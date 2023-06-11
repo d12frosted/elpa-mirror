@@ -4,4 +4,16 @@ Source:  https://github.com/pkmoore/strace-mode.git
 
 Updating /mnt/store/melpa/working/strace-mode/
 Checking out 2901baa968d5180ab985ac40ca22cc20914d01f5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/strace-mode/
+  to /tmp/strace-modeiPmjZd/strace-mode-20171116.2039
+    strace-mode.el -> strace-mode.el
+Created strace-mode-20171116.2039.tar containing:
+  strace-mode-20171116.2039/
+  strace-mode-20171116.2039/strace-mode-pkg.el
+  strace-mode-20171116.2039/strace-mode.el
+Built strace-mode in 3.464s, finished at 2023-06-10T22:51:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  9 16:52 packages/strace-mode-20171116.2039.el
+4.0K -rw-r--r-- 1 root root  391 Jun 10 22:51 packages/strace-mode-20171116.2039.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:51 packages/strace-mode-20171116.2039.tar

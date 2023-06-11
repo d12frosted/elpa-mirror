@@ -4,4 +4,16 @@ Source:  https://github.com/tkf/emacs-jedi.git
 
 Updating /mnt/store/melpa/working/jedi/
 Checking out 9d5f29116c4d42cae561a9d69e6fba2b61e2cf43
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jedi/
+  to /tmp/jedid6WuBF/jedi-20191011.1750
+    jedi.el -> jedi.el
+Created jedi-20191011.1750.tar containing:
+  jedi-20191011.1750/
+  jedi-20191011.1750/jedi-pkg.el
+  jedi-20191011.1750/jedi.el
+Built jedi in 6.129s, finished at 2023-06-10T22:26:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Jun  9 16:14 packages/jedi-20191011.1750.el
+4.0K -rw-r--r-- 1 root root  394 Jun 10 22:26 packages/jedi-20191011.1750.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:26 packages/jedi-20191011.1750.tar

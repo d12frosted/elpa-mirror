@@ -4,4 +4,16 @@ Source:  https://github.com/ddoherty03/commify.git
 
 Updating /mnt/store/melpa/working/commify/
 Checking out c4aeccae5b4a073fc3f4e8bd780a2ebbb7d5e533
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/commify/
+  to /tmp/commifyAbfg34/commify-20220531.1301
+    commify.el -> commify.el
+Created commify-20220531.1301.tar containing:
+  commify-20220531.1301/
+  commify-20220531.1301/commify-pkg.el
+  commify-20220531.1301/commify.el
+Built commify in 2.775s, finished at 2023-06-11T00:09:36+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  9 15:37 packages/commify-20220531.1301.el
+4.0K -rw-r--r-- 1 root root 493 Jun 11 00:09 packages/commify-20220531.1301.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:09 packages/commify-20220531.1301.tar

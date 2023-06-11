@@ -4,4 +4,16 @@ Source:  https://github.com/justbur/emacs-which-key.git
 
 Updating /mnt/store/melpa/working/which-key/
 Checking out bd34ede7bf77ad3988330b37207f3978e7342c79
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/which-key/
+  to /tmp/which-keyguSveN/which-key-20230330.2121
+    which-key.el -> which-key.el
+Created which-key-20230330.2121.tar containing:
+  which-key-20230330.2121/
+  which-key-20230330.2121/which-key-pkg.el
+  which-key-20230330.2121/which-key.el
+Built which-key in 3.648s, finished at 2023-06-10T22:58:05+0000
+ ✓ Success:
+116K -rw-r--r-- 1 root root 113K Jun  9 17:00 packages/which-key-20230330.2121.el
+4.0K -rw-r--r-- 1 root root  430 Jun 10 22:58 packages/which-key-20230330.2121.entry
+120K -rw-r--r-- 1 root root 120K Jun 10 22:58 packages/which-key-20230330.2121.tar

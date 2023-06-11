@@ -4,4 +4,16 @@ Source:  https://github.com/tonini/karma.el.git
 
 Updating /mnt/store/melpa/working/karma/
 Checking out 31d3e7708246183d7ed0686be92bf23140af348c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/karma/
+  to /tmp/karmaweuY3l/karma-20160220.1245
+    karma.el -> karma.el
+Created karma-20160220.1245.tar containing:
+  karma-20160220.1245/
+  karma-20160220.1245/karma-pkg.el
+  karma-20160220.1245/karma.el
+Built karma in 2.636s, finished at 2023-06-10T22:27:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Jun  9 16:16 packages/karma-20160220.1245.el
+4.0K -rw-r--r-- 1 root root  389 Jun 10 22:27 packages/karma-20160220.1245.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:27 packages/karma-20160220.1245.tar

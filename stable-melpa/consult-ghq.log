@@ -4,4 +4,16 @@ Source:  https://github.com/tomoya/consult-ghq.git
 
 Updating /mnt/store/melpa/working/consult-ghq/
 Checking out c8619d66bd8f8728e43ed15096078b89eb4d2083
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-ghq/
+  to /tmp/consult-ghqFtI72F/consult-ghq-20210606.2047
+    consult-ghq.el -> consult-ghq.el
+Created consult-ghq-20210606.2047.tar containing:
+  consult-ghq-20210606.2047/
+  consult-ghq-20210606.2047/consult-ghq-pkg.el
+  consult-ghq-20210606.2047/consult-ghq.el
+Built consult-ghq in 3.388s, finished at 2023-06-11T00:10:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jun  9 15:39 packages/consult-ghq-20210606.2047.el
+4.0K -rw-r--r-- 1 root root  531 Jun 11 00:10 packages/consult-ghq-20210606.2047.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:10 packages/consult-ghq-20210606.2047.tar

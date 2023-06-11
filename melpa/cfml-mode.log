@@ -4,4 +4,16 @@ Source:  https://github.com/amyers634/cfml-mode.git
 
 Updating /mnt/store/melpa/working/cfml-mode/
 Checking out b06d7cee2af0ed5d55a94f0db80fc1f429a1829a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cfml-mode/
+  to /tmp/cfml-modegkmSNp/cfml-mode-20190617.1130
+    cfml-mode.el -> cfml-mode.el
+Created cfml-mode-20190617.1130.tar containing:
+  cfml-mode-20190617.1130/
+  cfml-mode-20190617.1130/cfml-mode-pkg.el
+  cfml-mode-20190617.1130/cfml-mode.el
+Built cfml-mode in 3.724s, finished at 2023-06-11T00:07:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Jun  9 15:34 packages/cfml-mode-20190617.1130.el
+4.0K -rw-r--r-- 1 root root  407 Jun 11 00:07 packages/cfml-mode-20190617.1130.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:07 packages/cfml-mode-20190617.1130.tar

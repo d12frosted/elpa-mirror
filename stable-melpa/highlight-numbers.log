@@ -4,4 +4,16 @@ Source:  https://github.com/Fanael/highlight-numbers.git
 
 Updating /mnt/store/melpa/working/highlight-numbers/
 Checking out 8b4744c7f46c72b1d3d599d4fb75ef8183dee307
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/highlight-numbers/
+  to /tmp/highlight-numbersLGp1Aa/highlight-numbers-20181013.1744
+    highlight-numbers.el -> highlight-numbers.el
+Created highlight-numbers-20181013.1744.tar containing:
+  highlight-numbers-20181013.1744/
+  highlight-numbers-20181013.1744/highlight-numbers-pkg.el
+  highlight-numbers-20181013.1744/highlight-numbers.el
+Built highlight-numbers in 2.554s, finished at 2023-06-10T22:22:55+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:09 packages/highlight-numbers-20181013.1744.el
+4.0K -rw-r--r-- 1 root root 483 Jun 10 22:22 packages/highlight-numbers-20181013.1744.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:22 packages/highlight-numbers-20181013.1744.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/abo-abo/swiper.git
 
 Updating /mnt/store/melpa/working/ivy-avy/
 Checking out d28225e86f8dfb3825809ad287f759f95ee9e479
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-avy/
+  to /tmp/ivy-avyIYVs5w/ivy-avy-20230410.1815
+    ivy-avy.el -> ivy-avy.el
+Created ivy-avy-20230410.1815.tar containing:
+  ivy-avy-20230410.1815/
+  ivy-avy-20230410.1815/ivy-avy-pkg.el
+  ivy-avy-20230410.1815/ivy-avy.el
+Built ivy-avy in 3.442s, finished at 2023-06-10T22:25:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.9K Jun  9 16:13 packages/ivy-avy-20230410.1815.el
+4.0K -rw-r--r-- 1 root root  456 Jun 10 22:25 packages/ivy-avy-20230410.1815.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/ivy-avy-20230410.1815.tar

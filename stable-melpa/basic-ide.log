@@ -4,4 +4,16 @@ Source:  https://gitlab.com/sasanidas/emacs-c64-basic-ide.git
 
 Updating /mnt/store/melpa/working/basic-ide/
 Checking out e33036f838e61b647927165e81be5d5b855e0518
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/basic-ide/
+  to /tmp/basic-ideJQjsCA/basic-ide-20230118.1040
+    basic-ide.el -> basic-ide.el
+Created basic-ide-20230118.1040.tar containing:
+  basic-ide-20230118.1040/
+  basic-ide-20230118.1040/basic-ide-pkg.el
+  basic-ide-20230118.1040/basic-ide.el
+Built basic-ide in 3.065s, finished at 2023-06-11T00:05:00+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Jun  9 15:31 packages/basic-ide-20230118.1040.el
+4.0K -rw-r--r-- 1 root root  578 Jun 11 00:05 packages/basic-ide-20230118.1040.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:05 packages/basic-ide-20230118.1040.tar

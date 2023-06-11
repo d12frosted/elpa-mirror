@@ -4,4 +4,63 @@ Source:  https://github.com/CestDiego/nand2tetris.el.git
 
 Updating /mnt/store/melpa/working/nand2tetris/
 Checking out fe37ee41367ceff6f7d7a472a5f80cf1285e1e01
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nand2tetris/
+  to /tmp/nand2tetris3u5N6t/nand2tetris-20171201.1813
+    nand2tetris.el -> nand2tetris.el
+    nand2tetris-core.el -> nand2tetris-core.el
+    snippets => snippets
+Created nand2tetris-20171201.1813.tar containing:
+  nand2tetris-20171201.1813/
+  nand2tetris-20171201.1813/nand2tetris-core.el
+  nand2tetris-20171201.1813/nand2tetris-pkg.el
+  nand2tetris-20171201.1813/nand2tetris.el
+  nand2tetris-20171201.1813/snippets/
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/.yas-parents
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/ALU
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/Add16
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/FullAdder
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/HalfAdder
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/Inc16
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Aregister
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Bit
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/CPU
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DFF
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DMux/
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DMux/DMux
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DMux/DMux4Way
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DMux/DMux8Way
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DRegister
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Keyboard
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/And
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/And16
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Nand
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Not
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Not16
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Or
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Or16
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Or8Way
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Xor
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Memory
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/Mux
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/Mux16
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/Mux4Way16
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/Mux8Way16
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/PC
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM16K
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM4K
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM512
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM64
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM8
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/ROM32K
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Register
+  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Screen
+Built nand2tetris in 3.126s, finished at 2023-06-10T22:34:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 494 Jun 10 22:34 packages/nand2tetris-20171201.1813.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 10 22:34 packages/nand2tetris-20171201.1813.tar

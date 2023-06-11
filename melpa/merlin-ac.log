@@ -4,4 +4,16 @@ Source:  https://github.com/ocaml/merlin.git
 
 Updating /mnt/store/melpa/working/merlin-ac/
 Checking out 8bcab034a680f57ddf58092fda6288dc4caddd2a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/merlin-ac/
+  to /tmp/merlin-acz3jJ2W/merlin-ac-20221123.1408
+  ! emacs/merlin-ac.el -> merlin-ac.el
+Created merlin-ac-20221123.1408.tar containing:
+  merlin-ac-20221123.1408/
+  merlin-ac-20221123.1408/merlin-ac-pkg.el
+  merlin-ac-20221123.1408/merlin-ac.el
+Built merlin-ac in 10.662s, finished at 2023-06-10T22:32:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 16:22 packages/merlin-ac-20221123.1408.el
+4.0K -rw-r--r-- 1 root root  644 Jun 10 22:32 packages/merlin-ac-20221123.1408.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:32 packages/merlin-ac-20221123.1408.tar

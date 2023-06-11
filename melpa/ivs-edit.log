@@ -4,4 +4,19 @@ Source:  https://github.com/kawabata/ivs-edit.git
 
 Updating /mnt/store/melpa/working/ivs-edit/
 Checking out 5db39c234aa7393b591168a4fd0a9a4cbbca347d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivs-edit/
+  to /tmp/ivs-editShHCsT/ivs-edit-20170818.1441
+    ivs-edit.el -> ivs-edit.el
+    IVD_Sequences.txt -> IVD_Sequences.txt
+    jp-old-style.txt -> jp-old-style.txt
+Created ivs-edit-20170818.1441.tar containing:
+  ivs-edit-20170818.1441/
+  ivs-edit-20170818.1441/IVD_Sequences.txt
+  ivs-edit-20170818.1441/ivs-edit-pkg.el
+  ivs-edit-20170818.1441/ivs-edit.el
+  ivs-edit-20170818.1441/jp-old-style.txt
+Built ivs-edit in 2.650s, finished at 2023-06-10T22:25:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  531 Jun 10 22:25 packages/ivs-edit-20170818.1441.entry
+1.3M -rw-r--r-- 1 root root 1.3M Jun 10 22:25 packages/ivs-edit-20170818.1441.tar

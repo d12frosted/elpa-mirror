@@ -4,4 +4,16 @@ Source:  https://github.com/Wilfred/pip-requirements.el.git
 
 Updating /mnt/store/melpa/working/pip-requirements/
 Checking out 216cd1690f80cc965d4ae47b8753fc185f778ff6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pip-requirements/
+  to /tmp/pip-requirementsDoeAlh/pip-requirements-20181027.1629
+    pip-requirements.el -> pip-requirements.el
+Created pip-requirements-20181027.1629.tar containing:
+  pip-requirements-20181027.1629/
+  pip-requirements-20181027.1629/pip-requirements-pkg.el
+  pip-requirements-20181027.1629/pip-requirements.el
+Built pip-requirements in 2.712s, finished at 2023-06-10T22:42:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  9 16:38 packages/pip-requirements-20181027.1629.el
+4.0K -rw-r--r-- 1 root root  384 Jun 10 22:42 packages/pip-requirements-20181027.1629.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:42 packages/pip-requirements-20181027.1629.tar

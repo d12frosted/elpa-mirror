@@ -4,4 +4,16 @@ Source:  https://github.com/cosmicexplorer/helm-rg.git
 
 Updating /mnt/store/melpa/working/helm-rg/
 Checking out ee0a3c09da0c843715344919400ab0a0190cc9dc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-rg/
+  to /tmp/helm-rggqBPbV/helm-rg-20200721.725
+    helm-rg.el -> helm-rg.el
+Created helm-rg-20200721.725.tar containing:
+  helm-rg-20200721.725/
+  helm-rg-20200721.725/helm-rg-pkg.el
+  helm-rg-20200721.725/helm-rg.el
+Built helm-rg in 3.256s, finished at 2023-06-10T22:22:11+0000
+ ✓ Success:
+108K -rw-r--r-- 1 root root 107K Jun  9 16:07 packages/helm-rg-20200721.725.el
+4.0K -rw-r--r-- 1 root root  495 Jun 10 22:22 packages/helm-rg-20200721.725.entry
+112K -rw-r--r-- 1 root root 110K Jun 10 22:22 packages/helm-rg-20200721.725.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/sp1ff/elmpd.git
 
 Updating /mnt/store/melpa/working/elmpd/
 Checking out 4b42a90610fdb05ac1a2811da5acd55493715795
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elmpd/
+  to /tmp/elmpdTrsYis/elmpd-20210904.1340
+    elmpd.el -> elmpd.el
+Created elmpd-20210904.1340.tar containing:
+  elmpd-20210904.1340/
+  elmpd-20210904.1340/elmpd-pkg.el
+  elmpd-20210904.1340/elmpd.el
+Built elmpd in 4.119s, finished at 2023-06-11T00:17:16+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 40K Jun  9 15:49 packages/elmpd-20210904.1340.el
+4.0K -rw-r--r-- 1 root root 408 Jun 11 00:17 packages/elmpd-20210904.1340.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:17 packages/elmpd-20210904.1340.tar

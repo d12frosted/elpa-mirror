@@ -4,4 +4,16 @@ Source:  https://github.com/jackkamm/ob-reticulate.git
 
 Updating /mnt/store/melpa/working/ob-reticulate/
 Checking out 56f4d74f5a2218927aeacce61442b373a0a189e3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-reticulate/
+  to /tmp/ob-reticulate1E2OVb/ob-reticulate-20210214.2229
+    ob-reticulate.el -> ob-reticulate.el
+Created ob-reticulate-20210214.2229.tar containing:
+  ob-reticulate-20210214.2229/
+  ob-reticulate-20210214.2229/ob-reticulate-pkg.el
+  ob-reticulate-20210214.2229/ob-reticulate.el
+Built ob-reticulate in 2.786s, finished at 2023-06-10T22:36:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Jun  9 16:29 packages/ob-reticulate-20210214.2229.el
+4.0K -rw-r--r-- 1 root root  460 Jun 10 22:36 packages/ob-reticulate-20210214.2229.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:36 packages/ob-reticulate-20210214.2229.tar

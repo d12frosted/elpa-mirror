@@ -4,4 +4,16 @@ Source:  https://github.com/bbatsov/adoc-mode.git
 
 Updating /mnt/store/melpa/working/adoc-mode/
 Checking out a7691c8b9a738fd724007a2a283ed2c20684a7e5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/adoc-mode/
+  to /tmp/adoc-modeW4zK19/adoc-mode-20230413.800
+    adoc-mode.el -> adoc-mode.el
+Created adoc-mode-20230413.800.tar containing:
+  adoc-mode-20230413.800/
+  adoc-mode-20230413.800/adoc-mode-pkg.el
+  adoc-mode-20230413.800/adoc-mode.el
+Built adoc-mode in 4.938s, finished at 2023-06-11T00:02:36+0000
+ ✓ Success:
+148K -rw-r--r-- 1 root root 146K Jun  9 15:28 packages/adoc-mode-20230413.800.el
+4.0K -rw-r--r-- 1 root root  462 Jun 11 00:02 packages/adoc-mode-20230413.800.entry
+152K -rw-r--r-- 1 root root 150K Jun 11 00:02 packages/adoc-mode-20230413.800.tar

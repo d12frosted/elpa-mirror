@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/yascroll.git
 
 Updating /mnt/store/melpa/working/yascroll/
 Checking out b4669a6604a3093d3960c494874a7affc6b9c184
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yascroll/
+  to /tmp/yascrollApGRLU/yascroll-20220212.1742
+    yascroll.el -> yascroll.el
+Created yascroll-20220212.1742.tar containing:
+  yascroll-20220212.1742/
+  yascroll-20220212.1742/yascroll-pkg.el
+  yascroll-20220212.1742/yascroll.el
+Built yascroll in 6.525s, finished at 2023-06-10T22:59:43+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 17:02 packages/yascroll-20220212.1742.el
+4.0K -rw-r--r-- 1 root root 449 Jun 10 22:59 packages/yascroll-20220212.1742.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:59 packages/yascroll-20220212.1742.tar

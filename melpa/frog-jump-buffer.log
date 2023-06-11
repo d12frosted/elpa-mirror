@@ -4,4 +4,16 @@ Source:  https://github.com/waymondo/frog-jump-buffer.git
 
 Updating /mnt/store/melpa/working/frog-jump-buffer/
 Checking out ab830cb7a5af9429866ba88fb37589a0366d8bf2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/frog-jump-buffer/
+  to /tmp/frog-jump-bufferutVOiG/frog-jump-buffer-20221114.141
+    frog-jump-buffer.el -> frog-jump-buffer.el
+Created frog-jump-buffer-20221114.141.tar containing:
+  frog-jump-buffer-20221114.141/
+  frog-jump-buffer-20221114.141/frog-jump-buffer-pkg.el
+  frog-jump-buffer-20221114.141/frog-jump-buffer.el
+Built frog-jump-buffer in 2.382s, finished at 2023-06-11T00:24:52+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 15:59 packages/frog-jump-buffer-20221114.141.el
+4.0K -rw-r--r-- 1 root root 513 Jun 11 00:24 packages/frog-jump-buffer-20221114.141.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:24 packages/frog-jump-buffer-20221114.141.tar

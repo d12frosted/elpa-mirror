@@ -4,4 +4,16 @@ Source:  https://github.com/doublep/extmap.git
 
 Updating /mnt/store/melpa/working/extmap/
 Checking out 5875a4ab27831eb81af6246b12a174c765d52a78
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/extmap/
+  to /tmp/extmapfMxNIc/extmap-20211023.1904
+    extmap.el -> extmap.el
+Created extmap-20211023.1904.tar containing:
+  extmap-20211023.1904/
+  extmap-20211023.1904/extmap-pkg.el
+  extmap-20211023.1904/extmap.el
+Built extmap in 3.129s, finished at 2023-06-11T00:20:57+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 31K Jun  9 15:54 packages/extmap-20211023.1904.el
+4.0K -rw-r--r-- 1 root root 425 Jun 11 00:20 packages/extmap-20211023.1904.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:20 packages/extmap-20211023.1904.tar

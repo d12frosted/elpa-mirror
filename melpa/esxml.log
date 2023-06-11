@@ -4,4 +4,17 @@ Source:  https://github.com/tali713/esxml.git
 
 Updating /mnt/store/melpa/working/esxml/
 Checking out 225693096a587492d76bf696d1f0c25c61f7d531
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/esxml/
+  to /tmp/esxml8kZhOm/esxml-20230308.2254
+    esxml.el -> esxml.el
+    esxml-query.el -> esxml-query.el
+Created esxml-20230308.2254.tar containing:
+  esxml-20230308.2254/
+  esxml-20230308.2254/esxml-pkg.el
+  esxml-20230308.2254/esxml-query.el
+  esxml-20230308.2254/esxml.el
+Built esxml in 3.692s, finished at 2023-06-11T00:19:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 397 Jun 11 00:19 packages/esxml-20230308.2254.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:19 packages/esxml-20230308.2254.tar

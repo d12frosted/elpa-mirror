@@ -4,4 +4,16 @@ Source:  https://github.com/vaartis/auth-source-kwallet.git
 
 Updating /mnt/store/melpa/working/auth-source-kwallet/
 Checking out 57335d80876a526adb63a5ab57b83f55e8d79953
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auth-source-kwallet/
+  to /tmp/auth-source-kwalletEreuXe/auth-source-kwallet-20210605.1032
+    auth-source-kwallet.el -> auth-source-kwallet.el
+Created auth-source-kwallet-20210605.1032.tar containing:
+  auth-source-kwallet-20210605.1032/
+  auth-source-kwallet-20210605.1032/auth-source-kwallet-pkg.el
+  auth-source-kwallet-20210605.1032/auth-source-kwallet.el
+Built auth-source-kwallet in 3.648s, finished at 2023-06-11T00:04:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jun  9 15:30 packages/auth-source-kwallet-20210605.1032.el
+4.0K -rw-r--r-- 1 root root  468 Jun 11 00:04 packages/auth-source-kwallet-20210605.1032.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:04 packages/auth-source-kwallet-20210605.1032.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/JonWaltman/pcmpl-args.el.git
 
 Updating /mnt/store/melpa/working/pcmpl-args/
 Checking out 43229e1096f89c277190f09a3d794781f8fa0015
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pcmpl-args/
+  to /tmp/pcmpl-argsZD9uqJ/pcmpl-args-20220510.2056
+    pcmpl-args.el -> pcmpl-args.el
+Created pcmpl-args-20220510.2056.tar containing:
+  pcmpl-args-20220510.2056/
+  pcmpl-args-20220510.2056/pcmpl-args-pkg.el
+  pcmpl-args-20220510.2056/pcmpl-args.el
+Built pcmpl-args in 2.859s, finished at 2023-06-10T22:41:49+0000
+ ✓ Success:
+176K -rw-r--r-- 1 root root 174K Jun  9 16:37 packages/pcmpl-args-20220510.2056.el
+4.0K -rw-r--r-- 1 root root  557 Jun 10 22:41 packages/pcmpl-args-20220510.2056.entry
+180K -rw-r--r-- 1 root root 180K Jun 10 22:41 packages/pcmpl-args-20220510.2056.tar

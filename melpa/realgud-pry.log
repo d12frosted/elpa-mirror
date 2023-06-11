@@ -4,4 +4,24 @@ Source:  https://github.com/realgud/realgud-pry.git
 
 Updating /mnt/store/melpa/working/realgud-pry/
 Checking out 264ca6811b0bef5de4decc54acfeacf0bce2f51f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud-pry/
+  to /tmp/realgud-pryfQXyqC/realgud-pry-20201011.1815
+    realgud-pry.el -> realgud-pry.el
+    pry/core.el -> pry/core.el
+    pry/init.el -> pry/init.el
+    pry/pry.el -> pry/pry.el
+    pry/track-mode.el -> pry/track-mode.el
+Created realgud-pry-20201011.1815.tar containing:
+  realgud-pry-20201011.1815/
+  realgud-pry-20201011.1815/pry/
+  realgud-pry-20201011.1815/pry/core.el
+  realgud-pry-20201011.1815/pry/init.el
+  realgud-pry-20201011.1815/pry/pry.el
+  realgud-pry-20201011.1815/pry/track-mode.el
+  realgud-pry-20201011.1815/realgud-pry-pkg.el
+  realgud-pry-20201011.1815/realgud-pry.el
+Built realgud-pry in 4.377s, finished at 2023-06-10T22:46:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 450 Jun 10 22:46 packages/realgud-pry-20201011.1815.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:46 packages/realgud-pry-20201011.1815.tar

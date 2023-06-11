@@ -4,4 +4,65 @@ Source:  https://bitbucket.org/pdo/axiom-environment
 
 Updating /mnt/store/melpa/working/axiom-environment/
 Checking out 01d88daa0c864af9918db5a147fbb5e435dec199
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/axiom-environment/
+  to /tmp/axiom-environmentE3w3h5/axiom-environment-20220612.1535
+    axiom-base.el -> axiom-base.el
+    axiom-boot-mode.el -> axiom-boot-mode.el
+    axiom-buffer-menu.el -> axiom-buffer-menu.el
+    axiom-environment.el -> axiom-environment.el
+    axiom-help-mode.el -> axiom-help-mode.el
+    axiom-input-mode.el -> axiom-input-mode.el
+    axiom-process-mode.el -> axiom-process-mode.el
+    axiom-selector.el -> axiom-selector.el
+    axiom-spad-mode.el -> axiom-spad-mode.el
+    data/axiom-standard-category-info.el -> data/axiom-standard-category-info.el
+    data/axiom-standard-domain-info.el -> data/axiom-standard-domain-info.el
+    data/axiom-standard-operation-info.el -> data/axiom-standard-operation-info.el
+    data/axiom-standard-package-info.el -> data/axiom-standard-package-info.el
+    data/fricas-standard-category-info.el -> data/fricas-standard-category-info.el
+    data/fricas-standard-domain-info.el -> data/fricas-standard-domain-info.el
+    data/fricas-standard-operation-info.el -> data/fricas-standard-operation-info.el
+    data/fricas-standard-package-info.el -> data/fricas-standard-package-info.el
+    data/openaxiom-standard-category-info.el -> data/openaxiom-standard-category-info.el
+    data/openaxiom-standard-domain-info.el -> data/openaxiom-standard-domain-info.el
+    data/openaxiom-standard-operation-info.el -> data/openaxiom-standard-operation-info.el
+    data/openaxiom-standard-package-info.el -> data/openaxiom-standard-package-info.el
+    themes/axiom-on-gcl-theme.el -> themes/axiom-on-gcl-theme.el
+    themes/fricas-on-ccl-theme.el -> themes/fricas-on-ccl-theme.el
+    themes/fricas-on-sbcl-theme.el -> themes/fricas-on-sbcl-theme.el
+    themes/openaxiom-on-sbcl-theme.el -> themes/openaxiom-on-sbcl-theme.el
+Created axiom-environment-20220612.1535.tar containing:
+  axiom-environment-20220612.1535/
+  axiom-environment-20220612.1535/axiom-base.el
+  axiom-environment-20220612.1535/axiom-boot-mode.el
+  axiom-environment-20220612.1535/axiom-buffer-menu.el
+  axiom-environment-20220612.1535/axiom-environment-pkg.el
+  axiom-environment-20220612.1535/axiom-environment.el
+  axiom-environment-20220612.1535/axiom-help-mode.el
+  axiom-environment-20220612.1535/axiom-input-mode.el
+  axiom-environment-20220612.1535/axiom-process-mode.el
+  axiom-environment-20220612.1535/axiom-selector.el
+  axiom-environment-20220612.1535/axiom-spad-mode.el
+  axiom-environment-20220612.1535/data/
+  axiom-environment-20220612.1535/data/axiom-standard-category-info.el
+  axiom-environment-20220612.1535/data/axiom-standard-domain-info.el
+  axiom-environment-20220612.1535/data/axiom-standard-operation-info.el
+  axiom-environment-20220612.1535/data/axiom-standard-package-info.el
+  axiom-environment-20220612.1535/data/fricas-standard-category-info.el
+  axiom-environment-20220612.1535/data/fricas-standard-domain-info.el
+  axiom-environment-20220612.1535/data/fricas-standard-operation-info.el
+  axiom-environment-20220612.1535/data/fricas-standard-package-info.el
+  axiom-environment-20220612.1535/data/openaxiom-standard-category-info.el
+  axiom-environment-20220612.1535/data/openaxiom-standard-domain-info.el
+  axiom-environment-20220612.1535/data/openaxiom-standard-operation-info.el
+  axiom-environment-20220612.1535/data/openaxiom-standard-package-info.el
+  axiom-environment-20220612.1535/themes/
+  axiom-environment-20220612.1535/themes/axiom-on-gcl-theme.el
+  axiom-environment-20220612.1535/themes/fricas-on-ccl-theme.el
+  axiom-environment-20220612.1535/themes/fricas-on-sbcl-theme.el
+  axiom-environment-20220612.1535/themes/openaxiom-on-sbcl-theme.el
+Built axiom-environment in 2.887s, finished at 2023-06-11T00:04:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  442 Jun 11 00:04 packages/axiom-environment-20220612.1535.entry
+312K -rw-r--r-- 1 root root 310K Jun 11 00:04 packages/axiom-environment-20220612.1535.tar

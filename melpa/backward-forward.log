@@ -4,4 +4,16 @@ Source:  https://gitlab.com/vancan1ty/emacs-backward-forward.git
 
 Updating /mnt/store/melpa/working/backward-forward/
 Checking out 58489957a62a0da25dfb5df902624d2548d800b4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/backward-forward/
+  to /tmp/backward-forwardU4IqGz/backward-forward-20161229.550
+    backward-forward.el -> backward-forward.el
+Created backward-forward-20161229.550.tar containing:
+  backward-forward-20161229.550/
+  backward-forward-20161229.550/backward-forward-pkg.el
+  backward-forward-20161229.550/backward-forward.el
+Built backward-forward in 3.043s, finished at 2023-06-11T00:04:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:31 packages/backward-forward-20161229.550.el
+4.0K -rw-r--r-- 1 root root 543 Jun 11 00:04 packages/backward-forward-20161229.550.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:04 packages/backward-forward-20161229.550.tar

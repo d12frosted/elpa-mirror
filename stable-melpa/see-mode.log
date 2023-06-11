@@ -4,4 +4,16 @@ Source:  https://github.com/marcelino-m/see-mode.git
 
 Updating /mnt/store/melpa/working/see-mode/
 Checking out db9e4324f9dcc14d5125cb6a79d6c9fad5b14626
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/see-mode/
+  to /tmp/see-modeIe9Uab/see-mode-20180511.41
+    see-mode.el -> see-mode.el
+Created see-mode-20180511.41.tar containing:
+  see-mode-20180511.41/
+  see-mode-20180511.41/see-mode-pkg.el
+  see-mode-20180511.41/see-mode.el
+Built see-mode in 3.687s, finished at 2023-06-10T22:48:40+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:46 packages/see-mode-20180511.41.el
+4.0K -rw-r--r-- 1 root root 500 Jun 10 22:48 packages/see-mode-20180511.41.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:48 packages/see-mode-20180511.41.tar

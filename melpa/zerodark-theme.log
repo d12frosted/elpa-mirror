@@ -4,4 +4,16 @@ Source:  https://github.com/NicolasPetton/zerodark-theme.git
 
 Updating /mnt/store/melpa/working/zerodark-theme/
 Checking out b463528704f6eb00684c0ee003fbd8e42901cde0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zerodark-theme/
+  to /tmp/zerodark-themeBmeEXY/zerodark-theme-20211115.841
+    zerodark-theme.el -> zerodark-theme.el
+Created zerodark-theme-20211115.841.tar containing:
+  zerodark-theme-20211115.841/
+  zerodark-theme-20211115.841/zerodark-theme-pkg.el
+  zerodark-theme-20211115.841/zerodark-theme.el
+Built zerodark-theme in 5.201s, finished at 2023-06-10T23:00:25+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 45K Jun  9 17:03 packages/zerodark-theme-20211115.841.el
+4.0K -rw-r--r-- 1 root root 452 Jun 10 23:00 packages/zerodark-theme-20211115.841.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 23:00 packages/zerodark-theme-20211115.841.tar

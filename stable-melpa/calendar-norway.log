@@ -4,4 +4,16 @@ Source:  https://github.com/unhammer/calendar-norway.el.git
 
 Updating /mnt/store/melpa/working/calendar-norway/
 Checking out 0db0ea63365f4ff5f7d18fb8335fa88af194a2cc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/calendar-norway/
+  to /tmp/calendar-norwaygQed07/calendar-norway-20220211.1129
+    calendar-norway.el -> calendar-norway.el
+Created calendar-norway-20220211.1129.tar containing:
+  calendar-norway-20220211.1129/
+  calendar-norway-20220211.1129/calendar-norway-pkg.el
+  calendar-norway-20220211.1129/calendar-norway.el
+Built calendar-norway in 4.663s, finished at 2023-06-11T00:07:07+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.2K Jun  9 15:34 packages/calendar-norway-20220211.1129.el
+4.0K -rw-r--r-- 1 root root  402 Jun 11 00:07 packages/calendar-norway-20220211.1129.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:07 packages/calendar-norway-20220211.1129.tar

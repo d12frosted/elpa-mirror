@@ -4,4 +4,17 @@ Source:  https://github.com/alphapapa/org-web-tools.git
 
 Updating /mnt/store/melpa/working/org-web-tools/
 Checking out b94a07add8558ef7b0666173dbb8a2554f1d41a6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-web-tools/
+  to /tmp/org-web-toolsXqT5EI/org-web-tools-20201212.1058
+    org-web-tools-archive.el -> org-web-tools-archive.el
+    org-web-tools.el -> org-web-tools.el
+Created org-web-tools-20201212.1058.tar containing:
+  org-web-tools-20201212.1058/
+  org-web-tools-20201212.1058/org-web-tools-archive.el
+  org-web-tools-20201212.1058/org-web-tools-pkg.el
+  org-web-tools-20201212.1058/org-web-tools.el
+Built org-web-tools in 4.222s, finished at 2023-06-10T22:39:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 567 Jun 10 22:39 packages/org-web-tools-20201212.1058.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:39 packages/org-web-tools-20201212.1058.tar

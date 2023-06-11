@@ -4,4 +4,16 @@ Source:  https://github.com/donderom/jazz-theme.git
 
 Updating /mnt/store/melpa/working/jazz-theme/
 Checking out d67e09f320d03ace79a05bd28f967b1ac61f2348
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jazz-theme/
+  to /tmp/jazz-themenZguza/jazz-theme-20230524.1145
+    jazz-theme.el -> jazz-theme.el
+Created jazz-theme-20230524.1145.tar containing:
+  jazz-theme-20230524.1145/
+  jazz-theme-20230524.1145/jazz-theme-pkg.el
+  jazz-theme-20230524.1145/jazz-theme.el
+Built jazz-theme in 5.361s, finished at 2023-06-10T22:26:18+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 42K Jun  9 16:14 packages/jazz-theme-20230524.1145.el
+4.0K -rw-r--r-- 1 root root 406 Jun 10 22:26 packages/jazz-theme-20230524.1145.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:26 packages/jazz-theme-20230524.1145.tar

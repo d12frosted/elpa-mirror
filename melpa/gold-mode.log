@@ -4,4 +4,16 @@ Source:  https://github.com/yuutayamada/gold-mode-el.git
 
 Updating /mnt/store/melpa/working/gold-mode/
 Checking out 6d3aa59602b1b835495271c8c9741ac344c2eab1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gold-mode/
+  to /tmp/gold-modecAETRt/gold-mode-20140607.206
+    gold-mode.el -> gold-mode.el
+Created gold-mode-20140607.206.tar containing:
+  gold-mode-20140607.206/
+  gold-mode-20140607.206/gold-mode-pkg.el
+  gold-mode-20140607.206/gold-mode.el
+Built gold-mode in 6.450s, finished at 2023-06-11T00:27:17+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 16:03 packages/gold-mode-20140607.206.el
+4.0K -rw-r--r-- 1 root root  474 Jun 11 00:27 packages/gold-mode-20140607.206.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:27 packages/gold-mode-20140607.206.tar

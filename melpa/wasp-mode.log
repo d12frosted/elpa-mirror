@@ -4,4 +4,16 @@ Source:  https://github.com/thechampagne/wasp-mode.git
 
 Updating /mnt/store/melpa/working/wasp-mode/
 Checking out 76198cdd5f0ece3770c3a586115caea3ea613169
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/wasp-mode/
+  to /tmp/wasp-modejXa0Vj/wasp-mode-20230424.1307
+    wasp-mode.el -> wasp-mode.el
+Created wasp-mode-20230424.1307.tar containing:
+  wasp-mode-20230424.1307/
+  wasp-mode-20230424.1307/wasp-mode-pkg.el
+  wasp-mode-20230424.1307/wasp-mode.el
+Built wasp-mode in 2.908s, finished at 2023-06-10T22:57:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Jun  9 16:59 packages/wasp-mode-20230424.1307.el
+4.0K -rw-r--r-- 1 root root  374 Jun 10 22:57 packages/wasp-mode-20230424.1307.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:57 packages/wasp-mode-20230424.1307.tar

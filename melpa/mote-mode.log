@@ -4,4 +4,16 @@ Source:  https://github.com/inkel/mote-mode.git
 
 Updating /mnt/store/melpa/working/mote-mode/
 Checking out 666c6641addbd3b337a7aa01fd2742ded2f41b83
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mote-mode/
+  to /tmp/mote-modeE826UP/mote-mode-20160123.29
+    mote-mode.el -> mote-mode.el
+Created mote-mode-20160123.29.tar containing:
+  mote-mode-20160123.29/
+  mote-mode-20160123.29/mote-mode-pkg.el
+  mote-mode-20160123.29/mote-mode.el
+Built mote-mode in 6.142s, finished at 2023-06-10T22:33:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Jun  9 16:25 packages/mote-mode-20160123.29.el
+4.0K -rw-r--r-- 1 root root  427 Jun 10 22:33 packages/mote-mode-20160123.29.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:33 packages/mote-mode-20160123.29.tar

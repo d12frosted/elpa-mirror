@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/ac-etags.git
 
 Updating /mnt/store/melpa/working/ac-etags/
 Checking out 7983e631c226fe0fa53af3b2d56bf4eca3d785ce
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-etags/
+  to /tmp/ac-etagsDKxt9Z/ac-etags-20161001.1507
+    ac-etags.el -> ac-etags.el
+Created ac-etags-20161001.1507.tar containing:
+  ac-etags-20161001.1507/
+  ac-etags-20161001.1507/ac-etags-pkg.el
+  ac-etags-20161001.1507/ac-etags.el
+Built ac-etags in 3.640s, finished at 2023-06-11T00:01:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Jun  9 15:27 packages/ac-etags-20161001.1507.el
+4.0K -rw-r--r-- 1 root root  429 Jun 11 00:01 packages/ac-etags-20161001.1507.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:01 packages/ac-etags-20161001.1507.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/jcs-elpa/buffer-wrap.git
 
 Updating /mnt/store/melpa/working/buffer-wrap/
 Checking out b6b2118f59b8152fa02bd0b09d65a1f8ade4141b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/buffer-wrap/
+  to /tmp/buffer-wrapK6UDK0/buffer-wrap-20220704.646
+    buffer-wrap.el -> buffer-wrap.el
+Created buffer-wrap-20220704.646.tar containing:
+  buffer-wrap-20220704.646/
+  buffer-wrap-20220704.646/buffer-wrap-pkg.el
+  buffer-wrap-20220704.646/buffer-wrap.el
+Built buffer-wrap in 4.418s, finished at 2023-06-11T00:06:33+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  9 15:33 packages/buffer-wrap-20220704.646.el
+4.0K -rw-r--r-- 1 root root  497 Jun 11 00:06 packages/buffer-wrap-20220704.646.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:06 packages/buffer-wrap-20220704.646.tar

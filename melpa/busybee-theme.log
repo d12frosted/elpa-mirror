@@ -4,4 +4,16 @@ Source:  https://github.com/mswift42/busybee-theme.git
 
 Updating /mnt/store/melpa/working/busybee-theme/
 Checking out 66b2315b030582d0ebee605cf455d386d8c30fcd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/busybee-theme/
+  to /tmp/busybee-themeBhve0c/busybee-theme-20170719.928
+    busybee-theme.el -> busybee-theme.el
+Created busybee-theme-20170719.928.tar containing:
+  busybee-theme-20170719.928/
+  busybee-theme-20170719.928/busybee-theme-pkg.el
+  busybee-theme-20170719.928/busybee-theme.el
+Built busybee-theme in 3.330s, finished at 2023-06-11T00:06:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  9 15:33 packages/busybee-theme-20170719.928.el
+4.0K -rw-r--r-- 1 root root  309 Jun 11 00:06 packages/busybee-theme-20170719.928.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:06 packages/busybee-theme-20170719.928.tar

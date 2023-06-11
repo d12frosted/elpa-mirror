@@ -4,4 +4,16 @@ Source:  https://github.com/dkogan/xcscope.el.git
 
 Updating /mnt/store/melpa/working/xcscope/
 Checking out d228d7593d762e457340f678d14b663ef66d7cee
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xcscope/
+  to /tmp/xcscopeknbCa3/xcscope-20210719.828
+    xcscope.el -> xcscope.el
+Created xcscope-20210719.828.tar containing:
+  xcscope-20210719.828/
+  xcscope-20210719.828/xcscope-pkg.el
+  xcscope-20210719.828/xcscope.el
+Built xcscope in 4.349s, finished at 2023-06-10T22:58:59+0000
+ ✓ Success:
+120K -rw-r--r-- 1 root root 119K Jun  9 17:01 packages/xcscope-20210719.828.el
+4.0K -rw-r--r-- 1 root root  444 Jun 10 22:58 packages/xcscope-20210719.828.entry
+132K -rw-r--r-- 1 root root 130K Jun 10 22:58 packages/xcscope-20210719.828.tar

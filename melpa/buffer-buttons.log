@@ -4,4 +4,16 @@ Source:  https://github.com/rpav/buffer-buttons.git
 
 Updating /mnt/store/melpa/working/buffer-buttons/
 Checking out 2feb8494fa7863b98256bc85da670d74a3a8a975
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/buffer-buttons/
+  to /tmp/buffer-buttons6W6PKj/buffer-buttons-20150106.1439
+    buffer-buttons.el -> buffer-buttons.el
+Created buffer-buttons-20150106.1439.tar containing:
+  buffer-buttons-20150106.1439/
+  buffer-buttons-20150106.1439/buffer-buttons-pkg.el
+  buffer-buttons-20150106.1439/buffer-buttons.el
+Built buffer-buttons in 3.903s, finished at 2023-06-11T00:06:25+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jun  9 15:33 packages/buffer-buttons-20150106.1439.el
+4.0K -rw-r--r-- 1 root root  400 Jun 11 00:06 packages/buffer-buttons-20150106.1439.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:06 packages/buffer-buttons-20150106.1439.tar

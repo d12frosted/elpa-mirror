@@ -4,4 +4,16 @@ Source:  https://github.com/retroj/mowedline.git
 
 Updating /mnt/store/melpa/working/mowedline/
 Checking out c17501b48ded8261d815ab60bf14cddf7040be72
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mowedline/
+  to /tmp/mowedlinevYNfzV/mowedline-20171218.237
+    mowedline.el -> mowedline.el
+Created mowedline-20171218.237.tar containing:
+  mowedline-20171218.237/
+  mowedline-20171218.237/mowedline-pkg.el
+  mowedline-20171218.237/mowedline.el
+Built mowedline in 5.228s, finished at 2023-06-10T22:33:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.9K Jun  9 16:25 packages/mowedline-20171218.237.el
+4.0K -rw-r--r-- 1 root root  347 Jun 10 22:33 packages/mowedline-20171218.237.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:33 packages/mowedline-20171218.237.tar

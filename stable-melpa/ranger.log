@@ -4,4 +4,16 @@ Source:  https://github.com/punassuming/ranger.el.git
 
 Updating /mnt/store/melpa/working/ranger/
 Checking out 2498519cb21dcd5791d240607a72a204d1761668
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ranger/
+  to /tmp/rangerVOtRHY/ranger-20210125.330
+    ranger.el -> ranger.el
+Created ranger-20210125.330.tar containing:
+  ranger-20210125.330/
+  ranger-20210125.330/ranger-pkg.el
+  ranger-20210125.330/ranger.el
+Built ranger in 3.745s, finished at 2023-06-10T22:45:42+0000
+ ✓ Success:
+112K -rw-r--r-- 1 root root 111K Jun  9 16:42 packages/ranger-20210125.330.el
+4.0K -rw-r--r-- 1 root root  423 Jun 10 22:45 packages/ranger-20210125.330.entry
+120K -rw-r--r-- 1 root root 120K Jun 10 22:45 packages/ranger-20210125.330.tar

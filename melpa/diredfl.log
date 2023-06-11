@@ -4,4 +4,16 @@ Source:  https://github.com/purcell/diredfl.git
 
 Updating /mnt/store/melpa/working/diredfl/
 Checking out 17e805763d57370c4eff2c92ed257b72eeb9f94a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/diredfl/
+  to /tmp/diredflXx8fLh/diredfl-20230224.1302
+    diredfl.el -> diredfl.el
+Created diredfl-20230224.1302.tar containing:
+  diredfl-20230224.1302/
+  diredfl-20230224.1302/diredfl-pkg.el
+  diredfl-20230224.1302/diredfl.el
+Built diredfl in 4.792s, finished at 2023-06-11T00:14:06+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  9 15:44 packages/diredfl-20230224.1302.el
+4.0K -rw-r--r-- 1 root root 433 Jun 11 00:14 packages/diredfl-20230224.1302.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:14 packages/diredfl-20230224.1302.tar

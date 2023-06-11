@@ -4,4 +4,35 @@ Source:  https://github.com/sp1ff/elfeed-score.git
 
 Updating /mnt/store/melpa/working/elfeed-score/
 Checking out 640ffe17730b0024e873c634a1ef83966a45a018
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-score/
+  to /tmp/elfeed-scoredSycsb/elfeed-score-20230506.1524
+    elfeed-score-log.el -> elfeed-score-log.el
+    elfeed-score-maint.el -> elfeed-score-maint.el
+    elfeed-score-pkg.el -> elfeed-score-pkg.el
+    elfeed-score-rule-stats.el -> elfeed-score-rule-stats.el
+    elfeed-score-rules.el -> elfeed-score-rules.el
+    elfeed-score-scoring.el -> elfeed-score-scoring.el
+    elfeed-score-serde.el -> elfeed-score-serde.el
+    elfeed-score.el -> elfeed-score.el
+  ! doc/elfeed-score.texi -> elfeed-score.texi
+  ! doc/version.texi -> version.texi
+Generating /tmp/elfeed-scoredSycsb/elfeed-score-20230506.1524/elfeed-score.info
+Generating /tmp/elfeed-scoredSycsb/elfeed-score-20230506.1524/version.info
+Created elfeed-score-20230506.1524.tar containing:
+  elfeed-score-20230506.1524/
+  elfeed-score-20230506.1524/dir
+  elfeed-score-20230506.1524/elfeed-score-log.el
+  elfeed-score-20230506.1524/elfeed-score-maint.el
+  elfeed-score-20230506.1524/elfeed-score-pkg.el
+  elfeed-score-20230506.1524/elfeed-score-rule-stats.el
+  elfeed-score-20230506.1524/elfeed-score-rules.el
+  elfeed-score-20230506.1524/elfeed-score-scoring.el
+  elfeed-score-20230506.1524/elfeed-score-serde.el
+  elfeed-score-20230506.1524/elfeed-score.el
+  elfeed-score-20230506.1524/elfeed-score.info
+  elfeed-score-20230506.1524/version.info
+Built elfeed-score in 10.206s, finished at 2023-06-11T00:17:02+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  385 Jun 11 00:17 packages/elfeed-score-20230506.1524.entry
+252K -rw-r--r-- 1 root root 250K Jun 11 00:17 packages/elfeed-score-20230506.1524.tar

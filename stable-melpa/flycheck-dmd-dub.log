@@ -4,4 +4,16 @@ Source:  https://github.com/atilaneves/flycheck-dmd-dub.git
 
 Updating /mnt/store/melpa/working/flycheck-dmd-dub/
 Checking out 818bfed45ac8597b6ad568c71eb9428138a125c8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-dmd-dub/
+  to /tmp/flycheck-dmd-dubZN9ZEe/flycheck-dmd-dub-20210412.1608
+    flycheck-dmd-dub.el -> flycheck-dmd-dub.el
+Created flycheck-dmd-dub-20210412.1608.tar containing:
+  flycheck-dmd-dub-20210412.1608/
+  flycheck-dmd-dub-20210412.1608/flycheck-dmd-dub-pkg.el
+  flycheck-dmd-dub-20210412.1608/flycheck-dmd-dub.el
+Built flycheck-dmd-dub in 2.783s, finished at 2023-06-11T00:22:39+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 15:56 packages/flycheck-dmd-dub-20210412.1608.el
+4.0K -rw-r--r-- 1 root root 524 Jun 11 00:22 packages/flycheck-dmd-dub-20210412.1608.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:22 packages/flycheck-dmd-dub-20210412.1608.tar

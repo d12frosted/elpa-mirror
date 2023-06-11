@@ -4,4 +4,16 @@ Source:  https://github.com/vijumathew/windwow.git
 
 Updating /mnt/store/melpa/working/windwow/
 Checking out 77bad26f651744b68d31b389389147014d250f23
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/windwow/
+  to /tmp/windwowil5QBf/windwow-20170816.148
+    windwow.el -> windwow.el
+Created windwow-20170816.148.tar containing:
+  windwow-20170816.148/
+  windwow-20170816.148/windwow-pkg.el
+  windwow-20170816.148/windwow.el
+Built windwow in 3.088s, finished at 2023-06-10T22:58:25+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 17:00 packages/windwow-20170816.148.el
+4.0K -rw-r--r-- 1 root root 446 Jun 10 22:58 packages/windwow-20170816.148.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:58 packages/windwow-20170816.148.tar

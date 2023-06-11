@@ -4,4 +4,16 @@ Source:  https://github.com/JorisE/yapfify.git
 
 Updating /mnt/store/melpa/working/yapfify/
 Checking out c9347e3b1dec5fc8d34883e206fcdc8500d22368
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yapfify/
+  to /tmp/yapfifyzGGeop/yapfify-20210914.634
+    yapfify.el -> yapfify.el
+Created yapfify-20210914.634.tar containing:
+  yapfify-20210914.634/
+  yapfify-20210914.634/yapfify-pkg.el
+  yapfify-20210914.634/yapfify.el
+Built yapfify in 4.797s, finished at 2023-06-10T22:59:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jun  9 17:02 packages/yapfify-20210914.634.el
+4.0K -rw-r--r-- 1 root root  392 Jun 10 22:59 packages/yapfify-20210914.634.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:59 packages/yapfify-20210914.634.tar

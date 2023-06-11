@@ -4,4 +4,18 @@ Source:  https://github.com/linnik/flycheck-pyre.git
 
 Updating /mnt/store/melpa/working/flycheck-pyre/
 Checking out 0560122caae207d99d8af1ac2b4e5d6f6a1ce444
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-pyre/
+  to /tmp/flycheck-pyreri6bHx/flycheck-pyre-20190215.1222
+    flycheck-pyre.el -> flycheck-pyre.el
+    bin => bin
+Created flycheck-pyre-20190215.1222.tar containing:
+  flycheck-pyre-20190215.1222/
+  flycheck-pyre-20190215.1222/bin/
+  flycheck-pyre-20190215.1222/bin/pyrewrapper.sh
+  flycheck-pyre-20190215.1222/flycheck-pyre-pkg.el
+  flycheck-pyre-20190215.1222/flycheck-pyre.el
+Built flycheck-pyre in 2.812s, finished at 2023-06-11T00:23:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 473 Jun 11 00:23 packages/flycheck-pyre-20190215.1222.entry
+ 12K -rw-r--r-- 1 root root 10K Jun 11 00:23 packages/flycheck-pyre-20190215.1222.tar

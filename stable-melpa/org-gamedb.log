@@ -4,4 +4,16 @@ Source:  https://github.com/repelliuss/org-gamedb.git
 
 Updating /mnt/store/melpa/working/org-gamedb/
 Checking out f283b6f6a7e8ad090405be57202caa3d3c424447
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-gamedb/
+  to /tmp/org-gamedbcx4tU9/org-gamedb-20210525.2338
+    org-gamedb.el -> org-gamedb.el
+Created org-gamedb-20210525.2338.tar containing:
+  org-gamedb-20210525.2338/
+  org-gamedb-20210525.2338/org-gamedb-pkg.el
+  org-gamedb-20210525.2338/org-gamedb.el
+Built org-gamedb in 2.701s, finished at 2023-06-10T22:37:58+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Jun  9 16:32 packages/org-gamedb-20210525.2338.el
+4.0K -rw-r--r-- 1 root root 524 Jun 10 22:37 packages/org-gamedb-20210525.2338.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:37 packages/org-gamedb-20210525.2338.tar

@@ -4,4 +4,17 @@ Source:  https://github.com/jgru/consult-org-roam.git
 
 Updating /mnt/store/melpa/working/consult-org-roam/
 Checking out 2ca42a1c1641a29f1447d35be01bd1fda368a9e2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-org-roam/
+  to /tmp/consult-org-roam59oCLD/consult-org-roam-20230528.855
+    consult-org-roam-buffer.el -> consult-org-roam-buffer.el
+    consult-org-roam.el -> consult-org-roam.el
+Created consult-org-roam-20230528.855.tar containing:
+  consult-org-roam-20230528.855/
+  consult-org-roam-20230528.855/consult-org-roam-buffer.el
+  consult-org-roam-20230528.855/consult-org-roam-pkg.el
+  consult-org-roam-20230528.855/consult-org-roam.el
+Built consult-org-roam in 3.797s, finished at 2023-06-11T00:10:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 472 Jun 11 00:10 packages/consult-org-roam-20230528.855.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:10 packages/consult-org-roam-20230528.855.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/ROCKTAKEY/egalgo.git
 
 Updating /mnt/store/melpa/working/egalgo/
 Checking out a56a86591351d53ca2add7c651757bfb0064fb22
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/egalgo/
+  to /tmp/egalgoxFYYBU/egalgo-20211105.1657
+    egalgo.el -> egalgo.el
+Created egalgo-20211105.1657.tar containing:
+  egalgo-20211105.1657/
+  egalgo-20211105.1657/egalgo-pkg.el
+  egalgo-20211105.1657/egalgo.el
+Built egalgo in 2.878s, finished at 2023-06-11T00:16:08+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 15:47 packages/egalgo-20211105.1657.el
+4.0K -rw-r--r-- 1 root root 379 Jun 11 00:16 packages/egalgo-20211105.1657.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:16 packages/egalgo-20211105.1657.tar

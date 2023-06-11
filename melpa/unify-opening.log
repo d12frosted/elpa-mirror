@@ -4,4 +4,16 @@ Source:  https://github.com/DamienCassou/unify-opening.git
 
 Updating /mnt/store/melpa/working/unify-opening/
 Checking out 4c6e3447e203a51af116a2117e88d41114950205
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/unify-opening/
+  to /tmp/unify-openingBUs7fM/unify-opening-20220521.911
+    unify-opening.el -> unify-opening.el
+Created unify-opening-20220521.911.tar containing:
+  unify-opening-20220521.911/
+  unify-opening-20220521.911/unify-opening-pkg.el
+  unify-opening-20220521.911/unify-opening.el
+Built unify-opening in 3.335s, finished at 2023-06-10T22:56:06+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 16:57 packages/unify-opening-20220521.911.el
+4.0K -rw-r--r-- 1 root root  420 Jun 10 22:56 packages/unify-opening-20220521.911.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:56 packages/unify-opening-20220521.911.tar

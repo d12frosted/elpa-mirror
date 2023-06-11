@@ -1,6 +1,6 @@
 (pathify .
 	 [(20160423 846)
-	  nil "Symlink your scripts into a PATH directory" single
+	  nil "Symlink your scripts into a PATH directory" tar
 	  ((:commit . "335332a900717ae01bde5ccb8f3dc97a5350f123")
 	   (:authors
 	    ("Alex Kost" . "alezost@gmail.com"))

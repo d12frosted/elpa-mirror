@@ -4,4 +4,17 @@ Source:  https://github.com/conao3/leaf-defaults.el.git
 
 Updating /mnt/store/melpa/working/leaf-defaults/
 Checking out 96ce39d4f16736f1e654e24eac16a2603976c724
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leaf-defaults/
+  to /tmp/leaf-defaultseG0pPW/leaf-defaults-20210301.118
+    leaf-defaults-recipe.el -> leaf-defaults-recipe.el
+    leaf-defaults.el -> leaf-defaults.el
+Created leaf-defaults-20210301.118.tar containing:
+  leaf-defaults-20210301.118/
+  leaf-defaults-20210301.118/leaf-defaults-pkg.el
+  leaf-defaults-20210301.118/leaf-defaults-recipe.el
+  leaf-defaults-20210301.118/leaf-defaults.el
+Built leaf-defaults in 2.835s, finished at 2023-06-10T22:28:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 478 Jun 10 22:28 packages/leaf-defaults-20210301.118.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:28 packages/leaf-defaults-20210301.118.tar

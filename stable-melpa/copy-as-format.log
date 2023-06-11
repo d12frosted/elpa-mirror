@@ -4,4 +4,16 @@ Source:  https://github.com/sshaw/copy-as-format.git
 
 Updating /mnt/store/melpa/working/copy-as-format/
 Checking out a0962b670e26b723ce304b14e3397da453aef84e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/copy-as-format/
+  to /tmp/copy-as-formatpkUbYj/copy-as-format-20190523.258
+    copy-as-format.el -> copy-as-format.el
+Created copy-as-format-20190523.258.tar containing:
+  copy-as-format-20190523.258/
+  copy-as-format-20190523.258/copy-as-format-pkg.el
+  copy-as-format-20190523.258/copy-as-format.el
+Built copy-as-format in 3.097s, finished at 2023-06-11T00:10:49+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 15:39 packages/copy-as-format-20190523.258.el
+4.0K -rw-r--r-- 1 root root 553 Jun 11 00:10 packages/copy-as-format-20190523.258.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:10 packages/copy-as-format-20190523.258.tar

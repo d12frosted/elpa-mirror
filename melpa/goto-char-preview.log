@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-vs/goto-char-preview.git
 
 Updating /mnt/store/melpa/working/goto-char-preview/
 Checking out feee79f83194155e67f5b16ca57b51b2d941b2ee
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/goto-char-preview/
+  to /tmp/goto-char-previewKybnJR/goto-char-preview-20230111.1525
+    goto-char-preview.el -> goto-char-preview.el
+Created goto-char-preview-20230111.1525.tar containing:
+  goto-char-preview-20230111.1525/
+  goto-char-preview-20230111.1525/goto-char-preview-pkg.el
+  goto-char-preview-20230111.1525/goto-char-preview.el
+Built goto-char-preview in 4.782s, finished at 2023-06-11T00:27:35+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  9 16:03 packages/goto-char-preview-20230111.1525.el
+4.0K -rw-r--r-- 1 root root  533 Jun 11 00:27 packages/goto-char-preview-20230111.1525.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:27 packages/goto-char-preview-20230111.1525.tar

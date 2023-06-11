@@ -4,4 +4,16 @@ Source:  https://github.com/iquiw/smart-semicolon.git
 
 Updating /mnt/store/melpa/working/smart-semicolon/
 Checking out dd52a3e1a7b043fb88f799827c7b3e39f60a14f1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smart-semicolon/
+  to /tmp/smart-semicolonOa2MLc/smart-semicolon-20200909.1412
+    smart-semicolon.el -> smart-semicolon.el
+Created smart-semicolon-20200909.1412.tar containing:
+  smart-semicolon-20200909.1412/
+  smart-semicolon-20200909.1412/smart-semicolon-pkg.el
+  smart-semicolon-20200909.1412/smart-semicolon.el
+Built smart-semicolon in 2.823s, finished at 2023-06-10T22:50:26+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Jun  9 16:49 packages/smart-semicolon-20200909.1412.el
+4.0K -rw-r--r-- 1 root root  398 Jun 10 22:50 packages/smart-semicolon-20200909.1412.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:50 packages/smart-semicolon-20200909.1412.tar

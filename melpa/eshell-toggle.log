@@ -4,4 +4,16 @@ Source:  https://github.com/4DA/eshell-toggle.git
 
 Updating /mnt/store/melpa/working/eshell-toggle/
 Checking out d4e884624f02e68b267b0044322ad17baa6780f8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eshell-toggle/
+  to /tmp/eshell-togglek9pbRs/eshell-toggle-20220718.729
+    eshell-toggle.el -> eshell-toggle.el
+Created eshell-toggle-20220718.729.tar containing:
+  eshell-toggle-20220718.729/
+  eshell-toggle-20220718.729/eshell-toggle-pkg.el
+  eshell-toggle-20220718.729/eshell-toggle.el
+Built eshell-toggle in 2.910s, finished at 2023-06-11T00:18:52+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jun  9 15:51 packages/eshell-toggle-20220718.729.el
+4.0K -rw-r--r-- 1 root root  471 Jun 11 00:18 packages/eshell-toggle-20220718.729.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:18 packages/eshell-toggle-20220718.729.tar

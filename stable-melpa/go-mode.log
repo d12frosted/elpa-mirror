@@ -4,4 +4,16 @@ Source:  https://github.com/dominikh/go-mode.el.git
 
 Updating /mnt/store/melpa/working/go-mode/
 Checking out 166dfb1e090233c4609a50c2ec9f57f113c1da72
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/go-mode/
+  to /tmp/go-mode5MsV2W/go-mode-20221228.1706
+    go-mode.el -> go-mode.el
+Created go-mode-20221228.1706.tar containing:
+  go-mode-20221228.1706/
+  go-mode-20221228.1706/go-mode-pkg.el
+  go-mode-20221228.1706/go-mode.el
+Built go-mode in 5.215s, finished at 2023-06-11T00:26:56+0000
+ ✓ Success:
+112K -rw-r--r-- 1 root root 112K Jun  9 16:03 packages/go-mode-20221228.1706.el
+4.0K -rw-r--r-- 1 root root  388 Jun 11 00:26 packages/go-mode-20221228.1706.entry
+120K -rw-r--r-- 1 root root 120K Jun 11 00:26 packages/go-mode-20221228.1706.tar

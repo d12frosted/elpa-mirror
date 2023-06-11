@@ -4,4 +4,29 @@ Source:  https://github.com/emacs-lsp/emacs-ccls.git
 
 Updating /mnt/store/melpa/working/ccls/
 Checking out 29d231590fad39b4d658d9262859e60669edb9b0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ccls/
+  to /tmp/cclsqeUZ7E/ccls-20230111.1754
+    ccls-call-hierarchy.el -> ccls-call-hierarchy.el
+    ccls-code-lens.el -> ccls-code-lens.el
+    ccls-common.el -> ccls-common.el
+    ccls-inheritance-hierarchy.el -> ccls-inheritance-hierarchy.el
+    ccls-member-hierarchy.el -> ccls-member-hierarchy.el
+    ccls-semantic-highlight.el -> ccls-semantic-highlight.el
+    ccls-tree.el -> ccls-tree.el
+    ccls.el -> ccls.el
+Created ccls-20230111.1754.tar containing:
+  ccls-20230111.1754/
+  ccls-20230111.1754/ccls-call-hierarchy.el
+  ccls-20230111.1754/ccls-code-lens.el
+  ccls-20230111.1754/ccls-common.el
+  ccls-20230111.1754/ccls-inheritance-hierarchy.el
+  ccls-20230111.1754/ccls-member-hierarchy.el
+  ccls-20230111.1754/ccls-pkg.el
+  ccls-20230111.1754/ccls-semantic-highlight.el
+  ccls-20230111.1754/ccls-tree.el
+  ccls-20230111.1754/ccls.el
+Built ccls in 5.036s, finished at 2023-06-11T00:07:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 430 Jun 11 00:07 packages/ccls-20230111.1754.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 11 00:07 packages/ccls-20230111.1754.tar

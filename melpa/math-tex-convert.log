@@ -4,4 +4,19 @@ Source:  https://github.com/enricoflor/math-tex-convert.git
 
 Updating /mnt/store/melpa/working/math-tex-convert/
 Checking out 8b174d05e8e5269322a1ee90f94cf1ed018d4976
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/math-tex-convert/
+  to /tmp/math-tex-convertwIjuzz/math-tex-convert-20221210.1937
+    math-tex-convert.el -> math-tex-convert.el
+    math-tex-convert.info -> math-tex-convert.info
+    math-tex-convert.texi -> math-tex-convert.texi
+Created math-tex-convert-20221210.1937.tar containing:
+  math-tex-convert-20221210.1937/
+  math-tex-convert-20221210.1937/dir
+  math-tex-convert-20221210.1937/math-tex-convert-pkg.el
+  math-tex-convert-20221210.1937/math-tex-convert.el
+  math-tex-convert-20221210.1937/math-tex-convert.info
+Built math-tex-convert in 3.416s, finished at 2023-06-10T22:31:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 499 Jun 10 22:31 packages/math-tex-convert-20221210.1937.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:31 packages/math-tex-convert-20221210.1937.tar

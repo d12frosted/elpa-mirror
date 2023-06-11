@@ -4,4 +4,16 @@ Source:  https://github.com/masasam/emacs-easy-jekyll.git
 
 Updating /mnt/store/melpa/working/easy-jekyll/
 Checking out 7f19af310162464956f2bc4c38c6b7e95cb20321
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/easy-jekyll/
+  to /tmp/easy-jekyllyDbI9k/easy-jekyll-20211217.2311
+    easy-jekyll.el -> easy-jekyll.el
+Created easy-jekyll-20211217.2311.tar containing:
+  easy-jekyll-20211217.2311/
+  easy-jekyll-20211217.2311/easy-jekyll-pkg.el
+  easy-jekyll-20211217.2311/easy-jekyll.el
+Built easy-jekyll in 3.528s, finished at 2023-06-11T00:15:40+0000
+ ✓ Success:
+ 84K -rw-r--r-- 1 root root 84K Jun  9 15:46 packages/easy-jekyll-20211217.2311.el
+4.0K -rw-r--r-- 1 root root 394 Jun 11 00:15 packages/easy-jekyll-20211217.2311.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 11 00:15 packages/easy-jekyll-20211217.2311.tar

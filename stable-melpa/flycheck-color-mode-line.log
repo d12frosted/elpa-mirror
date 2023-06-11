@@ -4,4 +4,16 @@ Source:  https://github.com/flycheck/flycheck-color-mode-line.git
 
 Updating /mnt/store/melpa/working/flycheck-color-mode-line/
 Checking out df9be4c5bf26c4dc5ddaeed8179c4d66bdaa91f5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-color-mode-line/
+  to /tmp/flycheck-color-mode-linevzHSUw/flycheck-color-mode-line-20230106.1829
+    flycheck-color-mode-line.el -> flycheck-color-mode-line.el
+Created flycheck-color-mode-line-20230106.1829.tar containing:
+  flycheck-color-mode-line-20230106.1829/
+  flycheck-color-mode-line-20230106.1829/flycheck-color-mode-line-pkg.el
+  flycheck-color-mode-line-20230106.1829/flycheck-color-mode-line.el
+Built flycheck-color-mode-line in 2.759s, finished at 2023-06-11T00:22:29+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  9 15:56 packages/flycheck-color-mode-line-20230106.1829.el
+4.0K -rw-r--r-- 1 root root  577 Jun 11 00:22 packages/flycheck-color-mode-line-20230106.1829.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-color-mode-line-20230106.1829.tar

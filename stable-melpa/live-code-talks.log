@@ -4,4 +4,16 @@ Source:  https://github.com/david-christiansen/live-code-talks.git
 
 Updating /mnt/store/melpa/working/live-code-talks/
 Checking out 97f16a9ee4e6ff3e0f9291eaead772c66e3e12ae
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/live-code-talks/
+  to /tmp/live-code-talksWINcmR/live-code-talks-20180907.1647
+    live-code-talks.el -> live-code-talks.el
+Created live-code-talks-20180907.1647.tar containing:
+  live-code-talks-20180907.1647/
+  live-code-talks-20180907.1647/live-code-talks-pkg.el
+  live-code-talks-20180907.1647/live-code-talks.el
+Built live-code-talks in 3.087s, finished at 2023-06-10T22:29:40+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:19 packages/live-code-talks-20180907.1647.el
+4.0K -rw-r--r-- 1 root root 537 Jun 10 22:29 packages/live-code-talks-20180907.1647.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:29 packages/live-code-talks-20180907.1647.tar

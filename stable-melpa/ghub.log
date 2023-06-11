@@ -4,4 +4,32 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out 0fd648f0529f34b5da441d54c9dbff7810477d12
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ghub/
+  to /tmp/ghub6y6xDJ/ghub-20230513.1619
+    ghub-pkg.el -> ghub-pkg.el
+  ! lisp/buck.el -> buck.el
+  ! lisp/ghub-graphql.el -> ghub-graphql.el
+  ! lisp/ghub.el -> ghub.el
+  ! lisp/glab.el -> glab.el
+  ! lisp/gogs.el -> gogs.el
+  ! lisp/gsexp.el -> gsexp.el
+  ! lisp/gtea.el -> gtea.el
+  ! docs/ghub.texi -> ghub.texi
+Generating /tmp/ghub6y6xDJ/ghub-20230513.1619/ghub.info
+Created ghub-20230513.1619.tar containing:
+  ghub-20230513.1619/
+  ghub-20230513.1619/buck.el
+  ghub-20230513.1619/dir
+  ghub-20230513.1619/ghub-graphql.el
+  ghub-20230513.1619/ghub-pkg.el
+  ghub-20230513.1619/ghub.el
+  ghub-20230513.1619/ghub.info
+  ghub-20230513.1619/glab.el
+  ghub-20230513.1619/gogs.el
+  ghub-20230513.1619/gsexp.el
+  ghub-20230513.1619/gtea.el
+Built ghub in 8.219s, finished at 2023-06-11T00:25:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  414 Jun 11 00:25 packages/ghub-20230513.1619.entry
+160K -rw-r--r-- 1 root root 160K Jun 11 00:25 packages/ghub-20230513.1619.tar

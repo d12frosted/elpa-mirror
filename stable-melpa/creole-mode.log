@@ -4,4 +4,16 @@ Source:  https://github.com/nicferrier/creole-mode.git
 
 Updating /mnt/store/melpa/working/creole-mode/
 Checking out b5e79b2ec5f19fb5aacf689b5febc3e0b61515c4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/creole-mode/
+  to /tmp/creole-modeTx78B1/creole-mode-20130722.50
+    creole-mode.el -> creole-mode.el
+Created creole-mode-20130722.50.tar containing:
+  creole-mode-20130722.50/
+  creole-mode-20130722.50/creole-mode-pkg.el
+  creole-mode-20130722.50/creole-mode.el
+Built creole-mode in 3.171s, finished at 2023-06-11T00:11:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.6K Jun  9 15:41 packages/creole-mode-20130722.50.el
+4.0K -rw-r--r-- 1 root root  438 Jun 11 00:11 packages/creole-mode-20130722.50.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:11 packages/creole-mode-20130722.50.tar

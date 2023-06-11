@@ -4,4 +4,16 @@ Source:  https://github.com/purcell/inheritenv.git
 
 Updating /mnt/store/melpa/working/inheritenv/
 Checking out 13c0135ddd96519ddeb993ee21163d6e11b4f464
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/inheritenv/
+  to /tmp/inheritenvgONMBH/inheritenv-20210204.354
+    inheritenv.el -> inheritenv.el
+Created inheritenv-20210204.354.tar containing:
+  inheritenv-20210204.354/
+  inheritenv-20210204.354/inheritenv-pkg.el
+  inheritenv-20210204.354/inheritenv.el
+Built inheritenv in 3.050s, finished at 2023-06-10T22:24:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.5K Jun  9 16:12 packages/inheritenv-20210204.354.el
+4.0K -rw-r--r-- 1 root root  487 Jun 10 22:24 packages/inheritenv-20210204.354.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:24 packages/inheritenv-20210204.354.tar

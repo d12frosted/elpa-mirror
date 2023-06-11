@@ -4,4 +4,16 @@ Source:  https://github.com/flatwhatson/flycheck-guile.git
 
 Updating /mnt/store/melpa/working/flycheck-guile/
 Checking out dd7bbdc48fd21cf8d270c913c56cd580f8ec3d03
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-guile/
+  to /tmp/flycheck-guile8L6CMP/flycheck-guile-20230405.1154
+    flycheck-guile.el -> flycheck-guile.el
+Created flycheck-guile-20230405.1154.tar containing:
+  flycheck-guile-20230405.1154/
+  flycheck-guile-20230405.1154/flycheck-guile-pkg.el
+  flycheck-guile-20230405.1154/flycheck-guile.el
+Built flycheck-guile in 3.085s, finished at 2023-06-11T00:22:50+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jun  9 15:57 packages/flycheck-guile-20230405.1154.el
+4.0K -rw-r--r-- 1 root root  468 Jun 11 00:22 packages/flycheck-guile-20230405.1154.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:22 packages/flycheck-guile-20230405.1154.tar

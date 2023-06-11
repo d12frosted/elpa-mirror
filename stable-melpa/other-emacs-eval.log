@@ -4,4 +4,16 @@ Source:  https://github.com/xuchunyang/other-emacs-eval.git
 
 Updating /mnt/store/melpa/working/other-emacs-eval/
 Checking out 8ace5acafef65daabf0c6619eff60733d7f5d792
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/other-emacs-eval/
+  to /tmp/other-emacs-evalyUTD6D/other-emacs-eval-20180408.1348
+    other-emacs-eval.el -> other-emacs-eval.el
+Created other-emacs-eval-20180408.1348.tar containing:
+  other-emacs-eval-20180408.1348/
+  other-emacs-eval-20180408.1348/other-emacs-eval-pkg.el
+  other-emacs-eval-20180408.1348/other-emacs-eval.el
+Built other-emacs-eval in 7.533s, finished at 2023-06-10T22:40:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.6K Jun  9 16:34 packages/other-emacs-eval-20180408.1348.el
+4.0K -rw-r--r-- 1 root root  501 Jun 10 22:40 packages/other-emacs-eval-20180408.1348.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:40 packages/other-emacs-eval-20180408.1348.tar

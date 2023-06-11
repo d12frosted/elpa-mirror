@@ -4,4 +4,16 @@ Source:  https://github.com/SavchenkoValeriy/jeison.git
 
 Updating /mnt/store/melpa/working/jeison/
 Checking out 775b45657728c91f24f7508dfbc4d81a92b8e053
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jeison/
+  to /tmp/jeisoniDoWYa/jeison-20190721.1651
+    jeison.el -> jeison.el
+Created jeison-20190721.1651.tar containing:
+  jeison-20190721.1651/
+  jeison-20190721.1651/jeison-pkg.el
+  jeison-20190721.1651/jeison.el
+Built jeison in 6.401s, finished at 2023-06-10T22:26:23+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  9 16:14 packages/jeison-20190721.1651.el
+4.0K -rw-r--r-- 1 root root 280 Jun 10 22:26 packages/jeison-20190721.1651.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:26 packages/jeison-20190721.1651.tar

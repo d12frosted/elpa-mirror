@@ -4,4 +4,21 @@ Source:  https://github.com/AdamNiederer/ng2-mode.git
 
 Updating /mnt/store/melpa/working/ng2-mode/
 Checking out d341f177c6e4fb9d99b8639943ab5fc9184e2715
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ng2-mode/
+  to /tmp/ng2-modedhRR1b/ng2-mode-20201203.1925
+    ng2-html.el -> ng2-html.el
+    ng2-mode.el -> ng2-mode.el
+    ng2-shared.el -> ng2-shared.el
+    ng2-ts.el -> ng2-ts.el
+Created ng2-mode-20201203.1925.tar containing:
+  ng2-mode-20201203.1925/
+  ng2-mode-20201203.1925/ng2-html.el
+  ng2-mode-20201203.1925/ng2-mode-pkg.el
+  ng2-mode-20201203.1925/ng2-mode.el
+  ng2-mode-20201203.1925/ng2-shared.el
+  ng2-mode-20201203.1925/ng2-ts.el
+Built ng2-mode in 2.730s, finished at 2023-06-10T22:35:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 496 Jun 10 22:35 packages/ng2-mode-20201203.1925.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:35 packages/ng2-mode-20201203.1925.tar

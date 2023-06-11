@@ -4,4 +4,24 @@ Source:  https://github.com/11111000000/tao-theme-emacs.git
 
 Updating /mnt/store/melpa/working/tao-theme/
 Checking out 4443e91293a044869e836bfeb0b10e9b4d3b102b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tao-theme/
+  to /tmp/tao-theme4FGMOJ/tao-theme-20230529.234
+    tao-theme-emacs-autoloads.el -> tao-theme-emacs-autoloads.el
+    tao-theme-emacs-pkg.el -> tao-theme-emacs-pkg.el
+    tao-theme-pkg.el -> tao-theme-pkg.el
+    tao-theme.el -> tao-theme.el
+    tao-yang-theme.el -> tao-yang-theme.el
+    tao-yin-theme.el -> tao-yin-theme.el
+Created tao-theme-20230529.234.tar containing:
+  tao-theme-20230529.234/
+  tao-theme-20230529.234/tao-theme-emacs-autoloads.el
+  tao-theme-20230529.234/tao-theme-emacs-pkg.el
+  tao-theme-20230529.234/tao-theme-pkg.el
+  tao-theme-20230529.234/tao-theme.el
+  tao-theme-20230529.234/tao-yang-theme.el
+  tao-theme-20230529.234/tao-yin-theme.el
+Built tao-theme in 3.968s, finished at 2023-06-10T22:53:26+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  397 Jun 10 22:53 packages/tao-theme-20230529.234.entry
+112K -rw-r--r-- 1 root root 110K Jun 10 22:53 packages/tao-theme-20230529.234.tar

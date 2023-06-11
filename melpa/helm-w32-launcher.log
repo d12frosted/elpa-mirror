@@ -4,4 +4,25 @@ Source:  https://github.com/Fanael/helm-w32-launcher.git
 
 Updating /mnt/store/melpa/working/helm-w32-launcher/
 Checking out 3e59ad62b89dd21d334af0203d445a83eb25dc5b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-w32-launcher/
+  to /tmp/helm-w32-launcher55fNKX/helm-w32-launcher-20141223.2014
+    helm-w32-launcher.el -> helm-w32-launcher.el
+    helper-src => helper-src
+    license.txt -> license.txt
+Created helm-w32-launcher-20141223.2014.tar containing:
+  helm-w32-launcher-20141223.2014/
+  helm-w32-launcher-20141223.2014/helm-w32-launcher-pkg.el
+  helm-w32-launcher-20141223.2014/helm-w32-launcher.el
+  helm-w32-launcher-20141223.2014/helper-src/
+  helm-w32-launcher-20141223.2014/helper-src/ICommand.cs
+  helm-w32-launcher-20141223.2014/helper-src/ItemLister.cs
+  helm-w32-launcher-20141223.2014/helper-src/LispPrinter.cs
+  helm-w32-launcher-20141223.2014/helper-src/NativeMethods.cs
+  helm-w32-launcher-20141223.2014/helper-src/ProcessStarter.cs
+  helm-w32-launcher-20141223.2014/helper-src/Program.cs
+  helm-w32-launcher-20141223.2014/license.txt
+Built helm-w32-launcher in 2.756s, finished at 2023-06-10T22:22:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 512 Jun 10 22:22 packages/helm-w32-launcher-20141223.2014.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:22 packages/helm-w32-launcher-20141223.2014.tar

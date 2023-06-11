@@ -4,4 +4,16 @@ Source:  https://github.com/sp1ff/mpdmacs.git
 
 Updating /mnt/store/melpa/working/mpdmacs/
 Checking out 66031a8993a2a704bdfaa9c63ec590dd0c5a2eea
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mpdmacs/
+  to /tmp/mpdmacsF5cGPe/mpdmacs-20210904.2048
+    mpdmacs.el -> mpdmacs.el
+Created mpdmacs-20210904.2048.tar containing:
+  mpdmacs-20210904.2048/
+  mpdmacs-20210904.2048/mpdmacs-pkg.el
+  mpdmacs-20210904.2048/mpdmacs.el
+Built mpdmacs in 2.895s, finished at 2023-06-10T22:33:56+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Jun  9 16:25 packages/mpdmacs-20210904.2048.el
+4.0K -rw-r--r-- 1 root root 428 Jun 10 22:33 packages/mpdmacs-20210904.2048.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:33 packages/mpdmacs-20210904.2048.tar

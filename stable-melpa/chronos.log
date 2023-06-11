@@ -4,4 +4,18 @@ Source:  https://github.com/dxknight/chronos.git
 
 Updating /mnt/store/melpa/working/chronos/
 Checking out b360d9dae57aa553cf2a14ffa0756a51ad71de09
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chronos/
+  to /tmp/chronosNRGu7a/chronos-20150602.1529
+    chronos.el -> chronos.el
+    chronos.info -> chronos.info
+Created chronos-20150602.1529.tar containing:
+  chronos-20150602.1529/
+  chronos-20150602.1529/chronos-pkg.el
+  chronos-20150602.1529/chronos.el
+  chronos-20150602.1529/chronos.info
+  chronos-20150602.1529/dir
+Built chronos in 2.288s, finished at 2023-06-11T00:08:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 411 Jun 11 00:08 packages/chronos-20150602.1529.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 11 00:08 packages/chronos-20150602.1529.tar

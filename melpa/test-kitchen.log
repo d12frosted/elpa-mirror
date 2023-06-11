@@ -4,4 +4,16 @@ Source:  https://github.com/jjasghar/test-kitchen-el.git
 
 Updating /mnt/store/melpa/working/test-kitchen/
 Checking out 0fc0ca4808425f03fbeb8125246043723e2a179a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/test-kitchen/
+  to /tmp/test-kitchen2jkQ7h/test-kitchen-20171129.2035
+    test-kitchen.el -> test-kitchen.el
+Created test-kitchen-20171129.2035.tar containing:
+  test-kitchen-20171129.2035/
+  test-kitchen-20171129.2035/test-kitchen-pkg.el
+  test-kitchen-20171129.2035/test-kitchen.el
+Built test-kitchen in 3.255s, finished at 2023-06-10T22:54:01+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Jun  9 16:54 packages/test-kitchen-20171129.2035.el
+4.0K -rw-r--r-- 1 root root  349 Jun 10 22:54 packages/test-kitchen-20171129.2035.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:54 packages/test-kitchen-20171129.2035.tar

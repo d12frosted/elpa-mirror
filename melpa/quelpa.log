@@ -4,4 +4,17 @@ Source:  https://github.com/quelpa/quelpa.git
 
 Updating /mnt/store/melpa/working/quelpa/
 Checking out 79651cd0de497a8db18d79e7598eb01a4eec4f09
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/quelpa/
+  to /tmp/quelpaH2GCz5/quelpa-20221220.1136
+    bootstrap.el -> bootstrap.el
+    quelpa.el -> quelpa.el
+Created quelpa-20221220.1136.tar containing:
+  quelpa-20221220.1136/
+  quelpa-20221220.1136/bootstrap.el
+  quelpa-20221220.1136/quelpa-pkg.el
+  quelpa-20221220.1136/quelpa.el
+Built quelpa in 3.009s, finished at 2023-06-10T22:45:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 393 Jun 10 22:45 packages/quelpa-20221220.1136.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 10 22:45 packages/quelpa-20221220.1136.tar

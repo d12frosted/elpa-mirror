@@ -4,4 +4,16 @@ Source:  https://github.com/10sr/editorconfig-custom-majormode-el.git
 
 Updating /mnt/store/melpa/working/editorconfig-custom-majormode/
 Checking out 13ad1c83f847bedd4b3a19f9df7fd925853b19de
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/editorconfig-custom-majormode/
+  to /tmp/editorconfig-custom-majormodeF877WS/editorconfig-custom-majormode-20180816.244
+    editorconfig-custom-majormode.el -> editorconfig-custom-majormode.el
+Created editorconfig-custom-majormode-20180816.244.tar containing:
+  editorconfig-custom-majormode-20180816.244/
+  editorconfig-custom-majormode-20180816.244/editorconfig-custom-majormode-pkg.el
+  editorconfig-custom-majormode-20180816.244/editorconfig-custom-majormode.el
+Built editorconfig-custom-majormode in 3.274s, finished at 2023-06-11T00:16:01+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 15:47 packages/editorconfig-custom-majormode-20180816.244.el
+4.0K -rw-r--r-- 1 root root  525 Jun 11 00:16 packages/editorconfig-custom-majormode-20180816.244.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:16 packages/editorconfig-custom-majormode-20180816.244.tar

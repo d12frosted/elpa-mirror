@@ -4,4 +4,16 @@ Source:  https://github.com/alexmurray/flycheck-clang-analyzer.git
 
 Updating /mnt/store/melpa/working/flycheck-clang-analyzer/
 Checking out 646d9f3a80046ab231a07526778695d5decad92d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-clang-analyzer/
+  to /tmp/flycheck-clang-analyzeroY5OB9/flycheck-clang-analyzer-20211214.648
+    flycheck-clang-analyzer.el -> flycheck-clang-analyzer.el
+Created flycheck-clang-analyzer-20211214.648.tar containing:
+  flycheck-clang-analyzer-20211214.648/
+  flycheck-clang-analyzer-20211214.648/flycheck-clang-analyzer-pkg.el
+  flycheck-clang-analyzer-20211214.648/flycheck-clang-analyzer.el
+Built flycheck-clang-analyzer in 3.302s, finished at 2023-06-11T00:22:27+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 15:56 packages/flycheck-clang-analyzer-20211214.648.el
+4.0K -rw-r--r-- 1 root root 488 Jun 11 00:22 packages/flycheck-clang-analyzer-20211214.648.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:22 packages/flycheck-clang-analyzer-20211214.648.tar

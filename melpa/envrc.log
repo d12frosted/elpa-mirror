@@ -4,4 +4,16 @@ Source:  https://github.com/purcell/envrc.git
 
 Updating /mnt/store/melpa/working/envrc/
 Checking out d4d880faf51a3ebbfc2d45633c6c5ff6d1bc8c79
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/envrc/
+  to /tmp/envrckoD8bl/envrc-20230608.1240
+    envrc.el -> envrc.el
+Created envrc-20230608.1240.tar containing:
+  envrc-20230608.1240/
+  envrc-20230608.1240/envrc-pkg.el
+  envrc-20230608.1240/envrc.el
+Built envrc in 3.907s, finished at 2023-06-11T00:18:09+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 15:50 packages/envrc-20230608.1240.el
+4.0K -rw-r--r-- 1 root root 466 Jun 11 00:18 packages/envrc-20230608.1240.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:18 packages/envrc-20230608.1240.tar

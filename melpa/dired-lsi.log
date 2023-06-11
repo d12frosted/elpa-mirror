@@ -4,4 +4,16 @@ Source:  https://github.com/conao3/dired-lsi.el.git
 
 Updating /mnt/store/melpa/working/dired-lsi/
 Checking out 0f4038c8b47f6cfc70f82062800700c14c9912c2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-lsi/
+  to /tmp/dired-lsie5DOSU/dired-lsi-20200812.929
+    dired-lsi.el -> dired-lsi.el
+Created dired-lsi-20200812.929.tar containing:
+  dired-lsi-20200812.929/
+  dired-lsi-20200812.929/dired-lsi-pkg.el
+  dired-lsi-20200812.929/dired-lsi.el
+Built dired-lsi in 5.102s, finished at 2023-06-11T00:13:49+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jun  9 15:44 packages/dired-lsi-20200812.929.el
+4.0K -rw-r--r-- 1 root root  461 Jun 11 00:13 packages/dired-lsi-20200812.929.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:13 packages/dired-lsi-20200812.929.tar

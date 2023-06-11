@@ -4,4 +4,16 @@ Source:  https://github.com/daviderestivo/load-bash-alias.git
 
 Updating /mnt/store/melpa/working/load-bash-alias/
 Checking out 5daab364e65bdd7abe531b8557d88342b446f0c0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/load-bash-alias/
+  to /tmp/load-bash-aliasMFwWAG/load-bash-alias-20230310.1657
+    load-bash-alias.el -> load-bash-alias.el
+Created load-bash-alias-20230310.1657.tar containing:
+  load-bash-alias-20230310.1657/
+  load-bash-alias-20230310.1657/load-bash-alias-pkg.el
+  load-bash-alias-20230310.1657/load-bash-alias.el
+Built load-bash-alias in 3.182s, finished at 2023-06-10T22:29:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  9 16:19 packages/load-bash-alias-20230310.1657.el
+4.0K -rw-r--r-- 1 root root  521 Jun 10 22:29 packages/load-bash-alias-20230310.1657.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:29 packages/load-bash-alias-20230310.1657.tar

@@ -4,4 +4,19 @@ Source:  https://github.com/radian-software/el-patch.git
 
 Updating /mnt/store/melpa/working/el-patch/
 Checking out 7dfbd374f9de256de03516d777146e7f8aba1cef
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/el-patch/
+  to /tmp/el-patchnBdJ9m/el-patch-20230409.2156
+    el-patch-stub.el -> el-patch-stub.el
+    el-patch-template.el -> el-patch-template.el
+    el-patch.el -> el-patch.el
+Created el-patch-20230409.2156.tar containing:
+  el-patch-20230409.2156/
+  el-patch-20230409.2156/el-patch-pkg.el
+  el-patch-20230409.2156/el-patch-stub.el
+  el-patch-20230409.2156/el-patch-template.el
+  el-patch-20230409.2156/el-patch.el
+Built el-patch in 3.697s, finished at 2023-06-11T00:16:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  456 Jun 11 00:16 packages/el-patch-20230409.2156.entry
+100K -rw-r--r-- 1 root root 100K Jun 11 00:16 packages/el-patch-20230409.2156.tar

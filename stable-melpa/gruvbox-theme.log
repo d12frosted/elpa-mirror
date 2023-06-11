@@ -4,4 +4,29 @@ Source:  https://github.com/greduan/emacs-theme-gruvbox.git
 
 Updating /mnt/store/melpa/working/gruvbox-theme/
 Checking out 456060ed1b831c1edc6f3486be9a54247a08e39f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gruvbox-theme/
+  to /tmp/gruvbox-themeJ9CnVo/gruvbox-theme-20230607.21
+    gruvbox-dark-hard-theme.el -> gruvbox-dark-hard-theme.el
+    gruvbox-dark-medium-theme.el -> gruvbox-dark-medium-theme.el
+    gruvbox-dark-soft-theme.el -> gruvbox-dark-soft-theme.el
+    gruvbox-light-hard-theme.el -> gruvbox-light-hard-theme.el
+    gruvbox-light-medium-theme.el -> gruvbox-light-medium-theme.el
+    gruvbox-light-soft-theme.el -> gruvbox-light-soft-theme.el
+    gruvbox-theme.el -> gruvbox-theme.el
+    gruvbox.el -> gruvbox.el
+Created gruvbox-theme-20230607.21.tar containing:
+  gruvbox-theme-20230607.21/
+  gruvbox-theme-20230607.21/gruvbox-dark-hard-theme.el
+  gruvbox-theme-20230607.21/gruvbox-dark-medium-theme.el
+  gruvbox-theme-20230607.21/gruvbox-dark-soft-theme.el
+  gruvbox-theme-20230607.21/gruvbox-light-hard-theme.el
+  gruvbox-theme-20230607.21/gruvbox-light-medium-theme.el
+  gruvbox-theme-20230607.21/gruvbox-light-soft-theme.el
+  gruvbox-theme-20230607.21/gruvbox-theme-pkg.el
+  gruvbox-theme-20230607.21/gruvbox-theme.el
+  gruvbox-theme-20230607.21/gruvbox.el
+Built gruvbox-theme in 3.429s, finished at 2023-06-11T00:28:16+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  413 Jun 11 00:28 packages/gruvbox-theme-20230607.21.entry
+120K -rw-r--r-- 1 root root 120K Jun 11 00:28 packages/gruvbox-theme-20230607.21.tar

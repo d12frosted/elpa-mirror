@@ -4,4 +4,16 @@ Source:  https://github.com/Fuco1/neon-mode.git
 
 Updating /mnt/store/melpa/working/neon-mode/
 Checking out 99d15e46beaf1e7d71e39a00cce810df1f33229d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/neon-mode/
+  to /tmp/neon-modeUMrPy5/neon-mode-20180406.1156
+    neon-mode.el -> neon-mode.el
+Created neon-mode-20180406.1156.tar containing:
+  neon-mode-20180406.1156/
+  neon-mode-20180406.1156/neon-mode-pkg.el
+  neon-mode-20180406.1156/neon-mode.el
+Built neon-mode in 2.628s, finished at 2023-06-10T22:35:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  9 16:26 packages/neon-mode-20180406.1156.el
+4.0K -rw-r--r-- 1 root root  387 Jun 10 22:35 packages/neon-mode-20180406.1156.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:35 packages/neon-mode-20180406.1156.tar

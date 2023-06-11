@@ -4,4 +4,16 @@ Source:  https://github.com/rolandwalker/syntactic-sugar.git
 
 Updating /mnt/store/melpa/working/syntactic-sugar/
 Checking out b6a49df4b6056e2619eea9ca554c105ae67e115f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/syntactic-sugar/
+  to /tmp/syntactic-sugar2rBi5c/syntactic-sugar-20140508.2041
+    syntactic-sugar.el -> syntactic-sugar.el
+Created syntactic-sugar-20140508.2041.tar containing:
+  syntactic-sugar-20140508.2041/
+  syntactic-sugar-20140508.2041/syntactic-sugar-pkg.el
+  syntactic-sugar-20140508.2041/syntactic-sugar.el
+Built syntactic-sugar in 4.058s, finished at 2023-06-10T22:53:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 16:53 packages/syntactic-sugar-20140508.2041.el
+4.0K -rw-r--r-- 1 root root  430 Jun 10 22:53 packages/syntactic-sugar-20140508.2041.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:53 packages/syntactic-sugar-20140508.2041.tar

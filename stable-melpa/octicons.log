@@ -4,4 +4,17 @@ Source:  https://github.com/emacsorphanage/octicons.git
 
 Updating /mnt/store/melpa/working/octicons/
 Checking out 229286a6166dba8ddabc8c4d338798c6cd3cf67d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/octicons/
+  to /tmp/octiconsvEzxfD/octicons-20151101.340
+    octicons-data.el -> octicons-data.el
+    octicons.el -> octicons.el
+Created octicons-20151101.340.tar containing:
+  octicons-20151101.340/
+  octicons-20151101.340/octicons-data.el
+  octicons-20151101.340/octicons-pkg.el
+  octicons-20151101.340/octicons.el
+Built octicons in 3.129s, finished at 2023-06-10T22:36:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 390 Jun 10 22:36 packages/octicons-20151101.340.entry
+ 12K -rw-r--r-- 1 root root 10K Jun 10 22:36 packages/octicons-20151101.340.tar

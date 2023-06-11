@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/helm-css-scss.git
 
 Updating /mnt/store/melpa/working/helm-css-scss/
 Checking out 2169d83d8fdc661241df208cb3235112735d936e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-css-scss/
+  to /tmp/helm-css-scssrMq893/helm-css-scss-20230522.1113
+    helm-css-scss.el -> helm-css-scss.el
+Created helm-css-scss-20230522.1113.tar containing:
+  helm-css-scss-20230522.1113/
+  helm-css-scss-20230522.1113/helm-css-scss-pkg.el
+  helm-css-scss-20230522.1113/helm-css-scss.el
+Built helm-css-scss in 3.699s, finished at 2023-06-11T00:29:23+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  9 16:06 packages/helm-css-scss-20230522.1113.el
+4.0K -rw-r--r-- 1 root root 505 Jun 11 00:29 packages/helm-css-scss-20230522.1113.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:29 packages/helm-css-scss-20230522.1113.tar

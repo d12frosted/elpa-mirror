@@ -4,4 +4,16 @@ Source:  https://github.com/juergenhoetzel/emacs-guake.git
 
 Updating /mnt/store/melpa/working/guake/
 Checking out 2753ce833b95bd1f042ac0e4b7adfe34975a88ed
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/guake/
+  to /tmp/guake0rDGxd/guake-20221029.1811
+    guake.el -> guake.el
+Created guake-20221029.1811.tar containing:
+  guake-20221029.1811/
+  guake-20221029.1811/guake-pkg.el
+  guake-20221029.1811/guake.el
+Built guake in 3.559s, finished at 2023-06-11T00:28:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  9 16:04 packages/guake-20221029.1811.el
+4.0K -rw-r--r-- 1 root root  425 Jun 11 00:28 packages/guake-20221029.1811.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:28 packages/guake-20221029.1811.tar

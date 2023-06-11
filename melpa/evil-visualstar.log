@@ -4,4 +4,16 @@ Source:  https://github.com/bling/evil-visualstar.git
 
 Updating /mnt/store/melpa/working/evil-visualstar/
 Checking out 06c053d8f7381f91c53311b1234872ca96ced752
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-visualstar/
+  to /tmp/evil-visualstarE2fnQn/evil-visualstar-20160223.48
+    evil-visualstar.el -> evil-visualstar.el
+Created evil-visualstar-20160223.48.tar containing:
+  evil-visualstar-20160223.48/
+  evil-visualstar-20160223.48/evil-visualstar-pkg.el
+  evil-visualstar-20160223.48/evil-visualstar.el
+Built evil-visualstar in 4.170s, finished at 2023-06-11T00:20:38+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Jun  9 15:53 packages/evil-visualstar-20160223.48.el
+4.0K -rw-r--r-- 1 root root  395 Jun 11 00:20 packages/evil-visualstar-20160223.48.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/evil-visualstar-20160223.48.tar

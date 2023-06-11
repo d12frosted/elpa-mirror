@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-helm/helm-switch-to-repl.git
 
 Updating /mnt/store/melpa/working/helm-switch-to-repl/
 Checking out f0e732e7217fc0373b0805245fa15920cf676619
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-switch-to-repl/
+  to /tmp/helm-switch-to-replbZOO1c/helm-switch-to-repl-20210206.844
+    helm-switch-to-repl.el -> helm-switch-to-repl.el
+Created helm-switch-to-repl-20210206.844.tar containing:
+  helm-switch-to-repl-20210206.844/
+  helm-switch-to-repl-20210206.844/helm-switch-to-repl-pkg.el
+  helm-switch-to-repl-20210206.844/helm-switch-to-repl.el
+Built helm-switch-to-repl in 3.025s, finished at 2023-06-10T22:22:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:08 packages/helm-switch-to-repl-20210206.844.el
+4.0K -rw-r--r-- 1 root root 489 Jun 10 22:22 packages/helm-switch-to-repl-20210206.844.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:22 packages/helm-switch-to-repl-20210206.844.tar

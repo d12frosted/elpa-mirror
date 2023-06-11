@@ -4,4 +4,16 @@ Source:  https://github.com/damon-kwok/v-mode.git
 
 Updating /mnt/store/melpa/working/v-mode/
 Checking out 84f26ab0f0f5b23133292674da9fa4558207c33d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/v-mode/
+  to /tmp/v-mode78VBiP/v-mode-20221007.635
+    v-mode.el -> v-mode.el
+Created v-mode-20221007.635.tar containing:
+  v-mode-20221007.635/
+  v-mode-20221007.635/v-mode-pkg.el
+  v-mode-20221007.635/v-mode.el
+Built v-mode in 3.256s, finished at 2023-06-10T22:56:28+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:58 packages/v-mode-20221007.635.el
+4.0K -rw-r--r-- 1 root root 302 Jun 10 22:56 packages/v-mode-20221007.635.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:56 packages/v-mode-20221007.635.tar

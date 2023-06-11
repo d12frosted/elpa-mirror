@@ -4,4 +4,16 @@ Source:  https://github.com/conao3/cort.el.git
 
 Updating /mnt/store/melpa/working/cort/
 Checking out 3f64a7b03a4c5b768ec21fd5987acd0d62d16c7b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cort/
+  to /tmp/cortjRBq1k/cort-20211020.18
+    cort.el -> cort.el
+Created cort-20211020.18.tar containing:
+  cort-20211020.18/
+  cort-20211020.18/cort-pkg.el
+  cort-20211020.18/cort.el
+Built cort in 3.236s, finished at 2023-06-11T00:10:54+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 15:39 packages/cort-20211020.18.el
+4.0K -rw-r--r-- 1 root root 447 Jun 11 00:10 packages/cort-20211020.18.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:10 packages/cort-20211020.18.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/MetroWind/notink-theme.git
 
 Updating /mnt/store/melpa/working/notink-theme/
 Checking out 6115857fe75c1adbbce4165a2b77a11a271aaf31
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/notink-theme/
+  to /tmp/notink-themeYphQ0d/notink-theme-20220114.1955
+    notink-theme.el -> notink-theme.el
+Created notink-theme-20220114.1955.tar containing:
+  notink-theme-20220114.1955/
+  notink-theme-20220114.1955/notink-theme-pkg.el
+  notink-theme-20220114.1955/notink-theme.el
+Built notink-theme in 2.910s, finished at 2023-06-10T22:35:44+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 16:27 packages/notink-theme-20220114.1955.el
+4.0K -rw-r--r-- 1 root root 444 Jun 10 22:35 packages/notink-theme-20220114.1955.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:35 packages/notink-theme-20220114.1955.tar

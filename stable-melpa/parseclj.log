@@ -4,4 +4,23 @@ Source:  https://github.com/clojure-emacs/parseclj.git
 
 Updating /mnt/store/melpa/working/parseclj/
 Checking out 4d0e780e00f1828b00c43099e6eebc6582998f72
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/parseclj/
+  to /tmp/parsecljqhaq9k/parseclj-20220422.936
+    parseclj-alist.el -> parseclj-alist.el
+    parseclj-ast.el -> parseclj-ast.el
+    parseclj-lex.el -> parseclj-lex.el
+    parseclj-parser.el -> parseclj-parser.el
+    parseclj.el -> parseclj.el
+Created parseclj-20220422.936.tar containing:
+  parseclj-20220422.936/
+  parseclj-20220422.936/parseclj-alist.el
+  parseclj-20220422.936/parseclj-ast.el
+  parseclj-20220422.936/parseclj-lex.el
+  parseclj-20220422.936/parseclj-parser.el
+  parseclj-20220422.936/parseclj-pkg.el
+  parseclj-20220422.936/parseclj.el
+Built parseclj in 3.299s, finished at 2023-06-10T22:41:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 394 Jun 10 22:41 packages/parseclj-20220422.936.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:41 packages/parseclj-20220422.936.tar

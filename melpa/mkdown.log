@@ -4,4 +4,17 @@ Source:  https://github.com/ajtulloch/mkdown.el.git
 
 Updating /mnt/store/melpa/working/mkdown/
 Checking out 8e23de82719af6c5b53b52b3308a02b3a1fb872e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mkdown/
+  to /tmp/mkdownkn7De1/mkdown-20140517.1418
+    mkdown.el -> mkdown.el
+    mkdown.css -> mkdown.css
+Created mkdown-20140517.1418.tar containing:
+  mkdown-20140517.1418/
+  mkdown-20140517.1418/mkdown-pkg.el
+  mkdown-20140517.1418/mkdown.css
+  mkdown-20140517.1418/mkdown.el
+Built mkdown in 3.302s, finished at 2023-06-10T22:32:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  363 Jun 10 22:32 packages/mkdown-20140517.1418.entry
+140K -rw-r--r-- 1 root root 140K Jun 10 22:32 packages/mkdown-20140517.1418.tar

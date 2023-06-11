@@ -4,4 +4,16 @@ Source:  https://github.com/tarsius/imapfilter.git
 
 Updating /mnt/store/melpa/working/imapfilter/
 Checking out 79bbbe918319bc1e8f42a0bef53dc7c77fe868ea
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/imapfilter/
+  to /tmp/imapfilterAVFQZf/imapfilter-20180318.2222
+    imapfilter.el -> imapfilter.el
+Created imapfilter-20180318.2222.tar containing:
+  imapfilter-20180318.2222/
+  imapfilter-20180318.2222/imapfilter-pkg.el
+  imapfilter-20180318.2222/imapfilter.el
+Built imapfilter in 3.025s, finished at 2023-06-10T22:24:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jun  9 16:12 packages/imapfilter-20180318.2222.el
+4.0K -rw-r--r-- 1 root root  427 Jun 10 22:24 packages/imapfilter-20180318.2222.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:24 packages/imapfilter-20180318.2222.tar

@@ -4,4 +4,27 @@ Source:  https://github.com/PillFall/languagetool.el.git
 
 Updating /mnt/store/melpa/working/languagetool/
 Checking out b136d531129eb488dc4134784e34c4afedcb0c2f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/languagetool/
+  to /tmp/languagetool9VpCqe/languagetool-20230325.507
+    languagetool-console.el -> languagetool-console.el
+    languagetool-core.el -> languagetool-core.el
+    languagetool-correction.el -> languagetool-correction.el
+    languagetool-issue.el -> languagetool-issue.el
+    languagetool-java.el -> languagetool-java.el
+    languagetool-server.el -> languagetool-server.el
+    languagetool.el -> languagetool.el
+Created languagetool-20230325.507.tar containing:
+  languagetool-20230325.507/
+  languagetool-20230325.507/languagetool-console.el
+  languagetool-20230325.507/languagetool-core.el
+  languagetool-20230325.507/languagetool-correction.el
+  languagetool-20230325.507/languagetool-issue.el
+  languagetool-20230325.507/languagetool-java.el
+  languagetool-20230325.507/languagetool-pkg.el
+  languagetool-20230325.507/languagetool-server.el
+  languagetool-20230325.507/languagetool.el
+Built languagetool in 2.952s, finished at 2023-06-10T22:28:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 522 Jun 10 22:28 packages/languagetool-20230325.507.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:28 packages/languagetool-20230325.507.tar

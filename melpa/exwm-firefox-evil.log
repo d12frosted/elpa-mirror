@@ -4,4 +4,16 @@ Source:  https://github.com/walseb/exwm-firefox-evil.git
 
 Updating /mnt/store/melpa/working/exwm-firefox-evil/
 Checking out a377326e2e4ac386a0abb3fc9b1b356a0d955b61
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exwm-firefox-evil/
+  to /tmp/exwm-firefox-evilHCzKoR/exwm-firefox-evil-20220318.1958
+    exwm-firefox-evil.el -> exwm-firefox-evil.el
+Created exwm-firefox-evil-20220318.1958.tar containing:
+  exwm-firefox-evil-20220318.1958/
+  exwm-firefox-evil-20220318.1958/exwm-firefox-evil-pkg.el
+  exwm-firefox-evil-20220318.1958/exwm-firefox-evil.el
+Built exwm-firefox-evil in 3.779s, finished at 2023-06-11T00:21:00+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 15:54 packages/exwm-firefox-evil-20220318.1958.el
+4.0K -rw-r--r-- 1 root root 613 Jun 11 00:21 packages/exwm-firefox-evil-20220318.1958.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:20 packages/exwm-firefox-evil-20220318.1958.tar

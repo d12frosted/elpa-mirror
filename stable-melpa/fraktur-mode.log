@@ -4,4 +4,16 @@ Source:  https://github.com/grettke/fraktur-mode.git
 
 Updating /mnt/store/melpa/working/fraktur-mode/
 Checking out 514baf5546aed12a0d9fa0fe66e87cdcc7843b08
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fraktur-mode/
+  to /tmp/fraktur-modePZV8E5/fraktur-mode-20160815.227
+    fraktur-mode.el -> fraktur-mode.el
+Created fraktur-mode-20160815.227.tar containing:
+  fraktur-mode-20160815.227/
+  fraktur-mode-20160815.227/fraktur-mode-pkg.el
+  fraktur-mode-20160815.227/fraktur-mode.el
+Built fraktur-mode in 3.015s, finished at 2023-06-11T00:24:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jun  9 15:59 packages/fraktur-mode-20160815.227.el
+4.0K -rw-r--r-- 1 root root  478 Jun 11 00:24 packages/fraktur-mode-20160815.227.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:24 packages/fraktur-mode-20160815.227.tar

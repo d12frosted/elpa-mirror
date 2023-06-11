@@ -4,4 +4,45 @@ Source:  https://github.com/leanprover/lean-mode.git
 
 Updating /mnt/store/melpa/working/lean-mode/
 Checking out 362bc6fa3efb1874c525ed6b4b6f24f76af22596
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lean-mode/
+  to /tmp/lean-modeoZgQy2/lean-mode-20220501.1007
+    lean-debug.el -> lean-debug.el
+    lean-dev.el -> lean-dev.el
+    lean-eri.el -> lean-eri.el
+    lean-flycheck.el -> lean-flycheck.el
+    lean-hole.el -> lean-hole.el
+    lean-info.el -> lean-info.el
+    lean-input.el -> lean-input.el
+    lean-leanpkg.el -> lean-leanpkg.el
+    lean-message-boxes.el -> lean-message-boxes.el
+    lean-mode.el -> lean-mode.el
+    lean-right-click.el -> lean-right-click.el
+    lean-server.el -> lean-server.el
+    lean-settings.el -> lean-settings.el
+    lean-syntax.el -> lean-syntax.el
+    lean-type.el -> lean-type.el
+    lean-util.el -> lean-util.el
+Created lean-mode-20220501.1007.tar containing:
+  lean-mode-20220501.1007/
+  lean-mode-20220501.1007/lean-debug.el
+  lean-mode-20220501.1007/lean-dev.el
+  lean-mode-20220501.1007/lean-eri.el
+  lean-mode-20220501.1007/lean-flycheck.el
+  lean-mode-20220501.1007/lean-hole.el
+  lean-mode-20220501.1007/lean-info.el
+  lean-mode-20220501.1007/lean-input.el
+  lean-mode-20220501.1007/lean-leanpkg.el
+  lean-mode-20220501.1007/lean-message-boxes.el
+  lean-mode-20220501.1007/lean-mode-pkg.el
+  lean-mode-20220501.1007/lean-mode.el
+  lean-mode-20220501.1007/lean-right-click.el
+  lean-mode-20220501.1007/lean-server.el
+  lean-mode-20220501.1007/lean-settings.el
+  lean-mode-20220501.1007/lean-syntax.el
+  lean-mode-20220501.1007/lean-type.el
+  lean-mode-20220501.1007/lean-util.el
+Built lean-mode in 3.016s, finished at 2023-06-10T22:28:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  733 Jun 10 22:28 packages/lean-mode-20220501.1007.entry
+152K -rw-r--r-- 1 root root 150K Jun 10 22:28 packages/lean-mode-20220501.1007.tar

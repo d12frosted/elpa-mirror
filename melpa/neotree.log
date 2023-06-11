@@ -4,4 +4,20 @@ Source:  https://github.com/jaypei/emacs-neotree.git
 
 Updating /mnt/store/melpa/working/neotree/
 Checking out 98fe21334affaffe2334bf7c987edaf1980d2d0b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/neotree/
+  to /tmp/neotreeCqKQnl/neotree-20200324.1946
+    neotree.el -> neotree.el
+    icons => icons
+Created neotree-20200324.1946.tar containing:
+  neotree-20200324.1946/
+  neotree-20200324.1946/icons/
+  neotree-20200324.1946/icons/close.xpm
+  neotree-20200324.1946/icons/leaf.xpm
+  neotree-20200324.1946/icons/open.xpm
+  neotree-20200324.1946/neotree-pkg.el
+  neotree-20200324.1946/neotree.el
+Built neotree in 2.700s, finished at 2023-06-10T22:35:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 388 Jun 10 22:35 packages/neotree-20200324.1946.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 10 22:35 packages/neotree-20200324.1946.tar

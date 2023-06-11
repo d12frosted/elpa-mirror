@@ -4,4 +4,16 @@ Source:  https://github.com/n3mo/cyberpunk-theme.el.git
 
 Updating /mnt/store/melpa/working/cyberpunk-theme/
 Checking out 81004fc774d373777d426926fc11abcf1e7ab334
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cyberpunk-theme/
+  to /tmp/cyberpunk-themeioaGW7/cyberpunk-theme-20200601.1632
+    cyberpunk-theme.el -> cyberpunk-theme.el
+Created cyberpunk-theme-20200601.1632.tar containing:
+  cyberpunk-theme-20200601.1632/
+  cyberpunk-theme-20200601.1632/cyberpunk-theme-pkg.el
+  cyberpunk-theme-20200601.1632/cyberpunk-theme.el
+Built cyberpunk-theme in 3.554s, finished at 2023-06-11T00:11:52+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 50K Jun  9 15:42 packages/cyberpunk-theme-20200601.1632.el
+4.0K -rw-r--r-- 1 root root 466 Jun 11 00:11 packages/cyberpunk-theme-20200601.1632.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:11 packages/cyberpunk-theme-20200601.1632.tar

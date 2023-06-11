@@ -4,4 +4,16 @@ Source:  https://github.com/cgshep/encrypt-region.git
 
 Updating /mnt/store/melpa/working/encrypt-region/
 Checking out 8ff5704bc6f4c57f935a8b7680129e599bbe474f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/encrypt-region/
+  to /tmp/encrypt-region1gd1z7/encrypt-region-20220802.918
+    encrypt-region.el -> encrypt-region.el
+Created encrypt-region-20220802.918.tar containing:
+  encrypt-region-20220802.918/
+  encrypt-region-20220802.918/encrypt-region-pkg.el
+  encrypt-region-20220802.918/encrypt-region.el
+Built encrypt-region in 2.887s, finished at 2023-06-11T00:18:02+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Jun  9 15:50 packages/encrypt-region-20220802.918.el
+4.0K -rw-r--r-- 1 root root  445 Jun 11 00:18 packages/encrypt-region-20220802.918.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:18 packages/encrypt-region-20220802.918.tar

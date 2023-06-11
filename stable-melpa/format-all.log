@@ -4,4 +4,16 @@ Source:  https://github.com/lassik/emacs-format-all-the-code.git
 
 Updating /mnt/store/melpa/working/format-all/
 Checking out 4a5c64e44083de91c5b49cfea71872d503cae8fc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/format-all/
+  to /tmp/format-allPEwbVT/format-all-20230530.859
+    format-all.el -> format-all.el
+Created format-all-20230530.859.tar containing:
+  format-all-20230530.859/
+  format-all-20230530.859/format-all-pkg.el
+  format-all-20230530.859/format-all.el
+Built format-all in 3.219s, finished at 2023-06-11T00:24:32+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 61K Jun  9 15:59 packages/format-all-20230530.859.el
+4.0K -rw-r--r-- 1 root root 567 Jun 11 00:24 packages/format-all-20230530.859.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 11 00:24 packages/format-all-20230530.859.tar

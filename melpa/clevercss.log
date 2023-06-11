@@ -4,4 +4,16 @@ Source:  https://github.com/jschaf/CleverCSS-Mode.git
 
 Updating /mnt/store/melpa/working/clevercss/
 Checking out b8a3c0dd674367c62b1a1ffec84d88fe0c0219bc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/clevercss/
+  to /tmp/clevercssJ75Oh2/clevercss-20131229.155
+    clevercss.el -> clevercss.el
+Created clevercss-20131229.155.tar containing:
+  clevercss-20131229.155/
+  clevercss-20131229.155/clevercss-pkg.el
+  clevercss-20131229.155/clevercss.el
+Built clevercss in 2.869s, finished at 2023-06-11T00:08:40+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 26K Jun  9 15:35 packages/clevercss-20131229.155.el
+4.0K -rw-r--r-- 1 root root 379 Jun 11 00:08 packages/clevercss-20131229.155.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:08 packages/clevercss-20131229.155.tar

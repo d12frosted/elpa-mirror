@@ -4,4 +4,16 @@ Source:  https://github.com/mjwall/ample-zen.git
 
 Updating /mnt/store/melpa/working/ample-zen-theme/
 Checking out b277bb7abd4b6624e8d59f02474b79af50a007bd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ample-zen-theme/
+  to /tmp/ample-zen-theme0whlGH/ample-zen-theme-20150119.2154
+    ample-zen-theme.el -> ample-zen-theme.el
+Created ample-zen-theme-20150119.2154.tar containing:
+  ample-zen-theme-20150119.2154/
+  ample-zen-theme-20150119.2154/ample-zen-theme-pkg.el
+  ample-zen-theme-20150119.2154/ample-zen-theme.el
+Built ample-zen-theme in 2.869s, finished at 2023-06-11T00:03:04+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 38K Jun  9 15:28 packages/ample-zen-theme-20150119.2154.el
+4.0K -rw-r--r-- 1 root root 355 Jun 11 00:03 packages/ample-zen-theme-20150119.2154.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:03 packages/ample-zen-theme-20150119.2154.tar

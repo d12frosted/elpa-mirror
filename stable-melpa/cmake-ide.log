@@ -4,4 +4,16 @@ Source:  https://github.com/atilaneves/cmake-ide.git
 
 Updating /mnt/store/melpa/working/cmake-ide/
 Checking out 28dc4ab5bd01d99553901b4efeb7234280928b18
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cmake-ide/
+  to /tmp/cmake-ideoB1U0u/cmake-ide-20210610.1525
+    cmake-ide.el -> cmake-ide.el
+Created cmake-ide-20210610.1525.tar containing:
+  cmake-ide-20210610.1525/
+  cmake-ide-20210610.1525/cmake-ide-pkg.el
+  cmake-ide-20210610.1525/cmake-ide.el
+Built cmake-ide in 3.341s, finished at 2023-06-11T00:09:05+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 53K Jun  9 15:36 packages/cmake-ide-20210610.1525.el
+4.0K -rw-r--r-- 1 root root 594 Jun 11 00:09 packages/cmake-ide-20210610.1525.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:09 packages/cmake-ide-20210610.1525.tar

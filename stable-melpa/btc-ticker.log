@@ -4,4 +4,16 @@ Source:  https://github.com/niedbalski/emacs-btc-ticker.git
 
 Updating /mnt/store/melpa/working/btc-ticker/
 Checking out 2ed18ac6338d5fe98c578f0875840af07f0bc42a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/btc-ticker/
+  to /tmp/btc-tickerX9nTV9/btc-ticker-20220409.1647
+    btc-ticker.el -> btc-ticker.el
+Created btc-ticker-20220409.1647.tar containing:
+  btc-ticker-20220409.1647/
+  btc-ticker-20220409.1647/btc-ticker-pkg.el
+  btc-ticker-20220409.1647/btc-ticker.el
+Built btc-ticker in 3.224s, finished at 2023-06-11T00:06:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  9 15:33 packages/btc-ticker-20220409.1647.el
+4.0K -rw-r--r-- 1 root root  441 Jun 11 00:06 packages/btc-ticker-20220409.1647.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:06 packages/btc-ticker-20220409.1647.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/david-christiansen/zombie-trellys-mode.git
 
 Updating /mnt/store/melpa/working/zombie-trellys-mode/
 Checking out 9e99d444a387dd1634cab62ef802683f5bf5d907
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zombie-trellys-mode/
+  to /tmp/zombie-trellys-modeVJc5Kb/zombie-trellys-mode-20150304.1702
+    zombie-trellys-mode.el -> zombie-trellys-mode.el
+Created zombie-trellys-mode-20150304.1702.tar containing:
+  zombie-trellys-mode-20150304.1702/
+  zombie-trellys-mode-20150304.1702/zombie-trellys-mode-pkg.el
+  zombie-trellys-mode-20150304.1702/zombie-trellys-mode.el
+Built zombie-trellys-mode in 2.792s, finished at 2023-06-10T23:00:36+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jun  9 17:03 packages/zombie-trellys-mode-20150304.1702.el
+4.0K -rw-r--r-- 1 root root  553 Jun 10 23:00 packages/zombie-trellys-mode-20150304.1702.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 23:00 packages/zombie-trellys-mode-20150304.1702.tar

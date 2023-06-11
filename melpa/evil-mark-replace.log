@@ -4,4 +4,16 @@ Source:  https://github.com/redguardtoo/evil-mark-replace.git
 
 Updating /mnt/store/melpa/working/evil-mark-replace/
 Checking out d4fec7b10e93cca149163324cd2b2b2dcc211047
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-mark-replace/
+  to /tmp/evil-mark-replaceW6hNFE/evil-mark-replace-20200630.940
+    evil-mark-replace.el -> evil-mark-replace.el
+Created evil-mark-replace-20200630.940.tar containing:
+  evil-mark-replace-20200630.940/
+  evil-mark-replace-20200630.940/evil-mark-replace-pkg.el
+  evil-mark-replace-20200630.940/evil-mark-replace.el
+Built evil-mark-replace in 3.731s, finished at 2023-06-11T00:19:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.4K Jun  9 15:53 packages/evil-mark-replace-20200630.940.el
+4.0K -rw-r--r-- 1 root root  499 Jun 11 00:19 packages/evil-mark-replace-20200630.940.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:19 packages/evil-mark-replace-20200630.940.tar

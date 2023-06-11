@@ -4,4 +4,16 @@ Source:  https://github.com/jakebox/org-preview-html.git
 
 Updating /mnt/store/melpa/working/org-preview-html/
 Checking out 785e1f5c99c0f2d76a9a6611a06b4552a343e221
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-preview-html/
+  to /tmp/org-preview-htmlhcOHrh/org-preview-html-20220809.1033
+    org-preview-html.el -> org-preview-html.el
+Created org-preview-html-20220809.1033.tar containing:
+  org-preview-html-20220809.1033/
+  org-preview-html-20220809.1033/org-preview-html-pkg.el
+  org-preview-html-20220809.1033/org-preview-html.el
+Built org-preview-html in 3.017s, finished at 2023-06-10T22:38:38+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jun  9 16:33 packages/org-preview-html-20220809.1033.el
+4.0K -rw-r--r-- 1 root root  526 Jun 10 22:38 packages/org-preview-html-20220809.1033.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:38 packages/org-preview-html-20220809.1033.tar

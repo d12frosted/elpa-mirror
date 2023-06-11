@@ -4,4 +4,16 @@ Source:  https://github.com/Alexander-Miller/treemacs.git
 
 Updating /mnt/store/melpa/working/treemacs-evil/
 Checking out 12193dfa41d73f26386eacaeafd9ffaeee6491bd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/treemacs-evil/
+  to /tmp/treemacs-evil2PzEA2/treemacs-evil-20230510.1644
+  ! src/extra/treemacs-evil.el -> treemacs-evil.el
+Created treemacs-evil-20230510.1644.tar containing:
+  treemacs-evil-20230510.1644/
+  treemacs-evil-20230510.1644/treemacs-evil-pkg.el
+  treemacs-evil-20230510.1644/treemacs-evil.el
+Built treemacs-evil in 4.897s, finished at 2023-06-10T22:55:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 16:56 packages/treemacs-evil-20230510.1644.el
+4.0K -rw-r--r-- 1 root root  459 Jun 10 22:55 packages/treemacs-evil-20230510.1644.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:55 packages/treemacs-evil-20230510.1644.tar

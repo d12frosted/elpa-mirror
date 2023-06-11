@@ -4,4 +4,17 @@ Source:  https://github.com/frederic-santos/ob-ess-julia.git
 
 Updating /mnt/store/melpa/working/ob-ess-julia/
 Checking out 147e9e7fe55c41dd77171417e92af40db3530b84
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-ess-julia/
+  to /tmp/ob-ess-juliaWPyAtl/ob-ess-julia-20210414.1444
+    ob-ess-julia.el -> ob-ess-julia.el
+    ob-ess-julia-startup.jl -> ob-ess-julia-startup.jl
+Created ob-ess-julia-20210414.1444.tar containing:
+  ob-ess-julia-20210414.1444/
+  ob-ess-julia-20210414.1444/ob-ess-julia-pkg.el
+  ob-ess-julia-20210414.1444/ob-ess-julia-startup.jl
+  ob-ess-julia-20210414.1444/ob-ess-julia.el
+Built ob-ess-julia in 3.268s, finished at 2023-06-10T22:36:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 420 Jun 10 22:36 packages/ob-ess-julia-20210414.1444.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:36 packages/ob-ess-julia-20210414.1444.tar

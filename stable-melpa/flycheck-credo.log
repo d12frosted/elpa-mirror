@@ -4,4 +4,16 @@ Source:  https://github.com/aaronjensen/flycheck-credo.git
 
 Updating /mnt/store/melpa/working/flycheck-credo/
 Checking out e88f11ead53805c361ec7706e44c3dfee1daa19f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-credo/
+  to /tmp/flycheck-credoLTpDi1/flycheck-credo-20170526.1545
+    flycheck-credo.el -> flycheck-credo.el
+Created flycheck-credo-20170526.1545.tar containing:
+  flycheck-credo-20170526.1545/
+  flycheck-credo-20170526.1545/flycheck-credo-pkg.el
+  flycheck-credo-20170526.1545/flycheck-credo.el
+Built flycheck-credo in 3.195s, finished at 2023-06-11T00:22:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.0K Jun  9 15:56 packages/flycheck-credo-20170526.1545.el
+4.0K -rw-r--r-- 1 root root  418 Jun 11 00:22 packages/flycheck-credo-20170526.1545.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-credo-20170526.1545.tar

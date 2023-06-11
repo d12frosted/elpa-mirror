@@ -4,4 +4,16 @@ Source:  https://github.com/rafoo/dedukti-mode.git
 
 Updating /mnt/store/melpa/working/dedukti-mode/
 Checking out d7c3505a1046187de3c3aeb144455078d514594e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dedukti-mode/
+  to /tmp/dedukti-modeSFOpA3/dedukti-mode-20171103.1212
+    dedukti-mode.el -> dedukti-mode.el
+Created dedukti-mode-20171103.1212.tar containing:
+  dedukti-mode-20171103.1212/
+  dedukti-mode-20171103.1212/dedukti-mode-pkg.el
+  dedukti-mode-20171103.1212/dedukti-mode.el
+Built dedukti-mode in 4.117s, finished at 2023-06-11T00:12:36+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  9 15:43 packages/dedukti-mode-20171103.1212.el
+4.0K -rw-r--r-- 1 root root 363 Jun 11 00:12 packages/dedukti-mode-20171103.1212.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:12 packages/dedukti-mode-20171103.1212.tar

@@ -4,4 +4,58 @@ Source:  https://github.com/mattfidler/el-autoyas.el.git
 
 Updating /mnt/store/melpa/working/el-autoyas/
 Checking out bde0251ecb504f585dfa27c205c8e312655310cc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/el-autoyas/
+  to /tmp/el-autoyasHAVaEp/el-autoyas-20120918.1317
+    el-autoyas.el -> el-autoyas.el
+    el-autoyas.texi -> el-autoyas.texi
+Generating /tmp/el-autoyasHAVaEp/el-autoyas-20120918.1317/el-autoyas.info
+
+Command '' exited with non-zero exit-code: 1
+
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:76: @node `Hook run on package load' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:80: @node `yas-backward-compatability' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:70: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:86: @node `Hook run on package load' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:90: @node `yas-backward-compatability' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:70: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:96: @node `Hook run on package load' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:100: @node `yas-backward-compatability' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:70: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:106: @node `Hook run on package load' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:110: @node `yas-backward-compatability' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:70: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:116: @node `Hook run on package load' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:120: @node `yas-backward-compatability' previously defined
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:70: here is the previous definition as @node
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:71: raising the section level of @subsubsection which is too low
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:81: raising the section level of @subsubsection which is too low
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:91: raising the section level of @subsubsection which is too low
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:101: raising the section level of @subsubsection which is too low
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:111: raising the section level of @subsubsection which is too low
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:121: raising the section level of @subsubsection which is too low
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: warning: node next `Hook run on package load' in menu `History' and in sectioning `' differ
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: warning: node prev `Hook run on package load' in menu `Hook run on package load' and in sectioning `About' differ
+/mnt/store/melpa/working/el-autoyas/el-autoyas.texi:126: warning: node prev `History' in menu `Hook run on package load' and in sectioning `' differ
+
+Error: (error "Command exited with non-zero exit-code: 1")
+
+Command '' exited with non-zero exit-code: 1
+
+install-info: No such file or directory for /tmp/el-autoyasHAVaEp/el-autoyas-20120918.1317/el-autoyas.info
+
+Error: (error "Command exited with non-zero exit-code: 1")
+Created el-autoyas-20120918.1317.tar containing:
+  el-autoyas-20120918.1317/
+  el-autoyas-20120918.1317/dir
+  el-autoyas-20120918.1317/el-autoyas-pkg.el
+  el-autoyas-20120918.1317/el-autoyas.el
+Built el-autoyas in 5.855s, finished at 2023-06-11T00:16:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 414 Jun 11 00:16 packages/el-autoyas-20120918.1317.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:16 packages/el-autoyas-20120918.1317.tar

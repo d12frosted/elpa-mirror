@@ -4,4 +4,16 @@ Source:  https://github.com/mrkkrp/avy-menu.git
 
 Updating /mnt/store/melpa/working/avy-menu/
 Checking out e79d892afd974105a6b24e8985fef0c9a1b10b4c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/avy-menu/
+  to /tmp/avy-menueNwpTo/avy-menu-20230606.1519
+    avy-menu.el -> avy-menu.el
+Created avy-menu-20230606.1519.tar containing:
+  avy-menu-20230606.1519/
+  avy-menu-20230606.1519/avy-menu-pkg.el
+  avy-menu-20230606.1519/avy-menu.el
+Built avy-menu in 3.602s, finished at 2023-06-11T00:04:41+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.5K Jun  9 15:30 packages/avy-menu-20230606.1519.el
+4.0K -rw-r--r-- 1 root root  474 Jun 11 00:04 packages/avy-menu-20230606.1519.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:04 packages/avy-menu-20230606.1519.tar

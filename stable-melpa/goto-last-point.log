@@ -4,4 +4,16 @@ Source:  https://git.sr.ht/~gitmux/goto-last-point
 
 Updating /mnt/store/melpa/working/goto-last-point/
 Checking out 2ad8ff095bc34b433803c824ec4f500ff51cd1b2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/goto-last-point/
+  to /tmp/goto-last-pointHMzcIf/goto-last-point-20230406.1822
+    goto-last-point.el -> goto-last-point.el
+Created goto-last-point-20230406.1822.tar containing:
+  goto-last-point-20230406.1822/
+  goto-last-point-20230406.1822/goto-last-point-pkg.el
+  goto-last-point-20230406.1822/goto-last-point.el
+Built goto-last-point in 4.375s, finished at 2023-06-11T00:27:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  9 16:03 packages/goto-last-point-20230406.1822.el
+4.0K -rw-r--r-- 1 root root  498 Jun 11 00:27 packages/goto-last-point-20230406.1822.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:27 packages/goto-last-point-20230406.1822.tar

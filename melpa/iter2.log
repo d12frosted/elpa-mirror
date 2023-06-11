@@ -4,4 +4,16 @@ Source:  https://github.com/doublep/iter2.git
 
 Updating /mnt/store/melpa/working/iter2/
 Checking out 5ea6ba6effc4b71e7a4aed16b3f42408f9064c01
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/iter2/
+  to /tmp/iter275w3je/iter2-20221104.1938
+    iter2.el -> iter2.el
+Created iter2-20221104.1938.tar containing:
+  iter2-20221104.1938/
+  iter2-20221104.1938/iter2-pkg.el
+  iter2-20221104.1938/iter2.el
+Built iter2 in 3.299s, finished at 2023-06-10T22:25:28+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 57K Jun  9 16:13 packages/iter2-20221104.1938.el
+4.0K -rw-r--r-- 1 root root 424 Jun 10 22:25 packages/iter2-20221104.1938.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:25 packages/iter2-20221104.1938.tar

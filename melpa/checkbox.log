@@ -4,4 +4,16 @@ Source:  https://github.com/camdez/checkbox.el.git
 
 Updating /mnt/store/melpa/working/checkbox/
 Checking out 2afc2011fa35ccfa0ce9ef46cb1896911fa340d1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/checkbox/
+  to /tmp/checkboxh0HIOK/checkbox-20141117.58
+    checkbox.el -> checkbox.el
+Created checkbox-20141117.58.tar containing:
+  checkbox-20141117.58/
+  checkbox-20141117.58/checkbox-pkg.el
+  checkbox-20141117.58/checkbox.el
+Built checkbox in 3.139s, finished at 2023-06-11T00:08:02+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jun  9 15:35 packages/checkbox-20141117.58.el
+4.0K -rw-r--r-- 1 root root  473 Jun 11 00:08 packages/checkbox-20141117.58.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:08 packages/checkbox-20141117.58.tar

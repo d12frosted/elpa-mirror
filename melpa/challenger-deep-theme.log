@@ -4,4 +4,16 @@ Source:  https://github.com/challenger-deep-theme/emacs.git
 
 Updating /mnt/store/melpa/working/challenger-deep-theme/
 Checking out 2a799259406a8b96a688873093ffab6630a3ad3b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/challenger-deep-theme/
+  to /tmp/challenger-deep-themeOCzvDJ/challenger-deep-theme-20210120.941
+    challenger-deep-theme.el -> challenger-deep-theme.el
+Created challenger-deep-theme-20210120.941.tar containing:
+  challenger-deep-theme-20210120.941/
+  challenger-deep-theme-20210120.941/challenger-deep-theme-pkg.el
+  challenger-deep-theme-20210120.941/challenger-deep-theme.el
+Built challenger-deep-theme in 4.035s, finished at 2023-06-11T00:07:56+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 54K Jun  9 15:35 packages/challenger-deep-theme-20210120.941.el
+4.0K -rw-r--r-- 1 root root 318 Jun 11 00:07 packages/challenger-deep-theme-20210120.941.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:07 packages/challenger-deep-theme-20210120.941.tar

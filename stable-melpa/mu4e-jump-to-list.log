@@ -4,4 +4,16 @@ Source:  https://gitlab.com/wavexx/mu4e-jump-to-list.el.git
 
 Updating /mnt/store/melpa/working/mu4e-jump-to-list/
 Checking out cf19684d2333cb0cda7f6b62c7607144baa49310
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mu4e-jump-to-list/
+  to /tmp/mu4e-jump-to-listxIfxP8/mu4e-jump-to-list-20221202.1023
+    mu4e-jump-to-list.el -> mu4e-jump-to-list.el
+Created mu4e-jump-to-list-20221202.1023.tar containing:
+  mu4e-jump-to-list-20221202.1023/
+  mu4e-jump-to-list-20221202.1023/mu4e-jump-to-list-pkg.el
+  mu4e-jump-to-list-20221202.1023/mu4e-jump-to-list.el
+Built mu4e-jump-to-list in 3.692s, finished at 2023-06-10T22:34:06+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Jun  9 16:25 packages/mu4e-jump-to-list-20221202.1023.el
+4.0K -rw-r--r-- 1 root root  510 Jun 10 22:34 packages/mu4e-jump-to-list-20221202.1023.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:34 packages/mu4e-jump-to-list-20221202.1023.tar

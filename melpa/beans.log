@@ -4,4 +4,16 @@ Source:  https://github.com/jthulhu/emacs-beans.git
 
 Updating /mnt/store/melpa/working/beans/
 Checking out 0d04b79222812aa4978b6486a9ccac461850fe7a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/beans/
+  to /tmp/beansN2SzrV/beans-20221114.1634
+    beans.el -> beans.el
+Created beans-20221114.1634.tar containing:
+  beans-20221114.1634/
+  beans-20221114.1634/beans-pkg.el
+  beans-20221114.1634/beans.el
+Built beans in 3.537s, finished at 2023-06-11T00:05:13+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  9 15:31 packages/beans-20221114.1634.el
+4.0K -rw-r--r-- 1 root root  208 Jun 11 00:05 packages/beans-20221114.1634.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:05 packages/beans-20221114.1634.tar

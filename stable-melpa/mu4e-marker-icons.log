@@ -4,4 +4,16 @@ Source:  https://repo.or.cz/mu4e-marker-icons.git
 
 Updating /mnt/store/melpa/working/mu4e-marker-icons/
 Checking out 09fe0ca72b5c000d45a875c7cfa58016f740c1ae
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mu4e-marker-icons/
+  to /tmp/mu4e-marker-iconskHqQCA/mu4e-marker-icons-20230423.1039
+    mu4e-marker-icons.el -> mu4e-marker-icons.el
+Created mu4e-marker-icons-20230423.1039.tar containing:
+  mu4e-marker-icons-20230423.1039/
+  mu4e-marker-icons-20230423.1039/mu4e-marker-icons-pkg.el
+  mu4e-marker-icons-20230423.1039/mu4e-marker-icons.el
+Built mu4e-marker-icons in 3.977s, finished at 2023-06-10T22:34:07+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  9 16:25 packages/mu4e-marker-icons-20230423.1039.el
+4.0K -rw-r--r-- 1 root root  303 Jun 10 22:34 packages/mu4e-marker-icons-20230423.1039.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:34 packages/mu4e-marker-icons-20230423.1039.tar

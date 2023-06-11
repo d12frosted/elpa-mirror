@@ -4,4 +4,71 @@ Source:  https://github.com/mohkale/flymake-collection.git
 
 Updating /mnt/store/melpa/working/flymake-collection/
 Checking out 845c52a1aead7485450c62b48a92096160d99a25
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-collection/
+  to /tmp/flymake-collectionDDUiOJ/flymake-collection-20230606.2002
+  ! src/flymake-collection-commands.el -> flymake-collection-commands.el
+  ! src/flymake-collection-define.el -> flymake-collection-define.el
+  ! src/flymake-collection-hook.el -> flymake-collection-hook.el
+  ! src/flymake-collection.el -> flymake-collection.el
+  ! src/checkers/flymake-collection-awk-gawk.el -> flymake-collection-awk-gawk.el
+  ! src/checkers/flymake-collection-clang.el -> flymake-collection-clang.el
+  ! src/checkers/flymake-collection-eslint.el -> flymake-collection-eslint.el
+  ! src/checkers/flymake-collection-flake8.el -> flymake-collection-flake8.el
+  ! src/checkers/flymake-collection-gcc.el -> flymake-collection-gcc.el
+  ! src/checkers/flymake-collection-hlint.el -> flymake-collection-hlint.el
+  ! src/checkers/flymake-collection-html-tidy.el -> flymake-collection-html-tidy.el
+  ! src/checkers/flymake-collection-jq.el -> flymake-collection-jq.el
+  ! src/checkers/flymake-collection-jsonlint.el -> flymake-collection-jsonlint.el
+  ! src/checkers/flymake-collection-less.el -> flymake-collection-less.el
+  ! src/checkers/flymake-collection-lua.el -> flymake-collection-lua.el
+  ! src/checkers/flymake-collection-luacheck.el -> flymake-collection-luacheck.el
+  ! src/checkers/flymake-collection-markdownlint.el -> flymake-collection-markdownlint.el
+  ! src/checkers/flymake-collection-mypy.el -> flymake-collection-mypy.el
+  ! src/checkers/flymake-collection-proselint.el -> flymake-collection-proselint.el
+  ! src/checkers/flymake-collection-pycodestyle.el -> flymake-collection-pycodestyle.el
+  ! src/checkers/flymake-collection-pylint.el -> flymake-collection-pylint.el
+  ! src/checkers/flymake-collection-rubocop.el -> flymake-collection-rubocop.el
+  ! src/checkers/flymake-collection-ruff.el -> flymake-collection-ruff.el
+  ! src/checkers/flymake-collection-shellcheck.el -> flymake-collection-shellcheck.el
+  ! src/checkers/flymake-collection-sql-lint.el -> flymake-collection-sql-lint.el
+  ! src/checkers/flymake-collection-sqlint.el -> flymake-collection-sqlint.el
+  ! src/checkers/flymake-collection-statix.el -> flymake-collection-statix.el
+  ! src/checkers/flymake-collection-xmllint.el -> flymake-collection-xmllint.el
+  ! src/checkers/flymake-collection-yamllint.el -> flymake-collection-yamllint.el
+Created flymake-collection-20230606.2002.tar containing:
+  flymake-collection-20230606.2002/
+  flymake-collection-20230606.2002/flymake-collection-awk-gawk.el
+  flymake-collection-20230606.2002/flymake-collection-clang.el
+  flymake-collection-20230606.2002/flymake-collection-commands.el
+  flymake-collection-20230606.2002/flymake-collection-define.el
+  flymake-collection-20230606.2002/flymake-collection-eslint.el
+  flymake-collection-20230606.2002/flymake-collection-flake8.el
+  flymake-collection-20230606.2002/flymake-collection-gcc.el
+  flymake-collection-20230606.2002/flymake-collection-hlint.el
+  flymake-collection-20230606.2002/flymake-collection-hook.el
+  flymake-collection-20230606.2002/flymake-collection-html-tidy.el
+  flymake-collection-20230606.2002/flymake-collection-jq.el
+  flymake-collection-20230606.2002/flymake-collection-jsonlint.el
+  flymake-collection-20230606.2002/flymake-collection-less.el
+  flymake-collection-20230606.2002/flymake-collection-lua.el
+  flymake-collection-20230606.2002/flymake-collection-luacheck.el
+  flymake-collection-20230606.2002/flymake-collection-markdownlint.el
+  flymake-collection-20230606.2002/flymake-collection-mypy.el
+  flymake-collection-20230606.2002/flymake-collection-pkg.el
+  flymake-collection-20230606.2002/flymake-collection-proselint.el
+  flymake-collection-20230606.2002/flymake-collection-pycodestyle.el
+  flymake-collection-20230606.2002/flymake-collection-pylint.el
+  flymake-collection-20230606.2002/flymake-collection-rubocop.el
+  flymake-collection-20230606.2002/flymake-collection-ruff.el
+  flymake-collection-20230606.2002/flymake-collection-shellcheck.el
+  flymake-collection-20230606.2002/flymake-collection-sql-lint.el
+  flymake-collection-20230606.2002/flymake-collection-sqlint.el
+  flymake-collection-20230606.2002/flymake-collection-statix.el
+  flymake-collection-20230606.2002/flymake-collection-xmllint.el
+  flymake-collection-20230606.2002/flymake-collection-yamllint.el
+  flymake-collection-20230606.2002/flymake-collection.el
+Built flymake-collection in 3.436s, finished at 2023-06-11T00:23:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  608 Jun 11 00:23 packages/flymake-collection-20230606.2002.entry
+140K -rw-r--r-- 1 root root 140K Jun 11 00:23 packages/flymake-collection-20230606.2002.tar

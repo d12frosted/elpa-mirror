@@ -4,4 +4,21 @@ Source:  https://github.com/holomorph/systemd-mode.git
 
 Updating /mnt/store/melpa/working/systemd/
 Checking out 8742607120fbc440821acbc351fda1e8e68a8806
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/systemd/
+  to /tmp/systemd7ueG8a/systemd-20230201.302
+    systemd.el -> systemd.el
+    network-directives.txt -> network-directives.txt
+    nspawn-directives.txt -> nspawn-directives.txt
+    unit-directives.txt -> unit-directives.txt
+Created systemd-20230201.302.tar containing:
+  systemd-20230201.302/
+  systemd-20230201.302/network-directives.txt
+  systemd-20230201.302/nspawn-directives.txt
+  systemd-20230201.302/systemd-pkg.el
+  systemd-20230201.302/systemd.el
+  systemd-20230201.302/unit-directives.txt
+Built systemd in 5.271s, finished at 2023-06-10T22:53:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 367 Jun 10 22:53 packages/systemd-20230201.302.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:53 packages/systemd-20230201.302.tar

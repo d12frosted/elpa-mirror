@@ -4,4 +4,16 @@ Source:  https://github.com/davidlandry93/helm-ros.git
 
 Updating /mnt/store/melpa/working/helm-ros/
 Checking out 92b0b215f6a017f0f57f1af15466cc0b2a5a0135
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-ros/
+  to /tmp/helm-rosrSA6ZF/helm-ros-20160812.1752
+    helm-ros.el -> helm-ros.el
+Created helm-ros-20160812.1752.tar containing:
+  helm-ros-20160812.1752/
+  helm-ros-20160812.1752/helm-ros-pkg.el
+  helm-ros-20160812.1752/helm-ros.el
+Built helm-ros in 2.719s, finished at 2023-06-10T22:22:14+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 16:07 packages/helm-ros-20160812.1752.el
+4.0K -rw-r--r-- 1 root root 506 Jun 10 22:22 packages/helm-ros-20160812.1752.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:22 packages/helm-ros-20160812.1752.tar

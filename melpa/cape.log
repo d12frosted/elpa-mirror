@@ -4,4 +4,19 @@ Source:  https://github.com/minad/cape.git
 
 Updating /mnt/store/melpa/working/cape/
 Checking out 6c9abaf15adfbd9c6bf593609ac3bea8c8de0611
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cape/
+  to /tmp/cape18XOz0/cape-20230606.904
+    cape-char.el -> cape-char.el
+    cape-keyword.el -> cape-keyword.el
+    cape.el -> cape.el
+Created cape-20230606.904.tar containing:
+  cape-20230606.904/
+  cape-20230606.904/cape-char.el
+  cape-20230606.904/cape-keyword.el
+  cape-20230606.904/cape-pkg.el
+  cape-20230606.904/cape.el
+Built cape in 5.387s, finished at 2023-06-11T00:07:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 479 Jun 11 00:07 packages/cape-20230606.904.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 11 00:07 packages/cape-20230606.904.tar

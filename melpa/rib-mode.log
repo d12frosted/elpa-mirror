@@ -4,4 +4,16 @@ Source:  https://github.com/blezek/rib-mode.git
 
 Updating /mnt/store/melpa/working/rib-mode/
 Checking out 97470158784c3c212e22e2c20b8471ee65ba59af
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rib-mode/
+  to /tmp/rib-modeE4aD40/rib-mode-20170726.1448
+    rib-mode.el -> rib-mode.el
+Created rib-mode-20170726.1448.tar containing:
+  rib-mode-20170726.1448/
+  rib-mode-20170726.1448/rib-mode-pkg.el
+  rib-mode-20170726.1448/rib-mode.el
+Built rib-mode in 3.632s, finished at 2023-06-10T22:47:26+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  9 16:44 packages/rib-mode-20170726.1448.el
+4.0K -rw-r--r-- 1 root root  497 Jun 10 22:47 packages/rib-mode-20170726.1448.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:47 packages/rib-mode-20170726.1448.tar

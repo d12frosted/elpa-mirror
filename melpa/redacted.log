@@ -4,4 +4,16 @@ Source:  https://github.com/bkaestner/redacted.el.git
 
 Updating /mnt/store/melpa/working/redacted/
 Checking out b3f44ccf51d9d5274f7837fc825db0a378055744
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/redacted/
+  to /tmp/redactedaC1zY4/redacted-20220108.1037
+    redacted.el -> redacted.el
+Created redacted-20220108.1037.tar containing:
+  redacted-20220108.1037/
+  redacted-20220108.1037/redacted-pkg.el
+  redacted-20220108.1037/redacted.el
+Built redacted in 6.719s, finished at 2023-06-10T22:46:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jun  9 16:43 packages/redacted-20220108.1037.el
+4.0K -rw-r--r-- 1 root root  464 Jun 10 22:46 packages/redacted-20220108.1037.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:46 packages/redacted-20220108.1037.tar

@@ -4,4 +4,16 @@ Source:  https://gitlab.com/gvol/nanowrimo.el.git
 
 Updating /mnt/store/melpa/working/nanowrimo/
 Checking out b1d41458926ccb39cefbb1bb74aefe4f02fd349f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nanowrimo/
+  to /tmp/nanowrimoDzt1Mp/nanowrimo-20151105.228
+    nanowrimo.el -> nanowrimo.el
+Created nanowrimo-20151105.228.tar containing:
+  nanowrimo-20151105.228/
+  nanowrimo-20151105.228/nanowrimo-pkg.el
+  nanowrimo-20151105.228/nanowrimo.el
+Built nanowrimo in 3.311s, finished at 2023-06-10T22:34:49+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Jun  9 16:26 packages/nanowrimo-20151105.228.el
+4.0K -rw-r--r-- 1 root root 399 Jun 10 22:34 packages/nanowrimo-20151105.228.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:34 packages/nanowrimo-20151105.228.tar

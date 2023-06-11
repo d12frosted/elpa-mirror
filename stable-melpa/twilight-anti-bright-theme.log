@@ -4,4 +4,16 @@ Source:  https://github.com/jimeh/twilight-anti-bright-theme.git
 
 Updating /mnt/store/melpa/working/twilight-anti-bright-theme/
 Checking out 523b95fcdbf4a6a6483af314ad05354a3d80f23f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/twilight-anti-bright-theme/
+  to /tmp/twilight-anti-bright-themeC0HwVz/twilight-anti-bright-theme-20160622.848
+    twilight-anti-bright-theme.el -> twilight-anti-bright-theme.el
+Created twilight-anti-bright-theme-20160622.848.tar containing:
+  twilight-anti-bright-theme-20160622.848/
+  twilight-anti-bright-theme-20160622.848/twilight-anti-bright-theme-pkg.el
+  twilight-anti-bright-theme-20160622.848/twilight-anti-bright-theme.el
+Built twilight-anti-bright-theme in 3.033s, finished at 2023-06-10T22:55:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Jun  9 16:56 packages/twilight-anti-bright-theme-20160622.848.el
+4.0K -rw-r--r-- 1 root root  482 Jun 10 22:55 packages/twilight-anti-bright-theme-20160622.848.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:55 packages/twilight-anti-bright-theme-20160622.848.tar

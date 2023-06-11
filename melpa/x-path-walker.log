@@ -4,4 +4,26 @@ Source:  https://github.com/Lompik/x-path-walker.git
 
 Updating /mnt/store/melpa/working/x-path-walker/
 Checking out c91deaaba0d5cc9018008a39c96222deacba3868
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/x-path-walker/
+  to /tmp/x-path-walkerWMxako/x-path-walker-20220714.1056
+    x-path-walker.el -> x-path-walker.el
+    xpathwalker => xpathwalker
+Created x-path-walker-20220714.1056.tar containing:
+  x-path-walker-20220714.1056/
+  x-path-walker-20220714.1056/x-path-walker-pkg.el
+  x-path-walker-20220714.1056/x-path-walker.el
+  x-path-walker-20220714.1056/xpathwalker/
+  x-path-walker-20220714.1056/xpathwalker/__init__.py
+  x-path-walker-20220714.1056/xpathwalker/__main__.py
+  x-path-walker-20220714.1056/xpathwalker/args.py
+  x-path-walker-20220714.1056/xpathwalker/json_Processor.py
+  x-path-walker-20220714.1056/xpathwalker/json_jq_Processor.py
+  x-path-walker-20220714.1056/xpathwalker/lxml_Processor.py
+  x-path-walker-20220714.1056/xpathwalker/processor.py
+  x-path-walker-20220714.1056/xpathwalker/utils.py
+  x-path-walker-20220714.1056/xpathwalker/yaml_Processor.py
+Built x-path-walker in 3.022s, finished at 2023-06-10T22:58:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 374 Jun 10 22:58 packages/x-path-walker-20220714.1056.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:58 packages/x-path-walker-20220714.1056.tar

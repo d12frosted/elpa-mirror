@@ -4,4 +4,21 @@ Source:  https://github.com/magit/git-modes.git
 
 Updating /mnt/store/melpa/working/git-modes/
 Checking out 44d536ba637235c9dd203410281397417a3e60b6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-modes/
+  to /tmp/git-modesD64JOd/git-modes-20230511.2134
+    git-modes.el -> git-modes.el
+    gitattributes-mode.el -> gitattributes-mode.el
+    gitconfig-mode.el -> gitconfig-mode.el
+    gitignore-mode.el -> gitignore-mode.el
+Created git-modes-20230511.2134.tar containing:
+  git-modes-20230511.2134/
+  git-modes-20230511.2134/git-modes-pkg.el
+  git-modes-20230511.2134/git-modes.el
+  git-modes-20230511.2134/gitattributes-mode.el
+  git-modes-20230511.2134/gitconfig-mode.el
+  git-modes-20230511.2134/gitignore-mode.el
+Built git-modes in 3.850s, finished at 2023-06-11T00:25:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 619 Jun 11 00:25 packages/git-modes-20230511.2134.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:25 packages/git-modes-20230511.2134.tar

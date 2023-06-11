@@ -4,4 +4,16 @@ Source:  https://git.korewanetadesu.com/pelican-mode.git
 
 Updating /mnt/store/melpa/working/pelican-mode/
 Checking out a69934885c7a3b303049e2418333b3915b8f8fb8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pelican-mode/
+  to /tmp/pelican-modeSQ1jQZ/pelican-mode-20190124.2336
+    pelican-mode.el -> pelican-mode.el
+Created pelican-mode-20190124.2336.tar containing:
+  pelican-mode-20190124.2336/
+  pelican-mode-20190124.2336/pelican-mode-pkg.el
+  pelican-mode-20190124.2336/pelican-mode.el
+Built pelican-mode in 3.682s, finished at 2023-06-10T22:42:01+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:37 packages/pelican-mode-20190124.2336.el
+4.0K -rw-r--r-- 1 root root 471 Jun 10 22:42 packages/pelican-mode-20190124.2336.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:42 packages/pelican-mode-20190124.2336.tar

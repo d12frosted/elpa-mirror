@@ -4,4 +4,16 @@ Source:  https://github.com/porras/evil-ruby-text-objects.git
 
 Updating /mnt/store/melpa/working/evil-ruby-text-objects/
 Checking out 41c8b3eddb610206626a8a03e69857f903209e86
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-ruby-text-objects/
+  to /tmp/evil-ruby-text-objectsWvaqUF/evil-ruby-text-objects-20221130.1832
+    evil-ruby-text-objects.el -> evil-ruby-text-objects.el
+Created evil-ruby-text-objects-20221130.1832.tar containing:
+  evil-ruby-text-objects-20221130.1832/
+  evil-ruby-text-objects-20221130.1832/evil-ruby-text-objects-pkg.el
+  evil-ruby-text-objects-20221130.1832/evil-ruby-text-objects.el
+Built evil-ruby-text-objects in 5.956s, finished at 2023-06-11T00:20:14+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.0K Jun  9 15:53 packages/evil-ruby-text-objects-20221130.1832.el
+4.0K -rw-r--r-- 1 root root  480 Jun 11 00:20 packages/evil-ruby-text-objects-20221130.1832.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:20 packages/evil-ruby-text-objects-20221130.1832.tar

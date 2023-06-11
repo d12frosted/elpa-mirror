@@ -4,4 +4,16 @@ Source:  https://github.com/lassik/emacs-insert-random.git
 
 Updating /mnt/store/melpa/working/insert-random/
 Checking out a13827fd68457f939e46f95a662752f6f344107c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/insert-random/
+  to /tmp/insert-randomkh38Ge/insert-random-20230212.1710
+    insert-random.el -> insert-random.el
+Created insert-random-20230212.1710.tar containing:
+  insert-random-20230212.1710/
+  insert-random-20230212.1710/insert-random-pkg.el
+  insert-random-20230212.1710/insert-random.el
+Built insert-random in 3.266s, finished at 2023-06-10T22:25:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  9 16:13 packages/insert-random-20230212.1710.el
+4.0K -rw-r--r-- 1 root root  442 Jun 10 22:25 packages/insert-random-20230212.1710.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/insert-random-20230212.1710.tar

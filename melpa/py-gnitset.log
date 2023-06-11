@@ -4,4 +4,16 @@ Source:  https://github.com/quodlibetor/py-gnitset.git
 
 Updating /mnt/store/melpa/working/py-gnitset/
 Checking out 1e993cc29cbc31e06fe1e335dec198e21972fa55
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/py-gnitset/
+  to /tmp/py-gnitset62nlQs/py-gnitset-20170821.1732
+    py-gnitset.el -> py-gnitset.el
+Created py-gnitset-20170821.1732.tar containing:
+  py-gnitset-20170821.1732/
+  py-gnitset-20170821.1732/py-gnitset-pkg.el
+  py-gnitset-20170821.1732/py-gnitset.el
+Built py-gnitset in 2.910s, finished at 2023-06-10T22:44:45+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:41 packages/py-gnitset-20170821.1732.el
+4.0K -rw-r--r-- 1 root root 441 Jun 10 22:44 packages/py-gnitset-20170821.1732.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:44 packages/py-gnitset-20170821.1732.tar

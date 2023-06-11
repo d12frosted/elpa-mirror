@@ -4,4 +4,16 @@ Source:  https://github.com/erikbackman/mindre-theme.git
 
 Updating /mnt/store/melpa/working/mindre-theme/
 Checking out fc9ab1ba03494f2fb8cb8dc4e2ba5120ae35eb31
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mindre-theme/
+  to /tmp/mindre-themebm3AAm/mindre-theme-20220827.1031
+    mindre-theme.el -> mindre-theme.el
+Created mindre-theme-20220827.1031.tar containing:
+  mindre-theme-20220827.1031/
+  mindre-theme-20220827.1031/mindre-theme-pkg.el
+  mindre-theme-20220827.1031/mindre-theme.el
+Built mindre-theme in 4.140s, finished at 2023-06-10T22:32:26+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 44K Jun  9 16:23 packages/mindre-theme-20220827.1031.el
+4.0K -rw-r--r-- 1 root root 428 Jun 10 22:32 packages/mindre-theme-20220827.1031.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:32 packages/mindre-theme-20220827.1031.tar

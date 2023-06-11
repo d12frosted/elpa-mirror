@@ -4,4 +4,16 @@ Source:  https://github.com/galdor/rfc-mode.git
 
 Updating /mnt/store/melpa/working/rfc-mode/
 Checking out c938c8134e7434b623ebfd92ad22586205cb1c92
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rfc-mode/
+  to /tmp/rfc-modeGr32G2/rfc-mode-20230307.937
+    rfc-mode.el -> rfc-mode.el
+Created rfc-mode-20230307.937.tar containing:
+  rfc-mode-20230307.937/
+  rfc-mode-20230307.937/rfc-mode-pkg.el
+  rfc-mode-20230307.937/rfc-mode.el
+Built rfc-mode in 2.809s, finished at 2023-06-10T22:47:21+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 16:44 packages/rfc-mode-20230307.937.el
+4.0K -rw-r--r-- 1 root root 411 Jun 10 22:47 packages/rfc-mode-20230307.937.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:47 packages/rfc-mode-20230307.937.tar

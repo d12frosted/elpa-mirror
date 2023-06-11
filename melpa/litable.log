@@ -4,4 +4,16 @@ Source:  https://github.com/Fuco1/litable.git
 
 Updating /mnt/store/melpa/working/litable/
 Checking out 0a75befedbf826c9779f83500792b044658f2374
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/litable/
+  to /tmp/litableTZTJwQ/litable-20221028.1640
+    litable.el -> litable.el
+Created litable-20221028.1640.tar containing:
+  litable-20221028.1640/
+  litable-20221028.1640/litable-pkg.el
+  litable-20221028.1640/litable.el
+Built litable in 2.818s, finished at 2023-06-10T22:29:35+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 37K Jun  9 16:19 packages/litable-20221028.1640.el
+4.0K -rw-r--r-- 1 root root 383 Jun 10 22:29 packages/litable-20221028.1640.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:29 packages/litable-20221028.1640.tar

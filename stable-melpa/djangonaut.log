@@ -4,4 +4,16 @@ Source:  https://github.com/pythonic-emacs/djangonaut.git
 
 Updating /mnt/store/melpa/working/djangonaut/
 Checking out 75f642114e3997308a1e7e67c3025738cecee0fe
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/djangonaut/
+  to /tmp/djangonaut62f6l8/djangonaut-20200503.921
+    djangonaut.el -> djangonaut.el
+Created djangonaut-20200503.921.tar containing:
+  djangonaut-20200503.921/
+  djangonaut-20200503.921/djangonaut-pkg.el
+  djangonaut-20200503.921/djangonaut.el
+Built djangonaut in 3.298s, finished at 2023-06-11T00:14:37+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 54K Jun  9 15:45 packages/djangonaut-20200503.921.el
+4.0K -rw-r--r-- 1 root root 580 Jun 11 00:14 packages/djangonaut-20200503.921.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:14 packages/djangonaut-20200503.921.tar

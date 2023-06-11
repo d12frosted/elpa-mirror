@@ -4,4 +4,16 @@ Source:  https://github.com/emacsmirror/tex-smart-umlauts.git
 
 Updating /mnt/store/melpa/working/tex-smart-umlauts/
 Checking out b28bac71990e0442616157fdb64494179df5575e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tex-smart-umlauts/
+  to /tmp/tex-smart-umlautsLl8NJk/tex-smart-umlauts-20230416.2051
+    tex-smart-umlauts.el -> tex-smart-umlauts.el
+Created tex-smart-umlauts-20230416.2051.tar containing:
+  tex-smart-umlauts-20230416.2051/
+  tex-smart-umlauts-20230416.2051/tex-smart-umlauts-pkg.el
+  tex-smart-umlauts-20230416.2051/tex-smart-umlauts.el
+Built tex-smart-umlauts in 3.145s, finished at 2023-06-10T22:54:04+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 16:54 packages/tex-smart-umlauts-20230416.2051.el
+4.0K -rw-r--r-- 1 root root 480 Jun 10 22:54 packages/tex-smart-umlauts-20230416.2051.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:54 packages/tex-smart-umlauts-20230416.2051.tar

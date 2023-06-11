@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-helm/helm-firefox.git
 
 Updating /mnt/store/melpa/working/helm-firefox/
 Checking out 571cf8dfcbe43d91f9890eebefc88d7572c62e75
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-firefox/
+  to /tmp/helm-firefoxYDsTz7/helm-firefox-20220420.1346
+    helm-firefox.el -> helm-firefox.el
+Created helm-firefox-20220420.1346.tar containing:
+  helm-firefox-20220420.1346/
+  helm-firefox-20220420.1346/helm-firefox-pkg.el
+  helm-firefox-20220420.1346/helm-firefox.el
+Built helm-firefox in 3.137s, finished at 2023-06-11T00:29:34+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jun  9 16:06 packages/helm-firefox-20220420.1346.el
+4.0K -rw-r--r-- 1 root root  261 Jun 11 00:29 packages/helm-firefox-20220420.1346.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:29 packages/helm-firefox-20220420.1346.tar

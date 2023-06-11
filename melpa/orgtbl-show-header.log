@@ -4,4 +4,16 @@ Source:  https://github.com/DamienCassou/orgtbl-show-header.git
 
 Updating /mnt/store/melpa/working/orgtbl-show-header/
 Checking out f0f48ccc0f96d4aa2a676ff609d9dddd71748e6f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/orgtbl-show-header/
+  to /tmp/orgtbl-show-header2PkF8O/orgtbl-show-header-20141031.1547
+    orgtbl-show-header.el -> orgtbl-show-header.el
+Created orgtbl-show-header-20141031.1547.tar containing:
+  orgtbl-show-header-20141031.1547/
+  orgtbl-show-header-20141031.1547/orgtbl-show-header-pkg.el
+  orgtbl-show-header-20141031.1547/orgtbl-show-header.el
+Built orgtbl-show-header in 3.312s, finished at 2023-06-10T22:39:59+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.0K Jun  9 16:34 packages/orgtbl-show-header-20141031.1547.el
+4.0K -rw-r--r-- 1 root root  402 Jun 10 22:39 packages/orgtbl-show-header-20141031.1547.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:39 packages/orgtbl-show-header-20141031.1547.tar

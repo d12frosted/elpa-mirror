@@ -4,4 +4,16 @@ Source:  https://github.com/NOBUTOKA/niconama.el.git
 
 Updating /mnt/store/melpa/working/niconama/
 Checking out 96e7553e50e6bf7b58aac50f52c9b0b8edb41c56
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/niconama/
+  to /tmp/niconama0EmnVx/niconama-20170910.1501
+    niconama.el -> niconama.el
+Created niconama-20170910.1501.tar containing:
+  niconama-20170910.1501/
+  niconama-20170910.1501/niconama-pkg.el
+  niconama-20170910.1501/niconama.el
+Built niconama in 2.539s, finished at 2023-06-10T22:35:18+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  9 16:27 packages/niconama-20170910.1501.el
+4.0K -rw-r--r-- 1 root root 307 Jun 10 22:35 packages/niconama-20170910.1501.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:35 packages/niconama-20170910.1501.tar

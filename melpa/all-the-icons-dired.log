@@ -4,4 +4,16 @@ Source:  https://github.com/wyuenho/all-the-icons-dired.git
 
 Updating /mnt/store/melpa/working/all-the-icons-dired/
 Checking out bcaed35bb3ad7fc46007f16e0d670beb82bb613e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/all-the-icons-dired/
+  to /tmp/all-the-icons-dired1Fa9Td/all-the-icons-dired-20220929.1135
+    all-the-icons-dired.el -> all-the-icons-dired.el
+Created all-the-icons-dired-20220929.1135.tar containing:
+  all-the-icons-dired-20220929.1135/
+  all-the-icons-dired-20220929.1135/all-the-icons-dired-pkg.el
+  all-the-icons-dired-20220929.1135/all-the-icons-dired.el
+Built all-the-icons-dired in 3.814s, finished at 2023-06-11T00:02:55+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 15:28 packages/all-the-icons-dired-20220929.1135.el
+4.0K -rw-r--r-- 1 root root  516 Jun 11 00:02 packages/all-the-icons-dired-20220929.1135.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:02 packages/all-the-icons-dired-20220929.1135.tar

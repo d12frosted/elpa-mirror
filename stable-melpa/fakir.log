@@ -4,4 +4,16 @@ Source:  https://github.com/nicferrier/emacs-fakir.git
 
 Updating /mnt/store/melpa/working/fakir/
 Checking out 1fca406ad7de80fece6319ff75d4230b648534b0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fakir/
+  to /tmp/fakirChxT9W/fakir-20140729.1652
+    fakir.el -> fakir.el
+Created fakir-20140729.1652.tar containing:
+  fakir-20140729.1652/
+  fakir-20140729.1652/fakir-pkg.el
+  fakir-20140729.1652/fakir.el
+Built fakir in 3.601s, finished at 2023-06-11T00:21:15+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 26K Jun  9 15:54 packages/fakir-20140729.1652.el
+4.0K -rw-r--r-- 1 root root 446 Jun 11 00:21 packages/fakir-20140729.1652.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:21 packages/fakir-20140729.1652.tar

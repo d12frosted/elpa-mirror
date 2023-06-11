@@ -4,4 +4,16 @@ Source:  https://github.com/Malabarba/beacon.git
 
 Updating /mnt/store/melpa/working/beacon/
 Checking out 85261a928ae0ec3b41e639f05291ffd6bf7c231c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/beacon/
+  to /tmp/beacon0wam2P/beacon-20220730.100
+    beacon.el -> beacon.el
+Created beacon-20220730.100.tar containing:
+  beacon-20220730.100/
+  beacon-20220730.100/beacon-pkg.el
+  beacon-20220730.100/beacon.el
+Built beacon in 4.145s, finished at 2023-06-11T00:05:13+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 15:31 packages/beacon-20220730.100.el
+4.0K -rw-r--r-- 1 root root 461 Jun 11 00:05 packages/beacon-20220730.100.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:05 packages/beacon-20220730.100.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/alphapapa/topsy.el.git
 
 Updating /mnt/store/melpa/working/topsy/
 Checking out 149ee929dad667fd7668728d9b59dedb0183dfe5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/topsy/
+  to /tmp/topsycuGcRP/topsy-20230414.1738
+    topsy.el -> topsy.el
+Created topsy-20230414.1738.tar containing:
+  topsy-20230414.1738/
+  topsy-20230414.1738/topsy-pkg.el
+  topsy-20230414.1738/topsy.el
+Built topsy in 2.494s, finished at 2023-06-10T22:54:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Jun  9 16:55 packages/topsy-20230414.1738.el
+4.0K -rw-r--r-- 1 root root  388 Jun 10 22:54 packages/topsy-20230414.1738.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:54 packages/topsy-20230414.1738.tar

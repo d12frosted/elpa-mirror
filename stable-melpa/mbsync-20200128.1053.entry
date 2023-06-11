@@ -1,6 +1,6 @@
 (mbsync .
 	[(20200128 1053)
-	 nil "run mbsync to fetch mails" single
+	 nil "run mbsync to fetch mails" tar
 	 ((:commit . "d3c81da81ce5b154c0d048047a47277338721a70")
 	  (:authors
 	   ("Dimitri Fontaine" . "dim@tapoueh.org"))

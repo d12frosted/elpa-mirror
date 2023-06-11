@@ -5,4 +5,37 @@ Source:  https://github.com/gmlarumbe/vhdl-ext.git
 Updating /mnt/store/melpa/working/vhdl-ext/
 Checking out 231cb1a7dd582625035b8768e37f5bb9d25ff1b0
 Warning: vhdl-ext :files spec is equivalent to the default
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vhdl-ext/
+  to /tmp/vhdl-extKNQWW4/vhdl-ext-20230609.2131
+    vhdl-ext-compile.el -> vhdl-ext-compile.el
+    vhdl-ext-eglot.el -> vhdl-ext-eglot.el
+    vhdl-ext-flycheck.el -> vhdl-ext-flycheck.el
+    vhdl-ext-font-lock.el -> vhdl-ext-font-lock.el
+    vhdl-ext-hs.el -> vhdl-ext-hs.el
+    vhdl-ext-imenu.el -> vhdl-ext-imenu.el
+    vhdl-ext-lsp.el -> vhdl-ext-lsp.el
+    vhdl-ext-nav.el -> vhdl-ext-nav.el
+    vhdl-ext-template.el -> vhdl-ext-template.el
+    vhdl-ext-time-stamp.el -> vhdl-ext-time-stamp.el
+    vhdl-ext-utils.el -> vhdl-ext-utils.el
+    vhdl-ext.el -> vhdl-ext.el
+Created vhdl-ext-20230609.2131.tar containing:
+  vhdl-ext-20230609.2131/
+  vhdl-ext-20230609.2131/vhdl-ext-compile.el
+  vhdl-ext-20230609.2131/vhdl-ext-eglot.el
+  vhdl-ext-20230609.2131/vhdl-ext-flycheck.el
+  vhdl-ext-20230609.2131/vhdl-ext-font-lock.el
+  vhdl-ext-20230609.2131/vhdl-ext-hs.el
+  vhdl-ext-20230609.2131/vhdl-ext-imenu.el
+  vhdl-ext-20230609.2131/vhdl-ext-lsp.el
+  vhdl-ext-20230609.2131/vhdl-ext-nav.el
+  vhdl-ext-20230609.2131/vhdl-ext-pkg.el
+  vhdl-ext-20230609.2131/vhdl-ext-template.el
+  vhdl-ext-20230609.2131/vhdl-ext-time-stamp.el
+  vhdl-ext-20230609.2131/vhdl-ext-utils.el
+  vhdl-ext-20230609.2131/vhdl-ext.el
+Built vhdl-ext in 3.223s, finished at 2023-06-10T22:56:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 650 Jun 10 22:56 packages/vhdl-ext-20230609.2131.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 10 22:56 packages/vhdl-ext-20230609.2131.tar

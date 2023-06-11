@@ -4,4 +4,18 @@ Source:  https://gitlab.com/perweij/org-linkotron.git
 
 Updating /mnt/store/melpa/working/org-linkotron/
 Checking out d0adc5247b205bc73d2f1a83d4a512d2be541eb5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-linkotron/
+  to /tmp/org-linkotronMW9Axw/org-linkotron-20200112.2235
+    org-linkotron.el -> org-linkotron.el
+    org-linkotron.info -> org-linkotron.info
+Created org-linkotron-20200112.2235.tar containing:
+  org-linkotron-20200112.2235/
+  org-linkotron-20200112.2235/dir
+  org-linkotron-20200112.2235/org-linkotron-pkg.el
+  org-linkotron-20200112.2235/org-linkotron.el
+  org-linkotron-20200112.2235/org-linkotron.info
+Built org-linkotron in 3.088s, finished at 2023-06-10T22:38:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 452 Jun 10 22:38 packages/org-linkotron-20200112.2235.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:38 packages/org-linkotron-20200112.2235.tar

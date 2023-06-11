@@ -4,4 +4,16 @@ Source:  https://repo.or.cz/ob-redis.git
 
 Updating /mnt/store/melpa/working/ob-redis/
 Checking out 44c83636ccbea0b3e9838b0180471905c30224c5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-redis/
+  to /tmp/ob-redisOiitTB/ob-redis-20220221.1249
+    ob-redis.el -> ob-redis.el
+Created ob-redis-20220221.1249.tar containing:
+  ob-redis-20220221.1249/
+  ob-redis-20220221.1249/ob-redis-pkg.el
+  ob-redis-20220221.1249/ob-redis.el
+Built ob-redis in 3.269s, finished at 2023-06-10T22:36:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.1K Jun  9 16:29 packages/ob-redis-20220221.1249.el
+4.0K -rw-r--r-- 1 root root  445 Jun 10 22:36 packages/ob-redis-20220221.1249.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:36 packages/ob-redis-20220221.1249.tar

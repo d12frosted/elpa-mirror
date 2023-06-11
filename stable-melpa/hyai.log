@@ -4,4 +4,16 @@ Source:  https://github.com/iquiw/hyai.git
 
 Updating /mnt/store/melpa/working/hyai/
 Checking out e9a7e945fed12d8e664e898cf8b434b0376d5d80
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hyai/
+  to /tmp/hyaiUjGgkS/hyai-20170301.1447
+    hyai.el -> hyai.el
+Created hyai-20170301.1447.tar containing:
+  hyai-20170301.1447/
+  hyai-20170301.1447/hyai-pkg.el
+  hyai-20170301.1447/hyai.el
+Built hyai in 3.282s, finished at 2023-06-10T22:23:41+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 25K Jun  9 16:10 packages/hyai-20170301.1447.el
+4.0K -rw-r--r-- 1 root root 385 Jun 10 22:23 packages/hyai-20170301.1447.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:23 packages/hyai-20170301.1447.tar

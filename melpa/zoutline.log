@@ -4,4 +4,16 @@ Source:  https://github.com/abo-abo/zoutline.git
 
 Updating /mnt/store/melpa/working/zoutline/
 Checking out 32857c6c4b9b0bcbed14d825a10b91a98d5fed0a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zoutline/
+  to /tmp/zoutlinewEHjpT/zoutline-20220102.835
+    zoutline.el -> zoutline.el
+Created zoutline-20220102.835.tar containing:
+  zoutline-20220102.835/
+  zoutline-20220102.835/zoutline-pkg.el
+  zoutline-20220102.835/zoutline.el
+Built zoutline in 2.851s, finished at 2023-06-10T23:00:45+0000
+ ✓ Success:
+8.0K -rwxr-xr-x 1 root root 6.9K Jun  9 17:03 packages/zoutline-20220102.835.el
+4.0K -rw-r--r-- 1 root root  396 Jun 10 23:00 packages/zoutline-20220102.835.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 23:00 packages/zoutline-20220102.835.tar

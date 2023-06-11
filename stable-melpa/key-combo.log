@@ -4,4 +4,16 @@ Source:  https://github.com/uk-ar/key-combo.git
 
 Updating /mnt/store/melpa/working/key-combo/
 Checking out 16fb73522d53547ef38f3710aff7c0b01005d576
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/key-combo/
+  to /tmp/key-comboLdhIza/key-combo-20230323.829
+    key-combo.el -> key-combo.el
+Created key-combo-20230323.829.tar containing:
+  key-combo-20230323.829/
+  key-combo-20230323.829/key-combo-pkg.el
+  key-combo-20230323.829/key-combo.el
+Built key-combo in 2.875s, finished at 2023-06-10T22:27:46+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  9 16:16 packages/key-combo-20230323.829.el
+4.0K -rw-r--r-- 1 root root 424 Jun 10 22:27 packages/key-combo-20230323.829.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:27 packages/key-combo-20230323.829.tar

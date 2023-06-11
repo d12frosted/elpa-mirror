@@ -4,4 +4,16 @@ Source:  https://github.com/yasuyk/helm-emmet.git
 
 Updating /mnt/store/melpa/working/helm-emmet/
 Checking out f0364e736b10cf44232053a78de04133a88185ae
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-emmet/
+  to /tmp/helm-emmetYDjBLZ/helm-emmet-20160713.1231
+    helm-emmet.el -> helm-emmet.el
+Created helm-emmet-20160713.1231.tar containing:
+  helm-emmet-20160713.1231/
+  helm-emmet-20160713.1231/helm-emmet-pkg.el
+  helm-emmet-20160713.1231/helm-emmet.el
+Built helm-emmet in 3.609s, finished at 2023-06-11T00:29:29+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Jun  9 16:06 packages/helm-emmet-20160713.1231.el
+4.0K -rw-r--r-- 1 root root  509 Jun 11 00:29 packages/helm-emmet-20160713.1231.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:29 packages/helm-emmet-20160713.1231.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/Lindydancer/lisp-extra-font-lock.git
 
 Updating /mnt/store/melpa/working/lisp-extra-font-lock/
 Checking out 4605eccbe1a7fcbd3cacf5b71249435413b4db4f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lisp-extra-font-lock/
+  to /tmp/lisp-extra-font-lockjIqGQ6/lisp-extra-font-lock-20181008.1921
+    lisp-extra-font-lock.el -> lisp-extra-font-lock.el
+Created lisp-extra-font-lock-20181008.1921.tar containing:
+  lisp-extra-font-lock-20181008.1921/
+  lisp-extra-font-lock-20181008.1921/lisp-extra-font-lock-pkg.el
+  lisp-extra-font-lock-20181008.1921/lisp-extra-font-lock.el
+Built lisp-extra-font-lock in 2.722s, finished at 2023-06-10T22:29:29+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  9 16:18 packages/lisp-extra-font-lock-20181008.1921.el
+4.0K -rw-r--r-- 1 root root 396 Jun 10 22:29 packages/lisp-extra-font-lock-20181008.1921.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:29 packages/lisp-extra-font-lock-20181008.1921.tar

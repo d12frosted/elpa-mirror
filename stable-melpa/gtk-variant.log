@@ -4,4 +4,16 @@ Source:  https://github.com/bepvte/gtk-variant.el.git
 
 Updating /mnt/store/melpa/working/gtk-variant/
 Checking out a60af277fbb52306c17663074cf9954dd6cea024
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gtk-variant/
+  to /tmp/gtk-variant0oC8Ie/gtk-variant-20200416.2136
+    gtk-variant.el -> gtk-variant.el
+Created gtk-variant-20200416.2136.tar containing:
+  gtk-variant-20200416.2136/
+  gtk-variant-20200416.2136/gtk-variant-pkg.el
+  gtk-variant-20200416.2136/gtk-variant.el
+Built gtk-variant in 2.969s, finished at 2023-06-11T00:28:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  9 16:04 packages/gtk-variant-20200416.2136.el
+4.0K -rw-r--r-- 1 root root  421 Jun 11 00:28 packages/gtk-variant-20200416.2136.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:28 packages/gtk-variant-20200416.2136.tar

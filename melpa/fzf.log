@@ -4,4 +4,16 @@ Source:  https://github.com/bling/fzf.el.git
 
 Updating /mnt/store/melpa/working/fzf/
 Checking out 3a55b983921c620fb5a2cc811f42aa4daaad8266
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fzf/
+  to /tmp/fzf5hxUTV/fzf-20230403.1304
+    fzf.el -> fzf.el
+Created fzf-20230403.1304.tar containing:
+  fzf-20230403.1304/
+  fzf-20230403.1304/fzf-pkg.el
+  fzf-20230403.1304/fzf.el
+Built fzf in 3.660s, finished at 2023-06-11T00:25:07+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 44K Jun  9 15:59 packages/fzf-20230403.1304.el
+4.0K -rw-r--r-- 1 root root 352 Jun 11 00:25 packages/fzf-20230403.1304.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:25 packages/fzf-20230403.1304.tar

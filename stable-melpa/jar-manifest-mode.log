@@ -4,4 +4,16 @@ Source:  https://github.com/omajid/jar-manifest-mode.git
 
 Updating /mnt/store/melpa/working/jar-manifest-mode/
 Checking out 270dae14c481300f75ed96dad3a5ae42ca928a1d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jar-manifest-mode/
+  to /tmp/jar-manifest-modeOW0Ney/jar-manifest-mode-20160501.26
+    jar-manifest-mode.el -> jar-manifest-mode.el
+Created jar-manifest-mode-20160501.26.tar containing:
+  jar-manifest-mode-20160501.26/
+  jar-manifest-mode-20160501.26/jar-manifest-mode-pkg.el
+  jar-manifest-mode-20160501.26/jar-manifest-mode.el
+Built jar-manifest-mode in 5.096s, finished at 2023-06-10T22:26:07+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jun  9 16:14 packages/jar-manifest-mode-20160501.26.el
+4.0K -rw-r--r-- 1 root root  467 Jun 10 22:26 packages/jar-manifest-mode-20160501.26.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:26 packages/jar-manifest-mode-20160501.26.tar

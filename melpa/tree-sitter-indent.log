@@ -4,4 +4,16 @@ Source:  https://codeberg.org/FelipeLema/tree-sitter-indent.el.git
 
 Updating /mnt/store/melpa/working/tree-sitter-indent/
 Checking out 4ef246db3e4ff99f672fe5e4b416c890f885c09e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tree-sitter-indent/
+  to /tmp/tree-sitter-indentLZK1ZC/tree-sitter-indent-20220411.1439
+    tree-sitter-indent.el -> tree-sitter-indent.el
+Created tree-sitter-indent-20220411.1439.tar containing:
+  tree-sitter-indent-20220411.1439/
+  tree-sitter-indent-20220411.1439/tree-sitter-indent-pkg.el
+  tree-sitter-indent-20220411.1439/tree-sitter-indent.el
+Built tree-sitter-indent in 4.351s, finished at 2023-06-10T22:55:12+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:55 packages/tree-sitter-indent-20220411.1439.el
+4.0K -rw-r--r-- 1 root root 607 Jun 10 22:55 packages/tree-sitter-indent-20220411.1439.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:55 packages/tree-sitter-indent-20220411.1439.tar

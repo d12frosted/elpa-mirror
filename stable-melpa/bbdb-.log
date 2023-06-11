@@ -4,4 +4,16 @@ Source:  https://github.com/aki2o/bbdb-.git
 
 Updating /mnt/store/melpa/working/bbdb-/
 Checking out 2839e84c894de2513af41053e80a277a1b483d22
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bbdb-/
+  to /tmp/bbdb-rt3J0Q/bbdb--20140221.2354
+    bbdb-.el -> bbdb-.el
+Created bbdb--20140221.2354.tar containing:
+  bbdb--20140221.2354/
+  bbdb--20140221.2354/bbdb--pkg.el
+  bbdb--20140221.2354/bbdb-.el
+Built bbdb- in 3.560s, finished at 2023-06-11T00:05:07+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  9 15:31 packages/bbdb--20140221.2354.el
+4.0K -rw-r--r-- 1 root root 494 Jun 11 00:05 packages/bbdb--20140221.2354.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:05 packages/bbdb--20140221.2354.tar

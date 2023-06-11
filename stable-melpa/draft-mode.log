@@ -4,4 +4,16 @@ Source:  https://gitlab.com/gaudecker/draft-mode.git
 
 Updating /mnt/store/melpa/working/draft-mode/
 Checking out 4779fb32daf53746459da2def7e08004492d4f18
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/draft-mode/
+  to /tmp/draft-modeFoi8Ul/draft-mode-20160106.859
+    draft-mode.el -> draft-mode.el
+Created draft-mode-20160106.859.tar containing:
+  draft-mode-20160106.859/
+  draft-mode-20160106.859/draft-mode-pkg.el
+  draft-mode-20160106.859/draft-mode.el
+Built draft-mode in 4.367s, finished at 2023-06-11T00:15:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jun  9 15:46 packages/draft-mode-20160106.859.el
+4.0K -rw-r--r-- 1 root root  424 Jun 11 00:15 packages/draft-mode-20160106.859.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:15 packages/draft-mode-20160106.859.tar

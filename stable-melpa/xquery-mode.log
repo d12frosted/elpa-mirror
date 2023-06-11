@@ -4,4 +4,16 @@ Source:  https://github.com/xquery-mode/xquery-mode.git
 
 Updating /mnt/store/melpa/working/xquery-mode/
 Checking out 19e6f9553ce05380843582b879712de00679e4ab
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xquery-mode/
+  to /tmp/xquery-modeG0dbki/xquery-mode-20170214.1119
+    xquery-mode.el -> xquery-mode.el
+Created xquery-mode-20170214.1119.tar containing:
+  xquery-mode-20170214.1119/
+  xquery-mode-20170214.1119/xquery-mode-pkg.el
+  xquery-mode-20170214.1119/xquery-mode.el
+Built xquery-mode in 3.842s, finished at 2023-06-10T22:59:12+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 43K Jun  9 17:01 packages/xquery-mode-20170214.1119.el
+4.0K -rw-r--r-- 1 root root 247 Jun 10 22:59 packages/xquery-mode-20170214.1119.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:59 packages/xquery-mode-20170214.1119.tar

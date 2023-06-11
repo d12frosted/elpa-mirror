@@ -4,4 +4,27 @@ Source:  https://github.com/cquery-project/emacs-cquery.git
 
 Updating /mnt/store/melpa/working/cquery/
 Checking out 555e50984ebda177421fdcdc8c76cb29235d9694
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cquery/
+  to /tmp/cquery3e8Rs1/cquery-20190118.542
+    cquery-call-hierarchy.el -> cquery-call-hierarchy.el
+    cquery-code-lens.el -> cquery-code-lens.el
+    cquery-common.el -> cquery-common.el
+    cquery-inheritance-hierarchy.el -> cquery-inheritance-hierarchy.el
+    cquery-semantic-highlighting.el -> cquery-semantic-highlighting.el
+    cquery-tree.el -> cquery-tree.el
+    cquery.el -> cquery.el
+Created cquery-20190118.542.tar containing:
+  cquery-20190118.542/
+  cquery-20190118.542/cquery-call-hierarchy.el
+  cquery-20190118.542/cquery-code-lens.el
+  cquery-20190118.542/cquery-common.el
+  cquery-20190118.542/cquery-inheritance-hierarchy.el
+  cquery-20190118.542/cquery-pkg.el
+  cquery-20190118.542/cquery-semantic-highlighting.el
+  cquery-20190118.542/cquery-tree.el
+  cquery-20190118.542/cquery.el
+Built cquery in 3.155s, finished at 2023-06-11T00:11:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 392 Jun 11 00:11 packages/cquery-20190118.542.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 11 00:11 packages/cquery-20190118.542.tar

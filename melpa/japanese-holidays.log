@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-jp/japanese-holidays.git
 
 Updating /mnt/store/melpa/working/japanese-holidays/
 Checking out 324b6bf2f55ec050bef49e001caedaabaf4fa35d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/japanese-holidays/
+  to /tmp/japanese-holidaysOx0ARL/japanese-holidays-20201229.755
+    japanese-holidays.el -> japanese-holidays.el
+Created japanese-holidays-20201229.755.tar containing:
+  japanese-holidays-20201229.755/
+  japanese-holidays-20201229.755/japanese-holidays-pkg.el
+  japanese-holidays-20201229.755/japanese-holidays.el
+Built japanese-holidays in 4.174s, finished at 2023-06-10T22:26:04+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:14 packages/japanese-holidays-20201229.755.el
+4.0K -rw-r--r-- 1 root root 594 Jun 10 22:26 packages/japanese-holidays-20201229.755.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:26 packages/japanese-holidays-20201229.755.tar

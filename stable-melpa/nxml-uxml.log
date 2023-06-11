@@ -4,4 +4,16 @@ Source:  https://gitlab.com/dpk/nxml-uxml.git
 
 Updating /mnt/store/melpa/working/nxml-uxml/
 Checking out 95bbd0018ab218b9f39f5bf1f1e809f60fbc3edc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nxml-uxml/
+  to /tmp/nxml-uxmlripZ42/nxml-uxml-20220606.1213
+    nxml-uxml.el -> nxml-uxml.el
+Created nxml-uxml-20220606.1213.tar containing:
+  nxml-uxml-20220606.1213/
+  nxml-uxml-20220606.1213/nxml-uxml-pkg.el
+  nxml-uxml-20220606.1213/nxml-uxml.el
+Built nxml-uxml in 2.829s, finished at 2023-06-10T22:36:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Jun  9 16:28 packages/nxml-uxml-20220606.1213.el
+4.0K -rw-r--r-- 1 root root  407 Jun 10 22:36 packages/nxml-uxml-20220606.1213.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:36 packages/nxml-uxml-20220606.1213.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/YangZhao11/register-channel.git
 
 Updating /mnt/store/melpa/working/register-channel/
 Checking out ed7f563e92170b758dc878fcb5df88d46d5d44cc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/register-channel/
+  to /tmp/register-channelWnbBri/register-channel-20210120.1618
+    register-channel.el -> register-channel.el
+Created register-channel-20210120.1618.tar containing:
+  register-channel-20210120.1618/
+  register-channel-20210120.1618/register-channel-pkg.el
+  register-channel-20210120.1618/register-channel.el
+Built register-channel in 3.145s, finished at 2023-06-10T22:46:44+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:44 packages/register-channel-20210120.1618.el
+4.0K -rw-r--r-- 1 root root 417 Jun 10 22:46 packages/register-channel-20210120.1618.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:46 packages/register-channel-20210120.1618.tar

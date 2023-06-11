@@ -4,4 +4,16 @@ Source:  https://github.com/netromdk/describe-number.git
 
 Updating /mnt/store/melpa/working/describe-number/
 Checking out 40618345a37831804b29589849a785ef5aa5ac24
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/describe-number/
+  to /tmp/describe-number1Upfgt/describe-number-20151101.55
+    describe-number.el -> describe-number.el
+Created describe-number-20151101.55.tar containing:
+  describe-number-20151101.55/
+  describe-number-20151101.55/describe-number-pkg.el
+  describe-number-20151101.55/describe-number.el
+Built describe-number in 3.123s, finished at 2023-06-11T00:12:49+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 15:43 packages/describe-number-20151101.55.el
+4.0K -rw-r--r-- 1 root root  513 Jun 11 00:12 packages/describe-number-20151101.55.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:12 packages/describe-number-20151101.55.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/leathekd/erc-hl-nicks.git
 
 Updating /mnt/store/melpa/working/erc-hl-nicks/
 Checking out a67fe361c8f2aa20fc235447fbb898f424b51439
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/erc-hl-nicks/
+  to /tmp/erc-hl-nicksah8QHG/erc-hl-nicks-20200317.16
+    erc-hl-nicks.el -> erc-hl-nicks.el
+Created erc-hl-nicks-20200317.16.tar containing:
+  erc-hl-nicks-20200317.16/
+  erc-hl-nicks-20200317.16/erc-hl-nicks-pkg.el
+  erc-hl-nicks-20200317.16/erc-hl-nicks.el
+Built erc-hl-nicks in 2.904s, finished at 2023-06-11T00:18:21+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 15:51 packages/erc-hl-nicks-20200317.16.el
+4.0K -rw-r--r-- 1 root root 430 Jun 11 00:18 packages/erc-hl-nicks-20200317.16.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:18 packages/erc-hl-nicks-20200317.16.tar

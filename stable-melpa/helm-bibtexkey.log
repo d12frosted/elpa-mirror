@@ -4,4 +4,17 @@ Source:  https://github.com/kenbeese/helm-bibtexkey.git
 
 Updating /mnt/store/melpa/working/helm-bibtexkey/
 Checking out aa1637ea5c8c5f1817e480fc2a3750cafab3d99f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-bibtexkey/
+  to /tmp/helm-bibtexkeyzyBLkp/helm-bibtexkey-20140214.1504
+    helm-bibtexkey.el -> helm-bibtexkey.el
+    bibtexkey_source.py -> bibtexkey_source.py
+Created helm-bibtexkey-20140214.1504.tar containing:
+  helm-bibtexkey-20140214.1504/
+  helm-bibtexkey-20140214.1504/bibtexkey_source.py
+  helm-bibtexkey-20140214.1504/helm-bibtexkey-pkg.el
+  helm-bibtexkey-20140214.1504/helm-bibtexkey.el
+Built helm-bibtexkey in 2.869s, finished at 2023-06-11T00:29:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 443 Jun 11 00:29 packages/helm-bibtexkey-20140214.1504.entry
+ 12K -rw-r--r-- 1 root root 10K Jun 11 00:29 packages/helm-bibtexkey-20140214.1504.tar

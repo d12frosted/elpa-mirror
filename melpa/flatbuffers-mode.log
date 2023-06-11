@@ -4,4 +4,16 @@ Source:  https://github.com/Asalle/flatbuffers-mode.git
 
 Updating /mnt/store/melpa/working/flatbuffers-mode/
 Checking out 8e7783db45a64c9456130fd0c108ac12d45a7789
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flatbuffers-mode/
+  to /tmp/flatbuffers-modeoujtsg/flatbuffers-mode-20210710.1004
+    flatbuffers-mode.el -> flatbuffers-mode.el
+Created flatbuffers-mode-20210710.1004.tar containing:
+  flatbuffers-mode-20210710.1004/
+  flatbuffers-mode-20210710.1004/flatbuffers-mode-pkg.el
+  flatbuffers-mode-20210710.1004/flatbuffers-mode.el
+Built flatbuffers-mode in 3.179s, finished at 2023-06-11T00:22:02+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  9 15:55 packages/flatbuffers-mode-20210710.1004.el
+4.0K -rw-r--r-- 1 root root  486 Jun 11 00:22 packages/flatbuffers-mode-20210710.1004.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flatbuffers-mode-20210710.1004.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/jcs-elpa/define-it.git
 
 Updating /mnt/store/melpa/working/define-it/
 Checking out de026f399d5b7fa9286f7733b2e3416c6f234372
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/define-it/
+  to /tmp/define-itGPHYxK/define-it-20220713.750
+    define-it.el -> define-it.el
+Created define-it-20220713.750.tar containing:
+  define-it-20220713.750/
+  define-it-20220713.750/define-it-pkg.el
+  define-it-20220713.750/define-it.el
+Built define-it in 3.919s, finished at 2023-06-11T00:12:41+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  9 15:43 packages/define-it-20220713.750.el
+4.0K -rw-r--r-- 1 root root 680 Jun 11 00:12 packages/define-it-20220713.750.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:12 packages/define-it-20220713.750.tar

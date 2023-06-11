@@ -4,4 +4,16 @@ Source:  https://github.com/sebastiw/distel-completion.git
 
 Updating /mnt/store/melpa/working/auto-complete-distel/
 Checking out acc4c0a5521904203d797fe96b08e5fae4233c7e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auto-complete-distel/
+  to /tmp/auto-complete-distelk6M5aj/auto-complete-distel-20180827.1344
+    auto-complete-distel.el -> auto-complete-distel.el
+Created auto-complete-distel-20180827.1344.tar containing:
+  auto-complete-distel-20180827.1344/
+  auto-complete-distel-20180827.1344/auto-complete-distel-pkg.el
+  auto-complete-distel-20180827.1344/auto-complete-distel.el
+Built auto-complete-distel in 3.543s, finished at 2023-06-11T00:04:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.6K Jun  9 15:30 packages/auto-complete-distel-20180827.1344.el
+4.0K -rw-r--r-- 1 root root  510 Jun 11 00:04 packages/auto-complete-distel-20180827.1344.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:04 packages/auto-complete-distel-20180827.1344.tar

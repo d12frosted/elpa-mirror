@@ -4,4 +4,16 @@ Source:  https://github.com/radian-software/ctrlf.git
 
 Updating /mnt/store/melpa/working/ctrlf/
 Checking out 9b4cf6c79a961f2bfbb949805aa300fcf1eb40a6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ctrlf/
+  to /tmp/ctrlfQmlJza/ctrlf-20221112.340
+    ctrlf.el -> ctrlf.el
+Created ctrlf-20221112.340.tar containing:
+  ctrlf-20221112.340/
+  ctrlf-20221112.340/ctrlf-pkg.el
+  ctrlf-20221112.340/ctrlf.el
+Built ctrlf in 3.169s, finished at 2023-06-11T00:11:38+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 63K Jun  9 15:41 packages/ctrlf-20221112.340.el
+4.0K -rw-r--r-- 1 root root 424 Jun 11 00:11 packages/ctrlf-20221112.340.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 11 00:11 packages/ctrlf-20221112.340.tar

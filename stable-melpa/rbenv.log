@@ -4,4 +4,16 @@ Source:  https://github.com/senny/rbenv.el.git
 
 Updating /mnt/store/melpa/working/rbenv/
 Checking out 2ea1a5bdc1266caef1dd77700f2c8f42429b03f1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rbenv/
+  to /tmp/rbenvSQfr0r/rbenv-20141120.749
+    rbenv.el -> rbenv.el
+Created rbenv-20141120.749.tar containing:
+  rbenv-20141120.749/
+  rbenv-20141120.749/rbenv-pkg.el
+  rbenv-20141120.749/rbenv.el
+Built rbenv in 4.350s, finished at 2023-06-10T22:45:45+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.6K Jun  9 16:43 packages/rbenv-20141120.749.el
+4.0K -rw-r--r-- 1 root root  371 Jun 10 22:45 packages/rbenv-20141120.749.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:45 packages/rbenv-20141120.749.tar

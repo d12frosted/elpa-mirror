@@ -4,4 +4,17 @@ Source:  https://github.com/knu/yaml-imenu.el.git
 
 Updating /mnt/store/melpa/working/yaml-imenu/
 Checking out c1fbba8b03a7bef4fc2b87404914fa9c6eb67b55
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yaml-imenu/
+  to /tmp/yaml-imenu64tSFg/yaml-imenu-20220406.1703
+    yaml-imenu.el -> yaml-imenu.el
+    parse_yaml.rb -> parse_yaml.rb
+Created yaml-imenu-20220406.1703.tar containing:
+  yaml-imenu-20220406.1703/
+  yaml-imenu-20220406.1703/parse_yaml.rb
+  yaml-imenu-20220406.1703/yaml-imenu-pkg.el
+  yaml-imenu-20220406.1703/yaml-imenu.el
+Built yaml-imenu in 3.381s, finished at 2023-06-10T22:59:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 522 Jun 10 22:59 packages/yaml-imenu-20220406.1703.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:59 packages/yaml-imenu-20220406.1703.tar

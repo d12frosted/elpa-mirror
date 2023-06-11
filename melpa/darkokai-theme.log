@@ -4,4 +4,16 @@ Source:  https://github.com/sjrmanning/darkokai.git
 
 Updating /mnt/store/melpa/working/darkokai-theme/
 Checking out 5820aeddfc8c869ba840cc534eba776936656a66
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/darkokai-theme/
+  to /tmp/darkokai-themelqxZH2/darkokai-theme-20200614.1452
+    darkokai-theme.el -> darkokai-theme.el
+Created darkokai-theme-20200614.1452.tar containing:
+  darkokai-theme-20200614.1452/
+  darkokai-theme-20200614.1452/darkokai-theme-pkg.el
+  darkokai-theme-20200614.1452/darkokai-theme.el
+Built darkokai-theme in 2.990s, finished at 2023-06-11T00:12:10+0000
+ ✓ Success:
+228K -rw-r--r-- 1 root root 227K Jun  9 15:42 packages/darkokai-theme-20200614.1452.el
+4.0K -rw-r--r-- 1 root root  194 Jun 11 00:12 packages/darkokai-theme-20200614.1452.entry
+232K -rw-r--r-- 1 root root 230K Jun 11 00:12 packages/darkokai-theme-20200614.1452.tar

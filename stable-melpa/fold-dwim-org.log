@@ -4,4 +4,16 @@ Source:  https://github.com/mattfidler/fold-dwim-org.git
 
 Updating /mnt/store/melpa/working/fold-dwim-org/
 Checking out c09bb2b46d65afbd1d0febc6fded7495be7a3037
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fold-dwim-org/
+  to /tmp/fold-dwim-org6TJjRT/fold-dwim-org-20131203.1351
+    fold-dwim-org.el -> fold-dwim-org.el
+Created fold-dwim-org-20131203.1351.tar containing:
+  fold-dwim-org-20131203.1351/
+  fold-dwim-org-20131203.1351/fold-dwim-org-pkg.el
+  fold-dwim-org-20131203.1351/fold-dwim-org.el
+Built fold-dwim-org in 3.276s, finished at 2023-06-11T00:24:21+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 15:58 packages/fold-dwim-org-20131203.1351.el
+4.0K -rw-r--r-- 1 root root 408 Jun 11 00:24 packages/fold-dwim-org-20131203.1351.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:24 packages/fold-dwim-org-20131203.1351.tar

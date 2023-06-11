@@ -4,4 +4,16 @@ Source:  https://github.com/dbrock/volume.el.git
 
 Updating /mnt/store/melpa/working/volume/
 Checking out 050d3e6d2543a6771a13f95612055864679b6301
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/volume/
+  to /tmp/volumeQIu0wg/volume-20220904.1727
+    volume.el -> volume.el
+Created volume-20220904.1727.tar containing:
+  volume-20220904.1727/
+  volume-20220904.1727/volume-pkg.el
+  volume-20220904.1727/volume.el
+Built volume in 2.412s, finished at 2023-06-10T22:57:12+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  9 16:59 packages/volume-20220904.1727.el
+4.0K -rw-r--r-- 1 root root 382 Jun 10 22:57 packages/volume-20220904.1727.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:57 packages/volume-20220904.1727.tar

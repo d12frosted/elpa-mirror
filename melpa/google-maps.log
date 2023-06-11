@@ -4,4 +4,23 @@ Source:  https://github.com/jd/google-maps.el.git
 
 Updating /mnt/store/melpa/working/google-maps/
 Checking out 2eb16ff609f5a9f8d02c15238a111fbb7db6c146
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/google-maps/
+  to /tmp/google-mapsHVrGBa/google-maps-20181121.1532
+    google-maps-base.el -> google-maps-base.el
+    google-maps-geocode.el -> google-maps-geocode.el
+    google-maps-static.el -> google-maps-static.el
+    google-maps.el -> google-maps.el
+    org-location-google-maps.el -> org-location-google-maps.el
+Created google-maps-20181121.1532.tar containing:
+  google-maps-20181121.1532/
+  google-maps-20181121.1532/google-maps-base.el
+  google-maps-20181121.1532/google-maps-geocode.el
+  google-maps-20181121.1532/google-maps-pkg.el
+  google-maps-20181121.1532/google-maps-static.el
+  google-maps-20181121.1532/google-maps.el
+  google-maps-20181121.1532/org-location-google-maps.el
+Built google-maps in 3.403s, finished at 2023-06-11T00:27:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 471 Jun 11 00:27 packages/google-maps-20181121.1532.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:27 packages/google-maps-20181121.1532.tar

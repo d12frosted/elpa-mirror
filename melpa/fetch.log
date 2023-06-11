@@ -4,4 +4,16 @@ Source:  https://github.com/cbrst/fetch.el.git
 
 Updating /mnt/store/melpa/working/fetch/
 Checking out 3f2793afcbbc32f320e572453166f9354ecc6d06
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fetch/
+  to /tmp/fetchhJy67r/fetch-20131201.730
+    fetch.el -> fetch.el
+Created fetch-20131201.730.tar containing:
+  fetch-20131201.730/
+  fetch-20131201.730/fetch-pkg.el
+  fetch-20131201.730/fetch.el
+Built fetch in 2.565s, finished at 2023-06-11T00:21:33+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jun  9 15:55 packages/fetch-20131201.730.el
+4.0K -rw-r--r-- 1 root root  413 Jun 11 00:21 packages/fetch-20131201.730.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:21 packages/fetch-20131201.730.tar

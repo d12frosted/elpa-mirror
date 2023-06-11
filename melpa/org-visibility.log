@@ -4,4 +4,16 @@ Source:  https://github.com/nullman/emacs-org-visibility.git
 
 Updating /mnt/store/melpa/working/org-visibility/
 Checking out afa4b6f8ff274df87eb11f1afd0321084a45a2ab
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-visibility/
+  to /tmp/org-visibilityni2AMO/org-visibility-20220929.1415
+    org-visibility.el -> org-visibility.el
+Created org-visibility-20220929.1415.tar containing:
+  org-visibility-20220929.1415/
+  org-visibility-20220929.1415/org-visibility-pkg.el
+  org-visibility-20220929.1415/org-visibility.el
+Built org-visibility in 3.090s, finished at 2023-06-10T22:39:27+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 25K Jun  9 16:34 packages/org-visibility-20220929.1415.el
+4.0K -rw-r--r-- 1 root root 472 Jun 10 22:39 packages/org-visibility-20220929.1415.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:39 packages/org-visibility-20220929.1415.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/juba/textile-mode.git
 
 Updating /mnt/store/melpa/working/textile-mode/
 Checking out 8f8c09ef097a95a713307fdb5c92b9778dfbc1fc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/textile-mode/
+  to /tmp/textile-modeCc9dro/textile-mode-20230112.1030
+    textile-mode.el -> textile-mode.el
+Created textile-mode-20230112.1030.tar containing:
+  textile-mode-20230112.1030/
+  textile-mode-20230112.1030/textile-mode-pkg.el
+  textile-mode-20230112.1030/textile-mode.el
+Built textile-mode in 3.203s, finished at 2023-06-10T22:54:05+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 16:54 packages/textile-mode-20230112.1030.el
+4.0K -rw-r--r-- 1 root root 410 Jun 10 22:54 packages/textile-mode-20230112.1030.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:54 packages/textile-mode-20230112.1030.tar

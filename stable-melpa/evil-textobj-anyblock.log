@@ -4,4 +4,16 @@ Source:  https://github.com/noctuid/evil-textobj-anyblock.git
 
 Updating /mnt/store/melpa/working/evil-textobj-anyblock/
 Checking out ff00980f0634f95bf2ad9956b615a155ea8743be
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-textobj-anyblock/
+  to /tmp/evil-textobj-anyblockzEYuxj/evil-textobj-anyblock-20170905.1907
+    evil-textobj-anyblock.el -> evil-textobj-anyblock.el
+Created evil-textobj-anyblock-20170905.1907.tar containing:
+  evil-textobj-anyblock-20170905.1907/
+  evil-textobj-anyblock-20170905.1907/evil-textobj-anyblock-pkg.el
+  evil-textobj-anyblock-20170905.1907/evil-textobj-anyblock.el
+Built evil-textobj-anyblock in 3.847s, finished at 2023-06-11T00:20:26+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 15:53 packages/evil-textobj-anyblock-20170905.1907.el
+4.0K -rw-r--r-- 1 root root 489 Jun 11 00:20 packages/evil-textobj-anyblock-20170905.1907.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:20 packages/evil-textobj-anyblock-20170905.1907.tar

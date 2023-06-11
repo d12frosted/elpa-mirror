@@ -4,4 +4,16 @@ Source:  https://github.com/DamienCassou/navigel.git
 
 Updating /mnt/store/melpa/working/navigel/
 Checking out 680b71f0f2017f9417504639d5c47366b102c2b7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/navigel/
+  to /tmp/navigelPWWuhM/navigel-20230527.1620
+    navigel.el -> navigel.el
+Created navigel-20230527.1620.tar containing:
+  navigel-20230527.1620/
+  navigel-20230527.1620/navigel-pkg.el
+  navigel-20230527.1620/navigel.el
+Built navigel in 3.316s, finished at 2023-06-10T22:34:55+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:26 packages/navigel-20230527.1620.el
+4.0K -rw-r--r-- 1 root root 441 Jun 10 22:34 packages/navigel-20230527.1620.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:34 packages/navigel-20230527.1620.tar

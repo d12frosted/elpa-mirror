@@ -4,4 +4,16 @@ Source:  https://github.com/liblit/flycheck-status-emoji.git
 
 Updating /mnt/store/melpa/working/flycheck-status-emoji/
 Checking out 4bd113ab42dec9544b66e0a27ed9008ce8148433
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-status-emoji/
+  to /tmp/flycheck-status-emojiYmIQhg/flycheck-status-emoji-20180516.229
+    flycheck-status-emoji.el -> flycheck-status-emoji.el
+Created flycheck-status-emoji-20180516.229.tar containing:
+  flycheck-status-emoji-20180516.229/
+  flycheck-status-emoji-20180516.229/flycheck-status-emoji-pkg.el
+  flycheck-status-emoji-20180516.229/flycheck-status-emoji.el
+Built flycheck-status-emoji in 2.748s, finished at 2023-06-11T00:23:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.4K Jun  9 15:57 packages/flycheck-status-emoji-20180516.229.el
+4.0K -rw-r--r-- 1 root root  547 Jun 11 00:23 packages/flycheck-status-emoji-20180516.229.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:23 packages/flycheck-status-emoji-20180516.229.tar

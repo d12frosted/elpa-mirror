@@ -4,4 +4,16 @@ Source:  https://github.com/tiros-dev/tql-mode.git
 
 Updating /mnt/store/melpa/working/tql-mode/
 Checking out 488add79eb3fc8ec02aedaa997fe1ed9e5c3e638
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tql-mode/
+  to /tmp/tql-modeRCCShu/tql-mode-20170724.254
+    tql-mode.el -> tql-mode.el
+Created tql-mode-20170724.254.tar containing:
+  tql-mode-20170724.254/
+  tql-mode-20170724.254/tql-mode-pkg.el
+  tql-mode-20170724.254/tql-mode.el
+Built tql-mode in 2.724s, finished at 2023-06-10T22:54:53+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  9 16:55 packages/tql-mode-20170724.254.el
+4.0K -rw-r--r-- 1 root root  364 Jun 10 22:54 packages/tql-mode-20170724.254.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:54 packages/tql-mode-20170724.254.tar

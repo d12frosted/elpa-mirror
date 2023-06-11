@@ -4,4 +4,16 @@ Source:  https://github.com/agrif/pianobar.el.git
 
 Updating /mnt/store/melpa/working/pianobar/
 Checking out d708417608df4f09ee565fddaad03dfe181829a8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pianobar/
+  to /tmp/pianobarDhWXmY/pianobar-20201002.1756
+    pianobar.el -> pianobar.el
+Created pianobar-20201002.1756.tar containing:
+  pianobar-20201002.1756/
+  pianobar-20201002.1756/pianobar-pkg.el
+  pianobar-20201002.1756/pianobar.el
+Built pianobar in 2.950s, finished at 2023-06-10T22:42:32+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:38 packages/pianobar-20201002.1756.el
+4.0K -rw-r--r-- 1 root root 396 Jun 10 22:42 packages/pianobar-20201002.1756.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:42 packages/pianobar-20201002.1756.tar

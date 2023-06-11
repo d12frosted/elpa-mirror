@@ -4,4 +4,16 @@ Source:  https://github.com/bazelbuild/emacs-bazel-mode.git
 
 Updating /mnt/store/melpa/working/bazel/
 Checking out d334a5d9c00def0995a36fe89f3bb8d4595409ad
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bazel/
+  to /tmp/bazelugrF4C/bazel-20230510.2235
+    bazel.el -> bazel.el
+Created bazel-20230510.2235.tar containing:
+  bazel-20230510.2235/
+  bazel-20230510.2235/bazel-pkg.el
+  bazel-20230510.2235/bazel.el
+Built bazel in 4.206s, finished at 2023-06-11T00:05:04+0000
+ ✓ Success:
+132K -rw-r--r-- 1 root root 130K Jun  9 15:31 packages/bazel-20230510.2235.el
+4.0K -rw-r--r-- 1 root root  245 Jun 11 00:05 packages/bazel-20230510.2235.entry
+140K -rw-r--r-- 1 root root 140K Jun 11 00:05 packages/bazel-20230510.2235.tar

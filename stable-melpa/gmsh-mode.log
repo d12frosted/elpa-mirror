@@ -4,4 +4,16 @@ Source:  https://gitlab.com/matsievskiysv/gmsh-mode.git
 
 Updating /mnt/store/melpa/working/gmsh-mode/
 Checking out 2b7c573f378f7e9210400115d4d9dfd879f8a4ad
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gmsh-mode/
+  to /tmp/gmsh-modepuYI2T/gmsh-mode-20211204.826
+    gmsh-mode.el -> gmsh-mode.el
+Created gmsh-mode-20211204.826.tar containing:
+  gmsh-mode-20211204.826/
+  gmsh-mode-20211204.826/gmsh-mode-pkg.el
+  gmsh-mode-20211204.826/gmsh-mode.el
+Built gmsh-mode in 3.957s, finished at 2023-06-11T00:26:27+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  9 16:02 packages/gmsh-mode-20211204.826.el
+4.0K -rw-r--r-- 1 root root 404 Jun 11 00:26 packages/gmsh-mode-20211204.826.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:26 packages/gmsh-mode-20211204.826.tar

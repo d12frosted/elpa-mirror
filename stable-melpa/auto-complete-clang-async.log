@@ -4,4 +4,16 @@ Source:  https://github.com/Golevka/emacs-clang-complete-async.git
 
 Updating /mnt/store/melpa/working/auto-complete-clang-async/
 Checking out a5114e3477793ccb9420acc5cd6a1cb26be65964
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auto-complete-clang-async/
+  to /tmp/auto-complete-clang-async2x8QaX/auto-complete-clang-async-20130526.1527
+    auto-complete-clang-async.el -> auto-complete-clang-async.el
+Created auto-complete-clang-async-20130526.1527.tar containing:
+  auto-complete-clang-async-20130526.1527/
+  auto-complete-clang-async-20130526.1527/auto-complete-clang-async-pkg.el
+  auto-complete-clang-async-20130526.1527/auto-complete-clang-async.el
+Built auto-complete-clang-async in 3.513s, finished at 2023-06-11T00:04:13+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Jun  9 15:30 packages/auto-complete-clang-async-20130526.1527.el
+4.0K -rw-r--r-- 1 root root 229 Jun 11 00:04 packages/auto-complete-clang-async-20130526.1527.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:04 packages/auto-complete-clang-async-20130526.1527.tar

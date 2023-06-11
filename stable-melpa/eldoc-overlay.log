@@ -4,4 +4,16 @@ Source:  https://repo.or.cz/eldoc-overlay.git
 
 Updating /mnt/store/melpa/working/eldoc-overlay/
 Checking out 14a9e141918c2e18a107920e8631e622c580b3ef
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eldoc-overlay/
+  to /tmp/eldoc-overlayMdqxSa/eldoc-overlay-20230406.959
+    eldoc-overlay.el -> eldoc-overlay.el
+Created eldoc-overlay-20230406.959.tar containing:
+  eldoc-overlay-20230406.959/
+  eldoc-overlay-20230406.959/eldoc-overlay-pkg.el
+  eldoc-overlay-20230406.959/eldoc-overlay.el
+Built eldoc-overlay in 3.330s, finished at 2023-06-11T00:16:43+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  9 15:49 packages/eldoc-overlay-20230406.959.el
+4.0K -rw-r--r-- 1 root root  506 Jun 11 00:16 packages/eldoc-overlay-20230406.959.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:16 packages/eldoc-overlay-20230406.959.tar

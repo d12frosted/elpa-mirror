@@ -4,4 +4,19 @@ Source:  https://github.com/karthink/elfeed-tube.git
 
 Updating /mnt/store/melpa/working/elfeed-tube/
 Checking out 3ac12d76402bf192de8ae3b18997f9a52726379f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-tube/
+  to /tmp/elfeed-tubez3l6hc/elfeed-tube-20230430.546
+    elfeed-tube.el -> elfeed-tube.el
+    elfeed-tube-utils.el -> elfeed-tube-utils.el
+    elfeed-tube-fill.el -> elfeed-tube-fill.el
+Created elfeed-tube-20230430.546.tar containing:
+  elfeed-tube-20230430.546/
+  elfeed-tube-20230430.546/elfeed-tube-fill.el
+  elfeed-tube-20230430.546/elfeed-tube-pkg.el
+  elfeed-tube-20230430.546/elfeed-tube-utils.el
+  elfeed-tube-20230430.546/elfeed-tube.el
+Built elfeed-tube in 3.366s, finished at 2023-06-11T00:16:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  575 Jun 11 00:16 packages/elfeed-tube-20230430.546.entry
+100K -rw-r--r-- 1 root root 100K Jun 11 00:16 packages/elfeed-tube-20230430.546.tar

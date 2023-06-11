@@ -4,4 +4,16 @@ Source:  https://github.com/snosov1/toc-org.git
 
 Updating /mnt/store/melpa/working/toc-org/
 Checking out bf2e4b358efbd860ecafe6e74776de0885d9d100
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/toc-org/
+  to /tmp/toc-orgbZ7BzO/toc-org-20220110.1452
+    toc-org.el -> toc-org.el
+Created toc-org-20220110.1452.tar containing:
+  toc-org-20220110.1452/
+  toc-org-20220110.1452/toc-org-pkg.el
+  toc-org-20220110.1452/toc-org.el
+Built toc-org in 3.119s, finished at 2023-06-10T22:54:38+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 16:55 packages/toc-org-20220110.1452.el
+4.0K -rw-r--r-- 1 root root 499 Jun 10 22:54 packages/toc-org-20220110.1452.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:54 packages/toc-org-20220110.1452.tar

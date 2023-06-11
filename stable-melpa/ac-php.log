@@ -4,4 +4,16 @@ Source:  https://github.com/xcwen/ac-php.git
 
 Updating /mnt/store/melpa/working/ac-php/
 Checking out 4c678709e1e1f1673a83b9eb01875e457c6ca658
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-php/
+  to /tmp/ac-phpKP2bAn/ac-php-20230522.1329
+    ac-php.el -> ac-php.el
+Created ac-php-20230522.1329.tar containing:
+  ac-php-20230522.1329/
+  ac-php-20230522.1329/ac-php-pkg.el
+  ac-php-20230522.1329/ac-php.el
+Built ac-php in 3.225s, finished at 2023-06-11T00:02:09+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.1K Jun  9 15:27 packages/ac-php-20230522.1329.el
+4.0K -rw-r--r-- 1 root root  415 Jun 11 00:02 packages/ac-php-20230522.1329.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:02 packages/ac-php-20230522.1329.tar

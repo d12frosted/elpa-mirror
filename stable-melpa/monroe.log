@@ -4,4 +4,16 @@ Source:  https://github.com/sanel/monroe.git
 
 Updating /mnt/store/melpa/working/monroe/
 Checking out 8f809e4aa0a35ec2d1c880aacf59e6bc317a566f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/monroe/
+  to /tmp/monroeQcMQ7q/monroe-20220915.1647
+    monroe.el -> monroe.el
+Created monroe-20220915.1647.tar containing:
+  monroe-20220915.1647/
+  monroe-20220915.1647/monroe-pkg.el
+  monroe-20220915.1647/monroe.el
+Built monroe in 3.954s, finished at 2023-06-10T22:33:29+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 26K Jun  9 16:24 packages/monroe-20220915.1647.el
+4.0K -rw-r--r-- 1 root root 397 Jun 10 22:33 packages/monroe-20220915.1647.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:33 packages/monroe-20220915.1647.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/nicferrier/emacs-lxc.git
 
 Updating /mnt/store/melpa/working/lxc/
 Checking out 88bed56c954d1edd9ff5ce0ced2c02dcf9f71835
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lxc/
+  to /tmp/lxccIuLjh/lxc-20140410.2022
+    lxc.el -> lxc.el
+Created lxc-20140410.2022.tar containing:
+  lxc-20140410.2022/
+  lxc-20140410.2022/lxc-pkg.el
+  lxc-20140410.2022/lxc.el
+Built lxc in 2.940s, finished at 2023-06-10T22:30:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.9K Jun  9 16:20 packages/lxc-20140410.2022.el
+4.0K -rw-r--r-- 1 root root  416 Jun 10 22:30 packages/lxc-20140410.2022.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:30 packages/lxc-20140410.2022.tar

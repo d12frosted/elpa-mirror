@@ -4,4 +4,16 @@ Source:  https://github.com/leoc/elmine.git
 
 Updating /mnt/store/melpa/working/elmine/
 Checking out d42e328634828e0c1770b72d5e8b87671d081693
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elmine/
+  to /tmp/elmineePSuB0/elmine-20200520.1237
+    elmine.el -> elmine.el
+Created elmine-20200520.1237.tar containing:
+  elmine-20200520.1237/
+  elmine-20200520.1237/elmine-pkg.el
+  elmine-20200520.1237/elmine.el
+Built elmine in 4.474s, finished at 2023-06-11T00:17:16+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 15:49 packages/elmine-20200520.1237.el
+4.0K -rw-r--r-- 1 root root 399 Jun 11 00:17 packages/elmine-20200520.1237.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:17 packages/elmine-20200520.1237.tar

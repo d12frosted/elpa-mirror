@@ -4,4 +4,16 @@ Source:  https://github.com/joostkremers/criticmarkup-emacs.git
 
 Updating /mnt/store/melpa/working/cm-mode/
 Checking out 276d49c859822265070ae5dfbb403fd7d8d06436
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cm-mode/
+  to /tmp/cm-modeBUQtIX/cm-mode-20170203.2107
+    cm-mode.el -> cm-mode.el
+Created cm-mode-20170203.2107.tar containing:
+  cm-mode-20170203.2107/
+  cm-mode-20170203.2107/cm-mode-pkg.el
+  cm-mode-20170203.2107/cm-mode.el
+Built cm-mode in 3.498s, finished at 2023-06-11T00:09:03+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 36K Jun  9 15:36 packages/cm-mode-20170203.2107.el
+4.0K -rw-r--r-- 1 root root 389 Jun 11 00:09 packages/cm-mode-20170203.2107.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:09 packages/cm-mode-20170203.2107.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/paddymcall/indian-ext.git
 
 Updating /mnt/store/melpa/working/indian-ext/
 Checking out a5450fe467393194bc2458c0d5e0a06c91bf117a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/indian-ext/
+  to /tmp/indian-extDFkVxF/indian-ext-20190424.1547
+    indian-ext.el -> indian-ext.el
+Created indian-ext-20190424.1547.tar containing:
+  indian-ext-20190424.1547/
+  indian-ext-20190424.1547/indian-ext-pkg.el
+  indian-ext-20190424.1547/indian-ext.el
+Built indian-ext in 2.882s, finished at 2023-06-10T22:24:40+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 16:12 packages/indian-ext-20190424.1547.el
+4.0K -rw-r--r-- 1 root root 513 Jun 10 22:24 packages/indian-ext-20190424.1547.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:24 packages/indian-ext-20190424.1547.tar

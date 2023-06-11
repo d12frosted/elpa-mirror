@@ -4,4 +4,16 @@ Source:  https://github.com/legoscia/messages-are-flowing.git
 
 Updating /mnt/store/melpa/working/messages-are-flowing/
 Checking out d582a564a63b7b90764ffc5c618bc5300225d0ab
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/messages-are-flowing/
+  to /tmp/messages-are-flowingK0EACS/messages-are-flowing-20191029.954
+    messages-are-flowing.el -> messages-are-flowing.el
+Created messages-are-flowing-20191029.954.tar containing:
+  messages-are-flowing-20191029.954/
+  messages-are-flowing-20191029.954/messages-are-flowing-pkg.el
+  messages-are-flowing-20191029.954/messages-are-flowing.el
+Built messages-are-flowing in 4.700s, finished at 2023-06-10T22:32:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.5K Jun  9 16:22 packages/messages-are-flowing-20191029.954.el
+4.0K -rw-r--r-- 1 root root  402 Jun 10 22:32 packages/messages-are-flowing-20191029.954.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:32 packages/messages-are-flowing-20191029.954.tar

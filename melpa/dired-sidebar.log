@@ -4,4 +4,16 @@ Source:  https://github.com/jojojames/dired-sidebar.git
 
 Updating /mnt/store/melpa/working/dired-sidebar/
 Checking out 5569d3b53585f5413cf87a694650d0fd6e040803
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-sidebar/
+  to /tmp/dired-sidebaryjb0rg/dired-sidebar-20230216.432
+    dired-sidebar.el -> dired-sidebar.el
+Created dired-sidebar-20230216.432.tar containing:
+  dired-sidebar-20230216.432/
+  dired-sidebar-20230216.432/dired-sidebar-pkg.el
+  dired-sidebar-20230216.432/dired-sidebar.el
+Built dired-sidebar in 3.699s, finished at 2023-06-11T00:13:58+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 47K Jun  9 15:44 packages/dired-sidebar-20230216.432.el
+4.0K -rw-r--r-- 1 root root 468 Jun 11 00:13 packages/dired-sidebar-20230216.432.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:13 packages/dired-sidebar-20230216.432.tar

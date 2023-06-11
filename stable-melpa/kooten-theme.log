@@ -4,4 +4,16 @@ Source:  https://github.com/kootenpv/emacs-kooten-theme.git
 
 Updating /mnt/store/melpa/working/kooten-theme/
 Checking out d10197b4dd7af02cd14aeab2573c273a294798c3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kooten-theme/
+  to /tmp/kooten-theme279pJA/kooten-theme-20161023.905
+    kooten-theme.el -> kooten-theme.el
+Created kooten-theme-20161023.905.tar containing:
+  kooten-theme-20161023.905/
+  kooten-theme-20161023.905/kooten-theme-pkg.el
+  kooten-theme-20161023.905/kooten-theme.el
+Built kooten-theme in 3.732s, finished at 2023-06-10T22:28:15+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 36K Jun  9 16:17 packages/kooten-theme-20161023.905.el
+4.0K -rw-r--r-- 1 root root 432 Jun 10 22:28 packages/kooten-theme-20161023.905.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:28 packages/kooten-theme-20161023.905.tar

@@ -4,4 +4,29 @@ Source:  https://github.com/re5et/simp.git
 
 Updating /mnt/store/melpa/working/simp/
 Checking out d4d4b8547055347828bedccbeffdb4fd2d5a5d34
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/simp/
+  to /tmp/simpS6Zb3d/simp-20180607.254
+    simp-project-files.el -> simp-project-files.el
+    simp-project-git.el -> simp-project-git.el
+    simp-project-ibuffer.el -> simp-project-ibuffer.el
+    simp-project-rgrep.el -> simp-project-rgrep.el
+    simp-project-root-dired.el -> simp-project-root-dired.el
+    simp-project-with-bookmarks.el -> simp-project-with-bookmarks.el
+    simp-project.el -> simp-project.el
+    simp.el -> simp.el
+Created simp-20180607.254.tar containing:
+  simp-20180607.254/
+  simp-20180607.254/simp-pkg.el
+  simp-20180607.254/simp-project-files.el
+  simp-20180607.254/simp-project-git.el
+  simp-20180607.254/simp-project-ibuffer.el
+  simp-20180607.254/simp-project-rgrep.el
+  simp-20180607.254/simp-project-root-dired.el
+  simp-20180607.254/simp-project-with-bookmarks.el
+  simp-20180607.254/simp-project.el
+  simp-20180607.254/simp.el
+Built simp in 2.802s, finished at 2023-06-10T22:49:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 348 Jun 10 22:49 packages/simp-20180607.254.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:49 packages/simp-20180607.254.tar

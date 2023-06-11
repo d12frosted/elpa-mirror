@@ -4,4 +4,16 @@ Source:  https://github.com/ananthakumaran/exunit.el.git
 
 Updating /mnt/store/melpa/working/exunit/
 Checking out e0a8c2b81f3d53885ed753b911b3cb6ee9229bec
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exunit/
+  to /tmp/exunitn3I2Jt/exunit-20221019.1320
+    exunit.el -> exunit.el
+Created exunit-20221019.1320.tar containing:
+  exunit-20221019.1320/
+  exunit-20221019.1320/exunit-pkg.el
+  exunit-20221019.1320/exunit.el
+Built exunit in 3.345s, finished at 2023-06-11T00:20:57+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 15:54 packages/exunit-20221019.1320.el
+4.0K -rw-r--r-- 1 root root 510 Jun 11 00:20 packages/exunit-20221019.1320.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:20 packages/exunit-20221019.1320.tar

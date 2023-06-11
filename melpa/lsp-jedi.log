@@ -4,4 +4,16 @@ Source:  https://github.com/fredcamps/lsp-jedi.git
 
 Updating /mnt/store/melpa/working/lsp-jedi/
 Checking out 5e3eb3e160c2d38b8bd2b5cd3b86fa4f823f9330
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-jedi/
+  to /tmp/lsp-jediai2Taj/lsp-jedi-20220430.18
+    lsp-jedi.el -> lsp-jedi.el
+Created lsp-jedi-20220430.18.tar containing:
+  lsp-jedi-20220430.18/
+  lsp-jedi-20220430.18/lsp-jedi-pkg.el
+  lsp-jedi-20220430.18/lsp-jedi.el
+Built lsp-jedi in 3.124s, finished at 2023-06-10T22:30:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jun  9 16:20 packages/lsp-jedi-20220430.18.el
+4.0K -rw-r--r-- 1 root root  469 Jun 10 22:30 packages/lsp-jedi-20220430.18.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:30 packages/lsp-jedi-20220430.18.tar

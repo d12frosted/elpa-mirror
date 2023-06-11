@@ -4,4 +4,16 @@ Source:  https://github.com/mrkkrp/kill-or-bury-alive.git
 
 Updating /mnt/store/melpa/working/kill-or-bury-alive/
 Checking out 16c393db6ad0c7e184af0a24d26b637e23543b1f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kill-or-bury-alive/
+  to /tmp/kill-or-bury-aliveaPD0qQ/kill-or-bury-alive-20230606.1503
+    kill-or-bury-alive.el -> kill-or-bury-alive.el
+Created kill-or-bury-alive-20230606.1503.tar containing:
+  kill-or-bury-alive-20230606.1503/
+  kill-or-bury-alive-20230606.1503/kill-or-bury-alive-pkg.el
+  kill-or-bury-alive-20230606.1503/kill-or-bury-alive.el
+Built kill-or-bury-alive in 4.066s, finished at 2023-06-10T22:28:03+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.8K Jun  9 16:17 packages/kill-or-bury-alive-20230606.1503.el
+4.0K -rw-r--r-- 1 root root  500 Jun 10 22:28 packages/kill-or-bury-alive-20230606.1503.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:28 packages/kill-or-bury-alive-20230606.1503.tar

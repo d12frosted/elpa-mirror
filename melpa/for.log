@@ -4,4 +4,25 @@ Source:  https://github.com/usaoc/elisp-for.git
 
 Updating /mnt/store/melpa/working/for/
 Checking out 81f97e3f10c3ea9eb29759c2442dcf919d95d842
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/for/
+  to /tmp/forf4HXjo/for-20230507.702
+    for-helper.el -> for-helper.el
+    for-iteration.el -> for-iteration.el
+    for-sequence.el -> for-sequence.el
+    for.el -> for.el
+    for.texi -> for.texi
+Generating /tmp/forf4HXjo/for-20230507.702/for.info
+Created for-20230507.702.tar containing:
+  for-20230507.702/
+  for-20230507.702/dir
+  for-20230507.702/for-helper.el
+  for-20230507.702/for-iteration.el
+  for-20230507.702/for-pkg.el
+  for-20230507.702/for-sequence.el
+  for-20230507.702/for.el
+  for-20230507.702/for.info
+Built for in 10.692s, finished at 2023-06-11T00:24:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  433 Jun 11 00:24 packages/for-20230507.702.entry
+140K -rw-r--r-- 1 root root 140K Jun 11 00:24 packages/for-20230507.702.tar

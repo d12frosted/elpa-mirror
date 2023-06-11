@@ -4,4 +4,16 @@ Source:  https://github.com/xendk/ede-php-autoload-composer-installers.git
 
 Updating /mnt/store/melpa/working/ede-php-autoload-composer-installers/
 Checking out 3e2fde975a06757b363e235c67e6341ebe668f60
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ede-php-autoload-composer-installers/
+  to /tmp/ede-php-autoload-composer-installers9PKUJp/ede-php-autoload-composer-installers-20170221.2026
+    ede-php-autoload-composer-installers.el -> ede-php-autoload-composer-installers.el
+Created ede-php-autoload-composer-installers-20170221.2026.tar containing:
+  ede-php-autoload-composer-installers-20170221.2026/
+  ede-php-autoload-composer-installers-20170221.2026/ede-php-autoload-composer-installers-pkg.el
+  ede-php-autoload-composer-installers-20170221.2026/ede-php-autoload-composer-installers.el
+Built ede-php-autoload-composer-installers in 3.076s, finished at 2023-06-11T00:15:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  9 15:47 packages/ede-php-autoload-composer-installers-20170221.2026.el
+4.0K -rw-r--r-- 1 root root  590 Jun 11 00:15 packages/ede-php-autoload-composer-installers-20170221.2026.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:15 packages/ede-php-autoload-composer-installers-20170221.2026.tar

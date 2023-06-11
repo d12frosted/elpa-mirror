@@ -4,4 +4,16 @@ Source:  https://github.com/modelica-tools/modelica-mode.git
 
 Updating /mnt/store/melpa/working/modelica-mode/
 Checking out 7064a4abdae68fc074a85a2e7c159e067c44c0e1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/modelica-mode/
+  to /tmp/modelica-mode3Iwivi/modelica-mode-20230508.1020
+    modelica-mode.el -> modelica-mode.el
+Created modelica-mode-20230508.1020.tar containing:
+  modelica-mode-20230508.1020/
+  modelica-mode-20230508.1020/modelica-mode-pkg.el
+  modelica-mode-20230508.1020/modelica-mode.el
+Built modelica-mode in 6.197s, finished at 2023-06-10T22:33:02+0000
+ ✓ Success:
+ 44K -rwxr-xr-x 1 root root 41K Jun  9 16:24 packages/modelica-mode-20230508.1020.el
+4.0K -rw-r--r-- 1 root root 290 Jun 10 22:33 packages/modelica-mode-20230508.1020.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:33 packages/modelica-mode-20230508.1020.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/ageldama/moonshot.git
 
 Updating /mnt/store/melpa/working/moonshot/
 Checking out ec37a12825888047a90d9ee8131aa4bea348edf7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/moonshot/
+  to /tmp/moonshotIXncUq/moonshot-20210627.2244
+    moonshot.el -> moonshot.el
+Created moonshot-20210627.2244.tar containing:
+  moonshot-20210627.2244/
+  moonshot-20210627.2244/moonshot-pkg.el
+  moonshot-20210627.2244/moonshot.el
+Built moonshot in 3.719s, finished at 2023-06-10T22:33:32+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:24 packages/moonshot-20210627.2244.el
+4.0K -rw-r--r-- 1 root root 717 Jun 10 22:33 packages/moonshot-20210627.2244.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:33 packages/moonshot-20210627.2244.tar

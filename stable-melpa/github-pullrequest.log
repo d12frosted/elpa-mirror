@@ -4,4 +4,16 @@ Source:  https://github.com/jakoblind/github-pullrequest.git
 
 Updating /mnt/store/melpa/working/github-pullrequest/
 Checking out 471816e09d1e140a0975911fe020c6c659f71209
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/github-pullrequest/
+  to /tmp/github-pullrequestIVvunE/github-pullrequest-20170116.616
+    github-pullrequest.el -> github-pullrequest.el
+Created github-pullrequest-20170116.616.tar containing:
+  github-pullrequest-20170116.616/
+  github-pullrequest-20170116.616/github-pullrequest-pkg.el
+  github-pullrequest-20170116.616/github-pullrequest.el
+Built github-pullrequest in 3.902s, finished at 2023-06-11T00:26:07+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.6K Jun  9 16:01 packages/github-pullrequest-20170116.616.el
+4.0K -rw-r--r-- 1 root root  616 Jun 11 00:26 packages/github-pullrequest-20170116.616.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:26 packages/github-pullrequest-20170116.616.tar

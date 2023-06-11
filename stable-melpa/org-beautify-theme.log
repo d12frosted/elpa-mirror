@@ -4,4 +4,16 @@ Source:  https://github.com/jonnay/org-beautify-theme.git
 
 Updating /mnt/store/melpa/working/org-beautify-theme/
 Checking out df6a1114fda313e1689363e196c8284fbe2a2738
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-beautify-theme/
+  to /tmp/org-beautify-themeccy5Pa/org-beautify-theme-20170908.2218
+    org-beautify-theme.el -> org-beautify-theme.el
+Created org-beautify-theme-20170908.2218.tar containing:
+  org-beautify-theme-20170908.2218/
+  org-beautify-theme-20170908.2218/org-beautify-theme-pkg.el
+  org-beautify-theme-20170908.2218/org-beautify-theme.el
+Built org-beautify-theme in 2.931s, finished at 2023-06-10T22:37:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jun  9 16:31 packages/org-beautify-theme-20170908.2218.el
+4.0K -rw-r--r-- 1 root root  413 Jun 10 22:37 packages/org-beautify-theme-20170908.2218.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:37 packages/org-beautify-theme-20170908.2218.tar

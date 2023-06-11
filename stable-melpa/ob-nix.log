@@ -4,4 +4,16 @@ Source:  https://codeberg.org/theesm/ob-nix.git
 
 Updating /mnt/store/melpa/working/ob-nix/
 Checking out 76d71b37fb031f25bd52ff9c98b29292ebe0424e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-nix/
+  to /tmp/ob-nixoPbncg/ob-nix-20221224.334
+    ob-nix.el -> ob-nix.el
+Created ob-nix-20221224.334.tar containing:
+  ob-nix-20221224.334/
+  ob-nix-20221224.334/ob-nix-pkg.el
+  ob-nix-20221224.334/ob-nix.el
+Built ob-nix in 3.613s, finished at 2023-06-10T22:36:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jun  9 16:29 packages/ob-nix-20221224.334.el
+4.0K -rw-r--r-- 1 root root  400 Jun 10 22:36 packages/ob-nix-20221224.334.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:36 packages/ob-nix-20221224.334.tar

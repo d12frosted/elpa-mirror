@@ -4,4 +4,43 @@ Source:  https://github.com/nlamirault/dionysos.git
 
 Updating /mnt/store/melpa/working/dionysos/
 Checking out 98bc789d20e41020d6e62d63d3c78f8032fa4bf2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dionysos/
+  to /tmp/dionysosbQxwbh/dionysos-20160810.1056
+    dionysos-backend-mpd.el -> dionysos-backend-mpd.el
+    dionysos-backend-mplayer.el -> dionysos-backend-mplayer.el
+    dionysos-backend-vlc.el -> dionysos-backend-vlc.el
+    dionysos-backend.el -> dionysos-backend.el
+    dionysos-custom.el -> dionysos-custom.el
+    dionysos-fs-mode.el -> dionysos-fs-mode.el
+    dionysos-io.el -> dionysos-io.el
+    dionysos-mode.el -> dionysos-mode.el
+    dionysos-mpd-mode.el -> dionysos-mpd-mode.el
+    dionysos-notify.el -> dionysos-notify.el
+    dionysos-process.el -> dionysos-process.el
+    dionysos-ui.el -> dionysos-ui.el
+    dionysos-version.el -> dionysos-version.el
+    dionysos-volume.el -> dionysos-volume.el
+    dionysos.el -> dionysos.el
+Created dionysos-20160810.1056.tar containing:
+  dionysos-20160810.1056/
+  dionysos-20160810.1056/dionysos-backend-mpd.el
+  dionysos-20160810.1056/dionysos-backend-mplayer.el
+  dionysos-20160810.1056/dionysos-backend-vlc.el
+  dionysos-20160810.1056/dionysos-backend.el
+  dionysos-20160810.1056/dionysos-custom.el
+  dionysos-20160810.1056/dionysos-fs-mode.el
+  dionysos-20160810.1056/dionysos-io.el
+  dionysos-20160810.1056/dionysos-mode.el
+  dionysos-20160810.1056/dionysos-mpd-mode.el
+  dionysos-20160810.1056/dionysos-notify.el
+  dionysos-20160810.1056/dionysos-pkg.el
+  dionysos-20160810.1056/dionysos-process.el
+  dionysos-20160810.1056/dionysos-ui.el
+  dionysos-20160810.1056/dionysos-version.el
+  dionysos-20160810.1056/dionysos-volume.el
+  dionysos-20160810.1056/dionysos.el
+Built dionysos in 3.936s, finished at 2023-06-11T00:13:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 610 Jun 11 00:13 packages/dionysos-20160810.1056.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:13 packages/dionysos-20160810.1056.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/fritzgrabo/ob-dsq.git
 
 Updating /mnt/store/melpa/working/ob-dsq/
 Checking out e001b263af87993755319caefaf5d19e196e4e1b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-dsq/
+  to /tmp/ob-dsqVt48wz/ob-dsq-20220915.1610
+    ob-dsq.el -> ob-dsq.el
+Created ob-dsq-20220915.1610.tar containing:
+  ob-dsq-20220915.1610/
+  ob-dsq-20220915.1610/ob-dsq-pkg.el
+  ob-dsq-20220915.1610/ob-dsq.el
+Built ob-dsq in 3.022s, finished at 2023-06-10T22:36:17+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:28 packages/ob-dsq-20220915.1610.el
+4.0K -rw-r--r-- 1 root root 439 Jun 10 22:36 packages/ob-dsq-20220915.1610.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:36 packages/ob-dsq-20220915.1610.tar

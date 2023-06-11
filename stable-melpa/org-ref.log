@@ -4,4 +4,93 @@ Source:  https://github.com/jkitchin/org-ref.git
 
 Updating /mnt/store/melpa/working/org-ref/
 Checking out cb624ec1c1a351037a59071342af31bb38b3b4fe
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-ref/
+  to /tmp/org-ref79vuzm/org-ref-20230518.2125
+    contrib.el -> contrib.el
+    doi-utils.el -> doi-utils.el
+    nist-webbook.el -> nist-webbook.el
+    openalex.el -> openalex.el
+    org-ref-arxiv.el -> org-ref-arxiv.el
+    org-ref-bibliography-links.el -> org-ref-bibliography-links.el
+    org-ref-bibtex.el -> org-ref-bibtex.el
+    org-ref-citation-links.el -> org-ref-citation-links.el
+    org-ref-compat.el -> org-ref-compat.el
+    org-ref-core.el -> org-ref-core.el
+    org-ref-export.el -> org-ref-export.el
+    org-ref-glossary.el -> org-ref-glossary.el
+    org-ref-helm.el -> org-ref-helm.el
+    org-ref-isbn.el -> org-ref-isbn.el
+    org-ref-ivy.el -> org-ref-ivy.el
+    org-ref-label-link.el -> org-ref-label-link.el
+    org-ref-latex.el -> org-ref-latex.el
+    org-ref-misc-links.el -> org-ref-misc-links.el
+    org-ref-natbib-bbl-citeproc.el -> org-ref-natbib-bbl-citeproc.el
+    org-ref-pdf.el -> org-ref-pdf.el
+    org-ref-pgk.el -> org-ref-pgk.el
+    org-ref-pubmed.el -> org-ref-pubmed.el
+    org-ref-ref-links.el -> org-ref-ref-links.el
+    org-ref-refproc.el -> org-ref-refproc.el
+    org-ref-sci-id.el -> org-ref-sci-id.el
+    org-ref-scifinder.el -> org-ref-scifinder.el
+    org-ref-scopus.el -> org-ref-scopus.el
+    org-ref-url-utils.el -> org-ref-url-utils.el
+    org-ref-utils.el -> org-ref-utils.el
+    org-ref-worldcat.el -> org-ref-worldcat.el
+    org-ref-wos.el -> org-ref-wos.el
+    org-ref.el -> org-ref.el
+    x2bib.el -> x2bib.el
+    org-ref.org -> org-ref.org
+    org-ref.bib -> org-ref.bib
+    citeproc => citeproc
+Created org-ref-20230518.2125.tar containing:
+  org-ref-20230518.2125/
+  org-ref-20230518.2125/citeproc/
+  org-ref-20230518.2125/citeproc/csl-locales/
+  org-ref-20230518.2125/citeproc/csl-locales/locales-en-US.xml
+  org-ref-20230518.2125/citeproc/csl-styles/
+  org-ref-20230518.2125/citeproc/csl-styles/apa-5th-edition.csl
+  org-ref-20230518.2125/citeproc/csl-styles/apa-numeric-superscript-brackets.csl
+  org-ref-20230518.2125/citeproc/csl-styles/chicago-author-date-16th-edition.csl
+  org-ref-20230518.2125/citeproc/csl-styles/elsevier-harvard.csl
+  org-ref-20230518.2125/citeproc/csl-styles/elsevier-with-titles.csl
+  org-ref-20230518.2125/contrib.el
+  org-ref-20230518.2125/doi-utils.el
+  org-ref-20230518.2125/nist-webbook.el
+  org-ref-20230518.2125/openalex.el
+  org-ref-20230518.2125/org-ref-arxiv.el
+  org-ref-20230518.2125/org-ref-bibliography-links.el
+  org-ref-20230518.2125/org-ref-bibtex.el
+  org-ref-20230518.2125/org-ref-citation-links.el
+  org-ref-20230518.2125/org-ref-compat.el
+  org-ref-20230518.2125/org-ref-core.el
+  org-ref-20230518.2125/org-ref-export.el
+  org-ref-20230518.2125/org-ref-glossary.el
+  org-ref-20230518.2125/org-ref-helm.el
+  org-ref-20230518.2125/org-ref-isbn.el
+  org-ref-20230518.2125/org-ref-ivy.el
+  org-ref-20230518.2125/org-ref-label-link.el
+  org-ref-20230518.2125/org-ref-latex.el
+  org-ref-20230518.2125/org-ref-misc-links.el
+  org-ref-20230518.2125/org-ref-natbib-bbl-citeproc.el
+  org-ref-20230518.2125/org-ref-pdf.el
+  org-ref-20230518.2125/org-ref-pgk.el
+  org-ref-20230518.2125/org-ref-pkg.el
+  org-ref-20230518.2125/org-ref-pubmed.el
+  org-ref-20230518.2125/org-ref-ref-links.el
+  org-ref-20230518.2125/org-ref-refproc.el
+  org-ref-20230518.2125/org-ref-sci-id.el
+  org-ref-20230518.2125/org-ref-scifinder.el
+  org-ref-20230518.2125/org-ref-scopus.el
+  org-ref-20230518.2125/org-ref-url-utils.el
+  org-ref-20230518.2125/org-ref-utils.el
+  org-ref-20230518.2125/org-ref-worldcat.el
+  org-ref-20230518.2125/org-ref-wos.el
+  org-ref-20230518.2125/org-ref.bib
+  org-ref-20230518.2125/org-ref.el
+  org-ref-20230518.2125/org-ref.org
+  org-ref-20230518.2125/x2bib.el
+Built org-ref in 3.910s, finished at 2023-06-10T22:38:49+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  699 Jun 10 22:38 packages/org-ref-20230518.2125.entry
+680K -rw-r--r-- 1 root root 680K Jun 10 22:38 packages/org-ref-20230518.2125.tar

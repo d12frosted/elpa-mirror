@@ -4,4 +4,16 @@ Source:  https://github.com/nbfalcon/macrostep-geiser.git
 
 Updating /mnt/store/melpa/working/macrostep-geiser/
 Checking out f6a2d5bb96ade4f23df557649af87ebd0cc45125
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/macrostep-geiser/
+  to /tmp/macrostep-geiserGRaXlk/macrostep-geiser-20210717.801
+    macrostep-geiser.el -> macrostep-geiser.el
+Created macrostep-geiser-20210717.801.tar containing:
+  macrostep-geiser-20210717.801/
+  macrostep-geiser-20210717.801/macrostep-geiser-pkg.el
+  macrostep-geiser-20210717.801/macrostep-geiser.el
+Built macrostep-geiser in 3.029s, finished at 2023-06-10T22:30:45+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  9 16:20 packages/macrostep-geiser-20210717.801.el
+4.0K -rw-r--r-- 1 root root  476 Jun 10 22:30 packages/macrostep-geiser-20210717.801.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:30 packages/macrostep-geiser-20210717.801.tar

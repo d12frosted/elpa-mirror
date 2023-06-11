@@ -4,4 +4,16 @@ Source:  https://github.com/luisgerhorst/virtual-auto-fill.git
 
 Updating /mnt/store/melpa/working/virtual-auto-fill/
 Checking out a3991ce02d9a6a1624a3f04da80f4ac966a44092
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/virtual-auto-fill/
+  to /tmp/virtual-auto-fill3Q0Uza/virtual-auto-fill-20200906.2038
+    virtual-auto-fill.el -> virtual-auto-fill.el
+Created virtual-auto-fill-20200906.2038.tar containing:
+  virtual-auto-fill-20200906.2038/
+  virtual-auto-fill-20200906.2038/virtual-auto-fill-pkg.el
+  virtual-auto-fill-20200906.2038/virtual-auto-fill.el
+Built virtual-auto-fill in 2.890s, finished at 2023-06-10T22:57:02+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:59 packages/virtual-auto-fill-20200906.2038.el
+4.0K -rw-r--r-- 1 root root 654 Jun 10 22:57 packages/virtual-auto-fill-20200906.2038.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:57 packages/virtual-auto-fill-20200906.2038.tar

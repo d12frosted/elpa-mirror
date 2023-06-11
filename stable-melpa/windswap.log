@@ -4,4 +4,16 @@ Source:  https://github.com/purcell/windswap.git
 
 Updating /mnt/store/melpa/working/windswap/
 Checking out 1a334f6543e0a30c55ea1e6071e9732d948f9e4b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/windswap/
+  to /tmp/windswapiKPDQh/windswap-20200722.411
+    windswap.el -> windswap.el
+Created windswap-20200722.411.tar containing:
+  windswap-20200722.411/
+  windswap-20200722.411/windswap-pkg.el
+  windswap-20200722.411/windswap.el
+Built windswap in 2.750s, finished at 2023-06-10T22:58:24+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  9 17:00 packages/windswap-20200722.411.el
+4.0K -rw-r--r-- 1 root root  466 Jun 10 22:58 packages/windswap-20200722.411.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:58 packages/windswap-20200722.411.tar

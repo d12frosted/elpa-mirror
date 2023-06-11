@@ -4,4 +4,16 @@ Source:  https://github.com/manzyuk/ghci-completion.git
 
 Updating /mnt/store/melpa/working/ghci-completion/
 Checking out c47e23d585d2a3c7b13aac163693fdc4f2bb90e5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ghci-completion/
+  to /tmp/ghci-completionDs3aS6/ghci-completion-20151125.1257
+    ghci-completion.el -> ghci-completion.el
+Created ghci-completion-20151125.1257.tar containing:
+  ghci-completion-20151125.1257/
+  ghci-completion-20151125.1257/ghci-completion-pkg.el
+  ghci-completion-20151125.1257/ghci-completion.el
+Built ghci-completion in 2.789s, finished at 2023-06-11T00:25:35+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:00 packages/ghci-completion-20151125.1257.el
+4.0K -rw-r--r-- 1 root root 450 Jun 11 00:25 packages/ghci-completion-20151125.1257.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:25 packages/ghci-completion-20151125.1257.tar

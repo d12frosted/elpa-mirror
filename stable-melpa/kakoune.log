@@ -4,4 +4,23 @@ Source:  https://github.com/jmorag/kakoune.el.git
 
 Updating /mnt/store/melpa/working/kakoune/
 Checking out b39c5605e896c55ea246f755c46171bd6d0768a8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kakoune/
+  to /tmp/kakounehjv8TO/kakoune-20230206.2037
+    kakoune-exchange.el -> kakoune-exchange.el
+    kakoune-shell-commands.el -> kakoune-shell-commands.el
+    kakoune-unimpaired.el -> kakoune-unimpaired.el
+    kakoune-utils.el -> kakoune-utils.el
+    kakoune.el -> kakoune.el
+Created kakoune-20230206.2037.tar containing:
+  kakoune-20230206.2037/
+  kakoune-20230206.2037/kakoune-exchange.el
+  kakoune-20230206.2037/kakoune-pkg.el
+  kakoune-20230206.2037/kakoune-shell-commands.el
+  kakoune-20230206.2037/kakoune-unimpaired.el
+  kakoune-20230206.2037/kakoune-utils.el
+  kakoune-20230206.2037/kakoune.el
+Built kakoune in 2.752s, finished at 2023-06-10T22:27:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 501 Jun 10 22:27 packages/kakoune-20230206.2037.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:27 packages/kakoune-20230206.2037.tar

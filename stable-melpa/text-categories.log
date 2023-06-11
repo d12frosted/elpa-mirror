@@ -4,4 +4,16 @@ Source:  https://github.com/Dspil/text-categories.git
 
 Updating /mnt/store/melpa/working/text-categories/
 Checking out 7ae616e45005c469273dd4285cd0808885860984
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/text-categories/
+  to /tmp/text-categoriesNLcPJY/text-categories-20230425.1154
+    text-categories.el -> text-categories.el
+Created text-categories-20230425.1154.tar containing:
+  text-categories-20230425.1154/
+  text-categories-20230425.1154/text-categories-pkg.el
+  text-categories-20230425.1154/text-categories.el
+Built text-categories in 2.788s, finished at 2023-06-10T22:54:04+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 29K Jun  9 16:54 packages/text-categories-20230425.1154.el
+4.0K -rw-r--r-- 1 root root 518 Jun 10 22:54 packages/text-categories-20230425.1154.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:54 packages/text-categories-20230425.1154.tar

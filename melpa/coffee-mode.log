@@ -4,4 +4,16 @@ Source:  https://github.com/defunkt/coffee-mode.git
 
 Updating /mnt/store/melpa/working/coffee-mode/
 Checking out 35a41c7d8233eac0b267d9593e67fb8b6235e134
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/coffee-mode/
+  to /tmp/coffee-modeyXjBKJ/coffee-mode-20200315.1133
+    coffee-mode.el -> coffee-mode.el
+Created coffee-mode-20200315.1133.tar containing:
+  coffee-mode-20200315.1133/
+  coffee-mode-20200315.1133/coffee-mode-pkg.el
+  coffee-mode-20200315.1133/coffee-mode.el
+Built coffee-mode in 3.050s, finished at 2023-06-11T00:09:17+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 49K Jun  9 15:36 packages/coffee-mode-20200315.1133.el
+4.0K -rw-r--r-- 1 root root 466 Jun 11 00:09 packages/coffee-mode-20200315.1133.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:09 packages/coffee-mode-20200315.1133.tar

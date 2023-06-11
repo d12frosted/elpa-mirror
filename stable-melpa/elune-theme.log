@@ -4,4 +4,16 @@ Source:  https://github.com/xcatalyst/elune-theme.git
 
 Updating /mnt/store/melpa/working/elune-theme/
 Checking out e0f3f4def066e679cfdde3bbade4c83dcfc38cd8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elune-theme/
+  to /tmp/elune-themeqlk7sk/elune-theme-20230526.2238
+    elune-theme.el -> elune-theme.el
+Created elune-theme-20230526.2238.tar containing:
+  elune-theme-20230526.2238/
+  elune-theme-20230526.2238/elune-theme-pkg.el
+  elune-theme-20230526.2238/elune-theme.el
+Built elune-theme in 3.514s, finished at 2023-06-11T00:17:31+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Jun  9 15:50 packages/elune-theme-20230526.2238.el
+4.0K -rw-r--r-- 1 root root  394 Jun 11 00:17 packages/elune-theme-20230526.2238.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:17 packages/elune-theme-20230526.2238.tar

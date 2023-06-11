@@ -4,4 +4,16 @@ Source:  https://github.com/julienXX/ivy-lobsters.git
 
 Updating /mnt/store/melpa/working/ivy-lobsters/
 Checking out 3f7f90751d15ebcf91253ef3cda18c0aa7d856ff
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-lobsters/
+  to /tmp/ivy-lobstersbUcxJT/ivy-lobsters-20200818.1406
+    ivy-lobsters.el -> ivy-lobsters.el
+Created ivy-lobsters-20200818.1406.tar containing:
+  ivy-lobsters-20200818.1406/
+  ivy-lobsters-20200818.1406/ivy-lobsters-pkg.el
+  ivy-lobsters-20200818.1406/ivy-lobsters.el
+Built ivy-lobsters in 3.097s, finished at 2023-06-10T22:25:44+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jun  9 16:14 packages/ivy-lobsters-20200818.1406.el
+4.0K -rw-r--r-- 1 root root  460 Jun 10 22:25 packages/ivy-lobsters-20200818.1406.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/ivy-lobsters-20200818.1406.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/AdamNiederer/metamorph.git
 
 Updating /mnt/store/melpa/working/metamorph/
 Checking out 3633e32a9601c491df32d6c2212dbe63dc6484f4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/metamorph/
+  to /tmp/metamorphbAblpx/metamorph-20220328.129
+    metamorph.el -> metamorph.el
+Created metamorph-20220328.129.tar containing:
+  metamorph-20220328.129/
+  metamorph-20220328.129/metamorph-pkg.el
+  metamorph-20220328.129/metamorph.el
+Built metamorph in 3.097s, finished at 2023-06-10T22:32:14+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jun  9 16:23 packages/metamorph-20220328.129.el
+4.0K -rw-r--r-- 1 root root  477 Jun 10 22:32 packages/metamorph-20220328.129.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:32 packages/metamorph-20220328.129.tar

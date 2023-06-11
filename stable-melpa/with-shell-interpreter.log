@@ -4,4 +4,16 @@ Source:  https://github.com/p3r7/with-shell-interpreter.git
 
 Updating /mnt/store/melpa/working/with-shell-interpreter/
 Checking out 45b7d6ad63165c82a95966b291abbfe305d3ada2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/with-shell-interpreter/
+  to /tmp/with-shell-interpreterDq9LhJ/with-shell-interpreter-20200828.1217
+    with-shell-interpreter.el -> with-shell-interpreter.el
+Created with-shell-interpreter-20200828.1217.tar containing:
+  with-shell-interpreter-20200828.1217/
+  with-shell-interpreter-20200828.1217/with-shell-interpreter-pkg.el
+  with-shell-interpreter-20200828.1217/with-shell-interpreter.el
+Built with-shell-interpreter in 2.950s, finished at 2023-06-10T22:58:32+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 17:01 packages/with-shell-interpreter-20200828.1217.el
+4.0K -rw-r--r-- 1 root root 308 Jun 10 22:58 packages/with-shell-interpreter-20200828.1217.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:58 packages/with-shell-interpreter-20200828.1217.tar

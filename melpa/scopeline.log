@@ -4,4 +4,16 @@ Source:  https://github.com/meain/scopeline.el.git
 
 Updating /mnt/store/melpa/working/scopeline/
 Checking out 6733f0f7ca33aa5c8ad83099dcb7b7ff8bc46a68
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scopeline/
+  to /tmp/scopeline9frl8i/scopeline-20230521.614
+    scopeline.el -> scopeline.el
+Created scopeline-20230521.614.tar containing:
+  scopeline-20230521.614/
+  scopeline-20230521.614/scopeline-pkg.el
+  scopeline-20230521.614/scopeline.el
+Built scopeline in 2.875s, finished at 2023-06-10T22:48:26+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  9 16:46 packages/scopeline-20230521.614.el
+4.0K -rw-r--r-- 1 root root  308 Jun 10 22:48 packages/scopeline-20230521.614.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:48 packages/scopeline-20230521.614.tar

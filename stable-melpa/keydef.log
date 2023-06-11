@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/keydef.git
 
 Updating /mnt/store/melpa/working/keydef/
 Checking out dff2be9f58d12d8c6a490ad0c1b2b10b55528dc0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/keydef/
+  to /tmp/keydefMPkVTM/keydef-20090428.1931
+    keydef.el -> keydef.el
+Created keydef-20090428.1931.tar containing:
+  keydef-20090428.1931/
+  keydef-20090428.1931/keydef-pkg.el
+  keydef-20090428.1931/keydef.el
+Built keydef in 2.725s, finished at 2023-06-10T22:27:51+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  9 16:16 packages/keydef-20090428.1931.el
+4.0K -rw-r--r-- 1 root root 392 Jun 10 22:27 packages/keydef-20090428.1931.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:27 packages/keydef-20090428.1931.tar

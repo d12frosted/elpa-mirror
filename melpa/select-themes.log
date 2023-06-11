@@ -4,4 +4,16 @@ Source:  https://github.com/jasonm23/emacs-select-themes.git
 
 Updating /mnt/store/melpa/working/select-themes/
 Checking out 236f54287519a3ea6dd7b3992d053e4f4ff5d0fe
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/select-themes/
+  to /tmp/select-themes5oqmg4/select-themes-20160221.106
+    select-themes.el -> select-themes.el
+Created select-themes-20160221.106.tar containing:
+  select-themes-20160221.106/
+  select-themes-20160221.106/select-themes-pkg.el
+  select-themes-20160221.106/select-themes.el
+Built select-themes in 2.952s, finished at 2023-06-10T22:48:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.9K Jun  9 16:46 packages/select-themes-20160221.106.el
+4.0K -rw-r--r-- 1 root root  397 Jun 10 22:48 packages/select-themes-20160221.106.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:48 packages/select-themes-20160221.106.tar

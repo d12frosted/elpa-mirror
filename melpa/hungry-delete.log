@@ -4,4 +4,16 @@ Source:  https://github.com/nflath/hungry-delete.git
 
 Updating /mnt/store/melpa/working/hungry-delete/
 Checking out d919e555e5c13a2edf4570f3ceec84f0ade71657
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hungry-delete/
+  to /tmp/hungry-deletezXt5LM/hungry-delete-20210409.1643
+    hungry-delete.el -> hungry-delete.el
+Created hungry-delete-20210409.1643.tar containing:
+  hungry-delete-20210409.1643/
+  hungry-delete-20210409.1643/hungry-delete-pkg.el
+  hungry-delete-20210409.1643/hungry-delete.el
+Built hungry-delete in 2.697s, finished at 2023-06-10T22:23:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Jun  9 16:10 packages/hungry-delete-20210409.1643.el
+4.0K -rw-r--r-- 1 root root  377 Jun 10 22:23 packages/hungry-delete-20210409.1643.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:23 packages/hungry-delete-20210409.1643.tar

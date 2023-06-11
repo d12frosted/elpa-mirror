@@ -4,4 +4,16 @@ Source:  https://github.com/jumper047/media-progress.git
 
 Updating /mnt/store/melpa/working/media-progress/
 Checking out 0b22f92cf4bd40df6057485f63079c779eda9696
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/media-progress/
+  to /tmp/media-progressCi0l27/media-progress-20230527.2209
+    media-progress.el -> media-progress.el
+Created media-progress-20230527.2209.tar containing:
+  media-progress-20230527.2209/
+  media-progress-20230527.2209/media-progress-pkg.el
+  media-progress-20230527.2209/media-progress.el
+Built media-progress in 2.804s, finished at 2023-06-10T22:31:52+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jun  9 16:22 packages/media-progress-20230527.2209.el
+4.0K -rw-r--r-- 1 root root  484 Jun 10 22:31 packages/media-progress-20230527.2209.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:31 packages/media-progress-20230527.2209.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/antham/anyins.git
 
 Updating /mnt/store/melpa/working/anyins/
 Checking out cd5e3c1abd471c8a67aafc42c4c985a2796f4b9f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/anyins/
+  to /tmp/anyinsI9YMca/anyins-20131229.1041
+    anyins.el -> anyins.el
+Created anyins-20131229.1041.tar containing:
+  anyins-20131229.1041/
+  anyins-20131229.1041/anyins-pkg.el
+  anyins-20131229.1041/anyins.el
+Built anyins in 3.196s, finished at 2023-06-11T00:03:25+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jun  9 15:29 packages/anyins-20131229.1041.el
+4.0K -rw-r--r-- 1 root root  435 Jun 11 00:03 packages/anyins-20131229.1041.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:03 packages/anyins-20131229.1041.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/srcery-colors/srcery-emacs.git
 
 Updating /mnt/store/melpa/working/srcery-theme/
 Checking out 58dd21cd63e4a2eed15e0082c2547069363f107b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/srcery-theme/
+  to /tmp/srcery-themeDXaN9c/srcery-theme-20210601.1247
+    srcery-theme.el -> srcery-theme.el
+Created srcery-theme-20210601.1247.tar containing:
+  srcery-theme-20210601.1247/
+  srcery-theme-20210601.1247/srcery-theme-pkg.el
+  srcery-theme-20210601.1247/srcery-theme.el
+Built srcery-theme in 2.692s, finished at 2023-06-10T22:51:36+0000
+ ✓ Success:
+140K -rw-r--r-- 1 root root 137K Jun  9 16:51 packages/srcery-theme-20210601.1247.el
+4.0K -rw-r--r-- 1 root root  343 Jun 10 22:51 packages/srcery-theme-20210601.1247.entry
+140K -rw-r--r-- 1 root root 140K Jun 10 22:51 packages/srcery-theme-20210601.1247.tar

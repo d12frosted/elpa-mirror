@@ -4,4 +4,16 @@ Source:  https://github.com/benprew/flymake-puppet.git
 
 Updating /mnt/store/melpa/working/flymake-puppet/
 Checking out 9579e5c736cb890195464fabf51df113313de88d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-puppet/
+  to /tmp/flymake-puppet60YYCT/flymake-puppet-20170801.554
+    flymake-puppet.el -> flymake-puppet.el
+Created flymake-puppet-20170801.554.tar containing:
+  flymake-puppet-20170801.554/
+  flymake-puppet-20170801.554/flymake-puppet-pkg.el
+  flymake-puppet-20170801.554/flymake-puppet.el
+Built flymake-puppet in 2.753s, finished at 2023-06-11T00:23:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.9K Jun  9 15:58 packages/flymake-puppet-20170801.554.el
+4.0K -rw-r--r-- 1 root root  328 Jun 11 00:23 packages/flymake-puppet-20170801.554.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:23 packages/flymake-puppet-20170801.554.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/polymode/poly-R.git
 
 Updating /mnt/store/melpa/working/poly-R/
 Checking out 8024e852cfca642dea2045a41b2033baa2f1f9a5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/poly-R/
+  to /tmp/poly-RD5LMAf/poly-R-20230416.1454
+    poly-R.el -> poly-R.el
+Created poly-R-20230416.1454.tar containing:
+  poly-R-20230416.1454/
+  poly-R-20230416.1454/poly-R-pkg.el
+  poly-R-20230416.1454/poly-R.el
+Built poly-R in 3.654s, finished at 2023-06-10T22:43:13+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Jun  9 16:39 packages/poly-R-20230416.1454.el
+4.0K -rw-r--r-- 1 root root 435 Jun 10 22:43 packages/poly-R-20230416.1454.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:43 packages/poly-R-20230416.1454.tar

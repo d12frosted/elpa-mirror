@@ -4,4 +4,16 @@ Source:  https://github.com/fritzgrabo/project-tab-groups.git
 
 Updating /mnt/store/melpa/working/project-tab-groups/
 Checking out 2d348279876f3073176048d903f9672f3c933ca5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/project-tab-groups/
+  to /tmp/project-tab-groupsQrwUdM/project-tab-groups-20220720.2109
+    project-tab-groups.el -> project-tab-groups.el
+Created project-tab-groups-20220720.2109.tar containing:
+  project-tab-groups-20220720.2109/
+  project-tab-groups-20220720.2109/project-tab-groups-pkg.el
+  project-tab-groups-20220720.2109/project-tab-groups.el
+Built project-tab-groups in 3.166s, finished at 2023-06-10T22:44:04+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 16:40 packages/project-tab-groups-20220720.2109.el
+4.0K -rw-r--r-- 1 root root  511 Jun 10 22:44 packages/project-tab-groups-20220720.2109.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:44 packages/project-tab-groups-20220720.2109.tar

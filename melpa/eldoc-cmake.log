@@ -4,4 +4,16 @@ Source:  https://github.com/ikirill/eldoc-cmake.git
 
 Updating /mnt/store/melpa/working/eldoc-cmake/
 Checking out 4453c03b5c95ff32842f13db2fc317fb0fe2f79e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eldoc-cmake/
+  to /tmp/eldoc-cmakeg9HGLE/eldoc-cmake-20190419.2244
+    eldoc-cmake.el -> eldoc-cmake.el
+Created eldoc-cmake-20190419.2244.tar containing:
+  eldoc-cmake-20190419.2244/
+  eldoc-cmake-20190419.2244/eldoc-cmake-pkg.el
+  eldoc-cmake-20190419.2244/eldoc-cmake.el
+Built eldoc-cmake in 2.820s, finished at 2023-06-11T00:16:39+0000
+ ✓ Success:
+184K -rw-r--r-- 1 root root 182K Jun  9 15:48 packages/eldoc-cmake-20190419.2244.el
+4.0K -rw-r--r-- 1 root root  351 Jun 11 00:16 packages/eldoc-cmake-20190419.2244.entry
+192K -rw-r--r-- 1 root root 190K Jun 11 00:16 packages/eldoc-cmake-20190419.2244.tar

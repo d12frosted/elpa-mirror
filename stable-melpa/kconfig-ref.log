@@ -4,4 +4,16 @@ Source:  https://github.com/seokbeomKim/kconfig-ref.git
 
 Updating /mnt/store/melpa/working/kconfig-ref/
 Checking out dfb127fa5ac003a06f108d2e876c84a1931e5678
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kconfig-ref/
+  to /tmp/kconfig-ref9fopag/kconfig-ref-20230220.1207
+    kconfig-ref.el -> kconfig-ref.el
+Created kconfig-ref-20230220.1207.tar containing:
+  kconfig-ref-20230220.1207/
+  kconfig-ref-20230220.1207/kconfig-ref-pkg.el
+  kconfig-ref-20230220.1207/kconfig-ref.el
+Built kconfig-ref in 2.413s, finished at 2023-06-10T22:27:41+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  9 16:16 packages/kconfig-ref-20230220.1207.el
+4.0K -rw-r--r-- 1 root root  560 Jun 10 22:27 packages/kconfig-ref-20230220.1207.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:27 packages/kconfig-ref-20230220.1207.tar

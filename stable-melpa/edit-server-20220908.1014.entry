@@ -1,6 +1,6 @@
 (edit-server .
 	     [(20220908 1014)
-	      nil "server that responds to edit requests from Chrome" single
+	      nil "server that responds to edit requests from Chrome" tar
 	      ((:commit . "3ce09c6eb2919d56ef052b1584bba6abb12f7e99")
 	       (:authors
 		("Alex Bennée" . "alex@bennee.com"))

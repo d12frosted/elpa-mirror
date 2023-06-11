@@ -4,4 +4,16 @@ Source:  https://github.com/Malabarba/Nameless.git
 
 Updating /mnt/store/melpa/working/nameless/
 Checking out e468f3eea4518b9827419611868c897dce20453f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nameless/
+  to /tmp/namelessFrqDLB/nameless-20230112.1259
+    nameless.el -> nameless.el
+Created nameless-20230112.1259.tar containing:
+  nameless-20230112.1259/
+  nameless-20230112.1259/nameless-pkg.el
+  nameless-20230112.1259/nameless.el
+Built nameless in 2.979s, finished at 2023-06-10T22:34:45+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:26 packages/nameless-20230112.1259.el
+4.0K -rw-r--r-- 1 root root 495 Jun 10 22:34 packages/nameless-20230112.1259.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:34 packages/nameless-20230112.1259.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/xuchunyang/cc-cedict.el.git
 
 Updating /mnt/store/melpa/working/cc-cedict/
 Checking out 03fbe7d1589d36f627ef9fe7b86f9fe6f623cbb3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cc-cedict/
+  to /tmp/cc-cedictMKYTYO/cc-cedict-20210814.819
+    cc-cedict.el -> cc-cedict.el
+Created cc-cedict-20210814.819.tar containing:
+  cc-cedict-20210814.819/
+  cc-cedict-20210814.819/cc-cedict-pkg.el
+  cc-cedict-20210814.819/cc-cedict.el
+Built cc-cedict in 4.608s, finished at 2023-06-11T00:07:34+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jun  9 15:34 packages/cc-cedict-20210814.819.el
+4.0K -rw-r--r-- 1 root root  369 Jun 11 00:07 packages/cc-cedict-20210814.819.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:07 packages/cc-cedict-20210814.819.tar

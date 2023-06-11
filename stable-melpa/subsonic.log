@@ -4,4 +4,16 @@ Source:  https://git.sr.ht/~amk/subsonic.el
 
 Updating /mnt/store/melpa/working/subsonic/
 Checking out 011e58d434ed707a06a2cfa20509629ebb339c04
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/subsonic/
+  to /tmp/subsonicdTwBW7/subsonic-20220826.748
+    subsonic.el -> subsonic.el
+Created subsonic-20220826.748.tar containing:
+  subsonic-20220826.748/
+  subsonic-20220826.748/subsonic-pkg.el
+  subsonic-20220826.748/subsonic.el
+Built subsonic in 5.372s, finished at 2023-06-10T22:52:15+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Jun  9 16:52 packages/subsonic-20220826.748.el
+4.0K -rw-r--r-- 1 root root 455 Jun 10 22:52 packages/subsonic-20220826.748.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:52 packages/subsonic-20220826.748.tar

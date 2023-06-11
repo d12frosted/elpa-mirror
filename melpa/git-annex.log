@@ -4,4 +4,16 @@ Source:  https://github.com/jwiegley/git-annex-el.git
 
 Updating /mnt/store/melpa/working/git-annex/
 Checking out 92f2d97c89980d2cea85850353836c68903514a1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-annex/
+  to /tmp/git-annexxTBmTA/git-annex-20220807.1542
+    git-annex.el -> git-annex.el
+Created git-annex-20220807.1542.tar containing:
+  git-annex-20220807.1542/
+  git-annex-20220807.1542/git-annex-pkg.el
+  git-annex-20220807.1542/git-annex.el
+Built git-annex in 3.176s, finished at 2023-06-11T00:25:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  9 16:00 packages/git-annex-20220807.1542.el
+4.0K -rw-r--r-- 1 root root  451 Jun 11 00:25 packages/git-annex-20220807.1542.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:25 packages/git-annex-20220807.1542.tar

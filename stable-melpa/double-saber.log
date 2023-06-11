@@ -4,4 +4,16 @@ Source:  https://github.com/dp12/double-saber.git
 
 Updating /mnt/store/melpa/working/double-saber/
 Checking out 5555dc28cbaa228fa8f9390738a4200e071380b8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/double-saber/
+  to /tmp/double-saberpIdLxu/double-saber-20190325.1917
+    double-saber.el -> double-saber.el
+Created double-saber-20190325.1917.tar containing:
+  double-saber-20190325.1917/
+  double-saber-20190325.1917/double-saber-pkg.el
+  double-saber-20190325.1917/double-saber.el
+Built double-saber in 2.955s, finished at 2023-06-11T00:14:59+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Jun  9 15:45 packages/double-saber-20190325.1917.el
+4.0K -rw-r--r-- 1 root root  509 Jun 11 00:14 packages/double-saber-20190325.1917.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:14 packages/double-saber-20190325.1917.tar

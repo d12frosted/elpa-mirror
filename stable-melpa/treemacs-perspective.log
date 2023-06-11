@@ -4,4 +4,16 @@ Source:  https://github.com/Alexander-Miller/treemacs.git
 
 Updating /mnt/store/melpa/working/treemacs-perspective/
 Checking out 127485317a19254ca20ba1910d10edf7dbaa2d97
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/treemacs-perspective/
+  to /tmp/treemacs-perspective5S33Lh/treemacs-perspective-20230408.1109
+  ! src/extra/treemacs-perspective.el -> treemacs-perspective.el
+Created treemacs-perspective-20230408.1109.tar containing:
+  treemacs-perspective-20230408.1109/
+  treemacs-perspective-20230408.1109/treemacs-perspective-pkg.el
+  treemacs-perspective-20230408.1109/treemacs-perspective.el
+Built treemacs-perspective in 4.073s, finished at 2023-06-10T22:55:23+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  9 16:56 packages/treemacs-perspective-20230408.1109.el
+4.0K -rw-r--r-- 1 root root  557 Jun 10 22:55 packages/treemacs-perspective-20230408.1109.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:55 packages/treemacs-perspective-20230408.1109.tar

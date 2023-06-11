@@ -4,4 +4,16 @@ Source:  https://github.com/enricoflor/numbex.git
 
 Updating /mnt/store/melpa/working/numbex/
 Checking out b64f51388726363fc0d154219e2270c6b9c5ce19
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/numbex/
+  to /tmp/numbexqvCW2Q/numbex-20230601.1618
+    numbex.el -> numbex.el
+Created numbex-20230601.1618.tar containing:
+  numbex-20230601.1618/
+  numbex-20230601.1618/numbex-pkg.el
+  numbex-20230601.1618/numbex.el
+Built numbex in 2.909s, finished at 2023-06-10T22:35:56+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 42K Jun  9 16:28 packages/numbex-20230601.1618.el
+4.0K -rw-r--r-- 1 root root 362 Jun 10 22:35 packages/numbex-20230601.1618.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:35 packages/numbex-20230601.1618.tar

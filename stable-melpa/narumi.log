@@ -4,4 +4,16 @@ Source:  https://github.com/nryotaro/narumi.git
 
 Updating /mnt/store/melpa/working/narumi/
 Checking out 2f23f03a7b94766799f26605e167b259a4a90903
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/narumi/
+  to /tmp/narumi6AREbw/narumi-20220228.243
+    narumi.el -> narumi.el
+Created narumi-20220228.243.tar containing:
+  narumi-20220228.243/
+  narumi-20220228.243/narumi-pkg.el
+  narumi-20220228.243/narumi.el
+Built narumi in 2.989s, finished at 2023-06-10T22:34:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jun  9 16:26 packages/narumi-20220228.243.el
+4.0K -rw-r--r-- 1 root root  217 Jun 10 22:34 packages/narumi-20220228.243.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:34 packages/narumi-20220228.243.tar

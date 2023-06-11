@@ -4,4 +4,16 @@ Source:  https://github.com/dalanicolai/toc-mode.git
 
 Updating /mnt/store/melpa/working/toc-mode/
 Checking out 448a0ac00c110802f3124bbf9c5a72bdfc3c3c28
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/toc-mode/
+  to /tmp/toc-modeo8seFE/toc-mode-20220926.530
+    toc-mode.el -> toc-mode.el
+Created toc-mode-20220926.530.tar containing:
+  toc-mode-20220926.530/
+  toc-mode-20220926.530/toc-mode-pkg.el
+  toc-mode-20220926.530/toc-mode.el
+Built toc-mode in 2.944s, finished at 2023-06-10T22:54:38+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 43K Jun  9 16:55 packages/toc-mode-20220926.530.el
+4.0K -rw-r--r-- 1 root root 521 Jun 10 22:54 packages/toc-mode-20220926.530.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:54 packages/toc-mode-20220926.530.tar

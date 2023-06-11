@@ -4,4 +4,16 @@ Source:  https://github.com/canatella/xwwp.git
 
 Updating /mnt/store/melpa/working/xwwp-follow-link-helm/
 Checking out 99670ec37e2083eada9691a342441d2fa4589002
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xwwp-follow-link-helm/
+  to /tmp/xwwp-follow-link-helm9rdRod/xwwp-follow-link-helm-20200917.642
+    xwwp-follow-link-helm.el -> xwwp-follow-link-helm.el
+Created xwwp-follow-link-helm-20200917.642.tar containing:
+  xwwp-follow-link-helm-20200917.642/
+  xwwp-follow-link-helm-20200917.642/xwwp-follow-link-helm-pkg.el
+  xwwp-follow-link-helm-20200917.642/xwwp-follow-link-helm.el
+Built xwwp-follow-link-helm in 3.768s, finished at 2023-06-10T22:59:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.8K Jun  9 17:02 packages/xwwp-follow-link-helm-20200917.642.el
+4.0K -rw-r--r-- 1 root root  422 Jun 10 22:59 packages/xwwp-follow-link-helm-20200917.642.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:59 packages/xwwp-follow-link-helm-20200917.642.tar

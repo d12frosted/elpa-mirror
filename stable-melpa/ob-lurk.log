@@ -4,4 +4,16 @@ Source:  https://github.com/lurk-lang/lurk-emacs.git
 
 Updating /mnt/store/melpa/working/ob-lurk/
 Checking out bd7cf661ccb31bfbfab542018c361bd79064d4f4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-lurk/
+  to /tmp/ob-lurk20uOOe/ob-lurk-20221122.2058
+    ob-lurk.el -> ob-lurk.el
+Created ob-lurk-20221122.2058.tar containing:
+  ob-lurk-20221122.2058/
+  ob-lurk-20221122.2058/ob-lurk-pkg.el
+  ob-lurk-20221122.2058/ob-lurk.el
+Built ob-lurk in 2.914s, finished at 2023-06-10T22:36:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.3K Jun  9 16:29 packages/ob-lurk-20221122.2058.el
+4.0K -rw-r--r-- 1 root root  405 Jun 10 22:36 packages/ob-lurk-20221122.2058.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:36 packages/ob-lurk-20221122.2058.tar

@@ -4,4 +4,20 @@ Source:  https://thelambdalab.xyz/git/elpher.git
 
 Updating /mnt/store/melpa/working/elpher/
 Checking out 81f2883614c303184116449ec3583ef5c136ec2f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elpher/
+  to /tmp/elpherTULmP1/elpher-20230505.817
+    elpher-pkg.el -> elpher-pkg.el
+    elpher.el -> elpher.el
+    elpher.texi -> elpher.texi
+Generating /tmp/elpherTULmP1/elpher-20230505.817/elpher.info
+Created elpher-20230505.817.tar containing:
+  elpher-20230505.817/
+  elpher-20230505.817/dir
+  elpher-20230505.817/elpher-pkg.el
+  elpher-20230505.817/elpher.el
+  elpher-20230505.817/elpher.info
+Built elpher in 6.472s, finished at 2023-06-11T00:17:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  360 Jun 11 00:17 packages/elpher-20230505.817.entry
+160K -rw-r--r-- 1 root root 160K Jun 11 00:17 packages/elpher-20230505.817.tar

@@ -4,4 +4,19 @@ Source:  https://github.com/ROCKTAKEY/grugru.git
 
 Updating /mnt/store/melpa/working/grugru/
 Checking out 088f26330be161cfad4835e155595ec60dcb335a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/grugru/
+  to /tmp/grugru5MCJhl/grugru-20230121.1825
+    grugru-default.el -> grugru-default.el
+    grugru-utils.el -> grugru-utils.el
+    grugru.el -> grugru.el
+Created grugru-20230121.1825.tar containing:
+  grugru-20230121.1825/
+  grugru-20230121.1825/grugru-default.el
+  grugru-20230121.1825/grugru-pkg.el
+  grugru-20230121.1825/grugru-utils.el
+  grugru-20230121.1825/grugru.el
+Built grugru in 3.379s, finished at 2023-06-11T00:28:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 406 Jun 11 00:28 packages/grugru-20230121.1825.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 11 00:28 packages/grugru-20230121.1825.tar

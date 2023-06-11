@@ -4,4 +4,16 @@ Source:  https://github.com/jcaw/talonscript-mode.git
 
 Updating /mnt/store/melpa/working/talonscript-mode/
 Checking out b6eb61f56349e0d47276270163ec611c2d5b188e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/talonscript-mode/
+  to /tmp/talonscript-modeF0luCA/talonscript-mode-20220204.1441
+    talonscript-mode.el -> talonscript-mode.el
+Created talonscript-mode-20220204.1441.tar containing:
+  talonscript-mode-20220204.1441/
+  talonscript-mode-20220204.1441/talonscript-mode-pkg.el
+  talonscript-mode-20220204.1441/talonscript-mode.el
+Built talonscript-mode in 3.544s, finished at 2023-06-10T22:53:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  9 16:53 packages/talonscript-mode-20220204.1441.el
+4.0K -rw-r--r-- 1 root root  450 Jun 10 22:53 packages/talonscript-mode-20220204.1441.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:53 packages/talonscript-mode-20220204.1441.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/hagleitn/unicode-emoticons.git
 
 Updating /mnt/store/melpa/working/unicode-emoticons/
 Checking out 52a09955c2afc1807c0f37f1467ccfc1e1da690a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/unicode-emoticons/
+  to /tmp/unicode-emoticonsAl39gb/unicode-emoticons-20150204.1108
+    unicode-emoticons.el -> unicode-emoticons.el
+Created unicode-emoticons-20150204.1108.tar containing:
+  unicode-emoticons-20150204.1108/
+  unicode-emoticons-20150204.1108/unicode-emoticons-pkg.el
+  unicode-emoticons-20150204.1108/unicode-emoticons.el
+Built unicode-emoticons in 2.919s, finished at 2023-06-10T22:56:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Jun  9 16:57 packages/unicode-emoticons-20150204.1108.el
+4.0K -rw-r--r-- 1 root root  422 Jun 10 22:56 packages/unicode-emoticons-20150204.1108.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:56 packages/unicode-emoticons-20150204.1108.tar

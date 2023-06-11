@@ -4,4 +4,16 @@ Source:  https://github.com/grafov/russian-holidays.git
 
 Updating /mnt/store/melpa/working/russian-holidays/
 Checking out b285a30f29d85c48e3ea4eb93972d34a090c167b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/russian-holidays/
+  to /tmp/russian-holidaysCxVRRg/russian-holidays-20170109.2140
+    russian-holidays.el -> russian-holidays.el
+Created russian-holidays-20170109.2140.tar containing:
+  russian-holidays-20170109.2140/
+  russian-holidays-20170109.2140/russian-holidays-pkg.el
+  russian-holidays-20170109.2140/russian-holidays.el
+Built russian-holidays in 2.740s, finished at 2023-06-10T22:48:00+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Jun  9 16:45 packages/russian-holidays-20170109.2140.el
+4.0K -rw-r--r-- 1 root root  425 Jun 10 22:48 packages/russian-holidays-20170109.2140.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:48 packages/russian-holidays-20170109.2140.tar

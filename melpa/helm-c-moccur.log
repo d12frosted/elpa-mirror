@@ -4,4 +4,16 @@ Source:  https://github.com/myuhe/helm-c-moccur.el.git
 
 Updating /mnt/store/melpa/working/helm-c-moccur/
 Checking out b0a906f85fa352db091f88b91a9c510de607dfe9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-c-moccur/
+  to /tmp/helm-c-moccurG2yWXY/helm-c-moccur-20151230.924
+    helm-c-moccur.el -> helm-c-moccur.el
+Created helm-c-moccur-20151230.924.tar containing:
+  helm-c-moccur-20151230.924/
+  helm-c-moccur-20151230.924/helm-c-moccur-pkg.el
+  helm-c-moccur-20151230.924/helm-c-moccur.el
+Built helm-c-moccur in 2.575s, finished at 2023-06-10T22:20:55+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 29K Jun  9 16:05 packages/helm-c-moccur-20151230.924.el
+4.0K -rw-r--r-- 1 root root 458 Jun 10 22:20 packages/helm-c-moccur-20151230.924.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:20 packages/helm-c-moccur-20151230.924.tar

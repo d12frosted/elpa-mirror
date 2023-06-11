@@ -4,4 +4,16 @@ Source:  https://github.com/dochang/elpa-clone.git
 
 Updating /mnt/store/melpa/working/elpa-clone/
 Checking out 1d130c251690f24c23b77a4e4570157fca881d8f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elpa-clone/
+  to /tmp/elpa-clonepdBrHe/elpa-clone-20221201.1227
+    elpa-clone.el -> elpa-clone.el
+Created elpa-clone-20221201.1227.tar containing:
+  elpa-clone-20221201.1227/
+  elpa-clone-20221201.1227/elpa-clone-pkg.el
+  elpa-clone-20221201.1227/elpa-clone.el
+Built elpa-clone in 3.082s, finished at 2023-06-11T00:17:21+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 15:49 packages/elpa-clone-20221201.1227.el
+4.0K -rw-r--r-- 1 root root 458 Jun 11 00:17 packages/elpa-clone-20221201.1227.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:17 packages/elpa-clone-20221201.1227.tar

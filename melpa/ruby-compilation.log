@@ -4,4 +4,16 @@ Source:  https://github.com/eschulte/rinari.git
 
 Updating /mnt/store/melpa/working/ruby-compilation/
 Checking out be07b0f42aefa24c5d36c441d1f3f72e64fffaa4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ruby-compilation/
+  to /tmp/ruby-compilationvDRCHZ/ruby-compilation-20150709.640
+  ! util/ruby-compilation.el -> ruby-compilation.el
+Created ruby-compilation-20150709.640.tar containing:
+  ruby-compilation-20150709.640/
+  ruby-compilation-20150709.640/ruby-compilation-pkg.el
+  ruby-compilation-20150709.640/ruby-compilation.el
+Built ruby-compilation in 3.415s, finished at 2023-06-10T22:47:48+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:45 packages/ruby-compilation-20150709.640.el
+4.0K -rw-r--r-- 1 root root 453 Jun 10 22:47 packages/ruby-compilation-20150709.640.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:47 packages/ruby-compilation-20150709.640.tar

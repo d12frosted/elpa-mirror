@@ -4,4 +4,16 @@ Source:  https://github.com/flycheck/flycheck-cask.git
 
 Updating /mnt/store/melpa/working/flycheck-cask/
 Checking out 4b2ede6362ded4a45678dfbef1876faa42edbd58
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-cask/
+  to /tmp/flycheck-caskNlB4B4/flycheck-cask-20200926.1502
+    flycheck-cask.el -> flycheck-cask.el
+Created flycheck-cask-20200926.1502.tar containing:
+  flycheck-cask-20200926.1502/
+  flycheck-cask-20200926.1502/flycheck-cask-pkg.el
+  flycheck-cask-20200926.1502/flycheck-cask.el
+Built flycheck-cask in 3.112s, finished at 2023-06-11T00:22:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jun  9 15:56 packages/flycheck-cask-20200926.1502.el
+4.0K -rw-r--r-- 1 root root  501 Jun 11 00:22 packages/flycheck-cask-20200926.1502.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-cask-20200926.1502.tar

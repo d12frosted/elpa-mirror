@@ -4,4 +4,16 @@ Source:  https://github.com/tmalsburg/helm-bibtex.git
 
 Updating /mnt/store/melpa/working/ivy-bibtex/
 Checking out bb47f355b0da8518aa3fb516019120c14c8747c9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-bibtex/
+  to /tmp/ivy-bibtexOzWVbt/ivy-bibtex-20210927.1205
+    ivy-bibtex.el -> ivy-bibtex.el
+Created ivy-bibtex-20210927.1205.tar containing:
+  ivy-bibtex-20210927.1205/
+  ivy-bibtex-20210927.1205/ivy-bibtex-pkg.el
+  ivy-bibtex-20210927.1205/ivy-bibtex.el
+Built ivy-bibtex in 3.009s, finished at 2023-06-10T22:25:31+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  9 16:13 packages/ivy-bibtex-20210927.1205.el
+4.0K -rw-r--r-- 1 root root  528 Jun 10 22:25 packages/ivy-bibtex-20210927.1205.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:25 packages/ivy-bibtex-20210927.1205.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/marcIhm/org-id-cleanup.git
 
 Updating /mnt/store/melpa/working/org-id-cleanup/
 Checking out 73d3f750d236dd486b8bcc07c88bfda9ce5b384e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-id-cleanup/
+  to /tmp/org-id-cleanup12LWjw/org-id-cleanup-20230310.1639
+    org-id-cleanup.el -> org-id-cleanup.el
+Created org-id-cleanup-20230310.1639.tar containing:
+  org-id-cleanup-20230310.1639/
+  org-id-cleanup-20230310.1639/org-id-cleanup-pkg.el
+  org-id-cleanup-20230310.1639/org-id-cleanup.el
+Built org-id-cleanup in 3.360s, finished at 2023-06-10T22:38:04+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 32K Jun  9 16:32 packages/org-id-cleanup-20230310.1639.el
+4.0K -rw-r--r-- 1 root root 455 Jun 10 22:38 packages/org-id-cleanup-20230310.1639.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:38 packages/org-id-cleanup-20230310.1639.tar

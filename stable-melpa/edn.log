@@ -4,4 +4,16 @@ Source:  https://github.com/expez/edn.el.git
 
 Updating /mnt/store/melpa/working/edn/
 Checking out be9e32d1b49e35247b263b0243df7cfdc8d413ab
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/edn/
+  to /tmp/ednh7Eg5I/edn-20160215.1219
+    edn.el -> edn.el
+Created edn-20160215.1219.tar containing:
+  edn-20160215.1219/
+  edn-20160215.1219/edn-pkg.el
+  edn-20160215.1219/edn.el
+Built edn in 3.314s, finished at 2023-06-11T00:16:02+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 15:47 packages/edn-20160215.1219.el
+4.0K -rw-r--r-- 1 root root 500 Jun 11 00:16 packages/edn-20160215.1219.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:16 packages/edn-20160215.1219.tar

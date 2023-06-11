@@ -4,4 +4,16 @@ Source:  https://github.com/wandersoncferreira/ivy-clojuredocs.git
 
 Updating /mnt/store/melpa/working/ivy-clojuredocs/
 Checking out 8b6de19b3578c72d2b88f898e2290d94c04350f9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-clojuredocs/
+  to /tmp/ivy-clojuredocsRmvU2l/ivy-clojuredocs-20201129.2355
+    ivy-clojuredocs.el -> ivy-clojuredocs.el
+Created ivy-clojuredocs-20201129.2355.tar containing:
+  ivy-clojuredocs-20201129.2355/
+  ivy-clojuredocs-20201129.2355/ivy-clojuredocs-pkg.el
+  ivy-clojuredocs-20201129.2355/ivy-clojuredocs.el
+Built ivy-clojuredocs in 2.754s, finished at 2023-06-10T22:25:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Jun  9 16:13 packages/ivy-clojuredocs-20201129.2355.el
+4.0K -rw-r--r-- 1 root root  538 Jun 10 22:25 packages/ivy-clojuredocs-20201129.2355.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/ivy-clojuredocs-20201129.2355.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/wkirschbaum/elixir-ts-mode.git
 
 Updating /mnt/store/melpa/working/elixir-ts-mode/
 Checking out 6671c0ffe0e59d82b99948b08d200bd744cc9d26
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elixir-ts-mode/
+  to /tmp/elixir-ts-mode7hyAiE/elixir-ts-mode-20230403.823
+    elixir-ts-mode.el -> elixir-ts-mode.el
+Created elixir-ts-mode-20230403.823.tar containing:
+  elixir-ts-mode-20230403.823/
+  elixir-ts-mode-20230403.823/elixir-ts-mode-pkg.el
+  elixir-ts-mode-20230403.823/elixir-ts-mode.el
+Built elixir-ts-mode in 3.961s, finished at 2023-06-11T00:17:08+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Jun  9 15:49 packages/elixir-ts-mode-20230403.823.el
+4.0K -rw-r--r-- 1 root root 454 Jun 11 00:17 packages/elixir-ts-mode-20230403.823.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:17 packages/elixir-ts-mode-20230403.823.tar

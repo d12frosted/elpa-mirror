@@ -4,4 +4,19 @@ Source:  https://github.com/tuhdo/semantic-refactor.git
 
 Updating /mnt/store/melpa/working/srefactor/
 Checking out 95c70a94b5aad4c85b35569e2f2325047791153a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/srefactor/
+  to /tmp/srefactorrW0oQm/srefactor-20230504.617
+    srefactor-lisp.el -> srefactor-lisp.el
+    srefactor-ui.el -> srefactor-ui.el
+    srefactor.el -> srefactor.el
+Created srefactor-20230504.617.tar containing:
+  srefactor-20230504.617/
+  srefactor-20230504.617/srefactor-lisp.el
+  srefactor-20230504.617/srefactor-pkg.el
+  srefactor-20230504.617/srefactor-ui.el
+  srefactor-20230504.617/srefactor.el
+Built srefactor in 3.278s, finished at 2023-06-10T22:51:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  438 Jun 10 22:51 packages/srefactor-20230504.617.entry
+120K -rw-r--r-- 1 root root 120K Jun 10 22:51 packages/srefactor-20230504.617.tar

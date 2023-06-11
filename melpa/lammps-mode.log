@@ -4,4 +4,16 @@ Source:  https://github.com/HaoZeke/lammps-mode.git
 
 Updating /mnt/store/melpa/working/lammps-mode/
 Checking out a5b68d7a59975770b56ee8f6e66fa4f703a72ffe
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lammps-mode/
+  to /tmp/lammps-modeUGuzLB/lammps-mode-20180801.1319
+    lammps-mode.el -> lammps-mode.el
+Created lammps-mode-20180801.1319.tar containing:
+  lammps-mode-20180801.1319/
+  lammps-mode-20180801.1319/lammps-mode-pkg.el
+  lammps-mode-20180801.1319/lammps-mode.el
+Built lammps-mode in 2.613s, finished at 2023-06-10T22:28:33+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Jun  9 16:17 packages/lammps-mode-20180801.1319.el
+4.0K -rw-r--r-- 1 root root  491 Jun 10 22:28 packages/lammps-mode-20180801.1319.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:28 packages/lammps-mode-20180801.1319.tar

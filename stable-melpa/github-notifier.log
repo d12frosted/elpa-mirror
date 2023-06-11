@@ -4,4 +4,16 @@ Source:  https://github.com/xuchunyang/github-notifier.el.git
 
 Updating /mnt/store/melpa/working/github-notifier/
 Checking out 274f3812926ea371346f639fcee98066f6e8c96f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/github-notifier/
+  to /tmp/github-notifierLJLAXj/github-notifier-20180421.316
+    github-notifier.el -> github-notifier.el
+Created github-notifier-20180421.316.tar containing:
+  github-notifier-20180421.316/
+  github-notifier-20180421.316/github-notifier-pkg.el
+  github-notifier-20180421.316/github-notifier.el
+Built github-notifier in 3.844s, finished at 2023-06-11T00:26:07+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:01 packages/github-notifier-20180421.316.el
+4.0K -rw-r--r-- 1 root root 482 Jun 11 00:26 packages/github-notifier-20180421.316.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:26 packages/github-notifier-20180421.316.tar

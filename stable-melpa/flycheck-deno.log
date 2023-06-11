@@ -4,4 +4,16 @@ Source:  https://github.com/flycheck/flycheck-deno.git
 
 Updating /mnt/store/melpa/working/flycheck-deno/
 Checking out e7cd15a6a05be73d1f83a16d2efa6b49a105a9cd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-deno/
+  to /tmp/flycheck-denoBNgw4i/flycheck-deno-20230212.1754
+    flycheck-deno.el -> flycheck-deno.el
+Created flycheck-deno-20230212.1754.tar containing:
+  flycheck-deno-20230212.1754/
+  flycheck-deno-20230212.1754/flycheck-deno-pkg.el
+  flycheck-deno-20230212.1754/flycheck-deno.el
+Built flycheck-deno in 3.260s, finished at 2023-06-11T00:22:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jun  9 15:56 packages/flycheck-deno-20230212.1754.el
+4.0K -rw-r--r-- 1 root root  454 Jun 11 00:22 packages/flycheck-deno-20230212.1754.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-deno-20230212.1754.tar

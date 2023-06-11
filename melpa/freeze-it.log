@@ -4,4 +4,16 @@ Source:  https://github.com/rnkn/freeze-it.git
 
 Updating /mnt/store/melpa/working/freeze-it/
 Checking out ad92e33a7ebd860905da60d194833516bf61cbf5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/freeze-it/
+  to /tmp/freeze-itQOZmzb/freeze-it-20220301.148
+    freeze-it.el -> freeze-it.el
+Created freeze-it-20220301.148.tar containing:
+  freeze-it-20220301.148/
+  freeze-it-20220301.148/freeze-it-pkg.el
+  freeze-it-20220301.148/freeze-it.el
+Built freeze-it in 2.896s, finished at 2023-06-11T00:24:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  9 15:59 packages/freeze-it-20220301.148.el
+4.0K -rw-r--r-- 1 root root  459 Jun 11 00:24 packages/freeze-it-20220301.148.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:24 packages/freeze-it-20220301.148.tar

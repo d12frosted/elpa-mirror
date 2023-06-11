@@ -4,4 +4,25 @@ Source:  https://github.com/amake/macports.el.git
 
 Updating /mnt/store/melpa/working/macports/
 Checking out 1bd8406c84a80204f69f8bc328ab842a049a1aab
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/macports/
+  to /tmp/macportsWxDAZk/macports-20230427.1110
+    macports-core.el -> macports-core.el
+    macports-describe.el -> macports-describe.el
+    macports-installed.el -> macports-installed.el
+    macports-outdated.el -> macports-outdated.el
+    macports-select.el -> macports-select.el
+    macports.el -> macports.el
+Created macports-20230427.1110.tar containing:
+  macports-20230427.1110/
+  macports-20230427.1110/macports-core.el
+  macports-20230427.1110/macports-describe.el
+  macports-20230427.1110/macports-installed.el
+  macports-20230427.1110/macports-outdated.el
+  macports-20230427.1110/macports-pkg.el
+  macports-20230427.1110/macports-select.el
+  macports-20230427.1110/macports.el
+Built macports in 2.962s, finished at 2023-06-10T22:30:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 400 Jun 10 22:30 packages/macports-20230427.1110.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:30 packages/macports-20230427.1110.tar

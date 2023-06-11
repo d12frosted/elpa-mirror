@@ -4,4 +4,16 @@ Source:  https://github.com/sebasmonia/awscli-capf.git
 
 Updating /mnt/store/melpa/working/awscli-capf/
 Checking out 1a75f88f53a2969fe821c31e6857861d0a0c0a5e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/awscli-capf/
+  to /tmp/awscli-capffe41QR/awscli-capf-20190930.1517
+    awscli-capf.el -> awscli-capf.el
+Created awscli-capf-20190930.1517.tar containing:
+  awscli-capf-20190930.1517/
+  awscli-capf-20190930.1517/awscli-capf-pkg.el
+  awscli-capf-20190930.1517/awscli-capf.el
+Built awscli-capf in 2.731s, finished at 2023-06-11T00:04:45+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 15:31 packages/awscli-capf-20190930.1517.el
+4.0K -rw-r--r-- 1 root root 497 Jun 11 00:04 packages/awscli-capf-20190930.1517.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:04 packages/awscli-capf-20190930.1517.tar

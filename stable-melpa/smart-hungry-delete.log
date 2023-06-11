@@ -4,4 +4,16 @@ Source:  https://github.com/hrehfeld/emacs-smart-hungry-delete.git
 
 Updating /mnt/store/melpa/working/smart-hungry-delete/
 Checking out e06525cc1841805ebe470c876d6b966de90bc275
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smart-hungry-delete/
+  to /tmp/smart-hungry-deleteqDkSKP/smart-hungry-delete-20220516.1538
+    smart-hungry-delete.el -> smart-hungry-delete.el
+Created smart-hungry-delete-20220516.1538.tar containing:
+  smart-hungry-delete-20220516.1538/
+  smart-hungry-delete-20220516.1538/smart-hungry-delete-pkg.el
+  smart-hungry-delete-20220516.1538/smart-hungry-delete.el
+Built smart-hungry-delete in 3.360s, finished at 2023-06-10T22:50:19+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  9 16:49 packages/smart-hungry-delete-20220516.1538.el
+4.0K -rw-r--r-- 1 root root  504 Jun 10 22:50 packages/smart-hungry-delete-20220516.1538.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:50 packages/smart-hungry-delete-20220516.1538.tar

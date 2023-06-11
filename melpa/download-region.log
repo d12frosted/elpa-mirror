@@ -4,4 +4,16 @@ Source:  https://github.com/zk-phi/download-region.git
 
 Updating /mnt/store/melpa/working/download-region/
 Checking out e0a721858a22896fa1d7f1d5689dd0878dbc58fa
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/download-region/
+  to /tmp/download-regionnNurVN/download-region-20210306.415
+    download-region.el -> download-region.el
+Created download-region-20210306.415.tar containing:
+  download-region-20210306.415/
+  download-region-20210306.415/download-region-pkg.el
+  download-region-20210306.415/download-region.el
+Built download-region in 2.982s, finished at 2023-06-11T00:15:00+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.8K Jun  9 15:45 packages/download-region-20210306.415.el
+4.0K -rw-r--r-- 1 root root  311 Jun 11 00:15 packages/download-region-20210306.415.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:15 packages/download-region-20210306.415.tar

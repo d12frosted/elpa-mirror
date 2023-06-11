@@ -4,4 +4,23 @@ Source:  https://github.com/gnuvince/purp.git
 
 Updating /mnt/store/melpa/working/purp-theme/
 Checking out 8d3510e1ed995b8323cd5205626ddde6386a76ca
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/purp-theme/
+  to /tmp/purp-theme9liiPO/purp-theme-20210912.1940
+    blurb-theme.el -> blurb-theme.el
+    ega-theme.el -> ega-theme.el
+    purp-common.el -> purp-common.el
+    purp-light-theme.el -> purp-light-theme.el
+    purp-theme.el -> purp-theme.el
+Created purp-theme-20210912.1940.tar containing:
+  purp-theme-20210912.1940/
+  purp-theme-20210912.1940/blurb-theme.el
+  purp-theme-20210912.1940/ega-theme.el
+  purp-theme-20210912.1940/purp-common.el
+  purp-theme-20210912.1940/purp-light-theme.el
+  purp-theme-20210912.1940/purp-theme-pkg.el
+  purp-theme-20210912.1940/purp-theme.el
+Built purp-theme in 2.730s, finished at 2023-06-10T22:44:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 422 Jun 10 22:44 packages/purp-theme-20210912.1940.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:44 packages/purp-theme-20210912.1940.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/neuromage/ycm.el.git
 
 Updating /mnt/store/melpa/working/ycm/
 Checking out 4da8a14abcd0f4fa3235042ade2e12b5068c0601
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ycm/
+  to /tmp/ycmLP7X8h/ycm-20150822.1836
+    ycm.el -> ycm.el
+Created ycm-20150822.1836.tar containing:
+  ycm-20150822.1836/
+  ycm-20150822.1836/ycm-pkg.el
+  ycm-20150822.1836/ycm.el
+Built ycm in 5.085s, finished at 2023-06-10T22:59:49+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 17:02 packages/ycm-20150822.1836.el
+4.0K -rw-r--r-- 1 root root 394 Jun 10 22:59 packages/ycm-20150822.1836.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:59 packages/ycm-20150822.1836.tar

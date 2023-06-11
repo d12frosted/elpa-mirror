@@ -4,4 +4,16 @@ Source:  https://github.com/abo-abo/ace-link.git
 
 Updating /mnt/store/melpa/working/ace-link/
 Checking out 06ab398df85e81d1dc763b3210732dd26cba60a1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ace-link/
+  to /tmp/ace-linkRwvd89/ace-link-20220901.1710
+    ace-link.el -> ace-link.el
+Created ace-link-20220901.1710.tar containing:
+  ace-link-20220901.1710/
+  ace-link-20220901.1710/ace-link-pkg.el
+  ace-link-20220901.1710/ace-link.el
+Built ace-link in 4.182s, finished at 2023-06-11T00:02:22+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 36K Jun  9 15:28 packages/ace-link-20220901.1710.el
+4.0K -rw-r--r-- 1 root root 434 Jun 11 00:02 packages/ace-link-20220901.1710.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:02 packages/ace-link-20220901.1710.tar

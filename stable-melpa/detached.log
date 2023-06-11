@@ -4,4 +4,38 @@ Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
 Checking out 6b64d4d8064cee781e071e825857b442ea96c3d9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/detached/
+  to /tmp/detachedp03uJc/detached-20221129.1430
+    detached-compile.el -> detached-compile.el
+    detached-consult.el -> detached-consult.el
+    detached-dired.el -> detached-dired.el
+    detached-eshell.el -> detached-eshell.el
+    detached-extra.el -> detached-extra.el
+    detached-init.el -> detached-init.el
+    detached-list.el -> detached-list.el
+    detached-org.el -> detached-org.el
+    detached-shell.el -> detached-shell.el
+    detached-vterm.el -> detached-vterm.el
+    detached.el -> detached.el
+  ! doc/detached.info -> detached.info
+Created detached-20221129.1430.tar containing:
+  detached-20221129.1430/
+  detached-20221129.1430/detached-compile.el
+  detached-20221129.1430/detached-consult.el
+  detached-20221129.1430/detached-dired.el
+  detached-20221129.1430/detached-eshell.el
+  detached-20221129.1430/detached-extra.el
+  detached-20221129.1430/detached-init.el
+  detached-20221129.1430/detached-list.el
+  detached-20221129.1430/detached-org.el
+  detached-20221129.1430/detached-pkg.el
+  detached-20221129.1430/detached-shell.el
+  detached-20221129.1430/detached-vterm.el
+  detached-20221129.1430/detached.el
+  detached-20221129.1430/detached.info
+  detached-20221129.1430/dir
+Built detached in 4.832s, finished at 2023-06-11T00:12:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  536 Jun 11 00:12 packages/detached-20221129.1430.entry
+200K -rw-r--r-- 1 root root 200K Jun 11 00:12 packages/detached-20221129.1430.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/bitspook/css-comb.el.git
 
 Updating /mnt/store/melpa/working/css-comb/
 Checking out 6fa45e5af8a8bd3af6c1154cde3540e32c4206ee
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/css-comb/
+  to /tmp/css-combZdPEGM/css-comb-20160416.559
+    css-comb.el -> css-comb.el
+Created css-comb-20160416.559.tar containing:
+  css-comb-20160416.559/
+  css-comb-20160416.559/css-comb-pkg.el
+  css-comb-20160416.559/css-comb.el
+Built css-comb in 3.314s, finished at 2023-06-11T00:11:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.6K Jun  9 15:41 packages/css-comb-20160416.559.el
+4.0K -rw-r--r-- 1 root root  416 Jun 11 00:11 packages/css-comb-20160416.559.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:11 packages/css-comb-20160416.559.tar

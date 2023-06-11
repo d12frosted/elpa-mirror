@@ -4,4 +4,16 @@ Source:  https://github.com/r0man/hive-el.git
 
 Updating /mnt/store/melpa/working/hive/
 Checking out 131f2816a0cf4d1fee44198ca305e6e2d1cab750
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hive/
+  to /tmp/hive0BPVmK/hive-20131217.1512
+    hive.el -> hive.el
+Created hive-20131217.1512.tar containing:
+  hive-20131217.1512/
+  hive-20131217.1512/hive-pkg.el
+  hive-20131217.1512/hive.el
+Built hive in 3.082s, finished at 2023-06-10T22:23:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Jun  9 16:09 packages/hive-20131217.1512.el
+4.0K -rw-r--r-- 1 root root  363 Jun 10 22:23 packages/hive-20131217.1512.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:23 packages/hive-20131217.1512.tar

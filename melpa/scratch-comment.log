@@ -4,4 +4,16 @@ Source:  https://github.com/conao3/scratch-comment.el.git
 
 Updating /mnt/store/melpa/working/scratch-comment/
 Checking out cf3e967b4def1308b6ef1cfeedd2cf15ee6e226c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scratch-comment/
+  to /tmp/scratch-commentmB49bc/scratch-comment-20200812.1025
+    scratch-comment.el -> scratch-comment.el
+Created scratch-comment-20200812.1025.tar containing:
+  scratch-comment-20200812.1025/
+  scratch-comment-20200812.1025/scratch-comment-pkg.el
+  scratch-comment-20200812.1025/scratch-comment.el
+Built scratch-comment in 2.684s, finished at 2023-06-10T22:48:27+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Jun  9 16:46 packages/scratch-comment-20200812.1025.el
+4.0K -rw-r--r-- 1 root root  468 Jun 10 22:48 packages/scratch-comment-20200812.1025.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:48 packages/scratch-comment-20200812.1025.tar

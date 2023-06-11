@@ -4,4 +4,16 @@ Source:  https://github.com/nicferrier/emacs-world-time-mode.git
 
 Updating /mnt/store/melpa/working/world-time-mode/
 Checking out ce7a3b45c87eb24cfe61eee453175d64f741d7cc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/world-time-mode/
+  to /tmp/world-time-modeJgprXg/world-time-mode-20140627.807
+    world-time-mode.el -> world-time-mode.el
+Created world-time-mode-20140627.807.tar containing:
+  world-time-mode-20140627.807/
+  world-time-mode-20140627.807/world-time-mode-pkg.el
+  world-time-mode-20140627.807/world-time-mode.el
+Built world-time-mode in 3.069s, finished at 2023-06-10T22:58:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jun  9 17:01 packages/world-time-mode-20140627.807.el
+4.0K -rw-r--r-- 1 root root  381 Jun 10 22:58 packages/world-time-mode-20140627.807.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:58 packages/world-time-mode-20140627.807.tar

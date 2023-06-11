@@ -4,4 +4,16 @@ Source:  https://github.com/listx/kakapo-mode.git
 
 Updating /mnt/store/melpa/working/kakapo-mode/
 Checking out 67d516138172fd60782df94454b3d0bd247e84f3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kakapo-mode/
+  to /tmp/kakapo-modehsn92w/kakapo-mode-20171004.451
+    kakapo-mode.el -> kakapo-mode.el
+Created kakapo-mode-20171004.451.tar containing:
+  kakapo-mode-20171004.451/
+  kakapo-mode-20171004.451/kakapo-mode-pkg.el
+  kakapo-mode-20171004.451/kakapo-mode.el
+Built kakapo-mode in 2.686s, finished at 2023-06-10T22:27:31+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:16 packages/kakapo-mode-20171004.451.el
+4.0K -rw-r--r-- 1 root root 316 Jun 10 22:27 packages/kakapo-mode-20171004.451.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:27 packages/kakapo-mode-20171004.451.tar

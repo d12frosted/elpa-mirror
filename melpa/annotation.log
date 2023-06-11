@@ -4,4 +4,16 @@ Source:  https://github.com/agda/agda.git
 
 Updating /mnt/store/melpa/working/annotation/
 Checking out aa5e3a127bf17a8c80d947f3c286758a36dadc36
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/annotation/
+  to /tmp/annotationyLmS8d/annotation-20200914.644
+  ! src/data/emacs-mode/annotation.el -> annotation.el
+Created annotation-20200914.644.tar containing:
+  annotation-20200914.644/
+  annotation-20200914.644/annotation-pkg.el
+  annotation-20200914.644/annotation.el
+Built annotation in 9.611s, finished at 2023-06-11T00:03:24+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 15:29 packages/annotation-20200914.644.el
+4.0K -rw-r--r-- 1 root root 221 Jun 11 00:03 packages/annotation-20200914.644.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:03 packages/annotation-20200914.644.tar

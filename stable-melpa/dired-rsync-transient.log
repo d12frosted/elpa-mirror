@@ -4,4 +4,16 @@ Source:  https://github.com/stsquad/dired-rsync.git
 
 Updating /mnt/store/melpa/working/dired-rsync-transient/
 Checking out c0e2168b80df00116ab9071bb214cf05ed943d73
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-rsync-transient/
+  to /tmp/dired-rsync-transientdAFm73/dired-rsync-transient-20221214.1215
+    dired-rsync-transient.el -> dired-rsync-transient.el
+Created dired-rsync-transient-20221214.1215.tar containing:
+  dired-rsync-transient-20221214.1215/
+  dired-rsync-transient-20221214.1215/dired-rsync-transient-pkg.el
+  dired-rsync-transient-20221214.1215/dired-rsync-transient.el
+Built dired-rsync-transient in 4.181s, finished at 2023-06-11T00:13:58+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  9 15:44 packages/dired-rsync-transient-20221214.1215.el
+4.0K -rw-r--r-- 1 root root  464 Jun 11 00:13 packages/dired-rsync-transient-20221214.1215.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:13 packages/dired-rsync-transient-20221214.1215.tar

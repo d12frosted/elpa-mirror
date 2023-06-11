@@ -4,4 +4,16 @@ Source:  https://github.com/guidoschmidt/circadian.el.git
 
 Updating /mnt/store/melpa/working/circadian/
 Checking out 9959e4b9d2ed9920b668fc229aab1f5fa5bd8584
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/circadian/
+  to /tmp/circadianIPA40W/circadian-20221223.1734
+    circadian.el -> circadian.el
+Created circadian-20221223.1734.tar containing:
+  circadian-20221223.1734/
+  circadian-20221223.1734/circadian-pkg.el
+  circadian-20221223.1734/circadian.el
+Built circadian in 4.053s, finished at 2023-06-11T00:08:25+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jun  9 15:35 packages/circadian-20221223.1734.el
+4.0K -rw-r--r-- 1 root root  429 Jun 11 00:08 packages/circadian-20221223.1734.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:08 packages/circadian-20221223.1734.tar

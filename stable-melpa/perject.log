@@ -4,4 +4,23 @@ Source:  https://github.com/overideal/perject.git
 
 Updating /mnt/store/melpa/working/perject/
 Checking out 6357ab199c717191e7695a3e3c2545918b97a942
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/perject/
+  to /tmp/perjecttpRJlH/perject-20230605.841
+    perject-consult.el -> perject-consult.el
+    perject-ibuffer.el -> perject-ibuffer.el
+    perject-tab.el -> perject-tab.el
+    perject-transient.el -> perject-transient.el
+    perject.el -> perject.el
+Created perject-20230605.841.tar containing:
+  perject-20230605.841/
+  perject-20230605.841/perject-consult.el
+  perject-20230605.841/perject-ibuffer.el
+  perject-20230605.841/perject-pkg.el
+  perject-20230605.841/perject-tab.el
+  perject-20230605.841/perject-transient.el
+  perject-20230605.841/perject.el
+Built perject in 3.257s, finished at 2023-06-10T22:42:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  369 Jun 10 22:42 packages/perject-20230605.841.entry
+180K -rw-r--r-- 1 root root 180K Jun 10 22:42 packages/perject-20230605.841.tar

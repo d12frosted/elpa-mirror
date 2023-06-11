@@ -4,4 +4,16 @@ Source:  https://github.com/alhassy/repl-driven-development.git
 
 Updating /mnt/store/melpa/working/repl-driven-development/
 Checking out 581fa6ac02d77a7a4293965049d801411402098e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/repl-driven-development/
+  to /tmp/repl-driven-developmentWltjBe/repl-driven-development-20230508.40
+    repl-driven-development.el -> repl-driven-development.el
+Created repl-driven-development-20230508.40.tar containing:
+  repl-driven-development-20230508.40/
+  repl-driven-development-20230508.40/repl-driven-development-pkg.el
+  repl-driven-development-20230508.40/repl-driven-development.el
+Built repl-driven-development in 5.102s, finished at 2023-06-10T22:46:57+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:44 packages/repl-driven-development-20230508.40.el
+4.0K -rw-r--r-- 1 root root 711 Jun 10 22:46 packages/repl-driven-development-20230508.40.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:46 packages/repl-driven-development-20230508.40.tar

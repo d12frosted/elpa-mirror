@@ -4,4 +4,16 @@ Source:  https://github.com/undercover-el/undercover.el.git
 
 Updating /mnt/store/melpa/working/undercover/
 Checking out 1d3587f1fad66a747688f36636b67b33b73447d3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/undercover/
+  to /tmp/undercoverrg6ycR/undercover-20210602.2119
+    undercover.el -> undercover.el
+Created undercover-20210602.2119.tar containing:
+  undercover-20210602.2119/
+  undercover-20210602.2119/undercover-pkg.el
+  undercover-20210602.2119/undercover.el
+Built undercover in 3.391s, finished at 2023-06-10T22:55:53+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 57K Jun  9 16:57 packages/undercover-20210602.2119.el
+4.0K -rw-r--r-- 1 root root 580 Jun 10 22:55 packages/undercover-20210602.2119.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:55 packages/undercover-20210602.2119.tar

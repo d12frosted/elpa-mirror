@@ -4,4 +4,16 @@ Source:  https://github.com/HenryNewcomer/laguna-theme.git
 
 Updating /mnt/store/melpa/working/laguna-theme/
 Checking out 680ab8c936cb1c249b5a6a07976bcc83ef217e25
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/laguna-theme/
+  to /tmp/laguna-theme5PQZGk/laguna-theme-20220804.227
+    laguna-theme.el -> laguna-theme.el
+Created laguna-theme-20220804.227.tar containing:
+  laguna-theme-20220804.227/
+  laguna-theme-20220804.227/laguna-theme-pkg.el
+  laguna-theme-20220804.227/laguna-theme.el
+Built laguna-theme in 2.751s, finished at 2023-06-10T22:28:32+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 54K Jun  9 16:17 packages/laguna-theme-20220804.227.el
+4.0K -rw-r--r-- 1 root root 413 Jun 10 22:28 packages/laguna-theme-20220804.227.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:28 packages/laguna-theme-20220804.227.tar

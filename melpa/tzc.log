@@ -4,4 +4,16 @@ Source:  https://github.com/md-arif-shaikh/tzc.git
 
 Updating /mnt/store/melpa/working/tzc/
 Checking out e815b43790d9a517f89a2bb592c665bd911a4477
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tzc/
+  to /tmp/tzcnvq3oi/tzc-20230504.445
+    tzc.el -> tzc.el
+Created tzc-20230504.445.tar containing:
+  tzc-20230504.445/
+  tzc-20230504.445/tzc-pkg.el
+  tzc-20230504.445/tzc.el
+Built tzc in 3.170s, finished at 2023-06-10T22:55:47+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  9 16:57 packages/tzc-20230504.445.el
+4.0K -rw-r--r-- 1 root root 472 Jun 10 22:55 packages/tzc-20230504.445.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:55 packages/tzc-20230504.445.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/dieggsy/difflib.el.git
 
 Updating /mnt/store/melpa/working/difflib/
 Checking out 646fc4388274fe765bbf4661e17a24e4d081250c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/difflib/
+  to /tmp/difflibQLoo7Z/difflib-20210224.2242
+    difflib.el -> difflib.el
+Created difflib-20210224.2242.tar containing:
+  difflib-20210224.2242/
+  difflib-20210224.2242/difflib-pkg.el
+  difflib-20210224.2242/difflib.el
+Built difflib in 3.682s, finished at 2023-06-11T00:13:08+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  9 15:43 packages/difflib-20210224.2242.el
+4.0K -rw-r--r-- 1 root root 511 Jun 11 00:13 packages/difflib-20210224.2242.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:13 packages/difflib-20210224.2242.tar

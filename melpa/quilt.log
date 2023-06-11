@@ -4,4 +4,16 @@ Source:  https://github.com/jstranik/emacs-quilt.git
 
 Updating /mnt/store/melpa/working/quilt/
 Checking out b56a1f1acc46cdf8655710e4c8f24f5f31f22c6a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/quilt/
+  to /tmp/quiltdvTTGH/quilt-20190828.506
+    quilt.el -> quilt.el
+Created quilt-20190828.506.tar containing:
+  quilt-20190828.506/
+  quilt-20190828.506/quilt-pkg.el
+  quilt-20190828.506/quilt.el
+Built quilt in 3.220s, finished at 2023-06-10T22:45:28+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:42 packages/quilt-20190828.506.el
+4.0K -rw-r--r-- 1 root root 402 Jun 10 22:45 packages/quilt-20190828.506.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:45 packages/quilt-20190828.506.tar

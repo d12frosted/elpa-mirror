@@ -4,4 +4,16 @@ Source:  https://repo.or.cz/edebug-inline-result.git
 
 Updating /mnt/store/melpa/working/edebug-inline-result/
 Checking out 90e401ae3e7b3c85da8b24af940fd97f5e744625
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/edebug-inline-result/
+  to /tmp/edebug-inline-result9q1nEh/edebug-inline-result-20220820.2240
+    edebug-inline-result.el -> edebug-inline-result.el
+Created edebug-inline-result-20220820.2240.tar containing:
+  edebug-inline-result-20220820.2240/
+  edebug-inline-result-20220820.2240/edebug-inline-result-pkg.el
+  edebug-inline-result-20220820.2240/edebug-inline-result.el
+Built edebug-inline-result in 3.713s, finished at 2023-06-11T00:15:51+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.5K Jun  9 15:47 packages/edebug-inline-result-20220820.2240.el
+4.0K -rw-r--r-- 1 root root  289 Jun 11 00:15 packages/edebug-inline-result-20220820.2240.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:15 packages/edebug-inline-result-20220820.2240.tar

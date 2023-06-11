@@ -4,4 +4,16 @@ Source:  https://gitlab.com/to1ne/use-package-hydra.git
 
 Updating /mnt/store/melpa/working/use-package-hydra/
 Checking out 8cd55a1128fbdf6327bb38a199d206225896d146
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/use-package-hydra/
+  to /tmp/use-package-hydraueuUhf/use-package-hydra-20181228.745
+    use-package-hydra.el -> use-package-hydra.el
+Created use-package-hydra-20181228.745.tar containing:
+  use-package-hydra-20181228.745/
+  use-package-hydra-20181228.745/use-package-hydra-pkg.el
+  use-package-hydra-20181228.745/use-package-hydra.el
+Built use-package-hydra in 3.085s, finished at 2023-06-10T22:56:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Jun  9 16:58 packages/use-package-hydra-20181228.745.el
+4.0K -rw-r--r-- 1 root root  518 Jun 10 22:56 packages/use-package-hydra-20181228.745.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:56 packages/use-package-hydra-20181228.745.tar

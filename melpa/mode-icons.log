@@ -4,4 +4,127 @@ Source:  https://github.com/ryuslash/mode-icons.git
 
 Updating /mnt/store/melpa/working/mode-icons/
 Checking out 82cfba411c544c862a0854f682494a437642c957
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mode-icons/
+  to /tmp/mode-iconsMy4eHu/mode-icons-20200920.2031
+    mode-icons.el -> mode-icons.el
+    icons => icons
+Created mode-icons-20200920.2031.tar containing:
+  mode-icons-20200920.2031/
+  mode-icons-20200920.2031/icons/
+  mode-icons-20200920.2031/icons/FontAwesome-f002.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f013.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f016.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f021.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f023.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f03c.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f044.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f046.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f047.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f059.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f05a.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f066.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f071.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f073.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f092.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f09c.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f0c7.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f0f6.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f11c.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f128.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f179.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f17a.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f17c.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f188.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f18e.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f1ad.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f1c6.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f1d2.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f1de.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f1ec.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f21b.xpm
+  mode-icons-20200920.2031/icons/FontAwesome-f27b.xpm
+  mode-icons-20200920.2031/icons/IcoMoon-Free-ea12.xpm
+  mode-icons-20200920.2031/icons/IcoMoon-Free-eabd.xpm
+  mode-icons-20200920.2031/icons/IcoMoon-Free-eabf.xpm
+  mode-icons-20200920.2031/icons/Lua-Logo_16x16.png
+  mode-icons-20200920.2031/icons/Lua-Logo_16x16.xpm
+  mode-icons-20200920.2031/icons/R.xpm
+  mode-icons-20200920.2031/icons/autohotkey.xpm
+  mode-icons-20200920.2031/icons/bash.xpm
+  mode-icons-20200920.2031/icons/bibtex.xpm
+  mode-icons-20200920.2031/icons/c.xpm
+  mode-icons-20200920.2031/icons/cl.xpm
+  mode-icons-20200920.2031/icons/cmd.xpm
+  mode-icons-20200920.2031/icons/coffee.xpm
+  mode-icons-20200920.2031/icons/compile.xpm
+  mode-icons-20200920.2031/icons/cpp.xpm
+  mode-icons-20200920.2031/icons/csharp.xpm
+  mode-icons-20200920.2031/icons/css.xpm
+  mode-icons-20200920.2031/icons/cygwin.xpm
+  mode-icons-20200920.2031/icons/dart.xpm
+  mode-icons-20200920.2031/icons/dim.xpm
+  mode-icons-20200920.2031/icons/docker.xpm
+  mode-icons-20200920.2031/icons/e-palm_tree.xpm
+  mode-icons-20200920.2031/icons/elixir.xpm
+  mode-icons-20200920.2031/icons/emacs.xpm
+  mode-icons-20200920.2031/icons/emmet.xpm
+  mode-icons-20200920.2031/icons/emoji.png
+  mode-icons-20200920.2031/icons/emoji.xpm
+  mode-icons-20200920.2031/icons/erlang.xpm
+  mode-icons-20200920.2031/icons/ext-png.xpm
+  mode-icons-20200920.2031/icons/ext-tex.xpm
+  mode-icons-20200920.2031/icons/ext-xpm.xpm
+  mode-icons-20200920.2031/icons/flutter.xpm
+  mode-icons-20200920.2031/icons/flycheck.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f107.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f10a.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f10c.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f10d.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f115.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f116.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f126.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f12b.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f148.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f15b.xpm
+  mode-icons-20200920.2031/icons/font-mfizz-f166.xpm
+  mode-icons-20200920.2031/icons/github-octicons-f0c9.xpm
+  mode-icons-20200920.2031/icons/go.xpm
+  mode-icons-20200920.2031/icons/golden.xpm
+  mode-icons-20200920.2031/icons/haml.xpm
+  mode-icons-20200920.2031/icons/helm.xpm
+  mode-icons-20200920.2031/icons/hs.xpm
+  mode-icons-20200920.2031/icons/html.xpm
+  mode-icons-20200920.2031/icons/icy.xpm
+  mode-icons-20200920.2031/icons/infruby.xpm
+  mode-icons-20200920.2031/icons/ivy.xpm
+  mode-icons-20200920.2031/icons/js.xpm
+  mode-icons-20200920.2031/icons/msys.xpm
+  mode-icons-20200920.2031/icons/octave.xpm
+  mode-icons-20200920.2031/icons/org.xpm
+  mode-icons-20200920.2031/icons/php.xpm
+  mode-icons-20200920.2031/icons/powershell.xpm
+  mode-icons-20200920.2031/icons/python.xpm
+  mode-icons-20200920.2031/icons/rails.xpm
+  mode-icons-20200920.2031/icons/rainbow.xpm
+  mode-icons-20200920.2031/icons/react.xpm
+  mode-icons-20200920.2031/icons/ruby.xpm
+  mode-icons-20200920.2031/icons/rust.xpm
+  mode-icons-20200920.2031/icons/sas.xpm
+  mode-icons-20200920.2031/icons/sass.xpm
+  mode-icons-20200920.2031/icons/scheme.xpm
+  mode-icons-20200920.2031/icons/slim.xpm
+  mode-icons-20200920.2031/icons/smartparens.xpm
+  mode-icons-20200920.2031/icons/spacemacs.png
+  mode-icons-20200920.2031/icons/spacemacs.xpm
+  mode-icons-20200920.2031/icons/svg.xpm
+  mode-icons-20200920.2031/icons/term.xpm
+  mode-icons-20200920.2031/icons/xml.xpm
+  mode-icons-20200920.2031/icons/yaml.xpm
+  mode-icons-20200920.2031/icons/yas.xpm
+  mode-icons-20200920.2031/mode-icons-pkg.el
+  mode-icons-20200920.2031/mode-icons.el
+Built mode-icons in 5.725s, finished at 2023-06-10T22:32:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  477 Jun 10 22:32 packages/mode-icons-20200920.2031.entry
+380K -rw-r--r-- 1 root root 380K Jun 10 22:32 packages/mode-icons-20200920.2031.tar

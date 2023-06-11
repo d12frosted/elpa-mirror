@@ -4,4 +4,16 @@ Source:  https://github.com/didibus/anakondo.git
 
 Updating /mnt/store/melpa/working/anakondo/
 Checking out 16b0ba14d94a5d7e55655efc9e1d6d069a9306f2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/anakondo/
+  to /tmp/anakondob5xoBN/anakondo-20210221.1727
+    anakondo.el -> anakondo.el
+Created anakondo-20210221.1727.tar containing:
+  anakondo-20210221.1727/
+  anakondo-20210221.1727/anakondo-pkg.el
+  anakondo-20210221.1727/anakondo.el
+Built anakondo in 3.247s, finished at 2023-06-11T00:03:08+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 37K Jun  9 15:29 packages/anakondo-20210221.1727.el
+4.0K -rw-r--r-- 1 root root 553 Jun 11 00:03 packages/anakondo-20210221.1727.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:03 packages/anakondo-20210221.1727.tar

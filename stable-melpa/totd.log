@@ -4,4 +4,16 @@ Source:  https://gitlab.com/egh/emacs-totd.git
 
 Updating /mnt/store/melpa/working/totd/
 Checking out a715f7f2df416b8a6c827a9493ce7004180a3a4f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/totd/
+  to /tmp/totdToC6Ey/totd-20150519.1440
+    totd.el -> totd.el
+Created totd-20150519.1440.tar containing:
+  totd-20150519.1440/
+  totd-20150519.1440/totd-pkg.el
+  totd-20150519.1440/totd.el
+Built totd in 3.081s, finished at 2023-06-10T22:54:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.9K Jun  9 16:55 packages/totd-20150519.1440.el
+4.0K -rw-r--r-- 1 root root  353 Jun 10 22:54 packages/totd-20150519.1440.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:54 packages/totd-20150519.1440.tar

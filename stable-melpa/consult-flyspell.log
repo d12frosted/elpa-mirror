@@ -4,4 +4,16 @@ Source:  https://gitlab.com/OlMon/consult-flyspell.git
 
 Updating /mnt/store/melpa/working/consult-flyspell/
 Checking out 7011e6634598530ea2d874e7e7389dc1bb94e1ca
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-flyspell/
+  to /tmp/consult-flyspellxbwvjS/consult-flyspell-20230322.204
+    consult-flyspell.el -> consult-flyspell.el
+Created consult-flyspell-20230322.204.tar containing:
+  consult-flyspell-20230322.204/
+  consult-flyspell-20230322.204/consult-flyspell-pkg.el
+  consult-flyspell-20230322.204/consult-flyspell.el
+Built consult-flyspell in 3.769s, finished at 2023-06-11T00:10:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  9 15:39 packages/consult-flyspell-20230322.204.el
+4.0K -rw-r--r-- 1 root root  431 Jun 11 00:10 packages/consult-flyspell-20230322.204.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:10 packages/consult-flyspell-20230322.204.tar

@@ -4,4 +4,26 @@ Source:  https://github.com/alphapapa/org-ql.git
 
 Updating /mnt/store/melpa/working/org-ql/
 Checking out eb5377320fcfd38354d6e9e3e655969ae3c0e052
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-ql/
+  to /tmp/org-qlaIyAka/org-ql-20230525.1548
+    org-ql-completing-read.el -> org-ql-completing-read.el
+    org-ql-find.el -> org-ql-find.el
+    org-ql-search.el -> org-ql-search.el
+    org-ql-view.el -> org-ql-view.el
+    org-ql.el -> org-ql.el
+    org-ql.info -> org-ql.info
+Created org-ql-20230525.1548.tar containing:
+  org-ql-20230525.1548/
+  org-ql-20230525.1548/dir
+  org-ql-20230525.1548/org-ql-completing-read.el
+  org-ql-20230525.1548/org-ql-find.el
+  org-ql-20230525.1548/org-ql-pkg.el
+  org-ql-20230525.1548/org-ql-search.el
+  org-ql-20230525.1548/org-ql-view.el
+  org-ql-20230525.1548/org-ql.el
+  org-ql-20230525.1548/org-ql.info
+Built org-ql in 3.915s, finished at 2023-06-10T22:38:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  673 Jun 10 22:38 packages/org-ql-20230525.1548.entry
+312K -rw-r--r-- 1 root root 310K Jun 10 22:38 packages/org-ql-20230525.1548.tar

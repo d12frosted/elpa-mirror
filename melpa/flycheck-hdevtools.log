@@ -4,4 +4,16 @@ Source:  https://github.com/flycheck/flycheck-hdevtools.git
 
 Updating /mnt/store/melpa/working/flycheck-hdevtools/
 Checking out 53829f0c57800615718cfce27ffa16d8ba286cee
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-hdevtools/
+  to /tmp/flycheck-hdevtoolsZH4Ah1/flycheck-hdevtools-20160926.702
+    flycheck-hdevtools.el -> flycheck-hdevtools.el
+Created flycheck-hdevtools-20160926.702.tar containing:
+  flycheck-hdevtools-20160926.702/
+  flycheck-hdevtools-20160926.702/flycheck-hdevtools-pkg.el
+  flycheck-hdevtools-20160926.702/flycheck-hdevtools.el
+Built flycheck-hdevtools in 2.510s, finished at 2023-06-11T00:22:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jun  9 15:57 packages/flycheck-hdevtools-20160926.702.el
+4.0K -rw-r--r-- 1 root root  567 Jun 11 00:22 packages/flycheck-hdevtools-20160926.702.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-hdevtools-20160926.702.tar

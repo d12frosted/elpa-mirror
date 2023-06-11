@@ -4,4 +4,16 @@ Source:  https://github.com/aki2o/auto-complete-nxml.git
 
 Updating /mnt/store/melpa/working/auto-complete-nxml/
 Checking out ac7b09a23e45f9bd02affb31847263de4180163a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auto-complete-nxml/
+  to /tmp/auto-complete-nxmlzM9GRm/auto-complete-nxml-20140221.458
+    auto-complete-nxml.el -> auto-complete-nxml.el
+Created auto-complete-nxml-20140221.458.tar containing:
+  auto-complete-nxml-20140221.458/
+  auto-complete-nxml-20140221.458/auto-complete-nxml-pkg.el
+  auto-complete-nxml-20140221.458/auto-complete-nxml.el
+Built auto-complete-nxml in 3.623s, finished at 2023-06-11T00:04:18+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  9 15:30 packages/auto-complete-nxml-20140221.458.el
+4.0K -rw-r--r-- 1 root root 531 Jun 11 00:04 packages/auto-complete-nxml-20140221.458.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:04 packages/auto-complete-nxml-20140221.458.tar

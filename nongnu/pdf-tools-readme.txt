@@ -3,51 +3,6 @@
 			   ━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. About PDF Tools
-2. Installing pdf-tools
-.. 1. Installing the epdfinfo server
-..... 1. Installing the epdfinfo server from package managers
-..... 2. Installing the epdfinfo server from source on Windows (+ Gotchas)
-..... 3. Installing the epdfinfo server from source on macOS (+ Gotchas)
-..... 4. Common installation gotchas
-..... 5. Installing optional features
-.. 2. Installing pdf-tools elisp code
-.. 3. Updating pdf-tools
-3. Features
-.. 1. View and Navigate PDFs
-..... 1. Keybindings for navigating PDF documents
-..... 2. Keybindings for manipulating display of PDF
-.. 2. Annotations
-..... 1. Keybindings for working with Annotations
-.. 3. Working with AUCTeX
-..... 1. Keybindings for working with AUCTeX
-.. 4. Miscellaneous features
-..... 1. Keybindings for miscellaneous features in PDF tools
-.. 5. Easy Help for PDF Tools features
-.. 6. Configuring PDF Tools features
-4. Known problems
-.. 1. linum-mode
-.. 2. display-line-numbers-mode
-.. 3. auto-revert
-.. 4. sublimity
-.. 5. Text selection is not transparent in PDFs OCRed with Tesseract
-5. Key-bindings in PDF Tools
-6. Tips and Tricks for Developers
-.. 1. Turn on debug mode
-.. 2. Run Emacs lisp tests locally
-.. 3. Run server compilation tests locally
-.. 4. Add a Dockerfile to automate server compilation testing
-7. FAQs
-.. 1. PDFs are not rendering well!
-.. 2. What Emacs versions does pdf-tools support?
-.. 3. I want to add support for pdf-tools on "My Fav OS". How do I do that?
-.. 4. I am on a Macbook M1 and pdf-tools installation fails with a stack-trace
-.. 5. I am a developer, making changes to the pdf-tools source code
-
-
 [https://circleci.com/gh/vedang/pdf-tools.svg?style=svg]
 [http://elpa.nongnu.org/nongnu/pdf-tools.svg]
 [http://stable.melpa.org/packages/pdf-tools-badge.svg]
@@ -161,6 +116,7 @@ manual. All the topics on the site are listed at
   • Apline Linux: `apk'
   • FreeBSD: `pkg'
   • OpenBSD: `pkg_add'
+  • NetBSD: `pkgin'
   • Arch Linux: `pacman'
   • Gentoo: `emerge'
   • CentOS: `yum'
@@ -403,6 +359,7 @@ manual. All the topics on the site are listed at
    Trim Margins (set slice to bounding box)  `s b'           
    Reset Margins                             `s r'           
    Reset Zoom                                `0'             
+   Rotate Page                               `R'             
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
@@ -656,6 +613,67 @@ manual. All the topics on the site are listed at
   server-test-unsupported'. To add support, look into the
   `server/test/docker/templates' folder (`ubuntu' files are a good
   example to refer to)
+
+
+6.5 Issue Template for Bug Reports
+──────────────────────────────────
+
+  Please use the 'Bug Report' issue template when reporting bugs. The
+  template is as follows:
+
+
+6.5.1 Describe the bug
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  A clear and concise description of what the bug is.
+
+
+6.5.2 Steps To Reproduce the behaviour:
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  1. Go to '…'
+  2. Click on '….'
+  3. Scroll down to '….'
+  4. See error
+
+
+6.5.3 What is the expected behaviour?
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  A clear and concise description of what you expected to happen.
+
+
+6.5.4 Desktop
+╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Please complete the following information:
+
+  • OS: [eg: MacOS Catalina]
+  • Emacs Version: [This should be the output of `M-x emacs-version' ]
+  • Poppler Version: [eg: output of `brew info poppler' and similarly
+    for other OSs]
+
+
+6.5.5 Your pdf-tools install
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Please complete the following information:
+  • `pdf-tools' Version: [ `M-x package-list-packages' -> Search for
+    `pdf-tools' -> Hit Enter and copy all the details that pop up in the
+    Help buffer]
+  • `pdf-tools' customization / configuration that you use:
+
+
+6.5.6 Additional context
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • If you are reporting a crash, please try and add the Backtrace /
+    Stacktrace of the crash.
+  • If you are reporting a bug, please try and attach an example PDF
+    file where I can reproduce the bug.
+  • If you can attach screenshots or recordings, that is a great help
+  • Please try reproducing the bug yourself on Vanilla Emacs before
+    reporting the problem.
 
 
 7 FAQs

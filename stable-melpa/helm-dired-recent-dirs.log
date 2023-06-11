@@ -4,4 +4,16 @@ Source:  https://github.com/zonkyy/helm-dired-recent-dirs.git
 
 Updating /mnt/store/melpa/working/helm-dired-recent-dirs/
 Checking out 3bcd125b44f5a707588ae3868777d91192351523
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-dired-recent-dirs/
+  to /tmp/helm-dired-recent-dirsdWMdFR/helm-dired-recent-dirs-20131228.1414
+    helm-dired-recent-dirs.el -> helm-dired-recent-dirs.el
+Created helm-dired-recent-dirs-20131228.1414.tar containing:
+  helm-dired-recent-dirs-20131228.1414/
+  helm-dired-recent-dirs-20131228.1414/helm-dired-recent-dirs-pkg.el
+  helm-dired-recent-dirs-20131228.1414/helm-dired-recent-dirs.el
+Built helm-dired-recent-dirs in 3.353s, finished at 2023-06-11T00:29:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jun  9 16:06 packages/helm-dired-recent-dirs-20131228.1414.el
+4.0K -rw-r--r-- 1 root root  391 Jun 11 00:29 packages/helm-dired-recent-dirs-20131228.1414.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:29 packages/helm-dired-recent-dirs-20131228.1414.tar

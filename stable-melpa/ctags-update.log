@@ -4,4 +4,16 @@ Source:  https://github.com/jixiuf/ctags-update.git
 
 Updating /mnt/store/melpa/working/ctags-update/
 Checking out 67faf248b92388442958a069263c62a345425a1b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ctags-update/
+  to /tmp/ctags-updatespstXE/ctags-update-20190609.613
+    ctags-update.el -> ctags-update.el
+Created ctags-update-20190609.613.tar containing:
+  ctags-update-20190609.613/
+  ctags-update-20190609.613/ctags-update-pkg.el
+  ctags-update-20190609.613/ctags-update.el
+Built ctags-update in 3.493s, finished at 2023-06-11T00:11:37+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:41 packages/ctags-update-20190609.613.el
+4.0K -rw-r--r-- 1 root root 465 Jun 11 00:11 packages/ctags-update-20190609.613.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:11 packages/ctags-update-20190609.613.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/abo-abo/centimacro.git
 
 Updating /mnt/store/melpa/working/centimacro/
 Checking out 0149877584b333c4f1953f0767f0cae23881b0df
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/centimacro/
+  to /tmp/centimacrojP8PeI/centimacro-20201225.1132
+    centimacro.el -> centimacro.el
+Created centimacro-20201225.1132.tar containing:
+  centimacro-20201225.1132/
+  centimacro-20201225.1132/centimacro-pkg.el
+  centimacro-20201225.1132/centimacro.el
+Built centimacro in 4.156s, finished at 2023-06-11T00:07:47+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 15:34 packages/centimacro-20201225.1132.el
+4.0K -rw-r--r-- 1 root root  442 Jun 11 00:07 packages/centimacro-20201225.1132.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:07 packages/centimacro-20201225.1132.tar

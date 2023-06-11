@@ -4,4 +4,32 @@ Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
 Checking out b54b86ad4f1253f46fd4552a73923756660c1d53
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/erlang/
+  to /tmp/erlang3NPlmp/erlang-20230608.533
+  ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
+  ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
+  ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
+  ! lib/tools/emacs/erlang-pkg.el -> erlang-pkg.el
+  ! lib/tools/emacs/erlang-skels-old.el -> erlang-skels-old.el
+  ! lib/tools/emacs/erlang-skels.el -> erlang-skels.el
+  ! lib/tools/emacs/erlang-start.el -> erlang-start.el
+  ! lib/tools/emacs/erlang-test.el -> erlang-test.el
+  ! lib/tools/emacs/erlang.el -> erlang.el
+  ! lib/tools/emacs/erldoc.el -> erldoc.el
+Created erlang-20230608.533.tar containing:
+  erlang-20230608.533/
+  erlang-20230608.533/erlang-edoc.el
+  erlang-20230608.533/erlang-eunit.el
+  erlang-20230608.533/erlang-flymake.el
+  erlang-20230608.533/erlang-pkg.el
+  erlang-20230608.533/erlang-skels-old.el
+  erlang-20230608.533/erlang-skels.el
+  erlang-20230608.533/erlang-start.el
+  erlang-20230608.533/erlang-test.el
+  erlang-20230608.533/erlang.el
+  erlang-20230608.533/erldoc.el
+Built erlang in 17.225s, finished at 2023-06-11T00:18:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  258 Jun 11 00:18 packages/erlang-20230608.533.entry
+432K -rw-r--r-- 1 root root 430K Jun 11 00:18 packages/erlang-20230608.533.tar

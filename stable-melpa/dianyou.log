@@ -4,4 +4,16 @@ Source:  https://github.com/redguardtoo/dianyou.git
 
 Updating /mnt/store/melpa/working/dianyou/
 Checking out f77d9e76be5d8022fa6ee5426144f13f38dd09f2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dianyou/
+  to /tmp/dianyouJVzNUT/dianyou-20210525.1517
+    dianyou.el -> dianyou.el
+Created dianyou-20210525.1517.tar containing:
+  dianyou-20210525.1517/
+  dianyou-20210525.1517/dianyou-pkg.el
+  dianyou-20210525.1517/dianyou.el
+Built dianyou in 3.974s, finished at 2023-06-11T00:12:58+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 15:43 packages/dianyou-20210525.1517.el
+4.0K -rw-r--r-- 1 root root 436 Jun 11 00:12 packages/dianyou-20210525.1517.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:12 packages/dianyou-20210525.1517.tar

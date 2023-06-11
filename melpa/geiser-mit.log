@@ -4,4 +4,22 @@ Source:  https://gitlab.com/emacs-geiser/mit.git
 
 Updating /mnt/store/melpa/working/geiser-mit/
 Checking out 4e90e9ae815e89f3540fb9644e6016c663ef5765
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-mit/
+  to /tmp/geiser-mitBAVW33/geiser-mit-20211204.1935
+    geiser-mit.el -> geiser-mit.el
+    src/geiser => src/geiser
+Created geiser-mit-20211204.1935.tar containing:
+  geiser-mit-20211204.1935/
+  geiser-mit-20211204.1935/geiser-mit-pkg.el
+  geiser-mit-20211204.1935/geiser-mit.el
+  geiser-mit-20211204.1935/src/
+  geiser-mit-20211204.1935/src/geiser/
+  geiser-mit-20211204.1935/src/geiser/compile.scm
+  geiser-mit-20211204.1935/src/geiser/emacs.scm
+  geiser-mit-20211204.1935/src/geiser/geiser.pkg
+  geiser-mit-20211204.1935/src/geiser/load.scm
+Built geiser-mit in 3.603s, finished at 2023-06-11T00:25:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 522 Jun 11 00:25 packages/geiser-mit-20211204.1935.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:25 packages/geiser-mit-20211204.1935.tar

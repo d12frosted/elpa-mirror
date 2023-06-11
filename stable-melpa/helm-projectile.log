@@ -4,4 +4,16 @@ Source:  https://github.com/bbatsov/helm-projectile.git
 
 Updating /mnt/store/melpa/working/helm-projectile/
 Checking out 35a2111d00c0c0c9d8743280d3f1243bb217118a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-projectile/
+  to /tmp/helm-projectileGcEQ7A/helm-projectile-20221215.613
+    helm-projectile.el -> helm-projectile.el
+Created helm-projectile-20221215.613.tar containing:
+  helm-projectile-20221215.613/
+  helm-projectile-20221215.613/helm-projectile-pkg.el
+  helm-projectile-20221215.613/helm-projectile.el
+Built helm-projectile in 4.358s, finished at 2023-06-11T00:30:32+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root 52K Jun  9 16:07 packages/helm-projectile-20221215.613.el
+4.0K -rw-r--r-- 1 root root 453 Jun 11 00:30 packages/helm-projectile-20221215.613.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:30 packages/helm-projectile-20221215.613.tar

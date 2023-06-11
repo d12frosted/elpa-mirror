@@ -4,4 +4,16 @@ Source:  https://github.com/mswift42/MetalHeart-Emacs.git
 
 Updating /mnt/store/melpa/working/metalheart-theme/
 Checking out ec98ea2c11dc1213dae8cbe1fe0cee73ca138bb2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/metalheart-theme/
+  to /tmp/metalheart-themezol1Vg/metalheart-theme-20160710.641
+    metalheart-theme.el -> metalheart-theme.el
+Created metalheart-theme-20160710.641.tar containing:
+  metalheart-theme-20160710.641/
+  metalheart-theme-20160710.641/metalheart-theme-pkg.el
+  metalheart-theme-20160710.641/metalheart-theme.el
+Built metalheart-theme in 2.887s, finished at 2023-06-10T22:32:14+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:23 packages/metalheart-theme-20160710.641.el
+4.0K -rw-r--r-- 1 root root 323 Jun 10 22:32 packages/metalheart-theme-20160710.641.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:32 packages/metalheart-theme-20160710.641.tar

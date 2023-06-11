@@ -4,4 +4,16 @@ Source:  https://github.com/scottjad/ido-hacks.git
 
 Updating /mnt/store/melpa/working/ido-hacks/
 Checking out d2153a3e8d23436ee07ecae2a106f434361a10c5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ido-hacks/
+  to /tmp/ido-hacksnK3Gif/ido-hacks-20190206.2153
+    ido-hacks.el -> ido-hacks.el
+Created ido-hacks-20190206.2153.tar containing:
+  ido-hacks-20190206.2153/
+  ido-hacks-20190206.2153/ido-hacks-pkg.el
+  ido-hacks-20190206.2153/ido-hacks.el
+Built ido-hacks in 3.320s, finished at 2023-06-10T22:24:12+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 16:11 packages/ido-hacks-20190206.2153.el
+4.0K -rw-r--r-- 1 root root 347 Jun 10 22:24 packages/ido-hacks-20190206.2153.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:24 packages/ido-hacks-20190206.2153.tar

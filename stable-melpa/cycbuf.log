@@ -4,4 +4,16 @@ Source:  https://github.com/martinp26/cycbuf.git
 
 Updating /mnt/store/melpa/working/cycbuf/
 Checking out 1079b41c3eb27d65b66d4399959bb6253f84858e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cycbuf/
+  to /tmp/cycbufPzzSw8/cycbuf-20131203.2037
+    cycbuf.el -> cycbuf.el
+Created cycbuf-20131203.2037.tar containing:
+  cycbuf-20131203.2037/
+  cycbuf-20131203.2037/cycbuf-pkg.el
+  cycbuf-20131203.2037/cycbuf.el
+Built cycbuf in 3.062s, finished at 2023-06-11T00:11:52+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 31K Jun  9 15:42 packages/cycbuf-20131203.2037.el
+4.0K -rw-r--r-- 1 root root 440 Jun 11 00:11 packages/cycbuf-20131203.2037.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:11 packages/cycbuf-20131203.2037.tar

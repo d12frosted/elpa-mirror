@@ -4,4 +4,16 @@ Source:  https://github.com/TommyX12/company-tabnine.git
 
 Updating /mnt/store/melpa/working/company-tabnine/
 Checking out 96d0c2c05450359ce90ee99a474991391988d2e6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-tabnine/
+  to /tmp/company-tabnineElVQDP/company-tabnine-20230216.817
+    company-tabnine.el -> company-tabnine.el
+Created company-tabnine-20230216.817.tar containing:
+  company-tabnine-20230216.817/
+  company-tabnine-20230216.817/company-tabnine-pkg.el
+  company-tabnine-20230216.817/company-tabnine.el
+Built company-tabnine in 3.427s, finished at 2023-06-11T00:10:17+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Jun  9 15:38 packages/company-tabnine-20230216.817.el
+4.0K -rw-r--r-- 1 root root 554 Jun 11 00:10 packages/company-tabnine-20230216.817.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:10 packages/company-tabnine-20230216.817.tar

@@ -4,4 +4,17 @@ Source:  https://github.com/seanirby/evalator-clojure.git
 
 Updating /mnt/store/melpa/working/evalator-clojure/
 Checking out caa4e0a137bdfada86593128a654e16aa617ad50
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evalator-clojure/
+  to /tmp/evalator-clojuredJi5nQ/evalator-clojure-20160208.2148
+    evalator-clojure.el -> evalator-clojure.el
+    evalator-clojure.clj -> evalator-clojure.clj
+Created evalator-clojure-20160208.2148.tar containing:
+  evalator-clojure-20160208.2148/
+  evalator-clojure-20160208.2148/evalator-clojure-pkg.el
+  evalator-clojure-20160208.2148/evalator-clojure.clj
+  evalator-clojure-20160208.2148/evalator-clojure.el
+Built evalator-clojure in 3.626s, finished at 2023-06-11T00:19:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 514 Jun 11 00:19 packages/evalator-clojure-20160208.2148.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:19 packages/evalator-clojure-20160208.2148.tar

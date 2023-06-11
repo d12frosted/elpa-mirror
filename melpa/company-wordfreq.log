@@ -4,4 +4,16 @@ Source:  https://github.com/johannes-mueller/company-wordfreq.el.git
 
 Updating /mnt/store/melpa/working/company-wordfreq/
 Checking out 83569cf346c2320ef22f6a858e3424f771c4324e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-wordfreq/
+  to /tmp/company-wordfreqjJd3TZ/company-wordfreq-20220405.2000
+    company-wordfreq.el -> company-wordfreq.el
+Created company-wordfreq-20220405.2000.tar containing:
+  company-wordfreq-20220405.2000/
+  company-wordfreq-20220405.2000/company-wordfreq-pkg.el
+  company-wordfreq-20220405.2000/company-wordfreq.el
+Built company-wordfreq in 3.546s, finished at 2023-06-11T00:10:21+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 15:38 packages/company-wordfreq-20220405.2000.el
+4.0K -rw-r--r-- 1 root root 570 Jun 11 00:10 packages/company-wordfreq-20220405.2000.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:10 packages/company-wordfreq-20220405.2000.tar

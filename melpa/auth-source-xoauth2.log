@@ -4,4 +4,16 @@ Source:  https://github.com/ccrusius/auth-source-xoauth2.git
 
 Updating /mnt/store/melpa/working/auth-source-xoauth2/
 Checking out 99a03f8ce835412943d311b2746e77fcf5a1b500
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auth-source-xoauth2/
+  to /tmp/auth-source-xoauth2gAaCMS/auth-source-xoauth2-20220804.2219
+    auth-source-xoauth2.el -> auth-source-xoauth2.el
+Created auth-source-xoauth2-20220804.2219.tar containing:
+  auth-source-xoauth2-20220804.2219/
+  auth-source-xoauth2-20220804.2219/auth-source-xoauth2-pkg.el
+  auth-source-xoauth2-20220804.2219/auth-source-xoauth2.el
+Built auth-source-xoauth2 in 4.702s, finished at 2023-06-11T00:04:07+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 15:30 packages/auth-source-xoauth2-20220804.2219.el
+4.0K -rw-r--r-- 1 root root 456 Jun 11 00:04 packages/auth-source-xoauth2-20220804.2219.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:04 packages/auth-source-xoauth2-20220804.2219.tar

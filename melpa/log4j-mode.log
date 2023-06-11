@@ -4,4 +4,16 @@ Source:  https://github.com/dykstrom/log4j-mode.git
 
 Updating /mnt/store/melpa/working/log4j-mode/
 Checking out 98fbe4d3bc5d5034c3b9901bd43268a8f1501a07
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/log4j-mode/
+  to /tmp/log4j-modeIVtlwN/log4j-mode-20230318.1521
+  ! src/log4j-mode.el -> log4j-mode.el
+Created log4j-mode-20230318.1521.tar containing:
+  log4j-mode-20230318.1521/
+  log4j-mode-20230318.1521/log4j-mode-pkg.el
+  log4j-mode-20230318.1521/log4j-mode.el
+Built log4j-mode in 2.947s, finished at 2023-06-10T22:29:54+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Jun  9 16:19 packages/log4j-mode-20230318.1521.el
+4.0K -rw-r--r-- 1 root root 393 Jun 10 22:29 packages/log4j-mode-20230318.1521.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:29 packages/log4j-mode-20230318.1521.tar

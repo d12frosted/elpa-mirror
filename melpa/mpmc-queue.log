@@ -4,4 +4,16 @@ Source:  https://github.com/smizoe/mpmc-queue.git
 
 Updating /mnt/store/melpa/working/mpmc-queue/
 Checking out df07d6bef7468edb1d73ef73b8331b94d0e5d0ca
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mpmc-queue/
+  to /tmp/mpmc-queueaHMvpd/mpmc-queue-20180303.2029
+    mpmc-queue.el -> mpmc-queue.el
+Created mpmc-queue-20180303.2029.tar containing:
+  mpmc-queue-20180303.2029/
+  mpmc-queue-20180303.2029/mpmc-queue-pkg.el
+  mpmc-queue-20180303.2029/mpmc-queue.el
+Built mpmc-queue in 2.647s, finished at 2023-06-10T22:33:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  9 16:25 packages/mpmc-queue-20180303.2029.el
+4.0K -rw-r--r-- 1 root root  497 Jun 10 22:33 packages/mpmc-queue-20180303.2029.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:33 packages/mpmc-queue-20180303.2029.tar

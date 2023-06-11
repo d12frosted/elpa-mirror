@@ -4,4 +4,16 @@ Source:  https://github.com/nickanderson/ob-cfengine3.git
 
 Updating /mnt/store/melpa/working/ob-cfengine3/
 Checking out 52aa32fdfa412860837e795d17d50dac237e56e4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-cfengine3/
+  to /tmp/ob-cfengine3iuT0Va/ob-cfengine3-20230226.1954
+    ob-cfengine3.el -> ob-cfengine3.el
+Created ob-cfengine3-20230226.1954.tar containing:
+  ob-cfengine3-20230226.1954/
+  ob-cfengine3-20230226.1954/ob-cfengine3-pkg.el
+  ob-cfengine3-20230226.1954/ob-cfengine3.el
+Built ob-cfengine3 in 3.458s, finished at 2023-06-10T22:36:09+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:28 packages/ob-cfengine3-20230226.1954.el
+4.0K -rw-r--r-- 1 root root 439 Jun 10 22:36 packages/ob-cfengine3-20230226.1954.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:36 packages/ob-cfengine3-20230226.1954.tar

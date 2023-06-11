@@ -4,4 +4,16 @@ Source:  https://github.com/atykhonov/emacs-howdoi.git
 
 Updating /mnt/store/melpa/working/howdoi/
 Checking out 5fbf7069ee160c597a328e5ce5fb32920e1ca88f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/howdoi/
+  to /tmp/howdoivhqK2U/howdoi-20150204.43
+    howdoi-pkg.el -> howdoi-pkg.el
+    howdoi.el -> howdoi.el
+Created howdoi-20150204.43.tar containing:
+  howdoi-20150204.43/
+  howdoi-20150204.43/howdoi-pkg.el
+  howdoi-20150204.43/howdoi.el
+Built howdoi in 2.798s, finished at 2023-06-10T22:23:26+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 350 Jun 10 22:23 packages/howdoi-20150204.43.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:23 packages/howdoi-20150204.43.tar

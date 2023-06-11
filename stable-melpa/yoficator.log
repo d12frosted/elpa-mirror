@@ -4,4 +4,17 @@ Source:  https://gitlab.com/alx.k/yoficator.git
 
 Updating /mnt/store/melpa/working/yoficator/
 Checking out fa914f9648515bca54b5e558ca57d2b65fa57491
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yoficator/
+  to /tmp/yoficatorHIS1MA/yoficator-20190509.1620
+    yoficator.el -> yoficator.el
+    yo.txt -> yo.txt
+Created yoficator-20190509.1620.tar containing:
+  yoficator-20190509.1620/
+  yoficator-20190509.1620/yo.txt
+  yoficator-20190509.1620/yoficator-pkg.el
+  yoficator-20190509.1620/yoficator.el
+Built yoficator in 2.514s, finished at 2023-06-10T22:59:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  444 Jun 10 22:59 packages/yoficator-20190509.1620.entry
+1.3M -rw-r--r-- 1 root root 1.3M Jun 10 22:59 packages/yoficator-20190509.1620.tar

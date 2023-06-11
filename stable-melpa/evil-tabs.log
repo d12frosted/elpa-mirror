@@ -4,4 +4,16 @@ Source:  https://github.com/krisajenkins/evil-tabs.git
 
 Updating /mnt/store/melpa/working/evil-tabs/
 Checking out 53d3314a810017b6056ab6796aef671f5ea1c063
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-tabs/
+  to /tmp/evil-tabs6hUMxT/evil-tabs-20160217.1520
+    evil-tabs.el -> evil-tabs.el
+Created evil-tabs-20160217.1520.tar containing:
+  evil-tabs-20160217.1520/
+  evil-tabs-20160217.1520/evil-tabs-pkg.el
+  evil-tabs-20160217.1520/evil-tabs.el
+Built evil-tabs in 3.685s, finished at 2023-06-11T00:20:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.8K Jun  9 15:53 packages/evil-tabs-20160217.1520.el
+4.0K -rw-r--r-- 1 root root  523 Jun 11 00:20 packages/evil-tabs-20160217.1520.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/evil-tabs-20160217.1520.tar

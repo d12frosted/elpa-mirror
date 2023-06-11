@@ -4,4 +4,16 @@ Source:  https://github.com/roman/evil-paredit.git
 
 Updating /mnt/store/melpa/working/evil-paredit/
 Checking out e058fbdcf9dbf7ad6cc77f0172d7517ef233d55f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-paredit/
+  to /tmp/evil-pareditVb3ZXG/evil-paredit-20150413.2048
+    evil-paredit.el -> evil-paredit.el
+Created evil-paredit-20150413.2048.tar containing:
+  evil-paredit-20150413.2048/
+  evil-paredit-20150413.2048/evil-paredit-pkg.el
+  evil-paredit-20150413.2048/evil-paredit.el
+Built evil-paredit in 5.273s, finished at 2023-06-11T00:20:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Jun  9 15:53 packages/evil-paredit-20150413.2048.el
+4.0K -rw-r--r-- 1 root root  476 Jun 11 00:20 packages/evil-paredit-20150413.2048.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/evil-paredit-20150413.2048.tar

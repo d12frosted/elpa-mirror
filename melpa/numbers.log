@@ -4,4 +4,16 @@ Source:  https://github.com/davep/numbers.el.git
 
 Updating /mnt/store/melpa/working/numbers/
 Checking out dd02508b788a13b7d4dbcc4923fa23134b783ab3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/numbers/
+  to /tmp/numbersTZkDkA/numbers-20170802.1134
+    numbers.el -> numbers.el
+Created numbers-20170802.1134.tar containing:
+  numbers-20170802.1134/
+  numbers-20170802.1134/numbers-pkg.el
+  numbers-20170802.1134/numbers.el
+Built numbers in 2.805s, finished at 2023-06-10T22:35:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.9K Jun  9 16:28 packages/numbers-20170802.1134.el
+4.0K -rw-r--r-- 1 root root  442 Jun 10 22:35 packages/numbers-20170802.1134.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:35 packages/numbers-20170802.1134.tar

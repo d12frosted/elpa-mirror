@@ -4,4 +4,27 @@ Source:  https://github.com/LaurenceWarne/finito.el.git
 
 Updating /mnt/store/melpa/working/finito/
 Checking out c8143ff6d32d13f809688800e761250b113d1b0f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/finito/
+  to /tmp/finitoG0g8us/finito-20230225.1326
+    finito-buffer.el -> finito-buffer.el
+    finito-core.el -> finito-core.el
+    finito-graphql.el -> finito-graphql.el
+    finito-request.el -> finito-request.el
+    finito-server.el -> finito-server.el
+    finito-view.el -> finito-view.el
+    finito.el -> finito.el
+Created finito-20230225.1326.tar containing:
+  finito-20230225.1326/
+  finito-20230225.1326/finito-buffer.el
+  finito-20230225.1326/finito-core.el
+  finito-20230225.1326/finito-graphql.el
+  finito-20230225.1326/finito-pkg.el
+  finito-20230225.1326/finito-request.el
+  finito-20230225.1326/finito-server.el
+  finito-20230225.1326/finito-view.el
+  finito-20230225.1326/finito.el
+Built finito in 3.571s, finished at 2023-06-11T00:21:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  500 Jun 11 00:21 packages/finito-20230225.1326.entry
+100K -rw-r--r-- 1 root root 100K Jun 11 00:21 packages/finito-20230225.1326.tar

@@ -4,4 +4,16 @@ Source:  https://gitlab.com/ajgrf/parchment.git
 
 Updating /mnt/store/melpa/working/parchment-theme/
 Checking out 07c9887be6e7d94a8546db625c7d62c54d2e5923
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/parchment-theme/
+  to /tmp/parchment-themeHTy26h/parchment-theme-20221206.1541
+    parchment-theme.el -> parchment-theme.el
+Created parchment-theme-20221206.1541.tar containing:
+  parchment-theme-20221206.1541/
+  parchment-theme-20221206.1541/parchment-theme-pkg.el
+  parchment-theme-20221206.1541/parchment-theme.el
+Built parchment-theme in 2.545s, finished at 2023-06-10T22:41:28+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 41K Jun  9 16:36 packages/parchment-theme-20221206.1541.el
+4.0K -rw-r--r-- 1 root root 398 Jun 10 22:41 packages/parchment-theme-20221206.1541.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:41 packages/parchment-theme-20221206.1541.tar

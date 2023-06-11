@@ -4,4 +4,16 @@ Source:  https://github.com/jschaf/emacs-lorem-ipsum.git
 
 Updating /mnt/store/melpa/working/lorem-ipsum/
 Checking out 4e87a899868e908a7a9e1812831d76c8d072f885
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lorem-ipsum/
+  to /tmp/lorem-ipsumrPzJ1L/lorem-ipsum-20221214.1857
+    lorem-ipsum.el -> lorem-ipsum.el
+Created lorem-ipsum-20221214.1857.tar containing:
+  lorem-ipsum-20221214.1857/
+  lorem-ipsum-20221214.1857/lorem-ipsum-pkg.el
+  lorem-ipsum-20221214.1857/lorem-ipsum.el
+Built lorem-ipsum in 4.185s, finished at 2023-06-10T22:30:08+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jun  9 16:19 packages/lorem-ipsum-20221214.1857.el
+4.0K -rw-r--r-- 1 root root  459 Jun 10 22:30 packages/lorem-ipsum-20221214.1857.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:30 packages/lorem-ipsum-20221214.1857.tar

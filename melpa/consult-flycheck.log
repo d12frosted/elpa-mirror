@@ -4,4 +4,16 @@ Source:  https://github.com/minad/consult-flycheck.git
 
 Updating /mnt/store/melpa/working/consult-flycheck/
 Checking out fda630411ad9219f45136310f671b44eaefafcab
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-flycheck/
+  to /tmp/consult-flycheck3AS8HA/consult-flycheck-20230411.445
+    consult-flycheck.el -> consult-flycheck.el
+Created consult-flycheck-20230411.445.tar containing:
+  consult-flycheck-20230411.445/
+  consult-flycheck-20230411.445/consult-flycheck-pkg.el
+  consult-flycheck-20230411.445/consult-flycheck.el
+Built consult-flycheck in 3.355s, finished at 2023-06-11T00:10:36+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Jun  9 15:39 packages/consult-flycheck-20230411.445.el
+4.0K -rw-r--r-- 1 root root  550 Jun 11 00:10 packages/consult-flycheck-20230411.445.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:10 packages/consult-flycheck-20230411.445.tar

@@ -4,4 +4,16 @@ Source:  https://gitlab.com/wavexx/mu4e-query-fragments.el.git
 
 Updating /mnt/store/melpa/working/mu4e-query-fragments/
 Checking out 8d93ede3772353e2dbc307de03e06e37ea6a0b6c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mu4e-query-fragments/
+  to /tmp/mu4e-query-fragmentsNFG1JK/mu4e-query-fragments-20211030.2307
+    mu4e-query-fragments.el -> mu4e-query-fragments.el
+Created mu4e-query-fragments-20211030.2307.tar containing:
+  mu4e-query-fragments-20211030.2307/
+  mu4e-query-fragments-20211030.2307/mu4e-query-fragments-pkg.el
+  mu4e-query-fragments-20211030.2307/mu4e-query-fragments.el
+Built mu4e-query-fragments in 4.142s, finished at 2023-06-10T22:34:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 16:25 packages/mu4e-query-fragments-20211030.2307.el
+4.0K -rw-r--r-- 1 root root  469 Jun 10 22:34 packages/mu4e-query-fragments-20211030.2307.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:34 packages/mu4e-query-fragments-20211030.2307.tar

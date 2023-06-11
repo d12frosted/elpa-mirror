@@ -4,4 +4,31 @@ Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
 Checking out a72903cf2e7234a745b5ec4aac12a1e3dd85ea09
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/epkg/
+  to /tmp/epkgHlbgvG/epkg-20230513.2035
+  ! lisp/epkg-desc.el -> epkg-desc.el
+  ! lisp/epkg-elpa.el -> epkg-elpa.el
+  ! lisp/epkg-list.el -> epkg-list.el
+  ! lisp/epkg-org.el -> epkg-org.el
+  ! lisp/epkg-schemata.el -> epkg-schemata.el
+  ! lisp/epkg-utils.el -> epkg-utils.el
+  ! lisp/epkg.el -> epkg.el
+  ! docs/epkg.texi -> epkg.texi
+Generating /tmp/epkgHlbgvG/epkg-20230513.2035/epkg.info
+Created epkg-20230513.2035.tar containing:
+  epkg-20230513.2035/
+  epkg-20230513.2035/dir
+  epkg-20230513.2035/epkg-desc.el
+  epkg-20230513.2035/epkg-elpa.el
+  epkg-20230513.2035/epkg-list.el
+  epkg-20230513.2035/epkg-org.el
+  epkg-20230513.2035/epkg-pkg.el
+  epkg-20230513.2035/epkg-schemata.el
+  epkg-20230513.2035/epkg-utils.el
+  epkg-20230513.2035/epkg.el
+  epkg-20230513.2035/epkg.info
+Built epkg in 7.109s, finished at 2023-06-11T00:18:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  506 Jun 11 00:18 packages/epkg-20230513.2035.entry
+112K -rw-r--r-- 1 root root 110K Jun 11 00:18 packages/epkg-20230513.2035.tar

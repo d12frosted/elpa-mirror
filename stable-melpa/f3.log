@@ -4,4 +4,17 @@ Source:  https://github.com/cosmicexplorer/f3.git
 
 Updating /mnt/store/melpa/working/f3/
 Checking out 000009ce4adf7a57eae80512f29c4ec2a1391ce5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/f3/
+  to /tmp/f38Tr8s8/f3-20180130.1158
+    f3.el -> f3.el
+    update-commentary.el -> update-commentary.el
+Created f3-20180130.1158.tar containing:
+  f3-20180130.1158/
+  f3-20180130.1158/f3-pkg.el
+  f3-20180130.1158/f3.el
+  f3-20180130.1158/update-commentary.el
+Built f3 in 3.779s, finished at 2023-06-11T00:21:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 462 Jun 11 00:21 packages/f3-20180130.1158.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:21 packages/f3-20180130.1158.tar

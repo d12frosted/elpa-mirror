@@ -4,4 +4,26 @@ Source:  https://github.com/realgud/realgud-trepan-ni.git
 
 Updating /mnt/store/melpa/working/realgud-trepan-ni/
 Checking out 0ec088ea343835e24ae73da09bea96bfb02a3130
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud-trepan-ni/
+  to /tmp/realgud-trepan-niuSxjhg/realgud-trepan-ni-20210513.2237
+    cask-install.el -> cask-install.el
+    realgud-trepan-ni.el -> realgud-trepan-ni.el
+    trepan-ni/core.el -> trepan-ni/core.el
+    trepan-ni/init.el -> trepan-ni/init.el
+    trepan-ni/track-mode.el -> trepan-ni/track-mode.el
+    trepan-ni/trepan-ni.el -> trepan-ni/trepan-ni.el
+Created realgud-trepan-ni-20210513.2237.tar containing:
+  realgud-trepan-ni-20210513.2237/
+  realgud-trepan-ni-20210513.2237/cask-install.el
+  realgud-trepan-ni-20210513.2237/realgud-trepan-ni-pkg.el
+  realgud-trepan-ni-20210513.2237/realgud-trepan-ni.el
+  realgud-trepan-ni-20210513.2237/trepan-ni/
+  realgud-trepan-ni-20210513.2237/trepan-ni/core.el
+  realgud-trepan-ni-20210513.2237/trepan-ni/init.el
+  realgud-trepan-ni-20210513.2237/trepan-ni/track-mode.el
+  realgud-trepan-ni-20210513.2237/trepan-ni/trepan-ni.el
+Built realgud-trepan-ni in 4.112s, finished at 2023-06-10T22:46:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 502 Jun 10 22:46 packages/realgud-trepan-ni-20210513.2237.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:46 packages/realgud-trepan-ni-20210513.2237.tar

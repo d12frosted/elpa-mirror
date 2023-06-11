@@ -4,4 +4,16 @@ Source:  https://github.com/kuanyui/hexo.el.git
 
 Updating /mnt/store/melpa/working/hexo/
 Checking out 709c069ec0f9ffd8bc2f8fff18a66d80bc205f6d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hexo/
+  to /tmp/hexoewVdsW/hexo-20221130.1642
+    hexo.el -> hexo.el
+Created hexo-20221130.1642.tar containing:
+  hexo-20221130.1642/
+  hexo-20221130.1642/hexo-pkg.el
+  hexo-20221130.1642/hexo.el
+Built hexo in 2.776s, finished at 2023-06-10T22:22:40+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 53K Jun  9 16:09 packages/hexo-20221130.1642.el
+4.0K -rw-r--r-- 1 root root 434 Jun 10 22:22 packages/hexo-20221130.1642.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:22 packages/hexo-20221130.1642.tar

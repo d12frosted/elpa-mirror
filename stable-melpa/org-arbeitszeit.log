@@ -4,4 +4,16 @@ Source:  https://github.com/bkaestner/org-arbeitszeit.git
 
 Updating /mnt/store/melpa/working/org-arbeitszeit/
 Checking out 2598fb45a182d22e6d7579d55139db80e8af0b02
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-arbeitszeit/
+  to /tmp/org-arbeitszeitASDWsa/org-arbeitszeit-20220816.1447
+    org-arbeitszeit.el -> org-arbeitszeit.el
+Created org-arbeitszeit-20220816.1447.tar containing:
+  org-arbeitszeit-20220816.1447/
+  org-arbeitszeit-20220816.1447/org-arbeitszeit-pkg.el
+  org-arbeitszeit-20220816.1447/org-arbeitszeit.el
+Built org-arbeitszeit in 3.732s, finished at 2023-06-10T22:37:27+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jun  9 16:31 packages/org-arbeitszeit-20220816.1447.el
+4.0K -rw-r--r-- 1 root root  507 Jun 10 22:37 packages/org-arbeitszeit-20220816.1447.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:37 packages/org-arbeitszeit-20220816.1447.tar

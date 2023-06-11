@@ -4,4 +4,19 @@ Source:  https://github.com/jaalto/project-emacs--folding-mode.git
 
 Updating /mnt/store/melpa/working/folding/
 Checking out 1ce338b991c69358a607c37bfb16ffb7de7e91c4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/folding/
+  to /tmp/folding72syi4/folding-20220110.1718
+    folding.el -> folding.el
+    folding.texi -> folding.texi
+Generating /tmp/folding72syi4/folding-20220110.1718/folding.info
+Created folding-20220110.1718.tar containing:
+  folding-20220110.1718/
+  folding-20220110.1718/dir
+  folding-20220110.1718/folding-pkg.el
+  folding-20220110.1718/folding.el
+  folding-20220110.1718/folding.info
+Built folding in 5.902s, finished at 2023-06-11T00:24:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  293 Jun 11 00:24 packages/folding-20220110.1718.entry
+240K -rw-r--r-- 1 root root 240K Jun 11 00:24 packages/folding-20220110.1718.tar

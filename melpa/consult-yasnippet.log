@@ -4,4 +4,16 @@ Source:  https://github.com/mohkale/consult-yasnippet.git
 
 Updating /mnt/store/melpa/working/consult-yasnippet/
 Checking out ae0450889484f23dc4ec37518852a2c61b89f184
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-yasnippet/
+  to /tmp/consult-yasnippetsq4q1c/consult-yasnippet-20220724.1338
+    consult-yasnippet.el -> consult-yasnippet.el
+Created consult-yasnippet-20220724.1338.tar containing:
+  consult-yasnippet-20220724.1338/
+  consult-yasnippet-20220724.1338/consult-yasnippet-pkg.el
+  consult-yasnippet-20220724.1338/consult-yasnippet.el
+Built consult-yasnippet in 3.336s, finished at 2023-06-11T00:10:45+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Jun  9 15:39 packages/consult-yasnippet-20220724.1338.el
+4.0K -rw-r--r-- 1 root root  520 Jun 11 00:10 packages/consult-yasnippet-20220724.1338.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:10 packages/consult-yasnippet-20220724.1338.tar

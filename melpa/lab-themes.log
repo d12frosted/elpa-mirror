@@ -4,4 +4,19 @@ Source:  https://github.com/MetroWind/lab-theme.git
 
 Updating /mnt/store/melpa/working/lab-themes/
 Checking out 9d7deb9635959d3a50ccb1082eb1207275f4b3e8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lab-themes/
+  to /tmp/lab-themesF5wGBq/lab-themes-20200815.2104
+    lab-dark-theme.el -> lab-dark-theme.el
+    lab-light-theme.el -> lab-light-theme.el
+    lab-themes.el -> lab-themes.el
+Created lab-themes-20200815.2104.tar containing:
+  lab-themes-20200815.2104/
+  lab-themes-20200815.2104/lab-dark-theme.el
+  lab-themes-20200815.2104/lab-light-theme.el
+  lab-themes-20200815.2104/lab-themes-pkg.el
+  lab-themes-20200815.2104/lab-themes.el
+Built lab-themes in 2.712s, finished at 2023-06-10T22:28:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 480 Jun 10 22:28 packages/lab-themes-20200815.2104.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:28 packages/lab-themes-20200815.2104.tar

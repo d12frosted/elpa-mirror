@@ -4,4 +4,16 @@ Source:  https://github.com/chumpage/chumpy-windows.git
 
 Updating /mnt/store/melpa/working/window-jump/
 Checking out 6bdb51e9a346907d60a9625f6180bddd06be6674
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/window-jump/
+  to /tmp/window-jump0Azdkd/window-jump-20170809.2208
+    window-jump.el -> window-jump.el
+Created window-jump-20170809.2208.tar containing:
+  window-jump-20170809.2208/
+  window-jump-20170809.2208/window-jump-pkg.el
+  window-jump-20170809.2208/window-jump.el
+Built window-jump in 2.945s, finished at 2023-06-10T22:58:20+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.9K Jun  9 17:00 packages/window-jump-20170809.2208.el
+4.0K -rw-r--r-- 1 root root  392 Jun 10 22:58 packages/window-jump-20170809.2208.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:58 packages/window-jump-20170809.2208.tar

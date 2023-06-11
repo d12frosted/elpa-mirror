@@ -4,4 +4,16 @@ Source:  https://gitlab.com/jessieh/adwaita-dark-theme.git
 
 Updating /mnt/store/melpa/working/adwaita-dark-theme/
 Checking out 4792fed63a44a2337832644db909c1663100605e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/adwaita-dark-theme/
+  to /tmp/adwaita-dark-themedmHn4h/adwaita-dark-theme-20230215.2027
+    adwaita-dark-theme.el -> adwaita-dark-theme.el
+Created adwaita-dark-theme-20230215.2027.tar containing:
+  adwaita-dark-theme-20230215.2027/
+  adwaita-dark-theme-20230215.2027/adwaita-dark-theme-pkg.el
+  adwaita-dark-theme-20230215.2027/adwaita-dark-theme.el
+Built adwaita-dark-theme in 5.132s, finished at 2023-06-11T00:02:36+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 57K Jun  9 15:28 packages/adwaita-dark-theme-20230215.2027.el
+4.0K -rw-r--r-- 1 root root 493 Jun 11 00:02 packages/adwaita-dark-theme-20230215.2027.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:02 packages/adwaita-dark-theme-20230215.2027.tar

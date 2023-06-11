@@ -4,4 +4,16 @@ Source:  https://github.com/DarwinAwardWinner/ido-complete-space-or-hyphen.git
 
 Updating /mnt/store/melpa/working/ido-complete-space-or-hyphen/
 Checking out d1244243e042b8d5b6b991db752a17a44ea169bc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ido-complete-space-or-hyphen/
+  to /tmp/ido-complete-space-or-hyphenIK8X1p/ido-complete-space-or-hyphen-20210206.1505
+    ido-complete-space-or-hyphen.el -> ido-complete-space-or-hyphen.el
+Created ido-complete-space-or-hyphen-20210206.1505.tar containing:
+  ido-complete-space-or-hyphen-20210206.1505/
+  ido-complete-space-or-hyphen-20210206.1505/ido-complete-space-or-hyphen-pkg.el
+  ido-complete-space-or-hyphen-20210206.1505/ido-complete-space-or-hyphen.el
+Built ido-complete-space-or-hyphen in 3.644s, finished at 2023-06-10T22:24:06+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K Jun  9 16:11 packages/ido-complete-space-or-hyphen-20210206.1505.el
+4.0K -rw-r--r-- 1 root root  553 Jun 10 22:24 packages/ido-complete-space-or-hyphen-20210206.1505.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:24 packages/ido-complete-space-or-hyphen-20210206.1505.tar

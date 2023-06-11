@@ -4,4 +4,16 @@ Source:  https://github.com/alexeyr/company-auctex.git
 
 Updating /mnt/store/melpa/working/company-auctex/
 Checking out 9400a2ec7459dde8cbf1a5d50dfee4e300ed7e18
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-auctex/
+  to /tmp/company-auctex4jzHPh/company-auctex-20200529.1835
+    company-auctex.el -> company-auctex.el
+Created company-auctex-20200529.1835.tar containing:
+  company-auctex-20200529.1835/
+  company-auctex-20200529.1835/company-auctex-pkg.el
+  company-auctex-20200529.1835/company-auctex.el
+Built company-auctex in 2.453s, finished at 2023-06-11T00:09:38+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 15:37 packages/company-auctex-20200529.1835.el
+4.0K -rw-r--r-- 1 root root 619 Jun 11 00:09 packages/company-auctex-20200529.1835.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:09 packages/company-auctex-20200529.1835.tar

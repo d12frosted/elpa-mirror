@@ -4,4 +4,23 @@ Source:  https://github.com/joaotavora/sly-named-readtables.git
 
 Updating /mnt/store/melpa/working/sly-named-readtables/
 Checking out a5a42674ccffa97ccd5e4e9742beaf3ea719931f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sly-named-readtables/
+  to /tmp/sly-named-readtablesP1cXbL/sly-named-readtables-20191013.2138
+    sly-named-readtables-autoloads.el -> sly-named-readtables-autoloads.el
+    sly-named-readtables.el -> sly-named-readtables.el
+    example.lisp -> example.lisp
+    slynk-named-readtables.lisp -> slynk-named-readtables.lisp
+    slynk-named-readtables.asd -> slynk-named-readtables.asd
+Created sly-named-readtables-20191013.2138.tar containing:
+  sly-named-readtables-20191013.2138/
+  sly-named-readtables-20191013.2138/example.lisp
+  sly-named-readtables-20191013.2138/sly-named-readtables-autoloads.el
+  sly-named-readtables-20191013.2138/sly-named-readtables-pkg.el
+  sly-named-readtables-20191013.2138/sly-named-readtables.el
+  sly-named-readtables-20191013.2138/slynk-named-readtables.asd
+  sly-named-readtables-20191013.2138/slynk-named-readtables.lisp
+Built sly-named-readtables in 4.566s, finished at 2023-06-10T22:50:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 503 Jun 10 22:50 packages/sly-named-readtables-20191013.2138.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:50 packages/sly-named-readtables-20191013.2138.tar

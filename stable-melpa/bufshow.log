@@ -4,4 +4,16 @@ Source:  https://github.com/pjones/bufshow.git
 
 Updating /mnt/store/melpa/working/bufshow/
 Checking out 42d7fb74c3f914e127d5447c63d209bf19f5d517
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bufshow/
+  to /tmp/bufshowXeVxzn/bufshow-20130726.1838
+  ! lisp/bufshow.el -> bufshow.el
+Created bufshow-20130726.1838.tar containing:
+  bufshow-20130726.1838/
+  bufshow-20130726.1838/bufshow-pkg.el
+  bufshow-20130726.1838/bufshow.el
+Built bufshow in 3.383s, finished at 2023-06-11T00:06:34+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 15:33 packages/bufshow-20130726.1838.el
+4.0K -rw-r--r-- 1 root root 384 Jun 11 00:06 packages/bufshow-20130726.1838.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:06 packages/bufshow-20130726.1838.tar

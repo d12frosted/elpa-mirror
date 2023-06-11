@@ -4,4 +4,16 @@ Source:  https://github.com/agda/agda.git
 
 Updating /mnt/store/melpa/working/eri/
 Checking out aa5e3a127bf17a8c80d947f3c286758a36dadc36
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eri/
+  to /tmp/eriht33UF/eri-20200914.644
+  ! src/data/emacs-mode/eri.el -> eri.el
+Created eri-20200914.644.tar containing:
+  eri-20200914.644/
+  eri-20200914.644/eri-pkg.el
+  eri-20200914.644/eri.el
+Built eri in 8.358s, finished at 2023-06-11T00:18:38+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.1K Jun  9 15:51 packages/eri-20200914.644.el
+4.0K -rw-r--r-- 1 root root  192 Jun 11 00:18 packages/eri-20200914.644.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:18 packages/eri-20200914.644.tar

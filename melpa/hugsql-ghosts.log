@@ -4,4 +4,16 @@ Source:  https://github.com/rkaercher/hugsql-ghosts.git
 
 Updating /mnt/store/melpa/working/hugsql-ghosts/
 Checking out f9ab314b6a10140041233e65a23e924dcab9a7a3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hugsql-ghosts/
+  to /tmp/hugsql-ghostsByfTRi/hugsql-ghosts-20211124.1646
+    hugsql-ghosts.el -> hugsql-ghosts.el
+Created hugsql-ghosts-20211124.1646.tar containing:
+  hugsql-ghosts-20211124.1646/
+  hugsql-ghosts-20211124.1646/hugsql-ghosts-pkg.el
+  hugsql-ghosts-20211124.1646/hugsql-ghosts.el
+Built hugsql-ghosts in 2.919s, finished at 2023-06-10T22:23:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jun  9 16:10 packages/hugsql-ghosts-20211124.1646.el
+4.0K -rw-r--r-- 1 root root  496 Jun 10 22:23 packages/hugsql-ghosts-20211124.1646.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:23 packages/hugsql-ghosts-20211124.1646.tar

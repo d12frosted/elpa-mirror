@@ -4,4 +4,16 @@ Source:  https://github.com/hlissner/emacs-company-dict.git
 
 Updating /mnt/store/melpa/working/company-dict/
 Checking out cd7b8394f6014c57897f65d335d6b2bd65dab1f4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-dict/
+  to /tmp/company-dict7EkxBR/company-dict-20190302.5
+    company-dict.el -> company-dict.el
+Created company-dict-20190302.5.tar containing:
+  company-dict-20190302.5/
+  company-dict-20190302.5/company-dict-pkg.el
+  company-dict-20190302.5/company-dict.el
+Built company-dict in 3.067s, finished at 2023-06-11T00:09:45+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jun  9 15:37 packages/company-dict-20190302.5.el
+4.0K -rw-r--r-- 1 root root  538 Jun 11 00:09 packages/company-dict-20190302.5.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:09 packages/company-dict-20190302.5.tar

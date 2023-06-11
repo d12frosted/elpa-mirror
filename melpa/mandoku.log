@@ -4,4 +4,39 @@ Source:  https://github.com/mandoku/mandoku.git
 
 Updating /mnt/store/melpa/working/mandoku/
 Checking out e3b7678762e9824861b1ce775a94b05b096164f5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mandoku/
+  to /tmp/mandokuS1VyiO/mandoku-20180403.1106
+  ! lisp/mandoku-annot.el -> mandoku-annot.el
+  ! lisp/mandoku-cbeta.el -> mandoku-cbeta.el
+  ! lisp/mandoku-dict.el -> mandoku-dict.el
+  ! lisp/mandoku-github.el -> mandoku-github.el
+  ! lisp/mandoku-images.el -> mandoku-images.el
+  ! lisp/mandoku-init.el -> mandoku-init.el
+  ! lisp/mandoku-link.el -> mandoku-link.el
+  ! lisp/mandoku-remote.el -> mandoku-remote.el
+  ! lisp/mandoku-trans.el -> mandoku-trans.el
+  ! lisp/mandoku-two-columns.el -> mandoku-two-columns.el
+  ! lisp/mandoku.el -> mandoku.el
+  ! lisp/w32-registry.el -> w32-registry.el
+  ! lisp/mandoku-settings.org -> mandoku-settings.org
+Created mandoku-20180403.1106.tar containing:
+  mandoku-20180403.1106/
+  mandoku-20180403.1106/mandoku-annot.el
+  mandoku-20180403.1106/mandoku-cbeta.el
+  mandoku-20180403.1106/mandoku-dict.el
+  mandoku-20180403.1106/mandoku-github.el
+  mandoku-20180403.1106/mandoku-images.el
+  mandoku-20180403.1106/mandoku-init.el
+  mandoku-20180403.1106/mandoku-link.el
+  mandoku-20180403.1106/mandoku-pkg.el
+  mandoku-20180403.1106/mandoku-remote.el
+  mandoku-20180403.1106/mandoku-settings.org
+  mandoku-20180403.1106/mandoku-trans.el
+  mandoku-20180403.1106/mandoku-two-columns.el
+  mandoku-20180403.1106/mandoku.el
+  mandoku-20180403.1106/w32-registry.el
+Built mandoku in 2.952s, finished at 2023-06-10T22:31:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  481 Jun 10 22:31 packages/mandoku-20180403.1106.entry
+880K -rw-r--r-- 1 root root 880K Jun 10 22:31 packages/mandoku-20180403.1106.tar

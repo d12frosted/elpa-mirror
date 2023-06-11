@@ -4,4 +4,16 @@ Source:  https://github.com/leoc/ruby-interpolation.el.git
 
 Updating /mnt/store/melpa/working/ruby-interpolation/
 Checking out 1978e337601222cedf00e117bf4b5cac15d1f203
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ruby-interpolation/
+  to /tmp/ruby-interpolationbYc7Uj/ruby-interpolation-20131112.1652
+    ruby-interpolation.el -> ruby-interpolation.el
+Created ruby-interpolation-20131112.1652.tar containing:
+  ruby-interpolation-20131112.1652/
+  ruby-interpolation-20131112.1652/ruby-interpolation-pkg.el
+  ruby-interpolation-20131112.1652/ruby-interpolation.el
+Built ruby-interpolation in 2.561s, finished at 2023-06-10T22:47:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jun  9 16:45 packages/ruby-interpolation-20131112.1652.el
+4.0K -rw-r--r-- 1 root root  459 Jun 10 22:47 packages/ruby-interpolation-20131112.1652.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:47 packages/ruby-interpolation-20131112.1652.tar

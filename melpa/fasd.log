@@ -4,4 +4,16 @@ Source:  https://framagit.org/steckerhalter/emacs-fasd.git
 
 Updating /mnt/store/melpa/working/fasd/
 Checking out c1d92553f33ebb018135c698db1a6d7f86731a26
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fasd/
+  to /tmp/fasdhU6ts4/fasd-20210104.738
+    fasd.el -> fasd.el
+Created fasd-20210104.738.tar containing:
+  fasd-20210104.738/
+  fasd-20210104.738/fasd-pkg.el
+  fasd-20210104.738/fasd.el
+Built fasd in 4.468s, finished at 2023-06-11T00:21:25+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  9 15:54 packages/fasd-20210104.738.el
+4.0K -rw-r--r-- 1 root root  380 Jun 11 00:21 packages/fasd-20210104.738.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:21 packages/fasd-20210104.738.tar

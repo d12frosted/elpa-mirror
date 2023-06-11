@@ -4,4 +4,17 @@ Source:  https://github.com/neeasade/ct.el.git
 
 Updating /mnt/store/melpa/working/ct/
 Checking out 02f209fe6c8ad85c832d8f80193255d0bf78e218
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ct/
+  to /tmp/ct9htjL3/ct-20230519.1319
+    ct-doc.el -> ct-doc.el
+    ct.el -> ct.el
+Created ct-20230519.1319.tar containing:
+  ct-20230519.1319/
+  ct-20230519.1319/ct-doc.el
+  ct-20230519.1319/ct-pkg.el
+  ct-20230519.1319/ct.el
+Built ct in 3.291s, finished at 2023-06-11T00:11:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 466 Jun 11 00:11 packages/ct-20230519.1319.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:11 packages/ct-20230519.1319.tar

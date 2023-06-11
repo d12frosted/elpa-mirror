@@ -4,4 +4,16 @@ Source:  https://github.com/davep/obfusurl.el.git
 
 Updating /mnt/store/melpa/working/obfusurl/
 Checking out 7a5a41905000ce2ec1fd72509a5567e5fd9f47e5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/obfusurl/
+  to /tmp/obfusurlt4nN2X/obfusurl-20170809.1524
+    obfusurl.el -> obfusurl.el
+Created obfusurl-20170809.1524.tar containing:
+  obfusurl-20170809.1524/
+  obfusurl-20170809.1524/obfusurl-pkg.el
+  obfusurl-20170809.1524/obfusurl.el
+Built obfusurl in 2.776s, finished at 2023-06-10T22:36:47+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Jun  9 16:30 packages/obfusurl-20170809.1524.el
+4.0K -rw-r--r-- 1 root root  444 Jun 10 22:36 packages/obfusurl-20170809.1524.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:36 packages/obfusurl-20170809.1524.tar

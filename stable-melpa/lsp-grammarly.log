@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-grammarly/lsp-grammarly.git
 
 Updating /mnt/store/melpa/working/lsp-grammarly/
 Checking out 6d111728f9d062d723bb88bd462b6eafe5cafe3f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-grammarly/
+  to /tmp/lsp-grammarlyEXw2bE/lsp-grammarly-20221231.1655
+    lsp-grammarly.el -> lsp-grammarly.el
+Created lsp-grammarly-20221231.1655.tar containing:
+  lsp-grammarly-20221231.1655/
+  lsp-grammarly-20221231.1655/lsp-grammarly-pkg.el
+  lsp-grammarly-20221231.1655/lsp-grammarly.el
+Built lsp-grammarly in 3.437s, finished at 2023-06-10T22:30:15+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  9 16:19 packages/lsp-grammarly-20221231.1655.el
+4.0K -rw-r--r-- 1 root root 581 Jun 10 22:30 packages/lsp-grammarly-20221231.1655.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:30 packages/lsp-grammarly-20221231.1655.tar

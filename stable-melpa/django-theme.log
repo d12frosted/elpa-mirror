@@ -4,4 +4,16 @@ Source:  https://github.com/andrzejsliwa/django-theme.el.git
 
 Updating /mnt/store/melpa/working/django-theme/
 Checking out 86c8142b3eb1addd94a43aa6f1d98dab06401af0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/django-theme/
+  to /tmp/django-themeYoASVT/django-theme-20131022.902
+    django-theme.el -> django-theme.el
+Created django-theme-20131022.902.tar containing:
+  django-theme-20131022.902/
+  django-theme-20131022.902/django-theme-pkg.el
+  django-theme-20131022.902/django-theme.el
+Built django-theme in 3.125s, finished at 2023-06-11T00:14:35+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  9 15:45 packages/django-theme-20131022.902.el
+4.0K -rw-r--r-- 1 root root  308 Jun 11 00:14 packages/django-theme-20131022.902.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:14 packages/django-theme-20131022.902.tar

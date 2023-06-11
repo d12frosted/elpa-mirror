@@ -4,4 +4,16 @@ Source:  https://github.com/a13/iqa.el.git
 
 Updating /mnt/store/melpa/working/iqa/
 Checking out 03f90a2f68b2f05d8a2509bf3612a337d3d5b67f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/iqa/
+  to /tmp/iqayqV17j/iqa-20200520.1137
+    iqa.el -> iqa.el
+Created iqa-20200520.1137.tar containing:
+  iqa-20200520.1137/
+  iqa-20200520.1137/iqa-pkg.el
+  iqa-20200520.1137/iqa.el
+Built iqa in 2.564s, finished at 2023-06-10T22:25:17+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  9 16:13 packages/iqa-20200520.1137.el
+4.0K -rw-r--r-- 1 root root  216 Jun 10 22:25 packages/iqa-20200520.1137.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/iqa-20200520.1137.tar

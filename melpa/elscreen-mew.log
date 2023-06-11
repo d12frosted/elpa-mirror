@@ -4,4 +4,16 @@ Source:  https://github.com/masutaka/elscreen-mew.git
 
 Updating /mnt/store/melpa/working/elscreen-mew/
 Checking out 89871fad690ae161dc076e16ef481b1965612077
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elscreen-mew/
+  to /tmp/elscreen-mew3dz1hj/elscreen-mew-20160504.1835
+    elscreen-mew.el -> elscreen-mew.el
+Created elscreen-mew-20160504.1835.tar containing:
+  elscreen-mew-20160504.1835/
+  elscreen-mew-20160504.1835/elscreen-mew-pkg.el
+  elscreen-mew-20160504.1835/elscreen-mew.el
+Built elscreen-mew in 3.015s, finished at 2023-06-11T00:17:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Jun  9 15:50 packages/elscreen-mew-20160504.1835.el
+4.0K -rw-r--r-- 1 root root  426 Jun 11 00:17 packages/elscreen-mew-20160504.1835.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:17 packages/elscreen-mew-20160504.1835.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/lassik/emacs-live-preview.git
 
 Updating /mnt/store/melpa/working/live-preview/
 Checking out 603a4a1759fbec92e7a1cabc249517c78e59ce7e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/live-preview/
+  to /tmp/live-previewoplibR/live-preview-20201010.1948
+    live-preview.el -> live-preview.el
+Created live-preview-20201010.1948.tar containing:
+  live-preview-20201010.1948/
+  live-preview-20201010.1948/live-preview-pkg.el
+  live-preview-20201010.1948/live-preview.el
+Built live-preview in 2.914s, finished at 2023-06-10T22:29:40+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jun  9 16:19 packages/live-preview-20201010.1948.el
+4.0K -rw-r--r-- 1 root root  449 Jun 10 22:29 packages/live-preview-20201010.1948.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:29 packages/live-preview-20201010.1948.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/ROCKTAKEY/ivy-migemo.git
 
 Updating /mnt/store/melpa/working/ivy-migemo/
 Checking out 6022b24e72f073a7b5599f2dea611da3a1282378
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-migemo/
+  to /tmp/ivy-migemobYb6VI/ivy-migemo-20230121.1934
+    ivy-migemo.el -> ivy-migemo.el
+Created ivy-migemo-20230121.1934.tar containing:
+  ivy-migemo-20230121.1934/
+  ivy-migemo-20230121.1934/ivy-migemo-pkg.el
+  ivy-migemo-20230121.1934/ivy-migemo.el
+Built ivy-migemo in 3.838s, finished at 2023-06-10T22:25:44+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:14 packages/ivy-migemo-20230121.1934.el
+4.0K -rw-r--r-- 1 root root 532 Jun 10 22:25 packages/ivy-migemo-20230121.1934.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:25 packages/ivy-migemo-20230121.1934.tar

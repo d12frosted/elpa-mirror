@@ -4,4 +4,16 @@ Source:  https://github.com/myrkr/dictionary-el.git
 
 Updating /mnt/store/melpa/working/link/
 Checking out c9cad101100975e88873636bfd426b7a19304ebd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/link/
+  to /tmp/linkjJnU0b/link-20191111.446
+    link.el -> link.el
+Created link-20191111.446.tar containing:
+  link-20191111.446/
+  link-20191111.446/link-pkg.el
+  link-20191111.446/link.el
+Built link in 3.149s, finished at 2023-06-10T22:29:21+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  9 16:18 packages/link-20191111.446.el
+4.0K -rw-r--r-- 1 root root  378 Jun 10 22:29 packages/link-20191111.446.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:29 packages/link-20191111.446.tar

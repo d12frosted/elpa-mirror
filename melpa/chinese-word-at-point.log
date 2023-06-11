@@ -4,4 +4,16 @@ Source:  https://github.com/xuchunyang/chinese-word-at-point.el.git
 
 Updating /mnt/store/melpa/working/chinese-word-at-point/
 Checking out 8223d7439e005555b86995a005b225ae042f0538
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chinese-word-at-point/
+  to /tmp/chinese-word-at-pointbqfroi/chinese-word-at-point-20170811.941
+    chinese-word-at-point.el -> chinese-word-at-point.el
+Created chinese-word-at-point-20170811.941.tar containing:
+  chinese-word-at-point-20170811.941/
+  chinese-word-at-point-20170811.941/chinese-word-at-point-pkg.el
+  chinese-word-at-point-20170811.941/chinese-word-at-point.el
+Built chinese-word-at-point in 3.591s, finished at 2023-06-11T00:08:13+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Jun  9 15:35 packages/chinese-word-at-point-20170811.941.el
+4.0K -rw-r--r-- 1 root root  490 Jun 11 00:08 packages/chinese-word-at-point-20170811.941.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:08 packages/chinese-word-at-point-20170811.941.tar

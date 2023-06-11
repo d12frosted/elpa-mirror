@@ -4,4 +4,16 @@ Source:  https://github.com/ahungry/prog-fill.git
 
 Updating /mnt/store/melpa/working/prog-fill/
 Checking out 3fbf7da6dd826e95c9077d659566ee29814a31d8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prog-fill/
+  to /tmp/prog-fillau3kQv/prog-fill-20180607.132
+    prog-fill.el -> prog-fill.el
+Created prog-fill-20180607.132.tar containing:
+  prog-fill-20180607.132/
+  prog-fill-20180607.132/prog-fill-pkg.el
+  prog-fill-20180607.132/prog-fill.el
+Built prog-fill in 2.653s, finished at 2023-06-10T22:43:57+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.0K Jun  9 16:40 packages/prog-fill-20180607.132.el
+4.0K -rw-r--r-- 1 root root  515 Jun 10 22:43 packages/prog-fill-20180607.132.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:43 packages/prog-fill-20180607.132.tar

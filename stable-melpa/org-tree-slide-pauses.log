@@ -4,4 +4,16 @@ Source:  https://github.com/cnngimenez/org-tree-slide-pauses.git
 
 Updating /mnt/store/melpa/working/org-tree-slide-pauses/
 Checking out f02af7102e9ecef7c3dac0d376d85bbb8c4de4cc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-tree-slide-pauses/
+  to /tmp/org-tree-slide-pauses4JLNV7/org-tree-slide-pauses-20201215.146
+    org-tree-slide-pauses.el -> org-tree-slide-pauses.el
+Created org-tree-slide-pauses-20201215.146.tar containing:
+  org-tree-slide-pauses-20201215.146/
+  org-tree-slide-pauses-20201215.146/org-tree-slide-pauses-pkg.el
+  org-tree-slide-pauses-20201215.146/org-tree-slide-pauses.el
+Built org-tree-slide-pauses in 3.168s, finished at 2023-06-10T22:39:22+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:34 packages/org-tree-slide-pauses-20201215.146.el
+4.0K -rw-r--r-- 1 root root 462 Jun 10 22:39 packages/org-tree-slide-pauses-20201215.146.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:39 packages/org-tree-slide-pauses-20201215.146.tar

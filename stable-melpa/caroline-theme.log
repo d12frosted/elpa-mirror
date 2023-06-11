@@ -4,4 +4,16 @@ Source:  https://github.com/xjackk/caroline-theme.git
 
 Updating /mnt/store/melpa/working/caroline-theme/
 Checking out 222fd483db304509f9e422dc82883d808e023ceb
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/caroline-theme/
+  to /tmp/caroline-themerJ5qUN/caroline-theme-20160318.520
+    caroline-theme.el -> caroline-theme.el
+Created caroline-theme-20160318.520.tar containing:
+  caroline-theme-20160318.520/
+  caroline-theme-20160318.520/caroline-theme-pkg.el
+  caroline-theme-20160318.520/caroline-theme.el
+Built caroline-theme in 3.914s, finished at 2023-06-11T00:07:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jun  9 15:34 packages/caroline-theme-20160318.520.el
+4.0K -rw-r--r-- 1 root root  403 Jun 11 00:07 packages/caroline-theme-20160318.520.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:07 packages/caroline-theme-20160318.520.tar

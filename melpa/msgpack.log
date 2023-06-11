@@ -4,4 +4,16 @@ Source:  https://github.com/xuchunyang/msgpack.el.git
 
 Updating /mnt/store/melpa/working/msgpack/
 Checking out e2a0d76d1087bc8178c9f27222cb9b93e2e815ec
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/msgpack/
+  to /tmp/msgpackqjwt3w/msgpack-20200323.515
+    msgpack.el -> msgpack.el
+Created msgpack-20200323.515.tar containing:
+  msgpack-20200323.515/
+  msgpack-20200323.515/msgpack-pkg.el
+  msgpack-20200323.515/msgpack.el
+Built msgpack in 2.738s, finished at 2023-06-10T22:34:00+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Jun  9 16:25 packages/msgpack-20200323.515.el
+4.0K -rw-r--r-- 1 root root 346 Jun 10 22:34 packages/msgpack-20200323.515.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:34 packages/msgpack-20200323.515.tar

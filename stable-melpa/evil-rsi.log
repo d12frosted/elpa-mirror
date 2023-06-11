@@ -4,4 +4,16 @@ Source:  https://github.com/linktohack/evil-rsi.git
 
 Updating /mnt/store/melpa/working/evil-rsi/
 Checking out 236bf6ed1e2285698db808463e5f2f69f5f5e7c0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-rsi/
+  to /tmp/evil-rsiRoZHkG/evil-rsi-20160221.2104
+    evil-rsi.el -> evil-rsi.el
+Created evil-rsi-20160221.2104.tar containing:
+  evil-rsi-20160221.2104/
+  evil-rsi-20160221.2104/evil-rsi-pkg.el
+  evil-rsi-20160221.2104/evil-rsi.el
+Built evil-rsi in 6.085s, finished at 2023-06-11T00:20:12+0000
+ ✓ Success:
+4.0K -rwxr-xr-x 1 root root 2.9K Jun  9 15:53 packages/evil-rsi-20160221.2104.el
+4.0K -rw-r--r-- 1 root root  472 Jun 11 00:20 packages/evil-rsi-20160221.2104.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/evil-rsi-20160221.2104.tar

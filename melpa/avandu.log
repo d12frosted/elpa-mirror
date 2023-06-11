@@ -4,4 +4,19 @@ Source:  https://github.com/ryuslash/avandu.git
 
 Updating /mnt/store/melpa/working/avandu/
 Checking out f064cd62f878d945cc2f202cda9a1a82b39d9e22
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/avandu/
+  to /tmp/avandutD42VR/avandu-20221106.834
+    avandu.el -> avandu.el
+  ! doc/avandu.texinfo -> avandu.texinfo
+Generating /tmp/avandutD42VR/avandu-20221106.834/avandu.info
+Created avandu-20221106.834.tar containing:
+  avandu-20221106.834/
+  avandu-20221106.834/avandu-pkg.el
+  avandu-20221106.834/avandu.el
+  avandu-20221106.834/avandu.info
+  avandu-20221106.834/dir
+Built avandu in 5.949s, finished at 2023-06-11T00:04:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 315 Jun 11 00:04 packages/avandu-20221106.834.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:04 packages/avandu-20221106.834.tar

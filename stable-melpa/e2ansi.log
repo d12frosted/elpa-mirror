@@ -4,4 +4,25 @@ Source:  https://github.com/Lindydancer/e2ansi.git
 
 Updating /mnt/store/melpa/working/e2ansi/
 Checking out 6e1bb4e4e27885d1786db08b091cfa13b184fb54
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/e2ansi/
+  to /tmp/e2ansibeU9Qb/e2ansi-20190517.1902
+    e2ansi-list.el -> e2ansi-list.el
+    e2ansi-magic.el -> e2ansi-magic.el
+    e2ansi-silent.el -> e2ansi-silent.el
+    e2ansi.el -> e2ansi.el
+    bin => bin
+Created e2ansi-20190517.1902.tar containing:
+  e2ansi-20190517.1902/
+  e2ansi-20190517.1902/bin/
+  e2ansi-20190517.1902/bin/e2ansi-cat
+  e2ansi-20190517.1902/bin/e2ansi-info
+  e2ansi-20190517.1902/e2ansi-list.el
+  e2ansi-20190517.1902/e2ansi-magic.el
+  e2ansi-20190517.1902/e2ansi-pkg.el
+  e2ansi-20190517.1902/e2ansi-silent.el
+  e2ansi-20190517.1902/e2ansi.el
+Built e2ansi in 3.287s, finished at 2023-06-11T00:15:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 389 Jun 11 00:15 packages/e2ansi-20190517.1902.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 11 00:15 packages/e2ansi-20190517.1902.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/ianyepan/tron-legacy-emacs-theme.git
 
 Updating /mnt/store/melpa/working/tron-legacy-theme/
 Checking out 44996469041a9b7f54c2a42ad2a3c16ac9579d77
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tron-legacy-theme/
+  to /tmp/tron-legacy-theme38bnBm/tron-legacy-theme-20230506.1037
+    tron-legacy-theme.el -> tron-legacy-theme.el
+Created tron-legacy-theme-20230506.1037.tar containing:
+  tron-legacy-theme-20230506.1037/
+  tron-legacy-theme-20230506.1037/tron-legacy-theme-pkg.el
+  tron-legacy-theme-20230506.1037/tron-legacy-theme.el
+Built tron-legacy-theme in 2.691s, finished at 2023-06-10T22:55:27+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  9 16:56 packages/tron-legacy-theme-20230506.1037.el
+4.0K -rw-r--r-- 1 root root 384 Jun 10 22:55 packages/tron-legacy-theme-20230506.1037.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:55 packages/tron-legacy-theme-20230506.1037.tar

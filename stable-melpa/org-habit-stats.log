@@ -4,4 +4,16 @@ Source:  https://github.com/ml729/org-habit-stats.git
 
 Updating /mnt/store/melpa/working/org-habit-stats/
 Checking out 9cb389f1c409d1f7aaea28378b4d7c7e975aefd4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-habit-stats/
+  to /tmp/org-habit-stats8mPJgf/org-habit-stats-20230412.515
+    org-habit-stats.el -> org-habit-stats.el
+Created org-habit-stats-20230412.515.tar containing:
+  org-habit-stats-20230412.515/
+  org-habit-stats-20230412.515/org-habit-stats-pkg.el
+  org-habit-stats-20230412.515/org-habit-stats.el
+Built org-habit-stats in 3.162s, finished at 2023-06-10T22:38:02+0000
+ ✓ Success:
+ 76K -rw-r--r-- 1 root root 76K Jun  9 16:32 packages/org-habit-stats-20230412.515.el
+4.0K -rw-r--r-- 1 root root 416 Jun 10 22:38 packages/org-habit-stats-20230412.515.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 10 22:38 packages/org-habit-stats-20230412.515.tar

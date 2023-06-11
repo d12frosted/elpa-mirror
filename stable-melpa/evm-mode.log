@@ -4,4 +4,16 @@ Source:  https://github.com/taquangtrung/emacs-evm-mode.git
 
 Updating /mnt/store/melpa/working/evm-mode/
 Checking out 422b65cfd04854072bf6b9238c49e3d40577ef98
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evm-mode/
+  to /tmp/evm-mode1uV8Jz/evm-mode-20220911.1647
+    evm-mode.el -> evm-mode.el
+Created evm-mode-20220911.1647.tar containing:
+  evm-mode-20220911.1647/
+  evm-mode-20220911.1647/evm-mode-pkg.el
+  evm-mode-20220911.1647/evm-mode.el
+Built evm-mode in 4.048s, finished at 2023-06-11T00:20:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 15:53 packages/evm-mode-20220911.1647.el
+4.0K -rw-r--r-- 1 root root  368 Jun 11 00:20 packages/evm-mode-20220911.1647.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/evm-mode-20220911.1647.tar

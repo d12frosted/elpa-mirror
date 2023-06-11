@@ -4,4 +4,16 @@ Source:  https://github.com/sshirokov/ZNC.el.git
 
 Updating /mnt/store/melpa/working/znc/
 Checking out 2605f78e37a8a759067dc14fa25a82824ba1bacc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/znc/
+  to /tmp/zncrJGIzm/znc-20210803.159
+    znc.el -> znc.el
+Created znc-20210803.159.tar containing:
+  znc-20210803.159/
+  znc-20210803.159/znc-pkg.el
+  znc-20210803.159/znc.el
+Built znc in 2.798s, finished at 2023-06-10T23:00:35+0000
+ ✓ Success:
+ 12K -rwxr-xr-x 1 root root 9.2K Jun  9 17:03 packages/znc-20210803.159.el
+4.0K -rw-r--r-- 1 root root  320 Jun 10 23:00 packages/znc-20210803.159.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 23:00 packages/znc-20210803.159.tar

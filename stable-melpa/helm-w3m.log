@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-helm/helm-w3m.git
 
 Updating /mnt/store/melpa/working/helm-w3m/
 Checking out 0a25a2b1df9bc660a90d633beb301b3815556e4e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-w3m/
+  to /tmp/helm-w3mjghjaJ/helm-w3m-20210315.723
+    helm-w3m.el -> helm-w3m.el
+Created helm-w3m-20210315.723.tar containing:
+  helm-w3m-20210315.723/
+  helm-w3m-20210315.723/helm-w3m-pkg.el
+  helm-w3m-20210315.723/helm-w3m.el
+Built helm-w3m in 2.168s, finished at 2023-06-10T22:22:34+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  9 16:08 packages/helm-w3m-20210315.723.el
+4.0K -rw-r--r-- 1 root root  235 Jun 10 22:22 packages/helm-w3m-20210315.723.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:22 packages/helm-w3m-20210315.723.tar

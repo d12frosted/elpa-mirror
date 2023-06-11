@@ -4,4 +4,16 @@ Source:  https://github.com/tttuuu888/package-loading-notifier.git
 
 Updating /mnt/store/melpa/working/package-loading-notifier/
 Checking out bc06ba97a0537aa202f277e5597ac96ca39307ab
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/package-loading-notifier/
+  to /tmp/package-loading-notifier0dqpCc/package-loading-notifier-20220130.318
+    package-loading-notifier.el -> package-loading-notifier.el
+Created package-loading-notifier-20220130.318.tar containing:
+  package-loading-notifier-20220130.318/
+  package-loading-notifier-20220130.318/package-loading-notifier-pkg.el
+  package-loading-notifier-20220130.318/package-loading-notifier.el
+Built package-loading-notifier in 3.612s, finished at 2023-06-10T22:41:14+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  9 16:36 packages/package-loading-notifier-20220130.318.el
+4.0K -rw-r--r-- 1 root root  515 Jun 10 22:41 packages/package-loading-notifier-20220130.318.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:41 packages/package-loading-notifier-20220130.318.tar

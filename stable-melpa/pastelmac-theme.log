@@ -4,4 +4,16 @@ Source:  https://github.com/bmastenbrook/pastelmac-theme-el.git
 
 Updating /mnt/store/melpa/working/pastelmac-theme/
 Checking out bead21741e3f46f6506e8aef4469d4240a819389
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pastelmac-theme/
+  to /tmp/pastelmac-themeyTtw8D/pastelmac-theme-20151031.236
+    pastelmac-theme.el -> pastelmac-theme.el
+Created pastelmac-theme-20151031.236.tar containing:
+  pastelmac-theme-20151031.236/
+  pastelmac-theme-20151031.236/pastelmac-theme-pkg.el
+  pastelmac-theme-20151031.236/pastelmac-theme.el
+Built pastelmac-theme in 2.919s, finished at 2023-06-10T22:41:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  9 16:37 packages/pastelmac-theme-20151031.236.el
+4.0K -rw-r--r-- 1 root root  485 Jun 10 22:41 packages/pastelmac-theme-20151031.236.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:41 packages/pastelmac-theme-20151031.236.tar

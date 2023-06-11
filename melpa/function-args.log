@@ -4,4 +4,17 @@ Source:  https://github.com/abo-abo/function-args.git
 
 Updating /mnt/store/melpa/working/function-args/
 Checking out beba049751fed78666c87bd146a6f1cf149bb819
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/function-args/
+  to /tmp/function-argszuhlkh/function-args-20220516.1226
+    function-args.el -> function-args.el
+    semantic-directory.el -> semantic-directory.el
+Created function-args-20220516.1226.tar containing:
+  function-args-20220516.1226/
+  function-args-20220516.1226/function-args-pkg.el
+  function-args-20220516.1226/function-args.el
+  function-args-20220516.1226/semantic-directory.el
+Built function-args in 2.938s, finished at 2023-06-11T00:24:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 392 Jun 11 00:24 packages/function-args-20220516.1226.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 11 00:24 packages/function-args-20220516.1226.tar

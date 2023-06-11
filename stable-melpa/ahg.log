@@ -4,4 +4,16 @@ Source:  https://bitbucket.org/agriggio/ahg
 
 Updating /mnt/store/melpa/working/ahg/
 Checking out 8f0dc52dedcf20e1662c964c6577cfb737381505
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ahg/
+  to /tmp/ahgnEeriP/ahg-20221013.916
+    ahg.el -> ahg.el
+Created ahg-20221013.916.tar containing:
+  ahg-20221013.916/
+  ahg-20221013.916/ahg-pkg.el
+  ahg-20221013.916/ahg.el
+Built ahg in 2.946s, finished at 2023-06-11T00:02:41+0000
+ ✓ Success:
+212K -rw-r--r-- 1 root root 209K Jun  9 15:28 packages/ahg-20221013.916.el
+4.0K -rw-r--r-- 1 root root  433 Jun 11 00:02 packages/ahg-20221013.916.entry
+220K -rw-r--r-- 1 root root 220K Jun 11 00:02 packages/ahg-20221013.916.tar

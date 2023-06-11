@@ -4,4 +4,17 @@ Source:  https://github.com/arnested/emacs-git-attr.git
 
 Updating /mnt/store/melpa/working/git-attr/
 Checking out 3e43a0cf616b00a4bbd3c6b49fd2397f3103796f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-attr/
+  to /tmp/git-attrUKzV9h/git-attr-20180925.2003
+    git-attr-linguist.el -> git-attr-linguist.el
+    git-attr.el -> git-attr.el
+Created git-attr-20180925.2003.tar containing:
+  git-attr-20180925.2003/
+  git-attr-20180925.2003/git-attr-linguist.el
+  git-attr-20180925.2003/git-attr-pkg.el
+  git-attr-20180925.2003/git-attr.el
+Built git-attr in 3.603s, finished at 2023-06-11T00:25:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 431 Jun 11 00:25 packages/git-attr-20180925.2003.entry
+ 12K -rw-r--r-- 1 root root 10K Jun 11 00:25 packages/git-attr-20180925.2003.tar

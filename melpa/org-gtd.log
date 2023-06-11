@@ -4,4 +4,75 @@ Source:  https://github.com/Trevoke/org-gtd.el.git
 
 Updating /mnt/store/melpa/working/org-gtd/
 Checking out 60855bf9bb7359ccb45fffe86cd1664b46991b6c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-gtd/
+  to /tmp/org-gtdAvZ11O/org-gtd-20230531.100
+    org-gtd-agenda.el -> org-gtd-agenda.el
+    org-gtd-archive.el -> org-gtd-archive.el
+    org-gtd-areas-of-focus.el -> org-gtd-areas-of-focus.el
+    org-gtd-backward-compatibility.el -> org-gtd-backward-compatibility.el
+    org-gtd-calendar.el -> org-gtd-calendar.el
+    org-gtd-capture.el -> org-gtd-capture.el
+    org-gtd-clarify.el -> org-gtd-clarify.el
+    org-gtd-core.el -> org-gtd-core.el
+    org-gtd-delegate.el -> org-gtd-delegate.el
+    org-gtd-files.el -> org-gtd-files.el
+    org-gtd-habit.el -> org-gtd-habit.el
+    org-gtd-horizons.el -> org-gtd-horizons.el
+    org-gtd-id.el -> org-gtd-id.el
+    org-gtd-incubate.el -> org-gtd-incubate.el
+    org-gtd-knowledge.el -> org-gtd-knowledge.el
+    org-gtd-mode.el -> org-gtd-mode.el
+    org-gtd-oops.el -> org-gtd-oops.el
+    org-gtd-organize.el -> org-gtd-organize.el
+    org-gtd-pkg.el -> org-gtd-pkg.el
+    org-gtd-process.el -> org-gtd-process.el
+    org-gtd-projects.el -> org-gtd-projects.el
+    org-gtd-quick-action.el -> org-gtd-quick-action.el
+    org-gtd-refile.el -> org-gtd-refile.el
+    org-gtd-review.el -> org-gtd-review.el
+    org-gtd-single-action.el -> org-gtd-single-action.el
+    org-gtd-skip.el -> org-gtd-skip.el
+    org-gtd-trash.el -> org-gtd-trash.el
+    org-gtd-upgrades.el -> org-gtd-upgrades.el
+    org-gtd.el -> org-gtd.el
+    dir -> dir
+    org-gtd.info -> org-gtd.info
+  ! doc/org-gtd.texi -> org-gtd.texi
+Created org-gtd-20230531.100.tar containing:
+  org-gtd-20230531.100/
+  org-gtd-20230531.100/dir
+  org-gtd-20230531.100/org-gtd-agenda.el
+  org-gtd-20230531.100/org-gtd-archive.el
+  org-gtd-20230531.100/org-gtd-areas-of-focus.el
+  org-gtd-20230531.100/org-gtd-backward-compatibility.el
+  org-gtd-20230531.100/org-gtd-calendar.el
+  org-gtd-20230531.100/org-gtd-capture.el
+  org-gtd-20230531.100/org-gtd-clarify.el
+  org-gtd-20230531.100/org-gtd-core.el
+  org-gtd-20230531.100/org-gtd-delegate.el
+  org-gtd-20230531.100/org-gtd-files.el
+  org-gtd-20230531.100/org-gtd-habit.el
+  org-gtd-20230531.100/org-gtd-horizons.el
+  org-gtd-20230531.100/org-gtd-id.el
+  org-gtd-20230531.100/org-gtd-incubate.el
+  org-gtd-20230531.100/org-gtd-knowledge.el
+  org-gtd-20230531.100/org-gtd-mode.el
+  org-gtd-20230531.100/org-gtd-oops.el
+  org-gtd-20230531.100/org-gtd-organize.el
+  org-gtd-20230531.100/org-gtd-pkg.el
+  org-gtd-20230531.100/org-gtd-process.el
+  org-gtd-20230531.100/org-gtd-projects.el
+  org-gtd-20230531.100/org-gtd-quick-action.el
+  org-gtd-20230531.100/org-gtd-refile.el
+  org-gtd-20230531.100/org-gtd-review.el
+  org-gtd-20230531.100/org-gtd-single-action.el
+  org-gtd-20230531.100/org-gtd-skip.el
+  org-gtd-20230531.100/org-gtd-trash.el
+  org-gtd-20230531.100/org-gtd-upgrades.el
+  org-gtd-20230531.100/org-gtd.el
+  org-gtd-20230531.100/org-gtd.info
+Built org-gtd in 4.150s, finished at 2023-06-10T22:38:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  465 Jun 10 22:38 packages/org-gtd-20230531.100.entry
+212K -rw-r--r-- 1 root root 210K Jun 10 22:38 packages/org-gtd-20230531.100.tar

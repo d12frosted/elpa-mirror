@@ -4,4 +4,16 @@ Source:  https://git.sr.ht/~nbarrientos/cern-ldap.el
 
 Updating /mnt/store/melpa/working/cern-ldap/
 Checking out 7a2dfa4c5ec9d05ec0c4e90caedae8508a96196c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cern-ldap/
+  to /tmp/cern-ldapLtvnRG/cern-ldap-20230418.1249
+    cern-ldap.el -> cern-ldap.el
+Created cern-ldap-20230418.1249.tar containing:
+  cern-ldap-20230418.1249/
+  cern-ldap-20230418.1249/cern-ldap-pkg.el
+  cern-ldap-20230418.1249/cern-ldap.el
+Built cern-ldap in 4.467s, finished at 2023-06-11T00:07:49+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 15:34 packages/cern-ldap-20230418.1249.el
+4.0K -rw-r--r-- 1 root root 504 Jun 11 00:07 packages/cern-ldap-20230418.1249.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:07 packages/cern-ldap-20230418.1249.tar

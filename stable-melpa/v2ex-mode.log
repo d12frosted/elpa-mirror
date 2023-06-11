@@ -4,4 +4,16 @@ Source:  https://github.com/aborn/v2ex-mode.git
 
 Updating /mnt/store/melpa/working/v2ex-mode/
 Checking out b7d19bb594b43ea3824a6f215dd1e5d1d4c0e8ad
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/v2ex-mode/
+  to /tmp/v2ex-modesVeH1K/v2ex-mode-20160720.345
+    v2ex-mode.el -> v2ex-mode.el
+Created v2ex-mode-20160720.345.tar containing:
+  v2ex-mode-20160720.345/
+  v2ex-mode-20160720.345/v2ex-mode-pkg.el
+  v2ex-mode-20160720.345/v2ex-mode.el
+Built v2ex-mode in 3.119s, finished at 2023-06-10T22:56:29+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jun  9 16:58 packages/v2ex-mode-20160720.345.el
+4.0K -rw-r--r-- 1 root root  523 Jun 10 22:56 packages/v2ex-mode-20160720.345.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:56 packages/v2ex-mode-20160720.345.tar

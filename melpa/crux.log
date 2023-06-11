@@ -4,4 +4,16 @@ Source:  https://github.com/bbatsov/crux.git
 
 Updating /mnt/store/melpa/working/crux/
 Checking out f8789f67a9d2e1eb31a0e4531aec9bb6d6ec1282
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/crux/
+  to /tmp/cruxqJgoFv/crux-20221121.859
+    crux.el -> crux.el
+Created crux-20221121.859.tar containing:
+  crux-20221121.859/
+  crux-20221121.859/crux-pkg.el
+  crux-20221121.859/crux.el
+Built crux in 3.545s, finished at 2023-06-11T00:11:27+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Jun  9 15:41 packages/crux-20221121.859.el
+4.0K -rw-r--r-- 1 root root 428 Jun 11 00:11 packages/crux-20221121.859.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:11 packages/crux-20221121.859.tar

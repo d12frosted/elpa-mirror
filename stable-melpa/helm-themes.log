@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/helm-themes.git
 
 Updating /mnt/store/melpa/working/helm-themes/
 Checking out 12e856c0346fa69d13d941f27bd3cddb3a3deed2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-themes/
+  to /tmp/helm-themes99W3Ax/helm-themes-20220721.330
+    helm-themes.el -> helm-themes.el
+Created helm-themes-20220721.330.tar containing:
+  helm-themes-20220721.330/
+  helm-themes-20220721.330/helm-themes-pkg.el
+  helm-themes-20220721.330/helm-themes.el
+Built helm-themes in 3.080s, finished at 2023-06-10T22:22:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.8K Jun  9 16:08 packages/helm-themes-20220721.330.el
+4.0K -rw-r--r-- 1 root root  463 Jun 10 22:22 packages/helm-themes-20220721.330.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:22 packages/helm-themes-20220721.330.tar

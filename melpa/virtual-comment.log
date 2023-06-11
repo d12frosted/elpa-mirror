@@ -4,4 +4,16 @@ Source:  https://github.com/thanhvg/emacs-virtual-comment.git
 
 Updating /mnt/store/melpa/working/virtual-comment/
 Checking out b0c2ac4a9d625b5f4f329bbab879ad86cd7056bd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/virtual-comment/
+  to /tmp/virtual-commentE6U5hk/virtual-comment-20220921.221
+    virtual-comment.el -> virtual-comment.el
+Created virtual-comment-20220921.221.tar containing:
+  virtual-comment-20220921.221/
+  virtual-comment-20220921.221/virtual-comment-pkg.el
+  virtual-comment-20220921.221/virtual-comment.el
+Built virtual-comment in 2.858s, finished at 2023-06-10T22:57:02+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 47K Jun  9 16:59 packages/virtual-comment-20220921.221.el
+4.0K -rw-r--r-- 1 root root 399 Jun 10 22:57 packages/virtual-comment-20220921.221.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:57 packages/virtual-comment-20220921.221.tar

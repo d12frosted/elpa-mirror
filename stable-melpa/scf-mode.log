@@ -4,4 +4,16 @@ Source:  https://github.com/lewang/scf-mode.git
 
 Updating /mnt/store/melpa/working/scf-mode/
 Checking out dbfcdcd89034f208d65e181af58e0d73ad09f8b2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scf-mode/
+  to /tmp/scf-modeRMbZfy/scf-mode-20151122.248
+    scf-mode.el -> scf-mode.el
+Created scf-mode-20151122.248.tar containing:
+  scf-mode-20151122.248/
+  scf-mode-20151122.248/scf-mode-pkg.el
+  scf-mode-20151122.248/scf-mode.el
+Built scf-mode in 2.727s, finished at 2023-06-10T22:48:21+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jun  9 16:46 packages/scf-mode-20151122.248.el
+4.0K -rw-r--r-- 1 root root  338 Jun 10 22:48 packages/scf-mode-20151122.248.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:48 packages/scf-mode-20151122.248.tar

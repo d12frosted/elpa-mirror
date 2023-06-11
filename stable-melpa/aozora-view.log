@@ -4,4 +4,17 @@ Source:  https://github.com/kawabata/aozora-view.git
 
 Updating /mnt/store/melpa/working/aozora-view/
 Checking out b0390616d19e45f15f9a2f5d5688274831e721fd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/aozora-view/
+  to /tmp/aozora-view0vM5Jp/aozora-view-20140310.1317
+    aozora-view.el -> aozora-view.el
+    aozora_gaiji_chuki.txt -> aozora_gaiji_chuki.txt
+Created aozora-view-20140310.1317.tar containing:
+  aozora-view-20140310.1317/
+  aozora-view-20140310.1317/aozora-view-pkg.el
+  aozora-view-20140310.1317/aozora-view.el
+  aozora-view-20140310.1317/aozora_gaiji_chuki.txt
+Built aozora-view in 3.643s, finished at 2023-06-11T00:03:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  461 Jun 11 00:03 packages/aozora-view-20140310.1317.entry
+652K -rw-r--r-- 1 root root 650K Jun 11 00:03 packages/aozora-view-20140310.1317.tar

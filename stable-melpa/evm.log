@@ -4,4 +4,16 @@ Source:  https://github.com/rejeep/evm.el.git
 
 Updating /mnt/store/melpa/working/evm/
 Checking out d0623b2355436a5fd9f7238b419782080c79196b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evm/
+  to /tmp/evmpMvdsw/evm-20141007.1156
+    evm.el -> evm.el
+Created evm-20141007.1156.tar containing:
+  evm-20141007.1156/
+  evm-20141007.1156/evm-pkg.el
+  evm-20141007.1156/evm.el
+Built evm in 4.123s, finished at 2023-06-11T00:20:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jun  9 15:53 packages/evm-20141007.1156.el
+4.0K -rw-r--r-- 1 root root  422 Jun 11 00:20 packages/evm-20141007.1156.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/evm-20141007.1156.tar

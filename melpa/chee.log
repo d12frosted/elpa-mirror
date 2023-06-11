@@ -4,4 +4,29 @@ Source:  https://github.com/eikek/chee.git
 
 Updating /mnt/store/melpa/working/chee/
 Checking out 669ff9ee429f24c3c2d03b83d9cb9aec5f86bb8b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chee/
+  to /tmp/cheeAj6bS6/chee-20171123.2233
+  ! emacs/chee-dired.el -> chee-dired.el
+  ! emacs/chee-helm.el -> chee-helm.el
+  ! emacs/chee-minor.el -> chee-minor.el
+  ! emacs/chee-proc.el -> chee-proc.el
+  ! emacs/chee-query.el -> chee-query.el
+  ! emacs/chee-settings.el -> chee-settings.el
+  ! emacs/chee-utils.el -> chee-utils.el
+  ! emacs/chee.el -> chee.el
+Created chee-20171123.2233.tar containing:
+  chee-20171123.2233/
+  chee-20171123.2233/chee-dired.el
+  chee-20171123.2233/chee-helm.el
+  chee-20171123.2233/chee-minor.el
+  chee-20171123.2233/chee-pkg.el
+  chee-20171123.2233/chee-proc.el
+  chee-20171123.2233/chee-query.el
+  chee-20171123.2233/chee-settings.el
+  chee-20171123.2233/chee-utils.el
+  chee-20171123.2233/chee.el
+Built chee in 4.765s, finished at 2023-06-11T00:08:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 282 Jun 11 00:08 packages/chee-20171123.2233.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:08 packages/chee-20171123.2233.tar

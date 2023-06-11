@@ -4,4 +4,16 @@ Source:  https://github.com/nashamri/academic-phrases.git
 
 Updating /mnt/store/melpa/working/academic-phrases/
 Checking out 25d9cf67feac6359cb213f061735e2679c84187f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/academic-phrases/
+  to /tmp/academic-phrasesmf3dqs/academic-phrases-20180723.1021
+    academic-phrases.el -> academic-phrases.el
+Created academic-phrases-20180723.1021.tar containing:
+  academic-phrases-20180723.1021/
+  academic-phrases-20180723.1021/academic-phrases-pkg.el
+  academic-phrases-20180723.1021/academic-phrases.el
+Built academic-phrases in 2.953s, finished at 2023-06-11T00:02:14+0000
+ ✓ Success:
+148K -rw-r--r-- 1 root root 148K Jun  9 15:27 packages/academic-phrases-20180723.1021.el
+4.0K -rw-r--r-- 1 root root  625 Jun 11 00:02 packages/academic-phrases-20180723.1021.entry
+160K -rw-r--r-- 1 root root 160K Jun 11 00:02 packages/academic-phrases-20180723.1021.tar

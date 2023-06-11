@@ -4,4 +4,25 @@ Source:  https://github.com/tuh8888/chezmoi.el.git
 
 Updating /mnt/store/melpa/working/chezmoi/
 Checking out 0578f81ab01f5280e6c68d7a8a70ae4b4ba29755
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chezmoi/
+  to /tmp/chezmoiwAFjvb/chezmoi-20230106.1716
+    chezmoi-company.el -> chezmoi-company.el
+    chezmoi-dired.el -> chezmoi-dired.el
+    chezmoi-ediff.el -> chezmoi-ediff.el
+    chezmoi-magit.el -> chezmoi-magit.el
+    chezmoi-template.el -> chezmoi-template.el
+    chezmoi.el -> chezmoi.el
+Created chezmoi-20230106.1716.tar containing:
+  chezmoi-20230106.1716/
+  chezmoi-20230106.1716/chezmoi-company.el
+  chezmoi-20230106.1716/chezmoi-dired.el
+  chezmoi-20230106.1716/chezmoi-ediff.el
+  chezmoi-20230106.1716/chezmoi-magit.el
+  chezmoi-20230106.1716/chezmoi-pkg.el
+  chezmoi-20230106.1716/chezmoi-template.el
+  chezmoi-20230106.1716/chezmoi.el
+Built chezmoi in 4.177s, finished at 2023-06-11T00:08:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 389 Jun 11 00:08 packages/chezmoi-20230106.1716.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:08 packages/chezmoi-20230106.1716.tar

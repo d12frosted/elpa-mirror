@@ -4,4 +4,16 @@ Source:  https://github.com/kosh04/emacs-go-playground.git
 
 Updating /mnt/store/melpa/working/go-playground-cli/
 Checking out 60beebd98e3930641d41cee0189c579626f223bc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/go-playground-cli/
+  to /tmp/go-playground-clifKR4sS/go-playground-cli-20160503.914
+    go-playground-cli.el -> go-playground-cli.el
+Created go-playground-cli-20160503.914.tar containing:
+  go-playground-cli-20160503.914/
+  go-playground-cli-20160503.914/go-playground-cli-pkg.el
+  go-playground-cli-20160503.914/go-playground-cli.el
+Built go-playground-cli in 4.270s, finished at 2023-06-11T00:26:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.6K Jun  9 16:03 packages/go-playground-cli-20160503.914.el
+4.0K -rw-r--r-- 1 root root  696 Jun 11 00:26 packages/go-playground-cli-20160503.914.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:26 packages/go-playground-cli-20160503.914.tar

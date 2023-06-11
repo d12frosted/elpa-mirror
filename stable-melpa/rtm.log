@@ -4,4 +4,16 @@ Source:  https://github.com/pmiddend/emacs-rtm.git
 
 Updating /mnt/store/melpa/working/rtm/
 Checking out 3e3d09387cb84801343ecca8fb02e82f213e7bbe
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rtm/
+  to /tmp/rtm9weL32/rtm-20180329.1508
+    rtm.el -> rtm.el
+Created rtm-20180329.1508.tar containing:
+  rtm-20180329.1508/
+  rtm-20180329.1508/rtm-pkg.el
+  rtm-20180329.1508/rtm.el
+Built rtm in 3.064s, finished at 2023-06-10T22:47:46+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Jun  9 16:45 packages/rtm-20180329.1508.el
+4.0K -rw-r--r-- 1 root root 536 Jun 10 22:47 packages/rtm-20180329.1508.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:47 packages/rtm-20180329.1508.tar

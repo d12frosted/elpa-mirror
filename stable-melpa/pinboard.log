@@ -4,4 +4,16 @@ Source:  https://github.com/davep/pinboard.el.git
 
 Updating /mnt/store/melpa/working/pinboard/
 Checking out 112e903b489fed3f71b3165447ba6f21ee5675e6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pinboard/
+  to /tmp/pinboardX9bknM/pinboard-20230101.850
+    pinboard.el -> pinboard.el
+Created pinboard-20230101.850.tar containing:
+  pinboard-20230101.850/
+  pinboard-20230101.850/pinboard-pkg.el
+  pinboard-20230101.850/pinboard.el
+Built pinboard in 3.021s, finished at 2023-06-10T22:42:37+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 29K Jun  9 16:38 packages/pinboard-20230101.850.el
+4.0K -rw-r--r-- 1 root root 472 Jun 10 22:42 packages/pinboard-20230101.850.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:42 packages/pinboard-20230101.850.tar

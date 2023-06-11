@@ -4,7 +4,7 @@
 		    (0 3 1))
 		   (list-utils
 		    (0 4 2)))
-		  "Persistent storage, returning nil on failure" single
+		  "Persistent storage, returning nil on failure" tar
 		  ((:commit . "a1e0ddf2a12a6f18cab565dee250f070384cbe02")
 		   (:authors
 		    ("Roland Walker" . "walker@pobox.com"))

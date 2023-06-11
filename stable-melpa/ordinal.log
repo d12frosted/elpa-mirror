@@ -4,4 +4,16 @@ Source:  https://github.com/zonuexe/ordinal.el.git
 
 Updating /mnt/store/melpa/working/ordinal/
 Checking out a7f378306290b6807fb6b87cee3ef79b31cec711
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ordinal/
+  to /tmp/ordinalShnX67/ordinal-20210519.1442
+    ordinal.el -> ordinal.el
+Created ordinal-20210519.1442.tar containing:
+  ordinal-20210519.1442/
+  ordinal-20210519.1442/ordinal-pkg.el
+  ordinal-20210519.1442/ordinal.el
+Built ordinal in 2.700s, finished at 2023-06-10T22:37:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jun  9 16:31 packages/ordinal-20210519.1442.el
+4.0K -rw-r--r-- 1 root root  409 Jun 10 22:37 packages/ordinal-20210519.1442.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:37 packages/ordinal-20210519.1442.tar

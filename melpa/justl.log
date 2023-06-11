@@ -4,4 +4,16 @@ Source:  https://github.com/psibi/justl.el.git
 
 Updating /mnt/store/melpa/working/justl/
 Checking out 141daaa4b0dc07fe25423609dcd14441a9f2613e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/justl/
+  to /tmp/justlkTXw87/justl-20221222.1650
+    justl.el -> justl.el
+Created justl-20221222.1650.tar containing:
+  justl-20221222.1650/
+  justl-20221222.1650/justl-pkg.el
+  justl-20221222.1650/justl.el
+Built justl in 4.121s, finished at 2023-06-10T22:27:27+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Jun  9 16:16 packages/justl-20221222.1650.el
+4.0K -rw-r--r-- 1 root root 424 Jun 10 22:27 packages/justl-20221222.1650.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:27 packages/justl-20221222.1650.tar

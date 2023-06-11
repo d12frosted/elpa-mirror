@@ -4,4 +4,16 @@ Source:  https://github.com/webnf/semaphore.el.git
 
 Updating /mnt/store/melpa/working/semaphore/
 Checking out ec4c485c8e4cff63805ecc25523a031a6c2ad7cd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/semaphore/
+  to /tmp/semaphoreIm5mKL/semaphore-20190607.1949
+    semaphore.el -> semaphore.el
+Created semaphore-20190607.1949.tar containing:
+  semaphore-20190607.1949/
+  semaphore-20190607.1949/semaphore-pkg.el
+  semaphore-20190607.1949/semaphore.el
+Built semaphore in 2.736s, finished at 2023-06-10T22:48:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  9 16:46 packages/semaphore-20190607.1949.el
+4.0K -rw-r--r-- 1 root root  474 Jun 10 22:48 packages/semaphore-20190607.1949.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:48 packages/semaphore-20190607.1949.tar

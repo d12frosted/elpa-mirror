@@ -4,4 +4,16 @@ Source:  https://github.com/AdrieanKhisbe/omni-kill.el.git
 
 Updating /mnt/store/melpa/working/omni-kill/
 Checking out 904549c8fd6ac3cf22b5d7111ca8944e179cffea
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/omni-kill/
+  to /tmp/omni-killmT8lFi/omni-kill-20171016.2140
+    omni-kill.el -> omni-kill.el
+Created omni-kill-20171016.2140.tar containing:
+  omni-kill-20171016.2140/
+  omni-kill-20171016.2140/omni-kill-pkg.el
+  omni-kill-20171016.2140/omni-kill.el
+Built omni-kill in 2.673s, finished at 2023-06-10T22:37:04+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.6K Jun  9 16:30 packages/omni-kill-20171016.2140.el
+4.0K -rw-r--r-- 1 root root  391 Jun 10 22:37 packages/omni-kill-20171016.2140.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:37 packages/omni-kill-20171016.2140.tar

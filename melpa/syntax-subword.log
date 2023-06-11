@@ -4,4 +4,16 @@ Source:  https://github.com/jpkotta/syntax-subword.git
 
 Updating /mnt/store/melpa/working/syntax-subword/
 Checking out 9aa9b3f846bfe2474370642458a693ac4760d9fe
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/syntax-subword/
+  to /tmp/syntax-subwordiNBiPI/syntax-subword-20160205.2154
+    syntax-subword.el -> syntax-subword.el
+Created syntax-subword-20160205.2154.tar containing:
+  syntax-subword-20160205.2154/
+  syntax-subword-20160205.2154/syntax-subword-pkg.el
+  syntax-subword-20160205.2154/syntax-subword.el
+Built syntax-subword in 3.623s, finished at 2023-06-10T22:53:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.2K Jun  9 16:53 packages/syntax-subword-20160205.2154.el
+4.0K -rw-r--r-- 1 root root  338 Jun 10 22:53 packages/syntax-subword-20160205.2154.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:53 packages/syntax-subword-20160205.2154.tar

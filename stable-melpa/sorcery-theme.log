@@ -4,4 +4,16 @@ Source:  https://github.com/mtreca/emacs-theme-sorcery.git
 
 Updating /mnt/store/melpa/working/sorcery-theme/
 Checking out 5a1c4445b9e6e09589a299a9962a6973272a0c2f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sorcery-theme/
+  to /tmp/sorcery-themecoP3LL/sorcery-theme-20210101.1352
+    sorcery-theme.el -> sorcery-theme.el
+Created sorcery-theme-20210101.1352.tar containing:
+  sorcery-theme-20210101.1352/
+  sorcery-theme-20210101.1352/sorcery-theme-pkg.el
+  sorcery-theme-20210101.1352/sorcery-theme.el
+Built sorcery-theme in 3.315s, finished at 2023-06-10T22:50:57+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 46K Jun  9 16:50 packages/sorcery-theme-20210101.1352.el
+4.0K -rw-r--r-- 1 root root 396 Jun 10 22:50 packages/sorcery-theme-20210101.1352.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:50 packages/sorcery-theme-20210101.1352.tar

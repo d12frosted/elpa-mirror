@@ -4,4 +4,21 @@ Source:  https://github.com/rbanffy/selectric-mode.git
 
 Updating /mnt/store/melpa/working/selectric-mode/
 Checking out bb9e66678f34e9bc23624ff6292cf5e7857e8e5f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/selectric-mode/
+  to /tmp/selectric-mode7xi2RJ/selectric-mode-20200209.2107
+    selectric-mode.el -> selectric-mode.el
+    ping.wav -> ping.wav
+    selectric-move.wav -> selectric-move.wav
+    selectric-type.wav -> selectric-type.wav
+Created selectric-mode-20200209.2107.tar containing:
+  selectric-mode-20200209.2107/
+  selectric-mode-20200209.2107/ping.wav
+  selectric-mode-20200209.2107/selectric-mode-pkg.el
+  selectric-mode-20200209.2107/selectric-mode.el
+  selectric-mode-20200209.2107/selectric-move.wav
+  selectric-mode-20200209.2107/selectric-type.wav
+Built selectric-mode in 3.666s, finished at 2023-06-10T22:48:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  450 Jun 10 22:48 packages/selectric-mode-20200209.2107.entry
+252K -rw-r--r-- 1 root root 250K Jun 10 22:48 packages/selectric-mode-20200209.2107.tar

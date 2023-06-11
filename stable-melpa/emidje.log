@@ -4,4 +4,16 @@ Source:  https://github.com/nubank/emidje.git
 
 Updating /mnt/store/melpa/working/emidje/
 Checking out 7e92f053964d925c97dc8cca8d4d70a3030021db
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emidje/
+  to /tmp/emidjecike9g/emidje-20190209.1726
+    emidje.el -> emidje.el
+Created emidje-20190209.1726.tar containing:
+  emidje-20190209.1726/
+  emidje-20190209.1726/emidje-pkg.el
+  emidje-20190209.1726/emidje.el
+Built emidje in 2.220s, finished at 2023-06-11T00:17:45+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  9 15:50 packages/emidje-20190209.1726.el
+4.0K -rw-r--r-- 1 root root 506 Jun 11 00:17 packages/emidje-20190209.1726.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:17 packages/emidje-20190209.1726.tar

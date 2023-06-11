@@ -4,4 +4,16 @@ Source:  https://gitlab.com/xuhdev/dired-quick-sort.git
 
 Updating /mnt/store/melpa/working/dired-quick-sort/
 Checking out 69b06f306a5fc2b38e707bae3ff1e35db2b39b6b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-quick-sort/
+  to /tmp/dired-quick-sortPkcgM8/dired-quick-sort-20201221.403
+    dired-quick-sort.el -> dired-quick-sort.el
+Created dired-quick-sort-20201221.403.tar containing:
+  dired-quick-sort-20201221.403/
+  dired-quick-sort-20201221.403/dired-quick-sort-pkg.el
+  dired-quick-sort-20201221.403/dired-quick-sort.el
+Built dired-quick-sort in 5.874s, finished at 2023-06-11T00:13:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:44 packages/dired-quick-sort-20201221.403.el
+4.0K -rw-r--r-- 1 root root 514 Jun 11 00:13 packages/dired-quick-sort-20201221.403.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:13 packages/dired-quick-sort-20201221.403.tar

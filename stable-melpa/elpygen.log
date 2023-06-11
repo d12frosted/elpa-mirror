@@ -4,4 +4,16 @@ Source:  https://github.com/vkazanov/elpygen.git
 
 Updating /mnt/store/melpa/working/elpygen/
 Checking out 21929c997a05968f9eefe52b85a76ceaab3b0d81
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elpygen/
+  to /tmp/elpygent90cBc/elpygen-20171225.1736
+    elpygen.el -> elpygen.el
+Created elpygen-20171225.1736.tar containing:
+  elpygen-20171225.1736/
+  elpygen-20171225.1736/elpygen-pkg.el
+  elpygen-20171225.1736/elpygen.el
+Built elpygen in 2.537s, finished at 2023-06-11T00:17:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  9 15:49 packages/elpygen-20171225.1736.el
+4.0K -rw-r--r-- 1 root root  499 Jun 11 00:17 packages/elpygen-20171225.1736.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:17 packages/elpygen-20171225.1736.tar

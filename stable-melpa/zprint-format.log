@@ -4,4 +4,16 @@ Source:  https://github.com/dpassen/zprint-format.git
 
 Updating /mnt/store/melpa/working/zprint-format/
 Checking out fa575c17a40033189f2f23f1a5b27b88c399d200
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zprint-format/
+  to /tmp/zprint-formatm3kNMm/zprint-format-20210602.146
+    zprint-format.el -> zprint-format.el
+Created zprint-format-20210602.146.tar containing:
+  zprint-format-20210602.146/
+  zprint-format-20210602.146/zprint-format-pkg.el
+  zprint-format-20210602.146/zprint-format.el
+Built zprint-format in 3.001s, finished at 2023-06-10T23:00:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.0K Jun  9 17:03 packages/zprint-format-20210602.146.el
+4.0K -rw-r--r-- 1 root root  480 Jun 10 23:00 packages/zprint-format-20210602.146.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 23:00 packages/zprint-format-20210602.146.tar

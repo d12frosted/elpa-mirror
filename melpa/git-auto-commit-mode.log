@@ -4,4 +4,16 @@ Source:  https://github.com/ryuslash/git-auto-commit-mode.git
 
 Updating /mnt/store/melpa/working/git-auto-commit-mode/
 Checking out df07899acdb3f9c114b72fdab77107c924b3172c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-auto-commit-mode/
+  to /tmp/git-auto-commit-modePMwUhT/git-auto-commit-mode-20200828.653
+    git-auto-commit-mode.el -> git-auto-commit-mode.el
+Created git-auto-commit-mode-20200828.653.tar containing:
+  git-auto-commit-mode-20200828.653/
+  git-auto-commit-mode-20200828.653/git-auto-commit-mode-pkg.el
+  git-auto-commit-mode-20200828.653/git-auto-commit-mode.el
+Built git-auto-commit-mode in 3.402s, finished at 2023-06-11T00:25:45+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.5K Jun  9 16:00 packages/git-auto-commit-mode-20200828.653.el
+4.0K -rw-r--r-- 1 root root  437 Jun 11 00:25 packages/git-auto-commit-mode-20200828.653.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:25 packages/git-auto-commit-mode-20200828.653.tar

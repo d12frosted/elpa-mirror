@@ -4,4 +4,16 @@ Source:  https://github.com/wglass/tommyh-theme.git
 
 Updating /mnt/store/melpa/working/tommyh-theme/
 Checking out 46d1c69ee0a1ca7c67b569b891a2f28fed89e7d5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tommyh-theme/
+  to /tmp/tommyh-themeeQgA4e/tommyh-theme-20131004.2330
+    tommyh-theme.el -> tommyh-theme.el
+Created tommyh-theme-20131004.2330.tar containing:
+  tommyh-theme-20131004.2330/
+  tommyh-theme-20131004.2330/tommyh-theme-pkg.el
+  tommyh-theme-20131004.2330/tommyh-theme.el
+Built tommyh-theme in 3.016s, finished at 2023-06-10T22:54:46+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  9 16:55 packages/tommyh-theme-20131004.2330.el
+4.0K -rw-r--r-- 1 root root  352 Jun 10 22:54 packages/tommyh-theme-20131004.2330.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:54 packages/tommyh-theme-20131004.2330.tar

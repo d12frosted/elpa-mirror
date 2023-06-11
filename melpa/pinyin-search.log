@@ -4,4 +4,16 @@ Source:  https://github.com/xuchunyang/pinyin-search.el.git
 
 Updating /mnt/store/melpa/working/pinyin-search/
 Checking out 2e877a76851009d41bde66eb33182a03a7f04262
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pinyin-search/
+  to /tmp/pinyin-searchErbcU7/pinyin-search-20160515.358
+    pinyin-search.el -> pinyin-search.el
+Created pinyin-search-20160515.358.tar containing:
+  pinyin-search-20160515.358/
+  pinyin-search-20160515.358/pinyin-search-pkg.el
+  pinyin-search-20160515.358/pinyin-search.el
+Built pinyin-search in 2.666s, finished at 2023-06-10T22:42:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 16:38 packages/pinyin-search-20160515.358.el
+4.0K -rw-r--r-- 1 root root  442 Jun 10 22:42 packages/pinyin-search-20160515.358.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:42 packages/pinyin-search-20160515.358.tar

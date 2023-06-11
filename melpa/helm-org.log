@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-helm/helm-org.git
 
 Updating /mnt/store/melpa/working/helm-org/
 Checking out d67186d3a64e610c03a5f3d583488f018fb032e4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-org/
+  to /tmp/helm-org4lx3VS/helm-org-20210324.1927
+    helm-org.el -> helm-org.el
+Created helm-org-20210324.1927.tar containing:
+  helm-org-20210324.1927/
+  helm-org-20210324.1927/helm-org-pkg.el
+  helm-org-20210324.1927/helm-org.el
+Built helm-org in 3.119s, finished at 2023-06-10T22:21:54+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  9 16:07 packages/helm-org-20210324.1927.el
+4.0K -rw-r--r-- 1 root root 485 Jun 10 22:21 packages/helm-org-20210324.1927.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:21 packages/helm-org-20210324.1927.tar

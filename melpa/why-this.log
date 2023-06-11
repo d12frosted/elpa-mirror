@@ -4,4 +4,16 @@ Source:  https://codeberg.org/akib/emacs-why-this.git
 
 Updating /mnt/store/melpa/working/why-this/
 Checking out 5203d9379afaf6703746823a580c804e1dd98e08
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/why-this/
+  to /tmp/why-this0dv5e9/why-this-20221129.817
+    why-this.el -> why-this.el
+Created why-this-20221129.817.tar containing:
+  why-this-20221129.817/
+  why-this-20221129.817/why-this-pkg.el
+  why-this-20221129.817/why-this.el
+Built why-this in 3.866s, finished at 2023-06-10T22:58:15+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 32K Jun  9 17:00 packages/why-this-20221129.817.el
+4.0K -rw-r--r-- 1 root root 470 Jun 10 22:58 packages/why-this-20221129.817.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:58 packages/why-this-20221129.817.tar

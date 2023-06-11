@@ -4,4 +4,16 @@ Source:  https://github.com/abailly/sensei.git
 
 Updating /mnt/store/melpa/working/sensei/
 Checking out 3538990de9ab57154e3da08d10fbd2c6228d87b8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sensei/
+  to /tmp/senseiKwz5Xn/sensei-20220530.1226
+  ! elisp/sensei.el -> sensei.el
+Created sensei-20220530.1226.tar containing:
+  sensei-20220530.1226/
+  sensei-20220530.1226/sensei-pkg.el
+  sensei-20220530.1226/sensei.el
+Built sensei in 3.351s, finished at 2023-06-10T22:48:49+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 8.0K Jun  9 16:46 packages/sensei-20220530.1226.el
+4.0K -rw-r--r-- 1 root root  452 Jun 10 22:48 packages/sensei-20220530.1226.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:48 packages/sensei-20220530.1226.tar

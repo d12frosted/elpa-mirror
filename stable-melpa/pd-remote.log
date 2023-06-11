@@ -4,4 +4,16 @@ Source:  https://github.com/agraef/pd-remote.git
 
 Updating /mnt/store/melpa/working/pd-remote/
 Checking out dcd68097d2b7468303517d91cb76682bfb47db63
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pd-remote/
+  to /tmp/pd-remoteUkTYWU/pd-remote-20230314.428
+    pd-remote.el -> pd-remote.el
+Created pd-remote-20230314.428.tar containing:
+  pd-remote-20230314.428/
+  pd-remote-20230314.428/pd-remote-pkg.el
+  pd-remote-20230314.428/pd-remote.el
+Built pd-remote in 2.580s, finished at 2023-06-10T22:41:53+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jun  9 16:37 packages/pd-remote-20230314.428.el
+4.0K -rw-r--r-- 1 root root  512 Jun 10 22:41 packages/pd-remote-20230314.428.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:41 packages/pd-remote-20230314.428.tar

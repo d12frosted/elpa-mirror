@@ -4,4 +4,16 @@ Source:  https://github.com/google/styleguide.git
 
 Updating /mnt/store/melpa/working/google-c-style/
 Checking out af78b49ac4fef8083094d5105f72528ee7d09073
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/google-c-style/
+  to /tmp/google-c-style5dSYva/google-c-style-20220210.1659
+    google-c-style.el -> google-c-style.el
+Created google-c-style-20220210.1659.tar containing:
+  google-c-style-20220210.1659/
+  google-c-style-20220210.1659/google-c-style-pkg.el
+  google-c-style-20220210.1659/google-c-style.el
+Built google-c-style in 4.882s, finished at 2023-06-11T00:27:28+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  9 16:03 packages/google-c-style-20220210.1659.el
+4.0K -rw-r--r-- 1 root root  172 Jun 11 00:27 packages/google-c-style-20220210.1659.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:27 packages/google-c-style-20220210.1659.tar

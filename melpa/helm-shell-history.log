@@ -4,4 +4,16 @@ Source:  https://github.com/anoopemacs/helm-shell-history.git
 
 Updating /mnt/store/melpa/working/helm-shell-history/
 Checking out dfa657ae76ef1ba768e970a557739efdf0436cb0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-shell-history/
+  to /tmp/helm-shell-historyXr28kX/helm-shell-history-20210214.948
+    helm-shell-history.el -> helm-shell-history.el
+Created helm-shell-history-20210214.948.tar containing:
+  helm-shell-history-20210214.948/
+  helm-shell-history-20210214.948/helm-shell-history-pkg.el
+  helm-shell-history-20210214.948/helm-shell-history.el
+Built helm-shell-history in 2.441s, finished at 2023-06-10T22:22:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.5K Jun  9 16:08 packages/helm-shell-history-20210214.948.el
+4.0K -rw-r--r-- 1 root root  537 Jun 10 22:22 packages/helm-shell-history-20210214.948.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:22 packages/helm-shell-history-20210214.948.tar

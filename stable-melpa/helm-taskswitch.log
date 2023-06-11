@@ -4,4 +4,16 @@ Source:  https://github.com/bdc34/helm-taskswitch.git
 
 Updating /mnt/store/melpa/working/helm-taskswitch/
 Checking out 6e8b62702376c1d30ab52a419dd72cb2a40fd76e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-taskswitch/
+  to /tmp/helm-taskswitchxErGpi/helm-taskswitch-20221019.1542
+    helm-taskswitch.el -> helm-taskswitch.el
+Created helm-taskswitch-20221019.1542.tar containing:
+  helm-taskswitch-20221019.1542/
+  helm-taskswitch-20221019.1542/helm-taskswitch-pkg.el
+  helm-taskswitch-20221019.1542/helm-taskswitch.el
+Built helm-taskswitch in 2.692s, finished at 2023-06-10T22:22:30+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.4K Jun  9 16:08 packages/helm-taskswitch-20221019.1542.el
+4.0K -rw-r--r-- 1 root root  477 Jun 10 22:22 packages/helm-taskswitch-20221019.1542.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:22 packages/helm-taskswitch-20221019.1542.tar

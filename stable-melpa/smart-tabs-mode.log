@@ -4,4 +4,16 @@ Source:  https://github.com/jcsalomon/smarttabs.git
 
 Updating /mnt/store/melpa/working/smart-tabs-mode/
 Checking out 1044c17e42479de943e69cdeb85e4d05ad9cca8c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smart-tabs-mode/
+  to /tmp/smart-tabs-modeP7P32Y/smart-tabs-mode-20200907.2025
+    smart-tabs-mode.el -> smart-tabs-mode.el
+Created smart-tabs-mode-20200907.2025.tar containing:
+  smart-tabs-mode-20200907.2025/
+  smart-tabs-mode-20200907.2025/smart-tabs-mode-pkg.el
+  smart-tabs-mode-20200907.2025/smart-tabs-mode.el
+Built smart-tabs-mode in 3.093s, finished at 2023-06-10T22:50:27+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:49 packages/smart-tabs-mode-20200907.2025.el
+4.0K -rw-r--r-- 1 root root 604 Jun 10 22:50 packages/smart-tabs-mode-20200907.2025.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:50 packages/smart-tabs-mode-20200907.2025.tar

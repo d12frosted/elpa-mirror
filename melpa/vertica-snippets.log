@@ -4,4 +4,64 @@ Source:  https://github.com/baron42bba/vertica-snippets.git
 
 Updating /mnt/store/melpa/working/vertica-snippets/
 Checking out 6ced718d9120878878700592fab430a8542b748f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vertica-snippets/
+  to /tmp/vertica-snippetsZQJCpc/vertica-snippets-20200423.1200
+    vertica-snippets.el -> vertica-snippets.el
+    snippets => snippets
+Created vertica-snippets-20200423.1200.tar containing:
+  vertica-snippets-20200423.1200/
+  vertica-snippets-20200423.1200/snippets/
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/.dir-locals.el
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/busy-hours
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/check_rle_overridden
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/config-changes
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/current_epoch
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/errors
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/external_table_details
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/format_numbers
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/get-partitions
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/get-projections
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/grants
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/last-statement-timing
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/last-vertica-updates
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/licence-history
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/list-backups
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/list-tables-row-count-size
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/nodes
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/pool_queues
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/projection_storage
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/pset_footer
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-acquisition-queue
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-event-issues
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-long-acquisitions
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-requests
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-requests-expensive
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-requests-overview
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-times
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/rebalance_projection_status
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/rebalance_status
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/rebalance_times
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resource-pool-move
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resource_pool_status
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resource_pool_status2
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resource_pools
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resources
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/ros_count
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/segmentation-islands1
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/segmentation-islands2
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/sessions
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/storage-containers
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/storage-locations
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/table_locks
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/user_sessions
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/vertica_users
+  vertica-snippets-20200423.1200/snippets/sql-mode/
+  vertica-snippets-20200423.1200/snippets/sql-mode/.yas-parents
+  vertica-snippets-20200423.1200/vertica-snippets-pkg.el
+  vertica-snippets-20200423.1200/vertica-snippets.el
+Built vertica-snippets in 2.606s, finished at 2023-06-10T22:56:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 509 Jun 10 22:56 packages/vertica-snippets-20200423.1200.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 10 22:56 packages/vertica-snippets-20200423.1200.tar

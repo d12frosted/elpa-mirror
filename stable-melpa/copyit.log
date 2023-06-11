@@ -4,4 +4,16 @@ Source:  https://github.com/zonuexe/emacs-copyit.git
 
 Updating /mnt/store/melpa/working/copyit/
 Checking out c4f2c28e5b6270e8e3364341619f1154bb4e682e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/copyit/
+  to /tmp/copyit2d2vrK/copyit-20190919.1258
+    copyit.el -> copyit.el
+Created copyit-20190919.1258.tar containing:
+  copyit-20190919.1258/
+  copyit-20190919.1258/copyit-pkg.el
+  copyit-20190919.1258/copyit.el
+Built copyit in 3.326s, finished at 2023-06-11T00:10:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  9 15:39 packages/copyit-20190919.1258.el
+4.0K -rw-r--r-- 1 root root  425 Jun 11 00:10 packages/copyit-20190919.1258.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:10 packages/copyit-20190919.1258.tar

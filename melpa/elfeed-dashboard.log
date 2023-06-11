@@ -4,4 +4,16 @@ Source:  https://github.com/manojm321/elfeed-dashboard.git
 
 Updating /mnt/store/melpa/working/elfeed-dashboard/
 Checking out b143f8453aed2053e8fc6f05cef6233797408546
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-dashboard/
+  to /tmp/elfeed-dashboardi6n3c3/elfeed-dashboard-20210727.603
+    elfeed-dashboard.el -> elfeed-dashboard.el
+Created elfeed-dashboard-20210727.603.tar containing:
+  elfeed-dashboard-20210727.603/
+  elfeed-dashboard-20210727.603/elfeed-dashboard-pkg.el
+  elfeed-dashboard-20210727.603/elfeed-dashboard.el
+Built elfeed-dashboard in 3.014s, finished at 2023-06-11T00:16:51+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.7K Jun  9 15:49 packages/elfeed-dashboard-20210727.603.el
+4.0K -rw-r--r-- 1 root root  555 Jun 11 00:16 packages/elfeed-dashboard-20210727.603.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:16 packages/elfeed-dashboard-20210727.603.tar

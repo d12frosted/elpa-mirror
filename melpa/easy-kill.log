@@ -4,4 +4,16 @@ Source:  https://github.com/leoliu/easy-kill.git
 
 Updating /mnt/store/melpa/working/easy-kill/
 Checking out de7d66c3c864a4722a973ee9bc228a14be49ba0c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/easy-kill/
+  to /tmp/easy-killnYzUDJ/easy-kill-20220511.557
+    easy-kill.el -> easy-kill.el
+Created easy-kill-20220511.557.tar containing:
+  easy-kill-20220511.557/
+  easy-kill-20220511.557/easy-kill-pkg.el
+  easy-kill-20220511.557/easy-kill.el
+Built easy-kill in 3.895s, finished at 2023-06-11T00:15:40+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 32K Jun  9 15:46 packages/easy-kill-20220511.557.el
+4.0K -rw-r--r-- 1 root root 456 Jun 11 00:15 packages/easy-kill-20220511.557.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:15 packages/easy-kill-20220511.557.tar

@@ -4,4 +4,16 @@ Source:  https://codeberg.org/ideasman42/emacs-hl-block-mode.git
 
 Updating /mnt/store/melpa/working/hl-block-mode/
 Checking out 768d92aa93c1894afb6f79feb5eb6b070ab24e4f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hl-block-mode/
+  to /tmp/hl-block-modeCeWzTm/hl-block-mode-20230521.2306
+    hl-block-mode.el -> hl-block-mode.el
+Created hl-block-mode-20230521.2306.tar containing:
+  hl-block-mode-20230521.2306/
+  hl-block-mode-20230521.2306/hl-block-mode-pkg.el
+  hl-block-mode-20230521.2306/hl-block-mode.el
+Built hl-block-mode in 3.851s, finished at 2023-06-10T22:23:14+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:10 packages/hl-block-mode-20230521.2306.el
+4.0K -rw-r--r-- 1 root root 417 Jun 10 22:23 packages/hl-block-mode-20230521.2306.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:23 packages/hl-block-mode-20230521.2306.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/kiwanami/emacs-deferred.git
 
 Updating /mnt/store/melpa/working/deferred/
 Checking out 2239671d94b38d92e9b28d4e12fd79814cfb9c16
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/deferred/
+  to /tmp/deferredhS28gp/deferred-20170901.1330
+    deferred.el -> deferred.el
+Created deferred-20170901.1330.tar containing:
+  deferred-20170901.1330/
+  deferred-20170901.1330/deferred-pkg.el
+  deferred-20170901.1330/deferred.el
+Built deferred in 3.589s, finished at 2023-06-11T00:12:39+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Jun  9 15:43 packages/deferred-20170901.1330.el
+4.0K -rw-r--r-- 1 root root 469 Jun 11 00:12 packages/deferred-20170901.1330.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:12 packages/deferred-20170901.1330.tar

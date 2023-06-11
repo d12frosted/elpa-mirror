@@ -4,4 +4,16 @@ Source:  https://github.com/Boruch-Baum/emacs-home-end.git
 
 Updating /mnt/store/melpa/working/home-end/
 Checking out 30676ceec0d4ad84038cd0d65ee45ae810ab185c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/home-end/
+  to /tmp/home-endcqK9HE/home-end-20190109.541
+    home-end.el -> home-end.el
+Created home-end-20190109.541.tar containing:
+  home-end-20190109.541/
+  home-end-20190109.541/home-end-pkg.el
+  home-end-20190109.541/home-end.el
+Built home-end in 2.864s, finished at 2023-06-10T22:23:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Jun  9 16:10 packages/home-end-20190109.541.el
+4.0K -rw-r--r-- 1 root root  514 Jun 10 22:23 packages/home-end-20190109.541.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:23 packages/home-end-20190109.541.tar

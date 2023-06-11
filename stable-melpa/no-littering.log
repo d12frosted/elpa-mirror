@@ -4,4 +4,16 @@ Source:  https://github.com/emacscollective/no-littering.git
 
 Updating /mnt/store/melpa/working/no-littering/
 Checking out 8f3934a965ce66f897593a8400cf426dc20e5bd5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/no-littering/
+  to /tmp/no-litteringyJWQoI/no-littering-20230606.1440
+    no-littering.el -> no-littering.el
+Created no-littering-20230606.1440.tar containing:
+  no-littering-20230606.1440/
+  no-littering-20230606.1440/no-littering-pkg.el
+  no-littering-20230606.1440/no-littering.el
+Built no-littering in 2.913s, finished at 2023-06-10T22:35:33+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 29K Jun  9 16:27 packages/no-littering-20230606.1440.el
+4.0K -rw-r--r-- 1 root root 471 Jun 10 22:35 packages/no-littering-20230606.1440.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:35 packages/no-littering-20230606.1440.tar

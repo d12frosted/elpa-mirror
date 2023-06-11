@@ -4,4 +4,16 @@ Source:  https://github.com/alphapapa/org-rifle.git
 
 Updating /mnt/store/melpa/working/helm-org-rifle/
 Checking out 74725b63e71b1c941f354e6c8a2cf8b5ee7ef563
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-org-rifle/
+  to /tmp/helm-org-riflepI46oF/helm-org-rifle-20221024.1943
+    helm-org-rifle.el -> helm-org-rifle.el
+Created helm-org-rifle-20221024.1943.tar containing:
+  helm-org-rifle-20221024.1943/
+  helm-org-rifle-20221024.1943/helm-org-rifle-pkg.el
+  helm-org-rifle-20221024.1943/helm-org-rifle.el
+Built helm-org-rifle in 3.607s, finished at 2023-06-11T00:30:20+0000
+ ✓ Success:
+ 84K -rw-r--r-- 1 root root 82K Jun  9 16:07 packages/helm-org-rifle-20221024.1943.el
+4.0K -rw-r--r-- 1 root root 528 Jun 11 00:30 packages/helm-org-rifle-20221024.1943.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 11 00:30 packages/helm-org-rifle-20221024.1943.tar

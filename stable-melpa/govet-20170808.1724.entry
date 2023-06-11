@@ -1,5 +1,5 @@
 (govet .
        [(20170808 1724)
-	nil "linter/problem finder for the Go source code" single
+	nil "linter/problem finder for the Go source code" tar
 	((:commit . "1b8c044aa856f4b62a682bc57494af19d22a6053")
 	 (:url . "https://godoc.org/golang.org/x/tools/cmd/vet"))])

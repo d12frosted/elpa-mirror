@@ -4,4 +4,16 @@ Source:  https://github.com/chyla/kill-file-path.git
 
 Updating /mnt/store/melpa/working/kill-file-path/
 Checking out 5dcbce69cbae17665216a32dd20f27de54c62972
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kill-file-path/
+  to /tmp/kill-file-pathjMTKjK/kill-file-path-20230306.1041
+    kill-file-path.el -> kill-file-path.el
+Created kill-file-path-20230306.1041.tar containing:
+  kill-file-path-20230306.1041/
+  kill-file-path-20230306.1041/kill-file-path-pkg.el
+  kill-file-path-20230306.1041/kill-file-path.el
+Built kill-file-path in 2.927s, finished at 2023-06-10T22:28:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  9 16:17 packages/kill-file-path-20230306.1041.el
+4.0K -rw-r--r-- 1 root root  423 Jun 10 22:28 packages/kill-file-path-20230306.1041.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:28 packages/kill-file-path-20230306.1041.tar

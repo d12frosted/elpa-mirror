@@ -4,4 +4,15 @@ Source:  https://gitlab.kitware.com/cmake/cmake.git
 
 Updating /mnt/store/melpa/working/cmake-mode/
 Checking out a2fc16510ce3f89e34bd802c808d10951cfc94f5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cmake-mode/
+  to /tmp/cmake-moderopv75/cmake-mode-20230422.828
+  ! Auxiliary/cmake-mode.el -> cmake-mode.el
+Created cmake-mode-20230422.828.tar containing:
+  cmake-mode-20230422.828/
+  cmake-mode-20230422.828/cmake-mode-pkg.el
+  cmake-mode-20230422.828/cmake-mode.el
+Built cmake-mode in 13.947s, finished at 2023-06-11T00:09:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 180 Jun 11 00:09 packages/cmake-mode-20230422.828.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:09 packages/cmake-mode-20230422.828.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/xcodebuild/nlinum-relative.git
 
 Updating /mnt/store/melpa/working/nlinum-relative/
 Checking out 5b9950c97ba79a6f0683e38b13da23f39e01031c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nlinum-relative/
+  to /tmp/nlinum-relativeKvz47N/nlinum-relative-20160526.708
+    nlinum-relative.el -> nlinum-relative.el
+Created nlinum-relative-20160526.708.tar containing:
+  nlinum-relative-20160526.708/
+  nlinum-relative-20160526.708/nlinum-relative-pkg.el
+  nlinum-relative-20160526.708/nlinum-relative.el
+Built nlinum-relative in 2.455s, finished at 2023-06-10T22:35:28+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jun  9 16:27 packages/nlinum-relative-20160526.708.el
+4.0K -rw-r--r-- 1 root root  422 Jun 10 22:35 packages/nlinum-relative-20160526.708.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:35 packages/nlinum-relative-20160526.708.tar

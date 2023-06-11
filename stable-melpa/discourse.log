@@ -4,4 +4,16 @@ Source:  https://github.com/lujun9972/discourse-api.git
 
 Updating /mnt/store/melpa/working/discourse/
 Checking out a86c7e608851e186fe12e892a573994f08c8e65e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/discourse/
+  to /tmp/discourseDwyE5X/discourse-20160911.819
+    discourse.el -> discourse.el
+Created discourse-20160911.819.tar containing:
+  discourse-20160911.819/
+  discourse-20160911.819/discourse-pkg.el
+  discourse-20160911.819/discourse.el
+Built discourse in 5.329s, finished at 2023-06-11T00:14:19+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.2K Jun  9 15:44 packages/discourse-20160911.819.el
+4.0K -rw-r--r-- 1 root root  481 Jun 11 00:14 packages/discourse-20160911.819.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:14 packages/discourse-20160911.819.tar

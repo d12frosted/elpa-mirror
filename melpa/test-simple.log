@@ -4,4 +4,16 @@ Source:  https://github.com/rocky/emacs-test-simple.git
 
 Updating /mnt/store/melpa/working/test-simple/
 Checking out 29c2c1ca7c240c8dfdba93dba6201e542a5a3b43
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/test-simple/
+  to /tmp/test-simpleJ8SRuc/test-simple-20200722.1121
+    test-simple.el -> test-simple.el
+Created test-simple-20200722.1121.tar containing:
+  test-simple-20200722.1121/
+  test-simple-20200722.1121/test-simple-pkg.el
+  test-simple-20200722.1121/test-simple.el
+Built test-simple in 3.108s, finished at 2023-06-10T22:54:01+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 16:54 packages/test-simple-20200722.1121.el
+4.0K -rw-r--r-- 1 root root 457 Jun 10 22:54 packages/test-simple-20200722.1121.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:54 packages/test-simple-20200722.1121.tar

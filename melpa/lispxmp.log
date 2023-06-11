@@ -4,4 +4,16 @@ Source:  https://github.com/rubikitch/lispxmp.git
 
 Updating /mnt/store/melpa/working/lispxmp/
 Checking out 7ad077b4ee91ce8a42f84eeddb9fc7ea4eac7814
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lispxmp/
+  to /tmp/lispxmp4QIRTN/lispxmp-20170926.23
+    lispxmp.el -> lispxmp.el
+Created lispxmp-20170926.23.tar containing:
+  lispxmp-20170926.23/
+  lispxmp-20170926.23/lispxmp-pkg.el
+  lispxmp-20170926.23/lispxmp.el
+Built lispxmp in 2.806s, finished at 2023-06-10T22:29:29+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:18 packages/lispxmp-20170926.23.el
+4.0K -rw-r--r-- 1 root root 436 Jun 10 22:29 packages/lispxmp-20170926.23.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:29 packages/lispxmp-20170926.23.tar

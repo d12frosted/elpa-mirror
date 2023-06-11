@@ -4,4 +4,16 @@ Source:  https://github.com/timvisher/sensitive.el.git
 
 Updating /mnt/store/melpa/working/sensitive/
 Checking out 69dd6125a41d8b55f4b6ba61daa4d1aa1f716fa8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sensitive/
+  to /tmp/sensitivelZXdUh/sensitive-20170818.1251
+    sensitive.el -> sensitive.el
+Created sensitive-20170818.1251.tar containing:
+  sensitive-20170818.1251/
+  sensitive-20170818.1251/sensitive-pkg.el
+  sensitive-20170818.1251/sensitive.el
+Built sensitive in 2.947s, finished at 2023-06-10T22:48:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jun  9 16:46 packages/sensitive-20170818.1251.el
+4.0K -rw-r--r-- 1 root root  439 Jun 10 22:48 packages/sensitive-20170818.1251.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:48 packages/sensitive-20170818.1251.tar

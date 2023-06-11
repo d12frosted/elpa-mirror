@@ -4,4 +4,16 @@ Source:  https://github.com/yyr/emacs-grads.git
 
 Updating /mnt/store/melpa/working/ctl-mode/
 Checking out 1a13051db21b999c7682a015b33a03096ff9d891
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ctl-mode/
+  to /tmp/ctl-modehRUaHQ/ctl-mode-20151202.1006
+    ctl-mode.el -> ctl-mode.el
+Created ctl-mode-20151202.1006.tar containing:
+  ctl-mode-20151202.1006/
+  ctl-mode-20151202.1006/ctl-mode-pkg.el
+  ctl-mode-20151202.1006/ctl-mode.el
+Built ctl-mode in 3.145s, finished at 2023-06-11T00:11:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jun  9 15:41 packages/ctl-mode-20151202.1006.el
+4.0K -rw-r--r-- 1 root root  383 Jun 11 00:11 packages/ctl-mode-20151202.1006.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:11 packages/ctl-mode-20151202.1006.tar

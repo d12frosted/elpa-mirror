@@ -4,4 +4,17 @@ Source:  https://github.com/ndw/xml-quotes.git
 
 Updating /mnt/store/melpa/working/xml-quotes/
 Checking out 8fc21e43b45f9a50b24642412f05afcc3a316a1f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xml-quotes/
+  to /tmp/xml-quotesLAi1YG/xml-quotes-20200301.1222
+    mail-signature-quotes.el -> mail-signature-quotes.el
+    xml-quotes.el -> xml-quotes.el
+Created xml-quotes-20200301.1222.tar containing:
+  xml-quotes-20200301.1222/
+  xml-quotes-20200301.1222/mail-signature-quotes.el
+  xml-quotes-20200301.1222/xml-quotes-pkg.el
+  xml-quotes-20200301.1222/xml-quotes.el
+Built xml-quotes in 3.659s, finished at 2023-06-10T22:59:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 427 Jun 10 22:59 packages/xml-quotes-20200301.1222.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:59 packages/xml-quotes-20200301.1222.tar

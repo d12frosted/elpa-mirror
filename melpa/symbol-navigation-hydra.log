@@ -4,4 +4,16 @@ Source:  https://github.com/bgwines/symbol-navigation-hydra.git
 
 Updating /mnt/store/melpa/working/symbol-navigation-hydra/
 Checking out b3b1257e676514d93cd2d71a10a485bf00b5375f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/symbol-navigation-hydra/
+  to /tmp/symbol-navigation-hydraDZZ26c/symbol-navigation-hydra-20211010.2353
+    symbol-navigation-hydra.el -> symbol-navigation-hydra.el
+Created symbol-navigation-hydra-20211010.2353.tar containing:
+  symbol-navigation-hydra-20211010.2353/
+  symbol-navigation-hydra-20211010.2353/symbol-navigation-hydra-pkg.el
+  symbol-navigation-hydra-20211010.2353/symbol-navigation-hydra.el
+Built symbol-navigation-hydra in 3.886s, finished at 2023-06-10T22:52:45+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 32K Jun  9 16:52 packages/symbol-navigation-hydra-20211010.2353.el
+4.0K -rw-r--r-- 1 root root 646 Jun 10 22:52 packages/symbol-navigation-hydra-20211010.2353.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:52 packages/symbol-navigation-hydra-20211010.2353.tar

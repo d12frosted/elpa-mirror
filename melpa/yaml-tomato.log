@@ -4,4 +4,16 @@ Source:  https://github.com/RadekMolenda/yaml-tomato.git
 
 Updating /mnt/store/melpa/working/yaml-tomato/
 Checking out 1272c502fac6ce6b0f8b7f8a9beb353f0b35e13c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yaml-tomato/
+  to /tmp/yaml-tomatoesrvGK/yaml-tomato-20151123.753
+    yaml-tomato.el -> yaml-tomato.el
+Created yaml-tomato-20151123.753.tar containing:
+  yaml-tomato-20151123.753/
+  yaml-tomato-20151123.753/yaml-tomato-pkg.el
+  yaml-tomato-20151123.753/yaml-tomato.el
+Built yaml-tomato in 4.599s, finished at 2023-06-10T22:59:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.8K Jun  9 17:02 packages/yaml-tomato-20151123.753.el
+4.0K -rw-r--r-- 1 root root  317 Jun 10 22:59 packages/yaml-tomato-20151123.753.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:59 packages/yaml-tomato-20151123.753.tar

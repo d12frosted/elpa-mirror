@@ -4,4 +4,16 @@ Source:  https://gitlab.com/mbunkus/mo-git-blame.git
 
 Updating /mnt/store/melpa/working/mo-git-blame/
 Checking out 254a675eb794cdbbdef9fa2b4b7bb510b70089c0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mo-git-blame/
+  to /tmp/mo-git-blamebTmttC/mo-git-blame-20160129.1759
+    mo-git-blame.el -> mo-git-blame.el
+Created mo-git-blame-20160129.1759.tar containing:
+  mo-git-blame-20160129.1759/
+  mo-git-blame-20160129.1759/mo-git-blame-pkg.el
+  mo-git-blame-20160129.1759/mo-git-blame.el
+Built mo-git-blame in 3.647s, finished at 2023-06-10T22:32:49+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 37K Jun  9 16:24 packages/mo-git-blame-20160129.1759.el
+4.0K -rw-r--r-- 1 root root 370 Jun 10 22:32 packages/mo-git-blame-20160129.1759.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:32 packages/mo-git-blame-20160129.1759.tar

@@ -4,4 +4,16 @@ Source:  https://git.flintfam.org/swf-projects/emacs-pushover.git
 
 Updating /mnt/store/melpa/working/pushover/
 Checking out bbe3ac8df3c532a72da4552615af960b8a577588
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pushover/
+  to /tmp/pushoversny2PY/pushover-20170818.2103
+    pushover.el -> pushover.el
+Created pushover-20170818.2103.tar containing:
+  pushover-20170818.2103/
+  pushover-20170818.2103/pushover-pkg.el
+  pushover-20170818.2103/pushover.el
+Built pushover in 3.522s, finished at 2023-06-10T22:44:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Jun  9 16:41 packages/pushover-20170818.2103.el
+4.0K -rw-r--r-- 1 root root  439 Jun 10 22:44 packages/pushover-20170818.2103.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:44 packages/pushover-20170818.2103.tar

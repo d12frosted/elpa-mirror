@@ -4,4 +4,17 @@ Source:  https://github.com/vspinu/math-symbol-lists.git
 
 Updating /mnt/store/melpa/working/math-symbol-lists/
 Checking out ac3eb053d3b576fcdd192b0ac6ad5090ea3a7079
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/math-symbol-lists/
+  to /tmp/math-symbol-listsq5wRhZ/math-symbol-lists-20220828.2047
+    math-symbol-lists.el -> math-symbol-lists.el
+    msl-build.el -> msl-build.el
+Created math-symbol-lists-20220828.2047.tar containing:
+  math-symbol-lists-20220828.2047/
+  math-symbol-lists-20220828.2047/math-symbol-lists-pkg.el
+  math-symbol-lists-20220828.2047/math-symbol-lists.el
+  math-symbol-lists-20220828.2047/msl-build.el
+Built math-symbol-lists in 3.059s, finished at 2023-06-10T22:31:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  486 Jun 10 22:31 packages/math-symbol-lists-20220828.2047.entry
+192K -rw-r--r-- 1 root root 190K Jun 10 22:31 packages/math-symbol-lists-20220828.2047.tar

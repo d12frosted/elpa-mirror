@@ -4,4 +4,16 @@ Source:  https://github.com/isamert/lab.el.git
 
 Updating /mnt/store/melpa/working/lab/
 Checking out 3e33e532aea48ffadde4e4e48efd26523d362a0d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lab/
+  to /tmp/labKSUVxC/lab-20230507.59
+    lab.el -> lab.el
+Created lab-20230507.59.tar containing:
+  lab-20230507.59/
+  lab-20230507.59/lab-pkg.el
+  lab-20230507.59/lab.el
+Built lab in 3.095s, finished at 2023-06-10T22:28:31+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 38K Jun  9 16:17 packages/lab-20230507.59.el
+4.0K -rw-r--r-- 1 root root 480 Jun 10 22:28 packages/lab-20230507.59.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:28 packages/lab-20230507.59.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/CestDiego/nand2tetris.el.git
 
 Updating /mnt/store/melpa/working/nand2tetris-assembler/
 Checking out fe37ee41367ceff6f7d7a472a5f80cf1285e1e01
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nand2tetris-assembler/
+  to /tmp/nand2tetris-assembler7q5Tlj/nand2tetris-assembler-20171201.1813
+    nand2tetris-assembler.el -> nand2tetris-assembler.el
+Created nand2tetris-assembler-20171201.1813.tar containing:
+  nand2tetris-assembler-20171201.1813/
+  nand2tetris-assembler-20171201.1813/nand2tetris-assembler-pkg.el
+  nand2tetris-assembler-20171201.1813/nand2tetris-assembler.el
+Built nand2tetris-assembler in 2.585s, finished at 2023-06-10T22:34:48+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:26 packages/nand2tetris-assembler-20171201.1813.el
+4.0K -rw-r--r-- 1 root root 499 Jun 10 22:34 packages/nand2tetris-assembler-20171201.1813.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:34 packages/nand2tetris-assembler-20171201.1813.tar

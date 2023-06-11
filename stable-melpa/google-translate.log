@@ -4,4 +4,25 @@ Source:  https://github.com/atykhonov/google-translate.git
 
 Updating /mnt/store/melpa/working/google-translate/
 Checking out e60dd6eeb9cdb931d9d8bfbefc29a48ef9a21bd9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/google-translate/
+  to /tmp/google-translatepEjOWh/google-translate-20220921.245
+    google-translate-backend.el -> google-translate-backend.el
+    google-translate-core-ui.el -> google-translate-core-ui.el
+    google-translate-core.el -> google-translate-core.el
+    google-translate-default-ui.el -> google-translate-default-ui.el
+    google-translate-smooth-ui.el -> google-translate-smooth-ui.el
+    google-translate.el -> google-translate.el
+Created google-translate-20220921.245.tar containing:
+  google-translate-20220921.245/
+  google-translate-20220921.245/google-translate-backend.el
+  google-translate-20220921.245/google-translate-core-ui.el
+  google-translate-20220921.245/google-translate-core.el
+  google-translate-20220921.245/google-translate-default-ui.el
+  google-translate-20220921.245/google-translate-pkg.el
+  google-translate-20220921.245/google-translate-smooth-ui.el
+  google-translate-20220921.245/google-translate.el
+Built google-translate in 4.053s, finished at 2023-06-11T00:27:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  506 Jun 11 00:27 packages/google-translate-20220921.245.entry
+100K -rw-r--r-- 1 root root 100K Jun 11 00:27 packages/google-translate-20220921.245.tar

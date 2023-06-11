@@ -4,4 +4,16 @@ Source:  https://github.com/gdonald/blackjack-el.git
 
 Updating /mnt/store/melpa/working/blackjack/
 Checking out b58e0fab096314177a21275f64143199b628d429
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/blackjack/
+  to /tmp/blackjackEiBQb4/blackjack-20230528.1152
+    blackjack.el -> blackjack.el
+Created blackjack-20230528.1152.tar containing:
+  blackjack-20230528.1152/
+  blackjack-20230528.1152/blackjack-pkg.el
+  blackjack-20230528.1152/blackjack.el
+Built blackjack in 3.263s, finished at 2023-06-11T00:05:46+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 45K Jun  9 15:32 packages/blackjack-20230528.1152.el
+4.0K -rw-r--r-- 1 root root 458 Jun 11 00:05 packages/blackjack-20230528.1152.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:05 packages/blackjack-20230528.1152.tar

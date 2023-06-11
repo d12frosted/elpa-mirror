@@ -4,4 +4,16 @@ Source:  https://github.com/redguardtoo/counsel-etags.git
 
 Updating /mnt/store/melpa/working/counsel-etags/
 Checking out a65c03d2a82bae2571993b77b980f2f27c138ecb
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/counsel-etags/
+  to /tmp/counsel-etagsWyn0Ql/counsel-etags-20221213.209
+    counsel-etags.el -> counsel-etags.el
+Created counsel-etags-20221213.209.tar containing:
+  counsel-etags-20221213.209/
+  counsel-etags-20221213.209/counsel-etags-pkg.el
+  counsel-etags-20221213.209/counsel-etags.el
+Built counsel-etags in 3.628s, finished at 2023-06-11T00:11:01+0000
+ ✓ Success:
+ 76K -rw-r--r-- 1 root root 73K Jun  9 15:40 packages/counsel-etags-20221213.209.el
+4.0K -rw-r--r-- 1 root root 499 Jun 11 00:11 packages/counsel-etags-20221213.209.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 11 00:11 packages/counsel-etags-20221213.209.tar

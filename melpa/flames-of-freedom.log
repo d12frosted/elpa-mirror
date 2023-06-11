@@ -4,4 +4,16 @@ Source:  https://github.com/wiz21b/FlamesOfFreedom.git
 
 Updating /mnt/store/melpa/working/flames-of-freedom/
 Checking out 5e47ff27cfa2f7c06081be2ffefe91a731efd012
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flames-of-freedom/
+  to /tmp/flames-of-freedomKwr7kB/flames-of-freedom-20191202.1637
+    flames-of-freedom.el -> flames-of-freedom.el
+Created flames-of-freedom-20191202.1637.tar containing:
+  flames-of-freedom-20191202.1637/
+  flames-of-freedom-20191202.1637/flames-of-freedom-pkg.el
+  flames-of-freedom-20191202.1637/flames-of-freedom.el
+Built flames-of-freedom in 3.569s, finished at 2023-06-11T00:22:02+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 15:55 packages/flames-of-freedom-20191202.1637.el
+4.0K -rw-r--r-- 1 root root 499 Jun 11 00:22 packages/flames-of-freedom-20191202.1637.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:22 packages/flames-of-freedom-20191202.1637.tar

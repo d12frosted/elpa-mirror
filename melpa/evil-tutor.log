@@ -4,4 +4,17 @@ Source:  https://github.com/syl20bnr/evil-tutor.git
 
 Updating /mnt/store/melpa/working/evil-tutor/
 Checking out 909273bac88b98a565f1b89bbb13d523b7edce2b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-tutor/
+  to /tmp/evil-tutore67Ehg/evil-tutor-20150103.653
+    evil-tutor.el -> evil-tutor.el
+    tutor.txt -> tutor.txt
+Created evil-tutor-20150103.653.tar containing:
+  evil-tutor-20150103.653/
+  evil-tutor-20150103.653/evil-tutor-pkg.el
+  evil-tutor-20150103.653/evil-tutor.el
+  evil-tutor-20150103.653/tutor.txt
+Built evil-tutor in 2.590s, finished at 2023-06-11T00:20:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 522 Jun 11 00:20 packages/evil-tutor-20150103.653.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:20 packages/evil-tutor-20150103.653.tar

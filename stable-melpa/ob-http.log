@@ -4,4 +4,17 @@ Source:  https://github.com/zweifisch/ob-http.git
 
 Updating /mnt/store/melpa/working/ob-http/
 Checking out b1428ea2a63bcb510e7382a1bf5fe82b19c104a7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-http/
+  to /tmp/ob-httpzgFDhP/ob-http-20180707.1448
+    ob-http-mode.el -> ob-http-mode.el
+    ob-http.el -> ob-http.el
+Created ob-http-20180707.1448.tar containing:
+  ob-http-20180707.1448/
+  ob-http-20180707.1448/ob-http-mode.el
+  ob-http-20180707.1448/ob-http-pkg.el
+  ob-http-20180707.1448/ob-http.el
+Built ob-http in 2.863s, finished at 2023-06-10T22:36:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 403 Jun 10 22:36 packages/ob-http-20180707.1448.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:36 packages/ob-http-20180707.1448.tar

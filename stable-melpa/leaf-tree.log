@@ -4,4 +4,16 @@ Source:  https://github.com/conao3/leaf-tree.el.git
 
 Updating /mnt/store/melpa/working/leaf-tree/
 Checking out 89c3b8842df067bba67663d309f43aa311acdccd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leaf-tree/
+  to /tmp/leaf-tree0ZpYrl/leaf-tree-20211105.19
+    leaf-tree.el -> leaf-tree.el
+Created leaf-tree-20211105.19.tar containing:
+  leaf-tree-20211105.19/
+  leaf-tree-20211105.19/leaf-tree-pkg.el
+  leaf-tree-20211105.19/leaf-tree.el
+Built leaf-tree in 3.238s, finished at 2023-06-10T22:28:54+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:18 packages/leaf-tree-20211105.19.el
+4.0K -rw-r--r-- 1 root root 508 Jun 10 22:28 packages/leaf-tree-20211105.19.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:28 packages/leaf-tree-20211105.19.tar

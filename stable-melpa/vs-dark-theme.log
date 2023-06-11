@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-vs/vs-dark-theme.git
 
 Updating /mnt/store/melpa/working/vs-dark-theme/
 Checking out 8906a2a593888eafc61c5c202260edaddd3e6c75
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vs-dark-theme/
+  to /tmp/vs-dark-thememTAtQh/vs-dark-theme-20230415.435
+    vs-dark-theme.el -> vs-dark-theme.el
+Created vs-dark-theme-20230415.435.tar containing:
+  vs-dark-theme-20230415.435/
+  vs-dark-theme-20230415.435/vs-dark-theme-pkg.el
+  vs-dark-theme-20230415.435/vs-dark-theme.el
+Built vs-dark-theme in 5.093s, finished at 2023-06-10T22:57:15+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:59 packages/vs-dark-theme-20230415.435.el
+4.0K -rw-r--r-- 1 root root 330 Jun 10 22:57 packages/vs-dark-theme-20230415.435.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:57 packages/vs-dark-theme-20230415.435.tar

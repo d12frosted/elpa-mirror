@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/dirtree.git
 
 Updating /mnt/store/melpa/working/dirtree/
 Checking out ba55f1e716e386fdd37cb8e7f48616e405dc7251
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dirtree/
+  to /tmp/dirtreendhyey/dirtree-20140129.832
+    dirtree.el -> dirtree.el
+Created dirtree-20140129.832.tar containing:
+  dirtree-20140129.832/
+  dirtree-20140129.832/dirtree-pkg.el
+  dirtree-20140129.832/dirtree.el
+Built dirtree in 4.788s, finished at 2023-06-11T00:14:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 15:44 packages/dirtree-20140129.832.el
+4.0K -rw-r--r-- 1 root root  347 Jun 11 00:14 packages/dirtree-20140129.832.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:14 packages/dirtree-20140129.832.tar

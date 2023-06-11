@@ -4,4 +4,19 @@ Source:  https://github.com/maurooaranda/ctune.git
 
 Updating /mnt/store/melpa/working/ctune/
 Checking out 3f7abc6e74d4e5954b476ba9a1dc652f96b10c05
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ctune/
+  to /tmp/ctunetnRKWj/ctune-20210205.1428
+    ctune.el -> ctune.el
+    ctune.texi -> ctune.texi
+Generating /tmp/ctunetnRKWj/ctune-20210205.1428/ctune.info
+Created ctune-20210205.1428.tar containing:
+  ctune-20210205.1428/
+  ctune-20210205.1428/ctune-pkg.el
+  ctune-20210205.1428/ctune.el
+  ctune-20210205.1428/ctune.info
+  ctune-20210205.1428/dir
+Built ctune in 6.673s, finished at 2023-06-11T00:11:41+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 416 Jun 11 00:11 packages/ctune-20210205.1428.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:11 packages/ctune-20210205.1428.tar

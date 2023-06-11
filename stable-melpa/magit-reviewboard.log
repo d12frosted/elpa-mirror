@@ -4,4 +4,16 @@ Source:  https://github.com/jtamagnan/magit-reviewboard.git
 
 Updating /mnt/store/melpa/working/magit-reviewboard/
 Checking out aceedff88921f1dfef8a6b2fb18fe316fb7223a8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magit-reviewboard/
+  to /tmp/magit-reviewboardFnZD3W/magit-reviewboard-20200727.1748
+    magit-reviewboard.el -> magit-reviewboard.el
+Created magit-reviewboard-20200727.1748.tar containing:
+  magit-reviewboard-20200727.1748/
+  magit-reviewboard-20200727.1748/magit-reviewboard-pkg.el
+  magit-reviewboard-20200727.1748/magit-reviewboard.el
+Built magit-reviewboard in 2.889s, finished at 2023-06-10T22:31:00+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:20 packages/magit-reviewboard-20200727.1748.el
+4.0K -rw-r--r-- 1 root root 583 Jun 10 22:31 packages/magit-reviewboard-20200727.1748.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:31 packages/magit-reviewboard-20200727.1748.tar

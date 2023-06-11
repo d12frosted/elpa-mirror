@@ -4,4 +4,16 @@ Source:  https://github.com/kenranunderscore/emacs-naga-theme.git
 
 Updating /mnt/store/melpa/working/naga-theme/
 Checking out 5cf1ecaa052d3bdaee93ad5e98bb4f5346404b3f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/naga-theme/
+  to /tmp/naga-theme3P7AP7/naga-theme-20230418.1210
+    naga-theme.el -> naga-theme.el
+Created naga-theme-20230418.1210.tar containing:
+  naga-theme-20230418.1210/
+  naga-theme-20230418.1210/naga-theme-pkg.el
+  naga-theme-20230418.1210/naga-theme.el
+Built naga-theme in 4.331s, finished at 2023-06-10T22:34:39+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 16:26 packages/naga-theme-20230418.1210.el
+4.0K -rw-r--r-- 1 root root 521 Jun 10 22:34 packages/naga-theme-20230418.1210.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:34 packages/naga-theme-20230418.1210.tar

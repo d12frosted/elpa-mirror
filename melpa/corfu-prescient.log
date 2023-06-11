@@ -4,4 +4,16 @@ Source:  https://github.com/radian-software/prescient.el.git
 
 Updating /mnt/store/melpa/working/corfu-prescient/
 Checking out 72b023f5fc1ae2bbf2f51f1786cc012d40671bf4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/corfu-prescient/
+  to /tmp/corfu-prescientEIL0Xc/corfu-prescient-20221216.112
+    corfu-prescient.el -> corfu-prescient.el
+Created corfu-prescient-20221216.112.tar containing:
+  corfu-prescient-20221216.112/
+  corfu-prescient-20221216.112/corfu-prescient-pkg.el
+  corfu-prescient-20221216.112/corfu-prescient.el
+Built corfu-prescient in 3.890s, finished at 2023-06-11T00:10:53+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K Jun  9 15:39 packages/corfu-prescient-20221216.112.el
+4.0K -rw-r--r-- 1 root root  525 Jun 11 00:10 packages/corfu-prescient-20221216.112.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:10 packages/corfu-prescient-20221216.112.tar

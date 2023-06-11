@@ -4,4 +4,16 @@ Source:  https://github.com/noctuid/evil-textobj-column.git
 
 Updating /mnt/store/melpa/working/evil-textobj-column/
 Checking out 835d7036d0bc9a6e44fc9b7c54ccf2a7c01428cd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-textobj-column/
+  to /tmp/evil-textobj-columncQZ1da/evil-textobj-column-20170905.1905
+    evil-textobj-column.el -> evil-textobj-column.el
+Created evil-textobj-column-20170905.1905.tar containing:
+  evil-textobj-column-20170905.1905/
+  evil-textobj-column-20170905.1905/evil-textobj-column-pkg.el
+  evil-textobj-column-20170905.1905/evil-textobj-column.el
+Built evil-textobj-column in 3.319s, finished at 2023-06-11T00:20:27+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:53 packages/evil-textobj-column-20170905.1905.el
+4.0K -rw-r--r-- 1 root root 545 Jun 11 00:20 packages/evil-textobj-column-20170905.1905.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:20 packages/evil-textobj-column-20170905.1905.tar

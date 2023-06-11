@@ -4,4 +4,23 @@ Source:  https://github.com/Lautaro-Garcia/counsel-spotify.git
 
 Updating /mnt/store/melpa/working/counsel-spotify/
 Checking out 2743ad52a9def53534fd505397fbe1ac49e53015
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/counsel-spotify/
+  to /tmp/counsel-spotify2zCNRx/counsel-spotify-20200818.2055
+    counsel-spotify-backends.el -> counsel-spotify-backends.el
+    counsel-spotify-messages.el -> counsel-spotify-messages.el
+    counsel-spotify-notifications.el -> counsel-spotify-notifications.el
+    counsel-spotify-search.el -> counsel-spotify-search.el
+    counsel-spotify.el -> counsel-spotify.el
+Created counsel-spotify-20200818.2055.tar containing:
+  counsel-spotify-20200818.2055/
+  counsel-spotify-20200818.2055/counsel-spotify-backends.el
+  counsel-spotify-20200818.2055/counsel-spotify-messages.el
+  counsel-spotify-20200818.2055/counsel-spotify-notifications.el
+  counsel-spotify-20200818.2055/counsel-spotify-pkg.el
+  counsel-spotify-20200818.2055/counsel-spotify-search.el
+  counsel-spotify-20200818.2055/counsel-spotify.el
+Built counsel-spotify in 3.705s, finished at 2023-06-11T00:11:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 513 Jun 11 00:11 packages/counsel-spotify-20200818.2055.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:11 packages/counsel-spotify-20200818.2055.tar

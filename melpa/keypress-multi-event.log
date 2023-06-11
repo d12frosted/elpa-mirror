@@ -4,4 +4,16 @@ Source:  https://github.com/Boruch-Baum/emacs-keypress-multi-event.git
 
 Updating /mnt/store/melpa/working/keypress-multi-event/
 Checking out 9de65a27e10d8ae47aa6d28c02c3eb82ee8c0b2e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/keypress-multi-event/
+  to /tmp/keypress-multi-event78XQtA/keypress-multi-event-20190109.530
+    keypress-multi-event.el -> keypress-multi-event.el
+Created keypress-multi-event-20190109.530.tar containing:
+  keypress-multi-event-20190109.530/
+  keypress-multi-event-20190109.530/keypress-multi-event-pkg.el
+  keypress-multi-event-20190109.530/keypress-multi-event.el
+Built keypress-multi-event in 2.605s, finished at 2023-06-10T22:27:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Jun  9 16:16 packages/keypress-multi-event-20190109.530.el
+4.0K -rw-r--r-- 1 root root  515 Jun 10 22:27 packages/keypress-multi-event-20190109.530.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:27 packages/keypress-multi-event-20190109.530.tar

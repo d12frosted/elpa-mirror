@@ -4,4 +4,21 @@ Source:  https://github.com/emacsfodder/emacs-theme-darktooth.git
 
 Updating /mnt/store/melpa/working/darktooth-theme/
 Checking out fd3df73a4d937fa9e12f0b18acb009a9d40f245e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/darktooth-theme/
+  to /tmp/darktooth-themeQdIdnT/darktooth-theme-20221014.1418
+    darktooth-dark-theme.el -> darktooth-dark-theme.el
+    darktooth-darker-theme.el -> darktooth-darker-theme.el
+    darktooth-theme.el -> darktooth-theme.el
+    darktooth.el -> darktooth.el
+Created darktooth-theme-20221014.1418.tar containing:
+  darktooth-theme-20221014.1418/
+  darktooth-theme-20221014.1418/darktooth-dark-theme.el
+  darktooth-theme-20221014.1418/darktooth-darker-theme.el
+  darktooth-theme-20221014.1418/darktooth-theme-pkg.el
+  darktooth-theme-20221014.1418/darktooth-theme.el
+  darktooth-theme-20221014.1418/darktooth.el
+Built darktooth-theme in 3.910s, finished at 2023-06-11T00:12:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  269 Jun 11 00:12 packages/darktooth-theme-20221014.1418.entry
+112K -rw-r--r-- 1 root root 110K Jun 11 00:12 packages/darktooth-theme-20221014.1418.tar

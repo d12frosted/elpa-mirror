@@ -1,6 +1,6 @@
 (replace-from-region .
 		     [(20170227 2316)
-		      nil "Replace commands whose query is from region" single
+		      nil "Replace commands whose query is from region" tar
 		      ((:commit . "dc9318b9b2822da7b00ecc34d1dc965c8f96c9bb")
 		       (:authors
 			("rubikitch" . "rubikitch@ruby-lang.org"))

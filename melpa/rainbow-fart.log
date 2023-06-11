@@ -4,4 +4,73 @@ Source:  https://repo.or.cz/emacs-rainbow-fart.git
 
 Updating /mnt/store/melpa/working/rainbow-fart/
 Checking out 6504424707b6e9101dfbd9fdd4b7b963b9a4f323
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rainbow-fart/
+  to /tmp/rainbow-fartN1huq2/rainbow-fart-20220427.2227
+    rainbow-fart.el -> rainbow-fart.el
+    voices => voices
+Created rainbow-fart-20220427.2227.tar containing:
+  rainbow-fart-20220427.2227/
+  rainbow-fart-20220427.2227/rainbow-fart-pkg.el
+  rainbow-fart-20220427.2227/rainbow-fart.el
+  rainbow-fart-20220427.2227/voices/
+  rainbow-fart-20220427.2227/voices/JustKowalski/
+  rainbow-fart-20220427.2227/voices/JustKowalski/README.md
+  rainbow-fart-20220427.2227/voices/JustKowalski/arrow_function_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/avatar-dark.jpg
+  rainbow-fart-20220427.2227/voices/JustKowalski/avatar.jpg
+  rainbow-fart-20220427.2227/voices/JustKowalski/await_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/await_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/await_03.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/catch_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/catch_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/catch_03.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/contributes.json
+  rainbow-fart-20220427.2227/voices/JustKowalski/for_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/for_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/for_03.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/fuck_pm_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/fuck_pm_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/function.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/function_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/function_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/function_03.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/if_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/if_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/if_03.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/import_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/import_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/manifest.json
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_before_noon_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_before_noon_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_before_noon_03.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_before_noon_04.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_each_hour_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_each_hour_02.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_each_hour_03.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_each_hour_04.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_each_hour_05.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_evening_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_midnight_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_morning_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/time_noon_01.mp3
+  rainbow-fart-20220427.2227/voices/JustKowalski/v_html_01.mp3
+  rainbow-fart-20220427.2227/voices/built-in-voice-english/
+  rainbow-fart-20220427.2227/voices/built-in-voice-english/arrow_function_01.mp3
+  rainbow-fart-20220427.2227/voices/built-in-voice-english/catch_01.mp3
+  rainbow-fart-20220427.2227/voices/built-in-voice-english/contributes.json
+  rainbow-fart-20220427.2227/voices/built-in-voice-english/function_01.mp3
+  rainbow-fart-20220427.2227/voices/built-in-voice-english/function_02.mp3
+  rainbow-fart-20220427.2227/voices/built-in-voice-english/function_03.mp3
+  rainbow-fart-20220427.2227/voices/built-in-voice-english/manifest.json
+  rainbow-fart-20220427.2227/voices/sounds/
+  rainbow-fart-20220427.2227/voices/sounds/ajax.mp3
+  rainbow-fart-20220427.2227/voices/sounds/alert.mp3
+  rainbow-fart-20220427.2227/voices/sounds/document.mp3
+  rainbow-fart-20220427.2227/voices/sounds/duang.mp3
+  rainbow-fart-20220427.2227/voices/sounds/function.mp3
+  rainbow-fart-20220427.2227/voices/sounds/vue.mp3
+Built rainbow-fart in 3.870s, finished at 2023-06-10T22:45:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  302 Jun 10 22:45 packages/rainbow-fart-20220427.2227.entry
+3.4M -rw-r--r-- 1 root root 3.4M Jun 10 22:45 packages/rainbow-fart-20220427.2227.tar

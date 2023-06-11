@@ -4,4 +4,16 @@ Source:  https://github.com/rpdillon/todotxt.el.git
 
 Updating /mnt/store/melpa/working/todotxt/
 Checking out ddb25fb931b4bbc1af14c4c712d412af454794c4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/todotxt/
+  to /tmp/todotxtIYz51y/todotxt-20220204.1903
+    todotxt.el -> todotxt.el
+Created todotxt-20220204.1903.tar containing:
+  todotxt-20220204.1903/
+  todotxt-20220204.1903/todotxt-pkg.el
+  todotxt-20220204.1903/todotxt.el
+Built todotxt in 2.695s, finished at 2023-06-10T22:54:39+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Jun  9 16:55 packages/todotxt-20220204.1903.el
+4.0K -rw-r--r-- 1 root root 435 Jun 10 22:54 packages/todotxt-20220204.1903.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:54 packages/todotxt-20220204.1903.tar

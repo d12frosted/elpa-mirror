@@ -4,4 +4,16 @@ Source:  https://github.com/hcl-emacs/hcl-mode.git
 
 Updating /mnt/store/melpa/working/hcl-mode/
 Checking out 35784854efd29fa8c9fe827654d747a2ace5cb19
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hcl-mode/
+  to /tmp/hcl-modeYEMJl2/hcl-mode-20230302.1029
+    hcl-mode.el -> hcl-mode.el
+Created hcl-mode-20230302.1029.tar containing:
+  hcl-mode-20230302.1029/
+  hcl-mode-20230302.1029/hcl-mode-pkg.el
+  hcl-mode-20230302.1029/hcl-mode.el
+Built hcl-mode in 3.048s, finished at 2023-06-10T22:20:41+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jun  9 16:05 packages/hcl-mode-20230302.1029.el
+4.0K -rw-r--r-- 1 root root  404 Jun 10 22:20 packages/hcl-mode-20230302.1029.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:20 packages/hcl-mode-20230302.1029.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/creichert/ido-vertical-mode.el.git
 
 Updating /mnt/store/melpa/working/ido-vertical-mode/
 Checking out b1659e967da0687abceca733b389ace24004fa66
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ido-vertical-mode/
+  to /tmp/ido-vertical-mode54JXat/ido-vertical-mode-20210205.436
+    ido-vertical-mode.el -> ido-vertical-mode.el
+Created ido-vertical-mode-20210205.436.tar containing:
+  ido-vertical-mode-20210205.436/
+  ido-vertical-mode-20210205.436/ido-vertical-mode-pkg.el
+  ido-vertical-mode-20210205.436/ido-vertical-mode.el
+Built ido-vertical-mode in 3.091s, finished at 2023-06-10T22:24:17+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  9 16:11 packages/ido-vertical-mode-20210205.436.el
+4.0K -rw-r--r-- 1 root root 481 Jun 10 22:24 packages/ido-vertical-mode-20210205.436.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:24 packages/ido-vertical-mode-20210205.436.tar

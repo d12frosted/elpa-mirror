@@ -4,4 +4,16 @@ Source:  https://github.com/tarsius/keycast.git
 
 Updating /mnt/store/melpa/working/keycast/
 Checking out cbdedd8a1ca15c43888e9dcf06e9f1f49c04727c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/keycast/
+  to /tmp/keycast2jLg4R/keycast-20230513.1829
+    keycast.el -> keycast.el
+Created keycast-20230513.1829.tar containing:
+  keycast-20230513.1829/
+  keycast-20230513.1829/keycast-pkg.el
+  keycast-20230513.1829/keycast.el
+Built keycast in 2.972s, finished at 2023-06-10T22:27:50+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Jun  9 16:16 packages/keycast-20230513.1829.el
+4.0K -rw-r--r-- 1 root root 454 Jun 10 22:27 packages/keycast-20230513.1829.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:27 packages/keycast-20230513.1829.tar

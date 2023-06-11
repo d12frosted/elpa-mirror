@@ -4,4 +4,16 @@ Source:  https://github.com/emacsattic/ido-migemo.git
 
 Updating /mnt/store/melpa/working/ido-migemo/
 Checking out 09a2cc175b500cab7655a25ffc982e78d46ca669
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ido-migemo/
+  to /tmp/ido-migemoxS0dp9/ido-migemo-20191017.1919
+    ido-migemo.el -> ido-migemo.el
+Created ido-migemo-20191017.1919.tar containing:
+  ido-migemo-20191017.1919/
+  ido-migemo-20191017.1919/ido-migemo-pkg.el
+  ido-migemo-20191017.1919/ido-migemo.el
+Built ido-migemo in 3.321s, finished at 2023-06-10T22:24:14+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jun  9 16:11 packages/ido-migemo-20191017.1919.el
+4.0K -rw-r--r-- 1 root root  385 Jun 10 22:24 packages/ido-migemo-20191017.1919.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:24 packages/ido-migemo-20191017.1919.tar

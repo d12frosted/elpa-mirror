@@ -4,4 +4,16 @@ Source:  https://github.com/benzanol/echo-bar.el.git
 
 Updating /mnt/store/melpa/working/echo-bar/
 Checking out 03cae6d045636948d8b47979d85774e39556f9e1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/echo-bar/
+  to /tmp/echo-bars3COjv/echo-bar-20230209.1350
+    echo-bar.el -> echo-bar.el
+Created echo-bar-20230209.1350.tar containing:
+  echo-bar-20230209.1350/
+  echo-bar-20230209.1350/echo-bar-pkg.el
+  echo-bar-20230209.1350/echo-bar.el
+Built echo-bar in 3.076s, finished at 2023-06-11T00:15:45+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.5K Jun  9 15:47 packages/echo-bar-20230209.1350.el
+4.0K -rw-r--r-- 1 root root  422 Jun 11 00:15 packages/echo-bar-20230209.1350.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:15 packages/echo-bar-20230209.1350.tar

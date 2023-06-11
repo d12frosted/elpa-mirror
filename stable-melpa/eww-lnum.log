@@ -4,4 +4,16 @@ Source:  https://github.com/m00natic/eww-lnum.git
 
 Updating /mnt/store/melpa/working/eww-lnum/
 Checking out 4b0ecec769919ecb05ca4fb15ec51911ba589929
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eww-lnum/
+  to /tmp/eww-lnum9lBJoY/eww-lnum-20150102.1512
+    eww-lnum.el -> eww-lnum.el
+Created eww-lnum-20150102.1512.tar containing:
+  eww-lnum-20150102.1512/
+  eww-lnum-20150102.1512/eww-lnum-pkg.el
+  eww-lnum-20150102.1512/eww-lnum.el
+Built eww-lnum in 3.767s, finished at 2023-06-11T00:20:43+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 33K Jun  9 15:53 packages/eww-lnum-20150102.1512.el
+4.0K -rw-r--r-- 1 root root 444 Jun 11 00:20 packages/eww-lnum-20150102.1512.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:20 packages/eww-lnum-20150102.1512.tar

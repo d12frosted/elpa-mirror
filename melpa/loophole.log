@@ -4,4 +4,16 @@ Source:  https://github.com/0x60df/loophole.git
 
 Updating /mnt/store/melpa/working/loophole/
 Checking out dadc3fadc68b13501c4dbe89109f30deb0d3441a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/loophole/
+  to /tmp/loopholea7PVCa/loophole-20221126.1556
+    loophole.el -> loophole.el
+Created loophole-20221126.1556.tar containing:
+  loophole-20221126.1556/
+  loophole-20221126.1556/loophole-pkg.el
+  loophole-20221126.1556/loophole.el
+Built loophole in 4.845s, finished at 2023-06-10T22:30:07+0000
+ ✓ Success:
+240K -rw-r--r-- 1 root root 239K Jun  9 16:19 packages/loophole-20221126.1556.el
+4.0K -rw-r--r-- 1 root root  405 Jun 10 22:30 packages/loophole-20221126.1556.entry
+252K -rw-r--r-- 1 root root 250K Jun 10 22:30 packages/loophole-20221126.1556.tar

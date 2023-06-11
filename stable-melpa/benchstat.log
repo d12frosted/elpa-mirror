@@ -4,4 +4,16 @@ Source:  https://github.com/quasilyte/benchstat.el.git
 
 Updating /mnt/store/melpa/working/benchstat/
 Checking out fee86f521f22ef0f99564903d63e2023b591fc7f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/benchstat/
+  to /tmp/benchstatqW5Egy/benchstat-20171014.312
+    benchstat.el -> benchstat.el
+Created benchstat-20171014.312.tar containing:
+  benchstat-20171014.312/
+  benchstat-20171014.312/benchstat-pkg.el
+  benchstat-20171014.312/benchstat.el
+Built benchstat in 3.362s, finished at 2023-06-11T00:05:19+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 8.0K Jun  9 15:31 packages/benchstat-20171014.312.el
+4.0K -rw-r--r-- 1 root root  436 Jun 11 00:05 packages/benchstat-20171014.312.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:05 packages/benchstat-20171014.312.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/mpdel/ivy-mpdel.git
 
 Updating /mnt/store/melpa/working/ivy-mpdel/
 Checking out a42dcc943914c71975c115195d38c739f25e475c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-mpdel/
+  to /tmp/ivy-mpdelxF27In/ivy-mpdel-20190428.920
+    ivy-mpdel.el -> ivy-mpdel.el
+Created ivy-mpdel-20190428.920.tar containing:
+  ivy-mpdel-20190428.920/
+  ivy-mpdel-20190428.920/ivy-mpdel-pkg.el
+  ivy-mpdel-20190428.920/ivy-mpdel.el
+Built ivy-mpdel in 3.330s, finished at 2023-06-10T22:25:44+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  9 16:14 packages/ivy-mpdel-20190428.920.el
+4.0K -rw-r--r-- 1 root root  532 Jun 10 22:25 packages/ivy-mpdel-20190428.920.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/ivy-mpdel-20190428.920.tar

@@ -4,4 +4,17 @@ Source:  https://github.com/krzysztof-magosa/company-ansible.git
 
 Updating /mnt/store/melpa/working/company-ansible/
 Checking out 79dd421b161efa49fbdffad57fa40edb41f484a3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-ansible/
+  to /tmp/company-ansibleZKaMHu/company-ansible-20200306.1441
+    company-ansible-keywords.el -> company-ansible-keywords.el
+    company-ansible.el -> company-ansible.el
+Created company-ansible-20200306.1441.tar containing:
+  company-ansible-20200306.1441/
+  company-ansible-20200306.1441/company-ansible-keywords.el
+  company-ansible-20200306.1441/company-ansible-pkg.el
+  company-ansible-20200306.1441/company-ansible.el
+Built company-ansible in 3.286s, finished at 2023-06-11T00:09:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  495 Jun 11 00:09 packages/company-ansible-20200306.1441.entry
+352K -rw-r--r-- 1 root root 350K Jun 11 00:09 packages/company-ansible-20200306.1441.tar

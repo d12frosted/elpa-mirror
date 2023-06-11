@@ -4,4 +4,16 @@ Source:  https://github.com/aki2o/emacs-bts.git
 
 Updating /mnt/store/melpa/working/bts/
 Checking out df42d58a36447697f93b56e69f5e700b2baef1f9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bts/
+  to /tmp/btsAllORZ/bts-20151109.1333
+    bts.el -> bts.el
+Created bts-20151109.1333.tar containing:
+  bts-20151109.1333/
+  bts-20151109.1333/bts-pkg.el
+  bts-20151109.1333/bts.el
+Built bts in 3.985s, finished at 2023-06-11T00:06:22+0000
+ ✓ Success:
+208K -rw-r--r-- 1 root root 206K Jun  9 15:33 packages/bts-20151109.1333.el
+4.0K -rw-r--r-- 1 root root  583 Jun 11 00:06 packages/bts-20151109.1333.entry
+212K -rw-r--r-- 1 root root 210K Jun 11 00:06 packages/bts-20151109.1333.tar

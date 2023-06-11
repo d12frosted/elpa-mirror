@@ -4,4 +4,16 @@ Source:  https://github.com/ahendriksen/ob-tmux.git
 
 Updating /mnt/store/melpa/working/ob-tmux/
 Checking out e672ca5a9534b9f33ed7aa5cd21b88189ccc5697
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-tmux/
+  to /tmp/ob-tmuxx5rIp0/ob-tmux-20221005.2025
+    ob-tmux.el -> ob-tmux.el
+Created ob-tmux-20221005.2025.tar containing:
+  ob-tmux-20221005.2025/
+  ob-tmux-20221005.2025/ob-tmux-pkg.el
+  ob-tmux-20221005.2025/ob-tmux.el
+Built ob-tmux in 3.022s, finished at 2023-06-10T22:36:45+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 16:30 packages/ob-tmux-20221005.2025.el
+4.0K -rw-r--r-- 1 root root 453 Jun 10 22:36 packages/ob-tmux-20221005.2025.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:36 packages/ob-tmux-20221005.2025.tar

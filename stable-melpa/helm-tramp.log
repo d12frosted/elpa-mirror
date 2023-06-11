@@ -4,4 +4,16 @@ Source:  https://github.com/masasam/emacs-helm-tramp.git
 
 Updating /mnt/store/melpa/working/helm-tramp/
 Checking out 10711393c05272112e1585dca87ebeb0ea5b114d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-tramp/
+  to /tmp/helm-trampLOjMoh/helm-tramp-20221228.1444
+    helm-tramp.el -> helm-tramp.el
+Created helm-tramp-20221228.1444.tar containing:
+  helm-tramp-20221228.1444/
+  helm-tramp-20221228.1444/helm-tramp-pkg.el
+  helm-tramp-20221228.1444/helm-tramp.el
+Built helm-tramp in 2.852s, finished at 2023-06-10T22:22:30+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Jun  9 16:08 packages/helm-tramp-20221228.1444.el
+4.0K -rw-r--r-- 1 root root  415 Jun 10 22:22 packages/helm-tramp-20221228.1444.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:22 packages/helm-tramp-20221228.1444.tar

@@ -4,4 +4,32 @@ Source:  https://github.com/cpitclaudel/biblio.el.git
 
 Updating /mnt/store/melpa/working/biblio/
 Checking out ee52f6cda82ea6fbc3b400e7b12132595cc0374c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/biblio/
+  to /tmp/biblio3mjEgw/biblio-20230202.1721
+    biblio-arxiv.el -> biblio-arxiv.el
+    biblio-crossref.el -> biblio-crossref.el
+    biblio-dblp.el -> biblio-dblp.el
+    biblio-dissemin.el -> biblio-dissemin.el
+    biblio-doi.el -> biblio-doi.el
+    biblio-download.el -> biblio-download.el
+    biblio-hal.el -> biblio-hal.el
+    biblio-ieee.el -> biblio-ieee.el
+    biblio-pkg.el -> biblio-pkg.el
+    biblio.el -> biblio.el
+Created biblio-20230202.1721.tar containing:
+  biblio-20230202.1721/
+  biblio-20230202.1721/biblio-arxiv.el
+  biblio-20230202.1721/biblio-crossref.el
+  biblio-20230202.1721/biblio-dblp.el
+  biblio-20230202.1721/biblio-dissemin.el
+  biblio-20230202.1721/biblio-doi.el
+  biblio-20230202.1721/biblio-download.el
+  biblio-20230202.1721/biblio-hal.el
+  biblio-20230202.1721/biblio-ieee.el
+  biblio-20230202.1721/biblio-pkg.el
+  biblio-20230202.1721/biblio.el
+Built biblio in 4.081s, finished at 2023-06-11T00:05:28+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 501 Jun 11 00:05 packages/biblio-20230202.1721.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:05 packages/biblio-20230202.1721.tar

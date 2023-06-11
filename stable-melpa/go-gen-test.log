@@ -4,4 +4,16 @@ Source:  https://github.com/s-kostyaev/go-gen-test.git
 
 Updating /mnt/store/melpa/working/go-gen-test/
 Checking out f84f4177af7fcbe10ce2116d5417ad5f0485034b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/go-gen-test/
+  to /tmp/go-gen-testSYbfcy/go-gen-test-20230127.1422
+    go-gen-test.el -> go-gen-test.el
+Created go-gen-test-20230127.1422.tar containing:
+  go-gen-test-20230127.1422/
+  go-gen-test-20230127.1422/go-gen-test-pkg.el
+  go-gen-test-20230127.1422/go-gen-test.el
+Built go-gen-test in 4.309s, finished at 2023-06-11T00:26:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jun  9 16:02 packages/go-gen-test-20230127.1422.el
+4.0K -rw-r--r-- 1 root root  453 Jun 11 00:26 packages/go-gen-test-20230127.1422.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:26 packages/go-gen-test-20230127.1422.tar

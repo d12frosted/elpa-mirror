@@ -4,4 +4,16 @@ Source:  https://github.com/nlamirault/emacs-gitlab.git
 
 Updating /mnt/store/melpa/working/ivy-gitlab/
 Checking out 8c2324c02119500f094c2f92dfaba4c9977ce1ba
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-gitlab/
+  to /tmp/ivy-gitlabLjwYdC/ivy-gitlab-20181228.826
+    ivy-gitlab.el -> ivy-gitlab.el
+Created ivy-gitlab-20181228.826.tar containing:
+  ivy-gitlab-20181228.826/
+  ivy-gitlab-20181228.826/ivy-gitlab-pkg.el
+  ivy-gitlab-20181228.826/ivy-gitlab.el
+Built ivy-gitlab in 3.959s, finished at 2023-06-10T22:25:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  9 16:13 packages/ivy-gitlab-20181228.826.el
+4.0K -rw-r--r-- 1 root root  585 Jun 10 22:25 packages/ivy-gitlab-20181228.826.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/ivy-gitlab-20181228.826.tar

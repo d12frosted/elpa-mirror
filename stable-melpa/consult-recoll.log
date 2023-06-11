@@ -4,4 +4,16 @@ Source:  https://codeberg.org/jao/consult-recoll.git
 
 Updating /mnt/store/melpa/working/consult-recoll/
 Checking out 8d506e2d01f46fc6b0a0825efb90b062ad6fe3d4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-recoll/
+  to /tmp/consult-recollYncvfg/consult-recoll-20221014.2002
+    consult-recoll.el -> consult-recoll.el
+Created consult-recoll-20221014.2002.tar containing:
+  consult-recoll-20221014.2002/
+  consult-recoll-20221014.2002/consult-recoll-pkg.el
+  consult-recoll-20221014.2002/consult-recoll.el
+Built consult-recoll in 4.313s, finished at 2023-06-11T00:10:44+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 15:39 packages/consult-recoll-20221014.2002.el
+4.0K -rw-r--r-- 1 root root 457 Jun 11 00:10 packages/consult-recoll-20221014.2002.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:10 packages/consult-recoll-20221014.2002.tar

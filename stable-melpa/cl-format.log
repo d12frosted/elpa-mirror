@@ -4,4 +4,22 @@ Source:  https://gitlab.com/akater/elisp-cl-format.git
 
 Updating /mnt/store/melpa/working/cl-format/
 Checking out ad1a4fb6bc91e65ea90bcf6792cc5a1be5380f9d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cl-format/
+  to /tmp/cl-formatsrIOgd/cl-format-20210831.530
+    cl-format-builtins.el -> cl-format-builtins.el
+    cl-format-def.el -> cl-format-def.el
+    cl-format-pkg.el -> cl-format-pkg.el
+    cl-format.el -> cl-format.el
+    clisp-format.el -> clisp-format.el
+Created cl-format-20210831.530.tar containing:
+  cl-format-20210831.530/
+  cl-format-20210831.530/cl-format-builtins.el
+  cl-format-20210831.530/cl-format-def.el
+  cl-format-20210831.530/cl-format-pkg.el
+  cl-format-20210831.530/cl-format.el
+  cl-format-20210831.530/clisp-format.el
+Built cl-format in 3.367s, finished at 2023-06-11T00:08:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  344 Jun 11 00:08 packages/cl-format-20210831.530.entry
+152K -rw-r--r-- 1 root root 150K Jun 11 00:08 packages/cl-format-20210831.530.tar

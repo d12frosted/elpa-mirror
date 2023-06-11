@@ -4,4 +4,16 @@ Source:  https://github.com/emacsfodder/emacs-flatland-black-theme.git
 
 Updating /mnt/store/melpa/working/flatland-black-theme/
 Checking out 348c5d5fe615e6ea13cadc17f046e506e789ce07
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flatland-black-theme/
+  to /tmp/flatland-black-themec5T59k/flatland-black-theme-20170808.1312
+    flatland-black-theme.el -> flatland-black-theme.el
+Created flatland-black-theme-20170808.1312.tar containing:
+  flatland-black-theme-20170808.1312/
+  flatland-black-theme-20170808.1312/flatland-black-theme-pkg.el
+  flatland-black-theme-20170808.1312/flatland-black-theme.el
+Built flatland-black-theme in 3.316s, finished at 2023-06-11T00:22:03+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.5K Jun  9 15:55 packages/flatland-black-theme-20170808.1312.el
+4.0K -rw-r--r-- 1 root root  389 Jun 11 00:22 packages/flatland-black-theme-20170808.1312.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:22 packages/flatland-black-theme-20170808.1312.tar

@@ -4,4 +4,17 @@ Source:  https://github.com/gongo/airplay-el.git
 
 Updating /mnt/store/melpa/working/airplay/
 Checking out 46fad71d293a3e18551cf464fe6c6208a7a32d9d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/airplay/
+  to /tmp/airplaydPHmYZ/airplay-20130212.1226
+    airplay-video-server.el -> airplay-video-server.el
+    airplay.el -> airplay.el
+Created airplay-20130212.1226.tar containing:
+  airplay-20130212.1226/
+  airplay-20130212.1226/airplay-pkg.el
+  airplay-20130212.1226/airplay-video-server.el
+  airplay-20130212.1226/airplay.el
+Built airplay in 2.668s, finished at 2023-06-11T00:02:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 494 Jun 11 00:02 packages/airplay-20130212.1226.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:02 packages/airplay-20130212.1226.tar

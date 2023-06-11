@@ -4,4 +4,16 @@ Source:  https://github.com/leotaku/flycheck-aspell.git
 
 Updating /mnt/store/melpa/working/flycheck-aspell/
 Checking out 45cd22c52b676abbdf405d9fe16b7073b954ed77
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-aspell/
+  to /tmp/flycheck-aspell44JinZ/flycheck-aspell-20230408.957
+    flycheck-aspell.el -> flycheck-aspell.el
+Created flycheck-aspell-20230408.957.tar containing:
+  flycheck-aspell-20230408.957/
+  flycheck-aspell-20230408.957/flycheck-aspell-pkg.el
+  flycheck-aspell-20230408.957/flycheck-aspell.el
+Built flycheck-aspell in 3.671s, finished at 2023-06-11T00:22:23+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  9 15:56 packages/flycheck-aspell-20230408.957.el
+4.0K -rw-r--r-- 1 root root  480 Jun 11 00:22 packages/flycheck-aspell-20230408.957.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-aspell-20230408.957.tar

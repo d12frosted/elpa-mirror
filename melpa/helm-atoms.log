@@ -4,4 +4,16 @@ Source:  https://github.com/dantecatalfamo/helm-atoms.git
 
 Updating /mnt/store/melpa/working/helm-atoms/
 Checking out 7e6f91a16f556c96ae1b0d1f965ea56861bb6372
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-atoms/
+  to /tmp/helm-atoms1FfQ4H/helm-atoms-20201013.1723
+    helm-atoms.el -> helm-atoms.el
+Created helm-atoms-20201013.1723.tar containing:
+  helm-atoms-20201013.1723/
+  helm-atoms-20201013.1723/helm-atoms-pkg.el
+  helm-atoms-20201013.1723/helm-atoms.el
+Built helm-atoms in 2.569s, finished at 2023-06-10T22:20:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.4K Jun  9 16:05 packages/helm-atoms-20201013.1723.el
+4.0K -rw-r--r-- 1 root root  472 Jun 10 22:20 packages/helm-atoms-20201013.1723.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:20 packages/helm-atoms-20201013.1723.tar

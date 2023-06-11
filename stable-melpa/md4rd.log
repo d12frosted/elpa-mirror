@@ -4,4 +4,16 @@ Source:  https://github.com/ahungry/md4rd.git
 
 Updating /mnt/store/melpa/working/md4rd/
 Checking out 9f649e9b014438ad2289e6194a20c5f719e4fe8a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/md4rd/
+  to /tmp/md4rdh29HYY/md4rd-20230603.1450
+    md4rd.el -> md4rd.el
+Created md4rd-20230603.1450.tar containing:
+  md4rd-20230603.1450/
+  md4rd-20230603.1450/md4rd-pkg.el
+  md4rd-20230603.1450/md4rd.el
+Built md4rd in 3.192s, finished at 2023-06-10T22:31:51+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 32K Jun  9 16:22 packages/md4rd-20230603.1450.el
+4.0K -rw-r--r-- 1 root root 540 Jun 10 22:31 packages/md4rd-20230603.1450.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:31 packages/md4rd-20230603.1450.tar

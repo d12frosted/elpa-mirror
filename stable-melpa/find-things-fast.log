@@ -4,4 +4,16 @@ Source:  https://github.com/eglaysher/find-things-fast.git
 
 Updating /mnt/store/melpa/working/find-things-fast/
 Checking out 281dcb5a2e2db1013246dcac5111808352a8ea95
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/find-things-fast/
+  to /tmp/find-things-fastvBfPpb/find-things-fast-20150519.2226
+    find-things-fast.el -> find-things-fast.el
+Created find-things-fast-20150519.2226.tar containing:
+  find-things-fast-20150519.2226/
+  find-things-fast-20150519.2226/find-things-fast-pkg.el
+  find-things-fast-20150519.2226/find-things-fast.el
+Built find-things-fast in 3.264s, finished at 2023-06-11T00:21:48+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 15:55 packages/find-things-fast-20150519.2226.el
+4.0K -rw-r--r-- 1 root root 503 Jun 11 00:21 packages/find-things-fast-20150519.2226.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:21 packages/find-things-fast-20150519.2226.tar

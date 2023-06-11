@@ -4,4 +4,16 @@ Source:  https://github.com/emacsattic/company-go.git
 
 Updating /mnt/store/melpa/working/company-go/
 Checking out 31948b463f2fc18f8801e5a8fe511fef300eb3dd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-go/
+  to /tmp/company-go5qT3Wo/company-go-20170825.1643
+    company-go.el -> company-go.el
+Created company-go-20170825.1643.tar containing:
+  company-go-20170825.1643/
+  company-go-20170825.1643/company-go-pkg.el
+  company-go-20170825.1643/company-go.el
+Built company-go in 2.587s, finished at 2023-06-11T00:09:53+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jun  9 15:38 packages/company-go-20170825.1643.el
+4.0K -rw-r--r-- 1 root root  437 Jun 11 00:09 packages/company-go-20170825.1643.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:09 packages/company-go-20170825.1643.tar

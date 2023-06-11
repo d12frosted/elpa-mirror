@@ -4,4 +4,16 @@ Source:  https://github.com/lassik/emacs-teletext-yle.git
 
 Updating /mnt/store/melpa/working/teletext-yle/
 Checking out 9c8f4b503923c4ec688e2dcc9dff62d71bc55933
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/teletext-yle/
+  to /tmp/teletext-ylee2mbHj/teletext-yle-20210927.825
+    teletext-yle.el -> teletext-yle.el
+Created teletext-yle-20210927.825.tar containing:
+  teletext-yle-20210927.825/
+  teletext-yle-20210927.825/teletext-yle-pkg.el
+  teletext-yle-20210927.825/teletext-yle.el
+Built teletext-yle in 2.435s, finished at 2023-06-10T22:53:40+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jun  9 16:53 packages/teletext-yle-20210927.825.el
+4.0K -rw-r--r-- 1 root root  481 Jun 10 22:53 packages/teletext-yle-20210927.825.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:53 packages/teletext-yle-20210927.825.tar

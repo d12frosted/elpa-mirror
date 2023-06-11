@@ -4,4 +4,16 @@ Source:  https://github.com/integral-dw/dw-passphrase-generator.git
 
 Updating /mnt/store/melpa/working/dw/
 Checking out 61c5718ba64ace4c9e29de18aa2690ecc3f0f258
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dw/
+  to /tmp/dw1SbBpK/dw-20210331.2311
+    dw.el -> dw.el
+Created dw-20210331.2311.tar containing:
+  dw-20210331.2311/
+  dw-20210331.2311/dw-pkg.el
+  dw-20210331.2311/dw.el
+Built dw in 2.862s, finished at 2023-06-11T00:15:22+0000
+ ✓ Success:
+192K -rw-r--r-- 1 root root 191K Jun  9 15:46 packages/dw-20210331.2311.el
+4.0K -rw-r--r-- 1 root root  479 Jun 11 00:15 packages/dw-20210331.2311.entry
+200K -rw-r--r-- 1 root root 200K Jun 11 00:15 packages/dw-20210331.2311.tar

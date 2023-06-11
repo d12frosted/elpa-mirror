@@ -4,4 +4,16 @@ Source:  https://github.com/plexus/html-to-hiccup.git
 
 Updating /mnt/store/melpa/working/html-to-hiccup/
 Checking out 12f12fe3165eebbcf17e6209693c8e7251ffa04c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/html-to-hiccup/
+  to /tmp/html-to-hiccupPeXMDo/html-to-hiccup-20230120.1416
+    html-to-hiccup.el -> html-to-hiccup.el
+Created html-to-hiccup-20230120.1416.tar containing:
+  html-to-hiccup-20230120.1416/
+  html-to-hiccup-20230120.1416/html-to-hiccup-pkg.el
+  html-to-hiccup-20230120.1416/html-to-hiccup.el
+Built html-to-hiccup in 3.223s, finished at 2023-06-10T22:23:31+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 16:10 packages/html-to-hiccup-20230120.1416.el
+4.0K -rw-r--r-- 1 root root  522 Jun 10 22:23 packages/html-to-hiccup-20230120.1416.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:23 packages/html-to-hiccup-20230120.1416.tar

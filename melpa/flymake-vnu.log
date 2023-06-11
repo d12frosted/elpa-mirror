@@ -4,4 +4,16 @@ Source:  https://github.com/theneosloth/flymake-vnu.git
 
 Updating /mnt/store/melpa/working/flymake-vnu/
 Checking out e9c6038f69ad1523e603026155d9acd5fc3d5aac
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-vnu/
+  to /tmp/flymake-vnusj0XAa/flymake-vnu-20230310.440
+    flymake-vnu.el -> flymake-vnu.el
+Created flymake-vnu-20230310.440.tar containing:
+  flymake-vnu-20230310.440/
+  flymake-vnu-20230310.440/flymake-vnu-pkg.el
+  flymake-vnu-20230310.440/flymake-vnu.el
+Built flymake-vnu in 3.972s, finished at 2023-06-11T00:24:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 15:58 packages/flymake-vnu-20230310.440.el
+4.0K -rw-r--r-- 1 root root  422 Jun 11 00:24 packages/flymake-vnu-20230310.440.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:24 packages/flymake-vnu-20230310.440.tar

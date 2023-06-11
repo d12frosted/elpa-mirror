@@ -4,4 +4,16 @@ Source:  https://github.com/ocaml-ppx/ocamlformat.git
 
 Updating /mnt/store/melpa/working/ocamlformat/
 Checking out ee9cdd7e19298dc025d77212cab11b3d97b9972f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ocamlformat/
+  to /tmp/ocamlformatOgpGDL/ocamlformat-20230420.1458
+  ! emacs/ocamlformat.el -> ocamlformat.el
+Created ocamlformat-20230420.1458.tar containing:
+  ocamlformat-20230420.1458/
+  ocamlformat-20230420.1458/ocamlformat-pkg.el
+  ocamlformat-20230420.1458/ocamlformat.el
+Built ocamlformat in 3.942s, finished at 2023-06-10T22:36:53+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:30 packages/ocamlformat-20230420.1458.el
+4.0K -rw-r--r-- 1 root root 282 Jun 10 22:36 packages/ocamlformat-20230420.1458.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:36 packages/ocamlformat-20230420.1458.tar

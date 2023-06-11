@@ -4,4 +4,16 @@ Source:  https://github.com/scturtle/flycheck-ghcmod.git
 
 Updating /mnt/store/melpa/working/flycheck-ghcmod/
 Checking out 6bb7b7d879f05bbae54e99eb04806c877adf3ccc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-ghcmod/
+  to /tmp/flycheck-ghcmodJ5QKo3/flycheck-ghcmod-20150114.632
+    flycheck-ghcmod.el -> flycheck-ghcmod.el
+Created flycheck-ghcmod-20150114.632.tar containing:
+  flycheck-ghcmod-20150114.632/
+  flycheck-ghcmod-20150114.632/flycheck-ghcmod-pkg.el
+  flycheck-ghcmod-20150114.632/flycheck-ghcmod.el
+Built flycheck-ghcmod in 2.847s, finished at 2023-06-11T00:22:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.5K Jun  9 15:56 packages/flycheck-ghcmod-20150114.632.el
+4.0K -rw-r--r-- 1 root root  501 Jun 11 00:22 packages/flycheck-ghcmod-20150114.632.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-ghcmod-20150114.632.tar

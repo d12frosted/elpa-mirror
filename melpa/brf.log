@@ -4,4 +4,34 @@ Source:  https://bitbucket.org/MikeWoolley/brf-mode
 
 Updating /mnt/store/melpa/working/brf/
 Checking out ca6f9869707dab5929e1da9e13bdf602207bc7f9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/brf/
+  to /tmp/brfl8Bgpv/brf-20230428.1402
+    brf-bookmark.el -> brf-bookmark.el
+    brf-compat.el -> brf-compat.el
+    brf-editing.el -> brf-editing.el
+    brf-marking.el -> brf-marking.el
+    brf-menu.el -> brf-menu.el
+    brf-movement.el -> brf-movement.el
+    brf-undo.el -> brf-undo.el
+    brf-window.el -> brf-window.el
+    brf.el -> brf.el
+    brf-mode.info -> brf-mode.info
+Created brf-20230428.1402.tar containing:
+  brf-20230428.1402/
+  brf-20230428.1402/brf-bookmark.el
+  brf-20230428.1402/brf-compat.el
+  brf-20230428.1402/brf-editing.el
+  brf-20230428.1402/brf-marking.el
+  brf-20230428.1402/brf-menu.el
+  brf-20230428.1402/brf-mode.info
+  brf-20230428.1402/brf-movement.el
+  brf-20230428.1402/brf-pkg.el
+  brf-20230428.1402/brf-undo.el
+  brf-20230428.1402/brf-window.el
+  brf-20230428.1402/brf.el
+  brf-20230428.1402/dir
+Built brf in 3.675s, finished at 2023-06-11T00:06:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  505 Jun 11 00:06 packages/brf-20230428.1402.entry
+112K -rw-r--r-- 1 root root 110K Jun 11 00:06 packages/brf-20230428.1402.tar

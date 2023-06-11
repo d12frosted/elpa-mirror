@@ -4,4 +4,19 @@ Source:  https://github.com/unhammer/dix.git
 
 Updating /mnt/store/melpa/working/dix/
 Checking out 5eeed9362fbeaf5a032bccd69b861b8a36877516
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dix/
+  to /tmp/dixvkuFEo/dix-20230126.1017
+    dix.el -> dix.el
+    schemas.xml -> schemas.xml
+    local-schemas.xml -> local-schemas.xml
+Created dix-20230126.1017.tar containing:
+  dix-20230126.1017/
+  dix-20230126.1017/dix-pkg.el
+  dix-20230126.1017/dix.el
+  dix-20230126.1017/local-schemas.xml
+  dix-20230126.1017/schemas.xml
+Built dix in 3.320s, finished at 2023-06-11T00:14:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  478 Jun 11 00:14 packages/dix-20230126.1017.entry
+112K -rw-r--r-- 1 root root 110K Jun 11 00:14 packages/dix-20230126.1017.tar

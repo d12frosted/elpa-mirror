@@ -4,4 +4,16 @@ Source:  https://github.com/alphapapa/org-sidebar.git
 
 Updating /mnt/store/melpa/working/org-sidebar/
 Checking out 288703b897449f5110c9c76e78eb9a928ffc0dcd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-sidebar/
+  to /tmp/org-sidebarHGF30f/org-sidebar-20210912.1321
+    org-sidebar.el -> org-sidebar.el
+Created org-sidebar-20210912.1321.tar containing:
+  org-sidebar-20210912.1321/
+  org-sidebar-20210912.1321/org-sidebar-pkg.el
+  org-sidebar-20210912.1321/org-sidebar.el
+Built org-sidebar in 3.609s, finished at 2023-06-10T22:39:01+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 30K Jun  9 16:33 packages/org-sidebar-20210912.1321.el
+4.0K -rw-r--r-- 1 root root 606 Jun 10 22:39 packages/org-sidebar-20210912.1321.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:39 packages/org-sidebar-20210912.1321.tar

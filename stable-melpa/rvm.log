@@ -4,4 +4,16 @@ Source:  https://github.com/senny/rvm.el.git
 
 Updating /mnt/store/melpa/working/rvm/
 Checking out e1e83b5466c132c066142ac63729ba833c530c83
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rvm/
+  to /tmp/rvmAGE5qf/rvm-20220910.1558
+    rvm.el -> rvm.el
+Created rvm-20220910.1558.tar containing:
+  rvm-20220910.1558/
+  rvm-20220910.1558/rvm-pkg.el
+  rvm-20220910.1558/rvm.el
+Built rvm in 3.137s, finished at 2023-06-10T22:48:05+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:45 packages/rvm-20220910.1558.el
+4.0K -rw-r--r-- 1 root root 389 Jun 10 22:48 packages/rvm-20220910.1558.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:48 packages/rvm-20220910.1558.tar

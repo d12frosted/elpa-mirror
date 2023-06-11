@@ -4,4 +4,43 @@ Source:  https://github.com/sshaw/ruby-factory-mode.git
 
 Updating /mnt/store/melpa/working/ruby-factory/
 Checking out 2bb7ccc2fccb5257376a989aa395bc7b9eb1d55d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ruby-factory/
+  to /tmp/ruby-factoryTDALsQ/ruby-factory-20160102.721
+    ruby-factory.el -> ruby-factory.el
+    snippets => snippets
+Created ruby-factory-20160102.721.tar containing:
+  ruby-factory-20160102.721/
+  ruby-factory-20160102.721/ruby-factory-pkg.el
+  ruby-factory-20160102.721/ruby-factory.el
+  ruby-factory-20160102.721/snippets/
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/aft
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/aftb
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/aftc
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/aftv
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/bef
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/befc
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/befs
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/befv
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/fab
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/initw
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/seq
+  ruby-factory-20160102.721/snippets/ruby-factory-fabrication-mode/tran
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/aft
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/aftb
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/aftc
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/afts
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/ass
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/bef
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/fac
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/fg
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/initw
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/seq
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/trai
+  ruby-factory-20160102.721/snippets/ruby-factory-girl-mode/tran
+Built ruby-factory in 2.595s, finished at 2023-06-10T22:47:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 468 Jun 10 22:47 packages/ruby-factory-20160102.721.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:47 packages/ruby-factory-20160102.721.tar

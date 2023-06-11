@@ -4,4 +4,16 @@ Source:  https://github.com/ncaq/recentf-remove-sudo-tramp-prefix.git
 
 Updating /mnt/store/melpa/working/recentf-remove-sudo-tramp-prefix/
 Checking out 95ff600058371dd08f615095a55850d2910021bb
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/recentf-remove-sudo-tramp-prefix/
+  to /tmp/recentf-remove-sudo-tramp-prefix66ypSf/recentf-remove-sudo-tramp-prefix-20220621.749
+    recentf-remove-sudo-tramp-prefix.el -> recentf-remove-sudo-tramp-prefix.el
+Created recentf-remove-sudo-tramp-prefix-20220621.749.tar containing:
+  recentf-remove-sudo-tramp-prefix-20220621.749/
+  recentf-remove-sudo-tramp-prefix-20220621.749/recentf-remove-sudo-tramp-prefix-pkg.el
+  recentf-remove-sudo-tramp-prefix-20220621.749/recentf-remove-sudo-tramp-prefix.el
+Built recentf-remove-sudo-tramp-prefix in 3.784s, finished at 2023-06-10T22:46:16+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jun  9 16:43 packages/recentf-remove-sudo-tramp-prefix-20220621.749.el
+4.0K -rw-r--r-- 1 root root  433 Jun 10 22:46 packages/recentf-remove-sudo-tramp-prefix-20220621.749.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:46 packages/recentf-remove-sudo-tramp-prefix-20220621.749.tar

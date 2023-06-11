@@ -4,4 +4,16 @@ Source:  https://github.com/camdez/goto-last-change.el.git
 
 Updating /mnt/store/melpa/working/goto-last-change/
 Checking out 58b0928bc255b47aad318cd183a5dce8f62199cc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/goto-last-change/
+  to /tmp/goto-last-change9UvGjq/goto-last-change-20150109.1823
+    goto-last-change.el -> goto-last-change.el
+Created goto-last-change-20150109.1823.tar containing:
+  goto-last-change-20150109.1823/
+  goto-last-change-20150109.1823/goto-last-change-pkg.el
+  goto-last-change-20150109.1823/goto-last-change.el
+Built goto-last-change in 3.506s, finished at 2023-06-11T00:27:35+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Jun  9 16:03 packages/goto-last-change-20150109.1823.el
+4.0K -rw-r--r-- 1 root root  454 Jun 11 00:27 packages/goto-last-change-20150109.1823.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:27 packages/goto-last-change-20150109.1823.tar

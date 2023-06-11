@@ -4,4 +4,16 @@ Source:  https://github.com/walseb/exwm-firefox-core.git
 
 Updating /mnt/store/melpa/working/exwm-firefox-core/
 Checking out e2fe2a895e8f973307ef52f8c9976b26e701cbd0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exwm-firefox-core/
+  to /tmp/exwm-firefox-core1V3R1a/exwm-firefox-core-20190812.2110
+    exwm-firefox-core.el -> exwm-firefox-core.el
+Created exwm-firefox-core-20190812.2110.tar containing:
+  exwm-firefox-core-20190812.2110/
+  exwm-firefox-core-20190812.2110/exwm-firefox-core-pkg.el
+  exwm-firefox-core-20190812.2110/exwm-firefox-core.el
+Built exwm-firefox-core in 4.558s, finished at 2023-06-11T00:21:00+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 15:54 packages/exwm-firefox-core-20190812.2110.el
+4.0K -rw-r--r-- 1 root root 525 Jun 11 00:21 packages/exwm-firefox-core-20190812.2110.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:21 packages/exwm-firefox-core-20190812.2110.tar

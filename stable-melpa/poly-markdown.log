@@ -4,4 +4,16 @@ Source:  https://github.com/polymode/poly-markdown.git
 
 Updating /mnt/store/melpa/working/poly-markdown/
 Checking out 98695eb7ca4ca11dcec71a1cab64903bbf79b4d3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/poly-markdown/
+  to /tmp/poly-markdownfppCxg/poly-markdown-20230202.1210
+    poly-markdown.el -> poly-markdown.el
+Created poly-markdown-20230202.1210.tar containing:
+  poly-markdown-20230202.1210/
+  poly-markdown-20230202.1210/poly-markdown-pkg.el
+  poly-markdown-20230202.1210/poly-markdown.el
+Built poly-markdown in 3.256s, finished at 2023-06-10T22:43:15+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.1K Jun  9 16:39 packages/poly-markdown-20230202.1210.el
+4.0K -rw-r--r-- 1 root root  402 Jun 10 22:43 packages/poly-markdown-20230202.1210.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:43 packages/poly-markdown-20230202.1210.tar

@@ -212,8 +212,10 @@ filename is used to connect to by clients of the triples library.
     can't be done with `triples-db-delete' because that method uses
     exact matching for all arguments, and this uses prefix matching for
     the predicate.
-  • `triples-db-select-predicate-object-fragment': Select triples that
-    contain an object partially in which the fragment appears.
+  • `triples-db-select-pred-op': Select triples that contain, for a
+    predicate, an object with some relationship to the passed in value.
+    This function lets you look for values equal to, greater, less, than
+    or, "like", the passed in value.
   • `triples-db-select': Select triples matching any of the parts of the
     triple.  Like `triples-db-delete', empty arguments match everything.
     You can specify exactly what to return with a selector.

@@ -4,4 +4,16 @@ Source:  https://github.com/conao3/indent-lint.el.git
 
 Updating /mnt/store/melpa/working/flycheck-indent/
 Checking out 23ef4bab5509e2e7fb1f4a194895a9510fa7c797
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-indent/
+  to /tmp/flycheck-indentfFe7Wm/flycheck-indent-20200129.2046
+    flycheck-indent.el -> flycheck-indent.el
+Created flycheck-indent-20200129.2046.tar containing:
+  flycheck-indent-20200129.2046/
+  flycheck-indent-20200129.2046/flycheck-indent-pkg.el
+  flycheck-indent-20200129.2046/flycheck-indent.el
+Built flycheck-indent in 3.089s, finished at 2023-06-11T00:22:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  9 15:57 packages/flycheck-indent-20200129.2046.el
+4.0K -rw-r--r-- 1 root root  503 Jun 11 00:22 packages/flycheck-indent-20200129.2046.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-indent-20200129.2046.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/krzysztof-magosa/haxor-mode.git
 
 Updating /mnt/store/melpa/working/haxor-mode/
 Checking out 6fa25a8e6b6a59481bc0354c2fe1e0ed53cbdc91
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/haxor-mode/
+  to /tmp/haxor-mode0anKyM/haxor-mode-20160618.1129
+    haxor-mode.el -> haxor-mode.el
+Created haxor-mode-20160618.1129.tar containing:
+  haxor-mode-20160618.1129/
+  haxor-mode-20160618.1129/haxor-mode-pkg.el
+  haxor-mode-20160618.1129/haxor-mode.el
+Built haxor-mode in 4.642s, finished at 2023-06-10T22:20:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Jun  9 16:05 packages/haxor-mode-20160618.1129.el
+4.0K -rw-r--r-- 1 root root  490 Jun 10 22:20 packages/haxor-mode-20160618.1129.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:20 packages/haxor-mode-20160618.1129.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-php/phan.el.git
 
 Updating /mnt/store/melpa/working/phan/
 Checking out b7d523630bb072c4dbcfa9995dc734b25b72a69f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/phan/
+  to /tmp/phanxxxIka/phan-20200805.356
+    phan.el -> phan.el
+Created phan-20200805.356.tar containing:
+  phan-20200805.356/
+  phan-20200805.356/phan-pkg.el
+  phan-20200805.356/phan.el
+Built phan in 2.533s, finished at 2023-06-10T22:42:21+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 32K Jun  9 16:38 packages/phan-20200805.356.el
+4.0K -rw-r--r-- 1 root root 450 Jun 10 22:42 packages/phan-20200805.356.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:42 packages/phan-20200805.356.tar

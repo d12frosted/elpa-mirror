@@ -4,4 +4,16 @@ Source:  https://github.com/iory/emacs-helm-ghs.git
 
 Updating /mnt/store/melpa/working/helm-ghs/
 Checking out f9d4ab80e8a33b21cd635285289ec5779bbe629f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-ghs/
+  to /tmp/helm-ghsbpUDfs/helm-ghs-20170715.541
+    helm-ghs.el -> helm-ghs.el
+Created helm-ghs-20170715.541.tar containing:
+  helm-ghs-20170715.541/
+  helm-ghs-20170715.541/helm-ghs-pkg.el
+  helm-ghs-20170715.541/helm-ghs.el
+Built helm-ghs in 2.729s, finished at 2023-06-10T22:21:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jun  9 16:06 packages/helm-ghs-20170715.541.el
+4.0K -rw-r--r-- 1 root root  395 Jun 10 22:21 packages/helm-ghs-20170715.541.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:21 packages/helm-ghs-20170715.541.tar

@@ -4,4 +4,24 @@ Source:  https://github.com/alphapapa/bufler.el.git
 
 Updating /mnt/store/melpa/working/bufler/
 Checking out bf5fdccbae6bb6dc51e31dc282805e32bb41e412
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bufler/
+  to /tmp/buflerZuzDZ3/bufler-20221031.1852
+    bufler-group-tree.el -> bufler-group-tree.el
+    bufler-workspace-tabs.el -> bufler-workspace-tabs.el
+    bufler-workspace.el -> bufler-workspace.el
+    bufler.el -> bufler.el
+    bufler.info -> bufler.info
+Created bufler-20221031.1852.tar containing:
+  bufler-20221031.1852/
+  bufler-20221031.1852/bufler-group-tree.el
+  bufler-20221031.1852/bufler-pkg.el
+  bufler-20221031.1852/bufler-workspace-tabs.el
+  bufler-20221031.1852/bufler-workspace.el
+  bufler-20221031.1852/bufler.el
+  bufler-20221031.1852/bufler.info
+  bufler-20221031.1852/dir
+Built bufler in 4.195s, finished at 2023-06-11T00:06:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  545 Jun 11 00:06 packages/bufler-20221031.1852.entry
+120K -rw-r--r-- 1 root root 120K Jun 11 00:06 packages/bufler-20221031.1852.tar

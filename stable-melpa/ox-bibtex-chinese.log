@@ -4,4 +4,21 @@ Source:  https://github.com/tumashu/ox-bibtex-chinese.git
 
 Updating /mnt/store/melpa/working/ox-bibtex-chinese/
 Checking out 2ad2364399229144110db7ef6365ad0461d6a38c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ox-bibtex-chinese/
+  to /tmp/ox-bibtex-chinese0cAQQ8/ox-bibtex-chinese-20170723.309
+    ox-bibtex-chinese-pkg.el -> ox-bibtex-chinese-pkg.el
+    ox-bibtex-chinese.el -> ox-bibtex-chinese.el
+    bibtex-styles => bibtex-styles
+Created ox-bibtex-chinese-20170723.309.tar containing:
+  ox-bibtex-chinese-20170723.309/
+  ox-bibtex-chinese-20170723.309/bibtex-styles/
+  ox-bibtex-chinese-20170723.309/bibtex-styles/GBT7714-2005-latex/
+  ox-bibtex-chinese-20170723.309/bibtex-styles/GBT7714-2005-latex/GBT7714-2005AYLang-UTF8.bst
+  ox-bibtex-chinese-20170723.309/bibtex-styles/GBT7714-2005-latex/GBT7714-2005NLang-UTF8.bst
+  ox-bibtex-chinese-20170723.309/ox-bibtex-chinese-pkg.el
+  ox-bibtex-chinese-20170723.309/ox-bibtex-chinese.el
+Built ox-bibtex-chinese in 4.086s, finished at 2023-06-10T22:40:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  370 Jun 10 22:40 packages/ox-bibtex-chinese-20170723.309.entry
+192K -rw-r--r-- 1 root root 190K Jun 10 22:40 packages/ox-bibtex-chinese-20170723.309.tar

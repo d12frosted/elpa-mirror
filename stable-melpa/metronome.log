@@ -4,4 +4,19 @@ Source:  https://git.sr.ht/~jagrg/metronome
 
 Updating /mnt/store/melpa/working/metronome/
 Checking out 4811b54d800d1bb69fd501ffeab3adf86978362d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/metronome/
+  to /tmp/metronomeYteLQS/metronome-20230515.1850
+    metronome.el -> metronome.el
+    sounds => sounds
+Created metronome-20230515.1850.tar containing:
+  metronome-20230515.1850/
+  metronome-20230515.1850/metronome-pkg.el
+  metronome-20230515.1850/metronome.el
+  metronome-20230515.1850/sounds/
+  metronome-20230515.1850/sounds/high.wav
+  metronome-20230515.1850/sounds/low.wav
+Built metronome in 2.852s, finished at 2023-06-10T22:32:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 443 Jun 10 22:32 packages/metronome-20230515.1850.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:32 packages/metronome-20230515.1850.tar

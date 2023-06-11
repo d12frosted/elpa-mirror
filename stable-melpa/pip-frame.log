@@ -4,4 +4,16 @@ Source:  https://git.zamazal.org/pdm/pip-frame
 
 Updating /mnt/store/melpa/working/pip-frame/
 Checking out 8c396a11f532a1beb594b65e99e594f1e9f1c2c8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pip-frame/
+  to /tmp/pip-framesKYkFv/pip-frame-20220802.1914
+    pip-frame.el -> pip-frame.el
+Created pip-frame-20220802.1914.tar containing:
+  pip-frame-20220802.1914/
+  pip-frame-20220802.1914/pip-frame-pkg.el
+  pip-frame-20220802.1914/pip-frame.el
+Built pip-frame in 3.905s, finished at 2023-06-10T22:42:43+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.9K Jun  9 16:38 packages/pip-frame-20220802.1914.el
+4.0K -rw-r--r-- 1 root root  435 Jun 10 22:42 packages/pip-frame-20220802.1914.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:42 packages/pip-frame-20220802.1914.tar

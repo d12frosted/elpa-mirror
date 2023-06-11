@@ -4,4 +4,16 @@ Source:  https://github.com/rubikitch/open-junk-file.git
 
 Updating /mnt/store/melpa/working/open-junk-file/
 Checking out 558bec7372b0fed4c4cb6074ab906535fae615bd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/open-junk-file/
+  to /tmp/open-junk-fileFhY30F/open-junk-file-20161210.1114
+    open-junk-file.el -> open-junk-file.el
+Created open-junk-file-20161210.1114.tar containing:
+  open-junk-file-20161210.1114/
+  open-junk-file-20161210.1114/open-junk-file-pkg.el
+  open-junk-file-20161210.1114/open-junk-file.el
+Built open-junk-file in 2.910s, finished at 2023-06-10T22:37:14+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  9 16:30 packages/open-junk-file-20161210.1114.el
+4.0K -rw-r--r-- 1 root root  457 Jun 10 22:37 packages/open-junk-file-20161210.1114.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:37 packages/open-junk-file-20161210.1114.tar

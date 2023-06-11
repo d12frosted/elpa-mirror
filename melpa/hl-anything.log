@@ -4,4 +4,32 @@ Source:  https://github.com/hl-anything/hl-anything-emacs.git
 
 Updating /mnt/store/melpa/working/hl-anything/
 Checking out c2e50f91a05d6c43e8a1c169f709cd1f23e47b0a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hl-anything/
+  to /tmp/hl-anythingHT58pc/hl-anything-20160422.1708
+    hl-anything.el -> hl-anything.el
+    images/killall-highlights.xpm -> images/killall-highlights.xpm
+    images/off.xpm -> images/off.xpm
+    images/on.xpm -> images/on.xpm
+    images/toggle-global-highlight.xpm -> images/toggle-global-highlight.xpm
+    images/killall-highlights.png -> images/killall-highlights.png
+    images/off.png -> images/off.png
+    images/on.png -> images/on.png
+    images/toggle-global-highlight.png -> images/toggle-global-highlight.png
+Created hl-anything-20160422.1708.tar containing:
+  hl-anything-20160422.1708/
+  hl-anything-20160422.1708/hl-anything-pkg.el
+  hl-anything-20160422.1708/hl-anything.el
+  hl-anything-20160422.1708/images/
+  hl-anything-20160422.1708/images/killall-highlights.png
+  hl-anything-20160422.1708/images/killall-highlights.xpm
+  hl-anything-20160422.1708/images/off.png
+  hl-anything-20160422.1708/images/off.xpm
+  hl-anything-20160422.1708/images/on.png
+  hl-anything-20160422.1708/images/on.xpm
+  hl-anything-20160422.1708/images/toggle-global-highlight.png
+  hl-anything-20160422.1708/images/toggle-global-highlight.xpm
+Built hl-anything in 3.138s, finished at 2023-06-10T22:23:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 303 Jun 10 22:23 packages/hl-anything-20160422.1708.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 10 22:23 packages/hl-anything-20160422.1708.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/magnars/dash.el.git
 
 Updating /mnt/store/melpa/working/dash-functional/
 Checking out 39d067b9fbb2db65fc7a6938bfb21489ad990cb4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dash-functional/
+  to /tmp/dash-functionalhXIO4W/dash-functional-20210826.1149
+    dash-functional.el -> dash-functional.el
+Created dash-functional-20210826.1149.tar containing:
+  dash-functional-20210826.1149/
+  dash-functional-20210826.1149/dash-functional-pkg.el
+  dash-functional-20210826.1149/dash-functional.el
+Built dash-functional in 3.885s, finished at 2023-06-11T00:12:18+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Jun  9 15:42 packages/dash-functional-20210826.1149.el
+4.0K -rw-r--r-- 1 root root  518 Jun 11 00:12 packages/dash-functional-20210826.1149.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:12 packages/dash-functional-20210826.1149.tar

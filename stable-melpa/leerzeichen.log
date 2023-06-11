@@ -4,4 +4,16 @@ Source:  https://github.com/fgeller/leerzeichen.el.git
 
 Updating /mnt/store/melpa/working/leerzeichen/
 Checking out 9d4126d5f6563569080845a69b0867119a9fd6ea
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leerzeichen/
+  to /tmp/leerzeichenGMt7mq/leerzeichen-20220626.835
+    leerzeichen.el -> leerzeichen.el
+Created leerzeichen-20220626.835.tar containing:
+  leerzeichen-20220626.835/
+  leerzeichen-20220626.835/leerzeichen-pkg.el
+  leerzeichen-20220626.835/leerzeichen.el
+Built leerzeichen in 2.367s, finished at 2023-06-10T22:28:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.0K Jun  9 16:18 packages/leerzeichen-20220626.835.el
+4.0K -rw-r--r-- 1 root root  454 Jun 10 22:28 packages/leerzeichen-20220626.835.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:28 packages/leerzeichen-20220626.835.tar

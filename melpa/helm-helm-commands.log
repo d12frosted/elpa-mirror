@@ -4,4 +4,16 @@ Source:  https://github.com/vapniks/helm-helm-commands.git
 
 Updating /mnt/store/melpa/working/helm-helm-commands/
 Checking out 1c37bb0d4cda6877162603cd1ddc9f596a7a5cb9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-helm-commands/
+  to /tmp/helm-helm-commands89GJLR/helm-helm-commands-20130902.1748
+    helm-helm-commands.el -> helm-helm-commands.el
+Created helm-helm-commands-20130902.1748.tar containing:
+  helm-helm-commands-20130902.1748/
+  helm-helm-commands-20130902.1748/helm-helm-commands-pkg.el
+  helm-helm-commands-20130902.1748/helm-helm-commands.el
+Built helm-helm-commands in 3.045s, finished at 2023-06-10T22:21:33+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Jun  9 16:06 packages/helm-helm-commands-20130902.1748.el
+4.0K -rw-r--r-- 1 root root  480 Jun 10 22:21 packages/helm-helm-commands-20130902.1748.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:21 packages/helm-helm-commands-20130902.1748.tar

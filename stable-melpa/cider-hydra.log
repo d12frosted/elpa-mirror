@@ -4,4 +4,16 @@ Source:  https://github.com/clojure-emacs/cider-hydra.git
 
 Updating /mnt/store/melpa/working/cider-hydra/
 Checking out c3b8a15d72dddfbc390ab6a454bd7e4c765a2c95
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cider-hydra/
+  to /tmp/cider-hydrasXvU9c/cider-hydra-20190816.1121
+    cider-hydra.el -> cider-hydra.el
+Created cider-hydra-20190816.1121.tar containing:
+  cider-hydra-20190816.1121/
+  cider-hydra-20190816.1121/cider-hydra-pkg.el
+  cider-hydra-20190816.1121/cider-hydra.el
+Built cider-hydra in 3.771s, finished at 2023-06-11T00:08:24+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  9 15:35 packages/cider-hydra-20190816.1121.el
+4.0K -rw-r--r-- 1 root root  512 Jun 11 00:08 packages/cider-hydra-20190816.1121.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:08 packages/cider-hydra-20190816.1121.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/ymarco/auto-activating-snippets.git
 
 Updating /mnt/store/melpa/working/aas/
 Checking out ddc2b7a58a2234477006af348b30e970f73bc2c1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/aas/
+  to /tmp/aasQqw2ye/aas-20230303.2214
+    aas.el -> aas.el
+Created aas-20230303.2214.tar containing:
+  aas-20230303.2214/
+  aas-20230303.2214/aas-pkg.el
+  aas-20230303.2214/aas.el
+Built aas in 4.189s, finished at 2023-06-11T00:01:44+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 15:27 packages/aas-20230303.2214.el
+4.0K -rw-r--r-- 1 root root 440 Jun 11 00:01 packages/aas-20230303.2214.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:01 packages/aas-20230303.2214.tar

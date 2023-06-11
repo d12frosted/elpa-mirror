@@ -4,4 +4,16 @@ Source:  https://github.com/fritzgrabo/flymake-cspell.git
 
 Updating /mnt/store/melpa/working/flymake-cspell/
 Checking out c68bf7eef99ddb2fbd780f175e869df2db5d768f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-cspell/
+  to /tmp/flymake-cspellHxcVsK/flymake-cspell-20230208.2155
+    flymake-cspell.el -> flymake-cspell.el
+Created flymake-cspell-20230208.2155.tar containing:
+  flymake-cspell-20230208.2155/
+  flymake-cspell-20230208.2155/flymake-cspell-pkg.el
+  flymake-cspell-20230208.2155/flymake-cspell.el
+Built flymake-cspell in 2.620s, finished at 2023-06-11T00:23:35+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jun  9 15:57 packages/flymake-cspell-20230208.2155.el
+4.0K -rw-r--r-- 1 root root  426 Jun 11 00:23 packages/flymake-cspell-20230208.2155.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:23 packages/flymake-cspell-20230208.2155.tar

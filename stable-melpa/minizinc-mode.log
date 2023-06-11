@@ -4,4 +4,16 @@ Source:  https://github.com/m00nlight/minizinc-mode.git
 
 Updating /mnt/store/melpa/working/minizinc-mode/
 Checking out 2512521ba7f8e263a06db88df663fc6b3cca7e16
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/minizinc-mode/
+  to /tmp/minizinc-modeN9gi0d/minizinc-mode-20180201.1450
+    minizinc-mode.el -> minizinc-mode.el
+Created minizinc-mode-20180201.1450.tar containing:
+  minizinc-mode-20180201.1450/
+  minizinc-mode-20180201.1450/minizinc-mode-pkg.el
+  minizinc-mode-20180201.1450/minizinc-mode.el
+Built minizinc-mode in 3.218s, finished at 2023-06-10T22:32:40+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  9 16:23 packages/minizinc-mode-20180201.1450.el
+4.0K -rw-r--r-- 1 root root  257 Jun 10 22:32 packages/minizinc-mode-20180201.1450.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:32 packages/minizinc-mode-20180201.1450.tar

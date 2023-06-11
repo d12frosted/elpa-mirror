@@ -4,4 +4,16 @@ Source:  https://gitlab.com/emacsomancer/equake.git
 
 Updating /mnt/store/melpa/working/equake/
 Checking out 7aa2e1715e6ea286b08bb446d2d9915afa0fdf03
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/equake/
+  to /tmp/equakeBwEI2t/equake-20220627.2248
+    equake.el -> equake.el
+Created equake-20220627.2248.tar containing:
+  equake-20220627.2248/
+  equake-20220627.2248/equake-pkg.el
+  equake-20220627.2248/equake.el
+Built equake in 3.020s, finished at 2023-06-11T00:18:18+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 45K Jun  9 15:51 packages/equake-20220627.2248.el
+4.0K -rw-r--r-- 1 root root 503 Jun 11 00:18 packages/equake-20220627.2248.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:18 packages/equake-20220627.2248.tar

@@ -4,4 +4,36 @@ Source:  https://github.com/mxgoldstein/emojify-logos.git
 
 Updating /mnt/store/melpa/working/emojify-logos/
 Checking out a3e78bcbdf863092d4c9b026ac08bf7d1c7c0e8b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emojify-logos/
+  to /tmp/emojify-logostewViq/emojify-logos-20180814.917
+    emojify-logos.el -> emojify-logos.el
+    logos => logos
+Created emojify-logos-20180814.917.tar containing:
+  emojify-logos-20180814.917/
+  emojify-logos-20180814.917/emojify-logos-pkg.el
+  emojify-logos-20180814.917/emojify-logos.el
+  emojify-logos-20180814.917/logos/
+  emojify-logos-20180814.917/logos/COPYRIGHT.MD
+  emojify-logos-20180814.917/logos/angularjs.png
+  emojify-logos-20180814.917/logos/c++.png
+  emojify-logos-20180814.917/logos/c.png
+  emojify-logos-20180814.917/logos/css3.png
+  emojify-logos-20180814.917/logos/emacs.png
+  emojify-logos-20180814.917/logos/erlang.png
+  emojify-logos-20180814.917/logos/haskell.png
+  emojify-logos-20180814.917/logos/html5.png
+  emojify-logos-20180814.917/logos/javascript.png
+  emojify-logos-20180814.917/logos/latex.png
+  emojify-logos-20180814.917/logos/markdown.png
+  emojify-logos-20180814.917/logos/org.png
+  emojify-logos-20180814.917/logos/pdf.png
+  emojify-logos-20180814.917/logos/perl.png
+  emojify-logos-20180814.917/logos/php.png
+  emojify-logos-20180814.917/logos/python.png
+  emojify-logos-20180814.917/logos/ruby.png
+  emojify-logos-20180814.917/logos/typescript.png
+Built emojify-logos in 2.833s, finished at 2023-06-11T00:17:58+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 389 Jun 11 00:17 packages/emojify-logos-20180814.917.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:17 packages/emojify-logos-20180814.917.tar

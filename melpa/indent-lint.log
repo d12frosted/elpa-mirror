@@ -4,4 +4,16 @@ Source:  https://github.com/conao3/indent-lint.el.git
 
 Updating /mnt/store/melpa/working/indent-lint/
 Checking out c55f4ded11e8e50a96f43675a071354a8fb501c3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/indent-lint/
+  to /tmp/indent-lintjsrMRh/indent-lint-20200812.949
+    indent-lint.el -> indent-lint.el
+Created indent-lint-20200812.949.tar containing:
+  indent-lint-20200812.949/
+  indent-lint-20200812.949/indent-lint-pkg.el
+  indent-lint-20200812.949/indent-lint.el
+Built indent-lint in 2.744s, finished at 2023-06-10T22:24:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:12 packages/indent-lint-20200812.949.el
+4.0K -rw-r--r-- 1 root root 501 Jun 10 22:24 packages/indent-lint-20200812.949.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:24 packages/indent-lint-20200812.949.tar

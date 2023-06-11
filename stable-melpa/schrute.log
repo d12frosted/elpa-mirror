@@ -4,4 +4,16 @@ Source:  https://bitbucket.org/shackra/dwight-k.-schrute
 
 Updating /mnt/store/melpa/working/schrute/
 Checking out 59faa6c4232ae183cea93237301acad8c0763997
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/schrute/
+  to /tmp/schrutex8t40H/schrute-20170521.1840
+    schrute.el -> schrute.el
+Created schrute-20170521.1840.tar containing:
+  schrute-20170521.1840/
+  schrute-20170521.1840/schrute-pkg.el
+  schrute-20170521.1840/schrute.el
+Built schrute in 2.606s, finished at 2023-06-10T22:48:22+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  9 16:46 packages/schrute-20170521.1840.el
+4.0K -rw-r--r-- 1 root root  489 Jun 10 22:48 packages/schrute-20170521.1840.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:48 packages/schrute-20170521.1840.tar

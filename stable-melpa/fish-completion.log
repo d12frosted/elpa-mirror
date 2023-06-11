@@ -4,4 +4,16 @@ Source:  https://gitlab.com/Ambrevar/emacs-fish-completion.git
 
 Updating /mnt/store/melpa/working/fish-completion/
 Checking out 10384881817b5ae38cf6197a077a663420090d2c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fish-completion/
+  to /tmp/fish-completionuCoHBl/fish-completion-20191103.1210
+    fish-completion.el -> fish-completion.el
+Created fish-completion-20191103.1210.tar containing:
+  fish-completion-20191103.1210/
+  fish-completion-20191103.1210/fish-completion-pkg.el
+  fish-completion-20191103.1210/fish-completion.el
+Built fish-completion in 3.180s, finished at 2023-06-11T00:21:53+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.9K Jun  9 15:55 packages/fish-completion-20191103.1210.el
+4.0K -rw-r--r-- 1 root root  448 Jun 11 00:21 packages/fish-completion-20191103.1210.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:21 packages/fish-completion-20191103.1210.tar

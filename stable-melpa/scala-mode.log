@@ -4,4 +4,35 @@ Source:  https://github.com/hvesalai/emacs-scala-mode.git
 
 Updating /mnt/store/melpa/working/scala-mode/
 Checking out 5d7cf21c37e345c49f921fe5111a49fd54efd1e0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scala-mode/
+  to /tmp/scala-modeaVWEJs/scala-mode-20221025.1502
+    scala-compile.el -> scala-compile.el
+    scala-mode-fontlock.el -> scala-mode-fontlock.el
+    scala-mode-imenu.el -> scala-mode-imenu.el
+    scala-mode-indent.el -> scala-mode-indent.el
+    scala-mode-lib.el -> scala-mode-lib.el
+    scala-mode-map.el -> scala-mode-map.el
+    scala-mode-paragraph.el -> scala-mode-paragraph.el
+    scala-mode-prettify-symbols.el -> scala-mode-prettify-symbols.el
+    scala-mode-syntax.el -> scala-mode-syntax.el
+    scala-mode.el -> scala-mode.el
+    scala-organise.el -> scala-organise.el
+Created scala-mode-20221025.1502.tar containing:
+  scala-mode-20221025.1502/
+  scala-mode-20221025.1502/scala-compile.el
+  scala-mode-20221025.1502/scala-mode-fontlock.el
+  scala-mode-20221025.1502/scala-mode-imenu.el
+  scala-mode-20221025.1502/scala-mode-indent.el
+  scala-mode-20221025.1502/scala-mode-lib.el
+  scala-mode-20221025.1502/scala-mode-map.el
+  scala-mode-20221025.1502/scala-mode-paragraph.el
+  scala-mode-20221025.1502/scala-mode-pkg.el
+  scala-mode-20221025.1502/scala-mode-prettify-symbols.el
+  scala-mode-20221025.1502/scala-mode-syntax.el
+  scala-mode-20221025.1502/scala-mode.el
+  scala-mode-20221025.1502/scala-organise.el
+Built scala-mode in 3.231s, finished at 2023-06-10T22:48:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  240 Jun 10 22:48 packages/scala-mode-20221025.1502.entry
+152K -rw-r--r-- 1 root root 150K Jun 10 22:48 packages/scala-mode-20221025.1502.tar

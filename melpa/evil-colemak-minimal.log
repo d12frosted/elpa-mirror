@@ -4,4 +4,16 @@ Source:  https://github.com/bmallred/evil-colemak-minimal.git
 
 Updating /mnt/store/melpa/working/evil-colemak-minimal/
 Checking out 6d98b6da60f414524a0d718f76024c26dce742b3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-colemak-minimal/
+  to /tmp/evil-colemak-minimalo6FAHq/evil-colemak-minimal-20171006.1317
+    evil-colemak-minimal.el -> evil-colemak-minimal.el
+Created evil-colemak-minimal-20171006.1317.tar containing:
+  evil-colemak-minimal-20171006.1317/
+  evil-colemak-minimal-20171006.1317/evil-colemak-minimal-pkg.el
+  evil-colemak-minimal-20171006.1317/evil-colemak-minimal.el
+Built evil-colemak-minimal in 3.598s, finished at 2023-06-11T00:19:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 15:52 packages/evil-colemak-minimal-20171006.1317.el
+4.0K -rw-r--r-- 1 root root  508 Jun 11 00:19 packages/evil-colemak-minimal-20171006.1317.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:19 packages/evil-colemak-minimal-20171006.1317.tar

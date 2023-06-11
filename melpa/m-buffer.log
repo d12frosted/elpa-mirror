@@ -4,4 +4,21 @@ Source:  https://github.com/phillord/m-buffer-el.git
 
 Updating /mnt/store/melpa/working/m-buffer/
 Checking out d2e35bf9293367f1a2d19f259f32a35bd9f4788b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/m-buffer/
+  to /tmp/m-bufferQ1bMAt/m-buffer-20220719.1850
+    m-buffer-at.el -> m-buffer-at.el
+    m-buffer-macro.el -> m-buffer-macro.el
+    m-buffer.el -> m-buffer.el
+    m-buffer-doc.org -> m-buffer-doc.org
+Created m-buffer-20220719.1850.tar containing:
+  m-buffer-20220719.1850/
+  m-buffer-20220719.1850/m-buffer-at.el
+  m-buffer-20220719.1850/m-buffer-doc.org
+  m-buffer-20220719.1850/m-buffer-macro.el
+  m-buffer-20220719.1850/m-buffer-pkg.el
+  m-buffer-20220719.1850/m-buffer.el
+Built m-buffer in 2.929s, finished at 2023-06-10T22:30:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 383 Jun 10 22:30 packages/m-buffer-20220719.1850.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:30 packages/m-buffer-20220719.1850.tar

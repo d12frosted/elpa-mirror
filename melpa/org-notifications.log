@@ -4,4 +4,19 @@ Source:  https://github.com/doppelc/org-notifications.git
 
 Updating /mnt/store/melpa/working/org-notifications/
 Checking out b8032f8adfbeb328962a5657c6dd173e64cc76e5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-notifications/
+  to /tmp/org-notificationsPszOjT/org-notifications-20210918.1827
+    org-notifications.el -> org-notifications.el
+    sounds => sounds
+Created org-notifications-20210918.1827.tar containing:
+  org-notifications-20210918.1827/
+  org-notifications-20210918.1827/org-notifications-pkg.el
+  org-notifications-20210918.1827/org-notifications.el
+  org-notifications-20210918.1827/sounds/
+  org-notifications-20210918.1827/sounds/ding_elevator.wav
+  org-notifications-20210918.1827/sounds/ding_percussion.wav
+Built org-notifications in 2.846s, finished at 2023-06-10T22:38:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  515 Jun 10 22:38 packages/org-notifications-20210918.1827.entry
+380K -rw-r--r-- 1 root root 380K Jun 10 22:38 packages/org-notifications-20210918.1827.tar

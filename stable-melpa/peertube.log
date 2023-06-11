@@ -4,4 +4,16 @@ Source:  https://git.sr.ht/~yoctocell/peertube
 
 Updating /mnt/store/melpa/working/peertube/
 Checking out bb529db154596e86327829edbd7144b67cf72255
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/peertube/
+  to /tmp/peertube45YTqs/peertube-20210101.1007
+    peertube.el -> peertube.el
+Created peertube-20210101.1007.tar containing:
+  peertube-20210101.1007/
+  peertube-20210101.1007/peertube-pkg.el
+  peertube-20210101.1007/peertube.el
+Built peertube in 2.316s, finished at 2023-06-10T22:41:59+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:37 packages/peertube-20210101.1007.el
+4.0K -rw-r--r-- 1 root root 479 Jun 10 22:41 packages/peertube-20210101.1007.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:41 packages/peertube-20210101.1007.tar

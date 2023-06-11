@@ -4,4 +4,16 @@ Source:  https://github.com/thierryvolpiatto/psession.git
 
 Updating /mnt/store/melpa/working/psession/
 Checking out ca5bed69f803aab71851c46b0118b66f58455b8a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/psession/
+  to /tmp/psessionrwaUjF/psession-20230105.503
+    psession.el -> psession.el
+Created psession-20230105.503.tar containing:
+  psession-20230105.503/
+  psession-20230105.503/psession-pkg.el
+  psession-20230105.503/psession.el
+Built psession in 2.951s, finished at 2023-06-10T22:44:27+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 16:41 packages/psession-20230105.503.el
+4.0K -rw-r--r-- 1 root root 504 Jun 10 22:44 packages/psession-20230105.503.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:44 packages/psession-20230105.503.tar

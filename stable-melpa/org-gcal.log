@@ -4,4 +4,20 @@ Source:  https://github.com/kidd/org-gcal.el.git
 
 Updating /mnt/store/melpa/working/org-gcal/
 Checking out 9bb3720525ad1c45823abab8ce910dd1225e7dcd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-gcal/
+  to /tmp/org-gcalNd2LKO/org-gcal-20221212.1817
+    oauth2-auto.el -> oauth2-auto.el
+    org-gcal-pkg.el -> org-gcal-pkg.el
+    org-gcal.el -> org-gcal.el
+    org-generic-id.el -> org-generic-id.el
+Created org-gcal-20221212.1817.tar containing:
+  org-gcal-20221212.1817/
+  org-gcal-20221212.1817/oauth2-auto.el
+  org-gcal-20221212.1817/org-gcal-pkg.el
+  org-gcal-20221212.1817/org-gcal.el
+  org-gcal-20221212.1817/org-generic-id.el
+Built org-gcal in 3.196s, finished at 2023-06-10T22:38:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  569 Jun 10 22:38 packages/org-gcal-20221212.1817.entry
+140K -rw-r--r-- 1 root root 140K Jun 10 22:38 packages/org-gcal-20221212.1817.tar

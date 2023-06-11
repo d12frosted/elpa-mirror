@@ -4,4 +4,16 @@ Source:  https://github.com/jumper047/media-progress.git
 
 Updating /mnt/store/melpa/working/media-progress-dired/
 Checking out 438a37019383eef35e45875b3e4df3fca4eaf39f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/media-progress-dired/
+  to /tmp/media-progress-diredoJRqIg/media-progress-dired-20230527.2209
+    media-progress-dired.el -> media-progress-dired.el
+Created media-progress-dired-20230527.2209.tar containing:
+  media-progress-dired-20230527.2209/
+  media-progress-dired-20230527.2209/media-progress-dired-pkg.el
+  media-progress-dired-20230527.2209/media-progress-dired.el
+Built media-progress-dired in 2.609s, finished at 2023-06-10T22:31:53+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.9K Jun  9 16:22 packages/media-progress-dired-20230527.2209.el
+4.0K -rw-r--r-- 1 root root  554 Jun 10 22:31 packages/media-progress-dired-20230527.2209.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:31 packages/media-progress-dired-20230527.2209.tar

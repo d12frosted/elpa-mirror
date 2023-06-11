@@ -4,4 +4,27 @@ Source:  https://github.com/fourier/ztree.git
 
 Updating /mnt/store/melpa/working/ztree/
 Checking out f05677f9696e573c8c607e8876fb4a0cccbc491f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ztree/
+  to /tmp/ztreeQvozfe/ztree-20210415.1947
+    ztree-diff-model.el -> ztree-diff-model.el
+    ztree-diff.el -> ztree-diff.el
+    ztree-dir.el -> ztree-dir.el
+    ztree-protocol.el -> ztree-protocol.el
+    ztree-util.el -> ztree-util.el
+    ztree-view.el -> ztree-view.el
+    ztree.el -> ztree.el
+Created ztree-20210415.1947.tar containing:
+  ztree-20210415.1947/
+  ztree-20210415.1947/ztree-diff-model.el
+  ztree-20210415.1947/ztree-diff.el
+  ztree-20210415.1947/ztree-dir.el
+  ztree-20210415.1947/ztree-pkg.el
+  ztree-20210415.1947/ztree-protocol.el
+  ztree-20210415.1947/ztree-util.el
+  ztree-20210415.1947/ztree-view.el
+  ztree-20210415.1947/ztree.el
+Built ztree in 2.496s, finished at 2023-06-10T23:00:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  444 Jun 10 23:00 packages/ztree-20210415.1947.entry
+100K -rw-r--r-- 1 root root 100K Jun 10 23:00 packages/ztree-20210415.1947.tar

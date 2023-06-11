@@ -4,4 +4,58 @@ Source:  https://github.com/jyp/boon.git
 
 Updating /mnt/store/melpa/working/boon/
 Checking out 9b4260fbab2d3cc6f58a5c1360a235a03de4f0e1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/boon/
+  to /tmp/boonZ65grz/boon-20230410.1115
+    boon-arguments.el -> boon-arguments.el
+    boon-colemak-hnei.el -> boon-colemak-hnei.el
+    boon-colemak.el -> boon-colemak.el
+    boon-core.el -> boon-core.el
+    boon-dvorak.el -> boon-dvorak.el
+    boon-emacs.el -> boon-emacs.el
+    boon-hl.el -> boon-hl.el
+    boon-keys.el -> boon-keys.el
+    boon-loaddefs.el -> boon-loaddefs.el
+    boon-main.el -> boon-main.el
+    boon-moves.el -> boon-moves.el
+    boon-pkg.el -> boon-pkg.el
+    boon-powerline.el -> boon-powerline.el
+    boon-qwerty-hjkl.el -> boon-qwerty-hjkl.el
+    boon-qwerty.el -> boon-qwerty.el
+    boon-qwertz.el -> boon-qwertz.el
+    boon-regs.el -> boon-regs.el
+    boon-search.el -> boon-search.el
+    boon-spaceline.el -> boon-spaceline.el
+    boon-tutorial.el -> boon-tutorial.el
+    boon-utils.el -> boon-utils.el
+    boon-workman.el -> boon-workman.el
+    boon.el -> boon.el
+Created boon-20230410.1115.tar containing:
+  boon-20230410.1115/
+  boon-20230410.1115/boon-arguments.el
+  boon-20230410.1115/boon-colemak-hnei.el
+  boon-20230410.1115/boon-colemak.el
+  boon-20230410.1115/boon-core.el
+  boon-20230410.1115/boon-dvorak.el
+  boon-20230410.1115/boon-emacs.el
+  boon-20230410.1115/boon-hl.el
+  boon-20230410.1115/boon-keys.el
+  boon-20230410.1115/boon-loaddefs.el
+  boon-20230410.1115/boon-main.el
+  boon-20230410.1115/boon-moves.el
+  boon-20230410.1115/boon-pkg.el
+  boon-20230410.1115/boon-powerline.el
+  boon-20230410.1115/boon-qwerty-hjkl.el
+  boon-20230410.1115/boon-qwerty.el
+  boon-20230410.1115/boon-qwertz.el
+  boon-20230410.1115/boon-regs.el
+  boon-20230410.1115/boon-search.el
+  boon-20230410.1115/boon-spaceline.el
+  boon-20230410.1115/boon-tutorial.el
+  boon-20230410.1115/boon-utils.el
+  boon-20230410.1115/boon-workman.el
+  boon-20230410.1115/boon.el
+Built boon in 3.283s, finished at 2023-06-11T00:06:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  247 Jun 11 00:06 packages/boon-20230410.1115.entry
+172K -rw-r--r-- 1 root root 170K Jun 11 00:06 packages/boon-20230410.1115.tar

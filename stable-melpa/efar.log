@@ -4,4 +4,16 @@ Source:  https://github.com/suntsov/efar.git
 
 Updating /mnt/store/melpa/working/efar/
 Checking out 78618a6cd9fe7d46c3728db3589d1fe50f7c1c6b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/efar/
+  to /tmp/efarkkQOhX/efar-20230216.1213
+    efar.el -> efar.el
+Created efar-20230216.1213.tar containing:
+  efar-20230216.1213/
+  efar-20230216.1213/efar-pkg.el
+  efar-20230216.1213/efar.el
+Built efar in 3.956s, finished at 2023-06-11T00:16:08+0000
+ ✓ Success:
+212K -rw-r--r-- 1 root root 211K Jun  9 15:47 packages/efar-20230216.1213.el
+4.0K -rw-r--r-- 1 root root  389 Jun 11 00:16 packages/efar-20230216.1213.entry
+220K -rw-r--r-- 1 root root 220K Jun 11 00:16 packages/efar-20230216.1213.tar

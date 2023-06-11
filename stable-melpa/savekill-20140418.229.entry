@@ -1,6 +1,6 @@
 (savekill .
 	  [(20140418 229)
-	   nil "Save kill ring to disk" single
+	   nil "Save kill ring to disk" tar
 	   ((:commit . "67fc94e3d8fe8ce3ca16f90518f6a46479b63e34")
 	    (:authors
 	     ("rubikitch" . "rubikitch@ruby-lang.org"))

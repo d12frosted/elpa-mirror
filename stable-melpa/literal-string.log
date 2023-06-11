@@ -4,4 +4,16 @@ Source:  https://github.com/joodie/literal-string-mode.git
 
 Updating /mnt/store/melpa/working/literal-string/
 Checking out afffa86e626798ee9f9188ea3be2d5ee6ad17c39
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/literal-string/
+  to /tmp/literal-stringuY0tdM/literal-string-20191023.733
+    literal-string.el -> literal-string.el
+Created literal-string-20191023.733.tar containing:
+  literal-string-20191023.733/
+  literal-string-20191023.733/literal-string-pkg.el
+  literal-string-20191023.733/literal-string.el
+Built literal-string in 2.971s, finished at 2023-06-10T22:29:38+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:19 packages/literal-string-20191023.733.el
+4.0K -rw-r--r-- 1 root root 489 Jun 10 22:29 packages/literal-string-20191023.733.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:29 packages/literal-string-20191023.733.tar

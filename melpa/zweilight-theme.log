@@ -4,4 +4,16 @@ Source:  https://github.com/philiparvidsson/Zweilight-Theme-for-Emacs.git
 
 Updating /mnt/store/melpa/working/zweilight-theme/
 Checking out 890f27c939d8a358c9ef0f402fc3314f475ec874
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zweilight-theme/
+  to /tmp/zweilight-theme2oK5ke/zweilight-theme-20170113.605
+    zweilight-theme.el -> zweilight-theme.el
+Created zweilight-theme-20170113.605.tar containing:
+  zweilight-theme-20170113.605/
+  zweilight-theme-20170113.605/zweilight-theme-pkg.el
+  zweilight-theme-20170113.605/zweilight-theme.el
+Built zweilight-theme in 2.482s, finished at 2023-06-10T23:00:50+0000
+ ✓ Success:
+ 76K -rw-r--r-- 1 root root 75K Jun  9 17:03 packages/zweilight-theme-20170113.605.el
+4.0K -rw-r--r-- 1 root root 435 Jun 10 23:00 packages/zweilight-theme-20170113.605.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 10 23:00 packages/zweilight-theme-20170113.605.tar

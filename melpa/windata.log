@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/windata.git
 
 Updating /mnt/store/melpa/working/windata/
 Checking out a723fc446ceaec23d5f29ecc8245d94c99d91625
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/windata/
+  to /tmp/windataUT6dZy/windata-20090830.1040
+    windata.el -> windata.el
+Created windata-20090830.1040.tar containing:
+  windata-20090830.1040/
+  windata-20090830.1040/windata-pkg.el
+  windata-20090830.1040/windata.el
+Built windata in 2.777s, finished at 2023-06-10T22:58:19+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.9K Jun  9 17:00 packages/windata-20090830.1040.el
+4.0K -rw-r--r-- 1 root root  328 Jun 10 22:58 packages/windata-20090830.1040.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:58 packages/windata-20090830.1040.tar

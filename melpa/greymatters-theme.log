@@ -4,4 +4,16 @@ Source:  https://github.com/mswift42/greymatters-theme.git
 
 Updating /mnt/store/melpa/working/greymatters-theme/
 Checking out a7220a8c6cf18ccae2b76946b6f01188a7c9d5d1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/greymatters-theme/
+  to /tmp/greymatters-themeRKHwQe/greymatters-theme-20150621.1123
+    greymatters-theme.el -> greymatters-theme.el
+Created greymatters-theme-20150621.1123.tar containing:
+  greymatters-theme-20150621.1123/
+  greymatters-theme-20150621.1123/greymatters-theme-pkg.el
+  greymatters-theme-20150621.1123/greymatters-theme.el
+Built greymatters-theme in 4.252s, finished at 2023-06-10T22:19:29+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:04 packages/greymatters-theme-20150621.1123.el
+4.0K -rw-r--r-- 1 root root 321 Jun 10 22:19 packages/greymatters-theme-20150621.1123.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:19 packages/greymatters-theme-20150621.1123.tar

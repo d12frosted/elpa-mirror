@@ -4,4 +4,16 @@ Source:  https://github.com/zzamboni/750words-client.git
 
 Updating /mnt/store/melpa/working/ox-750words/
 Checking out 43eee19428fc8f5a133192398510d7313eb33d97
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ox-750words/
+  to /tmp/ox-750words7vNOZm/ox-750words-20220625.1407
+    ox-750words.el -> ox-750words.el
+Created ox-750words-20220625.1407.tar containing:
+  ox-750words-20220625.1407/
+  ox-750words-20220625.1407/ox-750words-pkg.el
+  ox-750words-20220625.1407/ox-750words.el
+Built ox-750words in 3.566s, finished at 2023-06-10T22:40:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Jun  9 16:35 packages/ox-750words-20220625.1407.el
+4.0K -rw-r--r-- 1 root root  510 Jun 10 22:40 packages/ox-750words-20220625.1407.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:40 packages/ox-750words-20220625.1407.tar

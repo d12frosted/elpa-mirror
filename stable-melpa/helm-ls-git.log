@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-helm/helm-ls-git.git
 
 Updating /mnt/store/melpa/working/helm-ls-git/
 Checking out 771b9add5259613a4b402a5972574d24dd121d7c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-ls-git/
+  to /tmp/helm-ls-gitfhW65W/helm-ls-git-20230505.1437
+    helm-ls-git.el -> helm-ls-git.el
+Created helm-ls-git-20230505.1437.tar containing:
+  helm-ls-git-20230505.1437/
+  helm-ls-git-20230505.1437/helm-ls-git-pkg.el
+  helm-ls-git-20230505.1437/helm-ls-git.el
+Built helm-ls-git in 4.818s, finished at 2023-06-11T00:30:09+0000
+ ✓ Success:
+ 88K -rw-r--r-- 1 root root 86K Jun  9 16:07 packages/helm-ls-git-20230505.1437.el
+4.0K -rw-r--r-- 1 root root 159 Jun 11 00:30 packages/helm-ls-git-20230505.1437.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 11 00:30 packages/helm-ls-git-20230505.1437.tar

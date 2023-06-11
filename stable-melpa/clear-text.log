@@ -4,4 +4,17 @@ Source:  https://github.com/xuchunyang/clear-text.el.git
 
 Updating /mnt/store/melpa/working/clear-text/
 Checking out b50669b6077d6948f72cb3c649281d206e0c2f2b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/clear-text/
+  to /tmp/clear-texteAmAbk/clear-text-20160406.2043
+    clear-text.el -> clear-text.el
+    1000-common-english-words.txt -> 1000-common-english-words.txt
+Created clear-text-20160406.2043.tar containing:
+  clear-text-20160406.2043/
+  clear-text-20160406.2043/1000-common-english-words.txt
+  clear-text-20160406.2043/clear-text-pkg.el
+  clear-text-20160406.2043/clear-text.el
+Built clear-text in 3.072s, finished at 2023-06-11T00:08:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 440 Jun 11 00:08 packages/clear-text-20160406.2043.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:08 packages/clear-text-20160406.2043.tar

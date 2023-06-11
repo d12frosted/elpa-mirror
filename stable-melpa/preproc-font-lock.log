@@ -4,4 +4,16 @@ Source:  https://github.com/Lindydancer/preproc-font-lock.git
 
 Updating /mnt/store/melpa/working/preproc-font-lock/
 Checking out 565fda9f5fdeb0598986174a07e9fb09f7604397
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/preproc-font-lock/
+  to /tmp/preproc-font-lockpc2Ixh/preproc-font-lock-20151107.2018
+    preproc-font-lock.el -> preproc-font-lock.el
+Created preproc-font-lock-20151107.2018.tar containing:
+  preproc-font-lock-20151107.2018/
+  preproc-font-lock-20151107.2018/preproc-font-lock-pkg.el
+  preproc-font-lock-20151107.2018/preproc-font-lock.el
+Built preproc-font-lock in 2.807s, finished at 2023-06-10T22:43:43+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jun  9 16:40 packages/preproc-font-lock-20151107.2018.el
+4.0K -rw-r--r-- 1 root root  412 Jun 10 22:43 packages/preproc-font-lock-20151107.2018.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:43 packages/preproc-font-lock-20151107.2018.tar

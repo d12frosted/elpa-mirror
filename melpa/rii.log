@@ -4,4 +4,16 @@ Source:  https://github.com/ROCKTAKEY/rii.git
 
 Updating /mnt/store/melpa/working/rii/
 Checking out 9df603a5c63ae38ec776e27dc93d3618e2b0fabe
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rii/
+  to /tmp/riiBtOtw0/rii-20210317.1330
+    rii.el -> rii.el
+Created rii-20210317.1330.tar containing:
+  rii-20210317.1330/
+  rii-20210317.1330/rii-pkg.el
+  rii-20210317.1330/rii.el
+Built rii in 2.724s, finished at 2023-06-10T22:47:25+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Jun  9 16:44 packages/rii-20210317.1330.el
+4.0K -rw-r--r-- 1 root root 442 Jun 10 22:47 packages/rii-20210317.1330.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:47 packages/rii-20210317.1330.tar

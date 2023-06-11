@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-php/projectile-variable.git
 
 Updating /mnt/store/melpa/working/projectile-variable/
 Checking out 8d348ac70bdd6dc320c13a12941b32b38140e264
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/projectile-variable/
+  to /tmp/projectile-variableNIu6Av/projectile-variable-20170208.1718
+    projectile-variable.el -> projectile-variable.el
+Created projectile-variable-20170208.1718.tar containing:
+  projectile-variable-20170208.1718/
+  projectile-variable-20170208.1718/projectile-variable-pkg.el
+  projectile-variable-20170208.1718/projectile-variable.el
+Built projectile-variable in 3.218s, finished at 2023-06-10T22:44:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  9 16:40 packages/projectile-variable-20170208.1718.el
+4.0K -rw-r--r-- 1 root root  500 Jun 10 22:44 packages/projectile-variable-20170208.1718.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:44 packages/projectile-variable-20170208.1718.tar

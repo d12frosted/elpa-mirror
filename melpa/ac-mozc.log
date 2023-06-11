@@ -4,4 +4,16 @@ Source:  https://github.com/igjit/ac-mozc.git
 
 Updating /mnt/store/melpa/working/ac-mozc/
 Checking out 4c6c8be4701010d9362184437c0f783e0335c631
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-mozc/
+  to /tmp/ac-mozcG35fuo/ac-mozc-20150227.1619
+    ac-mozc.el -> ac-mozc.el
+Created ac-mozc-20150227.1619.tar containing:
+  ac-mozc-20150227.1619/
+  ac-mozc-20150227.1619/ac-mozc-pkg.el
+  ac-mozc-20150227.1619/ac-mozc.el
+Built ac-mozc in 2.439s, finished at 2023-06-11T00:02:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Jun  9 15:27 packages/ac-mozc-20150227.1619.el
+4.0K -rw-r--r-- 1 root root  430 Jun 11 00:02 packages/ac-mozc-20150227.1619.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:02 packages/ac-mozc-20150227.1619.tar

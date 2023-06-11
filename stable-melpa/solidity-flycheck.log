@@ -4,4 +4,16 @@ Source:  https://github.com/ethereum/emacs-solidity.git
 
 Updating /mnt/store/melpa/working/solidity-flycheck/
 Checking out 8cb8ac6d1311f5bc893cd72ee96e3e335ee8b2a1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/solidity-flycheck/
+  to /tmp/solidity-flycheckjaXLq9/solidity-flycheck-20221024.220
+    solidity-flycheck.el -> solidity-flycheck.el
+Created solidity-flycheck-20221024.220.tar containing:
+  solidity-flycheck-20221024.220/
+  solidity-flycheck-20221024.220/solidity-flycheck-pkg.el
+  solidity-flycheck-20221024.220/solidity-flycheck.el
+Built solidity-flycheck in 3.173s, finished at 2023-06-10T22:50:52+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:50 packages/solidity-flycheck-20221024.220.el
+4.0K -rw-r--r-- 1 root root 535 Jun 10 22:50 packages/solidity-flycheck-20221024.220.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:50 packages/solidity-flycheck-20221024.220.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/jamiguet/network-watch.git
 
 Updating /mnt/store/melpa/working/network-watch/
 Checking out d80b38dbec79f813c3949a8df8fb5f58d48b60ee
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/network-watch/
+  to /tmp/network-watchBT1pRM/network-watch-20171123.1146
+    network-watch.el -> network-watch.el
+Created network-watch-20171123.1146.tar containing:
+  network-watch-20171123.1146/
+  network-watch-20171123.1146/network-watch-pkg.el
+  network-watch-20171123.1146/network-watch.el
+Built network-watch in 3.140s, finished at 2023-06-10T22:35:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  9 16:26 packages/network-watch-20171123.1146.el
+4.0K -rw-r--r-- 1 root root  483 Jun 10 22:35 packages/network-watch-20171123.1146.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:35 packages/network-watch-20171123.1146.tar

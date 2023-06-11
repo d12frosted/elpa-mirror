@@ -4,4 +4,16 @@ Source:  https://github.com/yelinkyaw/emacs-myanmar-input-methods.git
 
 Updating /mnt/store/melpa/working/myanmar-input-methods/
 Checking out 9d4e0d6358c61bde7a2274e430ef71683faea32e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/myanmar-input-methods/
+  to /tmp/myanmar-input-methodsRxLFMe/myanmar-input-methods-20160106.1537
+    myanmar-input-methods.el -> myanmar-input-methods.el
+Created myanmar-input-methods-20160106.1537.tar containing:
+  myanmar-input-methods-20160106.1537/
+  myanmar-input-methods-20160106.1537/myanmar-input-methods-pkg.el
+  myanmar-input-methods-20160106.1537/myanmar-input-methods.el
+Built myanmar-input-methods in 3.948s, finished at 2023-06-10T22:34:31+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Jun  9 16:26 packages/myanmar-input-methods-20160106.1537.el
+4.0K -rw-r--r-- 1 root root 455 Jun 10 22:34 packages/myanmar-input-methods-20160106.1537.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:34 packages/myanmar-input-methods-20160106.1537.tar

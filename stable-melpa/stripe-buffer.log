@@ -4,4 +4,16 @@ Source:  https://github.com/sabof/stripe-buffer.git
 
 Updating /mnt/store/melpa/working/stripe-buffer/
 Checking out c252080f55cb78c951b19ebab9687f6d00237baf
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/stripe-buffer/
+  to /tmp/stripe-bufferamk62k/stripe-buffer-20141208.1508
+    stripe-buffer.el -> stripe-buffer.el
+Created stripe-buffer-20141208.1508.tar containing:
+  stripe-buffer-20141208.1508/
+  stripe-buffer-20141208.1508/stripe-buffer-pkg.el
+  stripe-buffer-20141208.1508/stripe-buffer.el
+Built stripe-buffer in 3.059s, finished at 2023-06-10T22:52:03+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:52 packages/stripe-buffer-20141208.1508.el
+4.0K -rw-r--r-- 1 root root 401 Jun 10 22:52 packages/stripe-buffer-20141208.1508.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:52 packages/stripe-buffer-20141208.1508.tar

@@ -4,4 +4,49 @@ Source:  https://github.com/the-kenny/weechat.el.git
 
 Updating /mnt/store/melpa/working/weechat/
 Checking out d9a13306ea8be27367f92e9202d116a88fa1f441
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/weechat/
+  to /tmp/weechatQeN88D/weechat-20190520.1551
+    weechat-button.el -> weechat-button.el
+    weechat-cmd.el -> weechat-cmd.el
+    weechat-color.el -> weechat-color.el
+    weechat-complete.el -> weechat-complete.el
+    weechat-core.el -> weechat-core.el
+    weechat-corrector.el -> weechat-corrector.el
+    weechat-image.el -> weechat-image.el
+    weechat-latex.el -> weechat-latex.el
+    weechat-notifications.el -> weechat-notifications.el
+    weechat-read-marker.el -> weechat-read-marker.el
+    weechat-relay.el -> weechat-relay.el
+    weechat-sauron.el -> weechat-sauron.el
+    weechat-secrets.el -> weechat-secrets.el
+    weechat-smiley.el -> weechat-smiley.el
+    weechat-speedbar.el -> weechat-speedbar.el
+    weechat-spelling.el -> weechat-spelling.el
+    weechat-tracking.el -> weechat-tracking.el
+    weechat.el -> weechat.el
+Created weechat-20190520.1551.tar containing:
+  weechat-20190520.1551/
+  weechat-20190520.1551/weechat-button.el
+  weechat-20190520.1551/weechat-cmd.el
+  weechat-20190520.1551/weechat-color.el
+  weechat-20190520.1551/weechat-complete.el
+  weechat-20190520.1551/weechat-core.el
+  weechat-20190520.1551/weechat-corrector.el
+  weechat-20190520.1551/weechat-image.el
+  weechat-20190520.1551/weechat-latex.el
+  weechat-20190520.1551/weechat-notifications.el
+  weechat-20190520.1551/weechat-pkg.el
+  weechat-20190520.1551/weechat-read-marker.el
+  weechat-20190520.1551/weechat-relay.el
+  weechat-20190520.1551/weechat-sauron.el
+  weechat-20190520.1551/weechat-secrets.el
+  weechat-20190520.1551/weechat-smiley.el
+  weechat-20190520.1551/weechat-speedbar.el
+  weechat-20190520.1551/weechat-spelling.el
+  weechat-20190520.1551/weechat-tracking.el
+  weechat-20190520.1551/weechat.el
+Built weechat in 4.054s, finished at 2023-06-10T22:57:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  571 Jun 10 22:57 packages/weechat-20190520.1551.entry
+220K -rw-r--r-- 1 root root 220K Jun 10 22:57 packages/weechat-20190520.1551.tar

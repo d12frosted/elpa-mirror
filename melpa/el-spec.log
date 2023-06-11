@@ -4,4 +4,16 @@ Source:  https://github.com/uk-ar/el-spec.git
 
 Updating /mnt/store/melpa/working/el-spec/
 Checking out 1dbc465401d4aea5560318c4f13ff30920a0718d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/el-spec/
+  to /tmp/el-specH83c0B/el-spec-20121018.704
+    el-spec.el -> el-spec.el
+Created el-spec-20121018.704.tar containing:
+  el-spec-20121018.704/
+  el-spec-20121018.704/el-spec-pkg.el
+  el-spec-20121018.704/el-spec.el
+Built el-spec in 3.299s, finished at 2023-06-11T00:16:32+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 15:48 packages/el-spec-20121018.704.el
+4.0K -rw-r--r-- 1 root root 402 Jun 11 00:16 packages/el-spec-20121018.704.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:16 packages/el-spec-20121018.704.tar

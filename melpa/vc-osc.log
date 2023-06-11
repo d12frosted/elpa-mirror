@@ -4,4 +4,16 @@ Source:  https://github.com/aspiers/vc-osc.git
 
 Updating /mnt/store/melpa/working/vc-osc/
 Checking out bf5a515ed85f7d7cdfe66ed5bf4ef7554f8561e5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vc-osc/
+  to /tmp/vc-oscS5RJMD/vc-osc-20190402.2349
+    vc-osc.el -> vc-osc.el
+Created vc-osc-20190402.2349.tar containing:
+  vc-osc-20190402.2349/
+  vc-osc-20190402.2349/vc-osc-pkg.el
+  vc-osc-20190402.2349/vc-osc.el
+Built vc-osc in 2.701s, finished at 2023-06-10T22:56:40+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  9 16:58 packages/vc-osc-20190402.2349.el
+4.0K -rw-r--r-- 1 root root 320 Jun 10 22:56 packages/vc-osc-20190402.2349.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:56 packages/vc-osc-20190402.2349.tar

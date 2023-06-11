@@ -4,4 +4,16 @@ Source:  https://github.com/rdallasgray/graphene-meta-theme.git
 
 Updating /mnt/store/melpa/working/graphene-meta-theme/
 Checking out 62cc73fee31f1bd9474027b83a249feee050271e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/graphene-meta-theme/
+  to /tmp/graphene-meta-theme9cyXaf/graphene-meta-theme-20161204.1607
+    graphene-meta-theme.el -> graphene-meta-theme.el
+Created graphene-meta-theme-20161204.1607.tar containing:
+  graphene-meta-theme-20161204.1607/
+  graphene-meta-theme-20161204.1607/graphene-meta-theme-pkg.el
+  graphene-meta-theme-20161204.1607/graphene-meta-theme.el
+Built graphene-meta-theme in 4.142s, finished at 2023-06-10T22:19:14+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:03 packages/graphene-meta-theme-20161204.1607.el
+4.0K -rw-r--r-- 1 root root 493 Jun 10 22:19 packages/graphene-meta-theme-20161204.1607.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:19 packages/graphene-meta-theme-20161204.1607.tar

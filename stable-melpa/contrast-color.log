@@ -4,4 +4,16 @@ Source:  https://github.com/yuutayamada/contrast-color-el.git
 
 Updating /mnt/store/melpa/working/contrast-color/
 Checking out 6ff1b807e09ef6a775e4ab1032bb2ea3fc442d9e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/contrast-color/
+  to /tmp/contrast-colore0DNnv/contrast-color-20160903.1807
+    contrast-color.el -> contrast-color.el
+Created contrast-color-20160903.1807.tar containing:
+  contrast-color-20160903.1807/
+  contrast-color-20160903.1807/contrast-color-pkg.el
+  contrast-color-20160903.1807/contrast-color.el
+Built contrast-color in 2.870s, finished at 2023-06-11T00:10:47+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 15:39 packages/contrast-color-20160903.1807.el
+4.0K -rw-r--r-- 1 root root 472 Jun 11 00:10 packages/contrast-color-20160903.1807.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:10 packages/contrast-color-20160903.1807.tar

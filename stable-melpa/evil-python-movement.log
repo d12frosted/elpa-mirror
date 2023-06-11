@@ -4,4 +4,16 @@ Source:  https://bitbucket.org/FelipeLema/evil-python-movement.el
 
 Updating /mnt/store/melpa/working/evil-python-movement/
 Checking out 9936b3b7f8d96415d517c1f3604637889484a637
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-python-movement/
+  to /tmp/evil-python-movementnOEn2x/evil-python-movement-20180724.1420
+    evil-python-movement.el -> evil-python-movement.el
+Created evil-python-movement-20180724.1420.tar containing:
+  evil-python-movement-20180724.1420/
+  evil-python-movement-20180724.1420/evil-python-movement-pkg.el
+  evil-python-movement-20180724.1420/evil-python-movement.el
+Built evil-python-movement in 8.281s, finished at 2023-06-11T00:20:09+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:53 packages/evil-python-movement-20180724.1420.el
+4.0K -rw-r--r-- 1 root root 568 Jun 11 00:20 packages/evil-python-movement-20180724.1420.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:20 packages/evil-python-movement-20180724.1420.tar

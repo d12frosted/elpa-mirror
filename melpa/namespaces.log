@@ -4,4 +4,16 @@ Source:  https://github.com/chrisbarrett/elisp-namespaces.git
 
 Updating /mnt/store/melpa/working/namespaces/
 Checking out 3d02525d9b9a5ae6e7be3adefd880121436e6270
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/namespaces/
+  to /tmp/namespacescMa8C6/namespaces-20130326.2250
+    namespaces.el -> namespaces.el
+Created namespaces-20130326.2250.tar containing:
+  namespaces-20130326.2250/
+  namespaces-20130326.2250/namespaces-pkg.el
+  namespaces-20130326.2250/namespaces.el
+Built namespaces in 3.115s, finished at 2023-06-10T22:34:47+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  9 16:26 packages/namespaces-20130326.2250.el
+4.0K -rw-r--r-- 1 root root 389 Jun 10 22:34 packages/namespaces-20130326.2250.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:34 packages/namespaces-20130326.2250.tar

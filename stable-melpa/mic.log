@@ -4,4 +4,25 @@ Source:  https://github.com/ROCKTAKEY/mic.git
 
 Updating /mnt/store/melpa/working/mic/
 Checking out 7d0a31ace0b801cb8b58a7bb61a981b67508208d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mic/
+  to /tmp/micMtQG6y/mic-20230123.944
+    mic-adapter.el -> mic-adapter.el
+    mic-deffilter.el -> mic-deffilter.el
+    mic-definputter.el -> mic-definputter.el
+    mic-filter.el -> mic-filter.el
+    mic-utils.el -> mic-utils.el
+    mic.el -> mic.el
+Created mic-20230123.944.tar containing:
+  mic-20230123.944/
+  mic-20230123.944/mic-adapter.el
+  mic-20230123.944/mic-deffilter.el
+  mic-20230123.944/mic-definputter.el
+  mic-20230123.944/mic-filter.el
+  mic-20230123.944/mic-pkg.el
+  mic-20230123.944/mic-utils.el
+  mic-20230123.944/mic.el
+Built mic in 3.096s, finished at 2023-06-10T22:32:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  433 Jun 10 22:32 packages/mic-20230123.944.entry
+112K -rw-r--r-- 1 root root 110K Jun 10 22:32 packages/mic-20230123.944.tar

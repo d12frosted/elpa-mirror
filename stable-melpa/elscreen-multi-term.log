@@ -4,4 +4,16 @@ Source:  https://github.com/wamei/elscreen-multi-term.git
 
 Updating /mnt/store/melpa/working/elscreen-multi-term/
 Checking out 4ea89bae0444d9d4377515929f76cb3e98140f1f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elscreen-multi-term/
+  to /tmp/elscreen-multi-termD7UOqg/elscreen-multi-term-20200417.821
+    elscreen-multi-term.el -> elscreen-multi-term.el
+Created elscreen-multi-term-20200417.821.tar containing:
+  elscreen-multi-term-20200417.821/
+  elscreen-multi-term-20200417.821/elscreen-multi-term-pkg.el
+  elscreen-multi-term-20200417.821/elscreen-multi-term.el
+Built elscreen-multi-term in 2.519s, finished at 2023-06-11T00:17:30+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jun  9 15:50 packages/elscreen-multi-term-20200417.821.el
+4.0K -rw-r--r-- 1 root root  459 Jun 11 00:17 packages/elscreen-multi-term-20200417.821.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:17 packages/elscreen-multi-term-20200417.821.tar

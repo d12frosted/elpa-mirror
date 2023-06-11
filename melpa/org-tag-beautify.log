@@ -3,5 +3,16 @@ Fetcher: git
 Source:  https://repo.or.cz/org-tag-beautify.git
 
 Updating /mnt/store/melpa/working/org-tag-beautify/
-Checking out 972c1efa7eb3c7421b4feb63a3dffa7d3a6d6b3b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Checking out 569d2fe6548bebd4171c8410cdb104c0321918be
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-tag-beautify/
+  to /tmp/org-tag-beautifydYRtF5/org-tag-beautify-20230610.1559
+    org-tag-beautify.el -> org-tag-beautify.el
+Created org-tag-beautify-20230610.1559.tar containing:
+  org-tag-beautify-20230610.1559/
+  org-tag-beautify-20230610.1559/org-tag-beautify-pkg.el
+  org-tag-beautify-20230610.1559/org-tag-beautify.el
+Built org-tag-beautify in 4.672s, finished at 2023-06-10T22:39:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  329 Jun 10 22:39 packages/org-tag-beautify-20230610.1559.entry
+120K -rw-r--r-- 1 root root 120K Jun 10 22:39 packages/org-tag-beautify-20230610.1559.tar

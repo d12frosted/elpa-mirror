@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/go-eldoc.git
 
 Updating /mnt/store/melpa/working/go-eldoc/
 Checking out cbbd2ea1e94a36004432a9ac61414cb5a95a39bd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/go-eldoc/
+  to /tmp/go-eldoc8hgxM3/go-eldoc-20170305.1427
+    go-eldoc.el -> go-eldoc.el
+Created go-eldoc-20170305.1427.tar containing:
+  go-eldoc-20170305.1427/
+  go-eldoc-20170305.1427/go-eldoc-pkg.el
+  go-eldoc-20170305.1427/go-eldoc.el
+Built go-eldoc in 4.084s, finished at 2023-06-11T00:26:46+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 16:02 packages/go-eldoc-20170305.1427.el
+4.0K -rw-r--r-- 1 root root 421 Jun 11 00:26 packages/go-eldoc-20170305.1427.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:26 packages/go-eldoc-20170305.1427.tar

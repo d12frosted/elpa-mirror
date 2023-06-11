@@ -4,4 +4,16 @@ Source:  https://github.com/DarwinAwardWinner/emacs-system-specific-settings.git
 
 Updating /mnt/store/melpa/working/system-specific-settings/
 Checking out 0050d85b2175095aa5ecf580a2fe43c069b0eef3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/system-specific-settings/
+  to /tmp/system-specific-settingsD320sa/system-specific-settings-20140818.1457
+    system-specific-settings.el -> system-specific-settings.el
+Created system-specific-settings-20140818.1457.tar containing:
+  system-specific-settings-20140818.1457/
+  system-specific-settings-20140818.1457/system-specific-settings-pkg.el
+  system-specific-settings-20140818.1457/system-specific-settings.el
+Built system-specific-settings in 4.003s, finished at 2023-06-10T22:53:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Jun  9 16:53 packages/system-specific-settings-20140818.1457.el
+4.0K -rw-r--r-- 1 root root  429 Jun 10 22:53 packages/system-specific-settings-20140818.1457.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:53 packages/system-specific-settings-20140818.1457.tar

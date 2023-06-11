@@ -4,4 +4,16 @@ Source:  https://github.com/purcell/ac-haskell-process.git
 
 Updating /mnt/store/melpa/working/ac-haskell-process/
 Checking out 0362d4323511107ec70e7165cb612f3ab01b712f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-haskell-process/
+  to /tmp/ac-haskell-processNLfw1y/ac-haskell-process-20150423.1402
+    ac-haskell-process.el -> ac-haskell-process.el
+Created ac-haskell-process-20150423.1402.tar containing:
+  ac-haskell-process-20150423.1402/
+  ac-haskell-process-20150423.1402/ac-haskell-process-pkg.el
+  ac-haskell-process-20150423.1402/ac-haskell-process.el
+Built ac-haskell-process in 3.472s, finished at 2023-06-11T00:01:57+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Jun  9 15:27 packages/ac-haskell-process-20150423.1402.el
+4.0K -rw-r--r-- 1 root root  507 Jun 11 00:01 packages/ac-haskell-process-20150423.1402.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:01 packages/ac-haskell-process-20150423.1402.tar

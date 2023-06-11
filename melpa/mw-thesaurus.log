@@ -4,4 +4,16 @@ Source:  https://github.com/agzam/mw-thesaurus.el.git
 
 Updating /mnt/store/melpa/working/mw-thesaurus/
 Checking out c44d793595c2d0f6789621da457da065920968ac
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mw-thesaurus/
+  to /tmp/mw-thesaurusOdFAbN/mw-thesaurus-20230426.1752
+    mw-thesaurus.el -> mw-thesaurus.el
+Created mw-thesaurus-20230426.1752.tar containing:
+  mw-thesaurus-20230426.1752/
+  mw-thesaurus-20230426.1752/mw-thesaurus-pkg.el
+  mw-thesaurus-20230426.1752/mw-thesaurus.el
+Built mw-thesaurus in 3.859s, finished at 2023-06-10T22:34:29+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:26 packages/mw-thesaurus-20230426.1752.el
+4.0K -rw-r--r-- 1 root root 402 Jun 10 22:34 packages/mw-thesaurus-20230426.1752.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:34 packages/mw-thesaurus-20230426.1752.tar

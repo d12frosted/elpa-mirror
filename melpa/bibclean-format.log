@@ -4,4 +4,16 @@ Source:  https://github.com/peterwvj/bibclean-format.git
 
 Updating /mnt/store/melpa/working/bibclean-format/
 Checking out b4003950a925d1c659bc359ab5e88e4441775d77
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bibclean-format/
+  to /tmp/bibclean-format1J66cy/bibclean-format-20190302.2017
+    bibclean-format.el -> bibclean-format.el
+Created bibclean-format-20190302.2017.tar containing:
+  bibclean-format-20190302.2017/
+  bibclean-format-20190302.2017/bibclean-format-pkg.el
+  bibclean-format-20190302.2017/bibclean-format.el
+Built bibclean-format in 3.477s, finished at 2023-06-11T00:05:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Jun  9 15:31 packages/bibclean-format-20190302.2017.el
+4.0K -rw-r--r-- 1 root root  564 Jun 11 00:05 packages/bibclean-format-20190302.2017.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:05 packages/bibclean-format-20190302.2017.tar

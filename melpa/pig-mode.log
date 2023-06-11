@@ -4,4 +4,16 @@ Source:  https://github.com/motus/pig-mode.git
 
 Updating /mnt/store/melpa/working/pig-mode/
 Checking out 4c6c6e1b1bb719d8adc6c47cc24665f6fe558959
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pig-mode/
+  to /tmp/pig-modecqjX0F/pig-mode-20180520.1400
+    pig-mode.el -> pig-mode.el
+Created pig-mode-20180520.1400.tar containing:
+  pig-mode-20180520.1400/
+  pig-mode-20180520.1400/pig-mode-pkg.el
+  pig-mode-20180520.1400/pig-mode.el
+Built pig-mode in 2.882s, finished at 2023-06-10T22:42:35+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  9 16:38 packages/pig-mode-20180520.1400.el
+4.0K -rw-r--r-- 1 root root 217 Jun 10 22:42 packages/pig-mode-20180520.1400.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:42 packages/pig-mode-20180520.1400.tar

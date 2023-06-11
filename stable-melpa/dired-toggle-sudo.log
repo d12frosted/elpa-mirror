@@ -4,4 +4,16 @@ Source:  https://github.com/renard/dired-toggle-sudo.git
 
 Updating /mnt/store/melpa/working/dired-toggle-sudo/
 Checking out 9f86cdf858225b15c20affb97ed105e4109047bf
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-toggle-sudo/
+  to /tmp/dired-toggle-sudojMd83d/dired-toggle-sudo-20211216.102
+    dired-toggle-sudo.el -> dired-toggle-sudo.el
+Created dired-toggle-sudo-20211216.102.tar containing:
+  dired-toggle-sudo-20211216.102/
+  dired-toggle-sudo-20211216.102/dired-toggle-sudo-pkg.el
+  dired-toggle-sudo-20211216.102/dired-toggle-sudo.el
+Built dired-toggle-sudo in 5.324s, finished at 2023-06-11T00:14:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jun  9 15:44 packages/dired-toggle-sudo-20211216.102.el
+4.0K -rw-r--r-- 1 root root  446 Jun 11 00:14 packages/dired-toggle-sudo-20211216.102.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:14 packages/dired-toggle-sudo-20211216.102.tar

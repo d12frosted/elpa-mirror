@@ -4,4 +4,35 @@ Source:  https://github.com/bmag/emacs-purpose.git
 
 Updating /mnt/store/melpa/working/window-purpose/
 Checking out bb462f12f836414425edac32ebd069b4fd5b98d4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/window-purpose/
+  to /tmp/window-purposeFcLbOU/window-purpose-20210628.715
+    window-purpose-configuration.el -> window-purpose-configuration.el
+    window-purpose-core.el -> window-purpose-core.el
+    window-purpose-fixes.el -> window-purpose-fixes.el
+    window-purpose-layout.el -> window-purpose-layout.el
+    window-purpose-prefix-overload.el -> window-purpose-prefix-overload.el
+    window-purpose-switch.el -> window-purpose-switch.el
+    window-purpose-utils.el -> window-purpose-utils.el
+    window-purpose-x.el -> window-purpose-x.el
+    window-purpose.el -> window-purpose.el
+    layouts => layouts
+Created window-purpose-20210628.715.tar containing:
+  window-purpose-20210628.715/
+  window-purpose-20210628.715/layouts/
+  window-purpose-20210628.715/layouts/edit-terminal-general.window-layout
+  window-purpose-20210628.715/layouts/edit-terminal.window-layout
+  window-purpose-20210628.715/window-purpose-configuration.el
+  window-purpose-20210628.715/window-purpose-core.el
+  window-purpose-20210628.715/window-purpose-fixes.el
+  window-purpose-20210628.715/window-purpose-layout.el
+  window-purpose-20210628.715/window-purpose-pkg.el
+  window-purpose-20210628.715/window-purpose-prefix-overload.el
+  window-purpose-20210628.715/window-purpose-switch.el
+  window-purpose-20210628.715/window-purpose-utils.el
+  window-purpose-20210628.715/window-purpose-x.el
+  window-purpose-20210628.715/window-purpose.el
+Built window-purpose in 3.361s, finished at 2023-06-10T22:58:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  414 Jun 10 22:58 packages/window-purpose-20210628.715.entry
+200K -rw-r--r-- 1 root root 200K Jun 10 22:58 packages/window-purpose-20210628.715.tar

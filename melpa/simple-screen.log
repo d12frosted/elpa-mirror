@@ -4,4 +4,16 @@ Source:  https://github.com/wachikun/simple-screen.git
 
 Updating /mnt/store/melpa/working/simple-screen/
 Checking out 3ce535755986f7c25890d11e42fa621a3a069a4f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/simple-screen/
+  to /tmp/simple-screenGexw0c/simple-screen-20200926.109
+    simple-screen.el -> simple-screen.el
+Created simple-screen-20200926.109.tar containing:
+  simple-screen-20200926.109/
+  simple-screen-20200926.109/simple-screen-pkg.el
+  simple-screen-20200926.109/simple-screen.el
+Built simple-screen in 2.835s, finished at 2023-06-10T22:49:45+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jun  9 16:48 packages/simple-screen-20200926.109.el
+4.0K -rw-r--r-- 1 root root  407 Jun 10 22:49 packages/simple-screen-20200926.109.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:49 packages/simple-screen-20200926.109.tar

@@ -4,4 +4,23 @@ Source:  https://github.com/clojure-emacs/helm-cider.git
 
 Updating /mnt/store/melpa/working/helm-cider/
 Checking out fe7e48befdb0b20ea1b0fb3626a8a725e54ae626
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-cider/
+  to /tmp/helm-cider0V01Ww/helm-cider-20220706.944
+    helm-cider-cheatsheet.el -> helm-cider-cheatsheet.el
+    helm-cider-repl.el -> helm-cider-repl.el
+    helm-cider-spec.el -> helm-cider-spec.el
+    helm-cider-util.el -> helm-cider-util.el
+    helm-cider.el -> helm-cider.el
+Created helm-cider-20220706.944.tar containing:
+  helm-cider-20220706.944/
+  helm-cider-20220706.944/helm-cider-cheatsheet.el
+  helm-cider-20220706.944/helm-cider-pkg.el
+  helm-cider-20220706.944/helm-cider-repl.el
+  helm-cider-20220706.944/helm-cider-spec.el
+  helm-cider-20220706.944/helm-cider-util.el
+  helm-cider-20220706.944/helm-cider.el
+Built helm-cider in 3.131s, finished at 2023-06-11T00:29:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 572 Jun 11 00:29 packages/helm-cider-20220706.944.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:29 packages/helm-cider-20220706.944.tar

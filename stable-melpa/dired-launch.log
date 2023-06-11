@@ -4,4 +4,16 @@ Source:  https://github.com/thomp/dired-launch.git
 
 Updating /mnt/store/melpa/working/dired-launch/
 Checking out 519a6a49b56978b53e88a005490175cb913ec7fa
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-launch/
+  to /tmp/dired-launchR7Qd9f/dired-launch-20220916.1836
+    dired-launch.el -> dired-launch.el
+Created dired-launch-20220916.1836.tar containing:
+  dired-launch-20220916.1836/
+  dired-launch-20220916.1836/dired-launch-pkg.el
+  dired-launch-20220916.1836/dired-launch.el
+Built dired-launch in 5.240s, finished at 2023-06-11T00:13:47+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:44 packages/dired-launch-20220916.1836.el
+4.0K -rw-r--r-- 1 root root 362 Jun 11 00:13 packages/dired-launch-20220916.1836.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:13 packages/dired-launch-20220916.1836.tar

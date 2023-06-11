@@ -4,4 +4,16 @@ Source:  https://github.com/LaurenceWarne/prefab.el.git
 
 Updating /mnt/store/melpa/working/prefab/
 Checking out 328c763d67cd53875d729af0bcb89d412455cf60
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prefab/
+  to /tmp/prefabcNSkIN/prefab-20220828.2015
+    prefab.el -> prefab.el
+Created prefab-20220828.2015.tar containing:
+  prefab-20220828.2015/
+  prefab-20220828.2015/prefab-pkg.el
+  prefab-20220828.2015/prefab.el
+Built prefab in 3.230s, finished at 2023-06-10T22:43:42+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:40 packages/prefab-20220828.2015.el
+4.0K -rw-r--r-- 1 root root 394 Jun 10 22:43 packages/prefab-20220828.2015.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:43 packages/prefab-20220828.2015.tar

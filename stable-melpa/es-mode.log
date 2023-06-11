@@ -4,4 +4,37 @@ Source:  https://github.com/dakrone/es-mode.git
 
 Updating /mnt/store/melpa/working/es-mode/
 Checking out e82465fd785688bb58918ea62ca4de06a2a23a1e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/es-mode/
+  to /tmp/es-modehkiUlr/es-mode-20221026.1103
+    es-cc.el -> es-cc.el
+    es-copyas.el -> es-copyas.el
+    es-mode.el -> es-mode.el
+    es-parse.el -> es-parse.el
+    ob-elasticsearch.el -> ob-elasticsearch.el
+    snippets => snippets
+Created es-mode-20221026.1103.tar containing:
+  es-mode-20221026.1103/
+  es-mode-20221026.1103/es-cc.el
+  es-mode-20221026.1103/es-copyas.el
+  es-mode-20221026.1103/es-mode-pkg.el
+  es-mode-20221026.1103/es-mode.el
+  es-mode-20221026.1103/es-parse.el
+  es-mode-20221026.1103/ob-elasticsearch.el
+  es-mode-20221026.1103/snippets/
+  es-mode-20221026.1103/snippets/es-mode/
+  es-mode-20221026.1103/snippets/es-mode/bool
+  es-mode-20221026.1103/snippets/es-mode/cat_nodes
+  es-mode-20221026.1103/snippets/es-mode/cat_shards
+  es-mode-20221026.1103/snippets/es-mode/debug-logging
+  es-mode-20221026.1103/snippets/es-mode/delete_index
+  es-mode-20221026.1103/snippets/es-mode/match
+  es-mode-20221026.1103/snippets/es-mode/match_all
+  es-mode-20221026.1103/snippets/es-mode/multi_match
+  es-mode-20221026.1103/snippets/es-mode/new_index
+  es-mode-20221026.1103/snippets/es-mode/search
+  es-mode-20221026.1103/snippets/es-mode/search-match-all
+Built es-mode in 3.870s, finished at 2023-06-11T00:18:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 540 Jun 11 00:18 packages/es-mode-20221026.1103.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 11 00:18 packages/es-mode-20221026.1103.tar

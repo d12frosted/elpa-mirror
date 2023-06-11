@@ -4,4 +4,16 @@ Source:  https://github.com/jcs-elpa/indent-control.git
 
 Updating /mnt/store/melpa/working/indent-control/
 Checking out 586b955dde5a0699fca76db28ad0d6c3e4141a27
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/indent-control/
+  to /tmp/indent-controls55jKJ/indent-control-20220930.2107
+    indent-control.el -> indent-control.el
+Created indent-control-20220930.2107.tar containing:
+  indent-control-20220930.2107/
+  indent-control-20220930.2107/indent-control-pkg.el
+  indent-control-20220930.2107/indent-control.el
+Built indent-control in 3.300s, finished at 2023-06-10T22:24:38+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:12 packages/indent-control-20220930.2107.el
+4.0K -rw-r--r-- 1 root root 489 Jun 10 22:24 packages/indent-control-20220930.2107.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:24 packages/indent-control-20220930.2107.tar

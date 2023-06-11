@@ -4,4 +4,16 @@ Source:  https://github.com/smallwat3r/tubestatus.el.git
 
 Updating /mnt/store/melpa/working/tubestatus/
 Checking out bf722d441ff96ff8fac6c8d2a798e283fef5613b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tubestatus/
+  to /tmp/tubestatusDgSOzf/tubestatus-20220620.2028
+    tubestatus.el -> tubestatus.el
+Created tubestatus-20220620.2028.tar containing:
+  tubestatus-20220620.2028/
+  tubestatus-20220620.2028/tubestatus-pkg.el
+  tubestatus-20220620.2028/tubestatus.el
+Built tubestatus in 2.741s, finished at 2023-06-10T22:55:35+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Jun  9 16:56 packages/tubestatus-20220620.2028.el
+4.0K -rw-r--r-- 1 root root  487 Jun 10 22:55 packages/tubestatus-20220620.2028.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:55 packages/tubestatus-20220620.2028.tar

@@ -4,4 +4,17 @@ Source:  https://github.com/unrelentingtech/django-mode.git
 
 Updating /mnt/store/melpa/working/django-mode/
 Checking out a71b8dd984e7f724b8321246e5c353a4ae5c986e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/django-mode/
+  to /tmp/django-modeohSh0I/django-mode-20170522.714
+    django-html-mode.el -> django-html-mode.el
+    django-mode.el -> django-mode.el
+Created django-mode-20170522.714.tar containing:
+  django-mode-20170522.714/
+  django-mode-20170522.714/django-html-mode.el
+  django-mode-20170522.714/django-mode-pkg.el
+  django-mode-20170522.714/django-mode.el
+Built django-mode in 3.101s, finished at 2023-06-11T00:14:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 419 Jun 11 00:14 packages/django-mode-20170522.714.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:14 packages/django-mode-20170522.714.tar

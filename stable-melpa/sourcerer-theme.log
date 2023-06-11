@@ -4,4 +4,16 @@ Source:  https://github.com/gilbertw1/sourcerer-emacs.git
 
 Updating /mnt/store/melpa/working/sourcerer-theme/
 Checking out c7f8e665d53bb48fb72f95f706710d53d24bd407
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sourcerer-theme/
+  to /tmp/sourcerer-themeaEk3GN/sourcerer-theme-20161014.1625
+    sourcerer-theme.el -> sourcerer-theme.el
+Created sourcerer-theme-20161014.1625.tar containing:
+  sourcerer-theme-20161014.1625/
+  sourcerer-theme-20161014.1625/sourcerer-theme-pkg.el
+  sourcerer-theme-20161014.1625/sourcerer-theme.el
+Built sourcerer-theme in 3.164s, finished at 2023-06-10T22:51:02+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  9 16:50 packages/sourcerer-theme-20161014.1625.el
+4.0K -rw-r--r-- 1 root root 424 Jun 10 22:51 packages/sourcerer-theme-20161014.1625.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:51 packages/sourcerer-theme-20161014.1625.tar

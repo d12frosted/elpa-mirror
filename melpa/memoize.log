@@ -4,4 +4,16 @@ Source:  https://github.com/skeeto/emacs-memoize.git
 
 Updating /mnt/store/melpa/working/memoize/
 Checking out 51b075935ca7070f62fae1d69fe0ff7d8fa56fdd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/memoize/
+  to /tmp/memoize55nXxp/memoize-20200103.2036
+    memoize.el -> memoize.el
+Created memoize-20200103.2036.tar containing:
+  memoize-20200103.2036/
+  memoize-20200103.2036/memoize-pkg.el
+  memoize-20200103.2036/memoize.el
+Built memoize in 2.774s, finished at 2023-06-10T22:31:58+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jun  9 16:22 packages/memoize-20200103.2036.el
+4.0K -rw-r--r-- 1 root root  392 Jun 10 22:31 packages/memoize-20200103.2036.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:31 packages/memoize-20200103.2036.tar

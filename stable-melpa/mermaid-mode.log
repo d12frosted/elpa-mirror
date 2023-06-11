@@ -4,4 +4,16 @@ Source:  https://github.com/abrochard/mermaid-mode.git
 
 Updating /mnt/store/melpa/working/mermaid-mode/
 Checking out 105271870a872ae7a91838454b064a1153353b5f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mermaid-mode/
+  to /tmp/mermaid-modeN2tT8Z/mermaid-mode-20230517.1527
+    mermaid-mode.el -> mermaid-mode.el
+Created mermaid-mode-20230517.1527.tar containing:
+  mermaid-mode-20230517.1527/
+  mermaid-mode-20230517.1527/mermaid-mode-pkg.el
+  mermaid-mode-20230517.1527/mermaid-mode.el
+Built mermaid-mode in 3.752s, finished at 2023-06-10T22:32:03+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Jun  9 16:22 packages/mermaid-mode-20230517.1527.el
+4.0K -rw-r--r-- 1 root root  410 Jun 10 22:32 packages/mermaid-mode-20230517.1527.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:32 packages/mermaid-mode-20230517.1527.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/emacsattic/org-wunderlist.git
 
 Updating /mnt/store/melpa/working/org-wunderlist/
 Checking out 1a084bb49be4b5a1066db9cd9b7da2f8efab293f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-wunderlist/
+  to /tmp/org-wunderlistwwTDck/org-wunderlist-20191017.1917
+    org-wunderlist.el -> org-wunderlist.el
+Created org-wunderlist-20191017.1917.tar containing:
+  org-wunderlist-20191017.1917/
+  org-wunderlist-20191017.1917/org-wunderlist-pkg.el
+  org-wunderlist-20191017.1917/org-wunderlist.el
+Built org-wunderlist in 5.198s, finished at 2023-06-10T22:39:36+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 38K Jun  9 16:34 packages/org-wunderlist-20191017.1917.el
+4.0K -rw-r--r-- 1 root root 488 Jun 10 22:39 packages/org-wunderlist-20191017.1917.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:39 packages/org-wunderlist-20191017.1917.tar

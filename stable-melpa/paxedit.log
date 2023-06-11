@@ -4,4 +4,16 @@ Source:  https://github.com/promethial/paxedit.git
 
 Updating /mnt/store/melpa/working/paxedit/
 Checking out 48df0a26285f68cd20ea64368e7bf2a5fbf13135
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/paxedit/
+  to /tmp/paxeditNyJRxr/paxedit-20160730.1727
+    paxedit.el -> paxedit.el
+Created paxedit-20160730.1727.tar containing:
+  paxedit-20160730.1727/
+  paxedit-20160730.1727/paxedit-pkg.el
+  paxedit-20160730.1727/paxedit.el
+Built paxedit in 2.971s, finished at 2023-06-10T22:41:46+0000
+ ✓ Success:
+ 80K -rw-r--r-- 1 root root 78K Jun  9 16:37 packages/paxedit-20160730.1727.el
+4.0K -rw-r--r-- 1 root root 426 Jun 10 22:41 packages/paxedit-20160730.1727.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 10 22:41 packages/paxedit-20160730.1727.tar

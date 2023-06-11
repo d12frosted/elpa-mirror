@@ -4,4 +4,16 @@ Source:  https://github.com/DamienCassou/gpastel.git
 
 Updating /mnt/store/melpa/working/gpastel/
 Checking out 8a5522b274f79d55d7c9a0b2aaf062526f9253c7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gpastel/
+  to /tmp/gpastelkHBHJb/gpastel-20181229.1404
+    gpastel.el -> gpastel.el
+Created gpastel-20181229.1404.tar containing:
+  gpastel-20181229.1404/
+  gpastel-20181229.1404/gpastel-pkg.el
+  gpastel-20181229.1404/gpastel.el
+Built gpastel in 4.023s, finished at 2023-06-11T00:27:41+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Jun  9 16:03 packages/gpastel-20181229.1404.el
+4.0K -rw-r--r-- 1 root root  437 Jun 11 00:27 packages/gpastel-20181229.1404.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:27 packages/gpastel-20181229.1404.tar

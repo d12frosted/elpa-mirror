@@ -4,4 +4,16 @@ Source:  https://github.com/mtmtcode/helm-img-tiqav.git
 
 Updating /mnt/store/melpa/working/helm-img-tiqav/
 Checking out 33a7e9508bc8f37d53320b56c92b53d321a57bb0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-img-tiqav/
+  to /tmp/helm-img-tiqavGItrXb/helm-img-tiqav-20151224.2322
+    helm-img-tiqav.el -> helm-img-tiqav.el
+Created helm-img-tiqav-20151224.2322.tar containing:
+  helm-img-tiqav-20151224.2322/
+  helm-img-tiqav-20151224.2322/helm-img-tiqav-pkg.el
+  helm-img-tiqav-20151224.2322/helm-img-tiqav.el
+Built helm-img-tiqav in 2.788s, finished at 2023-06-10T22:21:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  9 16:06 packages/helm-img-tiqav-20151224.2322.el
+4.0K -rw-r--r-- 1 root root  366 Jun 10 22:21 packages/helm-img-tiqav-20151224.2322.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:21 packages/helm-img-tiqav-20151224.2322.tar

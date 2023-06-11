@@ -4,4 +4,16 @@ Source:  https://github.com/rejeep/commander.el.git
 
 Updating /mnt/store/melpa/working/commander/
 Checking out 2c8a57b9c619e29ccbe2d5a85921b9c689e95bf9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/commander/
+  to /tmp/commander6XKRoc/commander-20140120.1852
+    commander.el -> commander.el
+Created commander-20140120.1852.tar containing:
+  commander-20140120.1852/
+  commander-20140120.1852/commander-pkg.el
+  commander-20140120.1852/commander.el
+Built commander in 3.162s, finished at 2023-06-11T00:09:32+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 15:37 packages/commander-20140120.1852.el
+4.0K -rw-r--r-- 1 root root 539 Jun 11 00:09 packages/commander-20140120.1852.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:09 packages/commander-20140120.1852.tar

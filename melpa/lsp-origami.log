@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-lsp/lsp-origami.git
 
 Updating /mnt/store/melpa/working/lsp-origami/
 Checking out 5b88ab77dc2696c93fa5dd9debe183821c533b71
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-origami/
+  to /tmp/lsp-origamiBm3UgP/lsp-origami-20211016.1045
+    lsp-origami.el -> lsp-origami.el
+Created lsp-origami-20211016.1045.tar containing:
+  lsp-origami-20211016.1045/
+  lsp-origami-20211016.1045/lsp-origami-pkg.el
+  lsp-origami-20211016.1045/lsp-origami.el
+Built lsp-origami in 3.302s, finished at 2023-06-10T22:30:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.4K Jun  9 16:20 packages/lsp-origami-20211016.1045.el
+4.0K -rw-r--r-- 1 root root  420 Jun 10 22:30 packages/lsp-origami-20211016.1045.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:30 packages/lsp-origami-20211016.1045.tar

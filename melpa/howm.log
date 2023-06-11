@@ -5,4 +5,63 @@ Source:  https://github.com/kaorahi/howm.git
 Updating /mnt/store/melpa/working/howm/
 Checking out ffc1e7da1f02f750094a9f0fe8a0aa837743193b
 Warning: howm :files spec is equivalent to the default
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/howm/
+  to /tmp/howmkZR1I6/howm-20230218.818
+    action-lock.el -> action-lock.el
+    bcomp.el -> bcomp.el
+    cheat-font-lock.el -> cheat-font-lock.el
+    gfunc.el -> gfunc.el
+    honest-report.el -> honest-report.el
+    howm-backend.el -> howm-backend.el
+    howm-common.el -> howm-common.el
+    howm-date.el -> howm-date.el
+    howm-lang-en.el -> howm-lang-en.el
+    howm-lang-fr.el -> howm-lang-fr.el
+    howm-lang-ja.el -> howm-lang-ja.el
+    howm-menu-en.el -> howm-menu-en.el
+    howm-menu-fr.el -> howm-menu-fr.el
+    howm-menu-ja.el -> howm-menu-ja.el
+    howm-menu.el -> howm-menu.el
+    howm-misc.el -> howm-misc.el
+    howm-mkmenu.el -> howm-mkmenu.el
+    howm-mode.el -> howm-mode.el
+    howm-reminder.el -> howm-reminder.el
+    howm-vars.el -> howm-vars.el
+    howm-view.el -> howm-view.el
+    howm.el -> howm.el
+    iigrep.el -> iigrep.el
+    illusion.el -> illusion.el
+    riffle.el -> riffle.el
+Created howm-20230218.818.tar containing:
+  howm-20230218.818/
+  howm-20230218.818/action-lock.el
+  howm-20230218.818/bcomp.el
+  howm-20230218.818/cheat-font-lock.el
+  howm-20230218.818/gfunc.el
+  howm-20230218.818/honest-report.el
+  howm-20230218.818/howm-backend.el
+  howm-20230218.818/howm-common.el
+  howm-20230218.818/howm-date.el
+  howm-20230218.818/howm-lang-en.el
+  howm-20230218.818/howm-lang-fr.el
+  howm-20230218.818/howm-lang-ja.el
+  howm-20230218.818/howm-menu-en.el
+  howm-20230218.818/howm-menu-fr.el
+  howm-20230218.818/howm-menu-ja.el
+  howm-20230218.818/howm-menu.el
+  howm-20230218.818/howm-misc.el
+  howm-20230218.818/howm-mkmenu.el
+  howm-20230218.818/howm-mode.el
+  howm-20230218.818/howm-pkg.el
+  howm-20230218.818/howm-reminder.el
+  howm-20230218.818/howm-vars.el
+  howm-20230218.818/howm-view.el
+  howm-20230218.818/howm.el
+  howm-20230218.818/iigrep.el
+  howm-20230218.818/illusion.el
+  howm-20230218.818/riffle.el
+Built howm in 2.871s, finished at 2023-06-10T22:23:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  369 Jun 10 22:23 packages/howm-20230218.818.entry
+460K -rw-r--r-- 1 root root 460K Jun 10 22:23 packages/howm-20230218.818.tar

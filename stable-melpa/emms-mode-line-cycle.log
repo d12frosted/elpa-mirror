@@ -4,4 +4,16 @@ Source:  https://github.com/momomo5717/emms-mode-line-cycle.git
 
 Updating /mnt/store/melpa/working/emms-mode-line-cycle/
 Checking out 2c2f395e484a1d345050ddd61ff5fab71a92a6bc
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emms-mode-line-cycle/
+  to /tmp/emms-mode-line-cycleaFiNSq/emms-mode-line-cycle-20160221.1120
+    emms-mode-line-cycle.el -> emms-mode-line-cycle.el
+Created emms-mode-line-cycle-20160221.1120.tar containing:
+  emms-mode-line-cycle-20160221.1120/
+  emms-mode-line-cycle-20160221.1120/emms-mode-line-cycle-pkg.el
+  emms-mode-line-cycle-20160221.1120/emms-mode-line-cycle.el
+Built emms-mode-line-cycle in 4.157s, finished at 2023-06-11T00:17:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 10K Jun  9 15:50 packages/emms-mode-line-cycle-20160221.1120.el
+4.0K -rw-r--r-- 1 root root 418 Jun 11 00:17 packages/emms-mode-line-cycle-20160221.1120.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:17 packages/emms-mode-line-cycle-20160221.1120.tar

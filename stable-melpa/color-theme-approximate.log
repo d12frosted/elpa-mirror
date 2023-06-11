@@ -4,4 +4,16 @@ Source:  https://github.com/tungd/color-theme-approximate.git
 
 Updating /mnt/store/melpa/working/color-theme-approximate/
 Checking out f54301ca39bc5d2ffb000f233f8114184a3e7d71
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/color-theme-approximate/
+  to /tmp/color-theme-approximateqQHmHg/color-theme-approximate-20140228.436
+    color-theme-approximate.el -> color-theme-approximate.el
+Created color-theme-approximate-20140228.436.tar containing:
+  color-theme-approximate-20140228.436/
+  color-theme-approximate-20140228.436/color-theme-approximate-pkg.el
+  color-theme-approximate-20140228.436/color-theme-approximate.el
+Built color-theme-approximate in 3.071s, finished at 2023-06-11T00:09:22+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.9K Jun  9 15:37 packages/color-theme-approximate-20140228.436.el
+4.0K -rw-r--r-- 1 root root  342 Jun 11 00:09 packages/color-theme-approximate-20140228.436.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:09 packages/color-theme-approximate-20140228.436.tar

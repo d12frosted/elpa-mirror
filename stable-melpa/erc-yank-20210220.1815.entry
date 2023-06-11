@@ -1,6 +1,6 @@
 (erc-yank .
 	  [(20210220 1815)
-	   nil "Automagically create a Gist if pasting more than 5 lines" single
+	   nil "Automagically create a Gist if pasting more than 5 lines" tar
 	   ((:commit . "55d96f18c5df9d8fce51fa073d7a12c47a46ac80")
 	    (:authors
 	     ("John Wiegley" . "jwiegley@gmail.com"))

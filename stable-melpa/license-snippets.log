@@ -4,4 +4,42 @@ Source:  https://github.com/sei40kr/license-snippets.git
 
 Updating /mnt/store/melpa/working/license-snippets/
 Checking out a89988b81604fd23c43746912215770a4b861989
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/license-snippets/
+  to /tmp/license-snippetsNbH5Fk/license-snippets-20201117.1619
+    license-snippets.el -> license-snippets.el
+    snippets => snippets
+Created license-snippets-20201117.1619.tar containing:
+  license-snippets-20201117.1619/
+  license-snippets-20201117.1619/license-snippets-pkg.el
+  license-snippets-20201117.1619/license-snippets.el
+  license-snippets-20201117.1619/snippets/
+  license-snippets-20201117.1619/snippets/text-mode/
+  license-snippets-20201117.1619/snippets/text-mode/agpl3
+  license-snippets-20201117.1619/snippets/text-mode/apache
+  license-snippets-20201117.1619/snippets/text-mode/bsd2
+  license-snippets-20201117.1619/snippets/text-mode/bsd3
+  license-snippets-20201117.1619/snippets/text-mode/cc0
+  license-snippets-20201117.1619/snippets/text-mode/ccby
+  license-snippets-20201117.1619/snippets/text-mode/ccbync
+  license-snippets-20201117.1619/snippets/text-mode/ccbyncnd
+  license-snippets-20201117.1619/snippets/text-mode/ccbyncsa
+  license-snippets-20201117.1619/snippets/text-mode/ccbynd
+  license-snippets-20201117.1619/snippets/text-mode/ccbysa
+  license-snippets-20201117.1619/snippets/text-mode/cddl
+  license-snippets-20201117.1619/snippets/text-mode/epl
+  license-snippets-20201117.1619/snippets/text-mode/gpl2
+  license-snippets-20201117.1619/snippets/text-mode/gpl3
+  license-snippets-20201117.1619/snippets/text-mode/isc
+  license-snippets-20201117.1619/snippets/text-mode/lgpl
+  license-snippets-20201117.1619/snippets/text-mode/mit
+  license-snippets-20201117.1619/snippets/text-mode/mpl
+  license-snippets-20201117.1619/snippets/text-mode/unlicense
+  license-snippets-20201117.1619/snippets/text-mode/wtfpl
+  license-snippets-20201117.1619/snippets/text-mode/wtfpl-header-warranty
+  license-snippets-20201117.1619/snippets/text-mode/x11
+  license-snippets-20201117.1619/snippets/text-mode/zlib
+Built license-snippets in 2.998s, finished at 2023-06-10T22:29:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  485 Jun 10 22:29 packages/license-snippets-20201117.1619.entry
+312K -rw-r--r-- 1 root root 310K Jun 10 22:29 packages/license-snippets-20201117.1619.tar

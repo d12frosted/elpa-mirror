@@ -4,4 +4,16 @@ Source:  https://github.com/alpha22jp/atomic-chrome.git
 
 Updating /mnt/store/melpa/working/atomic-chrome/
 Checking out f1b077be7e414f457191d72dcf5eedb4371f9309
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/atomic-chrome/
+  to /tmp/atomic-chromeaNvRDl/atomic-chrome-20230304.112
+    atomic-chrome.el -> atomic-chrome.el
+Created atomic-chrome-20230304.112.tar containing:
+  atomic-chrome-20230304.112/
+  atomic-chrome-20230304.112/atomic-chrome-pkg.el
+  atomic-chrome-20230304.112/atomic-chrome.el
+Built atomic-chrome in 3.557s, finished at 2023-06-11T00:03:58+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 15:30 packages/atomic-chrome-20230304.112.el
+4.0K -rw-r--r-- 1 root root 509 Jun 11 00:03 packages/atomic-chrome-20230304.112.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:03 packages/atomic-chrome-20230304.112.tar

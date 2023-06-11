@@ -4,4 +4,16 @@ Source:  https://github.com/Qkessler/consult-project-extra.git
 
 Updating /mnt/store/melpa/working/consult-project-extra/
 Checking out 9fdf45fa40471900b0b158d73c4b1521a13d47ef
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-project-extra/
+  to /tmp/consult-project-extraeBCmLV/consult-project-extra-20221013.1014
+    consult-project-extra.el -> consult-project-extra.el
+Created consult-project-extra-20221013.1014.tar containing:
+  consult-project-extra-20221013.1014/
+  consult-project-extra-20221013.1014/consult-project-extra-pkg.el
+  consult-project-extra-20221013.1014/consult-project-extra.el
+Built consult-project-extra in 3.252s, finished at 2023-06-11T00:10:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  9 15:39 packages/consult-project-extra-20221013.1014.el
+4.0K -rw-r--r-- 1 root root  503 Jun 11 00:10 packages/consult-project-extra-20221013.1014.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:10 packages/consult-project-extra-20221013.1014.tar

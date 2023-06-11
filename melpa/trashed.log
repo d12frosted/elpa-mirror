@@ -4,4 +4,16 @@ Source:  https://github.com/shingo256/trashed.git
 
 Updating /mnt/store/melpa/working/trashed/
 Checking out ddf5830730544435a068f2dc9ac75a81ea69df1d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/trashed/
+  to /tmp/trashedS0NPMq/trashed-20220106.1358
+    trashed.el -> trashed.el
+Created trashed-20220106.1358.tar containing:
+  trashed-20220106.1358/
+  trashed-20220106.1358/trashed-pkg.el
+  trashed-20220106.1358/trashed.el
+Built trashed in 3.120s, finished at 2023-06-10T22:55:05+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 48K Jun  9 16:55 packages/trashed-20220106.1358.el
+4.0K -rw-r--r-- 1 root root 445 Jun 10 22:55 packages/trashed-20220106.1358.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:55 packages/trashed-20220106.1358.tar

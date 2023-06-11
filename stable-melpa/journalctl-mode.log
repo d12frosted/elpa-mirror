@@ -4,4 +4,16 @@ Source:  https://github.com/SebastianMeisel/journalctl-mode.git
 
 Updating /mnt/store/melpa/working/journalctl-mode/
 Checking out baaffdfd22a19afb1997ec3715d063186b80d3f5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/journalctl-mode/
+  to /tmp/journalctl-modeHnjnbs/journalctl-mode-20221119.1653
+    journalctl-mode.el -> journalctl-mode.el
+Created journalctl-mode-20221119.1653.tar containing:
+  journalctl-mode-20221119.1653/
+  journalctl-mode-20221119.1653/journalctl-mode-pkg.el
+  journalctl-mode-20221119.1653/journalctl-mode.el
+Built journalctl-mode in 5.010s, finished at 2023-06-10T22:26:43+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  9 16:15 packages/journalctl-mode-20221119.1653.el
+4.0K -rw-r--r-- 1 root root 500 Jun 10 22:26 packages/journalctl-mode-20221119.1653.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:26 packages/journalctl-mode-20221119.1653.tar

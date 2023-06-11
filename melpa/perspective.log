@@ -4,4 +4,16 @@ Source:  https://github.com/nex3/perspective-el.git
 
 Updating /mnt/store/melpa/working/perspective/
 Checking out 8a69512639ae915c32c5055d1308ebf4b278266c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/perspective/
+  to /tmp/perspectiveiTP8w7/perspective-20220921.346
+    perspective.el -> perspective.el
+Created perspective-20220921.346.tar containing:
+  perspective-20220921.346/
+  perspective-20220921.346/perspective-pkg.el
+  perspective-20220921.346/perspective.el
+Built perspective in 3.554s, finished at 2023-06-10T22:42:11+0000
+ ✓ Success:
+100K -rw-r--r-- 1 root root  97K Jun  9 16:38 packages/perspective-20220921.346.el
+4.0K -rw-r--r-- 1 root root  529 Jun 10 22:42 packages/perspective-20220921.346.entry
+100K -rw-r--r-- 1 root root 100K Jun 10 22:42 packages/perspective-20220921.346.tar

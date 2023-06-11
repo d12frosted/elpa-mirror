@@ -4,4 +4,16 @@ Source:  https://github.com/mbj4668/yang-mode.git
 
 Updating /mnt/store/melpa/working/yang-mode/
 Checking out 4b4ab4d4a79d37d6c31c6ea7cccbc425e0b1eded
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yang-mode/
+  to /tmp/yang-mode3dJRgz/yang-mode-20190507.724
+    yang-mode.el -> yang-mode.el
+Created yang-mode-20190507.724.tar containing:
+  yang-mode-20190507.724/
+  yang-mode-20190507.724/yang-mode-pkg.el
+  yang-mode-20190507.724/yang-mode.el
+Built yang-mode in 5.480s, finished at 2023-06-10T22:59:32+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 17:02 packages/yang-mode-20190507.724.el
+4.0K -rw-r--r-- 1 root root 345 Jun 10 22:59 packages/yang-mode-20190507.724.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:59 packages/yang-mode-20190507.724.tar

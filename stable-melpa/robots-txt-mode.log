@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-php/robots-txt-mode.git
 
 Updating /mnt/store/melpa/working/robots-txt-mode/
 Checking out 8bf67285a25a6756607354d184e36583f2847e7d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/robots-txt-mode/
+  to /tmp/robots-txt-modeD4EGtW/robots-txt-mode-20190812.1858
+    robots-txt-mode.el -> robots-txt-mode.el
+Created robots-txt-mode-20190812.1858.tar containing:
+  robots-txt-mode-20190812.1858/
+  robots-txt-mode-20190812.1858/robots-txt-mode-pkg.el
+  robots-txt-mode-20190812.1858/robots-txt-mode.el
+Built robots-txt-mode in 2.707s, finished at 2023-06-10T22:47:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  9 16:45 packages/robots-txt-mode-20190812.1858.el
+4.0K -rw-r--r-- 1 root root  423 Jun 10 22:47 packages/robots-txt-mode-20190812.1858.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:47 packages/robots-txt-mode-20190812.1858.tar

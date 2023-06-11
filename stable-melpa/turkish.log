@@ -4,4 +4,16 @@ Source:  https://github.com/emres/turkish-mode.git
 
 Updating /mnt/store/melpa/working/turkish/
 Checking out 9831a316c176bb21a1b91226323ea4133163e00c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/turkish/
+  to /tmp/turkishXBfoR7/turkish-20170910.1511
+    turkish.el -> turkish.el
+Created turkish-20170910.1511.tar containing:
+  turkish-20170910.1511/
+  turkish-20170910.1511/turkish-pkg.el
+  turkish-20170910.1511/turkish.el
+Built turkish in 3.731s, finished at 2023-06-10T22:55:37+0000
+ ✓ Success:
+176K -rw-r--r-- 1 root root 176K Jun  9 16:56 packages/turkish-20170910.1511.el
+4.0K -rw-r--r-- 1 root root  445 Jun 10 22:55 packages/turkish-20170910.1511.entry
+180K -rw-r--r-- 1 root root 180K Jun 10 22:55 packages/turkish-20170910.1511.tar

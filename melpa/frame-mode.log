@@ -4,4 +4,16 @@ Source:  https://github.com/IvanMalison/frame-mode.git
 
 Updating /mnt/store/melpa/working/frame-mode/
 Checking out ae2366969927c9f89ea07c999bef382b0b47cac1
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/frame-mode/
+  to /tmp/frame-modejfzUcX/frame-mode-20190710.2030
+    frame-mode.el -> frame-mode.el
+Created frame-mode-20190710.2030.tar containing:
+  frame-mode-20190710.2030/
+  frame-mode-20190710.2030/frame-mode-pkg.el
+  frame-mode-20190710.2030/frame-mode.el
+Built frame-mode in 2.987s, finished at 2023-06-11T00:24:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.0K Jun  9 15:59 packages/frame-mode-20190710.2030.el
+4.0K -rw-r--r-- 1 root root  493 Jun 11 00:24 packages/frame-mode-20190710.2030.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:24 packages/frame-mode-20190710.2030.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/montag451/helm-lxc.git
 
 Updating /mnt/store/melpa/working/helm-lxc/
 Checking out 37fe2d7ed97967edf59a3b68b1434910516ae24f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-lxc/
+  to /tmp/helm-lxcj9EJVb/helm-lxc-20200323.816
+    helm-lxc.el -> helm-lxc.el
+Created helm-lxc-20200323.816.tar containing:
+  helm-lxc-20200323.816/
+  helm-lxc-20200323.816/helm-lxc-pkg.el
+  helm-lxc-20200323.816/helm-lxc.el
+Built helm-lxc in 3.906s, finished at 2023-06-11T00:30:13+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 16:07 packages/helm-lxc-20200323.816.el
+4.0K -rw-r--r-- 1 root root 457 Jun 11 00:30 packages/helm-lxc-20200323.816.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:30 packages/helm-lxc-20200323.816.tar

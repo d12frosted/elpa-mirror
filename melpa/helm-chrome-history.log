@@ -4,4 +4,16 @@ Source:  https://github.com/xuchunyang/helm-chrome-history.git
 
 Updating /mnt/store/melpa/working/helm-chrome-history/
 Checking out f9002d4c12df65a99830376b126dbbeae3ef2148
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-chrome-history/
+  to /tmp/helm-chrome-historya5dHA6/helm-chrome-history-20191031.1233
+    helm-chrome-history.el -> helm-chrome-history.el
+Created helm-chrome-history-20191031.1233.tar containing:
+  helm-chrome-history-20191031.1233/
+  helm-chrome-history-20191031.1233/helm-chrome-history-pkg.el
+  helm-chrome-history-20191031.1233/helm-chrome-history.el
+Built helm-chrome-history in 2.847s, finished at 2023-06-10T22:20:59+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Jun  9 16:05 packages/helm-chrome-history-20191031.1233.el
+4.0K -rw-r--r-- 1 root root  505 Jun 10 22:20 packages/helm-chrome-history-20191031.1233.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:20 packages/helm-chrome-history-20191031.1233.tar

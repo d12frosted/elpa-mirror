@@ -4,4 +4,16 @@ Source:  https://github.com/sensorflo/markup-faces.git
 
 Updating /mnt/store/melpa/working/markup-faces/
 Checking out 98a807ed82473eb41c6a201ed7ef816d6bcd67b0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/markup-faces/
+  to /tmp/markup-facesWuzlf1/markup-faces-20141110.817
+    markup-faces.el -> markup-faces.el
+Created markup-faces-20141110.817.tar containing:
+  markup-faces-20141110.817/
+  markup-faces-20141110.817/markup-faces-pkg.el
+  markup-faces-20141110.817/markup-faces.el
+Built markup-faces in 3.026s, finished at 2023-06-10T22:31:36+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  9 16:21 packages/markup-faces-20141110.817.el
+4.0K -rw-r--r-- 1 root root 437 Jun 10 22:31 packages/markup-faces-20141110.817.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:31 packages/markup-faces-20141110.817.tar

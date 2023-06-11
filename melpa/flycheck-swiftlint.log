@@ -4,4 +4,16 @@ Source:  https://github.com/jojojames/flycheck-swiftlint.git
 
 Updating /mnt/store/melpa/working/flycheck-swiftlint/
 Checking out 65101873c4c9f8e7eac9471188b161eeddda1555
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-swiftlint/
+  to /tmp/flycheck-swiftlintBFMqjI/flycheck-swiftlint-20180830.340
+    flycheck-swiftlint.el -> flycheck-swiftlint.el
+Created flycheck-swiftlint-20180830.340.tar containing:
+  flycheck-swiftlint-20180830.340/
+  flycheck-swiftlint-20180830.340/flycheck-swiftlint-pkg.el
+  flycheck-swiftlint-20180830.340/flycheck-swiftlint.el
+Built flycheck-swiftlint in 2.540s, finished at 2023-06-11T00:23:25+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  9 15:57 packages/flycheck-swiftlint-20180830.340.el
+4.0K -rw-r--r-- 1 root root  486 Jun 11 00:23 packages/flycheck-swiftlint-20180830.340.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:23 packages/flycheck-swiftlint-20180830.340.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/Fuco1/eshell-bookmark.git
 
 Updating /mnt/store/melpa/working/eshell-bookmark/
 Checking out deda4b848b2fb979dbe73ead2cb866610e3596ed
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eshell-bookmark/
+  to /tmp/eshell-bookmarkdyl7TX/eshell-bookmark-20170922.1514
+    eshell-bookmark.el -> eshell-bookmark.el
+Created eshell-bookmark-20170922.1514.tar containing:
+  eshell-bookmark-20170922.1514/
+  eshell-bookmark-20170922.1514/eshell-bookmark-pkg.el
+  eshell-bookmark-20170922.1514/eshell-bookmark.el
+Built eshell-bookmark in 3.168s, finished at 2023-06-11T00:18:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jun  9 15:51 packages/eshell-bookmark-20170922.1514.el
+4.0K -rw-r--r-- 1 root root  471 Jun 11 00:18 packages/eshell-bookmark-20170922.1514.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:18 packages/eshell-bookmark-20170922.1514.tar

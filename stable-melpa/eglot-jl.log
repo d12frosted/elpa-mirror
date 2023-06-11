@@ -4,4 +4,21 @@ Source:  https://github.com/non-Jedi/eglot-jl.git
 
 Updating /mnt/store/melpa/working/eglot-jl/
 Checking out 7dc604fe42a459a987853d065cd6d0f3c4cbc02a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eglot-jl/
+  to /tmp/eglot-jlClrxUX/eglot-jl-20230601.1335
+    eglot-jl.el -> eglot-jl.el
+    eglot-jl.jl -> eglot-jl.jl
+    Manifest.toml -> Manifest.toml
+    Project.toml -> Project.toml
+Created eglot-jl-20230601.1335.tar containing:
+  eglot-jl-20230601.1335/
+  eglot-jl-20230601.1335/Manifest.toml
+  eglot-jl-20230601.1335/Project.toml
+  eglot-jl-20230601.1335/eglot-jl-pkg.el
+  eglot-jl-20230601.1335/eglot-jl.el
+  eglot-jl-20230601.1335/eglot-jl.jl
+Built eglot-jl in 3.677s, finished at 2023-06-11T00:16:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 551 Jun 11 00:16 packages/eglot-jl-20230601.1335.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:16 packages/eglot-jl-20230601.1335.tar

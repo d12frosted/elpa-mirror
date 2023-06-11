@@ -4,4 +4,16 @@ Source:  https://github.com/flycheck/flycheck-inline.git
 
 Updating /mnt/store/melpa/working/flycheck-inline/
 Checking out 0662c314bd819f9b46f8b2b13f0c650445b3a8c5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-inline/
+  to /tmp/flycheck-inlineTwJODc/flycheck-inline-20200808.1019
+    flycheck-inline.el -> flycheck-inline.el
+Created flycheck-inline-20200808.1019.tar containing:
+  flycheck-inline-20200808.1019/
+  flycheck-inline-20200808.1019/flycheck-inline-pkg.el
+  flycheck-inline-20200808.1019/flycheck-inline.el
+Built flycheck-inline in 3.216s, finished at 2023-06-11T00:22:56+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:57 packages/flycheck-inline-20200808.1019.el
+4.0K -rw-r--r-- 1 root root 394 Jun 11 00:22 packages/flycheck-inline-20200808.1019.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:22 packages/flycheck-inline-20200808.1019.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/seblemaguer/flatfluc-theme.git
 
 Updating /mnt/store/melpa/working/flatfluc-theme/
 Checking out 553167d27725d078f5c66ed7a31ca8ec9376dfd0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flatfluc-theme/
+  to /tmp/flatfluc-themeKzDyyO/flatfluc-theme-20221204.939
+    flatfluc-theme.el -> flatfluc-theme.el
+Created flatfluc-theme-20221204.939.tar containing:
+  flatfluc-theme-20221204.939/
+  flatfluc-theme-20221204.939/flatfluc-theme-pkg.el
+  flatfluc-theme-20221204.939/flatfluc-theme.el
+Built flatfluc-theme in 3.941s, finished at 2023-06-11T00:22:03+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  9 15:55 packages/flatfluc-theme-20221204.939.el
+4.0K -rw-r--r-- 1 root root 452 Jun 11 00:22 packages/flatfluc-theme-20221204.939.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:22 packages/flatfluc-theme-20221204.939.tar

@@ -4,4 +4,19 @@ Source:  https://github.com/mattfidler/nsis-mode.git
 
 Updating /mnt/store/melpa/working/nsis-mode/
 Checking out a3bc65b373d74acfad8eb4ef8072fd7059b6ace9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nsis-mode/
+  to /tmp/nsis-modeoL6jOY/nsis-mode-20230605.1652
+    nsis-mode.el -> nsis-mode.el
+    nsis-mode.texi -> nsis-mode.texi
+Generating /tmp/nsis-modeoL6jOY/nsis-mode-20230605.1652/nsis-mode.info
+Created nsis-mode-20230605.1652.tar containing:
+  nsis-mode-20230605.1652/
+  nsis-mode-20230605.1652/dir
+  nsis-mode-20230605.1652/nsis-mode-pkg.el
+  nsis-mode-20230605.1652/nsis-mode.el
+  nsis-mode-20230605.1652/nsis-mode.info
+Built nsis-mode in 5.260s, finished at 2023-06-10T22:35:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  338 Jun 10 22:35 packages/nsis-mode-20230605.1652.entry
+100K -rw-r--r-- 1 root root 100K Jun 10 22:35 packages/nsis-mode-20230605.1652.tar

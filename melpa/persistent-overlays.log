@@ -4,4 +4,19 @@ Source:  https://github.com/mneilly/Emacs-Persistent-Overlays.git
 
 Updating /mnt/store/melpa/working/persistent-overlays/
 Checking out f563c8b966edc78c9d806661c4eb80e4781c4eab
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/persistent-overlays/
+  to /tmp/persistent-overlaysQevmBa/persistent-overlays-20161128.700
+    persistent-overlays.el -> persistent-overlays.el
+    README.md -> README.md
+    LICENSE -> LICENSE
+Created persistent-overlays-20161128.700.tar containing:
+  persistent-overlays-20161128.700/
+  persistent-overlays-20161128.700/LICENSE
+  persistent-overlays-20161128.700/README.md
+  persistent-overlays-20161128.700/persistent-overlays-pkg.el
+  persistent-overlays-20161128.700/persistent-overlays.el
+Built persistent-overlays in 2.722s, finished at 2023-06-10T22:42:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 500 Jun 10 22:42 packages/persistent-overlays-20161128.700.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 10 22:42 packages/persistent-overlays-20161128.700.tar

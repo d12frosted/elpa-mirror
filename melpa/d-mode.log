@@ -4,4 +4,16 @@ Source:  https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode.git
 
 Updating /mnt/store/melpa/working/d-mode/
 Checking out 024aca97d07e72bf3500fb6bf0cdf50c4992a741
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/d-mode/
+  to /tmp/d-modecFnG6e/d-mode-20220602.649
+    d-mode.el -> d-mode.el
+Created d-mode-20220602.649.tar containing:
+  d-mode-20220602.649/
+  d-mode-20220602.649/d-mode-pkg.el
+  d-mode-20220602.649/d-mode.el
+Built d-mode in 3.263s, finished at 2023-06-11T00:11:57+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 63K Jun  9 15:42 packages/d-mode-20220602.649.el
+4.0K -rw-r--r-- 1 root root 388 Jun 11 00:11 packages/d-mode-20220602.649.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 11 00:11 packages/d-mode-20220602.649.tar

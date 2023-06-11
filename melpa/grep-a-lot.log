@@ -4,4 +4,16 @@ Source:  https://github.com/ZungBang/emacs-grep-a-lot.git
 
 Updating /mnt/store/melpa/working/grep-a-lot/
 Checking out 223819dbea049bdeb5f97f9849fce139a5f16a75
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/grep-a-lot/
+  to /tmp/grep-a-lot3oYtlk/grep-a-lot-20210618.1420
+    grep-a-lot.el -> grep-a-lot.el
+Created grep-a-lot-20210618.1420.tar containing:
+  grep-a-lot-20210618.1420/
+  grep-a-lot-20210618.1420/grep-a-lot-pkg.el
+  grep-a-lot-20210618.1420/grep-a-lot.el
+Built grep-a-lot in 4.554s, finished at 2023-06-10T22:19:27+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:04 packages/grep-a-lot-20210618.1420.el
+4.0K -rw-r--r-- 1 root root 471 Jun 10 22:19 packages/grep-a-lot-20210618.1420.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:19 packages/grep-a-lot-20210618.1420.tar

@@ -4,4 +4,17 @@ Source:  https://github.com/ahungry/geben.git
 
 Updating /mnt/store/melpa/working/geben/
 Checking out 8df1ed2c8ff13b0ca4ef241c95c46f60a5a4fe3c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geben/
+  to /tmp/geben2Sq1gy/geben-20220827.105
+    dbgp.el -> dbgp.el
+    geben.el -> geben.el
+Created geben-20220827.105.tar containing:
+  geben-20220827.105/
+  geben-20220827.105/dbgp.el
+  geben-20220827.105/geben-pkg.el
+  geben-20220827.105/geben.el
+Built geben in 2.809s, finished at 2023-06-11T00:25:13+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  422 Jun 11 00:25 packages/geben-20220827.105.entry
+212K -rw-r--r-- 1 root root 210K Jun 11 00:25 packages/geben-20220827.105.tar

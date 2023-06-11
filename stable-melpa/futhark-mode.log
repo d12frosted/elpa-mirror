@@ -4,4 +4,23 @@ Source:  https://github.com/diku-dk/futhark-mode.git
 
 Updating /mnt/store/melpa/working/futhark-mode/
 Checking out 8e830a65983c5175b0116360eddefa3ae4fea897
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/futhark-mode/
+  to /tmp/futhark-modex0ozKa/futhark-mode-20230511.1235
+    futhark-comint.el -> futhark-comint.el
+    futhark-dev.el -> futhark-dev.el
+    futhark-highlight.el -> futhark-highlight.el
+    futhark-indent.el -> futhark-indent.el
+    futhark-mode.el -> futhark-mode.el
+Created futhark-mode-20230511.1235.tar containing:
+  futhark-mode-20230511.1235/
+  futhark-mode-20230511.1235/futhark-comint.el
+  futhark-mode-20230511.1235/futhark-dev.el
+  futhark-mode-20230511.1235/futhark-highlight.el
+  futhark-mode-20230511.1235/futhark-indent.el
+  futhark-mode-20230511.1235/futhark-mode-pkg.el
+  futhark-mode-20230511.1235/futhark-mode.el
+Built futhark-mode in 3.206s, finished at 2023-06-11T00:25:02+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 292 Jun 11 00:25 packages/futhark-mode-20230511.1235.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:25 packages/futhark-mode-20230511.1235.tar

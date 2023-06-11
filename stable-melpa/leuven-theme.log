@@ -4,4 +4,17 @@ Source:  https://github.com/fniessen/emacs-leuven-theme.git
 
 Updating /mnt/store/melpa/working/leuven-theme/
 Checking out 59123b1f0a4a1d195bf1726bf82371e3455470a8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leuven-theme/
+  to /tmp/leuven-themeDp4y9F/leuven-theme-20230523.841
+  ! lisp/leuven-dark-theme.el -> leuven-dark-theme.el
+  ! lisp/leuven-theme.el -> leuven-theme.el
+Created leuven-theme-20230523.841.tar containing:
+  leuven-theme-20230523.841/
+  leuven-theme-20230523.841/leuven-dark-theme.el
+  leuven-theme-20230523.841/leuven-theme-pkg.el
+  leuven-theme-20230523.841/leuven-theme.el
+Built leuven-theme in 2.920s, finished at 2023-06-10T22:29:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  523 Jun 10 22:29 packages/leuven-theme-20230523.841.entry
+152K -rw-r--r-- 1 root root 150K Jun 10 22:29 packages/leuven-theme-20230523.841.tar

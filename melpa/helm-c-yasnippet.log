@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-jp/helm-c-yasnippet.git
 
 Updating /mnt/store/melpa/working/helm-c-yasnippet/
 Checking out e214eec8b2875d8a7cd09006dfb6a8e15e9e4079
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-c-yasnippet/
+  to /tmp/helm-c-yasnippethN7NBb/helm-c-yasnippet-20210330.16
+    helm-c-yasnippet.el -> helm-c-yasnippet.el
+Created helm-c-yasnippet-20210330.16.tar containing:
+  helm-c-yasnippet-20210330.16/
+  helm-c-yasnippet-20210330.16/helm-c-yasnippet-pkg.el
+  helm-c-yasnippet-20210330.16/helm-c-yasnippet.el
+Built helm-c-yasnippet in 2.523s, finished at 2023-06-10T22:20:56+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  9 16:05 packages/helm-c-yasnippet-20210330.16.el
+4.0K -rw-r--r-- 1 root root 512 Jun 10 22:20 packages/helm-c-yasnippet-20210330.16.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:20 packages/helm-c-yasnippet-20210330.16.tar

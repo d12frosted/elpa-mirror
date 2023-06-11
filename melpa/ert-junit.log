@@ -4,4 +4,16 @@ Source:  https://bitbucket.org/olanilsson/ert-junit
 
 Updating /mnt/store/melpa/working/ert-junit/
 Checking out 65f91c35b088b87943dbbbe7e1ce354bc9bc0992
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ert-junit/
+  to /tmp/ert-junitHdLFtS/ert-junit-20190802.2232
+    ert-junit.el -> ert-junit.el
+Created ert-junit-20190802.2232.tar containing:
+  ert-junit-20190802.2232/
+  ert-junit-20190802.2232/ert-junit-pkg.el
+  ert-junit-20190802.2232/ert-junit.el
+Built ert-junit in 2.951s, finished at 2023-06-11T00:18:37+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:51 packages/ert-junit-20190802.2232.el
+4.0K -rw-r--r-- 1 root root 501 Jun 11 00:18 packages/ert-junit-20190802.2232.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:18 packages/ert-junit-20190802.2232.tar

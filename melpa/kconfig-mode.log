@@ -4,4 +4,16 @@ Source:  https://github.com/delaanthonio/kconfig-mode.git
 
 Updating /mnt/store/melpa/working/kconfig-mode/
 Checking out cd87b71c8c1739d026645ece0bbd20055a7a2d4a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kconfig-mode/
+  to /tmp/kconfig-modek3zbtk/kconfig-mode-20220604.1415
+    kconfig-mode.el -> kconfig-mode.el
+Created kconfig-mode-20220604.1415.tar containing:
+  kconfig-mode-20220604.1415/
+  kconfig-mode-20220604.1415/kconfig-mode-pkg.el
+  kconfig-mode-20220604.1415/kconfig-mode.el
+Built kconfig-mode in 2.858s, finished at 2023-06-10T22:27:40+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 16:16 packages/kconfig-mode-20220604.1415.el
+4.0K -rw-r--r-- 1 root root  485 Jun 10 22:27 packages/kconfig-mode-20220604.1415.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:27 packages/kconfig-mode-20220604.1415.tar

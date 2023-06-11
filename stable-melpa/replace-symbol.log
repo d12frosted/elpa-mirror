@@ -4,4 +4,16 @@ Source:  https://github.com/bmastenbrook/replace-symbol-el.git
 
 Updating /mnt/store/melpa/working/replace-symbol/
 Checking out baf949e528aee1881f455f9c84e67718bedcb3f6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/replace-symbol/
+  to /tmp/replace-symbolY2jxjf/replace-symbol-20160518.12
+    replace-symbol.el -> replace-symbol.el
+Created replace-symbol-20160518.12.tar containing:
+  replace-symbol-20160518.12/
+  replace-symbol-20160518.12/replace-symbol-pkg.el
+  replace-symbol-20160518.12/replace-symbol.el
+Built replace-symbol in 5.807s, finished at 2023-06-10T22:47:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Jun  9 16:44 packages/replace-symbol-20160518.12.el
+4.0K -rw-r--r-- 1 root root  420 Jun 10 22:47 packages/replace-symbol-20160518.12.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:47 packages/replace-symbol-20160518.12.tar

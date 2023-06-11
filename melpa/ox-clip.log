@@ -4,4 +4,16 @@ Source:  https://github.com/jkitchin/ox-clip.git
 
 Updating /mnt/store/melpa/working/ox-clip/
 Checking out ff117cf3c619eef12eccc0ccbfa3f11adb73ea68
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ox-clip/
+  to /tmp/ox-clipM9VrVz/ox-clip-20220117.1909
+    ox-clip.el -> ox-clip.el
+Created ox-clip-20220117.1909.tar containing:
+  ox-clip-20220117.1909/
+  ox-clip-20220117.1909/ox-clip-pkg.el
+  ox-clip-20220117.1909/ox-clip.el
+Built ox-clip in 3.013s, finished at 2023-06-10T22:40:35+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:35 packages/ox-clip-20220117.1909.el
+4.0K -rw-r--r-- 1 root root 465 Jun 10 22:40 packages/ox-clip-20220117.1909.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:40 packages/ox-clip-20220117.1909.tar

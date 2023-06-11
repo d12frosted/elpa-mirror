@@ -4,4 +4,16 @@ Source:  https://github.com/emacsattic/org-multiple-keymap.git
 
 Updating /mnt/store/melpa/working/org-multiple-keymap/
 Checking out 4eb8aa0aada012b2346cc7f0c55e07783141a2c3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-multiple-keymap/
+  to /tmp/org-multiple-keymapZoXSDp/org-multiple-keymap-20191017.1920
+    org-multiple-keymap.el -> org-multiple-keymap.el
+Created org-multiple-keymap-20191017.1920.tar containing:
+  org-multiple-keymap-20191017.1920/
+  org-multiple-keymap-20191017.1920/org-multiple-keymap-pkg.el
+  org-multiple-keymap-20191017.1920/org-multiple-keymap.el
+Built org-multiple-keymap in 2.806s, finished at 2023-06-10T22:38:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.1K Jun  9 16:32 packages/org-multiple-keymap-20191017.1920.el
+4.0K -rw-r--r-- 1 root root  505 Jun 10 22:38 packages/org-multiple-keymap-20191017.1920.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:38 packages/org-multiple-keymap-20191017.1920.tar

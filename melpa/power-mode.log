@@ -4,4 +4,16 @@ Source:  https://github.com/elizagamedev/power-mode.el.git
 
 Updating /mnt/store/melpa/working/power-mode/
 Checking out 313698d9c7766c17b077a70b31a2d0f52496d767
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/power-mode/
+  to /tmp/power-modeyrkPBk/power-mode-20220817.429
+    power-mode.el -> power-mode.el
+Created power-mode-20220817.429.tar containing:
+  power-mode-20220817.429/
+  power-mode-20220817.429/power-mode-pkg.el
+  power-mode-20220817.429/power-mode.el
+Built power-mode in 2.978s, finished at 2023-06-10T22:43:36+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  9 16:39 packages/power-mode-20220817.429.el
+4.0K -rw-r--r-- 1 root root 393 Jun 10 22:43 packages/power-mode-20220817.429.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:43 packages/power-mode-20220817.429.tar

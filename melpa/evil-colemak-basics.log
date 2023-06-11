@@ -4,4 +4,16 @@ Source:  https://github.com/wbolster/emacs-evil-colemak-basics.git
 
 Updating /mnt/store/melpa/working/evil-colemak-basics/
 Checking out ea519b962f051cabced8aadaf6ed0134b861225c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-colemak-basics/
+  to /tmp/evil-colemak-basicsyJE1qO/evil-colemak-basics-20221230.1443
+    evil-colemak-basics.el -> evil-colemak-basics.el
+Created evil-colemak-basics-20221230.1443.tar containing:
+  evil-colemak-basics-20221230.1443/
+  evil-colemak-basics-20221230.1443/evil-colemak-basics-pkg.el
+  evil-colemak-basics-20221230.1443/evil-colemak-basics.el
+Built evil-colemak-basics in 4.102s, finished at 2023-06-11T00:19:30+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.5K Jun  9 15:52 packages/evil-colemak-basics-20221230.1443.el
+4.0K -rw-r--r-- 1 root root  597 Jun 11 00:19 packages/evil-colemak-basics-20221230.1443.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:19 packages/evil-colemak-basics-20221230.1443.tar

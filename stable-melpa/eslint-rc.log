@@ -4,4 +4,16 @@ Source:  https://github.com/jjuliano/eslint-rc-emacs.git
 
 Updating /mnt/store/melpa/working/eslint-rc/
 Checking out eb6f3e715792952bc957d5dc8ab1a607f3dbbd55
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eslint-rc/
+  to /tmp/eslint-rcmCXZin/eslint-rc-20220328.800
+    eslint-rc.el -> eslint-rc.el
+Created eslint-rc-20220328.800.tar containing:
+  eslint-rc-20220328.800/
+  eslint-rc-20220328.800/eslint-rc-pkg.el
+  eslint-rc-20220328.800/eslint-rc.el
+Built eslint-rc in 2.832s, finished at 2023-06-11T00:18:54+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jun  9 15:52 packages/eslint-rc-20220328.800.el
+4.0K -rw-r--r-- 1 root root  624 Jun 11 00:18 packages/eslint-rc-20220328.800.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:18 packages/eslint-rc-20220328.800.tar

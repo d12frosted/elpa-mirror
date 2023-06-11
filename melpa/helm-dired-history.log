@@ -4,4 +4,16 @@ Source:  https://github.com/jixiuf/helm-dired-history.git
 
 Updating /mnt/store/melpa/working/helm-dired-history/
 Checking out 281523f9fc46cf00fafd670ba5cd16552a607212
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-dired-history/
+  to /tmp/helm-dired-historylDLKke/helm-dired-history-20170524.1046
+    helm-dired-history.el -> helm-dired-history.el
+Created helm-dired-history-20170524.1046.tar containing:
+  helm-dired-history-20170524.1046/
+  helm-dired-history-20170524.1046/helm-dired-history-pkg.el
+  helm-dired-history-20170524.1046/helm-dired-history.el
+Built helm-dired-history in 3.656s, finished at 2023-06-10T22:21:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jun  9 16:06 packages/helm-dired-history-20170524.1046.el
+4.0K -rw-r--r-- 1 root root  546 Jun 10 22:21 packages/helm-dired-history-20170524.1046.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:21 packages/helm-dired-history-20170524.1046.tar

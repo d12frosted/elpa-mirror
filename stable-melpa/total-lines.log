@@ -4,4 +4,16 @@ Source:  https://github.com/hinrik/total-lines.git
 
 Updating /mnt/store/melpa/working/total-lines/
 Checking out c762f08d039c8103f71c747e00304f209c2254f4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/total-lines/
+  to /tmp/total-linesVa9Qyz/total-lines-20171227.1239
+    total-lines.el -> total-lines.el
+Created total-lines-20171227.1239.tar containing:
+  total-lines-20171227.1239/
+  total-lines-20171227.1239/total-lines-pkg.el
+  total-lines-20171227.1239/total-lines.el
+Built total-lines in 3.325s, finished at 2023-06-10T22:54:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jun  9 16:55 packages/total-lines-20171227.1239.el
+4.0K -rw-r--r-- 1 root root  443 Jun 10 22:54 packages/total-lines-20171227.1239.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:54 packages/total-lines-20171227.1239.tar

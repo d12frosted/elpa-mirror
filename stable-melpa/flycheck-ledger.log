@@ -4,4 +4,16 @@ Source:  https://github.com/purcell/flycheck-ledger.git
 
 Updating /mnt/store/melpa/working/flycheck-ledger/
 Checking out 628e25ba66604946085571652a94a54f4d1ad96f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-ledger/
+  to /tmp/flycheck-ledgermpl8dN/flycheck-ledger-20200304.2204
+    flycheck-ledger.el -> flycheck-ledger.el
+Created flycheck-ledger-20200304.2204.tar containing:
+  flycheck-ledger-20200304.2204/
+  flycheck-ledger-20200304.2204/flycheck-ledger-pkg.el
+  flycheck-ledger-20200304.2204/flycheck-ledger.el
+Built flycheck-ledger in 2.742s, finished at 2023-06-11T00:23:00+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jun  9 15:57 packages/flycheck-ledger-20200304.2204.el
+4.0K -rw-r--r-- 1 root root  507 Jun 11 00:23 packages/flycheck-ledger-20200304.2204.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:23 packages/flycheck-ledger-20200304.2204.tar

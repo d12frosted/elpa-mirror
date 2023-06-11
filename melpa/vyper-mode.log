@@ -4,4 +4,16 @@ Source:  https://github.com/ralexstokes/vyper-mode.git
 
 Updating /mnt/store/melpa/working/vyper-mode/
 Checking out 323dfddfc38f0b11697e9ebaf04d1b53297e54e5
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vyper-mode/
+  to /tmp/vyper-modetvWZfD/vyper-mode-20180707.1935
+    vyper-mode.el -> vyper-mode.el
+Created vyper-mode-20180707.1935.tar containing:
+  vyper-mode-20180707.1935/
+  vyper-mode-20180707.1935/vyper-mode-pkg.el
+  vyper-mode-20180707.1935/vyper-mode.el
+Built vyper-mode in 2.619s, finished at 2023-06-10T22:57:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Jun  9 16:59 packages/vyper-mode-20180707.1935.el
+4.0K -rw-r--r-- 1 root root  488 Jun 10 22:57 packages/vyper-mode-20180707.1935.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:57 packages/vyper-mode-20180707.1935.tar

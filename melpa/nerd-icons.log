@@ -4,4 +4,32 @@ Source:  https://github.com/rainstormstudio/nerd-icons.el.git
 
 Updating /mnt/store/melpa/working/nerd-icons/
 Checking out a6999ddd8b85043bb24547611524a7ec86c6a21f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nerd-icons/
+  to /tmp/nerd-icons3d2sii/nerd-icons-20230609.641
+    nerd-icons-data.el -> nerd-icons-data.el
+    nerd-icons-faces.el -> nerd-icons-faces.el
+    nerd-icons.el -> nerd-icons.el
+    data => data
+Created nerd-icons-20230609.641.tar containing:
+  nerd-icons-20230609.641/
+  nerd-icons-20230609.641/data/
+  nerd-icons-20230609.641/data/nerd-icons-data-codicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-devicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-faicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-flicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-ipsicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-mdicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-octicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-pomicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-powerline.el
+  nerd-icons-20230609.641/data/nerd-icons-data-sucicon.el
+  nerd-icons-20230609.641/data/nerd-icons-data-wicon.el
+  nerd-icons-20230609.641/nerd-icons-data.el
+  nerd-icons-20230609.641/nerd-icons-faces.el
+  nerd-icons-20230609.641/nerd-icons-pkg.el
+  nerd-icons-20230609.641/nerd-icons.el
+Built nerd-icons in 4.523s, finished at 2023-06-10T22:35:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  593 Jun 10 22:35 packages/nerd-icons-20230609.641.entry
+492K -rw-r--r-- 1 root root 490K Jun 10 22:35 packages/nerd-icons-20230609.641.tar

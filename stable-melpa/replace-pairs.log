@@ -4,4 +4,16 @@ Source:  https://github.com/davidshepherd7/replace-pairs.git
 
 Updating /mnt/store/melpa/working/replace-pairs/
 Checking out ef6f2719aab7714f6cb209fd3dd6d2e720681b3c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/replace-pairs/
+  to /tmp/replace-pairsxFqiiA/replace-pairs-20160207.1251
+    replace-pairs.el -> replace-pairs.el
+Created replace-pairs-20160207.1251.tar containing:
+  replace-pairs-20160207.1251/
+  replace-pairs-20160207.1251/replace-pairs-pkg.el
+  replace-pairs-20160207.1251/replace-pairs.el
+Built replace-pairs in 5.438s, finished at 2023-06-10T22:46:59+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jun  9 16:44 packages/replace-pairs-20160207.1251.el
+4.0K -rw-r--r-- 1 root root  425 Jun 10 22:46 packages/replace-pairs-20160207.1251.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:46 packages/replace-pairs-20160207.1251.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/dfdeshom/helm-mt.git
 
 Updating /mnt/store/melpa/working/helm-mt/
 Checking out d2bff4100118483bc398c56d0ff095294209265b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-mt/
+  to /tmp/helm-mtCSBUPb/helm-mt-20160918.452
+    helm-mt.el -> helm-mt.el
+Created helm-mt-20160918.452.tar containing:
+  helm-mt-20160918.452/
+  helm-mt-20160918.452/helm-mt-pkg.el
+  helm-mt-20160918.452/helm-mt.el
+Built helm-mt in 3.197s, finished at 2023-06-11T00:30:14+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Jun  9 16:07 packages/helm-mt-20160918.452.el
+4.0K -rw-r--r-- 1 root root  503 Jun 11 00:30 packages/helm-mt-20160918.452.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:30 packages/helm-mt-20160918.452.tar

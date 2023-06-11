@@ -4,4 +4,16 @@ Source:  https://github.com/jcaw/porthole.git
 
 Updating /mnt/store/melpa/working/porthole/
 Checking out 9e68b419acf9245208f8094e10041b7f04511473
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/porthole/
+  to /tmp/portholew1ZGTg/porthole-20200404.1454
+    porthole.el -> porthole.el
+Created porthole-20200404.1454.tar containing:
+  porthole-20200404.1454/
+  porthole-20200404.1454/porthole-pkg.el
+  porthole-20200404.1454/porthole.el
+Built porthole in 2.613s, finished at 2023-06-10T22:43:31+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 31K Jun  9 16:39 packages/porthole-20200404.1454.el
+4.0K -rw-r--r-- 1 root root 477 Jun 10 22:43 packages/porthole-20200404.1454.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:43 packages/porthole-20200404.1454.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/fujimisakari/emacs-go-expr-completion.git
 
 Updating /mnt/store/melpa/working/go-expr-completion/
 Checking out 66bba78f52a732b978848e3a4c99fa2afeb6c25f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/go-expr-completion/
+  to /tmp/go-expr-completion1IoMqh/go-expr-completion-20200817.1750
+    go-expr-completion.el -> go-expr-completion.el
+Created go-expr-completion-20200817.1750.tar containing:
+  go-expr-completion-20200817.1750/
+  go-expr-completion-20200817.1750/go-expr-completion-pkg.el
+  go-expr-completion-20200817.1750/go-expr-completion.el
+Built go-expr-completion in 4.069s, finished at 2023-06-11T00:26:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  9 16:02 packages/go-expr-completion-20200817.1750.el
+4.0K -rw-r--r-- 1 root root  478 Jun 11 00:26 packages/go-expr-completion-20200817.1750.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:26 packages/go-expr-completion-20200817.1750.tar

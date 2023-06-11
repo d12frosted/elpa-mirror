@@ -4,4 +4,16 @@ Source:  https://github.com/tomterl/php-boris.git
 
 Updating /mnt/store/melpa/working/php-boris/
 Checking out 4bb7e4d34d9906ddce688205eb24cafe634c6d06
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/php-boris/
+  to /tmp/php-borisRBsU55/php-boris-20130527.821
+    php-boris.el -> php-boris.el
+Created php-boris-20130527.821.tar containing:
+  php-boris-20130527.821/
+  php-boris-20130527.821/php-boris-pkg.el
+  php-boris-20130527.821/php-boris.el
+Built php-boris in 2.265s, finished at 2023-06-10T22:42:26+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:38 packages/php-boris-20130527.821.el
+4.0K -rw-r--r-- 1 root root 335 Jun 10 22:42 packages/php-boris-20130527.821.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:42 packages/php-boris-20130527.821.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/whitlockjc/atom-dark-theme-emacs.git
 
 Updating /mnt/store/melpa/working/atom-dark-theme/
 Checking out 2b3c7ad42bbcab3214a131f8957b92e717b36ad3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/atom-dark-theme/
+  to /tmp/atom-dark-themeVwrVkg/atom-dark-theme-20220114.1902
+    atom-dark-theme.el -> atom-dark-theme.el
+Created atom-dark-theme-20220114.1902.tar containing:
+  atom-dark-theme-20220114.1902/
+  atom-dark-theme-20220114.1902/atom-dark-theme-pkg.el
+  atom-dark-theme-20220114.1902/atom-dark-theme.el
+Built atom-dark-theme in 3.443s, finished at 2023-06-11T00:03:55+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 15:30 packages/atom-dark-theme-20220114.1902.el
+4.0K -rw-r--r-- 1 root root 475 Jun 11 00:03 packages/atom-dark-theme-20220114.1902.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:03 packages/atom-dark-theme-20220114.1902.tar

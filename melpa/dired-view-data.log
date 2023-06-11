@@ -4,4 +4,16 @@ Source:  https://github.com/ShuguangSun/dired-view-data.git
 
 Updating /mnt/store/melpa/working/dired-view-data/
 Checking out 96d4cb6569fd2be90a516dedd98263374bbc6ead
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-view-data/
+  to /tmp/dired-view-dataCqwBQq/dired-view-data-20220129.339
+    dired-view-data.el -> dired-view-data.el
+Created dired-view-data-20220129.339.tar containing:
+  dired-view-data-20220129.339/
+  dired-view-data-20220129.339/dired-view-data-pkg.el
+  dired-view-data-20220129.339/dired-view-data.el
+Built dired-view-data in 4.216s, finished at 2023-06-11T00:14:04+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:44 packages/dired-view-data-20220129.339.el
+4.0K -rw-r--r-- 1 root root 503 Jun 11 00:14 packages/dired-view-data-20220129.339.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:14 packages/dired-view-data-20220129.339.tar

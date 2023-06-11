@@ -4,4 +4,16 @@ Source:  https://github.com/kostajh/harvest.el.git
 
 Updating /mnt/store/melpa/working/harvest/
 Checking out 7acbc0564b250521b67131ee2a0a92720239454f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/harvest/
+  to /tmp/harvestUEW1Xg/harvest-20170822.1746
+    harvest.el -> harvest.el
+Created harvest-20170822.1746.tar containing:
+  harvest-20170822.1746/
+  harvest-20170822.1746/harvest-pkg.el
+  harvest-20170822.1746/harvest.el
+Built harvest in 2.821s, finished at 2023-06-11T00:28:43+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:05 packages/harvest-20170822.1746.el
+4.0K -rw-r--r-- 1 root root 464 Jun 11 00:28 packages/harvest-20170822.1746.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:28 packages/harvest-20170822.1746.tar

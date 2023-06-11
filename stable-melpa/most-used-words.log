@@ -4,4 +4,16 @@ Source:  https://github.com/udyantw/most-used-words.git
 
 Updating /mnt/store/melpa/working/most-used-words/
 Checking out 90c09da92b30c6497e9141f0edfe7842440c4d53
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/most-used-words/
+  to /tmp/most-used-wordslYOTh7/most-used-words-20200808.1353
+    most-used-words.el -> most-used-words.el
+Created most-used-words-20200808.1353.tar containing:
+  most-used-words-20200808.1353/
+  most-used-words-20200808.1353/most-used-words-pkg.el
+  most-used-words-20200808.1353/most-used-words.el
+Built most-used-words in 5.067s, finished at 2023-06-10T22:33:40+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jun  9 16:24 packages/most-used-words-20200808.1353.el
+4.0K -rw-r--r-- 1 root root  453 Jun 10 22:33 packages/most-used-words-20200808.1353.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:33 packages/most-used-words-20200808.1353.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/daviderestivo/smart-mode-line-atom-one-dark-theme.gi
 
 Updating /mnt/store/melpa/working/smart-mode-line-atom-one-dark-theme/
 Checking out 5f2056d7c24e9c8964f700ab6ec6f00ba4315eb8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smart-mode-line-atom-one-dark-theme/
+  to /tmp/smart-mode-line-atom-one-dark-themeRF0wT6/smart-mode-line-atom-one-dark-theme-20230107.1731
+    smart-mode-line-atom-one-dark-theme.el -> smart-mode-line-atom-one-dark-theme.el
+Created smart-mode-line-atom-one-dark-theme-20230107.1731.tar containing:
+  smart-mode-line-atom-one-dark-theme-20230107.1731/
+  smart-mode-line-atom-one-dark-theme-20230107.1731/smart-mode-line-atom-one-dark-theme-pkg.el
+  smart-mode-line-atom-one-dark-theme-20230107.1731/smart-mode-line-atom-one-dark-theme.el
+Built smart-mode-line-atom-one-dark-theme in 2.955s, finished at 2023-06-10T22:50:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jun  9 16:49 packages/smart-mode-line-atom-one-dark-theme-20230107.1731.el
+4.0K -rw-r--r-- 1 root root  628 Jun 10 22:50 packages/smart-mode-line-atom-one-dark-theme-20230107.1731.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:50 packages/smart-mode-line-atom-one-dark-theme-20230107.1731.tar

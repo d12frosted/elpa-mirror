@@ -4,4 +4,30 @@ Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
 Checking out da6a3b3073374e868f157fe7dc24be7b889af8fd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ekg/
+  to /tmp/ekg2DIehp/ekg-20230519.1717
+    ekg-embedding.el -> ekg-embedding.el
+    ekg-logseq.el -> ekg-logseq.el
+    ekg-org-roam.el -> ekg-org-roam.el
+    ekg-test-utils.el -> ekg-test-utils.el
+    ekg.el -> ekg.el
+  ! doc/doclicense.texi -> doclicense.texi
+  ! doc/ekg.texi -> ekg.texi
+Generating /tmp/ekg2DIehp/ekg-20230519.1717/doclicense.info
+Generating /tmp/ekg2DIehp/ekg-20230519.1717/ekg.info
+Created ekg-20230519.1717.tar containing:
+  ekg-20230519.1717/
+  ekg-20230519.1717/dir
+  ekg-20230519.1717/doclicense.info
+  ekg-20230519.1717/ekg-embedding.el
+  ekg-20230519.1717/ekg-logseq.el
+  ekg-20230519.1717/ekg-org-roam.el
+  ekg-20230519.1717/ekg-pkg.el
+  ekg-20230519.1717/ekg-test-utils.el
+  ekg-20230519.1717/ekg.el
+  ekg-20230519.1717/ekg.info
+Built ekg in 11.588s, finished at 2023-06-11T00:16:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  469 Jun 11 00:16 packages/ekg-20230519.1717.entry
+192K -rw-r--r-- 1 root root 190K Jun 11 00:16 packages/ekg-20230519.1717.tar

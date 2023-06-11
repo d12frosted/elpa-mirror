@@ -4,4 +4,16 @@ Source:  https://github.com/localauthor/zk.git
 
 Updating /mnt/store/melpa/working/zk-index/
 Checking out b9f5433486e79a23e82035be3e10d8f5678b2880
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zk-index/
+  to /tmp/zk-indexZZqj4d/zk-index-20230505.2118
+    zk-index.el -> zk-index.el
+Created zk-index-20230505.2118.tar containing:
+  zk-index-20230505.2118/
+  zk-index-20230505.2118/zk-index-pkg.el
+  zk-index-20230505.2118/zk-index.el
+Built zk-index in 6.115s, finished at 2023-06-10T23:00:36+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 24K Jun  9 17:03 packages/zk-index-20230505.2118.el
+4.0K -rw-r--r-- 1 root root 432 Jun 10 23:00 packages/zk-index-20230505.2118.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 23:00 packages/zk-index-20230505.2118.tar

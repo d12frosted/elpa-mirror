@@ -4,4 +4,16 @@ Source:  https://github.com/xendk/reaper.git
 
 Updating /mnt/store/melpa/working/reaper/
 Checking out a8ec93656698c5c02a02279ee7d7976325cc74cd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/reaper/
+  to /tmp/reaperNriD7D/reaper-20220527.2122
+    reaper.el -> reaper.el
+Created reaper-20220527.2122.tar containing:
+  reaper-20220527.2122/
+  reaper-20220527.2122/reaper-pkg.el
+  reaper-20220527.2122/reaper.el
+Built reaper in 4.345s, finished at 2023-06-10T22:46:09+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  9 16:43 packages/reaper-20220527.2122.el
+4.0K -rw-r--r-- 1 root root 398 Jun 10 22:46 packages/reaper-20220527.2122.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:46 packages/reaper-20220527.2122.tar

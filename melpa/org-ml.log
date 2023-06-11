@@ -4,4 +4,17 @@ Source:  https://github.com/ndwarshuis/org-ml.git
 
 Updating /mnt/store/melpa/working/org-ml/
 Checking out f57336a9126a168ad32ccce017c072474555395a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-ml/
+  to /tmp/org-mlkmKG6c/org-ml-20230410.30
+    org-ml-macs.el -> org-ml-macs.el
+    org-ml.el -> org-ml.el
+Created org-ml-20230410.30.tar containing:
+  org-ml-20230410.30/
+  org-ml-20230410.30/org-ml-macs.el
+  org-ml-20230410.30/org-ml-pkg.el
+  org-ml-20230410.30/org-ml.el
+Built org-ml in 3.309s, finished at 2023-06-10T22:38:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  466 Jun 10 22:38 packages/org-ml-20230410.30.entry
+332K -rw-r--r-- 1 root root 330K Jun 10 22:38 packages/org-ml-20230410.30.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/yanalunaterra/plain-theme.git
 
 Updating /mnt/store/melpa/working/plain-theme/
 Checking out 2609a811335d58cfb73a65d6307c156fe09037d3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/plain-theme/
+  to /tmp/plain-themeOOrzM9/plain-theme-20171124.410
+    plain-theme.el -> plain-theme.el
+Created plain-theme-20171124.410.tar containing:
+  plain-theme-20171124.410/
+  plain-theme-20171124.410/plain-theme-pkg.el
+  plain-theme-20171124.410/plain-theme.el
+Built plain-theme in 2.842s, finished at 2023-06-10T22:42:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.8K Jun  9 16:38 packages/plain-theme-20171124.410.el
+4.0K -rw-r--r-- 1 root root  180 Jun 10 22:42 packages/plain-theme-20171124.410.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:42 packages/plain-theme-20171124.410.tar

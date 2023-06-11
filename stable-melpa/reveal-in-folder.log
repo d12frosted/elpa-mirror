@@ -4,4 +4,16 @@ Source:  https://github.com/jcs-elpa/reveal-in-folder.git
 
 Updating /mnt/store/melpa/working/reveal-in-folder/
 Checking out 7b2b02356b75e224a0414995af95d45786ee6f7d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/reveal-in-folder/
+  to /tmp/reveal-in-folderLfLNhu/reveal-in-folder-20220704.659
+    reveal-in-folder.el -> reveal-in-folder.el
+Created reveal-in-folder-20220704.659.tar containing:
+  reveal-in-folder-20220704.659/
+  reveal-in-folder-20220704.659/reveal-in-folder-pkg.el
+  reveal-in-folder-20220704.659/reveal-in-folder.el
+Built reveal-in-folder in 3.092s, finished at 2023-06-10T22:47:16+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Jun  9 16:44 packages/reveal-in-folder-20220704.659.el
+4.0K -rw-r--r-- 1 root root  567 Jun 10 22:47 packages/reveal-in-folder-20220704.659.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:47 packages/reveal-in-folder-20220704.659.tar

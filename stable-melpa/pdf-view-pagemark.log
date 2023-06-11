@@ -4,4 +4,16 @@ Source:  https://github.com/kimim/pdf-view-pagemark.git
 
 Updating /mnt/store/melpa/working/pdf-view-pagemark/
 Checking out 90a2908795bd4bf1015ff18ab338b50a785a1843
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pdf-view-pagemark/
+  to /tmp/pdf-view-pagemark85ZlN2/pdf-view-pagemark-20230607.144
+    pdf-view-pagemark.el -> pdf-view-pagemark.el
+Created pdf-view-pagemark-20230607.144.tar containing:
+  pdf-view-pagemark-20230607.144/
+  pdf-view-pagemark-20230607.144/pdf-view-pagemark-pkg.el
+  pdf-view-pagemark-20230607.144/pdf-view-pagemark.el
+Built pdf-view-pagemark in 2.512s, finished at 2023-06-10T22:41:54+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Jun  9 16:37 packages/pdf-view-pagemark-20230607.144.el
+4.0K -rw-r--r-- 1 root root  565 Jun 10 22:41 packages/pdf-view-pagemark-20230607.144.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:41 packages/pdf-view-pagemark-20230607.144.tar

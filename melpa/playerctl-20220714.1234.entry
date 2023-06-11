@@ -1,6 +1,6 @@
 (playerctl .
 	   [(20220714 1234)
-	    nil "Control your music player (e.g. Spotify) with playerctl" single
+	    nil "Control your music player (e.g. Spotify) with playerctl" tar
 	    ((:commit . "0912ed5a5ab6d611b5f35db589f608f1fafdc81a")
 	     (:authors
 	      ("Thomas Luquet" . "thomas@luquet.net"))

@@ -4,4 +4,16 @@ Source:  https://github.com/aki2o/auto-complete-pcmp.git
 
 Updating /mnt/store/melpa/working/auto-complete-pcmp/
 Checking out 2595d3dab1ef3549271ca922f212928e9d830eec
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auto-complete-pcmp/
+  to /tmp/auto-complete-pcmpT78q1g/auto-complete-pcmp-20140303.255
+    auto-complete-pcmp.el -> auto-complete-pcmp.el
+Created auto-complete-pcmp-20140303.255.tar containing:
+  auto-complete-pcmp-20140303.255/
+  auto-complete-pcmp-20140303.255/auto-complete-pcmp-pkg.el
+  auto-complete-pcmp-20140303.255/auto-complete-pcmp.el
+Built auto-complete-pcmp in 3.560s, finished at 2023-06-11T00:04:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jun  9 15:30 packages/auto-complete-pcmp-20140303.255.el
+4.0K -rw-r--r-- 1 root root  596 Jun 11 00:04 packages/auto-complete-pcmp-20140303.255.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:04 packages/auto-complete-pcmp-20140303.255.tar

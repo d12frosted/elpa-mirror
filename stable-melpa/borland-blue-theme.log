@@ -4,4 +4,16 @@ Source:  https://github.com/fourier/borland-blue-theme.git
 
 Updating /mnt/store/melpa/working/borland-blue-theme/
 Checking out db74eefebbc89d3c62575f8f50b319e87b4a3470
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/borland-blue-theme/
+  to /tmp/borland-blue-theme79hGXe/borland-blue-theme-20160117.1321
+    borland-blue-theme.el -> borland-blue-theme.el
+Created borland-blue-theme-20160117.1321.tar containing:
+  borland-blue-theme-20160117.1321/
+  borland-blue-theme-20160117.1321/borland-blue-theme-pkg.el
+  borland-blue-theme-20160117.1321/borland-blue-theme.el
+Built borland-blue-theme in 2.874s, finished at 2023-06-11T00:06:01+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.1K Jun  9 15:32 packages/borland-blue-theme-20160117.1321.el
+4.0K -rw-r--r-- 1 root root  586 Jun 11 00:06 packages/borland-blue-theme-20160117.1321.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:06 packages/borland-blue-theme-20160117.1321.tar

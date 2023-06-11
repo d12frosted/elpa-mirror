@@ -4,4 +4,16 @@ Source:  https://github.com/romandecker/helm-jira.git
 
 Updating /mnt/store/melpa/working/helm-jira/
 Checking out 75d6ed5bd7a041fa8c1adb21cbbbe57b5a7c7cc7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-jira/
+  to /tmp/helm-jirav4V9Jx/helm-jira-20180802.815
+    helm-jira.el -> helm-jira.el
+Created helm-jira-20180802.815.tar containing:
+  helm-jira-20180802.815/
+  helm-jira-20180802.815/helm-jira-pkg.el
+  helm-jira-20180802.815/helm-jira.el
+Built helm-jira in 2.844s, finished at 2023-06-10T22:21:41+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  9 16:06 packages/helm-jira-20180802.815.el
+4.0K -rw-r--r-- 1 root root  570 Jun 10 22:21 packages/helm-jira-20180802.815.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:21 packages/helm-jira-20180802.815.tar

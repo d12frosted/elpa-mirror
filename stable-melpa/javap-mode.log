@@ -4,4 +4,16 @@ Source:  https://github.com/hiredman/javap-mode.git
 
 Updating /mnt/store/melpa/working/javap-mode/
 Checking out 864c1130e204b2072e1d19cd027b6fce8ebe6629
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/javap-mode/
+  to /tmp/javap-mode8qL11Y/javap-mode-20120223.2208
+    javap-mode.el -> javap-mode.el
+Created javap-mode-20120223.2208.tar containing:
+  javap-mode-20120223.2208/
+  javap-mode-20120223.2208/javap-mode-pkg.el
+  javap-mode-20120223.2208/javap-mode.el
+Built javap-mode in 3.889s, finished at 2023-06-10T22:26:11+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jun  9 16:14 packages/javap-mode-20120223.2208.el
+4.0K -rw-r--r-- 1 root root  190 Jun 10 22:26 packages/javap-mode-20120223.2208.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:26 packages/javap-mode-20120223.2208.tar

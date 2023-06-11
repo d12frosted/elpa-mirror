@@ -4,4 +4,16 @@ Source:  https://github.com/binjo/yara-mode.git
 
 Updating /mnt/store/melpa/working/yara-mode/
 Checking out 4c959b300ce52665c92e04e524dda5ed051c34f3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yara-mode/
+  to /tmp/yara-modeLr42fp/yara-mode-20220317.935
+    yara-mode.el -> yara-mode.el
+Created yara-mode-20220317.935.tar containing:
+  yara-mode-20220317.935/
+  yara-mode-20220317.935/yara-mode-pkg.el
+  yara-mode-20220317.935/yara-mode.el
+Built yara-mode in 5.779s, finished at 2023-06-10T22:59:37+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 17:02 packages/yara-mode-20220317.935.el
+4.0K -rw-r--r-- 1 root root 392 Jun 10 22:59 packages/yara-mode-20220317.935.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:59 packages/yara-mode-20220317.935.tar

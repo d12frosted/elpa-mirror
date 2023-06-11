@@ -4,4 +4,16 @@ Source:  https://github.com/jamiecollinson/emacs-panda-theme.git
 
 Updating /mnt/store/melpa/working/panda-theme/
 Checking out 60aa47c7a930377807da0d601351ad91e8ca446a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/panda-theme/
+  to /tmp/panda-theme7VoJFY/panda-theme-20181128.1738
+    panda-theme.el -> panda-theme.el
+Created panda-theme-20181128.1738.tar containing:
+  panda-theme-20181128.1738/
+  panda-theme-20181128.1738/panda-theme-pkg.el
+  panda-theme-20181128.1738/panda-theme.el
+Built panda-theme in 2.699s, finished at 2023-06-10T22:41:23+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  9 16:36 packages/panda-theme-20181128.1738.el
+4.0K -rw-r--r-- 1 root root  434 Jun 10 22:41 packages/panda-theme-20181128.1738.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:41 packages/panda-theme-20181128.1738.tar

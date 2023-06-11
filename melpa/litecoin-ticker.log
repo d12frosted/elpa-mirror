@@ -4,4 +4,16 @@ Source:  https://github.com/llcc/btcbox-ticker.git
 
 Updating /mnt/store/melpa/working/litecoin-ticker/
 Checking out 3d8047c736e4ee0b8638953f8cc63eaefad34106
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/litecoin-ticker/
+  to /tmp/litecoin-tickerq3wAoo/litecoin-ticker-20160612.11
+    litecoin-ticker.el -> litecoin-ticker.el
+Created litecoin-ticker-20160612.11.tar containing:
+  litecoin-ticker-20160612.11/
+  litecoin-ticker-20160612.11/litecoin-ticker-pkg.el
+  litecoin-ticker-20160612.11/litecoin-ticker.el
+Built litecoin-ticker in 2.984s, finished at 2023-06-10T22:29:37+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jun  9 16:19 packages/litecoin-ticker-20160612.11.el
+4.0K -rw-r--r-- 1 root root  263 Jun 10 22:29 packages/litecoin-ticker-20160612.11.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:29 packages/litecoin-ticker-20160612.11.tar

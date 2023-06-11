@@ -4,4 +4,16 @@ Source:  https://github.com/renzmann/treesit-auto.git
 
 Updating /mnt/store/melpa/working/treesit-auto/
 Checking out bac3b9d1d61a4d759f87c80de7be3b808d19cbf6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/treesit-auto/
+  to /tmp/treesit-autoFldZ82/treesit-auto-20230320.1555
+    treesit-auto.el -> treesit-auto.el
+Created treesit-auto-20230320.1555.tar containing:
+  treesit-auto-20230320.1555/
+  treesit-auto-20230320.1555/treesit-auto-pkg.el
+  treesit-auto-20230320.1555/treesit-auto.el
+Built treesit-auto in 3.506s, finished at 2023-06-10T22:55:25+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  9 16:56 packages/treesit-auto-20230320.1555.el
+4.0K -rw-r--r-- 1 root root 523 Jun 10 22:55 packages/treesit-auto-20230320.1555.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:55 packages/treesit-auto-20230320.1555.tar

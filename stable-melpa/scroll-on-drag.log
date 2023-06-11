@@ -4,4 +4,16 @@ Source:  https://codeberg.org/ideasman42/emacs-scroll-on-drag.git
 
 Updating /mnt/store/melpa/working/scroll-on-drag/
 Checking out 179c2acecc48d3ceca4b449b2a225d684002bb32
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scroll-on-drag/
+  to /tmp/scroll-on-drag0Ylby2/scroll-on-drag-20230313.546
+    scroll-on-drag.el -> scroll-on-drag.el
+Created scroll-on-drag-20230313.546.tar containing:
+  scroll-on-drag-20230313.546/
+  scroll-on-drag-20230313.546/scroll-on-drag-pkg.el
+  scroll-on-drag-20230313.546/scroll-on-drag.el
+Built scroll-on-drag in 3.272s, finished at 2023-06-10T22:48:33+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 16:46 packages/scroll-on-drag-20230313.546.el
+4.0K -rw-r--r-- 1 root root 417 Jun 10 22:48 packages/scroll-on-drag-20230313.546.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:48 packages/scroll-on-drag-20230313.546.tar

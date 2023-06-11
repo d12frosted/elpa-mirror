@@ -4,4 +4,16 @@ Source:  https://github.com/cyruseuros/compdef.git
 
 Updating /mnt/store/melpa/working/compdef/
 Checking out 30fb5846ed851efee641ce8c5d8879ad36cd7ac6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/compdef/
+  to /tmp/compdefAczb9U/compdef-20200304.611
+    compdef.el -> compdef.el
+Created compdef-20200304.611.tar containing:
+  compdef-20200304.611/
+  compdef-20200304.611/compdef-pkg.el
+  compdef-20200304.611/compdef.el
+Built compdef in 3.044s, finished at 2023-06-11T00:10:21+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 15:38 packages/compdef-20200304.611.el
+4.0K -rw-r--r-- 1 root root  344 Jun 11 00:10 packages/compdef-20200304.611.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:10 packages/compdef-20200304.611.tar

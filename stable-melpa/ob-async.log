@@ -4,4 +4,16 @@ Source:  https://github.com/astahlman/ob-async.git
 
 Updating /mnt/store/melpa/working/ob-async/
 Checking out 9aac486073f5c356ada20e716571be33a350a982
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-async/
+  to /tmp/ob-asyncIgVx62/ob-async-20210428.2052
+    ob-async.el -> ob-async.el
+Created ob-async-20210428.2052.tar containing:
+  ob-async-20210428.2052/
+  ob-async-20210428.2052/ob-async-pkg.el
+  ob-async-20210428.2052/ob-async.el
+Built ob-async in 2.891s, finished at 2023-06-10T22:36:05+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:28 packages/ob-async-20210428.2052.el
+4.0K -rw-r--r-- 1 root root 543 Jun 10 22:36 packages/ob-async-20210428.2052.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:36 packages/ob-async-20210428.2052.tar

@@ -4,4 +4,18 @@ Source:  https://github.com/vermiculus/graphql.el.git
 
 Updating /mnt/store/melpa/working/graphql/
 Checking out b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/graphql/
+  to /tmp/graphqlmcvyfQ/graphql-20221128.1106
+    graphql-examples.el -> graphql-examples.el
+    graphql.el -> graphql.el
+Created graphql-20221128.1106.tar containing:
+  graphql-20221128.1106/
+  graphql-20221128.1106/graphql-examples.el
+  graphql-20221128.1106/graphql-pkg.el
+  graphql-20221128.1106/graphql.el
+Built graphql in 6.751s, finished at 2023-06-11T00:27:57+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Aug 25  2022 packages/graphql-20180912.31.el
+4.0K -rw-r--r-- 1 root root  422 Jun 11 00:27 packages/graphql-20221128.1106.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:27 packages/graphql-20221128.1106.tar

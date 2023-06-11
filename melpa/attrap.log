@@ -4,4 +4,16 @@ Source:  https://github.com/jyp/attrap.git
 
 Updating /mnt/store/melpa/working/attrap/
 Checking out 2df105d0bd23a468e75fad0fed7d39013328526d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/attrap/
+  to /tmp/attrapuTeSF3/attrap-20230310.1555
+    attrap.el -> attrap.el
+Created attrap-20230310.1555.tar containing:
+  attrap-20230310.1555/
+  attrap-20230310.1555/attrap-pkg.el
+  attrap-20230310.1555/attrap.el
+Built attrap in 3.655s, finished at 2023-06-11T00:03:59+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Jun  9 15:30 packages/attrap-20230310.1555.el
+4.0K -rw-r--r-- 1 root root 535 Jun 11 00:03 packages/attrap-20230310.1555.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:03 packages/attrap-20230310.1555.tar

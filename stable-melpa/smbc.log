@@ -4,4 +4,16 @@ Source:  https://github.com/sakshamsharma/emacs-smbc.git
 
 Updating /mnt/store/melpa/working/smbc/
 Checking out 10538e3d575ba6ef3c94d555af2744b42dfd36c7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smbc/
+  to /tmp/smbcmI9Ax9/smbc-20171229.1808
+    smbc.el -> smbc.el
+Created smbc-20171229.1808.tar containing:
+  smbc-20171229.1808/
+  smbc-20171229.1808/smbc-pkg.el
+  smbc-20171229.1808/smbc.el
+Built smbc in 2.986s, finished at 2023-06-10T22:50:31+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Jun  9 16:49 packages/smbc-20171229.1808.el
+4.0K -rw-r--r-- 1 root root  402 Jun 10 22:50 packages/smbc-20171229.1808.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:50 packages/smbc-20171229.1808.tar

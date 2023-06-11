@@ -4,4 +4,16 @@ Source:  https://github.com/lightquake/hamlet-mode.git
 
 Updating /mnt/store/melpa/working/hamlet-mode/
 Checking out 7362b955e556a3d007fa06945a27e5b99349527d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hamlet-mode/
+  to /tmp/hamlet-mode69tTmU/hamlet-mode-20131208.724
+    hamlet-mode.el -> hamlet-mode.el
+Created hamlet-mode-20131208.724.tar containing:
+  hamlet-mode-20131208.724/
+  hamlet-mode-20131208.724/hamlet-mode-pkg.el
+  hamlet-mode-20131208.724/hamlet-mode.el
+Built hamlet-mode in 2.767s, finished at 2023-06-11T00:28:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Jun  9 16:04 packages/hamlet-mode-20131208.724.el
+4.0K -rw-r--r-- 1 root root  527 Jun 11 00:28 packages/hamlet-mode-20131208.724.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:28 packages/hamlet-mode-20131208.724.tar

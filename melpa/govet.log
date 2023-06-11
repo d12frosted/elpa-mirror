@@ -4,4 +4,16 @@ Source:  https://github.com/meshelton/govet.git
 
 Updating /mnt/store/melpa/working/govet/
 Checking out 1b8c044aa856f4b62a682bc57494af19d22a6053
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/govet/
+  to /tmp/govetgiffEH/govet-20170808.1724
+    govet.el -> govet.el
+Created govet-20170808.1724.tar containing:
+  govet-20170808.1724/
+  govet-20170808.1724/govet-pkg.el
+  govet-20170808.1724/govet.el
+Built govet in 3.584s, finished at 2023-06-11T00:27:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jun  9 16:03 packages/govet-20170808.1724.el
+4.0K -rw-r--r-- 1 root root  207 Jun 11 00:27 packages/govet-20170808.1724.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:27 packages/govet-20170808.1724.tar

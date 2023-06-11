@@ -4,4 +4,16 @@ Source:  https://github.com/vbuzin/berrys-theme.git
 
 Updating /mnt/store/melpa/working/berrys-theme/
 Checking out 888a14206b2fb3dc45b5273aeb05075f3e0b5f60
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/berrys-theme/
+  to /tmp/berrys-theme4Yyppe/berrys-theme-20191201.1609
+    berrys-theme.el -> berrys-theme.el
+Created berrys-theme-20191201.1609.tar containing:
+  berrys-theme-20191201.1609/
+  berrys-theme-20191201.1609/berrys-theme-pkg.el
+  berrys-theme-20191201.1609/berrys-theme.el
+Built berrys-theme in 2.884s, finished at 2023-06-11T00:05:22+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  9 15:31 packages/berrys-theme-20191201.1609.el
+4.0K -rw-r--r-- 1 root root 404 Jun 11 00:05 packages/berrys-theme-20191201.1609.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:05 packages/berrys-theme-20191201.1609.tar

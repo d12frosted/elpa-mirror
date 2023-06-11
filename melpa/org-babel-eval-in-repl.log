@@ -4,4 +4,19 @@ Source:  https://github.com/diadochos/org-babel-eval-in-repl.git
 
 Updating /mnt/store/melpa/working/org-babel-eval-in-repl/
 Checking out 3591f062873de2d64cc6f83b3555d030506e6ee7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-babel-eval-in-repl/
+  to /tmp/org-babel-eval-in-replKhpST9/org-babel-eval-in-repl-20201206.1540
+    eval-in-repl-ess.el -> eval-in-repl-ess.el
+    eval-in-repl-matlab.el -> eval-in-repl-matlab.el
+    org-babel-eval-in-repl.el -> org-babel-eval-in-repl.el
+Created org-babel-eval-in-repl-20201206.1540.tar containing:
+  org-babel-eval-in-repl-20201206.1540/
+  org-babel-eval-in-repl-20201206.1540/eval-in-repl-ess.el
+  org-babel-eval-in-repl-20201206.1540/eval-in-repl-matlab.el
+  org-babel-eval-in-repl-20201206.1540/org-babel-eval-in-repl-pkg.el
+  org-babel-eval-in-repl-20201206.1540/org-babel-eval-in-repl.el
+Built org-babel-eval-in-repl in 2.958s, finished at 2023-06-10T22:37:32+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 663 Jun 10 22:37 packages/org-babel-eval-in-repl-20201206.1540.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:37 packages/org-babel-eval-in-repl-20201206.1540.tar

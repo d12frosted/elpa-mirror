@@ -4,4 +4,16 @@ Source:  https://github.com/thierryvolpiatto/iterator.git
 
 Updating /mnt/store/melpa/working/iterator/
 Checking out b514d4d1d0167e5973afbc93a34070d1aa967d82
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/iterator/
+  to /tmp/iteratorTWbafD/iterator-20210109.1859
+    iterator.el -> iterator.el
+Created iterator-20210109.1859.tar containing:
+  iterator-20210109.1859/
+  iterator-20210109.1859/iterator-pkg.el
+  iterator-20210109.1859/iterator.el
+Built iterator in 2.840s, finished at 2023-06-10T22:25:28+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Jun  9 16:13 packages/iterator-20210109.1859.el
+4.0K -rw-r--r-- 1 root root  524 Jun 10 22:25 packages/iterator-20210109.1859.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/iterator-20210109.1859.tar

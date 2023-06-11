@@ -4,4 +4,16 @@ Source:  https://github.com/roman/evil-visual-mark-mode.git
 
 Updating /mnt/store/melpa/working/evil-visual-mark-mode/
 Checking out 2bbaaae56ae53e68a8bcc7bc2cfe830a14843b4d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-visual-mark-mode/
+  to /tmp/evil-visual-mark-modeMzg6ea/evil-visual-mark-mode-20230202.318
+    evil-visual-mark-mode.el -> evil-visual-mark-mode.el
+Created evil-visual-mark-mode-20230202.318.tar containing:
+  evil-visual-mark-mode-20230202.318/
+  evil-visual-mark-mode-20230202.318/evil-visual-mark-mode-pkg.el
+  evil-visual-mark-mode-20230202.318/evil-visual-mark-mode.el
+Built evil-visual-mark-mode in 3.334s, finished at 2023-06-11T00:20:34+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.2K Jun  9 15:53 packages/evil-visual-mark-mode-20230202.318.el
+4.0K -rw-r--r-- 1 root root  416 Jun 11 00:20 packages/evil-visual-mark-mode-20230202.318.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:20 packages/evil-visual-mark-mode-20230202.318.tar

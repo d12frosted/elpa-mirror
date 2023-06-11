@@ -4,4 +4,16 @@ Source:  https://github.com/CsBigDataHub/counsel-fd.git
 
 Updating /mnt/store/melpa/working/counsel-fd/
 Checking out 7c1e413e4ce44df2232c19ebe3357ac8ec33cb3b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/counsel-fd/
+  to /tmp/counsel-fdbFz1eR/counsel-fd-20221011.1853
+    counsel-fd.el -> counsel-fd.el
+Created counsel-fd-20221011.1853.tar containing:
+  counsel-fd-20221011.1853/
+  counsel-fd-20221011.1853/counsel-fd-pkg.el
+  counsel-fd-20221011.1853/counsel-fd.el
+Built counsel-fd in 3.488s, finished at 2023-06-11T00:11:02+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jun  9 15:40 packages/counsel-fd-20221011.1853.el
+4.0K -rw-r--r-- 1 root root  261 Jun 11 00:11 packages/counsel-fd-20221011.1853.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:11 packages/counsel-fd-20221011.1853.tar

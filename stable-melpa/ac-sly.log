@@ -4,4 +4,16 @@ Source:  https://github.com/qoocku/ac-sly.git
 
 Updating /mnt/store/melpa/working/ac-sly/
 Checking out bf69c687c4ecf1994349d20c182e9b567399912e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-sly/
+  to /tmp/ac-slycm7A74/ac-sly-20170728.1027
+    ac-sly.el -> ac-sly.el
+Created ac-sly-20170728.1027.tar containing:
+  ac-sly-20170728.1027/
+  ac-sly-20170728.1027/ac-sly-pkg.el
+  ac-sly-20170728.1027/ac-sly.el
+Built ac-sly in 2.982s, finished at 2023-06-11T00:02:13+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jun  9 15:27 packages/ac-sly-20170728.1027.el
+4.0K -rw-r--r-- 1 root root  474 Jun 11 00:02 packages/ac-sly-20170728.1027.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:02 packages/ac-sly-20170728.1027.tar

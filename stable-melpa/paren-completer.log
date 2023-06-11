@@ -4,4 +4,16 @@ Source:  https://github.com/MatthewBregg/paren-completer.git
 
 Updating /mnt/store/melpa/working/paren-completer/
 Checking out 74183a8e13fa1266271bdcbcb4bfb29a4f915f0a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/paren-completer/
+  to /tmp/paren-completerY7qDOh/paren-completer-20160501.1052
+    paren-completer.el -> paren-completer.el
+Created paren-completer-20160501.1052.tar containing:
+  paren-completer-20160501.1052/
+  paren-completer-20160501.1052/paren-completer-pkg.el
+  paren-completer-20160501.1052/paren-completer.el
+Built paren-completer in 2.810s, finished at 2023-06-10T22:41:29+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Jun  9 16:36 packages/paren-completer-20160501.1052.el
+4.0K -rw-r--r-- 1 root root  411 Jun 10 22:41 packages/paren-completer-20160501.1052.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:41 packages/paren-completer-20160501.1052.tar

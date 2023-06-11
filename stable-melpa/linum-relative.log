@@ -4,4 +4,16 @@ Source:  https://github.com/coldnew/linum-relative.git
 
 Updating /mnt/store/melpa/working/linum-relative/
 Checking out 8fbe89ad897921849665a3e8da18cee7d0721441
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/linum-relative/
+  to /tmp/linum-relative9ZukwI/linum-relative-20221025.517
+    linum-relative.el -> linum-relative.el
+Created linum-relative-20221025.517.tar containing:
+  linum-relative-20221025.517/
+  linum-relative-20221025.517/linum-relative-pkg.el
+  linum-relative-20221025.517/linum-relative.el
+Built linum-relative in 3.459s, finished at 2023-06-10T22:29:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:18 packages/linum-relative-20221025.517.el
+4.0K -rw-r--r-- 1 root root 407 Jun 10 22:29 packages/linum-relative-20221025.517.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:29 packages/linum-relative-20221025.517.tar

@@ -4,4 +4,36 @@ Source:  https://github.com/omajid/csproj-mode.git
 
 Updating /mnt/store/melpa/working/csproj-mode/
 Checking out a7f0f4610c976a28c41b9b8299892f88b5d0336c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/csproj-mode/
+  to /tmp/csproj-mode4Zg0GM/csproj-mode-20200801.1732
+    csproj-mode.el -> csproj-mode.el
+    snippets => snippets
+Created csproj-mode-20200801.1732.tar containing:
+  csproj-mode-20200801.1732/
+  csproj-mode-20200801.1732/csproj-mode-pkg.el
+  csproj-mode-20200801.1732/csproj-mode.el
+  csproj-mode-20200801.1732/snippets/
+  csproj-mode-20200801.1732/snippets/csproj-mode/
+  csproj-mode-20200801.1732/snippets/csproj-mode/Compile
+  csproj-mode-20200801.1732/snippets/csproj-mode/Content
+  csproj-mode-20200801.1732/snippets/csproj-mode/DefineConstants
+  csproj-mode-20200801.1732/snippets/csproj-mode/DotNetCliToolReference
+  csproj-mode-20200801.1732/snippets/csproj-mode/Import
+  csproj-mode-20200801.1732/snippets/csproj-mode/IsPackable
+  csproj-mode-20200801.1732/snippets/csproj-mode/ItemGroup
+  csproj-mode-20200801.1732/snippets/csproj-mode/Message
+  csproj-mode-20200801.1732/snippets/csproj-mode/None
+  csproj-mode-20200801.1732/snippets/csproj-mode/OutputType
+  csproj-mode-20200801.1732/snippets/csproj-mode/PackageLicenseExpression
+  csproj-mode-20200801.1732/snippets/csproj-mode/PackageReference
+  csproj-mode-20200801.1732/snippets/csproj-mode/Project
+  csproj-mode-20200801.1732/snippets/csproj-mode/ProjectReference
+  csproj-mode-20200801.1732/snippets/csproj-mode/PropertyGroup
+  csproj-mode-20200801.1732/snippets/csproj-mode/RuntimeIdentifiers
+  csproj-mode-20200801.1732/snippets/csproj-mode/Target
+  csproj-mode-20200801.1732/snippets/csproj-mode/TargetFramework
+Built csproj-mode in 3.337s, finished at 2023-06-11T00:11:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 476 Jun 11 00:11 packages/csproj-mode-20200801.1732.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:11 packages/csproj-mode-20200801.1732.tar

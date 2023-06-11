@@ -4,4 +4,16 @@ Source:  https://github.com/sjbach/lusty-emacs.git
 
 Updating /mnt/store/melpa/working/lusty-explorer/
 Checking out 75233eff9c961b9e99db0e0c50b6720850b595ec
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lusty-explorer/
+  to /tmp/lusty-explorerr5CDXf/lusty-explorer-20200602.228
+    lusty-explorer.el -> lusty-explorer.el
+Created lusty-explorer-20200602.228.tar containing:
+  lusty-explorer-20200602.228/
+  lusty-explorer-20200602.228/lusty-explorer-pkg.el
+  lusty-explorer-20200602.228/lusty-explorer.el
+Built lusty-explorer in 2.964s, finished at 2023-06-10T22:30:37+0000
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root 48K Jun  9 16:20 packages/lusty-explorer-20200602.228.el
+4.0K -rw-r--r-- 1 root root 290 Jun 10 22:30 packages/lusty-explorer-20200602.228.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:30 packages/lusty-explorer-20200602.228.tar

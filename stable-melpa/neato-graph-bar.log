@@ -4,4 +4,16 @@ Source:  https://gitlab.com/RobertCochran/neato-graph-bar.git
 
 Updating /mnt/store/melpa/working/neato-graph-bar/
 Checking out a7ae35afd67911e8924f36e646bce0d3e3c1bbe6
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/neato-graph-bar/
+  to /tmp/neato-graph-barduaRJA/neato-graph-bar-20181130.1649
+    neato-graph-bar.el -> neato-graph-bar.el
+Created neato-graph-bar-20181130.1649.tar containing:
+  neato-graph-bar-20181130.1649/
+  neato-graph-bar-20181130.1649/neato-graph-bar-pkg.el
+  neato-graph-bar-20181130.1649/neato-graph-bar.el
+Built neato-graph-bar in 3.145s, finished at 2023-06-10T22:34:59+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:26 packages/neato-graph-bar-20181130.1649.el
+4.0K -rw-r--r-- 1 root root 453 Jun 10 22:34 packages/neato-graph-bar-20181130.1649.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:34 packages/neato-graph-bar-20181130.1649.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/Sodel-the-Vociferous/helm-company.git
 
 Updating /mnt/store/melpa/working/helm-company/
 Checking out 6eb5c2d730a60e394e005b47c1db018697094dde
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-company/
+  to /tmp/helm-companyIFwWfw/helm-company-20190812.1429
+    helm-company.el -> helm-company.el
+Created helm-company-20190812.1429.tar containing:
+  helm-company-20190812.1429/
+  helm-company-20190812.1429/helm-company-pkg.el
+  helm-company-20190812.1429/helm-company.el
+Built helm-company in 3.030s, finished at 2023-06-10T22:21:04+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:05 packages/helm-company-20190812.1429.el
+4.0K -rw-r--r-- 1 root root 497 Jun 10 22:21 packages/helm-company-20190812.1429.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:21 packages/helm-company-20190812.1429.tar

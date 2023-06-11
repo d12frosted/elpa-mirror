@@ -4,4 +4,16 @@ Source:  https://github.com/jcatw/strie.el.git
 
 Updating /mnt/store/melpa/working/strie/
 Checking out eb7efb0cccc127c414f6a64db11454869d9c10a8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/strie/
+  to /tmp/strie32osAB/strie-20160211.2222
+    strie.el -> strie.el
+Created strie-20160211.2222.tar containing:
+  strie-20160211.2222/
+  strie-20160211.2222/strie-pkg.el
+  strie-20160211.2222/strie.el
+Built strie in 2.891s, finished at 2023-06-10T22:52:01+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  9 16:52 packages/strie-20160211.2222.el
+4.0K -rw-r--r-- 1 root root  341 Jun 10 22:52 packages/strie-20160211.2222.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:52 packages/strie-20160211.2222.tar

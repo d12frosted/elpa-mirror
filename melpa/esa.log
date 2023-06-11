@@ -4,4 +4,16 @@ Source:  https://github.com/nabinno/esa.el.git
 
 Updating /mnt/store/melpa/working/esa/
 Checking out 417e0ac55abe9b17e0b7165d0df26bc018aff42e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/esa/
+  to /tmp/esaMl2jRp/esa-20180403.1525
+    esa.el -> esa.el
+Created esa-20180403.1525.tar containing:
+  esa-20180403.1525/
+  esa-20180403.1525/esa-pkg.el
+  esa-20180403.1525/esa.el
+Built esa in 2.688s, finished at 2023-06-11T00:18:43+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 15:51 packages/esa-20180403.1525.el
+4.0K -rw-r--r-- 1 root root 392 Jun 11 00:18 packages/esa-20180403.1525.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:18 packages/esa-20180403.1525.tar

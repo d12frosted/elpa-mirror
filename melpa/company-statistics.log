@@ -4,4 +4,16 @@ Source:  https://github.com/company-mode/company-statistics.git
 
 Updating /mnt/store/melpa/working/company-statistics/
 Checking out e62157d43b2c874d2edbd547c3bdfb05d0a7ae5c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-statistics/
+  to /tmp/company-statisticss3NTsl/company-statistics-20170210.1933
+    company-statistics.el -> company-statistics.el
+Created company-statistics-20170210.1933.tar containing:
+  company-statistics-20170210.1933/
+  company-statistics-20170210.1933/company-statistics-pkg.el
+  company-statistics-20170210.1933/company-statistics.el
+Built company-statistics in 2.881s, finished at 2023-06-11T00:10:15+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 15:38 packages/company-statistics-20170210.1933.el
+4.0K -rw-r--r-- 1 root root 554 Jun 11 00:10 packages/company-statistics-20170210.1933.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:10 packages/company-statistics-20170210.1933.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/m00natic/anti-zenburn-theme.git
 
 Updating /mnt/store/melpa/working/anti-zenburn-theme/
 Checking out dbafbaa86be67c1d409873f57a5c0bbe1e7ca158
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/anti-zenburn-theme/
+  to /tmp/anti-zenburn-themexAPI3D/anti-zenburn-theme-20180712.1838
+    anti-zenburn-theme.el -> anti-zenburn-theme.el
+Created anti-zenburn-theme-20180712.1838.tar containing:
+  anti-zenburn-theme-20180712.1838/
+  anti-zenburn-theme-20180712.1838/anti-zenburn-theme-pkg.el
+  anti-zenburn-theme-20180712.1838/anti-zenburn-theme.el
+Built anti-zenburn-theme in 2.747s, finished at 2023-06-11T00:03:23+0000
+ ✓ Success:
+ 88K -rw-r--r-- 1 root root 87K Jun  9 15:29 packages/anti-zenburn-theme-20180712.1838.el
+4.0K -rw-r--r-- 1 root root 448 Jun 11 00:03 packages/anti-zenburn-theme-20180712.1838.entry
+ 92K -rw-r--r-- 1 root root 90K Jun 11 00:03 packages/anti-zenburn-theme-20180712.1838.tar

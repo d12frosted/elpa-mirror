@@ -4,4 +4,23 @@ Source:  https://github.com/jd/google-contacts.el.git
 
 Updating /mnt/store/melpa/working/google-contacts/
 Checking out 8923c238fe0906184d2254b33ba72792ed12cd47
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/google-contacts/
+  to /tmp/google-contactsETu20B/google-contacts-20201012.1056
+    google-contacts-gnus.el -> google-contacts-gnus.el
+    google-contacts-message.el -> google-contacts-message.el
+    google-contacts.el -> google-contacts.el
+    google-oauth.el -> google-oauth.el
+    google-org-contacts.el -> google-org-contacts.el
+Created google-contacts-20201012.1056.tar containing:
+  google-contacts-20201012.1056/
+  google-contacts-20201012.1056/google-contacts-gnus.el
+  google-contacts-20201012.1056/google-contacts-message.el
+  google-contacts-20201012.1056/google-contacts-pkg.el
+  google-contacts-20201012.1056/google-contacts.el
+  google-contacts-20201012.1056/google-oauth.el
+  google-contacts-20201012.1056/google-org-contacts.el
+Built google-contacts in 3.358s, finished at 2023-06-11T00:27:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 472 Jun 11 00:27 packages/google-contacts-20201012.1056.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:27 packages/google-contacts-20201012.1056.tar

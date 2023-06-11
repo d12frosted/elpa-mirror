@@ -4,4 +4,23 @@ Source:  https://github.com/mattiasb/mtg-deck-mode.git
 
 Updating /mnt/store/melpa/working/mtg-deck-mode/
 Checking out 8265b8ed17fcd4406760c19aa6ee9c76068b1ab0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mtg-deck-mode/
+  to /tmp/mtg-deck-modepfzcih/mtg-deck-mode-20180613.2010
+    mtg-deck-mode.el -> mtg-deck-mode.el
+    formats => formats
+Created mtg-deck-mode-20180613.2010.tar containing:
+  mtg-deck-mode-20180613.2010/
+  mtg-deck-mode-20180613.2010/formats/
+  mtg-deck-mode-20180613.2010/formats/all.cards
+  mtg-deck-mode-20180613.2010/formats/all.names
+  mtg-deck-mode-20180613.2010/formats/legacy.names
+  mtg-deck-mode-20180613.2010/formats/modern.names
+  mtg-deck-mode-20180613.2010/formats/standard.names
+  mtg-deck-mode-20180613.2010/formats/vintage.names
+  mtg-deck-mode-20180613.2010/mtg-deck-mode-pkg.el
+  mtg-deck-mode-20180613.2010/mtg-deck-mode.el
+Built mtg-deck-mode in 3.139s, finished at 2023-06-10T22:34:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  481 Jun 10 22:34 packages/mtg-deck-mode-20180613.2010.entry
+4.5M -rw-r--r-- 1 root root 4.5M Jun 10 22:34 packages/mtg-deck-mode-20180613.2010.tar

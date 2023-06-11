@@ -4,4 +4,16 @@ Source:  https://github.com/zenobht/exotica-theme.git
 
 Updating /mnt/store/melpa/working/exotica-theme/
 Checking out ff3ef4f6fa38c93b99becad977c7810c990a4d2f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exotica-theme/
+  to /tmp/exotica-themeCskIIe/exotica-theme-20180212.2329
+    exotica-theme.el -> exotica-theme.el
+Created exotica-theme-20180212.2329.tar containing:
+  exotica-theme-20180212.2329/
+  exotica-theme-20180212.2329/exotica-theme-pkg.el
+  exotica-theme-20180212.2329/exotica-theme.el
+Built exotica-theme in 5.895s, finished at 2023-06-11T00:20:49+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 15:53 packages/exotica-theme-20180212.2329.el
+4.0K -rw-r--r-- 1 root root 453 Jun 11 00:20 packages/exotica-theme-20180212.2329.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:20 packages/exotica-theme-20180212.2329.tar

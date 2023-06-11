@@ -4,4 +4,16 @@ Source:  https://github.com/dracula/emacs.git
 
 Updating /mnt/store/melpa/working/dracula-theme/
 Checking out 54c26402555ab5b8b7cfd8ee2488c57b2fa5d32a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dracula-theme/
+  to /tmp/dracula-themehXmHk8/dracula-theme-20230405.1844
+    dracula-theme.el -> dracula-theme.el
+Created dracula-theme-20230405.1844.tar containing:
+  dracula-theme-20230405.1844/
+  dracula-theme-20230405.1844/dracula-theme-pkg.el
+  dracula-theme-20230405.1844/dracula-theme.el
+Built dracula-theme in 4.504s, finished at 2023-06-11T00:15:06+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 57K Jun  9 15:46 packages/dracula-theme-20230405.1844.el
+4.0K -rw-r--r-- 1 root root 345 Jun 11 00:15 packages/dracula-theme-20230405.1844.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:15 packages/dracula-theme-20230405.1844.tar

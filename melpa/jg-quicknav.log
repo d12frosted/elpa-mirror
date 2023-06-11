@@ -4,4 +4,16 @@ Source:  https://github.com/jeffgran/jg-quicknav.git
 
 Updating /mnt/store/melpa/working/jg-quicknav/
 Checking out c8d53e774d63e68a944092c08a026b57da741038
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jg-quicknav/
+  to /tmp/jg-quicknavywsGjn/jg-quicknav-20170809.130
+    jg-quicknav.el -> jg-quicknav.el
+Created jg-quicknav-20170809.130.tar containing:
+  jg-quicknav-20170809.130/
+  jg-quicknav-20170809.130/jg-quicknav-pkg.el
+  jg-quicknav-20170809.130/jg-quicknav.el
+Built jg-quicknav in 3.382s, finished at 2023-06-10T22:26:34+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 27K Jun  9 16:15 packages/jg-quicknav-20170809.130.el
+4.0K -rw-r--r-- 1 root root 479 Jun 10 22:26 packages/jg-quicknav-20170809.130.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:26 packages/jg-quicknav-20170809.130.tar

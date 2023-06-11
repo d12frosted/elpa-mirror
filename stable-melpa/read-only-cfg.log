@@ -4,4 +4,16 @@ Source:  https://github.com/pfchen/read-only-cfg.git
 
 Updating /mnt/store/melpa/working/read-only-cfg/
 Checking out fa16d6018a5a29f26adf6007b6b76ea1b3c0bfce
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/read-only-cfg/
+  to /tmp/read-only-cfg3BsqSZ/read-only-cfg-20210717.205
+    read-only-cfg.el -> read-only-cfg.el
+Created read-only-cfg-20210717.205.tar containing:
+  read-only-cfg-20210717.205/
+  read-only-cfg-20210717.205/read-only-cfg-pkg.el
+  read-only-cfg-20210717.205/read-only-cfg.el
+Built read-only-cfg in 3.948s, finished at 2023-06-10T22:45:55+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:43 packages/read-only-cfg-20210717.205.el
+4.0K -rw-r--r-- 1 root root 423 Jun 10 22:45 packages/read-only-cfg-20210717.205.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:45 packages/read-only-cfg-20210717.205.tar

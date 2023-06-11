@@ -4,4 +4,16 @@ Source:  https://github.com/hober/google-el.git
 
 Updating /mnt/store/melpa/working/google/
 Checking out 3b3189a8b201c8d36fed6e61496274e530dd40bd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/google/
+  to /tmp/google4ZrxBW/google-20140416.1748
+    google.el -> google.el
+Created google-20140416.1748.tar containing:
+  google-20140416.1748/
+  google-20140416.1748/google-pkg.el
+  google-20140416.1748/google.el
+Built google in 4.872s, finished at 2023-06-11T00:27:25+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Jun  9 16:03 packages/google-20140416.1748.el
+4.0K -rw-r--r-- 1 root root  349 Jun 11 00:27 packages/google-20140416.1748.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:27 packages/google-20140416.1748.tar

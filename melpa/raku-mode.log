@@ -4,4 +4,29 @@ Source:  https://github.com/Raku/raku-mode.git
 
 Updating /mnt/store/melpa/working/raku-mode/
 Checking out 4ee9045eeb90f7831d7c0ee2e4adfcd957f712be
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/raku-mode/
+  to /tmp/raku-modeQ57aNb/raku-mode-20210927.1227
+    raku-detect.el -> raku-detect.el
+    raku-font-lock.el -> raku-font-lock.el
+    raku-imenu.el -> raku-imenu.el
+    raku-indent.el -> raku-indent.el
+    raku-mode.el -> raku-mode.el
+    raku-repl.el -> raku-repl.el
+    raku-skeletons.el -> raku-skeletons.el
+    raku-unicode-menu.el -> raku-unicode-menu.el
+Created raku-mode-20210927.1227.tar containing:
+  raku-mode-20210927.1227/
+  raku-mode-20210927.1227/raku-detect.el
+  raku-mode-20210927.1227/raku-font-lock.el
+  raku-mode-20210927.1227/raku-imenu.el
+  raku-mode-20210927.1227/raku-indent.el
+  raku-mode-20210927.1227/raku-mode-pkg.el
+  raku-mode-20210927.1227/raku-mode.el
+  raku-mode-20210927.1227/raku-repl.el
+  raku-mode-20210927.1227/raku-skeletons.el
+  raku-mode-20210927.1227/raku-unicode-menu.el
+Built raku-mode in 3.455s, finished at 2023-06-10T22:45:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 484 Jun 10 22:45 packages/raku-mode-20210927.1227.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:45 packages/raku-mode-20210927.1227.tar

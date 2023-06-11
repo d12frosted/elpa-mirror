@@ -4,4 +4,16 @@ Source:  https://github.com/WillForan/zim-wiki-mode.git
 
 Updating /mnt/store/melpa/working/zim-wiki-mode/
 Checking out cf3d5a0dfb53d6cba8d7d35420ec18bf81b5bf2f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zim-wiki-mode/
+  to /tmp/zim-wiki-modeXHxsAC/zim-wiki-mode-20230211.1650
+    zim-wiki-mode.el -> zim-wiki-mode.el
+Created zim-wiki-mode-20230211.1650.tar containing:
+  zim-wiki-mode-20230211.1650/
+  zim-wiki-mode-20230211.1650/zim-wiki-mode-pkg.el
+  zim-wiki-mode-20230211.1650/zim-wiki-mode.el
+Built zim-wiki-mode in 3.243s, finished at 2023-06-10T23:00:30+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 17:03 packages/zim-wiki-mode-20230211.1650.el
+4.0K -rw-r--r-- 1 root root 602 Jun 10 23:00 packages/zim-wiki-mode-20230211.1650.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 23:00 packages/zim-wiki-mode-20230211.1650.tar

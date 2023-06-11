@@ -4,4 +4,16 @@ Source:  https://github.com/Wilfred/elisp-refs.git
 
 Updating /mnt/store/melpa/working/elisp-refs/
 Checking out bf3cca8f74065b1b31036f461e3a093b162311bd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elisp-refs/
+  to /tmp/elisp-refsDj1wOp/elisp-refs-20230419.405
+    elisp-refs.el -> elisp-refs.el
+Created elisp-refs-20230419.405.tar containing:
+  elisp-refs-20230419.405/
+  elisp-refs-20230419.405/elisp-refs-pkg.el
+  elisp-refs-20230419.405/elisp-refs.el
+Built elisp-refs in 3.919s, finished at 2023-06-11T00:17:08+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Jun  9 15:49 packages/elisp-refs-20230419.405.el
+4.0K -rw-r--r-- 1 root root 435 Jun 11 00:17 packages/elisp-refs-20230419.405.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:17 packages/elisp-refs-20230419.405.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/helm-robe.git
 
 Updating /mnt/store/melpa/working/helm-robe/
 Checking out 7348d0bc0251b51979554ea678b970fd01c0efe9
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-robe/
+  to /tmp/helm-robeVqH1pt/helm-robe-20151209.355
+    helm-robe.el -> helm-robe.el
+Created helm-robe-20151209.355.tar containing:
+  helm-robe-20151209.355/
+  helm-robe-20151209.355/helm-robe-pkg.el
+  helm-robe-20151209.355/helm-robe.el
+Built helm-robe in 3.865s, finished at 2023-06-11T00:30:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.7K Jun  9 16:07 packages/helm-robe-20151209.355.el
+4.0K -rw-r--r-- 1 root root  420 Jun 11 00:30 packages/helm-robe-20151209.355.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:30 packages/helm-robe-20151209.355.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/ubolonton/info-colors.git
 
 Updating /mnt/store/melpa/working/info-colors/
 Checking out 2e237c301ba62f0e0286a27c1abe48c4c8441143
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/info-colors/
+  to /tmp/info-colorshackOT/info-colors-20220927.1640
+    info-colors.el -> info-colors.el
+Created info-colors-20220927.1640.tar containing:
+  info-colors-20220927.1640/
+  info-colors-20220927.1640/info-colors-pkg.el
+  info-colors-20220927.1640/info-colors.el
+Built info-colors in 3.695s, finished at 2023-06-10T22:24:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jun  9 16:12 packages/info-colors-20220927.1640.el
+4.0K -rw-r--r-- 1 root root  491 Jun 10 22:24 packages/info-colors-20220927.1640.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:24 packages/info-colors-20220927.1640.tar

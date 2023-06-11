@@ -4,4 +4,16 @@ Source:  https://github.com/alphapapa/org-bookmark-heading.git
 
 Updating /mnt/store/melpa/working/org-bookmark-heading/
 Checking out 4e97fab8cf0307fc338df50efac103ed966c7914
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-bookmark-heading/
+  to /tmp/org-bookmark-heading5I4mm1/org-bookmark-heading-20230517.1141
+    org-bookmark-heading.el -> org-bookmark-heading.el
+Created org-bookmark-heading-20230517.1141.tar containing:
+  org-bookmark-heading-20230517.1141/
+  org-bookmark-heading-20230517.1141/org-bookmark-heading-pkg.el
+  org-bookmark-heading-20230517.1141/org-bookmark-heading.el
+Built org-bookmark-heading in 3.272s, finished at 2023-06-10T22:37:34+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:31 packages/org-bookmark-heading-20230517.1141.el
+4.0K -rw-r--r-- 1 root root 472 Jun 10 22:37 packages/org-bookmark-heading-20230517.1141.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:37 packages/org-bookmark-heading-20230517.1141.tar

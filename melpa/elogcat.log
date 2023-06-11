@@ -4,4 +4,16 @@ Source:  https://github.com/youngker/elogcat.el.git
 
 Updating /mnt/store/melpa/working/elogcat/
 Checking out f2f19d7ab6b77b8fec55cb67524df629fe967891
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elogcat/
+  to /tmp/elogcatkbG4rj/elogcat-20230121.459
+    elogcat.el -> elogcat.el
+Created elogcat-20230121.459.tar containing:
+  elogcat-20230121.459/
+  elogcat-20230121.459/elogcat-pkg.el
+  elogcat-20230121.459/elogcat.el
+Built elogcat in 2.888s, finished at 2023-06-11T00:17:20+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:49 packages/elogcat-20230121.459.el
+4.0K -rw-r--r-- 1 root root 368 Jun 11 00:17 packages/elogcat-20230121.459.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:17 packages/elogcat-20230121.459.tar

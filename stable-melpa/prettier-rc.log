@@ -4,4 +4,16 @@ Source:  https://github.com/jjuliano/prettier-rc-emacs.git
 
 Updating /mnt/store/melpa/working/prettier-rc/
 Checking out 99e40a9783299e41911f6b37156626d53e43809e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettier-rc/
+  to /tmp/prettier-rcDYBAFq/prettier-rc-20220330.145
+    prettier-rc.el -> prettier-rc.el
+Created prettier-rc-20220330.145.tar containing:
+  prettier-rc-20220330.145/
+  prettier-rc-20220330.145/prettier-rc-pkg.el
+  prettier-rc-20220330.145/prettier-rc.el
+Built prettier-rc in 3.111s, finished at 2023-06-10T22:43:46+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jun  9 16:40 packages/prettier-rc-20220330.145.el
+4.0K -rw-r--r-- 1 root root  638 Jun 10 22:43 packages/prettier-rc-20220330.145.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:43 packages/prettier-rc-20220330.145.tar

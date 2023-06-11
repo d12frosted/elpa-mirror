@@ -4,4 +4,16 @@ Source:  https://github.com/ninrod/exato.git
 
 Updating /mnt/store/melpa/working/exato/
 Checking out 5e7b5721bf48aa49c6cdb5d41b908ef7d513b2a8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exato/
+  to /tmp/exatoB2c723/exato-20200524.1319
+    exato.el -> exato.el
+Created exato-20200524.1319.tar containing:
+  exato-20200524.1319/
+  exato-20200524.1319/exato-pkg.el
+  exato-20200524.1319/exato.el
+Built exato in 4.042s, finished at 2023-06-11T00:20:44+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  9 15:53 packages/exato-20200524.1319.el
+4.0K -rw-r--r-- 1 root root  411 Jun 11 00:20 packages/exato-20200524.1319.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/exato-20200524.1319.tar

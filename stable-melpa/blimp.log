@@ -4,4 +4,16 @@ Source:  https://github.com/walseb/blimp.git
 
 Updating /mnt/store/melpa/working/blimp/
 Checking out b048b037129b68674b99310bcc08fb96d44fdbb4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/blimp/
+  to /tmp/blimpTQwYrn/blimp-20180903.2240
+    blimp.el -> blimp.el
+Created blimp-20180903.2240.tar containing:
+  blimp-20180903.2240/
+  blimp-20180903.2240/blimp-pkg.el
+  blimp-20180903.2240/blimp.el
+Built blimp in 3.490s, finished at 2023-06-11T00:05:47+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 33K Jun  9 15:32 packages/blimp-20180903.2240.el
+4.0K -rw-r--r-- 1 root root 451 Jun 11 00:05 packages/blimp-20180903.2240.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:05 packages/blimp-20180903.2240.tar

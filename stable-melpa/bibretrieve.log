@@ -4,4 +4,17 @@ Source:  https://github.com/pzorin/bibretrieve.git
 
 Updating /mnt/store/melpa/working/bibretrieve/
 Checking out 81dc8e0db3629cc180eafb2bc34b60dcd8980316
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bibretrieve/
+  to /tmp/bibretrieveOQJoJ9/bibretrieve-20191124.1855
+    bibretrieve-base.el -> bibretrieve-base.el
+    bibretrieve.el -> bibretrieve.el
+Created bibretrieve-20191124.1855.tar containing:
+  bibretrieve-20191124.1855/
+  bibretrieve-20191124.1855/bibretrieve-base.el
+  bibretrieve-20191124.1855/bibretrieve-pkg.el
+  bibretrieve-20191124.1855/bibretrieve.el
+Built bibretrieve in 3.018s, finished at 2023-06-11T00:05:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 523 Jun 11 00:05 packages/bibretrieve-20191124.1855.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:05 packages/bibretrieve-20191124.1855.tar

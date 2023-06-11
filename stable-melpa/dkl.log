@@ -4,4 +4,23 @@ Source:  https://github.com/flexibeast/dkl.git
 
 Updating /mnt/store/melpa/working/dkl/
 Checking out 6b4584f86037bda3383960c678d51f340229fb91
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dkl/
+  to /tmp/dklCFYHGO/dkl-20161005.7
+    dkl.el -> dkl.el
+    keyboards => keyboards
+    layouts => layouts
+Created dkl-20161005.7.tar containing:
+  dkl-20161005.7/
+  dkl-20161005.7/dkl-pkg.el
+  dkl-20161005.7/dkl.el
+  dkl-20161005.7/keyboards/
+  dkl-20161005.7/keyboards/standard
+  dkl-20161005.7/layouts/
+  dkl-20161005.7/layouts/devanagari-inscript
+  dkl-20161005.7/layouts/hebrew-new
+  dkl-20161005.7/layouts/qwerty-us
+Built dkl in 3.327s, finished at 2023-06-11T00:14:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 400 Jun 11 00:14 packages/dkl-20161005.7.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:14 packages/dkl-20161005.7.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/abo-abo/hydra.git
 
 Updating /mnt/store/melpa/working/lv/
 Checking out 87873d788891029d9e44fa5458321d6a05849b94
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lv/
+  to /tmp/lv3AjG6s/lv-20200507.1518
+    lv.el -> lv.el
+Created lv-20200507.1518.tar containing:
+  lv-20200507.1518/
+  lv-20200507.1518/lv-pkg.el
+  lv-20200507.1518/lv.el
+Built lv in 2.304s, finished at 2023-06-10T22:30:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  9 16:20 packages/lv-20200507.1518.el
+4.0K -rw-r--r-- 1 root root  240 Jun 10 22:30 packages/lv-20200507.1518.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:30 packages/lv-20200507.1518.tar

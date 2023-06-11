@@ -4,4 +4,19 @@ Source:  https://github.com/skeeto/emacs-aio.git
 
 Updating /mnt/store/melpa/working/aio/
 Checking out da93523e235529fa97d6f251319d9e1d6fc24a41
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/aio/
+  to /tmp/aio6Kq2rj/aio-20200610.1904
+    aio.el -> aio.el
+    README.md -> README.md
+    UNLICENSE -> UNLICENSE
+Created aio-20200610.1904.tar containing:
+  aio-20200610.1904/
+  aio-20200610.1904/README.md
+  aio-20200610.1904/UNLICENSE
+  aio-20200610.1904/aio-pkg.el
+  aio-20200610.1904/aio.el
+Built aio in 3.175s, finished at 2023-06-11T00:02:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 428 Jun 11 00:02 packages/aio-20200610.1904.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:02 packages/aio-20200610.1904.tar

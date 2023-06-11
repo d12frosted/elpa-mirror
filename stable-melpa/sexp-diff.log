@@ -4,4 +4,16 @@ Source:  https://github.com/xuchunyang/sexp-diff.el.git
 
 Updating /mnt/store/melpa/working/sexp-diff/
 Checking out 4fea80f7b04c64b160a95bdc9d6de68c71096706
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sexp-diff/
+  to /tmp/sexp-diffLKbw86/sexp-diff-20200314.2018
+    sexp-diff.el -> sexp-diff.el
+Created sexp-diff-20200314.2018.tar containing:
+  sexp-diff-20200314.2018/
+  sexp-diff-20200314.2018/sexp-diff-pkg.el
+  sexp-diff-20200314.2018/sexp-diff.el
+Built sexp-diff in 2.802s, finished at 2023-06-10T22:49:00+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.2K Jun  9 16:47 packages/sexp-diff-20200314.2018.el
+4.0K -rw-r--r-- 1 root root  390 Jun 10 22:48 packages/sexp-diff-20200314.2018.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:48 packages/sexp-diff-20200314.2018.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/thisirs/scratch-message.git
 
 Updating /mnt/store/melpa/working/scratch-message/
 Checking out 0d4198f6effd8f118bf03ee4979f566041ef6a9b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scratch-message/
+  to /tmp/scratch-message4wt7g3/scratch-message-20220209.2207
+    scratch-message.el -> scratch-message.el
+Created scratch-message-20220209.2207.tar containing:
+  scratch-message-20220209.2207/
+  scratch-message-20220209.2207/scratch-message-pkg.el
+  scratch-message-20220209.2207/scratch-message.el
+Built scratch-message in 3.071s, finished at 2023-06-10T22:48:29+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 16:46 packages/scratch-message-20220209.2207.el
+4.0K -rw-r--r-- 1 root root 462 Jun 10 22:48 packages/scratch-message-20220209.2207.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:48 packages/scratch-message-20220209.2207.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/akirak/counsel-org-capture-string.git
 
 Updating /mnt/store/melpa/working/counsel-org-capture-string/
 Checking out f47de69458c9fceeecd7c69264f645c0cfeb2cd2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/counsel-org-capture-string/
+  to /tmp/counsel-org-capture-stringwcmBZI/counsel-org-capture-string-20200810.1114
+    counsel-org-capture-string.el -> counsel-org-capture-string.el
+Created counsel-org-capture-string-20200810.1114.tar containing:
+  counsel-org-capture-string-20200810.1114/
+  counsel-org-capture-string-20200810.1114/counsel-org-capture-string-pkg.el
+  counsel-org-capture-string-20200810.1114/counsel-org-capture-string.el
+Built counsel-org-capture-string in 3.622s, finished at 2023-06-11T00:11:06+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 15:40 packages/counsel-org-capture-string-20200810.1114.el
+4.0K -rw-r--r-- 1 root root 567 Jun 11 00:11 packages/counsel-org-capture-string-20200810.1114.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:11 packages/counsel-org-capture-string-20200810.1114.tar

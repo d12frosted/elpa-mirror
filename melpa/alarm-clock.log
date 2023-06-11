@@ -4,4 +4,17 @@ Source:  https://github.com/wlemuel/alarm-clock.git
 
 Updating /mnt/store/melpa/working/alarm-clock/
 Checking out bcd9158f18ead2aa25f10a48e4a38e2c3ed64217
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/alarm-clock/
+  to /tmp/alarm-clockj9Wmue/alarm-clock-20230326.718
+    alarm-clock.el -> alarm-clock.el
+    alarm.mp3 -> alarm.mp3
+Created alarm-clock-20230326.718.tar containing:
+  alarm-clock-20230326.718/
+  alarm-clock-20230326.718/alarm-clock-pkg.el
+  alarm-clock-20230326.718/alarm-clock.el
+  alarm-clock-20230326.718/alarm.mp3
+Built alarm-clock in 3.009s, finished at 2023-06-11T00:02:47+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 454 Jun 11 00:02 packages/alarm-clock-20230326.718.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:02 packages/alarm-clock-20230326.718.tar

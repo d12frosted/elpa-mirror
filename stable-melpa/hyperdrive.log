@@ -4,4 +4,29 @@ Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
 Checking out 10fd83be43cc901cf03ef7bfa6a7320c48743351
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hyperdrive/
+  to /tmp/hyperdriveNGZ7z6/hyperdrive-20230604.332
+    build-readme.el -> build-readme.el
+    hyperdrive-dir.el -> hyperdrive-dir.el
+    hyperdrive-handlers.el -> hyperdrive-handlers.el
+    hyperdrive-lib.el -> hyperdrive-lib.el
+    hyperdrive-org.el -> hyperdrive-org.el
+    hyperdrive.el -> hyperdrive.el
+  ! doc/hyperdrive-manual.texi -> hyperdrive-manual.texi
+Generating /tmp/hyperdriveNGZ7z6/hyperdrive-20230604.332/hyperdrive-manual.info
+Created hyperdrive-20230604.332.tar containing:
+  hyperdrive-20230604.332/
+  hyperdrive-20230604.332/build-readme.el
+  hyperdrive-20230604.332/dir
+  hyperdrive-20230604.332/hyperdrive-dir.el
+  hyperdrive-20230604.332/hyperdrive-handlers.el
+  hyperdrive-20230604.332/hyperdrive-lib.el
+  hyperdrive-20230604.332/hyperdrive-manual.info
+  hyperdrive-20230604.332/hyperdrive-org.el
+  hyperdrive-20230604.332/hyperdrive-pkg.el
+  hyperdrive-20230604.332/hyperdrive.el
+Built hyperdrive in 7.731s, finished at 2023-06-10T22:23:49+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  518 Jun 10 22:23 packages/hyperdrive-20230604.332.entry
+172K -rw-r--r-- 1 root root 170K Jun 10 22:23 packages/hyperdrive-20230604.332.tar

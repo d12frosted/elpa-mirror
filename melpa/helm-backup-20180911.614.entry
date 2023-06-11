@@ -6,7 +6,7 @@
 		(1 8 0))
 	       (cl-lib
 		(0)))
-	      "Backup each file change using git" single
+	      "Backup each file change using git" tar
 	      ((:commit . "691fe542f38fc7c8cca409997f6a0ff5d76ad6c2")
 	       (:authors
 		("Anthony HAMON" . "hamon.anth@gmail.com"))

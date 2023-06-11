@@ -4,4 +4,16 @@ Source:  https://git.ookami.one/cgit/protobuf-ts-mode
 
 Updating /mnt/store/melpa/working/protobuf-ts-mode/
 Checking out cde61510b711d90bf2978ca4cbd3f36fce8b4c3e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/protobuf-ts-mode/
+  to /tmp/protobuf-ts-modeWzE2KY/protobuf-ts-mode-20230410.855
+    protobuf-ts-mode.el -> protobuf-ts-mode.el
+Created protobuf-ts-mode-20230410.855.tar containing:
+  protobuf-ts-mode-20230410.855/
+  protobuf-ts-mode-20230410.855/protobuf-ts-mode-pkg.el
+  protobuf-ts-mode-20230410.855/protobuf-ts-mode.el
+Built protobuf-ts-mode in 2.169s, finished at 2023-06-10T22:44:22+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jun  9 16:40 packages/protobuf-ts-mode-20230410.855.el
+4.0K -rw-r--r-- 1 root root  477 Jun 10 22:44 packages/protobuf-ts-mode-20230410.855.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:44 packages/protobuf-ts-mode-20230410.855.tar

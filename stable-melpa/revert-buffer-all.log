@@ -4,4 +4,16 @@ Source:  https://codeberg.org/ideasman42/emacs-revert-buffer-all.git
 
 Updating /mnt/store/melpa/working/revert-buffer-all/
 Checking out 08e90d2d75f5d5900ca2a0d2670592bcf2b2d68f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/revert-buffer-all/
+  to /tmp/revert-buffer-allle1ncT/revert-buffer-all-20230109.536
+    revert-buffer-all.el -> revert-buffer-all.el
+Created revert-buffer-all-20230109.536.tar containing:
+  revert-buffer-all-20230109.536/
+  revert-buffer-all-20230109.536/revert-buffer-all-pkg.el
+  revert-buffer-all-20230109.536/revert-buffer-all.el
+Built revert-buffer-all in 3.295s, finished at 2023-06-10T22:47:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.9K Jun  9 16:44 packages/revert-buffer-all-20230109.536.el
+4.0K -rw-r--r-- 1 root root  458 Jun 10 22:47 packages/revert-buffer-all-20230109.536.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:47 packages/revert-buffer-all-20230109.536.tar

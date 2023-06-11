@@ -4,4 +4,16 @@ Source:  https://github.com/weijiangan/emacs-snazzy.git
 
 Updating /mnt/store/melpa/working/snazzy-theme/
 Checking out 578d7ebc4ed91c0a630b652c4b6fdd54d9ae16cd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/snazzy-theme/
+  to /tmp/snazzy-theme6O4Q9n/snazzy-theme-20170828.757
+    snazzy-theme.el -> snazzy-theme.el
+Created snazzy-theme-20170828.757.tar containing:
+  snazzy-theme-20170828.757/
+  snazzy-theme-20170828.757/snazzy-theme-pkg.el
+  snazzy-theme-20170828.757/snazzy-theme.el
+Built snazzy-theme in 2.964s, finished at 2023-06-10T22:50:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Jun  9 16:49 packages/snazzy-theme-20170828.757.el
+4.0K -rw-r--r-- 1 root root  319 Jun 10 22:50 packages/snazzy-theme-20170828.757.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:50 packages/snazzy-theme-20170828.757.tar

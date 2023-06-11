@@ -4,4 +4,16 @@ Source:  https://github.com/laishulu/emacs-tmux-pane.git
 
 Updating /mnt/store/melpa/working/tmux-pane/
 Checking out 923524efe8e6e5e0d269de6bb253b45e02d9a663
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tmux-pane/
+  to /tmp/tmux-pane5ApUGE/tmux-pane-20200730.520
+    tmux-pane.el -> tmux-pane.el
+Created tmux-pane-20200730.520.tar containing:
+  tmux-pane-20200730.520/
+  tmux-pane-20200730.520/tmux-pane-pkg.el
+  tmux-pane-20200730.520/tmux-pane.el
+Built tmux-pane in 2.911s, finished at 2023-06-10T22:54:38+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  9 16:54 packages/tmux-pane-20200730.520.el
+4.0K -rw-r--r-- 1 root root  393 Jun 10 22:54 packages/tmux-pane-20200730.520.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:54 packages/tmux-pane-20200730.520.tar

@@ -4,4 +4,34 @@ Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
 Checking out a3ef20c269b9192710567571b20718f572942bc4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/debian-el/
+  to /tmp/debian-elimXGVb/debian-el-20211006.1939
+    apt-sources.el -> apt-sources.el
+    apt-utils.el -> apt-utils.el
+    deb-view.el -> deb-view.el
+    debian-autoloads.el -> debian-autoloads.el
+    debian-bug.el -> debian-bug.el
+    debian-el-pkg.el -> debian-el-pkg.el
+    debian-el.el -> debian-el.el
+    gnus-BTS.el -> gnus-BTS.el
+    preseed.el -> preseed.el
+    debian-el.texi -> debian-el.texi
+Generating /tmp/debian-elimXGVb/debian-el-20211006.1939/debian-el.info
+Created debian-el-20211006.1939.tar containing:
+  debian-el-20211006.1939/
+  debian-el-20211006.1939/apt-sources.el
+  debian-el-20211006.1939/apt-utils.el
+  debian-el-20211006.1939/deb-view.el
+  debian-el-20211006.1939/debian-autoloads.el
+  debian-el-20211006.1939/debian-bug.el
+  debian-el-20211006.1939/debian-el-pkg.el
+  debian-el-20211006.1939/debian-el.el
+  debian-el-20211006.1939/debian-el.info
+  debian-el-20211006.1939/dir
+  debian-el-20211006.1939/gnus-BTS.el
+  debian-el-20211006.1939/preseed.el
+Built debian-el in 6.919s, finished at 2023-06-11T00:12:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  152 Jun 11 00:12 packages/debian-el-20211006.1939.entry
+272K -rw-r--r-- 1 root root 270K Jun 11 00:12 packages/debian-el-20211006.1939.tar

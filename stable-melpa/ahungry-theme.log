@@ -4,4 +4,16 @@ Source:  https://github.com/ahungry/color-theme-ahungry.git
 
 Updating /mnt/store/melpa/working/ahungry-theme/
 Checking out a038d91ec593d1f1b19ca66a0576d59bbc24c523
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ahungry-theme/
+  to /tmp/ahungry-themedLCvLi/ahungry-theme-20180131.328
+    ahungry-theme.el -> ahungry-theme.el
+Created ahungry-theme-20180131.328.tar containing:
+  ahungry-theme-20180131.328/
+  ahungry-theme-20180131.328/ahungry-theme-pkg.el
+  ahungry-theme-20180131.328/ahungry-theme.el
+Built ahungry-theme in 2.932s, finished at 2023-06-11T00:02:42+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 15:28 packages/ahungry-theme-20180131.328.el
+4.0K -rw-r--r-- 1 root root 510 Jun 11 00:02 packages/ahungry-theme-20180131.328.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:02 packages/ahungry-theme-20180131.328.tar

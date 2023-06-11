@@ -4,4 +4,16 @@ Source:  https://github.com/Andersbakken/rtags.git
 
 Updating /mnt/store/melpa/working/rtags/
 Checking out b449eb7461e09ca3a839c2d49d22b975be1ad367
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rtags/
+  to /tmp/rtagsDYW9Sg/rtags-20220818.1535
+  ! src/rtags.el -> rtags.el
+Created rtags-20220818.1535.tar containing:
+  rtags-20220818.1535/
+  rtags-20220818.1535/rtags-pkg.el
+  rtags-20220818.1535/rtags.el
+Built rtags in 3.310s, finished at 2023-06-10T22:47:45+0000
+ ✓ Success:
+244K -rw-r--r-- 1 root root 242K Jun  9 16:45 packages/rtags-20220818.1535.el
+4.0K -rw-r--r-- 1 root root  420 Jun 10 22:47 packages/rtags-20220818.1535.entry
+252K -rw-r--r-- 1 root root 250K Jun 10 22:47 packages/rtags-20220818.1535.tar

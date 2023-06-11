@@ -4,4 +4,16 @@ Source:  https://github.com/knu/phi-search-mc.el.git
 
 Updating /mnt/store/melpa/working/phi-search-mc/
 Checking out 7aa671910f766437089aec26c3aa7814222d1356
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/phi-search-mc/
+  to /tmp/phi-search-mc9eMfPL/phi-search-mc-20160324.1503
+    phi-search-mc.el -> phi-search-mc.el
+Created phi-search-mc-20160324.1503.tar containing:
+  phi-search-mc-20160324.1503/
+  phi-search-mc-20160324.1503/phi-search-mc-pkg.el
+  phi-search-mc-20160324.1503/phi-search-mc.el
+Built phi-search-mc in 2.796s, finished at 2023-06-10T22:42:21+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:38 packages/phi-search-mc-20160324.1503.el
+4.0K -rw-r--r-- 1 root root 476 Jun 10 22:42 packages/phi-search-mc-20160324.1503.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:42 packages/phi-search-mc-20160324.1503.tar

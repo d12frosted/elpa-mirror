@@ -4,4 +4,16 @@ Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/consult-spotify/
 Checking out 5c1dcf0182135cda4191d4ba206fe2f265100293
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-spotify/
+  to /tmp/consult-spotifyBcE7AK/consult-spotify-20211114.2258
+    consult-spotify.el -> consult-spotify.el
+Created consult-spotify-20211114.2258.tar containing:
+  consult-spotify-20211114.2258/
+  consult-spotify-20211114.2258/consult-spotify-pkg.el
+  consult-spotify-20211114.2258/consult-spotify.el
+Built consult-spotify in 3.795s, finished at 2023-06-11T00:10:43+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Jun  9 15:39 packages/consult-spotify-20211114.2258.el
+4.0K -rw-r--r-- 1 root root  454 Jun 11 00:10 packages/consult-spotify-20211114.2258.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:10 packages/consult-spotify-20211114.2258.tar

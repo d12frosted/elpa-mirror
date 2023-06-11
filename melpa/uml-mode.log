@@ -4,4 +4,16 @@ Source:  https://github.com/ianxm/emacs-uml.git
 
 Updating /mnt/store/melpa/working/uml-mode/
 Checking out 0ef88c74b48b5400d83ab93e3e089bbe45538fd7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/uml-mode/
+  to /tmp/uml-modej2J4Xd/uml-mode-20200129.1147
+    uml-mode.el -> uml-mode.el
+Created uml-mode-20200129.1147.tar containing:
+  uml-mode-20200129.1147/
+  uml-mode-20200129.1147/uml-mode-pkg.el
+  uml-mode-20200129.1147/uml-mode.el
+Built uml-mode in 2.947s, finished at 2023-06-10T22:55:52+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:57 packages/uml-mode-20200129.1147.el
+4.0K -rw-r--r-- 1 root root 437 Jun 10 22:55 packages/uml-mode-20200129.1147.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:55 packages/uml-mode-20200129.1147.tar

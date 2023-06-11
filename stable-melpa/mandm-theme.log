@@ -4,4 +4,16 @@ Source:  https://github.com/choppsv1/emacs-mandm-theme.git
 
 Updating /mnt/store/melpa/working/mandm-theme/
 Checking out 4991bbc4b17308f5dc53742dc528cbfdc467ee01
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mandm-theme/
+  to /tmp/mandm-thememr0OFL/mandm-theme-20220426.1131
+    mandm-theme.el -> mandm-theme.el
+Created mandm-theme-20220426.1131.tar containing:
+  mandm-theme-20220426.1131/
+  mandm-theme-20220426.1131/mandm-theme-pkg.el
+  mandm-theme-20220426.1131/mandm-theme.el
+Built mandm-theme in 2.795s, finished at 2023-06-10T22:31:24+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root 61K Jun  9 16:21 packages/mandm-theme-20220426.1131.el
+4.0K -rw-r--r-- 1 root root 399 Jun 10 22:31 packages/mandm-theme-20220426.1131.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 10 22:31 packages/mandm-theme-20220426.1131.tar

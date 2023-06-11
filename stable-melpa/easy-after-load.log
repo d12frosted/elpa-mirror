@@ -4,4 +4,16 @@ Source:  https://github.com/pd/easy-after-load.git
 
 Updating /mnt/store/melpa/working/easy-after-load/
 Checking out 29e20145da49ac9ea40463c552130777408040de
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/easy-after-load/
+  to /tmp/easy-after-loadHyn8Me/easy-after-load-20170817.1231
+    easy-after-load.el -> easy-after-load.el
+Created easy-after-load-20170817.1231.tar containing:
+  easy-after-load-20170817.1231/
+  easy-after-load-20170817.1231/easy-after-load-pkg.el
+  easy-after-load-20170817.1231/easy-after-load.el
+Built easy-after-load in 3.113s, finished at 2023-06-11T00:15:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jun  9 15:46 packages/easy-after-load-20170817.1231.el
+4.0K -rw-r--r-- 1 root root  337 Jun 11 00:15 packages/easy-after-load-20170817.1231.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:15 packages/easy-after-load-20170817.1231.tar

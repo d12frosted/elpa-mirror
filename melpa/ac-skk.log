@@ -4,4 +4,16 @@ Source:  https://github.com/myuhe/ac-skk.el.git
 
 Updating /mnt/store/melpa/working/ac-skk/
 Checking out d25a265930430d080329789fb253d786c01dfa24
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-skk/
+  to /tmp/ac-skkqZ2sGh/ac-skk-20141230.119
+    ac-skk.el -> ac-skk.el
+Created ac-skk-20141230.119.tar containing:
+  ac-skk-20141230.119/
+  ac-skk-20141230.119/ac-skk-pkg.el
+  ac-skk-20141230.119/ac-skk.el
+Built ac-skk in 2.943s, finished at 2023-06-11T00:02:10+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K Jun  9 15:27 packages/ac-skk-20141230.119.el
+4.0K -rw-r--r-- 1 root root  475 Jun 11 00:02 packages/ac-skk-20141230.119.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:02 packages/ac-skk-20141230.119.tar

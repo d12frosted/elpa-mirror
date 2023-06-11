@@ -4,4 +4,27 @@ Source:  https://github.com/eutro/zenscript-mode.git
 
 Updating /mnt/store/melpa/working/zenscript-mode/
 Checking out c33b4525502459fe60dd76b383e19919d450aeb8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zenscript-mode/
+  to /tmp/zenscript-modejO0xPq/zenscript-mode-20210102.1350
+    zenscript-common.el -> zenscript-common.el
+    zenscript-completion.el -> zenscript-completion.el
+    zenscript-highlighting.el -> zenscript-highlighting.el
+    zenscript-indentation.el -> zenscript-indentation.el
+    zenscript-language.el -> zenscript-language.el
+    zenscript-mode.el -> zenscript-mode.el
+    zenscript-parser.el -> zenscript-parser.el
+Created zenscript-mode-20210102.1350.tar containing:
+  zenscript-mode-20210102.1350/
+  zenscript-mode-20210102.1350/zenscript-common.el
+  zenscript-mode-20210102.1350/zenscript-completion.el
+  zenscript-mode-20210102.1350/zenscript-highlighting.el
+  zenscript-mode-20210102.1350/zenscript-indentation.el
+  zenscript-mode-20210102.1350/zenscript-language.el
+  zenscript-mode-20210102.1350/zenscript-mode-pkg.el
+  zenscript-mode-20210102.1350/zenscript-mode.el
+  zenscript-mode-20210102.1350/zenscript-parser.el
+Built zenscript-mode in 6.506s, finished at 2023-06-10T23:00:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  220 Jun 10 23:00 packages/zenscript-mode-20210102.1350.entry
+132K -rw-r--r-- 1 root root 130K Jun 10 23:00 packages/zenscript-mode-20210102.1350.tar

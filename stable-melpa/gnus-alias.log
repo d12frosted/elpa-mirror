@@ -4,4 +4,16 @@ Source:  https://github.com/hexmode/gnus-alias.git
 
 Updating /mnt/store/melpa/working/gnus-alias/
 Checking out 9447d3ccb4c0e75d0468899cccff7aa249657bac
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gnus-alias/
+  to /tmp/gnus-aliasrPl1Kk/gnus-alias-20150316.42
+    gnus-alias.el -> gnus-alias.el
+Created gnus-alias-20150316.42.tar containing:
+  gnus-alias-20150316.42/
+  gnus-alias-20150316.42/gnus-alias-pkg.el
+  gnus-alias-20150316.42/gnus-alias.el
+Built gnus-alias in 3.457s, finished at 2023-06-11T00:26:33+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root 55K Jun  9 16:02 packages/gnus-alias-20150316.42.el
+4.0K -rw-r--r-- 1 root root 434 Jun 11 00:26 packages/gnus-alias-20150316.42.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:26 packages/gnus-alias-20150316.42.tar

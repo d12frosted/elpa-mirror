@@ -4,4 +4,16 @@ Source:  https://github.com/cfengine/cfengine-code-style.git
 
 Updating /mnt/store/melpa/working/cfengine-code-style/
 Checking out 92a25872a6d1de00c5bfc2b9455ccb0082bf6569
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cfengine-code-style/
+  to /tmp/cfengine-code-style6LIBwI/cfengine-code-style-20171111.1027
+    cfengine-code-style.el -> cfengine-code-style.el
+Created cfengine-code-style-20171111.1027.tar containing:
+  cfengine-code-style-20171111.1027/
+  cfengine-code-style-20171111.1027/cfengine-code-style-pkg.el
+  cfengine-code-style-20171111.1027/cfengine-code-style.el
+Built cfengine-code-style in 3.847s, finished at 2023-06-11T00:07:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jun  9 15:34 packages/cfengine-code-style-20171111.1027.el
+4.0K -rw-r--r-- 1 root root  450 Jun 11 00:07 packages/cfengine-code-style-20171111.1027.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:07 packages/cfengine-code-style-20171111.1027.tar

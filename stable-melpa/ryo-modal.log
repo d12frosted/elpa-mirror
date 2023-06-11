@@ -4,4 +4,16 @@ Source:  https://github.com/Kungsgeten/ryo-modal.git
 
 Updating /mnt/store/melpa/working/ryo-modal/
 Checking out b9e6a0f33b9e2aeb6088accd23ed312083d8f707
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ryo-modal/
+  to /tmp/ryo-modalQ2A9ii/ryo-modal-20221221.1355
+    ryo-modal.el -> ryo-modal.el
+Created ryo-modal-20221221.1355.tar containing:
+  ryo-modal-20221221.1355/
+  ryo-modal-20221221.1355/ryo-modal-pkg.el
+  ryo-modal-20221221.1355/ryo-modal.el
+Built ryo-modal in 3.705s, finished at 2023-06-10T22:48:05+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:45 packages/ryo-modal-20221221.1355.el
+4.0K -rw-r--r-- 1 root root 483 Jun 10 22:48 packages/ryo-modal-20221221.1355.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:48 packages/ryo-modal-20221221.1355.tar

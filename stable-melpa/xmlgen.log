@@ -4,4 +4,16 @@ Source:  https://github.com/philjackson/xmlgen.git
 
 Updating /mnt/store/melpa/working/xmlgen/
 Checking out dba66681f0c5e621a9e70e8afb34903c9ffe93c4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xmlgen/
+  to /tmp/xmlgenAfRNxN/xmlgen-20170411.1317
+    xmlgen.el -> xmlgen.el
+Created xmlgen-20170411.1317.tar containing:
+  xmlgen-20170411.1317/
+  xmlgen-20170411.1317/xmlgen-pkg.el
+  xmlgen-20170411.1317/xmlgen.el
+Built xmlgen in 4.512s, finished at 2023-06-10T22:59:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 17:01 packages/xmlgen-20170411.1317.el
+4.0K -rw-r--r-- 1 root root  323 Jun 10 22:59 packages/xmlgen-20170411.1317.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:59 packages/xmlgen-20170411.1317.tar

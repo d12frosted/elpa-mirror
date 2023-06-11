@@ -5,4 +5,16 @@ Source:  https://git.sr.ht/~swflint/buffer-sets
 Updating /mnt/store/melpa/working/buffer-sets/
 Checking out 951e894ef96d533324f7f24c2a0def45ae89d558
 Warning: buffer-sets :files spec is equivalent to the default
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/buffer-sets/
+  to /tmp/buffer-setsOHujmU/buffer-sets-20230319.1822
+    buffer-sets.el -> buffer-sets.el
+Created buffer-sets-20230319.1822.tar containing:
+  buffer-sets-20230319.1822/
+  buffer-sets-20230319.1822/buffer-sets-pkg.el
+  buffer-sets-20230319.1822/buffer-sets.el
+Built buffer-sets in 4.525s, finished at 2023-06-11T00:06:29+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 18K Jun  9 15:33 packages/buffer-sets-20230319.1822.el
+4.0K -rw-r--r-- 1 root root 480 Jun 11 00:06 packages/buffer-sets-20230319.1822.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:06 packages/buffer-sets-20230319.1822.tar

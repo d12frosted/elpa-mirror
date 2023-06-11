@@ -4,4 +4,19 @@ Source:  https://github.com/mattfidler/r-autoyas.el.git
 
 Updating /mnt/store/melpa/working/r-autoyas/
 Checking out d321a7da0ef2e94668d53e0807277da7b70ea678
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/r-autoyas/
+  to /tmp/r-autoyas8U7JsV/r-autoyas-20140101.1510
+    r-autoyas.el -> r-autoyas.el
+    r-autoyas.texi -> r-autoyas.texi
+Generating /tmp/r-autoyas8U7JsV/r-autoyas-20140101.1510/r-autoyas.info
+Created r-autoyas-20140101.1510.tar containing:
+  r-autoyas-20140101.1510/
+  r-autoyas-20140101.1510/dir
+  r-autoyas-20140101.1510/r-autoyas-pkg.el
+  r-autoyas-20140101.1510/r-autoyas.el
+  r-autoyas-20140101.1510/r-autoyas.info
+Built r-autoyas in 5.313s, finished at 2023-06-10T22:45:31+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 477 Jun 10 22:45 packages/r-autoyas-20140101.1510.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:45 packages/r-autoyas-20140101.1510.tar

@@ -4,4 +4,31 @@ Source:  https://github.com/narendraj9/hledger-mode.git
 
 Updating /mnt/store/melpa/working/hledger-mode/
 Checking out 07baa57017e1b7703560363a6e1948b630a5158d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hledger-mode/
+  to /tmp/hledger-modeY8cbtd/hledger-mode-20221116.2203
+    hledger-core.el -> hledger-core.el
+    hledger-defuns.el -> hledger-defuns.el
+    hledger-input.el -> hledger-input.el
+    hledger-mail.el -> hledger-mail.el
+    hledger-mode.el -> hledger-mode.el
+    hledger-navigate.el -> hledger-navigate.el
+    hledger-reports.el -> hledger-reports.el
+    hledger-suggest.el -> hledger-suggest.el
+    hledger-webservice.el -> hledger-webservice.el
+Created hledger-mode-20221116.2203.tar containing:
+  hledger-mode-20221116.2203/
+  hledger-mode-20221116.2203/hledger-core.el
+  hledger-mode-20221116.2203/hledger-defuns.el
+  hledger-mode-20221116.2203/hledger-input.el
+  hledger-mode-20221116.2203/hledger-mail.el
+  hledger-mode-20221116.2203/hledger-mode-pkg.el
+  hledger-mode-20221116.2203/hledger-mode.el
+  hledger-mode-20221116.2203/hledger-navigate.el
+  hledger-mode-20221116.2203/hledger-reports.el
+  hledger-mode-20221116.2203/hledger-suggest.el
+  hledger-mode-20221116.2203/hledger-webservice.el
+Built hledger-mode in 3.238s, finished at 2023-06-10T22:23:16+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  522 Jun 10 22:23 packages/hledger-mode-20221116.2203.entry
+120K -rw-r--r-- 1 root root 120K Jun 10 22:23 packages/hledger-mode-20221116.2203.tar

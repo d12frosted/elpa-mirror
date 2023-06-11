@@ -4,4 +4,19 @@ Source:  https://github.com/mattfidler/tabbar-ruler.el.git
 
 Updating /mnt/store/melpa/working/tabbar-ruler/
 Checking out 535568189aa12a3eff7f977d2783e57b6a65ab6a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tabbar-ruler/
+  to /tmp/tabbar-rulerekvY3w/tabbar-ruler-20160802.307
+    tabbar-ruler.el -> tabbar-ruler.el
+    dir -> dir
+    tabbar-ruler.info -> tabbar-ruler.info
+Created tabbar-ruler-20160802.307.tar containing:
+  tabbar-ruler-20160802.307/
+  tabbar-ruler-20160802.307/dir
+  tabbar-ruler-20160802.307/tabbar-ruler-pkg.el
+  tabbar-ruler-20160802.307/tabbar-ruler.el
+  tabbar-ruler-20160802.307/tabbar-ruler.info
+Built tabbar-ruler in 5.466s, finished at 2023-06-10T22:53:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  528 Jun 10 22:53 packages/tabbar-ruler-20160802.307.entry
+100K -rw-r--r-- 1 root root 100K Jun 10 22:53 packages/tabbar-ruler-20160802.307.tar

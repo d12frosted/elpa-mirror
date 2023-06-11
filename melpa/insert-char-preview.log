@@ -4,4 +4,16 @@ Source:  https://gitlab.com/matsievskiysv/insert-char-preview.git
 
 Updating /mnt/store/melpa/working/insert-char-preview/
 Checking out 8f13262ebcb3f271f1d188584d04ca6d87214111
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/insert-char-preview/
+  to /tmp/insert-char-previewaYXkLO/insert-char-preview-20201023.2108
+    insert-char-preview.el -> insert-char-preview.el
+Created insert-char-preview-20201023.2108.tar containing:
+  insert-char-preview-20201023.2108/
+  insert-char-preview-20201023.2108/insert-char-preview-pkg.el
+  insert-char-preview-20201023.2108/insert-char-preview.el
+Built insert-char-preview in 2.978s, finished at 2023-06-10T22:25:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  9 16:12 packages/insert-char-preview-20201023.2108.el
+4.0K -rw-r--r-- 1 root root  418 Jun 10 22:25 packages/insert-char-preview-20201023.2108.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/insert-char-preview-20201023.2108.tar

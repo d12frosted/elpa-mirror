@@ -4,4 +4,16 @@ Source:  https://repo.or.cz/smiles-mode.git
 
 Updating /mnt/store/melpa/working/smiles-mode/
 Checking out 950a8b3224f8f069c82faeb0282d041f872d5550
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smiles-mode/
+  to /tmp/smiles-modeV2vWYs/smiles-mode-20220210.1413
+    smiles-mode.el -> smiles-mode.el
+Created smiles-mode-20220210.1413.tar containing:
+  smiles-mode-20220210.1413/
+  smiles-mode-20220210.1413/smiles-mode-pkg.el
+  smiles-mode-20220210.1413/smiles-mode.el
+Built smiles-mode in 3.349s, finished at 2023-06-10T22:50:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.9K Jun  9 16:49 packages/smiles-mode-20220210.1413.el
+4.0K -rw-r--r-- 1 root root  440 Jun 10 22:50 packages/smiles-mode-20220210.1413.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:50 packages/smiles-mode-20220210.1413.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/wbolster/evil-text-object-python.git
 
 Updating /mnt/store/melpa/working/evil-text-object-python/
 Checking out 39d22fc524f0413763f291267eaab7f4e7984318
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-text-object-python/
+  to /tmp/evil-text-object-pythonHJ9QCj/evil-text-object-python-20191010.1328
+    evil-text-object-python.el -> evil-text-object-python.el
+Created evil-text-object-python-20191010.1328.tar containing:
+  evil-text-object-python-20191010.1328/
+  evil-text-object-python-20191010.1328/evil-text-object-python-pkg.el
+  evil-text-object-python-20191010.1328/evil-text-object-python.el
+Built evil-text-object-python in 4.046s, finished at 2023-06-11T00:20:26+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jun  9 15:53 packages/evil-text-object-python-20191010.1328.el
+4.0K -rw-r--r-- 1 root root  568 Jun 11 00:20 packages/evil-text-object-python-20191010.1328.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/evil-text-object-python-20191010.1328.tar

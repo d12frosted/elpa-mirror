@@ -4,4 +4,16 @@ Source:  https://github.com/NicolasPetton/snapshot-timemachine-rsnapshot.git
 
 Updating /mnt/store/melpa/working/snapshot-timemachine-rsnapshot/
 Checking out 72b0b700d80f1a0442e62bbbb6a0c8c59182f97f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/snapshot-timemachine-rsnapshot/
+  to /tmp/snapshot-timemachine-rsnapshotySVnrv/snapshot-timemachine-rsnapshot-20170324.1213
+    snapshot-timemachine-rsnapshot.el -> snapshot-timemachine-rsnapshot.el
+Created snapshot-timemachine-rsnapshot-20170324.1213.tar containing:
+  snapshot-timemachine-rsnapshot-20170324.1213/
+  snapshot-timemachine-rsnapshot-20170324.1213/snapshot-timemachine-rsnapshot-pkg.el
+  snapshot-timemachine-rsnapshot-20170324.1213/snapshot-timemachine-rsnapshot.el
+Built snapshot-timemachine-rsnapshot in 2.978s, finished at 2023-06-10T22:50:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.9K Jun  9 16:49 packages/snapshot-timemachine-rsnapshot-20170324.1213.el
+4.0K -rw-r--r-- 1 root root  444 Jun 10 22:50 packages/snapshot-timemachine-rsnapshot-20170324.1213.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:50 packages/snapshot-timemachine-rsnapshot-20170324.1213.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/ffevotte/desktop-plus.git
 
 Updating /mnt/store/melpa/working/desktop+/
 Checking out d26f369bda96860eef18365cdb5c79f39a2c765c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/desktop+/
+  to /tmp/desktop+GWxlNw/desktop+-20170107.2132
+    desktop+.el -> desktop+.el
+Created desktop+-20170107.2132.tar containing:
+  desktop+-20170107.2132/
+  desktop+-20170107.2132/desktop+-pkg.el
+  desktop+-20170107.2132/desktop+.el
+Built desktop+ in 3.958s, finished at 2023-06-11T00:12:50+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 15:43 packages/desktop+-20170107.2132.el
+4.0K -rw-r--r-- 1 root root 496 Jun 11 00:12 packages/desktop+-20170107.2132.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:12 packages/desktop+-20170107.2132.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/lassik/emacs-whois.git
 
 Updating /mnt/store/melpa/working/whois/
 Checking out bf131b99bb3f5583d27d1c72ef0fbd829ef85664
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/whois/
+  to /tmp/whoisswr3Cc/whois-20230510.919
+    whois.el -> whois.el
+Created whois-20230510.919.tar containing:
+  whois-20230510.919/
+  whois-20230510.919/whois-pkg.el
+  whois-20230510.919/whois.el
+Built whois in 3.628s, finished at 2023-06-10T22:58:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Jun  9 17:00 packages/whois-20230510.919.el
+4.0K -rw-r--r-- 1 root root  419 Jun 10 22:58 packages/whois-20230510.919.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:58 packages/whois-20230510.919.tar

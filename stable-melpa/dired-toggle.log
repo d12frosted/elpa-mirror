@@ -4,4 +4,16 @@ Source:  https://github.com/fasheng/dired-toggle.git
 
 Updating /mnt/store/melpa/working/dired-toggle/
 Checking out b694ba91a45d0762bd032ff1bb4109e4c62ca686
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-toggle/
+  to /tmp/dired-toggleSc0S8d/dired-toggle-20190616.303
+    dired-toggle.el -> dired-toggle.el
+Created dired-toggle-20190616.303.tar containing:
+  dired-toggle-20190616.303/
+  dired-toggle-20190616.303/dired-toggle-pkg.el
+  dired-toggle-20190616.303/dired-toggle.el
+Built dired-toggle in 4.487s, finished at 2023-06-11T00:14:04+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.4K Jun  9 15:44 packages/dired-toggle-20190616.303.el
+4.0K -rw-r--r-- 1 root root  402 Jun 11 00:14 packages/dired-toggle-20190616.303.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:14 packages/dired-toggle-20190616.303.tar

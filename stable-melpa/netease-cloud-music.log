@@ -4,4 +4,21 @@ Source:  https://github.com/SpringHan/netease-cloud-music.el.git
 
 Updating /mnt/store/melpa/working/netease-cloud-music/
 Checking out f238d1d45bbeee32e0a8d169f39de4360be908f4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/netease-cloud-music/
+  to /tmp/netease-cloud-musicbJeUzh/netease-cloud-music-20220305.1224
+    netease-cloud-music-comment.el -> netease-cloud-music-comment.el
+    netease-cloud-music-functions.el -> netease-cloud-music-functions.el
+    netease-cloud-music-ui.el -> netease-cloud-music-ui.el
+    netease-cloud-music.el -> netease-cloud-music.el
+Created netease-cloud-music-20220305.1224.tar containing:
+  netease-cloud-music-20220305.1224/
+  netease-cloud-music-20220305.1224/netease-cloud-music-comment.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-functions.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-pkg.el
+  netease-cloud-music-20220305.1224/netease-cloud-music-ui.el
+  netease-cloud-music-20220305.1224/netease-cloud-music.el
+Built netease-cloud-music in 4.355s, finished at 2023-06-10T22:35:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  433 Jun 10 22:35 packages/netease-cloud-music-20220305.1224.entry
+172K -rw-r--r-- 1 root root 170K Jun 10 22:35 packages/netease-cloud-music-20220305.1224.tar

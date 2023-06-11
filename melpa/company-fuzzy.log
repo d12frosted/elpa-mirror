@@ -4,4 +4,16 @@ Source:  https://github.com/jcs-elpa/company-fuzzy.git
 
 Updating /mnt/store/melpa/working/company-fuzzy/
 Checking out 85dd0a7852db70673d70387a834af01ed705c3f7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-fuzzy/
+  to /tmp/company-fuzzysaOshC/company-fuzzy-20230531.743
+    company-fuzzy.el -> company-fuzzy.el
+Created company-fuzzy-20230531.743.tar containing:
+  company-fuzzy-20230531.743/
+  company-fuzzy-20230531.743/company-fuzzy-pkg.el
+  company-fuzzy-20230531.743/company-fuzzy.el
+Built company-fuzzy in 3.294s, finished at 2023-06-11T00:09:50+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 35K Jun  9 15:38 packages/company-fuzzy-20230531.743.el
+4.0K -rw-r--r-- 1 root root 535 Jun 11 00:09 packages/company-fuzzy-20230531.743.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:09 packages/company-fuzzy-20230531.743.tar

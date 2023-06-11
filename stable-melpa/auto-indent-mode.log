@@ -4,4 +4,66 @@ Source:  https://github.com/mattfidler/auto-indent-mode.el.git
 
 Updating /mnt/store/melpa/working/auto-indent-mode/
 Checking out 664006b67329a8e27330541547f8c2187dab947c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/auto-indent-mode/
+  to /tmp/auto-indent-modeOWaNIQ/auto-indent-mode-20211029.11
+    auto-indent-mode.el -> auto-indent-mode.el
+    dir -> dir
+    auto-indent-mode.texi -> auto-indent-mode.texi
+Generating /tmp/auto-indent-modeOWaNIQ/auto-indent-mode-20211029.11/auto-indent-mode.info
+
+Command '' exited with non-zero exit-code: 1
+
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:187: misplaced }
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:187: warning: @tex should only appear at the beginning of a line
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:189: warning: @tex should only appear at the beginning of a line
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:191: warning: @tex should only appear at the beginning of a line
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: misplaced }
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: warning: @tex should only appear at the beginning of a line
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:195: warning: @tex should only appear at the beginning of a line
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:197: superfluous argument to @end tex: ") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:195: superfluous argument to @end tex: ]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: superfluous argument to @end tex: ][+][ @tex
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:191: superfluous argument to @end tex: @tex
+@end tex][+][ @tex
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:189: superfluous argument to @end tex: ]+" nil t) (replace-match "") (goto-char (point-at-eol)) (while (looking-at "[ @tex
+@end tex@tex
+@end tex][+][ @tex
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:187: @emph missing closing brace
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:187: superfluous argument to @end tex: @emph{[>][ @tex
+@end tex]+" nil t) (replace-match "") (goto-char (point-at-eol)) (while (looking-at "[ @tex
+@end tex@tex
+@end tex][+][ @tex
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
+}
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:185: @node seen before @footnote closing brace
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:236: raising the section level of @subsubsection which is too low
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:235: warning: node `Why is auto-indent-mode changing tabs to spaces' is next for `How do I change the auto-indent default offset?' in sectioning but not in menu
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:235: warning: node `Auto-indent and org-mode' is up for `How do I change the auto-indent default offset?' in sectioning but not in menu
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:201: node `Auto-indent and org-mode' lacks menu item for `How do I change the auto-indent default offset?' despite being its Up target
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:247: warning: node `How do I change the auto-indent default offset?' is prev for `Why is auto-indent-mode changing tabs to spaces' in sectioning but not in menu
+
+Error: (error "Command exited with non-zero exit-code: 1")
+
+Command '' exited with non-zero exit-code: 1
+
+install-info: No such file or directory for /tmp/auto-indent-modeOWaNIQ/auto-indent-mode-20211029.11/auto-indent-mode.info
+
+Error: (error "Command exited with non-zero exit-code: 1")
+Created auto-indent-mode-20211029.11.tar containing:
+  auto-indent-mode-20211029.11/
+  auto-indent-mode-20211029.11/auto-indent-mode-pkg.el
+  auto-indent-mode-20211029.11/auto-indent-mode.el
+  auto-indent-mode-20211029.11/dir
+Built auto-indent-mode in 7.384s, finished at 2023-06-11T00:04:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  400 Jun 11 00:04 packages/auto-indent-mode-20211029.11.entry
+120K -rw-r--r-- 1 root root 120K Jun 11 00:04 packages/auto-indent-mode-20211029.11.tar

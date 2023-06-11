@@ -4,4 +4,16 @@ Source:  https://repo.or.cz/external-dict.el.git
 
 Updating /mnt/store/melpa/working/external-dict/
 Checking out 7ef87709c09792dfa6332fb41a6ec1edd917120a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/external-dict/
+  to /tmp/external-dictHQMPQD/external-dict-20230313.118
+    external-dict.el -> external-dict.el
+Created external-dict-20230313.118.tar containing:
+  external-dict-20230313.118/
+  external-dict-20230313.118/external-dict-pkg.el
+  external-dict-20230313.118/external-dict.el
+Built external-dict in 4.265s, finished at 2023-06-11T00:20:55+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.9K Jun  9 15:54 packages/external-dict-20230313.118.el
+4.0K -rw-r--r-- 1 root root  274 Jun 11 00:20 packages/external-dict-20230313.118.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:20 packages/external-dict-20230313.118.tar

@@ -4,4 +4,31 @@ Source:  https://github.com/seanirby/evalator.git
 
 Updating /mnt/store/melpa/working/evalator/
 Checking out f30da4da48c0b3f3cfa1fc1c7cfdb53ffe79df36
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evalator/
+  to /tmp/evalator46qxrh/evalator-20160213.128
+    evalator-config.el -> evalator-config.el
+    evalator-context.el -> evalator-context.el
+    evalator-elisp.el -> evalator-elisp.el
+    evalator-faces.el -> evalator-faces.el
+    evalator-history.el -> evalator-history.el
+    evalator-key-map.el -> evalator-key-map.el
+    evalator-state.el -> evalator-state.el
+    evalator-utils.el -> evalator-utils.el
+    evalator.el -> evalator.el
+Created evalator-20160213.128.tar containing:
+  evalator-20160213.128/
+  evalator-20160213.128/evalator-config.el
+  evalator-20160213.128/evalator-context.el
+  evalator-20160213.128/evalator-elisp.el
+  evalator-20160213.128/evalator-faces.el
+  evalator-20160213.128/evalator-history.el
+  evalator-20160213.128/evalator-key-map.el
+  evalator-20160213.128/evalator-pkg.el
+  evalator-20160213.128/evalator-state.el
+  evalator-20160213.128/evalator-utils.el
+  evalator-20160213.128/evalator.el
+Built evalator in 4.122s, finished at 2023-06-11T00:19:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 452 Jun 11 00:19 packages/evalator-20160213.128.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 11 00:19 packages/evalator-20160213.128.tar

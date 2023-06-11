@@ -4,4 +4,16 @@ Source:  https://github.com/golang/lint.git
 
 Updating /mnt/store/melpa/working/golint/
 Checking out 0562613f16a6ec439a4a68e817e69e0f7c405c87
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/golint/
+  to /tmp/golintPAPe0w/golint-20180221.2015
+  ! misc/emacs/golint.el -> golint.el
+Created golint-20180221.2015.tar containing:
+  golint-20180221.2015/
+  golint-20180221.2015/golint-pkg.el
+  golint-20180221.2015/golint.el
+Built golint in 6.362s, finished at 2023-06-11T00:27:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.6K Jun  9 16:03 packages/golint-20180221.2015.el
+4.0K -rw-r--r-- 1 root root  174 Jun 11 00:27 packages/golint-20180221.2015.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:27 packages/golint-20180221.2015.tar

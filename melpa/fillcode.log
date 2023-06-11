@@ -4,4 +4,16 @@ Source:  https://github.com/snarfed/fillcode.git
 
 Updating /mnt/store/melpa/working/fillcode/
 Checking out 4d206982b6aaa493d709c84aea206cabb8b4038c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fillcode/
+  to /tmp/fillcodeCmdWBz/fillcode-20200524.2226
+    fillcode.el -> fillcode.el
+Created fillcode-20200524.2226.tar containing:
+  fillcode-20200524.2226/
+  fillcode-20200524.2226/fillcode-pkg.el
+  fillcode-20200524.2226/fillcode.el
+Built fillcode in 2.986s, finished at 2023-06-11T00:21:41+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root 28K Jun  9 15:55 packages/fillcode-20200524.2226.el
+4.0K -rw-r--r-- 1 root root 397 Jun 11 00:21 packages/fillcode-20200524.2226.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:21 packages/fillcode-20200524.2226.tar

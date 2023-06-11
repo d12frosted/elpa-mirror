@@ -4,4 +4,16 @@ Source:  https://github.com/gkowzan/alert-toast.git
 
 Updating /mnt/store/melpa/working/alert-toast/
 Checking out 96c88c93c1084de681700f655223142ee0eb944a
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/alert-toast/
+  to /tmp/alert-toastbC5VUc/alert-toast-20220312.229
+    alert-toast.el -> alert-toast.el
+Created alert-toast-20220312.229.tar containing:
+  alert-toast-20220312.229/
+  alert-toast-20220312.229/alert-toast-pkg.el
+  alert-toast-20220312.229/alert-toast.el
+Built alert-toast in 2.887s, finished at 2023-06-11T00:02:52+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 15:28 packages/alert-toast-20220312.229.el
+4.0K -rw-r--r-- 1 root root 496 Jun 11 00:02 packages/alert-toast-20220312.229.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:02 packages/alert-toast-20220312.229.tar

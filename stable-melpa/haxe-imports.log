@@ -4,4 +4,16 @@ Source:  https://github.com/accidentalrebel/emacs-haxe-imports.git
 
 Updating /mnt/store/melpa/working/haxe-imports/
 Checking out a4ab31759bd237e78c055dda73e808a4ee1b5fde
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/haxe-imports/
+  to /tmp/haxe-importsSe9irh/haxe-imports-20170330.2304
+    haxe-imports.el -> haxe-imports.el
+Created haxe-imports-20170330.2304.tar containing:
+  haxe-imports-20170330.2304/
+  haxe-imports-20170330.2304/haxe-imports-pkg.el
+  haxe-imports-20170330.2304/haxe-imports.el
+Built haxe-imports in 3.196s, finished at 2023-06-11T00:28:49+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.5K Jun  9 16:05 packages/haxe-imports-20170330.2304.el
+4.0K -rw-r--r-- 1 root root  527 Jun 11 00:28 packages/haxe-imports-20170330.2304.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:28 packages/haxe-imports-20170330.2304.tar

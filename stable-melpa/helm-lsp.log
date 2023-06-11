@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-lsp/helm-lsp.git
 
 Updating /mnt/store/melpa/working/helm-lsp/
 Checking out c2c6974dadfac459b1a69a1217441283874cea92
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-lsp/
+  to /tmp/helm-lspLItMDg/helm-lsp-20210419.2014
+    helm-lsp.el -> helm-lsp.el
+Created helm-lsp-20210419.2014.tar containing:
+  helm-lsp-20210419.2014/
+  helm-lsp-20210419.2014/helm-lsp-pkg.el
+  helm-lsp-20210419.2014/helm-lsp.el
+Built helm-lsp in 3.802s, finished at 2023-06-11T00:30:13+0000
+ ✓ Success:
+ 16K -rwxr-xr-x 1 root root 14K Jun  9 16:07 packages/helm-lsp-20210419.2014.el
+4.0K -rw-r--r-- 1 root root 512 Jun 11 00:30 packages/helm-lsp-20210419.2014.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:30 packages/helm-lsp-20210419.2014.tar

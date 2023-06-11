@@ -4,4 +4,16 @@ Source:  https://github.com/waymondo/org-repo-todo.git
 
 Updating /mnt/store/melpa/working/org-repo-todo/
 Checking out f73ebd91399c5760ad52c6ad9033de1066042003
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-repo-todo/
+  to /tmp/org-repo-todopzbRDi/org-repo-todo-20171228.119
+    org-repo-todo.el -> org-repo-todo.el
+Created org-repo-todo-20171228.119.tar containing:
+  org-repo-todo-20171228.119/
+  org-repo-todo-20171228.119/org-repo-todo-pkg.el
+  org-repo-todo-20171228.119/org-repo-todo.el
+Built org-repo-todo in 2.580s, finished at 2023-06-10T22:38:49+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jun  9 16:33 packages/org-repo-todo-20171228.119.el
+4.0K -rw-r--r-- 1 root root  431 Jun 10 22:38 packages/org-repo-todo-20171228.119.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:38 packages/org-repo-todo-20171228.119.tar

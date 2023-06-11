@@ -4,4 +4,16 @@ Source:  https://github.com/purcell/ac-slime.git
 
 Updating /mnt/store/melpa/working/ac-slime/
 Checking out a91f664510d3da24b02e87e4aa59d049483a6529
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-slime/
+  to /tmp/ac-slimeDgbnL4/ac-slime-20171027.2100
+    ac-slime.el -> ac-slime.el
+Created ac-slime-20171027.2100.tar containing:
+  ac-slime-20171027.2100/
+  ac-slime-20171027.2100/ac-slime-pkg.el
+  ac-slime-20171027.2100/ac-slime.el
+Built ac-slime in 3.572s, finished at 2023-06-11T00:02:13+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jun  9 15:27 packages/ac-slime-20171027.2100.el
+4.0K -rw-r--r-- 1 root root  481 Jun 11 00:02 packages/ac-slime-20171027.2100.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:02 packages/ac-slime-20171027.2100.tar

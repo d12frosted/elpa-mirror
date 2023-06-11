@@ -4,4 +4,16 @@ Source:  https://github.com/muffinmad/emacs-vc-hgcmd.git
 
 Updating /mnt/store/melpa/working/vc-hgcmd/
 Checking out d044448965d31ca8214f8bca48487e4d9b9d9a0f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vc-hgcmd/
+  to /tmp/vc-hgcmdQ5vW8M/vc-hgcmd-20211021.1704
+    vc-hgcmd.el -> vc-hgcmd.el
+Created vc-hgcmd-20211021.1704.tar containing:
+  vc-hgcmd-20211021.1704/
+  vc-hgcmd-20211021.1704/vc-hgcmd-pkg.el
+  vc-hgcmd-20211021.1704/vc-hgcmd.el
+Built vc-hgcmd in 3.196s, finished at 2023-06-10T22:56:38+0000
+ ✓ Success:
+ 68K -rw-r--r-- 1 root root 65K Jun  9 16:58 packages/vc-hgcmd-20211021.1704.el
+4.0K -rw-r--r-- 1 root root 472 Jun 10 22:56 packages/vc-hgcmd-20211021.1704.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 10 22:56 packages/vc-hgcmd-20211021.1704.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/TLINDEN/viking-mode.git
 
 Updating /mnt/store/melpa/working/viking-mode/
 Checking out c76aa265d13ad91d6890d242e142d05e31f0340b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/viking-mode/
+  to /tmp/viking-modeqZYMQd/viking-mode-20160705.2027
+    viking-mode.el -> viking-mode.el
+Created viking-mode-20160705.2027.tar containing:
+  viking-mode-20160705.2027/
+  viking-mode-20160705.2027/viking-mode-pkg.el
+  viking-mode-20160705.2027/viking-mode.el
+Built viking-mode in 2.702s, finished at 2023-06-10T22:56:57+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 16:58 packages/viking-mode-20160705.2027.el
+4.0K -rw-r--r-- 1 root root 405 Jun 10 22:56 packages/viking-mode-20160705.2027.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:56 packages/viking-mode-20160705.2027.tar

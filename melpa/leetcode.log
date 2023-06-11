@@ -4,4 +4,16 @@ Source:  https://github.com/kaiwk/leetcode.el.git
 
 Updating /mnt/store/melpa/working/leetcode/
 Checking out e5701191a98d043acdc7112f28d67e3d5c848228
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leetcode/
+  to /tmp/leetcodeXCTBJe/leetcode-20230524.1851
+    leetcode.el -> leetcode.el
+Created leetcode-20230524.1851.tar containing:
+  leetcode-20230524.1851/
+  leetcode-20230524.1851/leetcode-pkg.el
+  leetcode-20230524.1851/leetcode.el
+Built leetcode in 3.182s, finished at 2023-06-10T22:28:58+0000
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root 58K Jun  9 16:18 packages/leetcode-20230524.1851.el
+4.0K -rw-r--r-- 1 root root 544 Jun 10 22:28 packages/leetcode-20230524.1851.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 10 22:28 packages/leetcode-20230524.1851.tar

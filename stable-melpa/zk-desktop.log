@@ -4,4 +4,16 @@ Source:  https://github.com/localauthor/zk.git
 
 Updating /mnt/store/melpa/working/zk-desktop/
 Checking out 6ba90de2b33a8717fb1e263fe6df7b3831d3bd8e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zk-desktop/
+  to /tmp/zk-desktoptjQ391/zk-desktop-20230609.742
+    zk-desktop.el -> zk-desktop.el
+Created zk-desktop-20230609.742.tar containing:
+  zk-desktop-20230609.742/
+  zk-desktop-20230609.742/zk-desktop-pkg.el
+  zk-desktop-20230609.742/zk-desktop.el
+Built zk-desktop in 3.239s, finished at 2023-06-10T23:00:32+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 17:03 packages/zk-desktop-20230609.742.el
+4.0K -rw-r--r-- 1 root root 505 Jun 10 23:00 packages/zk-desktop-20230609.742.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 23:00 packages/zk-desktop-20230609.742.tar

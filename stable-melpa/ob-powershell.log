@@ -4,4 +4,16 @@ Source:  https://github.com/MoisMoshev/ob-powershell.git
 
 Updating /mnt/store/melpa/working/ob-powershell/
 Checking out f351429590ed68b26a9c8f9847066ca4205e524b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-powershell/
+  to /tmp/ob-powershellmZIPHc/ob-powershell-20220314.1359
+    ob-powershell.el -> ob-powershell.el
+Created ob-powershell-20220314.1359.tar containing:
+  ob-powershell-20220314.1359/
+  ob-powershell-20220314.1359/ob-powershell-pkg.el
+  ob-powershell-20220314.1359/ob-powershell.el
+Built ob-powershell in 3.171s, finished at 2023-06-10T22:36:35+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jun  9 16:29 packages/ob-powershell-20220314.1359.el
+4.0K -rw-r--r-- 1 root root  504 Jun 10 22:36 packages/ob-powershell-20220314.1359.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:36 packages/ob-powershell-20220314.1359.tar

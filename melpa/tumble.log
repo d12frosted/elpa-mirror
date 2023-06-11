@@ -4,4 +4,16 @@ Source:  https://github.com/febuiles/tumble.git
 
 Updating /mnt/store/melpa/working/tumble/
 Checking out e8fd7643cccf2b6ea4170f0c5f1f87d007e7fa00
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tumble/
+  to /tmp/tumbleD5NsZQ/tumble-20160112.729
+    tumble.el -> tumble.el
+Created tumble-20160112.729.tar containing:
+  tumble-20160112.729/
+  tumble-20160112.729/tumble-pkg.el
+  tumble-20160112.729/tumble.el
+Built tumble in 2.927s, finished at 2023-06-10T22:55:35+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:56 packages/tumble-20160112.729.el
+4.0K -rw-r--r-- 1 root root 403 Jun 10 22:55 packages/tumble-20160112.729.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:55 packages/tumble-20160112.729.tar

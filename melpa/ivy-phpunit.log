@@ -4,4 +4,16 @@ Source:  https://github.com/12pt/ivy-phpunit.git
 
 Updating /mnt/store/melpa/working/ivy-phpunit/
 Checking out ffedb0138d36564e8e36a28fd9bc71ea8944681f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-phpunit/
+  to /tmp/ivy-phpunitYb3laG/ivy-phpunit-20180219.915
+    ivy-phpunit.el -> ivy-phpunit.el
+Created ivy-phpunit-20180219.915.tar containing:
+  ivy-phpunit-20180219.915/
+  ivy-phpunit-20180219.915/ivy-phpunit-pkg.el
+  ivy-phpunit-20180219.915/ivy-phpunit.el
+Built ivy-phpunit in 3.158s, finished at 2023-06-10T22:25:45+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jun  9 16:14 packages/ivy-phpunit-20180219.915.el
+4.0K -rw-r--r-- 1 root root  436 Jun 10 22:25 packages/ivy-phpunit-20180219.915.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/ivy-phpunit-20180219.915.tar

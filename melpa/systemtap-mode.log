@@ -4,4 +4,16 @@ Source:  https://github.com/ruediger/systemtap-mode.git
 
 Updating /mnt/store/melpa/working/systemtap-mode/
 Checking out 8b5086d6b0050a12bb37e33c24c24d1f420afd3b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/systemtap-mode/
+  to /tmp/systemtap-mode9RFf0c/systemtap-mode-20151122.1940
+    systemtap-mode.el -> systemtap-mode.el
+Created systemtap-mode-20151122.1940.tar containing:
+  systemtap-mode-20151122.1940/
+  systemtap-mode-20151122.1940/systemtap-mode-pkg.el
+  systemtap-mode-20151122.1940/systemtap-mode.el
+Built systemtap-mode in 4.428s, finished at 2023-06-10T22:53:07+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  9 16:53 packages/systemtap-mode-20151122.1940.el
+4.0K -rw-r--r-- 1 root root  333 Jun 10 22:53 packages/systemtap-mode-20151122.1940.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:53 packages/systemtap-mode-20151122.1940.tar

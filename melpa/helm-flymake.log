@@ -4,4 +4,16 @@ Source:  https://github.com/tam17aki/helm-flymake.git
 
 Updating /mnt/store/melpa/working/helm-flymake/
 Checking out 72cf18a1a1f843db9bb5d58301739ea9ccb1655b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-flymake/
+  to /tmp/helm-flymakeKGN10t/helm-flymake-20160610.2
+    helm-flymake.el -> helm-flymake.el
+Created helm-flymake-20160610.2.tar containing:
+  helm-flymake-20160610.2/
+  helm-flymake-20160610.2/helm-flymake-pkg.el
+  helm-flymake-20160610.2/helm-flymake.el
+Built helm-flymake in 2.776s, finished at 2023-06-10T22:21:22+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jun  9 16:06 packages/helm-flymake-20160610.2.el
+4.0K -rw-r--r-- 1 root root  400 Jun 10 22:21 packages/helm-flymake-20160610.2.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:21 packages/helm-flymake-20160610.2.tar

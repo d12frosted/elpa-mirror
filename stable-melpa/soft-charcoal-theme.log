@@ -4,4 +4,16 @@ Source:  https://github.com/mswift42/soft-charcoal-theme.git
 
 Updating /mnt/store/melpa/working/soft-charcoal-theme/
 Checking out 5607ab977fae6638e78b1495e02da8955c9ba19f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/soft-charcoal-theme/
+  to /tmp/soft-charcoal-themeEzTyza/soft-charcoal-theme-20140420.1643
+    soft-charcoal-theme.el -> soft-charcoal-theme.el
+Created soft-charcoal-theme-20140420.1643.tar containing:
+  soft-charcoal-theme-20140420.1643/
+  soft-charcoal-theme-20140420.1643/soft-charcoal-theme-pkg.el
+  soft-charcoal-theme-20140420.1643/soft-charcoal-theme.el
+Built soft-charcoal-theme in 2.864s, finished at 2023-06-10T22:50:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Jun  9 16:50 packages/soft-charcoal-theme-20140420.1643.el
+4.0K -rw-r--r-- 1 root root  364 Jun 10 22:50 packages/soft-charcoal-theme-20140420.1643.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:50 packages/soft-charcoal-theme-20140420.1643.tar

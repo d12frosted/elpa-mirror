@@ -4,4 +4,16 @@ Source:  https://github.com/spebern/www-synonyms.git
 
 Updating /mnt/store/melpa/working/www-synonyms/
 Checking out 7e37ea35064ff31c9945f0198a653647d408c936
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/www-synonyms/
+  to /tmp/www-synonymsW0pNmk/www-synonyms-20170128.2251
+    www-synonyms.el -> www-synonyms.el
+Created www-synonyms-20170128.2251.tar containing:
+  www-synonyms-20170128.2251/
+  www-synonyms-20170128.2251/www-synonyms-pkg.el
+  www-synonyms-20170128.2251/www-synonyms.el
+Built www-synonyms in 3.218s, finished at 2023-06-10T22:58:53+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jun  9 17:01 packages/www-synonyms-20170128.2251.el
+4.0K -rw-r--r-- 1 root root  401 Jun 10 22:58 packages/www-synonyms-20170128.2251.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:58 packages/www-synonyms-20170128.2251.tar

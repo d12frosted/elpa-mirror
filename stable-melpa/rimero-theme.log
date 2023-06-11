@@ -4,4 +4,16 @@ Source:  https://github.com/yveszoundi/emacs-rimero-theme.git
 
 Updating /mnt/store/melpa/working/rimero-theme/
 Checking out a2e706c2b34f749019979a133f08a2d94a1104b3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rimero-theme/
+  to /tmp/rimero-themeNImqH5/rimero-theme-20180901.1348
+    rimero-theme.el -> rimero-theme.el
+Created rimero-theme-20180901.1348.tar containing:
+  rimero-theme-20180901.1348/
+  rimero-theme-20180901.1348/rimero-theme-pkg.el
+  rimero-theme-20180901.1348/rimero-theme.el
+Built rimero-theme in 2.917s, finished at 2023-06-10T22:47:29+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 16:45 packages/rimero-theme-20180901.1348.el
+4.0K -rw-r--r-- 1 root root 508 Jun 10 22:47 packages/rimero-theme-20180901.1348.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:47 packages/rimero-theme-20180901.1348.tar

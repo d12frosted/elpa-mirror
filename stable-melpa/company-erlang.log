@@ -5,4 +5,16 @@ Source:  https://github.com/s-kostyaev/company-erlang.git
 Updating /mnt/store/melpa/working/company-erlang/
 Checking out bc0524a16f17b66c7397690e4ca0e004f09ea6c5
 Warning: company-erlang :files spec is equivalent to the default
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-erlang/
+  to /tmp/company-erlang3fmiCE/company-erlang-20170123.538
+    company-erlang.el -> company-erlang.el
+Created company-erlang-20170123.538.tar containing:
+  company-erlang-20170123.538/
+  company-erlang-20170123.538/company-erlang-pkg.el
+  company-erlang-20170123.538/company-erlang.el
+Built company-erlang in 2.892s, finished at 2023-06-11T00:09:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jun  9 15:37 packages/company-erlang-20170123.538.el
+4.0K -rw-r--r-- 1 root root  436 Jun 11 00:09 packages/company-erlang-20170123.538.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:09 packages/company-erlang-20170123.538.tar

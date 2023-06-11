@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-helm/helm-descbinds.git
 
 Updating /mnt/store/melpa/working/helm-descbinds/
 Checking out b72515982396b6e336ad7beb6767e95a80fca192
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-descbinds/
+  to /tmp/helm-descbindsvl1TEB/helm-descbinds-20190501.935
+    helm-descbinds.el -> helm-descbinds.el
+Created helm-descbinds-20190501.935.tar containing:
+  helm-descbinds-20190501.935/
+  helm-descbinds-20190501.935/helm-descbinds-pkg.el
+  helm-descbinds-20190501.935/helm-descbinds.el
+Built helm-descbinds in 3.503s, finished at 2023-06-10T22:21:07+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:06 packages/helm-descbinds-20190501.935.el
+4.0K -rw-r--r-- 1 root root 457 Jun 10 22:21 packages/helm-descbinds-20190501.935.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:21 packages/helm-descbinds-20190501.935.tar

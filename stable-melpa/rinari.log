@@ -4,4 +4,16 @@ Source:  https://github.com/eschulte/rinari.git
 
 Updating /mnt/store/melpa/working/rinari/
 Checking out be07b0f42aefa24c5d36c441d1f3f72e64fffaa4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rinari/
+  to /tmp/rinari5w1bH7/rinari-20150709.640
+    rinari.el -> rinari.el
+Created rinari-20150709.640.tar containing:
+  rinari-20150709.640/
+  rinari-20150709.640/rinari-pkg.el
+  rinari-20150709.640/rinari.el
+Built rinari in 3.053s, finished at 2023-06-10T22:47:30+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 44K Jun  9 16:45 packages/rinari-20150709.640.el
+4.0K -rw-r--r-- 1 root root 535 Jun 10 22:47 packages/rinari-20150709.640.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:47 packages/rinari-20150709.640.tar

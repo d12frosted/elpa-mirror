@@ -4,4 +4,16 @@ Source:  https://github.com/onurtemizkan/paganini.git
 
 Updating /mnt/store/melpa/working/paganini-theme/
 Checking out 255c5a2a8abee9c5935465ec42b9c3604c178c3c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/paganini-theme/
+  to /tmp/paganini-themeePwwgS/paganini-theme-20180815.1921
+    paganini-theme.el -> paganini-theme.el
+Created paganini-theme-20180815.1921.tar containing:
+  paganini-theme-20180815.1921/
+  paganini-theme-20180815.1921/paganini-theme-pkg.el
+  paganini-theme-20180815.1921/paganini-theme.el
+Built paganini-theme in 2.507s, finished at 2023-06-10T22:41:18+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Jun  9 16:36 packages/paganini-theme-20180815.1921.el
+4.0K -rw-r--r-- 1 root root  336 Jun 10 22:41 packages/paganini-theme-20180815.1921.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:41 packages/paganini-theme-20180815.1921.tar

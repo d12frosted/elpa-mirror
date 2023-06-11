@@ -4,4 +4,16 @@ Source:  https://gitlab.com/jgkamat/alda-mode.git
 
 Updating /mnt/store/melpa/working/alda-mode/
 Checking out 580f6e94c93aead91406d00a42ccf9040a898cb8
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/alda-mode/
+  to /tmp/alda-modeUkUMRM/alda-mode-20230406.1927
+    alda-mode.el -> alda-mode.el
+Created alda-mode-20230406.1927.tar containing:
+  alda-mode-20230406.1927/
+  alda-mode-20230406.1927/alda-mode-pkg.el
+  alda-mode-20230406.1927/alda-mode.el
+Built alda-mode in 2.871s, finished at 2023-06-11T00:02:47+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 15:28 packages/alda-mode-20230406.1927.el
+4.0K -rw-r--r-- 1 root root 431 Jun 11 00:02 packages/alda-mode-20230406.1927.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:02 packages/alda-mode-20230406.1927.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/BlueBoxWare/counsel-chrome-bm.git
 
 Updating /mnt/store/melpa/working/counsel-chrome-bm/
 Checking out 3321bf78231e443cb98520dbb30a6c49e004c6a7
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/counsel-chrome-bm/
+  to /tmp/counsel-chrome-bm0SO25z/counsel-chrome-bm-20211022.1427
+    counsel-chrome-bm.el -> counsel-chrome-bm.el
+Created counsel-chrome-bm-20211022.1427.tar containing:
+  counsel-chrome-bm-20211022.1427/
+  counsel-chrome-bm-20211022.1427/counsel-chrome-bm-pkg.el
+  counsel-chrome-bm-20211022.1427/counsel-chrome-bm.el
+Built counsel-chrome-bm in 3.056s, finished at 2023-06-11T00:10:58+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 22K Jun  9 15:40 packages/counsel-chrome-bm-20211022.1427.el
+4.0K -rw-r--r-- 1 root root 569 Jun 11 00:10 packages/counsel-chrome-bm-20211022.1427.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:10 packages/counsel-chrome-bm-20211022.1427.tar

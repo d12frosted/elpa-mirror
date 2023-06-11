@@ -4,4 +4,16 @@ Source:  https://gitlab.com/elzair/punctuality-logger.git
 
 Updating /mnt/store/melpa/working/punctuality-logger/
 Checking out d76c5d5589a4f8a94cc5537686d9a3b46ea7cc59
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/punctuality-logger/
+  to /tmp/punctuality-loggerdzrxRO/punctuality-logger-20141120.2031
+    punctuality-logger.el -> punctuality-logger.el
+Created punctuality-logger-20141120.2031.tar containing:
+  punctuality-logger-20141120.2031/
+  punctuality-logger-20141120.2031/punctuality-logger-pkg.el
+  punctuality-logger-20141120.2031/punctuality-logger.el
+Built punctuality-logger in 2.945s, finished at 2023-06-10T22:44:34+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Jun  9 16:41 packages/punctuality-logger-20141120.2031.el
+4.0K -rw-r--r-- 1 root root  490 Jun 10 22:44 packages/punctuality-logger-20141120.2031.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:44 packages/punctuality-logger-20141120.2031.tar

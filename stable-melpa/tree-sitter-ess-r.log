@@ -4,4 +4,16 @@ Source:  https://github.com/ShuguangSun/tree-sitter-ess-r.git
 
 Updating /mnt/store/melpa/working/tree-sitter-ess-r/
 Checking out 9669c00f3d3463e6769725af74c392891e269eed
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tree-sitter-ess-r/
+  to /tmp/tree-sitter-ess-rFfonnK/tree-sitter-ess-r-20221012.855
+    tree-sitter-ess-r.el -> tree-sitter-ess-r.el
+Created tree-sitter-ess-r-20221012.855.tar containing:
+  tree-sitter-ess-r-20221012.855/
+  tree-sitter-ess-r-20221012.855/tree-sitter-ess-r-pkg.el
+  tree-sitter-ess-r-20221012.855/tree-sitter-ess-r.el
+Built tree-sitter-ess-r in 3.615s, finished at 2023-06-10T22:55:11+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K Jun  9 16:55 packages/tree-sitter-ess-r-20221012.855.el
+4.0K -rw-r--r-- 1 root root  568 Jun 10 22:55 packages/tree-sitter-ess-r-20221012.855.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:55 packages/tree-sitter-ess-r-20221012.855.tar

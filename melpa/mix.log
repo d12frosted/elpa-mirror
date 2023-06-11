@@ -4,4 +4,16 @@ Source:  https://github.com/ayrat555/mix.el.git
 
 Updating /mnt/store/melpa/working/mix/
 Checking out 3d5dbc0ef01c4f6b3732f067e9ebc2d7be74a49e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mix/
+  to /tmp/mixWDyvIC/mix-20210605.1015
+    mix.el -> mix.el
+Created mix-20210605.1015.tar containing:
+  mix-20210605.1015/
+  mix-20210605.1015/mix-pkg.el
+  mix-20210605.1015/mix.el
+Built mix in 3.950s, finished at 2023-06-10T22:32:44+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:24 packages/mix-20210605.1015.el
+4.0K -rw-r--r-- 1 root root 439 Jun 10 22:32 packages/mix-20210605.1015.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:32 packages/mix-20210605.1015.tar

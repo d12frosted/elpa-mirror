@@ -4,4 +4,16 @@ Source:  https://github.com/mswift42/silkworm-theme.git
 
 Updating /mnt/store/melpa/working/silkworm-theme/
 Checking out ff80e9294da0fb093e15097ac62153ef4a64a889
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/silkworm-theme/
+  to /tmp/silkworm-themeV3rXDY/silkworm-theme-20210215.1120
+    silkworm-theme.el -> silkworm-theme.el
+Created silkworm-theme-20210215.1120.tar containing:
+  silkworm-theme-20210215.1120/
+  silkworm-theme-20210215.1120/silkworm-theme-pkg.el
+  silkworm-theme-20210215.1120/silkworm-theme.el
+Built silkworm-theme in 2.830s, finished at 2023-06-10T22:49:38+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 16:48 packages/silkworm-theme-20210215.1120.el
+4.0K -rw-r--r-- 1 root root 296 Jun 10 22:49 packages/silkworm-theme-20210215.1120.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:49 packages/silkworm-theme-20210215.1120.tar

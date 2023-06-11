@@ -4,4 +4,25 @@ Source:  https://github.com/eschulte/rhtml.git
 
 Updating /mnt/store/melpa/working/rhtml-mode/
 Checking out a6d71b38a3db867ccf82999c99805db1a3a33c33
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rhtml-mode/
+  to /tmp/rhtml-modehGR8TZ/rhtml-mode-20130422.1311
+    rhtml-erb.el -> rhtml-erb.el
+    rhtml-fonts.el -> rhtml-fonts.el
+    rhtml-mode.el -> rhtml-mode.el
+    rhtml-navigation.el -> rhtml-navigation.el
+    rhtml-ruby-hook.el -> rhtml-ruby-hook.el
+    rhtml-sgml-hacks.el -> rhtml-sgml-hacks.el
+Created rhtml-mode-20130422.1311.tar containing:
+  rhtml-mode-20130422.1311/
+  rhtml-mode-20130422.1311/rhtml-erb.el
+  rhtml-mode-20130422.1311/rhtml-fonts.el
+  rhtml-mode-20130422.1311/rhtml-mode-pkg.el
+  rhtml-mode-20130422.1311/rhtml-mode.el
+  rhtml-mode-20130422.1311/rhtml-navigation.el
+  rhtml-mode-20130422.1311/rhtml-ruby-hook.el
+  rhtml-mode-20130422.1311/rhtml-sgml-hacks.el
+Built rhtml-mode in 2.918s, finished at 2023-06-10T22:47:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 152 Jun 10 22:47 packages/rhtml-mode-20130422.1311.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:47 packages/rhtml-mode-20130422.1311.tar

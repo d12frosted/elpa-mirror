@@ -4,4 +4,16 @@ Source:  https://gitlab.com/hperrey/org-jami-bot.git
 
 Updating /mnt/store/melpa/working/org-jami-bot/
 Checking out 6d80549e9aaacd04cff410b22e7f265373f4d73b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-jami-bot/
+  to /tmp/org-jami-botIiwCdC/org-jami-bot-20230605.950
+    org-jami-bot.el -> org-jami-bot.el
+Created org-jami-bot-20230605.950.tar containing:
+  org-jami-bot-20230605.950/
+  org-jami-bot-20230605.950/org-jami-bot-pkg.el
+  org-jami-bot-20230605.950/org-jami-bot.el
+Built org-jami-bot in 4.260s, finished at 2023-06-10T22:38:10+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 13K Jun  9 16:32 packages/org-jami-bot-20230605.950.el
+4.0K -rw-r--r-- 1 root root 502 Jun 10 22:38 packages/org-jami-bot-20230605.950.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:38 packages/org-jami-bot-20230605.950.tar

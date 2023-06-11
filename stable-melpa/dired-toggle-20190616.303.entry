@@ -1,6 +1,6 @@
 (dired-toggle .
 	      [(20190616 303)
-	       nil "Show dired as sidebar and will not create new buffers when changing dir" single
+	       nil "Show dired as sidebar and will not create new buffers when changing dir" tar
 	       ((:commit . "b694ba91a45d0762bd032ff1bb4109e4c62ca686")
 		(:authors
 		 ("Xu FaSheng <fasheng[AT]fasheng.info>"))

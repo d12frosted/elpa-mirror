@@ -4,4 +4,16 @@ Source:  https://github.com/waymondo/ace-jump-buffer.git
 
 Updating /mnt/store/melpa/working/ace-jump-buffer/
 Checking out ae5be0415c823f7bb66833aa4af2180d4cf99cef
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ace-jump-buffer/
+  to /tmp/ace-jump-bufferiiD7of/ace-jump-buffer-20171031.1550
+    ace-jump-buffer.el -> ace-jump-buffer.el
+Created ace-jump-buffer-20171031.1550.tar containing:
+  ace-jump-buffer-20171031.1550/
+  ace-jump-buffer-20171031.1550/ace-jump-buffer-pkg.el
+  ace-jump-buffer-20171031.1550/ace-jump-buffer.el
+Built ace-jump-buffer in 3.143s, finished at 2023-06-11T00:02:16+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Jun  9 15:27 packages/ace-jump-buffer-20171031.1550.el
+4.0K -rw-r--r-- 1 root root  459 Jun 11 00:02 packages/ace-jump-buffer-20171031.1550.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:02 packages/ace-jump-buffer-20171031.1550.tar

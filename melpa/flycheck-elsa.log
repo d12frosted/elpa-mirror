@@ -4,4 +4,17 @@ Source:  https://github.com/emacs-elsa/flycheck-elsa.git
 
 Updating /mnt/store/melpa/working/flycheck-elsa/
 Checking out d60db9544d0c4213f2478bcea0fd0e668e31cf34
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-elsa/
+  to /tmp/flycheck-elsapp90Z8/flycheck-elsa-20230217.1640
+    Elsafile.el -> Elsafile.el
+    flycheck-elsa.el -> flycheck-elsa.el
+Created flycheck-elsa-20230217.1640.tar containing:
+  flycheck-elsa-20230217.1640/
+  flycheck-elsa-20230217.1640/Elsafile.el
+  flycheck-elsa-20230217.1640/flycheck-elsa-pkg.el
+  flycheck-elsa-20230217.1640/flycheck-elsa.el
+Built flycheck-elsa in 3.249s, finished at 2023-06-11T00:22:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 474 Jun 11 00:22 packages/flycheck-elsa-20230217.1640.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:22 packages/flycheck-elsa-20230217.1640.tar

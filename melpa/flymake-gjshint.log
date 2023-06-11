@@ -4,4 +4,16 @@ Source:  https://github.com/yasuyk/flymake-gjshint-el.git
 
 Updating /mnt/store/melpa/working/flymake-gjshint/
 Checking out 71495ee5303de18293decd57ab9f9abdbaabfa05
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-gjshint/
+  to /tmp/flymake-gjshinttaOGey/flymake-gjshint-20130327.1232
+    flymake-gjshint.el -> flymake-gjshint.el
+Created flymake-gjshint-20130327.1232.tar containing:
+  flymake-gjshint-20130327.1232/
+  flymake-gjshint-20130327.1232/flymake-gjshint-pkg.el
+  flymake-gjshint-20130327.1232/flymake-gjshint.el
+Built flymake-gjshint in 2.878s, finished at 2023-06-11T00:23:41+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K Jun  9 15:58 packages/flymake-gjshint-20130327.1232.el
+4.0K -rw-r--r-- 1 root root  417 Jun 11 00:23 packages/flymake-gjshint-20130327.1232.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:23 packages/flymake-gjshint-20130327.1232.tar

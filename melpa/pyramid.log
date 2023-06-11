@@ -4,4 +4,23 @@ Source:  https://github.com/dakra/pyramid.el.git
 
 Updating /mnt/store/melpa/working/pyramid/
 Checking out c8a8b36725d85664e74f59600fe5d18d06ea907d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pyramid/
+  to /tmp/pyramidGf7xax/pyramid-20230114.1049
+    pyramid.el -> pyramid.el
+    snippets => snippets
+Created pyramid-20230114.1049.tar containing:
+  pyramid-20230114.1049/
+  pyramid-20230114.1049/pyramid-pkg.el
+  pyramid-20230114.1049/pyramid.el
+  pyramid-20230114.1049/snippets/
+  pyramid-20230114.1049/snippets/python-mode/
+  pyramid-20230114.1049/snippets/python-mode/assign_translate
+  pyramid-20230114.1049/snippets/python-mode/translate
+  pyramid-20230114.1049/snippets/python-mode/view
+  pyramid-20230114.1049/snippets/web-mode/
+  pyramid-20230114.1049/snippets/web-mode/route_url
+Built pyramid in 2.848s, finished at 2023-06-10T22:45:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 525 Jun 10 22:45 packages/pyramid-20230114.1049.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:45 packages/pyramid-20230114.1049.tar

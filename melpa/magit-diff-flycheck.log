@@ -4,4 +4,16 @@ Source:  https://github.com/ragone/magit-diff-flycheck.git
 
 Updating /mnt/store/melpa/working/magit-diff-flycheck/
 Checking out ad58efa312d708f25661dfcc2a7f83a833cca328
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magit-diff-flycheck/
+  to /tmp/magit-diff-flycheck17Wnd5/magit-diff-flycheck-20190524.551
+    magit-diff-flycheck.el -> magit-diff-flycheck.el
+Created magit-diff-flycheck-20190524.551.tar containing:
+  magit-diff-flycheck-20190524.551/
+  magit-diff-flycheck-20190524.551/magit-diff-flycheck-pkg.el
+  magit-diff-flycheck-20190524.551/magit-diff-flycheck.el
+Built magit-diff-flycheck in 2.274s, finished at 2023-06-10T22:30:50+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:20 packages/magit-diff-flycheck-20190524.551.el
+4.0K -rw-r--r-- 1 root root 552 Jun 10 22:30 packages/magit-diff-flycheck-20190524.551.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:30 packages/magit-diff-flycheck-20190524.551.tar

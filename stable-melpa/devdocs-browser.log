@@ -4,4 +4,16 @@ Source:  https://github.com/blahgeek/emacs-devdocs-browser.git
 
 Updating /mnt/store/melpa/working/devdocs-browser/
 Checking out ef7686e4ff4ecab42e1b4a1a5d079bcf947a5b71
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/devdocs-browser/
+  to /tmp/devdocs-browser9U5WoY/devdocs-browser-20230423.444
+    devdocs-browser.el -> devdocs-browser.el
+Created devdocs-browser-20230423.444.tar containing:
+  devdocs-browser-20230423.444/
+  devdocs-browser-20230423.444/devdocs-browser-pkg.el
+  devdocs-browser-20230423.444/devdocs-browser.el
+Built devdocs-browser in 3.047s, finished at 2023-06-11T00:12:54+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  9 15:43 packages/devdocs-browser-20230423.444.el
+4.0K -rw-r--r-- 1 root root 442 Jun 11 00:12 packages/devdocs-browser-20230423.444.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 11 00:12 packages/devdocs-browser-20230423.444.tar

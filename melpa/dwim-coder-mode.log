@@ -4,4 +4,25 @@ Source:  https://gitlab.com/sadiq/dwim-coder-mode.git
 
 Updating /mnt/store/melpa/working/dwim-coder-mode/
 Checking out c8c5b3981bd44bee7ab59eb0a686c8841975a2c3
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dwim-coder-mode/
+  to /tmp/dwim-coder-modetA1Ufh/dwim-coder-mode-20230602.334
+    dwim-coder-c.el -> dwim-coder-c.el
+    dwim-coder-common.el -> dwim-coder-common.el
+    dwim-coder-default.el -> dwim-coder-default.el
+    dwim-coder-mode.el -> dwim-coder-mode.el
+    dwim-coder-python.el -> dwim-coder-python.el
+    dwim-coder-rust.el -> dwim-coder-rust.el
+Created dwim-coder-mode-20230602.334.tar containing:
+  dwim-coder-mode-20230602.334/
+  dwim-coder-mode-20230602.334/dwim-coder-c.el
+  dwim-coder-mode-20230602.334/dwim-coder-common.el
+  dwim-coder-mode-20230602.334/dwim-coder-default.el
+  dwim-coder-mode-20230602.334/dwim-coder-mode-pkg.el
+  dwim-coder-mode-20230602.334/dwim-coder-mode.el
+  dwim-coder-mode-20230602.334/dwim-coder-python.el
+  dwim-coder-mode-20230602.334/dwim-coder-rust.el
+Built dwim-coder-mode in 3.342s, finished at 2023-06-11T00:15:23+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 468 Jun 11 00:15 packages/dwim-coder-mode-20230602.334.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 11 00:15 packages/dwim-coder-mode-20230602.334.tar

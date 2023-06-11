@@ -4,4 +4,16 @@ Source:  https://github.com/zzkt/metabrainz.git
 
 Updating /mnt/store/melpa/working/musicbrainz/
 Checking out 986690a515e67526598eaa4200bd383f03a007bd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/musicbrainz/
+  to /tmp/musicbrainzVzgRvD/musicbrainz-20230530.749
+    musicbrainz.el -> musicbrainz.el
+Created musicbrainz-20230530.749.tar containing:
+  musicbrainz-20230530.749/
+  musicbrainz-20230530.749/musicbrainz-pkg.el
+  musicbrainz-20230530.749/musicbrainz.el
+Built musicbrainz in 3.021s, finished at 2023-06-10T22:34:22+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root 34K Jun  9 16:25 packages/musicbrainz-20230530.749.el
+4.0K -rw-r--r-- 1 root root 458 Jun 10 22:34 packages/musicbrainz-20230530.749.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 10 22:34 packages/musicbrainz-20230530.749.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/emacs-helm/helm-notmuch.git
 
 Updating /mnt/store/melpa/working/helm-notmuch/
 Checking out 97a01497e079a7b6505987e9feba6b603bbec288
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-notmuch/
+  to /tmp/helm-notmuchMyilj1/helm-notmuch-20190320.1048
+    helm-notmuch.el -> helm-notmuch.el
+Created helm-notmuch-20190320.1048.tar containing:
+  helm-notmuch-20190320.1048/
+  helm-notmuch-20190320.1048/helm-notmuch-pkg.el
+  helm-notmuch-20190320.1048/helm-notmuch.el
+Built helm-notmuch in 2.787s, finished at 2023-06-10T22:21:52+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jun  9 16:07 packages/helm-notmuch-20190320.1048.el
+4.0K -rw-r--r-- 1 root root  451 Jun 10 22:21 packages/helm-notmuch-20190320.1048.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:21 packages/helm-notmuch-20190320.1048.tar

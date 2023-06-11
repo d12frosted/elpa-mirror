@@ -4,4 +4,16 @@ Source:  https://github.com/DarwinAwardWinner/emacs-named-timer.git
 
 Updating /mnt/store/melpa/working/named-timer/
 Checking out 670b81e3eddef2e7353a4eedc9553a85306445db
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/named-timer/
+  to /tmp/named-timerEHA7R7/named-timer-20181120.2224
+    named-timer.el -> named-timer.el
+Created named-timer-20181120.2224.tar containing:
+  named-timer-20181120.2224/
+  named-timer-20181120.2224/named-timer-pkg.el
+  named-timer-20181120.2224/named-timer.el
+Built named-timer in 4.314s, finished at 2023-06-10T22:34:43+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jun  9 16:26 packages/named-timer-20181120.2224.el
+4.0K -rw-r--r-- 1 root root  417 Jun 10 22:34 packages/named-timer-20181120.2224.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:34 packages/named-timer-20181120.2224.tar

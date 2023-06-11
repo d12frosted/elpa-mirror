@@ -4,4 +4,31 @@ Source:  https://github.com/swift-emacs/swift-mode.git
 
 Updating /mnt/store/melpa/working/swift-mode/
 Checking out 83b691db601afaa09f0da48f20cdb399086823e2
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/swift-mode/
+  to /tmp/swift-modecvSh7L/swift-mode-20230603.809
+    swift-mode-beginning-of-defun.el -> swift-mode-beginning-of-defun.el
+    swift-mode-fill.el -> swift-mode-fill.el
+    swift-mode-font-lock.el -> swift-mode-font-lock.el
+    swift-mode-imenu.el -> swift-mode-imenu.el
+    swift-mode-indent.el -> swift-mode-indent.el
+    swift-mode-lexer.el -> swift-mode-lexer.el
+    swift-mode-repl.el -> swift-mode-repl.el
+    swift-mode-standard-types.el -> swift-mode-standard-types.el
+    swift-mode.el -> swift-mode.el
+Created swift-mode-20230603.809.tar containing:
+  swift-mode-20230603.809/
+  swift-mode-20230603.809/swift-mode-beginning-of-defun.el
+  swift-mode-20230603.809/swift-mode-fill.el
+  swift-mode-20230603.809/swift-mode-font-lock.el
+  swift-mode-20230603.809/swift-mode-imenu.el
+  swift-mode-20230603.809/swift-mode-indent.el
+  swift-mode-20230603.809/swift-mode-lexer.el
+  swift-mode-20230603.809/swift-mode-pkg.el
+  swift-mode-20230603.809/swift-mode-repl.el
+  swift-mode-20230603.809/swift-mode-standard-types.el
+  swift-mode-20230603.809/swift-mode.el
+Built swift-mode in 4.672s, finished at 2023-06-10T22:52:38+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  675 Jun 10 22:52 packages/swift-mode-20230603.809.entry
+472K -rw-r--r-- 1 root root 470K Jun 10 22:52 packages/swift-mode-20230603.809.tar

@@ -4,4 +4,37 @@ Source:  https://github.com/nnicandro/emacs-zmq.git
 
 Updating /mnt/store/melpa/working/zmq/
 Checking out 9d5679c54f361f518a426586b51686674fd3b0fa
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zmq/
+  to /tmp/zmqbb4ZYn/zmq-20230608.1856
+    zmq.el -> zmq.el
+    Makefile -> Makefile
+    src => src
+Created zmq-20230608.1856.tar containing:
+  zmq-20230608.1856/
+  zmq-20230608.1856/Makefile
+  zmq-20230608.1856/src/
+  zmq-20230608.1856/src/Makefile.am
+  zmq-20230608.1856/src/configure.ac
+  zmq-20230608.1856/src/constants.c
+  zmq-20230608.1856/src/context.c
+  zmq-20230608.1856/src/context.h
+  zmq-20230608.1856/src/core.c
+  zmq-20230608.1856/src/core.h
+  zmq-20230608.1856/src/emacs-module.h
+  zmq-20230608.1856/src/emacs-zmq.c
+  zmq-20230608.1856/src/emacs-zmq.h
+  zmq-20230608.1856/src/msg.c
+  zmq-20230608.1856/src/msg.h
+  zmq-20230608.1856/src/poll.c
+  zmq-20230608.1856/src/poll.h
+  zmq-20230608.1856/src/socket.c
+  zmq-20230608.1856/src/socket.h
+  zmq-20230608.1856/src/util.c
+  zmq-20230608.1856/src/util.h
+  zmq-20230608.1856/zmq-pkg.el
+  zmq-20230608.1856/zmq.el
+Built zmq in 3.868s, finished at 2023-06-10T23:00:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  482 Jun 10 23:00 packages/zmq-20230608.1856.entry
+152K -rw-r--r-- 1 root root 150K Jun 10 23:00 packages/zmq-20230608.1856.tar

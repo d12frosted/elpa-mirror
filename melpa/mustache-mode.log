@@ -4,4 +4,16 @@ Source:  https://github.com/mustache/emacs.git
 
 Updating /mnt/store/melpa/working/mustache-mode/
 Checking out bf9897eb287ca47ced65d7d4e07ea61ea0aec39f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mustache-mode/
+  to /tmp/mustache-modevQw0kW/mustache-mode-20141024.1432
+    mustache-mode.el -> mustache-mode.el
+Created mustache-mode-20141024.1432.tar containing:
+  mustache-mode-20141024.1432/
+  mustache-mode-20141024.1432/mustache-mode-pkg.el
+  mustache-mode-20141024.1432/mustache-mode.el
+Built mustache-mode in 3.296s, finished at 2023-06-10T22:34:24+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 10K Jun  9 16:25 packages/mustache-mode-20141024.1432.el
+4.0K -rw-r--r-- 1 root root 318 Jun 10 22:34 packages/mustache-mode-20141024.1432.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:34 packages/mustache-mode-20141024.1432.tar

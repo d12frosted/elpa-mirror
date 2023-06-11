@@ -4,4 +4,29 @@ Source:  https://github.com/facetframer/orgnav.git
 
 Updating /mnt/store/melpa/working/orgnav/
 Checking out 9e2cac9c1a67af5f0080e60022e821bf7b70312d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/orgnav/
+  to /tmp/orgnav5axSUw/orgnav-20170608.1713
+    orgnav-capture.el -> orgnav-capture.el
+    orgnav-clock.el -> orgnav-clock.el
+    orgnav-hack.el -> orgnav-hack.el
+    orgnav-link.el -> orgnav-link.el
+    orgnav-log.el -> orgnav-log.el
+    orgnav-refile.el -> orgnav-refile.el
+    orgnav-tree.el -> orgnav-tree.el
+    orgnav.el -> orgnav.el
+Created orgnav-20170608.1713.tar containing:
+  orgnav-20170608.1713/
+  orgnav-20170608.1713/orgnav-capture.el
+  orgnav-20170608.1713/orgnav-clock.el
+  orgnav-20170608.1713/orgnav-hack.el
+  orgnav-20170608.1713/orgnav-link.el
+  orgnav-20170608.1713/orgnav-log.el
+  orgnav-20170608.1713/orgnav-pkg.el
+  orgnav-20170608.1713/orgnav-refile.el
+  orgnav-20170608.1713/orgnav-tree.el
+  orgnav-20170608.1713/orgnav.el
+Built orgnav in 5.273s, finished at 2023-06-10T22:39:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 489 Jun 10 22:39 packages/orgnav-20170608.1713.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:39 packages/orgnav-20170608.1713.tar

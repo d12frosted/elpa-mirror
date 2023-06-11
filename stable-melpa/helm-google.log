@@ -4,4 +4,16 @@ Source:  https://framagit.org/steckerhalter/helm-google.git
 
 Updating /mnt/store/melpa/working/helm-google/
 Checking out 27834161391c350ef790062391cb7eab1d59fb62
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-google/
+  to /tmp/helm-google8Z10h6/helm-google-20210527.900
+    helm-google.el -> helm-google.el
+Created helm-google-20210527.900.tar containing:
+  helm-google-20210527.900/
+  helm-google-20210527.900/helm-google-pkg.el
+  helm-google-20210527.900/helm-google.el
+Built helm-google in 4.390s, finished at 2023-06-11T00:29:50+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K Jun  9 16:06 packages/helm-google-20210527.900.el
+4.0K -rw-r--r-- 1 root root  433 Jun 11 00:29 packages/helm-google-20210527.900.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:29 packages/helm-google-20210527.900.tar

@@ -4,4 +4,34 @@ Source:  https://github.com/toumorokoshi/go-snippets.git
 
 Updating /mnt/store/melpa/working/go-snippets/
 Checking out d437df148879566ffe7f2e503a3cf2602aa9fb28
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/go-snippets/
+  to /tmp/go-snippetsVtZzqI/go-snippets-20180113.611
+    go-snippets-pkg.el -> go-snippets-pkg.el
+    go-snippets.el -> go-snippets.el
+    snippets => snippets
+Created go-snippets-20180113.611.tar containing:
+  go-snippets-20180113.611/
+  go-snippets-20180113.611/go-snippets-pkg.el
+  go-snippets-20180113.611/go-snippets.el
+  go-snippets-20180113.611/snippets/
+  go-snippets-20180113.611/snippets/go-mode/
+  go-snippets-20180113.611/snippets/go-mode/.yas-parents
+  go-snippets-20180113.611/snippets/go-mode/bench
+  go-snippets-20180113.611/snippets/go-mode/exit
+  go-snippets-20180113.611/snippets/go-mode/for
+  go-snippets-20180113.611/snippets/go-mode/func
+  go-snippets-20180113.611/snippets/go-mode/helloworld
+  go-snippets-20180113.611/snippets/go-mode/if
+  go-snippets-20180113.611/snippets/go-mode/ifelse
+  go-snippets-20180113.611/snippets/go-mode/interface
+  go-snippets-20180113.611/snippets/go-mode/main
+  go-snippets-20180113.611/snippets/go-mode/make
+  go-snippets-20180113.611/snippets/go-mode/method
+  go-snippets-20180113.611/snippets/go-mode/select
+  go-snippets-20180113.611/snippets/go-mode/struct
+  go-snippets-20180113.611/snippets/go-mode/test
+Built go-snippets in 6.434s, finished at 2023-06-11T00:27:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 196 Jun 11 00:27 packages/go-snippets-20180113.611.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:27 packages/go-snippets-20180113.611.tar

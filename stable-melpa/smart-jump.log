@@ -4,4 +4,41 @@ Source:  https://github.com/jojojames/smart-jump.git
 
 Updating /mnt/store/melpa/working/smart-jump/
 Checking out 3392eb35e3cde37e6f5f2a48dc0db15ca535143c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smart-jump/
+  to /tmp/smart-jumpJ0OzYm/smart-jump-20210304.844
+    smart-jump-cc-mode.el -> smart-jump-cc-mode.el
+    smart-jump-clojure-mode.el -> smart-jump-clojure-mode.el
+    smart-jump-csharp-mode.el -> smart-jump-csharp-mode.el
+    smart-jump-elisp-mode.el -> smart-jump-elisp-mode.el
+    smart-jump-elixir-mode.el -> smart-jump-elixir-mode.el
+    smart-jump-go-mode.el -> smart-jump-go-mode.el
+    smart-jump-lisp-mode.el -> smart-jump-lisp-mode.el
+    smart-jump-lispy.el -> smart-jump-lispy.el
+    smart-jump-python.el -> smart-jump-python.el
+    smart-jump-ruby-mode.el -> smart-jump-ruby-mode.el
+    smart-jump-rust-mode.el -> smart-jump-rust-mode.el
+    smart-jump-scheme.el -> smart-jump-scheme.el
+    smart-jump-typescript-mode.el -> smart-jump-typescript-mode.el
+    smart-jump.el -> smart-jump.el
+Created smart-jump-20210304.844.tar containing:
+  smart-jump-20210304.844/
+  smart-jump-20210304.844/smart-jump-cc-mode.el
+  smart-jump-20210304.844/smart-jump-clojure-mode.el
+  smart-jump-20210304.844/smart-jump-csharp-mode.el
+  smart-jump-20210304.844/smart-jump-elisp-mode.el
+  smart-jump-20210304.844/smart-jump-elixir-mode.el
+  smart-jump-20210304.844/smart-jump-go-mode.el
+  smart-jump-20210304.844/smart-jump-lisp-mode.el
+  smart-jump-20210304.844/smart-jump-lispy.el
+  smart-jump-20210304.844/smart-jump-pkg.el
+  smart-jump-20210304.844/smart-jump-python.el
+  smart-jump-20210304.844/smart-jump-ruby-mode.el
+  smart-jump-20210304.844/smart-jump-rust-mode.el
+  smart-jump-20210304.844/smart-jump-scheme.el
+  smart-jump-20210304.844/smart-jump-typescript-mode.el
+  smart-jump-20210304.844/smart-jump.el
+Built smart-jump in 3.138s, finished at 2023-06-10T22:50:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 450 Jun 10 22:50 packages/smart-jump-20210304.844.entry
+ 72K -rw-r--r-- 1 root root 70K Jun 10 22:50 packages/smart-jump-20210304.844.tar

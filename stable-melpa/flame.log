@@ -4,4 +4,16 @@ Source:  https://github.com/mschuldt/flame.git
 
 Updating /mnt/store/melpa/working/flame/
 Checking out 2cfb860a483197e92a4c20d7b9b055d586e76fe0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flame/
+  to /tmp/flamevo33Jj/flame-20180303.2016
+    flame.el -> flame.el
+Created flame-20180303.2016.tar containing:
+  flame-20180303.2016/
+  flame-20180303.2016/flame-pkg.el
+  flame-20180303.2016/flame.el
+Built flame in 2.979s, finished at 2023-06-11T00:21:58+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 21K Jun  9 15:55 packages/flame-20180303.2016.el
+4.0K -rw-r--r-- 1 root root 470 Jun 11 00:21 packages/flame-20180303.2016.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 11 00:21 packages/flame-20180303.2016.tar

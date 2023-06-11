@@ -4,4 +4,16 @@ Source:  https://github.com/tttuuu888/korean-holidays.git
 
 Updating /mnt/store/melpa/working/korean-holidays/
 Checking out 3f90ed86f46f8e5533f23baa40e2513ac497ca2b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/korean-holidays/
+  to /tmp/korean-holidayscsZHri/korean-holidays-20190102.1558
+    korean-holidays.el -> korean-holidays.el
+Created korean-holidays-20190102.1558.tar containing:
+  korean-holidays-20190102.1558/
+  korean-holidays-20190102.1558/korean-holidays-pkg.el
+  korean-holidays-20190102.1558/korean-holidays.el
+Built korean-holidays in 3.594s, finished at 2023-06-10T22:28:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.8K Jun  9 16:17 packages/korean-holidays-20190102.1558.el
+4.0K -rw-r--r-- 1 root root  420 Jun 10 22:28 packages/korean-holidays-20190102.1558.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:28 packages/korean-holidays-20190102.1558.tar

@@ -4,4 +4,21 @@ Source:  https://github.com/osv/company-web.git
 
 Updating /mnt/store/melpa/working/company-web/
 Checking out e0c6bfa3ae7006c73d0fdfc0fdb69816309baf1b
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-web/
+  to /tmp/company-webP97P6g/company-web-20220115.2146
+    company-web-html.el -> company-web-html.el
+    company-web-jade.el -> company-web-jade.el
+    company-web-slim.el -> company-web-slim.el
+    company-web.el -> company-web.el
+Created company-web-20220115.2146.tar containing:
+  company-web-20220115.2146/
+  company-web-20220115.2146/company-web-html.el
+  company-web-20220115.2146/company-web-jade.el
+  company-web-20220115.2146/company-web-pkg.el
+  company-web-20220115.2146/company-web-slim.el
+  company-web-20220115.2146/company-web.el
+Built company-web in 2.780s, finished at 2023-06-11T00:10:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 617 Jun 11 00:10 packages/company-web-20220115.2146.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:10 packages/company-web-20220115.2146.tar

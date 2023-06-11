@@ -4,4 +4,16 @@ Source:  https://github.com/arturovm/shades-of-purple-emacs.git
 
 Updating /mnt/store/melpa/working/shades-of-purple-theme/
 Checking out 8757594c5f6265b09d156cf9f8671f78863b25db
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shades-of-purple-theme/
+  to /tmp/shades-of-purple-themeSA6OBP/shades-of-purple-theme-20230421.2059
+    shades-of-purple-theme.el -> shades-of-purple-theme.el
+Created shades-of-purple-theme-20230421.2059.tar containing:
+  shades-of-purple-theme-20230421.2059/
+  shades-of-purple-theme-20230421.2059/shades-of-purple-theme-pkg.el
+  shades-of-purple-theme-20230421.2059/shades-of-purple-theme.el
+Built shades-of-purple-theme in 3.144s, finished at 2023-06-10T22:49:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jun  9 16:47 packages/shades-of-purple-theme-20230421.2059.el
+4.0K -rw-r--r-- 1 root root  419 Jun 10 22:49 packages/shades-of-purple-theme-20230421.2059.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:49 packages/shades-of-purple-theme-20230421.2059.tar

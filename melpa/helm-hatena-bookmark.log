@@ -4,4 +4,16 @@ Source:  https://github.com/masutaka/emacs-helm-hatena-bookmark.git
 
 Updating /mnt/store/melpa/working/helm-hatena-bookmark/
 Checking out a6a2b37370ac84ca2cae5ef65b2b144a010b1584
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-hatena-bookmark/
+  to /tmp/helm-hatena-bookmark3ugRDH/helm-hatena-bookmark-20210724.732
+    helm-hatena-bookmark.el -> helm-hatena-bookmark.el
+Created helm-hatena-bookmark-20210724.732.tar containing:
+  helm-hatena-bookmark-20210724.732/
+  helm-hatena-bookmark-20210724.732/helm-hatena-bookmark-pkg.el
+  helm-hatena-bookmark-20210724.732/helm-hatena-bookmark.el
+Built helm-hatena-bookmark in 2.649s, finished at 2023-06-10T22:21:32+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 12K Jun  9 16:06 packages/helm-hatena-bookmark-20210724.732.el
+4.0K -rw-r--r-- 1 root root 480 Jun 10 22:21 packages/helm-hatena-bookmark-20210724.732.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:21 packages/helm-hatena-bookmark-20210724.732.tar

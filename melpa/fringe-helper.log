@@ -4,4 +4,16 @@ Source:  https://github.com/nschum/fringe-helper.el.git
 
 Updating /mnt/store/melpa/working/fringe-helper/
 Checking out 9bc3d3e82c9cc3937aa090248dc4dd2e289fc55c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fringe-helper/
+  to /tmp/fringe-helperEaOtIo/fringe-helper-20140620.2109
+    fringe-helper.el -> fringe-helper.el
+Created fringe-helper-20140620.2109.tar containing:
+  fringe-helper-20140620.2109/
+  fringe-helper-20140620.2109/fringe-helper-pkg.el
+  fringe-helper-20140620.2109/fringe-helper.el
+Built fringe-helper in 2.876s, finished at 2023-06-11T00:24:52+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 15:59 packages/fringe-helper-20140620.2109.el
+4.0K -rw-r--r-- 1 root root 410 Jun 11 00:24 packages/fringe-helper-20140620.2109.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:24 packages/fringe-helper-20140620.2109.tar

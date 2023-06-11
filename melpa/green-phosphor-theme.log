@@ -4,4 +4,16 @@ Source:  https://github.com/aalpern/emacs-color-theme-green-phosphor.git
 
 Updating /mnt/store/melpa/working/green-phosphor-theme/
 Checking out 5549781559ff5daa85c1d6c635c94524c1c5f644
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/green-phosphor-theme/
+  to /tmp/green-phosphor-theme765RSU/green-phosphor-theme-20150515.1447
+    green-phosphor-theme.el -> green-phosphor-theme.el
+Created green-phosphor-theme-20150515.1447.tar containing:
+  green-phosphor-theme-20150515.1447/
+  green-phosphor-theme-20150515.1447/green-phosphor-theme-pkg.el
+  green-phosphor-theme-20150515.1447/green-phosphor-theme.el
+Built green-phosphor-theme in 4.296s, finished at 2023-06-10T22:19:21+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun  9 16:04 packages/green-phosphor-theme-20150515.1447.el
+4.0K -rw-r--r-- 1 root root  470 Jun 10 22:19 packages/green-phosphor-theme-20150515.1447.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:19 packages/green-phosphor-theme-20150515.1447.tar

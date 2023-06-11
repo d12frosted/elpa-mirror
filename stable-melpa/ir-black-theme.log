@@ -4,4 +4,16 @@ Source:  https://github.com/jmdeldin/ir-black-theme.el.git
 
 Updating /mnt/store/melpa/working/ir-black-theme/
 Checking out ee6078bc67cbc15184e64e0f1fc8542d4079d55f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ir-black-theme/
+  to /tmp/ir-black-themeztY9De/ir-black-theme-20130303.755
+    ir-black-theme.el -> ir-black-theme.el
+Created ir-black-theme-20130303.755.tar containing:
+  ir-black-theme-20130303.755/
+  ir-black-theme-20130303.755/ir-black-theme-pkg.el
+  ir-black-theme-20130303.755/ir-black-theme.el
+Built ir-black-theme in 2.903s, finished at 2023-06-10T22:25:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jun  9 16:13 packages/ir-black-theme-20130303.755.el
+4.0K -rw-r--r-- 1 root root  350 Jun 10 22:25 packages/ir-black-theme-20130303.755.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:25 packages/ir-black-theme-20130303.755.tar

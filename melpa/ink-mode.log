@@ -4,4 +4,29 @@ Source:  https://github.com/Kungsgeten/ink-mode.git
 
 Updating /mnt/store/melpa/working/ink-mode/
 Checking out 71d215712067729eb92e766a3b2067e7f3254183
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ink-mode/
+  to /tmp/ink-modeAJ7MeP/ink-mode-20201105.2242
+    ink-mode.el -> ink-mode.el
+  ! doc/WritingWithInk.texi -> WritingWithInk.texi
+    snippets => snippets
+Generating /tmp/ink-modeAJ7MeP/ink-mode-20201105.2242/WritingWithInk.info
+Created ink-mode-20201105.2242.tar containing:
+  ink-mode-20201105.2242/
+  ink-mode-20201105.2242/WritingWithInk.info
+  ink-mode-20201105.2242/dir
+  ink-mode-20201105.2242/ink-mode-pkg.el
+  ink-mode-20201105.2242/ink-mode.el
+  ink-mode-20201105.2242/snippets/
+  ink-mode-20201105.2242/snippets/ink-mode/
+  ink-mode-20201105.2242/snippets/ink-mode/choice_once
+  ink-mode-20201105.2242/snippets/ink-mode/choice_sticky
+  ink-mode-20201105.2242/snippets/ink-mode/condition
+  ink-mode-20201105.2242/snippets/ink-mode/condition_multiline
+  ink-mode-20201105.2242/snippets/ink-mode/divert
+  ink-mode-20201105.2242/snippets/ink-mode/knot
+  ink-mode-20201105.2242/snippets/ink-mode/stitch
+Built ink-mode in 13.331s, finished at 2023-06-10T22:25:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  429 Jun 10 22:25 packages/ink-mode-20201105.2242.entry
+220K -rw-r--r-- 1 root root 220K Jun 10 22:25 packages/ink-mode-20201105.2242.tar

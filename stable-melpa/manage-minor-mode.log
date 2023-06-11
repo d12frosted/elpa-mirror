@@ -4,4 +4,16 @@ Source:  https://github.com/emacsorphanage/manage-minor-mode.git
 
 Updating /mnt/store/melpa/working/manage-minor-mode/
 Checking out f4b37fffec7b6608a597e6a3f6900634802807b4
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/manage-minor-mode/
+  to /tmp/manage-minor-modewkZpg7/manage-minor-mode-20210108.1832
+    manage-minor-mode.el -> manage-minor-mode.el
+Created manage-minor-mode-20210108.1832.tar containing:
+  manage-minor-mode-20210108.1832/
+  manage-minor-mode-20210108.1832/manage-minor-mode-pkg.el
+  manage-minor-mode-20210108.1832/manage-minor-mode.el
+Built manage-minor-mode in 3.006s, finished at 2023-06-10T22:31:24+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 20K Jun  9 16:21 packages/manage-minor-mode-20210108.1832.el
+4.0K -rw-r--r-- 1 root root 511 Jun 10 22:31 packages/manage-minor-mode-20210108.1832.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:31 packages/manage-minor-mode-20210108.1832.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/DLaps/flycheck-clolyze.git
 
 Updating /mnt/store/melpa/working/flycheck-clolyze/
 Checking out 9a3300eac22a7ff96accf37fa2d761c13cc38020
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-clolyze/
+  to /tmp/flycheck-clolyzeV2NTyn/flycheck-clolyze-20190422.2134
+    flycheck-clolyze.el -> flycheck-clolyze.el
+Created flycheck-clolyze-20190422.2134.tar containing:
+  flycheck-clolyze-20190422.2134/
+  flycheck-clolyze-20190422.2134/flycheck-clolyze-pkg.el
+  flycheck-clolyze-20190422.2134/flycheck-clolyze.el
+Built flycheck-clolyze in 2.865s, finished at 2023-06-11T00:22:29+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.6K Jun  9 15:56 packages/flycheck-clolyze-20190422.2134.el
+4.0K -rw-r--r-- 1 root root  447 Jun 11 00:22 packages/flycheck-clolyze-20190422.2134.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:22 packages/flycheck-clolyze-20190422.2134.tar

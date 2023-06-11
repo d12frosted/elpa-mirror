@@ -4,4 +4,16 @@ Source:  https://github.com/ppareit/graphviz-dot-mode.git
 
 Updating /mnt/store/melpa/working/graphviz-dot-mode/
 Checking out 8ff793b13707cb511875f56e167ff7f980a31136
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/graphviz-dot-mode/
+  to /tmp/graphviz-dot-modeTdsiOb/graphviz-dot-mode-20230325.1050
+    graphviz-dot-mode.el -> graphviz-dot-mode.el
+Created graphviz-dot-mode-20230325.1050.tar containing:
+  graphviz-dot-mode-20230325.1050/
+  graphviz-dot-mode-20230325.1050/graphviz-dot-mode-pkg.el
+  graphviz-dot-mode-20230325.1050/graphviz-dot-mode.el
+Built graphviz-dot-mode in 4.917s, finished at 2023-06-10T22:19:19+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 42K Jun  9 16:04 packages/graphviz-dot-mode-20230325.1050.el
+4.0K -rw-r--r-- 1 root root 492 Jun 10 22:19 packages/graphviz-dot-mode-20230325.1050.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 10 22:19 packages/graphviz-dot-mode-20230325.1050.tar

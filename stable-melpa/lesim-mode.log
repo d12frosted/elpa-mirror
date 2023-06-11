@@ -4,4 +4,29 @@ Source:  https://github.com/drghirlanda/lesim-mode.git
 
 Updating /mnt/store/melpa/working/lesim-mode/
 Checking out 2e3be0e7b00996ac52e9f3b4b5b08f319b3ef6dd
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lesim-mode/
+  to /tmp/lesim-mode9MQ8Lh/lesim-mode-20230609.2202
+    lesim-align.el -> lesim-align.el
+    lesim-custom.el -> lesim-custom.el
+    lesim-highlight.el -> lesim-highlight.el
+    lesim-locate.el -> lesim-locate.el
+    lesim-mode.el -> lesim-mode.el
+    lesim-online.el -> lesim-online.el
+    lesim-run.el -> lesim-run.el
+    lesim-type.el -> lesim-type.el
+Created lesim-mode-20230609.2202.tar containing:
+  lesim-mode-20230609.2202/
+  lesim-mode-20230609.2202/lesim-align.el
+  lesim-mode-20230609.2202/lesim-custom.el
+  lesim-mode-20230609.2202/lesim-highlight.el
+  lesim-mode-20230609.2202/lesim-locate.el
+  lesim-mode-20230609.2202/lesim-mode-pkg.el
+  lesim-mode-20230609.2202/lesim-mode.el
+  lesim-mode-20230609.2202/lesim-online.el
+  lesim-mode-20230609.2202/lesim-run.el
+  lesim-mode-20230609.2202/lesim-type.el
+Built lesim-mode in 3.245s, finished at 2023-06-10T22:29:02+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 504 Jun 10 22:29 packages/lesim-mode-20230609.2202.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 10 22:29 packages/lesim-mode-20230609.2202.tar

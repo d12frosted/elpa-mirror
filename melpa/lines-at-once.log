@@ -4,4 +4,16 @@ Source:  https://github.com/jiahaoli95/lines-at-once.el.git
 
 Updating /mnt/store/melpa/working/lines-at-once/
 Checking out a018ba90549384d52ec58c2685fd14a0f65252be
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lines-at-once/
+  to /tmp/lines-at-once1URvgK/lines-at-once-20180422.247
+    lines-at-once.el -> lines-at-once.el
+Created lines-at-once-20180422.247.tar containing:
+  lines-at-once-20180422.247/
+  lines-at-once-20180422.247/lines-at-once-pkg.el
+  lines-at-once-20180422.247/lines-at-once.el
+Built lines-at-once in 2.274s, finished at 2023-06-10T22:29:19+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Jun  9 16:18 packages/lines-at-once-20180422.247.el
+4.0K -rw-r--r-- 1 root root  435 Jun 10 22:29 packages/lines-at-once-20180422.247.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:29 packages/lines-at-once-20180422.247.tar

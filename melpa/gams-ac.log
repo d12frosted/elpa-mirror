@@ -4,4 +4,16 @@ Source:  https://github.com/ShiroTakeda/gams-ac.git
 
 Updating /mnt/store/melpa/working/gams-ac/
 Checking out 66d04ff36033f54205c19bc1d893e926d4dbf02e
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gams-ac/
+  to /tmp/gams-acSIYyis/gams-ac-20180423.926
+    gams-ac.el -> gams-ac.el
+Created gams-ac-20180423.926.tar containing:
+  gams-ac-20180423.926/
+  gams-ac-20180423.926/gams-ac-pkg.el
+  gams-ac-20180423.926/gams-ac.el
+Built gams-ac in 3.150s, finished at 2023-06-11T00:25:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.5K Jun  9 15:59 packages/gams-ac-20180423.926.el
+4.0K -rw-r--r-- 1 root root  450 Jun 11 00:25 packages/gams-ac-20180423.926.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:25 packages/gams-ac-20180423.926.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/lassik/emacs-language-id.git
 
 Updating /mnt/store/melpa/working/language-id/
 Checking out 06f960f733e5958c4fe0e52db666ce6f6710f508
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/language-id/
+  to /tmp/language-idVuYOVO/language-id-20230527.1312
+    language-id.el -> language-id.el
+Created language-id-20230527.1312.tar containing:
+  language-id-20230527.1312/
+  language-id-20230527.1312/language-id-pkg.el
+  language-id-20230527.1312/language-id.el
+Built language-id in 3.561s, finished at 2023-06-10T22:28:38+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jun  9 16:17 packages/language-id-20230527.1312.el
+4.0K -rw-r--r-- 1 root root  476 Jun 10 22:28 packages/language-id-20230527.1312.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:28 packages/language-id-20230527.1312.tar

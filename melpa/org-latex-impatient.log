@@ -4,4 +4,16 @@ Source:  https://github.com/yangsheng6810/org-latex-impatient.git
 
 Updating /mnt/store/melpa/working/org-latex-impatient/
 Checking out 031025a8be9bf7255aa047388d027642cd2d6183
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-latex-impatient/
+  to /tmp/org-latex-impatientosTyJr/org-latex-impatient-20221111.623
+    org-latex-impatient.el -> org-latex-impatient.el
+Created org-latex-impatient-20221111.623.tar containing:
+  org-latex-impatient-20221111.623/
+  org-latex-impatient-20221111.623/org-latex-impatient-pkg.el
+  org-latex-impatient-20221111.623/org-latex-impatient.el
+Built org-latex-impatient in 3.285s, finished at 2023-06-10T22:38:14+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:32 packages/org-latex-impatient-20221111.623.el
+4.0K -rw-r--r-- 1 root root 612 Jun 10 22:38 packages/org-latex-impatient-20221111.623.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:38 packages/org-latex-impatient-20221111.623.tar

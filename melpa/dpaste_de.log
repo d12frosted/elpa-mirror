@@ -4,4 +4,16 @@ Source:  https://github.com/theju/dpaste_de.el.git
 
 Updating /mnt/store/melpa/working/dpaste_de/
 Checking out ab041443884a7a4bfdc81b055688821e8efc9b02
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dpaste_de/
+  to /tmp/dpaste_delxBNBn/dpaste_de-20131015.1225
+    dpaste_de.el -> dpaste_de.el
+Created dpaste_de-20131015.1225.tar containing:
+  dpaste_de-20131015.1225/
+  dpaste_de-20131015.1225/dpaste_de-pkg.el
+  dpaste_de-20131015.1225/dpaste_de.el
+Built dpaste_de in 3.536s, finished at 2023-06-11T00:15:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Jun  9 15:46 packages/dpaste_de-20131015.1225.el
+4.0K -rw-r--r-- 1 root root  431 Jun 11 00:15 packages/dpaste_de-20131015.1225.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 00:15 packages/dpaste_de-20131015.1225.tar

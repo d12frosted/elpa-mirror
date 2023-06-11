@@ -4,4 +4,16 @@ Source:  https://github.com/zellio/org-themis.git
 
 Updating /mnt/store/melpa/working/org-themis/
 Checking out 78aadbbe22b1993be5c4accd0d3f91a4e85c9a3c
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-themis/
+  to /tmp/org-themisJgZDtQ/org-themis-20160122.404
+    org-themis.el -> org-themis.el
+Created org-themis-20160122.404.tar containing:
+  org-themis-20160122.404/
+  org-themis-20160122.404/org-themis-pkg.el
+  org-themis-20160122.404/org-themis.el
+Built org-themis in 3.717s, finished at 2023-06-10T22:39:16+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:33 packages/org-themis-20160122.404.el
+4.0K -rw-r--r-- 1 root root 424 Jun 10 22:39 packages/org-themis-20160122.404.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 10 22:39 packages/org-themis-20160122.404.tar

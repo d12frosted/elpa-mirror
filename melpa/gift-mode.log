@@ -4,4 +4,16 @@ Source:  https://github.com/csrhodes/gift-mode.git
 
 Updating /mnt/store/melpa/working/gift-mode/
 Checking out c93354e8fe1173b22f398f17b127875807f15b87
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gift-mode/
+  to /tmp/gift-mode9g9S8V/gift-mode-20210528.1459
+    gift-mode.el -> gift-mode.el
+Created gift-mode-20210528.1459.tar containing:
+  gift-mode-20210528.1459/
+  gift-mode-20210528.1459/gift-mode-pkg.el
+  gift-mode-20210528.1459/gift-mode.el
+Built gift-mode in 2.762s, finished at 2023-06-11T00:25:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.4K Jun  9 16:00 packages/gift-mode-20210528.1459.el
+4.0K -rw-r--r-- 1 root root  422 Jun 11 00:25 packages/gift-mode-20210528.1459.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:25 packages/gift-mode-20210528.1459.tar

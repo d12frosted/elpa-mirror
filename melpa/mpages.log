@@ -4,4 +4,16 @@ Source:  https://github.com/slevin/mpages.git
 
 Updating /mnt/store/melpa/working/mpages/
 Checking out 39a72a0931ab1cdbfdf0ab9f412dc12d43a3829f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mpages/
+  to /tmp/mpagesErytpR/mpages-20150710.1404
+    mpages.el -> mpages.el
+Created mpages-20150710.1404.tar containing:
+  mpages-20150710.1404/
+  mpages-20150710.1404/mpages-pkg.el
+  mpages-20150710.1404/mpages.el
+Built mpages in 2.873s, finished at 2023-06-10T22:33:54+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jun  9 16:25 packages/mpages-20150710.1404.el
+4.0K -rw-r--r-- 1 root root  303 Jun 10 22:33 packages/mpages-20150710.1404.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:33 packages/mpages-20150710.1404.tar

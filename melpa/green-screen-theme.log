@@ -4,4 +4,16 @@ Source:  https://github.com/rbanffy/green-screen-emacs.git
 
 Updating /mnt/store/melpa/working/green-screen-theme/
 Checking out 774e8f6c033786406267f71ec07319d906a30b75
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/green-screen-theme/
+  to /tmp/green-screen-themenbeNYg/green-screen-theme-20180816.1502
+    green-screen-theme.el -> green-screen-theme.el
+Created green-screen-theme-20180816.1502.tar containing:
+  green-screen-theme-20180816.1502/
+  green-screen-theme-20180816.1502/green-screen-theme-pkg.el
+  green-screen-theme-20180816.1502/green-screen-theme.el
+Built green-screen-theme in 4.455s, finished at 2023-06-10T22:19:23+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Jun  9 16:04 packages/green-screen-theme-20180816.1502.el
+4.0K -rw-r--r-- 1 root root  481 Jun 10 22:19 packages/green-screen-theme-20180816.1502.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:19 packages/green-screen-theme-20180816.1502.tar

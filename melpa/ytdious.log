@@ -4,4 +4,16 @@ Source:  https://github.com/spiderbit/ytdious.git
 
 Updating /mnt/store/melpa/working/ytdious/
 Checking out 941460b51e43ef6764e15e2b9c4af54c3e56115f
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ytdious/
+  to /tmp/ytdiousMcNfPT/ytdious-20210228.2111
+    ytdious.el -> ytdious.el
+Created ytdious-20210228.2111.tar containing:
+  ytdious-20210228.2111/
+  ytdious-20210228.2111/ytdious-pkg.el
+  ytdious-20210228.2111/ytdious.el
+Built ytdious in 3.416s, finished at 2023-06-10T22:59:58+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 19K Jun  9 17:02 packages/ytdious-20210228.2111.el
+4.0K -rw-r--r-- 1 root root 410 Jun 10 22:59 packages/ytdious-20210228.2111.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 10 22:59 packages/ytdious-20210228.2111.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/davep/uptimes.el.git
 
 Updating /mnt/store/melpa/working/uptimes/
 Checking out 29ae6585eeed5a00719b2e52f5ae1082087c1778
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/uptimes/
+  to /tmp/uptimesdJOsyl/uptimes-20191121.1030
+    uptimes.el -> uptimes.el
+Created uptimes-20191121.1030.tar containing:
+  uptimes-20191121.1030/
+  uptimes-20191121.1030/uptimes-pkg.el
+  uptimes-20191121.1030/uptimes.el
+Built uptimes in 3.358s, finished at 2023-06-10T22:56:16+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Jun  9 16:57 packages/uptimes-20191121.1030.el
+4.0K -rw-r--r-- 1 root root  448 Jun 10 22:56 packages/uptimes-20191121.1030.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 10 22:56 packages/uptimes-20191121.1030.tar

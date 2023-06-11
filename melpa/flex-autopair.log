@@ -4,4 +4,16 @@ Source:  https://github.com/uk-ar/flex-autopair.git
 
 Updating /mnt/store/melpa/working/flex-autopair/
 Checking out 55d128749cc070551a1624a4508d1c4f6d76f7cf
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flex-autopair/
+  to /tmp/flex-autopairklIScF/flex-autopair-20120809.1218
+    flex-autopair.el -> flex-autopair.el
+Created flex-autopair-20120809.1218.tar containing:
+  flex-autopair-20120809.1218/
+  flex-autopair-20120809.1218/flex-autopair-pkg.el
+  flex-autopair-20120809.1218/flex-autopair.el
+Built flex-autopair in 2.914s, finished at 2023-06-11T00:22:07+0000
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root 42K Jun  9 15:56 packages/flex-autopair-20120809.1218.el
+4.0K -rw-r--r-- 1 root root 487 Jun 11 00:22 packages/flex-autopair-20120809.1218.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 11 00:22 packages/flex-autopair-20120809.1218.tar

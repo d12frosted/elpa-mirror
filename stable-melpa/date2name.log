@@ -4,4 +4,16 @@ Source:  https://github.com/DerBeutlin/date2name.el.git
 
 Updating /mnt/store/melpa/working/date2name/
 Checking out 1d239e4d647ad8ba5cd23a8d4012a9f10bcf7d7d
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/date2name/
+  to /tmp/date2nameKibJcB/date2name-20190630.933
+    date2name.el -> date2name.el
+Created date2name-20190630.933.tar containing:
+  date2name-20190630.933/
+  date2name-20190630.933/date2name-pkg.el
+  date2name-20190630.933/date2name.el
+Built date2name in 3.089s, finished at 2023-06-11T00:12:22+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K Jun  9 15:42 packages/date2name-20190630.933.el
+4.0K -rw-r--r-- 1 root root  416 Jun 11 00:12 packages/date2name-20190630.933.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 11 00:12 packages/date2name-20190630.933.tar

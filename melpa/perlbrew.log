@@ -4,4 +4,16 @@ Source:  https://github.com/kentaro/perlbrew.el.git
 
 Updating /mnt/store/melpa/working/perlbrew/
 Checking out 3a3406c3307c92aa30f9400d430925c434a3b6f0
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/perlbrew/
+  to /tmp/perlbrewPh4G1A/perlbrew-20161109.709
+    perlbrew.el -> perlbrew.el
+Created perlbrew-20161109.709.tar containing:
+  perlbrew-20161109.709/
+  perlbrew-20161109.709/perlbrew-pkg.el
+  perlbrew-20161109.709/perlbrew.el
+Built perlbrew in 2.983s, finished at 2023-06-10T22:42:04+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Jun  9 16:37 packages/perlbrew-20161109.709.el
+4.0K -rw-r--r-- 1 root root  375 Jun 10 22:42 packages/perlbrew-20161109.709.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 10 22:42 packages/perlbrew-20161109.709.tar

@@ -4,4 +4,16 @@ Source:  https://github.com/asok/helm-rails.git
 
 Updating /mnt/store/melpa/working/helm-rails/
 Checking out 723c2a27f3843570ec1039e3c526953e48b4ed40
-Wrong number of arguments: ((t) (rcp files) (let* ((name (eieio-oref rcp 'name)) (version (eieio-oref rcp 'version)) (tmp-dir (file-name-as-directory (make-temp-file name t)))) (unwind-protect (let* ((target (expand-file-name (concat name "-" version) tmp-dir)) (desc (or (package-build--desc-from-package rcp files) (package-build--desc-from-library rcp files 'tar) (error "%s[-pkg].el matching package name is missing" name)))) (package-build--copy-package-files files target) (package-build--write-pkg-file desc target) (package-build--generate-info-files files target) (package-build--create-tar rcp tmp-dir) (package-build--write-pkg-readme rcp files) (package-build--write-archive-entry desc)) (delete-directory tmp-dir t nil)))), 0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-rails/
+  to /tmp/helm-railsba3vWB/helm-rails-20130424.1519
+    helm-rails.el -> helm-rails.el
+Created helm-rails-20130424.1519.tar containing:
+  helm-rails-20130424.1519/
+  helm-rails-20130424.1519/helm-rails-pkg.el
+  helm-rails-20130424.1519/helm-rails.el
+Built helm-rails in 3.202s, finished at 2023-06-11T00:30:37+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 11K Jun  9 16:07 packages/helm-rails-20130424.1519.el
+4.0K -rw-r--r-- 1 root root 452 Jun 11 00:30 packages/helm-rails-20130424.1519.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 11 00:30 packages/helm-rails-20130424.1519.tar
