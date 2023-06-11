@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/leanprover/lean-mode.git
 
 Updating /mnt/store/melpa/working/lean-mode/
-Checking out 362bc6fa3efb1874c525ed6b4b6f24f76af22596
+Checking out 99d6a34dc5b12f6e996e9217fa9f6fe4a6af037a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lean-mode/
-  to /tmp/lean-modemDQy02/lean-mode-20220501.1007
+  to /tmp/lean-modeNy70nb/lean-mode-20230611.728
     lean-debug.el -> lean-debug.el
     lean-dev.el -> lean-dev.el
     lean-eri.el -> lean-eri.el
@@ -23,26 +23,26 @@ Copying files (->) and directories (=>)
     lean-syntax.el -> lean-syntax.el
     lean-type.el -> lean-type.el
     lean-util.el -> lean-util.el
-Created lean-mode-20220501.1007.tar containing:
-  lean-mode-20220501.1007/
-  lean-mode-20220501.1007/lean-debug.el
-  lean-mode-20220501.1007/lean-dev.el
-  lean-mode-20220501.1007/lean-eri.el
-  lean-mode-20220501.1007/lean-flycheck.el
-  lean-mode-20220501.1007/lean-hole.el
-  lean-mode-20220501.1007/lean-info.el
-  lean-mode-20220501.1007/lean-input.el
-  lean-mode-20220501.1007/lean-leanpkg.el
-  lean-mode-20220501.1007/lean-message-boxes.el
-  lean-mode-20220501.1007/lean-mode-pkg.el
-  lean-mode-20220501.1007/lean-mode.el
-  lean-mode-20220501.1007/lean-right-click.el
-  lean-mode-20220501.1007/lean-server.el
-  lean-mode-20220501.1007/lean-settings.el
-  lean-mode-20220501.1007/lean-syntax.el
-  lean-mode-20220501.1007/lean-type.el
-  lean-mode-20220501.1007/lean-util.el
-Built lean-mode in 3.099s, finished at 2023-06-11T02:46:42+0000
+Created lean-mode-20230611.728.tar containing:
+  lean-mode-20230611.728/
+  lean-mode-20230611.728/lean-debug.el
+  lean-mode-20230611.728/lean-dev.el
+  lean-mode-20230611.728/lean-eri.el
+  lean-mode-20230611.728/lean-flycheck.el
+  lean-mode-20230611.728/lean-hole.el
+  lean-mode-20230611.728/lean-info.el
+  lean-mode-20230611.728/lean-input.el
+  lean-mode-20230611.728/lean-leanpkg.el
+  lean-mode-20230611.728/lean-message-boxes.el
+  lean-mode-20230611.728/lean-mode-pkg.el
+  lean-mode-20230611.728/lean-mode.el
+  lean-mode-20230611.728/lean-right-click.el
+  lean-mode-20230611.728/lean-server.el
+  lean-mode-20230611.728/lean-settings.el
+  lean-mode-20230611.728/lean-syntax.el
+  lean-mode-20230611.728/lean-type.el
+  lean-mode-20230611.728/lean-util.el
+Built lean-mode in 3.460s, finished at 2023-06-11T11:21:01+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  733 Jun 11 02:46 packages/lean-mode-20220501.1007.entry
-152K -rw-r--r-- 1 root root 150K Jun 11 02:46 packages/lean-mode-20220501.1007.tar
+4.0K -rw-r--r-- 1 root root  732 Jun 11 11:21 packages/lean-mode-20230611.728.entry
+152K -rw-r--r-- 1 root root 150K Jun 11 11:21 packages/lean-mode-20230611.728.tar
