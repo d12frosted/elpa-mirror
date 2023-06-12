@@ -1109,6 +1109,16 @@
 		      ("Andrea Corallo" . "akrl@sdf.org"))
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
+ (emacs-gc-stats .
+		 [(1 1)
+		  ((emacs
+		    (25 1)))
+		  "Collect Emacs GC statistics" tar
+		  ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
+		   (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
+		   (:authors
+		    ("Ihor Radchenko" . "yantar92@posteo.net"))
+		   (:commit . "19c24e427fcee57fe834b7842cd48f0e23ba8a84"))])
  (embark .
 	 [(0 22 1)
 	  ((emacs
