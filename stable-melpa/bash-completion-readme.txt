@@ -7,6 +7,17 @@ enable it by invoking `bash-completion-setup' or by adding
 
 to your initialisation file.
 
+You can also use bash completion as an additional completion
+function in any buffer that contains bash commands. To do that, add
+`bash-completion-capf-nonexclusive' to the buffer-local
+`completion-at-point-functions'. For example, you can setup bash
+completion in `eshell-mode' by invoking
+
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (add-hook 'completion-at-point-functions
+                      'bash-completion-capf-nonexclusive nil t)))
+
 The completion will be aware of bash builtins, alii and functions.
 It does file expansion does file expansion inside of
 colon-separated variables and after redirections (> or <), and
