@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Checking out e6a2f6e523a8ddfa75fb99c27e4f416faa808eb3
+Checking out c63ca4bdb1cdfd1a60d55250ecd9ca62a4464b24
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevGfPLTi/eldev-20230606.1809
+  to /tmp/eldevKxLdOA/eldev-20230611.1624
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctor.el -> eldev-doctor.el
@@ -19,23 +19,23 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20230606.1809.tar containing:
-  eldev-20230606.1809/
-  eldev-20230606.1809/bin/
-  eldev-20230606.1809/bin/eldev
-  eldev-20230606.1809/bin/eldev.bat
-  eldev-20230606.1809/bin/eldev.ps1
-  eldev-20230606.1809/eldev-build.el
-  eldev-20230606.1809/eldev-buttercup.el
-  eldev-20230606.1809/eldev-doctor.el
-  eldev-20230606.1809/eldev-ecukes.el
-  eldev-20230606.1809/eldev-ert.el
-  eldev-20230606.1809/eldev-pkg.el
-  eldev-20230606.1809/eldev-plugins.el
-  eldev-20230606.1809/eldev-util.el
-  eldev-20230606.1809/eldev-vc.el
-  eldev-20230606.1809/eldev.el
-Built eldev in 5.177s, finished at 2023-06-11T11:00:09+0000
+Created eldev-20230611.1624.tar containing:
+  eldev-20230611.1624/
+  eldev-20230611.1624/bin/
+  eldev-20230611.1624/bin/eldev
+  eldev-20230611.1624/bin/eldev.bat
+  eldev-20230611.1624/bin/eldev.ps1
+  eldev-20230611.1624/eldev-build.el
+  eldev-20230611.1624/eldev-buttercup.el
+  eldev-20230611.1624/eldev-doctor.el
+  eldev-20230611.1624/eldev-ecukes.el
+  eldev-20230611.1624/eldev-ert.el
+  eldev-20230611.1624/eldev-pkg.el
+  eldev-20230611.1624/eldev-plugins.el
+  eldev-20230611.1624/eldev-util.el
+  eldev-20230611.1624/eldev-vc.el
+  eldev-20230611.1624/eldev.el
+Built eldev in 3.919s, finished at 2023-06-12T10:51:15+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  405 Jun 11 11:00 packages/eldev-20230606.1809.entry
-620K -rw-r--r-- 1 root root 620K Jun 11 11:00 packages/eldev-20230606.1809.tar
+4.0K -rw-r--r-- 1 root root  405 Jun 12 10:51 packages/eldev-20230611.1624.entry
+620K -rw-r--r-- 1 root root 620K Jun 12 10:51 packages/eldev-20230611.1624.tar

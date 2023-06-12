@@ -22,3 +22,7 @@ With a numeric arg 0 (C-u 0 or C-0), it shows the first frame and stops playback
 
 M-x org-inline-anim-animate-all (C-c C-x M) plays all animations
 in the buffer at once.  The same prefix arguments are effective.
+
+You can assign a non-nil value to `org-inline-anim-loop' for
+animations to loop by default.  A single prefix (C-u) then means to
+play only once.

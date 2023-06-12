@@ -3,17 +3,9 @@ Fetcher: git
 Source:  https://gitlab.lrde.epita.fr/spot/emacs-modes.git
 
 Updating /mnt/store/melpa/working/hoa-mode/
-Checking out 18f5c981e256f867f29a93376ccdc04717b159cd
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hoa-mode/
-  to /tmp/hoa-modeYMVcbo/hoa-mode-20200610.1339
-    hoa-mode.el -> hoa-mode.el
-Created hoa-mode-20200610.1339.tar containing:
-  hoa-mode-20200610.1339/
-  hoa-mode-20200610.1339/hoa-mode-pkg.el
-  hoa-mode-20200610.1339/hoa-mode.el
-Built hoa-mode in 9.634s, finished at 2023-06-11T11:15:26+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  9 16:10 packages/hoa-mode-20200610.1339.el
-4.0K -rw-r--r-- 1 root root 462 Jun 11 11:15 packages/hoa-mode-20200610.1339.entry
- 20K -rw-r--r-- 1 root root 20K Jun 11 11:15 packages/hoa-mode-20200610.1339.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://gitlab.lrde.epita.fr/spot/emacs-modes.git/': Operation timed out after 300042 milliseconds with 0 out of 0 bytes received
+
+Command exited with non-zero exit-code: 128

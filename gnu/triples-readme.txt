@@ -173,8 +173,8 @@ filename is used to connect to by clients of the triples library.
     subject,
   • `triples-with-predicate', gets all triples that is about a specific
     property,
-  • `triples-with-predicate-object', get all subjects whose predicate is
-    equal to /object/,
+  • `triples-subject-with-predicate-object', get all subjects whose
+    predicate is equal to /object/,
   • `triples-subjects-of-type', get all subjects which have a particular
     type.
 

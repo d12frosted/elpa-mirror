@@ -24,9 +24,10 @@ this package depends on user contributions to accomplish decent
 coverage.  Pull requests are highly welcome (but please follow the
 conventions described below and in the pull request template).
 
-`no-littering' cannot help with moving existing files to the new
-location.  You will have to move the files manually.  See issue
-#79 for more information.
+This package does not automatically migrate existing files to their
+new locations, but unless you want to, you also do not have to do
+it completely by hand.  The contributed "migrate.org" provides some
+guidance and tools to help with the migration.
 
 ;; Usage
 
@@ -68,8 +69,8 @@ For additional optional settings see "README.md".
 5. If applicable, the appropriate extension is added to the file name
    so that files are visited using the appropriate major-modes and
    also to provide a hint about the kind of data stored in the file.
-   E.g.  if a file contains an S-expression, then the suffix should be
-   `*.el`.
+   E.g.,  if a file contains an S-expression, then the suffix should
+   be `*.el`.
 
 ;;; B) File location and subdirectories
 
@@ -90,11 +91,11 @@ For additional optional settings see "README.md".
 4. If a package provides a "framework" for other packages to use,
    then we may reuse its directories for other packages that make use
    of that framework or otherwise "extend" the "main package".
-   E.g. we place all `helm` related files in `helm/`.
+   E.g., we place all `helm` related files in `helm/`.
 
 5. If a package only defines a single variable that specifies a data
    (or config) directory, then the directory name should
-   nevertheless be just the package name.  E.g. the path used for
+   nevertheless be just the package name.  E.g., the path used for
    `sx-cache-directory` from the `sx` package is `sx/cache/`, not
    `sx-cache/`.
 
