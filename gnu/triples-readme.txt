@@ -33,7 +33,7 @@ filename is used to connect to by clients of the triples library.
 2 Maturity
 ══════════
 
-  This module is very new should be considered alpha quality.
+  This module is somewhat new and should be considered beta quality.
 
   While it has basic functionality, there are significant parts, such as
   a querying language, that are missing.  Whether anyone needs such
