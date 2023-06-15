@@ -126,6 +126,9 @@ be simple and well-organized.  Every feature is tested against
         `HEADERS' may be an alist of extra headers to send with the
         request.
 
+        `BODY' may be a string, a buffer, or a list like `(file
+        FILENAME)' to upload a file from disk.
+
         `BODY-TYPE' may be `text' to send `BODY' as text, or `binary' to
         send it as binary.
 
@@ -198,7 +201,9 @@ be simple and well-organized.  Every feature is tested against
   Or:
 
   ┌────
-  │ (let ((queue (make-plz-queue :limit 2))
+  │ (let ((queue (make-plz-queue :limit 2
+  │ 			     :finally (lambda ()
+  │ 					(message "Queue empty."))))
   │       (urls '("https://httpbin.org/get?foo=0"
   │ 	      "https://httpbin.org/get?foo=1")))
   │   (plz-run
@@ -224,7 +229,23 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.5.4
+3.1 0.6
+───────
+
+  *Additions*
+  ⁃ Function `plz''s `:body' argument now accepts a list like `(file
+    FILENAME)' to upload a file from disk (by passing the filename to
+    curl, rather than reading its content into Emacs and sending it to
+    curl through the pipe).
+
+  *Fixes*
+  ⁃ Function `plz''s docstring now mentions that the `:body' argument
+    may also be a buffer (an intentional feature that was accidentally
+    undocumented).
+  ⁃ Handle HTTP 3xx redirects when using `:as 'response'.
+
+
+3.2 0.5.4
 ─────────
 
   *Fixes*
@@ -232,7 +253,7 @@ be simple and well-organized.  Every feature is tested against
     features should not be designed and released on a Friday.)
 
 
-3.2 0.5.3
+3.3 0.5.3
 ─────────
 
   *Fixes*
@@ -241,7 +262,7 @@ be simple and well-organized.  Every feature is tested against
     would require them to be recompiled after upgrading `plz').
 
 
-3.3 0.5.2
+3.4 0.5.2
 ─────────
 
   *Fixes*
@@ -249,7 +270,7 @@ be simple and well-organized.  Every feature is tested against
     when specified.
 
 
-3.4 0.5.1
+3.5 0.5.1
 ─────────
 
   *Fixes*
@@ -260,7 +281,7 @@ be simple and well-organized.  Every feature is tested against
 [Dan Oriani] <https://github.com/redchops>
 
 
-3.5 0.5
+3.6 0.5
 ───────
 
   *Additions*
@@ -268,7 +289,7 @@ be simple and well-organized.  Every feature is tested against
     queue is finished.
 
 
-3.6 0.4
+3.7 0.4
 ───────
 
   *Additions*
@@ -300,7 +321,7 @@ be simple and well-organized.  Every feature is tested against
 [#17] <https://github.com/alphapapa/plz.el/issues/17>
 
 
-3.7 0.3
+3.8 0.3
 ───────
 
   *Additions*
@@ -319,21 +340,21 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.8 0.2.1
+3.9 0.2.1
 ─────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.9 0.2
-───────
+3.10 0.2
+────────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.10 0.1
+3.11 0.1
 ────────
 
   Initial release.

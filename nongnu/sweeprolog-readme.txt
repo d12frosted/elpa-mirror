@@ -113,22 +113,21 @@ High-level Architecture
   The different parts of Sweep are structured as follows:
 
   • `sweep.c' defines a dynamic Emacs module which is referred to from
-    Elisp as `sweep-module'. This module is linked against the
+    Elisp as `sweep-module'.  This module is linked against the
     SWI-Prolog runtime library (`libswipl') and exposes a subset of the
     SWI-Prolog C interface to Emacs in the form of Elisp functions (see
-    Querying Prolog). Notably, `sweep-module' is responsible for
+    Querying Prolog).  Notably, `sweep-module' is responsible for
     translating Elisp objects to Prolog terms and vice versa.
 
-  • `sweeprolog.el' defines an Elisp library (named simply
-    `sweeprolog'), which builds on top of `sweep-module' to provide
-    user-facing commands and functionality. It is also responsible for
-    loading `sweep-module'.
+  • `sweeprolog.el' defines an Elisp library which builds on top of
+    `sweep-module' to provide user-facing commands and functionality.
+    It is also responsible for loading `sweep-module'.
 
-  • `sweep.pl' defines a Prolog module (named, unsurprisingly, Sweep)
+  • `sweep.pl' defines a Prolog module (named, unsurprisingly, `sweep')
     which is by default arranged by `sweeprolog.el' to be loaded when
-    the embedded Prolog runtime is initialized. It contains predicates
+    the embedded Prolog runtime is initialized.  It contains predicates
     that `sweeprolog.el' invoke through `sweep-module' to facilitate its
-    different commands (see Finding Prolog code).
+    different commands.
 
 
 Installation
@@ -1474,13 +1473,12 @@ Documenting Predicates
         Function to use for determining the initial contents of
         documentation comments inserted with
         `sweeprolog-document-predicate-at-point'.
-  Function: sweeprolog-read-predicate-documentation-default-function functor arity
-        Prompt and read from the minibuffer the arguments modes,
-        determinism specification and initial summary for the
-        documentation of the predicate FUNCTOR/ARITY.
-  Function: sweeprolog-read-predicate-documentation-with-holes functor arity
-        Use holes for the initial documentation of the predicate
-        FUNCTOR/ARITY.
+  Function: sweeprolog-read-predicate-documentation-default-function
+        Prompt and read from the minibuffer the argument modes,
+        determinism specification and initial summary of the given
+        predicate.
+  Function: sweeprolog-read-predicate-documentation-with-holes
+        Use holes for the initial documentation of the given predicate.
 
   Sweep also includes a dedicated command called
   `sweeprolog-document-predicate-at-point' for interactively creating
@@ -2344,18 +2342,41 @@ Executing Prolog Asynchronously
 [Compilation Mode] <info:emacs#Compilation Mode>
 
 
-Finding Prolog code
+Finding Prolog Code
 ═══════════════════
 
-  Sweep provides the command `M-x sweeprolog-find-module' for selecting
-  and jumping to the source code of a loaded or auto-loadable Prolog
-  module.  Sweep integrates with Emacs’s standard completion API to
-  annotate candidate modules in the completion UI with their `PLDoc'
-  description when available.
+  The following commands let you find and jump to Prolog code from
+  anywhere in Emacs:
 
-  Along with `M-x sweeprolog-find-module', Sweep provides the command
-  `M-x sweeprolog-find-predicate' jumping to the definition a loaded or
-  auto-loadable Prolog predicate.
+  Command: sweeprolog-find-module
+        Prompt for a known Prolog module and find its source code.
+  Command: sweeprolog-find-predicate
+        Prompt for a known Prolog predicate and find its source code.
+
+  `sweeprolog-find-module' and `sweeprolog-find-predicate' prompt you
+  for a Prolog identifier (respectively, a module name or a predicate
+  indicator), and jump to its source definition.  Sweep integrates with
+  Emacs’s standard completion API to annotate candidate modules in the
+  completion UI with a summary line derived from their documentation,
+  when available.
+
+  By default, these commands use the current window to display the
+  selected module or predicate.  To have it in another window instead,
+  invoke these commands with a prefix argument (e.g. `C-u M-x
+  sweeprolog-find-predicate').
+
+  The command `sweeprolog-find-predicate' uses the function
+  `sweeprolog-read-predicate' for prompting you to insert a predicate
+  indicator in the minibuffer.  This is the standard function that Sweep
+  commands use for this purpose, it provides completion candidates based
+  on known predicates, and it uses the predicate at point, if any, as
+  the default minibuffer argument.  By default,
+  `sweeprolog-read-predicate' includes all predicates that Sweep knows
+  about as completion candidates, except for predicate whose functor
+  name begins with `$', because that’s the convention in in SWI-Prolog
+  for internal predicates that are usually of little interest to users.
+  To include also these predicates as completion candidates, customize
+  the user option `sweeprolog-predicate-visible-p-function' to `nil'.
 
 
 Prolog file specification expansion
@@ -2476,9 +2497,9 @@ and Cleanup
 
 [Loading Buffers] See section Loading Buffers
 
-[Finding Prolog Code] See section Finding Prolog code
+[Finding Prolog Code] See section Finding Prolog Code
 
-[Finding Prolog Code] See section Finding Prolog code
+[Finding Prolog Code] See section Finding Prolog Code
 
 [Sending Goals to the Top-level] See section Sending Goals to the
 Top-level

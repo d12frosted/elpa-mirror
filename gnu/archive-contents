@@ -2719,7 +2719,7 @@
 	      ("Daiki Ueno" . "ueno@gnu.org"))
 	     (:maintainer "Daiki Ueno" . "ueno@gnu.org"))])
  (plz .
-      [(0 5 4)
+      [(0 6)
        ((emacs
 	 (26 3)))
        "HTTP library" tar
@@ -2728,7 +2728,7 @@
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "367c6a5a9a4bf320dcccb54bdd80ac46aa8be06f"))])
+	(:commit . "271d0aa8e7d6b0575135a94fcb64af125e23323d"))])
  (poke .
        [(3 2)
 	((emacs
