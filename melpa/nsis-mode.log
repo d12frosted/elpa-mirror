@@ -1,0 +1,22 @@
+Package: nsis-mode
+Fetcher: github
+Source:  https://github.com/mattfidler/nsis-mode.git
+
+Updating /mnt/store/melpa/working/nsis-mode/
+Checking out a3bc65b373d74acfad8eb4ef8072fd7059b6ace9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nsis-mode/
+  to /tmp/nsis-mode9QseVi/nsis-mode-20230605.1652
+    nsis-mode.el -> nsis-mode.el
+    nsis-mode.texi -> nsis-mode.texi
+Generating /tmp/nsis-mode9QseVi/nsis-mode-20230605.1652/nsis-mode.info
+Created nsis-mode-20230605.1652.tar containing:
+  nsis-mode-20230605.1652/
+  nsis-mode-20230605.1652/dir
+  nsis-mode-20230605.1652/nsis-mode-pkg.el
+  nsis-mode-20230605.1652/nsis-mode.el
+  nsis-mode-20230605.1652/nsis-mode.info
+Built nsis-mode in 12.203s, finished at 2023-06-15T02:40:13+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  338 Jun 15 02:40 packages/nsis-mode-20230605.1652.entry
+100K -rw-r--r-- 1 root root 100K Jun 15 02:40 packages/nsis-mode-20230605.1652.tar
