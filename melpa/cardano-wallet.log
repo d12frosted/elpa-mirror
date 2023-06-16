@@ -3,9 +3,17 @@ Fetcher: github
 Source:  https://github.com/Titan-C/cardano.el.git
 
 Updating /mnt/store/melpa/working/cardano-wallet/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://github.com/Titan-C/cardano.el.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out cf85424b305e8f89debb756dc67eebc84639f711
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cardano-wallet/
+  to /tmp/cardano-walletpEZvvH/cardano-wallet-20230606.1150
+    cardano-wallet.el -> cardano-wallet.el
+Created cardano-wallet-20230606.1150.tar containing:
+  cardano-wallet-20230606.1150/
+  cardano-wallet-20230606.1150/cardano-wallet-pkg.el
+  cardano-wallet-20230606.1150/cardano-wallet.el
+Built cardano-wallet in 4.323s, finished at 2023-06-16T05:28:00+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 15:34 packages/cardano-wallet-20230606.1150.el
+4.0K -rw-r--r-- 1 root root 544 Jun 16 05:27 packages/cardano-wallet-20230606.1150.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 16 05:27 packages/cardano-wallet-20230606.1150.tar

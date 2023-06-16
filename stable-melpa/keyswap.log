@@ -3,10 +3,17 @@ Fetcher: github
 Source:  https://github.com/hardenedapple/keyswap.el.git
 
 Updating /mnt/store/melpa/working/keyswap/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; curl 35 gnutls_handshake() failed: Error in the pull function.
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out cd682a7c4a8d64d6bae6a005db5045232e5e7b95
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/keyswap/
+  to /tmp/keyswap29ZMF2/keyswap-20160813.957
+    keyswap.el -> keyswap.el
+Created keyswap-20160813.957.tar containing:
+  keyswap-20160813.957/
+  keyswap-20160813.957/keyswap-pkg.el
+  keyswap-20160813.957/keyswap.el
+Built keyswap in 4.822s, finished at 2023-06-16T06:04:23+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:16 packages/keyswap-20160813.957.el
+4.0K -rw-r--r-- 1 root root 455 Jun 16 06:04 packages/keyswap-20160813.957.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 16 06:04 packages/keyswap-20160813.957.tar
