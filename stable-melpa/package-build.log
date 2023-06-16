@@ -3,22 +3,22 @@ Fetcher: github
 Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
-Checking out 1c3f0b631e58f57d70d28807385904004b285853
+Checking out c9f743cc30a8752dbb8d948c536f198cd364de74
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-build/
-  to /tmp/package-buildj7tqiw/package-build-20230611.1708
+  to /tmp/package-buildXTXekv/package-build-20230615.1624
     package-build-badges.el -> package-build-badges.el
     package-build.el -> package-build.el
     package-recipe-mode.el -> package-recipe-mode.el
     package-recipe.el -> package-recipe.el
-Created package-build-20230611.1708.tar containing:
-  package-build-20230611.1708/
-  package-build-20230611.1708/package-build-badges.el
-  package-build-20230611.1708/package-build-pkg.el
-  package-build-20230611.1708/package-build.el
-  package-build-20230611.1708/package-recipe-mode.el
-  package-build-20230611.1708/package-recipe.el
-Built package-build in 6.448s, finished at 2023-06-15T07:18:28+0000
+Created package-build-20230615.1624.tar containing:
+  package-build-20230615.1624/
+  package-build-20230615.1624/package-build-badges.el
+  package-build-20230615.1624/package-build-pkg.el
+  package-build-20230615.1624/package-build.el
+  package-build-20230615.1624/package-recipe-mode.el
+  package-build-20230615.1624/package-recipe.el
+Built package-build in 4.373s, finished at 2023-06-16T03:07:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 602 Jun 15 07:18 packages/package-build-20230611.1708.entry
- 80K -rw-r--r-- 1 root root 80K Jun 15 07:18 packages/package-build-20230611.1708.tar
+4.0K -rw-r--r-- 1 root root  602 Jun 16 03:07 packages/package-build-20230615.1624.entry
+100K -rw-r--r-- 1 root root 100K Jun 16 03:07 packages/package-build-20230615.1624.tar

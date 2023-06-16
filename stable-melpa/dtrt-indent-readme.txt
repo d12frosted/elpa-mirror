@@ -88,7 +88,7 @@ level could otherwise be wrongly guessed.
 
 Configuration settings used at this stage:
 `dtrt-indent-max-merge-deviation'
-;
+
 Final Evaluation
 
 Finally, dtrt-indent looks at the highest probability of all

@@ -1,0 +1,13 @@
+(auto-compile .
+	      [(20230615 2045)
+	       ((emacs
+		 (25 1)))
+	       "Automatically compile Emacs Lisp libraries" tar
+	       ((:commit . "3a255903643227c0db10ca2371c33ba9e8ec9924")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainers
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:keywords "compile" "convenience" "lisp")
+		(:url . "https://github.com/emacscollective/auto-compile"))])

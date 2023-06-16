@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out da6a3b3073374e868f157fe7dc24be7b889af8fd
+Checking out edd6fa2ba7a0b83a0cc26662cc9b96e0ae9351a5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgkCCytx/ekg-20230519.1717
+  to /tmp/ekgPpqXNG/ekg-20230613.1319
     ekg-embedding.el -> ekg-embedding.el
     ekg-logseq.el -> ekg-logseq.el
     ekg-org-roam.el -> ekg-org-roam.el
@@ -14,20 +14,22 @@ Copying files (->) and directories (=>)
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekgkCCytx/ekg-20230519.1717/doclicense.info
-Generating /tmp/ekgkCCytx/ekg-20230519.1717/ekg.info
-Created ekg-20230519.1717.tar containing:
-  ekg-20230519.1717/
-  ekg-20230519.1717/dir
-  ekg-20230519.1717/doclicense.info
-  ekg-20230519.1717/ekg-embedding.el
-  ekg-20230519.1717/ekg-logseq.el
-  ekg-20230519.1717/ekg-org-roam.el
-  ekg-20230519.1717/ekg-pkg.el
-  ekg-20230519.1717/ekg-test-utils.el
-  ekg-20230519.1717/ekg.el
-  ekg-20230519.1717/ekg.info
-Built ekg in 11.139s, finished at 2023-06-15T06:40:46+0000
+Generating /tmp/ekgPpqXNG/ekg-20230613.1319/doclicense.info
+Generating /tmp/ekgPpqXNG/ekg-20230613.1319/ekg.info
+Created ekg-20230613.1319.tar containing:
+  ekg-20230613.1319/
+  ekg-20230613.1319/dir
+  ekg-20230613.1319/doclicense.info
+  ekg-20230613.1319/ekg-embedding.el
+  ekg-20230613.1319/ekg-logseq.el
+  ekg-20230613.1319/ekg-org-roam.el
+  ekg-20230613.1319/ekg-pkg.el
+  ekg-20230613.1319/ekg-test-utils.el
+  ekg-20230613.1319/ekg.el
+  ekg-20230613.1319/ekg.info
+Built ekg in 14.112s, finished at 2023-06-16T02:25:27+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  469 Jun 15 06:40 packages/ekg-20230519.1717.entry
-192K -rw-r--r-- 1 root root 190K Jun 15 06:40 packages/ekg-20230519.1717.tar
+4.0K -rw-r--r-- 1 root root  469 Jun 15 23:11 packages/ekg-20230519.1717.entry
+192K -rw-r--r-- 1 root root 190K Jun 15 23:11 packages/ekg-20230519.1717.tar
+4.0K -rw-r--r-- 1 root root  469 Jun 16 02:25 packages/ekg-20230613.1319.entry
+200K -rw-r--r-- 1 root root 200K Jun 16 02:25 packages/ekg-20230613.1319.tar
