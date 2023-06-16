@@ -14,9 +14,9 @@
   like, uh, the God mode?  But alas, there is nothing divine to be found
   here.  Welcome, instead, to the realm of the Devil!  You will be
   granted the occasional use of the comma key for punctuation, but only
-  if you can charm the Devil!  But beware, for in this sinister domain,
+  if you can charm the Devil.  But beware, for in this sinister domain,
   you must relinquish your comma key and embrace an editing experience
-  that whispers wicked secrets into your fingertips!
+  that whispers wicked secrets into your fingertips.
 
 
 [file:https://melpa.org/packages/devil-badge.svg]
@@ -31,8 +31,15 @@
 [file:https://img.shields.io/badge/mastodon-%40susam-%2355f.svg]
 <https://mastodon.social/@susam>
 
-1.1 Get Started
-───────────────
+1.1 Introduction
+────────────────
+
+  Devil is available in MELPA as well as NonGNU ELPA.  If you are using
+  Emacs 28.1 or a more recent version of Emacs, you can get the latest
+  stable version of Devil by typing `M-x package-install RET devil RET'.
+  Otherwise, you need to add MELPA or NonGNU ELPA to your list of
+  package archives and then install MELPA.  More details on the
+  installation procedure is provided in the [manual].
 
   By default, Devil mode rebinds the comma key to activate Devil.  Once
   activated, Devil reads a so-called Devil key sequence from you.  As
