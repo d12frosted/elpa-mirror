@@ -3449,14 +3449,14 @@
 	       ("Ulf Jasper" . "ulf.jasper@web.de"))
 	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
  (svg-lib .
-	  [(0 2 6)
+	  [(0 2 7)
 	   ((emacs
 	     (27 1)))
 	   "SVG tags, progress bars & icons" tar
 	   ((:url . "https://github.com/rougier/svg-lib")
 	    (:keywords "svg" "icons" "tags" "convenience")
 	    (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-	    (:commit . "5ba4e4ea2b5c66e8811beb53251dee13685b2cb2"))])
+	    (:commit . "cde8a8c2ba153963cbe4d233069bc053943f0974"))])
  (svg-tag-mode .
 	       [(0 3 2)
 		((emacs
