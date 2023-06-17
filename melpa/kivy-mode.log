@@ -3,17 +3,19 @@ Fetcher: github
 Source:  https://github.com/kivy/kivy.git
 
 Updating /mnt/store/melpa/working/kivy-mode/
-Checking out bd041aea52d96161fb610a5f1485a7375a0531e1
+Checking out db86b06b9b72e514c122e3f54a0bce74adad44c5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kivy-mode/
-  to /tmp/kivy-modetvhy3N/kivy-mode-20230520.746
+  to /tmp/kivy-modeqhwDEO/kivy-mode-20210318.2106
   ! kivy/tools/highlight/kivy-mode.el -> kivy-mode.el
-Created kivy-mode-20230520.746.tar containing:
-  kivy-mode-20230520.746/
-  kivy-mode-20230520.746/kivy-mode-pkg.el
-  kivy-mode-20230520.746/kivy-mode.el
-Built kivy-mode in 9.875s, finished at 2023-06-17T10:43:38+0000
+Created kivy-mode-20210318.2106.tar containing:
+  kivy-mode-20210318.2106/
+  kivy-mode-20210318.2106/kivy-mode-pkg.el
+  kivy-mode-20210318.2106/kivy-mode.el
+Built kivy-mode in 8.765s, finished at 2023-06-17T17:11:54+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  343 Jun 17 17:11 packages/kivy-mode-20210318.2106.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 17 17:11 packages/kivy-mode-20210318.2106.tar
  12K -rw-r--r-- 1 root root 9.7K Jun  9 16:17 packages/kivy-mode-20230520.746.el
-4.0K -rw-r--r-- 1 root root  342 Jun 17 10:43 packages/kivy-mode-20230520.746.entry
- 20K -rw-r--r-- 1 root root  20K Jun 17 10:43 packages/kivy-mode-20230520.746.tar
+4.0K -rw-r--r-- 1 root root  342 Jun 17 13:55 packages/kivy-mode-20230520.746.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 17 13:55 packages/kivy-mode-20230520.746.tar
