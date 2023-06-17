@@ -15,7 +15,8 @@ to your init file to enable the statistics acquiring.
 
 When you are ready to share the results, run `M-x
 emacs-gc-stats-save-session' and then share the saved
-`emacs-gc-stats-file' (defaults to `~/.emacs.d/emacs-gc-stats.eld').
+`emacs-gc-stats-file' (defaults to `~/.emacs.d/emacs-gc-stats.eld') by
+sending an email attachment to <mailto:emacs-gc-stats@gnu.org>.
 
 You can use `M-x emacs-gc-stats-clear' to clear the currently collected
 session data.

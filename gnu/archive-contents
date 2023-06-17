@@ -1110,7 +1110,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (emacs-gc-stats .
-		 [(1 2)
+		 [(1 2 1)
 		  ((emacs
 		    (25 1)))
 		  "Collect Emacs GC statistics" tar
@@ -1118,7 +1118,7 @@
 		   (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
 		   (:authors
 		    ("Ihor Radchenko" . "yantar92@posteo.net"))
-		   (:commit . "c19aedb41c8e6fb224e8284b19d5447b8472a669"))])
+		   (:commit . "478b9fcb0810592dfdf6417d780169e7fbeb13ba"))])
  (embark .
 	 [(0 22 1)
 	  ((emacs
@@ -1148,7 +1148,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "127492fac048cecfdba145d496a902022a68d1d5"))])
  (ement .
-	[(0 9 3)
+	[(0 10)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1156,7 +1156,7 @@
 	  (persist
 	   (0 5))
 	  (plz
-	   (0 2))
+	   (0 6))
 	  (taxy
 	   (0 10))
 	  (taxy-magit-section
@@ -1171,7 +1171,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "16e05cf4d3f3cc8dcfa30a4c2426066dbef798ad"))])
+	  (:commit . "fba18f941289e607ad5e296783fc410e58f5d07e"))])
  (emms .
        [(15)
 	((cl-lib

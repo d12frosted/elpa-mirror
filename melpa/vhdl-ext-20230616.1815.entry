@@ -1,0 +1,27 @@
+(vhdl-ext .
+	  [(20230616 1815)
+	   ((emacs
+	     (28 1))
+	    (eglot
+	     (1 9))
+	    (lsp-mode
+	     (8 0 1))
+	    (ag
+	     (0 48))
+	    (ripgrep
+	     (0 4 0))
+	    (hydra
+	     (0 15 0))
+	    (flycheck
+	     (33 -4))
+	    (company
+	     (0 9 13)))
+	   "VHDL Extensions" tar
+	   ((:commit . "3eaccab8ec18a6ad5e04acea49b838c0a89bd8f8")
+	    (:authors
+	     ("Gonzalo Larumbe" . "gonzalomlarumbe@gmail.com"))
+	    (:maintainers
+	     ("Gonzalo Larumbe" . "gonzalomlarumbe@gmail.com"))
+	    (:maintainer "Gonzalo Larumbe" . "gonzalomlarumbe@gmail.com")
+	    (:keywords "vhdl" "ide" "tools")
+	    (:url . "https://github.com/gmlarumbe/vhdl-ext"))])

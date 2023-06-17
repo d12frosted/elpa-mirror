@@ -3,6 +3,17 @@
 			       ━━━━━━━━━━
 
 
+Table of Contents
+─────────────────
+
+1. Installation
+2. Usage
+3. Rationale
+4. Changelog
+5. Development
+6. License
+
+
 [https://elpa.gnu.org/packages/ement.svg]
 
 Ement.el is a Matrix client for Emacs.  It aims to be simple, fast,
@@ -22,8 +33,8 @@ Feel free to join us in the chat room:
 1 Installation
 ══════════════
 
-1.1 GNU ELPA
-────────────
+GNU ELPA
+────────
 
   Ement.el is published in [GNU ELPA], so it may be installed in Emacs
   with the command `M-x package-install RET ement RET'.  This is the
@@ -34,8 +45,8 @@ Feel free to join us in the chat room:
 [GNU ELPA] <http://elpa.gnu.org/>
 
 
-1.2 GNU Guix
-────────────
+GNU Guix
+────────
 
   Ement.el is also available in [GNU Guix] as `emacs-ement'.
 
@@ -43,8 +54,8 @@ Feel free to join us in the chat room:
 [GNU Guix] <https://guix.gnu.org/>
 
 
-1.3 Debian
-──────────
+Debian
+──────
 
   Ement.el is also available in Debian as [elpa-ement].
 
@@ -52,8 +63,8 @@ Feel free to join us in the chat room:
 [elpa-ement] <https://packages.debian.org/elpa-ement>
 
 
-1.4 Git master
-──────────────
+Git master
+──────────
 
   The `master' branch of the Git repository is intended to be usable at
   all times; only minor bugs are expected to be found in it before a new
@@ -82,8 +93,8 @@ Feel free to join us in the chat room:
 [DOOM] <https://github.com/doomemacs/doomemacs>
 
 
-1.5 Manual
-──────────
+Manual
+──────
 
   Ement.el is intended to be installed with Emacs's package system,
   which will ensure that the required autoloads are generated, etc.  If
@@ -141,8 +152,8 @@ Feel free to join us in the chat room:
        Notifications*' buffer.
 
 
-2.1 Bindings
-────────────
+Bindings
+────────
 
   These bindings are common to all of the following buffer types:
 
@@ -152,8 +163,8 @@ Feel free to join us in the chat room:
   ⁃ Switch to the notifications buffer: `M-g M-n'
 
 
-2.1.1 Room buffers
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+Room buffers
+╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Show command menu: `?'
 
@@ -166,6 +177,7 @@ Feel free to join us in the chat room:
   ⁃ Scroll up and mark read: `SPC'
   ⁃ Scroll down: `S-SPC'
   ⁃ Jump to fully-read marker: `M-SPC'
+  ⁃ Move read markers to point: `m'
   ⁃ Load older messages: at top of buffer, scroll contents up
     (i.e. `S-SPC', `M-v' or `mwheel-scroll')
 
@@ -234,8 +246,8 @@ Feel free to join us in the chat room:
     prefix to force new sync): `g'
 
 
-2.1.2 Room list buffer
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+Room list buffer
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Show buffer of room at point: `RET'
   ⁃ Show buffer of next unread room: `SPC'
@@ -245,15 +257,15 @@ Feel free to join us in the chat room:
   ⁃ Toggle room's membership in a space: `s'
 
 
-2.1.3 Directory buffers
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+Directory buffers
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ View/join a room: `RET' / `mouse-1'
   ⁃ Load next batch of rooms: `+'
 
 
-2.1.4 Mentions/notifications buffers
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+Mentions/notifications buffers
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ⁃ Move between events: `TAB' / `<backtab>'
   ⁃ Go to event at point in its room buffer: `RET'
@@ -261,8 +273,8 @@ Feel free to join us in the chat room:
     writing) : `S-RET'
 
 
-2.2 Tips
-────────
+Tips
+────
 
   ⁃ Desktop notifications are enabled by default for events that mention
     the local user.  They can also be shown for all events in rooms with
@@ -302,8 +314,8 @@ Feel free to join us in the chat room:
 
 [Burly] <https://github.com/alphapapa/burly.el>
 
-2.2.1 Displaying symbols and emojis
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+Displaying symbols and emojis
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Emacs may not display certain symbols and emojis well by default.
   Based on [this question and answer], you may find that the simplest
@@ -322,8 +334,8 @@ Feel free to join us in the chat room:
 [Noto Emoji] <https://www.google.com/get/noto/#emoji-zsye>
 
 
-2.3 Encrypted room support through Pantalaimon
-──────────────────────────────────────────────
+Encrypted room support through Pantalaimon
+──────────────────────────────────────────
 
   Ement.el doesn't support encrypted rooms natively, but it can be used
   transparently with the E2EE-aware reverse proxy daemon [Pantalaimon].
@@ -402,31 +414,109 @@ Feel free to join us in the chat room:
 4 Changelog
 ═══════════
 
-4.1 0.9.3
-─────────
+0.10
+────
+
+  *Security Fixes*
+  ⁃ When uploading a GPG-encrypted file (i.e. one whose filename ends in
+    `.gpg'), if the recipient's private key or the symmetric encryption
+    key were cached by Emacs (or a configured agent, like `gpg-agent'),
+    Emacs would automatically decrypt the file while reading its
+    contents and then upload the decrypted contents.  (This happened
+    because the function `insert-file-contents' was used, which does
+    many things automatically, some of which are not even mentioned in
+    its docstring; refer to its entry in the Elisp Info manual for
+    details.  The fix is to use `insert-file-contents-literally'
+    instead.)  Thanks to `@welkinsl:matrix.org' for reporting.
+
+  *Additions*
+  ⁃ Support for Single Sign-On (SSO) authentication.  ([#24].  Thanks to
+    [Jeffrey Stoffers] for development, and to [Phil Sainty], [Jakub
+    Kadlčík], and [Juanjo Presa] for testing.)
+  ⁃ Bind `m' in room buffers to `ement-room-mark-read' (which moves read
+    markers to point).
+
+  *Changes*
+
+  ⁃ Activating a space in the room list uses `ement-view-space' (which
+    shows a directory of rooms in the space) instead of
+    `ement-view-room' (which shows events in the space, which is
+    generally not useful).
+  ⁃ Command `ement-view-room', when used for a space, shows a footer
+    explaining that the buffer is showing a space rather than a normal
+    room, with a button to call `ement-view-space' for it (which lists
+    rooms in the space).
+  ⁃ Command `ement-describe-room' shows whether a room is a space or a
+    normal room.
+  ⁃ Command `ement-view-space' shows the space's name and alias.
+  ⁃ Command `ement-room-scroll-up-mark-read' moves the fully read marker
+    to the top of the window (when the marker's position is within the
+    range of known events), rather than only moving it when at the end
+    of the buffer.  (This eases the process of gradually reading a long
+    backlog of messages.)
+  ⁃ Improve readme export settings.
+
+  *Fixes*
+  ⁃ Extra indentation of some membership events.  (Thanks to [Steven
+    Allen].)
+  ⁃ Customization group for faces.
+  ⁃ Don't reinitialize `ement-room-list-mode' when room list buffer is
+    refreshed.  ([#146].  Thanks to [Ted Reed] for reporting.)
+  ⁃ Don't fetch old events when scrolling to the bottom of a room buffer
+    (only when scrolling to the top).  (Thanks to [Steven Allen].)
+  ⁃ Minor improvements to auto-detection of homeserver URIs.  (See
+    [#24].  Thanks to [Phil Sainty].)
+  ⁃ Uploading of certain filetypes (e.g. Emacs would decompress some
+    archives before uploading).  Thanks to `@welkinsl:matrix.org' for
+    reporting.
+  ⁃ Messages edited multiple times sometimes weren't correctly replaced.
+
+
+[#24] <https://github.com/alphapapa/ement.el/issues/24>
+
+[Jeffrey Stoffers] <https://github.com/Necronian>
+
+[Phil Sainty] <https://github.com/phil-s>
+
+[Jakub Kadlčík] <https://github.com/FrostyX>
+
+[Juanjo Presa] <https://github.com/oneingan>
+
+[Steven Allen] <https://github.com/Stebalien>
+
+[#146] <https://github.com/alphapapa/ement.el/issues/146>
+
+[Ted Reed] <https://github.com/treed>
+
+[#24]
+<https://github.com/alphapapa/ement.el/issues/24#issuecomment-1569518713>
+
+
+0.9.3
+─────
 
   *Fixes*
   ⁃ Another attempt at restoring position in room list when refreshing.
   ⁃ Command `ement-room-list-next-unread'.
 
 
-4.2 0.9.2
-─────────
+0.9.2
+─────
 
   *Fixes*
   ⁃ Restore position in room list when refreshing.
   ⁃ Completion in minibuffer.
 
 
-4.3 0.9.1
-─────────
+0.9.1
+─────
 
   *Fixes*
   ⁃ Error in `ement-room-list' command upon initial sync.
 
 
-4.4 0.9
-───────
+0.9
+───
 
   *Additions*
 
@@ -478,8 +568,8 @@ Feel free to join us in the chat room:
 [Caleb Chase] <https://github.com/chasecaleb>
 
 
-4.5 0.8.3
-─────────
+0.8.3
+─────
 
   *Fixes*
 
@@ -493,22 +583,22 @@ Feel free to join us in the chat room:
     used.)
 
 
-4.6 0.8.2
-─────────
+0.8.2
+─────
 
   *Fixes*
 
   ⁃ Deduplicate grouped membership events.
 
 
-4.7 0.8.1
-─────────
+0.8.1
+─────
 
   Added missing changelog entry (of course).
 
 
-4.8 0.8
-───────
+0.8
+───
 
   *Additions*
   ⁃ Command `ement-create-space' creates a new space.
@@ -550,8 +640,8 @@ Feel free to join us in the chat room:
 [Jeff Bowman] <https://github.com/jeffbowman>
 
 
-4.9 0.7
-───────
+0.7
+───
 
   *Additions*
 
@@ -590,8 +680,8 @@ Feel free to join us in the chat room:
 [mekeor] <https://github.com/mekeor>
 
 
-4.10 0.6
-────────
+0.6
+───
 
   *Additions*
   ⁃ Command `ement-view-space' to view a space's rooms in a directory
@@ -620,24 +710,24 @@ Feel free to join us in the chat room:
 [Visuwesh] <https://github.com/vizs>
 
 
-4.11 0.5.2
-──────────
+0.5.2
+─────
 
   *Fixes*
   ⁃ Apply `ement-initial-sync-timeout' properly (important for when the
     homeserver is slow to respond).
 
 
-4.12 0.5.1
-──────────
+0.5.1
+─────
 
   *Fixes*
   ⁃ Autoload `ement-directory' commands.
   ⁃ Faces in `ement-directory' listings.
 
 
-4.13 0.5
-────────
+0.5
+───
 
   *Additions*
   ⁃ Present "joined-and-left" and "rejoined-and-left" membership event
@@ -661,16 +751,16 @@ Feel free to join us in the chat room:
 [taxy.el] <https://github.com/alphapapa/taxy.el>
 
 
-4.14 0.4.1
-──────────
+0.4.1
+─────
 
   *Fixes*
   ⁃ Don't show "curl process interrupted" message when updating a read
     marker's position again.
 
 
-4.15 0.4
-────────
+0.4
+───
 
   *Additions*
   ⁃ Option `ement-room-unread-only-counts-notifications', now enabled by
@@ -700,16 +790,16 @@ Feel free to join us in the chat room:
   ⁃ Highlighting of `@room' mentions.
 
 
-4.16 0.3.1
-──────────
+0.3.1
+─────
 
   *Fixes*
   ⁃ Room unread status (when the last event in a room is sent by the
     local user, the room is considered read).
 
 
-4.17 0.3
-────────
+0.3
+───
 
   *Additions*
   ⁃ Command `ement-directory' shows a server's room directory.
@@ -736,15 +826,15 @@ Feel free to join us in the chat room:
   ⁃ Compatibility with Emacs 27.
 
 
-4.18 0.2.1
-──────────
+0.2.1
+─────
 
   *Fixes*
   ⁃ Info manual export filename.
 
 
-4.19 0.2
-────────
+0.2
+───
 
   *Changes*
   ⁃ Read receipts are re-enabled.  (They're now implemented with a
@@ -778,15 +868,15 @@ Feel free to join us in the chat room:
 [Julien Roy] <https://github.com/MrRoy>
 
 
-4.20 0.1.4
-──────────
+0.1.4
+─────
 
   *Fixed*
   ⁃ Info manual directory headers.
 
 
-4.21 0.1.3
-──────────
+0.1.3
+─────
 
   *Fixed*
 
@@ -795,8 +885,8 @@ Feel free to join us in the chat room:
     re-enabled in a future release.)
 
 
-4.22 0.1.2
-──────────
+0.1.2
+─────
 
   *Fixed*
   ⁃ Function `ement-room-sync' correctly updates room-list buffers.
@@ -812,8 +902,8 @@ Feel free to join us in the chat room:
 [Tassilo Horn] <https://github.com/tsdh>
 
 
-4.23 0.1.1
-──────────
+0.1.1
+─────
 
   *Fixed*
   ⁃ Function `ement-room-scroll-up-mark-read' selects the correct room
@@ -822,8 +912,8 @@ Feel free to join us in the chat room:
     `display-images-p' returns.
 
 
-4.24 0.1
-────────
+0.1
+───
 
   After almost two years of development, the first tagged release.
   Submitted to GNU ELPA.
@@ -835,8 +925,8 @@ Feel free to join us in the chat room:
   Bug reports, feature requests, suggestions — /oh my/!
 
 
-5.1 Copyright Assignment
-────────────────────────
+Copyright Assignment
+────────────────────
 
   Ement.el is published in GNU ELPA and is considered part of GNU Emacs.
   Therefore, cumulative contributions of more than 15 lines of code
@@ -848,8 +938,8 @@ Feel free to join us in the chat room:
 [assign@gnu.org] <mailto:assign@gnu.org>
 
 
-5.2 Matrix spec in Org format
-─────────────────────────────
+Matrix spec in Org format
+─────────────────────────
 
   An Org-formatted version of the Matrix spec is available in the
   [meta/spec] branch.
