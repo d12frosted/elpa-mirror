@@ -1,0 +1,13 @@
+(jabber .
+	[(20230617 2121)
+	 ((fsm
+	   (0 2))
+	  (srv
+	   (0 2)))
+	 "A Jabber client for Emacs." tar
+	 ((:commit . "bf4f0de231d2620a974f4e227be700cc5bcce3d5")
+	  (:authors
+	   ("Magnus Henoch" . "mange@freemail.hu"))
+	  (:maintainer "wgreenhouse" . "wgreenhouse@tilde.club")
+	  (:keywords "comm")
+	  (:url . "https://codeberg.org/emacs-jabber/emacs-jabber"))])
