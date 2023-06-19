@@ -72,8 +72,19 @@ Features
     happen automatically when buffers are loaded or saved, which time is
     adjusted, and how much time to leave between subtitles.
   • Convert between formats with `M-x subed-convert'.
+  • Show the waveform (`M-x subed-waveform-minor-mode', off by default)
+    extracted from the media file using `ffmpeg' with the start/stop
+    positions of the current subtitle and the current position in MPV
+    marked along with the subtitle.  Change the "volume" of the waveform
+    (i.e., the /visible/ amplitude) with `C-c C--' and `C-c C-='.
+    Redisplay the waveform with `C-c |'.  Left/right-click on the
+    waveform to set the start/stop timestamps. If you would like to
+    display the waveform automatically when you open a file, you can add
+    `(add-hook 'subed-mode-hook 'subed-waveform-minor-mode)' to your
+    configuration.
   • Load word timing data (ex: SRV2) using `M-x
-      subed-word-data-load-from-file'.
+      subed-word-data-load-from-file'. This will be used for splitting
+      words at timestamps when available.
   • Use `M-x subed-align' and [aeneas] to align your text or subtitles
     with an audio file in order to get timestamps.
 
