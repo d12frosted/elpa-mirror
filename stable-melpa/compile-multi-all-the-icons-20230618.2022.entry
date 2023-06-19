@@ -1,0 +1,15 @@
+(compile-multi-all-the-icons .
+			     [(20230618 2022)
+			      ((emacs
+				(28 0))
+			       (all-the-icons-completion
+				(0 0 1)))
+			      "Affixate `compile-multi' with icons" tar
+			      ((:commit . "0625042d50dd629c62af8cdc5457fa9d7179468e")
+			       (:authors
+				("mohsin kaleem" . "mohkale@kisara.moe"))
+			       (:maintainers
+				("mohsin kaleem" . "mohkale@kisara.moe"))
+			       (:maintainer "mohsin kaleem" . "mohkale@kisara.moe")
+			       (:keywords "tools" "compile" "build")
+			       (:url . "https://github.com/mohkale/compile-multi"))])

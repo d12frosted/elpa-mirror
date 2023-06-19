@@ -1,19 +1,11 @@
 Package: cff
-Fetcher: github
-Source:  https://github.com/fourier/cff.git
+Fetcher: codeberg
+Source:  https://codeberg.org/fourier/cff.git
 
 Updating /mnt/store/melpa/working/cff/
-Checking out b6ab2a28e64ef06f281ec74cfe3114e450644dfa
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cff/
-  to /tmp/cffB6qPKp/cff-20160118.2018
-    cff.el -> cff.el
-Created cff-20160118.2018.tar containing:
-  cff-20160118.2018/
-  cff-20160118.2018/cff-pkg.el
-  cff-20160118.2018/cff.el
-Built cff in 3.728s, finished at 2023-06-18T02:08:44+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root 22K Jun  9 15:34 packages/cff-20160118.2018.el
-4.0K -rw-r--r-- 1 root root 527 Jun 18 02:08 packages/cff-20160118.2018.entry
- 32K -rw-r--r-- 1 root root 30K Jun 18 02:08 packages/cff-20160118.2018.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/fourier/cff.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

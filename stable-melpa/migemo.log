@@ -3,10 +3,17 @@ Fetcher: github
 Source:  https://github.com/emacs-jp/migemo.git
 
 Updating /mnt/store/melpa/working/migemo/
-
-Command '' exited with non-zero exit-code: 128
-
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out f756cba3d5268968da361463c2e29b3a659a3de7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/migemo/
+  to /tmp/migemoUc8lPD/migemo-20200913.12
+    migemo.el -> migemo.el
+Created migemo-20200913.12.tar containing:
+  migemo-20200913.12/
+  migemo-20200913.12/migemo-pkg.el
+  migemo-20200913.12/migemo.el
+Built migemo in 2.786s, finished at 2023-06-19T10:57:41+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root 31K Jun  9 16:23 packages/migemo-20200913.12.el
+4.0K -rw-r--r-- 1 root root 449 Jun 19 10:57 packages/migemo-20200913.12.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 19 10:57 packages/migemo-20200913.12.tar

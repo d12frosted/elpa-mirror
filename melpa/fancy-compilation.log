@@ -3,17 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-fancy-compilation.git
 
 Updating /mnt/store/melpa/working/fancy-compilation/
-Checking out 5104912ed98f803f2504a8d5cacc341a76bc29cf
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fancy-compilation/
-  to /tmp/fancy-compilationYT2mFa/fancy-compilation-20230601.204
-    fancy-compilation.el -> fancy-compilation.el
-Created fancy-compilation-20230601.204.tar containing:
-  fancy-compilation-20230601.204/
-  fancy-compilation-20230601.204/fancy-compilation-pkg.el
-  fancy-compilation-20230601.204/fancy-compilation.el
-Built fancy-compilation in 6.435s, finished at 2023-06-18T02:26:28+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 11K Jun  9 15:54 packages/fancy-compilation-20230601.204.el
-4.0K -rw-r--r-- 1 root root 462 Jun 18 02:26 packages/fancy-compilation-20230601.204.entry
- 20K -rw-r--r-- 1 root root 20K Jun 18 02:26 packages/fancy-compilation-20230601.204.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-fancy-compilation.git/': Failed to connect to codeberg.org port 443: Connection refused
+
+Command exited with non-zero exit-code: 128

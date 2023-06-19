@@ -83,7 +83,6 @@ Contributing
 .. Submitting Patches
 Things To Do
 .. Editing Improvements
-.. Running Improvements
 .. General Improvements
 Indices
 .. Function Index
@@ -2216,21 +2215,28 @@ Sending signals to running top-levels
   Menu buffer).
 
   For more information about interrupting threads in SWI-Prolog, see
-  [Signaling threads in the SWI-Prolog manual].
+  [Signaling threads] in the SWI-Prolog manual.
 
 
-[Signaling threads in the SWI-Prolog manual]
+[Signaling threads]
 <https://www.swi-prolog.org/pldoc/man?section=thread-signal>
 
 
-Top-level history
+Top-level History
 ─────────────────
 
-  `sweeprolog-top-level-mode' buffers provide a history of previously
-  user inputs, similarly to other `comint-mode' derivatives such as
-  `shell-mode'.  To insert the last input from the history at the
-  prompt, use `M-p' (`comint-previous-input').  For a full description
-  of history related commands, see [Shell History in the Emacs manual].
+  Sweep top-level buffers provide a history of previous user inputs,
+  similarly to other `comint-mode' derivatives such as `shell-mode'.  To
+  insert the last input from the history at the prompt, use `M-p'
+  (`comint-previous-input').  For a full description of history related
+  commands, see [Shell History] in the Emacs manual.
+
+  User Option: sweeprolog-top-level-min-history-length
+        Minimum input length to record in the history of Sweep
+        top-levels.
+  User Option: sweeprolog-top-level-persistent-history
+        Controls if and where Sweep top-level buffers persist their
+        input history.
 
   The Sweep top-level history only records inputs whose length is at
   least `sweeprolog-top-level-min-history-length'.  This user option is
@@ -2239,8 +2245,35 @@ Top-level history
   are common in the top-level interaction, e.g. `;' as used to invoke
   backtracking.
 
+  Sweep can optionally persist top-level input history.  The user option
+  `sweeprolog-top-level-persistent-history' controls if and where
+  top-levels store their persistent history: when this option is
+  non-`nil', Sweep top-level buffers that you create read their input
+  history from a persistent history file, and write their history back
+  to it when you delete them.  If this option is a string, it is treated
+  as a file name, and top-level buffers use that file to persistent
+  their input history.  If it’s a function, it is called with no
+  arguments and should return either a file name for the persistent
+  history, or `nil' to disable persistent history for that top-level
+  buffer.  The file name that this user option specifies can be either
+  absolute or relative, in which case it is expanded relative to the
+  default directory of the top-level buffer (see [File Names]).  This
+  option can also be a list of the form `(project REL DEF)', in which
+  case the persistent history file that a top-level buffer uses depends
+  on the current project of the of that buffer (see [Projects] in the
+  Emacs manual).  If there is no current project, the top-level
+  persistent history file is `DEF'.  Otherwise, the history file is
+  `REL' relative to the project’s root directory.  You can leave `DEF'
+  nil or omit it entirely to disable persistent history for top-levels
+  that are not associated with any project.  By default, this option is
+  set to `nil' which says not to keep persistent top-level history.
 
-[Shell History in the Emacs manual] <info:emacs#Shell History>
+
+[Shell History] <info:emacs#Shell History>
+
+[File Names] <info:emacs#File Names>
+
+[Projects] <info:emacs#Projects>
 
 
 Completion in the top-level
@@ -2411,7 +2444,7 @@ Built-in Native Predicates
   default), Sweep will try to locate a local checkout of the SWI-Prolog
   sources automatically among known project root directories provided by
   Emacs’s built-in `project-known-project-roots' from `project.el' (see
-  [Projects in the Emacs manual] for more information about `project.el'
+  [Projects] in the Emacs manual for more information about `project.el'
   projects).  Lastly, setting `sweeprolog-swipl-sources' to `nil'
   disables searching for definitions of native built-ins.
 
@@ -2427,7 +2460,7 @@ Built-in Native Predicates
       sweeprolog-describe-predicate' (see [Prolog Help]).
 
 
-[Projects in the Emacs manual] <info:emacs#Projects>
+[Projects] <info:emacs#Projects>
 
 [the Emacs CC Mode manual] <info:ccmode#Top>
 
@@ -2692,15 +2725,6 @@ Improvements around editing Prolog
         └────
 
         And decide whether or not to apply the fragment.
-
-
-Improvements around running Prolog
-──────────────────────────────────
-
-  Persist top-level history across sessions
-        Sweep should persist Prolog top-level histories across
-        invocations of `sweeprolog-top-level', ideally also across
-        different Emacs sessions.
 
 
 General improvements

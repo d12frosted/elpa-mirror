@@ -3,16 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-buffer-name-relative.git
 
 Updating /mnt/store/melpa/working/buffer-name-relative/
-Checking out 094f7c5fb7e69e5a7403638d81f3de8f296e8471
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/buffer-name-relative/
-  to /tmp/buffer-name-relativedL5suB/buffer-name-relative-20230613.621
-    buffer-name-relative.el -> buffer-name-relative.el
-Created buffer-name-relative-20230613.621.tar containing:
-  buffer-name-relative-20230613.621/
-  buffer-name-relative-20230613.621/buffer-name-relative-pkg.el
-  buffer-name-relative-20230613.621/buffer-name-relative.el
-Built buffer-name-relative in 4.996s, finished at 2023-06-18T02:07:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 475 Jun 18 02:07 packages/buffer-name-relative-20230613.621.entry
- 20K -rw-r--r-- 1 root root 20K Jun 18 02:07 packages/buffer-name-relative-20230613.621.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-buffer-name-relative.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

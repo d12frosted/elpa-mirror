@@ -3,30 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist-key-values/
-Checking out 9f970ebb637d57b3234b6e1e85840dcf524037e6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/chronometrist-key-values/
-  to /tmp/chronometrist-key-valuesOoO6oR/chronometrist-key-values-20220414.726
-  ! elisp/chronometrist-key-values.el -> chronometrist-key-values.el
-  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
-  ! elisp/chronometrist-sqlite.el -> chronometrist-sqlite.el
-  ! elisp/chronometrist-third.el -> chronometrist-third.el
-  ! elisp/chronometrist-key-values.org -> chronometrist-key-values.org
-  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
-  ! elisp/chronometrist-sqlite.org -> chronometrist-sqlite.org
-  ! elisp/chronometrist-third.org -> chronometrist-third.org
-Created chronometrist-key-values-20220414.726.tar containing:
-  chronometrist-key-values-20220414.726/
-  chronometrist-key-values-20220414.726/chronometrist-key-values-pkg.el
-  chronometrist-key-values-20220414.726/chronometrist-key-values.el
-  chronometrist-key-values-20220414.726/chronometrist-key-values.org
-  chronometrist-key-values-20220414.726/chronometrist-spark.el
-  chronometrist-key-values-20220414.726/chronometrist-spark.org
-  chronometrist-key-values-20220414.726/chronometrist-sqlite.el
-  chronometrist-key-values-20220414.726/chronometrist-sqlite.org
-  chronometrist-key-values-20220414.726/chronometrist-third.el
-  chronometrist-key-values-20220414.726/chronometrist-third.org
-Built chronometrist-key-values in 5.361s, finished at 2023-06-18T02:09:17+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  528 Jun 18 02:09 packages/chronometrist-key-values-20220414.726.entry
-120K -rw-r--r-- 1 root root 120K Jun 18 02:09 packages/chronometrist-key-values-20220414.726.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/contrapunctus/chronometrist.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

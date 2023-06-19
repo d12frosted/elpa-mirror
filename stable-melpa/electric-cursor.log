@@ -3,17 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/acdw/electric-cursor.el.git
 
 Updating /mnt/store/melpa/working/electric-cursor/
-Checking out bc09aa8c5d3cc32e3e6452cbf8018fc1ea772b73
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/electric-cursor/
-  to /tmp/electric-cursorDeaJ3C/electric-cursor-20221221.438
-    electric-cursor.el -> electric-cursor.el
-Created electric-cursor-20221221.438.tar containing:
-  electric-cursor-20221221.438/
-  electric-cursor-20221221.438/electric-cursor-pkg.el
-  electric-cursor-20221221.438/electric-cursor.el
-Built electric-cursor in 4.701s, finished at 2023-06-18T02:20:37+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.3K Jun  9 15:49 packages/electric-cursor-20221221.438.el
-4.0K -rw-r--r-- 1 root root  458 Jun 18 02:20 packages/electric-cursor-20221221.438.entry
- 12K -rw-r--r-- 1 root root  10K Jun 18 02:20 packages/electric-cursor-20221221.438.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/acdw/electric-cursor.el.git/': Failed to connect to codeberg.org port 443: Connection refused
+
+Command exited with non-zero exit-code: 128

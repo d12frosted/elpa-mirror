@@ -3,17 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/akib/emacs-gnu-indent.git
 
 Updating /mnt/store/melpa/working/gnu-indent/
-Checking out f31dbe60478b6270bb57b6b05998df8eec56f801
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gnu-indent/
-  to /tmp/gnu-indentfjuo6p/gnu-indent-20221127.2112
-    gnu-indent.el -> gnu-indent.el
-Created gnu-indent-20221127.2112.tar containing:
-  gnu-indent-20221127.2112/
-  gnu-indent-20221127.2112/gnu-indent-pkg.el
-  gnu-indent-20221127.2112/gnu-indent.el
-Built gnu-indent in 8.609s, finished at 2023-06-18T02:33:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Jun  9 16:02 packages/gnu-indent-20221127.2112.el
-4.0K -rw-r--r-- 1 root root  473 Jun 18 02:33 packages/gnu-indent-20221127.2112.entry
- 12K -rw-r--r-- 1 root root  10K Jun 18 02:33 packages/gnu-indent-20221127.2112.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/akib/emacs-gnu-indent.git/': Failed to connect to codeberg.org port 443: Connection refused
+
+Command exited with non-zero exit-code: 128

@@ -3,32 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-cycle-at-point.git
 
 Updating /mnt/store/melpa/working/cycle-at-point/
-Checking out 3c1471362d6cb947daf6373e8def8169c21222fc
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cycle-at-point/
-  to /tmp/cycle-at-pointJSUuOY/cycle-at-point-20230116.951
-    cycle-at-point-find-alphabet.el -> cycle-at-point-find-alphabet.el
-    cycle-at-point-find-integer.el -> cycle-at-point-find-integer.el
-    cycle-at-point-preset-c++-mode.el -> cycle-at-point-preset-c++-mode.el
-    cycle-at-point-preset-c-mode.el -> cycle-at-point-preset-c-mode.el
-    cycle-at-point-preset-cmake-mode.el -> cycle-at-point-preset-cmake-mode.el
-    cycle-at-point-preset-emacs-lisp-mode.el -> cycle-at-point-preset-emacs-lisp-mode.el
-    cycle-at-point-preset-lang-en.el -> cycle-at-point-preset-lang-en.el
-    cycle-at-point-preset-python-mode.el -> cycle-at-point-preset-python-mode.el
-    cycle-at-point.el -> cycle-at-point.el
-Created cycle-at-point-20230116.951.tar containing:
-  cycle-at-point-20230116.951/
-  cycle-at-point-20230116.951/cycle-at-point-find-alphabet.el
-  cycle-at-point-20230116.951/cycle-at-point-find-integer.el
-  cycle-at-point-20230116.951/cycle-at-point-pkg.el
-  cycle-at-point-20230116.951/cycle-at-point-preset-c++-mode.el
-  cycle-at-point-20230116.951/cycle-at-point-preset-c-mode.el
-  cycle-at-point-20230116.951/cycle-at-point-preset-cmake-mode.el
-  cycle-at-point-20230116.951/cycle-at-point-preset-emacs-lisp-mode.el
-  cycle-at-point-20230116.951/cycle-at-point-preset-lang-en.el
-  cycle-at-point-20230116.951/cycle-at-point-preset-python-mode.el
-  cycle-at-point-20230116.951/cycle-at-point.el
-Built cycle-at-point in 4.961s, finished at 2023-06-18T02:14:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 495 Jun 18 02:14 packages/cycle-at-point-20230116.951.entry
- 40K -rw-r--r-- 1 root root 40K Jun 18 02:14 packages/cycle-at-point-20230116.951.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-cycle-at-point.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

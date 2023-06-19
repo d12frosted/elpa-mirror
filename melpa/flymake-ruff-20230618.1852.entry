@@ -1,0 +1,14 @@
+(flymake-ruff .
+	      [(20230618 1852)
+	       ((emacs
+		 (26 1))
+		(project
+		 (0 3 0)))
+	       "A flymake plugin for python files using ruff" tar
+	       ((:commit . "31a7635da27dada872b28ad7adfa0df622438863")
+		(:authors
+		 ("Erick Navarro" . "erick@navarro.io"))
+		(:maintainers
+		 ("Erick Navarro" . "erick@navarro.io"))
+		(:maintainer "Erick Navarro" . "erick@navarro.io")
+		(:url . "https://github.com/erickgnavar/flymake-ruff"))])

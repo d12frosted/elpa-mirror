@@ -3,17 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-diff-at-point.git
 
 Updating /mnt/store/melpa/working/diff-at-point/
-Checking out 0a4815a364b636eadf2f9ca6f468fb5996ff8d6f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/diff-at-point/
-  to /tmp/diff-at-pointjBsZXb/diff-at-point-20230320.2355
-    diff-at-point.el -> diff-at-point.el
-Created diff-at-point-20230320.2355.tar containing:
-  diff-at-point-20230320.2355/
-  diff-at-point-20230320.2355/diff-at-point-pkg.el
-  diff-at-point-20230320.2355/diff-at-point.el
-Built diff-at-point in 4.372s, finished at 2023-06-18T02:15:57+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 13K Jun  9 15:43 packages/diff-at-point-20230320.2355.el
-4.0K -rw-r--r-- 1 root root 406 Jun 18 02:15 packages/diff-at-point-20230320.2355.entry
- 20K -rw-r--r-- 1 root root 20K Jun 18 02:15 packages/diff-at-point-20230320.2355.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-diff-at-point.git/': The requested URL returned error: 502
+
+Command exited with non-zero exit-code: 128

@@ -1,0 +1,13 @@
+(gpr-ts-mode .
+	     [(20230613 1237)
+	      ((emacs
+		(29)))
+	      "Tree-sitter support for GNAT project" tar
+	      ((:commit . "b5c8419f3ff3e224aec922083b83654c77481e65")
+	       (:authors
+		("Troy Brown" . "brownts@troybrown.dev"))
+	       (:maintainers
+		("Troy Brown" . "brownts@troybrown.dev"))
+	       (:maintainer "Troy Brown" . "brownts@troybrown.dev")
+	       (:keywords "gpr" "gnat" "ada" "languages" "tree-sitter")
+	       (:url . "https://github.com/brownts/gpr-ts-mode"))])

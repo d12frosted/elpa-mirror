@@ -1,19 +1,11 @@
 Package: idea-darkula-theme
-Fetcher: github
-Source:  https://github.com/fourier/idea-darkula-theme.git
+Fetcher: codeberg
+Source:  https://codeberg.org/fourier/idea-darkula-theme.git
 
 Updating /mnt/store/melpa/working/idea-darkula-theme/
-Checking out 2ba08b6b7c0f75d460d81e1f02114a6449bb1868
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/idea-darkula-theme/
-  to /tmp/idea-darkula-themekbjeT0/idea-darkula-theme-20230617.2005
-    idea-darkula-theme.el -> idea-darkula-theme.el
-Created idea-darkula-theme-20230617.2005.tar containing:
-  idea-darkula-theme-20230617.2005/
-  idea-darkula-theme-20230617.2005/idea-darkula-theme-pkg.el
-  idea-darkula-theme-20230617.2005/idea-darkula-theme.el
-Built idea-darkula-theme in 4.016s, finished at 2023-06-18T02:40:49+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jun  9 16:11 packages/idea-darkula-theme-20160416.2303.el
-4.0K -rw-r--r-- 1 root root  586 Jun 18 02:40 packages/idea-darkula-theme-20230617.2005.entry
- 20K -rw-r--r-- 1 root root  20K Jun 18 02:40 packages/idea-darkula-theme-20230617.2005.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/fourier/idea-darkula-theme.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

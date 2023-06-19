@@ -3,17 +3,9 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-scroll-on-jump.git
 
 Updating /mnt/store/melpa/working/scroll-on-jump/
-Checking out 220e4a8f21cc0b430c693a3ecac08156da2602c1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/scroll-on-jump/
-  to /tmp/scroll-on-jumpdgoeOb/scroll-on-jump-20230201.141
-    scroll-on-jump.el -> scroll-on-jump.el
-Created scroll-on-jump-20230201.141.tar containing:
-  scroll-on-jump-20230201.141/
-  scroll-on-jump-20230201.141/scroll-on-jump-pkg.el
-  scroll-on-jump-20230201.141/scroll-on-jump.el
-Built scroll-on-jump in 5.447s, finished at 2023-06-18T03:12:12+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root 26K Jun  9 16:46 packages/scroll-on-jump-20230201.141.el
-4.0K -rw-r--r-- 1 root root 430 Jun 18 03:12 packages/scroll-on-jump-20230201.141.entry
- 32K -rw-r--r-- 1 root root 30K Jun 18 03:12 packages/scroll-on-jump-20230201.141.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-scroll-on-jump.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

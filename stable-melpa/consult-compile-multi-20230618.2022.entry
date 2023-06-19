@@ -1,0 +1,17 @@
+(consult-compile-multi .
+		       [(20230618 2022)
+			((emacs
+			  (28 0))
+			 (compile-multi
+			  (0 3))
+			 (consult
+			  (0 34)))
+			"Consulting read support for `compile-multi'" tar
+			((:commit . "0625042d50dd629c62af8cdc5457fa9d7179468e")
+			 (:authors
+			  ("mohsin kaleem" . "mohkale@kisara.moe"))
+			 (:maintainers
+			  ("mohsin kaleem" . "mohkale@kisara.moe"))
+			 (:maintainer "mohsin kaleem" . "mohkale@kisara.moe")
+			 (:keywords "tools" "compile" "build")
+			 (:url . "https://github.com/mohkale/compile-multi"))])
