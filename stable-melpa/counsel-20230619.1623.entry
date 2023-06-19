@@ -1,5 +1,5 @@
 (counsel .
-	 [(20230410 1815)
+	 [(20230619 1623)
 	  ((emacs
 	    (24 5))
 	   (ivy
@@ -7,7 +7,7 @@
 	   (swiper
 	    (0 14 0)))
 	  "Various completion functions using Ivy" tar
-	  ((:commit . "d28225e86f8dfb3825809ad287f759f95ee9e479")
+	  ((:commit . "aa18c1f4861cef2ddcf0c70b6fd7edd93ae9c627")
 	   (:authors
 	    ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	   (:maintainers

@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/consult-spotify/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/jao/espotify.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 5c1dcf0182135cda4191d4ba206fe2f265100293
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-spotify/
+  to /tmp/consult-spotify849wJX/consult-spotify-20211114.2258
+    consult-spotify.el -> consult-spotify.el
+Created consult-spotify-20211114.2258.tar containing:
+  consult-spotify-20211114.2258/
+  consult-spotify-20211114.2258/consult-spotify-pkg.el
+  consult-spotify-20211114.2258/consult-spotify.el
+Built consult-spotify in 4.386s, finished at 2023-06-19T19:57:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Jun  9 15:39 packages/consult-spotify-20211114.2258.el
+4.0K -rw-r--r-- 1 root root  454 Jun 19 19:57 packages/consult-spotify-20211114.2258.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 19 19:57 packages/consult-spotify-20211114.2258.tar

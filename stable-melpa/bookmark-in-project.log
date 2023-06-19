@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-bookmark-in-project.git
 
 Updating /mnt/store/melpa/working/bookmark-in-project/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-bookmark-in-project.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out b3255afd8bddd0e6705fa2556205bf1c1192fc37
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bookmark-in-project/
+  to /tmp/bookmark-in-projectwS8ene/bookmark-in-project-20230604.757
+    bookmark-in-project.el -> bookmark-in-project.el
+Created bookmark-in-project-20230604.757.tar containing:
+  bookmark-in-project-20230604.757/
+  bookmark-in-project-20230604.757/bookmark-in-project-pkg.el
+  bookmark-in-project-20230604.757/bookmark-in-project.el
+Built bookmark-in-project in 4.700s, finished at 2023-06-19T19:52:06+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root 39K Jun  9 15:32 packages/bookmark-in-project-20230604.757.el
+4.0K -rw-r--r-- 1 root root 507 Jun 19 19:52 packages/bookmark-in-project-20230604.757.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 19 19:52 packages/bookmark-in-project-20230604.757.tar
