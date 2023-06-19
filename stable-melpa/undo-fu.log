@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-undo-fu.git
 
 Updating /mnt/store/melpa/working/undo-fu/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-undo-fu.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out d59bba01de48a808a42d6e29e011ef641cdb6a77
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/undo-fu/
+  to /tmp/undo-fumLpznD/undo-fu-20230109.2256
+    undo-fu.el -> undo-fu.el
+Created undo-fu-20230109.2256.tar containing:
+  undo-fu-20230109.2256/
+  undo-fu-20230109.2256/undo-fu-pkg.el
+  undo-fu-20230109.2256/undo-fu.el
+Built undo-fu in 5.558s, finished at 2023-06-19T14:40:06+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 15K Jun  9 16:57 packages/undo-fu-20230109.2256.el
+4.0K -rw-r--r-- 1 root root 404 Jun 19 14:40 packages/undo-fu-20230109.2256.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 19 14:40 packages/undo-fu-20230109.2256.tar

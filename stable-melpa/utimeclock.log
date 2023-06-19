@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-utimeclock.git
 
 Updating /mnt/store/melpa/working/utimeclock/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-utimeclock.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out 484d426a2ecc1ac7b922fd93c7d03da23510fb63
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/utimeclock/
+  to /tmp/utimeclockwCQ4ke/utimeclock-20230601.25
+    utimeclock.el -> utimeclock.el
+Created utimeclock-20230601.25.tar containing:
+  utimeclock-20230601.25/
+  utimeclock-20230601.25/utimeclock-pkg.el
+  utimeclock-20230601.25/utimeclock.el
+Built utimeclock in 4.857s, finished at 2023-06-19T14:40:41+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root 17K Jun  9 16:58 packages/utimeclock-20230601.25.el
+4.0K -rw-r--r-- 1 root root 459 Jun 19 14:40 packages/utimeclock-20230601.25.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 19 14:40 packages/utimeclock-20230601.25.tar

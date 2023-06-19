@@ -3,9 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-theme-inkpot.git
 
 Updating /mnt/store/melpa/working/inkpot-theme/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-theme-inkpot.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 2f59c524e17f8fb157bdbae5cf10cfe42f63c6bd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/inkpot-theme/
+  to /tmp/inkpot-themekmekV7/inkpot-theme-20230618.715
+    inkpot-theme.el -> inkpot-theme.el
+Created inkpot-theme-20230618.715.tar containing:
+  inkpot-theme-20230618.715/
+  inkpot-theme-20230618.715/inkpot-theme-pkg.el
+  inkpot-theme-20230618.715/inkpot-theme.el
+Built inkpot-theme in 4.988s, finished at 2023-06-19T13:59:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 462 Jun 19 13:59 packages/inkpot-theme-20230618.715.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 19 13:59 packages/inkpot-theme-20230618.715.tar

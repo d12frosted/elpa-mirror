@@ -3,17 +3,9 @@ Fetcher: github
 Source:  https://github.com/juba/textile-mode.git
 
 Updating /mnt/store/melpa/working/textile-mode/
-Checking out 8f8c09ef097a95a713307fdb5c92b9778dfbc1fc
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/textile-mode/
-  to /tmp/textile-modevJ6goq/textile-mode-20230112.1030
-    textile-mode.el -> textile-mode.el
-Created textile-mode-20230112.1030.tar containing:
-  textile-mode-20230112.1030/
-  textile-mode-20230112.1030/textile-mode-pkg.el
-  textile-mode-20230112.1030/textile-mode.el
-Built textile-mode in 3.097s, finished at 2023-06-19T11:24:44+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root 14K Jun  9 16:54 packages/textile-mode-20230112.1030.el
-4.0K -rw-r--r-- 1 root root 410 Jun 19 11:24 packages/textile-mode-20230112.1030.entry
- 20K -rw-r--r-- 1 root root 20K Jun 19 11:24 packages/textile-mode-20230112.1030.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://github.com/juba/textile-mode.git/': gnutls_handshake() failed: Error in the pull function.
+
+Command exited with non-zero exit-code: 128

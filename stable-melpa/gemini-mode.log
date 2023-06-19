@@ -3,9 +3,17 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/gemini.el.git
 
 Updating /mnt/store/melpa/working/gemini-mode/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://git.carcosa.net/jmcbray/gemini.el.git/': Failed to connect to git.carcosa.net port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out a7dd7c6ea4e036d0d5ecc4a5d284874c400f10ba
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gemini-mode/
+  to /tmp/gemini-mode3yIz8Q/gemini-mode-20221127.1619
+    gemini-mode.el -> gemini-mode.el
+Created gemini-mode-20221127.1619.tar containing:
+  gemini-mode-20221127.1619/
+  gemini-mode-20221127.1619/gemini-mode-pkg.el
+  gemini-mode-20221127.1619/gemini-mode.el
+Built gemini-mode in 4.155s, finished at 2023-06-19T13:48:41+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jun  9 16:00 packages/gemini-mode-20221127.1619.el
+4.0K -rw-r--r-- 1 root root  687 Jun 19 13:48 packages/gemini-mode-20221127.1619.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 19 13:48 packages/gemini-mode-20221127.1619.tar

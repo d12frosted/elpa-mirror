@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/shell-here.git
 
 Updating /mnt/store/melpa/working/shell-here/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/emacs-weirdware/shell-here.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out eeb437ff26d62a5009046b1b3b4503b768e3131a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shell-here/
+  to /tmp/shell-heresZatsG/shell-here-20220102.1703
+    shell-here.el -> shell-here.el
+Created shell-here-20220102.1703.tar containing:
+  shell-here-20220102.1703/
+  shell-here-20220102.1703/shell-here-pkg.el
+  shell-here-20220102.1703/shell-here.el
+Built shell-here in 4.673s, finished at 2023-06-19T14:30:39+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jun  9 16:47 packages/shell-here-20220102.1703.el
+4.0K -rw-r--r-- 1 root root  393 Jun 19 14:30 packages/shell-here-20220102.1703.entry
+ 20K -rw-r--r-- 1 root root  20K Jun 19 14:30 packages/shell-here-20220102.1703.tar

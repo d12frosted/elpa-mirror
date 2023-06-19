@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/FelipeLema/tree-sitter-indent.el.git
 
 Updating /mnt/store/melpa/working/tree-sitter-indent/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/FelipeLema/tree-sitter-indent.el.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out 4ef246db3e4ff99f672fe5e4b416c890f885c09e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tree-sitter-indent/
+  to /tmp/tree-sitter-indentIfX4Jf/tree-sitter-indent-20220411.1439
+    tree-sitter-indent.el -> tree-sitter-indent.el
+Created tree-sitter-indent-20220411.1439.tar containing:
+  tree-sitter-indent-20220411.1439/
+  tree-sitter-indent-20220411.1439/tree-sitter-indent-pkg.el
+  tree-sitter-indent-20220411.1439/tree-sitter-indent.el
+Built tree-sitter-indent in 8.497s, finished at 2023-06-19T14:39:03+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:55 packages/tree-sitter-indent-20220411.1439.el
+4.0K -rw-r--r-- 1 root root 607 Jun 19 14:39 packages/tree-sitter-indent-20220411.1439.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 19 14:39 packages/tree-sitter-indent-20220411.1439.tar

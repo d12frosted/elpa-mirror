@@ -1,9 +1,9 @@
 (engine-mode .
-	     [(20230516 1526)
-	      ((cl-lib
-		(0 5)))
-	      "Define and query search engines from within Emacs" tar
-	      ((:commit . "fae1bd4fdf7d102744505bf2a8f4dc88d5b8f2fd")
+	     [(20230619 1326)
+	      ((emacs
+		(24 3)))
+	      "Define and query search engines" tar
+	      ((:commit . "81d4ae1054dab2dbf81c1efbed50f27112dddbb1")
 	       (:authors
 		("Harry R. Schwartz" . "hello@harryrschwartz.com"))
 	       (:maintainers

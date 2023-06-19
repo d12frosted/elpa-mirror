@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/joostkremers/visual-fill-column.git
 
 Updating /mnt/store/melpa/working/visual-fill-column/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/joostkremers/visual-fill-column.git/': The requested URL returned error: 502
-
-Command exited with non-zero exit-code: 128
+Checking out 695a59789209c42fa08a5bce92963ee32f4455be
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/visual-fill-column/
+  to /tmp/visual-fill-column0c5mOT/visual-fill-column-20230102.1830
+    visual-fill-column.el -> visual-fill-column.el
+Created visual-fill-column-20230102.1830.tar containing:
+  visual-fill-column-20230102.1830/
+  visual-fill-column-20230102.1830/visual-fill-column-pkg.el
+  visual-fill-column-20230102.1830/visual-fill-column.el
+Built visual-fill-column in 4.806s, finished at 2023-06-19T14:41:36+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 16K Jun  9 16:59 packages/visual-fill-column-20230102.1830.el
+4.0K -rw-r--r-- 1 root root 483 Jun 19 14:41 packages/visual-fill-column-20230102.1830.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 19 14:41 packages/visual-fill-column-20230102.1830.tar

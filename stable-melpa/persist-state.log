@@ -3,9 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/bram85/emacs-persist-state.git
 
 Updating /mnt/store/melpa/working/persist-state/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/bram85/emacs-persist-state.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 757a6049723b777930fda220234c10f315cd05bb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/persist-state/
+  to /tmp/persist-state8N4E4U/persist-state-20230618.2016
+    persist-state.el -> persist-state.el
+Created persist-state-20230618.2016.tar containing:
+  persist-state-20230618.2016/
+  persist-state-20230618.2016/persist-state-pkg.el
+  persist-state-20230618.2016/persist-state.el
+Built persist-state in 5.283s, finished at 2023-06-19T14:21:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 491 Jun 19 14:21 packages/persist-state-20230618.2016.entry
+ 12K -rw-r--r-- 1 root root 10K Jun 19 14:21 packages/persist-state-20230618.2016.tar

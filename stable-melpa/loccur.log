@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/fourier/loccur.git
 
 Updating /mnt/store/melpa/working/loccur/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/fourier/loccur.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 01b7afa62589432a98171074abb8c5a1e089034a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/loccur/
+  to /tmp/loccurgAztgb/loccur-20210224.2041
+    loccur.el -> loccur.el
+Created loccur-20210224.2041.tar containing:
+  loccur-20210224.2041/
+  loccur-20210224.2041/loccur-pkg.el
+  loccur-20210224.2041/loccur.el
+Built loccur in 4.721s, finished at 2023-06-19T14:05:23+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root 14K Jun  9 16:19 packages/loccur-20210224.2041.el
+4.0K -rw-r--r-- 1 root root 471 Jun 19 14:05 packages/loccur-20210224.2041.entry
+ 20K -rw-r--r-- 1 root root 20K Jun 19 14:05 packages/loccur-20210224.2041.tar

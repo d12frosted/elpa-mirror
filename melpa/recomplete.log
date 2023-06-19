@@ -3,9 +3,17 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-recomplete.git
 
 Updating /mnt/store/melpa/working/recomplete/
-
-Command '' exited with non-zero exit-code: 128
-
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-recomplete.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out 296ed0ecce65066f513182bbde2045fca9c1e035
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/recomplete/
+  to /tmp/recompleteioi5v7/recomplete-20230601.15
+    recomplete.el -> recomplete.el
+Created recomplete-20230601.15.tar containing:
+  recomplete-20230601.15/
+  recomplete-20230601.15/recomplete-pkg.el
+  recomplete-20230601.15/recomplete.el
+Built recomplete in 4.854s, finished at 2023-06-19T14:27:16+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root 23K Jun  9 16:43 packages/recomplete-20230601.15.el
+4.0K -rw-r--r-- 1 root root 452 Jun 19 14:27 packages/recomplete-20230601.15.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 19 14:27 packages/recomplete-20230601.15.tar
