@@ -11,3 +11,6 @@ MELPA, you can run `M-x package-install` then enter `hyperdrive`.
 [hyper-gateway](https://github.com/RangerMauve/hyper-gateway/) for
 talking to the hypercore network (installation instructions -
 <https://github.com/RangerMauve/hyper-gateway#how-do-i-install-hyper-gateway>).
+
+TODO: When requiring Emacs 28+, consider using symbol shorthands to
+reduce how many times we have to type "hyperdrive".

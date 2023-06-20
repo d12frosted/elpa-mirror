@@ -2309,14 +2309,14 @@
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
 		(:commit . "6c38e95b8e846aceb88398c682fd283052924556"))])
  (nano-modeline .
-		[(1 0 0)
+		[(1 0 1)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
 		 ((:url . "https://github.com/rougier/nano-modeline")
 		  (:keywords "convenience" "mode-line" "header-line")
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-		  (:commit . "cba074e55c847f289085ec35c21fb2ad8df1b483"))])
+		  (:commit . "a18780c277838983932623870752f0adddef0345"))])
  (nano-theme .
 	     [(0 3 4)
 	      ((emacs
