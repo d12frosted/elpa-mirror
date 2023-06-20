@@ -1,0 +1,10 @@
+(opam-switch-mode .
+		  [(20230620 1534)
+		   ((emacs
+		     (25 1)))
+		   "Select OCaml opam switches via a menu" tar
+		   ((:commit . "1a787e286a36b509ce418fe94141f53795b0c6b6")
+		    (:maintainers
+		     (nil . "proof-general-maintainers@groupes.renater.fr"))
+		    (:maintainer nil . "proof-general-maintainers@groupes.renater.fr")
+		    (:url . "https://github.com/ProofGeneral/opam-switch-mode"))])

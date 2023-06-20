@@ -3,17 +3,19 @@ Fetcher: github
 Source:  https://github.com/necaris/conda.el.git
 
 Updating /mnt/store/melpa/working/conda/
-Checking out f3ea3876eecd00a1fca16fd7fd68e56e3beac87c
+Checking out 6a6a27dad7ab696b41b54a1cb7591ca489133fec
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/conda/
-  to /tmp/condaaKFa6h/conda-20230528.2355
+  to /tmp/condaq8yGca/conda-20230620.1745
     conda.el -> conda.el
-Created conda-20230528.2355.tar containing:
-  conda-20230528.2355/
-  conda-20230528.2355/conda-pkg.el
-  conda-20230528.2355/conda.el
-Built conda in 4.517s, finished at 2023-06-20T02:21:27+0000
+Created conda-20230620.1745.tar containing:
+  conda-20230620.1745/
+  conda-20230620.1745/conda-pkg.el
+  conda-20230620.1745/conda.el
+Built conda in 4.216s, finished at 2023-06-20T18:39:17+0000
  ✓ Success:
  28K -rw-r--r-- 1 root root 28K Jun  9 15:39 packages/conda-20230528.2355.el
-4.0K -rw-r--r-- 1 root root 551 Jun 20 02:21 packages/conda-20230528.2355.entry
- 40K -rw-r--r-- 1 root root 40K Jun 20 02:21 packages/conda-20230528.2355.tar
+4.0K -rw-r--r-- 1 root root 551 Jun 20 15:14 packages/conda-20230528.2355.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 20 15:14 packages/conda-20230528.2355.tar
+4.0K -rw-r--r-- 1 root root 551 Jun 20 18:39 packages/conda-20230620.1745.entry
+ 40K -rw-r--r-- 1 root root 40K Jun 20 18:39 packages/conda-20230620.1745.tar
