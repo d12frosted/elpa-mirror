@@ -1408,6 +1408,14 @@
 		   (:authors
 		    ("Campbell Barton" . "ideasman42@gmail.com"))
 		   (:commit . "3a1d67637ea4a6099a62de45842b8c5e4440ede4"))])
+ (opam-switch-mode .
+		   [(1 1)
+		    ((emacs
+		      (25 1)))
+		    "Select OCaml opam switches via a menu" tar
+		    ((:url . "https://github.com/ProofGeneral/opam-switch-mode")
+		     (:maintainer nil . "proof-general-maintainers@groupes.renater.fr")
+		     (:commit . "07a3742449b6572a842de045135e17c0e9993943"))])
  (org-auto-tangle .
 		  [(0 6 0)
 		   ((emacs
