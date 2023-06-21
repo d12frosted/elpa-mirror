@@ -3,17 +3,19 @@ Fetcher: github
 Source:  https://github.com/justbur/emacs-vdiff.git
 
 Updating /mnt/store/melpa/working/vdiff/
-Checking out d5df45f84395f507aba555a54407b60e284b23cd
+Checking out 170e968c6a46a572b30c52c1b038232d418734cc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vdiff/
-  to /tmp/vdiffMUK7qg/vdiff-20220830.1450
+  to /tmp/vdiffd02LTC/vdiff-20230621.201
     vdiff.el -> vdiff.el
-Created vdiff-20220830.1450.tar containing:
-  vdiff-20220830.1450/
-  vdiff-20220830.1450/vdiff-pkg.el
-  vdiff-20220830.1450/vdiff.el
-Built vdiff in 3.662s, finished at 2023-06-20T22:56:41+0000
+Created vdiff-20230621.201.tar containing:
+  vdiff-20230621.201/
+  vdiff-20230621.201/vdiff-pkg.el
+  vdiff-20230621.201/vdiff.el
+Built vdiff in 7.700s, finished at 2023-06-21T02:12:13+0000
  ✓ Success:
  92K -rw-r--r-- 1 root root  92K Jun  9 16:58 packages/vdiff-20220830.1450.el
 4.0K -rw-r--r-- 1 root root  421 Jun 20 22:56 packages/vdiff-20220830.1450.entry
 100K -rw-r--r-- 1 root root 100K Jun 20 22:56 packages/vdiff-20220830.1450.tar
+4.0K -rw-r--r-- 1 root root  420 Jun 21 02:12 packages/vdiff-20230621.201.entry
+100K -rw-r--r-- 1 root root 100K Jun 21 02:12 packages/vdiff-20230621.201.tar
