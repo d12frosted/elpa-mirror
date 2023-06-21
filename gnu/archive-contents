@@ -1110,7 +1110,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (emacs-gc-stats .
-		 [(1 2 3)
+		 [(1 3)
 		  ((emacs
 		    (25 1)))
 		  "Collect Emacs GC statistics" tar
@@ -1118,7 +1118,7 @@
 		   (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
 		   (:authors
 		    ("Ihor Radchenko" . "yantar92@posteo.net"))
-		   (:commit . "cdea9f03baf8f451760b12444de5b177a9366ef3"))])
+		   (:commit . "f17fd30098c284a11feb06d505308d1f85ba2c55"))])
  (embark .
 	 [(0 22 1)
 	  ((emacs
@@ -2064,7 +2064,7 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (logos .
-	[(1 0 1)
+	[(1 1 0)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
@@ -2073,7 +2073,7 @@
 	  (:maintainer "Logos Development" . "~protesilaos/logos@lists.sr.ht")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "d8f18f74591ffcac6466409ac7cd29f90838b2fe"))])
+	  (:commit . "88beb0aa7ba2d968ab1f21353b38fdd1b226c527"))])
  (luwak .
 	[(1 0 0)
 	 ((emacs

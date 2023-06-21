@@ -1,5 +1,5 @@
 (consult-compile-multi .
-		       [(20230618 2022)
+		       [(20230620 1848)
 			((emacs
 			  (28 0))
 			 (compile-multi
@@ -7,7 +7,7 @@
 			 (consult
 			  (0 34)))
 			"Consulting read support for `compile-multi'" tar
-			((:commit . "0625042d50dd629c62af8cdc5457fa9d7179468e")
+			((:commit . "111db49b4debe3f56b643a5917e14da3d0e36988")
 			 (:authors
 			  ("mohsin kaleem" . "mohkale@kisara.moe"))
 			 (:maintainers
