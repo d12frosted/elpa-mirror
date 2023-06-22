@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/millejoh/emacs-ipython-notebook.git
 
 Updating /mnt/store/melpa/working/ein/
-Checking out 87f444838f076b6926ff02ffab3fd5b0f67af2bc
+Checking out c22611b02fc571346ead4f5d2e4dc64d786d70e5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ein/
-  to /tmp/ein3u5blY/ein-20230426.1857
+  to /tmp/eincRGrtO/ein-20230622.249
   ! lisp/ein-cell.el -> ein-cell.el
   ! lisp/ein-classes.el -> ein-classes.el
   ! lisp/ein-completer.el -> ein-completer.el
@@ -44,46 +44,48 @@ Copying files (->) and directories (=>)
   ! lisp/ein.el -> ein.el
   ! lisp/ob-ein.el -> ob-ein.el
   ! lisp/poly-ein.el -> poly-ein.el
-Created ein-20230426.1857.tar containing:
-  ein-20230426.1857/
-  ein-20230426.1857/ein-cell.el
-  ein-20230426.1857/ein-classes.el
-  ein-20230426.1857/ein-completer.el
-  ein-20230426.1857/ein-contents-api.el
-  ein-20230426.1857/ein-core.el
-  ein-20230426.1857/ein-dev.el
-  ein-20230426.1857/ein-events.el
-  ein-20230426.1857/ein-file.el
-  ein-20230426.1857/ein-gat.el
-  ein-20230426.1857/ein-ipdb.el
-  ein-20230426.1857/ein-ipynb-mode.el
-  ein-20230426.1857/ein-jupyter.el
-  ein-20230426.1857/ein-kernel.el
-  ein-20230426.1857/ein-kernelinfo.el
-  ein-20230426.1857/ein-kill-ring.el
-  ein-20230426.1857/ein-log.el
-  ein-20230426.1857/ein-markdown-mode.el
-  ein-20230426.1857/ein-node.el
-  ein-20230426.1857/ein-notebook.el
-  ein-20230426.1857/ein-notebooklist.el
-  ein-20230426.1857/ein-notification.el
-  ein-20230426.1857/ein-output-area.el
-  ein-20230426.1857/ein-pager.el
-  ein-20230426.1857/ein-pkg.el
-  ein-20230426.1857/ein-process.el
-  ein-20230426.1857/ein-python-send.el
-  ein-20230426.1857/ein-pytools.el
-  ein-20230426.1857/ein-query.el
-  ein-20230426.1857/ein-scratchsheet.el
-  ein-20230426.1857/ein-shared-output.el
-  ein-20230426.1857/ein-traceback.el
-  ein-20230426.1857/ein-utils.el
-  ein-20230426.1857/ein-websocket.el
-  ein-20230426.1857/ein-worksheet.el
-  ein-20230426.1857/ein.el
-  ein-20230426.1857/ob-ein.el
-  ein-20230426.1857/poly-ein.el
-Built ein in 4.862s, finished at 2023-06-21T17:10:05+0000
+Created ein-20230622.249.tar containing:
+  ein-20230622.249/
+  ein-20230622.249/ein-cell.el
+  ein-20230622.249/ein-classes.el
+  ein-20230622.249/ein-completer.el
+  ein-20230622.249/ein-contents-api.el
+  ein-20230622.249/ein-core.el
+  ein-20230622.249/ein-dev.el
+  ein-20230622.249/ein-events.el
+  ein-20230622.249/ein-file.el
+  ein-20230622.249/ein-gat.el
+  ein-20230622.249/ein-ipdb.el
+  ein-20230622.249/ein-ipynb-mode.el
+  ein-20230622.249/ein-jupyter.el
+  ein-20230622.249/ein-kernel.el
+  ein-20230622.249/ein-kernelinfo.el
+  ein-20230622.249/ein-kill-ring.el
+  ein-20230622.249/ein-log.el
+  ein-20230622.249/ein-markdown-mode.el
+  ein-20230622.249/ein-node.el
+  ein-20230622.249/ein-notebook.el
+  ein-20230622.249/ein-notebooklist.el
+  ein-20230622.249/ein-notification.el
+  ein-20230622.249/ein-output-area.el
+  ein-20230622.249/ein-pager.el
+  ein-20230622.249/ein-pkg.el
+  ein-20230622.249/ein-process.el
+  ein-20230622.249/ein-python-send.el
+  ein-20230622.249/ein-pytools.el
+  ein-20230622.249/ein-query.el
+  ein-20230622.249/ein-scratchsheet.el
+  ein-20230622.249/ein-shared-output.el
+  ein-20230622.249/ein-traceback.el
+  ein-20230622.249/ein-utils.el
+  ein-20230622.249/ein-websocket.el
+  ein-20230622.249/ein-worksheet.el
+  ein-20230622.249/ein.el
+  ein-20230622.249/ob-ein.el
+  ein-20230622.249/poly-ein.el
+Built ein in 4.893s, finished at 2023-06-22T06:07:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  481 Jun 21 17:10 packages/ein-20230426.1857.entry
-820K -rw-r--r-- 1 root root 820K Jun 21 17:10 packages/ein-20230426.1857.tar
+4.0K -rw-r--r-- 1 root root  481 Jun 22 02:47 packages/ein-20230426.1857.entry
+820K -rw-r--r-- 1 root root 820K Jun 22 02:47 packages/ein-20230426.1857.tar
+4.0K -rw-r--r-- 1 root root  480 Jun 22 06:07 packages/ein-20230622.249.entry
+820K -rw-r--r-- 1 root root 820K Jun 22 06:07 packages/ein-20230622.249.tar
