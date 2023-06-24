@@ -3,18 +3,20 @@ Fetcher: github
 Source:  https://github.com/catppuccin/emacs.git
 
 Updating /mnt/store/melpa/working/catppuccin-theme/
-Checking out 438622d74f1b0034c354fdd67ed39c36f059e1b4
+Checking out afce713460798a57214f600eda764f345f468615
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/catppuccin-theme/
-  to /tmp/catppuccin-theme5L9WzW/catppuccin-theme-20230620.11
+  to /tmp/catppuccin-themekWF9Yc/catppuccin-theme-20230623.2015
     catppuccin-theme.el -> catppuccin-theme.el
     catppuccin-theme.test.el -> catppuccin-theme.test.el
-Created catppuccin-theme-20230620.11.tar containing:
-  catppuccin-theme-20230620.11/
-  catppuccin-theme-20230620.11/catppuccin-theme-pkg.el
-  catppuccin-theme-20230620.11/catppuccin-theme.el
-  catppuccin-theme-20230620.11/catppuccin-theme.test.el
-Built catppuccin-theme in 6.345s, finished at 2023-06-23T18:07:51+0000
+Created catppuccin-theme-20230623.2015.tar containing:
+  catppuccin-theme-20230623.2015/
+  catppuccin-theme-20230623.2015/catppuccin-theme-pkg.el
+  catppuccin-theme-20230623.2015/catppuccin-theme.el
+  catppuccin-theme-20230623.2015/catppuccin-theme.test.el
+Built catppuccin-theme in 5.896s, finished at 2023-06-23T21:23:22+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 433 Jun 23 18:07 packages/catppuccin-theme-20230620.11.entry
  80K -rw-r--r-- 1 root root 80K Jun 23 18:07 packages/catppuccin-theme-20230620.11.tar
+4.0K -rw-r--r-- 1 root root 435 Jun 23 21:23 packages/catppuccin-theme-20230623.2015.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 23 21:23 packages/catppuccin-theme-20230623.2015.tar
