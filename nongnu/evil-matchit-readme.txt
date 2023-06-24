@@ -1,31 +1,3 @@
-Table of Contents
-─────────────────
-
-1. evil-matchit
-2. Why use evil-matchit
-3. Install
-4. Set up
-.. 1. EVIL is used
-.. 2. EVIL is not used
-5. Usage
-.. 1. EVIL is used
-.. 2. EVIL is not used
-6. Advanced tips
-.. 1. Support new major modes
-.. 2. Use evilmi-select-items instead press "%" in evil-visual-state
-.. 3. Add new tags into existing languages
-.. 4. Re-define keybinding
-.. 5. Jump between the two end of the "string"
-.. 6. Match case-sensitive tags?
-.. 7. Python
-7. Developer guide
-.. 1. Quick start to support new language
-.. 2. Use SDK
-..... 1. Support languages using indentation to identify a block of code
-.. 3. APIs
-8. Contact me
-
-
 1 evil-matchit
 ══════════════
 
@@ -186,10 +158,32 @@ Table of Contents
   `evilmi-select-items' still work.
 
 
-6 Advanced tips
-═══════════════
+6 Tips
+══════
 
-6.1 Support new major modes
+6.1 Toggle other modes before&after jumping to the matched tag
+──────────────────────────────────────────────────────────────
+
+  It's reported [some mode is not compatible with this package].
+
+  You can use `evilmi-jump-hook' to turn off the mode before jumping to
+  the matched tag.
+
+  Then turn on it after the jump using the same hook.
+
+  Here is an example to toggle `global-tree-sitter-mode',
+  ┌────
+  │ (add-hook 'evilmi-jump-hook
+  │ 	  (lambda (before-jump-p)
+  │ 	    (global-tree-sitter-mode (not before-jump-p))))
+  └────
+
+
+[some mode is not compatible with this package]
+<https://github.com/redguardtoo/evil-matchit/issues/138>
+
+
+6.2 Support new major modes
 ───────────────────────────
 
   In order to apply three matching rules `evilmi-template',
@@ -200,7 +194,7 @@ Table of Contents
   └────
 
 
-6.2 Use evilmi-select-items instead press "%" in evil-visual-state
+6.3 Use evilmi-select-items instead press "%" in evil-visual-state
 ──────────────────────────────────────────────────────────────────
 
   `evilmi-select-items' is more robust and provides more
@@ -209,7 +203,7 @@ Table of Contents
   So you'd better stick to `evilmi-select-item' if possible.
 
 
-6.3 Add new tags into existing languages
+6.4 Add new tags into existing languages
 ────────────────────────────────────────
 
   Use ruby as an example.
@@ -234,7 +228,7 @@ Table of Contents
   └────
 
 
-6.4 Re-define keybinding
+6.5 Re-define keybinding
 ────────────────────────
 
   All you need to do is to define function `evilmi-customize-keybinding'
@@ -260,7 +254,7 @@ Table of Contents
   └────
 
 
-6.5 Jump between the two end of the "string"
+6.6 Jump between the two end of the "string"
 ────────────────────────────────────────────
 
   Please note the definition of "string" could be *customized* by user.
@@ -273,7 +267,7 @@ Table of Contents
   └────
 
 
-6.6 Match case-sensitive tags?
+6.7 Match case-sensitive tags?
 ──────────────────────────────
 
   It's decided by the Emacs global variable "case-fold-search". You need
@@ -281,7 +275,7 @@ Table of Contents
   automatically.
 
 
-6.7 Python
+6.8 Python
 ──────────
 
   You can turn on `evilmi-always-simple-jump' to match brackets at

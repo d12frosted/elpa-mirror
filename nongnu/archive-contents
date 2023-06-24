@@ -554,7 +554,7 @@
 		    (:authors
 		     ("Sylvain Benner" . "sylvain.benner@gmail.com")))])
  (evil-matchit .
-	       [(3 0 0)
+	       [(3 0 1)
 		((emacs
 		  (25 1)))
 		"Vim matchit ported to Evil" tar
@@ -563,7 +563,7 @@
 		 (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 		 (:authors
 		  ("Chen Bin" . "chenbin.sh@gmail.com"))
-		 (:commit . "7a2a7384b6e752a805d6fbb78cf9425e54c2b18b"))])
+		 (:commit . "41a062bb88bde5aa3dc3ddab0ad5353e9bbc3f56"))])
  (evil-nerd-commenter .
 		      [(3 6 0)
 		       ((emacs
