@@ -3,30 +3,30 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Checking out 4fb3f1a4f98e506e7bdc3b8a053afaedd3de4c84
+Checking out 8ffae157f375df07e039ecc818a87f394ced2339
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperdrive/
-  to /tmp/hyperdriveZZIqO3/hyperdrive-20230623.1921
+  to /tmp/hyperdriveGlA021/hyperdrive-20230624.33
     hyperdrive-dir.el -> hyperdrive-dir.el
     hyperdrive-handlers.el -> hyperdrive-handlers.el
     hyperdrive-lib.el -> hyperdrive-lib.el
     hyperdrive-org.el -> hyperdrive-org.el
     hyperdrive.el -> hyperdrive.el
   ! doc/hyperdrive-manual.texi -> hyperdrive-manual.texi
-Generating /tmp/hyperdriveZZIqO3/hyperdrive-20230623.1921/hyperdrive-manual.info
-Created hyperdrive-20230623.1921.tar containing:
-  hyperdrive-20230623.1921/
-  hyperdrive-20230623.1921/dir
-  hyperdrive-20230623.1921/hyperdrive-dir.el
-  hyperdrive-20230623.1921/hyperdrive-handlers.el
-  hyperdrive-20230623.1921/hyperdrive-lib.el
-  hyperdrive-20230623.1921/hyperdrive-manual.info
-  hyperdrive-20230623.1921/hyperdrive-org.el
-  hyperdrive-20230623.1921/hyperdrive-pkg.el
-  hyperdrive-20230623.1921/hyperdrive.el
-Built hyperdrive in 10.343s, finished at 2023-06-23T21:56:00+0000
+Generating /tmp/hyperdriveGlA021/hyperdrive-20230624.33/hyperdrive-manual.info
+Created hyperdrive-20230624.33.tar containing:
+  hyperdrive-20230624.33/
+  hyperdrive-20230624.33/dir
+  hyperdrive-20230624.33/hyperdrive-dir.el
+  hyperdrive-20230624.33/hyperdrive-handlers.el
+  hyperdrive-20230624.33/hyperdrive-lib.el
+  hyperdrive-20230624.33/hyperdrive-manual.info
+  hyperdrive-20230624.33/hyperdrive-org.el
+  hyperdrive-20230624.33/hyperdrive-pkg.el
+  hyperdrive-20230624.33/hyperdrive.el
+Built hyperdrive in 12.733s, finished at 2023-06-24T01:12:21+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  519 Jun 23 18:40 packages/hyperdrive-20230620.2150.entry
-172K -rw-r--r-- 1 root root 170K Jun 23 18:40 packages/hyperdrive-20230620.2150.tar
 4.0K -rw-r--r-- 1 root root  519 Jun 23 21:55 packages/hyperdrive-20230623.1921.entry
 172K -rw-r--r-- 1 root root 170K Jun 23 21:55 packages/hyperdrive-20230623.1921.tar
+4.0K -rw-r--r-- 1 root root  517 Jun 24 01:12 packages/hyperdrive-20230624.33.entry
+172K -rw-r--r-- 1 root root 170K Jun 24 01:12 packages/hyperdrive-20230624.33.tar

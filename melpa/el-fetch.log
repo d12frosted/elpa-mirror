@@ -3,17 +3,21 @@ Fetcher: gitlab
 Source:  https://gitlab.com/xgqt/emacs-el-fetch.git
 
 Updating /mnt/store/melpa/working/el-fetch/
-Checking out 0142f58f075ea39aa6cc7ed35dd599afc4b6b450
+Checking out 7907fd7829ca55b21a62d23c17066fdfde9cd07c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/el-fetch/
-  to /tmp/el-fetche6PP0Q/el-fetch-20230210.1311
+  to /tmp/el-fetchrV5bPl/el-fetch-20230624.2
+  ! src/el-fetch/el-fetch-custom.el -> el-fetch-custom.el
   ! src/el-fetch/el-fetch.el -> el-fetch.el
-Created el-fetch-20230210.1311.tar containing:
-  el-fetch-20230210.1311/
-  el-fetch-20230210.1311/el-fetch-pkg.el
-  el-fetch-20230210.1311/el-fetch.el
-Built el-fetch in 4.993s, finished at 2023-06-23T21:35:18+0000
+Created el-fetch-20230624.2.tar containing:
+  el-fetch-20230624.2/
+  el-fetch-20230624.2/el-fetch-custom.el
+  el-fetch-20230624.2/el-fetch-pkg.el
+  el-fetch-20230624.2/el-fetch.el
+Built el-fetch in 6.019s, finished at 2023-06-24T00:51:29+0000
  ✓ Success:
  16K -rw-r--r-- 1 root root 14K Jun  9 15:48 packages/el-fetch-20230210.1311.el
 4.0K -rw-r--r-- 1 root root 424 Jun 23 21:35 packages/el-fetch-20230210.1311.entry
  20K -rw-r--r-- 1 root root 20K Jun 23 21:35 packages/el-fetch-20230210.1311.tar
+4.0K -rw-r--r-- 1 root root 446 Jun 24 00:51 packages/el-fetch-20230624.2.entry
+ 32K -rw-r--r-- 1 root root 30K Jun 24 00:51 packages/el-fetch-20230624.2.tar
