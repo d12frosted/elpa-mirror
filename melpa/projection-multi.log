@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/mohkale/projection.git
 
 Updating /mnt/store/melpa/working/projection-multi/
-Checking out 2f623c89a093cee935e0e89da7d19df848d466ee
+Checking out 369ef38490065d6b951981c0fa4b69d49dbb4b95
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection-multi/
-  to /tmp/projection-multikrBgSc/projection-multi-20230621.1904
+  to /tmp/projection-multiirvbZf/projection-multi-20230624.1315
   ! src/projection-multi/projection-multi-cmake.el -> projection-multi-cmake.el
   ! src/projection-multi/projection-multi-ctest.el -> projection-multi-ctest.el
   ! src/projection-multi/projection-multi-make.el -> projection-multi-make.el
@@ -15,18 +15,20 @@ Copying files (->) and directories (=>)
   ! src/projection-multi/projection-multi-tox.el -> projection-multi-tox.el
   ! src/projection-multi/projection-multi-yarn-scripts.el -> projection-multi-yarn-scripts.el
   ! src/projection-multi/projection-multi.el -> projection-multi.el
-Created projection-multi-20230621.1904.tar containing:
-  projection-multi-20230621.1904/
-  projection-multi-20230621.1904/projection-multi-cmake.el
-  projection-multi-20230621.1904/projection-multi-ctest.el
-  projection-multi-20230621.1904/projection-multi-make.el
-  projection-multi-20230621.1904/projection-multi-npm-scripts.el
-  projection-multi-20230621.1904/projection-multi-pkg.el
-  projection-multi-20230621.1904/projection-multi-poetry-poe.el
-  projection-multi-20230621.1904/projection-multi-tox.el
-  projection-multi-20230621.1904/projection-multi-yarn-scripts.el
-  projection-multi-20230621.1904/projection-multi.el
-Built projection-multi in 3.994s, finished at 2023-06-25T13:41:41+0000
+Created projection-multi-20230624.1315.tar containing:
+  projection-multi-20230624.1315/
+  projection-multi-20230624.1315/projection-multi-cmake.el
+  projection-multi-20230624.1315/projection-multi-ctest.el
+  projection-multi-20230624.1315/projection-multi-make.el
+  projection-multi-20230624.1315/projection-multi-npm-scripts.el
+  projection-multi-20230624.1315/projection-multi-pkg.el
+  projection-multi-20230624.1315/projection-multi-poetry-poe.el
+  projection-multi-20230624.1315/projection-multi-tox.el
+  projection-multi-20230624.1315/projection-multi-yarn-scripts.el
+  projection-multi-20230624.1315/projection-multi.el
+Built projection-multi in 4.515s, finished at 2023-06-25T17:02:49+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 543 Jun 25 13:41 packages/projection-multi-20230621.1904.entry
  52K -rw-r--r-- 1 root root 50K Jun 25 13:41 packages/projection-multi-20230621.1904.tar
+4.0K -rw-r--r-- 1 root root 543 Jun 25 17:02 packages/projection-multi-20230624.1315.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 25 17:02 packages/projection-multi-20230624.1315.tar

@@ -3,26 +3,28 @@ Fetcher: github
 Source:  https://github.com/semenInRussia/simple-indentation.el.git
 
 Updating /mnt/store/melpa/working/simple-indentation/
-Checking out 74efe02aa6c1612ae9b32b88f97b7d6d309726b2
+Checking out b5f97fc14b3f494cfe009938cf5ee9016a83d30e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/simple-indentation/
-  to /tmp/simple-indentationq8yZNd/simple-indentation-20221127.1232
+  to /tmp/simple-indentationOWnNdS/simple-indentation-20230625.1610
     simple-indentation-hooks.el -> simple-indentation-hooks.el
     simple-indentation-lib.el -> simple-indentation-lib.el
     simple-indentation-namespace.el -> simple-indentation-namespace.el
     simple-indentation-rules.el -> simple-indentation-rules.el
     simple-indentation-utils.el -> simple-indentation-utils.el
     simple-indentation.el -> simple-indentation.el
-Created simple-indentation-20221127.1232.tar containing:
-  simple-indentation-20221127.1232/
-  simple-indentation-20221127.1232/simple-indentation-hooks.el
-  simple-indentation-20221127.1232/simple-indentation-lib.el
-  simple-indentation-20221127.1232/simple-indentation-namespace.el
-  simple-indentation-20221127.1232/simple-indentation-pkg.el
-  simple-indentation-20221127.1232/simple-indentation-rules.el
-  simple-indentation-20221127.1232/simple-indentation-utils.el
-  simple-indentation-20221127.1232/simple-indentation.el
-Built simple-indentation in 4.261s, finished at 2023-06-25T13:48:55+0000
+Created simple-indentation-20230625.1610.tar containing:
+  simple-indentation-20230625.1610/
+  simple-indentation-20230625.1610/simple-indentation-hooks.el
+  simple-indentation-20230625.1610/simple-indentation-lib.el
+  simple-indentation-20230625.1610/simple-indentation-namespace.el
+  simple-indentation-20230625.1610/simple-indentation-pkg.el
+  simple-indentation-20230625.1610/simple-indentation-rules.el
+  simple-indentation-20230625.1610/simple-indentation-utils.el
+  simple-indentation-20230625.1610/simple-indentation.el
+Built simple-indentation in 4.373s, finished at 2023-06-25T17:10:19+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 563 Jun 25 13:48 packages/simple-indentation-20221127.1232.entry
  80K -rw-r--r-- 1 root root 80K Jun 25 13:48 packages/simple-indentation-20221127.1232.tar
+4.0K -rw-r--r-- 1 root root 563 Jun 25 17:10 packages/simple-indentation-20230625.1610.entry
+ 80K -rw-r--r-- 1 root root 80K Jun 25 17:10 packages/simple-indentation-20230625.1610.tar

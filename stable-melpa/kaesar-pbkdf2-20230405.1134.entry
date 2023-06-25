@@ -1,0 +1,13 @@
+(kaesar-pbkdf2 .
+	       [(20230405 1134)
+		((emacs
+		  (25 1)))
+		"PBKDF2 extension for kaesar.el" tar
+		((:commit . "18eec9751c7a832bd5c0ed65b5de2be49cdf8243")
+		 (:authors
+		  ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
+		 (:maintainers
+		  ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
+		 (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
+		 (:keywords "data")
+		 (:url . "https://github.com/mhayashi1120/Emacs-kaesar"))])

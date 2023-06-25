@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/ddskk/
 Checking out 98c103ed697e461439401f731c13b3bda02e5128
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ddskk/
-  to /tmp/ddskkoPT08P/ddskk-20230328.1058
+  to /tmp/ddskk4mZGix/ddskk-20230328.1058
     context-skk.el -> context-skk.el
     ddskk-pkg.el -> ddskk-pkg.el
     ddskk.el -> ddskk.el
@@ -51,4 +51,55 @@ Copying files (->) and directories (=>)
     tar-util.el -> tar-util.el
   ! doc/skk.texi -> skk.texi
   ! etc/skk.xpm -> skk.xpm
-Generating /tmp/ddskkoPT08P/ddskk-20230328.1058/skk.info
+Generating /tmp/ddskk4mZGix/ddskk-20230328.1058/skk.info
+Created ddskk-20230328.1058.tar containing:
+  ddskk-20230328.1058/
+  ddskk-20230328.1058/context-skk.el
+  ddskk-20230328.1058/ddskk-pkg.el
+  ddskk-20230328.1058/ddskk.el
+  ddskk-20230328.1058/dir
+  ddskk-20230328.1058/skk-abbrev.el
+  ddskk-20230328.1058/skk-act.el
+  ddskk-20230328.1058/skk-annotation.el
+  ddskk-20230328.1058/skk-auto.el
+  ddskk-20230328.1058/skk-azik.el
+  ddskk-20230328.1058/skk-cdb.el
+  ddskk-20230328.1058/skk-comp.el
+  ddskk-20230328.1058/skk-cursor.el
+  ddskk-20230328.1058/skk-cus.el
+  ddskk-20230328.1058/skk-dcomp.el
+  ddskk-20230328.1058/skk-decor.el
+  ddskk-20230328.1058/skk-develop.el
+  ddskk-20230328.1058/skk-emacs.el
+  ddskk-20230328.1058/skk-gadget.el
+  ddskk-20230328.1058/skk-hint.el
+  ddskk-20230328.1058/skk-inline.el
+  ddskk-20230328.1058/skk-isearch.el
+  ddskk-20230328.1058/skk-jisx0201.el
+  ddskk-20230328.1058/skk-jisx0213.el
+  ddskk-20230328.1058/skk-jisyo-edit-mode.el
+  ddskk-20230328.1058/skk-kakasi.el
+  ddskk-20230328.1058/skk-kcode.el
+  ddskk-20230328.1058/skk-leim.el
+  ddskk-20230328.1058/skk-look.el
+  ddskk-20230328.1058/skk-macs.el
+  ddskk-20230328.1058/skk-num.el
+  ddskk-20230328.1058/skk-search-web.el
+  ddskk-20230328.1058/skk-server-completion.el
+  ddskk-20230328.1058/skk-server.el
+  ddskk-20230328.1058/skk-show-mode.el
+  ddskk-20230328.1058/skk-sticky.el
+  ddskk-20230328.1058/skk-study.el
+  ddskk-20230328.1058/skk-tankan.el
+  ddskk-20230328.1058/skk-tut.el
+  ddskk-20230328.1058/skk-vars.el
+  ddskk-20230328.1058/skk-version.el
+  ddskk-20230328.1058/skk-viper.el
+  ddskk-20230328.1058/skk.el
+  ddskk-20230328.1058/skk.info
+  ddskk-20230328.1058/skk.xpm
+  ddskk-20230328.1058/tar-util.el
+Built ddskk in 32.748s, finished at 2023-06-25T19:28:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  384 Jun 25 19:28 packages/ddskk-20230328.1058.entry
+1.8M -rw-r--r-- 1 root root 1.8M Jun 25 19:28 packages/ddskk-20230328.1058.tar

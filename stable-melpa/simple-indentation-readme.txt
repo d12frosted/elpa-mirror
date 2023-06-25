@@ -1,1 +1,1 @@
-Simplify writing major-mode indentation functions.  Alternative to `SMIE'
+Simplify writing major-mode indentation functions.  Alternative to `smie'
