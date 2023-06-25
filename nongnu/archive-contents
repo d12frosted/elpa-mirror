@@ -554,7 +554,7 @@
 		    (:authors
 		     ("Sylvain Benner" . "sylvain.benner@gmail.com")))])
  (evil-matchit .
-	       [(3 0 1)
+	       [(3 0 2)
 		((emacs
 		  (25 1)))
 		"Vim matchit ported to Evil" tar
@@ -563,9 +563,9 @@
 		 (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 		 (:authors
 		  ("Chen Bin" . "chenbin.sh@gmail.com"))
-		 (:commit . "41a062bb88bde5aa3dc3ddab0ad5353e9bbc3f56"))])
+		 (:commit . "f27b2a87bab75e3b8a87c277049a4363cdfcbf61"))])
  (evil-nerd-commenter .
-		      [(3 6 0)
+		      [(3 6 1)
 		       ((emacs
 			 (26 1)))
 		       "Comment/uncomment lines efficiently. Like Nerd Commenter in Vim" tar
@@ -574,7 +574,7 @@
 			(:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 			(:authors
 			 ("Chen Bin" . "chenbin.sh@gmail.com"))
-			(:commit . "8c0f23d46a3927b9f83c1c2c4590be53d0b740db"))])
+			(:commit . "3b197a2b559b06a7cf39978704b196f53dac802a"))])
  (evil-numbers .
 	       [(0 7)
 		((emacs
