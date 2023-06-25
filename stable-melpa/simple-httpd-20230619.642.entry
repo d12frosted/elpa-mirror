@@ -1,0 +1,12 @@
+(simple-httpd .
+	      [(20230619 642)
+	       ((cl-lib
+		 (0 3)))
+	       "pure elisp HTTP server" tar
+	       ((:commit . "6260232da8b53c4e214bc5e427ec00c3ebdd9869")
+		(:authors
+		 ("Christopher Wellons" . "wellons@nullprogram.com"))
+		(:maintainers
+		 ("Christopher Wellons" . "wellons@nullprogram.com"))
+		(:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+		(:url . "https://github.com/skeeto/emacs-http-server"))])

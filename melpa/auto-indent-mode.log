@@ -6,11 +6,11 @@ Updating /mnt/store/melpa/working/auto-indent-mode/
 Checking out 664006b67329a8e27330541547f8c2187dab947c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/auto-indent-mode/
-  to /tmp/auto-indent-mode7TRMYQ/auto-indent-mode-20211029.11
+  to /tmp/auto-indent-modeuTyNSK/auto-indent-mode-20211029.11
     auto-indent-mode.el -> auto-indent-mode.el
     dir -> dir
     auto-indent-mode.texi -> auto-indent-mode.texi
-Generating /tmp/auto-indent-mode7TRMYQ/auto-indent-mode-20211029.11/auto-indent-mode.info
+Generating /tmp/auto-indent-modeuTyNSK/auto-indent-mode-20211029.11/auto-indent-mode.info
 
 Command '' exited with non-zero exit-code: 1
 
@@ -55,7 +55,7 @@ Error: (error "Command exited with non-zero exit-code: 1")
 
 Command '' exited with non-zero exit-code: 1
 
-install-info: No such file or directory for /tmp/auto-indent-mode7TRMYQ/auto-indent-mode-20211029.11/auto-indent-mode.info
+install-info: No such file or directory for /tmp/auto-indent-modeuTyNSK/auto-indent-mode-20211029.11/auto-indent-mode.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
 Created auto-indent-mode-20211029.11.tar containing:
@@ -63,7 +63,7 @@ Created auto-indent-mode-20211029.11.tar containing:
   auto-indent-mode-20211029.11/auto-indent-mode-pkg.el
   auto-indent-mode-20211029.11/auto-indent-mode.el
   auto-indent-mode-20211029.11/dir
-Built auto-indent-mode in 8.464s, finished at 2023-06-24T03:54:46+0000
+Built auto-indent-mode in 8.843s, finished at 2023-06-25T02:48:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  400 Jun 24 03:54 packages/auto-indent-mode-20211029.11.entry
-120K -rw-r--r-- 1 root root 120K Jun 24 03:54 packages/auto-indent-mode-20211029.11.tar
+4.0K -rw-r--r-- 1 root root  400 Jun 25 02:48 packages/auto-indent-mode-20211029.11.entry
+120K -rw-r--r-- 1 root root 120K Jun 25 02:48 packages/auto-indent-mode-20211029.11.tar

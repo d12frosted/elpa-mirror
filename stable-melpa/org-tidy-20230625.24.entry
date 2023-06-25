@@ -1,0 +1,15 @@
+(org-tidy .
+	  [(20230625 24)
+	   ((emacs
+	     (27 1))
+	    (dash
+	     (2 19 1)))
+	   "A minor mode to tidy org-mode buffers" tar
+	   ((:commit . "11aeb5f92abfed08d835e89e248023ef782bbe0d")
+	    (:authors
+	     ("Xuqing Jia" . "jxq@jxq.me"))
+	    (:maintainers
+	     ("Xuqing Jia" . "jxq@jxq.me"))
+	    (:maintainer "Xuqing Jia" . "jxq@jxq.me")
+	    (:keywords "convenience" "org")
+	    (:url . "https://github.com/jxq0/org-tidy"))])
