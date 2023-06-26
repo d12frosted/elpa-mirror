@@ -2,18 +2,18 @@ Package: khoj
 Fetcher: github
 Source:  https://github.com/khoj-ai/khoj.git
 
-Cloning https://github.com/khoj-ai/khoj.git to /mnt/store/melpa/working/khoj/
+Updating /mnt/store/melpa/working/khoj/
 Checking out 6d4aad57e1944e51934da59597096aa568cdaa15
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/khoj/
-  to /tmp/khojcQ7YRO/khoj-20230621.857
+  to /tmp/khojIff82e/khoj-20230621.857
   ! src/interface/emacs/khoj.el -> khoj.el
 Created khoj-20230621.857.tar containing:
   khoj-20230621.857/
   khoj-20230621.857/khoj-pkg.el
   khoj-20230621.857/khoj.el
-Built khoj in 21.570s, finished at 2023-06-25T19:57:37+0000
+Built khoj in 5.183s, finished at 2023-06-26T02:27:15+0000
  ✓ Success:
  52K -rw-r--r-- 1 root root 49K Jun  9 16:17 packages/khoj-20230609.1306.el
-4.0K -rw-r--r-- 1 root root 581 Jun 25 19:57 packages/khoj-20230621.857.entry
- 60K -rw-r--r-- 1 root root 60K Jun 25 19:57 packages/khoj-20230621.857.tar
+4.0K -rw-r--r-- 1 root root 581 Jun 26 02:27 packages/khoj-20230621.857.entry
+ 60K -rw-r--r-- 1 root root 60K Jun 26 02:27 packages/khoj-20230621.857.tar

@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/speechd-el/
 Checking out 7e30c439729d5635ddd341ad5ab16f832a4619ea
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/speechd-el/
-  to /tmp/speechd-ellGci2a/speechd-el-20220608.1422
+  to /tmp/speechd-elAw17A0/speechd-el-20220608.1422
     braille.el -> braille.el
     brltty.el -> brltty.el
     mmanager.el -> mmanager.el
@@ -26,9 +26,9 @@ Copying files (->) and directories (=>)
     gpl.texi -> gpl.texi
     speechd-el.cs.texi -> speechd-el.cs.texi
     speechd-el.texi -> speechd-el.texi
-Generating /tmp/speechd-ellGci2a/speechd-el-20220608.1422/fdl.info
-Generating /tmp/speechd-ellGci2a/speechd-el-20220608.1422/gpl.info
-Generating /tmp/speechd-ellGci2a/speechd-el-20220608.1422/speechd-el.cs.info
+Generating /tmp/speechd-elAw17A0/speechd-el-20220608.1422/fdl.info
+Generating /tmp/speechd-elAw17A0/speechd-el-20220608.1422/gpl.info
+Generating /tmp/speechd-elAw17A0/speechd-el-20220608.1422/speechd-el.cs.info
 
 Command '' exited with non-zero exit-code: 1
 
@@ -40,10 +40,10 @@ Error: (error "Command exited with non-zero exit-code: 1")
 
 Command '' exited with non-zero exit-code: 1
 
-install-info: No such file or directory for /tmp/speechd-ellGci2a/speechd-el-20220608.1422/speechd-el.cs.info
+install-info: No such file or directory for /tmp/speechd-elAw17A0/speechd-el-20220608.1422/speechd-el.cs.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/speechd-ellGci2a/speechd-el-20220608.1422/speechd-el.info
+Generating /tmp/speechd-elAw17A0/speechd-el-20220608.1422/speechd-el.info
 Created speechd-el-20220608.1422.tar containing:
   speechd-el-20220608.1422/
   speechd-el-20220608.1422/braille.el
@@ -65,7 +65,7 @@ Created speechd-el-20220608.1422.tar containing:
   speechd-el-20220608.1422/speechd-ssip.el
   speechd-el-20220608.1422/speechd-version.el
   speechd-el-20220608.1422/speechd.el
-Built speechd-el in 26.143s, finished at 2023-06-25T17:12:45+0000
+Built speechd-el in 23.505s, finished at 2023-06-26T02:59:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  290 Jun 25 17:12 packages/speechd-el-20220608.1422.entry
-452K -rw-r--r-- 1 root root 450K Jun 25 17:12 packages/speechd-el-20220608.1422.tar
+4.0K -rw-r--r-- 1 root root  290 Jun 26 02:59 packages/speechd-el-20220608.1422.entry
+452K -rw-r--r-- 1 root root 450K Jun 26 02:59 packages/speechd-el-20220608.1422.tar

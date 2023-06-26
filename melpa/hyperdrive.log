@@ -3,10 +3,10 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Checking out 4ff9ba0082967253a917ec6a9f780fd4f3c200ef
+Checking out 02802c4ed8e5ecbfab87824a2dbfbc3b0fa7eeb1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperdrive/
-  to /tmp/hyperdriveiJ4Ag1/hyperdrive-20230625.636
+  to /tmp/hyperdrive2nn8zm/hyperdrive-20230626.14
     hyperdrive-dir.el -> hyperdrive-dir.el
     hyperdrive-ewoc.el -> hyperdrive-ewoc.el
     hyperdrive-handlers.el -> hyperdrive-handlers.el
@@ -15,20 +15,22 @@ Copying files (->) and directories (=>)
     hyperdrive-org.el -> hyperdrive-org.el
     hyperdrive.el -> hyperdrive.el
   ! doc/hyperdrive-manual.texi -> hyperdrive-manual.texi
-Generating /tmp/hyperdriveiJ4Ag1/hyperdrive-20230625.636/hyperdrive-manual.info
-Created hyperdrive-20230625.636.tar containing:
-  hyperdrive-20230625.636/
-  hyperdrive-20230625.636/dir
-  hyperdrive-20230625.636/hyperdrive-dir.el
-  hyperdrive-20230625.636/hyperdrive-ewoc.el
-  hyperdrive-20230625.636/hyperdrive-handlers.el
-  hyperdrive-20230625.636/hyperdrive-history.el
-  hyperdrive-20230625.636/hyperdrive-lib.el
-  hyperdrive-20230625.636/hyperdrive-manual.info
-  hyperdrive-20230625.636/hyperdrive-org.el
-  hyperdrive-20230625.636/hyperdrive-pkg.el
-  hyperdrive-20230625.636/hyperdrive.el
-Built hyperdrive in 17.742s, finished at 2023-06-25T19:52:41+0000
+Generating /tmp/hyperdrive2nn8zm/hyperdrive-20230626.14/hyperdrive-manual.info
+Created hyperdrive-20230626.14.tar containing:
+  hyperdrive-20230626.14/
+  hyperdrive-20230626.14/dir
+  hyperdrive-20230626.14/hyperdrive-dir.el
+  hyperdrive-20230626.14/hyperdrive-ewoc.el
+  hyperdrive-20230626.14/hyperdrive-handlers.el
+  hyperdrive-20230626.14/hyperdrive-history.el
+  hyperdrive-20230626.14/hyperdrive-lib.el
+  hyperdrive-20230626.14/hyperdrive-manual.info
+  hyperdrive-20230626.14/hyperdrive-org.el
+  hyperdrive-20230626.14/hyperdrive-pkg.el
+  hyperdrive-20230626.14/hyperdrive.el
+Built hyperdrive in 14.602s, finished at 2023-06-26T02:21:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  518 Jun 25 19:52 packages/hyperdrive-20230625.636.entry
-192K -rw-r--r-- 1 root root 190K Jun 25 19:52 packages/hyperdrive-20230625.636.tar
+4.0K -rw-r--r-- 1 root root  519 Jun 25 23:02 packages/hyperdrive-20230625.2301.entry
+192K -rw-r--r-- 1 root root 190K Jun 25 23:02 packages/hyperdrive-20230625.2301.tar
+4.0K -rw-r--r-- 1 root root  517 Jun 26 02:21 packages/hyperdrive-20230626.14.entry
+192K -rw-r--r-- 1 root root 190K Jun 26 02:21 packages/hyperdrive-20230626.14.tar
