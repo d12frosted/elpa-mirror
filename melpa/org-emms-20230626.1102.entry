@@ -1,0 +1,17 @@
+(org-emms .
+	  [(20230626 1102)
+	   ((emacs
+	     (24 1))
+	    (org
+	     (9 3))
+	    (emms
+	     (0 0)))
+	   "Playback multimedia files from Org documents" tar
+	   ((:commit . "13c8f245885a7f4f87bf88c5ad5612af03be1e77")
+	    (:authors
+	     ("Jonathan Gregory <jgrg at autistici dot org>"))
+	    (:maintainers
+	     ("Jonathan Gregory <jgrg at autistici dot org>"))
+	    (:maintainer "Jonathan Gregory <jgrg at autistici dot org>")
+	    (:keywords "multimedia")
+	    (:url . "https://git.sr.ht/~jagrg/org-emms"))])

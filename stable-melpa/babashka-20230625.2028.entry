@@ -1,0 +1,14 @@
+(babashka .
+	  [(20230625 2028)
+	   ((emacs
+	     (27 1))
+	    (parseedn
+	     (1 1 0)))
+	   "Babashka Tasks Interface" tar
+	   ((:commit . "57176642f4e89356791112908e1985316328b00b")
+	    (:authors
+	     ("Mykhaylo Bilyanskyy" . "mb@m1k.pw"))
+	    (:maintainers
+	     ("Mykhaylo Bilyanskyy" . "mb@m1k.pw"))
+	    (:maintainer "Mykhaylo Bilyanskyy" . "mb@m1k.pw")
+	    (:url . "https://github.com/licht1stein/babashka.el"))])
