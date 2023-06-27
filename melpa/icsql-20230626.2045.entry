@@ -1,5 +1,5 @@
 (icsql .
-       [(20210630 1606)
+       [(20230626 2045)
 	((emacs
 	  (26))
 	 (choice-program
@@ -7,7 +7,7 @@
 	 (buffer-manage
 	  (0 12)))
 	"Interactive iSQL iteraface to ciSQL" tar
-	((:commit . "4521e9d2debef7687bfd26a664479f0c46688a36")
+	((:commit . "fdf2a280f27def4b633a3a74ebdf3a6c95471e3d")
 	 (:authors
 	  ("Paul Landes"))
 	 (:maintainers
