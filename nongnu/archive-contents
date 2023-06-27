@@ -431,13 +431,13 @@
 		  ("EditorConfig Team" . "editorconfig@googlegroups.com"))
 		 (:commit . "ed760770ed5397120b3d68b69afc0778c48d3a47"))])
  (elixir-mode .
-	      [(2 4 0)
+	      [(2 5 0)
 	       ((emacs
 		 (25)))
 	       "Major mode for editing Elixir files" tar
 	       ((:url . "https://github.com/elixir-editors/emacs-elixir")
 		(:keywords "languages" "elixir")
-		(:commit . "1d94b525ddcc995b5a979de7b050c2309648ca6f"))])
+		(:commit . "00d6580a040a750e019218f9392cf9a4c2dac23a"))])
  (elpher .
 	 [(3 5 0)
 	  ((emacs
