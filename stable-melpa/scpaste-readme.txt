@@ -42,6 +42,8 @@ it should link to:
 (setq scpaste-user-name "Technomancy"
       scpaste-user-address "https://technomancy.us/")
 
+You can set `scpaste-async' to non-nil to run the upload in the background.
+
 ; Usage
 
 M-x scpaste, enter a name, and press return. The name will be

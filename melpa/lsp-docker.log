@@ -3,17 +3,19 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-docker.git
 
 Updating /mnt/store/melpa/working/lsp-docker/
-Checking out 1fa2fec2cc6c081b81fbb74bd10d10c1d19693ca
+Checking out 175b587e0def23d4560abdb06b12e05ea469aaea
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-docker/
-  to /tmp/lsp-dockerRBfdMx/lsp-docker-20230508.2051
+  to /tmp/lsp-docker9qSoR4/lsp-docker-20230627.1601
     lsp-docker.el -> lsp-docker.el
-Created lsp-docker-20230508.2051.tar containing:
-  lsp-docker-20230508.2051/
-  lsp-docker-20230508.2051/lsp-docker-pkg.el
-  lsp-docker-20230508.2051/lsp-docker.el
-Built lsp-docker in 4.534s, finished at 2023-06-27T14:50:28+0000
+Created lsp-docker-20230627.1601.tar containing:
+  lsp-docker-20230627.1601/
+  lsp-docker-20230627.1601/lsp-docker-pkg.el
+  lsp-docker-20230627.1601/lsp-docker.el
+Built lsp-docker in 4.522s, finished at 2023-06-27T18:14:34+0000
  ✓ Success:
  40K -rw-r--r-- 1 root root 38K Jun  9 16:19 packages/lsp-docker-20230508.2051.el
 4.0K -rw-r--r-- 1 root root 647 Jun 27 14:50 packages/lsp-docker-20230508.2051.entry
  52K -rw-r--r-- 1 root root 50K Jun 27 14:50 packages/lsp-docker-20230508.2051.tar
+4.0K -rw-r--r-- 1 root root 647 Jun 27 18:14 packages/lsp-docker-20230627.1601.entry
+ 52K -rw-r--r-- 1 root root 50K Jun 27 18:14 packages/lsp-docker-20230627.1601.tar
