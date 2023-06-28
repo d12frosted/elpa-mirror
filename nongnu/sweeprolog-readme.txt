@@ -13,7 +13,9 @@ Table of Contents
 ─────────────────
 
 Overview
+.. Main Features
 .. Architecture
+.. Alternatives
 Installation
 Getting Started
 Discovering Sweep
@@ -27,7 +29,7 @@ Editing Prolog Code
 .. Indentation
 ..... Indentation Rules
 .. Highlighting
-..... Available Styles
+..... PceEmacs Theme
 ..... Highlight Variables
 ..... Quasi-Quotation
 .. Hover for Help
@@ -101,6 +103,49 @@ Overview
   advanced features for developing SWI-Prolog programs in Emacs.
 
 
+Main Features
+─────────────
+
+  Some of the main benefits that Sweep brings to working with Prolog
+  code in Emacs are:
+
+  • [Semantic highlighting]
+  • [Automatic indentation]
+  • [Structural editing and navigation]
+  • [Jumping to predicate definitions and references]
+  • [On-the-fly diagnostics]
+  • [Intelligent code completion]
+  • [Refactoring support]
+  • [Integrated SWI-Prolog top-level]
+  • [Ability to run Prolog queries directly from Emacs Lisp]
+
+  These features and others are documented in the rest of this manual,
+  along with many options that Sweep provides for you to customize its
+  behavior.
+
+
+[Semantic highlighting] See section Semantic Highlighting
+
+[Automatic indentation] See section Indentation
+
+[Structural editing and navigation] See section Term-based editing and
+motion commands
+
+[Jumping to predicate definitions and references] See section
+Definitions and References
+
+[On-the-fly diagnostics] See section Examining Diagnostics
+
+[Intelligent code completion] See section Code Completion
+
+[Refactoring support] See section Renaming Variables
+
+[Integrated SWI-Prolog top-level] See section The Prolog Top-Level
+
+[Ability to run Prolog queries directly from Emacs Lisp] See section
+Querying Prolog
+
+
 High-level Architecture
 ───────────────────────
 
@@ -127,6 +172,23 @@ High-level Architecture
     the embedded Prolog runtime is initialized.  It contains predicates
     that `sweeprolog.el' invoke through `sweep-module' to facilitate its
     different commands.
+
+
+Comparison with Emacs's built-in Prolog mode
+────────────────────────────────────────────
+
+  Emacs has a built-in mode for Prolog code, defined in the library
+  `prolog.el' that comes bundled with Emacs.  `prolog.el' aims to work
+  with a wide variety of Prolog systems and dialects, unlike Sweep that
+  is very tightly integrated with SWI-Prolog specifically.
+
+  *If you are working with SWI-Prolog, you’ll find Sweep to be far more
+  powerful* than the built-in `prolog.el'.  This is because Sweep
+  leverages the Prolog parser and other analysis tools that SWI-Prolog
+  itself uses, these give Sweep access to highly accurate and rich
+  information about SWI-Prolog code.  If you’re using another Prolog
+  implementation, you should stick to `prolog.el' as Sweep won’t work
+  with other Prolog systems.
 
 
 Installation
@@ -696,43 +758,57 @@ Semantic Highlighting
   semantic highlighting can be set via the user option
   `sweeprolog-analyze-buffer-min-interval'.
 
-  Sweep defines three highlighting /styles/, each containing more than
-  60 different faces (named sets of properties that determine the
-  appearance of a specific text in Emacs buffers, see also [Faces in the
-  Emacs manual]) to signify the specific semantics of each token in a
-  Prolog code buffer.
-
-  To view and customize all of the faces defined and used in Sweep, type
-  `M-x customize-group RET sweeprolog-faces RET'.
+  To view and customize the various faces that Sweep defines and uses,
+  type `M-x customize-group RET sweeprolog-faces RET'.  For more
+  information about text faces in Emacs, see [Faces].
 
 
 [Font Lock in the Emacs manual] <info:emacs#Font Lock>
 
 [Examining Diagnostics] See section Examining Diagnostics
 
-[Faces in the Emacs manual] <info:emacs#Faces>
+[Faces] <info:emacs#Faces>
 
-Available Styles
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+PceEmacs Highlighting Emulation
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Sweep comes with three highlighting styles:
+  Sweep comes with a custom theme, called `sweeprolog-pce', that
+  emulates the Prolog code highlighting provided by /PceEmacs/, the
+  SWI-Prolog built-in Emacs-like editor (see [Using the PceEmacs
+  built-in editor] in the SWI-Prolog manual).  If you are starting out
+  with Sweep after coming from PceEmacs, enabling this theme may soften
+  your landing by providing a more familiar experience.
 
-  1. The default style includes faces that mostly inherit from standard
-     Emacs faces commonly used in programming modes.
-  2. The `light' style mimics the colors used in the SWI-Prolog built-in
-     editor.
-  3. The `dark' style mimics the colors used in the SWI-Prolog built-in
-     editor in dark mode.
+  The `sweeprolog-pce' theme only affects faces that Sweep itself
+  defines, so you can use it along other themes that you may have
+  enabled.  To enable this theme or the current Emacs session, type `M-x
+  load-theme RET sweeprolog-pce RET'.  To enable it for future sessions,
+  add the following to your Emacs configuration:
 
-  User Option: sweeprolog-faces-style
-        Style of faces to use for semantic highlighting in
-        `sweeprolog-mode' buffers.  Defaults to `nil'.
+  ┌────
+  │ (load-theme 'sweeprolog-pce t)
+  └────
 
-  To choose a style, customize the user option `sweeprolog-faces-style'
-  with `M-x customize-option RET sweeprolog-faces-style RET'.  The new
-  style will apply to all new `sweeprolog-mode' buffers.  To apply the
-  new style to an existing buffer, use `C-x x f' (`font-lock-update') in
-  that buffer.
+  For more information about custom themes in Emacs, see [Custom
+  Themes].
+
+  In versions up to and including 0.20.0, Sweep used to provide a
+  different mechanism for emulating the highlighting of PceEmacs that
+  involved customizing the user option `sweeprolog-faces-style'.  When
+  that option was set to `light' or `dark', Sweep would use different
+  sets of faces that mimic the highlighting of PceEmacs.
+  `sweeprolog-faces-style' is now deprecated, and you should instead use
+  the `sweeprolog-pce' theme.  Still, in benefit of users that have
+  `sweeprolog-faces-style' set and expect Sweep to use PceEmacs
+  highlighting, Sweep checks if `sweeprolog-faces-style' is either
+  `light' or `dark' when you first open a Prolog buffer, and if so it
+  simply enables the `sweeprolog-pce' theme to get the same effect.
+
+
+[Using the PceEmacs built-in editor]
+<https://www.swi-prolog.org/pldoc/man?section=pceemacs>
+
+[Custom Themes] <info:emacs#Custom Themes>
 
 
 Highlighting occurrences of a variable
@@ -789,8 +865,8 @@ Quasi-quotation highlighting
   sweeprolog-qq-mode-alist RET'.
 
   If a quasi-quotation type does not have a matching mode in
-  `sweeprolog-qq-mode-alist', the function `sweeprolog-qq-content-face'
-  is used to determine a default face for quoted content.
+  `sweeprolog-qq-mode-alist', Sweep highlights the quoted content with
+  the `sweeprolog-qq-content' face.
 
   For more information about quasi-quotations in SWI-Prolog, see
   [library(quasi_quotations) in the SWI-Prolog manual].
@@ -2695,15 +2771,6 @@ Things to do
 Improvements around editing Prolog
 ──────────────────────────────────
 
-  Inherit user customizations from `prolog-mode'
-        Sweep should inherit user customizations from the standard
-        `prolog.el' built into Emacs to accommodate users updating their
-        configs to work with Sweep.  Ideally, `sweeprolog-mode' should
-        be derived from `prolog-mode' instead of the generic `prog-mode'
-        to inherit user-set hooks and modifications, but careful
-        consideration is required to make sure `sweeprolog-mode'
-        overrides all conflicting `prolog-mode' features.
-
   Make predicate completion aware of module-qualification
         predicate completion should detect when the prefix it’s trying
         to complete starts with a module-qualification `foo:ba<|>' and
@@ -2718,13 +2785,9 @@ Improvements around editing Prolog
         changing `sweeprolog--colour-term-to-faces' such that each color
         fragment in returned list states its target decoration level
         (i.e. 1, 2 or 3).  `sweeprolog--colourise' would then compare
-        this target to the value of
-
-        ┌────
-        │ (font-lock-value-in-major-mode font-lock-maximum-decoration)
-        └────
-
-        And decide whether or not to apply the fragment.
+        this target to the value of `(font-lock-value-in-major-mode
+        font-lock-maximum-decoration)' and decide whether or not to
+        apply the fragment.
 
 
 General improvements
