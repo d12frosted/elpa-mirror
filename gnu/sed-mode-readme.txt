@@ -1,2 +1,5 @@
-If you need this major mode, you might also want to
-consider spending some time with `M-x doctor'.
+This major mode provides basic support for Sed scripts.  Despite its
+simplicity, I hope this major mode will be overkill for you.
+The functionality supported is:
+- Font-locking
+- Auto-indentation

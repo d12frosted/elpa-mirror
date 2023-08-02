@@ -23,7 +23,7 @@ search terms and associate them with a given label.  The label is purely
 cosmetic, though it helps characterise the resulting counter.
 
 The value of `notmuch-indicator-args` is a list of plists (property
-lists).  Each plist consists of one mandarory property and two optional
+lists).  Each plist consists of one mandatory property and two optional
 ones:
 
 1. The `:terms`, which is required, is a string that holds the

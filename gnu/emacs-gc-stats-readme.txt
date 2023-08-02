@@ -71,7 +71,20 @@ See the source code for information how to contact the author.
 3 News
 ══════
 
-3.1 Version 1.3
+3.1 Version 1.4.1
+─────────────────
+
+  • Avoid `memory-info' trying to retrieve memory information from
+    remote system over TRAMP.
+
+
+3.2 Version 1.4
+───────────────
+
+  • `emacs-gc-stats-file' is now compressed, when possible.
+
+
+3.3 Version 1.3
 ───────────────
 
   • New customization: `emacs-gc-stats-inhibit-command-name-logging' to

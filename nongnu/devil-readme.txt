@@ -16,7 +16,7 @@
   granted the occasional use of the comma key for punctuation, but only
   if you can charm the Devil.  But beware, for in this sinister domain,
   you must relinquish your comma key and embrace an editing experience
-  that whispers wicked secrets into your fingertips.
+  that whispers wicked secrets into your fingertips!
 
 
 [file:https://melpa.org/packages/devil-badge.svg]
@@ -50,11 +50,14 @@
 
   By default, each comma in the Devil key sequence is translated to
   "C-".  For example, if you type ", x , f", Devil translates it to "C-x
-  C-f".  Similarly, "m" is translated to "M-", so if you type ", m s",
-  Devil translates it to "C-M-s".  There are several other translations
-  available in the default translation rules that let you enjoy working
-  with Emacs while avoiding modifier keys.  Further, the Devil
-  activation key, translation rules, etc. are customisable.
+  C-f".  Similarly ", m" is translated to "M-".  If you type ", m x",
+  Devil translates it to "M-x".  Further ", m m" is translated to
+  "C-M-".  If you type ", m m f" Devil translates it to "C-M-f".  There
+  are several other translations available in the default translation
+  rules that let you enjoy working with Emacs while avoiding modifier
+  keys.  Further, the Devil activation key, translation rules, etc. are
+  customisable.  Thus if you do not like the default choices made in
+  this package, you can customise it easily to suit your preferences.
 
   Read the [manual] to learn how to install, use, and customise Devil.
 
@@ -69,7 +72,6 @@
 
   • Website: [susam.net]
   • Mastodon: [@susam@mastodon.social]
-  • Twitter: [@susam]
   • GitHub: [@susam]
 
   You are welcome to subscribe to, follow, or join one or more of the
@@ -80,8 +82,6 @@
 [susam.net] <https://susam.net>
 
 [@susam@mastodon.social] <https://mastodon.social/@susam>
-
-[@susam] <https://twitter.com/susam>
 
 [@susam] <https://github.com/susam>
 

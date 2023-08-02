@@ -3,17 +3,6 @@
 	      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Installation
-.. 1. Package
-.. 2. Quelpa
-.. 3. Straight.el
-.. 4. Manual
-2. Usage
-
-
 Popon allows you to pop text on a window, what we call a popon.  Popons
 are window-local and sticky, they don't move while scrolling, and they
 even don't go away when switching buffer, but you can bind a popon to a

@@ -1734,12 +1734,16 @@ Exporting Predicates
 Code Completion
 ───────────────
 
-  `sweeprolog-mode' empowers Emacs’s standard `completion-at-point'
-  command, bound by default to `C-M-i' and `M-TAB', with context-aware
-  completion for Prolog terms.  For background about completion-at-point
-  in Emacs, see [Symbol Completion] in the Emacs manual.
+  In Emacs, major modes for different programming languages provide
+  in-buffer code completion via a standard generic command called
+  `completion-at-point' ([Symbol Completion]).  This command is normally
+  bound to `C-M-i' and `M-TAB'.  Sweep extends and empowers
+  `completion-at-point' with context-aware completion for Prolog code in
+  Prolog buffers.
 
-  Sweep provides the following Prolog-specific completion facilities:
+  When providing candidates for in-buffer completion, Sweep takes into
+  account the code surrounding the cursor to determine what kind of
+  completion makes most sense:
 
   Variable name completion
         If the text before point can be completed to one or more
@@ -1748,10 +1752,9 @@ Code Completion
         completion candidates.
   Predicate completion
         If point is at a callable position, `completion-at-point'
-        suggests matching predicates as completion candidates.
-        Predicate calls are inserted as complete term.  If the chosen
-        predicate takes arguments, holes are inserted in their places
-        (see [Holes]).
+        suggests matching predicate calls as completion candidates.  If
+        the predicate you choose takes arguments, Sweep inserts holes in
+        their places, and moves point to the first argument ([Holes]).
   Atom completion
         If point is at a non-callable position, `completion-at-point'
         suggests matching atoms as completion candidates.
@@ -2770,12 +2773,6 @@ Things to do
 
 Improvements around editing Prolog
 ──────────────────────────────────
-
-  Make predicate completion aware of module-qualification
-        predicate completion should detect when the prefix it’s trying
-        to complete starts with a module-qualification `foo:ba<|>' and
-        restrict completion to matching candidates in the specified
-        module.
 
   Respect `font-lock-maximum-decoration'
         We should take into account the value of

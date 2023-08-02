@@ -136,35 +136,45 @@ be simple and well-organized.  Every feature is tested against
         `THEN', or the kind of result to return for synchronous
         requests.  It may be:
 
-        • `buffer' to pass the response buffer.
-        • `binary' to pass the response body as an undecoded string.
+        • `buffer' to pass the response buffer, which will be narrowed
+          to the response body and decoded according to `DECODE'.
+        • `binary' to pass the response body as an un-decoded string.
         • `string' to pass the response body as a decoded string.
-        • `response' to pass a `plz-response' struct.
-        • A function, to pass its return value; it is called in the
-          response buffer, which is narrowed to the response body
-          (suitable for, e.g. `json-read').
-        • `file' to pass a temporary filename to which the response
-          body has been saved without decoding.
-        • `(file FILENAME)' to pass `FILENAME' after having saved the
+        • `response' to pass a `plz-response' structure.
+        • `file' to pass a temporary filename to which the response body
+          has been saved without decoding.
+        • `(file ~FILENAME)' to pass `FILENAME' after having saved the
           response body to it without decoding.  `FILENAME' must be a
           non-existent file; if it exists, it will not be overwritten,
           and an error will be signaled.
+        • A function, which is called in the response buffer with it
+          narrowed to the response body (suitable for,
+          e.g. `json-read').
 
         If `DECODE' is non-nil, the response body is decoded
         automatically.  For binary content, it should be nil.  When `AS'
         is `binary', `DECODE' is automatically set to nil.
 
         `THEN' is a callback function, whose sole argument is selected
-        above with `AS'.  Or `THEN' may be `sync' to make a synchronous
-        request, in which case the result is returned directly.
+        above with `AS'; if the request fails and no `ELSE' function is
+        given (see below), the argument will be a `plz-error' structure
+        describing the error.  Or `THEN' may be `sync' to make a
+        synchronous request, in which case the result is returned
+        directly from this function.
 
         `ELSE' is an optional callback function called when the request
-        fails (i.e. if curl fails, or if the HTTP response has a non-2xx
-        status code).  It is called with one argument, a `plz-error'
-        structure.  If `ELSE' is nil, an error is signaled when the
-        request fails, either `plz-curl-error' or `plz-http-error' as
-        appropriate, with a `plz-error' structure as the error data.
-        For synchronous requests, this argument is ignored.
+        fails (i.e. if curl fails, or if the `HTTP' response has a
+        non-2xx status code).  It is called with one argument, a
+        `plz-error' structure.  If `ELSE' is nil, a `plz-curl-error' or
+        `plz-http-error' is signaled when the request fails, with a
+        `plz-error' structure as the error data.  For synchronous
+        requests, this argument is ignored.
+
+        `NOTE': In v0.8 of `plz', only one error will be signaled:
+        `plz-error'.  The existing errors, `plz-curl-error' and
+        `plz-http-error', inherit from `plz-error' to allow applications
+        to update their code while using v0.7 (i.e. any `condition-case'
+        forms should now handle only `plz-error', not the other two).
 
         `FINALLY' is an optional function called without argument after
         `THEN' or `ELSE', as appropriate.  For synchronous requests,
@@ -229,7 +239,53 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.6
+3.1 0.7
+───────
+
+  *Changes*
+  ⁃ A new error signal, `plz-error', is defined.  The existing signals,
+    `plz-curl-error' and `plz-http-error', inherit from it, so handling
+    `plz-error' catches both.
+
+    *NOTE:* The existing signals, `plz-curl-error' and `plz-http-error',
+     are hereby deprecated, and they will be removed in v0.8.
+     Applications should be updated while using v0.7 to only expect
+     `plz-error'.
+
+  *Fixes*
+  ⁃ Significant improvement in reliability by implementing failsafes and
+    workarounds for Emacs's process-handling code.  (See [#3].)
+  ⁃ STDERR output from curl processes is not included in response bodies
+    (which sometimes happened, depending on Emacs's internal race
+    conditions).  (Fixes [#23].)
+  ⁃ Use `with-local-quit' for synchronous requests (preventing Emacs
+    from complaining sometimes).  (Fixes [#26].)
+  ⁃ Various fixes for `:as 'buffer' result type: decode body when
+    appropriate; unset multibyte for binary; narrow to body; don't kill
+    buffer prematurely.
+  ⁃ When clearing a queue, don't try to kill finished processes.
+
+  *Internal*
+  ⁃ Response processing now happens outside the process sentinel, so any
+    errors (e.g. in user callbacks) are not signaled from inside the
+    sentinel.  (This avoids the 2-second pause Emacs imposes in such
+    cases.)
+  ⁃ Tests run against a local instance of [httpbin] (since the
+    `httpbin.org' server is often overloaded).
+  ⁃ No buffer-local variables are defined anymore; process properties
+    are used instead.
+
+
+[#3] <https://github.com/alphapapa/plz.el/issues/3>
+
+[#23] <https://github.com/alphapapa/plz.el/issues/23>
+
+[#26] <https://github.com/alphapapa/plz.el/issues/26>
+
+[httpbin] <https://github.com/postmanlabs/httpbin>
+
+
+3.2 0.6
 ───────
 
   *Additions*
@@ -245,7 +301,7 @@ be simple and well-organized.  Every feature is tested against
   ⁃ Handle HTTP 3xx redirects when using `:as 'response'.
 
 
-3.2 0.5.4
+3.3 0.5.4
 ─────────
 
   *Fixes*
@@ -253,7 +309,7 @@ be simple and well-organized.  Every feature is tested against
     features should not be designed and released on a Friday.)
 
 
-3.3 0.5.3
+3.4 0.5.3
 ─────────
 
   *Fixes*
@@ -262,7 +318,7 @@ be simple and well-organized.  Every feature is tested against
     would require them to be recompiled after upgrading `plz').
 
 
-3.4 0.5.2
+3.5 0.5.2
 ─────────
 
   *Fixes*
@@ -270,7 +326,7 @@ be simple and well-organized.  Every feature is tested against
     when specified.
 
 
-3.5 0.5.1
+3.6 0.5.1
 ─────────
 
   *Fixes*
@@ -281,7 +337,7 @@ be simple and well-organized.  Every feature is tested against
 [Dan Oriani] <https://github.com/redchops>
 
 
-3.6 0.5
+3.7 0.5
 ───────
 
   *Additions*
@@ -289,7 +345,7 @@ be simple and well-organized.  Every feature is tested against
     queue is finished.
 
 
-3.7 0.4
+3.8 0.4
 ───────
 
   *Additions*
@@ -321,7 +377,7 @@ be simple and well-organized.  Every feature is tested against
 [#17] <https://github.com/alphapapa/plz.el/issues/17>
 
 
-3.8 0.3
+3.9 0.3
 ───────
 
   *Additions*
@@ -340,21 +396,21 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.9 0.2.1
-─────────
+3.10 0.2.1
+──────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.10 0.2
+3.11 0.2
 ────────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.11 0.1
+3.12 0.1
 ────────
 
   Initial release.

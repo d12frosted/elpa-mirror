@@ -1,6 +1,7 @@
 # opam-switch-mode
 
-[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/opam-switch-mode-badge.svg)](https://elpa.nongnu.org/nongnu/opam-switch-mode.html)
+[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/opam-switch-mode.svg)](https://elpa.nongnu.org/nongnu/opam-switch-mode.html)
+[![MELPA Stable](https://stable.melpa.org/packages/opam-switch-mode-badge.svg)](https://stable.melpa.org/#/opam-switch-mode)
 [![MELPA](https://melpa.org/packages/opam-switch-mode-badge.svg)](https://melpa.org/#/opam-switch-mode)
 
 Provide a command `opam-switch-set-switch` to change the opam switch
@@ -17,24 +18,23 @@ entry "reset" to reset the environment to the state when Emacs was started.
 We recommend to install this mode from either the 
 [NonGNU ELPA](https://elpa.nongnu.org/) or the
 [MELPA](https://melpa.org/) repository of Emacs packages.
+In the sequel, we assume you have already set up those in your `.emacs`.
 
 If you use the
 [`use-package`](https://github.com/jwiegley/use-package) macro, the
-recommended configuration is:
-Assuming you have already set up those in your `.emacs`, just write:
+recommended configuration is as follows:
 
-```elisp
-(use-package opam-switch-mode
-  :ensure t
-  :hook
-  (coq-mode . opam-switch-mode))
-```
+    (use-package opam-switch-mode
+      :ensure t
+      :hook
+      ((coq-mode tuareg-mode) . opam-switch-mode))
 
 If you don't use `use-package`, do the following instead:
 
     (add-hook 'coq-mode-hook #'opam-switch-mode)
+    (add-hook 'tuareg-mode-hook #'opam-switch-mode)
 
-so that the minor mode is automatically enabled when `coq-mode` is on,
+so that the minor mode is automatically enabled when `coq-mode` or `tuareg-mode` is on,
 see also [`opam-switch-mode` aware modes](#opam-switch-mode-aware-modes).
 
 ## Command `opam-switch-set-switch`
@@ -56,8 +56,9 @@ newly set opam switch. In addition to setting environment variables such as
 PATH and CAML_LD_LIBRARY_PATH, this also sets `exec-path`, which controls
 Emacs' subprocesses (`call-process`, `make-process` and similar functions).
 
-When the switch is changed, `opam-switch-change-opam-switch-hook` runs.
-This can be used to inform other modes that may run background processes
+Just before the switch is changed, `opam-switch-before-change-opam-switch-hook` runs.
+After the switch is changed, `opam-switch-change-opam-switch-hook` runs.
+One of these can be used to inform other modes that run background processes
 that depend on the currently active opam switch.
 
 For obvious reasons, `opam-switch-set-switch` will only affect Emacs and not
@@ -66,5 +67,11 @@ any other shells outside Emacs.
 ## `opam-switch-mode` aware modes
 
 - `coq-mode` from [`proof-general`](https://proofgeneral.github.io/)
-  can kill the coq background process, when the opam switch changes,
-  see [`coq-kill-coq-on-opam-switch`](https://proofgeneral.github.io/doc/master/userman/Coq-Proof-General/#index-coq_002dkill_002dcoq_002don_002dopam_002dswitch).
+  can kill the Coq background process when the opam switch changes,
+  see option [`coq-kill-coq-on-opam-switch`](https://proofgeneral.github.io/doc/master/userman/Coq-Proof-General/#index-coq_002dkill_002dcoq_002don_002dopam_002dswitch).
+- `tuareg-mode` from [`tuareg`](https://github.com/ocaml/tuareg)
+  can kill the OCaml background process when the opam switch changes,
+  see option `tuareg-kill-ocaml-on-opam-switch`.
+- `merlin-mode` from [`merlin`](https://github.com/ocaml/merlin)
+  can kill the underlying Merlin server when the opam switch changes,
+  see option `merlin-stop-server-on-opam-switch`.

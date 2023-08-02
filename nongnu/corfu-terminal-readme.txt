@@ -3,18 +3,6 @@
 	      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. Installation
-.. 1. Package
-.. 2. Quelpa
-.. 3. Straight.el
-.. 4. Manual
-2. Usage
-3. Complementary Packages
-
-
 Corfu uses child frames to display candidates.  This makes Corfu
 unusable on terminal.  This package replaces that with popup/popon,
 which works everywhere.

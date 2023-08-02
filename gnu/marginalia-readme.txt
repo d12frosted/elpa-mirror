@@ -24,7 +24,8 @@ Table of Contents
 2. Information shown by the annotators
 3. Adding custom annotators or classifiers
 4. Disabling annotators, builtin or lightweight annotators
-5. Contributions
+5. Icons in the minibuffer
+6. Contributions
 
 
 [Marginalia] <https://en.wikipedia.org/wiki/Marginalia>
@@ -41,16 +42,18 @@ Table of Contents
   ┌────
   │ ;; Enable rich annotations using the Marginalia package
   │ (use-package marginalia
-  │   ;; Either bind `marginalia-cycle' globally or only in the minibuffer
-  │   :bind (("M-A" . marginalia-cycle)
-  │ 	 :map minibuffer-local-map
+  │   ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
+  │   ;; available in the *Completions* buffer, add it to the
+  │   ;; `completion-list-mode-map'.
+  │   :bind (:map minibuffer-local-map
   │ 	 ("M-A" . marginalia-cycle))
   │ 
-  │   ;; The :init configuration is always executed (Not lazy!)
+  │   ;; The :init section is always executed.
   │   :init
   │ 
-  │   ;; Must be in the :init section of use-package such that the mode gets
-  │   ;; enabled right away. Note that this forces loading the package.
+  │   ;; Marginalia must be actived in the :init section of use-package such that
+  │   ;; the mode gets enabled right away. Note that this forces loading the
+  │   ;; package.
   │   (marginalia-mode))
   └────
 
@@ -239,7 +242,31 @@ Table of Contents
   └────
 
 
-5 Contributions
+5 Icons in the minibuffer
+═════════════════════════
+
+  Icons in the minibuffer completion UI are a commonly requested
+  feature.  Marginalia focuses on text annotations only. The following
+  packages are compatible with Marginalia and use special fonts to add
+  icons in front of completion candidates. There also exist related
+  packages to enhance Dired, Ibuffer and other modes with icons
+  consistently.
+
+  • [all-the-icons-completion]: Relies on the `all-the-icons.el' package
+    which configures multiple icon fonts.
+  • [nerd-icons-completion]: Relies on patched fonts including
+    icons. This package works even in the terminal where only a single
+    font can be used.
+
+
+[all-the-icons-completion]
+<https://github.com/iyefrat/all-the-icons-completion>
+
+[nerd-icons-completion]
+<https://github.com/rainstormstudio/nerd-icons-completion>
+
+
+6 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

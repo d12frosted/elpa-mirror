@@ -9,11 +9,11 @@
 1 Introduction
 ══════════════
 
-  This package implements a "modern" style for your Org buffers using
-  font locking and text properties. The package styles headlines,
-  keywords, tables and source blocks. The styling is configurable, you
-  can enable, disable or modify the style of each syntax element
-  individually via the `org-modern' customization group.
+  This package implements a modern style for your Org buffers using font
+  locking and text properties. The package styles headlines, keywords,
+  tables and source blocks. The styling is configurable, you can enable,
+  disable or modify the style of each syntax element individually via
+  the `org-modern' customization group.
 
   <https://github.com/minad/org-modern/blob/screenshots/example.gif?raw=true>
 
@@ -24,44 +24,18 @@
   Since this package adjusts text styling, it depends on your font
   settings. You should ensure that your `variable-pitch' and
   `fixed-pitch' fonts combine harmonically and have approximately the
-  same height. `org-modern-mode' tries to adjust the tag label display
-  based on the value of `line-spacing'. This looks best if
-  `line-spacing' has a value between 0.1 and 0.4 in the Org buffer. Note
-  that `org-indent-mode' interferes with some of the style elements
-  applied by `org-modern-mode', e.g., the block brackets in the fringe.
-
-  Bug reports, improvement or style proposals are welcome! Maybe some
-  more Org elements deserve styling or alternative styles should be
-  offered?
-
-  The tag style of `org-modern' is inspired by Nicholas Rougier's
-  beautiful [svg-tag-mode]. In contrast to `svg-tag-mode', this package
-  avoids images and uses cheap and fast Emacs box text properties. By
-  only styling the text via text properties, the styled text, e.g.,
-  dates or tags stay editable and are easy to interact with.
-
-  On the downside, this restricts our flexibility and may lead to
-  font-dependent issues. We do our best, but for example there is no way
-  we can get round corners. Combining `org-modern-mode' with
-  `svg-tag-mode' is possible. You can use SVG tags and use the table and
-  block styling from `org-modern'. If you are interested in further
-  tweaks, Emacs comes with the builtin `prettify-symbols-mode' which can
-  be used for individual styling of custom keywords.
-
-  Another popular alternative is [org-superstar], which has a more
-  restricted feature set and mainly adjusts headlines and
-  lists. `org-superstar' relies on character composition, while
-  `org-modern' uses text properties, which are considered more
-  future-proof.
+  same height. As default font, I recommend variants of the [Iosevka]
+  font, e.g., Iosevka Term Curly.  `org-modern-mode' tries to adjust the
+  tag label display based on the value of `line-spacing'. This looks
+  best if `line-spacing' has a value between 0.1 and 0.4 in the Org
+  buffer.
 
 
 [example.org] <file:example.org>
 
 [modus-operandi] <https://protesilaos.com/emacs/modus-themes>
 
-[svg-tag-mode] <https://github.com/rougier/svg-tag-mode>
-
-[org-superstar] <https://github.com/integral-dw/org-superstar-mode>
+[Iosevka] <https://github.com/be5invis/Iosevka>
 
 
 2 Configuration
@@ -79,7 +53,7 @@
   │ (add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
   │ 
   │ ;; Option 2: Globally
-  │ (global-org-modern-mode)
+  │ (with-eval-after-load 'org (global-org-modern-mode))
   └────
 
   Try the following more extensive setup in `emacs -Q' to reproduce the
@@ -136,7 +110,37 @@
   └────
 
 
-3 Contributions
+3 Alternatives
+══════════════
+
+  The tag style of `org-modern' is inspired by Nicholas Rougier's
+  beautiful [svg-tag-mode]. In contrast to `svg-tag-mode', this package
+  avoids images and uses cheap and fast Emacs box text properties. By
+  only styling the text via text properties, the styled text, e.g.,
+  dates or tags stay editable and are easy to interact with.
+
+  The approach restricts our flexibility and may lead to font-dependent
+  issues. We do our best, but for example there is no way we can get
+  round corners. Combining `org-modern-mode' with `svg-tag-mode' is
+  possible. You can use SVG tags and use the table and block styling
+  from `org-modern'. If you are interested in further tweaks, Emacs
+  comes with the builtin `prettify-symbols-mode' which can be used for
+  individual styling of custom keywords.
+
+  Popular alternatives are the older `org-superstar' and `org-bullets'
+  packages, which have are more limited and mainly adjust headlines and
+  lists. `org-superstar' relies on character composition, while
+  `org-modern' uses text properties, which are considered more
+  future-proof. Note that `org-modern' is a full replacement for both
+  `org-superstar' and `org-bullets'. You can easily disable styling of
+  certain elements, e.g., `org-modern-timestamp', if you only want to
+  use a subset of `org-modern'.
+
+
+[svg-tag-mode] <https://github.com/rougier/svg-tag-mode>
+
+
+4 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

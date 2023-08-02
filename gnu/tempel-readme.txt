@@ -36,12 +36,16 @@ Table of Contents
   ⁃ `tempel-complete' completes a template name at point in the buffer
     and subsequently expands the template. If called non-interactively
     the function behaves like a Capf and can be added to
-    `completion-at-point-functions'.
+    `completion-at-point-functions'. The Capf returns a list of
+    templates names which are presented by the completion UI for
+    selection.
   ⁃ `tempel-expand' expands an exactly matching template name at point
-    in the buffer.  If called non-interactively the function behaves
-    like a Capf and can be added to `completion-at-point-functions'.
-  ⁃ `tempel-insert' selects a template by name and insert it into the
-    current buffer.
+    in the buffer. If called non-interactively the function behaves like
+    a Capf and can be added to `completion-at-point-functions'. This
+    Capf returns only the single exactly matching template name, such
+    that no selection in the completion UI is possible.
+  ⁃ `tempel-insert' selects a template by name via `completing-read' and
+    insert it into the current buffer.
 
   For the commands `tempel-complete' and `tempel-expand', you may want
   to give my [Corfu] completion at point popup UI a try. After inserting
@@ -92,6 +96,7 @@ Table of Contents
   │ 		(cons #'tempel-expand
   │ 		      completion-at-point-functions)))
   │ 
+  │   (add-hook 'conf-mode-hook 'tempel-setup-capf)
   │   (add-hook 'prog-mode-hook 'tempel-setup-capf)
   │   (add-hook 'text-mode-hook 'tempel-setup-capf)
   │ 
@@ -196,7 +201,6 @@ Table of Contents
   │ 
   │ (autoload ";;;###autoload")
   │ (pt "(point)")
-  │ (lambda "(lambda (" p ")" n> r> ")")
   │ (var "(defvar " p "\n  \"" p "\")")
   │ (local "(defvar-local " p "\n  \"" p "\")")
   │ (const "(defconst " p "\n  \"" p "\")")
@@ -437,6 +441,7 @@ Table of Contents
   • expand.el: Abbreviation expansion, builtin
   • skeleton.el: Lisp syntax for templates, builtin
   • tempo.el: Lisp syntax for templates, builtin
+  • srecode.el: CEDET template manager and code generator, builtin
   • [aas.el]: Auto activating snippets
   • [cdlatex.el]: Fast LaTeX insertion
   • [laas.el]: Latex auto activating snippets

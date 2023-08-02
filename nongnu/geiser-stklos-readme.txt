@@ -24,6 +24,7 @@ Supported Geiser features
 * autodoc (signature of procedures and values of symbols are displayed in the minibuffer
   when the mouse hovers over their names)
 * symbol documentation (docstrings for procedures, and values of variables)
+* logging of forms
 
 Unsupported Geiser features
 ───────────────────────────

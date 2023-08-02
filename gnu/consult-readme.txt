@@ -198,8 +198,10 @@ Table of Contents
 1.4 Navigation
 ──────────────
 
-  • `consult-goto-line': Jump to line number enhanced with live preview.
-    This is a drop-in replacement for `goto-line'.
+  • `consult-goto-line': Jump to line number enhanced with live
+    preview. This is a drop-in replacement for `goto-line'. Enter a line
+    number to jump to the first column of the given line. Alternatively
+    enter `line:column' in order to jump to a specific column.
   • `consult-mark': Jump to a marker in the `mark-ring'. Supports live
     preview and recursive editing.
   • `consult-global-mark': Jump to a marker in the `global-mark-ring'.
@@ -473,14 +475,25 @@ Table of Contents
   In this case one may wonder what the difference is between using an
   Embark action on the current candidate in comparison to a manually
   triggered preview.  The main difference is that the files opened by
-  manual preview are closed again after the completion
-  session. Furthermore during preview some functionality is disabled to
-  improve the performance, see for example the customization variables
-  `consult-preview-allowed-hooks' and `consult-preview-variables'. Files
-  larger than `consult-preview-raw-size' are previewed literally without
-  syntax highlighting and without changing the major mode. Delaying the
-  preview is also useful for `consult-theme', since the theme preview is
-  slow. The delay results in a smoother UI experience.
+  manual preview are closed again after the completion session. During
+  preview some functionality is disabled to improve the performance, see
+  for example the customization variables `consult-preview-variables'
+  and `consult-preview-allowed-hooks'. Only the hooks listed in
+  `consult-preview-allowed-hooks' are executed when a file is opened
+  (`find-file-hook'). In order to enable additional font locking during
+  preview, add the corresponding hooks to the allow list. The following
+  code demonstrates this for [org-modern] and [hl-todo].
+
+  ┌────
+  │ (add-to-list 'consult-preview-allowed-hooks 'global-org-modern-mode-check-buffers)
+  │ (add-to-list 'consult-preview-allowed-hooks 'global-hl-todo-mode-check-buffers)
+  └────
+
+  Files larger than `consult-preview-raw-size' are previewed literally
+  without syntax highlighting and without changing the major
+  mode. Delaying the preview is also useful for `consult-theme', since
+  the theme preview is slow. The delay results in a smoother UI
+  experience.
 
   ┌────
   │ ;; Preview on any key press, but delay 0.5s
@@ -495,6 +508,10 @@ Table of Contents
 
 
 [example configuration] See section 3.1
+
+[org-modern] <https://github.com/minad/org-modern>
+
+[hl-todo] <https://github.com/tarsius/hl-todo>
 
 
 2.2 Narrowing and grouping
@@ -1016,8 +1033,7 @@ Table of Contents
 
   Commands and buffer sources allow flexible, individual customization
   by using the `consult-customize' macro. You can override any option
-  passed to the internal `consult--read' API. The [Consult wiki] already
-  contains a numerous useful configuration examples. Note that since
+  passed to the internal `consult--read' API. Note that since
   `consult--read' is part of the internal API, options could be removed,
   replaced or renamed in future versions of the package.
 
@@ -1137,8 +1153,9 @@ Table of Contents
 
   • [consult-ag]: Support for the [Silver Searcher] in the style of
     `consult-grep'.
-  • [consult-company]: Completion at point using the [Company] backends.
   • [consult-codesearch]: Integration with [Code Search].
+  • [consult-company]: Completion at point using the [Company] backends.
+  • [consult-compile-multi]: Integration with [compile-multi].
   • [consult-dir]: Directory jumper using Consult multi sources.
   • [consult-dash]: Consult interface to [Dash documentation]
   • [consult-eglot]: Integration with Eglot (LSP client).
@@ -1181,20 +1198,26 @@ Table of Contents
     `completing-read'.
   • [wgrep]: Editing of grep buffers, use together with `consult-grep'
     via `embark-export'.
-  • [all-the-icons-completion]: Icons for the completion UI.
+  • [all-the-icons-completion], [nerd-icons-completion]: Icons for the
+    completion UI.
 
 
 [consult-ag] <https://github.com/yadex205/consult-ag>
 
 [Silver Searcher] <https://github.com/ggreer/the_silver_searcher>
 
+[consult-codesearch] <https://github.com/youngker/consult-codesearch.el>
+
+[Code Search] <https://github.com/google/codesearch>
+
 [consult-company] <https://github.com/mohkale/consult-company>
 
 [Company] <https://github.com/company-mode/company-mode>
 
-[consult-codesearch] <https://github.com/youngker/consult-codesearch.el>
+[consult-compile-multi]
+<https://github.com/mohkale/consult-compile-multi>
 
-[Code Search] <https://github.com/google/codesearch>
+[compile-multi] <https://github.com/mohkale/compile-multi>
 
 [consult-dir] <https://github.com/karthink/consult-dir>
 
@@ -1265,6 +1288,9 @@ Table of Contents
 
 [all-the-icons-completion]
 <https://github.com/iyefrat/all-the-icons-completion>
+
+[nerd-icons-completion]
+<https://github.com/rainstormstudio/nerd-icons-completion>
 
 
 6 Bug reports
@@ -1420,8 +1446,8 @@ Table of Contents
     [consult-spotify])
   • [Gerry Agbobada] ([consult-lsp])
   • [Karthik Chikmagalur] ([consult-dir])
-  • [Mohsin Kaleem] ([consult-company], [consult-eglot],
-    [consult-yasnippet])
+  • [Mohsin Kaleem] ([consult-company], [consult-compile-multi],
+    [consult-eglot], [consult-yasnippet])
   • [Marco Pawłowski] ([consult-flyspell], [consult-projectile])
   • [Enrique Kessler Martínez] ([consult-project-extra])
   • [Jan Gru] ([consult-org-roam])
@@ -1517,6 +1543,9 @@ Table of Contents
 [consult-dir] <https://github.com/karthink/consult-dir>
 
 [consult-company] <https://github.com/mohkale/consult-company>
+
+[consult-compile-multi]
+<https://github.com/mohkale/consult-compile-multi>
 
 [consult-eglot] <https://github.com/mohkale/consult-eglot>
 

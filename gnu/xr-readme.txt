@@ -113,10 +113,44 @@ The xr package can be used interactively or by other code as a library.
     consecutive character codes. This is often caused by a misplaced
     hyphen.
 
+  - Range 'A-z' between upper and lower case includes symbols
+
+    A range spans over upper and lower case letters, which also
+    includes some symbols. This is probably unintentional. To cover
+    both upper and lower case letters, use separate ranges, as in
+    [A-Za-z].
+
+  - Suspect character range '+-X': should '-' be literal?
+
+    A range has + as one of its endpoints, which could mean that the
+    hyphen was actually intended to be literal in order to match both
+    + and -.
+    This check is only enable when CHECKS=all.
+
+  - Possibly erroneous '\X' in character alternative
+
+    A character alternative includes something that looks like a
+    escape sequence, but no escape sequences are allowed there since
+    backslash is not a special character in that context.
+    It could also be a caused by too many backslashes.
+
+    For example, "[\\n\\t]" matches the characters 'n', 't' and
+    backslash, but could be an attempt to match newline and tab.
+    This check is only enable when CHECKS=all.
+
   - Duplicated character class '[:class:]'
 
     A character class occurs twice in a single character alternative
     or skip set.
+
+  - Or-pattern more efficiently expressed as character alternative
+
+    When an or-pattern can be written as a character alternative, it
+    becomes more efficient and reduces regexp stack usage.
+    For example, a\|b is better written [ab], and \s-\|\sw is usually
+    better written [[:space:][:word:]]. (There is a subtle difference
+    in how syntax properties are handled but it rarely matters.)
+    This check is only enable when CHECKS=all.
 
   - Duplicated alternative branch
 
@@ -160,6 +194,22 @@ The xr package can be used interactively or by other code as a library.
 
     A pattern that only matches a non-empty string occurs right after
     an end-of-text anchor (\'). This combination can never match.
+
+  - Use \` instead of ^ in file-matching regexp
+  - Use \' instead of $ in file-matching regexp
+
+    In a regexp used for matching a file name, newlines are usually
+    not relevant. Line-start and line-end anchors should therefore
+    probably be replaced with string-start and string-end,
+    respectively. Otherwise, the regexp may fail for file names that
+    do contain newlines.
+
+  - Possibly unescaped '.' in file-matching regexp
+
+    In a regexp used for matching a file name, a naked dot is usually
+    more likely to be a mistake (missing escaping backslash) than an
+    actual intent to match any character except newline, since literal
+    dots are very common in file name patterns.
 
   - Uncounted repetition
 
@@ -205,6 +255,24 @@ The xr package can be used interactively or by other code as a library.
 
     In general, A?, where A matches the empty string, can be
     simplified to just A.
+
+  - Repetition of effective repetition
+
+    A repetition construct is applied to an expression that itself
+    contains a repetition, in addition to some patterns that may match
+    the empty string. This can lead to bad matching performance.
+
+    Example: \(?:a*b+\)* is equivalent to the much faster \(?:a\|b\)* .
+
+    Another example: \(?:a*b+\)+ is better written a*b[ab]* .
+
+    This check is only enable when CHECKS=all.
+
+  - Possibly mistyped ':?' at start of group
+
+    A group starts as \(:? which makes it likely that it was really
+    meant to be \(?: -- ie, a non-capturing group.
+    This check is only enable when CHECKS=all.
 
   - Unnecessarily escaped 'X'
 
