@@ -3,32 +3,32 @@ Fetcher: github
 Source:  https://github.com/dickmao/nnreddit.git
 
 Updating /mnt/store/melpa/working/nnreddit/
-Checking out 5a10f3f467388b03ca9d0e1eb5e77e33402aabe5
+Checking out 221963fb0b7116729829145f055ed750d0e2f961
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nnreddit/
-  to /tmp/nnreddit46CTIU/nnreddit-20230615.2355
+  to /tmp/nnreddit1HaNsG/nnreddit-20230705.1328
   ! lisp/nnreddit-pkg.el -> nnreddit-pkg.el
   ! lisp/nnreddit.el -> nnreddit.el
     setup.py -> setup.py
     requirements.txt -> requirements.txt
     nnreddit => nnreddit
-Created nnreddit-20230615.2355.tar containing:
-  nnreddit-20230615.2355/
-  nnreddit-20230615.2355/nnreddit-pkg.el
-  nnreddit-20230615.2355/nnreddit.el
-  nnreddit-20230615.2355/nnreddit/
-  nnreddit-20230615.2355/nnreddit/VERSION
-  nnreddit-20230615.2355/nnreddit/__init__.py
-  nnreddit-20230615.2355/nnreddit/__main__.py
-  nnreddit-20230615.2355/nnreddit/authenticated_reddit.py
-  nnreddit-20230615.2355/nnreddit/pylintrc
-  nnreddit-20230615.2355/nnreddit/templates/
-  nnreddit-20230615.2355/nnreddit/templates/index.html
-  nnreddit-20230615.2355/nnreddit/templates/mailcap
-  nnreddit-20230615.2355/nnreddit/templates/rtv.cfg
-  nnreddit-20230615.2355/requirements.txt
-  nnreddit-20230615.2355/setup.py
-Built nnreddit in 4.416s, finished at 2023-06-28T00:53:15+0000
+Created nnreddit-20230705.1328.tar containing:
+  nnreddit-20230705.1328/
+  nnreddit-20230705.1328/nnreddit-pkg.el
+  nnreddit-20230705.1328/nnreddit.el
+  nnreddit-20230705.1328/nnreddit/
+  nnreddit-20230705.1328/nnreddit/VERSION
+  nnreddit-20230705.1328/nnreddit/__init__.py
+  nnreddit-20230705.1328/nnreddit/__main__.py
+  nnreddit-20230705.1328/nnreddit/authenticated_reddit.py
+  nnreddit-20230705.1328/nnreddit/pylintrc
+  nnreddit-20230705.1328/nnreddit/templates/
+  nnreddit-20230705.1328/nnreddit/templates/index.html
+  nnreddit-20230705.1328/nnreddit/templates/mailcap
+  nnreddit-20230705.1328/nnreddit/templates/rtv.cfg
+  nnreddit-20230705.1328/requirements.txt
+  nnreddit-20230705.1328/setup.py
+Built nnreddit in 4.532s, finished at 2023-08-02T09:15:08+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  413 Jun 28 00:53 packages/nnreddit-20230615.2355.entry
-132K -rw-r--r-- 1 root root 130K Jun 28 00:53 packages/nnreddit-20230615.2355.tar
+4.0K -rw-r--r-- 1 root root  413 Aug  2 09:15 packages/nnreddit-20230705.1328.entry
+132K -rw-r--r-- 1 root root 130K Aug  2 09:15 packages/nnreddit-20230705.1328.tar

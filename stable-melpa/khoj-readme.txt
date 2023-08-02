@@ -1,6 +1,5 @@
 Create an AI personal assistant for your `org-mode', `markdown' notes,
-`beancount' transactions, PDFs and images. This package exposes
-two assistance modes, search and chat:
+PDFs and images. The assistant exposes 2 modes, search and chat:
 
 Chat provides faster answers, iterative discovery and assisted
 creativity. It requires your OpenAI API key to access GPT models

@@ -3,19 +3,19 @@ Fetcher: github
 Source:  https://github.com/purcell/package-lint.git
 
 Updating /mnt/store/melpa/working/package-lint/
-Checking out 2892058fba1f36efd85f6c0d007b40621ab5c68e
+Checking out ed8742e9fc0306951b46482816f5fbbb568b8250
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-lint/
-  to /tmp/package-lintWxT4iu/package-lint-20230605.1550
+  to /tmp/package-lint9DcIai/package-lint-20230730.1249
     package-lint.el -> package-lint.el
     data => data
-Created package-lint-20230605.1550.tar containing:
-  package-lint-20230605.1550/
-  package-lint-20230605.1550/data/
-  package-lint-20230605.1550/data/stdlib-changes
-  package-lint-20230605.1550/package-lint-pkg.el
-  package-lint-20230605.1550/package-lint.el
-Built package-lint in 4.879s, finished at 2023-06-28T01:01:18+0000
+Created package-lint-20230730.1249.tar containing:
+  package-lint-20230730.1249/
+  package-lint-20230730.1249/data/
+  package-lint-20230730.1249/data/stdlib-changes
+  package-lint-20230730.1249/package-lint-pkg.el
+  package-lint-20230730.1249/package-lint.el
+Built package-lint in 3.526s, finished at 2023-08-02T09:21:44+0000
  ✓ Success:
- 4.0K -rw-r--r-- 1 root root   537 Jun 28 01:01 packages/package-lint-20230605.1550.entry
-1012K -rw-r--r-- 1 root root 1010K Jun 28 01:01 packages/package-lint-20230605.1550.tar
+4.0K -rw-r--r-- 1 root root  537 Aug  2 09:21 packages/package-lint-20230730.1249.entry
+1.2M -rw-r--r-- 1 root root 1.2M Aug  2 09:21 packages/package-lint-20230730.1249.tar

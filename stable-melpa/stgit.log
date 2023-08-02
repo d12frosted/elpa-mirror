@@ -3,17 +3,16 @@ Fetcher: github
 Source:  https://github.com/stacked-git/stgit.git
 
 Updating /mnt/store/melpa/working/stgit/
-Checking out d34715b1f63643ed5f13516df614aa729bd65fd8
+Checking out cee9dfd7d12b86178bcbf1d48679f298f94113b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/stgit/
-  to /tmp/stgitL2nMnG/stgit-20230525.1553
+  to /tmp/stgitE5CKF7/stgit-20230725.1528
   ! contrib/stgit.el -> stgit.el
-Created stgit-20230525.1553.tar containing:
-  stgit-20230525.1553/
-  stgit-20230525.1553/stgit-pkg.el
-  stgit-20230525.1553/stgit.el
-Built stgit in 13.578s, finished at 2023-06-28T01:17:43+0000
+Created stgit-20230725.1528.tar containing:
+  stgit-20230725.1528/
+  stgit-20230725.1528/stgit-pkg.el
+  stgit-20230725.1528/stgit.el
+Built stgit in 5.736s, finished at 2023-08-02T09:34:48+0000
  ✓ Success:
-116K -rw-r--r-- 1 root root 116K Jun  9 16:52 packages/stgit-20230525.1553.el
-4.0K -rw-r--r-- 1 root root  364 Jun 28 01:17 packages/stgit-20230525.1553.entry
-120K -rw-r--r-- 1 root root 120K Jun 28 01:17 packages/stgit-20230525.1553.tar
+4.0K -rw-r--r-- 1 root root  364 Aug  2 09:34 packages/stgit-20230725.1528.entry
+120K -rw-r--r-- 1 root root 120K Aug  2 09:34 packages/stgit-20230725.1528.tar

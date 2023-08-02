@@ -2,8 +2,6 @@
 [![MELPA](http://melpa.org/packages/elpa-clone-badge.svg)](http://melpa.org/#/elpa-clone)
 [![MELPA Stable](http://stable.melpa.org/packages/elpa-clone-badge.svg)](http://stable.melpa.org/#/elpa-clone)
 [![CI](https://github.com/dochang/elpa-clone/actions/workflows/ci.yml/badge.svg)](https://github.com/dochang/elpa-clone/actions/workflows/ci.yml)
-[![Build Status](https://cloud.drone.io/api/badges/dochang/elpa-clone/status.svg)](https://cloud.drone.io/dochang/elpa-clone)
-[![Build Status](https://travis-ci.org/dochang/elpa-clone.svg?branch=master)](https://travis-ci.org/dochang/elpa-clone)
 [![GitHub](https://img.shields.io/github/license/dochang/elpa-clone)](https://github.com/dochang/elpa-clone/blob/master/LICENSE)
 [![Say Thanks!](https://img.shields.io/badge/say-thanks-green)](https://saythanks.io/to/dochang)
 <!--

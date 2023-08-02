@@ -86,6 +86,8 @@ Here is a list of other variables you can set globally or per directory:
 * `ssh-deploy-revision-folder' - The folder used for storing local revisions *(string)*
 * `ssh-deploy-automatically-detect-remote-changes' - Enables automatic detection of remote changes *(integer)*
 * `ssh-deploy-on-explicit-save' - Enabled automatic uploads on save *(integer)*
+* `ssh-deploy-force-on-explicit-save' -- Enables forced uploads on explicit save actions *(integer)*
+* `ssh-deploy-run-script-on-explicit-save' - Enabled automatic running of the deployment script on save *(integer)*
 * `ssh-deploy-exclude-list' - A list defining what file names to exclude from deployment *(list)*
 * `ssh-deploy-async' - Enables asynchronous transfers (you need to have `(make-thread)` or `async.el` available as well) *(integer)*
 * `ssh-deploy-remote-sql-database' - Default database when connecting to remote SQL database *(string)*

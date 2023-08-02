@@ -3,17 +3,18 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/stklos.git
 
 Updating /mnt/store/melpa/working/geiser-stklos/
-Checking out 6ae96bfb96f47a75eb882d0d1dac938e4992e952
+Checking out 3358d0cc01436bd8f71a500175db2716e75b2eed
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-stklos/
-  to /tmp/geiser-stklosj2ie2q/geiser-stklos-20230504.1639
+  to /tmp/geiser-stklosLRduhb/geiser-stklos-20230707.237
     geiser-stklos.el -> geiser-stklos.el
-Created geiser-stklos-20230504.1639.tar containing:
-  geiser-stklos-20230504.1639/
-  geiser-stklos-20230504.1639/geiser-stklos-pkg.el
-  geiser-stklos-20230504.1639/geiser-stklos.el
-Built geiser-stklos in 4.528s, finished at 2023-06-28T03:52:01+0000
+    geiser.stk -> geiser.stk
+Created geiser-stklos-20230707.237.tar containing:
+  geiser-stklos-20230707.237/
+  geiser-stklos-20230707.237/geiser-stklos-pkg.el
+  geiser-stklos-20230707.237/geiser-stklos.el
+  geiser-stklos-20230707.237/geiser.stk
+Built geiser-stklos in 3.122s, finished at 2023-08-02T11:55:59+0000
  ✓ Success:
- 16K -rw-r--r-- 1 root root 15K Jun  9 16:00 packages/geiser-stklos-20230504.1639.el
-4.0K -rw-r--r-- 1 root root 504 Jun 28 03:52 packages/geiser-stklos-20230504.1639.entry
- 20K -rw-r--r-- 1 root root 20K Jun 28 03:52 packages/geiser-stklos-20230504.1639.tar
+4.0K -rw-r--r-- 1 root root 503 Aug  2 11:55 packages/geiser-stklos-20230707.237.entry
+ 40K -rw-r--r-- 1 root root 40K Aug  2 11:55 packages/geiser-stklos-20230707.237.tar

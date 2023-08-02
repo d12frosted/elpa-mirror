@@ -1,0 +1,22 @@
+Package: mess
+Fetcher: github
+Source:  https://github.com/Iacob/mess.el.git
+
+Updating /mnt/store/melpa/working/mess/
+Checking out 65392b0d0ded45de789d4deab28a4ce88de24567
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mess/
+  to /tmp/messSoBorC/mess-20230718.1533
+    mess-base.el -> mess-base.el
+    mess-config.el -> mess-config.el
+    mess.el -> mess.el
+Created mess-20230718.1533.tar containing:
+  mess-20230718.1533/
+  mess-20230718.1533/mess-base.el
+  mess-20230718.1533/mess-config.el
+  mess-20230718.1533/mess-pkg.el
+  mess-20230718.1533/mess.el
+Built mess in 3.002s, finished at 2023-08-02T09:11:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 376 Aug  2 09:11 packages/mess-20230718.1533.entry
+ 32K -rw-r--r-- 1 root root 30K Aug  2 09:11 packages/mess-20230718.1533.tar

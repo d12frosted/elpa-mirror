@@ -289,7 +289,8 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to the code or manual
-        Christopher League, Philip Kaludercic, Stefan Monnier.
+        Christopher League, Mehdi Khawari, Nicholas Vollmer, Philip
+        Kaludercic, Stefan Monnier.
 
 
 6 Also see

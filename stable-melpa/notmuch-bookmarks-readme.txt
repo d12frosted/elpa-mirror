@@ -13,4 +13,7 @@ your init file:
   :config
   (notmuch-bookmarks-mode))
 
-This package is NOT part of the official notmuch Emacs suite.
+There is experimental support for providing annotations which count
+the read and unread mails for the bookmarks. Currently, annotations
+do only work when the package `marginalia' is installed. Turn on
+this feature with `notmuch-bookmarks-annotation-mode'.

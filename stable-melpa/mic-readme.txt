@@ -1260,8 +1260,10 @@ _________________
 
     ,----
     | (mic-defmic mic-with-mode-hydra mic
-    |   :filters '(mic-filter-mode-hydra))
+    |   :filters '(mic-filter-mode-hydra
+    |              mic-filter-mode-hydra+))
     |
+    | ;;; `:mode-hydra'
     | (mic-with-mode-hydra package-name
     |   :mode-hydra
     |   (( c-mode (:title "C Mode" :quit-key "q")
@@ -1281,6 +1283,36 @@ _________________
     |   :eval
     |   ((major-mode-hydra-define c-mode
     |      (:title "C Mode" :quit-key "q")
+    |      ("Alphabet"
+    |       (("p" shrink-window "shrink")
+    |        ("n" enlarge-window "enlarge")
+    |        ("f" enlarge-window-horizontally "enlarge-horizontally")
+    |        ("b" shrink-window-horizontally "shrink-horizontally"))
+    |       "Arrow"
+    |       (("<down>" shrink-window "shrink-window")
+    |        ("<up>" enlarge-window "enlarge-window")
+    |        ("<right>" enlarge-window-horizontally "enlarge-window-horizontally")
+    |        ("<left>" shrink-window-horizontally "shrink-window-horizontally"))))))
+    |
+    | ;;;  `:mode-hydra+'
+    | (mic-with-mode-hydra package-name
+    |   :mode-hydra+
+    |   (( c-mode (:title "C Mode" :quit-key "q")
+    |      ("Alphabet"
+    |       (("p" shrink-window "shrink")
+    |        ("n" enlarge-window "enlarge")
+    |        ("f" enlarge-window-horizontally "enlarge-horizontally")
+    |        ("b" shrink-window-horizontally "shrink-horizontally"))
+    |       "Arrow"
+    |       (("<down>" shrink-window)
+    |        ("<up>" enlarge-window)
+    |        ("<right>" enlarge-window-horizontally)
+    |        ("<left>" shrink-window-horizontally))))))
+    |
+    | ;; Expanded to:
+    | (mic package-name :eval
+    |   ((major-mode-hydra-define+ c-mode
+    |      (:title "C Mode" :quit-key "q" :hint nil :color teal :separator "═")
     |      ("Alphabet"
     |       (("p" shrink-window "shrink")
     |        ("n" enlarge-window "enlarge")

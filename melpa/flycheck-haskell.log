@@ -3,18 +3,18 @@ Fetcher: github
 Source:  https://github.com/flycheck/flycheck-haskell.git
 
 Updating /mnt/store/melpa/working/flycheck-haskell/
-Checking out 50425a8b96fea84ea15940a4a07b184e43bb8e7a
+Checking out b7c4861aa754220b7d0cfc05aa0895bb35665683
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flycheck-haskell/
-  to /tmp/flycheck-haskell08RDWf/flycheck-haskell-20221111.59
+  to /tmp/flycheck-haskellLbVqyG/flycheck-haskell-20230706.1439
     flycheck-haskell.el -> flycheck-haskell.el
     get-cabal-configuration.hs -> get-cabal-configuration.hs
-Created flycheck-haskell-20221111.59.tar containing:
-  flycheck-haskell-20221111.59/
-  flycheck-haskell-20221111.59/flycheck-haskell-pkg.el
-  flycheck-haskell-20221111.59/flycheck-haskell.el
-  flycheck-haskell-20221111.59/get-cabal-configuration.hs
-Built flycheck-haskell in 4.531s, finished at 2023-06-28T03:48:14+0000
+Created flycheck-haskell-20230706.1439.tar containing:
+  flycheck-haskell-20230706.1439/
+  flycheck-haskell-20230706.1439/flycheck-haskell-pkg.el
+  flycheck-haskell-20230706.1439/flycheck-haskell.el
+  flycheck-haskell-20230706.1439/get-cabal-configuration.hs
+Built flycheck-haskell in 3.921s, finished at 2023-08-02T11:52:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 653 Jun 28 03:48 packages/flycheck-haskell-20221111.59.entry
- 60K -rw-r--r-- 1 root root 60K Jun 28 03:48 packages/flycheck-haskell-20221111.59.tar
+4.0K -rw-r--r-- 1 root root 655 Aug  2 11:52 packages/flycheck-haskell-20230706.1439.entry
+ 60K -rw-r--r-- 1 root root 60K Aug  2 11:52 packages/flycheck-haskell-20230706.1439.tar

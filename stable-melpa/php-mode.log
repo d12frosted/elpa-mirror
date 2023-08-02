@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-php/php-mode.git
 
 Updating /mnt/store/melpa/working/php-mode/
-Checking out 73d2dedb81cb210d8ba79d60af7918d52cc37bf7
+Checking out 38fd6ec205a02ccad6b3006afef0988e380adfa6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-modepSzOW2/php-mode-20230616.1919
+  to /tmp/php-modeZu1wH5/php-mode-20230730.1735
   ! lisp/php-align.el -> php-align.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-defs.el -> php-defs.el
@@ -20,23 +20,23 @@ Copying files (->) and directories (=>)
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
   ! lisp/php.el -> php.el
-Created php-mode-20230616.1919.tar containing:
-  php-mode-20230616.1919/
-  php-mode-20230616.1919/php-align.el
-  php-mode-20230616.1919/php-complete.el
-  php-mode-20230616.1919/php-defs.el
-  php-mode-20230616.1919/php-face.el
-  php-mode-20230616.1919/php-flymake.el
-  php-mode-20230616.1919/php-format.el
-  php-mode-20230616.1919/php-ide-phpactor.el
-  php-mode-20230616.1919/php-ide.el
-  php-mode-20230616.1919/php-local-manual.el
-  php-mode-20230616.1919/php-mode-debug.el
-  php-mode-20230616.1919/php-mode-pkg.el
-  php-mode-20230616.1919/php-mode.el
-  php-mode-20230616.1919/php-project.el
-  php-mode-20230616.1919/php.el
-Built php-mode in 6.811s, finished at 2023-06-28T01:03:45+0000
+Created php-mode-20230730.1735.tar containing:
+  php-mode-20230730.1735/
+  php-mode-20230730.1735/php-align.el
+  php-mode-20230730.1735/php-complete.el
+  php-mode-20230730.1735/php-defs.el
+  php-mode-20230730.1735/php-face.el
+  php-mode-20230730.1735/php-flymake.el
+  php-mode-20230730.1735/php-format.el
+  php-mode-20230730.1735/php-ide-phpactor.el
+  php-mode-20230730.1735/php-ide.el
+  php-mode-20230730.1735/php-local-manual.el
+  php-mode-20230730.1735/php-mode-debug.el
+  php-mode-20230730.1735/php-mode-pkg.el
+  php-mode-20230730.1735/php-mode.el
+  php-mode-20230730.1735/php-project.el
+  php-mode-20230730.1735/php.el
+Built php-mode in 3.602s, finished at 2023-08-02T09:23:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  416 Jun 28 01:03 packages/php-mode-20230616.1919.entry
-272K -rw-r--r-- 1 root root 270K Jun 28 01:03 packages/php-mode-20230616.1919.tar
+4.0K -rw-r--r-- 1 root root  416 Aug  2 09:23 packages/php-mode-20230730.1735.entry
+272K -rw-r--r-- 1 root root 270K Aug  2 09:23 packages/php-mode-20230730.1735.tar

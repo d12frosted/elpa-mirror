@@ -18,5 +18,26 @@ When prompted for the time, enter an integer number of minutes for the timer
 to count down from.  When prompted for the message, enter a short description
 of the timer for display and notification.
 
+you can fill in the `chronos-standard-timers' variable to use the
+`chronos-select-timer' command to quickly select a chrono.
+ex:
+(setq chronos-standard-timers
+      '("Green Tea (Short)            2/Green Tea: Remove tea bag"
+        "Green Tea (Medium)      0:2:30/Green Tea: Remove tea bag"
+        "Green Tea (Long)             3/Green Tea: Remove tea bag"
+        "Black Tea (Medium)           4/Black Tea: Remove tea bag"
+        "Black Tea (Long)             5/Black Tea: Remove tea bag"
+        "Herbal Tea                  10/Herbal Tea: Remove tea bag"
+        "Timebox                     25/Finish and Reflect + 5/Back to it"
+        "Break                       30/Back to it"
+        "Charge Phone                30/Unplug Phone"
+        "Charge Tablet               60/Unplug Tablet"
+        "Charge Headphones           15/Unplug Headphones"
+        "Charge Battery             120/Unplug Battery"
+        "Class: Very Short            1/End"
+        "Class: Short                 5/End"
+        "Class: Medium               10/End"
+        "Class: Long                 15/End"))
+
 For more details, including more sophisticated time specifications and
 notification options, see the info manual or website.

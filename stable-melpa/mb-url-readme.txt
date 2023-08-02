@@ -2,8 +2,6 @@
 [![MELPA](http://melpa.org/packages/mb-url-badge.svg)](http://melpa.org/#/mb-url)
 [![MELPA Stable](http://stable.melpa.org/packages/mb-url-badge.svg)](http://stable.melpa.org/#/mb-url)
 [![CI](https://github.com/dochang/mb-url/actions/workflows/ci.yml/badge.svg)](https://github.com/dochang/mb-url/actions/workflows/ci.yml)
-[![Build Status](https://cloud.drone.io/api/badges/dochang/mb-url/status.svg)](https://cloud.drone.io/dochang/mb-url)
-[![Build Status](https://travis-ci.org/dochang/mb-url.svg?branch=master)](https://travis-ci.org/dochang/mb-url)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/dochang/mb-url.svg)](http://isitmaintained.com/project/dochang/mb-url "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/dochang/mb-url.svg)](http://isitmaintained.com/project/dochang/mb-url "Percentage of issues still open")
 [![Issues](https://img.shields.io/github/issues/dochang/mb-url.svg)](https://github.com/dochang/mb-url)

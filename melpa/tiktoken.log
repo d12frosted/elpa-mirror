@@ -1,0 +1,18 @@
+Package: tiktoken
+Fetcher: github
+Source:  https://github.com/zkry/tiktoken.el.git
+
+Updating /mnt/store/melpa/working/tiktoken/
+Checking out 957ece897933460d532057fe60cfddcd9e49d8b5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tiktoken/
+  to /tmp/tiktokenXYZ1wt/tiktoken-20230719.129
+    tiktoken.el -> tiktoken.el
+Created tiktoken-20230719.129.tar containing:
+  tiktoken-20230719.129/
+  tiktoken-20230719.129/tiktoken-pkg.el
+  tiktoken-20230719.129/tiktoken.el
+Built tiktoken in 4.908s, finished at 2023-08-02T09:37:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 371 Aug  2 09:37 packages/tiktoken-20230719.129.entry
+ 32K -rw-r--r-- 1 root root 30K Aug  2 09:37 packages/tiktoken-20230719.129.tar

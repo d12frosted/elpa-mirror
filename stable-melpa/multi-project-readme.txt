@@ -23,7 +23,7 @@ C-x p f - Find project files        Interactively find project files
 C-x p n - Add a new project         Prompts for new project information
 C-x p r - Go to project root        Visits the project root
 C-x p s - Project shell             Creates a project shell
-C-x p S - Project shell             Creates a project shell at the root
+C-x p S - Project root shell        Creates a project shell at the root
 C-x p u - Resets the anchor         Unsets the project anchor
 C-x p v - Visit a project           Visits another project in a separate frame
 

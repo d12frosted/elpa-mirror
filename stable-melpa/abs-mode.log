@@ -3,34 +3,33 @@ Fetcher: github
 Source:  https://github.com/abstools/abs-mode.git
 
 Updating /mnt/store/melpa/working/abs-mode/
-Checking out cf3b8e1887adb2a9c0abd90d8b42af466d478608
+Checking out bf21971bf57100e9e1ac26563207b35b377ec057
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/abs-mode/
-  to /tmp/abs-modeNvreEA/abs-mode-20230603.1054
+  to /tmp/abs-modeCo7Cnl/abs-mode-20230705.1437
     abs-mode.el -> abs-mode.el
     snippets => snippets
-Created abs-mode-20230603.1054.tar containing:
-  abs-mode-20230603.1054/
-  abs-mode-20230603.1054/abs-mode-pkg.el
-  abs-mode-20230603.1054/abs-mode.el
-  abs-mode-20230603.1054/snippets/
-  abs-mode-20230603.1054/snippets/abs-mode/
-  abs-mode-20230603.1054/snippets/abs-mode/case
-  abs-mode-20230603.1054/snippets/abs-mode/class
-  abs-mode-20230603.1054/snippets/abs-mode/data
-  abs-mode-20230603.1054/snippets/abs-mode/def
-  abs-mode-20230603.1054/snippets/abs-mode/exception
-  abs-mode-20230603.1054/snippets/abs-mode/foreach
-  abs-mode-20230603.1054/snippets/abs-mode/interface
-  abs-mode-20230603.1054/snippets/abs-mode/let
-  abs-mode-20230603.1054/snippets/abs-mode/module
-  abs-mode-20230603.1054/snippets/abs-mode/recover
-  abs-mode-20230603.1054/snippets/abs-mode/switch
-  abs-mode-20230603.1054/snippets/abs-mode/try
-  abs-mode-20230603.1054/snippets/abs-mode/type
-  abs-mode-20230603.1054/snippets/abs-mode/while
-Built abs-mode in 4.575s, finished at 2023-06-28T03:20:16+0000
+Created abs-mode-20230705.1437.tar containing:
+  abs-mode-20230705.1437/
+  abs-mode-20230705.1437/abs-mode-pkg.el
+  abs-mode-20230705.1437/abs-mode.el
+  abs-mode-20230705.1437/snippets/
+  abs-mode-20230705.1437/snippets/abs-mode/
+  abs-mode-20230705.1437/snippets/abs-mode/case
+  abs-mode-20230705.1437/snippets/abs-mode/class
+  abs-mode-20230705.1437/snippets/abs-mode/data
+  abs-mode-20230705.1437/snippets/abs-mode/def
+  abs-mode-20230705.1437/snippets/abs-mode/exception
+  abs-mode-20230705.1437/snippets/abs-mode/foreach
+  abs-mode-20230705.1437/snippets/abs-mode/interface
+  abs-mode-20230705.1437/snippets/abs-mode/let
+  abs-mode-20230705.1437/snippets/abs-mode/module
+  abs-mode-20230705.1437/snippets/abs-mode/recover
+  abs-mode-20230705.1437/snippets/abs-mode/switch
+  abs-mode-20230705.1437/snippets/abs-mode/try
+  abs-mode-20230705.1437/snippets/abs-mode/type
+  abs-mode-20230705.1437/snippets/abs-mode/while
+Built abs-mode in 2.954s, finished at 2023-08-02T11:28:39+0000
  ✓ Success:
- 40K -rw-r--r-- 1 root root 37K Apr  2 16:34 packages/abs-mode-20230402.1422.el
-4.0K -rw-r--r-- 1 root root 558 Jun 28 03:20 packages/abs-mode-20230603.1054.entry
- 60K -rw-r--r-- 1 root root 60K Jun 28 03:20 packages/abs-mode-20230603.1054.tar
+4.0K -rw-r--r-- 1 root root 558 Aug  2 11:28 packages/abs-mode-20230705.1437.entry
+ 60K -rw-r--r-- 1 root root 60K Aug  2 11:28 packages/abs-mode-20230705.1437.tar

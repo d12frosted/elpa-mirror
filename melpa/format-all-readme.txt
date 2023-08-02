@@ -51,6 +51,7 @@ Supported languages:
 - Ledger (ledger-mode)
 - Lua (lua-fmt, stylua, prettier plugin)
 - Markdown (prettier, prettierd, deno)
+- Meson (muon fmt)
 - Nginx (nginxfmt)
 - Nix (nixpkgs-fmt, nixfmt, alejandra)
 - OCaml (ocp-indent, ocamlformat)

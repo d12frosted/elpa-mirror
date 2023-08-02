@@ -172,6 +172,9 @@ on-the-fly help.
    delimiter are inserted pairwise by configuring the variable
    `cdlatex-paired-parens'.
 
+   If the region is active when you press $, the region will be
+   bracketed by a pair of $ characters.
+
    Also, the keys `_' and `^' will insert "_{}" and "^{}",
    respectively, and, if necessary, also a pair of dollar signs to
    switch to math mode.  You can use TAB to exit paired parenthesis.

@@ -3,17 +3,18 @@ Fetcher: git
 Source:  https://repo.or.cz/org-contacts.git
 
 Updating /mnt/store/melpa/working/org-contacts/
-Checking out ae45b9413e24abdc431d12858dced54e0dee6e39
+Checking out 7f03eafaad2e5746949c0bebb98353e939c51ade
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-contacts/
-  to /tmp/org-contactsmrt0de/org-contacts-20230227.1417
+  to /tmp/org-contactscOzQJQ/org-contacts-20230721.151
     org-contacts.el -> org-contacts.el
-Created org-contacts-20230227.1417.tar containing:
-  org-contacts-20230227.1417/
-  org-contacts-20230227.1417/org-contacts-pkg.el
-  org-contacts-20230227.1417/org-contacts.el
-Built org-contacts in 4.502s, finished at 2023-06-28T00:57:15+0000
+    test-org-contacts.el -> test-org-contacts.el
+Created org-contacts-20230721.151.tar containing:
+  org-contacts-20230721.151/
+  org-contacts-20230721.151/org-contacts-pkg.el
+  org-contacts-20230721.151/org-contacts.el
+  org-contacts-20230721.151/test-org-contacts.el
+Built org-contacts in 4.248s, finished at 2023-08-02T09:17:50+0000
  ✓ Success:
- 60K -rw-r--r-- 1 root root 59K Jun  9 16:31 packages/org-contacts-20230227.1417.el
-4.0K -rw-r--r-- 1 root root 499 Jun 28 00:57 packages/org-contacts-20230227.1417.entry
- 72K -rw-r--r-- 1 root root 70K Jun 28 00:57 packages/org-contacts-20230227.1417.tar
+4.0K -rw-r--r-- 1 root root 498 Aug  2 09:17 packages/org-contacts-20230721.151.entry
+ 72K -rw-r--r-- 1 root root 70K Aug  2 09:17 packages/org-contacts-20230721.151.tar

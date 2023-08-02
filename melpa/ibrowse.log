@@ -3,24 +3,30 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ngraves/ibrowse.el
 
 Updating /mnt/store/melpa/working/ibrowse/
-Checking out b42685528d7bb2ca968fbf536d8745838e633828
+Checking out ed345cf0c4bd617caf8377dcf6472a4ebd68abd8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ibrowse/
-  to /tmp/ibrowseL4dpzF/ibrowse-20230123.737
+  to /tmp/ibrowseQ58a1I/ibrowse-20230720.715
+    ibrowse-bookmark-chromium.el -> ibrowse-bookmark-chromium.el
+    ibrowse-bookmark-firefox.el -> ibrowse-bookmark-firefox.el
     ibrowse-bookmark.el -> ibrowse-bookmark.el
     ibrowse-core.el -> ibrowse-core.el
     ibrowse-history.el -> ibrowse-history.el
+    ibrowse-sql.el -> ibrowse-sql.el
     ibrowse-tab.el -> ibrowse-tab.el
     ibrowse.el -> ibrowse.el
-Created ibrowse-20230123.737.tar containing:
-  ibrowse-20230123.737/
-  ibrowse-20230123.737/ibrowse-bookmark.el
-  ibrowse-20230123.737/ibrowse-core.el
-  ibrowse-20230123.737/ibrowse-history.el
-  ibrowse-20230123.737/ibrowse-pkg.el
-  ibrowse-20230123.737/ibrowse-tab.el
-  ibrowse-20230123.737/ibrowse.el
-Built ibrowse in 5.736s, finished at 2023-06-28T04:00:44+0000
+Created ibrowse-20230720.715.tar containing:
+  ibrowse-20230720.715/
+  ibrowse-20230720.715/ibrowse-bookmark-chromium.el
+  ibrowse-20230720.715/ibrowse-bookmark-firefox.el
+  ibrowse-20230720.715/ibrowse-bookmark.el
+  ibrowse-20230720.715/ibrowse-core.el
+  ibrowse-20230720.715/ibrowse-history.el
+  ibrowse-20230720.715/ibrowse-pkg.el
+  ibrowse-20230720.715/ibrowse-sql.el
+  ibrowse-20230720.715/ibrowse-tab.el
+  ibrowse-20230720.715/ibrowse.el
+Built ibrowse in 6.305s, finished at 2023-08-02T12:03:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 437 Jun 28 04:00 packages/ibrowse-20230123.737.entry
- 40K -rw-r--r-- 1 root root 40K Jun 28 04:00 packages/ibrowse-20230123.737.tar
+4.0K -rw-r--r-- 1 root root 437 Aug  2 12:03 packages/ibrowse-20230720.715.entry
+ 60K -rw-r--r-- 1 root root 60K Aug  2 12:03 packages/ibrowse-20230720.715.tar

@@ -3,26 +3,30 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sadiq/dwim-coder-mode.git
 
 Updating /mnt/store/melpa/working/dwim-coder-mode/
-Checking out 498c28d6d74cd347352001b4f56715e7170fb473
+Checking out 271d9c06ecdfadf19e0eaa788c8b90626090d4c1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dwim-coder-mode/
-  to /tmp/dwim-coder-modecz0pDt/dwim-coder-mode-20230625.244
+  to /tmp/dwim-coder-modeEvrx8d/dwim-coder-mode-20230801.403
     dwim-coder-c.el -> dwim-coder-c.el
     dwim-coder-common.el -> dwim-coder-common.el
     dwim-coder-default.el -> dwim-coder-default.el
+    dwim-coder-lisp.el -> dwim-coder-lisp.el
     dwim-coder-mode.el -> dwim-coder-mode.el
     dwim-coder-python.el -> dwim-coder-python.el
     dwim-coder-rust.el -> dwim-coder-rust.el
-Created dwim-coder-mode-20230625.244.tar containing:
-  dwim-coder-mode-20230625.244/
-  dwim-coder-mode-20230625.244/dwim-coder-c.el
-  dwim-coder-mode-20230625.244/dwim-coder-common.el
-  dwim-coder-mode-20230625.244/dwim-coder-default.el
-  dwim-coder-mode-20230625.244/dwim-coder-mode-pkg.el
-  dwim-coder-mode-20230625.244/dwim-coder-mode.el
-  dwim-coder-mode-20230625.244/dwim-coder-python.el
-  dwim-coder-mode-20230625.244/dwim-coder-rust.el
-Built dwim-coder-mode in 3.426s, finished at 2023-06-28T03:38:25+0000
+    dwim-coder-xml.el -> dwim-coder-xml.el
+Created dwim-coder-mode-20230801.403.tar containing:
+  dwim-coder-mode-20230801.403/
+  dwim-coder-mode-20230801.403/dwim-coder-c.el
+  dwim-coder-mode-20230801.403/dwim-coder-common.el
+  dwim-coder-mode-20230801.403/dwim-coder-default.el
+  dwim-coder-mode-20230801.403/dwim-coder-lisp.el
+  dwim-coder-mode-20230801.403/dwim-coder-mode-pkg.el
+  dwim-coder-mode-20230801.403/dwim-coder-mode.el
+  dwim-coder-mode-20230801.403/dwim-coder-python.el
+  dwim-coder-mode-20230801.403/dwim-coder-rust.el
+  dwim-coder-mode-20230801.403/dwim-coder-xml.el
+Built dwim-coder-mode in 3.244s, finished at 2023-08-02T11:44:23+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 476 Jun 28 03:38 packages/dwim-coder-mode-20230625.244.entry
- 80K -rw-r--r-- 1 root root 80K Jun 28 03:38 packages/dwim-coder-mode-20230625.244.tar
+4.0K -rw-r--r-- 1 root root 476 Aug  2 11:44 packages/dwim-coder-mode-20230801.403.entry
+ 80K -rw-r--r-- 1 root root 80K Aug  2 11:44 packages/dwim-coder-mode-20230801.403.tar

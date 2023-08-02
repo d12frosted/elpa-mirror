@@ -10,6 +10,7 @@ skip-syntax-forward and skip-syntax-backward.
 
    - Usage
    - Installation
+   - Configuration
    - What the diagnostics mean
    - Suppressing diagnostics
    - How it works
@@ -55,6 +56,17 @@ skip-syntax-forward and skip-syntax-backward.
 
   Relint requires the package xr (https://elpa.gnu.org/packages/xr.html);
   it will be installed automatically.
+
+
+* Configuration
+
+  No configuration is required.
+
+  There is a single user option, 'relint-xr-checks'.
+  If set to 'all', it enables more thorough checks that detect more
+  errors and performance problems but may also produce more false
+  warnings. The default value is 'nil', limiting warnings to ones that
+  are likely to be accurate.
 
 
 * What the diagnostics mean
@@ -118,10 +130,44 @@ skip-syntax-forward and skip-syntax-backward.
     consecutive character codes. This is often caused by a misplaced
     hyphen.
 
+  - Range 'A-z' between upper and lower case includes symbols
+
+    A range spans over upper and lower case letters, which also
+    includes some symbols. This is probably unintentional. To cover
+    both upper and lower case letters, use separate ranges, as in
+    [A-Za-z].
+
+  - Suspect character range '+-X': should '-' be literal?
+
+    A range has + as one of its endpoints, which could mean that the
+    hyphen was actually intended to be literal in order to match both
+    + and -.
+    This check is only enable when relint-xr-checks = all.
+
+  - Possibly erroneous '\X' in character alternative
+
+    A character alternative includes something that looks like a
+    escape sequence, but no escape sequences are allowed there since
+    backslash is not a special character in that context.
+    It could also be a caused by too many backslashes.
+
+    For example, "[\\n\\t]" matches the characters 'n', 't' and
+    backslash, but could be an attempt to match newline and tab.
+    This check is only enable when relint-xr-checks = all.
+
   - Duplicated character class '[:class:]'
 
     A character class occurs twice in a single character alternative
     or skip set.
+
+  - Or-pattern more efficiently expressed as character alternative
+
+    When an or-pattern can be written as a character alternative, it
+    becomes more efficient and reduces regexp stack usage.
+    For example, a\|b is better written [ab], and \s-\|\sw is usually
+    better written [[:space:][:word:]]. (There is a subtle difference
+    in how syntax properties are handled but it rarely matters.)
+    This check is only enable when relint-xr-checks = all.
 
   - Duplicated alternative branch
 
@@ -226,6 +272,24 @@ skip-syntax-forward and skip-syntax-backward.
 
     In general, A?, where A matches the empty string, can be
     simplified to just A.
+
+  - Repetition of effective repetition
+
+    A repetition construct is applied to an expression that itself
+    contains a repetition, in addition to some patterns that may match
+    the empty string. This can lead to bad matching performance.
+
+    Example: \(?:a*b+\)* is equivalent to the much faster \(?:a\|b\)* .
+
+    Another example: \(?:a*b+\)+ is better written a*b[ab]* .
+
+    This check is only enable when relint-xr-checks = all.
+
+  - Possibly mistyped ':?' at start of group
+
+    A group starts as \(:? which makes it likely that it was really
+    meant to be \(?: -- ie, a non-capturing group.
+    This check is only enable when relint-xr-checks = all.
 
   - Unnecessarily escaped 'X'
 

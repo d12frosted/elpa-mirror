@@ -8,12 +8,14 @@ Emacs interface for managing hyperdrives.
 
 hyperdrive.el requires Emacs version 27.1 or later.
 
-hyperdrive.el~ is available on
-[[https://melpa.org/#/getting-started][MELPA]]. Once you've set up
-MELPA, you can run ~M-x package-install RET hyperdrive RET~.
+hyperdrive.el is available on MELPA:
+https://melpa.org/#/getting-started
 
-~hyperdrive.el~ relies on
-hyper-gateway (https://github.com/RangerMauve/hyper-gateway/) for
-talking to the hypercore network. Installation instructions:
+Once you've set up MELPA, run
+M-x package-install RET hyperdrive RET
 
+hyperdrive.el relies on hyper-gateway for connecting to the P2P network:
+https://github.com/RangerMauve/hyper-gateway
+
+Installation instructions:
 https://github.com/RangerMauve/hyper-gateway#how-do-i-install-hyper-gateway

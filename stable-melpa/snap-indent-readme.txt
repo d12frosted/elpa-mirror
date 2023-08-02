@@ -10,7 +10,14 @@ features:
 - When indenting, additionally format text, e.g. tabify, untabify, remove
   trailing whitespace, etc (optional)
 - Prevent minor mode activation in certain major modes (optional)
+- Skip indentation systematically by maximum text length or according to any
+  user-defined predicate (optional)
+- Skip indentation for a single operation using an argument prefix (optional)
 
 Snap-indent's additional formatting behavior is very flexible. Any function
 that operates on a region may be used, and multiple functions may be
 specified.
+
+Snap-indent can be configured to skip indentation with equal flexibility.
+Any predicate function can be set control this behavior systematically, and
+indentation may be suppressed for a single operation with key input.

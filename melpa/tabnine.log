@@ -1,0 +1,28 @@
+Package: tabnine
+Fetcher: github
+Source:  https://github.com/shuxiao9058/tabnine.git
+
+Updating /mnt/store/melpa/working/tabnine/
+Checking out ea7a6caea7061df61fbd03f9bc9ed4974cf4a1f9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tabnine/
+  to /tmp/tabninePOzYY9/tabnine-20230801.219
+    tabnine-chat-curl.el -> tabnine-chat-curl.el
+    tabnine-chat-transient.el -> tabnine-chat-transient.el
+    tabnine-chat.el -> tabnine-chat.el
+    tabnine-core.el -> tabnine-core.el
+    tabnine-util.el -> tabnine-util.el
+    tabnine.el -> tabnine.el
+Created tabnine-20230801.219.tar containing:
+  tabnine-20230801.219/
+  tabnine-20230801.219/tabnine-chat-curl.el
+  tabnine-20230801.219/tabnine-chat-transient.el
+  tabnine-20230801.219/tabnine-chat.el
+  tabnine-20230801.219/tabnine-core.el
+  tabnine-20230801.219/tabnine-pkg.el
+  tabnine-20230801.219/tabnine-util.el
+  tabnine-20230801.219/tabnine.el
+Built tabnine in 2.897s, finished at 2023-08-02T09:36:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  697 Aug  2 09:36 packages/tabnine-20230801.219.entry
+120K -rw-r--r-- 1 root root 120K Aug  2 09:36 packages/tabnine-20230801.219.tar

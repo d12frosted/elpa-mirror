@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/roadrunner1776/magik.git
 
 Updating /mnt/store/melpa/working/magik-mode/
-Checking out d59e9212e44f62b40c4323ca8bbe53ea09cd00d0
+Checking out 545232bde1f8f9c6b74a7a31d9e1620d23979a9a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magik-mode/
-  to /tmp/magik-modeFXo6dF/magik-mode-20230623.1236
+  to /tmp/magik-modey9M1gb/magik-mode-20230727.813
     magik-aliases.el -> magik-aliases.el
     magik-cb-ac.el -> magik-cb-ac.el
     magik-cb.el -> magik-cb.el
@@ -25,32 +25,34 @@ Copying files (->) and directories (=>)
     magik-session-filter.el -> magik-session-filter.el
     magik-session.el -> magik-session.el
     magik-template.el -> magik-template.el
+    magik-treesit.el -> magik-treesit.el
     magik-utils.el -> magik-utils.el
     magik-version.el -> magik-version.el
-Created magik-mode-20230623.1236.tar containing:
-  magik-mode-20230623.1236/
-  magik-mode-20230623.1236/magik-aliases.el
-  magik-mode-20230623.1236/magik-cb-ac.el
-  magik-mode-20230623.1236/magik-cb.el
-  magik-mode-20230623.1236/magik-electric.el
-  magik-mode-20230623.1236/magik-indent.el
-  magik-mode-20230623.1236/magik-keys.el
-  magik-mode-20230623.1236/magik-lint.el
-  magik-mode-20230623.1236/magik-loadlist.el
-  magik-mode-20230623.1236/magik-menu.el
-  magik-mode-20230623.1236/magik-mode-pkg.el
-  magik-mode-20230623.1236/magik-mode.el
-  magik-mode-20230623.1236/magik-module.el
-  magik-mode-20230623.1236/magik-msg.el
-  magik-mode-20230623.1236/magik-pragma.el
-  magik-mode-20230623.1236/magik-product.el
-  magik-mode-20230623.1236/magik-session-extras.el
-  magik-mode-20230623.1236/magik-session-filter.el
-  magik-mode-20230623.1236/magik-session.el
-  magik-mode-20230623.1236/magik-template.el
-  magik-mode-20230623.1236/magik-utils.el
-  magik-mode-20230623.1236/magik-version.el
-Built magik-mode in 6.495s, finished at 2023-06-28T04:10:15+0000
+Created magik-mode-20230727.813.tar containing:
+  magik-mode-20230727.813/
+  magik-mode-20230727.813/magik-aliases.el
+  magik-mode-20230727.813/magik-cb-ac.el
+  magik-mode-20230727.813/magik-cb.el
+  magik-mode-20230727.813/magik-electric.el
+  magik-mode-20230727.813/magik-indent.el
+  magik-mode-20230727.813/magik-keys.el
+  magik-mode-20230727.813/magik-lint.el
+  magik-mode-20230727.813/magik-loadlist.el
+  magik-mode-20230727.813/magik-menu.el
+  magik-mode-20230727.813/magik-mode-pkg.el
+  magik-mode-20230727.813/magik-mode.el
+  magik-mode-20230727.813/magik-module.el
+  magik-mode-20230727.813/magik-msg.el
+  magik-mode-20230727.813/magik-pragma.el
+  magik-mode-20230727.813/magik-product.el
+  magik-mode-20230727.813/magik-session-extras.el
+  magik-mode-20230727.813/magik-session-filter.el
+  magik-mode-20230727.813/magik-session.el
+  magik-mode-20230727.813/magik-template.el
+  magik-mode-20230727.813/magik-treesit.el
+  magik-mode-20230727.813/magik-utils.el
+  magik-mode-20230727.813/magik-version.el
+Built magik-mode in 8.189s, finished at 2023-08-02T09:09:56+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  242 Jun 28 04:10 packages/magik-mode-20230623.1236.entry
-460K -rw-r--r-- 1 root root 460K Jun 28 04:10 packages/magik-mode-20230623.1236.tar
+4.0K -rw-r--r-- 1 root root  268 Aug  2 09:09 packages/magik-mode-20230727.813.entry
+452K -rw-r--r-- 1 root root 450K Aug  2 09:09 packages/magik-mode-20230727.813.tar

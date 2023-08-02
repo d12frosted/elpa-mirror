@@ -714,7 +714,7 @@
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
 	     (:commit . "db8a3e3aef31d35ce5bd1fd09127a3bbfdd0c340"))])
  (cursory .
-	  [(1 0 0)
+	  [(1 0 1)
 	   ((emacs
 	     (27 1)))
 	   "Manage cursor styles using presets" tar
@@ -723,7 +723,7 @@
 	    (:maintainer "Cursory Development" . "~protesilaos/cursory@lists.sr.ht")
 	    (:authors
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	    (:commit . "12cd2b22913ddacf3cab54b0d6dd97d633f72e43"))])
+	    (:commit . "a91da4edc07df0bc17056d9a673287082a3c6b26"))])
  (cycle-quotes .
 	       [(0 1)
 		nil "Cycle between quote styles" tar
@@ -3054,9 +3054,9 @@
 		   ("Bastien Guerry" . "bzg@gnu.org"))
 		  (:maintainer "Bastien Guerry" . "bzg@gnu.org"))])
  (relint .
-	 [(1 22)
+	 [(1 23)
 	  ((xr
-	    (1 22))
+	    (1 24))
 	   (emacs
 	    (26 1)))
 	  "Elisp regexp mistake finder" tar
@@ -3065,7 +3065,7 @@
 	   (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
 	   (:authors
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
-	   (:commit . "011f4f10ee65fb698d4caf3c72ba8ee6b98e3de5"))])
+	   (:commit . "380754be9c288ee0baeb40c2a4773737f8aebcd9"))])
  (repology .
 	   [(1 2 3)
 	    ((emacs
