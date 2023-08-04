@@ -2,6 +2,7 @@
 [![MELPA](http://melpa.org/packages/mb-url-badge.svg)](http://melpa.org/#/mb-url)
 [![MELPA Stable](http://stable.melpa.org/packages/mb-url-badge.svg)](http://stable.melpa.org/#/mb-url)
 [![CI](https://github.com/dochang/mb-url/actions/workflows/ci.yml/badge.svg)](https://github.com/dochang/mb-url/actions/workflows/ci.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/dochang/mb-url/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/dochang/mb-url/tree/master)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/dochang/mb-url.svg)](http://isitmaintained.com/project/dochang/mb-url "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/dochang/mb-url.svg)](http://isitmaintained.com/project/dochang/mb-url "Percentage of issues still open")
 [![Issues](https://img.shields.io/github/issues/dochang/mb-url.svg)](https://github.com/dochang/mb-url)

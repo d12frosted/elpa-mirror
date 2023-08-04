@@ -2,6 +2,7 @@
 [![MELPA](http://melpa.org/packages/elpa-clone-badge.svg)](http://melpa.org/#/elpa-clone)
 [![MELPA Stable](http://stable.melpa.org/packages/elpa-clone-badge.svg)](http://stable.melpa.org/#/elpa-clone)
 [![CI](https://github.com/dochang/elpa-clone/actions/workflows/ci.yml/badge.svg)](https://github.com/dochang/elpa-clone/actions/workflows/ci.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/dochang/elpa-clone/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/dochang/elpa-clone/tree/master)
 [![GitHub](https://img.shields.io/github/license/dochang/elpa-clone)](https://github.com/dochang/elpa-clone/blob/master/LICENSE)
 [![Say Thanks!](https://img.shields.io/badge/say-thanks-green)](https://saythanks.io/to/dochang)
 <!--
