@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/cider.git
 
 Updating /mnt/store/melpa/working/cider/
-Checking out b217386ec2f45a4e967a8039b29cc68758b5409e
+Checking out 1c5834aeff34b3cdd27725c51d328243862d6390
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cider/
-  to /tmp/ciderXugkip/cider-20230802.1233
+  to /tmp/ciderSHQEs1/cider-20230803.1959
     cider-apropos.el -> cider-apropos.el
     cider-browse-ns.el -> cider-browse-ns.el
     cider-browse-spec.el -> cider-browse-spec.el
@@ -45,48 +45,48 @@ Copying files (->) and directories (=>)
     cider.el -> cider.el
     nrepl-client.el -> nrepl-client.el
     nrepl-dict.el -> nrepl-dict.el
-Created cider-20230802.1233.tar containing:
-  cider-20230802.1233/
-  cider-20230802.1233/cider-apropos.el
-  cider-20230802.1233/cider-browse-ns.el
-  cider-20230802.1233/cider-browse-spec.el
-  cider-20230802.1233/cider-cheatsheet.el
-  cider-20230802.1233/cider-classpath.el
-  cider-20230802.1233/cider-client.el
-  cider-20230802.1233/cider-clojuredocs.el
-  cider-20230802.1233/cider-common.el
-  cider-20230802.1233/cider-completion.el
-  cider-20230802.1233/cider-connection.el
-  cider-20230802.1233/cider-debug.el
-  cider-20230802.1233/cider-doc.el
-  cider-20230802.1233/cider-eldoc.el
-  cider-20230802.1233/cider-eval.el
-  cider-20230802.1233/cider-find.el
-  cider-20230802.1233/cider-format.el
-  cider-20230802.1233/cider-inspector.el
-  cider-20230802.1233/cider-jar.el
-  cider-20230802.1233/cider-log.el
-  cider-20230802.1233/cider-macroexpansion.el
-  cider-20230802.1233/cider-mode.el
-  cider-20230802.1233/cider-ns.el
-  cider-20230802.1233/cider-overlays.el
-  cider-20230802.1233/cider-pkg.el
-  cider-20230802.1233/cider-popup.el
-  cider-20230802.1233/cider-profile.el
-  cider-20230802.1233/cider-repl-history.el
-  cider-20230802.1233/cider-repl.el
-  cider-20230802.1233/cider-resolve.el
-  cider-20230802.1233/cider-scratch.el
-  cider-20230802.1233/cider-selector.el
-  cider-20230802.1233/cider-stacktrace.el
-  cider-20230802.1233/cider-test.el
-  cider-20230802.1233/cider-tracing.el
-  cider-20230802.1233/cider-util.el
-  cider-20230802.1233/cider-xref.el
-  cider-20230802.1233/cider.el
-  cider-20230802.1233/nrepl-client.el
-  cider-20230802.1233/nrepl-dict.el
-Built cider in 4.296s, finished at 2023-08-03T18:16:07+0000
+Created cider-20230803.1959.tar containing:
+  cider-20230803.1959/
+  cider-20230803.1959/cider-apropos.el
+  cider-20230803.1959/cider-browse-ns.el
+  cider-20230803.1959/cider-browse-spec.el
+  cider-20230803.1959/cider-cheatsheet.el
+  cider-20230803.1959/cider-classpath.el
+  cider-20230803.1959/cider-client.el
+  cider-20230803.1959/cider-clojuredocs.el
+  cider-20230803.1959/cider-common.el
+  cider-20230803.1959/cider-completion.el
+  cider-20230803.1959/cider-connection.el
+  cider-20230803.1959/cider-debug.el
+  cider-20230803.1959/cider-doc.el
+  cider-20230803.1959/cider-eldoc.el
+  cider-20230803.1959/cider-eval.el
+  cider-20230803.1959/cider-find.el
+  cider-20230803.1959/cider-format.el
+  cider-20230803.1959/cider-inspector.el
+  cider-20230803.1959/cider-jar.el
+  cider-20230803.1959/cider-log.el
+  cider-20230803.1959/cider-macroexpansion.el
+  cider-20230803.1959/cider-mode.el
+  cider-20230803.1959/cider-ns.el
+  cider-20230803.1959/cider-overlays.el
+  cider-20230803.1959/cider-pkg.el
+  cider-20230803.1959/cider-popup.el
+  cider-20230803.1959/cider-profile.el
+  cider-20230803.1959/cider-repl-history.el
+  cider-20230803.1959/cider-repl.el
+  cider-20230803.1959/cider-resolve.el
+  cider-20230803.1959/cider-scratch.el
+  cider-20230803.1959/cider-selector.el
+  cider-20230803.1959/cider-stacktrace.el
+  cider-20230803.1959/cider-test.el
+  cider-20230803.1959/cider-tracing.el
+  cider-20230803.1959/cider-util.el
+  cider-20230803.1959/cider-xref.el
+  cider-20230803.1959/cider.el
+  cider-20230803.1959/nrepl-client.el
+  cider-20230803.1959/nrepl-dict.el
+Built cider in 4.176s, finished at 2023-08-04T03:26:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  840 Aug  3 18:16 packages/cider-20230802.1233.entry
-980K -rw-r--r-- 1 root root 980K Aug  3 18:16 packages/cider-20230802.1233.tar
+4.0K -rw-r--r-- 1 root root  840 Aug  4 03:26 packages/cider-20230803.1959.entry
+980K -rw-r--r-- 1 root root 980K Aug  4 03:26 packages/cider-20230803.1959.tar
