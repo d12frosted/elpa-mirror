@@ -3531,14 +3531,15 @@
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		 (:commit . "112970f8d2355c0cfa0269bb92cd1ecc18790bc9"))])
  (system-packages .
-		  [(1 0 11)
+		  [(1 0 12)
 		   ((emacs
 		     (24 3)))
 		   "functions to manage system packages" tar
 		   ((:url . "https://gitlab.com/jabranham/system-packages")
 		    (:maintainer "J. Alexander Branham" . "alex.branham@gmail.com")
 		    (:authors
-		     ("J. Alexander Branham" . "alex.branham@gmail.com")))])
+		     ("J. Alexander Branham" . "alex.branham@gmail.com"))
+		    (:commit . "14b2cc3d54cc26692fb4a71ae4befee1f0b15e1b"))])
  (tNFA .
        [(0 1 1)
 	((queue
