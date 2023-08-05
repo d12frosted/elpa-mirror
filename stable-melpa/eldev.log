@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Checking out 2ed92f49d833be17e850f5fdb29b06763b9eb437
+Checking out 6fc93733b65a4455a479549690f37ee993efab1e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevtSBoUq/eldev-20230804.1838
+  to /tmp/eldevl7YptF/eldev-20230805.1048
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctor.el -> eldev-doctor.el
@@ -19,23 +19,23 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20230804.1838.tar containing:
-  eldev-20230804.1838/
-  eldev-20230804.1838/bin/
-  eldev-20230804.1838/bin/eldev
-  eldev-20230804.1838/bin/eldev.bat
-  eldev-20230804.1838/bin/eldev.ps1
-  eldev-20230804.1838/eldev-build.el
-  eldev-20230804.1838/eldev-buttercup.el
-  eldev-20230804.1838/eldev-doctor.el
-  eldev-20230804.1838/eldev-ecukes.el
-  eldev-20230804.1838/eldev-ert.el
-  eldev-20230804.1838/eldev-pkg.el
-  eldev-20230804.1838/eldev-plugins.el
-  eldev-20230804.1838/eldev-util.el
-  eldev-20230804.1838/eldev-vc.el
-  eldev-20230804.1838/eldev.el
-Built eldev in 5.912s, finished at 2023-08-05T06:57:32+0000
+Created eldev-20230805.1048.tar containing:
+  eldev-20230805.1048/
+  eldev-20230805.1048/bin/
+  eldev-20230805.1048/bin/eldev
+  eldev-20230805.1048/bin/eldev.bat
+  eldev-20230805.1048/bin/eldev.ps1
+  eldev-20230805.1048/eldev-build.el
+  eldev-20230805.1048/eldev-buttercup.el
+  eldev-20230805.1048/eldev-doctor.el
+  eldev-20230805.1048/eldev-ecukes.el
+  eldev-20230805.1048/eldev-ert.el
+  eldev-20230805.1048/eldev-pkg.el
+  eldev-20230805.1048/eldev-plugins.el
+  eldev-20230805.1048/eldev-util.el
+  eldev-20230805.1048/eldev-vc.el
+  eldev-20230805.1048/eldev.el
+Built eldev in 4.129s, finished at 2023-08-05T16:02:39+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  405 Aug  5 06:57 packages/eldev-20230804.1838.entry
-640K -rw-r--r-- 1 root root 640K Aug  5 06:57 packages/eldev-20230804.1838.tar
+4.0K -rw-r--r-- 1 root root  405 Aug  5 16:02 packages/eldev-20230805.1048.entry
+640K -rw-r--r-- 1 root root 640K Aug  5 16:02 packages/eldev-20230805.1048.tar
