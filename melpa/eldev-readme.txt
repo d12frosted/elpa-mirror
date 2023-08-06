@@ -14,7 +14,7 @@ If you have a catch-all directory for executables.
 
 1. From this directory (e.g. `~/bin') execute:
 
-     $ curl -fsSL https://raw.github.com/doublep/eldev/master/bin/eldev > eldev && chmod a+x eldev
+     $ curl -fsSL https://raw.github.com/emacs-eldev/eldev/master/bin/eldev > eldev && chmod a+x eldev
 
 No further steps necessary — Eldev will bootstrap itself as needed
 on first invocation.
@@ -24,7 +24,7 @@ executable is placed.
 
 1. Run:
 
-     $ curl -fsSL https://raw.github.com/doublep/eldev/master/webinstall/eldev | sh
+     $ curl -fsSL https://raw.github.com/emacs-eldev/eldev/master/webinstall/eldev | sh
 
    This will install eldev script to ~/.local/bin.
 
@@ -37,4 +37,4 @@ invocation.
 
 For further help and more ways to install, please see the homepage:
 
-  https://github.com/doublep/eldev
+  https://github.com/emacs-eldev/eldev

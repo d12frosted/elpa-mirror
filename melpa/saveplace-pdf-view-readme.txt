@@ -13,3 +13,4 @@ amount (if available).
 
 - João Pedro <jpedrodeamorim@gmail.com>, for making the package
   work with doc-view-mode
+- vizs, for fixing the compatibility with saveplace in Emacs 30

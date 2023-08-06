@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm-core/
-Checking out 35b293c2a2297bb23c7e11ccb610386dd4c11f2e
+Checking out cc045f492ed07692987808f82b7c2bcfd59551e2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-core/
-  to /tmp/helm-coreVC6EOP/helm-core-20230801.522
+  to /tmp/helm-coreWlpkMb/helm-core-20230805.1946
     helm-core.el -> helm-core.el
     helm-lib.el -> helm-lib.el
     helm-source.el -> helm-source.el
     helm-multi-match.el -> helm-multi-match.el
-Created helm-core-20230801.522.tar containing:
-  helm-core-20230801.522/
-  helm-core-20230801.522/helm-core-pkg.el
-  helm-core-20230801.522/helm-core.el
-  helm-core-20230801.522/helm-lib.el
-  helm-core-20230801.522/helm-multi-match.el
-  helm-core-20230801.522/helm-source.el
-Built helm-core in 7.718s, finished at 2023-08-05T13:15:54+0000
+Created helm-core-20230805.1946.tar containing:
+  helm-core-20230805.1946/
+  helm-core-20230805.1946/helm-core-pkg.el
+  helm-core-20230805.1946/helm-core.el
+  helm-core-20230805.1946/helm-lib.el
+  helm-core-20230805.1946/helm-multi-match.el
+  helm-core-20230805.1946/helm-source.el
+Built helm-core in 4.099s, finished at 2023-08-05T22:22:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  450 Aug  5 13:15 packages/helm-core-20230801.522.entry
-480K -rw-r--r-- 1 root root 480K Aug  5 13:15 packages/helm-core-20230801.522.tar
+4.0K -rw-r--r-- 1 root root  451 Aug  5 19:20 packages/helm-core-20230805.1410.entry
+480K -rw-r--r-- 1 root root 480K Aug  5 19:20 packages/helm-core-20230805.1410.tar
+4.0K -rw-r--r-- 1 root root  451 Aug  5 22:22 packages/helm-core-20230805.1946.entry
+480K -rw-r--r-- 1 root root 480K Aug  5 22:22 packages/helm-core-20230805.1946.tar

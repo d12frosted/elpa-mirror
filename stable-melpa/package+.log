@@ -3,18 +3,20 @@ Fetcher: github
 Source:  https://github.com/zenspider/package.git
 
 Updating /mnt/store/melpa/working/package+/
-Checking out 06fbc904e09d3349b669c2624a587fee5accf5ef
+Checking out 57a53a1da75d76a9dcd17008d1c1d77475b9671a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package+/
-  to /tmp/package+mozQir/package+-20210124.640
+  to /tmp/package+MiOxmp/package+-20230805.2115
     package+.el -> package+.el
     package+advice.el -> package+advice.el
-Created package+-20210124.640.tar containing:
-  package+-20210124.640/
-  package+-20210124.640/package+-pkg.el
-  package+-20210124.640/package+.el
-  package+-20210124.640/package+advice.el
-Built package+ in 3.409s, finished at 2023-08-05T13:39:42+0000
+Created package+-20230805.2115.tar containing:
+  package+-20230805.2115/
+  package+-20230805.2115/package+-pkg.el
+  package+-20230805.2115/package+.el
+  package+-20230805.2115/package+advice.el
+Built package+ in 3.268s, finished at 2023-08-05T22:46:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 455 Aug  5 13:39 packages/package+-20210124.640.entry
- 20K -rw-r--r-- 1 root root 20K Aug  5 13:39 packages/package+-20210124.640.tar
+4.0K -rw-r--r-- 1 root root 455 Aug  5 19:44 packages/package+-20210124.640.entry
+ 20K -rw-r--r-- 1 root root 20K Aug  5 19:44 packages/package+-20210124.640.tar
+4.0K -rw-r--r-- 1 root root 456 Aug  5 22:46 packages/package+-20230805.2115.entry
+ 20K -rw-r--r-- 1 root root 20K Aug  5 22:46 packages/package+-20230805.2115.tar

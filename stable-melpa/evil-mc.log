@@ -3,3 +3,38 @@ Fetcher: github
 Source:  https://github.com/gabesoft/evil-mc.git
 
 Updating /mnt/store/melpa/working/evil-mc/
+Checking out bdf893ea6f52fd0f10bece8ddae813658e17bbb4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-mc/
+  to /tmp/evil-mcBydD5v/evil-mc-20230529.210
+    evil-mc-command-execute.el -> evil-mc-command-execute.el
+    evil-mc-command-record.el -> evil-mc-command-record.el
+    evil-mc-common.el -> evil-mc-common.el
+    evil-mc-cursor-make.el -> evil-mc-cursor-make.el
+    evil-mc-cursor-state.el -> evil-mc-cursor-state.el
+    evil-mc-known-commands.el -> evil-mc-known-commands.el
+    evil-mc-region.el -> evil-mc-region.el
+    evil-mc-scratch.el -> evil-mc-scratch.el
+    evil-mc-setup.el -> evil-mc-setup.el
+    evil-mc-undo.el -> evil-mc-undo.el
+    evil-mc-vars.el -> evil-mc-vars.el
+    evil-mc.el -> evil-mc.el
+Created evil-mc-20230529.210.tar containing:
+  evil-mc-20230529.210/
+  evil-mc-20230529.210/evil-mc-command-execute.el
+  evil-mc-20230529.210/evil-mc-command-record.el
+  evil-mc-20230529.210/evil-mc-common.el
+  evil-mc-20230529.210/evil-mc-cursor-make.el
+  evil-mc-20230529.210/evil-mc-cursor-state.el
+  evil-mc-20230529.210/evil-mc-known-commands.el
+  evil-mc-20230529.210/evil-mc-pkg.el
+  evil-mc-20230529.210/evil-mc-region.el
+  evil-mc-20230529.210/evil-mc-scratch.el
+  evil-mc-20230529.210/evil-mc-setup.el
+  evil-mc-20230529.210/evil-mc-undo.el
+  evil-mc-20230529.210/evil-mc-vars.el
+  evil-mc-20230529.210/evil-mc.el
+Built evil-mc in 3.298s, finished at 2023-08-05T22:12:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  553 Aug  5 22:12 packages/evil-mc-20230529.210.entry
+140K -rw-r--r-- 1 root root 140K Aug  5 22:12 packages/evil-mc-20230529.210.tar
