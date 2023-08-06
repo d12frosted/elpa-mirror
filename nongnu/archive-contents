@@ -1009,7 +1009,7 @@
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
 	 (:commit . "1b411786346f1df38af3d37c389975db3a103353"))])
  (helm-core .
-	    [(3 9 2)
+	    [(3 9 3)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -1019,7 +1019,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "c859db76283068a38270cd833d1b84e2fec3683c"))])
+	      (:commit . "e347a2c98438e2dbb5b1f681729f00c0e816ffc6"))])
  (highlight-parentheses .
 			[(2 1 1)
 			 ((emacs
@@ -2237,7 +2237,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 4 20230803221734)
+	       [(24 4 20230805215231)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -2246,7 +2246,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "e6750a002990a6029fa2851861c3742ffe25be06"))])
+		 (:commit . "fc1e7293615589bb531f32f91130ba1fa98c0df8"))])
  (xkcd .
        [(1 1)
 	((json
