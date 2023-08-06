@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm/
-Checking out 2e514ad65ea0fdd282becf4f99e16f9c2b360371
+Checking out e347a2c98438e2dbb5b1f681729f00c0e816ffc6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmb5EaV0/helm-20230805.1606
+  to /tmp/helmbIdw76/helm-20230806.517
     .dir-locals.el -> .dir-locals.el
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
@@ -50,55 +50,55 @@ Copying files (->) and directories (=>)
     helm-x-files.el -> helm-x-files.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20230805.1606.tar containing:
-  helm-20230805.1606/
-  helm-20230805.1606/.dir-locals.el
-  helm-20230805.1606/emacs-helm.sh
-  helm-20230805.1606/helm-adaptive.el
-  helm-20230805.1606/helm-bookmark.el
-  helm-20230805.1606/helm-buffers.el
-  helm-20230805.1606/helm-color.el
-  helm-20230805.1606/helm-comint.el
-  helm-20230805.1606/helm-command.el
-  helm-20230805.1606/helm-dabbrev.el
-  helm-20230805.1606/helm-easymenu.el
-  helm-20230805.1606/helm-elisp-package.el
-  helm-20230805.1606/helm-elisp.el
-  helm-20230805.1606/helm-epa.el
-  helm-20230805.1606/helm-eshell.el
-  helm-20230805.1606/helm-eval.el
-  helm-20230805.1606/helm-external.el
-  helm-20230805.1606/helm-fd.el
-  helm-20230805.1606/helm-files.el
-  helm-20230805.1606/helm-find.el
-  helm-20230805.1606/helm-font.el
-  helm-20230805.1606/helm-for-files.el
-  helm-20230805.1606/helm-global-bindings.el
-  helm-20230805.1606/helm-grep.el
-  helm-20230805.1606/helm-help.el
-  helm-20230805.1606/helm-id-utils.el
-  helm-20230805.1606/helm-imenu.el
-  helm-20230805.1606/helm-info.el
-  helm-20230805.1606/helm-locate.el
-  helm-20230805.1606/helm-man.el
-  helm-20230805.1606/helm-misc.el
-  helm-20230805.1606/helm-mode.el
-  helm-20230805.1606/helm-net.el
-  helm-20230805.1606/helm-occur.el
-  helm-20230805.1606/helm-pkg.el
-  helm-20230805.1606/helm-regexp.el
-  helm-20230805.1606/helm-ring.el
-  helm-20230805.1606/helm-semantic.el
-  helm-20230805.1606/helm-shell.el
-  helm-20230805.1606/helm-sys.el
-  helm-20230805.1606/helm-tags.el
-  helm-20230805.1606/helm-types.el
-  helm-20230805.1606/helm-utils.el
-  helm-20230805.1606/helm-x-files.el
-  helm-20230805.1606/helm.el
-Built helm in 4.343s, finished at 2023-08-05T22:22:00+0000
+Created helm-20230806.517.tar containing:
+  helm-20230806.517/
+  helm-20230806.517/.dir-locals.el
+  helm-20230806.517/emacs-helm.sh
+  helm-20230806.517/helm-adaptive.el
+  helm-20230806.517/helm-bookmark.el
+  helm-20230806.517/helm-buffers.el
+  helm-20230806.517/helm-color.el
+  helm-20230806.517/helm-comint.el
+  helm-20230806.517/helm-command.el
+  helm-20230806.517/helm-dabbrev.el
+  helm-20230806.517/helm-easymenu.el
+  helm-20230806.517/helm-elisp-package.el
+  helm-20230806.517/helm-elisp.el
+  helm-20230806.517/helm-epa.el
+  helm-20230806.517/helm-eshell.el
+  helm-20230806.517/helm-eval.el
+  helm-20230806.517/helm-external.el
+  helm-20230806.517/helm-fd.el
+  helm-20230806.517/helm-files.el
+  helm-20230806.517/helm-find.el
+  helm-20230806.517/helm-font.el
+  helm-20230806.517/helm-for-files.el
+  helm-20230806.517/helm-global-bindings.el
+  helm-20230806.517/helm-grep.el
+  helm-20230806.517/helm-help.el
+  helm-20230806.517/helm-id-utils.el
+  helm-20230806.517/helm-imenu.el
+  helm-20230806.517/helm-info.el
+  helm-20230806.517/helm-locate.el
+  helm-20230806.517/helm-man.el
+  helm-20230806.517/helm-misc.el
+  helm-20230806.517/helm-mode.el
+  helm-20230806.517/helm-net.el
+  helm-20230806.517/helm-occur.el
+  helm-20230806.517/helm-pkg.el
+  helm-20230806.517/helm-regexp.el
+  helm-20230806.517/helm-ring.el
+  helm-20230806.517/helm-semantic.el
+  helm-20230806.517/helm-shell.el
+  helm-20230806.517/helm-sys.el
+  helm-20230806.517/helm-tags.el
+  helm-20230806.517/helm-types.el
+  helm-20230806.517/helm-utils.el
+  helm-20230806.517/helm-x-files.el
+  helm-20230806.517/helm.el
+Built helm in 4.892s, finished at 2023-08-06T07:30:14+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  459 Aug  5 19:20 packages/helm-20230805.1410.entry
-1.2M -rw-r--r-- 1 root root 1.2M Aug  5 19:20 packages/helm-20230805.1410.tar
-4.0K -rw-r--r-- 1 root root  459 Aug  5 22:22 packages/helm-20230805.1606.entry
-1.2M -rw-r--r-- 1 root root 1.2M Aug  5 22:21 packages/helm-20230805.1606.tar
+4.0K -rw-r--r-- 1 root root  459 Aug  6 04:26 packages/helm-20230805.1606.entry
+1.2M -rw-r--r-- 1 root root 1.2M Aug  6 04:26 packages/helm-20230805.1606.tar
+4.0K -rw-r--r-- 1 root root  458 Aug  6 07:30 packages/helm-20230806.517.entry
+1.2M -rw-r--r-- 1 root root 1.2M Aug  6 07:30 packages/helm-20230806.517.tar
