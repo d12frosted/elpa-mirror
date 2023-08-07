@@ -12,13 +12,12 @@ M-x `igist-explore-public-gists' - List public gists sorted by most recently upd
 
 Completions display:
 
-M-x `igist-edit-list' - Read user gists in mini-buffer and open it in edit buffer.
-
+M-x `igist-edit-list' - Read user gists in minibuffer and open it in edit buffer.
 
 ; Create commands:
 
 M-x `igist-create-new-gist'
-     Setup new gist buffer with currently active region content or empty.
+     Create the editable gist buffer with the content of the current buffer.
 
 M-x `igist-new-gist-from-buffer' (&rest _ignore)
      Setup new gist buffer whole buffer contents.

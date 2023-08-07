@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/haskell/haskell-mode.git
 
 Updating /mnt/store/melpa/working/haskell-mode/
-Checking out e8358945845b15cbcc4c1479e51b5236bac61b72
+Checking out 79af559b6d750aff32a916a81cc4fb63ecfd588d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/haskell-mode/
-  to /tmp/haskell-modej13vXW/haskell-mode-20230804.640
+  to /tmp/haskell-modehoUElA/haskell-mode-20230806.1107
     ghc-core.el -> ghc-core.el
     ghci-script-mode.el -> ghci-script-mode.el
     haskell-align-imports.el -> haskell-align-imports.el
@@ -30,7 +30,6 @@ Copying files (->) and directories (=>)
     haskell-lexeme.el -> haskell-lexeme.el
     haskell-load.el -> haskell-load.el
     haskell-menu.el -> haskell-menu.el
-    haskell-mode-pkg.el -> haskell-mode-pkg.el
     haskell-mode.el -> haskell-mode.el
     haskell-modules.el -> haskell-modules.el
     haskell-move-nested.el -> haskell-move-nested.el
@@ -52,56 +51,56 @@ Copying files (->) and directories (=>)
   ! doc/haskell-mode.texi -> haskell-mode.texi
     NEWS -> NEWS
     logo.svg -> logo.svg
-Generating /tmp/haskell-modej13vXW/haskell-mode-20230804.640/haskell-mode.info
-Created haskell-mode-20230804.640.tar containing:
-  haskell-mode-20230804.640/
-  haskell-mode-20230804.640/NEWS
-  haskell-mode-20230804.640/dir
-  haskell-mode-20230804.640/ghc-core.el
-  haskell-mode-20230804.640/ghci-script-mode.el
-  haskell-mode-20230804.640/haskell-align-imports.el
-  haskell-mode-20230804.640/haskell-c2hs.el
-  haskell-mode-20230804.640/haskell-cabal.el
-  haskell-mode-20230804.640/haskell-collapse.el
-  haskell-mode-20230804.640/haskell-commands.el
-  haskell-mode-20230804.640/haskell-compile.el
-  haskell-mode-20230804.640/haskell-complete-module.el
-  haskell-mode-20230804.640/haskell-completions.el
-  haskell-mode-20230804.640/haskell-customize.el
-  haskell-mode-20230804.640/haskell-debug.el
-  haskell-mode-20230804.640/haskell-decl-scan.el
-  haskell-mode-20230804.640/haskell-doc.el
-  haskell-mode-20230804.640/haskell-font-lock.el
-  haskell-mode-20230804.640/haskell-ghc-support.el
-  haskell-mode-20230804.640/haskell-hoogle.el
-  haskell-mode-20230804.640/haskell-indent.el
-  haskell-mode-20230804.640/haskell-indentation.el
-  haskell-mode-20230804.640/haskell-interactive-mode.el
-  haskell-mode-20230804.640/haskell-lexeme.el
-  haskell-mode-20230804.640/haskell-load.el
-  haskell-mode-20230804.640/haskell-menu.el
-  haskell-mode-20230804.640/haskell-mode-pkg.el
-  haskell-mode-20230804.640/haskell-mode.el
-  haskell-mode-20230804.640/haskell-mode.info
-  haskell-mode-20230804.640/haskell-modules.el
-  haskell-mode-20230804.640/haskell-move-nested.el
-  haskell-mode-20230804.640/haskell-navigate-imports.el
-  haskell-mode-20230804.640/haskell-presentation-mode.el
-  haskell-mode-20230804.640/haskell-process.el
-  haskell-mode-20230804.640/haskell-repl.el
-  haskell-mode-20230804.640/haskell-sandbox.el
-  haskell-mode-20230804.640/haskell-session.el
-  haskell-mode-20230804.640/haskell-sort-imports.el
-  haskell-mode-20230804.640/haskell-string.el
-  haskell-mode-20230804.640/haskell-svg.el
-  haskell-mode-20230804.640/haskell-unicode-input-method.el
-  haskell-mode-20230804.640/haskell-utils.el
-  haskell-mode-20230804.640/haskell.el
-  haskell-mode-20230804.640/highlight-uses-mode.el
-  haskell-mode-20230804.640/inf-haskell.el
-  haskell-mode-20230804.640/logo.svg
-  haskell-mode-20230804.640/w3m-haddock.el
-Built haskell-mode in 14.175s, finished at 2023-08-06T10:33:46+0000
+Generating /tmp/haskell-modehoUElA/haskell-mode-20230806.1107/haskell-mode.info
+Created haskell-mode-20230806.1107.tar containing:
+  haskell-mode-20230806.1107/
+  haskell-mode-20230806.1107/NEWS
+  haskell-mode-20230806.1107/dir
+  haskell-mode-20230806.1107/ghc-core.el
+  haskell-mode-20230806.1107/ghci-script-mode.el
+  haskell-mode-20230806.1107/haskell-align-imports.el
+  haskell-mode-20230806.1107/haskell-c2hs.el
+  haskell-mode-20230806.1107/haskell-cabal.el
+  haskell-mode-20230806.1107/haskell-collapse.el
+  haskell-mode-20230806.1107/haskell-commands.el
+  haskell-mode-20230806.1107/haskell-compile.el
+  haskell-mode-20230806.1107/haskell-complete-module.el
+  haskell-mode-20230806.1107/haskell-completions.el
+  haskell-mode-20230806.1107/haskell-customize.el
+  haskell-mode-20230806.1107/haskell-debug.el
+  haskell-mode-20230806.1107/haskell-decl-scan.el
+  haskell-mode-20230806.1107/haskell-doc.el
+  haskell-mode-20230806.1107/haskell-font-lock.el
+  haskell-mode-20230806.1107/haskell-ghc-support.el
+  haskell-mode-20230806.1107/haskell-hoogle.el
+  haskell-mode-20230806.1107/haskell-indent.el
+  haskell-mode-20230806.1107/haskell-indentation.el
+  haskell-mode-20230806.1107/haskell-interactive-mode.el
+  haskell-mode-20230806.1107/haskell-lexeme.el
+  haskell-mode-20230806.1107/haskell-load.el
+  haskell-mode-20230806.1107/haskell-menu.el
+  haskell-mode-20230806.1107/haskell-mode-pkg.el
+  haskell-mode-20230806.1107/haskell-mode.el
+  haskell-mode-20230806.1107/haskell-mode.info
+  haskell-mode-20230806.1107/haskell-modules.el
+  haskell-mode-20230806.1107/haskell-move-nested.el
+  haskell-mode-20230806.1107/haskell-navigate-imports.el
+  haskell-mode-20230806.1107/haskell-presentation-mode.el
+  haskell-mode-20230806.1107/haskell-process.el
+  haskell-mode-20230806.1107/haskell-repl.el
+  haskell-mode-20230806.1107/haskell-sandbox.el
+  haskell-mode-20230806.1107/haskell-session.el
+  haskell-mode-20230806.1107/haskell-sort-imports.el
+  haskell-mode-20230806.1107/haskell-string.el
+  haskell-mode-20230806.1107/haskell-svg.el
+  haskell-mode-20230806.1107/haskell-unicode-input-method.el
+  haskell-mode-20230806.1107/haskell-utils.el
+  haskell-mode-20230806.1107/haskell.el
+  haskell-mode-20230806.1107/highlight-uses-mode.el
+  haskell-mode-20230806.1107/inf-haskell.el
+  haskell-mode-20230806.1107/logo.svg
+  haskell-mode-20230806.1107/w3m-haddock.el
+Built haskell-mode in 11.653s, finished at 2023-08-07T11:17:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  559 Aug  6 10:33 packages/haskell-mode-20230804.640.entry
-920K -rw-r--r-- 1 root root 920K Aug  6 10:33 packages/haskell-mode-20230804.640.tar
+4.0K -rw-r--r-- 1 root root  282 Aug  7 11:17 packages/haskell-mode-20230806.1107.entry
+920K -rw-r--r-- 1 root root 920K Aug  7 11:17 packages/haskell-mode-20230806.1107.tar
