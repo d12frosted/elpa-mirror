@@ -32,7 +32,7 @@
 2 Supported schemes
 ═══════════════════
 
-  Geiser needs Emacs 24 or better, and installing also at least one of
+  Geiser needs Emacs 27.1 or better, and installing also at least one of
   the supported scheme implementations.
 
   The following schemes are supported via an independent package,

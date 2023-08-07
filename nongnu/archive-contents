@@ -690,9 +690,9 @@
 		("Akib Azmain Turja" . "akib@disroot.org"))
 	       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser .
-	 [(0 29)
+	 [(0 29 1)
 	  ((emacs
-	    (25 1))
+	    (27 1))
 	   (project
 	    (0 8 1)))
 	  "GNU Emacs and Scheme talk to each other" tar
@@ -701,7 +701,7 @@
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 	   (:authors
 	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-	   (:commit . "761c65be5763a0cac161f2d9ea9dec510f58b83d"))])
+	   (:commit . "d743a8cd1df4101a6dc2226ccfc3b4883ec761c5"))])
  (geiser-chez .
 	      [(0 18)
 	       ((emacs
@@ -974,19 +974,13 @@
 	       ("Natalie Weizenbaum"))
 	      (:commit . "45a0b23db0b8f827c78f7749457f3427263e6ffd"))])
  (haskell-mode .
-	       [(17 2)
-		nil "A Haskell editing mode" tar
+	       [(17 4)
+		((emacs
+		  (25 1)))
+		"A Haskell editing mode" tar
 		((:url . "https://github.com/haskell/haskell-mode")
-		 (:keywords "faces" "files" "haskell")
-		 (:maintainer "1992      Simon Marlow")
-		 (:authors
-		  ("1992      Simon Marlow")
-		  ("1997-1998 Graeme E Moss" . "gem@cs.york.ac.uk")
-		  ("Tommy Thorn" . "thorn@irisa.fr")
-		  ("2001-2002 Reuben Thomas (>=v1.4)")
-		  ("2003      Dave Love" . "fx@gnu.org")
-		  ("2016      Arthur Fayzrakhmanov"))
-		 (:commit . "e72677668f5fc7cc148008e885a0f256e245dd43"))])
+		 (:keywords "haskell" "cabal" "ghc" "repl" "languages")
+		 (:commit . "79af559b6d750aff32a916a81cc4fb63ecfd588d"))])
  (haskell-tng-mode .
 		   [(0 0 1)
 		    ((emacs
