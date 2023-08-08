@@ -3,16 +3,18 @@ Fetcher: gitlab
 Source:  https://gitlab.com/ligolang/ligo.git
 
 Updating /mnt/store/melpa/working/ligo-mode/
-Checking out bdd69fa7cd9adc8756ca9e688ede0335672e29cf
+Checking out 2d557873ccd14e03e3ad42ed46a88571f4eeafab
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ligo-mode/
-  to /tmp/ligo-modefaIiQa/ligo-mode-20230803.1446
+  to /tmp/ligo-mode0VsU5Z/ligo-mode-20230808.1743
   ! tools/emacs/ligo-mode.el -> ligo-mode.el
-Created ligo-mode-20230803.1446.tar containing:
-  ligo-mode-20230803.1446/
-  ligo-mode-20230803.1446/ligo-mode-pkg.el
-  ligo-mode-20230803.1446/ligo-mode.el
-Built ligo-mode in 8.537s, finished at 2023-08-08T15:21:53+0000
+Created ligo-mode-20230808.1743.tar containing:
+  ligo-mode-20230808.1743/
+  ligo-mode-20230808.1743/ligo-mode-pkg.el
+  ligo-mode-20230808.1743/ligo-mode.el
+Built ligo-mode in 7.524s, finished at 2023-08-08T18:18:20+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 407 Aug  8 15:21 packages/ligo-mode-20230803.1446.entry
  20K -rw-r--r-- 1 root root 20K Aug  8 15:21 packages/ligo-mode-20230803.1446.tar
+4.0K -rw-r--r-- 1 root root 407 Aug  8 18:18 packages/ligo-mode-20230808.1743.entry
+ 20K -rw-r--r-- 1 root root 20K Aug  8 18:18 packages/ligo-mode-20230808.1743.tar
