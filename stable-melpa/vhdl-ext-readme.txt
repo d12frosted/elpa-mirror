@@ -1,6 +1,7 @@
 Extensions for VHDL Mode:
 
  - Improve syntax highlighting
+ - Hierarchy extraction and navigation: builtin and GHDL based
  - LSP configuration for `lsp-mode' and `eglot'
  - Support for many linters via `flycheck'
  - Beautify blocks and instances
