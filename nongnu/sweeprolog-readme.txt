@@ -82,7 +82,7 @@ Prolog Flags
 Prolog Packages
 Contributing
 .. Developing Sweep
-.. Submitting Patches
+.. Bug Reports
 Things To Do
 .. Editing Improvements
 .. General Improvements
@@ -2557,7 +2557,7 @@ Quick access to sweep commands
   globally to a prefix key, e.g. `C-c p', use:
 
   ┌────
-  │ (keymap-global-set "C-c p" sweeprolog-prefix-map)
+  │ (keymap-global-set "C-c p" 'sweeprolog-prefix-map)
   └────
 
   As an example, with the above binding the Sweep top-level can be
@@ -2706,7 +2706,7 @@ Contributing
 
 [Things to do] See section Things to do
 
-Setting up sweep for local development
+Setting up Sweep for local development
 ──────────────────────────────────────
 
   Since the Prolog and C parts of Sweep are intended to be distributed
@@ -2753,15 +2753,18 @@ Submitting patches and bug reports
 ──────────────────────────────────
 
   The best way to get in touch with the Sweep maintainers is via [the
-  sweep mailing list].
+  Sweep mailing list].
 
-  The command `M-x sweeprolog-submit-bug-report' can be used to easily
+  Command: sweeprolog-submit-bug-report
+        Report a bug in Sweep to the maintainers via mail.
+
+  You can use the command `M-x sweeprolog-submit-bug-report' to easily
   contact the Sweep maintainers from within Emacs.  This command opens a
   new buffer with a message template ready to be sent to the Sweep
   mailing list.
 
 
-[the sweep mailing list] <https://lists.sr.ht/~eshel/dev>
+[the Sweep mailing list] <https://lists.sr.ht/~eshel/dev>
 
 
 Things to do

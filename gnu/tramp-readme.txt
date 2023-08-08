@@ -22,11 +22,11 @@ installed with, you must recompile the package:
 
    • Remove all byte-compiled Tramp files
 
-          $ rm -f ~/.emacs.d/elpa/tramp-2.6.1.1/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.6.1.1a/tramp*.elc
 
    • Start Emacs with Tramp’s source files
 
-          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.1.1 -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.1.1a -l tramp
 
      This should not give you the error.
 
@@ -35,3 +35,17 @@ installed with, you must recompile the package:
           M-x tramp-recompile-elpa
 
      Afterwards, you must restart Emacs.
+
+Mitigation of a bug in Emacs 29.1
+*********************************
+
+Due to a bug in Emacs 29.1, you must apply the following change prior
+installation or upgrading Tramp 2.6.1.1a from GNU ELPA:
+
+     (when (string-equal emacs-version "29.1")
+       (with-current-buffer
+           (url-retrieve-synchronously
+            "https://git.savannah.gnu.org/cgit/emacs.git/plain/lisp/emacs-lisp/loaddefs-gen.el?h=emacs-29")
+         (goto-char (point-min))
+         (while (looking-at "^.+$") (forward-line))
+         (eval-region (point) (point-max))))
