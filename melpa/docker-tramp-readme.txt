@@ -5,6 +5,9 @@
 > with docker version 1.6.x but should work with versions >1.3.  Podman
 > also works.
 
+> **NOTE**: [Similar functionality][] is built-in to Emacs from version 29
+> onwards, so perhaps you don't need this package any more.
+
 ## Usage
 
 Offers the TRAMP method `docker` to access running containers
@@ -48,6 +51,7 @@ Tramp use the remote's `PATH' environment varialbe.
 
     (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 
+[Similar functionality]: https://www.gnu.org/software/tramp/#index-method-docker
 [Multi-hop]: https://www.gnu.org/software/emacs/manual/html_node/tramp/Ad_002dhoc-multi_002dhops.html
 [98a5112]: http://git.savannah.gnu.org/cgit/tramp.git/commit/?id=98a511248a9405848ed44de48a565b0b725af82c
 [docker-tramp-compat.el]: https://github.com/emacs-pe/docker-tramp.el/raw/master/docker-tramp-compat.el
