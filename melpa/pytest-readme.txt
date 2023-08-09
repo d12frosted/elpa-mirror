@@ -10,15 +10,15 @@ In your Emacs config:
 
   (require 'pytest)
 
-If you don't use a global installation of py.test (ie in
+If you don't use a global installation of pytest (ie in
 virtualenv) then add something like the following that points to
 either the non-global version or a test runner script.:
 
   (add-to-list 'pytest-project-names "my/crazy/runner")
 
-You can generate a script with py.test:
+You can generate a script with pytest:
 
-  py.test --genscript=run-tests.py
+  pytest --genscript=run-tests.py
 
 Another option is if your global pytest isn't called "pytest" is to
 redefine pytest-global-name to be the command that should be used.

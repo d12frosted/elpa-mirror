@@ -99,11 +99,12 @@ M-x `igist-change-user' (&rest _)
 
 ; Customization
 
-`igist-auth-marker'
-     Suffix added to the username as USERNAME^MARKER in authsoures.
-     For example, if the value of the marker is `igist' (which is the default value),
-     you need to add such entry:
-     machine api.github.com login GITHUB_USERNAME^igist password GITHUB_TOKEN.
+
+`igist-current-user-name' is a customizable option that represents the
+GitHub user name used for making authorized requests.
+
+`igist-auth-marker' This variable can either be a string containing the OAuth
+token or a symbol indicating where to fetch the OAuth token.
 
 
 `igist-per-page-limit'
