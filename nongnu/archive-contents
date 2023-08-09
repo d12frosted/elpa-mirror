@@ -991,9 +991,11 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 9 1)
+       [(3 9 3)
 	((helm-core
-	  (3 9 1))
+	  (3 9 3))
+	 (wfnames
+	  (1 1))
 	 (popup
 	  (0 5 3)))
 	"Helm is an Emacs incremental and narrowing framework" tar
@@ -1001,7 +1003,7 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "1b411786346f1df38af3d37c389975db3a103353"))])
+	 (:commit . "e347a2c98438e2dbb5b1f681729f00c0e816ffc6"))])
  (helm-core .
 	    [(3 9 3)
 	     ((emacs
