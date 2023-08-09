@@ -30,8 +30,9 @@ exclude words.
 Tips,
 
   1. Customize `mybigword-default-format-function' to format the word for display.
-  If it's `mybigword-format-with-dictionary', the `dictionary-definition' is used to
-  find the definitions of all big words.
+  If it's `mybigword-format-with-dictionary', the `mybigword-word-definition-function',
+  whose default value is `dictionary-definition', is used to find the definitions of
+  all big words.
 
   Sample to display the dictionary definitions of big words:
 
