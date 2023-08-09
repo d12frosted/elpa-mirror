@@ -34,6 +34,8 @@
   • [Emacs IPython Notebook]
   • [Emacs Realtime Markdown Viewer]
   • [Kite]
+  • [Markdown-preview-mode]
+  • [Org-Roam-UI]
 
   If you are using this module for your own emacs package, please let me
   know by editing this file, adding your project, and sending a pull
@@ -46,3 +48,8 @@
 <https://github.com/syohex/emacs-realtime-markdown-viewer>
 
 [Kite] <https://github.com/jscheid/kite>
+
+[Markdown-preview-mode]
+<https://github.com/ancane/markdown-preview-mode>
+
+[Org-Roam-UI] <https://github.com/org-roam/org-roam-ui>

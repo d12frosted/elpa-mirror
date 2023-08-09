@@ -1048,7 +1048,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "16613c18c5ec17755f083f4839bca7e4e05dd4c7"))])
  (ef-themes .
-	    [(1 2 0)
+	    [(1 3 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -1057,7 +1057,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "9a64221f797c8cc5cefb0bd732612d08f2b321a0"))])
+	      (:commit . "86b92a5567800c50ea316d97846df138f34a3307"))])
  (eglot .
 	[(1 15)
 	 ((emacs
@@ -4086,7 +4086,7 @@
 	       ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
 	      (:keywords "news" "hypermedia" "blog" "feed" "rss" "atom"))])
  (websocket .
-	    [(1 14)
+	    [(1 15)
 	     ((cl-lib
 	       (0 5)))
 	     "Emacs WebSocket client and server" tar
@@ -4095,7 +4095,7 @@
 	      (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	      (:authors
 	       ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	      (:commit . "1f086f14f0f55f55eafd09f404f48e924157c1d1"))])
+	      (:commit . "40c208eaab99999d7c1e4bea883648da24c03be3"))])
  (which-key .
 	    [(3 6 0)
 	     ((emacs
