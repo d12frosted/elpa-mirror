@@ -3,10 +3,10 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Checking out 60550b9693e43a095e4d5f880006613371475bd2
+Checking out bf967583860c785bfd99fb9bded9bcd1c3da6070
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperdrive/
-  to /tmp/hyperdriveSyQyaK/hyperdrive-20230808.2332
+  to /tmp/hyperdriveOeEm1b/hyperdrive-20230809.14
     hyperdrive-diff.el -> hyperdrive-diff.el
     hyperdrive-dir.el -> hyperdrive-dir.el
     hyperdrive-ewoc.el -> hyperdrive-ewoc.el
@@ -17,24 +17,24 @@ Copying files (->) and directories (=>)
     hyperdrive-vars.el -> hyperdrive-vars.el
     hyperdrive.el -> hyperdrive.el
   ! doc/hyperdrive-manual.texi -> hyperdrive-manual.texi
-Generating /tmp/hyperdriveSyQyaK/hyperdrive-20230808.2332/hyperdrive-manual.info
-Created hyperdrive-20230808.2332.tar containing:
-  hyperdrive-20230808.2332/
-  hyperdrive-20230808.2332/dir
-  hyperdrive-20230808.2332/hyperdrive-diff.el
-  hyperdrive-20230808.2332/hyperdrive-dir.el
-  hyperdrive-20230808.2332/hyperdrive-ewoc.el
-  hyperdrive-20230808.2332/hyperdrive-handlers.el
-  hyperdrive-20230808.2332/hyperdrive-history.el
-  hyperdrive-20230808.2332/hyperdrive-lib.el
-  hyperdrive-20230808.2332/hyperdrive-manual.info
-  hyperdrive-20230808.2332/hyperdrive-org.el
-  hyperdrive-20230808.2332/hyperdrive-pkg.el
-  hyperdrive-20230808.2332/hyperdrive-vars.el
-  hyperdrive-20230808.2332/hyperdrive.el
-Built hyperdrive in 8.099s, finished at 2023-08-09T00:05:46+0000
+Generating /tmp/hyperdriveOeEm1b/hyperdrive-20230809.14/hyperdrive-manual.info
+Created hyperdrive-20230809.14.tar containing:
+  hyperdrive-20230809.14/
+  hyperdrive-20230809.14/dir
+  hyperdrive-20230809.14/hyperdrive-diff.el
+  hyperdrive-20230809.14/hyperdrive-dir.el
+  hyperdrive-20230809.14/hyperdrive-ewoc.el
+  hyperdrive-20230809.14/hyperdrive-handlers.el
+  hyperdrive-20230809.14/hyperdrive-history.el
+  hyperdrive-20230809.14/hyperdrive-lib.el
+  hyperdrive-20230809.14/hyperdrive-manual.info
+  hyperdrive-20230809.14/hyperdrive-org.el
+  hyperdrive-20230809.14/hyperdrive-pkg.el
+  hyperdrive-20230809.14/hyperdrive-vars.el
+  hyperdrive-20230809.14/hyperdrive.el
+Built hyperdrive in 9.381s, finished at 2023-08-09T03:00:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  507 Aug  8 21:09 packages/hyperdrive-20230725.2050.entry
-232K -rw-r--r-- 1 root root 230K Aug  8 21:09 packages/hyperdrive-20230725.2050.tar
 4.0K -rw-r--r-- 1 root root  507 Aug  9 00:05 packages/hyperdrive-20230808.2332.entry
 232K -rw-r--r-- 1 root root 230K Aug  9 00:05 packages/hyperdrive-20230808.2332.tar
+4.0K -rw-r--r-- 1 root root  505 Aug  9 03:00 packages/hyperdrive-20230809.14.entry
+232K -rw-r--r-- 1 root root 230K Aug  9 03:00 packages/hyperdrive-20230809.14.tar
