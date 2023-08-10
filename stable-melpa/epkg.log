@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out dfb66853b1dabdbcda1c4565db418a644968da7d
+Checking out 73806fa39da91426ec0ab35d4e5d220f1a2146a7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkg8MUPQm/epkg-20230730.2121
+  to /tmp/epkgFqYgXf/epkg-20230809.2221
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,20 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkg8MUPQm/epkg-20230730.2121/epkg.info
-Created epkg-20230730.2121.tar containing:
-  epkg-20230730.2121/
-  epkg-20230730.2121/dir
-  epkg-20230730.2121/epkg-desc.el
-  epkg-20230730.2121/epkg-elpa.el
-  epkg-20230730.2121/epkg-list.el
-  epkg-20230730.2121/epkg-org.el
-  epkg-20230730.2121/epkg-pkg.el
-  epkg-20230730.2121/epkg-schemata.el
-  epkg-20230730.2121/epkg-utils.el
-  epkg-20230730.2121/epkg.el
-  epkg-20230730.2121/epkg.info
-Built epkg in 7.367s, finished at 2023-08-09T17:32:59+0000
+Generating /tmp/epkgFqYgXf/epkg-20230809.2221/epkg.info
+Created epkg-20230809.2221.tar containing:
+  epkg-20230809.2221/
+  epkg-20230809.2221/dir
+  epkg-20230809.2221/epkg-desc.el
+  epkg-20230809.2221/epkg-elpa.el
+  epkg-20230809.2221/epkg-list.el
+  epkg-20230809.2221/epkg-org.el
+  epkg-20230809.2221/epkg-pkg.el
+  epkg-20230809.2221/epkg-schemata.el
+  epkg-20230809.2221/epkg-utils.el
+  epkg-20230809.2221/epkg.el
+  epkg-20230809.2221/epkg.info
+Built epkg in 14.897s, finished at 2023-08-10T02:21:08+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  506 Aug  9 17:32 packages/epkg-20230730.2121.entry
-112K -rw-r--r-- 1 root root 110K Aug  9 17:32 packages/epkg-20230730.2121.tar
+4.0K -rw-r--r-- 1 root root  506 Aug 10 02:21 packages/epkg-20230809.2221.entry
+112K -rw-r--r-- 1 root root 110K Aug 10 02:21 packages/epkg-20230809.2221.tar
