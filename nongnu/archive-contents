@@ -247,20 +247,20 @@
 		 ("Chris Wanstrath" . "chris@ozmm.org"))
 		(:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (corfu-terminal .
-		 [(0 6)
+		 [(0 7)
 		  ((emacs
 		    (26 1))
 		   (corfu
 		    (0 36))
 		   (popon
-		    (0 1)))
+		    (0 13)))
 		  "Corfu popup on terminal" tar
 		  ((:url . "https://codeberg.org/akib/emacs-corfu-terminal")
 		   (:keywords "convenience")
 		   (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 		   (:authors
 		    ("Akib Azmain Turja" . "akib@disroot.org"))
-		   (:commit . "5ce4c11b8efd4d2fd1b404b9422bb85b05476da0"))])
+		   (:commit . "501548c3d51f926c687e8cd838c5865ec45d03cc"))])
  (crux .
        [(0 4 0)
 	((seq
