@@ -20,7 +20,7 @@ reddigg-view-frontpage: view frontpage
 
 reddigg-view-comments: prompt for a post (eg:
 r/emacs/comments/lfww57/weekly_tipstricketc_thread/ or
-https://www.reddit.com/r/emacs/comments/lfww57/weekly_tipstricketc_thread/)
+https://old.reddit.com/r/emacs/comments/lfww57/weekly_tipstricketc_thread/)
 and show it.
 
 * Remarks

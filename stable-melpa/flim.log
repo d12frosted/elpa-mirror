@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/wanderlust/flim.git
 
 Updating /mnt/store/melpa/working/flim/
-Checking out 2cf5a7891090faca8de725b1d3743dcedf233ea2
+Checking out 80b8121f05a5a0d7fcfe3e54085467a646dd2028
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flim/
-  to /tmp/flimBsw7vS/flim-20230205.1423
+  to /tmp/flimRq0NxL/flim-20230808.1153
     mime-en.texi -> mime-en.texi
     mime-ja.texi -> mime-ja.texi
     sasl.texi -> sasl.texi
@@ -37,43 +37,43 @@ Copying files (->) and directories (=>)
     sha1.el -> sha1.el
     smtp.el -> smtp.el
     std11.el -> std11.el
-Generating /tmp/flimBsw7vS/flim-20230205.1423/mime-en.info
-Generating /tmp/flimBsw7vS/flim-20230205.1423/mime-ja.info
-Generating /tmp/flimBsw7vS/flim-20230205.1423/sasl.info
-Created flim-20230205.1423.tar containing:
-  flim-20230205.1423/
-  flim-20230205.1423/dir
-  flim-20230205.1423/eword-decode.el
-  flim-20230205.1423/eword-encode.el
-  flim-20230205.1423/flim-pkg.el
-  flim-20230205.1423/hmac-sha1.el
-  flim-20230205.1423/luna.el
-  flim-20230205.1423/lunit.el
-  flim-20230205.1423/md5.el
-  flim-20230205.1423/mel-g.el
-  flim-20230205.1423/mel-q-ccl.el
-  flim-20230205.1423/mel-q.el
-  flim-20230205.1423/mel-u.el
-  flim-20230205.1423/mel.el
-  flim-20230205.1423/mime-conf.el
-  flim-20230205.1423/mime-def.el
-  flim-20230205.1423/mime-en.info
-  flim-20230205.1423/mime-ja.info
-  flim-20230205.1423/mime-parse.el
-  flim-20230205.1423/mime.el
-  flim-20230205.1423/mmbuffer.el
-  flim-20230205.1423/mmcooked.el
-  flim-20230205.1423/mmexternal.el
-  flim-20230205.1423/mmgeneric.el
-  flim-20230205.1423/qmtp.el
-  flim-20230205.1423/sasl-scram.el
-  flim-20230205.1423/sasl-xoauth2.el
-  flim-20230205.1423/sasl.el
-  flim-20230205.1423/sasl.info
-  flim-20230205.1423/sha1.el
-  flim-20230205.1423/smtp.el
-  flim-20230205.1423/std11.el
-Built flim in 22.370s, finished at 2023-08-10T11:11:14+0000
+Generating /tmp/flimRq0NxL/flim-20230808.1153/mime-en.info
+Generating /tmp/flimRq0NxL/flim-20230808.1153/mime-ja.info
+Generating /tmp/flimRq0NxL/flim-20230808.1153/sasl.info
+Created flim-20230808.1153.tar containing:
+  flim-20230808.1153/
+  flim-20230808.1153/dir
+  flim-20230808.1153/eword-decode.el
+  flim-20230808.1153/eword-encode.el
+  flim-20230808.1153/flim-pkg.el
+  flim-20230808.1153/hmac-sha1.el
+  flim-20230808.1153/luna.el
+  flim-20230808.1153/lunit.el
+  flim-20230808.1153/md5.el
+  flim-20230808.1153/mel-g.el
+  flim-20230808.1153/mel-q-ccl.el
+  flim-20230808.1153/mel-q.el
+  flim-20230808.1153/mel-u.el
+  flim-20230808.1153/mel.el
+  flim-20230808.1153/mime-conf.el
+  flim-20230808.1153/mime-def.el
+  flim-20230808.1153/mime-en.info
+  flim-20230808.1153/mime-ja.info
+  flim-20230808.1153/mime-parse.el
+  flim-20230808.1153/mime.el
+  flim-20230808.1153/mmbuffer.el
+  flim-20230808.1153/mmcooked.el
+  flim-20230808.1153/mmexternal.el
+  flim-20230808.1153/mmgeneric.el
+  flim-20230808.1153/qmtp.el
+  flim-20230808.1153/sasl-scram.el
+  flim-20230808.1153/sasl-xoauth2.el
+  flim-20230808.1153/sasl.el
+  flim-20230808.1153/sasl.info
+  flim-20230808.1153/sha1.el
+  flim-20230808.1153/smtp.el
+  flim-20230808.1153/std11.el
+Built flim in 38.449s, finished at 2023-08-10T22:51:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  250 Aug 10 11:11 packages/flim-20230205.1423.entry
-472K -rw-r--r-- 1 root root 470K Aug 10 11:11 packages/flim-20230205.1423.tar
+4.0K -rw-r--r-- 1 root root  250 Aug 10 22:51 packages/flim-20230808.1153.entry
+472K -rw-r--r-- 1 root root 470K Aug 10 22:51 packages/flim-20230808.1153.tar

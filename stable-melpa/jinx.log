@@ -3,22 +3,22 @@ Fetcher: github
 Source:  https://github.com/minad/jinx.git
 
 Updating /mnt/store/melpa/working/jinx/
-Checking out edfb7a39553a368918be9615ea0b2302b6b79278
+Checking out 55afe148c1f6fe5f5b1adb983aeaa0cc69126161
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jinx/
-  to /tmp/jinxl5CFEq/jinx-20230810.1032
+  to /tmp/jinxspNOFX/jinx-20230810.2045
     jinx.el -> jinx.el
     jinx-mod.c -> jinx-mod.c
     emacs-module.h -> emacs-module.h
-Created jinx-20230810.1032.tar containing:
-  jinx-20230810.1032/
-  jinx-20230810.1032/emacs-module.h
-  jinx-20230810.1032/jinx-mod.c
-  jinx-20230810.1032/jinx-pkg.el
-  jinx-20230810.1032/jinx.el
-Built jinx in 3.319s, finished at 2023-08-10T11:24:39+0000
+Created jinx-20230810.2045.tar containing:
+  jinx-20230810.2045/
+  jinx-20230810.2045/emacs-module.h
+  jinx-20230810.2045/jinx-mod.c
+  jinx-20230810.2045/jinx-pkg.el
+  jinx-20230810.2045/jinx.el
+Built jinx in 2.896s, finished at 2023-08-10T23:05:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 440 Aug 10 08:30 packages/jinx-20230730.1200.entry
- 72K -rw-r--r-- 1 root root 70K Aug 10 08:30 packages/jinx-20230730.1200.tar
-4.0K -rw-r--r-- 1 root root 440 Aug 10 11:24 packages/jinx-20230810.1032.entry
- 72K -rw-r--r-- 1 root root 70K Aug 10 11:24 packages/jinx-20230810.1032.tar
+4.0K -rw-r--r-- 1 root root 440 Aug 10 20:11 packages/jinx-20230810.1032.entry
+ 72K -rw-r--r-- 1 root root 70K Aug 10 20:11 packages/jinx-20230810.1032.tar
+4.0K -rw-r--r-- 1 root root 440 Aug 10 23:05 packages/jinx-20230810.2045.entry
+ 72K -rw-r--r-- 1 root root 70K Aug 10 23:05 packages/jinx-20230810.2045.tar

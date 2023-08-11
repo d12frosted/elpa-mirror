@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out 73806fa39da91426ec0ab35d4e5d220f1a2146a7
+Checking out b22da65653418290dc93f7c8b167e8600cdaedb0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgBWbqnO/epkg-20230809.2221
+  to /tmp/epkgVCao3o/epkg-20230810.1304
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,20 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgBWbqnO/epkg-20230809.2221/epkg.info
-Created epkg-20230809.2221.tar containing:
-  epkg-20230809.2221/
-  epkg-20230809.2221/dir
-  epkg-20230809.2221/epkg-desc.el
-  epkg-20230809.2221/epkg-elpa.el
-  epkg-20230809.2221/epkg-list.el
-  epkg-20230809.2221/epkg-org.el
-  epkg-20230809.2221/epkg-pkg.el
-  epkg-20230809.2221/epkg-schemata.el
-  epkg-20230809.2221/epkg-utils.el
-  epkg-20230809.2221/epkg.el
-  epkg-20230809.2221/epkg.info
-Built epkg in 8.559s, finished at 2023-08-10T11:06:48+0000
+Generating /tmp/epkgVCao3o/epkg-20230810.1304/epkg.info
+Created epkg-20230810.1304.tar containing:
+  epkg-20230810.1304/
+  epkg-20230810.1304/dir
+  epkg-20230810.1304/epkg-desc.el
+  epkg-20230810.1304/epkg-elpa.el
+  epkg-20230810.1304/epkg-list.el
+  epkg-20230810.1304/epkg-org.el
+  epkg-20230810.1304/epkg-pkg.el
+  epkg-20230810.1304/epkg-schemata.el
+  epkg-20230810.1304/epkg-utils.el
+  epkg-20230810.1304/epkg.el
+  epkg-20230810.1304/epkg.info
+Built epkg in 7.648s, finished at 2023-08-10T22:47:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  506 Aug 10 11:06 packages/epkg-20230809.2221.entry
-112K -rw-r--r-- 1 root root 110K Aug 10 11:06 packages/epkg-20230809.2221.tar
+4.0K -rw-r--r-- 1 root root  506 Aug 10 22:47 packages/epkg-20230810.1304.entry
+112K -rw-r--r-- 1 root root 110K Aug 10 22:47 packages/epkg-20230810.1304.tar
