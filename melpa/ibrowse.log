@@ -3,10 +3,10 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ngraves/ibrowse.el
 
 Updating /mnt/store/melpa/working/ibrowse/
-Checking out 5f708dd93a9f4d98e005d08ef6f1d30bfd3eb2f4
+Checking out b4964c63ed5b631fffa9a638c523dea6884abcb9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ibrowse/
-  to /tmp/ibrowseBiuZdM/ibrowse-20230811.756
+  to /tmp/ibrowse4Sepnv/ibrowse-20230812.1435
     ibrowse-bookmark-chromium.el -> ibrowse-bookmark-chromium.el
     ibrowse-bookmark-firefox.el -> ibrowse-bookmark-firefox.el
     ibrowse-bookmark.el -> ibrowse-bookmark.el
@@ -15,18 +15,18 @@ Copying files (->) and directories (=>)
     ibrowse-sql.el -> ibrowse-sql.el
     ibrowse-tab.el -> ibrowse-tab.el
     ibrowse.el -> ibrowse.el
-Created ibrowse-20230811.756.tar containing:
-  ibrowse-20230811.756/
-  ibrowse-20230811.756/ibrowse-bookmark-chromium.el
-  ibrowse-20230811.756/ibrowse-bookmark-firefox.el
-  ibrowse-20230811.756/ibrowse-bookmark.el
-  ibrowse-20230811.756/ibrowse-core.el
-  ibrowse-20230811.756/ibrowse-history.el
-  ibrowse-20230811.756/ibrowse-pkg.el
-  ibrowse-20230811.756/ibrowse-sql.el
-  ibrowse-20230811.756/ibrowse-tab.el
-  ibrowse-20230811.756/ibrowse.el
-Built ibrowse in 6.214s, finished at 2023-08-12T10:07:33+0000
+Created ibrowse-20230812.1435.tar containing:
+  ibrowse-20230812.1435/
+  ibrowse-20230812.1435/ibrowse-bookmark-chromium.el
+  ibrowse-20230812.1435/ibrowse-bookmark-firefox.el
+  ibrowse-20230812.1435/ibrowse-bookmark.el
+  ibrowse-20230812.1435/ibrowse-core.el
+  ibrowse-20230812.1435/ibrowse-history.el
+  ibrowse-20230812.1435/ibrowse-pkg.el
+  ibrowse-20230812.1435/ibrowse-sql.el
+  ibrowse-20230812.1435/ibrowse-tab.el
+  ibrowse-20230812.1435/ibrowse.el
+Built ibrowse in 4.498s, finished at 2023-08-12T18:54:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 437 Aug 12 10:07 packages/ibrowse-20230811.756.entry
- 60K -rw-r--r-- 1 root root 60K Aug 12 10:07 packages/ibrowse-20230811.756.tar
+4.0K -rw-r--r-- 1 root root 438 Aug 12 18:54 packages/ibrowse-20230812.1435.entry
+ 60K -rw-r--r-- 1 root root 60K Aug 12 18:54 packages/ibrowse-20230812.1435.tar

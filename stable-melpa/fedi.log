@@ -3,18 +3,22 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/fedi.el.git
 
 Updating /mnt/store/melpa/working/fedi/
-Checking out 308e671f8f5329f28d3846b0c31039f52bd9d6e7
+Checking out b898abb1d9b29f386b586d72f62596d298392987
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fedi/
-  to /tmp/fediBnWLpe/fedi-20230801.1500
+  to /tmp/fedizUoLGv/fedi-20230812.1530
     fedi-http.el -> fedi-http.el
+    fedi-post.el -> fedi-post.el
     fedi.el -> fedi.el
-Created fedi-20230801.1500.tar containing:
-  fedi-20230801.1500/
-  fedi-20230801.1500/fedi-http.el
-  fedi-20230801.1500/fedi-pkg.el
-  fedi-20230801.1500/fedi.el
-Built fedi in 6.452s, finished at 2023-08-12T09:54:55+0000
+Created fedi-20230812.1530.tar containing:
+  fedi-20230812.1530/
+  fedi-20230812.1530/fedi-http.el
+  fedi-20230812.1530/fedi-pkg.el
+  fedi-20230812.1530/fedi-post.el
+  fedi-20230812.1530/fedi.el
+Built fedi in 3.628s, finished at 2023-08-12T18:42:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 405 Aug 12 09:54 packages/fedi-20230801.1500.entry
- 52K -rw-r--r-- 1 root root 50K Aug 12 09:54 packages/fedi-20230801.1500.tar
+4.0K -rw-r--r-- 1 root root 405 Aug 12 15:48 packages/fedi-20230801.1500.entry
+ 52K -rw-r--r-- 1 root root 50K Aug 12 15:48 packages/fedi-20230801.1500.tar
+4.0K -rw-r--r-- 1 root root 405 Aug 12 18:42 packages/fedi-20230812.1530.entry
+ 72K -rw-r--r-- 1 root root 70K Aug 12 18:42 packages/fedi-20230812.1530.tar

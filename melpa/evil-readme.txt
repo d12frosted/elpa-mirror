@@ -16,7 +16,7 @@ Then add the following lines to ~/.emacs:
 Evil requires undo-redo (Emacs 28), undo-fu or undo-tree for redo
 functionality.  Otherwise, Evil uses regular Emacs undo.
 
-    https://gitlab.com/ideasman42/emacs-undo-fu
+    https://codeberg.org/ideasman42/emacs-undo-fu
     https://melpa.org/#/undo-fu
     https://gitlab.com/tsc25/undo-tree
     https://elpa.gnu.org/packages/undo-tree.html
