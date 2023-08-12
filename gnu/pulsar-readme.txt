@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `pulsar' (or `pulsar.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.5.0,
-released on 2022-08-19.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.0.0,
+released on 2023-08-12.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.6.0-dev.
+Current development target is 1.1.0-dev.
 
 ⁃ Package name (GNU ELPA): `pulsar'
 ⁃ Official manual: <https://protesilaos.com/emacs/pulsar>
@@ -25,6 +25,8 @@ Current development target is 0.6.0-dev.
     ⁃ GitHub: <https://github.com/protesilaos/pulsar>
     ⁃ GitLab: <https://gitlab.com/protesilaos/pulsar>
 ⁃ Mailing list: <https://lists.sr.ht/~protesilaos/pulsar>
+⁃ Backronym: Pulsar Unquestionably Luminates, Strictly Absent the
+  Radiation.
 
 Table of Contents
 ─────────────────
@@ -37,6 +39,7 @@ Table of Contents
 .. 2. Manual installation
 4. Sample configuration
 .. 1. Use pulsar with next-error
+.. 2. Use pulsar in the minibuffer
 5. Integration with other packages
 6. Acknowledgements
 7. GNU Free Documentation License
@@ -49,7 +52,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022 Free Software Foundation, Inc.
+  Copyright (C) 2022-2023 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -242,6 +245,33 @@ Table of Contents
   └────
 
 
+4.2 Use pulsar in the minibuffer
+────────────────────────────────
+
+  Due to how the minibuffer works, the user cannot rely on the user
+  option `pulse-pulse-functions' to automatically pulse in that context.
+  Instead, the user must add a function to the `minibuffer-setup-hook':
+  it will trigger a pulse as soon as the minibuffer shows up:
+
+  ┌────
+  │ (add-hook 'minibuffer-setup-hook #'pulsar-pulse-line)
+  └────
+
+  The `pulsar-pulse-line' function will use the default Pulsar face, per
+  the user option `pulsar-face'.
+
+  A convenience function can also be used ([Convenience functions]).
+  The idea is to apply a different color than the one applied by
+  default.  For example:
+
+  ┌────
+  │ (add-hook 'minibuffer-setup-hook #'pulsar-pulse-line-blue)
+  └────
+
+
+[Convenience functions] See section 2.1
+
+
 5 Integration with other packages
 ═════════════════════════════════
 
@@ -249,7 +279,8 @@ Table of Contents
   added to hooks that are provided by other packages.
 
   There are two functions to recenter and then pulse the current line:
-  `pulsar-recenter-top' and `pulsar-recenter-middle'.
+  `pulsar-recenter-top' and `pulsar-recenter-center' (alias
+  `pulsar-recenter-middle').
 
   There also exists `pulsar-reveal-entry' which displays the hidden
   contents of an Org or Outline heading.  It can be used in tandem with
@@ -277,7 +308,8 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to the code or manual
-        Aymeric Agon-Rambosson, Daniel Mendler, Ivan Popovych, JD Smith.
+        Aymeric Agon-Rambosson, Daniel Mendler, Ivan Popovych, JD Smith,
+        Ryan Kaskel.
 
   Ideas and user feedback
         Duy Nguyen, Mark Barton, Petter Storvik, Rudolf Adamkovič, Toon

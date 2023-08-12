@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out fdc5f6cf687bdde7b19f9252d1d6c0f49d0ede54
+Checking out 25fe8af6ba7b1b5a289e198ed491f0f830ffa43c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyjSSsW8/loopy-20230506.2230
+  to /tmp/loopycUy7eY/loopy-20230812.310
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
     loopy-misc.el -> loopy-misc.el
@@ -16,20 +16,20 @@ Copying files (->) and directories (=>)
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Generating /tmp/loopyjSSsW8/loopy-20230506.2230/loopy.info
-Created loopy-20230506.2230.tar containing:
-  loopy-20230506.2230/
-  loopy-20230506.2230/dir
-  loopy-20230506.2230/loopy-commands.el
-  loopy-20230506.2230/loopy-iter.el
-  loopy-20230506.2230/loopy-misc.el
-  loopy-20230506.2230/loopy-pcase.el
-  loopy-20230506.2230/loopy-pkg.el
-  loopy-20230506.2230/loopy-seq.el
-  loopy-20230506.2230/loopy-vars.el
-  loopy-20230506.2230/loopy.el
-  loopy-20230506.2230/loopy.info
-Built loopy in 22.741s, finished at 2023-08-12T01:24:40+0000
+Generating /tmp/loopycUy7eY/loopy-20230812.310/loopy.info
+Created loopy-20230812.310.tar containing:
+  loopy-20230812.310/
+  loopy-20230812.310/dir
+  loopy-20230812.310/loopy-commands.el
+  loopy-20230812.310/loopy-iter.el
+  loopy-20230812.310/loopy-misc.el
+  loopy-20230812.310/loopy-pcase.el
+  loopy-20230812.310/loopy-pkg.el
+  loopy-20230812.310/loopy-seq.el
+  loopy-20230812.310/loopy-vars.el
+  loopy-20230812.310/loopy.el
+  loopy-20230812.310/loopy.info
+Built loopy in 19.302s, finished at 2023-08-12T10:15:14+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  327 Aug 12 01:24 packages/loopy-20230506.2230.entry
-500K -rw-r--r-- 1 root root 500K Aug 12 01:24 packages/loopy-20230506.2230.tar
+4.0K -rw-r--r-- 1 root root  326 Aug 12 10:15 packages/loopy-20230812.310.entry
+520K -rw-r--r-- 1 root root 520K Aug 12 10:15 packages/loopy-20230812.310.tar

@@ -3,10 +3,10 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Checking out 008af15a1ce5f35d844639a1236f015c02c9117c
+Checking out 1b777ca8ace57d881cea1c16a0773f80811d7262
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperdrive/
-  to /tmp/hyperdrivelYEHGJ/hyperdrive-20230811.2032
+  to /tmp/hyperdriveQgPowS/hyperdrive-20230812.737
     hyperdrive-describe.el -> hyperdrive-describe.el
     hyperdrive-diff.el -> hyperdrive-diff.el
     hyperdrive-dir.el -> hyperdrive-dir.el
@@ -19,24 +19,26 @@ Copying files (->) and directories (=>)
     hyperdrive-vars.el -> hyperdrive-vars.el
     hyperdrive.el -> hyperdrive.el
   ! doc/hyperdrive-manual.texi -> hyperdrive-manual.texi
-Generating /tmp/hyperdrivelYEHGJ/hyperdrive-20230811.2032/hyperdrive-manual.info
-Created hyperdrive-20230811.2032.tar containing:
-  hyperdrive-20230811.2032/
-  hyperdrive-20230811.2032/dir
-  hyperdrive-20230811.2032/hyperdrive-describe.el
-  hyperdrive-20230811.2032/hyperdrive-diff.el
-  hyperdrive-20230811.2032/hyperdrive-dir.el
-  hyperdrive-20230811.2032/hyperdrive-ewoc.el
-  hyperdrive-20230811.2032/hyperdrive-handlers.el
-  hyperdrive-20230811.2032/hyperdrive-history.el
-  hyperdrive-20230811.2032/hyperdrive-lib.el
-  hyperdrive-20230811.2032/hyperdrive-manual.info
-  hyperdrive-20230811.2032/hyperdrive-mirror.el
-  hyperdrive-20230811.2032/hyperdrive-org.el
-  hyperdrive-20230811.2032/hyperdrive-pkg.el
-  hyperdrive-20230811.2032/hyperdrive-vars.el
-  hyperdrive-20230811.2032/hyperdrive.el
-Built hyperdrive in 9.558s, finished at 2023-08-12T01:16:53+0000
+Generating /tmp/hyperdriveQgPowS/hyperdrive-20230812.737/hyperdrive-manual.info
+Created hyperdrive-20230812.737.tar containing:
+  hyperdrive-20230812.737/
+  hyperdrive-20230812.737/dir
+  hyperdrive-20230812.737/hyperdrive-describe.el
+  hyperdrive-20230812.737/hyperdrive-diff.el
+  hyperdrive-20230812.737/hyperdrive-dir.el
+  hyperdrive-20230812.737/hyperdrive-ewoc.el
+  hyperdrive-20230812.737/hyperdrive-handlers.el
+  hyperdrive-20230812.737/hyperdrive-history.el
+  hyperdrive-20230812.737/hyperdrive-lib.el
+  hyperdrive-20230812.737/hyperdrive-manual.info
+  hyperdrive-20230812.737/hyperdrive-mirror.el
+  hyperdrive-20230812.737/hyperdrive-org.el
+  hyperdrive-20230812.737/hyperdrive-pkg.el
+  hyperdrive-20230812.737/hyperdrive-vars.el
+  hyperdrive-20230812.737/hyperdrive.el
+Built hyperdrive in 19.322s, finished at 2023-08-12T10:07:31+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  507 Aug 12 01:16 packages/hyperdrive-20230811.2032.entry
-240K -rw-r--r-- 1 root root 240K Aug 12 01:16 packages/hyperdrive-20230811.2032.tar
+4.0K -rw-r--r-- 1 root root  507 Aug 12 07:08 packages/hyperdrive-20230811.2032.entry
+240K -rw-r--r-- 1 root root 240K Aug 12 07:08 packages/hyperdrive-20230811.2032.tar
+4.0K -rw-r--r-- 1 root root  506 Aug 12 10:07 packages/hyperdrive-20230812.737.entry
+240K -rw-r--r-- 1 root root 240K Aug 12 10:07 packages/hyperdrive-20230812.737.tar
