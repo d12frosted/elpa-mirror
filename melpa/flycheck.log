@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/flycheck/flycheck.git
 
 Updating /mnt/store/melpa/working/flycheck/
-Checking out 5f2ef177cb21ae8b73714575802beef04abd0f5e
+Checking out 773c3eb31ebeb6bb2f9f57d28177882ca7073df0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flycheck/
-  to /tmp/flychecklZzokh/flycheck-20230306.414
+  to /tmp/flycheckuCDTbk/flycheck-20230813.620
     flycheck-buttercup.el -> flycheck-buttercup.el
     flycheck-ert.el -> flycheck-ert.el
     flycheck.el -> flycheck.el
-Created flycheck-20230306.414.tar containing:
-  flycheck-20230306.414/
-  flycheck-20230306.414/flycheck-buttercup.el
-  flycheck-20230306.414/flycheck-ert.el
-  flycheck-20230306.414/flycheck-pkg.el
-  flycheck-20230306.414/flycheck.el
-Built flycheck in 4.372s, finished at 2023-08-13T03:33:26+0000
+Created flycheck-20230813.620.tar containing:
+  flycheck-20230813.620/
+  flycheck-20230813.620/flycheck-buttercup.el
+  flycheck-20230813.620/flycheck-ert.el
+  flycheck-20230813.620/flycheck-pkg.el
+  flycheck-20230813.620/flycheck.el
+Built flycheck in 5.738s, finished at 2023-08-13T06:31:28+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  583 Aug 13 03:33 packages/flycheck-20230306.414.entry
 520K -rw-r--r-- 1 root root 520K Aug 13 03:33 packages/flycheck-20230306.414.tar
+4.0K -rw-r--r-- 1 root root  583 Aug 13 06:31 packages/flycheck-20230813.620.entry
+520K -rw-r--r-- 1 root root 520K Aug 13 06:31 packages/flycheck-20230813.620.tar
