@@ -190,14 +190,14 @@
 	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:keywords "ocaml"))])
  (cdlatex .
-	  [(4 15)
+	  [(4 17)
 	   nil "Fast input methods for LaTeX environments and math" tar
 	   ((:keywords "tex")
 	    (:maintainer "Carsten Dominik" . "carsten.dominik@gmail.com")
 	    (:authors
 	     ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
-	    (:commit . "9a09c2ad32e45889ab7696a8cedbf99d6a17edd6"))])
+	    (:commit . "c13f089e960c5596a769cb445955eacf020f61b0"))])
  (cider .
 	[(1 7 0)
 	 ((emacs
@@ -2243,16 +2243,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 4 20230811133840)
+	       [(24 5 20230812104032)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:authors
-		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "9e767a3f15ebd34968c62a0ffe46ff4a8499ff9f"))])
+		 (:commit . "b873a08cdb7966dea848e8a2854debb1a5d94328"))])
  (xkcd .
        [(1 1)
 	((json
