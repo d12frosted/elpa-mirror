@@ -3,26 +3,28 @@ Fetcher: github
 Source:  https://github.com/amake/macports.el.git
 
 Updating /mnt/store/melpa/working/macports/
-Checking out 1bd8406c84a80204f69f8bc328ab842a049a1aab
+Checking out 0a99de715b1f62a01d8128dfaef263a168ee05e4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/macports/
-  to /tmp/macportsr1LFye/macports-20230427.1110
+  to /tmp/macports987OTj/macports-20230814.1525
     macports-core.el -> macports-core.el
     macports-describe.el -> macports-describe.el
     macports-installed.el -> macports-installed.el
     macports-outdated.el -> macports-outdated.el
     macports-select.el -> macports-select.el
     macports.el -> macports.el
-Created macports-20230427.1110.tar containing:
-  macports-20230427.1110/
-  macports-20230427.1110/macports-core.el
-  macports-20230427.1110/macports-describe.el
-  macports-20230427.1110/macports-installed.el
-  macports-20230427.1110/macports-outdated.el
-  macports-20230427.1110/macports-pkg.el
-  macports-20230427.1110/macports-select.el
-  macports-20230427.1110/macports.el
-Built macports in 4.636s, finished at 2023-08-14T09:29:10+0000
+Created macports-20230814.1525.tar containing:
+  macports-20230814.1525/
+  macports-20230814.1525/macports-core.el
+  macports-20230814.1525/macports-describe.el
+  macports-20230814.1525/macports-installed.el
+  macports-20230814.1525/macports-outdated.el
+  macports-20230814.1525/macports-pkg.el
+  macports-20230814.1525/macports-select.el
+  macports-20230814.1525/macports.el
+Built macports in 4.338s, finished at 2023-08-14T18:14:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 400 Aug 14 09:29 packages/macports-20230427.1110.entry
- 60K -rw-r--r-- 1 root root 60K Aug 14 09:29 packages/macports-20230427.1110.tar
+4.0K -rw-r--r-- 1 root root 400 Aug 14 15:18 packages/macports-20230814.1431.entry
+ 60K -rw-r--r-- 1 root root 60K Aug 14 15:18 packages/macports-20230814.1431.tar
+4.0K -rw-r--r-- 1 root root 400 Aug 14 18:14 packages/macports-20230814.1525.entry
+ 60K -rw-r--r-- 1 root root 60K Aug 14 18:14 packages/macports-20230814.1525.tar

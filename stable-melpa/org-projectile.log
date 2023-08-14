@@ -1,18 +1,22 @@
 Package: org-projectile
 Fetcher: github
-Source:  https://github.com/colonelpanic8/org-projectile.git
+Source:  https://github.com/colonelpanic8/org-project-capture.git
 
 Updating /mnt/store/melpa/working/org-projectile/
-Checking out b904009a4f2f28ce9748e55730b6a419a516549e
+Checking out ae8a474700298b5f8a511eb6952fa69647b4fa04
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-projectile/
-  to /tmp/org-projectilev3MRfc/org-projectile-20230813.1939
+  to /tmp/org-projectilevH1Ho9/org-projectile-20230814.159
     org-projectile.el -> org-projectile.el
-Created org-projectile-20230813.1939.tar containing:
-  org-projectile-20230813.1939/
-  org-projectile-20230813.1939/org-projectile-pkg.el
-  org-projectile-20230813.1939/org-projectile.el
-Built org-projectile in 3.522s, finished at 2023-08-14T09:38:57+0000
+    org-project-capture.el -> org-project-capture.el
+    org-project-capture-backend.el -> org-project-capture-backend.el
+Created org-projectile-20230814.159.tar containing:
+  org-projectile-20230814.159/
+  org-projectile-20230814.159/org-project-capture-backend.el
+  org-projectile-20230814.159/org-project-capture.el
+  org-projectile-20230814.159/org-projectile-pkg.el
+  org-projectile-20230814.159/org-projectile.el
+Built org-projectile in 3.297s, finished at 2023-08-14T18:23:24+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 604 Aug 14 09:38 packages/org-projectile-20230813.1939.entry
- 20K -rw-r--r-- 1 root root 20K Aug 14 09:38 packages/org-projectile-20230813.1939.tar
+4.0K -rw-r--r-- 1 root root 614 Aug 14 18:23 packages/org-projectile-20230814.159.entry
+ 40K -rw-r--r-- 1 root root 40K Aug 14 18:23 packages/org-projectile-20230814.159.tar
