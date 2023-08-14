@@ -3,16 +3,9 @@ Fetcher: git
 Source:  https://git.spwhitton.name/haskell-tab-indent
 
 Updating /mnt/store/melpa/working/haskell-tab-indent/
-Checking out 1127f46eca40a48be9cd2380df2cfc5f0b694e63
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/haskell-tab-indent/
-  to /tmp/haskell-tab-indent5N0Fv0/haskell-tab-indent-20200514.1424
-    haskell-tab-indent.el -> haskell-tab-indent.el
-Created haskell-tab-indent-20200514.1424.tar containing:
-  haskell-tab-indent-20200514.1424/
-  haskell-tab-indent-20200514.1424/haskell-tab-indent-pkg.el
-  haskell-tab-indent-20200514.1424/haskell-tab-indent.el
-Built haskell-tab-indent in 4.461s, finished at 2023-08-14T03:10:00+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 501 Aug 14 03:09 packages/haskell-tab-indent-20200514.1424.entry
- 12K -rw-r--r-- 1 root root 10K Aug 14 03:09 packages/haskell-tab-indent-20200514.1424.tar
+
+Command '' exited with non-zero exit-code: 128
+
+fatal: unable to access 'https://git.spwhitton.name/haskell-tab-indent/': Failed to connect to git.spwhitton.name port 443: Connection timed out
+
+Command exited with non-zero exit-code: 128

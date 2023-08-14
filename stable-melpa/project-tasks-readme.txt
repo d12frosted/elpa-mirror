@@ -1,24 +1,18 @@
-(use-package project-tasks
-  :ensure t :defer t
-  :commands (project-tasks)
+`project-tasks` provides efficient task management for your project.
+It allows you to organize and manage your project's tasks in an
+Org file. You can quickly jump to the task file, capture new tasks
+and easily run tasks by name.
 
-  :init
-  ;; Show project-tasks when switching projects
-  (add-to-list 'project-switch-commands '(project-tasks "tasks") t)
-  ;; Add action to embark-file map
-  (with-eval-after-load 'embark
-    (define-key embark-file-map (kbd "P") #'project-tasks-in-dir))
+The main idea is to use Org source blocks as tasks. Each source
+block is a task and its name is the task name. You can use
+`project-tasks` to quickly run a task by name.
 
-  :custom
-  ;; Set the default filename in project
-  (project-tasks-file "tasks.org")
-  ;; Set the function to get current project dir
-  (project-tasks-root-func #'project-tasks-project-root)
+Example:
+If we want to have a fast way to run `top` command in our project,
+we can add a source block named `Run top` to `tasks.org` file:
+#+name: Run top
+#+begin_src elisp :results none
+(comint-run "top")
+#+end_src
 
-  ;; Bind project-tasks to project keymap
-  :bind
-  (:map project-prefix-map
-        ("P" . project-tasks)
-        ("o" . project-tasks-capture)
-        ("O" . project-tasks-jump))
-  )
+Then we just need to run `M-x project-tasks` to select and run the task.
