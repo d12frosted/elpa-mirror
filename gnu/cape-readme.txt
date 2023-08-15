@@ -1,6 +1,6 @@
-		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		  CAPE.EL - LET YOUR COMPLETIONS FLY!
-		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                  CAPE.EL - LET YOUR COMPLETIONS FLY!
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Cape provides Completion At Point Extensions which can be used in
@@ -68,6 +68,27 @@ Table of Contents
   with `package-install'. In the following we present a sample
   configuration based on the popular `use-package' macro.
 
+  I recommend to bind the `cape-*' completion commands to keys such that
+  you can invoke them explicitly. This makes particular sense for
+  special Capfs which you only want to trigger in rare
+  circumstances. See the `:bind' specification below.
+
+  Furthermore the `cape-*' functions are Capfs which you can add to the
+  `completion-at-point-functions' list. Take care when adding Capfs to
+  the list since each of the Capfs adds a small runtime cost. Note that
+  the Capfs which occur earlier in the list take precedence, such that
+  the first Capf returning a result will win and the later Capfs may not
+  get a chance to run. In order to merge Capfs you can try the
+  experimental function `cape-super-capf'.
+
+  One must distinguish the buffer-local and the global value of the
+  `completion-at-point-functions' variable. The buffer-local value of
+  the list takes precedence, but if the buffer-local list contains the
+  symbol `t' at the end, it means that the functions specified in the
+  global list should be executed afterwards. The special meaning of the
+  value `t' is a feature of the `run-hooks' function, see the section
+  ["Running Hooks" in the Elisp manual] for further information.
+
   ┌────
   │ ;; Enable Corfu completion UI
   │ ;; See the Corfu README for more configuration tips.
@@ -95,8 +116,10 @@ Table of Contents
   │ 	 ("C-c p &" . cape-sgml)
   │ 	 ("C-c p r" . cape-rfc1345))
   │   :init
-  │   ;; Add `completion-at-point-functions', used by `completion-at-point'.
-  │   ;; NOTE: The order matters!
+  │   ;; Add to the global default value of `completion-at-point-functions' which is
+  │   ;; used by `completion-at-point'.  The order of the functions matters, the
+  │   ;; first function returning a result wins.  Note that the list of buffer-local
+  │   ;; completion functions takes precedence over the global list.
   │   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   │   (add-to-list 'completion-at-point-functions #'cape-file)
   │   (add-to-list 'completion-at-point-functions #'cape-elisp-block)
@@ -111,6 +134,9 @@ Table of Contents
   │   ;;(add-to-list 'completion-at-point-functions #'cape-line)
   │ )
   └────
+
+
+["Running Hooks" in the Elisp manual] <info:elisp#Running Hooks>
 
 
 3 CAPF adapters and transformers
@@ -191,28 +217,27 @@ Table of Contents
   /Throw multiple Capfs under the Cape and get a Super-Capf!/
 
   Cape supports merging multiple Capfs using the function
-  `cape-super-capf'.  *This feature is EXPERIMENTAL and should only be
-  used in special scenarios. Don't use cape-super-capf if you are not
-  100% sure that you need it! If you decide to use the function, you are
-  on UNSUPPORTED TERRITORY.*
+  `cape-super-capf'. This feature is *EXPERIMENTAL* and should only be
+  used carefully in special scenarios.  Due to some technical details,
+  only a subset of Capfs can be merged. Merge Capfs one by one and make
+  sure that you get the desired outcome on each step.
 
   Note that `cape-super-capf' is not needed if you want to use multiple
-  Capfs which are tried one by one, e.g., it is perfectly possible to
-  use `cape-file' together with the Lsp-mode Capf or other programming
-  mode Capfs by adding `cape-file' to the
-  `completion-at-point-functions' list. The file completion will be
-  available in comments and string literals. `cape-super-capf' is only
-  needed if you want to combine multiple Capfs, such that the candidates
-  from multiple sources appear /together/ in the completion list at the
-  same time.
+  Capfs which are tried one after the other, for example you can use
+  `cape-file' together with programming mode Capfs by adding `cape-file'
+  to the `completion-at-point-functions' list. File completion will then
+  be available in comments and string literals, but not in normal
+  code. `cape-super-capf' is only necessary if you want to combine
+  multiple Capfs, such that the candidates from multiple sources appear
+  /together/ in the completion list at the same time.
 
-  Completion table merging works only for tables which are sufficiently
-  well-behaved and tables which do not define completion boundaries.
-  `cape-super-capf' has the same restrictions as
+  Capf merging works only for completion functions which are
+  sufficiently well-behaved and completion functions which do not define
+  completion boundaries.  `cape-super-capf' has the same restrictions as
   `completion-table-merge' and `completion-table-in-turn'. As a simple
-  rule of thumb, `cape-super-capf' works only well for static completion
+  rule of thumb, `cape-super-capf' works only for static completion
   functions like `cape-dabbrev', `cape-keyword', `cape-dict', etc., but
-  not for complex multi-step completions like `cape-file'.
+  not for multi-step completions like `cape-file'.
 
   ┌────
   │ ;; Merge the dabbrev, dict and keyword capfs, display candidates together.
@@ -306,8 +331,9 @@ Table of Contents
   │ (setq-local completion-at-point-functions (list #'cape-dabbrev-min-2))
   │ 
   │ ;; Example 4: Define a defensive Dabbrev Capf, which accepts all inputs.  If you
-  │ ;; use Corfu and `corfu-auto=t', the first candidate won't be auto selected even
-  │ ;; if `corfu-preselect=first'. You can use this instead of `cape-dabbrev'.
+  │ ;; use Corfu and `corfu-auto=t', the first candidate won't be auto selected if
+  │ ;; `corfu-preselect=valid', such that it cannot be accidentally committed when
+  │ ;; pressing RET.
   │ (defun my-cape-dabbrev-accept-all ()
   │   (cape-wrap-accept-all #'cape-dabbrev))
   │ (add-to-list 'completion-at-point-functions #'my-cape-dabbrev-accept-all)

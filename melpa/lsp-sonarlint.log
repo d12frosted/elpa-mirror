@@ -3,40 +3,40 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-sonarlint.git
 
 Updating /mnt/store/melpa/working/lsp-sonarlint/
-Checking out a429be2aea7797369a3c751ef54e3554733117be
+Checking out d131779950d5d45c3129eb088cef5fd11099f47c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-sonarlint/
-  to /tmp/lsp-sonarlintSZrJuB/lsp-sonarlint-20220510.1802
+  to /tmp/lsp-sonarlintKNy8nV/lsp-sonarlint-20230814.1954
     lsp-sonarlint.el -> lsp-sonarlint.el
   ! languages/xml/lsp-sonarlint-xml.el -> languages/lsp-sonarlint-xml.el
   ! languages/typescript/lsp-sonarlint-typescript.el -> languages/lsp-sonarlint-typescript.el
-  ! languages/scala/lsp-sonarlint-scala.el -> languages/lsp-sonarlint-scala.el
-  ! languages/ruby/lsp-sonarlint-ruby.el -> languages/lsp-sonarlint-ruby.el
+  ! languages/text/lsp-sonarlint-text.el -> languages/lsp-sonarlint-text.el
   ! languages/python/lsp-sonarlint-python.el -> languages/lsp-sonarlint-python.el
   ! languages/php/lsp-sonarlint-php.el -> languages/lsp-sonarlint-php.el
   ! languages/javascript/lsp-sonarlint-javascript.el -> languages/lsp-sonarlint-javascript.el
   ! languages/java/lsp-sonarlint-java.el -> languages/lsp-sonarlint-java.el
   ! languages/html/lsp-sonarlint-html.el -> languages/lsp-sonarlint-html.el
+  ! languages/go/lsp-sonarlint-go.el -> languages/lsp-sonarlint-go.el
     server/LICENSE -> server/LICENSE
     server/sonarlint-language-server.jar -> server/sonarlint-language-server.jar
-Created lsp-sonarlint-20220510.1802.tar containing:
-  lsp-sonarlint-20220510.1802/
-  lsp-sonarlint-20220510.1802/languages/
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-html.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-java.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-javascript.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-php.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-python.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-ruby.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-scala.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-typescript.el
-  lsp-sonarlint-20220510.1802/languages/lsp-sonarlint-xml.el
-  lsp-sonarlint-20220510.1802/lsp-sonarlint-pkg.el
-  lsp-sonarlint-20220510.1802/lsp-sonarlint.el
-  lsp-sonarlint-20220510.1802/server/
-  lsp-sonarlint-20220510.1802/server/LICENSE
-  lsp-sonarlint-20220510.1802/server/sonarlint-language-server.jar
-Built lsp-sonarlint in 7.685s, finished at 2023-08-14T18:14:15+0000
+Created lsp-sonarlint-20230814.1954.tar containing:
+  lsp-sonarlint-20230814.1954/
+  lsp-sonarlint-20230814.1954/languages/
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-go.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-html.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-java.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-javascript.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-php.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-python.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-text.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-typescript.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-xml.el
+  lsp-sonarlint-20230814.1954/lsp-sonarlint-pkg.el
+  lsp-sonarlint-20230814.1954/lsp-sonarlint.el
+  lsp-sonarlint-20230814.1954/server/
+  lsp-sonarlint-20230814.1954/server/LICENSE
+  lsp-sonarlint-20230814.1954/server/sonarlint-language-server.jar
+Built lsp-sonarlint in 6.885s, finished at 2023-08-15T00:02:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 536 Aug 14 18:14 packages/lsp-sonarlint-20220510.1802.entry
- 14M -rw-r--r-- 1 root root 14M Aug 14 18:14 packages/lsp-sonarlint-20220510.1802.tar
+4.0K -rw-r--r-- 1 root root 541 Aug 15 00:02 packages/lsp-sonarlint-20230814.1954.entry
+ 23M -rw-r--r-- 1 root root 23M Aug 15 00:02 packages/lsp-sonarlint-20230814.1954.tar

@@ -405,18 +405,18 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "ad65bf9b51edaf85371db958a1dcaff2f620519f"))])
  (cape .
-       [(0 16)
+       [(0 17)
 	((emacs
 	  (27 1))
 	 (compat
-	  (29 1 4 0)))
+	  (29 1 4 2)))
 	"Completion At Point Extensions" tar
 	((:url . "https://github.com/minad/cape")
 	 (:keywords "abbrev" "convenience" "matching" "completion" "wp")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "c8e3a75f2b1096fbb09c9f4b3f60ab1fdcfee13b"))])
+	 (:commit . "7bec22b26be62bc0dab0c2a1ba6bc4b33fcabba1"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -613,18 +613,18 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 37)
+	[(0 38)
 	 ((emacs
 	   (27 1))
 	  (compat
-	   (29 1 4 0)))
+	   (29 1 4 2)))
 	 "COmpletion in Region FUnction" tar
 	 ((:url . "https://github.com/minad/corfu")
 	  (:keywords "abbrev" "convenience" "matching" "completion" "wp")
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "664ef966f3668f3b5c30a8c5db429ae38ca00c61"))])
+	  (:commit . "d73dcb484e0bfb23fe4b73ad3fc8df3c0d94b096"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
