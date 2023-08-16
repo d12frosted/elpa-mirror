@@ -3,7 +3,6 @@ designed for easy peer-to-peer file sharing.  hyperdrive.el is an
 independent project built by https://ushin.org which provides an
 Emacs interface for managing hyperdrives.
 
-
 ;; Installation:
 
 hyperdrive.el requires Emacs version 27.1 or later.
