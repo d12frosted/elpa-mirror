@@ -1,10 +1,10 @@
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	      PULSAR.EL: PULSE HIGHLIGHT LINE ON DEMAND OR
-		     AFTER RUNNING SELECT FUNCTIONS
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+              PULSAR.EL: PULSE HIGHLIGHT LINE ON DEMAND OR
+                     AFTER RUNNING SELECT FUNCTIONS
 
-			  Protesilaos Stavrou
-			  info@protesilaos.com
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          Protesilaos Stavrou
+                          info@protesilaos.com
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This manual, written by Protesilaos Stavrou, describes the customization
