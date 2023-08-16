@@ -2,24 +2,25 @@ Edit, create and view your GitHub gists.
 
 Usage
 
- `igist-dispatch' - to invoke transient popup with the list of available commands
+ `igist-dispatch' - Invoke transient menu with the list of available
+  commands.
 
 Tabulated display:
 
-M-x `igist-list-gists' - to display your gists as table.
-M-x `igist-list-other-user-gists' - to display public gists of any user.
-M-x `igist-explore-public-gists' - List public gists sorted by most recently updated to least recently updated.
+M-x `igist-list-gists' - Display your gists as table.
+M-x `igist-list-other-user-gists' - Display public gists of any user.
+M-x `igist-explore-public-gists' - List public gists sorted.
 
 Completions display:
 
-M-x `igist-edit-list' - Read user gists in minibuffer and open it in edit buffer.
+M-x `igist-edit-list' Read Gist to edit from the minibuffer.
 
 ; Create commands:
 
 M-x `igist-create-new-gist'
      Create the editable gist buffer with the content of the current buffer.
 
-M-x `igist-new-gist-from-buffer' (&rest _ignore)
+M-x `igist-new-gist-from-buffer'
      Setup new gist buffer whole buffer contents.
 
 M-x `igist-list-add-file'
@@ -27,6 +28,12 @@ M-x `igist-list-add-file'
 
 M-x `igist-fork-gist'
      Fork gist at point in `igist-list-mode' or currently opened.
+
+M-x `igist-post-files' Post multiple files to Gist. If
+     there are marked files in the Dired buffer, use them; otherwise, read
+     the directory in the minibuffer with completions and then read multiple
+     files.
+
 
 Delete commands:
 
@@ -99,26 +106,33 @@ M-x `igist-change-user' (&rest _)
 
 ; Customization
 
+- `igist-current-user-name': This variable should be set to a string
+  that contains your GitHub username.
 
-`igist-current-user-name' is a customizable option that represents the
-GitHub user name used for making authorized requests.
+- `igist-auth-marker': This variable can either be a string that
+  contains the OAuth token or a symbol indicating where to retrieve
+  the OAuth token.
 
-`igist-auth-marker' This variable can either be a string containing the OAuth
-token or a symbol indicating where to fetch the OAuth token.
+- `igist-message-function': A custom function for displaying messages.
+  Should accept the same arguments as the `message' function.
 
+- `igist-per-page-limit': The number of results displayed per page
+  should be a value ranging between 30 to 100. The default value is 30.
 
-`igist-per-page-limit'
-     The number of results per page (max 100).
+- `igist-ask-for-description': Determines when to prompt for a
+  description before posting new gists. The default setting prompts
+  for a description before saving a new gist.
 
-`igist-ask-for-description'
-     When to prompt for description before posting new gists.
+- `igist-enable-copy-gist-url-p': Specifies whether and when to add
+  the URL of a new or updated gist to the kill ring. The default
+  setting is after the creation of new gists.
 
-`igist-mode-for-comments'
-     Major mode when editing and viewing comments.
-     Program `pandoc' should be installed for `org-mode'.
+- `igist-list-format': Specifies the format of the user's Tabulated
+  Gists buffers.
 
-`igist-list-format'
-     Format for gist list.
+- `igist-explore-format': Specifies the format of the Explore Public
+  Gists tabulated buffers.
+
 
 ; Keymaps
 
