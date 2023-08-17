@@ -3,16 +3,10 @@ Fetcher: git
 Source:  https://git.launchpad.net/global-tags.el
 
 Updating /mnt/store/melpa/working/global-tags/
-Checking out aaa37da4c538f35a90149ef4ad3d8b0922af54ab
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/global-tags/
-  to /tmp/global-tagslmUSLU/global-tags-20211120.347
-    global-tags.el -> global-tags.el
-Created global-tags-20211120.347.tar containing:
-  global-tags-20211120.347/
-  global-tags-20211120.347/global-tags-pkg.el
-  global-tags-20211120.347/global-tags.el
-Built global-tags in 5.152s, finished at 2023-08-17T05:43:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 575 Aug 17 05:43 packages/global-tags-20211120.347.entry
- 40K -rw-r--r-- 1 root root 40K Aug 17 05:43 packages/global-tags-20211120.347.tar
+
+Command '' exited with non-zero exit-code: 128
+
+remote: fatal: '/srv/turnip/data/repos/38860' does not appear to be a git repository
+fatal: unable to access 'https://git.launchpad.net/global-tags.el/': The requested URL returned error: 500
+
+Command exited with non-zero exit-code: 128
