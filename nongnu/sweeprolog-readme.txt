@@ -194,31 +194,25 @@ Comparison with Emacs's built-in Prolog mode
 Installation
 ════════════
 
-  The dynamic Emacs module `sweep-module' is included with SWI-Prolog
-  versions 8.5.18 and later.  For instructions on how to build and
-  install SWI-Prolog, see <https://www.swi-prolog.org/build/>.
+  Installing Sweep requires:
 
-  The `sweeprolog' Elisp package is available on NonGNU ELPA, to install
-  `sweeprolog' simply type `M-x package-install RET sweeprolog RET'.
+  • Emacs 27 or later, and
+  • SWI-Prolog 8.5.18 or later.
 
-  An alternative to installing from ELPA is to get the Elisp library
-  from the Sweep Git repository:
+  Sweep is available from NonGNU ELPA, to install it simply type in
+  Emacs `M-x package-install RET sweeprolog RET'.
 
-  1. Clone the Sweep repository:
-     ┌────
-     │ git clone https://git.sr.ht/~eshel/sweep
-     └────
+  Note that in Emacs prior to version 28, you need to explicitly enable
+  NonGNU ELPA by adding something like the following to your Emacs
+  configuration:
 
-     Or:
+  ┌────
+  │ (with-eval-after-load 'package
+  │   (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/")))
+  └────
 
-     ┌────
-     │ git clone https://github.com/SWI-Prolog/packages-sweep sweep
-     └────
-
-  2. Add Sweep to Emacs’s `load-path':
-     ┌────
-     │ (add-to-list 'load-path "/path/to/sweep")
-     └────
+  To upgrade Sweep to a newer version, do `M-x package-upgrade
+  sweeprolog RET'.
 
 
 Getting Started
