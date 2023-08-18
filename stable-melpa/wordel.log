@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/progfolio/wordel.git
 
 Updating /mnt/store/melpa/working/wordel/
-Checking out dd87d7c1b66eaceb6ebedbbff6ab6d8523004de2
+Checking out 70171a21cbe53e407b86440bf7ee93d39cb5ebde
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/wordel/
-  to /tmp/wordelTgVRfP/wordel-20230528.1902
+  to /tmp/wordelVvx6Zh/wordel-20230818.1324
     wordel.el -> wordel.el
     words => words
-Created wordel-20230528.1902.tar containing:
-  wordel-20230528.1902/
-  wordel-20230528.1902/wordel-pkg.el
-  wordel-20230528.1902/wordel.el
-  wordel-20230528.1902/words/
-  wordel-20230528.1902/words/scrabble
-  wordel-20230528.1902/words/wordle
-Built wordel in 4.767s, finished at 2023-08-18T10:52:45+0000
+Created wordel-20230818.1324.tar containing:
+  wordel-20230818.1324/
+  wordel-20230818.1324/wordel-pkg.el
+  wordel-20230818.1324/wordel.el
+  wordel-20230818.1324/words/
+  wordel-20230818.1324/words/scrabble
+  wordel-20230818.1324/words/wordle
+Built wordel in 5.172s, finished at 2023-08-18T13:46:23+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  470 Aug 18 10:52 packages/wordel-20230528.1902.entry
 680K -rw-r--r-- 1 root root 680K Aug 18 10:52 packages/wordel-20230528.1902.tar
+4.0K -rw-r--r-- 1 root root  470 Aug 18 13:46 packages/wordel-20230818.1324.entry
+680K -rw-r--r-- 1 root root 680K Aug 18 13:46 packages/wordel-20230818.1324.tar
