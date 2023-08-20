@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/w3m/
 Checking out e19e72815a3256d6de5347d8878ea6a00f01bc0b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mG4wstf/w3m-20230818.722
+  to /tmp/w3mnMRYJh/w3m-20230818.722
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -36,50 +36,10 @@ Copying files (->) and directories (=>)
     w3m-weather.el -> w3m-weather.el
     w3m.el -> w3m.el
     w3mhack.el -> w3mhack.el
-  ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
-  ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Generating /tmp/w3mG4wstf/w3m-20230818.722/emacs-w3m-ja.info
-
-Command '' exited with non-zero exit-code: 1
-
-/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
-/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:65: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-
-Error: (error "Command exited with non-zero exit-code: 1")
-
-Command '' exited with non-zero exit-code: 1
-
-install-info: No such file or directory for /tmp/w3mG4wstf/w3m-20230818.722/emacs-w3m-ja.info
-
-Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/w3mG4wstf/w3m-20230818.722/emacs-w3m.info
-
-Command '' exited with non-zero exit-code: 1
-
-/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
-/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
-/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
-
-Error: (error "Command exited with non-zero exit-code: 1")
-
-Command '' exited with non-zero exit-code: 1
-
-install-info: No such file or directory for /tmp/w3mG4wstf/w3m-20230818.722/emacs-w3m.info
-
-Error: (error "Command exited with non-zero exit-code: 1")
 Created w3m-20230818.722.tar containing:
   w3m-20230818.722/
   w3m-20230818.722/bookmark-w3m.el
-  w3m-20230818.722/dir
   w3m-20230818.722/icons/
   w3m-20230818.722/icons/antenna-up.png
   w3m-20230818.722/icons/antenna-up.xpm
@@ -153,7 +113,7 @@ Created w3m-20230818.722.tar containing:
   w3m-20230818.722/w3m-weather.el
   w3m-20230818.722/w3m.el
   w3m-20230818.722/w3mhack.el
-Built w3m in 24.325s, finished at 2023-08-19T21:25:18+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  179 Aug 19 21:25 packages/w3m-20230818.722.entry
-1.1M -rw-r--r-- 1 root root 1.1M Aug 19 21:25 packages/w3m-20230818.722.tar
+  2023-08-20T03:23:10+0000  w3m-20230818.722.entry
+  2023-08-20T03:23:10+0000  w3m-20230818.722.tar
+Built w3m in 4.543s, finished at 2023-08-20T03:23:12+0000
