@@ -62,6 +62,11 @@ it does define an 'xml input-mode and does support the ISO 8879 entity names.
 
 ; Changes
 
+v1.26 20 Aug 2023
+  Fixed some docstring errors.
+  Improved "smart" quoting functions to avoid smart features in YAML files
+  and Org mode source blocks.
+  Updated xmlunicode-character-list.el to the latest UnicodeDatabase.txt
 v1.25 29 Aug 2021
   Added a progress message when loading the xmlunicode-character-alist.
   Fixed a few docstrings.
