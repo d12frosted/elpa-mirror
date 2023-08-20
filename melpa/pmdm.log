@@ -6,13 +6,13 @@ Updating /mnt/store/melpa/working/pmdm/
 Checking out 6d2af9f9e88e6c91eb74dafaddb5f009e1de4907
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pmdm/
-  to /tmp/pmdmeCSZQA/pmdm-20191101.2346
+  to /tmp/pmdm0ayVVy/pmdm-20191101.2346
     pmdm.el -> pmdm.el
 Created pmdm-20191101.2346.tar containing:
   pmdm-20191101.2346/
   pmdm-20191101.2346/pmdm-pkg.el
   pmdm-20191101.2346/pmdm.el
-Command `hg purge --all --interactive' exited with non-zero exit-code: 255
+Command `hg purge --all --noninteractive' exited with non-zero exit-code: 255
 hg: unknown command 'purge'
 'purge' is provided by the following extension:
 
@@ -20,4 +20,4 @@ hg: unknown command 'purge'
 
 (use 'hg help extensions' for information on enabling extensions)
 
-Command `hg purge --all --interactive' exited with non-zero exit-code: 255
+Command `hg purge --all --noninteractive' exited with non-zero exit-code: 255

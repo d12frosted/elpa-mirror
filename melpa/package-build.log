@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
-Checking out 7b7b7f3aadbb7eb1278c94f8d06122ddc9e52cd0
+Checking out 0081876d33d50eadd0f705863a5ae68a62684e32
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-build/
-  to /tmp/package-buildtMgeIQ/package-build-20230819.2252
+  to /tmp/package-build8DlSAZ/package-build-20230820.1348
     package-build-badges.el -> package-build-badges.el
     package-build.el -> package-build.el
     package-recipe-mode.el -> package-recipe-mode.el
     package-recipe.el -> package-recipe.el
-Created package-build-20230819.2252.tar containing:
-  package-build-20230819.2252/
-  package-build-20230819.2252/package-build-badges.el
-  package-build-20230819.2252/package-build-pkg.el
-  package-build-20230819.2252/package-build.el
-  package-build-20230819.2252/package-recipe-mode.el
-  package-build-20230819.2252/package-recipe.el
+Created package-build-20230820.1348.tar containing:
+  package-build-20230820.1348/
+  package-build-20230820.1348/package-build-badges.el
+  package-build-20230820.1348/package-build-pkg.el
+  package-build-20230820.1348/package-build.el
+  package-build-20230820.1348/package-recipe-mode.el
+  package-build-20230820.1348/package-recipe.el
  ✓ Success:
-  2023-08-20T09:08:37+0000  package-build-20230819.2252.entry
-  2023-08-20T09:08:37+0000  package-build-20230819.2252.tar
-Built package-build in 4.217s, finished at 2023-08-20T09:08:39+0000
+  2023-08-20T12:10:18+0000  package-build-20230819.2252.entry
+  2023-08-20T12:10:18+0000  package-build-20230819.2252.tar
+  2023-08-20T15:14:05+0000  package-build-20230820.1348.entry
+  2023-08-20T15:14:05+0000  package-build-20230820.1348.tar
+Built package-build in 4.125s, finished at 2023-08-20T15:14:07+0000
