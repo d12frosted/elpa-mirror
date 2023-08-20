@@ -6,15 +6,13 @@ Updating /mnt/store/melpa/working/lognav-mode/
 Checking out 100541ec31468b771073a7d2ad4512c1dcb1eb07
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lognav-mode/
-  to /tmp/lognav-modeguLE57/lognav-mode-20220410.1344
+  to /tmp/lognav-mode1OVkBa/lognav-mode-20220410.1344
     lognav-mode.el -> lognav-mode.el
 Created lognav-mode-20220410.1344.tar containing:
   lognav-mode-20220410.1344/
   lognav-mode-20220410.1344/lognav-mode-pkg.el
   lognav-mode-20220410.1344/lognav-mode.el
-
-Command '' exited with non-zero exit-code: 255
-
+Command `hg purge --all --interactive' exited with non-zero exit-code: 255
 hg: unknown command 'purge'
 'purge' is provided by the following extension:
 
@@ -22,4 +20,4 @@ hg: unknown command 'purge'
 
 (use 'hg help extensions' for information on enabling extensions)
 
-Command exited with non-zero exit-code: 255
+Command `hg purge --all --interactive' exited with non-zero exit-code: 255

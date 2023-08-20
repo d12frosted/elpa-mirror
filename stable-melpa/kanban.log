@@ -6,15 +6,13 @@ Updating /mnt/store/melpa/working/kanban/
 Checking out d70fa7acab2bfcbb7d3da43c1343073f7eff4998
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kanban/
-  to /tmp/kanbanMuz8Cj/kanban-20230210.1505
+  to /tmp/kanban1jUQid/kanban-20230210.1505
     kanban.el -> kanban.el
 Created kanban-20230210.1505.tar containing:
   kanban-20230210.1505/
   kanban-20230210.1505/kanban-pkg.el
   kanban-20230210.1505/kanban.el
-
-Command '' exited with non-zero exit-code: 255
-
+Command `hg purge --all --interactive' exited with non-zero exit-code: 255
 hg: unknown command 'purge'
 'purge' is provided by the following extension:
 
@@ -22,4 +20,4 @@ hg: unknown command 'purge'
 
 (use 'hg help extensions' for information on enabling extensions)
 
-Command exited with non-zero exit-code: 255
+Command `hg purge --all --interactive' exited with non-zero exit-code: 255
