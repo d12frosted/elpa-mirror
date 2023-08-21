@@ -1299,6 +1299,17 @@
 		  (:authors
 		   ("Magnar Sveen" . "magnars@gmail.com"))
 		  (:keywords "marking" "region"))])
+ (expreg .
+	 [(1 0 0)
+	  ((emacs
+	    (29 1)))
+	  "Simple expand region" tar
+	  ((:url . "https://github.com/casouri/expreg")
+	   (:keywords "text" "editing")
+	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
+	   (:authors
+	    ("Yuan Fu" . "casouri@gmail.com"))
+	   (:commit . "a5ceac5c0c646cf1a2ea674465be3726e272e675"))])
  (external-completion .
 		      [(0 1)
 		       nil "Let external tools control completion style" tar
@@ -2564,7 +2575,7 @@
 	      ("Taylor Grinn" . "grinntaylor@gmail.com"))
 	     (:commit . "9ae5d4a2c576671e8f7ab20d202eefa65af51b25"))])
  (org-remark .
-	     [(1 1 0)
+	     [(1 2 1)
 	      ((emacs
 		(27 1))
 	       (org
@@ -2575,7 +2586,7 @@
 	       (:maintainer "Noboru Ota" . "me@nobiot.com")
 	       (:authors
 		("Noboru Ota" . "me@nobiot.com"))
-	       (:commit . "41a615c9f865c4c192d074f95b88cf2290cbc971"))])
+	       (:commit . "240109bc923f389cb6fecd8b5d9678d1835cf15f"))])
  (org-transclusion .
 		   [(1 3 2)
 		    ((emacs

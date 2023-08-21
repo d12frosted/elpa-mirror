@@ -1,6 +1,6 @@
-			 ━━━━━━━━━━━━━━━━━━━━━
-			  README – ORG-REMARK
-			 ━━━━━━━━━━━━━━━━━━━━━
+                         ━━━━━━━━━━━━━━━━━━━━━
+                          README – ORG-REMARK
+                         ━━━━━━━━━━━━━━━━━━━━━
 
 
 Table of Contents
@@ -20,8 +20,8 @@ Table of Contents
 1 Introduction
 ══════════════
 
-  Org-remark lets you highlight and annotate text files and websites
-  with using Org mode [1].
+  Org-remark lets you highlight and annotate text files, websites, EPUB
+  books and Info documentation with using Org mode.
 
   A user manual is available [online] or Emacs in-system as an Info node
   `(org-remark)': (`C-h i' and find the `Org-remark' node).
@@ -36,7 +36,8 @@ Table of Contents
   For customization, refer to the customization group `org-remark' or
   user manual: [online] or Info node `(org-remark) Customizing'.
 
-  An [introductory video] (8 minutes) is available on YouTube.
+  An [introductory video] (8 minutes) and [V1.1.0 release introduction]
+  (12 minutes) are available on YouTube.
 
 
 [online] <https://nobiot.github.io/org-remark/>
@@ -45,32 +46,37 @@ Table of Contents
 
 [online] <https://nobiot.github.io/org-remark/#Installation>
 
-[online] <https://nobiot.github.io/org-remark/#getting-started>
+[online] <https://nobiot.github.io/org-remark/#Getting-Started>
 
 [online] <https://nobiot.github.io/org-remark/#Customizing>
 
 [introductory video] <https://youtu.be/c8DHrAsFiLc>
+
+[V1.1.0 release introduction] <https://youtu.be/BTFuS21N00k>
 
 
 2 Features
 ══════════
 
   • Highlight and annotate any text file. The highlights and notes are
-    kepted in an Org file as the plain text database. This lets you
-    easily manage your marginal notes and use the built-in Org
-    fecilities on them – e.g. create a sparse tree based on the category
-    of the notes
-
-  • Have the same highlighting and annotating functionality for websites
-    when you use EWW to browse them (new in latest [GNU-devel ELPA] and
-    is planned to be part of v1.1.0.)
+    kept in an Org file as the plain text database. This lets you easily
+    manage your marginal notes and use the built-in Org facilities on
+    them – e.g. create a sparse tree based on the category of the notes
 
   • Create your your own highlighter pens with different colors, type
     (e.g. underline, squiggle, etc. optionally with Org's category for
     search and filter on your highlights and notes)
 
+  • Have the same highlighting and annotating functionality for
 
-[GNU-devel ELPA] <https://elpa.gnu.org/devel/org-remark.html>
+    ⁃ Websites when you use EWW to browse them
+
+    ⁃ EPUB books with [nov.el]
+
+    ⁃ Info documentation
+
+
+[nov.el] <https://depp.brause.cc/nov.el/>
 
 
 3 Installation
@@ -100,6 +106,14 @@ Table of Contents
   │ ;; Optional if you would like to highlight websites via eww-mode
   │ (with-eval-after-load 'eww
   │   (org-remark-eww-mode +1))
+  │ 
+  │ ;; Optional if you would like to highlight EPUB books via nov.el
+  │ (with-eval-after-load 'nov
+  │   (org-remark-nov-mode +1))
+  │ 
+  │ ;; Optional if you would like to highlight Info documentation via Info-mode
+  │ (with-eval-after-load 'info
+  │   (org-remark-info-mode +1))
   └────
 
   Unless you explicitly load `org' during Emacs initialization, I
@@ -122,7 +136,8 @@ Table of Contents
   │   (define-key org-remark-mode-map (kbd "C-c n o") #'org-remark-open)
   │   (define-key org-remark-mode-map (kbd "C-c n ]") #'org-remark-view-next)
   │   (define-key org-remark-mode-map (kbd "C-c n [") #'org-remark-view-prev)
-  │   (define-key org-remark-mode-map (kbd "C-c n r") #'org-remark-remove))
+  │   (define-key org-remark-mode-map (kbd "C-c n r") #'org-remark-remove)
+  │   (define-key org-remark-mode-map (kbd "C-c n d") #'org-remark-delete))
   └────
 
 
@@ -157,6 +172,10 @@ Table of Contents
   New features
 
 
+
+        EPUB books (nov.el) support would not have been possible without
+        collaboration with @sati-bodhi
+
         `echo-text' update from the marginal notes to the source buffer
         by marty hiatt (@mooseyboots)
 
@@ -164,10 +183,10 @@ Table of Contents
         (@vedang)
 
   Bug fixes
-  Nan Jun Jie (@nanjj), @sgati-bodhi
+  @alan-w-255, Nan Jun Jie (@nanjj), @sgati-bodhi
 
   Documentation (including README, NEWS, CHANGELOG)
-  @randomwangran, marty hiatt (@mooseyboots)
+  @randomwangran, marty hiatt (@mooseyboots), @jsntn
 
   All the comments, issues, and questions on GitHub
   @randomwangran, @karthink, @holtzermann17, @shombando, @magthe,
@@ -184,12 +203,3 @@ Table of Contents
 
 
 [LICENSE] <./LICENSE>
-
-
-
-Footnotes
-─────────
-
-[1] : Feature to highlight and annotate websites is new in the latest
-[GNU-devel ELPA] (<https://elpa.gnu.org/devel/org-remark.html>) and is
-part of v1.1.0.
