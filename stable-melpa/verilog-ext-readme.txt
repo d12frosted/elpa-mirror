@@ -1,5 +1,6 @@
 Extensions for Verilog Mode:
 
+ - Tree-sitter powered `verilog-ts-mode` support
  - Improved syntax highlighting
  - Builtin xref backend
  - Builtin capf function with dot and scope completion
@@ -19,6 +20,3 @@ Extensions for Verilog Mode:
  - Convert block end comments to names
  - Automatically add SystemVerilog keywords to `company-keywords` backend
  - Port connections utilities
-
- Experimental:
- - Tree-sitter powered `verilog-ts-mode` support
