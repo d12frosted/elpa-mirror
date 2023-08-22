@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/verilog-ext.git
 
 Updating /mnt/store/melpa/working/verilog-ext/
-Checking out dae46f5a874fa3f17caa571785757de1e2696ec7
+Checking out fccddc36ffb9718b0c31ea13536f6a8b531bed75
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/verilog-ext/
-  to /tmp/verilog-extNZI5mo/verilog-ext-20230821.1805
+  to /tmp/verilog-extUNuUdS/verilog-ext-20230822.1814
     verilog-ext-beautify.el -> verilog-ext-beautify.el
     verilog-ext-block-end-comments.el -> verilog-ext-block-end-comments.el
     verilog-ext-capf.el -> verilog-ext-capf.el
@@ -31,103 +31,105 @@ Copying files (->) and directories (=>)
     verilog-ext-xref.el -> verilog-ext-xref.el
     verilog-ext.el -> verilog-ext.el
     snippets => snippets
-Created verilog-ext-20230821.1805.tar containing:
-  verilog-ext-20230821.1805/
-  verilog-ext-20230821.1805/snippets/
-  verilog-ext-20230821.1805/snippets/makefile-mode/
-  verilog-ext-20230821.1805/snippets/makefile-mode/verilog-template
-  verilog-ext-20230821.1805/snippets/uvm_agent/
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_agent.svh
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_agent_config.svh
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_agent_pkg.sv
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_driver.svh
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_driver_bfm.sv
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_if.sv
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_monitor.svh
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_monitor_bfm.sv
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_seq_item.svh
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_seq_lib.svh
-  verilog-ext-20230821.1805/snippets/uvm_agent/uvm_types.svh
-  verilog-ext-20230821.1805/snippets/verilog-mode/
-  verilog-ext-20230821.1805/snippets/verilog-mode/always
-  verilog-ext-20230821.1805/snippets/verilog-mode/always_comb
-  verilog-ext-20230821.1805/snippets/verilog-mode/always_ff
-  verilog-ext-20230821.1805/snippets/verilog-mode/always_latch
-  verilog-ext-20230821.1805/snippets/verilog-mode/assert
-  verilog-ext-20230821.1805/snippets/verilog-mode/assert_prop
-  verilog-ext-20230821.1805/snippets/verilog-mode/assign
-  verilog-ext-20230821.1805/snippets/verilog-mode/begin
-  verilog-ext-20230821.1805/snippets/verilog-mode/class
-  verilog-ext-20230821.1805/snippets/verilog-mode/clk_event
-  verilog-ext-20230821.1805/snippets/verilog-mode/clocking
-  verilog-ext-20230821.1805/snippets/verilog-mode/constraint
-  verilog-ext-20230821.1805/snippets/verilog-mode/covergroup
-  verilog-ext-20230821.1805/snippets/verilog-mode/display
-  verilog-ext-20230821.1805/snippets/verilog-mode/do-while
-  verilog-ext-20230821.1805/snippets/verilog-mode/else
-  verilog-ext-20230821.1805/snippets/verilog-mode/else-if
-  verilog-ext-20230821.1805/snippets/verilog-mode/final
-  verilog-ext-20230821.1805/snippets/verilog-mode/for
-  verilog-ext-20230821.1805/snippets/verilog-mode/foreach
-  verilog-ext-20230821.1805/snippets/verilog-mode/forever
-  verilog-ext-20230821.1805/snippets/verilog-mode/fork
-  verilog-ext-20230821.1805/snippets/verilog-mode/fork_any
-  verilog-ext-20230821.1805/snippets/verilog-mode/fork_none
-  verilog-ext-20230821.1805/snippets/verilog-mode/function
-  verilog-ext-20230821.1805/snippets/verilog-mode/generate
-  verilog-ext-20230821.1805/snippets/verilog-mode/if
-  verilog-ext-20230821.1805/snippets/verilog-mode/initial
-  verilog-ext-20230821.1805/snippets/verilog-mode/interface
-  verilog-ext-20230821.1805/snippets/verilog-mode/localparam
-  verilog-ext-20230821.1805/snippets/verilog-mode/logic
-  verilog-ext-20230821.1805/snippets/verilog-mode/logic_vector
-  verilog-ext-20230821.1805/snippets/verilog-mode/modport
-  verilog-ext-20230821.1805/snippets/verilog-mode/module
-  verilog-ext-20230821.1805/snippets/verilog-mode/module_param
-  verilog-ext-20230821.1805/snippets/verilog-mode/once
-  verilog-ext-20230821.1805/snippets/verilog-mode/package
-  verilog-ext-20230821.1805/snippets/verilog-mode/parameter
-  verilog-ext-20230821.1805/snippets/verilog-mode/program
-  verilog-ext-20230821.1805/snippets/verilog-mode/property
-  verilog-ext-20230821.1805/snippets/verilog-mode/repeat
-  verilog-ext-20230821.1805/snippets/verilog-mode/sequence
-  verilog-ext-20230821.1805/snippets/verilog-mode/star_comment
-  verilog-ext-20230821.1805/snippets/verilog-mode/task
-  verilog-ext-20230821.1805/snippets/verilog-mode/typedef
-  verilog-ext-20230821.1805/snippets/verilog-mode/uvm_component
-  verilog-ext-20230821.1805/snippets/verilog-mode/uvm_error
-  verilog-ext-20230821.1805/snippets/verilog-mode/uvm_fatal
-  verilog-ext-20230821.1805/snippets/verilog-mode/uvm_info
-  verilog-ext-20230821.1805/snippets/verilog-mode/uvm_object
-  verilog-ext-20230821.1805/snippets/verilog-mode/uvm_report
-  verilog-ext-20230821.1805/snippets/verilog-mode/uvm_typeid_create
-  verilog-ext-20230821.1805/snippets/verilog-mode/uvm_warning
-  verilog-ext-20230821.1805/snippets/verilog-mode/while
-  verilog-ext-20230821.1805/verilog-ext-beautify.el
-  verilog-ext-20230821.1805/verilog-ext-block-end-comments.el
-  verilog-ext-20230821.1805/verilog-ext-capf.el
-  verilog-ext-20230821.1805/verilog-ext-compile.el
-  verilog-ext-20230821.1805/verilog-ext-eglot.el
-  verilog-ext-20230821.1805/verilog-ext-flycheck.el
-  verilog-ext-20230821.1805/verilog-ext-font-lock.el
-  verilog-ext-20230821.1805/verilog-ext-formatter.el
-  verilog-ext-20230821.1805/verilog-ext-hierarchy.el
-  verilog-ext-20230821.1805/verilog-ext-hs.el
-  verilog-ext-20230821.1805/verilog-ext-imenu.el
-  verilog-ext-20230821.1805/verilog-ext-lsp.el
-  verilog-ext-20230821.1805/verilog-ext-nav.el
-  verilog-ext-20230821.1805/verilog-ext-pkg.el
-  verilog-ext-20230821.1805/verilog-ext-ports.el
-  verilog-ext-20230821.1805/verilog-ext-tags.el
-  verilog-ext-20230821.1805/verilog-ext-template.el
-  verilog-ext-20230821.1805/verilog-ext-time-stamp.el
-  verilog-ext-20230821.1805/verilog-ext-typedef.el
-  verilog-ext-20230821.1805/verilog-ext-utils.el
-  verilog-ext-20230821.1805/verilog-ext-which-func.el
-  verilog-ext-20230821.1805/verilog-ext-workspace.el
-  verilog-ext-20230821.1805/verilog-ext-xref.el
-  verilog-ext-20230821.1805/verilog-ext.el
+Created verilog-ext-20230822.1814.tar containing:
+  verilog-ext-20230822.1814/
+  verilog-ext-20230822.1814/snippets/
+  verilog-ext-20230822.1814/snippets/makefile-mode/
+  verilog-ext-20230822.1814/snippets/makefile-mode/verilog-template
+  verilog-ext-20230822.1814/snippets/uvm_agent/
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_agent.svh
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_agent_config.svh
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_agent_pkg.sv
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_driver.svh
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_driver_bfm.sv
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_if.sv
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_monitor.svh
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_monitor_bfm.sv
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_seq_item.svh
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_seq_lib.svh
+  verilog-ext-20230822.1814/snippets/uvm_agent/uvm_types.svh
+  verilog-ext-20230822.1814/snippets/verilog-mode/
+  verilog-ext-20230822.1814/snippets/verilog-mode/always
+  verilog-ext-20230822.1814/snippets/verilog-mode/always_comb
+  verilog-ext-20230822.1814/snippets/verilog-mode/always_ff
+  verilog-ext-20230822.1814/snippets/verilog-mode/always_latch
+  verilog-ext-20230822.1814/snippets/verilog-mode/assert
+  verilog-ext-20230822.1814/snippets/verilog-mode/assert_prop
+  verilog-ext-20230822.1814/snippets/verilog-mode/assign
+  verilog-ext-20230822.1814/snippets/verilog-mode/begin
+  verilog-ext-20230822.1814/snippets/verilog-mode/class
+  verilog-ext-20230822.1814/snippets/verilog-mode/clk_event
+  verilog-ext-20230822.1814/snippets/verilog-mode/clocking
+  verilog-ext-20230822.1814/snippets/verilog-mode/constraint
+  verilog-ext-20230822.1814/snippets/verilog-mode/covergroup
+  verilog-ext-20230822.1814/snippets/verilog-mode/display
+  verilog-ext-20230822.1814/snippets/verilog-mode/do-while
+  verilog-ext-20230822.1814/snippets/verilog-mode/else
+  verilog-ext-20230822.1814/snippets/verilog-mode/else-if
+  verilog-ext-20230822.1814/snippets/verilog-mode/final
+  verilog-ext-20230822.1814/snippets/verilog-mode/for
+  verilog-ext-20230822.1814/snippets/verilog-mode/foreach
+  verilog-ext-20230822.1814/snippets/verilog-mode/forever
+  verilog-ext-20230822.1814/snippets/verilog-mode/fork
+  verilog-ext-20230822.1814/snippets/verilog-mode/fork_any
+  verilog-ext-20230822.1814/snippets/verilog-mode/fork_none
+  verilog-ext-20230822.1814/snippets/verilog-mode/function
+  verilog-ext-20230822.1814/snippets/verilog-mode/generate
+  verilog-ext-20230822.1814/snippets/verilog-mode/if
+  verilog-ext-20230822.1814/snippets/verilog-mode/initial
+  verilog-ext-20230822.1814/snippets/verilog-mode/interface
+  verilog-ext-20230822.1814/snippets/verilog-mode/localparam
+  verilog-ext-20230822.1814/snippets/verilog-mode/logic
+  verilog-ext-20230822.1814/snippets/verilog-mode/logic_vector
+  verilog-ext-20230822.1814/snippets/verilog-mode/modport
+  verilog-ext-20230822.1814/snippets/verilog-mode/module
+  verilog-ext-20230822.1814/snippets/verilog-mode/module_param
+  verilog-ext-20230822.1814/snippets/verilog-mode/once
+  verilog-ext-20230822.1814/snippets/verilog-mode/package
+  verilog-ext-20230822.1814/snippets/verilog-mode/parameter
+  verilog-ext-20230822.1814/snippets/verilog-mode/program
+  verilog-ext-20230822.1814/snippets/verilog-mode/property
+  verilog-ext-20230822.1814/snippets/verilog-mode/repeat
+  verilog-ext-20230822.1814/snippets/verilog-mode/sequence
+  verilog-ext-20230822.1814/snippets/verilog-mode/star_comment
+  verilog-ext-20230822.1814/snippets/verilog-mode/task
+  verilog-ext-20230822.1814/snippets/verilog-mode/typedef
+  verilog-ext-20230822.1814/snippets/verilog-mode/uvm_component
+  verilog-ext-20230822.1814/snippets/verilog-mode/uvm_error
+  verilog-ext-20230822.1814/snippets/verilog-mode/uvm_fatal
+  verilog-ext-20230822.1814/snippets/verilog-mode/uvm_info
+  verilog-ext-20230822.1814/snippets/verilog-mode/uvm_object
+  verilog-ext-20230822.1814/snippets/verilog-mode/uvm_report
+  verilog-ext-20230822.1814/snippets/verilog-mode/uvm_typeid_create
+  verilog-ext-20230822.1814/snippets/verilog-mode/uvm_warning
+  verilog-ext-20230822.1814/snippets/verilog-mode/while
+  verilog-ext-20230822.1814/verilog-ext-beautify.el
+  verilog-ext-20230822.1814/verilog-ext-block-end-comments.el
+  verilog-ext-20230822.1814/verilog-ext-capf.el
+  verilog-ext-20230822.1814/verilog-ext-compile.el
+  verilog-ext-20230822.1814/verilog-ext-eglot.el
+  verilog-ext-20230822.1814/verilog-ext-flycheck.el
+  verilog-ext-20230822.1814/verilog-ext-font-lock.el
+  verilog-ext-20230822.1814/verilog-ext-formatter.el
+  verilog-ext-20230822.1814/verilog-ext-hierarchy.el
+  verilog-ext-20230822.1814/verilog-ext-hs.el
+  verilog-ext-20230822.1814/verilog-ext-imenu.el
+  verilog-ext-20230822.1814/verilog-ext-lsp.el
+  verilog-ext-20230822.1814/verilog-ext-nav.el
+  verilog-ext-20230822.1814/verilog-ext-pkg.el
+  verilog-ext-20230822.1814/verilog-ext-ports.el
+  verilog-ext-20230822.1814/verilog-ext-tags.el
+  verilog-ext-20230822.1814/verilog-ext-template.el
+  verilog-ext-20230822.1814/verilog-ext-time-stamp.el
+  verilog-ext-20230822.1814/verilog-ext-typedef.el
+  verilog-ext-20230822.1814/verilog-ext-utils.el
+  verilog-ext-20230822.1814/verilog-ext-which-func.el
+  verilog-ext-20230822.1814/verilog-ext-workspace.el
+  verilog-ext-20230822.1814/verilog-ext-xref.el
+  verilog-ext-20230822.1814/verilog-ext.el
  ✓ Success:
-  2023-08-22T11:53:05+0000  verilog-ext-20230821.1805.entry
-  2023-08-22T11:53:05+0000  verilog-ext-20230821.1805.tar
-Built verilog-ext in 4.960s, finished at 2023-08-22T11:53:07+0000
+  2023-08-22T15:05:21+0000  verilog-ext-20230821.1805.entry
+  2023-08-22T15:05:21+0000  verilog-ext-20230821.1805.tar
+  2023-08-22T18:17:46+0000  verilog-ext-20230822.1814.entry
+  2023-08-22T18:17:45+0000  verilog-ext-20230822.1814.tar
+Built verilog-ext in 7.554s, finished at 2023-08-22T18:17:48+0000
