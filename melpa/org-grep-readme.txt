@@ -4,4 +4,4 @@ assorted with a few specific navigation commands so it works a bit
 like M-x rgrep.  Optionally, the tool may simultaneously search
 Unix mailboxes, Gnus mailgroups, or other textual files.
 
-See https://github.com/pinard/org-grep.
+See https://sr.ht/~minshall/org-grep.
