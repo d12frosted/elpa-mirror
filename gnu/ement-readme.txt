@@ -1,6 +1,6 @@
-			       ━━━━━━━━━━
-				EMENT.EL
-			       ━━━━━━━━━━
+                               ━━━━━━━━━━
+                                EMENT.EL
+                               ━━━━━━━━━━
 
 
 Table of Contents
@@ -8,10 +8,9 @@ Table of Contents
 
 1. Installation
 2. Usage
-3. Rationale
-4. Changelog
-5. Development
-6. License
+3. Changelog
+4. Development
+5. License
 
 
 [https://elpa.gnu.org/packages/ement.svg]
@@ -36,31 +35,66 @@ Feel free to join us in the chat room:
 GNU ELPA
 ────────
 
-  Ement.el is published in [GNU ELPA], so it may be installed in Emacs
-  with the command `M-x package-install RET ement RET'.  This is the
-  recommended way to install Ement.el, as it will install the current
-  stable release.
+  Ement.el is published in [GNU ELPA] as [ement], so it may be installed
+  in Emacs with the command `M-x package-install RET ement RET'.  This
+  is the recommended way to install Ement.el, as it will install the
+  current stable release.
+
+  The latest development build may be installed from [ELPA-devel] or
+  from Git (see below).
 
 
 [GNU ELPA] <http://elpa.gnu.org/>
+
+[ement] <https://elpa.gnu.org/packages/ement.html>
+
+[ELPA-devel] <https://elpa.gnu.org/devel/ement.html>
 
 
 GNU Guix
 ────────
 
-  Ement.el is also available in [GNU Guix] as `emacs-ement'.
+  Ement.el is available in [GNU Guix] as [emacs-ement].
 
 
 [GNU Guix] <https://guix.gnu.org/>
 
-
-Debian
-──────
-
-  Ement.el is also available in Debian as [elpa-ement].
+[emacs-ement] <https://packages.guix.gnu.org/packages/emacs-ement/>
 
 
-[elpa-ement] <https://packages.debian.org/elpa-ement>
+Debian, Ubuntu
+──────────────
+
+  Ement.el is available in [Debian as elpa-ement] and in [Ubuntu as
+  elpa-ement].
+
+
+[Debian as elpa-ement] <https://packages.debian.org/elpa-ement>
+
+[Ubuntu as elpa-ement]
+<https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=elpa-ement&searchon=names>
+
+
+Nix
+───
+
+  Ement.el is available in [NixOS] as [emacsPackages.ement].
+
+
+[NixOS] <https://nixos.org/>
+
+[emacsPackages.ement]
+<https://search.nixos.org/packages?channel=23.05&show=emacsPackages.ement&from=0&size=50&sort=relevance&type=packages&query=ement>
+
+
+Other distributions
+───────────────────
+
+  Ement.el is also available in some other distributions.  See
+  [Repology] for details.
+
+
+[Repology] <https://repology.org/project/emacs:ement/related>
 
 
 Git master
@@ -68,8 +102,10 @@ Git master
 
   The `master' branch of the Git repository is intended to be usable at
   all times; only minor bugs are expected to be found in it before a new
-  stable release is made.  To install from this, it is recommended to
-  use [quelpa-use-package], like this:
+  stable release is made.
+
+  To install, it is recommended to use [quelpa-use-package], like this
+  (using [this helpful command] for upgrading versions):
 
   ┌────
   │ ;; Install and load `quelpa-use-package'.
@@ -81,12 +117,16 @@ Git master
   │   :quelpa (ement :fetcher github :repo "alphapapa/ement.el"))
   └────
 
-  One might also use systems like [Straight] (which is also used by
-  [DOOM]) to install from Git, but the author cannot offer support for
-  them.
+  One might also use systems like [Elpaca] or [Straight] (which is also
+  used by [DOOM]), but the author cannot offer support for them.
 
 
 [quelpa-use-package] <https://github.com/quelpa/quelpa-use-package>
+
+[this helpful command]
+<https://github.com/alphapapa/unpackaged.el#upgrade-a-quelpa-use-package-forms-package>
+
+[Elpaca] <https://github.com/progfolio/elpaca>
 
 [Straight] <https://github.com/radian-software/straight.el>
 
@@ -350,69 +390,62 @@ Encrypted room support through Pantalaimon
 [Pantalaimon] <https://github.com/matrix-org/pantalaimon/>
 
 
-3 Rationale
+3 Changelog
 ═══════════
 
-  Why write a new Emacs Matrix client when there is already
-  [matrix-client.el], by the same author, no less?  A few reasons:
+0.11
+────
 
-  • `matrix-client' uses an older version of the Matrix spec, r0.3.0,
-    with a few elements of r0.4.0 grafted in.  Bringing it up to date
-    with the current version of the spec, r0.6.1, would be more work
-    than to begin with the current version.  Ement.el targets r0.6.1
-    from the beginning.
-  • `matrix-client' does not use Matrix's lazy-loading feature (which
-    was added to the specification later), so initial sync requests can
-    take a long time for the server to process and can be large
-    (sometimes tens of megabytes of JSON for the client to process!).
-    Ement.el uses lazy-loading, which significantly improves
-    performance.
-  • `matrix-client' automatically makes buffers for every room a user
-    has joined, even if the user doesn't currently want to watch a room.
-    Ement.el opens room buffers on-demand, improving performance by not
-    having to insert events into buffers for rooms the user isn't
-    watching.
-  • `matrix-client' was developed without the intention of publishing it
-    to, e.g. MELPA or ELPA.  It has several dependencies, and its code
-    does not always install or compile cleanly due to macro-expansion
-    issues (apparently depending on the user's Emacs config).  Ement.el
-    is designed to have minimal dependencies outside of Emacs (currently
-    only one, `plz', which could be imported into the project), and
-    every file is linted and compiles cleanly using [makem.sh].
-  • `matrix-client' uses EIEIO, probably unnecessarily, since few, if
-    any, of the benefits of EIEIO are realized in it.  Ement.el uses
-    structs instead.
-  • `matrix-client' uses bespoke code for inserting messages into
-    buffers, which works pretty well, but has a few minor bugs which are
-    difficult to track down.  Ement.el uses Emacs's built-in (and
-    perhaps little-known) `ewoc' library, which makes it much simpler
-    and more reliable to insert and update messages in buffers, and
-    enables the development of advanced UI features more easily.
-  • `matrix-client' was, to a certain extent, designed to imitate other
-    messaging apps.  The result is, at least when used with the
-    `matrix-client-frame' command, fairly pleasing to use, but isn't
-    especially "Emacsy."  Ement.el is intended to better fit into
-    Emacs's paradigms.
-  • `matrix-client''s long name makes for long symbol names, which makes
-    for tedious, verbose code.  `ement' is easy to type and makes for
-    concise, readable code.
-  • The author has learned much since writing `matrix-client' and hopes
-    to write simpler, more readable, more maintainable code in Ement.el.
-    It's hoped that this will enable others to contribute more easily.
+  *Additions*
+  ⁃ Commands `ement-room-image-show' and `ement-room-image-scale' (bound
+    to `RET' and `M-RET' when point is at an image) view and scale
+    images.  (Thanks to [Steven Allen] for these and other image-related
+    improvements.)
+  ⁃ Command `ement-room-image-show-mouse' is used to show an image with
+    the mouse.
 
-  Note that, while `matrix-client' remains usable, and probably will for
-  some time to come, Ement.el has now surpassed it in every way.  The
-  only reason to choose `matrix-client' instead is if one is using an
-  older version of Emacs that isn't supported by Ement.el.
+  *Changes*
+  ⁃ Enable `image-mode' when showing images in a new buffer.  (Thanks to
+    [Steven Allen].)
+  ⁃ Command `ement-room-image-show' is not used for mouse events.
+  ⁃ Show useful message in SSO login page.
+
+  *Fixes*
+  ⁃ Allow editing of already-edited events.
+  ⁃ Push rules' actions may be listed in any order.  (Fixes
+    compatibility with [v1.7 of the spec].  Thanks to [Steven Allen].)
+  ⁃ Call external browser for SSO login page.  (JavaScript is usually
+    required, which EWW doesn't support, and loading the page twice
+    seems to change state on the server that causes the SSO login to
+    fail, so it's best to load the page in the external browser
+    directly).
+  ⁃ Clean up SSO server process after two minutes in case SSO login
+    fails.
+  ⁃ Don't stop syncing if an error is signaled while sending a
+    notification.
+  ⁃ Command `ement-room-list-next-unread' could enter an infinite loop.
+    (Thanks to [Visuwesh] and `@mrtnmrtn:matrix.org'.)
+  ⁃ Events in notifications buffer could appear out-of-order.  ([#191].
+    Thanks to [Phil Sainty].)
+
+  *Internal*
+  ⁃ The `ement-read-receipt-idle-timer' could be duplicated when using
+    multiple sessions.  ([#196].  Thanks to [Phil Sainty].)
 
 
-[matrix-client.el] <https://github.com/alphapapa/matrix-client.el>
+[Steven Allen] <https://github.com/Stebalien>
 
-[makem.sh] <https://github.com/alphapapa/makem.sh>
+[v1.7 of the spec]
+<https://spec.matrix.org/v1.7/client-server-api/#actions>
 
+[Visuwesh] <https://github.com/vizs>
 
-4 Changelog
-═══════════
+[#191] <https://github.com/alphapapa/ement.el/issues/191>
+
+[Phil Sainty] <https://github.com/phil-s>
+
+[#196] <https://github.com/alphapapa/ement.el/issues/196>
+
 
 0.10
 ────
@@ -919,7 +952,7 @@ Encrypted room support through Pantalaimon
   Submitted to GNU ELPA.
 
 
-5 Development
+4 Development
 ═════════════
 
   Bug reports, feature requests, suggestions — /oh my/!
@@ -948,7 +981,71 @@ Matrix spec in Org format
 [meta/spec] <https://github.com/alphapapa/ement.el/tree/meta/spec>
 
 
-6 License
+Rationale
+─────────
+
+  /This section is preserved for posterity.  As it says, Ement.el has
+  long since surpassed `matrix-client', which should no longer be used./
+
+  Why write a new Emacs Matrix client when there is already
+  [matrix-client.el], by the same author, no less?  A few reasons:
+
+  • `matrix-client' uses an older version of the Matrix spec, r0.3.0,
+    with a few elements of r0.4.0 grafted in.  Bringing it up to date
+    with the current version of the spec, r0.6.1, would be more work
+    than to begin with the current version.  Ement.el targets r0.6.1
+    from the beginning.
+  • `matrix-client' does not use Matrix's lazy-loading feature (which
+    was added to the specification later), so initial sync requests can
+    take a long time for the server to process and can be large
+    (sometimes tens of megabytes of JSON for the client to process!).
+    Ement.el uses lazy-loading, which significantly improves
+    performance.
+  • `matrix-client' automatically makes buffers for every room a user
+    has joined, even if the user doesn't currently want to watch a room.
+    Ement.el opens room buffers on-demand, improving performance by not
+    having to insert events into buffers for rooms the user isn't
+    watching.
+  • `matrix-client' was developed without the intention of publishing it
+    to, e.g. MELPA or ELPA.  It has several dependencies, and its code
+    does not always install or compile cleanly due to macro-expansion
+    issues (apparently depending on the user's Emacs config).  Ement.el
+    is designed to have minimal dependencies outside of Emacs (currently
+    only one, `plz', which could be imported into the project), and
+    every file is linted and compiles cleanly using [makem.sh].
+  • `matrix-client' uses EIEIO, probably unnecessarily, since few, if
+    any, of the benefits of EIEIO are realized in it.  Ement.el uses
+    structs instead.
+  • `matrix-client' uses bespoke code for inserting messages into
+    buffers, which works pretty well, but has a few minor bugs which are
+    difficult to track down.  Ement.el uses Emacs's built-in (and
+    perhaps little-known) `ewoc' library, which makes it much simpler
+    and more reliable to insert and update messages in buffers, and
+    enables the development of advanced UI features more easily.
+  • `matrix-client' was, to a certain extent, designed to imitate other
+    messaging apps.  The result is, at least when used with the
+    `matrix-client-frame' command, fairly pleasing to use, but isn't
+    especially "Emacsy."  Ement.el is intended to better fit into
+    Emacs's paradigms.
+  • `matrix-client''s long name makes for long symbol names, which makes
+    for tedious, verbose code.  `ement' is easy to type and makes for
+    concise, readable code.
+  • The author has learned much since writing `matrix-client' and hopes
+    to write simpler, more readable, more maintainable code in Ement.el.
+    It's hoped that this will enable others to contribute more easily.
+
+  Note that, while `matrix-client' remains usable, and probably will for
+  some time to come, Ement.el has now surpassed it in every way.  The
+  only reason to choose `matrix-client' instead is if one is using an
+  older version of Emacs that isn't supported by Ement.el.
+
+
+[matrix-client.el] <https://github.com/alphapapa/matrix-client.el>
+
+[makem.sh] <https://github.com/alphapapa/makem.sh>
+
+
+5 License
 ═════════
 
   GPLv3
