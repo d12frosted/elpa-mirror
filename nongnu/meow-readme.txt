@@ -1,6 +1,6 @@
-				 ━━━━━━
-				  MEOW
-				 ━━━━━━
+                                 ━━━━━━
+                                  MEOW
+                                 ━━━━━━
 
 
 [file:https://melpa.org/packages/meow-badge.svg]
