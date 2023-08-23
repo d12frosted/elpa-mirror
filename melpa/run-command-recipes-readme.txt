@@ -26,3 +26,4 @@ following list:
 - java
 - racket
 - make
+- go
