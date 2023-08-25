@@ -235,6 +235,15 @@
 		 (:keywords "languages" "clojure" "clojurescript" "lisp")
 		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 		 (:commit . "dae21f8807c80297b9d69aefac4c3864c56d50af"))])
+ (clojure-ts-mode .
+		  [(0 1 4)
+		   ((emacs
+		     (29)))
+		   "Major mode for Clojure code" tar
+		   ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
+		    (:keywords "languages" "clojure" "clojurescript" "lisp")
+		    (:maintainer "Danny Freeman" . "danny@dfreeman.email")
+		    (:commit . "3e4c55fab14e0885a411f6018fb8aedb04afc49d"))])
  (coffee-mode .
 	      [(0 6 3)
 	       ((emacs
