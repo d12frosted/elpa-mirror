@@ -3,7 +3,7 @@
                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-                         [2021-10-10 Sun 02:05]
+                         [2023-05-13 Sat 01:13]
 
 
 [http://melpa.org/packages/org-tree-slide-badge.svg]
@@ -104,6 +104,9 @@
 
   • Org-mode 6.33x or higher version is required.
   • This elisp doesn't require any additional packages.
+  • Emacs 25.2 or later is required. But users of Emacs 25.1 or earlier
+    (at least 24.4) can still use this package. Please load
+    `org-tree-slide-compt.el' before activating org-tree-slide.el.
 
 
 2.4 2.3 additional package (moom.el)
@@ -250,7 +253,7 @@
     2  org-tree-slide-header                       t              Boolean 
     3  org-tree-slide-slide-in-effect              t              Boolean 
     4  org-tree-slide-cursor-init                  t              Boolean 
-    5  org-tree-slide-slide-in-brank-lines         10             Numeric 
+    5  org-tree-slide-slide-in-blank-lines         10             Numeric 
     6  org-tree-slide-slide-in-waiting             0.02           Float   
     7  org-tree-slide-heading-emphasis             nil            Boolean 
     8  org-tree-slide-never-touch-face             nil            Boolean 
@@ -296,7 +299,7 @@
   │     'org-tree-slide-content)
   │   (setq org-tree-slide-skip-outline-level 4)
   │   (org-tree-slide-narrowing-control-profile)
-  │   (setq org-tree-slide-skip-done nil)))
+  │   (setq org-tree-slide-skip-done nil))
   └────
 
 

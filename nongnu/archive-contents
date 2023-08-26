@@ -1509,16 +1509,16 @@
 		  (:authors
 		   ("D. Williams" . "d.williams@posteo.net")))])
  (org-tree-slide .
-		 [(2 8 20)
+		 [(2 8 22)
 		  ((emacs
-		    (24 4)))
+		    (25 2)))
 		  "A presentation tool for org-mode" tar
 		  ((:url . "https://github.com/takaxp/org-tree-slide")
 		   (:keywords "convenience" "org-mode" "presentation" "narrowing")
 		   (:maintainer "Takaaki ISHIKAWA" . "takaxpatieeedotorg")
 		   (:authors
 		    ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
-		   (:commit . "b535e26c4199e1e4d7a964c3ad4f4a65b88c008b"))])
+		   (:commit . "941e7e6cb8a5a0b193345263ed912cceecae1887"))])
  (orgit .
 	[(1 9 0)
 	 ((emacs
