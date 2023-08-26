@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/mohkale/projection.git
 
 Updating /mnt/store/melpa/working/projection/
-Checking out d043418c707d5637d869c488e8abe2186e55b5fe
+Checking out 363d3f79386735ae224c3692d333bc9d2a98f7f3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection/
-  to /tmp/projectionOJ0UFA/projection-20230822.2132
+  to /tmp/projectionY2PVao/projection-20230826.1902
   ! src/projection-commands.el -> projection-commands.el
   ! src/projection-core-commands.el -> projection-core-commands.el
   ! src/projection-core-log.el -> projection-core-log.el
@@ -20,23 +20,25 @@ Copying files (->) and directories (=>)
   ! src/projection-utils-meson.el -> projection-utils-meson.el
   ! src/projection-utils.el -> projection-utils.el
   ! src/projection.el -> projection.el
-Created projection-20230822.2132.tar containing:
-  projection-20230822.2132/
-  projection-20230822.2132/projection-commands.el
-  projection-20230822.2132/projection-core-commands.el
-  projection-20230822.2132/projection-core-log.el
-  projection-20230822.2132/projection-core.el
-  projection-20230822.2132/projection-find.el
-  projection-20230822.2132/projection-hook.el
-  projection-20230822.2132/projection-ibuffer.el
-  projection-20230822.2132/projection-pkg.el
-  projection-20230822.2132/projection-recentf.el
-  projection-20230822.2132/projection-types.el
-  projection-20230822.2132/projection-utils-cmake.el
-  projection-20230822.2132/projection-utils-meson.el
-  projection-20230822.2132/projection-utils.el
-  projection-20230822.2132/projection.el
+Created projection-20230826.1902.tar containing:
+  projection-20230826.1902/
+  projection-20230826.1902/projection-commands.el
+  projection-20230826.1902/projection-core-commands.el
+  projection-20230826.1902/projection-core-log.el
+  projection-20230826.1902/projection-core.el
+  projection-20230826.1902/projection-find.el
+  projection-20230826.1902/projection-hook.el
+  projection-20230826.1902/projection-ibuffer.el
+  projection-20230826.1902/projection-pkg.el
+  projection-20230826.1902/projection-recentf.el
+  projection-20230826.1902/projection-types.el
+  projection-20230826.1902/projection-utils-cmake.el
+  projection-20230826.1902/projection-utils-meson.el
+  projection-20230826.1902/projection-utils.el
+  projection-20230826.1902/projection.el
  ✓ Success:
-  2023-08-26T10:01:33+0000  projection-20230822.2132.entry
-  2023-08-26T10:01:33+0000  projection-20230822.2132.tar
-Built projection in 5.198s, finished at 2023-08-26T10:01:36+0000
+  2023-08-26T16:06:55+0000  projection-20230822.2132.entry
+  2023-08-26T16:06:55+0000  projection-20230822.2132.tar
+  2023-08-26T19:50:15+0000  projection-20230826.1902.entry
+  2023-08-26T19:50:15+0000  projection-20230826.1902.tar
+Built projection in 7.064s, finished at 2023-08-26T19:50:17+0000

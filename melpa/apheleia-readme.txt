@@ -5,4 +5,4 @@ that it resets point to the beginning of the buffer. Apheleia
 maintains the position of point relative to its surrounding text
 even if the buffer is modified by the reformatting.
 
-Please see https://github.com/raxod502/apheleia for more information.
+Please see https://github.com/radian-software/apheleia for more information.
