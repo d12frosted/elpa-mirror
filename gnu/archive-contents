@@ -3718,7 +3718,7 @@
 		("David Gonzalez Gandara" . "dggandara@member.fsf.org"))
 	       (:maintainer "David Gonzalez Gandara" . "dggandara@member.fsf.org"))])
  (transient .
-	    [(0 4 1)
+	    [(0 4 3)
 	     ((emacs
 	       (25 1))
 	      (compat
@@ -3729,7 +3729,7 @@
 	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 	      (:authors
 	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	      (:commit . "a1575e58331b1ff85ac97667df0130ae822ccf5f"))])
+	      (:commit . "8cf1238181d57504e68f42fa0d4ef66784b197a9"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs
