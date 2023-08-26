@@ -1,9 +1,9 @@
-		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		       README FOR ORG TREE SLIDE
-		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                       README FOR ORG TREE SLIDE
+                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-			 [2021-10-10 Sun 02:05]
+                         [2021-10-10 Sun 02:05]
 
 
 [http://melpa.org/packages/org-tree-slide-badge.svg]

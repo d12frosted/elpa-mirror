@@ -1509,16 +1509,16 @@
 		  (:authors
 		   ("D. Williams" . "d.williams@posteo.net")))])
  (org-tree-slide .
-		 [(2 8 19)
+		 [(2 8 20)
 		  ((emacs
-		    (25 2)))
+		    (24 4)))
 		  "A presentation tool for org-mode" tar
 		  ((:url . "https://github.com/takaxp/org-tree-slide")
 		   (:keywords "convenience" "org-mode" "presentation" "narrowing")
-		   (:maintainer "Takaaki ISHIKAWA <takaxp at ieee dot org>")
+		   (:maintainer "Takaaki ISHIKAWA" . "takaxpatieeedotorg")
 		   (:authors
-		    ("Takaaki ISHIKAWA <takaxp at ieee dot org>"))
-		   (:commit . "07906356f0b8d8ac51645b0994b8108deb53003d"))])
+		    ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
+		   (:commit . "b535e26c4199e1e4d7a964c3ad4f4a65b88c008b"))])
  (orgit .
 	[(1 9 0)
 	 ((emacs
@@ -2195,7 +2195,7 @@
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
-	      [(3 3 0)
+	      [(3 3 1)
 	       ((emacs
 		 (25 1))
 		(compat
@@ -2206,7 +2206,7 @@
 		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 		(:authors
 		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
-		(:commit . "bce8d1bf3faf5237332aada3bb0920bbbc037fe7"))])
+		(:commit . "2dc557b668203e718502e28573c45659cc8c0a78"))])
  (with-simulated-input .
 		       [(3 0)
 			((emacs
@@ -2251,14 +2251,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 7 20230823140837)
+	       [(24 8 20230825161727)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "7402010f107fc3833ccee6e4922b5ee930d401d9"))])
+		 (:commit . "b27dd77b6e051e786468d6f1fc689ce2dbb4077c"))])
  (xkcd .
        [(1 1)
 	((json
