@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/millejoh/emacs-ipython-notebook.git
 
 Updating /mnt/store/melpa/working/ein/
-Checking out 32e2681d01fefde34760795b514cb98cb8a750d4
+Checking out ac92eb92eac35a9542485969487e43f5318825a1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ein/
-  to /tmp/einxzXP68/ein-20230622.1757
+  to /tmp/einGNwB2j/ein-20230827.325
   ! lisp/ein-cell.el -> ein-cell.el
   ! lisp/ein-classes.el -> ein-classes.el
   ! lisp/ein-completer.el -> ein-completer.el
@@ -30,7 +30,6 @@ Copying files (->) and directories (=>)
   ! lisp/ein-notification.el -> ein-notification.el
   ! lisp/ein-output-area.el -> ein-output-area.el
   ! lisp/ein-pager.el -> ein-pager.el
-  ! lisp/ein-pkg.el -> ein-pkg.el
   ! lisp/ein-process.el -> ein-process.el
   ! lisp/ein-python-send.el -> ein-python-send.el
   ! lisp/ein-pytools.el -> ein-pytools.el
@@ -44,46 +43,48 @@ Copying files (->) and directories (=>)
   ! lisp/ein.el -> ein.el
   ! lisp/ob-ein.el -> ob-ein.el
   ! lisp/poly-ein.el -> poly-ein.el
-Created ein-20230622.1757.tar containing:
-  ein-20230622.1757/
-  ein-20230622.1757/ein-cell.el
-  ein-20230622.1757/ein-classes.el
-  ein-20230622.1757/ein-completer.el
-  ein-20230622.1757/ein-contents-api.el
-  ein-20230622.1757/ein-core.el
-  ein-20230622.1757/ein-dev.el
-  ein-20230622.1757/ein-events.el
-  ein-20230622.1757/ein-file.el
-  ein-20230622.1757/ein-gat.el
-  ein-20230622.1757/ein-ipdb.el
-  ein-20230622.1757/ein-ipynb-mode.el
-  ein-20230622.1757/ein-jupyter.el
-  ein-20230622.1757/ein-kernel.el
-  ein-20230622.1757/ein-kernelinfo.el
-  ein-20230622.1757/ein-kill-ring.el
-  ein-20230622.1757/ein-log.el
-  ein-20230622.1757/ein-markdown-mode.el
-  ein-20230622.1757/ein-node.el
-  ein-20230622.1757/ein-notebook.el
-  ein-20230622.1757/ein-notebooklist.el
-  ein-20230622.1757/ein-notification.el
-  ein-20230622.1757/ein-output-area.el
-  ein-20230622.1757/ein-pager.el
-  ein-20230622.1757/ein-pkg.el
-  ein-20230622.1757/ein-process.el
-  ein-20230622.1757/ein-python-send.el
-  ein-20230622.1757/ein-pytools.el
-  ein-20230622.1757/ein-query.el
-  ein-20230622.1757/ein-scratchsheet.el
-  ein-20230622.1757/ein-shared-output.el
-  ein-20230622.1757/ein-traceback.el
-  ein-20230622.1757/ein-utils.el
-  ein-20230622.1757/ein-websocket.el
-  ein-20230622.1757/ein-worksheet.el
-  ein-20230622.1757/ein.el
-  ein-20230622.1757/ob-ein.el
-  ein-20230622.1757/poly-ein.el
+Created ein-20230827.325.tar containing:
+  ein-20230827.325/
+  ein-20230827.325/ein-cell.el
+  ein-20230827.325/ein-classes.el
+  ein-20230827.325/ein-completer.el
+  ein-20230827.325/ein-contents-api.el
+  ein-20230827.325/ein-core.el
+  ein-20230827.325/ein-dev.el
+  ein-20230827.325/ein-events.el
+  ein-20230827.325/ein-file.el
+  ein-20230827.325/ein-gat.el
+  ein-20230827.325/ein-ipdb.el
+  ein-20230827.325/ein-ipynb-mode.el
+  ein-20230827.325/ein-jupyter.el
+  ein-20230827.325/ein-kernel.el
+  ein-20230827.325/ein-kernelinfo.el
+  ein-20230827.325/ein-kill-ring.el
+  ein-20230827.325/ein-log.el
+  ein-20230827.325/ein-markdown-mode.el
+  ein-20230827.325/ein-node.el
+  ein-20230827.325/ein-notebook.el
+  ein-20230827.325/ein-notebooklist.el
+  ein-20230827.325/ein-notification.el
+  ein-20230827.325/ein-output-area.el
+  ein-20230827.325/ein-pager.el
+  ein-20230827.325/ein-pkg.el
+  ein-20230827.325/ein-process.el
+  ein-20230827.325/ein-python-send.el
+  ein-20230827.325/ein-pytools.el
+  ein-20230827.325/ein-query.el
+  ein-20230827.325/ein-scratchsheet.el
+  ein-20230827.325/ein-shared-output.el
+  ein-20230827.325/ein-traceback.el
+  ein-20230827.325/ein-utils.el
+  ein-20230827.325/ein-websocket.el
+  ein-20230827.325/ein-worksheet.el
+  ein-20230827.325/ein.el
+  ein-20230827.325/ob-ein.el
+  ein-20230827.325/poly-ein.el
  ✓ Success:
-  2023-08-26T18:43:26+0000  ein-20230622.1757.entry
-  2023-08-26T18:43:26+0000  ein-20230622.1757.tar
-Built ein in 6.957s, finished at 2023-08-26T18:43:30+0000
+  2023-08-27T00:36:19+0000  ein-20230622.1757.entry
+  2023-08-27T00:36:18+0000  ein-20230622.1757.tar
+  2023-08-27T03:44:09+0000  ein-20230827.325.entry
+  2023-08-27T03:44:09+0000  ein-20230827.325.tar
+Built ein in 5.081s, finished at 2023-08-27T03:44:11+0000
