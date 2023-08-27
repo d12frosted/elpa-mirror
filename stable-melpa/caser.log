@@ -1,0 +1,23 @@
+Package: caser
+Fetcher: hg
+Source:  https://hg.sr.ht/~zck/caser.el
+
+Cloning https://hg.sr.ht/~zck/caser.el to /mnt/store/melpa/working/caser/
+Checking out ede9bbf3ee1f9fd7833c00f9169e282c5d1b5f9e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/caser/
+  to /tmp/caserXA2Wft/caser-20230823.1527
+    caser.el -> caser.el
+Created caser-20230823.1527.tar containing:
+  caser-20230823.1527/
+  caser-20230823.1527/caser-pkg.el
+  caser-20230823.1527/caser.el
+Command `hg purge' exited with non-zero exit-code: 255
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command `hg purge' exited with non-zero exit-code: 255
