@@ -1311,7 +1311,7 @@
 		   ("Magnar Sveen" . "magnars@gmail.com"))
 		  (:keywords "marking" "region"))])
  (expreg .
-	 [(1 0 0)
+	 [(1 1 0)
 	  ((emacs
 	    (29 1)))
 	  "Simple expand region" tar
@@ -1320,7 +1320,7 @@
 	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	   (:authors
 	    ("Yuan Fu" . "casouri@gmail.com"))
-	   (:commit . "a5ceac5c0c646cf1a2ea674465be3726e272e675"))])
+	   (:commit . "4fc82bbaafacbd3456cdf401f0b45c5203bd0a9d"))])
  (external-completion .
 		      [(0 1)
 		       nil "Let external tools control completion style" tar

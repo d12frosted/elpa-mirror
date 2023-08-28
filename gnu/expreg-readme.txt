@@ -10,3 +10,7 @@ the region after point. In the example below, only region B is kept
     (region A)|(region B)
 
 Expreg also recognizes subwords if ‘subword-mode’ is on.
+
+By default, the sentence expander ‘expreg--sentence’ is not
+enabled. I suggest enabling it (by adding it to ‘expreg-functions’)
+in text modes only.
