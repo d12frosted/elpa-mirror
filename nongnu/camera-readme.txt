@@ -1,16 +1,6 @@
-		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		 CAMERA - TAKE PICTURE WITH YOUR CAMERA
-		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Installation
-.. 1. Quelpa
-.. 2. Straight.el
-.. 3. Manual
-2. Usage
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                 CAMERA - TAKE PICTURE WITH YOUR CAMERA
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This package allows you to take photos using your camera/webcam from
