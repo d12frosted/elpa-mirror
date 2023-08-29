@@ -1595,15 +1595,15 @@
 		("Jonathan Waltman" . "jonathan.waltman@gmail.com"))
 	       (:commit . "5f2943fd70d94065496c52d21f05eb89028637cc"))])
  (pcre2el .
-	  [(1 11)
+	  [(1 12)
 	   ((emacs
 	     (25 1)))
 	   "regexp syntax converter" tar
 	   ((:url . "https://github.com/joddie/pcre2el")
-	    (:maintainer "joddie <jonxfield at gmail.com>")
+	    (:maintainer "joddie" . "jonxfieldatgmail.com")
 	    (:authors
-	     ("joddie <jonxfield at gmail.com>"))
-	    (:commit . "3a59d133d1ed9fd941ddecc85ee2a8e32be3d267"))])
+	     ("joddie" . "jonxfieldatgmail.com"))
+	    (:commit . "018531ba0cf8e2b28d1108136a0e031b6a45f1c1"))])
  (pdf-tools .
 	    [(1 1 0)
 	     ((emacs

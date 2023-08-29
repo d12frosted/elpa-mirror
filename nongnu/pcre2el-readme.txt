@@ -1,25 +1,3 @@
-Table of Contents
-─────────────────
-
-1. pcre2el: convert between PCRE, Emacs and rx regexp syntax
-.. 1. Overview
-.. 2. Usage
-..... 1. Interactive input and output
-..... 2. Syntax conversion commands
-..... 3. PCRE mode (experimental)
-..... 4. Explain regexps
-..... 5. Generate all matching strings (productions)
-..... 6. RE-Builder support
-..... 7. Use from Lisp
-.. 3. Bugs and Limitations
-..... 1. Limitations on PCRE syntax
-..... 2. Other limitations
-..... 3. TODO:
-.. 4. Internal details
-.. 5. Soapbox
-.. 6. History and acknowledgments
-
-
 1 pcre2el: convert between PCRE, Emacs and rx regexp syntax
 ═══════════════════════════════════════════════════════════
 
