@@ -22,11 +22,11 @@ installed with, you must recompile the package:
 
    • Remove all byte-compiled Tramp files
 
-          $ rm -f ~/.emacs.d/elpa/tramp-2.6.1.1a/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.6.1.2/tramp*.elc
 
    • Start Emacs with Tramp’s source files
 
-          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.1.1a -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.1.2 -l tramp
 
      This should not give you the error.
 
@@ -40,7 +40,7 @@ Mitigation of a bug in Emacs 29.1
 *********************************
 
 Due to a bug in Emacs 29.1, you must apply the following change prior
-installation or upgrading Tramp 2.6.1.1a from GNU ELPA:
+installation or upgrading Tramp 2.6.1.2 from GNU ELPA:
 
      (when (string-equal emacs-version "29.1")
        (with-current-buffer

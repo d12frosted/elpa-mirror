@@ -1311,7 +1311,7 @@
 		   ("Magnar Sveen" . "magnars@gmail.com"))
 		  (:keywords "marking" "region"))])
  (expreg .
-	 [(1 1 0)
+	 [(1 2 0)
 	  ((emacs
 	    (29 1)))
 	  "Simple expand region" tar
@@ -1320,7 +1320,7 @@
 	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	   (:authors
 	    ("Yuan Fu" . "casouri@gmail.com"))
-	   (:commit . "4fc82bbaafacbd3456cdf401f0b45c5203bd0a9d"))])
+	   (:commit . "f6f6abcd00960d0b8bb7cc96f9706036ed1956c9"))])
  (external-completion .
 		      [(0 1)
 		       nil "Let external tools control completion style" tar
@@ -3690,7 +3690,7 @@
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (tramp .
-	[(2 6 1 1 1)
+	[(2 6 1 2)
 	 ((emacs
 	   (26 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3699,7 +3699,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "83345a2c2468c37ac4ef396c6a0350b7ccbf6b4f"))])
+	  (:commit . "382733d64116368ad50e6fbdb848357e9ce1c72d"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
