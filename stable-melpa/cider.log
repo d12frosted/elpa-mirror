@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/cider.git
 
 Updating /mnt/store/melpa/working/cider/
-Checking out e8b61c4efdee5b2671b446315aaeae3fe2d3fadb
+Checking out ef5bbe080fdd7b4e33f31e8354eaea04413aefca
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cider/
-  to /tmp/cider3IluCL/cider-20230829.1020
+  to /tmp/ciderhleI3b/cider-20230829.1935
     cider-apropos.el -> cider-apropos.el
     cider-browse-ns.el -> cider-browse-ns.el
     cider-browse-spec.el -> cider-browse-spec.el
@@ -47,50 +47,50 @@ Copying files (->) and directories (=>)
     nrepl-client.el -> nrepl-client.el
     nrepl-dict.el -> nrepl-dict.el
     clojure.sh -> clojure.sh
-Created cider-20230829.1020.tar containing:
-  cider-20230829.1020/
-  cider-20230829.1020/cider-apropos.el
-  cider-20230829.1020/cider-browse-ns.el
-  cider-20230829.1020/cider-browse-spec.el
-  cider-20230829.1020/cider-cheatsheet.el
-  cider-20230829.1020/cider-classpath.el
-  cider-20230829.1020/cider-client.el
-  cider-20230829.1020/cider-clojuredocs.el
-  cider-20230829.1020/cider-common.el
-  cider-20230829.1020/cider-completion.el
-  cider-20230829.1020/cider-connection.el
-  cider-20230829.1020/cider-debug.el
-  cider-20230829.1020/cider-doc.el
-  cider-20230829.1020/cider-eldoc.el
-  cider-20230829.1020/cider-eval.el
-  cider-20230829.1020/cider-find.el
-  cider-20230829.1020/cider-format.el
-  cider-20230829.1020/cider-inspector.el
-  cider-20230829.1020/cider-jar.el
-  cider-20230829.1020/cider-log.el
-  cider-20230829.1020/cider-macroexpansion.el
-  cider-20230829.1020/cider-mode.el
-  cider-20230829.1020/cider-ns.el
-  cider-20230829.1020/cider-overlays.el
-  cider-20230829.1020/cider-pkg.el
-  cider-20230829.1020/cider-popup.el
-  cider-20230829.1020/cider-profile.el
-  cider-20230829.1020/cider-repl-history.el
-  cider-20230829.1020/cider-repl.el
-  cider-20230829.1020/cider-resolve.el
-  cider-20230829.1020/cider-scratch.el
-  cider-20230829.1020/cider-selector.el
-  cider-20230829.1020/cider-stacktrace.el
-  cider-20230829.1020/cider-test.el
-  cider-20230829.1020/cider-tracing.el
-  cider-20230829.1020/cider-util.el
-  cider-20230829.1020/cider-xref-backend.el
-  cider-20230829.1020/cider-xref.el
-  cider-20230829.1020/cider.el
-  cider-20230829.1020/clojure.sh
-  cider-20230829.1020/nrepl-client.el
-  cider-20230829.1020/nrepl-dict.el
+Created cider-20230829.1935.tar containing:
+  cider-20230829.1935/
+  cider-20230829.1935/cider-apropos.el
+  cider-20230829.1935/cider-browse-ns.el
+  cider-20230829.1935/cider-browse-spec.el
+  cider-20230829.1935/cider-cheatsheet.el
+  cider-20230829.1935/cider-classpath.el
+  cider-20230829.1935/cider-client.el
+  cider-20230829.1935/cider-clojuredocs.el
+  cider-20230829.1935/cider-common.el
+  cider-20230829.1935/cider-completion.el
+  cider-20230829.1935/cider-connection.el
+  cider-20230829.1935/cider-debug.el
+  cider-20230829.1935/cider-doc.el
+  cider-20230829.1935/cider-eldoc.el
+  cider-20230829.1935/cider-eval.el
+  cider-20230829.1935/cider-find.el
+  cider-20230829.1935/cider-format.el
+  cider-20230829.1935/cider-inspector.el
+  cider-20230829.1935/cider-jar.el
+  cider-20230829.1935/cider-log.el
+  cider-20230829.1935/cider-macroexpansion.el
+  cider-20230829.1935/cider-mode.el
+  cider-20230829.1935/cider-ns.el
+  cider-20230829.1935/cider-overlays.el
+  cider-20230829.1935/cider-pkg.el
+  cider-20230829.1935/cider-popup.el
+  cider-20230829.1935/cider-profile.el
+  cider-20230829.1935/cider-repl-history.el
+  cider-20230829.1935/cider-repl.el
+  cider-20230829.1935/cider-resolve.el
+  cider-20230829.1935/cider-scratch.el
+  cider-20230829.1935/cider-selector.el
+  cider-20230829.1935/cider-stacktrace.el
+  cider-20230829.1935/cider-test.el
+  cider-20230829.1935/cider-tracing.el
+  cider-20230829.1935/cider-util.el
+  cider-20230829.1935/cider-xref-backend.el
+  cider-20230829.1935/cider-xref.el
+  cider-20230829.1935/cider.el
+  cider-20230829.1935/clojure.sh
+  cider-20230829.1935/nrepl-client.el
+  cider-20230829.1935/nrepl-dict.el
  ✓ Success:
-  2023-08-29T17:35:52+0000  cider-20230829.1020.entry
-  2023-08-29T17:35:51+0000  cider-20230829.1020.tar
-Built cider in 5.427s, finished at 2023-08-29T17:35:53+0000
+  2023-08-29T23:56:02+0000  cider-20230829.1935.entry
+  2023-08-29T23:56:02+0000  cider-20230829.1935.tar
+Built cider in 9.486s, finished at 2023-08-29T23:56:06+0000
