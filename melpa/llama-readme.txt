@@ -5,7 +5,7 @@ to add syntax were met with determined pushback and the use of a
 macro was suggested as an alternative.
 
 The `##' macro, whose signature is (## FN &rest args), expands
-to a `lambda' expressions, which wraps around its arguments.
+to a `lambda' expression, which wraps around its arguments.
 
 This `lambda' expression calls the function FN with arguments
 ARGS and returns its value.  Its own arguments are derived from
@@ -31,12 +31,12 @@ Instead of:
 
 you can use this macro and write:
 
-  (##foo %1 (bar %3) %*)
+  (##foo %1 (bar &3) &*)
 
 which expands to:
 
-  (lambda (%1 _%2 &optional %3 &rest %*)
-    (foo %1 (bar %3) %*))
+  (lambda (%1 _%2 &optional &3 &rest &*)
+    (foo %1 (bar &3) &*))
 
 The name `##' was chosen because that allows (optionally)
 omitting the whitespace between it and the following symbol.
