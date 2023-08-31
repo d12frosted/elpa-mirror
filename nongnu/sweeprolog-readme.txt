@@ -237,22 +237,31 @@ Getting Started
   │ (setq sweeprolog-swipl-path "/path/to/swipl")
   └────
 
-  All set!  `sweeprolog' automatically loads `sweep-module' and
-  initializes the embedded SWI-Prolog runtime.  For a description of the
-  different features of Sweep, see the following sections of this
-  manual.
+  All set!  You can now use Sweep for Prolog development ([Editing
+  Prolog code]) and for integrating Prolog into your Emacs Lisp code
+  ([Querying Prolog]).  In the next section ([Discovering Sweep]) you’ll
+  find some useful tips for learning to work with Sweep.
 
   _Important note for Linux users_: prior to version 29, Emacs would
   load dynamic modules in a way that is not fully compatible with the
   way the SWI-Prolog native library, `libswipl', loads its own native
   extensions.  This may lead to Sweep failing after loading
-  `sweep-module'.  To work around this issue, users running Emacs 28 or
-  earlier on Linux can start Emacs with `libswipl' loaded upfront via
-  `LD_PRELOAD', for example:
+  `sweep-module' ([High-level Architecture]).  To work around this
+  issue, users running Emacs 28 or earlier on Linux can start Emacs with
+  `libswipl' loaded upfront via `LD_PRELOAD', for example:
 
   ┌────
   │ LD_PRELOAD=/usr/local/lib/libswipl.so emacs
   └────
+
+
+[Editing Prolog code] See section Editing Prolog code
+
+[Querying Prolog] See section Querying Prolog
+
+[Discovering Sweep] See section Discovering Sweep
+
+[High-level Architecture] See section High-level Architecture
 
 
 Discovering Sweep
