@@ -13,15 +13,15 @@
   [leanpub-badge]: https://img.shields.io/badge/leanpub-guide-orange.svg
 
 markdown-mode is a major mode for editing [Markdown][]-formatted
-text.  The latest stable version is markdown-mode 2.5, released on
-Feb 12, 2022.  See the [release notes][] for details.
+text.  The latest stable version is markdown-mode 2.6, released on
+Aug 30, 2023.  See the [release notes][] for details.
 markdown-mode is free software, licensed under the GNU GPL,
 version 3 or later.
 
 ![Markdown Mode Screenshot](https://jblevins.org/projects/markdown-mode/screenshots/20170818-001.png)
 
 [Markdown]: http://daringfireball.net/projects/markdown/
-[release notes]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.5
+[release notes]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.6
 
 ## Documentation
 
@@ -83,7 +83,9 @@ example; adjust settings as desired):
 (use-package markdown-mode
   :ensure t
   :mode ("README\\.md\\'" . gfm-mode)
-  :init (setq markdown-command "multimarkdown"))
+  :init (setq markdown-command "multimarkdown")
+  :bind (:map markdown-mode-map
+         ("C-c C-e" . markdown-do)))
 ```
 
 [MELPA Stable]: http://stable.melpa.org/
@@ -106,9 +108,12 @@ to load automatically by adding the following to your init file:
 (autoload 'gfm-mode "markdown-mode"
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
+(with-eval-after-load 'markdown-mode
+  (define-key markdown-mode-map (kbd "C-c C-e") #'markdown-do))
 ```
 
-[markdown-mode.el]: https://raw.githubusercontent.com/jrblevin/markdown-mode/v2.5/markdown-mode.el
+[markdown-mode.el]: https://raw.githubusercontent.com/jrblevin/markdown-mode/v2.6/markdown-mode.el
 
 **Development Version**
 
@@ -346,6 +351,19 @@ can obtain a list of all keybindings by pressing <kbd>C-c C-h</kbd>.
     in a browser other than `eww`.  If you want to force the
     preview window to appear at the bottom or right, you can
     customize `markdown-split-window-direction`.
+
+      ```lisp
+      ;; Set custom markdown preview function
+      (setq markdown-live-preview-window-function #'my-markdown-preview-function)
+
+      ;; always open the preview window at the right
+      (setq markdown-split-window-direction 'right)
+      ;; always open the preview window at the bottom
+      (setq markdown-split-window-direction 'below)
+
+      ;; delete exported HTML file after markdown-live-preview-export is called
+      (setq markdown-live-preview-delete-export 'delete-on-export)
+      ```
 
     To summarize:
 
@@ -665,13 +683,16 @@ that can be customized.  The <kbd>M-x customize-mode</kbd> command
 provides an interface to all of the possible customizations:
 
   * `markdown-command` - the command used to run Markdown (default:
-    `markdown`).  This variable may be customized to pass
-    command-line options to your Markdown processor of choice. We recommend
-    you to use list of strings if you want to set command line options like.
+    `markdown`).  This variable may be customized to pass command-line
+    options to your Markdown processor of choice. We recommend you to
+    use list of strings if you want to set command line options like.
     `'("pandoc" "--from=markdown" "--to=html5")`.  It can also be a
     function; in this case `markdown` will call it with three
-    arguments: the beginning and end of the region to process, and
-    a buffer to write the output to.
+    arguments or four arguments, depending on
+    `markdown-command-needs-filename`.  The first three arguments are:
+    the beginning and end of the region to process, and a buffer to
+    write the output to. When `markdown-command-needs-filename` is `t`, the fourth
+    argument is set to the name of the file.
 
   * `markdown-command-needs-filename` - set to `t` if
     `markdown-command` does not accept standard input (default:
@@ -680,9 +701,7 @@ provides an interface to all of the possible customizations:
     When set to `t`, `markdown-mode` will pass the name of the file
     as the final command-line argument to `markdown-command`.  Note
     that in the latter case, you will only be able to run
-    `markdown-command` from buffers which are visiting a file.  If
-    `markdown-command` is a function, `markdown-command-needs-filename`
-    is ignored.
+    `markdown-command` from buffers which are visiting a file.
 
   * `markdown-open-command` - the command used for calling a standalone
     Markdown previewer which is capable of opening Markdown source files
@@ -913,6 +932,9 @@ provides an interface to all of the possible customizations:
   * `markdown-enable-highlighting-syntax` - font lock for highlighting
      syntax like Obsidian, Quilt(default: `nil`).
 
+  * `markdown-fontify-whole-heading-line` - font lock for highlighting
+     the whole line for headings.(default: `nil`)
+
 Additionally, the faces used for syntax highlighting can be modified to
 your liking by issuing <kbd>M-x customize-group RET markdown-faces</kbd>
 or by using the "Markdown Faces" link at the bottom of the mode
@@ -1064,7 +1086,7 @@ contributions!  See the [contributors graph][contrib] for details.
 ## Bugs
 
 markdown-mode is developed and tested primarily for compatibility
-with GNU Emacs 25.1 and later.  If you find any bugs in
+with GNU Emacs 27.1 and later.  If you find any bugs in
 markdown-mode, please construct a test case or a patch and open a
 ticket on the [GitHub issue tracker][issues].  See the
 contributing guidelines in `CONTRIBUTING.md` for details on
@@ -1093,6 +1115,7 @@ first version was released on May 24, 2007.
   * 2017-08-31: [Version 2.3][]
   * 2020-05-30: [Version 2.4][]
   * 2022-02-12: [Version 2.5][]
+  * 2023-08-30: [Version 2.6][]
 
 [Version 1.1]: https://jblevins.org/projects/markdown-mode/rev-1-1
 [Version 1.2]: https://jblevins.org/projects/markdown-mode/rev-1-2
@@ -1110,3 +1133,4 @@ first version was released on May 24, 2007.
 [Version 2.3]: https://jblevins.org/projects/markdown-mode/rev-2-3
 [Version 2.4]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.4
 [Version 2.5]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.5
+[Version 2.6]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.6

@@ -1,6 +1,6 @@
-			     ━━━━━━━━━━━━━
-			      ANNOTATE.EL
-			     ━━━━━━━━━━━━━
+                             ━━━━━━━━━━━━━
+                              ANNOTATE.EL
+                             ━━━━━━━━━━━━━
 
 
 [https://elpa.nongnu.org/nongnu/annotate.svg]
@@ -27,7 +27,6 @@
   annotations to arbitrary files without changing the files
   themselves. This is very useful for code reviews. When `annotate-mode'
   is active, `C-c C-a' will create, edit, or delete annotations.
-
   <https://raw.githubusercontent.com/bastibe/annotate.el/master/example.png>
 
 
@@ -53,7 +52,7 @@
   The current database for annotations is contained in the file
   indicated by the variable `annotate-file' (`~/.emacs.d/annotations' by
   default) but each user can change this value in a dynamic way using
-  the command `annotate-switch-db'.  This command will take care to
+  the command `annotate-switch-db'. This command will take care to
   refresh/redraw all annotations in the buffers that uses
   `annotate-mode'.
 
@@ -64,8 +63,8 @@
   `annotate-warn-if-hash-mismatch' to nil.
 
   Please note that switching database, in this context, means rebinding
-  the aforementioned variable (`annotate-file').  This means than no
-  more than a single database can be active for each Emacs session.
+  the aforementioned variable (`annotate-file'). This means than no more
+  than a single database can be active for each Emacs session.
 
   If an empty annotation database (in memory) is saved the database file
   is deleted instead, if `annotate-database-confirm-deletion' is non nil
@@ -84,8 +83,11 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   To use multiple database in the same Emacs session `annotate-file'
-  should be made [buffer-local], see: [this thread] and, in particular
-  [this message].
+  should be made [buffer-local],
+
+  see:
+
+  [this thread] and, in particular [this message].
 
   Finally, if the customizable variable `annotate-file-buffer-local' is
   non-nil (default `nil'), for each annotated file an annotation
@@ -135,8 +137,8 @@
 2.3 keybindings
 ───────────────
 
-2.3.1 `C-c  C-a' (function annotate-annotate)
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+2.3.1 `C-c C-a' (function annotate-annotate)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Creates a new annotation for that region.
 
@@ -153,8 +155,8 @@
   `annotate-endline-annotate-whole-line' is not nil (default is non nil)
   the whole line is annotated (or the next if the line is empty).
 
-  If the line contains a single annotation that cover all the line
-  annotating the newline Will ask to edit the annotation. If
+  If the line contains a single annotation that cover all the line,
+  annotating the newline will ask to edit the annotation. If
   `annotate-endline-annotate-whole-line' is nil annotating a newline
   will signal an error.
 
@@ -373,26 +375,25 @@
   • Because of a limitation in the Emacs display routines
     `scroll-down-line' could get stuck on a annotated line. So no fix
     can be provided by the authors of `annotate.el', a possible
-    workaround is to call the command with a numeric prefix equals to
-    one plus the number of annotation text lines below the annotated
-    text.
+  workaround is to call the command with a numeric prefix equals to one
+  plus the number of annotation text lines below the annotated text.
 
-    For example:
+  For example:
 
-    ┌────
-    │ foo bar baz
-    │ annotation
-    └────
+  ┌────
+  │ foo bar baz
+  │ annotation
+  └────
 
-    needs a prefix of 2: `C-u 2 M-x scroll-down-line'
+  needs a prefix of 2: `C-u 2 M-x scroll-down-line'
 
-    But note that:
+  But note that:
 
-    ┌────
-    │ foo bar baz   annotation
-    └────
+  ┌────
+  │ foo bar baz   annotation
+  └────
 
-    Needs no prefix.
+  Needs no prefix.
 
   • Deleting the first character of an annotated text will remove the
     annotation (this turned out to be useful, though).
@@ -418,7 +419,7 @@
   │ [file-mask] [(and | or) [not] regex-note [(and | or) [not] regexp-note ...]]
   └────
 
-  where
+  where:
 
   file-mask
         is a regular expression that should match the path of file the
@@ -450,6 +451,7 @@
   ┌────
   │ /home/foo/
   └────
+
   matches all the annotation that refers to file in the directory
   `/home/foo'
 
@@ -463,6 +465,7 @@
   ┌────
   │ .* and "not"
   └────
+
   the quotation mark (") can be used to escape strings.
 
   As a shortcut, an empty query will match everything (just press

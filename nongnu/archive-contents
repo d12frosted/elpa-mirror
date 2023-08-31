@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(2 0 1)
+	   [(2 0 2)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
-	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
-	     (:authors
-	      ("Bastian Bechtold"))
-	     (:commit . "93c4e36e7e62e5d82b9b3e659e59331b7df48f58"))])
+	     (:maintainer
+	      ("Bastian Bechtold" . "bastibe.dev@mailbox.org")
+	      ("cage" . "cage-dev@twistfold.it"))
+	     (:commit . "bf42792154c003ac34de794b63aa530d9fdbc22f"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -236,14 +236,14 @@
 		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 		 (:commit . "dae21f8807c80297b9d69aefac4c3864c56d50af"))])
  (clojure-ts-mode .
-		  [(0 1 4)
+		  [(0 1 5)
 		   ((emacs
 		     (29)))
 		   "Major mode for Clojure code" tar
 		   ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
 		    (:keywords "languages" "clojure" "clojurescript" "lisp")
 		    (:maintainer "Danny Freeman" . "danny@dfreeman.email")
-		    (:commit . "3e4c55fab14e0885a411f6018fb8aedb04afc49d"))])
+		    (:commit . "4e18177a568027b464ea794c166d2eb4ebe080fc"))])
  (coffee-mode .
 	      [(0 6 3)
 	       ((emacs
@@ -1275,16 +1275,31 @@
 		  (:authors
 		   ("Jonas Bernoulli" . "jonas@bernoul.li")))])
  (markdown-mode .
-		[(2 5)
+		[(2 6)
 		 ((emacs
-		   (25 1)))
+		   (27 1)))
 		 "Major mode for Markdown-formatted text" tar
 		 ((:url . "https://jblevins.org/projects/markdown-mode/")
 		  (:keywords "markdown" "github flavored markdown" "itex")
 		  (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
 		  (:authors
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
-		  (:commit . "eecf2f20b097f9e6a0eaf938af967122fbec35dd"))])
+		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
+ (mastodon .
+	   [(1 0 1)
+	    ((emacs
+	      (27 1))
+	     (request
+	      (0 3 0))
+	     (persist
+	      (0 4)))
+	    "Client for fediverse services using the Mastodon API" tar
+	    ((:url . "https://codeberg.org/martianh/mastodon.el")
+	     (:maintainer "Marty Hiatt" . "martianhiatus@riseup.net")
+	     (:authors
+	      ("Johnson Denen" . "johnson.denen@gmail.com")
+	      ("Marty Hiatt" . "martianhiatus@riseup.net"))
+	     (:commit . "42bf0c5d4f1b81f8468ac774a5d7f19057510b32"))])
  (material-theme .
 		 [(2015)
 		  ((emacs

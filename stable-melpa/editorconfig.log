@@ -3,28 +3,30 @@ Fetcher: github
 Source:  https://github.com/editorconfig/editorconfig-emacs.git
 
 Updating /mnt/store/melpa/working/editorconfig/
-Checking out df0e5180db1d1267c9ea39abbe98b7993e83bae7
+Checking out 2fed9599bcfea5d1aa9fb57dc9118d0f82b6c999
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfiggeVX0w/editorconfig-20230802.1505
+  to /tmp/editorconfiguyZjtj/editorconfig-20230830.2226
     editorconfig-conf-mode.el -> editorconfig-conf-mode.el
     editorconfig-core-handle.el -> editorconfig-core-handle.el
     editorconfig-core.el -> editorconfig-core.el
     editorconfig-fnmatch.el -> editorconfig-fnmatch.el
     editorconfig.el -> editorconfig.el
   ! doc/editorconfig.texi -> editorconfig.texi
-Generating /tmp/editorconfiggeVX0w/editorconfig-20230802.1505/editorconfig.info
-Created editorconfig-20230802.1505.tar containing:
-  editorconfig-20230802.1505/
-  editorconfig-20230802.1505/dir
-  editorconfig-20230802.1505/editorconfig-conf-mode.el
-  editorconfig-20230802.1505/editorconfig-core-handle.el
-  editorconfig-20230802.1505/editorconfig-core.el
-  editorconfig-20230802.1505/editorconfig-fnmatch.el
-  editorconfig-20230802.1505/editorconfig-pkg.el
-  editorconfig-20230802.1505/editorconfig.el
-  editorconfig-20230802.1505/editorconfig.info
+Generating /tmp/editorconfiguyZjtj/editorconfig-20230830.2226/editorconfig.info
+Created editorconfig-20230830.2226.tar containing:
+  editorconfig-20230830.2226/
+  editorconfig-20230830.2226/dir
+  editorconfig-20230830.2226/editorconfig-conf-mode.el
+  editorconfig-20230830.2226/editorconfig-core-handle.el
+  editorconfig-20230830.2226/editorconfig-core.el
+  editorconfig-20230830.2226/editorconfig-fnmatch.el
+  editorconfig-20230830.2226/editorconfig-pkg.el
+  editorconfig-20230830.2226/editorconfig.el
+  editorconfig-20230830.2226/editorconfig.info
  ✓ Success:
   2023-08-30T19:17:49+0000  editorconfig-20230802.1505.entry
   2023-08-30T19:17:49+0000  editorconfig-20230802.1505.tar
-Built editorconfig in 7.842s, finished at 2023-08-30T19:17:51+0000
+  2023-08-30T22:30:54+0000  editorconfig-20230830.2226.entry
+  2023-08-30T22:30:53+0000  editorconfig-20230830.2226.tar
+Built editorconfig in 7.810s, finished at 2023-08-30T22:30:56+0000
