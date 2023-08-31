@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://depp.brause.cc/shackle.git
 
 Updating /mnt/store/melpa/working/shackle/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://depp.brause.cc/shackle.git/': Failed to connect to depp.brause.cc port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out f1467db75a8fa5d51c676181fb308ccbf7b05e6f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shackle/
+  to /tmp/shackle4wwuTR/shackle-20211118.1129
+    shackle.el -> shackle.el
+Created shackle-20211118.1129.tar containing:
+  shackle-20211118.1129/
+  shackle-20211118.1129/shackle-pkg.el
+  shackle-20211118.1129/shackle.el
+ ✓ Success:
+  2023-08-31T05:47:15+0000  shackle-20211118.1129.entry
+  2023-08-31T05:47:15+0000  shackle-20211118.1129.tar
+Built shackle in 5.921s, finished at 2023-08-31T05:47:17+0000
