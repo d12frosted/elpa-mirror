@@ -8,7 +8,7 @@ then only the color of the mode line changes when a window
 becomes in-/active.  Other packages additionally change what
 elements are being displayed and also the appearance of an
 individual element may change completely, which I found highly
-distracting when trying out those packages because I never know
+distracting when trying out those packages, because I never knew
 what visual clues to look for in order to find a certain piece
 of information.
 

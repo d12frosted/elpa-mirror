@@ -47,7 +47,7 @@ otherwise:
     (auto-compile-on-save-mode)
 
 You might want to set the file-local value of `no-byte-compile' to
-t, e.g. by adding "-*- no-byte-compile: t -*-" (without the quotes)
+t, e.g., by adding "-*- no-byte-compile: t -*-" (without the quotes)
 at the end of the very first line.  That way all user files benefit
 from the protection offered by `load-prefer-newer' and the modes
 that are defined here, otherwise `init.el' is the only exception.
@@ -93,5 +93,5 @@ To display the buffer use `M-x auto-compile-display-log' or click
 on the counter in the mode-line.
 
 Using `auto-compile-inhibit-compile-hook' it is possible to inhibit
-automatic compilation under certain circumstances; e.g. when HEAD
+automatic compilation under certain circumstances; e.g., when HEAD
 is detached inside a Git repository (useful during rebase sessions).
