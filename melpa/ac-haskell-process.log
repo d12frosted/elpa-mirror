@@ -3,16 +3,8 @@ Fetcher: github
 Source:  https://github.com/purcell/ac-haskell-process.git
 
 Updating /mnt/store/melpa/working/ac-haskell-process/
-Checking out 0362d4323511107ec70e7165cb612f3ab01b712f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ac-haskell-process/
-  to /tmp/ac-haskell-processlF6j2u/ac-haskell-process-20150423.1402
-    ac-haskell-process.el -> ac-haskell-process.el
-Created ac-haskell-process-20150423.1402.tar containing:
-  ac-haskell-process-20150423.1402/
-  ac-haskell-process-20150423.1402/ac-haskell-process-pkg.el
-  ac-haskell-process-20150423.1402/ac-haskell-process.el
- ✓ Success:
-  2023-09-01T15:54:33+0000  ac-haskell-process-20150423.1402.entry
-  2023-09-01T15:54:33+0000  ac-haskell-process-20150423.1402.tar
-Built ac-haskell-process in 4.915s, finished at 2023-09-01T15:54:35+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

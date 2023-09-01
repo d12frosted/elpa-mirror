@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~mgmarlow/flymake-clippy
 
 Updating /mnt/store/melpa/working/flymake-clippy/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~mgmarlow/flymake-clippy/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out d0774403fe96d88bd629d0825ffca46a1786d697
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-clippy/
+  to /tmp/flymake-clippy4n5as0/flymake-clippy-20230826.1702
+    flymake-clippy.el -> flymake-clippy.el
+Created flymake-clippy-20230826.1702.tar containing:
+  flymake-clippy-20230826.1702/
+  flymake-clippy-20230826.1702/flymake-clippy-pkg.el
+  flymake-clippy-20230826.1702/flymake-clippy.el
+ ✓ Success:
+  2023-09-01T19:37:13+0000  flymake-clippy-20230826.1702.entry
+  2023-09-01T19:37:12+0000  flymake-clippy-20230826.1702.tar
+Built flymake-clippy in 5.217s, finished at 2023-09-01T19:37:15+0000
