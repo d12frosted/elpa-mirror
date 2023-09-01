@@ -39,10 +39,12 @@ Isearch-like key bindings to let you modify the search's behavior:
 |:----------------------------|:-----------------------------------------|
 | <kbd>M-s</kbd> <kbd>r</kbd> | Toggle regexp search                     |
 | <kbd>M-s</kbd> <kbd>c</kbd> | Toggle case sensitivity                  |
+| <kbd>M-s</kbd> <kbd>h</kbd> | Toggle searching in hidden files         |
 | <kbd>M-s</kbd> <kbd>f</kbd> | Set wildcards to filter files¹           |
 | <kbd>M-s</kbd> <kbd>C</kbd> | Set number of lines of context²          |
 | <kbd>M-s</kbd> <kbd>B</kbd> | Set number of lines of leading context²  |
 | <kbd>M-s</kbd> <kbd>A</kbd> | Set number of lines of trailing context² |
+| <kbd>M-s</kbd> <kbd>t</kbd> | Set the search tool                      |
 
 > 1. Prompts with a recursive minibuffer<br>
 > 2. With a numeric prefix argument, set immediately; otherwise, use a recursive
@@ -99,8 +101,8 @@ recursive grep command. The following options are supported:
 | `-s`, `--case-sensitive`    | Search case-sensitively                     |
 | `-i`, `--ignore-case`       | Search case-insensitively                   |
 | `-S`, `--smart-case`        | Ignore case if pattern is all lower-case    |
-| `--group`                   | Group results by file                       |
-| `--no-group`                | Don't group results by file                 |
+| `--group` / `--no-group`    | Enable/disable grouping results by file     |
+| `--hidden` / `--no-hidden`  | Enable/disable searching hidden files       |
 | `-Cn`, `--context=n`        | Show *n* lines of context                   |
 | `-Bn`, `--before-context=n` | Show *n* lines of leading context           |
 | `-An`, `--after-context=n`  | Show *n* lines of trailing context          |
@@ -114,8 +116,11 @@ arguments. For more information, consult the docstring for `urgrep-command`.
 
 ## Contributing
 
-Feedback is welcome, but it's a bit early for code contributions. Thanks for the
-thought, though! (Hopefully this will change after not too long.)
+This project [assigns copyright][fsf-copyright] to the Free Software Foundation,
+so if you'd like to contribute code, please make sure you've filled out the
+assignment form and that it's up to date. In any case, before submitting
+patches, it's probably best to [file an issue][new-issue] first so that we
+can discuss the best way to do things.
 
 [elpa-image]: https://elpa.gnu.org/packages/urgrep.svg
 [elpa-link]: https://elpa.gnu.org/packages/urgrep.html
@@ -127,3 +132,5 @@ thought, though! (Hopefully this will change after not too long.)
 [grep]: https://www.gnu.org/software/grep/
 [find]: https://www.gnu.org/software/findutils/
 [wgrep]: https://github.com/mhayashi1120/Emacs-wgrep
+[fsf-copyright]: https://www.gnu.org/prep/maintain/html_node/Copyright-Papers.html
+[new-issue]: https://github.com/jimporter/urgrep/issues/new
