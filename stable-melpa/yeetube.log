@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~thanosapollo/yeetube.el
 
 Updating /mnt/store/melpa/working/yeetube/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~thanosapollo/yeetube.el/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 6b66735716a0d7d4dbcc66e044f296528f59248b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yeetube/
+  to /tmp/yeetubesSZ2Rl/yeetube-20230830.1157
+    yeetube.el -> yeetube.el
+Created yeetube-20230830.1157.tar containing:
+  yeetube-20230830.1157/
+  yeetube-20230830.1157/yeetube-pkg.el
+  yeetube-20230830.1157/yeetube.el
+ ✓ Success:
+  2023-09-02T02:57:20+0000  yeetube-20230830.1157.entry
+  2023-09-02T02:57:20+0000  yeetube-20230830.1157.tar
+Built yeetube in 4.671s, finished at 2023-09-02T02:57:22+0000

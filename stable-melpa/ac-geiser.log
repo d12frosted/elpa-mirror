@@ -3,8 +3,17 @@ Fetcher: github
 Source:  https://github.com/xiaohanyu/ac-geiser.git
 
 Updating /mnt/store/melpa/working/ac-geiser/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/xiaohanyu/ac-geiser.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 93818c936ee7e2f1ba1b315578bde363a7d43d05
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-geiser/
+  to /tmp/ac-geiserRsiW7y/ac-geiser-20200318.824
+    ac-geiser-pkg.el -> ac-geiser-pkg.el
+    ac-geiser.el -> ac-geiser.el
+Created ac-geiser-20200318.824.tar containing:
+  ac-geiser-20200318.824/
+  ac-geiser-20200318.824/ac-geiser-pkg.el
+  ac-geiser-20200318.824/ac-geiser.el
+ ✓ Success:
+  2023-09-02T01:33:21+0000  ac-geiser-20200318.824.entry
+  2023-09-02T01:33:21+0000  ac-geiser-20200318.824.tar
+Built ac-geiser in 4.445s, finished at 2023-09-02T01:33:23+0000
