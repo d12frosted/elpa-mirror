@@ -1,4 +1,3 @@
 Generate and update CHANGELOG file in Emacs.
-This package provides the interface `conventional-changelog-menu', which is
-built with `transient', between command-line tool `standard-version' and Emacs.
+This package provides the `transient' menu for`standard-version'.
 Call `conventional-changelog-menu' to start.
