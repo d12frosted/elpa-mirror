@@ -1,16 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Please help maintaining these add-ons
-2. License
-3. Files to remove from the next release
-4. Other files
-.. 1. Org utils
-.. 2. Org exporters
-.. 3. Org link
-.. 4. Org Babel languages
-
-
 This repository contains add-ons to Org.
 
 You can use them by installing the `org-contrib' NonGNU ELPA package
@@ -53,17 +40,26 @@ from <https://elpa.nongnu.org/nongnu/>.
 [COPYING] <file:COPYING>
 
 
-3 Files to remove from the next release
+3 Contribute
+════════════
+
+  You can send patches to `~bzg/dev@lists.sr.ht' and configure your
+  local copy of the repository like this:
+
+  `git config format.subjectPrefix 'PATCH org-contrib''
+
+
+4 Files to remove from the next release
 ═══════════════════════════════════════
 
   If a file has a "Homepage:" keyword, it will be removed from the next
   minor or major release.
 
 
-4 Other files
+5 Other files
 ═════════════
 
-4.1 Org utils
+5.1 Org utils
 ─────────────
 
   org-annotate-file.el
@@ -126,7 +122,7 @@ from <https://elpa.nongnu.org/nongnu/>.
         CamelCase wiki-like links for Org
 
 
-4.2 Org exporters
+5.2 Org exporters
 ─────────────────
 
   ox-bibtex.el
@@ -147,7 +143,7 @@ from <https://elpa.nongnu.org/nongnu/>.
         TaskJuggler exporter
 
 
-4.3 Org link
+5.3 Org link
 ────────────
 
   ol-bookmark.el
@@ -164,7 +160,7 @@ from <https://elpa.nongnu.org/nongnu/>.
         Support for links to Wanderlust messages
 
 
-4.4 Org Babel languages
+5.4 Org Babel languages
 ───────────────────────
 
   ob-abc.el
