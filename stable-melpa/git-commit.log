@@ -3,17 +3,19 @@ Fetcher: github
 Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/git-commit/
-Checking out 6f54443aaaa0a822cc245dc6c66d2033c7dc0900
+Checking out 186414ae418a07a46c413f05c68413a76256a05e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/git-commit/
-  to /tmp/git-commitryXQje/git-commit-20230821.1659
+  to /tmp/git-commitE4H6uR/git-commit-20230903.1454
   ! lisp/git-commit.el -> git-commit.el
   ! lisp/git-commit-pkg.el -> git-commit-pkg.el
-Created git-commit-20230821.1659.tar containing:
-  git-commit-20230821.1659/
-  git-commit-20230821.1659/git-commit-pkg.el
-  git-commit-20230821.1659/git-commit.el
+Created git-commit-20230903.1454.tar containing:
+  git-commit-20230903.1454/
+  git-commit-20230903.1454/git-commit-pkg.el
+  git-commit-20230903.1454/git-commit.el
  ✓ Success:
-  2023-09-03T03:06:26+0000  git-commit-20230821.1659.entry
-  2023-09-03T03:06:26+0000  git-commit-20230821.1659.tar
-Built git-commit in 8.836s, finished at 2023-09-03T03:06:29+0000
+  2023-09-03T12:17:27+0000  git-commit-20230821.1659.entry
+  2023-09-03T12:17:27+0000  git-commit-20230821.1659.tar
+  2023-09-03T15:18:30+0000  git-commit-20230903.1454.entry
+  2023-09-03T15:18:30+0000  git-commit-20230903.1454.tar
+Built git-commit in 6.499s, finished at 2023-09-03T15:18:32+0000

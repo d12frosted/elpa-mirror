@@ -5,21 +5,16 @@ on the same TypeScript tree-sitter parsers.  Install both the TSX
 and TypeScript parsers for full deno syntax support (see README for
 full details).
 
-This package helps solve some of the problems that arise from deno
-and TypeScript sharing the same file extension.  With
-`deno-ts-setup-auto-mode-alist', `deno-ts-mode' will check for the
-presence of a Deno config file when a major mode is selected for a
-".ts" or ".tsx" file.  When the config file is located,
-`deno-ts-mode' is selected.  Otherwise, `typescript-ts-mode' and
-`tsx-ts-mode' are selected as fallbacks.  This function is
-optional, so you can determine your auto-mode bindings however you
-wish.
+This package helps solve some of the problems that arise from Deno
+and TypeScript sharing the same file extension.  If a Deno
+configuration file is found at project root, `deno-ts-mode' takes
+precedence over `typescript-ts-mode'.  Both ".ts" and ".tsx" file
+extensions are supported.
 
 Example configuration:
 
 (use-package deno-ts-mode
-  :config
-  (deno-ts-setup-auto-mode-alist))
+  :ensure t)
 
 (use-package eglot
   :ensure t
