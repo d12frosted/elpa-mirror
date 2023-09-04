@@ -1,8 +1,8 @@
-The difftastic is designed to integrate difftastic
-(https://github.com/wilfred/difftastic) into your Emacs workflow, enhancing
-your code review and comparison experience.  This package automatically
-displays difftastic's output within Emacs using faces from your user
-theme, ensuring consistency with your overall coding environment.
+The difftastic is designed to integrate difftastic - a structural diff tool
+- (https://github.com/wilfred/difftastic) into your Emacs workflow,
+enhancing your code review and comparison experience.  This package
+automatically displays difftastic's output within Emacs using faces from
+your user theme, ensuring consistency with your overall coding environment.
 
 Configuration
 
@@ -12,9 +12,19 @@ following code snippet in your Emacs configuration:
 (require 'difftastic)
 
 ;; Add commands to a `magit-difftastic'
-(transient-append-suffix 'magit-diff '(-1 -1)
-  [("D" "Difftastic diff (dwim)" difftastic-magit-diff)
-   ("S" "Difftastic show" difftastic-magit-show)])
+(eval-after-load 'magit-diff
+  '(transient-append-suffix 'magit-diff '(-1 -1)
+     [("D" "Difftastic diff (dwim)" difftastic-magit-diff)
+      ("S" "Difftastic show" difftastic-magit-show)]))
+
+Or, if you use `use-package':
+
+(use-package difftastic
+  :config
+  (eval-after-load 'magit-diff
+    '(transient-append-suffix 'magit-diff '(-1 -1)
+       [("D" "Difftastic diff (dwim)" difftastic-magit-diff)
+        ("S" "Difftastic show" difftastic-magit-show)])))
 
 Usage
 
