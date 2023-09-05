@@ -617,6 +617,19 @@
 		    (:maintainer "Bailey Ling")
 		    (:authors
 		     ("Bailey Ling")))])
+ (exec-path-from-shell .
+		       [(2 1)
+			((emacs
+			  (24 1))
+			 (cl-lib
+			  (0 6)))
+			"Get environment variables such as $PATH from the shell" tar
+			((:url . "https://github.com/purcell/exec-path-from-shell")
+			 (:keywords "unix" "environment")
+			 (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+			 (:authors
+			  ("Steve Purcell" . "steve@sanityinc.com"))
+			 (:commit . "03fc0a38af9e396c98f5a30c392cf757b3a34feb"))])
  (flx .
       [(0 6 2)
        ((cl-lib
@@ -639,6 +652,19 @@
 	    (:authors
 	     ("Le Wang"))
 	    (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
+ (flymake-guile .
+		[(0 4)
+		 ((emacs
+		   (26 1))
+		  (flymake
+		   (1 2 1)))
+		 "Guile flymake backend" tar
+		 ((:keywords "language" "tools")
+		  (:maintainer "Distopico" . "distopico@riseup.net")
+		  (:authors
+		   ("Distopico" . "distopico@riseup.net"))
+		  (:url . "https://elpa.nongnu.org/nongnu/flymake-guile.html")
+		  (:commit . "cf3fa333a857ed50aa4af2cc98797907789499a8"))])
  (flymake-kondor .
 		 [(0 1 3)
 		  ((emacs
@@ -1577,6 +1603,24 @@
 	  (:authors
 	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	  (:commit . "4a585029875a1dbbe96d8ac157bd2fd02875f289"))])
+ (package-lint .
+	       [(0 19)
+		((cl-lib
+		  (0 5))
+		 (emacs
+		  (24 1))
+		 (let-alist
+		     (1 0 6)))
+		"A linting library for elisp package authors" tar
+		((:url . "https://github.com/purcell/package-lint")
+		 (:keywords "lisp")
+		 (:maintainer
+		  ("Steve Purcell" . "steve@sanityinc.com")
+		  ("Fanael Linithien" . "fanael4@gmail.com"))
+		 (:authors
+		  ("Steve Purcell" . "steve@sanityinc.com")
+		  ("Fanael Linithien" . "fanael4@gmail.com"))
+		 (:commit . "91d0f1077c78753e09973d63fb3e571413a4c206"))])
  (pacmacs .
 	  [(0 1 1)
 	   ((emacs
@@ -1589,6 +1633,17 @@
 	    (:authors
 	     ("Codingteam" . "codingteam@conference.jabber.ru"))
 	    (:commit . "071d008ebd734f469b87597cbdd34139a92e5308"))])
+ (page-break-lines .
+		   [(0 15)
+		    ((emacs
+		      (24 4)))
+		    "Display ^L page breaks as tidy horizontal lines" tar
+		    ((:url . "https://github.com/purcell/page-break-lines")
+		     (:keywords "convenience" "faces")
+		     (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+		     (:authors
+		      ("Steve Purcell" . "steve@sanityinc.com"))
+		     (:commit . "c4283f580fa4feeb9abcaebb99709007db0a3159"))])
  (paredit .
 	  [(26)
 	   nil "minor mode for editing parentheses" tar
@@ -1762,6 +1817,17 @@
 	       (:authors
 		("Campbell Barton" . "ideasman42@gmail.com"))
 	       (:commit . "2b38ca25e3392636fe936d3edad447970279a463"))])
+ (reformatter .
+	      [(0 7)
+	       ((emacs
+		 (24 3)))
+	       "Define commands which run reformatters on the current buffer" tar
+	       ((:url . "https://github.com/purcell/emacs-reformatter")
+		(:keywords "convenience" "tools")
+		(:maintainer "Steve Purcell" . "steve@sanityinc.com")
+		(:authors
+		 ("Steve Purcell" . "steve@sanityinc.com"))
+		(:commit . "bfe3f1c6ece952d39921db16f601123bdd1748ab"))])
  (request .
 	  [(0 3 3)
 	   ((emacs
