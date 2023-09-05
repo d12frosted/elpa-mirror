@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/vhdl-ext.git
 
 Updating /mnt/store/melpa/working/vhdl-ext/
-Checking out 51e4aab9f5b4afa2c4fa4706d2907ad7272357fe
+Checking out eeafbfce1527f63334d65e61401f0213addc02a2
 Warning: vhdl-ext :files spec is equivalent to the default
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vhdl-ext/
-  to /tmp/vhdl-extiDY2rQ/vhdl-ext-20230903.219
+  to /tmp/vhdl-extzJKeya/vhdl-ext-20230905.1623
     vhdl-ext-beautify.el -> vhdl-ext-beautify.el
     vhdl-ext-compile.el -> vhdl-ext-compile.el
     vhdl-ext-eglot.el -> vhdl-ext-eglot.el
@@ -24,26 +24,28 @@ Copying files (->) and directories (=>)
     vhdl-ext-utils.el -> vhdl-ext-utils.el
     vhdl-ext-which-func.el -> vhdl-ext-which-func.el
     vhdl-ext.el -> vhdl-ext.el
-Created vhdl-ext-20230903.219.tar containing:
-  vhdl-ext-20230903.219/
-  vhdl-ext-20230903.219/vhdl-ext-beautify.el
-  vhdl-ext-20230903.219/vhdl-ext-compile.el
-  vhdl-ext-20230903.219/vhdl-ext-eglot.el
-  vhdl-ext-20230903.219/vhdl-ext-flycheck.el
-  vhdl-ext-20230903.219/vhdl-ext-font-lock.el
-  vhdl-ext-20230903.219/vhdl-ext-hierarchy.el
-  vhdl-ext-20230903.219/vhdl-ext-hs.el
-  vhdl-ext-20230903.219/vhdl-ext-imenu.el
-  vhdl-ext-20230903.219/vhdl-ext-lsp.el
-  vhdl-ext-20230903.219/vhdl-ext-nav.el
-  vhdl-ext-20230903.219/vhdl-ext-pkg.el
-  vhdl-ext-20230903.219/vhdl-ext-ports.el
-  vhdl-ext-20230903.219/vhdl-ext-template.el
-  vhdl-ext-20230903.219/vhdl-ext-time-stamp.el
-  vhdl-ext-20230903.219/vhdl-ext-utils.el
-  vhdl-ext-20230903.219/vhdl-ext-which-func.el
-  vhdl-ext-20230903.219/vhdl-ext.el
+Created vhdl-ext-20230905.1623.tar containing:
+  vhdl-ext-20230905.1623/
+  vhdl-ext-20230905.1623/vhdl-ext-beautify.el
+  vhdl-ext-20230905.1623/vhdl-ext-compile.el
+  vhdl-ext-20230905.1623/vhdl-ext-eglot.el
+  vhdl-ext-20230905.1623/vhdl-ext-flycheck.el
+  vhdl-ext-20230905.1623/vhdl-ext-font-lock.el
+  vhdl-ext-20230905.1623/vhdl-ext-hierarchy.el
+  vhdl-ext-20230905.1623/vhdl-ext-hs.el
+  vhdl-ext-20230905.1623/vhdl-ext-imenu.el
+  vhdl-ext-20230905.1623/vhdl-ext-lsp.el
+  vhdl-ext-20230905.1623/vhdl-ext-nav.el
+  vhdl-ext-20230905.1623/vhdl-ext-pkg.el
+  vhdl-ext-20230905.1623/vhdl-ext-ports.el
+  vhdl-ext-20230905.1623/vhdl-ext-template.el
+  vhdl-ext-20230905.1623/vhdl-ext-time-stamp.el
+  vhdl-ext-20230905.1623/vhdl-ext-utils.el
+  vhdl-ext-20230905.1623/vhdl-ext-which-func.el
+  vhdl-ext-20230905.1623/vhdl-ext.el
  ✓ Success:
   2023-09-05T14:47:33+0000  vhdl-ext-20230903.219.entry
   2023-09-05T14:47:33+0000  vhdl-ext-20230903.219.tar
-Built vhdl-ext in 5.866s, finished at 2023-09-05T14:47:36+0000
+  2023-09-05T18:00:27+0000  vhdl-ext-20230905.1623.entry
+  2023-09-05T18:00:27+0000  vhdl-ext-20230905.1623.tar
+Built vhdl-ext in 5.843s, finished at 2023-09-05T18:00:29+0000
