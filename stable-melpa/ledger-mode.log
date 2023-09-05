@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/ledger-mode/
 Checking out 6ca9e1b487ba642dbc28a2d81e0dbbb1a5a617ba
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ledger-mode/
-  to /tmp/ledger-modeX3lYCX/ledger-mode-20230810.1707
+  to /tmp/ledger-modez4suDl/ledger-mode-20230810.1707
     ledger-check.el -> ledger-check.el
     ledger-commodities.el -> ledger-commodities.el
     ledger-complete.el -> ledger-complete.el
@@ -26,11 +26,13 @@ Copying files (->) and directories (=>)
     ledger-schedule.el -> ledger-schedule.el
     ledger-sort.el -> ledger-sort.el
     ledger-state.el -> ledger-state.el
-    ledger-test.el -> ledger-test.el
     ledger-texi.el -> ledger-texi.el
     ledger-xact.el -> ledger-xact.el
+  ! doc/ledger-mode.texi -> ledger-mode.texi
+Generating /tmp/ledger-modez4suDl/ledger-mode-20230810.1707/ledger-mode.info
 Created ledger-mode-20230810.1707.tar containing:
   ledger-mode-20230810.1707/
+  ledger-mode-20230810.1707/dir
   ledger-mode-20230810.1707/ledger-check.el
   ledger-mode-20230810.1707/ledger-commodities.el
   ledger-mode-20230810.1707/ledger-complete.el
@@ -42,6 +44,7 @@ Created ledger-mode-20230810.1707.tar containing:
   ledger-mode-20230810.1707/ledger-init.el
   ledger-mode-20230810.1707/ledger-mode-pkg.el
   ledger-mode-20230810.1707/ledger-mode.el
+  ledger-mode-20230810.1707/ledger-mode.info
   ledger-mode-20230810.1707/ledger-navigate.el
   ledger-mode-20230810.1707/ledger-occur.el
   ledger-mode-20230810.1707/ledger-post.el
@@ -51,10 +54,9 @@ Created ledger-mode-20230810.1707.tar containing:
   ledger-mode-20230810.1707/ledger-schedule.el
   ledger-mode-20230810.1707/ledger-sort.el
   ledger-mode-20230810.1707/ledger-state.el
-  ledger-mode-20230810.1707/ledger-test.el
   ledger-mode-20230810.1707/ledger-texi.el
   ledger-mode-20230810.1707/ledger-xact.el
  ✓ Success:
-  2023-09-05T11:00:53+0000  ledger-mode-20230810.1707.entry
-  2023-09-05T11:00:53+0000  ledger-mode-20230810.1707.tar
-Built ledger-mode in 4.823s, finished at 2023-09-05T11:00:55+0000
+  2023-09-05T14:11:33+0000  ledger-mode-20230810.1707.entry
+  2023-09-05T14:11:33+0000  ledger-mode-20230810.1707.tar
+Built ledger-mode in 9.707s, finished at 2023-09-05T14:11:35+0000
