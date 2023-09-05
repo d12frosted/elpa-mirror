@@ -397,14 +397,13 @@
 		    (:keywords "docker")
 		    (:commit . "74ed3dfd1584298a0ea9881115d33ba1808a4c3f"))])
  (dracula-theme .
-		[(1 7 0)
+		[(1 8 1)
 		 ((emacs
 		   (24 3)))
 		 "Dracula Theme" tar
 		 ((:url . "https://github.com/dracula/emacs")
-		  (:maintainer "Étienne Deparis" . "etienne@depar.is")
-		  (:authors
-		   ("film42")))])
+		  (:maintainer "tienne Deparis" . "etienne@depar.is")
+		  (:commit . "8e73c675816faadcf4d052b1ba09dc1b00aa1509"))])
  (drupal-mode .
 	      [(0 7 4)
 	       ((php-mode

@@ -3194,13 +3194,14 @@
 	     (:url . "https://elpa.gnu.org/packages/sed-mode.html")
 	     (:commit . "6009f57567959387b9e34068567e982b6991eb24"))])
  (seq .
-      [(2 23)
+      [(2 24)
        nil "Sequence manipulation functions" tar
        ((:keywords "sequences")
 	(:maintainer nil . "emacs-devel@gnu.org")
 	(:authors
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
-	(:url . "https://elpa.gnu.org/packages/seq.html"))])
+	(:url . "https://elpa.gnu.org/packages/seq.html")
+	(:commit . "9d9f51b0e3ca59e0a488801064512f4878ac910b"))])
  (setup .
 	[(1 3 2)
 	 ((emacs
