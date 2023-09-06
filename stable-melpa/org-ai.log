@@ -3,12 +3,13 @@ Fetcher: github
 Source:  https://github.com/rksm/org-ai.git
 
 Updating /mnt/store/melpa/working/org-ai/
-Checking out e188f2b3506da47452142746f7ea9e08e97a9c09
+Checking out 5b187ba1225ec2790976289fd04b8b19804f2155
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ai/
-  to /tmp/org-aiwitMmX/org-ai-20230820.1230
+  to /tmp/org-aitDtsO9/org-ai-20230905.1738
     org-ai-block.el -> org-ai-block.el
     org-ai-on-project.el -> org-ai-on-project.el
+    org-ai-oobabooga.el -> org-ai-oobabooga.el
     org-ai-openai-image.el -> org-ai-openai-image.el
     org-ai-openai.el -> org-ai-openai.el
     org-ai-sd.el -> org-ai-sd.el
@@ -16,22 +17,23 @@ Copying files (->) and directories (=>)
     org-ai-useful.el -> org-ai-useful.el
     org-ai.el -> org-ai.el
     snippets => snippets
-Created org-ai-20230820.1230.tar containing:
-  org-ai-20230820.1230/
-  org-ai-20230820.1230/org-ai-block.el
-  org-ai-20230820.1230/org-ai-on-project.el
-  org-ai-20230820.1230/org-ai-openai-image.el
-  org-ai-20230820.1230/org-ai-openai.el
-  org-ai-20230820.1230/org-ai-pkg.el
-  org-ai-20230820.1230/org-ai-sd.el
-  org-ai-20230820.1230/org-ai-talk.el
-  org-ai-20230820.1230/org-ai-useful.el
-  org-ai-20230820.1230/org-ai.el
-  org-ai-20230820.1230/snippets/
-  org-ai-20230820.1230/snippets/org-mode/
-  org-ai-20230820.1230/snippets/org-mode/org-ai-block
-  org-ai-20230820.1230/snippets/org-mode/org-ai-image
+Created org-ai-20230905.1738.tar containing:
+  org-ai-20230905.1738/
+  org-ai-20230905.1738/org-ai-block.el
+  org-ai-20230905.1738/org-ai-on-project.el
+  org-ai-20230905.1738/org-ai-oobabooga.el
+  org-ai-20230905.1738/org-ai-openai-image.el
+  org-ai-20230905.1738/org-ai-openai.el
+  org-ai-20230905.1738/org-ai-pkg.el
+  org-ai-20230905.1738/org-ai-sd.el
+  org-ai-20230905.1738/org-ai-talk.el
+  org-ai-20230905.1738/org-ai-useful.el
+  org-ai-20230905.1738/org-ai.el
+  org-ai-20230905.1738/snippets/
+  org-ai-20230905.1738/snippets/org-mode/
+  org-ai-20230905.1738/snippets/org-mode/org-ai-block
+  org-ai-20230905.1738/snippets/org-mode/org-ai-image
  ✓ Success:
-  2023-09-05T17:34:38+0000  org-ai-20230820.1230.entry
-  2023-09-05T17:34:37+0000  org-ai-20230820.1230.tar
-Built org-ai in 7.958s, finished at 2023-09-05T17:34:41+0000
+  2023-09-05T23:59:23+0000  org-ai-20230905.1738.entry
+  2023-09-05T23:59:23+0000  org-ai-20230905.1738.tar
+Built org-ai in 7.909s, finished at 2023-09-05T23:59:26+0000

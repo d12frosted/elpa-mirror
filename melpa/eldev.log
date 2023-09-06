@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-eldev/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Checking out 045fda7fe5d60f900d47acd40b44166f0746bc99
+Checking out 2bbad256518785a24c3f9e95b4ac3fd4477c26b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevyMx3As/eldev-20230902.1637
+  to /tmp/eldevjhPlYd/eldev-20230905.2022
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctor.el -> eldev-doctor.el
@@ -19,23 +19,25 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20230902.1637.tar containing:
-  eldev-20230902.1637/
-  eldev-20230902.1637/bin/
-  eldev-20230902.1637/bin/eldev
-  eldev-20230902.1637/bin/eldev.bat
-  eldev-20230902.1637/bin/eldev.ps1
-  eldev-20230902.1637/eldev-build.el
-  eldev-20230902.1637/eldev-buttercup.el
-  eldev-20230902.1637/eldev-doctor.el
-  eldev-20230902.1637/eldev-ecukes.el
-  eldev-20230902.1637/eldev-ert.el
-  eldev-20230902.1637/eldev-pkg.el
-  eldev-20230902.1637/eldev-plugins.el
-  eldev-20230902.1637/eldev-util.el
-  eldev-20230902.1637/eldev-vc.el
-  eldev-20230902.1637/eldev.el
+Created eldev-20230905.2022.tar containing:
+  eldev-20230905.2022/
+  eldev-20230905.2022/bin/
+  eldev-20230905.2022/bin/eldev
+  eldev-20230905.2022/bin/eldev.bat
+  eldev-20230905.2022/bin/eldev.ps1
+  eldev-20230905.2022/eldev-build.el
+  eldev-20230905.2022/eldev-buttercup.el
+  eldev-20230905.2022/eldev-doctor.el
+  eldev-20230905.2022/eldev-ecukes.el
+  eldev-20230905.2022/eldev-ert.el
+  eldev-20230905.2022/eldev-pkg.el
+  eldev-20230905.2022/eldev-plugins.el
+  eldev-20230905.2022/eldev-util.el
+  eldev-20230905.2022/eldev-vc.el
+  eldev-20230905.2022/eldev.el
  ✓ Success:
-  2023-09-05T16:56:47+0000  eldev-20230902.1637.entry
-  2023-09-05T16:56:47+0000  eldev-20230902.1637.tar
-Built eldev in 4.657s, finished at 2023-09-05T16:56:49+0000
+  2023-09-05T20:12:15+0000  eldev-20230905.1823.entry
+  2023-09-05T20:12:15+0000  eldev-20230905.1823.tar
+  2023-09-05T23:23:29+0000  eldev-20230905.2022.entry
+  2023-09-05T23:23:29+0000  eldev-20230905.2022.tar
+Built eldev in 8.381s, finished at 2023-09-05T23:23:32+0000

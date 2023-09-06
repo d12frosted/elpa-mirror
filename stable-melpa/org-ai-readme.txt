@@ -1,8 +1,10 @@
 Provides a minor-mode for org-mode and a global minor-mode that allows you to
-interact with the OpenAI API and with Stable Diffusion. It allows you to:
-- have a conversation with ChatGPT
-- generate images with DALL-E
-- supports speech input and output
+interact with the OpenAI API, with Stable Diffusion, as well as various local LLMs.
+
+It allows you to:
+- "chat" with a language model from within an org mode buffer
+- generate images
+- has support for speech input and output
 - #+begin_ai..#+end_ai blocks for org-mode
 - various commands usable everywhere
 

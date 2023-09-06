@@ -1778,12 +1778,11 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20230628 162612)
+	      [(1 0 20230905 102118)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
 	       ((:url . "https://www.racket-mode.com/")
-		(:maintainer "Greg Hendershott")
 		(:authors
 		 ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
 		(:commit . "HEAD"))])
@@ -2245,16 +2244,14 @@
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
 		       (:commit . "695a59789209c42fa08a5bce92963ee32f4455be"))])
  (web-mode .
-	   [(17 3 9)
+	   [(17 3 13)
 	    ((emacs
 	      (23 1)))
 	    "major mode for editing web templates" tar
 	    ((:url . "https://web-mode.org")
 	     (:keywords "languages")
 	     (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
-	     (:authors
-	      ("François-Xavier Bois"))
-	     (:commit . "ff394e83b48e9ae05cf3be854272c1e4550de61a"))])
+	     (:commit . "90502d9cd2b5bc9a13d2628e48fd66b78243e090"))])
  (webpaste .
 	   [(3 2 2)
 	    ((emacs
