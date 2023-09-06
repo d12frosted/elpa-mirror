@@ -3,23 +3,25 @@ Fetcher: github
 Source:  https://github.com/org-noter/org-noter.git
 
 Updating /mnt/store/melpa/working/org-noter/
-Checking out 7f7ce199edb91cddee61222120f1571da6db568f
+Checking out 9d42ebc626981b6736b8078fb216b30cc5e34d21
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-noter/
-  to /tmp/org-noterq9CXjN/org-noter-20230827.301
+  to /tmp/org-noterxZ4Nxo/org-noter-20230906.241
     org-noter-core.el -> org-noter-core.el
     org-noter.el -> org-noter.el
     modules => modules
-Created org-noter-20230827.301.tar containing:
-  org-noter-20230827.301/
-  org-noter-20230827.301/modules/
-  org-noter-20230827.301/modules/org-noter-djvu.el
-  org-noter-20230827.301/modules/org-noter-nov.el
-  org-noter-20230827.301/modules/org-noter-pdf.el
-  org-noter-20230827.301/org-noter-core.el
-  org-noter-20230827.301/org-noter-pkg.el
-  org-noter-20230827.301/org-noter.el
+Created org-noter-20230906.241.tar containing:
+  org-noter-20230906.241/
+  org-noter-20230906.241/modules/
+  org-noter-20230906.241/modules/org-noter-djvu.el
+  org-noter-20230906.241/modules/org-noter-nov.el
+  org-noter-20230906.241/modules/org-noter-pdf.el
+  org-noter-20230906.241/org-noter-core.el
+  org-noter-20230906.241/org-noter-pkg.el
+  org-noter-20230906.241/org-noter.el
  ✓ Success:
   2023-09-06T00:00:56+0000  org-noter-20230827.301.entry
   2023-09-06T00:00:56+0000  org-noter-20230827.301.tar
-Built org-noter in 5.226s, finished at 2023-09-06T00:00:58+0000
+  2023-09-06T03:11:51+0000  org-noter-20230906.241.entry
+  2023-09-06T03:11:51+0000  org-noter-20230906.241.tar
+Built org-noter in 4.903s, finished at 2023-09-06T03:11:53+0000
