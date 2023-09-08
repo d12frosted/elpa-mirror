@@ -2863,7 +2863,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "f9d09afc97d08f90a6a462b9da86900e6b555a74"))])
  (pyim .
-       [(5 3 2)
+       [(5 3 3)
 	((emacs
 	  (27 1))
 	 (async
@@ -2877,7 +2877,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "4c953701a368e1433bf91fd19766d76c9b496825"))])
+	 (:commit . "64067b20ce0e964b1342b378180f24a1d4503797"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar
@@ -3466,15 +3466,16 @@
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		    (:commit . "b594df646b99d55acba3ccff3109bd322a3278f0"))])
  (stream .
-	 [(2 2 5)
+	 [(2 3 0)
 	  ((emacs
 	    (25)))
 	  "Implementation of streams" tar
-	  ((:maintainer nil . "nicolas@petton.fr")
+	  ((:keywords "stream" "laziness" "sequences")
+	   (:maintainer nil . "nicolas@petton.fr")
 	   (:authors
 	    ("Nicolas Petton" . "nicolas@petton.fr"))
-	   (:keywords "stream" "laziness" "sequences")
-	   (:url . "http://elpa.gnu.org/packages/stream.html"))])
+	   (:url . "https://elpa.gnu.org/packages/stream.html")
+	   (:commit . "5c0ffd088fbc344aedb11cc76bd7c0b28f3bc43b"))])
  (substitute .
 	     [(0 2 1)
 	      ((emacs
@@ -3566,7 +3567,7 @@
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		 (:commit . "112970f8d2355c0cfa0269bb92cd1ecc18790bc9"))])
  (system-packages .
-		  [(1 0 12)
+		  [(1 0 13)
 		   ((emacs
 		     (24 3)))
 		   "functions to manage system packages" tar
@@ -3574,7 +3575,7 @@
 		    (:maintainer "J. Alexander Branham" . "alex.branham@gmail.com")
 		    (:authors
 		     ("J. Alexander Branham" . "alex.branham@gmail.com"))
-		    (:commit . "14b2cc3d54cc26692fb4a71ae4befee1f0b15e1b"))])
+		    (:commit . "781f8d40ed35a86a65dda3123506dc810adc10e3"))])
  (tNFA .
        [(0 1 1)
 	((queue

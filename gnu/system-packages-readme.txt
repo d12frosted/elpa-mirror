@@ -1,6 +1,6 @@
-			   ━━━━━━━━━━━━━━━━━
-			    SYSTEM PACKAGES
-			   ━━━━━━━━━━━━━━━━━
+                           ━━━━━━━━━━━━━━━━━
+                            SYSTEM PACKAGES
+                           ━━━━━━━━━━━━━━━━━
 
 
 <https://gitlab.com/jabranham/system-packages/badges/master/pipeline.svg>

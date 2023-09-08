@@ -949,6 +949,15 @@
 	    (:authors
 	     ("The go-mode Authors"))
 	    (:commit . "3273fcece5d9ab7edd4f15b2d6bce61f4e5a0666"))])
+ (golden-ratio .
+	       [(1 0 1)
+		nil "Automatic resizing of Emacs windows to the golden ratio" tar
+		((:keywords "window" "resizing")
+		 (:maintainer "Roman Gonzalez" . "romanandreg@gmail.com")
+		 (:authors
+		  ("Roman Gonzalez" . "romanandreg@gmail.com"))
+		 (:url . "https://elpa.nongnu.org/nongnu/golden-ratio.html")
+		 (:commit . "362ab0ede7ee2bb9fd11aea119b9c22248649c0d"))])
  (gotham-theme .
 	       [(1 1 9)
 		((emacs
