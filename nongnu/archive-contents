@@ -1045,7 +1045,7 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 9 4)
+       [(3 9 5)
 	((helm-core
 	  (3 9 4))
 	 (wfnames
@@ -1057,9 +1057,9 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "497f479ec113583c2570c03a526c999e3d410f95"))])
+	 (:commit . "ffff39b542196565dcec5641e287265aaa5517ed"))])
  (helm-core .
-	    [(3 9 4)
+	    [(3 9 5)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -1069,7 +1069,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "497f479ec113583c2570c03a526c999e3d410f95"))])
+	      (:commit . "ffff39b542196565dcec5641e287265aaa5517ed"))])
  (highlight-parentheses .
 			[(2 1 1)
 			 ((emacs
@@ -2044,7 +2044,7 @@
 	   ("Random User"))
 	  (:commit . "6ce7de37f21e123467ef1191db7a37cd99881c00"))])
  (sweeprolog .
-	     [(0 23 1)
+	     [(0 24 0)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2055,7 +2055,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "38ebce23cc857a81aba4f10f2bbca5868c0e0112"))])
+	       (:commit . "8eac70fba4a37c3124fa0fe32d96f06c747a7469"))])
  (swift-mode .
 	     [(9 0 0)
 	      ((emacs
