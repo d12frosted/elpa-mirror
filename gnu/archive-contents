@@ -1640,15 +1640,16 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 1)
+	  [(0 2)
 	   ((emacs
 	     (25)))
-	   "gnamù reader, a reader with espeak tts" tar
-	   ((:maintainer "Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com")
+	   "gnamù reader, send buffer contents to a speech engine." tar
+	   ((:keywords "tools" "accessibility")
+	    (:maintainer "Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com")
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
-	    (:keywords "tools" "accessibility")
-	    (:url . "http://elpa.gnu.org/packages/greader.html"))])
+	    (:url . "https://elpa.gnu.org/packages/greader.html")
+	    (:commit . "c7de1dea4edd0a3f2ec571889746975dfaa67efb"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
