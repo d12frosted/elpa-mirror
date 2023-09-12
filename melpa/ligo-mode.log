@@ -3,7 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/ligolang/ligo.git
 
 Updating /mnt/store/melpa/working/ligo-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.com/ligolang/ligo.git/': The requested URL returned error: 522
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out d9bad20098d2321600fedf051af250c79f622bec
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ligo-mode/
+  to /tmp/ligo-modeUiJ6Kh/ligo-mode-20230727.1523
+  ! tools/emacs/ligo-mode.el -> ligo-mode.el
+Created ligo-mode-20230727.1523.tar containing:
+  ligo-mode-20230727.1523/
+  ligo-mode-20230727.1523/ligo-mode-pkg.el
+  ligo-mode-20230727.1523/ligo-mode.el
+ ✓ Success:
+  2023-09-12T19:13:51+0000  ligo-mode-20230727.1523.entry
+  2023-09-12T19:13:51+0000  ligo-mode-20230727.1523.tar
+Built ligo-mode in 15.336s, finished at 2023-09-12T19:13:53+0000
