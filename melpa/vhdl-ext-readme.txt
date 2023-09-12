@@ -12,7 +12,6 @@ Extensions for VHDL Mode:
  - Enhanced support for `which-func'
  - Improve code folding via `hideshow'
  - Auto-configure `time-stamp'
- - Automatically add VHDL keywords to `company-keywords' backend
  - Port connections utilities
 
  Experimental:
