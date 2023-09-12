@@ -18,5 +18,4 @@ Extensions for Verilog Mode:
  - Workspace tags, typedef analysis and caching
  - Time-stamp auto-configuration
  - Convert block end comments to names
- - Automatically add SystemVerilog keywords to `company-keywords` backend
  - Port connections utilities
