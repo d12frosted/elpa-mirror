@@ -3,23 +3,8 @@ Fetcher: gitlab
 Source:  https://gitlab.com/akater/elisp-cl-format.git
 
 Updating /mnt/store/melpa/working/cl-format/
-Checking out 42b662d27eefa458c1a39bea1836d6ada740b863
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cl-format/
-  to /tmp/cl-format1wfDDf/cl-format-20230818.1726
-    cl-format-builtins.el -> cl-format-builtins.el
-    cl-format-def.el -> cl-format-def.el
-    cl-format-pkg.el -> cl-format-pkg.el
-    cl-format.el -> cl-format.el
-    clisp-format.el -> clisp-format.el
-Created cl-format-20230818.1726.tar containing:
-  cl-format-20230818.1726/
-  cl-format-20230818.1726/cl-format-builtins.el
-  cl-format-20230818.1726/cl-format-def.el
-  cl-format-20230818.1726/cl-format-pkg.el
-  cl-format-20230818.1726/cl-format.el
-  cl-format-20230818.1726/clisp-format.el
- ✓ Success:
-  2023-09-14T10:15:05+0000  cl-format-20230818.1726.entry
-  2023-09-14T10:15:05+0000  cl-format-20230818.1726.tar
-Built cl-format in 5.768s, finished at 2023-09-14T10:15:07+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

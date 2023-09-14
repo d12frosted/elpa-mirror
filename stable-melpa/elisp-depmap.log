@@ -3,24 +3,8 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mtekman/elisp-depmap.el.git
 
 Updating /mnt/store/melpa/working/elisp-depmap/
-Checking out 15909462e3f7daf445d3cecf402ee16c7e3263ed
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elisp-depmap/
-  to /tmp/elisp-depmap7UDCgj/elisp-depmap-20220223.1131
-    elisp-depmap-exec.el -> elisp-depmap-exec.el
-    elisp-depmap-graph.el -> elisp-depmap-graph.el
-    elisp-depmap-parse.el -> elisp-depmap-parse.el
-    elisp-depmap-secondhelp.el -> elisp-depmap-secondhelp.el
-    elisp-depmap.el -> elisp-depmap.el
-Created elisp-depmap-20220223.1131.tar containing:
-  elisp-depmap-20220223.1131/
-  elisp-depmap-20220223.1131/elisp-depmap-exec.el
-  elisp-depmap-20220223.1131/elisp-depmap-graph.el
-  elisp-depmap-20220223.1131/elisp-depmap-parse.el
-  elisp-depmap-20220223.1131/elisp-depmap-pkg.el
-  elisp-depmap-20220223.1131/elisp-depmap-secondhelp.el
-  elisp-depmap-20220223.1131/elisp-depmap.el
- ✓ Success:
-  2023-09-14T07:03:59+0000  elisp-depmap-20220223.1131.entry
-  2023-09-14T07:03:59+0000  elisp-depmap-20220223.1131.tar
-Built elisp-depmap in 4.999s, finished at 2023-09-14T07:04:01+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

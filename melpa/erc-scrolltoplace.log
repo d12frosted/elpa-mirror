@@ -3,16 +3,8 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jgkamat/erc-scrolltoplace.git
 
 Updating /mnt/store/melpa/working/erc-scrolltoplace/
-Checking out feb0fbf1fd4bdf220ae2d31ea7c066d8e62089f9
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/erc-scrolltoplace/
-  to /tmp/erc-scrolltoplaceY0oYqe/erc-scrolltoplace-20180608.606
-    erc-scrolltoplace.el -> erc-scrolltoplace.el
-Created erc-scrolltoplace-20180608.606.tar containing:
-  erc-scrolltoplace-20180608.606/
-  erc-scrolltoplace-20180608.606/erc-scrolltoplace-pkg.el
-  erc-scrolltoplace-20180608.606/erc-scrolltoplace.el
- ✓ Success:
-  2023-09-14T10:28:07+0000  erc-scrolltoplace-20180608.606.entry
-  2023-09-14T10:28:07+0000  erc-scrolltoplace-20180608.606.tar
-Built erc-scrolltoplace in 5.060s, finished at 2023-09-14T10:28:09+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

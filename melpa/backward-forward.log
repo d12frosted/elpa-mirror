@@ -3,16 +3,8 @@ Fetcher: gitlab
 Source:  https://gitlab.com/vancan1ty/emacs-backward-forward.git
 
 Updating /mnt/store/melpa/working/backward-forward/
-Checking out 58489957a62a0da25dfb5df902624d2548d800b4
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/backward-forward/
-  to /tmp/backward-forwardUu6TZn/backward-forward-20161229.550
-    backward-forward.el -> backward-forward.el
-Created backward-forward-20161229.550.tar containing:
-  backward-forward-20161229.550/
-  backward-forward-20161229.550/backward-forward-pkg.el
-  backward-forward-20161229.550/backward-forward.el
- ✓ Success:
-  2023-09-14T10:10:14+0000  backward-forward-20161229.550.entry
-  2023-09-14T10:10:14+0000  backward-forward-20161229.550.tar
-Built backward-forward in 4.744s, finished at 2023-09-14T10:10:16+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

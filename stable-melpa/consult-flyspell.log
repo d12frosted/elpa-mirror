@@ -3,16 +3,8 @@ Fetcher: gitlab
 Source:  https://gitlab.com/OlMon/consult-flyspell.git
 
 Updating /mnt/store/melpa/working/consult-flyspell/
-Checking out 7011e6634598530ea2d874e7e7389dc1bb94e1ca
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/consult-flyspell/
-  to /tmp/consult-flyspellE3R569/consult-flyspell-20230322.204
-    consult-flyspell.el -> consult-flyspell.el
-Created consult-flyspell-20230322.204.tar containing:
-  consult-flyspell-20230322.204/
-  consult-flyspell-20230322.204/consult-flyspell-pkg.el
-  consult-flyspell-20230322.204/consult-flyspell.el
- ✓ Success:
-  2023-09-14T06:53:57+0000  consult-flyspell-20230322.204.entry
-  2023-09-14T06:53:56+0000  consult-flyspell-20230322.204.tar
-Built consult-flyspell in 8.020s, finished at 2023-09-14T06:54:00+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
