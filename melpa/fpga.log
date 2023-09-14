@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/fpga.git
 
 Updating /mnt/store/melpa/working/fpga/
-Checking out 40ef2cb616f66ba14c6caeec6170b189a2079028
+Checking out 9cf7b25ab7364f4e690e86b364cc3279cdffc25e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fpga/
-  to /tmp/fpga3XMlyE/fpga-20230913.2057
+  to /tmp/fpgaNoq7Xk/fpga-20230913.2241
     fpga-altera.el -> fpga-altera.el
     fpga-cadence.el -> fpga-cadence.el
     fpga-lattice.el -> fpga-lattice.el
@@ -16,21 +16,19 @@ Copying files (->) and directories (=>)
     fpga-xilinx.el -> fpga-xilinx.el
     fpga-yosys.el -> fpga-yosys.el
     fpga.el -> fpga.el
-Created fpga-20230913.2057.tar containing:
-  fpga-20230913.2057/
-  fpga-20230913.2057/fpga-altera.el
-  fpga-20230913.2057/fpga-cadence.el
-  fpga-20230913.2057/fpga-lattice.el
-  fpga-20230913.2057/fpga-pkg.el
-  fpga-20230913.2057/fpga-siemens.el
-  fpga-20230913.2057/fpga-synopsys.el
-  fpga-20230913.2057/fpga-utils.el
-  fpga-20230913.2057/fpga-xilinx.el
-  fpga-20230913.2057/fpga-yosys.el
-  fpga-20230913.2057/fpga.el
+Created fpga-20230913.2241.tar containing:
+  fpga-20230913.2241/
+  fpga-20230913.2241/fpga-altera.el
+  fpga-20230913.2241/fpga-cadence.el
+  fpga-20230913.2241/fpga-lattice.el
+  fpga-20230913.2241/fpga-pkg.el
+  fpga-20230913.2241/fpga-siemens.el
+  fpga-20230913.2241/fpga-synopsys.el
+  fpga-20230913.2241/fpga-utils.el
+  fpga-20230913.2241/fpga-xilinx.el
+  fpga-20230913.2241/fpga-yosys.el
+  fpga-20230913.2241/fpga.el
  ✓ Success:
-  2023-09-13T18:04:17+0000  fpga-20230913.1255.entry
-  2023-09-13T18:04:17+0000  fpga-20230913.1255.tar
-  2023-09-13T21:25:11+0000  fpga-20230913.2057.entry
-  2023-09-13T21:25:11+0000  fpga-20230913.2057.tar
-Built fpga in 3.779s, finished at 2023-09-13T21:25:12+0000
+  2023-09-14T07:14:53+0000  fpga-20230913.2241.entry
+  2023-09-14T07:14:53+0000  fpga-20230913.2241.tar
+Built fpga in 4.828s, finished at 2023-09-14T07:14:55+0000

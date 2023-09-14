@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://depp.brause.cc/eyebrowse.git
 
 Updating /mnt/store/melpa/working/eyebrowse/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://depp.brause.cc/eyebrowse.git/': Operation timed out after 300045 milliseconds with 0 out of 0 bytes received
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out bdc626f88ab8e3d88bf5bf2e929707606675ef92
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eyebrowse/
+  to /tmp/eyebrowsei1YS3j/eyebrowse-20201107.955
+    eyebrowse.el -> eyebrowse.el
+Created eyebrowse-20201107.955.tar containing:
+  eyebrowse-20201107.955/
+  eyebrowse-20201107.955/eyebrowse-pkg.el
+  eyebrowse-20201107.955/eyebrowse.el
+ ✓ Success:
+  2023-09-14T07:09:28+0000  eyebrowse-20201107.955.entry
+  2023-09-14T07:09:28+0000  eyebrowse-20201107.955.tar
+Built eyebrowse in 5.487s, finished at 2023-09-14T07:09:30+0000
