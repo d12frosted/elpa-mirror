@@ -1,6 +1,9 @@
 Extensions for VHDL Mode:
 
+ - Tree-sitter `vhdl-ts-mode' support
  - Improve syntax highlighting
+ - Builtin xref backend
+ - Auto-completion
  - Hierarchy extraction and navigation: builtin and GHDL based
  - LSP configuration for `lsp-mode' and `eglot'
  - Support for many linters via `flycheck'
@@ -13,6 +16,3 @@ Extensions for VHDL Mode:
  - Improve code folding via `hideshow'
  - Auto-configure `time-stamp'
  - Port connections utilities
-
- Experimental:
- - Tree-sitter powered `verilog-ts-mode` support

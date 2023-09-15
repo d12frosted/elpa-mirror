@@ -1,20 +1,20 @@
 Extensions for Verilog Mode:
 
- - Tree-sitter powered `verilog-ts-mode` support
+ - Tree-sitter `verilog-ts-mode' support
  - Improved syntax highlighting
  - Builtin xref backend
- - Builtin capf function with dot and scope completion
+ - Auto-completion with dot and scope completion
  - Hierarchy extraction and navigation: builtin and vhier based
- - LSP configuration for `lsp-mode` and `eglot`
- - Support for many linters via `flycheck`
+ - LSP configuration for `lsp-mode' and `eglot'
+ - Support for many linters via `flycheck'
  - Beautify modules and instances
  - Code navigation functions for RTL and Verification environments
- - Extended collection of custom and `yasnippet` templates insertion via `hydra`
- - Code formatter via `apheleia`
+ - Extended collection of custom and `yasnippet' templates insertion via `hydra'
+ - Code formatter via `apheleia'
  - Compilation-based utilities
- - Improve `imenu` entries: detect instances, classes and methods
- - Enhanced support for `which-func`
- - Code folding via `hideshow`
+ - Improve `imenu' entries: detect instances, classes and methods
+ - Enhanced support for `which-func'
+ - Code folding via `hideshow'
  - Workspace tags, typedef analysis and caching
  - Time-stamp auto-configuration
  - Convert block end comments to names
