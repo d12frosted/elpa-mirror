@@ -1323,7 +1323,7 @@
 		   ("Magnar Sveen" . "magnars@gmail.com"))
 		  (:keywords "marking" "region"))])
  (expreg .
-	 [(1 2 1)
+	 [(1 3 1)
 	  ((emacs
 	    (29 1)))
 	  "Simple expand region" tar
@@ -1332,7 +1332,7 @@
 	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	   (:authors
 	    ("Yuan Fu" . "casouri@gmail.com"))
-	   (:commit . "b9fd9f90c6f00b628a610e556d560d5719a92d7d"))])
+	   (:commit . "9950c07ec90293964baa33603f4a80e764b0a847"))])
  (external-completion .
 		      [(0 1)
 		       nil "Let external tools control completion style" tar
@@ -1640,7 +1640,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 3 0)
+	  [(0 4 0)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1649,7 +1649,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "230c54be6c82c4c7de6afa8ce04ec57d8c26d468"))])
+	    (:commit . "92a14825eb2b2c8764af7817bf2700eba10971a8"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
