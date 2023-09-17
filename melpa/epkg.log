@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out b22da65653418290dc93f7c8b167e8600cdaedb0
+Checking out bfccebabd75195d12dab9aacf783415c49b7e8a5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkg58J0wX/epkg-20230810.1304
+  to /tmp/epkgE8VbRu/epkg-20230916.2049
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,20 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkg58J0wX/epkg-20230810.1304/epkg.info
-Created epkg-20230810.1304.tar containing:
-  epkg-20230810.1304/
-  epkg-20230810.1304/dir
-  epkg-20230810.1304/epkg-desc.el
-  epkg-20230810.1304/epkg-elpa.el
-  epkg-20230810.1304/epkg-list.el
-  epkg-20230810.1304/epkg-org.el
-  epkg-20230810.1304/epkg-pkg.el
-  epkg-20230810.1304/epkg-schemata.el
-  epkg-20230810.1304/epkg-utils.el
-  epkg-20230810.1304/epkg.el
-  epkg-20230810.1304/epkg.info
+Generating /tmp/epkgE8VbRu/epkg-20230916.2049/epkg.info
+Created epkg-20230916.2049.tar containing:
+  epkg-20230916.2049/
+  epkg-20230916.2049/dir
+  epkg-20230916.2049/epkg-desc.el
+  epkg-20230916.2049/epkg-elpa.el
+  epkg-20230916.2049/epkg-list.el
+  epkg-20230916.2049/epkg-org.el
+  epkg-20230916.2049/epkg-pkg.el
+  epkg-20230916.2049/epkg-schemata.el
+  epkg-20230916.2049/epkg-utils.el
+  epkg-20230916.2049/epkg.el
+  epkg-20230916.2049/epkg.info
  ✓ Success:
-  2023-09-16T17:37:26+0000  epkg-20230810.1304.entry
-  2023-09-16T17:37:25+0000  epkg-20230810.1304.tar
-Built epkg in 7.235s, finished at 2023-09-16T17:37:27+0000
+  2023-09-17T06:16:37+0000  epkg-20230916.2049.entry
+  2023-09-17T06:16:37+0000  epkg-20230916.2049.tar
+Built epkg in 8.056s, finished at 2023-09-17T06:16:39+0000
