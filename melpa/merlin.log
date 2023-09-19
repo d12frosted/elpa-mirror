@@ -3,22 +3,24 @@ Fetcher: github
 Source:  https://github.com/ocaml/merlin.git
 
 Updating /mnt/store/melpa/working/merlin/
-Checking out fd1bac38fcfe601094ce8e01895333666733e664
+Checking out 5f050e4ec4f60343bb3a3c5085d9ab558c734b3e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/merlin/
-  to /tmp/merlinZ8BXKe/merlin-20230726.900
+  to /tmp/merlinSJeCJM/merlin-20230919.1444
   ! emacs/merlin-cap.el -> merlin-cap.el
   ! emacs/merlin-imenu.el -> merlin-imenu.el
   ! emacs/merlin-xref.el -> merlin-xref.el
   ! emacs/merlin.el -> merlin.el
-Created merlin-20230726.900.tar containing:
-  merlin-20230726.900/
-  merlin-20230726.900/merlin-cap.el
-  merlin-20230726.900/merlin-imenu.el
-  merlin-20230726.900/merlin-pkg.el
-  merlin-20230726.900/merlin-xref.el
-  merlin-20230726.900/merlin.el
+Created merlin-20230919.1444.tar containing:
+  merlin-20230919.1444/
+  merlin-20230919.1444/merlin-cap.el
+  merlin-20230919.1444/merlin-imenu.el
+  merlin-20230919.1444/merlin-pkg.el
+  merlin-20230919.1444/merlin-xref.el
+  merlin-20230919.1444/merlin.el
  ✓ Success:
   2023-09-19T13:50:20+0000  merlin-20230726.900.entry
   2023-09-19T13:50:20+0000  merlin-20230726.900.tar
-Built merlin in 9.694s, finished at 2023-09-19T13:50:23+0000
+  2023-09-19T17:06:15+0000  merlin-20230919.1444.entry
+  2023-09-19T17:06:15+0000  merlin-20230919.1444.tar
+Built merlin in 9.340s, finished at 2023-09-19T17:06:18+0000
