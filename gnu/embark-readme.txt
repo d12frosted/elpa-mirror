@@ -1,7 +1,7 @@
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	      EMBARK: EMACS MINI-BUFFER ACTIONS ROOTED IN
-				KEYMAPS
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+              EMBARK: EMACS MINI-BUFFER ACTIONS ROOTED IN
+                                KEYMAPS
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 
@@ -188,17 +188,19 @@
   • The `embark-collect' command produces a buffer listing all the
     current candidates, for you to peruse and run actions on at your
     leisure.  The candidates are displayed as a list showing additional
-    annotations.
+    annotations. If any of the candidates contain newlines, then
+    horizontal lines are used to separate candidates.
 
     The Embark Collect buffer is somewhat "dired-like": you can select
-    and deselect candidates through the `embark-select' action (bound to
-    `SPC'). In an Embark Collect buffer `embark-act' is bound to `a' and
-    `embark-act-all' is bound to `A'; `embark-act-all' will act on all
-    currently marked candidates if there any, and will act on all
-    candidates if none are marked. In particular, this means that `a
-    SPC' will toggle whether the candidate at point is selected, and `A
-    SPC' will select all candidates if none are selected, or deselect
-    all selected candidates if there are some.
+    and deselect candidates through `embark-select' (available as an
+    action in `embark-act', bound to `SPC'; but you could also give it a
+    global key binding). In an Embark Collect buffer `embark-act' is
+    bound to `a' and `embark-act-all' is bound to `A'; `embark-act-all'
+    will act on all currently marked candidates if there any, and will
+    act on all candidates if none are marked. In particular, this means
+    that `a SPC' will toggle whether the candidate at point is selected,
+    and `A SPC' will select all candidates if none are selected, or
+    deselect all selected candidates if there are some.
 
   • The `embark-export' command tries to open a buffer in an appropriate
     major mode for the set of candidates. If the candidates are files
@@ -252,14 +254,16 @@
   where you can accumulate an ad hoc list of targets for these commands
   to work on.
 
-  The selection is controlled by using the `embark-select' action (which
-  must be run as an action through `embark-act'), bound to `SPC' in
-  `embark-general-map' so that it is always available. Calling this
-  action on a target toggles its membership in the current buffer's
-  Embark selection; that is, it adds it to selection if not selected and
-  removes it from the selection if it was selected. Whenever the
-  selection for a buffer is non-empty, the commands `embark-act-all',
-  `embark-export' and `embark-collect' will act on the selection.
+  The selection is controlled by using the `embark-select' action, bound
+  to `SPC' in `embark-general-map' so that it is always available (you
+  can also give `embark-select' a global key binding if you wish; when
+  called directly, not as an action for `embark-act', it will select the
+  first target at point). Calling this action on a target toggles its
+  membership in the current buffer's Embark selection; that is, it adds
+  it to selection if not selected and removes it from the selection if
+  it was selected. Whenever the selection for a buffer is non-empty, the
+  commands `embark-act-all', `embark-export' and `embark-collect' will
+  act on the selection.
 
   To deselect all selected targets, you can use the `embark-select'
   action through `embark-act-all', since this will run `embark-select'
@@ -268,7 +272,12 @@
   `embark-select' from `embark-act-all' will select all the current
   completion candidates.
 
-  This functionality is supported everywhere:
+  By default, whenever some targets are selected in the current buffer,
+  a count of selected targets appears in the mode line. This can be
+  turned off or customized through the `embark-selection-indicator' user
+  option.
+
+  The selection functionality is supported in every buffer:
 
   • In the minibuffer this gives a convenient way to act on several
     completion candidates that don't follow any simple pattern: just go
@@ -1208,7 +1217,30 @@
 >
 
 
-6 Resources
+6 Related Packages
+══════════════════
+
+  There are several packages that offer functionality similar to
+  Embark's.
+
+  Acting on minibuffer completion candidates
+        The popular Ivy and Helm packages have support for acting on the
+        completion candidates of commands written using their APIs, and
+        there is an extensive ecosystem of packages meant for Helm and
+        for Ivy (the Ivy ones usually have "counsel" in the name)
+        providing commands and appropriate actions.
+  Acting on things at point
+        The built-in `context-menu-mode' provides a mouse-driven
+        context-sensitive configurable menu. The `do-at-point' package
+        by Philip Kaludercic (available on GNU ELPA), on the other hand
+        is keyboard-driven.
+  Collecting completion candidates into a buffer
+        The Ivy package has the command `ivy-occur' which is similar to
+        `embark-collect'. As with Ivy actions, `ivy-occur' only works
+        for commands written using the Ivy API.
+
+
+7 Resources
 ═══════════
 
   If you want to learn more about how others have used Embark here are
@@ -1251,7 +1283,7 @@
 <https://youtu.be/5ffb2at2d7w>
 
 
-7 Contributions
+8 Contributions
 ═══════════════
 
   Contributions to Embark are very welcome. There is a [wish list] for
@@ -1272,7 +1304,7 @@
 [wiki] <https://github.com/oantolin/embark/wiki>
 
 
-8 Acknowledgments
+9 Acknowledgments
 ═════════════════
 
   While I, Omar Antolín Camarena, have written most of the Embark code
