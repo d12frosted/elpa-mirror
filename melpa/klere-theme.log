@@ -3,7 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/WammKD/emacs-klere-theme.git
 
 Updating /mnt/store/melpa/working/klere-theme/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
 fatal: unable to access 'https://codeberg.org/WammKD/emacs-klere-theme.git/': The requested URL returned error: 502
 
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
