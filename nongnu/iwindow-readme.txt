@@ -1,16 +1,6 @@
-	      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	       IWINDOW - INTERACTIVELY MANIPULATE WINDOWS
-	      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Usage
-2. Installation
-.. 1. Quelpa
-.. 2. Straight.el
-.. 3. Manual
+              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+               IWINDOW - INTERACTIVELY MANIPULATE WINDOWS
+              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 The default command for switching window in `other-window', which is
@@ -37,11 +27,19 @@ any window with a few keystrokes.
 2 Installation
 ══════════════
 
-  IWindow isn't available on any ELPA right now.  So, you have to follow
-  one of the following methods:
+2.1 NonGNU ELPA
+───────────────
+
+  IWindow is available on NonGNU ELPA.  If you don't have the archive
+  setup, put something like the following in your init file:
+
+  ┌────
+  │ (add-to-list 'package-archives
+  │ 	     '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
+  └────
 
 
-2.1 Quelpa
+2.2 Quelpa
 ──────────
 
   ┌────
@@ -50,7 +48,7 @@ any window with a few keystrokes.
   └────
 
 
-2.2 Straight.el
+2.3 Straight.el
 ───────────────
 
   ┌────
@@ -60,7 +58,7 @@ any window with a few keystrokes.
   └────
 
 
-2.3 Manual
+2.4 Manual
 ──────────
 
   Download the `IWindow.el' file and put it in your `load-path'.

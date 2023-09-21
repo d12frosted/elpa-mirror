@@ -2076,6 +2076,18 @@
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
+ (llm .
+      [(0 1 1)
+       ((request
+	 (0 3 3))
+	(emacs
+	 (28 1)))
+       "Interface to pluggable llm backends" tar
+       ((:url . "https://github.com/ahyatt/llm")
+	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
+	(:authors
+	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
+	(:commit . "9ca27d742b43283f5c81d925be74dc0d27c95924"))])
  (lmc .
       [(1 4)
        ((emacs
@@ -3598,6 +3610,19 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:url . "http://www.dr-qubit.org/emacs.php"))])
+ (tam .
+      [(0 1)
+       ((queue
+	 (0 2))
+	(emacs
+	 (24 3)))
+       "Manage use of slots in a fixed size table" tar
+       ((:url . "https://github.com/owinebar/emacs-table-allocation-manager")
+	(:keywords "lisp" "tools")
+	(:maintainer "Onnie Lynn Winebarger" . "owinebar@gmail.com")
+	(:authors
+	 ("Onnie Lynn Winebarger" . "owinebar@gmail.com"))
+	(:commit . "c254ec9f646ef5527eb1f834a90e5897caa977cf"))])
  (taxy .
        [(0 10 1)
 	((emacs
