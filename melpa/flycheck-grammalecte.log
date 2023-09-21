@@ -3,7 +3,22 @@ Fetcher: git
 Source:  https://git.umaneti.net/flycheck-grammalecte/
 
 Updating /mnt/store/melpa/working/flycheck-grammalecte/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.umaneti.net/flycheck-grammalecte/': Failed to connect to git.umaneti.net port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 76aca865992d828af54d77c1cf9a70663747e080
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-grammalecte/
+  to /tmp/flycheck-grammalecteJjjGPG/flycheck-grammalecte-20230605.1035
+    flycheck-grammalecte.el -> flycheck-grammalecte.el
+    grammalecte.el -> grammalecte.el
+    conjugueur.py -> conjugueur.py
+    flycheck_grammalecte.py -> flycheck_grammalecte.py
+Created flycheck-grammalecte-20230605.1035.tar containing:
+  flycheck-grammalecte-20230605.1035/
+  flycheck-grammalecte-20230605.1035/conjugueur.py
+  flycheck-grammalecte-20230605.1035/flycheck-grammalecte-pkg.el
+  flycheck-grammalecte-20230605.1035/flycheck-grammalecte.el
+  flycheck-grammalecte-20230605.1035/flycheck_grammalecte.py
+  flycheck-grammalecte-20230605.1035/grammalecte.el
+ ✓ Success:
+  2023-09-21T17:33:26+0000  flycheck-grammalecte-20230605.1035.entry
+  2023-09-21T17:33:26+0000  flycheck-grammalecte-20230605.1035.tar
+Built flycheck-grammalecte in 6.294s, finished at 2023-09-21T17:33:28+0000
