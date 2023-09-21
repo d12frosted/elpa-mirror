@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/espotify/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/jao/espotify.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out ea6d6021e5acc550560325db2f09198839ee702f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/espotify/
+  to /tmp/espotifyUtPJ4l/espotify-20220121.2057
+    espotify.el -> espotify.el
+Created espotify-20220121.2057.tar containing:
+  espotify-20220121.2057/
+  espotify-20220121.2057/espotify-pkg.el
+  espotify-20220121.2057/espotify.el
+ ✓ Success:
+  2023-09-20T21:51:16+0000  espotify-20220121.2057.entry
+  2023-09-20T21:51:16+0000  espotify-20220121.2057.tar
+Built espotify in 4.667s, finished at 2023-09-20T21:51:18+0000

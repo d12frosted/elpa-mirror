@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/fourier/cff.git
 
 Updating /mnt/store/melpa/working/cff/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/fourier/cff.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out b6ab2a28e64ef06f281ec74cfe3114e450644dfa
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cff/
+  to /tmp/cffHogSof/cff-20160118.2018
+    cff.el -> cff.el
+Created cff-20160118.2018.tar containing:
+  cff-20160118.2018/
+  cff-20160118.2018/cff-pkg.el
+  cff-20160118.2018/cff.el
+ ✓ Success:
+  2023-09-20T21:36:15+0000  cff-20160118.2018.entry
+  2023-09-20T21:36:14+0000  cff-20160118.2018.tar
+Built cff in 5.049s, finished at 2023-09-20T21:36:16+0000

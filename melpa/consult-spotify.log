@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/consult-spotify/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/jao/espotify.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 5c1dcf0182135cda4191d4ba206fe2f265100293
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/consult-spotify/
+  to /tmp/consult-spotifyHxea3c/consult-spotify-20211114.2258
+    consult-spotify.el -> consult-spotify.el
+Created consult-spotify-20211114.2258.tar containing:
+  consult-spotify-20211114.2258/
+  consult-spotify-20211114.2258/consult-spotify-pkg.el
+  consult-spotify-20211114.2258/consult-spotify.el
+ ✓ Success:
+  2023-09-20T21:40:33+0000  consult-spotify-20211114.2258.entry
+  2023-09-20T21:40:32+0000  consult-spotify-20211114.2258.tar
+Built consult-spotify in 4.881s, finished at 2023-09-20T21:40:34+0000
