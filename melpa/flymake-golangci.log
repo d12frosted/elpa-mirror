@@ -3,8 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/shackra/flymake-golangci.git
 
 Updating /mnt/store/melpa/working/flymake-golangci/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
-fatal: expected flush after ref listing
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out dfc31a1a6ae3f087b49fe6f5f21b3866780aa91c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-golangci/
+  to /tmp/flymake-golangcimcydYx/flymake-golangci-20191028.1927
+    flymake-golangci.el -> flymake-golangci.el
+Created flymake-golangci-20191028.1927.tar containing:
+  flymake-golangci-20191028.1927/
+  flymake-golangci-20191028.1927/flymake-golangci-pkg.el
+  flymake-golangci-20191028.1927/flymake-golangci.el
+ ✓ Success:
+  2023-09-22T09:45:27+0000  flymake-golangci-20191028.1927.entry
+  2023-09-22T09:45:27+0000  flymake-golangci-20191028.1927.tar
+Built flymake-golangci in 4.142s, finished at 2023-09-22T09:45:29+0000

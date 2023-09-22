@@ -3,7 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/igorwojnicki/fixed-page-mode.git
 
 Updating /mnt/store/melpa/working/fixed-page-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.com/igorwojnicki/fixed-page-mode.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 608dd1120d35b02a02570f024c585f7569508586
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fixed-page-mode/
+  to /tmp/fixed-page-modeCt33ob/fixed-page-mode-20230531.929
+    fixed-page-mode.el -> fixed-page-mode.el
+Created fixed-page-mode-20230531.929.tar containing:
+  fixed-page-mode-20230531.929/
+  fixed-page-mode-20230531.929/fixed-page-mode-pkg.el
+  fixed-page-mode-20230531.929/fixed-page-mode.el
+ ✓ Success:
+  2023-09-22T09:43:11+0000  fixed-page-mode-20230531.929.entry
+  2023-09-22T09:43:10+0000  fixed-page-mode-20230531.929.tar
+Built fixed-page-mode in 4.765s, finished at 2023-09-22T09:43:13+0000
