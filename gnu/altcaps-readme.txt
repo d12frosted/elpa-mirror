@@ -1,29 +1,30 @@
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	      ALTCAPS: APPLY ALTERNATING LETTER CASING TO
-		       CONVEY SARCASM OR MOCKERY
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+              ALTCAPS: APPLY ALTERNATING LETTER CASING TO
+                       CONVEY SARCASM OR MOCKERY
 
-			  Protesilaos Stavrou
-			  info@protesilaos.com
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          Protesilaos Stavrou
+                          info@protesilaos.com
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This manual, written by Protesilaos Stavrou, describes the customization
 options for `altcaps' (or `altcaps.el'), and provides every other piece
 of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.1.0,
-released on 2022-11-28.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.2.0,
+released on 2023-09-22.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.2.0-dev.
+Current development target is 1.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `altcaps'
 ⁃ Official manual: <https://protesilaos.com/emacs/altcaps>
+⁃ Change log: <https://protesilaos.com/emacs/altcaps-changelog>
 ⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/altcaps>
   • Mirrors:
     ⁃ GitHub: <https://github.com/protesilaos/altcaps>
     ⁃ GitLab: <https://gitlab.com/protesilaos/altcaps>
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/altcaps>
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/general-issues>
 ⁃ Backronyms: Alternating Letters Transform Casual Asides to Playful
   Statements.  ALTCAPS Lets Trolls Convert Aphorisms to Proper
   Shitposts.
@@ -48,7 +49,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022 Free Software Foundation, Inc.
+  Copyright (C) 2022-2023 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -105,13 +106,11 @@ Table of Contents
         `altcaps-word' with optional `NUM', per that command’s
         functionality (read its documentation).
 
-  [ The following is part of 1.2.0-dev. ]
-
   The user option `altcaps-force-character-casing' forces the given
   letter casing for specified characters.  Its value is an alist of
-  `(CHARACTER . CASE)' pairs.  `CHARACTER' is a single character
-  (satisfies the `characterp' condition), while `CASE' is the `upcase'
-  or `downcase' symbol (code sample further below).
+  `(STRING . CASE)' pairs.  `STRING' is a string with a single
+  character, while `CASE' is the `upcase' or `downcase' symbol (code
+  sample further below).
 
   The idea is to always render certain characters in lower or upper
   case, in consideration of their legibility in context.  For example,
@@ -134,8 +133,8 @@ Table of Contents
 
   ┌────
   │ (setq altcaps-force-character-casing
-  │       '((?i . downcase)
-  │ 	(?l . upcase)))
+  │       '(("i" . downcase)
+  │ 	("l" . upcase)))
   └────
 
 
@@ -202,8 +201,8 @@ Table of Contents
   │ 
   │ ;; Force letter casing for certain characters (for legibility).
   │ (setq altcaps-force-character-casing
-  │       '((?i . downcase)
-  │ 	(?l . upcase)))
+  │       '(("i" . downcase)
+  │ 	("l" . upcase)))
   │ 
   │ ;; We do not bind any keys, but you are free to do so:
   │ (define-key global-map (kbd "C-x C-a") #'altcaps-dwim)
