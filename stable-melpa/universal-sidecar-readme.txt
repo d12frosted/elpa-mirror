@@ -76,6 +76,13 @@ normal window motion commands
                    (window-parameters . ((no-other-window . t)
                                          (no-delete-other-windows . t)))))
 
+
+Finally, errors in sections or section definitions are by default
+logged to the *Warnings* buffer.  This is done in a way to allow
+for debugging.  Moreover, the logging can be disabled by setting
+`universal-sidecar-inhibit-section-error-log' to non-nil, in which
+case (unless debugging is enabled) these errors will be ignored.
+
 ; Section Functions
 
 The basic installation of `universal-sidecar' does not include any
@@ -144,3 +151,7 @@ v1.2.6 (2023-09-04): Fix type error in
 v1.2.7 (2023-09-04): Fix a byte compilation issue.
 
 v1.3.0 (2023-09-14): Log errors, don't ignore them.
+
+v1.4.0 (2023-09-22): Add
+`universal-sidecar-inhibit-section-error-log' to control when
+sidecar section errors are logged.
