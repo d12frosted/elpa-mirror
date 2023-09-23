@@ -2157,7 +2157,7 @@
 	    (:authors
 	     ("Sergei Nosov <sergei.nosov [at] gmail.com>")))])
  (treeview .
-	   [(1 1 1)
+	   [(1 2 0)
 	    ((emacs
 	      (24 4)))
 	    "A generic tree navigation library" tar
@@ -2166,7 +2166,7 @@
 	     (:maintainer "Tilman Rassy" . "tilman.rassy@googlemail.com")
 	     (:authors
 	      ("Tilman Rassy" . "tilman.rassy@googlemail.com"))
-	     (:commit . "b68f77bf102b289e7b0e97f767bb7ffff9a5835b"))])
+	     (:commit . "c6888e5f3aa0d72a7b4db625fcc2a847fd3bb1ce"))])
  (tuareg .
 	 [(3 0 1)
 	  ((emacs

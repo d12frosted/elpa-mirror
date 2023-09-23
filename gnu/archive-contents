@@ -3445,15 +3445,16 @@
 		  (:url . "https://elpa.gnu.org/packages/sql-cassandra.html")
 		  (:commit . "3e997c6ad82f4240bcd62630ad44b5f023bd16c1"))])
  (sql-indent .
-	     [(1 6)
+	     [(1 7)
 	      ((cl-lib
 		(0 5)))
 	      "Support for indenting code in SQL files." tar
 	      ((:url . "https://github.com/alex-hhh/emacs-sql-indent")
+	       (:keywords "languages" "sql")
 	       (:maintainer "Alex Harsanyi" . "AlexHarsanyi@gmail.com")
 	       (:authors
 		("Alex Harsanyi" . "AlexHarsanyi@gmail.com"))
-	       (:keywords "languages" "sql"))])
+	       (:commit . "323ece64acaac7f27b7806db9dba0757d6e57885"))])
  (srht .
        [(0 2)
 	((emacs
