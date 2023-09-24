@@ -55,7 +55,7 @@ Here's an example which you can test by evaluating the `let' form:
          (:todo "WAITING" :order 8) ; Set order of this section
          (:todo ("SOMEDAY" "TO-READ" "CHECK" "TO-WATCH" "WATCHING")
                 ;; Show this group at the end of the agenda (since it has the
-                ;; highest number). If you specified this group last, items
+                ;; highest number).  If you specified this group last, items
                 ;; with these todo keywords that e.g. have priority A would be
                 ;; displayed in that group instead, because items are grouped
                 ;; out in the order the groups are listed.

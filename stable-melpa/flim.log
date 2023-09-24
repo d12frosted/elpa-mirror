@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/flim/
 Checking out 80b8121f05a5a0d7fcfe3e54085467a646dd2028
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flim/
-  to /tmp/flimVY4gfl/flim-20230808.1153
+  to /tmp/flimIbv0Ru/flim-20230808.1153
     mime-en.texi -> mime-en.texi
     mime-ja.texi -> mime-ja.texi
     sasl.texi -> sasl.texi
@@ -37,4 +37,43 @@ Copying files (->) and directories (=>)
     sha1.el -> sha1.el
     smtp.el -> smtp.el
     std11.el -> std11.el
-Generating /tmp/flimVY4gfl/flim-20230808.1153/mime-en.info
+Generating /tmp/flimIbv0Ru/flim-20230808.1153/mime-en.info
+Generating /tmp/flimIbv0Ru/flim-20230808.1153/mime-ja.info
+Generating /tmp/flimIbv0Ru/flim-20230808.1153/sasl.info
+Created flim-20230808.1153.tar containing:
+  flim-20230808.1153/
+  flim-20230808.1153/dir
+  flim-20230808.1153/eword-decode.el
+  flim-20230808.1153/eword-encode.el
+  flim-20230808.1153/flim-pkg.el
+  flim-20230808.1153/hmac-sha1.el
+  flim-20230808.1153/luna.el
+  flim-20230808.1153/lunit.el
+  flim-20230808.1153/md5.el
+  flim-20230808.1153/mel-g.el
+  flim-20230808.1153/mel-q-ccl.el
+  flim-20230808.1153/mel-q.el
+  flim-20230808.1153/mel-u.el
+  flim-20230808.1153/mel.el
+  flim-20230808.1153/mime-conf.el
+  flim-20230808.1153/mime-def.el
+  flim-20230808.1153/mime-en.info
+  flim-20230808.1153/mime-ja.info
+  flim-20230808.1153/mime-parse.el
+  flim-20230808.1153/mime.el
+  flim-20230808.1153/mmbuffer.el
+  flim-20230808.1153/mmcooked.el
+  flim-20230808.1153/mmexternal.el
+  flim-20230808.1153/mmgeneric.el
+  flim-20230808.1153/qmtp.el
+  flim-20230808.1153/sasl-scram.el
+  flim-20230808.1153/sasl-xoauth2.el
+  flim-20230808.1153/sasl.el
+  flim-20230808.1153/sasl.info
+  flim-20230808.1153/sha1.el
+  flim-20230808.1153/smtp.el
+  flim-20230808.1153/std11.el
+ ✓ Success:
+  2023-09-24T06:30:37+0000  flim-20230808.1153.entry
+  2023-09-24T06:30:37+0000  flim-20230808.1153.tar
+Built flim in 16.781s, finished at 2023-09-24T06:30:39+0000
