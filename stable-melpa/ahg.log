@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://bitbucket.org/agriggio/ahg
 
 Updating /mnt/store/melpa/working/ahg/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://bitbucket.org/agriggio/ahg/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 6a8dd876d767b50431db2c695a8c21d5df9944e2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ahg/
+  to /tmp/ahgoGnpRE/ahg-20230904.701
+    ahg.el -> ahg.el
+Created ahg-20230904.701.tar containing:
+  ahg-20230904.701/
+  ahg-20230904.701/ahg-pkg.el
+  ahg-20230904.701/ahg.el
+ ✓ Success:
+  2023-09-25T19:14:50+0000  ahg-20230904.701.entry
+  2023-09-25T19:14:50+0000  ahg-20230904.701.tar
+Built ahg in 3.576s, finished at 2023-09-25T19:14:52+0000

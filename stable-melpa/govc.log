@@ -3,16 +3,18 @@ Fetcher: github
 Source:  https://github.com/vmware/govmomi.git
 
 Updating /mnt/store/melpa/working/govc/
-Checking out c82a709c50c0cd1ae560dd4c8da2d5b266114c50
+Checking out 2fab8d5337155ac7e6162b4cddd0b87fbfdf7515
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/govc/
-  to /tmp/govcKgzlUs/govc-20221216.1712
+  to /tmp/govcEq5pKC/govc-20230925.1912
   ! govc/emacs/govc.el -> govc.el
-Created govc-20221216.1712.tar containing:
-  govc-20221216.1712/
-  govc-20221216.1712/govc-pkg.el
-  govc-20221216.1712/govc.el
+Created govc-20230925.1912.tar containing:
+  govc-20230925.1912/
+  govc-20230925.1912/govc-pkg.el
+  govc-20230925.1912/govc.el
  ✓ Success:
-  2023-09-25T10:51:27+0000  govc-20221216.1712.entry
-  2023-09-25T10:51:27+0000  govc-20221216.1712.tar
-Built govc in 5.875s, finished at 2023-09-25T10:51:29+0000
+  2023-09-25T17:32:58+0000  govc-20221216.1712.entry
+  2023-09-25T17:32:58+0000  govc-20221216.1712.tar
+  2023-09-25T19:45:18+0000  govc-20230925.1912.entry
+  2023-09-25T19:45:18+0000  govc-20230925.1912.tar
+Built govc in 7.750s, finished at 2023-09-25T19:45:20+0000
