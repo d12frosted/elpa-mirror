@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/consult-spotify/
-Checking out 5c1dcf0182135cda4191d4ba206fe2f265100293
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/consult-spotify/
-  to /tmp/consult-spotifyEswUrp/consult-spotify-20211114.2258
-    consult-spotify.el -> consult-spotify.el
-Created consult-spotify-20211114.2258.tar containing:
-  consult-spotify-20211114.2258/
-  consult-spotify-20211114.2258/consult-spotify-pkg.el
-  consult-spotify-20211114.2258/consult-spotify.el
- ✓ Success:
-  2023-09-25T19:25:03+0000  consult-spotify-20211114.2258.entry
-  2023-09-25T19:25:03+0000  consult-spotify-20211114.2258.tar
-Built consult-spotify in 5.030s, finished at 2023-09-25T19:25:05+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/jao/espotify.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
