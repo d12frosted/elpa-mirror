@@ -1,7 +1,7 @@
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		WORKROOM - NAMED ROOMS FOR WORK WITHOUT
-		     IRRELEVANT DISTRACTING BUFFERS
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                WORKROOM - NAMED ROOMS FOR WORK WITHOUT
+                     IRRELEVANT DISTRACTING BUFFERS
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Workroom provides named "workrooms" (or workspaces), somewhat similar to
