@@ -1,9 +1,9 @@
-			   ━━━━━━━━━━━━━━━━━
-			      DENOTE-MENU
+                           ━━━━━━━━━━━━━━━━━
+                              DENOTE-MENU
 
-			    Mohamed Suliman
-			    sulimanm@tcd.ie
-			   ━━━━━━━━━━━━━━━━━
+                            Mohamed Suliman
+                            sulimanm@tcd.ie
+                           ━━━━━━━━━━━━━━━━━
 
 
 
@@ -54,7 +54,7 @@
   └────
 
 
-  This package requires Denote `v1.2.0' or above.
+  This package requires Denote `v2.0.0' or above.
 
 
 3 Usage
@@ -90,7 +90,8 @@
   specific keywords, run `M-x denote-menu-filter-by-keyword'. This
   command will prompt for a list of comma separated keywords (with
   completion) and filter the list to those denote files that are tagged
-  with at least one of the inputted keywords.
+  with at least one of the inputted keywords. To filter /out/ any denote
+  files by keyword, run `M-x denote-menu-filter-out-keyword'.
 
 
 3.3 Defining your own filters
@@ -154,6 +155,9 @@
   The user options for `denote-menu' are:
   `denote-menu-date-column-width'
         A number value for the width of the date column. Defaults to 17.
+  `denote-menu-signature-column-width'
+        A number value for the width of the signature column. Defaults
+        to 10.
   `denote-menu-title-column-width'
         A number value for the width of the title column. Defaults to
         85.
@@ -164,6 +168,8 @@
   `denote-menu-show-file-type'
         If non-nil, appends the file type of the current denote file to
         the title.
+  `denote-menu-show-file-signature'
+        If non-nil, the column for file signature is added.
   `denote-menu-initial-regex'
         A string that is the regular expression that is used to
         initially populate the `*Denote*' buffer with matching
@@ -189,5 +195,6 @@
   │ (define-key denote-menu-mode-map (kbd "c") #'denote-menu-clear-filters)
   │ (define-key denote-menu-mode-map (kbd "/ r") #'denote-menu-filter)
   │ (define-key denote-menu-mode-map (kbd "/ k") #'denote-menu-filter-by-keyword)
+  │ (define-key denote-menu-mode-map (kbd "/ o") #'denote-menu-filter-out-keyword)
   │ (define-key denote-menu-mode-map (kbd "e") #'denote-menu-export-to-dired)
   └────

@@ -13,6 +13,41 @@
 1.1 Installation
 ────────────────
 
+  You can install `mastodon.el' from ELPA, MELPA, or directly from this
+  repo.
+
+
+1.1.1 ELPA
+╌╌╌╌╌╌╌╌╌╌
+
+  You should be able to directly install with:
+
+  `M-x package-refresh-contents RET'
+
+  `M-x package-install RET mastodon RET'
+
+
+1.1.2 MELPA
+╌╌╌╌╌╌╌╌╌╌╌
+
+  Add `MELPA' to your archives:
+
+  ┌────
+  │ (require 'package)
+  │ (add-to-list 'package-archives
+  │ 	     '("melpa" . "http://melpa.org/packages/") t)
+  └────
+
+  Update and install:
+
+  `M-x package-refresh-contents RET'
+
+  `M-x package-install RET mastodon RET'
+
+
+1.1.3 Repo
+╌╌╌╌╌╌╌╌╌╌
+
   Clone this repository and add the lisp directory to your load path.
   Then, require it and go.
 
@@ -32,25 +67,7 @@
   version it shouldn't be very hard to get it working.
 
 
-1.1.1 MELPA
-╌╌╌╌╌╌╌╌╌╌╌
-
-  Add `MELPA' to your archives:
-
-  ┌────
-  │ (require 'package)
-  │ (add-to-list 'package-archives
-  │ 	     '("melpa" . "http://melpa.org/packages/") t)
-  └────
-
-  Update and install:
-
-  `M-x package-refresh-contents RET'
-
-  `M-x package-install RET mastodon RET'
-
-
-1.1.2 Emoji
+1.1.4 Emoji
 ╌╌╌╌╌╌╌╌╌╌╌
 
   `mastodon-mode' will enable [Emojify] if it is loaded in your Emacs
@@ -61,7 +78,7 @@
 [Emojify] <https://github.com/iqbalansari/emacs-emojify>
 
 
-1.1.3 Discover
+1.1.5 Discover
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   `mastodon-mode' can provide a context menu for its keybindings if
