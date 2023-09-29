@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-php/php-mode.git
 
 Updating /mnt/store/melpa/working/php-mode/
-Checking out c421658d7049a2b1dfe04e75c1e8a9e4a9e5e21e
+Checking out 4a29636243ba7f4afba476348587713531d994bc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-modeR7DZnt/php-mode-20230815.1051
+  to /tmp/php-modeqIJP3e/php-mode-20230929.123
   ! lisp/php-align.el -> php-align.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-defs.el -> php-defs.el
@@ -20,23 +20,25 @@ Copying files (->) and directories (=>)
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
   ! lisp/php.el -> php.el
-Created php-mode-20230815.1051.tar containing:
-  php-mode-20230815.1051/
-  php-mode-20230815.1051/php-align.el
-  php-mode-20230815.1051/php-complete.el
-  php-mode-20230815.1051/php-defs.el
-  php-mode-20230815.1051/php-face.el
-  php-mode-20230815.1051/php-flymake.el
-  php-mode-20230815.1051/php-format.el
-  php-mode-20230815.1051/php-ide-phpactor.el
-  php-mode-20230815.1051/php-ide.el
-  php-mode-20230815.1051/php-local-manual.el
-  php-mode-20230815.1051/php-mode-debug.el
-  php-mode-20230815.1051/php-mode-pkg.el
-  php-mode-20230815.1051/php-mode.el
-  php-mode-20230815.1051/php-project.el
-  php-mode-20230815.1051/php.el
+Created php-mode-20230929.123.tar containing:
+  php-mode-20230929.123/
+  php-mode-20230929.123/php-align.el
+  php-mode-20230929.123/php-complete.el
+  php-mode-20230929.123/php-defs.el
+  php-mode-20230929.123/php-face.el
+  php-mode-20230929.123/php-flymake.el
+  php-mode-20230929.123/php-format.el
+  php-mode-20230929.123/php-ide-phpactor.el
+  php-mode-20230929.123/php-ide.el
+  php-mode-20230929.123/php-local-manual.el
+  php-mode-20230929.123/php-mode-debug.el
+  php-mode-20230929.123/php-mode-pkg.el
+  php-mode-20230929.123/php-mode.el
+  php-mode-20230929.123/php-project.el
+  php-mode-20230929.123/php.el
  ✓ Success:
-  2023-09-28T18:22:50+0000  php-mode-20230815.1051.entry
-  2023-09-28T18:22:50+0000  php-mode-20230815.1051.tar
-Built php-mode in 5.494s, finished at 2023-09-28T18:22:52+0000
+  2023-09-29T01:16:54+0000  php-mode-20230815.1051.entry
+  2023-09-29T01:16:54+0000  php-mode-20230815.1051.tar
+  2023-09-29T03:32:39+0000  php-mode-20230929.123.entry
+  2023-09-29T03:32:39+0000  php-mode-20230929.123.tar
+Built php-mode in 5.690s, finished at 2023-09-29T03:32:41+0000
