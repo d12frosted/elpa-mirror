@@ -1,0 +1,20 @@
+Package: gerrit
+Fetcher: github
+Source:  https://github.com/thisch/gerrit.el.git
+
+Updating /mnt/store/melpa/working/gerrit/
+Checking out 76cc426d62f1b4964159706eafa8f5b50b8427ea
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gerrit/
+  to /tmp/gerrit1Aps0R/gerrit-20230102.1714
+    gerrit-rest.el -> gerrit-rest.el
+    gerrit.el -> gerrit.el
+Created gerrit-20230102.1714.tar containing:
+  gerrit-20230102.1714/
+  gerrit-20230102.1714/gerrit-pkg.el
+  gerrit-20230102.1714/gerrit-rest.el
+  gerrit-20230102.1714/gerrit.el
+ ✓ Success:
+  2023-09-29T18:28:17+0000  gerrit-20230102.1714.entry
+  2023-09-29T18:28:17+0000  gerrit-20230102.1714.tar
+Built gerrit in 4.269s, finished at 2023-09-29T18:28:19+0000
