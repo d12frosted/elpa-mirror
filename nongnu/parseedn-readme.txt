@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/clojure-emacs/parseedn.svg?branch=master)](https://travis-ci.org/clojure-emacs/parseedn)
+[![CircleCI](https://circleci.com/gh/clojure-emacs/parseedn.svg?style=svg)](https://circleci.com/gh/clojure-emacs/parseedn)
+[![MELPA](http://melpa.org/packages/parseedn-badge.svg)](http://melpa.org/#/parseedn)
+[![MELPA Stable](http://stable.melpa.org/packages/parseedn-badge.svg)](http://stable.melpa.org/#/parseedn)
 
 # EDN parser for Emacs Lisp
 
@@ -72,7 +74,7 @@ PEG parser generator library.
 
 ## License
 
-&copy; 2017-2021 Arne Brasseur
+&copy; 2017-2023 Arne Brasseur
 
 Distributed under the terms of the GNU General Public License 3.0 or later. See
 [LICENSE](LICENSE).

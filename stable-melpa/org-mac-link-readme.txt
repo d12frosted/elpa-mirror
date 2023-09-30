@@ -22,7 +22,7 @@ Brave.app - Grab the url of the frontmost tab in the frontmost window
 Together.app - Grab links to the selected items in the library list
 Skim.app - Grab a link to the selected page in the topmost pdf document
 Microsoft Outlook.app - Grab a link to the selected message in the message list
-DEVONthink Pro Office.app - Grab a link to the selected DEVONthink item(s); open DEVONthink item by reference
+DEVONthink*.app - Grab a link to the selected DEVONthink item(s); open DEVONthink item by reference
 Evernote.app - Grab a link to the selected Evernote item(s); open Evernote item by ID
 qutebrowser.app - Grab the url of the frontmost tab in the frontmost window
 
@@ -52,3 +52,6 @@ You may customize which applications appear in the grab menu by
 customizing the group `org-mac-link'.  Changes take effect
 immediately.
 
+You can also add grab handlers for other apps, just by updating
+`org-mac-link-descriptors', for instance:
+`(push '("W" "ord" my-word-handler t) org-mac-link-descriptors)'

@@ -1674,7 +1674,7 @@
 	     (:url . "https://elpa.nongnu.org/nongnu/parseclj.html")
 	     (:commit . "90595049634549e6d8872f719b13e9555897d17b"))])
  (parseedn .
-	   [(1 1 0)
+	   [(1 2 0)
 	    ((emacs
 	      (26))
 	     (parseclj
@@ -1682,12 +1682,12 @@
 	     (map
 	      (2)))
 	    "Clojure/EDN parser" tar
-	    ((:keywords "lisp" "clojure" "edn" "parser")
+	    ((:url . "http://www.github.com/clojure-emacs/parseedn")
+	     (:keywords "lisp" "clojure" "edn" "parser")
 	     (:maintainer "Arne Brasseur" . "arne@arnebrasseur.net")
 	     (:authors
 	      ("Arne Brasseur" . "arne@arnebrasseur.net"))
-	     (:url . "https://elpa.nongnu.org/nongnu/parseedn.html")
-	     (:commit . "ea7b5281ec80aca0bd1cc93a348aebb302497339"))])
+	     (:commit . "c8f07926a688bfe995fde4460103915d401a1aff"))])
  (pcmpl-args .
 	     [(0 1 3)
 	      ((emacs
