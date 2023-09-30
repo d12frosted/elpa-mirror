@@ -2077,17 +2077,15 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (llm .
-      [(0 1 1)
-       ((request
-	 (0 3 3))
-	(emacs
+      [(0 2)
+       ((emacs
 	 (28 1)))
        "Interface to pluggable llm backends" tar
        ((:url . "https://github.com/ahyatt/llm")
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "9ca27d742b43283f5c81d925be74dc0d27c95924"))])
+	(:commit . "09fce97090bde133e98310090c1a363f034396a7"))])
  (lmc .
       [(1 4)
        ((emacs
