@@ -18,12 +18,12 @@ I. Installation
         :config
         (load-theme 'timu-spacegrey t))
 
-II. Configuration
+II.  Configuration
   A. Dark and light flavour
     By default the theme is `dark', to setup the `light' flavour:
 
     - Change the variable `timu-spacegrey-flavour' in the Customization Interface.
-      M-x customize RET. Then Search for `timu'.
+      M-x customize RET.  Then Search for `timu'.
 
     or
 
@@ -42,7 +42,7 @@ II. Configuration
     More to follow in the future.
 
     By default the scaling is turned off.
-    To setup the scaling add the following to your `~/.emacs.d/init.el' or `~/.emacs':
+    To setup the scaling add the following to your Emacs configuration.
 
     1. Default scaling
       This will turn on default values of scaling in the theme.
@@ -68,24 +68,43 @@ II. Configuration
     You can set a variable to make some faces more "intense".
 
     By default the intense colors are turned off.
-    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+    To turn this on add the following to your Emacs configuration.
       (customize-set-variable 'timu-spacegrey-org-intense-colors t)
 
   D. Muted colors for the dark flavour
     You can set muted colors for the dark flavour of the theme.
 
     By default muted colors are turned off.
-    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+    To turn this on add the following to your Emacs configuration.
       (customize-set-variable 'timu-spacegrey-muted-colors t)
 
-  E. Border for the `mode-line'
+  E. More contrast for the foreground
+    You can set the =default= foreground to be more contrasted.
+
+    By default the option are turned off.
+    To turn this on add the following to your Emacs configuration.
+      (customize-set-variable 'timu-spacegrey-contrasted-foreground t)
+
+  F. More contrast for comments & docs
+     You can set the comments & docs to be more contrasted.
+
+     - `font-lock-comment-delimiter-face'
+     - `font-lock-comment-face'
+     - `tree-sitter-hl-face:comment'
+     - `tree-sitter-hl-face:doc'
+
+    By default the option are turned off.
+    To turn this on add the following to your Emacs configuration.
+      (customize-set-variable 'timu-spacegrey-contrasted-comments t)
+
+  G. Border for the `mode-line'
     You can set a variable to add a border to the mode-line.
 
     By default the border is turned off.
-    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+    To turn this on add the following to your Emacs configuration.
       (customize-set-variable 'timu-spacegrey-mode-line-border t)
 
-III. Utility functions
+III.  Utility functions
   A. Toggle dark and light flavour of the theme
       M-x timu-spacegrey-toggle-dark-light RET.
 
