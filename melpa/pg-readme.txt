@@ -11,6 +11,10 @@ Supported features:
  - SCRAM-SHA-256 authentication (the default method since PostgreSQL version 14)
  - MD5 authentication
  - Encrypted (TLS) connections
+ - Support for the SQL COPY protocol to copy preformatted data to PostgreSQL from an Emacs buffer
+ - Asynchronous handling of LISTEN/NOTIFY notification messages from PostgreSQL, allowing the
+   implementation of publish-subscribe type architectures (PostgreSQL as an "event broker" or
+   "message bus" and Emacs as event publisher and consumer.
 
 
 Entry points
