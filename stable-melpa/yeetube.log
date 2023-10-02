@@ -1,9 +1,24 @@
 Package: yeetube
-Fetcher: sourcehut
-Source:  https://git.sr.ht/~thanosapollo/yeetube.el
+Fetcher: git
+Source:  https://git.thanosapollo.com/yeetube
 
-Updating /mnt/store/melpa/working/yeetube/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~thanosapollo/yeetube.el/': The requested URL returned error: 403
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Cloning https://git.thanosapollo.com/yeetube to /mnt/store/melpa/working/yeetube/
+Checking out 159c55f71c71fabb544eff32b8d368a238be1af7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yeetube/
+  to /tmp/yeetubeZHDiXe/yeetube-20231002.241
+    yeetube-buffer.el -> yeetube-buffer.el
+    yeetube-mpv.el -> yeetube-mpv.el
+    yeetube.el -> yeetube.el
+Created yeetube-20231002.241.tar containing:
+  yeetube-20231002.241/
+  yeetube-20231002.241/yeetube-buffer.el
+  yeetube-20231002.241/yeetube-mpv.el
+  yeetube-20231002.241/yeetube-pkg.el
+  yeetube-20231002.241/yeetube.el
+ ✓ Success:
+  2023-10-02T02:58:12+0000  yeetube-20230929.620.entry
+  2023-10-02T02:58:12+0000  yeetube-20230929.620.tar
+  2023-10-02T14:25:59+0000  yeetube-20231002.241.entry
+  2023-10-02T14:25:59+0000  yeetube-20231002.241.tar
+Built yeetube in 8.652s, finished at 2023-10-02T14:26:01+0000

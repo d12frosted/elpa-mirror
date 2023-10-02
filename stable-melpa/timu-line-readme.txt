@@ -2,9 +2,10 @@ A custom and simple mode line for Emacs.
 
 I.  Installation
  A. Manual installation
-  1. Add `timu-line.el' to your `custom-load-path'.
+  1. Add `timu-line.el' (https://gitlab.com/aimebertrand/timu-line)
+     to your `custom-load-path'.
   2. In your `~/.emacs.d/init.el' or `~/.emacs':
-     (add-hook 'after-init-hook #'timu-line-mode)
+      (timu-line-mode 1)
 
 II.  Features
     The following is displayed in appropriate buffers only:
@@ -12,6 +13,7 @@ II.  Features
  A. Left side
     - Display hint when a kbd macro is running
     - Display evil state
+    - Display Tramp host if applicable
     - Display buffer/file name
     - Display keybindings for org capture in the capture buffer
     - Display the vc branch
@@ -22,8 +24,8 @@ II.  Features
 
  B. Right side
     - Display the major mode
-    - Display Mu4e mail count
-    - Display tab number (current:total)
+    - Display Mu4e mail count (works only with `mu' installed)
+    - Display tab number `current:total'
     - Display column number of the point
 
 III.  Options
@@ -53,6 +55,7 @@ III.  Options
     - `timu-line-show-mu4e-context' - default value is t
     - `timu-line-show-elfeed-counts' - default value is t
     - `timu-line-show-evil-state' - default value is nil
+    - `timu-line-show-tramp-host' - default value is nil
 
  C. Org capture hints for keybindings
     The variable `timu-line-org-capture-keys-string' contains the string to
