@@ -1,0 +1,67 @@
+A custom and simple mode line for Emacs.
+
+I.  Installation
+ A. Manual installation
+  1. Add `timu-line.el' to your `custom-load-path'.
+  2. In your `~/.emacs.d/init.el' or `~/.emacs':
+     (add-hook 'after-init-hook #'timu-line-mode)
+
+II.  Features
+    The following is displayed in appropriate buffers only:
+
+ A. Left side
+    - Display hint when a kbd macro is running
+    - Display evil state
+    - Display buffer/file name
+    - Display keybindings for org capture in the capture buffer
+    - Display the vc branch
+    - Display the python venv
+    - Display Mu4e context
+    - Display Elfeed search filter
+    - Display Elfeed article counts
+
+ B. Right side
+    - Display the major mode
+    - Display Mu4e mail count
+    - Display tab number (current:total)
+    - Display column number of the point
+
+III.  Options
+ A. Faces
+    The following faces can be set to ones liking.
+    Either by the theme or with `set-face-attribute'.
+
+    - `timu-line-bg-active-face'
+    - `timu-line-bg-inactive-face'
+    - `timu-line-active-face'
+    - `timu-line-inactive-face'
+    - `timu-line-special-face'
+    - `timu-line-fancy-face'
+    - `timu-line-status-face'
+    - `timu-line-modified-face'
+    - `timu-line-read-only-face'
+
+ B. Control section display
+    You can elect to display some sections or not by using the
+    following variables:
+
+    - `timu-line-show-vc-branch' - default value is t
+    - `timu-line-show-lsp-indicator' - default value is nil
+    - `timu-line-show-eglot-indicator' - default value is nil
+    - `timu-line-show-python-virtual-env' - default value is t
+    - `timu-line-show-org-capture-keys' - default value is t
+    - `timu-line-show-mu4e-context' - default value is t
+    - `timu-line-show-elfeed-counts' - default value is t
+    - `timu-line-show-evil-state' - default value is nil
+
+ C. Org capture hints for keybindings
+    The variable `timu-line-org-capture-keys-string' contains the string to
+    show in the mode line as keybindings hint in the org capture buffer.
+
+ D. Modes for mu4e context
+    `timu-line-mu4e-context-modes' is a custom variable containing a list of
+    major modes in which to display the Mu4e context in the mode line.
+
+ E. Modes for mu4e context
+    `timu-line-elfeed-modes' controls in which modes the custom
+    Elfeed string is displayed.
