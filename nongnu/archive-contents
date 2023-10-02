@@ -156,6 +156,17 @@
 	 (:authors
 	  ("Akib Azmain Turja" . "akib@disroot.org"))
 	 (:commit . "19152095662c95bc73f1f25b8dcce432294b06a1"))])
+ (blueprint-ts-mode .
+		    [(0 0 1)
+		     ((emacs
+		       (29 0)))
+		     "Major mode for editing GNOME Blueprint files" tar
+		     ((:url . "https://github.com/huanie/blueprint-ts-mode")
+		      (:keywords "languages" "blueprint" "tree-sitter" "gnome" "gtk")
+		      (:maintainer "Huan Thieu Nguyen" . "nguyenthieuhuan@gmail.com")
+		      (:authors
+		       ("Huan Thieu Nguyen" . "nguyenthieuhuan@gmail.com"))
+		      (:commit . "1aa9223538519fc23cab76588db3585df04717f5"))])
  (boxquote .
 	   [(2 3)
 	    ((cl-lib

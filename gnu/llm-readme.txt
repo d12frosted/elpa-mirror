@@ -177,6 +177,12 @@
     `response-callback' which will be called with the text response.
     The `error-callback' will be called in case of error, with the error
     symbol and an error message.
+  • `llm-chat-streaming provider prompt partial-callback
+    response-callback error-callback': Similar to `llm-chat-async', but
+    request a streaming response.  As the response is built up,
+    `partial-callback' is called with the all the text retrieved up to
+    the current point.  Finally, `reponse-callback' is called with the
+    complete text.
   • `llm-embedding provider string': With the user-chosen `provider',
     send a string and get an embedding, which is a large vector of
     floating point values.  The embedding represents the semantic
