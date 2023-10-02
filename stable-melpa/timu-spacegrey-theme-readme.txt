@@ -106,10 +106,19 @@ II.  Configuration
 
 III.  Utility functions
   A. Toggle dark and light flavour of the theme
-      M-x timu-spacegrey-toggle-dark-light RET.
+      M-x `timu-spacegrey-toggle-dark-light' RET.
 
   B. Toggle between intense and non intense colors for `org-mode'
-      M-x timu-spacegrey-toggle-org-colors-intensity RET.
+      M-x `timu-spacegrey-toggle-org-colors-intensity' RET.
 
   C. Toggle between borders and no borders for the `mode-line'
-      M-x timu-spacegrey-toggle-mode-line-border RET.
+      M-x `timu-spacegrey-toggle-mode-line-border' RET.
+
+  D. Toggle italic faces on or off
+      M-x `timu-spacegrey-toggle-italic-faces' RET.
+
+  E. Toggle toggle more contrast for the foreground on or off
+      M-x `timu-spacegrey-toggle-contrasted-foreground' RET.
+
+  F. Toggle toggle more contrast for comments and docs on or off
+      M-x `timu-spacegrey-toggle-contrasted-comments' RET.
