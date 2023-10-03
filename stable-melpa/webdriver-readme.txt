@@ -92,9 +92,12 @@ Here is a usage example:
     (message (webdriver-get-element-text session element)))
   (webdriver-session-stop session))
 
-Currently, there is not great support for constructing a
-requested capabilities object to pass to the New Session command.
-For example, if you want to request a headless Firefox session, use:
-(make-instance 'webdriver-session
-               :requested-capabilities
-               '(:alwaysMatch (:moz:firefoxOptions (:args ["-headless"]))))
+If you want to request the remote end for certain capabilities, you can do
+that using a `webdriver-capabilities' object, and adding options to it.
+For example, for a headless Firefox session, you can use:
+(let ((caps (make-instance 'webdriver-capabilities-firefox)))
+  (webdriver-capabilities-firefox-add-arg caps "-headless" t)
+  (make-instance 'webdriver-session :requested-capabilities caps))
+This adds the "-headless" argument as part of :args in the
+:moz:firefoxOptions.  The third argument t says to add this requested
+capability as an alwaysMatch capability.
