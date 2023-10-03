@@ -214,6 +214,7 @@ Room buffers
 
   ⁃ Next event: `n'
   ⁃ Previous event: `p'
+  ⁃ End of buffer: `N'
   ⁃ Scroll up and mark read: `SPC'
   ⁃ Scroll down: `S-SPC'
   ⁃ Jump to fully-read marker: `M-g M-p'
@@ -392,6 +393,52 @@ Encrypted room support through Pantalaimon
 
 3 Changelog
 ═══════════
+
+0.13
+────
+
+  *Additions*
+
+  ⁃ Group joined direct rooms in directory buffers.
+  ⁃ Command `end-of-buffer' is bound to `N' in room buffers.
+
+  *Changes*
+
+  ⁃ Command `ement-room-image-show' use frame parameters to maximize the
+    frame, making it easier for users to override.  ([#223].  Thanks to
+    [Nicholas Vollmer].)
+
+  *Fixes*
+
+  ⁃ Name for direct rooms in directory buffers.
+  ⁃ Editing a message from the compose buffer would be sent as a reply
+    to the edited message.  (Fixes [#189].  Thanks to [Phil Sainty] for
+    reporting.)
+  ⁃ Editing an already-edited message.  ([#226].  Thanks to [Phil
+    Sainty] for reporting.)
+  ⁃ Replying to an already-edited message.  ([#227].  Thanks to [Phil
+    Sainty] for reporting.)
+  ⁃ Rendering redactions of edited messages.  ([#228].  Thanks to [Phil
+    Sainty] for reporting.)
+  ⁃ Redacting an edited message.  ([#228].  Thanks to [Phil Sainty] for
+    reporting.)
+  ⁃ Command `ement-room-flush-colors' maintains point position.
+
+
+[#223] <https://github.com/alphapapa/ement.el/issues/223>
+
+[Nicholas Vollmer] <https://github.com/progfolio>
+
+[#189] <https://github.com/alphapapa/ement.el/issues/189>
+
+[Phil Sainty] <https://github.com/phil-s>
+
+[#226] <https://github.com/alphapapa/ement.el/issues/226>
+
+[#227] <https://github.com/alphapapa/ement.el/issues/227>
+
+[#228] <https://github.com/alphapapa/ement.el/issues/228>
+
 
 0.12
 ────
