@@ -13,3 +13,5 @@ Most of the behaviour is controlled via the user option
 `do-at-point-actions' and `do-at-point-user-actions'.  A mode may
 use `do-at-point-local-actions' to add additional things and/or
 actions.
+
+Inspired by Embark and `isearch-forward-thing-at-point'.
