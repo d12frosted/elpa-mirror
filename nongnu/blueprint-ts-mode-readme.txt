@@ -13,6 +13,13 @@
   with Treesitter support (`--with-tree-sitter') which you can check
   with the variable `system-configuration-options'.
 
+  Get the grammar:
+  ┌────
+  │ (add-to-list 'treesit-language-source-alist
+  │ 	     '(blueprint . (https://github.com/huanie/tree-sitter-blueprint)))
+  │ (treesit-install-language-grammar 'blueprint)
+  └────
+
   Install `blueprint-ts-mode' from NONGNU ELPA. `package-install
   blueprint-ts-mode'.
 
@@ -27,3 +34,10 @@
 
     These features still need improvement. Feedback and contributions
     are welcome!
+
+
+4 Reporting Bugs
+════════════════
+
+  Please make sure that you have the latest grammar installed from
+  <https://github.com/huanie/tree-sitter-blueprint>.

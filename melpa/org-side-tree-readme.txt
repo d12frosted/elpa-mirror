@@ -4,14 +4,11 @@ Inspired by and modeled on `org-sidebar-tree' from org-sidebar by Adam
 Porter (@alphapapa) and `embark-live' from Embark by Omar Antolin
 (@oantolin).
 
-
 To install, place file on your load-path
 and include this in your init file:
 (require 'org-side-tree)
 
-
 To use, Open an Org file and call M-x `org-side-tree'.
-
 
 Regarding support for non-Org files:
 
