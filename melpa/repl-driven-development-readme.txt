@@ -5,7 +5,7 @@ arbitrary languages, provided they have a REPL shell command.
 
 Whenever reading/refactoring some code, if you can make some of it
 self-contained, then you can immediately try it out! No need to
-load your entire program; nor copy-paste into an external REPL. The
+load your entire program; nor copy-paste into an external REPL.  The
 benefits of Emacs' built-in “C-x C-e” for Lisp, and Lisp's Repl
 Driven Development philosophy, are essentially made possible for
 arbitrary languages (to some approximate degree, but not fully).
@@ -36,7 +36,7 @@ with:
 For example, execute “C-x C-t” anywhere on each line below and see results in an
 overlay, right by your cursor.
 
-  echo "It is $(date) and I am at $(pwd), my name is $(whoami) and I have: \n $(ls)"
+  echo "It is $(date) and I am at $(pwd), my name is $(whoami) and I have: $(ls)"
 
   say "My name is $(whoami) and I like Emacs"
 
@@ -58,7 +58,7 @@ Then, we can submit the following Python snippets with “C-x C-p” on each lin
 
 These work fine, however there are some shortcomings of this REPL.
 For example, echoing results could be prettier and it doesn't handle
-multi-line input very well. You can address these issues using the various
+multi-line input very well.  You can address these issues using the various
 hooks / keyword arguments of the “repl-driven-development” macro.
 
 However, this package comes with preconfigured REPLS for: python, terminal,
@@ -76,7 +76,7 @@ Now we can submit the following, with “C-x C-p”, with no issues:
   square(5)
 
 Since these new REPL commands are just Emacs functions, we can use
-several at the time, alternating between them. For example:
+several at the time, alternating between them.  For example:
 
   ;; C-x C-e on the next two lines
   (repl-driven-development [C-x C-t] terminal)

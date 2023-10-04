@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out 74d43f53cf9b11c40cf97de26d871a39c2ec596f
+Checking out cec144245bf7adbd4761bd5be39471c31f33410a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgAH59Sj/ekg-20230930.1823
+  to /tmp/ekgRz6eys/ekg-20231004.431
     ekg-embedding.el -> ekg-embedding.el
     ekg-llm.el -> ekg-llm.el
     ekg-logseq.el -> ekg-logseq.el
@@ -15,21 +15,21 @@ Copying files (->) and directories (=>)
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekgAH59Sj/ekg-20230930.1823/doclicense.info
-Generating /tmp/ekgAH59Sj/ekg-20230930.1823/ekg.info
-Created ekg-20230930.1823.tar containing:
-  ekg-20230930.1823/
-  ekg-20230930.1823/dir
-  ekg-20230930.1823/doclicense.info
-  ekg-20230930.1823/ekg-embedding.el
-  ekg-20230930.1823/ekg-llm.el
-  ekg-20230930.1823/ekg-logseq.el
-  ekg-20230930.1823/ekg-org-roam.el
-  ekg-20230930.1823/ekg-pkg.el
-  ekg-20230930.1823/ekg-test-utils.el
-  ekg-20230930.1823/ekg.el
-  ekg-20230930.1823/ekg.info
+Generating /tmp/ekgRz6eys/ekg-20231004.431/doclicense.info
+Generating /tmp/ekgRz6eys/ekg-20231004.431/ekg.info
+Created ekg-20231004.431.tar containing:
+  ekg-20231004.431/
+  ekg-20231004.431/dir
+  ekg-20231004.431/doclicense.info
+  ekg-20231004.431/ekg-embedding.el
+  ekg-20231004.431/ekg-llm.el
+  ekg-20231004.431/ekg-logseq.el
+  ekg-20231004.431/ekg-org-roam.el
+  ekg-20231004.431/ekg-pkg.el
+  ekg-20231004.431/ekg-test-utils.el
+  ekg-20231004.431/ekg.el
+  ekg-20231004.431/ekg.info
  ✓ Success:
-  2023-10-04T01:49:22+0000  ekg-20230930.1823.entry
-  2023-10-04T01:49:22+0000  ekg-20230930.1823.tar
-Built ekg in 19.852s, finished at 2023-10-04T01:49:25+0000
+  2023-10-04T10:27:49+0000  ekg-20231004.431.entry
+  2023-10-04T10:27:49+0000  ekg-20231004.431.tar
+Built ekg in 11.465s, finished at 2023-10-04T10:27:50+0000

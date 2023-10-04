@@ -1,1 +1,10 @@
-This package provides a YouTube front-end for Emacs.
+This package provides the ability to scrape YouTube, with the results
+displayed in a proced-like buffer.
+
+Basic functionality includes:
+
+- Search Youtube for query
+- Play video url by default using mpv
+- Bookmark/Save video url
+- Download video using yt-dlp
+- A minimal yt-dlp front-end, which is independent of the rest YouTube functionality, to download multiple urls.
