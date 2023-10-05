@@ -36,7 +36,7 @@ with:
 For example, execute “C-x C-t” anywhere on each line below and see results in an
 overlay, right by your cursor.
 
-  echo "It is $(date) and I am at $(pwd), my name is $(whoami) and I have: $(ls)"
+  echo "It is $(date) and I am at $PWD, my name is $(whoami) and I have: $(ls)"
 
   say "My name is $(whoami) and I like Emacs"
 
@@ -108,4 +108,5 @@ from overlay echos, handle multi-line input, and more.
  // See a list of 23 numbers, which are attached as a tooltip to this text.
  IntStream.range(0, 23).forEach(x -> System.out.println(x))
 
-For more documentation, and examples, see http://alhassy.com/repl-driven-development
+For more documentation, and examples,
+see http://alhassy.com/repl-driven-development
