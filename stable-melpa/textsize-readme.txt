@@ -6,8 +6,6 @@ Hooks to perform the adjustment automatically are set up by enabling
 `textsize-mode' on initialization.  e.g.:
 
     (use-package textsize
-      :ensure nil
-      :commands textsize-mode
       :init (textsize-mode))
 
 Alternatively, the adjustment may be manually triggered by calling
