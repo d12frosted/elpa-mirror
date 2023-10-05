@@ -530,15 +530,14 @@
 		       (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
 		       (:url . "https://github.com/cpitclaudel/compact-docstrings"))])
  (company .
-	  [(0 9 13)
+	  [(0 10 0)
 	   ((emacs
-	     (24 3)))
+	     (25 1)))
 	   "Modular text completion framework" tar
 	   ((:url . "http://company-mode.github.io/")
-	    (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
-	    (:authors
-	     ("Nikolaj Schumacher"))
-	    (:keywords "abbrev" "convenience" "matching"))])
+	    (:keywords "abbrev" "convenience" "matching")
+	    (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
+	    (:commit . "b59662293cc9bd52bf6c7a4c3f70393351b52d71"))])
  (company-ebdb .
 	       [(1 1)
 		((company
