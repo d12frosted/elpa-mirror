@@ -512,10 +512,29 @@
   `mastodon.el' should work with ActivityPub servers that implement the
   Mastodon API.
 
-  Apart from Mastodon itself, it is currently known to work with Pleroma
-  and Gotosocial. If you attempt to use `mastodon.el' with another
-  server that implements the Mastodon API and run into problems, feel
-  free to open an issue.
+  Apart from Mastodon itself, it is currently known to work with:
+  • Pleroma ([pleroma.social])
+  • Akkoma ([akkoma.social])
+  • Gotosocial ([gotosocial.org])
+
+  It does not support the non-Mastodon API servers Misskey
+  ([misskey.io]) and Firefish ([joinfirefish.org], formerly Calkey), but
+  it should fully support displaying and interacting with posts and
+  users on those platforms.
+
+  If you attempt to use `mastodon.el' with a server and run into
+  problems, feel free to open an issue.
+
+
+[pleroma.social] <https://pleroma.social/>
+
+[akkoma.social] <https://akkoma.social/>
+
+[gotosocial.org] <https://gotosocial.org/>
+
+[misskey.io] <https://misskey.io/>
+
+[joinfirefish.org] <https://joinfirefish.org/>
 
 
 1.5 Contributing
@@ -573,8 +592,9 @@
 
   If you'd like to support continued development of `mastodon.el', I
   accept donations via paypal: [paypal.me/martianh]. If you would prefer
-  a different payment method, write to me at that address and I can
-  provide IBAN or other details.
+  a different payment method, please write to me at <martianhiatus [at]
+  riseup [dot] net> and I can provide IBAN or other bank account
+  details.
 
   I don't have a tech worker's income, so even a small tip would help
   out.

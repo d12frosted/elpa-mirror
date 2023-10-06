@@ -1356,7 +1356,7 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
  (mastodon .
-	   [(1 0 2)
+	   [(1 0 5)
 	    ((emacs
 	      (27 1))
 	     (request
@@ -1369,7 +1369,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "martianhiatus@riseup.net"))
-	     (:commit . "016a3a2b331a0cc9ee916e401b1eb3a196006c06"))])
+	     (:commit . "083222c20cd23755ca93fc2a9e320f653cffe9ef"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
@@ -2371,14 +2371,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 12 20230930093650)
+	       [(24 13 20231005090319)
 		((emacs
 		  (29)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "afdd2e6bee1b5823a598cf27431a0e6af88e6477"))])
+		 (:commit . "ecb110d50c5b0893132074cadba687761251cb1e"))])
  (xkcd .
        [(1 1)
 	((json

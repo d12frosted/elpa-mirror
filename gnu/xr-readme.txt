@@ -125,7 +125,7 @@ The xr package can be used interactively or by other code as a library.
     A range has + as one of its endpoints, which could mean that the
     hyphen was actually intended to be literal in order to match both
     + and -.
-    This check is only enable when CHECKS=all.
+    This check is only enabled when the 'checks' argument is 'all'.
 
   - Possibly erroneous '\X' in character alternative
 
@@ -136,7 +136,7 @@ The xr package can be used interactively or by other code as a library.
 
     For example, "[\\n\\t]" matches the characters 'n', 't' and
     backslash, but could be an attempt to match newline and tab.
-    This check is only enable when CHECKS=all.
+    This check is only enabled when the 'checks' argument is 'all'.
 
   - Duplicated character class '[:class:]'
 
@@ -150,7 +150,7 @@ The xr package can be used interactively or by other code as a library.
     For example, a\|b is better written [ab], and \s-\|\sw is usually
     better written [[:space:][:word:]]. (There is a subtle difference
     in how syntax properties are handled but it rarely matters.)
-    This check is only enable when CHECKS=all.
+    This check is only enabled when the 'checks' argument is 'all'.
 
   - Duplicated alternative branch
 
@@ -266,13 +266,11 @@ The xr package can be used interactively or by other code as a library.
 
     Another example: \(?:a*b+\)+ is better written a*b[ab]* .
 
-    This check is only enable when CHECKS=all.
-
   - Possibly mistyped ':?' at start of group
 
     A group starts as \(:? which makes it likely that it was really
     meant to be \(?: -- ie, a non-capturing group.
-    This check is only enable when CHECKS=all.
+    This check is only enabled when the 'checks' argument is 'all'.
 
   - Unnecessarily escaped 'X'
 
