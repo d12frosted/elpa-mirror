@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://git.launchpad.net/global-tags.el
 
 Updating /mnt/store/melpa/working/global-tags/
-Checking out aaa37da4c538f35a90149ef4ad3d8b0922af54ab
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/global-tags/
-  to /tmp/global-tagspZ7i2U/global-tags-20211120.347
-    global-tags.el -> global-tags.el
-Created global-tags-20211120.347.tar containing:
-  global-tags-20211120.347/
-  global-tags-20211120.347/global-tags-pkg.el
-  global-tags-20211120.347/global-tags.el
- ✓ Success:
-  2023-10-06T02:47:12+0000  global-tags-20211120.347.entry
-  2023-10-06T02:47:12+0000  global-tags-20211120.347.tar
-Built global-tags in 5.358s, finished at 2023-10-06T02:47:14+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.launchpad.net/global-tags.el/': gnutls_handshake() failed: Error in the pull function.
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

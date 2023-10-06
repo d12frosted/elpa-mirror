@@ -530,14 +530,14 @@
 		       (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
 		       (:url . "https://github.com/cpitclaudel/compact-docstrings"))])
  (company .
-	  [(0 10 0)
+	  [(0 10 1)
 	   ((emacs
 	     (25 1)))
 	   "Modular text completion framework" tar
 	   ((:url . "http://company-mode.github.io/")
 	    (:keywords "abbrev" "convenience" "matching")
 	    (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-	    (:commit . "b59662293cc9bd52bf6c7a4c3f70393351b52d71"))])
+	    (:commit . "d832d886d0dce655b44de8c5e1eec749b2bea3a3"))])
  (company-ebdb .
 	       [(1 1)
 		((company
@@ -3109,9 +3109,9 @@
 		   ("Bastien Guerry" . "bzg@gnu.org"))
 		  (:maintainer "Bastien Guerry" . "bzg@gnu.org"))])
  (relint .
-	 [(1 23)
+	 [(1 24)
 	  ((xr
-	    (1 24))
+	    (1 25))
 	   (emacs
 	    (26 1)))
 	  "Elisp regexp mistake finder" tar
@@ -3120,7 +3120,7 @@
 	   (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
 	   (:authors
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
-	   (:commit . "380754be9c288ee0baeb40c2a4773737f8aebcd9"))])
+	   (:commit . "a88d83f420e2fdcfff4408cf967df2b2f9176ba1"))])
  (repology .
 	   [(1 2 3)
 	    ((emacs

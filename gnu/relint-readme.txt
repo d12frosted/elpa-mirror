@@ -31,6 +31,8 @@ skip-syntax-forward and skip-syntax-backward.
 
       M-x relint-current-buffer
 
+  In the *relint* buffer, pressing "g" will re-run the same check.
+
   - From batch mode:
 
       emacs -batch -l relint.el -f relint-batch FILES-AND-DIRS...
@@ -39,13 +41,17 @@ skip-syntax-forward and skip-syntax-backward.
     (Options for finding relint and xr need to be added after
     -batch, either -f package-initialize or -L DIR.)
 
-    In the *relint* buffer, pressing "g" will re-run the same check.
-
   - From Emacs Lisp code, use one of the above functions or
 
       (relint-buffer BUFFER)
 
     which returns a list of diagnostics.
+
+  - From other packages:
+
+    The flycheck-relint and flymake-relint packages run relint
+    automatically via flycheck and flymake, respectively.
+    They are available from the MELPA package archive.
 
 
 * Installation
@@ -142,7 +148,7 @@ skip-syntax-forward and skip-syntax-backward.
     A range has + as one of its endpoints, which could mean that the
     hyphen was actually intended to be literal in order to match both
     + and -.
-    This check is only enable when relint-xr-checks = all.
+    This check is only enabled when relint-xr-checks = all.
 
   - Possibly erroneous '\X' in character alternative
 
@@ -153,7 +159,7 @@ skip-syntax-forward and skip-syntax-backward.
 
     For example, "[\\n\\t]" matches the characters 'n', 't' and
     backslash, but could be an attempt to match newline and tab.
-    This check is only enable when relint-xr-checks = all.
+    This check is only enabled when relint-xr-checks = all.
 
   - Duplicated character class '[:class:]'
 
@@ -167,7 +173,7 @@ skip-syntax-forward and skip-syntax-backward.
     For example, a\|b is better written [ab], and \s-\|\sw is usually
     better written [[:space:][:word:]]. (There is a subtle difference
     in how syntax properties are handled but it rarely matters.)
-    This check is only enable when relint-xr-checks = all.
+    This check is only enabled when relint-xr-checks = all.
 
   - Duplicated alternative branch
 
@@ -283,13 +289,11 @@ skip-syntax-forward and skip-syntax-backward.
 
     Another example: \(?:a*b+\)+ is better written a*b[ab]* .
 
-    This check is only enable when relint-xr-checks = all.
-
   - Possibly mistyped ':?' at start of group
 
     A group starts as \(:? which makes it likely that it was really
     meant to be \(?: -- ie, a non-capturing group.
-    This check is only enable when relint-xr-checks = all.
+    This check is only enabled when relint-xr-checks = all.
 
   - Unnecessarily escaped 'X'
 
@@ -443,3 +447,6 @@ skip-syntax-forward and skip-syntax-backward.
   If you believe that an error could have been discovered but wasn't,
   or that an unwarranted complaint could be avoided, please report it
   as a bug.
+
+  If you find a complaint hard to understand, don't be afraid to ask.
+  Maybe it could be explained in a better way.
