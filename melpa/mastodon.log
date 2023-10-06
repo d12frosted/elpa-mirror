@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
-Checking out b8c5e9d50dcb68222070303726c0e6027a9c0d26
+Checking out 041cd4d47202a2326bc8a79bac96e951073b0399
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonuYXaJz/mastodon-20231005.943
+  to /tmp/mastodontPdyVc/mastodon-20231006.1411
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -25,27 +25,29 @@ Copying files (->) and directories (=>)
     dir -> dir
     mastodon.info -> mastodon.info
     mastodon.texi -> mastodon.texi
-Created mastodon-20231005.943.tar containing:
-  mastodon-20231005.943/
-  mastodon-20231005.943/dir
-  mastodon-20231005.943/mastodon-async.el
-  mastodon-20231005.943/mastodon-auth.el
-  mastodon-20231005.943/mastodon-client.el
-  mastodon-20231005.943/mastodon-discover.el
-  mastodon-20231005.943/mastodon-http.el
-  mastodon-20231005.943/mastodon-inspect.el
-  mastodon-20231005.943/mastodon-iso.el
-  mastodon-20231005.943/mastodon-media.el
-  mastodon-20231005.943/mastodon-notifications.el
-  mastodon-20231005.943/mastodon-pkg.el
-  mastodon-20231005.943/mastodon-profile.el
-  mastodon-20231005.943/mastodon-search.el
-  mastodon-20231005.943/mastodon-tl.el
-  mastodon-20231005.943/mastodon-toot.el
-  mastodon-20231005.943/mastodon-views.el
-  mastodon-20231005.943/mastodon.el
-  mastodon-20231005.943/mastodon.info
+Created mastodon-20231006.1411.tar containing:
+  mastodon-20231006.1411/
+  mastodon-20231006.1411/dir
+  mastodon-20231006.1411/mastodon-async.el
+  mastodon-20231006.1411/mastodon-auth.el
+  mastodon-20231006.1411/mastodon-client.el
+  mastodon-20231006.1411/mastodon-discover.el
+  mastodon-20231006.1411/mastodon-http.el
+  mastodon-20231006.1411/mastodon-inspect.el
+  mastodon-20231006.1411/mastodon-iso.el
+  mastodon-20231006.1411/mastodon-media.el
+  mastodon-20231006.1411/mastodon-notifications.el
+  mastodon-20231006.1411/mastodon-pkg.el
+  mastodon-20231006.1411/mastodon-profile.el
+  mastodon-20231006.1411/mastodon-search.el
+  mastodon-20231006.1411/mastodon-tl.el
+  mastodon-20231006.1411/mastodon-toot.el
+  mastodon-20231006.1411/mastodon-views.el
+  mastodon-20231006.1411/mastodon.el
+  mastodon-20231006.1411/mastodon.info
  ✓ Success:
-  2023-10-06T10:03:16+0000  mastodon-20231005.943.entry
-  2023-10-06T10:03:16+0000  mastodon-20231005.943.tar
-Built mastodon in 7.216s, finished at 2023-10-06T10:03:19+0000
+  2023-10-06T12:22:53+0000  mastodon-20231005.943.entry
+  2023-10-06T12:22:53+0000  mastodon-20231005.943.tar
+  2023-10-06T14:44:20+0000  mastodon-20231006.1411.entry
+  2023-10-06T14:44:20+0000  mastodon-20231006.1411.tar
+Built mastodon in 8.620s, finished at 2023-10-06T14:44:22+0000

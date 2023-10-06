@@ -7,6 +7,7 @@ Minimum setup:
 
  (setq load-path
        (cons "~/src/mhc/emacs" load-path))
- (autoload 'mhc "mhc")
+ (autoload 'mhc "mhc" nil t)
+ (autoload 'mhc-import "mhc" nil t)
 
 and M-x mhc
