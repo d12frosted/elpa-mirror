@@ -480,15 +480,15 @@
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "81f2883614c303184116449ec3583ef5c136ec2f"))])
  (engine-mode .
-	      [(2 2 3)
+	      [(2 2 4)
 	       ((cl-lib
 		 (0 5)))
-	       "Define and query search engines from within Emacs" tar
+	       "Define and query search engines" tar
 	       ((:url . "https://github.com/hrs/engine-mode")
 		(:maintainer "Harry R. Schwartz" . "hello@harryrschwartz.com")
 		(:authors
 		 ("Harry R. Schwartz" . "hello@harryrschwartz.com"))
-		(:commit . "fae1bd4fdf7d102744505bf2a8f4dc88d5b8f2fd"))])
+		(:commit . "67b68c1a2bff48bad2cc4722598da0f36e3866a9"))])
  (evil .
        [(1 15 0)
 	nil "extensible vi layer" tar
