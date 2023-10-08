@@ -1,0 +1,33 @@
+Package: ede-php-autoload
+Fetcher: github
+Source:  https://github.com/emacs-php/ede-php-autoload.git
+
+Updating /mnt/store/melpa/working/ede-php-autoload/
+Checking out a7c16292ecaf9b39321e7a99ccac259fcbf6c373
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ede-php-autoload/
+  to /tmp/ede-php-autoloadLhnnm7/ede-php-autoload-20230916.441
+    ede-php-autoload-composer.el -> ede-php-autoload-composer.el
+    ede-php-autoload-mode.el -> ede-php-autoload-mode.el
+    ede-php-autoload-semanticdb.el -> ede-php-autoload-semanticdb.el
+    ede-php-autoload.el -> ede-php-autoload.el
+    ede-php-autoload => ede-php-autoload
+Created ede-php-autoload-20230916.441.tar containing:
+  ede-php-autoload-20230916.441/
+  ede-php-autoload-20230916.441/ede-php-autoload-composer.el
+  ede-php-autoload-20230916.441/ede-php-autoload-mode.el
+  ede-php-autoload-20230916.441/ede-php-autoload-pkg.el
+  ede-php-autoload-20230916.441/ede-php-autoload-semanticdb.el
+  ede-php-autoload-20230916.441/ede-php-autoload.el
+  ede-php-autoload-20230916.441/ede-php-autoload/
+  ede-php-autoload-20230916.441/ede-php-autoload/class-loader.el
+  ede-php-autoload-20230916.441/ede-php-autoload/class-loader/
+  ede-php-autoload-20230916.441/ede-php-autoload/class-loader/aggregate.el
+  ede-php-autoload-20230916.441/ede-php-autoload/class-loader/classmap.el
+  ede-php-autoload-20230916.441/ede-php-autoload/class-loader/core.el
+  ede-php-autoload-20230916.441/ede-php-autoload/class-loader/psr0.el
+  ede-php-autoload-20230916.441/ede-php-autoload/class-loader/psr4.el
+ ✓ Success:
+  2023-10-07T22:21:36+0000  ede-php-autoload-20230916.441.entry
+  2023-10-07T22:21:36+0000  ede-php-autoload-20230916.441.tar
+Built ede-php-autoload in 5.210s, finished at 2023-10-07T22:21:38+0000

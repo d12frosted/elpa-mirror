@@ -3,3 +3,64 @@ Fetcher: github
 Source:  https://github.com/ecukes/ecukes.git
 
 Updating /mnt/store/melpa/working/ecukes/
+Checking out 6bc1feb33d44bda7a7ccf06f8748050ffa1dc23c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ecukes/
+  to /tmp/ecukesNclPoz/ecukes-20230220.456
+    ecukes-byte-compile.el -> ecukes-byte-compile.el
+    ecukes-cli.el -> ecukes-cli.el
+    ecukes-core.el -> ecukes-core.el
+    ecukes-def.el -> ecukes-def.el
+    ecukes-helpers.el -> ecukes-helpers.el
+    ecukes-hooks.el -> ecukes-hooks.el
+    ecukes-load.el -> ecukes-load.el
+    ecukes-new.el -> ecukes-new.el
+    ecukes-parse.el -> ecukes-parse.el
+    ecukes-pkg.el -> ecukes-pkg.el
+    ecukes-project.el -> ecukes-project.el
+    ecukes-reporter.el -> ecukes-reporter.el
+    ecukes-run.el -> ecukes-run.el
+    ecukes-stats.el -> ecukes-stats.el
+    ecukes-steps.el -> ecukes-steps.el
+    ecukes-template.el -> ecukes-template.el
+    ecukes.el -> ecukes.el
+    templates => templates
+    bin => bin
+    reporters => reporters
+Created ecukes-20230220.456.tar containing:
+  ecukes-20230220.456/
+  ecukes-20230220.456/bin/
+  ecukes-20230220.456/bin/ecukes
+  ecukes-20230220.456/bin/ecukes.bat
+  ecukes-20230220.456/ecukes-byte-compile.el
+  ecukes-20230220.456/ecukes-cli.el
+  ecukes-20230220.456/ecukes-core.el
+  ecukes-20230220.456/ecukes-def.el
+  ecukes-20230220.456/ecukes-helpers.el
+  ecukes-20230220.456/ecukes-hooks.el
+  ecukes-20230220.456/ecukes-load.el
+  ecukes-20230220.456/ecukes-new.el
+  ecukes-20230220.456/ecukes-parse.el
+  ecukes-20230220.456/ecukes-pkg.el
+  ecukes-20230220.456/ecukes-project.el
+  ecukes-20230220.456/ecukes-reporter.el
+  ecukes-20230220.456/ecukes-run.el
+  ecukes-20230220.456/ecukes-stats.el
+  ecukes-20230220.456/ecukes-steps.el
+  ecukes-20230220.456/ecukes-template.el
+  ecukes-20230220.456/ecukes.el
+  ecukes-20230220.456/reporters/
+  ecukes-20230220.456/reporters/ecukes-reporter-dot.el
+  ecukes-20230220.456/reporters/ecukes-reporter-landing.el
+  ecukes-20230220.456/reporters/ecukes-reporter-magnars.el
+  ecukes-20230220.456/reporters/ecukes-reporter-progress.el
+  ecukes-20230220.456/reporters/ecukes-reporter-spec.el
+  ecukes-20230220.456/templates/
+  ecukes-20230220.456/templates/env.tpl
+  ecukes-20230220.456/templates/feature.tpl
+  ecukes-20230220.456/templates/missing-step.tpl
+  ecukes-20230220.456/templates/step-definition.tpl
+ ✓ Success:
+  2023-10-07T22:21:33+0000  ecukes-20230220.456.entry
+  2023-10-07T22:21:33+0000  ecukes-20230220.456.tar
+Built ecukes in 5.276s, finished at 2023-10-07T22:21:35+0000

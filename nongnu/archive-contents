@@ -1356,7 +1356,7 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
  (mastodon .
-	   [(1 0 5)
+	   [(1 0 6)
 	    ((emacs
 	      (27 1))
 	     (request
@@ -1369,7 +1369,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "martianhiatus@riseup.net"))
-	     (:commit . "083222c20cd23755ca93fc2a9e320f653cffe9ef"))])
+	     (:commit . "708aaa06b6f5dbe7db96154388309098a8f69fba"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
@@ -2051,7 +2051,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:commit . "ccf071fb0bd815565c674ee8d2f213e3f209833d"))])
  (sweeprolog .
-	     [(0 25 2)
+	     [(0 25 3)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2062,7 +2062,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "dba83e95e67a0bca703ef535663b4a4de03538b7"))])
+	       (:commit . "6431074ee1a130d7bc63a6f2cce97ab704d41d58"))])
  (swift-mode .
 	     [(9 1 0)
 	      ((emacs

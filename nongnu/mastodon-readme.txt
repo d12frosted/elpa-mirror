@@ -14,7 +14,7 @@
 ────────────────
 
   You can install `mastodon.el' from ELPA, MELPA, or directly from this
-  repo.
+  repo. It is also available as a GUIX package.
 
 
 1.1.1 ELPA
