@@ -3576,7 +3576,7 @@
   (ob-nix :url "https://codeberg.org/theesm/ob-nix.git")
   (ob-p5js :url "https://github.com/alejandrogallo/ob-p5js.git")
   (ob-php :url "https://repo.or.cz/ob-php.git")
-  (ob-powershell :url "https://github.com/MoisMoshev/ob-powershell.git")
+  (ob-powershell :url "https://github.com/rkiggen/ob-powershell.git")
   (ob-prolog :url "https://github.com/ljos/ob-prolog.git")
   (ob-raku :url "https://github.com/masukomi/ob-raku.git")
   (ob-redis :url "https://repo.or.cz/ob-redis.git")
