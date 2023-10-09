@@ -1,23 +1,6 @@
-	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	     BUFFER-ENV — BUFFER-LOCAL PROCESS ENVIRONMENTS
-	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Basic setup
-.. 1. On the project side
-.. 2. On the Emacs side
-2. How this package works
-3. Integration with other environment management mechanisms
-.. 1. Python virtualenvs
-.. 2. .env files
-.. 3. Direnv
-4. Compatibility issues
-.. 1. Non-Unix-like systems
-5. Related packages
-6. Contributing
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+             BUFFER-ENV — BUFFER-LOCAL PROCESS ENVIRONMENTS
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 With this package, you can teach Emacs to call the correct version of
@@ -43,8 +26,8 @@ with no undue interference and switch seamlessly between them.
   features in the `.envrc' scripts — at least not directly.
 
   Alternatively, it is possible to configure buffer-env to directly
-  support other environment setup methods, such as Python virtualenvs or
-  `.env' files.  See below for details.
+  support other environment setup methods, such as Python virtualenvs,
+  `.env' files or certain build tools.  See below for details.
 
 
 [direnv] <https://direnv.net/>
@@ -57,13 +40,14 @@ with no undue interference and switch seamlessly between them.
   following in your init file:
 
   ┌────
-  │ (add-hook 'hack-local-variables-hook 'buffer-env-update)
+  │ (add-hook 'hack-local-variables-hook #'buffer-env-update)
+  │ (add-hook 'comint-mode-hook #'buffer-env-update)
   └────
 
   In this way, any buffer potentially affected by [directory-local
-  variables] will also be affected by buffer-env.  It is also possible
-  to add `buffer-env-update' only to specific major-mode hooks, or call
-  it interactively.
+  variables], as well as Comint buffers, will also be affected by
+  buffer-env.  It is also possible to add `buffer-env-update' only to
+  specific major-mode hooks, or call it interactively.
 
 
 [directory-local variables]
@@ -94,19 +78,41 @@ with no undue interference and switch seamlessly between them.
     lists of `VARIABLE=value' pairs.  They are still executed as shell
     scripts (which dictates when and how quotes are to be used, for
     instance), but no `export' statements are needed.
-  • `guix.scm': The development environment of the Guix package is
-    loaded and exported to Emacs.  Make sure you have entered `guix
-    shell' at least once before to install the dependencies, otherwise
-    you may block Emacs for a long time.
+  • `guix.scm' and `manifest.scm': The development environment of the
+    Guix package is loaded and exported to Emacs.  Make sure you have
+    entered `guix shell' at least once before to install the
+    dependencies, otherwise you may block Emacs for a long time.
+  • `flake.nix' and `shell.nix': These files are used by the Nix package
+    manager and are handled similarly to Guix.
+  • `*.ps1': Similar to a regular shell script, but interpreted by
+    PowerShell.
 
   For instructions on how to extend this list, see the documentation of
-  the variable `buffer-env-commands'.
+  the variable `buffer-env-command-alist'.
 
 
 3 Integration with other environment management mechanisms
 ══════════════════════════════════════════════════════════
 
-3.1 Python virtualenvs
+3.1 pyproject.toml
+──────────────────
+
+  If you are using a fully featured Python project manager such as
+  [Poetry], [Hatch] or [PDM], buffer-env can be configured to infer the
+  project environment directly from the `pyproject.toml' file.  See
+  [this note] for instructions.
+
+
+[Poetry] <https://python-poetry.org/>
+
+[Hatch] <https://hatch.pypa.io/>
+
+[PDM] <https://pdm.fming.dev>
+
+[this note] <https://github.com/astoff/buffer-env/issues/13>
+
+
+3.2 Python virtualenvs
 ──────────────────────
 
   In most cases, the easiest way to interface with Python virtualenvs is
@@ -116,7 +122,7 @@ with no undue interference and switch seamlessly between them.
   │ source path-to-virtualenv/bin/activate
   └────
 
-  You can also call `buffer-env-activate' interactively and select the
+  You can also call `buffer-env-update' interactively and select the
   `activate' script directly.
 
   However, if you want to avoid writing `.envrc' scripts and you create
@@ -125,14 +131,16 @@ with no undue interference and switch seamlessly between them.
 
   ┌────
   │ (setq buffer-env-script-name ".venv/bin/activate")
+  │ ;; alternatively, try to find a .envrc file first
+  │ (setq buffer-env-script-name '(".envrc" ".venv/bin/activate"))
   └────
 
-  or a variation thereof.  Note that it is also possible to provide an
-  absolute path for `buffer-env-script-name', and it is possible to
-  specify it as a buffer- or directory-local variable.
+  Note that it is also possible to provide an absolute path for
+  `buffer-env-script-name', and it is possible to specify it as a
+  buffer- or directory-local variable.
 
 
-3.2 .env files
+3.3 .env files
 ──────────────
 
   To load the environment defined by a `.env' file, you can select it
@@ -141,7 +149,7 @@ with no undue interference and switch seamlessly between them.
   buffer-locally.
 
 
-3.3 Direnv
+3.4 Direnv
 ──────────
 
   Buffer-env is /mostly/ compatible with direnv; specifically, it
@@ -151,7 +159,7 @@ with no undue interference and switch seamlessly between them.
 
   ┌────
   │ (with-eval-after-load 'buffer-env
-  │   (add-to-list 'buffer-env-commands '(".envrc" . "direnv exec . env -0")))
+  │   (add-to-list 'buffer-env-command-alist '("/\\.envrc\\'" . "direnv exec . env -0")))
   └────
 
   If you need tighter integration with direnv, you may want to check out
@@ -170,8 +178,7 @@ with no undue interference and switch seamlessly between them.
   after switching to a different buffer or remote directory.  Examples
   include:
 
-  • `shell', `project-shell' (`C-x p s') and other REPLs;
-  • `compile' and `project-compile' (`C-x p c') in Emacs 27 and older;
+  • `compile' and `project-compile' (`C-x p c') in Emacs 27 and older,
   • `async-shell-command' (`M-&').
 
   Fortunately, the problem has an easy fix provided by the [inheritenv]
@@ -182,6 +189,7 @@ with no undue interference and switch seamlessly between them.
   `:around' advice to any affected commands.
 
   ┌────
+  │ (eval-when-compile (require 'cl-lib))
   │ (defun buffer-env-inherit (fn &rest args)
   │   "Call FN with ARGS using the buffer-local process environment.
   │ Intended as an advice around commands that start a process after
@@ -193,13 +201,6 @@ with no undue interference and switch seamlessly between them.
 
 
 [inheritenv] <https://github.com/purcell/inheritenv>
-
-4.1 Non-Unix-like systems
-─────────────────────────
-
-  Currently, this package assumes your system shell is POSIX.  For other
-  types of operating system, I would need to know what the appropriate
-  value of `buffer-env-commands' is.  Drop me a line if you can help.
 
 
 5 Related packages

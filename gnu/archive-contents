@@ -357,18 +357,18 @@
 	  (:url . "https://elpa.gnu.org/packages/brief.html")
 	  (:commit . "94471036e4fd356d6c8a7dd72622123e18c95e75"))])
  (buffer-env .
-	     [(0 4)
+	     [(0 5)
 	      ((emacs
 		(27 1))
 	       (compat
-		(28 1)))
+		(29 1)))
 	      "Buffer-local process environments" tar
 	      ((:url . "https://github.com/astoff/buffer-env")
 	       (:keywords "processes" "tools")
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
-	       (:commit . "7c176d043445ea94fe924a715158c25b91ec4776"))])
+	       (:commit . "9a0878dbfed33adf171bc389116d81f326161a64"))])
  (buffer-expose .
 		[(0 4 3)
 		 ((emacs
@@ -530,14 +530,14 @@
 		       (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
 		       (:url . "https://github.com/cpitclaudel/compact-docstrings"))])
  (company .
-	  [(0 10 1)
+	  [(0 10 2)
 	   ((emacs
 	     (25 1)))
 	   "Modular text completion framework" tar
 	   ((:url . "http://company-mode.github.io/")
 	    (:keywords "abbrev" "convenience" "matching")
 	    (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-	    (:commit . "d832d886d0dce655b44de8c5e1eec749b2bea3a3"))])
+	    (:commit . "34e92d9b7084b03d087866abcd1e6a22a244c9bb"))])
  (company-ebdb .
 	       [(1 1)
 		((company
@@ -2531,7 +2531,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "847694e78c12d903d5e3f6cb365a5d3b984db537"))])
  (org .
-      [(9 6 9)
+      [(9 6 10)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2540,7 +2540,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "806abc5a2bbcb5f884467a0145547221ba09eb59"))])
+	(:commit . "e54c7e604be3c5932fc8ea2b45d6906d2d9a49a2"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
