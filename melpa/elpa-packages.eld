@@ -4240,6 +4240,7 @@
   (projectile-variable :url "https://github.com/emacs-php/projectile-variable.git")
   (projection :url "https://github.com/mohkale/projection.git")
   (projection-multi :url "https://github.com/mohkale/projection.git")
+  (projection-multi-embark :url "https://github.com/mohkale/projection.git")
   (projector :url "https://github.com/waymondo/projector.el.git")
   (projekt :url "https://github.com/tekai/projekt.git")
   (projmake-mode :url "https://github.com/ericbmerritt/projmake-mode.git")

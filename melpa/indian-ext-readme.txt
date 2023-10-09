@@ -26,3 +26,9 @@ You can find other input methods here:
 
 including Karoṣṭhī: http://stefanbaums.com/unicode/sanskrit.el
 requires login: http://indica-et-buddhica.org/repositorium/software/emacs-utf8-input-framework
+
+TODO:
+
+2023-10-09:
+https://list.indology.info/pipermail/indology/2023-October/058254.html,
+trīn lokān with various opitons (see [[https://archive.org/details/sanskritgrammari00whit/page/69/mode/1up][Whitney]] §206a: n+l
