@@ -1,19 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Commentary:
-2. Installation:
-3. Requirements
-4. Bug reports
-5. Representing data types
-6. Examples
-.. 1. Normal synchronous operation
-.. 2. Asynchronous example (cb-foo will be called when the methods returns)
-.. 3. Some real world working examples for fun and play
-..... 1. Fetch the first state name from UserLand's server
-..... 2. Get a list of supported methods from a blog
-
-
 [https://elpa.nongnu.org/nongnu/xml-rpc.svg]
 [file:https://stable.melpa.org/packages/xml-rpc-badge.svg]
 [file:https://melpa.org/packages/xml-rpc-badge.svg]
@@ -21,7 +5,7 @@ Table of Contents
 
 
 [https://elpa.nongnu.org/nongnu/xml-rpc.svg]
-<http://github.com/xml-rpc-el/xml-rpc-el>
+<https://elpa.nongnu.org/nongnu/xml-rpc.html>
 
 [file:https://stable.melpa.org/packages/xml-rpc-badge.svg]
 <https://stable.melpa.org/#/xml-rpc>
@@ -55,12 +39,12 @@ Table of Contents
 2 Installation:
 ═══════════════
 
-  If you use [ELPA], and have configured the [MELPA] repository, then
-  `M-x package-install RET xml-rpc RET' interface. This is preferrable
-  as you will have access to updates automatically.
+  If you use [ELPA], and have configured the [NonGNU ELPA] or [MELPA]
+  repository, then `M-x package-install RET xml-rpc RET' interface. This
+  is preferable as you will have access to updates automatically.
 
-  If you would like to use ELPA, but this is your first time to use it
-  or MELPA, then try evaluating the following code in emacs:
+  If you would like to use ELPA, but this is your first time to use it,
+  or NonGNU ELPA/MELPA, then try evaluating the following code in emacs:
   ┌────
   │ (progn
   │   (require 'package)
@@ -80,6 +64,8 @@ Table of Contents
 
 
 [ELPA] <http://elpa.gnu.org/>
+
+[NonGNU ELPA] <https://elpa.nongnu.org/>
 
 [MELPA] <https://melpa.org/>
 

@@ -427,7 +427,7 @@
 		 ("Arne Jørgensen" . "arne@arnested.dk"))
 		(:commit . "ed90b0c4d808365e9ae9f16cc8a96eff17815621"))])
  (eat .
-      [(0 9 1)
+      [(0 9 2)
        ((emacs
 	 (26 1))
 	(compat
@@ -438,7 +438,7 @@
 	(:maintainer "Akib Azmain Turja" . "akib@disroot.org")
 	(:authors
 	 ("Akib Azmain Turja" . "akib@disroot.org"))
-	(:commit . "db63d46739b7ae91717783dd24cfb01e30dc6510"))])
+	(:commit . "c071e9e5e37f2e1dbef5b6907fae903547826480"))])
  (edit-indirect .
 		[(0 1 10)
 		 ((emacs
@@ -620,6 +620,33 @@
 		 (:authors
 		  ("Michael Markert" . "markert.michael@googlemail.com"))
 		 (:commit . "61dde4e3715fd1255df8f87a37d9c8022e909bf4"))])
+ (evil-surround .
+		[(1 0 4)
+		 ((evil
+		   (1 2 12)))
+		 "emulate surround.vim from Vim" tar
+		 ((:keywords "emulation" "vi" "evil")
+		  (:maintainer
+		   ("Tim Harper" . "timcharperatgmaildotcom")
+		   ("Vegard ye" . "vegard_oyeathotmaildotcom"))
+		  (:authors
+		   ("Tim Harper" . "timcharperatgmaildotcom")
+		   ("Vegard ye" . "vegard_oyeathotmaildotcom"))
+		  (:url . "https://elpa.nongnu.org/nongnu/evil-surround.html")
+		  (:commit . "a14856cd811d2ad2cab343d1a2591e68c1e7ba6d"))])
+ (evil-visual-mark-mode .
+			[(0 0 5)
+			 ((evil
+			   (1 0 9))
+			  (dash
+			   (2 10)))
+			 "Display evil marks on buffer" tar
+			 ((:keywords "evil")
+			  (:maintainer "Roman Gonzalez" . "romanandreg@gmail.com")
+			  (:authors
+			   ("Roman Gonzalez" . "romanandreg@gmail.com"))
+			  (:url . "https://elpa.nongnu.org/nongnu/evil-visual-mark-mode.html")
+			  (:commit . "2bbaaae56ae53e68a8bcc7bc2cfe830a14843b4d"))])
  (evil-visualstar .
 		  [(0 2 0)
 		   ((evil
@@ -2373,14 +2400,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 13 20231005090319)
+	       [(24 13 20231009115302)
 		((emacs
 		  (29)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "ecb110d50c5b0893132074cadba687761251cb1e"))])
+		 (:commit . "7118846cda6026acd12a3fc6ab52a70091e6ec1a"))])
  (xkcd .
        [(1 1)
 	((json
@@ -2393,12 +2420,14 @@
 	  ("Vibhav Pant" . "vibhavp@gmail.com"))
 	 (:commit . "ca3eed560361fad276a1e1c6fd0104ce902f358a"))])
  (xml-rpc .
-	  [(1 6 16)
-	   nil "An elisp implementation of clientside XML-RPC" tar
+	  [(1 6 17)
+	   ((emacs
+	     (24 1)))
+	   "An elisp implementation of clientside XML-RPC" tar
 	   ((:url . "http://github.com/xml-rpc-el/xml-rpc-el")
-	    (:keywords "xml" "rpc" "network")
+	    (:keywords "xml" "rpc" "network" "comm")
 	    (:maintainer "Mark A. Hershberger" . "mah@everybody.org")
-	    (:commit . "fc0c82eb5c8a5d5d837a21bca50f7c8169165f03"))])
+	    (:commit . "47cd3409d6c376adc6b9e46c30b1033289ddfb49"))])
  (yaml-mode .
 	    [(0 0 16)
 	     ((emacs
