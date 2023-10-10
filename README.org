@@ -14,17 +14,6 @@ Just setup =package-archives= in your =init.el= file.
           ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")))
 #+END_SRC
 
-** Usage - GitLab
-
-Just setup =package-archives= in your =init.el= file.
-
-#+BEGIN_SRC emacs-lisp
-  (setq package-archives
-        '(("melpa" . "https://gitlab.com/d12frosted/elpa-mirror/raw/master/melpa/")
-          ("org"   . "https://gitlab.com/d12frosted/elpa-mirror/raw/master/org/")
-          ("gnu"   . "https://gitlab.com/d12frosted/elpa-mirror/raw/master/gnu/")))
-#+END_SRC
-
 ** Usage - Local
 
 First, you need to clone this repository.
