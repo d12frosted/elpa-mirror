@@ -15,24 +15,25 @@ See the [CHANGELOG](item/CHANGELOG.md "change log") for more information.
 This package is available on [ELPA](https://elpa.gnu.org/packages/jarchive.html "jarchive on elpa").
 There is also an example of a [guix recipe](https://git.sr.ht/~abcdw/rde/tree/90af100a4d70d7016261d39b91b6748768ac374b/rde/packages/emacs-xyz.scm#L330 "jarchive guix recipe").
 
-After installing this package, in your config call `jarchive-setup`:
+After installing this package, in your config call `jarchive-mode`:
 
 ```emacs-lisp
-(jarchive-setup)
+(jarchive-mode)
 ```
 
-or it can be called interactively, via `M-x jarchive-setup`.
+or it can be called interactively, via `M-x jarchive-mode`.
     
-## Doom Emacs users: Note about when to call `jarchive-setup`
+## Doom Emacs users: Note about when to call `jarchive-mode`
 
 Some Emacs distributions like [Doom](https://github.com/doomemacs/doomemacs "doom emacs on github") (and many personal configurations), set the `file-name-handler-alist` var to nil on startup, then restore it's value when startup is complete.
 
-If this is the case for you, `jarchive-setup` should be called AFTER everything is initialized, using `(with-eval-after-load "init" (jarchive-setup))`, where `"init"` refers to your `"init.el"` file.
-This package modifies `file-name-handler-alist`, so it relies on it _not_ being reset after `jarchive-setup` is invoked.
+If this is the case for you, `jarchive-mode` should be called AFTER everything is initialized, using `(with-eval-after-load "init" (jarchive-mode))`, where `"init"` refers to your `"init.el"` file.
+This package modifies `file-name-handler-alist`, so it relies on it _not_ being reset after `jarchive-mode` is invoked.
 
 ## Working with Eglot
 
-Jarchive will open jar dependencies provided to Eglot by lsp servers.
+Jarchive will open jar dependencies provided to Eglot by lsp servers. This should work out of the box with Emacs 29 and recent Eglot versions.
+
 
 If you are using an older version of Eglot, like the melpa version released on [2022-10-20](https://melpa.org/packages/eglot-20221020.1010.el "Eglot Melpa Release 2022-10-20"), then you need to call `jarchive-patch-eglot` after Eglot is loaded, like so
 
@@ -42,7 +43,7 @@ If you are using an older version of Eglot, like the melpa version released on [
 
 This is _not_ required on newer versions of eglot. Installs that are up to date with eglot on [ELPA devel](https://elpa.gnu.org/devel/eglot.html "Eglot ELPA Devel Release") or eglot bundled with emacs 29 will work without patching.
 This patch function is included so those on older releases of eglot can also take advantage of this package.
-Eventually it will be removed (with some advanced notice).
+It is currently marked obsolete and will be removed in the next version of Jarchive.
 
 # Usage
 
