@@ -3,8 +3,16 @@ Fetcher: git
 Source:  https://git.launchpad.net/global-tags.el
 
 Updating /mnt/store/melpa/working/global-tags/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out aaa37da4c538f35a90149ef4ad3d8b0922af54ab
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/global-tags/
+  to /tmp/global-tagsh895P6/global-tags-20211120.347
+    global-tags.el -> global-tags.el
+Created global-tags-20211120.347.tar containing:
+  global-tags-20211120.347/
+  global-tags-20211120.347/global-tags-pkg.el
+  global-tags-20211120.347/global-tags.el
+ ✓ Success:
+  2023-10-11T14:08:04+0000  global-tags-20211120.347.entry
+  2023-10-11T14:08:03+0000  global-tags-20211120.347.tar
+Built global-tags in 6.158s, finished at 2023-10-11T14:08:05+0000

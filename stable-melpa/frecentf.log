@@ -3,8 +3,16 @@ Fetcher: git
 Source:  https://git.launchpad.net/frecentf.el
 
 Updating /mnt/store/melpa/working/frecentf/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-remote: Connection was closed cleanly.
-fatal: unable to access 'https://git.launchpad.net/frecentf.el/': The requested URL returned error: 500
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 19e2c48a8b8c8ee8cae5c93b58b57a0aa81a8c46
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/frecentf/
+  to /tmp/frecentfOdjyAr/frecentf-20210330.1521
+    frecentf.el -> frecentf.el
+Created frecentf-20210330.1521.tar containing:
+  frecentf-20210330.1521/
+  frecentf-20210330.1521/frecentf-pkg.el
+  frecentf-20210330.1521/frecentf.el
+ ✓ Success:
+  2023-10-11T14:05:59+0000  frecentf-20210330.1521.entry
+  2023-10-11T14:05:59+0000  frecentf-20210330.1521.tar
+Built frecentf in 6.387s, finished at 2023-10-11T14:06:02+0000
