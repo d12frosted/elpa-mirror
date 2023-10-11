@@ -17,12 +17,12 @@ When installed through the package-install:
   (setq wg-morph-on nil)
   ;; switch off the animation of restoring window configuration
   (setq persp-autokill-buffer-on-remove 'kill-weak)
-  (add-hook 'after-init-hook #'(lambda () (persp-mode 1))))
+  (add-hook 'after-init-hook (lambda () (persp-mode 1))))
 
 When installed without generating an autoloads file:
 (with-eval-after-load "persp-mode"
   ;; .. all settings you want here
-  (add-hook 'after-init-hook #'(lambda () (persp-mode 1))))
+  (add-hook 'after-init-hook (lambda () (persp-mode 1))))
 (require 'persp-mode)
 
 Dependencies:
