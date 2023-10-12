@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/async-backup.git
 
 Updating /mnt/store/melpa/working/async-backup/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/contrapunctus/async-backup.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 6ddb39fe77d66cdef48b87cb0d0554ad7d132308
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/async-backup/
+  to /tmp/async-backupXuN5g5/async-backup-20220131.1438
+    async-backup.el -> async-backup.el
+Created async-backup-20220131.1438.tar containing:
+  async-backup-20220131.1438/
+  async-backup-20220131.1438/async-backup-pkg.el
+  async-backup-20220131.1438/async-backup.el
+ ✓ Success:
+  2023-10-12T10:41:37+0000  async-backup-20220131.1438.entry
+  2023-10-12T10:41:37+0000  async-backup-20220131.1438.tar
+Built async-backup in 4.748s, finished at 2023-10-12T10:41:39+0000

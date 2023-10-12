@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/chronometrist-goal.git
 
 Updating /mnt/store/melpa/working/chronometrist-goal/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/contrapunctus/chronometrist-goal.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 6cb939d160f5d5966d7853aa23f3ed7c7ef9df44
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chronometrist-goal/
+  to /tmp/chronometrist-goalKmlB7A/chronometrist-goal-20210510.1831
+    chronometrist-goal.el -> chronometrist-goal.el
+Created chronometrist-goal-20210510.1831.tar containing:
+  chronometrist-goal-20210510.1831/
+  chronometrist-goal-20210510.1831/chronometrist-goal-pkg.el
+  chronometrist-goal-20210510.1831/chronometrist-goal.el
+ ✓ Success:
+  2023-10-12T10:47:02+0000  chronometrist-goal-20210510.1831.entry
+  2023-10-12T10:47:02+0000  chronometrist-goal-20210510.1831.tar
+Built chronometrist-goal in 4.437s, finished at 2023-10-12T10:47:04+0000

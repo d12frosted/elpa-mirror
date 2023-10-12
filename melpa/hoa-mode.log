@@ -4,6 +4,6 @@ Source:  https://gitlab.lrde.epita.fr/spot/emacs-modes.git
 
 Updating /mnt/store/melpa/working/hoa-mode/
 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.lrde.epita.fr/spot/emacs-modes.git/': Could not resolve host: gitlab.lrde.epita.fr
+fatal: unable to access 'https://gitlab.lrde.epita.fr/spot/emacs-modes.git/': Failed to connect to gitlab.lrde.epita.fr port 443: Connection timed out
 
 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
