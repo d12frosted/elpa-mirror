@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-diff-ansi.git
 
 Updating /mnt/store/melpa/working/diff-ansi/
-Checking out c14d1f6c58ddf579cba86b95d160f71589c8cd04
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/diff-ansi/
-  to /tmp/diff-ansiV737rQ/diff-ansi-20230808.1343
-    diff-ansi.el -> diff-ansi.el
-Created diff-ansi-20230808.1343.tar containing:
-  diff-ansi-20230808.1343/
-  diff-ansi-20230808.1343/diff-ansi-pkg.el
-  diff-ansi-20230808.1343/diff-ansi.el
- ✓ Success:
-  2023-10-12T03:47:39+0000  diff-ansi-20230808.1343.entry
-  2023-10-12T03:47:39+0000  diff-ansi-20230808.1343.tar
-Built diff-ansi in 7.320s, finished at 2023-10-12T03:47:42+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-diff-ansi.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
