@@ -3,10 +3,20 @@ Fetcher: github
 Source:  https://github.com/konr/tomatinho.git
 
 Updating /mnt/store/melpa/working/tomatinho/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out b53354b9b9f496c0388d6a573b06b7d6fc53d0bd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tomatinho/
+  to /tmp/tomatinhoSRA7qT/tomatinho-20180621.1748
+    tomatinho.el -> tomatinho.el
+    tick.wav -> tick.wav
+    tack.wav -> tack.wav
+Created tomatinho-20180621.1748.tar containing:
+  tomatinho-20180621.1748/
+  tomatinho-20180621.1748/tack.wav
+  tomatinho-20180621.1748/tick.wav
+  tomatinho-20180621.1748/tomatinho-pkg.el
+  tomatinho-20180621.1748/tomatinho.el
+ ✓ Success:
+  2023-10-13T18:06:41+0000  tomatinho-20180621.1748.entry
+  2023-10-13T18:06:41+0000  tomatinho-20180621.1748.tar
+Built tomatinho in 4.030s, finished at 2023-10-13T18:06:43+0000
