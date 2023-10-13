@@ -249,14 +249,14 @@
 	   ("Steve Purcell" . "steve@sanityinc.com"))
 	  (:commit . "f39e0b52014913f5acc1dc28ad94c68385c0834e"))])
  (clojure-mode .
-	       [(5 17 0)
+	       [(5 17 1)
 		((emacs
 		  (25 1)))
 		"Major mode for Clojure code" tar
 		((:url . "https://github.com/clojure-emacs/clojure-mode")
 		 (:keywords "languages" "clojure" "clojurescript" "lisp")
 		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-		 (:commit . "5fab97d0efc1ed932518fba0cb90afe6dcd00191"))])
+		 (:commit . "661c80e3db9fa5990b39aa5277fb27a047c2546c"))])
  (clojure-ts-mode .
 		  [(0 2 0)
 		   ((emacs
@@ -1385,7 +1385,7 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
  (mastodon .
-	   [(1 0 6)
+	   [(1 0 7)
 	    ((emacs
 	      (27 1))
 	     (request
@@ -1398,7 +1398,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "martianhiatus@riseup.net"))
-	     (:commit . "708aaa06b6f5dbe7db96154388309098a8f69fba"))])
+	     (:commit . "9a400d33a5b9c33d6fddd9d2ec988d7b156f74d3"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
