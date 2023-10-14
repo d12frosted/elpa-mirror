@@ -518,9 +518,9 @@
   • Gotosocial ([gotosocial.org])
 
   It does not support the non-Mastodon API servers Misskey
-  ([misskey.io]) and Firefish ([joinfirefish.org], formerly Calkey), but
-  it should fully support displaying and interacting with posts and
-  users on those platforms.
+  ([misskey.io]), Firefish ([joinfirefish.org], formerly Calkey) and
+  Friendica, but it should fully support displaying and interacting with
+  posts and users on those platforms.
 
   If you attempt to use `mastodon.el' with a server and run into
   problems, feel free to open an issue.

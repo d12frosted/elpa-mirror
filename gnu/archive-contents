@@ -2664,18 +2664,18 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(0 13)
+      [(0 14)
        ((emacs
 	 (27 1))
 	(compat
-	 (29 1 4 0)))
+	 (29 1 4 2)))
        "OpenStreetMap viewer" tar
        ((:url . "https://github.com/minad/osm")
 	(:keywords "network" "multimedia" "hypermedia" "mouse")
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "b2481ef66d4443402bfbac66cbbfe51a52152407"))])
+	(:commit . "1957cf75127471bce0ebe91b5afdf566d5bec033"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs

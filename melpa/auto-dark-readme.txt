@@ -8,3 +8,6 @@ To enable it, install the package and add it to your load path:
 To customize the themes used by light/dark mode:
 
     M-x customize-group auto-dark
+
+If you're using DoomEmacs or Spacemacs, follow the installation tips
+on https://github.com/LionyxML/auto-dark-emacs.

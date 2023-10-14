@@ -1,5 +1,5 @@
-Create an AI personal assistant for your `org-mode', `markdown' notes,
-PDFs and images. The assistant exposes 2 modes, search and chat:
+Create an AI copilot to your `org-mode', `markdown' notes,
+PDFs and images. The copilot exposes 2 modes, search and chat:
 
 Chat provides faster answers, iterative discovery and assisted
 creativity. It requires your OpenAI API key to access GPT models

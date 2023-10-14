@@ -1,6 +1,6 @@
-	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		OSM.EL - OPENSTREETMAP VIEWER FOR EMACS
-	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                OSM.EL - OPENSTREETMAP VIEWER FOR EMACS
+               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Osm.el is a tile-based map viewer, with a responsive movable and
@@ -61,7 +61,17 @@ Table of Contents
   │   :init
   │   ;; Load Org link support
   │   (with-eval-after-load 'org
-  │     (require 'osm-ol)))
+  │     (require 'osm-ol))
+  │ 
+  │   :config
+  │ 
+  │   ;; Add custom servers
+  │   ;; (osm-add-server 'myserver
+  │   ;;   :name "My tile server"
+  │   ;;   :group "Custom"
+  │   ;;   :description "Tiles based on aerial images"
+  │   ;;   :url "https://myserver/tiles/%z/%x/%y.png?apikey=%k")
+  │ )
   └────
 
 
@@ -97,7 +107,6 @@ Table of Contents
   │ [[geo:41.869560826994544,12.45849609375;z=6;s=opentopomap][Italia, 41.87° 12.46° OpenTopoMap]]
   │ [[geo:51.48950698022105,-0.144195556640625;z=11][London, England, 51.49° -0.14°]]
   │ [[geo:55.686875255964424,12.569732666015625;z=12;s=cyclosm][København, Danmark, 55.69° 12.57° CyclOSM]]
-  │ [[geo:40.72956780913898,-73.97918701171875;z=12;s=stamen-watercolor][New York, United States, 40.73° -73.98° Stamen Watercolor]]
   │ [[geo:27.961656050984658,86.89224243164062;z=13;s=opentopomap][Mount Everest, 27.96° 86.89° OpenTopoMap]]
   │ <geo:Tour Eiffel, Av. Gustave Eiffel, Paris> (Address link)
   └────
@@ -119,7 +128,6 @@ Table of Contents
   │ (osm 41.869561 12.458496 6 'opentopomap "Lazio, Italia")
   │ (osm 51.489507 -0.144196 11 "London, Greater London, England, SW1A 2DX, United Kingdom")
   │ (osm 55.686875 12.569733 12 'cyclosm "København, Københavns Kommune, Region Hovedstaden, 1357, Danmark")
-  │ (osm 40.729568 -73.979187 12 'stamen-watercolor "New York County, New York, United States")
   │ (osm 27.961656 86.892242 13 'opentopomap "Khumjung, Khumbupasanglahmu, सोलुखुम्बु, Province #1, Nepal")
   │ (osm "Tour Eiffel, Av. Gustave Eiffel, Paris") ;; Address link
   └────
