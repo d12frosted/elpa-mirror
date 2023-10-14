@@ -221,13 +221,13 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
 	    (:commit . "7521fa1b39de735dcbd32bca92a792d5261e9ce2"))])
  (cider .
-	[(1 7 0)
+	[(1 8 0)
 	 ((emacs
 	   (26))
 	  (clojure-mode
-	   (5 16 0))
+	   (5 17 1))
 	  (parseedn
-	   (1 0 6))
+	   (1 2 0))
 	  (queue
 	   (0 2))
 	  (spinner
@@ -235,7 +235,9 @@
 	  (seq
 	   (2 22))
 	  (sesman
-	   (0 3 2)))
+	   (0 3 2))
+	  (transient
+	   (0 4 1)))
 	 "Clojure Interactive Development Environment that Rocks" tar
 	 ((:url . "http://www.github.com/clojure-emacs/cider")
 	  (:keywords "languages" "clojure" "cider")
@@ -247,7 +249,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "f39e0b52014913f5acc1dc28ad94c68385c0834e"))])
+	  (:commit . "e9936f52432d25fdb2477dc4ec8fe95a7806e784"))])
  (clojure-mode .
 	       [(5 17 1)
 		((emacs
@@ -408,13 +410,13 @@
 		    (:keywords "docker")
 		    (:commit . "74ed3dfd1584298a0ea9881115d33ba1808a4c3f"))])
  (dracula-theme .
-		[(1 8 1)
+		[(1 8 2)
 		 ((emacs
 		   (24 3)))
 		 "Dracula Theme" tar
 		 ((:url . "https://github.com/dracula/emacs")
 		  (:maintainer "tienne Deparis" . "etienne@depar.is")
-		  (:commit . "8e73c675816faadcf4d052b1ba09dc1b00aa1509"))])
+		  (:commit . "29d5180f7e34c0c858a520068fb650f705b8cfc2"))])
  (drupal-mode .
 	      [(0 7 4)
 	       ((php-mode
@@ -1795,7 +1797,7 @@
 	  (:authors
 	   ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com")))])
  (projectile .
-	     [(2 7 0)
+	     [(2 8 0)
 	      ((emacs
 		(25 1)))
 	      "Manage and navigate projects in Emacs easily" tar
@@ -1804,7 +1806,7 @@
 	       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 	       (:authors
 		("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-	       (:commit . "14beeaee7a77601aee4d4982811f6a27f696403c"))])
+	       (:commit . "e6889d7f4bc0d2c48ceac56dfe6f4a3d742a3b69"))])
  (proof-general .
 		[(4 5)
 		 ((emacs
@@ -1884,7 +1886,7 @@
 	    (:authors
 	     ("Takafumi Arakaki <aka.tkf at gmail.com>")))])
  (rfc-mode .
-	   [(1 4 0)
+	   [(1 4 2)
 	    ((emacs
 	      (25 1)))
 	    "RFC document browser and viewer" tar
@@ -1892,7 +1894,7 @@
 	     (:maintainer "Nicolas Martyanoff" . "nicolas@n16f.net")
 	     (:authors
 	      ("Nicolas Martyanoff" . "nicolas@n16f.net"))
-	     (:commit . "53ec006aa6aa4fae9c6c64004692aa3d01b38275"))])
+	     (:commit . "ab09db78d9d1baa4da4f926930833598e1e978ce"))])
  (rubocop .
 	  [(0 6 0)
 	   ((emacs
