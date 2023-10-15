@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out 5771ef573b50aa3541c3919d08594ad6918026c3
+Checking out 0780e281e12742803f5aac8f2126156d4271d567
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyW5aPYV/loopy-20231008.19
+  to /tmp/loopyhqre4j/loopy-20231015.1458
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
     loopy-misc.el -> loopy-misc.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Generating /tmp/loopyW5aPYV/loopy-20231008.19/loopy.info
-Created loopy-20231008.19.tar containing:
-  loopy-20231008.19/
-  loopy-20231008.19/dir
-  loopy-20231008.19/loopy-commands.el
-  loopy-20231008.19/loopy-iter.el
-  loopy-20231008.19/loopy-misc.el
-  loopy-20231008.19/loopy-pcase.el
-  loopy-20231008.19/loopy-pkg.el
-  loopy-20231008.19/loopy-seq.el
-  loopy-20231008.19/loopy-vars.el
-  loopy-20231008.19/loopy.el
-  loopy-20231008.19/loopy.info
+Generating /tmp/loopyhqre4j/loopy-20231015.1458/loopy.info
+Created loopy-20231015.1458.tar containing:
+  loopy-20231015.1458/
+  loopy-20231015.1458/dir
+  loopy-20231015.1458/loopy-commands.el
+  loopy-20231015.1458/loopy-iter.el
+  loopy-20231015.1458/loopy-misc.el
+  loopy-20231015.1458/loopy-pcase.el
+  loopy-20231015.1458/loopy-pkg.el
+  loopy-20231015.1458/loopy-seq.el
+  loopy-20231015.1458/loopy-vars.el
+  loopy-20231015.1458/loopy.el
+  loopy-20231015.1458/loopy.info
  ✓ Success:
-  2023-10-15T11:25:35+0000  loopy-20231008.19.entry
-  2023-10-15T11:25:35+0000  loopy-20231008.19.tar
-Built loopy in 13.541s, finished at 2023-10-15T11:25:37+0000
+  2023-10-15T13:37:04+0000  loopy-20231008.19.entry
+  2023-10-15T13:37:04+0000  loopy-20231008.19.tar
+  2023-10-15T15:48:19+0000  loopy-20231015.1458.entry
+  2023-10-15T15:48:19+0000  loopy-20231015.1458.tar
+Built loopy in 22.355s, finished at 2023-10-15T15:48:21+0000
