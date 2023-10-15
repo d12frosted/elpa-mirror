@@ -1972,12 +1972,13 @@
 	    (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
 	    (:commit . "2d835d64ba339bb375f0d55c4679149d6da3f209"))])
  (jumpc .
-	[(3 0)
-	 nil "jump to previous insertion points" single
-	 ((:url . "http://elpa.gnu.org/packages/jumpc.html")
+	[(3 1)
+	 nil "jump to previous insertion points" tar
+	 ((:maintainer "Ivan Kanis" . "ivan@kanis.fr")
 	  (:authors
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
-	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
+	  (:url . "https://elpa.gnu.org/packages/jumpc.html")
+	  (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (kind-icon .
 	    [(0 2 0)
 	     ((emacs
@@ -2471,6 +2472,13 @@
 	    ("Julien Danjou" . "julien@danjou.info"))
 	   (:keywords "comm")
 	   (:url . "https://elpa.gnu.org/packages/oauth2.html"))])
+ (ob-asymptote .
+	       [(1 0)
+		nil "Babel Functions for Asymptote" tar
+		((:url . "https://github.com/hurrja/ob-asymptote")
+		 (:keywords "literate programming" "reproducible research")
+		 (:maintainer "Jarmo Hurri" . "jarmo.hurri@iki.fi")
+		 (:commit . "8445b1cccc131e317b464a3ebc461301b9e2ca30"))])
  (ob-haxe .
 	  [(1 0)
 	   nil "org-babel functions for haxe evaluation" tar
@@ -2808,13 +2816,13 @@
 	  ("Jose E. Marchesi" . "jemarch@gnu.org"))
 	 (:commit . "77bdcce97e06bbd6771f35acbb3f399457bebb71"))])
  (poke-mode .
-	    [(3 0)
+	    [(3 1)
 	     nil "Major mode for editing Poke programs" tar
 	     ((:maintainer "Jose E. Marchesi" . "jemarch@gnu.org")
 	      (:authors
 	       ("Aurelien Aptel" . "aaptel@suse.com"))
 	      (:url . "https://elpa.gnu.org/packages/poke-mode.html")
-	      (:commit . "488a44cf462b7c98a2e7f3146afcffc9ba208bb0"))])
+	      (:commit . "340bb45867cce7f86d09a00b809c2c2078302a9e"))])
  (poker .
 	[(0 2)
 	 nil "Texas hold 'em poker" single
@@ -3815,17 +3823,18 @@
 		    ("Mariano Montone" . "marianomontone@gmail.com"))
 		   (:commit . "bbb8d2dfe84fbf857fcc1579de5a1324b09a877e"))])
  (trie .
-       [(0 5)
+       [(0 6)
 	((tNFA
 	  (0 1 1))
 	 (heap
 	  (0 3)))
 	"Trie data structure" tar
 	((:url . "http://www.dr-qubit.org/emacs.php")
+	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp")
 	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:authors
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
-	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
+	 (:commit . "e7326a61b1cd2605867063fcfc5ddddaeed6d993"))])
  (triples .
 	  [(0 3 5)
 	   ((seq

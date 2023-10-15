@@ -1153,7 +1153,7 @@
 	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
 	    (:keywords "hypermedia" "extensions"))])
  (hyperdrive .
-	     [(0 1 0)
+	     [(0 2)
 	      ((emacs
 		(27 1))
 	       (map
@@ -1163,11 +1163,15 @@
 	       (plz
 		(0 7))
 	       (persist
-		(0 5)))
+		(0 5))
+	       (transient
+		(0 4 3)))
 	      "P2P filesystem" tar
 	      ((:url . "https://git.sr.ht/~ushin/hyperdrive.el")
-	       (:maintainer "Joseph Turner" . "joseph@ushin.org")
-	       (:commit . "91ea0fac623dfee497644d7f105180dc737ee749"))])
+	       (:maintainer "Joseph Turner" . "~ushin/ushin@lists.sr.ht")
+	       (:authors
+		("Joseph Turner" . "joseph@ushin.org"))
+	       (:commit . "262f4bf033fe10f7593ebbc156cfa83d04d5d5ba"))])
  (idle-highlight-mode .
 		      [(1 1 4)
 		       ((emacs
