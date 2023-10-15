@@ -2076,7 +2076,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (llm .
-      [(0 3 0)
+      [(0 4 0)
        ((emacs
 	 (28 1)))
        "Interface to pluggable llm backends" tar
@@ -2084,7 +2084,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "7954a92d7cd15ed4e265101ac94d2f969fae473d"))])
+	(:commit . "3d3f898c3085421e0d70faa85c38aac71e38de35"))])
  (lmc .
       [(1 4)
        ((emacs
@@ -2432,16 +2432,16 @@
 		(nil . "<johnh@isi.edu>."))
 	       (:url . "http://elpa.gnu.org/packages/notes-mode.html"))])
  (notmuch-indicator .
-		    [(1 0 1)
+		    [(1 1 0)
 		     ((emacs
 		       (27 1)))
 		     "Display mode line indicator with notmuch-count(1) output" tar
 		     ((:url . "https://git.sr.ht/~protesilaos/notmuch-indicator")
 		      (:keywords "convenience" "mail")
-		      (:maintainer "notmuch-indicator Development" . "~protesilaos/notmuch-indicator@lists.sr.ht")
+		      (:maintainer "notmuch-indicator Development" . "~protesilaos/general-issues@lists.sr.ht")
 		      (:authors
 		       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		      (:commit . "8c242eab4cc0fd7e70bf2bc0f5d361f573eb40cd"))])
+		      (:commit . "c50cf91ff137ef07db3b0ce4410fca7a3bc94452"))])
  (ntlm .
        [(2 1 0)
 	nil "NTLM (NT LanManager) authentication support" single

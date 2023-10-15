@@ -15,6 +15,19 @@ latex-mode, especially when labeling equations within subequations
 environment.  We recommend using `latex-labeler.el' with AUCTeX or
 YaTeX.
 
+Getting started
+
+If you use AUCTeX, add the following code to your
+Emacs configuration file (e.g.  ~/.emacs.d/init.el):
+
+(with-eval-after-load 'latex (require 'latex-labeler))
+
+
+If you use YaTeX instead of AUCTeX, add the following code:
+
+(with-eval-after-load 'yatex (require 'latex-labeler))
+
+
 Usage
 
 `latex-labeler.el' provides three commands for labeling equations

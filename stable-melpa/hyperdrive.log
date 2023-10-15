@@ -3,10 +3,10 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Checking out 0869edbd13f3536f543f921384e003b2c0925101
+Checking out 7c2e768ca64d9031535b3074901c5d5ad5aa8c98
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperdrive/
-  to /tmp/hyperdrive3ajOIv/hyperdrive-20231014.432
+  to /tmp/hyperdrivetD1Zu4/hyperdrive-20231014.2204
     hyperdrive-describe.el -> hyperdrive-describe.el
     hyperdrive-diff.el -> hyperdrive-diff.el
     hyperdrive-dir.el -> hyperdrive-dir.el
@@ -18,21 +18,27 @@ Copying files (->) and directories (=>)
     hyperdrive-org.el -> hyperdrive-org.el
     hyperdrive-vars.el -> hyperdrive-vars.el
     hyperdrive.el -> hyperdrive.el
-Created hyperdrive-20231014.432.tar containing:
-  hyperdrive-20231014.432/
-  hyperdrive-20231014.432/hyperdrive-describe.el
-  hyperdrive-20231014.432/hyperdrive-diff.el
-  hyperdrive-20231014.432/hyperdrive-dir.el
-  hyperdrive-20231014.432/hyperdrive-ewoc.el
-  hyperdrive-20231014.432/hyperdrive-history.el
-  hyperdrive-20231014.432/hyperdrive-lib.el
-  hyperdrive-20231014.432/hyperdrive-menu.el
-  hyperdrive-20231014.432/hyperdrive-mirror.el
-  hyperdrive-20231014.432/hyperdrive-org.el
-  hyperdrive-20231014.432/hyperdrive-pkg.el
-  hyperdrive-20231014.432/hyperdrive-vars.el
-  hyperdrive-20231014.432/hyperdrive.el
+  ! doc/hyperdrive-manual.texi -> hyperdrive-manual.texi
+Generating /tmp/hyperdrivetD1Zu4/hyperdrive-20231014.2204/hyperdrive-manual.info
+Created hyperdrive-20231014.2204.tar containing:
+  hyperdrive-20231014.2204/
+  hyperdrive-20231014.2204/dir
+  hyperdrive-20231014.2204/hyperdrive-describe.el
+  hyperdrive-20231014.2204/hyperdrive-diff.el
+  hyperdrive-20231014.2204/hyperdrive-dir.el
+  hyperdrive-20231014.2204/hyperdrive-ewoc.el
+  hyperdrive-20231014.2204/hyperdrive-history.el
+  hyperdrive-20231014.2204/hyperdrive-lib.el
+  hyperdrive-20231014.2204/hyperdrive-manual.info
+  hyperdrive-20231014.2204/hyperdrive-menu.el
+  hyperdrive-20231014.2204/hyperdrive-mirror.el
+  hyperdrive-20231014.2204/hyperdrive-org.el
+  hyperdrive-20231014.2204/hyperdrive-pkg.el
+  hyperdrive-20231014.2204/hyperdrive-vars.el
+  hyperdrive-20231014.2204/hyperdrive.el
  ✓ Success:
-  2023-10-14T17:55:49+0000  hyperdrive-20231014.432.entry
-  2023-10-14T17:55:49+0000  hyperdrive-20231014.432.tar
-Built hyperdrive in 5.504s, finished at 2023-10-14T17:55:51+0000
+  2023-10-14T20:08:05+0000  hyperdrive-20231014.1957.entry
+  2023-10-14T20:08:05+0000  hyperdrive-20231014.1957.tar
+  2023-10-14T22:17:32+0000  hyperdrive-20231014.2204.entry
+  2023-10-14T22:17:32+0000  hyperdrive-20231014.2204.tar
+Built hyperdrive in 10.101s, finished at 2023-10-14T22:17:33+0000

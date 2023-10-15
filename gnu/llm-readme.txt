@@ -112,7 +112,26 @@
 <https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings#supported_models>
 
 
-2.3 Fake
+2.3 Ollama
+──────────
+
+  [Ollama] is a way to run large language models locally. There are
+  [many different models] you can use with it. You set it up with the
+  following parameters:
+  • `:port': The localhost port that ollama is run on.  This is optional
+    and will default to the default ollama port.
+  • `:chat-mode': The model name to use for chat.  This is not optional
+    for chat use, since there is no default.
+  • `:embedding-model': The model name to use for embeddings.  This is
+    not optional for embedding use, since there is no default.
+
+
+[Ollama] <https://ollama.ai/>
+
+[many different models] <https://ollama.ai/library>
+
+
+2.4 Fake
 ────────
 
   This is a client that makes no call, but it just there for testing and
@@ -166,7 +185,7 @@
   user-api-key)'.  The client application will use this provider to call
   all the generic functions.
 
-  A list of all the functions:
+  A list of all the main functions:
 
   • `llm-chat provider prompt': With user-chosen `provider' , and a
     `llm-chat-prompt' structure (containing context, examples,
@@ -194,6 +213,22 @@
     asynchronously. `vector-callback' is called with the vector
     embedding, and, in case of error, `error-callback' is called with
     the same arguments as in `llm-chat-async'.
+  • `llm-count-tokens provider string': Count how many tokens are in
+    `string'.  This may theoretically vary by `provider' but typically
+    is always about the same.  This gives an estimate only.
+
+    And the following helper functions:
+    • `llm-make-simple-chat-prompt text': For the common case of just
+      wanting a simple text prompt without the richness that
+      `llm-chat-prompt' struct provides, use this to turn a string into
+      a `llm-chat-prompt' that can be passed to the main functions
+      above.
+    • `llm-chat-prompt-to-text prompt': Somewhat opposite of the above,
+      from a prompt, return a string representation.  This is not
+      usually suitable for passing to LLMs, but for debugging purposes.
+    • `llm-chat-streaming-to-point provider prompt buffer point
+      finish-callback': Same basic arguments as `llm-chat-streaming',
+      but will stream to `point' in `buffer'.
 
 
 5 Contributions
