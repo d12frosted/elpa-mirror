@@ -5185,6 +5185,7 @@
   (ts :url "https://github.com/alphapapa/ts.el.git")
   (ts-comint :url "https://github.com/emacs-typescript/ts-comint.git")
   (tsc :url "https://github.com/emacs-tree-sitter/elisp-tree-sitter.git" :branch "release")
+  (tsort :url "https://github.com/ehawkvu/tsort.el.git")
   (tss :url "https://github.com/aki2o/emacs-tss.git")
   (tt-mode :url "https://github.com/davorg/tt-mode.git")
   (ttl-mode :url "https://github.com/nxg/ttl-mode.git")
