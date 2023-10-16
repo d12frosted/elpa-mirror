@@ -843,19 +843,22 @@
 	     ("Augusto Stoffel" . "arstoffel@gmail.com"))
 	    (:commit . "60099be5fc5c90d5adc2795b3bfacb492a0adb88"))])
  (dict-tree .
-	    [(0 16)
+	    [(0 17)
 	     ((trie
-	       (0 3))
+	       (0 6))
 	      (tNFA
 	       (0 1 1))
 	      (heap
-	       (0 3)))
+	       (0 3))
+	      (emacs
+	       (24 1)))
 	     "Dictionary data structure" tar
 	     ((:url . "http://www.dr-qubit.org/emacs.php")
+	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp")
 	      (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	      (:authors
 	       ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
-	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
+	      (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl .
 	  [(1 9 2)
 	   ((cl-lib

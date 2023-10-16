@@ -368,3 +368,21 @@ License
 
 
 [GNU General Public License] <https://www.gnu.org/licenses/gpl-3.0.txt>
+
+
+Other resources
+═══════════════
+
+  • [Marcin Borkowski: 2023-09-18 Making Anki flashcards from subtitles]
+  • [sachac/subed-record: Record audio in segments and compile it into a
+    file]
+  • [EmacsConf - Captioning tips]
+
+
+[Marcin Borkowski: 2023-09-18 Making Anki flashcards from subtitles]
+<https://mbork.pl/2023-09-18_Making_Anki_flashcards_from_subtitles>
+
+[sachac/subed-record: Record audio in segments and compile it into a
+file] <https://github.com/sachac/subed-record>
+
+[EmacsConf - Captioning tips] <https://emacsconf.org/captioning/>
