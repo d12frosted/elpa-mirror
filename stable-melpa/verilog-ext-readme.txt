@@ -15,7 +15,7 @@ Extensions for Verilog Mode:
  - Improve `imenu' entries: detect instances, classes and methods
  - Enhanced support for `which-func'
  - Code folding via `hideshow'
- - Workspace tags, typedef analysis and caching
+ - Project tags, typedef analysis and caching
  - Time-stamp auto-configuration
  - Convert block end comments to names
  - Port connections utilities
