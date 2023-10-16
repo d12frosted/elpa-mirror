@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/larsbrinkhoff/forth-mode.git
 
 Updating /mnt/store/melpa/working/forth-mode/
-Checking out 3ef319bf2da443cf9f999f42bf854160b32448a0
+Checking out aaacce775b910afe06a02a56ecfceb3288c84b64
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forth-mode/
-  to /tmp/forth-modeIEFSch/forth-mode-20231014.1018
+  to /tmp/forth-modet6bHQR/forth-mode-20231016.640
     forth-block-mode.el -> forth-block-mode.el
     forth-interaction-mode.el -> forth-interaction-mode.el
     forth-mode.el -> forth-mode.el
@@ -16,28 +16,30 @@ Copying files (->) and directories (=>)
     forth-syntax.el -> forth-syntax.el
     forth-mode.texi -> forth-mode.texi
     backend => backend
-Generating /tmp/forth-modeIEFSch/forth-mode-20231014.1018/forth-mode.info
-Created forth-mode-20231014.1018.tar containing:
-  forth-mode-20231014.1018/
-  forth-mode-20231014.1018/backend/
-  forth-mode-20231014.1018/backend/gforth.el
-  forth-mode-20231014.1018/backend/lbforth.el
-  forth-mode-20231014.1018/backend/pforth.el
-  forth-mode-20231014.1018/backend/spforth.el
-  forth-mode-20231014.1018/backend/swiftforth.el
-  forth-mode-20231014.1018/backend/swiftforth.fth
-  forth-mode-20231014.1018/backend/vfxforth.el
-  forth-mode-20231014.1018/dir
-  forth-mode-20231014.1018/forth-block-mode.el
-  forth-mode-20231014.1018/forth-interaction-mode.el
-  forth-mode-20231014.1018/forth-mode-pkg.el
-  forth-mode-20231014.1018/forth-mode.el
-  forth-mode-20231014.1018/forth-mode.info
-  forth-mode-20231014.1018/forth-parse.el
-  forth-mode-20231014.1018/forth-smie.el
-  forth-mode-20231014.1018/forth-spec.el
-  forth-mode-20231014.1018/forth-syntax.el
+Generating /tmp/forth-modet6bHQR/forth-mode-20231016.640/forth-mode.info
+Created forth-mode-20231016.640.tar containing:
+  forth-mode-20231016.640/
+  forth-mode-20231016.640/backend/
+  forth-mode-20231016.640/backend/gforth.el
+  forth-mode-20231016.640/backend/lbforth.el
+  forth-mode-20231016.640/backend/pforth.el
+  forth-mode-20231016.640/backend/spforth.el
+  forth-mode-20231016.640/backend/swiftforth.el
+  forth-mode-20231016.640/backend/swiftforth.fth
+  forth-mode-20231016.640/backend/vfxforth.el
+  forth-mode-20231016.640/dir
+  forth-mode-20231016.640/forth-block-mode.el
+  forth-mode-20231016.640/forth-interaction-mode.el
+  forth-mode-20231016.640/forth-mode-pkg.el
+  forth-mode-20231016.640/forth-mode.el
+  forth-mode-20231016.640/forth-mode.info
+  forth-mode-20231016.640/forth-parse.el
+  forth-mode-20231016.640/forth-smie.el
+  forth-mode-20231016.640/forth-spec.el
+  forth-mode-20231016.640/forth-syntax.el
  ✓ Success:
-  2023-10-16T02:35:14+0000  forth-mode-20231014.1018.entry
-  2023-10-16T02:35:14+0000  forth-mode-20231014.1018.tar
-Built forth-mode in 7.589s, finished at 2023-10-16T02:35:16+0000
+  2023-10-16T04:47:37+0000  forth-mode-20231014.1018.entry
+  2023-10-16T04:47:37+0000  forth-mode-20231014.1018.tar
+  2023-10-16T07:01:43+0000  forth-mode-20231016.640.entry
+  2023-10-16T07:01:43+0000  forth-mode-20231016.640.tar
+Built forth-mode in 6.568s, finished at 2023-10-16T07:01:45+0000

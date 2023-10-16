@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magnars/expand-region.el.git
 
 Updating /mnt/store/melpa/working/expand-region/
-Checking out b70feaa644310dc2d599dc277cd20a1f2b6446ac
+Checking out d91935345581a034c0424cf2885f6a25d329f888
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/expand-region/
-  to /tmp/expand-regionef4Wfd/expand-region-20221030.957
+  to /tmp/expand-regionr7VI5Y/expand-region-20231016.51
     cc-mode-expansions.el -> cc-mode-expansions.el
     clojure-mode-expansions.el -> clojure-mode-expansions.el
     cperl-mode-expansions.el -> cperl-mode-expansions.el
@@ -16,7 +16,6 @@ Copying files (->) and directories (=>)
     erlang-mode-expansions.el -> erlang-mode-expansions.el
     expand-region-core.el -> expand-region-core.el
     expand-region-custom.el -> expand-region-custom.el
-    expand-region-pkg.el -> expand-region-pkg.el
     expand-region.el -> expand-region.el
     feature-mode-expansions.el -> feature-mode-expansions.el
     html-mode-expansions.el -> html-mode-expansions.el
@@ -36,38 +35,40 @@ Copying files (->) and directories (=>)
     the-org-mode-expansions.el -> the-org-mode-expansions.el
     web-mode-expansions.el -> web-mode-expansions.el
     yaml-mode-expansions.el -> yaml-mode-expansions.el
-Created expand-region-20221030.957.tar containing:
-  expand-region-20221030.957/
-  expand-region-20221030.957/cc-mode-expansions.el
-  expand-region-20221030.957/clojure-mode-expansions.el
-  expand-region-20221030.957/cperl-mode-expansions.el
-  expand-region-20221030.957/css-mode-expansions.el
-  expand-region-20221030.957/enh-ruby-mode-expansions.el
-  expand-region-20221030.957/er-basic-expansions.el
-  expand-region-20221030.957/erlang-mode-expansions.el
-  expand-region-20221030.957/expand-region-core.el
-  expand-region-20221030.957/expand-region-custom.el
-  expand-region-20221030.957/expand-region-pkg.el
-  expand-region-20221030.957/expand-region.el
-  expand-region-20221030.957/feature-mode-expansions.el
-  expand-region-20221030.957/html-mode-expansions.el
-  expand-region-20221030.957/js-mode-expansions.el
-  expand-region-20221030.957/js2-mode-expansions.el
-  expand-region-20221030.957/jsp-expansions.el
-  expand-region-20221030.957/latex-mode-expansions.el
-  expand-region-20221030.957/nxml-mode-expansions.el
-  expand-region-20221030.957/octave-expansions.el
-  expand-region-20221030.957/python-el-expansions.el
-  expand-region-20221030.957/python-el-fgallina-expansions.el
-  expand-region-20221030.957/python-mode-expansions.el
-  expand-region-20221030.957/ruby-mode-expansions.el
-  expand-region-20221030.957/sml-mode-expansions.el
-  expand-region-20221030.957/subword-mode-expansions.el
-  expand-region-20221030.957/text-mode-expansions.el
-  expand-region-20221030.957/the-org-mode-expansions.el
-  expand-region-20221030.957/web-mode-expansions.el
-  expand-region-20221030.957/yaml-mode-expansions.el
+Created expand-region-20231016.51.tar containing:
+  expand-region-20231016.51/
+  expand-region-20231016.51/cc-mode-expansions.el
+  expand-region-20231016.51/clojure-mode-expansions.el
+  expand-region-20231016.51/cperl-mode-expansions.el
+  expand-region-20231016.51/css-mode-expansions.el
+  expand-region-20231016.51/enh-ruby-mode-expansions.el
+  expand-region-20231016.51/er-basic-expansions.el
+  expand-region-20231016.51/erlang-mode-expansions.el
+  expand-region-20231016.51/expand-region-core.el
+  expand-region-20231016.51/expand-region-custom.el
+  expand-region-20231016.51/expand-region-pkg.el
+  expand-region-20231016.51/expand-region.el
+  expand-region-20231016.51/feature-mode-expansions.el
+  expand-region-20231016.51/html-mode-expansions.el
+  expand-region-20231016.51/js-mode-expansions.el
+  expand-region-20231016.51/js2-mode-expansions.el
+  expand-region-20231016.51/jsp-expansions.el
+  expand-region-20231016.51/latex-mode-expansions.el
+  expand-region-20231016.51/nxml-mode-expansions.el
+  expand-region-20231016.51/octave-expansions.el
+  expand-region-20231016.51/python-el-expansions.el
+  expand-region-20231016.51/python-el-fgallina-expansions.el
+  expand-region-20231016.51/python-mode-expansions.el
+  expand-region-20231016.51/ruby-mode-expansions.el
+  expand-region-20231016.51/sml-mode-expansions.el
+  expand-region-20231016.51/subword-mode-expansions.el
+  expand-region-20231016.51/text-mode-expansions.el
+  expand-region-20231016.51/the-org-mode-expansions.el
+  expand-region-20231016.51/web-mode-expansions.el
+  expand-region-20231016.51/yaml-mode-expansions.el
  ✓ Success:
-  2023-10-16T02:30:24+0000  expand-region-20221030.957.entry
-  2023-10-16T02:30:24+0000  expand-region-20221030.957.tar
-Built expand-region in 3.449s, finished at 2023-10-16T02:30:25+0000
+  2023-10-16T04:42:48+0000  expand-region-20221030.957.entry
+  2023-10-16T04:42:48+0000  expand-region-20221030.957.tar
+  2023-10-16T06:56:50+0000  expand-region-20231016.51.entry
+  2023-10-16T06:56:50+0000  expand-region-20231016.51.tar
+Built expand-region in 5.253s, finished at 2023-10-16T06:56:52+0000
