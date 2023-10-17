@@ -3,21 +3,8 @@ Fetcher: hg
 Source:  https://hg.osdn.net/view/lognav-mode/lognav-mode
 
 Updating /mnt/store/melpa/working/lognav-mode/
-Checking out 100541ec31468b771073a7d2ad4512c1dcb1eb07
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lognav-mode/
-  to /tmp/lognav-modeqyEzql/lognav-mode-20220410.1344
-    lognav-mode.el -> lognav-mode.el
-Created lognav-mode-20220410.1344.tar containing:
-  lognav-mode-20220410.1344/
-  lognav-mode-20220410.1344/lognav-mode-pkg.el
-  lognav-mode-20220410.1344/lognav-mode.el
-Command `hg purge' exited with non-zero exit-code: 255
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
+Command `hg pull' exited with non-zero exit-code: 255
+pulling from https://hg.osdn.net/view/lognav-mode/lognav-mode
+abort: error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1123)
 
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command `hg purge' exited with non-zero exit-code: 255
+Command `hg pull' exited with non-zero exit-code: 255

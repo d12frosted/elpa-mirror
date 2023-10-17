@@ -18,6 +18,7 @@ Firefox.app - Grab the url of the frontmost tab in the frontmost window
 Vimperator/Firefox.app - Grab the url of the frontmost tab in the frontmost window
 Safari.app - Grab the url of the frontmost tab in the frontmost window
 Google Chrome.app - Grab the url of the frontmost tab in the frontmost window
+Chromium.app - Grab the url of the frontmost tab in the frontmost window
 Brave.app - Grab the url of the frontmost tab in the frontmost window
 Together.app - Grab links to the selected items in the library list
 Skim.app - Grab a link to the selected page in the topmost pdf document
