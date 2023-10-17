@@ -3,7 +3,18 @@ Fetcher: git
 Source:  https://git.sr.ht/~ashton314/nordic-night
 
 Updating /mnt/store/melpa/working/nordic-night-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~ashton314/nordic-night/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 38020ebac496992a4b41bc721db9c28962e5b7df
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nordic-night-theme/
+  to /tmp/nordic-night-theme5a2B3a/nordic-night-theme-20230831.1732
+    nordic-midnight-theme.el -> nordic-midnight-theme.el
+    nordic-night-theme.el -> nordic-night-theme.el
+Created nordic-night-theme-20230831.1732.tar containing:
+  nordic-night-theme-20230831.1732/
+  nordic-night-theme-20230831.1732/nordic-midnight-theme.el
+  nordic-night-theme-20230831.1732/nordic-night-theme-pkg.el
+  nordic-night-theme-20230831.1732/nordic-night-theme.el
+ ✓ Success:
+  2023-10-17T19:30:39+0000  nordic-night-theme-20230831.1732.entry
+  2023-10-17T19:30:39+0000  nordic-night-theme-20230831.1732.tar
+Built nordic-night-theme in 4.388s, finished at 2023-10-17T19:30:41+0000

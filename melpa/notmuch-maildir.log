@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/notmuch-maildir
 
 Updating /mnt/store/melpa/working/notmuch-maildir/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~tarsius/notmuch-maildir/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 4686e8e7b6d88439d4b0c39c7b17502b102a6f58
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/notmuch-maildir/
+  to /tmp/notmuch-maildir9B9NPT/notmuch-maildir-20230511.2056
+    notmuch-maildir.el -> notmuch-maildir.el
+Created notmuch-maildir-20230511.2056.tar containing:
+  notmuch-maildir-20230511.2056/
+  notmuch-maildir-20230511.2056/notmuch-maildir-pkg.el
+  notmuch-maildir-20230511.2056/notmuch-maildir.el
+ ✓ Success:
+  2023-10-17T19:30:45+0000  notmuch-maildir-20230511.2056.entry
+  2023-10-17T19:30:45+0000  notmuch-maildir-20230511.2056.tar
+Built notmuch-maildir in 4.433s, finished at 2023-10-17T19:30:47+0000
