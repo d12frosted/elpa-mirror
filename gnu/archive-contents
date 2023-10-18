@@ -4340,13 +4340,12 @@
 			       (:keywords "snippets")
 			       (:url . "http://elpa.gnu.org/packages/yasnippet-classic-snippets.html"))])
  (zones .
-	[(2019 7 13)
-	 nil "Zones of text - like multiple regions" single
-	 ((:keywords "narrow" "restriction" "widen" "region" "zone")
-	  (:authors
-	   ("Drew Adams"))
+	[(2023 6 11)
+	 nil "Zones of text - like multiple regions" tar
+	 ((:url . "https://elpa.gnu.org/packages/zones.html")
+	  (:keywords "narrow" "restriction" "widen" "region" "zone")
 	  (:maintainer "Drew Adams" . "drew.adams@oracle.com")
-	  (:url . "https://elpa.gnu.org/packages/zones.html"))])
+	  (:commit . "10ebf386d48725fa3af2f8b0c60ad4ffa0ec9653"))])
  (ztree .
 	[(1 0 6)
 	 ((cl-lib

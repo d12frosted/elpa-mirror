@@ -42,6 +42,7 @@ Supported languages:
 - Go (gofmt, goimports)
 - GraphQL (prettier, prettierd)
 - Haskell (brittany, fourmolu, hindent, ormolu, stylish-haskell)
+- HCL (hclfmt)
 - HTML/XHTML/XML (tidy)
 - Java (clang-format, astyle)
 - JavaScript/JSON/JSX (prettier, standard, prettierd, deno)

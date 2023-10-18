@@ -11,7 +11,7 @@
    major changes (named ''versions'') are posted to GNU ELPA.
 
    More description below.
-
+ 
 (@> "Index")
 
  Index
@@ -44,7 +44,7 @@
  (@> "General Commands")
  (@> "General Non-Interactive Functions")
  (@> "Key Bindings")
-
+ 
 (@* "Things Defined Here")
 
  Things Defined Here
@@ -71,7 +71,8 @@
  User options defined here:
 
    `zz-auto-remove-empty-izones-flag',
-   `zz-narrowing-use-fringe-flag' (Emacs 23+).
+   `zz-narrowing-adds-zone-flag', `zz-narrowing-use-fringe-flag'
+   (Emacs 23+).
 
  Faces defined here:
 
@@ -79,25 +80,27 @@
 
  Non-interactive functions defined here:
 
-   `zz-add-key-bindings-to-narrow-map', `zz-buffer-narrowed-p'
-   (Emacs 22-23), `zz-buffer-of-markers', `zz-car-<',
+   `zz-add-key-bindings-to-narrow-map', `zz-basic-zones',
+   `zz-basic-zones-in-bufs', `zz-buffer-narrowed-p' (Emacs 22-23),
+   `zz-buffer-of-markers', `zz-car-<',
    `zz-choose-zone-by-id-and-text', `zz-do-izones',
    `zz-dotted-zones-from-izones', `zz-do-zones', `zz-dot-pairs',
-   `zz-empty-zone-p', `zz-every',
-   `zz-izone-has-other-buffer-marker-p', `zz-izone-limits',
-   `zz-izone-limits-in-bufs', `zz-izones-from-noncontiguous-region'
-   (Emacs 25+), `zz-izones-from-zones', `zz-izone-p',
-   `zz-izones-p', `zz-izones-renumber', `zz-map-izones',
-   `zz-map-zones', `zz-marker-from-object', `zz-markerize',
-   `zz-max', `zz-min', `zz-narrow-advice', `zz-narrowing-lighter',
+   `zz-empty-zone-p', `zz-every', `zz-get-overlay-props',
+   `zz-izone-has-other-buffer-marker-p',
+   `zz-izones-from-noncontiguous-region' (Emacs 25+),
+   `zz-izones-from-zones', `zz-izone-p', `zz-izones-p',
+   `zz-izones-renumber', `zz-map-izones', `zz-map-zones',
+   `zz-marker-from-object', `zz-markerize', `zz-max', `zz-min',
+   `zz-narrow-advice', `zz-narrowing-lighter',
    `zz-noncontiguous-region-from-izones',
-   `zz-noncontiguous-region-from-zones', `zz-number-or-marker-p',
-   `zz-numeric-position', `zz-order-zones', `zz-overlays-to-zones',
-   `zz-overlay-to-zone', `zz-overlay-union',
+   `zz-noncontiguous-region-from-zones', `zz-numberize',
+   `zz-number-or-marker-p', `zz-numeric-position',
+   `zz-order-zones', `zz-overlays-to-zones', `zz-overlay-to-zone',
+   `zz-overlay-union', `zz-position-from-object',
    `zz-rassoc-delete-all', `zz-readable-marker',
-   `zz-readable-marker-p', `zz-read-any-variable', `zz-read-bufs',
-   `zz-regexp-car-member', `zz-remove-empty-izones',
-   `zz-remove-if', `zz-remove-if-not',
+   `zz-readable-markerize', `zz-readable-marker-p',
+   `zz-read-any-variable', `zz-read-bufs', `zz-regexp-car-member',
+   `zz-remove-empty-izones', `zz-remove-if', `zz-remove-if-not',
    `zz-remove-izones-w-other-buffer-markers',
    `zz-remove-zones-w-other-buffer-markers', `zz-repeat-command',
    `zz-same-position-p', `zz-set-intersection', `zz-set-union',
@@ -126,7 +129,7 @@
  ***** NOTE: These EMACS PRIMITIVES have been ADVISED HERE:
 
    `narrow-to-defun', `narrow-to-page', `narrow-to-region'.
-
+ 
 (@* "Documentation")
 
  Documentation
@@ -272,14 +275,19 @@
  When creating zones from overlays you can specify how to represent
  the zone limits: using markers, readable markers, or positive
  integers.  And you can specify whether to create basic zones or
- izones.  The overlay property list becomes the list of EXTRA
- information of the resulting zone: (LIMIT1 LIMIT2 . EXTRA).
+ izones.
 
- When creating overlays from zones, any list of EXTRA zone
- information is used as the property list of the resulting overlay.
- When creating a single such overlay you can optionally specify
- additional overlay properties, as well as arguments FRONT-ADVANCE
- and REAR-ADVANCE for function `make-overlay'.
+ The resulting zone has ((:zz-overlay . PROPS)) as its list of
+ extra information, where PROPS is the overlay's property list.  So
+ the zone is (LIMIT1 LIMIT2 (:zz-overlay . PROPS)) (or the same
+ with an identifier, if an izone).
+
+ When creating overlays from zones, the presence of a list
+ (:zz-overlay . PROPS) in the extra zone information results in the
+ overlay having PROPS as its property list.  When creating a single
+ such overlay you can optionally specify additional overlay
+ properties, as well as arguments FRONT-ADVANCE and REAR-ADVANCE
+ for function `make-overlay'.
 
  You can use function `zz-overlay-union' to coalesce overlays in a
  given buffer that overlap or are adjacent.
@@ -404,11 +412,22 @@
  not rebind that key; your bindings are respected.
 
  C-x n #   `zz-select-zone-by-id-and-text' - Select zone as region
+ C-x n M-% `zz-query-replace-zones' - Query-replace within zones
+ C-x n C-M-%                        - Regexp query-replace
+ C-x n M-= ~ `isearchp-toggle-complementing-domain' -
+             Toggle searching anti-zones
+ C-x n M-= d `isearchp-toggle-dimming-outside-search-area' -
+             Toggle dimming text that is outside the search area
+ C-x n M-= v `isearchp-toggle-anti-zones-invisible' - Toggle
+             visibility of the complement of (the union of) zones
+ C-x n M-= V `isearchp-toggle-zones-invisible' - Toggle visibility
+             of zones
  C-x n a   `zz-add-zone' - Add to current izones set (variable)
  C-x n A   `zz-add-zone-and-unite' - Add zone, then unite zones
  C-x n c   `zz-clone-zones' - Clone zones from one var to another
  C-x n C   `zz-clone-and-unite-zones' - Clone then unite zones
  C-x n d   `narrow-to-defun'
+ C-x n D   `isearchp-remove-dimming' - Remove text dimming
  C-x n C-d `zz-delete-zone' - Delete an izone from current var
  C-x n f   `zz-set-zones-from-face' - Set zone set to face areas
  C-x n h   `hlt-highlight-regions' - Ad hoc zone highlighting
@@ -417,14 +436,25 @@
  C-x n L   `zz-set-zones-from-highlighting' - Set to highlighted
  C-x n n   `narrow-to-region'
  C-x n p   `narrow-to-page'
+ C-x n P   `isearchp-put-prop-on-zones' - Add text property
  C-x n r   `zz-add-zones-matching-regexp' - Add regexp-match zones
  C-x n R   `zz-set-zones-matching-regexp' - Set zone set to matches
+ C-x n C-r `isearchp-zones-backward' - Search backward within zones
+ C-x n C-M-r                         - Regexp-search backward
  C-x n s   `zz-select-zone-repeat' - Cycle zones as active region
                                      (negative arg removes zone)
+ C-x n C-s `isearchp-zones-forward' - Search forward within zones
+ C-x n C-M-s                        - Regexp-search forward
  C-x n u   `zz-unite-zones' - Unite (coalesce) zones
  C-x n v   `zz-set-izones-var' - Set current zones-set variable
  C-x n w   `widen'
  C-x n x   `zz-narrow-repeat' - Cycle or pop zones as narrowings
+
+ For the `hlt*' commands you need library `highlight.el': `C-x n
+ h', `C-x n H'.  For the `isearchp-' commands you need library
+ `isearch-prop.el': `C-x n M-= ~', `C-x n M-= d', `C-x n M-= v',
+ `C-x n M-= V', `C-x n D', `C-x n P', `C-x n C-r', `C-x n C-M-r',
+ `C-x n C-s', 'C-x n C-M-s`.
 
 
 (@* "Command `zz-narrow-repeat'")
@@ -493,9 +523,9 @@
 
  You can define your own commands that iterate over a list of
  izones in a given buffer, or over such lists in a set of buffers.
- Utility functions `zz-izone-limits', `zz-izone-limits-in-bufs',
- and `zz-read-bufs', `zz-do-zones', `zz-do-izones', `zz-map-zones',
- and `zz-map-izones' can help with this.
+ Utility functions `zz-basic-zones', `zz-basic-zones-in-bufs', and
+ `zz-read-bufs', `zz-do-zones', `zz-do-izones', `zz-map-zones', and
+ `zz-map-izones' can help with this.
 
  As examples of such commands, if you use library `highlight.el'
  then you can use `C-x n h' (command `hlt-highlight-regions') to
@@ -517,7 +547,7 @@
 (defun hlt-highlight-regions (&optional regions face msgp mousep
                                         buffers)
   "Apply `hlt-highlight-region' to regions in `zz-izones'."
-  (interactive (list (zz-izone-limits zz-izones)
+  (interactive (list (zz-basic-zones zz-izones)
                      nil
                      t
                      current-prefix-arg))
@@ -536,4 +566,3 @@
  Minor mode `zz-auto-add-region-as-izone-mode' automatically adds
  the nonempty region as an izone upon its deactivation.  The zone
  is added to the current value of `zz-izones-var'.
-
