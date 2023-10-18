@@ -1133,14 +1133,6 @@
 	   ("Noah Friedman" . "friedman@splode.com"))
 	  (:url . "https://elpa.gnu.org/packages/eldoc.html")
 	  (:commit . "f2357df91f0262949618bd4da571d3267c1b1dfa"))])
- (eldoc-eval .
-	     [(0 2)
-	      nil "Enable eldoc support when minibuffer is in use." tar
-	      ((:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
-	       (:authors
-		("Thierry Volpiatto" . "thievol@posteo.net"))
-	       (:url . "https://elpa.gnu.org/packages/eldoc-eval.html")
-	       (:commit . "e91800503c90cb75dc70abe42f1d6ae499346cc1"))])
  (electric-spacing .
 		   [(5 0)
 		    nil "Insert operators with surrounding spaces smartly" single
