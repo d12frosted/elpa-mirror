@@ -3,20 +3,26 @@ Fetcher: github
 Source:  https://github.com/radian-software/apheleia.git
 
 Updating /mnt/store/melpa/working/apheleia/
-Checking out f57d21ef1f36f00930001fc3a22bd7e4a9fa16c9
+Checking out 51b8a796b666c6ec7f961e5cb2e05c6aa60475f6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/apheleia/
-  to /tmp/apheleiaYvL6Qz/apheleia-20231013.319
-    apheleia-core.el -> apheleia-core.el
+  to /tmp/apheleia9EPQHv/apheleia-20231017.2020
+    apheleia-formatter-context.el -> apheleia-formatter-context.el
+    apheleia-formatters.el -> apheleia-formatters.el
+    apheleia-log.el -> apheleia-log.el
+    apheleia-rcs.el -> apheleia-rcs.el
     apheleia-utils.el -> apheleia-utils.el
     apheleia.el -> apheleia.el
-Created apheleia-20231013.319.tar containing:
-  apheleia-20231013.319/
-  apheleia-20231013.319/apheleia-core.el
-  apheleia-20231013.319/apheleia-pkg.el
-  apheleia-20231013.319/apheleia-utils.el
-  apheleia-20231013.319/apheleia.el
+Created apheleia-20231017.2020.tar containing:
+  apheleia-20231017.2020/
+  apheleia-20231017.2020/apheleia-formatter-context.el
+  apheleia-20231017.2020/apheleia-formatters.el
+  apheleia-20231017.2020/apheleia-log.el
+  apheleia-20231017.2020/apheleia-pkg.el
+  apheleia-20231017.2020/apheleia-rcs.el
+  apheleia-20231017.2020/apheleia-utils.el
+  apheleia-20231017.2020/apheleia.el
  ✓ Success:
-  2023-10-17T18:38:15+0000  apheleia-20231013.319.entry
-  2023-10-17T18:38:15+0000  apheleia-20231013.319.tar
-Built apheleia in 4.691s, finished at 2023-10-17T18:38:17+0000
+  2023-10-18T03:39:28+0000  apheleia-20231017.2020.entry
+  2023-10-18T03:39:28+0000  apheleia-20231017.2020.tar
+Built apheleia in 4.740s, finished at 2023-10-18T03:39:30+0000
