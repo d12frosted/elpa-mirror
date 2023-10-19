@@ -221,11 +221,11 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
 	    (:commit . "7521fa1b39de735dcbd32bca92a792d5261e9ce2"))])
  (cider .
-	[(1 8 2)
+	[(1 8 3)
 	 ((emacs
 	   (26))
 	  (clojure-mode
-	   (5 17 1))
+	   (5 18 0))
 	  (parseedn
 	   (1 2 0))
 	  (queue
@@ -249,7 +249,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "0f689fd5136a00e35999ee2d642de6a1c0726273"))])
+	  (:commit . "944d6773ac254d9fcac55c05489bff3d91d91402"))])
  (clojure-mode .
 	       [(5 18 0)
 		((emacs
