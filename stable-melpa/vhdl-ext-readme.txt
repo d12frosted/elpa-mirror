@@ -1,18 +1,19 @@
 Extensions for VHDL Mode:
 
  - Tree-sitter `vhdl-ts-mode' support
- - Improve syntax highlighting
- - Builtin xref backend
- - Auto-completion
- - Hierarchy extraction and navigation: builtin and GHDL based
+ - Improved syntax highlighting for `vhdl-mode'
+ - Find definitions and references with builtin `xref' backend
+ - Auto-completion with semantic completion
+ - Hierarchy extraction and navigation
  - LSP configuration for `lsp-mode' and `eglot'
  - Support for many linters via `flycheck'
  - Beautify blocks and instances
- - Navigate through instances in a module
+ - Code navigation functions
  - Templates insertion via `hydra'
  - Compilation-based utilities
  - Improve `imenu': detect instances
- - Enhanced support for `which-func'
+ - Add support for `which-func'
  - Improve code folding via `hideshow'
- - Auto-configure `time-stamp'
+ - Project tags and caching
+ - `time-stamp' auto-configuration
  - Port connections utilities

@@ -44,6 +44,7 @@ Supported languages:
 - Haskell (brittany, fourmolu, hindent, ormolu, stylish-haskell)
 - HCL (hclfmt)
 - HTML/XHTML/XML (tidy)
+- Hy (Emacs)
 - Java (clang-format, astyle)
 - JavaScript/JSON/JSX (prettier, standard, prettierd, deno)
 - Jsonnet (jsonnetfmt)
