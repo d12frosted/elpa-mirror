@@ -58,13 +58,12 @@ text-mode. Incidentally Emacs already comes with `mark-paragraph` and
 `mark-page`. To add it to the try-list, do this:
 
     (defun er/add-text-mode-expansions ()
-      (make-variable-buffer-local 'er/try-expand-list)
-      (setq er/try-expand-list (append
+      (setq-local er/try-expand-list (append
                                 er/try-expand-list
                                 '(mark-paragraph
                                   mark-page))))
 
-    (er/enable-mode-expansions 'text-mode 'er/add-text-mode-expansions)
+    (er/enable-mode-expansions 'text-mode #'er/add-text-mode-expansions)
 
 Add that to its own file, and require it at the bottom of this one,
 where it says "Mode-specific expansions"
