@@ -3,24 +3,7 @@ Fetcher: github
 Source:  https://github.com/jd/google-contacts.el.git
 
 Updating /mnt/store/melpa/working/google-contacts/
-Checking out 8923c238fe0906184d2254b33ba72792ed12cd47
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/google-contacts/
-  to /tmp/google-contactslIOT0A/google-contacts-20201012.1056
-    google-contacts-gnus.el -> google-contacts-gnus.el
-    google-contacts-message.el -> google-contacts-message.el
-    google-contacts.el -> google-contacts.el
-    google-oauth.el -> google-oauth.el
-    google-org-contacts.el -> google-org-contacts.el
-Created google-contacts-20201012.1056.tar containing:
-  google-contacts-20201012.1056/
-  google-contacts-20201012.1056/google-contacts-gnus.el
-  google-contacts-20201012.1056/google-contacts-message.el
-  google-contacts-20201012.1056/google-contacts-pkg.el
-  google-contacts-20201012.1056/google-contacts.el
-  google-contacts-20201012.1056/google-oauth.el
-  google-contacts-20201012.1056/google-org-contacts.el
- ✓ Success:
-  2023-10-21T07:17:18+0000  google-contacts-20201012.1056.entry
-  2023-10-21T07:17:18+0000  google-contacts-20201012.1056.tar
-Built google-contacts in 10.993s, finished at 2023-10-21T07:17:24+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: could not read Username for 'https://github.com': No such device or address
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
