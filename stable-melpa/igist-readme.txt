@@ -80,8 +80,6 @@ M-x `igist-toggle-public' (&rest _)
 
 M-x `igist-list-edit-description' (&rest _)
      Edit description for current gist at point in tabulated list mode.
-
-
 Comments commands:
 
 M-x `igist-post-comment'
