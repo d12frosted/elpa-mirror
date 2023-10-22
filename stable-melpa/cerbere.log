@@ -3,3 +3,28 @@ Fetcher: github
 Source:  https://github.com/nlamirault/cerbere.git
 
 Updating /mnt/store/melpa/working/cerbere/
+Checking out bb18d932b16541105d41a668dbf6fc4e833a6dc2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cerbere/
+  to /tmp/cerbereB3GsQ4/cerbere-20181113.1641
+    cerbere-common.el -> cerbere-common.el
+    cerbere-elisp-ert-runner.el -> cerbere-elisp-ert-runner.el
+    cerbere-php-phpunit.el -> cerbere-php-phpunit.el
+    cerbere-python-tox.el -> cerbere-python-tox.el
+    cerbere-ruby-minitest.el -> cerbere-ruby-minitest.el
+    cerbere-rust-libtest.el -> cerbere-rust-libtest.el
+    cerbere.el -> cerbere.el
+Created cerbere-20181113.1641.tar containing:
+  cerbere-20181113.1641/
+  cerbere-20181113.1641/cerbere-common.el
+  cerbere-20181113.1641/cerbere-elisp-ert-runner.el
+  cerbere-20181113.1641/cerbere-php-phpunit.el
+  cerbere-20181113.1641/cerbere-pkg.el
+  cerbere-20181113.1641/cerbere-python-tox.el
+  cerbere-20181113.1641/cerbere-ruby-minitest.el
+  cerbere-20181113.1641/cerbere-rust-libtest.el
+  cerbere-20181113.1641/cerbere.el
+ ✓ Success:
+  2023-10-22T14:20:49+0000  cerbere-20181113.1641.entry
+  2023-10-22T14:20:49+0000  cerbere-20181113.1641.tar
+Built cerbere in 4.117s, finished at 2023-10-22T14:20:51+0000
