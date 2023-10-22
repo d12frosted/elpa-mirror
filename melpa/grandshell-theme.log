@@ -3,17 +3,8 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/grandshell-theme.git
 
 Updating /mnt/store/melpa/working/grandshell-theme/
-Checking out 0ed8e4273607dd4fcaa742b4097259233b09eda6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/grandshell-theme/
-  to /tmp/grandshell-themesfHoQM/grandshell-theme-20180606.517
-    grandshell-theme-pkg.el -> grandshell-theme-pkg.el
-    grandshell-theme.el -> grandshell-theme.el
-Created grandshell-theme-20180606.517.tar containing:
-  grandshell-theme-20180606.517/
-  grandshell-theme-20180606.517/grandshell-theme-pkg.el
-  grandshell-theme-20180606.517/grandshell-theme.el
- ✓ Success:
-  2023-10-22T03:32:25+0000  grandshell-theme-20180606.517.entry
-  2023-10-22T03:32:25+0000  grandshell-theme-20180606.517.tar
-Built grandshell-theme in 5.161s, finished at 2023-10-22T03:32:27+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

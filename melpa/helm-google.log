@@ -3,16 +3,8 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/helm-google.git
 
 Updating /mnt/store/melpa/working/helm-google/
-Checking out 27834161391c350ef790062391cb7eab1d59fb62
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-google/
-  to /tmp/helm-googleGIz7xy/helm-google-20210527.900
-    helm-google.el -> helm-google.el
-Created helm-google-20210527.900.tar containing:
-  helm-google-20210527.900/
-  helm-google-20210527.900/helm-google-pkg.el
-  helm-google-20210527.900/helm-google.el
- ✓ Success:
-  2023-10-22T03:34:38+0000  helm-google-20210527.900.entry
-  2023-10-22T03:34:38+0000  helm-google-20210527.900.tar
-Built helm-google in 5.403s, finished at 2023-10-22T03:34:40+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; curl 35 GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
