@@ -3,16 +3,22 @@ Fetcher: github
 Source:  https://github.com/positron-solutions/elisp-repo-kit.git
 
 Updating /mnt/store/melpa/working/erk/
-Checking out f6cca4647538c4dc659f07669938f7e795dba4ee
+Checking out a982619ef62e403fed47136333b8762556c39a64
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erk/
-  to /tmp/erk28H5o1/erk-20230511.251
+  to /tmp/erkwpPUoz/erk-20231023.1400
   ! lisp/erk.el -> erk.el
-Created erk-20230511.251.tar containing:
-  erk-20230511.251/
-  erk-20230511.251/erk-pkg.el
-  erk-20230511.251/erk.el
+  ! docs/manual.texi -> manual.texi
+Generating /tmp/erkwpPUoz/erk-20231023.1400/manual.info
+Created erk-20231023.1400.tar containing:
+  erk-20231023.1400/
+  erk-20231023.1400/dir
+  erk-20231023.1400/erk-pkg.el
+  erk-20231023.1400/erk.el
+  erk-20231023.1400/manual.info
  ✓ Success:
-  2023-10-23T10:40:06+0000  erk-20230511.251.entry
-  2023-10-23T10:40:06+0000  erk-20230511.251.tar
-Built erk in 4.612s, finished at 2023-10-23T10:40:08+0000
+  2023-10-23T12:56:31+0000  erk-20230511.251.entry
+  2023-10-23T12:56:31+0000  erk-20230511.251.tar
+  2023-10-23T15:13:19+0000  erk-20231023.1400.entry
+  2023-10-23T15:13:19+0000  erk-20231023.1400.tar
+Built erk in 9.427s, finished at 2023-10-23T15:13:22+0000
