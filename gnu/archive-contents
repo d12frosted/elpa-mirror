@@ -231,7 +231,7 @@
 	 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	(:keywords "point" "location"))])
  (bbdb .
-       [(3 2 2 2)
+       [(3 2 2 4)
 	((emacs
 	  (24))
 	 (cl-lib
@@ -239,7 +239,7 @@
 	"Big Brother DataBase" tar
 	((:maintainer "Roland Winkler" . "winkler@gnu.org")
 	 (:url . "https://elpa.gnu.org/packages/bbdb.html")
-	 (:commit . "715f35b5f53d6bcdcb3754b4f98933df01b57c15"))])
+	 (:commit . "641ff1f309e65ac8bd9794bd5f72cfc9ffc297a4"))])
  (beacon .
 	 [(1 3 4)
 	  ((emacs

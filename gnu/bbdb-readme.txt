@@ -1,11 +1,11 @@
-Copyright (C) 2010-2022 Free Software Foundation, Inc.
+Copyright (C) 2010-2023 Free Software Foundation, Inc.
 See the end of the file for license conditions.
 
 BBDB is the Insidious Big Brother Database for GNU Emacs.
 It provides an address book for email and snail mail addresses,
 phone numbers and the like.  It can be linked with various Emacs mail
-clients (Message and Mail mode, Rmail, Gnus, MH-E, Mu4e, VM, and 
-Wanderlust).  BBDB is fully customizable.
+clients (Message and Mail mode, Rmail, Gnus, MH-E, Mu4e, VM, Notmuch,
+and Wanderlust).  BBDB is fully customizable.
 
 BBDB is available at
 http://elpa.gnu.org/packages/bbdb.html
@@ -15,7 +15,7 @@ M-x package-install RET bbdb RET
 BBDB is also available at
 http://savannah.nongnu.org/projects/bbdb/
 To check it out, use
-git clone git://git.savannah.nongnu.org/bbdb.git
+git clone https://git.savannah.nongnu.org/git/bbdb.git
 
 Questions, comments, suggestions, and bug reports may be directed to
 the BBDB mailing list at bbdb-user@nongnu.org.
@@ -55,6 +55,9 @@ To compile and install BBDB from Savannah with `make'
 
    `--with-wl-dir=DIR' specifies the path where Wanderlust can be found.
      Without this option the resulting BBDB build does not support WL.
+
+   `--with-notmuch-dir=DIR' specifies the path where Notmuch can be found.
+     Without this option the resulting BBDB build does not support Notmuch.
 
    `--with-lispdir=DIR' specifies where to install the lisp files.
 
@@ -129,8 +132,8 @@ BBDB interface with mail user agents (MUAs)
 ===========================================
 
 BBDB can interface with various mail user agents (MUAs).
-These include Rmail, Gnus, VM, MH-E, Mu4e, Wanderlust, Message and Mail mode.
-This lets you
+These include Rmail, Gnus, VM, MH-E, Mu4e, Notmuch, Wanderlust, Message
+and Mail mode.  This lets you
 
  - display the BBDB records for the sender and/or recipients of a
    message you are viewing
@@ -226,7 +229,7 @@ do not modify the records directly.  The recommended sequence of calls is
 
 ==================================================================
 
-Copyright (C) 2010-2022 Free Software Foundation, Inc.
+Copyright (C) 2010-2023 Free Software Foundation, Inc.
 
 This file is part of the Insidious Big Brother Database (aka BBDB),
 
