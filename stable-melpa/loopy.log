@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out 0780e281e12742803f5aac8f2126156d4271d567
+Checking out 9dfd773f901821f0d0637e264a6470d25dab45ef
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyCUIwQG/loopy-20231015.1458
+  to /tmp/loopyrEjbXC/loopy-20231023.152
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
     loopy-misc.el -> loopy-misc.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Generating /tmp/loopyCUIwQG/loopy-20231015.1458/loopy.info
-Created loopy-20231015.1458.tar containing:
-  loopy-20231015.1458/
-  loopy-20231015.1458/dir
-  loopy-20231015.1458/loopy-commands.el
-  loopy-20231015.1458/loopy-iter.el
-  loopy-20231015.1458/loopy-misc.el
-  loopy-20231015.1458/loopy-pcase.el
-  loopy-20231015.1458/loopy-pkg.el
-  loopy-20231015.1458/loopy-seq.el
-  loopy-20231015.1458/loopy-vars.el
-  loopy-20231015.1458/loopy.el
-  loopy-20231015.1458/loopy.info
+Generating /tmp/loopyrEjbXC/loopy-20231023.152/loopy.info
+Created loopy-20231023.152.tar containing:
+  loopy-20231023.152/
+  loopy-20231023.152/dir
+  loopy-20231023.152/loopy-commands.el
+  loopy-20231023.152/loopy-iter.el
+  loopy-20231023.152/loopy-misc.el
+  loopy-20231023.152/loopy-pcase.el
+  loopy-20231023.152/loopy-pkg.el
+  loopy-20231023.152/loopy-seq.el
+  loopy-20231023.152/loopy-vars.el
+  loopy-20231023.152/loopy.el
+  loopy-20231023.152/loopy.info
  ✓ Success:
   2023-10-22T23:49:12+0000  loopy-20231015.1458.entry
   2023-10-22T23:49:12+0000  loopy-20231015.1458.tar
-Built loopy in 15.153s, finished at 2023-10-22T23:49:14+0000
+  2023-10-23T02:03:49+0000  loopy-20231023.152.entry
+  2023-10-23T02:03:49+0000  loopy-20231023.152.tar
+Built loopy in 15.112s, finished at 2023-10-23T02:03:51+0000
