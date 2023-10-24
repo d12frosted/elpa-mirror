@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/jd/naquadah-theme.git
 
 Updating /mnt/store/melpa/working/naquadah-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: could not read Username for 'https://github.com': No such device or address
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 430c3b7bd51922cb616b3f60301f4e2604816ed8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/naquadah-theme/
+  to /tmp/naquadah-themeo4b5aQ/naquadah-theme-20190225.1427
+    naquadah-theme.el -> naquadah-theme.el
+Created naquadah-theme-20190225.1427.tar containing:
+  naquadah-theme-20190225.1427/
+  naquadah-theme-20190225.1427/naquadah-theme-pkg.el
+  naquadah-theme-20190225.1427/naquadah-theme.el
+ ✓ Success:
+  2023-10-24T18:55:36+0000  naquadah-theme-20190225.1427.entry
+  2023-10-24T18:55:36+0000  naquadah-theme-20190225.1427.tar
+Built naquadah-theme in 4.749s, finished at 2023-10-24T18:55:38+0000
