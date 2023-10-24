@@ -1,0 +1,20 @@
+Package: etherpad
+Fetcher: github
+Source:  https://github.com/zzkt/ethermacs.git
+
+Updating /mnt/store/melpa/working/etherpad/
+Checking out 29409bf9ff05b74d942c1cd7a421eeec2ef96e49
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/etherpad/
+  to /tmp/etherpadi2ln9D/etherpad-20230530.1248
+    etherpad-esync.el -> etherpad-esync.el
+    etherpad.el -> etherpad.el
+Created etherpad-20230530.1248.tar containing:
+  etherpad-20230530.1248/
+  etherpad-20230530.1248/etherpad-esync.el
+  etherpad-20230530.1248/etherpad-pkg.el
+  etherpad-20230530.1248/etherpad.el
+ ✓ Success:
+  2023-10-24T06:57:13+0000  etherpad-20230530.1248.entry
+  2023-10-24T06:57:13+0000  etherpad-20230530.1248.tar
+Built etherpad in 3.528s, finished at 2023-10-24T06:57:14+0000
