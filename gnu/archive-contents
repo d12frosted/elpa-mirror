@@ -3910,17 +3910,20 @@
 	   (:keywords "grep" "search")
 	   (:commit . "4a034d9b2ec90fcdbd1d4539c1bfb9555020f0e3"))])
  (url-http-ntlm .
-		[(2 0 4)
+		[(2 0 5)
 		 ((cl-lib
 		   (0 5))
 		  (ntlm
-		   (2 1 0)))
-		 "NTLM authentication for the url library" single
-		 ((:keywords "comm" "data" "processes" "hypermedia")
+		   (2 1 0))
+		  (nadvice
+		   (0 3)))
+		 "NTLM authentication for the url library" tar
+		 ((:url . "https://code.google.com/p/url-http-ntlm/")
+		  (:keywords "comm" "data" "processes" "hypermedia")
+		  (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		  (:authors
 		   ("Tom Schutzer-Weissmann" . "tom.weissmann@gmail.com"))
-		  (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
-		  (:url . "https://code.google.com/p/url-http-ntlm/"))])
+		  (:commit . "2c76d9491304e485a91c9d457fc25130279e1324"))])
  (url-http-oauth .
 		 [(0 8 3)
 		  nil "OAuth 2.0 for URL library" tar

@@ -9,5 +9,5 @@ Acknowledgements:
 Taro Kawagishi <tarok@transpulse.org> wrote ntlm.el and md4.el,
 which are parts of FLIM (Faithful Library about Internet Message).
 
-http://stuff.mit.edu/afs/sipb/contrib/emacs/packages/flim-1.14.7/ntlm.el
-http://stuff.mit.edu/afs/sipb/contrib/emacs/packages/flim-1.14.7/md4.el
+https://stuff.mit.edu/afs/sipb/contrib/emacs/packages/flim-1.14.7/ntlm.el
+https://stuff.mit.edu/afs/sipb/contrib/emacs/packages/flim-1.14.7/md4.el
