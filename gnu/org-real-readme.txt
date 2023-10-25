@@ -1,27 +1,6 @@
-			       ━━━━━━━━━━
-				ORG REAL
-			       ━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Usage
-.. 1. Inserting a link
-.. 2. Inserting a link with completion
-.. 3. Rearranging things
-.. 4. Opening links
-.. 5. `org-real-world'
-.. 6. Boxy mode
-2. License
-3. Development
-.. 1. Setup
-.. 2. Commands:
-..... 1. `eldev lint'
-..... 2. `eldev compile'
-..... 3. `eldev test'
-..... 4. `eldev package'
-..... 5. `eldev md5'
+                               ━━━━━━━━━━
+                                ORG REAL
+                               ━━━━━━━━━━
 
 
 Keep track of real things as org-mode links.
