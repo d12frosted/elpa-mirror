@@ -2295,14 +2295,14 @@
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
 		       (:commit . "695a59789209c42fa08a5bce92963ee32f4455be"))])
  (web-mode .
-	   [(17 3 14)
+	   [(17 3 15)
 	    ((emacs
 	      (23 1)))
 	    "major mode for editing web templates" tar
 	    ((:url . "https://web-mode.org")
 	     (:keywords "languages")
 	     (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
-	     (:commit . "443a09423d23727df7efd4e60beedd3919e4800a"))])
+	     (:commit . "848fce94de202541cd3fcd35e9c9d22783e9e828"))])
  (webpaste .
 	   [(3 2 2)
 	    ((emacs
@@ -2406,14 +2406,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 13 20231009132304)
+	       [(24 13 20231025112537)
 		((emacs
 		  (29)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "5f8d28b358ded1925a4e637a70bdafd41b62461a"))])
+		 (:commit . "d96d5a936a606446eaf29e8b3569a2f3cef94b9a"))])
  (xkcd .
        [(1 1)
 	((json
