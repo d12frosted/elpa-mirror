@@ -1812,7 +1812,7 @@
 	       ("Michael Heerdegen" . "michael_heerdegen@web.de"))
 	      (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de"))])
  (ivy .
-      [(0 14 0)
+      [(0 14 2)
        ((emacs
 	 (24 5)))
        "Incremental Vertical completYon" tar
@@ -1821,13 +1821,13 @@
 	(:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	(:authors
 	 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	(:commit . "abc993c6d066a11f9ca6ec70d2c5c2e2b3e6b17a"))])
+	(:commit . "97dfa3e7991aa7b713c04918ca0fbf43b7e3a201"))])
  (ivy-avy .
-	  [(0 14 0)
+	  [(0 14 2)
 	   ((emacs
 	     (24 5))
 	    (ivy
-	     (0 14 0))
+	     (0 14 2))
 	    (avy
 	     (0 5 0)))
 	   "Avy integration for Ivy" tar
@@ -1836,7 +1836,7 @@
 	    (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	    (:authors
 	     ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	    (:commit . "522c2ed7a62d3c7ff9e7ea455ad3c5d63b3c4b54"))])
+	    (:commit . "48bde81f31d0c201540d696f60fd33a2a7ccb7e1"))])
  (ivy-explorer .
 	       [(0 3 2)
 		((emacs
@@ -1850,11 +1850,11 @@
 		 (:maintainer "Clemens Radermacher" . "clemera@posteo.net")
 		 (:url . "https://github.com/clemera/ivy-explorer"))])
  (ivy-hydra .
-	    [(0 14 0)
+	    [(0 14 2)
 	     ((emacs
 	       (24 5))
 	      (ivy
-	       (0 14 0))
+	       (0 14 2))
 	      (hydra
 	       (0 14 0)))
 	     "Additional key bindings for Ivy" tar
@@ -1863,7 +1863,7 @@
 	      (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	      (:authors
 	       ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	      (:commit . "1ee6eda9f632d66f5e6b582a0d565e52feb856ed"))])
+	      (:commit . "ceeef47a0fd4f8f78a4718a2df691793959bbac8"))])
  (ivy-posframe .
 	       [(0 6 3)
 		((emacs
@@ -2075,7 +2075,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (llm .
-      [(0 4 0)
+      [(0 5 0)
        ((emacs
 	 (28 1)))
        "Interface to pluggable llm backends" tar
@@ -2083,7 +2083,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "3d3f898c3085421e0d70faa85c38aac71e38de35"))])
+	(:commit . "8f431fad9e4dd173fe12d7f9849dff934ea0331d"))])
  (lmc .
       [(1 4)
        ((emacs
@@ -3559,18 +3559,18 @@
 		 (:authors
 		  ("Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")))])
  (swiper .
-	 [(0 14 0)
+	 [(0 14 2)
 	  ((emacs
 	    (24 5))
 	   (ivy
-	    (0 14 0)))
+	    (0 14 2)))
 	  "Isearch with an overview.  Oh, man!" tar
 	  ((:url . "https://github.com/abo-abo/swiper")
 	   (:keywords "matching")
 	   (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	   (:authors
 	    ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	   (:commit . "4129750ab368c8bfd1ef2ad3df6ea11d79ad06b4"))])
+	   (:commit . "3d755fd540c0fa0c7d398bb709361291bd1fba0c"))])
  (switchy-window .
 		 [(1 3)
 		  ((emacs

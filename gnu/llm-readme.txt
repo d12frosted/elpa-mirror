@@ -118,9 +118,11 @@
   [Ollama] is a way to run large language models locally. There are
   [many different models] you can use with it. You set it up with the
   following parameters:
-  • `:port': The localhost port that ollama is run on.  This is optional
-    and will default to the default ollama port.
-  • `:chat-mode': The model name to use for chat.  This is not optional
+  • `:host': The host that ollama is run on.  This is optional and will
+    default to localhost.
+  • `:port': The port that ollama is run on.  This is optional and will
+    default to the default ollama port.
+  • `:chat-model': The model name to use for chat.  This is not optional
     for chat use, since there is no default.
   • `:embedding-model': The model name to use for embeddings.  This is
     not optional for embedding use, since there is no default.
@@ -131,7 +133,27 @@
 [many different models] <https://ollama.ai/library>
 
 
-2.4 Fake
+2.4 GPT4All
+───────────
+
+  [GPT4All] is a way to run large language models locally.  To use it
+  with `llm' package, you must click "Enable API Server" in the
+  settings.  It does not offer embeddings or streaming functionality,
+  though, so Ollama might be a better fit for users who are not already
+  set up with local models.  You can set it up with the following
+  parameters:
+  • `:host': The host that GPT4All is run on.  This is optional and will
+    default to localhost.
+  • `:port': The port that GPT4All is run on.  This is optional and will
+    default to the default ollama port.
+  • `:chat-model': The model name to use for chat.  This is not optional
+    for chat use, since there is no default.
+
+
+[GPT4All] <https://gpt4all.io/index.html>
+
+
+2.5 Fake
 ────────
 
   This is a client that makes no call, but it just there for testing and
@@ -185,7 +207,13 @@
   user-api-key)'.  The client application will use this provider to call
   all the generic functions.
 
-  A list of all the main functions:
+  For all callbacks, the callback will be executed in the buffer the
+  function was first called from.  If the buffer has been killed, it
+  will be executed in a temporary buffer instead.
+
+
+4.1 Main functions
+──────────────────
 
   • `llm-chat provider prompt': With user-chosen `provider' , and a
     `llm-chat-prompt' structure (containing context, examples,
@@ -229,6 +257,34 @@
     • `llm-chat-streaming-to-point provider prompt buffer point
       finish-callback': Same basic arguments as `llm-chat-streaming',
       but will stream to `point' in `buffer'.
+    • `llm-chat-prompt-append-response prompt response role': Append a
+      new response (from the user, usually) to the prompt.  The `role'
+      is optional, and defaults to `'user'.
+
+
+4.2 How to handle conversations
+───────────────────────────────
+
+  Conversations can take place by repeatedly calling `llm-chat' and its
+  variants.  For a conversation, the entire prompt must be a variable,
+  because the `llm-chat-prompt-interactions' slot will be getting
+  changed by the chat functions to store the conversation.  For some
+  providers, this will store the history directly in
+  `llm-chat-prompt-interactions', but for others (such as ollama), the
+  conversation history is opaque.  For that reason, the correct way to
+  handle a conversation is to repeatedly call `llm-chat' or variants,
+  and after each time, add the new user text with
+  `llm-chat-prompt-append-response'.  The following is an example:
+
+  ┌────
+  │ (defvar-local llm-chat-streaming-prompt nil)
+  │ (defun start-or-continue-conversation (text)
+  │   "Called when the user has input TEXT as the next input."
+  │   (if llm-chat-streaming-prompt
+  │       (llm-chat-prompt-append-response llm-chat-streaming-prompt text)
+  │     (setq llm-chat-streaming-prompt (llm-make-simple-chat-prompt text))
+  │     (llm-chat-streaming-to-point provider llm-chat-streaming-prompt (current-buffer) (point-max) (lambda ()))))
+  └────
 
 
 5 Contributions
