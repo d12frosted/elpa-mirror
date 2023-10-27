@@ -19,13 +19,13 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (ada-mode .
-	   [(8 0 5)
+	   [(8 1 0)
 	    ((uniquify-files
 	      (1 0 4))
 	     (wisi
-	      (4 2 2))
+	      (4 3 0))
 	     (gnat-compiler
-	      (1 0 2))
+	      (1 0 3))
 	     (emacs
 	      (25 3)))
 	    "major-mode for editing Ada sources" tar
@@ -34,7 +34,7 @@
 	     (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
 	     (:authors
 	      ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
-	     (:commit . "8660d5e9b2219208e5d43b979f5fb57fbb518924"))])
+	     (:commit . "357ac189bea640023e33214e8efe9288d9d1416c"))])
  (ada-ref-man .
 	      [(2020 1)
 	       nil "Ada Reference Manual 2012" tar
@@ -650,20 +650,20 @@
 	    ("jakanakaevangeli" . "jakanakaevangeli@chiru.no"))
 	   (:commit . "d8e1b04cd359d9f27ab7c6dbf8cae90dde834085"))])
  (counsel .
-	  [(0 14 0)
+	  [(0 14 2)
 	   ((emacs
 	     (24 5))
 	    (ivy
-	     (0 14 0))
+	     (0 14 2))
 	    (swiper
-	     (0 14 0)))
+	     (0 14 2)))
 	   "Various completion functions using Ivy" tar
 	   ((:url . "https://github.com/abo-abo/swiper")
 	    (:keywords "convenience" "matching" "tools")
 	    (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	    (:authors
 	     ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	    (:commit . "603c29c64856ba7f32ca00affae64f2f5ae3fced"))])
+	    (:commit . "08b0a88d67494aa4cca469247f8b44edb6402b52"))])
  (cpio-mode .
 	    [(0 17)
 	     ((emacs
@@ -1073,7 +1073,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "16613c18c5ec17755f083f4839bca7e4e05dd4c7"))])
  (ef-themes .
-	    [(1 3 0)
+	    [(1 4 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -1082,7 +1082,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "86b92a5567800c50ea316d97846df138f34a3307"))])
+	      (:commit . "3f10dea8d8f85ddb011e9beaf4ca1b107d2d9683"))])
  (eglot .
 	[(1 15)
 	 ((emacs
@@ -1398,7 +1398,7 @@
 	     ("Barry O'Reilly" . "gundaetiapo@gmail.com"))
 	    (:maintainer "Barry O'Reilly" . "gundaetiapo@gmail.com"))])
  (flymake .
-	  [(1 3 6)
+	  [(1 3 7)
 	   ((emacs
 	     (26 1))
 	    (eldoc
@@ -1411,7 +1411,7 @@
 	    (:authors
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
 	    (:url . "https://elpa.gnu.org/packages/flymake.html")
-	    (:commit . "9db3fbd369121ddd34e7f4febe8688d758a5dbb7"))])
+	    (:commit . "309823ff7796416414cee8c6f4d2650615c19f64"))])
  (flymake-proselint .
 		    [(0 3 0)
 		     ((emacs
@@ -1520,17 +1520,17 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (gnat-compiler .
-		[(1 0 2)
+		[(1 0 3)
 		 ((emacs
 		   (25 3))
 		  (wisi
-		   (4 2 0)))
+		   (4 3 0)))
 		 "Support for running GNAT tools" tar
 		 ((:maintainer "Stephen Leake" . "stephen_leake@member.fsf.org")
 		  (:authors
 		   ("Stephen Leake" . "stephen_leake@member.fsf.org"))
 		  (:url . "https://elpa.gnu.org/packages/gnat-compiler.html")
-		  (:commit . "49774d33dc26ee75944a7380180cd748881e3a3f"))])
+		  (:commit . "9db5c393ee0f9694e83305ef8b0b1e37f0560111"))])
  (gnome-c-style .
 		[(0 1)
 		 nil "minor mode for editing GNOME-style C source code" tar
@@ -1598,33 +1598,33 @@
 	    (:maintainer "Damien Cassou" . "damien@cassou.me")
 	    (:url . "https://gitlab.petton.fr/DamienCassou/desktop-environment"))])
  (gpr-mode .
-	   [(1 0 3)
+	   [(1 0 4)
 	    ((emacs
 	      (25 3))
 	     (wisi
-	      (4 2 2))
+	      (4 3 0))
 	     (gnat-compiler
-	      (1 0 1)))
+	      (1 0 3)))
 	    "Major mode for editing GNAT project files" tar
 	    ((:url . "https://stephe-leake.org/ada/wisitoken.html")
 	     (:maintainer "Stephen Leake" . "stephen_leake@member.fsf.org")
 	     (:authors
 	      ("Stephen Leake" . "stephen_leake@member.fsf.org"))
-	     (:commit . "9676e6361ef38fd953835b405ccccdf0d0c5517b"))])
+	     (:commit . "ed12dc73272f9f77c974db0ff0290f959125224f"))])
  (gpr-query .
-	    [(1 0 3)
+	    [(1 0 4)
 	     ((emacs
 	       (25 3))
 	      (wisi
-	       (4 2 2))
+	       (4 3 0))
 	      (gnat-compiler
-	       (1 0 2)))
+	       (1 0 3)))
 	     "Minor mode for navigating sources using gpr_query" tar
 	     ((:maintainer "Stephen Leake" . "stephen_leake@member.fsf.org")
 	      (:authors
 	       ("Stephen Leake" . "stephen_leake@member.fsf.org"))
 	      (:url . "https://elpa.gnu.org/packages/gpr-query.html")
-	      (:commit . "ada0d0afcefe88b66b9cc53de5d76db661bfb2d7"))])
+	      (:commit . "d50f92fe46828b6b675770dba3004c1ea6ab0b50"))])
  (graphql .
 	  [(0 1 2)
 	   ((emacs
@@ -4214,7 +4214,7 @@
 		("Bastien" . "bzg@gnu.org"))
 	       (:maintainer "Bastien" . "bzg@gnu.org"))])
  (wisi .
-       [(4 2 2)
+       [(4 3 2)
 	((emacs
 	  (25 3))
 	 (seq
@@ -4225,7 +4225,7 @@
 	 (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
 	 (:authors
 	  ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
-	 (:commit . "a12d5248783d9c98d46c66c8fd3607fceb47b36d"))])
+	 (:commit . "1c4b099bf1f93cebee523b0ba75ccab6c6c2a2f0"))])
  (wisitoken-grammar-mode .
 			 [(1 3 0)
 			  ((wisi

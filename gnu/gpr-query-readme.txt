@@ -1,4 +1,4 @@
-Emacs gpr-query version 1.0.2
+Emacs gpr-query version 1.0.4
 
 gpr-query provides an emacs xref backend using the cross-reference
 information output by the AdaCore GNAT compiler.

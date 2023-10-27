@@ -1,12 +1,9 @@
-This package provides a minor mode for annotating changes in org-mode
-files, by defining a new type of link, the change: link.  Using the
-functions org-change-add, org-change-delete, and
-org-change-replace, you can mark text as constitution an addiion,
-deletion, or replacement to the text.  These functions are bound by
-default to C-` a, C-` d, and C-` r. Functions org-change-accept and
-org-change-reject can be used to replace the change: link with the
-new and old text, respectively.  These are bound to C-` o and C-` x.
-
-To change key bindings and other settings, run M-x customize-group
-RET org-change.  When exporting to LaTeX, changes are rendered using
-the "changes" package.  See the package URL for more documentation.
+org-change is a minor mode to annotate changes in org-mode files by
+defining a "change" link type that hides old text and shows new
+text. Mark additions to the text with org-change-add (C-` a),
+deletions with org-change-delete (C-` d), and replacements with
+org-change-replace (C-` r). Accept or reject changes with
+org-change-accept (C-` k) and org-change-reject (C-` x). LaTeX and
+HTML export are available. To change key bindings and other
+settings, run M-x customize-group RET org-change. More information
+at the package URL.
