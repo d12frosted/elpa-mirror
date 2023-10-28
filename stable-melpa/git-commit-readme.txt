@@ -46,17 +46,10 @@ an aborted message use M-p and M-n while editing a message.
   M-n      Replace the buffer contents with the next message from
            the message ring, after storing the current content.
 
-Some support for pseudo headers as used in some projects is
-provided by these commands:
+Support for inserting Git trailers (as described in the manpage
+git-interpret-trailers(1)) is available.
 
-  C-c C-s  Insert a Signed-off-by header.
-  C-c C-a  Insert a Acked-by header.
-  C-c C-m  Insert a Modified-by header.
-  C-c C-t  Insert a Tested-by header.
-  C-c C-r  Insert a Reviewed-by header.
-  C-c C-o  Insert a Cc header.
-  C-c C-p  Insert a Reported-by header.
-  C-c C-i  Insert a Suggested-by header.
+  C-c C-i  Insert a trailer selected from a transient menu.
 
 When Git requests a commit message from the user, it does so by
 having her edit a file which initially contains some comments,
