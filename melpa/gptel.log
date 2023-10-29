@@ -3,22 +3,26 @@ Fetcher: github
 Source:  https://github.com/karthink/gptel.git
 
 Updating /mnt/store/melpa/working/gptel/
-Checking out 61c0df5e19e44f50f96002c8c7a75c8a2d3112bb
+Checking out aa50cbab704ce8e6cab57868c3358a2eda6bdd68
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptelPQAcZB/gptel-20231029.234
+  to /tmp/gptelh3Wfrb/gptel-20231029.734
     gptel-curl.el -> gptel-curl.el
+    gptel-ollama.el -> gptel-ollama.el
+    gptel-openai.el -> gptel-openai.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20231029.234.tar containing:
-  gptel-20231029.234/
-  gptel-20231029.234/gptel-curl.el
-  gptel-20231029.234/gptel-pkg.el
-  gptel-20231029.234/gptel-transient.el
-  gptel-20231029.234/gptel.el
+Created gptel-20231029.734.tar containing:
+  gptel-20231029.734/
+  gptel-20231029.734/gptel-curl.el
+  gptel-20231029.734/gptel-ollama.el
+  gptel-20231029.734/gptel-openai.el
+  gptel-20231029.734/gptel-pkg.el
+  gptel-20231029.734/gptel-transient.el
+  gptel-20231029.734/gptel.el
  ✓ Success:
-  2023-10-29T00:56:25+0000  gptel-20231024.2326.entry
-  2023-10-29T00:56:25+0000  gptel-20231024.2326.tar
-  2023-10-29T03:13:17+0000  gptel-20231029.234.entry
-  2023-10-29T03:13:17+0000  gptel-20231029.234.tar
-Built gptel in 4.360s, finished at 2023-10-29T03:13:19+0000
+  2023-10-29T05:30:18+0000  gptel-20231029.234.entry
+  2023-10-29T05:30:18+0000  gptel-20231029.234.tar
+  2023-10-29T07:48:45+0000  gptel-20231029.734.entry
+  2023-10-29T07:48:45+0000  gptel-20231029.734.tar
+Built gptel in 8.273s, finished at 2023-10-29T07:48:48+0000
