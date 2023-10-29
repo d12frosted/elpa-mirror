@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/php-boris-minor-mode.git
 
 Updating /mnt/store/melpa/working/php-boris-minor-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://framagit.org/steckerhalter/php-boris-minor-mode.git/': Error while processing content unencoding: invalid stored block lengths
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 8648eba604e4ff82ef6594a2c5ee4cb4825e6235
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/php-boris-minor-mode/
+  to /tmp/php-boris-minor-modeWzAuaT/php-boris-minor-mode-20140209.1835
+    php-boris-minor-mode.el -> php-boris-minor-mode.el
+Created php-boris-minor-mode-20140209.1835.tar containing:
+  php-boris-minor-mode-20140209.1835/
+  php-boris-minor-mode-20140209.1835/php-boris-minor-mode-pkg.el
+  php-boris-minor-mode-20140209.1835/php-boris-minor-mode.el
+ ✓ Success:
+  2023-10-29T03:43:06+0000  php-boris-minor-mode-20140209.1835.entry
+  2023-10-29T03:43:06+0000  php-boris-minor-mode-20140209.1835.tar
+Built php-boris-minor-mode in 5.312s, finished at 2023-10-29T03:43:08+0000
