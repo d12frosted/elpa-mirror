@@ -1,17 +1,17 @@
-Set up Emacs package with GitHub repository configuration, complete with
-Actions CI, tests, lints, documentation generation, and a licensing scheme
-all ready to go.  Included commands are focused on productivity, appropriate
-for professional development in elisp.  The goal of the package is streamline
-authoring & distributing new Emacs packages.  It provides a well-integrated
-but rigid scheme, aka opinionated.
+Set up and develop Emacs packages, complete with Github Actions CI, tests,
+lints, documentation generation, and a licensing scheme all ready to go.
+Included commands are focused on productivity, appropriate for professional
+development in elisp.  The goal of the package is streamline authoring &
+distributing new Emacs packages.  It provides a well-integrated but rigid
+scheme, aka opinionated.
 
-The package also uses its own hosted source as a substrate for creating new
-packages.  It will clone its source repository and then perform renaming &
-re-licensing.  Simply call `erk-new' to start a new package.  The
-README documents remaining setup steps on GitHub and in preparation for
-publishing on MELPA.
+Simply call `erk-new' to start a new package.  ERK will clone a small
+template project and interactively rename and relicense the project.
+Instructions on how to host and publish your package are included in the
+manual.
 
 As a development aid, the package is versatile enough to work on some elisp
-packages that were not descended from its own source.  The scope of
-functionality is primarily to interface with linting and testing frameworks,
-both in batch and interactive workflows.
+packages not descended from its templates.  The provided functionality
+focuses on smoothing out typical workflows.  Common actions like reloading
+packages and navigating between source & tests are streamlined.  Processes
+like exporting all documents are automated.
