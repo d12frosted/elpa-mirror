@@ -2,7 +2,7 @@ This package adds support for AWS Cloudformation in Flycheck.
 
 To use, first install the requisite tools:
 
-~gem install cfn_nag~
+~gem install cfn-nag~
 ~pip install cfn-lint~
 
 For information about these checkers, and how to handle configuration and
