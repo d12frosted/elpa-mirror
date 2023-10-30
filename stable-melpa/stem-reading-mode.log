@@ -3,16 +3,7 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/stem-reading-mode.el.git
 
 Updating /mnt/store/melpa/working/stem-reading-mode/
-Checking out 6efc9962e3a19a452c7ab9636cf1e2566a51bd38
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/stem-reading-mode/
-  to /tmp/stem-reading-modeBM9qcf/stem-reading-mode-20220522.1053
-    stem-reading-mode.el -> stem-reading-mode.el
-Created stem-reading-mode-20220522.1053.tar containing:
-  stem-reading-mode-20220522.1053/
-  stem-reading-mode-20220522.1053/stem-reading-mode-pkg.el
-  stem-reading-mode-20220522.1053/stem-reading-mode.el
- ✓ Success:
-  2023-10-30T11:04:47+0000  stem-reading-mode-20220522.1053.entry
-  2023-10-30T11:04:46+0000  stem-reading-mode-20220522.1053.tar
-Built stem-reading-mode in 5.498s, finished at 2023-10-30T11:04:49+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://gitlab.com/wavexx/stem-reading-mode.el.git/': The requested URL returned error: 502
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

@@ -3,19 +3,7 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/python-x.el.git
 
 Updating /mnt/store/melpa/working/python-x/
-Checking out 744924e7468200f3e8ac7ad60a496ad9d080308e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/python-x/
-  to /tmp/python-xYwf58n/python-x-20230117.1408
-    python-help-mode.el -> python-help-mode.el
-    python-x-pkg.el -> python-x-pkg.el
-    python-x.el -> python-x.el
-Created python-x-20230117.1408.tar containing:
-  python-x-20230117.1408/
-  python-x-20230117.1408/python-help-mode.el
-  python-x-20230117.1408/python-x-pkg.el
-  python-x-20230117.1408/python-x.el
- ✓ Success:
-  2023-10-30T10:56:05+0000  python-x-20230117.1408.entry
-  2023-10-30T10:56:05+0000  python-x-20230117.1408.tar
-Built python-x in 8.103s, finished at 2023-10-30T10:56:09+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://gitlab.com/wavexx/python-x.el.git/': The requested URL returned error: 503
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
