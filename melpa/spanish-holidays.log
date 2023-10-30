@@ -3,7 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/gnuhack/spanish-holidays.git
 
 Updating /mnt/store/melpa/working/spanish-holidays/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.com/gnuhack/spanish-holidays.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 26d552ae71f670dc966a3b7b7614d1622bce9f38
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/spanish-holidays/
+  to /tmp/spanish-holidayspmDrro/spanish-holidays-20230626.805
+    spanish-holidays.el -> spanish-holidays.el
+Created spanish-holidays-20230626.805.tar containing:
+  spanish-holidays-20230626.805/
+  spanish-holidays-20230626.805/spanish-holidays-pkg.el
+  spanish-holidays-20230626.805/spanish-holidays.el
+ ✓ Success:
+  2023-10-30T17:52:03+0000  spanish-holidays-20230626.805.entry
+  2023-10-30T17:52:03+0000  spanish-holidays-20230626.805.tar
+Built spanish-holidays in 4.281s, finished at 2023-10-30T17:52:05+0000

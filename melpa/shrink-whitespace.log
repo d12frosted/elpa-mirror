@@ -3,7 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jcpetkovich/shrink-whitespace.el.git
 
 Updating /mnt/store/melpa/working/shrink-whitespace/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.com/jcpetkovich/shrink-whitespace.el.git/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 0407b89c142bd17e65edb666f35e2c6755bd0867
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shrink-whitespace/
+  to /tmp/shrink-whitespace0IsVK8/shrink-whitespace-20181003.321
+    shrink-whitespace.el -> shrink-whitespace.el
+Created shrink-whitespace-20181003.321.tar containing:
+  shrink-whitespace-20181003.321/
+  shrink-whitespace-20181003.321/shrink-whitespace-pkg.el
+  shrink-whitespace-20181003.321/shrink-whitespace.el
+ ✓ Success:
+  2023-10-30T17:49:49+0000  shrink-whitespace-20181003.321.entry
+  2023-10-30T17:49:49+0000  shrink-whitespace-20181003.321.tar
+Built shrink-whitespace in 4.279s, finished at 2023-10-30T17:49:51+0000

@@ -3,8 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/cnngimenez/sqlite.el.git
 
 Updating /mnt/store/melpa/working/sqlite/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 503 curl 22 The requested URL returned error: 503
-fatal: expected flush after ref listing
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out f3da716302c929b9df4ba0c281968f72a9d1d188
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sqlite/
+  to /tmp/sqliteULQdNY/sqlite-20201227.1822
+    sqlite.el -> sqlite.el
+Created sqlite-20201227.1822.tar containing:
+  sqlite-20201227.1822/
+  sqlite-20201227.1822/sqlite-pkg.el
+  sqlite-20201227.1822/sqlite.el
+ ✓ Success:
+  2023-10-30T17:52:31+0000  sqlite-20201227.1822.entry
+  2023-10-30T17:52:31+0000  sqlite-20201227.1822.tar
+Built sqlite in 4.519s, finished at 2023-10-30T17:52:33+0000

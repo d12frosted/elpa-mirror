@@ -3,8 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/matteoredaelli/sql-sqlline.git
 
 Updating /mnt/store/melpa/working/sql-sqlline/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
-fatal: expected flush after ref listing
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 189c55261ecf0d7990edf7d1bb89776225e9092b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sql-sqlline/
+  to /tmp/sql-sqllineEGvTyS/sql-sqlline-20201102.1508
+  ! artifacts/sql-sqlline.el -> sql-sqlline.el
+Created sql-sqlline-20201102.1508.tar containing:
+  sql-sqlline-20201102.1508/
+  sql-sqlline-20201102.1508/sql-sqlline-pkg.el
+  sql-sqlline-20201102.1508/sql-sqlline.el
+ ✓ Success:
+  2023-10-30T17:52:30+0000  sql-sqlline-20201102.1508.entry
+  2023-10-30T17:52:30+0000  sql-sqlline-20201102.1508.tar
+Built sql-sqlline in 4.401s, finished at 2023-10-30T17:52:32+0000
