@@ -1412,6 +1412,19 @@
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
 	    (:url . "https://elpa.gnu.org/packages/flymake.html")
 	    (:commit . "309823ff7796416414cee8c6f4d2650615c19f64"))])
+ (flymake-codespell .
+		    [(0 1)
+		     ((emacs
+		       (26 1))
+		      (compat
+		       (29 1 4 2)))
+		     "Flymake backend for codespell" tar
+		     ((:url . "https://www.github.com/skangas/flymake-codespell")
+		      (:keywords "extensions")
+		      (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
+		      (:authors
+		       ("Stefan Kangas" . "stefankangas@gmail.com"))
+		      (:commit . "d72e3ad4cdfd5cea1509a241d55e18f54ae2aeca"))])
  (flymake-proselint .
 		    [(0 3 0)
 		     ((emacs
