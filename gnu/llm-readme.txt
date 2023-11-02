@@ -242,8 +242,9 @@
     embedding, and, in case of error, `error-callback' is called with
     the same arguments as in `llm-chat-async'.
   • `llm-count-tokens provider string': Count how many tokens are in
-    `string'.  This may theoretically vary by `provider' but typically
-    is always about the same.  This gives an estimate only.
+    `string'.  This may vary by `provider', because some provideres
+    implement an API for this, but typically is always about the same.
+    This gives an estimate if the provider has no API support.
 
     And the following helper functions:
     • `llm-make-simple-chat-prompt text': For the common case of just
