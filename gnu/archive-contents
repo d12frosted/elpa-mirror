@@ -1650,7 +1650,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 5 0)
+	  [(0 6 0)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1659,7 +1659,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "c87373438efacfd3e7e81189aa58e5a2a65c5167"))])
+	    (:commit . "8f6cf791ad02579346ee078cf929c0044ff3e46d"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
@@ -3485,18 +3485,18 @@
 		("Alex Harsanyi" . "AlexHarsanyi@gmail.com"))
 	       (:commit . "323ece64acaac7f27b7806db9dba0757d6e57885"))])
  (srht .
-       [(0 2)
+       [(0 3)
 	((emacs
 	  (27 1))
 	 (plz
-	  (0 1)))
+	  (0 7)))
 	"Sourcehut" tar
 	((:url . "https://sr.ht/~akagi/srht.el/")
 	 (:keywords "comm" "vc")
 	 (:maintainer "Aleksandr Vityazev" . "avityazev@posteo.org")
 	 (:authors
 	  ("Aleksandr Vityazev" . "avityazev@posteo.org"))
-	 (:commit . "5605a75111a9b1a1e67bd012bbf78fc6cb54f96b"))])
+	 (:commit . "8cab1e48bcb5b8ee70c498a712fb6f52eddc95ab"))])
  (ssh-deploy .
 	     [(3 1 16)
 	      ((emacs
