@@ -1657,13 +1657,15 @@
 	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	  (:commit . "4a585029875a1dbbe96d8ac157bd2fd02875f289"))])
  (package-lint .
-	       [(0 19)
+	       [(0 20)
 		((cl-lib
 		  (0 5))
 		 (emacs
-		  (24 1))
+		  (24 4))
 		 (let-alist
-		     (1 0 6)))
+		     (1 0 6))
+		 (compat
+		  (29 1)))
 		"A linting library for elisp package authors" tar
 		((:url . "https://github.com/purcell/package-lint")
 		 (:keywords "lisp")
@@ -1673,7 +1675,7 @@
 		 (:authors
 		  ("Steve Purcell" . "steve@sanityinc.com")
 		  ("Fanael Linithien" . "fanael4@gmail.com"))
-		 (:commit . "91d0f1077c78753e09973d63fb3e571413a4c206"))])
+		 (:commit . "5eba825d657b490c320b2ea2c302b1fa0c999610"))])
  (pacmacs .
 	  [(0 1 1)
 	   ((emacs
