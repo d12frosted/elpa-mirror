@@ -745,7 +745,7 @@
   (composable :url "https://github.com/paldepind/composable.el.git")
   (composer :url "https://github.com/emacs-php/composer.el.git")
   (comware-router-mode :url "https://github.com/daviderestivo/comware-router-mode.git")
-  (conan :url "https://github.com/carl2/conan-elisp.git")
+  (conan :url "https://github.com/Carl2/conan-elisp.git")
   (concurrent :url "https://github.com/kiwanami/emacs-deferred.git")
   (conda :url "https://github.com/necaris/conda.el.git")
   (config-general-mode :url "https://github.com/TLINDEN/config-general-mode.git")

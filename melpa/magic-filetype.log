@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/emacs-php/magic-filetype.el.git
 
 Updating /mnt/store/melpa/working/magic-filetype/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://github.com/emacs-php/magic-filetype.el.git/': The requested URL returned error: 503
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out fce1eaade148eb0dc4ce1d27a4763e280fe48466
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magic-filetype/
+  to /tmp/magic-filetypeYw9j8W/magic-filetype-20230916.441
+    magic-filetype.el -> magic-filetype.el
+Created magic-filetype-20230916.441.tar containing:
+  magic-filetype-20230916.441/
+  magic-filetype-20230916.441/magic-filetype-pkg.el
+  magic-filetype-20230916.441/magic-filetype.el
+ ✓ Success:
+  2023-11-04T01:55:14+0000  magic-filetype-20230916.441.entry
+  2023-11-04T01:55:14+0000  magic-filetype-20230916.441.tar
+Built magic-filetype in 4.598s, finished at 2023-11-04T01:55:16+0000
