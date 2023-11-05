@@ -575,7 +575,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(29 1 4 2)
+	 [(29 1 4 3)
 	  ((emacs
 	    (24 4))
 	   (seq
@@ -583,10 +583,13 @@
 	  "Emacs Lisp Compatibility Library" tar
 	  ((:url . "https://github.com/emacs-compat/compat")
 	   (:keywords "lisp" "maint")
-	   (:maintainer "Daniel Mendler <mail@daniel-mendler.de>, Compat Development" . "~pkal/compat-devel@lists.sr.ht")
+	   (:maintainer
+	    ("Daniel Mendler" . "mail@daniel-mendler.de")
+	    ("Compat Development" . "~pkal/compat-devel@lists.sr.ht"))
 	   (:authors
-	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "74300f16a1630a33a86710aa20c1fc26f5f89f75"))])
+	    ("Philip Kaludercic" . "philipk@posteo.net")
+	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	   (:commit . "14f5f74dd98dcd0410559942aae4d8ed49e36154"))])
  (consult .
 	  [(0 35)
 	   ((emacs
