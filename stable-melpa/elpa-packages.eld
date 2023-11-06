@@ -899,6 +899,8 @@
   (dakrone-light-theme :url "https://github.com/dakrone/dakrone-light-theme.git")
   (dakrone-theme :url "https://github.com/dakrone/dakrone-theme.git")
   (dall-e-shell :url "https://github.com/xenodium/chatgpt-shell.git")
+  (daml-lsp :url "https://github.com/bartfailt/daml-lsp.git")
+  (daml-mode :url "https://github.com/bartfailt/daml-mode.git")
   (danneskjold-theme :url "https://github.com/rails-to-cosmos/danneskjold-theme.git")
   (dante :url "https://github.com/jyp/dante.git")
   (dap-mode :url "https://github.com/emacs-lsp/dap-mode.git")
