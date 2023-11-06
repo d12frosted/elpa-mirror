@@ -2079,14 +2079,14 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 2 5)
+	[(1 2 6)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
 	 ((:url . "https://github.com/sachac/subed")
 	  (:keywords "convenience" "files" "hypermedia" "multimedia")
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-	  (:commit . "de7ee929613a9c5430d5f8927f3beab7af002659"))])
+	  (:commit . "2598656c5d62cb1a082ff5c49658246805443c60"))])
  (sweeprolog .
 	     [(0 26 1)
 	      ((emacs
@@ -2408,14 +2408,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 15 20231102161602)
+	       [(24 15 20231105091131)
 		((emacs
-		  (29)))
+		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
-		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
+		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "9637e144a0a9349ce11f82cd61b413fb95de9659"))])
+		 (:commit . "de3c7b272128bbcfa9f8afad27b7723f1813cdba"))])
  (xkcd .
        [(1 1)
 	((json
