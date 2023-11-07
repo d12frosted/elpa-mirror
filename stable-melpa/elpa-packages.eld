@@ -944,7 +944,7 @@
   (decide :url "https://github.com/lifelike/decide-mode.git")
   (decl :url "https://github.com/preetpalS/decl.el.git")
   (declutter :url "https://github.com/sanel/declutter.git")
-  (decor :url "https://github.com/keyweeusr/decor.git")
+  (decor :url "https://github.com/KeyWeeUsr/decor.git")
   (dedicated :url "https://github.com/emacsorphanage/dedicated.git")
   (dedukti-mode :url "https://github.com/rafoo/dedukti-mode.git")
   (default-font-presets :url "https://codeberg.org/ideasman42/emacs-default-font-presets.git")

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/chenyanming/calibredb.el.git
 
 Updating /mnt/store/melpa/working/calibredb/
-Checking out 588039aeb471c0bdabea36dab5e1c37441d38fed
+Checking out 124c916f203511c64d03fac28d303dfb102a6ead
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/calibredb/
-  to /tmp/calibredbrfKoWu/calibredb-20230809.927
+  to /tmp/calibredbdK4E76/calibredb-20231107.302
     calibredb-annotation.el -> calibredb-annotation.el
     calibredb-consult.el -> calibredb-consult.el
     calibredb-core.el -> calibredb-core.el
@@ -22,25 +22,27 @@ Copying files (->) and directories (=>)
     calibredb-transient.el -> calibredb-transient.el
     calibredb-utils.el -> calibredb-utils.el
     calibredb.el -> calibredb.el
-Created calibredb-20230809.927.tar containing:
-  calibredb-20230809.927/
-  calibredb-20230809.927/calibredb-annotation.el
-  calibredb-20230809.927/calibredb-consult.el
-  calibredb-20230809.927/calibredb-core.el
-  calibredb-20230809.927/calibredb-dired.el
-  calibredb-20230809.927/calibredb-faces.el
-  calibredb-20230809.927/calibredb-helm.el
-  calibredb-20230809.927/calibredb-ivy.el
-  calibredb-20230809.927/calibredb-library.el
-  calibredb-20230809.927/calibredb-opds.el
-  calibredb-20230809.927/calibredb-org.el
-  calibredb-20230809.927/calibredb-pkg.el
-  calibredb-20230809.927/calibredb-search.el
-  calibredb-20230809.927/calibredb-show.el
-  calibredb-20230809.927/calibredb-transient.el
-  calibredb-20230809.927/calibredb-utils.el
-  calibredb-20230809.927/calibredb.el
+Created calibredb-20231107.302.tar containing:
+  calibredb-20231107.302/
+  calibredb-20231107.302/calibredb-annotation.el
+  calibredb-20231107.302/calibredb-consult.el
+  calibredb-20231107.302/calibredb-core.el
+  calibredb-20231107.302/calibredb-dired.el
+  calibredb-20231107.302/calibredb-faces.el
+  calibredb-20231107.302/calibredb-helm.el
+  calibredb-20231107.302/calibredb-ivy.el
+  calibredb-20231107.302/calibredb-library.el
+  calibredb-20231107.302/calibredb-opds.el
+  calibredb-20231107.302/calibredb-org.el
+  calibredb-20231107.302/calibredb-pkg.el
+  calibredb-20231107.302/calibredb-search.el
+  calibredb-20231107.302/calibredb-show.el
+  calibredb-20231107.302/calibredb-transient.el
+  calibredb-20231107.302/calibredb-utils.el
+  calibredb-20231107.302/calibredb.el
  ✓ Success:
-  2023-11-06T18:09:21+0000  calibredb-20230809.927.entry
-  2023-11-06T18:09:21+0000  calibredb-20230809.927.tar
-Built calibredb in 3.883s, finished at 2023-11-06T18:09:22+0000
+  2023-11-07T01:03:23+0000  calibredb-20230809.927.entry
+  2023-11-07T01:03:23+0000  calibredb-20230809.927.tar
+  2023-11-07T03:18:58+0000  calibredb-20231107.302.entry
+  2023-11-07T03:18:58+0000  calibredb-20231107.302.tar
+Built calibredb in 7.614s, finished at 2023-11-07T03:19:01+0000
