@@ -4,6 +4,8 @@ Source:  https://git.thanosapollo.com/yeetube
 
 Updating /mnt/store/melpa/working/yeetube/
 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.thanosapollo.com/yeetube/': Could not resolve host: thanosapollo.com
+fatal: unable to update url base from redirection:
+  asked for: https://git.thanosapollo.com/yeetube/info/refs?service=git-upload-pack
+   redirect: https://thanosapollo.org/
 
 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
