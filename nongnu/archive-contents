@@ -221,7 +221,7 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
 	    (:commit . "7521fa1b39de735dcbd32bca92a792d5261e9ce2"))])
  (cider .
-	[(1 10 0)
+	[(1 11 0)
 	 ((emacs
 	   (26))
 	  (clojure-mode
@@ -239,7 +239,7 @@
 	  (transient
 	   (0 4 1)))
 	 "Clojure Interactive Development Environment that Rocks" tar
-	 ((:url . "http://www.github.com/clojure-emacs/cider")
+	 ((:url . "https://www.github.com/clojure-emacs/cider")
 	  (:keywords "languages" "clojure" "cider")
 	  (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 	  (:authors
@@ -249,7 +249,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "d16988719ae5561f32b06db0726adb03d84fe15c"))])
+	  (:commit . "6e5294624959736c486f7a466bd5e78ce6183ab9"))])
  (clojure-mode .
 	       [(5 18 0)
 		((emacs
