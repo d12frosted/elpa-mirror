@@ -61,7 +61,7 @@ Supported languages:
 - PHP (prettier plugin)
 - Protocol Buffers (clang-format)
 - PureScript (purty, purs-tidy)
-- Python (black, yapf, isort)
+- Python (black, isort, ruff format, yapf)
 - R (styler)
 - Racket (raco-fmt)
 - Reason (bsrefmt)
