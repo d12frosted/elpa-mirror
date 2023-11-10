@@ -917,6 +917,17 @@
 	      ("Tino Calancha" . "tino.calancha@gmail.com"))
 	     (:keywords "files" "unix" "convenience")
 	     (:url . "http://elpa.gnu.org/packages/dired-du.html"))])
+ (dired-duplicates .
+		   [(0 2)
+		    ((emacs
+		      (27 1)))
+		    "Find duplicate files locally and remotely" tar
+		    ((:url . "https://codeberg.org/hjudt/dired-duplicates")
+		     (:keywords "files")
+		     (:maintainer "Harald Judt" . "h.judt@gmx.at")
+		     (:authors
+		      ("Harald Judt" . "h.judt@gmx.at"))
+		     (:commit . "349eebbd8b3fc10fa2a4551426769d20744e2eb2"))])
  (dired-git-info .
 		 [(0 3 1)
 		  ((emacs

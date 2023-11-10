@@ -1833,7 +1833,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20230919 113921)
+	      [(1 0 20231109 110741)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
@@ -2088,7 +2088,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:commit . "2598656c5d62cb1a082ff5c49658246805443c60"))])
  (sweeprolog .
-	     [(0 26 1)
+	     [(0 26 2)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2099,7 +2099,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "d89118a4f3c0e2df191524ab8b9da73b1069f64b"))])
+	       (:commit . "f87507029ff45096384358619724bb97b5491865"))])
  (swift-mode .
 	     [(9 1 0)
 	      ((emacs
