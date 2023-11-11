@@ -42,23 +42,22 @@ workspace persistence).  They work quite differently than bufferlo.
 1 Installation
 ══════════════
 
-  Put `bufferlo.el' in your load path and require it in your init file:
-  ┌────
-  │ (require 'bufferlo)
-  └────
-
-  Enable `bufferlo-mode' in your init file:
+  Bufferlo is available in [GNU ELPA].  Install it via `package-install'
+  and enable `bufferlo-mode':
   ┌────
   │ (bufferlo-mode 1)
   └────
 
-  Or use use-package:
+  Or use `use-package':
   ┌────
   │ (use-package bufferlo
-  │  :load-path "path/bufferlo"
+  │  :ensure t
   │  :config
   │  (bufferlo-mode 1))
   └────
+
+
+[GNU ELPA] <https://elpa.gnu.org/packages/bufferlo.html>
 
 
 2 Usage
@@ -71,8 +70,8 @@ workspace persistence).  They work quite differently than bufferlo.
     global list (all buffers).
   • `bufferlo-ibuffer': `ibuffer' filtered for local buffers.
     Alternatively, use "/ l" in ibuffer.
-  • `bufferlo-list-buffers': Display a list of local buffers in the
-    "*Buffer List"* buffer.
+  • `bufferlo-list-buffers': Display a list of local buffers in a
+    buffer-menu buffer.
 
   Bufferlo provides functions to manage the local buffer lists:
   • `bufferlo-clear': Clear the frame/tab's buffer list.
@@ -88,6 +87,7 @@ workspace persistence).  They work quite differently than bufferlo.
     its local buffers.
   • `bufferlo-tab-close-kill-buffers': Close the tab and kill all its
     local buffers.
+  • `bufferlo-isolate-project': Isolate a project in the frame or tab.
 
 
 2.1 Consult Integration
@@ -174,9 +174,17 @@ workspace persistence).  They work quite differently than bufferlo.
   <./img/consult2.svg> Fig.2: By entering 'a'+<space>, the global buffer
   list is shown ("All Buffers").
 
+  A good alternative is to bind space to "All Buffers" (via `:narrow
+  32').  By default, space is used for hidden buffers
+  (`consult--source-hidden-buffer').  If you still need the hidden
+  buffer list, you can make a new source for it, for example, with
+  period as the narrowing key (`:narrow ?.').
+
 
 2.2 Ivy Integration
 ───────────────────
+
+  You can also integrate bufferlo with ivy.
 
   ┌────
   │ (defun ivy-bufferlo-switch-buffer ()
