@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-undo-fu.git
 
 Updating /mnt/store/melpa/working/undo-fu/
-Checking out 0e74116fd5c7797811a91ba4eadef50d67523eb6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/undo-fu/
-  to /tmp/undo-fuVAjFwq/undo-fu-20230808.1340
-    undo-fu.el -> undo-fu.el
-Created undo-fu-20230808.1340.tar containing:
-  undo-fu-20230808.1340/
-  undo-fu-20230808.1340/undo-fu-pkg.el
-  undo-fu-20230808.1340/undo-fu.el
- ✓ Success:
-  2023-11-12T06:27:43+0000  undo-fu-20230808.1340.entry
-  2023-11-12T06:27:43+0000  undo-fu-20230808.1340.tar
-Built undo-fu in 5.654s, finished at 2023-11-12T06:27:45+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-undo-fu.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
