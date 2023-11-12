@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-scroll-on-jump.git
 
 Updating /mnt/store/melpa/working/scroll-on-jump/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-scroll-on-jump.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 220e4a8f21cc0b430c693a3ecac08156da2602c1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scroll-on-jump/
+  to /tmp/scroll-on-jump9hPG70/scroll-on-jump-20230201.141
+    scroll-on-jump.el -> scroll-on-jump.el
+Created scroll-on-jump-20230201.141.tar containing:
+  scroll-on-jump-20230201.141/
+  scroll-on-jump-20230201.141/scroll-on-jump-pkg.el
+  scroll-on-jump-20230201.141/scroll-on-jump.el
+ ✓ Success:
+  2023-11-12T19:46:01+0000  scroll-on-jump-20230201.141.entry
+  2023-11-12T19:46:01+0000  scroll-on-jump-20230201.141.tar
+Built scroll-on-jump in 5.363s, finished at 2023-11-12T19:46:04+0000

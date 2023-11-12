@@ -3176,6 +3176,7 @@
   (mark-multiple :url "https://github.com/magnars/mark-multiple.el.git")
   (mark-thing-at :url "https://github.com/plandes/mark-thing-at.git")
   (mark-tools :url "https://github.com/stsquad/emacs-mark-tools.git")
+  (mark-yank :url "https://github.com/mkleehammer/mark-yank.git")
   (markdown-changelog :url "https://github.com/plandes/markdown-changelog.git")
   (markdown-mode :url "https://github.com/jrblevin/markdown-mode.git")
   (markdown-preview-eww :url "https://github.com/niku/markdown-preview-eww.git")
