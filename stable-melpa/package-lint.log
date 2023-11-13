@@ -3,19 +3,21 @@ Fetcher: github
 Source:  https://github.com/purcell/package-lint.git
 
 Updating /mnt/store/melpa/working/package-lint/
-Checking out c541e67dbb7f93b888edac908e9b25813ee7e6f7
+Checking out dd81a5b9224cc6e6dc4bbb6b4a2928df89c01317
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-lint/
-  to /tmp/package-lintwfVDrX/package-lint-20231110.1025
+  to /tmp/package-lintghbvkc/package-lint-20231113.1518
     package-lint.el -> package-lint.el
     data => data
-Created package-lint-20231110.1025.tar containing:
-  package-lint-20231110.1025/
-  package-lint-20231110.1025/data/
-  package-lint-20231110.1025/data/stdlib-changes
-  package-lint-20231110.1025/package-lint-pkg.el
-  package-lint-20231110.1025/package-lint.el
+Created package-lint-20231113.1518.tar containing:
+  package-lint-20231113.1518/
+  package-lint-20231113.1518/data/
+  package-lint-20231113.1518/data/stdlib-changes
+  package-lint-20231113.1518/package-lint-pkg.el
+  package-lint-20231113.1518/package-lint.el
  ✓ Success:
-  2023-11-13T11:12:39+0000  package-lint-20231110.1025.entry
-  2023-11-13T11:12:39+0000  package-lint-20231110.1025.tar
-Built package-lint in 4.197s, finished at 2023-11-13T11:12:41+0000
+  2023-11-13T13:27:42+0000  package-lint-20231110.1025.entry
+  2023-11-13T13:27:42+0000  package-lint-20231110.1025.tar
+  2023-11-13T15:41:16+0000  package-lint-20231113.1518.entry
+  2023-11-13T15:41:16+0000  package-lint-20231113.1518.tar
+Built package-lint in 5.525s, finished at 2023-11-13T15:41:18+0000
