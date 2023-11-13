@@ -1,21 +1,21 @@
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		 DENOTE: SIMPLE NOTES WITH AN EFFICIENT
-			   FILE-NAMING SCHEME
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                 DENOTE: SIMPLE NOTES WITH AN EFFICIENT
+                           FILE-NAMING SCHEME
 
-			  Protesilaos Stavrou
-			  info@protesilaos.com
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          Protesilaos Stavrou
+                          info@protesilaos.com
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 2.0.0,
-released on 2023-07-21.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 2.1.0,
+released on 2023-11-12.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 2.1.0-dev.
+Current development target is 2.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote>
@@ -46,38 +46,47 @@ Table of Contents
 ..... 5. Add or remove keywords interactively
 .. 2. Create note using Org capture
 .. 3. Create note with specific prompts using Org capture
-.. 4. Maintain separate directory silos for notes
+.. 4. Open an existing note or create it if missing
+.. 5. Maintain separate directory silos for notes
 ..... 1. Use custom commands to select a silo
-.. 5. Exclude certain directories from all operations
-.. 6. Exclude certain keywords from being inferred
-.. 7. Use Denote commands from the menu bar or context menu
+..... 2. The `denote-silo-extras.el'
+.. 6. Exclude certain directories from all operations
+.. 7. Exclude certain keywords from being inferred
+.. 8. Use Denote commands from the menu bar or context menu
 4. Renaming files
 .. 1. Rename a single file
-.. 2. Rename multiple files at once
-.. 3. Rename a single file based on its front matter
-.. 4. Rename multiple files based on their front matter
-.. 5. Rename file by changing only its file type
+..... 1. The `denote-rename-no-confirm' option
+.. 2. Rename a single file based on its front matter
+.. 3. Rename multiple files interactively
+.. 4. Rename multiple files at once by asking only for keywords
+.. 5. Rename multiple files based on their front matter
+.. 6. Rename a file by changing only its file type
 5. The file-naming scheme
 .. 1. Sluggified title, keywords, and signature
-.. 2. Features of the file-naming scheme for searching or filtering
+.. 2. Contol the letter casing of file names
+.. 3. Features of the file-naming scheme for searching or filtering
 6. Front matter
 .. 1. Change the front matter format
 .. 2. Regenerate front matter
 7. Linking notes
 .. 1. Adding a single link
 .. 2. Insert links matching a regexp
-.. 3. Insert links, but only those missing from current buffer
-.. 4. Insert links from marked files in Dired
-.. 5. Link to an existing note or create a new one
-.. 6. The backlinks’ buffer
-.. 7. Writing metanotes
-.. 8. Visiting linked files via the minibuffer
-.. 9. Miscellaneous information about links
-8. Fontification in Dired
-9. Automatically rename Denote buffers
-10. Use Org dynamic blocks
-11. Minibuffer histories
-12. Extending Denote
+.. 3. Insert link to file with signature
+.. 4. Insert links, but only those missing from current buffer
+.. 5. Insert links from marked files in Dired
+.. 6. Link to an existing note or create a new one
+.. 7. The backlinks’ buffer
+.. 8. Writing metanotes
+.. 9. Visiting linked files via the minibuffer
+.. 10. Link to a note or create it if missing
+.. 11. Miscellaneous information about links
+8. Choose which commands to prompt for
+9. Fontification in Dired
+10. Automatically rename Denote buffers
+.. 1. The `denote-rename-buffer-format' option
+11. Use Org dynamic blocks
+12. Minibuffer histories
+13. Extending Denote
 .. 1. Keep a journal or diary
 ..... 1. Journaling with a timer
 .. 2. Create a note with the region’s contents
@@ -91,26 +100,24 @@ Table of Contents
 .. 10. Use the `consult-notes' package
 .. 11. Use the `denote-menu' package
 .. 12. Treat your notes as a project
-.. 13. Make variants of `denote-open-or-create'
-.. 14. Make variants of `denote-link-or-create'
-.. 15. Use the tree-based file prompt for select commands
-.. 16. Rename files with Denote in the Image Dired thumbnails buffer
-.. 17. Rename files with Denote using `dired-preview'
-.. 18. Avoid duplicate identifiers when exporting Denote notes
+.. 13. Use the tree-based file prompt for select commands
+.. 14. Rename files with Denote in the Image Dired thumbnails buffer
+.. 15. Rename files with Denote using `dired-preview'
+.. 16. Avoid duplicate identifiers when exporting Denote notes
 ..... 1. Export Denote notes with Org Mode
 ..... 2. Export Denote notes with Markdown
-13. Installation
+14. Installation
 .. 1. GNU ELPA package
 .. 2. Manual installation
-14. Sample configuration
-15. For developers or advanced users
-16. Troubleshoot Denote in a pristine environment
-17. Contributing
-18. Things to do
-19. Publications about Denote
-20. Alternatives to Denote
+15. Sample configuration
+16. For developers or advanced users
+17. Troubleshoot Denote in a pristine environment
+18. Contributing
+19. Things to do
+20. Publications about Denote
+21. Alternatives to Denote
 .. 1. Alternative implementations and further reading
-21. Frequently Asked Questions
+22. Frequently Asked Questions
 .. 1. Why develop Denote when PACKAGE already exists?
 .. 2. Why not rely exclusively on Org?
 .. 3. Why care about Unix tools when you use Emacs?
@@ -121,9 +128,9 @@ Table of Contents
 .. 8. How do you handle the last modified case?
 .. 9. Speed up backlinks’ buffer creation?
 .. 10. Why do I get “Search failed with status 1” when I search for backlinks?
-22. Acknowledgements
-23. GNU Free Documentation License
-24. Indices
+23. Acknowledgements
+24. GNU Free Documentation License
+25. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -234,20 +241,22 @@ Table of Contents
 
 [Points of entry] See section 3
 
-[Writing metanotes] See section 7.7
+[Writing metanotes] See section 7.8
 
-[Keep a journal or diary] See section 12.1
+[Keep a journal or diary] See section 13.1
 
 
 3 Points of entry
 ═════════════════
 
-  There are five ways to write a note with Denote: invoke the `denote',
-  `denote-type', `denote-date', `denote-subdirectory',
+  There are five main ways to write a note with Denote: invoke the
+  `denote', `denote-type', `denote-date', `denote-subdirectory',
   `denote-template', `denote-signature' commands, or leverage the
   `org-capture-templates' by setting up a template which calls the
   function `denote-org-capture'.  We explain all of those in the
-  subsequent sections.
+  subsequent sections.  Other more specialised commands exist as well,
+  which one shall learn about as they read through this manual.  We do
+  not want to overwhelm the user with options at this stage.
 
 
 3.1 Standard note creation
@@ -259,6 +268,9 @@ Table of Contents
   value).  Once the title is supplied, the `denote' command will then
   ask for keywords.  The resulting note will have a file name as already
   explained: [The file naming scheme]
+
+  The `denote' command runs the hook `denote-after-new-note-hook' after
+  creating the new note.
 
   The file type of the new note is determined by the user option
   `denote-file-type' ([Front matter]).
@@ -338,9 +350,10 @@ Table of Contents
     up to the user to apply as they see fit.  One use-case is to
     implement Niklas Luhmann’s Zettelkasten system for a sequence of
     notes (Folgezettel).  Signatures are not included in a file’s front
-    matter and are not shown in the description of a link.  They are
-    reserved solely for creating a sequence in a file listing, at least
-    for the time being.
+    matter.  They are reserved solely for creating a sequence in a file
+    listing, at least for the time being.  To insert a link that
+    includes the signature, use the command `denote-link-with-signature'
+    ([Insert link to file with signature]).
 
   The prompts occur in the given order.
 
@@ -383,6 +396,8 @@ Table of Contents
 [The denote-date-prompt-use-org-read-date option] See section 3.1.4
 
 [The denote-templates option] See section 3.1.2
+
+[Insert link to file with signature] See section 7.3
 
 [The file-naming scheme] See section 5
 
@@ -648,7 +663,7 @@ Table of Contents
 
 [Standard note creation] See section 3.1
 
-[Rename a single file based on its front matter] See section 4.3
+[Rename a single file based on its front matter] See section 4.2
 
 
 3.2 Create note using Org capture
@@ -797,7 +812,52 @@ Table of Contents
 [Points of entry] See section 3
 
 
-3.4 Maintain separate directory silos for notes
+3.4 Open an existing note or create it if missing
+─────────────────────────────────────────────────
+
+  Sometimes it is necessary to briefly interrupt the ongoing writing
+  session to open an existing note or, if that is missing, to create it.
+  This happens when a new tangential thought occurs and the user wants
+  to confirm that an entry for it is in place.  To this end, Denote
+  provides the command `denote-open-or-create' as well as its more
+  flexible counterpart `denote-open-or-create-with-command'.
+
+  The `denote-open-or-create' prompts to visit a file in the
+  `denote-directory'.  At this point, the user must type in search terms
+  that match a file name.  If the input does not return any matches and
+  the user confirms their choice to proceed (usually by typing RET
+  twice, depending on the minibuffer settings), `denote-open-or-create'
+  will call the `denote' command interactively to create a new note.  It
+  will then use whatever prompts `denote' normally has, per the user
+  option `denote-prompts' ([Standard note creation]).  If the title
+  prompt is involved (the default behaviour), the
+  `denote-open-or-create' sets up this prompt to have the previous input
+  as the default title of the note to-be-created.  This means that the
+  user can type RET at the empty prompt to re-use what they typed in
+  previously.  Commands to use previous inputs from the history are also
+  available (`M-p' or `M-n' in the minibuffer, which call
+  `previous-history-element' and `next-history-element' by default).
+  Accessing the history is helpful to, for example, make further edits
+  to the available text.
+
+  The `denote-open-or-create-with-command' is like the above, except
+  when it is about to create the new note it first prompts for the
+  specific file-creating command to use ([Points of entry]).  For
+  example, the user may want to specify a signature for this new file,
+  so they can select the `denote-signature' command.
+
+  Denote provides similar functionality for linking to an existing note
+  or creating a new one ([Link to a note or create it if missing]).
+
+
+[Standard note creation] See section 3.1
+
+[Points of entry] See section 3
+
+[Link to a note or create it if missing] See section 7.10
+
+
+3.5 Maintain separate directory silos for notes
 ───────────────────────────────────────────────
 
   The user option `denote-directory' accepts a value that represents the
@@ -932,10 +992,15 @@ Table of Contents
   sufficient.  The manual shall be expanded accordingly.
 
 
-[Use custom commands to select a silo] See section 3.4.1
+[Use custom commands to select a silo] See section 3.5.1
 
-3.4.1 Use custom commands to select a silo
+3.5.1 Use custom commands to select a silo
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  [ As part of version 2.1.0, the contents of this section are formally
+    provided in the file `denote-silo-extras.el'.  We keep this here for
+    existing users.  Otherwise consult the new entry in the manual ([The
+    `denote-silo-extras.el']). ]
 
   We implement silos as directory-local values of the user option
   `denote-directory'.  This means that all Denote commands read from the
@@ -1004,13 +1069,49 @@ Table of Contents
   [Extending Denote: Split an Org subtree into its own note].
 
 
-[Maintain separate directory silos for notes] See section 3.4
+[The `denote-silo-extras.el'] See section 3.5.2
+
+[Maintain separate directory silos for notes] See section 3.5
 
 [Extending Denote: Split an Org subtree into its own note] See section
-12.3
+13.3
 
 
-3.5 Exclude certain directories from all operations
+3.5.2 The `denote-silo-extras.el'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The `denote-silo-extras.el' provides optional convenience functions
+  for working with silos ([Maintain separate directory silos for
+  notes]).  Start by loading the relevant library:
+
+  ┌────
+  │ (require 'denote-silo-extras)
+  └────
+
+  The user option `denote-silo-extras-directories' specifies a list of
+  directories that the user has set up as `denote-directory' silos.
+
+  The command `denote-silo-extras-create-note' prompts for a directory
+  among `denote-silo-extras-directories' and runs the `denote' command
+  from there.
+
+  Similar to the above, the command `denote-silo-extras-open-or-create'
+  prompts for a directory among `denote-silo-extras-directories' and
+  runs the `denote-open-or-create' command from there.
+
+  The command `denote-silo-extras-select-silo-then-command' prompts with
+  minibuffer completion for a directory among
+  `denote-silo-extras-directories'.  Once the user selects a silo, a
+  second prompt asks for a Denote note-creation command to call from
+  inside that silo ([Points of entry]).
+
+
+[Maintain separate directory silos for notes] See section 3.5
+
+[Points of entry] See section 3
+
+
+3.6 Exclude certain directories from all operations
 ───────────────────────────────────────────────────
 
   The user option `denote-excluded-directories-regexp' instructs all
@@ -1033,12 +1134,12 @@ Table of Contents
   [For developers or advanced users].
 
 
-[Maintain separate directory silos for notes] See section 3.4
+[Maintain separate directory silos for notes] See section 3.5
 
-[For developers or advanced users] See section 15
+[For developers or advanced users] See section 16
 
 
-3.6 Exclude certain keywords from being inferred
+3.7 Exclude certain keywords from being inferred
 ────────────────────────────────────────────────
 
   The user option `denote-excluded-keywords-regexp' omits keywords that
@@ -1051,7 +1152,7 @@ Table of Contents
   The match is performed with `string-match-p'.
 
 
-3.7 Use Denote commands from the menu bar or context menu
+3.8 Use Denote commands from the menu bar or context menu
 ─────────────────────────────────────────────────────────
 
   Denote registers a submenu for the `menu-bar-mode'.  Users will find
@@ -1105,130 +1206,122 @@ Table of Contents
 
 [Linking notes] See section 7
 
-[Automatically rename Denote buffers] See section 9
+[Automatically rename Denote buffers] See section 10
 
 4.1 Rename a single file
 ────────────────────────
 
   The `denote-rename-file' command renames a file and updates existing
-  front matter if appropriate.
+  front matter if appropriate. It is possible to do the same with
+  multiple files ([Rename multiple files interactively]).
 
-  If in Dired, the `FILE' to be renamed is the one at point, else the
-  command prompts with minibuffer completion for a target file.
+  If in Dired, consider `FILE' to be the one at point, else prompt with
+  minibuffer completion for one. When called from Lisp, `FILE' is a
+  filesystem path represented as a string.
 
   If `FILE' has a Denote-compliant identifier, retain it while updating
-  the `TITLE' and `KEYWORDS' fields of the file name.  Else create an
-  identifier based on the following conditions:
+  the TITLE and `KEYWORDS' fields of the file name.
 
-  • If `FILE' does not have an identifier and optional `DATE' is non-nil
-    (such as with a prefix argument), invoke the function
-    `denote-prompt-for-date-return-id'.  It prompts for a date and uses
-    it to derive the identifier.
+  Else create an identifier based on the following conditions:
 
-  • If `FILE' does not have an identifier and optional `DATE' is nil
-    (this is the case without a prefix argument), use the file
-    attributes to determine the last modified date and format it as an
-    identifier.
+  1. If optional `ASK-DATE' is non-nil (such as with a prefix argument),
+     prompt for a date and use it to derive the identifier.
 
-  • As a fallback, derive an identifier from the current time.
+  2. If optional `ASK-DATE' is nil (this is the case without a prefix
+     argument), use the file attributes to determine the last modified
+     date and format it as an identifier.
 
-  • If the resulting identifier is not unique among the files in the
-    variable `denote-directory’, increment it such that it becomes
-    unique.
+  3. As a fallback, derive an identifier from the current time.
 
-  The default `TITLE' is retrieved from a line starting with a title
+  4. If the resulting identifier is not unique among the files in the
+     variable `denote-directory', increment it such that it becomes
+     unique.
+
+  Use `TITLE' to construct the new name of `FILE'. In interactive use,
+  retrieve the default `TITLE' value from a line starting with a title
   field in the file’s contents, depending on the given file type ([Front
-  matter]).  Else, the file name is used as a default value at the
-  minibuffer prompt.
+  matter]).  Else, use the file name as a default value at the
+  minibuffer prompt.  When called from Lisp, `TITLE' is a string.
 
-  As a final step after the `FILE', `TITLE', and `KEYWORDS' prompts, ask
-  for confirmation, showing the difference between old and new file
-  names.  For example:
+  Add `SIGNATURE' to the file, using an existing one as the default
+  value at the minibuffer prompt. When called from Lisp, `SIGNATURE' is
+  a string. If the `SIGNATURE' is empty or `nil', it is not included in
+  the new file name.
+
+  As a final step after the `FILE', `TITLE', `KEYWORDS', and `SIGNATURE'
+  are collected, ask for confirmation, showing the difference between
+  old and new file names. For example:
 
   ┌────
   │ Rename sample.txt to 20220612T052900--my-sample-title__testing.txt? (y or n)
   └────
 
-  The file type extension (e.g. `.txt') is read from the underlying file
-  and is preserved through the renaming process.  Files that have no
-  extension are simply left without one.
+  Do not ask for confirmation if the `denote-rename-no-confirm' option
+  is set to a non-nil value ([The `denote-rename-no-confirm' option]).
 
-  Renaming only occurs relative to the current directory.  Files are not
+  Read the file type extension (like `.txt') from the underlying file
+  and preserve it through the renaming process. Files that have no
+  extension are left without one.
+
+  Renaming only occurs relative to the current directory. Files are not
   moved between directories.
 
   If the `FILE' has Denote-style front matter for the `TITLE' and
-  `KEYWORDS', this command asks to rewrite their values in order to
-  reflect the new input (this step always requires confirmation and the
-  underlying buffer is not saved, so consider invoking
-  `diff-buffer-with-file' to double-check the effect).  The rewrite of
-  the `FILE' and `KEYWORDS' in the front matter should not affect the
-  rest of the block.
+  `KEYWORDS', ask to rewrite their values in order to reflect the new
+  input (this step always requires confirmation and the underlying
+  buffer is not saved, so consider invoking `diff-buffer-with-file' to
+  double-check the effect). The rewrite of the `FILE' and `KEYWORDS' in
+  the front matter should not affect the rest of the front matter.
 
   If the file doesn’t have front matter but is among the supported file
-  types (per `denote-file-type'), the `denote-rename-file' command adds
-  front matter at the top of it and leaves the buffer unsaved for
-  further inspection.
+  types (per `denote-file-type'), add front matter at the top of it and
+  leave the buffer unsaved for further inspection.
+
+  For the front matter of each file type, refer to the variables:
+
+  • `denote-org-front-matter'
+  • `denote-text-front-matter'
+  • `denote-toml-front-matter'
+  • `denote-yaml-front-matter'
 
   This command is intended to (i) rename existing Denote notes while
   updating their title and keywords in the front matter, (ii) convert
   existing supported file types to Denote notes, and (ii) rename
   non-note files (e.g. PDF) that can benefit from Denote’s file-naming
-  scheme.  The latter is a convenience we provide, since we already have
-  all the requisite mechanisms in place (though Denote does not—and will
-  not—manage such files).
+  scheme. The latter is a convenience we provide, since we already have
+  all the requisite mechanisms in place.
 
+
+[Rename multiple files interactively] See section 4.3
 
 [Front matter] See section 6
 
+[The `denote-rename-no-confirm' option] See section 4.1.1
 
-4.2 Rename multiple files at once
-─────────────────────────────────
+4.1.1 The `denote-rename-no-confirm' option
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  The `denote-dired-rename-marked-files' command renames marked files in
-  Dired to conform with our file-naming scheme.  Specifically, it does
-  the following:
+  The default behaviour of the `denote-rename-file' command is to ask
+  for an affirmative answer as a final step before changing the file
+  name and, where relevant, inserting or updating the corresponding
+  front matter ([Rename a single file]).
 
-  • retains the file’s existing name and make it the `TITLE' field, per
-    Denote’s file-naming scheme;
+  Remember that `denote-rename-file' does not save the underlying buffer
+  it modifies. It leaves it unsaved so that the user can review what
+  happened, such as by invoking the command `diff-buffer-with-file'.
 
-  • downcases and sluggifies the `TITLE', per our conventions;
-
-  • prepends an identifier to the `TITLE';
-
-  • preserves the file’s extension, if any;
-
-  • prompts once for `KEYWORDS' and applies the user’s input to the
-    corresponding field in the file name;
-
-  • adds or rewrites existing front matter to the underlying file, if it
-    is recognized as a Denote note (per the `denote-file-type' user
-    option), such that it includes the new keywords.
-
-  • prompts at the outset for a confirmation, unless optional
-    `SKIP-FRONT-MATTER-PROMPT' is non-nil (such as with a universal
-    prefix argument).
-
-    [ Note that the affected buffers are not saved.  Users can thus
-      check them to confirm that the new front matter does not cause any
-      problems (e.g. with the `diff-buffer-with-file’ command).
-      Multiple buffers can be saved in one go with `save-some-buffers’
-      (read its doc string). ]
-
-  With the optional `NO-UNIQUE-ID-CHECK' as non-nil (such as as a double
-  prefix argument), it does not process the file identifiers of the
-  marked files for potential duplicates.  The default is to check for
-  duplicates and increment them such that they become unique.  The
-  reason this optional argument exists is for those who want to speed up
-  the process, perhaps because they know ahead of time all identifiers
-  will be unique or do not care about them.
-
-  [ When renaming files in Dired, it is possible to produce duplicate
-    identifiers.  This can happen when multiple files share the same
-    modification time, which can be casually done with the `touch’
-    command, `git’, and others. ]
+  Specialised commands that build on top of `denote-rename-file' may
+  internally bind this user option to a non-nil value in order to
+  perform their operation (e.g. `denote-dired-rename-files' goes through
+  each marked Dired file, prompting for the information to use, but
+  carries out the renaming without asking for confirmation (buffers
+  remain unsaved)).
 
 
-4.3 Rename a single file based on its front matter
+[Rename a single file] See section 4.1
+
+
+4.2 Rename a single file based on its front matter
 ──────────────────────────────────────────────────
 
   In the previous section, we covered the more general mechanism of the
@@ -1267,9 +1360,9 @@ Table of Contents
   │ #+identifier: 20220805T131044
   └────
 
-  The file name still shows the old title and keywords.  So after saving
-  the buffer, you invoke `denote-rename-file-using-front-matter' and it
-  updates the file name to:
+  At this stage, the file name still shows the old title and keywords.
+  You now invoke `denote-rename-file-using-front-matter' and it updates
+  the file name to:
 
   ┌────
   │ 20220805T131044--my-modified-sample-note-file__testing_denote_emacs.org
@@ -1279,8 +1372,9 @@ Table of Contents
   The renaming is subject to a “yes or no” prompt that shows the old and
   new names, just so the user is certain about the change.
 
-  If called interactively with a prefix argument `C-u' or from Lisp with
-  a non-nil `AUTO-CONFIRM' argument, this “yes or no” prompt is skipped.
+  If called interactively with a prefix argument (`C-u' by default) or
+  from Lisp with a non-nil `AUTO-CONFIRM' argument, this “yes or no”
+  prompt is skipped.
 
   The identifier of the file, if any, is never modified even if it is
   edited in the front matter: Denote considers the file name to be the
@@ -1293,7 +1387,68 @@ Table of Contents
 [Front matter] See section 6
 
 
-4.4 Rename multiple files based on their front matter
+4.3 Rename multiple files interactively
+───────────────────────────────────────
+
+  The command `denote-dired-rename-files' renames the files that are
+  marked in a Dired buffer. Its behaviour is similar to the
+  `denote-rename-file' in that it prompts for a title, keywords, and
+  signature ([Rename a single file]). It does so over each marked file,
+  renaming one after the other.
+
+  Unlike `denote-rename-file', the command `denote-dired-rename-files'
+  does not ask to confirm the changes made to the files: it performs
+  them outright. This is done to make it easier to rename multiple files
+  without having to confirm each step. For an even more direct approach,
+  check the command `denote-dired-rename-marked-files':
+
+  • [Rename by writing only keywords]
+  • [Rename multiple files based on their front matter]
+
+
+[Rename a single file] See section 4.1
+
+[Rename by writing only keywords] See section 4.4
+
+[Rename multiple files based on their front matter] See section 4.5
+
+
+4.4 Rename multiple files at once by asking only for keywords
+─────────────────────────────────────────────────────────────
+
+  The `denote-dired-rename-marked-files-with-keywords' command renames
+  marked files in Dired to conform with our file-naming scheme. It does
+  so by writing keywords to them. Specifically, it does the following:
+
+  • retains the file’s existing name and makes it the `TITLE' field, per
+    Denote’s file-naming scheme;
+
+  • sluggifies the `TITLE' and adjusts its letter casing, according to
+    our conventions ([Contol the letter casing of file names]);
+
+  • prepends an identifier to the `TITLE', if one is missing;
+
+  • preserves the file’s extension, if any;
+
+  • prompts once for `KEYWORDS' and applies the user’s input to the
+    corresponding field in the file name, rewriting any keywords that
+    may exist;
+
+  • adds or rewrites existing front matter to the underlying file, if it
+    is recognized as a Denote note (per the `denote-file-type' user
+    option), such that it includes the new keywords.
+
+  [ Note that the affected buffers are not saved. Users can thus check
+    them to confirm that the new front matter does not cause any
+    problems (e.g. with the `diff-buffer-with-file' command). Multiple
+    buffers can be saved in one go with `save-some-buffers' (read its
+    doc string). ]
+
+
+[Contol the letter casing of file names] See section 5.2
+
+
+4.5 Rename multiple files based on their front matter
 ─────────────────────────────────────────────────────
 
   As already noted, Denote can rename a file based on the data in its
@@ -1304,50 +1459,33 @@ Table of Contents
 
   Marked files must count as notes for the purposes of Denote, which
   means that they at least have an identifier in their file name and use
-  a supported file type, per `denote-file-type'.  Files that do not meet
-  this criterion are ignored.
-
-  The operation does the following:
-
-  • the title in the front matter becomes the `TITLE' component of the
-    file name ([The file-naming scheme]);
-
-  • the keywords in the front matter are used for the `KEYWORDS'
-    component of the file name and are processed accordingly, if needed;
-
-  • the identifier remains unchanged in the file name even if it is
-    modified in the front matter (this is done to avoid breakage caused
-    by typos and the like).
-
-  NOTE that files must be saved, because Denote reads from the
-  underlying file, not a modified buffer (this is done to avoid
-  potential mistakes).  The return value of a modified buffer is the one
-  prior to the modification, i.e. the one already written on disk.
-
-  This command is useful for synchronizing multiple file names with
-  their respective front matter.
+  a supported file type, per `denote-file-type'. Files that do not meet
+  this criterion are ignored, because Denote cannot know if they have
+  front matter and what that may be. For such files, it is still
+  possible to rename them interactively ([Rename multiple files
+  interactively]).
 
 
-[Rename a single file based on its front matter] See section 4.3
+[Rename a single file based on its front matter] See section 4.2
 
-[The file-naming scheme] See section 5
+[Rename multiple files interactively] See section 4.3
 
 
-4.5 Rename file by changing only its file type
-──────────────────────────────────────────────
+4.6 Rename a file by changing only its file type
+────────────────────────────────────────────────
 
-  The command `denote-change-file-type' provides the convenience of
-  converting a note taken in one file type, say, `.txt' into another
-  like `.org'.  It presents a choice among the `denote-file-type'
-  options.
+  The command `denote-change-file-type-and-front-matter' provides the
+  convenience of converting a note taken in one file type, say, `.txt'
+  into another like `.org'. It presents a choice among the
+  `denote-file-type' options.
 
   The conversion does NOT modify the existing front matter.  Instead, it
   prepends new front matter to the top of the file.  We do this as a
   safety precaution since the user can, in principle, add arbitrary
   extras to their front matter that we would not want to touch.
 
-  If in Dired, `denote-change-file-type' operates on the file at point,
-  else it prompts with minibuffer completion for one.
+  If in Dired, `denote-change-file-type-and-front-matter' operates on
+  the file at point, else it prompts with minibuffer completion for one.
 
   The title of the file is retrieved from a line starting with a title
   field in the file’s front matter, depending on the previous file type
@@ -1382,26 +1520,22 @@ Table of Contents
   note and, as such, is also known as the file’s ID or identifier.
 
   The `TITLE' field is the title of the note, as provided by the user.
-  It automatically gets downcased and hyphenated.  An entry about
-  “Economics in the Euro Area” produces an `economics-in-the-euro-area'
-  string for the `TITLE' of the file name.
+  It automatically gets downcased by default and is also hyphenated
+  ([Contol the letter casing of file names]).  An entry about “Economics
+  in the Euro Area” produces an `economics-in-the-euro-area' string for
+  the `TITLE' of the file name.
 
   The `KEYWORDS' field consists of one or more entries demarcated by an
   underscore (the separator is inserted automatically).  Each keyword is
   a string provided by the user at the relevant prompt which broadly
   describes the contents of the entry.
 
-  Optionally, when the user option `denote-allow-multi-word-keywords' is
-  non-nil, keywords that need to be more than one-word-long are written
-  with hyphens: any other character, such as spaces or the plus sign is
-  automatically converted into a hyphen.  So when `emacs_library'
-  appears in a file name, it is interpreted as two distinct keywords,
-  whereas `emacs-library' is one keyword.  This is reflected in how the
-  keywords are recorded in the note ([Front matter]).  While Denote
-  optional supports multi-word keywords, default `nil' value of
-  `denote-allow-multi-word-keywords' forcibly joins all words into one,
-  meaning that an input of `word1 word2' will be written as
-  `word1word2'.
+  Each of the keywords is a single word, with multiple keywords
+  providing the multi-dimensionality needed for advanced searches
+  through Denote files.  Users who need to compose a keyword out of
+  multiple words are encouraged to apply a letter casing convention such
+  as camelCase/CamelCase and set the `denote-file-name-letter-casing'
+  user option accordingly ([Contol the letter casing of file names]).
 
   The `EXTENSION' is the file type.  By default, it is `.org'
   (`org-mode') though the user option `denote-file-type' provides
@@ -1475,10 +1609,10 @@ Table of Contents
 
 [Points of entry] See section 3
 
-[Front matter] See section 6
+[Contol the letter casing of file names] See section 5.2
 
 [Features of the file-naming scheme for searching or filtering] See
-section 5.2
+section 5.3
 
 5.1 Sluggified title, keywords, and signature
 ─────────────────────────────────────────────
@@ -1490,20 +1624,87 @@ section 5.2
 
   ⁃ What we count as “illegal characters” are converted into hyphens.
 
-  ⁃ Input for a file title is hyphenated and downcased.  The original
-    value is preserved in the note’s contents ([Front matter]).
+  ⁃ Input for a file title is hyphenated.  The original value is
+    preserved in the note’s contents ([Front matter]).
 
-  ⁃ Keywords should not have spaces or other delimiters.  If they do,
-    they are converted into hyphens.  Keywords are always downcased.
+  ⁃ Keywords should not have spaces or other delimiters. If they do,
+    they are removed, meaning that `hello-world' becomes `helloworld'.
+    This is because hyphens in keywords do not work everywhere, such as
+    in Org.
 
   ⁃ Signatures are like the above, but use the equals sign instead of
     hyphens.
 
+  All file name components are downcases by default, though users can
+  configure this behaviour ([Contol the letter casing of file names]).
+  Consider a `helloWorld' or `HelloWorld' convention for those cases
+  where you would want to have a hyphen between consistuent words of a
+  keyword.
+
 
 [Front matter] See section 6
 
+[Contol the letter casing of file names] See section 5.2
 
-5.2 Features of the file-naming scheme for searching or filtering
+
+5.2 Contol the letter casing of file names
+──────────────────────────────────────────
+
+  The user option `denote-file-name-letter-casing' controls the letter
+  casing of the individual components of file names ([The file-naming
+  scheme]).  The default method is to downcase everything.
+
+  The value of this user option is an alist where each element is a cons
+  cell of the form `(COMPONENT . METHOD)'.  For example, here is the
+  default value:
+
+  ┌────
+  │ '((title . downcase)
+  │   (signature . downcase)
+  │   (keywords . downcase)
+  │   (t . downcase))
+  └────
+
+  What these cons cells of `(COMPONENT . METHOD)' are:
+
+  • The `COMPONENT' is an unquoted symbol among `title', `signature',
+    `keywords', which refers to the corresponding component of the file
+    name.  The special `t' `COMPONENT' is a fallback value in case the
+    others are not specified.
+
+  • The `METHOD' is the letter casing scheme, which is an unquoted
+    symbol of either `downcase' or `verbatim'.  A nil value has the same
+    meaning as `downcase'.  Other non-nil `METHOD' types are reserved
+    for possible future use.
+
+    The `downcase' `METHOD' converts user input for the given
+    `COMPONENT' into lower case.  The benefit of this approach (which is
+    the default behaviour) is that file names remain consistent over the
+    long-term.  The user never needs to account for varying letter
+    casing while working with them.
+
+    The `verbatim' `METHOD' means that Denote will not affect the letter
+    casing of user input when generating the given file name
+    `COMPONENT'.  Conventions like CamelCase or camelCase are respected.
+    The user thus assumes responsibility to keep file names in a good
+    state over the long term.
+
+  As an example, we can downcase the title, but preserve the letter
+  casing of the signature and keyword components with this:
+
+  ┌────
+  │ (setq denote-file-name-letter-casing
+  │       '((title . downcase)
+  │ 	(signature . verbatim)
+  │ 	(keywords . verbatim)
+  │ 	(t . downcase)))
+  └────
+
+
+[The file-naming scheme] See section 5
+
+
+5.3 Features of the file-naming scheme for searching or filtering
 ─────────────────────────────────────────────────────────────────
 
   By default, file names have three fields and two sets of field
@@ -1754,10 +1955,10 @@ section 5.2
 7.1 Adding a single link
 ────────────────────────
 
-  The `denote-link' command inserts a link at point to an entry
-  specified at the minibuffer prompt.  Links are formatted depending on
-  the file type of current note.  In Org and plain text buffers, links
-  are formatted thus: `[[denote:IDENTIFIER][TITLE]]'.  While in Markdown
+  The `denote-link' command inserts a link at point to a file specified
+  at the minibuffer prompt.  Links are formatted depending on the file
+  type of the current note.  In Org and plain text buffers, links are
+  formatted thus: `[[denote:IDENTIFIER][TITLE]]'.  While in Markdown
   they are expressed as `[TITLE](denote:IDENTIFIER)'.
 
   When `denote-link' is called with a prefix argument (`C-u' by
@@ -1767,7 +1968,7 @@ section 5.2
   The description of the link is taken from the target file’s front
   matter or, if that is not available, from the file name.  If the
   region is active, its text is used as the link’s description instead.
-  If the active region has no text, the inserted link used just the
+  If the active region has no text, the inserted link uses just the
   identifier, as with the `C-u' prefix mentioned above.
 
   Inserted links are automatically buttonized and remain active for as
@@ -1860,7 +2061,27 @@ section 5.2
 [Linking notes] See section 7
 
 
-7.3 Insert links, but only those missing from current buffer
+7.3 Insert link to file with signature
+──────────────────────────────────────
+
+  The command `denote-link-with-signature' prompts for a file among
+  those that contain a `==SIGNATURE' and inserts a link to it.  The
+  description of the link includes the text of the signature and that of
+  the file’s title, if any.  For example, a link to the following file:
+
+  ┌────
+  │ 20230925T144303==abc--my-first-signature-note__denote_testing.txt
+  └────
+
+
+  will get this link: `[[denote:20230925T144303][abc My first signature
+  note]]'.
+
+  For more advanced uses, refer to the doc string of the `denote-link'
+  function.
+
+
+7.4 Insert links, but only those missing from current buffer
 ────────────────────────────────────────────────────────────
 
   As a variation on the `denote-add-links' command, one may wish to only
@@ -1875,7 +2096,7 @@ section 5.2
 [Insert links matching a regexp] See section 7.2
 
 
-7.4 Insert links from marked files in Dired
+7.5 Insert links from marked files in Dired
 ───────────────────────────────────────────
 
   The command `denote-link-dired-marked-notes' is similar to
@@ -1909,7 +2130,7 @@ section 5.2
 [Linking notes] See section 7
 
 
-7.5 Link to an existing note or create a new one
+7.6 Link to an existing note or create a new one
 ────────────────────────────────────────────────
 
   In one’s note-taking workflow, there may come a point where they are
@@ -1944,6 +2165,14 @@ section 5.2
         establish valid links, and (ii) retrieve whatever front matter
         from the target file.
 
+  `denote-link-after-creating-with-command'
+        This command is like `denote-link-after-creating' except it
+        prompts for a note-creating command ([Points of entry]).  Use
+        this to, for example, call `denote-signature' so that the newly
+        created note has a signature as part of its file name.  Optional
+        `ID-ONLY' has the same meaning as in the command
+        `denote-link-after-creating'.
+
   `denote-link-or-create'
         Use `denote-link' on `TARGET' file, creating it if necessary.
 
@@ -1975,8 +2204,10 @@ section 5.2
 
 [Adding a single link] See section 7.1
 
+[Points of entry] See section 3
 
-7.6 The backlinks’ buffer
+
+7.7 The backlinks’ buffer
 ─────────────────────────
 
   The command `denote-backlinks' produces a bespoke buffer which
@@ -2056,15 +2287,15 @@ section 5.2
   └────
 
 
-[Speed up backlinks’ buffer creation?] See section 21.9
+[Speed up backlinks’ buffer creation?] See section 22.9
 
 [Why do I get “Search failed with status 1” when I search for
-backlinks?] See section 21.10
+backlinks?] See section 22.10
 
-[Visiting linked files via the minibuffer] See section 7.8
+[Visiting linked files via the minibuffer] See section 7.9
 
 
-7.7 Writing metanotes
+7.8 Writing metanotes
 ─────────────────────
 
   A “metanote” is an entry that describes other entries who have
@@ -2101,10 +2332,10 @@ backlinks?] See section 21.10
 
 [Insert links matching a regexp] See section 7.2
 
-[Insert links from marked files in Dired] See section 7.4
+[Insert links from marked files in Dired] See section 7.5
 
 
-7.8 Visiting linked files via the minibuffer
+7.9 Visiting linked files via the minibuffer
 ────────────────────────────────────────────
 
   Denote has a major-mode-agnostic mechanism to collect all linked file
@@ -2125,13 +2356,76 @@ backlinks?] See section 21.10
   in a dedicated buffer ([The backlinks’ buffer]).
 
 
-[Extending Denote] See section 12
+[Extending Denote] See section 13
 
-[The backlinks’ buffer] See section 7.6
+[The backlinks’ buffer] See section 7.7
 
 
-7.9 Miscellaneous information about links
-─────────────────────────────────────────
+7.10 Link to a note or create it if missing
+───────────────────────────────────────────
+
+  During a writing session, it is possible that a thought occurs which
+  does not require immediate attention but nonetheless must be linked to
+  from the current context.  Denote can be used in this case to
+  establish a link to an existing note or, if that is missing, to create
+  it.  The commands are `denote-link-after-creating', its more flexible
+  variant `denote-link-after-creating-with-command', the
+  `denote-link-or-create', and `denote-link-or-create-with-command'.
+
+  The command `denote-link-or-create' prompts for an existing file in
+  the `denote-directory' in order to link to it ([Linking notes]).  At
+  this point, the user must type in search terms that match a file name.
+  If the input does not return any matches and the user confirms their
+  choice to proceed (usually by typing RET twice, depending on the
+  minibuffer settings), `denote-link-or-create' will call the `denote'
+  command interactively to create a new note.  It will then use whatever
+  prompts `denote' normally has, per the user option `denote-prompts'
+  ([Standard note creation]).  If the title prompt is involved (the
+  default behaviour), the `denote-link-or-create' sets up this prompt to
+  have the previous input as the default title of the note
+  to-be-created.  This means that the user can type RET at the empty
+  prompt to re-use what they typed in previously.  Commands to use
+  previous inputs from the history are also available (`M-p' or `M-n' in
+  the minibuffer, which call `previous-history-element' and
+  `next-history-element' by default).  Accessing the history is helpful
+  to, for example, make further edits to the available text.
+
+  In the case where a file is created, the process happens in the
+  background, meaning that the new file is not displayed.  It is simply
+  linked to from the current context.
+
+  The `denote-link-or-create-with-command' is like the above, except
+  when it is about to create the new note it first prompts for the
+  specific file-creating command to use ([Points of entry]).  For
+  example, the user may want to specify a signature for this new file,
+  so they can select the `denote-signature' command.
+
+  The commands `denote-link-after-creating' and
+  `denote-link-or-create-with-command' are conceptually the same as
+  above except they do not have the “or create” logic: they always
+  create a new file in the backgroun (in fact, the aforementioned use
+  those two to perform the linking, which is consistent with the
+  composability and hackability of Denote).
+
+  In all of the above, an optional prefix argument (`C-u' by default)
+  creates a link that consists of just the identifier.  This has the
+  same meaning as in the regular `denote-link' command.
+
+  Denote provides similar functionality for opening an existing note or
+  creating a new one ([Open an existing note or create it if missing]).
+
+
+[Linking notes] See section 7
+
+[Standard note creation] See section 3.1
+
+[Points of entry] See section 3
+
+[Open an existing note or create it if missing] See section 3.4
+
+
+7.11 Miscellaneous information about links
+──────────────────────────────────────────
 
   For convenience, the `denote-link' command has an alias called
   `denote-insert-link'.  The `denote-backlinks' can also be used as
@@ -2141,7 +2435,33 @@ backlinks?] See section 21.10
   commands.
 
 
-8 Fontification in Dired
+8 Choose which commands to prompt for
+═════════════════════════════════════
+
+  The user option `denote-commands-for-new-notes' specifies a list of
+  commands that are available at the `denote-command-prompt'.  This
+  prompt is used by Denote commands that ask the user how to create a
+  new note, as described elsewhere in this manual:
+
+  • [Open an existing note or create it if missing]
+  • [Link to a note or create it if missing]
+
+  The default value includes all the basic file-creating commands
+  ([Points of entry]).  Users may customise this value if (i) they only
+  want to see fewer options and/or (ii) wish to include their own custom
+  command in the list ([Write your own convenience commands]).
+
+
+[Open an existing note or create it if missing] See section 3.4
+
+[Link to a note or create it if missing] See section 7.10
+
+[Points of entry] See section 3
+
+[Write your own convenience commands] See section 3.1.3.1
+
+
+9 Fontification in Dired
 ════════════════════════
 
   One of the upsides of Denote’s file-naming scheme is the predictable
@@ -2195,53 +2515,110 @@ backlinks?] See section 21.10
 [The file-naming scheme] See section 5
 
 
-9 Automatically rename Denote buffers
-═════════════════════════════════════
+10 Automatically rename Denote buffers
+══════════════════════════════════════
 
-  The `denote-rename-buffer-mode' minor mode provides the means to
+  The minor mode `denote-rename-buffer-mode' provides the means to
   automatically rename the buffer of a Denote file upon visiting the
-  file.  A buffer is renamed upon visiting the underlying file.  This
-  means that existing buffers are not renamed until they are visited
-  again in a new buffer (files are visited with the command `find-file'
-  or related).  Enable the mode thus:
+  file. This applies both to existing Denote files as well as new ones
+  ([Points of entry]). Enable the mode thus:
 
   ┌────
   │ (denote-rename-buffer-mode 1)
   └────
 
-  The default behaviour is to rename the buffer based on the file’s
-  title, which is retrieved from the front matter or from the `TITLE'
-  component of the file name ([The file-naming scheme]).
-
-  Customize the user option `denote-rename-buffer-function' to affect
-  how buffers are renamed.  Its value must be the symbol of a function.
-  The default is the `denote-rename-buffer-with-title', with an
-  alternative of `denote-rename-buffer-with-identifier'.
-
-  The user option also accepts an arbitrary function.  Refer to the
-  implementation details of `denote-rename-buffer-with-title' or
-  `denote-rename-buffer-with-identifier' for guidance on how to write a
-  custom function.
+  Buffers are named by applying the function specified in the user
+  option `denote-rename-buffer-function'. The default function is
+  `denote-rename-buffer': it renames the buffer based on the template
+  set in the user option `denote-rename-buffer-format'. By default, the
+  formatting template targets only the `TITLE' component of the file
+  name ([The file-naming scheme]). Other fields are explained elsewhere
+  in this manual ([The denote-rename-buffer-format]).
 
   Note that renaming a buffer is not the same as renaming a file
-  ([Renaming files]).  The former is just for convenience inside of
+  ([Renaming files]). The former is just for convenience inside of
   Emacs.  Whereas the latter is for writing changes to disk, making them
   available to all programs.
 
 
+[Points of entry] See section 3
+
 [The file-naming scheme] See section 5
+
+[The denote-rename-buffer-format] See section 10.1
 
 [Renaming files] See section 4
 
+10.1 The `denote-rename-buffer-format' option
+─────────────────────────────────────────────
 
-10 Use Org dynamic blocks
+  The user option `denote-rename-buffer-format' controls how the
+  function `denote-rename-buffer' chooses the name of the
+  buffer-to-be-renamed.
+
+  The value of this user option is a string. The following specifiers
+  are placeholders for Denote file name components ([The file-naming
+  scheme]):
+
+  • The `%t' is the Denote `TITLE' of the file.
+  • The `%i' is the Denote `IDENTIFIER' of the file.
+  • The `%d' is the same as `%i' (`DATE' mnemonic).
+  • The `%s' is the Denote `SIGNATURE' of the file.
+  • The `%k' is the Denote `KEYWORDS' of the file.
+  • The `%%' is a literal percent sign.
+
+  In addition, the following flags are available for each of the
+  specifiers:
+
+  `0'
+        Pad to the width, if given, with zeros instead of spaces.
+  `-'
+        Pad to the width, if given, on the right instead of the left.
+  `<'
+        Truncate to the width and precision, if given, on the left.
+  `>'
+        Truncate to the width and precision, if given, on the right.
+  `^'
+        Convert to upper case.
+  `_'
+        Convert to lower case.
+
+  When combined all together, the above are written thus:
+
+  ┌────
+  │ %<flags><width><precision>SPECIFIER-CHARACTER
+  └────
+
+
+  Any other string it taken as-is.  Users may want, for example, to
+  include some text that makes Denote buffers stand out, such as a `[D]'
+  prefix.  Examples:
+
+  ┌────
+  │ ;; Use the title (default)
+  │ (setq denote-rename-buffer-format "%t")
+  │ 
+  │ ;; Use the title and keywords with some emoji in between
+  │ (setq denote-rename-buffer-format "%t 🤨 %k")
+  │ 
+  │ ;; Use the title with a literal "[D]" before it
+  │ (setq denote-rename-buffer-format "[D] %t")
+  └────
+
+  Users who need yet more flexibility are best served by writing their
+  own function and assigning it to the `denote-rename-buffer-function'.
+
+
+[The file-naming scheme] See section 5
+
+
+11 Use Org dynamic blocks
 ═════════════════════════
 
   Denote can optionally integrate with Org mode’s “dynamic blocks”
   facility.  Start by loading the relevant library:
 
   ┌────
-  │ ;; Register Denote's Org dynamic blocks
   │ (require 'denote-org-dblock)
   └────
 
@@ -2350,10 +2727,10 @@ backlinks?] See section 21.10
 
 [The file-naming scheme] See section 5
 
-[Writing metanotes] See section 7.7
+[Writing metanotes] See section 7.8
 
 
-11 Minibuffer histories
+12 Minibuffer histories
 ═══════════════════════
 
   Denote has a dedicated minibuffer history for each one of its prompts.
@@ -2375,7 +2752,7 @@ backlinks?] See section 21.10
   └────
 
 
-12 Extending Denote
+13 Extending Denote
 ═══════════════════
 
   Denote is a tool with a narrow scope: create notes and link between
@@ -2385,82 +2762,105 @@ backlinks?] See section 21.10
   the details.
 
 
-12.1 Keep a journal or diary
+13.1 Keep a journal or diary
 ────────────────────────────
 
-  While there are subtle technical differences between a journal and a
-  diary, we will consider those equivalent in the interest of brevity:
-  they both describe a personal space that holds a record of your
-  thoughts about your experiences and/or view of events in the world.
-
-  Suppose you are committed to writing an entry every day.  Unlike what
-  we demonstrated before, your writing will follow a regular naming
-  pattern.  You know that the title of the new note must always look
-  like `Tuesday 14 June 2022' and the keyword has to be `journal' or
-  `diary'.  As such, you want to automate the task instead of being
-  prompted each time, as is the norm with `denote' and the relevant
-  commands ([Points of entry]).  This is easy to accomplish because
-  `denote' can be called from Lisp and given the required arguments of
-  `TITLE' and `KEYWORDS' directly.  All you need is a simple wrapper
-  function:
+  Denote provides a general-purpose mechanism to create new files that
+  broadly count as “notes” ([Points of entry]).  Such files can be daily
+  entries in a journal.  While it is possible to use the generic
+  `denote' command to maintain a journal, we provide an optional set of
+  convenience options and commands as part of
+  `denote-journal-extras.el'.  To use those, add the following the
+  Denote configuration:
 
   ┌────
-  │ (defun my-denote-journal ()
-  │   "Create an entry tagged 'journal' with the date as its title."
-  │   (interactive)
-  │   (denote
-  │    (format-time-string "%A %e %B %Y") ; format like Tuesday 14 June 2022
-  │    '("journal"))) ; multiple keywords are a list of strings: '("one" "two")
+  │ (require 'denote-journal-extras)
   └────
 
-  By invoking `my-denote-journal' you will go straight into the newly
-  created note and commit to your writing outright.
+  The command `denote-journal-extras-new-entry' creates a new entry in
+  the journal.  Such a file has the `denote-journal-extras-keyword',
+  which is `journal' by default ([The file-naming scheme]).  The user
+  can set this keyword to an arbitrary string (single word is
+  preferred).  New journal entries can be stored in the
+  `denote-directory' or subdirectory thereof.  To make it easier for the
+  user, the new journal entry will be placed in
+  `denote-journal-extras-directory', which defaults to a subdirectory of
+  `denote-directory' called `journal'.
 
-  Of course, you can always set up the function so that it asks for a
-  `TITLE' but still automatically applies the `journal' tag:
+  If `denote-journal-extras-directory' is nil, the `denote-directory' is
+  used.  Journal entries will thus be in a flat listing together with
+  all other notes.  They can still be retrieved easily by searching for
+  the `denote-journal-extras-keyword' ([Features of the file-naming
+  scheme for searching or filtering]).
+
+  Furthermore, the command `denote-journal-extras-new-entry' will use
+  the current date as the title of the new entry.  The exact format is
+  controlled by the user option `denote-journal-extras-title-format'.
+  Acceptable values for `denote-journal-extras-title-format' and their
+  corresponding styles are:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Symbol                   Style                             
+  ────────────────────────────────────────────────────────────
+   day                      Monday                            
+   day-date-month-year      Monday 19 September 2023          
+   day-date-month-year-24h  Monday 19 September 2023 20:49    
+   day-date-month-year-12h  Monday 19 September 2023 08:49 PM 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  For example:
 
   ┌────
-  │ (defun denote-journal-with-title ()
-  │   "Create an entry tagged 'journal', while prompting for a title."
-  │   (interactive)
-  │   (denote
-  │    (denote-title-prompt) ; ask for title, instead of using human-readable date
-  │    '("journal")))
+  │ (setq denote-journal-extras-title-format 'day-date-month-year)
   └────
 
-  The above snippets do not check if a daily entry exists: they always
-  create a new one.  The idea is that one may want to write multiple
-  journal entries per day.  Another approach is to create a single entry
-  on a given day, in which case the command must be repurposed to
-  surface the existing note, if present.  As with `my-denote-journal'
-  above, the title is formatted as `Tuesday 14 June 2022'.
+  If the value of this user option is `nil', then
+  `denote-journal-extras-new-entry' will prompt for a title.
 
-  ┌────
-  │ (defun my-denote-journal ()
-  │   "Create an entry tagged 'journal' with the date as its title.
-  │ If a journal for the current day exists, visit it.  If multiple
-  │ entries exist, prompt with completion for a choice between them.
-  │ Else create a new file."
-  │   (interactive)
-  │   (let* ((today (format-time-string "%A %e %B %Y"))
-  │ 	 (string (denote-sluggify today))
-  │ 	 (files (denote-directory-files-matching-regexp string)))
-  │     (cond
-  │      ((> (length files) 1)
-  │       (find-file (completing-read "Select file: " files nil :require-match)))
-  │      (files
-  │       (find-file (car files)))
-  │      (t
-  │       (denote
-  │        today
-  │        '("journal"))))))
-  └────
+  The `denote-journal-extras-new-entry' command also accepts an optional
+  `DATE' argument. When called internactively, this is a universal
+  prefix (e.g. `C-u' with the default key bindings). With `DATE', it
+  prompts for a date to create a new journal entry for. The date prompt
+  can optionally use the Org date+calendar selection interface ([The
+  `denote-date-prompt-use-org-read-date' option]).
+
+  In terms of workflow, using the current date as the title is better
+  for maintaining a daily journal.  A prompt for an arbitrary title is
+  more suitable for those who like to keep a record of something like a
+  thought or event (though this can also be achieved by the regular
+  `denote' command or maybe `denote-subdirectory').
+
+  The `denote-journal-extras-new-entry' command calls the normal hook
+  `denote-journal-extras-hook' after it is done.  The user can leverage
+  this to produce consequences therefrom, such as to set a timer with
+  the `tmr' package from GNU ELPA ([Journaling with a timer]).
+
+  The command `denote-journal-extras-new-or-existing-entry' locates an
+  existing journal entry or creates a new one.  A journal entry is one
+  that has `denote-journal-extras-keyword' as part of its file name.  If
+  there are multiple journal entries for the current date, it prompts
+  for one among them using minibuffer completion.  If there is only one,
+  it visits it outright.  If there is no journal entry, it creates one
+  by calling `denote-journal-extra-new-entry' (as described above).
 
 
 [Points of entry] See section 3
 
-12.1.1 Journaling with a timer
+[The file-naming scheme] See section 5
+
+[Features of the file-naming scheme for searching or filtering] See
+section 5.3
+
+[The `denote-date-prompt-use-org-read-date' option] See section 3.1.4
+
+[Journaling with a timer] See section 13.1.1
+
+13.1.1 Journaling with a timer
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  [ Revised as part of version 2.1.0 to conform with how we now tend to
+    the needs of users who use Denote for journaling purposes ([Keep a
+    journal or diary]). ]
 
   Sometimes journaling is done with the intent to hone one’s writing
   skills.  Perhaps you are learning a new language or wish to
@@ -2470,25 +2870,45 @@ backlinks?] See section 21.10
 
   One way to test your progress is to set a timer.  It helps you gauge
   your output and its quality.  To use a timer with Emacs, consider the
-  `tmr' package:
+  `tmr' package.  A new timer can be set with something like this:
 
   ┌────
-  │ (defun my-denote-journal-with-tmr ()
-  │   "Like `my-denote-journal', but also set a 10-minute timer.
-  │ The `tmr' command is part of the `tmr' package."
-  │   (interactive)
-  │   (denote
-  │    (format-time-string "%A %e %B %Y")
-  │    '("journal"))
-  │   (tmr "10" "Practice writing in my journal")) ; set 10 minute timer with a description
+  │ ;; Set 10 minute timer with the given description
+  │ (tmr "10" "Practice writing in my journal")
+  └────
+
+  To make this timer start as soon as a new journal entry is created
+  with the command `denote-journal-extras-new-entry', add a function to
+  the `denote-journal-extras-hook'.  For example:
+
+  ┌────
+  │ ;; Add an anonymous function, which is more difficult to modify after
+  │ ;; the fact:
+  │ (add-hook 'denote-journal-extras-hook (lambda ()
+  │ 					(tmr "10" "Practice writing in my journal")))
+  │ 
+  │ ;; Or write a small function that you can then modify without
+  │ ;; revaluating the hook:
+  │ (defun my-denote-tmr ()
+  │   (tmr "10" "Practice writing in my journal"))
+  │ 
+  │ (add-hook 'denote-journal-extras-hook 'my-denote-tmr)
+  │ 
+  │ ;; Or to make it fully featured, define variables for the duration and
+  │ ;; the description and set it up so that you only need to modify
+  │ ;; those:
+  │ (defvar my-denote-tmr-duration "10")
+  │ 
+  │ (defvar my-denote-tmr-description "Practice writing in my journal")
+  │ 
+  │ (defun my-denote-tmr ()
+  │   (tmr my-denote-tmr-duration my-denote-tmr-description))
+  │ 
+  │ (add-hook 'denote-journal-extras-hook 'my-denote-tmr)
   └────
 
   Once the timer elapses, stop writing and review your performance.
   Practice makes perfect!
-
-  [ As Denote matures, we may add hooks to control what happens before
-    or after the creation of a new note.  We shall also document more
-    examples of tasks that can be accomplished with this package. ]
 
   Sources for `tmr':
 
@@ -2502,37 +2922,53 @@ backlinks?] See section 21.10
   ⁃ Mailing list: <https://lists.sr.ht/~protesilaos/tmr>
 
 
-12.2 Create a note with the region’s contents
+[Keep a journal or diary] See section 13.1
+
+
+13.2 Create a note with the region’s contents
 ─────────────────────────────────────────────
 
-  Sometimes it makes sense to gather notes in a single file and later
-  review it to make multiple notes out of it.  With the following code,
-  the user marks a region and then invokes the command
-  `my-denote-create-new-note-from-region': it prompts for a title and
-  keywords and then uses the region’s contents to fill in the newly
-  created note.
+  The command `denote-region' takes the contents of the active region
+  and then prompts for a title and keywords.  Once a new note is
+  created, it inserts the contents of the region therein.  This is
+  useful to quickly elaborate on some snippet of text or capture it for
+  future reference.
+
+  If there is no active region, `denote-region' simply calls the
+  `denote' command which will behave the way it does ordinarily.
+
+  When the `denote-region' command is called with an active region, it
+  finalises its work by calling
+  `denote-region-after-new-note-functions'.  This is an abnormal hook,
+  meaning that the functions added to it are called with arguments.  The
+  arguments are two, representing the beginning and end positions of the
+  newly inserted text.
+
+  A common use-case for Org mode users is to call the command
+  `org-insert-structure-template' after a region is inserted.  Emacs
+  will thus prompt for a structure template, such as the one
+  corresponding to a source block.  In this case the function added to
+  `denote-region-after-new-note-functions' does not actually need
+  aforementioned arguments: it can simply declare those as ignored by
+  prefixing the argument names with an underscore (an underscore is
+  enough, but it is better to include a name for clarity).  For example,
+  the following will prompt for a structure template as soon as
+  `denote-region' is done:
 
   ┌────
-  │ (defun my-denote-create-new-note-from-region (beg end)
-  │   "Create note whose contents include the text between BEG and END.
-  │ Prompt for title and keywords of the new note."
-  │   (interactive "r")
-  │   (if-let (((region-active-p))
-  │ 	   (text (buffer-substring-no-properties beg end)))
-  │       (progn
-  │ 	(denote (denote-title-prompt) (denote-keywords-prompt))
-  │ 	(insert text))
-  │     (user-error "No region is available")))
+  │ (defun my-denote-region-org-structure-template (_beg _end)
+  │   (when (derived-mode-p 'org-mode)
+  │     (activate-mark)
+  │     (call-interactively 'org-insert-structure-template)))
+  │ 
+  │ (add-hook 'denote-region-after-new-note-functions #'my-denote-region-org-structure-template)
   └────
 
-  Have a different workflow?  Feel welcome to discuss it in any of our
-  official channels ([Contributing]).
+  Remember that `denote-region-after-new-note-functions' are not called
+  if `denote-region' is used without an active region.
 
 
-[Contributing] See section 17
-
-
-12.3 Split an Org subtree into its own note
+13.3 Split an Org subtree into its own note
 ───────────────────────────────────────────
 
   With Org files in particular, it is common to have nested headings
@@ -2586,10 +3022,10 @@ backlinks?] See section 21.10
   official channels ([Contributing]).
 
 
-[Contributing] See section 17
+[Contributing] See section 18
 
 
-12.4 Narrow the list of files in Dired
+13.4 Narrow the list of files in Dired
 ──────────────────────────────────────
 
   Emacs’ standard file manager (or directory editor) can read a regular
@@ -2599,7 +3035,7 @@ backlinks?] See section 21.10
   keyword ([Features of the file-naming scheme for searching or
   filtering]).
 
-  Once the files are matched, the user has to options: (i) narrow the
+  Once the files are matched, the user has two options: (i) narrow the
   list to the matching items or (ii) exclude the matching items from the
   list.
 
@@ -2648,10 +3084,10 @@ backlinks?] See section 21.10
 
 
 [Features of the file-naming scheme for searching or filtering] See
-section 5.2
+section 5.3
 
 
-12.5 Use `dired-virtual-mode' for arbitrary file listings
+13.5 Use `dired-virtual-mode' for arbitrary file listings
 ─────────────────────────────────────────────────────────
 
   Emacs’ Dired is a powerful file manager that builds its functionality
@@ -2748,12 +3184,12 @@ section 5.2
 
 
 [I want to sort by last modified, why won’t Denote let me?] See section
-21.7
+22.7
 
 [The file-naming scheme] See section 5
 
 
-12.6 Use Embark to collect minibuffer candidates
+13.6 Use Embark to collect minibuffer candidates
 ────────────────────────────────────────────────
 
   `embark' is a remarkable package that lets you perform relevant,
@@ -2777,10 +3213,10 @@ section 5.2
   power of the minibuffer ([Narrow the list of files in Dired]).
 
 
-[Narrow the list of files in Dired] See section 12.4
+[Narrow the list of files in Dired] See section 13.4
 
 
-12.7 Search file contents
+13.7 Search file contents
 ─────────────────────────
 
   Emacs provides built-in commands which are wrappers of standard Unix
@@ -2821,7 +3257,7 @@ section 5.2
   use than the built-in commands.
 
 
-12.8 Bookmark the directory with the notes
+13.8 Bookmark the directory with the notes
 ──────────────────────────────────────────
 
   Part of the reason Denote does not reinvent existing functionality is
@@ -2846,7 +3282,7 @@ section 5.2
   extras for working with directories, including bookmarks.
 
 
-12.9 Use the `citar-denote' package for bibliography notes
+13.9 Use the `citar-denote' package for bibliography notes
 ──────────────────────────────────────────────────────────
 
   Peter Prevos has produced the `citar-denote' package which makes it
@@ -2863,7 +3299,7 @@ section 5.2
   <https://github.com/pprevos/citar-denote/>.
 
 
-12.10 Use the `consult-notes' package
+13.10 Use the `consult-notes' package
 ─────────────────────────────────────
 
   If you are using Daniel Mendler’s `consult' (which is a brilliant
@@ -2898,10 +3334,10 @@ section 5.2
 
 
 [Features of the file-naming scheme for searching or filtering] See
-section 5.2
+section 5.3
 
 
-12.11 Use the `denote-menu' package
+13.11 Use the `denote-menu' package
 ───────────────────────────────────
 
   Denote’s file-naming scheme is designed to be efficient and to provide
@@ -2922,7 +3358,7 @@ section 5.2
 <https://github.com/namilus/denote-menu>
 
 
-12.12 Treat your notes as a project
+13.12 Treat your notes as a project
 ───────────────────────────────────
 
   Emacs has a built-in library for treating a directory tree as a
@@ -2955,153 +3391,7 @@ section 5.2
   Git).
 
 
-12.13 Make variants of `denote-open-or-create'
-──────────────────────────────────────────────
-
-  The command `denote-open-or-create' prompts to visit a file in the
-  `denote-directory'.  If the user input does not have any matches,
-  `denote-open-or-create' will call the `denote' command interactively.
-  It will then use whatever prompts `denote' normally has, per the user
-  option `denote-prompts' ([Standard note creation]).
-
-  To speed up the process or to maintain variants that suit one’s
-  workflow, we provide these ready-to-use commands that one can add to
-  their Emacs init file.  They can be assigned to key bindings or be
-  used via `M-x' after they have been evaluated.
-
-  ┌────
-  │ ;;;###autoload
-  │ (defun denote-open-or-create-with-date ()
-  │   "Invoke `denote-open-or-create' but also prompt for date.
-  │ 
-  │ The date can be in YEAR-MONTH-DAY notation like 2022-06-30 or
-  │ that plus the time: 2022-06-16 14:30.  When the user option
-  │ `denote-date-prompt-use-org-read-date' is non-nil, the date
-  │ prompt uses the more powerful Org+calendar system.
-  │ 
-  │ This is the equivalent to calling `denote-open-or-create' when
-  │ `denote-prompts' is set to \\='(date title keywords)."
-  │   (declare (interactive-only t))
-  │   (interactive)
-  │   (let ((denote-prompts '(date title keywords)))
-  │     (call-interactively #'denote-open-or-create)))
-  │ 
-  │ ;;;###autoload
-  │ (defun denote-open-or-create-with-type ()
-  │   "Invoke `denote-open-or-create' but also prompt for file type.
-  │ This is the equivalent to calling `denote-open-or-create' when
-  │ `denote-prompts' is set to \\='(type title keywords)."
-  │   (declare (interactive-only t))
-  │   (interactive)
-  │   (let ((denote-prompts '(type title keywords)))
-  │     (call-interactively #'denote-open-or-create)))
-  │ 
-  │ ;;;###autoload
-  │ (defun denote-open-or-create-with-subdirectory ()
-  │   "Invoke `denote-open-or-create' but also prompt for subdirectory.
-  │ This is the equivalent to calling `denote-open-or-create' when
-  │ `denote-prompts' is set to \\='(subdirectory title keywords)."
-  │   (declare (interactive-only t))
-  │   (interactive)
-  │   (let ((denote-prompts '(subdirectory title keywords)))
-  │     (call-interactively #'denote-open-or-create)))
-  │ 
-  │ ;;;###autoload
-  │ (defun denote-open-or-create-with-template ()
-  │   "Invoke `denote-open-or-create' but also prompt for template.
-  │ This is the equivalent to calling `denote-open-or-create' when
-  │ `denote-prompts' is set to \\='(template title keywords).
-  │ 
-  │ For templates, refer to `denote-templates'."
-  │   (declare (interactive-only t))
-  │   (interactive)
-  │   (let ((denote-prompts '(template title keywords)))
-  │     (call-interactively #'denote-open-or-create)))
-  └────
-
-
-[Standard note creation] See section 3.1
-
-
-12.14 Make variants of `denote-link-or-create'
-──────────────────────────────────────────────
-
-  The command `denote-link-or-create' uses `denote-link' on a `TARGET'
-  file, creating it if necessary.  The `TARGET' matches the user input
-  at a minibuffer prompt: it is a file in the `denote-directory'.
-
-  If `TARGET' file does not exist, The `denote-link-or-create' calls
-  `denote-link-after-creating' which runs the standard `denote' command
-  interactively to create the file ([Standard note creation]).  The
-  established link will then be targeting that new file.
-
-  When called with an optional prefix argument (`C-u' by default)
-  `denote-link-or-create' creates a link that consists of just the
-  identifier.  Else it tries to also include the file’s title.  This has
-  the same meaning as in `denote-link' ([Linking notes]).
-
-  To speed up the process or to maintain variants that suit one’s
-  workflow, we provide these ready-to-use commands that one can add to
-  their Emacs init file.  They can be assigned to key bindings or be
-  used via `M-x' after they have been evaluated.
-
-  ┌────
-  │ ;;;###autoload
-  │ (defun denote-link-or-create-with-date ()
-  │   "Invoke `denote-link-or-create' but also prompt for date.
-  │ 
-  │ The date can be in YEAR-MONTH-DAY notation like 2022-06-30 or
-  │ that plus the time: 2022-06-16 14:30.  When the user option
-  │ `denote-date-prompt-use-org-read-date' is non-nil, the date
-  │ prompt uses the more powerful Org+calendar system.
-  │ 
-  │ This is the equivalent to calling `denote-link-or-create' when
-  │ `denote-prompts' is set to \\='(date title keywords)."
-  │   (declare (interactive-only t))
-  │   (interactive)
-  │   (let ((denote-prompts '(date title keywords)))
-  │     (call-interactively #'denote-link-or-create)))
-  │ 
-  │ ;;;###autoload
-  │ (defun denote-link-or-create-with-type ()
-  │   "Invoke `denote-link-or-create' but also prompt for file type.
-  │ This is the equivalent to calling `denote-link-or-create' when
-  │ `denote-prompts' is set to \\='(type title keywords)."
-  │   (declare (interactive-only t))
-  │   (interactive)
-  │   (let ((denote-prompts '(type title keywords)))
-  │     (call-interactively #'denote-link-or-create)))
-  │ 
-  │ ;;;###autoload
-  │ (defun denote-link-or-create-with-subdirectory ()
-  │   "Invoke `denote-link-or-create' but also prompt for subdirectory.
-  │ This is the equivalent to calling `denote-link-or-create' when
-  │ `denote-prompts' is set to \\='(subdirectory title keywords)."
-  │   (declare (interactive-only t))
-  │   (interactive)
-  │   (let ((denote-prompts '(subdirectory title keywords)))
-  │     (call-interactively #'denote-link-or-create)))
-  │ 
-  │ ;;;###autoload
-  │ (defun denote-link-or-create-with-template ()
-  │   "Invoke `denote-link-or-create' but also prompt for template.
-  │ This is the equivalent to calling `denote-link-or-create' when
-  │ `denote-prompts' is set to \\='(template title keywords).
-  │ 
-  │ For templates, refer to `denote-templates'."
-  │   (declare (interactive-only t))
-  │   (interactive)
-  │   (let ((denote-prompts '(template title keywords)))
-  │     (call-interactively #'denote-link-or-create)))
-  └────
-
-
-[Standard note creation] See section 3.1
-
-[Linking notes] See section 7
-
-
-12.15 Use the tree-based file prompt for select commands
+13.13 Use the tree-based file prompt for select commands
 ────────────────────────────────────────────────────────
 
   Older versions of Denote had a file prompt that resembled that of the
@@ -3140,21 +3430,21 @@ section 5.2
   └────
 
 
-12.16 Rename files with Denote in the Image Dired thumbnails buffer
+13.14 Rename files with Denote in the Image Dired thumbnails buffer
 ───────────────────────────────────────────────────────────────────
 
   [Rename files with Denote using `dired-preview']
 
-  Just as with the `denote-dired-rename-marked-files', we can use Denote
-  in the Image Dired buffer ([Rename multiple files at once]).  Here is
-  the custom code:
+  Just as with the `denote-dired-rename-marked-files-with-keywords', we
+  can use Denote in the Image Dired buffer ([Rename multiple files at
+  once]).  Here is the custom code:
 
   ┌────
   │ (autoload 'image-dired--with-marked "image-dired")
   │ (autoload 'image-dired-original-file-name "image-dired-util")
   │ 
   │ (defun my-denote-image-dired-rename-marked-files (keywords)
-  │   "Like `denote-dired-rename-marked-files' but for Image Dired.
+  │   "Like `denote-dired-rename-marked-files-with-keywords' but for Image Dired.
   │ Prompt for KEYWORDS and rename all marked files in the Image
   │ Dired buffer to have a Denote-style file name with the given
   │ KEYWORDS.
@@ -3169,7 +3459,7 @@ section 5.2
   │   (image-dired--with-marked
   │    (when-let* ((file (image-dired-original-file-name))
   │ 	       (dir (file-name-directory file))
-  │ 	       (id (denote-retrieve-or-create-file-identifier file))
+  │ 	       (id (denote-retrieve-filename-identifier file))
   │ 	       (file-type (denote-filetype-heuristics file))
   │ 	       (title (denote--retrieve-title-or-filename file file-type))
   │ 	       (extension (file-name-extension file t))
@@ -3186,7 +3476,7 @@ section 5.2
 
   ┌────
   │ (defun my-image-dired-rename-marked-files (keywords)
-  │   "Like `denote-dired-rename-marked-files' but for Image Dired.
+  │   "Like `denote-dired-rename-marked-files-with-keywords' but for Image Dired.
   │ Prompt for keywords and rename all marked files in the Image
   │ Dired buffer to have Denote-style keywords, but none of the other
   │ conventions of Denote's file-naming scheme."
@@ -3204,12 +3494,12 @@ section 5.2
   └────
 
 
-[Rename files with Denote using `dired-preview'] See section 12.17
+[Rename files with Denote using `dired-preview'] See section 13.15
 
-[Rename multiple files at once] See section 4.2
+[Rename multiple files at once] See section 4.3
 
 
-12.17 Rename files with Denote using `dired-preview'
+13.15 Rename files with Denote using `dired-preview'
 ────────────────────────────────────────────────────
 
   The `dired-preview' package (by me/Protesilaos) automatically displays
@@ -3217,11 +3507,11 @@ section 5.2
   tandem with Denote when we want to rename multiple files by taking a
   quick look at their contents.
 
-  The command `denote-dired-rename-marked-files' will generate
-  Denote-style file names based on the keywords it prompts for.
-  Identifiers are derived from each file’s modification date ([Rename
-  multiple files at once]).  There is no need for any custom code in
-  this scenario.
+  The command `denote-dired-rename-marked-files-with-keywords' will
+  generate Denote-style file names based on the keywords it prompts
+  for. Identifiers are derived from each file’s modification date
+  ([Rename multiple files at once]). There is no need for any custom
+  code in this scenario.
 
   As noted in the section about Image Dired, the user may sometimes not
   need a fully fledged Denote-style file name but only append
@@ -3239,7 +3529,7 @@ section 5.2
 
   ┌────
   │ (defun my-denote-dired-rename-marked-files-keywords-only ()
-  │   "Like `denote-dired-rename-marked-files' but only for keywords in file names.
+  │   "Like `denote-dired-rename-marked-files-with-keywords' but only for keywords in file names.
   │ 
   │ Prompt for keywords and rename all marked files in the Dired
   │ buffer to only have Denote-style keywords, but none of the other
@@ -3260,13 +3550,13 @@ section 5.2
   └────
 
 
-[Rename multiple files at once] See section 4.2
+[Rename multiple files at once] See section 4.3
 
 [Rename files with Denote in the Image Dired thumbnails buffer] See
-section 12.16
+section 13.14
 
 
-12.18 Avoid duplicate identifiers when exporting Denote notes
+13.16 Avoid duplicate identifiers when exporting Denote notes
 ─────────────────────────────────────────────────────────────
 
   When exporting Denote notes to, for example, an HTML or PDF file,
@@ -3287,7 +3577,7 @@ section 12.16
 
 [Convenience commands for note creation] See section 3.1.3
 
-12.18.1 Export Denote notes with Org Mode
+13.16.1 Export Denote notes with Org Mode
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Org Mode has a built-in configurable export engine.  You can prevent
@@ -3295,7 +3585,7 @@ section 12.16
   or by advising the Org export function.
 
 
-◊ 12.18.1.1 Manually configure Org export
+◊ 13.16.1.1 Manually configure Org export
 
   Insert `#+export_file_name: FILENAME' in the front matter before
   exporting to force a filename called whatever the value of `FILENAME'
@@ -3312,10 +3602,10 @@ section 12.16
   this section ([Export Denote notes]).
 
 
-  [Export Denote notes] See section 12.18
+  [Export Denote notes] See section 13.16
 
 
-◊ 12.18.1.2 Automatically store Org exports in another folder
+◊ 13.16.1.2 Automatically store Org exports in another folder
 
   It is possible to automatically place all exports in another folder by
   making Org’s function `org-export-output-file-name' create the target
@@ -3370,10 +3660,10 @@ section 12.16
   <https://emacs.stackexchange.com/questions/45751/org-export-to-different-directory>.
 
 
-  [Exclude certain directories from all operations] See section 3.5
+  [Exclude certain directories from all operations] See section 3.6
 
 
-◊ 12.18.1.3 Org Mode Publishing
+◊ 13.16.1.3 Org Mode Publishing
 
   Org Mode also has a publishing tool for exporting a collection of
   files. Some user might apply this approach to convert their note
@@ -3388,10 +3678,10 @@ section 12.16
   ([Exclude certain directories from all operations]).
 
 
-  [Exclude certain directories from all operations] See section 3.5
+  [Exclude certain directories from all operations] See section 3.6
 
 
-12.18.2 Export Denote notes with Markdown
+13.16.2 Export Denote notes with Markdown
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Exporting from Markdown requires an external processor (e.g.,
@@ -3407,13 +3697,13 @@ section 12.16
   of duplicate Denote identifiers.
 
 
-13 Installation
+14 Installation
 ═══════════════
 
 
 
 
-13.1 GNU ELPA package
+14.1 GNU ELPA package
 ─────────────────────
 
   The package is available as `denote'.  Simply do:
@@ -3433,7 +3723,7 @@ section 12.16
   <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-13.2 Manual installation
+14.2 Manual installation
 ────────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
@@ -3462,7 +3752,7 @@ section 12.16
   Everything is in place to set up the package.
 
 
-14 Sample configuration
+15 Sample configuration
 ═══════════════════════
 
   ┌────
@@ -3485,11 +3775,6 @@ section 12.16
   │ ;; Read this manual for how to specify `denote-templates'.  We do not
   │ ;; include an example here to avoid potential confusion.
   │ 
-  │ 
-  │ ;; We do not allow multi-word keywords by default.  The author's
-  │ ;; personal preference is for single-word keywords for a more rigid
-  │ ;; workflow.
-  │ (setq denote-allow-multi-word-keywords t)
   │ 
   │ (setq denote-date-format nil) ; read doc string
   │ 
@@ -3516,33 +3801,15 @@ section 12.16
   │ ;; OR if only want it in `denote-dired-directories':
   │ (add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)
   │ 
-  │ ;; Here is a custom, user-level command from one of the examples we
-  │ ;; showed in this manual.  We define it here and add it to a key binding
-  │ ;; below.
-  │ (defun my-denote-journal ()
-  │   "Create an entry tagged 'journal' with the date as its title.
-  │ If a journal for the current day exists, visit it.  If multiple
-  │ entries exist, prompt with completion for a choice between them.
-  │ Else create a new file."
-  │   (interactive)
-  │   (let* ((today (format-time-string "%A %e %B %Y"))
-  │ 	 (string (denote-sluggify today))
-  │ 	 (files (denote-directory-files-matching-regexp string)))
-  │     (cond
-  │      ((> (length files) 1)
-  │       (find-file (completing-read "Select file: " files nil :require-match)))
-  │      (files
-  │       (find-file (car files)))
-  │      (t
-  │       (denote
-  │        today
-  │        '("journal"))))))
+  │ 
+  │ ;; Automatically rename Denote buffers using the `denote-rename-buffer-format'.
+  │ (denote-rename-buffer-mode 1)
   │ 
   │ ;; Denote DOES NOT define any key bindings.  This is for the user to
   │ ;; decide.  For example:
   │ (let ((map global-map))
-  │   (define-key map (kbd "C-c n j") #'my-denote-journal) ; our custom command
   │   (define-key map (kbd "C-c n n") #'denote)
+  │   (define-key map (kbd "C-c n c") #'denote-region) ; "contents" mnemonic
   │   (define-key map (kbd "C-c n N") #'denote-type)
   │   (define-key map (kbd "C-c n d") #'denote-date)
   │   (define-key map (kbd "C-c n z") #'denote-signature) ; "zettelkasten" mnemonic
@@ -3565,7 +3832,8 @@ section 12.16
   │ ;; Key bindings specifically for Dired.
   │ (let ((map dired-mode-map))
   │   (define-key map (kbd "C-c C-d C-i") #'denote-link-dired-marked-notes)
-  │   (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-marked-files)
+  │   (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-files)
+  │   (define-key map (kbd "C-c C-d C-k") #'denote-dired-rename-marked-files-with-keywords)
   │   (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-using-front-matter))
   │ 
   │ (with-eval-after-load 'org-capture
@@ -3590,7 +3858,7 @@ section 12.16
   └────
 
 
-15 For developers or advanced users
+16 For developers or advanced users
 ═══════════════════════════════════
 
   Denote is in a stable state and can be relied upon as the basis for
@@ -3674,6 +3942,18 @@ section 12.16
         Derive `denote-file-type-extensions' plus
         `denote-encryption-file-extensions'.
 
+  Function `denote-get-file-extension'
+        Return extension of `FILE' with dot included.  Account for
+        `denote-encryption-file-extensions'.  In other words, return
+        something like `.org.gpg' if it is part of the file, else return
+        `.org'.
+
+  Function `denote-get-file-extension-sans-encryption'
+        Return extension of `FILE' with dot included and without the
+        encryption part.  Build on top of `denote-get-file-extension'
+        though always return something like `.org' even if the actual
+        file extension is `.org.gpg'.
+
   Function `denote-keywords'
         Return appropriate list of keyword candidates.  If
         `denote-infer-keywords' is non-nil, infer keywords from existing
@@ -3684,6 +3964,11 @@ section 12.16
   Function `denote-keywords-sort'
         Sort `KEYWORDS' if `denote-sort-keywords' is non-nil.
         `KEYWORDS' is a list of strings, per `denote-keywords-prompt'.
+
+  Function `denote-keywords-combine'
+        Combine `KEYWORDS' list of strings into a single
+        string. Keywords are separated by the underscore character, per
+        the Denote file-naming scheme.
 
   Function `denote-directory'
         Return path of the variable `denote-directory' as a proper
@@ -3718,6 +4003,11 @@ section 12.16
         Return list of files matching `REGEXP' in
         `denote-directory-files'.
 
+  Function `denote-all-files'
+        Return the list of Denote files in the variable
+        `denote-directory'. With optional `OMIT-CURRENT', do not include
+        the current Denote file in the returned list.
+
   Function `denote-file-name-relative-to-denote-directory'
         Return name of `FILE' relative to the variable
         `denote-directory'.  `FILE' must be an absolute path.
@@ -3741,7 +4031,8 @@ section 12.16
         is a test'.
 
   Function `denote-sluggify-signature'
-        Make `STR' an appropriate slug for signatures.
+        Make `STR' an appropriate slug for signatures ([Contol the
+        letter casing of file names]).
 
   Function `denote-sluggify-keywords'
         Sluggify `KEYWORDS', which is a list of strings ([Sluggified
@@ -3776,32 +4067,25 @@ section 12.16
         Return existing Denote identifier in `STRING', else nil.
 
   Function `denote-retrieve-filename-identifier'
-        Extract identifier from `FILE' name.  To return an existing
-        identifier or create a new one, refer to the
-        `denote-retrieve-or-create-file-identifier' function.
+        Extract identifier from `FILE' name.  To create a new one, refer
+        to the `denote-create-unique-file-identifier' function.
 
   Function `denote-retrieve-filename-signature'
         Extract signature from `FILE' name, if present, else return nil.
 
-  Function `denote-retrieve-or-create-file-identifier'
-        Return `FILE' identifier, generating one if appropriate.  The
-        conditions are as follows:
+  Function `denote-create-unique-file-identifier'
+        Create a new unique `FILE' identifier.  Test that the identifier
+        is unique among `USED-IDS'.  The conditions are as follows:
 
-        • If `FILE' has an identifier, return it.
+        • If `DATE' is non-nil, invoke
+          `denote-prompt-for-date-return-id'.
 
-        • If `FILE' does not have an identifier and optional `DATE' is
-          non-nil, invoke `denote-prompt-for-date-return-id'.
-
-        • If `FILE' does not have an identifier and DATE is nil, use the
-          file attributes to determine the last modified date and format
-          it as an identifier.
+        • If `DATE' is nil, use the file attributes to determine the
+          last modified date and format it as an identifier.
 
         • As a fallback, derive an identifier from the current time.
 
-        With optional `FILES' as a list of file names, test that the
-        identifier is unique among them.
-
-        With optional `FILES' as non-nil, test that the identifier is
+        With optional `USED-IDS' as nil, test that the identifier is
         unique among all files and buffers in variable
         `denote-directory'.
 
@@ -3820,29 +4104,57 @@ section 12.16
         Return title line from `FILE' front matter per `FILE-TYPE'.
 
   Function `denote-retrieve-keywords-value'
-        Return keywords value from `FILE' front matter per `FILE-TYPE'.
+        Return keywords value from `FILE' front matter per
+        `FILE-TYPE'. The return value is a list of strings. To get a
+        combined string the way it would appear in a Denote file name,
+        use `denote-retrieve-keywords-value-as-string'.
+
+  Function `denote-retrieve-keywords-value-as-string'
+        Return keywords value from `FILE' front matter per
+        `FILE-TYPE'. The return value is a string, with the underscrore
+        as a separator between individual keywords. To get a list of
+        strings instead, use `denote-retrieve-keywords-value' (the
+        current function uses that internally).
 
   Function `denote-retrieve-keywords-line'
         Return keywords line from `FILE' front matter per `FILE-TYPE'.
 
   Function `denote-signature-prompt'
-        Prompt for signature string.
+        Prompt for signature string.  With optional `DEFAULT-SIGNATURE'
+        use it as the default minibuffer value. With optional
+        `PROMPT-TEXT' use it in the minibuffer instead of the default
+        prompt. Previous inputs at this prompt are available for
+        minibuffer completion. Consider `savehist-mode' to persist
+        minibuffer histories between sessions.
 
   Function `denote-file-prompt'
         Prompt for file with identifier in variable `denote-directory'.
-        With optional `INITIAL-TEXT', use it to prepopulate the
-        minibuffer.
+        With optional `FILES-MATCHING-REGEXP', filter the candidates per
+        the given regular expression.
 
   Function `denote-keywords-prompt'
-        Prompt for one or more keywords.  In the case of multiple
-        entries, those are separated by the `crm-sepator', which
-        typically is a comma.  In such a scenario, the output is sorted
-        with `string-lessp'.  To sort the return value, use
-        `denote-keywords-sort'.
+        Prompt for one or more keywords. Read entries as separate when
+        they are demarcated by the `crm-separator', which typically is a
+        comma. With optional `PROMPT-TEXT', use it to prompt the user
+        for keywords. Else use a generic prompt. Process the return
+        value with `denote-keywords-sort' and sort with
+        `string-collate-lessp' if the user option `denote-sort-keywords'
+        is non-nil.
 
   Function `denote-title-prompt'
-        Read file title for `denote'.  With optional `DEFAULT-TITLE' use
-        it as the default value.
+        Read file title for `denote'. With optional `DEFAULT-TITLE' use
+        it as the default value. With optional `PROMPT-TEXT' use it in
+        the minibuffer instead of the generic prompt. Previous inputs at
+        this prompt are available for minibuffer completion. Consider
+        `savehist-mode' to persist minibuffer histories between
+        sessions.
+
+  Variable `denote-title-prompt-current-default'
+        Currently bound default title for `denote-title-prompt'.  Set
+        the value of this variable within the lexical scope of a command
+        that needs to supply a default title before calling
+        `denote-title-prompt' and use `unwind-protect' to set its value
+        back to nil.
 
   Function `denote-file-type-prompt'
         Prompt for `denote-file-type'.  Note that a non-nil value other
@@ -3855,6 +4167,10 @@ section 12.16
         utility if the user option
         `denote-date-prompt-use-org-read-date' is non-nil.  It requires
         Org ([The denote-date-prompt-use-org-read-date option]).
+
+  Function `denote-command-prompt'
+        Prompt for command among `denote-commands-for-new-notes'
+        ([Points of entry]).
 
   Function `denote-prompt-for-date-return-id'
         Use `denote-date-prompt' and return it as `denote-id-format'.
@@ -3879,14 +4195,17 @@ section 12.16
         Rewrite front matter of note after `denote-rename-file' (or
         related) The `FILE', `TITLE', `KEYWORDS', and `FILE-TYPE'
         arguments are given by the renaming command and are used to
-        construct new front matter values if appropriate.
+        construct new front matter values if appropriate. With optional
+        `NO-CONFIRM', do not prompt to confirm the rewriting of the
+        front matter. Otherwise produce a `y-or-n-p' prompt to that
+        effect.
 
   Function `denote-rewrite-keywords'
         Rewrite `KEYWORDS' in `FILE' outright according to `FILE-TYPE'.
         Do the same as `denote-rewrite-front-matter' for keywords, but
         do not ask for confirmation.  This is for use in
         `denote-keywords-add', `denote-keywords-remove',
-        `denote-dired-rename-marked-files', or related.
+        `denote-dired-rename-marked-files-with-keywords', or related.
 
   Function `denote-update-dired-buffers'
         Update Dired buffers of variable `denote-directory'.  Note that
@@ -4048,24 +4367,28 @@ section 12.16
         `denote-link-return-backlinks'.
 
   Function `denote-link-return-backlinks'
-        Return list of links in current or optional `FILE'.  Also see
-        `denote-link-return-links'.
+        Return list of backlinks in current or optional `FILE'.  Also
+        see `denote-link-return-links'.
 
 
 [The file-naming scheme] See section 5
 
 [Standard note creation] See section 3.1
 
-[Maintain separate directories for notes] See section 3.4
+[Maintain separate directories for notes] See section 3.5
 
 [Sluggified title and keywords] See section 5.1
 
+[Contol the letter casing of file names] See section 5.2
+
 [The denote-date-prompt-use-org-read-date option] See section 3.1.4
+
+[Points of entry] See section 3
 
 [Change the front matter format] See section 6.1
 
 
-16 Troubleshoot Denote in a pristine environment
+17 Troubleshoot Denote in a pristine environment
 ════════════════════════════════════════════════
 
   Sometimes we get reports on bugs that may not be actually caused by
@@ -4110,7 +4433,7 @@ section 12.16
   us get a better sense of the specifics.
 
 
-17 Contributing
+18 Contributing
 ═══════════════
 
   Denote is a GNU ELPA package.  As such, any significant change to the
@@ -4192,12 +4515,12 @@ section 12.16
   └────
 
 
-[Things to do] See section 18
+[Things to do] See section 19
 
-[Acknowledgements] See section 22
+[Acknowledgements] See section 23
 
 
-18 Things to do
+19 Things to do
 ═══════════════
 
   Denote should work well for what is described in this manual.  Though
@@ -4232,10 +4555,10 @@ section 12.16
   think of extensions to the core package.
 
 
-[Contributing] See section 17
+[Contributing] See section 18
 
 
-19 Publications about Denote
+20 Publications about Denote
 ════════════════════════════
 
   The Emacs community is putting Denote to great use.  This section
@@ -4275,6 +4598,13 @@ section 12.16
     Package/, 2022-07-28,
     <https://lucidmanager.org/productivity/testing-denote-package/>
 
+  ⁃ Peter Prevos: /Emacs Writing Studio/, 2023-10-19. A configuration
+    for authors, using Denote for taking notes, literature reviews and
+    manage collections of images:
+    • <https://lucidmanager.org/productivity/taking-notes-with-emacs-denote/>
+    • <https://lucidmanager.org/productivity/bibliographic-notes-in-emacs-with-citar-denote/>
+    • <https://lucidmanager.org/productivity/using-emacs-image-dired/>
+
   ⁃ Stefan Thesing: /Denote as a Zettelkasten/, 2023-03-02,
     <https://www.thesing-online.de/blog/denote-as-a-zettelkasten>
 
@@ -4282,10 +4612,10 @@ section 12.16
     <https://github.com/summeremacs/howiuseemacs/blob/main/full-explanation-of-how-i-use-emacs.org>
 
 
-[Contributing] See section 17
+[Contributing] See section 18
 
 
-20 Alternatives to Denote
+21 Alternatives to Denote
 ═════════════════════════
 
   What follows is a list of Emacs packages for note-taking.  I
@@ -4373,7 +4703,7 @@ section 12.16
 
 [zetteldeft] <https://github.com/EFLS/zetteldeft>
 
-20.1 Alternative implementations and further reading
+21.1 Alternative implementations and further reading
 ────────────────────────────────────────────────────
 
   This section covers blog posts and implementations from the Emacs
@@ -4402,7 +4732,7 @@ section 12.16
   [ Development note: help expand this list. ]
 
 
-[Alternatives to Denote] See section 20
+[Alternatives to Denote] See section 21
 
 [date2name] <https://github.com/novoid/date2name>
 
@@ -4419,7 +4749,7 @@ section 12.16
 [memacs] <https://github.com/novoid/memacs>
 
 
-21 Frequently Asked Questions
+22 Frequently Asked Questions
 ═════════════════════════════
 
   I (Protesilaos) answer some questions I have received or might get.
@@ -4427,7 +4757,7 @@ section 12.16
   go into the specifics of how Denote works.
 
 
-21.1 Why develop Denote when PACKAGE already exists?
+22.1 Why develop Denote when PACKAGE already exists?
 ────────────────────────────────────────────────────
 
   I wrote Denote because I was using a variant of Denote’s file-naming
@@ -4461,7 +4791,7 @@ section 12.16
   choose whatever you want.
 
 
-21.2 Why not rely exclusively on Org?
+22.2 Why not rely exclusively on Org?
 ─────────────────────────────────────
 
   I think Org is one of Emacs’ killer apps.  I also believe it is not
@@ -4492,7 +4822,7 @@ section 12.16
   this very manual.
 
 
-21.3 Why care about Unix tools when you use Emacs?
+22.3 Why care about Unix tools when you use Emacs?
 ──────────────────────────────────────────────────
 
   My notes form part of my longer-term storage.  I do not want to have
@@ -4518,7 +4848,7 @@ section 12.16
   just me thinking long-term.
 
 
-21.4 Why many small files instead of few large ones?
+22.4 Why many small files instead of few large ones?
 ────────────────────────────────────────────────────
 
   I have read that Org favours the latter method.  If true, I strongly
@@ -4554,7 +4884,7 @@ section 12.16
   about using the right tool for the job).
 
 
-21.5 Does Denote perform well at scale?
+22.5 Does Denote perform well at scale?
 ───────────────────────────────────────
 
   Denote does not do anything fancy and has no special requirements: it
@@ -4576,7 +4906,7 @@ section 12.16
   where necessary, without compromising on the project’s principles.
 
 
-21.6 I add TODOs to my notes; will many files slow down the Org agenda?
+22.6 I add TODOs to my notes; will many files slow down the Org agenda?
 ───────────────────────────────────────────────────────────────────────
 
   Yes, many files will slow down the agenda due to how that works.  Org
@@ -4609,10 +4939,10 @@ section 12.16
   ask for help in our relevant channels ([Contributing]).
 
 
-[Contributing] See section 17
+[Contributing] See section 18
 
 
-21.7 I want to sort by last modified, why won’t Denote let me?
+22.7 I want to sort by last modified, why won’t Denote let me?
 ──────────────────────────────────────────────────────────────
 
   Denote does not sort files and will not reinvent tools that handle
@@ -4632,10 +4962,10 @@ section 12.16
   listings]).
 
 
-[Use dired-virtual-mode for arbitrary file listings] See section 12.5
+[Use dired-virtual-mode for arbitrary file listings] See section 13.5
 
 
-21.8 How do you handle the last modified case?
+22.8 How do you handle the last modified case?
 ──────────────────────────────────────────────
 
   Denote does not insert any meta data or heading pertaining to edits in
@@ -4661,7 +4991,7 @@ section 12.16
   software handle the tracking of changes.
 
 
-21.9 Speed up backlinks’ buffer creation?
+22.9 Speed up backlinks’ buffer creation?
 ─────────────────────────────────────────
 
   Denote leverages the built-in `xref' library to search for the
@@ -4699,7 +5029,7 @@ section 12.16
   └────
 
 
-21.10 Why do I get “Search failed with status 1” when I search for backlinks?
+22.10 Why do I get “Search failed with status 1” when I search for backlinks?
 ─────────────────────────────────────────────────────────────────────────────
 
   Denote uses [Emacs’ Xref] to find backlinks.  Xref requires `xargs'
@@ -4720,7 +5050,7 @@ section 12.16
 [Emacs’ Xref] <info:emacs#Xref>
 
 
-22 Acknowledgements
+23 Acknowledgements
 ═══════════════════
 
   Denote is meant to be a collective effort.  Every bit of help matters.
@@ -4732,24 +5062,27 @@ section 12.16
         Abin Simon, Adam Růžička, Alan Schmitt, Benjamin Kästner, Bruno
         Boal, Charanjit Singh, Clemens Radermacher, Colin McLear, Damien
         Cassou, Eduardo Grajeda, Elias Storms, Eshel Yaron, Florian,
-        Graham Marlow, Hilde Rhyne, Jack Baty, Jean-Philippe Gagné Guay,
-        Jürgen Hötzel, Kaushal Modi, Kai von Fintel, Kyle Meyer, Marc
+        Graham Marlow, Hilde Rhyne, Ivan Sokolov, Jack Baty,
+        Jean-Charles Bagneris, Jean-Philippe Gagné Guay, Jürgen Hötzel,
+        Kaushal Modi, Kai von Fintel, Kostas Andreadis, Kyle Meyer, Marc
         Fargas, Matthew Lemon, Noboru Ota (nobiot), Norwid Behrnd, Peter
         Prevos, Philip Kaludercic, Quiliro Ordóñez, Stefan Monnier,
         Stefan Thesing, Thibaut Benjamin, Tomasz Hołubowicz, Vedang
-        Manerikar, relict007.
+        Manerikar, ezchi, mentalisttraceur, relict007.
 
   Ideas and/or user feedback
         Abin Simon, Aditya Yadav, Alan Schmitt, Alfredo Borrás, Ashton
         Wiersdorf, Benjamin Kästner, Colin McLear, Damien Cassou, Elias
-        Storms, Federico Stilman, Florian, Frank Ehmsen, Guo Yong,
-        Hanspeter Gisler, Jack Baty, Jay Rajput, Jean-Charles Bagneris,
-        Jeremy Friesen, Jonathan Sahar, Johan Bolmsjö, Juanjo Presa, Kai
-        von Fintel, Kaushal Modi, M. Hadi Timachi, Mirko Hernandez,
-        Niall Dooley, Paul van Gelder, Peter Prevos, Shreyas Ragavan,
-        Stefan Thesing, Summer Emacs, Sven Seebeck, Taoufik, Viktor
-        Haag, Wade Mealing, Yi Liu, Ypot, atanasj, doolio, drcxd,
-        hpgisler, pRot0ta1p, rbenit68, relict007, sienic, sundar bp.
+        Storms, Federico Stilman, Florian, Frédéric Willem Frank Ehmsen,
+        Guo Yong, Hanspeter Gisler, Jack Baty, Jay Rajput, Jean-Charles
+        Bagneris, Jens Östlund, Jeremy Friesen, Jonathan Sahar, Johan
+        Bolmsjö, Juanjo Presa, Kai von Fintel, Kaushal Modi, M. Hadi
+        Timachi, Mark Olson, Mirko Hernandez, Niall Dooley, Paul van
+        Gelder, Peter Prevos, Peter Smith, Suhail Singh, Shreyas
+        Ragavan, Stefan Thesing, Summer Emacs, Sven Seebeck, Taoufik, TJ
+        Stankus, Viktor Haag, Wade Mealing, Yi Liu, Ypot, atanasj,
+        doolio, drcxd, hpgisler, pRot0ta1p, rbenit68, relict007, sienic,
+        sundar bp.
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.
@@ -4758,20 +5091,20 @@ section 12.16
   contributions to the code base.
 
 
-23 GNU Free Documentation License
+24 GNU Free Documentation License
 ═════════════════════════════════
 
 
-24 Indices
+25 Indices
 ══════════
 
-24.1 Function index
+25.1 Function index
 ───────────────────
 
 
-24.2 Variable index
+25.2 Variable index
 ───────────────────
 
 
-24.3 Concept index
+25.3 Concept index
 ──────────────────
