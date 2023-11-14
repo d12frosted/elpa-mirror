@@ -12,7 +12,25 @@ M-3 <some prefix> * to triple the number.
 For the predefined operation list and how to define a new
 operation, see `operate-on-number-at-point-alist'.
 
-It is recommended using smartrep to bind the functions like this:
+It is recommended using hydra or smartrep to bind the functions like this:
+
+  (defhydra hydra-operate-on-number
+    (global-map "M-=")
+    "operate-on-number"
+    ("+"  apply-operation-to-number-at-point)
+    ("-"  apply-operation-to-number-at-point)
+    ("*"  apply-operation-to-number-at-point)
+    ("/"  apply-operation-to-number-at-point)
+    ("\\" apply-operation-to-number-at-point)
+    ("^"  apply-operation-to-number-at-point)
+    ("<"  apply-operation-to-number-at-point)
+    (">"  apply-operation-to-number-at-point)
+    ("#"  apply-operation-to-number-at-point)
+    ("%"  apply-operation-to-number-at-point)
+    ("'"  operate-on-number-at-point)
+    ("C-u" operate-on-number-read-operand)
+    ("<return>" nil)
+    ("RET" nil)))
 
   (smartrep-define-key global-map "C-."
     '(("+" . apply-operation-to-number-at-point)
@@ -25,4 +43,5 @@ It is recommended using smartrep to bind the functions like this:
       (">" . apply-operation-to-number-at-point)
       ("#" . apply-operation-to-number-at-point)
       ("%" . apply-operation-to-number-at-point)
-      ("'" . operate-on-number-at-point)))
+      ("'" . operate-on-number-at-point)
+      ("C-u" . operate-on-number-read-operand)))
