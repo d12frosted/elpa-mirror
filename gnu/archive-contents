@@ -916,7 +916,7 @@
 	     (:keywords "files" "unix" "convenience")
 	     (:url . "http://elpa.gnu.org/packages/dired-du.html"))])
  (dired-duplicates .
-		   [(0 2)
+		   [(0 3)
 		    ((emacs
 		      (27 1)))
 		    "Find duplicate files locally and remotely" tar
@@ -925,7 +925,7 @@
 		     (:maintainer "Harald Judt" . "h.judt@gmx.at")
 		     (:authors
 		      ("Harald Judt" . "h.judt@gmx.at"))
-		     (:commit . "349eebbd8b3fc10fa2a4551426769d20744e2eb2"))])
+		     (:commit . "e07552323b26ce68956f8b03aa66af145bae4d86"))])
  (dired-git-info .
 		 [(0 3 1)
 		  ((emacs

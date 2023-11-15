@@ -3,16 +3,8 @@ Fetcher: github
 Source:  https://github.com/iquiw/smart-semicolon.git
 
 Updating /mnt/store/melpa/working/smart-semicolon/
-Checking out dd52a3e1a7b043fb88f799827c7b3e39f60a14f1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/smart-semicolon/
-  to /tmp/smart-semicolonLRC9T8/smart-semicolon-20200909.1412
-    smart-semicolon.el -> smart-semicolon.el
-Created smart-semicolon-20200909.1412.tar containing:
-  smart-semicolon-20200909.1412/
-  smart-semicolon-20200909.1412/smart-semicolon-pkg.el
-  smart-semicolon-20200909.1412/smart-semicolon.el
- ✓ Success:
-  2023-11-15T02:18:21+0000  smart-semicolon-20200909.1412.entry
-  2023-11-15T02:18:21+0000  smart-semicolon-20200909.1412.tar
-Built smart-semicolon in 4.051s, finished at 2023-11-15T02:18:23+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/iquiw/smart-semicolon.git/': The requested URL returned error: 500
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

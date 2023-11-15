@@ -28,6 +28,9 @@
   setting the custom variable `dired-duplicates-separate-result' to
   `nil'.
 
+  dired-duplicates will silently ignore unreadable directories and
+  files.
+
 
 2 Requirements
 ══════════════
