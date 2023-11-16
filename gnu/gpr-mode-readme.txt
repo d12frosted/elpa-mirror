@@ -1,4 +1,4 @@
-Emacs gpr mode version 1.0.4
+Emacs gpr mode version 1.0.5
 
 gpr mode provides auto-casing, fontification, navigation, and
 indentation for gpr source code files.

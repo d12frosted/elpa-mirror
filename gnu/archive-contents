@@ -1647,11 +1647,11 @@
 	    (:maintainer "Damien Cassou" . "damien@cassou.me")
 	    (:url . "https://gitlab.petton.fr/DamienCassou/desktop-environment"))])
  (gpr-mode .
-	   [(1 0 4)
+	   [(1 0 5)
 	    ((emacs
 	      (25 3))
 	     (wisi
-	      (4 3 0))
+	      (4 3 2))
 	     (gnat-compiler
 	      (1 0 3)))
 	    "Major mode for editing GNAT project files" tar
@@ -1659,7 +1659,7 @@
 	     (:maintainer "Stephen Leake" . "stephen_leake@member.fsf.org")
 	     (:authors
 	      ("Stephen Leake" . "stephen_leake@member.fsf.org"))
-	     (:commit . "ed12dc73272f9f77c974db0ff0290f959125224f"))])
+	     (:commit . "9ca25ec5ca871f04b4704b39fb3ba129694e02ac"))])
  (gpr-query .
 	    [(1 0 4)
 	     ((emacs

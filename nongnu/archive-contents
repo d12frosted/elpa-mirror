@@ -1070,13 +1070,13 @@
 	       ("Natalie Weizenbaum"))
 	      (:commit . "45a0b23db0b8f827c78f7749457f3427263e6ffd"))])
  (haskell-mode .
-	       [(17 4)
+	       [(17 5)
 		((emacs
 		  (25 1)))
 		"A Haskell editing mode" tar
 		((:url . "https://github.com/haskell/haskell-mode")
 		 (:keywords "haskell" "cabal" "ghc" "repl" "languages")
-		 (:commit . "79af559b6d750aff32a916a81cc4fb63ecfd588d"))])
+		 (:commit . "8d0f44bfe2a9ab6b0969c9bafb75089f315ff5ae"))])
  (haskell-tng-mode .
 		   [(0 0 1)
 		    ((emacs
@@ -1833,7 +1833,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20231113 94505)
+	      [(1 0 20231115 104415)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
@@ -2408,14 +2408,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 18 20231112185021)
+	       [(24 18 20231115084756)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "708199618a1e84b8e11ae468f71291e3e1c66daf"))])
+		 (:commit . "68335b2a903d9d9163129e92bbbf8927599739a6"))])
  (xkcd .
        [(1 1)
 	((json
