@@ -1,0 +1,45 @@
+Package: code-compass
+Fetcher: github
+Source:  https://github.com/ag91/code-compass.git
+
+Updating /mnt/store/melpa/working/code-compass/
+Checking out 67ec53f9ca43bea941ec5ba6fccba8565c1d937f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/code-compass/
+  to /tmp/code-compassZT6vX2/code-compass-20231108.1618
+    code-compass.el -> code-compass.el
+    scripts => scripts
+    pages => pages
+Created code-compass-20231108.1618.tar containing:
+  code-compass-20231108.1618/
+  code-compass-20231108.1618/code-compass-pkg.el
+  code-compass-20231108.1618/code-compass.el
+  code-compass-20231108.1618/pages/
+  code-compass-20231108.1618/pages/age-enclosure-diagram/
+  code-compass-20231108.1618/pages/age-enclosure-diagram/script.js
+  code-compass-20231108.1618/pages/age-enclosure-diagram/style.css
+  code-compass-20231108.1618/pages/age-enclosure-diagram/zoomable.html
+  code-compass-20231108.1618/pages/edge-bundling/
+  code-compass-20231108.1618/pages/edge-bundling/script.js
+  code-compass-20231108.1618/pages/edge-bundling/style.css
+  code-compass-20231108.1618/pages/edge-bundling/zoomable.html
+  code-compass-20231108.1618/pages/enclosure-diagram/
+  code-compass-20231108.1618/pages/enclosure-diagram/script.js
+  code-compass-20231108.1618/pages/enclosure-diagram/style.css
+  code-compass-20231108.1618/pages/enclosure-diagram/zoomable.html
+  code-compass-20231108.1618/pages/knowledge-enclosure-diagram/
+  code-compass-20231108.1618/pages/knowledge-enclosure-diagram/script.js
+  code-compass-20231108.1618/pages/knowledge-enclosure-diagram/style.css
+  code-compass-20231108.1618/pages/knowledge-enclosure-diagram/zoomable.html
+  code-compass-20231108.1618/scripts/
+  code-compass-20231108.1618/scripts/code_age_csv_as_enclosure_json.py
+  code-compass-20231108.1618/scripts/communication_csv_as_edge_bundling.py
+  code-compass-20231108.1618/scripts/coupling_csv_as_edge_bundling.py
+  code-compass-20231108.1618/scripts/csv-to-pie-graph.py
+  code-compass-20231108.1618/scripts/csv_as_enclosure_json.py
+  code-compass-20231108.1618/scripts/knowledge_csv_as_enclosure_diagram.py
+  code-compass-20231108.1618/scripts/refactoring_csv_as_enclosure_diagram.py
+ ✓ Success:
+  2023-11-17T00:04:13+0000  code-compass-20231108.1618.entry
+  2023-11-17T00:04:13+0000  code-compass-20231108.1618.tar
+Built code-compass in 7.381s, finished at 2023-11-17T00:04:16+0000
