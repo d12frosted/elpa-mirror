@@ -67,6 +67,21 @@ To:
 
 ### Notable changes
 
+Version 0.8.0
+
+- Add `robot-mode-retain-point-on-indent' option to retain point position
+  when indenting. Currently it is disabled by default, but may be enabled
+  in the future.
+- Prevent indent toggling from interfering with TAB completion when
+  `tab-always-indent' is set to 'complete and the above point retention is
+  used.
+- Fix several indent toggling bugs:
+  - Set `electric-indent-inhibit'.
+  - Disable when aligning by using variable `robot-mode-indent-toggle'.
+- Fix syntax highlighting and indentation when a control structure word is
+  the first word in a keyword.
+- Fix various other syntax highlighting bugs.
+
 Version 0.7.0
 
 - Add control structure indentation (IF/WHILE/FOR/TRY etc.).
