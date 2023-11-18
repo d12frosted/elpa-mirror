@@ -3521,18 +3521,20 @@
 		("Alex Harsanyi" . "AlexHarsanyi@gmail.com"))
 	       (:commit . "323ece64acaac7f27b7806db9dba0757d6e57885"))])
  (srht .
-       [(0 3)
+       [(0 4)
 	((emacs
 	  (27 1))
 	 (plz
-	  (0 7)))
+	  (0 7))
+	 (transient
+	  (0 4 3)))
 	"Sourcehut" tar
 	((:url . "https://sr.ht/~akagi/srht.el/")
 	 (:keywords "comm" "vc")
 	 (:maintainer "Aleksandr Vityazev" . "avityazev@posteo.org")
 	 (:authors
 	  ("Aleksandr Vityazev" . "avityazev@posteo.org"))
-	 (:commit . "8cab1e48bcb5b8ee70c498a712fb6f52eddc95ab"))])
+	 (:commit . "053c79fb41278f11e98c61785e8cc500ed4c853b"))])
  (ssh-deploy .
 	     [(3 1 16)
 	      ((emacs
