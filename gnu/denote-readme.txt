@@ -169,7 +169,7 @@ Table of Contents
 
   Denote’s file-naming scheme is not limited to “notes”.  It can be used
   for all types of file, including those that are not editable in Emacs,
-  such as videos.  Naming files in a constistent way makes their
+  such as videos.  Naming files in a consistent way makes their
   filtering and retrieval considerably easier.  Denote provides relevant
   facilities to rename files, regardless of file type.
 
@@ -2489,6 +2489,11 @@ backlinks?] See section 22.10
   │ 
   │ (add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)
   └────
+
+  The user option `denote-dired-directories-include-subdirectories'
+  specifies whether the `denote-dired-directories' also cover their
+  subdirectories. By default they do not. Set this option to `t' to
+  include subdirectories as well. [ This feature is part of 2.2.0-dev. ]
 
   The faces we define for this purpose are:
 
@@ -5068,7 +5073,8 @@ section 13.14
         Fargas, Matthew Lemon, Noboru Ota (nobiot), Norwid Behrnd, Peter
         Prevos, Philip Kaludercic, Quiliro Ordóñez, Stefan Monnier,
         Stefan Thesing, Thibaut Benjamin, Tomasz Hołubowicz, Vedang
-        Manerikar, ezchi, mentalisttraceur, relict007.
+        Manerikar, ezchi, leinfink (Henrik), mentalisttraceur,
+        relict007.
 
   Ideas and/or user feedback
         Abin Simon, Aditya Yadav, Alan Schmitt, Alfredo Borrás, Ashton
