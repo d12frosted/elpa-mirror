@@ -3,3 +3,30 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/guile.git
 
 Updating /mnt/store/melpa/working/geiser-guile/
+Checking out ee33af6b4ef8fdaccbdf93c62b50fe17c07a1ade
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-guile/
+  to /tmp/geiser-guileHunn2J/geiser-guile-20230425.1523
+    geiser-guile.el -> geiser-guile.el
+    geiser-guile.texi -> geiser-guile.texi
+    src/geiser => src/geiser
+Generating /tmp/geiser-guileHunn2J/geiser-guile-20230425.1523/geiser-guile.info
+Created geiser-guile-20230425.1523.tar containing:
+  geiser-guile-20230425.1523/
+  geiser-guile-20230425.1523/dir
+  geiser-guile-20230425.1523/geiser-guile-pkg.el
+  geiser-guile-20230425.1523/geiser-guile.el
+  geiser-guile-20230425.1523/geiser-guile.info
+  geiser-guile-20230425.1523/src/
+  geiser-guile-20230425.1523/src/geiser/
+  geiser-guile-20230425.1523/src/geiser/completion.scm
+  geiser-guile-20230425.1523/src/geiser/doc.scm
+  geiser-guile-20230425.1523/src/geiser/emacs.scm
+  geiser-guile-20230425.1523/src/geiser/evaluation.scm
+  geiser-guile-20230425.1523/src/geiser/modules.scm
+  geiser-guile-20230425.1523/src/geiser/utils.scm
+  geiser-guile-20230425.1523/src/geiser/xref.scm
+ ✓ Success:
+  2023-11-19T14:16:06+0000  geiser-guile-20230425.1523.entry
+  2023-11-19T14:16:06+0000  geiser-guile-20230425.1523.tar
+Built geiser-guile in 6.404s, finished at 2023-11-19T14:16:08+0000
