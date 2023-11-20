@@ -1,18 +1,6 @@
-	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	     CODE-CELLS.EL — LIGHTWEIGHT NOTEBOOKS IN EMACS
-	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Minor mode
-2. Editing commands
-3. Speed keys
-4. Handling Jupyter notebook files
-.. 1. Tweaking the ipynb conversion
-5. Alternatives
-6. Contributing
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+             CODE-CELLS.EL — LIGHTWEIGHT NOTEBOOKS IN EMACS
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This package lets you efficiently navigate, edit and execute code split
@@ -190,7 +178,7 @@ behavior, which allowed spaces, led to many false positives.
   ┌────
   │ (setq code-cells-convert-ipynb-style '(("jupytext" "--to" "ipynb" "--from" "markdown")
   │ 				       ("jupytext" "--to" "markdown" "--from" "ipynb")
-  │ 				       markdown-mode))
+  │ 				       (lamdba () #'markdown-mode)))
   └────
 
   To edit ipynb files as org documents, try using [Pandoc] with the
@@ -200,7 +188,7 @@ behavior, which allowed spaces, led to many false positives.
   ┌────
   │ (setq code-cells-convert-ipynb-style '(("pandoc" "--to" "ipynb" "--from" "org")
   │ 				       ("pandoc" "--to" "org" "--from" "ipynb")
-  │ 				       org-mode))
+  │ 				       (lambda () #'org-mode)))
   └────
 
   A good reason to stick with Jupytext, though, is that it offers
