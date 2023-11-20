@@ -1,11 +1,24 @@
 Package: yeetube
 Fetcher: git
-Source:  https://git.thanosapollo.com/yeetube
+Source:  https://git.thanosapollo.org/yeetube
 
-Updating /mnt/store/melpa/working/yeetube/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to update url base from redirection:
-  asked for: https://git.thanosapollo.com/yeetube/info/refs?service=git-upload-pack
-   redirect: https://git.thanosapollo.org/
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Cloning https://git.thanosapollo.org/yeetube to /mnt/store/melpa/working/yeetube/
+Checking out cca40d2020ba45b0113d4a5d6a5c26995e07d83d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yeetube/
+  to /tmp/yeetubeq9DGZd/yeetube-20231108.1016
+    yeetube-buffer.el -> yeetube-buffer.el
+    yeetube-mpv.el -> yeetube-mpv.el
+    yeetube.el -> yeetube.el
+Created yeetube-20231108.1016.tar containing:
+  yeetube-20231108.1016/
+  yeetube-20231108.1016/yeetube-buffer.el
+  yeetube-20231108.1016/yeetube-mpv.el
+  yeetube-20231108.1016/yeetube-pkg.el
+  yeetube-20231108.1016/yeetube.el
+ ✓ Success:
+  2023-11-07T06:54:41+0000  yeetube-20231017.634.entry
+  2023-11-07T06:54:41+0000  yeetube-20231017.634.tar
+  2023-11-19T23:40:38+0000  yeetube-20231108.1016.entry
+  2023-11-19T23:40:38+0000  yeetube-20231108.1016.tar
+Built yeetube in 4.740s, finished at 2023-11-19T23:40:40+0000

@@ -70,8 +70,14 @@ workspace persistence).  They work quite differently than bufferlo.
     global list (all buffers).
   • `bufferlo-ibuffer': `ibuffer' filtered for local buffers.
     Alternatively, use "/ l" in ibuffer.
+  • `bufferlo-ibuffer-orphans': `ibuffer' filtered for orphan buffers.
+    Orphan buffers are buffers that are not in any frame/tab's local
+    buffer list.  Alternatively, use "/ L" in ibuffer.
   • `bufferlo-list-buffers': Display a list of local buffers in a
     buffer-menu buffer.
+  • `bufferlo-list-orphan-buffers': Display a list of orphan buffers in
+    a buffer-menu buffer.  Orphan buffers are buffers that are not in
+    any frame/tab's local buffer list.
 
   Bufferlo provides functions to manage the local buffer lists:
   • `bufferlo-clear': Clear the frame/tab's buffer list.
@@ -88,6 +94,10 @@ workspace persistence).  They work quite differently than bufferlo.
   • `bufferlo-tab-close-kill-buffers': Close the tab and kill all its
     local buffers.
   • `bufferlo-isolate-project': Isolate a project in the frame or tab.
+  • `bufferlo-find-buffer': Switch to (one of) the frame/tab that
+    contains the buffer in its local list.
+  • `bufferlo-find-buffer-switch': Switch to (one of) the frame/tab that
+    contains the buffer in its local list, and select the buffer.
 
 
 2.1 Consult Integration
@@ -125,8 +135,8 @@ workspace persistence).  They work quite differently than bufferlo.
   │     "Local buffer candidate source for `consult-buffer'.")
   │ 
   │ (setq consult-buffer-sources '(consult--source-hidden-buffer
-  │ 			       my-consult--source-buffer
   │ 			       my-consult--source-local-buffer
+  │ 			       my-consult--source-buffer
   │ 			       ;; ... other sources ...
   │ 			       ))
   └────
@@ -203,8 +213,8 @@ workspace persistence).  They work quite differently than bufferlo.
   └────
 
 
-2.3 Tips
-────────
+2.3 Initial Buffer
+──────────────────
 
   By default, the currently active buffer is shown in a newly created
   tab, so this buffer inevitably ends up in the new tab's local list.
@@ -215,10 +225,29 @@ workspace persistence).  They work quite differently than bufferlo.
   └────
   This lets new tabs always start with the scratch buffer.
 
-  To get the same behavior for frames:
+  You can also create a local scratch buffer for each tab:
   ┌────
-  │ (defun my-set-scratch-buffer (frame)
+  │ (setq tab-bar-new-tab-choice #'bufferlo-create-local-scratch-buffer)
+  └────
+  You can customize the name of the local scratch buffers by setting
+  `bufferlo-local-scratch-buffer-name' accordingly.
+
+  The same can be achieved for new frames.  Use this to set the scratch
+  buffer as the initial buffer for new frames:
+  ┌────
+  │ (add-hook 'after-make-frame-functions #'bufferlo-switch-to-scratch-buffer)
+  └────
+
+  Alternatively, create a new local scratch buffer for new frames:
+  ┌────
+  │ (add-hook 'after-make-frame-functions #'bufferlo-switch-to-local-scratch-buffer)
+  └────
+
+  Of course, you can also set an arbitrary buffer as the initial frame
+  buffer:
+  ┌────
+  │ (defun my-set-initial-frame-buffer (frame)
   │   (with-selected-frame frame
-  │     (switch-to-buffer "*scratch*")))
-  │ (add-hook 'after-make-frame-functions #'my-set-scratch-buffer)
+  │     (switch-to-buffer "<BUFFER_NAME>")))
+  │ (add-hook 'after-make-frame-functions #'my-set-initial-frame-buffer)
   └────

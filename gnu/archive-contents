@@ -382,7 +382,7 @@
 		  (:maintainer "Clemens Radermacher" . "clemera@posteo.net")
 		  (:url . "https://github.com/clemera/buffer-expose"))])
  (bufferlo .
-	   [(0 3)
+	   [(0 4)
 	    ((emacs
 	      (27 1)))
 	    "Manage frame/tab-local buffer lists" tar
@@ -391,7 +391,7 @@
 	     (:maintainer "Florian Rommel" . "mail@florommel.de")
 	     (:authors
 	      ("Florian Rommel" . "mail@florommel.de"))
-	     (:commit . "02de3c5e3ae47c152997ced2f92341a1ffe23ef6"))])
+	     (:commit . "c516fd8e4a9fe2d46a35bba8b5b07a4df0d078df"))])
  (bug-hunter .
 	     [(1 3 1)
 	      ((seq
@@ -1686,7 +1686,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 7 0)
+	  [(0 8 0)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1695,7 +1695,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "c4caf70e405d9c80a388e00e014f8aa3f72a90e6"))])
+	    (:commit . "fe5df5a83932acccf3407d67c59c131be058d6c4"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
