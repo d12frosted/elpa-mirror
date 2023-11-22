@@ -1087,7 +1087,7 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 9 5)
+       [(3 9 6)
 	((helm-core
 	  (3 9 4))
 	 (wfnames
@@ -1099,9 +1099,9 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "ffff39b542196565dcec5641e287265aaa5517ed"))])
+	 (:commit . "d1f10e5a998254a763304a925963dc6d54e934b1"))])
  (helm-core .
-	    [(3 9 5)
+	    [(3 9 6)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -1111,7 +1111,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "ffff39b542196565dcec5641e287265aaa5517ed"))])
+	      (:commit . "d1f10e5a998254a763304a925963dc6d54e934b1"))])
  (highlight-parentheses .
 			[(2 1 1)
 			 ((emacs
@@ -1833,7 +1833,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20231121 101845)
+	      [(1 0 20231121 123637)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
@@ -1872,7 +1872,7 @@
 		("Campbell Barton" . "ideasman42@gmail.com"))
 	       (:commit . "2b38ca25e3392636fe936d3edad447970279a463"))])
  (reformatter .
-	      [(0 7)
+	      [(0 8)
 	       ((emacs
 		 (24 3)))
 	       "Define commands which run reformatters on the current buffer" tar
@@ -1881,7 +1881,7 @@
 		(:maintainer "Steve Purcell" . "steve@sanityinc.com")
 		(:authors
 		 ("Steve Purcell" . "steve@sanityinc.com"))
-		(:commit . "bfe3f1c6ece952d39921db16f601123bdd1748ab"))])
+		(:commit . "ebea79504b40fecb150caf8c39621146164f997e"))])
  (request .
 	  [(0 3 3)
 	   ((emacs
