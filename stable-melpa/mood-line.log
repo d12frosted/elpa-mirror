@@ -3,20 +3,26 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jessieh/mood-line.git
 
 Updating /mnt/store/melpa/working/mood-line/
-Checking out bcd8725b21a64df4952cb0c52ece953075cbee66
+Checking out c3ff35a807ba55dc3e66871abfeef3e84e571666
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mood-line/
-  to /tmp/mood-lineUYogR5/mood-line-20231016.1735
+  to /tmp/mood-linevknRpE/mood-line-20231121.2146
+    mood-line-segment-checker.el -> mood-line-segment-checker.el
     mood-line-segment-indentation.el -> mood-line-segment-indentation.el
     mood-line-segment-modal.el -> mood-line-segment-modal.el
+    mood-line-segment-vc.el -> mood-line-segment-vc.el
     mood-line.el -> mood-line.el
-Created mood-line-20231016.1735.tar containing:
-  mood-line-20231016.1735/
-  mood-line-20231016.1735/mood-line-pkg.el
-  mood-line-20231016.1735/mood-line-segment-indentation.el
-  mood-line-20231016.1735/mood-line-segment-modal.el
-  mood-line-20231016.1735/mood-line.el
+Created mood-line-20231121.2146.tar containing:
+  mood-line-20231121.2146/
+  mood-line-20231121.2146/mood-line-pkg.el
+  mood-line-20231121.2146/mood-line-segment-checker.el
+  mood-line-20231121.2146/mood-line-segment-indentation.el
+  mood-line-20231121.2146/mood-line-segment-modal.el
+  mood-line-20231121.2146/mood-line-segment-vc.el
+  mood-line-20231121.2146/mood-line.el
  ✓ Success:
-  2023-11-21T18:29:15+0000  mood-line-20231016.1735.entry
-  2023-11-21T18:29:15+0000  mood-line-20231016.1735.tar
-Built mood-line in 4.833s, finished at 2023-11-21T18:29:17+0000
+  2023-11-21T20:40:47+0000  mood-line-20231016.1735.entry
+  2023-11-21T20:40:46+0000  mood-line-20231016.1735.tar
+  2023-11-21T22:47:34+0000  mood-line-20231121.2146.entry
+  2023-11-21T22:47:34+0000  mood-line-20231121.2146.tar
+Built mood-line in 4.771s, finished at 2023-11-21T22:47:36+0000
