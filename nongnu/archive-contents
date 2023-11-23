@@ -1656,6 +1656,15 @@
 	  (:authors
 	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	  (:commit . "4a585029875a1dbbe96d8ac157bd2fd02875f289"))])
+ (p4-16-mode .
+	     [(0 3)
+	      nil "Support for the P4_16 programming language" tar
+	      ((:keywords "languages" "p4_16")
+	       (:maintainer "Soham S Gumaste" . "sohamg2@gmail.com")
+	       (:authors
+		("Soham S Gumaste" . "sohamg2@gmail.com"))
+	       (:url . "https://elpa.nongnu.org/nongnu/p4-16-mode.html")
+	       (:commit . "794dd0056b4ca736ae5ecb39072547f22a006137"))])
  (package-lint .
 	       [(0 21)
 		((cl-lib

@@ -3,3 +3,19 @@ Fetcher: github
 Source:  https://github.com/nbarrientos/archive-rpm.git
 
 Updating /mnt/store/melpa/working/archive-rpm/
+Checking out cb48fee04cb0cbb26f760a3b95649f7dac78c6ec
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/archive-rpm/
+  to /tmp/archive-rpmvYBZW7/archive-rpm-20220527.632
+    archive-cpio.el -> archive-cpio.el
+    archive-rpm-pkg.el -> archive-rpm-pkg.el
+    archive-rpm.el -> archive-rpm.el
+Created archive-rpm-20220527.632.tar containing:
+  archive-rpm-20220527.632/
+  archive-rpm-20220527.632/archive-cpio.el
+  archive-rpm-20220527.632/archive-rpm-pkg.el
+  archive-rpm-20220527.632/archive-rpm.el
+ ✓ Success:
+  2023-11-23T10:10:24+0000  archive-rpm-20220527.632.entry
+  2023-11-23T10:10:24+0000  archive-rpm-20220527.632.tar
+Built archive-rpm in 3.926s, finished at 2023-11-23T10:10:26+0000
