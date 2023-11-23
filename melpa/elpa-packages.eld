@@ -5240,7 +5240,7 @@
   (ue :url "https://gitlab.com/unrealemacs/ue.el.git")
   (uimage :url "https://github.com/lujun9972/uimage.git")
   (uiua-mode :url "https://github.com/crmsnbleyd/uiua-mode.git")
-  (uiua-ts-mode :url "https://github.com/crmsnbleyd/uiua-mode.git")
+  (uiua-ts-mode :url "https://github.com/crmsnbleyd/uiua-ts-mode.git")
   (ujelly-theme :url "https://github.com/marktran/color-theme-ujelly.git")
   (ukrainian-holidays :url "https://github.com/abo-abo/ukrainian-holidays.git")
   (uml-mode :url "https://github.com/ianxm/emacs-uml.git")

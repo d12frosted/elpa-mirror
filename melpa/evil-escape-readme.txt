@@ -1,3 +1,5 @@
+Escape from anything with a customizable key sequence.
+
 Press `fd` quickly to:
 ----------------------
 
@@ -19,6 +21,7 @@ Press `fd` quickly to:
   - quit gist-list menu
   - quit helm-ag-edit
   - hide neotree buffer
+  - hide treemacs buffer
   - quit evil-multiedit
 And more to come !
 
@@ -54,4 +57,4 @@ instance to execute evil-escape with `C-c C-g':
 (global-set-key (kbd "C-c C-g") 'evil-escape)
 
 More information in the readme of the repository:
-https://github.com/syl20bnr/evil-escape
+at https://github.com/emacsorphanage/evil-escape.
