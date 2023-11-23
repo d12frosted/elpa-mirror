@@ -43,3 +43,15 @@ references, regardless of the format.
 prefix interactively and updates labels.  When you change the
 prefix, LaTeX Labeler appends the necessary local variables
 configuration to your LaTeX file.
+
+If you want to append section numbers to equation labels for a
+specific file, add the following lines at the end of the LaTeX file:
+
+% local variables:
+% latex-labeler-with-section-counter: t
+% end:
+
+If you prefer to set this configuration globally, add the following
+line to your Emacs configuration file:
+
+(setq latex-labeler-with-section-counter t)
