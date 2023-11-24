@@ -153,7 +153,7 @@
 			 (:maintainer "Thien-Thi Nguyen" . "ttn@gnu.org")
 			 (:url . "http://www.gnuvola.org/software/aa2u/"))])
  (async .
-	[(1 9 7)
+	[(1 9 8)
 	 ((emacs
 	   (24 4)))
 	 "Asynchronous processing in Emacs" tar
@@ -162,7 +162,7 @@
 	  (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	  (:authors
 	   ("John Wiegley" . "jwiegley@gmail.com"))
-	  (:commit . "53addd02fbad33765f508f8e6254ebd44e1f81e5"))])
+	  (:commit . "00e07e060218fbd1e16faaf10116c03b12e62580"))])
  (auctex .
 	 [(13 2 2)
 	  ((emacs
