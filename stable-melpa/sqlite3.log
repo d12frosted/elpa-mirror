@@ -3,24 +3,26 @@ Fetcher: github
 Source:  https://github.com/pekingduck/emacs-sqlite3-api.git
 
 Updating /mnt/store/melpa/working/sqlite3/
-Checking out 0aa2b039259b63c592e09ea815def52c95521c3f
+Checking out a601c9965e4d0178705a64b7d4f88709ca9aea66
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sqlite3/
-  to /tmp/sqlite3BXe54o/sqlite3-20231124.433
+  to /tmp/sqlite3A0KXQx/sqlite3-20231124.1326
     sqlite3.el -> sqlite3.el
     Makefile -> Makefile
     consts.c -> consts.c
     emacs-module.h -> emacs-module.h
     sqlite3-api.c -> sqlite3-api.c
-Created sqlite3-20231124.433.tar containing:
-  sqlite3-20231124.433/
-  sqlite3-20231124.433/Makefile
-  sqlite3-20231124.433/consts.c
-  sqlite3-20231124.433/emacs-module.h
-  sqlite3-20231124.433/sqlite3-api.c
-  sqlite3-20231124.433/sqlite3-pkg.el
-  sqlite3-20231124.433/sqlite3.el
+Created sqlite3-20231124.1326.tar containing:
+  sqlite3-20231124.1326/
+  sqlite3-20231124.1326/Makefile
+  sqlite3-20231124.1326/consts.c
+  sqlite3-20231124.1326/emacs-module.h
+  sqlite3-20231124.1326/sqlite3-api.c
+  sqlite3-20231124.1326/sqlite3-pkg.el
+  sqlite3-20231124.1326/sqlite3.el
  ✓ Success:
+  2023-11-24T14:04:08+0000  sqlite3-20231124.1326.entry
+  2023-11-24T14:04:08+0000  sqlite3-20231124.1326.tar
   2023-11-24T12:00:04+0000  sqlite3-20231124.433.entry
   2023-11-24T12:00:04+0000  sqlite3-20231124.433.tar
-Built sqlite3 in 4.683s, finished at 2023-11-24T12:00:06+0000
+Built sqlite3 in 4.096s, finished at 2023-11-24T14:04:10+0000
