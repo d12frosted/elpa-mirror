@@ -3,24 +3,28 @@ Fetcher: github
 Source:  https://github.com/ethan-leba/tree-edit.git
 
 Updating /mnt/store/melpa/working/tree-edit/
-Checking out 5f12ca6f366aad2c311bac09817f079900dce8d2
+Checking out 3e71d276e7369ff4525f0e2b84356a31fe6b7782
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tree-edit/
-  to /tmp/tree-editjAFMD5/tree-edit-20231108.1749
+  to /tmp/tree-editYzC2lo/tree-edit-20231124.1712
     tree-edit-build.el -> tree-edit-build.el
     tree-edit-c.el -> tree-edit-c.el
+    tree-edit-elisp.el -> tree-edit-elisp.el
     tree-edit-java.el -> tree-edit-java.el
     tree-edit-python.el -> tree-edit-python.el
     tree-edit.el -> tree-edit.el
-Created tree-edit-20231108.1749.tar containing:
-  tree-edit-20231108.1749/
-  tree-edit-20231108.1749/tree-edit-build.el
-  tree-edit-20231108.1749/tree-edit-c.el
-  tree-edit-20231108.1749/tree-edit-java.el
-  tree-edit-20231108.1749/tree-edit-pkg.el
-  tree-edit-20231108.1749/tree-edit-python.el
-  tree-edit-20231108.1749/tree-edit.el
+Created tree-edit-20231124.1712.tar containing:
+  tree-edit-20231124.1712/
+  tree-edit-20231124.1712/tree-edit-build.el
+  tree-edit-20231124.1712/tree-edit-c.el
+  tree-edit-20231124.1712/tree-edit-elisp.el
+  tree-edit-20231124.1712/tree-edit-java.el
+  tree-edit-20231124.1712/tree-edit-pkg.el
+  tree-edit-20231124.1712/tree-edit-python.el
+  tree-edit-20231124.1712/tree-edit.el
  ✓ Success:
-  2023-11-24T14:08:16+0000  tree-edit-20231108.1749.entry
-  2023-11-24T14:08:15+0000  tree-edit-20231108.1749.tar
-Built tree-edit in 4.490s, finished at 2023-11-24T14:08:17+0000
+  2023-11-24T16:14:11+0000  tree-edit-20231108.1749.entry
+  2023-11-24T16:14:11+0000  tree-edit-20231108.1749.tar
+  2023-11-24T18:18:15+0000  tree-edit-20231124.1712.entry
+  2023-11-24T18:18:15+0000  tree-edit-20231124.1712.tar
+Built tree-edit in 7.066s, finished at 2023-11-24T18:18:18+0000
