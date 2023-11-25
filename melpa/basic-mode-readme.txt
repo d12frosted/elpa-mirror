@@ -19,8 +19,8 @@ a new line starting with a fresh line number.  Typing C-c C-r will
 renumber all lines in the region, or the entire buffer, including
 any jumps in the code.
 
-Type M-. to lookup the line number, label, variable, or constant at point,
-and type M-, to go back again.  See also function `xref-find-definitions'.
+Type M-. to lookup the definition of the identifier at point, and type M-,
+to go back again. See also function `xref-find-definitions'.
 
 Installation:
 
