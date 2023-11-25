@@ -2415,14 +2415,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 18 20231115084756)
+	       [(24 18 20231124130215)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "68335b2a903d9d9163129e92bbbf8927599739a6"))])
+		 (:commit . "770b9dc860cb0b58c80136c94ba39762143a3da7"))])
  (xkcd .
        [(1 1)
 	((json
