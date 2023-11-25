@@ -1,6 +1,5 @@
 
-mood-line is a minimal mode line configuration that aims to replicate
-some of the features of the more advanced doom-modeline package.
+mood-line is a lightweight, drop-in replacement for the default mode line.
 
 Features offered:
 * Clean, informative design
