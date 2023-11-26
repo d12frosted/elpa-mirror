@@ -3096,6 +3096,7 @@
   (lsp-python-ms :url "https://github.com/emacs-lsp/lsp-python-ms.git")
   (lsp-rescript :url "https://github.com/jjlee/lsp-rescript.git")
   (lsp-scheme :url "https://codeberg.org/rgherdt/emacs-lsp-scheme.git")
+  (lsp-shader :url "https://github.com/shader-ls/lsp-shader.git")
   (lsp-sonarlint :url "https://github.com/emacs-lsp/lsp-sonarlint.git")
   (lsp-sourcekit :url "https://github.com/emacs-lsp/lsp-sourcekit.git")
   (lsp-tailwindcss :url "https://github.com/merrickluo/lsp-tailwindcss.git")
