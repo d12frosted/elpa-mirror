@@ -1283,7 +1283,7 @@
 	      ((:url . "https://github.com/JuliaEditorSupport/julia-emacs")
 	       (:keywords "languages"))])
  (keycast .
-	  [(1 3 2)
+	  [(1 3 3)
 	   ((emacs
 	     (25 3))
 	    (compat
@@ -1294,7 +1294,7 @@
 	    (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 	    (:authors
 	     ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	    (:commit . "0b16d6aa3ae965bcd6b4d1fd0173cfde9dc8e275"))])
+	    (:commit . "c47fa154c756abd044da4a1353c30b978782f7dc"))])
  (kotlin-mode .
 	      [(2 0 0)
 	       ((emacs
