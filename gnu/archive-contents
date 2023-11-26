@@ -3751,7 +3751,7 @@
 		(:maintainer "Rocky Bernstein" . "rocky@gnu.org")
 		(:url . "http://github.com/rocky/emacs-test-simple"))])
  (theme-buffet .
-	       [(0 0 0)
+	       [(0 1 0)
 		((emacs
 		  (29 1)))
 		"Time based theme switcher" tar
@@ -3760,7 +3760,7 @@
 		 (:authors
 		  ("Bruno Boal" . "egomet@bboal.com")
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "c00d1e40974a2bdef3cb1bae3b774197be73bf78"))])
+		 (:commit . "8898823a87178581425d90d4f9fba7e741b0236a"))])
  (timerfunctions .
 		 [(1 4 2)
 		  ((cl-lib
