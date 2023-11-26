@@ -5161,6 +5161,7 @@
   (tramp-auto-auth :url "https://github.com/oitofelix/tramp-auto-auth.git")
   (tramp-hdfs :url "https://github.com/raghavgautam/tramp-hdfs.git")
   (tramp-term :url "https://github.com/cuspymd/tramp-term.el.git")
+  (transducers :url "https://git.sr.ht/~fosskers/transducers.el")
   (transfer-sh :url "https://gitlab.com/tuedachu/transfer-sh.el.git")
   (transient :url "https://github.com/magit/transient.git")
   (transient-dwim :url "https://github.com/conao3/transient-dwim.el.git")
