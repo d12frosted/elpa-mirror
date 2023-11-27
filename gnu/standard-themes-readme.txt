@@ -1,24 +1,27 @@
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	    STANDARD-THEMES: LIKE THE DEFAULT THEME BUT MORE
-			       CONSISTENT
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            STANDARD-THEMES: LIKE THE DEFAULT THEME BUT MORE
+                               CONSISTENT
 
-			  Protesilaos Stavrou
-			  info@protesilaos.com
-	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          Protesilaos Stavrou
+                          info@protesilaos.com
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This manual, written by Protesilaos Stavrou, describes the Emacs package
 called `standard-themes', and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.2.0,
-released on 2023-02-16.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 2.0.0,
+released on 2023-11-27.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.3.0-dev.
+Current development target is 2.1.0-dev.
 
 ⁃ Package name (GNU ELPA): `standard-themes'
 ⁃ Official manual: <https://protesilaos.com/emacs/standard-themes>
+⁃ Change log: <https://protesilaos.com/emacs/standard-themes-changelog>
+⁃ Sample pictures:
+  <https://protesilaos.com/emacs/standard-themes-pictures>
 ⁃ Git repo on SourceHut:
   <https://git.sr.ht/~protesilaos/standard-themes>
   • Mirrors:
@@ -41,18 +44,14 @@ Table of Contents
 .. 2. Manual installation
 4. Sample configuration
 5. Customization options
-.. 1. Disable other themes
-.. 2. Enable mixed fonts
-.. 3. Accented mode line
-.. 4. UI typeface
-.. 5. Bold constructs
-.. 6. Italic constructs
-.. 7. Fringe visibility
-.. 8. Link style
-.. 9. Option for command prompts
-.. 10. Option for headings
-.. 11. Style of region highlight
-.. 12. Palette overrides
+.. 1. Option to disable other themes
+.. 2. Option to enable mixed fonts
+.. 3. Option to control the UI typeface
+.. 4. Option to enable more bold constructs
+.. 5. Option to enable more italic constructs
+.. 6. Option for command prompts
+.. 7. Option for headings
+.. 8. Palette overrides
 6. Loading a theme
 7. Preview theme colors
 8. Use colors from the active Standard theme
@@ -171,17 +170,10 @@ Table of Contents
   │ ;; sample values.
   │ (setq standard-themes-bold-constructs t
   │       standard-themes-italic-constructs t
+  │       standard-themes-disable-other-themes t
   │       standard-themes-mixed-fonts t
   │       standard-themes-variable-pitch-ui t
-  │       standard-themes-mode-line-accented t
-  │ 
-  │       ;; Accepts a symbol value:
-  │       standard-themes-fringes 'subtle
-  │ 
-  │       ;; The following accept lists of properties
-  │       standard-themes-links '(neutral-underline)
-  │       standard-themes-region '(no-extend neutral intense)
-  │       standard-themes-prompts '(bold italic)
+  │       standard-themes-prompts '(extrabold italic)
   │ 
   │       ;; more complex alist to set weight, height, and optional
   │       ;; `variable-pitch' per heading level (t is for any level not
@@ -195,12 +187,11 @@ Table of Contents
   │ 	(5 . (variable-pitch 1.4))
   │ 	(6 . (variable-pitch 1.3))
   │ 	(7 . (variable-pitch 1.2))
+  │ 	(agenda-date . (1.3))
+  │ 	(agenda-structure . (variable-pitch light 1.8))
   │ 	(t . (variable-pitch 1.1))))
   │ 
-  │ ;; Disable all other themes to avoid awkward blending:
-  │ (mapc #'disable-theme custom-enabled-themes)
-  │ 
-  │ (load-theme 'standard-light :no-confirm)
+  │ (standard-themes-load-light) ; OR (standard-themes-load-dark)
   │ 
   │ (define-key global-map (kbd "<f5>") #'standard-themes-toggle)
   └────
@@ -210,25 +201,26 @@ Table of Contents
 ═══════════════════════
 
   The `standard-themes' provide user options which tweak secondary
-  aspects of the theme.  All customizations need to be evaluated before
-  loading a theme.  Any change after the theme has been loaded require a
+  aspects of the theme. All customizations need to be evaluated before
+  loading a theme. Any change after the theme has been loaded requires a
   re-load ([Loading a theme]).
 
 
 [Loading a theme] See section 6
 
-5.1 Disable other themes
-────────────────────────
+5.1 Option to disable other themes
+──────────────────────────────────
 
-  The user option `standard-themes-disable-other-themes' controls which
-  themes to disable when loading a Standard theme ([Loading a theme]).
+  The user option `standard-themes-disable-other-themes' controls
+  whether to disable other themes when loading a Standard theme
+  ([Loading a theme]).
 
   When the value is non-nil, the command `standard-themes-toggle' as
   well as the functions `standard-themes-load-dark' and
   `standard-themes-load-light', will disable all other themes while
-  loading the specified Standard theme.  This is done to ensure that
-  Emacs does not blend two or more themes: such blends lead to awkward
-  results that undermine the work of the designer.
+  loading the given Standard theme. This is done to ensure that Emacs
+  does not blend two or more themes: such blends lead to awkward results
+  that undermine the work of the designer.
 
   When the value is nil, the aforementioned command and functions will
   only disable the other Standard theme.
@@ -242,12 +234,12 @@ Table of Contents
 [Loading a theme] See section 6
 
 
-5.2 Enable mixed fonts
-──────────────────────
+5.2 Option to enable mixed fonts
+────────────────────────────────
 
   The user option `standard-themes-mixed-fonts' controls whether
   strictly spacing-sensitive constructs inherit from `fixed-pitch' (a
-  monospaced font family).
+  monospaced font family) to ensure proper alignment at all times.
 
   By default (a `nil' value for this user option) no face inherits from
   `fixed-pitch': they all use the default font family, regardless of
@@ -255,15 +247,16 @@ Table of Contents
 
   When `standard-themes-mixed-fonts' is set to a non-`nil' value, faces
   such as for Org tables, inline code, code blocks, and the like, are
-  rendered in a monospaced font at all times.  The user can thus set
-  their default font family to a proportionately spaced font without
-  worrying about breaking the alignment of relevant elements, or if they
-  simply prefer the aesthetics of mixed mono and proportionately spaced
-  font families.
+  rendered in a monospaced font (the inherit the `fixed-pitch' face).
+  The user can thus set their default font family to a proportionately
+  spaced font without worrying about breaking the alignment of relevant
+  elements (or if they simply prefer the aesthetics of mixed mono and
+  proportionately spaced font families).
 
   A temporary switch to a proportionately spaced font (known in Emacs as
   `variable-pitch') can be enabled in the current buffer with the
-  activation of the built-in `variable-pitch-mode'.
+  activation of the built-in `variable-pitch-mode'. Mixed fonts work
+  well in this case.
 
   To get consistent typography, the user may need to edit the font
   family of the `fixed-pitch' and `variable-pitch' faces.  The
@@ -271,23 +264,17 @@ Table of Contents
   regard.
 
 
-5.3 Accented mode line
-──────────────────────
-
-  The user option `standard-themes-mode-line-accented' handles the
-  background color of the active mode line.  When the value is `nil',
-  the color is gray, while non-`nil' uses an accent value.
-
-
-5.4 UI typeface
-───────────────
+5.3 Option to control the UI typeface
+─────────────────────────────────────
 
   The user option `standard-themes-variable-pitch-ui' controls whether
   the elements of the User Interface (UI) use a proportionately spaced
-  font.  By default (a `nil' value), all UI elements use the default
-  font family.  When this user option is set to a non-`nil' value, all
-  UI elements will inherit the face `variable-pitch', thus rendering
-  them in a proportionately spaced font.
+  font.
+
+  By default (a `nil' value), all UI elements use the default font
+  family. When this user option is set to a non-`nil' value, all UI
+  elements will inherit the face `variable-pitch', thus rendering them
+  in a proportionately spaced font.
 
   In this context, the UI elements are:
 
@@ -302,12 +289,12 @@ Table of Contents
   regard.
 
 
-5.5 Bold constructs
-───────────────────
+5.4 Option to enable more bold constructs
+─────────────────────────────────────────
 
   The user option `standard-themes-bold-constructs' determines whether
-  select faces will inherit the `bold' face.  When the value is
-  non-`nil', a bold weight is applied to code constructs.  This affects
+  select faces will inherit the `bold' face. When the value is
+  non-`nil', a bold weight is applied to code constructs. This affects
   keywords, builtins, and a few other elements.
 
   [Configure bold and italic faces].
@@ -316,13 +303,13 @@ Table of Contents
 [Configure bold and italic faces] See section 9.5
 
 
-5.6 Italic constructs
-─────────────────────
+5.5 Option to enable more italic constructs
+───────────────────────────────────────────
 
   The user option `standard-themes-italic-constructs' determines whether
-  select faces will inherit the `italic' face.  When the value is
-  non-`nil', an italic style is applied to code constructs.  This
-  affects comments, doc strings, and a few other minor elements.
+  select faces will inherit the `italic' face. When the value is
+  non-`nil', an italic style is applied to code constructs. This affects
+  comments, doc strings, and a few other minor elements.
 
   [Configure bold and italic faces].
 
@@ -330,91 +317,48 @@ Table of Contents
 [Configure bold and italic faces] See section 9.5
 
 
-5.7 Fringe visibility
-─────────────────────
-
-  The user option `standard-themes-fringes' controls the visibility and
-  intensity of the fringes.  With regular Emacs settings “Fringe” is a
-  small surface area to either side of the Emacs window: it is where
-  certain indicators are displayed, such as continuation lines.
-
-  When the value is `nil', do not apply a distinct background color.
-
-  With a value of `subtle', use a gray background color that is visible
-  yet close to the main background color.  This is the default style.
-
-  With `intense', use a more pronounced gray background color.
-
-
-5.8 Link style
-──────────────
-
-  The user option `standard-themes-links' controls the style of links.
-  The value is a list of properties, each designated by a symbol.  The
-  default (a `nil' value or an empty list) is a prominent text color,
-  typically blue, with an underline of the same color.
-
-  For the style of the underline, a `neutral-underline' property turns
-  the color of the line into a subtle gray, while the `no-underline'
-  property removes the line altogether.  If both of those are set, the
-  latter takes precedence.
-
-  For text coloration, a `faint' property desaturates the color of the
-  text and the underline, unless the underline is affected by the
-  aforementioned properties.
-
-  A `bold' property applies a heavy typographic weight to the text of
-  the link.
-
-  An `italic' property adds a slant to the link’s text (italic or
-  oblique forms, depending on the typeface).
-
-  Combinations of any of those properties are expressed as a list, like
-  in these examples:
-
-  ┌────
-  │ (faint)
-  │ (no-underline faint)
-  └────
-
-  The order in which the properties are set is not significant.
-
-  In user configuration files the form may look like this:
-
-  ┌────
-  │ (setq standard-themes-links '(neutral-underline faint))
-  └────
-
-  The placement of the underline, meaning its proximity to the text, is
-  controlled by `x-use-underline-position-properties',
-  `x-underline-at-descent-line', `underline-minimum-offset'.  Please
-  refer to their documentation strings.
-
-
-5.9 Option for command prompts
+5.6 Option for command prompts
 ──────────────────────────────
 
   The user option `standard-themes-prompts' controls the style of all
   prompts, such as those of the minibuffer and REPLs.
 
-  The value is a list of properties, each designated by a symbol.  The
-  default (a `nil' value or an empty list) means to only use an accented
-  foreground color.
+  Possible values are expressed as a list of properties (default is
+  `nil' or an empty list). The list can include any of the following
+  symbols:
 
-  The property `background' applies a background color to the prompt’s
-  text and adjusts the foreground accordingly.
+  ⁃ `italic'
+  ⁃ A font weight, which must be supported by the underlying typeface:
+    • `thin'
+    • `ultralight'
+    • `extralight'
+    • `light'
+    • `semilight'
+    • `regular'
+    • `medium'
+    • `semibold'
+    • `bold'
+    • `heavy'
+    • `extrabold'
+    • `ultrabold'
 
-  The property `bold' makes the text use a bold typographic weight.
-  Similarly, `italic' adds a slant to the font’s forms (italic or
+  The default (a `nil' value or an empty list) means to only use a
+  foreground color without any typographic additions.
+
+  The `italic' property adds a slant to the font’s forms (italic or
   oblique forms, depending on the typeface).
+
+  The symbol of a font weight attribute such as `light', `semibold', et
+  cetera, adds the given weight to links. Valid symbols are defined in
+  the variable `standard-themes-weights'. The absence of a weight means
+  that the one of the underlying text will be used.
 
   Combinations of any of those properties are expressed as a list, like
   in these examples:
 
   ┌────
-  │ (background)
   │ (bold italic)
-  │ (background bold italic)
+  │ (italic semibold)
   └────
 
   The order in which the properties are set is not significant.
@@ -422,12 +366,18 @@ Table of Contents
   In user configuration files the form may look like this:
 
   ┌────
-  │ (setq standard-themes-prompts '(background bold))
+  │ (setq standard-themes-prompts '(extrabold italic))
   └────
 
+  The foreground and background colors of prompts can be modified by
+  applying palette overrides ([Palette overrides]).
 
-5.10 Option for headings
-────────────────────────
+
+[Palette overrides] See section 5.8
+
+
+5.7 Option for headings
+───────────────────────
 
   The user option `standard-themes-headings' provides support for
   individual heading styles for regular heading levels 0 through 8, as
@@ -448,44 +398,58 @@ Table of Contents
 
   ┌────
   │ (setq standard-themes-headings
-  │       '((1 . (light variable-pitch 1.5))
-  │ 	(2 . (regular 1.3))
-  │ 	(3 . (1.1))
+  │       '((1 . (variable-pitch 1.5))
+  │ 	(2 . (1.3))
   │ 	(agenda-date . (1.3))
   │ 	(agenda-structure . (variable-pitch light 1.8))
-  │ 	(t . (variable-pitch))))
+  │ 	(t . (1.1))))
   └────
 
-  By default (a `nil' value for this variable), all headings have a
-  normal typographic weight, a font family that is the same as the
-  `default' face (typically monospaced), and a height that is equal to
-  the `default' face’s height.
+  Properties:
 
-  • A `variable-pitch' property changes the font family of the heading
-    to that of the `variable-pitch' face (normally a proportionately
-    spaced typeface).  Also check the `fontaine' package (by
-    Protesilaos) for tweaking fonts via faces.
+  ⁃ A font weight, which must be supported by the underlying typeface:
+    • `thin'
+    • `ultralight'
+    • `extralight'
+    • `light'
+    • `semilight'
+    • `regular'
+    • `medium'
+    • `semibold'
+    • `bold' (default)
+    • `heavy'
+    • `extrabold'
+    • `ultrabold'
+  ⁃ A floating point as a height multiple of the default or a cons cell
+    in the form of `(height . FLOAT)'.
 
-  • The symbol of a weight attribute adjusts the font of the heading
-    accordingly, such as `light', `semibold', etc.  Valid symbols are
-    defined in the variable `standard-themes-weights'.  The absence of a
-    weight means that no distinct weight will be used.
+  By default (a `nil' value for this variable), all headings have a bold
+  typographic weight and use a desaturated text color.
 
-  • A number, expressed as a floating point (e.g. 1.5), adjusts the
-    height of the heading to that many times the base font size.  The
-    default height is the same as 1.0, though it need not be explicitly
-    stated.  Instead of a floating point, an acceptable value can be in
-    the form of a cons cell like `(height . FLOAT)' or `(height FLOAT)',
-    where `FLOAT' is the given number.
+  A `variable-pitch' property changes the font family of the heading to
+  that of the `variable-pitch' face (normally a proportionately spaced
+  typeface).
+
+  The symbol of a weight attribute adjusts the font of the heading
+  accordingly, such as `light', `semibold', etc.  Valid symbols are
+  defined in the variable `standard-themes-weights'.  The absence of a
+  weight means that bold will be used by virtue of inheriting the `bold'
+  face.
+
+  A number, expressed as a floating point (e.g. 1.5), adjusts the height
+  of the heading to that many times the base font size.  The default
+  height is the same as 1.0, though it need not be explicitly stated.
+  Instead of a floating point, an acceptable value can be in the form of
+  a cons cell like `(height . FLOAT)' or `(height FLOAT)', where FLOAT
+  is the given number.
 
   Combinations of any of those properties are expressed as a list, like
   in these examples:
 
   ┌────
   │ (semibold)
-  │ (variable-pitch semibold)
   │ (variable-pitch semibold 1.3)
-  │ (variable-pitch semibold (height 1.3))   ; same as above
+  │ (variable-pitch semibold (height 1.3)) ; same as above
   │ (variable-pitch semibold (height . 1.3)) ; same as above
   └────
 
@@ -495,68 +459,43 @@ Table of Contents
 
   ┌────
   │ (setq standard-themes-headings
-  │       '((1 . (light variable-pitch 1.5))
-  │ 	(2 . (regular 1.3))
-  │ 	(3 . (1.1))
-  │ 	(t . (variable-pitch))))
+  │       '((1 . (variable-pitch 1.5))
+  │ 	(2 . (1.3))
+  │ 	(agenda-date . (1.3))
+  │ 	(agenda-structure . (variable-pitch light 1.8))
+  │ 	(t . (1.1))))
   └────
 
   When defining the styles per heading level, it is possible to pass a
-  non-`nil' value (t) instead of a list of properties.  This will retain
-  the original aesthetic for that level.  For example:
+  non-`nil' value (`t') instead of a list of properties.  This will
+  retain the original aesthetic for that level.  For example:
 
   ┌────
   │ (setq standard-themes-headings
   │       '((1 . t)           ; keep the default style
-  │ 	(2 . (variable-pitch 1.2))
-  │ 	(t . (variable-pitch)))) ; style for all unspecified headings
+  │ 	(2 . (semibold 1.2))
+  │ 	(t . (rainbow)))) ; style for all other headings
   │ 
   │ (setq standard-themes-headings
-  │       '((1 . (variable-pitch 1.6))
-  │ 	(2 . (1.3))
-  │ 	(t . t))) ; default style for all unspecified levels
+  │       '((1 . (variable-pitch 1.5))
+  │ 	(2 . (semibold))
+  │ 	(t . t))) ; default style for all other levels
   └────
 
+  Note that the text color of headings, of their background, and
+  overline can all be set via the overrides.  It is possible to have any
+  color combination for any heading level (something that could not be
+  done in older versions of the themes).
 
-5.11 Style of region highlight
-──────────────────────────────
-
-  The user option `standard-themes-region' controls the appearance of
-  the `region' face (the highlighted selection of an area).
-
-  The value it accepts is a list of symbols.
-
-  If `nil' or an empty list (the default), use a subtle background for
-  the region and preserve the color of selected text.
-
-  The `no-extend' symbol limits the highlighted area to the end of the
-  line, so that it does not reach the edge of the window.
-
-  The `neutral' symbol makes the highlighted area’s background gray (or
-  more gray, depending on the theme).
-
-  The `intense' symbol amplifies the intensity of the highlighted area’s
-  background color.  It also overrides any text color to keep it
-  legible.
-
-  Combinations of those symbols are expressed in any order.
-
-  In user configuration files the form may look like this:
-
-  ┌────
-  │ (setq standard-themes-region '(intense no-extend))
-  └────
-
-  Other examples:
-
-  ┌────
-  │ (setq standard-themes-region '(intense))
-  │ (setq standard-themes-region '(intense no-extend neutral))
-  └────
+  The foreground, background, and overline colors of headings can be
+  modified by applying palette overrides ([Palette overrides]).
 
 
-5.12 Palette overrides
-──────────────────────
+[Palette overrides] See section 5.8
+
+
+5.8 Palette overrides
+─────────────────────
 
   The Standard themes define their own color palette as well as semantic
   color mappings.  The former is the set of color values such as what
@@ -654,9 +593,9 @@ Table of Contents
 
   As the Standard themes are extensible, another way to load the theme
   of choice is to use either `standard-themes-load-dark' or
-  `standard-themes-load-light'.  These functions take care of (i)
-  disabling other themes, (ii) loading the specified Standard theme, and
-  (iii) running the `standard-themes-post-load-hook' which is useful for
+  `standard-themes-load-light'. These functions take care to (i) disable
+  other themes, (ii) load the specified Standard theme, and (iii) run
+  the `standard-themes-post-load-hook' which is useful for
   do-it-yourself customizations ([The general approach to DIY changes]).
   These two functions are also called by the command
   `standard-themes-toggle'.
@@ -700,7 +639,7 @@ Table of Contents
   and `=*standard-light-list-mappings*' for the semantic color mappings.
 
 
-[Palette overrides] See section 5.12
+[Palette overrides] See section 5.8
 
 
 8 Use colors from the active Standard theme
@@ -805,7 +744,7 @@ Table of Contents
 
 [Preview theme colors] See section 7
 
-[Palette overrides] See section 5.12
+[Palette overrides] See section 5.8
 
 
 9.2 The general approach to advanced DIY changes
@@ -1141,29 +1080,48 @@ Table of Contents
 
   All the faces defined by the themes:
 
-  ⁃ `standard-themes-bold'
-  ⁃ `standard-themes-fixed-pitch'
-  ⁃ `standard-themes-fringe-error'
-  ⁃ `standard-themes-fringe-info'
-  ⁃ `standard-themes-fringe-warning'
-  ⁃ `standard-themes-heading-0'
-  ⁃ `standard-themes-heading-1'
-  ⁃ `standard-themes-heading-2'
-  ⁃ `standard-themes-heading-3'
-  ⁃ `standard-themes-heading-4'
-  ⁃ `standard-themes-heading-5'
-  ⁃ `standard-themes-heading-6'
-  ⁃ `standard-themes-heading-7'
-  ⁃ `standard-themes-heading-8'
-  ⁃ `standard-themes-italic'
-  ⁃ `standard-themes-key-binding'
-  ⁃ `standard-themes-mark-delete'
-  ⁃ `standard-themes-mark-other'
-  ⁃ `standard-themes-mark-select'
-  ⁃ `standard-themes-ui-variable-pitch'
-  ⁃ `standard-themes-underline-error'
-  ⁃ `standard-themes-underline-info'
-  ⁃ `standard-themes-underline-warning'
+  • `standard-themes-bold'
+  • `standard-themes-fixed-pitch'
+  • `standard-themes-fringe-error'
+  • `standard-themes-fringe-info'
+  • `standard-themes-fringe-warning'
+  • `standard-themes-heading-0'
+  • `standard-themes-heading-1'
+  • `standard-themes-heading-2'
+  • `standard-themes-heading-3'
+  • `standard-themes-heading-4'
+  • `standard-themes-heading-5'
+  • `standard-themes-heading-6'
+  • `standard-themes-heading-7'
+  • `standard-themes-heading-8'
+  • `standard-themes-intense-blue'
+  • `standard-themes-intense-cyan'
+  • `standard-themes-intense-green'
+  • `standard-themes-intense-magenta'
+  • `standard-themes-intense-red'
+  • `standard-themes-intense-yellow'
+  • `standard-themes-italic'
+  • `standard-themes-key-binding'
+  • `standard-themes-mark-delete'
+  • `standard-themes-mark-other'
+  • `standard-themes-mark-select'
+  • `standard-themes-nuanced-blue'
+  • `standard-themes-nuanced-cyan'
+  • `standard-themes-nuanced-green'
+  • `standard-themes-nuanced-magenta'
+  • `standard-themes-nuanced-red'
+  • `standard-themes-nuanced-yellow'
+  • `standard-themes-prompt'
+  • `standard-themes-subtle-blue'
+  • `standard-themes-subtle-cyan'
+  • `standard-themes-subtle-green'
+  • `standard-themes-subtle-magenta'
+  • `standard-themes-subtle-red'
+  • `standard-themes-subtle-yellow'
+  • `standard-themes-ui-variable-pitch'
+  • `standard-themes-underline-error'
+  • `standard-themes-underline-info'
+  • `standard-themes-underline-warning'
 
 
 [Do-It-Yourself customizations] See section 9
@@ -1190,10 +1148,12 @@ Table of Contents
   • ansi-color
   • auctex
   • auto-dim-other-buffers
+  • breadcrumb
   • bongo
   • bookmark
   • calendar and diary
   • cider
+  • centaur-tabs
   • change-log and log-view (part of VC)
   • chart
   • clojure-mode
@@ -1202,6 +1162,7 @@ Table of Contents
   • completions
   • consult
   • corfu
+  • corfu-candidate-overlay
   • custom (`M-x customize')
   • denote
   • dictionary
@@ -1233,6 +1194,7 @@ Table of Contents
   • image-dired
   • info
   • isearch, occur, query-replace
+  • jit-spell
   • keycast
   • lin
   • line numbers (`display-line-numbers-mode' and global variant)
@@ -1243,6 +1205,9 @@ Table of Contents
   • messages
   • mode-line
   • mu4e
+  • nerd-icons
+  • nerd-icons-dired
+  • nerd-icons-ibuffer
   • neotree
   • notmuch
   • olivetti
@@ -1277,8 +1242,10 @@ Table of Contents
   • tty-menu
   • vc (`vc-dir.el', `vc-hooks.el')
   • vertico
+  • vundo
   • wgrep
   • which-function-mode
+  • which-key
   • whitespace-mode
   • widget
   • writegood-mode
