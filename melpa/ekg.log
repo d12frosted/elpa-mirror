@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out adbe9bfb6faf603fcd4958d4b4d6473829d4e7f2
+Checking out d5324b62b2fb6c5fe4d54cf23d4d054b07869124
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgYgFwH9/ekg-20231111.513
+  to /tmp/ekgHPHwpU/ekg-20231127.46
     ekg-embedding.el -> ekg-embedding.el
     ekg-llm.el -> ekg-llm.el
     ekg-logseq.el -> ekg-logseq.el
@@ -15,21 +15,21 @@ Copying files (->) and directories (=>)
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekgYgFwH9/ekg-20231111.513/doclicense.info
-Generating /tmp/ekgYgFwH9/ekg-20231111.513/ekg.info
-Created ekg-20231111.513.tar containing:
-  ekg-20231111.513/
-  ekg-20231111.513/dir
-  ekg-20231111.513/doclicense.info
-  ekg-20231111.513/ekg-embedding.el
-  ekg-20231111.513/ekg-llm.el
-  ekg-20231111.513/ekg-logseq.el
-  ekg-20231111.513/ekg-org-roam.el
-  ekg-20231111.513/ekg-pkg.el
-  ekg-20231111.513/ekg-test-utils.el
-  ekg-20231111.513/ekg.el
-  ekg-20231111.513/ekg.info
+Generating /tmp/ekgHPHwpU/ekg-20231127.46/doclicense.info
+Generating /tmp/ekgHPHwpU/ekg-20231127.46/ekg.info
+Created ekg-20231127.46.tar containing:
+  ekg-20231127.46/
+  ekg-20231127.46/dir
+  ekg-20231127.46/doclicense.info
+  ekg-20231127.46/ekg-embedding.el
+  ekg-20231127.46/ekg-llm.el
+  ekg-20231127.46/ekg-logseq.el
+  ekg-20231127.46/ekg-org-roam.el
+  ekg-20231127.46/ekg-pkg.el
+  ekg-20231127.46/ekg-test-utils.el
+  ekg-20231127.46/ekg.el
+  ekg-20231127.46/ekg.info
  ✓ Success:
-  2023-11-26T18:57:15+0000  ekg-20231111.513.entry
-  2023-11-26T18:57:15+0000  ekg-20231111.513.tar
-Built ekg in 10.942s, finished at 2023-11-26T18:57:17+0000
+  2023-11-27T03:15:15+0000  ekg-20231127.46.entry
+  2023-11-27T03:15:15+0000  ekg-20231127.46.tar
+Built ekg in 11.528s, finished at 2023-11-27T03:15:17+0000
