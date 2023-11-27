@@ -1,0 +1,26 @@
+Package: mood-line
+Fetcher: gitlab
+Source:  https://gitlab.com/jessieh/mood-line.git
+
+Updating /mnt/store/melpa/working/mood-line/
+Checking out 19dc4775e5dc6f8c123a3a3ac0718284490a9328
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mood-line/
+  to /tmp/mood-linepgWX4K/mood-line-20231125.23
+    mood-line-segment-checker.el -> mood-line-segment-checker.el
+    mood-line-segment-indentation.el -> mood-line-segment-indentation.el
+    mood-line-segment-modal.el -> mood-line-segment-modal.el
+    mood-line-segment-vc.el -> mood-line-segment-vc.el
+    mood-line.el -> mood-line.el
+Created mood-line-20231125.23.tar containing:
+  mood-line-20231125.23/
+  mood-line-20231125.23/mood-line-pkg.el
+  mood-line-20231125.23/mood-line-segment-checker.el
+  mood-line-20231125.23/mood-line-segment-indentation.el
+  mood-line-20231125.23/mood-line-segment-modal.el
+  mood-line-20231125.23/mood-line-segment-vc.el
+  mood-line-20231125.23/mood-line.el
+ ✓ Success:
+  2023-11-27T14:13:14+0000  mood-line-20231125.23.entry
+  2023-11-27T14:13:14+0000  mood-line-20231125.23.tar
+Built mood-line in 4.124s, finished at 2023-11-27T14:13:16+0000
