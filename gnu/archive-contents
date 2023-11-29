@@ -2008,7 +2008,7 @@
 	       ("Simen Heggestøyl" . "simenheg@gmail.com"))
 	      (:maintainer "Simen Heggestøyl" . "simenheg@gmail.com"))])
  (jsonrpc .
-	  [(1 0 17)
+	  [(1 0 18)
 	   ((emacs
 	     (25 2)))
 	   "JSON-RPC library" tar
@@ -2017,7 +2017,7 @@
 	    (:authors
 	     ("João Távora" . "joaotavora@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
-	    (:commit . "2d835d64ba339bb375f0d55c4679149d6da3f209"))])
+	    (:commit . "5a0250f76676d8750f42bbca1af5c4553846949b"))])
  (jumpc .
 	[(3 1)
 	 nil "jump to previous insertion points" tar
@@ -3820,7 +3820,7 @@
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (tramp .
-	[(2 6 1 4)
+	[(2 6 1 5)
 	 ((emacs
 	   (26 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3829,7 +3829,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "9a32fb3d225a070cd1f6e5e74b9bed8944b3acb5"))])
+	  (:commit . "4c72c437f689f234929668d1b9d4a8f7d113e32d"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs

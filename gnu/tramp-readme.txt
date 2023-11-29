@@ -20,13 +20,23 @@ experience compatibility error messages for the Tramp package, or if you
 use another major Emacs version than the version Tramp has been
 installed with, you must recompile the package:
 
+Emacs 29 or newer
+-----------------
+
+   • Recompile the Tramp package
+
+          M-x package-recompile RET tramp
+
+Emacs 28 or older
+-----------------
+
    • Remove all byte-compiled Tramp files
 
-          $ rm -f ~/.emacs.d/elpa/tramp-2.6.1.4/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.6.1.5/tramp*.elc
 
    • Start Emacs with Tramp’s source files
 
-          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.1.4 -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.1.5 -l tramp
 
      This should not give you the error.
 
@@ -37,10 +47,10 @@ installed with, you must recompile the package:
      Afterwards, you must restart Emacs.
 
 Mitigation of a bug in Emacs 29.1
-*********************************
+---------------------------------
 
 Due to a bug in Emacs 29.1, you must apply the following change prior
-installation or upgrading Tramp 2.6.1.4 from GNU ELPA:
+installation or upgrading Tramp 2.6.1.5 from GNU ELPA:
 
      (when (string-equal emacs-version "29.1")
        (with-current-buffer
