@@ -17,14 +17,17 @@ is available, which will activate the mode based on the value of
 ;; Configuration
 
 There are a couple of options which can be used to modify behavior
-(and speed) of the mode.
+(and speed) of the mode.  The variables noted with (CUSTOM) *must*
+be customized using either the customize interface or (on Emacs
+29.1 or later) `setopt', because a setter is used to cache the
+regular expressions.
 
-- The first is `electric-ospl-regexps', which sets the list of
-  regular expressions defining how a sentence ends.
+- The first is `electric-ospl-regexps' (CUSTOM), which sets the
+  list of regular expressions defining how a sentence ends.
 
-- The next is `electric-ospl-ignored-abbreviations', which is a
-  (case-sensitive) list of abbrevations ending in a period that are
-  not necessarily considered the end of a sentence.
+- The next is `electric-ospl-ignored-abbreviations' (CUSTOM), which
+  is a (case-sensitive) list of abbrevations ending in a period
+  that are not necessarily considered the end of a sentence.
 
 - Next, efficiency may be modified by changing
   `electric-ospl-maximum-lookback-chars', which determines how far
