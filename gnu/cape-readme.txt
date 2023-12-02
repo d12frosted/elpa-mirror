@@ -14,10 +14,11 @@ for completion, which is usually invoked by pressing `TAB' or
 `M-TAB'. The functions can also be invoked interactively to trigger the
 respective completion at point. You can bind them directly to a key in
 your user configuration. Notable commands/Capfs are `cape-line' for
-completion of a line from the current buffer and `cape-file' for
-completion of a file name.  The commands `cape-symbol' and
-`cape-elisp-block' are useful for documentation of Elisp packages or
-configurations, since they completes Elisp anywhere.
+completion of a line from the current buffer, `cape-history' for history
+completion in shell or Comint modes and `cape-file' for completion of
+file names. The commands `cape-elisp-symbol' and `cape-elisp-block' are
+useful for documentation of Elisp packages or configurations, since they
+complete Elisp anywhere.
 
 Cape has the super power to transform Company backends into Capfs and
 merge multiple Capfs into a Super-Capf! These transformers allow you to
@@ -45,20 +46,21 @@ Table of Contents
 1 Available Capfs
 ═════════════════
 
+  ⁃ `cape-abbrev': Complete abbreviation (`add-global-abbrev',
+    `add-mode-abbrev').
   ⁃ `cape-dabbrev': Complete word from current buffers. See also
     `dabbrev-capf' on Emacs 29.
+  ⁃ `cape-dict': Complete word from dictionary file.
   ⁃ `cape-elisp-block': Complete Elisp in Org or Markdown code block.
+  ⁃ `cape-elisp-symbol': Complete Elisp symbol.
+  ⁃ `cape-emoji': Complete Emoji. Available on Emacs 29 and newer.
   ⁃ `cape-file': Complete file name.
   ⁃ `cape-history': Complete from Eshell, Comint or minibuffer history.
   ⁃ `cape-keyword': Complete programming language keyword.
-  ⁃ `cape-symbol': Complete Elisp symbol.
-  ⁃ `cape-abbrev': Complete abbreviation (`add-global-abbrev',
-    `add-mode-abbrev').
-  ⁃ `cape-dict': Complete word from dictionary file.
   ⁃ `cape-line': Complete entire line from current buffer.
-  ⁃ `cape-tex': Complete Unicode char from TeX command, e.g. `\hbar'.
-  ⁃ `cape-sgml': Complete Unicode char from SGML entity, e.g., `&alpha'.
   ⁃ `cape-rfc1345': Complete Unicode char using RFC 1345 mnemonics.
+  ⁃ `cape-sgml': Complete Unicode char from SGML entity, e.g., `&alpha'.
+  ⁃ `cape-tex': Complete Unicode char from TeX command, e.g. `\hbar'.
 
 
 2 Configuration
@@ -79,7 +81,7 @@ Table of Contents
   the Capfs which occur earlier in the list take precedence, such that
   the first Capf returning a result will win and the later Capfs may not
   get a chance to run. In order to merge Capfs you can try the
-  experimental function `cape-super-capf'.
+  experimental function `cape-capf-super'.
 
   One must distinguish the buffer-local and the global value of the
   `completion-at-point-functions' variable. The buffer-local value of
@@ -106,10 +108,12 @@ Table of Contents
   │ 	 ("C-c p h" . cape-history)
   │ 	 ("C-c p f" . cape-file)
   │ 	 ("C-c p k" . cape-keyword)
-  │ 	 ("C-c p s" . cape-symbol)
+  │ 	 ("C-c p s" . cape-elisp-symbol)
+  │ 	 ("C-c p e" . cape-elisp-block)
   │ 	 ("C-c p a" . cape-abbrev)
   │ 	 ("C-c p l" . cape-line)
   │ 	 ("C-c p w" . cape-dict)
+  │ 	 ("C-c p :" . cape-emoji)
   │ 	 ("C-c p \\" . cape-tex)
   │ 	 ("C-c p _" . cape-tex)
   │ 	 ("C-c p ^" . cape-tex)
@@ -130,7 +134,7 @@ Table of Contents
   │   ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-dict)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-symbol)
+  │   ;;(add-to-list 'completion-at-point-functions #'cape-elisp-symbol)
   │   ;;(add-to-list 'completion-at-point-functions #'cape-line)
   │ )
   └────
@@ -157,7 +161,7 @@ Table of Contents
   │ ;; Use Company backends as Capfs.
   │ (setq-local completion-at-point-functions
   │   (mapcar #'cape-company-to-capf
-  │     (list #'company-files #'company-ispell #'company-dabbrev)))
+  │     (list #'company-files #'company-keywords #'company-dabbrev)))
   └────
 
   Note that the adapter does not require Company to be installed or
@@ -168,37 +172,38 @@ Table of Contents
   completion) and Company.
 
   ┌────
-  │ (defvar emojis
+  │ (defvar demo-alist
   │   '((":-D" . "😀")
   │     (";-)" . "😉")
   │     (":-/" . "😕")
   │     (":-(" . "🙁")
   │     (":-*" . "😙")))
   │ 
-  │ (defun emoji-backend (action &optional arg &rest _)
+  │ (defun demo-backend (action &optional arg &rest _)
   │   (pcase action
   │     ('prefix (and (memq (char-before) '(?: ?\;))
   │ 		  (cons (string (char-before)) t)))
-  │     ('candidates (all-completions arg emojis))
-  │     ('annotation (concat " " (cdr (assoc arg emojis))))
+  │     ('candidates (all-completions arg demo-alist))
+  │     ('annotation (concat " " (cdr (assoc arg demo-alist))))
   │     ('post-completion
   │      (let ((str (buffer-substring (- (point) 3) (point))))
   │        (delete-region (- (point) 3) (point))
-  │      (insert (cdr (assoc str emojis)))))))
+  │      (insert (cdr (assoc str demo-alist)))))))
   │ 
-  │ ;; Register emoji backend with `completion-at-point'
+  │ ;; Register demo backend with `completion-at-point'
   │ (setq completion-at-point-functions
-  │       (list (cape-company-to-capf #'emoji-backend)))
+  │       (list (cape-company-to-capf #'demo-backend)))
   │ 
-  │ ;; Register emoji backend with Company.
-  │ (setq company-backends '(emoji-backend))
+  │ ;; Register demo backend with Company.
+  │ (setq company-backends '(demo-backend))
   └────
 
-  It is possible to merge/group multiple Company backends and use them
-  as a single Capf using the `company--multi-backend-adapter' function
-  from Company. The adapter transforms multiple Company backends into a
+  It is possible to merge multiple Company backends and use them as a
+  single Capf using the `company--multi-backend-adapter' function from
+  Company. The adapter transforms multiple Company backends into a
   single Company backend, which can then be used as a Capf via
-  `cape-company-to-capf'.
+  `cape-company-to-capf'. Capfs can be merged directly with
+  `cape-capf-super'.
 
   ┌────
   │ (require 'company)
@@ -217,37 +222,37 @@ Table of Contents
   /Throw multiple Capfs under the Cape and get a Super-Capf!/
 
   Cape supports merging multiple Capfs using the function
-  `cape-super-capf'. This feature is *EXPERIMENTAL* and should only be
+  `cape-capf-super'. This feature is *EXPERIMENTAL* and should only be
   used carefully in special scenarios.  Due to some technical details,
   only a subset of Capfs can be merged. Merge Capfs one by one and make
   sure that you get the desired outcome on each step.
 
-  Note that `cape-super-capf' is not needed if you want to use multiple
+  Note that `cape-capf-super' is not needed if you want to use multiple
   Capfs which are tried one after the other, for example you can use
   `cape-file' together with programming mode Capfs by adding `cape-file'
   to the `completion-at-point-functions' list. File completion will then
   be available in comments and string literals, but not in normal
-  code. `cape-super-capf' is only necessary if you want to combine
+  code. `cape-capf-super' is only necessary if you want to combine
   multiple Capfs, such that the candidates from multiple sources appear
   /together/ in the completion list at the same time.
 
   Capf merging works only for completion functions which are
   sufficiently well-behaved and completion functions which do not define
-  completion boundaries.  `cape-super-capf' has the same restrictions as
+  completion boundaries.  `cape-capf-super' has the same restrictions as
   `completion-table-merge' and `completion-table-in-turn'. As a simple
-  rule of thumb, `cape-super-capf' works only for static completion
+  rule of thumb, `cape-capf-super' works only for static completion
   functions like `cape-dabbrev', `cape-keyword', `cape-dict', etc., but
   not for multi-step completions like `cape-file'.
 
   ┌────
   │ ;; Merge the dabbrev, dict and keyword capfs, display candidates together.
   │ (setq-local completion-at-point-functions
-  │ 	    (list (cape-super-capf #'cape-dabbrev #'cape-dict #'cape-keyword)))
+  │ 	    (list (cape-capf-super #'cape-dabbrev #'cape-dict #'cape-keyword)))
   │ 
   │ ;; Alternative: Define named Capf instead of using the anonymous Capf directly
-  │ (defalias 'cape-dabbrev+dict+keyword
-  │   (cape-super-capf #'cape-dabbrev #'cape-dict #'cape-keyword))
-  │ (setq-local completion-at-point-functions (list #'cape-dabbrev+dict+keyword))
+  │ (defun cape-dabbrev-dict-keyword ()
+  │   (cape-wrap-super #'cape-dabbrev #'cape-dict #'cape-keyword))
+  │ (setq-local completion-at-point-functions (list #'cape-dabbrev-dict-keyword))
   └────
 
   See also the aforementioned `company--multi-backend-adapter' from
@@ -262,7 +267,7 @@ Table of Contents
 
   If a Capf caches the candidates for too long we can use a cache
   busting Capf-transformer. For example the Capf merging function
-  `cape-super-capf' creates a Capf, which caches the candidates for the
+  `cape-capf-super' creates a Capf, which caches the candidates for the
   whole lifetime of the Capf.  Therefore you may want to combine a
   merged Capf with a cache buster under some circumstances. It is
   noteworthy that the `company-capf' backend from Company refreshes the
@@ -285,30 +290,38 @@ Table of Contents
   bind the Capfs created by the Capf transformers with `defalias' to a
   function symbol.
 
-  • `cape-interactive-capf', `cape-interactive': Create a Capf which can
-    be called interactively.
-  • `cape-wrap-accept-all', `cape-capf-accept-all': Create a Capf which
+  • `cape-capf-accept-all', `cape-wrap-accept-all': Create a Capf which
     accepts every input as valid.
-  • `cape-wrap-silent', `cape-capf-silent': Wrap a chatty Capf and
-    silence it.
-  • `cape-wrap-purify', `cape-capf-purify': Purify a broken Capf and
-    ensure that it does not modify the buffer.
-  • `cape-wrap-nonexclusive', `cape-capf-nonexclusive:' Mark Capf as
-    non-exclusive.
-  • `cape-wrap-noninterruptible', `cape-capf-noninterruptible:' Protect
-    a Capf which does not like to be interrupted.
-  • `cape-wrap-case-fold', `cape-capf-case-fold': Create a Capf which is
+  • `cape-capf-case-fold', `cape-wrap-case-fold': Create a Capf which is
     case insensitive.
-  • `cape-wrap-properties', `cape-capf-properties': Add completion
-    properties to a Capf.
-  • `cape-wrap-predicate', `cape-capf-predicate': Add candidate
-    predicate to a Capf.
-  • `cape-wrap-prefix-length', `cape-capf-prefix-length': Enforce a
-    minimal prefix length.
-  • `cape-wrap-inside-comment', `cape-capf-inside-comment': Ensure that
+  • `cape-capf-debug', `cape-wrap-debug': Create a Capf which prints
+    debugging messages.
+  • `cape-capf-inside-comment', `cape-wrap-inside-comment': Ensure that
     Capf triggers only inside comment.
-  • `cape-wrap-inside-string', `cape-capf-inside-string': Ensure that
+  • `cape-capf-inside-faces', `cape-wrap-inside-faces': Ensure that Capf
+    triggers only inside text with certain faces.
+  • `cape-capf-inside-string', `cape-wrap-inside-string': Ensure that
     Capf triggers only inside a string literal.
+  • `cape-capf-interactive', `cape-interactive': Create a Capf which can
+    be called interactively.
+  • `cape-capf-nonexclusive', `cape-wrap-nonexclusive': Mark Capf as
+    non-exclusive.
+  • `cape-capf-noninterruptible', `cape-wrap-noninterruptible': Protect
+    a Capf which does not like to be interrupted.
+  • `cape-capf-passthrough', `cape-wrap-passthrough': Defeat entire
+    completion style filtering.
+  • `cape-capf-predicate', `cape-wrap-predicate': Add candidate
+    predicate to a Capf.
+  • `cape-capf-prefix-length', `cape-wrap-prefix-length': Enforce a
+    minimal prefix length.
+  • `cape-capf-properties', `cape-wrap-properties': Add completion
+    properties to a Capf.
+  • `cape-capf-purify', `cape-wrap-purify': Purify a broken Capf and
+    ensure that it does not modify the buffer.
+  • `cape-capf-silent', `cape-wrap-silent': Wrap a chatty Capf and
+    silence it.
+  • `cape-capf-super', `cape-wrap-super': Merge multiple Capfs into a
+    Super-Capf.
 
   In the following we show a few example configurations, which have come
   up on the [Cape] or [Corfu issue tracker] or the [Corfu wiki.] I use
@@ -326,11 +339,14 @@ Table of Contents
   │ (setq-local completion-at-point-functions
   │ 	    (list (cape-capf-prefix-length #'cape-dabbrev 2)))
   │ 
-  │ ;; Example 3: Named Capf
+  │ ;; Example 3: Create a Capf with debugging messages
+  │ (setq-local completion-at-point-functions (list (cape-capf-debug #'cape-dict)))
+  │ 
+  │ ;; Example 4: Named Capf
   │ (defalias 'cape-dabbrev-min-2 (cape-capf-prefix-length #'cape-dabbrev 2))
   │ (setq-local completion-at-point-functions (list #'cape-dabbrev-min-2))
   │ 
-  │ ;; Example 4: Define a defensive Dabbrev Capf, which accepts all inputs.  If you
+  │ ;; Example 5: Define a defensive Dabbrev Capf, which accepts all inputs.  If you
   │ ;; use Corfu and `corfu-auto=t', the first candidate won't be auto selected if
   │ ;; `corfu-preselect=valid', such that it cannot be accidentally committed when
   │ ;; pressing RET.
@@ -338,12 +354,12 @@ Table of Contents
   │   (cape-wrap-accept-all #'cape-dabbrev))
   │ (add-to-list 'completion-at-point-functions #'my-cape-dabbrev-accept-all)
   │ 
-  │ ;; Example 5: Define interactive Capf which can be bound to a key.  Here we wrap
+  │ ;; Example 6: Define interactive Capf which can be bound to a key.  Here we wrap
   │ ;; the `elisp-completion-at-point' such that we can complete Elisp code
   │ ;; explicitly in arbitrary buffers.
-  │ (keymap-global-set "C-c p e" (cape-interactive-capf #'elisp-completion-at-point))
+  │ (keymap-global-set "C-c p e" (cape-capf-interactive #'elisp-completion-at-point))
   │ 
-  │ ;; Example 6: Ignore :keywords in Elisp completion.
+  │ ;; Example 7: Ignore :keywords in Elisp completion.
   │ (defun ignore-elisp-keywords (sym)
   │   (not (keywordp sym)))
   │ (setq-local completion-at-point-functions

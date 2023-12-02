@@ -1,4 +1,4 @@
-This package provides functions for working with pass ("the
-standard Unix password manager").
+This package provides and Emacs interface for working with
+pass ("the standard Unix password manager").
 
-http://www.passwordstore.org/
+https://www.passwordstore.org/

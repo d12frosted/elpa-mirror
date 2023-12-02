@@ -1,6 +1,6 @@
-		  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		   JINX.EL - ENCHANTED SPELL CHECKER
-		  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                   JINX.EL - ENCHANTED SPELL CHECKER
+                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Jinx is a fast just-in-time spell-checker for Emacs. Jinx highlights
@@ -51,17 +51,19 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   Jinx requires `libenchant'. Enchant library is a required dependency
   for Jinx to compile its module at install time. If `pkgconf' or
   `pkg-config' is available when installing Jinx, Jinx will use it to
-  locate `libenchant'. Depending on your operating system and Linux
-  distribution you have to install different packages:
+  locate `libenchant'. Depending on your BSD or Linux distribution you
+  have to install different packages:
 
-  • Debian or Ubuntu: `libenchant-2-dev', `pkgconf'
-  • Guix: `enchant', `pkgconf'
-  • Arch: `enchant', `pkgconf'
-  • Gentoo: `enchant', `pkgconf'
-  • Void: `enchant2-devel', `pkgconf'
-  • Fedora or RHEL: `enchant2-devel', `pkgconf'
+  • Debian, Ubuntu: `libenchant-2-dev', `pkgconf'
+  • Arch, Gentoo: `enchant', `pkgconf'
+  • Guix: `emacs-jinx' or `enchant', `pkgconf'
+  • NixOS: `jinx' from `elpa-packages.nix'
+  • Void, Fedora: `enchant2-devel', `pkgconf'
   • FreeBSD, OpenBSD: `enchant2', `pkgconf'
-  • Mac: `enchant2', `pkgconf'
+
+  There have been reports of hangups when loading the native module on
+  unofficial Emacs Mac ports. On Windows the installation of the native
+  module may require manual intervention.
 
 
 2 Configuration
@@ -80,9 +82,9 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   │   (add-hook hook #'jinx-mode))
   └────
 
-  The commands `jinx-correct' and `jinx-languages' are
-  autoloaded. Invoking `jinx-correct' corrects the misspellings. Binding
-  `jinx-correct' to `M-$' chord takes over that key from the default
+  The commands `jinx-correct' and `jinx-languages' are marked as
+  autoloads. Invoking `jinx-correct' corrects the misspellings. Binding
+  `jinx-correct' to `M-$' takes over that key from the default
   assignment to `ispell-word'. Since Jinx is independent of the Ispell
   package, `M-$' can be re-used.
 
@@ -93,6 +95,8 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
 
   • `M-$' triggers correction for the misspelled word before point.
   • `C-u M-$' triggers correction for the entire buffer.
+  • `C-u C-u M-$' forces correction of the word at point, even if it is
+    not misspelled.
 
   A sample configuration with the popular `use-package' macro is shown
   here:
@@ -173,9 +177,8 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   file `/usr/share/enchant-2/enchant.ordering'. Enchant uses Hunspell as
   default backend for most languages. There are a few exceptions. For
   English Enchant prefers Aspell and for Finnish and Turkish special
-  backends called Voikko and Zemberek are used. On non-Linux operating
-  systems Enchant may also integrate with the spell-checker provided by
-  the operating system.
+  backends called Voikko and Zemberek are used. On some operating
+  systems Enchant may also integrate with the system spell-checker.
 
   Depending on the backend the personal dictionary will be taken from
   different locations, e.g., `~/.aspell.LANG.pws' or
@@ -199,10 +202,12 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
 
   • [jit-spell]: Jinx UI borrows ideas from Augusto Stoffel's
     Jit-spell. Jit-spell uses the less efficient Ispell process
-    communication instead Jinx's calling native API. Since Jit-spell
-    highlights misspellings in the entire buffer and does not confine to
-    just the visible text, Jit-spell affected load and latency
-    negatively in my tests ([issue on Github]).
+    communication instead of Jinx's calling a native API. Since
+    Jit-spell does not restrict spell checking to the visible text only,
+    it may enqueue the entire buffer too eagerly for checking. This
+    happens when scrolling around or when stealth font locking is
+    enabled. For this reason, Jit-spell affected load and latency in my
+    tests ([issue on Github]).
 
   • [spell-fu]: The idea to check words just in the visible text came
     from Campbell Barton's spell-fu package. Spell-fu is fast but incurs

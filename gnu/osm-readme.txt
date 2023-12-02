@@ -51,21 +51,16 @@ Table of Contents
 
   ┌────
   │ (use-package osm
-  │   :bind ("C-c m" . osm-prefix-map) ;; Alternative: `osm-home'
+  │   :bind ("C-c m" . osm-prefix-map) ;; Alternatives: `osm-home' or `osm'
   │ 
   │   :custom
   │   ;; Take a look at the customization group `osm' for more options.
   │   (osm-server 'default) ;; Configure the tile server
   │   (osm-copyright t)     ;; Display the copyright information
   │ 
-  │   :init
-  │   ;; Load Org link support
-  │   (with-eval-after-load 'org
-  │     (require 'osm-ol))
-  │ 
   │   :config
   │ 
-  │   ;; Add custom servers
+  │   ;; Add custom servers, see also https://github.com/minad/osm/wiki
   │   ;; (osm-add-server 'myserver
   │   ;;   :name "My tile server"
   │   ;;   :group "Custom"
@@ -81,18 +76,24 @@ Table of Contents
 3 Bookmarks, Org links, Geo urls and Elisp links
 ════════════════════════════════════════════════
 
-  There exist multiple methods to store the current location.
+  There exist multiple methods to store a location, such that you can
+  return there afterwards.
 
-  • `b': Create a bookmark of the current location.
-  • `l': Store an Org link to the current location. The link can the be
-    inserted into an Org buffer with `C-c C-l'.
+  • `b': Create a bookmark of the current location. The bookmark is
+    stored as an Emacs bookmark in `bookmark-alist'. You can jump to the
+    bookmark via the completion commands `osm-bookmark-jump' or
+    `bookmark-jump'.
+  • `l': Store an Org link to the current location. The link can be
+    inserted subsequently into an Org buffer with `C-c C-l'.
   • `u': Save the geo url of the current location in the kill ring. The
-    url can be inserted in another buffer via `C-y'.
+    url can be inserted in another buffer via `C-y'. A geo url has the
+    form `geo:27.96,86.89;z=13'.
   • `C-u u': Save an Elisp link to the current location in the kill
-    ring.
+    ring. An Elisp link has the form `(osm 51.49 -0.14 11)'.
 
-  Bookmarks and Org links can be created at point with the mouse, see
-  `osm-bookmark-set-click' and `osm-org-link-click'.
+  Bookmarks and Org links can be created at point by clicking with the
+  mouse. See the docstrings of the commands `osm-bookmark-set-click' and
+  `osm-org-link-click'.
 
 
 ◊ 3.0.0.1 Org link examples
@@ -136,7 +137,12 @@ Table of Contents
 4 Commands and Key Bindings
 ═══════════════════════════
 
-  Top-level commands in `osm-prefix-map':
+  Top-level commands in `osm-prefix-map'. These bindings are available
+  globally if you bind `osm-prefix-map' to a key like `C-c m'. For
+  example, to search for a location press the key sequence `C-c m
+  s'. Furthermore the key bindings are available in Osm buffers. There
+  it is sufficient to press the key `s' only to initiate a search.
+
   • `h': `osm-home' - Open new map at home coordinates
   • `s': `osm-search' - Search and jump to location
   • `t': `osm-goto' - Go to coordinates
@@ -144,7 +150,8 @@ Table of Contents
   • `j': `osm-bookmark-jump' - Jump to bookmark
   • `x': `osm-gpx-show' - Show GPX file in map viewer
 
-  Additional key bindings in `osm-mode' buffer:
+  Some additional key bindings are available in Osm buffers:
+
   • `<arrow>': Small step scrolling
   • `C-<arrow>', `M-<arrow>': Large step scrolling
   • `+', `SPC': `osm-zoom-in' - Zoom in

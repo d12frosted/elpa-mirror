@@ -1,6 +1,6 @@
-	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		CONSULT.EL - CONSULTING COMPLETING-READ
-	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                CONSULT.EL - CONSULTING COMPLETING-READ
+               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Consult provides search and navigation commands based on the Emacs
@@ -63,11 +63,10 @@ Table of Contents
 .. 2. Custom variables
 .. 3. Fine-tuning
 4. Recommended packages
-5. Auxiliary packages
-6. Bug reports
-7. Contributions
-8. Acknowledgments
-9. Indices
+5. Bug reports
+6. Contributions
+7. Acknowledgments
+8. Indices
 .. 1. Function index
 .. 2. Concept index
 
@@ -117,12 +116,11 @@ Table of Contents
 1.1 Virtual Buffers
 ───────────────────
 
-  • `consult-buffer' (`-other-window', `-other-frame'): Enhanced version
-    of `switch-to-buffer' with support for virtual buffers. Supports
-    live preview of buffers and narrowing to the virtual buffer
-    types. You can type `f SPC' in order to narrow to recent
-    files. Press `SPC' to show ephemeral buffers.  Supported narrowing
-    keys:
+  • `consult-buffer': Enhanced version of `switch-to-buffer' with
+    support for virtual buffers. Supports live preview of buffers and
+    narrowing to the virtual buffer types. You can type `f SPC' in order
+    to narrow to recent files. Press `SPC' to show ephemeral
+    buffers. Supported narrowing keys:
     • b Buffers
     • SPC Hidden buffers
     • * Modified buffers
@@ -131,6 +129,8 @@ Table of Contents
     • m Bookmarks
     • p Project
     • Custom [other sources] configured in `consult-buffer-sources'.
+  • `consult-buffer-other-window', `consult-buffer-other-frame',
+    `consult-buffer-other-tab': Variants of `consult-buffer'.
   • `consult-project-buffer': Variant of `consult-buffer' restricted to
     buffers and recent files of the current project. You can add custom
     sources to `consult-project-buffer-sources'. The command may prompt
@@ -274,13 +274,13 @@ Table of Contents
     `default-directory' is searched. If `consult-grep' is invoked with
     prefix argument `C-u M-s g', you can specify one or more
     comma-separated files and directories manually.
-  • `consult-find', `consult-locate': Find file by matching the path
-    against a regexp.  Like for `consult-grep', either the project root
-    or the current directory is the root directory for the search. The
-    input string is treated similarly to `consult-grep', where the first
-    part is passed to find, and the second part is used for Emacs
-    filtering.  Prefix arguments to `consult-find' work just like those
-    for the consult grep commands.
+  • `consult-find', `consult-fd', `consult-locate': Find file by
+    matching the path against a regexp. Like for `consult-grep', either
+    the project root or the current directory is the root directory for
+    the search. The input string is treated similarly to `consult-grep',
+    where the first part is passed to find, and the second part is used
+    for Emacs filtering. Prefix arguments to `consult-find' work just
+    like those for the consult grep commands.
 
 
 1.7 Compilation
@@ -334,12 +334,14 @@ Table of Contents
 1.10 Org Mode
 ─────────────
 
-  • `consult-org-heading': Similar to `consult-outline', for Org
-    buffers. Supports narrowing by heading level, priority and TODO
-    state, as well as live preview and recursive editing.
-  • `consult-org-agenda': Jump to an agenda heading. Supports narrowing
-    by heading level, priority and TODO state, as well as live preview
-    and recursive editing.
+  • `consult-org-heading': Variant of `consult-imenu' or
+    `consult-outline' for Org buffers. The headline and its ancestors
+    headlines are separated by slashes.  Supports narrowing by heading
+    level, priority and TODO keyword, as well as live preview and
+    recursive editing.
+  • `consult-org-agenda': Jump to an Org agenda heading. Supports
+    narrowing by heading level, priority and TODO keyword, as well as
+    live preview and recursive editing.
 
 
 1.11 Help
@@ -397,21 +399,19 @@ Table of Contents
     └────
     Instead of `consult-completion-in-region', you may prefer to see the
     completions directly in the buffer as a small popup. In that case, I
-    recommend either the [Corfu] or the [Company] package. There is a
-    technical limitation of `consult-completion-in-region' in
-    combination with Lsp-mode or Eglot. The Lsp server relies on the
-    input at point, in order to generate refined candidate
-    strings. Since the completion is transferred from the original
-    buffer to the minibuffer, the server does not receive the updated
-    input. LSP completion works with Corfu or Company though, which
-    perform the completion directly in the original buffer.
+    recommend the [Corfu] package. There is a technical limitation of
+    `consult-completion-in-region' in combination with the Lsp
+    modes. The Lsp server relies on the input at point, in order to
+    generate refined candidate strings. Since the completion is
+    transferred from the original buffer to the minibuffer, the server
+    does not receive the updated input. In contrast, in-buffer Lsp
+    completion for example via Corfu works properly since the completion
+    takes place directly in the original buffer.
 
 
 [Mct] <https://git.sr.ht/~protesilaos/mct>
 
 [Corfu] <https://github.com/minad/corfu>
-
-[Company] <https://github.com/company-mode/company-mode>
 
 
 2 Special features
@@ -489,10 +489,9 @@ Table of Contents
   │ (add-to-list 'consult-preview-allowed-hooks 'global-hl-todo-mode-check-buffers)
   └────
 
-  Files larger than `consult-preview-raw-size' are previewed literally
-  without syntax highlighting and without changing the major
-  mode. Delaying the preview is also useful for `consult-theme', since
-  the theme preview is slow. The delay results in a smoother UI
+  Files larger than `consult-preview-partial-size' are previewed
+  partially. Delaying the preview is also useful for `consult-theme',
+  since the theme preview is slow.  The delay results in a smoother UI
   experience.
 
   ┌────
@@ -736,11 +735,7 @@ Table of Contents
   │ 	    (consult--buffer-action (current-buffer))))
   │ 	:items
   │ 	(lambda ()
-  │ 	  (mapcar #'buffer-name
-  │ 		  (seq-filter
-  │ 		   (lambda (x)
-  │ 		     (eq (buffer-local-value 'major-mode x) 'org-mode))
-  │ 		   (buffer-list))))))
+  │ 	  (consult--buffer-query :mode 'org-mode :as #'buffer-name))))
   │ 
   │ (add-to-list 'consult-buffer-sources 'org-source 'append)
   └────
@@ -856,6 +851,7 @@ Table of Contents
   │ 	 ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
   │ 	 ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
   │ 	 ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
+  │ 	 ("C-x t b" . consult-buffer-other-tab)    ;; orig. switch-to-buffer-other-tab
   │ 	 ("C-x r b" . consult-bookmark)            ;; orig. bookmark-jump
   │ 	 ("C-x p b" . consult-project-buffer)      ;; orig. project-switch-to-buffer
   │ 	 ;; Custom M-# bindings for fast register access
@@ -875,8 +871,8 @@ Table of Contents
   │ 	 ("M-g i" . consult-imenu)
   │ 	 ("M-g I" . consult-imenu-multi)
   │ 	 ;; M-s bindings in `search-map'
-  │ 	 ("M-s d" . consult-find)
-  │ 	 ("M-s D" . consult-locate)
+  │ 	 ("M-s d" . consult-find)                  ;; Alternative: consult-fd
+  │ 	 ("M-s c" . consult-locate)
   │ 	 ("M-s g" . consult-grep)
   │ 	 ("M-s G" . consult-git-grep)
   │ 	 ("M-s r" . consult-ripgrep)
@@ -974,50 +970,51 @@ Table of Contents
   description. Alternatively, type `C-h a ^consult' to get an overview
   of all Consult variables and functions with their descriptions.
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Variable                          Description                                           
-  ─────────────────────────────────────────────────────────────────────────────────────────
-   consult-after-jump-hook           Functions to call after jumping to a location         
-   consult-async-input-debounce      Input debounce for asynchronous commands              
-   consult-async-input-throttle      Input throttle for asynchronous commands              
-   consult-async-min-input           Minimum numbers of letters needed for async process   
-   consult-async-refresh-delay       Refresh delay for asynchronous commands               
-   consult-async-split-style         Splitting style used for async commands               
-   consult-async-split-styles-alist  Available splitting styles used for async commands    
-   consult-bookmark-narrow           Narrowing configuration for `consult-bookmark'        
-   consult-buffer-filter             Filter for `consult-buffer'                           
-   consult-buffer-sources            List of virtual buffer sources                        
-   consult-find-args                 Command line arguments for find                       
-   consult-fontify-max-size          Buffers larger than this limit are not fontified      
-   consult-fontify-preserve          Preserve fontification for line-based commands.       
-   consult-git-grep-args             Command line arguments for git-grep                   
-   consult-goto-line-numbers         Show line numbers for `consult-goto-line'             
-   consult-grep-max-columns          Maximal number of columns of the matching lines       
-   consult-grep-args                 Command line arguments for grep                       
-   consult-imenu-config              Mode-specific configuration for `consult-imenu'       
-   consult-line-numbers-widen        Show absolute line numbers when narrowing is active.  
-   consult-line-start-from-top       Start the `consult-line' search from the top          
-   consult-locate-args               Command line arguments for locate                     
-   consult-man-args                  Command line arguments for man                        
-   consult-mode-command-filter       Filter for `consult-mode-command'                     
-   consult-mode-histories            Mode-specific history variables                       
-   consult-narrow-key                Narrowing prefix key during completion                
-   consult-point-placement           Placement of the point when jumping to matches        
-   consult-preview-key               Keys which triggers preview                           
-   consult-preview-allowed-hooks     List of `find-file' hooks to enable during preview    
-   consult-preview-excluded-files    Regexps matched against file names during preview     
-   consult-preview-max-count         Maximum number of files to keep open during preview   
-   consult-preview-max-size          Files larger than this size are not previewed         
-   consult-preview-raw-size          Files larger than this size are previewed in raw form 
-   consult-preview-variables         Alist of variables to bind during preview             
-   consult-project-buffer-sources    List of virtual project buffer sources                
-   consult-project-function          Function which returns current project root           
-   consult-register-prefix           Prefix string for register keys during completion     
-   consult-ripgrep-args              Command line arguments for ripgrep                    
-   consult-themes                    List of themes to be presented for selection          
-   consult-widen-key                 Widening key during completion                        
-   consult-yank-rotate               Rotate kill ring                                      
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Variable                          Description                                         
+  ───────────────────────────────────────────────────────────────────────────────────────
+   consult-after-jump-hook           Functions to call after jumping to a location       
+   consult-async-input-debounce      Input debounce for asynchronous commands            
+   consult-async-input-throttle      Input throttle for asynchronous commands            
+   consult-async-min-input           Minimum numbers of input characters                 
+   consult-async-refresh-delay       Refresh delay for asynchronous commands             
+   consult-async-split-style         Splitting style used for async commands             
+   consult-async-split-styles-alist  Available splitting styles used for async commands  
+   consult-bookmark-narrow           Narrowing configuration for `consult-bookmark'      
+   consult-buffer-filter             Filter for `consult-buffer'                         
+   consult-buffer-sources            List of virtual buffer sources                      
+   consult-fd-args                   Command line arguments for fd                       
+   consult-find-args                 Command line arguments for find                     
+   consult-fontify-max-size          Buffers larger than this limit are not fontified    
+   consult-fontify-preserve          Preserve fontification for line-based commands.     
+   consult-git-grep-args             Command line arguments for git-grep                 
+   consult-goto-line-numbers         Show line numbers for `consult-goto-line'           
+   consult-grep-max-columns          Maximal number of columns of the matching lines     
+   consult-grep-args                 Command line arguments for grep                     
+   consult-imenu-config              Mode-specific configuration for `consult-imenu'     
+   consult-line-numbers-widen        Show absolute line numbers when narrowing is active 
+   consult-line-start-from-top       Start the `consult-line' search from the top        
+   consult-locate-args               Command line arguments for locate                   
+   consult-man-args                  Command line arguments for man                      
+   consult-mode-command-filter       Filter for `consult-mode-command'                   
+   consult-mode-histories            Mode-specific history variables                     
+   consult-narrow-key                Narrowing prefix key during completion              
+   consult-point-placement           Placement of the point when jumping to matches      
+   consult-preview-key               Keys which triggers preview                         
+   consult-preview-allowed-hooks     List of `find-file' hooks to enable during preview  
+   consult-preview-excluded-files    Regexps matched against file names during preview   
+   consult-preview-max-count         Maximum number of files to keep open during preview 
+   consult-preview-partial-size      Files larger than this size are previewed partially 
+   consult-preview-partial-chunk     Size of the file chunk which is previewed partially 
+   consult-preview-variables         Alist of variables to bind during preview           
+   consult-project-buffer-sources    List of virtual project buffer sources              
+   consult-project-function          Function which returns current project root         
+   consult-register-prefix           Prefix string for register keys during completion   
+   consult-ripgrep-args              Command line arguments for ripgrep                  
+   consult-themes                    List of themes to be presented for selection        
+   consult-widen-key                 Widening key during completion                      
+   consult-yank-rotate               Rotate kill ring                                    
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 [Marginalia] <https://github.com/minad/marginalia>
@@ -1108,16 +1105,17 @@ Table of Contents
     completion candidates
   • [orderless]: Completion style which offers flexible candidate
     filtering
+  • [wgrep]: Editing of grep buffers. Use with `consult-grep' via
+    `embark-export'.
 
-  There exist many other fine completion UIs beside Vertico, which are
+  There exist multiple fine completion UIs beside Vertico, which are
   supported by Consult. Give them a try and find out which interaction
   model fits best for you.
 
   • The builtin completion UI, which pops up the `*Completions*' buffer.
-  • The builtin `icomplete-vertical-mode' in Emacs 28.
+  • The builtin `icomplete-vertical-mode' in Emacs 28 or newer.
   • [mct by Protesilaos Stavrou]: Minibuffer and Completions in Tandem,
-    which builds on the default completion UI (development currently
-    [discontinued]).
+    which builds on the default completion UI.
 
   Note that all packages are independent and can be exchanged with
   alternative components, since there exist no hard
@@ -1129,6 +1127,10 @@ Table of Contents
   without it - or you could use with Embark right away and add the other
   components later on.
 
+  We document a [list of auxillary packages] in the Consult wiki. These
+  packages integrate Consult with special programs or with other
+  packages in the wider Emacs ecosystem.
+
 
 [vertico] <https://github.com/minad/vertico>
 
@@ -1138,162 +1140,15 @@ Table of Contents
 
 [orderless] <https://github.com/oantolin/orderless>
 
-[mct by Protesilaos Stavrou] <https://git.sr.ht/~protesilaos/mct>
-
-[discontinued]
-<https://protesilaos.com/codelog/2022-04-14-emacs-discontinue-mct/>
-
-
-5 Auxiliary packages
-════════════════════
-
-  You can integrate Consult with special programs or with other packages
-  in the wider Emacs ecosystem. You may want to install some of theses
-  packages depending on your preferences and requirements.
-
-  • [consult-ag]: Support for the [Silver Searcher] in the style of
-    `consult-grep'.
-  • [consult-codesearch]: Integration with [Code Search].
-  • [consult-company]: Completion at point using the [Company] backends.
-  • [consult-compile-multi]: Integration with [compile-multi].
-  • [consult-dir]: Directory jumper using Consult multi sources.
-  • [consult-dash]: Consult interface to [Dash documentation]
-  • [consult-eglot]: Integration with Eglot (LSP client).
-  • [consult-flycheck]: Additional Flycheck integration.
-  • [consult-flyspell]: Additional Flyspell integration.
-  • [consult-git-log-grep]: Consult interface to git log.
-  • [consult-hatena-bookmark]: Access Hatena bookmarks.
-  • [consult-ls-git]: List files from git via Consult.
-  • [consult-lsp]: Integration with Lsp-mode (LSP client).
-  • [consult-notmuch]: Access the [Notmuch] email system using Consult.
-  • [consult-notes]: Searching notes with Consult.
-  • [consult-org-roam]: Integration with [Org-roam].
-  • [consult-project-extra]: Additional project.el extras and buffer
-    sources.
-  • [consult-projectile]: Additional [Projectile] integration and buffer
-    sources.
-  • [consult-recoll]: Access the [Recoll] desktop full-text search using
-    Consult.
-  • [consult-spotify]: Access the Spotify API and control your local
-    music player.
-  • [consult-yasnippet]: Integration with Yasnippet.
-  • [affe]: Asynchronous Fuzzy Finder for Emacs based on Consult.
-
-  Not directly related to Consult, but maybe still of interest are the
-  following packages. These packages should work well with Consult,
-  follow a similar spirit or offer functionality based on
-  `completing-read'.
-
-  • [corfu]: Completion systems for `completion-at-point' using small
-    popups (Alternative to [Company]).
-  • [cape]: Completion At Point Extensions, which can be used with
-    `consult-completion-in-region' and [Corfu].
-  • [bookmark-view]: Store window configuration as bookmarks, possible
-    integration with `consult-buffer'.
-  • [citar]: Versatile package for citation insertion and bibliography
-    management.
-  • [devdocs]: Emacs viewer for [DevDocs] with a convenient completion
-    interface.
-  • [flyspell-correct]: Apply spelling corrections by selecting via
-    `completing-read'.
-  • [wgrep]: Editing of grep buffers, use together with `consult-grep'
-    via `embark-export'.
-  • [all-the-icons-completion], [nerd-icons-completion]: Icons for the
-    completion UI.
-
-
-[consult-ag] <https://github.com/yadex205/consult-ag>
-
-[Silver Searcher] <https://github.com/ggreer/the_silver_searcher>
-
-[consult-codesearch] <https://github.com/youngker/consult-codesearch.el>
-
-[Code Search] <https://github.com/google/codesearch>
-
-[consult-company] <https://github.com/mohkale/consult-company>
-
-[Company] <https://github.com/company-mode/company-mode>
-
-[consult-compile-multi]
-<https://github.com/mohkale/consult-compile-multi>
-
-[compile-multi] <https://github.com/mohkale/compile-multi>
-
-[consult-dir] <https://github.com/karthink/consult-dir>
-
-[consult-dash] <https://codeberg.org/ravi/consult-dash>
-
-[Dash documentation] <https://github.com/dash-docs-el/dash-docs>
-
-[consult-eglot] <https://github.com/mohkale/consult-eglot>
-
-[consult-flycheck] <https://github.com/minad/consult-flycheck>
-
-[consult-flyspell] <https://gitlab.com/OlMon/consult-flyspell>
-
-[consult-git-log-grep]
-<https://github.com/ghosty141/consult-git-log-grep>
-
-[consult-hatena-bookmark]
-<https://github.com/Nyoho/consult-hatena-bookmark>
-
-[consult-ls-git] <https://github.com/rcj/consult-ls-git>
-
-[consult-lsp] <https://github.com/gagbo/consult-lsp>
-
-[consult-notmuch] <https://codeberg.org/jao/consult-notmuch>
-
-[Notmuch] <https://notmuchmail.org/>
-
-[consult-notes] <https://github.com/mclear-tools/consult-notes>
-
-[consult-org-roam] <https://github.com/jgru/consult-org-roam>
-
-[Org-roam] <https://github.com/org-roam/org-roam>
-
-[consult-project-extra]
-<https://github.com/Qkessler/consult-project-extra/>
-
-[consult-projectile] <https://gitlab.com/OlMon/consult-projectile/>
-
-[Projectile] <https://github.com/bbatsov/projectile>
-
-[consult-recoll] <https://codeberg.org/jao/consult-recoll>
-
-[Recoll] <https://www.lesbonscomptes.com/recoll/>
-
-[consult-spotify] <https://codeberg.org/jao/espotify>
-
-[consult-yasnippet] <https://github.com/mohkale/consult-yasnippet>
-
-[affe] <https://github.com/minad/affe>
-
-[corfu] <https://github.com/minad/corfu>
-
-[cape] <https://github.com/minad/cape>
-
-[Corfu] <https://github.com/minad/corfu>
-
-[bookmark-view] <https://github.com/minad/bookmark-view>
-
-[citar] <https://github.com/bdarcus/citar>
-
-[devdocs] <https://github.com/astoff/devdocs.el>
-
-[DevDocs] <https://devdocs.io/>
-
-[flyspell-correct] <https://github.com/d12frosted/flyspell-correct>
-
 [wgrep] <https://github.com/mhayashi1120/Emacs-wgrep>
 
-[all-the-icons-completion]
-<https://github.com/iyefrat/all-the-icons-completion>
+[mct by Protesilaos Stavrou] <https://git.sr.ht/~protesilaos/mct>
 
-[nerd-icons-completion]
-<https://github.com/rainstormstudio/nerd-icons-completion>
+[list of auxillary packages]
+<https://github.com/minad/consult/wiki/Auxillary-packages>
 
 
-6 Bug reports
+5 Bug reports
 ═════════════
 
   If you find a bug or suspect that there is a problem with Consult,
@@ -1366,7 +1221,7 @@ Table of Contents
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html>
 
 
-7 Contributions
+6 Contributions
 ═══════════════
 
   Consult is a community effort, please participate in the discussions.
@@ -1391,7 +1246,7 @@ Table of Contents
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
 
-8 Acknowledgments
+7 Acknowledgments
 ═════════════════
 
   This package took inspiration from [Counsel] by Oleh Krehel. Some of
@@ -1415,13 +1270,18 @@ Table of Contents
   • [Tecosaur]
   • [Mohamed Abdelnour]
   • [Sylvain Rousseau]
-  • [J.D. Smith]
+  • [JD Smith]
   • [Mohsin Kaleem]
   • [Jean-Philippe Bernardy]
   • [Aymeric Agon-Rambosson]
   • [Geoffrey Lessel]
   • [Piotr Kwiecinski]
   • [Robert Weiner]
+  • [Amos Bird]
+  • [Zhengyi]
+  • [Alexandru Scvorțov]
+  • [Ashton Wiersdorf]
+  • [Illia Ostapyshyn]
 
   Advice and useful discussions:
   • [Clemens Radermacher]
@@ -1436,28 +1296,9 @@ Table of Contents
   • [Dmitry Gutov]
   • [Itai Y. Efrat]
   • [Bruce d'Arcus]
-  • [J.D. Smith]
+  • [JD Smith]
   • [Enrique Kessler Martínez]
   • [Radon Rosborough]
-
-  Authors of supplementary `consult-*' packages:
-
-  • [Jose A Ortega Ruiz] ([consult-notmuch], [consult-recoll],
-    [consult-spotify])
-  • [Gerry Agbobada] ([consult-lsp])
-  • [Karthik Chikmagalur] ([consult-dir])
-  • [Mohsin Kaleem] ([consult-company], [consult-compile-multi],
-    [consult-eglot], [consult-yasnippet])
-  • [Marco Pawłowski] ([consult-flyspell], [consult-projectile])
-  • [Enrique Kessler Martínez] ([consult-project-extra])
-  • [Jan Gru] ([consult-org-roam])
-  • [Kanon Kakuno] ([consult-ag])
-  • [Robin Joy] ([consult-ls-git])
-  • [Ravi R Kiran] [(consult-dash])
-  • [Colin McLear] ([consult-notes])
-  • [Yukinori Kitadai] ([consult-hatena-bookmark])
-  • [ghosty141] ([consult-git-log-grep])
-  • [YoungJoo Lee] ([consult-codesearch])
 
 
 [Counsel] <https://github.com/abo-abo/swiper#counsel>
@@ -1490,7 +1331,7 @@ Table of Contents
 
 [Sylvain Rousseau] <https://github.com/thisirs>
 
-[J.D. Smith] <https://github.com/jdtsmith>
+[JD Smith] <https://github.com/jdtsmith>
 
 [Mohsin Kaleem] <https://github.com/mohkale>
 
@@ -1503,6 +1344,16 @@ Table of Contents
 [Piotr Kwiecinski] <https://github.com/piotrkwiecinski>
 
 [Robert Weiner] <https://github.com/rswgnu>
+
+[Amos Bird] <https://github.com/amosbird>
+
+[Zhengyi] <https://github.com/fuzy112>
+
+[Alexandru Scvorțov] <https://github.com/scvalex>
+
+[Ashton Wiersdorf] <https://github.com/ashton314>
+
+[Illia Ostapyshyn] <https://github.com/iostapyshyn>
 
 [Protesilaos Stavrou] <https://protesilaos.com>
 
@@ -1526,81 +1377,13 @@ Table of Contents
 
 [Radon Rosborough] <https://github.com/raxod502>
 
-[Jose A Ortega Ruiz] <https://codeberg.org/jao/>
 
-[consult-notmuch] <https://codeberg.org/jao/consult-notmuch>
-
-[consult-recoll] <https://codeberg.org/jao/consult-recoll>
-
-[consult-spotify] <https://codeberg.org/jao/espotify>
-
-[Gerry Agbobada] <https://github.com/gagbo/>
-
-[consult-lsp] <https://github.com/gagbo/consult-lsp>
-
-[Karthik Chikmagalur] <https://github.com/karthink>
-
-[consult-dir] <https://github.com/karthink/consult-dir>
-
-[consult-company] <https://github.com/mohkale/consult-company>
-
-[consult-compile-multi]
-<https://github.com/mohkale/consult-compile-multi>
-
-[consult-eglot] <https://github.com/mohkale/consult-eglot>
-
-[consult-yasnippet] <https://github.com/mohkale/consult-yasnippet>
-
-[Marco Pawłowski] <https://gitlab.com/OlMon>
-
-[consult-flyspell] <https://gitlab.com/OlMon/consult-flyspell>
-
-[consult-projectile] <https://gitlab.com/OlMon/consult-projectile>
-
-[consult-project-extra]
-<https://github.com/Qkessler/consult-project-extra>
-
-[Jan Gru] <https://github.com/jgru>
-
-[consult-org-roam] <https://github.com/jgru/consult-org-roam>
-
-[Kanon Kakuno] <https://github.com/yadex205>
-
-[consult-ag] <https://github.com/yadex205/consult-ag>
-
-[Robin Joy] <https://github.com/rcj>
-
-[consult-ls-git] <https://github.com/rcj/consult-ls-git>
-
-[Ravi R Kiran] <https://codeberg.org/ravi>
-
-[(consult-dash] <https://codeberg.org/ravi/consult-dash>
-
-[Colin McLear] <https://github.com/mclearc>
-
-[consult-notes] <https://github.com/mclear-tools/consult-notes>
-
-[Yukinori Kitadai] <https://github.com/Nyoho>
-
-[consult-hatena-bookmark]
-<https://github.com/Nyoho/consult-hatena-bookmark>
-
-[ghosty141] <https://github.com/ghosty141>
-
-[consult-git-log-grep]
-<https://github.com/ghosty141/consult-git-log-grep>
-
-[YoungJoo Lee] <https://github.com/youngker>
-
-[consult-codesearch] <https://github.com/youngker/consult-codesearch.el>
-
-
-9 Indices
+8 Indices
 ═════════
 
-9.1 Function index
+8.1 Function index
 ──────────────────
 
 
-9.2 Concept index
+8.2 Concept index
 ─────────────────

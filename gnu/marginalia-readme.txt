@@ -1,6 +1,6 @@
-	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	      MARGINALIA.EL - MARGINALIA IN THE MINIBUFFER
-	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+              MARGINALIA.EL - MARGINALIA IN THE MINIBUFFER
+             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This package provides `marginalia-mode' which adds marginalia to the
@@ -51,7 +51,7 @@ Table of Contents
   │   ;; The :init section is always executed.
   │   :init
   │ 
-  │   ;; Marginalia must be actived in the :init section of use-package such that
+  │   ;; Marginalia must be activated in the :init section of use-package such that
   │   ;; the mode gets enabled right away. Note that this forces loading the
   │   ;; package.
   │   (marginalia-mode))

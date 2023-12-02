@@ -1,6 +1,6 @@
-		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		  TEMPEL - SIMPLE TEMPLATES FOR EMACS
-		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                  TEMPEL - SIMPLE TEMPLATES FOR EMACS
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Tempel is a tiny template package for Emacs, which uses the syntax of
@@ -129,14 +129,21 @@ Table of Contents
   `~/.config/emacs/templates' is used. The templates are grouped by
   major mode with an optional `:when' condition. Each template is a list
   in the concise form of the Emacs Tempo syntax. The first element of
-  each list is the name of the template. Behind the name, the Tempo
-  syntax elements follow.
+  each list is the name of the template. I recommend to use avoid
+  special letters for the template names, since special letters may
+  carry meaning during completion filtering and as such make it harder
+  to select the desired template. Thus the name `lett' is better than
+  `let*'. Behind the name, the Tempo syntax elements follow.
 
   In addition, each template may specify a `:pre' and/or `:post' key
   with a FORM that is evaluated before the template is expanded or after
   it is finalized, respectively. The `:post' form is evaluated in the
   lexical scope of the template, which means that it can access the
   template's named fields.
+
+  The following examples are written on a single line, but this is is of
+  course not a requirement. Strings can even contain line breaks, which
+  can be useful if you want to write complex templates.
 
   ┌────
   │ ;; ~/.config/emacs/templates
@@ -285,9 +292,9 @@ Table of Contents
   │ (latex "#+begin_export latex" n> r> n "#+end_export")
   │ (comment "#+begin_comment" n> r> n "#+end_comment")
   │ (verse "#+begin_verse" n> r> n "#+end_verse")
-  │ (src "#+begin_src " q n> r> n "#+end_src")
-  │ (gnuplot "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n> r> n "#+end_src" :post (org-edit-src-code))
-  │ (elisp "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
+  │ (src "#+begin_src " q n r n "#+end_src")
+  │ (gnuplot "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n r n "#+end_src" :post (org-edit-src-code))
+  │ (elisp "#+begin_src emacs-lisp" n r n "#+end_src" :post (org-edit-src-code))
   │ (inlsrc "src_" p "{" q "}")
   │ (title "#+title: " p n "#+author: Daniel Mendler" n "#+language: en")
   │ 
