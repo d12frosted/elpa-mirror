@@ -3,24 +3,26 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/parseclj.git
 
 Updating /mnt/store/melpa/working/parseclj/
-Checking out 74ff7d63fed92a3c859e474ae85f011e794b751a
+Checking out 6af22372e0fe14df882dd300b22b12ba2d7e00b0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parseclj/
-  to /tmp/parsecljN4qSLE/parseclj-20230911.1621
+  to /tmp/parsecljHH6npB/parseclj-20231203.1905
     parseclj-alist.el -> parseclj-alist.el
     parseclj-ast.el -> parseclj-ast.el
     parseclj-lex.el -> parseclj-lex.el
     parseclj-parser.el -> parseclj-parser.el
     parseclj.el -> parseclj.el
-Created parseclj-20230911.1621.tar containing:
-  parseclj-20230911.1621/
-  parseclj-20230911.1621/parseclj-alist.el
-  parseclj-20230911.1621/parseclj-ast.el
-  parseclj-20230911.1621/parseclj-lex.el
-  parseclj-20230911.1621/parseclj-parser.el
-  parseclj-20230911.1621/parseclj-pkg.el
-  parseclj-20230911.1621/parseclj.el
+Created parseclj-20231203.1905.tar containing:
+  parseclj-20231203.1905/
+  parseclj-20231203.1905/parseclj-alist.el
+  parseclj-20231203.1905/parseclj-ast.el
+  parseclj-20231203.1905/parseclj-lex.el
+  parseclj-20231203.1905/parseclj-parser.el
+  parseclj-20231203.1905/parseclj-pkg.el
+  parseclj-20231203.1905/parseclj.el
  ✓ Success:
-  2023-12-03T15:56:29+0000  parseclj-20230911.1621.entry
-  2023-12-03T15:56:29+0000  parseclj-20230911.1621.tar
-Built parseclj in 4.627s, finished at 2023-12-03T15:56:31+0000
+  2023-12-03T17:56:09+0000  parseclj-20230911.1621.entry
+  2023-12-03T17:56:09+0000  parseclj-20230911.1621.tar
+  2023-12-03T19:55:05+0000  parseclj-20231203.1905.entry
+  2023-12-03T19:55:05+0000  parseclj-20231203.1905.tar
+Built parseclj in 4.093s, finished at 2023-12-03T19:55:07+0000
