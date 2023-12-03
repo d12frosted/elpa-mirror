@@ -1,6 +1,5 @@
 # hyperdrive.el - P2P filesystem in Emacs
 
-27.2: [![builds.sr.ht status](https://builds.sr.ht/~ushin/hyperdrive.el/commits/master/emacs-27.2.yml.svg)](https://builds.sr.ht/~ushin/hyperdrive.el/commits/master/emacs-27.2.yml?)
 28.2: [![builds.sr.ht status](https://builds.sr.ht/~ushin/hyperdrive.el/commits/master/emacs-28.2.yml.svg)](https://builds.sr.ht/~ushin/hyperdrive.el/commits/master/emacs-28.2.yml?)
 29.1: [![builds.sr.ht status](https://builds.sr.ht/~ushin/hyperdrive.el/commits/master/emacs-29.1.yml.svg)](https://builds.sr.ht/~ushin/hyperdrive.el/commits/master/emacs-29.1.yml?)
 snapshot: [![builds.sr.ht status](https://builds.sr.ht/~ushin/hyperdrive.el/commits/master/emacs-snapshot.yml.svg)](https://builds.sr.ht/~ushin/hyperdrive.el/commits/master/emacs-snapshot.yml?)
