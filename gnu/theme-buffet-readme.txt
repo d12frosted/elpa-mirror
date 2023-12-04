@@ -23,15 +23,16 @@ more fancier, can be easily enabled by evaluating the following:
 
 The binding above will set the themes to be either Modus or Ef, authored by
 Protesilaos Stavrou <https://git.sr.ht/~protesilaos>, distributed across six
-periods of the day (night, twilight, morning, day, afternoon and evening).  The
-library will not require the aforementioned package, you will have to install it
-manual if you intent to use it.  Finally to start using Theme-Buffet, evaluate:
+periods of the day (night, twilight, morning, day, afternoon and evening).
+The library will not require the aforementioned package, you will have to
+install it manual if you intent to use it.  Finally to start using
+Theme-Buffet, evaluate:
 
    (theme-buffet-mode 1)
 
 Following the appanage way of Emacs, both the names and number of themes and
-time periods can be freely changed while mantaining the same structure.  There
-is also a time-offset that can be set by the user to match a specific
+time periods can be freely changed while mantaining the same structure.
+There is also a time-offset that can be set by the user to match a specific
 time-zone/personal preference.  E.g
 
    (setq theme-buffet-time-offset 2)
@@ -64,15 +65,15 @@ Some examples in lisp:
    (theme-buffet-timer-mins 30) ; to change theme every 30m from now
    (theme-buffet-timer-hours 2) ; to also change every 2h from now
 
-Interactively, as an example, you would press M-x and execute
+Interactively, as an example, you would press M-x
 `theme-buffet-order-other-period'.  Then, after choosing any defined period,
 you would get returned a random loaded theme from the aforementioned period.
 
 
 Disclaimer from Bruno Boal to the reader: This package was produced during my
-learning sessions with Protesilaos "Prot" Stavrou and improved as
-homework.  Most of the credit goes to him, the mistakes you may find are my
-own.  Personally, despite the disadvantages and advantages of not being a
+learning sessions with Protesilaos "Prot" Stavrou and improved as homework.
+Most of the credit goes to him, the mistakes you may find are my own.
+Personally, despite the disadvantages and advantages of not being a
 professional programmer, it is essential for me to always have fun and
 enjoyment during learning and programming.  In this respect, mission
 accomplished, a big "thank you!" to my mentor.  Also, keep in mind at least

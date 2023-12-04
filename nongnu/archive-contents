@@ -1720,7 +1720,7 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/paredit.html")
 	    (:commit . "72cc1f6055321a53021186b86d2f825167b81478"))])
  (parseclj .
-	   [(1 1 0)
+	   [(1 1 1)
 	    ((emacs
 	      (25)))
 	    "Clojure/EDN parser" tar
@@ -1729,7 +1729,7 @@
 	     (:authors
 	      ("Arne Brasseur" . "arne@arnebrasseur.net"))
 	     (:url . "https://elpa.nongnu.org/nongnu/parseclj.html")
-	     (:commit . "90595049634549e6d8872f719b13e9555897d17b"))])
+	     (:commit . "6af22372e0fe14df882dd300b22b12ba2d7e00b0"))])
  (parseedn .
 	   [(1 2 0)
 	    ((emacs
@@ -1842,7 +1842,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20231201 162829)
+	      [(1 0 20231203 100509)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
