@@ -9,3 +9,9 @@ js-ts-mode and tsx-ts-mode modes
 * Jumping between opening and closing `JSX` elements
 * Electric JSX closing element
 * Code folding
+
+Note on the default configuration:
+This package doesn't automatically register its provided major modes into
+auto-mode-alist.  It is up to the user to do the association, letting him/her
+choose which of the provided modes he/she wants to use.  Same consideration
+applies for command shortcuts.
