@@ -753,6 +753,13 @@
 		  ("Simen Heggestøyl" . "simenheg@gmail.com"))
 		 (:keywords "convenience")
 		 (:url . "http://elpa.gnu.org/packages/cycle-quotes.html"))])
+ (dape .
+       [(0 2)
+	((emacs
+	  (29 1)))
+	"Debug Adapter Protocol for Emacs" tar
+	((:url . "https://github.com/svaante/dape")
+	 (:commit . "ee2ecae446c76f2b306bd75eedcf4976b2652ee4"))])
  (darkroom .
 	   [(0 3)
 	    ((cl-lib
@@ -3221,14 +3228,14 @@
 	     (:url . "https://elpa.gnu.org/packages/rnc-mode.html")
 	     (:commit . "dfee31d83208b734ed1d1fdc523565d7056db850"))])
  (rt-liberation .
-		[(5)
+		[(6)
 		 nil "Emacs interface to RT" tar
 		 ((:url . "http://www.nongnu.org/rtliber/")
 		  (:keywords "rt" "tickets")
 		  (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 		  (:authors
 		   ("Yoni Rabkin" . "yrk@gnu.org"))
-		  (:commit . "b76ae2828b12efc5f45f51ba873489e049a70924"))])
+		  (:commit . "c97eff6716c2438f9052b4641fa6128bf759af96"))])
  (ruby-end .
 	   [(0 4 3)
 	    nil "Automatic insertion of end blocks for Ruby" tar
