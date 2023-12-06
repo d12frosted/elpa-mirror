@@ -3,16 +3,7 @@ Fetcher: gitlab
 Source:  https://gitlab.com/shackra/flymake-golangci.git
 
 Updating /mnt/store/melpa/working/flymake-golangci/
-Checking out dfc31a1a6ae3f087b49fe6f5f21b3866780aa91c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/flymake-golangci/
-  to /tmp/flymake-golangcixF4WFx/flymake-golangci-20191028.1927
-    flymake-golangci.el -> flymake-golangci.el
-Created flymake-golangci-20191028.1927.tar containing:
-  flymake-golangci-20191028.1927/
-  flymake-golangci-20191028.1927/flymake-golangci-pkg.el
-  flymake-golangci-20191028.1927/flymake-golangci.el
- ✓ Success:
-  2023-12-06T02:32:12+0000  flymake-golangci-20191028.1927.entry
-  2023-12-06T02:32:12+0000  flymake-golangci-20191028.1927.tar
-Built flymake-golangci in 4.926s, finished at 2023-12-06T02:32:14+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: could not read Username for 'https://gitlab.com': No such device or address
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
