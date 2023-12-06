@@ -1,53 +1,75 @@
-1 Transient commands
-════════════════════
+1 Transient command menus
+═════════════════════════
 
-  Taking inspiration from prefix keys and prefix arguments, Transient
-  implements a similar abstraction involving a prefix command, infix
-  arguments and suffix commands.  We could call this abstraction a
-  "transient command", but because it always involves at least two
-  commands (a prefix and a suffix) we prefer to call it just a
-  "transient".
+  Transient is the library used to implement the keyboard-driven “menus”
+  in [Magit].  It is distributed as a separate package, so that it can
+  be used to implement similar menus in [other packages].
 
-        Transient keymaps are a feature provided by Emacs.
-        Transients as implemented by this package involve the use
-        of transient keymaps.
 
-        Emacs provides a feature that it calls "prefix commands".
-        When we talk about "prefix commands" in Transient's
-        documentation, then we mean our own kind of "prefix
-        commands", unless specified otherwise.  To avoid ambiguity
-        we sometimes use the terms "transient prefix command" for
-        our kind and "regular prefix command" for Emacs' kind.
+[Magit] <https://github.com/magit/magit/>
 
-  When the user calls a transient prefix command, then a transient
-  (temporary) keymap is activated, which binds the transient's infix and
-  suffix commands, and functions that control the transient state are
-  added to `pre-command-hook' and `post-command-hook'.  The available
-  suffix and infix commands and their state are shown in a popup buffer
-  until the transient is exited by invoking a suffix command.
+[other packages] <https://melpa.org/#/transient>
 
-  Calling an infix command causes its value to be changed.  How that is
-  done depends on the type of the infix command.  The simplest case is
-  an infix command that represents a command-line argument that does not
-  take a value.  Invoking such an infix command causes the switch to be
-  toggled on or off.  More complex infix commands may read a value from
-  the user, using the minibuffer.
+1.1 Some things that Transient can do
+─────────────────────────────────────
 
-  Calling a suffix command usually causes the transient to be exited;
-  the transient keymaps and hook functions are removed, the popup buffer
-  no longer shows information about the (no longer bound) suffix
-  commands, the values of some public global variables are set, while
-  some internal global variables are unset, and finally the command is
-  actually called.  Suffix commands can also be configured to not exit
-  the transient.
+  • Display current state of arguments
+  • Display and manage lifecycle of modal bindings
+  • Contextual user interface
+  • Flow control for wizard-like composition of interactive forms
+  • History & persistence
+  • Rendering arguments for controlling CLI programs
 
-  A suffix command can, but does not have to, use the infix arguments in
-  much the same way it can choose to use or ignore the prefix arguments.
-  For a suffix command that was invoked from a transient the variable
-  `transient-current-suffixes' and the function `transient-args' serve
-  about the same purpose as the variables `prefix-arg' and
-  `current-prefix-arg' do for any command that was called after the
-  prefix arguments have been set using a command such as
-  `universal-argument'.
+
+1.2 Complexity in CLI programs
+──────────────────────────────
+
+  Complexity tends to grow with time.  How do you manage the complexity
+  of commands?  Consider the humble shell command `ls'.  It now has over
+  /fifty/ command line options.  Some of these are boolean flags (`ls
+  -l').  Some take arguments (`ls --sort=s').  Some have no effect
+  unless paired with other flags (`ls -lh').  Some are mutually
+  exclusive.  Some shell commands even have so many options that they
+  introduce /subcommands/ (`git branch', `git commit'), each with their
+  own rich set of options (`git branch -f').
+
+
+1.3 Using Transient for composing interactive commands
+──────────────────────────────────────────────────────
+
+  What about Emacs commands used interactively? How do these handle
+  options?  One solution is to make many versions of the same command,
+  so you don't need to! Consider: `delete-other-windows' vs.
+  `delete-other-windows-vertically' (among many similar examples).
+
+  Some Emacs commands will simply prompt you for the next "argument"
+  (`M-x switch-to-buffer').  Another common solution is to use prefix
+  arguments which usually start with `C-u'.  Sometimes these are
+  sensibly numerical in nature (`C-u 4 M-x forward-paragraph' to move
+  forward 4 paragraphs).  But sometimes they function instead as boolean
+  "switches" (`C-u C-SPACE' to jump to the last mark instead of just
+  setting it, `C-u C-u C-SPACE' to unconditionally set the mark).  Since
+  there aren't many standards for the use of prefix options, you have to
+  read the command's documentation to find out what the possibilities
+  are.
+
+  But when an Emacs command grows to have a truly large set of options
+  and arguments, with dependencies between them, lots of option values,
+  etc., these simple approaches just don't scale.  Transient is designed
+  to solve this issue.  Think of it as the humble prefix argument `C-u',
+  /raised to the power of 10/.  Like `C-u', it is key driven.  Like the
+  shell, it supports boolean "flag" options, options that take
+  arguments, and even "sub-commands", with their own options.  But
+  instead of searching through a man page or command documentation,
+  well-designed transients /guide/ their users to the relevant set of
+  options (and even their possible values!) directly, taking into
+  account any important pre-existing Emacs settings.  And while for
+  shell commands like `ls', there is only one way to "execute" (hit
+  `Return'!), transients can "execute" using multiple different keys
+  tied to one of many self-documenting /actions/ (imagine having 5
+  different colored return keys on your keyboard!).  Transients make
+  navigating and setting large, complex groups of command options and
+  arguments easy.  Fun even.  Once you've tried it, it's hard to go back
+  to the `C-u what can I do here again?' way.
 
   <http://readme.emacsair.me/transient.png>
