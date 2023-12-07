@@ -179,15 +179,15 @@
 	      ("Dave Pearson" . "davep@davep.org"))
 	     (:commit . "fe676396fa7e4372e01bf2c3d9a62e8d53615d46"))])
  (buttercup .
-	    [(1 32)
+	    [(1 33)
 	     ((emacs
-	       (24 3)))
+	       (24 4)))
 	     "Behavior-Driven Emacs Lisp Testing" tar
 	     ((:url . "https://github.com/jorgenschaefer/emacs-buttercup")
 	      (:maintainer "Ola Nilsson" . "ola.nilsson@gmail.com")
 	      (:authors
 	       ("Jorgen Schaefer" . "contact@jorgenschaefer.de"))
-	      (:commit . "3780eb081913d1aeef2bc5950891a3fbe3b3771d"))])
+	      (:commit . "e4fb7cd560d27d8879a2c7739ee96946adec2df8"))])
  (camera .
 	 [(0 3)
 	  ((emacs
@@ -1842,7 +1842,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20231203 100509)
+	      [(1 0 20231206 130741)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
