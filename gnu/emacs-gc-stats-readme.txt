@@ -7,6 +7,11 @@ Context:
 
 See the source code for information how to contact the author.
 
+[2023-12-06 Wed] You can find EmacsConf2023 presentation with analysis
+of the collected data (as of the timestamp date) at
+<https://emacsconf.org/2023/talks/gc/>.  The data in reproducible format
+is available at <https://dx.doi.org/10.5281/zenodo.10213384>.
+
 
 1 Usage
 ═══════
