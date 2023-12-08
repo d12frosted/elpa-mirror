@@ -19,21 +19,21 @@
     direct keybinding for direct use without the launcher (see
     below).
 
-  If you've ever used packages such as `ivy' or `magit', you've
+  If you've ever used packages such as 'ivy' or 'magit', you've
   probably benefited from each's custom combination keybinding
-  cheatsheet and launcher: `hydra' in the case of `ivy', and
-  `transient' for `magit'. The current package `key-assist' offers
+  cheatsheet and launcher: 'hydra' in the case of 'ivy', and
+  'transient' for 'magit'. The current package 'key-assist' offers
   a generic and very simple alternative requiring only the
-  `completing-read' function commonly used in core vanilla Emacs.
-  `key-assist' is trivial to implement "on-the-fly" interactively
+  'completing-read' function commonly used in core vanilla Emacs.
+  'key-assist' is trivial to implement "on-the-fly" interactively
   for any buffer, and programmatically much simpler to customize
-  that either `hydra' or `transient'. And it only requires the
-  Emacs core function `completing-read'.
+  that either 'hydra' or 'transient'. And it only requires the
+  Emacs core function 'completing-read'.
 
 
 ; Dependencies:
 
-`cl-lib': For `cl-member',`cl-position'
+'cl-lib': For 'cl-member','cl-position'
 
 
 ; Installation:
@@ -43,7 +43,7 @@
 
 ; Interactive operation:
 
-  Run M-x `key-assist' from the buffer of interest. Specify a
+  Run M-x 'key-assist' from the buffer of interest. Specify a
   selection (or don't), press <TAB> to view the presentation, and
   then either exit with your new-found knowledge of the command
   keybindings, or use standard Emacs tab completion to select an
@@ -52,16 +52,16 @@
   If you choose not to respond to the initial prompt, a list of
   keybindings and command descriptions will be generated based upon
   the first word of the buffer's major mode. For, example, in a
-  `w3m' buffer, the list will be of all interactive functions
-  beginning `w3m-'. This works out to be great as a default, but
-  isn't always useful. For example, in an `emacs-lisp-mode' buffer
-  or a `lisp-interaction-mode', what would you expect it to
+  'w3m' buffer, the list will be of all interactive functions
+  beginning 'w3m-'. This works out to be great as a default, but
+  isn't always useful. For example, in an 'emacs-lisp-mode' buffer
+  or a 'lisp-interaction-mode', what would you expect it to
   usefully produce? At the other extreme might be a case of a
   buffer with too many obscure keybindings of little use.
 
   You can also respond to the prompt with your own regexp of
   commands to show, or with the name of a keymap of your choice.
-  For the purposes of `key-assist', a regexp can be just a
+  For the purposes of 'key-assist', a regexp can be just a
   substring, without REQUIRING any leading or trailing globs.
 
   In all cases, note that the package can only present keybindings
@@ -83,16 +83,16 @@
      (define-key my-mode-map "?"
                  'my-mode-keybinding-cheatsheet-launcher)
 
-  See the docstrings for functions `key-assist' and
-  `key-assist--get-cmds' for the description of ARGS that can be
+  See the docstrings for functions 'key-assist' and
+  'key-assist--get-cmds' for the description of ARGS that can be
   used to customize the output.
 
 
 ; Configuration:
 
   Two variables are available to exclude items from the
-  presentation list: `key-assist-exclude-cmds' and
-  `key-assist-exclude-regexps'. See there for further information.
+  presentation list: 'key-assist-exclude-cmds' and
+  'key-assist-exclude-regexps'. See there for further information.
 
 
 ; Compatability

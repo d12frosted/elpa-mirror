@@ -1115,7 +1115,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "16613c18c5ec17755f083f4839bca7e4e05dd4c7"))])
  (ef-themes .
-	    [(1 4 0)
+	    [(1 4 1)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -1124,7 +1124,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "3f10dea8d8f85ddb011e9beaf4ca1b107d2d9683"))])
+	      (:commit . "abe9503a693e5561db7049606b47459236c2699f"))])
  (eglot .
 	[(1 15)
 	 ((emacs
@@ -1202,7 +1202,7 @@
 		    ("Ihor Radchenko" . "yantar92@posteo.net"))
 		   (:commit . "05d669e123f411c9582f99a9a6182efa43d01a6b"))])
  (embark .
-	 [(0 23)
+	 [(1 0)
 	  ((emacs
 	    (27 1))
 	   (compat
@@ -1213,22 +1213,24 @@
 	   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 	   (:authors
 	    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-	   (:commit . "07af44c7de72efde79ac563cbecdfff0b48d8411"))])
+	   (:commit . "47b0c75d4bf4f72a7af839667c877c80bd493cdb"))])
  (embark-consult .
-		 [(0 8)
+		 [(1 0)
 		  ((emacs
 		    (27 1))
+		   (compat
+		    (29 1 4 0))
 		   (embark
-		    (0 20))
+		    (1 0))
 		   (consult
-		    (0 17)))
+		    (1 0)))
 		  "Consult integration for Embark" tar
 		  ((:url . "https://github.com/oantolin/embark")
 		   (:keywords "convenience")
 		   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 		   (:authors
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-		   (:commit . "07af44c7de72efde79ac563cbecdfff0b48d8411"))])
+		   (:commit . "47b0c75d4bf4f72a7af839667c877c80bd493cdb"))])
  (ement .
 	[(0 13)
 	 ((emacs

@@ -638,7 +638,7 @@
   to which you could add commands for which Embark should forgo pressing
   `RET' for you after inserting the target. Since its effect can also be
   achieved via the general `embark-target-injection-hooks' mechanism,
-  that variable has been removed to simply Embark. Be sure to update
+  that variable has been removed to simplify Embark. Be sure to update
   your configuration; if you had something like:
 
   ┌────
@@ -1200,11 +1200,19 @@
   package provides many subtle tweaks and small integrations between
   Embark and Consult. Some examples are:
 
-  • The asynchronous search commands will start in the directory
-    associated to the Embark target if that target is a file, buffer,
-    bookmark or Emacs Lisp library.
+  • When used as actions, the asynchronous search commands will search
+    only the files associated to the targets: if the targets /are/
+    files, it searches those files; for buffers it will search either
+    the associated file if there is one, else all files in the buffer's
+    `default-directory'; for bookmarks it will search the file they
+    point to, same for Emacs Lisp libraries. This is particularly
+    powerful when using `embark-act-all' to act on multiple files at
+    once, for example you can use `consult-find' to search among file
+    /names/ and then `embark-act-all' and `consult-grep' to search
+    within the matching files.
 
-    • For all other target types, a Consult search command (asynchronous
+    • For all other target types, those that do not have a sensible
+      notion of associated file, a Consult search command (asynchronous
       or not) will search for the text of the target but leave the
       minibuffer open so you can interact with the Consult command.
 
