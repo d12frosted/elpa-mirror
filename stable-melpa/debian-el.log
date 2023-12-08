@@ -3,35 +3,32 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
-Checking out 586300cb4747128b7f8397d9dd9f09fa1e27b118
+Checking out 67dbe593b650b7748e8cbe93fdb8f0cf883563ad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/debian-el/
-  to /tmp/debian-el0nPp2L/debian-el-20231017.1037
+  to /tmp/debian-elXQMv1T/debian-el-20231207.2347
     apt-sources.el -> apt-sources.el
     apt-utils.el -> apt-utils.el
     deb-view.el -> deb-view.el
-    debian-autoloads.el -> debian-autoloads.el
     debian-bug.el -> debian-bug.el
-    debian-el-pkg.el -> debian-el-pkg.el
     debian-el.el -> debian-el.el
     gnus-BTS.el -> gnus-BTS.el
     preseed.el -> preseed.el
     debian-el.texi -> debian-el.texi
-Generating /tmp/debian-el0nPp2L/debian-el-20231017.1037/debian-el.info
-Created debian-el-20231017.1037.tar containing:
-  debian-el-20231017.1037/
-  debian-el-20231017.1037/apt-sources.el
-  debian-el-20231017.1037/apt-utils.el
-  debian-el-20231017.1037/deb-view.el
-  debian-el-20231017.1037/debian-autoloads.el
-  debian-el-20231017.1037/debian-bug.el
-  debian-el-20231017.1037/debian-el-pkg.el
-  debian-el-20231017.1037/debian-el.el
-  debian-el-20231017.1037/debian-el.info
-  debian-el-20231017.1037/dir
-  debian-el-20231017.1037/gnus-BTS.el
-  debian-el-20231017.1037/preseed.el
+Generating /tmp/debian-elXQMv1T/debian-el-20231207.2347/debian-el.info
+Created debian-el-20231207.2347.tar containing:
+  debian-el-20231207.2347/
+  debian-el-20231207.2347/apt-sources.el
+  debian-el-20231207.2347/apt-utils.el
+  debian-el-20231207.2347/deb-view.el
+  debian-el-20231207.2347/debian-bug.el
+  debian-el-20231207.2347/debian-el-pkg.el
+  debian-el-20231207.2347/debian-el.el
+  debian-el-20231207.2347/debian-el.info
+  debian-el-20231207.2347/dir
+  debian-el-20231207.2347/gnus-BTS.el
+  debian-el-20231207.2347/preseed.el
  ✓ Success:
-  2023-12-07T23:08:23+0000  debian-el-20231017.1037.entry
-  2023-12-07T23:08:23+0000  debian-el-20231017.1037.tar
-Built debian-el in 7.526s, finished at 2023-12-07T23:08:24+0000
+  2023-12-08T03:00:49+0000  debian-el-20231207.2347.entry
+  2023-12-08T03:00:49+0000  debian-el-20231207.2347.tar
+Built debian-el in 6.822s, finished at 2023-12-08T03:00:51+0000
