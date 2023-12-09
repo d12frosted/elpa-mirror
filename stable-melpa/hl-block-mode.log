@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-hl-block-mode.git
 
 Updating /mnt/store/melpa/working/hl-block-mode/
-Checking out 768d92aa93c1894afb6f79feb5eb6b070ab24e4f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hl-block-mode/
-  to /tmp/hl-block-mode8ASoZw/hl-block-mode-20230521.2306
-    hl-block-mode.el -> hl-block-mode.el
-Created hl-block-mode-20230521.2306.tar containing:
-  hl-block-mode-20230521.2306/
-  hl-block-mode-20230521.2306/hl-block-mode-pkg.el
-  hl-block-mode-20230521.2306/hl-block-mode.el
- ✓ Success:
-  2023-12-08T18:52:54+0000  hl-block-mode-20230521.2306.entry
-  2023-12-08T18:52:54+0000  hl-block-mode-20230521.2306.tar
-Built hl-block-mode in 4.235s, finished at 2023-12-08T18:52:55+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-hl-block-mode.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
