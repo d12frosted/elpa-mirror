@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://bitbucket.org/pdo/axiom-environment
 
 Updating /mnt/store/melpa/working/company-axiom/
-Checking out 01d88daa0c864af9918db5a147fbb5e435dec199
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/company-axiom/
-  to /tmp/company-axiomRyFrwY/company-axiom-20220612.1535
-    company-axiom.el -> company-axiom.el
-Created company-axiom-20220612.1535.tar containing:
-  company-axiom-20220612.1535/
-  company-axiom-20220612.1535/company-axiom-pkg.el
-  company-axiom-20220612.1535/company-axiom.el
- ✓ Success:
-  2023-12-09T15:39:55+0000  company-axiom-20220612.1535.entry
-  2023-12-09T15:39:55+0000  company-axiom-20220612.1535.tar
-Built company-axiom in 6.083s, finished at 2023-12-09T15:39:59+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://bitbucket.org/pdo/axiom-environment/': The requested URL returned error: 503
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
