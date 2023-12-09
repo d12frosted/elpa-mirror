@@ -118,6 +118,8 @@
   [Ollama] is a way to run large language models locally. There are
   [many different models] you can use with it. You set it up with the
   following parameters:
+  • `:scheme': The scheme (http/https) for the connection to ollama.
+    This default to "http".
   • `:host': The host that ollama is run on.  This is optional and will
     default to localhost.
   • `:port': The port that ollama is run on.  This is optional and will
@@ -153,7 +155,35 @@
 [GPT4All] <https://gpt4all.io/index.html>
 
 
-2.5 Fake
+2.5 llama.cpp
+─────────────
+
+  [llama.cpp] is a way to run large language models locally.  To use it
+  with the `llm' package, you need to start the server (with the
+  "–embedding" flag if you plan on using embeddings).  The server must
+  be started with a model, so it is not possible to switch models until
+  the server is restarted to use the new model.  As such, model is not a
+  parameter to the provider, since the model choice is already set once
+  the server starts.
+
+  Llama.cpp does not have native chat interfaces, so is not as good at
+  multi-round conversations as other solutions such as Ollama.  It will
+  perform better at single-responses.
+
+  The parameters default to optional values, so mostly users should just
+  be creating a model with `(make-llm-llamacpp)'.  The parameters are:
+  • `:scheme': The scheme (http/https) for the connection to ollama.
+    This default to "http".
+  • `:host': The host that llama.cpp server is run on.  This is optional
+    and will default to localhost.
+  • `:port': The port that llama.cpp server is run on.  This is optional
+    and will default to 8080, the default llama.cpp port.
+
+
+[llama.cpp] <https://github.com/ggerganov/llama.cpp>
+
+
+2.6 Fake
 ────────
 
   This is a client that makes no call, but it just there for testing and
