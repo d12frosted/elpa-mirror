@@ -3,7 +3,26 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-hl-prog-extra.git
 
 Updating /mnt/store/melpa/working/hl-prog-extra/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-hl-prog-extra.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out b9a6a5d982b000d26ab365f16b4d5fdced2a3736
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hl-prog-extra/
+  to /tmp/hl-prog-extraw1s0HY/hl-prog-extra-20230820.39
+    hl-prog-extra-preset-c++-mode.el -> hl-prog-extra-preset-c++-mode.el
+    hl-prog-extra-preset-c-mode.el -> hl-prog-extra-preset-c-mode.el
+    hl-prog-extra-preset-glsl-mode.el -> hl-prog-extra-preset-glsl-mode.el
+    hl-prog-extra-preset-lua-mode.el -> hl-prog-extra-preset-lua-mode.el
+    hl-prog-extra-preset-python-mode.el -> hl-prog-extra-preset-python-mode.el
+    hl-prog-extra.el -> hl-prog-extra.el
+Created hl-prog-extra-20230820.39.tar containing:
+  hl-prog-extra-20230820.39/
+  hl-prog-extra-20230820.39/hl-prog-extra-pkg.el
+  hl-prog-extra-20230820.39/hl-prog-extra-preset-c++-mode.el
+  hl-prog-extra-20230820.39/hl-prog-extra-preset-c-mode.el
+  hl-prog-extra-20230820.39/hl-prog-extra-preset-glsl-mode.el
+  hl-prog-extra-20230820.39/hl-prog-extra-preset-lua-mode.el
+  hl-prog-extra-20230820.39/hl-prog-extra-preset-python-mode.el
+  hl-prog-extra-20230820.39/hl-prog-extra.el
+ ✓ Success:
+  2023-12-09T02:36:45+0000  hl-prog-extra-20230820.39.entry
+  2023-12-09T02:36:45+0000  hl-prog-extra-20230820.39.tar
+Built hl-prog-extra in 4.335s, finished at 2023-12-09T02:36:47+0000

@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/WammKD/Emacs-Klondike.git
 
 Updating /mnt/store/melpa/working/klondike/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/WammKD/Emacs-Klondike.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 244278348e913433450329c6c863da06167a3f20
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/klondike/
+  to /tmp/klondikehKanBj/klondike-20230606.704
+    klondike.el -> klondike.el
+Created klondike-20230606.704.tar containing:
+  klondike-20230606.704/
+  klondike-20230606.704/klondike-pkg.el
+  klondike-20230606.704/klondike.el
+ ✓ Success:
+  2023-12-09T02:41:49+0000  klondike-20230606.704.entry
+  2023-12-09T02:41:49+0000  klondike-20230606.704.tar
+Built klondike in 4.346s, finished at 2023-12-09T02:41:50+0000

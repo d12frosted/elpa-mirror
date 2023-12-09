@@ -3,7 +3,26 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/lem.el.git
 
 Updating /mnt/store/melpa/working/lem/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/martianh/lem.el.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 7f4184f51001c6df218d318b2f938cbb631541e9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lem/
+  to /tmp/lemJMicWd/lem-20231022.1416
+  ! lisp/lem-api.el -> lem-api.el
+  ! lisp/lem-post.el -> lem-post.el
+  ! lisp/lem-request.el -> lem-request.el
+  ! lisp/lem-search.el -> lem-search.el
+  ! lisp/lem-ui.el -> lem-ui.el
+  ! lisp/lem.el -> lem.el
+Created lem-20231022.1416.tar containing:
+  lem-20231022.1416/
+  lem-20231022.1416/lem-api.el
+  lem-20231022.1416/lem-pkg.el
+  lem-20231022.1416/lem-post.el
+  lem-20231022.1416/lem-request.el
+  lem-20231022.1416/lem-search.el
+  lem-20231022.1416/lem-ui.el
+  lem-20231022.1416/lem.el
+ ✓ Success:
+  2023-12-09T02:42:45+0000  lem-20231022.1416.entry
+  2023-12-09T02:42:45+0000  lem-20231022.1416.tar
+Built lem in 5.070s, finished at 2023-12-09T02:42:46+0000

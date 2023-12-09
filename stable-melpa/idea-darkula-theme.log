@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/fourier/idea-darkula-theme.git
 
 Updating /mnt/store/melpa/working/idea-darkula-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/fourier/idea-darkula-theme.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 2ba08b6b7c0f75d460d81e1f02114a6449bb1868
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/idea-darkula-theme/
+  to /tmp/idea-darkula-themet6QUJF/idea-darkula-theme-20230617.2005
+    idea-darkula-theme.el -> idea-darkula-theme.el
+Created idea-darkula-theme-20230617.2005.tar containing:
+  idea-darkula-theme-20230617.2005/
+  idea-darkula-theme-20230617.2005/idea-darkula-theme-pkg.el
+  idea-darkula-theme-20230617.2005/idea-darkula-theme.el
+ ✓ Success:
+  2023-12-09T02:37:47+0000  idea-darkula-theme-20230617.2005.entry
+  2023-12-09T02:37:47+0000  idea-darkula-theme-20230617.2005.tar
+Built idea-darkula-theme in 7.037s, finished at 2023-12-09T02:37:50+0000

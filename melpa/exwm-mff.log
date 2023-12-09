@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/exwm-mff.git
 
 Updating /mnt/store/melpa/working/exwm-mff/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/emacs-weirdware/exwm-mff.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 89206f2e3189f589c27c56bd2b6203e906ee7100
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exwm-mff/
+  to /tmp/exwm-mfffxXbxX/exwm-mff-20210603.1723
+    exwm-mff.el -> exwm-mff.el
+Created exwm-mff-20210603.1723.tar containing:
+  exwm-mff-20210603.1723/
+  exwm-mff-20210603.1723/exwm-mff-pkg.el
+  exwm-mff-20210603.1723/exwm-mff.el
+ ✓ Success:
+  2023-12-09T02:25:28+0000  exwm-mff-20210603.1723.entry
+  2023-12-09T02:25:28+0000  exwm-mff-20210603.1723.tar
+Built exwm-mff in 3.882s, finished at 2023-12-09T02:25:30+0000
