@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-spell-fu.git
 
 Updating /mnt/store/melpa/working/spell-fu/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-spell-fu.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 540141a5764ceb403e78e22f6714e2dab3597bc7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/spell-fu/
+  to /tmp/spell-fuXigNIe/spell-fu-20230808.1342
+    spell-fu.el -> spell-fu.el
+Created spell-fu-20230808.1342.tar containing:
+  spell-fu-20230808.1342/
+  spell-fu-20230808.1342/spell-fu-pkg.el
+  spell-fu-20230808.1342/spell-fu.el
+ ✓ Success:
+  2023-12-10T04:04:54+0000  spell-fu-20230808.1342.entry
+  2023-12-10T04:04:53+0000  spell-fu-20230808.1342.tar
+Built spell-fu in 3.747s, finished at 2023-12-10T04:04:55+0000

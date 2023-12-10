@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/FelipeLema/session-async.el.git
 
 Updating /mnt/store/melpa/working/session-async/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/FelipeLema/session-async.el.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 6e361073256740ce546f4fa104045f2b3818ef94
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/session-async/
+  to /tmp/session-asyncO6MRb3/session-async-20231125.2106
+    session-async.el -> session-async.el
+Created session-async-20231125.2106.tar containing:
+  session-async-20231125.2106/
+  session-async-20231125.2106/session-async-pkg.el
+  session-async-20231125.2106/session-async.el
+ ✓ Success:
+  2023-12-10T04:02:07+0000  session-async-20231125.2106.entry
+  2023-12-10T04:02:07+0000  session-async-20231125.2106.tar
+Built session-async in 6.447s, finished at 2023-12-10T04:02:10+0000
