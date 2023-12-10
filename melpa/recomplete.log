@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-recomplete.git
 
 Updating /mnt/store/melpa/working/recomplete/
-Checking out 4c9002938fa0480c68e22b86c20d20cea6396ce6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/recomplete/
-  to /tmp/recomplete8GwzYD/recomplete-20230910.1154
-    recomplete.el -> recomplete.el
-Created recomplete-20230910.1154.tar containing:
-  recomplete-20230910.1154/
-  recomplete-20230910.1154/recomplete-pkg.el
-  recomplete-20230910.1154/recomplete.el
- ✓ Success:
-  2023-12-09T18:24:59+0000  recomplete-20230910.1154.entry
-  2023-12-09T18:24:59+0000  recomplete-20230910.1154.tar
-Built recomplete in 4.131s, finished at 2023-12-09T18:25:00+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-recomplete.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

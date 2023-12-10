@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://bitbucket.org/shackra/dwight-k.-schrute
 
 Updating /mnt/store/melpa/working/schrute/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://bitbucket.org/shackra/dwight-k.-schrute/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 59faa6c4232ae183cea93237301acad8c0763997
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/schrute/
+  to /tmp/schrute3M4OPE/schrute-20170521.1840
+    schrute.el -> schrute.el
+Created schrute-20170521.1840.tar containing:
+  schrute-20170521.1840/
+  schrute-20170521.1840/schrute-pkg.el
+  schrute-20170521.1840/schrute.el
+ ✓ Success:
+  2023-12-10T00:13:17+0000  schrute-20170521.1840.entry
+  2023-12-10T00:13:17+0000  schrute-20170521.1840.tar
+Built schrute in 3.706s, finished at 2023-12-10T00:13:19+0000

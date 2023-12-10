@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://bitbucket.org/sbarbit/jack-connect
 
 Updating /mnt/store/melpa/working/jack-connect/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://bitbucket.org/sbarbit/jack-connect/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 1acaebfe8f37f0194e95c3e812c9515a6f688eee
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jack-connect/
+  to /tmp/jack-connectNqYiqb/jack-connect-20220201.1417
+    jack-connect.el -> jack-connect.el
+Created jack-connect-20220201.1417.tar containing:
+  jack-connect-20220201.1417/
+  jack-connect-20220201.1417/jack-connect-pkg.el
+  jack-connect-20220201.1417/jack-connect.el
+ ✓ Success:
+  2023-12-09T23:49:09+0000  jack-connect-20220201.1417.entry
+  2023-12-09T23:49:09+0000  jack-connect-20220201.1417.tar
+Built jack-connect in 3.439s, finished at 2023-12-09T23:49:10+0000

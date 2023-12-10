@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://bitbucket.org/olanilsson/ert-junit
 
 Updating /mnt/store/melpa/working/ert-junit/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://bitbucket.org/olanilsson/ert-junit/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 65f91c35b088b87943dbbbe7e1ce354bc9bc0992
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ert-junit/
+  to /tmp/ert-junitNxxwyi/ert-junit-20190802.2232
+    ert-junit.el -> ert-junit.el
+Created ert-junit-20190802.2232.tar containing:
+  ert-junit-20190802.2232/
+  ert-junit-20190802.2232/ert-junit-pkg.el
+  ert-junit-20190802.2232/ert-junit.el
+ ✓ Success:
+  2023-12-09T23:32:28+0000  ert-junit-20190802.2232.entry
+  2023-12-09T23:32:28+0000  ert-junit-20190802.2232.tar
+Built ert-junit in 3.838s, finished at 2023-12-09T23:32:29+0000

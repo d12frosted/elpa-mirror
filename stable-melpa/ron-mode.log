@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/Hutzdog/ron-mode.git
 
 Updating /mnt/store/melpa/working/ron-mode/
-Checking out c5e0454b9916d6b73adc15dab8abbb0b0a68ea22
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ron-mode/
-  to /tmp/ron-modeSAvyAQ/ron-mode-20200830.1554
-    ron-mode.el -> ron-mode.el
-Created ron-mode-20200830.1554.tar containing:
-  ron-mode-20200830.1554/
-  ron-mode-20200830.1554/ron-mode-pkg.el
-  ron-mode-20200830.1554/ron-mode.el
- ✓ Success:
-  2023-12-09T18:26:00+0000  ron-mode-20200830.1554.entry
-  2023-12-09T18:26:00+0000  ron-mode-20200830.1554.tar
-Built ron-mode in 4.545s, finished at 2023-12-09T18:26:02+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/Hutzdog/ron-mode.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

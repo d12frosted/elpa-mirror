@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://bitbucket.org/Soft/zenity-color-picker.el
 
 Updating /mnt/store/melpa/working/zenity-color-picker/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://bitbucket.org/Soft/zenity-color-picker.el/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out bdece51052ef7037e0a3481fc1f487939f57777e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zenity-color-picker/
+  to /tmp/zenity-color-pickerVLCvAa/zenity-color-picker-20160302.1154
+    zenity-color-picker.el -> zenity-color-picker.el
+Created zenity-color-picker-20160302.1154.tar containing:
+  zenity-color-picker-20160302.1154/
+  zenity-color-picker-20160302.1154/zenity-color-picker-pkg.el
+  zenity-color-picker-20160302.1154/zenity-color-picker.el
+ ✓ Success:
+  2023-12-09T22:31:01+0000  zenity-color-picker-20160302.1154.entry
+  2023-12-09T22:31:01+0000  zenity-color-picker-20160302.1154.tar
+Built zenity-color-picker in 4.537s, finished at 2023-12-09T22:31:03+0000

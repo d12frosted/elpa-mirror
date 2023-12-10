@@ -3,16 +3,8 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-prog-face-refine.git
 
 Updating /mnt/store/melpa/working/prog-face-refine/
-Checking out c99853ad732784e27300bdb70d4f1aa59c1f6476
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/prog-face-refine/
-  to /tmp/prog-face-refineDzLIn8/prog-face-refine-20230710.113
-    prog-face-refine.el -> prog-face-refine.el
-Created prog-face-refine-20230710.113.tar containing:
-  prog-face-refine-20230710.113/
-  prog-face-refine-20230710.113/prog-face-refine-pkg.el
-  prog-face-refine-20230710.113/prog-face-refine.el
- ✓ Success:
-  2023-12-09T18:22:18+0000  prog-face-refine-20230710.113.entry
-  2023-12-09T18:22:18+0000  prog-face-refine-20230710.113.tar
-Built prog-face-refine in 4.301s, finished at 2023-12-09T18:22:20+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

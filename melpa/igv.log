@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://bitbucket.org/sbarbit/eigv
 
 Updating /mnt/store/melpa/working/igv/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://bitbucket.org/sbarbit/eigv/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 47ac6ceede252f451348a2c696398c0cb5279555
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/igv/
+  to /tmp/igv0JJvne/igv-20141210.1227
+    igv.el -> igv.el
+Created igv-20141210.1227.tar containing:
+  igv-20141210.1227/
+  igv-20141210.1227/igv-pkg.el
+  igv-20141210.1227/igv.el
+ ✓ Success:
+  2023-12-09T23:47:09+0000  igv-20141210.1227.entry
+  2023-12-09T23:47:08+0000  igv-20141210.1227.tar
+Built igv in 3.544s, finished at 2023-12-09T23:47:10+0000

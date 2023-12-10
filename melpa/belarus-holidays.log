@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://bitbucket.org/EugeneMakei/belarus-holidays.el
 
 Updating /mnt/store/melpa/working/belarus-holidays/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://bitbucket.org/EugeneMakei/belarus-holidays.el/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 35a18273e19edc3b4c761030ffbd11116483b83e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/belarus-holidays/
+  to /tmp/belarus-holidaysWoSmOL/belarus-holidays-20190102.1343
+    belarus-holidays.el -> belarus-holidays.el
+Created belarus-holidays-20190102.1343.tar containing:
+  belarus-holidays-20190102.1343/
+  belarus-holidays-20190102.1343/belarus-holidays-pkg.el
+  belarus-holidays-20190102.1343/belarus-holidays.el
+ ✓ Success:
+  2023-12-09T23:18:00+0000  belarus-holidays-20190102.1343.entry
+  2023-12-09T23:18:00+0000  belarus-holidays-20190102.1343.tar
+Built belarus-holidays in 3.778s, finished at 2023-12-09T23:18:02+0000

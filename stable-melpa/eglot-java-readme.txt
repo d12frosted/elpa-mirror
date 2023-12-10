@@ -1,7 +1,7 @@
 Java extension for eglot.
 
 Some of the key features include the following:
-- Automatic installation of the Eclipse JDT LSP server.
+- Automatic installation of the Eclipse JDT LSP server (latest milestone release).
 - Ability to pass JVM arguments to the Eclipse JDT LSP server (eglot-java-eclipse-jdt-args)
 - Wizards for Spring starter, Maven and Gradle project creation
 - Generic build command support for Maven and Gradle projects
@@ -31,3 +31,5 @@ Below is a sample configuration for your emacs init file
   (define-key eglot-java-mode-map (kbd "C-c l N") #'eglot-java-project-new)
   (define-key eglot-java-mode-map (kbd "C-c l T") #'eglot-java-project-build-task)
   (define-key eglot-java-mode-map (kbd "C-c l R") #'eglot-java-project-build-refresh)))
+
+You can upgrade an existing LSP server installation with the "eglot-java-upgrade-lsp-server" function.
