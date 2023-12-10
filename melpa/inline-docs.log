@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://repo.or.cz/inline-docs.git
 
 Updating /mnt/store/melpa/working/inline-docs/
-Checking out 08eb99f65406993425ccf9937aad013436a7c6ef
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/inline-docs/
-  to /tmp/inline-docsMP58io/inline-docs-20230708.222
-    inline-docs.el -> inline-docs.el
-Created inline-docs-20230708.222.tar containing:
-  inline-docs-20230708.222/
-  inline-docs-20230708.222/inline-docs-pkg.el
-  inline-docs-20230708.222/inline-docs.el
- ✓ Success:
-  2023-12-10T03:36:49+0000  inline-docs-20230708.222.entry
-  2023-12-10T03:36:49+0000  inline-docs-20230708.222.tar
-Built inline-docs in 3.928s, finished at 2023-12-10T03:36:50+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://repo.or.cz/inline-docs.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

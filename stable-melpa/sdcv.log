@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://repo.or.cz/sdcv.el.git
 
 Updating /mnt/store/melpa/working/sdcv/
-Checking out 98e239c7380c63282845d5bc55ea6d605f5a33b8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sdcv/
-  to /tmp/sdcvUB2eGv/sdcv-20220210.1412
-    sdcv.el -> sdcv.el
-Created sdcv-20220210.1412.tar containing:
-  sdcv-20220210.1412/
-  sdcv-20220210.1412/sdcv-pkg.el
-  sdcv-20220210.1412/sdcv.el
- ✓ Success:
-  2023-12-10T04:01:41+0000  sdcv-20220210.1412.entry
-  2023-12-10T04:01:41+0000  sdcv-20220210.1412.tar
-Built sdcv in 4.163s, finished at 2023-12-10T04:01:42+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://repo.or.cz/sdcv.el.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
