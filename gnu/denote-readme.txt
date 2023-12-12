@@ -5265,8 +5265,8 @@ section 14.14
         Damien Cassou, Elias Storms, Federico Stilman, Florian, Frédéric
         Willem Frank Ehmsen, Glenna D., Guo Yong, Hanspeter Gisler, Jack
         Baty, Jay Rajput, Jean-Charles Bagneris, Jens Östlund, Jeremy
-        Friesen, Jonathan Sahar, Johan Bolmsjö, Juanjo Presa, Kai von
-        Fintel, Kaushal Modi, M. Hadi Timachi, Mark Olson, Mirko
+        Friesen, Jonathan Sahar, Johan Bolmsjö, Jousimies, Juanjo Presa,
+        Kai von Fintel, Kaushal Modi, M. Hadi Timachi, Mark Olson, Mirko
         Hernandez, Niall Dooley, Paul van Gelder, Peter Prevos, Peter
         Smith, Suhail Singh, Shreyas Ragavan, Stefan Thesing, Summer
         Emacs, Sven Seebeck, Taoufik, TJ Stankus, Viktor Haag, Wade
