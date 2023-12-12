@@ -1,24 +1,6 @@
-		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		 RECOLL QUERIES IN EMACS USING CONSULT
-		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. About
-.. 1. Tip: using consult-recoll with helm
-2. Searching
-.. 1. Tip: Two-level filtering
-3. Displaying results
-.. 1. Example: formatting results list
-.. 2. Integration with embark-collect
-.. 3. Tip: displaying snippets in results list
-.. 4. Tip: disabling mime type groups
-4. Opening search results
-.. 1. Example: opening PDFs with external viewer
-.. 2. Example: Opening emails with notmuch
-5. Thanks
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                 RECOLL QUERIES IN EMACS USING CONSULT
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 

@@ -1217,7 +1217,7 @@
 		(:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 		(:commit . "151b20ba9d3ae39b88f91aecbab98bd5a5215f1a"))])
  (inf-ruby .
-	   [(2 8 0)
+	   [(2 8 1)
 	    ((emacs
 	      (26 1)))
 	    "Run a Ruby process in a buffer" tar
@@ -1228,7 +1228,7 @@
 	      ("Cornelius Mika" . "cornelius.mika@gmail.com")
 	      ("Dmitry Gutov" . "dgutov@yandex.ru")
 	      ("Kyle Hargraves" . "pd@krh.me"))
-	     (:commit . "991fe74b1c1b83412b42832a39aafc2d88ae625c"))])
+	     (:commit . "8116b3b8336819a9838dd73e6926b5ba6d57c05e"))])
  (inkpot-theme .
 	       [(0 1)
 		((emacs
@@ -1842,7 +1842,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20231209 134147)
+	      [(1 0 20231211 122419)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
