@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/exwm-mff.git
 
 Updating /mnt/store/melpa/working/exwm-mff/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/emacs-weirdware/exwm-mff.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 89206f2e3189f589c27c56bd2b6203e906ee7100
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exwm-mff/
+  to /tmp/exwm-mffDSsQg3/exwm-mff-20210603.1723
+    exwm-mff.el -> exwm-mff.el
+Created exwm-mff-20210603.1723.tar containing:
+  exwm-mff-20210603.1723/
+  exwm-mff-20210603.1723/exwm-mff-pkg.el
+  exwm-mff-20210603.1723/exwm-mff.el
+ ✓ Success:
+  2023-12-13T03:27:43+0000  exwm-mff-20210603.1723.entry
+  2023-12-13T03:27:43+0000  exwm-mff-20210603.1723.tar
+Built exwm-mff in 3.789s, finished at 2023-12-13T03:27:45+0000

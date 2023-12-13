@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/acdw/filldent.el.git
 
 Updating /mnt/store/melpa/working/filldent/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/acdw/filldent.el.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 2f32e0cf5e27c613f962fa41bf3427bbdc04e6c0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/filldent/
+  to /tmp/filldentLWbiLs/filldent-20220423.2216
+    filldent.el -> filldent.el
+Created filldent-20220423.2216.tar containing:
+  filldent-20220423.2216/
+  filldent-20220423.2216/filldent-pkg.el
+  filldent-20220423.2216/filldent.el
+ ✓ Success:
+  2023-12-13T03:28:33+0000  filldent-20220423.2216.entry
+  2023-12-13T03:28:33+0000  filldent-20220423.2216.tar
+Built filldent in 5.752s, finished at 2023-12-13T03:28:35+0000
