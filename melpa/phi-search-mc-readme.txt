@@ -38,13 +38,12 @@ complex multi-stroke keys on my terminal emulator where [C->] is
 mapped to [C-x @ c >] etc., I had to add the following lines for
 the features to work properly.
 
-  (defvar phi-search-from-isearch-mc/ctl-map
-    (let ((map (make-sparse-keymap)))
-      (define-key map (kbd ">")   'phi-search-from-isearch-mc/mark-next)
-      (define-key map (kbd "<")   'phi-search-from-isearch-mc/mark-previous)
-      (define-key map (kbd ". !") 'phi-search-from-isearch-mc/mark-all)
-      map))
+  (define-prefix-command 'phi-search-from-isearch-mc/ctl-map)
+  (let ((map phi-search-from-isearch-mc/ctl-map))
+    (define-key map (kbd ">")   'phi-search-from-isearch-mc/mark-next)
+    (define-key map (kbd "<")   'phi-search-from-isearch-mc/mark-previous)
+    (define-key map (kbd ". !") 'phi-search-from-isearch-mc/mark-all))
 
-  (defadvice phi-search-from-isearch-mc/setup-keys
-    (after for-terminal activate)
+  (defun phi-search-from-isearch-mc/setup-keys-ad-for-terminal ()
     (define-key isearch-mode-map (kbd "C-x @ c") phi-search-from-isearch-mc/ctl-map))
+  (advice-add #'phi-search-from-isearch-mc/setup-keys :after #'phi-search-from-isearch-mc/setup-keys-ad-for-terminal)

@@ -271,14 +271,18 @@
 	      ("John Wiegley" . "johnw@newartisans.com"))
 	     (:commit . "4932ed21d40f9e8ad48ad2a1f086fdf9b3847ac9"))])
  (blist .
-	[(0 2)
-	 nil "Display bookmarks in an ibuffer way" tar
-	 ((:keywords "convenience")
-	  (:maintainer "Durand" . "mmemmew@gmail.com")
+	[(0 3)
+	 ((ilist
+	   (0 1))
+	  (emacs
+	   (24)))
+	 "Display bookmarks in an ibuffer way" tar
+	 ((:url . "https://gitlab.com/mmemmew/blist")
+	  (:keywords "convenience")
+	  (:maintainer "Durand" . "durand@jsdurand.xyz")
 	  (:authors
-	   ("Durand" . "mmemmew@gmail.com"))
-	  (:url . "https://elpa.gnu.org/packages/blist.html")
-	  (:commit . "c5aadbce3b713a2a9e7dba8c3c0881c43ebb2b4d"))])
+	   ("Durand" . "durand@jsdurand.xyz"))
+	  (:commit . "9e1054d3cb2b796704ebeb2575b29ad70f0bb21c"))])
  (bluetooth .
 	    [(0 3 1)
 	     ((emacs

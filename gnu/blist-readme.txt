@@ -1,31 +1,9 @@
-	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		BLIST: LIST BOOKMARKS IN AN IBUFFER WAY
-	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                BLIST: LIST BOOKMARKS IN AN IBUFFER WAY
+               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-			 <2021-09-16 Thu 12:26>
-
-
-Table of Contents
-─────────────────
-
-1. About
-2. Dependency
-3. Usage
-.. 1. Screenshot
-.. 2. Example configuration
-.. 3. Header
-.. 4. Columns
-.. 5. Groups
-..... 1. Fixed filter groups
-..... 2. Automatic filter groups
-..... 3. Combine fixed and automatic filter groups
-.. 6. Calling convention(s)
-.. 7. Navigations
-.. 8. Marking
-.. 9. Jump to bookmarks
-.. 10. Annotations
-.. 11. Others
+                         <2021-09-16 Thu 12:26>
 
 
 
@@ -69,8 +47,12 @@ Table of Contents
 3.2 Example configuration
 ─────────────────────────
 
-  An example configuration is included so that it is easier to begin
-  configuring the package.
+  Some examples of configurations are included so that it is easier to
+  begin configuring the package.
+
+
+3.2.1 Example of manual grouping
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ┌────
   │ (setq blist-filter-groups
@@ -101,6 +83,55 @@ Table of Contents
   │ (blist-define-criterion "info" "Info"
   │   (eq (bookmark-get-handler bookmark)
   │       #'Info-bookmark-jump))
+  └────
+
+
+3.2.2 Example of automatic grouping
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ (setq blist-filter-features (list 'auto))
+  │ 
+  │ ;; Either this
+  │ (setq blist-automatic-filter-groups
+  │       #'ilist-automatic-group-blist-default)
+  │ 
+  │ ;; Or this
+  │ (setq blist-automatic-filter-groups
+  │       #'ilist-automatic-group-blist-type-only)
+  │ 
+  │ ;; Or define ones own grouping function
+  └────
+
+
+3.2.3 Example of combining the two groupings
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ ;; The order matters not.
+  │ (setq blist-filter-features (list 'manual 'auto))
+  │ 
+  │ ;; We can use manual groups to place certain important categories of
+  │ ;; bookmarks at the top of the list.
+  │ ;;
+  │ ;; Make sure not to include a default group, otherwise tha automatic
+  │ ;; grouping functions would have no chance of being run.
+  │ (setq blist-filter-groups
+  │       (list
+  │        (cons "Eshell" #'blist-eshell-p)
+  │        (cons "ELisp" #'blist-elisp-p)
+  │        (cons "PDF" #'blist-pdf-p)
+  │        (cons "Info" #'blist-info-p)))
+  │ 
+  │ ;; Either this
+  │ (setq blist-automatic-filter-groups
+  │       #'ilist-automatic-group-blist-default)
+  │ 
+  │ ;; Or this
+  │ (setq blist-automatic-filter-groups
+  │       #'ilist-automatic-group-blist-type-only)
+  │ 
+  │ ;; Or define ones own grouping function
   └────
 
   See the following subsections for more details.
@@ -213,7 +244,33 @@ Table of Contents
   that macro, for your information.
 
 
-3.5.3 Combine fixed and automatic filter groups
+3.5.3 Two default automatic groups
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  There are two pre-defined automatic groups in the package: the default
+  one and the /type-only/ one.
+
+
+◊ 3.5.3.1 Default group
+
+  In Emacs 29 or later, if a bookmark handler function symbol has a
+  property called `bookmark-handler-type', it will be recognized as the
+  type of the bookmark, which can be retrieved by the function
+  `bookmark-type-from-full-record'.
+
+  The default group will use the type of a bookmark as the group header,
+  if the type is available, otherwise it falls back to use file name
+  extensions.
+
+
+◊ 3.5.3.2 Type-only group
+
+  This automatic group only uses the type of a bookmark as the group
+  header.  If the type is not available, it always uses the default
+  group.
+
+
+3.5.4 Combine fixed and automatic filter groups
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   What if one wants to use both the fixed filter groups and the
@@ -301,6 +358,8 @@ Table of Contents
   • `% n': Mark bookmarks whose name matches a regular expression.
   • `% l': Mark bookmarks whose location matches a regular expression.
   • `* c': Change the marks from OLD to NEW (using `read-char')
+  • `t': Toggle marks: an item is going to be marked if and only if it
+    is currently not marked.
 
 
 3.9 Jump to bookmarks
@@ -333,6 +392,14 @@ Table of Contents
 
 3.11 Others
 ───────────
+
+  • `R': Relocate the bookmark.
+  • `r': Rename the bookmark.
+  • `l': Load bookmarks from a file, and prepend these bookmarks to the
+    front of the bookmarks list.
+  • `S-RET': Toggle all other groups than the group at which the cursor
+    sits.  This creates a kind of narrowing effect, and is fun to apply
+    on different groups successively.
 
   Some functions are too minor to record here.  Use `describe-mode' in
   the list of bookmarks to see all available key-bindings.
