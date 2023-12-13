@@ -3,22 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/fedi.el.git
 
 Updating /mnt/store/melpa/working/fedi/
-Checking out d7e60a712ad1c481d7401b5a066ad8681556e870
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fedi/
-  to /tmp/fediSSt8xq/fedi-20231209.1448
-    fedi-http.el -> fedi-http.el
-    fedi-iso.el -> fedi-iso.el
-    fedi-post.el -> fedi-post.el
-    fedi.el -> fedi.el
-Created fedi-20231209.1448.tar containing:
-  fedi-20231209.1448/
-  fedi-20231209.1448/fedi-http.el
-  fedi-20231209.1448/fedi-iso.el
-  fedi-20231209.1448/fedi-pkg.el
-  fedi-20231209.1448/fedi-post.el
-  fedi-20231209.1448/fedi.el
- ✓ Success:
-  2023-12-12T19:33:40+0000  fedi-20231209.1448.entry
-  2023-12-12T19:33:40+0000  fedi-20231209.1448.tar
-Built fedi in 4.484s, finished at 2023-12-12T19:33:41+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/martianh/fedi.el.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

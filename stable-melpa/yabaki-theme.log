@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/seahorse/yabaki-theme.git
 
 Updating /mnt/store/melpa/working/yabaki-theme/
-Checking out 209f2be321509dac00631fff1b0f7ea01ba382de
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/yabaki-theme/
-  to /tmp/yabaki-themetbtJ5E/yabaki-theme-20231004.2023
-    yabaki-theme.el -> yabaki-theme.el
-Created yabaki-theme-20231004.2023.tar containing:
-  yabaki-theme-20231004.2023/
-  yabaki-theme-20231004.2023/yabaki-theme-pkg.el
-  yabaki-theme-20231004.2023/yabaki-theme.el
- ✓ Success:
-  2023-12-12T18:26:40+0000  yabaki-theme-20231004.2023.entry
-  2023-12-12T18:26:40+0000  yabaki-theme-20231004.2023.tar
-Built yabaki-theme in 4.509s, finished at 2023-12-12T18:26:42+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/seahorse/yabaki-theme.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
