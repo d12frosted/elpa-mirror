@@ -3,16 +3,8 @@ Fetcher: github
 Source:  https://github.com/cute-jumper/embrace.el.git
 
 Updating /mnt/store/melpa/working/embrace/
-Checking out c7e748603151d7d91c237fd2d9cdf56e9f3b1ea8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/embrace/
-  to /tmp/embraceX8HOdi/embrace-20231027.419
-    embrace.el -> embrace.el
-Created embrace-20231027.419.tar containing:
-  embrace-20231027.419/
-  embrace-20231027.419/embrace-pkg.el
-  embrace-20231027.419/embrace.el
- ✓ Success:
-  2023-12-13T15:24:24+0000  embrace-20231027.419.entry
-  2023-12-13T15:24:24+0000  embrace-20231027.419.tar
-Built embrace in 3.900s, finished at 2023-12-13T15:24:25+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
