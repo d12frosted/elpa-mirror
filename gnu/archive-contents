@@ -2020,7 +2020,7 @@
 	       ("Simen Heggestøyl" . "simenheg@gmail.com"))
 	      (:maintainer "Simen Heggestøyl" . "simenheg@gmail.com"))])
  (jsonrpc .
-	  [(1 0 18)
+	  [(1 0 19)
 	   ((emacs
 	     (25 2)))
 	   "JSON-RPC library" tar
@@ -2029,7 +2029,7 @@
 	    (:authors
 	     ("João Távora" . "joaotavora@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
-	    (:commit . "5a0250f76676d8750f42bbca1af5c4553846949b"))])
+	    (:commit . "ea29a48da13d6e6b87a3b017bcf92689bc18ca54"))])
  (jumpc .
 	[(3 1)
 	 nil "jump to previous insertion points" tar
