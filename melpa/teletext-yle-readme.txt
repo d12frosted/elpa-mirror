@@ -1,4 +1,3 @@
-
 Provides a teletext broadcast from YLE, the Finnish national
 television network.  A TV tuner is not needed for browsing: an
 ordinary internet connection is enough.  The service is free of

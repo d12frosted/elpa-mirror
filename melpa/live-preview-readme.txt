@@ -1,4 +1,3 @@
-
 Renders a live preview of whatever you are editing in a side
 window.
 

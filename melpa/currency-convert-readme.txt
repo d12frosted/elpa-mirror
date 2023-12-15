@@ -1,4 +1,3 @@
-
 Convert amounts of money from one currency to another in Emacs.
 
 Exchange rates are downloaded from exchangeratesapi.io. They ought

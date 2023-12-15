@@ -1,4 +1,3 @@
-
 Show a character map of the ubiquitous 7-bit ASCII character set
 (128 characters in total).
 
