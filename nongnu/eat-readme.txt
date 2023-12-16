@@ -39,13 +39,13 @@ To get the most out of Eat, you should also setup shell integration.
     • `C-c C-k': Kill process.
     • `C-c C-e': Switch to "emacs" input mode.
     • `C-c M-d': Switch to "char" input mode.
-    • `C-c C-e': Switch to "line" input mode.
+    • `C-c C-l': Switch to "line" input mode.
 
   • "emacs" mode: No special keybinding, except the following:
 
     • `C-c C-j': Switch to "semi-char" input mode.
     • `C-c M-d': Switch to "char" input mode.
-    • `C-c C-e': Switch to "line" input mode.
+    • `C-c C-l': Switch to "line" input mode.
     • `C-c C-k': Kill process.
 
   • "char" mode: All supported keys are bound to send the key to the
