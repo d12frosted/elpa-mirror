@@ -777,7 +777,7 @@
 		("Akib Azmain Turja" . "akib@disroot.org"))
 	       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser .
-	 [(0 29 1)
+	 [(0 30)
 	  ((emacs
 	    (27 1))
 	   (project
@@ -785,10 +785,10 @@
 	  "GNU Emacs and Scheme talk to each other" tar
 	  ((:url . "https://gitlab.com/emacs-geiser/")
 	   (:keywords "languages" "scheme" "geiser")
-	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
+	   (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
 	   (:authors
-	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-	   (:commit . "d743a8cd1df4101a6dc2226ccfc3b4883ec761c5"))])
+	    ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
+	   (:commit . "f343592a52da0f947989d07c208a51ad6c972a5e"))])
  (geiser-chez .
 	      [(0 18)
 	       ((emacs
