@@ -3,16 +3,8 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/ipretty.git
 
 Updating /mnt/store/melpa/working/ipretty/
-Checking out 042f5cc4e6f81d59115e8335c582bb5c571c2585
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ipretty/
-  to /tmp/iprettyggyZTy/ipretty-20180606.522
-    ipretty.el -> ipretty.el
-Created ipretty-20180606.522.tar containing:
-  ipretty-20180606.522/
-  ipretty-20180606.522/ipretty-pkg.el
-  ipretty-20180606.522/ipretty.el
- ✓ Success:
-  2023-12-16T11:08:36+0000  ipretty-20180606.522.entry
-  2023-12-16T11:08:36+0000  ipretty-20180606.522.tar
-Built ipretty in 4.619s, finished at 2023-12-16T11:08:38+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
