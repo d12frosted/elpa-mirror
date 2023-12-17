@@ -32,4 +32,9 @@ Below is a sample configuration for your emacs init file
   (define-key eglot-java-mode-map (kbd "C-c l T") #'eglot-java-project-build-task)
   (define-key eglot-java-mode-map (kbd "C-c l R") #'eglot-java-project-build-refresh)))
 
+The behavior of the "eglot-java-run-test" function depends on the cursor location:
+- If there's an enclosing method at the current cursor location, that specific test method will run
+- Otherwise, all the tests in the current file will be executed
+
 You can upgrade an existing LSP server installation with the "eglot-java-upgrade-lsp-server" function.
+You can upgrade an existing JUnit jar installation with the "eglot-java-upgrade-junit-jar" function.

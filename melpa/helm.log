@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm/
-Checking out b04272a53e5b2db1fc7724d4ba84e51fd20e9c4f
+Checking out 2ea205c890602cd4d8c6bf0dd6cb42fba73b48ab
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmNgPnFy/helm-20231209.709
+  to /tmp/helm9DVWQ9/helm-20231217.609
     .dir-locals.el -> .dir-locals.el
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
@@ -48,51 +48,51 @@ Copying files (->) and directories (=>)
     helm-x-files.el -> helm-x-files.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20231209.709.tar containing:
-  helm-20231209.709/
-  helm-20231209.709/.dir-locals.el
-  helm-20231209.709/emacs-helm.sh
-  helm-20231209.709/helm-adaptive.el
-  helm-20231209.709/helm-bookmark.el
-  helm-20231209.709/helm-buffers.el
-  helm-20231209.709/helm-color.el
-  helm-20231209.709/helm-command.el
-  helm-20231209.709/helm-dabbrev.el
-  helm-20231209.709/helm-easymenu.el
-  helm-20231209.709/helm-elisp.el
-  helm-20231209.709/helm-epa.el
-  helm-20231209.709/helm-eshell.el
-  helm-20231209.709/helm-eval.el
-  helm-20231209.709/helm-external.el
-  helm-20231209.709/helm-fd.el
-  helm-20231209.709/helm-files.el
-  helm-20231209.709/helm-find.el
-  helm-20231209.709/helm-font.el
-  helm-20231209.709/helm-for-files.el
-  helm-20231209.709/helm-global-bindings.el
-  helm-20231209.709/helm-grep.el
-  helm-20231209.709/helm-help.el
-  helm-20231209.709/helm-id-utils.el
-  helm-20231209.709/helm-imenu.el
-  helm-20231209.709/helm-info.el
-  helm-20231209.709/helm-locate.el
-  helm-20231209.709/helm-man.el
-  helm-20231209.709/helm-misc.el
-  helm-20231209.709/helm-mode.el
-  helm-20231209.709/helm-net.el
-  helm-20231209.709/helm-occur.el
-  helm-20231209.709/helm-packages.el
-  helm-20231209.709/helm-pkg.el
-  helm-20231209.709/helm-regexp.el
-  helm-20231209.709/helm-ring.el
-  helm-20231209.709/helm-semantic.el
-  helm-20231209.709/helm-sys.el
-  helm-20231209.709/helm-tags.el
-  helm-20231209.709/helm-types.el
-  helm-20231209.709/helm-utils.el
-  helm-20231209.709/helm-x-files.el
-  helm-20231209.709/helm.el
+Created helm-20231217.609.tar containing:
+  helm-20231217.609/
+  helm-20231217.609/.dir-locals.el
+  helm-20231217.609/emacs-helm.sh
+  helm-20231217.609/helm-adaptive.el
+  helm-20231217.609/helm-bookmark.el
+  helm-20231217.609/helm-buffers.el
+  helm-20231217.609/helm-color.el
+  helm-20231217.609/helm-command.el
+  helm-20231217.609/helm-dabbrev.el
+  helm-20231217.609/helm-easymenu.el
+  helm-20231217.609/helm-elisp.el
+  helm-20231217.609/helm-epa.el
+  helm-20231217.609/helm-eshell.el
+  helm-20231217.609/helm-eval.el
+  helm-20231217.609/helm-external.el
+  helm-20231217.609/helm-fd.el
+  helm-20231217.609/helm-files.el
+  helm-20231217.609/helm-find.el
+  helm-20231217.609/helm-font.el
+  helm-20231217.609/helm-for-files.el
+  helm-20231217.609/helm-global-bindings.el
+  helm-20231217.609/helm-grep.el
+  helm-20231217.609/helm-help.el
+  helm-20231217.609/helm-id-utils.el
+  helm-20231217.609/helm-imenu.el
+  helm-20231217.609/helm-info.el
+  helm-20231217.609/helm-locate.el
+  helm-20231217.609/helm-man.el
+  helm-20231217.609/helm-misc.el
+  helm-20231217.609/helm-mode.el
+  helm-20231217.609/helm-net.el
+  helm-20231217.609/helm-occur.el
+  helm-20231217.609/helm-packages.el
+  helm-20231217.609/helm-pkg.el
+  helm-20231217.609/helm-regexp.el
+  helm-20231217.609/helm-ring.el
+  helm-20231217.609/helm-semantic.el
+  helm-20231217.609/helm-sys.el
+  helm-20231217.609/helm-tags.el
+  helm-20231217.609/helm-types.el
+  helm-20231217.609/helm-utils.el
+  helm-20231217.609/helm-x-files.el
+  helm-20231217.609/helm.el
  ✓ Success:
-  2023-12-16T23:32:28+0000  helm-20231209.709.entry
-  2023-12-16T23:32:27+0000  helm-20231209.709.tar
-Built helm in 8.399s, finished at 2023-12-16T23:32:31+0000
+  2023-12-17T12:00:05+0000  helm-20231217.609.entry
+  2023-12-17T12:00:05+0000  helm-20231217.609.tar
+Built helm in 6.074s, finished at 2023-12-17T12:00:07+0000
