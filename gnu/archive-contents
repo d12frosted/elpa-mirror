@@ -3562,7 +3562,7 @@
 		("Christian Johansson" . "christian@cvj.se"))
 	       (:commit . "95fb076c9b657c5f1bfad3ee5bf1f8691c50d428"))])
  (standard-themes .
-		  [(2 0 0)
+		  [(2 0 1)
 		   ((emacs
 		     (27 1)))
 		   "Like the default theme but more consistent" tar
@@ -3571,7 +3571,7 @@
 		    (:maintainer "Standard-Themes Development" . "~protesilaos/standard-themes@lists.sr.ht")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "ba79285bf1b2f9ce4430e83ba60391e7f26a9a1a"))])
+		    (:commit . "4b9e5395d5faad8d831727bc37d2551d68888555"))])
  (stream .
 	 [(2 3 0)
 	  ((emacs
@@ -3874,7 +3874,7 @@
 		("David Gonzalez Gandara" . "dggandara@member.fsf.org"))
 	       (:maintainer "David Gonzalez Gandara" . "dggandara@member.fsf.org"))])
  (transient .
-	    [(0 5 2)
+	    [(0 5 3)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -3887,7 +3887,7 @@
 	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 	      (:authors
 	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	      (:commit . "2c8b50231b11d354b60709c361f2dfbc4cb8163d"))])
+	      (:commit . "72cf67d7e047a4f82e0e18bd016c7826bf2efde0"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs

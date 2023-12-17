@@ -1357,7 +1357,7 @@ Table of Contents
         Clemens Radermacher.
 
   Ideas and/or user feedback
-        Fritz Grabo, Manuel Uberti, Tassilo Horn.
+        Fritz Grabo, Manuel Uberti, Tassilo Horn, Zack Weinberg.
 
 
 13 GNU Free Documentation License
