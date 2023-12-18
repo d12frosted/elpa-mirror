@@ -83,8 +83,29 @@
 <https://platform.openai.com/docs/guides/embeddings/embedding-models>
 
 
-2.2 Vertex
-──────────
+2.2 Gemini (not via Google Cloud)
+─────────────────────────────────
+
+  This is Google's AI model.  You can get an API key via their [page on
+  Google AI Studio].  Set this up with `make-llm-gemini', with the
+  following parameters:
+  • `:key', the Google AI key that you get from Google AI Studio.
+  • `:chat-model', the model name, from the
+    [[<https://ai.google.dev/models>][list of models.  This is optional
+    and will default to the text Gemini model.
+  • `:embedding-model': the model name, currently must be
+    "embedding-001".  This is optional and will default to
+    "embedding-001".
+
+
+[page on Google AI Studio] <https://makersuite.google.com/app/apikey>
+
+
+2.3 Vertex (Gemini via Google Cloud)
+────────────────────────────────────
+
+  This is mostly for those who want to use Google Cloud specifically,
+  most users should use Gemini instead, which is easier to set up.
 
   You can set up with `make-llm-vertex', with the following parameters:
   • `:project': Your project number from Google Cloud that has Vertex
@@ -104,6 +125,12 @@
     set this to a region near where you are for best latency.  Defaults
     to "us-central1".
 
+    If you haven't already, you must run the following command before
+    using this:
+    ┌────
+    │ gcloud beta services identity create --service=aiplatform.googleapis.com --project=PROJECT_ID
+    └────
+
 
 [list of Vertex's model names.]
 <https://cloud.google.com/vertex-ai/docs/generative-ai/chat/chat-prompts#supported_model>
@@ -112,7 +139,7 @@
 <https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings#supported_models>
 
 
-2.3 Ollama
+2.4 Ollama
 ──────────
 
   [Ollama] is a way to run large language models locally. There are
@@ -135,7 +162,7 @@
 [many different models] <https://ollama.ai/library>
 
 
-2.4 GPT4All
+2.5 GPT4All
 ───────────
 
   [GPT4All] is a way to run large language models locally.  To use it
@@ -155,7 +182,7 @@
 [GPT4All] <https://gpt4all.io/index.html>
 
 
-2.5 llama.cpp
+2.6 llama.cpp
 ─────────────
 
   [llama.cpp] is a way to run large language models locally.  To use it
@@ -183,7 +210,7 @@
 [llama.cpp] <https://github.com/ggerganov/llama.cpp>
 
 
-2.6 Fake
+2.7 Fake
 ────────
 
   This is a client that makes no call, but it just there for testing and

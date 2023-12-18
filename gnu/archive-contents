@@ -1108,7 +1108,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20231216)
+      [(20231217)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1117,7 +1117,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "02c297bb55b191e82f466adafdb938f8b3de8d40"))])
+	(:commit . "b7e99541e34d8867db542deb583d86681c0e76f5"))])
  (ef-themes .
 	    [(1 4 1)
 	     ((emacs
@@ -1195,6 +1195,21 @@
 		      ("Andrea Corallo" . "akrl@sdf.org"))
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
+ (ellama .
+	 [(0 3 2)
+	  ((emacs
+	    (28 1))
+	   (llm
+	    (0 6 0))
+	   (spinner
+	    (1 7 4)))
+	  "Tool for interacting with LLMs" tar
+	  ((:url . "http://github.com/s-kostyaev/ellama")
+	   (:keywords "help" "local" "tools")
+	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
+	   (:authors
+	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
+	   (:commit . "7ffb9558ddb254d1d605d5a2bc3166379771848f"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2136,7 +2151,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (llm .
-      [(0 6 0)
+      [(0 7 0)
        ((emacs
 	 (28 1)))
        "Interface to pluggable llm backends" tar
@@ -2144,7 +2159,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "d903c6ab759ef41d746e29c7f63924d403f23c22"))])
+	(:commit . "384e04d471b8bbba2cb0644c25f4ba8dd0528a02"))])
  (lmc .
       [(1 4)
        ((emacs
