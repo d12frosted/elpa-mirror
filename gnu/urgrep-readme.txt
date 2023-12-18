@@ -86,6 +86,12 @@ This also works with connection-local variables:
 Urgrep can hook into wgrep to support this as well. To enable this, just load
 `urgrep-wgrep.el`.
 
+### Using with Xref
+
+[Xref][xref] lets you search through your projects to find strings, identifiers
+etc. You can make Xref use Urgrep to generate its search command by loading
+`urgrep-xref.el`.
+
 ### Using with Eshell
 
 In Eshell buffers, you can call `urgrep` much like you'd call any command-line
@@ -132,5 +138,6 @@ can discuss the best way to do things.
 [grep]: https://www.gnu.org/software/grep/
 [find]: https://www.gnu.org/software/findutils/
 [wgrep]: https://github.com/mhayashi1120/Emacs-wgrep
+[xref]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Xref.html
 [fsf-copyright]: https://www.gnu.org/prep/maintain/html_node/Copyright-Papers.html
 [new-issue]: https://github.com/jimporter/urgrep/issues/new
