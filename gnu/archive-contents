@@ -1196,7 +1196,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 3 2)
+	 [(0 4 0)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1209,7 +1209,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "7ffb9558ddb254d1d605d5a2bc3166379771848f"))])
+	   (:commit . "d8224613acf4bfbd5879adcd02f25562fefc13bb"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2872,7 +2872,7 @@
 	      ("Daiki Ueno" . "ueno@gnu.org"))
 	     (:maintainer "Daiki Ueno" . "ueno@gnu.org"))])
  (plz .
-      [(0 7)
+      [(0 7 1)
        ((emacs
 	 (26 3)))
        "HTTP library" tar
@@ -2881,7 +2881,7 @@
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "70ebd6edea2b5c376776cd747bc378b07f0e6646"))])
+	(:commit . "c701f5d3722b38d9e1a4223d7c06e879ddba5e69"))])
  (plz-see .
 	  [(0 1)
 	   ((emacs
