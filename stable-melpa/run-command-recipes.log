@@ -3,14 +3,15 @@ Fetcher: github
 Source:  https://github.com/semenInRussia/emacs-run-command-recipes.git
 
 Updating /mnt/store/melpa/working/run-command-recipes/
-Checking out 3d4c05225d54c97a4aef375113e6f4de9ea3aaef
+Checking out 63405333f23b33ecda08e716eca8588c8950952d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/run-command-recipes/
-  to /tmp/run-command-recipesV7IPee/run-command-recipes-20231003.1823
+  to /tmp/run-command-recipes7iqYaO/run-command-recipes-20231219.1331
     run-command-recipes-c.el -> run-command-recipes-c.el
     run-command-recipes-cpp.el -> run-command-recipes-cpp.el
     run-command-recipes-csharp.el -> run-command-recipes-csharp.el
     run-command-recipes-elisp.el -> run-command-recipes-elisp.el
+    run-command-recipes-elixir.el -> run-command-recipes-elixir.el
     run-command-recipes-go.el -> run-command-recipes-go.el
     run-command-recipes-haskell.el -> run-command-recipes-haskell.el
     run-command-recipes-java.el -> run-command-recipes-java.el
@@ -24,27 +25,30 @@ Copying files (->) and directories (=>)
     run-command-recipes-rust.el -> run-command-recipes-rust.el
     run-command-recipes.el -> run-command-recipes.el
     run-command-recipes-template.txt -> run-command-recipes-template.txt
-Created run-command-recipes-20231003.1823.tar containing:
-  run-command-recipes-20231003.1823/
-  run-command-recipes-20231003.1823/run-command-recipes-c.el
-  run-command-recipes-20231003.1823/run-command-recipes-cpp.el
-  run-command-recipes-20231003.1823/run-command-recipes-csharp.el
-  run-command-recipes-20231003.1823/run-command-recipes-elisp.el
-  run-command-recipes-20231003.1823/run-command-recipes-go.el
-  run-command-recipes-20231003.1823/run-command-recipes-haskell.el
-  run-command-recipes-20231003.1823/run-command-recipes-java.el
-  run-command-recipes-20231003.1823/run-command-recipes-latex.el
-  run-command-recipes-20231003.1823/run-command-recipes-lib.el
-  run-command-recipes-20231003.1823/run-command-recipes-make.el
-  run-command-recipes-20231003.1823/run-command-recipes-pandoc.el
-  run-command-recipes-20231003.1823/run-command-recipes-pkg.el
-  run-command-recipes-20231003.1823/run-command-recipes-project.el
-  run-command-recipes-20231003.1823/run-command-recipes-python.el
-  run-command-recipes-20231003.1823/run-command-recipes-racket.el
-  run-command-recipes-20231003.1823/run-command-recipes-rust.el
-  run-command-recipes-20231003.1823/run-command-recipes-template.txt
-  run-command-recipes-20231003.1823/run-command-recipes.el
+Created run-command-recipes-20231219.1331.tar containing:
+  run-command-recipes-20231219.1331/
+  run-command-recipes-20231219.1331/run-command-recipes-c.el
+  run-command-recipes-20231219.1331/run-command-recipes-cpp.el
+  run-command-recipes-20231219.1331/run-command-recipes-csharp.el
+  run-command-recipes-20231219.1331/run-command-recipes-elisp.el
+  run-command-recipes-20231219.1331/run-command-recipes-elixir.el
+  run-command-recipes-20231219.1331/run-command-recipes-go.el
+  run-command-recipes-20231219.1331/run-command-recipes-haskell.el
+  run-command-recipes-20231219.1331/run-command-recipes-java.el
+  run-command-recipes-20231219.1331/run-command-recipes-latex.el
+  run-command-recipes-20231219.1331/run-command-recipes-lib.el
+  run-command-recipes-20231219.1331/run-command-recipes-make.el
+  run-command-recipes-20231219.1331/run-command-recipes-pandoc.el
+  run-command-recipes-20231219.1331/run-command-recipes-pkg.el
+  run-command-recipes-20231219.1331/run-command-recipes-project.el
+  run-command-recipes-20231219.1331/run-command-recipes-python.el
+  run-command-recipes-20231219.1331/run-command-recipes-racket.el
+  run-command-recipes-20231219.1331/run-command-recipes-rust.el
+  run-command-recipes-20231219.1331/run-command-recipes-template.txt
+  run-command-recipes-20231219.1331/run-command-recipes.el
  ✓ Success:
-  2023-12-19T10:57:52+0000  run-command-recipes-20231003.1823.entry
-  2023-12-19T10:57:52+0000  run-command-recipes-20231003.1823.tar
-Built run-command-recipes in 4.152s, finished at 2023-12-19T10:57:53+0000
+  2023-12-19T13:00:10+0000  run-command-recipes-20231003.1823.entry
+  2023-12-19T13:00:10+0000  run-command-recipes-20231003.1823.tar
+  2023-12-19T15:02:34+0000  run-command-recipes-20231219.1331.entry
+  2023-12-19T15:02:33+0000  run-command-recipes-20231219.1331.tar
+Built run-command-recipes in 7.167s, finished at 2023-12-19T15:02:37+0000

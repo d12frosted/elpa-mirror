@@ -27,3 +27,4 @@ following list:
 - racket
 - make
 - go
+- elixir
