@@ -1,6 +1,7 @@
 Extensions for Verilog Mode:
 
  - Tree-sitter `verilog-ts-mode' support
+ - Project management
  - Improved syntax highlighting for `verilog-mode'
  - Find definitions and references with builtin `xref' backend
  - Auto-completion with dot and scope completion

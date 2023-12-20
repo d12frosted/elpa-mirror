@@ -1,6 +1,7 @@
 Extensions for VHDL Mode:
 
  - Tree-sitter `vhdl-ts-mode' support
+ - Project management
  - Improved syntax highlighting for `vhdl-mode'
  - Find definitions and references with builtin `xref' backend
  - Auto-completion with semantic completion
