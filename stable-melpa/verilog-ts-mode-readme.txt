@@ -4,7 +4,7 @@ Provides tree-sitter based implementations for the following features:
 - Syntax highlighting
 - Indentation
 - `imenu'
-- `'which-func'
+- `which-func'
 - Navigation functions
 - Prettify and beautify
 - Completion at point
