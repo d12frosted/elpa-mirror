@@ -1196,7 +1196,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 4 2)
+	 [(0 4 3)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1209,7 +1209,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "d089d66419ab4e7ceb71f14107d055ecd6e96fba"))])
+	   (:commit . "d2fc4223f7fc29356d66253dea5a47afa3d7478c"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -3499,7 +3499,7 @@
 	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	    (:url . "https://github.com/Malabarba/speed-of-thought-lisp"))])
  (spacious-padding .
-		   [(0 2 2)
+		   [(0 3 0)
 		    ((emacs
 		      (28 1)))
 		    "Increase the padding/spacing of frames and windows" tar
@@ -3508,7 +3508,7 @@
 		     (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
 		     (:authors
 		      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		     (:commit . "55b9e26d58c006389e43de27cdc2903b7bbd4338"))])
+		     (:commit . "9d96d301d5bccf192daaf00dba64bca9979dcb5a"))])
  (spinner .
 	  [(1 7 4)
 	   ((emacs
