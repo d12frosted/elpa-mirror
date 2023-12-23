@@ -24,5 +24,6 @@ follows: (setq-local outline-regexp ";;;\\(;* [^ \t\n]\\)")
 To set this automatically for every elisp buffer, add the following lines
 to your init file:
 
-(add-hook 'emacs-lisp-mode-hook (lambda () (setq-local outline-regexp ";;;\\(;* [^   \t\n]\\)")))
+(add-hook 'emacs-lisp-mode-hook
+    (lambda () (setq-local outline-regexp ";;;\\(;* [^   \t\n]\\)")))
 (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
