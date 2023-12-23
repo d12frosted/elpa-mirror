@@ -3,8 +3,6 @@
                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Dape is an debug adapter client for Emacs.
-
 Use `dape-configs' to set up your debug adapter configurations.  To
 initiate debugging sessions, use the command `dape'.
 
@@ -44,8 +42,6 @@ and enable `repeat-mode' for ergonomics.
 
   ┌────
   │ (use-package dape
-  │   ;; Currently only on github
-  │   :straight (dape :type git :host github :repo "svaante/dape")
   │   ;; To use window configuration like gud (gdb-mi)
   │   ;; :init
   │   ;; (setq dape-buffer-window-arrangment 'gud)
@@ -53,11 +49,13 @@ and enable `repeat-mode' for ergonomics.
   │   ;; Info buffers to the right
   │   ;; (setq dape-buffer-window-arrangment 'right)
   │ 
-  │   ;; To remove info buffers
-  │   ;; (remove-hook 'dape-update-ui-hooks 'dape-info-update)
-  │ 
-  │   ;; To remove repl buffer on startup
+  │   ;; To not display info and/or buffers on startup
+  │   ;; (remove-hook 'dape-on-start-hooks 'dape-info)
   │   ;; (remove-hook 'dape-on-start-hooks 'dape-repl)
+  │ 
+  │   ;; To display info and/or repl buffers on stopped
+  │   ;; (add-hook 'dape-on-stopped-hooks 'dape-info)
+  │   ;; (add-hook 'dape-on-stopped-hooks 'dape-repl)
   │ 
   │   ;; By default dape uses gdb keybinding prefix
   │   ;; (setq dape-key-prefix "\C-x\C-a")
@@ -71,7 +69,11 @@ and enable `repeat-mode' for ergonomics.
   │   ;;             (save-some-buffers t t)))
   │ 
   │   ;; Projectile users
-  │   ;; (setq dape-cwd-fn 'projectile-project-root)
+  │   ;; (setq dape-cwd-fn (lambda (&optional skip-tramp-trim)
+  │   ;;                     (let ((root (projectile-project-root)))
+  │   ;;                       (if (and (not skip-tramp-trim) (tramp-tramp-file-p root))
+  │   ;;                           (tramp-file-name-localname (tramp-dissect-file-name root))
+  │   ;;                         root))))
   │   )
   └────
 
@@ -210,8 +212,16 @@ and enable `repeat-mode' for ergonomics.
   See <https://github.com/Samsung/netcoredbg> for installation
 
 
-4.9 Other untested adapters
-───────────────────────────
+4.9 Ruby - rdbg
+───────────────
+
+  Install with `gem install debug'.
+
+  See <https://github.com/ruby/debug> for more information
+
+
+4.10 Other untested adapters
+────────────────────────────
 
   If you find a working configuration for any other debug adapter please
   submit a PR.

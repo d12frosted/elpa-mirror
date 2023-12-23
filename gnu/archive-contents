@@ -758,13 +758,13 @@
 		 (:keywords "convenience")
 		 (:url . "http://elpa.gnu.org/packages/cycle-quotes.html"))])
  (dape .
-       [(0 2 2)
+       [(0 3 0)
 	((emacs
 	  (29 1)))
 	"Debug Adapter Protocol for Emacs" tar
 	((:url . "https://github.com/svaante/dape")
 	 (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-	 (:commit . "a8e56d3767e1b063f6c49a6081ca4e22afdfaaaf"))])
+	 (:commit . "53560932c3cf11aecd17bb247743e4352c0ddf20"))])
  (darkroom .
 	   [(0 3)
 	    ((cl-lib
@@ -1196,7 +1196,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 4 3)
+	 [(0 4 6)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1209,7 +1209,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "d2fc4223f7fc29356d66253dea5a47afa3d7478c"))])
+	   (:commit . "cb0fbac035ce76985e85d071e960901b39269112"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs

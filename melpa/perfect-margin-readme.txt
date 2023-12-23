@@ -24,6 +24,10 @@ Change `perfect-margin-visible-width` and `Apply and Save`. That's it.
 
 (setq perfect-margin-visible-width 128)
 
+By default both left and right margins are set, enable this option to only set the left margin of windows.
+
+(setq perfect-margin-only-set-left-margin t)
+
 # Additional binding on margin area
 
 You can place this in your init.el to make mouse wheel scroll on margin area just like it scroll on the visible window.
