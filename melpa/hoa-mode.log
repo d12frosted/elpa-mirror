@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://gitlab.lrde.epita.fr/spot/emacs-modes.git
 
 Updating /mnt/store/melpa/working/hoa-mode/
-Checking out 18f5c981e256f867f29a93376ccdc04717b159cd
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hoa-mode/
-  to /tmp/hoa-modeqqOevw/hoa-mode-20200610.1339
-    hoa-mode.el -> hoa-mode.el
-Created hoa-mode-20200610.1339.tar containing:
-  hoa-mode-20200610.1339/
-  hoa-mode-20200610.1339/hoa-mode-pkg.el
-  hoa-mode-20200610.1339/hoa-mode.el
- ✓ Success:
-  2023-12-23T19:17:17+0000  hoa-mode-20200610.1339.entry
-  2023-12-23T19:17:17+0000  hoa-mode-20200610.1339.tar
-Built hoa-mode in 7.800s, finished at 2023-12-23T19:17:18+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://gitlab.lrde.epita.fr/spot/emacs-modes.git/': server certificate verification failed. CAfile: none CRLfile: none
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

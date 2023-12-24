@@ -1196,7 +1196,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 4 6)
+	 [(0 4 7)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1209,7 +1209,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "cb0fbac035ce76985e85d071e960901b39269112"))])
+	   (:commit . "0caf2ec8d1d3731f9500a78331874fb89d6f8317"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2749,7 +2749,7 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(1 0)
+      [(1 1)
        ((emacs
 	 (27 1))
 	(compat
@@ -2760,7 +2760,7 @@
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "74bf96638c08b87c5a1621e4dcbb992b2851eb3b"))])
+	(:commit . "ce940a8fd0afb1263eed304065eafc52df524a82"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs

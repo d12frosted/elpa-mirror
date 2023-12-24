@@ -18,9 +18,10 @@ Table of Contents
 1. Features
 2. Configuration
 3. Bookmarks, Org links, Geo urls and Elisp links
-4. Commands and Key Bindings
-5. Related projects
-6. Contributions
+4. Distance measurement
+5. Commands and Key Bindings
+6. Related projects
+7. Contributions
 
 
 1 Features
@@ -32,6 +33,7 @@ Table of Contents
   • Moving in large and small steps
   • Mouse support (dragging, clicking, menu)
   • Map scale indicator
+  • Distance measurement
   • Go to coordinate
   • Search for location by name
   • Org link, Geo url and Elisp link support
@@ -92,8 +94,8 @@ Table of Contents
     ring. An Elisp link has the form `(osm 51.49 -0.14 11)'.
 
   Bookmarks and Org links can be created at point by clicking with the
-  mouse. See the docstrings of the commands `osm-bookmark-set-click' and
-  `osm-org-link-click'.
+  mouse. See the docstrings of the commands `osm-bookmark-set' and
+  `org-link-store'.
 
 
 ◊ 3.0.0.1 Org link examples
@@ -134,7 +136,18 @@ Table of Contents
   └────
 
 
-4 Commands and Key Bindings
+4 Distance measurement
+══════════════════════
+
+  Osm provides a simple distance measurement utility. In order to
+  measure a distance, place or select a pin by clicking with the left
+  mouse button. Then create one or more additional way points by
+  pressing shift and clicking the left mouse button. The length of the
+  track will be shown in the echo area. You can select the way points of
+  the track and delete them with `d' or `DEL'.
+
+
+5 Commands and Key Bindings
 ═══════════════════════════
 
   Top-level commands in `osm-prefix-map'. These bindings are available
@@ -156,13 +169,14 @@ Table of Contents
   • `C-<arrow>', `M-<arrow>': Large step scrolling
   • `+', `SPC': `osm-zoom-in' - Zoom in
   • `-', `S-SPC': `osm-zoom-out' - Zoom out
-  • `<mouse-1>': `osm-transient-click' - Place transient pin at point
-  • `<mouse-2>': `osm-org-link-click' - Store point as Org link
-  • `<mouse-3>': `osm-bookmark-set-click' - Store point as bookmark
-  • `<osm-bookmark mouse-*>': `osm-bookmark-delete-click' - Click on
-    bookmark at point to delete
+  • `<mouse-1>': `osm-mouse-pin' - Place pin at point
+  • `<mouse-2>': `org-link-store' - Store point as Org link
+  • `<mouse-3>': `osm-bookmark-set' - Store point as bookmark
+  • `S-<mouse-1>': `osm-mouse-track' - Create track pin to measure
+    distance
   • `<down-mouse-*>': `osm-mouse-drag' - Drag the map with the mouse
-  • `d', `DEL': `osm-bookmark-delete' - Delete selected bookmark
+  • `d', `DEL': `osm-delete' - Delete selected pin (bookmark or way
+    point)
   • `c': `osm-center' - Center to currently marked pin
   • `X': `osm-gpx-hide' - Hide overlays from GPX file
   • `l': `org-store-link' - Store Org link
@@ -173,7 +187,7 @@ Table of Contents
   • `o': `clone-buffer' - Clone buffer
 
 
-5 Related projects
+6 Related projects
 ══════════════════
 
   There have been other attempts at map viewers in Emacs before.
@@ -184,7 +198,7 @@ Table of Contents
   • <https://github.com/emacsattic/org-osm-link>
 
 
-6 Contributions
+7 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a
