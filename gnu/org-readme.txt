@@ -14,11 +14,9 @@ Check the [Org Mode website] for more.
 
   Org is part of GNU Emacs: you probably don't need to install it.
 
-  To install a more recent version, please do it from [GNU ELPA] by
-  running this command: `M-x package-install RET org RET'
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/org.html>
+  To install a more recent version, please use command: `M-x
+  list-packages', find "org" in the list, click on it, and click
+  "Install" in the popped up window.
 
 
 2 Join the GNU Project
