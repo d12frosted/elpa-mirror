@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/mohkale/flymake-collection.git
 
 Updating /mnt/store/melpa/working/flymake-collection/
-Checking out 845c52a1aead7485450c62b48a92096160d99a25
+Checking out d80144082511f5c8169540e43652b23c19509740
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flymake-collection/
-  to /tmp/flymake-collectionsmPHhe/flymake-collection-20230606.2002
+  to /tmp/flymake-collectionVmwVyE/flymake-collection-20231226.1614
   ! src/flymake-collection-commands.el -> flymake-collection-commands.el
   ! src/flymake-collection-define.el -> flymake-collection-define.el
   ! src/flymake-collection-hook.el -> flymake-collection-hook.el
@@ -36,39 +36,39 @@ Copying files (->) and directories (=>)
   ! src/checkers/flymake-collection-statix.el -> flymake-collection-statix.el
   ! src/checkers/flymake-collection-xmllint.el -> flymake-collection-xmllint.el
   ! src/checkers/flymake-collection-yamllint.el -> flymake-collection-yamllint.el
-Created flymake-collection-20230606.2002.tar containing:
-  flymake-collection-20230606.2002/
-  flymake-collection-20230606.2002/flymake-collection-awk-gawk.el
-  flymake-collection-20230606.2002/flymake-collection-clang.el
-  flymake-collection-20230606.2002/flymake-collection-commands.el
-  flymake-collection-20230606.2002/flymake-collection-define.el
-  flymake-collection-20230606.2002/flymake-collection-eslint.el
-  flymake-collection-20230606.2002/flymake-collection-flake8.el
-  flymake-collection-20230606.2002/flymake-collection-gcc.el
-  flymake-collection-20230606.2002/flymake-collection-hlint.el
-  flymake-collection-20230606.2002/flymake-collection-hook.el
-  flymake-collection-20230606.2002/flymake-collection-html-tidy.el
-  flymake-collection-20230606.2002/flymake-collection-jq.el
-  flymake-collection-20230606.2002/flymake-collection-jsonlint.el
-  flymake-collection-20230606.2002/flymake-collection-less.el
-  flymake-collection-20230606.2002/flymake-collection-lua.el
-  flymake-collection-20230606.2002/flymake-collection-luacheck.el
-  flymake-collection-20230606.2002/flymake-collection-markdownlint.el
-  flymake-collection-20230606.2002/flymake-collection-mypy.el
-  flymake-collection-20230606.2002/flymake-collection-pkg.el
-  flymake-collection-20230606.2002/flymake-collection-proselint.el
-  flymake-collection-20230606.2002/flymake-collection-pycodestyle.el
-  flymake-collection-20230606.2002/flymake-collection-pylint.el
-  flymake-collection-20230606.2002/flymake-collection-rubocop.el
-  flymake-collection-20230606.2002/flymake-collection-ruff.el
-  flymake-collection-20230606.2002/flymake-collection-shellcheck.el
-  flymake-collection-20230606.2002/flymake-collection-sql-lint.el
-  flymake-collection-20230606.2002/flymake-collection-sqlint.el
-  flymake-collection-20230606.2002/flymake-collection-statix.el
-  flymake-collection-20230606.2002/flymake-collection-xmllint.el
-  flymake-collection-20230606.2002/flymake-collection-yamllint.el
-  flymake-collection-20230606.2002/flymake-collection.el
+Created flymake-collection-20231226.1614.tar containing:
+  flymake-collection-20231226.1614/
+  flymake-collection-20231226.1614/flymake-collection-awk-gawk.el
+  flymake-collection-20231226.1614/flymake-collection-clang.el
+  flymake-collection-20231226.1614/flymake-collection-commands.el
+  flymake-collection-20231226.1614/flymake-collection-define.el
+  flymake-collection-20231226.1614/flymake-collection-eslint.el
+  flymake-collection-20231226.1614/flymake-collection-flake8.el
+  flymake-collection-20231226.1614/flymake-collection-gcc.el
+  flymake-collection-20231226.1614/flymake-collection-hlint.el
+  flymake-collection-20231226.1614/flymake-collection-hook.el
+  flymake-collection-20231226.1614/flymake-collection-html-tidy.el
+  flymake-collection-20231226.1614/flymake-collection-jq.el
+  flymake-collection-20231226.1614/flymake-collection-jsonlint.el
+  flymake-collection-20231226.1614/flymake-collection-less.el
+  flymake-collection-20231226.1614/flymake-collection-lua.el
+  flymake-collection-20231226.1614/flymake-collection-luacheck.el
+  flymake-collection-20231226.1614/flymake-collection-markdownlint.el
+  flymake-collection-20231226.1614/flymake-collection-mypy.el
+  flymake-collection-20231226.1614/flymake-collection-pkg.el
+  flymake-collection-20231226.1614/flymake-collection-proselint.el
+  flymake-collection-20231226.1614/flymake-collection-pycodestyle.el
+  flymake-collection-20231226.1614/flymake-collection-pylint.el
+  flymake-collection-20231226.1614/flymake-collection-rubocop.el
+  flymake-collection-20231226.1614/flymake-collection-ruff.el
+  flymake-collection-20231226.1614/flymake-collection-shellcheck.el
+  flymake-collection-20231226.1614/flymake-collection-sql-lint.el
+  flymake-collection-20231226.1614/flymake-collection-sqlint.el
+  flymake-collection-20231226.1614/flymake-collection-statix.el
+  flymake-collection-20231226.1614/flymake-collection-xmllint.el
+  flymake-collection-20231226.1614/flymake-collection-yamllint.el
+  flymake-collection-20231226.1614/flymake-collection.el
  ✓ Success:
-  2023-12-26T14:57:43+0000  flymake-collection-20230606.2002.entry
-  2023-12-26T14:57:43+0000  flymake-collection-20230606.2002.tar
-Built flymake-collection in 4.886s, finished at 2023-12-26T14:57:45+0000
+  2023-12-26T19:04:49+0000  flymake-collection-20231226.1614.entry
+  2023-12-26T19:04:49+0000  flymake-collection-20231226.1614.tar
+Built flymake-collection in 4.002s, finished at 2023-12-26T19:04:51+0000
