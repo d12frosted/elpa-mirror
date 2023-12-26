@@ -1196,7 +1196,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 4 9)
+	 [(0 4 11)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1209,7 +1209,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "4962a7e2c4f9a6a1afe920c9242074aef7059e28"))])
+	   (:commit . "70671ca6622fc2726c23eef7a619b4c26c70fcc5"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -4430,7 +4430,7 @@
 	((:url . "https://elpa.gnu.org/packages/xref.html")
 	 (:commit . "4b6f2a7028b91128934a19f83572f24106782225"))])
  (xref-union .
-	     [(0 1 1)
+	     [(0 2 0)
 	      ((emacs
 		(25 1)))
 	      "Combine multiple Xref backends" tar
@@ -4438,7 +4438,7 @@
 	       (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
 	       (:authors
 		("Philip Kaludercic" . "philipk@posteo.net"))
-	       (:commit . "0f98bea5948cee35aa9070b631bc0188159d5b3d"))])
+	       (:commit . "2bb88d0dc526177c3c6612d6585cee6b2c57803a"))])
  (yasnippet .
 	    [(0 14 0)
 	     ((cl-lib
