@@ -3,24 +3,26 @@ Fetcher: github
 Source:  https://github.com/emacscollective/borg.git
 
 Updating /mnt/store/melpa/working/borg/
-Checking out 46335f7b19835f462523e938e9026a0ab3521898
+Checking out 1b4efad56d4177fcabc98851c3e4395e94b52e0f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borgf1PEHJ/borg-20231218.1850
+  to /tmp/borgWLL7ad/borg-20231227.858
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
   ! docs/borg.texi -> borg.texi
     borg.mk -> borg.mk
-Generating /tmp/borgf1PEHJ/borg-20231218.1850/borg.info
-Created borg-20231218.1850.tar containing:
-  borg-20231218.1850/
-  borg-20231218.1850/borg-elpa.el
-  borg-20231218.1850/borg-pkg.el
-  borg-20231218.1850/borg.el
-  borg-20231218.1850/borg.info
-  borg-20231218.1850/borg.mk
-  borg-20231218.1850/dir
+Generating /tmp/borgWLL7ad/borg-20231227.858/borg.info
+Created borg-20231227.858.tar containing:
+  borg-20231227.858/
+  borg-20231227.858/borg-elpa.el
+  borg-20231227.858/borg-pkg.el
+  borg-20231227.858/borg.el
+  borg-20231227.858/borg.info
+  borg-20231227.858/borg.mk
+  borg-20231227.858/dir
  ✓ Success:
-  2023-12-27T02:41:42+0000  borg-20231218.1850.entry
-  2023-12-27T02:41:41+0000  borg-20231218.1850.tar
-Built borg in 6.963s, finished at 2023-12-27T02:41:43+0000
+  2023-12-27T08:36:53+0000  borg-20231218.1850.entry
+  2023-12-27T08:36:53+0000  borg-20231218.1850.tar
+  2023-12-27T10:36:39+0000  borg-20231227.858.entry
+  2023-12-27T10:36:39+0000  borg-20231227.858.tar
+Built borg in 8.746s, finished at 2023-12-27T10:36:40+0000
