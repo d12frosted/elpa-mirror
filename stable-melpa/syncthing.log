@@ -3,16 +3,38 @@ Fetcher: github
 Source:  https://github.com/KeyWeeUsr/emacs-syncthing.git
 
 Updating /mnt/store/melpa/working/syncthing/
-Checking out df2efd31689efe8ad340d53f602a777e5e0d78f3
+Checking out d0ad6245e52d681c673517ddc2a119630eb28bfd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/syncthing/
-  to /tmp/syncthinghpi1Lb/syncthing-20231225.1505
+  to /tmp/syncthingsRpEip/syncthing-20231226.2000
+    syncthing-common.el -> syncthing-common.el
+    syncthing-constants.el -> syncthing-constants.el
+    syncthing-custom.el -> syncthing-custom.el
+    syncthing-draw.el -> syncthing-draw.el
+    syncthing-faces.el -> syncthing-faces.el
+    syncthing-groups.el -> syncthing-groups.el
+    syncthing-keyboard.el -> syncthing-keyboard.el
+    syncthing-network.el -> syncthing-network.el
+    syncthing-state.el -> syncthing-state.el
+    syncthing-update.el -> syncthing-update.el
+    syncthing-watcher.el -> syncthing-watcher.el
     syncthing.el -> syncthing.el
-Created syncthing-20231225.1505.tar containing:
-  syncthing-20231225.1505/
-  syncthing-20231225.1505/syncthing-pkg.el
-  syncthing-20231225.1505/syncthing.el
+Created syncthing-20231226.2000.tar containing:
+  syncthing-20231226.2000/
+  syncthing-20231226.2000/syncthing-common.el
+  syncthing-20231226.2000/syncthing-constants.el
+  syncthing-20231226.2000/syncthing-custom.el
+  syncthing-20231226.2000/syncthing-draw.el
+  syncthing-20231226.2000/syncthing-faces.el
+  syncthing-20231226.2000/syncthing-groups.el
+  syncthing-20231226.2000/syncthing-keyboard.el
+  syncthing-20231226.2000/syncthing-network.el
+  syncthing-20231226.2000/syncthing-pkg.el
+  syncthing-20231226.2000/syncthing-state.el
+  syncthing-20231226.2000/syncthing-update.el
+  syncthing-20231226.2000/syncthing-watcher.el
+  syncthing-20231226.2000/syncthing.el
  ✓ Success:
-  2023-12-26T19:48:00+0000  syncthing-20231225.1505.entry
-  2023-12-26T19:48:00+0000  syncthing-20231225.1505.tar
-Built syncthing in 4.236s, finished at 2023-12-26T19:48:01+0000
+  2023-12-26T23:46:26+0000  syncthing-20231226.2000.entry
+  2023-12-26T23:46:26+0000  syncthing-20231226.2000.tar
+Built syncthing in 4.030s, finished at 2023-12-26T23:46:27+0000
