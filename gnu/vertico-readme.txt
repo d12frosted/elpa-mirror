@@ -313,8 +313,8 @@ Table of Contents
   extensions. Currently the following extensions come with the Vertico
   ELPA package:
 
-  • [vertico-buffer]: `vertico-buffer-mode' to display Vertico in a
-    separate buffer.
+  • [vertico-buffer]: `vertico-buffer-mode' to display Vertico like a
+    regular buffer.
   • [vertico-directory]: Commands for Ido-like directory navigation.
   • [vertico-flat]: `vertico-flat-mode' to enable a flat, horizontal
     display.
@@ -438,11 +438,12 @@ Table of Contents
   `vertico-multiform-map'. You can of course change these bindings if
   you like.
 
-  • `M-V' -> `vertico-multiform-vertical'
-  • `M-G' -> `vertico-multiform-grid'
+  • `M-B' -> `vertico-multiform-buffer'
   • `M-F' -> `vertico-multiform-flat'
+  • `M-G' -> `vertico-multiform-grid'
   • `M-R' -> `vertico-multiform-reverse'
   • `M-U' -> `vertico-multiform-unobtrusive'
+  • `M-V' -> `vertico-multiform-vertical'
 
   For special configuration you can use your own functions or even
   lambdas to configure the completion behavior per command or per

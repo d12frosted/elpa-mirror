@@ -1130,11 +1130,11 @@
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	      (:commit . "abe9503a693e5561db7049606b47459236c2699f"))])
  (eglot .
-	[(1 16)
+	[(1 15)
 	 ((emacs
 	   (26 3))
 	  (jsonrpc
-	   (1 0 23))
+	   (1 0 16))
 	  (flymake
 	   (1 2 1))
 	  (project
@@ -1153,7 +1153,7 @@
 	  (:maintainer "João Távora" . "joaotavora@gmail.com")
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
-	  (:commit . "c5a4366b3f3c6ee4178d954e58eb226441d1d2ee"))])
+	  (:commit . "30892cbd330ace125454a056ca86d85e2a860bf5"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -1196,7 +1196,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 4 12)
+	 [(0 4 13)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1209,7 +1209,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "4bee1325428459a6df6eec23319cd7600927753a"))])
+	   (:commit . "4bf9c6c08d43779a0ae838ba6a1045772050f8a4"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2250,11 +2250,11 @@
 	(:url . "https://elpa.gnu.org/packages/map.html")
 	(:commit . "9da2efb670574b473ab864ae0456b4f1b38e680b"))])
  (marginalia .
-	     [(1 4)
+	     [(1 5)
 	      ((emacs
 		(27 1))
 	       (compat
-		(29 1 4 0)))
+		(29 1 4 4)))
 	      "Enrich existing commands with completion annotations" tar
 	      ((:url . "https://github.com/minad/marginalia")
 	       (:keywords "docs" "help" "matching" "completion")
@@ -2264,7 +2264,7 @@
 	       (:authors
 		("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "270d0d9bf766900e605883567b5131ae739918be"))])
+	       (:commit . "98f6e58c12d57283bd7c1cb241664c966dc38ac3"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" single
@@ -2752,18 +2752,18 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(1 1)
+      [(1 2)
        ((emacs
 	 (27 1))
 	(compat
-	 (29 1 4 2)))
+	 (29 1 4 4)))
        "OpenStreetMap viewer" tar
        ((:url . "https://github.com/minad/osm")
 	(:keywords "network" "multimedia" "hypermedia" "mouse")
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "ce940a8fd0afb1263eed304065eafc52df524a82"))])
+	(:commit . "54d8fac06c36bf319cdac1c92bef2fcfc372b53f"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs
@@ -4163,7 +4163,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "f68d962ede0cc3d7758d3304e7411a10694acce8"))])
  (vertico .
-	  [(1 5)
+	  [(1 6)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -4174,7 +4174,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "017ff44443bad401097b9987849625cafa348d86"))])
+	    (:commit . "f7aeda39df860ba1d82d0d94396f8bdeb13c4c8c"))])
  (vertico-posframe .
 		   [(0 7 5)
 		    ((emacs

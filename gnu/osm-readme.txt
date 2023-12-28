@@ -166,7 +166,7 @@ Table of Contents
   Some additional key bindings are available in Osm buffers:
 
   • `<arrow>': Small step scrolling
-  • `C-<arrow>', `M-<arrow>': Large step scrolling
+  • `C-<arrow>', `M-<arrow>', `S-<arrow>': Large step scrolling
   • `+', `SPC': `osm-zoom-in' - Zoom in
   • `-', `S-SPC': `osm-zoom-out' - Zoom out
   • `<mouse-1>': `osm-mouse-pin' - Place pin at point
@@ -177,12 +177,12 @@ Table of Contents
   • `<down-mouse-*>': `osm-mouse-drag' - Drag the map with the mouse
   • `d', `DEL': `osm-delete' - Delete selected pin (bookmark or way
     point)
-  • `c': `osm-center' - Center to currently marked pin
+  • `n': `osm-rename' - Rename selected pin
+  • `c': `osm-center' - Center to currently selected pin
   • `X': `osm-gpx-hide' - Hide overlays from GPX file
   • `l': `org-store-link' - Store Org link
   • `u': `osm-save-url' - Save geo url in the kill ring
   • `b': `osm-bookmark-set' - Set bookmark
-  • `n': `osm-bookmark-rename' - Rename selected bookmark
   • `q': `quit-window' - Close buffer and window
   • `o': `clone-buffer' - Clone buffer
 
