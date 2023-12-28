@@ -432,18 +432,18 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "2c4221ecfaf511cbca0205ccb3531d70246a71dc"))])
  (cape .
-       [(1 0)
+       [(1 1)
 	((emacs
 	  (27 1))
 	 (compat
-	  (29 1 4 2)))
+	  (29 1 4 4)))
 	"Completion At Point Extensions" tar
 	((:url . "https://github.com/minad/cape")
 	 (:keywords "abbrev" "convenience" "matching" "completion" "wp")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "18a30f48bb8754421cb10dad99e0a406173d4551"))])
+	 (:commit . "1a52302e1bb051f1f0fc8a9e49780bf9af797e15"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -604,16 +604,16 @@
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "3809be4d24a301c78d40bd00fc15bb763e0a3a2a"))])
  (consult .
-	  [(1 0)
+	  [(1 1)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (29 1 4 1)))
+	     (29 1 4 4)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "10a1d7012af5186e6462f44312724359d33748c3"))])
+	    (:commit . "0e7f3ec8e7e959e262158fa4ddb73de80b52ccc0"))])
  (consult-recoll .
 		 [(0 8 1)
 		  ((emacs
@@ -638,7 +638,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(1 0)
+	[(1 1)
 	 ((emacs
 	   (27 1))
 	  (compat
@@ -649,7 +649,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "24dccafeea114b1aec7118f2a8405b46aa0051e0"))])
+	  (:commit . "4584252abefb37ac46a32177aa9442164165b55c"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
@@ -1130,11 +1130,11 @@
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	      (:commit . "abe9503a693e5561db7049606b47459236c2699f"))])
  (eglot .
-	[(1 15)
+	[(1 16)
 	 ((emacs
 	   (26 3))
 	  (jsonrpc
-	   (1 0 16))
+	   (1 0 23))
 	  (flymake
 	   (1 2 1))
 	  (project
@@ -1153,7 +1153,7 @@
 	  (:maintainer "João Távora" . "joaotavora@gmail.com")
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
-	  (:commit . "30892cbd330ace125454a056ca86d85e2a860bf5"))])
+	  (:commit . "c5a4366b3f3c6ee4178d954e58eb226441d1d2ee"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -1196,7 +1196,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 4 11)
+	 [(0 4 12)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1209,7 +1209,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "70671ca6622fc2726c23eef7a619b4c26c70fcc5"))])
+	   (:commit . "4bee1325428459a6df6eec23319cd7600927753a"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1984,18 +1984,18 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (jinx .
-       [(1 0)
+       [(1 1)
 	((emacs
 	  (27 1))
 	 (compat
-	  (29 1 4 0)))
+	  (29 1 4 4)))
 	"Enchanted Spell Checker" tar
 	((:url . "https://github.com/minad/jinx")
 	 (:keywords "convenience" "wp")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "2533991bfe9da75aa6adad73770fe5b196ea0bb1"))])
+	 (:commit . "041b6590eb703c9b34968a9374f2a6d41af60aea"))])
  (jit-spell .
 	    [(0 3)
 	     ((emacs
@@ -2038,7 +2038,7 @@
 	       ("Simen Heggestøyl" . "simenheg@gmail.com"))
 	      (:maintainer "Simen Heggestøyl" . "simenheg@gmail.com"))])
  (jsonrpc .
-	  [(1 0 22)
+	  [(1 0 23)
 	   ((emacs
 	     (25 2)))
 	   "JSON-RPC library" tar
@@ -2047,7 +2047,7 @@
 	    (:authors
 	     ("João Távora" . "joaotavora@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
-	    (:commit . "4adc67c59dedcea89116aae0e054ea1212dcca7a"))])
+	    (:commit . "731cfee3b45361158d88bded3c32c9a48ace7bdb"))])
  (jumpc .
 	[(3 1)
 	 nil "jump to previous insertion points" tar

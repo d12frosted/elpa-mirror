@@ -687,37 +687,8 @@ Table of Contents
   └────
 
   Sources can be added directly to the `consult-buffer-source' list for
-  convenience.  For example views/perspectives can be added to the list
-  of virtual buffers from a library like [bookmark-view].
-
-  ┌────
-  │ ;; Configure new bookmark-view source
-  │ (add-to-list 'consult-buffer-sources
-  │ 	      (list :name     "View"
-  │ 		    :narrow   ?v
-  │ 		    :category 'bookmark
-  │ 		    :face     'font-lock-keyword-face
-  │ 		    :history  'bookmark-view-history
-  │ 		    :action   #'consult--bookmark-action
-  │ 		    :items    #'bookmark-view-names)
-  │ 	      'append)
-  │ 
-  │ ;; Modify bookmark source, such that views are hidden
-  │ (setq consult--source-bookmark
-  │       (plist-put
-  │        consult--source-bookmark :items
-  │        (lambda ()
-  │ 	 (bookmark-maybe-load-default-file)
-  │ 	 (mapcar #'car
-  │ 		 (seq-remove (lambda (x)
-  │ 			       (eq #'bookmark-view-handler
-  │ 				   (alist-get 'handler (cdr x))))
-  │ 			     bookmark-alist)))))
-  └────
-
-  Another useful source lists all Org buffers and lets you create new
-  ones. One can create similar sources for other major modes, e.g., for
-  Eshell.
+  convenience.  For example, the following source lists all Org buffers
+  and lets you create new ones.
 
   ┌────
   │ (defvar org-source
@@ -740,13 +711,14 @@ Table of Contents
   │ (add-to-list 'consult-buffer-sources 'org-source 'append)
   └────
 
-  For more details, see the documentation of `consult-buffer' and of the
-  internal `consult--multi' API. The `consult--multi' function can be
-  used to create new multi-source commands, but is part of the internal
-  API as of now, since some details may still change.
+  One can create similar sources for other major modes. See the [Consult
+  wiki] for many additional source examples. See also the documentation
+  of `consult-buffer' and of the internal `consult--multi' API. The
+  function `consult--multi' can be used to create new multi-source
+  commands.
 
 
-[bookmark-view] <https://github.com/minad/bookmark-view/>
+[Consult wiki] <https://github.com/minad/consult/wiki>
 
 
 2.5 Embark integration
@@ -1255,127 +1227,99 @@ Table of Contents
   these great contributors and thanks to the feedback of many
   users. Thank you!
 
-  Code contributions:
-  • [Omar Antolín Camarena]
-  • [Sergey Kostyaev]
-  • [Earl Hyatt]
-  • [Clemens Radermacher]
-  • [Tom Fitzhenry]
-  • [jakanakaevangeli]
-  • [Iñigo Serna]
-  • [Adam Spiers]
-  • [Omar Polo]
-  • [Augusto Stoffel]
-  • [Fox Kiester]
-  • [Tecosaur]
-  • [Mohamed Abdelnour]
-  • [Sylvain Rousseau]
-  • [JD Smith]
-  • [Mohsin Kaleem]
-  • [Jean-Philippe Bernardy]
-  • [Aymeric Agon-Rambosson]
-  • [Geoffrey Lessel]
-  • [Piotr Kwiecinski]
-  • [Robert Weiner]
-  • [Amos Bird]
-  • [Zhengyi]
-  • [Alexandru Scvorțov]
-  • [Ashton Wiersdorf]
-  • [Illia Ostapyshyn]
+  Code contributions: [Aymeric Agon-Rambosson], [Amos Bird], [Ashton
+  Wiersdorf], [Adam Spiers], [Augusto Stoffel], [Clemens Radermacher],
+  [Zhengyi], [Geoffrey Lessel], [Illia Ostapyshyn], [jakanakaevangeli],
+  [JD Smith], [Jean-Philippe Bernardy], [Mohamed Abdelnour], [Mohsin
+  Kaleem], [Fox Kiester], [Omar Antolín Camarena], [Earl Hyatt], [Omar
+  Polo], [Piotr Kwiecinski], [Robert Weiner], [Sergey Kostyaev],
+  [Alexandru Scvorțov], [Tecosaur], [Sylvain Rousseau], [Tom Fitzhenry],
+  [Iñigo Serna] and [Alex Kreisher].
 
-  Advice and useful discussions:
-  • [Clemens Radermacher]
-  • [Omar Antolín Camarena]
-  • [Protesilaos Stavrou]
-  • [Steve Purcell]
-  • [Adam Porter]
-  • [Manuel Uberti]
-  • [Tom Fitzhenry]
-  • [Howard Melman]
-  • [Stefan Monnier]
-  • [Dmitry Gutov]
-  • [Itai Y. Efrat]
-  • [Bruce d'Arcus]
-  • [JD Smith]
-  • [Enrique Kessler Martínez]
-  • [Radon Rosborough]
+  Advice and useful discussions: [Enrique Kessler Martínez], [Adam
+  Porter], [Bruce d'Arcus], [Clemens Radermacher], [Dmitry Gutov],
+  [Howard Melman], [Itai Y. Efrat], [JD Smith], [Manuel Uberti], [Stefan
+  Monnier], [Omar Antolín Camarena], [Steve Purcell], [Radon
+  Rosborough], [Tom Fitzhenry] and [Protesilaos Stavrou].
 
 
 [Counsel] <https://github.com/abo-abo/swiper#counsel>
 
-[Omar Antolín Camarena] <https://github.com/oantolin/>
+[Aymeric Agon-Rambosson] <https://github.com/aagon>
 
-[Sergey Kostyaev] <https://github.com/s-kostyaev/>
+[Amos Bird] <https://github.com/amosbird>
 
-[Earl Hyatt] <https://github.com/okamsn/>
-
-[Clemens Radermacher] <https://github.com/clemera/>
-
-[Tom Fitzhenry] <https://github.com/tomfitzhenry/>
-
-[jakanakaevangeli] <https://github.com/jakanakaevangeli>
-
-[Iñigo Serna] <https://hg.serna.eu>
+[Ashton Wiersdorf] <https://github.com/ashton314>
 
 [Adam Spiers] <https://github.com/aspiers/>
 
-[Omar Polo] <https://github.com/omar-polo>
-
 [Augusto Stoffel] <https://github.com/astoff>
 
-[Fox Kiester] <https://github.com/noctuid>
+[Clemens Radermacher] <https://github.com/clemera/>
 
-[Tecosaur] <https://github.com/tecosaur>
+[Zhengyi] <https://github.com/fuzy112>
 
-[Mohamed Abdelnour] <https://github.com/mohamed-abdelnour>
+[Geoffrey Lessel] <https://github.com/geolessel>
 
-[Sylvain Rousseau] <https://github.com/thisirs>
+[Illia Ostapyshyn] <https://github.com/iostapyshyn>
+
+[jakanakaevangeli] <https://github.com/jakanakaevangeli>
 
 [JD Smith] <https://github.com/jdtsmith>
 
-[Mohsin Kaleem] <https://github.com/mohkale>
-
 [Jean-Philippe Bernardy] <https://github.com/jyp>
 
-[Aymeric Agon-Rambosson] <https://github.com/aagon>
+[Mohamed Abdelnour] <https://github.com/mohamed-abdelnour>
 
-[Geoffrey Lessel] <https://github.com/geolessel>
+[Mohsin Kaleem] <https://github.com/mohkale>
+
+[Fox Kiester] <https://github.com/noctuid>
+
+[Omar Antolín Camarena] <https://github.com/oantolin/>
+
+[Earl Hyatt] <https://github.com/okamsn/>
+
+[Omar Polo] <https://github.com/omar-polo>
 
 [Piotr Kwiecinski] <https://github.com/piotrkwiecinski>
 
 [Robert Weiner] <https://github.com/rswgnu>
 
-[Amos Bird] <https://github.com/amosbird>
-
-[Zhengyi] <https://github.com/fuzy112>
+[Sergey Kostyaev] <https://github.com/s-kostyaev/>
 
 [Alexandru Scvorțov] <https://github.com/scvalex>
 
-[Ashton Wiersdorf] <https://github.com/ashton314>
+[Tecosaur] <https://github.com/tecosaur>
 
-[Illia Ostapyshyn] <https://github.com/iostapyshyn>
+[Sylvain Rousseau] <https://github.com/thisirs>
 
-[Protesilaos Stavrou] <https://protesilaos.com>
+[Tom Fitzhenry] <https://github.com/tomfitzhenry/>
 
-[Steve Purcell] <https://github.com/purcell/>
+[Iñigo Serna] <https://hg.serna.eu>
 
-[Adam Porter] <https://github.com/alphapapa/>
-
-[Manuel Uberti] <https://github.com/manuel-uberti/>
-
-[Howard Melman] <https://github.com/hmelman/>
-
-[Stefan Monnier] <https://github.com/monnier/>
-
-[Dmitry Gutov] <https://github.com/dgutov/>
-
-[Itai Y. Efrat] <https://github.com/iyefrat>
-
-[Bruce d'Arcus] <https://github.com/bdarcus>
+[Alex Kreisher] <https://github.com/akreisher>
 
 [Enrique Kessler Martínez] <https://github.com/Qkessler>
 
+[Adam Porter] <https://github.com/alphapapa/>
+
+[Bruce d'Arcus] <https://github.com/bdarcus>
+
+[Dmitry Gutov] <https://github.com/dgutov/>
+
+[Howard Melman] <https://github.com/hmelman/>
+
+[Itai Y. Efrat] <https://github.com/iyefrat>
+
+[Manuel Uberti] <https://github.com/manuel-uberti/>
+
+[Stefan Monnier] <https://github.com/monnier/>
+
+[Steve Purcell] <https://github.com/purcell/>
+
 [Radon Rosborough] <https://github.com/raxod502>
+
+[Protesilaos Stavrou] <https://protesilaos.com>
 
 
 8 Indices

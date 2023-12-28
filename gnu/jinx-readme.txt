@@ -119,18 +119,24 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
 3 Correcting misspellings
 ═════════════════════════
 
-  After invoking the command `jinx-correct', suggested corrections are
-  displayed as a completion menu. You can press the displayed digit keys
-  to quickly select a suggestion. Furthermore the menu offers options to
-  save the word temporarily for the current session, in the personal
-  dictionary or in the file-local variables.
+  The easiest way to correct a misspellings is to right click on the
+  word, underlined with a wavy line. Then a context menu will open where
+  you can select from suggestions.
 
-  Note that you can enter arbitrary input at the correction prompt in
-  order to make the correction or to store a modified word in the
-  personal dictionary.  For example if you typed `alotriomorpc', the
-  prompt offers you the option `@alotriomorpc' which would add this word
-  to your personal dictionary upon selection. You can then correct the
-  option to `@allotriomorphic' and add it to the dictionary.
+  If you prefer to use the keyboard, invoke the command
+  `jinx-correct'. The recommended binding is `M-$', see the
+  configuration section. Suggested corrections will be displayed as a
+  completion menu. You can press the displayed digit keys to quickly
+  select a suggestion. Furthermore the menu offers options to save the
+  word temporarily for the current session, in the personal dictionary
+  or in the file-local variables.
+
+  You can enter arbitrary input at the correction prompt in order to
+  make the correction or to store a modified word in the personal
+  dictionary. For example if you typed `alotriomorpc', the prompt offers
+  you the option `@alotriomorpc' which would add this word to your
+  personal dictionary upon selection. You can then correct the option to
+  `@allotriomorphic' and add it to the dictionary.
 
   While inside the `jinx-correct' prompt, the keys `M-n' and `M-p' are
   bound to `jinx-next' and `jinx-previous' respectively and allow you to
@@ -153,9 +159,9 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
 4 Navigating between misspellings
 ═════════════════════════════════
 
-  As mentioned before, when correcting a word with `jinx-correct', the
-  movement commands `jinx-next' and `jinx-previous' are available on the
-  keys `M-n' and `M-p' to navigate to the next and previous misspelling
+  When correcting a word with `jinx-correct', the movement commands
+  `jinx-next' and `jinx-previous' are available on the keys `M-n' and
+  `M-p' to navigate to the next and previous misspelling
   respectively. The movement commands work from within the minibuffer
   during `jinx-correct' and also globally outside the minibuffer
   context.
