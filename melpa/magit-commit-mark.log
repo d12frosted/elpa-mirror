@@ -3,8 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-magit-commit-mark.git
 
 Updating /mnt/store/melpa/working/magit-commit-mark/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
-fatal: expected flush after ref listing
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 8c0ea6c2e25ae0d47f15ae9067874a0605c00704
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magit-commit-mark/
+  to /tmp/magit-commit-markGRyZgp/magit-commit-mark-20230420.304
+    magit-commit-mark.el -> magit-commit-mark.el
+Created magit-commit-mark-20230420.304.tar containing:
+  magit-commit-mark-20230420.304/
+  magit-commit-mark-20230420.304/magit-commit-mark-pkg.el
+  magit-commit-mark-20230420.304/magit-commit-mark.el
+ ✓ Success:
+  2023-12-29T07:21:09+0000  magit-commit-mark-20230420.304.entry
+  2023-12-29T07:21:09+0000  magit-commit-mark-20230420.304.tar
+Built magit-commit-mark in 4.286s, finished at 2023-12-29T07:21:10+0000
