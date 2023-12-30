@@ -4213,7 +4213,6 @@
   (posix-manual :url "https://github.com/lassik/emacs-posix-manual.git")
   (postcss-sorting :url "https://github.com/P233/postcss-sorting.el.git")
   (pov-mode :url "https://github.com/melmothx/pov-mode.git")
-  (pow :url "https://github.com/yukihr/emacs-pow.git")
   (power-mode :url "https://github.com/elizagamedev/power-mode.el.git")
   (powerline :url "https://github.com/milkypostman/powerline.git")
   (powerline-evil :url "https://github.com/johnson-christopher/powerline-evil.git")
