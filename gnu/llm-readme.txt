@@ -9,44 +9,45 @@
 1 Introduction
 ══════════════
 
-  This is a library for interfacing with Large Language Models.  It
-  allows elisp code to use LLMs, but allows gives the end-user an option
-  to choose which LLM they would prefer.  This is especially useful for
-  LLMs, since there are various high-quality ones that in which API
-  access costs money, as well as locally installed ones that are free,
-  but of medium quality.  Applications using LLMs can use this library
-  to make sure their application works regardless of whether the user
-  has a local LLM or is paying for API access.
+  This library provides an interface for interacting with Large Language
+  Models (LLMs). It allows elisp code to use LLMs while also giving
+  end-users the choice to select their preferred LLM. This is
+  particularly beneficial when working with LLMs since various
+  high-quality models exist, some of which have paid API access, while
+  others are locally installed and free but offer medium
+  quality. Applications using LLMs can utilize this library to ensure
+  compatibility regardless of whether the user has a local LLM or is
+  paying for API access.
 
-  The functionality supported by LLMs is not completely consistent, nor
-  are their APIs.  In this library we attempt to abstract functionality
-  to a higher level, because sometimes those higher level concepts are
-  supported by an API, and othertimes they must be put in more low-level
-  concepts.  One such higher-level concept is "examples" where the
-  client can show example interactions to demonstrate a pattern for the
-  LLM.  The GCloud Vertex API has an explicit API for examples, but for
-  Open AI's API, examples must be specified by modifying the system
-  prompt.  Open AI has the concept of a system prompt, whereas Vertex
-  API does not.  These are the kinds of API differences we attempt to
-  hide by having higher-level concepts in our API.
+  LMMs exhibit varying functionalities and APIs. This library aims to
+  abstract functionality to a higher level, as some high-level concepts
+  might be supported by an API while others require more low-level
+  implementations. An example of such a concept is "examples," where the
+  client offers example interactions to demonstrate a pattern for the
+  LLM. While the GCloud Vertex API has an explicit API for examples,
+  OpenAI's API requires specifying examples by modifying the system
+  prompt. OpenAI also introduces the concept of a system prompt, which
+  does not exist in the Vertex API. Our library aims to conceal these
+  API variations by providing higher-level concepts in our API.
 
-  Some functionality may not be supported by LLMs.  Any unsupported
-  functionality with throw a `'not-implemented' signal.
+  Certain functionalities might not be available in some LLMs. Any such
+  unsupported functionality will raise a `'not-implemented' signal.
 
-  This package is simple at the moment, but will grow as both LLMs and
-  functionality is added.
+  This package is still in its early stages but will continue to develop
+  as LLMs and functionality are introduced.
 
 
 2 Setting up providers
 ══════════════════════
 
-  Users who use an application that uses this package should not need to
-  install it.  The llm module should be installed as a dependency when
-  you install the package that uses it.  You do need to make sure to
-  both require and set up the provider you will be using.  Typically,
-  applications will have a variable you can set.  For example, let's say
-  there's a package called "llm-refactoring", which has a variable
-  `llm-refactoring-provider'.  You would set it up like so:
+  Users of an application that uses this package should not need to
+  install it themselves. The llm module should be installed as a
+  dependency when you install the package that uses it. However, you do
+  need to require the llm module and set up the provider you will be
+  using. Typically, applications will have a variable you can set. For
+  example, let's say there's a package called "llm-refactoring", which
+  has a variable `llm-refactoring-provider'. You would set it up like
+  so:
 
   ┌────
   │ (use-package llm-refactoring
@@ -56,10 +57,10 @@
   └────
 
   Here `my-openai-key' would be a variable you set up before with your
-  Open AI key.  Or, just substitute the key itself as a string.  It's
-  important that you remember never to check your key into a public
-  repository such as github, because your key must be kept private.
-  Anyone with your key can use the API, and you will be charged.
+  OpenAI key. Or, just substitute the key itself as a string. It's
+  important to remember never to check your key into a public repository
+  such as GitHub, because your key must be kept private. Anyone with
+  your key can use the API, and you will be charged.
 
 
 2.1 Open AI
@@ -83,7 +84,19 @@
 <https://platform.openai.com/docs/guides/embeddings/embedding-models>
 
 
-2.2 Gemini (not via Google Cloud)
+2.2 Open AI Compatible
+──────────────────────
+
+  There are many Open AI compatible APIs and proxies of Open AI.  You
+  can set up one with `make-llm-openai-compatible', with the following
+  parameter:
+  • `:url', the URL of leading up to the command ("embeddings" or
+    "chat/completions").  So, for example,
+    "<https://api.openai.com/v1/>" is the URL to use Open AI (although
+    if you wanted to do that, just use `make-llm-openai' instead.
+
+
+2.3 Gemini (not via Google Cloud)
 ─────────────────────────────────
 
   This is Google's AI model.  You can get an API key via their [page on
@@ -101,7 +114,7 @@
 [page on Google AI Studio] <https://makersuite.google.com/app/apikey>
 
 
-2.3 Vertex (Gemini via Google Cloud)
+2.4 Vertex (Gemini via Google Cloud)
 ────────────────────────────────────
 
   This is mostly for those who want to use Google Cloud specifically,
@@ -139,7 +152,7 @@
 <https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings#supported_models>
 
 
-2.4 Ollama
+2.5 Ollama
 ──────────
 
   [Ollama] is a way to run large language models locally. There are
@@ -162,7 +175,7 @@
 [many different models] <https://ollama.ai/library>
 
 
-2.5 GPT4All
+2.6 GPT4All
 ───────────
 
   [GPT4All] is a way to run large language models locally.  To use it
@@ -182,7 +195,7 @@
 [GPT4All] <https://gpt4all.io/index.html>
 
 
-2.6 llama.cpp
+2.7 llama.cpp
 ─────────────
 
   [llama.cpp] is a way to run large language models locally.  To use it
@@ -195,7 +208,10 @@
 
   Llama.cpp does not have native chat interfaces, so is not as good at
   multi-round conversations as other solutions such as Ollama.  It will
-  perform better at single-responses.
+  perform better at single-responses.  However, it does support Open
+  AI's request format for models that are good at conversation.  If you
+  are using one of those models, you should probably use the Open AI
+  Compatible provider instead to connect to Llama CPP.
 
   The parameters default to optional values, so mostly users should just
   be creating a model with `(make-llm-llamacpp)'.  The parameters are:
@@ -210,7 +226,7 @@
 [llama.cpp] <https://github.com/ggerganov/llama.cpp>
 
 
-2.7 Fake
+2.8 Fake
 ────────
 
   This is a client that makes no call, but it just there for testing and
@@ -302,6 +318,11 @@
     `string'.  This may vary by `provider', because some provideres
     implement an API for this, but typically is always about the same.
     This gives an estimate if the provider has no API support.
+  • `llm-cancel-request request' Cancels the given request, if possible.
+    The `request' object is the return value of async and streaming
+    functions.
+  • `llm-name provider'.  Provides a short name of the model or
+    provider, suitable for showing to users.
 
     And the following helper functions:
     • `llm-make-simple-chat-prompt text': For the common case of just
@@ -343,6 +364,19 @@
   │     (setq llm-chat-streaming-prompt (llm-make-simple-chat-prompt text))
   │     (llm-chat-streaming-to-point provider llm-chat-streaming-prompt (current-buffer) (point-max) (lambda ()))))
   └────
+
+
+4.3 Caution about `llm-chat-prompt-interactions'
+────────────────────────────────────────────────
+
+  The interactions in a prompt may be modified by conversation or by the
+  conversion of the context and examples to what the LLM understands.
+  Different providers require different things from the interactions.
+  Some can handle system prompts, some cannot.  Some may have richer
+  APIs for examples and context, some not.  Do not attempt to read or
+  manipulate `llm-chat-prompt-interactions' after initially setting it
+  up for the first time, because you are likely to make changes that
+  only work for some providers.
 
 
 5 Contributions
