@@ -32,11 +32,11 @@ Emacs 28 or older
 
    • Remove all byte-compiled Tramp files
 
-          $ rm -f ~/.emacs.d/elpa/tramp-2.6.1.5/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.6.2.0/tramp*.elc
 
    • Start Emacs with Tramp’s source files
 
-          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.1.5 -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.2.0 -l tramp
 
      This should not give you the error.
 
@@ -50,7 +50,7 @@ Mitigation of a bug in Emacs 29.1
 ---------------------------------
 
 Due to a bug in Emacs 29.1, you must apply the following change prior
-installation or upgrading Tramp 2.6.1.5 from GNU ELPA:
+installation or upgrading Tramp 2.6.2.0 from GNU ELPA:
 
      (when (string-equal emacs-version "29.1")
        (with-current-buffer
