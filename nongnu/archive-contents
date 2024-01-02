@@ -2098,7 +2098,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:commit . "e73c0a38039eb32fd43911023ff35007e324c733"))])
  (sweeprolog .
-	     [(0 27 2)
+	     [(0 27 3)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2109,7 +2109,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "e98cf4feb6dab3b01b650b95830ea57b176613e4"))])
+	       (:commit . "52f506b3a3dd7e7003a44ad3ae5257b3d22025d2"))])
  (swift-mode .
 	     [(9 1 0)
 	      ((emacs
@@ -2418,14 +2418,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 19 20231231134718)
+	       [(24 19 20240101152046)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "3f96e2126ed997517abf3ce4e2f6e966f33b217e"))])
+		 (:commit . "d74760a2553f2b2275495ae99659451156639deb"))])
  (xkcd .
        [(1 1)
 	((json

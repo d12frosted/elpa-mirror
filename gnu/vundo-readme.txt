@@ -11,6 +11,11 @@ should pop up. To move around, type:
 
   a   to go back to the last branching point
   e   to go forward to the end/tip of the branch
+  l   to go to the last saved node
+
+  m   to mark the current node for diff
+  u   to unmark the marked node
+  d   to show a diff between the marked (or parent) and current nodes
 
   q   to quit, you can also type C-g
 
@@ -60,6 +65,4 @@ Comparing to undo-tree:
 
 Vundo doesn’t need to be turned on all the time nor replace the undo
 commands like undo-tree does. Vundo displays the tree horizontally,
-whereas undo-tree displays a tree vertically. Vundo doesn’t have many
-advanced features that undo-tree does (like showing diff), and most
-probably will not add those features in the future.
+whereas undo-tree displays a tree vertically.
