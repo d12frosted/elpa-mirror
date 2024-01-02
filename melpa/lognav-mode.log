@@ -1,10 +1,18 @@
 Package: lognav-mode
-Fetcher: hg
-Source:  https://hg.osdn.net/view/lognav-mode/lognav-mode
+Fetcher: github
+Source:  https://github.com/ellisvelo/lognav-mode.git
 
 Updating /mnt/store/melpa/working/lognav-mode/
-Command `hg pull' exited with non-zero exit-code: 255
-pulling from https://hg.osdn.net/view/lognav-mode/lognav-mode
-abort: error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1123)
-
-Command `hg pull' exited with non-zero exit-code: 255
+Checking out 294e6088d426910082c1b87792ff5125f2725a88
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lognav-mode/
+  to /tmp/lognav-modeJBtRdm/lognav-mode-20231226.1630
+    lognav-mode.el -> lognav-mode.el
+Created lognav-mode-20231226.1630.tar containing:
+  lognav-mode-20231226.1630/
+  lognav-mode-20231226.1630/lognav-mode-pkg.el
+  lognav-mode-20231226.1630/lognav-mode.el
+ ✓ Success:
+  2024-01-02T00:10:45+0000  lognav-mode-20231226.1630.entry
+  2024-01-02T00:10:45+0000  lognav-mode-20231226.1630.tar
+Built lognav-mode in 5.823s, finished at 2024-01-02T00:10:48+0000

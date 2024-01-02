@@ -1,10 +1,18 @@
 Package: multi-project
-Fetcher: hg
-Source:  https://hg.osdn.net/view/multi-project/multi-project
+Fetcher: github
+Source:  https://github.com/ellisvelo/multi-project.git
 
 Updating /mnt/store/melpa/working/multi-project/
-Command `hg pull' exited with non-zero exit-code: 255
-pulling from https://hg.osdn.net/view/multi-project/multi-project
-abort: error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1123)
-
-Command `hg pull' exited with non-zero exit-code: 255
+Checking out a81a536c7c73d471b65e8456d4530e6341a8ce65
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/multi-project/
+  to /tmp/multi-projectiYjDfh/multi-project-20231226.1630
+    multi-project.el -> multi-project.el
+Created multi-project-20231226.1630.tar containing:
+  multi-project-20231226.1630/
+  multi-project-20231226.1630/multi-project-pkg.el
+  multi-project-20231226.1630/multi-project.el
+ ✓ Success:
+  2024-01-02T00:15:00+0000  multi-project-20231226.1630.entry
+  2024-01-02T00:15:00+0000  multi-project-20231226.1630.tar
+Built multi-project in 3.751s, finished at 2024-01-02T00:15:01+0000

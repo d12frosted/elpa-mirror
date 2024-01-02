@@ -1,2 +1,2 @@
-Interface for the himalaya email client
-https://github.com/soywod/himalaya
+Interface for the email client Himalaya CLI
+<https://github.com/soywod/himalaya>
