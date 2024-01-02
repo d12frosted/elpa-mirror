@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/akermu/emacs-libvterm.git
 
 Updating /mnt/store/melpa/working/vterm/
-Checking out 94e2b0b2b4a750e7907dacd5b4c0584900846dd1
+Checking out e96c53f5035c841b20937b65142498bd8e161a40
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vterm/
-  to /tmp/vtermqjjtza/vterm-20230417.424
+  to /tmp/vtermsaAO6J/vterm-20240102.1640
     CMakeLists.txt -> CMakeLists.txt
     elisp.c -> elisp.c
     elisp.h -> elisp.h
@@ -17,23 +17,25 @@ Copying files (->) and directories (=>)
     vterm.el -> vterm.el
     vterm-module.c -> vterm-module.c
     vterm-module.h -> vterm-module.h
-Created vterm-20230417.424.tar containing:
-  vterm-20230417.424/
-  vterm-20230417.424/CMakeLists.txt
-  vterm-20230417.424/elisp.c
-  vterm-20230417.424/elisp.h
-  vterm-20230417.424/emacs-module.h
-  vterm-20230417.424/etc/
-  vterm-20230417.424/etc/emacs-vterm-bash.sh
-  vterm-20230417.424/etc/emacs-vterm-zsh.sh
-  vterm-20230417.424/etc/emacs-vterm.fish
-  vterm-20230417.424/utf8.c
-  vterm-20230417.424/utf8.h
-  vterm-20230417.424/vterm-module.c
-  vterm-20230417.424/vterm-module.h
-  vterm-20230417.424/vterm-pkg.el
-  vterm-20230417.424/vterm.el
+Created vterm-20240102.1640.tar containing:
+  vterm-20240102.1640/
+  vterm-20240102.1640/CMakeLists.txt
+  vterm-20240102.1640/elisp.c
+  vterm-20240102.1640/elisp.h
+  vterm-20240102.1640/emacs-module.h
+  vterm-20240102.1640/etc/
+  vterm-20240102.1640/etc/emacs-vterm-bash.sh
+  vterm-20240102.1640/etc/emacs-vterm-zsh.sh
+  vterm-20240102.1640/etc/emacs-vterm.fish
+  vterm-20240102.1640/utf8.c
+  vterm-20240102.1640/utf8.h
+  vterm-20240102.1640/vterm-module.c
+  vterm-20240102.1640/vterm-module.h
+  vterm-20240102.1640/vterm-pkg.el
+  vterm-20240102.1640/vterm.el
  ✓ Success:
-  2024-01-02T10:34:21+0000  vterm-20230417.424.entry
-  2024-01-02T10:34:21+0000  vterm-20230417.424.tar
-Built vterm in 4.329s, finished at 2024-01-02T10:34:23+0000
+  2024-01-02T16:28:42+0000  vterm-20230417.424.entry
+  2024-01-02T16:28:42+0000  vterm-20230417.424.tar
+  2024-01-02T18:28:11+0000  vterm-20240102.1640.entry
+  2024-01-02T18:28:11+0000  vterm-20240102.1640.tar
+Built vterm in 4.704s, finished at 2024-01-02T18:28:12+0000

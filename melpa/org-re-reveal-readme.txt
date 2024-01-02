@@ -21,7 +21,7 @@ Quickstart:
        "C-c C-e v b" (write HTML file and open in browser)
 See "Readme.org" for introduction, details, and features added to
 org-reveal:
-https://gitlab.com/oer/org-re-reveal/-/blob/master/Readme.org
+https://gitlab.com/oer/org-re-reveal/-/blob/main/Readme.org
 The Readme is also available as reveal.js presentation that is
 generated with org-re-reveal in a CI/CD infrastructure on GitLab:
 https://oer.gitlab.io/org-re-reveal/Readme.html

@@ -1,4 +1,4 @@
-Java extension for eglot.
+Java extension for the eglot LSP client.
 
 Some of the key features include the following:
 - Automatic installation of the Eclipse JDT LSP server (latest milestone release).
@@ -24,13 +24,13 @@ you can toggle the value of the variable "eglot-java-eglot-server-programs-manua
 Below is a sample configuration for your emacs init file
 
 (add-hook 'java-mode-hook 'eglot-java-mode)
-(add-hook 'eglot-java-mode-hook (lambda ()
+(with-eval-after-load 'eglot-java
   (define-key eglot-java-mode-map (kbd "C-c l n") #'eglot-java-file-new)
   (define-key eglot-java-mode-map (kbd "C-c l x") #'eglot-java-run-main)
   (define-key eglot-java-mode-map (kbd "C-c l t") #'eglot-java-run-test)
   (define-key eglot-java-mode-map (kbd "C-c l N") #'eglot-java-project-new)
   (define-key eglot-java-mode-map (kbd "C-c l T") #'eglot-java-project-build-task)
-  (define-key eglot-java-mode-map (kbd "C-c l R") #'eglot-java-project-build-refresh)))
+  (define-key eglot-java-mode-map (kbd "C-c l R") #'eglot-java-project-build-refresh))
 
 The behavior of the "eglot-java-run-test" function depends on the cursor location:
 - If there's an enclosing method at the current cursor location, that specific test method will run
