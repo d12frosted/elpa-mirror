@@ -3,28 +3,3 @@ Fetcher: github
 Source:  https://github.com/editorconfig/editorconfig-emacs.git
 
 Updating /mnt/store/melpa/working/editorconfig/
-Checking out f7588dd1a216bfd0a89109ae7bcc3a7da74824c1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfigrliQna/editorconfig-20231224.44
-    editorconfig-conf-mode.el -> editorconfig-conf-mode.el
-    editorconfig-core-handle.el -> editorconfig-core-handle.el
-    editorconfig-core.el -> editorconfig-core.el
-    editorconfig-fnmatch.el -> editorconfig-fnmatch.el
-    editorconfig.el -> editorconfig.el
-  ! doc/editorconfig.texi -> editorconfig.texi
-Generating /tmp/editorconfigrliQna/editorconfig-20231224.44/editorconfig.info
-Created editorconfig-20231224.44.tar containing:
-  editorconfig-20231224.44/
-  editorconfig-20231224.44/dir
-  editorconfig-20231224.44/editorconfig-conf-mode.el
-  editorconfig-20231224.44/editorconfig-core-handle.el
-  editorconfig-20231224.44/editorconfig-core.el
-  editorconfig-20231224.44/editorconfig-fnmatch.el
-  editorconfig-20231224.44/editorconfig-pkg.el
-  editorconfig-20231224.44/editorconfig.el
-  editorconfig-20231224.44/editorconfig.info
- ✓ Success:
-  2024-01-04T14:10:09+0000  editorconfig-20231224.44.entry
-  2024-01-04T14:10:09+0000  editorconfig-20231224.44.tar
-Built editorconfig in 11.551s, finished at 2024-01-04T14:10:11+0000
