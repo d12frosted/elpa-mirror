@@ -4,6 +4,6 @@ Source:  https://git.jamzattack.xyz/eshell-outline
 
 Updating /mnt/store/melpa/working/eshell-outline/
 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.jamzattack.xyz/eshell-outline/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+fatal: unable to access 'https://git.jamzattack.xyz/eshell-outline/': Failed to connect to git.jamzattack.xyz port 443: Connection timed out
 
 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
