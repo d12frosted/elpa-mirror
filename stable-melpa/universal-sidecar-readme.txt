@@ -25,7 +25,11 @@ which will advise functions listed in
 `universal-sidecar-insinuate' will add `universal-sidecar-refresh'
 to the `focus-in-hook', and will set an idle timer to refresh all
 sidecar buffers (idle time configured with
-`universal-sidecar-refresh-time').
+`universal-sidecar-refresh-time').  Buffers can be ignored by
+modifying the `universal-sidecar-ignore-buffer-regexp', or using
+the (irregular) `universal-sidecar-ignore-buffer-functions' hook.
+This hook will be run with an argument (the buffer) and run until a
+non-nil result.
 
 ;; Configuration
 
@@ -155,3 +159,7 @@ v1.3.0 (2023-09-14): Log errors, don't ignore them.
 v1.4.0 (2023-09-22): Add
 `universal-sidecar-inhibit-section-error-log' to control when
 sidecar section errors are logged.
+
+v1.4.3 (2024-01-03): Buffers can now be ignored using the
+`universal-sidecar-ignore-buffer-regexp' and
+`universal-sidecar-ignore-buffer-functions' variables.
