@@ -523,6 +523,21 @@
 	      (:authors
 	       ("Connor Smith" . "wconnorsmith@gmail.com"))
 	      (:commit . "2671071a4a57eaee7cc8c27b9e4b6fc60fd2ccd3"))])
+ (evil-escape .
+	      [(3 16)
+	       ((emacs
+		 (24))
+		(evil
+		 (1 0 9))
+		(cl-lib
+		 (0 5)))
+	       "Escape from anything with a customizable key sequence" tar
+	       ((:url . "https://github.com/emacsorphanage/evil-escape")
+		(:keywords "convenience" "editing" "evil")
+		(:maintainer "Sylvain Benner" . "sylvain.benner@gmail.com")
+		(:authors
+		 ("Sylvain Benner" . "sylvain.benner@gmail.com"))
+		(:commit . "3c335a5709b1abb08687960038746b36add465f9"))])
  (evil-exchange .
 		[(0 41)
 		 ((evil
