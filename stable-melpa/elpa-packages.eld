@@ -4881,7 +4881,7 @@
   (speeddating :url "https://github.com/xuchunyang/emacs-speeddating.git")
   (spell-fu :url "https://codeberg.org/ideasman42/emacs-spell-fu.git")
   (sphinx-doc :url "https://github.com/naiquevin/sphinx-doc.el.git")
-  (sphinx-frontend :url "https://github.com/kostafey/sphinx-frontend.git")
+  (sphinx-frontend :url "https://gitlab.com/kostafey/sphinx-frontend.git")
   (sphinx-mode :url "https://github.com/Fuco1/sphinx-mode.git")
   (spice-mode :url "https://repo.or.cz/spice-mode.git")
   (splitjoin :url "https://github.com/emacsorphanage/splitjoin.git")
