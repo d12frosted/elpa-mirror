@@ -32,6 +32,23 @@ Below is a sample configuration for your emacs init file
   (define-key eglot-java-mode-map (kbd "C-c l T") #'eglot-java-project-build-task)
   (define-key eglot-java-mode-map (kbd "C-c l R") #'eglot-java-project-build-refresh))
 
+Sometimes you may want to add/modify LSP server initialization settings.
+JDT LS settings documentation: https://github.com/eclipse-jdtls/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
+- For basic flexibility, you can control the ":settings" node of the LSP server configuration via the variable "eglot-workspace-configuration".
+- For greater flexibility, you can leverage the "eglot-java-user-init-opts-fn" variable.
+  - You'll need to bind the value of the "eglot-java-user-init-opts-fn" with your own callback function.
+  - You'll need to return a property list of valid JDT LS settings (merged with defaults)
+
+(setq eglot-java-user-init-opts-fn 'custom-eglot-java-init-opts)
+(defun custom-eglot-java-init-opts (server eglot-java-eclipse-jdt)
+  "Custom options that will be merged with any default settings."
+  '(:settings
+    (:java
+     (:format
+      (:settings
+       (:url "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml")
+       :enabled t)))))
+
 The behavior of the "eglot-java-run-test" function depends on the cursor location:
 - If there's an enclosing method at the current cursor location, that specific test method will run
 - Otherwise, all the tests in the current file will be executed

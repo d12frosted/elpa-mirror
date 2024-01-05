@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://repo.or.cz/org-seek.el.git
 
 Updating /mnt/store/melpa/working/org-seek/
-Checking out 1f51e6634e3b9a6a29d335d0d14370a6ffef2265
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-seek/
-  to /tmp/org-seek47W0X7/org-seek-20161217.502
-    org-seek.el -> org-seek.el
-Created org-seek-20161217.502.tar containing:
-  org-seek-20161217.502/
-  org-seek-20161217.502/org-seek-pkg.el
-  org-seek-20161217.502/org-seek.el
- ✓ Success:
-  2024-01-05T03:39:56+0000  org-seek-20161217.502.entry
-  2024-01-05T03:39:56+0000  org-seek-20161217.502.tar
-Built org-seek in 6.157s, finished at 2024-01-05T03:39:59+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://repo.or.cz/org-seek.el.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

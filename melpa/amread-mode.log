@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://repo.or.cz/amread-mode.git
 
 Updating /mnt/store/melpa/working/amread-mode/
-Checking out b8622ae7b05f27d6f84c4e5d724bc79163ba9ce3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/amread-mode/
-  to /tmp/amread-modeDMqoSl/amread-mode-20230409.1018
-    amread-mode.el -> amread-mode.el
-Created amread-mode-20230409.1018.tar containing:
-  amread-mode-20230409.1018/
-  amread-mode-20230409.1018/amread-mode-pkg.el
-  amread-mode-20230409.1018/amread-mode.el
- ✓ Success:
-  2024-01-05T02:52:58+0000  amread-mode-20230409.1018.entry
-  2024-01-05T02:52:58+0000  amread-mode-20230409.1018.tar
-Built amread-mode in 4.435s, finished at 2024-01-05T02:52:59+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://repo.or.cz/amread-mode.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

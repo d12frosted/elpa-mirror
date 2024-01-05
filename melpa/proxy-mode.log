@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://repo.or.cz/proxy-mode.git
 
 Updating /mnt/store/melpa/working/proxy-mode/
-Checking out eca6f0b8a17fcf9eb961ed0426f57a5b7ca4e1f6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/proxy-mode/
-  to /tmp/proxy-modegcjXyh/proxy-mode-20230303.706
-    proxy-mode.el -> proxy-mode.el
-Created proxy-mode-20230303.706.tar containing:
-  proxy-mode-20230303.706/
-  proxy-mode-20230303.706/proxy-mode-pkg.el
-  proxy-mode-20230303.706/proxy-mode.el
- ✓ Success:
-  2024-01-05T03:45:24+0000  proxy-mode-20230303.706.entry
-  2024-01-05T03:45:24+0000  proxy-mode-20230303.706.tar
-Built proxy-mode in 6.387s, finished at 2024-01-05T03:45:27+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://repo.or.cz/proxy-mode.git/': Failed to connect to repo.or.cz port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
