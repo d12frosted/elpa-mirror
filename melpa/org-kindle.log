@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://repo.or.cz/org-kindle.git
 
 Updating /mnt/store/melpa/working/org-kindle/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://repo.or.cz/org-kindle.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out fadcfd62e254d0c45e87d63128a82a08ae21869a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-kindle/
+  to /tmp/org-kindleRGNsnP/org-kindle-20220210.1408
+    org-kindle.el -> org-kindle.el
+Created org-kindle-20220210.1408.tar containing:
+  org-kindle-20220210.1408/
+  org-kindle-20220210.1408/org-kindle-pkg.el
+  org-kindle-20220210.1408/org-kindle.el
+ ✓ Success:
+  2024-01-05T11:15:30+0000  org-kindle-20220210.1408.entry
+  2024-01-05T11:15:30+0000  org-kindle-20220210.1408.tar
+Built org-kindle in 4.254s, finished at 2024-01-05T11:15:32+0000

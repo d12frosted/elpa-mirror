@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://repo.or.cz/external-dict.el.git
 
 Updating /mnt/store/melpa/working/external-dict/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://repo.or.cz/external-dict.el.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 17807ac7e671b44da495e7e3fac5b8cb72a25feb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/external-dict/
+  to /tmp/external-dictB2OcXS/external-dict-20231129.1043
+    external-dict.el -> external-dict.el
+Created external-dict-20231129.1043.tar containing:
+  external-dict-20231129.1043/
+  external-dict-20231129.1043/external-dict-pkg.el
+  external-dict-20231129.1043/external-dict.el
+ ✓ Success:
+  2024-01-05T10:47:34+0000  external-dict-20231129.1043.entry
+  2024-01-05T10:47:34+0000  external-dict-20231129.1043.tar
+Built external-dict in 3.677s, finished at 2024-01-05T10:47:36+0000

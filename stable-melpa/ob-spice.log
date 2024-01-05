@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://repo.or.cz/ob-spice.git
 
 Updating /mnt/store/melpa/working/ob-spice/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://repo.or.cz/ob-spice.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 4d3ab60c2012aba2a5bd96a4d42dfeea0be6edac
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-spice/
+  to /tmp/ob-spiceuqqkZZ/ob-spice-20221030.217
+    ob-spice.el -> ob-spice.el
+Created ob-spice-20221030.217.tar containing:
+  ob-spice-20221030.217/
+  ob-spice-20221030.217/ob-spice-pkg.el
+  ob-spice-20221030.217/ob-spice.el
+ ✓ Success:
+  2024-01-05T11:13:45+0000  ob-spice-20221030.217.entry
+  2024-01-05T11:13:45+0000  ob-spice-20221030.217.tar
+Built ob-spice in 4.552s, finished at 2024-01-05T11:13:47+0000

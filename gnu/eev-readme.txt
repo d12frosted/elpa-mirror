@@ -10,19 +10,19 @@ To run the tutorial: install this package, then type `M-x
 eev-beginner'. This will load all the main modules, activate the
 eev-mode keybindings, and open this tutorial,
 
-  http://angg.twu.net/eev-intros/find-eev-quick-intro.html
+  http://anggtwu.net/eev-intros/find-eev-quick-intro.html
   (find-eev-quick-intro)
 
 in a sandboxed buffer. The URL aboves points to an HTMLized version of
 the sandboxed tutorial, and the `(find-*-intro)' sexp opens it in
 Emacs. You can find an index of the other sandboxed tutorials here:
 
-  http://angg.twu.net/eev-intros/find-eev-intro.html
+  http://anggtwu.net/eev-intros/find-eev-intro.html
   (find-eev-intro)
 
 The home page of eev is:
 
-  http://angg.twu.net/#eev
+  http://anggtwu.net/#eev
 
 
 
@@ -31,9 +31,9 @@ Autoloads
 Eev handles autoloads in a very atypical way, explained in these three
 places:
 
-  http://angg.twu.net/eev-current/eev-load.el.html#autoloads
-  http://angg.twu.net/eev-intros/find-eev-install-intro.html#7.3
-  http://angg.twu.net/eev-intros/find-eev-intro.html#4
+  http://anggtwu.net/eev-current/eev-load.el.html#autoloads
+  http://anggtwu.net/eev-intros/find-eev-install-intro.html#7.3
+  http://anggtwu.net/eev-intros/find-eev-intro.html#4
   (find-eev "eev-load.el" "autoloads")
   (find-eev-install-intro "7.3. Autoloads")
   (find-eev-intro "4. The prefix `find-'")
@@ -56,7 +56,7 @@ Eev mode
 Eev mode only activates some keybindings and adds a reminder saying
 "eev" to the mode line, as explained here:
 
-  http://angg.twu.net/eev-intros/find-eev-intro.html#1
+  http://anggtwu.net/eev-intros/find-eev-intro.html#1
   (find-eev-intro "1. `eev-mode'")
 
 It is possible to use eev's elisp hyperlink functions with eev-mode

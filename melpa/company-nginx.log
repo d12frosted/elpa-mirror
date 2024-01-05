@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://repo.or.cz/company-nginx.git
 
 Updating /mnt/store/melpa/working/company-nginx/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://repo.or.cz/company-nginx.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 8a9f1a5653fe2d9a5042bfb9377d54f37fcc64c8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-nginx/
+  to /tmp/company-nginxb1d2JG/company-nginx-20220210.1411
+    company-nginx.el -> company-nginx.el
+Created company-nginx-20220210.1411.tar containing:
+  company-nginx-20220210.1411/
+  company-nginx-20220210.1411/company-nginx-pkg.el
+  company-nginx-20220210.1411/company-nginx.el
+ ✓ Success:
+  2024-01-05T10:36:22+0000  company-nginx-20220210.1411.entry
+  2024-01-05T10:36:22+0000  company-nginx-20220210.1411.tar
+Built company-nginx in 4.580s, finished at 2024-01-05T10:36:24+0000

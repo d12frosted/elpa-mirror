@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://repo.or.cz/mu4e-marker-icons.git
 
 Updating /mnt/store/melpa/working/mu4e-marker-icons/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://repo.or.cz/mu4e-marker-icons.git/': Failed to connect to repo.or.cz port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 09fe0ca72b5c000d45a875c7cfa58016f740c1ae
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mu4e-marker-icons/
+  to /tmp/mu4e-marker-iconsLxFjIa/mu4e-marker-icons-20230423.1039
+    mu4e-marker-icons.el -> mu4e-marker-icons.el
+Created mu4e-marker-icons-20230423.1039.tar containing:
+  mu4e-marker-icons-20230423.1039/
+  mu4e-marker-icons-20230423.1039/mu4e-marker-icons-pkg.el
+  mu4e-marker-icons-20230423.1039/mu4e-marker-icons.el
+ ✓ Success:
+  2024-01-05T11:10:37+0000  mu4e-marker-icons-20230423.1039.entry
+  2024-01-05T11:10:37+0000  mu4e-marker-icons-20230423.1039.tar
+Built mu4e-marker-icons in 4.208s, finished at 2024-01-05T11:10:39+0000
