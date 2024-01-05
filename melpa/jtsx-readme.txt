@@ -5,9 +5,9 @@ and tsx-ts-mode, benefiting thus from the new tree-sitter built-in feature.
 Summary of features and fixes:
 * Fix commenting and indenting issues with JSX code in Emacs built-in
 js-ts-mode and tsx-ts-mode modes
-* Refactoring: moving, wrapping, renaming `JSX` elements
+* Refactoring: moving, wrapping/unwrapping, deleting, renaming `JSX` elements
 * Jumping between opening and closing `JSX` elements
-* Electric JSX closing element
+* Electric JSX closing element and new line
 * Code folding
 
 Note on the default configuration:
