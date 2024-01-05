@@ -2763,7 +2763,7 @@
   (jenkins :url "https://github.com/rmuslimov/jenkins.el.git")
   (jenkins-watch :url "https://github.com/ataylor284/jenkins-watch.git")
   (jenkinsfile-mode :url "https://github.com/john2x/jenkinsfile-mode.git")
-  (jest :url "https://github.com/Emiller88/emacs-jest.git")
+  (jest :url "https://github.com/edmundmiller/emacs-jest.git")
   (jest-test-mode :url "https://github.com/rymndhng/jest-test-mode.git")
   (jet :url "https://github.com/ericdallo/jet.el.git")
   (jetbrains :url "https://github.com/emacs-php/jetbrains.el.git")
