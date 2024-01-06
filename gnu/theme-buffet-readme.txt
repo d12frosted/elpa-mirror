@@ -1,46 +1,7 @@
-Theme-Buffet lets the user specify different time periods of the day and for
-each period, a list of preferred themes to be randomly loaded accordingly.
-To install you just have to clone the repo from the url, add the path to the
-'load-path variable and then require the library.  Here's an example, for
-those who still love the Emacs 28 or earlier way of doing things:
-
-   # In the terminal
-   git clone https://git.sr.ht/~bboal/theme-buffet ~/.emacs.d/theme-buffet
-
-   ;; In Emacs, evaluate
-   (add-to-list 'load-path "~/.emacs.d/theme-buffet")
-   (require 'theme-buffet)
-
-The newest way, from Emacs 29 onward:
-
-   (package-vc-install "https://git.sr.ht/~bboal/theme-buffet")
-
-There are two templates preconfigured available for usage.  One enabled by
-default, with the standard themes that come with vanilla Emacs; the other
-more fancier, can be easily enabled by evaluating the following:
-
-	  (setq theme-buffet-menu 'modus-ef)
-
-The binding above will set the themes to be either Modus or Ef, authored by
-Protesilaos Stavrou <https://git.sr.ht/~protesilaos>, distributed across six
-periods of the day (night, twilight, morning, day, afternoon and evening).
-The library will not require the aforementioned package, you will have to
-install it manual if you intent to use it.  Finally to start using
-Theme-Buffet, evaluate:
-
-   (theme-buffet-mode 1)
-
-Following the appanage way of Emacs, both the names and number of themes and
-time periods can be freely changed while mantaining the same structure.
-There is also a time-offset that can be set by the user to match a specific
-time-zone/personal preference.  E.g
-
-   (setq theme-buffet-time-offset 2)
-
-All this can be achieved by tweaking `theme-buffet-end-user'.  For
-inspiration, take a look at `theme-buffet--modus-ef' which is used when
-setting `theme-buffet-menu' to 'modus-ef like demonstrated above.
-
+The theme-buffet package arranges to automatically change themes during
+specific times of the day or at fixed intervals.  The collection of themes is
+customisable, with the default options covering the built-in Emacs themes as
+well as Prot's modus-themes and ef-themes.
 
 Usage:
 
@@ -52,7 +13,7 @@ change when the periods do: `theme-buffet-built-in',
 `theme-buffet-modus-ef' and `theme-buffet-end-user'.
 
 To set the timer for a certain time interval of hours or minutes:
-`theme-buffet-timer-hours' or `theme-buffet-timer-mins'.
+`theme-buffet-timer-hours' or `theme-buffet-timer-mins' functions.
 
 To load a theme from the current period: `theme-buffet-a-la-carte'.  If
 instead you want to load a random theme from a prompted period, there's
@@ -65,9 +26,22 @@ Some examples in lisp:
    (theme-buffet-timer-mins 30) ; to change theme every 30m from now
    (theme-buffet-timer-hours 2) ; to also change every 2h from now
 
-Interactively, as an example, you would press M-x
-`theme-buffet-order-other-period'.  Then, after choosing any defined period,
-you would get returned a random loaded theme from the aforementioned period.
+Take a moment to actually look into the code and use the `customize-group'
+option to tweak all the variables if needed.
+
+For inspiration or constructive criticism, here is the developer's
+installation/configuration `use-package' snippet:
+
+   (use-package theme-buffet
+     :demand t
+     :functions calendar-current-time-zone
+     theme-buffet-modus-ef theme-buffet-timer-hours
+     :config
+     (require 'cal-dst)
+     (setopt theme-buffet-time-offset
+             (1+ (/ (cadr (calendar-current-time-zone)) 60)))
+     (theme-buffet-modus-ef)
+     (theme-buffet-timer-hours 1))
 
 
 Disclaimer from Bruno Boal to the reader: This package was produced during my

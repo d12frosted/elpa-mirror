@@ -9,8 +9,8 @@ This gives you separate buffer lists per frame and per (tab-bar) tab.
 Bufferlo is a lightweight wrapper around Emacs's buffer-list frame
 parameter.  In contrast to similar solutions, it integrates seamlessly
 with the standard frame and tab management facilities, including
-undeletion of frame and tabs, tab duplication and moving, frame cloning,
-and persisting sessions (via desktop.el).
+undeletion of frames and tabs, tab duplication and moving, frame
+cloning, and persisting sessions (via desktop.el).
 
 A buffer is added to the local buffer list when it is displayed in the
 frame/tab (e.g., by opening a new file in the tab or by switching to the
@@ -251,3 +251,25 @@ workspace persistence).  They work quite differently than bufferlo.
   │     (switch-to-buffer "<BUFFER_NAME>")))
   │ (add-hook 'after-make-frame-functions #'my-set-initial-frame-buffer)
   └────
+
+
+2.4 Bufferlo Anywhere
+─────────────────────
+
+  "Bufferlo anywhere" is an optional feature that lets you have
+  bufferlo's frame/tab-local buffer list anywhere you like, i.e. in any
+  command with interactive buffer selection (via `read-buffer', e.g.,
+  `diff-buffers', `make-indirect-buffer', …) – not just in the
+  switch-buffer facilities.  You can configure which commands use
+  bufferlo's local list and which use the global list.
+
+  Enable `bufferlo-anywhere-mode' to use bufferlo's local buffer list by
+  default.  Customize `bufferlo-anywhere-filter' and
+  `bufferlo-anywhere-filter-type' to restrict the commands that use the
+  local list.  With the command prefix
+  `bufferlo-anywhere-disable-prefix', you can temporarily disable
+  `bufferlo-anywhere-mode' for the next command.
+
+  Instead the minor mode, you can use the command prefix
+  `bufferlo-anywhere-enable-prefix', which only temporarily enables
+  bufferlo's local buffer list for the next command.
