@@ -3,16 +3,7 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~amk/subsonic.el
 
 Updating /mnt/store/melpa/working/subsonic/
-Checking out 011e58d434ed707a06a2cfa20509629ebb339c04
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/subsonic/
-  to /tmp/subsonicjMsANH/subsonic-20220826.748
-    subsonic.el -> subsonic.el
-Created subsonic-20220826.748.tar containing:
-  subsonic-20220826.748/
-  subsonic-20220826.748/subsonic-pkg.el
-  subsonic-20220826.748/subsonic.el
- ✓ Success:
-  2024-01-06T07:05:01+0000  subsonic-20220826.748.entry
-  2024-01-06T07:05:01+0000  subsonic-20220826.748.tar
-Built subsonic in 4.493s, finished at 2024-01-06T07:05:03+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~amk/subsonic.el/': Failed to connect to git.sr.ht port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

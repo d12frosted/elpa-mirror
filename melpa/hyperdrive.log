@@ -3,40 +3,7 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Checking out 3db4bc0e326675d27e52791d182c0eae28508695
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hyperdrive/
-  to /tmp/hyperdrivew7nCSg/hyperdrive-20240105.615
-    hyperdrive-describe.el -> hyperdrive-describe.el
-    hyperdrive-diff.el -> hyperdrive-diff.el
-    hyperdrive-dir.el -> hyperdrive-dir.el
-    hyperdrive-ewoc.el -> hyperdrive-ewoc.el
-    hyperdrive-history.el -> hyperdrive-history.el
-    hyperdrive-lib.el -> hyperdrive-lib.el
-    hyperdrive-menu.el -> hyperdrive-menu.el
-    hyperdrive-mirror.el -> hyperdrive-mirror.el
-    hyperdrive-org.el -> hyperdrive-org.el
-    hyperdrive-vars.el -> hyperdrive-vars.el
-    hyperdrive.el -> hyperdrive.el
-  ! doc/hyperdrive.texi -> hyperdrive.texi
-Generating /tmp/hyperdrivew7nCSg/hyperdrive-20240105.615/hyperdrive.info
-Created hyperdrive-20240105.615.tar containing:
-  hyperdrive-20240105.615/
-  hyperdrive-20240105.615/dir
-  hyperdrive-20240105.615/hyperdrive-describe.el
-  hyperdrive-20240105.615/hyperdrive-diff.el
-  hyperdrive-20240105.615/hyperdrive-dir.el
-  hyperdrive-20240105.615/hyperdrive-ewoc.el
-  hyperdrive-20240105.615/hyperdrive-history.el
-  hyperdrive-20240105.615/hyperdrive-lib.el
-  hyperdrive-20240105.615/hyperdrive-menu.el
-  hyperdrive-20240105.615/hyperdrive-mirror.el
-  hyperdrive-20240105.615/hyperdrive-org.el
-  hyperdrive-20240105.615/hyperdrive-pkg.el
-  hyperdrive-20240105.615/hyperdrive-vars.el
-  hyperdrive-20240105.615/hyperdrive.el
-  hyperdrive-20240105.615/hyperdrive.info
- ✓ Success:
-  2024-01-06T06:33:09+0000  hyperdrive-20240105.615.entry
-  2024-01-06T06:33:09+0000  hyperdrive-20240105.615.tar
-Built hyperdrive in 9.297s, finished at 2024-01-06T06:33:11+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~ushin/hyperdrive.el/': Failed to connect to git.sr.ht port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
