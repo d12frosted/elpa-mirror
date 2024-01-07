@@ -8,3 +8,5 @@ This extension provides the frontend for work in terminal, which has the followi
 - show comand histories into a dedicated window and access them quickly.
 
 For more infomation, see <https://github.com/aki2o/e2wm-term/blob/master/README.md>
+
+Enjoy!!!
