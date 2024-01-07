@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/jkitchin/org-ref.git
 
 Updating /mnt/store/melpa/working/org-ref/
-Checking out cc4b2b8777c5b54f01a451aae295fb5e23aa1358
+Checking out d56a6c201c76ce0277af81ee8e8919908501e440
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ref/
-  to /tmp/org-refIh3fk3/org-ref-20240106.1931
+  to /tmp/org-refijcii2/org-ref-20240107.1350
     contrib.el -> contrib.el
     doi-utils.el -> doi-utils.el
     nist-webbook.el -> nist-webbook.el
@@ -45,56 +45,58 @@ Copying files (->) and directories (=>)
     org-ref.org -> org-ref.org
     org-ref.bib -> org-ref.bib
     citeproc => citeproc
-Created org-ref-20240106.1931.tar containing:
-  org-ref-20240106.1931/
-  org-ref-20240106.1931/citeproc/
-  org-ref-20240106.1931/citeproc/csl-locales/
-  org-ref-20240106.1931/citeproc/csl-locales/locales-en-US.xml
-  org-ref-20240106.1931/citeproc/csl-styles/
-  org-ref-20240106.1931/citeproc/csl-styles/apa-5th-edition.csl
-  org-ref-20240106.1931/citeproc/csl-styles/apa-numeric-superscript-brackets.csl
-  org-ref-20240106.1931/citeproc/csl-styles/chicago-author-date-16th-edition.csl
-  org-ref-20240106.1931/citeproc/csl-styles/elsevier-harvard.csl
-  org-ref-20240106.1931/citeproc/csl-styles/elsevier-with-titles.csl
-  org-ref-20240106.1931/contrib.el
-  org-ref-20240106.1931/doi-utils.el
-  org-ref-20240106.1931/nist-webbook.el
-  org-ref-20240106.1931/openalex.el
-  org-ref-20240106.1931/org-ref-arxiv.el
-  org-ref-20240106.1931/org-ref-bibliography-links.el
-  org-ref-20240106.1931/org-ref-bibtex.el
-  org-ref-20240106.1931/org-ref-citation-links.el
-  org-ref-20240106.1931/org-ref-compat.el
-  org-ref-20240106.1931/org-ref-core.el
-  org-ref-20240106.1931/org-ref-export.el
-  org-ref-20240106.1931/org-ref-extract.el
-  org-ref-20240106.1931/org-ref-glossary.el
-  org-ref-20240106.1931/org-ref-helm.el
-  org-ref-20240106.1931/org-ref-isbn.el
-  org-ref-20240106.1931/org-ref-ivy.el
-  org-ref-20240106.1931/org-ref-label-link.el
-  org-ref-20240106.1931/org-ref-latex.el
-  org-ref-20240106.1931/org-ref-misc-links.el
-  org-ref-20240106.1931/org-ref-natbib-bbl-citeproc.el
-  org-ref-20240106.1931/org-ref-pdf.el
-  org-ref-20240106.1931/org-ref-pgk.el
-  org-ref-20240106.1931/org-ref-pkg.el
-  org-ref-20240106.1931/org-ref-publish.el
-  org-ref-20240106.1931/org-ref-pubmed.el
-  org-ref-20240106.1931/org-ref-ref-links.el
-  org-ref-20240106.1931/org-ref-refproc.el
-  org-ref-20240106.1931/org-ref-sci-id.el
-  org-ref-20240106.1931/org-ref-scifinder.el
-  org-ref-20240106.1931/org-ref-scopus.el
-  org-ref-20240106.1931/org-ref-url-utils.el
-  org-ref-20240106.1931/org-ref-utils.el
-  org-ref-20240106.1931/org-ref-worldcat.el
-  org-ref-20240106.1931/org-ref-wos.el
-  org-ref-20240106.1931/org-ref.bib
-  org-ref-20240106.1931/org-ref.el
-  org-ref-20240106.1931/org-ref.org
-  org-ref-20240106.1931/x2bib.el
+Created org-ref-20240107.1350.tar containing:
+  org-ref-20240107.1350/
+  org-ref-20240107.1350/citeproc/
+  org-ref-20240107.1350/citeproc/csl-locales/
+  org-ref-20240107.1350/citeproc/csl-locales/locales-en-US.xml
+  org-ref-20240107.1350/citeproc/csl-styles/
+  org-ref-20240107.1350/citeproc/csl-styles/apa-5th-edition.csl
+  org-ref-20240107.1350/citeproc/csl-styles/apa-numeric-superscript-brackets.csl
+  org-ref-20240107.1350/citeproc/csl-styles/chicago-author-date-16th-edition.csl
+  org-ref-20240107.1350/citeproc/csl-styles/elsevier-harvard.csl
+  org-ref-20240107.1350/citeproc/csl-styles/elsevier-with-titles.csl
+  org-ref-20240107.1350/contrib.el
+  org-ref-20240107.1350/doi-utils.el
+  org-ref-20240107.1350/nist-webbook.el
+  org-ref-20240107.1350/openalex.el
+  org-ref-20240107.1350/org-ref-arxiv.el
+  org-ref-20240107.1350/org-ref-bibliography-links.el
+  org-ref-20240107.1350/org-ref-bibtex.el
+  org-ref-20240107.1350/org-ref-citation-links.el
+  org-ref-20240107.1350/org-ref-compat.el
+  org-ref-20240107.1350/org-ref-core.el
+  org-ref-20240107.1350/org-ref-export.el
+  org-ref-20240107.1350/org-ref-extract.el
+  org-ref-20240107.1350/org-ref-glossary.el
+  org-ref-20240107.1350/org-ref-helm.el
+  org-ref-20240107.1350/org-ref-isbn.el
+  org-ref-20240107.1350/org-ref-ivy.el
+  org-ref-20240107.1350/org-ref-label-link.el
+  org-ref-20240107.1350/org-ref-latex.el
+  org-ref-20240107.1350/org-ref-misc-links.el
+  org-ref-20240107.1350/org-ref-natbib-bbl-citeproc.el
+  org-ref-20240107.1350/org-ref-pdf.el
+  org-ref-20240107.1350/org-ref-pgk.el
+  org-ref-20240107.1350/org-ref-pkg.el
+  org-ref-20240107.1350/org-ref-publish.el
+  org-ref-20240107.1350/org-ref-pubmed.el
+  org-ref-20240107.1350/org-ref-ref-links.el
+  org-ref-20240107.1350/org-ref-refproc.el
+  org-ref-20240107.1350/org-ref-sci-id.el
+  org-ref-20240107.1350/org-ref-scifinder.el
+  org-ref-20240107.1350/org-ref-scopus.el
+  org-ref-20240107.1350/org-ref-url-utils.el
+  org-ref-20240107.1350/org-ref-utils.el
+  org-ref-20240107.1350/org-ref-worldcat.el
+  org-ref-20240107.1350/org-ref-wos.el
+  org-ref-20240107.1350/org-ref.bib
+  org-ref-20240107.1350/org-ref.el
+  org-ref-20240107.1350/org-ref.org
+  org-ref-20240107.1350/x2bib.el
  ✓ Success:
-  2024-01-07T11:39:00+0000  org-ref-20240106.1931.entry
-  2024-01-07T11:39:00+0000  org-ref-20240106.1931.tar
-Built org-ref in 1.419s, finished at 2024-01-07T11:39:01+0000
+  2024-01-07T13:35:37+0000  org-ref-20240106.1931.entry
+  2024-01-07T13:35:37+0000  org-ref-20240106.1931.tar
+  2024-01-07T15:35:22+0000  org-ref-20240107.1350.entry
+  2024-01-07T15:35:21+0000  org-ref-20240107.1350.tar
+Built org-ref in 3.277s, finished at 2024-01-07T15:35:23+0000
