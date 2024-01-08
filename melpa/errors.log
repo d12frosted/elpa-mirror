@@ -1,92 +1,89 @@
-2024-01-08T14:24:47+0000  2048-game                  Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T14:26:46+0000  0x0                        Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:30:37+0000  bbdb-csv-import            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:30:45+0000  caser                      Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T14:30:54+0000  better-defaults            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:31:26+0000  bluesound                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:32:03+0000  buffer-sets                Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:33:05+0000  cern-ldap                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:33:29+0000  chordpro-mode              Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:33:52+0000  clang-capf                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:35:08+0000  colorless-themes           Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:37:25+0000  counsel-mairix             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:38:23+0000  ditz-mode                  Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T14:38:34+0000  darkman                    Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:38:53+0000  ddate                      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:39:13+0000  deno-ts-mode               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:39:17+0000  detached                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:40:04+0000  dired-rmjunk               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:40:25+0000  display-wttr               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:42:48+0000  enlightened-theme          Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T14:43:03+0000  el-secretario-mu4e         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:43:03+0000  el-secretario              Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:43:03+0000  el-secretario-elfeed       Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:43:03+0000  el-secretario-notmuch      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:43:03+0000  el-secretario-org          Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:43:19+0000  electric-ospl              Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:45:49+0000  eshell-outline             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:48:26+0000  fennel-mode                Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:48:38+0000  flymake-golangci           Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:50:37+0000  flymake-clippy             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:50:45+0000  flymake-fennel             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:51:14+0000  flymake-swi-prolog         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:52:05+0000  fullframe                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:52:34+0000  gemtext-mode               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:53:56+0000  glue                       Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:54:47+0000  goto-last-point            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:55:04+0000  graphql-ts-mode            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:58:30+0000  highlight-parentheses      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:59:40+0000  hyperdrive                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:59:48+0000  ibrowse                    Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T14:59:52+0000  jabber                     No define-package found in jabber-pkg.el
-2024-01-08T15:01:06+0000  insert-kaomoji             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:01:16+0000  iota                       Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:01:28+0000  kanban                     Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:04:47+0000  lms                        Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:04:53+0000  lavenderless-theme         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:06:44+0000  llama                      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:07:36+0000  minesweeper                Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:09:24+0000  metronome                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:10:07+0000  modus-themes               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:11:29+0000  myrddin-mode               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:12:46+0000  nordic-night-theme         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:12:51+0000  notmuch-addr               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:12:51+0000  notmuch-maildir            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:12:53+0000  notmuch-transient          Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:14:06+0000  org-parser                 Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:14:25+0000  ol-notmuch                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:14:55+0000  org-agenda-files-track     Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:14:58+0000  org-agenda-files-track-ql  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:15:34+0000  org-emms                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:15:38+0000  org-grep                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:16:17+0000  org-present-remote         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:17:39+0000  org-zettelkasten           Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:17:47+0000  per-buffer-theme           Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:18:20+0000  ox-gemini                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:18:22+0000  ox-haunt                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:18:58+0000  pmdm                       Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:19:46+0000  peertube                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:20:15+0000  protobuf-ts-mode           Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:22:40+0000  pulseaudio-control         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:25:02+0000  repl-toggle                Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:25:37+0000  robot-log                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:26:34+0000  scpaste                    Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:28:24+0000  slow-keys                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:28:29+0000  sly-overlay                Command `git clone https\://git.sr.ht/\~fosskers/sly-overlay /mnt/store/melpa/working/sly-overlay/' exited with non-zero exit-code: 128
-2024-01-08T15:30:07+0000  spray                      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:30:56+0000  subsonic                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:31:57+0000  tangonov-theme             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:32:45+0000  third-time                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:32:55+0000  time-block                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:33:36+0000  transducers                Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:33:48+0000  tray                       Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:35:20+0000  universal-sidecar          Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:35:20+0000  universal-sidecar-elfeed-related  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:35:22+0000  universal-sidecar-roam     Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:35:22+0000  universal-sidecar-elfeed-score  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:35:39+0000  ushin-shapes               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:36:23+0000  wisp-mode                  Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:36:42+0000  visible-mark               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-2024-01-08T15:37:32+0000  yatex                      Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:38:18+0000  zpresent                   Command `hg purge' exited with non-zero exit-code: 255
-2024-01-08T15:40:15+0000  zoxide                     Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:22:13+0000  2048-game                  Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T18:24:14+0000  0x0                        Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:27:43+0000  bbdb-csv-import            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:27:57+0000  better-defaults            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:28:11+0000  caser                      Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T18:28:30+0000  bluesound                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:29:19+0000  buffer-sets                Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:30:28+0000  cern-ldap                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:30:53+0000  chordpro-mode              Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:31:16+0000  clang-capf                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:32:11+0000  colorless-themes           Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:34:08+0000  counsel-mairix             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:35:26+0000  ditz-mode                  Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T18:35:38+0000  darkman                    Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:35:56+0000  ddate                      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:36:17+0000  deno-ts-mode               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:36:23+0000  detached                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:37:08+0000  dired-rmjunk               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:37:28+0000  display-wttr               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:39:46+0000  el-secretario-mu4e         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:40:02+0000  electric-ospl              Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:40:17+0000  enlightened-theme          Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T18:43:02+0000  eshell-outline             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:45:17+0000  fennel-mode                Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:45:59+0000  flymake-golangci           Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:47:57+0000  flymake-clippy             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:48:07+0000  flymake-fennel             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:48:34+0000  flymake-swi-prolog         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:49:27+0000  fullframe                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:49:56+0000  gemtext-mode               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:50:57+0000  glue                       Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:51:48+0000  goto-last-point            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:52:07+0000  graphql-ts-mode            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:55:46+0000  highlight-parentheses      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:56:35+0000  hyperdrive                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:56:43+0000  ibrowse                    Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:57:03+0000  jabber                     No define-package found in jabber-pkg.el
+2024-01-08T18:58:01+0000  insert-kaomoji             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:58:18+0000  iota                       Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T18:58:36+0000  kanban                     Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:01:00+0000  lms                        Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:01:51+0000  lavenderless-theme         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:02:56+0000  llama                      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:04:11+0000  minesweeper                Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:05:56+0000  metronome                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:06:43+0000  modus-themes               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:07:51+0000  myrddin-mode               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:09:01+0000  nordic-night-theme         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:09:01+0000  nordless-theme             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:09:03+0000  notmuch-addr               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:09:05+0000  notmuch-maildir            Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:09:07+0000  notmuch-transient          Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:10:53+0000  org-parser                 Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:10:53+0000  ol-notmuch                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:11:20+0000  org-agenda-files-track     Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:11:22+0000  org-agenda-files-track-ql  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:11:59+0000  org-emms                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:12:03+0000  org-grep                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:13:04+0000  org-present-remote         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:14:02+0000  org-zettelkasten           Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:14:28+0000  per-buffer-theme           Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:14:43+0000  ox-gemini                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:14:45+0000  ox-haunt                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:15:38+0000  pmdm                       Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:16:27+0000  peertube                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:16:52+0000  protobuf-ts-mode           Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:19:17+0000  pulseaudio-control         Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:21:30+0000  repl-toggle                Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:22:15+0000  robot-log                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:23:13+0000  scpaste                    Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:25:05+0000  slow-keys                  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:25:11+0000  sly-overlay                Command `git clone https\://git.sr.ht/\~fosskers/sly-overlay /mnt/store/melpa/working/sly-overlay/' exited with non-zero exit-code: 128
+2024-01-08T19:26:29+0000  spray                      Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:27:29+0000  subsonic                   Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:28:40+0000  tangonov-theme             Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:29:29+0000  third-time                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:29:38+0000  time-block                 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:30:17+0000  transducers                Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:30:27+0000  tray                       Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:31:38+0000  universal-sidecar-elfeed-related  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:31:38+0000  universal-sidecar          Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:31:38+0000  universal-sidecar-roam     Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:31:38+0000  universal-sidecar-elfeed-score  Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:31:57+0000  ushin-shapes               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:32:53+0000  wisp-mode                  Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:32:58+0000  visible-mark               Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+2024-01-08T19:34:06+0000  yatex                      Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:34:41+0000  zpresent                   Command `hg purge' exited with non-zero exit-code: 255
+2024-01-08T19:36:44+0000  zoxide                     Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
