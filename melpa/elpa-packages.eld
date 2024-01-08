@@ -2838,6 +2838,7 @@
   (kaesar-file :url "https://github.com/mhayashi1120/Emacs-kaesar.git")
   (kaesar-mode :url "https://github.com/mhayashi1120/Emacs-kaesar.git")
   (kaesar-pbkdf2 :url "https://github.com/mhayashi1120/Emacs-kaesar.git")
+  (kagi :url "https://codeberg.org/bram85/kagi.el.git")
   (kakapo-mode :url "https://github.com/listx/kakapo-mode.git")
   (kakoune :url "https://github.com/jmorag/kakoune.el.git")
   (kaleidoscope :url "https://git.madhouse-project.org/algernon/kaleidoscope.el")
