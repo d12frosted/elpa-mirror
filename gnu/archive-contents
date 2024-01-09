@@ -164,14 +164,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "00e07e060218fbd1e16faaf10116c03b12e62580"))])
  (auctex .
-	 [(13 2 3)
+	 [(13 2 4)
 	  ((emacs
 	    (26 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "ef2999e6d7c3232c0fe82d1de89ddda17b88c5b0"))])
+	   (:commit . "62befc2176987f202770b974cbda89314abc254e"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -3223,7 +3223,7 @@
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
 	   (:commit . "a88d83f420e2fdcfff4408cf967df2b2f9176ba1"))])
  (repology .
-	   [(1 2 3)
+	   [(1 2 4)
 	    ((emacs
 	      (26 1)))
 	    "Repology API access via Elisp" tar
@@ -3232,7 +3232,7 @@
 	     (:authors
 	      ("Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))
 	     (:url . "https://elpa.gnu.org/packages/repology.html")
-	     (:commit . "b5829003decbdbe9002e7e1d29f45989a4659927"))])
+	     (:commit . "a6b41709525e60bdac807f153a3199003ee9d50f"))])
  (rich-minority .
 		[(1 0 3)
 		 ((cl-lib
