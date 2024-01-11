@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-diff-at-point.git
 
 Updating /mnt/store/melpa/working/diff-at-point/
-Checking out 0a4815a364b636eadf2f9ca6f468fb5996ff8d6f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/diff-at-point/
-  to /tmp/diff-at-point7ojSGY/diff-at-point-20230320.2355
-    diff-at-point.el -> diff-at-point.el
-Created diff-at-point-20230320.2355.tar containing:
-  diff-at-point-20230320.2355/
-  diff-at-point-20230320.2355/diff-at-point-pkg.el
-  diff-at-point-20230320.2355/diff-at-point.el
- ✓ Success:
-  2024-01-11T15:50:17+0000  diff-at-point-20230320.2355.entry
-  2024-01-11T15:50:17+0000  diff-at-point-20230320.2355.tar
-Built diff-at-point in 3.493s, finished at 2024-01-11T15:50:18+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-diff-at-point.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

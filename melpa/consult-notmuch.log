@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/consult-notmuch.git
 
 Updating /mnt/store/melpa/working/consult-notmuch/
-Checking out d0d4129d45ccceddaeeaa3631eb42d5dd09a758b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/consult-notmuch/
-  to /tmp/consult-notmuchDPGgPg/consult-notmuch-20221216.1701
-    consult-notmuch.el -> consult-notmuch.el
-Created consult-notmuch-20221216.1701.tar containing:
-  consult-notmuch-20221216.1701/
-  consult-notmuch-20221216.1701/consult-notmuch-pkg.el
-  consult-notmuch-20221216.1701/consult-notmuch.el
- ✓ Success:
-  2024-01-11T15:47:25+0000  consult-notmuch-20221216.1701.entry
-  2024-01-11T15:47:25+0000  consult-notmuch-20221216.1701.tar
-Built consult-notmuch in 4.069s, finished at 2024-01-11T15:47:26+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/jao/consult-notmuch.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

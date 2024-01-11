@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ravi/consult-dash.git
 
 Updating /mnt/store/melpa/working/consult-dash/
-Checking out af9f26393583e4b5eb5f29fa4d7e72bf1a46d5f9
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/consult-dash/
-  to /tmp/consult-dashcebiAo/consult-dash-20230529.1419
-    consult-dash.el -> consult-dash.el
-Created consult-dash-20230529.1419.tar containing:
-  consult-dash-20230529.1419/
-  consult-dash-20230529.1419/consult-dash-pkg.el
-  consult-dash-20230529.1419/consult-dash.el
- ✓ Success:
-  2024-01-11T15:47:16+0000  consult-dash-20230529.1419.entry
-  2024-01-11T15:47:16+0000  consult-dash-20230529.1419.tar
-Built consult-dash in 4.152s, finished at 2024-01-11T15:47:17+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ravi/consult-dash.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

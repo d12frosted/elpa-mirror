@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/fourier/borland-blue-theme.git
 
 Updating /mnt/store/melpa/working/borland-blue-theme/
-Checking out db74eefebbc89d3c62575f8f50b319e87b4a3470
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/borland-blue-theme/
-  to /tmp/borland-blue-themeTxD6yR/borland-blue-theme-20160117.1321
-    borland-blue-theme.el -> borland-blue-theme.el
-Created borland-blue-theme-20160117.1321.tar containing:
-  borland-blue-theme-20160117.1321/
-  borland-blue-theme-20160117.1321/borland-blue-theme-pkg.el
-  borland-blue-theme-20160117.1321/borland-blue-theme.el
- ✓ Success:
-  2024-01-11T15:42:16+0000  borland-blue-theme-20160117.1321.entry
-  2024-01-11T15:42:16+0000  borland-blue-theme-20160117.1321.tar
-Built borland-blue-theme in 5.649s, finished at 2024-01-11T15:42:18+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/fourier/borland-blue-theme.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

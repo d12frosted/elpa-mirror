@@ -3,30 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist/
-Checking out dbbcdfd4398cc2845a20aca4161358fafcb60c65
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/chronometrist/
-  to /tmp/chronometristXrDZbI/chronometrist-20230712.1532
-  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
-  ! elisp/chronometrist-sqlite.el -> chronometrist-sqlite.el
-  ! elisp/chronometrist-third.el -> chronometrist-third.el
-  ! elisp/chronometrist.el -> chronometrist.el
-  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
-  ! elisp/chronometrist-sqlite.org -> chronometrist-sqlite.org
-  ! elisp/chronometrist-third.org -> chronometrist-third.org
-  ! elisp/chronometrist.org -> chronometrist.org
-Created chronometrist-20230712.1532.tar containing:
-  chronometrist-20230712.1532/
-  chronometrist-20230712.1532/chronometrist-pkg.el
-  chronometrist-20230712.1532/chronometrist-spark.el
-  chronometrist-20230712.1532/chronometrist-spark.org
-  chronometrist-20230712.1532/chronometrist-sqlite.el
-  chronometrist-20230712.1532/chronometrist-sqlite.org
-  chronometrist-20230712.1532/chronometrist-third.el
-  chronometrist-20230712.1532/chronometrist-third.org
-  chronometrist-20230712.1532/chronometrist.el
-  chronometrist-20230712.1532/chronometrist.org
- ✓ Success:
-  2024-01-11T15:44:37+0000  chronometrist-20230712.1532.entry
-  2024-01-11T15:44:37+0000  chronometrist-20230712.1532.tar
-Built chronometrist in 3.101s, finished at 2024-01-11T15:44:37+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/contrapunctus/chronometrist.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

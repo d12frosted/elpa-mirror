@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/hjudt/dired-duplicates.git
 
 Updating /mnt/store/melpa/working/dired-duplicates/
-Checking out e07552323b26ce68956f8b03aa66af145bae4d86
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dired-duplicates/
-  to /tmp/dired-duplicateslTQMA8/dired-duplicates-20231114.2150
-    dired-duplicates.el -> dired-duplicates.el
-Created dired-duplicates-20231114.2150.tar containing:
-  dired-duplicates-20231114.2150/
-  dired-duplicates-20231114.2150/dired-duplicates-pkg.el
-  dired-duplicates-20231114.2150/dired-duplicates.el
- ✓ Success:
-  2024-01-11T15:50:37+0000  dired-duplicates-20231114.2150.entry
-  2024-01-11T15:50:37+0000  dired-duplicates-20231114.2150.tar
-Built dired-duplicates in 2.941s, finished at 2024-01-11T15:50:38+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/hjudt/dired-duplicates.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

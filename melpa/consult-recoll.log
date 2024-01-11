@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/consult-recoll.git
 
 Updating /mnt/store/melpa/working/consult-recoll/
-Checking out ba68d052d9479aeaa5dda15a57a2c070df7d9bca
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/consult-recoll/
-  to /tmp/consult-recollkP664X/consult-recoll-20231211.1221
-    consult-recoll.el -> consult-recoll.el
-Created consult-recoll-20231211.1221.tar containing:
-  consult-recoll-20231211.1221/
-  consult-recoll-20231211.1221/consult-recoll-pkg.el
-  consult-recoll-20231211.1221/consult-recoll.el
- ✓ Success:
-  2024-01-11T15:47:26+0000  consult-recoll-20231211.1221.entry
-  2024-01-11T15:47:26+0000  consult-recoll-20231211.1221.tar
-Built consult-recoll in 4.101s, finished at 2024-01-11T15:47:27+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/jao/consult-recoll.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

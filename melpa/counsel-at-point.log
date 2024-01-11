@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-counsel-at-point.git
 
 Updating /mnt/store/melpa/working/counsel-at-point/
-Checking out 08f45559597ffbff2e9ecda35bacaaa4dae26fc2
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/counsel-at-point/
-  to /tmp/counsel-at-pointGCpmN7/counsel-at-point-20230808.1344
-    counsel-at-point.el -> counsel-at-point.el
-Created counsel-at-point-20230808.1344.tar containing:
-  counsel-at-point-20230808.1344/
-  counsel-at-point-20230808.1344/counsel-at-point-pkg.el
-  counsel-at-point-20230808.1344/counsel-at-point.el
- ✓ Success:
-  2024-01-11T15:47:44+0000  counsel-at-point-20230808.1344.entry
-  2024-01-11T15:47:44+0000  counsel-at-point-20230808.1344.tar
-Built counsel-at-point in 4.361s, finished at 2024-01-11T15:47:46+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-counsel-at-point.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/clause.el.git
 
 Updating /mnt/store/melpa/working/clause/
-Checking out 0ea166fa218618c1b80b60c995f927310c25b02a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/clause/
-  to /tmp/clausenaKPMq/clause-20230405.1235
-    clause.el -> clause.el
-Created clause-20230405.1235.tar containing:
-  clause-20230405.1235/
-  clause-20230405.1235/clause-pkg.el
-  clause-20230405.1235/clause.el
- ✓ Success:
-  2024-01-11T15:45:01+0000  clause-20230405.1235.entry
-  2024-01-11T15:45:01+0000  clause-20230405.1235.tar
-Built clause in 4.050s, finished at 2024-01-11T15:45:02+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/martianh/clause.el.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

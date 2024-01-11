@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-bookmark-in-project.git
 
 Updating /mnt/store/melpa/working/bookmark-in-project/
-Checking out b3255afd8bddd0e6705fa2556205bf1c1192fc37
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/bookmark-in-project/
-  to /tmp/bookmark-in-projectWB46jx/bookmark-in-project-20230604.757
-    bookmark-in-project.el -> bookmark-in-project.el
-Created bookmark-in-project-20230604.757.tar containing:
-  bookmark-in-project-20230604.757/
-  bookmark-in-project-20230604.757/bookmark-in-project-pkg.el
-  bookmark-in-project-20230604.757/bookmark-in-project.el
- ✓ Success:
-  2024-01-11T15:42:09+0000  bookmark-in-project-20230604.757.entry
-  2024-01-11T15:42:09+0000  bookmark-in-project-20230604.757.tar
-Built bookmark-in-project in 4.960s, finished at 2024-01-11T15:42:11+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-bookmark-in-project.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

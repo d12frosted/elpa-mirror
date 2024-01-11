@@ -3,32 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-cycle-at-point.git
 
 Updating /mnt/store/melpa/working/cycle-at-point/
-Checking out cbbd8721af0cbc84ba737d42bdf702d9a80fa3fb
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cycle-at-point/
-  to /tmp/cycle-at-pointSUJdQK/cycle-at-point-20230805.925
-    cycle-at-point-find-alphabet.el -> cycle-at-point-find-alphabet.el
-    cycle-at-point-find-integer.el -> cycle-at-point-find-integer.el
-    cycle-at-point-preset-c++-mode.el -> cycle-at-point-preset-c++-mode.el
-    cycle-at-point-preset-c-mode.el -> cycle-at-point-preset-c-mode.el
-    cycle-at-point-preset-cmake-mode.el -> cycle-at-point-preset-cmake-mode.el
-    cycle-at-point-preset-emacs-lisp-mode.el -> cycle-at-point-preset-emacs-lisp-mode.el
-    cycle-at-point-preset-lang-en.el -> cycle-at-point-preset-lang-en.el
-    cycle-at-point-preset-python-mode.el -> cycle-at-point-preset-python-mode.el
-    cycle-at-point.el -> cycle-at-point.el
-Created cycle-at-point-20230805.925.tar containing:
-  cycle-at-point-20230805.925/
-  cycle-at-point-20230805.925/cycle-at-point-find-alphabet.el
-  cycle-at-point-20230805.925/cycle-at-point-find-integer.el
-  cycle-at-point-20230805.925/cycle-at-point-pkg.el
-  cycle-at-point-20230805.925/cycle-at-point-preset-c++-mode.el
-  cycle-at-point-20230805.925/cycle-at-point-preset-c-mode.el
-  cycle-at-point-20230805.925/cycle-at-point-preset-cmake-mode.el
-  cycle-at-point-20230805.925/cycle-at-point-preset-emacs-lisp-mode.el
-  cycle-at-point-20230805.925/cycle-at-point-preset-lang-en.el
-  cycle-at-point-20230805.925/cycle-at-point-preset-python-mode.el
-  cycle-at-point-20230805.925/cycle-at-point.el
- ✓ Success:
-  2024-01-11T15:48:43+0000  cycle-at-point-20230805.925.entry
-  2024-01-11T15:48:43+0000  cycle-at-point-20230805.925.tar
-Built cycle-at-point in 4.843s, finished at 2024-01-11T15:48:45+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-cycle-at-point.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
