@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/smeargle.git
 
 Updating /mnt/store/melpa/working/smeargle/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://github.com/emacsorphanage/smeargle.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 1c5c1e1d66aa96b818fbfcdf9fbec84e509b87be
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smeargle/
+  to /tmp/smeargleAalxNn/smeargle-20200323.533
+    smeargle.el -> smeargle.el
+Created smeargle-20200323.533.tar containing:
+  smeargle-20200323.533/
+  smeargle-20200323.533/smeargle-pkg.el
+  smeargle-20200323.533/smeargle.el
+ ✓ Success:
+  2024-01-11T14:39:52+0000  smeargle-20200323.533.entry
+  2024-01-11T14:39:52+0000  smeargle-20200323.533.tar
+Built smeargle in 4.957s, finished at 2024-01-11T14:39:54+0000
