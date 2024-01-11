@@ -1,0 +1,57 @@
+Package: evil
+Fetcher: github
+Source:  https://github.com/emacs-evil/evil.git
+
+Updating /mnt/store/melpa/working/evil/
+Checking out 6ca32ca05eef41c3bc3d9cc66fc052741250bc3a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil/
+  to /tmp/evilkjjFG8/evil-20240104.1115
+    evil-command-window.el -> evil-command-window.el
+    evil-commands.el -> evil-commands.el
+    evil-common.el -> evil-common.el
+    evil-core.el -> evil-core.el
+    evil-development.el -> evil-development.el
+    evil-digraphs.el -> evil-digraphs.el
+    evil-ex.el -> evil-ex.el
+    evil-integration.el -> evil-integration.el
+    evil-jumps.el -> evil-jumps.el
+    evil-keybindings.el -> evil-keybindings.el
+    evil-macros.el -> evil-macros.el
+    evil-maps.el -> evil-maps.el
+    evil-pkg.el -> evil-pkg.el
+    evil-repeat.el -> evil-repeat.el
+    evil-search.el -> evil-search.el
+    evil-states.el -> evil-states.el
+    evil-types.el -> evil-types.el
+    evil-vars.el -> evil-vars.el
+    evil.el -> evil.el
+  ! doc/build/texinfo/evil.texi -> evil.texi
+Generating /tmp/evilkjjFG8/evil-20240104.1115/evil.info
+Created evil-20240104.1115.tar containing:
+  evil-20240104.1115/
+  evil-20240104.1115/dir
+  evil-20240104.1115/evil-command-window.el
+  evil-20240104.1115/evil-commands.el
+  evil-20240104.1115/evil-common.el
+  evil-20240104.1115/evil-core.el
+  evil-20240104.1115/evil-development.el
+  evil-20240104.1115/evil-digraphs.el
+  evil-20240104.1115/evil-ex.el
+  evil-20240104.1115/evil-integration.el
+  evil-20240104.1115/evil-jumps.el
+  evil-20240104.1115/evil-keybindings.el
+  evil-20240104.1115/evil-macros.el
+  evil-20240104.1115/evil-maps.el
+  evil-20240104.1115/evil-pkg.el
+  evil-20240104.1115/evil-repeat.el
+  evil-20240104.1115/evil-search.el
+  evil-20240104.1115/evil-states.el
+  evil-20240104.1115/evil-types.el
+  evil-20240104.1115/evil-vars.el
+  evil-20240104.1115/evil.el
+  evil-20240104.1115/evil.info
+ ✓ Success:
+  2024-01-11T00:01:13+0000  evil-20240104.1115.entry
+  2024-01-11T00:01:13+0000  evil-20240104.1115.tar
+Built evil in 8.128s, finished at 2024-01-11T00:01:14+0000
