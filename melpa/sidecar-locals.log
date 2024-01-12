@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-sidecar-locals.git
 
 Updating /mnt/store/melpa/working/sidecar-locals/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-sidecar-locals.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out b6b66b6d5a8963256d87d87d02f94ae36b39e6f6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sidecar-locals/
+  to /tmp/sidecar-locals8Wjzra/sidecar-locals-20230518.1422
+    sidecar-locals.el -> sidecar-locals.el
+Created sidecar-locals-20230518.1422.tar containing:
+  sidecar-locals-20230518.1422/
+  sidecar-locals-20230518.1422/sidecar-locals-pkg.el
+  sidecar-locals-20230518.1422/sidecar-locals.el
+ ✓ Success:
+  2024-01-12T11:44:15+0000  sidecar-locals-20230518.1422.entry
+  2024-01-12T11:44:15+0000  sidecar-locals-20230518.1422.tar
+Built sidecar-locals in 4.038s, finished at 2024-01-12T11:44:17+0000

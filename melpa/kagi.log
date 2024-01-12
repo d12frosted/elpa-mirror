@@ -3,7 +3,18 @@ Fetcher: codeberg
 Source:  https://codeberg.org/bram85/kagi.el.git
 
 Updating /mnt/store/melpa/working/kagi/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/bram85/kagi.el.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 5097198ef9ed033d7296483522df7f129dfd61cb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kagi/
+  to /tmp/kagi0WphBQ/kagi-20240111.2111
+    kagi.el -> kagi.el
+Created kagi-20240111.2111.tar containing:
+  kagi-20240111.2111/
+  kagi-20240111.2111/kagi-pkg.el
+  kagi-20240111.2111/kagi.el
+ ✓ Success:
+  2024-01-11T18:18:33+0000  kagi-20240110.2046.entry
+  2024-01-11T18:18:32+0000  kagi-20240110.2046.tar
+  2024-01-12T11:20:22+0000  kagi-20240111.2111.entry
+  2024-01-12T11:20:22+0000  kagi-20240111.2111.tar
+Built kagi in 4.416s, finished at 2024-01-12T11:20:23+0000
