@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/pidu/git-lens.git
 
 Updating /mnt/store/melpa/working/git-lens/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/pidu/git-lens.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 347832fbdb75a0930aa3eef628ec0069a335f3b7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-lens/
+  to /tmp/git-lens9HJHP7/git-lens-20220922.710
+    git-lens.el -> git-lens.el
+Created git-lens-20220922.710.tar containing:
+  git-lens-20220922.710/
+  git-lens-20220922.710/git-lens-pkg.el
+  git-lens-20220922.710/git-lens.el
+ ✓ Success:
+  2024-01-12T07:01:23+0000  git-lens-20220922.710.entry
+  2024-01-12T07:01:23+0000  git-lens-20220922.710.tar
+Built git-lens in 3.827s, finished at 2024-01-12T07:01:24+0000

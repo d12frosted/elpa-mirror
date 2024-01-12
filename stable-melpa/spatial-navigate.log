@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-spatial-navigate.git
 
 Updating /mnt/store/melpa/working/spatial-navigate/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-spatial-navigate.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 11f281ae16b541ede9b4fadf96200e1728eb6ed0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/spatial-navigate/
+  to /tmp/spatial-navigate3lqwKk/spatial-navigate-20230115.633
+    spatial-navigate.el -> spatial-navigate.el
+Created spatial-navigate-20230115.633.tar containing:
+  spatial-navigate-20230115.633/
+  spatial-navigate-20230115.633/spatial-navigate-pkg.el
+  spatial-navigate-20230115.633/spatial-navigate.el
+ ✓ Success:
+  2024-01-12T07:40:50+0000  spatial-navigate-20230115.633.entry
+  2024-01-12T07:40:50+0000  spatial-navigate-20230115.633.tar
+Built spatial-navigate in 4.684s, finished at 2024-01-12T07:40:51+0000

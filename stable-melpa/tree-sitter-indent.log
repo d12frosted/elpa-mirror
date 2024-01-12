@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/FelipeLema/tree-sitter-indent.el.git
 
 Updating /mnt/store/melpa/working/tree-sitter-indent/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/FelipeLema/tree-sitter-indent.el.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 4ef246db3e4ff99f672fe5e4b416c890f885c09e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tree-sitter-indent/
+  to /tmp/tree-sitter-indentz0ni64/tree-sitter-indent-20220411.1439
+    tree-sitter-indent.el -> tree-sitter-indent.el
+Created tree-sitter-indent-20220411.1439.tar containing:
+  tree-sitter-indent-20220411.1439/
+  tree-sitter-indent-20220411.1439/tree-sitter-indent-pkg.el
+  tree-sitter-indent-20220411.1439/tree-sitter-indent.el
+ ✓ Success:
+  2024-01-12T07:45:18+0000  tree-sitter-indent-20220411.1439.entry
+  2024-01-12T07:45:18+0000  tree-sitter-indent-20220411.1439.tar
+Built tree-sitter-indent in 2.268s, finished at 2024-01-12T07:45:19+0000

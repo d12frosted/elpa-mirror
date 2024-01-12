@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-scroll-on-drag.git
 
 Updating /mnt/store/melpa/working/scroll-on-drag/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-scroll-on-drag.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 179c2acecc48d3ceca4b449b2a225d684002bb32
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scroll-on-drag/
+  to /tmp/scroll-on-dragmmJji2/scroll-on-drag-20230313.546
+    scroll-on-drag.el -> scroll-on-drag.el
+Created scroll-on-drag-20230313.546.tar containing:
+  scroll-on-drag-20230313.546/
+  scroll-on-drag-20230313.546/scroll-on-drag-pkg.el
+  scroll-on-drag-20230313.546/scroll-on-drag.el
+ ✓ Success:
+  2024-01-12T07:36:59+0000  scroll-on-drag-20230313.546.entry
+  2024-01-12T07:36:59+0000  scroll-on-drag-20230313.546.tar
+Built scroll-on-drag in 1.882s, finished at 2024-01-12T07:36:59+0000

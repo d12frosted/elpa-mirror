@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/seahorse/yabaki-theme.git
 
 Updating /mnt/store/melpa/working/yabaki-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/seahorse/yabaki-theme.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 209f2be321509dac00631fff1b0f7ea01ba382de
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yabaki-theme/
+  to /tmp/yabaki-themePrKiDE/yabaki-theme-20231004.2023
+    yabaki-theme.el -> yabaki-theme.el
+Created yabaki-theme-20231004.2023.tar containing:
+  yabaki-theme-20231004.2023/
+  yabaki-theme-20231004.2023/yabaki-theme-pkg.el
+  yabaki-theme-20231004.2023/yabaki-theme.el
+ ✓ Success:
+  2024-01-12T07:51:47+0000  yabaki-theme-20231004.2023.entry
+  2024-01-12T07:51:47+0000  yabaki-theme-20231004.2023.tar
+Built yabaki-theme in 2.642s, finished at 2024-01-12T07:51:47+0000

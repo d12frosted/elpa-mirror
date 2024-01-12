@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git
 
 Updating /mnt/store/melpa/working/idle-highlight-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out f9091c907d41e7b12d99d108a194229b8dbfc5ae
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/idle-highlight-mode/
+  to /tmp/idle-highlight-modebYryLa/idle-highlight-mode-20230319.810
+    idle-highlight-mode.el -> idle-highlight-mode.el
+Created idle-highlight-mode-20230319.810.tar containing:
+  idle-highlight-mode-20230319.810/
+  idle-highlight-mode-20230319.810/idle-highlight-mode-pkg.el
+  idle-highlight-mode-20230319.810/idle-highlight-mode.el
+ ✓ Success:
+  2024-01-12T07:09:14+0000  idle-highlight-mode-20230319.810.entry
+  2024-01-12T07:09:14+0000  idle-highlight-mode-20230319.810.tar
+Built idle-highlight-mode in 1.953s, finished at 2024-01-12T07:09:14+0000

@@ -3,7 +3,22 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/fedi.el.git
 
 Updating /mnt/store/melpa/working/fedi/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/martianh/fedi.el.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 4d776332d6425a917cb437fc17831fa834c881d2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fedi/
+  to /tmp/fediGLp9AQ/fedi-20231230.1108
+    fedi-http.el -> fedi-http.el
+    fedi-iso.el -> fedi-iso.el
+    fedi-post.el -> fedi-post.el
+    fedi.el -> fedi.el
+Created fedi-20231230.1108.tar containing:
+  fedi-20231230.1108/
+  fedi-20231230.1108/fedi-http.el
+  fedi-20231230.1108/fedi-iso.el
+  fedi-20231230.1108/fedi-pkg.el
+  fedi-20231230.1108/fedi-post.el
+  fedi-20231230.1108/fedi.el
+ ✓ Success:
+  2024-01-12T06:56:07+0000  fedi-20231230.1108.entry
+  2024-01-12T06:56:07+0000  fedi-20231230.1108.tar
+Built fedi in 3.985s, finished at 2024-01-12T06:56:08+0000

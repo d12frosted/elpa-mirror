@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/contrapunctus/sxiv.el.git
 
 Updating /mnt/store/melpa/working/sxiv/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/contrapunctus/sxiv.el.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 47f5b2fbb94c569dc5e71cbe4de9c6eabbbc69e8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sxiv/
+  to /tmp/sxivGDTvL0/sxiv-20220530.14
+    sxiv.el -> sxiv.el
+Created sxiv-20220530.14.tar containing:
+  sxiv-20220530.14/
+  sxiv-20220530.14/sxiv-pkg.el
+  sxiv-20220530.14/sxiv.el
+ ✓ Success:
+  2024-01-12T07:42:31+0000  sxiv-20220530.14.entry
+  2024-01-12T07:42:31+0000  sxiv-20220530.14.tar
+Built sxiv in 3.272s, finished at 2024-01-12T07:42:32+0000

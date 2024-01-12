@@ -3,7 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/ivy-spotify/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
 fatal: unable to access 'https://codeberg.org/jao/espotify.git/': Failed to connect to codeberg.org port 443: Connection timed out
 
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

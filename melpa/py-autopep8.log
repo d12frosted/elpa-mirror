@@ -3,7 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-py-autopep8.git
 
 Updating /mnt/store/melpa/working/py-autopep8/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
 fatal: unable to access 'https://codeberg.org/ideasman42/emacs-py-autopep8.git/': Failed to connect to codeberg.org port 443: Connection timed out
 
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

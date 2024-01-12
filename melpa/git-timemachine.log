@@ -3,7 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/pidu/git-timemachine.git
 
 Updating /mnt/store/melpa/working/git-timemachine/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
 fatal: unable to access 'https://codeberg.org/pidu/git-timemachine.git/': Failed to connect to codeberg.org port 443: Connection timed out
 
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
