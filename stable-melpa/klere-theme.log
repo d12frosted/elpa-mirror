@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/WammKD/emacs-klere-theme.git
 
 Updating /mnt/store/melpa/working/klere-theme/
-Checking out ad7fe6963a4c3db8b3e93f1dcb1892f6ef084280
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/klere-theme/
-  to /tmp/klere-themep7wkVj/klere-theme-20240110.336
-    klere-theme.el -> klere-theme.el
-Created klere-theme-20240110.336.tar containing:
-  klere-theme-20240110.336/
-  klere-theme-20240110.336/klere-theme-pkg.el
-  klere-theme-20240110.336/klere-theme.el
- ✓ Success:
-  2024-01-11T18:19:19+0000  klere-theme-20240110.336.entry
-  2024-01-11T18:19:19+0000  klere-theme-20240110.336.tar
-Built klere-theme in 3.949s, finished at 2024-01-11T18:19:20+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/WammKD/emacs-klere-theme.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

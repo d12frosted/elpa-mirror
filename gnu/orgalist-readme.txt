@@ -7,7 +7,7 @@ such constructs include:
 
     - item 1
     - item 2
-      - [ ] checbox sub-item
+      - [ ] checkbox sub-item
 
 or
 

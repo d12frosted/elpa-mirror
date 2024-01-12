@@ -3,5 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-jabber/emacs-jabber.git
 
 Updating /mnt/store/melpa/working/jabber/
-Checking out 676d1867731fbb986646d353eb8945107710f0bd
-No define-package found in jabber-pkg.el
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/emacs-jabber/emacs-jabber.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

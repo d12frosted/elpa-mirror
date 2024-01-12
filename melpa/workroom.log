@@ -3,26 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/akib/emacs-workroom.git
 
 Updating /mnt/store/melpa/working/workroom/
-Checking out cb8654191b23c9b02a79660c3d8c969709c6fcbe
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/workroom/
-  to /tmp/workroomLyjKUM/workroom-20230926.1631
-    workroom.el -> workroom.el
-    fdl.texi -> fdl.texi
-    gpl.texi -> gpl.texi
-    workroom.texi -> workroom.texi
-Generating /tmp/workroomLyjKUM/workroom-20230926.1631/fdl.info
-Generating /tmp/workroomLyjKUM/workroom-20230926.1631/gpl.info
-Generating /tmp/workroomLyjKUM/workroom-20230926.1631/workroom.info
-Created workroom-20230926.1631.tar containing:
-  workroom-20230926.1631/
-  workroom-20230926.1631/dir
-  workroom-20230926.1631/fdl.info
-  workroom-20230926.1631/gpl.info
-  workroom-20230926.1631/workroom-pkg.el
-  workroom-20230926.1631/workroom.el
-  workroom-20230926.1631/workroom.info
- ✓ Success:
-  2024-01-11T18:54:42+0000  workroom-20230926.1631.entry
-  2024-01-11T18:54:42+0000  workroom-20230926.1631.tar
-Built workroom in 9.864s, finished at 2024-01-11T18:54:43+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/akib/emacs-workroom.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

@@ -2734,15 +2734,16 @@
 		  (:url . "https://elpa.gnu.org/packages/org-translate.html")
 		  (:commit . "bdc5d169ef0c502f46aa673918ccf34fcc8415f2"))])
  (orgalist .
-	   [(1 13)
+	   [(1 14)
 	    ((emacs
 	      (24 4)))
-	    "Manage Org-like lists in non-Org buffers" single
-	    ((:url . "http://elpa.gnu.org/packages/orgalist.html")
-	     (:keywords "convenience")
+	    "Manage Org-like lists in non-Org buffers" tar
+	    ((:keywords "convenience")
+	     (:maintainer "Nicolas Goaziou" . "mail@nicolasgoaziou.fr")
 	     (:authors
 	      ("Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))
-	     (:maintainer "Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))])
+	     (:url . "https://elpa.gnu.org/packages/orgalist.html")
+	     (:commit . "06c62e23c7bdeb743ac4d2fc38a25720f2598ff6"))])
  (osc .
       [(0 4)
        nil "Open Sound Control protocol library" tar
