@@ -3,16 +3,7 @@ Fetcher: github
 Source:  https://github.com/tuhdo/semantic-stickyfunc-enhance.git
 
 Updating /mnt/store/melpa/working/stickyfunc-enhance/
-Checking out 13bdba51fcd83ccbc3267959d23afc94d458dcb0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/stickyfunc-enhance/
-  to /tmp/stickyfunc-enhanceRRcRTJ/stickyfunc-enhance-20150429.1814
-    stickyfunc-enhance.el -> stickyfunc-enhance.el
-Created stickyfunc-enhance-20150429.1814.tar containing:
-  stickyfunc-enhance-20150429.1814/
-  stickyfunc-enhance-20150429.1814/stickyfunc-enhance-pkg.el
-  stickyfunc-enhance-20150429.1814/stickyfunc-enhance.el
- ✓ Success:
-  2024-01-12T11:46:44+0000  stickyfunc-enhance-20150429.1814.entry
-  2024-01-12T11:46:44+0000  stickyfunc-enhance-20150429.1814.tar
-Built stickyfunc-enhance in 2.376s, finished at 2024-01-12T11:46:45+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: could not read Username for 'https://github.com': No such device or address
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

@@ -3,20 +3,7 @@ Fetcher: github
 Source:  https://github.com/tuhdo/semantic-refactor.git
 
 Updating /mnt/store/melpa/working/srefactor/
-Checking out 95c70a94b5aad4c85b35569e2f2325047791153a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/srefactor/
-  to /tmp/srefactorrcpDco/srefactor-20230504.617
-    srefactor-lisp.el -> srefactor-lisp.el
-    srefactor-ui.el -> srefactor-ui.el
-    srefactor.el -> srefactor.el
-Created srefactor-20230504.617.tar containing:
-  srefactor-20230504.617/
-  srefactor-20230504.617/srefactor-lisp.el
-  srefactor-20230504.617/srefactor-pkg.el
-  srefactor-20230504.617/srefactor-ui.el
-  srefactor-20230504.617/srefactor.el
- ✓ Success:
-  2024-01-12T11:46:26+0000  srefactor-20230504.617.entry
-  2024-01-12T11:46:26+0000  srefactor-20230504.617.tar
-Built srefactor in 2.200s, finished at 2024-01-12T11:46:26+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: could not read Username for 'https://github.com': No such device or address
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
