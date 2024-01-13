@@ -3,8 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~fosskers/sly-overlay
 
 Cloning https://git.sr.ht/~fosskers/sly-overlay to /mnt/store/melpa/working/sly-overlay/
-Command `git clone https\://git.sr.ht/\~fosskers/sly-overlay /mnt/store/melpa/working/sly-overlay/' exited with non-zero exit-code: 128
-Cloning into '/mnt/store/melpa/working/sly-overlay'...
-fatal: unable to access 'https://git.sr.ht/~fosskers/sly-overlay/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git clone https\://git.sr.ht/\~fosskers/sly-overlay /mnt/store/melpa/working/sly-overlay/' exited with non-zero exit-code: 128
+Checking out 078c2db5390ef19d1336da067fe85b9586b261e4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sly-overlay/
+  to /tmp/sly-overlayQPQMdb/sly-overlay-20240107.2206
+    sly-overlay.el -> sly-overlay.el
+Created sly-overlay-20240107.2206.tar containing:
+  sly-overlay-20240107.2206/
+  sly-overlay-20240107.2206/sly-overlay-pkg.el
+  sly-overlay-20240107.2206/sly-overlay.el
+ ✓ Success:
+  2024-01-13T07:49:43+0000  sly-overlay-20240107.2206.entry
+  2024-01-13T07:49:43+0000  sly-overlay-20240107.2206.tar
+Built sly-overlay in 6.241s, finished at 2024-01-13T07:49:46+0000

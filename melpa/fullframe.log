@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tomterl/fullframe
 
 Updating /mnt/store/melpa/working/fullframe/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~tomterl/fullframe/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 886b831c001b44ec95aec4ff36e8bc1b3003c786
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fullframe/
+  to /tmp/fullframeZNwnVe/fullframe-20210226.1057
+    fullframe.el -> fullframe.el
+Created fullframe-20210226.1057.tar containing:
+  fullframe-20210226.1057/
+  fullframe-20210226.1057/fullframe-pkg.el
+  fullframe-20210226.1057/fullframe.el
+ ✓ Success:
+  2024-01-13T07:13:24+0000  fullframe-20210226.1057.entry
+  2024-01-13T07:13:23+0000  fullframe-20210226.1057.tar
+Built fullframe in 16.069s, finished at 2024-01-13T07:13:25+0000

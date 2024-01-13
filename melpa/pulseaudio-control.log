@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~flexibeast/pulseaudio-control
 
 Updating /mnt/store/melpa/working/pulseaudio-control/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~flexibeast/pulseaudio-control/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out e917e84661b0e2496b295f1bbfba6ad32a656527
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pulseaudio-control/
+  to /tmp/pulseaudio-control2IsZka/pulseaudio-control-20230316.1819
+    pulseaudio-control.el -> pulseaudio-control.el
+Created pulseaudio-control-20230316.1819.tar containing:
+  pulseaudio-control-20230316.1819/
+  pulseaudio-control-20230316.1819/pulseaudio-control-pkg.el
+  pulseaudio-control-20230316.1819/pulseaudio-control.el
+ ✓ Success:
+  2024-01-13T07:43:49+0000  pulseaudio-control-20230316.1819.entry
+  2024-01-13T07:43:48+0000  pulseaudio-control-20230316.1819.tar
+Built pulseaudio-control in 5.411s, finished at 2024-01-13T07:43:51+0000

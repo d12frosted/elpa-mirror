@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~technomancy/scpaste
 
 Updating /mnt/store/melpa/working/scpaste/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~technomancy/scpaste/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 4723c551951c5e86ceaf078846f4f46db38739fe
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scpaste/
+  to /tmp/scpasteKNeHke/scpaste-20230627.1800
+    scpaste.el -> scpaste.el
+Created scpaste-20230627.1800.tar containing:
+  scpaste-20230627.1800/
+  scpaste-20230627.1800/scpaste-pkg.el
+  scpaste-20230627.1800/scpaste.el
+ ✓ Success:
+  2024-01-13T07:47:45+0000  scpaste-20230627.1800.entry
+  2024-01-13T07:47:44+0000  scpaste-20230627.1800.tar
+Built scpaste in 4.620s, finished at 2024-01-13T07:47:46+0000

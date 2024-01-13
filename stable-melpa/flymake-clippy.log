@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~mgmarlow/flymake-clippy
 
 Updating /mnt/store/melpa/working/flymake-clippy/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~mgmarlow/flymake-clippy/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 62c670c19e575a0d7dd723cbd195c18de60bb494
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-clippy/
+  to /tmp/flymake-clippydDVrZE/flymake-clippy-20231102.1616
+    flymake-clippy.el -> flymake-clippy.el
+Created flymake-clippy-20231102.1616.tar containing:
+  flymake-clippy-20231102.1616/
+  flymake-clippy-20231102.1616/flymake-clippy-pkg.el
+  flymake-clippy-20231102.1616/flymake-clippy.el
+ ✓ Success:
+  2024-01-13T07:11:42+0000  flymake-clippy-20231102.1616.entry
+  2024-01-13T07:11:42+0000  flymake-clippy-20231102.1616.tar
+Built flymake-clippy in 4.425s, finished at 2024-01-13T07:11:44+0000

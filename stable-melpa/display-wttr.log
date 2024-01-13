@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~josegpt/display-wttr
 
 Updating /mnt/store/melpa/working/display-wttr/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~josegpt/display-wttr/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 7062953d034e27c297d58748cf74dad552aa2873
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/display-wttr/
+  to /tmp/display-wttrhFQNoy/display-wttr-20221102.1426
+    display-wttr.el -> display-wttr.el
+Created display-wttr-20221102.1426.tar containing:
+  display-wttr-20221102.1426/
+  display-wttr-20221102.1426/display-wttr-pkg.el
+  display-wttr-20221102.1426/display-wttr.el
+ ✓ Success:
+  2024-01-13T07:01:29+0000  display-wttr-20221102.1426.entry
+  2024-01-13T07:01:29+0000  display-wttr-20221102.1426.tar
+Built display-wttr in 4.653s, finished at 2024-01-13T07:01:31+0000

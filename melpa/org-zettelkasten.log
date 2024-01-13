@@ -3,7 +3,20 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ymherklotz/org-zettelkasten
 
 Updating /mnt/store/melpa/working/org-zettelkasten/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~ymherklotz/org-zettelkasten/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 5863a057f9b41dfa4cbf383c325b3fcddbbe5449
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-zettelkasten/
+  to /tmp/org-zettelkastenpQK2Qu/org-zettelkasten-20230613.1924
+    org-zettelkasten-consult.el -> org-zettelkasten-consult.el
+    org-zettelkasten-counsel.el -> org-zettelkasten-counsel.el
+    org-zettelkasten.el -> org-zettelkasten.el
+Created org-zettelkasten-20230613.1924.tar containing:
+  org-zettelkasten-20230613.1924/
+  org-zettelkasten-20230613.1924/org-zettelkasten-consult.el
+  org-zettelkasten-20230613.1924/org-zettelkasten-counsel.el
+  org-zettelkasten-20230613.1924/org-zettelkasten-pkg.el
+  org-zettelkasten-20230613.1924/org-zettelkasten.el
+ ✓ Success:
+  2024-01-13T07:38:41+0000  org-zettelkasten-20230613.1924.entry
+  2024-01-13T07:38:41+0000  org-zettelkasten-20230613.1924.tar
+Built org-zettelkasten in 9.664s, finished at 2024-01-13T07:38:43+0000

@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~mgmarlow/deno-ts-mode
 
 Updating /mnt/store/melpa/working/deno-ts-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~mgmarlow/deno-ts-mode/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 526b6c00483cd86a028805e31ebd8a4a7000c3da
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/deno-ts-mode/
+  to /tmp/deno-ts-mode5o2dov/deno-ts-mode-20230912.202
+    deno-ts-mode.el -> deno-ts-mode.el
+Created deno-ts-mode-20230912.202.tar containing:
+  deno-ts-mode-20230912.202/
+  deno-ts-mode-20230912.202/deno-ts-mode-pkg.el
+  deno-ts-mode-20230912.202/deno-ts-mode.el
+ ✓ Success:
+  2024-01-13T07:00:15+0000  deno-ts-mode-20230912.202.entry
+  2024-01-13T07:00:15+0000  deno-ts-mode-20230912.202.tar
+Built deno-ts-mode in 5.404s, finished at 2024-01-13T07:00:17+0000

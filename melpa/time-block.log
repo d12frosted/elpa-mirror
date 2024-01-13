@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/time-block-command
 
 Updating /mnt/store/melpa/working/time-block/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~swflint/time-block-command/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 0fdb488c3fa3da2934ee486613f5bf46712b97d6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/time-block/
+  to /tmp/time-blockZFhQWc/time-block-20230511.1434
+    time-block.el -> time-block.el
+Created time-block-20230511.1434.tar containing:
+  time-block-20230511.1434/
+  time-block-20230511.1434/time-block-pkg.el
+  time-block-20230511.1434/time-block.el
+ ✓ Success:
+  2024-01-13T07:54:16+0000  time-block-20230511.1434.entry
+  2024-01-13T07:54:16+0000  time-block-20230511.1434.tar
+Built time-block in 11.958s, finished at 2024-01-13T07:54:18+0000

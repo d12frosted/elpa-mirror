@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~iank/spray
 
 Updating /mnt/store/melpa/working/spray/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~iank/spray/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 69fe48e7bb079e3011476b9f4eb6ac9ae94d6d9b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/spray/
+  to /tmp/sprayX0Tq0c/spray-20160304.2220
+    spray.el -> spray.el
+Created spray-20160304.2220.tar containing:
+  spray-20160304.2220/
+  spray-20160304.2220/spray-pkg.el
+  spray-20160304.2220/spray.el
+ ✓ Success:
+  2024-01-13T07:51:28+0000  spray-20160304.2220.entry
+  2024-01-13T07:51:27+0000  spray-20160304.2220.tar
+Built spray in 11.798s, finished at 2024-01-13T07:51:29+0000

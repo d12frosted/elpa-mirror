@@ -3,7 +3,42 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/hyperdrive.el
 
 Updating /mnt/store/melpa/working/hyperdrive/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~ushin/hyperdrive.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 96436b4e58ea9094a89588cb564f92b350c628dc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hyperdrive/
+  to /tmp/hyperdrivejifc2u/hyperdrive-20240106.1342
+    hyperdrive-describe.el -> hyperdrive-describe.el
+    hyperdrive-diff.el -> hyperdrive-diff.el
+    hyperdrive-dir.el -> hyperdrive-dir.el
+    hyperdrive-ewoc.el -> hyperdrive-ewoc.el
+    hyperdrive-history.el -> hyperdrive-history.el
+    hyperdrive-lib.el -> hyperdrive-lib.el
+    hyperdrive-menu.el -> hyperdrive-menu.el
+    hyperdrive-mirror.el -> hyperdrive-mirror.el
+    hyperdrive-org.el -> hyperdrive-org.el
+    hyperdrive-vars.el -> hyperdrive-vars.el
+    hyperdrive.el -> hyperdrive.el
+  ! doc/hyperdrive.texi -> hyperdrive.texi
+Generating /tmp/hyperdrivejifc2u/hyperdrive-20240106.1342/hyperdrive.info
+Created hyperdrive-20240106.1342.tar containing:
+  hyperdrive-20240106.1342/
+  hyperdrive-20240106.1342/dir
+  hyperdrive-20240106.1342/hyperdrive-describe.el
+  hyperdrive-20240106.1342/hyperdrive-diff.el
+  hyperdrive-20240106.1342/hyperdrive-dir.el
+  hyperdrive-20240106.1342/hyperdrive-ewoc.el
+  hyperdrive-20240106.1342/hyperdrive-history.el
+  hyperdrive-20240106.1342/hyperdrive-lib.el
+  hyperdrive-20240106.1342/hyperdrive-menu.el
+  hyperdrive-20240106.1342/hyperdrive-mirror.el
+  hyperdrive-20240106.1342/hyperdrive-org.el
+  hyperdrive-20240106.1342/hyperdrive-pkg.el
+  hyperdrive-20240106.1342/hyperdrive-vars.el
+  hyperdrive-20240106.1342/hyperdrive.el
+  hyperdrive-20240106.1342/hyperdrive.info
+ ✓ Success:
+  2024-01-06T08:31:42+0000  hyperdrive-20240105.615.entry
+  2024-01-06T08:31:41+0000  hyperdrive-20240105.615.tar
+  2024-01-13T07:20:50+0000  hyperdrive-20240106.1342.entry
+  2024-01-13T07:20:50+0000  hyperdrive-20240106.1342.tar
+Built hyperdrive in 19.552s, finished at 2024-01-13T07:20:53+0000

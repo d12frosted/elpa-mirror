@@ -1,4 +1,4 @@
-This package provides a command dispatcher for existing Notmuch
-commands, as well as some new commands for dealing with tags.
+This package provides dispatcher menus for Notmuch commands,
+as well as some commands defined here, which deal with tags.
 
 Everything is still incomplete and very much subject to change.

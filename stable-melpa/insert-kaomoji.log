@@ -3,7 +3,18 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~pkal/insert-kaomoji
 
 Updating /mnt/store/melpa/working/insert-kaomoji/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~pkal/insert-kaomoji/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 974bb7dc02059253e032c501b2c3c0ece448d472
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/insert-kaomoji/
+  to /tmp/insert-kaomojiDRlXfp/insert-kaomoji-20220215.1204
+    insert-kaomoji.el -> insert-kaomoji.el
+    KAOMOJIS -> KAOMOJIS
+Created insert-kaomoji-20220215.1204.tar containing:
+  insert-kaomoji-20220215.1204/
+  insert-kaomoji-20220215.1204/KAOMOJIS
+  insert-kaomoji-20220215.1204/insert-kaomoji-pkg.el
+  insert-kaomoji-20220215.1204/insert-kaomoji.el
+ ✓ Success:
+  2024-01-13T07:22:22+0000  insert-kaomoji-20220215.1204.entry
+  2024-01-13T07:22:22+0000  insert-kaomoji-20220215.1204.tar
+Built insert-kaomoji in 6.946s, finished at 2024-01-13T07:22:23+0000

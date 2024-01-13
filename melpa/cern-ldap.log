@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~nbarrientos/cern-ldap.el
 
 Updating /mnt/store/melpa/working/cern-ldap/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~nbarrientos/cern-ldap.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 70b5275f0e7b8e15a3def48281f364a32c55afce
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cern-ldap/
+  to /tmp/cern-ldapzi8g1q/cern-ldap-20230626.1158
+    cern-ldap.el -> cern-ldap.el
+Created cern-ldap-20230626.1158.tar containing:
+  cern-ldap-20230626.1158/
+  cern-ldap-20230626.1158/cern-ldap-pkg.el
+  cern-ldap-20230626.1158/cern-ldap.el
+ ✓ Success:
+  2024-01-13T06:54:15+0000  cern-ldap-20230626.1158.entry
+  2024-01-13T06:54:15+0000  cern-ldap-20230626.1158.tar
+Built cern-ldap in 4.004s, finished at 2024-01-13T06:54:16+0000

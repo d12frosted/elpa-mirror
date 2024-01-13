@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~technomancy/better-defaults
 
 Updating /mnt/store/melpa/working/better-defaults/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~technomancy/better-defaults/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 7d0e56b3a7f84bea6ee2dd9fda09da9df335f89e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/better-defaults/
+  to /tmp/better-defaultszjvN4k/better-defaults-20230611.432
+    better-defaults.el -> better-defaults.el
+Created better-defaults-20230611.432.tar containing:
+  better-defaults-20230611.432/
+  better-defaults-20230611.432/better-defaults-pkg.el
+  better-defaults-20230611.432/better-defaults.el
+ ✓ Success:
+  2024-01-13T06:51:28+0000  better-defaults-20230611.432.entry
+  2024-01-13T06:51:28+0000  better-defaults-20230611.432.tar
+Built better-defaults in 6.955s, finished at 2024-01-13T06:51:31+0000

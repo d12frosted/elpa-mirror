@@ -3,7 +3,38 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~protesilaos/modus-themes
 
 Updating /mnt/store/melpa/working/modus-themes/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~protesilaos/modus-themes/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 64823c7767710207cdf443492e0f712876dc4ee4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/modus-themes/
+  to /tmp/modus-themesrMQxaF/modus-themes-20240104.1122
+    modus-operandi-deuteranopia-theme.el -> modus-operandi-deuteranopia-theme.el
+    modus-operandi-theme.el -> modus-operandi-theme.el
+    modus-operandi-tinted-theme.el -> modus-operandi-tinted-theme.el
+    modus-operandi-tritanopia-theme.el -> modus-operandi-tritanopia-theme.el
+    modus-themes.el -> modus-themes.el
+    modus-vivendi-deuteranopia-theme.el -> modus-vivendi-deuteranopia-theme.el
+    modus-vivendi-theme.el -> modus-vivendi-theme.el
+    modus-vivendi-tinted-theme.el -> modus-vivendi-tinted-theme.el
+    modus-vivendi-tritanopia-theme.el -> modus-vivendi-tritanopia-theme.el
+  ! doc/modus-themes.info -> modus-themes.info
+  ! doc/doclicense.texi -> doclicense.texi
+Generating /tmp/modus-themesrMQxaF/modus-themes-20240104.1122/doclicense.info
+Created modus-themes-20240104.1122.tar containing:
+  modus-themes-20240104.1122/
+  modus-themes-20240104.1122/dir
+  modus-themes-20240104.1122/doclicense.info
+  modus-themes-20240104.1122/modus-operandi-deuteranopia-theme.el
+  modus-themes-20240104.1122/modus-operandi-theme.el
+  modus-themes-20240104.1122/modus-operandi-tinted-theme.el
+  modus-themes-20240104.1122/modus-operandi-tritanopia-theme.el
+  modus-themes-20240104.1122/modus-themes-pkg.el
+  modus-themes-20240104.1122/modus-themes.el
+  modus-themes-20240104.1122/modus-themes.info
+  modus-themes-20240104.1122/modus-vivendi-deuteranopia-theme.el
+  modus-themes-20240104.1122/modus-vivendi-theme.el
+  modus-themes-20240104.1122/modus-vivendi-tinted-theme.el
+  modus-themes-20240104.1122/modus-vivendi-tritanopia-theme.el
+ ✓ Success:
+  2024-01-13T07:31:19+0000  modus-themes-20240104.1122.entry
+  2024-01-13T07:31:19+0000  modus-themes-20240104.1122.tar
+Built modus-themes in 7.141s, finished at 2024-01-13T07:31:20+0000

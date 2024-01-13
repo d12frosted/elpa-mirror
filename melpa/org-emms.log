@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jagrg/org-emms
 
 Updating /mnt/store/melpa/working/org-emms/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~jagrg/org-emms/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 13c8f245885a7f4f87bf88c5ad5612af03be1e77
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-emms/
+  to /tmp/org-emmsEHsb3R/org-emms-20230626.1102
+    org-emms.el -> org-emms.el
+Created org-emms-20230626.1102.tar containing:
+  org-emms-20230626.1102/
+  org-emms-20230626.1102/org-emms-pkg.el
+  org-emms-20230626.1102/org-emms.el
+ ✓ Success:
+  2024-01-13T07:36:43+0000  org-emms-20230626.1102.entry
+  2024-01-13T07:36:43+0000  org-emms-20230626.1102.tar
+Built org-emms in 4.408s, finished at 2024-01-13T07:36:45+0000

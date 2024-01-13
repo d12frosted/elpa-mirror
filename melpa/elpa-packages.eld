@@ -4779,6 +4779,7 @@
   (sly-hello-world :url "https://github.com/joaotavora/sly-hello-world.git")
   (sly-macrostep :url "https://github.com/joaotavora/sly-macrostep.git")
   (sly-named-readtables :url "https://github.com/joaotavora/sly-named-readtables.git")
+  (sly-overlay :url "https://git.sr.ht/~fosskers/sly-overlay")
   (sly-quicklisp :url "https://github.com/joaotavora/sly-quicklisp.git")
   (sly-repl-ansi-color :url "https://github.com/PuercoPop/sly-repl-ansi-color.git")
   (smart-backspace :url "https://github.com/itome/smart-backspace.git")

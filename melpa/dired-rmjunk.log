@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/dired-rmjunk
 
 Updating /mnt/store/melpa/working/dired-rmjunk/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~jakob/dired-rmjunk/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 0e890a41fa680a45b4b4aad2c28f9d6dca999cee
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-rmjunk/
+  to /tmp/dired-rmjunkOJv8LY/dired-rmjunk-20191007.1232
+    dired-rmjunk.el -> dired-rmjunk.el
+Created dired-rmjunk-20191007.1232.tar containing:
+  dired-rmjunk-20191007.1232/
+  dired-rmjunk-20191007.1232/dired-rmjunk-pkg.el
+  dired-rmjunk-20191007.1232/dired-rmjunk.el
+ ✓ Success:
+  2024-01-13T07:01:09+0000  dired-rmjunk-20191007.1232.entry
+  2024-01-13T07:01:09+0000  dired-rmjunk-20191007.1232.tar
+Built dired-rmjunk in 4.619s, finished at 2024-01-13T07:01:11+0000

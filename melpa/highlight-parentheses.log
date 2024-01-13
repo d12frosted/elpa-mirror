@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tsdh/highlight-parentheses.el
 
 Updating /mnt/store/melpa/working/highlight-parentheses/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~tsdh/highlight-parentheses.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 438a1cb2563e2a2496be4678cc0df8d5b22caf5d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/highlight-parentheses/
+  to /tmp/highlight-parentheses2gzHVM/highlight-parentheses-20220408.845
+    highlight-parentheses.el -> highlight-parentheses.el
+Created highlight-parentheses-20220408.845.tar containing:
+  highlight-parentheses-20220408.845/
+  highlight-parentheses-20220408.845/highlight-parentheses-pkg.el
+  highlight-parentheses-20220408.845/highlight-parentheses.el
+ ✓ Success:
+  2024-01-13T07:19:38+0000  highlight-parentheses-20220408.845.entry
+  2024-01-13T07:19:38+0000  highlight-parentheses-20220408.845.tar
+Built highlight-parentheses in 4.937s, finished at 2024-01-13T07:19:40+0000

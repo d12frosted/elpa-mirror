@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~hajovonta/glue
 
 Updating /mnt/store/melpa/working/glue/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~hajovonta/glue/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out dcdf8a69db87acea4fa61d4b4b9b1265c7e025db
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/glue/
+  to /tmp/glue8DjtPE/glue-20230112.2159
+    glue.el -> glue.el
+Created glue-20230112.2159.tar containing:
+  glue-20230112.2159/
+  glue-20230112.2159/glue-pkg.el
+  glue-20230112.2159/glue.el
+ ✓ Success:
+  2024-01-13T07:14:52+0000  glue-20230112.2159.entry
+  2024-01-13T07:14:52+0000  glue-20230112.2159.tar
+Built glue in 7.421s, finished at 2024-01-13T07:14:56+0000

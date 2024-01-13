@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/ol-notmuch
 
 Updating /mnt/store/melpa/working/ol-notmuch/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~tarsius/ol-notmuch/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 881991d94a1ad750633fcf1f2d8a9e0616979be3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ol-notmuch/
+  to /tmp/ol-notmuchh1TLva/ol-notmuch-20240101.2222
+    ol-notmuch.el -> ol-notmuch.el
+Created ol-notmuch-20240101.2222.tar containing:
+  ol-notmuch-20240101.2222/
+  ol-notmuch-20240101.2222/ol-notmuch-pkg.el
+  ol-notmuch-20240101.2222/ol-notmuch.el
+ ✓ Success:
+  2024-01-13T07:35:37+0000  ol-notmuch-20240101.2222.entry
+  2024-01-13T07:35:37+0000  ol-notmuch-20240101.2222.tar
+Built ol-notmuch in 6.745s, finished at 2024-01-13T07:35:39+0000

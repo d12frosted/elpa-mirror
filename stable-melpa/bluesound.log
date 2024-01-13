@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~rwv/bluesound-el
 
 Updating /mnt/store/melpa/working/bluesound/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~rwv/bluesound-el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 92f6ebacfa20e89ccd10d27bdb84c74b6413cc68
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bluesound/
+  to /tmp/bluesoundXyYcdt/bluesound-20231124.1347
+    bluesound.el -> bluesound.el
+Created bluesound-20231124.1347.tar containing:
+  bluesound-20231124.1347/
+  bluesound-20231124.1347/bluesound-pkg.el
+  bluesound-20231124.1347/bluesound.el
+ ✓ Success:
+  2024-01-13T06:52:17+0000  bluesound-20231124.1347.entry
+  2024-01-13T06:52:17+0000  bluesound-20231124.1347.tar
+Built bluesound in 7.268s, finished at 2024-01-13T06:52:20+0000

@@ -139,6 +139,15 @@ This section could be added in any of the following ways:
     (add-to-list 'universal-sidecar-sections '(fortune-section :title "O Fortuna!"))
     (add-to-list 'universal-sidecar-sections '(fortune-section :file "definitions" :title "Random Definition"))
 
+Finally, section text can be formatted and fontified as if it was
+in some other mode, for instance, `org-mode' using
+`universal-sidecar-fontify-as'.  An example is shown below.
+
+    (universal-sidecar-fontify-as org-mode ((org-fold-core-style 'overlays))
+      (some-function-that-generates-org-text)
+      (some-post-processing-of-org-text))
+
+
 ;; Changelog
 
 v1.2.3 (2023-06-24): Pass package-lint and byte-compile-file with
@@ -163,3 +172,6 @@ sidecar section errors are logged.
 v1.4.3 (2024-01-03): Buffers can now be ignored using the
 `universal-sidecar-ignore-buffer-regexp' and
 `universal-sidecar-ignore-buffer-functions' variables.
+
+v1.5.0 (2024-01-06): The macro `universal-sidecar-fontify-as' is
+now available to fontify code as if in some major mode.
