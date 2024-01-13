@@ -3,16 +3,7 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/emacs-universal-sidecar
 
 Updating /mnt/store/melpa/working/universal-sidecar-elfeed-related/
-Checking out 4c1be458ed7cde1d97d2e30630fb94958eb89ed3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/universal-sidecar-elfeed-related/
-  to /tmp/universal-sidecar-elfeed-relatedwzkP4a/universal-sidecar-elfeed-related-20240106.1755
-    universal-sidecar-elfeed-related.el -> universal-sidecar-elfeed-related.el
-Created universal-sidecar-elfeed-related-20240106.1755.tar containing:
-  universal-sidecar-elfeed-related-20240106.1755/
-  universal-sidecar-elfeed-related-20240106.1755/universal-sidecar-elfeed-related-pkg.el
-  universal-sidecar-elfeed-related-20240106.1755/universal-sidecar-elfeed-related.el
- ✓ Success:
-  2024-01-13T11:54:24+0000  universal-sidecar-elfeed-related-20240106.1755.entry
-  2024-01-13T11:54:23+0000  universal-sidecar-elfeed-related-20240106.1755.tar
-Built universal-sidecar-elfeed-related in 5.197s, finished at 2024-01-13T11:54:25+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~swflint/emacs-universal-sidecar/': Failed to connect to git.sr.ht port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

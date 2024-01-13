@@ -5,7 +5,8 @@ Features
 
 * Indent
 
-elixir-ts-mode tries to replicate the indentation provided by
+
+`elixir-ts-mode' tries to replicate the indentation provided by
 mix format, but will come with some minor differences.
 
 * IMenu
