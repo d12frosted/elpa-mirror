@@ -21,7 +21,7 @@ Installation
             (set 'auto-mode-alist (cons (cons "\\.brec\\'" 'brec-mode) auto-mode-alist))
 
   For a working example of manual installation, see the relevant lines of the file
-  `http://reluk.ca/.config/emacs/lisp/initialization.el`.
+  `http://reluk.ca/.config/emacs/initialization.el`.
 
 Bugs
 
