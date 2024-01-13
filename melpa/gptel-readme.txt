@@ -1,19 +1,23 @@
 gptel is a simple Large Language Model chat client, with support for multiple models/backends.
 
-gptel supports ChatGPT, Azure, Gemini and local models using Ollama and
-GPT4All.
+gptel supports
+- The services ChatGPT, Azure, Gemini, and Kagi (FastGPT)
+- Local models via Ollama, Llama.cpp, Llamafiles or GPT4All
 
- Features:
- - It’s async and fast, streams responses.
- - Interact with LLMs from anywhere in Emacs (any buffer, shell, minibuffer,
-   wherever)
- - LLM responses are in Markdown or Org markup.
- - Supports conversations and multiple independent sessions.
- - Save chats as regular Markdown/Org/Text files and resume them later.
- - You can go back and edit your previous prompts or LLM responses when
-   continuing a conversation.  These will be fed back to the model.
+ Additionally, any LLM service (local or remote) that provides an
+ OpenAI-compatible API is supported.
 
-Requirements for ChatGPT, Azure or Gemini:
+Features:
+- It’s async and fast, streams responses.
+- Interact with LLMs from anywhere in Emacs (any buffer, shell, minibuffer,
+  wherever)
+- LLM responses are in Markdown or Org markup.
+- Supports conversations and multiple independent sessions.
+- Save chats as regular Markdown/Org/Text files and resume them later.
+- You can go back and edit your previous prompts or LLM responses when
+  continuing a conversation.  These will be fed back to the model.
+
+Requirements for ChatGPT, Azure, Gemini or Kagi:
 
 - You need an appropriate API key.  Set the variable `gptel-api-key' to the
   key or to a function of no arguments that returns the key.  (It tries to
@@ -21,12 +25,16 @@ Requirements for ChatGPT, Azure or Gemini:
 
 - For Azure: define a gptel-backend with `gptel-make-azure', which see.
 - For Gemini: define a gptel-backend with `gptel-make-gemini', which see.
+- For Kagi: define a gptel-backend with `gptel-make-kagi', which see
 
-For local models using Ollama or GPT4All:
+For local models using Ollama, Llama.cpp or GPT4All:
 
 - The model has to be running on an accessible address (or localhost)
 - Define a gptel-backend with `gptel-make-ollama' or `gptel-make-gpt4all',
   which see.
+
+Consult the package README for examples and more help with configuring
+backends.
 
 Usage:
 
