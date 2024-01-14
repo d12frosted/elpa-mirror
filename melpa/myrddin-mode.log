@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/myrddin-mode
 
 Updating /mnt/store/melpa/working/myrddin-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~jakob/myrddin-mode/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 51c0a2cb9dfc9526cd47e71313f5a745c99cadcc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/myrddin-mode/
+  to /tmp/myrddin-modeSIt6Nb/myrddin-mode-20191225.2120
+    myrddin-mode.el -> myrddin-mode.el
+Created myrddin-mode-20191225.2120.tar containing:
+  myrddin-mode-20191225.2120/
+  myrddin-mode-20191225.2120/myrddin-mode-pkg.el
+  myrddin-mode-20191225.2120/myrddin-mode.el
+ ✓ Success:
+  2024-01-14T15:22:16+0000  myrddin-mode-20191225.2120.entry
+  2024-01-14T15:22:15+0000  myrddin-mode-20191225.2120.tar
+Built myrddin-mode in 4.160s, finished at 2024-01-14T15:22:17+0000

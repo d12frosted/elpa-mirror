@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~iank/bbdb-csv-import
 
 Updating /mnt/store/melpa/working/bbdb-csv-import/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~iank/bbdb-csv-import/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 7739d10ebe1787a72aa74085e9baedd0f4988b00
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bbdb-csv-import/
+  to /tmp/bbdb-csv-importujq5Vu/bbdb-csv-import-20140802.1142
+    bbdb-csv-import.el -> bbdb-csv-import.el
+Created bbdb-csv-import-20140802.1142.tar containing:
+  bbdb-csv-import-20140802.1142/
+  bbdb-csv-import-20140802.1142/bbdb-csv-import-pkg.el
+  bbdb-csv-import-20140802.1142/bbdb-csv-import.el
+ ✓ Success:
+  2024-01-14T14:41:58+0000  bbdb-csv-import-20140802.1142.entry
+  2024-01-14T14:41:58+0000  bbdb-csv-import-20140802.1142.tar
+Built bbdb-csv-import in 24.693s, finished at 2024-01-14T14:41:59+0000

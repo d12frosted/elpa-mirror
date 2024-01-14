@@ -3,8 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/emacs-universal-sidecar
 
 Updating /mnt/store/melpa/working/universal-sidecar-elfeed-score/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~swflint/emacs-universal-sidecar/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-...pa/packages/errors.log locked by root@31d9dff1... (pid 174645): (s, q, p, ?)? 
-Cannot resolve lock conflict in batch mode
+Checking out 4c1be458ed7cde1d97d2e30630fb94958eb89ed3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/universal-sidecar-elfeed-score/
+  to /tmp/universal-sidecar-elfeed-score6XCaCL/universal-sidecar-elfeed-score-20240106.1755
+    universal-sidecar-elfeed-score.el -> universal-sidecar-elfeed-score.el
+Created universal-sidecar-elfeed-score-20240106.1755.tar containing:
+  universal-sidecar-elfeed-score-20240106.1755/
+  universal-sidecar-elfeed-score-20240106.1755/universal-sidecar-elfeed-score-pkg.el
+  universal-sidecar-elfeed-score-20240106.1755/universal-sidecar-elfeed-score.el
+ ✓ Success:
+  2024-01-14T15:45:41+0000  universal-sidecar-elfeed-score-20240106.1755.entry
+  2024-01-14T15:45:41+0000  universal-sidecar-elfeed-score-20240106.1755.tar
+Built universal-sidecar-elfeed-score in 5.511s, finished at 2024-01-14T15:45:43+0000

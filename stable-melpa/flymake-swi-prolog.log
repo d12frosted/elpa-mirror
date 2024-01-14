@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~eshel/flymake-swi-prolog
 
 Updating /mnt/store/melpa/working/flymake-swi-prolog/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~eshel/flymake-swi-prolog/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out ae0e4b706a40b71c007ed6cb0ec5425d49bea4c3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-swi-prolog/
+  to /tmp/flymake-swi-prologsNM8YO/flymake-swi-prolog-20220404.950
+    flymake-swi-prolog.el -> flymake-swi-prolog.el
+Created flymake-swi-prolog-20220404.950.tar containing:
+  flymake-swi-prolog-20220404.950/
+  flymake-swi-prolog-20220404.950/flymake-swi-prolog-pkg.el
+  flymake-swi-prolog-20220404.950/flymake-swi-prolog.el
+ ✓ Success:
+  2024-01-14T15:02:35+0000  flymake-swi-prolog-20220404.950.entry
+  2024-01-14T15:02:35+0000  flymake-swi-prolog-20220404.950.tar
+Built flymake-swi-prolog in 23.765s, finished at 2024-01-14T15:02:38+0000

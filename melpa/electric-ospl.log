@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/electric-ospl-mode
 
 Updating /mnt/store/melpa/working/electric-ospl/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~swflint/electric-ospl-mode/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out c2b33c82156adffcbe1c81abc2f62ee4ab86b0c6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/electric-ospl/
+  to /tmp/electric-ospl0AwpWz/electric-ospl-20231129.1953
+    electric-ospl.el -> electric-ospl.el
+Created electric-ospl-20231129.1953.tar containing:
+  electric-ospl-20231129.1953/
+  electric-ospl-20231129.1953/electric-ospl-pkg.el
+  electric-ospl-20231129.1953/electric-ospl.el
+ ✓ Success:
+  2024-01-14T14:54:29+0000  electric-ospl-20231129.1953.entry
+  2024-01-14T14:54:29+0000  electric-ospl-20231129.1953.tar
+Built electric-ospl in 5.407s, finished at 2024-01-14T14:54:31+0000

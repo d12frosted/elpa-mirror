@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~vonfry/zoxide.el
 
 Updating /mnt/store/melpa/working/zoxide/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~vonfry/zoxide.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out c4b72681b139f40ba82f43d9c93adbd37da7b238
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zoxide/
+  to /tmp/zoxidefmMvSi/zoxide-20230912.2359
+    zoxide.el -> zoxide.el
+Created zoxide-20230912.2359.tar containing:
+  zoxide-20230912.2359/
+  zoxide-20230912.2359/zoxide-pkg.el
+  zoxide-20230912.2359/zoxide.el
+ ✓ Success:
+  2024-01-14T15:50:19+0000  zoxide-20230912.2359.entry
+  2024-01-14T15:50:19+0000  zoxide-20230912.2359.tar
+Built zoxide in 4.295s, finished at 2024-01-14T15:50:20+0000

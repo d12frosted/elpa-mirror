@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~lthms/colorless-themes.el
 
 Updating /mnt/store/melpa/working/lavenderless-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~lthms/colorless-themes.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 1b2a507b3b7f9559c944af8fc7531a60b38ae0c3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lavenderless-theme/
+  to /tmp/lavenderless-themeSaHzPs/lavenderless-theme-20201222.1627
+    lavenderless-theme.el -> lavenderless-theme.el
+Created lavenderless-theme-20201222.1627.tar containing:
+  lavenderless-theme-20201222.1627/
+  lavenderless-theme-20201222.1627/lavenderless-theme-pkg.el
+  lavenderless-theme-20201222.1627/lavenderless-theme.el
+ ✓ Success:
+  2024-01-14T15:16:06+0000  lavenderless-theme-20201222.1627.entry
+  2024-01-14T15:16:06+0000  lavenderless-theme-20201222.1627.tar
+Built lavenderless-theme in 6.318s, finished at 2024-01-14T15:16:07+0000

@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/notmuch-transient
 
 Updating /mnt/store/melpa/working/notmuch-transient/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~tarsius/notmuch-transient/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 0dc26288276e43a2e362acae850444a47b7db652
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/notmuch-transient/
+  to /tmp/notmuch-transientXkXzNe/notmuch-transient-20240106.1322
+    notmuch-transient.el -> notmuch-transient.el
+Created notmuch-transient-20240106.1322.tar containing:
+  notmuch-transient-20240106.1322/
+  notmuch-transient-20240106.1322/notmuch-transient-pkg.el
+  notmuch-transient-20240106.1322/notmuch-transient.el
+ ✓ Success:
+  2024-01-14T15:23:35+0000  notmuch-transient-20240106.1322.entry
+  2024-01-14T15:23:34+0000  notmuch-transient-20240106.1322.tar
+Built notmuch-transient in 4.577s, finished at 2024-01-14T15:23:36+0000

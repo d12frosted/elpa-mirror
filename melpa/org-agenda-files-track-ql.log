@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ngraves/org-agenda-files-track
 
 Updating /mnt/store/melpa/working/org-agenda-files-track-ql/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~ngraves/org-agenda-files-track/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 832cffe62c35f32850afb800e9a3b8a20a05ad7b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-agenda-files-track-ql/
+  to /tmp/org-agenda-files-track-qlYNmGww/org-agenda-files-track-ql-20231218.627
+    org-agenda-files-track-ql.el -> org-agenda-files-track-ql.el
+Created org-agenda-files-track-ql-20231218.627.tar containing:
+  org-agenda-files-track-ql-20231218.627/
+  org-agenda-files-track-ql-20231218.627/org-agenda-files-track-ql-pkg.el
+  org-agenda-files-track-ql-20231218.627/org-agenda-files-track-ql.el
+ ✓ Success:
+  2024-01-14T15:25:24+0000  org-agenda-files-track-ql-20231218.627.entry
+  2024-01-14T15:25:24+0000  org-agenda-files-track-ql-20231218.627.tar
+Built org-agenda-files-track-ql in 5.506s, finished at 2024-01-14T15:25:26+0000

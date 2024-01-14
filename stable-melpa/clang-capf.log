@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~pkal/clang-capf
 
 Updating /mnt/store/melpa/working/clang-capf/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~pkal/clang-capf/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 5e4dfba90ce86bbc7ee61805edfca04fff93c291
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/clang-capf/
+  to /tmp/clang-capfNluGiS/clang-capf-20221030.1830
+    clang-capf.el -> clang-capf.el
+Created clang-capf-20221030.1830.tar containing:
+  clang-capf-20221030.1830/
+  clang-capf-20221030.1830/clang-capf-pkg.el
+  clang-capf-20221030.1830/clang-capf.el
+ ✓ Success:
+  2024-01-14T14:45:14+0000  clang-capf-20221030.1830.entry
+  2024-01-14T14:45:14+0000  clang-capf-20221030.1830.tar
+Built clang-capf in 5.976s, finished at 2024-01-14T14:45:16+0000

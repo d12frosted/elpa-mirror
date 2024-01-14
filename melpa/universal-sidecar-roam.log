@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/emacs-universal-sidecar
 
 Updating /mnt/store/melpa/working/universal-sidecar-roam/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~swflint/emacs-universal-sidecar/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 4c1be458ed7cde1d97d2e30630fb94958eb89ed3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/universal-sidecar-roam/
+  to /tmp/universal-sidecar-roamKizNiI/universal-sidecar-roam-20240106.1755
+    universal-sidecar-roam.el -> universal-sidecar-roam.el
+Created universal-sidecar-roam-20240106.1755.tar containing:
+  universal-sidecar-roam-20240106.1755/
+  universal-sidecar-roam-20240106.1755/universal-sidecar-roam-pkg.el
+  universal-sidecar-roam-20240106.1755/universal-sidecar-roam.el
+ ✓ Success:
+  2024-01-14T15:45:41+0000  universal-sidecar-roam-20240106.1755.entry
+  2024-01-14T15:45:41+0000  universal-sidecar-roam-20240106.1755.tar
+Built universal-sidecar-roam in 5.321s, finished at 2024-01-14T15:45:43+0000

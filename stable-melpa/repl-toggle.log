@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tomterl/repl-toggle
 
 Updating /mnt/store/melpa/working/repl-toggle/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~tomterl/repl-toggle/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out e05996b4a2b988f93ccce67f933cfad00064360f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/repl-toggle/
+  to /tmp/repl-toggleMeHN3p/repl-toggle-20220920.752
+    repl-toggle.el -> repl-toggle.el
+Created repl-toggle-20220920.752.tar containing:
+  repl-toggle-20220920.752/
+  repl-toggle-20220920.752/repl-toggle-pkg.el
+  repl-toggle-20220920.752/repl-toggle.el
+ ✓ Success:
+  2024-01-14T15:35:27+0000  repl-toggle-20220920.752.entry
+  2024-01-14T15:35:27+0000  repl-toggle-20220920.752.tar
+Built repl-toggle in 5.563s, finished at 2024-01-14T15:35:28+0000

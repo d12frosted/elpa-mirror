@@ -3,7 +3,20 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~grtcdr/darkman.el
 
 Updating /mnt/store/melpa/working/darkman/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~grtcdr/darkman.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out ecbeeee3b596123755ebb2d2b4bc0399b086ccbf
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/darkman/
+  to /tmp/darkmanZW6gGd/darkman-20240105.1401
+    darkman.el -> darkman.el
+    MANUAL.texi -> MANUAL.texi
+Generating /tmp/darkmanZW6gGd/darkman-20240105.1401/MANUAL.info
+Created darkman-20240105.1401.tar containing:
+  darkman-20240105.1401/
+  darkman-20240105.1401/MANUAL.info
+  darkman-20240105.1401/darkman-pkg.el
+  darkman-20240105.1401/darkman.el
+  darkman-20240105.1401/dir
+ ✓ Success:
+  2024-01-14T14:49:20+0000  darkman-20240105.1401.entry
+  2024-01-14T14:49:19+0000  darkman-20240105.1401.tar
+Built darkman in 7.469s, finished at 2024-01-14T14:49:21+0000

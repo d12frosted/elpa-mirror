@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~earneson/emacs-ddate
 
 Updating /mnt/store/melpa/working/ddate/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~earneson/emacs-ddate/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 31576a62792743c614e362688b3752b7a959814e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ddate/
+  to /tmp/ddateZ7db5M/ddate-20221031.1611
+    ddate.el -> ddate.el
+Created ddate-20221031.1611.tar containing:
+  ddate-20221031.1611/
+  ddate-20221031.1611/ddate-pkg.el
+  ddate-20221031.1611/ddate.el
+ ✓ Success:
+  2024-01-14T14:49:38+0000  ddate-20221031.1611.entry
+  2024-01-14T14:49:38+0000  ddate-20221031.1611.tar
+Built ddate in 5.135s, finished at 2024-01-14T14:49:40+0000

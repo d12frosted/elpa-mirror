@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~jakob/ox-haunt
 
 Updating /mnt/store/melpa/working/ox-haunt/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~jakob/ox-haunt/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 1c8c70e3173f98206768c15cb2e4de706559f151
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ox-haunt/
+  to /tmp/ox-hauntSf7DRb/ox-haunt-20230725.1
+    ox-haunt.el -> ox-haunt.el
+Created ox-haunt-20230725.1.tar containing:
+  ox-haunt-20230725.1/
+  ox-haunt-20230725.1/ox-haunt-pkg.el
+  ox-haunt-20230725.1/ox-haunt.el
+ ✓ Success:
+  2024-01-14T15:28:47+0000  ox-haunt-20230725.1.entry
+  2024-01-14T15:28:46+0000  ox-haunt-20230725.1.tar
+Built ox-haunt in 4.626s, finished at 2024-01-14T15:28:48+0000

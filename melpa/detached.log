@@ -3,7 +3,39 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~niklaseklund/detached.el
 
 Updating /mnt/store/melpa/working/detached/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~niklaseklund/detached.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 6b64d4d8064cee781e071e825857b442ea96c3d9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/detached/
+  to /tmp/detachedXzNfqh/detached-20221129.1430
+    detached-compile.el -> detached-compile.el
+    detached-consult.el -> detached-consult.el
+    detached-dired.el -> detached-dired.el
+    detached-eshell.el -> detached-eshell.el
+    detached-extra.el -> detached-extra.el
+    detached-init.el -> detached-init.el
+    detached-list.el -> detached-list.el
+    detached-org.el -> detached-org.el
+    detached-shell.el -> detached-shell.el
+    detached-vterm.el -> detached-vterm.el
+    detached.el -> detached.el
+  ! doc/detached.info -> detached.info
+Created detached-20221129.1430.tar containing:
+  detached-20221129.1430/
+  detached-20221129.1430/detached-compile.el
+  detached-20221129.1430/detached-consult.el
+  detached-20221129.1430/detached-dired.el
+  detached-20221129.1430/detached-eshell.el
+  detached-20221129.1430/detached-extra.el
+  detached-20221129.1430/detached-init.el
+  detached-20221129.1430/detached-list.el
+  detached-20221129.1430/detached-org.el
+  detached-20221129.1430/detached-pkg.el
+  detached-20221129.1430/detached-shell.el
+  detached-20221129.1430/detached-vterm.el
+  detached-20221129.1430/detached.el
+  detached-20221129.1430/detached.info
+  detached-20221129.1430/dir
+ ✓ Success:
+  2024-01-14T14:50:16+0000  detached-20221129.1430.entry
+  2024-01-14T14:50:16+0000  detached-20221129.1430.tar
+Built detached in 11.491s, finished at 2024-01-14T14:50:21+0000

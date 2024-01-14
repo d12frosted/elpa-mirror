@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/third-time
 
 Updating /mnt/store/melpa/working/third-time/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~swflint/third-time/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 05bed0c25ce5def3db6b885ffcee74a705dc0dfb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/third-time/
+  to /tmp/third-time9A2F4F/third-time-20231023.316
+    third-time.el -> third-time.el
+Created third-time-20231023.316.tar containing:
+  third-time-20231023.316/
+  third-time-20231023.316/third-time-pkg.el
+  third-time-20231023.316/third-time.el
+ ✓ Success:
+  2024-01-14T15:43:18+0000  third-time-20231023.316.entry
+  2024-01-14T15:43:18+0000  third-time-20231023.316.tar
+Built third-time in 8.339s, finished at 2024-01-14T15:43:21+0000

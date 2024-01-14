@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~joram/graphql-ts-mode
 
 Updating /mnt/store/melpa/working/graphql-ts-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~joram/graphql-ts-mode/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out dc88c4bb1702b910cdc68dd7b361a0fc5bf96486
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/graphql-ts-mode/
+  to /tmp/graphql-ts-modek8DnDD/graphql-ts-mode-20230911.2036
+    graphql-ts-mode.el -> graphql-ts-mode.el
+Created graphql-ts-mode-20230911.2036.tar containing:
+  graphql-ts-mode-20230911.2036/
+  graphql-ts-mode-20230911.2036/graphql-ts-mode-pkg.el
+  graphql-ts-mode-20230911.2036/graphql-ts-mode.el
+ ✓ Success:
+  2024-01-14T15:06:33+0000  graphql-ts-mode-20230911.2036.entry
+  2024-01-14T15:06:33+0000  graphql-ts-mode-20230911.2036.tar
+Built graphql-ts-mode in 30.538s, finished at 2024-01-14T15:06:35+0000
