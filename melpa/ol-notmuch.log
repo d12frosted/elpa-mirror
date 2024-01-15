@@ -3,16 +3,7 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tarsius/ol-notmuch
 
 Updating /mnt/store/melpa/working/ol-notmuch/
-Checking out 881991d94a1ad750633fcf1f2d8a9e0616979be3
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ol-notmuch/
-  to /tmp/ol-notmuchIg61WD/ol-notmuch-20240101.2222
-    ol-notmuch.el -> ol-notmuch.el
-Created ol-notmuch-20240101.2222.tar containing:
-  ol-notmuch-20240101.2222/
-  ol-notmuch-20240101.2222/ol-notmuch-pkg.el
-  ol-notmuch-20240101.2222/ol-notmuch.el
- ✓ Success:
-  2024-01-14T19:17:38+0000  ol-notmuch-20240101.2222.entry
-  2024-01-14T19:17:38+0000  ol-notmuch-20240101.2222.tar
-Built ol-notmuch in 5.352s, finished at 2024-01-14T19:17:40+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~tarsius/ol-notmuch/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

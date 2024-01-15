@@ -1279,7 +1279,7 @@
 	   ("Adam Porter" . "adam@alphapapa.net"))
 	  (:commit . "17ea7f6fc11d8e7747c87e9efa76d04e815fd32e"))])
  (emms .
-       [(17)
+       [(18)
 	((cl-lib
 	  (0 5))
 	 (nadvice
@@ -1292,7 +1292,7 @@
 	 (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 	 (:authors
 	  ("Jorgen Schäfer" . "forcer@forcix.cx"))
-	 (:commit . "192c5d4321ecfaa74790e0e73beaf6ed48715b13"))])
+	 (:commit . "1d7547f3fd2659b1b9a4b4534b4673341ee81c92"))])
  (engrave-faces .
 		[(0 3 1)
 		 ((emacs
@@ -2879,7 +2879,7 @@
 	      ("Daiki Ueno" . "ueno@gnu.org"))
 	     (:maintainer "Daiki Ueno" . "ueno@gnu.org"))])
  (plz .
-      [(0 7 1)
+      [(0 7 2)
        ((emacs
 	 (26 3)))
        "HTTP library" tar
@@ -2888,7 +2888,7 @@
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "c701f5d3722b38d9e1a4223d7c06e879ddba5e69"))])
+	(:commit . "e98989a1816458d2940f99beda2b85c37f6b1f3e"))])
  (plz-see .
 	  [(0 1)
 	   ((emacs
