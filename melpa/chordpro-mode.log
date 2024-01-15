@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~breatheoutbreathein/chordpro-mode.el
 
 Updating /mnt/store/melpa/working/chordpro-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~breatheoutbreathein/chordpro-mode.el/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out a63fc0b7181299befc4496cba04e0f84d5953000
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chordpro-mode/
+  to /tmp/chordpro-modeLHL2Pn/chordpro-mode-20231205.26
+    chordpro-mode.el -> chordpro-mode.el
+Created chordpro-mode-20231205.26.tar containing:
+  chordpro-mode-20231205.26/
+  chordpro-mode-20231205.26/chordpro-mode-pkg.el
+  chordpro-mode-20231205.26/chordpro-mode.el
+ ✓ Success:
+  2024-01-15T02:22:37+0000  chordpro-mode-20231205.26.entry
+  2024-01-15T02:22:37+0000  chordpro-mode-20231205.26.tar
+Built chordpro-mode in 4.304s, finished at 2024-01-15T02:22:37+0000

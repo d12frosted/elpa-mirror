@@ -3,7 +3,20 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~grtcdr/darkman.el
 
 Updating /mnt/store/melpa/working/darkman/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~grtcdr/darkman.el/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out ecbeeee3b596123755ebb2d2b4bc0399b086ccbf
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/darkman/
+  to /tmp/darkmananpSqt/darkman-20240105.1401
+    darkman.el -> darkman.el
+    MANUAL.texi -> MANUAL.texi
+Generating /tmp/darkmananpSqt/darkman-20240105.1401/MANUAL.info
+Created darkman-20240105.1401.tar containing:
+  darkman-20240105.1401/
+  darkman-20240105.1401/MANUAL.info
+  darkman-20240105.1401/darkman-pkg.el
+  darkman-20240105.1401/darkman.el
+  darkman-20240105.1401/dir
+ ✓ Success:
+  2024-01-15T02:27:12+0000  darkman-20240105.1401.entry
+  2024-01-15T02:27:12+0000  darkman-20240105.1401.tar
+Built darkman in 7.565s, finished at 2024-01-15T02:27:14+0000

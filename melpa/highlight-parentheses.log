@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tsdh/highlight-parentheses.el
 
 Updating /mnt/store/melpa/working/highlight-parentheses/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~tsdh/highlight-parentheses.el/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 438a1cb2563e2a2496be4678cc0df8d5b22caf5d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/highlight-parentheses/
+  to /tmp/highlight-parenthesesh7GYOR/highlight-parentheses-20220408.845
+    highlight-parentheses.el -> highlight-parentheses.el
+Created highlight-parentheses-20220408.845.tar containing:
+  highlight-parentheses-20220408.845/
+  highlight-parentheses-20220408.845/highlight-parentheses-pkg.el
+  highlight-parentheses-20220408.845/highlight-parentheses.el
+ ✓ Success:
+  2024-01-15T02:46:50+0000  highlight-parentheses-20220408.845.entry
+  2024-01-15T02:46:50+0000  highlight-parentheses-20220408.845.tar
+Built highlight-parentheses in 6.957s, finished at 2024-01-15T02:46:53+0000
