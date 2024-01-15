@@ -1,1 +1,18 @@
-Read error: Is a directory, /mnt/store/melpa/recipes/ert-results
+Package: ert-results
+Fetcher: github
+Source:  https://github.com/rswgnu/ert-results.git
+
+Cloning https://github.com/rswgnu/ert-results.git to /mnt/store/melpa/working/ert-results/
+Checking out 32200a195f68c25a013497329d85ae0703ab475d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ert-results/
+  to /tmp/ert-resultsTUKQO3/ert-results-20240108.1358
+    ert-results.el -> ert-results.el
+Created ert-results-20240108.1358.tar containing:
+  ert-results-20240108.1358/
+  ert-results-20240108.1358/ert-results-pkg.el
+  ert-results-20240108.1358/ert-results.el
+ ✓ Success:
+  2024-01-15T15:59:16+0000  ert-results-20240108.1358.entry
+  2024-01-15T15:59:16+0000  ert-results-20240108.1358.tar
+Built ert-results in 3.184s, finished at 2024-01-15T15:59:18+0000
