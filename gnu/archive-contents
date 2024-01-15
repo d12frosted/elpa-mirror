@@ -729,7 +729,7 @@
 		 ("Theodor Thornhill" . "theo@thornhill.no"))
 		(:commit . "d8b058c9e9d0429ea7e81d121ce19b064bd7e0f5"))])
  (csv-mode .
-	   [(1 22)
+	   [(1 23)
 	    ((emacs
 	      (27 1))
 	     (cl-lib
@@ -738,9 +738,9 @@
 	    ((:keywords "convenience")
 	     (:maintainer nil . "emacs-devel@gnu.org")
 	     (:authors
-	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
+	      ("Francis J. Wright" . "F.J.Wright@qmul.ac.uk"))
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
-	     (:commit . "db8a3e3aef31d35ce5bd1fd09127a3bbfdd0c340"))])
+	     (:commit . "63f02980978f19786bda354457ac5259b8f969a2"))])
  (cursory .
 	  [(1 0 1)
 	   ((emacs
