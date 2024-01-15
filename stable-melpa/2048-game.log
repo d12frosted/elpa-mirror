@@ -3,8 +3,21 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~zck/game-2048
 
 Updating /mnt/store/melpa/working/2048-game/
-Command `hg pull' exited with non-zero exit-code: 255
-pulling from https://hg.sr.ht/~zck/game-2048
-abort: error: Connection timed out
+Checking out 8175ca5191175183b9522141dcb55d30673d2323
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/2048-game/
+  to /tmp/2048-gamesjsLxT/2048-game-20230809.356
+    2048-game.el -> 2048-game.el
+Created 2048-game-20230809.356.tar containing:
+  2048-game-20230809.356/
+  2048-game-20230809.356/2048-game-pkg.el
+  2048-game-20230809.356/2048-game.el
+Command `hg purge' exited with non-zero exit-code: 255
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
 
-Command `hg pull' exited with non-zero exit-code: 255
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command `hg purge' exited with non-zero exit-code: 255
