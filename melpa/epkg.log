@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out 3858c49c8ca230e1766e062e63c23d5ebb06be73
+Checking out 7f7137e96dd91786e0cf5c8ecb674aeaaf22a49d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgRVVBki/epkg-20240101.2215
+  to /tmp/epkghaaHwB/epkg-20240116.1941
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,22 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgRVVBki/epkg-20240101.2215/epkg.info
-Created epkg-20240101.2215.tar containing:
-  epkg-20240101.2215/
-  epkg-20240101.2215/dir
-  epkg-20240101.2215/epkg-desc.el
-  epkg-20240101.2215/epkg-elpa.el
-  epkg-20240101.2215/epkg-list.el
-  epkg-20240101.2215/epkg-org.el
-  epkg-20240101.2215/epkg-pkg.el
-  epkg-20240101.2215/epkg-schemata.el
-  epkg-20240101.2215/epkg-utils.el
-  epkg-20240101.2215/epkg.el
-  epkg-20240101.2215/epkg.info
+Generating /tmp/epkghaaHwB/epkg-20240116.1941/epkg.info
+Created epkg-20240116.1941.tar containing:
+  epkg-20240116.1941/
+  epkg-20240116.1941/dir
+  epkg-20240116.1941/epkg-desc.el
+  epkg-20240116.1941/epkg-elpa.el
+  epkg-20240116.1941/epkg-list.el
+  epkg-20240116.1941/epkg-org.el
+  epkg-20240116.1941/epkg-pkg.el
+  epkg-20240116.1941/epkg-schemata.el
+  epkg-20240116.1941/epkg-utils.el
+  epkg-20240116.1941/epkg.el
+  epkg-20240116.1941/epkg.info
  ✓ Success:
-  2024-01-16T16:00:17+0000  epkg-20240101.2215.entry
-  2024-01-16T16:00:17+0000  epkg-20240101.2215.tar
-Built epkg in 10.946s, finished at 2024-01-16T16:00:19+0000
+  2024-01-16T17:55:14+0000  epkg-20240101.2215.entry
+  2024-01-16T17:55:14+0000  epkg-20240101.2215.tar
+  2024-01-16T19:53:21+0000  epkg-20240116.1941.entry
+  2024-01-16T19:53:21+0000  epkg-20240116.1941.tar
+Built epkg in 7.254s, finished at 2024-01-16T19:53:22+0000
