@@ -1,7 +1,7 @@
 gptel is a simple Large Language Model chat client, with support for multiple models/backends.
 
 gptel supports
-- The services ChatGPT, Azure, Gemini, and Kagi (FastGPT)
+- The services ChatGPT, Azure, Gemini, and Kagi (FastGPT & Summarizer)
 - Local models via Ollama, Llama.cpp, Llamafiles or GPT4All
 
  Additionally, any LLM service (local or remote) that provides an

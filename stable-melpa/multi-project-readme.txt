@@ -4,7 +4,7 @@ for creating, deleting, and searching with projects.  Multi-project
 supports interactively finding a file within a project by using a TAGS file.
 
 
-To use multi-project add the following lines within your .emacs file:
+To use Multi-project add the following lines within your .emacs file:
 
 (require 'multi-project)
 (multi-project-mode)

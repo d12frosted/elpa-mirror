@@ -176,6 +176,9 @@ v1.4.3 (2024-01-03): Buffers can now be ignored using the
 v1.5.0 (2024-01-06): The macro `universal-sidecar-fontify-as' is
 now available to fontify code as if in some major mode.
 
-v1.5.1 (2024-01-16): `universal-sidecar-advise-commands' and
+v1.5.1 (2024-01-14): `universal-sidecar-advise-commands' and
 `universal-sidecar-unadvise-commands' now take arguments to allow
 programmatic advising.
+
+v1.5.2 (2024-01-15): `universal-sidecar-buffer-mode-hook' is now
+customizable.
