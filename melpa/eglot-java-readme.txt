@@ -41,8 +41,9 @@ JDT LS settings documentation: https://github.com/eclipse-jdtls/eclipse.jdt.ls/w
 
 (setq eglot-java-user-init-opts-fn 'custom-eglot-java-init-opts)
 (defun custom-eglot-java-init-opts (server eglot-java-eclipse-jdt)
-  "Custom options that will be merged with any default settings."
-  '(:settings
+  "Custom options that will be merged with default settings."
+  '(:bundles ["/home/me/.emacs.d/lsp-bundles/com.microsoft.java.debug.plugin-0.50.0.jar"]
+    :settings
     (:java
      (:format
       (:settings
