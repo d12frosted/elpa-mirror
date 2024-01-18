@@ -1,2 +1,2 @@
 
-Reveal current file in folder.
+Reveal current file/directory in folder.
