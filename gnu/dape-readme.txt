@@ -19,16 +19,22 @@ and enable `repeat-mode' for ergonomics.
   ⁃ Variable watch
   ⁃ Variable hover with `eldoc'
   ⁃ REPL
-  ⁃ gdb-mi like interface
+  ⁃ gdb-mi.el like interface
   ⁃ Memory viewer with `hexl'
   ⁃ `compile' integration
   ⁃ Debug adapter configuration ergonomics
-  ⁃ No dependencies
+  ⁃ No dependencies (except for jsonrpc which is part of emacs but
+    needed version is not part of latest stable emacs release 29.1-1 but
+    available on elpa)
 
-  <https://raw.githubusercontent.com/svaante/dape/resources/c-light-left.png>
-  And with `(setq dape-buffer-window-arrangment 'gud)' + `corfu' as
-  `completion-in-region-function'.
-  <https://raw.githubusercontent.com/svaante/dape/resources/js-light-gud.png>
+  With `(setq dape-buffer-window-arrangement 'right)':
+  <https://github.com/svaante/dape/blob/resources/dape_0_4_0_right.png>
+  And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
+  `completion-in-region-function':
+  <https://github.com/svaante/dape/blob/resources/dape_0_4_0_gud.png>
+  And with minibuffer config hints:
+  <https://github.com/svaante/dape/blob/resources/dape_0_4_0_hint.png>
+
   Screenshots taken with [modus-operandi-tinted].
 
 
@@ -44,10 +50,11 @@ and enable `repeat-mode' for ergonomics.
   │ (use-package dape
   │   ;; To use window configuration like gud (gdb-mi)
   │   ;; :init
-  │   ;; (setq dape-buffer-window-arrangment 'gud)
+  │   ;; (setq dape-buffer-window-arrangement 'gud)
+  │ 
   │   :config
   │   ;; Info buffers to the right
-  │   ;; (setq dape-buffer-window-arrangment 'right)
+  │   ;; (setq dape-buffer-window-arrangement 'right)
   │ 
   │   ;; To not display info and/or buffers on startup
   │   ;; (remove-hook 'dape-on-start-hooks 'dape-info)
@@ -58,6 +65,7 @@ and enable `repeat-mode' for ergonomics.
   │   ;; (add-hook 'dape-on-stopped-hooks 'dape-repl)
   │ 
   │   ;; By default dape uses gdb keybinding prefix
+  │   ;; If you do not want to use any prefix, set it to nil.
   │   ;; (setq dape-key-prefix "\C-x\C-a")
   │ 
   │   ;; Kill compile buffer on build success
@@ -69,21 +77,13 @@ and enable `repeat-mode' for ergonomics.
   │   ;;             (save-some-buffers t t)))
   │ 
   │   ;; Projectile users
-  │   ;; (setq dape-cwd-fn (lambda (&optional skip-tramp-trim)
-  │   ;;                     (let ((root (projectile-project-root)))
-  │   ;;                       (if (and (not skip-tramp-trim) (tramp-tramp-file-p root))
-  │   ;;                           (tramp-file-name-localname (tramp-dissect-file-name root))
-  │   ;;                         root))))
+  │   ;; (setq dape-cwd-fn 'projectile-project-root)
   │   )
   └────
 
 
 3 Differences with dap-mode
 ═══════════════════════════
-
-  [dap-mode] is the most popular alternative and is of course much more
-  mature and probably more feature rich (have not used `dap-mode'
-  extensively).
 
   Dape has no dependencies outside of packages included in emacs, and
   tries to use get as much out of them possible.
@@ -103,9 +103,6 @@ and enable `repeat-mode' for ergonomics.
     implemented in emacs if vscode never existed.
 
 
-[dap-mode] <https://github.com/emacs-lsp/dap-mode>
-
-
 4 Supported debug adapters
 ══════════════════════════
 
@@ -115,11 +112,11 @@ and enable `repeat-mode' for ergonomics.
 4.1 Javascript - vscode-js-*
 ────────────────────────────
 
-  1. Install `node`
+  1. Install `node'
   2. Visit <https://github.com/microsoft/vscode-js-debug/releases/> and
-     download the asset `js-debug-dap-<version>.tar.gz`
+     download the asset `js-debug-dap-<version>.tar.gz'
   3. Unpack `mkdir -p ~/.emacs.d/debug-adapters && tar -xvzf
-     js-debug-dap-<version>.tar.gz -C ~/.emacs.d/debug-adapters`
+     js-debug-dap-<version>.tar.gz -C ~/.emacs.d/debug-adapters'
 
   For more information see [OPTIONS.md].
 
@@ -145,10 +142,10 @@ and enable `repeat-mode' for ergonomics.
 ──────────────────────────────
 
   1. Download latest `vsix' [release] for your platform
-     `codelldb-<platform>-<os>.vsix`
+     `codelldb-<platform>-<os>.vsix'
   2. Unpack `mkdir -p ~/.emacs.d/debug-adapters && unzip
      codelldb-<platform>-<os>.vsix -d
-     ~/.emacs.d/debug-adapters/codelldb`
+     ~/.emacs.d/debug-adapters/codelldb'
 
   See [manual] for more information.
 
@@ -164,14 +161,14 @@ and enable `repeat-mode' for ergonomics.
   Download latesnd unpack `vsix' file with your favorite unzipper.
 
   1. Download latest `vsix' [release] for your platform
-     `cpptools-<platform>-<os>.vsix`
+     `cpptools-<platform>-<os>.vsix'
   2. Unpack `mkdir -p ~/.emacs.d/debug-adapters && unzip
      cpptools-<os>-<platform>.vsix -d
-     ~/.emacs.d/debug-adapters/cpptools`
+     ~/.emacs.d/debug-adapters/cpptools'
   3. Then `chmod +x
-     ~/.emacs.d/debug-adapters/cpptools/extension/debugAdapters/bin/OpenDebugAD7`
+     ~/.emacs.d/debug-adapters/cpptools/extension/debugAdapters/bin/OpenDebugAD7'
   4. And `chmod +x
-     ~/.emacs.d/debug-adapters/cpptools/extension/debugAdapters/lldb-mi/bin/lldb-mi`
+     ~/.emacs.d/debug-adapters/cpptools/extension/debugAdapters/lldb-mi/bin/lldb-mi'
 
   See [options].
 
@@ -184,7 +181,7 @@ and enable `repeat-mode' for ergonomics.
 4.5 Python - debugpy
 ────────────────────
 
-  Install debugpy with pip `pip install debugpy`
+  Install debugpy with pip `pip install debugpy'
 
   See [options].
 
@@ -220,7 +217,24 @@ and enable `repeat-mode' for ergonomics.
   See <https://github.com/ruby/debug> for more information
 
 
-4.10 Other untested adapters
+4.10 Java - JDTLS with Java Debug Server plugin
+───────────────────────────────────────────────
+
+  See <https://github.com/eclipse-jdtls/eclipse.jdt.ls> for installation
+  of JDTLS.  See <https://github.com/microsoft/java-debug> for
+  installation of the Java Debug Server plugin.  The Java config depends
+  on Eglot running JDTLS with the plugin prior to starting Dape.  Extend
+  `eglot-server-programs' as follows to have JDTLS load the plugin:
+  ┌────
+  │ (add-to-list 'eglot-server-programs
+  │ 	     `((java-mode java-ts-mode) .
+  │ 	       ("jdtls"
+  │ 		:initializationOptions
+  │ 		(:bundles ["/PATH/TO/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-VERSION.jar"]))))
+  └────
+
+
+4.11 Other untested adapters
 ────────────────────────────
 
   If you find a working configuration for any other debug adapter please
@@ -233,21 +247,17 @@ and enable `repeat-mode' for ergonomics.
 <https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/>
 
 
-5 Roadmap
-═════════
-
-  ⁃ More options for indicator placement
-  ⁃ Improving completion in REPL
-  ⁃ Usage of "setVariable" inside of `*dape-info*' buffer
-  ⁃ Improve memory reader with auto reload and write functionality
-  ⁃ Individual thread controls
-  ⁃ Variable values displayed in source buffer, this seams to require
-    integration with lsp-mode and eglot
-
-
-6 Bugs and issues
+5 Bugs and issues
 ═════════════════
 
-  Before reporting any issues take a look at `*dape-debug*' buffer with
-  all debug messages enabled.  `(setq dape--debug-on '(io info error
-  std-server))'.
+  Before reporting any issues take a look at `*dape-repl*'
+  buffer. Master is used is for all case and purposes a development
+  branch still and releases on elpa should be more stable so in the mean
+  time use elpa if the bug is a breaking you workflow.
+
+
+6 Acknowledgements
+══════════════════
+
+  Big thanks to João Távora for the input and jsonrpc; the project
+  wouldn't be where it is without João.

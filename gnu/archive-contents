@@ -264,6 +264,15 @@
 	    (:authors
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	    (:commit . "1709059b8ac33c76107da178cf2d0dc875dff14e"))])
+ (bicep-ts-mode .
+		[(0 1)
+		 nil "tree-sitter support for Bicep" tar
+		 ((:keywords "bicep" "languages" "tree-sitter")
+		  (:maintainer "Jostein Kjønigsen" . "jostein@kjonigsen.net")
+		  (:authors
+		   ("Jostein Kjønigsen" . "jostein@kjonigsen.net"))
+		  (:url . "https://elpa.gnu.org/packages/bicep-ts-mode.html")
+		  (:commit . "197ccf3d4b8b7bb89eb379b90e701429275d58ee"))])
  (bind-key .
 	   [(2 4 1)
 	    nil "A simple way to manage personal keybindings" tar
@@ -761,13 +770,15 @@
 		 (:keywords "convenience")
 		 (:url . "http://elpa.gnu.org/packages/cycle-quotes.html"))])
  (dape .
-       [(0 3 0)
+       [(0 4 0)
 	((emacs
-	  (29 1)))
+	  (29 1))
+	 (jsonrpc
+	  (1 0 21)))
 	"Debug Adapter Protocol for Emacs" tar
 	((:url . "https://github.com/svaante/dape")
 	 (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-	 (:commit . "53560932c3cf11aecd17bb247743e4352c0ddf20"))])
+	 (:commit . "3b39d3739f9671536e33ae52a405812ba2cdec61"))])
  (darkroom .
 	   [(0 3)
 	    ((cl-lib
@@ -1078,7 +1089,7 @@
 	       ("Leo Liu" . "sdl.web@gmail.com"))
 	      (:commit . "f155d19c528e27f8f6c72f0d75f652edbdcab37f"))])
  (ebdb .
-       [(0 8 21)
+       [(0 8 22)
 	((emacs
 	  (25 1))
 	 (seq
@@ -1089,7 +1100,7 @@
 	 (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 	 (:authors
 	  ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-	 (:commit . "a03d36f847c9384215638be1180f1690d76f6b30"))])
+	 (:commit . "b96e5470c54503eab2159e69c822648ad55e6915"))])
  (ebdb-gnorb .
 	     [(1 0 2)
 	      ((gnorb
