@@ -1,9 +1,10 @@
 Package: srefactor
 Fetcher: github
-Source:  https://github.com/tuhdo/semantic-refactor.git
+Source:  https://github.com/emacsattic/semantic-refactor.git
 
-Updating /mnt/store/melpa/working/srefactor/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Cloning https://github.com/emacsattic/semantic-refactor.git to /mnt/store/melpa/working/srefactor/
+Command `git clone https\://github.com/emacsattic/semantic-refactor.git /mnt/store/melpa/working/srefactor/' exited with non-zero exit-code: 128
+Cloning into '/mnt/store/melpa/working/srefactor'...
 fatal: could not read Username for 'https://github.com': No such device or address
 
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Command `git clone https\://github.com/emacsattic/semantic-refactor.git /mnt/store/melpa/working/srefactor/' exited with non-zero exit-code: 128

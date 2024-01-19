@@ -1,9 +1,18 @@
 Package: xwidgete
 Fetcher: github
-Source:  https://github.com/tuhdo/xwidgete.git
+Source:  https://github.com/emacsattic/xwidgete.git
 
 Updating /mnt/store/melpa/working/xwidgete/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: could not read Username for 'https://github.com': No such device or address
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out e4e8410fe32176df85b46234717824519443fb04
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xwidgete/
+  to /tmp/xwidgetenWvmDb/xwidgete-20171118.2116
+    xwidgete.el -> xwidgete.el
+Created xwidgete-20171118.2116.tar containing:
+  xwidgete-20171118.2116/
+  xwidgete-20171118.2116/xwidgete-pkg.el
+  xwidgete-20171118.2116/xwidgete.el
+ ✓ Success:
+  2024-01-19T00:05:57+0000  xwidgete-20171118.2116.entry
+  2024-01-19T00:05:56+0000  xwidgete-20171118.2116.tar
+Built xwidgete in 5.880s, finished at 2024-01-19T00:05:59+0000

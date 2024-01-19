@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://git.savannah.gnu.org/git/emms.git
 
 Updating /mnt/store/melpa/working/emms/
-Checking out 1d7547f3fd2659b1b9a4b4534b4673341ee81c92
+Checking out 37682a777d8262b54a6f09c37d8e353d077e222c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emms/
-  to /tmp/emms3gjT3a/emms-20240114.2024
+  to /tmp/emmsL9T58Y/emms-20240118.2132
     emms-bookmarks.el -> emms-bookmarks.el
     emms-browser.el -> emms-browser.el
     emms-cache.el -> emms-cache.el
@@ -69,74 +69,76 @@ Copying files (->) and directories (=>)
     emms-volume.el -> emms-volume.el
     emms.el -> emms.el
   ! doc/emms.texinfo -> emms.texinfo
-Generating /tmp/emms3gjT3a/emms-20240114.2024/emms.info
-Created emms-20240114.2024.tar containing:
-  emms-20240114.2024/
-  emms-20240114.2024/dir
-  emms-20240114.2024/emms-bookmarks.el
-  emms-20240114.2024/emms-browser.el
-  emms-20240114.2024/emms-cache.el
-  emms-20240114.2024/emms-compat.el
-  emms-20240114.2024/emms-cue.el
-  emms-20240114.2024/emms-history.el
-  emms-20240114.2024/emms-i18n.el
-  emms-20240114.2024/emms-info-exiftool.el
-  emms-20240114.2024/emms-info-libtag.el
-  emms-20240114.2024/emms-info-metaflac.el
-  emms-20240114.2024/emms-info-mp3info.el
-  emms-20240114.2024/emms-info-native-flac.el
-  emms-20240114.2024/emms-info-native-mp3.el
-  emms-20240114.2024/emms-info-native-ogg.el
-  emms-20240114.2024/emms-info-native-opus.el
-  emms-20240114.2024/emms-info-native-spc.el
-  emms-20240114.2024/emms-info-native-vorbis.el
-  emms-20240114.2024/emms-info-native.el
-  emms-20240114.2024/emms-info-ogginfo.el
-  emms-20240114.2024/emms-info-opusinfo.el
-  emms-20240114.2024/emms-info-tinytag.el
-  emms-20240114.2024/emms-info.el
-  emms-20240114.2024/emms-jack.el
-  emms-20240114.2024/emms-last-played.el
-  emms-20240114.2024/emms-later-do.el
-  emms-20240114.2024/emms-librefm-scrobbler.el
-  emms-20240114.2024/emms-librefm-stream.el
-  emms-20240114.2024/emms-lyrics.el
-  emms-20240114.2024/emms-maint.el
-  emms-20240114.2024/emms-mark.el
-  emms-20240114.2024/emms-metaplaylist-mode.el
-  emms-20240114.2024/emms-mode-line-icon.el
-  emms-20240114.2024/emms-mode-line.el
-  emms-20240114.2024/emms-mpris.el
-  emms-20240114.2024/emms-pkg.el
-  emms-20240114.2024/emms-player-mpd.el
-  emms-20240114.2024/emms-player-mpg321-remote.el
-  emms-20240114.2024/emms-player-mplayer.el
-  emms-20240114.2024/emms-player-mpv.el
-  emms-20240114.2024/emms-player-simple.el
-  emms-20240114.2024/emms-player-vlc.el
-  emms-20240114.2024/emms-player-xine.el
-  emms-20240114.2024/emms-playing-time.el
-  emms-20240114.2024/emms-playlist-limit.el
-  emms-20240114.2024/emms-playlist-mode.el
-  emms-20240114.2024/emms-playlist-sort.el
-  emms-20240114.2024/emms-score.el
-  emms-20240114.2024/emms-setup.el
-  emms-20240114.2024/emms-show-all.el
-  emms-20240114.2024/emms-source-file.el
-  emms-20240114.2024/emms-source-playlist.el
-  emms-20240114.2024/emms-stream-info.el
-  emms-20240114.2024/emms-streams.el
-  emms-20240114.2024/emms-tag-editor.el
-  emms-20240114.2024/emms-tag-tracktag.el
-  emms-20240114.2024/emms-url.el
-  emms-20240114.2024/emms-volume-amixer.el
-  emms-20240114.2024/emms-volume-mixerctl.el
-  emms-20240114.2024/emms-volume-pulse.el
-  emms-20240114.2024/emms-volume-sndioctl.el
-  emms-20240114.2024/emms-volume.el
-  emms-20240114.2024/emms.el
-  emms-20240114.2024/emms.info
+Generating /tmp/emmsL9T58Y/emms-20240118.2132/emms.info
+Created emms-20240118.2132.tar containing:
+  emms-20240118.2132/
+  emms-20240118.2132/dir
+  emms-20240118.2132/emms-bookmarks.el
+  emms-20240118.2132/emms-browser.el
+  emms-20240118.2132/emms-cache.el
+  emms-20240118.2132/emms-compat.el
+  emms-20240118.2132/emms-cue.el
+  emms-20240118.2132/emms-history.el
+  emms-20240118.2132/emms-i18n.el
+  emms-20240118.2132/emms-info-exiftool.el
+  emms-20240118.2132/emms-info-libtag.el
+  emms-20240118.2132/emms-info-metaflac.el
+  emms-20240118.2132/emms-info-mp3info.el
+  emms-20240118.2132/emms-info-native-flac.el
+  emms-20240118.2132/emms-info-native-mp3.el
+  emms-20240118.2132/emms-info-native-ogg.el
+  emms-20240118.2132/emms-info-native-opus.el
+  emms-20240118.2132/emms-info-native-spc.el
+  emms-20240118.2132/emms-info-native-vorbis.el
+  emms-20240118.2132/emms-info-native.el
+  emms-20240118.2132/emms-info-ogginfo.el
+  emms-20240118.2132/emms-info-opusinfo.el
+  emms-20240118.2132/emms-info-tinytag.el
+  emms-20240118.2132/emms-info.el
+  emms-20240118.2132/emms-jack.el
+  emms-20240118.2132/emms-last-played.el
+  emms-20240118.2132/emms-later-do.el
+  emms-20240118.2132/emms-librefm-scrobbler.el
+  emms-20240118.2132/emms-librefm-stream.el
+  emms-20240118.2132/emms-lyrics.el
+  emms-20240118.2132/emms-maint.el
+  emms-20240118.2132/emms-mark.el
+  emms-20240118.2132/emms-metaplaylist-mode.el
+  emms-20240118.2132/emms-mode-line-icon.el
+  emms-20240118.2132/emms-mode-line.el
+  emms-20240118.2132/emms-mpris.el
+  emms-20240118.2132/emms-pkg.el
+  emms-20240118.2132/emms-player-mpd.el
+  emms-20240118.2132/emms-player-mpg321-remote.el
+  emms-20240118.2132/emms-player-mplayer.el
+  emms-20240118.2132/emms-player-mpv.el
+  emms-20240118.2132/emms-player-simple.el
+  emms-20240118.2132/emms-player-vlc.el
+  emms-20240118.2132/emms-player-xine.el
+  emms-20240118.2132/emms-playing-time.el
+  emms-20240118.2132/emms-playlist-limit.el
+  emms-20240118.2132/emms-playlist-mode.el
+  emms-20240118.2132/emms-playlist-sort.el
+  emms-20240118.2132/emms-score.el
+  emms-20240118.2132/emms-setup.el
+  emms-20240118.2132/emms-show-all.el
+  emms-20240118.2132/emms-source-file.el
+  emms-20240118.2132/emms-source-playlist.el
+  emms-20240118.2132/emms-stream-info.el
+  emms-20240118.2132/emms-streams.el
+  emms-20240118.2132/emms-tag-editor.el
+  emms-20240118.2132/emms-tag-tracktag.el
+  emms-20240118.2132/emms-url.el
+  emms-20240118.2132/emms-volume-amixer.el
+  emms-20240118.2132/emms-volume-mixerctl.el
+  emms-20240118.2132/emms-volume-pulse.el
+  emms-20240118.2132/emms-volume-sndioctl.el
+  emms-20240118.2132/emms-volume.el
+  emms-20240118.2132/emms.el
+  emms-20240118.2132/emms.info
  ✓ Success:
-  2024-01-18T19:25:08+0000  emms-20240114.2024.entry
-  2024-01-18T19:25:08+0000  emms-20240114.2024.tar
-Built emms in 11.875s, finished at 2024-01-18T19:25:10+0000
+  2024-01-18T21:19:42+0000  emms-20240114.2024.entry
+  2024-01-18T21:19:42+0000  emms-20240114.2024.tar
+  2024-01-18T23:12:53+0000  emms-20240118.2132.entry
+  2024-01-18T23:12:53+0000  emms-20240118.2132.tar
+Built emms in 12.771s, finished at 2024-01-18T23:12:55+0000
