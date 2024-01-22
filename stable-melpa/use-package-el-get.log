@@ -3,16 +3,7 @@ Fetcher: github
 Source:  https://github.com/edvorg/use-package-el-get.git
 
 Updating /mnt/store/melpa/working/use-package-el-get/
-Checking out f33c448ed43ecb003b60ff601ee7ef9b08cff947
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/use-package-el-get/
-  to /tmp/use-package-el-gettAwklG/use-package-el-get-20180131.505
-    use-package-el-get.el -> use-package-el-get.el
-Created use-package-el-get-20180131.505.tar containing:
-  use-package-el-get-20180131.505/
-  use-package-el-get-20180131.505/use-package-el-get-pkg.el
-  use-package-el-get-20180131.505/use-package-el-get.el
- ✓ Success:
-  2024-01-22T03:55:08+0000  use-package-el-get-20180131.505.entry
-  2024-01-22T03:55:08+0000  use-package-el-get-20180131.505.tar
-Built use-package-el-get in 3.651s, finished at 2024-01-22T03:55:10+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: could not read Username for 'https://github.com': No such device or address
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
