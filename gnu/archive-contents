@@ -1373,6 +1373,27 @@
 		    ("David Capello" . "davidcapello@gmail.com")
 		    ("Matthew L. Fidler" . "matthew.fidler@gmail.com"))
 		   (:keywords "convenience"))])
+ (ess .
+      [(24 1 0)
+       ((emacs
+	 (25 1)))
+       "Emacs Speaks Statistics" tar
+       ((:url . "https://ess.r-project.org/")
+	(:maintainer "ESS Core Team" . "ESS-core@r-project.org")
+	(:authors
+	 ("David Smith" . "dsmith@stats.adelaide.edu.au")
+	 ("A.J. Rossini" . "blindglobe@gmail.com")
+	 ("Richard M. Heiberger" . "rmh@temple.edu")
+	 ("Kurt Hornik" . "Kurt.Hornik@R-project.org")
+	 ("Martin Maechler" . "maechler@stat.math.ethz.ch")
+	 ("Rodney A. Sparapani" . "rsparapa@mcw.edu")
+	 ("Stephen Eglen" . "stephen@gnu.org")
+	 ("Sebastian P. Luque" . "spluque@gmail.com")
+	 ("Henning Redestig" . "henning.red@googlemail.com")
+	 ("Vitalie Spinu" . "spinuvit@gmail.com")
+	 ("Lionel Henry" . "lionel.hry@gmail.com")
+	 ("J. Alexander Branham" . "alex.branham@gmail.com"))
+	(:commit . "88d611c6833d521d0fbb2ef9c638bf6b3525a622"))])
  (excorporate .
 	      [(1 1 1)
 	       ((emacs
