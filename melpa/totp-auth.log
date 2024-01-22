@@ -1,0 +1,22 @@
+Package: totp-auth
+Fetcher: gitlab
+Source:  https://gitlab.com/fledermaus/totp.el.git
+
+Updating /mnt/store/melpa/working/totp-auth/
+Checking out 269044a4a210906e2ebbf789c029441fcc5cc70e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/totp-auth/
+  to /tmp/totp-authfZADuy/totp-auth-20240114.2352
+    totp-auth-hmac.el -> totp-auth-hmac.el
+    totp-auth-interop.el -> totp-auth-interop.el
+    totp-auth.el -> totp-auth.el
+Created totp-auth-20240114.2352.tar containing:
+  totp-auth-20240114.2352/
+  totp-auth-20240114.2352/totp-auth-hmac.el
+  totp-auth-20240114.2352/totp-auth-interop.el
+  totp-auth-20240114.2352/totp-auth-pkg.el
+  totp-auth-20240114.2352/totp-auth.el
+ ✓ Success:
+  2024-01-22T03:53:31+0000  totp-auth-20240114.2352.entry
+  2024-01-22T03:53:31+0000  totp-auth-20240114.2352.tar
+Built totp-auth in 3.710s, finished at 2024-01-22T03:53:32+0000

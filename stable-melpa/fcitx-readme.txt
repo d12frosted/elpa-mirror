@@ -98,7 +98,7 @@ https://github.com/cute-jumper/fcitx-remote-for-windows
   For Emacs users on Linux:
   ,----
   | (fcitx-aggressive-setup)
-  | (setq fcitx-use-dbus t)
+  | (setq fcitx-use-dbus t)  ;; or set to 'fcitx5 if you use fcitx5
   `----
 
   For Emacs users on OS X:
@@ -118,7 +118,7 @@ https://github.com/cute-jumper/fcitx-remote-for-windows
   *NOTE*: In Linux, using the `dbus' interface has a better performance.
   But if you also set `echo-keystrokes', you may experience a lagging
   issue.  See [#30].  If that is something you can't tolerate, don't
-  change the value of `fcitx-use-dbus' to `t'.
+  change the value of `fcitx-use-dbus'.
 
 
 [#30] https://github.com/cute-jumper/fcitx.el/issues/30
@@ -387,11 +387,12 @@ https://github.com/cute-jumper/fcitx-remote-for-windows
 =======================
 
   For Linux users, it is recommended that you set `fcitx-use-dbus' to be
-  `t' to speed up a little (but pay attention to the lagging issue
+  non-`nil' to speed up a little (but pay attention to the lagging issue
   mentioned above):
   ,----
-  | (setq fcitx-use-dbus t)
+  | (setq fcitx-use-dbus t)  ;; or 'fcitx5 if you use fcitx5
   `----
+
 
   For OSX users who use [fcitx-remote-for-osx], don't set this variable.
 
