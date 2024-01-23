@@ -48,15 +48,15 @@ Table of Contents
 1 Features
 ══════════
 
-  • Vertical display with arrow key navigation. See the [extensions] for
-    additional display modes.
+  • Vertical display with arrow key navigation. Many additional display
+    modes are provided as [extensions].
   • Prompt shows the current candidate index and the total number of
     candidates.
   • The current candidate is inserted with `TAB' and selected with
     `RET'.
   • Non-existing candidates can be submitted with `M-RET' or by moving
     the point to the prompt.
-  • Configurable sorting by history position, length and alphabetically.
+  • Efficient sorting by history position, length and alphabetically.
   • Long candidates with newlines are formatted to take up less space.
   • Lazy completion candidate highlighting for performance.
   • Annotations are displayed next to the candidates (`annotation-' and
@@ -334,7 +334,7 @@ Table of Contents
   • [vertico-unobtrusive]: `vertico-unobtrusive-mode' displays only the
     topmost candidate.
 
-  See the Commentary of those files for configuration details. With
+  See the commentary of those files for configuration details. With
   these extensions it is possible to adapt Vertico such that it matches
   your preference or behaves similar to other familiar UIs. For example,
   the combination `vertico-flat' plus `vertico-directory' resembles Ido

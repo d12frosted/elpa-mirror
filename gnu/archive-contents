@@ -444,18 +444,18 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "7fe464d21895c4cde2566c3e707c1d30b0782089"))])
  (cape .
-       [(1 1)
+       [(1 2)
 	((emacs
 	  (27 1))
 	 (compat
 	  (29 1 4 4)))
 	"Completion At Point Extensions" tar
 	((:url . "https://github.com/minad/cape")
-	 (:keywords "abbrev" "convenience" "matching" "completion" "wp")
+	 (:keywords "abbrev" "convenience" "matching" "completion" "text")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "1a52302e1bb051f1f0fc8a9e49780bf9af797e15"))])
+	 (:commit . "a687fbeddc0f1dcdc7e4c2d2a69c96243587317d"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -616,7 +616,7 @@
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "3809be4d24a301c78d40bd00fc15bb763e0a3a2a"))])
  (consult .
-	  [(1 1)
+	  [(1 2)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -625,7 +625,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "0e7f3ec8e7e959e262158fa4ddb73de80b52ccc0"))])
+	    (:commit . "ba1ccbb45cd76b3fae20844bd2950631a3312a81"))])
  (consult-recoll .
 		 [(0 8 1)
 		  ((emacs
@@ -650,18 +650,18 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(1 1)
+	[(1 2)
 	 ((emacs
 	   (27 1))
 	  (compat
 	   (29 1 4 4)))
 	 "COmpletion in Region FUnction" tar
 	 ((:url . "https://github.com/minad/corfu")
-	  (:keywords "abbrev" "convenience" "matching" "completion" "wp")
+	  (:keywords "abbrev" "convenience" "matching" "completion" "text")
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "4584252abefb37ac46a32177aa9442164165b55c"))])
+	  (:commit . "b48d3017a47706198e04440cc1b3483bdf646771"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
@@ -2032,18 +2032,18 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (jinx .
-       [(1 1)
+       [(1 2)
 	((emacs
 	  (27 1))
 	 (compat
 	  (29 1 4 4)))
 	"Enchanted Spell Checker" tar
 	((:url . "https://github.com/minad/jinx")
-	 (:keywords "convenience" "wp")
+	 (:keywords "convenience" "text")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "041b6590eb703c9b34968a9374f2a6d41af60aea"))])
+	 (:commit . "e7934278540b33c394a0aebdd9fa543aa84fc82a"))])
  (jit-spell .
 	    [(0 3)
 	     ((emacs
@@ -2801,7 +2801,7 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(1 2)
+      [(1 3)
        ((emacs
 	 (27 1))
 	(compat
@@ -2812,7 +2812,7 @@
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "54d8fac06c36bf319cdac1c92bef2fcfc372b53f"))])
+	(:commit . "5dffbc00e4acfcddc13677f3b76a65dc3b6aee30"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs
@@ -4212,7 +4212,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "f68d962ede0cc3d7758d3304e7411a10694acce8"))])
  (vertico .
-	  [(1 6)
+	  [(1 7)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -4223,7 +4223,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "f7aeda39df860ba1d82d0d94396f8bdeb13c4c8c"))])
+	    (:commit . "cf8b2abf5207696c054c33214c86e3969d415054"))])
  (vertico-posframe .
 		   [(0 7 6)
 		    ((emacs

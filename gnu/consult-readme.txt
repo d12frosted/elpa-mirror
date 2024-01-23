@@ -1099,7 +1099,7 @@ Table of Contents
   without it - or you could use with Embark right away and add the other
   components later on.
 
-  We document a [list of auxillary packages] in the Consult wiki. These
+  We document a [list of auxiliary packages] in the Consult wiki. These
   packages integrate Consult with special programs or with other
   packages in the wider Emacs ecosystem.
 
@@ -1116,8 +1116,8 @@ Table of Contents
 
 [mct by Protesilaos Stavrou] <https://git.sr.ht/~protesilaos/mct>
 
-[list of auxillary packages]
-<https://github.com/minad/consult/wiki/Auxillary-packages>
+[list of auxiliary packages]
+<https://github.com/minad/consult/wiki/Auxiliary-packages>
 
 
 5 Bug reports

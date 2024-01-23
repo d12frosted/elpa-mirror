@@ -59,11 +59,10 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   • Guix: `emacs-jinx' or `enchant', `pkgconf'
   • NixOS: `jinx' from `elpa-packages.nix'
   • Void, Fedora: `enchant2-devel', `pkgconf'
-  • FreeBSD, OpenBSD: `enchant2', `pkgconf'
+  • FreeBSD, OpenBSD, Mac: `enchant2', `pkgconf'
 
-  There have been reports of hangups when loading the native module on
-  unofficial Emacs Mac ports. On Windows the installation of the native
-  module may require manual intervention.
+  On Windows the installation of the native module may require manual
+  intervention.
 
 
 2 Configuration

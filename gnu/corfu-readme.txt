@@ -155,9 +155,11 @@ Table of Contents
   │   ;; Swap M-/ and C-M-/
   │   :bind (("M-/" . dabbrev-completion)
   │ 	 ("C-M-/" . dabbrev-expand))
-  │   ;; Other useful Dabbrev configurations.
-  │   :custom
-  │   (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
+  │   :config
+  │   (add-to-list 'dabbrev-ignored-buffer-regexps "\\` ")
+  │   ;; Since 29.1, use `dabbrev-ignored-buffer-regexps' on older.
+  │   (add-to-list 'dabbrev-ignored-buffer-modes 'doc-view-mode)
+  │   (add-to-list 'dabbrev-ignored-buffer-modes 'pdf-view-mode))
   └────
 
   If you start to configure the package more deeply, I recommend to give
@@ -274,17 +276,15 @@ Table of Contents
 ────────────────────────────────
 
   Corfu can be used for completion in the minibuffer, since it relies on
-  child frames to display the candidates. The Corfu popup can be
-  displayed even if it doesn't fully fit inside the minibuffer. There is
-  a caveat however if you use EXWM, since then an EXWM buffer will
-  overlap the child frame.
+  child frames to display the candidates. The Corfu popup can be shown
+  even if it doesn't fully fit inside the minibuffer.
 
   By default, `global-corfu-mode' does not activate `corfu-mode' in the
   minibuffer, to avoid interference with specialised minibuffer
   completion UIs like Vertico or Mct. However you may still want to
   enable Corfu completion for commands like `M-:' (`eval-expression') or
   `M-!' (`shell-command'), which read from the minibuffer. In order to
-  detect such minibuffers we can check if the variable
+  detect minibuffers with completion we check if the variable
   `completion-at-point-functions' is set locally.
 
   ┌────
@@ -298,10 +298,10 @@ Table of Contents
   │ (add-hook 'minibuffer-setup-hook #'corfu-enable-in-minibuffer)
   └────
 
-  You can also enable Corfu more generally for every minibuffer, as long
-  as no completion UI is active. In the following example we check for
-  Mct and Vertico.  Furthermore we ensure that Corfu is not enabled if a
-  password is read from the minibuffer.
+  This is not recommended, but one can also enable Corfu more generally
+  for every minibuffer, as long as no completion UI is active. In the
+  following example we check for Mct and Vertico. Furthermore we ensure
+  that Corfu is not enabled if a password is read from the minibuffer.
 
   ┌────
   │ (defun corfu-enable-always-in-minibuffer ()
@@ -542,10 +542,10 @@ Table of Contents
   features. In particular, [Embark] is available in the minibuffer, such
   that you can act on the candidates or export/collect the candidates to
   a separate buffer. We could add Corfu support to Embark in the future,
-  such that export/collect is possible directly from Corfu. But in my
-  opinion having the ability to transfer the Corfu completion to the
-  minibuffer is an even better feature, since further completion can be
-  performed there.
+  such that export or collect is possible directly from
+  Corfu. Nevertheless, the ability to transfer the Corfu completion to
+  the minibuffer is even more powerful, since further completion is
+  possible.
 
   The command `corfu-move-to-minibuffer' is defined here in terms of
   `consult-completion-in-region', which uses the minibuffer completion
@@ -554,10 +554,11 @@ Table of Contents
   ┌────
   │ (defun corfu-move-to-minibuffer ()
   │   (interactive)
-  │   (when completion-in-region--data
-  │     (let ((completion-extra-properties corfu--extra)
-  │ 	  completion-cycle-threshold completion-cycling)
-  │       (apply #'consult-completion-in-region completion-in-region--data))))
+  │   (pcase completion-in-region--data
+  │     (`(,beg ,end ,table ,pred ,extras)
+  │      (let ((completion-extra-properties extras)
+  │ 	   completion-cycle-threshold completion-cycling)
+  │        (consult-completion-in-region beg end table pred)))))
   │ (keymap-set corfu-map "M-m" #'corfu-move-to-minibuffer)
   │ (add-to-list 'corfu-continue-commands #'corfu-move-to-minibuffer)
   └────
