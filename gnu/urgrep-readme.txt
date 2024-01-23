@@ -92,6 +92,11 @@ Urgrep can hook into wgrep to support this as well. To enable this, just load
 etc. You can make Xref use Urgrep to generate its search command by loading
 `urgrep-xref.el`.
 
+### Using with `outline-minor-mode`
+
+Inside of Urgrep buffers, you can enable `outline-minor-mode`. This will let you
+toggle the visibility of each file's results.
+
 ### Using with Eshell
 
 In Eshell buffers, you can call `urgrep` much like you'd call any command-line

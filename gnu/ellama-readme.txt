@@ -1,6 +1,356 @@
-Ellama is a tool for interacting with large language models from Emacs.
-It allows you to ask questions and receive responses from the
-LLMs.  Ellama can perform various tasks such as translation, code
-review, summarization, enhancing grammar/spelling or wording and
-more through the Emacs interface.  Ellama natively supports streaming
-output, making it effortless to use with your preferred text editor.
+1 Ellama
+════════
+
+  [file:https://img.shields.io/badge/license-GPL_3-green.svg]
+  [file:https://melpa.org/packages/ellama-badge.svg]
+  [file:https://stable.melpa.org/packages/ellama-badge.svg]
+  [file:https://elpa.gnu.org/packages/ellama.svg]
+
+  Ellama is a tool for interacting with large language models from
+  Emacs. It allows you to ask questions and receive responses from the
+  LLMs. Ellama can perform various tasks such as translation, code
+  review, summarization, enhancing grammar/spelling or wording and more
+  through the Emacs interface. Ellama natively supports streaming
+  output, making it effortless to use with your preferred text editor.
+
+
+[file:https://img.shields.io/badge/license-GPL_3-green.svg]
+<http://www.gnu.org/licenses/gpl-3.0.txt>
+
+[file:https://melpa.org/packages/ellama-badge.svg]
+<https://melpa.org/#/ellama>
+
+[file:https://stable.melpa.org/packages/ellama-badge.svg]
+<https://stable.melpa.org/#/ellama>
+
+[file:https://elpa.gnu.org/packages/ellama.svg]
+<https://elpa.gnu.org/packages/ellama.html>
+
+1.1 Installation
+────────────────
+
+  Just `M-x' `package-install' `ellama' . By default it uses [ollama]
+  provider and [zephyr] model. If you ok with it, you need to install
+  [ollama] and pull [zephyr]. You can use `ellama' with other model or
+  other llm provider.  In that case you should customize ellama
+  configuration like this:
+
+  ┌────
+  │ (use-package ellama
+  │   :init
+  │   (setopt ellama-language "German")
+  │   (require 'llm-ollama)
+  │   (setopt ellama-provider
+  │ 		  (make-llm-ollama
+  │ 		   :chat-model "mistral:7b-instruct-v0.2-q6/K"
+  │ 		   :embedding-model "mistral:7b-instruct-v0.2-q6/K"))
+  │   ;; Predefined llm providers for interactive switching.
+  │   ;; You shouldn't add ollama providers here - it can be selected interactively
+  │   ;; without it. It is just example.
+  │   (setopt ellama-providers
+  │ 		  '(("zephyr" . (make-llm-ollama
+  │ 				 :chat-model "zephyr:7b-beta-q6_K"
+  │ 				 :embedding-model "zephyr:7b-beta-q6_K"))
+  │ 		    ("mistral" . (make-llm-ollama
+  │ 				  :chat-model "mistral:7b-instruct-v0.2-q6_K"
+  │ 				  :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
+  │ 		    ("mixtral" . (make-llm-ollama
+  │ 				  :chat-model "mixtral:8x7b-instruct-v0.1-q3/K/M-4k"
+  │ 				  :embedding-model "mixtral:8x7b-instruct-v0.1-q3/K/M-4k")))))
+  └────
+
+
+[ollama] <https://github.com/jmorganca/ollama>
+
+[zephyr] <https://ollama.ai/library/zephyr>
+
+
+1.2 Commands
+────────────
+
+1.2.1 ellama-chat
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Ask Ellama about something by entering a prompt in an interactive
+  buffer and continue conversation.  !
+
+
+1.2.2 ellama-ask-about
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Ask Ellama about a selected region or the current buffer.  !
+
+
+1.2.3 ellama-ask-selection
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Send selected region or current buffer to ellama chat.
+
+
+1.2.4 ellama-ask-line
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Send current line to ellama chat.
+
+
+1.2.5 ellama-complete
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Complete text in current buffer with ellama.
+
+
+1.2.6 ellama-translate
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Ask Ellama to translate a selected region or word at the point.  !
+
+
+1.2.7 ellama-define-word
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Find the definition of the current word using Ellama.  !
+
+
+1.2.8 ellama-summarize
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Summarize a selected region or the current buffer using Ellama.  !
+
+
+1.2.9 ellama-code-review
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Review code in a selected region or the current buffer using Ellama.
+  !
+
+
+1.2.10 ellama-change
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Change text in a selected region or the current buffer according to a
+  provided change.
+
+
+1.2.11 ellama-make-list
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Create a markdown list from the active region or the current buffer
+  using Ellama.
+
+
+1.2.12 ellama-make-table
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Create a markdown table from the active region or the current buffer
+  using Ellama.
+
+
+1.2.13 ellama-summarize-webpage
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Summarize a webpage fetched from a URL using Ellama.
+
+
+1.2.14 ellama-provider-select
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Select ellama provider.
+
+
+1.2.15 ellama-code-complete
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Complete selected code or code in the current buffer according to a
+  provided change using Ellama.
+
+
+1.2.16 ellama-code-add
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Add new code according to a description, generating it with a provided
+  context from the selected region or the current buffer using Ellama.
+
+
+1.2.17 ellama-code-edit
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Change selected code or code in the current buffer according to a
+  provided change using Ellama.
+
+
+1.2.18 ellama-code-improve
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Change selected code or code in the current buffer according to a
+  provided change using Ellama.
+
+
+1.2.19 ellama-improve-wording
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Enhance the wording in the currently selected region or buffer using
+  Ellama.
+
+
+1.2.20 ellama-improve-grammar
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Enhance the grammar and spelling in the currently selected region or
+  buffer using Ellama.  !
+
+
+1.2.21 ellama-improve-conciseness
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Make the text of the currently selected region or buffer concise and
+  simple using Ellama.
+
+
+1.2.22 ellama-make-format
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Render the currently selected text or the text in the current buffer
+  as a specified format using Ellama.
+
+
+1.2.23 ellama-load-session
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Load ellama session from file.
+
+
+1.2.24 ellama-session-remove
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Remove ellama session.
+
+
+1.2.25 ellama-session-switch
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Change current active session.
+
+
+1.2.26 ellama-session-rename
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Rename current ellama session.
+
+
+1.3 Keymap
+──────────
+
+  Here is a table of keybindings and their associated functions in
+  Ellama, using the `C-c e' prefix:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Keymap  Function                    Description                  
+  ──────────────────────────────────────────────────────────────────
+   "c c"   ellama-code-complete        Code complete                
+   "c a"   ellama-code-add             Code add                     
+   "c e"   ellama-code-edit            Code edit                    
+   "c i"   ellama-code-improve         Code improve                 
+   "c r"   ellama-code-review          Code review                  
+   "s s"   ellama-summarize            Summarize                    
+   "s w"   ellama-summarize-webpage    Summarize webpage            
+   "i w"   ellama-improve-wording      Improve wording              
+   "i g"   ellama-improve-grammar      Improve grammar and spelling 
+   "i c"   ellama-improve-conciseness  Improve conciseness          
+   "m l"   ellama-make-list            Make list                    
+   "m t"   ellama-make-table           Make table                   
+   "m f"   ellama-make-format          Make format                  
+   "a a"   ellama-ask-about            Ask about                    
+   "a i"   ellama-chat                 Chat (ask interactively)     
+   "a l"   ellama-ask-line             Ask about current line       
+   "a s"   ellama-ask-selection        Ask about selection          
+   "t t"   ellama-translate            Text translate               
+   "t c"   ellama-complete             Text complete                
+   "d w"   ellama-define-word          Define word                  
+   "p s"   ellama-provider-select      Provider select              
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+1.4 Configuration
+─────────────────
+
+  The following variables can be customized for the Ellama client:
+
+  • `ellama-enable-keymap': Enable the Ellama keymap.
+  • `ellama-keymap-prefix': The keymap prefix for Ellama.
+  • `ellama-user-nick': The user nick in logs.
+  • `ellama-assistant-nick': The assistant nick in logs.
+  • `ellama-language': The language for Ollama translation. Default
+  language is english.
+  • `ellama-provider': llm provider for ellama. Default provider is
+  `ollama' with [zephyr] model.  There are many supported providers:
+  `ollama', `open ai', `vertex', `GPT4All'. For more information see
+  [llm documentation].
+  • `ellama-providers': association list of model llm providers with
+    name as key.
+  • `ellama-spinner-type': Spinner type for ellama. Default type is
+  `progress-bar'.
+  • `ellama-ollama-binary': Path to ollama binary.
+  • `ellama-auto-scroll': If enabled ellama buffer will scroll
+    automatically during generation. Disabled by default.
+  • `ellama-fill-paragraphs': Option to customize ellama paragraphs
+    filling behaviour.
+  • `ellama-name-prompt-words-count': Count of words in prompt to
+    generate name.
+  • Prompt templates for every command.
+  • `ellama-chat-done-callback': Callback that will be called on ellama
+  chat response generation done. It should be a function with single
+  argument generated text string.
+  • `ellama-nick-prefix': User and assistant nick prefix in logs.
+  • `ellama-session-file-extension': File extension for saving ellama
+    session. Default value "org".
+  • `ellama-sessions-directory': Directory for saved ellama sessions.
+  • `ellama-instant-mode': Major mode for ellama instant commands. Org
+    mode by default.
+  • `ellama-long-lines-length': Long lines length for fill paragraph
+    call.
+  Too low value can break generated code by splitting long comment
+  lines. Default value 100.
+
+
+[zephyr] <https://ollama.ai/library/zephyr>
+
+[llm documentation] <https://elpa.gnu.org/packages/llm.html>
+
+
+1.5 Acknowledgments
+───────────────────
+
+  Thanks [Jeffrey Morgan] for excellent project [ollama]. This project
+  cannot exist without it.
+
+  Thanks [zweifisch] - I got some ideas from [ollama.el] what ollama
+  client in Emacs can do.
+
+  Thanks [Dr. David A. Kunz] - I got more ideas from [gen.nvim].
+
+  Thanks [Andrew Hyatt] for `llm' library. Without it only `ollama'
+  would be supported.
+
+
+[Jeffrey Morgan] <https://github.com/jmorganca>
+
+[ollama] <https://github.com/jmorganca/ollama>
+
+[zweifisch] <https://github.com/zweifisch>
+
+[ollama.el] <https://github.com/zweifisch/ollama>
+
+[Dr. David A. Kunz] <https://github.com/David-Kunz>
+
+[gen.nvim] <https://github.com/David-Kunz/gen.nvim>
+
+[Andrew Hyatt] <https://github.com/ahyatt>
+
+
+2 Contributions
+═══════════════
+
+  To contribute, submit a pull request or report a bug. This library is
+  part of GNU ELPA; major contributions must be from someone with FSF
+  papers. Alternatively, you can write a module and share it on a
+  different archive like MELPA.

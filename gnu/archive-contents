@@ -1221,20 +1221,22 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 7 0)
+	 [(0 7 1)
 	  ((emacs
 	    (28 1))
 	   (llm
 	    (0 6 0))
 	   (spinner
-	    (1 7 4)))
+	    (1 7 4))
+	   (dash
+	    (2 19 1)))
 	  "Tool for interacting with LLMs" tar
 	  ((:url . "http://github.com/s-kostyaev/ellama")
 	   (:keywords "help" "local" "tools")
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "8bab25150a054c67bd49ca9707ccdedcadcbcd2b"))])
+	   (:commit . "4848d51d6c072f19c93d65134f0b364044815893"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -4055,7 +4057,7 @@
 		   (:url . "https://elpa.gnu.org/packages/uniquify-files.html")
 		   (:commit . "1d76b4f0e283afaff2be053d85f8726ffc3abd6e"))])
  (urgrep .
-	 [(0 3 0)
+	 [(0 4 0)
 	  ((emacs
 	    (27 1))
 	   (compat
@@ -4065,7 +4067,7 @@
 	  "Universal recursive grep" tar
 	  ((:url . "https://github.com/jimporter/urgrep")
 	   (:keywords "grep" "search")
-	   (:commit . "afa36a79f6ec8f01626bd5cdc480c5d6486b3c55"))])
+	   (:commit . "9eb6db2be4d44274322d4b59f068e04ae6abbc52"))])
  (url-http-ntlm .
 		[(2 0 5)
 		 ((cl-lib
