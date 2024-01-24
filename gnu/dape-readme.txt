@@ -250,10 +250,12 @@ and enable `repeat-mode' for ergonomics.
 5 Bugs and issues
 ═════════════════
 
-  Before reporting any issues take a look at `*dape-repl*'
-  buffer. Master is used is for all case and purposes a development
-  branch still and releases on elpa should be more stable so in the mean
-  time use elpa if the bug is a breaking you workflow.
+  Before reporting any issues `(setq dape-debug t)' and take a look at
+  `*dape-repl*' buffer. Please share your `*dape-repl*' and
+  `*dape-connection events*' in the buffer contents with the bug report.
+  Master is used is for all case and purposes a development branch still
+  and releases on elpa should be more stable so in the mean time use
+  elpa if the bug is a breaking you workflow.
 
 
 6 Acknowledgements
