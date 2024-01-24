@@ -1,6 +1,6 @@
-			━━━━━━━━━━━━━━━━━━━━━━━
-			 TAXY-MAGIT-SECTION.EL
-			━━━━━━━━━━━━━━━━━━━━━━━
+                        ━━━━━━━━━━━━━━━━━━━━━━━
+                         TAXY-MAGIT-SECTION.EL
+                        ━━━━━━━━━━━━━━━━━━━━━━━
 
 
 [https://elpa.gnu.org/packages/taxy-magit-section.svg]
@@ -30,28 +30,40 @@ This library renders [Taxy] structs with [magit-section].
 2 Changelog
 ═══════════
 
-2.1 0.12.2
+2.1 0.13
+────────
+
+  *Additions*
+
+  ⁃ Function `taxy-magit-section-insert' takes a `:section-class'
+    argument, which is passed to `magit-insert-section' as its `class'
+    argument.  This allows a custom subclass of `magit-section' to be
+    passed, which, with a custom method on `magit-section-ident-value',
+    allows section visibility to be cached concisely.
+
+
+2.2 0.12.2
 ──────────
 
   *Fixes*
   ⁃ Header alignment.
 
 
-2.2 0.12.1
+2.3 0.12.1
 ──────────
 
   *Fixes*
   ⁃ Compilation error.
 
 
-2.3 0.12
+2.4 0.12
 ────────
 
   *Fixes*
   ⁃ Section visibility caching.
 
 
-2.4 0.11
+2.5 0.11
 ────────
 
   *Additions*
@@ -59,14 +71,14 @@ This library renders [Taxy] structs with [magit-section].
     value can be viewed.
 
 
-2.5 0.10
+2.6 0.10
 ────────
 
   *Fixes*
   ⁃ Require package `taxy' in package headers.
 
 
-2.6 0.9.1
+2.7 0.9.1
 ─────────
 
   *Fixes*
@@ -77,7 +89,7 @@ This library renders [Taxy] structs with [magit-section].
     items' values.
 
 
-2.7 0.9
+2.8 0.9
 ───────
 
   ⁃ `taxy-magit-section' moved to separate package.
