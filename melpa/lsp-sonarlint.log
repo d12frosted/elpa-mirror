@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/lsp-sonarlint/
 Checking out d131779950d5d45c3129eb088cef5fd11099f47c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-sonarlint/
-  to /tmp/lsp-sonarlintB5V5Iw/lsp-sonarlint-20230814.1954
+  to /tmp/lsp-sonarlintadi1fI/lsp-sonarlint-20230814.1954
     lsp-sonarlint.el -> lsp-sonarlint.el
   ! languages/xml/lsp-sonarlint-xml.el -> languages/lsp-sonarlint-xml.el
   ! languages/typescript/lsp-sonarlint-typescript.el -> languages/lsp-sonarlint-typescript.el
@@ -19,24 +19,4 @@ Copying files (->) and directories (=>)
   ! languages/go/lsp-sonarlint-go.el -> languages/lsp-sonarlint-go.el
     server/LICENSE -> server/LICENSE
     server/sonarlint-language-server.jar -> server/sonarlint-language-server.jar
-Created lsp-sonarlint-20230814.1954.tar containing:
-  lsp-sonarlint-20230814.1954/
-  lsp-sonarlint-20230814.1954/languages/
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-go.el
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-html.el
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-java.el
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-javascript.el
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-php.el
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-python.el
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-text.el
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-typescript.el
-  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-xml.el
-  lsp-sonarlint-20230814.1954/lsp-sonarlint-pkg.el
-  lsp-sonarlint-20230814.1954/lsp-sonarlint.el
-  lsp-sonarlint-20230814.1954/server/
-  lsp-sonarlint-20230814.1954/server/LICENSE
-  lsp-sonarlint-20230814.1954/server/sonarlint-language-server.jar
- ✓ Success:
-  2024-01-24T18:21:08+0000  lsp-sonarlint-20230814.1954.entry
-  2024-01-24T18:21:08+0000  lsp-sonarlint-20230814.1954.tar
-Built lsp-sonarlint in 7.084s, finished at 2024-01-24T18:21:10+0000
+Write error: No space left on device, /tmp/lsp-sonarlintadi1fI/lsp-sonarlint-20230814.1954/server/sonarlint-language-server.jar

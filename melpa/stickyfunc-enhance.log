@@ -1,10 +1,18 @@
 Package: stickyfunc-enhance
 Fetcher: github
-Source:  https://github.com/emacsattic/semantic-stickyfunc-enhance.git
+Source:  https://github.com/tuhdo/semantic-stickyfunc-enhance.git
 
-Cloning https://github.com/emacsattic/semantic-stickyfunc-enhance.git to /mnt/store/melpa/working/stickyfunc-enhance/
-Command `git clone https\://github.com/emacsattic/semantic-stickyfunc-enhance.git /mnt/store/melpa/working/stickyfunc-enhance/' exited with non-zero exit-code: 128
-Cloning into '/mnt/store/melpa/working/stickyfunc-enhance'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-Command `git clone https\://github.com/emacsattic/semantic-stickyfunc-enhance.git /mnt/store/melpa/working/stickyfunc-enhance/' exited with non-zero exit-code: 128
+Updating /mnt/store/melpa/working/stickyfunc-enhance/
+Checking out 13bdba51fcd83ccbc3267959d23afc94d458dcb0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/stickyfunc-enhance/
+  to /tmp/stickyfunc-enhanceNS95Ks/stickyfunc-enhance-20150429.1814
+    stickyfunc-enhance.el -> stickyfunc-enhance.el
+Created stickyfunc-enhance-20150429.1814.tar containing:
+  stickyfunc-enhance-20150429.1814/
+  stickyfunc-enhance-20150429.1814/stickyfunc-enhance-pkg.el
+  stickyfunc-enhance-20150429.1814/stickyfunc-enhance.el
+ ✓ Success:
+  2024-01-25T00:36:16+0000  stickyfunc-enhance-20150429.1814.entry
+  2024-01-25T00:36:16+0000  stickyfunc-enhance-20150429.1814.tar
+Built stickyfunc-enhance in 3.493s, finished at 2024-01-25T00:36:17+0000

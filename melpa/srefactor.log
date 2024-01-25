@@ -1,10 +1,22 @@
 Package: srefactor
 Fetcher: github
-Source:  https://github.com/emacsattic/semantic-refactor.git
+Source:  https://github.com/tuhdo/semantic-refactor.git
 
-Cloning https://github.com/emacsattic/semantic-refactor.git to /mnt/store/melpa/working/srefactor/
-Command `git clone https\://github.com/emacsattic/semantic-refactor.git /mnt/store/melpa/working/srefactor/' exited with non-zero exit-code: 128
-Cloning into '/mnt/store/melpa/working/srefactor'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-Command `git clone https\://github.com/emacsattic/semantic-refactor.git /mnt/store/melpa/working/srefactor/' exited with non-zero exit-code: 128
+Updating /mnt/store/melpa/working/srefactor/
+Checking out 95c70a94b5aad4c85b35569e2f2325047791153a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/srefactor/
+  to /tmp/srefactorb2w2ed/srefactor-20230504.617
+    srefactor-lisp.el -> srefactor-lisp.el
+    srefactor-ui.el -> srefactor-ui.el
+    srefactor.el -> srefactor.el
+Created srefactor-20230504.617.tar containing:
+  srefactor-20230504.617/
+  srefactor-20230504.617/srefactor-lisp.el
+  srefactor-20230504.617/srefactor-pkg.el
+  srefactor-20230504.617/srefactor-ui.el
+  srefactor-20230504.617/srefactor.el
+ ✓ Success:
+  2024-01-25T00:35:56+0000  srefactor-20230504.617.entry
+  2024-01-25T00:35:56+0000  srefactor-20230504.617.tar
+Built srefactor in 3.619s, finished at 2024-01-25T00:35:57+0000

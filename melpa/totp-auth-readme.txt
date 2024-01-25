@@ -9,9 +9,9 @@ It retrieves the shared secrets used to generate TOTP tokens
 with ‘auth-sources’ and/or the freedesktop secrets API (aka
 Gnome Keyring or KWallet).
 
-You can call it with the command ‘totp’, ie:
+You can call it with the command ‘totp-auth’, ie:
 
-   M-x totp RET
+   M-x totp-auth RET
 
 You can tab-complete based on the label of the secret.
 Depending on the setting of ‘totp-auth-display-token-method’ the
