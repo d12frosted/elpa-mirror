@@ -15,8 +15,8 @@ Table of Contents
 
 [https://elpa.gnu.org/packages/ement.svg]
 
-Ement.el is a Matrix client for Emacs.  It aims to be simple, fast,
-featureful, and reliable.
+Ement.el is a [Matrix] client for [GNU Emacs].  It aims to be simple,
+fast, featureful, and reliable, while integrating naturally with Emacs.
 
 Feel free to join us in the chat room:
 [https://img.shields.io/matrix/ement.el:matrix.org.svg?label=%23ement.el:matrix.org]
@@ -24,6 +24,10 @@ Feel free to join us in the chat room:
 
 [https://elpa.gnu.org/packages/ement.svg]
 <https://elpa.gnu.org/packages/ement.html>
+
+[Matrix] <http://www.matrix.org/>
+
+[GNU Emacs] <https://www.gnu.org/software/emacs/>
 
 [https://img.shields.io/matrix/ement.el:matrix.org.svg?label=%23ement.el:matrix.org]
 <https://matrix.to/#/#ement.el:matrix.org>
@@ -149,10 +153,10 @@ Manual
   • 
 
   1. Call command `ement-connect' to connect.  Multiple sessions are
-     supported, so you may call the command again to connect to another
-     account.
+     supported: call the command again with a `C-u' universal prefix to
+     connect to another account.
   2. Wait for initial sync to complete (which can take a few
-     moments–initial sync JSON requests can be large).
+     moments–initial sync JSON responses can be large).
   3. Use these commands (room-related commands may be called with
      universal prefix to prompt for the room):
      • `ement-list-rooms' to view the list of joined rooms.
@@ -393,6 +397,49 @@ Encrypted room support through Pantalaimon
 
 3 Changelog
 ═══════════
+
+0.14
+────
+
+  *Additions*
+
+  ⁃ Audio events are rendered as a link to the audio file.  (Thanks to
+    [Arto Jantunen].)
+  ⁃ Customization group `ement-room-list'.
+  ⁃ Option `ement-room-list-space-prefix' is applied to space names in
+    the room list (e.g. set to empty string for cleaner appearance).
+  ⁃ Option `ement-room-reaction-names-limit' sets how many senders of a
+    reaction are shown in the buffer (more than that many are shown in
+    the tooltip).
+
+  *Changes*
+
+  ⁃ Bind `TAB' / `BACKTAB' to move between links in room and like
+    buffers.  ([#113].  Thanks to [Eric S. Fraga] for suggesting.)
+
+  *Fixes*
+
+  ⁃ Insertion of sender headers (when using "Elemental" message format).
+    (Refactoring contributed by [Steven Allen].)
+  ⁃ Some room event data was being unintentionally serialized to disk
+    when caching the room list visibility state. ([#256])
+  ⁃ Notifications buffer restores properly when bookmarked.
+  ⁃ Command `ement-room-send-reaction' checks for an event at point.
+    (Thanks to [Phil Sainty].)
+
+
+[Arto Jantunen] <https://github.com/viiru->
+
+[#113] <https://github.com/alphapapa/ement.el/issues/113>
+
+[Eric S. Fraga] <https://github.com/ericsfraga>
+
+[Steven Allen] <https://github.com/Stebalien>
+
+[#256] <https://github.com/alphapapa/ement.el/issues/256>
+
+[Phil Sainty] <https://github.com/phil-s>
+
 
 0.13
 ────
