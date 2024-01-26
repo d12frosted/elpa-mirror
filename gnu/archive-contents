@@ -1155,11 +1155,11 @@
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	      (:commit . "f7659477e583a4ca72dce0364a74ba539c014a2c"))])
  (eglot .
-	[(1 16)
+	[(1 17)
 	 ((emacs
 	   (26 3))
 	  (jsonrpc
-	   (1 0 23))
+	   (1 0 24))
 	  (flymake
 	   (1 2 1))
 	  (project
@@ -1178,7 +1178,7 @@
 	  (:maintainer "João Távora" . "joaotavora@gmail.com")
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
-	  (:commit . "c5a4366b3f3c6ee4178d954e58eb226441d1d2ee"))])
+	  (:commit . "b014bca833a17f5b2258e88115f03cffa983d0bd"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
