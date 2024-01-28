@@ -4,36 +4,4 @@ Source:  https://github.com/akermu/emacs-libvterm.git
 
 Updating /mnt/store/melpa/working/vterm/
 Checking out e96c53f5035c841b20937b65142498bd8e161a40
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/vterm/
-  to /tmp/vtermsqFBG0/vterm-20240102.1640
-    CMakeLists.txt -> CMakeLists.txt
-    elisp.c -> elisp.c
-    elisp.h -> elisp.h
-    emacs-module.h -> emacs-module.h
-    etc => etc
-    utf8.c -> utf8.c
-    utf8.h -> utf8.h
-    vterm.el -> vterm.el
-    vterm-module.c -> vterm-module.c
-    vterm-module.h -> vterm-module.h
-Created vterm-20240102.1640.tar containing:
-  vterm-20240102.1640/
-  vterm-20240102.1640/CMakeLists.txt
-  vterm-20240102.1640/elisp.c
-  vterm-20240102.1640/elisp.h
-  vterm-20240102.1640/emacs-module.h
-  vterm-20240102.1640/etc/
-  vterm-20240102.1640/etc/emacs-vterm-bash.sh
-  vterm-20240102.1640/etc/emacs-vterm-zsh.sh
-  vterm-20240102.1640/etc/emacs-vterm.fish
-  vterm-20240102.1640/utf8.c
-  vterm-20240102.1640/utf8.h
-  vterm-20240102.1640/vterm-module.c
-  vterm-20240102.1640/vterm-module.h
-  vterm-20240102.1640/vterm-pkg.el
-  vterm-20240102.1640/vterm.el
- ✓ Success:
-  2024-01-25T00:42:29+0000  vterm-20240102.1640.entry
-  2024-01-25T00:42:29+0000  vterm-20240102.1640.tar
-Built vterm in 4.308s, finished at 2024-01-25T00:42:31+0000
+Creating directory with prefix: No space left on device, /tmp/vterm

@@ -3,23 +3,5 @@ Fetcher: github
 Source:  https://github.com/magit/transient.git
 
 Updating /mnt/store/melpa/working/transient/
-Checking out 522b625cf39cb1a9322719dcb039f25bc49ab35b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/transient/
-  to /tmp/transientxeZ42o/transient-20240121.2000
-  ! lisp/transient.el -> transient.el
-  ! docs/gpl.texi -> gpl.texi
-  ! docs/transient.texi -> transient.texi
-Generating /tmp/transientxeZ42o/transient-20240121.2000/gpl.info
-Generating /tmp/transientxeZ42o/transient-20240121.2000/transient.info
-Created transient-20240121.2000.tar containing:
-  transient-20240121.2000/
-  transient-20240121.2000/dir
-  transient-20240121.2000/gpl.info
-  transient-20240121.2000/transient-pkg.el
-  transient-20240121.2000/transient.el
-  transient-20240121.2000/transient.info
- ✓ Success:
-  2024-01-25T00:39:18+0000  transient-20240121.2000.entry
-  2024-01-25T00:39:18+0000  transient-20240121.2000.tar
-Built transient in 12.387s, finished at 2024-01-25T00:39:20+0000
+Checking out b14f44e91341ca70c21946baf70162dd13a30310
+Creating directory with prefix: No space left on device, /tmp/transient

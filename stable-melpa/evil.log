@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-evil/evil.git
 
 Updating /mnt/store/melpa/working/evil/
-Checking out 9e27bb9e5a66cacbf9f1f4f20ca9b30fc2ae297b
+Checking out 5995f6f21f662484440ed67a28ce59e365feb9ad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil/
-  to /tmp/evilf52FmK/evil-20240123.1601
+  to /tmp/evil50Qn4r/evil-20240128.957
     evil-command-window.el -> evil-command-window.el
     evil-commands.el -> evil-commands.el
     evil-common.el -> evil-common.el
@@ -24,34 +24,4 @@ Copying files (->) and directories (=>)
     evil-search.el -> evil-search.el
     evil-states.el -> evil-states.el
     evil-types.el -> evil-types.el
-    evil-vars.el -> evil-vars.el
-    evil.el -> evil.el
-  ! doc/build/texinfo/evil.texi -> evil.texi
-Generating /tmp/evilf52FmK/evil-20240123.1601/evil.info
-Created evil-20240123.1601.tar containing:
-  evil-20240123.1601/
-  evil-20240123.1601/dir
-  evil-20240123.1601/evil-command-window.el
-  evil-20240123.1601/evil-commands.el
-  evil-20240123.1601/evil-common.el
-  evil-20240123.1601/evil-core.el
-  evil-20240123.1601/evil-development.el
-  evil-20240123.1601/evil-digraphs.el
-  evil-20240123.1601/evil-ex.el
-  evil-20240123.1601/evil-integration.el
-  evil-20240123.1601/evil-jumps.el
-  evil-20240123.1601/evil-keybindings.el
-  evil-20240123.1601/evil-macros.el
-  evil-20240123.1601/evil-maps.el
-  evil-20240123.1601/evil-pkg.el
-  evil-20240123.1601/evil-repeat.el
-  evil-20240123.1601/evil-search.el
-  evil-20240123.1601/evil-states.el
-  evil-20240123.1601/evil-types.el
-  evil-20240123.1601/evil-vars.el
-  evil-20240123.1601/evil.el
-  evil-20240123.1601/evil.info
- ✓ Success:
-  2024-01-24T23:51:40+0000  evil-20240123.1601.entry
-  2024-01-24T23:51:40+0000  evil-20240123.1601.tar
-Built evil in 8.650s, finished at 2024-01-24T23:51:41+0000
+Write error: No space left on device, /tmp/evil50Qn4r/evil-20240128.957/evil-types.el

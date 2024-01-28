@@ -3,55 +3,5 @@ Fetcher: github
 Source:  https://github.com/magit/forge.git
 
 Updating /mnt/store/melpa/working/forge/
-Checking out 9d5a251053c7c2cbe71854831fac36c3df97cb01
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/forge/
-  to /tmp/forgeRg60Xy/forge-20240123.1956
-    forge-pkg.el -> forge-pkg.el
-  ! lisp/forge-bitbucket.el -> forge-bitbucket.el
-  ! lisp/forge-commands.el -> forge-commands.el
-  ! lisp/forge-core.el -> forge-core.el
-  ! lisp/forge-db.el -> forge-db.el
-  ! lisp/forge-gitea.el -> forge-gitea.el
-  ! lisp/forge-github.el -> forge-github.el
-  ! lisp/forge-gitlab.el -> forge-gitlab.el
-  ! lisp/forge-gogs.el -> forge-gogs.el
-  ! lisp/forge-issue.el -> forge-issue.el
-  ! lisp/forge-list.el -> forge-list.el
-  ! lisp/forge-notify.el -> forge-notify.el
-  ! lisp/forge-post.el -> forge-post.el
-  ! lisp/forge-pullreq.el -> forge-pullreq.el
-  ! lisp/forge-repo.el -> forge-repo.el
-  ! lisp/forge-revnote.el -> forge-revnote.el
-  ! lisp/forge-semi.el -> forge-semi.el
-  ! lisp/forge-topic.el -> forge-topic.el
-  ! lisp/forge.el -> forge.el
-  ! docs/forge.texi -> forge.texi
-Generating /tmp/forgeRg60Xy/forge-20240123.1956/forge.info
-Created forge-20240123.1956.tar containing:
-  forge-20240123.1956/
-  forge-20240123.1956/dir
-  forge-20240123.1956/forge-bitbucket.el
-  forge-20240123.1956/forge-commands.el
-  forge-20240123.1956/forge-core.el
-  forge-20240123.1956/forge-db.el
-  forge-20240123.1956/forge-gitea.el
-  forge-20240123.1956/forge-github.el
-  forge-20240123.1956/forge-gitlab.el
-  forge-20240123.1956/forge-gogs.el
-  forge-20240123.1956/forge-issue.el
-  forge-20240123.1956/forge-list.el
-  forge-20240123.1956/forge-notify.el
-  forge-20240123.1956/forge-pkg.el
-  forge-20240123.1956/forge-post.el
-  forge-20240123.1956/forge-pullreq.el
-  forge-20240123.1956/forge-repo.el
-  forge-20240123.1956/forge-revnote.el
-  forge-20240123.1956/forge-semi.el
-  forge-20240123.1956/forge-topic.el
-  forge-20240123.1956/forge.el
-  forge-20240123.1956/forge.info
- ✓ Success:
-  2024-01-24T23:56:51+0000  forge-20240123.1956.entry
-  2024-01-24T23:56:51+0000  forge-20240123.1956.tar
-Built forge in 7.686s, finished at 2024-01-24T23:56:53+0000
+Checking out c50204185734f1ac0f480323ad542a4bf3348ed5
+Creating directory with prefix: No space left on device, /tmp/forge

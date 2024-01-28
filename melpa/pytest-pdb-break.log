@@ -4,33 +4,4 @@ Source:  https://github.com/poppyschmo/pytest-pdb-break.git
 
 Updating /mnt/store/melpa/working/pytest-pdb-break/
 Checking out 05d227493b7b96f3556cba22f215cb85f9282020
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pytest-pdb-break/
-  to /tmp/pytest-pdb-break3o1Ryy/pytest-pdb-break-20200804.848
-  ! emacs/pytest-pdb-break-extra.el -> pytest-pdb-break-extra.el
-  ! emacs/pytest-pdb-break.el -> pytest-pdb-break.el
-  ! pytest_pdb_break.py -> lib/pytest_pdb_break.py
-  ! setup.py -> lib/setup.py
-  ! helpers => lib/helpers
-  ! emacs/setup_code_wrapper.py -> lib/emacs/setup_code_wrapper.py
-Created pytest-pdb-break-20200804.848.tar containing:
-  pytest-pdb-break-20200804.848/
-  pytest-pdb-break-20200804.848/lib/
-  pytest-pdb-break-20200804.848/lib/emacs/
-  pytest-pdb-break-20200804.848/lib/emacs/setup_code_wrapper.py
-  pytest-pdb-break-20200804.848/lib/helpers/
-  pytest-pdb-break-20200804.848/lib/helpers/__init__.py
-  pytest-pdb-break-20200804.848/lib/helpers/common.py
-  pytest-pdb-break-20200804.848/lib/helpers/ensure_venv.py
-  pytest-pdb-break-20200804.848/lib/helpers/get_collected.py
-  pytest-pdb-break-20200804.848/lib/helpers/get_config_info.py
-  pytest-pdb-break-20200804.848/lib/helpers/main.py
-  pytest-pdb-break-20200804.848/lib/pytest_pdb_break.py
-  pytest-pdb-break-20200804.848/lib/setup.py
-  pytest-pdb-break-20200804.848/pytest-pdb-break-extra.el
-  pytest-pdb-break-20200804.848/pytest-pdb-break-pkg.el
-  pytest-pdb-break-20200804.848/pytest-pdb-break.el
- ✓ Success:
-  2024-01-25T00:28:32+0000  pytest-pdb-break-20200804.848.entry
-  2024-01-25T00:28:32+0000  pytest-pdb-break-20200804.848.tar
-Built pytest-pdb-break in 4.049s, finished at 2024-01-25T00:28:34+0000
+Creating directory with prefix: No space left on device, /tmp/pytest-pdb-break

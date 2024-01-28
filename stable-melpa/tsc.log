@@ -4,34 +4,4 @@ Source:  https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
 
 Updating /mnt/store/melpa/working/tsc/
 Checking out 909717c685ff5a2327fa2ca8fb8a25216129361c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tsc/
-  to /tmp/tscUjbLr5/tsc-20220212.1632
-  ! core/tsc-dyn-get.el -> tsc-dyn-get.el
-  ! core/tsc-obsolete.el -> tsc-obsolete.el
-  ! core/tsc.el -> tsc.el
-  ! core/Cargo.toml -> Cargo.toml
-  ! core/Cargo.lock -> Cargo.lock
-  ! core/src => src
-Created tsc-20220212.1632.tar containing:
-  tsc-20220212.1632/
-  tsc-20220212.1632/Cargo.lock
-  tsc-20220212.1632/Cargo.toml
-  tsc-20220212.1632/src/
-  tsc-20220212.1632/src/cursor.rs
-  tsc-20220212.1632/src/error.rs
-  tsc-20220212.1632/src/lang.rs
-  tsc-20220212.1632/src/lib.rs
-  tsc-20220212.1632/src/node.rs
-  tsc-20220212.1632/src/parser.rs
-  tsc-20220212.1632/src/query.rs
-  tsc-20220212.1632/src/tree.rs
-  tsc-20220212.1632/src/types.rs
-  tsc-20220212.1632/tsc-dyn-get.el
-  tsc-20220212.1632/tsc-obsolete.el
-  tsc-20220212.1632/tsc-pkg.el
-  tsc-20220212.1632/tsc.el
- ✓ Success:
-  2024-01-25T00:39:56+0000  tsc-20220212.1632.entry
-  2024-01-25T00:39:55+0000  tsc-20220212.1632.tar
-Built tsc in 7.285s, finished at 2024-01-25T00:39:58+0000
+Creating directory with prefix: No space left on device, /tmp/tsc

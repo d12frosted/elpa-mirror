@@ -6,62 +6,6 @@ Updating /mnt/store/melpa/working/floobits/
 Checking out 93b3317fb6c842efe165e54c8a32bf51d436837d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/floobits/
-  to /tmp/floobitss5nCtz/floobits-20211018.550
+  to /tmp/floobitsSckKQd/floobits-20211018.550
     floo => floo
-    floobits.el -> floobits.el
-    floobits.py -> floobits.py
-Created floobits-20211018.550.tar containing:
-  floobits-20211018.550/
-  floobits-20211018.550/floo/
-  floobits-20211018.550/floo/__init__.py
-  floobits-20211018.550/floo/agent_connection.py
-  floobits-20211018.550/floo/common/
-  floobits-20211018.550/floo/common/.floo
-  floobits-20211018.550/floo/common/.flooignore
-  floobits-20211018.550/floo/common/.gitignore
-  floobits-20211018.550/floo/common/LICENSE
-  floobits-20211018.550/floo/common/NOTICE
-  floobits-20211018.550/floo/common/README.md
-  floobits-20211018.550/floo/common/__init__.py
-  floobits-20211018.550/floo/common/api.py
-  floobits-20211018.550/floo/common/cert.py
-  floobits-20211018.550/floo/common/event_emitter.py
-  floobits-20211018.550/floo/common/exc_fmt.py
-  floobits-20211018.550/floo/common/flooui.py
-  floobits-20211018.550/floo/common/handlers/
-  floobits-20211018.550/floo/common/handlers/__init__.py
-  floobits-20211018.550/floo/common/handlers/account.py
-  floobits-20211018.550/floo/common/handlers/base.py
-  floobits-20211018.550/floo/common/handlers/credentials.py
-  floobits-20211018.550/floo/common/handlers/floo_handler.py
-  floobits-20211018.550/floo/common/handlers/tcp_server.py
-  floobits-20211018.550/floo/common/ignore.py
-  floobits-20211018.550/floo/common/lib/
-  floobits-20211018.550/floo/common/lib/__init__.py
-  floobits-20211018.550/floo/common/lib/diff_match_patch.py
-  floobits-20211018.550/floo/common/lib/dmp_monkey.py
-  floobits-20211018.550/floo/common/msg.py
-  floobits-20211018.550/floo/common/protocols/
-  floobits-20211018.550/floo/common/protocols/__init__.py
-  floobits-20211018.550/floo/common/protocols/base.py
-  floobits-20211018.550/floo/common/protocols/floo_proto.py
-  floobits-20211018.550/floo/common/protocols/no_reconnect.py
-  floobits-20211018.550/floo/common/protocols/proxy.py
-  floobits-20211018.550/floo/common/protocols/tcp_server.py
-  floobits-20211018.550/floo/common/proxy.py
-  floobits-20211018.550/floo/common/reactor.py
-  floobits-20211018.550/floo/common/repo.py
-  floobits-20211018.550/floo/common/shared.py
-  floobits-20211018.550/floo/common/utils.py
-  floobits-20211018.550/floo/editor.py
-  floobits-20211018.550/floo/emacs_handler.py
-  floobits-20211018.550/floo/emacs_protocol.py
-  floobits-20211018.550/floo/emui.py
-  floobits-20211018.550/floo/view.py
-  floobits-20211018.550/floobits-pkg.el
-  floobits-20211018.550/floobits.el
-  floobits-20211018.550/floobits.py
- ✓ Success:
-  2024-01-24T23:54:10+0000  floobits-20211018.550.entry
-  2024-01-24T23:54:10+0000  floobits-20211018.550.tar
-Built floobits in 6.720s, finished at 2024-01-24T23:54:13+0000
+Write error: No space left on device, /tmp/floobitsSckKQd/floobits-20211018.550/floo/common/lib/diff_match_patch.py

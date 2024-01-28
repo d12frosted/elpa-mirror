@@ -5,27 +5,4 @@ Source:  https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
 Updating /mnt/store/melpa/working/tree-sitter/
 Checking out 909717c685ff5a2327fa2ca8fb8a25216129361c
 Warning: tree-sitter :files spec is equivalent to the default
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tree-sitter/
-  to /tmp/tree-sittergfZ63r/tree-sitter-20220212.1632
-  ! lisp/tree-sitter-cli.el -> tree-sitter-cli.el
-  ! lisp/tree-sitter-debug.el -> tree-sitter-debug.el
-  ! lisp/tree-sitter-extras.el -> tree-sitter-extras.el
-  ! lisp/tree-sitter-hl.el -> tree-sitter-hl.el
-  ! lisp/tree-sitter-load.el -> tree-sitter-load.el
-  ! lisp/tree-sitter-query.el -> tree-sitter-query.el
-  ! lisp/tree-sitter.el -> tree-sitter.el
-Created tree-sitter-20220212.1632.tar containing:
-  tree-sitter-20220212.1632/
-  tree-sitter-20220212.1632/tree-sitter-cli.el
-  tree-sitter-20220212.1632/tree-sitter-debug.el
-  tree-sitter-20220212.1632/tree-sitter-extras.el
-  tree-sitter-20220212.1632/tree-sitter-hl.el
-  tree-sitter-20220212.1632/tree-sitter-load.el
-  tree-sitter-20220212.1632/tree-sitter-pkg.el
-  tree-sitter-20220212.1632/tree-sitter-query.el
-  tree-sitter-20220212.1632/tree-sitter.el
- ✓ Success:
-  2024-01-25T00:39:22+0000  tree-sitter-20220212.1632.entry
-  2024-01-25T00:39:22+0000  tree-sitter-20220212.1632.tar
-Built tree-sitter in 4.148s, finished at 2024-01-25T00:39:24+0000
+Creating directory with prefix: No space left on device, /tmp/tree-sitter

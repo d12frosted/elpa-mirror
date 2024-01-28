@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/emacsql/
 Checking out 5aba772e562f0b22e36e34c9b4c256ffe439654c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emacsql/
-  to /tmp/emacsqlBgCpUg/emacsql-20240124.1601
+  to /tmp/emacsqlQnM7Ld/emacsql-20240124.1601
     emacsql-compiler.el -> emacsql-compiler.el
     emacsql-mysql.el -> emacsql-mysql.el
     emacsql-pg.el -> emacsql-pg.el
@@ -17,24 +17,4 @@ Copying files (->) and directories (=>)
     emacsql-sqlite.el -> emacsql-sqlite.el
     emacsql.el -> emacsql.el
     sqlite => sqlite
-Created emacsql-20240124.1601.tar containing:
-  emacsql-20240124.1601/
-  emacsql-20240124.1601/emacsql-compiler.el
-  emacsql-20240124.1601/emacsql-mysql.el
-  emacsql-20240124.1601/emacsql-pg.el
-  emacsql-20240124.1601/emacsql-pkg.el
-  emacsql-20240124.1601/emacsql-psql.el
-  emacsql-20240124.1601/emacsql-sqlite-builtin.el
-  emacsql-20240124.1601/emacsql-sqlite-common.el
-  emacsql-20240124.1601/emacsql-sqlite-module.el
-  emacsql-20240124.1601/emacsql-sqlite.el
-  emacsql-20240124.1601/emacsql.el
-  emacsql-20240124.1601/sqlite/
-  emacsql-20240124.1601/sqlite/Makefile
-  emacsql-20240124.1601/sqlite/emacsql.c
-  emacsql-20240124.1601/sqlite/sqlite3.c
-  emacsql-20240124.1601/sqlite/sqlite3.h
- ✓ Success:
-  2024-01-24T23:49:40+0000  emacsql-20240124.1601.entry
-  2024-01-24T23:49:40+0000  emacsql-20240124.1601.tar
-Built emacsql in 5.245s, finished at 2024-01-24T23:49:43+0000
+Write error: No space left on device, /tmp/emacsqlQnM7Ld/emacsql-20240124.1601/sqlite/sqlite3.c
