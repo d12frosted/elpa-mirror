@@ -442,7 +442,7 @@
 	 ("Akib Azmain Turja" . "akib@disroot.org"))
 	(:commit . "c91451f2d17453c19d3fa76faa4945cbe54e14ce"))])
  (edit-indirect .
-		[(0 1 11)
+		[(0 1 13)
 		 ((emacs
 		   (24 3)))
 		 "Edit regions in separate buffers" tar
@@ -450,7 +450,7 @@
 		  (:maintainer "Fanael Linithien" . "fanael4@gmail.com")
 		  (:authors
 		   ("Fanael Linithien" . "fanael4@gmail.com"))
-		  (:commit . "d0378d9747791fcd78370a0e52ec018d5970c482"))])
+		  (:commit . "82a28d8a85277cfe453af464603ea330eae41c05"))])
  (editorconfig .
 	       [(0 10 1)
 		((emacs
