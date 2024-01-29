@@ -4,4 +4,214 @@ Source:  https://github.com/slime/slime.git
 
 Updating /mnt/store/melpa/working/slime/
 Checking out cd745dae17c25225951f22cec8f29b0116fba707
-Creating directory with prefix: No space left on device, /tmp/slime
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/slime/
+  to /tmp/slime9HSWxw/slime-20240125.1336
+    slime-autoloads.el -> slime-autoloads.el
+    slime-tests.el -> slime-tests.el
+    slime.el -> slime.el
+    lib/hyperspec.el -> lib/hyperspec.el
+    swank => swank
+    metering.lisp -> metering.lisp
+    nregex.lisp -> nregex.lisp
+    packages.lisp -> packages.lisp
+    sbcl-pprint-patch.lisp -> sbcl-pprint-patch.lisp
+    start-swank.lisp -> start-swank.lisp
+    swank-loader.lisp -> swank-loader.lisp
+    swank.lisp -> swank.lisp
+    xref.lisp -> xref.lisp
+    swank.asd -> swank.asd
+  ! doc/slime.texi -> slime.texi
+    contrib/README.md -> contrib/README.md
+    contrib/bridge.el -> contrib/bridge.el
+    contrib/inferior-slime.el -> contrib/inferior-slime.el
+    contrib/slime-asdf.el -> contrib/slime-asdf.el
+    contrib/slime-autodoc.el -> contrib/slime-autodoc.el
+    contrib/slime-banner.el -> contrib/slime-banner.el
+    contrib/slime-buffer-streams.el -> contrib/slime-buffer-streams.el
+    contrib/slime-c-p-c.el -> contrib/slime-c-p-c.el
+    contrib/slime-cl-indent.el -> contrib/slime-cl-indent.el
+    contrib/slime-clipboard.el -> contrib/slime-clipboard.el
+    contrib/slime-compiler-notes-tree.el -> contrib/slime-compiler-notes-tree.el
+    contrib/slime-editing-commands.el -> contrib/slime-editing-commands.el
+    contrib/slime-enclosing-context.el -> contrib/slime-enclosing-context.el
+    contrib/slime-fancy-inspector.el -> contrib/slime-fancy-inspector.el
+    contrib/slime-fancy-trace.el -> contrib/slime-fancy-trace.el
+    contrib/slime-fancy.el -> contrib/slime-fancy.el
+    contrib/slime-fontifying-fu.el -> contrib/slime-fontifying-fu.el
+    contrib/slime-fuzzy.el -> contrib/slime-fuzzy.el
+    contrib/slime-highlight-edits.el -> contrib/slime-highlight-edits.el
+    contrib/slime-hyperdoc.el -> contrib/slime-hyperdoc.el
+    contrib/slime-indentation.el -> contrib/slime-indentation.el
+    contrib/slime-listener-hooks.el -> contrib/slime-listener-hooks.el
+    contrib/slime-macrostep.el -> contrib/slime-macrostep.el
+    contrib/slime-mdot-fu.el -> contrib/slime-mdot-fu.el
+    contrib/slime-media.el -> contrib/slime-media.el
+    contrib/slime-mrepl.el -> contrib/slime-mrepl.el
+    contrib/slime-package-fu.el -> contrib/slime-package-fu.el
+    contrib/slime-parse.el -> contrib/slime-parse.el
+    contrib/slime-presentation-streams.el -> contrib/slime-presentation-streams.el
+    contrib/slime-presentations.el -> contrib/slime-presentations.el
+    contrib/slime-quicklisp.el -> contrib/slime-quicklisp.el
+    contrib/slime-references.el -> contrib/slime-references.el
+    contrib/slime-repl.el -> contrib/slime-repl.el
+    contrib/slime-sbcl-exts.el -> contrib/slime-sbcl-exts.el
+    contrib/slime-scheme.el -> contrib/slime-scheme.el
+    contrib/slime-scratch.el -> contrib/slime-scratch.el
+    contrib/slime-snapshot.el -> contrib/slime-snapshot.el
+    contrib/slime-sprof.el -> contrib/slime-sprof.el
+    contrib/slime-trace-dialog.el -> contrib/slime-trace-dialog.el
+    contrib/slime-tramp.el -> contrib/slime-tramp.el
+    contrib/slime-typeout-frame.el -> contrib/slime-typeout-frame.el
+    contrib/slime-xref-browser.el -> contrib/slime-xref-browser.el
+    contrib/swank-arglists.lisp -> contrib/swank-arglists.lisp
+    contrib/swank-asdf.lisp -> contrib/swank-asdf.lisp
+    contrib/swank-buffer-streams.lisp -> contrib/swank-buffer-streams.lisp
+    contrib/swank-c-p-c.lisp -> contrib/swank-c-p-c.lisp
+    contrib/swank-clipboard.lisp -> contrib/swank-clipboard.lisp
+    contrib/swank-fancy-inspector.lisp -> contrib/swank-fancy-inspector.lisp
+    contrib/swank-fuzzy.lisp -> contrib/swank-fuzzy.lisp
+    contrib/swank-goo.goo -> contrib/swank-goo.goo
+    contrib/swank-hyperdoc.lisp -> contrib/swank-hyperdoc.lisp
+    contrib/swank-ikarus.ss -> contrib/swank-ikarus.ss
+    contrib/swank-indentation.lisp -> contrib/swank-indentation.lisp
+    contrib/swank-jolt.k -> contrib/swank-jolt.k
+    contrib/swank-kawa.scm -> contrib/swank-kawa.scm
+    contrib/swank-larceny.scm -> contrib/swank-larceny.scm
+    contrib/swank-listener-hooks.lisp -> contrib/swank-listener-hooks.lisp
+    contrib/swank-macrostep.lisp -> contrib/swank-macrostep.lisp
+    contrib/swank-media.lisp -> contrib/swank-media.lisp
+    contrib/swank-mit-scheme.scm -> contrib/swank-mit-scheme.scm
+    contrib/swank-mlworks.sml -> contrib/swank-mlworks.sml
+    contrib/swank-mrepl.lisp -> contrib/swank-mrepl.lisp
+    contrib/swank-package-fu.lisp -> contrib/swank-package-fu.lisp
+    contrib/swank-presentation-streams.lisp -> contrib/swank-presentation-streams.lisp
+    contrib/swank-presentations.lisp -> contrib/swank-presentations.lisp
+    contrib/swank-quicklisp.lisp -> contrib/swank-quicklisp.lisp
+    contrib/swank-r6rs.scm -> contrib/swank-r6rs.scm
+    contrib/swank-repl.lisp -> contrib/swank-repl.lisp
+    contrib/swank-sbcl-exts.lisp -> contrib/swank-sbcl-exts.lisp
+    contrib/swank-snapshot.lisp -> contrib/swank-snapshot.lisp
+    contrib/swank-sprof.lisp -> contrib/swank-sprof.lisp
+    contrib/swank-trace-dialog.lisp -> contrib/swank-trace-dialog.lisp
+    contrib/swank-util.lisp -> contrib/swank-util.lisp
+    contrib/swank.rb -> contrib/swank.rb
+Generating /tmp/slime9HSWxw/slime-20240125.1336/slime.info
+Created slime-20240125.1336.tar containing:
+  slime-20240125.1336/
+  slime-20240125.1336/contrib/
+  slime-20240125.1336/contrib/README.md
+  slime-20240125.1336/contrib/bridge.el
+  slime-20240125.1336/contrib/inferior-slime.el
+  slime-20240125.1336/contrib/slime-asdf.el
+  slime-20240125.1336/contrib/slime-autodoc.el
+  slime-20240125.1336/contrib/slime-banner.el
+  slime-20240125.1336/contrib/slime-buffer-streams.el
+  slime-20240125.1336/contrib/slime-c-p-c.el
+  slime-20240125.1336/contrib/slime-cl-indent.el
+  slime-20240125.1336/contrib/slime-clipboard.el
+  slime-20240125.1336/contrib/slime-compiler-notes-tree.el
+  slime-20240125.1336/contrib/slime-editing-commands.el
+  slime-20240125.1336/contrib/slime-enclosing-context.el
+  slime-20240125.1336/contrib/slime-fancy-inspector.el
+  slime-20240125.1336/contrib/slime-fancy-trace.el
+  slime-20240125.1336/contrib/slime-fancy.el
+  slime-20240125.1336/contrib/slime-fontifying-fu.el
+  slime-20240125.1336/contrib/slime-fuzzy.el
+  slime-20240125.1336/contrib/slime-highlight-edits.el
+  slime-20240125.1336/contrib/slime-hyperdoc.el
+  slime-20240125.1336/contrib/slime-indentation.el
+  slime-20240125.1336/contrib/slime-listener-hooks.el
+  slime-20240125.1336/contrib/slime-macrostep.el
+  slime-20240125.1336/contrib/slime-mdot-fu.el
+  slime-20240125.1336/contrib/slime-media.el
+  slime-20240125.1336/contrib/slime-mrepl.el
+  slime-20240125.1336/contrib/slime-package-fu.el
+  slime-20240125.1336/contrib/slime-parse.el
+  slime-20240125.1336/contrib/slime-presentation-streams.el
+  slime-20240125.1336/contrib/slime-presentations.el
+  slime-20240125.1336/contrib/slime-quicklisp.el
+  slime-20240125.1336/contrib/slime-references.el
+  slime-20240125.1336/contrib/slime-repl.el
+  slime-20240125.1336/contrib/slime-sbcl-exts.el
+  slime-20240125.1336/contrib/slime-scheme.el
+  slime-20240125.1336/contrib/slime-scratch.el
+  slime-20240125.1336/contrib/slime-snapshot.el
+  slime-20240125.1336/contrib/slime-sprof.el
+  slime-20240125.1336/contrib/slime-trace-dialog.el
+  slime-20240125.1336/contrib/slime-tramp.el
+  slime-20240125.1336/contrib/slime-typeout-frame.el
+  slime-20240125.1336/contrib/slime-xref-browser.el
+  slime-20240125.1336/contrib/swank-arglists.lisp
+  slime-20240125.1336/contrib/swank-asdf.lisp
+  slime-20240125.1336/contrib/swank-buffer-streams.lisp
+  slime-20240125.1336/contrib/swank-c-p-c.lisp
+  slime-20240125.1336/contrib/swank-clipboard.lisp
+  slime-20240125.1336/contrib/swank-fancy-inspector.lisp
+  slime-20240125.1336/contrib/swank-fuzzy.lisp
+  slime-20240125.1336/contrib/swank-goo.goo
+  slime-20240125.1336/contrib/swank-hyperdoc.lisp
+  slime-20240125.1336/contrib/swank-ikarus.ss
+  slime-20240125.1336/contrib/swank-indentation.lisp
+  slime-20240125.1336/contrib/swank-jolt.k
+  slime-20240125.1336/contrib/swank-kawa.scm
+  slime-20240125.1336/contrib/swank-larceny.scm
+  slime-20240125.1336/contrib/swank-listener-hooks.lisp
+  slime-20240125.1336/contrib/swank-macrostep.lisp
+  slime-20240125.1336/contrib/swank-media.lisp
+  slime-20240125.1336/contrib/swank-mit-scheme.scm
+  slime-20240125.1336/contrib/swank-mlworks.sml
+  slime-20240125.1336/contrib/swank-mrepl.lisp
+  slime-20240125.1336/contrib/swank-package-fu.lisp
+  slime-20240125.1336/contrib/swank-presentation-streams.lisp
+  slime-20240125.1336/contrib/swank-presentations.lisp
+  slime-20240125.1336/contrib/swank-quicklisp.lisp
+  slime-20240125.1336/contrib/swank-r6rs.scm
+  slime-20240125.1336/contrib/swank-repl.lisp
+  slime-20240125.1336/contrib/swank-sbcl-exts.lisp
+  slime-20240125.1336/contrib/swank-snapshot.lisp
+  slime-20240125.1336/contrib/swank-sprof.lisp
+  slime-20240125.1336/contrib/swank-trace-dialog.lisp
+  slime-20240125.1336/contrib/swank-util.lisp
+  slime-20240125.1336/contrib/swank.rb
+  slime-20240125.1336/dir
+  slime-20240125.1336/lib/
+  slime-20240125.1336/lib/hyperspec.el
+  slime-20240125.1336/metering.lisp
+  slime-20240125.1336/nregex.lisp
+  slime-20240125.1336/packages.lisp
+  slime-20240125.1336/sbcl-pprint-patch.lisp
+  slime-20240125.1336/slime-autoloads.el
+  slime-20240125.1336/slime-pkg.el
+  slime-20240125.1336/slime-tests.el
+  slime-20240125.1336/slime.el
+  slime-20240125.1336/slime.info
+  slime-20240125.1336/start-swank.lisp
+  slime-20240125.1336/swank-loader.lisp
+  slime-20240125.1336/swank.asd
+  slime-20240125.1336/swank.lisp
+  slime-20240125.1336/swank/
+  slime-20240125.1336/swank/abcl.lisp
+  slime-20240125.1336/swank/allegro.lisp
+  slime-20240125.1336/swank/backend.lisp
+  slime-20240125.1336/swank/ccl.lisp
+  slime-20240125.1336/swank/clasp.lisp
+  slime-20240125.1336/swank/clisp.lisp
+  slime-20240125.1336/swank/cmucl.lisp
+  slime-20240125.1336/swank/corman.lisp
+  slime-20240125.1336/swank/ecl.lisp
+  slime-20240125.1336/swank/gray.lisp
+  slime-20240125.1336/swank/lispworks.lisp
+  slime-20240125.1336/swank/match.lisp
+  slime-20240125.1336/swank/mezzano.lisp
+  slime-20240125.1336/swank/mkcl.lisp
+  slime-20240125.1336/swank/rpc.lisp
+  slime-20240125.1336/swank/sbcl.lisp
+  slime-20240125.1336/swank/scl.lisp
+  slime-20240125.1336/swank/source-file-cache.lisp
+  slime-20240125.1336/swank/source-path-parser.lisp
+  slime-20240125.1336/xref.lisp
+ ✓ Success:
+  2024-01-29T15:38:35+0000  slime-20240125.1336.entry
+  2024-01-29T15:38:35+0000  slime-20240125.1336.tar
+Built slime in 14.859s, finished at 2024-01-29T15:38:38+0000

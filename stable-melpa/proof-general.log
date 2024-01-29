@@ -4,4 +4,178 @@ Source:  https://github.com/ProofGeneral/PG.git
 
 Updating /mnt/store/melpa/working/proof-general/
 Checking out c6b7d506f991d7b97556341039558ef64c902382
-Creating directory with prefix: No space left on device, /tmp/proof-general
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/proof-general/
+  to /tmp/proof-generalTOlQ9b/proof-general-20240123.1014
+    proof-general.el -> proof-general.el
+  ! doc/dir -> dir
+  ! doc/PG-adapting.texi -> PG-adapting.texi
+  ! doc/ProofGeneral.texi -> ProofGeneral.texi
+    CHANGES -> CHANGES
+    AUTHORS -> AUTHORS
+    COPYING -> COPYING
+    generic => generic
+    images => images
+    lib => lib
+    coq/coq-abbrev.el -> coq/coq-abbrev.el
+    coq/coq-autotest.el -> coq/coq-autotest.el
+    coq/coq-compile-common.el -> coq/coq-compile-common.el
+    coq/coq-db.el -> coq/coq-db.el
+    coq/coq-diffs.el -> coq/coq-diffs.el
+    coq/coq-indent.el -> coq/coq-indent.el
+    coq/coq-local-vars.el -> coq/coq-local-vars.el
+    coq/coq-mode.el -> coq/coq-mode.el
+    coq/coq-par-compile.el -> coq/coq-par-compile.el
+    coq/coq-seq-compile.el -> coq/coq-seq-compile.el
+    coq/coq-smie.el -> coq/coq-smie.el
+    coq/coq-syntax.el -> coq/coq-syntax.el
+    coq/coq-system.el -> coq/coq-system.el
+    coq/coq-unicode-tokens.el -> coq/coq-unicode-tokens.el
+    coq/coq.el -> coq/coq.el
+    easycrypt => easycrypt
+    phox => phox
+    qrhl => qrhl
+    pghaskell => pghaskell
+    pgocaml => pgocaml
+    pgshell => pgshell
+Generating /tmp/proof-generalTOlQ9b/proof-general-20240123.1014/PG-adapting.info
+Generating /tmp/proof-generalTOlQ9b/proof-general-20240123.1014/ProofGeneral.info
+Created proof-general-20240123.1014.tar containing:
+  proof-general-20240123.1014/
+  proof-general-20240123.1014/AUTHORS
+  proof-general-20240123.1014/CHANGES
+  proof-general-20240123.1014/COPYING
+  proof-general-20240123.1014/PG-adapting.info
+  proof-general-20240123.1014/ProofGeneral.info
+  proof-general-20240123.1014/coq/
+  proof-general-20240123.1014/coq/coq-abbrev.el
+  proof-general-20240123.1014/coq/coq-autotest.el
+  proof-general-20240123.1014/coq/coq-compile-common.el
+  proof-general-20240123.1014/coq/coq-db.el
+  proof-general-20240123.1014/coq/coq-diffs.el
+  proof-general-20240123.1014/coq/coq-indent.el
+  proof-general-20240123.1014/coq/coq-local-vars.el
+  proof-general-20240123.1014/coq/coq-mode.el
+  proof-general-20240123.1014/coq/coq-par-compile.el
+  proof-general-20240123.1014/coq/coq-seq-compile.el
+  proof-general-20240123.1014/coq/coq-smie.el
+  proof-general-20240123.1014/coq/coq-syntax.el
+  proof-general-20240123.1014/coq/coq-system.el
+  proof-general-20240123.1014/coq/coq-unicode-tokens.el
+  proof-general-20240123.1014/coq/coq.el
+  proof-general-20240123.1014/dir
+  proof-general-20240123.1014/easycrypt/
+  proof-general-20240123.1014/easycrypt/easycrypt-abbrev.el
+  proof-general-20240123.1014/easycrypt/easycrypt-hooks.el
+  proof-general-20240123.1014/easycrypt/easycrypt-keywords.el
+  proof-general-20240123.1014/easycrypt/easycrypt-syntax.el
+  proof-general-20240123.1014/easycrypt/easycrypt.el
+  proof-general-20240123.1014/generic/
+  proof-general-20240123.1014/generic/README
+  proof-general-20240123.1014/generic/pg-assoc.el
+  proof-general-20240123.1014/generic/pg-autotest.el
+  proof-general-20240123.1014/generic/pg-custom.el
+  proof-general-20240123.1014/generic/pg-goals.el
+  proof-general-20240123.1014/generic/pg-movie.el
+  proof-general-20240123.1014/generic/pg-pamacs.el
+  proof-general-20240123.1014/generic/pg-pbrpm.el
+  proof-general-20240123.1014/generic/pg-pgip.el
+  proof-general-20240123.1014/generic/pg-response.el
+  proof-general-20240123.1014/generic/pg-user.el
+  proof-general-20240123.1014/generic/pg-vars.el
+  proof-general-20240123.1014/generic/pg-xml.el
+  proof-general-20240123.1014/generic/proof-autoloads.el
+  proof-general-20240123.1014/generic/proof-auxmodes.el
+  proof-general-20240123.1014/generic/proof-config.el
+  proof-general-20240123.1014/generic/proof-depends.el
+  proof-general-20240123.1014/generic/proof-easy-config.el
+  proof-general-20240123.1014/generic/proof-faces.el
+  proof-general-20240123.1014/generic/proof-indent.el
+  proof-general-20240123.1014/generic/proof-maths-menu.el
+  proof-general-20240123.1014/generic/proof-menu.el
+  proof-general-20240123.1014/generic/proof-script.el
+  proof-general-20240123.1014/generic/proof-shell.el
+  proof-general-20240123.1014/generic/proof-site.el
+  proof-general-20240123.1014/generic/proof-splash.el
+  proof-general-20240123.1014/generic/proof-syntax.el
+  proof-general-20240123.1014/generic/proof-toolbar.el
+  proof-general-20240123.1014/generic/proof-tree.el
+  proof-general-20240123.1014/generic/proof-unicode-tokens.el
+  proof-general-20240123.1014/generic/proof-useropts.el
+  proof-general-20240123.1014/generic/proof-utils.el
+  proof-general-20240123.1014/generic/proof.el
+  proof-general-20240123.1014/images/
+  proof-general-20240123.1014/images/ProofGeneral-splash.png
+  proof-general-20240123.1014/images/ProofGeneral.png
+  proof-general-20240123.1014/images/README
+  proof-general-20240123.1014/images/epg-abort.png
+  proof-general-20240123.1014/images/epg-abort.xpm
+  proof-general-20240123.1014/images/epg-command.png
+  proof-general-20240123.1014/images/epg-command.xpm
+  proof-general-20240123.1014/images/epg-context.png
+  proof-general-20240123.1014/images/epg-context.xpm
+  proof-general-20240123.1014/images/epg-find.png
+  proof-general-20240123.1014/images/epg-find.xpm
+  proof-general-20240123.1014/images/epg-goal.png
+  proof-general-20240123.1014/images/epg-goal.xpm
+  proof-general-20240123.1014/images/epg-goto.png
+  proof-general-20240123.1014/images/epg-goto.xpm
+  proof-general-20240123.1014/images/epg-help.png
+  proof-general-20240123.1014/images/epg-help.xpm
+  proof-general-20240123.1014/images/epg-home.png
+  proof-general-20240123.1014/images/epg-home.xpm
+  proof-general-20240123.1014/images/epg-info.png
+  proof-general-20240123.1014/images/epg-info.xpm
+  proof-general-20240123.1014/images/epg-interrupt.png
+  proof-general-20240123.1014/images/epg-interrupt.xpm
+  proof-general-20240123.1014/images/epg-next.png
+  proof-general-20240123.1014/images/epg-next.xpm
+  proof-general-20240123.1014/images/epg-prooftree.png
+  proof-general-20240123.1014/images/epg-prooftree.xpm
+  proof-general-20240123.1014/images/epg-qed.png
+  proof-general-20240123.1014/images/epg-qed.xpm
+  proof-general-20240123.1014/images/epg-restart.png
+  proof-general-20240123.1014/images/epg-restart.xpm
+  proof-general-20240123.1014/images/epg-retract.png
+  proof-general-20240123.1014/images/epg-retract.xpm
+  proof-general-20240123.1014/images/epg-state.png
+  proof-general-20240123.1014/images/epg-state.xpm
+  proof-general-20240123.1014/images/epg-undo.png
+  proof-general-20240123.1014/images/epg-undo.xpm
+  proof-general-20240123.1014/images/epg-use.png
+  proof-general-20240123.1014/images/epg-use.xpm
+  proof-general-20240123.1014/images/hiddenproof.xpm
+  proof-general-20240123.1014/lib/
+  proof-general-20240123.1014/lib/README
+  proof-general-20240123.1014/lib/bufhist.el
+  proof-general-20240123.1014/lib/holes.el
+  proof-general-20240123.1014/lib/local-vars-list.el
+  proof-general-20240123.1014/lib/maths-menu.el
+  proof-general-20240123.1014/lib/pg-dev.el
+  proof-general-20240123.1014/lib/pg-fontsets.el
+  proof-general-20240123.1014/lib/proof-compat.el
+  proof-general-20240123.1014/lib/scomint.el
+  proof-general-20240123.1014/lib/span.el
+  proof-general-20240123.1014/lib/texi-docstring-magic.el
+  proof-general-20240123.1014/lib/unicode-chars.el
+  proof-general-20240123.1014/lib/unicode-tokens.el
+  proof-general-20240123.1014/pghaskell/
+  proof-general-20240123.1014/pghaskell/pghaskell.el
+  proof-general-20240123.1014/pgocaml/
+  proof-general-20240123.1014/pgocaml/pgocaml.el
+  proof-general-20240123.1014/pgshell/
+  proof-general-20240123.1014/pgshell/README
+  proof-general-20240123.1014/pgshell/example.pgsh
+  proof-general-20240123.1014/pgshell/pgshell.el
+  proof-general-20240123.1014/phox/
+  proof-general-20240123.1014/phox/phox.el
+  proof-general-20240123.1014/phox/sqrt2.phx
+  proof-general-20240123.1014/proof-general-pkg.el
+  proof-general-20240123.1014/proof-general.el
+  proof-general-20240123.1014/qrhl/
+  proof-general-20240123.1014/qrhl/qrhl-input.el
+  proof-general-20240123.1014/qrhl/qrhl.el
+ ✓ Success:
+  2024-01-29T15:33:18+0000  proof-general-20240123.1014.entry
+  2024-01-29T15:33:18+0000  proof-general-20240123.1014.tar
+Built proof-general in 22.261s, finished at 2024-01-29T15:33:19+0000

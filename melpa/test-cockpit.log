@@ -4,4 +4,25 @@ Source:  https://github.com/johannes-mueller/test-cockpit.el.git
 
 Updating /mnt/store/melpa/working/test-cockpit/
 Checking out 2fcd6ccb94869b854e9d12e0ba5d433adc336296
-Creating directory with prefix: No space left on device, /tmp/test-cockpit
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/test-cockpit/
+  to /tmp/test-cockpitYrXrpU/test-cockpit-20231103.2037
+    test-cockpit-cargo.el -> test-cockpit-cargo.el
+    test-cockpit-cask.el -> test-cockpit-cask.el
+    test-cockpit-mix.el -> test-cockpit-mix.el
+    test-cockpit-npm-jest.el -> test-cockpit-npm-jest.el
+    test-cockpit-python.el -> test-cockpit-python.el
+    test-cockpit.el -> test-cockpit.el
+Created test-cockpit-20231103.2037.tar containing:
+  test-cockpit-20231103.2037/
+  test-cockpit-20231103.2037/test-cockpit-cargo.el
+  test-cockpit-20231103.2037/test-cockpit-cask.el
+  test-cockpit-20231103.2037/test-cockpit-mix.el
+  test-cockpit-20231103.2037/test-cockpit-npm-jest.el
+  test-cockpit-20231103.2037/test-cockpit-pkg.el
+  test-cockpit-20231103.2037/test-cockpit-python.el
+  test-cockpit-20231103.2037/test-cockpit.el
+ ✓ Success:
+  2024-01-29T15:42:09+0000  test-cockpit-20231103.2037.entry
+  2024-01-29T15:42:09+0000  test-cockpit-20231103.2037.tar
+Built test-cockpit in 3.167s, finished at 2024-01-29T15:42:11+0000

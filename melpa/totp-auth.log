@@ -3,5 +3,20 @@ Fetcher: gitlab
 Source:  https://gitlab.com/fledermaus/totp.el.git
 
 Updating /mnt/store/melpa/working/totp-auth/
-Checking out 7e7e43535e0bd9fdf5d373780a47ee622526b9a3
-Creating directory with prefix: No space left on device, /tmp/totp-auth
+Checking out 19b6939cca9690274070f0c60ac30fbf7531d6f4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/totp-auth/
+  to /tmp/totp-authsPDtse/totp-auth-20240129.1057
+    totp-auth-hmac.el -> totp-auth-hmac.el
+    totp-auth-interop.el -> totp-auth-interop.el
+    totp-auth.el -> totp-auth.el
+Created totp-auth-20240129.1057.tar containing:
+  totp-auth-20240129.1057/
+  totp-auth-20240129.1057/totp-auth-hmac.el
+  totp-auth-20240129.1057/totp-auth-interop.el
+  totp-auth-20240129.1057/totp-auth-pkg.el
+  totp-auth-20240129.1057/totp-auth.el
+ ✓ Success:
+  2024-01-29T15:43:02+0000  totp-auth-20240129.1057.entry
+  2024-01-29T15:43:02+0000  totp-auth-20240129.1057.tar
+Built totp-auth in 3.441s, finished at 2024-01-29T15:43:03+0000

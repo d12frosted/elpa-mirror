@@ -4,4 +4,42 @@ Source:  https://github.com/haskell/haskell-snippets.git
 
 Updating /mnt/store/melpa/working/haskell-snippets/
 Checking out 1c29c4a68ce89848b8d371c6510d1de3b586c8b3
-Creating directory with prefix: No space left on device, /tmp/haskell-snippets
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/haskell-snippets/
+  to /tmp/haskell-snippetsL3IQKz/haskell-snippets-20210228.344
+    haskell-snippets.el -> haskell-snippets.el
+    snippets => snippets
+Created haskell-snippets-20210228.344.tar containing:
+  haskell-snippets-20210228.344/
+  haskell-snippets-20210228.344/haskell-snippets-pkg.el
+  haskell-snippets-20210228.344/haskell-snippets.el
+  haskell-snippets-20210228.344/snippets/
+  haskell-snippets-20210228.344/snippets/haskell-mode/
+  haskell-snippets-20210228.344/snippets/haskell-mode/.yas-ignore-filenames-as-triggers
+  haskell-snippets-20210228.344/snippets/haskell-mode/.yas-make-groups
+  haskell-snippets-20210228.344/snippets/haskell-mode/case
+  haskell-snippets-20210228.344/snippets/haskell-mode/comment.block
+  haskell-snippets-20210228.344/snippets/haskell-mode/constraint
+  haskell-snippets-20210228.344/snippets/haskell-mode/data.inline
+  haskell-snippets-20210228.344/snippets/haskell-mode/data.record
+  haskell-snippets-20210228.344/snippets/haskell-mode/fn
+  haskell-snippets-20210228.344/snippets/haskell-mode/fn.clause
+  haskell-snippets-20210228.344/snippets/haskell-mode/fn.guarded
+  haskell-snippets-20210228.344/snippets/haskell-mode/get
+  haskell-snippets-20210228.344/snippets/haskell-mode/if.block
+  haskell-snippets-20210228.344/snippets/haskell-mode/if.inline
+  haskell-snippets-20210228.344/snippets/haskell-mode/import
+  haskell-snippets-20210228.344/snippets/haskell-mode/import.qualified
+  haskell-snippets-20210228.344/snippets/haskell-mode/instance
+  haskell-snippets-20210228.344/snippets/haskell-mode/lambda
+  haskell-snippets-20210228.344/snippets/haskell-mode/lang-pragma
+  haskell-snippets-20210228.344/snippets/haskell-mode/let
+  haskell-snippets-20210228.344/snippets/haskell-mode/main
+  haskell-snippets-20210228.344/snippets/haskell-mode/module
+  haskell-snippets-20210228.344/snippets/haskell-mode/module.exports
+  haskell-snippets-20210228.344/snippets/haskell-mode/newtype
+  haskell-snippets-20210228.344/snippets/haskell-mode/opt-pragma
+ ✓ Success:
+  2024-01-29T15:10:07+0000  haskell-snippets-20210228.344.entry
+  2024-01-29T15:10:07+0000  haskell-snippets-20210228.344.tar
+Built haskell-snippets in 3.798s, finished at 2024-01-29T15:10:09+0000

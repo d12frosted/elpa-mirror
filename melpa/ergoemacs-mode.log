@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ergoemacs/ergoemacs-mode.git
 
 Updating /mnt/store/melpa/working/ergoemacs-mode/
-Checking out c2a918c6ab13e29dba2caf2bd06496babd0dfca6
+Checking out 095129648e9846fbda1f585806de39c12e82f37e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ergoemacs-mode/
-  to /tmp/ergoemacs-modeuKUWlj/ergoemacs-mode-20230207.1551
+  to /tmp/ergoemacs-modeJ5imB2/ergoemacs-mode-20240129.1407
     ergoemacs-advice.el -> ergoemacs-advice.el
     ergoemacs-calculate-bindings.el -> ergoemacs-calculate-bindings.el
     ergoemacs-command-loop.el -> ergoemacs-command-loop.el
@@ -27,4 +27,36 @@ Copying files (->) and directories (=>)
     ergoemacs-translate.el -> ergoemacs-translate.el
     kbd-ergo.svg -> kbd-ergo.svg
     kbd.svg -> kbd.svg
-Write error: No space left on device, /tmp/ergoemacs-modeuKUWlj/ergoemacs-mode-20230207.1551/kbd.svg
+    ahk-us.ahk -> ahk-us.ahk
+    os_x_qwerty.dict.txt -> os_x_qwerty.dict.txt
+Created ergoemacs-mode-20240129.1407.tar containing:
+  ergoemacs-mode-20240129.1407/
+  ergoemacs-mode-20240129.1407/ahk-us.ahk
+  ergoemacs-mode-20240129.1407/ergoemacs-advice.el
+  ergoemacs-mode-20240129.1407/ergoemacs-calculate-bindings.el
+  ergoemacs-mode-20240129.1407/ergoemacs-command-loop.el
+  ergoemacs-mode-20240129.1407/ergoemacs-cua.el
+  ergoemacs-mode-20240129.1407/ergoemacs-debug.el
+  ergoemacs-mode-20240129.1407/ergoemacs-functions.el
+  ergoemacs-mode-20240129.1407/ergoemacs-key-description.el
+  ergoemacs-mode-20240129.1407/ergoemacs-layouts.el
+  ergoemacs-mode-20240129.1407/ergoemacs-lib.el
+  ergoemacs-mode-20240129.1407/ergoemacs-macros.el
+  ergoemacs-mode-20240129.1407/ergoemacs-map-properties.el
+  ergoemacs-mode-20240129.1407/ergoemacs-map.el
+  ergoemacs-mode-20240129.1407/ergoemacs-mapkeymap.el
+  ergoemacs-mode-20240129.1407/ergoemacs-mode-pkg.el
+  ergoemacs-mode-20240129.1407/ergoemacs-mode.el
+  ergoemacs-mode-20240129.1407/ergoemacs-test.el
+  ergoemacs-mode-20240129.1407/ergoemacs-theme-engine.el
+  ergoemacs-mode-20240129.1407/ergoemacs-themes.el
+  ergoemacs-mode-20240129.1407/ergoemacs-translate.el
+  ergoemacs-mode-20240129.1407/kbd-ergo.svg
+  ergoemacs-mode-20240129.1407/kbd.svg
+  ergoemacs-mode-20240129.1407/os_x_qwerty.dict.txt
+ ✓ Success:
+  2024-01-29T13:21:22+0000  ergoemacs-mode-20230207.1551.entry
+  2024-01-29T13:21:22+0000  ergoemacs-mode-20230207.1551.tar
+  2024-01-29T15:00:26+0000  ergoemacs-mode-20240129.1407.entry
+  2024-01-29T15:00:25+0000  ergoemacs-mode-20240129.1407.tar
+Built ergoemacs-mode in 4.080s, finished at 2024-01-29T15:00:27+0000

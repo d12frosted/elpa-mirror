@@ -4,4 +4,19 @@ Source:  https://github.com/abingham/emacs-ycmd.git
 
 Updating /mnt/store/melpa/working/ycmd/
 Checking out 6f4f7384b82203cccf208e3ec09252eb079439f9
-Creating directory with prefix: No space left on device, /tmp/ycmd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ycmd/
+  to /tmp/ycmdnuJBZb/ycmd-20190416.807
+    ycmd.el -> ycmd.el
+    ycmd-eldoc.el -> ycmd-eldoc.el
+  ! contrib/ycmd-next-error.el -> ycmd-next-error.el
+Created ycmd-20190416.807.tar containing:
+  ycmd-20190416.807/
+  ycmd-20190416.807/ycmd-eldoc.el
+  ycmd-20190416.807/ycmd-next-error.el
+  ycmd-20190416.807/ycmd-pkg.el
+  ycmd-20190416.807/ycmd.el
+ ✓ Success:
+  2024-01-29T15:47:54+0000  ycmd-20190416.807.entry
+  2024-01-29T15:47:54+0000  ycmd-20190416.807.tar
+Built ycmd in 3.576s, finished at 2024-01-29T15:47:55+0000

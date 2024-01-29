@@ -4,4 +4,40 @@ Source:  https://github.com/ericbmerritt/projmake-mode.git
 
 Updating /mnt/store/melpa/working/projmake-mode/
 Checking out a897701f7e8f8cc11459ed44eb0e454db2a460c1
-Creating directory with prefix: No space left on device, /tmp/projmake-mode
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/projmake-mode/
+  to /tmp/projmake-modeL9zvwj/projmake-mode-20161031.1715
+  ! src/projmake-banner.el -> projmake-banner.el
+  ! src/projmake-build-state.el -> projmake-build-state.el
+  ! src/projmake-default-parse-engine.el -> projmake-default-parse-engine.el
+  ! src/projmake-discover.el -> projmake-discover.el
+  ! src/projmake-elmm.el -> projmake-elmm.el
+  ! src/projmake-error.el -> projmake-error.el
+  ! src/projmake-log.el -> projmake-log.el
+  ! src/projmake-markup.el -> projmake-markup.el
+  ! src/projmake-mode-pkg.el -> projmake-mode-pkg.el
+  ! src/projmake-mode.el -> projmake-mode.el
+  ! src/projmake-ocaml-parse-engine.el -> projmake-ocaml-parse-engine.el
+  ! src/projmake-parse-engine.el -> projmake-parse-engine.el
+  ! src/projmake-project.el -> projmake-project.el
+  ! src/projmake-util.el -> projmake-util.el
+Created projmake-mode-20161031.1715.tar containing:
+  projmake-mode-20161031.1715/
+  projmake-mode-20161031.1715/projmake-banner.el
+  projmake-mode-20161031.1715/projmake-build-state.el
+  projmake-mode-20161031.1715/projmake-default-parse-engine.el
+  projmake-mode-20161031.1715/projmake-discover.el
+  projmake-mode-20161031.1715/projmake-elmm.el
+  projmake-mode-20161031.1715/projmake-error.el
+  projmake-mode-20161031.1715/projmake-log.el
+  projmake-mode-20161031.1715/projmake-markup.el
+  projmake-mode-20161031.1715/projmake-mode-pkg.el
+  projmake-mode-20161031.1715/projmake-mode.el
+  projmake-mode-20161031.1715/projmake-ocaml-parse-engine.el
+  projmake-mode-20161031.1715/projmake-parse-engine.el
+  projmake-mode-20161031.1715/projmake-project.el
+  projmake-mode-20161031.1715/projmake-util.el
+ ✓ Success:
+  2024-01-29T15:32:56+0000  projmake-mode-20161031.1715.entry
+  2024-01-29T15:32:56+0000  projmake-mode-20161031.1715.tar
+Built projmake-mode in 3.377s, finished at 2024-01-29T15:32:57+0000

@@ -4,4 +4,105 @@ Source:  https://github.com/stevenremot/roguel-ike.git
 
 Updating /mnt/store/melpa/working/roguel-ike/
 Checking out 706dcb0687e8016d7d776f9d9e5ace9fdbbca43c
-Creating directory with prefix: No space left on device, /tmp/roguel-ike
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/roguel-ike/
+  to /tmp/roguel-ikew2DvP2/roguel-ike-20160120.302
+    roguel-ike-pkg.el -> roguel-ike-pkg.el
+    roguel-ike.el -> roguel-ike.el
+    roguel-ike => roguel-ike
+    roguel-ike-lib => roguel-ike-lib
+Created roguel-ike-20160120.302.tar containing:
+  roguel-ike-20160120.302/
+  roguel-ike-20160120.302/roguel-ike-lib/
+  roguel-ike-20160120.302/roguel-ike-lib/cell.el
+  roguel-ike-20160120.302/roguel-ike-lib/dispatcher.el
+  roguel-ike-20160120.302/roguel-ike-lib/fov.el
+  roguel-ike-20160120.302/roguel-ike-lib/level.el
+  roguel-ike-20160120.302/roguel-ike-lib/level/
+  roguel-ike-20160120.302/roguel-ike-lib/level/generator/
+  roguel-ike-20160120.302/roguel-ike-lib/level/generator/binary-node.el
+  roguel-ike-20160120.302/roguel-ike-lib/los.el
+  roguel-ike-20160120.302/roguel-ike-lib/math.el
+  roguel-ike-20160120.302/roguel-ike-lib/path-finding.el
+  roguel-ike-20160120.302/roguel-ike-lib/renderer.el
+  roguel-ike-20160120.302/roguel-ike-pkg.el
+  roguel-ike-20160120.302/roguel-ike.el
+  roguel-ike-20160120.302/roguel-ike/
+  roguel-ike-20160120.302/roguel-ike/behaviour.el
+  roguel-ike-20160120.302/roguel-ike/behaviour/
+  roguel-ike-20160120.302/roguel-ike/behaviour/ai.el
+  roguel-ike-20160120.302/roguel-ike/behaviour/manual.el
+  roguel-ike-20160120.302/roguel-ike/buffer-manager.el
+  roguel-ike-20160120.302/roguel-ike/controller.el
+  roguel-ike-20160120.302/roguel-ike/custom.el
+  roguel-ike-20160120.302/roguel-ike/data/
+  roguel-ike-20160120.302/roguel-ike/data/effects.el
+  roguel-ike-20160120.302/roguel-ike/data/races.el
+  roguel-ike-20160120.302/roguel-ike/data/skills.el
+  roguel-ike-20160120.302/roguel-ike/dungeon.el
+  roguel-ike-20160120.302/roguel-ike/entity.el
+  roguel-ike-20160120.302/roguel-ike/entity/
+  roguel-ike-20160120.302/roguel-ike/entity/factory/
+  roguel-ike-20160120.302/roguel-ike/entity/factory/hero.el
+  roguel-ike-20160120.302/roguel-ike/fov.el
+  roguel-ike-20160120.302/roguel-ike/game-screen.el
+  roguel-ike-20160120.302/roguel-ike/game-screen/
+  roguel-ike-20160120.302/roguel-ike/game-screen/arena.el
+  roguel-ike-20160120.302/roguel-ike/game-screen/dungeon-rampage.el
+  roguel-ike-20160120.302/roguel-ike/game-screen/fight.el
+  roguel-ike-20160120.302/roguel-ike/game-screen/select-hero.el
+  roguel-ike-20160120.302/roguel-ike/game-screen/select-mode.el
+  roguel-ike-20160120.302/roguel-ike/game-screen/test.el
+  roguel-ike-20160120.302/roguel-ike/game.el
+  roguel-ike-20160120.302/roguel-ike/graphics/
+  roguel-ike-20160120.302/roguel-ike/graphics/faces.el
+  roguel-ike-20160120.302/roguel-ike/graphics/renderer/
+  roguel-ike-20160120.302/roguel-ike/graphics/renderer/game.el
+  roguel-ike-20160120.302/roguel-ike/graphics/renderer/stats.el
+  roguel-ike-20160120.302/roguel-ike/graphics/widget/
+  roguel-ike-20160120.302/roguel-ike/graphics/widget/entity.el
+  roguel-ike-20160120.302/roguel-ike/graphics/widget/stats.el
+  roguel-ike-20160120.302/roguel-ike/hero-data.el
+  roguel-ike-20160120.302/roguel-ike/hero-data/
+  roguel-ike-20160120.302/roguel-ike/hero-data/manager.el
+  roguel-ike-20160120.302/roguel-ike/interactive-object.el
+  roguel-ike-20160120.302/roguel-ike/interactive-object/
+  roguel-ike-20160120.302/roguel-ike/interactive-object/door.el
+  roguel-ike-20160120.302/roguel-ike/interactive-object/stairs.el
+  roguel-ike-20160120.302/roguel-ike/level.el
+  roguel-ike-20160120.302/roguel-ike/level/
+  roguel-ike-20160120.302/roguel-ike/level/cell.el
+  roguel-ike-20160120.302/roguel-ike/level/cell/
+  roguel-ike-20160120.302/roguel-ike/level/cell/ground.el
+  roguel-ike-20160120.302/roguel-ike/level/cell/object.el
+  roguel-ike-20160120.302/roguel-ike/level/factory/
+  roguel-ike-20160120.302/roguel-ike/level/factory/all-rooms.el
+  roguel-ike-20160120.302/roguel-ike/level/factory/layout.el
+  roguel-ike-20160120.302/roguel-ike/level/factory/string.el
+  roguel-ike-20160120.302/roguel-ike/level/populator/
+  roguel-ike-20160120.302/roguel-ike/level/populator/arena.el
+  roguel-ike-20160120.302/roguel-ike/level/populator/periodic.el
+  roguel-ike-20160120.302/roguel-ike/message-logger.el
+  roguel-ike-20160120.302/roguel-ike/mode.el
+  roguel-ike-20160120.302/roguel-ike/mode/
+  roguel-ike-20160120.302/roguel-ike/mode/menu.el
+  roguel-ike-20160120.302/roguel-ike/path-finding.el
+  roguel-ike-20160120.302/roguel-ike/physics/
+  roguel-ike-20160120.302/roguel-ike/physics/motion.el
+  roguel-ike-20160120.302/roguel-ike/physics/world.el
+  roguel-ike-20160120.302/roguel-ike/race.el
+  roguel-ike-20160120.302/roguel-ike/skill.el
+  roguel-ike-20160120.302/roguel-ike/skill/
+  roguel-ike-20160120.302/roguel-ike/skill/object/
+  roguel-ike-20160120.302/roguel-ike/skill/object/fireball.el
+  roguel-ike-20160120.302/roguel-ike/skill/object/fractalball.el
+  roguel-ike-20160120.302/roguel-ike/stats.el
+  roguel-ike-20160120.302/roguel-ike/stats/
+  roguel-ike-20160120.302/roguel-ike/stats/effect.el
+  roguel-ike-20160120.302/roguel-ike/stats/regenerator.el
+  roguel-ike-20160120.302/roguel-ike/stats/slot.el
+  roguel-ike-20160120.302/roguel-ike/time-manager.el
+ ✓ Success:
+  2024-01-29T15:35:43+0000  roguel-ike-20160120.302.entry
+  2024-01-29T15:35:43+0000  roguel-ike-20160120.302.tar
+Built roguel-ike in 4.083s, finished at 2024-01-29T15:35:44+0000

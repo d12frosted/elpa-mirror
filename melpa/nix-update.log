@@ -4,4 +4,15 @@ Source:  https://github.com/jwiegley/nix-update-el.git
 
 Updating /mnt/store/melpa/working/nix-update/
 Checking out aab70a38165575a9cb41726f1cc67df60fbf2832
-Creating directory with prefix: No space left on device, /tmp/nix-update
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nix-update/
+  to /tmp/nix-updateo2BSS9/nix-update-20220816.2212
+    nix-update.el -> nix-update.el
+Created nix-update-20220816.2212.tar containing:
+  nix-update-20220816.2212/
+  nix-update-20220816.2212/nix-update-pkg.el
+  nix-update-20220816.2212/nix-update.el
+ ✓ Success:
+  2024-01-29T15:23:58+0000  nix-update-20220816.2212.entry
+  2024-01-29T15:23:58+0000  nix-update-20220816.2212.tar
+Built nix-update in 3.211s, finished at 2024-01-29T15:24:00+0000

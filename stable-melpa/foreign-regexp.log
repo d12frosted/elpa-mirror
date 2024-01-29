@@ -4,4 +4,24 @@ Source:  https://github.com/k-talo/foreign-regexp.el.git
 
 Updating /mnt/store/melpa/working/foreign-regexp/
 Checking out e2dd47f2160cadc194eb156e7c76c3c869e6706e
-Creating directory with prefix: No space left on device, /tmp/foreign-regexp
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/foreign-regexp/
+  to /tmp/foreign-regexpRbRpnO/foreign-regexp-20200325.50
+    foreign-regexp.el -> foreign-regexp.el
+    bin/foreign-regexp-quote-meta-aux.pl -> bin/foreign-regexp-quote-meta-aux.pl
+    bin/foreign-regexp-replace-aux.pl -> bin/foreign-regexp-replace-aux.pl
+    bin/foreign-regexp-quote-meta-aux.rb -> bin/foreign-regexp-quote-meta-aux.rb
+    bin/foreign-regexp-replace-aux.rb -> bin/foreign-regexp-replace-aux.rb
+Created foreign-regexp-20200325.50.tar containing:
+  foreign-regexp-20200325.50/
+  foreign-regexp-20200325.50/bin/
+  foreign-regexp-20200325.50/bin/foreign-regexp-quote-meta-aux.pl
+  foreign-regexp-20200325.50/bin/foreign-regexp-quote-meta-aux.rb
+  foreign-regexp-20200325.50/bin/foreign-regexp-replace-aux.pl
+  foreign-regexp-20200325.50/bin/foreign-regexp-replace-aux.rb
+  foreign-regexp-20200325.50/foreign-regexp-pkg.el
+  foreign-regexp-20200325.50/foreign-regexp.el
+ ✓ Success:
+  2024-01-29T15:05:54+0000  foreign-regexp-20200325.50.entry
+  2024-01-29T15:05:54+0000  foreign-regexp-20200325.50.tar
+Built foreign-regexp in 3.452s, finished at 2024-01-29T15:05:56+0000

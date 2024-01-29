@@ -4,4 +4,90 @@ Source:  https://github.com/kanchoku/tc.git
 
 Updating /mnt/store/melpa/working/tc/
 Checking out 6d7d16ae0dd737efb8ba68eebf1cc4cfdc26b05f
-Creating directory with prefix: No space left on device, /tmp/tc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tc/
+  to /tmp/tcBr7h1h/tc-20231123.1424
+    eelll.el -> eelll.el
+    tc-bushu.el -> tc-bushu.el
+    tc-complete.el -> tc-complete.el
+    tc-help.el -> tc-help.el
+    tc-image.el -> tc-image.el
+    tc-inst.el -> tc-inst.el
+    tc-is22.el -> tc-is22.el
+    tc-ja-alnum.el -> tc-ja-alnum.el
+    tc-jiscode.el -> tc-jiscode.el
+    tc-mazegaki.el -> tc-mazegaki.el
+    tc-mkmzdic.el -> tc-mkmzdic.el
+    tc-pre.el -> tc-pre.el
+    tc-setup.el -> tc-setup.el
+    tc-stat.el -> tc-stat.el
+    tc-sysdep.el -> tc-sysdep.el
+    tc-tbl.el -> tc-tbl.el
+    tc-util.el -> tc-util.el
+    tc.el -> tc.el
+    try-etbl.el -> try-etbl.el
+    try-tbl.el -> try-tbl.el
+    ttc-ltbl.el -> ttc-ltbl.el
+    ttc-rtbl.el -> ttc-rtbl.el
+    ttc-tbl.el -> ttc-tbl.el
+    tutc-tbl.el -> tutc-tbl.el
+    tcode => tcode
+Created tc-20231123.1424.tar containing:
+  tc-20231123.1424/
+  tc-20231123.1424/eelll.el
+  tc-20231123.1424/tc-bushu.el
+  tc-20231123.1424/tc-complete.el
+  tc-20231123.1424/tc-help.el
+  tc-20231123.1424/tc-image.el
+  tc-20231123.1424/tc-inst.el
+  tc-20231123.1424/tc-is22.el
+  tc-20231123.1424/tc-ja-alnum.el
+  tc-20231123.1424/tc-jiscode.el
+  tc-20231123.1424/tc-mazegaki.el
+  tc-20231123.1424/tc-mkmzdic.el
+  tc-20231123.1424/tc-pkg.el
+  tc-20231123.1424/tc-pre.el
+  tc-20231123.1424/tc-setup.el
+  tc-20231123.1424/tc-stat.el
+  tc-20231123.1424/tc-sysdep.el
+  tc-20231123.1424/tc-tbl.el
+  tc-20231123.1424/tc-util.el
+  tc-20231123.1424/tc.el
+  tc-20231123.1424/tcode/
+  tc-20231123.1424/tcode/EELLLTXT
+  tc-20231123.1424/tcode/EELLLTXT.tut
+  tc-20231123.1424/tcode/Makefile.am
+  tc-20231123.1424/tcode/Makefile.in
+  tc-20231123.1424/tcode/README
+  tc-20231123.1424/tcode/bushu.expand
+  tc-20231123.1424/tcode/bushu.rev
+  tc-20231123.1424/tcode/greece.maz
+  tc-20231123.1424/tcode/itaiji.maz
+  tc-20231123.1424/tcode/jukujiku.maz
+  tc-20231123.1424/tcode/mazegaki.dic
+  tc-20231123.1424/tcode/mk-mzdic
+  tc-20231123.1424/tcode/mkcertain.pl
+  tc-20231123.1424/tcode/pd_kihon.yom
+  tc-20231123.1424/tcode/step1.pl
+  tc-20231123.1424/tcode/step2.pl
+  tc-20231123.1424/tcode/symbol.rev
+  tc-20231123.1424/tcode/t1200.dat
+  tc-20231123.1424/tcode/t1353.dat
+  tc-20231123.1424/tcode/t225.dat
+  tc-20231123.1424/tcode/t300.dat
+  tc-20231123.1424/tcode/t400.dat
+  tc-20231123.1424/tcode/t450.dat
+  tc-20231123.1424/tcode/t575.dat
+  tc-20231123.1424/tcode/t675.dat
+  tc-20231123.1424/tcode/t900.dat
+  tc-20231123.1424/tcode/tcode.u
+  tc-20231123.1424/try-etbl.el
+  tc-20231123.1424/try-tbl.el
+  tc-20231123.1424/ttc-ltbl.el
+  tc-20231123.1424/ttc-rtbl.el
+  tc-20231123.1424/ttc-tbl.el
+  tc-20231123.1424/tutc-tbl.el
+ ✓ Success:
+  2024-01-29T15:41:48+0000  tc-20231123.1424.entry
+  2024-01-29T15:41:48+0000  tc-20231123.1424.tar
+Built tc in 3.395s, finished at 2024-01-29T15:41:49+0000

@@ -4,4 +4,29 @@ Source:  https://github.com/donkirkby/live-py-plugin.git
 
 Updating /mnt/store/melpa/working/live-py-mode/
 Checking out a7529311e9a60b26b562a98f00feeb09ef640afe
-Creating directory with prefix: No space left on device, /tmp/live-py-mode
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/live-py-mode/
+  to /tmp/live-py-modeTVyQ2x/live-py-mode-20231219.314
+  ! emacs-live-py-mode/live-py-mode.el -> live-py-mode.el
+  ! plugin/PySrc/space_tracer => space_tracer
+Created live-py-mode-20231219.314.tar containing:
+  live-py-mode-20231219.314/
+  live-py-mode-20231219.314/live-py-mode-pkg.el
+  live-py-mode-20231219.314/live-py-mode.el
+  live-py-mode-20231219.314/space_tracer/
+  live-py-mode-20231219.314/space_tracer/__init__.py
+  live-py-mode-20231219.314/space_tracer/__main__.py
+  live-py-mode-20231219.314/space_tracer/about.py
+  live-py-mode-20231219.314/space_tracer/canvas.py
+  live-py-mode-20231219.314/space_tracer/code_tracer.py
+  live-py-mode-20231219.314/space_tracer/live_image.py
+  live-py-mode-20231219.314/space_tracer/main.py
+  live-py-mode-20231219.314/space_tracer/mock_turtle.py
+  live-py-mode-20231219.314/space_tracer/module_importers.py
+  live-py-mode-20231219.314/space_tracer/py.typed
+  live-py-mode-20231219.314/space_tracer/report_builder.py
+  live-py-mode-20231219.314/space_tracer/traced_finder.py
+ ✓ Success:
+  2024-01-29T15:18:53+0000  live-py-mode-20231219.314.entry
+  2024-01-29T15:18:53+0000  live-py-mode-20231219.314.tar
+Built live-py-mode in 3.987s, finished at 2024-01-29T15:18:54+0000

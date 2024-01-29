@@ -4,4 +4,141 @@ Source:  https://github.com/emacs-lsp/lsp-mssql.git
 
 Updating /mnt/store/melpa/working/lsp-mssql/
 Checking out a0dba8f86a2ace7e800a9dc8f814767625a509af
-Creating directory with prefix: No space left on device, /tmp/lsp-mssql
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-mssql/
+  to /tmp/lsp-mssqlKz9vet/lsp-mssql-20230510.1124
+    lsp-mssql.el -> lsp-mssql.el
+    images => images
+    snippets => snippets
+Created lsp-mssql-20230510.1124.tar containing:
+  lsp-mssql-20230510.1124/
+  lsp-mssql-20230510.1124/images/
+  lsp-mssql-20230510.1124/images/AggregateFunction.png
+  lsp-mssql-20230510.1124/images/AggregateFunctionParameter_Input.png
+  lsp-mssql-20230510.1124/images/AggregateFunctionParameter_Output.png
+  lsp-mssql-20230510.1124/images/AggregateFunctionParameter_Return.png
+  lsp-mssql-20230510.1124/images/ApplicationRole.png
+  lsp-mssql-20230510.1124/images/Assembly.png
+  lsp-mssql-20230510.1124/images/AsymmetricKey.png
+  lsp-mssql-20230510.1124/images/BrokerPriority.png
+  lsp-mssql-20230510.1124/images/Certificate.png
+  lsp-mssql-20230510.1124/images/Column.png
+  lsp-mssql-20230510.1124/images/ColumnEncryptionKey.png
+  lsp-mssql-20230510.1124/images/ColumnMasterKey.png
+  lsp-mssql-20230510.1124/images/Constraint.png
+  lsp-mssql-20230510.1124/images/Contract.png
+  lsp-mssql-20230510.1124/images/Database.png
+  lsp-mssql-20230510.1124/images/DatabaseAndQueueEventNotification.png
+  lsp-mssql-20230510.1124/images/DatabaseAuditSpecification.png
+  lsp-mssql-20230510.1124/images/DatabaseEncryptionKey.png
+  lsp-mssql-20230510.1124/images/DatabaseRole.png
+  lsp-mssql-20230510.1124/images/DatabaseScopedCredential.png
+  lsp-mssql-20230510.1124/images/DatabaseTrigger.png
+  lsp-mssql-20230510.1124/images/Database_Unavailable.png
+  lsp-mssql-20230510.1124/images/DefaultIcon.png
+  lsp-mssql-20230510.1124/images/ExternalDataSource.png
+  lsp-mssql-20230510.1124/images/ExternalFileFormat.png
+  lsp-mssql-20230510.1124/images/FileGroupFile.png
+  lsp-mssql-20230510.1124/images/Folder.png
+  lsp-mssql-20230510.1124/images/FullTextCatalog.png
+  lsp-mssql-20230510.1124/images/FullTextStopList.png
+  lsp-mssql-20230510.1124/images/HDFSFolder.png
+  lsp-mssql-20230510.1124/images/Index.png
+  lsp-mssql-20230510.1124/images/Key_ForeignKey.png
+  lsp-mssql-20230510.1124/images/Key_PrimaryKey.png
+  lsp-mssql-20230510.1124/images/Key_UniqueKey.png
+  lsp-mssql-20230510.1124/images/MasterKey.png
+  lsp-mssql-20230510.1124/images/MessageType.png
+  lsp-mssql-20230510.1124/images/PartitionFunction.png
+  lsp-mssql-20230510.1124/images/PartitionScheme.png
+  lsp-mssql-20230510.1124/images/Queue.png
+  lsp-mssql-20230510.1124/images/RemoteServiceBinding.png
+  lsp-mssql-20230510.1124/images/Route.png
+  lsp-mssql-20230510.1124/images/ScalarValuedFunction.png
+  lsp-mssql-20230510.1124/images/ScalarValuedFunctionParameter_Input.png
+  lsp-mssql-20230510.1124/images/ScalarValuedFunctionParameter_Output.png
+  lsp-mssql-20230510.1124/images/ScalarValuedFunctionParameter_Return.png
+  lsp-mssql-20230510.1124/images/Schema.png
+  lsp-mssql-20230510.1124/images/SearchPropertyList.png
+  lsp-mssql-20230510.1124/images/SecurityPolicy.png
+  lsp-mssql-20230510.1124/images/Sequence.png
+  lsp-mssql-20230510.1124/images/ServerLevelCredential.png
+  lsp-mssql-20230510.1124/images/ServerLevelCryptographicProvider.png
+  lsp-mssql-20230510.1124/images/ServerLevelEndpoint.png
+  lsp-mssql-20230510.1124/images/ServerLevelLinkedServer.png
+  lsp-mssql-20230510.1124/images/ServerLevelLinkedServerLogin.png
+  lsp-mssql-20230510.1124/images/ServerLevelLinkedServerLogin_Disabled.png
+  lsp-mssql-20230510.1124/images/ServerLevelLogin.png
+  lsp-mssql-20230510.1124/images/ServerLevelLogin_Disabled.png
+  lsp-mssql-20230510.1124/images/ServerLevelServerAudit.png
+  lsp-mssql-20230510.1124/images/ServerLevelServerAuditSpecification.png
+  lsp-mssql-20230510.1124/images/ServerLevelServerRole.png
+  lsp-mssql-20230510.1124/images/ServerLevelServerTrigger.png
+  lsp-mssql-20230510.1124/images/Server_green.png
+  lsp-mssql-20230510.1124/images/Server_red.png
+  lsp-mssql-20230510.1124/images/Service.png
+  lsp-mssql-20230510.1124/images/SqlLogFile.png
+  lsp-mssql-20230510.1124/images/Statistic.png
+  lsp-mssql-20230510.1124/images/StoredProcedure.png
+  lsp-mssql-20230510.1124/images/StoredProcedureParameter_Input.png
+  lsp-mssql-20230510.1124/images/StoredProcedureParameter_Output.png
+  lsp-mssql-20230510.1124/images/StoredProcedureParameter_Return.png
+  lsp-mssql-20230510.1124/images/SymmetricKey.png
+  lsp-mssql-20230510.1124/images/Synonym.png
+  lsp-mssql-20230510.1124/images/SystemApproximateNumeric.png
+  lsp-mssql-20230510.1124/images/SystemBinaryString.png
+  lsp-mssql-20230510.1124/images/SystemCharacterString.png
+  lsp-mssql-20230510.1124/images/SystemClrDataType.png
+  lsp-mssql-20230510.1124/images/SystemContract.png
+  lsp-mssql-20230510.1124/images/SystemDateAndTime.png
+  lsp-mssql-20230510.1124/images/SystemExactNumeric.png
+  lsp-mssql-20230510.1124/images/SystemMessageType.png
+  lsp-mssql-20230510.1124/images/SystemOtherDataType.png
+  lsp-mssql-20230510.1124/images/SystemQueue.png
+  lsp-mssql-20230510.1124/images/SystemService.png
+  lsp-mssql-20230510.1124/images/SystemSpatialDataType.png
+  lsp-mssql-20230510.1124/images/SystemUnicodeCharacterString.png
+  lsp-mssql-20230510.1124/images/Table.png
+  lsp-mssql-20230510.1124/images/TableValuedFunction.png
+  lsp-mssql-20230510.1124/images/TableValuedFunctionParameter_Input.png
+  lsp-mssql-20230510.1124/images/TableValuedFunctionParameter_Output.png
+  lsp-mssql-20230510.1124/images/TableValuedFunctionParameter_Return.png
+  lsp-mssql-20230510.1124/images/Table_Temporal.png
+  lsp-mssql-20230510.1124/images/Trigger.png
+  lsp-mssql-20230510.1124/images/Trigger_Disabled.png
+  lsp-mssql-20230510.1124/images/User.png
+  lsp-mssql-20230510.1124/images/UserDefinedDataType.png
+  lsp-mssql-20230510.1124/images/UserDefinedTableType.png
+  lsp-mssql-20230510.1124/images/UserDefinedTableTypeColumn.png
+  lsp-mssql-20230510.1124/images/UserDefinedTableTypeConstraint.png
+  lsp-mssql-20230510.1124/images/UserDefinedType.png
+  lsp-mssql-20230510.1124/images/User_Disabled.png
+  lsp-mssql-20230510.1124/images/View.png
+  lsp-mssql-20230510.1124/images/XmlSchemaCollection.png
+  lsp-mssql-20230510.1124/images/add.png
+  lsp-mssql-20230510.1124/images/add_inverse.png
+  lsp-mssql-20230510.1124/lsp-mssql-pkg.el
+  lsp-mssql-20230510.1124/lsp-mssql.el
+  lsp-mssql-20230510.1124/snippets/
+  lsp-mssql-20230510.1124/snippets/sql-mode/
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlAddColumn
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlCreateDatabase
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlCreateStoredProc
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlCreateTable
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDeleteRows
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDropColumn
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDropDatabase
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDropStoredProc
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDropTable
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlExtensionHelp
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlGetSpaceUsed
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlInsertRows
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlListColumns
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlListDatabases
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlListTablesAndViews
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlSelect
+  lsp-mssql-20230510.1124/snippets/sql-mode/sqlUpdateRows
+ ✓ Success:
+  2024-01-29T15:19:27+0000  lsp-mssql-20230510.1124.entry
+  2024-01-29T15:19:27+0000  lsp-mssql-20230510.1124.tar
+Built lsp-mssql in 3.769s, finished at 2024-01-29T15:19:29+0000

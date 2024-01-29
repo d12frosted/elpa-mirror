@@ -4,4 +4,21 @@ Source:  https://github.com/holomorph/systemd-mode.git
 
 Updating /mnt/store/melpa/working/systemd/
 Checking out 8742607120fbc440821acbc351fda1e8e68a8806
-Creating directory with prefix: No space left on device, /tmp/systemd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/systemd/
+  to /tmp/systemdWopeog/systemd-20230201.302
+    systemd.el -> systemd.el
+    network-directives.txt -> network-directives.txt
+    nspawn-directives.txt -> nspawn-directives.txt
+    unit-directives.txt -> unit-directives.txt
+Created systemd-20230201.302.tar containing:
+  systemd-20230201.302/
+  systemd-20230201.302/network-directives.txt
+  systemd-20230201.302/nspawn-directives.txt
+  systemd-20230201.302/systemd-pkg.el
+  systemd-20230201.302/systemd.el
+  systemd-20230201.302/unit-directives.txt
+ ✓ Success:
+  2024-01-29T15:41:28+0000  systemd-20230201.302.entry
+  2024-01-29T15:41:28+0000  systemd-20230201.302.tar
+Built systemd in 3.104s, finished at 2024-01-29T15:41:29+0000

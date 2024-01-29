@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://alexschroeder.ch/cgit/gemini-write
 
 Updating /mnt/store/melpa/working/gemini-write/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://alexschroeder.ch/cgit/gemini-write/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 2a7d07d0ce4c5b8750f3ff1182ad94ee616734c8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gemini-write/
+  to /tmp/gemini-writePeEqkB/gemini-write-20211114.1032
+    gemini-write.el -> gemini-write.el
+Created gemini-write-20211114.1032.tar containing:
+  gemini-write-20211114.1032/
+  gemini-write-20211114.1032/gemini-write-pkg.el
+  gemini-write-20211114.1032/gemini-write.el
+ ✓ Success:
+  2024-01-29T15:06:51+0000  gemini-write-20211114.1032.entry
+  2024-01-29T15:06:51+0000  gemini-write-20211114.1032.tar
+Built gemini-write in 5.410s, finished at 2024-01-29T15:06:52+0000

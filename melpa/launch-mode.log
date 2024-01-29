@@ -4,4 +4,21 @@ Source:  https://github.com/iory/launch-mode.git
 
 Updating /mnt/store/melpa/working/launch-mode/
 Checking out 25ebd4ba77afcbe729901eb74923dbe9ae81c313
-Creating directory with prefix: No space left on device, /tmp/launch-mode
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/launch-mode/
+  to /tmp/launch-modelGNRN3/launch-mode-20170106.512
+    launch-find-definition.el -> launch-find-definition.el
+    launch-mode.el -> launch-mode.el
+    goto_launch.py -> goto_launch.py
+    insert_node_name.py -> insert_node_name.py
+Created launch-mode-20170106.512.tar containing:
+  launch-mode-20170106.512/
+  launch-mode-20170106.512/goto_launch.py
+  launch-mode-20170106.512/insert_node_name.py
+  launch-mode-20170106.512/launch-find-definition.el
+  launch-mode-20170106.512/launch-mode-pkg.el
+  launch-mode-20170106.512/launch-mode.el
+ ✓ Success:
+  2024-01-29T15:17:56+0000  launch-mode-20170106.512.entry
+  2024-01-29T15:17:56+0000  launch-mode-20170106.512.tar
+Built launch-mode in 3.108s, finished at 2024-01-29T15:17:58+0000

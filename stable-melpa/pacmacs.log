@@ -4,4 +4,103 @@ Source:  https://github.com/codingteam/pacmacs.el.git
 
 Updating /mnt/store/melpa/working/pacmacs/
 Checking out 25a8c30210f6bd94634a7ff743a2f8be391ed3b3
-Creating directory with prefix: No space left on device, /tmp/pacmacs
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pacmacs/
+  to /tmp/pacmacsF5yjDn/pacmacs-20220106.2248
+    pacmacs-anim.el -> pacmacs-anim.el
+    pacmacs-board.el -> pacmacs-board.el
+    pacmacs-render.el -> pacmacs-render.el
+    pacmacs-score.el -> pacmacs-score.el
+    pacmacs-utils.el -> pacmacs-utils.el
+    pacmacs-vector.el -> pacmacs-vector.el
+    pacmacs-walls.el -> pacmacs-walls.el
+    pacmacs.el -> pacmacs.el
+    maps => maps
+    signs => signs
+    sprites/Big-Pill.json -> sprites/Big-Pill.json
+    sprites/Blinking-Terrified-Ghost.json -> sprites/Blinking-Terrified-Ghost.json
+    sprites/Pacman-Chomping-Down.json -> sprites/Pacman-Chomping-Down.json
+    sprites/Pacman-Chomping-Left.json -> sprites/Pacman-Chomping-Left.json
+    sprites/Pacman-Chomping-Right.json -> sprites/Pacman-Chomping-Right.json
+    sprites/Pacman-Chomping-Up.json -> sprites/Pacman-Chomping-Up.json
+    sprites/Pacman-Death.json -> sprites/Pacman-Death.json
+    sprites/Pill.json -> sprites/Pill.json
+    sprites/Red-Ghost-Down.json -> sprites/Red-Ghost-Down.json
+    sprites/Red-Ghost-Left.json -> sprites/Red-Ghost-Left.json
+    sprites/Red-Ghost-Right.json -> sprites/Red-Ghost-Right.json
+    sprites/Red-Ghost-Up.json -> sprites/Red-Ghost-Up.json
+    sprites/Red-Ghost-Win.json -> sprites/Red-Ghost-Win.json
+    sprites/Terrified-Ghost.json -> sprites/Terrified-Ghost.json
+    sprites/Big-Pill.xpm -> sprites/Big-Pill.xpm
+    sprites/Blinking-Terrified-Ghost.xpm -> sprites/Blinking-Terrified-Ghost.xpm
+    sprites/Pacman-Chomping-Down.xpm -> sprites/Pacman-Chomping-Down.xpm
+    sprites/Pacman-Chomping-Left.xpm -> sprites/Pacman-Chomping-Left.xpm
+    sprites/Pacman-Chomping-Right.xpm -> sprites/Pacman-Chomping-Right.xpm
+    sprites/Pacman-Chomping-Up.xpm -> sprites/Pacman-Chomping-Up.xpm
+    sprites/Pacman-Death.xpm -> sprites/Pacman-Death.xpm
+    sprites/Pill.xpm -> sprites/Pill.xpm
+    sprites/Red-Ghost-Down.xpm -> sprites/Red-Ghost-Down.xpm
+    sprites/Red-Ghost-Left.xpm -> sprites/Red-Ghost-Left.xpm
+    sprites/Red-Ghost-Right.xpm -> sprites/Red-Ghost-Right.xpm
+    sprites/Red-Ghost-Up.xpm -> sprites/Red-Ghost-Up.xpm
+    sprites/Red-Ghost-Win.xpm -> sprites/Red-Ghost-Win.xpm
+    sprites/Terrified-Ghost.xpm -> sprites/Terrified-Ghost.xpm
+Created pacmacs-20220106.2248.tar containing:
+  pacmacs-20220106.2248/
+  pacmacs-20220106.2248/maps/
+  pacmacs-20220106.2248/maps/map01.txt
+  pacmacs-20220106.2248/maps/map02.txt
+  pacmacs-20220106.2248/maps/map03.txt
+  pacmacs-20220106.2248/maps/map04.txt
+  pacmacs-20220106.2248/maps/map05.txt
+  pacmacs-20220106.2248/maps/map06.txt
+  pacmacs-20220106.2248/maps/map07.txt
+  pacmacs-20220106.2248/maps/map08.txt
+  pacmacs-20220106.2248/maps/map09.txt
+  pacmacs-20220106.2248/maps/map10.txt
+  pacmacs-20220106.2248/maps/map11.txt
+  pacmacs-20220106.2248/pacmacs-anim.el
+  pacmacs-20220106.2248/pacmacs-board.el
+  pacmacs-20220106.2248/pacmacs-pkg.el
+  pacmacs-20220106.2248/pacmacs-render.el
+  pacmacs-20220106.2248/pacmacs-score.el
+  pacmacs-20220106.2248/pacmacs-utils.el
+  pacmacs-20220106.2248/pacmacs-vector.el
+  pacmacs-20220106.2248/pacmacs-walls.el
+  pacmacs-20220106.2248/pacmacs.el
+  pacmacs-20220106.2248/signs/
+  pacmacs-20220106.2248/signs/game-over.txt
+  pacmacs-20220106.2248/signs/scores.txt
+  pacmacs-20220106.2248/sprites/
+  pacmacs-20220106.2248/sprites/Big-Pill.json
+  pacmacs-20220106.2248/sprites/Big-Pill.xpm
+  pacmacs-20220106.2248/sprites/Blinking-Terrified-Ghost.json
+  pacmacs-20220106.2248/sprites/Blinking-Terrified-Ghost.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Down.json
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Down.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Left.json
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Left.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Right.json
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Right.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Up.json
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Up.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Death.json
+  pacmacs-20220106.2248/sprites/Pacman-Death.xpm
+  pacmacs-20220106.2248/sprites/Pill.json
+  pacmacs-20220106.2248/sprites/Pill.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Down.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Down.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Left.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Left.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Right.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Right.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Up.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Up.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Win.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Win.xpm
+  pacmacs-20220106.2248/sprites/Terrified-Ghost.json
+  pacmacs-20220106.2248/sprites/Terrified-Ghost.xpm
+ ✓ Success:
+  2024-01-29T15:29:38+0000  pacmacs-20220106.2248.entry
+  2024-01-29T15:29:38+0000  pacmacs-20220106.2248.tar
+Built pacmacs in 3.470s, finished at 2024-01-29T15:29:39+0000

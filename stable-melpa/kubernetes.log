@@ -4,4 +4,77 @@ Source:  https://github.com/kubernetes-el/kubernetes-el.git
 
 Updating /mnt/store/melpa/working/kubernetes/
 Checking out 099004511670c7fd52a619c5758047bb3172ba36
-Creating directory with prefix: No space left on device, /tmp/kubernetes
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kubernetes/
+  to /tmp/kubernetesm8FQBg/kubernetes-20221229.1519
+    kubernetes-ast.el -> kubernetes-ast.el
+    kubernetes-commands.el -> kubernetes-commands.el
+    kubernetes-configmaps.el -> kubernetes-configmaps.el
+    kubernetes-contexts.el -> kubernetes-contexts.el
+    kubernetes-core.el -> kubernetes-core.el
+    kubernetes-deployments.el -> kubernetes-deployments.el
+    kubernetes-el-tramp.el -> kubernetes-el-tramp.el
+    kubernetes-errors.el -> kubernetes-errors.el
+    kubernetes-ingress.el -> kubernetes-ingress.el
+    kubernetes-jobs.el -> kubernetes-jobs.el
+    kubernetes-kubectl.el -> kubernetes-kubectl.el
+    kubernetes-labels.el -> kubernetes-labels.el
+    kubernetes-loading-container.el -> kubernetes-loading-container.el
+    kubernetes-logs.el -> kubernetes-logs.el
+    kubernetes-modes.el -> kubernetes-modes.el
+    kubernetes-namespaces.el -> kubernetes-namespaces.el
+    kubernetes-nodes.el -> kubernetes-nodes.el
+    kubernetes-overview.el -> kubernetes-overview.el
+    kubernetes-persistentvolumeclaims.el -> kubernetes-persistentvolumeclaims.el
+    kubernetes-pod-line.el -> kubernetes-pod-line.el
+    kubernetes-pods.el -> kubernetes-pods.el
+    kubernetes-popups.el -> kubernetes-popups.el
+    kubernetes-process.el -> kubernetes-process.el
+    kubernetes-resources.el -> kubernetes-resources.el
+    kubernetes-secrets.el -> kubernetes-secrets.el
+    kubernetes-services.el -> kubernetes-services.el
+    kubernetes-state.el -> kubernetes-state.el
+    kubernetes-statefulsets.el -> kubernetes-statefulsets.el
+    kubernetes-utils.el -> kubernetes-utils.el
+    kubernetes-vars.el -> kubernetes-vars.el
+    kubernetes-yaml.el -> kubernetes-yaml.el
+    kubernetes.el -> kubernetes.el
+Created kubernetes-20221229.1519.tar containing:
+  kubernetes-20221229.1519/
+  kubernetes-20221229.1519/kubernetes-ast.el
+  kubernetes-20221229.1519/kubernetes-commands.el
+  kubernetes-20221229.1519/kubernetes-configmaps.el
+  kubernetes-20221229.1519/kubernetes-contexts.el
+  kubernetes-20221229.1519/kubernetes-core.el
+  kubernetes-20221229.1519/kubernetes-deployments.el
+  kubernetes-20221229.1519/kubernetes-el-tramp.el
+  kubernetes-20221229.1519/kubernetes-errors.el
+  kubernetes-20221229.1519/kubernetes-ingress.el
+  kubernetes-20221229.1519/kubernetes-jobs.el
+  kubernetes-20221229.1519/kubernetes-kubectl.el
+  kubernetes-20221229.1519/kubernetes-labels.el
+  kubernetes-20221229.1519/kubernetes-loading-container.el
+  kubernetes-20221229.1519/kubernetes-logs.el
+  kubernetes-20221229.1519/kubernetes-modes.el
+  kubernetes-20221229.1519/kubernetes-namespaces.el
+  kubernetes-20221229.1519/kubernetes-nodes.el
+  kubernetes-20221229.1519/kubernetes-overview.el
+  kubernetes-20221229.1519/kubernetes-persistentvolumeclaims.el
+  kubernetes-20221229.1519/kubernetes-pkg.el
+  kubernetes-20221229.1519/kubernetes-pod-line.el
+  kubernetes-20221229.1519/kubernetes-pods.el
+  kubernetes-20221229.1519/kubernetes-popups.el
+  kubernetes-20221229.1519/kubernetes-process.el
+  kubernetes-20221229.1519/kubernetes-resources.el
+  kubernetes-20221229.1519/kubernetes-secrets.el
+  kubernetes-20221229.1519/kubernetes-services.el
+  kubernetes-20221229.1519/kubernetes-state.el
+  kubernetes-20221229.1519/kubernetes-statefulsets.el
+  kubernetes-20221229.1519/kubernetes-utils.el
+  kubernetes-20221229.1519/kubernetes-vars.el
+  kubernetes-20221229.1519/kubernetes-yaml.el
+  kubernetes-20221229.1519/kubernetes.el
+ ✓ Success:
+  2024-01-29T15:17:34+0000  kubernetes-20221229.1519.entry
+  2024-01-29T15:17:34+0000  kubernetes-20221229.1519.tar
+Built kubernetes in 3.735s, finished at 2024-01-29T15:17:35+0000

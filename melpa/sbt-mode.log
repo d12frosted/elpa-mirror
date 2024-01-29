@@ -4,4 +4,27 @@ Source:  https://github.com/hvesalai/emacs-sbt-mode.git
 
 Updating /mnt/store/melpa/working/sbt-mode/
 Checking out 9fe1e8807c22cc1dc56a6233e000969518907f4d
-Creating directory with prefix: No space left on device, /tmp/sbt-mode
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sbt-mode/
+  to /tmp/sbt-modeSWt7tz/sbt-mode-20211203.1148
+    sbt-mode-buffer.el -> sbt-mode-buffer.el
+    sbt-mode-comint.el -> sbt-mode-comint.el
+    sbt-mode-hydra.el -> sbt-mode-hydra.el
+    sbt-mode-project.el -> sbt-mode-project.el
+    sbt-mode-rgrep.el -> sbt-mode-rgrep.el
+    sbt-mode-vars.el -> sbt-mode-vars.el
+    sbt-mode.el -> sbt-mode.el
+Created sbt-mode-20211203.1148.tar containing:
+  sbt-mode-20211203.1148/
+  sbt-mode-20211203.1148/sbt-mode-buffer.el
+  sbt-mode-20211203.1148/sbt-mode-comint.el
+  sbt-mode-20211203.1148/sbt-mode-hydra.el
+  sbt-mode-20211203.1148/sbt-mode-pkg.el
+  sbt-mode-20211203.1148/sbt-mode-project.el
+  sbt-mode-20211203.1148/sbt-mode-rgrep.el
+  sbt-mode-20211203.1148/sbt-mode-vars.el
+  sbt-mode-20211203.1148/sbt-mode.el
+ ✓ Success:
+  2024-01-29T15:36:23+0000  sbt-mode-20211203.1148.entry
+  2024-01-29T15:36:23+0000  sbt-mode-20211203.1148.tar
+Built sbt-mode in 3.271s, finished at 2024-01-29T15:36:24+0000

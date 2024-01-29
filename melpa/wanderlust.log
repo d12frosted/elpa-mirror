@@ -4,4 +4,244 @@ Source:  https://github.com/wanderlust/wanderlust.git
 
 Updating /mnt/store/melpa/working/wanderlust/
 Checking out 8ea81cd44fe68bf921d831bf0829912bd6b86db5
-Creating directory with prefix: No space left on device, /tmp/wanderlust
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/wanderlust/
+  to /tmp/wanderlust9krf9q/wanderlust-20240123.1631
+  ! doc/wl.texi -> wl.texi
+  ! doc/wl-ja.texi -> wl-ja.texi
+  ! elmo/acap.el -> acap.el
+  ! elmo/elmo-access.el -> elmo-access.el
+  ! elmo/elmo-archive.el -> elmo-archive.el
+  ! elmo/elmo-cache.el -> elmo-cache.el
+  ! elmo/elmo-date.el -> elmo-date.el
+  ! elmo/elmo-dop.el -> elmo-dop.el
+  ! elmo/elmo-file.el -> elmo-file.el
+  ! elmo/elmo-filter.el -> elmo-filter.el
+  ! elmo/elmo-flag.el -> elmo-flag.el
+  ! elmo/elmo-imap4.el -> elmo-imap4.el
+  ! elmo/elmo-internal.el -> elmo-internal.el
+  ! elmo/elmo-localdir.el -> elmo-localdir.el
+  ! elmo/elmo-localnews.el -> elmo-localnews.el
+  ! elmo/elmo-maildir.el -> elmo-maildir.el
+  ! elmo/elmo-map.el -> elmo-map.el
+  ! elmo/elmo-mime.el -> elmo-mime.el
+  ! elmo/elmo-msgdb.el -> elmo-msgdb.el
+  ! elmo/elmo-multi.el -> elmo-multi.el
+  ! elmo/elmo-net.el -> elmo-net.el
+  ! elmo/elmo-nntp.el -> elmo-nntp.el
+  ! elmo/elmo-null.el -> elmo-null.el
+  ! elmo/elmo-passwd.el -> elmo-passwd.el
+  ! elmo/elmo-pipe.el -> elmo-pipe.el
+  ! elmo/elmo-pop3.el -> elmo-pop3.el
+  ! elmo/elmo-rss.el -> elmo-rss.el
+  ! elmo/elmo-search.el -> elmo-search.el
+  ! elmo/elmo-sendlog.el -> elmo-sendlog.el
+  ! elmo/elmo-shimbun.el -> elmo-shimbun.el
+  ! elmo/elmo-signal.el -> elmo-signal.el
+  ! elmo/elmo-spam.el -> elmo-spam.el
+  ! elmo/elmo-split.el -> elmo-split.el
+  ! elmo/elmo-util.el -> elmo-util.el
+  ! elmo/elmo-vars.el -> elmo-vars.el
+  ! elmo/elmo-version.el -> elmo-version.el
+  ! elmo/elmo.el -> elmo.el
+  ! elmo/elsp-bogofilter.el -> elsp-bogofilter.el
+  ! elmo/elsp-bsfilter.el -> elsp-bsfilter.el
+  ! elmo/elsp-sa.el -> elsp-sa.el
+  ! elmo/elsp-spamfilter.el -> elsp-spamfilter.el
+  ! elmo/elsp-spamoracle.el -> elsp-spamoracle.el
+  ! elmo/mmimap.el -> mmimap.el
+  ! elmo/modb-entity.el -> modb-entity.el
+  ! elmo/modb-legacy.el -> modb-legacy.el
+  ! elmo/modb-standard.el -> modb-standard.el
+  ! elmo/modb.el -> modb.el
+  ! elmo/pldap.el -> pldap.el
+  ! elmo/slp.el -> slp.el
+  ! wl/wl-acap.el -> wl-acap.el
+  ! wl/wl-action.el -> wl-action.el
+  ! wl/wl-address.el -> wl-address.el
+  ! wl/wl-addrmgr.el -> wl-addrmgr.el
+  ! wl/wl-batch.el -> wl-batch.el
+  ! wl/wl-demo.el -> wl-demo.el
+  ! wl/wl-draft.el -> wl-draft.el
+  ! wl/wl-e21.el -> wl-e21.el
+  ! wl/wl-expire.el -> wl-expire.el
+  ! wl/wl-fldmgr.el -> wl-fldmgr.el
+  ! wl/wl-folder.el -> wl-folder.el
+  ! wl/wl-highlight.el -> wl-highlight.el
+  ! wl/wl-message.el -> wl-message.el
+  ! wl/wl-mime.el -> wl-mime.el
+  ! wl/wl-qs.el -> wl-qs.el
+  ! wl/wl-refile.el -> wl-refile.el
+  ! wl/wl-score.el -> wl-score.el
+  ! wl/wl-spam.el -> wl-spam.el
+  ! wl/wl-summary.el -> wl-summary.el
+  ! wl/wl-template.el -> wl-template.el
+  ! wl/wl-thread.el -> wl-thread.el
+  ! wl/wl-util.el -> wl-util.el
+  ! wl/wl-vars.el -> wl-vars.el
+  ! wl/wl-version.el -> wl-version.el
+  ! wl/wl.el -> wl.el
+  ! etc/icons => icons
+Generating /tmp/wanderlust9krf9q/wanderlust-20240123.1631/wl.info
+Generating /tmp/wanderlust9krf9q/wanderlust-20240123.1631/wl-ja.info
+Created wanderlust-20240123.1631.tar containing:
+  wanderlust-20240123.1631/
+  wanderlust-20240123.1631/acap.el
+  wanderlust-20240123.1631/dir
+  wanderlust-20240123.1631/elmo-access.el
+  wanderlust-20240123.1631/elmo-archive.el
+  wanderlust-20240123.1631/elmo-cache.el
+  wanderlust-20240123.1631/elmo-date.el
+  wanderlust-20240123.1631/elmo-dop.el
+  wanderlust-20240123.1631/elmo-file.el
+  wanderlust-20240123.1631/elmo-filter.el
+  wanderlust-20240123.1631/elmo-flag.el
+  wanderlust-20240123.1631/elmo-imap4.el
+  wanderlust-20240123.1631/elmo-internal.el
+  wanderlust-20240123.1631/elmo-localdir.el
+  wanderlust-20240123.1631/elmo-localnews.el
+  wanderlust-20240123.1631/elmo-maildir.el
+  wanderlust-20240123.1631/elmo-map.el
+  wanderlust-20240123.1631/elmo-mime.el
+  wanderlust-20240123.1631/elmo-msgdb.el
+  wanderlust-20240123.1631/elmo-multi.el
+  wanderlust-20240123.1631/elmo-net.el
+  wanderlust-20240123.1631/elmo-nntp.el
+  wanderlust-20240123.1631/elmo-null.el
+  wanderlust-20240123.1631/elmo-passwd.el
+  wanderlust-20240123.1631/elmo-pipe.el
+  wanderlust-20240123.1631/elmo-pop3.el
+  wanderlust-20240123.1631/elmo-rss.el
+  wanderlust-20240123.1631/elmo-search.el
+  wanderlust-20240123.1631/elmo-sendlog.el
+  wanderlust-20240123.1631/elmo-shimbun.el
+  wanderlust-20240123.1631/elmo-signal.el
+  wanderlust-20240123.1631/elmo-spam.el
+  wanderlust-20240123.1631/elmo-split.el
+  wanderlust-20240123.1631/elmo-util.el
+  wanderlust-20240123.1631/elmo-vars.el
+  wanderlust-20240123.1631/elmo-version.el
+  wanderlust-20240123.1631/elmo.el
+  wanderlust-20240123.1631/elsp-bogofilter.el
+  wanderlust-20240123.1631/elsp-bsfilter.el
+  wanderlust-20240123.1631/elsp-sa.el
+  wanderlust-20240123.1631/elsp-spamfilter.el
+  wanderlust-20240123.1631/elsp-spamoracle.el
+  wanderlust-20240123.1631/icons/
+  wanderlust-20240123.1631/icons/access.xpm
+  wanderlust-20240123.1631/icons/archive.xpm
+  wanderlust-20240123.1631/icons/closed.xpm
+  wanderlust-20240123.1631/icons/draft.xpm
+  wanderlust-20240123.1631/icons/elmo.xpm
+  wanderlust-20240123.1631/icons/file.xpm
+  wanderlust-20240123.1631/icons/filter.xpm
+  wanderlust-20240123.1631/icons/imap.xpm
+  wanderlust-20240123.1631/icons/internal.xpm
+  wanderlust-20240123.1631/icons/letter.xpm
+  wanderlust-20240123.1631/icons/local.xpm
+  wanderlust-20240123.1631/icons/localnews.xpm
+  wanderlust-20240123.1631/icons/maildir.xpm
+  wanderlust-20240123.1631/icons/multi.xpm
+  wanderlust-20240123.1631/icons/news.xpm
+  wanderlust-20240123.1631/icons/nmz.xpm
+  wanderlust-20240123.1631/icons/no-letter.xpm
+  wanderlust-20240123.1631/icons/opened.xpm
+  wanderlust-20240123.1631/icons/pipe.xpm
+  wanderlust-20240123.1631/icons/plugged.xpm
+  wanderlust-20240123.1631/icons/pop.xpm
+  wanderlust-20240123.1631/icons/queue.xpm
+  wanderlust-20240123.1631/icons/shimbun.xpm
+  wanderlust-20240123.1631/icons/trash-e.xpm
+  wanderlust-20240123.1631/icons/trash.xpm
+  wanderlust-20240123.1631/icons/unplugged.xpm
+  wanderlust-20240123.1631/icons/wl-alpha-logo.xbm
+  wanderlust-20240123.1631/icons/wl-alpha-logo.xpm
+  wanderlust-20240123.1631/icons/wl-alpha-xmas-logo.xbm
+  wanderlust-20240123.1631/icons/wl-alpha-xmas-logo.xpm
+  wanderlust-20240123.1631/icons/wl-beta-logo.xbm
+  wanderlust-20240123.1631/icons/wl-beta-logo.xpm
+  wanderlust-20240123.1631/icons/wl-beta-xmas-logo.xbm
+  wanderlust-20240123.1631/icons/wl-beta-xmas-logo.xpm
+  wanderlust-20240123.1631/icons/wl-draft-insert-signature-up.xpm
+  wanderlust-20240123.1631/icons/wl-draft-kill-up.xpm
+  wanderlust-20240123.1631/icons/wl-draft-save-and-exit-up.xpm
+  wanderlust-20240123.1631/icons/wl-draft-send-from-toolbar-down.xpm
+  wanderlust-20240123.1631/icons/wl-draft-send-from-toolbar-up.xpm
+  wanderlust-20240123.1631/icons/wl-draft-up.xpm
+  wanderlust-20240123.1631/icons/wl-draft-yank-original-up.xpm
+  wanderlust-20240123.1631/icons/wl-exit-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-check-current-entity-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-empty-trash-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-goto-draft-folder-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-jump-to-current-entity-no-sync-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-jump-to-current-entity-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-next-entity-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-prev-entity-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-read-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-select-entity-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-sync-current-entity-up.xpm
+  wanderlust-20240123.1631/icons/wl-folder-zoom-entity-up.xpm
+  wanderlust-20240123.1631/icons/wl-message-extract-content-up.xpm
+  wanderlust-20240123.1631/icons/wl-message-next-content-up.xpm
+  wanderlust-20240123.1631/icons/wl-message-play-content-up.xpm
+  wanderlust-20240123.1631/icons/wl-message-prev-content-up.xpm
+  wanderlust-20240123.1631/icons/wl-message-quit-up.xpm
+  wanderlust-20240123.1631/icons/wl-message-read-up.xpm
+  wanderlust-20240123.1631/icons/wl-stable-logo.xbm
+  wanderlust-20240123.1631/icons/wl-stable-logo.xpm
+  wanderlust-20240123.1631/icons/wl-stable-xmas-logo.xbm
+  wanderlust-20240123.1631/icons/wl-stable-xmas-logo.xpm
+  wanderlust-20240123.1631/icons/wl-summary-delete-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-dispose-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-exit-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-forward-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-jump-to-current-message-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-next-page-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-next-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-prev-page-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-prev-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-read-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-reply-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-reply-with-citation-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-set-flags-up.xpm
+  wanderlust-20240123.1631/icons/wl-summary-sync-force-update-up.xpm
+  wanderlust-20240123.1631/icons/wl-write-current-folder-up.xpm
+  wanderlust-20240123.1631/mmimap.el
+  wanderlust-20240123.1631/modb-entity.el
+  wanderlust-20240123.1631/modb-legacy.el
+  wanderlust-20240123.1631/modb-standard.el
+  wanderlust-20240123.1631/modb.el
+  wanderlust-20240123.1631/pldap.el
+  wanderlust-20240123.1631/slp.el
+  wanderlust-20240123.1631/wanderlust-pkg.el
+  wanderlust-20240123.1631/wl-acap.el
+  wanderlust-20240123.1631/wl-action.el
+  wanderlust-20240123.1631/wl-address.el
+  wanderlust-20240123.1631/wl-addrmgr.el
+  wanderlust-20240123.1631/wl-batch.el
+  wanderlust-20240123.1631/wl-demo.el
+  wanderlust-20240123.1631/wl-draft.el
+  wanderlust-20240123.1631/wl-e21.el
+  wanderlust-20240123.1631/wl-expire.el
+  wanderlust-20240123.1631/wl-fldmgr.el
+  wanderlust-20240123.1631/wl-folder.el
+  wanderlust-20240123.1631/wl-highlight.el
+  wanderlust-20240123.1631/wl-ja.info
+  wanderlust-20240123.1631/wl-message.el
+  wanderlust-20240123.1631/wl-mime.el
+  wanderlust-20240123.1631/wl-qs.el
+  wanderlust-20240123.1631/wl-refile.el
+  wanderlust-20240123.1631/wl-score.el
+  wanderlust-20240123.1631/wl-spam.el
+  wanderlust-20240123.1631/wl-summary.el
+  wanderlust-20240123.1631/wl-template.el
+  wanderlust-20240123.1631/wl-thread.el
+  wanderlust-20240123.1631/wl-util.el
+  wanderlust-20240123.1631/wl-vars.el
+  wanderlust-20240123.1631/wl-version.el
+  wanderlust-20240123.1631/wl.el
+  wanderlust-20240123.1631/wl.info
+ ✓ Success:
+  2024-01-29T15:46:28+0000  wanderlust-20240123.1631.entry
+  2024-01-29T15:46:28+0000  wanderlust-20240123.1631.tar
+Built wanderlust in 29.746s, finished at 2024-01-29T15:46:29+0000

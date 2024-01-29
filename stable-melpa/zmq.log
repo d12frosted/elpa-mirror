@@ -4,4 +4,37 @@ Source:  https://github.com/nnicandro/emacs-zmq.git
 
 Updating /mnt/store/melpa/working/zmq/
 Checking out 9d5679c54f361f518a426586b51686674fd3b0fa
-Creating directory with prefix: No space left on device, /tmp/zmq
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zmq/
+  to /tmp/zmqNoHdsx/zmq-20230608.1856
+    zmq.el -> zmq.el
+    Makefile -> Makefile
+    src => src
+Created zmq-20230608.1856.tar containing:
+  zmq-20230608.1856/
+  zmq-20230608.1856/Makefile
+  zmq-20230608.1856/src/
+  zmq-20230608.1856/src/Makefile.am
+  zmq-20230608.1856/src/configure.ac
+  zmq-20230608.1856/src/constants.c
+  zmq-20230608.1856/src/context.c
+  zmq-20230608.1856/src/context.h
+  zmq-20230608.1856/src/core.c
+  zmq-20230608.1856/src/core.h
+  zmq-20230608.1856/src/emacs-module.h
+  zmq-20230608.1856/src/emacs-zmq.c
+  zmq-20230608.1856/src/emacs-zmq.h
+  zmq-20230608.1856/src/msg.c
+  zmq-20230608.1856/src/msg.h
+  zmq-20230608.1856/src/poll.c
+  zmq-20230608.1856/src/poll.h
+  zmq-20230608.1856/src/socket.c
+  zmq-20230608.1856/src/socket.h
+  zmq-20230608.1856/src/util.c
+  zmq-20230608.1856/src/util.h
+  zmq-20230608.1856/zmq-pkg.el
+  zmq-20230608.1856/zmq.el
+ ✓ Success:
+  2024-01-29T15:48:24+0000  zmq-20230608.1856.entry
+  2024-01-29T15:48:24+0000  zmq-20230608.1856.tar
+Built zmq in 3.358s, finished at 2024-01-29T15:48:25+0000

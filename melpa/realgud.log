@@ -4,4 +4,242 @@ Source:  https://github.com/realgud/realgud.git
 
 Updating /mnt/store/melpa/working/realgud/
 Checking out 365063ea8ce8ec6a852cb388088d84147421c3c2
-Creating directory with prefix: No space left on device, /tmp/realgud
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud/
+  to /tmp/realgudYIBvEg/realgud-20231113.1910
+    realgud.el -> realgud.el
+  ! realgud/.nosearch -> .nosearch
+    realgud-recursive-autoloads.el -> realgud-recursive-autoloads.el
+    realgud/common/attach.el -> realgud/common/attach.el
+    realgud/common/backtrace-mode.el -> realgud/common/backtrace-mode.el
+    realgud/common/backtrack-mode.el -> realgud/common/backtrack-mode.el
+    realgud/common/bp-image-data.el -> realgud/common/bp-image-data.el
+    realgud/common/bp.el -> realgud/common/bp.el
+    realgud/common/breakpoint-mode.el -> realgud/common/breakpoint-mode.el
+    realgud/common/cmds.el -> realgud/common/cmds.el
+    realgud/common/core.el -> realgud/common/core.el
+    realgud/common/custom.el -> realgud/common/custom.el
+    realgud/common/eval.el -> realgud/common/eval.el
+    realgud/common/file.el -> realgud/common/file.el
+    realgud/common/follow.el -> realgud/common/follow.el
+    realgud/common/fringe.el -> realgud/common/fringe.el
+    realgud/common/helper.el -> realgud/common/helper.el
+    realgud/common/init.el -> realgud/common/init.el
+    realgud/common/key.el -> realgud/common/key.el
+    realgud/common/lang.el -> realgud/common/lang.el
+    realgud/common/loc.el -> realgud/common/loc.el
+    realgud/common/locals-mode.el -> realgud/common/locals-mode.el
+    realgud/common/lochist.el -> realgud/common/lochist.el
+    realgud/common/menu.el -> realgud/common/menu.el
+    realgud/common/regexp.el -> realgud/common/regexp.el
+    realgud/common/reset.el -> realgud/common/reset.el
+    realgud/common/run.el -> realgud/common/run.el
+    realgud/common/send.el -> realgud/common/send.el
+    realgud/common/shortkey.el -> realgud/common/shortkey.el
+    realgud/common/track-mode.el -> realgud/common/track-mode.el
+    realgud/common/track.el -> realgud/common/track.el
+    realgud/common/utils.el -> realgud/common/utils.el
+    realgud/common/window.el -> realgud/common/window.el
+    realgud/common/buffer/backtrace.el -> realgud/common/buffer/backtrace.el
+    realgud/common/buffer/breakpoint.el -> realgud/common/buffer/breakpoint.el
+    realgud/common/buffer/command.el -> realgud/common/buffer/command.el
+    realgud/common/buffer/helper.el -> realgud/common/buffer/helper.el
+    realgud/common/buffer/info.el -> realgud/common/buffer/info.el
+    realgud/common/buffer/locals.el -> realgud/common/buffer/locals.el
+    realgud/common/buffer/source.el -> realgud/common/buffer/source.el
+    realgud/debugger/bashdb/bashdb.el -> realgud/debugger/bashdb/bashdb.el
+    realgud/debugger/bashdb/core.el -> realgud/debugger/bashdb/core.el
+    realgud/debugger/bashdb/init.el -> realgud/debugger/bashdb/init.el
+    realgud/debugger/bashdb/track-mode.el -> realgud/debugger/bashdb/track-mode.el
+    realgud/debugger/gdb/core.el -> realgud/debugger/gdb/core.el
+    realgud/debugger/gdb/gdb.el -> realgud/debugger/gdb/gdb.el
+    realgud/debugger/gdb/init.el -> realgud/debugger/gdb/init.el
+    realgud/debugger/gdb/track-mode.el -> realgud/debugger/gdb/track-mode.el
+    realgud/debugger/gub/core.el -> realgud/debugger/gub/core.el
+    realgud/debugger/gub/gub.el -> realgud/debugger/gub/gub.el
+    realgud/debugger/gub/init.el -> realgud/debugger/gub/init.el
+    realgud/debugger/gub/track-mode.el -> realgud/debugger/gub/track-mode.el
+    realgud/debugger/kshdb/core.el -> realgud/debugger/kshdb/core.el
+    realgud/debugger/kshdb/init.el -> realgud/debugger/kshdb/init.el
+    realgud/debugger/kshdb/kshdb.el -> realgud/debugger/kshdb/kshdb.el
+    realgud/debugger/kshdb/track-mode.el -> realgud/debugger/kshdb/track-mode.el
+    realgud/debugger/pdb/core.el -> realgud/debugger/pdb/core.el
+    realgud/debugger/pdb/init.el -> realgud/debugger/pdb/init.el
+    realgud/debugger/pdb/pdb.el -> realgud/debugger/pdb/pdb.el
+    realgud/debugger/pdb/track-mode.el -> realgud/debugger/pdb/track-mode.el
+    realgud/debugger/perldb/core.el -> realgud/debugger/perldb/core.el
+    realgud/debugger/perldb/init.el -> realgud/debugger/perldb/init.el
+    realgud/debugger/perldb/perldb.el -> realgud/debugger/perldb/perldb.el
+    realgud/debugger/perldb/track-mode.el -> realgud/debugger/perldb/track-mode.el
+    realgud/debugger/rdebug/core.el -> realgud/debugger/rdebug/core.el
+    realgud/debugger/rdebug/init.el -> realgud/debugger/rdebug/init.el
+    realgud/debugger/rdebug/rdebug.el -> realgud/debugger/rdebug/rdebug.el
+    realgud/debugger/rdebug/track-mode.el -> realgud/debugger/rdebug/track-mode.el
+    realgud/debugger/remake/core.el -> realgud/debugger/remake/core.el
+    realgud/debugger/remake/init.el -> realgud/debugger/remake/init.el
+    realgud/debugger/remake/remake.el -> realgud/debugger/remake/remake.el
+    realgud/debugger/remake/track-mode.el -> realgud/debugger/remake/track-mode.el
+    realgud/debugger/trepan/backtrack-mode.el -> realgud/debugger/trepan/backtrack-mode.el
+    realgud/debugger/trepan/core.el -> realgud/debugger/trepan/core.el
+    realgud/debugger/trepan/init.el -> realgud/debugger/trepan/init.el
+    realgud/debugger/trepan/track-mode.el -> realgud/debugger/trepan/track-mode.el
+    realgud/debugger/trepan/trepan.el -> realgud/debugger/trepan/trepan.el
+    realgud/debugger/trepan.pl/backtrack-mode.el -> realgud/debugger/trepan.pl/backtrack-mode.el
+    realgud/debugger/trepan.pl/core.el -> realgud/debugger/trepan.pl/core.el
+    realgud/debugger/trepan.pl/init.el -> realgud/debugger/trepan.pl/init.el
+    realgud/debugger/trepan.pl/track-mode.el -> realgud/debugger/trepan.pl/track-mode.el
+    realgud/debugger/trepan.pl/trepanpl.el -> realgud/debugger/trepan.pl/trepanpl.el
+    realgud/debugger/trepan2/core.el -> realgud/debugger/trepan2/core.el
+    realgud/debugger/trepan2/init.el -> realgud/debugger/trepan2/init.el
+    realgud/debugger/trepan2/track-mode.el -> realgud/debugger/trepan2/track-mode.el
+    realgud/debugger/trepan2/trepan2.el -> realgud/debugger/trepan2/trepan2.el
+    realgud/debugger/trepan3k/core.el -> realgud/debugger/trepan3k/core.el
+    realgud/debugger/trepan3k/init.el -> realgud/debugger/trepan3k/init.el
+    realgud/debugger/trepan3k/track-mode.el -> realgud/debugger/trepan3k/track-mode.el
+    realgud/debugger/trepan3k/trepan3k.el -> realgud/debugger/trepan3k/trepan3k.el
+    realgud/debugger/trepanjs/backtrack-mode.el -> realgud/debugger/trepanjs/backtrack-mode.el
+    realgud/debugger/trepanjs/core.el -> realgud/debugger/trepanjs/core.el
+    realgud/debugger/trepanjs/init.el -> realgud/debugger/trepanjs/init.el
+    realgud/debugger/trepanjs/track-mode.el -> realgud/debugger/trepanjs/track-mode.el
+    realgud/debugger/trepanjs/trepanjs.el -> realgud/debugger/trepanjs/trepanjs.el
+    realgud/debugger/zshdb/core.el -> realgud/debugger/zshdb/core.el
+    realgud/debugger/zshdb/init.el -> realgud/debugger/zshdb/init.el
+    realgud/debugger/zshdb/track-mode.el -> realgud/debugger/zshdb/track-mode.el
+    realgud/debugger/zshdb/zshdb.el -> realgud/debugger/zshdb/zshdb.el
+    realgud/lang/java.el -> realgud/lang/java.el
+    realgud/lang/js.el -> realgud/lang/js.el
+    realgud/lang/perl.el -> realgud/lang/perl.el
+    realgud/lang/posix-shell.el -> realgud/lang/posix-shell.el
+    realgud/lang/python.el -> realgud/lang/python.el
+    realgud/lang/ruby.el -> realgud/lang/ruby.el
+Created realgud-20231113.1910.tar containing:
+  realgud-20231113.1910/
+  realgud-20231113.1910/.nosearch
+  realgud-20231113.1910/realgud-pkg.el
+  realgud-20231113.1910/realgud-recursive-autoloads.el
+  realgud-20231113.1910/realgud.el
+  realgud-20231113.1910/realgud/
+  realgud-20231113.1910/realgud/common/
+  realgud-20231113.1910/realgud/common/attach.el
+  realgud-20231113.1910/realgud/common/backtrace-mode.el
+  realgud-20231113.1910/realgud/common/backtrack-mode.el
+  realgud-20231113.1910/realgud/common/bp-image-data.el
+  realgud-20231113.1910/realgud/common/bp.el
+  realgud-20231113.1910/realgud/common/breakpoint-mode.el
+  realgud-20231113.1910/realgud/common/buffer/
+  realgud-20231113.1910/realgud/common/buffer/backtrace.el
+  realgud-20231113.1910/realgud/common/buffer/breakpoint.el
+  realgud-20231113.1910/realgud/common/buffer/command.el
+  realgud-20231113.1910/realgud/common/buffer/helper.el
+  realgud-20231113.1910/realgud/common/buffer/info.el
+  realgud-20231113.1910/realgud/common/buffer/locals.el
+  realgud-20231113.1910/realgud/common/buffer/source.el
+  realgud-20231113.1910/realgud/common/cmds.el
+  realgud-20231113.1910/realgud/common/core.el
+  realgud-20231113.1910/realgud/common/custom.el
+  realgud-20231113.1910/realgud/common/eval.el
+  realgud-20231113.1910/realgud/common/file.el
+  realgud-20231113.1910/realgud/common/follow.el
+  realgud-20231113.1910/realgud/common/fringe.el
+  realgud-20231113.1910/realgud/common/helper.el
+  realgud-20231113.1910/realgud/common/init.el
+  realgud-20231113.1910/realgud/common/key.el
+  realgud-20231113.1910/realgud/common/lang.el
+  realgud-20231113.1910/realgud/common/loc.el
+  realgud-20231113.1910/realgud/common/locals-mode.el
+  realgud-20231113.1910/realgud/common/lochist.el
+  realgud-20231113.1910/realgud/common/menu.el
+  realgud-20231113.1910/realgud/common/regexp.el
+  realgud-20231113.1910/realgud/common/reset.el
+  realgud-20231113.1910/realgud/common/run.el
+  realgud-20231113.1910/realgud/common/send.el
+  realgud-20231113.1910/realgud/common/shortkey.el
+  realgud-20231113.1910/realgud/common/track-mode.el
+  realgud-20231113.1910/realgud/common/track.el
+  realgud-20231113.1910/realgud/common/utils.el
+  realgud-20231113.1910/realgud/common/window.el
+  realgud-20231113.1910/realgud/debugger/
+  realgud-20231113.1910/realgud/debugger/bashdb/
+  realgud-20231113.1910/realgud/debugger/bashdb/bashdb.el
+  realgud-20231113.1910/realgud/debugger/bashdb/core.el
+  realgud-20231113.1910/realgud/debugger/bashdb/init.el
+  realgud-20231113.1910/realgud/debugger/bashdb/track-mode.el
+  realgud-20231113.1910/realgud/debugger/gdb/
+  realgud-20231113.1910/realgud/debugger/gdb/core.el
+  realgud-20231113.1910/realgud/debugger/gdb/gdb.el
+  realgud-20231113.1910/realgud/debugger/gdb/init.el
+  realgud-20231113.1910/realgud/debugger/gdb/track-mode.el
+  realgud-20231113.1910/realgud/debugger/gub/
+  realgud-20231113.1910/realgud/debugger/gub/core.el
+  realgud-20231113.1910/realgud/debugger/gub/gub.el
+  realgud-20231113.1910/realgud/debugger/gub/init.el
+  realgud-20231113.1910/realgud/debugger/gub/track-mode.el
+  realgud-20231113.1910/realgud/debugger/kshdb/
+  realgud-20231113.1910/realgud/debugger/kshdb/core.el
+  realgud-20231113.1910/realgud/debugger/kshdb/init.el
+  realgud-20231113.1910/realgud/debugger/kshdb/kshdb.el
+  realgud-20231113.1910/realgud/debugger/kshdb/track-mode.el
+  realgud-20231113.1910/realgud/debugger/pdb/
+  realgud-20231113.1910/realgud/debugger/pdb/core.el
+  realgud-20231113.1910/realgud/debugger/pdb/init.el
+  realgud-20231113.1910/realgud/debugger/pdb/pdb.el
+  realgud-20231113.1910/realgud/debugger/pdb/track-mode.el
+  realgud-20231113.1910/realgud/debugger/perldb/
+  realgud-20231113.1910/realgud/debugger/perldb/core.el
+  realgud-20231113.1910/realgud/debugger/perldb/init.el
+  realgud-20231113.1910/realgud/debugger/perldb/perldb.el
+  realgud-20231113.1910/realgud/debugger/perldb/track-mode.el
+  realgud-20231113.1910/realgud/debugger/rdebug/
+  realgud-20231113.1910/realgud/debugger/rdebug/core.el
+  realgud-20231113.1910/realgud/debugger/rdebug/init.el
+  realgud-20231113.1910/realgud/debugger/rdebug/rdebug.el
+  realgud-20231113.1910/realgud/debugger/rdebug/track-mode.el
+  realgud-20231113.1910/realgud/debugger/remake/
+  realgud-20231113.1910/realgud/debugger/remake/core.el
+  realgud-20231113.1910/realgud/debugger/remake/init.el
+  realgud-20231113.1910/realgud/debugger/remake/remake.el
+  realgud-20231113.1910/realgud/debugger/remake/track-mode.el
+  realgud-20231113.1910/realgud/debugger/trepan.pl/
+  realgud-20231113.1910/realgud/debugger/trepan.pl/backtrack-mode.el
+  realgud-20231113.1910/realgud/debugger/trepan.pl/core.el
+  realgud-20231113.1910/realgud/debugger/trepan.pl/init.el
+  realgud-20231113.1910/realgud/debugger/trepan.pl/track-mode.el
+  realgud-20231113.1910/realgud/debugger/trepan.pl/trepanpl.el
+  realgud-20231113.1910/realgud/debugger/trepan/
+  realgud-20231113.1910/realgud/debugger/trepan/backtrack-mode.el
+  realgud-20231113.1910/realgud/debugger/trepan/core.el
+  realgud-20231113.1910/realgud/debugger/trepan/init.el
+  realgud-20231113.1910/realgud/debugger/trepan/track-mode.el
+  realgud-20231113.1910/realgud/debugger/trepan/trepan.el
+  realgud-20231113.1910/realgud/debugger/trepan2/
+  realgud-20231113.1910/realgud/debugger/trepan2/core.el
+  realgud-20231113.1910/realgud/debugger/trepan2/init.el
+  realgud-20231113.1910/realgud/debugger/trepan2/track-mode.el
+  realgud-20231113.1910/realgud/debugger/trepan2/trepan2.el
+  realgud-20231113.1910/realgud/debugger/trepan3k/
+  realgud-20231113.1910/realgud/debugger/trepan3k/core.el
+  realgud-20231113.1910/realgud/debugger/trepan3k/init.el
+  realgud-20231113.1910/realgud/debugger/trepan3k/track-mode.el
+  realgud-20231113.1910/realgud/debugger/trepan3k/trepan3k.el
+  realgud-20231113.1910/realgud/debugger/trepanjs/
+  realgud-20231113.1910/realgud/debugger/trepanjs/backtrack-mode.el
+  realgud-20231113.1910/realgud/debugger/trepanjs/core.el
+  realgud-20231113.1910/realgud/debugger/trepanjs/init.el
+  realgud-20231113.1910/realgud/debugger/trepanjs/track-mode.el
+  realgud-20231113.1910/realgud/debugger/trepanjs/trepanjs.el
+  realgud-20231113.1910/realgud/debugger/zshdb/
+  realgud-20231113.1910/realgud/debugger/zshdb/core.el
+  realgud-20231113.1910/realgud/debugger/zshdb/init.el
+  realgud-20231113.1910/realgud/debugger/zshdb/track-mode.el
+  realgud-20231113.1910/realgud/debugger/zshdb/zshdb.el
+  realgud-20231113.1910/realgud/lang/
+  realgud-20231113.1910/realgud/lang/java.el
+  realgud-20231113.1910/realgud/lang/js.el
+  realgud-20231113.1910/realgud/lang/perl.el
+  realgud-20231113.1910/realgud/lang/posix-shell.el
+  realgud-20231113.1910/realgud/lang/python.el
+  realgud-20231113.1910/realgud/lang/ruby.el
+ ✓ Success:
+  2024-01-29T15:34:34+0000  realgud-20231113.1910.entry
+  2024-01-29T15:34:34+0000  realgud-20231113.1910.tar
+Built realgud in 4.054s, finished at 2024-01-29T15:34:35+0000

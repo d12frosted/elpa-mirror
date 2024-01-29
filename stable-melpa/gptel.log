@@ -3,5 +3,28 @@ Fetcher: github
 Source:  https://github.com/karthink/gptel.git
 
 Updating /mnt/store/melpa/working/gptel/
-Checking out c41a53f5263f4fee06de9ae73c3ac527181ce020
-Creating directory with prefix: No space left on device, /tmp/gptel
+Checking out 10f57605cee68f8ebd651c2ff5d51fdfebf5de67
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gptel/
+  to /tmp/gptelbR5IXI/gptel-20240128.2234
+    gptel-curl.el -> gptel-curl.el
+    gptel-gemini.el -> gptel-gemini.el
+    gptel-kagi.el -> gptel-kagi.el
+    gptel-ollama.el -> gptel-ollama.el
+    gptel-openai.el -> gptel-openai.el
+    gptel-transient.el -> gptel-transient.el
+    gptel.el -> gptel.el
+Created gptel-20240128.2234.tar containing:
+  gptel-20240128.2234/
+  gptel-20240128.2234/gptel-curl.el
+  gptel-20240128.2234/gptel-gemini.el
+  gptel-20240128.2234/gptel-kagi.el
+  gptel-20240128.2234/gptel-ollama.el
+  gptel-20240128.2234/gptel-openai.el
+  gptel-20240128.2234/gptel-pkg.el
+  gptel-20240128.2234/gptel-transient.el
+  gptel-20240128.2234/gptel.el
+ ✓ Success:
+  2024-01-29T15:09:16+0000  gptel-20240128.2234.entry
+  2024-01-29T15:09:16+0000  gptel-20240128.2234.tar
+Built gptel in 3.725s, finished at 2024-01-29T15:09:18+0000

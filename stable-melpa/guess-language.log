@@ -4,4 +4,151 @@ Source:  https://github.com/tmalsburg/guess-language.el.git
 
 Updating /mnt/store/melpa/working/guess-language/
 Checking out b1fc363ca2c30b8a8ddaf2e366bca7770c8cfbec
-Creating directory with prefix: No space left on device, /tmp/guess-language
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/guess-language/
+  to /tmp/guess-languageHkHIbU/guess-language-20220408.1545
+    guess-language.el -> guess-language.el
+  ! trigrams/README.org -> README.org
+  ! trigrams/af -> af
+  ! trigrams/ar -> ar
+  ! trigrams/az -> az
+  ! trigrams/bg -> bg
+  ! trigrams/ca -> ca
+  ! trigrams/ceb -> ceb
+  ! trigrams/cs -> cs
+  ! trigrams/cy -> cy
+  ! trigrams/da -> da
+  ! trigrams/de -> de
+  ! trigrams/en -> en
+  ! trigrams/eo -> eo
+  ! trigrams/es -> es
+  ! trigrams/et -> et
+  ! trigrams/eu -> eu
+  ! trigrams/fa -> fa
+  ! trigrams/fi -> fi
+  ! trigrams/fr -> fr
+  ! trigrams/ha -> ha
+  ! trigrams/haw -> haw
+  ! trigrams/hi -> hi
+  ! trigrams/hr -> hr
+  ! trigrams/hu -> hu
+  ! trigrams/id -> id
+  ! trigrams/is -> is
+  ! trigrams/it -> it
+  ! trigrams/kk -> kk
+  ! trigrams/ky -> ky
+  ! trigrams/la -> la
+  ! trigrams/lt -> lt
+  ! trigrams/lv -> lv
+  ! trigrams/mk -> mk
+  ! trigrams/mn -> mn
+  ! trigrams/nb -> nb
+  ! trigrams/ne -> ne
+  ! trigrams/nl -> nl
+  ! trigrams/nr -> nr
+  ! trigrams/nso -> nso
+  ! trigrams/pl -> pl
+  ! trigrams/ps -> ps
+  ! trigrams/pt -> pt
+  ! trigrams/pt_BR -> pt_BR
+  ! trigrams/pt_PT -> pt_PT
+  ! trigrams/ro -> ro
+  ! trigrams/ru -> ru
+  ! trigrams/sk -> sk
+  ! trigrams/sl -> sl
+  ! trigrams/so -> so
+  ! trigrams/sq -> sq
+  ! trigrams/sr -> sr
+  ! trigrams/sr_LAT -> sr_LAT
+  ! trigrams/ss -> ss
+  ! trigrams/st -> st
+  ! trigrams/sv -> sv
+  ! trigrams/sw -> sw
+  ! trigrams/tl -> tl
+  ! trigrams/tlh -> tlh
+  ! trigrams/tn -> tn
+  ! trigrams/tr -> tr
+  ! trigrams/ts -> ts
+  ! trigrams/uk -> uk
+  ! trigrams/ur -> ur
+  ! trigrams/uz -> uz
+  ! trigrams/ve -> ve
+  ! trigrams/vi -> vi
+  ! trigrams/xh -> xh
+  ! trigrams/zu -> zu
+Created guess-language-20220408.1545.tar containing:
+  guess-language-20220408.1545/
+  guess-language-20220408.1545/README.org
+  guess-language-20220408.1545/af
+  guess-language-20220408.1545/ar
+  guess-language-20220408.1545/az
+  guess-language-20220408.1545/bg
+  guess-language-20220408.1545/ca
+  guess-language-20220408.1545/ceb
+  guess-language-20220408.1545/cs
+  guess-language-20220408.1545/cy
+  guess-language-20220408.1545/da
+  guess-language-20220408.1545/de
+  guess-language-20220408.1545/en
+  guess-language-20220408.1545/eo
+  guess-language-20220408.1545/es
+  guess-language-20220408.1545/et
+  guess-language-20220408.1545/eu
+  guess-language-20220408.1545/fa
+  guess-language-20220408.1545/fi
+  guess-language-20220408.1545/fr
+  guess-language-20220408.1545/guess-language-pkg.el
+  guess-language-20220408.1545/guess-language.el
+  guess-language-20220408.1545/ha
+  guess-language-20220408.1545/haw
+  guess-language-20220408.1545/hi
+  guess-language-20220408.1545/hr
+  guess-language-20220408.1545/hu
+  guess-language-20220408.1545/id
+  guess-language-20220408.1545/is
+  guess-language-20220408.1545/it
+  guess-language-20220408.1545/kk
+  guess-language-20220408.1545/ky
+  guess-language-20220408.1545/la
+  guess-language-20220408.1545/lt
+  guess-language-20220408.1545/lv
+  guess-language-20220408.1545/mk
+  guess-language-20220408.1545/mn
+  guess-language-20220408.1545/nb
+  guess-language-20220408.1545/ne
+  guess-language-20220408.1545/nl
+  guess-language-20220408.1545/nr
+  guess-language-20220408.1545/nso
+  guess-language-20220408.1545/pl
+  guess-language-20220408.1545/ps
+  guess-language-20220408.1545/pt
+  guess-language-20220408.1545/pt_BR
+  guess-language-20220408.1545/pt_PT
+  guess-language-20220408.1545/ro
+  guess-language-20220408.1545/ru
+  guess-language-20220408.1545/sk
+  guess-language-20220408.1545/sl
+  guess-language-20220408.1545/so
+  guess-language-20220408.1545/sq
+  guess-language-20220408.1545/sr
+  guess-language-20220408.1545/sr_LAT
+  guess-language-20220408.1545/ss
+  guess-language-20220408.1545/st
+  guess-language-20220408.1545/sv
+  guess-language-20220408.1545/sw
+  guess-language-20220408.1545/tl
+  guess-language-20220408.1545/tlh
+  guess-language-20220408.1545/tn
+  guess-language-20220408.1545/tr
+  guess-language-20220408.1545/ts
+  guess-language-20220408.1545/uk
+  guess-language-20220408.1545/ur
+  guess-language-20220408.1545/uz
+  guess-language-20220408.1545/ve
+  guess-language-20220408.1545/vi
+  guess-language-20220408.1545/xh
+  guess-language-20220408.1545/zu
+ ✓ Success:
+  2024-01-29T15:09:41+0000  guess-language-20220408.1545.entry
+  2024-01-29T15:09:41+0000  guess-language-20220408.1545.tar
+Built guess-language in 3.484s, finished at 2024-01-29T15:09:43+0000

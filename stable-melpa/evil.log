@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/evil/
 Checking out 5995f6f21f662484440ed67a28ce59e365feb9ad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil/
-  to /tmp/evil50Qn4r/evil-20240128.957
+  to /tmp/evil05BIVC/evil-20240128.957
     evil-command-window.el -> evil-command-window.el
     evil-commands.el -> evil-commands.el
     evil-common.el -> evil-common.el
@@ -24,4 +24,34 @@ Copying files (->) and directories (=>)
     evil-search.el -> evil-search.el
     evil-states.el -> evil-states.el
     evil-types.el -> evil-types.el
-Write error: No space left on device, /tmp/evil50Qn4r/evil-20240128.957/evil-types.el
+    evil-vars.el -> evil-vars.el
+    evil.el -> evil.el
+  ! doc/build/texinfo/evil.texi -> evil.texi
+Generating /tmp/evil05BIVC/evil-20240128.957/evil.info
+Created evil-20240128.957.tar containing:
+  evil-20240128.957/
+  evil-20240128.957/dir
+  evil-20240128.957/evil-command-window.el
+  evil-20240128.957/evil-commands.el
+  evil-20240128.957/evil-common.el
+  evil-20240128.957/evil-core.el
+  evil-20240128.957/evil-development.el
+  evil-20240128.957/evil-digraphs.el
+  evil-20240128.957/evil-ex.el
+  evil-20240128.957/evil-integration.el
+  evil-20240128.957/evil-jumps.el
+  evil-20240128.957/evil-keybindings.el
+  evil-20240128.957/evil-macros.el
+  evil-20240128.957/evil-maps.el
+  evil-20240128.957/evil-pkg.el
+  evil-20240128.957/evil-repeat.el
+  evil-20240128.957/evil-search.el
+  evil-20240128.957/evil-states.el
+  evil-20240128.957/evil-types.el
+  evil-20240128.957/evil-vars.el
+  evil-20240128.957/evil.el
+  evil-20240128.957/evil.info
+ ✓ Success:
+  2024-01-29T15:01:16+0000  evil-20240128.957.entry
+  2024-01-29T15:01:16+0000  evil-20240128.957.tar
+Built evil in 7.669s, finished at 2024-01-29T15:01:17+0000

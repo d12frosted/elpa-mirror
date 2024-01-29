@@ -4,4 +4,35 @@ Source:  https://gitlab.com/emacs-geiser/racket.git
 
 Updating /mnt/store/melpa/working/geiser-racket/
 Checking out 22e56ce80389544d3872cf4beb4008fb514b2218
-Creating directory with prefix: No space left on device, /tmp/geiser-racket
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-racket/
+  to /tmp/geiser-racketZq00xx/geiser-racket-20210421.125
+    geiser-racket.el -> geiser-racket.el
+    src/geiser => src/geiser
+  ! bin => src/bin
+  ! bin/racket-server.sh -> src/racket-server.sh
+Created geiser-racket-20210421.125.tar containing:
+  geiser-racket-20210421.125/
+  geiser-racket-20210421.125/geiser-racket-pkg.el
+  geiser-racket-20210421.125/geiser-racket.el
+  geiser-racket-20210421.125/src/
+  geiser-racket-20210421.125/src/bin/
+  geiser-racket-20210421.125/src/bin/racket-server.sh
+  geiser-racket-20210421.125/src/geiser/
+  geiser-racket-20210421.125/src/geiser/autodoc.rkt
+  geiser-racket-20210421.125/src/geiser/completions.rkt
+  geiser-racket-20210421.125/src/geiser/enter.rkt
+  geiser-racket-20210421.125/src/geiser/eval.rkt
+  geiser-racket-20210421.125/src/geiser/images.rkt
+  geiser-racket-20210421.125/src/geiser/locations.rkt
+  geiser-racket-20210421.125/src/geiser/main.rkt
+  geiser-racket-20210421.125/src/geiser/modules.rkt
+  geiser-racket-20210421.125/src/geiser/server.rkt
+  geiser-racket-20210421.125/src/geiser/startup.rkt
+  geiser-racket-20210421.125/src/geiser/user.rkt
+  geiser-racket-20210421.125/src/geiser/utils.rkt
+  geiser-racket-20210421.125/src/racket-server.sh
+ ✓ Success:
+  2024-01-29T15:06:46+0000  geiser-racket-20210421.125.entry
+  2024-01-29T15:06:46+0000  geiser-racket-20210421.125.tar
+Built geiser-racket in 3.557s, finished at 2024-01-29T15:06:47+0000

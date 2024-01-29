@@ -4,4 +4,29 @@ Source:  https://git.savannah.nongnu.org/git/emacs-shroud.git
 
 Updating /mnt/store/melpa/working/shroud/
 Checking out 2e6ff2bab4a1e798c090c9d7fbd90b7f3463d5c5
-Creating directory with prefix: No space left on device, /tmp/shroud
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shroud/
+  to /tmp/shroudvvAM06/shroud-20210220.1952
+  ! src/shroud-bui.el -> shroud-bui.el
+  ! src/shroud-cli.el -> shroud-cli.el
+  ! src/shroud-el.el -> shroud-el.el
+  ! src/shroud.el -> shroud.el
+    README -> README
+    NEWS -> NEWS
+    AUTHORS -> AUTHORS
+    COPYING -> COPYING
+Created shroud-20210220.1952.tar containing:
+  shroud-20210220.1952/
+  shroud-20210220.1952/AUTHORS
+  shroud-20210220.1952/COPYING
+  shroud-20210220.1952/NEWS
+  shroud-20210220.1952/README
+  shroud-20210220.1952/shroud-bui.el
+  shroud-20210220.1952/shroud-cli.el
+  shroud-20210220.1952/shroud-el.el
+  shroud-20210220.1952/shroud-pkg.el
+  shroud-20210220.1952/shroud.el
+ ✓ Success:
+  2024-01-29T15:37:41+0000  shroud-20210220.1952.entry
+  2024-01-29T15:37:41+0000  shroud-20210220.1952.tar
+Built shroud in 6.547s, finished at 2024-01-29T15:37:44+0000

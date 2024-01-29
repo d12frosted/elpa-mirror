@@ -4,4 +4,40 @@ Source:  https://github.com/larsbrinkhoff/forth-mode.git
 
 Updating /mnt/store/melpa/working/forth-mode/
 Checking out 59c5ea89ca7593bd49cdde6caefa0893a8780105
-Creating directory with prefix: No space left on device, /tmp/forth-mode
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/forth-mode/
+  to /tmp/forth-modespq0AN/forth-mode-20231206.1127
+    forth-block-mode.el -> forth-block-mode.el
+    forth-interaction-mode.el -> forth-interaction-mode.el
+    forth-mode.el -> forth-mode.el
+    forth-parse.el -> forth-parse.el
+    forth-smie.el -> forth-smie.el
+    forth-spec.el -> forth-spec.el
+    forth-syntax.el -> forth-syntax.el
+    forth-mode.texi -> forth-mode.texi
+    backend => backend
+Generating /tmp/forth-modespq0AN/forth-mode-20231206.1127/forth-mode.info
+Created forth-mode-20231206.1127.tar containing:
+  forth-mode-20231206.1127/
+  forth-mode-20231206.1127/backend/
+  forth-mode-20231206.1127/backend/gforth.el
+  forth-mode-20231206.1127/backend/lbforth.el
+  forth-mode-20231206.1127/backend/pforth.el
+  forth-mode-20231206.1127/backend/spforth.el
+  forth-mode-20231206.1127/backend/swiftforth.el
+  forth-mode-20231206.1127/backend/swiftforth.fth
+  forth-mode-20231206.1127/backend/vfxforth.el
+  forth-mode-20231206.1127/dir
+  forth-mode-20231206.1127/forth-block-mode.el
+  forth-mode-20231206.1127/forth-interaction-mode.el
+  forth-mode-20231206.1127/forth-mode-pkg.el
+  forth-mode-20231206.1127/forth-mode.el
+  forth-mode-20231206.1127/forth-mode.info
+  forth-mode-20231206.1127/forth-parse.el
+  forth-mode-20231206.1127/forth-smie.el
+  forth-mode-20231206.1127/forth-spec.el
+  forth-mode-20231206.1127/forth-syntax.el
+ ✓ Success:
+  2024-01-29T15:06:01+0000  forth-mode-20231206.1127.entry
+  2024-01-29T15:06:01+0000  forth-mode-20231206.1127.tar
+Built forth-mode in 5.183s, finished at 2024-01-29T15:06:02+0000

@@ -3,5 +3,16 @@ Fetcher: github
 Source:  https://github.com/khoj-ai/khoj.git
 
 Updating /mnt/store/melpa/working/khoj/
-Checking out 17107a0337d4d47e2eb17450ee20a20446220e4a
-Creating directory with prefix: No space left on device, /tmp/khoj
+Checking out da854703aa7808ff6a03c8e32c0023fba94cc079
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/khoj/
+  to /tmp/khojCjNskg/khoj-20240129.1235
+  ! src/interface/emacs/khoj.el -> khoj.el
+Created khoj-20240129.1235.tar containing:
+  khoj-20240129.1235/
+  khoj-20240129.1235/khoj-pkg.el
+  khoj-20240129.1235/khoj.el
+ ✓ Success:
+  2024-01-29T15:17:14+0000  khoj-20240129.1235.entry
+  2024-01-29T15:17:14+0000  khoj-20240129.1235.tar
+Built khoj in 3.649s, finished at 2024-01-29T15:17:15+0000

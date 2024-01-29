@@ -4,4 +4,25 @@ Source:  https://github.com/Fanael/helm-w32-launcher.git
 
 Updating /mnt/store/melpa/working/helm-w32-launcher/
 Checking out 3e59ad62b89dd21d334af0203d445a83eb25dc5b
-Creating directory with prefix: No space left on device, /tmp/helm-w32-launcher
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-w32-launcher/
+  to /tmp/helm-w32-launcherlokDuh/helm-w32-launcher-20141223.2014
+    helm-w32-launcher.el -> helm-w32-launcher.el
+    helper-src => helper-src
+    license.txt -> license.txt
+Created helm-w32-launcher-20141223.2014.tar containing:
+  helm-w32-launcher-20141223.2014/
+  helm-w32-launcher-20141223.2014/helm-w32-launcher-pkg.el
+  helm-w32-launcher-20141223.2014/helm-w32-launcher.el
+  helm-w32-launcher-20141223.2014/helper-src/
+  helm-w32-launcher-20141223.2014/helper-src/ICommand.cs
+  helm-w32-launcher-20141223.2014/helper-src/ItemLister.cs
+  helm-w32-launcher-20141223.2014/helper-src/LispPrinter.cs
+  helm-w32-launcher-20141223.2014/helper-src/NativeMethods.cs
+  helm-w32-launcher-20141223.2014/helper-src/ProcessStarter.cs
+  helm-w32-launcher-20141223.2014/helper-src/Program.cs
+  helm-w32-launcher-20141223.2014/license.txt
+ ✓ Success:
+  2024-01-29T15:12:03+0000  helm-w32-launcher-20141223.2014.entry
+  2024-01-29T15:12:03+0000  helm-w32-launcher-20141223.2014.tar
+Built helm-w32-launcher in 3.489s, finished at 2024-01-29T15:12:04+0000

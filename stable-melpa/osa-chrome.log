@@ -4,4 +4,32 @@ Source:  https://github.com/atomontage/osa-chrome.git
 
 Updating /mnt/store/melpa/working/osa-chrome/
 Checking out 981c35136102eeca77d0e1a41e7c95e8486a1dce
-Creating directory with prefix: No space left on device, /tmp/osa-chrome
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/osa-chrome/
+  to /tmp/osa-chromeS4d3mh/osa-chrome-20230515.237
+    osa-chrome.el -> osa-chrome.el
+    scripts/delete-tabs-multi.js -> scripts/delete-tabs-multi.js
+    scripts/delete-tabs-single.js -> scripts/delete-tabs-single.js
+    scripts/get-tabs-multi.js -> scripts/get-tabs-multi.js
+    scripts/get-tabs-single.js -> scripts/get-tabs-single.js
+    scripts/set-tab-multi.js -> scripts/set-tab-multi.js
+    scripts/set-tab-single.js -> scripts/set-tab-single.js
+    scripts/view-source-multi.js -> scripts/view-source-multi.js
+    scripts/view-source-single.js -> scripts/view-source-single.js
+Created osa-chrome-20230515.237.tar containing:
+  osa-chrome-20230515.237/
+  osa-chrome-20230515.237/osa-chrome-pkg.el
+  osa-chrome-20230515.237/osa-chrome.el
+  osa-chrome-20230515.237/scripts/
+  osa-chrome-20230515.237/scripts/delete-tabs-multi.js
+  osa-chrome-20230515.237/scripts/delete-tabs-single.js
+  osa-chrome-20230515.237/scripts/get-tabs-multi.js
+  osa-chrome-20230515.237/scripts/get-tabs-single.js
+  osa-chrome-20230515.237/scripts/set-tab-multi.js
+  osa-chrome-20230515.237/scripts/set-tab-single.js
+  osa-chrome-20230515.237/scripts/view-source-multi.js
+  osa-chrome-20230515.237/scripts/view-source-single.js
+ ✓ Success:
+  2024-01-29T15:28:45+0000  osa-chrome-20230515.237.entry
+  2024-01-29T15:28:45+0000  osa-chrome-20230515.237.tar
+Built osa-chrome in 3.869s, finished at 2024-01-29T15:28:46+0000
