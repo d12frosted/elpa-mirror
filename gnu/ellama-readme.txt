@@ -29,21 +29,32 @@
 1.1 Installation
 ────────────────
 
-  Just `M-x' `package-install' `ellama' . By default it uses [ollama]
-  provider and [zephyr] model. If you ok with it, you need to install
-  [ollama] and pull [zephyr]. You can use `ellama' with other model or
-  other llm provider.  In that case you should customize ellama
-  configuration like this:
+  Just `M-x' `package-install' Enter `ellama' Enter. By default it uses
+  [ollama] provider and [zephyr] model. If you ok with it, you need to
+  install [ollama] and pull [zephyr] like this:
 
   ┌────
+  │ ollama pull zephyr
+  └────
+
+  You can use `ellama' with other model or other llm provider.  In that
+  case you should customize ellama configuration like this:
+
+  ┌────
+  │ ;; YOU DON'T NEED NONE OF THIS CODE FOR SIMPLE INSTALL
+  │ ;; IT IS AN EXAMPLE OF CUSTOMIZATION.
   │ (use-package ellama
   │   :init
+  │   ;; language you want ellama to translate to
   │   (setopt ellama-language "German")
+  │   ;; could be llm-openai for example
   │   (require 'llm-ollama)
   │   (setopt ellama-provider
   │ 		  (make-llm-ollama
-  │ 		   :chat-model "mistral:7b-instruct-v0.2-q6/K"
-  │ 		   :embedding-model "mistral:7b-instruct-v0.2-q6/K"))
+  │ 		   ;; this model should be pulled to use it
+  │ 		   ;; value should be the same as you print in terminal during pull
+  │ 		   :chat-model "mistral:7b-instruct-v0.2-q6_K"
+  │ 		   :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
   │   ;; Predefined llm providers for interactive switching.
   │   ;; You shouldn't add ollama providers here - it can be selected interactively
   │   ;; without it. It is just example.
@@ -55,8 +66,8 @@
   │ 				  :chat-model "mistral:7b-instruct-v0.2-q6_K"
   │ 				  :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
   │ 		    ("mixtral" . (make-llm-ollama
-  │ 				  :chat-model "mixtral:8x7b-instruct-v0.1-q3/K/M-4k"
-  │ 				  :embedding-model "mixtral:8x7b-instruct-v0.1-q3/K/M-4k")))))
+  │ 				  :chat-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"
+  │ 				  :embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k")))))
   └────
 
 
@@ -72,13 +83,13 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Ask Ellama about something by entering a prompt in an interactive
-  buffer and continue conversation.  !
+  buffer and continue conversation.
 
 
 1.2.2 ellama-ask-about
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Ask Ellama about a selected region or the current buffer.  !
+  Ask Ellama about a selected region or the current buffer.
 
 
 1.2.3 ellama-ask-selection
@@ -102,26 +113,25 @@
 1.2.6 ellama-translate
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Ask Ellama to translate a selected region or word at the point.  !
+  Ask Ellama to translate a selected region or word at the point.
 
 
 1.2.7 ellama-define-word
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Find the definition of the current word using Ellama.  !
+  Find the definition of the current word using Ellama.
 
 
 1.2.8 ellama-summarize
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Summarize a selected region or the current buffer using Ellama.  !
+  Summarize a selected region or the current buffer using Ellama.
 
 
 1.2.9 ellama-code-review
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Review code in a selected region or the current buffer using Ellama.
-  !
 
 
 1.2.10 ellama-change
@@ -196,7 +206,7 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Enhance the grammar and spelling in the currently selected region or
-  buffer using Ellama.  !
+  buffer using Ellama.
 
 
 1.2.21 ellama-improve-conciseness
@@ -307,9 +317,8 @@
   • `ellama-instant-mode': Major mode for ellama instant commands. Org
     mode by default.
   • `ellama-long-lines-length': Long lines length for fill paragraph
-    call.
-  Too low value can break generated code by splitting long comment
-  lines. Default value 100.
+    call. Too low value can break generated code by splitting long
+    comment lines. Default value 100.
 
 
 [zephyr] <https://ollama.ai/library/zephyr>
