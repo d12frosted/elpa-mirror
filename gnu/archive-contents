@@ -18,6 +18,19 @@
 	(:authors
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
+ (activities .
+	     [(0 3)
+	      ((emacs
+		(29 1))
+	       (persist
+		(0 6)))
+	      "Suspend/resume sets of windows, frames, and buffers" tar
+	      ((:keywords "convenience")
+	       (:maintainer "Adam Porter" . "adam@alphapapa.net")
+	       (:authors
+		("Adam Porter" . "adam@alphapapa.net"))
+	       (:url . "https://elpa.gnu.org/packages/activities.html")
+	       (:commit . "ee788599ba0e6046376680641214670cdbcf649d"))])
  (ada-mode .
 	   [(8 1 0)
 	    ((uniquify-files
