@@ -2016,6 +2016,17 @@
 		 (:authors
 		  ("Feng Shu" . "tumashu@163.com")
 		  ("Naoya Yamashita" . "conao3@gmail.com")))])
+ (jami-bot .
+	   [(0 0 3)
+	    ((emacs
+	      (27 1)))
+	    "An extendable chat bot for the private messenger GNU Jami" tar
+	    ((:url . "https://gitlab.com/hperrey/jami-bot")
+	     (:keywords "comm" "jami" "messenger" "chat bot" "dbus")
+	     (:maintainer "Hanno Perrey" . "hanno@hoowl.se")
+	     (:authors
+	      ("Hanno Perrey" . "http://gitlab.com/hperrey"))
+	     (:commit . "6823b52b3f598a863065b71dc51cec359fbc2955"))])
  (jarchive .
 	   [(0 11 0)
 	    ((emacs
@@ -3915,7 +3926,7 @@
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (tramp .
-	[(2 6 2 0)
+	[(2 6 2 1)
 	 ((emacs
 	   (26 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -3924,7 +3935,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "6a997f3da9da089b0ac0da82c1df70ab82e6e676"))])
+	  (:commit . "60000ace7314c10c76b3fbfe3a9ca80bbf21b3a1"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
