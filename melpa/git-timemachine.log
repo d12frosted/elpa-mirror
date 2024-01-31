@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/pidu/git-timemachine.git
 
 Updating /mnt/store/melpa/working/git-timemachine/
-Checking out ac933e5cd29583c131401f3bd991d98129c316df
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/git-timemachine/
-  to /tmp/git-timemachineYYZFeD/git-timemachine-20230630.1214
-    git-timemachine.el -> git-timemachine.el
-Created git-timemachine-20230630.1214.tar containing:
-  git-timemachine-20230630.1214/
-  git-timemachine-20230630.1214/git-timemachine-pkg.el
-  git-timemachine-20230630.1214/git-timemachine.el
- ✓ Success:
-  2024-01-31T06:45:35+0000  git-timemachine-20230630.1214.entry
-  2024-01-31T06:45:35+0000  git-timemachine-20230630.1214.tar
-Built git-timemachine in 4.923s, finished at 2024-01-31T06:45:37+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/pidu/git-timemachine.git/': The requested URL returned error: 500
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
