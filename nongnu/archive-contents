@@ -221,7 +221,7 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
 	    (:commit . "33770dec73138909714711b05a63e79da5a19ccd"))])
  (cider .
-	[(1 13 0)
+	[(1 13 1)
 	 ((emacs
 	   (26))
 	  (clojure-mode
@@ -249,7 +249,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "9f7e55b08af9256213d90ce2d6492e98db854f2a"))])
+	  (:commit . "06dc45844ad05fe23fccb7dec1609404e3cda88e"))])
  (clojure-mode .
 	       [(5 18 1)
 		((emacs
@@ -1857,7 +1857,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20240129 111238)
+	      [(1 0 20240130 151349)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
@@ -2113,7 +2113,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:commit . "e73c0a38039eb32fd43911023ff35007e324c733"))])
  (sweeprolog .
-	     [(0 27 3)
+	     [(0 27 4)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2124,7 +2124,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "52f506b3a3dd7e7003a44ad3ae5257b3d22025d2"))])
+	       (:commit . "799e1aebfd280ed6d00fb1034a3fed60de21c8d7"))])
  (swift-mode .
 	     [(9 1 0)
 	      ((emacs

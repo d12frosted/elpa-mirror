@@ -19,18 +19,18 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (activities .
-	     [(0 3)
+	     [(0 4)
 	      ((emacs
 		(29 1))
 	       (persist
 		(0 6)))
-	      "Suspend/resume sets of windows, frames, and buffers" tar
-	      ((:keywords "convenience")
+	      "Save/restore sets of windows, tabs/frames, and their buffers" tar
+	      ((:url . "https://github.com/alphapapa/activities.el")
+	       (:keywords "convenience")
 	       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	       (:authors
 		("Adam Porter" . "adam@alphapapa.net"))
-	       (:url . "https://elpa.gnu.org/packages/activities.html")
-	       (:commit . "ee788599ba0e6046376680641214670cdbcf649d"))])
+	       (:commit . "3e1ba4e12531f2e01a1b29ac5d53ff543a210d03"))])
  (ada-mode .
 	   [(8 1 0)
 	    ((uniquify-files
@@ -278,14 +278,14 @@
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	    (:commit . "1709059b8ac33c76107da178cf2d0dc875dff14e"))])
  (bicep-ts-mode .
-		[(0 1)
+		[(0 1 1)
 		 nil "tree-sitter support for Bicep" tar
-		 ((:keywords "bicep" "languages" "tree-sitter")
+		 ((:url . "https://github.com/josteink/bicep-ts-mode")
+		  (:keywords "bicep" "languages" "tree-sitter")
 		  (:maintainer "Jostein Kjønigsen" . "jostein@kjonigsen.net")
 		  (:authors
 		   ("Jostein Kjønigsen" . "jostein@kjonigsen.net"))
-		  (:url . "https://elpa.gnu.org/packages/bicep-ts-mode.html")
-		  (:commit . "197ccf3d4b8b7bb89eb379b90e701429275d58ee"))])
+		  (:commit . "da121357d71912b4bfa50d7a001a8b097cc40abb"))])
  (bind-key .
 	   [(2 4 1)
 	    nil "A simple way to manage personal keybindings" tar
@@ -1234,7 +1234,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 7 2)
+	 [(0 7 6)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1249,7 +1249,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "636f74600c7c1812d6c01e72a16817a69dc30ce0"))])
+	   (:commit . "81dc7414cbd637fb61c6541ce71ebb8092db9498"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1389,7 +1389,7 @@
 		    ("Matthew L. Fidler" . "matthew.fidler@gmail.com"))
 		   (:keywords "convenience"))])
  (ess .
-      [(24 1 0)
+      [(24 1 1)
        ((emacs
 	 (25 1)))
        "Emacs Speaks Statistics" tar
@@ -1408,7 +1408,7 @@
 	 ("Vitalie Spinu" . "spinuvit@gmail.com")
 	 ("Lionel Henry" . "lionel.hry@gmail.com")
 	 ("J. Alexander Branham" . "alex.branham@gmail.com"))
-	(:commit . "88d611c6833d521d0fbb2ef9c638bf6b3525a622"))])
+	(:commit . "d8472e00da8fde3224d4512641093b526601af39"))])
  (excorporate .
 	      [(1 1 1)
 	       ((emacs
@@ -2017,7 +2017,7 @@
 		  ("Feng Shu" . "tumashu@163.com")
 		  ("Naoya Yamashita" . "conao3@gmail.com")))])
  (jami-bot .
-	   [(0 0 3)
+	   [(0 0 4)
 	    ((emacs
 	      (27 1)))
 	    "An extendable chat bot for the private messenger GNU Jami" tar
@@ -2025,8 +2025,8 @@
 	     (:keywords "comm" "jami" "messenger" "chat bot" "dbus")
 	     (:maintainer "Hanno Perrey" . "hanno@hoowl.se")
 	     (:authors
-	      ("Hanno Perrey" . "http://gitlab.com/hperrey"))
-	     (:commit . "6823b52b3f598a863065b71dc51cec359fbc2955"))])
+	      ("Hanno Perrey" . "hanno@hoowl.se"))
+	     (:commit . "c2ad37e2ada14b5551a83211cc4692b39be4e5fb"))])
  (jarchive .
 	   [(0 11 0)
 	    ((emacs
@@ -2226,7 +2226,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (llm .
-      [(0 9 0)
+      [(0 9 1)
        ((emacs
 	 (28 1)))
        "Interface to pluggable llm backends" tar
@@ -2234,7 +2234,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "8fc2d1cb41ed8850696ee1ce549158496e437cda"))])
+	(:commit . "bed2cb774d2836a8992ad7cbf821e613d7d14ce1"))])
  (lmc .
       [(1 4)
        ((emacs
@@ -2691,7 +2691,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "847694e78c12d903d5e3f6cb365a5d3b984db537"))])
  (org .
-      [(9 6 17)
+      [(9 6 18)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2700,7 +2700,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "25c786f0fb5e49af27ed1790f966b3958e210d7f"))])
+	(:commit . "97f4ae0c2d43384d8b03addcafbc7fe0738ab2b7"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -2728,6 +2728,19 @@
 	     (:authors
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
+ (org-jami-bot .
+	       [(0 0 5)
+		((emacs
+		  (28 1))
+		 (jami-bot
+		  (0 0 4)))
+		"Capture GNU Jami messages as notes and todos in Org mode" tar
+		((:url . "https://gitlab.com/hperrey/org-jami-bot")
+		 (:keywords "comm" "outlines" "org-capture" "jami")
+		 (:maintainer "Hanno Perrey" . "hanno@hoowl.se")
+		 (:authors
+		  ("Hanno Perrey" . "hanno@hoowl.se"))
+		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern .
 	     [(1 1)
 	      ((emacs
@@ -4249,7 +4262,7 @@
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	    (:commit . "cf8b2abf5207696c054c33214c86e3969d415054"))])
  (vertico-posframe .
-		   [(0 7 6)
+		   [(0 7 7)
 		    ((emacs
 		      (26 0))
 		     (posframe
@@ -4262,7 +4275,7 @@
 		     (:maintainer "Feng Shu" . "tumashu@163.com")
 		     (:authors
 		      ("Feng Shu" . "tumashu@163.com"))
-		     (:commit . "bc0e67cbbba4daaf6ce7b8701a0dc7797d468752"))])
+		     (:commit . "2e0e09e5bbd6ec576ddbe566ab122575ef051fab"))])
  (vigenere .
 	   [(1 0)
 	    ((emacs

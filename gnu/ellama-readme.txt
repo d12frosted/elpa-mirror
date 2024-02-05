@@ -83,7 +83,8 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Ask Ellama about something by entering a prompt in an interactive
-  buffer and continue conversation.
+  buffer and continue conversation. If called with universal argument
+  (`C-u') will start new session with llm model interactive selection.
 
 
 1.2.2 ellama-ask-about
@@ -314,11 +315,13 @@
   • `ellama-session-file-extension': File extension for saving ellama
     session. Default value "org".
   • `ellama-sessions-directory': Directory for saved ellama sessions.
-  • `ellama-instant-mode': Major mode for ellama instant commands. Org
-    mode by default.
+  • `ellama-major-mode': Major mode for ellama commands. Org mode by
+    default.
   • `ellama-long-lines-length': Long lines length for fill paragraph
     call. Too low value can break generated code by splitting long
     comment lines. Default value 100.
+  • `ellama-session-auto-save': Automatically save ellama sessions if
+    set. Enabled by default.
 
 
 [zephyr] <https://ollama.ai/library/zephyr>

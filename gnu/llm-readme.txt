@@ -41,7 +41,7 @@
 ══════════════════════
 
   Users of an application that uses this package should not need to
-  install it themselves. The llm module should be installed as a
+  install it themselves. The llm package should be installed as a
   dependency when you install the package that uses it. However, you do
   need to require the llm module and set up the provider you will be
   using. Typically, applications will have a variable you can set. For
@@ -61,6 +61,11 @@
   important to remember never to check your key into a public repository
   such as GitHub, because your key must be kept private. Anyone with
   your key can use the API, and you will be charged.
+
+  For embedding users. if you store the embeddings, you *must* set the
+  embedding model.  Even though there's no way for the llm package to
+  tell whether you are storing it, if the default model changes, you may
+  find yourself storing incompatible embeddings.
 
 
 2.1 Open AI
@@ -323,6 +328,9 @@
     functions.
   • `llm-name provider'.  Provides a short name of the model or
     provider, suitable for showing to users.
+  • `llm-chat-token-limit'.  Gets the token limit for the chat model.
+    This isn't possible for some backends like `llama.cpp', in which the
+    model isn't selected or known by this library.
 
     And the following helper functions:
     • `llm-make-simple-chat-prompt text': For the common case of just

@@ -1,4 +1,4 @@
-On-the-fly syntax checking for GNU Emacs 24.
+On-the-fly syntax checking for GNU Emacs.
 
 Flycheck is a modern on-the-fly syntax checking extension for GNU Emacs,
 intended as replacement for the older Flymake extension which is part of GNU

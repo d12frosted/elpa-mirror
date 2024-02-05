@@ -3,15 +3,17 @@
                             ━━━━━━━━━━━━━━━
 
 
+[file:https://elpa.gnu.org/packages/activities.svg]
+
 Inspired by Genera's and KDE's concepts of "activities", this library
 allows the user to select an "activity", the loading of which restores a
-window configuration and/or frameset, along with the buffers shown in
-each window.  Saving an activity saves the state for later restoration.
-Switching away from an activity saves the last-used state for later
-switching back to, while still allowing the activity's initial or
-default state to be restored on demand.  Resuming an activity loads the
-last-used state, or the initial/default state when a universal argument
-is provided.
+window configuration into a `tab-bar' tab or frame, along with the
+buffers shown in each window.  Saving an activity saves the state for
+later restoration.  Switching away from an activity saves the last-used
+state for later switching back to, while still allowing the activity's
+initial or default state to be restored on demand.  Resuming an activity
+loads the last-used state, or the initial/default state when a universal
+argument is provided.
 
 The implementation uses the bookmark system to save buffers' states–that
 is, any major mode that supports the bookmark system is compatible.  A
@@ -22,8 +24,7 @@ as simple as implementing bookmark support for the mode, which is
 usually trivial.
 
 Integration with Emacs's `tab-bar-mode' is provided: a window
-configuration or frameset can be restored to a window or set of frames,
-or to a tab or set of tabs.
+configuration or can be restored to a `tab-bar' tab or to a frame.
 
 Various hooks are (or will be–feedback is welcome) provided, both
 globally and per-activity, so that the user can define functions to be
@@ -33,47 +34,43 @@ switching to within an activity, or to track the time spent in an
 activity.
 
 
+[file:https://elpa.gnu.org/packages/activities.svg]
+<https://elpa.gnu.org/packages/activities.html>
+
+
 1 Installation
 ══════════════
 
-  Until this library is available from a package archive, it's
-  recommended to install it using [Quelpa]:
+1.1 GNU ELPA
+────────────
+
+  `activities' may be installed into Emacs versions 29.1 or later from
+  [GNU ELPA] by using the command `M-x package-install RET activities
+  RET'.  This will install the latest stable release, which is
+  recommended.
+
+
+[GNU ELPA] <https://elpa.gnu.org/packages/activities.html>
+
+
+1.2 Quelpa
+──────────
+
+  To install directly from git (e.g. to test a pre-release version),
+  it's recommended to use [Quelpa]:
 
   1. Install [quelpa-use-package] (which can be installed directly from
      MELPA).
-  2. Add this form to your init file (which includes a recommended
-     configuration):
+  2. Add this form to your init file (see [Configuration] for more
+     details):
 
   ┌────
   │ (use-package activities
-  │   :quelpa (activities :fetcher github :repo "alphapapa/activities.el")
-  │ 
-  │   :bind
-  │   (("C-x C-a l" . activities-list)
-  │    ("C-x C-a a" . activities-resume)
-  │    ;; For convenience, we also bind `activities-resume' to "C-a", so the
-  │    ;; user need not lift the Control key.  This makes it easier to
-  │    ;; quickly switch between activities.
-  │    ("C-x C-a C-a" . activities-resume)
-  │    ("C-x C-a RET" . activities-switch)
-  │    ("C-x C-a g" . activities-revert)
-  │    ("C-x C-a n" . activities-new)
-  │    ("C-x C-a s" . activities-suspend)
-  │    ;; Alias for `activities-suspend'.
-  │    ("C-x C-a C-k" . activities-kill))
-  │ 
-  │   :init
-  │   ;; Automatically save activities' states when Emacs is idle and upon
-  │   ;; exit.
-  │   (activities-mode)
-  │   ;; Open activities in `tab-bar' tabs (otherwise frames are used, but
-  │   ;; the author doesn't test that as much).
-  │   (activities-tabs-mode))
+  │   :quelpa (activities :fetcher github :repo "alphapapa/activities.el"))
   └────
 
-  If you choose to install it otherwise, you'll need to load both the
-  `activities' and `activities-tabs' libraries, or ensure that the
-  autoloads are generated properly.
+  If you choose to install it otherwise, please note that the author
+  can't offer help with manual installation problems.
 
 
 [Quelpa] <https://framagit.org/steckerhalter/quelpa>
@@ -81,11 +78,39 @@ activity.
 [quelpa-use-package]
 <https://framagit.org/steckerhalter/quelpa-use-package#installation>
 
+[Configuration] See section 2
 
-2 Usage
+
+2 Configuration
+═══════════════
+
+  This is the recommended configuration, in terms of a `use-package'
+  form to be placed in the user's init file:
+
+  ┌────
+  │ (use-package activities
+  │   :init
+  │   (activities-mode)
+  │   (activities-tabs-mode)
+  │ 
+  │   :bind
+  │   (("C-x C-a n" . activities-new)
+  │    ("C-x C-a g" . activities-revert)
+  │    ("C-x C-a s" . activities-suspend)
+  │    ("C-x C-a C-k" . activities-kill)    ; Alias for `-suspend'
+  │    ("C-x C-a a" . activities-resume)
+  │    ;; For convenience, we also bind `activities-resume' to "C-x C-a
+  │    ;; C-a", so the user need not lift the Control key.
+  │    ("C-x C-a C-a" . activities-resume)
+  │    ("C-x C-a RET" . activities-switch)
+  │    ("C-x C-a l" . activities-list)))
+  └────
+
+
+3 Usage
 ═══════
 
-2.1 Activities
+3.1 Activities
 ──────────────
 
   For the purposes of this library, an "activity" is a window
@@ -105,7 +130,7 @@ activity.
   activity in general.
 
 
-2.2 Compatibility
+3.2 Compatibility
 ─────────────────
 
   This library is designed to not interfere with other workflows and
@@ -116,7 +141,7 @@ activity.
   activity.
 
 
-2.3 Modes
+3.3 Modes
 ─────────
 
   `activities-mode'
@@ -132,7 +157,7 @@ activity.
         found, so please report them./)
 
 
-2.4 Workflow
+3.4 Workflow
 ────────────
 
   An example of a workflow using activities:
@@ -155,7 +180,7 @@ activity.
      saves its last state and closes its frame/tab).
 
 
-2.5 Commands
+3.5 Commands
 ────────────
 
   `activities-list' (`C-x C-a l')
@@ -185,7 +210,7 @@ activity.
         this automatically, so this command should rarely be needed.)
 
 
-2.6 Bookmarks
+3.6 Bookmarks
 ─────────────
 
   When option `activities-bookmark-store' is enabled, an Emacs bookmark
@@ -194,7 +219,7 @@ activity.
   to universalize the bookmark system).
 
 
-3 FAQ
+4 FAQ
 ═════
 
   How is this different from [Burly.el] or [Bufler.el]?
@@ -254,10 +279,62 @@ activity.
 [Bufler.el] <https://github.com/alphapapa/bufler.el/>
 
 
-4 Changelog
+5 Changelog
 ═══════════
 
-4.1 v0.3
+5.1 v0.4
+────────
+
+  *Additions*
+  ⁃ Option `activities-anti-save-predicates' prevents saving activity
+    states at inappropriate times.
+
+  *Fixes*
+  ⁃ Don't save activity state if a minibuffer is active.
+  ⁃ Offer only active activities for suspending.
+  ⁃ Don't raise frame when saving activity states.  (See [#4].  Thanks
+    to [JD Smith] for reporting.)
+
+
+[#4] <https://github.com/alphapapa/activities.el/issues/4>
+
+[JD Smith] <https://github.com/jdtsmith>
+
+
+5.2 v0.3.3
+──────────
+
+  *Fixes*
+  ⁃ Command `activities-list' shows a helpful message if no activities
+    are defined.  ([#11].  Thanks to [fuzy112] for reporting.)
+  ⁃ Link in documentation (which works locally but not on GNU ELPA at
+    the moment).
+
+
+[#11] <https://github.com/alphapapa/activities.el/issues/11>
+
+[fuzy112] <https://github.com/fuzy112>
+
+
+5.3 v0.3.2
+──────────
+
+  Updated documentation, etc.
+
+
+5.4 v0.3.1
+──────────
+
+  *Fixes*
+  ⁃ Handle case in which `activities-tabs-mode' is enabled again without
+    having been disabled (which caused an error in
+    `tab-bar-mode'). ([#7])
+
+
+[#7] <https://github.com/alphapapa/activities.el/issues/7>
+
+
+5.5 v0.3
 ────────
 
   *Additions*
@@ -268,7 +345,7 @@ activity.
   ⁃ Record times at which activities' states were updated.
 
 
-4.2 v0.2
+5.6 v0.2
 ────────
 
   *Additions*
@@ -287,7 +364,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-4.3 v0.1.3
+5.7 v0.1.3
 ──────────
 
   *Fixes*
@@ -295,21 +372,48 @@ activity.
   ⁃ Command aliases.
 
 
-4.4 v0.1.2
+5.8 v0.1.2
 ──────────
 
   *Fixes*
   ⁃ Some single-window configurations were not restored properly.
 
 
-4.5 v0.1.1
+5.9 v0.1.1
 ──────────
 
   *Fixes*
   ⁃ Silence message about non-file-visiting buffers.
 
 
-4.6 v0.1
-────────
+5.10 v0.1
+─────────
 
   Initial release.
+
+
+6 Development
+═════════════
+
+  `activities' is developed on [GitHub].  Suggestions, bug reports, and
+  patches are welcome.
+
+
+[GitHub] <https://github.com/alphapapa/activities.el>
+
+6.1 Copyright assignment
+────────────────────────
+
+  This package is part of [GNU Emacs], being distributed in [GNU ELPA].
+  Contributions to this project must follow GNU guidelines, which means
+  that, as with other parts of Emacs, patches of more than a few lines
+  must be accompanied by having assigned copyright for the contribution
+  to the FSF.  Contributors who wish to do so may contact
+  [emacs-devel@gnu.org] to request the assignment form.
+
+
+[GNU Emacs] <https://www.gnu.org/software/emacs/>
+
+[GNU ELPA] <https://elpa.gnu.org/>
+
+[emacs-devel@gnu.org] <mailto:emacs-devel@gnu.org>

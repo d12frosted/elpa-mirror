@@ -53,6 +53,6 @@ information, `M-x ess-view-data-print` to go back.
 
 ess-view-data-summarise
 ess-view-data-overview
-ess-view-data-goto-page / -next-page / -preious-page / -first-page /
+ess-view-data-goto-page / -next-page / -previous-page / -first-page /
                           -last-page / -page-number
 ess-view-data-save
