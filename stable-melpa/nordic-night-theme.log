@@ -3,18 +3,7 @@ Fetcher: git
 Source:  https://git.sr.ht/~ashton314/nordic-night
 
 Updating /mnt/store/melpa/working/nordic-night-theme/
-Checking out d5d481a6b514001b22d1a184c1214d220fe3869d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nordic-night-theme/
-  to /tmp/nordic-night-theme4mDIIc/nordic-night-theme-20231205.1744
-    nordic-midnight-theme.el -> nordic-midnight-theme.el
-    nordic-night-theme.el -> nordic-night-theme.el
-Created nordic-night-theme-20231205.1744.tar containing:
-  nordic-night-theme-20231205.1744/
-  nordic-night-theme-20231205.1744/nordic-midnight-theme.el
-  nordic-night-theme-20231205.1744/nordic-night-theme-pkg.el
-  nordic-night-theme-20231205.1744/nordic-night-theme.el
- ✓ Success:
-  2024-02-05T10:59:56+0000  nordic-night-theme-20231205.1744.entry
-  2024-02-05T10:59:56+0000  nordic-night-theme-20231205.1744.tar
-Built nordic-night-theme in 3.961s, finished at 2024-02-05T10:59:57+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~ashton314/nordic-night/': Failed to connect to git.sr.ht port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
