@@ -214,7 +214,7 @@
   (auto-auto-indent :url "https://github.com/sabof/auto-auto-indent.git")
   (auto-compile :url "https://github.com/emacscollective/auto-compile.git")
   (auto-complete :url "https://github.com/auto-complete/auto-complete.git")
-  (auto-complete-auctex :url "https://github.com/monsanto/auto-complete-auctex.git")
+  (auto-complete-auctex :url "https://github.com/emacsattic/auto-complete-auctex.git")
   (auto-complete-c-headers :url "https://github.com/mooz/auto-complete-c-headers.git")
   (auto-complete-chunk :url "https://github.com/tkf/auto-complete-chunk.git")
   (auto-complete-clang :url "https://github.com/brianjcj/auto-complete-clang.git")

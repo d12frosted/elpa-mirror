@@ -3,25 +3,27 @@ Fetcher: github
 Source:  https://github.com/knupfer/haskell-emacs.git
 
 Updating /mnt/store/melpa/working/haskell-emacs/
-Checking out a2c6a079175904689eed7c6c200754bfa85d1ed9
+Checking out 777d5209f70229b53e4a60a09d1b714d233b0a7c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/haskell-emacs/
-  to /tmp/haskell-emacsbbgrjw/haskell-emacs-20160904.2026
+  to /tmp/haskell-emacsNb5U4F/haskell-emacs-20240205.2225
     haskell-emacs.el -> haskell-emacs.el
     HaskellEmacs.hs -> HaskellEmacs.hs
     README.org -> README.org
     Foreign => Foreign
-Created haskell-emacs-20160904.2026.tar containing:
-  haskell-emacs-20160904.2026/
-  haskell-emacs-20160904.2026/Foreign/
-  haskell-emacs-20160904.2026/Foreign/Emacs.hs
-  haskell-emacs-20160904.2026/Foreign/Emacs/
-  haskell-emacs-20160904.2026/Foreign/Emacs/Internal.hs
-  haskell-emacs-20160904.2026/HaskellEmacs.hs
-  haskell-emacs-20160904.2026/README.org
-  haskell-emacs-20160904.2026/haskell-emacs-pkg.el
-  haskell-emacs-20160904.2026/haskell-emacs.el
+Created haskell-emacs-20240205.2225.tar containing:
+  haskell-emacs-20240205.2225/
+  haskell-emacs-20240205.2225/Foreign/
+  haskell-emacs-20240205.2225/Foreign/Emacs.hs
+  haskell-emacs-20240205.2225/Foreign/Emacs/
+  haskell-emacs-20240205.2225/Foreign/Emacs/Internal.hs
+  haskell-emacs-20240205.2225/HaskellEmacs.hs
+  haskell-emacs-20240205.2225/README.org
+  haskell-emacs-20240205.2225/haskell-emacs-pkg.el
+  haskell-emacs-20240205.2225/haskell-emacs.el
  ✓ Success:
-  2024-02-05T19:45:37+0000  haskell-emacs-20160904.2026.entry
-  2024-02-05T19:45:37+0000  haskell-emacs-20160904.2026.tar
-Built haskell-emacs in 2.847s, finished at 2024-02-05T19:45:38+0000
+  2024-02-05T21:34:42+0000  haskell-emacs-20160904.2026.entry
+  2024-02-05T21:34:42+0000  haskell-emacs-20160904.2026.tar
+  2024-02-05T23:21:34+0000  haskell-emacs-20240205.2225.entry
+  2024-02-05T23:21:34+0000  haskell-emacs-20240205.2225.tar
+Built haskell-emacs in 1.835s, finished at 2024-02-05T23:21:34+0000

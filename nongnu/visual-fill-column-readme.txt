@@ -47,14 +47,18 @@ Note: If you are interested in a fully distraction-free writing environment, tha
 
 ## How it works ##
 
-`visual-fill-column-mode` works by widening the window margins. This reduces the area that is available for text display, creating the appearance that the text is wrapped at `fill-column`. In the default configuration, the only right margin is widened, mimicking the effect of `auto-fill-mode`. In buffers that are explicitly right-to-left (i.e., those where `bidi-paragraph-direction` is set to `right-to-left`), the left margin is expanded, so that the text appears at the window’s right side. When `visual-fill-column-center-text` is set, both margins are widened.
+`visual-fill-column-mode` works by widening the window margins. This reduces the area that is available for text display, creating the appearance that the text is wrapped at `fill-column`. In the default configuration, only the right margin is widened, mimicking the effect of `auto-fill-mode`. In buffers that are explicitly right-to-left (i.e., those where `bidi-paragraph-direction` is set to `right-to-left`), the left margin is expanded, so that the text appears at the window’s right side. When `visual-fill-column-center-text` is set, both margins are widened.
 
 The amount by which the margins are widened depends on the window width and is automatically adjusted when the window’s width changes (e.g., when the window is split in two side-by-side windows).
 
 
 ## Splitting a Window ##
 
-Emacs won’t vertically split a window (i.e., into two side-by-side windows) that has wide margins. As a result, displaying buffers such as `*Help*` buffers, `*Completion*` buffers, etc., won’t split a window vertically, even if there appears to be enough space for a vertical split. This is technically not problematic, but it may be undesirable from a user's point of view. To remedy this, you can set the option `visual-fill-column-enable-sensible-window-split`. When this option is set, the variable `split-window-preferred-function` is set to the function `visual-fill-column-split-window-sensibly`, which first removes the margins and then calls `split-window-sensibly` to do the actual splitting.
+If you have a wide screen (more specifically, if your Emacs frame is wide), `visual-fill-column` has the unfortunate effect that if you pop up, say, a `*Help*` or `*Completions*` buffer or something similar, the window is split horizontally (i.e., the popup buffer appears below the active buffer), not vertically, as you might otherwise expect.
+
+This is due to the fact that Emacs uses the width of the text area to determine whether a window can be split vertically (i.e., into two side-by-side windows), and since `visual-fill-column` narrows the text area, Emacs thinks there is not enough room to do a vertical split and so opts for a horizontal split.
+
+To remedy this situation, you can set the option `visual-fill-column-enable-sensible-window-split`. When this option is set, the variable `split-window-preferred-function` is set to the function `visual-fill-column-split-window-sensibly`, which first removes the margins, widening the text area again, and then calls `split-window-sensibly` to do the actual splitting.
 
 This option does not affect the ability to split windows manually. Even if you keep `visual-fill-column-enable-sensible-window-split` unset, you can still split a window into two side-by-side windows by invoking e.g., `split-window-right` (`C-x 3`).
 
