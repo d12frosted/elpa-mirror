@@ -640,15 +640,20 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:commit . "ba1ccbb45cd76b3fae20844bd2950631a3312a81"))])
  (consult-hoogle .
-		 [(0 1 0)
+		 [(0 1 1)
 		  ((emacs
 		    (27 1))
+		   (consult
+		    (0 18))
 		   (haskell-mode
 		    (16 1)))
 		  "Hoogle frontend using consult" tar
 		  ((:url . "https://codeberg.org/rahguzar/consult-hoogle")
 		   (:keywords "docs" "languages")
-		   (:commit . "593094b154f0ae5a404724d6ac7b7e1592fac680"))])
+		   (:maintainer "rahguzar" . "rahguzar@zohomail.eu")
+		   (:authors
+		    ("rahguzar" . "rahguzar@zohomail.eu"))
+		   (:commit . "77e4294e438afcc0fcfca2cce30a69d584cea603"))])
  (consult-recoll .
 		 [(0 8 1)
 		  ((emacs
@@ -1502,7 +1507,7 @@
 		("Philip Kaludercic" . "philipk@posteo.net"))
 	       (:commit . "671e53fdef9ed3fdb9ee768216d05b90e3ce592a"))])
  (filechooser .
-	      [(0 1 0)
+	      [(0 1 1)
 	       ((emacs
 		 (28 1))
 		(compat
@@ -1513,7 +1518,7 @@
 		(:maintainer "rahguzar" . "rahguzar@zohomail.eu")
 		(:authors
 		 ("rahguzar" . "rahguzar@zohomail.eu"))
-		(:commit . "5be1380af54f0fa24882dad17b42a356c4e7d49a"))])
+		(:commit . "fbabc1eaab111349819a454cda2c4d01993dde1e"))])
  (filladapt .
 	    [(2 12 2)
 	     ((emacs
