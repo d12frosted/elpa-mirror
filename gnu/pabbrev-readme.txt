@@ -37,7 +37,7 @@ word, but a less frequently occurring word.  You can access this
 functionality by hitting [tab] for a second time.  This takes you
 into a special suggestions buffer, from where you can select
 secondary selections.  See `pabbrev-select-mode' for more
-details. There is also an option `pabbrev-minimal-expansion-p'
+details.  There is also an option `pabbrev-minimal-expansion-p'
 which results in the shortest substring option being offered as the
 first replacement.
 

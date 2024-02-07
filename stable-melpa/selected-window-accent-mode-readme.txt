@@ -3,6 +3,26 @@ The Selected Window Accent Mode is an Emacs package designed to visually
 distinguish the currently selected window by applying a unique accent
 color to its fringes, mode line, header line, and margins.
 
+Quick Start:
+
+To use left and bottom accent based on the themes highlight colour:
+
+(use-package selected-window-accent-mode
+ :custom
+ (selected-window-accent-fringe-thickness 10)
+ (selected-window-accent-custom-color nil)
+ (selected-window-accent-mode-style 'subtle))
+
+OR define your own colour:
+
+(use-package selected-window-accent-mode
+ :custom
+ (selected-window-accent-fringe-thickness 10)
+ (selected-window-accent-custom-color "#427900")
+ (selected-window-accent-mode-style 'subtle))
+
+======================================================================
+
 1 Alternative window highlighting packages
 
   There exist a few emacs packages that perform window highlighting but
