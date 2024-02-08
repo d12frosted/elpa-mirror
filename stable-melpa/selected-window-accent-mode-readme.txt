@@ -3,29 +3,28 @@ The Selected Window Accent Mode is an Emacs package designed to visually
 distinguish the currently selected window by applying a unique accent
 color to its fringes, mode line, header line, and margins.
 
-Quick Start:
 
-To use left and bottom accent based on the themes highlight colour:
+1 Quick Start
 
-(use-package selected-window-accent-mode
- :custom
- (selected-window-accent-fringe-thickness 10)
- (selected-window-accent-custom-color nil)
- (selected-window-accent-mode-style 'subtle))
+  To use left and bottom accent based on the themes highlight colour:
 
-OR define your own colour:
+  | (use-package selected-window-accent-mode
+  |  :custom
+  |  (selected-window-accent-fringe-thickness 10)
+  |  (selected-window-accent-custom-color nil)
+  |  (selected-window-accent-mode-style 'subtle))
 
-(use-package selected-window-accent-mode
- :custom
- (selected-window-accent-fringe-thickness 10)
- (selected-window-accent-custom-color "#427900")
- (selected-window-accent-mode-style 'subtle))
+  OR define your own colour:
 
-======================================================================
+  | (use-package selected-window-accent-mode
+  |  :custom
+  |  (selected-window-accent-fringe-thickness 10)
+  |  (selected-window-accent-custom-color "#427900")
+  |  (selected-window-accent-mode-style 'subtle))
 
-1 Alternative window highlighting packages
+2 Alternative window highlighting packages
 
-  There exist a few emacs packages that perform window highlighting but
+  There exist a few Emacs packages that perform window highlighting but
   that don't quite provide the feature set of selected-window-accent.
 
   selected-window-accent focusses more on clearly but non-intrusively
@@ -33,7 +32,7 @@ OR define your own colour:
   aspects of the window border without having to modify the appearance
   of non-selected windows, hence more akin to a tiling window manager.
 
-1.1 dimmer
+2.1 dimmer
 
   "This package provides a minor mode that indicates which buffer is
   currently active by dimming the faces in the other buffers."
@@ -46,7 +45,7 @@ OR define your own colour:
   selected-window-accent to further enhance the emphasizing of the
   selected window.
 
-1.2 hiwin
+2.2 hiwin
 
   "This package provides a minor-mode to change the background colour of
   the non active window."
@@ -55,7 +54,7 @@ OR define your own colour:
   dimmer but is less subtle in its highlighting mechanism and hasn't
   been updated in excess of 10 years.
 
-1.3 color-theme-buffer-local
+2.3 color-theme-buffer-local
 
   "This package lets you set a color-theme on a per-buffer basis."
 
@@ -63,7 +62,7 @@ OR define your own colour:
   selected window but more of defining different themes for different
   windows to distinguish them.
 
-1.4 solaire-mode
+2.4 solaire-mode
 
   "This package is designed to visually distinguish "real" buffers
   (i.e. file-visiting code buffers where you do most of your work) from
@@ -73,4 +72,4 @@ OR define your own colour:
 
   Unlike dimmer and hiwin this package isn't related to the concept of a
   selected window but more of distinguishing between collections of IDE
-  like elements within emacs.
+  like elements within Emacs.
