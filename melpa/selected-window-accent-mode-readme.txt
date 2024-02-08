@@ -9,18 +9,20 @@ color to its fringes, mode line, header line, and margins.
   To use left and bottom accent based on the themes highlight colour:
 
   | (use-package selected-window-accent-mode
-  |  :custom
-  |  (selected-window-accent-fringe-thickness 10)
-  |  (selected-window-accent-custom-color nil)
-  |  (selected-window-accent-mode-style 'subtle))
+  |   :config (selected-window-accent-mode 1)
+  |   :custom
+  |   (selected-window-accent-fringe-thickness 10)
+  |   (selected-window-accent-custom-color nil)
+  |   (selected-window-accent-mode-style 'subtle))
 
   OR define your own colour:
 
   | (use-package selected-window-accent-mode
-  |  :custom
-  |  (selected-window-accent-fringe-thickness 10)
-  |  (selected-window-accent-custom-color "#427900")
-  |  (selected-window-accent-mode-style 'subtle))
+  |   :config (selected-window-accent-mode 1)
+  |   :custom
+  |   (selected-window-accent-fringe-thickness 10)
+  |   (selected-window-accent-custom-color "#427900")
+  |   (selected-window-accent-mode-style 'subtle))
 
 2 Alternative window highlighting packages
 

@@ -2,13 +2,13 @@ jtsx is a package for editing JSX or TSX files.  It provides jtsx-jsx-mode
 and jtsx-tsx-mode major modes implemented respectively on top of js-ts-mode
 and tsx-ts-mode, benefiting thus from the new tree-sitter built-in feature.
 
-Summary of features and fixes:
-* Fix commenting and indenting issues with JSX code in Emacs built-in
-js-ts-mode and tsx-ts-mode modes
+Summary of features:
+* Commenting/uncommenting JSX code
 * Refactoring: moving, wrapping/unwrapping, deleting, renaming `JSX` elements
 * Jumping between opening and closing `JSX` elements
 * Electric JSX closing element and new line
 * Code folding
+* Some additional indentation options
 
 Note on the default configuration:
 This package doesn't automatically register its provided major modes into
