@@ -3,3 +3,7 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ngraves/org-agenda-files-track
 
 Updating /mnt/store/melpa/working/org-agenda-files-track-ql/
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~ngraves/org-agenda-files-track/': Failed to connect to git.sr.ht port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
