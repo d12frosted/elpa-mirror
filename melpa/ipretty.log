@@ -3,7 +3,12 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/ipretty.git
 
 Updating /mnt/store/melpa/working/ipretty/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://framagit.org/steckerhalter/ipretty.git/': Failed to connect to framagit.org port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 042f5cc4e6f81d59115e8335c582bb5c571c2585
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ipretty/
+  to /tmp/iprettyB1p8td/ipretty-20180606.522
+    ipretty.el -> ipretty.el
+Created ipretty-20180606.522.tar containing:
+  ipretty-20180606.522/
+  ipretty-20180606.522/ipretty-pkg.el
+  ipretty-20180606.522/ipretty.el

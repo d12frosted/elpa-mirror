@@ -2322,14 +2322,14 @@
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
 		       (:commit . "5e74afe39d0afb911dae51af4e7a60ccdf9701f3"))])
  (web-mode .
-	   [(17 3 17)
+	   [(17 3 18)
 	    ((emacs
 	      (23 1)))
 	    "major mode for editing web templates" tar
 	    ((:url . "https://web-mode.org")
 	     (:keywords "languages")
 	     (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
-	     (:commit . "82847071ce93293bdb7945db08d970f13fd883cf"))])
+	     (:commit . "208f32b98873f5381f6516f9de8424418e3cf16f"))])
  (webpaste .
 	   [(3 2 2)
 	    ((emacs
