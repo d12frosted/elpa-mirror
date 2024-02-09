@@ -34,7 +34,7 @@ several files.
 
 One component of AUCTeX that LaTeX users will find attractive is
 preview-latex, a combination of folding and in-source previewing that
-provides true “What You See Is What You Get” experience in your
+provides true "What You See Is What You Get" experience in your
 sourcebuffer, while letting you retain full control.  For more
 information, see further below.
 
@@ -45,7 +45,7 @@ reader, issue the command ‘info auctex’ in a terminal.
 
 AUCTeX is written entirely in Emacs Lisp, and hence you can easily add
 new features for your own needs.  It is a GNU project and distributed
-under the ‘GNU General Public License Version 3’.
+under the 'GNU General Public License Version 3'.
 
 The most recent version is always available at
 <https://ftp.gnu.org/pub/gnu/auctex/>.
@@ -62,7 +62,7 @@ described in the ‘CHANGES’ file.
 If you want to discuss AUCTeX with other users or its developers, there
 are several mailing lists you can use.
 
-Send a mail with the subject “subscribe” to <auctex-request@gnu.org> in
+Send a mail with the subject "subscribe" to <auctex-request@gnu.org> in
 order to join the general discussion list for AUCTeX.  Articles should
 be sent to <auctex@gnu.org>.  In a similar way, you can subscribe to the
 <info-auctex@gnu.org> list for just getting important announcements
@@ -88,12 +88,12 @@ between source and image representation.
 WYSIWYG (what you see is what you get) sometimes is considered all the
 rage, sometimes frowned upon.  Do we really want it?  Wrong question.
 The right question is _what_ we want from it.  Except when finetuning
-the layout, we don’t want to use printer fonts for on-screen text
+the layout, we don't want to use printer fonts for on-screen text
 editing.  The low resolution and contrast of a computer screen render
 all but the coarsest printer fonts (those for low-quality newsprint)
 unappealing, and the margins and pagination of the print are not wanted
 on the screen, either.  On the other hand, more complex visual
-compositions like math formulas and tables can’t easily be taken in when
+compositions like math formulas and tables can't easily be taken in when
 seen only in the source.  preview-latex strikes a balance: it only uses
 graphic renditions of the output for certain, configurable constructs,
 does this only when told, and then right in the source code.  Switching
@@ -116,8 +116,8 @@ The usual activation (if it is not done automatically) would be
 
      (load "preview-latex.el" nil t t)
 
-If you still don’t get a “Preview” menu in LaTeX mode in spite of AUCTeX
-showing its “Command”, your installation is broken.  One possible cause
+If you still don't get a "Preview" menu in LaTeX mode in spite of AUCTeX
+showing its "Command", your installation is broken.  One possible cause
 are duplicate Lisp files that might be detectable with ‘M-x
 list-load-path-shadows <RET>’.
 
@@ -131,7 +131,7 @@ included in the distribution, but most documents including math and/or
 figures should do), you can use its menu or ‘C-c C-p C-d’ (for
 ‘Preview/Document’).  Previews will now be generated for various objects
 in your document.  You can use the time to take a short look at the
-other menu entries and key bindings in the ‘Preview’ menu.  You’ll see
+other menu entries and key bindings in the ‘Preview’ menu.  You'll see
 the previewed objects change into a roadworks sign when preview-latex
 has determined just what it is going to preview.  Note that you can
 freely navigate the buffer while this is going on.  When the process is
@@ -153,13 +153,13 @@ C-p’ (or by clicking with the middle mouse button on the icon before the
 edited text).
 
 If you are using the ‘desktop’ package, previews will remain from one
-session to the next as long as you don’t kill your buffer.
+session to the next as long as you don't kill your buffer.
 
 4 Basic modes of operation
 **************************
 
 preview-latex has a number of methods for generating its graphics.  Its
-default operation is equivalent to using the ‘LaTeX’ command from
+default operation is equivalent to using the 'LaTeX' command from
 AUCTeX.  If this happens to be a call of PDFLaTeX generating PDF output
 (you need at least AUCTeX 11.51 for this), then Ghostscript will be
 called directly on the resulting PDF file.  If a DVI file gets produced,
@@ -226,11 +226,11 @@ installation fails (but this should be a rare event), report bugs to
 There is a general discussion list for AUCTeX which also covers
 preview-latex, look at <https://lists.gnu.org/mailman/listinfo/auctex>.
 For more information on the mailing list, send a message with just the
-word “help” as subject or body to <auctex-request@gnu.org>.  For the
+word "help" as subject or body to <auctex-request@gnu.org>.  For the
 developers, there is the <auctex-devel@gnu.org> list; it would probably
 make sense to direct feature requests and questions about internal
 details there.  There is a low-volume read-only announcement list
-available to which you can subscribe by sending a mail with “subscribe”
+available to which you can subscribe by sending a mail with "subscribe"
 in the subject to <info-auctex-request@gnu.org>.
 
 Offers to support further development will be appreciated.  If you want
@@ -238,3 +238,4 @@ to show your appreciation with a donation to the main developer, you can
 do so via PayPal to <dak@gnu.org>, and of course you can arrange for
 service contracts or for added functionality.  Take a look at the ‘TODO’
 list for suggestions in that area.
+

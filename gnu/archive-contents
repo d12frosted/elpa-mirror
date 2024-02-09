@@ -180,14 +180,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "00e07e060218fbd1e16faaf10116c03b12e62580"))])
  (auctex .
-	 [(13 3 0)
+	 [(14 0 0)
 	  ((emacs
-	    (26 1)))
+	    (27 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "ea4210718993bc7726080bc7d7442f5c22e823b4"))])
+	   (:commit . "c207068f5daa6221b2486e598fc75506ff1a2e93"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -445,7 +445,7 @@
 	      ("Yuchen Pei" . "id@ypei.org"))
 	     (:commit . "d614eea91ca5717c2b0019dae8c85e6a24873f39"))])
  (calibre .
-	  [(1 4 0)
+	  [(1 4 1)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -455,7 +455,7 @@
 	    (:maintainer "Kjartan Oli Agustsson" . "kjartanoli@disroot.org")
 	    (:authors
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
-	    (:commit . "7fe464d21895c4cde2566c3e707c1d30b0782089"))])
+	    (:commit . "855a9cb092eecf1e5c17ea56c440a0200f95eb4c"))])
  (cape .
        [(1 2)
 	((emacs
@@ -838,7 +838,7 @@
 		  ("Daiki Ueno" . "ueno@gnu.org"))
 		 (:maintainer nil . "emacs-devel@gnu.org"))])
  (debbugs .
-	  [(0 38)
+	  [(0 39)
 	   ((emacs
 	     (26 1))
 	    (soap-client
@@ -849,7 +849,7 @@
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
 	    (:url . "https://elpa.gnu.org/packages/debbugs.html")
-	    (:commit . "6c2e2d892d96a44cefc0fef4408087f054eb09ca"))])
+	    (:commit . "9b1c3c94957b662e752f150452f6e916f61c507d"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
