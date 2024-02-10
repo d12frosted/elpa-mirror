@@ -268,15 +268,15 @@
 	    ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	   (:commit . "0cf8b60f62876f3e75653a5fb30d5d5cdd74c586"))])
  (beframe .
-	  [(1 0 0)
+	  [(1 0 1)
 	   ((emacs
 	     (28 1)))
 	   "Isolate buffers per frame" tar
-	   ((:url . "https://git.sr.ht/~protesilaos/beframe")
-	    (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
+	   ((:url . "https://github.com/protesilaos/beframe")
+	    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	    (:authors
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	    (:commit . "1709059b8ac33c76107da178cf2d0dc875dff14e"))])
+	    (:commit . "e911ab388d01aba00efc0ed7148f4e955c46f866"))])
  (bicep-ts-mode .
 		[(0 1 1)
 		 nil "tree-sitter support for Bicep" tar
@@ -1172,7 +1172,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "d8261dc70acdd78aa2c32c6a9916630ed90a0423"))])
  (ef-themes .
-	    [(1 5 0)
+	    [(1 5 1)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -1181,7 +1181,7 @@
 	      (:maintainer "Ef-Themes Development" . "~protesilaos/ef-themes@lists.sr.ht")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "f7659477e583a4ca72dce0364a74ba539c014a2c"))])
+	      (:commit . "1c4fc0440064a79bc788b21c70b399d031656a00"))])
  (eglot .
 	[(1 17)
 	 ((emacs

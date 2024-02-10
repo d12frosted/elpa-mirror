@@ -8,10 +8,9 @@ brevity, we call buffers that belong to frames "beframed".
 
 + Package name (GNU ELPA): `beframe`
 + Official manual: <https://protesilaos.com/emacs/beframe>
-+ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/beframe>
-  - Mirrors:
-    + GitHub: <https://github.com/protesilaos/beframe>
-    + GitLab: <https://gitlab.com/protesilaos/beframe>
-+ Mailing list: <https://lists.sr.ht/~protesilaos/general-issues>
++ Change log: <https://protesilaos.com/emacs/beframe-changelog>
++ Git repositories:
+  + GitHub: <https://github.com/protesilaos/beframe>
+  + GitLab: <https://gitlab.com/protesilaos/beframe>
 + Backronym: Buffers Encapsulated in Frames Realise Advanced
   Management of Emacs.
