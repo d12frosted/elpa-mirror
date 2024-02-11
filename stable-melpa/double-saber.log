@@ -3,8 +3,16 @@ Fetcher: github
 Source:  https://github.com/dp12/double-saber.git
 
 Updating /mnt/store/melpa/working/double-saber/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 5555dc28cbaa228fa8f9390738a4200e071380b8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/double-saber/
+  to /tmp/double-saberPDDWX0/double-saber-20190325.1917
+    double-saber.el -> double-saber.el
+Created double-saber-20190325.1917.tar containing:
+  double-saber-20190325.1917/
+  double-saber-20190325.1917/double-saber-pkg.el
+  double-saber-20190325.1917/double-saber.el
+ ✓ Success:
+  2024-02-11T14:46:23+0000  double-saber-20190325.1917.entry
+  2024-02-11T14:46:23+0000  double-saber-20190325.1917.tar
+Built double-saber in 8.166s, finished at 2024-02-11T14:46:25+0000
