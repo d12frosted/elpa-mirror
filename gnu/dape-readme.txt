@@ -28,12 +28,12 @@ and enable `repeat-mode' for ergonomics.
     available on elpa)
 
   With `(setq dape-buffer-window-arrangement 'right)':
-  <https://github.com/svaante/dape/blob/resources/dape_0_4_0_right.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/dape_0_4_0_right.png>
   And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
   `completion-in-region-function':
-  <https://github.com/svaante/dape/blob/resources/dape_0_4_0_gud.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/dape_0_4_0_gud.png>
   And with minibuffer config hints:
-  <https://github.com/svaante/dape/blob/resources/dape_0_4_0_hint.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/dape_0_4_0_hint.png>
 
   Screenshots taken with [modus-operandi-tinted].
 

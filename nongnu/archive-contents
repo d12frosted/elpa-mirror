@@ -106,6 +106,17 @@
 	      ((:url . "https://github.com/jasonm23/autothemer")
 	       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
 	       (:commit . "8f72afc6dba5ad7cc3a201a084fd20571f945d2e"))])
+ (base32 .
+	 [(1 0)
+	  ((emacs
+	    (27 1)))
+	  "Base32 support" tar
+	  ((:url . "https://gitlab.com/fledermaus/totp.el")
+	   (:keywords "tools")
+	   (:maintainer "Vivek Das Mohapatra" . "vivek@etla.org")
+	   (:authors
+	    ("Vivek Das Mohapatra" . "vivek@etla.org"))
+	   (:commit . "v1.0"))])
  (bash-completion .
 		  [(3 1 1)
 		   ((emacs
@@ -1452,13 +1463,13 @@
 	    ("Stefan Kangas" . "stefankangas@gmail.com"))
 	   (:commit . "480602f2ec5467aa2418ee98b328fb85d3b58d0c"))])
  (meow .
-       [(1 4 4)
+       [(1 4 5)
 	((emacs
 	  (27 1)))
 	"Yet Another modal editing" tar
 	((:url . "https://www.github.com/DogLooksGood/meow")
 	 (:keywords "convenience" "modal-editing")
-	 (:commit . "f553db183a47b23d037b1a7f1cab48b0b4798a37"))])
+	 (:commit . "54d4e933039827c158a4f593a94681a64e0d8042"))])
  (minibar .
 	  [(0 3)
 	   ((emacs
@@ -2227,6 +2238,19 @@
 	    (:maintainer "Sergei Nosov <sergei.nosov [at] gmail.com>")
 	    (:authors
 	     ("Sergei Nosov <sergei.nosov [at] gmail.com>")))])
+ (totp-auth .
+	    [(1 0)
+	     ((emacs
+	       (27 1))
+	      (base32
+	       (0 1)))
+	     "RFC6238 TOTP" tar
+	     ((:url . "https://gitlab.com/fledermaus/totp.el")
+	      (:keywords "2fa" "two-factor" "totp" "otp" "password" "comm")
+	      (:maintainer "Vivek Das Mohapatra" . "vivek@etla.org")
+	      (:authors
+	       ("Vivek Das Mohapatra" . "vivek@etla.org"))
+	      (:commit . "v1.0"))])
  (treeview .
 	   [(1 2 0)
 	    ((emacs
