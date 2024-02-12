@@ -19,7 +19,7 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (activities .
-	     [(0 4)
+	     [(0 5 1)
 	      ((emacs
 		(29 1))
 	       (persist
@@ -30,7 +30,7 @@
 	       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	       (:authors
 		("Adam Porter" . "adam@alphapapa.net"))
-	       (:commit . "3e1ba4e12531f2e01a1b29ac5d53ff543a210d03"))])
+	       (:commit . "12e2c3a29b19f999f73a976b4b6a63644cce6563"))])
  (ada-mode .
 	   [(8 1 0)
 	    ((uniquify-files
@@ -1249,7 +1249,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 7 7)
+	 [(0 8 1)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1264,7 +1264,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "28b002270884fb12725617f2bc5961395815f65b"))])
+	   (:commit . "763b2200f43dcdba807ac4d459a164515312f620"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2719,7 +2719,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "847694e78c12d903d5e3f6cb365a5d3b984db537"))])
  (org .
-      [(9 6 18)
+      [(9 6 19)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2728,7 +2728,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "97f4ae0c2d43384d8b03addcafbc7fe0738ab2b7"))])
+	(:commit . "bc0e14a1ab96de1a8a35c9e12cf68010e56ecdb2"))])
  (org-contacts .
 	       [(1 1)
 		((emacs

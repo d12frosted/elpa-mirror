@@ -13,6 +13,9 @@
   through the Emacs interface. Ellama natively supports streaming
   output, making it effortless to use with your preferred text editor.
 
+  The name "ellama" is derived from "Emacs Large LAnguage Model
+  Assistant". Previous sentence was written by Ellama itself.
+
 
 [file:https://img.shields.io/badge/license-GPL_3-green.svg]
 <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -248,37 +251,58 @@
   Rename current ellama session.
 
 
+1.2.27 ellama-context-add-file
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Add file to context.
+
+
+1.2.28 ellama-context-add-buffer
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Add buffer to context.
+
+
+1.2.29 ellama-context-add-selection
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Add selected region to context.
+
+
 1.3 Keymap
 ──────────
 
   Here is a table of keybindings and their associated functions in
   Ellama, using the `C-c e' prefix:
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Keymap  Function                    Description                  
-  ──────────────────────────────────────────────────────────────────
-   "c c"   ellama-code-complete        Code complete                
-   "c a"   ellama-code-add             Code add                     
-   "c e"   ellama-code-edit            Code edit                    
-   "c i"   ellama-code-improve         Code improve                 
-   "c r"   ellama-code-review          Code review                  
-   "s s"   ellama-summarize            Summarize                    
-   "s w"   ellama-summarize-webpage    Summarize webpage            
-   "i w"   ellama-improve-wording      Improve wording              
-   "i g"   ellama-improve-grammar      Improve grammar and spelling 
-   "i c"   ellama-improve-conciseness  Improve conciseness          
-   "m l"   ellama-make-list            Make list                    
-   "m t"   ellama-make-table           Make table                   
-   "m f"   ellama-make-format          Make format                  
-   "a a"   ellama-ask-about            Ask about                    
-   "a i"   ellama-chat                 Chat (ask interactively)     
-   "a l"   ellama-ask-line             Ask about current line       
-   "a s"   ellama-ask-selection        Ask about selection          
-   "t t"   ellama-translate            Text translate               
-   "t c"   ellama-complete             Text complete                
-   "d w"   ellama-define-word          Define word                  
-   "p s"   ellama-provider-select      Provider select              
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Keymap  Function                      Description                  
+  ────────────────────────────────────────────────────────────────────
+   "c c"   ellama-code-complete          Code complete                
+   "c a"   ellama-code-add               Code add                     
+   "c e"   ellama-code-edit              Code edit                    
+   "c i"   ellama-code-improve           Code improve                 
+   "c r"   ellama-code-review            Code review                  
+   "s s"   ellama-summarize              Summarize                    
+   "s w"   ellama-summarize-webpage      Summarize webpage            
+   "i w"   ellama-improve-wording        Improve wording              
+   "i g"   ellama-improve-grammar        Improve grammar and spelling 
+   "i c"   ellama-improve-conciseness    Improve conciseness          
+   "m l"   ellama-make-list              Make list                    
+   "m t"   ellama-make-table             Make table                   
+   "m f"   ellama-make-format            Make format                  
+   "a a"   ellama-ask-about              Ask about                    
+   "a i"   ellama-chat                   Chat (ask interactively)     
+   "a l"   ellama-ask-line               Ask current line             
+   "a s"   ellama-ask-selection          Ask selection                
+   "t t"   ellama-translate              Text translate               
+   "t c"   ellama-complete               Text complete                
+   "d w"   ellama-define-word            Define word                  
+   "x b"   ellama-context-add-buffer     Context add buffer           
+   "x f"   ellama-context-add-file       Context add file             
+   "x s"   ellama-context-add-selection  Context add selection        
+   "p s"   ellama-provider-select        Provider select              
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 1.4 Configuration
@@ -322,6 +346,9 @@
     comment lines. Default value 100.
   • `ellama-session-auto-save': Automatically save ellama sessions if
     set. Enabled by default.
+  • `ellama-naming-scheme': How to name new sessions.
+  • `ellama-naming-provider': LLM provider for generating session names
+    by LLM. If not set `ellama-provider' will be used.
 
 
 [zephyr] <https://ollama.ai/library/zephyr>

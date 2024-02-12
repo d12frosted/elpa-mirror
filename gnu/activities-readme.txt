@@ -92,17 +92,19 @@ activity.
   │   :init
   │   (activities-mode)
   │   (activities-tabs-mode)
+  │   ;; Prevent `edebug' default bindings from interfering.
+  │   (setq edebug-inhibit-emacs-lisp-mode-bindings t)
   │ 
   │   :bind
-  │   (("C-x C-a n" . activities-new)
-  │    ("C-x C-a g" . activities-revert)
-  │    ("C-x C-a s" . activities-suspend)
-  │    ("C-x C-a C-k" . activities-kill)    ; Alias for `-suspend'
-  │    ("C-x C-a a" . activities-resume)
-  │    ;; For convenience, we also bind `activities-resume' to "C-x C-a
-  │    ;; C-a", so the user need not lift the Control key.
+  │   (("C-x C-a C-n" . activities-new)
+  │    ;; As resuming is expected to be one of the most commonly used
+  │    ;; commands, this binding is one of the easiest to press.
   │    ("C-x C-a C-a" . activities-resume)
+  │    ("C-x C-a C-s" . activities-suspend)
+  │    ("C-x C-a C-k" . activities-kill)
+  │    ;; This binding mirrors, e.g. "C-x t RET".
   │    ("C-x C-a RET" . activities-switch)
+  │    ("C-x C-a g" . activities-revert)
   │    ("C-x C-a l" . activities-list)))
   └────
 
@@ -180,21 +182,40 @@ activity.
      saves its last state and closes its frame/tab).
 
 
-3.5 Commands
+3.5 Bindings
+────────────
+
+  Key bindings are, as always, ultimately up to the user.  However, in
+  [Configuration], we suggest a set of bindings with a simple philosophy
+  behind them:
+
+  ⁃ A binding ending in a `C'-prefixed key is expected to result in the
+    set of active activities being changed (e.g. defining a new
+    activity, activating one, or deactivating one).
+  ⁃ A binding not ending in a `C'-prefixed key is expected to merely
+    change an active one (e.g. reverting it) or do something else (like
+    listing activities.)
+
+
+[Configuration] See section 2
+
+
+3.6 Commands
 ────────────
 
   `activities-list' (`C-x C-a l')
         List activities in a `vtable' buffer in which they can be
         managed with various commands.
-  `activities-new' (`C-x C-a n')
+  `activities-new' (`C-x C-a C-n')
         Define a new activity whose default state is the current frame's
         or tab's window configuration.  With prefix argument, overwrite
         an existing activity (thereby updating its default state to the
         current state).
-  `activities-suspend' (`C-x C-a s')
+  `activities-suspend' (`C-x C-a C-s')
         Save an activity's state and close its frame or tab.
   `activities-kill' (`C-x C-a C-k')
-        Alias for `activities-suspend'.
+        Discard an activity's last state (so when it is resumed, its
+        default state will be used), and close its frame or tab.
   `activities-resume' (`C-x C-a C-a')
         Resume an activity, switching to a new frame or tab for its
         window configuration, and restoring its buffers.  With prefix
@@ -210,7 +231,7 @@ activity.
         this automatically, so this command should rarely be needed.)
 
 
-3.6 Bookmarks
+3.7 Bookmarks
 ─────────────
 
   When option `activities-bookmark-store' is enabled, an Emacs bookmark
@@ -282,7 +303,65 @@ activity.
 5 Changelog
 ═══════════
 
-5.1 v0.4
+5.1 v0.5.1
+──────────
+
+  *Fixes*
+  ⁃ Listing activities without last-saved states.
+
+
+5.2 v0.5
+────────
+
+  *Additions*
+  ⁃ Suggest setting variable `edebug-inhibit-emacs-lisp-mode-bindings'
+    to avoid conflicts with suggested keybindings.
+  ⁃ Option `activities-bookmark-warnings' enables warning messages when
+    a non-file-visiting buffer can't be bookmarked (for debugging
+    purposes).
+  ⁃ Option `activities-resume-into-frame' controls whether resuming an
+    activity opens a new frame or uses the current one (when
+    `activities-tabs-mode' is disabled).  ([#22].  Thanks to
+    [Icy-Thought] for suggesting.)
+
+  *Changes*
+  ⁃ Command `activities-kill' now discards an activity's last state
+    (while `activities-suspend' saves its last state), and closes its
+    frame or tab.
+  ⁃ Face `activities-tabs-face' is renamed to `activities-tabs', and now
+    inherits from another face by default, which allows it to adjust
+    with the loaded theme.  ([#24].  Thanks to [Karthik Chikmagalur] for
+    suggesting.)
+
+  *Fixes*
+  ⁃ Show a helpful error if a bookmark's target file is missing.
+    ([#17].  Thanks to [JD Smith] for reporting.)
+  ⁃ Sort order in `activities-list'.
+  ⁃ When discarding an inactive activity, don't switch to it first.
+    ([#18].  Thanks to [JD Smith] for reporting.)
+  ⁃ Don't signal an error when `debug-on-error' is enabled and a buffer
+    is not visiting a file.  ([#25].  Thanks to [Karthik Chikmagalur]
+    for reporting.)
+
+
+[#22] <https://github.com/alphapapa/activities.el/issues/22>
+
+[Icy-Thought] <https://github.com/Icy-Thought>
+
+[#24] <https://github.com/alphapapa/activities.el/issues/24>
+
+[Karthik Chikmagalur] <https://github.com/karthink>
+
+[#17] <https://github.com/alphapapa/activities.el/issues/17>
+
+[JD Smith] <https://github.com/jdtsmith>
+
+[#18] <https://github.com/alphapapa/activity.el/issues/18>
+
+[#25] <https://github.com/alphapapa/activity.el/issues/25>
+
+
+5.3 v0.4
 ────────
 
   *Additions*
@@ -301,7 +380,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.2 v0.3.3
+5.4 v0.3.3
 ──────────
 
   *Fixes*
@@ -316,13 +395,13 @@ activity.
 [fuzy112] <https://github.com/fuzy112>
 
 
-5.3 v0.3.2
+5.5 v0.3.2
 ──────────
 
   Updated documentation, etc.
 
 
-5.4 v0.3.1
+5.6 v0.3.1
 ──────────
 
   *Fixes*
@@ -334,7 +413,7 @@ activity.
 [#7] <https://github.com/alphapapa/activities.el/issues/7>
 
 
-5.5 v0.3
+5.7 v0.3
 ────────
 
   *Additions*
@@ -345,7 +424,7 @@ activity.
   ⁃ Record times at which activities' states were updated.
 
 
-5.6 v0.2
+5.8 v0.2
 ────────
 
   *Additions*
@@ -364,7 +443,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.7 v0.1.3
+5.9 v0.1.3
 ──────────
 
   *Fixes*
@@ -372,21 +451,21 @@ activity.
   ⁃ Command aliases.
 
 
-5.8 v0.1.2
-──────────
+5.10 v0.1.2
+───────────
 
   *Fixes*
   ⁃ Some single-window configurations were not restored properly.
 
 
-5.9 v0.1.1
-──────────
+5.11 v0.1.1
+───────────
 
   *Fixes*
   ⁃ Silence message about non-file-visiting buffers.
 
 
-5.10 v0.1
+5.12 v0.1
 ─────────
 
   Initial release.
