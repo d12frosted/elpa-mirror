@@ -798,7 +798,7 @@
 		 (:keywords "convenience")
 		 (:url . "http://elpa.gnu.org/packages/cycle-quotes.html"))])
  (dape .
-       [(0 6 0)
+       [(0 6 1)
 	((emacs
 	  (29 1))
 	 (jsonrpc
@@ -806,7 +806,7 @@
 	"Debug Adapter Protocol for Emacs" tar
 	((:url . "https://github.com/svaante/dape")
 	 (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-	 (:commit . "a31a760ac368c0faa708a007dd52347968a28a34"))])
+	 (:commit . "6503b09745f6913bd02061b08572386a676c7786"))])
  (darkroom .
 	   [(0 3)
 	    ((cl-lib
