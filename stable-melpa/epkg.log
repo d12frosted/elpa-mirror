@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out 7f7137e96dd91786e0cf5c8ecb674aeaaf22a49d
+Checking out 4a245349047f48507fc28f7077061bca3dfcedea
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkg8NoTCL/epkg-20240116.1941
+  to /tmp/epkgizbcs0/epkg-20240212.1731
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,22 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkg8NoTCL/epkg-20240116.1941/epkg.info
-Created epkg-20240116.1941.tar containing:
-  epkg-20240116.1941/
-  epkg-20240116.1941/dir
-  epkg-20240116.1941/epkg-desc.el
-  epkg-20240116.1941/epkg-elpa.el
-  epkg-20240116.1941/epkg-list.el
-  epkg-20240116.1941/epkg-org.el
-  epkg-20240116.1941/epkg-pkg.el
-  epkg-20240116.1941/epkg-schemata.el
-  epkg-20240116.1941/epkg-utils.el
-  epkg-20240116.1941/epkg.el
-  epkg-20240116.1941/epkg.info
+Generating /tmp/epkgizbcs0/epkg-20240212.1731/epkg.info
+Created epkg-20240212.1731.tar containing:
+  epkg-20240212.1731/
+  epkg-20240212.1731/dir
+  epkg-20240212.1731/epkg-desc.el
+  epkg-20240212.1731/epkg-elpa.el
+  epkg-20240212.1731/epkg-list.el
+  epkg-20240212.1731/epkg-org.el
+  epkg-20240212.1731/epkg-pkg.el
+  epkg-20240212.1731/epkg-schemata.el
+  epkg-20240212.1731/epkg-utils.el
+  epkg-20240212.1731/epkg.el
+  epkg-20240212.1731/epkg.info
  ✓ Success:
-  2024-02-12T14:55:46+0000  epkg-20240116.1941.entry
-  2024-02-12T14:55:46+0000  epkg-20240116.1941.tar
-Built epkg in 6.040s, finished at 2024-02-12T14:55:47+0000
+  2024-02-12T16:51:13+0000  epkg-20240116.1941.entry
+  2024-02-12T16:51:13+0000  epkg-20240116.1941.tar
+  2024-02-12T18:42:11+0000  epkg-20240212.1731.entry
+  2024-02-12T18:42:10+0000  epkg-20240212.1731.tar
+Built epkg in 12.492s, finished at 2024-02-12T18:42:13+0000

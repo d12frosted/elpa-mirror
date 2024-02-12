@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://git.systemreboot.net/exiftool.el/
 
 Updating /mnt/store/melpa/working/exiftool/
-Checking out e043df1bcef40cd5934a74c210e1e35d5eb0e5a6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/exiftool/
-  to /tmp/exiftoolD1dB4e/exiftool-20190520.1106
-    exiftool.el -> exiftool.el
-Created exiftool-20190520.1106.tar containing:
-  exiftool-20190520.1106/
-  exiftool-20190520.1106/exiftool-pkg.el
-  exiftool-20190520.1106/exiftool.el
- ✓ Success:
-  2024-02-12T14:57:55+0000  exiftool-20190520.1106.entry
-  2024-02-12T14:57:55+0000  exiftool-20190520.1106.tar
-Built exiftool in 7.863s, finished at 2024-02-12T14:57:57+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.systemreboot.net/exiftool.el/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
