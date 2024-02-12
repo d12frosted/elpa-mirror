@@ -3747,6 +3747,7 @@
   (org-dotemacs :url "https://github.com/vapniks/org-dotemacs.git")
   (org-download :url "https://github.com/abo-abo/org-download.git")
   (org-dp :url "https://github.com/tj64/org-dp.git")
+  (org-drawio :url "https://github.com/kimim/org-drawio.git")
   (org-drill :url "https://gitlab.com/phillord/org-drill.git")
   (org-drill-table :url "https://github.com/chrisbarrett/org-drill-table.git")
   (org-dropbox :url "https://github.com/heikkil/org-dropbox.git")

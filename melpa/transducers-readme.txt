@@ -24,6 +24,6 @@ they wish in their own files, just like import systems in other languages
 allow.
 
 To enable this abbreviation in your own Emacs Lisp files, interactively call
-either `add-file-local-variable-prop-line' or `add-file-local-variable' and
-set `read-symbol-shorthands' to a value like (("t-" . "transducers-")). You
-can see an example of this at the bottom of this file (transducers.el).
+`add-file-local-variable' and set `read-symbol-shorthands' to a value like
+(("t-" . "transducers-")). You can see an example of this at the bottom of
+this file (transducers.el).

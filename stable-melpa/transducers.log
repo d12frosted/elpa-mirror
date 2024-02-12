@@ -1,9 +1,18 @@
 Package: transducers
-Fetcher: sourcehut
-Source:  https://git.sr.ht/~fosskers/transducers.el
+Fetcher: github
+Source:  https://github.com/fosskers/transducers.el.git
 
 Updating /mnt/store/melpa/working/transducers/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~fosskers/transducers.el/': Failed to connect to git.sr.ht port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out acf4588bc3113e8412451650b0c38243ed43db89
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/transducers/
+  to /tmp/transducers0DQmYU/transducers-20240206.646
+    transducers.el -> transducers.el
+Created transducers-20240206.646.tar containing:
+  transducers-20240206.646/
+  transducers-20240206.646/transducers-pkg.el
+  transducers-20240206.646/transducers.el
+ ✓ Success:
+  2024-02-12T06:20:49+0000  transducers-20240206.646.entry
+  2024-02-12T06:20:49+0000  transducers-20240206.646.tar
+Built transducers in 2.038s, finished at 2024-02-12T06:20:50+0000
