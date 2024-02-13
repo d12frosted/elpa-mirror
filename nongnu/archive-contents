@@ -1171,13 +1171,14 @@
 	       ("Akib Azmain Turja" . "akib@disroot.org"))
 	      (:commit . "2d3a3f551b52c07a11b9ea0f842ef39915911c55"))])
  (htmlize .
-	  [(1 57)
+	  [(1 56)
 	   nil "Convert buffer text and decorations to HTML." tar
-	   ((:url . "https://github.com/hniksic/emacs-htmlize")
+	   ((:keywords "hypermedia" "extensions")
 	    (:maintainer "Hrvoje Niksic" . "hniksic@gmail.com")
 	    (:authors
 	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
-	    (:keywords "hypermedia" "extensions"))])
+	    (:url . "https://elpa.nongnu.org/nongnu/htmlize.html")
+	    (:commit . "7b63aa058c3dd0d9f8c07706cd8bb4e56aaa1fb3"))])
  (hyperdrive .
 	     [(0 3)
 	      ((emacs
