@@ -27,7 +27,7 @@ Bugs
 
   If you set a `line-spacing` other than zero, then the `line-spacing` will snap back to zero for any
   line that pushes past the right edge of the window, causing the text to bounce in the buffer as you
-  edit it.  [http://reluk.ca/project/Breccia/Emacs/working_notes.brec.xht#bounces,whenever,newline]
+  edit it.  [http://reluk.ca/project/Breccia/Emacs/notes.brec.xht#bounces,whenever,newline]
   The workaround is to zero the `line-spacing` for your Breccia Mode buffers.  For example,
   put this in your intialization file:
 

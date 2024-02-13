@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://git.systemreboot.net/exiftool.el/
 
 Updating /mnt/store/melpa/working/exiftool/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.systemreboot.net/exiftool.el/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out e043df1bcef40cd5934a74c210e1e35d5eb0e5a6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exiftool/
+  to /tmp/exiftoolWCbOG9/exiftool-20190520.1106
+    exiftool.el -> exiftool.el
+Created exiftool-20190520.1106.tar containing:
+  exiftool-20190520.1106/
+  exiftool-20190520.1106/exiftool-pkg.el
+  exiftool-20190520.1106/exiftool.el
+ ✓ Success:
+  2024-02-13T15:16:26+0000  exiftool-20190520.1106.entry
+  2024-02-13T15:16:26+0000  exiftool-20190520.1106.tar
+Built exiftool in 6.491s, finished at 2024-02-13T15:16:27+0000
