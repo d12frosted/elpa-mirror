@@ -1,23 +1,9 @@
-				━━━━━━━
-				 ILIST
-				━━━━━━━
+                                ━━━━━━━
+                                 ILIST
+                                ━━━━━━━
 
 
-			 <2021-09-12 Sun 11:00>
-
-
-Table of Contents
-─────────────────
-
-1. About
-2. Entry point
-.. 1. Columns
-.. 2. Groups
-..... 1. Fixed groups
-..... 2. Automatic groups
-..... 3. Define automatic filter groups
-3. Mapping over lines
-4. Moving
+                         <2021-09-12 Sun 11:00>
 
 
 
@@ -151,21 +137,42 @@ Table of Contents
     instead of nil, then?  Well, people make mistakes all the time, at
     least I do.  So I think this mechanism can help people to remember
     give a default label for elements.
-  • SORTER: This can be a symbol, or an s-expression.
+  • SORTER: This should be a function, or the symbol of a function.
 
-    If it is a symbol, it will be used as the sorting function of the
-    group labels.  Note that one does not have to quote this symbol,
-    though you can still quote it.
-
-    If it is an s-expression., it will be used to define a function
-    `ilist-automatic-group-NAME-sorter', which then becomes the sorting
-    function.  The variables `X' and `Y' are bound to the labels to sort
-    in this expression.  The sorter function should return a non-nil
-    value if and only if the group labelled `X' should be displayed
-    before the group labelled `Y'.
+    This will be used as the sorting function of the group labels.  The
+    sorter function should accept two arguments, and should return a
+    non-nil value if and only if the group labelled by the first
+    argument should be displayed before the group labelled by the second
+    argument.
 
 
-3 Mapping over lines
+3 Pixel precision
+═════════════════
+
+  Emacs is old, and its age shows from time to time.
+
+  As an example, Emacs usually measures lengths of strings by the
+  numbers of characters contained in the strings.  In most situations
+  this is not a problem, but in some cases, for example when the string
+  contains Chinese characters, this measurement is insufficient for the
+  correct alignment inside tables.
+
+  In the beginning, I used the function `string-width' to measure the
+  widths of strings, but as its documentation says, this function only
+  returns an approximation to the actual width.  This is changed in the
+  version /0.2/ of the package.
+
+  Now the package uses the function `string-pixel-width' to measure the
+  widths of strings in pixels.  Since working with actual pixels
+  requires more computation, and as it does not improve the user
+  experience for users who are fine with the approximation provided by
+  `string-width', I decide to let the users control whether or not to
+  work with pixels by the variable: `ilist-pixel-precision'.  If this
+  variable is not `nil', the package works with pixels rather than
+  characters, and should provide better alignment and truncation.
+
+
+4 Mapping over lines
 ════════════════════
 
   For the convenience of package-users, this package also provides some
@@ -184,7 +191,7 @@ Table of Contents
   • If NO-SKIP-INVISIBLE is non-nil, then we don’t skip invisible lines.
 
 
-4 Moving
+5 Moving
 ════════
 
   It might be desired to move between the displayed list items in a
@@ -199,3 +206,16 @@ Table of Contents
     parameters.
   • `ilist-backward-group-header'
   • `ilist-forward-group-header': Move between group headers.
+
+
+6 Packages using IList
+══════════════════════
+
+  The packages that use this library IList, which I know of, are listed
+  here:
+
+  • 
+
+  If you know about other packages that use IList, or if you write a
+  package using IList, it is welcomed to suggest to list those packages
+  here.

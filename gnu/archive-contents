@@ -1249,7 +1249,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 8 1)
+	 [(0 8 2)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1264,7 +1264,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "763b2200f43dcdba807ac4d459a164515312f620"))])
+	   (:commit . "6d105da1ab3e9229e4c41f33042e5e77900a6f42"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1926,13 +1926,14 @@
 	       ("Bob Weiner"))
 	      (:commit . "4214716e06920a3e10db5811bd22a343ad6435d9"))])
  (ilist .
-	[(0 1)
+	[(0 2)
 	 nil "Display a list in an ibuffer way." tar
-	 ((:keywords "convenience")
+	 ((:url . "https://gitlab.com/mmemmew/ilist")
+	  (:keywords "convenience")
 	  (:maintainer "Durand" . "mmemmew@gmail.com")
 	  (:authors
 	   ("Durand" . "mmemmew@gmail.com"))
-	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
+	  (:commit . "5283ca7c78da42da310fc6d8f190373bba8d75ba"))])
  (inspector .
 	    [(0 36)
 	     ((emacs

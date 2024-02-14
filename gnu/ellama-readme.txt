@@ -70,7 +70,13 @@
   │ 				  :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
   │ 		    ("mixtral" . (make-llm-ollama
   │ 				  :chat-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"
-  │ 				  :embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k")))))
+  │ 				  :embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"))))
+  │   ;; Naming new sessions with llm
+  │   (setopt ellama-naming-provider
+  │ 	  (make-llm-ollama
+  │ 	   :chat-model "mistral:7b-instruct-v0.2-q6_K"
+  │ 	   :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
+  │   (setopt ellama-naming-scheme 'ellama-generate-name-by-llm))
   └────
 
 
