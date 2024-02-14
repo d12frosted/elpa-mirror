@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
-Checking out 3a7e6b168dab0ceecce6da342cdd8f40d66e02c8
+Checking out b74bd21d5cb52e0fdc5ea321439c428783feea23
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangvhnB7p/erlang-20240209.1750
+  to /tmp/erlang72KC6Y/erlang-20240214.900
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -17,19 +17,19 @@ Copying files (->) and directories (=>)
   ! lib/tools/emacs/erlang-test.el -> erlang-test.el
   ! lib/tools/emacs/erlang.el -> erlang.el
   ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20240209.1750.tar containing:
-  erlang-20240209.1750/
-  erlang-20240209.1750/erlang-edoc.el
-  erlang-20240209.1750/erlang-eunit.el
-  erlang-20240209.1750/erlang-flymake.el
-  erlang-20240209.1750/erlang-pkg.el
-  erlang-20240209.1750/erlang-skels-old.el
-  erlang-20240209.1750/erlang-skels.el
-  erlang-20240209.1750/erlang-start.el
-  erlang-20240209.1750/erlang-test.el
-  erlang-20240209.1750/erlang.el
-  erlang-20240209.1750/erldoc.el
+Created erlang-20240214.900.tar containing:
+  erlang-20240214.900/
+  erlang-20240214.900/erlang-edoc.el
+  erlang-20240214.900/erlang-eunit.el
+  erlang-20240214.900/erlang-flymake.el
+  erlang-20240214.900/erlang-pkg.el
+  erlang-20240214.900/erlang-skels-old.el
+  erlang-20240214.900/erlang-skels.el
+  erlang-20240214.900/erlang-start.el
+  erlang-20240214.900/erlang-test.el
+  erlang-20240214.900/erlang.el
+  erlang-20240214.900/erldoc.el
  ✓ Success:
-  2024-02-14T07:59:23+0000  erlang-20240209.1750.entry
-  2024-02-14T07:59:23+0000  erlang-20240209.1750.tar
-Built erlang in 15.482s, finished at 2024-02-14T07:59:24+0000
+  2024-02-14T11:35:31+0000  erlang-20240214.900.entry
+  2024-02-14T11:35:31+0000  erlang-20240214.900.tar
+Built erlang in 6.308s, finished at 2024-02-14T11:35:33+0000
