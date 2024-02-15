@@ -296,8 +296,10 @@ Table of Contents
     case insensitive.
   • `cape-capf-debug', `cape-wrap-debug': Create a Capf which prints
     debugging messages.
+  • `cape-capf-inside-code', `cape-wrap-inside-code': Ensure that Capf
+    triggers only inside code.
   • `cape-capf-inside-comment', `cape-wrap-inside-comment': Ensure that
-    Capf triggers only inside comment.
+    Capf triggers only inside comments.
   • `cape-capf-inside-faces', `cape-wrap-inside-faces': Ensure that Capf
     triggers only inside text with certain faces.
   • `cape-capf-inside-string', `cape-wrap-inside-string': Ensure that

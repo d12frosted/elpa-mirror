@@ -457,7 +457,7 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "855a9cb092eecf1e5c17ea56c440a0200f95eb4c"))])
  (cape .
-       [(1 2)
+       [(1 3)
 	((emacs
 	  (27 1))
 	 (compat
@@ -468,7 +468,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "a687fbeddc0f1dcdc7e4c2d2a69c96243587317d"))])
+	 (:commit . "c56cd95f6df003f8928f11e8776d3a9a3eca6890"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -3192,6 +3192,17 @@
 	       (:authors
 		("Alex Schroeder" . "alex@gnu.org"))
 	       (:maintainer "Alex Schroeder" . "alex@gnu.org"))])
+ (rcirc-sqlite .
+	       [(0 1 3)
+		((emacs
+		  (30 0)))
+		"rcirc logging in SQLite" tar
+		((:url . "https://codeberg.org/mattof/rcirc-sqlite")
+		 (:keywords "comm")
+		 (:maintainer "Matto Fransen" . "matto@matto.nl")
+		 (:authors
+		  ("Matto Fransen" . "matto@matto.nl"))
+		 (:commit . "7549f95511be4d80610714d5b957dc05aa8ee7fc"))])
  (realgud .
 	  [(1 5 1)
 	   ((load-relative
