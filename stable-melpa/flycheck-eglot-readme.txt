@@ -9,4 +9,4 @@ Put the following in your init file:
 By default, the Flycheck-Eglot considers the Eglot to be the only provider
 of syntax checks.  Other Flycheck checkers are ignored.
 There is a variable `flycheck-eglot-exclusive' that controls this.
-You can override it system wide or for some major modes.
+You can override it system-wide or for some major modes.
