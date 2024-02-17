@@ -25,3 +25,25 @@ Intermediate NFA nodes may additionally look like:
 (and LEXERs...)
 (join CONT . EXIT)
 Note: we call those things "NFA"s but they're not really NFAs.
+
+Bugs:
+
+- `inter' doesn't work right.  Matching `join' to the corresponding `and'
+  is done incorrectly in some cases.
+- since `negate' uses intersections, it doesn't work right either.
+- "(\<)*" leads to a DFA that gets stuck in a cycle.
+
+Todo:
+
+- dfa "no-fail" simplifier
+- dfa minimization
+- dfa compaction (different representation)
+- submatches
+- backrefs?
+- search rather than just match
+- extensions:
+  - repeated submatches
+  - negation
+  - lookbehind and lookahead
+  - match(&search?) backward
+  - agrep

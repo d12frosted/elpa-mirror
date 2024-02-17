@@ -16,28 +16,41 @@ highlighting), indentation, and navigation support for the
 
 To see a list of available configuration options do `M-x customize-group <RET> clojure-ts`.
 
-Most configuration changes will require reverting any active clojure-ts-mode buffers.
+Most configuration changes will require reverting any active `clojure-ts-mode` buffers.
 
 ### Indentation
 
-clojure-ts-mode currently supports 2 different indentation strategies
-- `semantic`, the default, which tries to match the indentation of clojure-mode and cljfmt
+`clojure-ts-mode` currently supports 2 different indentation strategies:
+
+- `semantic`, the default, which tries to match the indentation of `clojure-mode` and `cljfmt`
 - `fixed`, [a simple indentation strategy outlined by Tonsky in a blog post](https://tonsky.me/blog/clojurefmt/)
 
 Set the var `clojure-ts-indent-style` to change it.
+
 ``` emacs-lisp
 (setq clojure-ts-indent-style 'fixed)
 ```
 
+**Note:** You can find [this article](https://metaredux.com/posts/2020/12/06/semantic-clojure-formatting.html) comparing semantic and fixed indentation useful.
+
 ### Font Locking
 
 Too highlight entire rich `comment` expression with the comment font face, set
+
 ``` emacs-lisp
 (setq clojure-ts-comment-macro-font-lock-body t)
 ```
 
 By default this is `nil`, so that anything within a `comment` expression is
 highlighted like regular clojure code.
+
+### Navigation and Evaluation
+
+To make forms inside of `(comment ...)` forms appear as top-level forms for evaluation and navigation, set
+
+``` emacs-lisp
+(setq clojure-ts-toplevel-inside-comment-form t)
+```
 
 ## Rationale
 
@@ -158,7 +171,7 @@ I don't know how to do this on Windows. Patches welcome!
 
 #### Finally, in emacs
 
-Then tell Emacs where to find the shared library by adding something like this to your init file
+Then tell Emacs where to find the shared library by adding something like this to your init file:
 
 ```emacs-lisp
 (setq treesit-extra-load-path '( "~/path/to/tree-sitter-clojure/dist"))
@@ -167,9 +180,25 @@ Then tell Emacs where to find the shared library by adding something like this t
 OR you can move the `libtree-sitter-clojure.so`/`libtree-sitter-clojure.dylib` to a directory named `tree-sitter`
 under your `user-emacs-directory` (typically `~/.emacs.d` on Unix systems).
 
+## Frequently Asked Questions
+
+### Does `clojure-ts-mode` work with CIDER?
+
+Not yet out of the box, but that [should change soon](https://github.com/clojure-emacs/cider/pull/3461). Feel free to help out with the remaining work, so we can expedite the process.
+
+For now, when you take care of the keybindings for the cider functions you use and ensure `cider-mode` is enabled for `clojure-ts-mode` buffers in your config, most functionality should already work:
+
+```emacs-lisp
+(add-hook 'clojure-ts-mode-hook #'cider-mode)
+```
+
+### Does `clojure-ts-mode` work with `inf-clojure`?
+
+[Ditto.](https://github.com/clojure-emacs/inf-clojure/pull/215)
+
 ## License
 
-Copyright © 2022-2023 Danny Freeman and [contributors][].
+Copyright © 2022-2024 Danny Freeman and [contributors][].
 
 Distributed under the GNU General Public License; type <kbd>C-h C-c</kbd> to view it.
 

@@ -271,14 +271,14 @@
 		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 		 (:commit . "25d713a67d8e0209ee74bfc0153fdf677697b43f"))])
  (clojure-ts-mode .
-		  [(0 2 0)
+		  [(0 2 2)
 		   ((emacs
-		     (29)))
+		     (29 1)))
 		   "Major mode for Clojure code" tar
 		   ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
 		    (:keywords "languages" "clojure" "clojurescript" "lisp")
 		    (:maintainer "Danny Freeman" . "danny@dfreeman.email")
-		    (:commit . "8e61fe8ff4795975ec9e225af931d3a514c99445"))])
+		    (:commit . "a923aa83a61751a588ed3afc133d45898995762e"))])
  (coffee-mode .
 	      [(0 6 3)
 	       ((emacs
@@ -614,7 +614,7 @@
 		    (:authors
 		     ("Sylvain Benner" . "sylvain.benner@gmail.com")))])
  (evil-matchit .
-	       [(3 0 2)
+	       [(3 0 4)
 		((emacs
 		  (25 1)))
 		"Vim matchit ported to Evil" tar
@@ -623,7 +623,7 @@
 		 (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 		 (:authors
 		  ("Chen Bin" . "chenbin.sh@gmail.com"))
-		 (:commit . "f27b2a87bab75e3b8a87c277049a4363cdfcbf61"))])
+		 (:commit . "1c4fefa9bb11cc4b1d7f10614d2021c12ed12e89"))])
  (evil-nerd-commenter .
 		      [(3 6 1)
 		       ((emacs
@@ -1971,16 +1971,18 @@
 	       ("Natalie Weizenbaum"))
 	      (:keywords "markup" "language" "css"))])
  (scad-mode .
-	    [(93 2)
+	    [(93 3)
 	     ((emacs
-	       (27 1)))
+	       (27 1))
+	      (compat
+	       (29 1 4 4)))
 	     "A major mode for editing OpenSCAD code" tar
 	     ((:url . "https://github.com/openscad/emacs-scad-mode")
 	      (:keywords "languages")
-	      (:maintainer "Len Trigg <lenbok@gmail.com>, Daniel Mendler" . "mail@daniel-mendler.de")
-	      (:authors
-	       ("Len Trigg, Łukasz Stelmach, zk_phi, Daniel Mendler"))
-	      (:commit . "749b11df1d3041aa0a90542cba0fe5d9563c3a1f"))])
+	      (:maintainer
+	       ("Len Trigg" . "lenbok@gmail.com")
+	       ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	      (:commit . "8d5650c5cfee96c42d64427bfcadb89f6bda66be"))])
  (scala-mode .
 	     [(0 23)
 	      nil "Major mode for editing Scala" tar
