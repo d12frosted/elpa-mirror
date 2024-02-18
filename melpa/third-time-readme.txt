@@ -83,4 +83,4 @@ summary of the current third-time status in the sidecar.
 ;; Bug Reports and Patches
 
 If you find a bug or wish to submit a patch, send an email to
-~swflint/public-inbox@lists.sr.ht.
+~swflint/emacs-utilities@lists.sr.ht.

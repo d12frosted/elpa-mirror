@@ -3729,6 +3729,7 @@
   (org-category-capture :url "https://github.com/colonelpanic8/org-project-capture.git")
   (org-change :url "https://github.com/drghirlanda/org-change.git")
   (org-chef :url "https://github.com/Chobbes/org-chef.git")
+  (org-cite-overlay :url "https://git.sr.ht/~swflint/org-cite-overlay")
   (org-cite-sidecar :url "https://git.sr.ht/~swflint/emacs-universal-sidecar")
   (org-cliplink :url "https://github.com/rexim/org-cliplink.git")
   (org-clock-convenience :url "https://github.com/dfeich/org-clock-convenience.git")
