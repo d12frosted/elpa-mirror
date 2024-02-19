@@ -1,10 +1,10 @@
 
 This program is derived from comint-mode and provides the following features.
 
- * token completion, same as Node.js REPL
- * file name completion in string
- * incremental history search
- * sending JavaScript codes to REPL
+ * Token completion, same as Node.js REPL
+ * File name completion in string
+ * Incremental history search
+ * Sending JavaScript code to REPL
 
 
 Put this file in your Emacs Lisp path (e.g. ~/.emacs.d/site-lisp)
@@ -15,8 +15,8 @@ and add the following line to your .emacs:
 Type M-x nodejs-repl to run Node.js REPL.
 See also `comint-mode' to check key bindings.
 
-You can use `nodejs-repl-minor-mode' to send JavaScript codes to REPL like
-below:
+You can use `nodejs-repl-minor-mode' to send JavaScript code to REPL as
+follows:
 
     (add-hook 'js-mode-hook #'nodejs-repl-minor-mode)
 

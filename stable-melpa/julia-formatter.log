@@ -3,7 +3,18 @@ Fetcher: codeberg
 Source:  https://codeberg.org/FelipeLema/julia-formatter.el.git
 
 Updating /mnt/store/melpa/working/julia-formatter/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/FelipeLema/julia-formatter.el.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 4b40481cc9c0dcb3c9704436e00d613067d44bf5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/julia-formatter/
+  to /tmp/julia-formatterDDJwtJ/julia-formatter-20231130.1512
+    julia-formatter.el -> julia-formatter.el
+    toml-respects-json.el -> toml-respects-json.el
+Created julia-formatter-20231130.1512.tar containing:
+  julia-formatter-20231130.1512/
+  julia-formatter-20231130.1512/julia-formatter-pkg.el
+  julia-formatter-20231130.1512/julia-formatter.el
+  julia-formatter-20231130.1512/toml-respects-json.el
+ ✓ Success:
+  2024-02-19T03:10:54+0000  julia-formatter-20231130.1512.entry
+  2024-02-19T03:10:54+0000  julia-formatter-20231130.1512.tar
+Built julia-formatter in 3.806s, finished at 2024-02-19T03:10:55+0000

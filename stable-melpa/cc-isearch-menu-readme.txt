@@ -5,9 +5,6 @@ Said functions are grouped as follows in the following sections:
 - Toggle
 - Misc
 
-This package by default will bind <f2> to `cc-isearch-menu-transient' in
-`isearch-mode-map'.
-
 INSTALLATION
 Enter the code below into your init file to load and install
 `cc-isearch-menu'. Tune the keybinding to your taste.
