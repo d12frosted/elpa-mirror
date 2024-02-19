@@ -278,14 +278,14 @@
 	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	    (:commit . "e911ab388d01aba00efc0ed7148f4e955c46f866"))])
  (bicep-ts-mode .
-		[(0 1 2)
+		[(0 1 3)
 		 nil "tree-sitter support for Bicep" tar
 		 ((:url . "https://github.com/josteink/bicep-ts-mode")
 		  (:keywords "bicep" "languages" "tree-sitter")
 		  (:maintainer "Jostein Kjønigsen" . "jostein@kjonigsen.net")
 		  (:authors
 		   ("Jostein Kjønigsen" . "jostein@kjonigsen.net"))
-		  (:commit . "c70e067362e3848efcb3d0727571b33c5d9775c8"))])
+		  (:commit . "5350edd6a1bd05292a26e7a3b291de8cbaf6bc05"))])
  (bind-key .
 	   [(2 4 1)
 	    nil "A simple way to manage personal keybindings" tar
@@ -1249,7 +1249,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 8 3)
+	 [(0 8 4)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1264,7 +1264,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "90ec5e86bae8c0071f1f44c1ddbb14b62004b71d"))])
+	   (:commit . "4e2dbf4322b4340dca356ded3321f4c04135ba37"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs

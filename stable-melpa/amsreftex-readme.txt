@@ -63,6 +63,8 @@ in the unlikely event that you want to sort by first name
 then last name!
 
 NEWS:
+v0.3.1: doc-string changes for more byte-compiler calm.
+v0.3: invisible changes to sooth the byte compliler.
 v0.2: -`amsreftex-sort-bibliography' added
       - Rename turn-on/off-amsreftex to amsreftex-turn-on/off to
         placate package-lint.

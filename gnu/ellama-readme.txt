@@ -48,6 +48,8 @@
   │ ;; IT IS AN EXAMPLE OF CUSTOMIZATION.
   │ (use-package ellama
   │   :init
+  │   ;; setup key bindings
+  │   (setopt ellama-keymap-prefix "C-c e")
   │   ;; language you want ellama to translate to
   │   (setopt ellama-language "German")
   │   ;; could be llm-openai for example

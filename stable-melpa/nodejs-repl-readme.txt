@@ -7,7 +7,7 @@ This program is derived from comint-mode and provides the following features.
  * sending JavaScript codes to REPL
 
 
-Put this file in your Emacs lisp path (e.g. ~/.emacs.d/site-lisp)
+Put this file in your Emacs Lisp path (e.g. ~/.emacs.d/site-lisp)
 and add the following line to your .emacs:
 
    (require 'nodejs-repl)

@@ -1,4 +1,10 @@
 
+*Notice:* This package is now deprectated and will be removed from
+MELPA around 18 March 2024.  Please use `org-cite-overlay-sidecar'
+(https://git.sr.ht/~swflint/org-cite-overlay) in its place, which
+does roughly the same thing, but in a more flexible way, and can
+utilize information from the `org-cite-overlay' package (same URL).
+
 This package can be used to show an Org-Mode document's citations
 in `universal-sidecar'.  This is done through the use of `citeproc'
 and can be shown quite flexibly.  A minimum configuration is as
