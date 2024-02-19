@@ -171,6 +171,14 @@
   variable is not `nil', the package works with pixels rather than
   characters, and should provide better alignment and truncation.
 
+  Moreover, if the value of this variable is the symbol `precise', then
+  the paddings will use display properties to produce pixel-exact spaces
+  so that the alignment is precise and perfect.  See the Info node
+  "(elisp) Display Property" for more details.
+
+  However, on text terminals, this may not work as expected, as Emacs
+  has no control over exact pixels on a text terminal (my guess).
+
 
 4 Mapping over lines
 ════════════════════
