@@ -1249,7 +1249,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 8 4)
+	 [(0 8 5)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1264,7 +1264,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "4e2dbf4322b4340dca356ded3321f4c04135ba37"))])
+	   (:commit . "6622630860f2da36b5ea4c0f35b15b63a0a9e7c5"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1425,7 +1425,7 @@
 	 ("J. Alexander Branham" . "alex.branham@gmail.com"))
 	(:commit . "d8472e00da8fde3224d4512641093b526601af39"))])
  (excorporate .
-	      [(1 1 1)
+	      [(1 1 2)
 	       ((emacs
 		 (24 1))
 		(cl-lib
@@ -1446,7 +1446,7 @@
 		(:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		(:authors
 		 ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
-		(:commit . "a6617dea1f9c3af8a4d8a20a53f5b265455b8e96"))])
+		(:commit . "8d1167ac47aa88265546ee7a82fd49ff6f9c8d66"))])
  (expand-region .
 		[(1 0 0)
 		 ((emacs
@@ -1507,7 +1507,7 @@
 		("Philip Kaludercic" . "philipk@posteo.net"))
 	       (:commit . "671e53fdef9ed3fdb9ee768216d05b90e3ce592a"))])
  (filechooser .
-	      [(0 1 1)
+	      [(0 1 2)
 	       ((emacs
 		 (28 1))
 		(compat
@@ -1518,7 +1518,7 @@
 		(:maintainer "rahguzar" . "rahguzar@zohomail.eu")
 		(:authors
 		 ("rahguzar" . "rahguzar@zohomail.eu"))
-		(:commit . "fbabc1eaab111349819a454cda2c4d01993dde1e"))])
+		(:commit . "4cdcf6017912d1b0825de27d18c5896746bcaf26"))])
  (filladapt .
 	    [(2 12 2)
 	     ((emacs
@@ -1802,7 +1802,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 9 1)
+	  [(0 9 4)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1811,7 +1811,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "23527d091ba650c831dff89dc642fa9db2214a76"))])
+	    (:commit . "3f34b5c1cc204ffb1e90a36fffae0f0ae8bdc0ab"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
@@ -1915,16 +1915,16 @@
 	   ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	  (:commit . "7081ee6d443dbf2b58e77fa7357c90e495173a2f"))])
  (hyperbole .
-	    [(8 0 0)
+	    [(9 0 0)
 	     ((emacs
-	       (27 0)))
+	       (27 1)))
 	     "GNU Hyperbole: The Everyday Hypertextual Information Manager" tar
 	     ((:url . "http://www.gnu.org/software/hyperbole")
 	      (:keywords "comm" "convenience" "files" "frames" "hypermedia" "languages" "mail" "matching" "mouse" "multimedia" "outlines" "tools" "wp")
-	      (:maintainer "Bob Weiner <rsw@gnu.org>, Mats Lidell" . "matsl@gnu.org")
-	      (:authors
-	       ("Bob Weiner"))
-	      (:commit . "4214716e06920a3e10db5811bd22a343ad6435d9"))])
+	      (:maintainer
+	       ("Bob Weiner" . "rsw@gnu.org")
+	       ("Mats Lidell" . "matsl@gnu.org"))
+	      (:commit . "e1483d9cff137ca7663694da1df56b31cfc7958d"))])
  (ilist .
 	[(0 3)
 	 nil "Display a list in an ibuffer way." tar

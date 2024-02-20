@@ -277,11 +277,17 @@
   Add selected region to context.
 
 
+1.2.30 ellama-context-add-info-node
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Add info node to context.
+
+
 1.3 Keymap
 ──────────
 
   Here is a table of keybindings and their associated functions in
-  Ellama, using the `C-c e' prefix:
+  Ellama, using the `ellama-keymap-prefix' prefix (not set by default):
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    Keymap  Function                      Description                  
@@ -293,6 +299,10 @@
    "c r"   ellama-code-review            Code review                  
    "s s"   ellama-summarize              Summarize                    
    "s w"   ellama-summarize-webpage      Summarize webpage            
+   "s l"   ellama-load-session           Session Load                 
+   "s r"   ellama-session-rename         Session rename               
+   "s d"   ellama-session-remove         Session delete               
+   "s a"   ellama-session-switch         Session activate             
    "i w"   ellama-improve-wording        Improve wording              
    "i g"   ellama-improve-grammar        Improve grammar and spelling 
    "i c"   ellama-improve-conciseness    Improve conciseness          
@@ -309,6 +319,7 @@
    "x b"   ellama-context-add-buffer     Context add buffer           
    "x f"   ellama-context-add-file       Context add file             
    "x s"   ellama-context-add-selection  Context add selection        
+   "x i"   ellama-context-add-info-node  Context add info node        
    "p s"   ellama-provider-select        Provider select              
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

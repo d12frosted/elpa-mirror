@@ -3,9 +3,9 @@
 # Author:       Bob Weiner
 #
 # Orig-Date:    19-Oct-91 at 03:27:47
-# Last-Mod:     24-Jan-22 at 00:19:12 by Bob Weiner
+# Last-Mod:     24-Jan-23 at 00:19:12 by Bob Weiner
 #
-# Copyright (C) 1989-2021  Free Software Foundation, Inc.
+# Copyright (C) 1989-2023  Free Software Foundation, Inc.
 # See the "HY-COPY" file for license information.
 #
 # This file is part of GNU Hyperbole.
@@ -106,6 +106,10 @@ by Bob Weiner.  It is maintained by him and Mats Lidell.  Its main
 distribution site is: https://www.gnu.org/software/hyperbole.  If any term in
 here is new or unfamiliar to you, you can look it up in the Hyperbole Manual
 Glossary.
+
+Unlock the power of GNU Hyperbole to make your information work for you.
+One system. One language.  One manual.  One solution.  Learn Hyperbole and
+start moving further, faster.
 
 ===========================================================================
 *			   Files

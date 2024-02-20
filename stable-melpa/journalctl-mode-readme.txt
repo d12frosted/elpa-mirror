@@ -10,3 +10,6 @@ asynchronous process
 No pre-run of journalctl to determin number of output lines.
 
 Put journalctl-mode.el in your load-path and add   ( require 'journalctl-mode)  to your .emacs file.
+
+It might be a good idea to define a global key to journalctl with:
+(global-set-key (kbd "C-c t") 'journalctl).

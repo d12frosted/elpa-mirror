@@ -3,6 +3,10 @@ Excorporate provides Exchange integration for Emacs.
 Most Recent Improvements
 ------------------------
 
+New in Excorporate 1.1.2, released 2024-02-19:
+
+** In Org entries use shorter time ranges where possible
+
 New in Excorporate 1.1.1, released 2023-05-29:
 
 ** Update documentation
