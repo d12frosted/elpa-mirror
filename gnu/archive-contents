@@ -180,14 +180,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "00e07e060218fbd1e16faaf10116c03b12e62580"))])
  (auctex .
-	 [(14 0 2)
+	 [(14 0 3)
 	  ((emacs
 	    (27 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "b3e1ab1b9f6e5bce95d6b03a60f507fd060def64"))])
+	   (:commit . "f124fe7d282e0693ce793a8c8b2a675765df63f3"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -2925,7 +2925,7 @@
 	    ("Junpeng Qiu" . "qjpchmail@gmail.com"))
 	   (:keywords "extensions"))])
  (parser-generator .
-		   [(0 2 0)
+		   [(0 2 1)
 		    ((emacs
 		      (26)))
 		    "Parser Generator library" tar
@@ -2934,7 +2934,7 @@
 		     (:maintainer "Christian Johansson" . "christian@cvj.se")
 		     (:authors
 		      ("Christian Johansson" . "christian@cvj.se"))
-		     (:commit . "6f09a9ca67f7abfbfcec722edfc37ce5a6278c65"))])
+		     (:commit . "0d4b9a42ea207bfa6c995c9cf5834c4bf68b9c44"))])
  (path-iterator .
 		[(1 0)
 		 ((emacs

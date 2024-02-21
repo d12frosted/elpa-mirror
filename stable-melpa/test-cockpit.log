@@ -3,26 +3,28 @@ Fetcher: github
 Source:  https://github.com/johannes-mueller/test-cockpit.el.git
 
 Updating /mnt/store/melpa/working/test-cockpit/
-Checking out 2fcd6ccb94869b854e9d12e0ba5d433adc336296
+Checking out 11c23ddb9284b21a1072c37f168574096ee3bd2f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/test-cockpit/
-  to /tmp/test-cockpitTtmoAu/test-cockpit-20231103.2037
+  to /tmp/test-cockpitv1B6oU/test-cockpit-20240220.2058
     test-cockpit-cargo.el -> test-cockpit-cargo.el
     test-cockpit-cask.el -> test-cockpit-cask.el
     test-cockpit-mix.el -> test-cockpit-mix.el
     test-cockpit-npm-jest.el -> test-cockpit-npm-jest.el
     test-cockpit-python.el -> test-cockpit-python.el
     test-cockpit.el -> test-cockpit.el
-Created test-cockpit-20231103.2037.tar containing:
-  test-cockpit-20231103.2037/
-  test-cockpit-20231103.2037/test-cockpit-cargo.el
-  test-cockpit-20231103.2037/test-cockpit-cask.el
-  test-cockpit-20231103.2037/test-cockpit-mix.el
-  test-cockpit-20231103.2037/test-cockpit-npm-jest.el
-  test-cockpit-20231103.2037/test-cockpit-pkg.el
-  test-cockpit-20231103.2037/test-cockpit-python.el
-  test-cockpit-20231103.2037/test-cockpit.el
+Created test-cockpit-20240220.2058.tar containing:
+  test-cockpit-20240220.2058/
+  test-cockpit-20240220.2058/test-cockpit-cargo.el
+  test-cockpit-20240220.2058/test-cockpit-cask.el
+  test-cockpit-20240220.2058/test-cockpit-mix.el
+  test-cockpit-20240220.2058/test-cockpit-npm-jest.el
+  test-cockpit-20240220.2058/test-cockpit-pkg.el
+  test-cockpit-20240220.2058/test-cockpit-python.el
+  test-cockpit-20240220.2058/test-cockpit.el
  ✓ Success:
-  2024-02-20T19:08:08+0000  test-cockpit-20231103.2037.entry
-  2024-02-20T19:08:08+0000  test-cockpit-20231103.2037.tar
-Built test-cockpit in 3.145s, finished at 2024-02-20T19:08:09+0000
+  2024-02-20T20:52:44+0000  test-cockpit-20231103.2037.entry
+  2024-02-20T20:52:44+0000  test-cockpit-20231103.2037.tar
+  2024-02-20T22:35:46+0000  test-cockpit-20240220.2058.entry
+  2024-02-20T22:35:46+0000  test-cockpit-20240220.2058.tar
+Built test-cockpit in 3.401s, finished at 2024-02-20T22:35:48+0000

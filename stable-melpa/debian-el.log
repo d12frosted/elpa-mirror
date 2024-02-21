@@ -3,3 +3,32 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
+Checking out 67dbe593b650b7748e8cbe93fdb8f0cf883563ad
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/debian-el/
+  to /tmp/debian-ellZ9yDK/debian-el-20231207.2347
+    apt-sources.el -> apt-sources.el
+    apt-utils.el -> apt-utils.el
+    deb-view.el -> deb-view.el
+    debian-bug.el -> debian-bug.el
+    debian-el.el -> debian-el.el
+    gnus-BTS.el -> gnus-BTS.el
+    preseed.el -> preseed.el
+    debian-el.texi -> debian-el.texi
+Generating /tmp/debian-ellZ9yDK/debian-el-20231207.2347/debian-el.info
+Created debian-el-20231207.2347.tar containing:
+  debian-el-20231207.2347/
+  debian-el-20231207.2347/apt-sources.el
+  debian-el-20231207.2347/apt-utils.el
+  debian-el-20231207.2347/deb-view.el
+  debian-el-20231207.2347/debian-bug.el
+  debian-el-20231207.2347/debian-el-pkg.el
+  debian-el-20231207.2347/debian-el.el
+  debian-el-20231207.2347/debian-el.info
+  debian-el-20231207.2347/dir
+  debian-el-20231207.2347/gnus-BTS.el
+  debian-el-20231207.2347/preseed.el
+ ✓ Success:
+  2024-02-20T23:32:09+0000  debian-el-20231207.2347.entry
+  2024-02-20T23:32:09+0000  debian-el-20231207.2347.tar
+Built debian-el in 6.522s, finished at 2024-02-20T23:32:11+0000
