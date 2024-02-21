@@ -9,7 +9,7 @@ documentation.
 To use this completion style you can use the following minimal
 configuration:
 
-(setq completion-styles '(orderless))
+(setq completion-styles '(orderless basic))
 
 You can customize the `orderless-component-separator' to decide how
 the input pattern is split into component regexps.  The default
