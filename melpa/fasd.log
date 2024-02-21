@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/emacs-fasd.git
 
 Updating /mnt/store/melpa/working/fasd/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://framagit.org/steckerhalter/emacs-fasd.git/': Error while processing content unencoding: incorrect header check
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out c1d92553f33ebb018135c698db1a6d7f86731a26
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fasd/
+  to /tmp/fasdET3NGv/fasd-20210104.738
+    fasd.el -> fasd.el
+Created fasd-20210104.738.tar containing:
+  fasd-20210104.738/
+  fasd-20210104.738/fasd-pkg.el
+  fasd-20210104.738/fasd.el
+ ✓ Success:
+  2024-02-21T03:05:27+0000  fasd-20210104.738.entry
+  2024-02-21T03:05:27+0000  fasd-20210104.738.tar
+Built fasd in 5.934s, finished at 2024-02-21T03:05:29+0000
