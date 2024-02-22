@@ -2457,18 +2457,18 @@
 	     ("David Engster" . "deng@randomsample.de"))
 	    (:maintainer "David Engster" . "deng@randomsample.de"))])
  (mmm-mode .
-	   [(0 5 10)
+	   [(0 5 11)
 	    ((emacs
 	      (25 1))
 	     (cl-lib
 	      (0 2)))
 	    "Allow Multiple Major Modes in a buffer" tar
-	    ((:url . "https://github.com/purcell/mmm-mode")
+	    ((:url . "https://github.com/dgutov/mmm-mode")
 	     (:keywords "convenience" "faces" "languages" "tools")
-	     (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
+	     (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
 	     (:authors
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
-	     (:commit . "96906747e862449b722b6e2c741b61871894ac3a"))])
+	     (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (modus-themes .
 	       [(4 3 0)
 		((emacs
