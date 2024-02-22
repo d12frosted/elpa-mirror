@@ -3,8 +3,16 @@ Fetcher: git
 Source:  https://bitbucket.org/FelipeLema/evil-python-movement.el
 
 Updating /mnt/store/melpa/working/evil-python-movement/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: unable to authorize current user, internal server error
-fatal: unable to access 'https://bitbucket.org/FelipeLema/evil-python-movement.el/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 9936b3b7f8d96415d517c1f3604637889484a637
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-python-movement/
+  to /tmp/evil-python-movementl8Xm6b/evil-python-movement-20180724.1420
+    evil-python-movement.el -> evil-python-movement.el
+Created evil-python-movement-20180724.1420.tar containing:
+  evil-python-movement-20180724.1420/
+  evil-python-movement-20180724.1420/evil-python-movement-pkg.el
+  evil-python-movement-20180724.1420/evil-python-movement.el
+ ✓ Success:
+  2024-02-22T14:59:20+0000  evil-python-movement-20180724.1420.entry
+  2024-02-22T14:59:20+0000  evil-python-movement-20180724.1420.tar
+Built evil-python-movement in 2.648s, finished at 2024-02-22T14:59:22+0000
