@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://gitlab.kitware.com/cmake/cmake.git
 
 Updating /mnt/store/melpa/working/cmake-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.kitware.com/cmake/cmake.git/': Could not resolve host: gitlab.kitware.com
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 409ab01039dd3c8f5ae0df48a1ee1c356132a9bf
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cmake-mode/
+  to /tmp/cmake-modeFBqo1O/cmake-mode-20240126.1513
+  ! Auxiliary/cmake-mode.el -> cmake-mode.el
+Created cmake-mode-20240126.1513.tar containing:
+  cmake-mode-20240126.1513/
+  cmake-mode-20240126.1513/cmake-mode-pkg.el
+  cmake-mode-20240126.1513/cmake-mode.el
+ ✓ Success:
+  2024-02-21T23:25:10+0000  cmake-mode-20240126.1513.entry
+  2024-02-21T23:25:10+0000  cmake-mode-20240126.1513.tar
+Built cmake-mode in 12.509s, finished at 2024-02-21T23:25:13+0000
