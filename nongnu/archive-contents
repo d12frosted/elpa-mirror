@@ -720,6 +720,20 @@
 	    (:authors
 	     ("Le Wang"))
 	    (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
+ (flycheck .
+	   [(34 1)
+	    ((emacs
+	      (26 1)))
+	    "On-the-fly syntax checking" tar
+	    ((:url . "http://www.flycheck.org")
+	     (:keywords "convenience" "languages" "tools")
+	     (:maintainer
+	      ("Clément Pit-Claudel" . "clement.pitclaudel@live.com")
+	      ("fmdkdd" . "fmdkdd@gmail.com")
+	      ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
+	     (:authors
+	      ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
+	     (:commit . "5a9ff918f91e230ae08a6bdce7ec1f107864a5e2"))])
  (flymake-guile .
 		[(0 5)
 		 ((emacs
@@ -2339,7 +2353,7 @@
 	       ("Daniel Semyonov" . "daniel@dsemy.com"))
 	      (:commit . "93ae3db40d07ae15e61d34c3c3870de5d2fce2de"))])
  (visual-fill-column .
-		     [(2 5 2)
+		     [(2 6 0)
 		      ((emacs
 			(25 1)))
 		      "fill-column for visual-line-mode" tar
@@ -2347,7 +2361,7 @@
 		       (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
 		       (:authors
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
-		       (:commit . "5e74afe39d0afb911dae51af4e7a60ccdf9701f3"))])
+		       (:commit . "57a72c9101ca21b61dadbc13d661416384ec22ea"))])
  (web-mode .
 	   [(17 3 18)
 	    ((emacs
