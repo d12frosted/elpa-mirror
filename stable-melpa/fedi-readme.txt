@@ -1,5 +1,5 @@
 fedi.el provides a bunch of untility functions and macros (originally
-adopted from popular mastodon.el
+adopted from the popular mastodon.el
 <https://codeberg.org/martianh/mastodon.el> package) to make it easy to
 write clients and interfaces for for JSON APIs.
 
