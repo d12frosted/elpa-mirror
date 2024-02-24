@@ -9,16 +9,18 @@
 
 ## Installation ##
 
-`visual-fill-column` can be installed from [Melpa](https://melpa.org/).
+`visual-fill-column` can be installed from [NonGNU Elpa](http://elpa.nongnu.org/). In Emacs versions 28 and above, simply type `M-x package-install RET visual-fill-column-mode RET`.
 
 
 ## Usage ##
 
-The primary purpose of `visual-fill-column-mode` is to wrap text at `fill-column` in buffers that use `visual-line-mode`. The most straightforward way to achieve this is to add it to `visual-line-mode-hook`:
+`visual-fill-column-mode` wraps long lines at `fill-column` without adding newlines to the buffer. Its primary (though not exclusive) purpose is to soft-wrap text in buffers that use `visual-line-mode`. The most straightforward way to achieve this is to use the minor mode `visual-line-fill-column-mode` instead of `visual-line-mode`. This function activates (and deactivates) `visual-line-mode` and `visual-fill-column-mode` in conjunction.
 
-    (add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
+`visual-fill-column` can also be used independently from `visual-line-mode`, for example to centre text in a buffer. In this case, use the function `visual-fill-column-mode` to activate it. This function can be added to mode hooks or called directly with `M-x visual-fill-column-mode RET`.
 
-There is also a globalised mode `global-visual-fill-column-mode`. This mode turns on `visual-fill-column-mode` in every buffer that visits a file. Activate it either through Customize or by calling it as a function in your init file. In buffers that do not visit a file, `visual-fill-column-mode` may be disruptive, so `global-visual-fill-column-mode` is restricted to file-visiting buffers. (You can, of course still activate `visual-fill-column-mode` manually or in hooks for such buffers, though.)
+Note that if you activate `visual-fill-column-mode` in a mode hook, though, it will not be deactivated when the hook's mode is deactivated. If, for example, you would add `visual-fill-column-mode` to `visual-line-mode-hook`, activating `visual-line-mode` will activate `visual-fill-column-mode`, but *deactivating* `visual-line-mode` will *not* deactivate `visual-fill-column-mode`. Therefore, the use of `visual-line-fill-column-mode` is preferred.
+
+There is also a globalised mode `global-visual-fill-column-mode`. This mode turns on `visual-fill-column-mode` in every buffer that visits a file. Activate it either through Customize or by calling it as a function in your init file. In buffers that do not visit a file, `visual-fill-column-mode` may be disruptive, so `global-visual-fill-column-mode` is restricted to file-visiting buffers. (You can, of course still activate `visual-fill-column-mode` manually or in hooks for such buffers, of course.)
 
 
 ## Wrap prefix ##
@@ -54,17 +56,13 @@ The amount by which the margins are widened depends on the window width and is a
 
 ## Splitting a Window ##
 
-If you have a wide screen (more specifically, if your Emacs frame is wide), `visual-fill-column` has the unfortunate effect that if you pop up, say, a `*Help*` or `*Completions*` buffer or something similar, the window is split horizontally (i.e., the popup buffer appears below the active buffer), not vertically, as you might otherwise expect.
+If you have a wide screen (more specifically, if your Emacs frame is wide), `visual-fill-column` has the unfortunate effect that if you pop up, say, a `*Help*` or `*Completions*` buffer or something similar, the popped-up window appears below the active buffer, not next to it, as you might otherwise expect.
 
-This is due to the fact that Emacs uses the width of the text area to determine whether a window can be split vertically (i.e., into two side-by-side windows), and since `visual-fill-column` narrows the text area, Emacs thinks there is not enough room to do a vertical split and so opts for a horizontal split.
+This is due to the fact that Emacs uses the width of the text area to determine whether a window can be split into two side-by-side windows, and since `visual-fill-column-mode` narrows the text area, Emacs thinks there is not enough room to do a side-by-side split and so opts for putting the new window below the current one.
 
 To remedy this situation, you can set the option `visual-fill-column-enable-sensible-window-split`. When this option is set, the variable `split-window-preferred-function` is set to the function `visual-fill-column-split-window-sensibly`, which first removes the margins, widening the text area again, and then calls `split-window-sensibly` to do the actual splitting.
 
 This option does not affect the ability to split windows manually. Even if you keep `visual-fill-column-enable-sensible-window-split` unset, you can still split a window into two side-by-side windows by invoking e.g., `split-window-right` (`C-x 3`).
-
-Note that this option replaces the option `visual-fill-column-inhibit-sensible-window-split`. This option was unset by default, causing `split-window-preferred-function` to be set, which had the unfortunate side effect that it would overwrite a user-defined setting for that variable without warning.
-
-To get the old behaviour back, simply customise the option `visual-fill-column-enable-sensible-window-split` or set it to `t` in your init file.
 
 
 ## Adjusting Text Size ##
@@ -82,21 +80,20 @@ Note that this functionality is controlled by the option `visual-fill-column-adj
 
 The customisation group `visual-fill-column` has several options that can be used to customise the package.
 
-`visual-fill-column-width`: column at which to wrap lines. If set to `nil` (the default), use the value of `fill-column` instead.
+The following options are buffer-local, the values you set in your init file are default values:
 
-`visual-fill-column-center-text`: if set to `t`, centre the text area in the window. By default, the text is displayed at the window’s (left) edge, mimicking the effect of `fill-column`.
+**`visual-fill-column-width`** — Column at which to wrap lines. If set to `nil` (the default), use the value of `fill-column` instead.
 
-`visual-fill-column-extra-text-width`: extra columns added to the left and right side of the text area. This should be a cons cell of two integers `(<left> . <right>)`. If `visual-fill-column-center-text` is `t`, the text area is centred before the extra columns are added. This is currently used by `writeroom-mode` to add room for line numbers without shifting the text off-centre.
+**`visual-fill-column-center-text`** — If set to `t`, centre the text area in the window. By default, the text is displayed at the window’s (left) edge, mimicking the effect of `fill-column`.
 
-`visual-fill-column-fringes-outside-margins`: if set to `t`, put the fringes outside the margins. Widening the margin would normally cause the fringes to be pushed inward, because by default, they appear between the margins and the text. This effect may be visually less appealing, therefore, `visual-fill-column-mode` places the fringes outside the margins. If you prefer to have the fringes inside the margins, unset this option.
+**`visual-fill-column-extra-text-width`** — Extra columns added to the left and right side of the text area. This should be a cons cell of two integers `(<left> . <right>)`. If `visual-fill-column-center-text` is `t`, the text area is centred before the extra columns are added. This is currently used by `writeroom-mode` to add room for line numbers without shifting the text off-centre.
 
-These options are buffer-local, so the values you set in your init file are default values. They can also be set in mode hooks or directory or file local variables in order to customise particular files or file types.
+**`visual-fill-column-fringes-outside-margins`** — If set to `t`, put the fringes outside the margins. Widening the margin would normally cause the fringes to be pushed inward, because by default, they appear between the margins and the text. This effect may be visually less appealing, therefore, `visual-fill-column-mode` places the fringes outside the margins. If you prefer to have the fringes inside the margins, unset this option.
 
-The following options apply to all buffers with `visual-fill-column-mode` enabled:
+The following options are global, so that they apply to all buffers with `visual-fill-column-mode` enabled:
 
-`visual-fill-column-inhibit-sensible-window-split` can be set to keep `visual-fill-column-mode` from setting `split-window-preferred-function`, as discussed above.
+**`visual-fill-column-enable-sensible-window-split`** — Allow pop-up windows to create a side-by-side window split, if possible. See the discussion above.
 
-`visual-fill-column-adjust-for-text-scale` determines whether text scaling is taken into account when computing the width of the margins.
+**`visual-fill-column-adjust-for-text-scale`** — Take text scaling into account when computing the width of the margins.
 
-
-`visual-fill-column-mode` also binds several mouse events for the left and right margins, so that scrolling or clicking on the margins does what you'd expect (rather than cause an "event not bound" error). If you wish to adjust these bindings, you should do so in `visual-fill-column-mode-map`.
+**`visual-fill-column-mode-map`** — Keymap for mouse events in the left and right margins, to make sure that scrolling or clicking on the margins does what you'd expect (rather than cause an "event not bound" error).

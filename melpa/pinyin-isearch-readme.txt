@@ -1,4 +1,4 @@
-There is two types of search: for pinyin (pīnyīn) and for Chinese
+There are two types of search: for pinyin (pīnyīn) and for Chinese
 characters (汉字) text.
 
 You can use both or select one of them.
@@ -6,13 +6,13 @@ Pinyin without tones is used for input.
 Input is transformed to regex expression like:
 "\\([嗯唔][爱哀挨埃癌]\\|[乃奶奈耐氖艿鼐柰]\\|n\\([ūúǔùǖǘǚǜ]\\s-*e\\|ü[ēéěè]\\)\\)"
 
-To activate:
-add (require 'pinyin-isearch) line to your
-~/.emacs or ~/.emacs.d/init.el
+Configuration in ~/.emacs or ~/.emacs.d/init.el:
 
-to activate isearch submodes add line: (pinyin-isearch-activate-submodes)
+(require 'pinyin-isearch)
+(pinyin-isearch--activate) ; force loading (optional)
+(pinyin-isearch-activate-submodes) ; to activate isearch submodes
 
-To use:
+Usage:
 
 M-x pinyin-isearch-mode
 C-u C-s for normal search.
@@ -22,7 +22,7 @@ Chinese characters search submode.
 or
 M-x pinyin-isearch-forward/backward
 
-Configuration:
+Customization:
 
 M-x customize-group RET pinyin-isearch
 
