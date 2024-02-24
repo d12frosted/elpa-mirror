@@ -247,7 +247,21 @@ and enable `repeat-mode' for ergonomics.
 <https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/>
 
 
-5 Bugs and issues
+5 Performance
+═════════════
+
+  If your are having issues with adapter output in `*dape-repl*' and
+  startup time `jsonrpc.el' could be the culprit.  This has been
+  reported upstream (#69241), but until the issue has been fixed there
+  exists an fork of `jsonrpc.el'.
+
+  ┌────
+  │ (use-package jsonrpc
+  │   :straight (jsonrpc :type git :host github :repo "svaante/jsonrpc"))
+  └────
+
+
+6 Bugs and issues
 ═════════════════
 
   Before reporting any issues `(setq dape-debug t)' and take a look at
@@ -258,7 +272,7 @@ and enable `repeat-mode' for ergonomics.
   elpa if the bug is a breaking you workflow.
 
 
-6 Acknowledgements
+7 Acknowledgements
 ══════════════════
 
   Big thanks to João Távora for the input and jsonrpc; the project

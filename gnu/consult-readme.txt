@@ -33,8 +33,8 @@ menu. These actions operate on the selected candidate in the minibuffer
 or at point in normal buffers. For example, when selecting from a list
 of files, Embark offers an action to delete the file.  Additionally
 Embark offers a facility to collect completion candidates in a collect
-buffer. The section [Embark integration] documents in greater detail how
-Consult and Embark work together.
+buffer. The section [Embark integration] documents in detail how Consult
+and Embark work together.
 
 Table of Contents
 ─────────────────
@@ -777,10 +777,9 @@ Table of Contents
   There is the [Consult wiki], where additional configuration examples
   can be contributed.
 
-  *IMPORTANT:* It is strongly recommended that you enable [lexical
-  binding] in your configuration. Consult relies on lambdas and lexical
-  closures. For this reason many Consult-related snippets require
-  lexical binding.
+  *IMPORTANT:* It is recommended that you enable [lexical binding] in
+  your configuration. Many Consult-related code snippets require lexical
+  binding, since they use lambdas and closures.
 
 
 [ELPA] <https://elpa.gnu.org/packages/consult.html>
@@ -1131,7 +1130,7 @@ Table of Contents
   2. *Remove all packages involved in the suspected bug from your
       installation.*
   3. *Reinstall the newest version of all relevant packages*. Updating
-     alone is not sufficient, since package.el is known to cause
+     alone is not sufficient, since package.el sometimes causes
      miscompilation. The list of packages includes Consult, Compat,
      Vertico or other completion UIs, Marginalia, Embark and Orderless.
   4. Either use the default completion UI or ensure that exactly one of
@@ -1172,15 +1171,13 @@ Table of Contents
   • A stack trace in case the bug triggers an exception.
   • Your Emacs version, since bugs may be fixed or introduced in newer
     versions.
-  • Your operating system, since Emacs behavior varies between Linux,
-    Mac and Windows.
+  • Your operating system, since Emacs behavior varies subtly between
+    Linux, Mac and Windows.
   • The package manager, e.g., straight.el or package.el, used to
     install the Emacs packages, in order to exclude update issues. Did
-    you install Consult as part of the Doom or Spacemacs Emacs
-    distributions?
-  • Do you use Evil or other packages which apply deep changes?  Consult
-    does not provide Evil integration out of the box, but there is some
-    support in [evil-collection].
+    you install Consult as part of the Doom Emacs distribution?
+  • Do you use Evil? Consult does not provide Evil integration out of
+    the box, but there is some support in [evil-collection].
 
   When evaluating Consult-related code snippets you should enable
   [lexical binding].  Consult often relies on lambdas and lexical
@@ -1230,11 +1227,11 @@ Table of Contents
   Code contributions: [Aymeric Agon-Rambosson], [Amos Bird], [Ashton
   Wiersdorf], [Adam Spiers], [Augusto Stoffel], [Clemens Radermacher],
   [Zhengyi], [Geoffrey Lessel], [Illia Ostapyshyn], [jakanakaevangeli],
-  [JD Smith], [Jean-Philippe Bernardy], [Mohamed Abdelnour], [Mohsin
-  Kaleem], [Fox Kiester], [Omar Antolín Camarena], [Earl Hyatt], [Omar
-  Polo], [Piotr Kwiecinski], [Robert Weiner], [Sergey Kostyaev],
-  [Alexandru Scvorțov], [Tecosaur], [Sylvain Rousseau], [Tom Fitzhenry],
-  [Iñigo Serna] and [Alex Kreisher].
+  [JD Smith], [Jean-Philippe Bernardy], [mattiasdrp], [Mohamed
+  Abdelnour], [Mohsin Kaleem], [Fox Kiester], [Omar Antolín Camarena],
+  [Earl Hyatt], [Omar Polo], [Piotr Kwiecinski], [Robert Weiner],
+  [Sergey Kostyaev], [Alexandru Scvorțov], [Tecosaur], [Sylvain
+  Rousseau], [Tom Fitzhenry], [Iñigo Serna] and [Alex Kreisher].
 
   Advice and useful discussions: [Enrique Kessler Martínez], [Adam
   Porter], [Bruce d'Arcus], [Clemens Radermacher], [Dmitry Gutov],
@@ -1268,6 +1265,8 @@ Table of Contents
 [JD Smith] <https://github.com/jdtsmith>
 
 [Jean-Philippe Bernardy] <https://github.com/jyp>
+
+[mattiasdrp] <https://github.com/mattiasdrp>
 
 [Mohamed Abdelnour] <https://github.com/mohamed-abdelnour>
 
