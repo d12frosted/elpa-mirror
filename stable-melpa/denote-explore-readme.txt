@@ -1,5 +1,5 @@
 
-explore Denote functionality:
+Explore Denote functionality:
 
 1. Statistics (count notes and keywords)
 2. Random walks through your notes
