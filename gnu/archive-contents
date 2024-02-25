@@ -1249,7 +1249,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 8 7)
+	 [(0 8 8)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1264,7 +1264,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "5acc209c299b9540265141b466900b0c36dc0ff4"))])
+	   (:commit . "27b66a84c564021242f2563d9a3c0c65370dff2f"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1802,7 +1802,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 9 7)
+	  [(0 9 8)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1811,7 +1811,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "1794001f35722e49774dbb074fcfe65f140c8e24"))])
+	    (:commit . "fb89df9fdbab58247c1586a036b61b5b37f972fe"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
