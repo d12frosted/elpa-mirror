@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://git.systemreboot.net/exiftool.el/
 
 Updating /mnt/store/melpa/working/exiftool/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.systemreboot.net/exiftool.el/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out e043df1bcef40cd5934a74c210e1e35d5eb0e5a6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exiftool/
+  to /tmp/exiftoolhb32Jn/exiftool-20190520.1106
+    exiftool.el -> exiftool.el
+Created exiftool-20190520.1106.tar containing:
+  exiftool-20190520.1106/
+  exiftool-20190520.1106/exiftool-pkg.el
+  exiftool-20190520.1106/exiftool.el
+ ✓ Success:
+  2024-02-25T23:07:20+0000  exiftool-20190520.1106.entry
+  2024-02-25T23:07:20+0000  exiftool-20190520.1106.tar
+Built exiftool in 7.815s, finished at 2024-02-25T23:07:21+0000

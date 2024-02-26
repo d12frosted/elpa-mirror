@@ -78,7 +78,11 @@
   │ 	  (make-llm-ollama
   │ 	   :chat-model "mistral:7b-instruct-v0.2-q6_K"
   │ 	   :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
-  │   (setopt ellama-naming-scheme 'ellama-generate-name-by-llm))
+  │   (setopt ellama-naming-scheme 'ellama-generate-name-by-llm)
+  │   ;; Translation llm provider
+  │   (setopt ellama-translation-provider (make-llm-ollama
+  │ 				       :chat-model "sskostyaev/openchat:8k"
+  │ 				       :embedding-model "nomic-embed-text")))
   └────
 
 
@@ -128,159 +132,177 @@
   Ask Ellama to translate a selected region or word at the point.
 
 
-1.2.7 ellama-define-word
+1.2.7 ellama-translate-buffer
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Translate current buffer.
+
+
+1.2.8 ellama-define-word
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Find the definition of the current word using Ellama.
 
 
-1.2.8 ellama-summarize
+1.2.9 ellama-summarize
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Summarize a selected region or the current buffer using Ellama.
 
 
-1.2.9 ellama-code-review
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+1.2.10 ellama-code-review
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Review code in a selected region or the current buffer using Ellama.
 
 
-1.2.10 ellama-change
+1.2.11 ellama-change
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change text in a selected region or the current buffer according to a
   provided change.
 
 
-1.2.11 ellama-make-list
+1.2.12 ellama-make-list
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Create a markdown list from the active region or the current buffer
   using Ellama.
 
 
-1.2.12 ellama-make-table
+1.2.13 ellama-make-table
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Create a markdown table from the active region or the current buffer
   using Ellama.
 
 
-1.2.13 ellama-summarize-webpage
+1.2.14 ellama-summarize-webpage
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Summarize a webpage fetched from a URL using Ellama.
 
 
-1.2.14 ellama-provider-select
+1.2.15 ellama-provider-select
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Select ellama provider.
 
 
-1.2.15 ellama-code-complete
+1.2.16 ellama-code-complete
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Complete selected code or code in the current buffer according to a
   provided change using Ellama.
 
 
-1.2.16 ellama-code-add
+1.2.17 ellama-code-add
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add new code according to a description, generating it with a provided
   context from the selected region or the current buffer using Ellama.
 
 
-1.2.17 ellama-code-edit
+1.2.18 ellama-code-edit
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change selected code or code in the current buffer according to a
   provided change using Ellama.
 
 
-1.2.18 ellama-code-improve
+1.2.19 ellama-code-improve
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change selected code or code in the current buffer according to a
   provided change using Ellama.
 
 
-1.2.19 ellama-improve-wording
+1.2.20 ellama-improve-wording
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Enhance the wording in the currently selected region or buffer using
   Ellama.
 
 
-1.2.20 ellama-improve-grammar
+1.2.21 ellama-improve-grammar
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Enhance the grammar and spelling in the currently selected region or
   buffer using Ellama.
 
 
-1.2.21 ellama-improve-conciseness
+1.2.22 ellama-improve-conciseness
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Make the text of the currently selected region or buffer concise and
   simple using Ellama.
 
 
-1.2.22 ellama-make-format
+1.2.23 ellama-make-format
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Render the currently selected text or the text in the current buffer
   as a specified format using Ellama.
 
 
-1.2.23 ellama-load-session
+1.2.24 ellama-load-session
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Load ellama session from file.
 
 
-1.2.24 ellama-session-remove
+1.2.25 ellama-session-remove
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Remove ellama session.
 
 
-1.2.25 ellama-session-switch
+1.2.26 ellama-session-switch
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change current active session.
 
 
-1.2.26 ellama-session-rename
+1.2.27 ellama-session-rename
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Rename current ellama session.
 
 
-1.2.27 ellama-context-add-file
+1.2.28 ellama-context-add-file
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add file to context.
 
 
-1.2.28 ellama-context-add-buffer
+1.2.29 ellama-context-add-buffer
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add buffer to context.
 
 
-1.2.29 ellama-context-add-selection
+1.2.30 ellama-context-add-selection
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add selected region to context.
 
 
-1.2.30 ellama-context-add-info-node
+1.2.31 ellama-context-add-info-node
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add info node to context.
+
+
+1.2.32 ellama-chat-translation-enable
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Chat translation enable.
+
+
+1.2.33 ellama-chat-translation-disable
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Chat translation disable.
 
 
 1.3 Keymap
@@ -289,39 +311,42 @@
   Here is a table of keybindings and their associated functions in
   Ellama, using the `ellama-keymap-prefix' prefix (not set by default):
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Keymap  Function                      Description                  
-  ────────────────────────────────────────────────────────────────────
-   "c c"   ellama-code-complete          Code complete                
-   "c a"   ellama-code-add               Code add                     
-   "c e"   ellama-code-edit              Code edit                    
-   "c i"   ellama-code-improve           Code improve                 
-   "c r"   ellama-code-review            Code review                  
-   "s s"   ellama-summarize              Summarize                    
-   "s w"   ellama-summarize-webpage      Summarize webpage            
-   "s l"   ellama-load-session           Session Load                 
-   "s r"   ellama-session-rename         Session rename               
-   "s d"   ellama-session-remove         Session delete               
-   "s a"   ellama-session-switch         Session activate             
-   "i w"   ellama-improve-wording        Improve wording              
-   "i g"   ellama-improve-grammar        Improve grammar and spelling 
-   "i c"   ellama-improve-conciseness    Improve conciseness          
-   "m l"   ellama-make-list              Make list                    
-   "m t"   ellama-make-table             Make table                   
-   "m f"   ellama-make-format            Make format                  
-   "a a"   ellama-ask-about              Ask about                    
-   "a i"   ellama-chat                   Chat (ask interactively)     
-   "a l"   ellama-ask-line               Ask current line             
-   "a s"   ellama-ask-selection          Ask selection                
-   "t t"   ellama-translate              Text translate               
-   "t c"   ellama-complete               Text complete                
-   "d w"   ellama-define-word            Define word                  
-   "x b"   ellama-context-add-buffer     Context add buffer           
-   "x f"   ellama-context-add-file       Context add file             
-   "x s"   ellama-context-add-selection  Context add selection        
-   "x i"   ellama-context-add-info-node  Context add info node        
-   "p s"   ellama-provider-select        Provider select              
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Keymap  Function                         Description                  
+  ───────────────────────────────────────────────────────────────────────
+   "c c"   ellama-code-complete             Code complete                
+   "c a"   ellama-code-add                  Code add                     
+   "c e"   ellama-code-edit                 Code edit                    
+   "c i"   ellama-code-improve              Code improve                 
+   "c r"   ellama-code-review               Code review                  
+   "s s"   ellama-summarize                 Summarize                    
+   "s w"   ellama-summarize-webpage         Summarize webpage            
+   "s l"   ellama-load-session              Session Load                 
+   "s r"   ellama-session-rename            Session rename               
+   "s d"   ellama-session-remove            Session delete               
+   "s a"   ellama-session-switch            Session activate             
+   "i w"   ellama-improve-wording           Improve wording              
+   "i g"   ellama-improve-grammar           Improve grammar and spelling 
+   "i c"   ellama-improve-conciseness       Improve conciseness          
+   "m l"   ellama-make-list                 Make list                    
+   "m t"   ellama-make-table                Make table                   
+   "m f"   ellama-make-format               Make format                  
+   "a a"   ellama-ask-about                 Ask about                    
+   "a i"   ellama-chat                      Chat (ask interactively)     
+   "a l"   ellama-ask-line                  Ask current line             
+   "a s"   ellama-ask-selection             Ask selection                
+   "t t"   ellama-translate                 Text translate               
+   "t b"   ellama-translate-buffer          Translate buffer             
+   "t e"   ellama-chat-translation-enable   Translation enable           
+   "t d"   ellama-chat-translation-disable  Translation disable          
+   "t c"   ellama-complete                  Text complete                
+   "d w"   ellama-define-word               Define word                  
+   "x b"   ellama-context-add-buffer        Context add buffer           
+   "x f"   ellama-context-add-file          Context add file             
+   "x s"   ellama-context-add-selection     Context add selection        
+   "x i"   ellama-context-add-info-node     Context add info node        
+   "p s"   ellama-provider-select           Provider select              
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 1.4 Configuration
@@ -368,6 +393,9 @@
   • `ellama-naming-scheme': How to name new sessions.
   • `ellama-naming-provider': LLM provider for generating session names
     by LLM. If not set `ellama-provider' will be used.
+  • `ellama-chat-translation-enabled': Enable chat translations if set.
+  • `ellama-translation-provider': LLM translation provider.
+    `ellama-provider' will be used if not set.
 
 
 [zephyr] <https://ollama.ai/library/zephyr>
