@@ -17,6 +17,32 @@
 2.1 Installation
 ────────────────
 
+
+2.2 Install from GNU ELPA
+─────────────────────────
+
+  The GNU ELPA package name is: `rcirc-sqlite'
+
+  To install the package:
+
+  • `M-x package-refresh-contents'
+  • `M-x package-install'
+
+  and search for `rcirc-sqlite'.
+
+  Or use `use-package'
+
+  ┌────
+  │ (use-package rcirc-sqlite
+  │     :ensure t
+  │     :config
+  │     (add-hook 'rcirc-mode-hook #'rcirc-sqlite-log-mode))
+  └────
+
+
+2.3 Manual installation
+───────────────────────
+
   Create a directory for the package.
 
   ┌────
@@ -33,7 +59,7 @@
   Re-evaluate your init file or restart Emacs, whatever you prefer.
 
 
-2.2 Activation
+2.4 Activation
 ──────────────
 
   The command `rcirc-sqlite-log-mode' toggles between activation and

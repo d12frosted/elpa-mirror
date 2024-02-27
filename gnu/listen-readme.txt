@@ -1,0 +1,105 @@
+                              ━━━━━━━━━━━
+                               LISTEN.EL
+                              ━━━━━━━━━━━
+
+
+This package aims to provide a simple audio/music player for Emacs.  It
+should "just work," with little-to-no configuration, have intuitive
+commands, and be easily extended and customized.  (Contrast to setting
+up EMMS, or having to configure external players like MPD.)  A Transient
+menu, under the command `listen', is the primary entry point.
+
+The only external dependency is VLC, which is currently the only player
+backend that is supported.  (Other backends may easily be added; see
+library `listen-vlc' for example.)  Track metadata is read using EMMS's
+native Elisp metadata library, which has been imported into this
+package.
+
+Queues are provided as the means to play consecutive tracks, and they
+are shown in a `vtable'-based view buffer.  They are persisted between
+sessions using the `persist' library, and they may be bookmarked.
+
+The primary interface to one's music library is through the filesystem,
+by selecting a file to play, or by adding files and directories to a
+queue.  Although MPD is not required, support is provided for finding
+files from a local MPD server's library using MPD's metadata searching.
+
+A simple "library" view is provided that shows a list of files organized
+into a hierarchy by genre, date, artist, album, etc.  (This will be made
+more configurable and useful in the future.)
+
+Note a silly limitation: a track may be present in a queue only once
+(but who would want to have a track more than once in a playlist).
+
+
+1 Installation
+══════════════
+
+  Until it's added to a repository, the easiest way to install this
+  package is with this Elisp code (removing the line that's
+  inappropriate for your Emacs version):
+
+  ┌────
+  │ (use-package listen
+  │   ;; For Emacs 29:
+  │   :init (unless (package-installed-p 'listen)
+  │ 	  (package-vc-install '(listen :url "https://github.com/alphapapa/listen.el.git")))
+  │   ;; For Emacs 30+:
+  │   :vc (:fetcher github :repo "alphapapa/listen.el"))
+  └────
+
+  You also need to have VLC installed.
+
+
+2 Configuration
+═══════════════
+
+  Listen is intended to work with little-to-no configuration.  You can
+  set the `listen-directory' to the location of your music library if
+  it's not at `~/Music'.  See `M-x customize-group RET listen RET'.
+
+
+3 Usage
+═══════
+
+  Use the command `listen' to show the Transient menu.  From there, it
+  is–hopefully–self-explanatory.  Please feel free to give feedback if
+  it doesn't seem so.
+
+
+4 Changelog
+═══════════
+
+4.1 v0.2
+────────
+
+  *Additions*
+  ⁃ Command `listen-queue-jump' jumps to the currently playing track in
+    the queue.
+  ⁃ Command `listen-queue-shell-command' runs a shell command on the
+    tracks selected in the queue.
+  ⁃ Reverting a queue buffer with universal prefix argument refreshes
+    the tracks' metadata from disk.
+
+  *Fixes*
+  ⁃ The queue could sometimes skip tracks when playing.
+  ⁃ Improve handling of tracks that are changed during playback
+    (e.g. metadata).
+  ⁃ Update copyright statements in all libraries.
+
+
+4.2 v0.1
+────────
+
+  Initial release.
+
+
+5 Development
+═════════════
+
+  Feedback is welcome.
+
+  This package might be submitted to GNU ELPA in the future, so any
+  contributions should meet the same criteria for GNU Emacs
+  (i.e. cumulative contributions of 15 lines or more must have copyright
+  assigned to the FSF).
