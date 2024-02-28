@@ -13,7 +13,18 @@ Or enable `tab-bar-buffers-mode` from the Easy Customization form.
 
 Customization:
 
-`tab-bar-buffers-mode` has only one customization item of its own: *Uninteresting buffers*.  This is a list of buffer names that you do **not** want shown in the tab bar.  Visible buffers are always shown.
+
+`tab-bar-buffers-mode` has a few customization items of its own.
+
+- *Uninteresting buffers* are buffer names that are not interesting
+- *Uninteresting prefixes* are buffer name prefixes that are not interesting (default `(" " "*")`)
+- *Interesting buffers* are buffers that are always interesting
+
+If `tab-bar-buffers-mode` determines a buffer is uninteresting, it will **not** be shown in the tab bar.
+
+Visible buffers are always shown.
+
+Some of tab-bar-mode's customization options are also relevant for tab-bar-buffers.
 
 `tab-bar-close-button-show'
 `tab-bar-position'
