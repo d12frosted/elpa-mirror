@@ -1802,7 +1802,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 9 13)
+	  [(0 9 14)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1811,7 +1811,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "d5437d1324a74cf0d1dc82facade8c70553bd8eb"))])
+	    (:commit . "577fc7c791be5e684ddd5c154983708a99d249be"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
@@ -2738,7 +2738,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "847694e78c12d903d5e3f6cb365a5d3b984db537"))])
  (org .
-      [(9 6 19)
+      [(9 6 20)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2747,7 +2747,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "bc0e14a1ab96de1a8a35c9e12cf68010e56ecdb2"))])
+	(:commit . "fe9bc9efd127544a5cf6d1c8a49eb6152a773c02"))])
  (org-contacts .
 	       [(1 1)
 		((emacs

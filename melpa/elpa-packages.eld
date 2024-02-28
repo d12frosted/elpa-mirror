@@ -4009,6 +4009,7 @@
   (ox-zenn :url "https://github.com/conao3/ox-zenn.el.git")
   (p4 :url "https://github.com/gareth-rees/p4.el.git")
   (pabbrev :url "https://github.com/phillord/pabbrev.git")
+  (pacdiff :url "https://github.com/fbrosda/pacdiff.el.git")
   (pacfiles-mode :url "https://github.com/UndeadKernel/pacfiles-mode.git")
   (pack :url "https://github.com/10sr/pack-el.git")
   (package+ :url "https://github.com/zenspider/package.git")
