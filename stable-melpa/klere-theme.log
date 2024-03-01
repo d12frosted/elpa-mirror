@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/WammKD/emacs-klere-theme.git
 
 Updating /mnt/store/melpa/working/klere-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/WammKD/emacs-klere-theme.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out e73a01e69bf80f753a1603337fdc4b89e685219a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/klere-theme/
+  to /tmp/klere-themeCnJ0NU/klere-theme-20240123.124
+    klere-theme.el -> klere-theme.el
+Created klere-theme-20240123.124.tar containing:
+  klere-theme-20240123.124/
+  klere-theme-20240123.124/klere-theme-pkg.el
+  klere-theme-20240123.124/klere-theme.el
+ ✓ Success:
+  2024-03-01T07:01:29+0000  klere-theme-20240123.124.entry
+  2024-03-01T07:01:29+0000  klere-theme-20240123.124.tar
+Built klere-theme in 7.871s, finished at 2024-03-01T07:01:33+0000

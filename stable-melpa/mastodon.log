@@ -3,7 +3,49 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/martianh/mastodon.el.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 98351a7c4fb2bac778ca17ddd03706b0fb016c47
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mastodon/
+  to /tmp/mastodonw89PLk/mastodon-20240228.913
+  ! lisp/mastodon-async.el -> mastodon-async.el
+  ! lisp/mastodon-auth.el -> mastodon-auth.el
+  ! lisp/mastodon-client.el -> mastodon-client.el
+  ! lisp/mastodon-discover.el -> mastodon-discover.el
+  ! lisp/mastodon-http.el -> mastodon-http.el
+  ! lisp/mastodon-inspect.el -> mastodon-inspect.el
+  ! lisp/mastodon-iso.el -> mastodon-iso.el
+  ! lisp/mastodon-media.el -> mastodon-media.el
+  ! lisp/mastodon-notifications.el -> mastodon-notifications.el
+  ! lisp/mastodon-profile.el -> mastodon-profile.el
+  ! lisp/mastodon-search.el -> mastodon-search.el
+  ! lisp/mastodon-tl.el -> mastodon-tl.el
+  ! lisp/mastodon-toot.el -> mastodon-toot.el
+  ! lisp/mastodon-views.el -> mastodon-views.el
+  ! lisp/mastodon.el -> mastodon.el
+    dir -> dir
+    mastodon.info -> mastodon.info
+    mastodon.texi -> mastodon.texi
+Created mastodon-20240228.913.tar containing:
+  mastodon-20240228.913/
+  mastodon-20240228.913/dir
+  mastodon-20240228.913/mastodon-async.el
+  mastodon-20240228.913/mastodon-auth.el
+  mastodon-20240228.913/mastodon-client.el
+  mastodon-20240228.913/mastodon-discover.el
+  mastodon-20240228.913/mastodon-http.el
+  mastodon-20240228.913/mastodon-inspect.el
+  mastodon-20240228.913/mastodon-iso.el
+  mastodon-20240228.913/mastodon-media.el
+  mastodon-20240228.913/mastodon-notifications.el
+  mastodon-20240228.913/mastodon-pkg.el
+  mastodon-20240228.913/mastodon-profile.el
+  mastodon-20240228.913/mastodon-search.el
+  mastodon-20240228.913/mastodon-tl.el
+  mastodon-20240228.913/mastodon-toot.el
+  mastodon-20240228.913/mastodon-views.el
+  mastodon-20240228.913/mastodon.el
+  mastodon-20240228.913/mastodon.info
+ ✓ Success:
+  2024-03-01T07:05:55+0000  mastodon-20240228.913.entry
+  2024-03-01T07:05:55+0000  mastodon-20240228.913.tar
+Built mastodon in 4.682s, finished at 2024-03-01T07:05:56+0000

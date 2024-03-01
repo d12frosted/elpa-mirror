@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/lingva.el.git
 
 Updating /mnt/store/melpa/working/lingva/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/martianh/lingva.el.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 6c33594068fa33de622172503deeec6778d9c744
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lingva/
+  to /tmp/lingvaWGLXkL/lingva-20220910.1435
+    lingva.el -> lingva.el
+Created lingva-20220910.1435.tar containing:
+  lingva-20220910.1435/
+  lingva-20220910.1435/lingva-pkg.el
+  lingva-20220910.1435/lingva.el
+ ✓ Success:
+  2024-03-01T07:03:33+0000  lingva-20220910.1435.entry
+  2024-03-01T07:03:33+0000  lingva-20220910.1435.tar
+Built lingva in 4.105s, finished at 2024-03-01T07:03:34+0000
