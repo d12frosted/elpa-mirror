@@ -7,6 +7,11 @@ Some of the key features include the following:
 - Generic build command support for Maven and Gradle projects
 - JUnit tests support, this hasn't been tested for a while...
 
+eglot-java dynamically modifies  the "eglot-server-programs" variable,
+you can change that behavior with the variable "eglot-java-eglot-server-programs-manual-updates"
+- you may prefer using directly default jdtls Python script, eglot-java doesn't use that (eglot defaults to jdtls)
+- eglot-java calls the relevant Java command directly, both for historical reasons and for potentially avoiding any Python dependency (Windows, Mac OS)
+
 If you're having issues with Gradle projects (auto-completion), ensure that you're using the gradle wrapper in your projects:
 - The root cause is likely JVM incompatibilities with the bundled Eclipse Gradle version
 - Check your default JDK version
@@ -15,11 +20,6 @@ If you're having issues with Gradle projects (auto-completion), ensure that you'
 - Use the gradle wrapper to ensure that you always have a compatible matching JVM version
   - Edit directly your gradle/wrapper/gradle-wrapper.properties
   - or download the matching Gradle version for your JVM and run: gradle wrapper
-
-If for any reason, you want to prevent "eglot-java" from modifying the "eglot-server-programs" variable,
-you can toggle the value of the variable "eglot-java-eglot-server-programs-manual-updates"
-- upstream "eglot" could change the syntax of programs associations without notice and it will break this package
-- you may want fine-grained control over how "eglot-java" behaves accordingly to your emacs customization
 
 Below is a sample configuration for your emacs init file
 

@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/joostkremers/visual-fill-column.git
 
 Updating /mnt/store/melpa/working/visual-fill-column/
-Checking out 5b9f9309bdf040b72bb2c3d99d1d8a0f0d98c308
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/visual-fill-column/
-  to /tmp/visual-fill-columnAtqHxb/visual-fill-column-20240223.2340
-    visual-fill-column.el -> visual-fill-column.el
-Created visual-fill-column-20240223.2340.tar containing:
-  visual-fill-column-20240223.2340/
-  visual-fill-column-20240223.2340/visual-fill-column-pkg.el
-  visual-fill-column-20240223.2340/visual-fill-column.el
- ✓ Success:
-  2024-03-01T00:02:15+0000  visual-fill-column-20240223.2340.entry
-  2024-03-01T00:02:15+0000  visual-fill-column-20240223.2340.tar
-Built visual-fill-column in 4.329s, finished at 2024-03-01T00:02:17+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/joostkremers/visual-fill-column.git/': The requested URL returned error: 500
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

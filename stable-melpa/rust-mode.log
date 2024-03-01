@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/rust-lang/rust-mode.git
 
 Updating /mnt/store/melpa/working/rust-mode/
-Checking out a8f94697acbd9d71ec94b79a30685899e9c31c6a
+Checking out 6d86af4a3d971b00da2ae737d490a240644264fa
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rust-mode/
-  to /tmp/rust-modeilT0Lf/rust-mode-20240228.338
+  to /tmp/rust-modeEmyUTe/rust-mode-20240301.229
     rust-cargo.el -> rust-cargo.el
     rust-common.el -> rust-common.el
     rust-compile.el -> rust-compile.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     rust-prog-mode.el -> rust-prog-mode.el
     rust-rustfmt.el -> rust-rustfmt.el
     rust-utils.el -> rust-utils.el
-Created rust-mode-20240228.338.tar containing:
-  rust-mode-20240228.338/
-  rust-mode-20240228.338/rust-cargo.el
-  rust-mode-20240228.338/rust-common.el
-  rust-mode-20240228.338/rust-compile.el
-  rust-mode-20240228.338/rust-mode-pkg.el
-  rust-mode-20240228.338/rust-mode-treesitter.el
-  rust-mode-20240228.338/rust-mode.el
-  rust-mode-20240228.338/rust-playpen.el
-  rust-mode-20240228.338/rust-prog-mode.el
-  rust-mode-20240228.338/rust-rustfmt.el
-  rust-mode-20240228.338/rust-utils.el
+Created rust-mode-20240301.229.tar containing:
+  rust-mode-20240301.229/
+  rust-mode-20240301.229/rust-cargo.el
+  rust-mode-20240301.229/rust-common.el
+  rust-mode-20240301.229/rust-compile.el
+  rust-mode-20240301.229/rust-mode-pkg.el
+  rust-mode-20240301.229/rust-mode-treesitter.el
+  rust-mode-20240301.229/rust-mode.el
+  rust-mode-20240301.229/rust-playpen.el
+  rust-mode-20240301.229/rust-prog-mode.el
+  rust-mode-20240301.229/rust-rustfmt.el
+  rust-mode-20240301.229/rust-utils.el
  ✓ Success:
-  2024-02-29T23:52:05+0000  rust-mode-20240228.338.entry
-  2024-02-29T23:52:05+0000  rust-mode-20240228.338.tar
-Built rust-mode in 6.134s, finished at 2024-02-29T23:52:07+0000
+  2024-03-01T01:45:48+0000  rust-mode-20240228.338.entry
+  2024-03-01T01:45:48+0000  rust-mode-20240228.338.tar
+  2024-03-01T03:37:25+0000  rust-mode-20240301.229.entry
+  2024-03-01T03:37:25+0000  rust-mode-20240301.229.tar
+Built rust-mode in 3.748s, finished at 2024-03-01T03:37:26+0000

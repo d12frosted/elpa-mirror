@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/fourier/loccur.git
 
 Updating /mnt/store/melpa/working/loccur/
-Checking out 01b7afa62589432a98171074abb8c5a1e089034a
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/loccur/
-  to /tmp/loccurFiQorD/loccur-20210224.2041
-    loccur.el -> loccur.el
-Created loccur-20210224.2041.tar containing:
-  loccur-20210224.2041/
-  loccur-20210224.2041/loccur-pkg.el
-  loccur-20210224.2041/loccur.el
- ✓ Success:
-  2024-02-29T23:32:37+0000  loccur-20210224.2041.entry
-  2024-02-29T23:32:37+0000  loccur-20210224.2041.tar
-Built loccur in 4.071s, finished at 2024-02-29T23:32:38+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/fourier/loccur.git/': The requested URL returned error: 500
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

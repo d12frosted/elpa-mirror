@@ -3,26 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-hl-prog-extra.git
 
 Updating /mnt/store/melpa/working/hl-prog-extra/
-Checking out f658eff775fea05fa6deabf59a5fecf99660fa26
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hl-prog-extra/
-  to /tmp/hl-prog-extravXIbFe/hl-prog-extra-20240209.218
-    hl-prog-extra-preset-c++-mode.el -> hl-prog-extra-preset-c++-mode.el
-    hl-prog-extra-preset-c-mode.el -> hl-prog-extra-preset-c-mode.el
-    hl-prog-extra-preset-glsl-mode.el -> hl-prog-extra-preset-glsl-mode.el
-    hl-prog-extra-preset-lua-mode.el -> hl-prog-extra-preset-lua-mode.el
-    hl-prog-extra-preset-python-mode.el -> hl-prog-extra-preset-python-mode.el
-    hl-prog-extra.el -> hl-prog-extra.el
-Created hl-prog-extra-20240209.218.tar containing:
-  hl-prog-extra-20240209.218/
-  hl-prog-extra-20240209.218/hl-prog-extra-pkg.el
-  hl-prog-extra-20240209.218/hl-prog-extra-preset-c++-mode.el
-  hl-prog-extra-20240209.218/hl-prog-extra-preset-c-mode.el
-  hl-prog-extra-20240209.218/hl-prog-extra-preset-glsl-mode.el
-  hl-prog-extra-20240209.218/hl-prog-extra-preset-lua-mode.el
-  hl-prog-extra-20240209.218/hl-prog-extra-preset-python-mode.el
-  hl-prog-extra-20240209.218/hl-prog-extra.el
- ✓ Success:
-  2024-02-29T23:25:18+0000  hl-prog-extra-20240209.218.entry
-  2024-02-29T23:25:18+0000  hl-prog-extra-20240209.218.tar
-Built hl-prog-extra in 6.255s, finished at 2024-02-29T23:25:20+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-hl-prog-extra.git/': The requested URL returned error: 500
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
