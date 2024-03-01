@@ -16,8 +16,10 @@ to output assembly/bytecode with debug information (or by using objdump)
 4. Provide an interface for highlighting the matched assembly/bytecode line
 to the source and vice versa
 
-Tweakables:
-RMSBolt is primarily configured with Emacs local variables. This lets you
+
+;; Tweakables:
+
+RMSBolt is primarily configured with Emacs local variables.  This lets you
 change compiler and rmsbolt options simply by editing a local variable block.
 
 Notable options:
