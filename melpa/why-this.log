@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/akib/emacs-why-this.git
 
 Updating /mnt/store/melpa/working/why-this/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/akib/emacs-why-this.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 5203d9379afaf6703746823a580c804e1dd98e08
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/why-this/
+  to /tmp/why-this5DO5s4/why-this-20221129.817
+    why-this.el -> why-this.el
+Created why-this-20221129.817.tar containing:
+  why-this-20221129.817/
+  why-this-20221129.817/why-this-pkg.el
+  why-this-20221129.817/why-this.el
+ ✓ Success:
+  2024-03-01T11:13:23+0000  why-this-20221129.817.entry
+  2024-03-01T11:13:23+0000  why-this-20221129.817.tar
+Built why-this in 4.475s, finished at 2024-03-01T11:13:25+0000

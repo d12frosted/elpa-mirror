@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-xref-rst.git
 
 Updating /mnt/store/melpa/working/xref-rst/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-xref-rst.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 0811365a6ac240463aac9ddfcefb9ed8630e3da8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xref-rst/
+  to /tmp/xref-rstXSr4TI/xref-rst-20230601.21
+    xref-rst.el -> xref-rst.el
+Created xref-rst-20230601.21.tar containing:
+  xref-rst-20230601.21/
+  xref-rst-20230601.21/xref-rst-pkg.el
+  xref-rst-20230601.21/xref-rst.el
+ ✓ Success:
+  2024-03-01T11:14:22+0000  xref-rst-20230601.21.entry
+  2024-03-01T11:14:22+0000  xref-rst-20230601.21.tar
+Built xref-rst in 3.994s, finished at 2024-03-01T11:14:23+0000
