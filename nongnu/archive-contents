@@ -306,15 +306,16 @@
 		    ("Akib Azmain Turja" . "akib@disroot.org"))
 		   (:commit . "501548c3d51f926c687e8cd838c5865ec45d03cc"))])
  (crux .
-       [(0 4 0)
-	((seq
-	  (1 11)))
+       [(0 5 0)
+	((emacs
+	  (26 1)))
 	"A Collection of Ridiculously Useful eXtensions" tar
 	((:url . "https://github.com/bbatsov/crux")
+	 (:keywords "convenience")
 	 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 	 (:authors
 	  ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-	 (:keywords "convenience"))])
+	 (:commit . "7980df10e47eef41d4d1c57cfb690ec406381ed3"))])
  (cyberpunk-theme .
 		  [(1 22)
 		   nil "Cyberpunk Color Theme" tar
@@ -1883,7 +1884,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
  (racket-mode .
-	      [(1 0 20240222 110701)
+	      [(1 0 20240229 94646)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar

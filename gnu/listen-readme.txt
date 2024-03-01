@@ -3,6 +3,8 @@
                               ━━━━━━━━━━━
 
 
+[https://elpa.gnu.org/packages/listen.svg]
+
 This package aims to provide a simple audio/music player for Emacs.  It
 should "just work," with little-to-no configuration, have intuitive
 commands, and be easily extended and customized.  (Contrast to setting
@@ -32,23 +34,75 @@ Note a silly limitation: a track may be present in a queue only once
 (but who would want to have a track more than once in a playlist).
 
 
+[https://elpa.gnu.org/packages/listen.svg]
+<https://elpa.gnu.org/packages/listen.html>
+
+
 1 Installation
 ══════════════
 
-  Until it's added to a repository, the easiest way to install this
-  package is with this Elisp code (removing the line that's
-  inappropriate for your Emacs version):
+  Note that Listen.el uses [VLC] to play audio, so it must be installed.
+  Also, `ffprobe' (part of [FFmpeg]) is used to read track durations
+  when available, but it is not required.
+
+
+[VLC] <https://www.videolan.org/vlc/>
+
+[FFmpeg] <https://ffmpeg.org/ffprobe.html>
+
+1.1 GNU ELPA
+────────────
+
+  Listen.el is published in [GNU ELPA] as [listen], so it may be
+  installed in Emacs with the command `M-x package-install RET listen
+  RET'.  This is the recommended way to install Listen.el, as it will
+  install the current stable release.
+
+  The latest development build may be installed from [ELPA-devel] or
+  from Git (see below).
+
+
+[GNU ELPA] <http://elpa.gnu.org/>
+
+[listen] <https://elpa.gnu.org/packages/listen.html>
+
+[ELPA-devel] <https://elpa.gnu.org/devel/listen.html>
+
+
+1.2 Git
+───────
+
+  The `master' branch of the Git repository is intended to be usable at
+  all times; only minor bugs are expected to be found in it before a new
+  stable release is made.
+
+  To install, it is recommended to use [quelpa-use-package], like this
+  (using [this helpful command] for upgrading versions):
 
   ┌────
+  │ ;; Install and load `quelpa-use-package'.
+  │ (package-install 'quelpa-use-package)
+  │ (require 'quelpa-use-package)
+  │ 
+  │ ;; Install Listen.
   │ (use-package listen
-  │   ;; For Emacs 29:
-  │   :init (unless (package-installed-p 'listen)
-  │ 	  (package-vc-install '(listen :url "https://github.com/alphapapa/listen.el.git")))
-  │   ;; For Emacs 30+:
-  │   :vc (:fetcher github :repo "alphapapa/listen.el"))
+  │   :quelpa (listen :fetcher github :repo "alphapapa/listen.el"))
   └────
 
-  You also need to have VLC installed.
+  One might also use systems like [Elpaca] or [Straight] (which is also
+  used by [DOOM]), but the author cannot offer support for them.
+
+
+[quelpa-use-package] <https://github.com/quelpa/quelpa-use-package>
+
+[this helpful command]
+<https://github.com/alphapapa/unpackaged.el#upgrade-a-quelpa-use-package-forms-package>
+
+[Elpaca] <https://github.com/progfolio/elpaca>
+
+[Straight] <https://github.com/radian-software/straight.el>
+
+[DOOM] <https://github.com/doomemacs/doomemacs>
 
 
 2 Configuration
@@ -70,7 +124,59 @@ Note a silly limitation: a track may be present in a queue only once
 4 Changelog
 ═══════════
 
-4.1 v0.2
+4.1 v0.4
+────────
+
+  *Additions*
+  ⁃ Command `listen-queue-deduplicate' removes duplicate tracks from a
+    queue (by comparing artist, album, and title metadata
+    case-insensitively).
+  ⁃ Read track durations with `ffprobe' and show in library and queue
+    views.
+  ⁃ Bound key `?' to open the `listen' Transient menu in library and
+    queue views.
+
+  *Fixes*
+  ⁃ Transposing a track in a queue keeps point on the track.
+  ⁃ Autoloading of `listen' command.
+
+
+4.2 v0.3
+────────
+
+  *Additions*
+  ⁃ Command `listen-library-from-mpd' shows tracks selected from MPD in
+    a library view.
+  ⁃ Command `listen-library-from-queue' shows tracks selected from a
+    queue buffer in a library view.
+  ⁃ Command `listen-library-from-playlist-file' shows tracks from an M3U
+    playlist in a library view.
+  ⁃ Command `listen-queue-add-from-playlist-file' adds tracks from an
+    M3U playlist file to a queue.
+
+  *Changes*
+  ⁃ Reading tracks from MPD allows multiple selection using
+    `completing-read-multiple'.
+  ⁃ Various improvements in robustness.
+  ⁃ Command `listen-queue' doesn't recreate its buffer when already
+    open.
+  ⁃ Key bindings in `listen' Transient menu.
+  ⁃ Function `listen-queue-complete' accepts argument `:allow-new-p' to
+    return a new queue if the entered name doesn't match an existing
+    one.
+
+  *Fixes*
+  ⁃ Completing read of tracks from MPD.
+  ⁃ Unset VLC process's query-on-exit flag.
+
+  *Credits*
+  ⁃ Thanks to [Philip Kaludercic] for reviewing.
+
+
+[Philip Kaludercic] <https://amodernist.com/>
+
+
+4.3 v0.2
 ────────
 
   *Additions*
@@ -88,7 +194,7 @@ Note a silly limitation: a track may be present in a queue only once
   ⁃ Update copyright statements in all libraries.
 
 
-4.2 v0.1
+4.4 v0.1
 ────────
 
   Initial release.
@@ -97,9 +203,17 @@ Note a silly limitation: a track may be present in a queue only once
 5 Development
 ═════════════
 
-  Feedback is welcome.
+  Feedback and patches are welcome.
 
-  This package might be submitted to GNU ELPA in the future, so any
-  contributions should meet the same criteria for GNU Emacs
-  (i.e. cumulative contributions of 15 lines or more must have copyright
-  assigned to the FSF).
+
+5.1 Copyright assignment
+────────────────────────
+
+  Listen.el is published in GNU ELPA and is considered part of GNU
+  Emacs.  Therefore, cumulative contributions of more than 15 lines of
+  code require that the author assign copyright of such contributions to
+  the FSF.  Authors who are interested in doing so may contact
+  [assign@gnu.org] to request the appropriate form.
+
+
+[assign@gnu.org] <mailto:assign@gnu.org>
