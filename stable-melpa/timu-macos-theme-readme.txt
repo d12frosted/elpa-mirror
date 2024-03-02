@@ -79,11 +79,22 @@ II. Configuration
       (customize-set-variable 'timu-macos-muted-colors t)
 
   E. Border for the `mode-line'
-    You can set a variable to add a border to the `mode-line'.
+    You can set a variable to set the border type for the `mode-line'.
+    Either no border, just on the top or all around.
 
     By default the border is turned off.
-    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
-      (customize-set-variable 'timu-macos-mode-line-border t)
+    For your preferred type add one of the following to your
+    =~/.emacs.d/init.el= or =~/.emacs=:
+      (customize-set-variable 'timu-macos-mode-line-border-type "none")
+      (customize-set-variable 'timu-macos-mode-line-border-type "border")
+      (customize-set-variable 'timu-macos-mode-line-border-type "overline")
+
+  F. Background color for the `mode-line'
+    You can set a variable to set a background for the `mode-line'.
+
+    By default the background color for the background turned on.
+    To turn this off add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
+      (customize-set-variable 'timu-macos-mode-line-background nil)
 
 III. Utility functions
   A. Toggle dark and light flavour of the theme
@@ -92,5 +103,8 @@ III. Utility functions
   B. Toggle between intense and non intense colors for `org-mode'
       M-x timu-macos-toggle-org-colors-intensity RET.
 
-  C. Toggle between borders and no borders for the `mode-line'
+  C. Toggle between border types for the `mode-line'
       M-x timu-macos-toggle-mode-line-border RET.
+
+  D. Toggle between background and no background for the `mode-line'
+      M-x timu-macos-toggle-mode-line-background RET.
