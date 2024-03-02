@@ -1,6 +1,6 @@
-			    ━━━━━━━━━━━━━━━━
-			     COMINT-MIME.EL
-			    ━━━━━━━━━━━━━━━━
+                            ━━━━━━━━━━━━━━━━
+                             COMINT-MIME.EL
+                            ━━━━━━━━━━━━━━━━
 
 
 This Emacs package provides a mechanism for REPLs (or comint buffers, in
