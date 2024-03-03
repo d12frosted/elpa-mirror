@@ -19,7 +19,7 @@
   compatibility regardless of whether the user has a local LLM or is
   paying for API access.
 
-  LMMs exhibit varying functionalities and APIs. This library aims to
+  LLMs exhibit varying functionalities and APIs. This library aims to
   abstract functionality to a higher level, as some high-level concepts
   might be supported by an API while others require more low-level
   implementations. An example of such a concept is "examples," where the
@@ -32,9 +32,6 @@
 
   Certain functionalities might not be available in some LLMs. Any such
   unsupported functionality will raise a `'not-implemented' signal.
-
-  This package is still in its early stages but will continue to develop
-  as LLMs and functionality are introduced.
 
 
 2 Setting up providers
@@ -220,7 +217,7 @@
 
   The parameters default to optional values, so mostly users should just
   be creating a model with `(make-llm-llamacpp)'.  The parameters are:
-  • `:scheme': The scheme (http/https) for the connection to ollama.
+  • `:scheme': The scheme (http/https) for the connection to llama.cpp.
     This default to "http".
   • `:host': The host that llama.cpp server is run on.  This is optional
     and will default to localhost.
@@ -349,7 +346,15 @@
       is optional, and defaults to `'user'.
 
 
-4.2 How to handle conversations
+4.2 Logging
+───────────
+
+  Interactions with the `llm' package can be logged by setting `llm-log'
+  to a non-nil value.  This should be done only when developing.  The
+  log can be found in the `*llm log*' buffer.
+
+
+4.3 How to handle conversations
 ───────────────────────────────
 
   Conversations can take place by repeatedly calling `llm-chat' and its
@@ -374,7 +379,7 @@
   └────
 
 
-4.3 Caution about `llm-chat-prompt-interactions'
+4.4 Caution about `llm-chat-prompt-interactions'
 ────────────────────────────────────────────────
 
   The interactions in a prompt may be modified by conversation or by the
@@ -385,6 +390,68 @@
   manipulate `llm-chat-prompt-interactions' after initially setting it
   up for the first time, because you are likely to make changes that
   only work for some providers.
+
+
+4.5 Function calling
+────────────────────
+
+  *Note: function calling functionality is currently alpha quality.  If
+   you want to use function calling, please watch the `llm'
+   [discussion](<https://github.com/ahyatt/llm/discussions>) section for
+   any announcements about changes.*
+
+  Function calling is a way to give the LLM a list of functions it can
+  call, and have it call the functions for you.  The standard
+  interaction has the following steps:
+  1. The client sends the LLM a prompt with functions it can call.
+  2. The LLM may return which functions to execute, and with what
+     arguments, or text as normal.
+  3. If the LLM has decided to call one or more functions, those
+     functions should be called, and their results sent back to the LLM.
+  4. The LLM will return with a text response based on the initial
+     prompt and the results of the function calling.
+  5. The client can now can continue the conversation.
+
+  This basic structure is useful because it can guarantee a
+  well-structured output (if the LLM does decide to call the
+  function). *Not every LLM can handle function calling, and those that
+  do not will ignore the functions entirely*. The function
+  `llm-capabilities' will return a list with `function-calls' in it if
+  the LLM supports function calls. Right now only Gemini, Vertex and
+  Open AI support function calling. Ollama should get function calling
+  soon. However, even for LLMs that handle function calling, there is a
+  fair bit of difference in the capabilities. Right now, it is possible
+  to write function calls that succeed in Open AI but cause errors in
+  Gemini, because Gemini does not appear to handle functions that have
+  types that contain other types.  So client programs are advised for
+  right now to keep function to simple types.
+
+  The way to call functions is to attach a list of functions to the
+  `llm-function-call' slot in the prompt. This is a list of
+  `llm-function-call' structs, which takes a function, a name, a
+  description, and a list of `llm-function-arg' structs. The docstrings
+  give an explanation of the format.
+
+  The various chat APIs will execute the functions defined in
+  `llm-function-call' with the arguments supplied by the LLM. Instead of
+  returning (or passing to a callback) a string, instead an alist will
+  be returned of function names and return values.
+
+  The client must then send this back to the LLM, to get a textual
+  response from the LLM based on the results of the function call. These
+  have already been added to the prompt, so the client only has to call
+  the LLM again. Gemini and Vertex require this extra call to the LLM,
+  but Open AI does not.
+
+  Be aware that there is no gaurantee that the function will be called
+  correctly.  While the LLMs mostly get this right, they are trained on
+  Javascript functions, so imitating Javascript names is
+  recommended. So, "write_email" is a better name for a function than
+  "write-email".
+
+  Examples can be found in `llm-tester'. There is also a function call
+  to generate function calls from existing elisp functions in
+  `utilities/elisp-to-function-call.el'.
 
 
 5 Contributions
