@@ -14,9 +14,5 @@ This will load and activate the theme.
 Requirements:
 - Emacs 24 or later.
 
-If you are interested in creating a version of the "leuven" theme for dark
-backgrounds, please feel free to contribute.  I am open to integrating dark
-variants into the project to provide more customization options for users.
-
 For more information and updates, visit the theme's GitHub repository at:
 https://github.com/fniessen/emacs-leuven-theme

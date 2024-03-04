@@ -1814,7 +1814,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 9 16)
+	  [(0 9 17)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1823,7 +1823,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "e15265afa0d92af2c189a53eb0d8b7e1f33252f6"))])
+	    (:commit . "f2785979b16a659695d6dc058b8b5af53925b722"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
@@ -3684,16 +3684,16 @@
 	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	    (:url . "https://github.com/Malabarba/speed-of-thought-lisp"))])
  (spacious-padding .
-		   [(0 3 0)
+		   [(0 4 0)
 		    ((emacs
 		      (28 1)))
 		    "Increase the padding/spacing of frames and windows" tar
-		    ((:url . "https://git.sr.ht/~protesilaos/spacious-padding")
+		    ((:url . "https://github.com/protesilaos/spacious-padding")
 		     (:keywords "convenience" "focus" "writing" "presentation")
-		     (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
+		     (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		     (:authors
 		      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		     (:commit . "9d96d301d5bccf192daaf00dba64bca9979dcb5a"))])
+		     (:commit . "227e6144cdd842d7d32b8cb7f587dcb53c0ea82b"))])
  (spinner .
 	  [(1 7 4)
 	   ((emacs
