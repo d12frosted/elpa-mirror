@@ -1376,6 +1376,7 @@
   (emms-mode-line-cycle :url "https://github.com/momomo5717/emms-mode-line-cycle.git")
   (emms-player-mpv-jp-radios :url "https://github.com/momomo5717/emms-player-mpv-jp-radios.git")
   (emms-player-simple-mpv :url "https://github.com/momomo5717/emms-player-simple-mpv.git")
+  (emms-player-spotify :url "https://github.com/sarg/emms-spotify.git")
   (emms-soundcloud :url "https://github.com/ozanmakes/emms-soundcloud.git")
   (emms-state :url "https://github.com/alezost/emms-state.el.git")
   (emoji-cheat-sheet-plus :url "https://github.com/syl20bnr/emacs-emoji-cheat-sheet-plus.git")

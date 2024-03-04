@@ -1,10 +1,10 @@
 This package provides the ability to scrape YouTube, with the results
-displayed in a proced-like buffer.
+displayed in a tabulated list.
 
-Basic functionality includes:
+Core features include:
 
-- Query YouTube
-- Play video url by default using mpv
-- Bookmark/Save video url
+- Executing queries on YouTube
+- Playing video URLs using default mpv
+- Bookmark/Save video url for future reference
 - Download video using yt-dlp
-- A minimal yt-dlp front-end, which is independent of the rest YouTube functionality, to download multiple urls.
+- A standalone, minimalist yt-dlp frontend
