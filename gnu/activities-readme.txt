@@ -5,26 +5,35 @@
 
 [file:https://elpa.gnu.org/packages/activities.svg]
 
-Inspired by Genera's and KDE's concepts of "activities", this library
-allows the user to select an "activity", the loading of which restores a
-window configuration into a `tab-bar' tab or frame, along with the
-buffers shown in each window.  Saving an activity saves the state for
-later restoration.  Switching away from an activity saves the last-used
-state for later switching back to, while still allowing the activity's
-initial or default state to be restored on demand.  Resuming an activity
-loads the last-used state, or the initial/default state when a universal
-argument is provided.
+Inspired by Genera's and KDE's concepts of "activities", this Emacs
+library allows the user to manage frames/tabs, windows, and buffers
+according to their purpose.  An "activity" comprises a frame or tab, its
+window configuration, and the buffers displayed in them–its "state";
+this state would be related to a certain task the user performs at
+various times, such as developing a certain software project, reading
+and writing email, working with one's Org mode system, etc.
 
-The implementation uses the bookmark system to save buffers' states–that
-is, any major mode that supports the bookmark system is compatible.  A
-buffer whose major mode does not support the bookmark system (or does
-not support it well enough to restore useful state) is not compatible
-and can't be fully restored, or perhaps not at all; but solving that is
-as simple as implementing bookmark support for the mode, which is
-usually trivial.
+"Suspending" an activity saves the activity's state and closes its
+frame/tab; the user would do this when finished with the activity's task
+for the time being.  "Resuming" the activity restores its buffers and
+windows to its frame/tab; the user would do this when ready to resume
+the task at a later time.  This saves the user from having to manually
+arrange the same windows and buffers each time the task is to be done.
 
-Integration with Emacs's `tab-bar-mode' is provided: a window
-configuration or can be restored to a `tab-bar' tab or to a frame.
+Each activity saves two states: the default state, set when the activity
+is defined by the user, and the last-used state, which was how the user
+left it when the activity was suspended (or when Emacs exited, etc).
+This allows the user to resume the activity where the task was left off,
+while also allowing it to be reverted to the default state, providing a
+consistent entry point into the activity.
+
+Internally, the Emacs `bookmark' library is used to save and restore
+buffers' states–that is, any major mode that supports the bookmark
+system is compatible.  A buffer whose major mode does not support the
+bookmark system (or does not support it well enough to restore useful
+state) is not compatible and can't be fully restored, or perhaps not at
+all; but solving that is as simple as implementing bookmark support for
+the mode, which is often trivial.
 
 Various hooks are (or will be–feedback is welcome) provided, both
 globally and per-activity, so that the user can define functions to be
@@ -104,6 +113,7 @@ activity.
   │    ("C-x C-a C-k" . activities-kill)
   │    ;; This binding mirrors, e.g. "C-x t RET".
   │    ("C-x C-a RET" . activities-switch)
+  │    ("C-x C-a b" . activities-switch-buffer)
   │    ("C-x C-a g" . activities-revert)
   │    ("C-x C-a l" . activities-list)))
   └────
@@ -224,6 +234,11 @@ activity.
         Revert an activity to its default state.
   `activities-switch' (`C-x C-a RET')
         Switch to an already-active activity.
+  `activities-switch-buffer' (`C-x C-a b')
+        Switch to a buffer associated with the current activity (or,
+        with prefix argument, another activity).
+  `activities-rename'
+        Rename an activity.
   `activities-discard'
         Discard an activity permanently.
   `activities-save-all'
@@ -254,9 +269,10 @@ activity.
   How does this differ from "workspace" packages?
         Yes, there are many Emacs packages that provide "workspace"-like
         features in one way or another.  To date, only Burly and Bufler
-        seem to offer the ability to restore one across Emacs sessions.
-        As mentioned, `activities' is intended to be more refined and
-        easier to use (e.g. automatically saving activities' states when
+        seem to offer the ability to restore one across Emacs sessions,
+        including non-file-backed buffers.  As mentioned, `activities'
+        is intended to be more refined and easier to use
+        (e.g. automatically saving activities' states when
         `activities-mode' is enabled).  Comparisons to other packages
         are left to the reader; suffice to say that `activities' is
         intended to provide what other tools haven't, in an idiomatic,
@@ -303,14 +319,46 @@ activity.
 5 Changelog
 ═══════════
 
-5.1 v0.5.1
+5.1 v0.6
+────────
+
+  *Additions*
+  ⁃ Command `activities-switch-buffer' switches to a buffer associated
+    with the current activity (or, with prefix argument, another
+    activity).  (A buffer is considered to be associated with an
+    activity if it has been displayed in its tab.  Note that this
+    feature currently requires `activities-tabs-mode'.)
+  ⁃ Command `activities-rename' renames an activity.
+  ⁃ Option `activities-after-switch-functions', a hook called after
+    switching to an activity.
+  ⁃ Option `activities-set-frame-name' sets the frame name after
+    switching to an activity.  ([#33].  Thanks to [JD Smith].)
+  ⁃ Option `activities-kill-buffers', when suspending an activity, kills
+    buffers that were only shown in that activity.
+
+  *Changes*
+  ⁃ Default time format in activities list.
+  ⁃ When saving all activities, don't persist to disk for each activity.
+    ([#34].  Thanks to [Al M.] for reporting.)
+
+
+[#33] <https://github.com/alphapapa/activities.el/issues/33>
+
+[JD Smith] <https://github.com/jdtsmith>
+
+[#34] <https://github.com/alphapapa/activities.el/issues/34>
+
+[Al M.] <https://github.com/yrns>
+
+
+5.2 v0.5.1
 ──────────
 
   *Fixes*
   ⁃ Listing activities without last-saved states.
 
 
-5.2 v0.5
+5.3 v0.5
 ────────
 
   *Additions*
@@ -361,7 +409,7 @@ activity.
 [#25] <https://github.com/alphapapa/activity.el/issues/25>
 
 
-5.3 v0.4
+5.4 v0.4
 ────────
 
   *Additions*
@@ -380,7 +428,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.4 v0.3.3
+5.5 v0.3.3
 ──────────
 
   *Fixes*
@@ -395,13 +443,13 @@ activity.
 [fuzy112] <https://github.com/fuzy112>
 
 
-5.5 v0.3.2
+5.6 v0.3.2
 ──────────
 
   Updated documentation, etc.
 
 
-5.6 v0.3.1
+5.7 v0.3.1
 ──────────
 
   *Fixes*
@@ -413,7 +461,7 @@ activity.
 [#7] <https://github.com/alphapapa/activities.el/issues/7>
 
 
-5.7 v0.3
+5.8 v0.3
 ────────
 
   *Additions*
@@ -424,7 +472,7 @@ activity.
   ⁃ Record times at which activities' states were updated.
 
 
-5.8 v0.2
+5.9 v0.2
 ────────
 
   *Additions*
@@ -443,29 +491,29 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.9 v0.1.3
-──────────
+5.10 v0.1.3
+───────────
 
   *Fixes*
   ⁃ Autoloads.
   ⁃ Command aliases.
 
 
-5.10 v0.1.2
+5.11 v0.1.2
 ───────────
 
   *Fixes*
   ⁃ Some single-window configurations were not restored properly.
 
 
-5.11 v0.1.1
+5.12 v0.1.1
 ───────────
 
   *Fixes*
   ⁃ Silence message about non-file-visiting buffers.
 
 
-5.12 v0.1
+5.13 v0.1
 ─────────
 
   Initial release.

@@ -5,9 +5,9 @@ Some of the key features include the following:
 - Ability to pass JVM arguments to the Eclipse JDT LSP server (eglot-java-eclipse-jdt-args)
 - Wizards for Spring, Micronaut, Quarkus, Vert.x, Maven and Gradle project creation
 - Generic build command support for Maven and Gradle projects
-- JUnit tests support, this hasn't been tested for a while...
+- Basic JUnit tests support
 
-eglot-java dynamically modifies  the "eglot-server-programs" variable,
+eglot-java dynamically modifies the "eglot-server-programs" variable,
 you can change that behavior with the variable "eglot-java-eglot-server-programs-manual-updates"
 - you may prefer using directly default jdtls Python script, eglot-java doesn't use that (eglot defaults to jdtls)
 - eglot-java calls the relevant Java command directly, both for historical reasons and for potentially avoiding any Python dependency (Windows, Mac OS)
