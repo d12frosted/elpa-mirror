@@ -8,7 +8,15 @@ headings all the way to the right window edge.
     :after outline
     :config (advice-add 'outline-flag-region :after 'backline-update))
 
-This package should be used together with the `outline-minor-faces'
-package.  Instead setting the built-in `outline-minor-mode-highlight' to
-`append' also works, but then top-level s-expressions are highlighted as
-if they were sections, which makes the overview less readable.
+The above advice requires that `outline-minor-faces-mode' (from the
+`outline-minor-faces' package) is enabled.
+
+  (use-package outline-minor-faces
+    :after outline
+    :config (add-hook 'outline-minor-mode-hook
+                      #'outline-minor-faces-mode))
+
+Do NOT set `outline-minor-mode-highlight' (provided by `outline' since
+Emacs 28.1) to a non-nil value, because that is incompatible with this
+package and `outline-minor-faces' (which is an older and still superior
+alternative).  See `outline-minor-faces' for details.
