@@ -38,7 +38,13 @@ Note a silly limitation: a track may be present in a queue only once
 <https://elpa.gnu.org/packages/listen.html>
 
 
-1 Installation
+1 Screenshots
+═════════════
+
+  <file:images/screenshot-modus-vivendi-tinted.png>
+
+
+2 Installation
 ══════════════
 
   Note that Listen.el uses [VLC] to play audio, so it must be installed.
@@ -50,7 +56,7 @@ Note a silly limitation: a track may be present in a queue only once
 
 [FFmpeg] <https://ffmpeg.org/ffprobe.html>
 
-1.1 GNU ELPA
+2.1 GNU ELPA
 ────────────
 
   Listen.el is published in [GNU ELPA] as [listen], so it may be
@@ -69,7 +75,7 @@ Note a silly limitation: a track may be present in a queue only once
 [ELPA-devel] <https://elpa.gnu.org/devel/listen.html>
 
 
-1.2 Git
+2.2 Git
 ───────
 
   The `master' branch of the Git repository is intended to be usable at
@@ -105,7 +111,7 @@ Note a silly limitation: a track may be present in a queue only once
 [DOOM] <https://github.com/doomemacs/doomemacs>
 
 
-2 Configuration
+3 Configuration
 ═══════════════
 
   Listen is intended to work with little-to-no configuration.  You can
@@ -113,7 +119,7 @@ Note a silly limitation: a track may be present in a queue only once
   it's not at `~/Music'.  See `M-x customize-group RET listen RET'.
 
 
-3 Usage
+4 Usage
 ═══════
 
   Use the command `listen' to show the Transient menu.  From there, it
@@ -121,10 +127,46 @@ Note a silly limitation: a track may be present in a queue only once
   it doesn't seem so.
 
 
-4 Changelog
+5 Changelog
 ═══════════
 
-4.1 v0.4
+5.1 v0.5
+────────
+
+  *Additions*
+  ⁃ Command `listen-queue-list' shows a list of queues.
+  ⁃ Command `listen-jump' (bound to `j' in queue and library buffers)
+    jumps to the track at point in a Dired buffer.
+  ⁃ Command `listen-track-view' shows a track's complete metadata in a
+    table view.
+  ⁃ Mode `listen-queue-delay-mode' plays a queue with a configurable,
+    random delay between tracks.
+  ⁃ Option `listen-queue-repeat-mode' (also settable in `listen-menu')
+    allows repeating a queue in-order or shuffled.
+  ⁃ Option `listen-lighter-extra-functions' allows displaying extra
+    information in the `listen-mode' lighter.
+  ⁃ Option `listen-track-end-functions' allows running functions when a
+    track finishes playing.
+  ⁃ Show total queue duration at bottom of track list.
+  ⁃ Show track ratings in library and queue buffers.
+
+  *Changes*
+  ⁃ All metadata in MP3 and Ogg files is available for display (not only
+    standard tags).
+  ⁃ For date field in library and queue views, show `originalyear' or
+    `originaldate' metadata fields in preference to `date' (which seems
+    generally more useful, as the `date' field may contain a full date,
+    and sometimes of a later release).
+
+  *Fixes*
+  ⁃ Increase timeout for reading track durations.
+  ⁃ Command `listen-queue-deduplicate' first removes any tracks not
+    backed by a file.
+  ⁃ In queue buffer, mark current track by comparing filename (rather
+    than internal track identity).
+
+
+5.2 v0.4
 ────────
 
   *Additions*
@@ -141,7 +183,7 @@ Note a silly limitation: a track may be present in a queue only once
   ⁃ Autoloading of `listen' command.
 
 
-4.2 v0.3
+5.3 v0.3
 ────────
 
   *Additions*
@@ -176,7 +218,7 @@ Note a silly limitation: a track may be present in a queue only once
 [Philip Kaludercic] <https://amodernist.com/>
 
 
-4.3 v0.2
+5.4 v0.2
 ────────
 
   *Additions*
@@ -194,19 +236,19 @@ Note a silly limitation: a track may be present in a queue only once
   ⁃ Update copyright statements in all libraries.
 
 
-4.4 v0.1
+5.5 v0.1
 ────────
 
   Initial release.
 
 
-5 Development
+6 Development
 ═════════════
 
   Feedback and patches are welcome.
 
 
-5.1 Copyright assignment
+6.1 Copyright assignment
 ────────────────────────
 
   Listen.el is published in GNU ELPA and is considered part of GNU
