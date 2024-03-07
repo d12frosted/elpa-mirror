@@ -1814,7 +1814,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 9 17)
+	  [(0 9 18)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1823,7 +1823,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "f2785979b16a659695d6dc058b8b5af53925b722"))])
+	    (:commit . "629b007e75e16d79112358899bdacb04fe9e7d63"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
@@ -3435,14 +3435,14 @@
 	     (:url . "https://elpa.gnu.org/packages/rnc-mode.html")
 	     (:commit . "dfee31d83208b734ed1d1fdc523565d7056db850"))])
  (rt-liberation .
-		[(6)
+		[(7)
 		 nil "Emacs interface to RT" tar
 		 ((:url . "http://www.nongnu.org/rtliber/")
 		  (:keywords "rt" "tickets")
 		  (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 		  (:authors
 		   ("Yoni Rabkin" . "yrk@gnu.org"))
-		  (:commit . "c97eff6716c2438f9052b4641fa6128bf759af96"))])
+		  (:commit . "3b98d22c76de94fae16434517b99525fabc58f31"))])
  (ruby-end .
 	   [(0 4 3)
 	    nil "Automatic insertion of end blocks for Ruby" tar
