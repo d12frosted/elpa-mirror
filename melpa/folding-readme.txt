@@ -3,68 +3,70 @@
 Preface
 
      This package provides a minor mode, compatible with all major
-     editing modes, for folding (hiding) parts of the edited text or
-     program.
+     editing modes, for folding (hiding) parts of the edited text
+     or program.
 
      Folding mode handles a document as a tree, where each branch
-     is bounded by special markers `{{{' and `}}}'. A branch can be
+     is bounded by special markers {{{' and }}}'. A branch can be
      placed inside another branch, creating a complete hierarchical
      structure. The markers:
 
-     o  Are placed to the beginning of line. No spaces.
-     o  Are prefixed by mode comment and space as needed.
-        For example in C++ mode, the beginning marker is: "// {{{"
-        See source code of folding.el and section "Set some useful default
-        fold marks" for full listing of the markers. If you need to
-        customize these markers, modify `folding-mode-marks-alist' after
-        loading this package (See my-folding-load-hook example in this doc).
+     o   Are placed at the beginning of the line. No spaces.
+     o   Are prefixed by mode comment and space as needed.
+         For example, in C++ mode, the beginning marker is: "//
+         {{{". See the source code of folding.el and the section
+         "Set some useful default fold marks" for a full listing of
+         the markers. If you need to customize these markers,
+         modify `folding-mode-marks-alist' after loading this
+         package (See the my-folding-load-hook example in this
+         doc).
 
      Folding mode can CLOSE a fold, leaving only the initial `{{{'
      and possibly a comment visible.
 
      It can also ENTER a fold, which means that only the current
-     fold will be visible, all text above `{{{' and below `}}}'
-     will be invisible.
+     fold will be visible; all text above {{{' and below }}}' will
+     be invisible.
 
-     Please note, that the maintainers do not recommend to use only
-     folding for you your code layout and navigation. Folding.el is
-     on its best when it can "chunk" large sections of code inside
-     folds. The larger the chunks, the more the usability of
-     folding will increase. Folding.el is not meant to hide
-     individual functions: you may be better served by hideshow.el
-     or imenu.el (which can parse the function indexes)
+     Please note that Folding.el is at its best when it can "chunk"
+     large sections of code inside folds. The larger the chunks,
+     the more the usable folding will be. Folding.el is not meant
+     to hide individual functions: you may be better served by
+     other packages like hideshow.el or imenu.el (which can parse
+     the function indexes).
 
 }}}
 {{{ Installation
 
  Installation
 
-     To install Folding mode, put this file (folding.el) on your
-     Emacs `load-path' (or extend the load path to include the
-     directory containing this file) and optionally byte compile it.
+     To install Folding mode, place this file (folding.el) in your
+     Emacs `load-path', such as the directory ~/.emacs.d and
+     optionally byte compile it with `M-x' `byte-compile'.
 
-     The best way to install folding is the autoload installation,
-     so that folding is loaded into your emacs only when you turn on
-     `folding-mode'. This statement speeds up loading your .emacs
+The most efficient way to install folding is to use autoload
+installation so that folding is loaded only when
+`folding-mode' is turned on. Add these statements to your
+Emacs init file. See '(info)Init File' for more information.
 
          (autoload 'folding-mode          "folding" "Folding mode" t)
          (autoload 'turn-off-folding-mode "folding" "Folding mode" t)
          (autoload 'turn-on-folding-mode  "folding" "Folding mode" t)
 
-     But if you always use folding, then perhaps you want more
-     traditional installation. Here Folding mode starts
-     automatically when you load a folded file.
-
-         ;; (setq folding-default-keys-function
-         ;;      'folding-bind-backward-compatible-keys)
+     If you always use folding, then perhaps you want folding to
+     start automatically when you load a folded file:
 
          (if (load "folding" 'nomessage 'noerror)
              (folding-mode-add-find-file-hook))
 
-     Folding uses a keymap which conforms with the new Emacs
-     (started 19.29) style. The key bindings are prefixed with
-     "C-c@" instead of old "C-c". To use the old keyboard bindings,
-     uncomment the lines in the the above installation example
+Folding uses a keymap that conforms with Emacs 19.29 or later.
+The key bindings are prefixed with "C-c@" instead of old
+"C-c". To use the old keyboard bindings, add this:
+
+         (setq folding-default-keys-function
+               'folding-bind-backward-compatible-keys)
+
+ Notes
 
      The same folding marks can be used in `vim' editor command
      "set fdm=marker".
@@ -510,7 +512,7 @@ Preface
  Old documentation
 
      The following text was written by Jamie Lokier for the release
-     of Folding 1.6. It is included here for history.
+     of Folding 1.6 in 1992. It is included here for history.
 
      Emacs 18:
      Folding mode has been tested with versions 18.55 and
@@ -547,9 +549,9 @@ Preface
      exit a fold with the file displayed in two frames. Both
      windows get fronted. Better fix that sometime.
 
- Future features
+ Development ideas
 
-     *** I will add a `folding-next-error' sometime. It will only
+     *** Maybe add `folding-next-error' sometime. It will only
      work with Emacs versions later than 18.58, because compile.el
      in earlier versions does not count line-numbers in the right
      way, when selective display is active.
