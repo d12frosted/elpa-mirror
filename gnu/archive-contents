@@ -469,7 +469,7 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "855a9cb092eecf1e5c17ea56c440a0200f95eb4c"))])
  (cape .
-       [(1 3)
+       [(1 4)
 	((emacs
 	  (27 1))
 	 (compat
@@ -480,7 +480,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "c56cd95f6df003f8928f11e8776d3a9a3eca6890"))])
+	 (:commit . "af61a4e670818f100beb6ef582449931b3965b10"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -641,7 +641,7 @@
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "3809be4d24a301c78d40bd00fc15bb763e0a3a2a"))])
  (consult .
-	  [(1 3)
+	  [(1 4)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -650,7 +650,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "66f7c20899976f23494c7016ce0cd25f1b4ff2e0"))])
+	    (:commit . "0eab65fe3273c97a422c99ee426eef7f2d2dffa4"))])
  (consult-hoogle .
 		 [(0 1 1)
 		  ((emacs

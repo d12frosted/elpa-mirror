@@ -320,8 +320,8 @@ Table of Contents
     properties to a Capf.
   • `cape-capf-purify', `cape-wrap-purify': Purify a broken Capf and
     ensure that it does not modify the buffer.
-  • `cape-capf-silent', `cape-wrap-silent': Wrap a chatty Capf and
-    silence it.
+  • `cape-capf-silent', `cape-wrap-silent': Silence Capf messages and
+    errors.
   • `cape-capf-super', `cape-wrap-super': Merge multiple Capfs into a
     Super-Capf.
 
