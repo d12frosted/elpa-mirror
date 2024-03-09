@@ -3,7 +3,18 @@ Fetcher: git
 Source:  https://git.thanosapollo.org/yeetube
 
 Updating /mnt/store/melpa/working/yeetube/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.thanosapollo.org/yeetube/': Maximum (20) redirects followed
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 5fa23846a66e7a57c0b9bb9894227f4cce3ebe30
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yeetube/
+  to /tmp/yeetubesqSmDW/yeetube-20240307.358
+    yeetube-mpv.el -> yeetube-mpv.el
+    yeetube.el -> yeetube.el
+Created yeetube-20240307.358.tar containing:
+  yeetube-20240307.358/
+  yeetube-20240307.358/yeetube-mpv.el
+  yeetube-20240307.358/yeetube-pkg.el
+  yeetube-20240307.358/yeetube.el
+ ✓ Success:
+  2024-03-09T11:45:45+0000  yeetube-20240307.358.entry
+  2024-03-09T11:45:45+0000  yeetube-20240307.358.tar
+Built yeetube in 4.733s, finished at 2024-03-09T11:45:47+0000

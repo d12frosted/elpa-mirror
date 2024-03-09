@@ -47,9 +47,11 @@ Note a silly limitation: a track may be present in a queue only once
 2 Installation
 ══════════════
 
-  Note that Listen.el uses [VLC] to play audio, so it must be installed.
-  Also, `ffprobe' (part of [FFmpeg]) is used to read track durations
-  when available, but it is not required.
+  *Requirements:*
+  ⁃ Emacs version 29.1 or later.
+  ⁃ [VLC]: used to play audio.
+  ⁃ Optional: `ffprobe' (part of [FFmpeg]) is used to read tracks'
+    duration when available.
 
 
 [VLC] <https://www.videolan.org/vlc/>
@@ -130,7 +132,37 @@ Note a silly limitation: a track may be present in a queue only once
 5 Changelog
 ═══════════
 
-5.1 v0.5
+5.1 v0.6
+────────
+
+  *Additions*
+  ⁃ In library buffer, show disc number when available.
+
+  *Changes*
+  ⁃ Reverting library buffers shows tracks from the queue or MPD query
+    originally selected.
+  ⁃ Command `listen-queue-add-files' no longer plays the queue
+    automatically.
+  ⁃ Command `listen-library-play-or-add' renamed to
+    `listen-library-play', and it now plays the selected queue when
+    playing multiple tracks.
+  ⁃ Face `listen-album' slants italic.
+  ⁃ In library buffer, prefer album-artist over artist tag when
+    available.
+  ⁃ Use half the number of CPUs to read track durations, by default.
+
+  *Fixes*
+  ⁃ Reading new queue name when no queue is playing.
+
+
+5.2 v0.5.1
+──────────
+
+  *Fixes*
+  ⁃ Viewing queues which aren't currently playing.
+
+
+5.3 v0.5
 ────────
 
   *Additions*
@@ -166,7 +198,7 @@ Note a silly limitation: a track may be present in a queue only once
     than internal track identity).
 
 
-5.2 v0.4
+5.4 v0.4
 ────────
 
   *Additions*
@@ -183,7 +215,7 @@ Note a silly limitation: a track may be present in a queue only once
   ⁃ Autoloading of `listen' command.
 
 
-5.3 v0.3
+5.5 v0.3
 ────────
 
   *Additions*
@@ -218,7 +250,7 @@ Note a silly limitation: a track may be present in a queue only once
 [Philip Kaludercic] <https://amodernist.com/>
 
 
-5.4 v0.2
+5.6 v0.2
 ────────
 
   *Additions*
@@ -236,7 +268,7 @@ Note a silly limitation: a track may be present in a queue only once
   ⁃ Update copyright statements in all libraries.
 
 
-5.5 v0.1
+5.7 v0.1
 ────────
 
   Initial release.

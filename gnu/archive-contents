@@ -1173,7 +1173,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20240205)
+      [(20240309)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1182,7 +1182,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "d8261dc70acdd78aa2c32c6a9916630ed90a0423"))])
+	(:commit . "eda749bc689591a8f43a98e002d63b4ef2d4602d"))])
  (ef-themes .
 	    [(1 5 1)
 	     ((emacs
@@ -2282,7 +2282,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (listen .
-	 [(0 5)
+	 [(0 6)
 	  ((emacs
 	    (29 1))
 	   (persist
@@ -2297,7 +2297,7 @@
 	   (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	   (:authors
 	    ("Adam Porter" . "adam@alphapapa.net"))
-	   (:commit . "903990570a19e054f9d7b5878503495955d224a3"))])
+	   (:commit . "644996b00acd09a62c204d68fde3917fe19de189"))])
  (llm .
       [(0 10 0)
        ((emacs
