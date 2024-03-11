@@ -1,6 +1,6 @@
 Run compile in org-mode.
 Example:
-#+begin_src compile :name uname :output (format "compile-%s" (format-time-string "%y%m%d-%H%M%S"))
+#+begin_src compile :name uname :output uname.txt :comint t
 uname -a
 #+end_src
 
