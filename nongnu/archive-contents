@@ -290,6 +290,19 @@
 		(:authors
 		 ("Chris Wanstrath" . "chris@ozmm.org"))
 		(:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
+ (consult-flycheck .
+		   [(1 0)
+		    ((emacs
+		      (27 1))
+		     (consult
+		      (1 0))
+		     (flycheck
+		      (32)))
+		    "Provides the command `consult-flycheck'" tar
+		    ((:url . "https://github.com/minad/consult")
+		     (:keywords "languages" "tools" "completion")
+		     (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+		     (:commit . "0662839aa5db429130f5ffd15c14d4a980b2e694"))])
  (corfu-terminal .
 		 [(0 7)
 		  ((emacs

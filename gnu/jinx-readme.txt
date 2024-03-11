@@ -56,8 +56,8 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
 
   • Debian, Ubuntu: `libenchant-2-dev', `pkgconf'
   • Arch, Gentoo: `enchant', `pkgconf'
-  • Guix: `emacs-jinx' or `enchant', `pkgconf'
-  • NixOS: `jinx' from `elpa-packages.nix'
+  • Guix: `emacs-jinx' defined in `emacs-xyz.scm'
+  • Nix: `jinx' defined in `elpa-packages.nix'
   • Void, Fedora: `enchant2-devel', `pkgconf'
   • OpenSUSE: `emacs-jinx' or `enchant', `pkgconf'
   • FreeBSD, OpenBSD, Mac: `enchant2', `pkgconf'
