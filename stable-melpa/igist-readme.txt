@@ -54,7 +54,7 @@ M-x `igist-kill-all-gists-buffers'
 M-x `igist-list-view-current'
      Fetch tabulated gist entry at point.
 
-M-x `igist-list-edit-gist-at-point' (&optional _entry)
+M-x `igist-list-edit-gist-at-point-async' (&optional _entry)
      Open tabulated GIST-ITEM at point in edit buffer.
 
 M-x `igist-browse-gist'
@@ -80,6 +80,7 @@ M-x `igist-toggle-public' (&rest _)
 
 M-x `igist-list-edit-description' (&rest _)
      Edit description for current gist at point in tabulated list mode.
+
 Comments commands:
 
 M-x `igist-post-comment'
