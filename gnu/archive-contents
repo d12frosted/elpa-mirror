@@ -2529,6 +2529,17 @@
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		 (:commit . "fe08a02c4c0501a984b15af3f8c3c5e4769b93ad"))])
+ (mpdired .
+	  [(1)
+	   ((emacs
+	     (29)))
+	   "A dired-like client for Music Player Daemon" tar
+	   ((:keywords "multimedia")
+	    (:maintainer "Manuel Giraud" . "manuel@ledu-giraud.fr")
+	    (:authors
+	     ("Manuel Giraud" . "manuel@ledu-giraud.fr"))
+	    (:url . "https://elpa.gnu.org/packages/mpdired.html")
+	    (:commit . "c2fb656038e779c010353ecce1623c4b935dbf69"))])
  (multi-mode .
 	     [(1 14)
 	      nil "support for multiple major modes" tar
