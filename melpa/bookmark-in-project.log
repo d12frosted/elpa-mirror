@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-bookmark-in-project.git
 
 Updating /mnt/store/melpa/working/bookmark-in-project/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-bookmark-in-project.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out b3255afd8bddd0e6705fa2556205bf1c1192fc37
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bookmark-in-project/
+  to /tmp/bookmark-in-project5dfe8Z/bookmark-in-project-20230604.757
+    bookmark-in-project.el -> bookmark-in-project.el
+Created bookmark-in-project-20230604.757.tar containing:
+  bookmark-in-project-20230604.757/
+  bookmark-in-project-20230604.757/bookmark-in-project-pkg.el
+  bookmark-in-project-20230604.757/bookmark-in-project.el
+ ✓ Success:
+  2024-03-12T02:42:05+0000  bookmark-in-project-20230604.757.entry
+  2024-03-12T02:42:05+0000  bookmark-in-project-20230604.757.tar
+Built bookmark-in-project in 5.125s, finished at 2024-03-12T02:42:07+0000

@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/fourier/borland-blue-theme.git
 
 Updating /mnt/store/melpa/working/borland-blue-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/fourier/borland-blue-theme.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out db74eefebbc89d3c62575f8f50b319e87b4a3470
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/borland-blue-theme/
+  to /tmp/borland-blue-theme1zA4ia/borland-blue-theme-20160117.1321
+    borland-blue-theme.el -> borland-blue-theme.el
+Created borland-blue-theme-20160117.1321.tar containing:
+  borland-blue-theme-20160117.1321/
+  borland-blue-theme-20160117.1321/borland-blue-theme-pkg.el
+  borland-blue-theme-20160117.1321/borland-blue-theme.el
+ ✓ Success:
+  2024-03-12T02:42:10+0000  borland-blue-theme-20160117.1321.entry
+  2024-03-12T02:42:10+0000  borland-blue-theme-20160117.1321.tar
+Built borland-blue-theme in 4.025s, finished at 2024-03-12T02:42:11+0000
