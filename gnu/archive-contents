@@ -19,7 +19,7 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (activities .
-	     [(0 6)
+	     [(0 7)
 	      ((emacs
 		(29 1))
 	       (persist
@@ -30,7 +30,7 @@
 	       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	       (:authors
 		("Adam Porter" . "adam@alphapapa.net"))
-	       (:commit . "7db998d883e81c044a2a58e1cd6c668f07189c84"))])
+	       (:commit . "b63ccc58fc3b5b3e6ed5b74bf84bd4eff9bb1660"))])
  (ada-mode .
 	   [(8 1 0)
 	    ((uniquify-files
@@ -1831,16 +1831,13 @@
 	      ("Michael R. Mauger" . "michael@mauger.com"))
 	     (:maintainer "Michael R. Mauger" . "michael@mauger.com"))])
  (gtags-mode .
-	     [(1 0)
+	     [(1 1)
 	      ((emacs
 		(28)))
 	      "GNU Global integration with xref, project and imenu." tar
 	      ((:url . "https://github.com/Ergus/gtags-mode")
 	       (:keywords "xref" "project" "imenu" "gtags" "global")
-	       (:maintainer "Jimmy Aguilar Mena")
-	       (:authors
-		("Jimmy Aguilar Mena"))
-	       (:commit . "f108a46c6c03eb5e18c73a908c655071aa153a14"))])
+	       (:commit . "4e0a03dc42dacb0d03c82bce479f765ca2efca52"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib

@@ -106,12 +106,10 @@ activity.
   │ 
   │   :bind
   │   (("C-x C-a C-n" . activities-new)
-  │    ;; As resuming is expected to be one of the most commonly used
-  │    ;; commands, this binding is one of the easiest to press.
+  │    ("C-x C-a C-d" . activities-define)
   │    ("C-x C-a C-a" . activities-resume)
   │    ("C-x C-a C-s" . activities-suspend)
   │    ("C-x C-a C-k" . activities-kill)
-  │    ;; This binding mirrors, e.g. "C-x t RET".
   │    ("C-x C-a RET" . activities-switch)
   │    ("C-x C-a b" . activities-switch-buffer)
   │    ("C-x C-a g" . activities-revert)
@@ -176,8 +174,8 @@ activity.
 
   1. Arrange windows in a tab according to an activity you're
      performing.
-  2. Call `activities-new' (`C-x C-a n') to save the activity under a
-     name.
+  2. Call `activities-define' (`C-x C-a C-d') to save the activity under
+     a name.
   3. Perform the activity for a while.
   4. Change window configuration, change tab, close the tab, or even
      restart Emacs.
@@ -186,8 +184,8 @@ activity.
   6. Return to the original activity state with `activities-revert'
      (`C-x C-a g').
   7. Rearrange windows and buffers.
-  8. Call `activities-new' with a universal prefix argument (`C-u C-x
-     C-a n') to redefine an activity's default state.
+  8. Call `activities-define' with a universal prefix argument (`C-u C-x
+     C-a C-d') to redefine an activity's default state.
   9. Suspend the activity with `activities-suspend' (`C-x C-a s') (which
      saves its last state and closes its frame/tab).
 
@@ -201,10 +199,10 @@ activity.
 
   ⁃ A binding ending in a `C'-prefixed key is expected to result in the
     set of active activities being changed (e.g. defining a new
-    activity, activating one, or deactivating one).
-  ⁃ A binding not ending in a `C'-prefixed key is expected to merely
-    change an active one (e.g. reverting it) or do something else (like
-    listing activities.)
+    activity, switching to one, or suspending one).
+  ⁃ A binding not ending in a `C'-prefixed key is expected to modify an
+    activity (e.g. reverting it) or do something else (like listing
+    activities.)
 
 
 [Configuration] See section 2
@@ -213,12 +211,17 @@ activity.
 3.6 Commands
 ────────────
 
+  /With the recommended bindings:/
+
   `activities-list' (`C-x C-a l')
         List activities in a `vtable' buffer in which they can be
         managed with various commands.
   `activities-new' (`C-x C-a C-n')
+        Switch to a new, empty activity (i.e. one showing a new
+        frame/tab).
+  `activities-define' (`C-x C-a C-d')
         Define a new activity whose default state is the current frame's
-        or tab's window configuration.  With prefix argument, overwrite
+        or tab's window configuration.  With prefix argument, redefine
         an existing activity (thereby updating its default state to the
         current state).
   `activities-suspend' (`C-x C-a C-s')
@@ -319,7 +322,28 @@ activity.
 5 Changelog
 ═══════════
 
-5.1 v0.6
+5.1 v0.7
+────────
+
+  *Additions*
+  ⁃ Command `activities-new' switches to a new, "empty" activity.  (See
+    [#46].)
+
+  *Changes*
+  ⁃ Command `activities-new' renamed to `activities-define', with new
+    binding `C-x C-a C-d'.  (See [#46].)
+  ⁃ Improve error message when jumping to a buffer's bookmark signals an
+    error.
+
+  *Fixes*
+  ⁃ Suspending/killing an activity when only one frame/tab is open.
+  ⁃ Generation of Info manual on GNU ELPA.  (Thanks to Stefan Monnier.)
+
+
+[#46] <https://github.com/alphapapa/activities.el/issues/46>
+
+
+5.2 v0.6
 ────────
 
   *Additions*
@@ -351,14 +375,14 @@ activity.
 [Al M.] <https://github.com/yrns>
 
 
-5.2 v0.5.1
+5.3 v0.5.1
 ──────────
 
   *Fixes*
   ⁃ Listing activities without last-saved states.
 
 
-5.3 v0.5
+5.4 v0.5
 ────────
 
   *Additions*
@@ -409,7 +433,7 @@ activity.
 [#25] <https://github.com/alphapapa/activity.el/issues/25>
 
 
-5.4 v0.4
+5.5 v0.4
 ────────
 
   *Additions*
@@ -428,7 +452,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.5 v0.3.3
+5.6 v0.3.3
 ──────────
 
   *Fixes*
@@ -443,13 +467,13 @@ activity.
 [fuzy112] <https://github.com/fuzy112>
 
 
-5.6 v0.3.2
+5.7 v0.3.2
 ──────────
 
   Updated documentation, etc.
 
 
-5.7 v0.3.1
+5.8 v0.3.1
 ──────────
 
   *Fixes*
@@ -461,7 +485,7 @@ activity.
 [#7] <https://github.com/alphapapa/activities.el/issues/7>
 
 
-5.8 v0.3
+5.9 v0.3
 ────────
 
   *Additions*
@@ -472,8 +496,8 @@ activity.
   ⁃ Record times at which activities' states were updated.
 
 
-5.9 v0.2
-────────
+5.10 v0.2
+─────────
 
   *Additions*
   ⁃ Offer current `project' name by default for new activities.  (Thanks
@@ -491,7 +515,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.10 v0.1.3
+5.11 v0.1.3
 ───────────
 
   *Fixes*
@@ -499,21 +523,21 @@ activity.
   ⁃ Command aliases.
 
 
-5.11 v0.1.2
+5.12 v0.1.2
 ───────────
 
   *Fixes*
   ⁃ Some single-window configurations were not restored properly.
 
 
-5.12 v0.1.1
+5.13 v0.1.1
 ───────────
 
   *Fixes*
   ⁃ Silence message about non-file-visiting buffers.
 
 
-5.13 v0.1
+5.14 v0.1
 ─────────
 
   Initial release.
