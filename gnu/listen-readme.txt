@@ -3,6 +3,18 @@
                               ━━━━━━━━━━━
 
 
+Table of Contents
+─────────────────
+
+1. Contents
+2. Screenshots
+3. Installation
+4. Configuration
+5. Usage
+6. Changelog
+7. Development
+
+
 [https://elpa.gnu.org/packages/listen.svg]
 
 This package aims to provide a simple audio/music player for Emacs.  It
@@ -35,22 +47,33 @@ Note a silly limitation: a track may be present in a queue only once
 
 
 [https://elpa.gnu.org/packages/listen.svg]
-<https://elpa.gnu.org/packages/listen.html>
+<file:https:/elpa.gnu.org/packages/listen.html>
 
 
-1 Screenshots
+1 Contents
+══════════
+
+  • 
+  • 
+  • 
+  • 
+  • 
+  • 
+
+
+2 Screenshots
 ═════════════
 
   <file:images/screenshot-modus-vivendi-tinted.png>
 
 
-2 Installation
+3 Installation
 ══════════════
 
   *Requirements:*
-  ⁃ Emacs version 29.1 or later.
-  ⁃ [VLC]: used to play audio.
-  ⁃ Optional: `ffprobe' (part of [FFmpeg]) is used to read tracks'
+  • Emacs version 29.1 or later.
+  • [VLC]: used to play audio.
+  • Optional: `ffprobe' (part of [FFmpeg]) is used to read tracks'
     duration when available.
 
 
@@ -58,8 +81,8 @@ Note a silly limitation: a track may be present in a queue only once
 
 [FFmpeg] <https://ffmpeg.org/ffprobe.html>
 
-2.1 GNU ELPA
-────────────
+GNU ELPA
+────────
 
   Listen.el is published in [GNU ELPA] as [listen], so it may be
   installed in Emacs with the command `M-x package-install RET listen
@@ -77,8 +100,8 @@ Note a silly limitation: a track may be present in a queue only once
 [ELPA-devel] <https://elpa.gnu.org/devel/listen.html>
 
 
-2.2 Git
-───────
+Git
+───
 
   The `master' branch of the Git repository is intended to be usable at
   all times; only minor bugs are expected to be found in it before a new
@@ -113,7 +136,7 @@ Note a silly limitation: a track may be present in a queue only once
 [DOOM] <https://github.com/doomemacs/doomemacs>
 
 
-3 Configuration
+4 Configuration
 ═══════════════
 
   Listen is intended to work with little-to-no configuration.  You can
@@ -121,167 +144,485 @@ Note a silly limitation: a track may be present in a queue only once
   it's not at `~/Music'.  See `M-x customize-group RET listen RET'.
 
 
-4 Usage
+5 Usage
 ═══════
 
   Use the command `listen' to show the Transient menu.  From there, it
   is–hopefully–self-explanatory.  Please feel free to give feedback if
-  it doesn't seem so.
+  it doesn't seem so.  For more information, see the following sections.
+
+  • 
+  • 
+  • 
+  • 
+  • 
 
 
-5 Changelog
+Queues
+──────
+
+  While `listen' can simply play one track and stop, playing multiple
+  tracks sequentially is provided by /queues/ (what other players may
+  call /playlists/).  A queue is a list of tracks, each of which is
+  backed by a file on disk, and which may have associated metadata
+  (provided by reading the file in Emacs with the `listen-info' library,
+  or from an external source, like an MPD server).
+
+  Queues are automatically persisted to disk in the variable
+  `listen-queues'.
+
+  A new, empty queue may be made with the command `listen-queue-new',
+  but it's usually more convenient to use a command that adds tracks to
+  a queue and enter a new queue name.
+
+  A queue's tracks may be de-duplicated using the command
+  `listen-queue-deduplicate'.  Tracks that appear to have the same
+  metadata (artist, album, and title, compared case-insensitively) are
+  de-duplicated.  Also, any tracks no longer backed by a file are
+  removed.
+
+
+Adding tracks to a queue
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Tracks can be added to a queue from various sources using these
+  commands:
+
+  • Files and directories: `listen-queue-add-files'.  Individual files
+    may be chosen, or a directory may be, which will be searched
+    recursively for tracks, which are added to the selected queue.
+  • From an MPD server: `listen-queue-add-from-mpd'.  An MPD search
+    query will be read with completion, and matching tracks are added to
+    the selected queue.
+  • From a playlist file: `listen-queue-add-from-playlist-file'.  The
+    playlist file is read, and its tracks are added to the selected
+    queue.
+
+
+Queue buffer
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+  A queue may be shown in a buffer with the command `listen-queue',
+  which shows its tracks in a [vtable] with columns for metadata and
+  filename.
+
+
+[vtable] <info:vtable#Introduction>
+
+◊ Commands
+
+  In the buffer, you can use these commands:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Listen to track  `listen-queue-play' (`RET') 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Move point forward/backward    `forward-line' (`n') / `previous-line' (`p') 
+   Move track forward             `listen-queue-transpose-forward' (`N')       
+   Move track backward            `listen-queue-transpose-backward' (`P')      
+   Kill track                     `listen-queue-kill-track' (`C-k')            
+   Yank track                     `listen-queue-yank' (`C-y')                  
+   Show track's metadata          `listen-view-track' (`m')                    
+   Jump to track's file in Dired  `listen-jump' (`j')                          
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Show tracks (at point or selected) in library buffer  `listen-library-from-queue' (`l')  
+   Run shell command on tracks (at point or selected)    `listen-queue-shell-command' (`!') 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Order the queue by column at point  `listen-queue-order-by' (`o') 
+   Shuffle the queue                   `listen-queue-shuffle' (`s')  
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Revert the queue buffer          `listen-queue-revert' (`g') 
+   Revert queue's tracks from disk  `C-u g'                     
+   Pause the player                 `listen-pause' (`SPC')      
+   Show the menu                    `listen-menu' (`?')         
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+◊ Bookmarks
+
+  Queue buffers may be bookmarked with `bookmark-set' (`C-x r m').  The
+  bookmark record refers to the queue by name, so if the queue is
+  renamed or discarded, the bookmark will remain.
+
+
+Queue list buffer
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The queue list buffer may be shown with the command
+  `listen-queue-list'.  In the list buffer, you can use these commands:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Show queue's buffer  `listen-queue' (`RET') 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Move point forward/backward            `forward-line' (`n') / `previous-line' (`p') 
+   Rename a queue                         `listen-queue-rename' (`R')                  
+   Discard a queue                        `listen-queue-discard' (`C-k')               
+   Show queue's tracks in library buffer  `listen-library-from-queue' (`l')            
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Revert the queue list  `listen-queue-list' (`g') 
+   Pause the player       `listen-pause' (`SPC')    
+   Show the menu          `listen-menu' (`?')       
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Library
+───────
+
+  To help with exploring and managing a music library, `listen' provides
+  various "library" features.  Tracks can be passed between library and
+  queue buffers and operated on with similar commands and bindings.
+
+  `listen' does not maintain its own database of audio files; they are
+  simply read from the filesystem as needed.  But if a local MPD server
+  is available, tracks can be loaded from its database (which does a
+  fine job of indexing audio files and their metadata); this is
+  generally much faster, because it avoids having to read tracks'
+  metadata with Emacs Lisp or their durations with `ffprobe'.
+
+  `listen' does not provide features to modify tracks' metadata, but it
+  provides commands to run shell commands on tracks' filenames, which
+  works well with external tools like [Picard].
+
+
+[Picard] <https://picard.musicbrainz.org/>
+
+Library buffer
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  A library buffer provides a hierarchical view of tracks grouped by
+  their metadata using [Taxy], rendered with [Magit Section].  Each
+  section can be folded, and it shows the number of tracks in it and its
+  subgroups.
+
+
+[Taxy] <info:taxy#Top>
+
+[Magit Section] <info:magit-section#Top>
+
+◊ Showing a library buffer
+
+  Tracks from various sources can be shown in a library using these
+  commands:
+
+  • Files and directories: `listen-library'.  Individual files may be
+    chosen, or a directory may be, which will be searched recursively
+    for tracks.
+  • From an MPD server: `listen-library-from-mpd'.  An MPD search query
+    will be read with completion, and matching tracks are read from the
+    MPD server.
+  • From a playlist file: `listen-library-from-playlist-file'.  Tracks
+    are read from the given playlist file.
+
+
+◊ Commands
+
+  In the library buffer, you can use these commands:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Listen to tracks     `listen-library-play' (`RET')   
+   Add tracks to queue  `listen-library-to-queue' (`a') 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Move point forward/backward    `forward-line' (`n') / `previous-line' (`p') 
+   Show track's metadata          `listen-library-view-track' (`m')            
+   Jump to track's file in Dired  `listen-library-jump' (`j')                  
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Run shell command on tracks  `listen-library-shell-command' (`!') 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Revert the library buffer  `listen-library-revert' (`g') 
+   Pause the player           `listen-pause' (`SPC')        
+   Show the menu              `listen-menu' (`?')           
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+◊ Bookmarks
+
+  Library buffers may be bookmarked with `bookmark-set' (`C-x r m').
+  The bookmark record refers to the buffer by the way it was created
+  (e.g. the filename paths, queue name, MPD query, or playlist file the
+  tracks came from), so jumping to the bookmark will show an updated
+  view, as if calling the original command with the same arguments.
+
+
+Players
+───────
+
+  `listen' currently supports audio playback via the VLC backend.
+  Internally, any number of simultaneous player instances could be
+  controlled, but `listen''s UI provides the means to control one at a
+  time.
+
+  Controlling the player is mainly done through the main [Transient]
+  menu, through the command `listen'.  However, all of the commands
+  provided in it are also available as interactive commands, which could
+  be bound by the user in any keymap (see, e.g. [M-x apropos-command RET
+  ^listen- RET]).
+
+  The player is run in a child process, which is started when playback
+  begins.  The `listen-quit' command terminates the player process.
+
+
+[Transient] <info:transient#Top>
+
+[M-x apropos-command RET ^listen- RET] <elisp:(apropos-command
+"^listen-")>
+
+Volume
+╌╌╌╌╌╌
+
+  The `listen-volume' command is used to set the current player's
+  volume.  Its argument should be an integer percentage.  Some players,
+  e.g. VLC, may allow settings above 100% to boost output beyond normal
+  levels.
+
+
+Seeking
+╌╌╌╌╌╌╌
+
+  The `listen-seek' command is used to seek to a position in the current
+  track.  Its argument should be a timestamp in MM:SS format, and it may
+  include a `-' or `+' prefix to indicate a position relative to the
+  current one.
+
+
+Repeat modes
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Three repeat modes are provided, controlled by the option
+  `listen-queue-repeat-mode', which may have these values:
+
+  `nil'
+        No repeating.  When the last track in the current queue finishes
+        playing, playback stops.
+  `queue'
+        The current queue is repeated when its last track finishes
+        playing.
+  `shuffle'
+        When the last track in the current queue finishes playing, the
+        queue is shuffled and played again.
+
+  The repeat mode is most easily set using the commands in the `listen'
+  menu.
+
+
+Mode
+────
+
+  The `listen-mode' minor mode runs a timer which plays the next track
+  in the current queue when a track finishes playing (when playing a
+  queue).  It is automatically activated when playing a queue.  It also
+  shows the current track in the `global-mode-string', which may be
+  displayed in the mode line or tab bar.
+
+
+Tips
+────
+
+  • Since VLC is used as a backend, [MPRIS]-based player info and
+    controls "just work", so you can use things like media hotkeys and
+    various widgets to control `listen''s playback.
+  • Similarly, you might even see an icon in your task switcher
+    indicating that Emacs is playing sound (e.g. with KDE Plasma).
+
+
+[MPRIS] <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>
+
+
+6 Changelog
 ═══════════
 
-5.1 v0.6
-────────
+v0.7
+────
 
   *Additions*
-  ⁃ In library buffer, show disc number when available.
+  • Info manual.
+  • Option `listen-lighter-format' now allows customizing the mode line
+    lighter.
 
   *Changes*
-  ⁃ Reverting library buffers shows tracks from the queue or MPD query
+  • Command `listen-queue' switches to existing queue buffers without
+    reverting them.
+  • Transient `qq' command exits the transient.
+  • Optimize updating of individual tracks in queue buffer.
+  • Improve handling of maximum volume with VLC (allowing boosting over
+    100%).
+  • Library buffer name defaults to given path.
+  • Minor improvements to Transient menu.
+
+  *Fixes*
+  • When reverting a queue's tracks from disk, re-detect the currently
+    playing track by filename.
+  • Queue bookmark handler.
+  • Open library buffer with point at beginning.
+  • In queue buffer, sort track numbers numerically.
+
+
+v0.6
+────
+
+  *Additions*
+  • In library buffer, show disc number when available.
+
+  *Changes*
+  • Reverting library buffers shows tracks from the queue or MPD query
     originally selected.
-  ⁃ Command `listen-queue-add-files' no longer plays the queue
+  • Command `listen-queue-add-files' no longer plays the queue
     automatically.
-  ⁃ Command `listen-library-play-or-add' renamed to
+  • Command `listen-library-play-or-add' renamed to
     `listen-library-play', and it now plays the selected queue when
     playing multiple tracks.
-  ⁃ Face `listen-album' slants italic.
-  ⁃ In library buffer, prefer album-artist over artist tag when
+  • Face `listen-album' slants italic.
+  • In library buffer, prefer album-artist over artist tag when
     available.
-  ⁃ Use half the number of CPUs to read track durations, by default.
+  • Use half the number of CPUs to read track durations, by default.
 
   *Fixes*
-  ⁃ Reading new queue name when no queue is playing.
+  • Reading new queue name when no queue is playing.
 
 
-5.2 v0.5.1
-──────────
+v0.5.1
+──────
 
   *Fixes*
-  ⁃ Viewing queues which aren't currently playing.
+  • Viewing queues which aren't currently playing.
 
 
-5.3 v0.5
-────────
+v0.5
+────
 
   *Additions*
-  ⁃ Command `listen-queue-list' shows a list of queues.
-  ⁃ Command `listen-jump' (bound to `j' in queue and library buffers)
+  • Command `listen-queue-list' shows a list of queues.
+  • Command `listen-jump' (bound to `j' in queue and library buffers)
     jumps to the track at point in a Dired buffer.
-  ⁃ Command `listen-track-view' shows a track's complete metadata in a
+  • Command `listen-track-view' shows a track's complete metadata in a
     table view.
-  ⁃ Mode `listen-queue-delay-mode' plays a queue with a configurable,
+  • Mode `listen-queue-delay-mode' plays a queue with a configurable,
     random delay between tracks.
-  ⁃ Option `listen-queue-repeat-mode' (also settable in `listen-menu')
+  • Option `listen-queue-repeat-mode' (also settable in `listen-menu')
     allows repeating a queue in-order or shuffled.
-  ⁃ Option `listen-lighter-extra-functions' allows displaying extra
+  • Option `listen-lighter-extra-functions' allows displaying extra
     information in the `listen-mode' lighter.
-  ⁃ Option `listen-track-end-functions' allows running functions when a
+  • Option `listen-track-end-functions' allows running functions when a
     track finishes playing.
-  ⁃ Show total queue duration at bottom of track list.
-  ⁃ Show track ratings in library and queue buffers.
+  • Show total queue duration at bottom of track list.
+  • Show track ratings in library and queue buffers.
 
   *Changes*
-  ⁃ All metadata in MP3 and Ogg files is available for display (not only
+  • All metadata in MP3 and Ogg files is available for display (not only
     standard tags).
-  ⁃ For date field in library and queue views, show `originalyear' or
+  • For date field in library and queue views, show `originalyear' or
     `originaldate' metadata fields in preference to `date' (which seems
     generally more useful, as the `date' field may contain a full date,
     and sometimes of a later release).
 
   *Fixes*
-  ⁃ Increase timeout for reading track durations.
-  ⁃ Command `listen-queue-deduplicate' first removes any tracks not
+  • Increase timeout for reading track durations.
+  • Command `listen-queue-deduplicate' first removes any tracks not
     backed by a file.
-  ⁃ In queue buffer, mark current track by comparing filename (rather
+  • In queue buffer, mark current track by comparing filename (rather
     than internal track identity).
 
 
-5.4 v0.4
-────────
+v0.4
+────
 
   *Additions*
-  ⁃ Command `listen-queue-deduplicate' removes duplicate tracks from a
+  • Command `listen-queue-deduplicate' removes duplicate tracks from a
     queue (by comparing artist, album, and title metadata
     case-insensitively).
-  ⁃ Read track durations with `ffprobe' and show in library and queue
+  • Read track durations with `ffprobe' and show in library and queue
     views.
-  ⁃ Bound key `?' to open the `listen' Transient menu in library and
+  • Bound key `?' to open the `listen' Transient menu in library and
     queue views.
 
   *Fixes*
-  ⁃ Transposing a track in a queue keeps point on the track.
-  ⁃ Autoloading of `listen' command.
+  • Transposing a track in a queue keeps point on the track.
+  • Autoloading of `listen' command.
 
 
-5.5 v0.3
-────────
+v0.3
+────
 
   *Additions*
-  ⁃ Command `listen-library-from-mpd' shows tracks selected from MPD in
+  • Command `listen-library-from-mpd' shows tracks selected from MPD in
     a library view.
-  ⁃ Command `listen-library-from-queue' shows tracks selected from a
+  • Command `listen-library-from-queue' shows tracks selected from a
     queue buffer in a library view.
-  ⁃ Command `listen-library-from-playlist-file' shows tracks from an M3U
+  • Command `listen-library-from-playlist-file' shows tracks from an M3U
     playlist in a library view.
-  ⁃ Command `listen-queue-add-from-playlist-file' adds tracks from an
+  • Command `listen-queue-add-from-playlist-file' adds tracks from an
     M3U playlist file to a queue.
 
   *Changes*
-  ⁃ Reading tracks from MPD allows multiple selection using
+  • Reading tracks from MPD allows multiple selection using
     `completing-read-multiple'.
-  ⁃ Various improvements in robustness.
-  ⁃ Command `listen-queue' doesn't recreate its buffer when already
+  • Various improvements in robustness.
+  • Command `listen-queue' doesn't recreate its buffer when already
     open.
-  ⁃ Key bindings in `listen' Transient menu.
-  ⁃ Function `listen-queue-complete' accepts argument `:allow-new-p' to
+  • Key bindings in `listen' Transient menu.
+  • Function `listen-queue-complete' accepts argument `:allow-new-p' to
     return a new queue if the entered name doesn't match an existing
     one.
 
   *Fixes*
-  ⁃ Completing read of tracks from MPD.
-  ⁃ Unset VLC process's query-on-exit flag.
+  • Completing read of tracks from MPD.
+  • Unset VLC process's query-on-exit flag.
 
   *Credits*
-  ⁃ Thanks to [Philip Kaludercic] for reviewing.
+  • Thanks to [Philip Kaludercic] for reviewing.
 
 
 [Philip Kaludercic] <https://amodernist.com/>
 
 
-5.6 v0.2
-────────
+v0.2
+────
 
   *Additions*
-  ⁃ Command `listen-queue-jump' jumps to the currently playing track in
+  • Command `listen-queue-jump' jumps to the currently playing track in
     the queue.
-  ⁃ Command `listen-queue-shell-command' runs a shell command on the
+  • Command `listen-queue-shell-command' runs a shell command on the
     tracks selected in the queue.
-  ⁃ Reverting a queue buffer with universal prefix argument refreshes
+  • Reverting a queue buffer with universal prefix argument refreshes
     the tracks' metadata from disk.
 
   *Fixes*
-  ⁃ The queue could sometimes skip tracks when playing.
-  ⁃ Improve handling of tracks that are changed during playback
+  • The queue could sometimes skip tracks when playing.
+  • Improve handling of tracks that are changed during playback
     (e.g. metadata).
-  ⁃ Update copyright statements in all libraries.
+  • Update copyright statements in all libraries.
 
 
-5.7 v0.1
-────────
+v0.1
+────
 
   Initial release.
 
 
-6 Development
+7 Development
 ═════════════
 
   Feedback and patches are welcome.
 
 
-6.1 Copyright assignment
-────────────────────────
+Copyright assignment
+────────────────────
 
   Listen.el is published in GNU ELPA and is considered part of GNU
   Emacs.  Therefore, cumulative contributions of more than 15 lines of

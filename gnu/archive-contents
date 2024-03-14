@@ -2275,7 +2275,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (listen .
-	 [(0 6)
+	 [(0 7)
 	  ((emacs
 	    (29 1))
 	   (persist
@@ -2283,14 +2283,16 @@
 	   (taxy
 	    (0 10))
 	   (taxy-magit-section
-	    (0 13)))
+	    (0 13))
+	   (transient
+	    (0 5 3)))
 	  "Audio/Music player" tar
 	  ((:url . "https://github.com/alphapapa/listen.el")
 	   (:keywords "multimedia")
 	   (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	   (:authors
 	    ("Adam Porter" . "adam@alphapapa.net"))
-	   (:commit . "644996b00acd09a62c204d68fde3917fe19de189"))])
+	   (:commit . "457083ca85a263831ab8fb386f285b27759cf822"))])
  (llm .
       [(0 10 0)
        ((emacs
