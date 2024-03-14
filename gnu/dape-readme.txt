@@ -3,16 +3,24 @@
                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Use `dape-configs' to set up your debug adapter configurations.  To
-initiate debugging sessions, use the command `dape'.
+`Dape' is a debug adapter client for Emacs. The debug adapter protocol,
+much like its more well-known counterpart, the language server protocol,
+aims to establish a common API for programming tools. However, instead
+of functionalities such as code completions, it provides a standardized
+interface for debuggers.
 
-For complete functionality, activate `eldoc-mode' in your source buffers
-and enable `repeat-mode' for ergonomics.
+To begin a debugging session, invoke the `dape' command. In the
+minibuffer prompt, enter a debug adapter configuration name from
+`dape-configs'.
+
+For complete functionality, make sure to enable `eldoc-mode' in your
+source buffers and `repeat-mode' for more pleasant key mappings.
 
 
 1 Features
 ══════════
 
+  ⁃ Batteries included support (`describe-variable' `dape-configs')
   ⁃ Log breakpoints
   ⁃ Conditional breakpoints
   ⁃ Variable explorer
@@ -20,12 +28,10 @@ and enable `repeat-mode' for ergonomics.
   ⁃ Variable hover with `eldoc'
   ⁃ REPL
   ⁃ gdb-mi.el like interface
-  ⁃ Memory viewer with `hexl'
-  ⁃ `compile' integration
+  ⁃ Memory editor with `hexl'
+  ⁃ Integration with `compile'
   ⁃ Debug adapter configuration ergonomics
-  ⁃ No dependencies (except for jsonrpc which is part of emacs but
-    needed version is not part of latest stable emacs release 29.1-1 but
-    available on elpa)
+  ⁃ No external dependencies outside of core Emacs
 
   With `(setq dape-buffer-window-arrangement 'right)':
   <https://raw.githubusercontent.com/svaante/dape/resources/dape_0_4_0_right.png>
@@ -44,17 +50,34 @@ and enable `repeat-mode' for ergonomics.
 2 Configuration
 ═══════════════
 
-  Currently `Dape' does not come with any debug adapter configuration.
+  `Dape' includes pre-defined debug adapter configurations for various
+  programming languages. Refer to `dape-configs' for more details. If
+  `dape' doesn't include a configuration suitable for your needs, you
+  can implement your own.
 
   ┌────
   │ (use-package dape
+  │   :preface
+  │   ;; By default dape shares the same keybinding prefix as `gud'
+  │   ;; If you do not want to use any prefix, set it to nil.
+  │   ;; (setq dape-key-prefix "\C-x\C-a")
+  │ 
+  │   :hook
+  │   ;; Save breakpoints on quit
+  │   ;; ((kill-emacs . dape-breakpoint-save)
+  │   ;; Load breakpoints on startup
+  │   ;;  (after-init . dape-breakpoint-load))
+  │ 
+  │   :init
   │   ;; To use window configuration like gud (gdb-mi)
-  │   ;; :init
   │   ;; (setq dape-buffer-window-arrangement 'gud)
   │ 
   │   :config
   │   ;; Info buffers to the right
   │   ;; (setq dape-buffer-window-arrangement 'right)
+  │ 
+  │   ;; Global bindings for setting breakpoints with mouse
+  │   ;; (dape-breakpoint-global-mode)
   │ 
   │   ;; To not display info and/or buffers on startup
   │   ;; (remove-hook 'dape-on-start-hooks 'dape-info)
@@ -64,17 +87,11 @@ and enable `repeat-mode' for ergonomics.
   │   ;; (add-hook 'dape-on-stopped-hooks 'dape-info)
   │   ;; (add-hook 'dape-on-stopped-hooks 'dape-repl)
   │ 
-  │   ;; By default dape uses gdb keybinding prefix
-  │   ;; If you do not want to use any prefix, set it to nil.
-  │   ;; (setq dape-key-prefix "\C-x\C-a")
-  │ 
   │   ;; Kill compile buffer on build success
   │   ;; (add-hook 'dape-compile-compile-hooks 'kill-buffer)
   │ 
   │   ;; Save buffers on startup, useful for interpreted languages
-  │   ;; (add-hook 'dape-on-start-hooks
-  │   ;;           (defun dape--save-on-start ()
-  │   ;;             (save-some-buffers t t)))
+  │   ;; (add-hook 'dape-on-start-hooks (lambda () (save-some-buffers t t)))
   │ 
   │   ;; Projectile users
   │   ;; (setq dape-cwd-fn 'projectile-project-root)
@@ -85,22 +102,21 @@ and enable `repeat-mode' for ergonomics.
 3 Differences with dap-mode
 ═══════════════════════════
 
-  Dape has no dependencies outside of packages included in emacs, and
-  tries to use get as much out of them possible.
+  Dape has no dependencies outside of core Emacs packages, and tries to
+  use get as much out of them possible.
 
   Dape takes a slightly different approach to configuration.
-  ⁃ Dape does not support `launch.json' files, if per project
-    configuration is needed use `dir-locals'.
-  ⁃ Tries to simplify configuration, by having just a plist.
-  ⁃ Dape tries to improve config ergonomics in `dape' completing-read by
-    using options to change/add plist entries in an already existing
-    config, example:
-    `adapter-config :program ＂/home/user/b.out＂ compile ＂gcc -g -o
+  ⁃ `Dape' does not support `launch.json' files, if per project
+    configuration is needed use `dir-locals' and `dape-command'.
+  ⁃ `Dape' enhances ergonomics within the minibuffer by allowing users
+    to modify or add PLIST entries to an existing configuration using
+    options. For example `dape-config :cwd
+    default-directory :program ＂/home/user/b.out＂ :compile ＂gcc -g -o
     b.out main.c＂'.
-  ⁃ No magic, no special variables. Instead, functions and variables are
-    resolved before starting a new session.
+  ⁃ No magic, no special variables like `${workspaceFolder}'. Instead,
+    functions and variables are resolved before starting a new session.
   ⁃ Tries to be envision to how debug adapter configuration would be
-    implemented in emacs if vscode never existed.
+    implemented in Emacs if vscode never existed.
 
 
 4 Supported debug adapters
@@ -138,7 +154,18 @@ and enable `repeat-mode' for ergonomics.
 <https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md>
 
 
-4.3 C, C++ and Rust - codelldb
+4.3 C, C++, Rust, and more - GDB
+────────────────────────────────
+
+  Ensure that your GDB version is 14.1 or newer.  For further details,
+  consult the [documentation].
+
+
+[documentation]
+<https://sourceware.org/gdb/current/onlinedocs/gdb.html/Debugger-Adapter-Protocol.html>
+
+
+4.4 C, C++ and Rust - codelldb
 ──────────────────────────────
 
   1. Download latest `vsix' [release] for your platform
@@ -155,7 +182,7 @@ and enable `repeat-mode' for ergonomics.
 [manual] <https://github.com/vadimcn/codelldb/blob/v1.10.0/MANUAL.md>
 
 
-4.4 C and C++ - cpptools
+4.5 C and C++ - cpptools
 ────────────────────────
 
   Download latesnd unpack `vsix' file with your favorite unzipper.
@@ -178,7 +205,7 @@ and enable `repeat-mode' for ergonomics.
 [options] <https://code.visualstudio.com/docs/cpp/launch-json-reference>
 
 
-4.5 Python - debugpy
+4.6 Python - debugpy
 ────────────────────
 
   Install debugpy with pip `pip install debugpy'
@@ -190,34 +217,34 @@ and enable `repeat-mode' for ergonomics.
 <https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings>
 
 
-4.6 Godot
+4.7 Godot
 ─────────
 
-  Configure debug adapter port under "Editor" -> "Editor Settings" ->
+  Configure debug adapter port under "Editor" > "Editor Settings" >
   "Debug Adapter".
 
 
-4.7 Dart - flutter
+4.8 Dart - flutter
 ──────────────────
 
   See for installation <https://docs.flutter.dev/get-started/install>
 
 
-4.8 C# - netcoredbg
+4.9 C# - netcoredbg
 ───────────────────
 
   See <https://github.com/Samsung/netcoredbg> for installation
 
 
-4.9 Ruby - rdbg
-───────────────
+4.10 Ruby - rdbg
+────────────────
 
   Install with `gem install debug'.
 
   See <https://github.com/ruby/debug> for more information
 
 
-4.10 Java - JDTLS with Java Debug Server plugin
+4.11 Java - JDTLS with Java Debug Server plugin
 ───────────────────────────────────────────────
 
   See <https://github.com/eclipse-jdtls/eclipse.jdt.ls> for installation
@@ -234,7 +261,7 @@ and enable `repeat-mode' for ergonomics.
   └────
 
 
-4.11 Other untested adapters
+4.12 Other untested adapters
 ────────────────────────────
 
   If you find a working configuration for any other debug adapter please
@@ -247,18 +274,22 @@ and enable `repeat-mode' for ergonomics.
 <https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/>
 
 
-5 Performance
-═════════════
+5 Contribute
+════════════
 
-  If your are having issues with adapter output in `*dape-repl*' and
-  startup time `jsonrpc.el' could be the culprit.  This has been
-  reported upstream (#69241), but until the issue has been fixed there
-  exists an fork of `jsonrpc.el'.
+  `dape' is subject to the same copyright assignment policy as GNU
+  Emacs.
 
-  ┌────
-  │ (use-package jsonrpc
-  │   :straight (jsonrpc :type git :host github :repo "svaante/jsonrpc"))
-  └────
+  Any legally [significant] contributions can only be merged after the
+  author has completed their paperwork.  See [Contributor's Frequently
+  Asked Questions (FAQ)] for more information.
+
+
+[significant]
+<https://www.gnu.org/prep/maintain/html_node/Legally-Significant.html#Legally-Significant>
+
+[Contributor's Frequently Asked Questions (FAQ)]
+<https://www.fsf.org/licensing/contributor-faq>
 
 
 6 Bugs and issues
@@ -267,9 +298,9 @@ and enable `repeat-mode' for ergonomics.
   Before reporting any issues `(setq dape-debug t)' and take a look at
   `*dape-repl*' buffer. Please share your `*dape-repl*' and
   `*dape-connection events*' in the buffer contents with the bug report.
-  Master is used is for all case and purposes a development branch still
-  and releases on elpa should be more stable so in the mean time use
-  elpa if the bug is a breaking you workflow.
+  The `master' branch is used as an development branch and releases on
+  elpa should be more stable so in the mean time use elpa if the bug is
+  a breaking you workflow.
 
 
 7 Acknowledgements

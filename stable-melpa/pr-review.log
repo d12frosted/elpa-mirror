@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/pr-review/
 Checking out 5294434883aa61f24ca6d2768a83ca924645a186
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pr-review/
-  to /tmp/pr-reviewDf4MB0/pr-review-20240206.414
+  to /tmp/pr-reviewUKmbuE/pr-review-20240206.414
     pr-review-action.el -> pr-review-action.el
     pr-review-api.el -> pr-review-api.el
     pr-review-common.el -> pr-review-common.el
@@ -17,3 +17,40 @@ Copying files (->) and directories (=>)
     pr-review-search.el -> pr-review-search.el
     pr-review.el -> pr-review.el
     graphql => graphql
+Created pr-review-20240206.414.tar containing:
+  pr-review-20240206.414/
+  pr-review-20240206.414/graphql/
+  pr-review-20240206.414/graphql/add-comment.graphql
+  pr-review-20240206.414/graphql/add-review-comment-reply.graphql
+  pr-review-20240206.414/graphql/add-review.graphql
+  pr-review-20240206.414/graphql/close-pr.graphql
+  pr-review-20240206.414/graphql/get-assignable-users.graphql
+  pr-review-20240206.414/graphql/get-pull-request-for-notification.inc.graphql
+  pr-review-20240206.414/graphql/get-pull-request.graphql
+  pr-review-20240206.414/graphql/merge-pr.graphql
+  pr-review-20240206.414/graphql/reopen-pr.graphql
+  pr-review-20240206.414/graphql/request-reviews.graphql
+  pr-review-20240206.414/graphql/resolve-review-thread.graphql
+  pr-review-20240206.414/graphql/search-prs.graphql
+  pr-review-20240206.414/graphql/submit-review.graphql
+  pr-review-20240206.414/graphql/unresolve-review-thread.graphql
+  pr-review-20240206.414/graphql/update-comment.graphql
+  pr-review-20240206.414/graphql/update-pr.graphql
+  pr-review-20240206.414/graphql/update-review-comment.graphql
+  pr-review-20240206.414/graphql/update-review.graphql
+  pr-review-20240206.414/graphql/update-subscription.graphql
+  pr-review-20240206.414/graphql/whoami.graphql
+  pr-review-20240206.414/pr-review-action.el
+  pr-review-20240206.414/pr-review-api.el
+  pr-review-20240206.414/pr-review-common.el
+  pr-review-20240206.414/pr-review-input.el
+  pr-review-20240206.414/pr-review-listview.el
+  pr-review-20240206.414/pr-review-notification.el
+  pr-review-20240206.414/pr-review-pkg.el
+  pr-review-20240206.414/pr-review-render.el
+  pr-review-20240206.414/pr-review-search.el
+  pr-review-20240206.414/pr-review.el
+ ✓ Success:
+  2024-03-13T23:54:33+0000  pr-review-20240206.414.entry
+  2024-03-13T23:54:33+0000  pr-review-20240206.414.tar
+Built pr-review in 3.491s, finished at 2024-03-13T23:54:35+0000
