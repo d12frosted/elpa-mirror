@@ -1,7 +1,6 @@
-Overrides `function-key-map' parent for preferred input-method
-to translate input sequences the default system layout (english)
-so we can use Emacs bindings while non-default system layout is active.
-
+Override the parent keymap of `function-key-map' for the preferred input method
+to translate input sequences to the default system layout (English), so we can
+use Emacs bindings while the non-default system layout is active.
 Usage example:
 (use-package reverse-im
   :ensure t
@@ -10,5 +9,5 @@ Usage example:
   :config
   (reverse-im-mode t))
 
-or, alternatively, add the library to your load-path and
-(reverse-im-activate "ukrainian-computer") manually
+or, alternatively, add the library to your `load-path'
+and (reverse-im-activate "ukrainian-computer") manually
