@@ -2245,6 +2245,18 @@
 	    ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	   (:url . "https://elpa.gnu.org/packages/lentic.html")
 	   (:commit . "180c1082c016de790f9e6596b63329657c83ce20"))])
+ (lentic-server .
+		[(0 2)
+		 ((lentic
+		   (0 8))
+		  (web-server
+		   (0 1 1)))
+		 "Web Server for Emacs Literate Source" tar
+		 ((:maintainer "Phillip Lord" . "phillip.lord@newcastle.ac.uk")
+		  (:authors
+		   ("Phillip Lord" . "phillip.lord@newcastle.ac.uk"))
+		  (:url . "https://elpa.gnu.org/packages/lentic-server.html")
+		  (:commit . "732b88e7a183707ba65c38e8b3517cac42572644"))])
  (let-alist .
    [(1 0 6)
     ((emacs
