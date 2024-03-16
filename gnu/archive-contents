@@ -1259,22 +1259,20 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 8 10)
+	 [(0 8 11)
 	  ((emacs
 	    (28 1))
 	   (llm
 	    (0 6 0))
 	   (spinner
-	    (1 7 4))
-	   (dash
-	    (2 19 1)))
+	    (1 7 4)))
 	  "Tool for interacting with LLMs" tar
 	  ((:url . "http://github.com/s-kostyaev/ellama")
 	   (:keywords "help" "local" "tools")
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "6a986d7e8da11152f6b7afa6bde11e1feb448051"))])
+	   (:commit . "31c71ff2852c69126fdcd61015d1537507038e54"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1341,7 +1339,7 @@
 	   ("Adam Porter" . "adam@alphapapa.net"))
 	  (:commit . "0c725c6c73babaea11e7a738b9224962310f78ed"))])
  (emms .
-       [(18)
+       [(19)
 	((cl-lib
 	  (0 5))
 	 (nadvice
@@ -1354,7 +1352,7 @@
 	 (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 	 (:authors
 	  ("Jorgen Schäfer" . "forcer@forcix.cx"))
-	 (:commit . "1d7547f3fd2659b1b9a4b4534b4673341ee81c92"))])
+	 (:commit . "bbe1d2cdc8340e0ea1a70bded0a4d8e0aa7df5c5"))])
  (engrave-faces .
 		[(0 3 1)
 		 ((emacs
@@ -1812,7 +1810,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 9 18)
+	  [(0 9 19)
 	   ((emacs
 	     (25)))
 	   "gnamù reader, send buffer contents to a speech engine." tar
@@ -1821,7 +1819,7 @@
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/greader.html")
-	    (:commit . "629b007e75e16d79112358899bdacb04fe9e7d63"))])
+	    (:commit . "96120885906c7e4b6d943f98d07f5cf4fb062ab8"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" single
