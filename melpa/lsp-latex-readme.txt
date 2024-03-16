@@ -57,7 +57,8 @@ _________________
 =============================
 
   While `lsp-tex.el', included by [lsp-mode], provides minimal setting
-  for [Texlab], `lsp-latex.el' provides full features of [Texlab]!
+  for [Texlab], `lsp-latex.el' provides full features of [Texlab]
+  v5.13.1.
 
 
 [lsp-mode] <https://github.com/emacs-lsp/lsp-mode>
@@ -120,33 +121,39 @@ _________________
 
   These variables are connected to Texlab configuration variables.  See
   also [Texlab official wiki].
-   Custom variable in Emacs                      Configuration provided by Texlab
-  ----------------------------------------------------------------------------------------
-   lsp-latex-root-directory                      texlab.rootDirectory
-   lsp-latex-build-executable                    texlab.build.executable
-   lsp-latex-build-args                          texlab.build.args
-   lsp-latex-build-forward-search-after          texlab.build.forwardSearchAfter
-   lsp-latex-build-on-save                       texlab.build.onSave
-   lsp-latex-build-aux-directory                 texlab.auxDirectory
-   lsp-latex-forward-search-executable           texlab.forwardSearch.executable
-   lsp-latex-forward-search-args                 texlab.forwardSearch.args
-   lsp-latex-chktex-on-open-and-save             texlab.chktex.onOpenAndSave
-   lsp-latex-chktex-on-edit                      texlab.chktex.onEdit
-   lsp-latex-diagnostics-delay                   texlab.diagnosticsDelay
-   lsp-latex-diagnostics-allowed-patterns        texlab.diagnostics.allowedPatterns
-   lsp-latex-diagnostics-ignored-patterns        texlab.diagnostics.ignoredPatterns
-   lsp-latex-symbol-allowed-patterns             texlab.symbol.allowedPatterns
-   lsp-latex-symbol-ignored-patterns             texlab.symbol.ignoredPatterns
-   lsp-latex-bibtex-formatter-line-length        texlab.formatterLineLength
-   lsp-latex-bibtex-formatter                    texlab.bibtexFormatter
-   lsp-latex-latex-formatter                     texlab.latexFormatter
-   lsp-latex-latexindent-local                   texlab.latexindent.local
-   lsp-latex-latexindent-modify-line-breaks      texlab.latexindent.modifyLineBreaks
-   lsp-latex-completion-matcher                  texlab.completion.matcher
-   lsp-latex-experimental-math-environments      texlab.experimental.mathEnvironments
-   lsp-latex-experimental-enum-environments      texlab.experimental.enumEnvironments
-   lsp-latex-experimental-verbatim-environments  texlab.experimental.verbatimEnvironments
-   lsp-latex-experimental-citation-commands      texlab.experimental.citationCommands
+   Custom variable in Emacs                         Configuration provided by Texlab
+  ---------------------------------------------------------------------------------------------
+   lsp-latex-root-directory                         texlab.rootDirectory
+   lsp-latex-build-executable                       texlab.build.executable
+   lsp-latex-build-args                             texlab.build.args
+   lsp-latex-build-forward-search-after             texlab.build.forwardSearchAfter
+   lsp-latex-build-on-save                          texlab.build.onSave
+   lsp-latex-build-aux-directory                    texlab.build.auxDirectory
+   lsp-latex-build-log-directory                    texlab.build.logDirectory
+   lsp-latex-build-pdf-directory                    texlab.build.pdfDirectory
+   lsp-latex-forward-search-executable              texlab.forwardSearch.executable
+   lsp-latex-forward-search-args                    texlab.forwardSearch.args
+   lsp-latex-chktex-additional-args                 texlab.chktex.additionalArgs
+   lsp-latex-chktex-on-open-and-save                texlab.chktex.onOpenAndSave
+   lsp-latex-chktex-on-edit                         texlab.chktex.onEdit
+   lsp-latex-diagnostics-delay                      texlab.diagnosticsDelay
+   lsp-latex-diagnostics-allowed-patterns           texlab.diagnostics.allowedPatterns
+   lsp-latex-diagnostics-ignored-patterns           texlab.diagnostics.ignoredPatterns
+   lsp-latex-symbol-allowed-patterns                texlab.symbol.allowedPatterns
+   lsp-latex-symbol-ignored-patterns                texlab.symbol.ignoredPatterns
+   lsp-latex-bibtex-formatter-line-length           texlab.formatterLineLength
+   lsp-latex-bibtex-formatter                       texlab.bibtexFormatter
+   lsp-latex-latex-formatter                        texlab.latexFormatter
+   lsp-latex-latexindent-local                      texlab.latexindent.local
+   lsp-latex-latexindent-modify-line-breaks         texlab.latexindent.modifyLineBreaks
+   lsp-latex-completion-matcher                     texlab.completion.matcher
+   lsp-latex-inlay-hints-label-definitions          texlab.inlayHints.labelDefinitions
+   lsp-latex-inlay-hints-label-references           texlab.inlayHints.labelReferences
+   lsp-latex-experimental-math-environments         texlab.experimental.mathEnvironments
+   lsp-latex-experimental-enum-environments         texlab.experimental.enumEnvironments
+   lsp-latex-experimental-verbatim-environments     texlab.experimental.verbatimEnvironments
+   lsp-latex-experimental-citation-commands         texlab.experimental.citationCommands
+   lsp-latex-experimental-label-reference-commands  texlab.experimental.labelReferenceCommands
 
 
 [Texlab official wiki]
