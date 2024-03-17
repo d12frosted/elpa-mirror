@@ -154,7 +154,25 @@
 <https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings#supported_models>
 
 
-2.5 Ollama
+2.5 Claude
+──────────
+
+  [Claude] is Anthropic's large language model.  It does not support
+  embeddings.  You can set it up with the following parameters:
+
+  `:key': The API key you get from [Claude's settings page].  This is
+  required.  `:chat-model': One of the [Claude models].  Defaults to
+  "claude-3-opus-20240229", the most powerful model.
+
+
+[Claude] <https://docs.anthropic.com/claude/docs/intro-to-claude>
+
+[Claude's settings page] <https://console.anthropic.com/settings/keys>
+
+[Claude models] <https://docs.anthropic.com/claude/docs/models-overview>
+
+
+2.6 Ollama
 ──────────
 
   [Ollama] is a way to run large language models locally. There are
@@ -177,7 +195,7 @@
 [many different models] <https://ollama.ai/library>
 
 
-2.6 GPT4All
+2.7 GPT4All
 ───────────
 
   [GPT4All] is a way to run large language models locally.  To use it
@@ -197,7 +215,7 @@
 [GPT4All] <https://gpt4all.io/index.html>
 
 
-2.7 llama.cpp
+2.8 llama.cpp
 ─────────────
 
   [llama.cpp] is a way to run large language models locally.  To use it
@@ -228,7 +246,7 @@
 [llama.cpp] <https://github.com/ggerganov/llama.cpp>
 
 
-2.8 Fake
+2.9 Fake
 ────────
 
   This is a client that makes no call, but it just there for testing and

@@ -2304,7 +2304,7 @@
 	    ("Adam Porter" . "adam@alphapapa.net"))
 	   (:commit . "457083ca85a263831ab8fb386f285b27759cf822"))])
  (llm .
-      [(0 10 0)
+      [(0 12 0)
        ((emacs
 	 (28 1)))
        "Interface to pluggable llm backends" tar
@@ -2312,7 +2312,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "9c33eb4a91db4ccab5c50d9a133f03b3734beda5"))])
+	(:commit . "5fb10b9bdbfc6bb384c14fbfc8caf09fdb4b99e8"))])
  (lmc .
       [(1 4)
        ((emacs
