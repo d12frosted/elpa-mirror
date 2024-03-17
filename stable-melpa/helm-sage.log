@@ -3,8 +3,16 @@ Fetcher: github
 Source:  https://github.com/sagemath/helm-sage.git
 
 Updating /mnt/store/melpa/working/helm-sage/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/sagemath/helm-sage.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out f14e9281d8f2162df7d8f9c2ad9ad1248a24803b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-sage/
+  to /tmp/helm-sageq7UbZw/helm-sage-20160514.745
+    helm-sage.el -> helm-sage.el
+Created helm-sage-20160514.745.tar containing:
+  helm-sage-20160514.745/
+  helm-sage-20160514.745/helm-sage-pkg.el
+  helm-sage-20160514.745/helm-sage.el
+ ✓ Success:
+  2024-03-17T19:03:52+0000  helm-sage-20160514.745.entry
+  2024-03-17T19:03:52+0000  helm-sage-20160514.745.tar
+Built helm-sage in 3.306s, finished at 2024-03-17T19:03:53+0000

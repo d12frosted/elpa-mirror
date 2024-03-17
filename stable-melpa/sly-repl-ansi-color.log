@@ -3,8 +3,16 @@ Fetcher: github
 Source:  https://github.com/PuercoPop/sly-repl-ansi-color.git
 
 Updating /mnt/store/melpa/working/sly-repl-ansi-color/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/PuercoPop/sly-repl-ansi-color.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out b9cd52d1cf927bf7e08582d46ab0bcf1d4fb5048
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sly-repl-ansi-color/
+  to /tmp/sly-repl-ansi-colorHsYY4C/sly-repl-ansi-color-20171020.1516
+    sly-repl-ansi-color.el -> sly-repl-ansi-color.el
+Created sly-repl-ansi-color-20171020.1516.tar containing:
+  sly-repl-ansi-color-20171020.1516/
+  sly-repl-ansi-color-20171020.1516/sly-repl-ansi-color-pkg.el
+  sly-repl-ansi-color-20171020.1516/sly-repl-ansi-color.el
+ ✓ Success:
+  2024-03-17T19:33:20+0000  sly-repl-ansi-color-20171020.1516.entry
+  2024-03-17T19:33:20+0000  sly-repl-ansi-color-20171020.1516.tar
+Built sly-repl-ansi-color in 3.465s, finished at 2024-03-17T19:33:21+0000
