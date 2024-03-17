@@ -3,7 +3,6 @@
   (0xc :url "https://github.com/AdamNiederer/0xc.git")
   (2048-game :url "https://hg.sr.ht/~zck/game-2048" :vc-backend Hg)
   (2bit :url "https://github.com/davep/2bit.el.git")
-  (4clojure :url "https://github.com/emacsorphanage/4clojure.git")
   (750words :url "https://github.com/zzamboni/750words-client.git")
   (@ :url "https://github.com/skeeto/at-el.git")
   (a :url "https://github.com/plexus/a.el.git")
