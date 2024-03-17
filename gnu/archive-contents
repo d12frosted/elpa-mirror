@@ -627,7 +627,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(29 1 4 4)
+	 [(29 1 4 5)
 	  ((emacs
 	    (24 4))
 	   (seq
@@ -639,7 +639,7 @@
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net")
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "3809be4d24a301c78d40bd00fc15bb763e0a3a2a"))])
+	   (:commit . "8d4e8a366681def88751f5e9975738ecd3180deb"))])
  (consult .
 	  [(1 4)
 	   ((emacs
@@ -1259,7 +1259,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (ellama .
-	 [(0 8 11)
+	 [(0 8 13)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1272,7 +1272,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "31c71ff2852c69126fdcd61015d1537507038e54"))])
+	   (:commit . "b94d5952d4e36e1caeef5ac0b3ecd6d89009082b"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2841,18 +2841,18 @@
 		  ("Hanno Perrey" . "hanno@hoowl.se"))
 		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern .
-	     [(1 1)
+	     [(1 2)
 	      ((emacs
 		(27 1))
 	       (compat
 		(29 1 4 4)))
 	      "Modern looks for Org" tar
 	      ((:url . "https://github.com/minad/org-modern")
-	       (:keywords "outlines" "hypermedia" "wp")
+	       (:keywords "outlines" "hypermedia" "text")
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "d812a192f040a9e7785a53f144de1800d52b9f0d"))])
+	       (:commit . "a2ff4c8e9cac412e8cb9c7faf618ac18146107ea"))])
  (org-notify .
 	     [(0 1 1)
 	      ((emacs
