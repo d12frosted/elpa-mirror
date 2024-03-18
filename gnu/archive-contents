@@ -192,14 +192,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "00e07e060218fbd1e16faaf10116c03b12e62580"))])
  (auctex .
-	 [(14 0 3)
+	 [(14 0 4)
 	  ((emacs
 	    (27 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "f124fe7d282e0693ce793a8c8b2a675765df63f3"))])
+	   (:commit . "44d54236056fccc32a0b26d6df2ceda5716b7df1"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -2528,16 +2528,16 @@
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	     (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (modus-themes .
-	       [(4 3 0)
+	       [(4 4 0)
 		((emacs
 		  (27 1)))
 		"Elegant, highly legible and customizable themes" tar
-		((:url . "https://git.sr.ht/~protesilaos/modus-themes")
+		((:url . "https://github.com/protesilaos/modus-themes")
 		 (:keywords "faces" "theme" "accessibility")
-		 (:maintainer "Modus-Themes Development" . "~protesilaos/modus-themes@lists.sr.ht")
+		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "fe08a02c4c0501a984b15af3f8c3c5e4769b93ad"))])
+		 (:commit . "a082d7739f627523c6d9098c869cf143fa60b014"))])
  (mpdired .
 	  [(1)
 	   ((emacs
