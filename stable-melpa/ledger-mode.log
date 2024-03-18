@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ledger/ledger-mode.git
 
 Updating /mnt/store/melpa/working/ledger-mode/
-Checking out 5f95628f2eea724ce63f7e06d4cf17e9a636f4a4
+Checking out cd36c4c00e07b6cf40c0a39d2dbcb650f0903f49
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ledger-mode/
-  to /tmp/ledger-modeJcUdsX/ledger-mode-20240318.627
+  to /tmp/ledger-modemBEXlM/ledger-mode-20240318.1855
     ledger-check.el -> ledger-check.el
     ledger-commodities.el -> ledger-commodities.el
     ledger-complete.el -> ledger-complete.el
@@ -30,35 +30,37 @@ Copying files (->) and directories (=>)
     ledger-texi.el -> ledger-texi.el
     ledger-xact.el -> ledger-xact.el
   ! doc/ledger-mode.texi -> ledger-mode.texi
-Generating /tmp/ledger-modeJcUdsX/ledger-mode-20240318.627/ledger-mode.info
-Created ledger-mode-20240318.627.tar containing:
-  ledger-mode-20240318.627/
-  ledger-mode-20240318.627/dir
-  ledger-mode-20240318.627/ledger-check.el
-  ledger-mode-20240318.627/ledger-commodities.el
-  ledger-mode-20240318.627/ledger-complete.el
-  ledger-mode-20240318.627/ledger-context.el
-  ledger-mode-20240318.627/ledger-exec.el
-  ledger-mode-20240318.627/ledger-flymake.el
-  ledger-mode-20240318.627/ledger-fontify.el
-  ledger-mode-20240318.627/ledger-fonts.el
-  ledger-mode-20240318.627/ledger-init.el
-  ledger-mode-20240318.627/ledger-mode-pkg.el
-  ledger-mode-20240318.627/ledger-mode.el
-  ledger-mode-20240318.627/ledger-mode.info
-  ledger-mode-20240318.627/ledger-navigate.el
-  ledger-mode-20240318.627/ledger-occur.el
-  ledger-mode-20240318.627/ledger-post.el
-  ledger-mode-20240318.627/ledger-reconcile.el
-  ledger-mode-20240318.627/ledger-regex.el
-  ledger-mode-20240318.627/ledger-report.el
-  ledger-mode-20240318.627/ledger-schedule.el
-  ledger-mode-20240318.627/ledger-sort.el
-  ledger-mode-20240318.627/ledger-state.el
-  ledger-mode-20240318.627/ledger-test.el
-  ledger-mode-20240318.627/ledger-texi.el
-  ledger-mode-20240318.627/ledger-xact.el
+Generating /tmp/ledger-modemBEXlM/ledger-mode-20240318.1855/ledger-mode.info
+Created ledger-mode-20240318.1855.tar containing:
+  ledger-mode-20240318.1855/
+  ledger-mode-20240318.1855/dir
+  ledger-mode-20240318.1855/ledger-check.el
+  ledger-mode-20240318.1855/ledger-commodities.el
+  ledger-mode-20240318.1855/ledger-complete.el
+  ledger-mode-20240318.1855/ledger-context.el
+  ledger-mode-20240318.1855/ledger-exec.el
+  ledger-mode-20240318.1855/ledger-flymake.el
+  ledger-mode-20240318.1855/ledger-fontify.el
+  ledger-mode-20240318.1855/ledger-fonts.el
+  ledger-mode-20240318.1855/ledger-init.el
+  ledger-mode-20240318.1855/ledger-mode-pkg.el
+  ledger-mode-20240318.1855/ledger-mode.el
+  ledger-mode-20240318.1855/ledger-mode.info
+  ledger-mode-20240318.1855/ledger-navigate.el
+  ledger-mode-20240318.1855/ledger-occur.el
+  ledger-mode-20240318.1855/ledger-post.el
+  ledger-mode-20240318.1855/ledger-reconcile.el
+  ledger-mode-20240318.1855/ledger-regex.el
+  ledger-mode-20240318.1855/ledger-report.el
+  ledger-mode-20240318.1855/ledger-schedule.el
+  ledger-mode-20240318.1855/ledger-sort.el
+  ledger-mode-20240318.1855/ledger-state.el
+  ledger-mode-20240318.1855/ledger-test.el
+  ledger-mode-20240318.1855/ledger-texi.el
+  ledger-mode-20240318.1855/ledger-xact.el
  ✓ Success:
-  2024-03-18T15:33:45+0000  ledger-mode-20240318.627.entry
-  2024-03-18T15:33:45+0000  ledger-mode-20240318.627.tar
-Built ledger-mode in 9.212s, finished at 2024-03-18T15:33:47+0000
+  2024-03-18T19:18:43+0000  ledger-mode-20240318.1855.entry
+  2024-03-18T19:18:43+0000  ledger-mode-20240318.1855.tar
+  2024-03-18T17:26:45+0000  ledger-mode-20240318.627.entry
+  2024-03-18T17:26:45+0000  ledger-mode-20240318.627.tar
+Built ledger-mode in 8.956s, finished at 2024-03-18T19:18:45+0000
