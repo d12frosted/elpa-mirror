@@ -3133,6 +3133,16 @@
 	     (:authors
 	      ("Feng Shu" . "tumashu@163.com"))
 	     (:commit . "3b97dc180b03498103cfcc7f44e64150df440bf0"))])
+ (pq .
+     [(0 2)
+      ((emacs
+	(25)))
+      "libpq binding" tar
+      ((:url . "https://github.com/anse1/emacs-libpq")
+       (:maintainer "Tom Gillespie" . "tgbugs@gmail.com")
+       (:authors
+	("Tom Gillespie" . "tgbugs@gmail.com"))
+       (:commit . "4dad5fcdbbb362a0dc2dfa7b5a38dd5be1551c68"))])
  (project .
 	  [(0 10 0)
 	   ((emacs
