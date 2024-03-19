@@ -3,6 +3,9 @@ Dired buffers or paths and lets you go back and forwards across
 them.  This is similar to the facility provided in Info, EWW and
 in modern filemanagers.
 
+This package require Emacs "26.1" actually, "27.1" reqqired by
+`dired-hist-tl'
+
 Commands:
 
 `dired-hist-mode'       : Turn on Dired history tracking
@@ -28,6 +31,20 @@ Consider instead "C-M-a" and "C-M-e".
 Customization:
 
 There are no customization options at this time.
+
+There is alternative implementation based on tab-line-mode.
+Pros: less code, history is visible in tabs
+Cons:
+- support for only ```dired-kill-when-opening-new-dired-buffer``` is nil.
+- tab-line modified globally for now
+
+Configuration for alternative implementation:
+
+(require 'dired-hist-tl)
+(add-hook 'dired-mode-hook #'dired-hist-tl-dired-mode-hook)
+(define-key dired-mode-map (kbd "RET") #'dired-hist-tl-dired-find-file)
+(global-set-key (kbd "l") #'tab-line-switch-to-prev-tab)
+(global-set-key (kbd "r") #'tab-line-switch-to-next-tab)
 
 How it works:
 
