@@ -4522,7 +4522,7 @@
   (replace-symbol :url "https://github.com/bmastenbrook/replace-symbol-el.git")
   (replace-with-inflections :url "https://github.com/knu/replace-with-inflections.el.git")
   (repo :url "https://github.com/canatella/repo-el.git")
-  (req-package :url "https://github.com/edvorg/req-package.git")
+  (req-package :url "https://github.com/emacsorphanage/req-package.git")
   (request :url "https://github.com/tkf/emacs-request.git")
   (request-deferred :url "https://github.com/tkf/emacs-request.git")
   (requirejs :url "https://github.com/joeheyming/requirejs-emacs.git")
