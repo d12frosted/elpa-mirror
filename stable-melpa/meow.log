@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/meow-edit/meow.git
 
 Updating /mnt/store/melpa/working/meow/
-Checking out 0d74ccfb7f1ebf987e34eb0b656ceb991367a987
+Checking out c693c48a2fa106790389015673a7b01526862b00
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/meow/
-  to /tmp/meowjwtnCh/meow-20240229.50
+  to /tmp/meowaTyUKh/meow-20240320.517
     meow-beacon.el -> meow-beacon.el
     meow-cheatsheet-layout.el -> meow-cheatsheet-layout.el
     meow-cheatsheet.el -> meow-cheatsheet.el
@@ -24,27 +24,29 @@ Copying files (->) and directories (=>)
     meow-var.el -> meow-var.el
     meow-visual.el -> meow-visual.el
     meow.el -> meow.el
-Created meow-20240229.50.tar containing:
-  meow-20240229.50/
-  meow-20240229.50/meow-beacon.el
-  meow-20240229.50/meow-cheatsheet-layout.el
-  meow-20240229.50/meow-cheatsheet.el
-  meow-20240229.50/meow-command.el
-  meow-20240229.50/meow-core.el
-  meow-20240229.50/meow-esc.el
-  meow-20240229.50/meow-face.el
-  meow-20240229.50/meow-helpers.el
-  meow-20240229.50/meow-keymap.el
-  meow-20240229.50/meow-keypad.el
-  meow-20240229.50/meow-pkg.el
-  meow-20240229.50/meow-shims.el
-  meow-20240229.50/meow-thing.el
-  meow-20240229.50/meow-tutor.el
-  meow-20240229.50/meow-util.el
-  meow-20240229.50/meow-var.el
-  meow-20240229.50/meow-visual.el
-  meow-20240229.50/meow.el
+Created meow-20240320.517.tar containing:
+  meow-20240320.517/
+  meow-20240320.517/meow-beacon.el
+  meow-20240320.517/meow-cheatsheet-layout.el
+  meow-20240320.517/meow-cheatsheet.el
+  meow-20240320.517/meow-command.el
+  meow-20240320.517/meow-core.el
+  meow-20240320.517/meow-esc.el
+  meow-20240320.517/meow-face.el
+  meow-20240320.517/meow-helpers.el
+  meow-20240320.517/meow-keymap.el
+  meow-20240320.517/meow-keypad.el
+  meow-20240320.517/meow-pkg.el
+  meow-20240320.517/meow-shims.el
+  meow-20240320.517/meow-thing.el
+  meow-20240320.517/meow-tutor.el
+  meow-20240320.517/meow-util.el
+  meow-20240320.517/meow-var.el
+  meow-20240320.517/meow-visual.el
+  meow-20240320.517/meow.el
  ✓ Success:
-  2024-03-20T02:48:38+0000  meow-20240229.50.entry
-  2024-03-20T02:48:38+0000  meow-20240229.50.tar
-Built meow in 3.110s, finished at 2024-03-20T02:48:39+0000
+  2024-03-20T04:38:07+0000  meow-20240229.50.entry
+  2024-03-20T04:38:07+0000  meow-20240229.50.tar
+  2024-03-20T06:28:11+0000  meow-20240320.517.entry
+  2024-03-20T06:28:11+0000  meow-20240320.517.tar
+Built meow in 4.801s, finished at 2024-03-20T06:28:13+0000
