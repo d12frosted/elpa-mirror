@@ -447,6 +447,30 @@ Tips
 6 Changelog
 ═══════════
 
+v0.8
+────
+
+  *Additions*
+  • The `listen-queue-list' buffer can be bookmarked.
+  • Queue buffers showing the currently playing queue indicate so in the
+    mode line.
+  • Support for `mood' metadata tag in MP3 files (added in ID3v2.4;
+    other filetypes need no specific support).
+
+  *Changes*
+  • Truncate track titles for display using option
+    `listen-lighter-title-max-length' (because the `format-spec'
+    specifier used in `listen-lighter-format' does not add an ellipsis
+    where truncation occurs).
+
+  *Fixes*
+  • Command `listen-queue-add-from-mpd'.
+  • Indication of currently playing queue in queue list.
+  • Set metadata slot when reverting track from disk.
+  • Don't highlight current track in non-playing queues.
+  • Increase minimum `ffprobe' timeout for a single track.
+
+
 v0.7
 ────
 
@@ -632,3 +656,14 @@ Copyright assignment
 
 
 [assign@gnu.org] <mailto:assign@gnu.org>
+
+
+Known issues
+────────────
+
+  • Queue buffers that are not visible during playback are not updated
+    automatically (i.e. to show the currently playing track).  This is
+    due to a limitation of the `vtable' library (see [bug #69837]).
+
+
+[bug #69837] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=69837>

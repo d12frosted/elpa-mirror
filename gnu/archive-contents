@@ -385,7 +385,7 @@
 	       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
 	       (:commit . "ff5fb77e2556c42aee9f1131f824bdfb955d861f"))])
  (brief .
-	[(5 88 22 2)
+	[(5 90)
 	 ((nadvice
 	   (0 3))
 	  (cl-lib
@@ -396,7 +396,7 @@
 	  (:authors
 	   ("Luke Lee" . "luke.yx.lee@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/brief.html")
-	  (:commit . "94471036e4fd356d6c8a7dd72622123e18c95e75"))])
+	  (:commit . "30c5bf48784a7de2e18069a1065fa14a6ff843fe"))])
  (buffer-env .
 	     [(0 5)
 	      ((emacs
@@ -2285,7 +2285,7 @@
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
  (listen .
-	 [(0 7)
+	 [(0 8)
 	  ((emacs
 	    (29 1))
 	   (persist
@@ -2302,7 +2302,7 @@
 	   (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	   (:authors
 	    ("Adam Porter" . "adam@alphapapa.net"))
-	   (:commit . "457083ca85a263831ab8fb386f285b27759cf822"))])
+	   (:commit . "372a2fe873fb7082e6e5afd682c4ee7cfdc920f5"))])
  (llm .
       [(0 12 0)
        ((emacs
