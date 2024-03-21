@@ -20,3 +20,8 @@ exposed as customization variables:
   `universal-sidecar-citeproc-default-style'.
 - `:header' allows you to change the header of the section from the
   default "References".
+
+Finally, update based on ebib motion commands can be enabled either
+manually (using `universal-sidecar-advise-commands') or
+automatically by also adding `ebib-sidecar-insinuate' somewhere in
+your init file.

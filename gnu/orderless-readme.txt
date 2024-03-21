@@ -1,6 +1,6 @@
-			      ━━━━━━━━━━━
-			       ORDERLESS
-			      ━━━━━━━━━━━
+                              ━━━━━━━━━━━
+                               ORDERLESS
+                              ━━━━━━━━━━━
 
 
 
@@ -23,8 +23,7 @@
   to the more well-known Ido Mode), the icomplete-vertical variant from
   Emacs 28 (see the external [icomplete-vertical] package to get that
   functionality on earlier versions of Emacs), or with some third party
-  minibuffer completion frameworks such as [Mct], [Vertico], or
-  [Selectrum] (in its default configuration).
+  minibuffer completion frameworks such as [Mct] or [Vertico].
 
   All the completion UIs just mentioned are for minibuffer completion,
   used when Emacs commands prompt the user in the minibuffer for some
@@ -88,8 +87,6 @@
 
 [Vertico] <https://github.com/minad/vertico>
 
-[Selectrum] <https://github.com/raxod502/selectrum>
-
 [Corfu] <https://github.com/minad/corfu>
 
 [Company] <https://company-mode.github.io/>
@@ -106,9 +103,11 @@
 ─────────────────────────────
 
   Each component of a pattern can match in any of several matching
-  styles. A matching style is simply a function from strings to strings
-  that maps a component to a regexp to match against, so it is easy to
-  define new matching styles. The predefined ones are:
+  styles. A matching style is a function from strings to regexps or
+  predicates, so it is easy to define new matching styles. The value
+  returned by a matching style can be either a regexp as a string, an
+  s-expression in `rx' syntax or a predicate function. The predefined
+  matching styles are:
 
   orderless-regexp
         the component is treated as a regexp that must match somewhere
@@ -120,17 +119,9 @@
         the component is treated as a literal string that must occur in
         the candidate.
 
-        This is just `regexp-quote'.
-
-  *orderless-without-literal*
-        the component is a treated as a literal string that must *not*
-        occur in the candidate.
-
-        Note that nothing is highlighted for this matching style. You
-        probably don't want to use this style directly in
-        `orderless-matching-styles' but with a style dispatcher
-        instead. There is an example in the section on style
-        dispatchers.
+  orderless-literal-prefix
+        the component is treated as a literal string that must occur as
+        a prefix of a candidate.
 
   orderless-prefixes
         the component is split at word endings and each piece must match
@@ -153,17 +144,68 @@
 
         This maps `abc' to `a.*b.*c'.
 
+  *orderless-without-literal*
+        the component is a treated as a literal string that must *not*
+        occur in the candidate.
+
+        Nothing is highlighted by this style. This style should not be
+        used directly in `orderless-matching-styles' but with a style
+        dispatcher instead. See also the more general style modifier
+        `orderless-not'.
+
   The variable `orderless-matching-styles' can be set to a list of the
   desired matching styles to use. By default it enables the literal and
   regexp styles.
 
 
-2.1.1 Style dispatchers
+2.1.1 Style modifiers
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Style modifiers are functions which take a predicate function and a
+  regular expression as a string and return a new predicate function.
+  Style modifiers should not be used directly in
+  `orderless-matching-styles' but with a style dispatcher instead.
+
+  orderless-annotation
+        this style modifier matches the pattern against the annotation
+        string of the candidate, instead of against the candidate
+        string.
+
+  orderless-not
+        this style modifier inverts the pattern, such that candidates
+        pass which do not match the pattern.
+
+
+2.1.2 Style dispatchers
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   For more fine-grained control on which matching styles to use for each
   component of the input string, you can customize the variable
-  `orderless-style-dispatchers'.
+  `orderless-style-dispatchers'. You can use this feature to define your
+  own "query syntax". For example, the default value of
+  `orderless-style-dispatchers' lists a single dispatcher called
+  `orderless-affix-dispatch' which enables a simple syntax based on
+  special characters used as either a prefix or suffix:
+
+  • ! modifies the component with `orderless-not'. Both `!bad' and
+    `bad!' will match strings that do /not/ contain the pattern `bad'.
+  • & modifies the component with `orderless-annotation'. The pattern
+    will match against the candidate's annotation (cheesy mnemonic:
+    andnotation!).
+  • , uses `orderless-initialism'.
+  • = uses `orderless-literal'.
+  • ^ uses `orderless-literal-prefix'.
+  • ~ uses `orderless-flex'.
+  • % makes the string match ignoring diacritics and similar inflections
+    on characters (it uses the function `char-fold-to-regexp' to do
+    this).
+
+  You can add, remove or change this mapping between affix characters
+  and matching styles by customizing the user option
+  `orderless-affix-dispatch-alist'. Most users will probably find this
+  type of customization sufficient for their query syntax needs, but for
+  those desiring further control the rest of this section explains how
+  to implement your own style dispatchers.
 
   Style dispatchers are functions which take a component, its index in
   the list of components (starting from 0), and the total number of
@@ -173,10 +215,11 @@
   A style dispatcher can either decline to handle the input string or
   component, or it can return which matching styles to use. It can also,
   if desired, additionally return a new string to use in place of the
-  given one. Consult the documentation of `orderless-dispatch' for full
+  given one. Consult the documentation of `orderless--dispatch' for full
   details.
 
-  As an example, say you wanted the following setup:
+  As an example of writing your own dispatchers, say you wanted the
+  following setup:
 
   • you normally want components to match as regexps,
   • except for the first component, which should always match as an
@@ -185,7 +228,8 @@
   • later components ending in `~' should match (the characters other
     than the final `~') in the flex style, and
   • later components starting with `!' should indicate the rest of the
-    component is a literal string not contained in the candidate.
+    component is a literal string not contained in the candidate (this
+    is part of the functionality of the default configuration).
 
   You can achieve this with the following configuration:
 
@@ -197,17 +241,17 @@
   │ (defun first-initialism (pattern index _total)
   │   (if (= index 0) 'orderless-initialism))
   │ 
-  │ (defun without-if-bang (pattern _index _total)
+  │ (defun not-if-bang (pattern _index _total)
   │   (cond
   │    ((equal "!" pattern)
-  │     '(orderless-literal . ""))
+  │     #'ignore)
   │    ((string-prefix-p "!" pattern)
-  │     `(orderless-without-literal . ,(substring pattern 1)))))
+  │     `(orderless-not . ,(substring pattern 1)))))
   │ 
   │ (setq orderless-matching-styles '(orderless-regexp)
   │       orderless-style-dispatchers '(first-initialism
   │ 				    flex-if-twiddle
-  │ 				    without-if-bang))
+  │ 				    not-if-bang))
   └────
 
 
@@ -293,13 +337,12 @@
 2.5 Pattern compiler
 ────────────────────
 
-  The default mechanism for turning an input string into a list of
-  regexps to match against, configured using
+  The default mechanism for turning an input string into a predicate and
+  a list of regexps to match against, configured using
   `orderless-matching-styles', is probably flexible enough for the vast
-  majority of users. The patterns are compiled by the
-  `orderless-pattern-compiler'. Under special circumstances it may be
-  useful to implement a custom pattern compiler by advising the
-  `orderless-pattern-compiler'.
+  majority of users. The patterns are compiled by
+  `orderless-compile'. Under special circumstances it may be useful to
+  implement a custom pattern compiler by advising `orderless-compile'.
 
 
 2.6 Interactively changing the configuration
@@ -366,7 +409,7 @@
 ────────
 
   To use `orderless' from Helm, simply configure `orderless' as you
-  would for completion UIs that use Emacs completion stlyes and add this
+  would for completion UIs that use Emacs completion styles and add this
   to your Helm configuration:
 
   ┌────
@@ -374,26 +417,7 @@
   └────
 
 
-3.3 Selectrum
-─────────────
-
-  Recent versions of Selectrum default to using whatever completion
-  styles you have configured. If you stick with that default
-  configuration you can use `orderless' just by adding it to
-  `completion-styles'. Alternatively, you can use this configuration:
-
-  ┌────
-  │ (setq selectrum-refine-candidates-function #'orderless-filter)
-  │ (setq selectrum-highlight-candidates-function #'orderless-highlight-matches)
-  └────
-
-  If you use the above configuration, only the visible candidates are
-  highlighted, which is a litte more efficient.
-
-  Note that Selectrum has been deprecated in favor of Vertico.
-
-
-3.4 Company
+3.3 Company
 ───────────
 
   Company comes with a `company-capf' backend that uses the
@@ -432,7 +456,7 @@
      (Aren't dynamically scoped variables and the advice system nifty?)
 
   If you would like to use different `completion-styles' with
-  `company-capf' instead, you can add this to your config:
+  `company-capf' instead, you can add this to your configuration:
 
   ┌────
   │ ;; We follow a suggestion by company maintainer u/hvis:
@@ -463,10 +487,10 @@
 
   It is worth pointing out that Helm does provide its multi pattern
   matching as a completion style which could be used with default tab
-  completion, Icomplete, Selectrum or other UIs supporting completion
-  styles! (Ivy does not provide a completion style to my knowledge.) So,
-  for example, Icomplete users could, instead of using this package,
-  install Helm and configure Icomplete to use it as follows:
+  completion, Icomplete or other UIs supporting completion styles! (Ivy
+  does not provide a completion style to my knowledge.) So, for example,
+  Icomplete users could, instead of using this package, install Helm and
+  configure Icomplete to use it as follows:
 
   ┌────
   │ (require 'helm)
@@ -488,17 +512,16 @@
 
   The [prescient.el] library also provides matching of space-separated
   components in any order. It offers a completion-style that can be used
-  with Emacs' default completion UI, Mct, Vertico or with
-  Icomplete. Furthermore Selectrum and Ivy are supported. The components
-  can be matched literally, as regexps, as initialisms or in the flex
-  style (called "fuzzy" in prescient). Prescient does not offer the same
-  flexibility as Orderless with its style dispatchers. However in
-  addition to matching, Prescient supports sorting of candidates, while
-  Orderless leaves that up to the candidate source and the completion
-  UI.
+  with Emacs' default completion UI, Mct, Vertico or with Icomplete.
+  Furthermore Ivy is supported. The components can be matched literally,
+  as regexps, as initialisms or in the flex style (called "fuzzy" in
+  prescient). Prescient does not offer the same flexibility as Orderless
+  with its style dispatchers. However in addition to matching, Prescient
+  supports sorting of candidates, while Orderless leaves that up to the
+  candidate source and the completion UI.
 
 
-[prescient.el] <https://github.com/raxod502/prescient.el>
+[prescient.el] <https://github.com/radian-software/prescient.el>
 
 
 4.3 Restricting to current matches in Icicles, Ido and Ivy

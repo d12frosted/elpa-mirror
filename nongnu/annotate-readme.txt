@@ -161,7 +161,7 @@
   will signal an error.
 
   With a numeric prefix the annotations will be displayed with the faces
-  indicated in `annotate-endline-annotate-whole-line' and
+  indicated in `annotate-highlight-faces' and
   `annotate-annotation-text-faces', respectively. The numeric prefix is
   used as index in the lists bound to the aforementioned variables.
 
@@ -176,6 +176,7 @@
   • `annotate-annotation-max-size-not-place-new-line';
   • `annotate-annotation-position-policy';
   • `annotate-endline-annotate-whole-line';
+  • `annotate-highlight-faces';
   • `annotate-annotation-text-faces'.
 
 
@@ -227,6 +228,24 @@
 ◊ 2.3.5.1 related customizable variable
 
   • `annotate-summary-ask-query'.
+
+
+2.3.6 `C-c C-c' (function annotate-change-annotation-colors)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Change the color of the annotation below point (both higlight and
+  annotation text colors are changed).
+
+  These changes are kept after the buffer is killed.
+
+
+2.3.7 `C-c C-p' (function annotate-change-annotation-text-position)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Change the policy positioning the annotation below point, a message
+  with the new policy is printed.
+
+  These changes are kept after the buffer is killed.
 
 
 3 Exporting
