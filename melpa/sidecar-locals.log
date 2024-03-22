@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-sidecar-locals.git
 
 Updating /mnt/store/melpa/working/sidecar-locals/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-sidecar-locals.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 2b2b765387f2cbae9935c3ee6e2a32aa8d68f1b8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sidecar-locals/
+  to /tmp/sidecar-localslRDHOe/sidecar-locals-20240227.151
+    sidecar-locals.el -> sidecar-locals.el
+Created sidecar-locals-20240227.151.tar containing:
+  sidecar-locals-20240227.151/
+  sidecar-locals-20240227.151/sidecar-locals-pkg.el
+  sidecar-locals-20240227.151/sidecar-locals.el
+ ✓ Success:
+  2024-03-21T23:55:06+0000  sidecar-locals-20240227.151.entry
+  2024-03-21T23:55:05+0000  sidecar-locals-20240227.151.tar
+Built sidecar-locals in 4.562s, finished at 2024-03-21T23:55:07+0000
