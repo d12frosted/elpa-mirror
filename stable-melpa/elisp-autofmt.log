@@ -3,20 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-elisp-autofmt.git
 
 Updating /mnt/store/melpa/working/elisp-autofmt/
-Checking out 6b280c854f964c303de2f9316f8f955e52893b8d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elisp-autofmt/
-  to /tmp/elisp-autofmt62R24I/elisp-autofmt-20231207.1018
-    elisp-autofmt.el -> elisp-autofmt.el
-    elisp-autofmt.py -> elisp-autofmt.py
-    elisp-autofmt.overrides.json -> elisp-autofmt.overrides.json
-Created elisp-autofmt-20231207.1018.tar containing:
-  elisp-autofmt-20231207.1018/
-  elisp-autofmt-20231207.1018/elisp-autofmt-pkg.el
-  elisp-autofmt-20231207.1018/elisp-autofmt.el
-  elisp-autofmt-20231207.1018/elisp-autofmt.overrides.json
-  elisp-autofmt-20231207.1018/elisp-autofmt.py
- ✓ Success:
-  2024-03-22T12:02:49+0000  elisp-autofmt-20231207.1018.entry
-  2024-03-22T12:02:49+0000  elisp-autofmt-20231207.1018.tar
-Built elisp-autofmt in 5.016s, finished at 2024-03-22T12:02:51+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-elisp-autofmt.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
