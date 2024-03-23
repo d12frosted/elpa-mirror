@@ -1182,7 +1182,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "eda749bc689591a8f43a98e002d63b4ef2d4602d"))])
  (ef-themes .
-	    [(1 6 0)
+	    [(1 6 1)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -1191,7 +1191,7 @@
 	      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "965053727ace036c4feb6bf2dc80d1b40e8a7965"))])
+	      (:commit . "96aaab126510bfd303558e2a9b85a745dab32f41"))])
  (eglot .
 	[(1 17)
 	 ((emacs
@@ -2792,7 +2792,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "3847f311077efa17951a786d2759f2639c5f43c8"))])
  (org .
-      [(9 6 21)
+      [(9 6 22)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2801,7 +2801,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "28dc5dd1ac1325ecb6bdec3e9f72997c35eebfa0"))])
+	(:commit . "50c51b9ad129ccd4d87cf5f2d64089a687383113"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
