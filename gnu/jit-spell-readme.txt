@@ -1,6 +1,6 @@
-	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		JIT-SPELL — JUST-IN-TIME SPELL CHECKING
-	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                JIT-SPELL — JUST-IN-TIME SPELL CHECKING
+               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 jit-spell is a spell-checking package for Emacs.  It highlights all

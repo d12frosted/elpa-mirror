@@ -84,23 +84,13 @@ with no undue interference and switch seamlessly between them.
     dependencies, otherwise you may block Emacs for a long time.
   • `flake.nix' and `shell.nix': These files are used by the Nix package
     manager and are handled similarly to Guix.
+  • `pyproject.toml': If you are using [Poetry], [Hatch] or [PDM],
+    buffer-env can infer the project environment from them.
   • `*.ps1': Similar to a regular shell script, but interpreted by
     PowerShell.
 
   For instructions on how to extend this list, see the documentation of
   the variable `buffer-env-command-alist'.
-
-
-3 Integration with other environment management mechanisms
-══════════════════════════════════════════════════════════
-
-3.1 pyproject.toml
-──────────────────
-
-  If you are using a fully featured Python project manager such as
-  [Poetry], [Hatch] or [PDM], buffer-env can be configured to infer the
-  project environment directly from the `pyproject.toml' file.  See
-  [this note] for instructions.
 
 
 [Poetry] <https://python-poetry.org/>
@@ -109,10 +99,11 @@ with no undue interference and switch seamlessly between them.
 
 [PDM] <https://pdm.fming.dev>
 
-[this note] <https://github.com/astoff/buffer-env/issues/13>
 
+3 Integration with other environment management mechanisms
+══════════════════════════════════════════════════════════
 
-3.2 Python virtualenvs
+3.1 Python virtualenvs
 ──────────────────────
 
   In most cases, the easiest way to interface with Python virtualenvs is
@@ -140,7 +131,7 @@ with no undue interference and switch seamlessly between them.
   buffer- or directory-local variable.
 
 
-3.3 .env files
+3.2 .env files
 ──────────────
 
   To load the environment defined by a `.env' file, you can select it
@@ -149,7 +140,7 @@ with no undue interference and switch seamlessly between them.
   buffer-locally.
 
 
-3.4 Direnv
+3.3 Direnv
 ──────────
 
   Buffer-env is /mostly/ compatible with direnv; specifically, it

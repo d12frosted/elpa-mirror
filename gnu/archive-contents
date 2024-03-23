@@ -398,7 +398,7 @@
 	  (:url . "https://elpa.gnu.org/packages/brief.html")
 	  (:commit . "30c5bf48784a7de2e18069a1065fa14a6ff843fe"))])
  (buffer-env .
-	     [(0 5)
+	     [(0 6)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -409,7 +409,7 @@
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
-	       (:commit . "9a0878dbfed33adf171bc389116d81f326161a64"))])
+	       (:commit . "3814bdf3585ffffea3014b1d01549894ec1aa897"))])
  (buffer-expose .
 		[(0 4 3)
 		 ((emacs
@@ -2101,7 +2101,7 @@
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:commit . "b2ef3af2857896e20cff0488c46a4bfcfee39ecc"))])
  (jit-spell .
-	    [(0 3)
+	    [(0 4)
 	     ((emacs
 	       (27 1))
 	      (compat
@@ -2112,7 +2112,7 @@
 	      (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	      (:authors
 	       ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	      (:commit . "365003e6e3c25c5e6210a2a4ce0654fa28063a23"))])
+	      (:commit . "db9cedbb2d2515ffc441fa27c839c42a657a6b71"))])
  (js2-mode .
 	   [(20231224)
 	    ((emacs
