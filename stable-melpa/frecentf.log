@@ -3,8 +3,16 @@ Fetcher: git
 Source:  https://git.launchpad.net/frecentf.el
 
 Updating /mnt/store/melpa/working/frecentf/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: Path translation timed out.
-fatal: unable to access 'https://git.launchpad.net/frecentf.el/': The requested URL returned error: 504
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out ef788b2af412311fbc6f52d639810746e5c0fa93
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/frecentf/
+  to /tmp/frecentfITFXsR/frecentf-20231125.201
+    frecentf.el -> frecentf.el
+Created frecentf-20231125.201.tar containing:
+  frecentf-20231125.201/
+  frecentf-20231125.201/frecentf-pkg.el
+  frecentf-20231125.201/frecentf.el
+ ✓ Success:
+  2024-03-23T19:07:34+0000  frecentf-20231125.201.entry
+  2024-03-23T19:07:34+0000  frecentf-20231125.201.tar
+Built frecentf in 4.597s, finished at 2024-03-23T19:07:36+0000
