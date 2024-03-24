@@ -1,0 +1,50 @@
+Package: casual
+Fetcher: github
+Source:  https://github.com/kickingvegas/casual.git
+
+Cloning https://github.com/kickingvegas/casual.git to /mnt/store/melpa/working/casual/
+Checking out 643af803258fd9524582fc1d56472ea44c70100f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/casual/
+  to /tmp/casualWlBKax/casual-20240317.2027
+  ! lisp/casual-angle-measure.el -> casual-angle-measure.el
+  ! lisp/casual-binary.el -> casual-binary.el
+  ! lisp/casual-complex.el -> casual-complex.el
+  ! lisp/casual-conversion.el -> casual-conversion.el
+  ! lisp/casual-graphics.el -> casual-graphics.el
+  ! lisp/casual-labels.el -> casual-labels.el
+  ! lisp/casual-logarithmic.el -> casual-logarithmic.el
+  ! lisp/casual-predicates.el -> casual-predicates.el
+  ! lisp/casual-radix.el -> casual-radix.el
+  ! lisp/casual-random.el -> casual-random.el
+  ! lisp/casual-rounding.el -> casual-rounding.el
+  ! lisp/casual-settings.el -> casual-settings.el
+  ! lisp/casual-time.el -> casual-time.el
+  ! lisp/casual-trigonometric.el -> casual-trigonometric.el
+  ! lisp/casual-units.el -> casual-units.el
+  ! lisp/casual-vector.el -> casual-vector.el
+  ! lisp/casual.el -> casual.el
+Created casual-20240317.2027.tar containing:
+  casual-20240317.2027/
+  casual-20240317.2027/casual-angle-measure.el
+  casual-20240317.2027/casual-binary.el
+  casual-20240317.2027/casual-complex.el
+  casual-20240317.2027/casual-conversion.el
+  casual-20240317.2027/casual-graphics.el
+  casual-20240317.2027/casual-labels.el
+  casual-20240317.2027/casual-logarithmic.el
+  casual-20240317.2027/casual-pkg.el
+  casual-20240317.2027/casual-predicates.el
+  casual-20240317.2027/casual-radix.el
+  casual-20240317.2027/casual-random.el
+  casual-20240317.2027/casual-rounding.el
+  casual-20240317.2027/casual-settings.el
+  casual-20240317.2027/casual-time.el
+  casual-20240317.2027/casual-trigonometric.el
+  casual-20240317.2027/casual-units.el
+  casual-20240317.2027/casual-vector.el
+  casual-20240317.2027/casual.el
+ ✓ Success:
+  2024-03-24T18:37:53+0000  casual-20240317.2027.entry
+  2024-03-24T18:37:53+0000  casual-20240317.2027.tar
+Built casual in 3.224s, finished at 2024-03-24T18:37:54+0000
