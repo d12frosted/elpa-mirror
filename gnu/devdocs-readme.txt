@@ -1,15 +1,6 @@
-		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		 DEVDOCS.EL — EMACS VIEWER FOR DEVDOCS
-		━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Basic usage
-2. Managing documents
-3. Setting the default documents for a collection of buffers
-4. Contributing
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                 DEVDOCS.EL — EMACS VIEWER FOR DEVDOCS
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 devdocs.el is a documentation viewer for Emacs similar to the built-in
@@ -20,8 +11,6 @@ different software components.
 The stable version of the package is available from [GNU ELPA] and a
 development version is available from [MELPA]; to install, type `M-x
 package-install RET devdocs'.
-
-<https://raw.githubusercontent.com/astoff/devdocs.el/images/screenshot.png>
 
 
 [DevDocs] <https://devdocs.io>
