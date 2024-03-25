@@ -1,4 +1,3 @@
-
 Display images as sliced images in org-mode, like insert-sliced-image. This
 makes scrolling nicer.
 

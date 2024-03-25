@@ -1,12 +1,15 @@
-Any key activate search. This is modern way of navigation.
+Any key activate search. This is a modern way of navigation.
 There are minor modes for major modes: Dired, Package Menu.
 Cursor is moved by just pressing any printable characters
-of target filename or directory in current folder.  Do you still
-use arrays?
+of target filename or directory in current folder.
 
-Old dired-explorer.el package do the same.
+Activation:
+- for Dired:	M-x firstly-search-dired-mode RET
+- for Package Menu:	M-x firstly-search-package-mode RET
+- for Buffer Menu:	M-x firstly-search-buffermenu-mode RET
+- for Bookmarks:	M-x firstly-search-bookmarks-mode RET
 
-to activate, add lines to your Emacs configuration (Init file):
+in Emacs configuration (Init file):
 (require 'firstly-search-dired)
 (require 'firstly-search-package)
 (require 'firstly-search-buffermenu)
@@ -25,10 +28,7 @@ M-x customize-group RET firstly-search-buffermenu
 M-x customize-group RET firstly-search-bookmarks
 
 Note:
-C-n and C-p used during searching as C-s and C-r
-
-Many functions use text properties, to find properties use:
-  M-: (print (text-properties-at (point)))
+C-n and C-p is used during searching as C-s and C-r
 
 How it works:
 
@@ -37,10 +37,19 @@ simple and not in "ignore-keys" we activate incremental search with
 modified `isearch-search-fun-function' that limit search to bounds
 in buffer and some other tweeks.
 
-For Dired `isearch-search-fun-in-text-property' is used that search
-only in text which have not nil specified "text properties".
+For Dired default `isearch-search-fun-in-text-property' function is
+used for search and only in text which have not nil specified "text
+properties".
 
-For modes based on tabulated-list (Buffer Menu, Package menu)
-variant of of previous function:
-`firstly-search-fun-match-text-property', that search only in text
-which have specified properties with specified values.
+For modes  based on tabulated-list  (Buffer Menu, Package  menu) we
+create  modified version,  `firstly-search-fun-match-text-property'
+function that search  only in text which  have specified properties
+with specified values.
+
+Many functions use text properties, to investigate them use:
+  M-: (print (text-properties-at (point)))
+
+Files:
+- first-search.el - common functionality for other files.
+- first-search-{dired,package,buffermenu,bookmarks}.el -
+  define user available minor modes for specific major modes.
