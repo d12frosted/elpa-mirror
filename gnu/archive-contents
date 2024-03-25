@@ -873,15 +873,15 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (denote .
-	 [(2 2 4)
+	 [(2 3 0)
 	  ((emacs
 	    (28 1)))
 	  "Simple notes with an efficient file-naming scheme" tar
-	  ((:url . "https://git.sr.ht/~protesilaos/denote")
-	   (:maintainer "Denote Development" . "~protesilaos/denote@lists.sr.ht")
+	  ((:url . "https://github.com/protesilaos/denote")
+	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "a4557ea8d0781a8f569869f80a9c9db1d52cb970"))])
+	   (:commit . "93887bea48602eaa7584fbf0f92f3dafa678fc84"))])
  (denote-menu .
 	      [(1 2 0)
 	       ((emacs
@@ -2792,7 +2792,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "3847f311077efa17951a786d2759f2639c5f43c8"))])
  (org .
-      [(9 6 22)
+      [(9 6 23)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2801,7 +2801,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "50c51b9ad129ccd4d87cf5f2d64089a687383113"))])
+	(:commit . "5ff4d54c6fa527f478035467ffe0a82a81a92320"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
