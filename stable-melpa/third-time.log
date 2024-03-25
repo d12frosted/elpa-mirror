@@ -3,8 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/third-time
 
 Updating /mnt/store/melpa/working/third-time/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 093b74be860fac389fb173caef5fabf61e417eef
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/third-time/
+  to /tmp/third-timetBQl0i/third-time-20240207.1621
+    third-time.el -> third-time.el
+Created third-time-20240207.1621.tar containing:
+  third-time-20240207.1621/
+  third-time-20240207.1621/third-time-pkg.el
+  third-time-20240207.1621/third-time.el
+ ✓ Success:
+  2024-03-25T06:46:57+0000  third-time-20240207.1621.entry
+  2024-03-25T06:46:57+0000  third-time-20240207.1621.tar
+Built third-time in 63.058s, finished at 2024-03-25T06:46:59+0000

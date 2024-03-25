@@ -3,8 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~hajovonta/glue
 
 Updating /mnt/store/melpa/working/glue/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out dcdf8a69db87acea4fa61d4b4b9b1265c7e025db
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/glue/
+  to /tmp/glueG5iw1y/glue-20230112.2159
+    glue.el -> glue.el
+Created glue-20230112.2159.tar containing:
+  glue-20230112.2159/
+  glue-20230112.2159/glue-pkg.el
+  glue-20230112.2159/glue.el
+ ✓ Success:
+  2024-03-25T08:00:32+0000  glue-20230112.2159.entry
+  2024-03-25T08:00:32+0000  glue-20230112.2159.tar
+Built glue in 4.002s, finished at 2024-03-25T08:00:33+0000
