@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/thomp/dtk.git
 
 Updating /mnt/store/melpa/working/dtk/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/thomp/dtk.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 461f30f2e2038c3c469e710309046c0af4d6b41a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dtk/
+  to /tmp/dtkzGSXsQ/dtk-20240317.2328
+    dtk.el -> dtk.el
+Created dtk-20240317.2328.tar containing:
+  dtk-20240317.2328/
+  dtk-20240317.2328/dtk-pkg.el
+  dtk-20240317.2328/dtk.el
+ ✓ Success:
+  2024-03-26T18:34:24+0000  dtk-20240317.2328.entry
+  2024-03-26T18:34:24+0000  dtk-20240317.2328.tar
+Built dtk in 4.684s, finished at 2024-03-26T18:34:26+0000
