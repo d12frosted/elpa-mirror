@@ -34,7 +34,10 @@ Table of Contents
   [online] or or Info node `(org-remark) Getting Started'.
 
   For customization, refer to the customization group `org-remark' or
-  user manual: [online] or Info node `(org-remark) Customizing'.
+  user manual: [online] or Info node `(org-remark) Customizing'. A
+  [separate online article] has been written to guide you on how to
+  customize an icon (also part of the user manual. Evaluate (info
+  "(or-gremark) How to Set Org-remark to Use SVG Icons").
 
   An [introductory video] (8 minutes) and [V1.1.0 release introduction]
   (12 minutes) are available on YouTube.
@@ -49,6 +52,9 @@ Table of Contents
 [online] <https://nobiot.github.io/org-remark/#Getting-Started>
 
 [online] <https://nobiot.github.io/org-remark/#Customizing>
+
+[separate online article]
+<https://github.com/nobiot/org-remark/tree/main/docs/articles/2023-08-20T184309_C_how-to-set-icons-to-be-svg-images.md>
 
 [introductory video] <https://youtu.be/c8DHrAsFiLc>
 
@@ -85,8 +91,7 @@ Table of Contents
   This package is available on:
 
   • [GNU-ELPA] (releases only; equivalent to MELPA-Stable)
-  • [GNU-devel ELPA] (unreleased development branch; equivalent to
-    MELPA)
+  • [GNU-devel ELPA] (unreleased main branch; equivalent to MELPA)
 
   GNU ELPA should be already set up in your Emacs by default. If you
   wish to add GNU-devel ELPA, simply add its URL to `package-archives'
@@ -140,6 +145,36 @@ Table of Contents
   │   (define-key org-remark-mode-map (kbd "C-c n d") #'org-remark-delete))
   └────
 
+  Alternatively, you can use `use-package' to set up Org-remark. The
+  example provided below should be equivalent to the setup described
+  above.
+
+  ┌────
+  │ (use-package org-remark
+  │   :bind (;; :bind keyword also implicitly defers org-remark itself.
+  │ 	 ;; Keybindings before :map is set for global-map.
+  │ 	 ("C-c n m" . org-remark-mark)
+  │ 	 ("C-c n l" . org-remark-mark-line)
+  │ 	 :map org-remark-mode-map
+  │ 	 ("C-c n o" . org-remark-open)
+  │ 	 ("C-c n ]" . org-remark-view-next)
+  │ 	 ("C-c n [" . org-remark-view-prev)
+  │ 	 ("C-c n r" . org-remark-remove)
+  │ 	 ("C-c n d" . org-remark-delete))
+  │   ;; Alternative way to enable `org-remark-global-tracking-mode' in
+  │   ;; `after-init-hook'.
+  │   ;; :hook (after-init . org-remark-global-tracking-mode)
+  │   :init
+  │   ;; It is recommended that `org-remark-global-tracking-mode' be
+  │   ;; enabled when Emacs initializes. Alternatively, you can put it to
+  │   ;; `after-init-hook' as in the comment above
+  │   (org-remark-global-tracking-mode +1)
+  │   :config
+  │   (use-package org-remark-info :after info :config (org-remark-info-mode +1))
+  │   (use-package org-remark-eww  :after eww  :config (org-remark-eww-mode +1))
+  │   (use-package org-remark-nov  :after nov  :config (org-remark-nov-mode +1)))
+  └────
+
 
 [GNU-ELPA] <https://elpa.gnu.org/packages/org-remark.html>
 
@@ -169,30 +204,23 @@ Table of Contents
 5 Contributors
 ══════════════
 
-  New features
+  *New features*
 
+  • EPUB books (nov.el) support would not have been possible without
+    collaboration with @sati-bodhi
+  • `echo-text' update from the marginal notes to the source buffer by
+    marty hiatt (@mooseyboots)
+  • Support for websites with `eww-mode' by Vedang Manerikar (@vedang)
 
+  *Bug fixes*
 
-        EPUB books (nov.el) support would not have been possible without
-        collaboration with @sati-bodhi
-
-        `echo-text' update from the marginal notes to the source buffer
-        by marty hiatt (@mooseyboots)
-
-        Support for websites with `eww-mode' by Vedang Manerikar
-        (@vedang)
-
-  Bug fixes
   @alan-w-255, Nan Jun Jie (@nanjj), @sgati-bodhi
 
-  Documentation (including README, NEWS, CHANGELOG)
+  *Documentation (including README, NEWS, CHANGELOG)*
+
   @randomwangran, marty hiatt (@mooseyboots), @jsntn
 
-  All the comments, issues, and questions on GitHub
-  @randomwangran, @karthink, @holtzermann17, @shombando, @magthe,
-  @linwaytin, @rtrppl, @ryanprior, @ericsfraga, @darcamo, @zhewy,
-  @QMeqGR, @Vidianos-Giannitsis, @AtomicNess123, @mooseyboots, @ouboub,
-  @dian-yu-luo, @SylvianHemus, @basaran, @Ypot, @oatmealm, @sati-bodhi
+  Thank-you to all the comments, issues, and questions on GitHub!
 
 
 6 License

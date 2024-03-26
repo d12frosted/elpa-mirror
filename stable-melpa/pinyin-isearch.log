@@ -3,22 +3,7 @@ Fetcher: github
 Source:  https://github.com/Anoncheg1/pinyin-isearch.git
 
 Updating /mnt/store/melpa/working/pinyin-isearch/
-Checking out bb956213c6ccd3067d5e3c33d7695bdc5ba58133
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pinyin-isearch/
-  to /tmp/pinyin-isearchIbCWua/pinyin-isearch-20240224.709
-    pinyin-isearch-chars.el -> pinyin-isearch-chars.el
-    pinyin-isearch-loaders.el -> pinyin-isearch-loaders.el
-    pinyin-isearch-pinyin.el -> pinyin-isearch-pinyin.el
-    pinyin-isearch.el -> pinyin-isearch.el
-Created pinyin-isearch-20240224.709.tar containing:
-  pinyin-isearch-20240224.709/
-  pinyin-isearch-20240224.709/pinyin-isearch-chars.el
-  pinyin-isearch-20240224.709/pinyin-isearch-loaders.el
-  pinyin-isearch-20240224.709/pinyin-isearch-pinyin.el
-  pinyin-isearch-20240224.709/pinyin-isearch-pkg.el
-  pinyin-isearch-20240224.709/pinyin-isearch.el
- ✓ Success:
-  2024-03-26T07:32:34+0000  pinyin-isearch-20240224.709.entry
-  2024-03-26T07:32:34+0000  pinyin-isearch-20240224.709.tar
-Built pinyin-isearch in 3.299s, finished at 2024-03-26T07:32:36+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: could not read Username for 'https://github.com': No such device or address
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
