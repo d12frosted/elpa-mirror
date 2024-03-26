@@ -206,8 +206,7 @@ details.
   http://dorophone.blogspot.co.uk/2011/05/monadic-parser-combinators-in-elisp.html
 
 
-8 Changelog
-===========
+; News
 
   - v0.9.2, 2023-05-12:
     - name the keymap macrostep-mode-map, fixing a regression in v0.9.1
