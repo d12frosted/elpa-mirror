@@ -1,2 +1,3 @@
-Defines a major mode for editing the Manchester OWL syntax.
-Basically, this is just a bit of font locking.
+This is an emacs package which supports OWL Manchester Notation
+
+https://www.w3.org/TR/owl2-manchester-syntax/
