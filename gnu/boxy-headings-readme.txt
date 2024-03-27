@@ -1,21 +1,6 @@
-			    ━━━━━━━━━━━━━━━
-			     BOXY HEADINGS
-			    ━━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Usage
-.. 1. `boxy-headings'
-2. License
-3. Development
-.. 1. Setup
-.. 2. Commands
-..... 1. `eldev lint'
-..... 2. `eldev compile'
-..... 3. `eldev package'
-..... 4. `eldev md5'
+                            ━━━━━━━━━━━━━━━
+                             BOXY HEADINGS
+                            ━━━━━━━━━━━━━━━
 
 
 View org files as a boxy diagram.

@@ -347,31 +347,31 @@
 	      ("Serghei Iakovlev" . "egrep@protonmail.ch"))
 	     (:keywords "languages"))])
  (boxy .
-       [(1 1 3)
+       [(1 1 4)
 	((emacs
 	  (26 1)))
 	"A boxy layout framework" tar
-	((:url . "https://gitlab.com/tygrdev/boxy")
+	((:url . "https://gitlab.com/grinn.amy/boxy")
 	 (:keywords "tools")
-	 (:maintainer "Taylor Grinn" . "grinntaylor@gmail.com")
+	 (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
 	 (:authors
-	  ("Taylor Grinn" . "grinntaylor@gmail.com"))
-	 (:commit . "6567d846a06cdc75da8e88a5a961172cb3f77519"))])
+	  ("Amy Grinn" . "grinn.amy@gmail.com"))
+	 (:commit . "c65a353e01610633efe20d861393a5d9605bc59d"))])
  (boxy-headings .
-		[(2 1 4)
+		[(2 1 5)
 		 ((emacs
 		   (26 1))
 		  (boxy
-		   (1 0))
+		   (1 1))
 		  (org
 		   (9 4)))
 		 "View org files in a boxy diagram" tar
-		 ((:url . "https://gitlab.com/tygrdev/boxy-headings")
+		 ((:url . "https://gitlab.com/grinn.amy/boxy-headings")
 		  (:keywords "tools")
-		  (:maintainer "Taylor Grinn" . "grinntaylor@gmail.com")
+		  (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
 		  (:authors
-		   ("Taylor Grinn" . "grinntaylor@gmail.com"))
-		  (:commit . "a1b67d1b52a34084200c036f493e0110acea3a6d"))])
+		   ("Amy Grinn" . "grinn.amy@gmail.com"))
+		  (:commit . "08e3bb8b9cb042446ac1c210340d0dbd86c3ec1b"))])
  (breadcrumb .
 	     [(1 0 1)
 	      ((emacs
