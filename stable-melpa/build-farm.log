@@ -1,0 +1,32 @@
+Package: build-farm
+Fetcher: github
+Source:  https://github.com/alezost/build-farm.el.git
+
+Updating /mnt/store/melpa/working/build-farm/
+Checking out 5c268a3c235ace0d79ef1ec82c440120317e06f5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/build-farm/
+  to /tmp/build-farmSSgwDJ/build-farm-20181218.2002
+    build-farm-build.el -> build-farm-build.el
+    build-farm-evaluation.el -> build-farm-evaluation.el
+    build-farm-jobset.el -> build-farm-jobset.el
+    build-farm-popup.el -> build-farm-popup.el
+    build-farm-project.el -> build-farm-project.el
+    build-farm-url.el -> build-farm-url.el
+    build-farm-utils.el -> build-farm-utils.el
+    build-farm.el -> build-farm.el
+Created build-farm-20181218.2002.tar containing:
+  build-farm-20181218.2002/
+  build-farm-20181218.2002/build-farm-build.el
+  build-farm-20181218.2002/build-farm-evaluation.el
+  build-farm-20181218.2002/build-farm-jobset.el
+  build-farm-20181218.2002/build-farm-pkg.el
+  build-farm-20181218.2002/build-farm-popup.el
+  build-farm-20181218.2002/build-farm-project.el
+  build-farm-20181218.2002/build-farm-url.el
+  build-farm-20181218.2002/build-farm-utils.el
+  build-farm-20181218.2002/build-farm.el
+ ✓ Success:
+  2024-03-27T02:12:09+0000  build-farm-20181218.2002.entry
+  2024-03-27T02:12:09+0000  build-farm-20181218.2002.tar
+Built build-farm in 3.416s, finished at 2024-03-27T02:12:11+0000
