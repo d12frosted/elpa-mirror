@@ -83,9 +83,10 @@ Table of Contents
 .. 8. The backlinks’ buffer
 .. 9. Writing metanotes
 .. 10. Visiting linked files via the minibuffer
-.. 11. Link to a note or create it if missing
-.. 12. Convert `denote:' links to `file:' links
-.. 13. Miscellaneous information about links
+.. 11. Convert `denote:' links to `file:' links
+.. 12. Miscellaneous information about links
+..... 1. Aliases for the linking commands
+..... 2. The `denote-link-description-function' to format links
 8. Choose which commands to prompt for
 9. Fontification in Dired
 10. Automatically rename Denote buffers
@@ -702,13 +703,15 @@ Table of Contents
   not save the buffer they create ([Points of entry]). This gives the
   user the chance to review the text before writing it to a file. The
   user may choose to delete the unsaved buffer, thus not creating a new
-  note.
+  note ([The `denote-save-buffer-after-creation' option]).
 
   If `denote-save-buffer-after-creation' is set to a non-nil value, such
   buffers are saved automatically.
 
 
 [Points of entry] See section 3
+
+[The `denote-save-buffer-after-creation' option] See section 3.1.5
 
 
 3.1.6 The `denote-date-prompt-use-org-read-date' option
@@ -1007,7 +1010,7 @@ Table of Contents
 
 [Points of entry] See section 3
 
-[Link to a note or create it if missing] See section 7.11
+[Link to a note or create it if missing] See section 7.7
 
 
 3.7 Maintain separate directory silos for notes
@@ -2254,11 +2257,9 @@ section 5.3
 
   Denote offers several commands for linking between notes.
 
-  All links target files which are Denote notes.  This means that they
-  have our file-naming scheme, are writable/regular (not directory,
-  named pipe, etc.), and use the appropriate file type extension (per
-  `denote-file-type').  Furthermore, the files need to be inside the
-  `denote-directory' or one of its subdirectories.  No other file is
+  All links target files which are Denote files. This means that they
+  have our file-naming scheme. Files need to be inside the
+  `denote-directory' or one of its subdirectories. No other file is
   recognised.
 
   The following sections delve into the details.
@@ -2548,14 +2549,15 @@ section 7.3
         link]).
 
         IMPORTANT NOTE: Normally, `denote' does not save the buffer it
-        produces for the new note.  This is a safety precaution to not
-        write to disk unless the user wants it (e.g. the user may choose
-        to kill the buffer, thus cancelling the creation of the note).
-        However, for this command the creation of the note happens in
-        the background and the user may miss the step of saving their
-        buffer.  We thus have to save the buffer in order to (i)
-        establish valid links, and (ii) retrieve whatever front matter
-        from the target file.
+        produces for the new note ([The
+        `denote-save-buffer-after-creation' option]).  This is a safety
+        precaution to not write to disk unless the user wants it
+        (e.g. the user may choose to kill the buffer, thus cancelling
+        the creation of the note). However, for this command the
+        creation of the note happens in the background and the user may
+        miss the step of saving their buffer. We thus have to save the
+        buffer in order to (i) establish valid links, and (ii) retrieve
+        whatever front matter from the target file.
 
   `denote-link-after-creating-with-command'
         This command is like `denote-link-after-creating' except it
@@ -2589,6 +2591,20 @@ section 7.3
         `denote-link-to-existing-or-new-note', which helps with
         discoverability.
 
+  `denote-link-or-create-with-command'
+        This is like the above, except when it is about to create the
+        new note it first prompts for the specific file-creating command
+        to use ([Points of entry]). For example, the user may want to
+        specify a signature for this new file, so they can select the
+        `denote-signature' command.
+
+  In all of the above, an optional prefix argument (`C-u' by default)
+  creates a link that consists of just the identifier.  This has the
+  same meaning as in the regular `denote-link' command.
+
+  Denote provides similar functionality for opening an existing note or
+  creating a new one ([Open an existing note or create it if missing]).
+
 
 [Linking notes] See section 7
 
@@ -2596,7 +2612,13 @@ section 7.3
 
 [Adding a single link] See section 7.1
 
+[The `denote-save-buffer-after-creation' option] See section 3.1.5
+
 [Points of entry] See section 3
+
+[Points of entry] See section 3
+
+[Open an existing note or create it if missing] See section 3.6
 
 
 7.8 The backlinks’ buffer
@@ -2753,70 +2775,7 @@ backlinks?] See section 23.10
 [The backlinks’ buffer] See section 7.8
 
 
-7.11 Link to a note or create it if missing
-───────────────────────────────────────────
-
-  During a writing session, it is possible that a thought occurs which
-  does not require immediate attention but nonetheless must be linked to
-  from the current context.  Denote can be used in this case to
-  establish a link to an existing note or, if that is missing, to create
-  it.  The commands are `denote-link-after-creating', its more flexible
-  variant `denote-link-after-creating-with-command', the
-  `denote-link-or-create', and `denote-link-or-create-with-command'.
-
-  The command `denote-link-or-create' prompts for an existing file in
-  the `denote-directory' in order to link to it ([Linking notes]).  At
-  this point, the user must type in search terms that match a file name.
-  If the input does not return any matches and the user confirms their
-  choice to proceed (usually by typing RET twice, depending on the
-  minibuffer settings), `denote-link-or-create' will call the `denote'
-  command interactively to create a new note.  It will then use whatever
-  prompts `denote' normally has, per the user option `denote-prompts'
-  ([Standard note creation]).  If the title prompt is involved (the
-  default behaviour), the `denote-link-or-create' sets up this prompt to
-  have the previous input as the default title of the note
-  to-be-created.  This means that the user can type RET at the empty
-  prompt to re-use what they typed in previously.  Commands to use
-  previous inputs from the history are also available (`M-p' or `M-n' in
-  the minibuffer, which call `previous-history-element' and
-  `next-history-element' by default).  Accessing the history is helpful
-  to, for example, make further edits to the available text.
-
-  In the case where a file is created, the process happens in the
-  background, meaning that the new file is not displayed.  It is simply
-  linked to from the current context.
-
-  The `denote-link-or-create-with-command' is like the above, except
-  when it is about to create the new note it first prompts for the
-  specific file-creating command to use ([Points of entry]).  For
-  example, the user may want to specify a signature for this new file,
-  so they can select the `denote-signature' command.
-
-  The commands `denote-link-after-creating' and
-  `denote-link-or-create-with-command' are conceptually the same as
-  above except they do not have the “or create” logic: they always
-  create a new file in the backgroun (in fact, the aforementioned use
-  those two to perform the linking, which is consistent with the
-  composability and hackability of Denote).
-
-  In all of the above, an optional prefix argument (`C-u' by default)
-  creates a link that consists of just the identifier.  This has the
-  same meaning as in the regular `denote-link' command.
-
-  Denote provides similar functionality for opening an existing note or
-  creating a new one ([Open an existing note or create it if missing]).
-
-
-[Linking notes] See section 7
-
-[Standard note creation] See section 3.1
-
-[Points of entry] See section 3
-
-[Open an existing note or create it if missing] See section 3.6
-
-
-7.12 Convert `denote:' links to `file:' links
+7.11 Convert `denote:' links to `file:' links
 ─────────────────────────────────────────────
 
   Sometimes the user needs to translate all `denote:' link types to
@@ -2850,8 +2809,11 @@ backlinks?] See section 23.10
 section 7.3
 
 
-7.13 Miscellaneous information about links
+7.12 Miscellaneous information about links
 ──────────────────────────────────────────
+
+7.12.1 Aliases for the linking commands
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   For convenience, the `denote-link' command has an alias called
   `denote-insert-link'.  The `denote-backlinks' can also be used as
@@ -2859,6 +2821,18 @@ section 7.3
   `denote-link-insert-links-matching-regexp'.  The purpose of these
   aliases is to offer alternative, more descriptive names of select
   commands.
+
+
+7.12.2 The `denote-link-description-function' to format links
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The user option `denote-link-description-function' takes as its value
+  the symbol of a function. This is used to format the text of the link.
+  The default function inserts the title. If the file has a signature,
+  it includes that as well, prepending it to the title.
+
+  The function specified accepts a single `FILE' argument and returns
+  the description as a string.
 
 
 8 Choose which commands to prompt for
@@ -2880,7 +2854,7 @@ section 7.3
 
 [Open an existing note or create it if missing] See section 3.6
 
-[Link to a note or create it if missing] See section 7.11
+[Link to a note or create it if missing] See section 7.7
 
 [Points of entry] See section 3
 
@@ -4172,7 +4146,7 @@ section 15.13
   export purposes ([Convert `denote:' links to `file:' links]).
 
 
-[Convert `denote:' links to `file:' links] See section 7.12
+[Convert `denote:' links to `file:' links] See section 7.11
 
 ◊ 15.15.1.1 Manually configure Org export
 
