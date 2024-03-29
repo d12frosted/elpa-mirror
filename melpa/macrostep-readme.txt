@@ -204,25 +204,3 @@ details.
 
   [screencast]
   http://dorophone.blogspot.co.uk/2011/05/monadic-parser-combinators-in-elisp.html
-
-
-; News
-
-  - v0.9.2, 2023-05-12:
-    - name the keymap macrostep-mode-map, fixing a regression in v0.9.1
-  - v0.9.1, 2023-03-12:
-    - bug fixes, cleanup and modernization
-  - v0.9, 2015-10-01:
-    - separate into Elisp-specific and generic components
-    - highlight and expand compiler macros
-    - improve local macro expansion and macro form identification by
-      instrumenting `macroexpand(-all)'
-  - v0.8, 2014-05-29: fix a bug with printing the first element of lists
-  - v0.7, 2014-05-11: expand locally-defined macros within
-    `(cl-)macrolet' forms
-  - v0.6, 2013-05-04: better handling of quote and backquote
-  - v0.5, 2013-04-16: highlight region, maintain cleaner buffer state
-  - v0.4, 2013-04-07: only enter macrostep-mode on successful
-    macro-expansion
-  - v0.3, 2012-10-30: print dotted lists correctly.  autoload
-    definitions.

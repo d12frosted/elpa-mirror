@@ -15,7 +15,7 @@ Table of Contents
 7. Development
 
 
-[https://elpa.gnu.org/packages/listen.svg]
+[file:https://elpa.gnu.org/packages/listen.svg]
 
 This package aims to provide a simple audio/music player for Emacs.  It
 should "just work," with little-to-no configuration, have intuitive
@@ -46,8 +46,8 @@ Note a silly limitation: a track may be present in a queue only once
 (but who would want to have a track more than once in a playlist).
 
 
-[https://elpa.gnu.org/packages/listen.svg]
-<file:https:/elpa.gnu.org/packages/listen.html>
+[file:https://elpa.gnu.org/packages/listen.svg]
+<https://elpa.gnu.org/packages/listen.html>
 
 
 1 Contents
@@ -446,6 +446,27 @@ Tips
 
 6 Changelog
 ═══════════
+
+v0.9
+────
+
+  /Released without additional changes due to change in ELPA recipe./
+
+  *Fixes*
+  • Currently playing column in queue list buffer.
+  • Autoload of `listen' / `listen-menu' commands (See [Transient
+    issue].  Thanks to Jonas Bernoulli.).
+
+
+[Transient issue] <https://github.com/magit/transient/issues/280>
+
+
+v0.8.1
+──────
+
+  *Fixes*
+  • Autoload of `listen' / `listen-menu' commands.
+
 
 v0.8
 ────
