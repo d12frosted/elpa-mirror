@@ -906,7 +906,7 @@
 	      ("Niklas Eklund" . "niklas.eklund@posteo.net"))
 	     (:commit . "fedb0df5b0fbba13c662107855fb07a922793096"))])
  (devdocs .
-	  [(0 6)
+	  [(0 6 1)
 	   ((emacs
 	     (27 1)))
 	   "Emacs viewer for DevDocs" tar
@@ -915,7 +915,7 @@
 	    (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	    (:authors
 	     ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	    (:commit . "01ce2c06e997cb821be6123395fb6d224bf958ab"))])
+	    (:commit . "ebdd3b39bef1a928c069373337d0f8e4f2d8b8d2"))])
  (devicetree-ts-mode .
 		     [(0 3)
 		      ((emacs
@@ -989,7 +989,7 @@
 	     (:keywords "files" "unix" "convenience")
 	     (:url . "http://elpa.gnu.org/packages/dired-du.html"))])
  (dired-duplicates .
-		   [(0 3)
+		   [(0 4)
 		    ((emacs
 		      (27 1)))
 		    "Find duplicate files locally and remotely" tar
@@ -998,7 +998,7 @@
 		     (:maintainer "Harald Judt" . "h.judt@gmx.at")
 		     (:authors
 		      ("Harald Judt" . "h.judt@gmx.at"))
-		     (:commit . "e07552323b26ce68956f8b03aa66af145bae4d86"))])
+		     (:commit . "5c5f24bea92159987f65f01ef32b261e905997bd"))])
  (dired-git-info .
 		 [(0 3 1)
 		  ((emacs

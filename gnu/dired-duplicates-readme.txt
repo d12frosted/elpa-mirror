@@ -29,7 +29,7 @@
   `nil'.
 
   dired-duplicates will silently ignore unreadable directories and
-  files.
+  files, and also unregular files, such as sockets.
 
 
 2 Requirements
@@ -64,8 +64,18 @@
 4 Usage
 ═══════
 
-  Call `dired-duplicates' interactively and provide one or more
-  directories (usually separated by commas) to search in recursively.
+  Call `dired-duplicates' interactively using M-x and provide one or
+  more directories to search in recursively.  If not customized
+  otherwise, the key shortcut M-n usually gets you the default directory
+  in the minibuffer prompt.  For some completion systems like vertico
+  and depending on how it is set up, remember to hit M-RET to confirm
+  the completion if you are not at the end of the line.
+
+  If you provide a prefix, using C-u M-x `dired-duplicates', then this
+  behaves similar but will search for files which do _NOT_ have any
+  duplicates.  This might be more helpful than listing all the duplicate
+  files when comparing directories that have mostly the same contents
+  except a few files.
 
 
 5 Configuration
@@ -76,26 +86,16 @@
   These options are described extensively there.
 
 
-6 Known issues and reporting bugs
-═════════════════════════════════
+6 Reporting bugs
+════════════════
 
-6.1 Known issue with completing-multiple-read
-─────────────────────────────────────────────
-
-  At the moment, there is a problem in Emacs 28.1 and perhaps other
-  versions with `completing-read-multiple' that makes auto-completion
-  fail.  When you try to specify more than one directory separated by
-  commas (e.g. `/tmp/1,/tmp/2'), an error /may/ occur depending on the
-  completing system.  In such a case, you might just do without
-  auto-completion and ignore that error, dired-duplicates will still
-  function properly if you provide valid directories.
-
-
-6.2 Reporting bugs
-──────────────────
+  If checksumming or accessing a file fails, it should be reported in
+  the minibuffer (interrupting the operation), or in the *Messages*
+  buffer.
 
   Just open an issue at the homepage of this project in case you hit an
-  error, and provide proper steps to reproduce the problem.
+  error that you think should not happen, but please provide proper
+  steps to reproduce the problem.
 
 
 7 License

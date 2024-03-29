@@ -6,6 +6,7 @@ A test suite begins with a call to the Buttercup macro `describe` with
 the first parameter describing the suite and the rest being the body
 of code that implements the suite.
 
+;;; lexical binding is required -*- lexical-binding: t; -*-
 (describe "A suite"
   (it "contains a spec with an expectation"
     (expect t :to-be t)))
