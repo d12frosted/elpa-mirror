@@ -1,4 +1,4 @@
-  This package introduces a derived major mode (`jmt-mode`) that affords better control
+  This package introduces a derived major mode (`jmt-mode`) that offers better control
   of the Java mode built into Emacs, particularly in regard to syntax highlighting.
   For more information, see `http://reluk.ca/project/Java/Emacs/`.
 
