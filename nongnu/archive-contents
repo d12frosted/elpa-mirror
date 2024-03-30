@@ -1167,7 +1167,7 @@
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
 	      (:commit . "b04272a53e5b2db1fc7724d4ba84e51fd20e9c4f"))])
  (highlight-parentheses .
-			[(2 1 1)
+			[(2 2 0)
 			 ((emacs
 			   (24 3)))
 			 "Highlight surrounding parentheses" tar
@@ -1175,8 +1175,8 @@
 			  (:keywords "faces" "matching")
 			  (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
 			  (:authors
-			   ("Nikolaj Schumacher <bugs * nschum de>"))
-			  (:commit . "438a1cb2563e2a2496be4678cc0df8d5b22caf5d"))])
+			   ("Nikolaj Schumacher" . "bugs*nschumde"))
+			  (:commit . "712b8375fe484d414372f25b09dc4595fbebd64f"))])
  (hl-block-mode .
 		[(0 2)
 		 ((emacs
