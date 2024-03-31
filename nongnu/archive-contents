@@ -1723,15 +1723,11 @@
 	       (:url . "https://elpa.nongnu.org/nongnu/p4-16-mode.html")
 	       (:commit . "794dd0056b4ca736ae5ecb39072547f22a006137"))])
  (package-lint .
-	       [(0 21)
-		((cl-lib
-		  (0 5))
-		 (emacs
+	       [(0 23)
+		((emacs
 		  (24 4))
 		 (let-alist
-		     (1 0 6))
-		 (compat
-		  (29 1)))
+		     (1 0 6)))
 		"A linting library for elisp package authors" tar
 		((:url . "https://github.com/purcell/package-lint")
 		 (:keywords "lisp")
@@ -1741,7 +1737,7 @@
 		 (:authors
 		  ("Steve Purcell" . "steve@sanityinc.com")
 		  ("Fanael Linithien" . "fanael4@gmail.com"))
-		 (:commit . "dd81a5b9224cc6e6dc4bbb6b4a2928df89c01317"))])
+		 (:commit . "17e4ab20dd3e36fa540007b4f4047170c23bdb10"))])
  (pacmacs .
 	  [(0 1 1)
 	   ((emacs
