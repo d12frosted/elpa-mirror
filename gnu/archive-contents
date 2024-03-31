@@ -3391,16 +3391,12 @@
  (realgud-ipdb .
 	       [(1 0 0)
 		((realgud
-		  (1 5 0))
-		 (load-relative
-		  (1 3 1))
+		  (1 4 5))
 		 (emacs
-		  (25)))
-		"Realgud front-end to ipdb" tar
+		  (24)))
+		"realgud front-end to ipdb" tar
 		((:url . "http://github.com/rocky/realgud-ipdb")
-		 (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
-		 (:authors
-		  ("Rocky Bernstein" . "rocky@gnu.org")))])
+		 (:commit . "ba41636ac4102bdc9d28a5ae7177b3792be55933"))])
  (realgud-jdb .
 	      [(1 0 0)
 	       ((realgud
@@ -3428,7 +3424,8 @@
 		((:url . "http://github.com/realgud/realgud-lldb")
 		 (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
 		 (:authors
-		  ("Rocky Bernstein" . "rocky@gnu.org")))])
+		  ("Rocky Bernstein" . "rocky@gnu.org"))
+		 (:commit . "f2f77d6ddfa42430ead400eaf81c605c3a04dead"))])
  (realgud-node-debug .
 		     [(1 0 0)
 		      ((realgud
@@ -3473,7 +3470,8 @@
 		     ((:url . "http://github.com/realgud/realgud-trepan-ni")
 		      (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
 		      (:authors
-		       ("Rocky Bernstein" . "rocky@gnu.org")))])
+		       ("Rocky Bernstein" . "rocky@gnu.org"))
+		      (:commit . "ce008862ea33de0a9e6c06099b9ddff8f620f2e4"))])
  (realgud-trepan-xpy .
 		     [(1 0 1)
 		      ((realgud
@@ -3500,12 +3498,13 @@
 	     (:commit . "dcd339458469d6c3c499b11df9d3b44e6de98ff5"))])
  (register-list .
 		[(0 1)
-		 nil "Interactively list/edit registers" single
-		 ((:url . "http://elpa.gnu.org/packages/register-list.html")
-		  (:keywords "register")
+		 nil "Interactively list/edit registers" tar
+		 ((:keywords "register")
+		  (:maintainer "Bastien Guerry" . "bzgATalternDOTorg")
 		  (:authors
-		   ("Bastien Guerry" . "bzg@gnu.org"))
-		  (:maintainer "Bastien Guerry" . "bzg@gnu.org"))])
+		   ("Bastien Guerry" . "bzgATalternDOTorg"))
+		  (:url . "https://elpa.gnu.org/packages/register-list.html")
+		  (:commit . "14d719a6f3596856228f08d3746a7bf92dd13240"))])
  (relint .
 	 [(1 24)
 	  ((xr
@@ -3536,10 +3535,11 @@
 		   (0 5)))
 		 "Clean-up and Beautify the list of minor-modes." tar
 		 ((:url . "https://github.com/Malabarba/rich-minority")
+		  (:keywords "mode-line" "faces")
 		  (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 		  (:authors
 		   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
-		  (:keywords "mode-line" "faces"))])
+		  (:commit . "d33d2e357c8eb0b38624dbc51e8b953b08b0cc98"))])
  (rnc-mode .
 	   [(0 3)
 	    nil "Emacs mode to edit Relax-NG Compact files" tar
@@ -3579,10 +3579,11 @@
 	   (1 0)))
 	 "A collaborative editing framework for Emacs" tar
 	 ((:url . "http://rudel.sourceforge.net/")
+	  (:keywords "rudel" "collaboration")
 	  (:maintainer "Jan Moringen" . "scymtym@users.sourceforge.net")
 	  (:authors
 	   ("Jan Moringen" . "scymtym@users.sourceforge.net"))
-	  (:keywords "rudel" "collaboration"))])
+	  (:commit . "42684c4fb26318291c8c06b184166c470d465ff4"))])
  (satchel .
 	  [(0 2)
 	   ((emacs
@@ -3604,18 +3605,20 @@
 	     (2 12 0)))
 	   "Scan documents and images" tar
 	   ((:url . "https://gitlab.com/rstocker/scanner.git")
+	    (:keywords "hardware" "multimedia")
 	    (:maintainer "Raffael Stocker" . "r.stocker@mnet-mail.de")
 	    (:authors
 	     ("Raffael Stocker" . "r.stocker@mnet-mail.de"))
-	    (:keywords "hardware" "multimedia"))])
+	    (:commit . "b96d3d111b3666bb8217a67fddfc6445d1e13c82"))])
  (scroll-restore .
 		 [(1 0)
-		  nil "restore original position after scrolling" single
-		  ((:url . "http://elpa.gnu.org/packages/scroll-restore.html")
-		   (:keywords "scrolling")
+		  nil "restore original position after scrolling" tar
+		  ((:keywords "scrolling")
+		   (:maintainer "Martin Rudalics" . "rudalics@gmx.at")
 		   (:authors
 		    ("Martin Rudalics" . "rudalics@gmx.at"))
-		   (:maintainer "Martin Rudalics" . "rudalics@gmx.at"))])
+		   (:url . "https://elpa.gnu.org/packages/scroll-restore.html")
+		   (:commit . "af8f3beae533c030d4899c235473aa15bfcb2010"))])
  (sed-mode .
 	   [(1 1)
 	    nil "Major mode to edit sed scripts" tar
@@ -3632,7 +3635,7 @@
 	(:authors
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
 	(:url . "https://elpa.gnu.org/packages/seq.html")
-	(:commit . "9d9f51b0e3ca59e0a488801064512f4878ac910b"))])
+	(:commit . "27a90793a13f149121180e864fa53d68b9eac0b3"))])
  (setup .
 	[(1 3 2)
 	 ((emacs
@@ -3651,7 +3654,8 @@
 	    (:maintainer "Michael R. Mauger" . "michael@mauger.com")
 	    (:authors
 	     ("Michael R. Mauger" . "michael@mauger.com"))
-	    (:url . "https://elpa.gnu.org/packages/shelisp.html"))])
+	    (:url . "https://elpa.gnu.org/packages/shelisp.html")
+	    (:commit . "32f91342f0039aa0e78a032b5b2a651ed5b1b79e"))])
  (shell-command+ .
 		 [(2 4 2)
 		  ((emacs
@@ -3666,19 +3670,18 @@
  (shen-mode .
 	    [(0 1)
 	     nil "A major mode for editing shen source code" tar
-	     ((:maintainer "Eric Schulte" . "schulte.eric@gmail.com")
+	     ((:keywords "languages" "shen")
+	      (:maintainer "Eric Schulte" . "schulte.eric@gmail.com")
 	      (:authors
 	       ("Eric Schulte" . "schulte.eric@gmail.com"))
-	      (:keywords "languages" "shen")
-	      (:url . "http://elpa.gnu.org/packages/shen-mode.html"))])
+	      (:url . "https://elpa.gnu.org/packages/shen-mode.html")
+	      (:commit . "df28df31317188a6d87c9df93444543ace4f7f4f"))])
  (sisu-mode .
 	    [(7 1 8)
-	     nil "Major mode for SiSU markup text" single
-	     ((:keywords "text" "syntax" "processes" "tools")
-	      (:authors
-	       ("Ralph Amissah & Ambrose Kofi Laing"))
-	      (:maintainer "Ralph Amissah" . "ralph.amissah@gmail.com")
-	      (:url . "http://www.sisudoc.org/"))])
+	     nil "Major mode for SiSU markup text" tar
+	     ((:url . "http://www.sisudoc.org/")
+	      (:keywords "text" "syntax" "processes" "tools")
+	      (:commit . "456acbde87a9fa9da0ed8b441c3f22c4d5310296"))])
  (site-lisp .
 	    [(0 1 2)
 	     ((emacs
@@ -3697,41 +3700,44 @@
 		(:keywords "multimedia")
 		(:maintainer "D.L. Nicolai" . "dalanicolai@gmail.com")
 		(:authors
-		 ("D.L. Nicolai" . "dalanicolai@gmail.com")))])
+		 ("D.L. Nicolai" . "dalanicolai@gmail.com"))
+		(:commit . "ff42a587d90f9cfd3481db6f4e9a269e3a9300cd"))])
  (slime-volleyball .
 		   [(1 2 0)
 		    ((cl-lib
 		      (0 5)))
 		    "An SVG Slime Volleyball Game" tar
-		    ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
+		    ((:keywords "games")
+		     (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		     (:authors
 		      ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
-		     (:keywords "games")
-		     (:url . "https://elpa.gnu.org/packages/slime-volleyball.html"))])
+		     (:url . "https://elpa.gnu.org/packages/slime-volleyball.html")
+		     (:commit . "361d22bba0b03cd81331439c97f84583dd87c752"))])
  (sm-c-mode .
 	    [(1 1)
-	     nil "C major mode based on SMIE" single
-	     ((:url . "http://elpa.gnu.org/packages/sm-c-mode.html")
+	     nil "C major mode based on SMIE" tar
+	     ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
 	      (:authors
 	       ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-	      (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+	      (:url . "https://elpa.gnu.org/packages/sm-c-mode.html")
+	      (:commit . "3ef465d3ebed319fdaa3bd650bc19eb11c786fe5"))])
  (smalltalk-mode .
 		 [(4 0)
 		  nil "Major mode for the GNU Smalltalk programming language" tar
 		  ((:maintainer "Derek Zhou" . "derek@3qin.us")
-		   (:authors
-		    ("Steve Byrne"))
-		   (:url . "https://elpa.gnu.org/packages/smalltalk-mode.html"))])
+		   (:url . "https://elpa.gnu.org/packages/smalltalk-mode.html")
+		   (:commit . "570b705db9a02bb48cd61652639401715f419447"))])
  (smart-yank .
 	     [(0 1 1)
 	      ((emacs
 		(24)))
-	      "A different approach of yank pointer handling" single
-	      ((:url . "http://elpa.gnu.org/packages/smart-yank.html")
-	       (:keywords "convenience")
+	      "A different approach of yank pointer handling" tar
+	      ((:keywords "convenience")
+	       (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de")
 	       (:authors
 		("Michael Heerdegen" . "michael_heerdegen@web.de"))
-	       (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de"))])
+	       (:url . "https://elpa.gnu.org/packages/smart-yank.html")
+	       (:commit . "673e1884d3ca537143415fc91b0b06a4ae02f164"))])
  (sml-mode .
 	   [(6 12)
 	    ((emacs
@@ -3742,13 +3748,9 @@
 	    ((:keywords "sml")
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
 	     (:authors
-	      ("Lars Bo Nielsen")
-	      ("	Olin Shivers")
-	      ("	Fritz Knabe (?)")
-	      ("	Steven Gilmore (?)")
-	      ("	Matthew Morley" . "mjm@scs.leeds.ac.uk")
-	      ("	Matthias Blume" . "blume@cs.princeton.edu")
-	      ("	(Stefan Monnier)" . "monnier@iro.umontreal.ca"))
+	      ("Matthew Morley" . "mjm@scs.leeds.ac.uk")
+	      ("Matthias Blume" . "blume@cs.princeton.edu")
+	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:url . "https://elpa.gnu.org/packages/sml-mode.html")
 	     (:commit . "7ebf91114292eead967d1a9bb4f235d66f6dd525"))])
  (so-long .
@@ -3792,12 +3794,13 @@
 	  [(1 6 2)
 	   ((emacs
 	     (24 1)))
-	   "Write lisp at the speed of thought." single
-	   ((:keywords "convenience" "lisp")
+	   "Write lisp at the speed of thought." tar
+	   ((:url . "https://github.com/Malabarba/speed-of-thought-lisp")
+	    (:keywords "convenience" "lisp")
+	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	    (:authors
 	     ("Artur Malabarba" . "emacs@endlessparentheses.com"))
-	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
-	    (:url . "https://github.com/Malabarba/speed-of-thought-lisp"))])
+	    (:commit . "fffe8d0b42b143a2e7df0470d9049fa57b6ecac5"))])
  (spacious-padding .
 		   [(0 4 1)
 		    ((emacs
@@ -3815,10 +3818,11 @@
 	     (24 3)))
 	   "Add spinners and progress-bars to the mode-line for ongoing operations" tar
 	   ((:url . "https://github.com/Malabarba/spinner.el")
+	    (:keywords "processes" "mode-line")
 	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	    (:authors
 	     ("Artur Malabarba" . "emacs@endlessparentheses.com"))
-	    (:keywords "processes" "mode-line"))])
+	    (:commit . "bca794fa6f6b007292cdac9b0a850a3711986db5"))])
  (sql-beeline .
 	      [(0 2)
 	       nil "Beeline support for sql.el" tar
@@ -3912,25 +3916,29 @@
       [(1 1)
        ((emacs
 	 (25)))
-       "SVG image creation functions" single
-       ((:url . "http://elpa.gnu.org/packages/svg.html")
-	(:keywords "image")
+       "SVG image creation functions" tar
+       ((:keywords "image")
+	(:maintainer
+	 ("Lars Magne Ingebrigtsen" . "larsi@gnus.org")
+	 ("Felix E. Klee" . "felix.klee@inka.de"))
 	(:authors
 	 ("Lars Magne Ingebrigtsen" . "larsi@gnus.org")
 	 ("Felix E. Klee" . "felix.klee@inka.de"))
-	(:maintainer "Lars Magne Ingebrigtsen" . "larsi@gnus.org"))])
+	(:url . "https://elpa.gnu.org/packages/svg.html")
+	(:commit . "2c1d8397788c1385debef514c59a6461b2e5408e"))])
  (svg-clock .
 	    [(1 2)
 	     ((svg
 	       (1 0))
 	      (emacs
 	       (27 0)))
-	     "Analog clock using Scalable Vector Graphics" single
-	     ((:url . "http://elpa.gnu.org/packages/svg-clock.html")
-	      (:keywords "demo" "svg" "clock")
+	     "Analog clock using Scalable Vector Graphics" tar
+	     ((:keywords "demo" "svg" "clock")
+	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de")
 	      (:authors
 	       ("Ulf Jasper" . "ulf.jasper@web.de"))
-	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
+	      (:url . "https://elpa.gnu.org/packages/svg-clock.html")
+	      (:commit . "1c04475520a125432c4e873ca944323999a3ff83"))])
  (svg-lib .
 	  [(0 3)
 	   ((emacs
@@ -3951,7 +3959,8 @@
 		 (:keywords "convenience")
 		 (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
 		 (:authors
-		  ("Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")))])
+		  ("Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))
+		 (:commit . "3b07983614bee0195534e7a8a6dcfab757da4f0b"))])
  (swiper .
 	 [(0 14 2)
 	  ((emacs
@@ -4051,12 +4060,13 @@
 		     [(1 5)
 		      ((emacs
 			(24)))
-		      "temp buffer browse mode" single
-		      ((:url . "http://elpa.gnu.org/packages/temp-buffer-browse.html")
-		       (:keywords "convenience")
+		      "temp buffer browse mode" tar
+		      ((:keywords "convenience")
+		       (:maintainer "Leo Liu" . "sdl.web@gmail.com")
 		       (:authors
 			("Leo Liu" . "sdl.web@gmail.com"))
-		       (:maintainer "Leo Liu" . "sdl.web@gmail.com"))])
+		       (:url . "https://elpa.gnu.org/packages/temp-buffer-browse.html")
+		       (:commit . "db6041b0413fdeefb1f1285e1d9c1039c10fbf04"))])
  (tempel .
 	 [(1 1)
 	  ((emacs
@@ -4074,12 +4084,13 @@
 	      [(1 3 0)
 	       ((cl-lib
 		 (0)))
-	       "Simple Unit Test Framework for Emacs Lisp" single
-	       ((:keywords "unit-test")
+	       "Simple Unit Test Framework for Emacs Lisp" tar
+	       ((:url . "http://github.com/rocky/emacs-test-simple")
+		(:keywords "unit-test")
+		(:maintainer "Rocky Bernstein" . "rocky@gnu.org")
 		(:authors
 		 ("Rocky Bernstein" . "rocky@gnu.org"))
-		(:maintainer "Rocky Bernstein" . "rocky@gnu.org")
-		(:url . "http://github.com/rocky/emacs-test-simple"))])
+		(:commit . "b3b69f52207d3a8111421ad7ab9ed82abbe85316"))])
  (theme-buffet .
 	       [(0 1 2)
 		((emacs
@@ -4175,19 +4186,21 @@
 	      [(0 2)
 	       ((emacs
 		 (24 1)))
-	       "Custom theme for remote buffers" single
-	       ((:url . "http://elpa.gnu.org/packages/tramp-theme.html")
-		(:keywords "convenience" "faces")
+	       "Custom theme for remote buffers" tar
+	       ((:keywords "convenience" "faces")
+		(:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 		(:authors
 		 ("Michael Albinus" . "michael.albinus@gmx.de"))
-		(:maintainer "Michael Albinus" . "michael.albinus@gmx.de"))])
+		(:url . "https://elpa.gnu.org/packages/tramp-theme.html")
+		(:commit . "e23d7a390278feea8b5652da49052a16dfbbfc3f"))])
  (transcribe .
 	     [(1 5 2)
-	      nil "Package for audio transcriptions" single
-	      ((:url . "http://elpa.gnu.org/packages/transcribe.html")
+	      nil "Package for audio transcriptions" tar
+	      ((:maintainer "David Gonzalez Gandara" . "dggandara@member.fsf.org")
 	       (:authors
 		("David Gonzalez Gandara" . "dggandara@member.fsf.org"))
-	       (:maintainer "David Gonzalez Gandara" . "dggandara@member.fsf.org"))])
+	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
+	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
 	    [(0 6 0)
 	     ((emacs
@@ -4277,15 +4290,13 @@
  (undo-tree .
 	    [(0 8 2)
 	     ((queue
-	       (0 2))
-	      (emacs
-	       (24 3)))
+	       (0 2)))
 	     "Treat undo history as a tree" tar
 	     ((:url . "https://www.dr-qubit.org/undo-tree.html")
 	      (:keywords "convenience" "files" "undo" "redo" "history" "tree")
-	      (:maintainer "Toby Cubitt" . "toby+undo-tree@dr-qubit.org")
+	      (:maintainer "Toby Cubitt" . "toby-undo-tree@dr-qubit.org")
 	      (:authors
-	       ("Toby Cubitt" . "toby+undo-tree@dr-qubit.org"))
+	       ("Toby Cubitt" . "toby-undo-tree@dr-qubit.org"))
 	      (:commit . "42aab056e37e033816b2d192f9121b89410b958e"))])
  (uni-confusables .
 		  [(0 3)
@@ -4372,22 +4383,24 @@
 	      (0 5))
 	     (seq
 	      (2 16)))
-	    "Schema validation for Emacs-lisp" single
-	    ((:url . "http://elpa.gnu.org/packages/validate.html")
-	     (:keywords "lisp")
+	    "Schema validation for Emacs-lisp" tar
+	    ((:keywords "lisp")
+	     (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	     (:authors
 	      ("Artur Malabarba" . "emacs@endlessparentheses.com"))
-	     (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com"))])
+	     (:url . "https://elpa.gnu.org/packages/validate.html")
+	     (:commit . "2bc1a7c5f09de5deb7f27b2b4ed731271f9f3f05"))])
  (valign .
 	 [(3 1 1)
 	  ((emacs
 	    (26 0)))
 	  "Visually align tables" tar
 	  ((:url . "https://github.com/casouri/valign")
+	   (:keywords "convenience" "text" "table")
 	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	   (:authors
 	    ("Yuan Fu" . "casouri@gmail.com"))
-	   (:keywords "convenience" "text" "table"))])
+	   (:commit . "421c8c0cb4636e5fd87ac1022d6b8268c320f74f"))])
  (vc-backup .
 	    [(1 1 0)
 	     nil "VC backend for versioned backups" tar
@@ -4395,7 +4408,8 @@
 	      (:keywords "vc")
 	      (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
 	      (:authors
-	       ("Philip Kaludercic" . "philipk@posteo.net")))])
+	       ("Philip Kaludercic" . "philipk@posteo.net"))
+	      (:commit . "397af1e12b2e73a00370cc3ac054ffe2402b3352"))])
  (vc-got .
 	 [(1 2)
 	  ((emacs
@@ -4403,7 +4417,9 @@
 	  "VC backend for Game of Trees VCS" tar
 	  ((:url . "https://projects.omarpolo.com/vc-got.html")
 	   (:keywords "vc" "tools")
-	   (:maintainer "Omar Polo" . "op@omarpolo.com")
+	   (:maintainer
+	    ("Omar Polo" . "op@omarpolo.com")
+	    ("Timo Myyrä" . "timo.myyra@bittivirhe.fi"))
 	   (:authors
 	    ("Omar Polo" . "op@omarpolo.com")
 	    ("Timo Myyrä" . "timo.myyra@bittivirhe.fi"))
@@ -4417,26 +4433,30 @@
 	     (:keywords "vc")
 	     (:maintainer "Andrii Kolomoiets" . "andreyk.mad@gmail.com")
 	     (:authors
-	      ("Andrii Kolomoiets" . "andreyk.mad@gmail.com")))])
+	      ("Andrii Kolomoiets" . "andreyk.mad@gmail.com"))
+	     (:commit . "d044448965d31ca8214f8bca48487e4d9b9d9a0f"))])
  (vcard .
 	[(0 2 2)
 	 ((emacs
 	   (27 1)))
 	 "Package for handling vCard files" tar
 	 ((:keywords "vcard" "mail" "news")
-	  (:maintainer "Noah Friedman <friedman@splode.com>, Eric Abrahamsen" . "eric@ericabrahamsen.net")
+	  (:maintainer
+	   ("Noah Friedman" . "friedman@splode.com")
+	   ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
 	  (:authors
 	   ("Noah Friedman" . "friedman@splode.com"))
 	  (:url . "https://elpa.gnu.org/packages/vcard.html")
 	  (:commit . "28b88fd8ed53ca12d9499175217af81f5ea161fc"))])
  (vcl-mode .
 	   [(1 1)
-	    nil "Major mode for Varnish Configuration Language" single
-	    ((:url . "http://elpa.gnu.org/packages/vcl-mode.html")
-	     (:keywords "varnish" "vcl")
+	    nil "Major mode for Varnish Configuration Language" tar
+	    ((:keywords "varnish" "vcl")
+	     (:maintainer "Sergey Poznyakoff" . "gray@gnu.org.ua")
 	     (:authors
 	      ("Sergey Poznyakoff" . "gray@gnu.org.ua"))
-	     (:maintainer "Sergey Poznyakoff" . "gray@gnu.org.ua"))])
+	     (:url . "https://elpa.gnu.org/packages/vcl-mode.html")
+	     (:commit . "ff7331de91e399af4b222cad0b0a1d445f82b333"))])
  (vdiff .
 	[(0 2 4)
 	 ((emacs
@@ -4445,10 +4465,11 @@
 	   (0 13 0)))
 	 "A diff tool similar to  vimdiff" tar
 	 ((:url . "https://github.com/justbur/emacs-vdiff")
+	  (:keywords "diff")
 	  (:maintainer "Justin Burkett" . "justin@burkett.cc")
 	  (:authors
 	   ("Justin Burkett" . "justin@burkett.cc"))
-	  (:keywords "diff"))])
+	  (:commit . "007e44be19d068fd6b49874b6e9b8df8b1f552bd"))])
  (verilog-mode .
 	       [(2024 3 1 121933719)
 		nil "major mode for editing verilog source in Emacs" tar
