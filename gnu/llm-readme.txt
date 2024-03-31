@@ -415,8 +415,7 @@
 
   *Note: function calling functionality is currently alpha quality.  If
    you want to use function calling, please watch the `llm'
-   [discussion](<https://github.com/ahyatt/llm/discussions>) section for
-   any announcements about changes.*
+   [discussions] for any announcements about changes.*
 
   Function calling is a way to give the LLM a list of functions it can
   call, and have it call the functions for you.  The standard
@@ -470,6 +469,9 @@
   Examples can be found in `llm-tester'. There is also a function call
   to generate function calls from existing elisp functions in
   `utilities/elisp-to-function-call.el'.
+
+
+[discussions] <https://github.com/ahyatt/llm/discussions>
 
 
 5 Contributions

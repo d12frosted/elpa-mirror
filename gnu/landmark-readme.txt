@@ -25,5 +25,3 @@ west will be improved when they shouldn't
 
 Many thanks to Yuri Pryadkin <yuri@rana.usc.edu> for this
 concise problem description.
-
-_* Require

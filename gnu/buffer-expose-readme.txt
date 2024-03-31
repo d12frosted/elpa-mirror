@@ -1,51 +1,60 @@
-#+BEGIN_HTML
-<a href="https://elpa.gnu.org/packages/buffer-expose.html"><img alt="GNU ELPA" src="https://elpa.gnu.org/favicon.png"/></a>
-#+END_HTML
+<a href="<https://elpa.gnu.org/packages/buffer-expose.html>"><img
+alt="GNU ELPA" src="<https://elpa.gnu.org/favicon.png"/>></a>
 
-* Description
 
-Visual buffer switching using a window grid ([[https://github.com/abo-abo/ace-window][ace-window ]]key hints are optional):
+1 Description
+═════════════
 
-[[./images/grid-aw.png]]
+  Visual buffer switching using a window grid ([ace-window ]key hints
+  are optional):
 
-* Installation
+  <./images/grid-aw.png>
 
-For manual installation, clone the repository and call:
 
-#+BEGIN_SRC elisp
-(package-install-file "/path/to/buffer-expose.el")
-#+END_SRC
+[ace-window ] <https://github.com/abo-abo/ace-window>
 
-* Config
 
-To use the default bindings for switching buffers with buffer-expose
-use buffer-expose-mode:
+2 Installation
+══════════════
 
-#+BEGIN_SRC elisp
-(buffer-expose-mode 1)
-#+END_SRC
+  For manual installation, clone the repository and call:
 
-The default bindings are defined in buffer-expose-mode-map:
+  ┌────
+  │ (package-install-file "/path/to/buffer-expose.el")
+  └────
 
-#+BEGIN_SRC elisp
-(defvar buffer-expose-mode-map
-  (let ((map (make-sparse-keymap)))
-    (define-key map (kbd "<s-tab>") 'buffer-expose)
-    (define-key map (kbd "<C-tab>") 'buffer-expose-no-stars)
-    (define-key map (kbd "C-c <C-tab>") 'buffer-expose-current-mode)
-    (define-key map (kbd "C-c C-m") 'buffer-expose-major-mode)
-    (define-key map (kbd "C-c C-d") 'buffer-expose-dired-buffers)
-    (define-key map (kbd "C-c C-*") 'buffer-expose-stars)
-    map)
-  "Mode map for command `buffer-expose-mode'.")
-#+END_SRC
 
-There are user options to customize which buffers are shown and you can easily
-write your own command, like this:
+3 Config
+════════
 
-#+BEGIN_SRC elisp
-(defun my-expose-command (&optional max)
-  (interactive "P")
-  (buffer-expose-show-buffers
-    <your-buffer-list> max [<hide-regexes> <filter-func>]))
-#+END_SRC
+  To use the default bindings for switching buffers with buffer-expose
+  use buffer-expose-mode:
+
+  ┌────
+  │ (buffer-expose-mode 1)
+  └────
+
+  The default bindings are defined in buffer-expose-mode-map:
+
+  ┌────
+  │ (defvar buffer-expose-mode-map
+  │   (let ((map (make-sparse-keymap)))
+  │     (define-key map (kbd "<s-tab>") 'buffer-expose)
+  │     (define-key map (kbd "<C-tab>") 'buffer-expose-no-stars)
+  │     (define-key map (kbd "C-c <C-tab>") 'buffer-expose-current-mode)
+  │     (define-key map (kbd "C-c C-m") 'buffer-expose-major-mode)
+  │     (define-key map (kbd "C-c C-d") 'buffer-expose-dired-buffers)
+  │     (define-key map (kbd "C-c C-*") 'buffer-expose-stars)
+  │     map)
+  │   "Mode map for command `buffer-expose-mode'.")
+  └────
+
+  There are user options to customize which buffers are shown and you
+  can easily write your own command, like this:
+
+  ┌────
+  │ (defun my-expose-command (&optional max)
+  │   (interactive "P")
+  │   (buffer-expose-show-buffers
+  │     <your-buffer-list> max [<hide-regexes> <filter-func>]))
+  └────

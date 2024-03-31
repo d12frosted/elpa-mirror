@@ -37,3 +37,9 @@ Known bugs:
     with a `window' property (for all N other windows that don't have
     their cursor on this line).
   FWIW, the original `hexl-mode' has the same kind of problem.
+
+Wishlist:
+
+- An equivalent to hexl-mode's `hexl-bits'.
+- Always reload the file with find-file-literally instead
+  of editing the multibyte representation?

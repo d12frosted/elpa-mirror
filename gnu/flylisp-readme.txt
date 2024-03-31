@@ -1,6 +1,5 @@
 Colors mismatched open parentheses with fl-mismatched-face, red by
-default. Works reliably after Emacs 24.3, in which bug 16247 is
-fixed.
+default.
 
 Also colors open and close parentheses which are inconsistent with
 the indentation of lines between them with fl-inconsistent-face,

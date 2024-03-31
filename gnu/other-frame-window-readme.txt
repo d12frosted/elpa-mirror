@@ -50,3 +50,33 @@ o - select another window/frame.
 r - find-file-read-only in another window/frame.
 
 To extend this list, add key bindings to ‘ofw-transient-map’.
+
+
+Usage:
+
+Enable the minor mode with:
+
+M-x other-frame-window-mode
+
+or, in your ~/.emacs:
+
+(other-frame-window-mode t)
+
+
+Design:
+
+This uses C-x 7, 9 prefix because those keys are undefined in core
+Emacs.  It could eventually switch to 4, 5, since those are
+currently used for -other-window, -other-frame bindings.
+
+(info "(emacs) Pop Up Window") (info "(emacs) Creating Frames")
+
+This adds advice to switch-to-buffer; eventually Emacs could
+reimplement switch-to-buffer to do the same.
+
+Todo:
+
+- Pay attention to bindings added to ctl-x-4-map and ctl-x-5-map
+- Should `C-x 7 C-h' display the transient map?
+- `C-x 7 C-h k f' should show `find-file' rather than `self-insert-command'.
+  This should probably be fixed in set-transient-map.
