@@ -239,7 +239,15 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.7.2
+3.1 0.7.3
+─────────
+
+  *Fixes*
+  ⁃ Info manual generation on GNU ELPA.  (Also, the Info manual is no
+    longer committed to Git.)
+
+
+3.2 0.7.2
 ─────────
 
   *Fixes*
@@ -252,7 +260,7 @@ be simple and well-organized.  Every feature is tested against
 [Joseph Turner] <https://github.com/josephmturner>
 
 
-3.2 0.7.1
+3.3 0.7.1
 ─────────
 
   *Fixes*
@@ -263,7 +271,7 @@ be simple and well-organized.  Every feature is tested against
 [Daniel Hubmann] <https://github.com/hubisan>
 
 
-3.3 0.7
+3.4 0.7
 ───────
 
   *Changes*
@@ -309,7 +317,7 @@ be simple and well-organized.  Every feature is tested against
 [httpbin] <https://github.com/postmanlabs/httpbin>
 
 
-3.4 0.6
+3.5 0.6
 ───────
 
   *Additions*
@@ -325,7 +333,7 @@ be simple and well-organized.  Every feature is tested against
   ⁃ Handle HTTP 3xx redirects when using `:as 'response'.
 
 
-3.5 0.5.4
+3.6 0.5.4
 ─────────
 
   *Fixes*
@@ -333,7 +341,7 @@ be simple and well-organized.  Every feature is tested against
     features should not be designed and released on a Friday.)
 
 
-3.6 0.5.3
+3.7 0.5.3
 ─────────
 
   *Fixes*
@@ -342,7 +350,7 @@ be simple and well-organized.  Every feature is tested against
     would require them to be recompiled after upgrading `plz').
 
 
-3.7 0.5.2
+3.8 0.5.2
 ─────────
 
   *Fixes*
@@ -350,7 +358,7 @@ be simple and well-organized.  Every feature is tested against
     when specified.
 
 
-3.8 0.5.1
+3.9 0.5.1
 ─────────
 
   *Fixes*
@@ -361,15 +369,15 @@ be simple and well-organized.  Every feature is tested against
 [Dan Oriani] <https://github.com/redchops>
 
 
-3.9 0.5
-───────
+3.10 0.5
+────────
 
   *Additions*
   ⁃ Struct `plz-queue''s `finally' slot, a function called when the
     queue is finished.
 
 
-3.10 0.4
+3.11 0.4
 ────────
 
   *Additions*
@@ -401,7 +409,7 @@ be simple and well-organized.  Every feature is tested against
 [#17] <https://github.com/alphapapa/plz.el/issues/17>
 
 
-3.11 0.3
+3.12 0.3
 ────────
 
   *Additions*
@@ -420,21 +428,21 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.12 0.2.1
+3.13 0.2.1
 ──────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.13 0.2
+3.14 0.2
 ────────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.14 0.1
+3.15 0.1
 ────────
 
   Initial release.

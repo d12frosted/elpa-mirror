@@ -3149,7 +3149,7 @@
 	     (:url . "https://elpa.gnu.org/packages/pinentry.html")
 	     (:commit . "ef0d62bba29dfab07624d030032ec0f67d34e865"))])
  (plz .
-      [(0 7 2)
+      [(0 7 3)
        ((emacs
 	 (26 3)))
        "HTTP library" tar
@@ -3158,7 +3158,7 @@
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "e98989a1816458d2940f99beda2b85c37f6b1f3e"))])
+	(:commit . "1b66fa907d6dbc64c6a01b96d58261f67a09200e"))])
  (plz-see .
 	  [(0 1)
 	   ((emacs
@@ -4161,7 +4161,7 @@
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (tramp .
-	[(2 6 2 2)
+	[(2 6 3)
 	 ((emacs
 	   (26 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -4170,7 +4170,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "cab3f20dcab56c116d0694ce6a5c2985616ae044"))])
+	  (:commit . "3d3b95bd87d858092ee33ed4f5c7acfbf44a48f2"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
