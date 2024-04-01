@@ -11,7 +11,6 @@ It can be used in `dash-docs', `eww', `nov.el', `mu4e', `anki.el', etc.
 - Switch/jump the headlines just like org-mode in `eww' and `nov.el' with `imenu'
 - Toggle/cycle the headlines just like org-mode in `eww' and `nov.el' with `outline-minor-mode'
   and `org-cycle'/`org-shifttab'
-- Enable indentation just like org-mode in `eww' and `nov.el' with `org-indent-mode'
 - Analysis capability:
   - Headline analysis: List all headlines with clickable texts.
   - URL analysis: List all classified URL with clickable texts.

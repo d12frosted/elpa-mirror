@@ -400,7 +400,7 @@
 	       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
 	       (:commit . "ff5fb77e2556c42aee9f1131f824bdfb955d861f"))])
  (brief .
-	[(5 90)
+	[(5 91)
 	 ((nadvice
 	   (0 3))
 	  (cl-lib
@@ -411,7 +411,7 @@
 	  (:authors
 	   ("Luke Lee" . "luke.yx.lee@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/brief.html")
-	  (:commit . "30c5bf48784a7de2e18069a1065fa14a6ff843fe"))])
+	  (:commit . "1d1d8fe291d785512eaa746dc2e5cd6dac96585c"))])
  (buffer-env .
 	     [(0 6)
 	      ((emacs
@@ -1882,13 +1882,13 @@
 	     (:url . "https://elpa.gnu.org/packages/greenbar.html")
 	     (:commit . "9526f29d073c533c3e54f0a7597eef1587ffb99e"))])
  (gtags-mode .
-	     [(1 1)
+	     [(1 2)
 	      ((emacs
 		(28)))
 	      "GNU Global integration with xref, project and imenu." tar
 	      ((:url . "https://github.com/Ergus/gtags-mode")
 	       (:keywords "xref" "project" "imenu" "gtags" "global")
-	       (:commit . "4e0a03dc42dacb0d03c82bce479f765ca2efca52"))])
+	       (:commit . "3c685185625e03343c995974ee1d026c9ef808c4"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib

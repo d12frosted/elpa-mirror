@@ -102,7 +102,7 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
    `==========================================='  `===================' 
    *Command & 'K'eyword*                          *'K'ey*               
    `==========================================='  `===================' 
-   e'X'it Emacs Brief Emulator:                   `<Alt>-X'             
+   e'X'it Emacs Brief Mode/Emulator:              `<Alt>-X'             
   ──────────────────────────────────────────────────────────────────────
    'E'dit a file:                                 `<Alt>-E'             
   ──────────────────────────────────────────────────────────────────────
@@ -126,10 +126,10 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
    'G'oto line:                                   `<Alt>-G'             
   ──────────────────────────────────────────────────────────────────────
    'L'ine oriented text selecting:                `<Alt>-L'             
-   followed by cursor commands                                          
+   followed by cursor movements                                         
   ──────────────────────────────────────────────────────────────────────
    'C'olumn oriented text selecting:              `<Alt>-C'             
-   followed by cursor commands                                          
+   followed by cursor movements                                         
   ──────────────────────────────────────────────────────────────────────
    Start line 'M'arking:                          `<Alt>-M'             
   ──────────────────────────────────────────────────────────────────────
@@ -139,13 +139,13 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
    Cut ('-') text selection into clipboard:       `<Keypad ->'          
    if no text selected, cut current line          `<Shift>-<Delete>'    
   ──────────────────────────────────────────────────────────────────────
-   Paste clipboard texts into current line:       `<Insert>'            
-   if text selected, replace selected                                   
+   Paste/insert clipboard texts into current      `<Insert>'            
+   line, if text selected, replace selected:                            
   ──────────────────────────────────────────────────────────────────────
    'D'elete a line(s):                            `<Alt>-D'             
    if text selected, delete selected                                    
   ──────────────────────────────────────────────────────────────────────
-   'K'ill till end of line:                       `<Alt>-K'             
+   'K'ill texts till end of line:                 `<Alt>-K'             
   ──────────────────────────────────────────────────────────────────────
    'R'ead a file and insert into current line:    `<Alt>-R'             
   ──────────────────────────────────────────────────────────────────────
@@ -259,13 +259,13 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    Switch to the window the arrow points to            `<F1> <arrow>' 
   ────────────────────────────────────────────────────────────────────
-   Adjust current window size on the border side the   `<F2> <arrow>' 
-   arrow points to                                                    
+   Adjust current window edge on the side the arrow    `<F2> <arrow>' 
+   points to                                                          
   ────────────────────────────────────────────────────────────────────
    Split a new window in the direction that the arrow  `<F3> <arrow>' 
    points to                                                          
   ────────────────────────────────────────────────────────────────────
-   Delete the window the arrow points to               `<F4> <arrow>' 
+   Merge and delete the window the arrow points to     `<F4> <arrow>' 
   ────────────────────────────────────────────────────────────────────
    Delete current window                               `<Ctrl>-<F4>'  
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -293,7 +293,7 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
   ────────────────────────────────────────────────────────────────────────
    Pause recording keystroke macro                         `<Shift>-<F7>' 
   ────────────────────────────────────────────────────────────────────────
-   Playback just recorded macro                            `<F8>'         
+   Playback the just recorded macro                        `<F8>'         
   ────────────────────────────────────────────────────────────────────────
    Load keystroke macro from a file, will prompt for a     `<Alt>-<F7>'   
    file name                                                              
@@ -318,8 +318,8 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-4 _Emacs specific or miscellaneous extended commands:_
-══════════════════════════════════════════════════════
+4 _Emacs specific and miscellaneous extended commands:_
+═══════════════════════════════════════════════════════
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    Move backwards an expression, or matching           `<Alt>-<Left>'           
