@@ -31,7 +31,7 @@ Bugs
   The workaround is to zero the `line-spacing` for your Breccia Mode buffers.  For example,
   put this in your intialization file:
 
-     (add-hook 'brec-mode-hook (lambda () (set 'line-spacing 0)))
+     (add-hook 'brec-mode-hook (lambda () (setq line-spacing 0)))
 
 Customization
 

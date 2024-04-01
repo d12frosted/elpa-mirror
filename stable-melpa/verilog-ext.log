@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/verilog-ext/
 Checking out 71059d6ea3ed065ea596c4498b6bfcd4d755ca42
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/verilog-ext/
-  to /tmp/verilog-extGciU4b/verilog-ext-20240330.1952
+  to /tmp/verilog-extH5GHLh/verilog-ext-20240330.1952
     verilog-ext-beautify.el -> verilog-ext-beautify.el
     verilog-ext-block-end-comments.el -> verilog-ext-block-end-comments.el
     verilog-ext-capf.el -> verilog-ext-capf.el
@@ -30,8 +30,15 @@ Copying files (->) and directories (=>)
     verilog-ext-xref.el -> verilog-ext-xref.el
     verilog-ext.el -> verilog-ext.el
     snippets => snippets
+    langserver => langserver
 Created verilog-ext-20240330.1952.tar containing:
   verilog-ext-20240330.1952/
+  verilog-ext-20240330.1952/langserver/
+  verilog-ext-20240330.1952/langserver/hdl-checker.json
+  verilog-ext-20240330.1952/langserver/svlangserver.json
+  verilog-ext-20240330.1952/langserver/svls.json
+  verilog-ext-20240330.1952/langserver/verible.json
+  verilog-ext-20240330.1952/langserver/veridian.json
   verilog-ext-20240330.1952/snippets/
   verilog-ext-20240330.1952/snippets/makefile-mode/
   verilog-ext-20240330.1952/snippets/makefile-mode/verilog-template
@@ -127,6 +134,6 @@ Created verilog-ext-20240330.1952.tar containing:
   verilog-ext-20240330.1952/verilog-ext-xref.el
   verilog-ext-20240330.1952/verilog-ext.el
  ✓ Success:
-  2024-03-31T18:09:59+0000  verilog-ext-20240330.1952.entry
-  2024-03-31T18:09:59+0000  verilog-ext-20240330.1952.tar
-Built verilog-ext in 4.062s, finished at 2024-03-31T18:10:00+0000
+  2024-04-01T02:18:15+0000  verilog-ext-20240330.1952.entry
+  2024-04-01T02:18:15+0000  verilog-ext-20240330.1952.tar
+Built verilog-ext in 3.878s, finished at 2024-04-01T02:18:16+0000
