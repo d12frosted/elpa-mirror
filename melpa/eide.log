@@ -3,43 +3,8 @@ Fetcher: git
 Source:  https://forge.tedomum.net/hjuvi/eide.git
 
 Updating /mnt/store/melpa/working/eide/
-Checking out d497539f00c33e3bee85d0f4b8ca367672fa2219
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eide/
-  to /tmp/eide1PJPGA/eide-20240122.1953
-  ! src/eide-compare.el -> eide-compare.el
-  ! src/eide-config.el -> eide-config.el
-  ! src/eide-display.el -> eide-display.el
-  ! src/eide-edit.el -> eide-edit.el
-  ! src/eide-keys.el -> eide-keys.el
-  ! src/eide-menu.el -> eide-menu.el
-  ! src/eide-pkg.el -> eide-pkg.el
-  ! src/eide-popup.el -> eide-popup.el
-  ! src/eide-project.el -> eide-project.el
-  ! src/eide-search.el -> eide-search.el
-  ! src/eide-vc.el -> eide-vc.el
-  ! src/eide-windows.el -> eide-windows.el
-  ! src/eide.el -> eide.el
-  ! src/themes/eide-dark-theme.el -> eide-dark-theme.el
-  ! src/themes/eide-light-theme.el -> eide-light-theme.el
-Created eide-20240122.1953.tar containing:
-  eide-20240122.1953/
-  eide-20240122.1953/eide-compare.el
-  eide-20240122.1953/eide-config.el
-  eide-20240122.1953/eide-dark-theme.el
-  eide-20240122.1953/eide-display.el
-  eide-20240122.1953/eide-edit.el
-  eide-20240122.1953/eide-keys.el
-  eide-20240122.1953/eide-light-theme.el
-  eide-20240122.1953/eide-menu.el
-  eide-20240122.1953/eide-pkg.el
-  eide-20240122.1953/eide-popup.el
-  eide-20240122.1953/eide-project.el
-  eide-20240122.1953/eide-search.el
-  eide-20240122.1953/eide-vc.el
-  eide-20240122.1953/eide-windows.el
-  eide-20240122.1953/eide.el
- ✓ Success:
-  2024-04-01T11:26:03+0000  eide-20240122.1953.entry
-  2024-04-01T11:26:03+0000  eide-20240122.1953.tar
-Built eide in 5.742s, finished at 2024-04-01T11:26:05+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+remote: 404 page not found
+fatal: repository 'https://forge.tedomum.net/hjuvi/eide.git/' not found
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

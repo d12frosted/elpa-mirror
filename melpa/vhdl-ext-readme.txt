@@ -6,7 +6,7 @@ Extensions for VHDL Mode:
  - Find definitions and references with builtin `xref' backend
  - Auto-completion with semantic completion
  - Hierarchy extraction and navigation
- - LSP configuration for `lsp-mode' and `eglot'
+ - LSP configuration for `lsp-bridge', `lsp-mode' and `eglot'
  - Support for many linters via `flycheck'
  - Beautify blocks and instances
  - Code navigation functions
