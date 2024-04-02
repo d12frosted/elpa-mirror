@@ -3,10 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/oer/oer-reveal.git
 
 Updating /mnt/store/melpa/working/oer-reveal/
-Checking out 0a44a385a565b8e39908c36dd32d5b231ffee9bd
+Checking out 744710bb4e7f1b572f4f686acc9d5ed2f78c47e0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/oer-reveal/
-  to /tmp/oer-revealUY21Qw/oer-reveal-20240319.1005
+  to /tmp/oer-revealoZ3gum/oer-reveal-20240402.741
     oer-reveal-publish.el -> oer-reveal-publish.el
     oer-reveal.el -> oer-reveal.el
     ox-oer-reveal.el -> ox-oer-reveal.el
@@ -18,108 +18,110 @@ Copying files (->) and directories (=>)
     css => css
     title-slide => title-slide
     examples => examples
-Created oer-reveal-20240319.1005.tar containing:
-  oer-reveal-20240319.1005/
-  oer-reveal-20240319.1005/LICENSE
-  oer-reveal-20240319.1005/LICENSES/
-  oer-reveal-20240319.1005/LICENSES/CC-BY-4.0.txt
-  oer-reveal-20240319.1005/LICENSES/CC-BY-SA-4.0.txt
-  oer-reveal-20240319.1005/LICENSES/CC0-1.0.txt
-  oer-reveal-20240319.1005/LICENSES/GPL-3.0-or-later.txt
-  oer-reveal-20240319.1005/LICENSES/LicenseRef-MIT-HEH-JL.txt
-  oer-reveal-20240319.1005/LICENSES/LicenseRef-MIT-JL.txt
-  oer-reveal-20240319.1005/README.md
-  oer-reveal-20240319.1005/README.md.license
-  oer-reveal-20240319.1005/css/
-  oer-reveal-20240319.1005/css/chevron-left.svg
-  oer-reveal-20240319.1005/css/chevron-left.svg.license
-  oer-reveal-20240319.1005/css/chevron-right.svg
-  oer-reveal-20240319.1005/css/chevron-right.svg.license
-  oer-reveal-20240319.1005/css/comment.svg
-  oer-reveal-20240319.1005/css/comment.svg.license
-  oer-reveal-20240319.1005/css/dbis-longtitle.css
-  oer-reveal-20240319.1005/css/dbis.css
-  oer-reveal-20240319.1005/css/ercis-quote.css
-  oer-reveal-20240319.1005/css/ercis.css
-  oer-reveal-20240319.1005/css/ercis2019.css
-  oer-reveal-20240319.1005/css/expand.svg
-  oer-reveal-20240319.1005/css/expand.svg.license
-  oer-reveal-20240319.1005/css/folder_inbox.png
-  oer-reveal-20240319.1005/css/folder_inbox.png.base
-  oer-reveal-20240319.1005/css/folder_inbox.png.base.license
-  oer-reveal-20240319.1005/css/folder_inbox.png.license
-  oer-reveal-20240319.1005/css/hidelinks.js
-  oer-reveal-20240319.1005/css/index.css
-  oer-reveal-20240319.1005/css/keyboard.svg
-  oer-reveal-20240319.1005/css/keyboard.svg.license
-  oer-reveal-20240319.1005/css/oer-reveal.css
-  oer-reveal-20240319.1005/css/outgoing-link.png
-  oer-reveal-20240319.1005/css/outgoing-link.png.base
-  oer-reveal-20240319.1005/css/outgoing-link.png.base.license
-  oer-reveal-20240319.1005/css/outgoing-link.png.license
-  oer-reveal-20240319.1005/css/search.svg
-  oer-reveal-20240319.1005/css/search.svg.license
-  oer-reveal-20240319.1005/css/toc-style.css
-  oer-reveal-20240319.1005/css/wwu-ercis.css
-  oer-reveal-20240319.1005/examples/
-  oer-reveal-20240319.1005/examples/publish.el
-  oer-reveal-20240319.1005/examples/quizzes/
-  oer-reveal-20240319.1005/examples/quizzes/usage-hints.js
-  oer-reveal-20240319.1005/examples/test-audio-jump.org
-  oer-reveal-20240319.1005/examples/test-default.org
-  oer-reveal-20240319.1005/examples/test-license.org
-  oer-reveal-20240319.1005/examples/test-local.org
-  oer-reveal-20240319.1005/examples/test-plain.org
-  oer-reveal-20240319.1005/examples/title-slide.html
-  oer-reveal-20240319.1005/oer-reveal-pkg.el
-  oer-reveal-20240319.1005/oer-reveal-publish.el
-  oer-reveal-20240319.1005/oer-reveal.el
-  oer-reveal-20240319.1005/org/
-  oer-reveal-20240319.1005/org/backmatter-de.org
-  oer-reveal-20240319.1005/org/backmatter-ercis.org
-  oer-reveal-20240319.1005/org/backmatter.org
-  oer-reveal-20240319.1005/org/bibliography-de.org
-  oer-reveal-20240319.1005/org/bibliography.org
-  oer-reveal-20240319.1005/org/config-de.org
-  oer-reveal-20240319.1005/org/config-ercis2019-de.org
-  oer-reveal-20240319.1005/org/config-ercis2019.org
-  oer-reveal-20240319.1005/org/config-title-notes.org
-  oer-reveal-20240319.1005/org/config-usage-notes-de.org
-  oer-reveal-20240319.1005/org/config-usage-notes.org
-  oer-reveal-20240319.1005/org/config.org
-  oer-reveal-20240319.1005/org/finalslide-ercis.org
-  oer-reveal-20240319.1005/org/learning-objectives-notes.org
-  oer-reveal-20240319.1005/org/license-disclaimer-cc-by-sa-4.0-de.org
-  oer-reveal-20240319.1005/org/license-disclaimer-cc-by-sa-4.0.org
-  oer-reveal-20240319.1005/org/license-template-de.org
-  oer-reveal-20240319.1005/org/license-template.org
-  oer-reveal-20240319.1005/org/reveal.js-hints-de.org
-  oer-reveal-20240319.1005/org/reveal.js-hints.org
-  oer-reveal-20240319.1005/org/source-code-licenses-de.org
-  oer-reveal-20240319.1005/org/source-code-licenses.org
-  oer-reveal-20240319.1005/ox-oer-reveal.el
-  oer-reveal-20240319.1005/title-slide/
-  oer-reveal-20240319.1005/title-slide/course-mlde-qr.html
-  oer-reveal-20240319.1005/title-slide/course-mlde.html
-  oer-reveal-20240319.1005/title-slide/csos.html
-  oer-reveal-20240319.1005/title-slide/dbis-course.html
-  oer-reveal-20240319.1005/title-slide/dbis-talk-de.html
-  oer-reveal-20240319.1005/title-slide/dbis-talk-glr-de.html
-  oer-reveal-20240319.1005/title-slide/dbis-talk-pdf.html
-  oer-reveal-20240319.1005/title-slide/dbis-talk-qr-de.html
-  oer-reveal-20240319.1005/title-slide/dbis-talk-qr.html
-  oer-reveal-20240319.1005/title-slide/dbis-talk.html
-  oer-reveal-20240319.1005/title-slide/ds.html
-  oer-reveal-20240319.1005/title-slide/ercis-talk-online-qr.html
-  oer-reveal-20240319.1005/title-slide/ercis-talk-online.html
-  oer-reveal-20240319.1005/title-slide/ercis-talk.html
-  oer-reveal-20240319.1005/title-slide/ercis-talk2019.html
-  oer-reveal-20240319.1005/title-slide/ercis2019-talk-online-qr.html
-  oer-reveal-20240319.1005/title-slide/ercis2019-vortrag.html
-  oer-reveal-20240319.1005/title-slide/ercis2023-talk-online-qr.html
-  oer-reveal-20240319.1005/title-slide/kurs-mlde.html
-  oer-reveal-20240319.1005/title-slide/kurs.html
+Created oer-reveal-20240402.741.tar containing:
+  oer-reveal-20240402.741/
+  oer-reveal-20240402.741/LICENSE
+  oer-reveal-20240402.741/LICENSES/
+  oer-reveal-20240402.741/LICENSES/CC-BY-4.0.txt
+  oer-reveal-20240402.741/LICENSES/CC-BY-SA-4.0.txt
+  oer-reveal-20240402.741/LICENSES/CC0-1.0.txt
+  oer-reveal-20240402.741/LICENSES/GPL-3.0-or-later.txt
+  oer-reveal-20240402.741/LICENSES/LicenseRef-MIT-HEH-JL.txt
+  oer-reveal-20240402.741/LICENSES/LicenseRef-MIT-JL.txt
+  oer-reveal-20240402.741/README.md
+  oer-reveal-20240402.741/README.md.license
+  oer-reveal-20240402.741/css/
+  oer-reveal-20240402.741/css/chevron-left.svg
+  oer-reveal-20240402.741/css/chevron-left.svg.license
+  oer-reveal-20240402.741/css/chevron-right.svg
+  oer-reveal-20240402.741/css/chevron-right.svg.license
+  oer-reveal-20240402.741/css/comment.svg
+  oer-reveal-20240402.741/css/comment.svg.license
+  oer-reveal-20240402.741/css/dbis-longtitle.css
+  oer-reveal-20240402.741/css/dbis.css
+  oer-reveal-20240402.741/css/ercis-quote.css
+  oer-reveal-20240402.741/css/ercis.css
+  oer-reveal-20240402.741/css/ercis2019.css
+  oer-reveal-20240402.741/css/expand.svg
+  oer-reveal-20240402.741/css/expand.svg.license
+  oer-reveal-20240402.741/css/folder_inbox.png
+  oer-reveal-20240402.741/css/folder_inbox.png.base
+  oer-reveal-20240402.741/css/folder_inbox.png.base.license
+  oer-reveal-20240402.741/css/folder_inbox.png.license
+  oer-reveal-20240402.741/css/hidelinks.js
+  oer-reveal-20240402.741/css/index.css
+  oer-reveal-20240402.741/css/keyboard.svg
+  oer-reveal-20240402.741/css/keyboard.svg.license
+  oer-reveal-20240402.741/css/oer-reveal.css
+  oer-reveal-20240402.741/css/outgoing-link.png
+  oer-reveal-20240402.741/css/outgoing-link.png.base
+  oer-reveal-20240402.741/css/outgoing-link.png.base.license
+  oer-reveal-20240402.741/css/outgoing-link.png.license
+  oer-reveal-20240402.741/css/search.svg
+  oer-reveal-20240402.741/css/search.svg.license
+  oer-reveal-20240402.741/css/toc-style.css
+  oer-reveal-20240402.741/css/wwu-ercis.css
+  oer-reveal-20240402.741/examples/
+  oer-reveal-20240402.741/examples/publish.el
+  oer-reveal-20240402.741/examples/quizzes/
+  oer-reveal-20240402.741/examples/quizzes/usage-hints.js
+  oer-reveal-20240402.741/examples/test-audio-jump.org
+  oer-reveal-20240402.741/examples/test-default.org
+  oer-reveal-20240402.741/examples/test-license.org
+  oer-reveal-20240402.741/examples/test-local.org
+  oer-reveal-20240402.741/examples/test-plain.org
+  oer-reveal-20240402.741/examples/title-slide.html
+  oer-reveal-20240402.741/oer-reveal-pkg.el
+  oer-reveal-20240402.741/oer-reveal-publish.el
+  oer-reveal-20240402.741/oer-reveal.el
+  oer-reveal-20240402.741/org/
+  oer-reveal-20240402.741/org/backmatter-de.org
+  oer-reveal-20240402.741/org/backmatter-ercis.org
+  oer-reveal-20240402.741/org/backmatter.org
+  oer-reveal-20240402.741/org/bibliography-de.org
+  oer-reveal-20240402.741/org/bibliography.org
+  oer-reveal-20240402.741/org/config-de.org
+  oer-reveal-20240402.741/org/config-ercis2019-de.org
+  oer-reveal-20240402.741/org/config-ercis2019.org
+  oer-reveal-20240402.741/org/config-title-notes.org
+  oer-reveal-20240402.741/org/config-usage-notes-de.org
+  oer-reveal-20240402.741/org/config-usage-notes.org
+  oer-reveal-20240402.741/org/config.org
+  oer-reveal-20240402.741/org/finalslide-ercis.org
+  oer-reveal-20240402.741/org/learning-objectives-notes.org
+  oer-reveal-20240402.741/org/license-disclaimer-cc-by-sa-4.0-de.org
+  oer-reveal-20240402.741/org/license-disclaimer-cc-by-sa-4.0.org
+  oer-reveal-20240402.741/org/license-template-de.org
+  oer-reveal-20240402.741/org/license-template.org
+  oer-reveal-20240402.741/org/reveal.js-hints-de.org
+  oer-reveal-20240402.741/org/reveal.js-hints.org
+  oer-reveal-20240402.741/org/source-code-licenses-de.org
+  oer-reveal-20240402.741/org/source-code-licenses.org
+  oer-reveal-20240402.741/ox-oer-reveal.el
+  oer-reveal-20240402.741/title-slide/
+  oer-reveal-20240402.741/title-slide/course-mlde-qr.html
+  oer-reveal-20240402.741/title-slide/course-mlde.html
+  oer-reveal-20240402.741/title-slide/csos.html
+  oer-reveal-20240402.741/title-slide/dbis-course.html
+  oer-reveal-20240402.741/title-slide/dbis-talk-de.html
+  oer-reveal-20240402.741/title-slide/dbis-talk-glr-de.html
+  oer-reveal-20240402.741/title-slide/dbis-talk-pdf.html
+  oer-reveal-20240402.741/title-slide/dbis-talk-qr-de.html
+  oer-reveal-20240402.741/title-slide/dbis-talk-qr.html
+  oer-reveal-20240402.741/title-slide/dbis-talk.html
+  oer-reveal-20240402.741/title-slide/ds.html
+  oer-reveal-20240402.741/title-slide/ercis-talk-online-qr.html
+  oer-reveal-20240402.741/title-slide/ercis-talk-online.html
+  oer-reveal-20240402.741/title-slide/ercis-talk.html
+  oer-reveal-20240402.741/title-slide/ercis-talk2019.html
+  oer-reveal-20240402.741/title-slide/ercis2019-talk-online-qr.html
+  oer-reveal-20240402.741/title-slide/ercis2019-vortrag.html
+  oer-reveal-20240402.741/title-slide/ercis2023-talk-online-qr.html
+  oer-reveal-20240402.741/title-slide/kurs-mlde.html
+  oer-reveal-20240402.741/title-slide/kurs.html
  ✓ Success:
-  2024-04-02T03:57:38+0000  oer-reveal-20240319.1005.entry
-  2024-04-02T03:57:38+0000  oer-reveal-20240319.1005.tar
-Built oer-reveal in 4.974s, finished at 2024-04-02T03:57:39+0000
+  2024-04-02T05:56:07+0000  oer-reveal-20240319.1005.entry
+  2024-04-02T05:56:07+0000  oer-reveal-20240319.1005.tar
+  2024-04-02T07:52:42+0000  oer-reveal-20240402.741.entry
+  2024-04-02T07:52:42+0000  oer-reveal-20240402.741.tar
+Built oer-reveal in 4.943s, finished at 2024-04-02T07:52:44+0000
