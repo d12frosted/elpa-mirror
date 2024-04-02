@@ -8,6 +8,16 @@ For documentation, see
 or	<http://www.isi.edu/~johnh/SOFTWARE/NOTES_MODE/>
 
 
+ WHAT'S NEW IN NOTES-MODE?
+ -------------------------
+ 
+Changed (2014-12-19): version 1.30
+ 
+Added support for EasyPG.
+Support for mailcrypt remains, but that library has seen no progress since 2002.
+Support for npgp is gone.
+ 
+ 
 WHAT IS NOTES-MODE?
 -------------------
 

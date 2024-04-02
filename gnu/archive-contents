@@ -2748,13 +2748,13 @@
 	   (:url . "https://elpa.gnu.org/packages/nlinum.html")
 	   (:commit . "99d0fef381e9f44a3fdcf66f28c28109a7cdaf45"))])
  (notes-mode .
-	     [(1 30)
+	     [(1 31)
 	      nil "Indexing system for on-line note-taking" tar
-	      ((:maintainer nil . "johnh@isi.edu")
+	      ((:url . "https://ant.isi.edu/~johnh/SOFTWARE/NOTES_MODE/")
+	       (:maintainer "John Heidemann" . "johnh@isi.edu")
 	       (:authors
-		(nil . "johnh@isi.edu"))
-	       (:url . "https://elpa.gnu.org/packages/notes-mode.html")
-	       (:commit . "3afb72a580149460190cb9dd8e18b274a4e24e1e"))])
+		("John Heidemann" . "johnh@isi.edu"))
+	       (:commit . "2a25d79f7e5d9ab7298ba40e11e78d1f2ded06d2"))])
  (notmuch-indicator .
 		    [(1 1 0)
 		     ((emacs
