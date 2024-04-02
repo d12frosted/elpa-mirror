@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/gemini.el.git
 
 Updating /mnt/store/melpa/working/gemini-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.carcosa.net/jmcbray/gemini.el.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out a7dd7c6ea4e036d0d5ecc4a5d284874c400f10ba
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gemini-mode/
+  to /tmp/gemini-moden4NJ8w/gemini-mode-20221127.1619
+    gemini-mode.el -> gemini-mode.el
+Created gemini-mode-20221127.1619.tar containing:
+  gemini-mode-20221127.1619/
+  gemini-mode-20221127.1619/gemini-mode-pkg.el
+  gemini-mode-20221127.1619/gemini-mode.el
+ ✓ Success:
+  2024-04-02T03:36:47+0000  gemini-mode-20221127.1619.entry
+  2024-04-02T03:36:47+0000  gemini-mode-20221127.1619.tar
+Built gemini-mode in 4.186s, finished at 2024-04-02T03:36:49+0000

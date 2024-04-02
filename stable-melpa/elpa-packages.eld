@@ -2525,7 +2525,6 @@
   (holiday-pascha-etc :url "https://github.com/hexmode/holiday-pascha-etc.git")
   (holy-books :url "https://github.com/alhassy/holy-books.git")
   (home-end :url "https://github.com/Boruch-Baum/emacs-home-end.git")
-  (homebrew-mode :url "https://github.com/dunn/homebrew-mode.git")
   (honcho :url "https://github.com/emacs-pe/honcho.el.git")
   (hookify :url "https://github.com/Silex/hookify.git")
   (horizon-theme :url "https://github.com/aodhneine/horizon-theme.el.git")
