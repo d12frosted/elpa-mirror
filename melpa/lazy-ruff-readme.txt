@@ -4,13 +4,15 @@ specific regions, or Org mode source blocks.
 
 Prerequisites:
 - The 'ruff' command-line tool must be installed and available in your
-  system's PATH.
-
-Installation of 'ruff':
-- Please refer to the 'ruff' documentation at:
+  system's PATH. Please refer to the 'ruff' documentation at:
   https://docs.astral.sh/ruff/installation/
 
-Configuring lazy-ruff:
-The global variables defined in the part before the ruff-lint-format-block
-function can be freely changed with setq in your init.el (or other
-personalization files) for configuring lazy-ruff.
+lazy-ruff quickstart with use-package:
+(use-package lazy-ruff
+  :ensure t
+  :bind (("C-c f" . lazy-ruff-lint-format-dwim)) ;; keybinding
+  :config
+  (lazy-ruff-global-mode t)) ;; Enable the lazy-ruff minor mode globally
+
+For further information on how to use lazy-ruff, please refer to the README at:
+https://github.com/christophermadsen/emacs-lazy-ruff
