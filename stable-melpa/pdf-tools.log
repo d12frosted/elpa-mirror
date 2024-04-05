@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/vedang/pdf-tools.git
 
 Updating /mnt/store/melpa/working/pdf-tools/
-Checking out 93e74924517d39483b432d6c3c9b8f8b8f0eb50c
+Checking out a1048bceb2bd3f635437b0f2bfac27cae8c2dabc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pdf-tools/
-  to /tmp/pdf-toolsH8AjqC/pdf-tools-20240317.848
+  to /tmp/pdf-toolslahxLX/pdf-tools-20240405.1311
   ! lisp/pdf-annot.el -> pdf-annot.el
   ! lisp/pdf-cache.el -> pdf-cache.el
   ! lisp/pdf-dev.el -> pdf-dev.el
@@ -27,81 +27,81 @@ Copying files (->) and directories (=>)
     README -> README
   ! Makefile -> build/Makefile
   ! server => build/server
-Created pdf-tools-20240317.848.tar containing:
-  pdf-tools-20240317.848/
-  pdf-tools-20240317.848/README
-  pdf-tools-20240317.848/build/
-  pdf-tools-20240317.848/build/Makefile
-  pdf-tools-20240317.848/build/server/
-  pdf-tools-20240317.848/build/server/.gitignore
-  pdf-tools-20240317.848/build/server/Makefile.am
-  pdf-tools-20240317.848/build/server/autobuild
-  pdf-tools-20240317.848/build/server/autogen.sh
-  pdf-tools-20240317.848/build/server/configure.ac
-  pdf-tools-20240317.848/build/server/epdfinfo.c
-  pdf-tools-20240317.848/build/server/epdfinfo.h
-  pdf-tools-20240317.848/build/server/poppler-versions
-  pdf-tools-20240317.848/build/server/synctex_parser.c
-  pdf-tools-20240317.848/build/server/synctex_parser.h
-  pdf-tools-20240317.848/build/server/synctex_parser_advanced.h
-  pdf-tools-20240317.848/build/server/synctex_parser_local.h
-  pdf-tools-20240317.848/build/server/synctex_parser_readme.txt
-  pdf-tools-20240317.848/build/server/synctex_parser_utils.c
-  pdf-tools-20240317.848/build/server/synctex_parser_utils.h
-  pdf-tools-20240317.848/build/server/synctex_parser_version.txt
-  pdf-tools-20240317.848/build/server/synctex_version.h
-  pdf-tools-20240317.848/build/server/test/
-  pdf-tools-20240317.848/build/server/test/.gitignore
-  pdf-tools-20240317.848/build/server/test/Makefile
-  pdf-tools-20240317.848/build/server/test/docker/
-  pdf-tools-20240317.848/build/server/test/docker/.gitignore
-  pdf-tools-20240317.848/build/server/test/docker/lib/
-  pdf-tools-20240317.848/build/server/test/docker/lib/run-tests
-  pdf-tools-20240317.848/build/server/test/docker/lib/yes-or-enter
-  pdf-tools-20240317.848/build/server/test/docker/templates/
-  pdf-tools-20240317.848/build/server/test/docker/templates/Dockerfile.common.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/arch.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/centos.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/debian-10.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/debian-11.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/debian-9.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/emacs-26.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/emacs-27.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/emacs-28.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/emacs-29.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/fedora-34.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/fedora-35.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/fedora-36.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/freebsd.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/gentoo.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/macos.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/msys2.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/nixos.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/openbsd.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/opensuse.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/build/server/test/docker/templates/ubuntu-18.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/ubuntu-20.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/ubuntu-22.Dockerfile.in
-  pdf-tools-20240317.848/build/server/test/docker/templates/void.Dockerfile.in.FAILING
-  pdf-tools-20240317.848/pdf-annot.el
-  pdf-tools-20240317.848/pdf-cache.el
-  pdf-tools-20240317.848/pdf-dev.el
-  pdf-tools-20240317.848/pdf-history.el
-  pdf-tools-20240317.848/pdf-info.el
-  pdf-tools-20240317.848/pdf-isearch.el
-  pdf-tools-20240317.848/pdf-links.el
-  pdf-tools-20240317.848/pdf-loader.el
-  pdf-tools-20240317.848/pdf-macs.el
-  pdf-tools-20240317.848/pdf-misc.el
-  pdf-tools-20240317.848/pdf-occur.el
-  pdf-tools-20240317.848/pdf-outline.el
-  pdf-tools-20240317.848/pdf-sync.el
-  pdf-tools-20240317.848/pdf-tools-pkg.el
-  pdf-tools-20240317.848/pdf-tools.el
-  pdf-tools-20240317.848/pdf-util.el
-  pdf-tools-20240317.848/pdf-view.el
-  pdf-tools-20240317.848/pdf-virtual.el
+Created pdf-tools-20240405.1311.tar containing:
+  pdf-tools-20240405.1311/
+  pdf-tools-20240405.1311/README
+  pdf-tools-20240405.1311/build/
+  pdf-tools-20240405.1311/build/Makefile
+  pdf-tools-20240405.1311/build/server/
+  pdf-tools-20240405.1311/build/server/.gitignore
+  pdf-tools-20240405.1311/build/server/Makefile.am
+  pdf-tools-20240405.1311/build/server/autobuild
+  pdf-tools-20240405.1311/build/server/autogen.sh
+  pdf-tools-20240405.1311/build/server/configure.ac
+  pdf-tools-20240405.1311/build/server/epdfinfo.c
+  pdf-tools-20240405.1311/build/server/epdfinfo.h
+  pdf-tools-20240405.1311/build/server/poppler-versions
+  pdf-tools-20240405.1311/build/server/synctex_parser.c
+  pdf-tools-20240405.1311/build/server/synctex_parser.h
+  pdf-tools-20240405.1311/build/server/synctex_parser_advanced.h
+  pdf-tools-20240405.1311/build/server/synctex_parser_local.h
+  pdf-tools-20240405.1311/build/server/synctex_parser_readme.txt
+  pdf-tools-20240405.1311/build/server/synctex_parser_utils.c
+  pdf-tools-20240405.1311/build/server/synctex_parser_utils.h
+  pdf-tools-20240405.1311/build/server/synctex_parser_version.txt
+  pdf-tools-20240405.1311/build/server/synctex_version.h
+  pdf-tools-20240405.1311/build/server/test/
+  pdf-tools-20240405.1311/build/server/test/.gitignore
+  pdf-tools-20240405.1311/build/server/test/Makefile
+  pdf-tools-20240405.1311/build/server/test/docker/
+  pdf-tools-20240405.1311/build/server/test/docker/.gitignore
+  pdf-tools-20240405.1311/build/server/test/docker/lib/
+  pdf-tools-20240405.1311/build/server/test/docker/lib/run-tests
+  pdf-tools-20240405.1311/build/server/test/docker/lib/yes-or-enter
+  pdf-tools-20240405.1311/build/server/test/docker/templates/
+  pdf-tools-20240405.1311/build/server/test/docker/templates/Dockerfile.common.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/arch.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/centos.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/debian-10.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/debian-11.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/debian-9.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/emacs-26.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/emacs-27.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/emacs-28.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/emacs-29.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/fedora-34.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/fedora-35.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/fedora-36.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/freebsd.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/gentoo.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/macos.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/msys2.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/nixos.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/openbsd.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/opensuse.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/build/server/test/docker/templates/ubuntu-18.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/ubuntu-20.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/ubuntu-22.Dockerfile.in
+  pdf-tools-20240405.1311/build/server/test/docker/templates/void.Dockerfile.in.FAILING
+  pdf-tools-20240405.1311/pdf-annot.el
+  pdf-tools-20240405.1311/pdf-cache.el
+  pdf-tools-20240405.1311/pdf-dev.el
+  pdf-tools-20240405.1311/pdf-history.el
+  pdf-tools-20240405.1311/pdf-info.el
+  pdf-tools-20240405.1311/pdf-isearch.el
+  pdf-tools-20240405.1311/pdf-links.el
+  pdf-tools-20240405.1311/pdf-loader.el
+  pdf-tools-20240405.1311/pdf-macs.el
+  pdf-tools-20240405.1311/pdf-misc.el
+  pdf-tools-20240405.1311/pdf-occur.el
+  pdf-tools-20240405.1311/pdf-outline.el
+  pdf-tools-20240405.1311/pdf-sync.el
+  pdf-tools-20240405.1311/pdf-tools-pkg.el
+  pdf-tools-20240405.1311/pdf-tools.el
+  pdf-tools-20240405.1311/pdf-util.el
+  pdf-tools-20240405.1311/pdf-view.el
+  pdf-tools-20240405.1311/pdf-virtual.el
  ✓ Success:
-  2024-04-05T12:04:54+0000  pdf-tools-20240317.848.entry
-  2024-04-05T12:04:54+0000  pdf-tools-20240317.848.tar
-Built pdf-tools in 3.631s, finished at 2024-04-05T12:04:55+0000
+  2024-04-05T16:00:03+0000  pdf-tools-20240405.1311.entry
+  2024-04-05T16:00:02+0000  pdf-tools-20240405.1311.tar
+Built pdf-tools in 4.806s, finished at 2024-04-05T16:00:04+0000
