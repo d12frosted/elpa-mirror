@@ -111,7 +111,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ⁃ `Dape' enhances ergonomics within the minibuffer by allowing users
     to modify or add PLIST entries to an existing configuration using
     options. For example `dape-config :cwd
-    default-directory :program ＂/home/user/b.out＂ :compile ＂gcc -g -o
+    default-directory :program ＂/home/user/b.out＂ compile ＂gcc -g -o
     b.out main.c＂'.
   ⁃ No magic, no special variables like `${workspaceFolder}'. Instead,
     functions and variables are resolved before starting a new session.

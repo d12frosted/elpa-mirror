@@ -73,7 +73,11 @@ then the backend implementation is also reasonably straightforward.
   • From the subprocess to Emacs, control messages travel in JSON
     objects inside an OSC escape sequence (code 5161).
   • From Emacs to the subprocess, control messages are passed as lines
-    of the form `ESC % <JSON object> LF'.
+    of the form `ESC = <JSON object> LF'.  If the subprocess
+    communicates over a PTY and the encoded message is too long to fit a
+    line (this is an OS-dependent limit), then the message payload is
+    split into fragments.  All fragments except the last are transmitted
+    as `ESC + <JSON fragment> LF'.
 
   At any given point in time, the subprocess expects either a framed
   messages like this or regular IO.  Emacs keeps track of the state of
@@ -93,78 +97,103 @@ then the backend implementation is also reasonably straightforward.
 
   The following operations are defined:
 
-  • `status' (interpreter notification): The interpreter indicates
-    whether or not it is ready to receive a framed operation message.
 
-    Parameters:
-    • `status': Either `ready' (subprocess is expecting a framed
-      message) or `busy' (IO, if it occurs, should not be framed).
+2.1 `status' (interpreter notification)
+───────────────────────────────────────
 
-    Note: Some changes in the tracked state happen implicitly.  Most
-    importantly, when an editor request is sent, tracked state changes
-    to `busy'.
+  The interpreter indicates whether or not it is ready to receive a
+  framed operation message.
 
-  • `eval' (editor request).  Evaluate some code, blocking until the
-    computation is complete.
+  Parameters:
+  • `status': Either `ready' (subprocess is expecting a framed message),
+    `rawio' (IO, if it occurs, should not be framed) or `busy' (no IO is
+    allowed).
 
-    Parameters:
-    • `code': The code to be evaluated
+  Note: Some changes in the tracked state happen implicitly.  For
+  instance, when an editor request is sent, the tracked state changes to
+  `busy' or `rawio' depending on the operation type.
 
-    Result: The response contains no data (that is, it includes only the
-    original request id).  The REPL should evaluate the code and print
-    the result.
 
-  • `complete' (editor request): Get completions at point.
+2.2 `eval' (editor request)
+───────────────────────────
 
-    Parameters:
-    • `code': A code snippet containing the completion point.
-    • `offset': The offset (zero-based) from start of `code' to the
-      point of completion.
+  Evaluate some code, blocking until the computation is complete.
 
-    Response:
-    • `candidates' (optional): A list of objects, each containing the
-      following attributes.
-      • `text': The completed text, including the existing prefix.
-      • `annot': Annotation text to be displayed next to the candidate
-        in the completion UI.
+  Parameters:
+  • `code': The code to be evaluated
 
-  • `checkinput' (editor request): Check if a continuation line is
-    needed.
+  Result: The response contains no data (that is, it includes only the
+  original request id).  The REPL should evaluate the code and print the
+  result.
 
-    Parameters:
-    • `code' (string): A code snippet.
 
-    Result:
-    • `status': One of `complete' (the code is valid), `incomplete' (the
-      code is syntactically invalid, but may become so by adding more
-      text) or `invalid' (there is a syntax error in the existing
-      portion of code).
-    • `indent' (optional): If present, this is the expected indentation
-      of a continuation line, as a string.
-    • `prompt': The prompt of a continuation line.
+2.3 `complete' (editor request)
+───────────────────────────────
 
-  • `describe' (editor request): Obtain information on the symbol at
-    point.
+  Get completions at point.
 
-    Parameters:
-    • `code': A code snippet.
-    • `offset': An offset (zero-based) from start of `code' containing
-      the symbol of interest.
+  Parameters:
+  • `code': A code snippet containing the completion point.
+  • `offset': The offset (zero-based) from start of `code' to the point
+    of completion.
 
-    Result: The response may be empty (no information on the symbol) or
-    as follows.
-    • `name': The symbol name.
-    • `type' (optional): The symbol type or function signature.
-    • `text' (optional): Free-form documentation on the symbol.
+  Response:
+  • `candidates' (optional): A list of objects, each containing the
+    following attributes.
+    • `text': The completed text, including the existing prefix.
+    • `annot': Annotation text to be displayed next to the candidate in
+      the completion UI.
 
-  • `setoptions' (editor request): Set configuration options.  The
-    parameters are arbitrary and interpreter-specific.  The interpreter
-    must send an empty response.
 
-  • `getoptions' (interpreter notification).  Indicates that the editor
-    should send a `setoptions' request.  Typically emitted when the
-    interpreter is initialized but before printing the first prompt.
-    Implicitly changes the tracked interpreter state to `ready'.
+2.4 `checkinput' (editor request)
+─────────────────────────────────
+
+  Check if a continuation line is needed.
+
+  Parameters:
+  • `code' (string): A code snippet.
+
+  Result:
+  • `status': One of `complete' (the code is valid), `incomplete' (the
+    code is syntactically invalid, but may become so by adding more
+    text) or `invalid' (there is a syntax error in the existing portion
+    of code).
+  • `indent' (optional): If present, this is the expected indentation of
+    a continuation line, as a string.
+  • `prompt': The prompt of a continuation line.
+
+
+2.5 `describe' (editor request)
+───────────────────────────────
+
+  Obtain information on the symbol at point.
+
+  Parameters:
+  • `code': A code snippet.
+  • `offset': An offset (zero-based) from start of `code' containing the
+    symbol of interest.
+
+  Result: The response may be empty (no information on the symbol) or as
+  follows.
+  • `name': The symbol name.
+  • `type' (optional): The symbol type or function signature.
+  • `text' (optional): Free-form documentation on the symbol.
+
+
+2.6 `setoptions' (editor request)
+─────────────────────────────────
+
+  Set configuration options.  The parameters are arbitrary and
+  interpreter-specific.  The interpreter must send an empty response.
+
+
+2.7 `getoptions' (interpreter notification)
+───────────────────────────────────────────
+
+  Indicates that the editor should send a `setoptions' request.
+  Typically emitted when the interpreter is initialized but before
+  printing the first prompt.  Implicitly changes the tracked interpreter
+  state to `ready'.
 
 
 3 Why
