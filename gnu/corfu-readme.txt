@@ -31,20 +31,22 @@ Table of Contents
 ─────────────────
 
 1. Features
-2. Installation and Configuration
+2. Installation
+3. Key bindings
+4. Configuration
 .. 1. Auto completion
 .. 2. Completing in the minibuffer
 .. 3. Completing in the Eshell or Shell
 .. 4. Orderless completion
 .. 5. TAB-only completion
 .. 6. TAB-and-Go completion
-.. 7. Transfer completion to the minibuffer
-3. Key bindings
-4. Extensions
-5. Complementary packages
-6. Alternatives
-7. Debugging Corfu
-8. Contributions
+.. 7. Expanding to the common candidate prefix with TAB
+.. 8. Transfer completion to the minibuffer
+5. Extensions
+6. Complementary packages
+7. Alternatives
+8. Debugging Corfu
+9. Contributions
 
 
 [Vertico] <https://github.com/minad/vertico>
@@ -83,22 +85,60 @@ Table of Contents
 [Orderless] <https://github.com/oantolin/orderless>
 
 
-2 Installation and Configuration
-════════════════════════════════
+2 Installation
+══════════════
 
-  Corfu is available from [GNU ELPA], such that it can be installed
-  directly via `package-install'. After installation, the global minor
-  mode can be enabled with `M-x global-corfu-mode'. In order to
-  configure Corfu and other packages in your init.el, you may want to
-  use `use-package'.
+  Corfu is available from [GNU ELPA]. You can install it directly via
+  `M-x package-install RET corfu RET'.  After installation, activate the
+  global minor mode with `M-x global-corfu-mode RET'.  Set the variable
+  `corfu-auto' to t in order to enable auto completion. For manual
+  completion press `M-TAB' (or `TAB') within a buffer.
 
-  Corfu is highly flexible and customizable via `corfu-*' customization
-  variables, such that you can adapt it precisely to your
-  requirements. However in order to quickly try out the Corfu completion
-  package, it should be sufficient to activate `global-corfu-mode'. You
-  can experiment with manual completion for example in an Elisp buffer
-  or in an Eshell or Shell buffer. For auto completion, set `corfu-auto'
-  to t before turning on `global-corfu-mode'.
+
+[GNU ELPA] <https://elpa.gnu.org/packages/corfu.html>
+
+
+3 Key bindings
+══════════════
+
+  Corfu uses a transient keymap `corfu-map' which is active while the
+  popup is shown. The keymap defines the following remappings of
+  fundamental commands and bindings:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Binding/Remapping             Corfu command              
+  ──────────────────────────────────────────────────────────
+   `move-beginning-of-line'      `corfu-prompt-beginning'   
+   `move-end-of-line'            `corfu-prompt-end'         
+   `beginning-of-buffer'         `corfu-first'              
+   `end-of-buffer'               `corfu-last'               
+   `scroll-down-command'         `corfu-scroll-down'        
+   `scroll-up-command'           `corfu-scroll-up'          
+   `next-line', `down', `M-n'    `corfu-next'               
+   `previous-line', `up', `M-p'  `corfu-previous'           
+   `completion-at-point', `TAB'  `corfu-complete'           
+   `M-TAB'                       `corfu-expand'             
+   `RET'                         `corfu-insert'             
+   `M-g'                         `corfu-info-location'      
+   `M-h'                         `corfu-info-documentation' 
+   `M-SPC'                       `corfu-insert-separator'   
+   `C-g'                         `corfu-quit'               
+   `keyboard-escape-quit'        `corfu-reset'              
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+4 Configuration
+═══════════════
+
+  In order to configure Corfu and other packages in your init.el, you
+  may want to use `use-package'. Corfu is flexibly customizable via
+  `corfu-*' customization variables, such that you can adapt it
+  precisely to your requirements. However in order to quickly try out
+  the Corfu completion package, it should be sufficient to activate
+  `global-corfu-mode'. You can experiment with manual completion for
+  example in an Elisp buffer or in an Eshell or Shell buffer. For auto
+  completion, set `corfu-auto' to t before turning on
+  `global-corfu-mode'.
 
   Here is an example configuration:
 
@@ -131,16 +171,20 @@ Table of Contents
   │ (use-package emacs
   │   :init
   │   ;; TAB cycle if there are only few candidates
-  │   (setq completion-cycle-threshold 3)
-  │ 
-  │   ;; Emacs 28: Hide commands in M-x which do not apply to the current mode.
-  │   ;; Corfu commands are hidden, since they are not supposed to be used via M-x.
-  │   ;; (setq read-extended-command-predicate
-  │   ;;       #'command-completion-default-include-p)
+  │   ;; (setq completion-cycle-threshold 3)
   │ 
   │   ;; Enable indentation+completion using the TAB key.
   │   ;; `completion-at-point' is often bound to M-TAB.
-  │   (setq tab-always-indent 'complete))
+  │   (setq tab-always-indent 'complete)
+  │ 
+  │   ;; Emacs 30 and newer: Disable Ispell completion function. As an alternative,
+  │   ;; try `cape-dict'.
+  │   (setq text-mode-ispell-word-completion nil)
+  │ 
+  │   ;; Emacs 28 and newer: Hide commands in M-x which do not apply to the current
+  │   ;; mode.  Corfu commands are hidden, since they are not used via M-x. This
+  │   ;; setting is useful beyond Corfu.
+  │   (setq read-extended-command-predicate #'command-completion-default-include-p))
   └────
 
   Dabbrev completion is based on `completion-in-region' and can be used
@@ -198,8 +242,6 @@ Table of Contents
   manual].
 
 
-[GNU ELPA] <https://elpa.gnu.org/packages/corfu.html>
-
 [Cape] <https://github.com/minad/cape>
 
 [Consult wiki] <https://github.com/minad/consult/wiki>
@@ -214,7 +256,7 @@ Table of Contents
 [Elisp manual]
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html>
 
-2.1 Auto completion
+4.1 Auto completion
 ───────────────────
 
   Auto completion is disabled by default, but can be enabled by setting
@@ -259,7 +301,7 @@ Table of Contents
   ┌────
   │ (defun orderless-fast-dispatch (word index total)
   │   (and (= index 0) (= total 1) (length< word 4)
-  │        `(orderless-regexp . ,(concat "^" (regexp-quote word)))))
+  │        (cons 'orderless-literal-prefix word))))
   │ 
   │ (orderless-define-completion-style orderless-fast
   │   (orderless-style-dispatchers '(orderless-fast-dispatch))
@@ -272,7 +314,7 @@ Table of Contents
   └────
 
 
-2.2 Completing in the minibuffer
+4.2 Completing in the minibuffer
 ────────────────────────────────
 
   Corfu can be used for completion in the minibuffer, since it relies on
@@ -317,7 +359,7 @@ Table of Contents
   └────
 
 
-2.3 Completing in the Eshell or Shell
+4.3 Completing in the Eshell or Shell
 ─────────────────────────────────────
 
   When completing in the Eshell I recommend conservative local settings
@@ -354,36 +396,27 @@ Table of Contents
   Shell completion uses the flexible Pcomplete mechanism internally,
   which allows you to program the completions per shell command. If you
   want to know more, look into this [blog post], which shows how to
-  configure Pcomplete for git commands.
-
-  You can try the [pcmpl-args] package which extends Pcomplete with
-  completion support and helpful annotation support for more
-  commands. Similar to the Fish shell, `pcmpl-args' uses man page
-  parsing and `--help' output parsing to dynamically generate
-  completions. Since Emacs 29, Pcomplete offers the
-  `pcomplete-from-help' function which parses the `--help' output of a
-  command and produces completions.  This Emacs 29 functionality is not
-  completely equivalent. For example it does not display annotations in
-  Eshell, but this may get fixed in Emacs 30.
+  configure Pcomplete for git commands.  Since Emacs 29, Pcomplete
+  offers the `pcomplete-from-help' function which parses the `--help'
+  output of a command and produces completions for command line options.
 
   Pcomplete has a few bugs on Emacs 28 and older. We can work around the
   issues with the [Cape] library (Completion at point extensions). Cape
   provides wrappers which sanitize the Pcomplete function. If you use
   Emacs 28 or older installing these advices is recommended such that
   Pcomplete works properly. On Emacs 29 the advices should not be
-  necessary anymore, since most of the relevant bugs have been fixed. I
-  therefore recommend to remove the advices on Emacs 29 and eventually
-  report any remaining Pcomplete issues upstream, such that they can be
-  fixed.
+  necessary anymore, since most relevant bugs have been fixed. I
+  therefore recommend to avoid the advices on Emacs 29 and eventually
+  report any remaining Pcomplete issues upstream.
 
   ┌────
   │ ;; The advices are only needed on Emacs 28 and older.
   │ (when (< emacs-major-version 29)
-  │   ;; Silence the pcomplete capf, no errors or messages!
+  │   ;; Silence the pcomplete capf. Hide errors or messages.
   │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
   │ 
-  │   ;; Ensure that pcomplete does not write to the buffer
-  │   ;; and behaves as a pure `completion-at-point-function'.
+  │   ;; Ensure that pcomplete does not write to the buffer and behaves as a
+  │   ;; `completion-at-point-function' without side-effects.
   │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
   └────
 
@@ -391,12 +424,10 @@ Table of Contents
 [blog post]
 <https://www.masteringemacs.org/article/pcomplete-context-sensitive-completion-emacs>
 
-[pcmpl-args] <https://github.com/JonWaltman/pcmpl-args.el>
-
 [Cape] <https://github.com/minad/cape>
 
 
-2.4 Orderless completion
+4.4 Orderless completion
 ────────────────────────
 
   [Orderless] is an advanced completion style that supports
@@ -465,7 +496,7 @@ Table of Contents
 [Orderless] <https://github.com/oantolin/orderless>
 
 
-2.5 TAB-only completion
+4.5 TAB-only completion
 ───────────────────────
 
   By default, Corfu steals both the `RET' and `TAB' keys, when the Corfu
@@ -504,7 +535,7 @@ Table of Contents
   └────
 
 
-2.6 TAB-and-Go completion
+4.6 TAB-and-Go completion
 ─────────────────────────
 
   You may be interested in configuring Corfu in TAB-and-Go
@@ -534,7 +565,34 @@ Table of Contents
   └────
 
 
-2.7 Transfer completion to the minibuffer
+4.7 Expanding to the common candidate prefix with TAB
+─────────────────────────────────────────────────────
+
+  If you leave the default configuration of the completion styles, such
+  that the `basic' completion style is still present, then pressing
+  `M-TAB' (`corfu-expand') will expand the current input to the common
+  prefix of all completion candidates. In contrast, `TAB'
+  (`corfu-complete') behaves differently and expands input to the
+  currently selected candidate.
+
+  If you use the `orderless' completion style, then expansion works
+  differently by default. Orderless only expands to single matching
+  candidates, since due to its multi-component input, there does not
+  necessarily exist an expansion to a common candidate prefix. However
+  it is possible to define a separate `tab' completion style. The `tab'
+  completion style will only take over `TAB' completion (if prefix
+  expansion is possible), but besides that won't affect Orderless
+  candidate filtering.
+
+  ┌────
+  │ (add-to-list 'completion-styles-alist
+  │ 	     '(tab completion-basic-try-completion ignore
+  │ 	       "Completion style which provides TAB completion only."))
+  │ (setq completion-styles '(tab orderless basic)))
+  └────
+
+
+4.8 Transfer completion to the minibuffer
 ─────────────────────────────────────────
 
   Sometimes it is useful to transfer the Corfu completion session to the
@@ -567,31 +625,7 @@ Table of Contents
 [Embark] <https://github.com/oantolin/embark>
 
 
-3 Key bindings
-══════════════
-
-  Corfu uses a transient keymap `corfu-map' which is active while the
-  popup is shown. The keymap defines the following remappings and
-  bindings:
-
-  • `move-beginning-of-line' -> `corfu-prompt-beginning'
-  • `move-end-of-line' -> `corfu-prompt-end'
-  • `beginning-of-buffer' -> `corfu-first'
-  • `end-of-buffer' -> `corfu-last'
-  • `scroll-down-command' -> `corfu-scroll-down'
-  • `scroll-up-command' -> `corfu-scroll-up'
-  • `next-line', `down', `M-n' -> `corfu-next'
-  • `previous-line', `up', `M-p' -> `corfu-previous'
-  • `completion-at-point', `TAB' -> `corfu-complete'
-  • `RET' -> `corfu-insert'
-  • `M-g' -> `corfu-info-location'
-  • `M-h' -> `corfu-info-documentation'
-  • `M-SPC' -> `corfu-insert-separator'
-  • `C-g' -> `corfu-quit'
-  • `keyboard-escape-quit' -> `corfu-reset'
-
-
-4 Extensions
+5 Extensions
 ════════════
 
   We maintain small extension packages to Corfu in this repository in
@@ -638,7 +672,7 @@ Table of Contents
 <https://github.com/minad/corfu/blob/main/extensions/corfu-quick.el>
 
 
-5 Complementary packages
+6 Complementary packages
 ════════════════════════
 
   Corfu works well together with all packages providing code completion
@@ -671,11 +705,6 @@ Table of Contents
     icon font, which is even supported on terminal, while kind-icon uses
     SVGs from monochromatic icon sets.
 
-  • [pcmpl-args]: Extend the Eshell/Shell Pcomplete mechanism with
-    support for many commands. Similar to the Fish shell, pcmpl-args
-    uses man page parsing to dynamically retrieve the completions and
-    helpful annotations.
-
   • [Tempel]: Tiny template/snippet package with templates in Lisp
     syntax, which can be used in conjunction with Corfu.
 
@@ -696,14 +725,12 @@ Table of Contents
 
 [kind-icon] <https://github.com/jdtsmith/kind-icon>
 
-[pcmpl-args] <https://github.com/JonWaltman/pcmpl-args.el>
-
 [Tempel] <https://github.com/minad/tempel>
 
 [Vertico] <https://github.com/minad/vertico>
 
 
-6 Alternatives
+7 Alternatives
 ══════════════
 
   • [Company]: Company is a widely used and mature completion package,
@@ -737,7 +764,7 @@ Table of Contents
 [Vertico] <https://github.com/minad/vertico>
 
 
-7 Debugging Corfu
+8 Debugging Corfu
 ═════════════════
 
   When you observe an error in the `corfu--post-command' post command
@@ -767,7 +794,7 @@ Table of Contents
   └────
 
 
-8 Contributions
+9 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a
