@@ -711,9 +711,7 @@
 		   "Starts a * or # search from the visual selection" tar
 		   ((:url . "https://github.com/bling/evil-visualstar")
 		    (:keywords "evil" "vim" "visualstar")
-		    (:maintainer "Bailey Ling")
-		    (:authors
-		     ("Bailey Ling")))])
+		    (:commit . "87a5bd845759c5e5508de2e2aed2a99424995d44"))])
  (exec-path-from-shell .
 		       [(2 1)
 			((emacs

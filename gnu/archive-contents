@@ -134,13 +134,16 @@
 		  ("Gregory Chamberlain" . "greg@cosine.blue"))
 		 (:commit . "0cecd81e7f6631c91ed0437d801517677e018c1d"))])
  (all .
-      [(1 0)
-       nil "Edit all lines matching a given regexp" single
-       ((:url . "http://elpa.gnu.org/packages/all.html")
-	(:keywords "matching")
+      [(1 1)
+       ((emacs
+	 (24 3)))
+       "Edit all lines matching a given regexp" tar
+       ((:keywords "matching")
+	(:maintainer "Per Abrahamsen" . "per.abrahamsen@gmail.com")
 	(:authors
 	 ("Per Abrahamsen" . "per.abrahamsen@gmail.com"))
-	(:maintainer "Per Abrahamsen" . "per.abrahamsen@gmail.com"))])
+	(:url . "https://elpa.gnu.org/packages/all.html")
+	(:commit . "55aa1ac8853d81040aec0b3a2bd43200923146fd"))])
  (altcaps .
 	  [(1 2 0)
 	   ((emacs
@@ -2871,7 +2874,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "3847f311077efa17951a786d2759f2639c5f43c8"))])
  (org .
-      [(9 6 24)
+      [(9 6 25)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2880,7 +2883,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "5bdfc02c6fa1b9ad4f075ac1ad1e4086ead310db"))])
+	(:commit . "9bff93f19a8ca565534f02ae5aa70b16af939cf2"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
