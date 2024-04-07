@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-circe/circe.git
 
 Updating /mnt/store/melpa/working/circe/
-Checking out 7044e07ab235ae09498c430558449750ec1e6a9f
+Checking out 9d703f481a2c65f2b17edcc2b05412f9865d24af
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/circe/
-  to /tmp/circe060p62/circe-20240227.2116
+  to /tmp/circe2TMqrx/circe-20240407.1101
     circe-chanop.el -> circe-chanop.el
     circe-color-nicks.el -> circe-color-nicks.el
     circe-compat.el -> circe-compat.el
@@ -27,29 +27,31 @@ Copying files (->) and directories (=>)
     make-tls-process.el -> make-tls-process.el
     shorten.el -> shorten.el
     tracking.el -> tracking.el
-Created circe-20240227.2116.tar containing:
-  circe-20240227.2116/
-  circe-20240227.2116/circe-chanop.el
-  circe-20240227.2116/circe-color-nicks.el
-  circe-20240227.2116/circe-compat.el
-  circe-20240227.2116/circe-display-images.el
-  circe-20240227.2116/circe-lagmon.el
-  circe-20240227.2116/circe-new-day-notifier.el
-  circe-20240227.2116/circe-pkg.el
-  circe-20240227.2116/circe.el
-  circe-20240227.2116/irc.el
-  circe-20240227.2116/lcs.el
-  circe-20240227.2116/lui-autopaste.el
-  circe-20240227.2116/lui-format.el
-  circe-20240227.2116/lui-irc-colors.el
-  circe-20240227.2116/lui-logging.el
-  circe-20240227.2116/lui-track-bar.el
-  circe-20240227.2116/lui-track.el
-  circe-20240227.2116/lui.el
-  circe-20240227.2116/make-tls-process.el
-  circe-20240227.2116/shorten.el
-  circe-20240227.2116/tracking.el
+Created circe-20240407.1101.tar containing:
+  circe-20240407.1101/
+  circe-20240407.1101/circe-chanop.el
+  circe-20240407.1101/circe-color-nicks.el
+  circe-20240407.1101/circe-compat.el
+  circe-20240407.1101/circe-display-images.el
+  circe-20240407.1101/circe-lagmon.el
+  circe-20240407.1101/circe-new-day-notifier.el
+  circe-20240407.1101/circe-pkg.el
+  circe-20240407.1101/circe.el
+  circe-20240407.1101/irc.el
+  circe-20240407.1101/lcs.el
+  circe-20240407.1101/lui-autopaste.el
+  circe-20240407.1101/lui-format.el
+  circe-20240407.1101/lui-irc-colors.el
+  circe-20240407.1101/lui-logging.el
+  circe-20240407.1101/lui-track-bar.el
+  circe-20240407.1101/lui-track.el
+  circe-20240407.1101/lui.el
+  circe-20240407.1101/make-tls-process.el
+  circe-20240407.1101/shorten.el
+  circe-20240407.1101/tracking.el
  ✓ Success:
-  2024-04-07T07:06:33+0000  circe-20240227.2116.entry
-  2024-04-07T07:06:32+0000  circe-20240227.2116.tar
-Built circe in 6.546s, finished at 2024-04-07T07:06:36+0000
+  2024-04-07T09:07:24+0000  circe-20240227.2116.entry
+  2024-04-07T09:07:24+0000  circe-20240227.2116.tar
+  2024-04-07T11:05:42+0000  circe-20240407.1101.entry
+  2024-04-07T11:05:42+0000  circe-20240407.1101.tar
+Built circe in 6.697s, finished at 2024-04-07T11:05:45+0000

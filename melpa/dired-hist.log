@@ -3,7 +3,18 @@ Fetcher: github
 Source:  https://github.com/Anoncheg1/dired-hist.git
 
 Updating /mnt/store/melpa/working/dired-hist/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: could not read Username for 'https://github.com': No such device or address
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 1755b7bbb81e83563feac8e395e0d9fd85217ad6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-hist/
+  to /tmp/dired-histkEjGHU/dired-hist-20240324.509
+    dired-hist-tl.el -> dired-hist-tl.el
+    dired-hist.el -> dired-hist.el
+Created dired-hist-20240324.509.tar containing:
+  dired-hist-20240324.509/
+  dired-hist-20240324.509/dired-hist-pkg.el
+  dired-hist-20240324.509/dired-hist-tl.el
+  dired-hist-20240324.509/dired-hist.el
+ ✓ Success:
+  2024-04-07T11:11:55+0000  dired-hist-20240324.509.entry
+  2024-04-07T11:11:55+0000  dired-hist-20240324.509.tar
+Built dired-hist in 3.931s, finished at 2024-04-07T11:11:57+0000
