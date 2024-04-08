@@ -38,3 +38,5 @@ compilation so it can be opened in a browser and shared.
 
 M-x `compiler-explorer-layout' cycles between different layouts.
 
+M-x `compiler-explorer-exit' kills the current session.
+
