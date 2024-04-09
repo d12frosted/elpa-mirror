@@ -1165,7 +1165,7 @@
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
 	      (:commit . "b04272a53e5b2db1fc7724d4ba84e51fd20e9c4f"))])
  (highlight-parentheses .
-			[(2 2 1)
+			[(2 2 2)
 			 ((emacs
 			   (24 3)))
 			 "Highlight surrounding parentheses" tar
@@ -1174,7 +1174,7 @@
 			  (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
 			  (:authors
 			   ("Nikolaj Schumacher" . "bugs*nschumde"))
-			  (:commit . "d64add6f37304ba46756f06517cf4448e2a79090"))])
+			  (:commit . "965b18dd69eff4457e17c9e84b3cbfdbfca2ddfb"))])
  (hl-block-mode .
 		[(0 2)
 		 ((emacs
