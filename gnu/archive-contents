@@ -253,7 +253,7 @@
 		   ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 		  (:commit . "0807a75d2606462ef636b737e8f3873f98141a82"))])
  (autocrypt .
-	    [(0 4 1)
+	    [(0 4 2)
 	     ((emacs
 	       (24 3)))
 	     "Autocrypt implementation" tar
@@ -262,7 +262,7 @@
 	      (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
 	      (:authors
 	       ("Philip Kaludercic" . "philipk@posteo.net"))
-	      (:commit . "a90aa6b644fe8cf72af9e1615a7c50b36b739e7c"))])
+	      (:commit . "dc0223f11daf526621fda206b38bf06c29759c94"))])
  (avy .
       [(0 5 0)
        ((emacs
