@@ -2,7 +2,7 @@ This Emacs package provides the following functionalities from the
 Kagi search engine:
 
 FastGPT
-      Kagi's open source LLM offering, as a shell inspired by
+      Kagi's LLM offering, as a shell inspired by
       [xenodium's chatgpt-shell].
 Universal Summarizer
       Summarizes texts, webpages, videos and more.
