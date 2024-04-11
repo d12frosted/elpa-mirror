@@ -3,20 +3,20 @@ Fetcher: github
 Source:  https://github.com/flycheck/flycheck.git
 
 Updating /mnt/store/melpa/working/flycheck/
-Checking out 1cc041503deb31e16819a1bdda342820c38ef5f8
+Checking out 900b8e79754d21853a6e5b5a2802f317a7112a1e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flycheck/
-  to /tmp/flycheckCi8txR/flycheck-20240410.1206
+  to /tmp/flycheckjBW5mf/flycheck-20240411.449
     flycheck-buttercup.el -> flycheck-buttercup.el
     flycheck-ert.el -> flycheck-ert.el
     flycheck.el -> flycheck.el
-Created flycheck-20240410.1206.tar containing:
-  flycheck-20240410.1206/
-  flycheck-20240410.1206/flycheck-buttercup.el
-  flycheck-20240410.1206/flycheck-ert.el
-  flycheck-20240410.1206/flycheck-pkg.el
-  flycheck-20240410.1206/flycheck.el
+Created flycheck-20240411.449.tar containing:
+  flycheck-20240411.449/
+  flycheck-20240411.449/flycheck-buttercup.el
+  flycheck-20240411.449/flycheck-ert.el
+  flycheck-20240411.449/flycheck-pkg.el
+  flycheck-20240411.449/flycheck.el
  ✓ Success:
-  2024-04-11T03:54:26+0000  flycheck-20240410.1206.entry
-  2024-04-11T03:54:26+0000  flycheck-20240410.1206.tar
-Built flycheck in 4.459s, finished at 2024-04-11T03:54:27+0000
+  2024-04-11T11:10:29+0000  flycheck-20240411.449.entry
+  2024-04-11T11:10:29+0000  flycheck-20240411.449.tar
+Built flycheck in 3.978s, finished at 2024-04-11T11:10:30+0000

@@ -2143,7 +2143,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:commit . "e73c0a38039eb32fd43911023ff35007e324c733"))])
  (sweeprolog .
-	     [(0 27 4)
+	     [(0 27 5)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2154,7 +2154,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "799e1aebfd280ed6d00fb1034a3fed60de21c8d7"))])
+	       (:commit . "d8ea9790b40d74f444ff147f7b98f2023ef2e61a"))])
  (swift-mode .
 	     [(9 1 0)
 	      ((emacs
@@ -2357,7 +2357,7 @@
 	       ("Daniel Semyonov" . "daniel@dsemy.com"))
 	      (:commit . "93ae3db40d07ae15e61d34c3c3870de5d2fce2de"))])
  (visual-fill-column .
-		     [(2 6 2)
+		     [(2 6 3)
 		      ((emacs
 			(25 1)))
 		      "fill-column for visual-line-mode" tar
@@ -2365,7 +2365,7 @@
 		       (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
 		       (:authors
 			("Joost Kremers" . "joostkremers@fastmail.fm"))
-		       (:commit . "5b9f9309bdf040b72bb2c3d99d1d8a0f0d98c308"))])
+		       (:commit . "e04d3521b6dc2435de4c4a4b9cac5feb194f0d5b"))])
  (web-mode .
 	   [(17 3 19)
 	    ((emacs
