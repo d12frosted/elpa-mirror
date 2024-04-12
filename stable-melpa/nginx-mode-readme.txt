@@ -6,3 +6,7 @@ useful indentation function that I've modified to suit this situation.
 
 Put this file into your load-path and the following into your ~/.emacs:
   (require 'nginx-mode)
+
+Now that nginx-mode is available via NonGNU ELPA, you could also:
+(use-package nginx-mode
+ :commands nginx-mode)
