@@ -1137,9 +1137,9 @@
 		     (:keywords "languages")
 		     (:commit . "59640ceec33cd4df37096289e11ff6f4b876be03"))])
  (helm .
-       [(3 9 7)
+       [(3 9 8)
 	((helm-core
-	  (3 9 7))
+	  (3 9 8))
 	 (wfnames
 	  (1 1))
 	 (popup
@@ -1149,7 +1149,7 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "b04272a53e5b2db1fc7724d4ba84e51fd20e9c4f"))])
+	 (:commit . "6ae44dba0cb72a3a6950cbe36d104db9c69dfb49"))])
  (helm-core .
 	    [(3 9 8)
 	     ((emacs
@@ -1560,14 +1560,14 @@
 	       ("Christopher Wellons" . "wellons@nullprogram.com"))
 	      (:commit . "d990ed94d902b74a5c834fb567e03307607cee45"))])
  (nginx-mode .
-	     [(1 1 9)
+	     [(1 1 10)
 	      nil "major mode for editing nginx config files" tar
 	      ((:keywords "languages" "nginx")
 	       (:maintainer "Andrew J Cosgriff" . "andrew@cosgriff.name")
 	       (:authors
 		("Andrew J Cosgriff" . "andrew@cosgriff.name"))
 	       (:url . "https://elpa.nongnu.org/nongnu/nginx-mode.html")
-	       (:commit . "a2bab83c2eb233d57d76b236e7c141c2ccc97005"))])
+	       (:commit . "c4ac5de975d65c84893a130a470af32a48b0b66c"))])
  (nix-mode .
 	   [(1 5 0)
 	    ((emacs
