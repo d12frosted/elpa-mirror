@@ -713,18 +713,16 @@
 		    (:keywords "evil" "vim" "visualstar")
 		    (:commit . "87a5bd845759c5e5508de2e2aed2a99424995d44"))])
  (exec-path-from-shell .
-		       [(2 1)
+		       [(2 2)
 			((emacs
-			  (24 1))
-			 (cl-lib
-			  (0 6)))
+			  (24 4)))
 			"Get environment variables such as $PATH from the shell" tar
 			((:url . "https://github.com/purcell/exec-path-from-shell")
 			 (:keywords "unix" "environment")
 			 (:maintainer "Steve Purcell" . "steve@sanityinc.com")
 			 (:authors
 			  ("Steve Purcell" . "steve@sanityinc.com"))
-			 (:commit . "03fc0a38af9e396c98f5a30c392cf757b3a34feb"))])
+			 (:commit . "72ede29a0e0467b3b433e8edbee3c79bab005884"))])
  (flx .
       [(0 6 2)
        ((cl-lib
@@ -1153,7 +1151,7 @@
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
 	 (:commit . "b04272a53e5b2db1fc7724d4ba84e51fd20e9c4f"))])
  (helm-core .
-	    [(3 9 7)
+	    [(3 9 8)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -1163,7 +1161,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "b04272a53e5b2db1fc7724d4ba84e51fd20e9c4f"))])
+	      (:commit . "6ae44dba0cb72a3a6950cbe36d104db9c69dfb49"))])
  (highlight-parentheses .
 			[(2 2 2)
 			 ((emacs
