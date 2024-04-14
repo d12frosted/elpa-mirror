@@ -1,0 +1,36 @@
+Package: go-translate
+Fetcher: github
+Source:  https://github.com/lorniu/go-translate.git
+
+Updating /mnt/store/melpa/working/go-translate/
+Checking out 377375c87f64e7d069c8fc310ccfefd8771226f3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/go-translate/
+  to /tmp/go-translatePjbqRj/go-translate-20240313.356
+    go-translate.el -> go-translate.el
+    gts-core.el -> gts-core.el
+    gts-engine-bing.el -> gts-engine-bing.el
+    gts-engine-deepl.el -> gts-engine-deepl.el
+    gts-engine-google-rpc.el -> gts-engine-google-rpc.el
+    gts-engine-google.el -> gts-engine-google.el
+    gts-engine-stardict.el -> gts-engine-stardict.el
+    gts-engine-youdao.el -> gts-engine-youdao.el
+    gts-faces.el -> gts-faces.el
+    gts-implements.el -> gts-implements.el
+Created go-translate-20240313.356.tar containing:
+  go-translate-20240313.356/
+  go-translate-20240313.356/go-translate-pkg.el
+  go-translate-20240313.356/go-translate.el
+  go-translate-20240313.356/gts-core.el
+  go-translate-20240313.356/gts-engine-bing.el
+  go-translate-20240313.356/gts-engine-deepl.el
+  go-translate-20240313.356/gts-engine-google-rpc.el
+  go-translate-20240313.356/gts-engine-google.el
+  go-translate-20240313.356/gts-engine-stardict.el
+  go-translate-20240313.356/gts-engine-youdao.el
+  go-translate-20240313.356/gts-faces.el
+  go-translate-20240313.356/gts-implements.el
+ ✓ Success:
+  2024-04-13T22:25:04+0000  go-translate-20240313.356.entry
+  2024-04-13T22:25:04+0000  go-translate-20240313.356.tar
+Built go-translate in 4.884s, finished at 2024-04-13T22:25:06+0000
