@@ -3520,7 +3520,7 @@
   (nix-mode :url "https://github.com/NixOS/nix-mode.git")
   (nix-modeline :url "https://github.com/ocelot-project/nix-modeline.git")
   (nix-sandbox :url "https://github.com/travisbhartwell/nix-emacs.git")
-  (nix-ts-mode :url "https://github.com/remi-gelinas/nix-ts-mode.git")
+  (nix-ts-mode :url "https://github.com/nix-community/nix-ts-mode.git")
   (nix-update :url "https://github.com/jwiegley/nix-update-el.git")
   (nixos-options :url "https://github.com/travisbhartwell/nix-emacs.git")
   (nixpkgs-fmt :url "https://github.com/purcell/emacs-nixpkgs-fmt.git")
