@@ -29,7 +29,7 @@ Bugs
   line that pushes past the right edge of the window, causing the text to bounce in the buffer as you
   edit it.  [http://reluk.ca/project/Breccia/Emacs/notes.brec.xht#bounces,whenever,newline]
   The workaround is to zero the `line-spacing` for your Breccia Mode buffers.  For example,
-  put this in your intialization file:
+  put this in your initialization file:
 
      (add-hook 'brec-mode-hook (lambda () (setq line-spacing 0)))
 

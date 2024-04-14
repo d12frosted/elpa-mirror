@@ -45,6 +45,13 @@ almost all 'file managers', and also some unique features:
   * Edit dired buffers (really `wdired-mode', not `diredc')
   * Set both panels to same directory (use "=" or "C-u =")
     * inspired by 'midnight commander's "M-i"
+  * Fontify filenames based upon their names or extensions
+    * fontify 'executable' suffix symbol
+  * Optional "drilled-down" view of "sparse" paths (use "}", "{")
+    * ie. ./paths/with/only/single/entries
+    * Uses a 'diredc'-patched version of external package
+      'dired-collapse' (https://github.com/Fuco1/dired-hacks)
+      pending pull-request merges.
 
 Bonus customization features
   * Customize colors for chmod bits (font-lock)
@@ -72,9 +79,8 @@ Bonus customization features
 
 Suggested (not part of Emacs):
 
-  popup       -- for popup-menu*
-  key-assist  -- for key-assist
-
+  popup          -- for popup-menu*
+  key-assist     -- for key-assist
 
 ; Installation:
 
