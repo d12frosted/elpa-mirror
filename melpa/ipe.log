@@ -1,0 +1,62 @@
+Package: ipe
+Fetcher: github
+Source:  https://github.com/BriansEmacs/insert-pair-edit.el.git
+
+Cloning https://github.com/BriansEmacs/insert-pair-edit.el.git to /mnt/store/melpa/working/ipe/
+Checking out 853979b08cf55f61a7cd7acc3a17145e86a67a2f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ipe/
+  to /tmp/ipeIEi4g5/ipe-20240413.2352
+    ipe-char.el -> ipe-char.el
+    ipe-compat.el -> ipe-compat.el
+    ipe-core.el -> ipe-core.el
+    ipe-custom.el -> ipe-custom.el
+    ipe-defn.el -> ipe-defn.el
+    ipe-doc.el -> ipe-doc.el
+    ipe-edit.el -> ipe-edit.el
+    ipe-help.el -> ipe-help.el
+    ipe-line.el -> ipe-line.el
+    ipe-list.el -> ipe-list.el
+    ipe-mc.el -> ipe-mc.el
+    ipe-menu.el -> ipe-menu.el
+    ipe-mouse.el -> ipe-mouse.el
+    ipe-read.el -> ipe-read.el
+    ipe-updt.el -> ipe-updt.el
+    ipe-word.el -> ipe-word.el
+    ipe.el -> ipe.el
+    ipe.info -> ipe.info
+    ipe.texi -> ipe.texi
+  ! modes/ipe-c-mode.el -> ipe-c-mode.el
+  ! modes/ipe-html-mode.el -> ipe-html-mode.el
+  ! modes/ipe-markdown-mode.el -> ipe-markdown-mode.el
+  ! modes/ipe-texinfo-mode.el -> ipe-texinfo-mode.el
+Created ipe-20240413.2352.tar containing:
+  ipe-20240413.2352/
+  ipe-20240413.2352/dir
+  ipe-20240413.2352/ipe-c-mode.el
+  ipe-20240413.2352/ipe-char.el
+  ipe-20240413.2352/ipe-compat.el
+  ipe-20240413.2352/ipe-core.el
+  ipe-20240413.2352/ipe-custom.el
+  ipe-20240413.2352/ipe-defn.el
+  ipe-20240413.2352/ipe-doc.el
+  ipe-20240413.2352/ipe-edit.el
+  ipe-20240413.2352/ipe-help.el
+  ipe-20240413.2352/ipe-html-mode.el
+  ipe-20240413.2352/ipe-line.el
+  ipe-20240413.2352/ipe-list.el
+  ipe-20240413.2352/ipe-markdown-mode.el
+  ipe-20240413.2352/ipe-mc.el
+  ipe-20240413.2352/ipe-menu.el
+  ipe-20240413.2352/ipe-mouse.el
+  ipe-20240413.2352/ipe-pkg.el
+  ipe-20240413.2352/ipe-read.el
+  ipe-20240413.2352/ipe-texinfo-mode.el
+  ipe-20240413.2352/ipe-updt.el
+  ipe-20240413.2352/ipe-word.el
+  ipe-20240413.2352/ipe.el
+  ipe-20240413.2352/ipe.info
+ ✓ Success:
+  2024-04-14T20:29:21+0000  ipe-20240413.2352.entry
+  2024-04-14T20:29:20+0000  ipe-20240413.2352.tar
+Built ipe in 4.720s, finished at 2024-04-14T20:29:23+0000
