@@ -1453,7 +1453,6 @@
   (ert-expectations :url "https://github.com/emacsorphanage/ert-expectations.git")
   (ert-junit :url "https://bitbucket.org/olanilsson/ert-junit")
   (ert-modeline :url "https://github.com/chrisbarrett/ert-modeline.git")
-  (ert-results :url "https://github.com/rswgnu/ert-results.git")
   (ert-runner :url "https://github.com/rejeep/ert-runner.el.git")
   (es-lib :url "https://github.com/sabof/es-lib.git")
   (es-mode :url "https://github.com/dakrone/es-mode.git")

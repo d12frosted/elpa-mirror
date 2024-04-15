@@ -150,156 +150,162 @@
   Summarize a selected region or the current buffer using Ellama.
 
 
-1.2.10 ellama-code-review
+1.2.10 ellama-summarize-killring
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Summarize text from the kill ring.
+
+
+1.2.11 ellama-code-review
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Review code in a selected region or the current buffer using Ellama.
 
 
-1.2.11 ellama-change
+1.2.12 ellama-change
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change text in a selected region or the current buffer according to a
   provided change.
 
 
-1.2.12 ellama-make-list
+1.2.13 ellama-make-list
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Create a markdown list from the active region or the current buffer
   using Ellama.
 
 
-1.2.13 ellama-make-table
+1.2.14 ellama-make-table
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Create a markdown table from the active region or the current buffer
   using Ellama.
 
 
-1.2.14 ellama-summarize-webpage
+1.2.15 ellama-summarize-webpage
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Summarize a webpage fetched from a URL using Ellama.
 
 
-1.2.15 ellama-provider-select
+1.2.16 ellama-provider-select
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Select ellama provider.
 
 
-1.2.16 ellama-code-complete
+1.2.17 ellama-code-complete
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Complete selected code or code in the current buffer according to a
   provided change using Ellama.
 
 
-1.2.17 ellama-code-add
+1.2.18 ellama-code-add
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add new code according to a description, generating it with a provided
   context from the selected region or the current buffer using Ellama.
 
 
-1.2.18 ellama-code-edit
+1.2.19 ellama-code-edit
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change selected code or code in the current buffer according to a
   provided change using Ellama.
 
 
-1.2.19 ellama-code-improve
+1.2.20 ellama-code-improve
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change selected code or code in the current buffer according to a
   provided change using Ellama.
 
 
-1.2.20 ellama-improve-wording
+1.2.21 ellama-improve-wording
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Enhance the wording in the currently selected region or buffer using
   Ellama.
 
 
-1.2.21 ellama-improve-grammar
+1.2.22 ellama-improve-grammar
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Enhance the grammar and spelling in the currently selected region or
   buffer using Ellama.
 
 
-1.2.22 ellama-improve-conciseness
+1.2.23 ellama-improve-conciseness
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Make the text of the currently selected region or buffer concise and
   simple using Ellama.
 
 
-1.2.23 ellama-make-format
+1.2.24 ellama-make-format
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Render the currently selected text or the text in the current buffer
   as a specified format using Ellama.
 
 
-1.2.24 ellama-load-session
+1.2.25 ellama-load-session
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Load ellama session from file.
 
 
-1.2.25 ellama-session-remove
+1.2.26 ellama-session-remove
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Remove ellama session.
 
 
-1.2.26 ellama-session-switch
+1.2.27 ellama-session-switch
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change current active session.
 
 
-1.2.27 ellama-session-rename
+1.2.28 ellama-session-rename
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Rename current ellama session.
 
 
-1.2.28 ellama-context-add-file
+1.2.29 ellama-context-add-file
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add file to context.
 
 
-1.2.29 ellama-context-add-buffer
+1.2.30 ellama-context-add-buffer
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add buffer to context.
 
 
-1.2.30 ellama-context-add-selection
+1.2.31 ellama-context-add-selection
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add selected region to context.
 
 
-1.2.31 ellama-context-add-info-node
+1.2.32 ellama-context-add-info-node
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add info node to context.
 
 
-1.2.32 ellama-chat-translation-enable
+1.2.33 ellama-chat-translation-enable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation enable.
 
 
-1.2.33 ellama-chat-translation-disable
+1.2.34 ellama-chat-translation-disable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation disable.
@@ -321,6 +327,7 @@
    "c r"   ellama-code-review               Code review                  
    "s s"   ellama-summarize                 Summarize                    
    "s w"   ellama-summarize-webpage         Summarize webpage            
+   "s c"   ellama-summarize-killring        Summarize killring           
    "s l"   ellama-load-session              Session Load                 
    "s r"   ellama-session-rename            Session rename               
    "s d"   ellama-session-remove            Session delete               
