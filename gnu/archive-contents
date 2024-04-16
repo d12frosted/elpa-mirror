@@ -1641,15 +1641,15 @@
 		       ("Manuel Uberti" . "manuel.uberti@inventati.org"))
 		      (:commit . "9c68ee881f18f554f0ab5bbf5bee1a4b753d792b"))])
  (fontaine .
-	   [(1 0 0)
+	   [(2 0 0)
 	    ((emacs
-	      (27 1)))
+	      (29 1)))
 	    "Set font configurations using presets" tar
-	    ((:url . "https://git.sr.ht/~protesilaos/fontaine")
-	     (:maintainer "Fontaine Development" . "~protesilaos/fontaine@lists.sr.ht")
+	    ((:url . "https://github.com/protesilaos/fontaine")
+	     (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	     (:authors
 	      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	     (:commit . "10c4fa74e56edbb1e9c5209d8189cfa30cbd8512"))])
+	     (:commit . "353e03ece05f31131bd160176b9c3c4bc2b7b365"))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" tar
