@@ -210,6 +210,14 @@ Bindings
 Room buffers
 ╌╌╌╌╌╌╌╌╌╌╌╌
 
+  Note that if global minor mode `ement-room-self-insert-mode' is
+  enabled (by default it is disabled), typing any of the common
+  printable ascii characters (such as letters) in a room buffer will
+  start a new message, and most of the following bindings are instead
+  accessed via a prefix key.  See the minor mode docstring for details.
+  (The `?' binding is an exception; by default it opens the command menu
+  regardless of this minor mode.)
+
   ⁃ Show command menu: `?'
 
 
@@ -237,11 +245,12 @@ Room buffers
   *Messages*
 
   ⁃ Write message: `RET'
-  ⁃ Write reply to event at point (when region is active, only quote
-    marked text) : `S-RET'
   ⁃ Compose message in buffer: `M-RET' (while writing in minibuffer:
-    `C-c ')' (Use command `ement-room-compose-org' to activate Org mode
-    in the compose buffer.)
+    `C-c '‍').  Customize the option `ement-room-compose-method' to make
+    `RET' and the other message bindings use a compose buffer by
+    default.  Use command `ement-room-compose-org' to activate Org mode
+    in the compose buffer.
+  ⁃ Write reply to event at point: `S-<return>'
   ⁃ Edit message: `<insert>'
   ⁃ Delete message: `C-k'
   ⁃ Send reaction to event at point, or send same reaction at point: `s
@@ -315,7 +324,7 @@ Mentions/notifications buffers
   ⁃ Move between events: `TAB' / `<backtab>'
   ⁃ Go to event at point in its room buffer: `RET'
   ⁃ Write reply to event at point (shows the event in its room while
-    writing) : `S-RET'
+    writing): `S-<return>'
 
 
 Tips
@@ -337,6 +346,12 @@ Tips
     • Source blocks (including results with `:exports both')
     • Footnotes (okay, that might be pushing it, but you can!)
     • And, generally, anything that Org can export to HTML
+    • Note that the default `org-export-preserve-breaks' value causes
+      singular line breaks to be exported as spaces.  To preserve the
+      line breaks, indentation, and blank lines in a region, but
+      otherwise use normal formatting, you can use the `verse' block
+      type.  Refer to `(info "(org) Paragraphs")' and `(info "(org)
+      Structure Templates")' for details.
   ⁃ Starting in the room list buffer, by pressing `SPC' repeatedly, you
     can cycle through and read all rooms with unread buffers.  (If a
     room doesn't have a buffer, it will not be included.)
@@ -351,6 +366,8 @@ Tips
   ⁃ Mention members by typing a `@' followed by their displayname or
     Matrix ID.  (Members' names and rooms' aliases/IDs may be completed
     with `completion-at-point' commands.)
+  ⁃ Customize `ement-room-use-variable-pitch' to render messages using
+    proportional fonts.
   ⁃ You can customize settings in the `ement' group.
     • *Note:* `setq' should not be used for certain options, because it
        will not call the associated setter function.  Users who have an
@@ -397,6 +414,183 @@ Encrypted room support through Pantalaimon
 
 3 Changelog
 ═══════════
+
+0.15
+────
+
+  *Additions*
+
+  Configurable emoji picker for sending reactions.  ([#199], [#201].  Thanks to [Omar Antolín Camarena].)
+        • Option `ement-room-reaction-picker' sets the default picker.
+          Within that, the user may press `C-g' to choose a different
+          one with a key bound in `ement-room-reaction-map'.
+
+  A variety of enhancements for using compose buffers.  ([#140].  Thanks to [Phil Sainty].)
+        Chiefly, messages can now be composed in small windows below
+        room windows, rather than in the minibuffer or a full-sized
+        window.  A variety of options and commands are available related
+        to these features.  See [compose buffer enhancements].
+
+  Global minor mode `ement-room-self-insert-mode' enables "just typing" to start a message.  (Thanks to [Phil Sainty].)
+        See [ement-room-self-insert-mode].
+
+  Options affecting how images are displayed in room buffers.
+        See [image display].
+
+  *Changes*
+
+  ⁃ Improve prompt used when viewing a room that is not joined.
+    ([#241].  Thanks to [Phil Sainty].)
+  ⁃ Format "was kicked and rejoined" membership event pairs.
+  ⁃ Enclose reasons for membership events in quotes for clarity.
+  ⁃ Improve default room list grouping.
+  ⁃ When editing or replying to a message in a compose buffer, the
+    related room event is highlighted persistently until the compose
+    buffer is killed.  (Thanks to [Phil Sainty].)
+  ⁃ In compose buffers `dabbrev' will prioritise firstly the associated
+    room, and secondly all other rooms, before looking to other buffers
+    for completions.  (Thanks to [Phil Sainty].)
+  ⁃ Aborted messages are now added to `ement-room-message-history'
+    rather than the kill-ring.  (Thanks to [Phil Sainty].)
+  ⁃ Prefix bindings in `ement-room-mode-map' now have named labels in
+    `which-key' and similar.  (Thanks to [Phil Sainty].)
+  ⁃ Option: `ement-room-use-variable-pitch' (previously named
+    `ement-room-shr-use-fonts') enables variable-pitch fonts for all
+    message types.  (This option previously supported formatted
+    messages, but now works for plain text messages as well.)  Note:
+    users who have customized the `ement-room-message-text' face to be
+    variable-pitch should revert that change, as it causes problems for
+    formatted messages, and is no longer necessary.  ([#174].  Thanks to
+    [Phil Sainty].)
+
+  *Fixes*
+
+  ⁃ Edits to previous edit events are correctly sent to the server as
+    edits to the original message event.  ([#230].  Thanks to [Phil
+    Sainty].)
+  ⁃ Completion at point works more reliably in compose buffers.  (Thanks
+    to [Phil Sainty].)
+  ⁃ Toggling images to fill the window body no longer triggers
+    unintended scrolling.  (Thanks to [Phil Sainty].)
+  ⁃ Recognition of mentions after a newline.  ([#267].  Thanks to [Phil
+    Sainty].)
+  ⁃ Newlines in `ement-room-message-format-spec' are considered when
+    calculating the wrap-prefix.  (Thanks to [Phil Sainty].)
+  ⁃ Weight of face `ement-room-list-direct' (now correctly bold in room
+    list heading).
+
+
+[#199] <https://github.com/alphapapa/ement.el/issues/199>
+
+[#201] <https://github.com/alphapapa/ement.el/pull/201>
+
+[Omar Antolín Camarena] <https://github.com/oantolin>
+
+[#140] <https://github.com/alphapapa/ement.el/issues/140>
+
+[Phil Sainty] <https://github.com/phil-s>
+
+[compose buffer enhancements] See section Compose buffer enhancements
+
+[ement-room-self-insert-mode] See section `ement-room-self-insert-mode'
+
+[image display] See section Image display
+
+[#241] <https://github.com/alphapapa/ement.el/issues/241>
+
+[#174] <https://github.com/alphapapa/ement.el/issues/174>
+
+[#230] <https://github.com/alphapapa/ement.el/issues/230>
+
+[#267] <https://github.com/alphapapa/ement.el/issues/267>
+
+Compose buffer enhancements
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • Option `ement-room-compose-buffer-display-action' declares how and
+    where a new compose buffer window should be displayed.  (By default,
+    in a new window below the associated room buffer.)
+  • Option `ement-room-compose-buffer-window-dedicated' determines
+    whether compose buffers will have dedicated windows.
+  • Option `ement-room-compose-buffer-window-auto-height' causes dynamic
+    scaling of the compose buffer window height so that the full message
+    is visible at all times.
+  • Option `ement-room-compose-buffer-window-auto-height-min' specifies
+    the minimum window height when
+    `ement-room-compose-buffer-window-auto-height' is enabled.
+  • Option `ement-room-compose-buffer-window-auto-height-max' specifies
+    the maximum window height when
+    `ement-room-compose-buffer-window-auto-height' is enabled.
+  • Option `ement-room-compose-method' chooses between
+    minibuffer-centric or compose-buffer-centric behaviour.
+  • Command `ement-room-dispatch-new-message' starts writing a new
+    message using your chosen `ement-room-compose-method'.  (Bound to
+    `RET' in room buffers.)
+  • Command `ement-room-dispatch-new-message-alt' starts writing a new
+    message using the alternative method.  (Bound to `M-RET' in room
+    buffers.)
+  • Command `ement-room-dispatch-edit-message' edits a message using
+    your chosen `ement-room-compose-method'.  (Bound to `<insert>' in
+    room buffers.)
+  • Command `ement-room-dispatch-reply-to-message' replies to a message
+    using your chosen `ement-room-compose-method'.  (Bound to
+    `S-<return>' in room buffers.)
+  • Command `ement-room-compose-edit' edits a message using a compose
+    buffer.
+  • Command `ement-room-compose-reply' replies to a message using a
+    compose buffer.
+  • Command `ement-room-compose-send-direct' sends a message directly
+    from a compose buffer (without the minibuffer).  (Bound to `C-x C-s'
+    in compose buffers.)
+  • Command `ement-room-compose-abort' kills the compose buffer and
+    delete its window.  (Bound to `C-c C-k' in compose buffers.)
+  • Command `ement-room-compose-abort-no-history' does the same without
+    adding to `ement-room-message-history'.  (Equivalent to `C-u C-c
+    C-k'.)
+  • Command `ement-room-compose-history-prev-message' cycles backwards
+    through `ement-room-message-history'.  (Bound to `M-p' in compose
+    buffers.)
+  • Command `ement-room-compose-history-next-message' cycles forwards
+    through `ement-room-message-history'.  (Bound to `M-n' in compose
+    buffers.)
+  • Command `ement-room-compose-history-isearch-backward' initiates an
+    isearch through `ement-room-message-history'.  (Bound to `M-r' in
+    compose buffers; continue searching with `C-r' or `C-s'.)
+  • Command `ement-room-compose-history-isearch-backward-regexp'
+    initiates a regexp isearch through `ement-room-message-history'.
+    (Bound to `C-M-r' in compose buffers; continue searching with `C-r'
+    or `C-s'.)
+
+
+`ement-room-self-insert-mode'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • Option `ement-room-self-insert-commands' determines which commands
+    will start a new message when `ement-room-self-insert-mode' is
+    enabled (defaulting to `self-insert-command' and `yank').
+  • Option `ement-room-self-insert-chars' determines which typed
+    characters will start a new message when
+    `ement-room-self-insert-mode' is enabled (regardless of whether they
+    are bound to `self-insert-command').
+  • Option `ement-room-mode-map-prefix-key' defines a prefix key for
+    accessing the full `ement-room-mode-map' when
+    `ement-room-self-insert-mode' is enabled.  (By default this key is
+    `DEL'.)
+
+
+Image display
+╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • Option `ement-room-image-margin' is the number of pixels of margin
+    around image thumbnails.
+  • Option `ement-room-image-relief' is the number of pixels of shadow
+    rectangle around image thumbnails.
+  • Option `ement-room-image-thumbnail-height' is the window body height
+    multiple to use when toggling full-sized images to thumbnails (by
+    default, 0.2).
+  • Option `ement-room-image-thumbnail-height-min' is the minimum pixel
+    height for thumbnail images (by default, 30 pixels).
+
 
 0.14
 ────

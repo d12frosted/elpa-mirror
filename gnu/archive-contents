@@ -1358,7 +1358,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "47b0c75d4bf4f72a7af839667c877c80bd493cdb"))])
  (ement .
-	[(0 14)
+	[(0 15)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1381,7 +1381,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "0c725c6c73babaea11e7a738b9224962310f78ed"))])
+	  (:commit . "dc314a120ca6c62c49342e1b109ae1282116257a"))])
  (emms .
        [(19)
 	((cl-lib
@@ -3364,7 +3364,7 @@
 		("Alex Schroeder" . "alex@gnu.org"))
 	       (:maintainer "Alex Schroeder" . "alex@gnu.org"))])
  (rcirc-sqlite .
-	       [(0 1 4)
+	       [(1 0 0)
 		((emacs
 		  (30 0)))
 		"rcirc logging in SQLite" tar
@@ -3373,7 +3373,7 @@
 		 (:maintainer "Matto Fransen" . "matto@matto.nl")
 		 (:authors
 		  ("Matto Fransen" . "matto@matto.nl"))
-		 (:commit . "84e49e3735a84b1903679aa7577a24aa32357e2d"))])
+		 (:commit . "a4fd54a0595071655042683544a6db7711713421"))])
  (realgud .
 	  [(1 5 1)
 	   ((load-relative
