@@ -8,3 +8,6 @@ The commands provided are
  'consult-tex-insert-reference'  Use consult to insert a reference
  'consult-tex-citation' - Use consult to find a citation
  'consult-tex-insert-citation'  Use consult to insert a citation
+
+The variable provided is
+ 'consult-tex-version' - Holds the current version
