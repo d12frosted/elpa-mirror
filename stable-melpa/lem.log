@@ -3,26 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/lem.el.git
 
 Updating /mnt/store/melpa/working/lem/
-Checking out 48caf7b856efc0c98f5d735dc605fbe0db793ec5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lem/
-  to /tmp/lemgJZbqS/lem-20240313.1154
-  ! lisp/lem-api.el -> lem-api.el
-  ! lisp/lem-post.el -> lem-post.el
-  ! lisp/lem-request.el -> lem-request.el
-  ! lisp/lem-search.el -> lem-search.el
-  ! lisp/lem-ui.el -> lem-ui.el
-  ! lisp/lem.el -> lem.el
-Created lem-20240313.1154.tar containing:
-  lem-20240313.1154/
-  lem-20240313.1154/lem-api.el
-  lem-20240313.1154/lem-pkg.el
-  lem-20240313.1154/lem-post.el
-  lem-20240313.1154/lem-request.el
-  lem-20240313.1154/lem-search.el
-  lem-20240313.1154/lem-ui.el
-  lem-20240313.1154/lem.el
- ✓ Success:
-  2024-04-17T00:12:22+0000  lem-20240313.1154.entry
-  2024-04-17T00:12:22+0000  lem-20240313.1154.tar
-Built lem in 6.330s, finished at 2024-04-17T00:12:25+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/martianh/lem.el.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-weirdware/scratch.git
 
 Updating /mnt/store/melpa/working/scratch/
-Checking out f000648c9663833a76a8de9b1e78c99a9d698e48
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/scratch/
-  to /tmp/scratchN0P6Tc/scratch-20220319.1705
-    scratch.el -> scratch.el
-Created scratch-20220319.1705.tar containing:
-  scratch-20220319.1705/
-  scratch-20220319.1705/scratch-pkg.el
-  scratch-20220319.1705/scratch.el
- ✓ Success:
-  2024-04-16T22:38:20+0000  scratch-20220319.1705.entry
-  2024-04-16T22:38:20+0000  scratch-20220319.1705.tar
-Built scratch in 3.617s, finished at 2024-04-16T22:38:21+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/emacs-weirdware/scratch.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

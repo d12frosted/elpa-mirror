@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-utimeclock.git
 
 Updating /mnt/store/melpa/working/utimeclock/
-Checking out 484d426a2ecc1ac7b922fd93c7d03da23510fb63
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/utimeclock/
-  to /tmp/utimeclock5ZZjmL/utimeclock-20230601.25
-    utimeclock.el -> utimeclock.el
-Created utimeclock-20230601.25.tar containing:
-  utimeclock-20230601.25/
-  utimeclock-20230601.25/utimeclock-pkg.el
-  utimeclock-20230601.25/utimeclock.el
- ✓ Success:
-  2024-04-16T22:47:18+0000  utimeclock-20230601.25.entry
-  2024-04-16T22:47:18+0000  utimeclock-20230601.25.tar
-Built utimeclock in 3.864s, finished at 2024-04-16T22:47:19+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-utimeclock.git/': Failed to connect to codeberg.org port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

@@ -1,0 +1,66 @@
+Package: mhc
+Fetcher: github
+Source:  https://github.com/yoshinari-nomura/mhc.git
+
+Updating /mnt/store/melpa/working/mhc/
+Checking out 7a1509967c1f0a686755e44bd6a7c34244800951
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mhc/
+  to /tmp/mhclkB2ZI/mhc-20240412.58
+  ! emacs/mhc-calendar.el -> mhc-calendar.el
+  ! emacs/mhc-calfw.el -> mhc-calfw.el
+  ! emacs/mhc-compat.el -> mhc-compat.el
+  ! emacs/mhc-date.el -> mhc-date.el
+  ! emacs/mhc-day.el -> mhc-day.el
+  ! emacs/mhc-db.el -> mhc-db.el
+  ! emacs/mhc-draft.el -> mhc-draft.el
+  ! emacs/mhc-e21.el -> mhc-e21.el
+  ! emacs/mhc-face.el -> mhc-face.el
+  ! emacs/mhc-file.el -> mhc-file.el
+  ! emacs/mhc-guess.el -> mhc-guess.el
+  ! emacs/mhc-header.el -> mhc-header.el
+  ! emacs/mhc-logic.el -> mhc-logic.el
+  ! emacs/mhc-message.el -> mhc-message.el
+  ! emacs/mhc-minibuf.el -> mhc-minibuf.el
+  ! emacs/mhc-misc.el -> mhc-misc.el
+  ! emacs/mhc-parse.el -> mhc-parse.el
+  ! emacs/mhc-process.el -> mhc-process.el
+  ! emacs/mhc-ps.el -> mhc-ps.el
+  ! emacs/mhc-record.el -> mhc-record.el
+  ! emacs/mhc-schedule.el -> mhc-schedule.el
+  ! emacs/mhc-summary.el -> mhc-summary.el
+  ! emacs/mhc-sync.el -> mhc-sync.el
+  ! emacs/mhc-vars.el -> mhc-vars.el
+  ! emacs/mhc.el -> mhc.el
+Created mhc-20240412.58.tar containing:
+  mhc-20240412.58/
+  mhc-20240412.58/mhc-calendar.el
+  mhc-20240412.58/mhc-calfw.el
+  mhc-20240412.58/mhc-compat.el
+  mhc-20240412.58/mhc-date.el
+  mhc-20240412.58/mhc-day.el
+  mhc-20240412.58/mhc-db.el
+  mhc-20240412.58/mhc-draft.el
+  mhc-20240412.58/mhc-e21.el
+  mhc-20240412.58/mhc-face.el
+  mhc-20240412.58/mhc-file.el
+  mhc-20240412.58/mhc-guess.el
+  mhc-20240412.58/mhc-header.el
+  mhc-20240412.58/mhc-logic.el
+  mhc-20240412.58/mhc-message.el
+  mhc-20240412.58/mhc-minibuf.el
+  mhc-20240412.58/mhc-misc.el
+  mhc-20240412.58/mhc-parse.el
+  mhc-20240412.58/mhc-pkg.el
+  mhc-20240412.58/mhc-process.el
+  mhc-20240412.58/mhc-ps.el
+  mhc-20240412.58/mhc-record.el
+  mhc-20240412.58/mhc-schedule.el
+  mhc-20240412.58/mhc-summary.el
+  mhc-20240412.58/mhc-sync.el
+  mhc-20240412.58/mhc-vars.el
+  mhc-20240412.58/mhc.el
+ ✓ Success:
+  2024-04-17T02:12:07+0000  mhc-20240412.58.entry
+  2024-04-17T02:12:07+0000  mhc-20240412.58.tar
+Built mhc in 2.521s, finished at 2024-04-17T02:12:08+0000
