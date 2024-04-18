@@ -12,6 +12,7 @@ almost all 'file managers', and also some unique features:
     * inspired by, and similar to, midnight commander's "C-x q"
     * customizable exclusion criteria to suppress undesirable files
       (eg. binaries)
+    * optionally view magit status buffers for repository roots
   * Current file's supplemental information in minibuffer (optional)
     * eg. output from 'getfattr', 'getfacl', 'stat', 'exif'.
   * Multiple panel views
