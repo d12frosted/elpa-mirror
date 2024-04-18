@@ -34,9 +34,9 @@ Bugs
 
 Customization
 
-  To see a list of customizeable faces, enter a Brec Mode buffer, or otherwise load Brec Mode,
-  and type `M-x customize-group <RET> brec <RET>`.  Alternatively, look through the `defface`
-  definitions of file `brec-mode.el`.
+  To see a list of customizeable faces and variables, enter a Brec Mode buffer, or otherwise load
+  Brec Mode, and type `M-x customize-group <RET> brec <RET>`.  Alternatively, look through
+  the `defcustom` and `defface` definitions of file `brec-mode.el`.
 
   For a working example, see:
 
