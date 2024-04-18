@@ -4163,6 +4163,16 @@
 	     (:authors
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
+ (track-changes .
+		[(1 1)
+		 ((emacs
+		   (24)))
+		 "API to react to buffer modifications" tar
+		 ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
+		  (:authors
+		   ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
+		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
+		  (:commit . "523aca13a45159711d7d9d7561e69d38acdac12a"))])
  (tramp .
 	[(2 6 3)
 	 ((emacs
