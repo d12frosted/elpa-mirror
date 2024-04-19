@@ -2850,7 +2850,7 @@
   (julia-repl :url "https://github.com/tpapp/julia-repl.git")
   (julia-shell :url "https://github.com/dennisog/julia-shell-mode.git")
   (julia-snail :url "https://github.com/gcv/julia-snail.git")
-  (julia-ts-mode :url "https://github.com/ronisbr/julia-ts-mode.git")
+  (julia-ts-mode :url "https://github.com/JuliaEditorSupport/julia-ts-mode.git")
   (julia-vterm :url "https://github.com/shg/julia-vterm.el.git")
   (jumblr :url "https://github.com/mkmcc/jumblr.git")
   (jump :url "https://github.com/eschulte/jump.el.git")
