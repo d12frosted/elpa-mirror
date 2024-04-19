@@ -2389,15 +2389,15 @@
 	      ("Elis etu Hirwing" . "elis@hirwing.se"))
 	     (:commit . "78272662e6992b8614e79a571ff2395fa9630357"))])
  (wfnames .
-	  [(1 1)
+	  [(1 2)
 	   ((emacs
-	     (24 3)))
+	     (24 4)))
 	   "Edit filenames" tar
 	   ((:url . "https://github.com/thierryvolpiatto/wfnames")
 	    (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	    (:authors
 	     ("Thierry Volpiatto" . "thievol@posteo.net"))
-	    (:commit . "4447417c58b063df1fca1ba4bec9cb650c7beb60"))])
+	    (:commit . "2f014c48fde0979da4ce3c0dbda81389c61a26bc"))])
  (wgrep .
 	[(3 0 0)
 	 ((emacs

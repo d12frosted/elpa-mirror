@@ -1,6 +1,6 @@
-			       ━━━━━━━━━
-				WFNAMES
-			       ━━━━━━━━━
+                               ━━━━━━━━━
+                                WFNAMES
+                               ━━━━━━━━━
 
 
 Allows editing filenames.
