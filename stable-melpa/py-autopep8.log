@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-py-autopep8.git
 
 Updating /mnt/store/melpa/working/py-autopep8/
-Checking out 0452be5deac5990bbb11ba07f0ef93f84b0615ba
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/py-autopep8/
-  to /tmp/py-autopep8T4rSsf/py-autopep8-20240420.1123
-    py-autopep8.el -> py-autopep8.el
-Created py-autopep8-20240420.1123.tar containing:
-  py-autopep8-20240420.1123/
-  py-autopep8-20240420.1123/py-autopep8-pkg.el
-  py-autopep8-20240420.1123/py-autopep8.el
- ✓ Success:
-  2024-04-20T14:40:13+0000  py-autopep8-20240420.1123.entry
-  2024-04-20T14:40:13+0000  py-autopep8-20240420.1123.tar
-Built py-autopep8 in 4.438s, finished at 2024-04-20T14:40:14+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-py-autopep8.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

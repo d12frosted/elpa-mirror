@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-magit-commit-mark.git
 
 Updating /mnt/store/melpa/working/magit-commit-mark/
-Checking out 74f5c61d01809d329347d9242a658a8d4894a0c9
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/magit-commit-mark/
-  to /tmp/magit-commit-mark9Y2SCz/magit-commit-mark-20240420.1101
-    magit-commit-mark.el -> magit-commit-mark.el
-Created magit-commit-mark-20240420.1101.tar containing:
-  magit-commit-mark-20240420.1101/
-  magit-commit-mark-20240420.1101/magit-commit-mark-pkg.el
-  magit-commit-mark-20240420.1101/magit-commit-mark.el
- ✓ Success:
-  2024-04-20T14:24:10+0000  magit-commit-mark-20240420.1101.entry
-  2024-04-20T14:24:10+0000  magit-commit-mark-20240420.1101.tar
-Built magit-commit-mark in 5.019s, finished at 2024-04-20T14:24:12+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-magit-commit-mark.git/': Failed to connect to codeberg.org port 443: Connection refused
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

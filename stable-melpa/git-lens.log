@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/pidu/git-lens.git
 
 Updating /mnt/store/melpa/working/git-lens/
-Checking out 347832fbdb75a0930aa3eef628ec0069a335f3b7
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/git-lens/
-  to /tmp/git-lensiZTKIf/git-lens-20220922.710
-    git-lens.el -> git-lens.el
-Created git-lens-20220922.710.tar containing:
-  git-lens-20220922.710/
-  git-lens-20220922.710/git-lens-pkg.el
-  git-lens-20220922.710/git-lens.el
- ✓ Success:
-  2024-04-20T14:09:15+0000  git-lens-20220922.710.entry
-  2024-04-20T14:09:15+0000  git-lens-20220922.710.tar
-Built git-lens in 8.970s, finished at 2024-04-20T14:09:18+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/pidu/git-lens.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/WammKD/Emacs-Klondike.git
 
 Updating /mnt/store/melpa/working/klondike/
-Checking out 1cf14d7b6c14ebde741c36f6aa871dcd41e37cff
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/klondike/
-  to /tmp/klondike5pQh7B/klondike-20240131.453
-    klondike.el -> klondike.el
-Created klondike-20240131.453.tar containing:
-  klondike-20240131.453/
-  klondike-20240131.453/klondike-pkg.el
-  klondike-20240131.453/klondike.el
- ✓ Success:
-  2024-04-20T14:20:51+0000  klondike-20240131.453.entry
-  2024-04-20T14:20:51+0000  klondike-20240131.453.tar
-Built klondike in 6.124s, finished at 2024-04-20T14:20:53+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/WammKD/Emacs-Klondike.git/': Failed to connect to codeberg.org port 443: Connection refused
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

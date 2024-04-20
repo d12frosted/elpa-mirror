@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/pidu/git-timemachine.git
 
 Updating /mnt/store/melpa/working/git-timemachine/
-Checking out a55f7209ea407bd90a063d6cd9ea6d7ba9c9ab08
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/git-timemachine/
-  to /tmp/git-timemachinenNaAiS/git-timemachine-20240413.909
-    git-timemachine.el -> git-timemachine.el
-Created git-timemachine-20240413.909.tar containing:
-  git-timemachine-20240413.909/
-  git-timemachine-20240413.909/git-timemachine-pkg.el
-  git-timemachine-20240413.909/git-timemachine.el
- ✓ Success:
-  2024-04-20T14:09:24+0000  git-timemachine-20240413.909.entry
-  2024-04-20T14:09:24+0000  git-timemachine-20240413.909.tar
-Built git-timemachine in 6.556s, finished at 2024-04-20T14:09:26+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/pidu/git-timemachine.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

@@ -3,26 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-hl-indent-scope.git
 
 Updating /mnt/store/melpa/working/hl-indent-scope/
-Checking out da183bdf7f2dcd27d6bcba2ef6ae62d8dc024e60
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hl-indent-scope/
-  to /tmp/hl-indent-scopeg00CCG/hl-indent-scope-20240420.1119
-    hl-indent-scope-preset-c++-mode.el -> hl-indent-scope-preset-c++-mode.el
-    hl-indent-scope-preset-c-mode.el -> hl-indent-scope-preset-c-mode.el
-    hl-indent-scope-preset-cmake-mode.el -> hl-indent-scope-preset-cmake-mode.el
-    hl-indent-scope-preset-glsl-mode.el -> hl-indent-scope-preset-glsl-mode.el
-    hl-indent-scope-preset-python-mode.el -> hl-indent-scope-preset-python-mode.el
-    hl-indent-scope.el -> hl-indent-scope.el
-Created hl-indent-scope-20240420.1119.tar containing:
-  hl-indent-scope-20240420.1119/
-  hl-indent-scope-20240420.1119/hl-indent-scope-pkg.el
-  hl-indent-scope-20240420.1119/hl-indent-scope-preset-c++-mode.el
-  hl-indent-scope-20240420.1119/hl-indent-scope-preset-c-mode.el
-  hl-indent-scope-20240420.1119/hl-indent-scope-preset-cmake-mode.el
-  hl-indent-scope-20240420.1119/hl-indent-scope-preset-glsl-mode.el
-  hl-indent-scope-20240420.1119/hl-indent-scope-preset-python-mode.el
-  hl-indent-scope-20240420.1119/hl-indent-scope.el
- ✓ Success:
-  2024-04-20T14:15:24+0000  hl-indent-scope-20240420.1119.entry
-  2024-04-20T14:15:24+0000  hl-indent-scope-20240420.1119.tar
-Built hl-indent-scope in 9.381s, finished at 2024-04-20T14:15:28+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-hl-indent-scope.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

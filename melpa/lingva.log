@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/lingva.el.git
 
 Updating /mnt/store/melpa/working/lingva/
-Checking out 6c33594068fa33de622172503deeec6778d9c744
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lingva/
-  to /tmp/lingvaxqUcag/lingva-20220910.1435
-    lingva.el -> lingva.el
-Created lingva-20220910.1435.tar containing:
-  lingva-20220910.1435/
-  lingva-20220910.1435/lingva-pkg.el
-  lingva-20220910.1435/lingva.el
- ✓ Success:
-  2024-04-20T14:22:35+0000  lingva-20220910.1435.entry
-  2024-04-20T14:22:34+0000  lingva-20220910.1435.tar
-Built lingva in 4.974s, finished at 2024-04-20T14:22:36+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/martianh/lingva.el.git/': Failed to connect to codeberg.org port 443: Connection refused
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
