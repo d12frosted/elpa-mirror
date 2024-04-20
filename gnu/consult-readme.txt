@@ -706,7 +706,7 @@ Table of Contents
   │ 	    (consult--buffer-action (current-buffer))))
   │ 	:items
   │ 	(lambda ()
-  │ 	  (consult--buffer-query :mode 'org-mode :as #'buffer-name))))
+  │ 	  (consult--buffer-query :mode 'org-mode :as #'consult--buffer-pair))))
   │ 
   │ (add-to-list 'consult-buffer-sources 'org-source 'append)
   └────
@@ -1140,12 +1140,12 @@ Table of Contents
   5. Ensure that the `completion-styles' variable is properly
      configured. Try to set `completion-styles' to a list including
      `substring' or `orderless'.
-  6. Try to reproduce the issue by starting a bare bone Emacs instance
-     with `emacs -Q' on the command line. Execute the following minimal
-     code snippets in the scratch buffer. This way we can exclude side
-     effects due to configuration settings. If other packages are
-     relevant to reproduce the issue, include them in the minimal
-     configuration snippet.
+  6. Try to reproduce the issue with the newest stable Emacs
+     version. Start a bare bone Emacs instance with `emacs -Q' on the
+     command line. Execute the following minimal code snippets in the
+     scratch buffer. This way we can exclude side effects due to
+     configuration settings. If other packages are relevant to reproduce
+     the issue, include them in the minimal configuration snippet.
 
   Minimal setup with Vertico for `emacs -Q':
   ┌────

@@ -669,7 +669,7 @@
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "8d4e8a366681def88751f5e9975738ecd3180deb"))])
  (consult .
-	  [(1 4)
+	  [(1 5)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -678,7 +678,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "0eab65fe3273c97a422c99ee426eef7f2d2dffa4"))])
+	    (:commit . "d8888bb67f881a3c4855c9ce7224de18a7dc3901"))])
  (consult-hoogle .
 		 [(0 2 0)
 		  ((emacs
@@ -2874,7 +2874,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "3847f311077efa17951a786d2759f2639c5f43c8"))])
  (org .
-      [(9 6 26)
+      [(9 6 27)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2883,7 +2883,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "096ecc9e24f42767b406d01525199d5e74d87804"))])
+	(:commit . "037700c4114e2a744dae549eb7cc5129f074f0a7"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
