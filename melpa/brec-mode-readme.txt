@@ -22,16 +22,6 @@ Installation
 
   For a working example, see the relevant lines of `http://reluk.ca/.config/emacs/initialization.el`.
 
-Bugs
-
-  If you set a `line-spacing` other than zero, then the `line-spacing` will snap back to zero for any
-  line that pushes past the right edge of the window, causing the text to bounce in the buffer as you
-  edit it.  [http://reluk.ca/project/Breccia/Emacs/notes.brec.xht#bounces,whenever,newline]
-  The workaround is to zero the `line-spacing` for your Brec Mode buffers.  For example,
-  put this in your initialization file:
-
-     (add-hook 'brec-mode-hook (lambda () (setq line-spacing 0)))
-
 Customization
 
   To see a list of customizeable faces and variables, enter a Brec Mode buffer, or otherwise load
