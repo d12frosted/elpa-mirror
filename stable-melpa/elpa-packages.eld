@@ -5590,7 +5590,7 @@
   (writeroom-mode :url "https://github.com/joostkremers/writeroom-mode.git")
   (ws-butler :url "https://github.com/lewang/ws-butler.git")
   (wsd-mode :url "https://github.com/josteink/wsd-mode.git")
-  (wttrin :url "https://github.com/bcbcarl/emacs-wttrin.git")
+  (wttrin :url "https://github.com/cjennings/emacs-wttrin.git")
   (wucuo :url "https://github.com/redguardtoo/wucuo.git")
   (wwg :url "https://github.com/ag91/writer-word-goals.git")
   (wwtime :url "https://github.com/ndw/wwtime.git")

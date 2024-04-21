@@ -1,1 +1,2 @@
-Provides the weather information from wttr.in based on your query condition.
+Displays the weather information from the wttr.in service for your submitted
+location.
