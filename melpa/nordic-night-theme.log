@@ -3,7 +3,18 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ashton314/nordic-night.git
 
 Updating /mnt/store/melpa/working/nordic-night-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ashton314/nordic-night.git/': Failed to connect to codeberg.org port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out a9e5918c7755ccb1fa20d3d8e3a3ea069455f87b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nordic-night-theme/
+  to /tmp/nordic-night-theme2jivVX/nordic-night-theme-20240311.2147
+    nordic-midnight-theme.el -> nordic-midnight-theme.el
+    nordic-night-theme.el -> nordic-night-theme.el
+Created nordic-night-theme-20240311.2147.tar containing:
+  nordic-night-theme-20240311.2147/
+  nordic-night-theme-20240311.2147/nordic-midnight-theme.el
+  nordic-night-theme-20240311.2147/nordic-night-theme-pkg.el
+  nordic-night-theme-20240311.2147/nordic-night-theme.el
+ ✓ Success:
+  2024-04-21T02:53:17+0000  nordic-night-theme-20240311.2147.entry
+  2024-04-21T02:53:17+0000  nordic-night-theme-20240311.2147.tar
+Built nordic-night-theme in 5.287s, finished at 2024-04-21T02:53:19+0000

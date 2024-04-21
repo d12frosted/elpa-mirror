@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-mode-line-idle.git
 
 Updating /mnt/store/melpa/working/mode-line-idle/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-mode-line-idle.git/': Failed to connect to codeberg.org port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 97cbf12d7e92a8d6db4c775ff5c0765d0392b67a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mode-line-idle/
+  to /tmp/mode-line-idleKyzfIP/mode-line-idle-20240420.1150
+    mode-line-idle.el -> mode-line-idle.el
+Created mode-line-idle-20240420.1150.tar containing:
+  mode-line-idle-20240420.1150/
+  mode-line-idle-20240420.1150/mode-line-idle-pkg.el
+  mode-line-idle-20240420.1150/mode-line-idle.el
+ ✓ Success:
+  2024-04-21T02:50:23+0000  mode-line-idle-20240420.1150.entry
+  2024-04-21T02:50:23+0000  mode-line-idle-20240420.1150.tar
+Built mode-line-idle in 4.500s, finished at 2024-04-21T02:50:25+0000

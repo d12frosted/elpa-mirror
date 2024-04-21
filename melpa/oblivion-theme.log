@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-theme-oblivion.git
 
 Updating /mnt/store/melpa/working/oblivion-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-theme-oblivion.git/': Failed to connect to codeberg.org port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 8b7ed6627ee3c838acd2ec9bfd5a6fb02228edfb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/oblivion-theme/
+  to /tmp/oblivion-thememyDfOc/oblivion-theme-20240320.1152
+    oblivion-theme.el -> oblivion-theme.el
+Created oblivion-theme-20240320.1152.tar containing:
+  oblivion-theme-20240320.1152/
+  oblivion-theme-20240320.1152/oblivion-theme-pkg.el
+  oblivion-theme-20240320.1152/oblivion-theme.el
+ ✓ Success:
+  2024-04-21T02:54:36+0000  oblivion-theme-20240320.1152.entry
+  2024-04-21T02:54:36+0000  oblivion-theme-20240320.1152.tar
+Built oblivion-theme in 4.402s, finished at 2024-04-21T02:54:38+0000

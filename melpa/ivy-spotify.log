@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/ivy-spotify/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/jao/espotify.git/': Failed to connect to codeberg.org port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out eefcb49d740570f6c874302d87be33e5b0ec54ff
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy-spotify/
+  to /tmp/ivy-spotify2EgJx8/ivy-spotify-20210329.312
+    ivy-spotify.el -> ivy-spotify.el
+Created ivy-spotify-20210329.312.tar containing:
+  ivy-spotify-20210329.312/
+  ivy-spotify-20210329.312/ivy-spotify-pkg.el
+  ivy-spotify-20210329.312/ivy-spotify.el
+ ✓ Success:
+  2024-04-21T02:42:41+0000  ivy-spotify-20210329.312.entry
+  2024-04-21T02:42:41+0000  ivy-spotify-20210329.312.tar
+Built ivy-spotify in 4.132s, finished at 2024-04-21T02:42:43+0000

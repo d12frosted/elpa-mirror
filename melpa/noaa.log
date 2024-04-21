@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/thomp/noaa.git
 
 Updating /mnt/store/melpa/working/noaa/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/thomp/noaa.git/': Failed to connect to codeberg.org port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 7d68b5a580c64123f3bbd75f795a891dfdeb1746
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/noaa/
+  to /tmp/noaaDjtPuB/noaa-20240317.2321
+    noaa.el -> noaa.el
+Created noaa-20240317.2321.tar containing:
+  noaa-20240317.2321/
+  noaa-20240317.2321/noaa-pkg.el
+  noaa-20240317.2321/noaa.el
+ ✓ Success:
+  2024-04-21T02:53:10+0000  noaa-20240317.2321.entry
+  2024-04-21T02:53:10+0000  noaa-20240317.2321.tar
+Built noaa in 8.422s, finished at 2024-04-21T02:53:12+0000

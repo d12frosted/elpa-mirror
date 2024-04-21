@@ -3,7 +3,30 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-mono-complete.git
 
 Updating /mnt/store/melpa/working/mono-complete/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-mono-complete.git/': Failed to connect to codeberg.org port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 70c7443375e955abeee976d83aa48f1f38992e60
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mono-complete/
+  to /tmp/mono-completeL65FbP/mono-complete-20240420.1139
+    mono-complete-backend-capf.el -> mono-complete-backend-capf.el
+    mono-complete-backend-dabbrev.el -> mono-complete-backend-dabbrev.el
+    mono-complete-backend-filesystem.el -> mono-complete-backend-filesystem.el
+    mono-complete-backend-spell-fu.el -> mono-complete-backend-spell-fu.el
+    mono-complete-backend-whole-line.el -> mono-complete-backend-whole-line.el
+    mono-complete-backend-word-predict.el -> mono-complete-backend-word-predict.el
+    mono-complete.el -> mono-complete.el
+    mono-complete-backend-word-predict.py -> mono-complete-backend-word-predict.py
+Created mono-complete-20240420.1139.tar containing:
+  mono-complete-20240420.1139/
+  mono-complete-20240420.1139/mono-complete-backend-capf.el
+  mono-complete-20240420.1139/mono-complete-backend-dabbrev.el
+  mono-complete-20240420.1139/mono-complete-backend-filesystem.el
+  mono-complete-20240420.1139/mono-complete-backend-spell-fu.el
+  mono-complete-20240420.1139/mono-complete-backend-whole-line.el
+  mono-complete-20240420.1139/mono-complete-backend-word-predict.el
+  mono-complete-20240420.1139/mono-complete-backend-word-predict.py
+  mono-complete-20240420.1139/mono-complete-pkg.el
+  mono-complete-20240420.1139/mono-complete.el
+ ✓ Success:
+  2024-04-21T02:50:42+0000  mono-complete-20240420.1139.entry
+  2024-04-21T02:50:42+0000  mono-complete-20240420.1139.tar
+Built mono-complete in 6.699s, finished at 2024-04-21T02:50:45+0000
