@@ -12,7 +12,6 @@ has loaded the old `notmuch-address', which cannot be prevented.
 If you do it later then it might have no effect:
 
 (with-eval-after-load 'notmuch-address
-  (require 'notmuch-addr)
   (notmuch-addr-setup))
 
 This implementation is essentially identical to the upstream

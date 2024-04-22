@@ -1,5 +1,5 @@
-This is a convenient language bundle for the Emacs package `tree-sitter'. It
-serves as an interim distribution mechanism, until `tree-sitter' is
+This is a convenient language bundle for the Emacs package `tree-sitter'.
+It serves as an interim distribution mechanism, until `tree-sitter' is
 widespread enough for language-specific major modes to incorporate its
 functionalities.
 
@@ -9,8 +9,8 @@ For each supported language, this package provides:
    Windows, on x86_64. In the future, `tree-sitter-langs' may provide tooling
    for major modes to do this on their own.
 
-2. Optional highlighting patterns. This is mainly intended for major modes
-   that are not aware of `tree-sitter'. A language major mode that wants to
+2. Optional highlighting patterns.  This is mainly intended for major modes
+   that are not aware of `tree-sitter'.  A language major mode that wants to
    use `tree-sitter' for syntax highlighting should instead provide the query
    patterns on its own, using the mechanisms defined by `tree-sitter-hl'.
 
