@@ -351,15 +351,18 @@
 		     ("Nicholas M. Van Horn" . "nvanhorn@protonmail.com"))
 		    (:commit . "81004fc774d373777d426926fc11abcf1e7ab334"))])
  (cycle-at-point .
-		 [(0 1)
+		 [(0 2)
 		  ((emacs
-		    (27 1))
+		    (29 1))
 		   (recomplete
 		    (0 2)))
 		  "Cycle (rotate) the thing under the cursor" tar
-		  ((:url . "https://gitlab.com/ideasman42/emacs-cycle-at-point")
+		  ((:url . "https://codeberg.org/ideasman42/emacs-cycle-at-point")
 		   (:keywords "convenience")
-		   (:commit . "ea22b90f35f4cef73387047b3ef3fad83787d4e2"))])
+		   (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		   (:authors
+		    ("Campbell Barton" . "ideasman42@gmail.com"))
+		   (:commit . "83d94733fd8ed64f2ba40f4e1df7ecbfe8260e51"))])
  (d-mode .
 	 [(202003130913)
 	  ((emacs
