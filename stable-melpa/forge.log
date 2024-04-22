@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/forge.git
 
 Updating /mnt/store/melpa/working/forge/
-Checking out 8d82330e2fbf8c85f68b97a45083d6204246899e
+Checking out 3e28ea9012107901196414948951f8e1aecc22da
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forge/
-  to /tmp/forgesGAvfh/forge-20240420.1959
+  to /tmp/forgetUlGJJ/forge-20240421.2325
     forge-pkg.el -> forge-pkg.el
   ! lisp/forge-bitbucket.el -> forge-bitbucket.el
   ! lisp/forge-commands.el -> forge-commands.el
@@ -17,41 +17,45 @@ Copying files (->) and directories (=>)
   ! lisp/forge-gitlab.el -> forge-gitlab.el
   ! lisp/forge-gogs.el -> forge-gogs.el
   ! lisp/forge-issue.el -> forge-issue.el
-  ! lisp/forge-list.el -> forge-list.el
   ! lisp/forge-notify.el -> forge-notify.el
   ! lisp/forge-post.el -> forge-post.el
   ! lisp/forge-pullreq.el -> forge-pullreq.el
   ! lisp/forge-repo.el -> forge-repo.el
+  ! lisp/forge-repos.el -> forge-repos.el
   ! lisp/forge-revnote.el -> forge-revnote.el
   ! lisp/forge-semi.el -> forge-semi.el
+  ! lisp/forge-tablist.el -> forge-tablist.el
   ! lisp/forge-topic.el -> forge-topic.el
+  ! lisp/forge-topics.el -> forge-topics.el
   ! lisp/forge.el -> forge.el
   ! docs/forge.texi -> forge.texi
-Generating /tmp/forgesGAvfh/forge-20240420.1959/forge.info
-Created forge-20240420.1959.tar containing:
-  forge-20240420.1959/
-  forge-20240420.1959/dir
-  forge-20240420.1959/forge-bitbucket.el
-  forge-20240420.1959/forge-commands.el
-  forge-20240420.1959/forge-core.el
-  forge-20240420.1959/forge-db.el
-  forge-20240420.1959/forge-gitea.el
-  forge-20240420.1959/forge-github.el
-  forge-20240420.1959/forge-gitlab.el
-  forge-20240420.1959/forge-gogs.el
-  forge-20240420.1959/forge-issue.el
-  forge-20240420.1959/forge-list.el
-  forge-20240420.1959/forge-notify.el
-  forge-20240420.1959/forge-pkg.el
-  forge-20240420.1959/forge-post.el
-  forge-20240420.1959/forge-pullreq.el
-  forge-20240420.1959/forge-repo.el
-  forge-20240420.1959/forge-revnote.el
-  forge-20240420.1959/forge-semi.el
-  forge-20240420.1959/forge-topic.el
-  forge-20240420.1959/forge.el
-  forge-20240420.1959/forge.info
+Generating /tmp/forgetUlGJJ/forge-20240421.2325/forge.info
+Created forge-20240421.2325.tar containing:
+  forge-20240421.2325/
+  forge-20240421.2325/dir
+  forge-20240421.2325/forge-bitbucket.el
+  forge-20240421.2325/forge-commands.el
+  forge-20240421.2325/forge-core.el
+  forge-20240421.2325/forge-db.el
+  forge-20240421.2325/forge-gitea.el
+  forge-20240421.2325/forge-github.el
+  forge-20240421.2325/forge-gitlab.el
+  forge-20240421.2325/forge-gogs.el
+  forge-20240421.2325/forge-issue.el
+  forge-20240421.2325/forge-notify.el
+  forge-20240421.2325/forge-pkg.el
+  forge-20240421.2325/forge-post.el
+  forge-20240421.2325/forge-pullreq.el
+  forge-20240421.2325/forge-repo.el
+  forge-20240421.2325/forge-repos.el
+  forge-20240421.2325/forge-revnote.el
+  forge-20240421.2325/forge-semi.el
+  forge-20240421.2325/forge-tablist.el
+  forge-20240421.2325/forge-topic.el
+  forge-20240421.2325/forge-topics.el
+  forge-20240421.2325/forge.el
+  forge-20240421.2325/forge.info
  ✓ Success:
-  2024-04-21T18:32:37+0000  forge-20240420.1959.entry
-  2024-04-21T18:32:37+0000  forge-20240420.1959.tar
-Built forge in 11.080s, finished at 2024-04-21T18:32:38+0000
+  2024-04-22T02:35:58+0000  forge-20240421.2325.entry
+  2024-04-22T02:35:58+0000  forge-20240421.2325.tar
+Built forge in 10.577s, finished at 2024-04-22T02:36:00+0000
