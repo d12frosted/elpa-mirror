@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-ui.git
 
 Updating /mnt/store/melpa/working/lsp-ui/
-Checking out 703fc515949b809c1fb39c7108aa6cdaec66bbd0
+Checking out b6d12ddcd17edf9edda8296e6fce18c78902c7f7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-ui/
-  to /tmp/lsp-ui2x5eq7/lsp-ui-20240421.24
+  to /tmp/lsp-uiAbJtgQ/lsp-ui-20240423.1111
     lsp-ui-doc.el -> lsp-ui-doc.el
     lsp-ui-flycheck.el -> lsp-ui-flycheck.el
     lsp-ui-imenu.el -> lsp-ui-imenu.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
     lsp-ui.el -> lsp-ui.el
     lsp-ui-doc.html -> lsp-ui-doc.html
     resources => resources
-Created lsp-ui-20240421.24.tar containing:
-  lsp-ui-20240421.24/
-  lsp-ui-20240421.24/lsp-ui-doc.el
-  lsp-ui-20240421.24/lsp-ui-doc.html
-  lsp-ui-20240421.24/lsp-ui-flycheck.el
-  lsp-ui-20240421.24/lsp-ui-imenu.el
-  lsp-ui-20240421.24/lsp-ui-peek.el
-  lsp-ui-20240421.24/lsp-ui-pkg.el
-  lsp-ui-20240421.24/lsp-ui-sideline.el
-  lsp-ui-20240421.24/lsp-ui-util.el
-  lsp-ui-20240421.24/lsp-ui.el
-  lsp-ui-20240421.24/resources/
-  lsp-ui-20240421.24/resources/lightbulb.png
+Created lsp-ui-20240423.1111.tar containing:
+  lsp-ui-20240423.1111/
+  lsp-ui-20240423.1111/lsp-ui-doc.el
+  lsp-ui-20240423.1111/lsp-ui-doc.html
+  lsp-ui-20240423.1111/lsp-ui-flycheck.el
+  lsp-ui-20240423.1111/lsp-ui-imenu.el
+  lsp-ui-20240423.1111/lsp-ui-peek.el
+  lsp-ui-20240423.1111/lsp-ui-pkg.el
+  lsp-ui-20240423.1111/lsp-ui-sideline.el
+  lsp-ui-20240423.1111/lsp-ui-util.el
+  lsp-ui-20240423.1111/lsp-ui.el
+  lsp-ui-20240423.1111/resources/
+  lsp-ui-20240423.1111/resources/lightbulb.png
  ✓ Success:
-  2024-04-23T07:42:48+0000  lsp-ui-20240421.24.entry
-  2024-04-23T07:42:47+0000  lsp-ui-20240421.24.tar
-Built lsp-ui in 4.640s, finished at 2024-04-23T07:42:49+0000
+  2024-04-23T09:43:52+0000  lsp-ui-20240421.24.entry
+  2024-04-23T09:43:51+0000  lsp-ui-20240421.24.tar
+  2024-04-23T11:48:54+0000  lsp-ui-20240423.1111.entry
+  2024-04-23T11:48:54+0000  lsp-ui-20240423.1111.tar
+Built lsp-ui in 4.712s, finished at 2024-04-23T11:48:57+0000
