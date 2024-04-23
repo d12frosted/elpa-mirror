@@ -82,6 +82,8 @@
 
   • `M-x rcirc-sqlite-view-log': display the logs.
   • `M-x rcirc-sqlite-text-search' perform full text search in the logs.
+  • `M-x rcirc-sqlite-logs-from-nick' display the logs from a specific
+    nick.
   • `M-x rcirc-sqlite-stats' displays some stats.
 
 
@@ -92,7 +94,23 @@
   to a specific channel, or month.
 
 
-3.2 `rcirc-sqlite-text-search'
+3.2 `rcirc-sqlite-logs-from-nick'
+─────────────────────────────────
+
+  Display the logs from a specific nick.
+
+  Prompts:
+
+  • for a nick
+  • for a time range
+
+  Completion is used to choose a nick and a time range.
+
+  When a time range is chosen, only show the messages that were send in
+  that specific range.  Choose `All channels' to display everything.
+
+
+3.3 `rcirc-sqlite-text-search'
 ──────────────────────────────
 
   Perform full text searches in the database.
@@ -101,20 +119,20 @@
 
   • for a search string
   • for a channel
-  • for a month
+  • for a time range
   • for a nick
 
-  Completion is used to choose a channel, month, or nick.
+  Completion is used to choose a channel, a time range, or nick.
 
   When a channel is chosen, the search is performed within the chat logs
-  of that specific channel. Choose `All channels' to search everywhere.
+  of that specific channel.  Choose `All channels' to search everywhere.
 
-  When a month is chosen, the search is performed within the messages
-  that were send in that specific month. Choose `Anytime' to search
-  everywhere.
+  When a time range is chosen, the search is performed within the
+  messages that were send in that specific range. Choose `Anytime' to
+  search everywhere.
 
   When a nick is chosen, the search is performed within the chats of
-  that specific nick. Choose `All nicks' to search independent of the
+  that specific nick.  Choose `All nicks' to search independent of the
   sender.
 
   The search string is used to do a full text search in the SQLite
@@ -129,7 +147,7 @@
   of the colon (`:'), the double quotes (`"') here are required.
 
 
-3.3 `rcirc-sqlite-stats'
+3.4 `rcirc-sqlite-stats'
 ────────────────────────
 
   This command gives an overview of the number of messages in the
@@ -152,6 +170,33 @@
 
   Use drill-down in the stats buffer to get more details, either by the
   "RET" key, or the left mouse button.
+
+
+3.5 Key bindings in the buffer `*rcirc log*'
+────────────────────────────────────────────
+
+  In the log buffer showing the channel, time, nick, and message a
+  number of functions are available with the press of a single key.
+
+  First, select a message by moving point up or down. Next, use one of
+  the following keys.
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Key    Action                                                          
+  ────────────────────────────────────────────────────────────────────────
+   `RET'  Show logs of the channel and date of the selected message       
+   `>'    Same, but also include the next day                             
+   `^'    Same, but also include the previous day                         
+   `a'    Same, but also include all following days                       
+   `<'    Show logs of the channel,date, and nick of the selected message 
+   `c'    Copy the selected message, nicely formatted, to the kill-ring   
+   `R'    Insert the selected message, nicely formatted, into a register  
+   `r'    Same, but append to the register                                
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  The register to insert or append messages is default register `r'. A
+  different register can be set as user option, with `customize-group
+  RET rcicq-sqlite'.
 
 
 4 Contribute

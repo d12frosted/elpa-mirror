@@ -10,4 +10,8 @@ You can also setup it to be used automatically like:
    :mode ("\\.md\\'" . markdown-ts-mode)
    :defer 't
    :config
-   (add-to-list 'treesit-language-source-alist '(markdown "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "main" "src")))
+   (add-to-list 'treesit-language-source-alist '(markdown "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "split_parser" "tree-sitter-markdown/src"))
+   (add-to-list 'treesit-language-source-alist '(markdown-inline "https://github.com/tree-sitter-grammars/tree-sitter-markdown" "split_parser" "tree-sitter-markdown-inline/src")))
+
+NOTE: please note you need BOTH markdown and markdown-inline grammars installed!
+      so please, run `treesit-install-language-grammar' twice.

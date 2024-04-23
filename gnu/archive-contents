@@ -3364,7 +3364,7 @@
 		("Alex Schroeder" . "alex@gnu.org"))
 	       (:maintainer "Alex Schroeder" . "alex@gnu.org"))])
  (rcirc-sqlite .
-	       [(1 0 0)
+	       [(1 0 1)
 		((emacs
 		  (30 0)))
 		"rcirc logging in SQLite" tar
@@ -3373,7 +3373,7 @@
 		 (:maintainer "Matto Fransen" . "matto@matto.nl")
 		 (:authors
 		  ("Matto Fransen" . "matto@matto.nl"))
-		 (:commit . "a4fd54a0595071655042683544a6db7711713421"))])
+		 (:commit . "a2dca3182572ab2af7018a91186dbf9bcb2db2b5"))])
  (realgud .
 	  [(1 5 1)
 	   ((load-relative
