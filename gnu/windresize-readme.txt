@@ -1,7 +1,7 @@
 This mode lets you edit the window configuration interactively just
 by using the keyboard.
 
-To use it, type M-x windresize; this puts Emacs in a state
+To use it, type M-x windresize; this enters put Emacs in a state
 where the up/down and left/right arrow keys resize the window
 dimensions.  To return Emacs to its ordinary state, type RET.
 

@@ -3132,7 +3132,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "737d095b4504436e6d870923ed471687f16b992e"))])
  (phps-mode .
-	    [(0 4 48)
+	    [(0 4 49)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -3141,7 +3141,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "676cfe11e673a3c63ac37b4f0dfd5b1c75ca4d4f"))])
+	      (:commit . "98fdd10d6299dfc5ad24cc214c9eaa0fdba946e4"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" tar
@@ -4527,12 +4527,13 @@
 	   [(1 0)
 	    ((emacs
 	      (25 1)))
-	    "Run a vigenere cipher on a block of text ;" single
-	    ((:keywords "data" "vigenere" "cipher")
+	    "Run a vigenere cipher on a block of text ;" tar
+	    ((:url . "https://elpa.gnu.org/packages/vigenere.html")
+	     (:keywords "data" "vigenere" "cipher")
+	     (:maintainer "Ian Dunn" . "dunni@gnu.org")
 	     (:authors
 	      ("Ian Dunn" . "dunni@gnu.org"))
-	     (:maintainer "Ian Dunn" . "dunni@gnu.org")
-	     (:url . "https://elpa.gnu.org/packages/vigenere.html"))])
+	     (:commit . "434270403845789f4be32102c573ea965e870d19"))])
  (visual-filename-abbrev .
 			 [(1 2)
 			  ((emacs
@@ -4555,10 +4556,11 @@
       [(1 7 2)
        nil "View Large Files" tar
        ((:url . "https://github.com/m00natic/vlfi")
+	(:keywords "large files" "utilities")
 	(:maintainer "Andrey Kotlarski" . "m00naticus@gmail.com")
-	(:keywords "large files" "utilities"))])
+	(:commit . "efffeb5f54191d41a503d1d51343bb327fe2f871"))])
  (vundo .
-	[(2 2 0)
+	[(2 3 0)
 	 ((emacs
 	   (28 1)))
 	 "Visual undo tree" tar
@@ -4567,7 +4569,7 @@
 	  (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	  (:authors
 	   ("Yuan Fu" . "casouri@gmail.com"))
-	  (:commit . "9f47232c6a5d357478bc979ef0908b307b08d1da"))])
+	  (:commit . "4c01db9c011b7b4ca4ef5da338cdc6ea45aac7a5"))])
  (wcheck-mode .
 	      [(2021)
 	       nil "General interface for text checkers" tar
@@ -4575,37 +4577,41 @@
 		(:keywords "text" "spell" "check" "languages" "ispell")
 		(:maintainer "Teemu Likonen" . "tlikonen@iki.fi")
 		(:authors
-		 ("Teemu Likonen" . "tlikonen@iki.fi")))])
+		 ("Teemu Likonen" . "tlikonen@iki.fi"))
+		(:commit . "e1c86e6f9e150ed25efb58fcf21db374b1b7f519"))])
  (wconf .
 	[(0 2 1)
 	 ((emacs
 	   (24 4)))
-	 "Minimal window layout manager" single
-	 ((:keywords "windows" "frames" "layout")
+	 "Minimal window layout manager" tar
+	 ((:url . "https://github.com/ilohmar/wconf")
+	  (:keywords "windows" "frames" "layout")
+	  (:maintainer "Ingo Lohmar" . "i.lohmar@gmail.com")
 	  (:authors
 	   ("Ingo Lohmar" . "i.lohmar@gmail.com"))
-	  (:maintainer "Ingo Lohmar" . "i.lohmar@gmail.com")
-	  (:url . "https://github.com/ilohmar/wconf"))])
+	  (:commit . "833ae431a5b35739be3076ea4b586d84d6fe269f"))])
  (web-server .
 	     [(0 1 2)
 	      ((emacs
 		(24 3)))
 	      "Emacs Web Server" tar
 	      ((:url . "https://github.com/eschulte/emacs-web-server")
+	       (:keywords "http" "server" "network")
 	       (:maintainer "Eric Schulte" . "schulte.eric@gmail.com")
 	       (:authors
 		("Eric Schulte" . "schulte.eric@gmail.com"))
-	       (:keywords "http" "server" "network"))])
+	       (:commit . "33afdb46e1cd61251736816d965495525b36c9cd"))])
  (webfeeder .
 	    [(1 1 2)
 	     ((emacs
 	       (25 1)))
 	     "Build RSS and Atom webfeeds from HTML files" tar
 	     ((:url . "https://gitlab.com/Ambrevar/emacs-webfeeder")
+	      (:keywords "news" "hypermedia" "blog" "feed" "rss" "atom")
 	      (:maintainer "Pierre Neidhardt" . "mail@ambrevar.xyz")
 	      (:authors
 	       ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
-	      (:keywords "news" "hypermedia" "blog" "feed" "rss" "atom"))])
+	      (:commit . "6037848ee495a67510d8b43f1fbe319b76dbd859"))])
  (websocket .
 	    [(1 15)
 	     ((cl-lib
@@ -4650,12 +4656,13 @@
 	     (:url . "https://gitlab.com/ambrevar/windower"))])
  (windresize .
 	     [(0 1)
-	      nil "Resize windows interactively" single
-	      ((:url . "http://elpa.gnu.org/packages/windresize.html")
-	       (:keywords "window")
+	      nil "Resize windows interactively" tar
+	      ((:keywords "window")
+	       (:maintainer "Bastien" . "bzgATalternDOTorg")
 	       (:authors
-		("Bastien" . "bzg@gnu.org"))
-	       (:maintainer "Bastien" . "bzg@gnu.org"))])
+		("Bastien" . "bzgATalternDOTorg"))
+	       (:url . "https://elpa.gnu.org/packages/windresize.html")
+	       (:commit . "0693d5d864ac9fd033c868bdd887e66278e056e9"))])
  (wisi .
        [(4 3 2)
 	((emacs
@@ -4686,20 +4693,21 @@
 			   (:commit . "2d58879cea26b8a3b573d084d149dea94f93dfb8"))])
  (wpuzzle .
 	  [(1 1)
-	   nil "find as many word in a given time" single
-	   ((:url . "http://elpa.gnu.org/packages/wpuzzle.html")
+	   nil "find as many word in a given time" tar
+	   ((:maintainer "Ivan Kanis" . "ivan@kanis.fr")
 	    (:authors
 	     ("Ivan Kanis" . "ivan@kanis.fr"))
-	    (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
+	    (:url . "https://elpa.gnu.org/packages/wpuzzle.html")
+	    (:commit . "9373cbc013b978b31e38822bfdcc9a7fc5e0ed99"))])
  (wrap-search .
-	      [(4 12 10)
+	      [(4 14 10)
 	       nil "wrapped, non-incremental search" tar
 	       ((:url . "https://dataswamp.org/~incal/emacs-init/wrap-search.el")
 		(:keywords "matching")
 		(:maintainer "Emanuel Berg" . "incal@dataswamp.org")
 		(:authors
 		 ("Emanuel Berg" . "incal@dataswamp.org"))
-		(:commit . "12a50aa425278d5982364b0f97e7a9f13ac52fe9"))])
+		(:commit . "982f8941af5993721bc899de2efccb4026276441"))])
  (xclip .
 	[(1 11)
 	 nil "Copy&paste GUI clipboard from text terminal" tar
@@ -4728,10 +4736,11 @@
 	  (0 2)))
 	"X protocol Emacs Lisp Binding" tar
 	((:url . "https://github.com/ch11ng/xelb")
+	 (:keywords "unix")
 	 (:maintainer "Chris Feng" . "chris.w.feng@gmail.com")
 	 (:authors
 	  ("Chris Feng" . "chris.w.feng@gmail.com"))
-	 (:keywords "unix"))])
+	 (:commit . "0f10c956349515b17bf1b5ac1fb7c65a736d401d"))])
  (xpm .
       [(1 0 5)
        ((cl-lib
@@ -4743,7 +4752,8 @@
 	(:keywords "multimedia" "xpm")
 	(:maintainer "Thien-Thi Nguyen" . "ttn@gnu.org")
 	(:authors
-	 ("Thien-Thi Nguyen" . "ttn@gnu.org")))])
+	 ("Thien-Thi Nguyen" . "ttn@gnu.org"))
+	(:commit . "85e5c412dde7ec3c3f64c64d37079e233293e4d0"))])
  (xr .
      [(1 25)
       ((emacs
@@ -4788,9 +4798,10 @@
 			      ((yasnippet
 				(0 9 1)))
 			      "\"Classic\" yasnippet snippets" tar
-			      ((:maintainer "Noam Postavsky" . "npostavs@gmail.com")
-			       (:keywords "snippets")
-			       (:url . "http://elpa.gnu.org/packages/yasnippet-classic-snippets.html"))])
+			      ((:keywords "snippets")
+			       (:maintainer "Noam Postavsky" . "npostavs@gmail.com")
+			       (:url . "https://elpa.gnu.org/packages/yasnippet-classic-snippets.html")
+			       (:commit . "43ff0337f5ec504f2a496f2f035a5087cd8e2074"))])
  (zones .
 	[(2023 6 11)
 	 nil "Zones of text - like multiple regions" tar
@@ -4804,10 +4815,11 @@
 	   (0)))
 	 "Text mode directory tree" tar
 	 ((:url . "https://github.com/fourier/ztree")
+	  (:keywords "files" "tools")
 	  (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	  (:authors
 	   ("Alexey Veretennikov" . "alexey.veretennikov@gmail.com"))
-	  (:keywords "files" "tools"))])
+	  (:commit . "c9ad9136d52ca5a81475693864e255d29448f43f"))])
  (zuul .
        [(0 4 0)
 	((emacs
