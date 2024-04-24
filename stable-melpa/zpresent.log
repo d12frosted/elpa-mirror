@@ -3,8 +3,21 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~zck/zpresent
 
 Updating /mnt/store/melpa/working/zpresent/
-Command `hg pull' exited with non-zero exit-code: 255
-pulling from https://hg.sr.ht/~zck/zpresent
-abort: error: Cannot assign requested address
+Checking out 341d1a4a91a8acff5be6b81f95695e17c79c5309
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zpresent/
+  to /tmp/zpresentzKfEJa/zpresent-20201207.732
+    zpresent.el -> zpresent.el
+Created zpresent-20201207.732.tar containing:
+  zpresent-20201207.732/
+  zpresent-20201207.732/zpresent-pkg.el
+  zpresent-20201207.732/zpresent.el
+Command `hg purge' exited with non-zero exit-code: 255
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
 
-Command `hg pull' exited with non-zero exit-code: 255
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command `hg purge' exited with non-zero exit-code: 255
