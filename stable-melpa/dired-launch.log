@@ -3,18 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/thomp/dired-launch.git
 
 Updating /mnt/store/melpa/working/dired-launch/
-Checking out 933aa6b921010c9d33ddf18f48c8ce780443f963
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dired-launch/
-  to /tmp/dired-launchFLBHjw/dired-launch-20240417.1903
-    dired-launch-x-on-dir.el -> dired-launch-x-on-dir.el
-    dired-launch.el -> dired-launch.el
-Created dired-launch-20240417.1903.tar containing:
-  dired-launch-20240417.1903/
-  dired-launch-20240417.1903/dired-launch-pkg.el
-  dired-launch-20240417.1903/dired-launch-x-on-dir.el
-  dired-launch-20240417.1903/dired-launch.el
- ✓ Success:
-  2024-04-25T07:41:35+0000  dired-launch-20240417.1903.entry
-  2024-04-25T07:41:35+0000  dired-launch-20240417.1903.tar
-Built dired-launch in 5.861s, finished at 2024-04-25T07:41:37+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/thomp/dired-launch.git/': SSL: certificate subject name (*.codeberg.page) does not match target host name 'codeberg.org'
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
