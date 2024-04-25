@@ -1885,13 +1885,13 @@
 	     (:url . "https://elpa.gnu.org/packages/greenbar.html")
 	     (:commit . "9526f29d073c533c3e54f0a7597eef1587ffb99e"))])
  (gtags-mode .
-	     [(1 4)
+	     [(1 5)
 	      ((emacs
 		(28)))
 	      "GNU Global integration with xref, project and imenu." tar
 	      ((:url . "https://github.com/Ergus/gtags-mode")
 	       (:keywords "xref" "project" "imenu" "gtags" "global")
-	       (:commit . "7dbe784eff8050639502a927b3f2f11d287e9905"))])
+	       (:commit . "627b2d458af9d72cc5bc638f133764e7a209333c"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib
@@ -4496,7 +4496,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "b2d18ff944ae374fa03579ca2574f1fba8ae2e4b"))])
  (vertico .
-	  [(1 7)
+	  [(1 8)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -4507,7 +4507,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "cf8b2abf5207696c054c33214c86e3969d415054"))])
+	    (:commit . "1def56a1e678ff9a8eeafafda9c474a5fbb097c4"))])
  (vertico-posframe .
 		   [(0 7 7)
 		    ((emacs
