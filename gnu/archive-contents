@@ -3152,7 +3152,7 @@
 	     (:url . "https://elpa.gnu.org/packages/pinentry.html")
 	     (:commit . "ef0d62bba29dfab07624d030032ec0f67d34e865"))])
  (plz .
-      [(0 7 3)
+      [(0 8)
        ((emacs
 	 (26 3)))
        "HTTP library" tar
@@ -3161,7 +3161,7 @@
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "1b66fa907d6dbc64c6a01b96d58261f67a09200e"))])
+	(:commit . "57f10482655f02c3cc8ff35d31bd83dd6d809d02"))])
  (plz-see .
 	  [(0 1)
 	   ((emacs
@@ -3214,7 +3214,7 @@
 	    ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
 	   (:commit . "fe4f0b3b8b16f005fb8b5f79bc26b380038400ab"))])
  (posframe .
-	   [(1 4 2)
+	   [(1 4 3)
 	    ((emacs
 	      (26 1)))
 	    "Pop a posframe (just a frame) at point" tar
@@ -3223,7 +3223,7 @@
 	     (:maintainer "Feng Shu" . "tumashu@163.com")
 	     (:authors
 	      ("Feng Shu" . "tumashu@163.com"))
-	     (:commit . "3b97dc180b03498103cfcc7f44e64150df440bf0"))])
+	     (:commit . "468ac1ab50d7e0feae2c06f12596bbc169f2abe4"))])
  (pq .
      [(0 2)
       ((emacs

@@ -186,6 +186,15 @@ be simple and well-organized.  Every feature is tested against
 
         `NOQUERY' is passed to `make-process', which see.
 
+        `FILTER' is an optional function to be used as the process
+        filter for the curl process.  It can be used to handle HTTP
+        responses in a streaming way.  The function must accept 2
+        arguments, the process object running curl, and a string which
+        is output received from the process.  The default process filter
+        inserts the output of the process into the process buffer.  The
+        provided `FILTER' function should at least insert output up to
+        the HTTP body into the process buffer.
+
 
 2.3 Queueing
 ────────────
@@ -239,7 +248,24 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.7.3
+3.1 0.8
+───────
+
+  *Additions*
+
+  ⁃ Function `plz' now accepts a `:filter' argument which can be used to
+    override the default process filter (e.g. for streaming responses).
+    ([#43], [#50].  Thanks to [Roman Scherer].)
+
+
+[#43] <https://github.com/alphapapa/plz.el/pull/43>
+
+[#50] <https://github.com/alphapapa/plz.el/pull/50>
+
+[Roman Scherer] <https://github.com/r0man>
+
+
+3.2 0.7.3
 ─────────
 
   *Fixes*
@@ -247,7 +273,7 @@ be simple and well-organized.  Every feature is tested against
     longer committed to Git.)
 
 
-3.2 0.7.2
+3.3 0.7.2
 ─────────
 
   *Fixes*
@@ -260,7 +286,7 @@ be simple and well-organized.  Every feature is tested against
 [Joseph Turner] <https://github.com/josephmturner>
 
 
-3.3 0.7.1
+3.4 0.7.1
 ─────────
 
   *Fixes*
@@ -271,7 +297,7 @@ be simple and well-organized.  Every feature is tested against
 [Daniel Hubmann] <https://github.com/hubisan>
 
 
-3.4 0.7
+3.5 0.7
 ───────
 
   *Changes*
@@ -317,7 +343,7 @@ be simple and well-organized.  Every feature is tested against
 [httpbin] <https://github.com/postmanlabs/httpbin>
 
 
-3.5 0.6
+3.6 0.6
 ───────
 
   *Additions*
@@ -333,7 +359,7 @@ be simple and well-organized.  Every feature is tested against
   ⁃ Handle HTTP 3xx redirects when using `:as 'response'.
 
 
-3.6 0.5.4
+3.7 0.5.4
 ─────────
 
   *Fixes*
@@ -341,7 +367,7 @@ be simple and well-organized.  Every feature is tested against
     features should not be designed and released on a Friday.)
 
 
-3.7 0.5.3
+3.8 0.5.3
 ─────────
 
   *Fixes*
@@ -350,7 +376,7 @@ be simple and well-organized.  Every feature is tested against
     would require them to be recompiled after upgrading `plz').
 
 
-3.8 0.5.2
+3.9 0.5.2
 ─────────
 
   *Fixes*
@@ -358,8 +384,8 @@ be simple and well-organized.  Every feature is tested against
     when specified.
 
 
-3.9 0.5.1
-─────────
+3.10 0.5.1
+──────────
 
   *Fixes*
   ⁃ Only call `plz-queue''s `finally' function when specified.  (Thanks
@@ -369,7 +395,7 @@ be simple and well-organized.  Every feature is tested against
 [Dan Oriani] <https://github.com/redchops>
 
 
-3.10 0.5
+3.11 0.5
 ────────
 
   *Additions*
@@ -377,7 +403,7 @@ be simple and well-organized.  Every feature is tested against
     queue is finished.
 
 
-3.11 0.4
+3.12 0.4
 ────────
 
   *Additions*
@@ -409,7 +435,7 @@ be simple and well-organized.  Every feature is tested against
 [#17] <https://github.com/alphapapa/plz.el/issues/17>
 
 
-3.12 0.3
+3.13 0.3
 ────────
 
   *Additions*
@@ -428,21 +454,21 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.13 0.2.1
+3.14 0.2.1
 ──────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.14 0.2
+3.15 0.2
 ────────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.15 0.1
+3.16 0.1
 ────────
 
   Initial release.
