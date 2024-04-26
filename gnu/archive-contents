@@ -4546,12 +4546,13 @@
 			   (:url . "https://elpa.gnu.org/packages/visual-filename-abbrev.html")
 			   (:commit . "3c1a54e2cec935126a74e40920f2cb7929fa4e75"))])
  (visual-fill .
-	      [(0 1)
-	       nil "Auto-refill paragraphs without modifying the buffer" single
-	       ((:url . "http://elpa.gnu.org/packages/visual-fill.html")
+	      [(0 2)
+	       nil "Auto-refill paragraphs without modifying the buffer" tar
+	       ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
 		(:authors
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+		(:url . "https://elpa.gnu.org/packages/visual-fill.html")
+		(:commit . "1951eaf59e25091d5597cc45e3dd5925be005122"))])
  (vlf .
       [(1 7 2)
        nil "View Large Files" tar
