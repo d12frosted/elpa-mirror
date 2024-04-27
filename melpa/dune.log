@@ -3,20 +3,22 @@ Fetcher: github
 Source:  https://github.com/ocaml/dune.git
 
 Updating /mnt/store/melpa/working/dune/
-Checking out e53368337be3c353fd654bdbead322605fc875c5
+Checking out 5554158af27ead066fbb3c009e780c930958613c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dune/
-  to /tmp/dunee9pM0m/dune-20230402.1815
+  to /tmp/duneCFSRSZ/dune-20240427.1346
   ! editor-integration/emacs/dune-flymake.el -> dune-flymake.el
   ! editor-integration/emacs/dune-watch.el -> dune-watch.el
   ! editor-integration/emacs/dune.el -> dune.el
-Created dune-20230402.1815.tar containing:
-  dune-20230402.1815/
-  dune-20230402.1815/dune-flymake.el
-  dune-20230402.1815/dune-pkg.el
-  dune-20230402.1815/dune-watch.el
-  dune-20230402.1815/dune.el
+Created dune-20240427.1346.tar containing:
+  dune-20240427.1346/
+  dune-20240427.1346/dune-flymake.el
+  dune-20240427.1346/dune-pkg.el
+  dune-20240427.1346/dune-watch.el
+  dune-20240427.1346/dune.el
  ✓ Success:
   2024-04-27T11:43:46+0000  dune-20230402.1815.entry
   2024-04-27T11:43:46+0000  dune-20230402.1815.tar
-Built dune in 31.515s, finished at 2024-04-27T11:43:49+0000
+  2024-04-27T13:51:20+0000  dune-20240427.1346.entry
+  2024-04-27T13:51:19+0000  dune-20240427.1346.tar
+Built dune in 18.731s, finished at 2024-04-27T13:51:24+0000
