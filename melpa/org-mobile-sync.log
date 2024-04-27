@@ -4,6 +4,7 @@ Source:  https://framagit.org/steckerhalter/org-mobile-sync.git
 
 Updating /mnt/store/melpa/working/org-mobile-sync/
 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://framagit.org/steckerhalter/org-mobile-sync.git/': Error while processing content unencoding: incorrect header check
+remote: The git server, Gitaly, is not available at this time. Please contact your administrator.
+fatal: unable to access 'https://framagit.org/steckerhalter/org-mobile-sync.git/': The requested URL returned error: 503
 
 Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
