@@ -2046,15 +2046,15 @@
 	      ("Chen Bin" . "chenbin.sh@gmail.com"))
 	     (:commit . "4e71f5b9199a0ad10017104a6b2bf5ef5f207dfc"))])
  (slime .
-	[(2 29 1)
-	 ((cl-lib
-	   (0 5))
+	[(2 30)
+	 ((emacs
+	   (24 3))
 	  (macrostep
 	   (0 9)))
 	 "Superior Lisp Interaction Mode for Emacs" tar
 	 ((:url . "https://github.com/slime/slime")
 	  (:keywords "languages" "lisp" "slime")
-	  (:commit . "d85dd9899f7524513c8ad1bd47b0dd248b1915cb"))])
+	  (:commit . "ef2af895a9e79306f0789e72b101aa39e960c900"))])
  (sly .
       [(1 0 43)
        ((emacs
