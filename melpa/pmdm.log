@@ -3,8 +3,21 @@ Fetcher: hg
 Source:  https://hg.serna.eu/emacs/pmdm
 
 Updating /mnt/store/melpa/working/pmdm/
-Command `hg pull' exited with non-zero exit-code: 255
-pulling from https://hg.serna.eu/emacs/pmdm
-abort: HTTP Error 502: Bad Gateway
+Checking out 6d2af9f9e88e6c91eb74dafaddb5f009e1de4907
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pmdm/
+  to /tmp/pmdmZDqG5K/pmdm-20191101.2346
+    pmdm.el -> pmdm.el
+Created pmdm-20191101.2346.tar containing:
+  pmdm-20191101.2346/
+  pmdm-20191101.2346/pmdm-pkg.el
+  pmdm-20191101.2346/pmdm.el
+Command `hg purge' exited with non-zero exit-code: 255
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
 
-Command `hg pull' exited with non-zero exit-code: 255
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
+Command `hg purge' exited with non-zero exit-code: 255
