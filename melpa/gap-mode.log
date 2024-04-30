@@ -3,10 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/gvol/gap-mode.git
 
 Updating /mnt/store/melpa/working/gap-mode/
-Checking out b816fcf70840887461764ebdbb34c8b37dd42ba2
+Checking out 8439c3622e1f9e2ec1a8ef21020eb55e917f4416
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gap-mode/
-  to /tmp/gap-modex9dlKb/gap-mode-20240126.359
+  to /tmp/gap-modejOijDT/gap-mode-20240313.1615
     gap-company.el -> gap-company.el
     gap-flycheck.el -> gap-flycheck.el
     gap-flymake.el -> gap-flymake.el
@@ -14,17 +14,19 @@ Copying files (->) and directories (=>)
     gap-process.el -> gap-process.el
     gap-smie.el -> gap-smie.el
     emacs.gaprc -> emacs.gaprc
-Created gap-mode-20240126.359.tar containing:
-  gap-mode-20240126.359/
-  gap-mode-20240126.359/emacs.gaprc
-  gap-mode-20240126.359/gap-company.el
-  gap-mode-20240126.359/gap-flycheck.el
-  gap-mode-20240126.359/gap-flymake.el
-  gap-mode-20240126.359/gap-mode-pkg.el
-  gap-mode-20240126.359/gap-mode.el
-  gap-mode-20240126.359/gap-process.el
-  gap-mode-20240126.359/gap-smie.el
+Created gap-mode-20240313.1615.tar containing:
+  gap-mode-20240313.1615/
+  gap-mode-20240313.1615/emacs.gaprc
+  gap-mode-20240313.1615/gap-company.el
+  gap-mode-20240313.1615/gap-flycheck.el
+  gap-mode-20240313.1615/gap-flymake.el
+  gap-mode-20240313.1615/gap-mode-pkg.el
+  gap-mode-20240313.1615/gap-mode.el
+  gap-mode-20240313.1615/gap-process.el
+  gap-mode-20240313.1615/gap-smie.el
  ✓ Success:
   2024-04-29T23:46:18+0000  gap-mode-20240126.359.entry
   2024-04-29T23:46:18+0000  gap-mode-20240126.359.tar
-Built gap-mode in 4.538s, finished at 2024-04-29T23:46:19+0000
+  2024-04-30T02:00:37+0000  gap-mode-20240313.1615.entry
+  2024-04-30T02:00:37+0000  gap-mode-20240313.1615.tar
+Built gap-mode in 4.357s, finished at 2024-04-30T02:00:39+0000
