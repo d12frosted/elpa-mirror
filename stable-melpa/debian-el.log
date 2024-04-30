@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/debian-el/
 Checking out 7bbbf575f0ce11cb4b6acd89e56000ae388b1413
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/debian-el/
-  to /tmp/debian-eltQRghf/debian-el-20240404.541
+  to /tmp/debian-elkNptk0/debian-el-20240404.541
     apt-sources.el -> apt-sources.el
     apt-utils.el -> apt-utils.el
     deb-view.el -> deb-view.el
@@ -16,4 +16,21 @@ Copying files (->) and directories (=>)
     gnus-BTS.el -> gnus-BTS.el
     preseed.el -> preseed.el
     debian-el.texi -> debian-el.texi
-Generating /tmp/debian-eltQRghf/debian-el-20240404.541/debian-el.info
+Generating /tmp/debian-elkNptk0/debian-el-20240404.541/debian-el.info
+Created debian-el-20240404.541.tar containing:
+  debian-el-20240404.541/
+  debian-el-20240404.541/apt-sources.el
+  debian-el-20240404.541/apt-utils.el
+  debian-el-20240404.541/deb-view.el
+  debian-el-20240404.541/debian-autoloads.el
+  debian-el-20240404.541/debian-bug.el
+  debian-el-20240404.541/debian-el-pkg.el
+  debian-el-20240404.541/debian-el.el
+  debian-el-20240404.541/debian-el.info
+  debian-el-20240404.541/dir
+  debian-el-20240404.541/gnus-BTS.el
+  debian-el-20240404.541/preseed.el
+ ✓ Success:
+  2024-04-30T10:24:22+0000  debian-el-20240404.541.entry
+  2024-04-30T10:24:22+0000  debian-el-20240404.541.tar
+Built debian-el in 8.658s, finished at 2024-04-30T10:24:23+0000
