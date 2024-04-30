@@ -2713,14 +2713,14 @@
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
 		(:commit . "6c38e95b8e846aceb88398c682fd283052924556"))])
  (nano-modeline .
-		[(1 0 1)
+		[(1 1 0)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
 		 ((:url . "https://github.com/rougier/nano-modeline")
 		  (:keywords "convenience" "mode-line" "header-line")
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-		  (:commit . "a18780c277838983932623870752f0adddef0345"))])
+		  (:commit . "04676d57a1e602123a593836745a744d1b2028fb"))])
  (nano-theme .
 	     [(0 3 4)
 	      ((emacs
@@ -3818,7 +3818,7 @@
 	     ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	    (:commit . "fffe8d0b42b143a2e7df0470d9049fa57b6ecac5"))])
  (spacious-padding .
-		   [(0 4 1)
+		   [(0 5 0)
 		    ((emacs
 		      (28 1)))
 		    "Increase the padding/spacing of frames and windows" tar
@@ -3827,7 +3827,7 @@
 		     (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		     (:authors
 		      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		     (:commit . "21be66a8293292234a7e4624c35f6645a044f7fa"))])
+		     (:commit . "e48f3335f50217e40081631abacc40964150f3ab"))])
  (spinner .
 	  [(1 7 4)
 	   ((emacs

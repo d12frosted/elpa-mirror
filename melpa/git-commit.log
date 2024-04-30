@@ -3,17 +3,19 @@ Fetcher: github
 Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/git-commit/
-Checking out 856807f1c82fb79b33a6cb0ac01ef2ae5ed0edfc
+Checking out 7c794201c473e19c6c41c73148221151997d8197
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/git-commit/
-  to /tmp/git-commitnZRdNf/git-commit-20240429.1540
+  to /tmp/git-commitqWk9WD/git-commit-20240429.2011
   ! lisp/git-commit.el -> git-commit.el
   ! lisp/git-commit-pkg.el -> git-commit-pkg.el
-Created git-commit-20240429.1540.tar containing:
-  git-commit-20240429.1540/
-  git-commit-20240429.1540/git-commit-pkg.el
-  git-commit-20240429.1540/git-commit.el
+Created git-commit-20240429.2011.tar containing:
+  git-commit-20240429.2011/
+  git-commit-20240429.2011/git-commit-pkg.el
+  git-commit-20240429.2011/git-commit.el
  ✓ Success:
-  2024-04-29T19:16:56+0000  git-commit-20240429.1540.entry
-  2024-04-29T19:16:56+0000  git-commit-20240429.1540.tar
-Built git-commit in 5.651s, finished at 2024-04-29T19:16:57+0000
+  2024-04-29T21:34:38+0000  git-commit-20240429.1540.entry
+  2024-04-29T21:34:38+0000  git-commit-20240429.1540.tar
+  2024-04-29T23:47:05+0000  git-commit-20240429.2011.entry
+  2024-04-29T23:47:05+0000  git-commit-20240429.2011.tar
+Built git-commit in 6.351s, finished at 2024-04-29T23:47:07+0000
