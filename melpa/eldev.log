@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-eldev/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
-Checking out ab21378fddc15523df43226e495c0f4564315ec5
+Checking out 810b3636e7f71f8e1d1a29e16b6ad6e8052df258
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevcT9fo3/eldev-20240429.1816
+  to /tmp/eldevf4iljP/eldev-20240430.1918
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-doctest.el -> eldev-doctest.el
@@ -20,24 +20,26 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20240429.1816.tar containing:
-  eldev-20240429.1816/
-  eldev-20240429.1816/bin/
-  eldev-20240429.1816/bin/eldev
-  eldev-20240429.1816/bin/eldev.bat
-  eldev-20240429.1816/bin/eldev.ps1
-  eldev-20240429.1816/eldev-build.el
-  eldev-20240429.1816/eldev-buttercup.el
-  eldev-20240429.1816/eldev-doctest.el
-  eldev-20240429.1816/eldev-doctor.el
-  eldev-20240429.1816/eldev-ecukes.el
-  eldev-20240429.1816/eldev-ert.el
-  eldev-20240429.1816/eldev-pkg.el
-  eldev-20240429.1816/eldev-plugins.el
-  eldev-20240429.1816/eldev-util.el
-  eldev-20240429.1816/eldev-vc.el
-  eldev-20240429.1816/eldev.el
+Created eldev-20240430.1918.tar containing:
+  eldev-20240430.1918/
+  eldev-20240430.1918/bin/
+  eldev-20240430.1918/bin/eldev
+  eldev-20240430.1918/bin/eldev.bat
+  eldev-20240430.1918/bin/eldev.ps1
+  eldev-20240430.1918/eldev-build.el
+  eldev-20240430.1918/eldev-buttercup.el
+  eldev-20240430.1918/eldev-doctest.el
+  eldev-20240430.1918/eldev-doctor.el
+  eldev-20240430.1918/eldev-ecukes.el
+  eldev-20240430.1918/eldev-ert.el
+  eldev-20240430.1918/eldev-pkg.el
+  eldev-20240430.1918/eldev-plugins.el
+  eldev-20240430.1918/eldev-util.el
+  eldev-20240430.1918/eldev-vc.el
+  eldev-20240430.1918/eldev.el
  ✓ Success:
-  2024-04-30T14:52:15+0000  eldev-20240429.1816.entry
-  2024-04-30T14:52:15+0000  eldev-20240429.1816.tar
-Built eldev in 4.741s, finished at 2024-04-30T14:52:17+0000
+  2024-04-30T17:14:09+0000  eldev-20240429.1816.entry
+  2024-04-30T17:14:09+0000  eldev-20240429.1816.tar
+  2024-04-30T19:36:02+0000  eldev-20240430.1918.entry
+  2024-04-30T19:36:02+0000  eldev-20240430.1918.tar
+Built eldev in 5.310s, finished at 2024-04-30T19:36:04+0000
