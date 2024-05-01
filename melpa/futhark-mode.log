@@ -1,0 +1,26 @@
+Package: futhark-mode
+Fetcher: github
+Source:  https://github.com/diku-dk/futhark-mode.git
+
+Updating /mnt/store/melpa/working/futhark-mode/
+Checking out 98f9e7e890e082d45034f935d311a399326010ef
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/futhark-mode/
+  to /tmp/futhark-modeOdktMp/futhark-mode-20240403.1143
+    futhark-comint.el -> futhark-comint.el
+    futhark-dev.el -> futhark-dev.el
+    futhark-highlight.el -> futhark-highlight.el
+    futhark-indent.el -> futhark-indent.el
+    futhark-mode.el -> futhark-mode.el
+Created futhark-mode-20240403.1143.tar containing:
+  futhark-mode-20240403.1143/
+  futhark-mode-20240403.1143/futhark-comint.el
+  futhark-mode-20240403.1143/futhark-dev.el
+  futhark-mode-20240403.1143/futhark-highlight.el
+  futhark-mode-20240403.1143/futhark-indent.el
+  futhark-mode-20240403.1143/futhark-mode-pkg.el
+  futhark-mode-20240403.1143/futhark-mode.el
+ ✓ Success:
+  2024-05-01T02:32:36+0000  futhark-mode-20240403.1143.entry
+  2024-05-01T02:32:36+0000  futhark-mode-20240403.1143.tar
+Built futhark-mode in 5.192s, finished at 2024-05-01T02:32:39+0000
