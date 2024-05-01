@@ -1391,7 +1391,7 @@
 	      ("Aaron Smith" . "aaron-lua@gelatinous.com"))
 	     (:commit . "1cb83e691627fb92290d452cb08b6c5f73fe19b6"))])
  (macrostep .
-	    [(0 9 2)
+	    [(0 9 3)
 	     ((cl-lib
 	       (0 5)))
 	     "Interactive macro expander" tar
@@ -1400,7 +1400,7 @@
 	      (:maintainer "Jon Oddie" . "j.j.oddie@gmail.com")
 	      (:authors
 	       ("Jon Oddie" . "j.j.oddie@gmail.com"))
-	      (:commit . "633586421e7fc14072cc1ca1655c1103b81a9093"))])
+	      (:commit . "81fcf3dafb761fed82c8c3b1c2dfe6956b62344d"))])
  (magit .
 	[(3 3 0)
 	 ((emacs
