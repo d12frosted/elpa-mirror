@@ -1078,6 +1078,18 @@
 	     (:authors
 	      ("David Andersson" . "l.david.anderssonsverige.nu"))
 	     (:commit . "278cd3e6d5107693aa2bb33189ca503f22f227d0"))])
+ (gptel .
+	[(0 8 5)
+	 ((emacs
+	   (27 1))
+	  (transient
+	   (0 4 0))
+	  (compat
+	   (29 1 4 1)))
+	 "Interact with ChatGPT or other LLMs" tar
+	 ((:url . "https://github.com/karthink/gptel")
+	  (:keywords "convenience")
+	  (:commit . "7b6e3c59009b97dcefafe124aab3a29663ccb088"))])
  (graphql-mode .
 	       [(1 0 0)
 		((emacs
