@@ -34,12 +34,12 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ⁃ No external dependencies outside of core Emacs
 
   With `(setq dape-buffer-window-arrangement 'right)':
-  <https://raw.githubusercontent.com/svaante/dape/resources/dape_0_4_0_right.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/c-right-11.0.0.png>
   And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
   `completion-in-region-function':
-  <https://raw.githubusercontent.com/svaante/dape/resources/dape_0_4_0_gud.png>
-  And with minibuffer config hints:
-  <https://raw.githubusercontent.com/svaante/dape/resources/dape_0_4_0_hint.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/js-gud-11.0.0.png>
+  With Minibuffer adapter configuration hints:
+  <https://raw.githubusercontent.com/svaante/dape/resources/python-minibuffer-hints-11.0.0.png>
 
   Screenshots taken with [modus-operandi-tinted].
 
@@ -115,7 +115,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
     b.out main.c＂'.
   ⁃ No magic, no special variables like `${workspaceFolder}'. Instead,
     functions and variables are resolved before starting a new session.
-  ⁃ Tries to be envision to how debug adapter configuration would be
+  ⁃ Tries to envision how debug adapter configurations would be
     implemented in Emacs if vscode never existed.
 
 
