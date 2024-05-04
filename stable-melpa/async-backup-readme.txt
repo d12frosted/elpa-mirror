@@ -9,4 +9,4 @@ To enable for all files -
 To enable for a specific file -
   `M-x add-file-local-variable RET eval RET (add-hook 'after-save-hook #'async-backup nil t) RET'
 
-See the full documentation at <https://tildegit.org/contrapunctus/async-backup>
+See the full documentation at <https://codeberg.org/contrapunctus/async-backup>
