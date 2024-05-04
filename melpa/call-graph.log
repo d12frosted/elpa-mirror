@@ -1,9 +1,22 @@
 Package: call-graph
 Fetcher: github
-Source:  https://github.com/beacoder/call-graph.git
+Source:  https://github.com/emacsattic/call-graph.git
 
-Updating /mnt/store/melpa/working/call-graph/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: could not read Username for 'https://github.com': No such device or address
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Cloning https://github.com/emacsattic/call-graph.git to /mnt/store/melpa/working/call-graph/
+Checking out 5fd5f3aad35e3561c253870e4d7fa34353b70b7b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/call-graph/
+  to /tmp/call-graphOvLnwh/call-graph-20230222.525
+    call-graph.el -> call-graph.el
+    cg-support.el -> cg-support.el
+Created call-graph-20230222.525.tar containing:
+  call-graph-20230222.525/
+  call-graph-20230222.525/call-graph-pkg.el
+  call-graph-20230222.525/call-graph.el
+  call-graph-20230222.525/cg-support.el
+ ✓ Success:
+  2024-05-03T23:11:08+0000  call-graph-20230222.525.entry
+  2024-05-03T23:11:08+0000  call-graph-20230222.525.tar
+  2024-05-03T01:03:37+0000  call-graph-20240501.1343.entry
+  2024-05-03T01:03:37+0000  call-graph-20240501.1343.tar
+Built call-graph in 39.568s, finished at 2024-05-03T23:11:10+0000

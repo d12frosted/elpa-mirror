@@ -1,9 +1,18 @@
 Package: number
 Fetcher: github
-Source:  https://github.com/chrisdone/number.git
+Source:  https://github.com/emacsattic/number.git
 
-Updating /mnt/store/melpa/working/number/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: could not read Username for 'https://github.com': No such device or address
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Cloning https://github.com/emacsattic/number.git to /mnt/store/melpa/working/number/
+Checking out bbc278d34dbcca83e70e3be855ec98b23debfb99
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/number/
+  to /tmp/numberwWl9H8/number-20170901.1312
+    number.el -> number.el
+Created number-20170901.1312.tar containing:
+  number-20170901.1312/
+  number-20170901.1312/number-pkg.el
+  number-20170901.1312/number.el
+ ✓ Success:
+  2024-05-04T00:00:07+0000  number-20170901.1312.entry
+  2024-05-04T00:00:06+0000  number-20170901.1312.tar
+Built number in 5.271s, finished at 2024-05-04T00:00:09+0000
