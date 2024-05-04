@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://git.spwhitton.name/haskell-tab-indent
 
 Updating /mnt/store/melpa/working/haskell-tab-indent/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.spwhitton.name/haskell-tab-indent/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 1127f46eca40a48be9cd2380df2cfc5f0b694e63
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/haskell-tab-indent/
+  to /tmp/haskell-tab-indentXXifwi/haskell-tab-indent-20200514.1424
+    haskell-tab-indent.el -> haskell-tab-indent.el
+Created haskell-tab-indent-20200514.1424.tar containing:
+  haskell-tab-indent-20200514.1424/
+  haskell-tab-indent-20200514.1424/haskell-tab-indent-pkg.el
+  haskell-tab-indent-20200514.1424/haskell-tab-indent.el
+ ✓ Success:
+  2024-05-04T18:53:07+0000  haskell-tab-indent-20200514.1424.entry
+  2024-05-04T18:53:07+0000  haskell-tab-indent-20200514.1424.tar
+Built haskell-tab-indent in 4.714s, finished at 2024-05-04T18:53:08+0000
