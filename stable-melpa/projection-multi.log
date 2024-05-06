@@ -3,12 +3,13 @@ Fetcher: github
 Source:  https://github.com/mohkale/projection.git
 
 Updating /mnt/store/melpa/working/projection-multi/
-Checking out dc489480a6e4be82e570266202144730b3ddde5f
+Checking out 7978b1218faf6c821260963dcae8d2409488aa6e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection-multi/
-  to /tmp/projection-multiwoveM1/projection-multi-20240316.2222
+  to /tmp/projection-multiNlFowj/projection-multi-20240505.1727
   ! src/projection-multi/projection-multi-cmake.el -> projection-multi-cmake.el
   ! src/projection-multi/projection-multi-ctest.el -> projection-multi-ctest.el
+  ! src/projection-multi/projection-multi-gradle.el -> projection-multi-gradle.el
   ! src/projection-multi/projection-multi-make.el -> projection-multi-make.el
   ! src/projection-multi/projection-multi-meson.el -> projection-multi-meson.el
   ! src/projection-multi/projection-multi-npm-scripts.el -> projection-multi-npm-scripts.el
@@ -17,20 +18,23 @@ Copying files (->) and directories (=>)
   ! src/projection-multi/projection-multi-tox.el -> projection-multi-tox.el
   ! src/projection-multi/projection-multi-yarn-scripts.el -> projection-multi-yarn-scripts.el
   ! src/projection-multi/projection-multi.el -> projection-multi.el
-Created projection-multi-20240316.2222.tar containing:
-  projection-multi-20240316.2222/
-  projection-multi-20240316.2222/projection-multi-cmake.el
-  projection-multi-20240316.2222/projection-multi-ctest.el
-  projection-multi-20240316.2222/projection-multi-make.el
-  projection-multi-20240316.2222/projection-multi-meson.el
-  projection-multi-20240316.2222/projection-multi-npm-scripts.el
-  projection-multi-20240316.2222/projection-multi-pkg.el
-  projection-multi-20240316.2222/projection-multi-poetry-poe.el
-  projection-multi-20240316.2222/projection-multi-rustic.el
-  projection-multi-20240316.2222/projection-multi-tox.el
-  projection-multi-20240316.2222/projection-multi-yarn-scripts.el
-  projection-multi-20240316.2222/projection-multi.el
+Created projection-multi-20240505.1727.tar containing:
+  projection-multi-20240505.1727/
+  projection-multi-20240505.1727/projection-multi-cmake.el
+  projection-multi-20240505.1727/projection-multi-ctest.el
+  projection-multi-20240505.1727/projection-multi-gradle.el
+  projection-multi-20240505.1727/projection-multi-make.el
+  projection-multi-20240505.1727/projection-multi-meson.el
+  projection-multi-20240505.1727/projection-multi-npm-scripts.el
+  projection-multi-20240505.1727/projection-multi-pkg.el
+  projection-multi-20240505.1727/projection-multi-poetry-poe.el
+  projection-multi-20240505.1727/projection-multi-rustic.el
+  projection-multi-20240505.1727/projection-multi-tox.el
+  projection-multi-20240505.1727/projection-multi-yarn-scripts.el
+  projection-multi-20240505.1727/projection-multi.el
  ✓ Success:
-  2024-05-06T07:41:52+0000  projection-multi-20240316.2222.entry
-  2024-05-06T07:41:52+0000  projection-multi-20240316.2222.tar
-Built projection-multi in 4.246s, finished at 2024-05-06T07:41:54+0000
+  2024-05-06T12:34:19+0000  projection-multi-20240316.2222.entry
+  2024-05-06T12:34:19+0000  projection-multi-20240316.2222.tar
+  2024-05-06T15:04:44+0000  projection-multi-20240505.1727.entry
+  2024-05-06T15:04:44+0000  projection-multi-20240505.1727.tar
+Built projection-multi in 9.988s, finished at 2024-05-06T15:04:48+0000
