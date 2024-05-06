@@ -1,15 +1,29 @@
-To be the most powerful translator on Emacs. Supports multiple translation engines such as Google, Bing, deepL.
+Translation framework on Emacs, with high configurability and extensibility.
 
-First, Install it via MELPA or download from github. Make sure this is on your `load-path'.
+ - Support multiple translation engines, such as Google, Bing, deepL, StarDict.
+ - With variety of output styles, such as Buffer, Overlay, Childframe and so on.
+ - With a flexible taker for easy retrieval of translated content and targets.
+ - Support multiple paragraphs/parts and multi-language translation.
+ - Support different http backends, such as url.el, curl. Async and non-blocking.
+ - Support caches, proxy and more.
 
-Then, add following lines to your `.emacs':
+Notice, it is not limited to just being a translation framework. It can fulfill
+any text transformation tasks, such as ChatGPT and more.
+
+Custom it as you need, extend it using your creativity.
+
+You can install it via MELPA or from github. Make sure it is on your `load-path'.
+
+For the most basic use, add the following configuration:
 
   (require 'go-translate)
-  (setq gts-translate-list '(("en" "zh")))
-  (setq gts-default-translator
-       (gts-translator
-        :picker (gts-prompt-picker)
-        :engines (list (gts-google-engine) (gts-google-rpc-engine))
-        :render (gts-buffer-render)))
 
-And start your translate with command `gts-do-translate'.
+  (setq gt-default-translator
+       (gt-translator
+        :taker (gt-taker :langs '(en zh))
+        :engines (list (gt-google-engine) (gt-bing-engine))
+        :render (gt-buffer-render)))
+
+Then start your translate with command `gt-do-translate'.
+
+See README.org for details.
