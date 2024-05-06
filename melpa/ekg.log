@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out 8f050a65837d6d3ec4ea3ba7539541518d061539
+Checking out c23f6672fa1075d11e942dffc1c37701731b94f0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgol2uMy/ekg-20240320.242
+  to /tmp/ekgd2dzvL/ekg-20240506.419
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-embedding.el -> ekg-embedding.el
     ekg-llm.el -> ekg-llm.el
@@ -16,22 +16,22 @@ Copying files (->) and directories (=>)
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekgol2uMy/ekg-20240320.242/doclicense.info
-Generating /tmp/ekgol2uMy/ekg-20240320.242/ekg.info
-Created ekg-20240320.242.tar containing:
-  ekg-20240320.242/
-  ekg-20240320.242/dir
-  ekg-20240320.242/doclicense.info
-  ekg-20240320.242/ekg-auto-save.el
-  ekg-20240320.242/ekg-embedding.el
-  ekg-20240320.242/ekg-llm.el
-  ekg-20240320.242/ekg-logseq.el
-  ekg-20240320.242/ekg-org-roam.el
-  ekg-20240320.242/ekg-pkg.el
-  ekg-20240320.242/ekg-test-utils.el
-  ekg-20240320.242/ekg.el
-  ekg-20240320.242/ekg.info
+Generating /tmp/ekgd2dzvL/ekg-20240506.419/doclicense.info
+Generating /tmp/ekgd2dzvL/ekg-20240506.419/ekg.info
+Created ekg-20240506.419.tar containing:
+  ekg-20240506.419/
+  ekg-20240506.419/dir
+  ekg-20240506.419/doclicense.info
+  ekg-20240506.419/ekg-auto-save.el
+  ekg-20240506.419/ekg-embedding.el
+  ekg-20240506.419/ekg-llm.el
+  ekg-20240506.419/ekg-logseq.el
+  ekg-20240506.419/ekg-org-roam.el
+  ekg-20240506.419/ekg-pkg.el
+  ekg-20240506.419/ekg-test-utils.el
+  ekg-20240506.419/ekg.el
+  ekg-20240506.419/ekg.info
  ✓ Success:
-  2024-05-06T02:06:52+0000  ekg-20240320.242.entry
-  2024-05-06T02:06:52+0000  ekg-20240320.242.tar
-Built ekg in 17.183s, finished at 2024-05-06T02:06:54+0000
+  2024-05-06T06:52:41+0000  ekg-20240506.419.entry
+  2024-05-06T06:52:41+0000  ekg-20240506.419.tar
+Built ekg in 13.147s, finished at 2024-05-06T06:52:43+0000

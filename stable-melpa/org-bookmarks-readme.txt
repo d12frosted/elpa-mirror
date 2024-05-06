@@ -1,1 +1,15 @@
 Usage
+
+1. Record bookmark information into Org mode file.
+
+2. bookmark entry is recorded with format like bellowing:
+
+   #+begin_src org
+   * bookmark title                                         :bookmark:tag1:tag2:
+   :PROPERTIES:
+   :URL:      https://www.example.com
+   :END:
+
+   #+end_src
+
+3. execute command `org-bookmarks' to search and select bookmark to open in web browser.
