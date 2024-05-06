@@ -376,7 +376,7 @@
 	  ("Amy Grinn" . "grinn.amy@gmail.com"))
 	 (:commit . "c65a353e01610633efe20d861393a5d9605bc59d"))])
  (boxy-headings .
-		[(2 1 5)
+		[(2 1 6)
 		 ((emacs
 		   (26 1))
 		  (boxy
@@ -389,7 +389,7 @@
 		  (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
 		  (:authors
 		   ("Amy Grinn" . "grinn.amy@gmail.com"))
-		  (:commit . "08e3bb8b9cb042446ac1c210340d0dbd86c3ec1b"))])
+		  (:commit . "d38a3598753d2c36c4a47b9c4b39123554d58106"))])
  (breadcrumb .
 	     [(1 0 1)
 	      ((emacs
@@ -1226,7 +1226,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20240309)
+      [(20240505)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1235,7 +1235,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "eda749bc689591a8f43a98e002d63b4ef2d4602d"))])
+	(:commit . "6546ced8f4003a5f05d2558bee1f9bb8045862be"))])
  (ef-themes .
 	    [(1 7 0)
 	     ((emacs
@@ -2963,7 +2963,7 @@
 		("Peter Münster" . "pm@a16n.net"))
 	       (:commit . "c08cf5b931960bc12eb782c1fe1ec82266cb4bc8"))])
  (org-real .
-	   [(1 0 8)
+	   [(1 0 9)
 	    ((emacs
 	      (26 1))
 	     (boxy
@@ -2976,7 +2976,7 @@
 	     (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
 	     (:authors
 	      ("Amy Grinn" . "grinn.amy@gmail.com"))
-	     (:commit . "8416364b9f48329dea23ae784e5f6c44de34664d"))])
+	     (:commit . "b6df63b9c8f19c32367b03791ca47410708a10e1"))])
  (org-remark .
 	     [(1 2 2)
 	      ((emacs
@@ -4177,7 +4177,7 @@
 	      ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
 	     (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (track-changes .
-		[(1 1)
+		[(1 2)
 		 ((emacs
 		   (24)))
 		 "API to react to buffer modifications" tar
@@ -4185,7 +4185,7 @@
 		  (:authors
 		   ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
-		  (:commit . "523aca13a45159711d7d9d7561e69d38acdac12a"))])
+		  (:commit . "44036b32ba398cf284320285b60be35874b6eea5"))])
  (tramp .
 	[(2 6 3)
 	 ((emacs
