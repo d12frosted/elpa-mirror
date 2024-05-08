@@ -827,3 +827,29 @@
   │ 
   │ (advice-add 'orderless-regexp :around #'my-orderless-regexp)
   └────
+
+
+12.22 让 pyim 在 Termux Emacs 中正常工作
+────────────────────────────────────────
+
+  Pyim 在 Termux Emacs 中，可能遇到类似下面的报错：
+
+  ┌────
+  │ error in process sentinel: End of file during parsing
+  └────
+
+  这可能是 Termux Emacs 中的 emacs-async 包运行不正常导致的，全拼和双拼
+  的用户可以使用 pyim-dregcache 后端，因为这个后端不需要 emacs-async 提
+  供的功能。
+
+  ┌────
+  │ (require 'pyim-dregcache)
+  │ (setq pyim-dcache-backend 'pyim-dregcache)
+  └────
+
+  形码用户暂时没有什么好办法，可以将其他设备上的 ~/.emacs.d/pyim/dcache
+  目录拷贝到Termux Emacs 对应的目录，然后设置：
+
+  ┌────
+  │ (setq pyim-dcache-auto-update nil)
+  └────
