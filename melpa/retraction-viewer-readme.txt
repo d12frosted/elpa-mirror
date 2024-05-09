@@ -63,12 +63,13 @@ detected using the `retraction-viewer-get-doi-functions' hook.  The
 functions are evaluated until one returns non-nil.  By default, it
 will get the DOI from ebib if called in an ebib buffer
 (`retraction-viewer-get-ebib-doi'), from the bibtex entry-at-point
-if within a bibtex buffer (`retraction-viewer-get-bibtex-doi'), or
-if point is on a DOI (see `retraction-viewer-doi-regexp').
-Additional functions can be written to select a current DOI, and
-should operate by: a) not adjusting match data; b) not adjust
-point/mark; c) not adjust narrowing, and d) fail early (i.e.,
-return nil ASAP).
+if within a bibtex buffer (`retraction-viewer-get-bibtex-doi'),
+from the currently shown elfeed entry if in an `elfeed-show' buffer
+(`retraction-viewer-get-elfeed-doi'), or if point is on a DOI (see
+`retraction-viewer-doi-regexp').  Additional functions can be
+written to select a current DOI, and should operate by: a) not
+adjusting match data; b) not adjust point/mark; c) not adjust
+narrowing, and d) fail early (i.e., return nil ASAP).
 
 ;; Use as a Library
 

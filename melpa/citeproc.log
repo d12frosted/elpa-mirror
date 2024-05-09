@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/andras-simonyi/citeproc-el.git
 
 Updating /mnt/store/melpa/working/citeproc/
-Checking out ce5d92969cd53b40185415a1b57c7681f3f611ef
+Checking out 0b56312227506d43493923a2fba6c436a659e377
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citeproc/
-  to /tmp/citeprocRX4jRT/citeproc-20240505.712
+  to /tmp/citeprocTfYppX/citeproc-20240509.1811
     citeproc-biblatex.el -> citeproc-biblatex.el
     citeproc-bibtex.el -> citeproc-bibtex.el
     citeproc-choose.el -> citeproc-choose.el
@@ -33,36 +33,38 @@ Copying files (->) and directories (=>)
     citeproc-term.el -> citeproc-term.el
     citeproc-test-human.el -> citeproc-test-human.el
     citeproc.el -> citeproc.el
-Created citeproc-20240505.712.tar containing:
-  citeproc-20240505.712/
-  citeproc-20240505.712/citeproc-biblatex.el
-  citeproc-20240505.712/citeproc-bibtex.el
-  citeproc-20240505.712/citeproc-choose.el
-  citeproc-20240505.712/citeproc-cite.el
-  citeproc-20240505.712/citeproc-context.el
-  citeproc-20240505.712/citeproc-date.el
-  citeproc-20240505.712/citeproc-disamb.el
-  citeproc-20240505.712/citeproc-formatters.el
-  citeproc-20240505.712/citeproc-generic-elements.el
-  citeproc-20240505.712/citeproc-itemdata.el
-  citeproc-20240505.712/citeproc-itemgetters.el
-  citeproc-20240505.712/citeproc-lib.el
-  citeproc-20240505.712/citeproc-locale.el
-  citeproc-20240505.712/citeproc-macro.el
-  citeproc-20240505.712/citeproc-name.el
-  citeproc-20240505.712/citeproc-number.el
-  citeproc-20240505.712/citeproc-pkg.el
-  citeproc-20240505.712/citeproc-prange.el
-  citeproc-20240505.712/citeproc-proc.el
-  citeproc-20240505.712/citeproc-rt.el
-  citeproc-20240505.712/citeproc-s.el
-  citeproc-20240505.712/citeproc-sort.el
-  citeproc-20240505.712/citeproc-style.el
-  citeproc-20240505.712/citeproc-subbibs.el
-  citeproc-20240505.712/citeproc-term.el
-  citeproc-20240505.712/citeproc-test-human.el
-  citeproc-20240505.712/citeproc.el
+Created citeproc-20240509.1811.tar containing:
+  citeproc-20240509.1811/
+  citeproc-20240509.1811/citeproc-biblatex.el
+  citeproc-20240509.1811/citeproc-bibtex.el
+  citeproc-20240509.1811/citeproc-choose.el
+  citeproc-20240509.1811/citeproc-cite.el
+  citeproc-20240509.1811/citeproc-context.el
+  citeproc-20240509.1811/citeproc-date.el
+  citeproc-20240509.1811/citeproc-disamb.el
+  citeproc-20240509.1811/citeproc-formatters.el
+  citeproc-20240509.1811/citeproc-generic-elements.el
+  citeproc-20240509.1811/citeproc-itemdata.el
+  citeproc-20240509.1811/citeproc-itemgetters.el
+  citeproc-20240509.1811/citeproc-lib.el
+  citeproc-20240509.1811/citeproc-locale.el
+  citeproc-20240509.1811/citeproc-macro.el
+  citeproc-20240509.1811/citeproc-name.el
+  citeproc-20240509.1811/citeproc-number.el
+  citeproc-20240509.1811/citeproc-pkg.el
+  citeproc-20240509.1811/citeproc-prange.el
+  citeproc-20240509.1811/citeproc-proc.el
+  citeproc-20240509.1811/citeproc-rt.el
+  citeproc-20240509.1811/citeproc-s.el
+  citeproc-20240509.1811/citeproc-sort.el
+  citeproc-20240509.1811/citeproc-style.el
+  citeproc-20240509.1811/citeproc-subbibs.el
+  citeproc-20240509.1811/citeproc-term.el
+  citeproc-20240509.1811/citeproc-test-human.el
+  citeproc-20240509.1811/citeproc.el
  ✓ Success:
   2024-05-09T16:02:26+0000  citeproc-20240505.712.entry
   2024-05-09T16:02:26+0000  citeproc-20240505.712.tar
-Built citeproc in 6.159s, finished at 2024-05-09T16:02:29+0000
+  2024-05-09T18:43:52+0000  citeproc-20240509.1811.entry
+  2024-05-09T18:43:52+0000  citeproc-20240509.1811.tar
+Built citeproc in 11.318s, finished at 2024-05-09T18:43:57+0000
