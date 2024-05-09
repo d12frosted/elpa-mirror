@@ -3,24 +3,28 @@ Fetcher: github
 Source:  https://github.com/kickingvegas/casual-dired.git
 
 Updating /mnt/store/melpa/working/casual-dired/
-Checking out 07eeb64dfe576e2926d49cf0a87801a579885785
+Checking out 9f65992e362c65a3023e4e2bc4853df9e92fa2d4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/casual-dired/
-  to /tmp/casual-diredHldIZP/casual-dired-20240507.1749
+  to /tmp/casual-diredhR6FS2/casual-dired-20240509.108
   ! lisp/casual-dired-settings.el -> casual-dired-settings.el
   ! lisp/casual-dired-sort-by.el -> casual-dired-sort-by.el
+  ! lisp/casual-dired-utils.el -> casual-dired-utils.el
   ! lisp/casual-dired-variables.el -> casual-dired-variables.el
   ! lisp/casual-dired-version.el -> casual-dired-version.el
   ! lisp/casual-dired.el -> casual-dired.el
-Created casual-dired-20240507.1749.tar containing:
-  casual-dired-20240507.1749/
-  casual-dired-20240507.1749/casual-dired-pkg.el
-  casual-dired-20240507.1749/casual-dired-settings.el
-  casual-dired-20240507.1749/casual-dired-sort-by.el
-  casual-dired-20240507.1749/casual-dired-variables.el
-  casual-dired-20240507.1749/casual-dired-version.el
-  casual-dired-20240507.1749/casual-dired.el
+Created casual-dired-20240509.108.tar containing:
+  casual-dired-20240509.108/
+  casual-dired-20240509.108/casual-dired-pkg.el
+  casual-dired-20240509.108/casual-dired-settings.el
+  casual-dired-20240509.108/casual-dired-sort-by.el
+  casual-dired-20240509.108/casual-dired-utils.el
+  casual-dired-20240509.108/casual-dired-variables.el
+  casual-dired-20240509.108/casual-dired-version.el
+  casual-dired-20240509.108/casual-dired.el
  ✓ Success:
-  2024-05-08T19:24:09+0000  casual-dired-20240507.1749.entry
-  2024-05-08T19:24:09+0000  casual-dired-20240507.1749.tar
-Built casual-dired in 8.663s, finished at 2024-05-08T19:24:14+0000
+  2024-05-09T00:38:04+0000  casual-dired-20240507.1749.entry
+  2024-05-09T00:38:04+0000  casual-dired-20240507.1749.tar
+  2024-05-09T03:11:00+0000  casual-dired-20240509.108.entry
+  2024-05-09T03:10:59+0000  casual-dired-20240509.108.tar
+Built casual-dired in 9.072s, finished at 2024-05-09T03:11:04+0000
