@@ -692,6 +692,20 @@
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:commit . "d8888bb67f881a3c4855c9ce7224de18a7dc3901"))])
+ (consult-denote .
+		 [(0 0 0)
+		  ((emacs
+		    (28 1))
+		   (denote
+		    (2 3 0))
+		   (consult
+		    (1 4)))
+		  "Use Consult in tandem with Denote" tar
+		  ((:url . "https://github.com/protesilaos/consult-denote")
+		   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+		   (:authors
+		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
+		   (:commit . "f605131c9add9128eeaf7adb359ba11a66a394e3"))])
  (consult-hoogle .
 		 [(0 2 1)
 		  ((emacs
