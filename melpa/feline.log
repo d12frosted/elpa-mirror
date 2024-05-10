@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://opensource.chee.party/chee/feline-mode
 
 Updating /mnt/store/melpa/working/feline/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://opensource.chee.party/chee/feline-mode/': Could not resolve host: opensource.chee.party
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 8c46b1be9e45a38281aa9ddae79fda3c8e4cb5c5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/feline/
+  to /tmp/felinea3lwma/feline-20230301.1350
+    feline.el -> feline.el
+Created feline-20230301.1350.tar containing:
+  feline-20230301.1350/
+  feline-20230301.1350/feline-pkg.el
+  feline-20230301.1350/feline.el
+ ✓ Success:
+  2024-05-10T02:53:31+0000  feline-20230301.1350.entry
+  2024-05-10T02:53:31+0000  feline-20230301.1350.tar
+Built feline in 5.952s, finished at 2024-05-10T02:53:32+0000
