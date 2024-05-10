@@ -1,5 +1,13 @@
 Usage
 
+0. config example:
+
+(use-package org-bookmarks
+  :ensure t
+  :custom ((org-bookmarks-file "~/Org/Bookmarks/Bookmarks.org")
+           (org-bookmarks-add-org-capture-template t))
+  :commands (org-bookmarks))
+
 1. Record bookmark information into Org mode file.
 
 2. bookmark entry is recorded with format like bellowing:
