@@ -3,8 +3,16 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/discover-my-major.git
 
 Updating /mnt/store/melpa/working/discover-my-major/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: GitLab is not responding
-fatal: unable to access 'https://framagit.org/steckerhalter/discover-my-major.git/': The requested URL returned error: 502
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 66081546eac360c83a9c3270db92a2164288b0d0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/discover-my-major/
+  to /tmp/discover-my-majorvuDhEk/discover-my-major-20180606.511
+    discover-my-major.el -> discover-my-major.el
+Created discover-my-major-20180606.511.tar containing:
+  discover-my-major-20180606.511/
+  discover-my-major-20180606.511/discover-my-major-pkg.el
+  discover-my-major-20180606.511/discover-my-major.el
+ ✓ Success:
+  2024-05-11T11:45:37+0000  discover-my-major-20180606.511.entry
+  2024-05-11T11:45:37+0000  discover-my-major-20180606.511.tar
+Built discover-my-major in 5.010s, finished at 2024-05-11T11:45:38+0000
