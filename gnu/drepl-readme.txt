@@ -6,8 +6,11 @@
 dREPL is a collection of fully featured language shells for Emacs.  At
 the moment it supports the following interpreters:
 
-• *Python:* requires [IPython].
-• *Lua:* requires [luarepl] and [dkjson].
+• *Python*: requires [IPython].
+• *Lua*: requires [luarepl] and [dkjson].
+• Various *SQL and NoSQL* databases: based on [usql], requires a Go
+  compiler.
+• *Node.js*: uses the built-in REPL library.
 
 The following features are available, subject to variations across
 different REPLs (IPython supports all of them):
@@ -31,6 +34,8 @@ then the backend implementation is also reasonably straightforward.
 [luarepl] <https://luarocks.org/modules/hoelzro/luarepl>
 
 [dkjson] <https://luarocks.org/modules/dhkolf/dkjson>
+
+[usql] <https://github.com/xo/usq>
 
 [comint-mime] <https://github.com/astoff/comint-mime>
 
@@ -109,9 +114,9 @@ then the backend implementation is also reasonably straightforward.
     `rawio' (IO, if it occurs, should not be framed) or `busy' (no IO is
     allowed).
 
-  Note: Some changes in the tracked state happen implicitly.  For
-  instance, when an editor request is sent, the tracked state changes to
-  `busy' or `rawio' depending on the operation type.
+  Note: The editor keeps track of the interpreter status and implicitly
+  switches to `busy' every time a request is sent.  It is the
+  interpreter's responsibility to notify about all other status changes.
 
 
 2.2 `eval' (editor request)
@@ -134,12 +139,13 @@ then the backend implementation is also reasonably straightforward.
 
   Parameters:
   • `code': A code snippet containing the completion point.
-  • `offset': The offset (zero-based) from start of `code' to the point
-    of completion.
+  • `pos': The offset (zero-based) from start of `code' to the point of
+    completion.
 
   Response:
-  • `candidates' (optional): A list of objects, each containing the
-    following attributes.
+  • `prefix' (optional): The portion of code that is being completed.
+  • `candidates' (optional): A list of completion candidates, either
+    strings or objects containing the following attributes:
     • `text': The completed text, including the existing prefix.
     • `annot': Annotation text to be displayed next to the candidate in
       the completion UI.
@@ -170,7 +176,7 @@ then the backend implementation is also reasonably straightforward.
 
   Parameters:
   • `code': A code snippet.
-  • `offset': An offset (zero-based) from start of `code' containing the
+  • `pos': An offset (zero-based) from start of `code' containing the
     symbol of interest.
 
   Result: The response may be empty (no information on the symbol) or as
