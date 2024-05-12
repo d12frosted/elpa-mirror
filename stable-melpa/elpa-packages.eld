@@ -130,7 +130,7 @@
   (angular-mode :url "https://github.com/emacsattic/angular-mode.git")
   (angular-snippets :url "https://github.com/magnars/angular-snippets.el.git")
   (anki-connect :url "https://github.com/lujun9972/anki-connect.el.git")
-  (anki-editor :url "https://github.com/louietan/anki-editor.git")
+  (anki-editor :url "https://github.com/anki-editor/anki-editor.git")
   (anki-editor-view :url "https://gitlab.com/vherrmann/anki-editor-view.git")
   (anki-mode :url "https://github.com/davidshepherd7/anki-mode.git")
   (anki-vocabulary :url "https://github.com/lujun9972/anki-vocabulary.el.git")

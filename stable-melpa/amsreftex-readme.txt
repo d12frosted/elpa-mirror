@@ -63,6 +63,7 @@ in the unlikely event that you want to sort by first name
 then last name!
 
 NEWS:
+v0.3.2: restore font-locking for auctex version >=14
 v0.3.1: doc-string changes for more byte-compiler calm.
 v0.3: invisible changes to sooth the byte compliler.
 v0.2: -`amsreftex-sort-bibliography' added
