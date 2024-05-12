@@ -4356,7 +4356,7 @@
 		   (:url . "https://elpa.gnu.org/packages/uniquify-files.html")
 		   (:commit . "1d76b4f0e283afaff2be053d85f8726ffc3abd6e"))])
  (urgrep .
-	 [(0 4 1)
+	 [(0 5 0)
 	  ((emacs
 	    (27 1))
 	   (compat
@@ -4366,7 +4366,7 @@
 	  "Universal recursive grep" tar
 	  ((:url . "https://github.com/jimporter/urgrep")
 	   (:keywords "grep" "search")
-	   (:commit . "8169f5b5646b606d1273e1230aaf827cdd44a770"))])
+	   (:commit . "df0bb61b3b99c9d1dabec42cb560a84230d20a4e"))])
  (url-http-ntlm .
 		[(2 0 5)
 		 ((cl-lib

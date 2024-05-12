@@ -37,9 +37,10 @@ Isearch-like key bindings to let you modify the search's behavior:
 
 | Key binding                 | Action                                   |
 |:----------------------------|:-----------------------------------------|
+| <kbd>M-s</kbd> <kbd>h</kbd> | Describe key bindings                    |
 | <kbd>M-s</kbd> <kbd>r</kbd> | Toggle regexp search                     |
-| <kbd>M-s</kbd> <kbd>c</kbd> | Toggle case sensitivity                  |
-| <kbd>M-s</kbd> <kbd>h</kbd> | Toggle searching in hidden files         |
+| <kbd>M-s</kbd> <kbd>c</kbd> | Toggle case folding                      |
+| <kbd>M-s</kbd> <kbd>H</kbd> | Toggle searching in hidden files         |
 | <kbd>M-s</kbd> <kbd>f</kbd> | Set wildcards to filter files¹           |
 | <kbd>M-s</kbd> <kbd>C</kbd> | Set number of lines of context²          |
 | <kbd>M-s</kbd> <kbd>B</kbd> | Set number of lines of leading context²  |
@@ -52,6 +53,22 @@ Isearch-like key bindings to let you modify the search's behavior:
 
 In addition to the above, you can call `urgrep-run-command`, which works like
 `urgrep` but allows you to manually edit the command before executing it.
+
+### Modifying your search
+
+After performing a search, you can adjust an existing query with <kbd>C-u</kbd>
+<kbd>g</kbd>, reopening the original search prompt. You can also adjust some of
+the search options, such as case folding, immediately:
+
+| Key binding  | Action                            |
+|:-------------|:----------------------------------|
+| <kbd>c</kbd> | Toggle case folding               |
+| <kbd>H</kbd> | Toggle searching in hidden files  |
+| <kbd>C</kbd> | Expand lines of context¹          |
+| <kbd>B</kbd> | Expand lines of leading context¹  |
+| <kbd>A</kbd> | Expand lines of trailing context¹ |
+
+> 1. Expand by one line by default, or by *N* lines with a prefix argument
 
 ### Configuring the tool to use
 
