@@ -292,7 +292,90 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 <https://www.fsf.org/licensing/contributor-faq>
 
 
-6 Bugs and issues
+6 Performance
+═════════════
+
+  Some minor gains to performance in the debugger can be achieved in
+  changing Emacs configuration values for process interaction and
+  garbage collection.
+
+
+6.1 `gc-cons-threshold'
+───────────────────────
+
+  This variable controls the frequency of garbage collection in Emacs.
+  Too high a value will lead to increased system memory pressure and
+  longer stalls, and too low a value will result in extra interruptions
+  and context switches (poor performance).
+
+  According to [GNU Emacs Maintainer Eli Zaretskii]:
+
+  ┌────
+  │ My suggestion is to repeatedly multiply gc-cons-threshold by 2 until you stop seeing significant improvements in
+  │ responsiveness, and in any case not to increase by a factor larger than 100 or somesuch. If even a 100-fold increase
+  │ doesn't help, there's some deeper problem with the Lisp code which produces so much garbage, or maybe GC is not the
+  │ reason for slowdown.
+  └────
+
+
+  Abiding the upper end of that advice, you can try to set
+  `gc-cons-threshold' to 100x the original value:
+
+  ┌────
+  │ (setq gc-cons-threshold 80000000) ;; original value * 100
+  └────
+
+
+[GNU Emacs Maintainer Eli Zaretskii]
+<https://www.reddit.com/r/emacs/comments/brc05y/comment/eofulix/>
+
+
+6.2 `read-process-output-max'
+─────────────────────────────
+
+  The default `read-process-output-max' of 4096 bytes may inhibit
+  performance to some degree, also.
+
+
+6.2.1 Linux
+╌╌╌╌╌╌╌╌╌╌╌
+
+  On Linux, you should be able to set it up to about `1mb'.  To check
+  the max value, check the output of:
+
+  ┌────
+  │ cat /proc/sys/fs/pipe-max-size
+  └────
+
+  To set it:
+
+  ┌────
+  │ (setq read-process-output-max (* 1024 1024)) ;; 1mb
+  └────
+
+
+6.2.2 Mac OS
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+  For Mac OS, there isn't an easy way to see the operating system
+  pipe-max-size.  It's probably about `64kb'.
+
+  ┌────
+  │ (setq read-process-output-max (* 64 1024)) ;; 64k
+  └────
+
+
+6.2.3 Windows
+╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  There doesn't seem to be a limit for Windows.  You can try `1mb'.
+
+  ┌────
+  │ (setq read-process-output-max (* 1024 1024)) ;; 1mb
+  └────
+
+
+7 Bugs and issues
 ═════════════════
 
   Before reporting any issues `(setq dape-debug t)' and take a look at
@@ -303,7 +386,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   a breaking you workflow.
 
 
-7 Acknowledgements
+8 Acknowledgements
 ══════════════════
 
   Big thanks to João Távora for the input and jsonrpc; the project

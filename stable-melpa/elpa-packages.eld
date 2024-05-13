@@ -3597,6 +3597,7 @@
   (oauth :url "https://gitlab.com/fvdbeek/emacs-oauth.git")
   (oauth2-auto :url "https://github.com/telotortium/emacs-oauth2-auto.git")
   (oauth2-request :url "https://github.com/conao3/oauth2-request.el.git")
+  (ob-acl2 :url "https://github.com/tani/ob-acl2.git")
   (ob-ada-spark :url "https://github.com/rocher/ob-ada-spark.git")
   (ob-applescript :url "https://github.com/stig/ob-applescript.el.git")
   (ob-async :url "https://github.com/astahlman/ob-async.git")

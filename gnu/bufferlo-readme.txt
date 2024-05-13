@@ -12,22 +12,24 @@ with the standard frame and tab management facilities, including
 undeletion of frames and tabs, tab duplication and moving, frame
 cloning, and persisting sessions (via desktop.el).
 
-A buffer is added to the local buffer list when it is displayed in the
-frame/tab (e.g., by opening a new file in the tab or by switching to the
-buffer from the global buffer list).  In addition, bufferlo provides
-functions that allow the manipulation of the local buffer list.
-Bufferlo does not touch the global buffer list or the existing
-buffer-management facilities.  Use the equivalent bufferlo variants to
-work with the frame/tab local buffer list.
+With bufferlo, every frame or tab (if you use tab-bar tabs) has an
+additional manageable local buffer list.  A buffer is added to the local
+buffer list when displayed in the frame/tab (e.g., by opening a new file
+in the tab or by switching to the buffer from the global buffer list).
+Bufferlo provides extensive management functions for the local list and
+frame/tab-local variants of the switch-buffer function, buffer menu, and
+Ibuffer.  In addition, you can configure any command that selects a
+buffer to use the local buffer list (bufferlo anywhere).  Bufferlo also
+allows you to bookmark and persist the state of individual frames or
+tabs.
 
 The packages [frame-bufs] (unmaintained) and [beframe] provide similar
-functionality, but only at the frame level, without support for tabs and
-desktop.el.
-
-You may also have a look at full workspace solutions like [bufler]
-(automatic rule-based workspace management and buffer grouping) or
-[perspective] (comprehensive workspace isolation, workspace merging,
-workspace persistence).  They work quite differently than bufferlo.
+functionality, but only at the frame level, without support for tabs.
+You may also have a look at (more different) workspace-oriented
+solutions like [bufler] (rule-based workspace management and buffer
+grouping), [perspective] (comprehensive workspace isolation and
+persistence), or [activities.el] (purpose-based session management on
+frame/tab level).
 
 
 [frame-bufs] <https://github.com/alpaker/frame-bufs>
@@ -37,6 +39,8 @@ workspace persistence).  They work quite differently than bufferlo.
 [bufler] <https://github.com/alphapapa/bufler.el>
 
 [perspective] <https://github.com/nex3/perspective-el>
+
+[activities.el] <https://github.com/alphapapa/activities.el>
 
 
 1 Installation
@@ -78,6 +82,9 @@ workspace persistence).  They work quite differently than bufferlo.
   • `bufferlo-list-orphan-buffers': Display a list of orphan buffers in
     a buffer-menu buffer.  Orphan buffers are buffers that are not in
     any frame/tab's local buffer list.
+
+  The functions `previous-buffer' and `next-buffer' are automatically
+  aware of the local buffer list when `bufferlo-mode' is enabled.
 
   Bufferlo provides functions to manage the local buffer lists:
   • `bufferlo-clear': Clear the frame/tab's buffer list.
@@ -213,7 +220,57 @@ workspace persistence).  They work quite differently than bufferlo.
   └────
 
 
-2.3 Initial Buffer
+2.3 Bookmarking Tabs and Frames
+───────────────────────────────
+
+  Bufferlo lets you bookmark the current editing state of individual
+  frames and tabs (windows and local buffers, i.e., the "session").
+  This allows persisting and restoring the state of a frame or tab
+  within or between Emacs sessions.
+
+  This feature has similarities to [activities.el] and [bookmark-view]
+  but with awareness of bufferlo's local buffer list.
+
+  A tab bookmark includes the tab's window configuration, the local
+  buffer list, and the state (not the contents) of all bookmarkable
+  local buffers.  A frame bookmark saves the entire frame with all its
+  tabs and their states.
+
+  The state of non-bookmarkable buffers is not saved.  However, when
+  still open, they are included in the restored tab/frame.
+
+  Tab bookmark functions:
+  • `bufferlo-bookmark-tab-save': Save the current tab as a bookmark.
+  • `bufferlo-bookmark-tab-load': Load a tab bookmark.  This replaces
+    the current tab.
+  • `bufferlo-bookmark-tab-save-current': Save the current tab to its
+    associated bookmark (*).
+  • `bufferlo-bookmark-tab-load-current': Load the current tab from its
+    associated bookmark (*).
+
+  Frame bookmark functions:
+  • `bufferlo-bookmark-frame-save': Save the current frame as a
+    bookmark.
+  • `bufferlo-bookmark-frame-load': Load a frame bookmark.  This
+    replaces the current frame.
+  • `bufferlo-bookmark-frame-save-current': Save the current frame to
+    its associated bookmark (*).
+  • `bufferlo-bookmark-frame-load-current': Load the current frame from
+    its associated bookmark (*).
+
+  Restoring bookmarks correctly handles renamed buffers with unchanged
+  file association (e.g., when Emacs had to "uniquify" buffer names).
+
+  (*) The associated bookmark is the bookmark from which the frame/tab
+  was loaded or to which it was saved.
+
+
+[activities.el] <https://github.com/alphapapa/activities.el>
+
+[bookmark-view] <https://github.com/minad/bookmark-view>
+
+
+2.4 Initial Buffer
 ──────────────────
 
   By default, the currently active buffer is shown in a newly created
@@ -253,15 +310,15 @@ workspace persistence).  They work quite differently than bufferlo.
   └────
 
 
-2.4 Bufferlo Anywhere
+2.5 Bufferlo Anywhere
 ─────────────────────
 
-  "Bufferlo anywhere" is an optional feature that lets you have
-  bufferlo's frame/tab-local buffer list anywhere you like, i.e. in any
-  command with interactive buffer selection (via `read-buffer', e.g.,
-  `diff-buffers', `make-indirect-buffer', …) – not just in the
-  switch-buffer facilities.  You can configure which commands use
-  bufferlo's local list and which use the global list.
+  "Bufferlo anywhere" lets you have bufferlo's frame/tab-local buffer
+  list anywhere you like, i.e. in any command with interactive buffer
+  selection (via `read-buffer', e.g., `diff-buffers',
+  `make-indirect-buffer', …) – not just in the switch-buffer facilities.
+  You can configure which commands use bufferlo's local list and which
+  use the global list.
 
   Enable `bufferlo-anywhere-mode' to use bufferlo's local buffer list by
   default.  Customize `bufferlo-anywhere-filter' and
@@ -270,6 +327,6 @@ workspace persistence).  They work quite differently than bufferlo.
   `bufferlo-anywhere-disable-prefix', you can temporarily disable
   `bufferlo-anywhere-mode' for the next command.
 
-  Instead the minor mode, you can use the command prefix
+  Instead of the minor mode, you can use the command prefix
   `bufferlo-anywhere-enable-prefix', which only temporarily enables
   bufferlo's local buffer list for the next command.
