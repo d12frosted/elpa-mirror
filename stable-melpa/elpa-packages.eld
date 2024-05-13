@@ -4313,6 +4313,7 @@
   (prognth :url "https://github.com/Fuco1/prognth.git")
   (programmer-dvorak :url "https://github.com/yangchenyun/programmer-dvorak.git")
   (project-abbrev :url "https://github.com/jcs-elpa/project-abbrev.git")
+  (project-butler :url "https://codeberg.org/jabbo/project-butler.git")
   (project-explorer :url "https://github.com/sabof/project-explorer.git")
   (project-mode-line-tag :url "https://github.com/fritzgrabo/project-mode-line-tag.git")
   (project-persist :url "https://github.com/rdallasgray/project-persist.git")
