@@ -3,8 +3,7 @@ Overview
 
 This module lets you access the PostgreSQL object-relational DBMS from Emacs, using its
 socket-level frontend/backend protocol. The module is capable of automatic type coercions from a
-range of SQL types to the equivalent Emacs Lisp type. This is a low level API, and won't be
-useful to end users.
+range of SQL types to the equivalent Emacs Lisp type.
 
 Supported features:
 
@@ -18,10 +17,14 @@ Supported features:
 
  - Asynchronous handling of LISTEN/NOTIFY notification messages from PostgreSQL, allowing the
    implementation of publish-subscribe type architectures (PostgreSQL as an "event broker" or
-   "message bus" and Emacs as event publisher and consumer.
+   "message bus" and Emacs as event publisher and consumer).
 
  - Support for PostgreSQL's extended query syntax, that allows for parameterized queries to
    protect from SQL injection issues.
+
+This is a low level API, and won't be useful to end users. If you're looking for a
+browsing/editing interface to PostgreSQL, see the PGmacs module from
+https://github.com/emarsden/pgmacs/.
 
 
 Entry points
