@@ -3,24 +3,7 @@ Fetcher: git
 Source:  https://git.thanosapollo.org/gnosis
 
 Updating /mnt/store/melpa/working/gnosis/
-Checking out bd9de41126d8752d48d38b5b9b3680ef0cd6b735
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosisf2EO5t/gnosis-20240510.918
-    gnosis-algorithm.el -> gnosis-algorithm.el
-    gnosis-string-edit.el -> gnosis-string-edit.el
-    gnosis.el -> gnosis.el
-  ! doc/gnosis.info -> gnosis.info
-  ! doc/gnosis.texi -> gnosis.texi
-Created gnosis-20240510.918.tar containing:
-  gnosis-20240510.918/
-  gnosis-20240510.918/dir
-  gnosis-20240510.918/gnosis-algorithm.el
-  gnosis-20240510.918/gnosis-pkg.el
-  gnosis-20240510.918/gnosis-string-edit.el
-  gnosis-20240510.918/gnosis.el
-  gnosis-20240510.918/gnosis.info
- ✓ Success:
-  2024-05-13T19:20:39+0000  gnosis-20240510.918.entry
-  2024-05-13T19:20:39+0000  gnosis-20240510.918.tar
-Built gnosis in 6.530s, finished at 2024-05-13T19:20:41+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.thanosapollo.org/gnosis/': The requested URL returned error: 530
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
