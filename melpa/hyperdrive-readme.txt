@@ -13,8 +13,8 @@ https://melpa.org/#/getting-started
 Once you've set up MELPA, run
 M-x package-install RET hyperdrive RET
 
-hyperdrive.el relies on hyper-gateway for connecting to the P2P network:
-https://github.com/RangerMauve/hyper-gateway
+hyperdrive.el relies on hyper-gateway-ushin for connecting to the P2P network:
+https://git.sr.ht/~ushin/hyper-gateway-ushin
 
 Installation instructions:
-https://github.com/RangerMauve/hyper-gateway#how-do-i-install-hyper-gateway
+https://git.sr.ht/~ushin/hyper-gateway-ushin/#installation
