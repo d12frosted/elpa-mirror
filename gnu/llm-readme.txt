@@ -158,7 +158,8 @@
 ──────────
 
   [Claude] is Anthropic's large language model.  It does not support
-  embeddings.  You can set it up with the following parameters:
+  embeddings.  It does support function calling, but currently not in
+  streaming.  You can set it up with the following parameters:
 
   `:key': The API key you get from [Claude's settings page].  This is
   required.  `:chat-model': One of the [Claude models].  Defaults to
@@ -226,21 +227,9 @@
   parameter to the provider, since the model choice is already set once
   the server starts.
 
-  Llama.cpp does not have native chat interfaces, so is not as good at
-  multi-round conversations as other solutions such as Ollama.  It will
-  perform better at single-responses.  However, it does support Open
-  AI's request format for models that are good at conversation.  If you
-  are using one of those models, you should probably use the Open AI
-  Compatible provider instead to connect to Llama CPP.
-
-  The parameters default to optional values, so mostly users should just
-  be creating a model with `(make-llm-llamacpp)'.  The parameters are:
-  • `:scheme': The scheme (http/https) for the connection to llama.cpp.
-    This default to "http".
-  • `:host': The host that llama.cpp server is run on.  This is optional
-    and will default to localhost.
-  • `:port': The port that llama.cpp server is run on.  This is optional
-    and will default to 8080, the default llama.cpp port.
+  There is a deprecated provider, however it is no longer needed.
+  Instead, llama cpp is Open AI compatible, so the Open AI Compatible
+  provider should work.
 
 
 [llama.cpp] <https://github.com/ggerganov/llama.cpp>
@@ -309,8 +298,7 @@
 ──────────────────
 
   • `llm-chat provider prompt': With user-chosen `provider' , and a
-    `llm-chat-prompt' structure (containing context, examples,
-    interactions, and parameters such as temperature and max tokens),
+    `llm-chat-prompt' structure (created by `llm-make-chat-prompt'),
     send that prompt to the LLM and wait for the string output.
   • `llm-chat-async provider prompt response-callback error-callback':
     Same as `llm-chat', but executes in the background.  Takes a
@@ -348,14 +336,19 @@
     model isn't selected or known by this library.
 
     And the following helper functions:
-    • `llm-make-simple-chat-prompt text': For the common case of just
-      wanting a simple text prompt without the richness that
-      `llm-chat-prompt' struct provides, use this to turn a string into
-      a `llm-chat-prompt' that can be passed to the main functions
-      above.
-    • `llm-chat-prompt-to-text prompt': Somewhat opposite of the above,
-      from a prompt, return a string representation.  This is not
-      usually suitable for passing to LLMs, but for debugging purposes.
+    • `llm-make-chat-prompt text &keys context examples functions
+          temperature max-tokens': This is how you make prompts.  `text'
+          can be a string (the user input to the llm chatbot), or a list
+          representing a series of back-and-forth exchanges, of odd
+          number, with the last element of the list representing the
+          user's latest input.  This supports inputting context (also
+          commonly called a system prompt, although it isn't guaranteed
+          to replace the actual system prompt), examples, and other
+          important elements, all detailed in the docstring for this
+          function.
+    • `llm-chat-prompt-to-text prompt': From a prompt, return a string
+      representation.  This is not usually suitable for passing to LLMs,
+      but for debugging purposes.
     • `llm-chat-streaming-to-point provider prompt buffer point
       finish-callback': Same basic arguments as `llm-chat-streaming',
       but will stream to `point' in `buffer'.
@@ -376,15 +369,17 @@
 ───────────────────────────────
 
   Conversations can take place by repeatedly calling `llm-chat' and its
-  variants.  For a conversation, the entire prompt must be a variable,
-  because the `llm-chat-prompt-interactions' slot will be getting
-  changed by the chat functions to store the conversation.  For some
-  providers, this will store the history directly in
-  `llm-chat-prompt-interactions', but for others (such as ollama), the
-  conversation history is opaque.  For that reason, the correct way to
-  handle a conversation is to repeatedly call `llm-chat' or variants,
-  and after each time, add the new user text with
-  `llm-chat-prompt-append-response'.  The following is an example:
+  variants.  The prompt should be constructed with
+  `llm-make-chat-prompt'. For a conversation, the entire prompt must be
+  kept as a variable, because the `llm-chat-prompt-interactions' slot
+  will be getting changed by the chat functions to store the
+  conversation.  For some providers, this will store the history
+  directly in `llm-chat-prompt-interactions', but other LLMs have an
+  opaque conversation history.  For that reason, the correct way to
+  handle a conversation is to repeatedly call `llm-chat' or variants
+  with the same prompt structure, kept in a variable, and after each
+  time, add the new user text with `llm-chat-prompt-append-response'.
+  The following is an example:
 
   ┌────
   │ (defvar-local llm-chat-streaming-prompt nil)
@@ -392,7 +387,7 @@
   │   "Called when the user has input TEXT as the next input."
   │   (if llm-chat-streaming-prompt
   │       (llm-chat-prompt-append-response llm-chat-streaming-prompt text)
-  │     (setq llm-chat-streaming-prompt (llm-make-simple-chat-prompt text))
+  │     (setq llm-chat-streaming-prompt (llm-make-chat-prompt text))
   │     (llm-chat-streaming-to-point provider llm-chat-streaming-prompt (current-buffer) (point-max) (lambda ()))))
   └────
 
@@ -403,11 +398,15 @@
   The interactions in a prompt may be modified by conversation or by the
   conversion of the context and examples to what the LLM understands.
   Different providers require different things from the interactions.
-  Some can handle system prompts, some cannot.  Some may have richer
-  APIs for examples and context, some not.  Do not attempt to read or
-  manipulate `llm-chat-prompt-interactions' after initially setting it
-  up for the first time, because you are likely to make changes that
-  only work for some providers.
+  Some can handle system prompts, some cannot.  Some require alternating
+  user and assistant chat interactions, others can handle anything.
+  It's important that clients keep to behaviors that work on all
+  providers.  Do not attempt to read or manipulate
+  `llm-chat-prompt-interactions' after initially setting it up for the
+  first time, because you are likely to make changes that only work for
+  some providers.  Similarly, don't directly create a prompt with
+  `make-llm-chat-prompt', because it is easy to create something that
+  wouldn't work for all providers.
 
 
 4.5 Function calling
@@ -434,14 +433,14 @@
   function). *Not every LLM can handle function calling, and those that
   do not will ignore the functions entirely*. The function
   `llm-capabilities' will return a list with `function-calls' in it if
-  the LLM supports function calls. Right now only Gemini, Vertex and
-  Open AI support function calling. Ollama should get function calling
-  soon. However, even for LLMs that handle function calling, there is a
-  fair bit of difference in the capabilities. Right now, it is possible
-  to write function calls that succeed in Open AI but cause errors in
-  Gemini, because Gemini does not appear to handle functions that have
-  types that contain other types.  So client programs are advised for
-  right now to keep function to simple types.
+  the LLM supports function calls. Right now only Gemini, Vertex,
+  Claude, and Open AI support function calling. Ollama should get
+  function calling soon. However, even for LLMs that handle function
+  calling, there is a fair bit of difference in the capabilities. Right
+  now, it is possible to write function calls that succeed in Open AI
+  but cause errors in Gemini, because Gemini does not appear to handle
+  functions that have types that contain other types.  So client
+  programs are advised for right now to keep function to simple types.
 
   The way to call functions is to attach a list of functions to the
   `llm-function-call' slot in the prompt. This is a list of
