@@ -682,7 +682,7 @@
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "8d4e8a366681def88751f5e9975738ecd3180deb"))])
  (consult .
-	  [(1 5)
+	  [(1 6)
 	   ((emacs
 	     (27 1))
 	    (compat
@@ -691,7 +691,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "d8888bb67f881a3c4855c9ce7224de18a7dc3901"))])
+	    (:commit . "6eba1a3fa8e13681091a30b2490a03bdce5f243a"))])
  (consult-denote .
 		 [(0 0 0)
 		  ((emacs
@@ -1321,14 +1321,14 @@
 		     (:url . "https://elpa.gnu.org/packages/electric-spacing.html")
 		     (:commit . "122ac5d08c3d3d91251752136abab9721d90e36c"))])
  (elisp-benchmarks .
-		   [(1 14)
+		   [(1 15)
 		    nil "elisp benchmarks collection" tar
 		    ((:keywords "languages" "lisp")
-		     (:maintainer "Andrea Corallo" . "akrl@sdf.org")
+		     (:maintainer "Andrea Corallo" . "acorallo@gnu.org")
 		     (:authors
-		      ("Andrea Corallo" . "akrl@sdf.org"))
+		      ("Andrea Corallo" . "acorallo@gnu.org"))
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
-		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
+		     (:commit . "869a51d70200b2e86e0b78793f4a99c8e690b996"))])
  (ellama .
 	 [(0 9 3)
 	  ((emacs
@@ -2181,7 +2181,7 @@
 		(:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
 		(:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx .
-       [(1 6)
+       [(1 7)
 	((emacs
 	  (27 1))
 	 (compat
@@ -2192,7 +2192,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "f4abad42cd0bdcff62ac325a644cb8faad186a4b"))])
+	 (:commit . "3c36f1eb31713869ffbdbf55971671efa4f01966"))])
  (jit-spell .
 	    [(0 4)
 	     ((emacs
