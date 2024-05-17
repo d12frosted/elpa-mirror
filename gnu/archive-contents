@@ -2401,15 +2401,17 @@
 	    ("Adam Porter" . "adam@alphapapa.net"))
 	   (:commit . "61c511541af474027c012de7063ddfdb3f8cc780"))])
  (llm .
-      [(0 14 2)
+      [(0 14 3)
        ((emacs
-	 (28 1)))
+	 (28 1))
+	(plz
+	 (0 8)))
        "Interface to pluggable llm backends" tar
        ((:url . "https://github.com/ahyatt/llm")
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "efe218ac13144ea8f062912da12ac8599162e705"))])
+	(:commit . "0f25d08218bdd3ea808d6d15328482327a551471"))])
  (lmc .
       [(1 4)
        nil "Little Man Computer in Elisp" tar
