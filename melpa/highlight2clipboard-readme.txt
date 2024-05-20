@@ -23,6 +23,21 @@ Copying formatted text to the clipboard is highly system specific.
 Currently, Mac OS X and MS-Windows are supported. Contributions for
 other systems are most welcome.
 
+Windows:
+
+On Windows, a support script written in Ruby is used. For this to
+work, Ruby most be installed on the system.
+
+macOS:
+
+On macOS, a support script written in python is used to access the
+clipboard. The module `AppKit' must be installed. This can be done
+using the following command:
+
+    pip install -U PyObjC
+
+You might need to use a version-specific variant, such as `pip3'.
+
 Known problems:
 
 Font Lock mode, the system providing syntax highlighting in Emacs,

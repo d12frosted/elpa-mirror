@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/liushihao456/symbols-outline.el.git
 
 Updating /mnt/store/melpa/working/symbols-outline/
-Checking out af4cba0c409a38e25eb572687a3a6848953ef868
+Checking out bfebe73b1322cdc32353375b55f5f56aad85fb57
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/symbols-outline/
-  to /tmp/symbols-outlinenI2tPO/symbols-outline-20231229.941
+  to /tmp/symbols-outlinelTtbXD/symbols-outline-20240517.819
     symbols-outline-ctags.el -> symbols-outline-ctags.el
     symbols-outline-follow-mode.el -> symbols-outline-follow-mode.el
     symbols-outline-lsp.el -> symbols-outline-lsp.el
@@ -15,80 +15,82 @@ Copying files (->) and directories (=>)
     symbols-outline-svg-icon.el -> symbols-outline-svg-icon.el
     symbols-outline.el -> symbols-outline.el
     icons => icons
-Created symbols-outline-20231229.941.tar containing:
-  symbols-outline-20231229.941/
-  symbols-outline-20231229.941/icons/
-  symbols-outline-20231229.941/icons/alias.svg
-  symbols-outline-20231229.941/icons/annotation.svg
-  symbols-outline-20231229.941/icons/array.svg
-  symbols-outline-20231229.941/icons/boolean.svg
-  symbols-outline-20231229.941/icons/chapter.svg
-  symbols-outline-20231229.941/icons/chevron-down.svg
-  symbols-outline-20231229.941/icons/chevron-right.svg
-  symbols-outline-20231229.941/icons/class.svg
-  symbols-outline-20231229.941/icons/const.svg
-  symbols-outline-20231229.941/icons/constant.svg
-  symbols-outline-20231229.941/icons/constructor.svg
-  symbols-outline-20231229.941/icons/custom.svg
-  symbols-outline-20231229.941/icons/derivedMode.svg
-  symbols-outline-20231229.941/icons/enum.svg
-  symbols-outline-20231229.941/icons/enumerator.svg
-  symbols-outline-20231229.941/icons/enummember.svg
-  symbols-outline-20231229.941/icons/error.svg
-  symbols-outline-20231229.941/icons/event.svg
-  symbols-outline-20231229.941/icons/externvar.svg
-  symbols-outline-20231229.941/icons/face.svg
-  symbols-outline-20231229.941/icons/field.svg
-  symbols-outline-20231229.941/icons/file.svg
-  symbols-outline-20231229.941/icons/function.svg
-  symbols-outline-20231229.941/icons/group.svg
-  symbols-outline-20231229.941/icons/inline.svg
-  symbols-outline-20231229.941/icons/interface.svg
-  symbols-outline-20231229.941/icons/key.svg
-  symbols-outline-20231229.941/icons/l4subsection.svg
-  symbols-outline-20231229.941/icons/l5subsection.svg
-  symbols-outline-20231229.941/icons/local.svg
-  symbols-outline-20231229.941/icons/macro.svg
-  symbols-outline-20231229.941/icons/macroparam.svg
-  symbols-outline-20231229.941/icons/majorMode.svg
-  symbols-outline-20231229.941/icons/member.svg
-  symbols-outline-20231229.941/icons/method.svg
-  symbols-outline-20231229.941/icons/minorMode.svg
-  symbols-outline-20231229.941/icons/misc.svg
-  symbols-outline-20231229.941/icons/module.svg
-  symbols-outline-20231229.941/icons/namespace.svg
-  symbols-outline-20231229.941/icons/null.svg
-  symbols-outline-20231229.941/icons/number.svg
-  symbols-outline-20231229.941/icons/object.svg
-  symbols-outline-20231229.941/icons/operator.svg
-  symbols-outline-20231229.941/icons/package.svg
-  symbols-outline-20231229.941/icons/parameter.svg
-  symbols-outline-20231229.941/icons/part.svg
-  symbols-outline-20231229.941/icons/property.svg
-  symbols-outline-20231229.941/icons/prototype.svg
-  symbols-outline-20231229.941/icons/section.svg
-  symbols-outline-20231229.941/icons/string.svg
-  symbols-outline-20231229.941/icons/struct.svg
-  symbols-outline-20231229.941/icons/subsection.svg
-  symbols-outline-20231229.941/icons/subst.svg
-  symbols-outline-20231229.941/icons/subsubsection.svg
-  symbols-outline-20231229.941/icons/tag.svg
-  symbols-outline-20231229.941/icons/tparam.svg
-  symbols-outline-20231229.941/icons/typedef.svg
-  symbols-outline-20231229.941/icons/typeparameter.svg
-  symbols-outline-20231229.941/icons/union.svg
-  symbols-outline-20231229.941/icons/unknown.svg
-  symbols-outline-20231229.941/icons/using.svg
-  symbols-outline-20231229.941/icons/variable.svg
-  symbols-outline-20231229.941/symbols-outline-ctags.el
-  symbols-outline-20231229.941/symbols-outline-follow-mode.el
-  symbols-outline-20231229.941/symbols-outline-lsp.el
-  symbols-outline-20231229.941/symbols-outline-nerd-icon.el
-  symbols-outline-20231229.941/symbols-outline-node.el
-  symbols-outline-20231229.941/symbols-outline-pkg.el
-  symbols-outline-20231229.941/symbols-outline-svg-icon.el
-  symbols-outline-20231229.941/symbols-outline.el
+Created symbols-outline-20240517.819.tar containing:
+  symbols-outline-20240517.819/
+  symbols-outline-20240517.819/icons/
+  symbols-outline-20240517.819/icons/alias.svg
+  symbols-outline-20240517.819/icons/annotation.svg
+  symbols-outline-20240517.819/icons/array.svg
+  symbols-outline-20240517.819/icons/boolean.svg
+  symbols-outline-20240517.819/icons/chapter.svg
+  symbols-outline-20240517.819/icons/chevron-down.svg
+  symbols-outline-20240517.819/icons/chevron-right.svg
+  symbols-outline-20240517.819/icons/class.svg
+  symbols-outline-20240517.819/icons/const.svg
+  symbols-outline-20240517.819/icons/constant.svg
+  symbols-outline-20240517.819/icons/constructor.svg
+  symbols-outline-20240517.819/icons/custom.svg
+  symbols-outline-20240517.819/icons/derivedMode.svg
+  symbols-outline-20240517.819/icons/enum.svg
+  symbols-outline-20240517.819/icons/enumerator.svg
+  symbols-outline-20240517.819/icons/enummember.svg
+  symbols-outline-20240517.819/icons/error.svg
+  symbols-outline-20240517.819/icons/event.svg
+  symbols-outline-20240517.819/icons/externvar.svg
+  symbols-outline-20240517.819/icons/face.svg
+  symbols-outline-20240517.819/icons/field.svg
+  symbols-outline-20240517.819/icons/file.svg
+  symbols-outline-20240517.819/icons/function.svg
+  symbols-outline-20240517.819/icons/group.svg
+  symbols-outline-20240517.819/icons/inline.svg
+  symbols-outline-20240517.819/icons/interface.svg
+  symbols-outline-20240517.819/icons/key.svg
+  symbols-outline-20240517.819/icons/l4subsection.svg
+  symbols-outline-20240517.819/icons/l5subsection.svg
+  symbols-outline-20240517.819/icons/local.svg
+  symbols-outline-20240517.819/icons/macro.svg
+  symbols-outline-20240517.819/icons/macroparam.svg
+  symbols-outline-20240517.819/icons/majorMode.svg
+  symbols-outline-20240517.819/icons/member.svg
+  symbols-outline-20240517.819/icons/method.svg
+  symbols-outline-20240517.819/icons/minorMode.svg
+  symbols-outline-20240517.819/icons/misc.svg
+  symbols-outline-20240517.819/icons/module.svg
+  symbols-outline-20240517.819/icons/namespace.svg
+  symbols-outline-20240517.819/icons/null.svg
+  symbols-outline-20240517.819/icons/number.svg
+  symbols-outline-20240517.819/icons/object.svg
+  symbols-outline-20240517.819/icons/operator.svg
+  symbols-outline-20240517.819/icons/package.svg
+  symbols-outline-20240517.819/icons/parameter.svg
+  symbols-outline-20240517.819/icons/part.svg
+  symbols-outline-20240517.819/icons/property.svg
+  symbols-outline-20240517.819/icons/prototype.svg
+  symbols-outline-20240517.819/icons/section.svg
+  symbols-outline-20240517.819/icons/string.svg
+  symbols-outline-20240517.819/icons/struct.svg
+  symbols-outline-20240517.819/icons/subsection.svg
+  symbols-outline-20240517.819/icons/subst.svg
+  symbols-outline-20240517.819/icons/subsubsection.svg
+  symbols-outline-20240517.819/icons/tag.svg
+  symbols-outline-20240517.819/icons/tparam.svg
+  symbols-outline-20240517.819/icons/typedef.svg
+  symbols-outline-20240517.819/icons/typeparameter.svg
+  symbols-outline-20240517.819/icons/union.svg
+  symbols-outline-20240517.819/icons/unknown.svg
+  symbols-outline-20240517.819/icons/using.svg
+  symbols-outline-20240517.819/icons/variable.svg
+  symbols-outline-20240517.819/symbols-outline-ctags.el
+  symbols-outline-20240517.819/symbols-outline-follow-mode.el
+  symbols-outline-20240517.819/symbols-outline-lsp.el
+  symbols-outline-20240517.819/symbols-outline-nerd-icon.el
+  symbols-outline-20240517.819/symbols-outline-node.el
+  symbols-outline-20240517.819/symbols-outline-pkg.el
+  symbols-outline-20240517.819/symbols-outline-svg-icon.el
+  symbols-outline-20240517.819/symbols-outline.el
  ✓ Success:
   2024-05-15T22:09:25+0000  symbols-outline-20231229.941.entry
   2024-05-15T22:09:25+0000  symbols-outline-20231229.941.tar
-Built symbols-outline in 4.759s, finished at 2024-05-15T22:09:27+0000
+  2024-05-19T23:58:32+0000  symbols-outline-20240517.819.entry
+  2024-05-19T23:58:32+0000  symbols-outline-20240517.819.tar
+Built symbols-outline in 5.560s, finished at 2024-05-19T23:58:34+0000

@@ -1,0 +1,22 @@
+Package: gpx
+Fetcher: github
+Source:  https://github.com/mkcms/gpx-mode.git
+
+Cloning https://github.com/mkcms/gpx-mode.git to /mnt/store/melpa/working/gpx/
+Checking out b79baf93040fb5c89e803848e8aff31331ea03b8
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gpx/
+  to /tmp/gpxClsRRa/gpx-20240513.1737
+    gpx.el -> gpx.el
+    gpx2html.py -> gpx2html.py
+    plot_track_elevation.py -> plot_track_elevation.py
+Created gpx-20240513.1737.tar containing:
+  gpx-20240513.1737/
+  gpx-20240513.1737/gpx-pkg.el
+  gpx-20240513.1737/gpx.el
+  gpx-20240513.1737/gpx2html.py
+  gpx-20240513.1737/plot_track_elevation.py
+ ✓ Success:
+  2024-05-19T23:10:05+0000  gpx-20240513.1737.entry
+  2024-05-19T23:10:05+0000  gpx-20240513.1737.tar
+Built gpx in 5.615s, finished at 2024-05-19T23:10:08+0000

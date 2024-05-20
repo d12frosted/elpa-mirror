@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
-Checking out 11bcd8fc563cf36140deab8f4d3293783c7b770c
+Checking out a76a38cf0af5625b38e1d298bbfa3ae5a2a1ebc9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/debian-el/
-  to /tmp/debian-elD1LERY/debian-el-20240512.602
+  to /tmp/debian-elYPscL3/debian-el-20240519.1104
     apt-sources.el -> apt-sources.el
     apt-utils.el -> apt-utils.el
     deb-view.el -> deb-view.el
@@ -16,21 +16,23 @@ Copying files (->) and directories (=>)
     gnus-BTS.el -> gnus-BTS.el
     preseed.el -> preseed.el
     debian-el.texi -> debian-el.texi
-Generating /tmp/debian-elD1LERY/debian-el-20240512.602/debian-el.info
-Created debian-el-20240512.602.tar containing:
-  debian-el-20240512.602/
-  debian-el-20240512.602/apt-sources.el
-  debian-el-20240512.602/apt-utils.el
-  debian-el-20240512.602/deb-view.el
-  debian-el-20240512.602/debian-autoloads.el
-  debian-el-20240512.602/debian-bug.el
-  debian-el-20240512.602/debian-el-pkg.el
-  debian-el-20240512.602/debian-el.el
-  debian-el-20240512.602/debian-el.info
-  debian-el-20240512.602/dir
-  debian-el-20240512.602/gnus-BTS.el
-  debian-el-20240512.602/preseed.el
+Generating /tmp/debian-elYPscL3/debian-el-20240519.1104/debian-el.info
+Created debian-el-20240519.1104.tar containing:
+  debian-el-20240519.1104/
+  debian-el-20240519.1104/apt-sources.el
+  debian-el-20240519.1104/apt-utils.el
+  debian-el-20240519.1104/deb-view.el
+  debian-el-20240519.1104/debian-autoloads.el
+  debian-el-20240519.1104/debian-bug.el
+  debian-el-20240519.1104/debian-el-pkg.el
+  debian-el-20240519.1104/debian-el.el
+  debian-el-20240519.1104/debian-el.info
+  debian-el-20240519.1104/dir
+  debian-el-20240519.1104/gnus-BTS.el
+  debian-el-20240519.1104/preseed.el
  ✓ Success:
   2024-05-15T20:59:18+0000  debian-el-20240512.602.entry
   2024-05-15T20:59:18+0000  debian-el-20240512.602.tar
-Built debian-el in 14.849s, finished at 2024-05-15T20:59:21+0000
+  2024-05-19T22:48:57+0000  debian-el-20240519.1104.entry
+  2024-05-19T22:48:57+0000  debian-el-20240519.1104.tar
+Built debian-el in 9.036s, finished at 2024-05-19T22:49:00+0000

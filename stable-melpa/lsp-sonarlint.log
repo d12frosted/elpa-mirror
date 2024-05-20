@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/lsp-sonarlint/
 Checking out d131779950d5d45c3129eb088cef5fd11099f47c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-sonarlint/
-  to /tmp/lsp-sonarlintjXMN3X/lsp-sonarlint-20230814.1954
+  to /tmp/lsp-sonarlintVcJqo3/lsp-sonarlint-20230814.1954
     lsp-sonarlint.el -> lsp-sonarlint.el
   ! languages/xml/lsp-sonarlint-xml.el -> languages/lsp-sonarlint-xml.el
   ! languages/typescript/lsp-sonarlint-typescript.el -> languages/lsp-sonarlint-typescript.el
@@ -19,4 +19,24 @@ Copying files (->) and directories (=>)
   ! languages/go/lsp-sonarlint-go.el -> languages/lsp-sonarlint-go.el
     server/LICENSE -> server/LICENSE
     server/sonarlint-language-server.jar -> server/sonarlint-language-server.jar
-Write error: No space left on device, /tmp/lsp-sonarlintjXMN3X/lsp-sonarlint-20230814.1954/server/sonarlint-language-server.jar
+Created lsp-sonarlint-20230814.1954.tar containing:
+  lsp-sonarlint-20230814.1954/
+  lsp-sonarlint-20230814.1954/languages/
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-go.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-html.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-java.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-javascript.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-php.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-python.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-text.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-typescript.el
+  lsp-sonarlint-20230814.1954/languages/lsp-sonarlint-xml.el
+  lsp-sonarlint-20230814.1954/lsp-sonarlint-pkg.el
+  lsp-sonarlint-20230814.1954/lsp-sonarlint.el
+  lsp-sonarlint-20230814.1954/server/
+  lsp-sonarlint-20230814.1954/server/LICENSE
+  lsp-sonarlint-20230814.1954/server/sonarlint-language-server.jar
+ ✓ Success:
+  2024-05-19T23:25:42+0000  lsp-sonarlint-20230814.1954.entry
+  2024-05-19T23:25:42+0000  lsp-sonarlint-20230814.1954.tar
+Built lsp-sonarlint in 9.716s, finished at 2024-05-19T23:25:46+0000

@@ -3,26 +3,28 @@ Fetcher: github
 Source:  https://github.com/johannes-mueller/test-cockpit.el.git
 
 Updating /mnt/store/melpa/working/test-cockpit/
-Checking out 11c23ddb9284b21a1072c37f168574096ee3bd2f
+Checking out 2b836e5f954059210b6efaecebfe5fd7c72e726c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/test-cockpit/
-  to /tmp/test-cockpit63laRa/test-cockpit-20240220.2058
+  to /tmp/test-cockpite216Tn/test-cockpit-20240519.1747
     test-cockpit-cargo.el -> test-cockpit-cargo.el
     test-cockpit-cask.el -> test-cockpit-cask.el
     test-cockpit-mix.el -> test-cockpit-mix.el
     test-cockpit-npm-jest.el -> test-cockpit-npm-jest.el
     test-cockpit-python.el -> test-cockpit-python.el
     test-cockpit.el -> test-cockpit.el
-Created test-cockpit-20240220.2058.tar containing:
-  test-cockpit-20240220.2058/
-  test-cockpit-20240220.2058/test-cockpit-cargo.el
-  test-cockpit-20240220.2058/test-cockpit-cask.el
-  test-cockpit-20240220.2058/test-cockpit-mix.el
-  test-cockpit-20240220.2058/test-cockpit-npm-jest.el
-  test-cockpit-20240220.2058/test-cockpit-pkg.el
-  test-cockpit-20240220.2058/test-cockpit-python.el
-  test-cockpit-20240220.2058/test-cockpit.el
+Created test-cockpit-20240519.1747.tar containing:
+  test-cockpit-20240519.1747/
+  test-cockpit-20240519.1747/test-cockpit-cargo.el
+  test-cockpit-20240519.1747/test-cockpit-cask.el
+  test-cockpit-20240519.1747/test-cockpit-mix.el
+  test-cockpit-20240519.1747/test-cockpit-npm-jest.el
+  test-cockpit-20240519.1747/test-cockpit-pkg.el
+  test-cockpit-20240519.1747/test-cockpit-python.el
+  test-cockpit-20240519.1747/test-cockpit.el
  ✓ Success:
   2024-05-15T22:10:49+0000  test-cockpit-20240220.2058.entry
   2024-05-15T22:10:48+0000  test-cockpit-20240220.2058.tar
-Built test-cockpit in 4.757s, finished at 2024-05-15T22:10:50+0000
+  2024-05-19T23:59:54+0000  test-cockpit-20240519.1747.entry
+  2024-05-19T23:59:54+0000  test-cockpit-20240519.1747.tar
+Built test-cockpit in 4.832s, finished at 2024-05-19T23:59:56+0000
