@@ -6,7 +6,8 @@ Usage
   :ensure t
   :custom ((org-bookmarks-file "~/Org/Bookmarks/Bookmarks.org")
            (org-bookmarks-add-org-capture-template t))
-  :commands (org-bookmarks))
+  :commands (org-bookmarks)
+  :init (org-bookmarks-add-org-capture-template))
 
 1. Record bookmark information into Org mode file.
 
