@@ -4674,6 +4674,17 @@
 		     (:authors
 		      ("Daniel Semyonov" . "daniel@dsemy.com"))
 		     (:commit . "ad92c184ccc06f46b2caf001bc8201d983eca626"))])
+ (window-tool-bar .
+		  [(0 2)
+		   ((emacs
+		     (29 1)))
+		   "Add tool bars inside windows" tar
+		   ((:keywords "mouse")
+		    (:maintainer "Jared Finder" . "jared@finder.org")
+		    (:authors
+		     ("Jared Finder" . "jared@finder.org"))
+		    (:url . "https://elpa.gnu.org/packages/window-tool-bar.html")
+		    (:commit . "be03dda5b0fc55e989bfa707c73f1cc990e24c3b"))])
  (windower .
 	   [(0 0 1)
 	    ((emacs
