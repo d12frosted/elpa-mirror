@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm/
-Checking out 2c639820ba784769b46abd5f47510d5f1b9776a4
+Checking out fa43b6093a045720c54805ef2ef2e191129dcf41
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmu0JSEA/helm-20240519.1131
+  to /tmp/helmwgDODl/helm-20240520.1459
     .dir-locals.el -> .dir-locals.el
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
@@ -48,51 +48,53 @@ Copying files (->) and directories (=>)
     helm-x-files.el -> helm-x-files.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20240519.1131.tar containing:
-  helm-20240519.1131/
-  helm-20240519.1131/.dir-locals.el
-  helm-20240519.1131/emacs-helm.sh
-  helm-20240519.1131/helm-adaptive.el
-  helm-20240519.1131/helm-bookmark.el
-  helm-20240519.1131/helm-buffers.el
-  helm-20240519.1131/helm-color.el
-  helm-20240519.1131/helm-command.el
-  helm-20240519.1131/helm-dabbrev.el
-  helm-20240519.1131/helm-easymenu.el
-  helm-20240519.1131/helm-elisp.el
-  helm-20240519.1131/helm-epa.el
-  helm-20240519.1131/helm-eshell.el
-  helm-20240519.1131/helm-eval.el
-  helm-20240519.1131/helm-external.el
-  helm-20240519.1131/helm-fd.el
-  helm-20240519.1131/helm-files.el
-  helm-20240519.1131/helm-find.el
-  helm-20240519.1131/helm-font.el
-  helm-20240519.1131/helm-for-files.el
-  helm-20240519.1131/helm-global-bindings.el
-  helm-20240519.1131/helm-grep.el
-  helm-20240519.1131/helm-help.el
-  helm-20240519.1131/helm-id-utils.el
-  helm-20240519.1131/helm-imenu.el
-  helm-20240519.1131/helm-info.el
-  helm-20240519.1131/helm-locate.el
-  helm-20240519.1131/helm-man.el
-  helm-20240519.1131/helm-misc.el
-  helm-20240519.1131/helm-mode.el
-  helm-20240519.1131/helm-net.el
-  helm-20240519.1131/helm-occur.el
-  helm-20240519.1131/helm-packages.el
-  helm-20240519.1131/helm-pkg.el
-  helm-20240519.1131/helm-regexp.el
-  helm-20240519.1131/helm-ring.el
-  helm-20240519.1131/helm-semantic.el
-  helm-20240519.1131/helm-sys.el
-  helm-20240519.1131/helm-tags.el
-  helm-20240519.1131/helm-types.el
-  helm-20240519.1131/helm-utils.el
-  helm-20240519.1131/helm-x-files.el
-  helm-20240519.1131/helm.el
+Created helm-20240520.1459.tar containing:
+  helm-20240520.1459/
+  helm-20240520.1459/.dir-locals.el
+  helm-20240520.1459/emacs-helm.sh
+  helm-20240520.1459/helm-adaptive.el
+  helm-20240520.1459/helm-bookmark.el
+  helm-20240520.1459/helm-buffers.el
+  helm-20240520.1459/helm-color.el
+  helm-20240520.1459/helm-command.el
+  helm-20240520.1459/helm-dabbrev.el
+  helm-20240520.1459/helm-easymenu.el
+  helm-20240520.1459/helm-elisp.el
+  helm-20240520.1459/helm-epa.el
+  helm-20240520.1459/helm-eshell.el
+  helm-20240520.1459/helm-eval.el
+  helm-20240520.1459/helm-external.el
+  helm-20240520.1459/helm-fd.el
+  helm-20240520.1459/helm-files.el
+  helm-20240520.1459/helm-find.el
+  helm-20240520.1459/helm-font.el
+  helm-20240520.1459/helm-for-files.el
+  helm-20240520.1459/helm-global-bindings.el
+  helm-20240520.1459/helm-grep.el
+  helm-20240520.1459/helm-help.el
+  helm-20240520.1459/helm-id-utils.el
+  helm-20240520.1459/helm-imenu.el
+  helm-20240520.1459/helm-info.el
+  helm-20240520.1459/helm-locate.el
+  helm-20240520.1459/helm-man.el
+  helm-20240520.1459/helm-misc.el
+  helm-20240520.1459/helm-mode.el
+  helm-20240520.1459/helm-net.el
+  helm-20240520.1459/helm-occur.el
+  helm-20240520.1459/helm-packages.el
+  helm-20240520.1459/helm-pkg.el
+  helm-20240520.1459/helm-regexp.el
+  helm-20240520.1459/helm-ring.el
+  helm-20240520.1459/helm-semantic.el
+  helm-20240520.1459/helm-sys.el
+  helm-20240520.1459/helm-tags.el
+  helm-20240520.1459/helm-types.el
+  helm-20240520.1459/helm-utils.el
+  helm-20240520.1459/helm-x-files.el
+  helm-20240520.1459/helm.el
  ✓ Success:
-  2024-05-20T09:40:28+0000  helm-20240519.1131.entry
-  2024-05-20T09:40:28+0000  helm-20240519.1131.tar
-Built helm in 6.837s, finished at 2024-05-20T09:40:31+0000
+  2024-05-20T15:00:13+0000  helm-20240519.1624.entry
+  2024-05-20T15:00:13+0000  helm-20240519.1624.tar
+  2024-05-20T17:36:45+0000  helm-20240520.1459.entry
+  2024-05-20T17:36:45+0000  helm-20240520.1459.tar
+Built helm in 6.846s, finished at 2024-05-20T17:36:47+0000
