@@ -1,6 +1,6 @@
-		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		       README – ORG-TRANSCLUSION
-		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                       README – ORG-TRANSCLUSION
+                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Table of Contents
@@ -83,6 +83,12 @@ or user manual: [online] or Info node `(org-transclusion)Customizing'.
   • Work with any text file such as program source code, plain text,
     Markdown, or other Org files
 
+  • With version 1.4, transclude content over network protocols like
+    `http://' (with [org-transclusion-http]) and `hyper://' (with
+    [hyperdrive-org-transclusion]).  Splitting `org-transclusion-add'
+    into two parts enables functions in `org-transclusion-add-functions'
+    to be asynchronous.
+
   • Keep the file system clear of the copies of text content –
     Org-transclusion tries hard to save only the links to the file
     system
@@ -102,6 +108,12 @@ or user manual: [online] or Info node `(org-transclusion)Customizing'.
     noweb style syntax
 
   • Extend Org-transclusion with its extension framework
+
+
+[org-transclusion-http] <https://git.sr.ht/~ushin/org-transclusion-http>
+
+[hyperdrive-org-transclusion]
+<https://git.sr.ht/~ushin/hyperdrive-org-transclusion>
 
 
 2 Installation

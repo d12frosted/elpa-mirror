@@ -3,24 +3,8 @@ Fetcher: git
 Source:  https://git.thanosapollo.org/gnosis
 
 Updating /mnt/store/melpa/working/gnosis/
-Checking out b9c6c04e33ad2f541ab116dda9e460f21034a8eb
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosisx3ugs1/gnosis-20240517.334
-    gnosis-algorithm.el -> gnosis-algorithm.el
-    gnosis-string-edit.el -> gnosis-string-edit.el
-    gnosis.el -> gnosis.el
-  ! doc/gnosis.info -> gnosis.info
-  ! doc/gnosis.texi -> gnosis.texi
-Created gnosis-20240517.334.tar containing:
-  gnosis-20240517.334/
-  gnosis-20240517.334/dir
-  gnosis-20240517.334/gnosis-algorithm.el
-  gnosis-20240517.334/gnosis-pkg.el
-  gnosis-20240517.334/gnosis-string-edit.el
-  gnosis-20240517.334/gnosis.el
-  gnosis-20240517.334/gnosis.info
- ✓ Success:
-  2024-05-20T17:34:08+0000  gnosis-20240517.334.entry
-  2024-05-20T17:34:07+0000  gnosis-20240517.334.tar
-Built gnosis in 5.639s, finished at 2024-05-20T17:34:09+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
+fatal: expected flush after ref listing
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

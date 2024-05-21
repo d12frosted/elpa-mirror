@@ -16,10 +16,9 @@ substitution outright.
 
 + Package name (GNU ELPA): `substitute`
 + Official manual: <https://protesilaos.com/emacs/substitute>
-+ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/substitute>
-  - Mirrors:
-    + GitHub: <https://github.com/protesilaos/substitute>
-    + GitLab: <https://gitlab.com/protesilaos/substitute>
-+ Mailing list: <https://lists.sr.ht/~protesilaos/general-issues>
++ Git repositories:
+  + GitHub: <https://github.com/protesilaos/substitute>
+  + GitLab: <https://gitlab.com/protesilaos/substitute>
++ Video demo: <https://protesilaos.com/codelog/2023-01-16-emacs-substitute-package-demo/>
 + Backronym: Some Utilities Built to Substitute Targets Independent of
   Their Utterances, Thoroughly and Easily.

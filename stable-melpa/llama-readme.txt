@@ -33,7 +33,7 @@ you can use this macro and write:
 
 which expands to:
 
-  (lambda (%1 _%2 &optional &3 &rest &*)
+  (lambda (%1 &optional _&2 &3 &rest &*)
     (foo %1 (bar &3) &*))
 
 Unused trailing arguments and mandatory unused arguments at the
