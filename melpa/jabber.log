@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-jabber/emacs-jabber.git
 
 Updating /mnt/store/melpa/working/jabber/
-Checking out 633cb73633143ec093c291af94b008f456037e8b
+Checking out fcff3918158ed85576445cfbe800f28ab81c7031
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jabber/
-  to /tmp/jabberBJTT2X/jabber-20240306.524
+  to /tmp/jabber5PsI8g/jabber-20240521.629
     jabber-ourversion.el -> jabber-ourversion.el
     jabber-pkg.el -> jabber-pkg.el
   ! lisp/jabber-activity.el -> jabber-activity.el
@@ -72,76 +72,78 @@ Copying files (->) and directories (=>)
     CHANGELOG.org -> CHANGELOG.org
     DEV.org -> DEV.org
     README.org -> README.org
-Generating /tmp/jabberBJTT2X/jabber-20240306.524/jabber.info
-Created jabber-20240306.524.tar containing:
-  jabber-20240306.524/
-  jabber-20240306.524/CHANGELOG.org
-  jabber-20240306.524/DEV.org
-  jabber-20240306.524/README.org
-  jabber-20240306.524/dir
-  jabber-20240306.524/jabber-activity.el
-  jabber-20240306.524/jabber-ahc-presence.el
-  jabber-20240306.524/jabber-ahc.el
-  jabber-20240306.524/jabber-alert.el
-  jabber-20240306.524/jabber-autoaway.el
-  jabber-20240306.524/jabber-avatar.el
-  jabber-20240306.524/jabber-awesome.el
-  jabber-20240306.524/jabber-bookmarks.el
-  jabber-20240306.524/jabber-browse.el
-  jabber-20240306.524/jabber-carbons.el
-  jabber-20240306.524/jabber-chat.el
-  jabber-20240306.524/jabber-chatbuffer.el
-  jabber-20240306.524/jabber-chatstates.el
-  jabber-20240306.524/jabber-compose.el
-  jabber-20240306.524/jabber-conn.el
-  jabber-20240306.524/jabber-console.el
-  jabber-20240306.524/jabber-core.el
-  jabber-20240306.524/jabber-disco.el
-  jabber-20240306.524/jabber-events.el
-  jabber-20240306.524/jabber-export.el
-  jabber-20240306.524/jabber-feature-neg.el
-  jabber-20240306.524/jabber-festival.el
-  jabber-20240306.524/jabber-history.el
-  jabber-20240306.524/jabber-httpupload.el
-  jabber-20240306.524/jabber-iq.el
-  jabber-20240306.524/jabber-keepalive.el
-  jabber-20240306.524/jabber-keymap.el
-  jabber-20240306.524/jabber-libnotify.el
-  jabber-20240306.524/jabber-logon.el
-  jabber-20240306.524/jabber-menu.el
-  jabber-20240306.524/jabber-modeline.el
-  jabber-20240306.524/jabber-muc-nick-coloring.el
-  jabber-20240306.524/jabber-muc-nick-completion.el
-  jabber-20240306.524/jabber-muc.el
-  jabber-20240306.524/jabber-notifications.el
-  jabber-20240306.524/jabber-ourversion.el
-  jabber-20240306.524/jabber-ping.el
-  jabber-20240306.524/jabber-pkg.el
-  jabber-20240306.524/jabber-presence.el
-  jabber-20240306.524/jabber-private.el
-  jabber-20240306.524/jabber-ratpoison.el
-  jabber-20240306.524/jabber-register.el
-  jabber-20240306.524/jabber-roster.el
-  jabber-20240306.524/jabber-rtt.el
-  jabber-20240306.524/jabber-sasl.el
-  jabber-20240306.524/jabber-sawfish.el
-  jabber-20240306.524/jabber-screen.el
-  jabber-20240306.524/jabber-search.el
-  jabber-20240306.524/jabber-time.el
-  jabber-20240306.524/jabber-tmux.el
-  jabber-20240306.524/jabber-truncate.el
-  jabber-20240306.524/jabber-util.el
-  jabber-20240306.524/jabber-vcard-avatars.el
-  jabber-20240306.524/jabber-vcard.el
-  jabber-20240306.524/jabber-version.el
-  jabber-20240306.524/jabber-watch.el
-  jabber-20240306.524/jabber-widget.el
-  jabber-20240306.524/jabber-wmii.el
-  jabber-20240306.524/jabber-xmessage.el
-  jabber-20240306.524/jabber-xml.el
-  jabber-20240306.524/jabber.el
-  jabber-20240306.524/jabber.info
+Generating /tmp/jabber5PsI8g/jabber-20240521.629/jabber.info
+Created jabber-20240521.629.tar containing:
+  jabber-20240521.629/
+  jabber-20240521.629/CHANGELOG.org
+  jabber-20240521.629/DEV.org
+  jabber-20240521.629/README.org
+  jabber-20240521.629/dir
+  jabber-20240521.629/jabber-activity.el
+  jabber-20240521.629/jabber-ahc-presence.el
+  jabber-20240521.629/jabber-ahc.el
+  jabber-20240521.629/jabber-alert.el
+  jabber-20240521.629/jabber-autoaway.el
+  jabber-20240521.629/jabber-avatar.el
+  jabber-20240521.629/jabber-awesome.el
+  jabber-20240521.629/jabber-bookmarks.el
+  jabber-20240521.629/jabber-browse.el
+  jabber-20240521.629/jabber-carbons.el
+  jabber-20240521.629/jabber-chat.el
+  jabber-20240521.629/jabber-chatbuffer.el
+  jabber-20240521.629/jabber-chatstates.el
+  jabber-20240521.629/jabber-compose.el
+  jabber-20240521.629/jabber-conn.el
+  jabber-20240521.629/jabber-console.el
+  jabber-20240521.629/jabber-core.el
+  jabber-20240521.629/jabber-disco.el
+  jabber-20240521.629/jabber-events.el
+  jabber-20240521.629/jabber-export.el
+  jabber-20240521.629/jabber-feature-neg.el
+  jabber-20240521.629/jabber-festival.el
+  jabber-20240521.629/jabber-history.el
+  jabber-20240521.629/jabber-httpupload.el
+  jabber-20240521.629/jabber-iq.el
+  jabber-20240521.629/jabber-keepalive.el
+  jabber-20240521.629/jabber-keymap.el
+  jabber-20240521.629/jabber-libnotify.el
+  jabber-20240521.629/jabber-logon.el
+  jabber-20240521.629/jabber-menu.el
+  jabber-20240521.629/jabber-modeline.el
+  jabber-20240521.629/jabber-muc-nick-coloring.el
+  jabber-20240521.629/jabber-muc-nick-completion.el
+  jabber-20240521.629/jabber-muc.el
+  jabber-20240521.629/jabber-notifications.el
+  jabber-20240521.629/jabber-ourversion.el
+  jabber-20240521.629/jabber-ping.el
+  jabber-20240521.629/jabber-pkg.el
+  jabber-20240521.629/jabber-presence.el
+  jabber-20240521.629/jabber-private.el
+  jabber-20240521.629/jabber-ratpoison.el
+  jabber-20240521.629/jabber-register.el
+  jabber-20240521.629/jabber-roster.el
+  jabber-20240521.629/jabber-rtt.el
+  jabber-20240521.629/jabber-sasl.el
+  jabber-20240521.629/jabber-sawfish.el
+  jabber-20240521.629/jabber-screen.el
+  jabber-20240521.629/jabber-search.el
+  jabber-20240521.629/jabber-time.el
+  jabber-20240521.629/jabber-tmux.el
+  jabber-20240521.629/jabber-truncate.el
+  jabber-20240521.629/jabber-util.el
+  jabber-20240521.629/jabber-vcard-avatars.el
+  jabber-20240521.629/jabber-vcard.el
+  jabber-20240521.629/jabber-version.el
+  jabber-20240521.629/jabber-watch.el
+  jabber-20240521.629/jabber-widget.el
+  jabber-20240521.629/jabber-wmii.el
+  jabber-20240521.629/jabber-xmessage.el
+  jabber-20240521.629/jabber-xml.el
+  jabber-20240521.629/jabber.el
+  jabber-20240521.629/jabber.info
  ✓ Success:
   2024-05-21T03:57:08+0000  jabber-20240306.524.entry
   2024-05-21T03:57:08+0000  jabber-20240306.524.tar
-Built jabber in 13.583s, finished at 2024-05-21T03:57:10+0000
+  2024-05-21T06:33:22+0000  jabber-20240521.629.entry
+  2024-05-21T06:33:22+0000  jabber-20240521.629.tar
+Built jabber in 15.405s, finished at 2024-05-21T06:33:24+0000
