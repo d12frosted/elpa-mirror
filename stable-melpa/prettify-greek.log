@@ -3,7 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/fommil/emacs-prettify-greek.git
 
 Updating /mnt/store/melpa/working/prettify-greek/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.com/fommil/emacs-prettify-greek.git/': The requested URL returned error: 503
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 698d07a6ffe85f6fb53f3bfec4f49380c25cfd90
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettify-greek/
+  to /tmp/prettify-greekICdYzY/prettify-greek-20160603.908
+    prettify-greek.el -> prettify-greek.el
+Created prettify-greek-20160603.908.tar containing:
+  prettify-greek-20160603.908/
+  prettify-greek-20160603.908/prettify-greek-pkg.el
+  prettify-greek-20160603.908/prettify-greek.el
+ ✓ Success:
+  2024-05-22T06:16:50+0000  prettify-greek-20160603.908.entry
+  2024-05-22T06:16:50+0000  prettify-greek-20160603.908.tar
+Built prettify-greek in 6.011s, finished at 2024-05-22T06:16:53+0000

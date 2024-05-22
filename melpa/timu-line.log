@@ -3,7 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/aimebertrand/timu-line.git
 
 Updating /mnt/store/melpa/working/timu-line/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.com/aimebertrand/timu-line.git/': The requested URL returned error: 503
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 3957234a4a7618376dc9ef40272f6aeabdf48843
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/timu-line/
+  to /tmp/timu-lineS0vRZv/timu-line-20240405.2022
+    timu-line.el -> timu-line.el
+Created timu-line-20240405.2022.tar containing:
+  timu-line-20240405.2022/
+  timu-line-20240405.2022/timu-line-pkg.el
+  timu-line-20240405.2022/timu-line.el
+ ✓ Success:
+  2024-05-22T06:31:48+0000  timu-line-20240405.2022.entry
+  2024-05-22T06:31:47+0000  timu-line-20240405.2022.tar
+Built timu-line in 5.610s, finished at 2024-05-22T06:31:49+0000

@@ -3,8 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jabranham/system-packages.git
 
 Updating /mnt/store/melpa/working/system-packages/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 503 curl 22 The requested URL returned error: 503
-fatal: expected flush after ref listing
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out c087d2c6e598f85fc2760324dce20104ea442fa3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/system-packages/
+  to /tmp/system-packagesMWT4VV/system-packages-20220409.1023
+    system-packages.el -> system-packages.el
+Created system-packages-20220409.1023.tar containing:
+  system-packages-20220409.1023/
+  system-packages-20220409.1023/system-packages-pkg.el
+  system-packages-20220409.1023/system-packages.el
+ ✓ Success:
+  2024-05-22T06:29:55+0000  system-packages-20220409.1023.entry
+  2024-05-22T06:29:55+0000  system-packages-20220409.1023.tar
+Built system-packages in 4.535s, finished at 2024-05-22T06:29:57+0000
