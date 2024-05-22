@@ -7,6 +7,10 @@
   `mastodon.el' is an Emacs client for the AcitivityPub social networks
   that implement the Mastodon API. For info see [joinmastodon.org].
 
+  NB: `mastodon.el' now ships this readme as an .info file, so if you
+  have it installed you should be able to browse this readme inside
+  emacs. `C-h i' for info, then `m masto RET' should load it for you.
+
 
 [joinmastodon.org] <https://joinmastodon.org/>
 
@@ -284,9 +288,10 @@
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-◊ 1.2.3.2 Autocompletion of mentions and tags
+◊ 1.2.3.2 Autocompletion of mentions, tags, and emoji
 
-  Autocompletion of mentions and tags is provided by
+  Autocompletion of mentions, tags, and emoji is triggered by `@', `#',
+  and `:' respectively, plus a few letters. It is provided by
   `completion-at-point-functions' (capf) backends.
   `mastodon-toot--enable-completion' is enabled by default. If you want
   to enable `company-mode' in the toot compose buffer, set
@@ -411,6 +416,10 @@
   An index of all user-facing commands and custom variables is available
   here: [mastodon-index.org].
 
+  You can also hit `?' in any `mastodon.el' buffer to see the available
+  bindings, or run `M-X' (upper-case `X') to view all commands in the
+  buffer with completion, and call one.
+
 
 [mastodon-index.org] <file:mastodon-index.org>
 
@@ -465,7 +474,7 @@
   │   "Translate text of toot at point.
   │   Uses `lingva.el'."
   │     (interactive)
-  │     (let* ((toot (mastodon-tl--property 'toot-json)))
+  │     (let* ((toot (mastodon-tl--property 'item-json)))
   │       (if toot
   │ 	  (lingva-translate nil (mastodon-tl--content toot))
   │ 	(message "No toot to translate?"))))
@@ -542,6 +551,10 @@
 
   PRs, issues, feature requests, and general feedback are very welcome!
 
+  If you prefer emailing patches to the process described below, feel
+  free to send them on. Ideally they'd be patches that can be applied
+  with `git am', if you want to actually contribute a commit.
+
 
 1.5.1 Bug reports
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
@@ -553,7 +566,7 @@
      `mastodon.el' in emacs with no init file (i.e. `emacs -q'
      (instructions and code for doing this are [here]) to see if it also
      happens independently of your own config (it probably does).
-  4. Enable debug on error (`toggle-debug-on-error'), make the bug
+  4. Else enable debug on error (`toggle-debug-on-error'), make the bug
      happen again, and copy the backtrace that appears.
   5. Open an issue here and explain what is going on. Provide your emacs
      version and what kind of server your account is on.
@@ -568,7 +581,8 @@
   1. Create an [issue] detailing what you'd like to do.
   2. Fork the repository and create a branch off of `develop'.
   3. Run the tests and ensure that your code doesn't break any of them.
-  4. Create a pull request referencing the issue created in step 1.
+  4. Create a pull request (to develop) referencing the issue created in
+     step 1.
 
 
 [issue] <https://codeberg.org/martianh/mastodon.el/issues>
