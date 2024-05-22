@@ -3,16 +3,7 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mtekman/terminal-toggle.el.git
 
 Updating /mnt/store/melpa/working/terminal-toggle/
-Checking out f824d634aef3600cb7a8e2ddf9e8444c6607c160
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/terminal-toggle/
-  to /tmp/terminal-toggleCaylr4/terminal-toggle-20190226.1510
-    terminal-toggle.el -> terminal-toggle.el
-Created terminal-toggle-20190226.1510.tar containing:
-  terminal-toggle-20190226.1510/
-  terminal-toggle-20190226.1510/terminal-toggle-pkg.el
-  terminal-toggle-20190226.1510/terminal-toggle.el
- ✓ Success:
-  2024-05-21T22:53:43+0000  terminal-toggle-20190226.1510.entry
-  2024-05-21T22:53:42+0000  terminal-toggle-20190226.1510.tar
-Built terminal-toggle in 5.130s, finished at 2024-05-21T22:53:45+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://gitlab.com/mtekman/terminal-toggle.el.git/': The requested URL returned error: 503
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
