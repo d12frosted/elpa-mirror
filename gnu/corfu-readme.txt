@@ -203,7 +203,8 @@ Table of Contents
   │   (add-to-list 'dabbrev-ignored-buffer-regexps "\\` ")
   │   ;; Since 29.1, use `dabbrev-ignored-buffer-regexps' on older.
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'doc-view-mode)
-  │   (add-to-list 'dabbrev-ignored-buffer-modes 'pdf-view-mode))
+  │   (add-to-list 'dabbrev-ignored-buffer-modes 'pdf-view-mode)
+  │   (add-to-list 'dabbrev-ignored-buffer-modes 'tags-table-mode))
   └────
 
   If you start to configure the package more deeply, I recommend to give
@@ -301,7 +302,7 @@ Table of Contents
   ┌────
   │ (defun orderless-fast-dispatch (word index total)
   │   (and (= index 0) (= total 1) (length< word 4)
-  │        (cons 'orderless-literal-prefix word))))
+  │        (cons 'orderless-literal-prefix word)))
   │ 
   │ (orderless-define-completion-style orderless-fast
   │   (orderless-style-dispatchers '(orderless-fast-dispatch))

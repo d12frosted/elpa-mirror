@@ -478,20 +478,20 @@ Table of Contents
   manual preview are closed again after the completion session. During
   preview some functionality is disabled to improve the performance, see
   for example the customization variables `consult-preview-variables'
-  and `consult-preview-allowed-hooks'. Only mode hooks
-  (e.g. `prog-mode-hook') and find file hooks (`find-file-hook') listed
-  in `consult-preview-allowed-hooks' are executed. In order to enable
-  additional font locking during preview, add the corresponding hooks to
-  the allow list. The following code demonstrates this for [org-modern]
-  and [hl-todo].
+  and `consult-preview-allowed-hooks'. Only hooks listed in
+  `consult-preview-allowed-hooks' are executed. This variable applies to
+  `find-file-hook', `change-major-mode-hook' and mode hooks, e.g.,
+  `prog-mode-hook'. In order to enable additional font locking during
+  preview, add the corresponding hooks to the allow list. The following
+  code demonstrates this for [org-modern] and [hl-todo].
 
   ┌────
-  │ ;; mode hook examples
+  │ ;; local modes added to prog-mode hooks
   │ (add-to-list 'consult-preview-allowed-hooks 'hl-todo-mode)
   │ (add-to-list 'consult-preview-allowed-hooks 'elide-head-mode)
-  │ ;; find-file-hook examples
-  │ (add-to-list 'consult-preview-allowed-hooks 'global-org-modern-mode-check-buffers)
-  │ (add-to-list 'consult-preview-allowed-hooks 'global-hl-todo-mode-check-buffers)
+  │ ;; enabled global modes
+  │ (add-to-list 'consult-preview-allowed-hooks 'global-org-modern-mode)
+  │ (add-to-list 'consult-preview-allowed-hooks 'global-hl-todo-mode)
   └────
 
   Files larger than `consult-preview-partial-size' are previewed
@@ -977,7 +977,7 @@ Table of Contents
    consult-narrow-key                Narrowing prefix key during completion              
    consult-point-placement           Placement of the point when jumping to matches      
    consult-preview-key               Keys which triggers preview                         
-   consult-preview-allowed-hooks     List of hooks to enable during preview              
+   consult-preview-allowed-hooks     List of hooks to allow during preview               
    consult-preview-excluded-files    Regexps matched against file names during preview   
    consult-preview-max-count         Maximum number of files to keep open during preview 
    consult-preview-partial-size      Files larger than this size are previewed partially 
