@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/factor/factor.git
 
 Updating /mnt/store/melpa/working/fuel/
-Checking out e10b64dbc53a8583098e73580a1eb9ff4ce0c709
+Checking out 436d9a61aaa1fdaa319f14d0eac6b5aec920db05
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fuel/
-  to /tmp/fuelqsLcuu/fuel-20230824.1321
+  to /tmp/fuel32higc/fuel-20240523.1604
   ! misc/fuel/factor-mode.el -> factor-mode.el
   ! misc/fuel/factor-smie.el -> factor-smie.el
   ! misc/fuel/fuel-autodoc.el -> fuel-autodoc.el
@@ -32,34 +32,36 @@ Copying files (->) and directories (=>)
   ! misc/fuel/fuel-table.el -> fuel-table.el
   ! misc/fuel/fuel-tests.el -> fuel-tests.el
   ! misc/fuel/fuel-xref.el -> fuel-xref.el
-Created fuel-20230824.1321.tar containing:
-  fuel-20230824.1321/
-  fuel-20230824.1321/factor-mode.el
-  fuel-20230824.1321/factor-smie.el
-  fuel-20230824.1321/fuel-autodoc.el
-  fuel-20230824.1321/fuel-autohelp.el
-  fuel-20230824.1321/fuel-base.el
-  fuel-20230824.1321/fuel-completion.el
-  fuel-20230824.1321/fuel-connection.el
-  fuel-20230824.1321/fuel-debug-uses.el
-  fuel-20230824.1321/fuel-debug.el
-  fuel-20230824.1321/fuel-edit.el
-  fuel-20230824.1321/fuel-eval.el
-  fuel-20230824.1321/fuel-help.el
-  fuel-20230824.1321/fuel-listener.el
-  fuel-20230824.1321/fuel-log.el
-  fuel-20230824.1321/fuel-markup.el
-  fuel-20230824.1321/fuel-menu.el
-  fuel-20230824.1321/fuel-mode.el
-  fuel-20230824.1321/fuel-pkg.el
-  fuel-20230824.1321/fuel-popup.el
-  fuel-20230824.1321/fuel-refactor.el
-  fuel-20230824.1321/fuel-scaffold.el
-  fuel-20230824.1321/fuel-stack.el
-  fuel-20230824.1321/fuel-table.el
-  fuel-20230824.1321/fuel-tests.el
-  fuel-20230824.1321/fuel-xref.el
+Created fuel-20240523.1604.tar containing:
+  fuel-20240523.1604/
+  fuel-20240523.1604/factor-mode.el
+  fuel-20240523.1604/factor-smie.el
+  fuel-20240523.1604/fuel-autodoc.el
+  fuel-20240523.1604/fuel-autohelp.el
+  fuel-20240523.1604/fuel-base.el
+  fuel-20240523.1604/fuel-completion.el
+  fuel-20240523.1604/fuel-connection.el
+  fuel-20240523.1604/fuel-debug-uses.el
+  fuel-20240523.1604/fuel-debug.el
+  fuel-20240523.1604/fuel-edit.el
+  fuel-20240523.1604/fuel-eval.el
+  fuel-20240523.1604/fuel-help.el
+  fuel-20240523.1604/fuel-listener.el
+  fuel-20240523.1604/fuel-log.el
+  fuel-20240523.1604/fuel-markup.el
+  fuel-20240523.1604/fuel-menu.el
+  fuel-20240523.1604/fuel-mode.el
+  fuel-20240523.1604/fuel-pkg.el
+  fuel-20240523.1604/fuel-popup.el
+  fuel-20240523.1604/fuel-refactor.el
+  fuel-20240523.1604/fuel-scaffold.el
+  fuel-20240523.1604/fuel-stack.el
+  fuel-20240523.1604/fuel-table.el
+  fuel-20240523.1604/fuel-tests.el
+  fuel-20240523.1604/fuel-xref.el
  ✓ Success:
   2024-05-23T15:50:32+0000  fuel-20230824.1321.entry
   2024-05-23T15:50:32+0000  fuel-20230824.1321.tar
-Built fuel in 16.581s, finished at 2024-05-23T15:50:35+0000
+  2024-05-23T18:13:06+0000  fuel-20240523.1604.entry
+  2024-05-23T18:13:06+0000  fuel-20240523.1604.tar
+Built fuel in 15.504s, finished at 2024-05-23T18:13:08+0000

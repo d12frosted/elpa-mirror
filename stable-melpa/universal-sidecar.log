@@ -3,18 +3,8 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/emacs-universal-sidecar
 
 Updating /mnt/store/melpa/working/universal-sidecar/
-Checking out e16f5974c77e7126cd5c9b7448116ee94a6a1e72
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/universal-sidecar/
-  to /tmp/universal-sidecarzojP1S/universal-sidecar-20240429.1525
-    universal-sidecar.el -> universal-sidecar.el
-    universal-sidecar-sections.el -> universal-sidecar-sections.el
-Created universal-sidecar-20240429.1525.tar containing:
-  universal-sidecar-20240429.1525/
-  universal-sidecar-20240429.1525/universal-sidecar-pkg.el
-  universal-sidecar-20240429.1525/universal-sidecar-sections.el
-  universal-sidecar-20240429.1525/universal-sidecar.el
- ✓ Success:
-  2024-05-23T14:19:38+0000  universal-sidecar-20240429.1525.entry
-  2024-05-23T14:19:37+0000  universal-sidecar-20240429.1525.tar
-Built universal-sidecar in 10.101s, finished at 2024-05-23T14:19:42+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
