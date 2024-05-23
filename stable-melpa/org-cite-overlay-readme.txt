@@ -9,5 +9,3 @@ This package does have a few limitations:
  - Detection of exit or insertion of citations is somewhat
    inconsistent, so every 30 user commands in the buffer, all
    citations will be regenerated.
- - Only the default (chicago-author-year) style is used at the
-   moment; this should eventually be fixed.
