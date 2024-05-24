@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/Lindydancer/dynamic-spaces.git
 
 Updating /mnt/store/melpa/working/dynamic-spaces/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://github.com/Lindydancer/dynamic-spaces.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 97ae8480c257ba573ca3d06dbf602f9b23c41d38
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dynamic-spaces/
+  to /tmp/dynamic-spacesbA5iyu/dynamic-spaces-20171027.1851
+    dynamic-spaces.el -> dynamic-spaces.el
+Created dynamic-spaces-20171027.1851.tar containing:
+  dynamic-spaces-20171027.1851/
+  dynamic-spaces-20171027.1851/dynamic-spaces-pkg.el
+  dynamic-spaces-20171027.1851/dynamic-spaces.el
+ ✓ Success:
+  2024-05-24T18:28:54+0000  dynamic-spaces-20171027.1851.entry
+  2024-05-24T18:28:54+0000  dynamic-spaces-20171027.1851.tar
+Built dynamic-spaces in 3.605s, finished at 2024-05-24T18:28:56+0000
