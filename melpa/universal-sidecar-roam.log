@@ -3,8 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/emacs-universal-sidecar
 
 Updating /mnt/store/melpa/working/universal-sidecar-roam/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 4c78015d10caba9c700e6e6b582004ae1c1d5344
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/universal-sidecar-roam/
+  to /tmp/universal-sidecar-roamo4j0LD/universal-sidecar-roam-20240428.1852
+    universal-sidecar-roam.el -> universal-sidecar-roam.el
+Created universal-sidecar-roam-20240428.1852.tar containing:
+  universal-sidecar-roam-20240428.1852/
+  universal-sidecar-roam-20240428.1852/universal-sidecar-roam-pkg.el
+  universal-sidecar-roam-20240428.1852/universal-sidecar-roam.el
+ ✓ Success:
+  2024-05-24T01:54:56+0000  universal-sidecar-roam-20240428.1852.entry
+  2024-05-24T01:54:56+0000  universal-sidecar-roam-20240428.1852.tar
+Built universal-sidecar-roam in 5.262s, finished at 2024-05-24T01:54:58+0000

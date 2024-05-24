@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~ushin/ushin-shapes.el
 
 Updating /mnt/store/melpa/working/ushin-shapes/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~ushin/ushin-shapes.el/': The requested URL returned error: 500
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 30171af499d8117a2dbc3e978473793eced49bcb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ushin-shapes/
+  to /tmp/ushin-shapesKmDSUn/ushin-shapes-20230702.2210
+    ushin-shapes.el -> ushin-shapes.el
+Created ushin-shapes-20230702.2210.tar containing:
+  ushin-shapes-20230702.2210/
+  ushin-shapes-20230702.2210/ushin-shapes-pkg.el
+  ushin-shapes-20230702.2210/ushin-shapes.el
+ ✓ Success:
+  2024-05-24T01:55:10+0000  ushin-shapes-20230702.2210.entry
+  2024-05-24T01:55:10+0000  ushin-shapes-20230702.2210.tar
+Built ushin-shapes in 4.037s, finished at 2024-05-24T01:55:11+0000
