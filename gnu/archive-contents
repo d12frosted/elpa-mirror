@@ -2016,6 +2016,13 @@
 	      (:keywords "comm" "convenience" "files" "frames" "hypermedia" "languages" "mail" "matching" "mouse" "multimedia" "outlines" "tools" "wp")
 	      (:maintainer "Mats Lidell" . "matsl@gnu.org")
 	      (:commit . "23b118ddb6e0595e3b0668dbce8fa4e8bcec5e71"))])
+ (idlwave .
+	  [(6 5 1)
+	   nil "IDL editing mode for GNU Emacs" tar
+	   ((:keywords "languages")
+	    (:maintainer "J.D. Smith" . "jdtsmith@gmail.com")
+	    (:url . "https://elpa.gnu.org/packages/idlwave.html")
+	    (:commit . "e1fcd7244cb32df1e90b09729e53474e50a2e808"))])
  (ilist .
 	[(0 3)
 	 nil "Display a list in an ibuffer way." tar
@@ -4770,18 +4777,19 @@
 	  ("Yuan Fu" . "casouri@gmail.com"))
 	 (:commit . "ea4fa859c1129243b15f259a10e67ea274c5ef63"))])
  (xelb .
-       [(0 18)
+       [(0 19)
 	((emacs
-	  (24 4))
-	 (cl-generic
-	  (0 2)))
+	  (27 1)))
 	"X protocol Emacs Lisp Binding" tar
-	((:url . "https://github.com/ch11ng/xelb")
+	((:url . "https://github.com/emacs-exwm/xelb")
 	 (:keywords "unix")
-	 (:maintainer "Chris Feng" . "chris.w.feng@gmail.com")
+	 (:maintainer
+	  ("Adrián Medraño Calvo" . "adrian@medranocalvo.com")
+	  ("Steven Allen" . "steven@stebalien.com")
+	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:authors
 	  ("Chris Feng" . "chris.w.feng@gmail.com"))
-	 (:commit . "0f10c956349515b17bf1b5ac1fb7c65a736d401d"))])
+	 (:commit . "3546afe73ef7c65181624da3a99ee6d7d7278582"))])
  (xpm .
       [(1 0 5)
        ((cl-lib

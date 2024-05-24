@@ -2002,7 +2002,7 @@
 	      (:keywords "markup" "language" "css")
 	      (:commit . "aee28ea552dce5aade05d8a7f91514e6eb37e59f"))])
  (scad-mode .
-	    [(93 3)
+	    [(94 0)
 	     ((emacs
 	       (27 1))
 	      (compat
@@ -2013,7 +2013,7 @@
 	      (:maintainer
 	       ("Len Trigg" . "lenbok@gmail.com")
 	       ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	      (:commit . "8d5650c5cfee96c42d64427bfcadb89f6bda66be"))])
+	      (:commit . "3c32b141f083c31539bb24700eb0aa23ea55918c"))])
  (scala-mode .
 	     [(0 23)
 	      nil "Major mode for editing Scala" tar
@@ -2489,14 +2489,14 @@
 	     ((:url . "https://github.com/lewang/ws-butler")
 	      (:commit . "323b651dd70ee40a25accc940b8f80c3a3185205"))])
  (xah-fly-keys .
-	       [(25 6 20240521220424)
+	       [(25 6 20240523015137)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "9953ca9d5c5984902b3b16d3d4df1b1ae6128ca0"))])
+		 (:commit . "9c11833c7b3c7898fd15bc69d949b08cbbaf2cce"))])
  (xkcd .
        [(1 1)
 	((json
