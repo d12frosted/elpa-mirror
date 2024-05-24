@@ -1559,16 +1559,21 @@
 			(:url . "https://elpa.gnu.org/packages/external-completion.html")
 			(:commit . "4bc9c8972ac0a3dfa237a9c5704de89ef24ad82b"))])
  (exwm .
-       [(0 28)
-	((xelb
-	  (0 18)))
+       [(0 30)
+	((emacs
+	  (27 1))
+	 (xelb
+	  (0 19)))
 	"Emacs X Window Manager" tar
-	((:url . "https://github.com/ch11ng/exwm")
+	((:url . "https://github.com/emacs-exwm/exwm")
 	 (:keywords "unix")
-	 (:maintainer "Adrián Medraño Calvo" . "adrian@medranocalvo.com")
+	 (:maintainer
+	  ("Adrián Medraño Calvo" . "adrian@medranocalvo.com")
+	  ("Steven Allen" . "steven@stebalien.com")
+	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:authors
 	  ("Chris Feng" . "chris.w.feng@gmail.com"))
-	 (:commit . "86f43494ebd056cd732fb1d10d440e0eba547228"))])
+	 (:commit . "3e6bfe36afc8356bf72d89eff940282db6ea7cba"))])
  (f90-interface-browser .
 			[(1 1)
 			 nil "Parse and browse f90 interfaces" single
