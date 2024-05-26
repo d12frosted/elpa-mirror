@@ -2650,7 +2650,7 @@
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		 (:commit . "a082d7739f627523c6d9098c869cf143fa60b014"))])
  (mpdired .
-	  [(1)
+	  [(2)
 	   ((emacs
 	     (29)))
 	   "A dired-like client for Music Player Daemon" tar
@@ -2659,7 +2659,7 @@
 	    (:authors
 	     ("Manuel Giraud" . "manuel@ledu-giraud.fr"))
 	    (:url . "https://elpa.gnu.org/packages/mpdired.html")
-	    (:commit . "c2fb656038e779c010353ecce1623c4b935dbf69"))])
+	    (:commit . "ff0fbe100360fbcc25d1e6f3b9120770d759fcfa"))])
  (multi-mode .
 	     [(1 14)
 	      nil "support for multiple major modes" tar
