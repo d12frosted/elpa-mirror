@@ -85,16 +85,16 @@
 			 ("Justin Talbott" . "justin@waymondo.com"))
 			(:commit . "cb56b8c1a4ea42a329b279e57b3db473f0be4adc"))])
  (arduino-mode .
-	       [(1 3 0)
+	       [(1 3 1)
 		((emacs
 		  (25 1))
 		 (spinner
 		  (1 7 3)))
 		"Major mode for editing Arduino code" tar
-		((:url . "https://github.com/stardiviner/arduino-mode")
+		((:url . "https://repo.or.cz/arduino-mode.git")
 		 (:keywords "languages" "arduino")
 		 (:maintainer "stardiviner" . "numbchild@gmail.com")
-		 (:commit . "b1e264568688a1225126c7b9e522bcdc394f354c"))])
+		 (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
  (auto-dim-other-buffers .
 			 [(2 1 1)
 			  nil "Makes windows without focus less prominent" tar
@@ -1460,7 +1460,7 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
  (mastodon .
-	   [(1 0 21)
+	   [(1 0 22)
 	    ((emacs
 	      (27 1))
 	     (request
@@ -1473,7 +1473,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "martianhiatus@riseup.net"))
-	     (:commit . "316ab00be17e4b86a16319301f74708ecf2e13ca"))])
+	     (:commit . "4c3bdb30b8d0238e8b5900a42938d865e7dc407f"))])
  (material-theme .
 		 [(2015)
 		  ((emacs

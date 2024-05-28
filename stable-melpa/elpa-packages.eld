@@ -2882,7 +2882,6 @@
   (kaleidoscope :url "https://git.madhouse-project.org/algernon/kaleidoscope.el")
   (kaleidoscope-evil-state-flash :url "https://git.madhouse-project.org/algernon/kaleidoscope.el")
   (kana :url "https://github.com/chenyanming/kana.git")
-  (kanagawa-theme :url "https://github.com/meritamen/emacs-kanagawa-theme.git")
   (kanban :url "https://hg.sr.ht/~arnebab/kanban.el" :vc-backend Hg)
   (kanji-mode :url "https://github.com/wsgac/kanji-mode.git")
   (kaocha-runner :url "https://github.com/magnars/kaocha-runner.el.git")

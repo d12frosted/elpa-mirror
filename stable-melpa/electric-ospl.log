@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/electric-ospl-mode
 
 Updating /mnt/store/melpa/working/electric-ospl/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~swflint/electric-ospl-mode/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out deab4493530ab4bb2112c18d8ca6ccc652e24a63
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/electric-ospl/
+  to /tmp/electric-osplXuPtBH/electric-ospl-20240428.1829
+    electric-ospl.el -> electric-ospl.el
+Created electric-ospl-20240428.1829.tar containing:
+  electric-ospl-20240428.1829/
+  electric-ospl-20240428.1829/electric-ospl-pkg.el
+  electric-ospl-20240428.1829/electric-ospl.el
+ ✓ Success:
+  2024-05-27T23:37:46+0000  electric-ospl-20240428.1829.entry
+  2024-05-27T23:37:46+0000  electric-ospl-20240428.1829.tar
+Built electric-ospl in 5.867s, finished at 2024-05-27T23:37:49+0000
