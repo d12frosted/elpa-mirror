@@ -1,2 +1,1 @@
-Tok is a minimal monochromatic theme for Emacs in the spirit
-of Zmacs and Smalltalk-80.
+Tok is a minimal neo-gothic theme for Emacs.

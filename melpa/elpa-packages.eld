@@ -4055,7 +4055,6 @@
   (package-lint-flymake :url "https://github.com/purcell/package-lint.git")
   (package-loading-notifier :url "https://github.com/tttuuu888/package-loading-notifier.git")
   (package-utils :url "https://github.com/Silex/package-utils.git")
-  (packed :url "https://github.com/emacsorphanage/packed.git")
   (pacmacs :url "https://github.com/codingteam/pacmacs.el.git")
   (pact-mode :url "https://github.com/kadena-io/pact-mode.git")
   (paganini-theme :url "https://github.com/onurtemizkan/paganini.git")
