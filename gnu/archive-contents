@@ -834,7 +834,7 @@
 		 ("Theodor Thornhill" . "theo@thornhill.no"))
 		(:commit . "02c61c219b2c22491eff9b7315fed661fab423d4"))])
  (csv-mode .
-	   [(1 24)
+	   [(1 25)
 	    ((emacs
 	      (27 1))
 	     (cl-lib
@@ -845,7 +845,7 @@
 	     (:authors
 	      ("Francis J. Wright" . "F.J.Wright@qmul.ac.uk"))
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
-	     (:commit . "2e4e55a6feb7894652b1d6e78d5a230fa84cb1b1"))])
+	     (:commit . "6e8b70504236325989b2f6e19b38602a23f57ba3"))])
  (cursory .
 	  [(1 0 1)
 	   ((emacs
@@ -1330,7 +1330,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 9 4)
+	 [(0 9 5)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1343,7 +1343,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "fddc1022b5e16e356d6f65ddac51bd2ccf25209c"))])
+	   (:commit . "1e1db6d5f1ced38ad1c76ffca1651787d54998de"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
