@@ -1166,17 +1166,17 @@
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
 	 (:commit . "6ae44dba0cb72a3a6950cbe36d104db9c69dfb49"))])
  (helm-core .
-	    [(3 9 8)
+	    [(3 9 9)
 	     ((emacs
 	       (25 1))
 	      (async
-	       (1 9 7)))
+	       (1 9 8)))
 	     "Development files for Helm" tar
 	     ((:url . "https://emacs-helm.github.io/helm/")
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "6ae44dba0cb72a3a6950cbe36d104db9c69dfb49"))])
+	      (:commit . "aa51c1a8d6ff4e1e88e61e989f41ac3aa808a592"))])
  (highlight-parentheses .
 			[(2 2 2)
 			 ((emacs
