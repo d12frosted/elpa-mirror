@@ -5,16 +5,11 @@ Emacs interface for managing hyperdrives.
 
 ;; Installation:
 
-hyperdrive.el requires Emacs version 28.1 or later.
+hyperdrive.el can be installed on Emacs version 28.1 or later with
 
-hyperdrive.el is available on MELPA:
-https://melpa.org/#/getting-started
+M-x package-install hyperdrive
 
-Once you've set up MELPA, run
-M-x package-install RET hyperdrive RET
+hyperdrive.el relies on hyper-gateway-ushin for connecting to the P2P
+network.  You can download and install the gateway by running
 
-hyperdrive.el relies on hyper-gateway-ushin for connecting to the P2P network:
-https://git.sr.ht/~ushin/hyper-gateway-ushin
-
-Installation instructions:
-https://git.sr.ht/~ushin/hyper-gateway-ushin/#installation
+M-x hyperdrive-install
