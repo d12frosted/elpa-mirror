@@ -154,6 +154,8 @@
 
 ◊ 1.2.2.1 Keybindings
 
+  For a full list of commands and variables, see [mastodon-index.org].
+
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    Key                     Action                                                                          
   ─────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -183,6 +185,7 @@
    `,'                     view favouriters of toot at point                                               
    `.'                     view boosters of toot at point                                                  
    `/'                     switch between mastodon buffers                                                 
+   `\'                     prompt for an instance domain and view its local timeline (if poss)             
    `Z'                     report user/toot at point to instances moderators                               
   ─────────────────────────────────────────────────────────────────────────────────────────────────────────
                            *Other views*                                                                   
@@ -228,6 +231,9 @@
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
+  [mastodon-index.org] <file:mastodon-index.org>
+
+
 ◊ 1.2.2.2 Toot byline legend
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -249,13 +255,19 @@
   are displayed in the buffer, and in the following subsection.
 
   Replies preserve visibility status/content warnings, and include
-  boosters by default.
+  boosters by default. If the region is active when you start a reply,
+  it will be yanked into the compose buffer prefixed with `>' to form a
+  rough reply quote.
 
-  Server's max toot length, and attachment previews, are shown.
+  Server's max toot length, with running char count, and attachment
+  previews, are shown.
 
   You can download and use your instance's custom emoji
   (`mastodon-toot--download-custom-emoji',
   `mastodon-toot--enable-custom-emoji').
+
+  If you want to view some of the toot being replied to in the compose
+  buffer, set `mastodon-toot-display-orig-in-reply-buffer' to non-nil.
 
   The compose buffer uses `text-mode' so any configuration you have for
   that mode will be enabled. If any of your existing config conflicts
@@ -272,29 +284,33 @@
 
 ◊ 1.2.3.1 Keybindings
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Key        Action                             
-  ───────────────────────────────────────────────
-   `C-c C-c'  Send toot                          
-   `C-c C-k'  Cancel toot                        
-   `C-c C-w'  Add content warning                
-   `C-c C-v'  Change toot visibility             
-   `C-c C-n'  Add sensitive media/nsfw flag      
-   `C-c C-a'  Upload attachment(s)               
-   `C-c !'    Remove all attachments             
-   `C-c C-e'  Add emoji (if `emojify' installed) 
-   `C-c C-p'  Create a poll                      
-   `C-c C-l'  Set toot language                  
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Key         Action                             
+  ────────────────────────────────────────────────
+   `C-c C-c'   Send toot                          
+   `C-c C-k'   Cancel toot                        
+   `C-c C-w'   Add content warning                
+   `C-c C-v'   Change toot visibility             
+   `C-c C-n'   Add sensitive media/nsfw flag      
+   `C-c C-a'   Upload attachment(s)               
+   `C-c !'     Remove all attachments             
+   `C-c C-e'   Add emoji (if `emojify' installed) 
+   `C-c C-p'   Create a poll                      
+   `C-c C-l'   Set toot language                  
+   `-C-c C-s'  Schedule toot                      
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-◊ 1.2.3.2 Autocompletion of mentions, tags, and emoji
+◊ 1.2.3.2 Autocompletion of mentions, tags and emoji
 
-  Autocompletion of mentions, tags, and emoji is triggered by `@', `#',
-  and `:' respectively, plus a few letters. It is provided by
+  Autocompletion of mentions, tags, and emojis is provided by
   `completion-at-point-functions' (capf) backends.
-  `mastodon-toot--enable-completion' is enabled by default. If you want
-  to enable `company-mode' in the toot compose buffer, set
+  `mastodon-toot--enable-completion' is enabled by default.
+
+  To trigger completion, type a prefix followed by a few letters, `@'
+  for mentions, `#' for tags, and `:' for emoji.
+
+  If you want to enable `company-mode' in the toot compose buffer, set
   `mastodon-toot--use-company-for-completion' to `t'. (`mastodon.el'
   used to run its own native company backends, but these have been
   removed in favour of capfs.)
@@ -319,7 +335,8 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   In addition to `mastodon', the following three functions are
-  autoloaded and should work without first loading `mastodon.el':
+  autoloaded and should work without first loading a `mastodon.el'
+  buffer:
   • `mastodon-toot': Compose new toot
   • `mastodon-notifications-get': View all notifications
   • `mastodon-url-lookup': Attempt to load a URL in `mastodon.el'. URL
@@ -408,6 +425,9 @@
     • Enable custom emoji
     • Display toot being replied to
     • Set default reply visibility
+
+  • Nofitication options:
+    • Display user's profile note in follow requests
 
 
 1.2.6 Commands and variables index

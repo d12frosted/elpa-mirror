@@ -1152,19 +1152,17 @@
 		     (:keywords "languages")
 		     (:commit . "59640ceec33cd4df37096289e11ff6f4b876be03"))])
  (helm .
-       [(3 9 8)
+       [(3 9 9)
 	((helm-core
-	  (3 9 8))
+	  (3 9 9))
 	 (wfnames
-	  (1 1))
-	 (popup
-	  (0 5 3)))
+	  (1 2)))
 	"Helm is an Emacs incremental and narrowing framework" tar
 	((:url . "https://emacs-helm.github.io/helm/")
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "6ae44dba0cb72a3a6950cbe36d104db9c69dfb49"))])
+	 (:commit . "aa51c1a8d6ff4e1e88e61e989f41ac3aa808a592"))])
  (helm-core .
 	    [(3 9 9)
 	     ((emacs
@@ -1460,7 +1458,7 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
  (mastodon .
-	   [(1 0 22)
+	   [(1 0 23)
 	    ((emacs
 	      (27 1))
 	     (request
@@ -1473,7 +1471,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "martianhiatus@riseup.net"))
-	     (:commit . "4c3bdb30b8d0238e8b5900a42938d865e7dc407f"))])
+	     (:commit . "ac5684acaa2c0910350a5a79977b28dea8ddf8d7"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
