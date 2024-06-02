@@ -59,6 +59,17 @@
   such as GitHub, because your key must be kept private. Anyone with
   your key can use the API, and you will be charged.
 
+  All of the providers (except for `llm-fake'), can also take default
+  parameters that will be used if they are not specified in the prompt.
+  These are the same parameters as appear in the prompt, but prefixed
+  with `default-chat-'.  So, for example, if you find that you like
+  Ollama to be less creative than the default, you can create your
+  provider like:
+
+  ┌────
+  │ (make-llm-ollama :embedding-model "mistral:latest" :chat-model "mistral:latest" :default-chat-temperature 0.1)
+  └────
+
   For embedding users. if you store the embeddings, you *must* set the
   embedding model.  Even though there's no way for the llm package to
   tell whether you are storing it, if the default model changes, you may
@@ -337,15 +348,16 @@
 
     And the following helper functions:
     • `llm-make-chat-prompt text &keys context examples functions
-          temperature max-tokens': This is how you make prompts.  `text'
-          can be a string (the user input to the llm chatbot), or a list
-          representing a series of back-and-forth exchanges, of odd
-          number, with the last element of the list representing the
-          user's latest input.  This supports inputting context (also
-          commonly called a system prompt, although it isn't guaranteed
-          to replace the actual system prompt), examples, and other
-          important elements, all detailed in the docstring for this
-          function.
+      temperature max-tokens': This is how you make prompts.  `text' can
+      be a string (the user input to the llm chatbot), or a list
+      representing a series of back-and-forth exchanges, of odd number,
+      with the last element of the list representing the user's latest
+      input.  This supports inputting context (also commonly called a
+      system prompt, although it isn't guaranteed to replace the actual
+      system prompt), examples, and other important elements, all
+      detailed in the docstring for this function.  The
+      `non-standard-params' let you specify other options that might
+      vary per-provider.  The correctness is up to the client.
     • `llm-chat-prompt-to-text prompt': From a prompt, return a string
       representation.  This is not usually suitable for passing to LLMs,
       but for debugging purposes.
