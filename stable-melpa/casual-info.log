@@ -1,0 +1,26 @@
+Package: casual-info
+Fetcher: github
+Source:  https://github.com/kickingvegas/casual-info.git
+
+Cloning https://github.com/kickingvegas/casual-info.git to /mnt/store/melpa/working/casual-info/
+Checking out 0017be4be7e48cb291f856c99c65c415ec0dcea5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/casual-info/
+  to /tmp/casual-infofodkri/casual-info-20240531.1854
+  ! lisp/casual-info-settings.el -> casual-info-settings.el
+  ! lisp/casual-info-utils.el -> casual-info-utils.el
+  ! lisp/casual-info-variables.el -> casual-info-variables.el
+  ! lisp/casual-info-version.el -> casual-info-version.el
+  ! lisp/casual-info.el -> casual-info.el
+Created casual-info-20240531.1854.tar containing:
+  casual-info-20240531.1854/
+  casual-info-20240531.1854/casual-info-pkg.el
+  casual-info-20240531.1854/casual-info-settings.el
+  casual-info-20240531.1854/casual-info-utils.el
+  casual-info-20240531.1854/casual-info-variables.el
+  casual-info-20240531.1854/casual-info-version.el
+  casual-info-20240531.1854/casual-info.el
+ ✓ Success:
+  2024-06-02T19:36:25+0000  casual-info-20240531.1854.entry
+  2024-06-02T19:36:25+0000  casual-info-20240531.1854.tar
+Built casual-info in 3.841s, finished at 2024-06-02T19:36:27+0000
