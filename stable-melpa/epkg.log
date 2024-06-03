@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out 91c3e441eaa9f85b13d5957ee82f7c440addd147
+Checking out c3a6599e76481e5a83edd601cdbf17f0cc2e931a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgHOQoth/epkg-20240415.1554
+  to /tmp/epkg2gH5RM/epkg-20240603.1436
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,22 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
-Generating /tmp/epkgHOQoth/epkg-20240415.1554/epkg.info
-Created epkg-20240415.1554.tar containing:
-  epkg-20240415.1554/
-  epkg-20240415.1554/dir
-  epkg-20240415.1554/epkg-desc.el
-  epkg-20240415.1554/epkg-elpa.el
-  epkg-20240415.1554/epkg-list.el
-  epkg-20240415.1554/epkg-org.el
-  epkg-20240415.1554/epkg-pkg.el
-  epkg-20240415.1554/epkg-schemata.el
-  epkg-20240415.1554/epkg-utils.el
-  epkg-20240415.1554/epkg.el
-  epkg-20240415.1554/epkg.info
+Generating /tmp/epkg2gH5RM/epkg-20240603.1436/epkg.info
+Created epkg-20240603.1436.tar containing:
+  epkg-20240603.1436/
+  epkg-20240603.1436/dir
+  epkg-20240603.1436/epkg-desc.el
+  epkg-20240603.1436/epkg-elpa.el
+  epkg-20240603.1436/epkg-list.el
+  epkg-20240603.1436/epkg-org.el
+  epkg-20240603.1436/epkg-pkg.el
+  epkg-20240603.1436/epkg-schemata.el
+  epkg-20240603.1436/epkg-utils.el
+  epkg-20240603.1436/epkg.el
+  epkg-20240603.1436/epkg.info
  ✓ Success:
-  2024-06-03T06:45:55+0000  epkg-20240415.1554.entry
-  2024-06-03T06:45:55+0000  epkg-20240415.1554.tar
-Built epkg in 7.614s, finished at 2024-06-03T06:45:57+0000
+  2024-06-03T13:16:28+0000  epkg-20240415.1554.entry
+  2024-06-03T13:16:28+0000  epkg-20240415.1554.tar
+  2024-06-03T15:26:42+0000  epkg-20240603.1436.entry
+  2024-06-03T15:26:42+0000  epkg-20240603.1436.tar
+Built epkg in 8.445s, finished at 2024-06-03T15:26:44+0000
