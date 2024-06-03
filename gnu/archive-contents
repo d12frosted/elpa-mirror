@@ -1330,7 +1330,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 9 5)
+	 [(0 9 7)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1343,7 +1343,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "1e1db6d5f1ced38ad1c76ffca1651787d54998de"))])
+	   (:commit . "361e1aa26541f2a8675fcda2c907fea4b68aff00"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2967,7 +2967,7 @@
 		  ("Hanno Perrey" . "hanno@hoowl.se"))
 		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern .
-	     [(1 2)
+	     [(1 3)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2978,7 +2978,7 @@
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "a2ff4c8e9cac412e8cb9c7faf618ac18146107ea"))])
+	       (:commit . "0b7af08548e586c0d3b0ca4a683253da407220d1"))])
  (org-notify .
 	     [(0 1 1)
 	      ((emacs

@@ -94,7 +94,6 @@
   │  ;; Org styling, hide markup etc.
   │  org-hide-emphasis-markers t
   │  org-pretty-entities t
-  │  org-ellipsis "…"
   │ 
   │  ;; Agenda styling
   │  org-agenda-tags-column 0
@@ -105,6 +104,10 @@
   │    " ┄┄┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
   │  org-agenda-current-time-string
   │  "◀── now ─────────────────────────────────────────────────")
+  │ 
+  │ ;; Ellipsis styling
+  │ (setq org-ellipsis "…")
+  │ (set-face-attribute 'org-ellipsis nil :inherit 'default :box nil)
   │ 
   │ (global-org-modern-mode)
   └────
