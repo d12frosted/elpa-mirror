@@ -1,0 +1,21 @@
+Package: flycheck-pycheckers
+Fetcher: github
+Source:  https://github.com/msherry/flycheck-pycheckers.git
+
+Updating /mnt/store/melpa/working/flycheck-pycheckers/
+Checking out 897fba15787df94c1ce6a48551f1b149940ffc25
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-pycheckers/
+  to /tmp/flycheck-pycheckersMF6NvG/flycheck-pycheckers-20220923.2250
+    flycheck-pycheckers.el -> flycheck-pycheckers.el
+    bin/pycheckers.py -> bin/pycheckers.py
+Created flycheck-pycheckers-20220923.2250.tar containing:
+  flycheck-pycheckers-20220923.2250/
+  flycheck-pycheckers-20220923.2250/bin/
+  flycheck-pycheckers-20220923.2250/bin/pycheckers.py
+  flycheck-pycheckers-20220923.2250/flycheck-pycheckers-pkg.el
+  flycheck-pycheckers-20220923.2250/flycheck-pycheckers.el
+ ✓ Success:
+  2024-06-04T02:20:17+0000  flycheck-pycheckers-20220923.2250.entry
+  2024-06-04T02:20:17+0000  flycheck-pycheckers-20220923.2250.tar
+Built flycheck-pycheckers in 4.067s, finished at 2024-06-04T02:20:19+0000
