@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://git.flintfam.org/swf-projects/emacs-i3.git
 
 Updating /mnt/store/melpa/working/i3wm/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.flintfam.org/swf-projects/emacs-i3.git/': The requested URL returned error: 504
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 71391dc61063fee77ad174f3b2ca25c60b41009e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/i3wm/
+  to /tmp/i3wmpta9Ms/i3wm-20170822.1438
+    i3wm.el -> i3wm.el
+Created i3wm-20170822.1438.tar containing:
+  i3wm-20170822.1438/
+  i3wm-20170822.1438/i3wm-pkg.el
+  i3wm-20170822.1438/i3wm.el
+ ✓ Success:
+  2024-06-03T22:17:12+0000  i3wm-20170822.1438.entry
+  2024-06-03T22:17:12+0000  i3wm-20170822.1438.tar
+Built i3wm in 11.093s, finished at 2024-06-03T22:17:18+0000
