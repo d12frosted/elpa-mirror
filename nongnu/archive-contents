@@ -342,7 +342,7 @@
 	  ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
 	 (:commit . "7980df10e47eef41d4d1c57cfb690ec406381ed3"))])
  (csv2ledger .
-	     [(1 5 2)
+	     [(1 5 3)
 	      ((emacs
 		(29 1))
 	       (csv-mode
@@ -352,7 +352,7 @@
 	       (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
 	       (:authors
 		("Joost Kremers" . "joostkremers@fastmail.fm"))
-	       (:commit . "1d1004507c4973b35f54d3b7207ee0477e067ba3"))])
+	       (:commit . "b5089fdd133405c69b1aa67246991907759f2313"))])
  (cyberpunk-theme .
 		  [(1 22)
 		   nil "Cyberpunk Color Theme" tar
@@ -2499,14 +2499,14 @@
 	     ((:url . "https://github.com/lewang/ws-butler")
 	      (:commit . "323b651dd70ee40a25accc940b8f80c3a3185205"))])
  (xah-fly-keys .
-	       [(25 7 20240602075123)
+	       [(25 8 20240604084157)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "77e49262dccbdf369de814d8e6cf893e98be31e9"))])
+		 (:commit . "a61c1807bd4939e71b54d655f8d261e111915ced"))])
  (xkcd .
        [(1 1)
 	((json

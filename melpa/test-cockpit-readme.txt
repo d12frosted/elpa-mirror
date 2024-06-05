@@ -49,3 +49,5 @@ You can also use the following commands to run tests in a more manual way
 If the current function at point or the current module cannot be determined,
 the last tested module resp. last tested function are tested.  If there are no
 last tests, an error message is thrown.
+
+There is experimental state support of the Dape package to run DAP debug sessions.
