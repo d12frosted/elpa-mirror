@@ -3,66 +3,66 @@ Fetcher: github
 Source:  https://github.com/kickingvegas/Casual.git
 
 Updating /mnt/store/melpa/working/casual/
-Checking out a22cf128c3baa3e11f6aaff7dc44ef91cf0fe9ce
+Checking out b59c6f4410f2c88656223f1b1e870b8fd43fab11
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/casual/
-  to /tmp/casual3wO8Vf/casual-20240416.2237
-  ! lisp/casual-angle-measure.el -> casual-angle-measure.el
-  ! lisp/casual-binary.el -> casual-binary.el
+  to /tmp/casualW4fRnD/casual-20240606.26
+  ! lisp/casual-calc--calc.el -> casual-calc--calc.el
   ! lisp/casual-calc-algebra.el -> casual-calc-algebra.el
-  ! lisp/casual-calc.el -> casual-calc.el
-  ! lisp/casual-complex.el -> casual-complex.el
-  ! lisp/casual-conversion.el -> casual-conversion.el
-  ! lisp/casual-fileio.el -> casual-fileio.el
-  ! lisp/casual-financial.el -> casual-financial.el
-  ! lisp/casual-graphics.el -> casual-graphics.el
-  ! lisp/casual-labels.el -> casual-labels.el
-  ! lisp/casual-logarithmic.el -> casual-logarithmic.el
-  ! lisp/casual-predicates.el -> casual-predicates.el
-  ! lisp/casual-radix.el -> casual-radix.el
-  ! lisp/casual-random.el -> casual-random.el
-  ! lisp/casual-rounding.el -> casual-rounding.el
-  ! lisp/casual-settings.el -> casual-settings.el
-  ! lisp/casual-stack.el -> casual-stack.el
-  ! lisp/casual-symbolic.el -> casual-symbolic.el
-  ! lisp/casual-time.el -> casual-time.el
-  ! lisp/casual-trail.el -> casual-trail.el
-  ! lisp/casual-trigonometric.el -> casual-trigonometric.el
-  ! lisp/casual-units.el -> casual-units.el
-  ! lisp/casual-variables.el -> casual-variables.el
-  ! lisp/casual-vector.el -> casual-vector.el
-  ! lisp/casual-version.el -> casual-version.el
+  ! lisp/casual-calc-angle-measure.el -> casual-calc-angle-measure.el
+  ! lisp/casual-calc-binary.el -> casual-calc-binary.el
+  ! lisp/casual-calc-complex.el -> casual-calc-complex.el
+  ! lisp/casual-calc-conversion.el -> casual-calc-conversion.el
+  ! lisp/casual-calc-fileio.el -> casual-calc-fileio.el
+  ! lisp/casual-calc-financial.el -> casual-calc-financial.el
+  ! lisp/casual-calc-graphics.el -> casual-calc-graphics.el
+  ! lisp/casual-calc-labels.el -> casual-calc-labels.el
+  ! lisp/casual-calc-logarithmic.el -> casual-calc-logarithmic.el
+  ! lisp/casual-calc-predicates.el -> casual-calc-predicates.el
+  ! lisp/casual-calc-radix.el -> casual-calc-radix.el
+  ! lisp/casual-calc-random.el -> casual-calc-random.el
+  ! lisp/casual-calc-rounding.el -> casual-calc-rounding.el
+  ! lisp/casual-calc-settings.el -> casual-calc-settings.el
+  ! lisp/casual-calc-stack.el -> casual-calc-stack.el
+  ! lisp/casual-calc-symbolic.el -> casual-calc-symbolic.el
+  ! lisp/casual-calc-time.el -> casual-calc-time.el
+  ! lisp/casual-calc-trail.el -> casual-calc-trail.el
+  ! lisp/casual-calc-trigonometric.el -> casual-calc-trigonometric.el
+  ! lisp/casual-calc-units.el -> casual-calc-units.el
+  ! lisp/casual-calc-variables.el -> casual-calc-variables.el
+  ! lisp/casual-calc-vector.el -> casual-calc-vector.el
+  ! lisp/casual-calc-version.el -> casual-calc-version.el
   ! lisp/casual.el -> casual.el
-Created casual-20240416.2237.tar containing:
-  casual-20240416.2237/
-  casual-20240416.2237/casual-angle-measure.el
-  casual-20240416.2237/casual-binary.el
-  casual-20240416.2237/casual-calc-algebra.el
-  casual-20240416.2237/casual-calc.el
-  casual-20240416.2237/casual-complex.el
-  casual-20240416.2237/casual-conversion.el
-  casual-20240416.2237/casual-fileio.el
-  casual-20240416.2237/casual-financial.el
-  casual-20240416.2237/casual-graphics.el
-  casual-20240416.2237/casual-labels.el
-  casual-20240416.2237/casual-logarithmic.el
-  casual-20240416.2237/casual-pkg.el
-  casual-20240416.2237/casual-predicates.el
-  casual-20240416.2237/casual-radix.el
-  casual-20240416.2237/casual-random.el
-  casual-20240416.2237/casual-rounding.el
-  casual-20240416.2237/casual-settings.el
-  casual-20240416.2237/casual-stack.el
-  casual-20240416.2237/casual-symbolic.el
-  casual-20240416.2237/casual-time.el
-  casual-20240416.2237/casual-trail.el
-  casual-20240416.2237/casual-trigonometric.el
-  casual-20240416.2237/casual-units.el
-  casual-20240416.2237/casual-variables.el
-  casual-20240416.2237/casual-vector.el
-  casual-20240416.2237/casual-version.el
-  casual-20240416.2237/casual.el
+Created casual-20240606.26.tar containing:
+  casual-20240606.26/
+  casual-20240606.26/casual-calc--calc.el
+  casual-20240606.26/casual-calc-algebra.el
+  casual-20240606.26/casual-calc-angle-measure.el
+  casual-20240606.26/casual-calc-binary.el
+  casual-20240606.26/casual-calc-complex.el
+  casual-20240606.26/casual-calc-conversion.el
+  casual-20240606.26/casual-calc-fileio.el
+  casual-20240606.26/casual-calc-financial.el
+  casual-20240606.26/casual-calc-graphics.el
+  casual-20240606.26/casual-calc-labels.el
+  casual-20240606.26/casual-calc-logarithmic.el
+  casual-20240606.26/casual-calc-predicates.el
+  casual-20240606.26/casual-calc-radix.el
+  casual-20240606.26/casual-calc-random.el
+  casual-20240606.26/casual-calc-rounding.el
+  casual-20240606.26/casual-calc-settings.el
+  casual-20240606.26/casual-calc-stack.el
+  casual-20240606.26/casual-calc-symbolic.el
+  casual-20240606.26/casual-calc-time.el
+  casual-20240606.26/casual-calc-trail.el
+  casual-20240606.26/casual-calc-trigonometric.el
+  casual-20240606.26/casual-calc-units.el
+  casual-20240606.26/casual-calc-variables.el
+  casual-20240606.26/casual-calc-vector.el
+  casual-20240606.26/casual-calc-version.el
+  casual-20240606.26/casual-pkg.el
+  casual-20240606.26/casual.el
  ✓ Success:
-  2024-06-05T23:17:07+0000  casual-20240416.2237.entry
-  2024-06-05T23:17:07+0000  casual-20240416.2237.tar
-Built casual in 5.301s, finished at 2024-06-05T23:17:09+0000
+  2024-06-06T03:35:54+0000  casual-20240606.26.entry
+  2024-06-06T03:35:54+0000  casual-20240606.26.tar
+Built casual in 5.590s, finished at 2024-06-06T03:35:57+0000
