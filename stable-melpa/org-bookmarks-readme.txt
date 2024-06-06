@@ -17,6 +17,7 @@ Usage
    * bookmark title                                         :bookmark:tag1:tag2:
    :PROPERTIES:
    :URL:      https://www.example.com
+   :DESCRIPTION: example url
    :END:
 
    #+end_src
