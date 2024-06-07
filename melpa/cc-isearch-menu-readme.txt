@@ -11,4 +11,4 @@ Enter the code below into your init file to load and install
 `cc-isearch-menu'.  Tune the keybinding to your taste.
 
 (require 'cc-isearch-menu)
-(define-key isearch-mode-map (kbd "<f2>") 'cc-isearch-menu-transient)
+(define-key isearch-mode-map (kbd "<f2>") #'cc-isearch-menu-transient)
