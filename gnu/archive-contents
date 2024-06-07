@@ -1385,7 +1385,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "195add1f1ccd1059472c9df7334c97c4d155425e"))])
  (ement .
-	[(0 15)
+	[(0 15 1)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1408,7 +1408,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "dc314a120ca6c62c49342e1b109ae1282116257a"))])
+	  (:commit . "e120fdb3bdf23e31f6f8b4a3aa4490794ca37183"))])
  (emms .
        [(19)
 	((cl-lib
@@ -2915,7 +2915,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "3847f311077efa17951a786d2759f2639c5f43c8"))])
  (org .
-      [(9 7 2)
+      [(9 7 3)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2924,7 +2924,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "88dd2cea35b8bc5324da1f506f9d9abb56bd80ca"))])
+	(:commit . "2f184485bfba4a192ed10ceabb26bbec2154b099"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -3405,7 +3405,7 @@
 		("Alex Schroeder" . "alex@gnu.org"))
 	       (:maintainer "Alex Schroeder" . "alex@gnu.org"))])
  (rcirc-sqlite .
-	       [(1 0 1)
+	       [(1 0 2)
 		((emacs
 		  (30 0)))
 		"rcirc logging in SQLite" tar
@@ -3414,7 +3414,7 @@
 		 (:maintainer "Matto Fransen" . "matto@matto.nl")
 		 (:authors
 		  ("Matto Fransen" . "matto@matto.nl"))
-		 (:commit . "a2dca3182572ab2af7018a91186dbf9bcb2db2b5"))])
+		 (:commit . "50279aa1aa4303bd2736de615414120e851db1dd"))])
  (realgud .
 	  [(1 5 1)
 	   ((load-relative

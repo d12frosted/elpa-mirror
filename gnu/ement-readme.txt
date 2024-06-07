@@ -415,6 +415,27 @@ Encrypted room support through Pantalaimon
 3 Changelog
 ═══════════
 
+0.15.1
+──────
+
+  *Fixes*
+  ⁃ Handle unnamed rooms in `ement-directory' list.  (See [#248].
+    Thanks to [Hunter Jozwiak] and [Bharath Palavalli] for reporting.)
+  ⁃ Don't use `cl-type' `pcase' form in Emacs versions before 28.
+    ([#279].  Thanks to [Adam Bark] for reporting.)
+
+
+[#248] <https://github.com/alphapapa/ement.el/issues/248>
+
+[Hunter Jozwiak] <https://github.com/hjozwiak>
+
+[Bharath Palavalli] <https://github.com/bmp>
+
+[#279] <https://github.com/alphapapa/ement.el/issues/279>
+
+[Adam Bark] <https://github.com/AdamBark>
+
+
 0.15
 ────
 
