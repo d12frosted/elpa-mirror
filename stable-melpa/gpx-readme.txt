@@ -15,7 +15,7 @@ on a button below a track and it will open a web browser showing that
 route on a map.
 
 You can also display elevation profile for each track.  To do that,
-click on the [Show elevation profile] button below a track, this will
+click on the [Toggle elevation profile] button below a track, this will
 insert the elevation profile image below the track.
 
 
@@ -23,8 +23,9 @@ insert the elevation profile image below the track.
 
 You need to install [gpxinfo] program in order to convert the files.
 
-Additionally, if you want to be able to draw the routes on a map, you
-need to install [folium].
+Additionally, if you want to be able to draw the routes on a map, in
+the default way, you need to install [folium].  See Configuration
+section below for alternatives.
 
 In order to display elevation profiles, you need to install
 [matplotlib] Python library.
@@ -38,6 +39,20 @@ You can also install them via pip:
 	pip install gpx-cmd-tools folium matplotlib
 
 
+; Configuration
+
+If you want to show the routes inside of Emacs instead of a browser, you can
+use [osm] and do:
+
+    (require 'osm)
+    (defun gpx-show-map-osm (file _track _segment)
+      (osm-gpx-show file))
+    (setq gpx-show-map-function #'gpx-show-map-osm)
+
+Also, see the documentation of various ``gpx-*-function`` variables for more
+configuration options.
+
+
 [GPX]: https://wiki.openstreetmap.org/wiki/GPX
 
 [gpxinfo]: https://github.com/tkrajina/gpx-cmd-tools
@@ -45,3 +60,5 @@ You can also install them via pip:
 [folium]: https://github.com/python-visualization/folium
 
 [matplotlib]: https://matplotlib.org/
+
+[osm]: https://github.com/minad/osm
