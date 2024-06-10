@@ -588,18 +588,18 @@
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
 	       (:commit . "44546ca256f3da29e3ac884e3d699c8455acbd6e"))])
  (colorful-mode .
-		[(1 0 0)
+		[(1 0 3)
 		 ((emacs
 		   (28 1))
 		  (compat
 		   (29 1 4 4)))
 		 "Preview any color in your buffer in real time" tar
 		 ((:url . "https://github.com/DevelopmentCool2449/colorful-mode")
-		  (:keywords "faces" "tools" "matching")
+		  (:keywords "faces" "tools" "matching" "convenience")
 		  (:maintainer "Elias G. Perez" . "eg642616@gmail.com")
 		  (:authors
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
-		  (:commit . "9d1e386f7ed3493b0196cf699bdd17d5610d43b3"))])
+		  (:commit . "2d9d1dd8c4b1975ca0bfdf6cb92cc6a598dc8b6b"))])
  (comint-mime .
 	      [(0 4)
 	       ((emacs
@@ -2413,7 +2413,7 @@
 	    ("Adam Porter" . "adam@alphapapa.net"))
 	   (:commit . "61c511541af474027c012de7063ddfdb3f8cc780"))])
  (llm .
-      [(0 16 0)
+      [(0 16 1)
        ((emacs
 	 (28 1))
 	(plz
@@ -2423,7 +2423,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "c7e208a83522f92588b72d574dcd5aa1331c607a"))])
+	(:commit . "0af693b635d7f9117790b129f0de1cd8fb7d5b85"))])
  (lmc .
       [(1 4)
        nil "Little Man Computer in Elisp" tar

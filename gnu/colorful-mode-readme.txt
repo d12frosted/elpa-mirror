@@ -1,8 +1,10 @@
             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                   <./ASSETS/COLORFUL-MODE-LOGO.SVG>
+                             COLORFUL-MODE
              Preview any color in your buffer in real time.
             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+
+<./assets/colorful-mode-logo.svg>
 
       Preview any color in your buffer in real time.
 
