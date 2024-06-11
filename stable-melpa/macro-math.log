@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/nschum/macro-math.el.git
 
 Updating /mnt/store/melpa/working/macro-math/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://github.com/nschum/macro-math.el.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 216e59371e9ee39c34117ba79b9acd78bb415750
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/macro-math/
+  to /tmp/macro-matho0i9gX/macro-math-20130328.1604
+    macro-math.el -> macro-math.el
+Created macro-math-20130328.1604.tar containing:
+  macro-math-20130328.1604/
+  macro-math-20130328.1604/macro-math-pkg.el
+  macro-math-20130328.1604/macro-math.el
+ ✓ Success:
+  2024-06-11T14:56:02+0000  macro-math-20130328.1604.entry
+  2024-06-11T14:56:02+0000  macro-math-20130328.1604.tar
+Built macro-math in 4.352s, finished at 2024-06-11T14:56:04+0000
