@@ -5305,6 +5305,7 @@
   (treemacs-tab-bar :url "https://github.com/Alexander-Miller/treemacs.git")
   (treepy :url "https://github.com/volrath/treepy.el.git")
   (treesit-auto :url "https://github.com/renzmann/treesit-auto.git")
+  (treesit-ispell :url "https://github.com/erickgnavar/treesit-ispell.el.git")
   (treeview :url "https://github.com/tilmanrassy/emacs-treeview.git")
   (trident-mode :url "https://github.com/johnmastro/trident-mode.el.git")
   (trinary :url "https://github.com/emacs-elsa/trinary-logic.git")
