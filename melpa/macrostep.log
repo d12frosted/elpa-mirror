@@ -3,18 +3,7 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/macrostep.git
 
 Updating /mnt/store/melpa/working/macrostep/
-Checking out 4939d88779761e8b5461b4cf73f86600172987db
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/macrostep/
-  to /tmp/macrostepXjLdun/macrostep-20240513.2203
-    macrostep-c.el -> macrostep-c.el
-    macrostep.el -> macrostep.el
-Created macrostep-20240513.2203.tar containing:
-  macrostep-20240513.2203/
-  macrostep-20240513.2203/macrostep-c.el
-  macrostep-20240513.2203/macrostep-pkg.el
-  macrostep-20240513.2203/macrostep.el
- ✓ Success:
-  2024-06-11T05:57:02+0000  macrostep-20240513.2203.entry
-  2024-06-11T05:57:02+0000  macrostep-20240513.2203.tar
-Built macrostep in 5.061s, finished at 2024-06-11T05:57:04+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/emacsorphanage/macrostep.git/': Failed to connect to github.com port 443: Connection refused
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

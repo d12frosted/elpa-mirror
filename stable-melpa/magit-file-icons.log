@@ -3,16 +3,7 @@ Fetcher: github
 Source:  https://github.com/gekoke/magit-file-icons.git
 
 Updating /mnt/store/melpa/working/magit-file-icons/
-Checking out 0006e243b0e7aa005f6e8900b4b2e3a92c2d0532
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/magit-file-icons/
-  to /tmp/magit-file-iconsEQv7Gv/magit-file-icons-20240524.1712
-    magit-file-icons.el -> magit-file-icons.el
-Created magit-file-icons-20240524.1712.tar containing:
-  magit-file-icons-20240524.1712/
-  magit-file-icons-20240524.1712/magit-file-icons-pkg.el
-  magit-file-icons-20240524.1712/magit-file-icons.el
- ✓ Success:
-  2024-06-11T05:57:12+0000  magit-file-icons-20240524.1712.entry
-  2024-06-11T05:57:12+0000  magit-file-icons-20240524.1712.tar
-Built magit-file-icons in 3.771s, finished at 2024-06-11T05:57:13+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/gekoke/magit-file-icons.git/': Failed to connect to github.com port 443: Connection refused
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
