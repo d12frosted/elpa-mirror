@@ -2455,16 +2455,16 @@
 		(:maintainer "Rocky Bernstein" . "rocky@gnu.org")
 		(:url . "http://github.com/rocky/emacs-loc-changes"))])
  (loccur .
-	 [(1 2 4)
+	 [(1 2 5)
 	  ((emacs
-	    (24 3)))
+	    (25 1)))
 	  "Perform an occur-like folding in current buffer" tar
 	  ((:url . "https://github.com/fourier/loccur")
 	   (:keywords "matching")
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:authors
 	    ("Alexey Veretennikov" . "alexey.veretennikov@gmail.com"))
-	   (:commit . "b232bc34d4f684ea32ba532b1d24bcbebcc4e375"))])
+	   (:commit . "2120345933a1617cc5359dabd7636fd3479441bf"))])
  (logos .
 	[(1 1 1)
 	 ((emacs
@@ -3193,16 +3193,16 @@
 	     (:url . "https://elpa.gnu.org/packages/pinentry.html")
 	     (:commit . "ef0d62bba29dfab07624d030032ec0f67d34e865"))])
  (plz .
-      [(0 8)
+      [(0 9)
        ((emacs
-	 (26 3)))
+	 (27 1)))
        "HTTP library" tar
        ((:url . "https://github.com/alphapapa/plz.el")
 	(:keywords "comm" "network" "http")
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "57f10482655f02c3cc8ff35d31bd83dd6d809d02"))])
+	(:commit . "399ad3e1aafa7b86c1ce0cfab8bcf2e09cb0e956"))])
  (plz-see .
 	  [(0 1)
 	   ((emacs

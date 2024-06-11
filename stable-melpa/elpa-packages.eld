@@ -4119,7 +4119,6 @@
   (pcache :url "https://github.com/sigma/pcache.git")
   (pcap-mode :url "https://github.com/apconole/pcap-mode.git")
   (pcmpl-args :url "https://github.com/JonWaltman/pcmpl-args.el.git")
-  (pcmpl-git :url "https://github.com/leoliu/pcmpl-git-el.git")
   (pcmpl-homebrew :url "https://github.com/zwild/pcmpl-homebrew.git")
   (pcmpl-pip :url "https://github.com/zwild/pcmpl-pip.git")
   (pcomplete-extension :url "https://github.com/thierryvolpiatto/pcomplete-extension.git")

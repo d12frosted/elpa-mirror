@@ -248,7 +248,67 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.8
+3.1 0.9
+───────
+
+  *Compatibility*
+
+  ⁃ The minimum supported Emacs version is now 27.1.  (It is no longer
+    practical to test `plz' with Emacs versions older than 27.1.  For
+    Emacs 26.3, an earlier version of `plz' may be used, or this version
+    might be compatible, with or without minor changes, which the
+    maintainer cannot offer support for.)
+
+  *Changes*
+
+  ⁃ Option `plz-timeout' is removed.  (It was the default value for
+    `plz''s `:timeout' argument, which is passed to Curl as its
+    `--max-time' argument, limiting the total duration of a request
+    operation.  This argument should be unset by default, because larger
+    or slower downloads might not finish within a certain duration, and
+    it is surprising to the user to have this option set by default,
+    potentially causing requests to timeout unnecessarily.)
+  ⁃ Using arguments `:as 'file' or `:as '(file FILENAME)' now passes the
+    filename to Curl, allowing it to write the data to the file itself
+    (rather than receiving the data into an Emacs buffer and then
+    writing it to a file.  This improves performance when downloading
+    large files, significantly reducing Emacs's CPU and memory usage).
+
+  *Fixes*
+
+  ⁃ Improve workaround for Emacs's process sentinel-related issues.
+    (Don't try to process response a second time if Emacs calls the
+    sentinel after `plz' has returned for a synchronous request.  See
+    [#53].  Thanks to [Joseph Turner] for extensive help debugging, and
+    to [USHIN] for sponsoring some of this work.)
+  ⁃ Inhibit buffer hooks when calling `generate-new-buffer' (as extra
+    protection against "kill buffer?" prompts in case of errors).  (See
+    [#52].  Thanks to [Michał Krzywkowski].)
+    • Avoid "kill buffer?" prompts in case of errors on Emacs versions
+      before 28.  (See [#52] and [#57].  Thanks to [Michał
+      Krzywkowski].)
+
+  *Development*
+
+  ⁃ `plz' is now automatically tested against Emacs versions 27.1, 27.2,
+    28.1, 28.2, 29.1, 29.2, 29.3, and a recent snapshot of the `master'
+    branch (adding 29.2 and 29.3).
+
+
+[#53] <https://github.com/alphapapa/plz.el/issues/53>
+
+[Joseph Turner] <https://github.com/josephmturner>
+
+[USHIN] <https://ushin.org/>
+
+[#52] <https://github.com/alphapapa/plz.el/pull/52>
+
+[Michał Krzywkowski] <https://github.com/mkcms>
+
+[#57] <https://github.com/alphapapa/plz.el/issues/57>
+
+
+3.2 0.8
 ───────
 
   *Additions*
@@ -265,7 +325,7 @@ be simple and well-organized.  Every feature is tested against
 [Roman Scherer] <https://github.com/r0man>
 
 
-3.2 0.7.3
+3.3 0.7.3
 ─────────
 
   *Fixes*
@@ -273,7 +333,7 @@ be simple and well-organized.  Every feature is tested against
     longer committed to Git.)
 
 
-3.3 0.7.2
+3.4 0.7.2
 ─────────
 
   *Fixes*
@@ -286,7 +346,7 @@ be simple and well-organized.  Every feature is tested against
 [Joseph Turner] <https://github.com/josephmturner>
 
 
-3.4 0.7.1
+3.5 0.7.1
 ─────────
 
   *Fixes*
@@ -297,7 +357,7 @@ be simple and well-organized.  Every feature is tested against
 [Daniel Hubmann] <https://github.com/hubisan>
 
 
-3.5 0.7
+3.6 0.7
 ───────
 
   *Changes*
@@ -343,7 +403,7 @@ be simple and well-organized.  Every feature is tested against
 [httpbin] <https://github.com/postmanlabs/httpbin>
 
 
-3.6 0.6
+3.7 0.6
 ───────
 
   *Additions*
@@ -359,7 +419,7 @@ be simple and well-organized.  Every feature is tested against
   ⁃ Handle HTTP 3xx redirects when using `:as 'response'.
 
 
-3.7 0.5.4
+3.8 0.5.4
 ─────────
 
   *Fixes*
@@ -367,7 +427,7 @@ be simple and well-organized.  Every feature is tested against
     features should not be designed and released on a Friday.)
 
 
-3.8 0.5.3
+3.9 0.5.3
 ─────────
 
   *Fixes*
@@ -376,15 +436,15 @@ be simple and well-organized.  Every feature is tested against
     would require them to be recompiled after upgrading `plz').
 
 
-3.9 0.5.2
-─────────
+3.10 0.5.2
+──────────
 
   *Fixes*
   ⁃ When clearing a queue, only call `plz-queue''s `finally' function
     when specified.
 
 
-3.10 0.5.1
+3.11 0.5.1
 ──────────
 
   *Fixes*
@@ -395,7 +455,7 @@ be simple and well-organized.  Every feature is tested against
 [Dan Oriani] <https://github.com/redchops>
 
 
-3.11 0.5
+3.12 0.5
 ────────
 
   *Additions*
@@ -403,22 +463,22 @@ be simple and well-organized.  Every feature is tested against
     queue is finished.
 
 
-3.12 0.4
+3.13 0.4
 ────────
 
   *Additions*
-  ⁃ Support for HTTP `HEAD' requests.  (Thanks to [USHIN, Inc.] for
+  ⁃ Support for HTTP `HEAD' requests.  (Thanks to [USHIN] for
     sponsoring.)
 
   *Changes*
   ⁃ Allow sending `POST' and `PUT' requests without bodies.  ([#16].
-    Thanks to [Joseph Turner] for reporting.  Thanks to [USHIN, Inc.]
-    for sponsoring.)
+    Thanks to [Joseph Turner] for reporting.  Thanks to [USHIN] for
+    sponsoring.)
 
   *Fixes*
   ⁃ All 2xx HTTP status codes are considered successful.  ([#17].
-    Thanks to [Joseph Turner] for reporting.  Thanks to [USHIN, Inc.]
-    for sponsoring.)
+    Thanks to [Joseph Turner] for reporting.  Thanks to [USHIN] for
+    sponsoring.)
   ⁃ Errors are signaled with error data correctly.
 
   *Internal*
@@ -426,7 +486,7 @@ be simple and well-organized.  Every feature is tested against
   ⁃ Test suite also tests with Emacs versions 27.2, 28.1, and 28.2.
 
 
-[USHIN, Inc.] <https://ushin.org/>
+[USHIN] <https://ushin.org/>
 
 [#16] <https://github.com/alphapapa/plz.el/issues/16>
 
@@ -435,7 +495,7 @@ be simple and well-organized.  Every feature is tested against
 [#17] <https://github.com/alphapapa/plz.el/issues/17>
 
 
-3.13 0.3
+3.14 0.3
 ────────
 
   *Additions*
@@ -454,21 +514,21 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.14 0.2.1
+3.15 0.2.1
 ──────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.15 0.2
+3.16 0.2
 ────────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.16 0.1
+3.17 0.1
 ────────
 
   Initial release.
