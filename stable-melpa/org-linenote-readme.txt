@@ -9,5 +9,6 @@ number in a buffer. The package provides some interactive functions:
 - org-linenote-browse
 - org-linenote-find-root-dir
 - org-linenote-find-note-dir
+- org-linenote-auto-open
 
 All notes are stored at $PROJECT_ROOT/.linenote directory.
