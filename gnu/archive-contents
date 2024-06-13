@@ -1455,18 +1455,20 @@
 		("Ted Zlatanov" . "tzz@lifelogs.com"))
 	       (:maintainer "Ted Zlatanov" . "tzz@lifelogs.com"))])
  (erc .
-      [(5 5)
+      [(5 6)
        ((emacs
 	 (27 1))
 	(compat
-	 (29 1 3 4)))
+	 (29 1 4 5)))
        "An Emacs Internet Relay Chat client" tar
        ((:url . "https://www.gnu.org/software/emacs/erc.html")
 	(:keywords "irc" "chat" "client" "internet")
-	(:maintainer "Amin Bandali <bandali@gnu.org>, F. Jason Park" . "jp@neverwas.me")
+	(:maintainer
+	 ("Amin Bandali" . "bandali@gnu.org")
+	 ("F. Jason Park" . "jp@neverwas.me"))
 	(:authors
 	 ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-	(:commit . "7548446194afdd3cd26851001565294da2732e29"))])
+	(:commit . "d1e98a8f0128747030e97ffea20a8f67aa0cd923"))])
  (ergoemacs-mode .
 		 [(5 16 10 12)
 		  ((emacs
