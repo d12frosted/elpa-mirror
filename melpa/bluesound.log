@@ -3,16 +3,7 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~rwv/bluesound-el
 
 Updating /mnt/store/melpa/working/bluesound/
-Checking out 92f6ebacfa20e89ccd10d27bdb84c74b6413cc68
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/bluesound/
-  to /tmp/bluesoundLY9x2A/bluesound-20231124.1347
-    bluesound.el -> bluesound.el
-Created bluesound-20231124.1347.tar containing:
-  bluesound-20231124.1347/
-  bluesound-20231124.1347/bluesound-pkg.el
-  bluesound-20231124.1347/bluesound.el
- ✓ Success:
-  2024-06-15T15:29:32+0000  bluesound-20231124.1347.entry
-  2024-06-15T15:29:32+0000  bluesound-20231124.1347.tar
-Built bluesound in 4.173s, finished at 2024-06-15T15:29:33+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~rwv/bluesound-el/': The requested URL returned error: 500
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

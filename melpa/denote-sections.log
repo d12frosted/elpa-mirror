@@ -3,16 +3,7 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~swflint/denote-sections
 
 Updating /mnt/store/melpa/working/denote-sections/
-Checking out 00c7084652fa32f9f4ab504facaaed623f299684
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/denote-sections/
-  to /tmp/denote-sectionsVQZywp/denote-sections-20240608.1629
-    denote-sections.el -> denote-sections.el
-Created denote-sections-20240608.1629.tar containing:
-  denote-sections-20240608.1629/
-  denote-sections-20240608.1629/denote-sections-pkg.el
-  denote-sections-20240608.1629/denote-sections.el
- ✓ Success:
-  2024-06-15T15:37:56+0000  denote-sections-20240608.1629.entry
-  2024-06-15T15:37:56+0000  denote-sections-20240608.1629.tar
-Built denote-sections in 4.090s, finished at 2024-06-15T15:37:57+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~swflint/denote-sections/': The requested URL returned error: 500
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
