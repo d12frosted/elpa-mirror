@@ -3401,6 +3401,7 @@
   (morrowind-theme :url "https://github.com/SamuelBanya/morrowind-theme.git")
   (mos-mode :url "https://github.com/themkat/mos-mode.git")
   (mosey :url "https://github.com/alphapapa/mosey.el.git")
+  (most-faces :url "https://codeberg.org/mekeor/most-faces.git")
   (most-used-words :url "https://github.com/udyantw/most-used-words.git")
   (mote-mode :url "https://github.com/inkel/mote-mode.git")
   (motion-mode :url "https://github.com/ainame/motion-mode.git")
