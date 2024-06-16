@@ -522,7 +522,7 @@
 		(:keywords "languages" "elixir")
 		(:commit . "00d6580a040a750e019218f9392cf9a4c2dac23a"))])
  (elpher .
-	 [(3 6 0)
+	 [(3 6 1)
 	  ((emacs
 	    (27 1)))
 	  "A friendly gopher and gemini client" tar
@@ -531,7 +531,7 @@
 	   (:maintainer "Tim Vaughan" . "plugd@thelambdalab.xyz")
 	   (:authors
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
-	   (:commit . "56bc74e224d9835c41b6e6b68c9705b60e6dbbe2"))])
+	   (:commit . "109c97791c16cb638ab42cbfe795a9ea9601a963"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib
@@ -2523,14 +2523,14 @@
 	     ((:url . "https://github.com/lewang/ws-butler")
 	      (:commit . "323b651dd70ee40a25accc940b8f80c3a3185205"))])
  (xah-fly-keys .
-	       [(25 8 20240608142416)
+	       [(25 8 20240615211050)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "9ca43eff25e1c4b7114f27241d429a2aa3c0c5ba"))])
+		 (:commit . "334a7c17f7e8f4bf1a016fd8015944aae4cceeaf"))])
  (xkcd .
        [(1 1)
 	((json
