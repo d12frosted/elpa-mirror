@@ -3,7 +3,24 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~technomancy/fennel-mode
 
 Updating /mnt/store/melpa/working/fennel-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~technomancy/fennel-mode/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out b07a726f4d8b6e7f69fdf7f2105abfa5707680dc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fennel-mode/
+  to /tmp/fennel-modec8IGYo/fennel-mode-20240502.1555
+    antifennel.el -> antifennel.el
+    fennel-mode.el -> fennel-mode.el
+    fennel-proto-repl.el -> fennel-proto-repl.el
+    fennel-scratch.el -> fennel-scratch.el
+    ob-fennel.el -> ob-fennel.el
+Created fennel-mode-20240502.1555.tar containing:
+  fennel-mode-20240502.1555/
+  fennel-mode-20240502.1555/antifennel.el
+  fennel-mode-20240502.1555/fennel-mode-pkg.el
+  fennel-mode-20240502.1555/fennel-mode.el
+  fennel-mode-20240502.1555/fennel-proto-repl.el
+  fennel-mode-20240502.1555/fennel-scratch.el
+  fennel-mode-20240502.1555/ob-fennel.el
+ ✓ Success:
+  2024-06-16T00:05:02+0000  fennel-mode-20240502.1555.entry
+  2024-06-16T00:05:02+0000  fennel-mode-20240502.1555.tar
+Built fennel-mode in 4.895s, finished at 2024-06-16T00:05:03+0000

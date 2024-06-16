@@ -2917,7 +2917,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "3847f311077efa17951a786d2759f2639c5f43c8"))])
  (org .
-      [(9 7 3)
+      [(9 7 4)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -2926,7 +2926,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "2f184485bfba4a192ed10ceabb26bbec2154b099"))])
+	(:commit . "1387e361350794610ac1d5e5629381652713197b"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -3167,13 +3167,15 @@
 	      ("Harald Jörg" . "haj@posteo.de"))
 	     (:commit . "638009f98a144790ea85fd0fa311d7499fdac94f"))])
  (persist .
-	  [(0 6)
-	   nil "Persist Variables between Emacs Sessions" tar
+	  [(0 6 1)
+	   ((emacs
+	     (26 1)))
+	   "Persist Variables between Emacs Sessions" tar
 	   ((:maintainer "Joseph Turner" . "persist-el@breatheoutbreathe.in")
 	    (:authors
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
-	    (:commit . "737d095b4504436e6d870923ed471687f16b992e"))])
+	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
  (phps-mode .
 	    [(0 4 49)
 	     ((emacs

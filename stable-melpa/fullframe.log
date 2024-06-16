@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~tomterl/fullframe
 
 Updating /mnt/store/melpa/working/fullframe/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~tomterl/fullframe/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 886b831c001b44ec95aec4ff36e8bc1b3003c786
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fullframe/
+  to /tmp/fullframeofYTDa/fullframe-20210226.1057
+    fullframe.el -> fullframe.el
+Created fullframe-20210226.1057.tar containing:
+  fullframe-20210226.1057/
+  fullframe-20210226.1057/fullframe-pkg.el
+  fullframe-20210226.1057/fullframe.el
+ ✓ Success:
+  2024-06-16T00:09:01+0000  fullframe-20210226.1057.entry
+  2024-06-16T00:09:01+0000  fullframe-20210226.1057.tar
+Built fullframe in 4.547s, finished at 2024-06-16T00:09:02+0000

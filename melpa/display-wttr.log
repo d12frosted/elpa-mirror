@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~josegpt/display-wttr
 
 Updating /mnt/store/melpa/working/display-wttr/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~josegpt/display-wttr/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 7062953d034e27c297d58748cf74dad552aa2873
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/display-wttr/
+  to /tmp/display-wttrcoaW9t/display-wttr-20221102.1426
+    display-wttr.el -> display-wttr.el
+Created display-wttr-20221102.1426.tar containing:
+  display-wttr-20221102.1426/
+  display-wttr-20221102.1426/display-wttr-pkg.el
+  display-wttr-20221102.1426/display-wttr.el
+ ✓ Success:
+  2024-06-15T23:56:22+0000  display-wttr-20221102.1426.entry
+  2024-06-15T23:56:22+0000  display-wttr-20221102.1426.tar
+Built display-wttr in 5.325s, finished at 2024-06-15T23:56:24+0000

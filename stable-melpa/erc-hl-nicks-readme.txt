@@ -1,8 +1,17 @@
+This package is now a part of Emacs.  This version is considered
+deprecated.  Please use the `nicks' module in ERC 5.6+.  See the
+README from the repo for more information.
+
 This file was originally erc-highlight-nicknames.  It was modified
 to optionally ignore the uniquifying characters that IRC clients
 add to nicknames
 
 History
+
+1.3.5
+
+- Mark this package as obsolete now that it's part of Emacs.
+  Thanks all!
 
 1.3.4
 
