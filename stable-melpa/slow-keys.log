@@ -3,7 +3,16 @@ Fetcher: sourcehut
 Source:  https://git.sr.ht/~gitmux/slow-keys
 
 Updating /mnt/store/melpa/working/slow-keys/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.sr.ht/~gitmux/slow-keys/': The requested URL returned error: 500
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out b951ae4bdcea56ced03f227b82b28c3d91d15e61
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/slow-keys/
+  to /tmp/slow-keysiMac5U/slow-keys-20220807.1425
+    slow-keys.el -> slow-keys.el
+Created slow-keys-20220807.1425.tar containing:
+  slow-keys-20220807.1425/
+  slow-keys-20220807.1425/slow-keys-pkg.el
+  slow-keys-20220807.1425/slow-keys.el
+ ✓ Success:
+  2024-06-17T07:52:30+0000  slow-keys-20220807.1425.entry
+  2024-06-17T07:52:30+0000  slow-keys-20220807.1425.tar
+Built slow-keys in 4.619s, finished at 2024-06-17T07:52:32+0000
