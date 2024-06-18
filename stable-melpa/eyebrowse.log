@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://depp.brause.cc/eyebrowse.git
 
 Updating /mnt/store/melpa/working/eyebrowse/
-Checking out 473381f4f9e847eb50a40ef2306c027432789754
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eyebrowse/
-  to /tmp/eyebrowseUzswe3/eyebrowse-20240407.1342
-    eyebrowse.el -> eyebrowse.el
-Created eyebrowse-20240407.1342.tar containing:
-  eyebrowse-20240407.1342/
-  eyebrowse-20240407.1342/eyebrowse-pkg.el
-  eyebrowse-20240407.1342/eyebrowse.el
- ✓ Success:
-  2024-06-18T02:17:27+0000  eyebrowse-20240407.1342.entry
-  2024-06-18T02:17:27+0000  eyebrowse-20240407.1342.tar
-Built eyebrowse in 5.137s, finished at 2024-06-18T02:17:30+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://depp.brause.cc/eyebrowse.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
