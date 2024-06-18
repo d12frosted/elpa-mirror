@@ -3,8 +3,16 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sequoia-pgp/sqel.git
 
 Updating /mnt/store/melpa/working/sq/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 524 curl 22 The requested URL returned error: 524
-fatal: expected flush after ref listing
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out bb0d1756bb9c62bb999fa21e15949e28650c663e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sq/
+  to /tmp/sqPqfP5o/sq-20220717.2039
+    sq.el -> sq.el
+Created sq-20220717.2039.tar containing:
+  sq-20220717.2039/
+  sq-20220717.2039/sq-pkg.el
+  sq-20220717.2039/sq.el
+ ✓ Success:
+  2024-06-17T22:49:07+0000  sq-20220717.2039.entry
+  2024-06-17T22:49:07+0000  sq-20220717.2039.tar
+Built sq in 3.827s, finished at 2024-06-17T22:49:08+0000
