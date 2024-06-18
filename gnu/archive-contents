@@ -214,6 +214,32 @@
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
 	   (:commit . "73edb3731e4bdbe3760fb4c12f94ae1aa075458f"))])
+ (auctex-cont-latexmk .
+		      [(0 2)
+		       ((emacs
+			 (29 3))
+			(auctex
+			 (14 0 5)))
+		       "run latexmk continuously, report errors via Flymake" tar
+		       ((:url . "https://github.com/ultronozm/auctex-cont-latexmk.el")
+			(:keywords "tex")
+			(:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
+			(:authors
+			 ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
+			(:commit . "afcf9d21170010a47f692ac6c48c3515c52bb62e"))])
+ (auctex-label-numbers .
+		       [(0 2)
+			((emacs
+			  (27 1))
+			 (auctex
+			  (14 0 5)))
+			"Numbering for LaTeX previews and folds" tar
+			((:url . "https://github.com/ultronozm/auctex-label-numbers.el")
+			 (:keywords "tex")
+			 (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
+			 (:authors
+			  ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
+			 (:commit . "202e49bb9f754bc647deb112bd2c35f9a583b942"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" tar
@@ -3279,6 +3305,32 @@
        (:authors
 	("Tom Gillespie" . "tgbugs@gmail.com"))
        (:commit . "4dad5fcdbbb362a0dc2dfa7b5a38dd5be1551c68"))])
+ (preview-auto .
+	       [(0 3)
+		((emacs
+		  (29 3))
+		 (auctex
+		  (14 0 5)))
+		"Automatic previews in AUCTeX" tar
+		((:url . "https://github.com/ultronozm/preview-auto.el")
+		 (:keywords "tex" "convenience")
+		 (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
+		 (:authors
+		  ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
+		 (:commit . "401e66743103baedc96ad3b63dfa2f1f39e4fa60"))])
+ (preview-tailor .
+		 [(0 2)
+		  ((emacs
+		    (29 1))
+		   (auctex
+		    (0)))
+		  "Tailor AUCTeX preview scale to monitor/text scale" tar
+		  ((:url . "https://github.com/ultronozm/preview-tailor.el")
+		   (:keywords "tex" "multimedia")
+		   (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
+		   (:authors
+		    ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
+		   (:commit . "bb92fac553c8ddb87f64f4c9829762b58764c1ff"))])
  (project .
 	  [(0 11 1)
 	   ((emacs
@@ -4139,6 +4191,30 @@
 		(:authors
 		 ("Rocky Bernstein" . "rocky@gnu.org"))
 		(:commit . "b3b69f52207d3a8111421ad7ab9ed82abbe85316"))])
+ (tex-item .
+	   [(0 1)
+	    ((emacs
+	      (27 1)))
+	    "Commands for working with tex items" tar
+	    ((:url . "https://github.com/ultronozm/tex-item.el")
+	     (:keywords "tex" "convenience")
+	     (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
+	     (:authors
+	      ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
+	     (:commit . "ee1957f3bce6ed04627b985e95a17db190781e06"))])
+ (tex-parens .
+	     [(0 2)
+	      ((emacs
+		(27 1))
+	       (auctex
+		(14 0 5)))
+	      "like lisp.el but for tex" tar
+	      ((:url . "https://github.com/ultronozm/tex-parens.el")
+	       (:keywords "tex" "convenience")
+	       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
+	       (:authors
+		("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
+	       (:commit . "d2f88832651ae2271b0267dae08b5d01c063cce1"))])
  (theme-buffet .
 	       [(0 1 2)
 		((emacs

@@ -3,8 +3,16 @@ Fetcher: git
 Source:  https://depp.brause.cc/form-feed.git
 
 Updating /mnt/store/melpa/working/form-feed/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-error: RPC failed; curl 16 Error in the HTTP2 framing layer
-fatal: expected flush after ref listing
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out ac1f0ef30a11979f5dfe12d8c05a666739e486ff
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/form-feed/
+  to /tmp/form-feedDKb6dC/form-feed-20210508.1627
+    form-feed.el -> form-feed.el
+Created form-feed-20210508.1627.tar containing:
+  form-feed-20210508.1627/
+  form-feed-20210508.1627/form-feed-pkg.el
+  form-feed-20210508.1627/form-feed.el
+ ✓ Success:
+  2024-06-18T10:44:46+0000  form-feed-20210508.1627.entry
+  2024-06-18T10:44:46+0000  form-feed-20210508.1627.tar
+Built form-feed in 4.295s, finished at 2024-06-18T10:44:47+0000

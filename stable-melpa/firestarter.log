@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://depp.brause.cc/firestarter.git
 
 Updating /mnt/store/melpa/working/firestarter/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://depp.brause.cc/firestarter.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 76070c9074aa363350abe6ad06143e90b3e12ab1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/firestarter/
+  to /tmp/firestarter5TFqrw/firestarter-20210508.1626
+    firestarter.el -> firestarter.el
+Created firestarter-20210508.1626.tar containing:
+  firestarter-20210508.1626/
+  firestarter-20210508.1626/firestarter-pkg.el
+  firestarter-20210508.1626/firestarter.el
+ ✓ Success:
+  2024-06-18T10:41:43+0000  firestarter-20210508.1626.entry
+  2024-06-18T10:41:43+0000  firestarter-20210508.1626.tar
+Built firestarter in 5.387s, finished at 2024-06-18T10:41:45+0000

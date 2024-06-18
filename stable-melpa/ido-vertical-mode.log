@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/creichert/ido-vertical-mode.el.git
 
 Updating /mnt/store/melpa/working/ido-vertical-mode/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://github.com/creichert/ido-vertical-mode.el.git/': Failed to connect to github.com port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out b1659e967da0687abceca733b389ace24004fa66
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ido-vertical-mode/
+  to /tmp/ido-vertical-modex9Psa3/ido-vertical-mode-20210205.436
+    ido-vertical-mode.el -> ido-vertical-mode.el
+Created ido-vertical-mode-20210205.436.tar containing:
+  ido-vertical-mode-20210205.436/
+  ido-vertical-mode-20210205.436/ido-vertical-mode-pkg.el
+  ido-vertical-mode-20210205.436/ido-vertical-mode.el
+ ✓ Success:
+  2024-06-18T10:54:00+0000  ido-vertical-mode-20210205.436.entry
+  2024-06-18T10:54:00+0000  ido-vertical-mode-20210205.436.tar
+Built ido-vertical-mode in 3.852s, finished at 2024-06-18T10:54:02+0000
