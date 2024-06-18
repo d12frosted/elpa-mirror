@@ -15,8 +15,8 @@ Alignment: Alignment rules for common Puppet expressions are included.
   current block with respect to "=>" for attributes and hashes or "=" for
   parameter lists.
 
-Imenu: Navigation to the resource types used in a file is implemented by
-  the imenu facility.
+Imenu: Navigation to the resource types and variable assignments used in
+  a file is implemented using the imenu facility.
 
 Cross-reference navigation: When point is on an identifier for a class,
   defined type, data type or custom function, the definition of that
