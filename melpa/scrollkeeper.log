@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/alphapapa/scrollkeeper.el.git
 
 Updating /mnt/store/melpa/working/scrollkeeper/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://github.com/alphapapa/scrollkeeper.el.git/': Failed to connect to github.com port 443: Connection refused
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 3c4ac6b6b44686d31c260ee0b19daaee59bdccd6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scrollkeeper/
+  to /tmp/scrollkeeperbBrWZb/scrollkeeper-20190109.629
+    scrollkeeper.el -> scrollkeeper.el
+Created scrollkeeper-20190109.629.tar containing:
+  scrollkeeper-20190109.629/
+  scrollkeeper-20190109.629/scrollkeeper-pkg.el
+  scrollkeeper-20190109.629/scrollkeeper.el
+ ✓ Success:
+  2024-06-18T02:59:01+0000  scrollkeeper-20190109.629.entry
+  2024-06-18T02:59:01+0000  scrollkeeper-20190109.629.tar
+Built scrollkeeper in 3.380s, finished at 2024-06-18T02:59:02+0000

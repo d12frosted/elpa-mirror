@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/zk-phi/scratch-pop.git
 
 Updating /mnt/store/melpa/working/scratch-pop/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://github.com/zk-phi/scratch-pop.git/': Failed to connect to github.com port 443: Connection refused
-
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+Checking out 545badcd840dd50b39dd7dfa37459c6f71d02ea6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scratch-pop/
+  to /tmp/scratch-popG2JQ04/scratch-pop-20200910.226
+    scratch-pop.el -> scratch-pop.el
+Created scratch-pop-20200910.226.tar containing:
+  scratch-pop-20200910.226/
+  scratch-pop-20200910.226/scratch-pop-pkg.el
+  scratch-pop-20200910.226/scratch-pop.el
+ ✓ Success:
+  2024-06-18T02:58:58+0000  scratch-pop-20200910.226.entry
+  2024-06-18T02:58:58+0000  scratch-pop-20200910.226.tar
+Built scratch-pop in 3.110s, finished at 2024-06-18T02:59:00+0000
