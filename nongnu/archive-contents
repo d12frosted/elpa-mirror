@@ -1007,20 +1007,20 @@
 		("Florian Ragwitz" . "rafl@debian.org")
 		("Marius Vollmer" . "marius.vollmer@gmail.com")))])
  (git-modes .
-	    [(1 4 2)
+	    [(1 4 3)
 	     ((emacs
 	       (25 1))
 	      (compat
-	       (29 1 4 1)))
+	       (29 1 4 5)))
 	     "Major modes for editing Git configuration files" tar
 	     ((:url . "https://github.com/magit/git-modes")
 	      (:keywords "convenience" "vc" "git")
-	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	      (:maintainer "Jonas Bernoulli" . "emacs.git-modes@jonas.bernoulli.dev")
 	      (:authors
 	       ("Sebastian Wiesner" . "lunaryorn@gmail.com")
 	       ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
-	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	      (:commit . "399b1b446644afce8d0949ff85a882bfdbbfb7bf"))])
+	       ("Jonas Bernoulli" . "emacs.git-modes@jonas.bernoulli.dev"))
+	      (:commit . "7901415b39bef1b789d161ca2c10dfb910d13780"))])
  (gnu-apl-mode .
 	       [(1 5 1)
 		nil "Emacs mode for GNU APL" tar
@@ -1364,18 +1364,18 @@
 	       (:keywords "languages")
 	       (:commit . "6408b96c1c97e41bc2af060d661afee4f7b22e89"))])
  (keycast .
-	  [(1 3 3)
+	  [(1 4 0)
 	   ((emacs
 	     (25 3))
 	    (compat
-	     (29 1 4 1)))
+	     (29 1 4 5)))
 	   "Show current command and its binding" tar
 	   ((:url . "https://github.com/tarsius/keycast")
 	    (:keywords "multimedia")
-	    (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	    (:maintainer "Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev")
 	    (:authors
-	     ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	    (:commit . "c47fa154c756abd044da4a1353c30b978782f7dc"))])
+	     ("Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev"))
+	    (:commit . "f04466cd8f8226715f113635204dc978171f63b7"))])
  (kotlin-mode .
 	      [(2 0 0)
 	       ((emacs
@@ -2472,18 +2472,18 @@
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
-	      [(3 3 2)
+	      [(3 3 3)
 	       ((emacs
 		 (25 1))
 		(compat
-		 (29 1 4 1)))
+		 (29 1 4 5)))
 	       "Use the Emacsclient as $EDITOR" tar
 	       ((:url . "https://github.com/magit/with-editor")
 		(:keywords "processes" "terminals")
-		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:maintainer "Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev")
 		(:authors
-		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
-		(:commit . "d5f3f06cb830311e60c58f656988ef37c05a99e0"))])
+		 ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
+		(:commit . "0eff758e59b0efeab0a4f40b19c51e5712c19d4e"))])
  (with-simulated-input .
 		       [(3 0)
 			((emacs

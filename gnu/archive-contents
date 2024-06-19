@@ -3072,7 +3072,7 @@
 		  (:url . "https://elpa.gnu.org/packages/org-translate.html")
 		  (:commit . "bdc5d169ef0c502f46aa673918ccf34fcc8415f2"))])
  (orgalist .
-	   [(1 15)
+	   [(1 16)
 	    ((emacs
 	      (26 1)))
 	    "Manage Org-like lists in non-Org buffers" tar
@@ -3081,7 +3081,7 @@
 	     (:authors
 	      ("Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))
 	     (:url . "https://elpa.gnu.org/packages/orgalist.html")
-	     (:commit . "6b97873be78dba574f4753104c8f2da3c8bfb5ee"))])
+	     (:commit . "1f540f645eeb338019750d4dca3c056a1f5eca6d"))])
  (osc .
       [(0 4)
        nil "Open Sound Control protocol library" tar
@@ -4336,20 +4336,20 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 6 0)
+	    [(0 7 0)
 	     ((emacs
 	       (26 1))
 	      (compat
-	       (29 1 4 4))
+	       (29 1 4 5))
 	      (seq
 	       (2 24)))
 	     "Transient commands" tar
 	     ((:url . "https://github.com/magit/transient")
 	      (:keywords "extensions")
-	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
-	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	      (:commit . "55d5d41b48d7f7bc1ecf1f90c012d7821dff5724"))])
+	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
+	      (:commit . "ef6cb3852f1d02224fbe9b9695cfe2d0dedbc271"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs
