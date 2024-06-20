@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-revert-buffer-all.git
 
 Updating /mnt/store/melpa/working/revert-buffer-all/
-Checking out d49462047ebb442d7872f12007380797ee49473c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/revert-buffer-all/
-  to /tmp/revert-buffer-allU30trI/revert-buffer-all-20240421.836
-    revert-buffer-all.el -> revert-buffer-all.el
-Created revert-buffer-all-20240421.836.tar containing:
-  revert-buffer-all-20240421.836/
-  revert-buffer-all-20240421.836/revert-buffer-all-pkg.el
-  revert-buffer-all-20240421.836/revert-buffer-all.el
- ✓ Success:
-  2024-06-20T03:00:52+0000  revert-buffer-all-20240421.836.entry
-  2024-06-20T03:00:52+0000  revert-buffer-all-20240421.836.tar
-Built revert-buffer-all in 4.595s, finished at 2024-06-20T03:00:54+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-revert-buffer-all.git/': The requested URL returned error: 502
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

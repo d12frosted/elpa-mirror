@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-run-stuff.git
 
 Updating /mnt/store/melpa/working/run-stuff/
-Checking out 518ffa247bc71e31514d9e90257107da32f94939
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/run-stuff/
-  to /tmp/run-stuffcEeXr4/run-stuff-20240421.807
-    run-stuff.el -> run-stuff.el
-Created run-stuff-20240421.807.tar containing:
-  run-stuff-20240421.807/
-  run-stuff-20240421.807/run-stuff-pkg.el
-  run-stuff-20240421.807/run-stuff.el
- ✓ Success:
-  2024-06-20T03:01:40+0000  run-stuff-20240421.807.entry
-  2024-06-20T03:01:40+0000  run-stuff-20240421.807.tar
-Built run-stuff in 4.688s, finished at 2024-06-20T03:01:42+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-run-stuff.git/': The requested URL returned error: 500
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

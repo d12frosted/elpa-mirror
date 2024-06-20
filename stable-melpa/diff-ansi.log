@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-diff-ansi.git
 
 Updating /mnt/store/melpa/working/diff-ansi/
-Checking out 0338970469375eadd3c0e492997aec2fcb06bb27
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/diff-ansi/
-  to /tmp/diff-ansiwSRf8p/diff-ansi-20240616.2345
-    diff-ansi.el -> diff-ansi.el
-Created diff-ansi-20240616.2345.tar containing:
-  diff-ansi-20240616.2345/
-  diff-ansi-20240616.2345/diff-ansi-pkg.el
-  diff-ansi-20240616.2345/diff-ansi.el
- ✓ Success:
-  2024-06-20T02:12:02+0000  diff-ansi-20240616.2345.entry
-  2024-06-20T02:12:02+0000  diff-ansi-20240616.2345.tar
-Built diff-ansi in 3.843s, finished at 2024-06-20T02:12:03+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-diff-ansi.git/': The requested URL returned error: 502
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

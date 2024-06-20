@@ -3,16 +3,7 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-xref-rst.git
 
 Updating /mnt/store/melpa/working/xref-rst/
-Checking out c6dd6cc6df1d9dd311cb0f421b86beadfa3156ce
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/xref-rst/
-  to /tmp/xref-rstWxRKD2/xref-rst-20240421.814
-    xref-rst.el -> xref-rst.el
-Created xref-rst-20240421.814.tar containing:
-  xref-rst-20240421.814/
-  xref-rst-20240421.814/xref-rst-pkg.el
-  xref-rst-20240421.814/xref-rst.el
- ✓ Success:
-  2024-06-20T03:16:00+0000  xref-rst-20240421.814.entry
-  2024-06-20T03:16:00+0000  xref-rst-20240421.814.tar
-Built xref-rst in 4.315s, finished at 2024-06-20T03:16:02+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/ideasman42/emacs-xref-rst.git/': The requested URL returned error: 500
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
