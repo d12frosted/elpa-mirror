@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/kickingvegas/casual-calc.git
 
 Updating /mnt/store/melpa/working/casual-calc/
-Checking out c060df6ab8de7d0c6059c106042d32ba15f2adef
+Checking out 8c7a3b3140a3d3d035f0a0d245683561a5b14003
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/casual-calc/
-  to /tmp/casual-calcKUiyCH/casual-calc-20240615.1647
+  to /tmp/casual-calcYRJdpw/casual-calc-20240620.1851
   ! lisp/casual-calc--calc.el -> casual-calc--calc.el
   ! lisp/casual-calc-algebra.el -> casual-calc-algebra.el
   ! lisp/casual-calc-angle-measure.el -> casual-calc-angle-measure.el
@@ -34,37 +34,39 @@ Copying files (->) and directories (=>)
   ! lisp/casual-calc-vector.el -> casual-calc-vector.el
   ! lisp/casual-calc-version.el -> casual-calc-version.el
   ! lisp/casual-calc.el -> casual-calc.el
-Created casual-calc-20240615.1647.tar containing:
-  casual-calc-20240615.1647/
-  casual-calc-20240615.1647/casual-calc--calc.el
-  casual-calc-20240615.1647/casual-calc-algebra.el
-  casual-calc-20240615.1647/casual-calc-angle-measure.el
-  casual-calc-20240615.1647/casual-calc-binary.el
-  casual-calc-20240615.1647/casual-calc-complex.el
-  casual-calc-20240615.1647/casual-calc-conversion.el
-  casual-calc-20240615.1647/casual-calc-fileio.el
-  casual-calc-20240615.1647/casual-calc-financial.el
-  casual-calc-20240615.1647/casual-calc-graphics.el
-  casual-calc-20240615.1647/casual-calc-labels.el
-  casual-calc-20240615.1647/casual-calc-logarithmic.el
-  casual-calc-20240615.1647/casual-calc-pkg.el
-  casual-calc-20240615.1647/casual-calc-predicates.el
-  casual-calc-20240615.1647/casual-calc-radix.el
-  casual-calc-20240615.1647/casual-calc-random.el
-  casual-calc-20240615.1647/casual-calc-rounding.el
-  casual-calc-20240615.1647/casual-calc-settings.el
-  casual-calc-20240615.1647/casual-calc-stack.el
-  casual-calc-20240615.1647/casual-calc-symbolic.el
-  casual-calc-20240615.1647/casual-calc-time.el
-  casual-calc-20240615.1647/casual-calc-trail.el
-  casual-calc-20240615.1647/casual-calc-trigonometric.el
-  casual-calc-20240615.1647/casual-calc-units.el
-  casual-calc-20240615.1647/casual-calc-utils.el
-  casual-calc-20240615.1647/casual-calc-variables.el
-  casual-calc-20240615.1647/casual-calc-vector.el
-  casual-calc-20240615.1647/casual-calc-version.el
-  casual-calc-20240615.1647/casual-calc.el
+Created casual-calc-20240620.1851.tar containing:
+  casual-calc-20240620.1851/
+  casual-calc-20240620.1851/casual-calc--calc.el
+  casual-calc-20240620.1851/casual-calc-algebra.el
+  casual-calc-20240620.1851/casual-calc-angle-measure.el
+  casual-calc-20240620.1851/casual-calc-binary.el
+  casual-calc-20240620.1851/casual-calc-complex.el
+  casual-calc-20240620.1851/casual-calc-conversion.el
+  casual-calc-20240620.1851/casual-calc-fileio.el
+  casual-calc-20240620.1851/casual-calc-financial.el
+  casual-calc-20240620.1851/casual-calc-graphics.el
+  casual-calc-20240620.1851/casual-calc-labels.el
+  casual-calc-20240620.1851/casual-calc-logarithmic.el
+  casual-calc-20240620.1851/casual-calc-pkg.el
+  casual-calc-20240620.1851/casual-calc-predicates.el
+  casual-calc-20240620.1851/casual-calc-radix.el
+  casual-calc-20240620.1851/casual-calc-random.el
+  casual-calc-20240620.1851/casual-calc-rounding.el
+  casual-calc-20240620.1851/casual-calc-settings.el
+  casual-calc-20240620.1851/casual-calc-stack.el
+  casual-calc-20240620.1851/casual-calc-symbolic.el
+  casual-calc-20240620.1851/casual-calc-time.el
+  casual-calc-20240620.1851/casual-calc-trail.el
+  casual-calc-20240620.1851/casual-calc-trigonometric.el
+  casual-calc-20240620.1851/casual-calc-units.el
+  casual-calc-20240620.1851/casual-calc-utils.el
+  casual-calc-20240620.1851/casual-calc-variables.el
+  casual-calc-20240620.1851/casual-calc-vector.el
+  casual-calc-20240620.1851/casual-calc-version.el
+  casual-calc-20240620.1851/casual-calc.el
  ✓ Success:
-  2024-06-20T14:59:30+0000  casual-calc-20240615.1647.entry
-  2024-06-20T14:59:30+0000  casual-calc-20240615.1647.tar
-Built casual-calc in 3.545s, finished at 2024-06-20T14:59:32+0000
+  2024-06-20T17:07:27+0000  casual-calc-20240615.1647.entry
+  2024-06-20T17:07:27+0000  casual-calc-20240615.1647.tar
+  2024-06-20T19:16:49+0000  casual-calc-20240620.1851.entry
+  2024-06-20T19:16:49+0000  casual-calc-20240620.1851.tar
+Built casual-calc in 4.018s, finished at 2024-06-20T19:16:51+0000
