@@ -113,6 +113,14 @@ Acknowledgments
 Changelog
 ─────────
 
+0.4
+╌╌╌
+
+◊ Fix
+
+  • Fix byte compilation error.  Thanks to Chris Rayner for reporting!
+
+
 0.3
 ╌╌╌
 

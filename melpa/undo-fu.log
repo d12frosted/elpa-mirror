@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-undo-fu.git
 
 Updating /mnt/store/melpa/working/undo-fu/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-undo-fu.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out ea902716f39c725db1b90dbb285b44404b3bd6df
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/undo-fu/
+  to /tmp/undo-fuIaS9bX/undo-fu-20240617.939
+    undo-fu.el -> undo-fu.el
+Created undo-fu-20240617.939.tar containing:
+  undo-fu-20240617.939/
+  undo-fu-20240617.939/undo-fu-pkg.el
+  undo-fu-20240617.939/undo-fu.el
+ ✓ Success:
+  2024-06-20T11:45:47+0000  undo-fu-20240617.939.entry
+  2024-06-20T11:45:47+0000  undo-fu-20240617.939.tar
+Built undo-fu in 5.867s, finished at 2024-06-20T11:45:50+0000

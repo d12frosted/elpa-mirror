@@ -3,7 +3,16 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-undo-fu-session.git
 
 Updating /mnt/store/melpa/working/undo-fu-session/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/ideasman42/emacs-undo-fu-session.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 75d78310c86901f01b35d47f3ac1a5c8368abba4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/undo-fu-session/
+  to /tmp/undo-fu-sessionST3s0U/undo-fu-session-20240421.834
+    undo-fu-session.el -> undo-fu-session.el
+Created undo-fu-session-20240421.834.tar containing:
+  undo-fu-session-20240421.834/
+  undo-fu-session-20240421.834/undo-fu-session-pkg.el
+  undo-fu-session-20240421.834/undo-fu-session.el
+ ✓ Success:
+  2024-06-20T11:45:47+0000  undo-fu-session-20240421.834.entry
+  2024-06-20T11:45:47+0000  undo-fu-session-20240421.834.tar
+Built undo-fu-session in 5.670s, finished at 2024-06-20T11:45:49+0000
