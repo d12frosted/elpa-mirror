@@ -2221,7 +2221,7 @@
 		(:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
 		(:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx .
-       [(1 7)
+       [(1 8)
 	((emacs
 	  (27 1))
 	 (compat
@@ -2232,7 +2232,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "3c36f1eb31713869ffbdbf55971671efa4f01966"))])
+	 (:commit . "d053303b54d8ceb15ee496bf7019837e70876410"))])
  (jit-spell .
 	    [(0 4)
 	     ((emacs
@@ -4336,7 +4336,7 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 7 0)
+	    [(0 7 1)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -4349,7 +4349,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "ef6cb3852f1d02224fbe9b9695cfe2d0dedbc271"))])
+	      (:commit . "f78aebdd03292241b45023c4379bcad5c746fc4c"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs

@@ -119,7 +119,7 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
 3 Correcting misspellings
 ═════════════════════════
 
-  The easiest way to correct a misspellings is to right click on the
+  The easiest way to correct a misspelling is to right click on the
   word, underlined with a wavy line. Then a context menu will open where
   you can select from suggestions.
 
