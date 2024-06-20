@@ -1,4 +1,4 @@
-Swedish celebrated name of the day
+Swedish name day calendar
 
 Example usage
 
