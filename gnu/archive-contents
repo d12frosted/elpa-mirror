@@ -2440,6 +2440,17 @@
 	   (:authors
 	    ("Adam Porter" . "adam@alphapapa.net"))
 	   (:commit . "61c511541af474027c012de7063ddfdb3f8cc780"))])
+ (literate-scratch .
+		   [(1 0)
+		    ((emacs
+		      (29 1)))
+		    "Lisp Interaction w/ text paragraphs" tar
+		    ((:url . "https://git.spwhitton.name/dotfiles/tree/.emacs.d/site-lisp/literate-scratch.el")
+		     (:keywords "lisp" "text")
+		     (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name")
+		     (:authors
+		      ("Sean Whitton" . "spwhitton@spwhitton.name"))
+		     (:commit . "c22a15e86acf28da716532c26ba1371574c8e979"))])
  (llm .
       [(0 16 1)
        ((emacs
