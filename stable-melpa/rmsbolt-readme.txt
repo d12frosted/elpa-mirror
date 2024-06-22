@@ -37,6 +37,17 @@ replacement language spec.
 Please see the readme at https://gitlab.com/jgkamat/rmsbolt for
 more information!
 
+Tramp support notes:
+- Compilation occurs on a remote system, via Tramp, when default-directory is
+  a remote path.  default-directory will be remote when rmsbolt is invoked on
+  a buffer backed by a remote path.
+- Paths used in externally-run command lines must use the local component of a
+  path so they can run on a remote system.  `rmsbolt--with-local-files` takes
+  care of commonly used paths that typically need to be local (`src-filename` and
+  `output-filename`), though `file-local-name` should be used in other cases.
+- One temporary directory exists per remote so that intermediate files are
+  created on the system performing the compilation.
+
 Thanks:
 Inspiration and some assembly parsing logic was adapted from Matt Godbolt's
 compiler-explorer: https://github.com/mattgodbolt/compiler-explorer and
