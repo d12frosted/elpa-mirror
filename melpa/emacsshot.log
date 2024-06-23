@@ -3,7 +3,18 @@ Fetcher: gitlab
 Source:  https://gitlab.com/marcowahl/emacsshot.git
 
 Updating /mnt/store/melpa/working/emacsshot/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.com/marcowahl/emacsshot.git/': Failed to connect to gitlab.com port 443: Connection timed out
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out fe958b11056f3c671ebdd604d5aa574323284ca5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emacsshot/
+  to /tmp/emacsshotRx11r5/emacsshot-20191206.944
+    emacsshot.el -> emacsshot.el
+    test-emacsshot.el -> test-emacsshot.el
+Created emacsshot-20191206.944.tar containing:
+  emacsshot-20191206.944/
+  emacsshot-20191206.944/emacsshot-pkg.el
+  emacsshot-20191206.944/emacsshot.el
+  emacsshot-20191206.944/test-emacsshot.el
+ ✓ Success:
+  2024-06-23T10:24:31+0000  emacsshot-20191206.944.entry
+  2024-06-23T10:24:31+0000  emacsshot-20191206.944.tar
+Built emacsshot in 3.737s, finished at 2024-06-23T10:24:33+0000
