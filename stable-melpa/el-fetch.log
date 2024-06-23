@@ -3,18 +3,7 @@ Fetcher: gitlab
 Source:  https://gitlab.com/xgqt/emacs-el-fetch.git
 
 Updating /mnt/store/melpa/working/el-fetch/
-Checking out 7907fd7829ca55b21a62d23c17066fdfde9cd07c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/el-fetch/
-  to /tmp/el-fetchJHdgT1/el-fetch-20230624.2
-  ! src/el-fetch/el-fetch-custom.el -> el-fetch-custom.el
-  ! src/el-fetch/el-fetch.el -> el-fetch.el
-Created el-fetch-20230624.2.tar containing:
-  el-fetch-20230624.2/
-  el-fetch-20230624.2/el-fetch-custom.el
-  el-fetch-20230624.2/el-fetch-pkg.el
-  el-fetch-20230624.2/el-fetch.el
- ✓ Success:
-  2024-06-23T03:50:11+0000  el-fetch-20230624.2.entry
-  2024-06-23T03:50:11+0000  el-fetch-20230624.2.tar
-Built el-fetch in 4.362s, finished at 2024-06-23T03:50:12+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://gitlab.com/xgqt/emacs-el-fetch.git/': Failed to connect to gitlab.com port 443: Connection timed out
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128

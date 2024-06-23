@@ -3,30 +3,7 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sadiq/dwim-coder-mode.git
 
 Updating /mnt/store/melpa/working/dwim-coder-mode/
-Checking out 94a752fca078144dd309343880abafbc4eacca5f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dwim-coder-mode/
-  to /tmp/dwim-coder-modeFnuD6p/dwim-coder-mode-20230830.1215
-    dwim-coder-c.el -> dwim-coder-c.el
-    dwim-coder-common.el -> dwim-coder-common.el
-    dwim-coder-default.el -> dwim-coder-default.el
-    dwim-coder-lisp.el -> dwim-coder-lisp.el
-    dwim-coder-mode.el -> dwim-coder-mode.el
-    dwim-coder-python.el -> dwim-coder-python.el
-    dwim-coder-rust.el -> dwim-coder-rust.el
-    dwim-coder-xml.el -> dwim-coder-xml.el
-Created dwim-coder-mode-20230830.1215.tar containing:
-  dwim-coder-mode-20230830.1215/
-  dwim-coder-mode-20230830.1215/dwim-coder-c.el
-  dwim-coder-mode-20230830.1215/dwim-coder-common.el
-  dwim-coder-mode-20230830.1215/dwim-coder-default.el
-  dwim-coder-mode-20230830.1215/dwim-coder-lisp.el
-  dwim-coder-mode-20230830.1215/dwim-coder-mode-pkg.el
-  dwim-coder-mode-20230830.1215/dwim-coder-mode.el
-  dwim-coder-mode-20230830.1215/dwim-coder-python.el
-  dwim-coder-mode-20230830.1215/dwim-coder-rust.el
-  dwim-coder-mode-20230830.1215/dwim-coder-xml.el
- ✓ Success:
-  2024-06-23T03:48:24+0000  dwim-coder-mode-20230830.1215.entry
-  2024-06-23T03:48:24+0000  dwim-coder-mode-20230830.1215.tar
-Built dwim-coder-mode in 6.020s, finished at 2024-06-23T03:48:26+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://gitlab.com/sadiq/dwim-coder-mode.git/': Failed to connect to gitlab.com port 443: Connection timed out
+
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128

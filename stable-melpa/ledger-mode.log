@@ -3,3 +3,62 @@ Fetcher: github
 Source:  https://github.com/ledger/ledger-mode.git
 
 Updating /mnt/store/melpa/working/ledger-mode/
+Checking out b0e65f74a5a0db98fd1aea2bd87fcf9e489cdacb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ledger-mode/
+  to /tmp/ledger-modeENiStx/ledger-mode-20240622.2052
+    ledger-check.el -> ledger-check.el
+    ledger-commodities.el -> ledger-commodities.el
+    ledger-complete.el -> ledger-complete.el
+    ledger-context.el -> ledger-context.el
+    ledger-exec.el -> ledger-exec.el
+    ledger-flymake.el -> ledger-flymake.el
+    ledger-fontify.el -> ledger-fontify.el
+    ledger-fonts.el -> ledger-fonts.el
+    ledger-init.el -> ledger-init.el
+    ledger-mode.el -> ledger-mode.el
+    ledger-navigate.el -> ledger-navigate.el
+    ledger-occur.el -> ledger-occur.el
+    ledger-post.el -> ledger-post.el
+    ledger-reconcile.el -> ledger-reconcile.el
+    ledger-regex.el -> ledger-regex.el
+    ledger-report.el -> ledger-report.el
+    ledger-schedule.el -> ledger-schedule.el
+    ledger-sort.el -> ledger-sort.el
+    ledger-state.el -> ledger-state.el
+    ledger-test.el -> ledger-test.el
+    ledger-texi.el -> ledger-texi.el
+    ledger-xact.el -> ledger-xact.el
+  ! doc/ledger-mode.texi -> ledger-mode.texi
+Generating /tmp/ledger-modeENiStx/ledger-mode-20240622.2052/ledger-mode.info
+Created ledger-mode-20240622.2052.tar containing:
+  ledger-mode-20240622.2052/
+  ledger-mode-20240622.2052/dir
+  ledger-mode-20240622.2052/ledger-check.el
+  ledger-mode-20240622.2052/ledger-commodities.el
+  ledger-mode-20240622.2052/ledger-complete.el
+  ledger-mode-20240622.2052/ledger-context.el
+  ledger-mode-20240622.2052/ledger-exec.el
+  ledger-mode-20240622.2052/ledger-flymake.el
+  ledger-mode-20240622.2052/ledger-fontify.el
+  ledger-mode-20240622.2052/ledger-fonts.el
+  ledger-mode-20240622.2052/ledger-init.el
+  ledger-mode-20240622.2052/ledger-mode-pkg.el
+  ledger-mode-20240622.2052/ledger-mode.el
+  ledger-mode-20240622.2052/ledger-mode.info
+  ledger-mode-20240622.2052/ledger-navigate.el
+  ledger-mode-20240622.2052/ledger-occur.el
+  ledger-mode-20240622.2052/ledger-post.el
+  ledger-mode-20240622.2052/ledger-reconcile.el
+  ledger-mode-20240622.2052/ledger-regex.el
+  ledger-mode-20240622.2052/ledger-report.el
+  ledger-mode-20240622.2052/ledger-schedule.el
+  ledger-mode-20240622.2052/ledger-sort.el
+  ledger-mode-20240622.2052/ledger-state.el
+  ledger-mode-20240622.2052/ledger-test.el
+  ledger-mode-20240622.2052/ledger-texi.el
+  ledger-mode-20240622.2052/ledger-xact.el
+ ✓ Success:
+  2024-06-23T06:24:55+0000  ledger-mode-20240622.2052.entry
+  2024-06-23T06:24:55+0000  ledger-mode-20240622.2052.tar
+Built ledger-mode in 10.314s, finished at 2024-06-23T06:24:57+0000
