@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm/
-Checking out 00faa55a8fddb7649a969120eb38a23c1bc8f739
+Checking out 3f07c14de971f44c43cd0300ea92cf0c69993816
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmEd1mbv/helm-20240618.613
+  to /tmp/helmt86Iv3/helm-20240624.615
     .dir-locals.el -> .dir-locals.el
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
@@ -48,51 +48,53 @@ Copying files (->) and directories (=>)
     helm-x-files.el -> helm-x-files.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20240618.613.tar containing:
-  helm-20240618.613/
-  helm-20240618.613/.dir-locals.el
-  helm-20240618.613/emacs-helm.sh
-  helm-20240618.613/helm-adaptive.el
-  helm-20240618.613/helm-bookmark.el
-  helm-20240618.613/helm-buffers.el
-  helm-20240618.613/helm-color.el
-  helm-20240618.613/helm-command.el
-  helm-20240618.613/helm-dabbrev.el
-  helm-20240618.613/helm-easymenu.el
-  helm-20240618.613/helm-elisp.el
-  helm-20240618.613/helm-epa.el
-  helm-20240618.613/helm-eshell.el
-  helm-20240618.613/helm-eval.el
-  helm-20240618.613/helm-external.el
-  helm-20240618.613/helm-fd.el
-  helm-20240618.613/helm-files.el
-  helm-20240618.613/helm-find.el
-  helm-20240618.613/helm-font.el
-  helm-20240618.613/helm-for-files.el
-  helm-20240618.613/helm-global-bindings.el
-  helm-20240618.613/helm-grep.el
-  helm-20240618.613/helm-help.el
-  helm-20240618.613/helm-id-utils.el
-  helm-20240618.613/helm-imenu.el
-  helm-20240618.613/helm-info.el
-  helm-20240618.613/helm-locate.el
-  helm-20240618.613/helm-man.el
-  helm-20240618.613/helm-misc.el
-  helm-20240618.613/helm-mode.el
-  helm-20240618.613/helm-net.el
-  helm-20240618.613/helm-occur.el
-  helm-20240618.613/helm-packages.el
-  helm-20240618.613/helm-pkg.el
-  helm-20240618.613/helm-regexp.el
-  helm-20240618.613/helm-ring.el
-  helm-20240618.613/helm-semantic.el
-  helm-20240618.613/helm-sys.el
-  helm-20240618.613/helm-tags.el
-  helm-20240618.613/helm-types.el
-  helm-20240618.613/helm-utils.el
-  helm-20240618.613/helm-x-files.el
-  helm-20240618.613/helm.el
+Created helm-20240624.615.tar containing:
+  helm-20240624.615/
+  helm-20240624.615/.dir-locals.el
+  helm-20240624.615/emacs-helm.sh
+  helm-20240624.615/helm-adaptive.el
+  helm-20240624.615/helm-bookmark.el
+  helm-20240624.615/helm-buffers.el
+  helm-20240624.615/helm-color.el
+  helm-20240624.615/helm-command.el
+  helm-20240624.615/helm-dabbrev.el
+  helm-20240624.615/helm-easymenu.el
+  helm-20240624.615/helm-elisp.el
+  helm-20240624.615/helm-epa.el
+  helm-20240624.615/helm-eshell.el
+  helm-20240624.615/helm-eval.el
+  helm-20240624.615/helm-external.el
+  helm-20240624.615/helm-fd.el
+  helm-20240624.615/helm-files.el
+  helm-20240624.615/helm-find.el
+  helm-20240624.615/helm-font.el
+  helm-20240624.615/helm-for-files.el
+  helm-20240624.615/helm-global-bindings.el
+  helm-20240624.615/helm-grep.el
+  helm-20240624.615/helm-help.el
+  helm-20240624.615/helm-id-utils.el
+  helm-20240624.615/helm-imenu.el
+  helm-20240624.615/helm-info.el
+  helm-20240624.615/helm-locate.el
+  helm-20240624.615/helm-man.el
+  helm-20240624.615/helm-misc.el
+  helm-20240624.615/helm-mode.el
+  helm-20240624.615/helm-net.el
+  helm-20240624.615/helm-occur.el
+  helm-20240624.615/helm-packages.el
+  helm-20240624.615/helm-pkg.el
+  helm-20240624.615/helm-regexp.el
+  helm-20240624.615/helm-ring.el
+  helm-20240624.615/helm-semantic.el
+  helm-20240624.615/helm-sys.el
+  helm-20240624.615/helm-tags.el
+  helm-20240624.615/helm-types.el
+  helm-20240624.615/helm-utils.el
+  helm-20240624.615/helm-x-files.el
+  helm-20240624.615/helm.el
  ✓ Success:
   2024-06-24T04:13:22+0000  helm-20240618.613.entry
   2024-06-24T04:13:22+0000  helm-20240618.613.tar
-Built helm in 4.623s, finished at 2024-06-24T04:13:24+0000
+  2024-06-24T06:33:08+0000  helm-20240624.615.entry
+  2024-06-24T06:33:08+0000  helm-20240624.615.tar
+Built helm in 6.500s, finished at 2024-06-24T06:33:10+0000
