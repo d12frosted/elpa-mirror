@@ -135,6 +135,14 @@
 		    (:authors
 		     ("Stephane Zermatten" . "szermatt@gmx.net"))
 		    (:commit . "a021468eec8ff8cacb74a9ea595d3587186e29ea"))])
+ (beancount .
+	    [(0 9)
+	     nil "A major mode to edit Beancount input files." tar
+	     ((:maintainer "Martin Blais" . "blais@furius.ca")
+	      (:authors
+	       ("Martin Blais" . "blais@furius.ca"))
+	      (:url . "https://elpa.nongnu.org/nongnu/beancount.html")
+	      (:commit . "71c16222461d947b82e45e4b986d01880b492bbb"))])
  (better-jumper .
 		[(1 0 1)
 		 ((emacs
@@ -1091,7 +1099,7 @@
 	      ("David Andersson" . "l.david.anderssonsverige.nu"))
 	     (:commit . "278cd3e6d5107693aa2bb33189ca503f22f227d0"))])
  (gptel .
-	[(0 8 6)
+	[(0 9 0)
 	 ((emacs
 	   (27 1))
 	  (transient
@@ -1101,7 +1109,10 @@
 	 "Interact with ChatGPT or other LLMs" tar
 	 ((:url . "https://github.com/karthink/gptel")
 	  (:keywords "convenience")
-	  (:commit . "cdb07d0d2bb6a4fe6d6a620aa4eec98f70fe6f78"))])
+	  (:maintainer "Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com")
+	  (:authors
+	   ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
+	  (:commit . "4c0583b2bd6557a09d66dfec84bab776242d0848"))])
  (graphql-mode .
 	       [(1 0 0)
 		((emacs
