@@ -1941,7 +1941,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20240620 135010)
+	      [(1 0 20240621 124732)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
@@ -2472,7 +2472,7 @@
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
-	      [(3 3 3)
+	      [(3 3 4)
 	       ((emacs
 		 (25 1))
 		(compat
@@ -2483,7 +2483,7 @@
 		(:maintainer "Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev")
 		(:authors
 		 ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-		(:commit . "0eff758e59b0efeab0a4f40b19c51e5712c19d4e"))])
+		(:commit . "322ee26d3a7d3d67840293041837b7e70cffa8d1"))])
  (with-simulated-input .
 		       [(3 0)
 			((emacs
