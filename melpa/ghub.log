@@ -3,33 +3,3 @@ Fetcher: github
 Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
-Checking out e44aceeb12831f8b7afac4e089525b5a2dd5a5e8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ghub/
-  to /tmp/ghub81rDMc/ghub-20240618.1527
-    ghub-pkg.el -> ghub-pkg.el
-  ! lisp/buck.el -> buck.el
-  ! lisp/ghub-graphql.el -> ghub-graphql.el
-  ! lisp/ghub.el -> ghub.el
-  ! lisp/glab.el -> glab.el
-  ! lisp/gogs.el -> gogs.el
-  ! lisp/gsexp.el -> gsexp.el
-  ! lisp/gtea.el -> gtea.el
-  ! docs/ghub.texi -> ghub.texi
-Generating /tmp/ghub81rDMc/ghub-20240618.1527/ghub.info
-Created ghub-20240618.1527.tar containing:
-  ghub-20240618.1527/
-  ghub-20240618.1527/buck.el
-  ghub-20240618.1527/dir
-  ghub-20240618.1527/ghub-graphql.el
-  ghub-20240618.1527/ghub-pkg.el
-  ghub-20240618.1527/ghub.el
-  ghub-20240618.1527/ghub.info
-  ghub-20240618.1527/glab.el
-  ghub-20240618.1527/gogs.el
-  ghub-20240618.1527/gsexp.el
-  ghub-20240618.1527/gtea.el
- ✓ Success:
-  2024-06-25T07:53:48+0000  ghub-20240618.1527.entry
-  2024-06-25T07:53:48+0000  ghub-20240618.1527.tar
-Built ghub in 8.903s, finished at 2024-06-25T07:53:50+0000
