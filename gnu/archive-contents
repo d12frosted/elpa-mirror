@@ -1143,7 +1143,7 @@
 	 (:url . "https://elpa.gnu.org/packages/djvu.html")
 	 (:commit . "071c8ab168588897475899c46eaa16e70141db8c"))])
  (do-at-point .
-	      [(0 1 1)
+	      [(0 1 2)
 	       ((emacs
 		 (26 1)))
 	       "Generic context-sensitive action dispatcher." tar
@@ -1152,7 +1152,7 @@
 		(:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
 		(:authors
 		 ("Philip Kaludercic" . "philipk@posteo.net"))
-		(:commit . "3244b2a765315ad640deab34b1b2f90ac2277df3"))])
+		(:commit . "da0742df74cbb36347aefd5dcb17d674ee4846d3"))])
  (doc-toc .
 	  [(1 2)
 	   ((emacs
@@ -1356,7 +1356,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 9 10)
+	 [(0 9 11)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1369,7 +1369,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "3d6192ea09cfbd2e3d3e13dcada5f543bd79b968"))])
+	   (:commit . "968b8631d102c7fd051dbe9eb077755964bb47a2"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
