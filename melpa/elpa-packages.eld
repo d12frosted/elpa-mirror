@@ -1253,7 +1253,7 @@
   (eglot-java :url "https://github.com/yveszoundi/eglot-java.git")
   (eglot-jl :url "https://github.com/non-Jedi/eglot-jl.git")
   (eglot-luau :url "https://github.com/kennethloeffler/eglot-luau.git")
-  (eglot-signature-eldoc-talkative :url "https://codeberg.org/mekeor/emacs-eglot-signature-eldoc-talkative.git")
+  (eglot-signature-eldoc-talkative :url "https://codeberg.org/mekeor/eglot-signature-eldoc-talkative.git")
   (eglot-tempel :url "https://github.com/fejfighter/eglot-tempel.git")
   (ego :url "https://github.com/emacs-china/EGO.git")
   (eide :url "https://forge.tedomum.net/hjuvi/eide.git")
