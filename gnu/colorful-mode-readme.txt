@@ -124,9 +124,9 @@ time and in a user friendly way based on 🌈[rainbow-mode.el].
 ────────────────
 
   These key bindings are defined by: `colorful-mode-map'
-  • `C-c c x' → `colorful-change-or-copy-color'.
-  • `C-c c c' → `colorful-convert-and-copy-color'.
-  • `C-c c r' → `colorful-convert-and-change-color'.
+  • `C-x c x' → `colorful-change-or-copy-color'.
+  • `C-x c c' → `colorful-convert-and-copy-color'.
+  • `C-x c r' → `colorful-convert-and-change-color'.
 
 
 3.5 Adding extra colors
