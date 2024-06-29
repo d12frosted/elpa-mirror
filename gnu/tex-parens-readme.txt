@@ -87,37 +87,23 @@
 2 Configuration
 ═══════════════
 
-  Download this repository, install using `M-x package-install-file' (or
-  package-vc-install, straight, elpaca, …), and add something like the
-  following to your [init file], adjusting the binds according to
-  preference (and replacing `LaTeX-mode' with `latex-mode' or `tex-mode'
-  or `plain-tex-mode', whichever is appropriate, if you don't use
-  AUCTeX):
+  This package is available via GNU ELPA, so you can install it using
+  `package-install' or `list-packages'.  You can activate it via `M-x
+  tex-parens-mode', which remaps binds for the commands listed above to
+  their `tex-parens-*' counterparts.
+
+  To activate automatically, add the following lines to your config (the
+  first hook applies if use the built-in [tex-mode], the second if you
+  use [AUCTeX]):
   ┌────
   │ (use-package tex-parens
-  │   :bind
-  │   (:map LaTeX-mode-map
-  │ 	([remap forward-sexp] . tex-parens-forward-sexp)
-  │ 	([remap backward-sexp] . tex-parens-backward-sexp)
-  │ 	([remap forward-list] . tex-parens-forward-list)
-  │ 	([remap backward-list] . tex-parens-backward-list)
-  │ 	([remap backward-up-list] . tex-parens-backward-up-list)
-  │ 	([remap up-list] . tex-parens-up-list)
-  │ 	([remap down-list] . tex-parens-down-list)
-  │ 	([remap delete-pair] . tex-parens-delete-pair)
-  │ 	([remap mark-sexp] . tex-parens-mark-sexp)
-  │ 	([remap kill-sexp] . tex-parens-kill-sexp)
-  │ 	([remap transpose-sexps] . transpose-sexps)
-  │ 	([remap backward-kill-sexp] . tex-parens-backward-kill-sexp)
-  │ 	([remap raise-sexp] . tex-parens-raise-sexp))
   │   :hook
-  │   (LaTeX-mode . tex-parens-setup))
+  │   (tex-mode . tex-parens-mode)
+  │   (TeX-mode . tex-parens-mode))
   └────
-  With this setup, whatever binds you generally use for the indicated
-  list commands will be forwarded to `tex-parens' in `LaTeX-mode'.  If
-  you want to specify the keys more directly, use instead something like
-  the following:
 
+  For finer control over how keys are bound, you can avoid
+  `tex-parens-mode' and instead use something like the following:
   ┌────
   │ (use-package tex-parens
   │   :bind
@@ -136,7 +122,8 @@
   │ 	("C-M-<backspace>" . tex-parens-backward-kill-sexp)
   │ 	("M-+" . tex-parens-raise-sexp))
   │   :hook
-  │   (LaTeX-mode . tex-parens-setup))
+  │   (tex-mode . tex-parens-setup)
+  │   (TeX-mode . tex-parens-setup))
   └────
 
   The precise use-package declaration that I use may be found in [the
@@ -144,11 +131,14 @@
 
   Use `M-x customize-group tex-parens' to configure further.  If you
   tweak the customization variables concerning delimiters and modifiers,
-  then you'll need to reload your tex file or `M-: (tex-parens-setup)'
-  for the changes to take effect.
+  then you'll need to reload your tex file, reset the minor mode, or do
+  `M-: (tex-parens-setup)' for the changes to take effect.
 
 
-[init file] <https://www.emacswiki.org/emacs/InitFile>
+[tex-mode]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/TeX-Mode.html>
+
+[AUCTeX] <https://www.gnu.org/software/auctex/>
 
 [the LaTeX part of my config]
 <https://github.com/ultronozm/emacsd/blob/main/init-latex.el>
