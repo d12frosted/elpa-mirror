@@ -3,13 +3,14 @@ Fetcher: github
 Source:  https://github.com/Fuco1/smartparens.git
 
 Updating /mnt/store/melpa/working/smartparens/
-Checking out 470451b12fd89eebd641fda7acb2adb1e2afa97f
+Checking out 236748ccf8ee0b305bf7892138db55425ccc1b36
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/smartparens/
-  to /tmp/smartparensZpLmng/smartparens-20240629.1313
+  to /tmp/smartparensdSS1OA/smartparens-20240629.1815
     smartparens-c.el -> smartparens-c.el
     smartparens-clojure.el -> smartparens-clojure.el
     smartparens-config.el -> smartparens-config.el
+    smartparens-coq.el -> smartparens-coq.el
     smartparens-crystal.el -> smartparens-crystal.el
     smartparens-elixir.el -> smartparens-elixir.el
     smartparens-erlang.el -> smartparens-erlang.el
@@ -35,39 +36,40 @@ Copying files (->) and directories (=>)
     smartparens-unison.el -> smartparens-unison.el
     smartparens.el -> smartparens.el
     sp-sublimetext-like.el -> sp-sublimetext-like.el
-Created smartparens-20240629.1313.tar containing:
-  smartparens-20240629.1313/
-  smartparens-20240629.1313/smartparens-c.el
-  smartparens-20240629.1313/smartparens-clojure.el
-  smartparens-20240629.1313/smartparens-config.el
-  smartparens-20240629.1313/smartparens-crystal.el
-  smartparens-20240629.1313/smartparens-elixir.el
-  smartparens-20240629.1313/smartparens-erlang.el
-  smartparens-20240629.1313/smartparens-ess.el
-  smartparens-20240629.1313/smartparens-go.el
-  smartparens-20240629.1313/smartparens-haskell.el
-  smartparens-20240629.1313/smartparens-html.el
-  smartparens-20240629.1313/smartparens-javascript.el
-  smartparens-20240629.1313/smartparens-latex.el
-  smartparens-20240629.1313/smartparens-lua.el
-  smartparens-20240629.1313/smartparens-markdown.el
-  smartparens-20240629.1313/smartparens-ml.el
-  smartparens-20240629.1313/smartparens-org.el
-  smartparens-20240629.1313/smartparens-pkg.el
-  smartparens-20240629.1313/smartparens-python.el
-  smartparens-20240629.1313/smartparens-racket.el
-  smartparens-20240629.1313/smartparens-rst.el
-  smartparens-20240629.1313/smartparens-ruby.el
-  smartparens-20240629.1313/smartparens-rust.el
-  smartparens-20240629.1313/smartparens-scala.el
-  smartparens-20240629.1313/smartparens-swift.el
-  smartparens-20240629.1313/smartparens-text.el
-  smartparens-20240629.1313/smartparens-unison.el
-  smartparens-20240629.1313/smartparens.el
-  smartparens-20240629.1313/sp-sublimetext-like.el
+Created smartparens-20240629.1815.tar containing:
+  smartparens-20240629.1815/
+  smartparens-20240629.1815/smartparens-c.el
+  smartparens-20240629.1815/smartparens-clojure.el
+  smartparens-20240629.1815/smartparens-config.el
+  smartparens-20240629.1815/smartparens-coq.el
+  smartparens-20240629.1815/smartparens-crystal.el
+  smartparens-20240629.1815/smartparens-elixir.el
+  smartparens-20240629.1815/smartparens-erlang.el
+  smartparens-20240629.1815/smartparens-ess.el
+  smartparens-20240629.1815/smartparens-go.el
+  smartparens-20240629.1815/smartparens-haskell.el
+  smartparens-20240629.1815/smartparens-html.el
+  smartparens-20240629.1815/smartparens-javascript.el
+  smartparens-20240629.1815/smartparens-latex.el
+  smartparens-20240629.1815/smartparens-lua.el
+  smartparens-20240629.1815/smartparens-markdown.el
+  smartparens-20240629.1815/smartparens-ml.el
+  smartparens-20240629.1815/smartparens-org.el
+  smartparens-20240629.1815/smartparens-pkg.el
+  smartparens-20240629.1815/smartparens-python.el
+  smartparens-20240629.1815/smartparens-racket.el
+  smartparens-20240629.1815/smartparens-rst.el
+  smartparens-20240629.1815/smartparens-ruby.el
+  smartparens-20240629.1815/smartparens-rust.el
+  smartparens-20240629.1815/smartparens-scala.el
+  smartparens-20240629.1815/smartparens-swift.el
+  smartparens-20240629.1815/smartparens-text.el
+  smartparens-20240629.1815/smartparens-unison.el
+  smartparens-20240629.1815/smartparens.el
+  smartparens-20240629.1815/sp-sublimetext-like.el
  ✓ Success:
-  2024-06-29T12:41:35+0000  smartparens-20240416.2253.entry
-  2024-06-29T12:41:35+0000  smartparens-20240416.2253.tar
-  2024-06-29T14:52:57+0000  smartparens-20240629.1313.entry
-  2024-06-29T14:52:57+0000  smartparens-20240629.1313.tar
-Built smartparens in 6.450s, finished at 2024-06-29T14:52:59+0000
+  2024-06-29T17:07:47+0000  smartparens-20240629.1313.entry
+  2024-06-29T17:07:47+0000  smartparens-20240629.1313.tar
+  2024-06-29T19:22:51+0000  smartparens-20240629.1815.entry
+  2024-06-29T19:22:51+0000  smartparens-20240629.1815.tar
+Built smartparens in 4.584s, finished at 2024-06-29T19:22:53+0000

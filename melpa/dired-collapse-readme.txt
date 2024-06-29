@@ -16,7 +16,8 @@ collapsed directory they are immediately brought to the deepest
 directory with some actual content.
 
 To enable or disable this functionality use `dired-collapse-mode'
-to toggle it for the current dired buffer.
+to toggle it for the current dired buffer.  To enable the mode
+globally in all dired buffers, use `global-dired-collapse-mode'.
 
 If the deepest directory contains only a single file this file is
 displayed instead of the last directory.  This way we can get
@@ -28,9 +29,9 @@ The files or directories re-inserted in this manner will also
 have updated permissions, file sizes and modification dates so
 they truly correspond to the properties of the file being shown.
 
-The path to the deepest file is dimmed with the `shadow' face so
-that it does not distract but at the same time is still available
-for inspection.
+The path to the deepest file is dimmed with the
+`dired-collapse-shadow' face so that it does not distract but at
+the same time is still available for inspection.
 
 The mode is integrated with `dired-rainbow' so the nested files
 are properly colored according to user's rules.
