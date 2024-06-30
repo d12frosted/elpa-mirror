@@ -3,32 +3,32 @@ Fetcher: github
 Source:  https://github.com/dickmao/nnreddit.git
 
 Updating /mnt/store/melpa/working/nnreddit/
-Checking out 5e01552f3fc89f07481864149e3e997d4c741825
+Checking out f8e26834b523c03dfcb0c751373123ffd32b8522
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nnreddit/
-  to /tmp/nnredditMeA4DX/nnreddit-20240627.1627
+  to /tmp/nnredditykD67x/nnreddit-20240629.2347
   ! lisp/nnreddit-pkg.el -> nnreddit-pkg.el
   ! lisp/nnreddit.el -> nnreddit.el
     setup.py -> setup.py
     requirements.txt -> requirements.txt
     nnreddit => nnreddit
-Created nnreddit-20240627.1627.tar containing:
-  nnreddit-20240627.1627/
-  nnreddit-20240627.1627/nnreddit-pkg.el
-  nnreddit-20240627.1627/nnreddit.el
-  nnreddit-20240627.1627/nnreddit/
-  nnreddit-20240627.1627/nnreddit/VERSION
-  nnreddit-20240627.1627/nnreddit/__init__.py
-  nnreddit-20240627.1627/nnreddit/__main__.py
-  nnreddit-20240627.1627/nnreddit/authenticated_reddit.py
-  nnreddit-20240627.1627/nnreddit/pylintrc
-  nnreddit-20240627.1627/nnreddit/templates/
-  nnreddit-20240627.1627/nnreddit/templates/index.html
-  nnreddit-20240627.1627/nnreddit/templates/mailcap
-  nnreddit-20240627.1627/nnreddit/templates/rtv.cfg
-  nnreddit-20240627.1627/requirements.txt
-  nnreddit-20240627.1627/setup.py
+Created nnreddit-20240629.2347.tar containing:
+  nnreddit-20240629.2347/
+  nnreddit-20240629.2347/nnreddit-pkg.el
+  nnreddit-20240629.2347/nnreddit.el
+  nnreddit-20240629.2347/nnreddit/
+  nnreddit-20240629.2347/nnreddit/VERSION
+  nnreddit-20240629.2347/nnreddit/__init__.py
+  nnreddit-20240629.2347/nnreddit/__main__.py
+  nnreddit-20240629.2347/nnreddit/authenticated_reddit.py
+  nnreddit-20240629.2347/nnreddit/pylintrc
+  nnreddit-20240629.2347/nnreddit/templates/
+  nnreddit-20240629.2347/nnreddit/templates/index.html
+  nnreddit-20240629.2347/nnreddit/templates/mailcap
+  nnreddit-20240629.2347/nnreddit/templates/rtv.cfg
+  nnreddit-20240629.2347/requirements.txt
+  nnreddit-20240629.2347/setup.py
  ✓ Success:
-  2024-06-29T19:03:42+0000  nnreddit-20240627.1627.entry
-  2024-06-29T19:03:41+0000  nnreddit-20240627.1627.tar
-Built nnreddit in 5.066s, finished at 2024-06-29T19:03:44+0000
+  2024-06-30T04:03:30+0000  nnreddit-20240629.2347.entry
+  2024-06-30T04:03:30+0000  nnreddit-20240629.2347.tar
+Built nnreddit in 3.726s, finished at 2024-06-30T04:03:32+0000

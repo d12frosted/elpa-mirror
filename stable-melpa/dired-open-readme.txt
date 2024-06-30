@@ -1,11 +1,11 @@
-While emacs already has the `auto-mode-alist', this is often
+While Emacs already has the `auto-mode-alist', this is often
 insufficient.  Many times, you want to open media files, pdfs or
 other documents with an external application.  There's remedy for
 that too, namely `dired-guess-shell-alist-user', but that is still
 not as convenient as just hitting enter.
 
 This package adds a mechanism to add "hooks" to `dired-find-file'
-that will run before emacs tries its own mechanisms to open the
+that will run before Emacs tries its own mechanisms to open the
 file, thus enabling you to launch other application or code and
 suspend the default behaviour.
 

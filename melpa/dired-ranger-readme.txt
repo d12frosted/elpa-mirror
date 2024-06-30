@@ -55,5 +55,5 @@ buffer.  This can be used to toggle between two dired buffers in a
 very fast way.
 
 These bookmarks are not persistent.  If you want persistent
-bookmarks use the bookmarks provided by emacs, see (info "(emacs)
+bookmarks use the bookmarks provided by Emacs, see (info "(emacs)
 Bookmarks").

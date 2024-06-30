@@ -30,7 +30,7 @@ Interactive functions
 
 Here's a list of available interactive functions.  You can read
 more about each one by using the built-in documentation facilities
-of emacs.  It is adviced to place bindings for these into a
+of Emacs.  It is adviced to place bindings for these into a
 convenient prefix key map, for example C-,
 
 * `dired-subtree-insert'
