@@ -5569,6 +5569,7 @@
   (wgrep-helm :url "https://github.com/mhayashi1120/Emacs-wgrep.git")
   (wgrep-pt :url "https://github.com/mhayashi1120/Emacs-wgrep.git")
   (wgsl-mode :url "https://github.com/acowley/wgsl-mode.git")
+  (whaler :url "https://github.com/SalOrak/whaler.el.git")
   (what-the-commit :url "https://github.com/danbarbarito/what-the-commit.el.git")
   (which-key :url "https://github.com/justbur/emacs-which-key.git")
   (which-key-posframe :url "https://github.com/emacsorphanage/which-key-posframe.git")
