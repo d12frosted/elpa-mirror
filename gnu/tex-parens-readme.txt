@@ -118,7 +118,7 @@
   │ 	("M-_" . tex-parens-delete-pair)
   │ 	("C-M-SPC" . tex-parens-mark-sexp)
   │ 	("C-M-k" . tex-parens-kill-sexp)
-  │ 	("C-M-t" . transpose-sexps)
+  │ 	("C-M-t" . tex-parens-transpose-sexps)
   │ 	("C-M-<backspace>" . tex-parens-backward-kill-sexp)
   │ 	("M-+" . tex-parens-raise-sexp))
   │   :hook

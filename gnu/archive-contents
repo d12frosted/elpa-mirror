@@ -206,14 +206,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "00e07e060218fbd1e16faaf10116c03b12e62580"))])
  (auctex .
-	 [(14 0 5)
+	 [(14 0 6)
 	  ((emacs
 	    (27 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "73edb3731e4bdbe3760fb4c12f94ae1aa075458f"))])
+	   (:commit . "be36aa96c813125a1f3849e13223fc68cd09e847"))])
  (auctex-cont-latexmk .
 		      [(0 2)
 		       ((emacs
@@ -4214,7 +4214,7 @@
 	      ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
 	     (:commit . "ee1957f3bce6ed04627b985e95a17db190781e06"))])
  (tex-parens .
-	     [(0 3)
+	     [(0 4)
 	      ((emacs
 		(27 1))
 	       (auctex
@@ -4225,7 +4225,7 @@
 	       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
 	       (:authors
 		("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-	       (:commit . "ae2a66e3bfd1cdc37cc3cb2416d940aca1460c8b"))])
+	       (:commit . "6972f5127ad96aca7ed6025526e72e4b72841835"))])
  (theme-buffet .
 	       [(0 1 2)
 		((emacs
