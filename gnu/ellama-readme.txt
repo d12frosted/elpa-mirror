@@ -313,6 +313,20 @@
   Chat translation disable.
 
 
+1.2.35 ellama-solve-reasoning-problem
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Solve reasoning problem with [Absctraction of Thought] technique. It
+  uses a chain of multiple messages to LLM and help it to provide much
+  better answers on reasoning problems. Even small LLMs like [phi3-mini]
+  provides much better results on reasoning tasks using AoT.
+
+
+[Absctraction of Thought] <https://arxiv.org/pdf/2406.12442>
+
+[phi3-mini] <https://ollama.com/library/phi3>
+
+
 1.3 Keymap
 ──────────
 

@@ -1,7 +1,7 @@
 Installing Tramp via GNU ELPA
 *****************************
 
-Tramp stands for “Transparent Remote (file) Access, Multiple Protocol”.
+Tramp stands for "Transparent Remote (file) Access, Multiple Protocol".
 This package provides remote file editing, similar to Ange-FTP.
 
 The difference is that Ange-FTP uses FTP to transfer files between the
@@ -32,11 +32,11 @@ Emacs 28 or older
 
    • Remove all byte-compiled Tramp files
 
-          $ rm -f ~/.emacs.d/elpa/tramp-2.6.3/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.7.1/tramp*.elc
 
-   • Start Emacs with Tramp’s source files
+   • Start Emacs with Tramp's source files
 
-          $ emacs -L ~/.emacs.d/elpa/tramp-2.6.3 -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.7.1 -l tramp
 
      This should not give you the error.
 
@@ -50,7 +50,7 @@ Mitigation of a bug in Emacs 29.1
 ---------------------------------
 
 Due to a bug in Emacs 29.1, you must apply the following change prior
-installation or upgrading Tramp 2.6.3 from GNU ELPA:
+installation or upgrading Tramp 2.7.1 from GNU ELPA:
 
      (when (string-equal emacs-version "29.1")
        (with-current-buffer

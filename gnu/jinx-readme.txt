@@ -193,7 +193,7 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   checkers. See the [Enchant manual] for details.
 
 
-[Enchant manual] <https://abiword.github.io/enchant/src/enchant.html>
+[Enchant manual] <https://abiword.github.io/enchant/lib/enchant.html>
 
 
 6 Alternative spell-checking packages

@@ -1356,7 +1356,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 9 11)
+	 [(0 10 0)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1369,7 +1369,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "968b8631d102c7fd051dbe9eb077755964bb47a2"))])
+	   (:commit . "eef3840384dd5b369a07036c776f93df6d8c6641"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2221,7 +2221,7 @@
 		(:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
 		(:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx .
-       [(1 8)
+       [(1 9)
 	((emacs
 	  (27 1))
 	 (compat
@@ -2232,7 +2232,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "d053303b54d8ceb15ee496bf7019837e70876410"))])
+	 (:commit . "4580aad8a0267bf30c98d210b6bdc1a08b1aad75"))])
  (jit-spell .
 	    [(0 4)
 	     ((emacs
@@ -4306,16 +4306,16 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "44036b32ba398cf284320285b60be35874b6eea5"))])
  (tramp .
-	[(2 6 3)
+	[(2 7 1)
 	 ((emacs
-	   (26 1)))
+	   (27 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
 	 ((:url . "https://www.gnu.org/software/tramp/")
 	  (:keywords "comm" "processes")
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "3d3b95bd87d858092ee33ed4f5c7acfbf44a48f2"))])
+	  (:commit . "fe5699e6627f883fa50964ea01b7d23555832ec4"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
