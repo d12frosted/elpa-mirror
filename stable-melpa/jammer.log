@@ -3,16 +3,7 @@ Fetcher: git
 Source:  https://depp.brause.cc/jammer.git
 
 Updating /mnt/store/melpa/working/jammer/
-Checking out a780e4c2adb2e85a4daadcefd1a2b189d761872f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jammer/
-  to /tmp/jammerErd89a/jammer-20210508.1633
-    jammer.el -> jammer.el
-Created jammer-20210508.1633.tar containing:
-  jammer-20210508.1633/
-  jammer-20210508.1633/jammer-pkg.el
-  jammer-20210508.1633/jammer.el
- ✓ Success:
-  2024-07-01T11:35:03+0000  jammer-20210508.1633.entry
-  2024-07-01T11:35:03+0000  jammer-20210508.1633.tar
-Built jammer in 7.812s, finished at 2024-07-01T11:35:07+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://depp.brause.cc/jammer.git/': The requested URL returned error: 500
+
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
