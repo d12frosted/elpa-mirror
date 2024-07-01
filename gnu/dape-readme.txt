@@ -78,19 +78,22 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   │   ;; Global bindings for setting breakpoints with mouse
   │   ;; (dape-breakpoint-global-mode)
   │ 
+  │   ;; Pulse source line (performance hit)
+  │   ;; (add-hook 'dape-display-source-hook 'pulse-momentary-highlight-one-line)
+  │ 
   │   ;; To not display info and/or buffers on startup
-  │   ;; (remove-hook 'dape-on-start-hooks 'dape-info)
-  │   ;; (remove-hook 'dape-on-start-hooks 'dape-repl)
+  │   ;; (remove-hook 'dape-start-hook 'dape-info)
+  │   ;; (remove-hook 'dape-start-hook 'dape-repl)
   │ 
   │   ;; To display info and/or repl buffers on stopped
-  │   ;; (add-hook 'dape-on-stopped-hooks 'dape-info)
-  │   ;; (add-hook 'dape-on-stopped-hooks 'dape-repl)
+  │   ;; (add-hook 'dape-stopped-hook 'dape-info)
+  │   ;; (add-hook 'dape-stopped-hook 'dape-repl)
   │ 
   │   ;; Kill compile buffer on build success
-  │   ;; (add-hook 'dape-compile-compile-hooks 'kill-buffer)
+  │   ;; (add-hook 'dape-compile-hook 'kill-buffer)
   │ 
   │   ;; Save buffers on startup, useful for interpreted languages
-  │   ;; (add-hook 'dape-on-start-hooks (lambda () (save-some-buffers t t)))
+  │   ;; (add-hook 'dape-start-hook (lambda () (save-some-buffers t t)))
   │ 
   │   ;; Projectile users
   │   ;; (setq dape-cwd-fn 'projectile-project-root)

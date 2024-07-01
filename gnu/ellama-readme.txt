@@ -327,6 +327,13 @@
 [phi3-mini] <https://ollama.com/library/phi3>
 
 
+1.2.36 ellama-solve-domain-specific-problem
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Solve domain specific problem with simple chain. It makes LLMs act
+  like a professional and adds a planning step.
+
+
 1.3 Keymap
 ──────────
 
