@@ -6264,7 +6264,7 @@ section 15.13
         Stankus, Vick (VicZz), Viktor Haag, Wade Mealing, Yi Liu, Ypot,
         atanasj, azegas, babusri, doolio, duli, drcxd, elge70,
         fingerknight, hpgisler, mentalisttraceur, pRot0ta1p, rbenit68,
-        relict007, sienic, sundar bp, zadca123
+        relict007, sienic, sundar bp, yetanotherfossman, zadca123
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.
