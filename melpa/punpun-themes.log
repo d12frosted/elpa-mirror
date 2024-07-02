@@ -3,7 +3,21 @@ Fetcher: git
 Source:  https://depp.brause.cc/punpun-themes.git
 
 Updating /mnt/store/melpa/working/punpun-themes/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://depp.brause.cc/punpun-themes.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 6a7e04de1ad9f7ba9074b7206bffc9241c33349c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/punpun-themes/
+  to /tmp/punpun-themescdiedn/punpun-themes-20221121.1018
+    punpun-dark-theme.el -> punpun-dark-theme.el
+    punpun-light-theme.el -> punpun-light-theme.el
+    punpun-themes-pkg.el -> punpun-themes-pkg.el
+    punpun-themes.el -> punpun-themes.el
+Created punpun-themes-20221121.1018.tar containing:
+  punpun-themes-20221121.1018/
+  punpun-themes-20221121.1018/punpun-dark-theme.el
+  punpun-themes-20221121.1018/punpun-light-theme.el
+  punpun-themes-20221121.1018/punpun-themes-pkg.el
+  punpun-themes-20221121.1018/punpun-themes.el
+ ✓ Success:
+  2024-07-02T19:28:42+0000  punpun-themes-20221121.1018.entry
+  2024-07-02T19:28:42+0000  punpun-themes-20221121.1018.tar
+Built punpun-themes in 5.067s, finished at 2024-07-02T19:28:43+0000

@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://depp.brause.cc/zone-nyan.git
 
 Updating /mnt/store/melpa/working/zone-nyan/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://depp.brause.cc/zone-nyan.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 38b6e9f1f5871e9166b00a1db44680caa56773be
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zone-nyan/
+  to /tmp/zone-nyanb8mx40/zone-nyan-20210508.1642
+    zone-nyan.el -> zone-nyan.el
+Created zone-nyan-20210508.1642.tar containing:
+  zone-nyan-20210508.1642/
+  zone-nyan-20210508.1642/zone-nyan-pkg.el
+  zone-nyan-20210508.1642/zone-nyan.el
+ ✓ Success:
+  2024-07-02T19:46:34+0000  zone-nyan-20210508.1642.entry
+  2024-07-02T19:46:34+0000  zone-nyan-20210508.1642.tar
+Built zone-nyan in 4.113s, finished at 2024-07-02T19:46:36+0000

@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://depp.brause.cc/form-feed.git
 
 Updating /mnt/store/melpa/working/form-feed/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://depp.brause.cc/form-feed.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out ac1f0ef30a11979f5dfe12d8c05a666739e486ff
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/form-feed/
+  to /tmp/form-feedxjG1qU/form-feed-20210508.1627
+    form-feed.el -> form-feed.el
+Created form-feed-20210508.1627.tar containing:
+  form-feed-20210508.1627/
+  form-feed-20210508.1627/form-feed-pkg.el
+  form-feed-20210508.1627/form-feed.el
+ ✓ Success:
+  2024-07-02T18:56:16+0000  form-feed-20210508.1627.entry
+  2024-07-02T18:56:16+0000  form-feed-20210508.1627.tar
+Built form-feed in 4.691s, finished at 2024-07-02T18:56:18+0000

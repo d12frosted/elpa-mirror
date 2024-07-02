@@ -3,7 +3,16 @@ Fetcher: git
 Source:  https://depp.brause.cc/nov.el.git
 
 Updating /mnt/store/melpa/working/nov/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://depp.brause.cc/nov.el.git/': The requested URL returned error: 500
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out 9b7bef950d68c2518710c480729d6bb6026e9489
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nov/
+  to /tmp/novoZce05/nov-20240407.1219
+    nov.el -> nov.el
+Created nov-20240407.1219.tar containing:
+  nov-20240407.1219/
+  nov-20240407.1219/nov-pkg.el
+  nov-20240407.1219/nov.el
+ ✓ Success:
+  2024-07-02T19:18:08+0000  nov-20240407.1219.entry
+  2024-07-02T19:18:08+0000  nov-20240407.1219.tar
+Built nov in 4.224s, finished at 2024-07-02T19:18:10+0000
