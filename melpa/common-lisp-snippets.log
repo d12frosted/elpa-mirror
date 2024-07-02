@@ -3,3 +3,57 @@ Fetcher: github
 Source:  https://github.com/mrkkrp/common-lisp-snippets.git
 
 Updating /mnt/store/melpa/working/common-lisp-snippets/
+Checking out 1ddf808311ba4d9e8444a1cb50bd5ee75e4111f6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/common-lisp-snippets/
+  to /tmp/common-lisp-snippetsSU53c5/common-lisp-snippets-20180226.1523
+    common-lisp-snippets.el -> common-lisp-snippets.el
+    snippets => snippets
+Created common-lisp-snippets-20180226.1523.tar containing:
+  common-lisp-snippets-20180226.1523/
+  common-lisp-snippets-20180226.1523/common-lisp-snippets-pkg.el
+  common-lisp-snippets-20180226.1523/common-lisp-snippets.el
+  common-lisp-snippets-20180226.1523/snippets/
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/assert
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/case
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/ccase
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/cond
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/ctypecase
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defclass
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defconstant
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defgeneric
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/define-compiler-macro
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/define-condition
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/define-symbol-macro
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defmacro
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defmethod
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defpackage
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defparameter
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defstruct
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defsystem
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/deftype
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defun
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/defvar
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/destructuring-bind
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/do
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/do_
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/dolist
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/dotimes
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/ecase
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/etypecase
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/flet
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/format
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/gnugpl
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/if
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/in-package
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/labels
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/let
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/mapc
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/mapcar
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/mitlic
+  common-lisp-snippets-20180226.1523/snippets/lisp-mode/typecase
+ ✓ Success:
+  2024-07-02T06:15:30+0000  common-lisp-snippets-20180226.1523.entry
+  2024-07-02T06:15:30+0000  common-lisp-snippets-20180226.1523.tar
+Built common-lisp-snippets in 4.892s, finished at 2024-07-02T06:15:32+0000
