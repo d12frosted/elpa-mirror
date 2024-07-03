@@ -530,7 +530,7 @@
 		(:keywords "languages" "elixir")
 		(:commit . "00d6580a040a750e019218f9392cf9a4c2dac23a"))])
  (elpher .
-	 [(3 6 1)
+	 [(3 6 2)
 	  ((emacs
 	    (27 1)))
 	  "A friendly gopher and gemini client" tar
@@ -539,7 +539,7 @@
 	   (:maintainer "Tim Vaughan" . "plugd@thelambdalab.xyz")
 	   (:authors
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
-	   (:commit . "109c97791c16cb638ab42cbfe795a9ea9601a963"))])
+	   (:commit . "0bd12913940a047724d830725bf8649e4f8df499"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib
