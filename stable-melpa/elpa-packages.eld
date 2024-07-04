@@ -4725,6 +4725,7 @@
   (sculpture-themes :url "https://github.com/precompute/sculpture-themes.git")
   (sdcv :url "https://repo.or.cz/sdcv.el.git")
   (sdlang-mode :url "https://github.com/CyberShadow/sdlang-mode.git")
+  (sdml-mode :url "https://github.com/sdm-lang/emacs-sdml-mode.git")
   (search-web :url "https://github.com/tomoya/search-web.el.git")
   (searcher :url "https://github.com/jcs-elpa/searcher.git")
   (searchq :url "https://github.com/tcw165/searchq.git")
