@@ -4782,7 +4782,7 @@ section 15.13
   │ 
   │ ;; If you use Markdown or plain text files (Org renders links as buttons
   │ ;; right away)
-  │ (add-hook 'text-mode-hook #'denote-fontify-links-mode)
+  │ (add-hook 'text-mode-hook #'denote-fontify-links-mode-maybe)
   │ 
   │ ;; We use different ways to specify a path for demo purposes.
   │ (setq denote-dired-directories
