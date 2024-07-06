@@ -18,10 +18,3 @@ to invoke `ace-jump-mode' or `avy' after `ace-isearch-jump-delay'. This has
 the effect of doing regular `isearch' for L=1 and L=3 to 6, with the ability
 to switch to 2-character `avy' or `ace-jump-mode' (not yet supported) once
 `ace-isearch-jump-delay' has passed. Much easier to do than to write about :-)
-
-; Installation:
-
-To use this package, add following code to your init file.
-
-  (require 'ace-isearch)
-  (global-ace-isearch-mode +1)

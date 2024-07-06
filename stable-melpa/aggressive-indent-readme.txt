@@ -32,21 +32,3 @@ If you don't want to install from Melpa, you can download it manually,
 place it in your `load-path' and require it with
 
     (require 'aggressive-indent)
-
-; Instructions:
-
-INSTALLATION
-
-This package is available fom Melpa, you may install it by calling
-M-x package-install RET aggressive-indent.
-
-Then activate it with
-    (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
-
-You can also use an equivalent hook for another mode,
-`aggressive-indent' is not exclusive to emacs-lisp code.
-
-Alternatively, you can download it manually, place it in your
-`load-path' and require it with
-
-    (require 'aggressive-indent)

@@ -6,18 +6,13 @@ Updating /mnt/store/melpa/working/2048-game/
 Checking out 8175ca5191175183b9522141dcb55d30673d2323
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/2048-game/
-  to /tmp/2048-gamebbEchZ/2048-game-20230809.356
+  to /tmp/2048-game2oUC3y/2048-game-20230809.356
     2048-game.el -> 2048-game.el
 Created 2048-game-20230809.356.tar containing:
   2048-game-20230809.356/
   2048-game-20230809.356/2048-game-pkg.el
   2048-game-20230809.356/2048-game.el
-Command `hg purge' exited with non-zero exit-code: 255
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command `hg purge' exited with non-zero exit-code: 255
+ ✓ Success:
+  2024-07-06T03:53:15+0000  2048-game-20230809.356.entry
+  2024-07-06T03:53:15+0000  2048-game-20230809.356.tar
+Built 2048-game in 18.107s, finished at 2024-07-06T03:53:22+0000
