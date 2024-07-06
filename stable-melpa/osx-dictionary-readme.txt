@@ -8,8 +8,3 @@ Below are commands you can use:
 Search input word and display result with buffer
 `osx-dictionary-search-word-at-point'
 Search word around and display result with buffer
-
-
-; Installation:
-
-This package is available on Melpa.

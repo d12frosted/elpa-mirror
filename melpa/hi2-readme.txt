@@ -37,12 +37,3 @@ everyone to participate (report bugs, fix issues, etc.):
 Once this is stable and better in every way than the default
 haskell-indentation-mode, I'm happy to merge it with haskell-mode,
 but until this is moving fast, I want to keep it separate.
-
-; Installation:
-
-To turn indentation on for all Haskell buffers under Haskell mode
-<http://www.haskell.org/haskell-mode/> add this to .emacs:
-
-   (add-hook haskell-mode-hook 'turn-on-hi2)
-
-Otherwise, call `hi2-mode'.

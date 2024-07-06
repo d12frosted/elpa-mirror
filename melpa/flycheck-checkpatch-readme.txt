@@ -6,3 +6,5 @@ to your startup files:
 
     (eval-after-load 'flycheck
       '(flycheck-checkpatch-setup))
+
+;; Code:

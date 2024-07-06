@@ -16,29 +16,3 @@ don't find it useful, it can be turned off by customizing
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Acknowledgements:
-   David Batty       <DB> (numerous corrections)
-   Laurent Bonnaud   <LB> (suggestions regarding font-lock rules)
-   Markus Dickebohm  <MD> (suggested `gnuplot-send-line-and-forward')
-   Stephen Eglan     <SE> (suggested the use of info-look,
-                           contributed a bug fix regarding shutting
-                           down the gnuplot process, improvement to
-                           `gnuplot-send-line-and-forward')
-   Robert Fenk       <RF> (suggested respecting continuation lines)
-   Michael Karbach   <MK> (suggested trimming the gnuplot process buffer)
-   Alex Chan Libchen <AL> (suggested font-lock for plotting words)
-   Kuang-Yu Liu      <KL> (pointed out buggy dependence on font-lock)
-   Hrvoje Niksic     <HN> (help with defcustom arguments for insertions)
-   Andreas Rechtsteiner <AR> (pointed out problem with C-c C-v)
-   Michael Sanders   <MS> (help with the info-look interface)
-   Jinwei Shen       <JS> (suggested functionality in comint buffer)
-   Michael M. Tung   <MT> (prompted me to add pm3d support)
-   Holger Wenzel     <HW> (suggested using `gnuplot-keywords-when')
-   Wolfgang Zocher   <WZ> (pointed out problem with gnuplot-mode + speedbar)
-   Jon Oddie         <jjo> (indentation, inline images, context mode)
-   Maxime F. Treca   <MFT> (package update, XEmacs deprecation)
-
- and especially to Lars Hecking <LH> for including gnuplot-mode
- with the gnuplot 3.7-beta distribution and for providing me with
- installation materials
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

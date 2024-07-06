@@ -42,3 +42,56 @@ Otherwise you need setup your Emacs directory with
 option `elisp-depend-directory-list', like below:
 
 (setq elisp-depend-directory-list '("YourEmacsDirectory"))
+
+
+;; Customize:
+
+`elisp-depend-directory-list' the install directory of emacs.
+Or you can add others directory that you want filter.
+
+All of the above can customize by:
+     M-x customize-group RET elisp-depend RET
+
+
+;; Change log:
+
+2012/04/20
+     * Switched to `read' instead of parsing the file mnaually.
+
+2010/05/10
+     * Bugfix: Fixed error if file didn't start with a comment.
+2010/05/08
+     * Added require for `thingatpt'
+     * Now slash-style module names are treated correctly.
+
+2009/02/11
+     * Add new option `built-in' to function `elisp-depend-map'
+       for debug.
+
+2009/01/18
+     * Complete all check work.
+       Now can generate exact depend information.
+     * Modified some code to compatibility Emacs 20.
+       Thanks "Drew Adams" advice.
+     * Fix doc.
+
+2009/01/17
+     * Don't include user init file in depend information,
+       filter by variable `user-init-file'.
+
+2009/01/11
+     * First released.
+
+
+;; Acknowledgements:
+
+     Drew Adams      <drew.adams@oracle.com>
+             For advice for compatibility Emacs 20.
+
+
+;; TODO
+
+     Fix local-variable problem:
+         If the some local-variable (such as lambda sentence)
+         have same name with function, will got unnecessary depend
+         information.

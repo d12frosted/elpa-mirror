@@ -8,7 +8,3 @@ Parameters not supported:
   - :session
 Original Parameters:
   - :allow (Specifies a permission list for the deno command)
-
-; Requirements:
-
-- Deno https://deno.land/

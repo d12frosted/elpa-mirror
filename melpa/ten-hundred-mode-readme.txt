@@ -25,14 +25,3 @@ don't get taken away, even if they would be normally.
 This thing doesn't know very much.  If you aren't typing normally,
 it probably will let you get away with using words you aren't
 supposed to use.  That's not nice, though, so don't do that.
-
-; Contributing:
-
-If you think of a way this thing can do a better job of taking away
-words that aren't okay to use, let me know, or (even better) add it
-to the thing and then let me know.
-
-Here's where this thing lives:
-https://github.com/aaron-em/ten-hundred-mode.el
-
-I hope you like it!

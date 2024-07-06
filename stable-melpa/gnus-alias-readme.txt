@@ -41,21 +41,3 @@
  There may also be some overlap between this package and
  `message-alternative-emails' (which see), though I'm not exactly
  sure what that really does.
-
-; Installation:
-
- Put this file on your Emacs-Lisp load path, then add one of the
- following to your ~/.emacs startup file.  You can load gnus-alias
- every time you start Emacs:
-
-    (require 'gnus-alias)
-    (gnus-alias-init)
-
- or you can load the package via autoload:
-
-    (autoload 'gnus-alias-determine-identity "gnus-alias" "" t)
-    (add-hook 'message-setup-hook 'gnus-alias-determine-identity)
-
- To add a directory to your load-path, use something like the following:
-
-     (add-to-list 'load-path (expand-file-name "/some/load/path"))

@@ -38,3 +38,13 @@ branch. However, if you invert the tree by pressing i then the child branches
 will correspond to functions that call the parent branch.
 You can sort the tree in various different ways, and change the depth of the tree.
 You can also narrow the tree to the function at point by pressing /
+
+;; Exporting:
+The tree can be exported in its current state with the `simple-call-tree-export-org-tree'
+command, and you can alter the types of links with the `simple-call-tree-org-link-style' option.
+This may be useful for project management.
+
+;; Refactoring
+You can perform `query-replace' or `query-replace-regexp' on the function at
+point by pressing % or C-%, or any other arbitrary command by pressing !
+This may be useful when refactoring.

@@ -4,3 +4,8 @@ also use `xml2rfc` directly to further convert to HTML, PDF and TXT.
 See Org manual for more information. See README.org
 (https://github.com/choppsv1/org-rfc-export/blob/master/README.org)
 for basic documentation on use.
+
+;; Credits:
+
+Started with ox-md.el by Nicolas Goaziou as a template also used code from
+ox-html.el by Carsten Dominik and Jambunathan K.

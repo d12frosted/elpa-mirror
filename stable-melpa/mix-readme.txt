@@ -20,9 +20,3 @@ Add a hook to the mode that you're using with Elixir, for example, `elixir-mode`
 ; C-u C-u - Add extra params for mix task.
 ; C-u C-u C-u - Choose MIX_ENV and add extra params.
 ;
-; For example, to create a migration in a subproject you should press:
-;
-; C-u C-u C-c d d e:
-;
-; C-u C-u - to be prompted for migration name
-; C-c d d e - to select a mix project and ecto.gen.migration task

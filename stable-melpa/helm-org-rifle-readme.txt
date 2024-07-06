@@ -15,17 +15,3 @@ easy to acquire your target.
 Entries are fontified by default to match the appearance of an Org
 buffer, and optionally the entire path can be displayed for each
 entry, rather than just its own heading.
-
-; Installation:
-
-;; MELPA
-
-If you installed from MELPA, your rifle is ready.  Just run one of
-the commands below.
-
-;; Manual
-
-Install the Helm, dash.el, f.el, and s.el packages.  Then require
-this package in your init file:
-
-(require 'helm-org-rifle)

@@ -10,5 +10,3 @@ Usage:
     #+begin_src dall-e-shell
       Hello
     #+end_src
-
-; Requirements:

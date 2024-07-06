@@ -44,27 +44,3 @@ As this package caters to developers, it should be helpful to browse the file
 in order for atleast the functions and the documentation. The file is well
 structured and documented, so go for it. The impatient could do a selective
 display to 3 (C-u 3 C-x $) before proceeding.
-
-; Installation:
-
-Put this file somewhere on your load-path. Then, you could use
-(require 'libmpdee) whenever the services of this package are needed.
-
-Parameters used for the interactive calls can be customized in the group mpd
-Use:
-        M-x customize-group mpd
-to change the values to your liking.
-
-
-; History: (See the SVN logs/ChangeLog for the list of all changes)
-
-v2.1
-Introducing automatic mode with hooking, for connections.
-See `mpd-set-automatic-mode'.
-
-v2.0
-The interface has changed since version 1 of this library and there is no
-backward compatibility. This change applies to functions which returned
-vector whose descriptions were given `*-data' variables. Such functions have
-been modified to return property lists, whose keys now describe the values
-returned. This should hopefully be a much more scalable representation.

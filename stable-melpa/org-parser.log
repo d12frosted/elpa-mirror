@@ -6,18 +6,13 @@ Updating /mnt/store/melpa/working/org-parser/
 Checking out fd4cb7035ff649378cc968b1ec2c386b5c565706
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-parser/
-  to /tmp/org-parserNZeNb9/org-parser-20200417.301
+  to /tmp/org-parserytP6gN/org-parser-20200417.301
     org-parser.el -> org-parser.el
 Created org-parser-20200417.301.tar containing:
   org-parser-20200417.301/
   org-parser-20200417.301/org-parser-pkg.el
   org-parser-20200417.301/org-parser.el
-Command `hg purge' exited with non-zero exit-code: 255
-hg: unknown command 'purge'
-'purge' is provided by the following extension:
-
-    purge         command to delete untracked files from the working directory
-
-(use 'hg help extensions' for information on enabling extensions)
-
-Command `hg purge' exited with non-zero exit-code: 255
+ ✓ Success:
+  2024-07-06T07:13:39+0000  org-parser-20200417.301.entry
+  2024-07-06T07:13:39+0000  org-parser-20200417.301.tar
+Built org-parser in 20.844s, finished at 2024-07-06T07:13:46+0000

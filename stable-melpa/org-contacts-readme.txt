@@ -24,3 +24,11 @@ You can also use a complex template, for example:
 :ADDRESS:
 :BIRTHDAY:
 :END:")))
+
+;; Usage:
+
+How to search?
+- You can use [M-x org-contacts] command to search.
+
+- You can use `org-sparse-tree' [C-c / p] to filter based on a
+  specific property. Or other matcher on `org-sparse-tree'.

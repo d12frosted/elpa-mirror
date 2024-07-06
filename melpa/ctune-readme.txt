@@ -33,10 +33,3 @@ easy and straight-forward.
 ctune tries to handle both 3 ways by providing an easy way to add the Noise
 Macro to the right variable and save the values in the `dir-locals-file'
 file.
-
-; Suggestions/Ideas:
-
-GNU C Coding Conventions, and other coding conventions as well, say that
-macro names should be all upper case.  Maybe check that when asked to add
-a macro name (but ctune should not enforce it, so there could be a user
-option to turn off the query).

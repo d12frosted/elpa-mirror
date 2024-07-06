@@ -54,17 +54,3 @@ Note:
 
 I can't ensure this package can perfect work with all situations.
 So please let me know if you have suggestion or bug.
-
-
-; Installation:
-
-Put elisp-format.el to your load-path.
-The load-path is usually ~/elisp/.
-It's set in your ~/.emacs like this:
-(add-to-list 'load-path (expand-file-name "~/elisp"))
-
-And the following to your ~/.emacs startup file.
-
-(require 'elisp-format)
-
-No need more.

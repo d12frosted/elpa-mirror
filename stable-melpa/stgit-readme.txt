@@ -14,12 +14,3 @@ git repository you are working in.
 
 To get quick help about the available keybindings in the buffer,
 press '?'
-
-; Installation:
-
-To install: put this file on the load-path and place the following
-in your .emacs file:
-
-   (require 'stgit)
-
-To start: `M-x stgit'

@@ -13,14 +13,3 @@ languages with help of custom extensions.
    When the connection is established, GEBEN loads the entry script
    file in geben-mode.
 4. Start debugging.  To see geben-mode key bindings, type ?.
-
-; Requirements:
-
-[Server side]
-- PHP with Xdebug 2.0.3
-   http://xdebug.org/
-- Perl, Python, Ruby, Tcl with Komodo Debugger Extension
-   http://aspn.activestate.com/ASPN/Downloads/Komodo/RemoteDebugging
-
-[Client side]
-- Emacs 24 and later

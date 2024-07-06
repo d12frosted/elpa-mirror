@@ -9,16 +9,3 @@ Note: you can achieve the same thing with the `helm-M-x' command which comes wit
 but that requires a few more keystrokes and doesn't show descriptions by default.
 
 ;;
-
-
-; Installation:
-
-Put helm-helm-commands.el in a directory in your load-path, e.g. ~/.emacs.d/
-You can add a directory to your load-path with the following line in ~/.emacs
-(add-to-list 'load-path (expand-file-name "~/elisp"))
-where ~/elisp is the directory you want to add
-(you don't need to do this for ~/.emacs.d - it's added by default).
-
-Add the following to your ~/.emacs startup file.
-
-(require 'helm-helm-commands)

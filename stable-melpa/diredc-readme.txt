@@ -64,34 +64,3 @@ Bonus customization features
     * option 1: M-x customize-variable diredc-bonus-configuration
     * option 2: (setq diredc-bonus-configuration nil)
 
-
-; Dependencies (all are already part of Emacs):
-
-  dired       -- ... (doh) ...
-  dired-x     -- for dired-guess-default, dired-omit-mode
-  dired-aux   -- for dired-compress-files
-  help-mode   -- for help button widget
-  hl-line     -- for hl-line-mode
-  subr        -- for string-match-p
-  term        -- for term-line-mode, term-send-input
-  view        -- for view-mode
-
-Suggested (not part of Emacs):
-
-  popup          -- for popup-menu*
-  key-assist     -- for key-assist
-
-; Installation:
-
-1) Evaluate or load this file.
-
-2) I recommend defining a global keybinding for function `diredc',
-   with a preference for Shift-F11, as follows:
-
-     (global-set-key (kbd "S-<f11>") 'diredc)
-
-   An alternative or additional option would be:
-
-     (global-set-key [remap dired-other-frame] 'diredc)
-
-

@@ -18,25 +18,3 @@ website, lists, and normal paragraphs. It escapes `backtick-quoted'
 names so they will display correctly. Lists are somewhat tricky to
 recognize automatically, and the program employs a very simple
 heuristic currently.
-
-; Dependencies:
-None.
-
-; Installation:
-(require 'md-readme), then you can call mdr-generate manually. I
-have not found a way to call it automatically that I really like,
-but here is one that works for me:
-
-    (require 'md-readme)
-    (dir-locals-set-class-variables
-     'generate-README-with-md-readme
-     '((emacs-lisp-mode . ((mdr-generate-readme . t)))))
-    (dolist (dir '("~/Projects/wpmail/" "~/Projects/md-readme/"))
-      (dir-locals-set-directory-class
-       dir 'generate-README-with-md-readme))
-    (add-hook 'after-save-hook
-              '(lambda () (if (boundp 'mdr-generate-readme) (mdr-generate))))
-
-; Binaries
-`bin/md-readme` is a shell script that will generate readme.md for the
-passed file. See it for usage instructions.

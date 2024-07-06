@@ -68,16 +68,3 @@ The other simple copy command is distributed with Emacs.  See
 misc.el in your lisp directory.  It copies characters from previous
 non-blank line, starting just above point.  But remember, fcopy has
 no influences from misc.el.
-
-; How to install:
-
-To install, put this in your .emacs file:
-
- (autoload 'fcopy "fcopy" "Copy lines or region without editing." t)
-
-And bind it to any key you like:
-
- (define-key mode-specific-map "k" 'fcopy)  ; C-c k for fcopy
-
-
-; Version and ChangeLog:

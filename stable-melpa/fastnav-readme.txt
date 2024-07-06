@@ -39,11 +39,3 @@ This library can be originally found at:
 Package.el compatible version can be found at
   https://github.com/gleber/fastnav.el
 it has been uploaded to ELPA and Marmalade
-
-; Changes Log:
-  2010-02-05: Fix for org mode, all commands were broken.
-              Fix for electric characters in certain modes.
-  2010-02-11: Yet another minor fix for switching to next/previous char.
-  2010-05-28: Added sprint commands.
-  2010-08-06: Make fastnav compatible with package.el
-  2011-08-10: Add fastnav- prefix to autoload-ed functions

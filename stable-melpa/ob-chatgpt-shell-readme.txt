@@ -10,5 +10,3 @@ Usage:
     #+begin_src chatgpt-shell
       Hello
     #+end_src
-
-; Requirements:

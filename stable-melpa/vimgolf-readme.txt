@@ -10,17 +10,3 @@ Patches and Issues are accepted at
 https://github.com/timvisher/vimgolf.el
 
 [1]: https://vimgolf.com/
-
-; Installation:
-
-Use MELPA Stable, preferably.
-
-I make no guarantees that vimgolf.el works with anything but the latest
-version of Emacs.
-
-; Contributors
-
-Tim Visher (@timvisher)
-Steve Purcell (@sanityinc)
-Adam Collard (@acollard)
-Siddhanathan Shanmugam (@siddhanathan)

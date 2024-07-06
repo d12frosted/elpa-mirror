@@ -39,12 +39,3 @@ experimental, and has only really been tested with gcc error
 reports.
 
 Finally there's also a google-cpp-reference function (C-c / r).
-
-; Instructions:
-
-INSTALLATION
-
- Make sure "google-this.el" is in your load path, then place
-     this code in your .emacs file:
-	(require 'google-this)
-             (google-this-mode 1)

@@ -83,14 +83,3 @@ Small User Experience Improvements
 The buffer used to display LaTeX errors is typically a regular text
 buffer in `fundamental-mode'. *latex-extra* switches it to
 `special-mode' and adds some colors to the display.
-
-; Instructions:
-
-INSTALLATION
-
-If you install from melpa: just use (as described above)
-
-    (add-hook 'LaTeX-mode-hook #'latex-extra-mode)
-
-If you install manually, first require it, then use the code above.
-    (require 'latex-extra)

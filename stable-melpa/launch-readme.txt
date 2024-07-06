@@ -12,14 +12,3 @@ want to launch your document in the system's web browser.
 Launch makes it easy to do this by using your OS's built-in
 file-associations to launch the appropriate program for a particular
 file.
-
-; Installation:
-
-Launch is available from MELPA <http://melpa.milkbox.net/>.
-Just run \\[package-install] and install `launch'.
-
-Then, in your ~/.emacs configuration, add:
-    (global-launch-mode +1)
-
-If you only want to enable it for certain modes, add:
-    (add-hook 'html-mode 'turn-on-launch-mode)

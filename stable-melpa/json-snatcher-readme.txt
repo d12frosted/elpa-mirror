@@ -20,22 +20,3 @@ interval ranges nil is returned, otherwise the path to the value is returned
 in the form [<key-string>] for objects, and [<loc-int>] for arrays.
 eg: ['value1'][0]['value2'] gets the array at with name value1, then gets the
 0th element of the array (another object), then gets the value at 'value2'.
-
-
-; Installation:
-
-IMPORTANT: Works ONLY in Emacs 24 due to the use of the lexical-binding variable.
-
-To install add the json-snatcher.el file to your load-path, and
-add the following lines to your .emacs file:
-(require 'json-snatcher)
-(defun js-mode-bindings ()
-  "Sets a hotkey for using the json-snatcher plugin."
-  (when (string-match  "\\.json$" (buffer-name))
-      (local-set-key (kbd "C-c C-g") 'jsons-print-path)))
-(add-hook 'js-mode-hook 'js-mode-bindings)
-(add-hook 'js2-mode-hook 'js-mode-bindings)
-
-This binds the key to snatch the path to the JSON value to C-c C-g only
-when either JS mode, or JS2 mode is active on a buffer ending with
-the .json extension.

@@ -6,20 +6,3 @@ be more productive by setting time limit for a task.
 If available, notification would be done with great tool
 mumbles ( http://www.mumbles-project.org )
 If not, then simply use standard emacs message.
-
-; Requirements:
-
-tested on Emacs 23
-
-; Installation:
-
-Add below code in your .emacs
-
-(require 'tea-time)
-(setq tea-time-sound "path-to-sound-file")
-
-If you're running on Mac OS X you'll need to add this
-(setq tea-time-sound-command "afplay %s")
-
-You can customize the sound command variable to any player you want
-where %s will be the sound file configured at tea-time-sound setting

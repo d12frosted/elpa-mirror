@@ -20,18 +20,3 @@ This package provides the following features:
    with S-lefttab (via ff-find-other-file)
  * interactive function glsl-find-man-page prompts for glsl built
    in function, formats opengl.org url and passes to browse-url
-
-; Installation:
-
-This file requires Emacs-20.3 or higher and package cc-mode.
-
-If glsl-mode is not part of your distribution, put this file into your
-load-path and the following into your ~/.emacs:
-  (autoload 'glsl-mode "glsl-mode" nil t)
-  (add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))
-  (add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
-  (add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode))
-  (add-to-list 'auto-mode-alist '("\\.geom\\'" . glsl-mode))
-
-Reference:
-https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.pdf

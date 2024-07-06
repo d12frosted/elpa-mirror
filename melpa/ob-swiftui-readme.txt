@@ -67,7 +67,3 @@ Examples:
         }
       }
     #+end_src
-
-; Requirements:
-
-Depends on `swift-mode' for editing Swift code.

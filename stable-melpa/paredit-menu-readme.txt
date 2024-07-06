@@ -13,13 +13,3 @@ provided showing the examples of use.
 
 Documentation and examples come directly from paredit, so the menu should
 automatically stay in sync, regardless of changes to paredit.
-
-; Installation:
-
-Add (require 'paredit-menu) to your .emacs. This will also force loading of
-paredit. If you autoload paredit, then
-
-(eval-after-load "paredit.el"
-   '(require 'paredit-menu))
-
-will achieve the same effect.

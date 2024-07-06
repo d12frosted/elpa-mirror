@@ -9,12 +9,3 @@ See the README in https://github.com/leoliu/ggtags for more
 details.
 
 All commands are available from the `Ggtags' menu in `ggtags-mode'.
-
-; NEWS 0.8.13 (2018-07-25):
-
-- Don't choke on tag names start with `-'.
-- `ggtags-show-definition' supports `ggtags-sort-by-nearness'.
-- New variable `ggtags-extra-args'.
-- Unbreak `ggtags-sort-by-nearness'.
-
-See full NEWS on https://github.com/leoliu/ggtags#news

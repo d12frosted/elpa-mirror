@@ -66,30 +66,3 @@ syntax for LaTeX fragments in org-mode buffers, i.e., $...$ and \[\].
 For more complicated cases you can install your own
 parsers of LaTeX fragments in the variable
 `texfrag-next-frag-function' (see the documentation of that variable).
-
-
-; Requirements:
-- depends on Emacs "25" (because of when-let)
-- requires AUCTeX with preview.el.
-
-; Important changes
-Here we list changes that may have an impact on the user configuration.
-
-2018-03-05:
-- `texfrag-header-function' is now called with `texfrag-source-buffer' as current buffer.
-- adopted LaTeX header generation from `org-latex-make-preamble'
-
-2019-05-04:
-- `texfrag-region' for `texfrag-preview-buffer-at-start' has been moved to `post-command-hook'
-  That is an important step to make `texfrag-preview-buffer-at-start' really work.
-  (No repeated LaTeX processing on the same document within one command.)
-- This version of texfrag is tagged 1.0.
-
-2019-11-29:
-- Let TeXfrag scale the images according to `text-scale-mode'.
-- That is actually like a bugfix for `preview.el'.  In the original version of preview
-  the function registered at `preview-scale-function' is run in the TeX process buffer and not in
-  the associated LaTeX source buffer.  The newly registered function `texfrag-scale-from-face'
-  switches to `TeX-command-buffer' (which is actually the source buffer) before it
-  calculates the scaling factor.  In that way the settings in the source buffer are taken into account.
-  Added the scaling factor `texfrag-scale'.  You can use that factor to scale all preview images up.

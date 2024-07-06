@@ -22,13 +22,3 @@ Finally, if you are a new user of alert.el, you might need to set
 your preferred notifier, here is an example config for libnotify:
 
 (setq alert-default-style 'libnotify)
-
-; Installation:
-
-The recommended installation method is using `package-install'.
-After that's done, just add this to your .emacs:
-
-(rcirc-alertify-enable)
-
-If you go the hard way, you need a copy of alert.el and add both
-files to your `load-path' and require rcirc-alertify.

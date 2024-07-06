@@ -11,13 +11,3 @@ tested with Org 9.
 
 This package makes use of handy functions and settings in
 `recentf'.
-
-; Installation:
-
-Install from MELPA, or manually by putting this file in your
-`load-path'.  Then put this in your init file:
-
-(require 'org-recent-headings)
-(org-recent-headings-mode)
-
-You may also install Helm and/or Ivy, but they aren't required.

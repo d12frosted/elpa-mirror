@@ -14,7 +14,3 @@ Then C-c C-x C-v to inline the resulting image.
 
    ;; Always redisplay images after C-c C-c (org-ctrl-c-ctrl-c)
    (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
-
-; Requirements:
-
-Users must have PDFLATEX and PDFTOPPM command line tools.
