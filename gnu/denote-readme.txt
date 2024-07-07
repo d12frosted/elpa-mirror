@@ -115,13 +115,14 @@ Table of Contents
 .. 6. Bookmark the directory with the notes
 .. 7. Use the `denote-explore' package to explore your notes
 .. 8. Use the `citar-denote' package for bibliography notes
-.. 9. Use the `consult-notes' package
-.. 10. Use the `denote-menu' package
-.. 11. Treat your notes as a project
-.. 12. Use the tree-based file prompt for select commands
-.. 13. Rename files with Denote in the Image Dired thumbnails buffer
-.. 14. Rename files with Denote using `dired-preview'
-.. 15. Avoid duplicate identifiers when exporting Denote notes
+.. 9. Use the `consult-notes' package for enhanced minibuffer interactions
+.. 10. Use the `consult-notes' package
+.. 11. Use the `denote-menu' package
+.. 12. Treat your notes as a project
+.. 13. Use the tree-based file prompt for select commands
+.. 14. Rename files with Denote in the Image Dired thumbnails buffer
+.. 15. Rename files with Denote using `dired-preview'
+.. 16. Avoid duplicate identifiers when exporting Denote notes
 ..... 1. Export Denote notes with Org Mode
 ..... 2. Export Denote notes with Markdown
 16. Installation
@@ -1735,21 +1736,10 @@ Table of Contents
   └────
 
 
-  The renaming is subject to a “yes or no” prompt that shows the old and
-  new names, just so the user is certain about the change.
-
-  If called interactively with a prefix argument (`C-u' by default) or
-  from Lisp with a non-nil `NO-CONFIRM' argument, this “yes or no”
-  prompt is skipped and the renaming is done outright.
-
-  If called interactively with a double prefix argument (`C-u C-u' by
-  default) or from Lisp with a non-nil `SAVE-BUFFER' argument, the
-  buffer is saved after the front matter is updated and the file is
-  renamed.
-
-  If the user option `denote-rename-no-confirm' is non-nil, it is
-  interpreted the same way as a combination of `NO-CONFIRM' and
-  `SAVE-BUFFER' ([The `denote-rename-no-confirm' option]).
+  By default, the renaming is subject to a “yes or no” prompt that shows
+  the old and new names, just so the user is certain about the change.
+  Though this can be modified ([The `denote-rename-confirmations'
+  option]).
 
   The identifier of the file, if any, is never modified even if it is
   edited in the front matter: Denote considers the file name to be the
@@ -1765,7 +1755,7 @@ Table of Contents
 
 [Front matter] See section 6
 
-[The `denote-rename-no-confirm' option] See section 4.1.1
+[The `denote-rename-confirmations' option] See section 4.1.1
 
 [Change the order of file name components] See section 5.1
 
@@ -4285,8 +4275,38 @@ section 5.4
   <https://lucidmanager.org/productivity/bibliographic-notes-in-emacs-with-citar-denote/>.
 
 
-15.9 Use the `consult-notes' package
-────────────────────────────────────
+15.9 Use the `consult-notes' package for enhanced minibuffer interactions
+─────────────────────────────────────────────────────────────────────────
+
+  The `consult-denote' package by me (Protesilaos) integrates Denote
+  with Daniel Mendler’s `consult' package:
+  <https://github.com/protesilaos/consult-denote>.
+
+  The idea is to preserve the familiar patterns of interaction with the
+  various Denote commands but add to them an extra layer of
+  functionality, such as the preview mechanism that Consult provides
+  (e.g. preview the file you are about to link to).
+
+  Additionally, `consult-denote' defines new “sources” for the
+  `consult-buffer' command. This command provides a single point of
+  entry for buffers, recently opened files, and bookmarks. With
+  `consult-denote', it has a dedicated place for Denote-specific
+  buffers, silos, and more (all of which are configurable).
+
+  Unlike the `consult-notes' package by Colin McLear, `consult-denote'
+  uses the same presentation of data in the minibuffer to stay in sync
+  with Denote and make its feature set entirely optional ([Use the
+  `consult-notes' package]).  It also only works with Denote.
+
+
+[Use the `consult-notes' package] See section 15.10
+
+
+15.10 Use the `consult-notes' package
+─────────────────────────────────────
+
+  [ Also check the `consult-denote' package by me (Protesilaos): [Use
+    the `consult-notes' package for enhanced minibuffer interactions]. ]
 
   If you are using Daniel Mendler’s `consult' (which is a brilliant
   package), you will most probably like its `consult-notes' extension,
@@ -4319,11 +4339,14 @@ section 5.4
   filtering]).
 
 
+[Use the `consult-notes' package for enhanced minibuffer interactions]
+See section 15.9
+
 [Features of the file-naming scheme for searching or filtering] See
 section 5.4
 
 
-15.10 Use the `denote-menu' package
+15.11 Use the `denote-menu' package
 ───────────────────────────────────
 
   Denote’s file-naming scheme is designed to be efficient and to provide
@@ -4344,7 +4367,7 @@ section 5.4
 <https://github.com/namilus/denote-menu>
 
 
-15.11 Treat your notes as a project
+15.12 Treat your notes as a project
 ───────────────────────────────────
 
   Emacs has a built-in library for treating a directory tree as a
@@ -4377,7 +4400,7 @@ section 5.4
   Git).
 
 
-15.12 Use the tree-based file prompt for select commands
+15.13 Use the tree-based file prompt for select commands
 ────────────────────────────────────────────────────────
 
   Older versions of Denote had a file prompt that resembled that of the
@@ -4416,7 +4439,7 @@ section 5.4
   └────
 
 
-15.13 Rename files with Denote in the Image Dired thumbnails buffer
+15.14 Rename files with Denote in the Image Dired thumbnails buffer
 ───────────────────────────────────────────────────────────────────
 
   [Rename files with Denote using `dired-preview']
@@ -4481,12 +4504,12 @@ section 5.4
   └────
 
 
-[Rename files with Denote using `dired-preview'] See section 15.14
+[Rename files with Denote using `dired-preview'] See section 15.15
 
 [Rename multiple files at once] See section 4.3
 
 
-15.14 Rename files with Denote using `dired-preview'
+15.15 Rename files with Denote using `dired-preview'
 ────────────────────────────────────────────────────
 
   The `dired-preview' package (by me/Protesilaos) automatically displays
@@ -4540,10 +4563,10 @@ section 5.4
 [Rename multiple files at once] See section 4.3
 
 [Rename files with Denote in the Image Dired thumbnails buffer] See
-section 15.13
+section 15.14
 
 
-15.15 Avoid duplicate identifiers when exporting Denote notes
+15.16 Avoid duplicate identifiers when exporting Denote notes
 ─────────────────────────────────────────────────────────────
 
   When exporting Denote notes to, for example, an HTML or PDF file,
@@ -4564,7 +4587,7 @@ section 15.13
 
 [Convenience commands for note creation] See section 3.1.4
 
-15.15.1 Export Denote notes with Org Mode
+15.16.1 Export Denote notes with Org Mode
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Org Mode has a built-in configurable export engine.  You can prevent
@@ -4578,7 +4601,7 @@ section 15.13
 
 [Convert `denote:' links to `file:' links] See section 7.11
 
-◊ 15.15.1.1 Manually configure Org export
+◊ 15.16.1.1 Manually configure Org export
 
   Insert `#+export_file_name: FILENAME' in the front matter before
   exporting to force a filename called whatever the value of `FILENAME'
@@ -4595,10 +4618,10 @@ section 15.13
   this section ([Export Denote notes]).
 
 
-  [Export Denote notes] See section 15.15
+  [Export Denote notes] See section 15.16
 
 
-◊ 15.15.1.2 Automatically store Org exports in another folder
+◊ 15.16.1.2 Automatically store Org exports in another folder
 
   It is possible to automatically place all exports in another folder by
   making Org’s function `org-export-output-file-name' create the target
@@ -4656,7 +4679,7 @@ section 15.13
   [Exclude certain directories from all operations] See section 3.9
 
 
-◊ 15.15.1.3 Org Mode Publishing
+◊ 15.16.1.3 Org Mode Publishing
 
   Org Mode also has a publishing tool for exporting a collection of
   files. Some user might apply this approach to convert their note
@@ -4674,7 +4697,7 @@ section 15.13
   [Exclude certain directories from all operations] See section 3.9
 
 
-15.15.2 Export Denote notes with Markdown
+15.16.2 Export Denote notes with Markdown
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Exporting from Markdown requires an external processor (e.g.,
