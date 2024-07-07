@@ -1,0 +1,38 @@
+Package: lsp-java
+Fetcher: github
+Source:  https://github.com/emacs-lsp/lsp-java.git
+
+Updating /mnt/store/melpa/working/lsp-java/
+Checking out 4909c14b9012eed669a9c3f11a8df055d5bb8a0e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-java/
+  to /tmp/lsp-javatr5AKf/lsp-java-20240524.2207
+    dap-java.el -> dap-java.el
+    lsp-java-boot.el -> lsp-java-boot.el
+    lsp-java.el -> lsp-java.el
+    lsp-jt.el -> lsp-jt.el
+    icons => icons
+Created lsp-java-20240524.2207.tar containing:
+  lsp-java-20240524.2207/
+  lsp-java-20240524.2207/dap-java.el
+  lsp-java-20240524.2207/icons/
+  lsp-java-20240524.2207/icons/vscode/
+  lsp-java-20240524.2207/icons/vscode/class.png
+  lsp-java-20240524.2207/icons/vscode/debug.png
+  lsp-java-20240524.2207/icons/vscode/history.png
+  lsp-java-20240524.2207/icons/vscode/method.png
+  lsp-java-20240524.2207/icons/vscode/package.png
+  lsp-java-20240524.2207/icons/vscode/pass.png
+  lsp-java-20240524.2207/icons/vscode/placeholder.png
+  lsp-java-20240524.2207/icons/vscode/refresh.png
+  lsp-java-20240524.2207/icons/vscode/run.png
+  lsp-java-20240524.2207/icons/vscode/running.png
+  lsp-java-20240524.2207/icons/vscode/test-error.png
+  lsp-java-20240524.2207/lsp-java-boot.el
+  lsp-java-20240524.2207/lsp-java-pkg.el
+  lsp-java-20240524.2207/lsp-java.el
+  lsp-java-20240524.2207/lsp-jt.el
+ ✓ Success:
+  2024-07-07T14:30:12+0000  lsp-java-20240524.2207.entry
+  2024-07-07T14:30:12+0000  lsp-java-20240524.2207.tar
+Built lsp-java in 7.100s, finished at 2024-07-07T14:30:14+0000

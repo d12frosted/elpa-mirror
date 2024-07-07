@@ -5171,7 +5171,7 @@
   (templ-ts-mode :url "https://github.com/danderson/templ-ts-mode.git")
   (template-dumper :url "https://github.com/natelastname/template-dumper.git")
   (template-overlays :url "https://github.com/mmontone/template-overlays.git")
-  (templatel :url "https://github.com/clarete/templatel.git")
+  (templatel :url "https://github.com/emacs-love/templatel.git")
   (temporary-persistent :url "https://gitlab.com/kostafey/temporary-persistent.git")
   (ten-hundred-mode :url "https://github.com/aaron-em/ten-hundred-mode.el.git")
   (term+ :url "https://github.com/tarao/term-plus-el.git")
