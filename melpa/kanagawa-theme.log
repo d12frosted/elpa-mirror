@@ -1,9 +1,18 @@
 Package: kanagawa-theme
 Fetcher: github
-Source:  https://github.com/meritamen/emacs-kanagawa-theme.git
+Source:  https://github.com/Fabiokleis/emacs-kanagawa-theme.git
 
 Updating /mnt/store/melpa/working/kanagawa-theme/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: could not read Username for 'https://github.com': No such device or address
-
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+Checking out e3d6aceb37417db0dd3e0ecb81d241d1b9ce7569
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kanagawa-theme/
+  to /tmp/kanagawa-themeKyjOn6/kanagawa-theme-20240707.59
+    kanagawa-theme.el -> kanagawa-theme.el
+Created kanagawa-theme-20240707.59.tar containing:
+  kanagawa-theme-20240707.59/
+  kanagawa-theme-20240707.59/kanagawa-theme-pkg.el
+  kanagawa-theme-20240707.59/kanagawa-theme.el
+ ✓ Success:
+  2024-07-07T07:13:52+0000  kanagawa-theme-20240707.59.entry
+  2024-07-07T07:13:52+0000  kanagawa-theme-20240707.59.tar
+Built kanagawa-theme in 3.237s, finished at 2024-07-07T07:13:53+0000
