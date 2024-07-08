@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out de9a2933f4794d13236236db6165403d722e5105
+Checking out 1c2a2164f24174a87194649f0286e0432594c84d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyQtlabz/loopy-20240310.50
+  to /tmp/loopyBIe3pD/loopy-20240708.156
     loopy-commands.el -> loopy-commands.el
     loopy-destructure.el -> loopy-destructure.el
     loopy-instrs.el -> loopy-instrs.el
@@ -18,22 +18,22 @@ Copying files (->) and directories (=>)
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Generating /tmp/loopyQtlabz/loopy-20240310.50/loopy.info
-Created loopy-20240310.50.tar containing:
-  loopy-20240310.50/
-  loopy-20240310.50/dir
-  loopy-20240310.50/loopy-commands.el
-  loopy-20240310.50/loopy-destructure.el
-  loopy-20240310.50/loopy-instrs.el
-  loopy-20240310.50/loopy-iter.el
-  loopy-20240310.50/loopy-misc.el
-  loopy-20240310.50/loopy-pcase.el
-  loopy-20240310.50/loopy-pkg.el
-  loopy-20240310.50/loopy-seq.el
-  loopy-20240310.50/loopy-vars.el
-  loopy-20240310.50/loopy.el
-  loopy-20240310.50/loopy.info
+Generating /tmp/loopyBIe3pD/loopy-20240708.156/loopy.info
+Created loopy-20240708.156.tar containing:
+  loopy-20240708.156/
+  loopy-20240708.156/dir
+  loopy-20240708.156/loopy-commands.el
+  loopy-20240708.156/loopy-destructure.el
+  loopy-20240708.156/loopy-instrs.el
+  loopy-20240708.156/loopy-iter.el
+  loopy-20240708.156/loopy-misc.el
+  loopy-20240708.156/loopy-pcase.el
+  loopy-20240708.156/loopy-pkg.el
+  loopy-20240708.156/loopy-seq.el
+  loopy-20240708.156/loopy-vars.el
+  loopy-20240708.156/loopy.el
+  loopy-20240708.156/loopy.info
  ✓ Success:
-  2024-07-07T23:58:56+0000  loopy-20240310.50.entry
-  2024-07-07T23:58:55+0000  loopy-20240310.50.tar
-Built loopy in 10.266s, finished at 2024-07-07T23:58:57+0000
+  2024-07-08T07:07:33+0000  loopy-20240708.156.entry
+  2024-07-08T07:07:33+0000  loopy-20240708.156.tar
+Built loopy in 9.753s, finished at 2024-07-08T07:07:35+0000

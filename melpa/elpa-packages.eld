@@ -588,6 +588,7 @@
   (clang-capf :url "https://git.sr.ht/~pkal/clang-capf")
   (clang-format :url "https://github.com/emacsmirror/clang-format.git")
   (clang-format+ :url "https://github.com/SavchenkoValeriy/emacs-clang-format-plus.git")
+  (clang-format-lite :url "https://github.com/arteen1000/clang-format-lite.git")
   (claude-shell :url "https://github.com/arminfriedl/claude-shell.git")
   (clause :url "https://codeberg.org/martianh/clause.el.git")
   (clay :url "https://github.com/scicloj/clay.el.git")
