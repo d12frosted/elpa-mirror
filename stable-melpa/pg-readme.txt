@@ -12,15 +12,16 @@ Supported features:
 
  - Encrypted (TLS) connections between Emacs and the PostgreSQL backend.
 
- - Support for the SQL COPY protocol to copy preformatted data to PostgreSQL from an Emacs
- - buffer.
+ - Parameterized queries using PostgreSQL's extended query syntax, to protect from SQL
+   injection issues.
+
+ - The PostgreSQL COPY protocol to copy preformatted data to PostgreSQL from an Emacs
+   buffer.
 
  - Asynchronous handling of LISTEN/NOTIFY notification messages from PostgreSQL, allowing the
    implementation of publish-subscribe type architectures (PostgreSQL as an "event broker" or
    "message bus" and Emacs as event publisher and consumer).
 
- - Support for PostgreSQL's extended query syntax, that allows for parameterized queries to
-   protect from SQL injection issues.
 
 This is a low level API, and won't be useful to end users. If you're looking for a
 browsing/editing interface to PostgreSQL, see the PGmacs module from
@@ -44,7 +45,3 @@ McNaught and Pavel Janik for bug fixes.
 
 * Implement the SASLPREP algorithm for usernames and passwords that contain
   unprintable characters (used for SCRAM-SHA-256 authentication).
-
-* Add a mechanism for parsing user-defined types. The user should be able to define a parse
-  function and a type-name; we query pg_type to get the type's OID and add the information to
-  pg--parsers.
