@@ -694,7 +694,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:commit . "e62157d43b2c874d2edbd547c3bdfb05d0a7ae5c"))])
  (compat .
-	 [(29 1 4 5)
+	 [(30 0 0 0)
 	  ((emacs
 	    (24 4))
 	   (seq
@@ -706,7 +706,7 @@
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net")
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "8d4e8a366681def88751f5e9975738ecd3180deb"))])
+	   (:commit . "09dce8a193c5a70277512263782b82fa1cba84c0"))])
  (consult .
 	  [(1 7)
 	   ((emacs
@@ -1356,7 +1356,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 11 2)
+	 [(0 11 3)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1369,7 +1369,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "b2ebd3ccfb30a12aafdd70c31bbf14adf582e6c4"))])
+	   (:commit . "33876e3ea907173aaea30289f25342f9d4a07e5e"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1587,11 +1587,13 @@
 			(:url . "https://elpa.gnu.org/packages/external-completion.html")
 			(:commit . "4bc9c8972ac0a3dfa237a9c5704de89ef24ad82b"))])
  (exwm .
-       [(0 30)
+       [(0 31)
 	((emacs
 	  (27 1))
 	 (xelb
-	  (0 19)))
+	  (0 19))
+	 (compat
+	  (29 1)))
 	"Emacs X Window Manager" tar
 	((:url . "https://github.com/emacs-exwm/exwm")
 	 (:keywords "unix")
@@ -1601,7 +1603,7 @@
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:authors
 	  ("Chris Feng" . "chris.w.feng@gmail.com"))
-	 (:commit . "3e6bfe36afc8356bf72d89eff940282db6ea7cba"))])
+	 (:commit . "512d0f0ef9f02211a463fdae04e6732de80bb5de"))])
  (f90-interface-browser .
 			[(1 1)
 			 nil "Parse and browse f90 interfaces" single
@@ -4879,9 +4881,11 @@
 	  ("Yuan Fu" . "casouri@gmail.com"))
 	 (:commit . "ea4fa859c1129243b15f259a10e67ea274c5ef63"))])
  (xelb .
-       [(0 19)
+       [(0 20)
 	((emacs
-	  (27 1)))
+	  (27 1))
+	 (compat
+	  (29 1)))
 	"X protocol Emacs Lisp Binding" tar
 	((:url . "https://github.com/emacs-exwm/xelb")
 	 (:keywords "unix")
@@ -4891,7 +4895,7 @@
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:authors
 	  ("Chris Feng" . "chris.w.feng@gmail.com"))
-	 (:commit . "3546afe73ef7c65181624da3a99ee6d7d7278582"))])
+	 (:commit . "bdf3a69214c70611fbce71942598c85c4fe3d6b7"))])
  (xpm .
       [(1 0 5)
        ((cl-lib
