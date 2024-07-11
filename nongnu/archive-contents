@@ -485,6 +485,17 @@
 		(:authors
 		 ("Arne Jørgensen" . "arne@arnested.dk"))
 		(:commit . "ed90b0c4d808365e9ae9f16cc8a96eff17815621"))])
+ (dslide .
+	 [(0 5 3)
+	  ((emacs
+	    (29 2)))
+	  "Domain Specific sLIDEs. A presentation framework" tar
+	  ((:url . "https://github.com/positron-solutions/dslide")
+	   (:keywords "convenience" "org-mode" "presentation" "narrowing")
+	   (:maintainer "Positron" . "contact@positron.solutions")
+	   (:authors
+	    ("Positron" . "contact@positron.solutions"))
+	   (:commit . "2d8a9ac3e37157ce8b78880ebc1defc61303a44d"))])
  (eat .
       [(0 9 4)
        ((emacs
@@ -2194,14 +2205,14 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 2 11)
+	[(1 2 14)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
 	 ((:url . "https://github.com/sachac/subed")
 	  (:keywords "convenience" "files" "hypermedia" "multimedia")
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-	  (:commit . "e73c0a38039eb32fd43911023ff35007e324c733"))])
+	  (:commit . "d5e48886f4472a644c1c406dd8994b357abd15d8"))])
  (sweeprolog .
 	     [(0 27 5)
 	      ((emacs
@@ -2387,16 +2398,16 @@
 	     ("Campbell Barton" . "ideasman42@gmail.com"))
 	    (:commit . "57615408f9bd70247d2b2844a1946a00300ef5bb"))])
  (undo-fu-session .
-		  [(0 6)
+		  [(0 7)
 		   ((emacs
 		     (28 1)))
 		   "Persistent undo, available between sessions" tar
-		   ((:url . "https://codeberg.com/ideasman42/emacs-undo-fu-session")
+		   ((:url . "https://codeberg.org/ideasman42/emacs-undo-fu-session")
 		    (:keywords "convenience")
 		    (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
 		    (:authors
 		     ("Campbell Barton" . "ideasman42@gmail.com"))
-		    (:commit . "27b688e02d5f5bb7a939f3e312b0219aebe24afc"))])
+		    (:commit . "cd619e30ebdbf0770305dd4f51c50548ab08d779"))])
  (vc-fossil .
 	    [(20230504)
 	     nil "VC backend for the fossil sofware configuraiton management system" tar
@@ -2534,14 +2545,14 @@
 	     ((:url . "https://github.com/lewang/ws-butler")
 	      (:commit . "323b651dd70ee40a25accc940b8f80c3a3185205"))])
  (xah-fly-keys .
-	       [(25 9 20240621104221)
+	       [(25 9 20240703220947)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "c9d578dfa2a9863c70ce0012efdfba5a3e462dc3"))])
+		 (:commit . "7c8789acf9a0256df3f42b9748e739254e806830"))])
  (xkcd .
        [(1 1)
 	((json

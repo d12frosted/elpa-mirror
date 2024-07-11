@@ -1266,7 +1266,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20240513)
+      [(20240710)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1275,7 +1275,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "2bd9d441330aa782ecf645f931e62bd3f3f1ac64"))])
+	(:commit . "8e242228e9987aa7ec2e708efd4b109311d778e2"))])
  (ef-themes .
 	    [(1 7 0)
 	     ((emacs
@@ -1356,7 +1356,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 11 7)
+	 [(0 11 9)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1371,7 +1371,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "d6d38df99d6afc0897ceb1443e020110d74f3f9b"))])
+	   (:commit . "8ee58b9f850f788f3fddd8e924a01091f3c76328"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs

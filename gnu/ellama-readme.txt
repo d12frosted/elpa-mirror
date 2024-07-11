@@ -225,95 +225,101 @@
   provided change using Ellama.
 
 
-1.2.21 ellama-improve-wording
+1.2.21 ellama-generate-commit-message
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Generate commit message based on diff.
+
+
+1.2.22 ellama-improve-wording
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Enhance the wording in the currently selected region or buffer using
   Ellama.
 
 
-1.2.22 ellama-improve-grammar
+1.2.23 ellama-improve-grammar
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Enhance the grammar and spelling in the currently selected region or
   buffer using Ellama.
 
 
-1.2.23 ellama-improve-conciseness
+1.2.24 ellama-improve-conciseness
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Make the text of the currently selected region or buffer concise and
   simple using Ellama.
 
 
-1.2.24 ellama-make-format
+1.2.25 ellama-make-format
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Render the currently selected text or the text in the current buffer
   as a specified format using Ellama.
 
 
-1.2.25 ellama-load-session
+1.2.26 ellama-load-session
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Load ellama session from file.
 
 
-1.2.26 ellama-session-remove
+1.2.27 ellama-session-remove
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Remove ellama session.
 
 
-1.2.27 ellama-session-switch
+1.2.28 ellama-session-switch
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Change current active session.
 
 
-1.2.28 ellama-session-rename
+1.2.29 ellama-session-rename
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Rename current ellama session.
 
 
-1.2.29 ellama-context-add-file
+1.2.30 ellama-context-add-file
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add file to context.
 
 
-1.2.30 ellama-context-add-buffer
+1.2.31 ellama-context-add-buffer
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add buffer to context.
 
 
-1.2.31 ellama-context-add-selection
+1.2.32 ellama-context-add-selection
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add selected region to context.
 
 
-1.2.32 ellama-context-add-info-node
+1.2.33 ellama-context-add-info-node
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add info node to context.
 
 
-1.2.33 ellama-chat-translation-enable
+1.2.34 ellama-chat-translation-enable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation enable.
 
 
-1.2.34 ellama-chat-translation-disable
+1.2.35 ellama-chat-translation-disable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation disable.
 
 
-1.2.35 ellama-solve-reasoning-problem
+1.2.36 ellama-solve-reasoning-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Solve reasoning problem with [Absctraction of Thought] technique. It
@@ -327,7 +333,7 @@
 [phi3-mini] <https://ollama.com/library/phi3>
 
 
-1.2.36 ellama-solve-domain-specific-problem
+1.2.37 ellama-solve-domain-specific-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Solve domain specific problem with simple chain. It makes LLMs act
@@ -348,6 +354,7 @@
    "c e"   ellama-code-edit                 Code edit                    
    "c i"   ellama-code-improve              Code improve                 
    "c r"   ellama-code-review               Code review                  
+   "c m"   ellama-generate-commit-message   Generate commit message      
    "s s"   ellama-summarize                 Summarize                    
    "s w"   ellama-summarize-webpage         Summarize webpage            
    "s c"   ellama-summarize-killring        Summarize killring           
