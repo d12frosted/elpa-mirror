@@ -15,7 +15,7 @@ This major mode provides the following:
 
 #### Alignment of keyword contents
 
-Align the contents of a keyword, test or task with `C-c C-a'. It changes the
+Align the contents of a keyword, test or task with C-c C-a. It changes the
 following code:
 
     Example Keyword
@@ -33,7 +33,7 @@ To:
 #### Line continuation
 
 Insert a newline, indentation, ellipsis and necessary spaces at current
-point with `C-c C-j'. For example (| denotes the cursor):
+point with C-c C-j. For example (| denotes the cursor):
 
     Another Keyword
         [Documentation]    A very long text| that describes the keyword.
@@ -47,7 +47,7 @@ To:
 #### Add spacing for an argument
 
 Robot framework separates arguments to keywords with 2 or more spaces. The
-`C-c C-SPC' sets the whitespace amount around point to exactly
+C-c C-SPC sets the whitespace amount around point to exactly
 `robot-mode-argument-separator'. For example (| denotes the cursor):
 
     Example Keyword
