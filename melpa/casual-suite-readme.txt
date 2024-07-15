@@ -6,6 +6,7 @@ porcelains. Included are porcelains for the following packages:
 - I-Search (casual-isearch)
 - IBuffer (casual-ibuffer)
 - Info (casual-info)
+- RE-Builder (casual-re-builder)
 - Avy (casual-avy)
 
 INSTALLATION
@@ -25,3 +26,5 @@ The following code is a TL;DR initialization for Casual Suite.
 (keymap-set ibuffer-mode-map "s" #'casual-ibuffer-sortby-tmenu)
 (keymap-set Info-mode-map "C-o" #'casual-info-tmenu)
 (keymap-global-set "M-g" #'casual-avy-tmenu)
+(keymap-set reb-mode-map "C-o" #'casual-re-builder-tmenu)
+(keymap-set reb-lisp-mode-map "C-o" #'casual-re-builder-tmenu)

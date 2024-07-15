@@ -34,12 +34,12 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ⁃ No external dependencies outside of core Emacs
 
   With `(setq dape-buffer-window-arrangement 'right)':
-  <https://raw.githubusercontent.com/svaante/dape/resources/c-right-12.0.0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/c-right-14.0.0.png>
   And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
   `completion-in-region-function':
-  <https://raw.githubusercontent.com/svaante/dape/resources/js-gud-12.0.0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/js-gud-14.0.0.png>
   With `minibuffer' adapter configuration hints:
-  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer-hints-12.0.0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer-hints-14.0.0.png>
   Screenshots taken with [standard-light].
 
 
@@ -207,7 +207,28 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 [options] <https://code.visualstudio.com/docs/cpp/launch-json-reference>
 
 
-4.6 Python - debugpy
+4.6 C, C++ and Rust - lldb-dap
+──────────────────────────────
+
+  1. Install [lldb-dap] for your platform
+
+
+[lldb-dap]
+<https://github.com/helix-editor/helix/wiki/Debugger-Configurations#install-debuggers>
+
+4.6.1 Example for MacOS using homebrew
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  1. Install the `llvm' keg: `brew install llvm'
+  2. Prepend the `llvm' path to the `PATH' variable (`$(brew --prefix
+     --installed llvm)/bin')
+  3. `M-x dape' and pass in arguments of interest
+     • To pass arguments, use `:args ["arg1" "arg2" ..]'
+     • To use a different program instead of `a.out' (e.g., for Rust),
+       use `:program "target/debug/<crate_name>"'
+
+
+4.7 Python - debugpy
 ────────────────────
 
   Install debugpy with pip `pip install debugpy'
@@ -219,26 +240,26 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 <https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings>
 
 
-4.7 Godot
+4.8 Godot
 ─────────
 
   Configure debug adapter port under "Editor" > "Editor Settings" >
   "Debug Adapter".
 
 
-4.8 Dart - flutter
+4.9 Dart - flutter
 ──────────────────
 
   See for installation <https://docs.flutter.dev/get-started/install>
 
 
-4.9 C# - netcoredbg
-───────────────────
+4.10 C# - netcoredbg
+────────────────────
 
   See <https://github.com/Samsung/netcoredbg> for installation
 
 
-4.10 Ruby - rdbg
+4.11 Ruby - rdbg
 ────────────────
 
   Install with `gem install debug'.
@@ -246,7 +267,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   See <https://github.com/ruby/debug> for more information
 
 
-4.11 Java - JDTLS with Java Debug Server plugin
+4.12 Java - JDTLS with Java Debug Server plugin
 ───────────────────────────────────────────────
 
   See <https://github.com/eclipse-jdtls/eclipse.jdt.ls> for installation
@@ -263,7 +284,23 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   └────
 
 
-4.12 Other untested adapters
+4.13 PHP - Xdebug
+─────────────────
+
+  1. Install and setup `Xdebug' see [instructions]
+  2. Install `node'
+  3. Download latest `vsix' [release] of DAP adapter for `Xdebug'
+     `php-debug-<version>.vsix'
+  4. Unpack `mkdir -p ~/.emacs.d/debug-adapters && unzip
+     php-debug-<version>.vsix -d ~/.emacs.d/debug-adapters/php-debug'
+
+
+[instructions] <https://github.com/xdebug/vscode-php-debug>
+
+[release] <https://github.com/xdebug/vscode-php-debug/releases>
+
+
+4.14 Other untested adapters
 ────────────────────────────
 
   If you find a working configuration for any other debug adapter please
