@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out c23f6672fa1075d11e942dffc1c37701731b94f0
+Checking out bada7d0223d4d08eb8ad5c81781147e6a91d8366
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgUs3hvY/ekg-20240506.419
+  to /tmp/ekg5R1UTP/ekg-20240706.312
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-embedding.el -> ekg-embedding.el
     ekg-llm.el -> ekg-llm.el
@@ -16,22 +16,22 @@ Copying files (->) and directories (=>)
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekgUs3hvY/ekg-20240506.419/doclicense.info
-Generating /tmp/ekgUs3hvY/ekg-20240506.419/ekg.info
-Created ekg-20240506.419.tar containing:
-  ekg-20240506.419/
-  ekg-20240506.419/dir
-  ekg-20240506.419/doclicense.info
-  ekg-20240506.419/ekg-auto-save.el
-  ekg-20240506.419/ekg-embedding.el
-  ekg-20240506.419/ekg-llm.el
-  ekg-20240506.419/ekg-logseq.el
-  ekg-20240506.419/ekg-org-roam.el
-  ekg-20240506.419/ekg-pkg.el
-  ekg-20240506.419/ekg-test-utils.el
-  ekg-20240506.419/ekg.el
-  ekg-20240506.419/ekg.info
+Generating /tmp/ekg5R1UTP/ekg-20240706.312/doclicense.info
+Generating /tmp/ekg5R1UTP/ekg-20240706.312/ekg.info
+Created ekg-20240706.312.tar containing:
+  ekg-20240706.312/
+  ekg-20240706.312/dir
+  ekg-20240706.312/doclicense.info
+  ekg-20240706.312/ekg-auto-save.el
+  ekg-20240706.312/ekg-embedding.el
+  ekg-20240706.312/ekg-llm.el
+  ekg-20240706.312/ekg-logseq.el
+  ekg-20240706.312/ekg-org-roam.el
+  ekg-20240706.312/ekg-pkg.el
+  ekg-20240706.312/ekg-test-utils.el
+  ekg-20240706.312/ekg.el
+  ekg-20240706.312/ekg.info
  ✓ Success:
-  2024-07-14T23:21:22+0000  ekg-20240506.419.entry
-  2024-07-14T23:21:22+0000  ekg-20240506.419.tar
-Built ekg in 7.504s, finished at 2024-07-14T23:21:23+0000
+  2024-07-15T03:48:27+0000  ekg-20240706.312.entry
+  2024-07-15T03:48:27+0000  ekg-20240706.312.tar
+Built ekg in 7.109s, finished at 2024-07-15T03:48:28+0000
