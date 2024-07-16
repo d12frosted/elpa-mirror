@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out bada7d0223d4d08eb8ad5c81781147e6a91d8366
+Checking out 321ba9a483f812a003988975761cfee0baf6f687
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgDx75IA/ekg-20240706.312
+  to /tmp/ekgh7upHA/ekg-20240716.409
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-embedding.el -> ekg-embedding.el
     ekg-llm.el -> ekg-llm.el
@@ -16,22 +16,22 @@ Copying files (->) and directories (=>)
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekgDx75IA/ekg-20240706.312/doclicense.info
-Generating /tmp/ekgDx75IA/ekg-20240706.312/ekg.info
-Created ekg-20240706.312.tar containing:
-  ekg-20240706.312/
-  ekg-20240706.312/dir
-  ekg-20240706.312/doclicense.info
-  ekg-20240706.312/ekg-auto-save.el
-  ekg-20240706.312/ekg-embedding.el
-  ekg-20240706.312/ekg-llm.el
-  ekg-20240706.312/ekg-logseq.el
-  ekg-20240706.312/ekg-org-roam.el
-  ekg-20240706.312/ekg-pkg.el
-  ekg-20240706.312/ekg-test-utils.el
-  ekg-20240706.312/ekg.el
-  ekg-20240706.312/ekg.info
+Generating /tmp/ekgh7upHA/ekg-20240716.409/doclicense.info
+Generating /tmp/ekgh7upHA/ekg-20240716.409/ekg.info
+Created ekg-20240716.409.tar containing:
+  ekg-20240716.409/
+  ekg-20240716.409/dir
+  ekg-20240716.409/doclicense.info
+  ekg-20240716.409/ekg-auto-save.el
+  ekg-20240716.409/ekg-embedding.el
+  ekg-20240716.409/ekg-llm.el
+  ekg-20240716.409/ekg-logseq.el
+  ekg-20240716.409/ekg-org-roam.el
+  ekg-20240716.409/ekg-pkg.el
+  ekg-20240716.409/ekg-test-utils.el
+  ekg-20240716.409/ekg.el
+  ekg-20240716.409/ekg.info
  ✓ Success:
-  2024-07-15T22:11:09+0000  ekg-20240706.312.entry
-  2024-07-15T22:11:09+0000  ekg-20240706.312.tar
-Built ekg in 8.090s, finished at 2024-07-15T22:11:11+0000
+  2024-07-16T07:52:33+0000  ekg-20240716.409.entry
+  2024-07-16T07:52:33+0000  ekg-20240716.409.tar
+Built ekg in 9.106s, finished at 2024-07-16T07:52:35+0000
