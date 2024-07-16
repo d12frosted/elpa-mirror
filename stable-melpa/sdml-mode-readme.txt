@@ -40,7 +40,7 @@ provides a number of useful skeletons for the following.  `abbrev-mode' is enabl
 by `sdml-mode' and when typing one of the abbreviations below type space to
 expand.
 
-Typing `d t SPC' will prompt for a name and expand into the SDML declaration
+Typing `d t SPCA' will prompt for a name and expand into the SDML declaration
 `datatype MyName ← opaque _' where the underscore character represents the new
 cursor position.
 
@@ -60,14 +60,20 @@ Interactive Commands
 
 
 `sdml-mode-validate-current-buffer' (\\[sdml-mode-validate-current-buffer]) to
-validate and show errors for the buffer's current module.
+validate and show errors for the current buffer's module.
 
-Adding this as a save-hook allows  validation on every save of a buffer.
+Adding this as a save-hook allows validation on every save of a buffer.
 
 `(add-hook 'after-save-hook 'sdml-validate-current-buffer)'
 
-`sdml-mode-current-buffer-dependencies' (\\[sdml-mode-current-buffer-dependencies])
-to display the dependencies of the curtent buffer's module.
+`sdml-mode-validate-file' (\\[sdml-mode-validate-file]) to
+validate and show errors for a specified file name.
+
+`sdml-mode-current-buffer-dependency-tree' (\\[sdml-mode-current-buffer-dependency-tree])
+to display the dependencies of the current buffer's module as a textual tree.
+
+`sdml-mode-current-buffer-dependency-graph' (\\[sdml-mode-current-buffer-dependency-graph])
+to display the dependencies of the current buffer's module as an SVG directed graph.
 
 
 Extensions
