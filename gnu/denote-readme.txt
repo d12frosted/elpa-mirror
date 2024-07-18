@@ -145,9 +145,10 @@ Table of Contents
 .. 6. I add TODOs to my notes; will many files slow down the Org agenda?
 .. 7. I want to sort by last modified in Dired, why won’t Denote let me?
 .. 8. How do you handle the last modified case?
-.. 9. Speed up backlinks’ buffer creation?
-.. 10. Why do I get “Search failed with status 1” when I search for backlinks?
-.. 11. Why do I get a double `#+title' in Doom Emacs?
+.. 9. Why are some Org links opening outside Emacs?
+.. 10. Speed up backlinks’ buffer creation?
+.. 11. Why do I get “Search failed with status 1” when I search for backlinks?
+.. 12. Why do I get a double `#+title' in Doom Emacs?
 24. Acknowledgements
 25. GNU Free Documentation License
 26. Indices
@@ -2603,8 +2604,11 @@ section 5.4
   `denote-directory' or one of its subdirectories. No other file is
   recognised.
 
-  The following sections delve into the details.
+  The following sections delve into the details ([Why are some Org links
+  opening outside Emacs?]).
 
+
+[Why are some Org links opening outside Emacs?] See section 23.9
 
 7.1 Adding a single link
 ────────────────────────
@@ -3065,10 +3069,10 @@ section 7.3
   └────
 
 
-[Speed up backlinks’ buffer creation?] See section 23.9
+[Speed up backlinks’ buffer creation?] See section 23.10
 
 [Why do I get “Search failed with status 1” when I search for
-backlinks?] See section 23.10
+backlinks?] See section 23.11
 
 [Visiting linked files via the minibuffer] See section 7.10
 
@@ -6175,8 +6179,47 @@ section 15.14
   software handle the tracking of changes.
 
 
-23.9 Speed up backlinks’ buffer creation?
-─────────────────────────────────────────
+23.9 Why are some Org links opening outside Emacs?
+──────────────────────────────────────────────────
+
+  Org has its own mechanism to determine how best to open a link. This
+  affects the `file:' link type, but also the `denote:' one (which is
+  designed to be as close to `file:' as possible).
+
+  When following a link, Org usually displays the data in an Emacs
+  buffer, though it might launch an external application instead. The
+  idea is to use a specialised program when that is relevant, such as to
+  display a video. Though there can be scenaria the user does not like,
+  such as when Org decides to load `.md' or `.html' files with an
+  external app. To compound the problem, users can name any file type
+  using the Denote file-naming scheme, including images, PDFs, videos,
+  and more ([Renaming files]).
+
+  To instruct Org to stay in Emacs for such cases, the user needs to
+  modify the variable `org-file-apps', which is not specific to Denote.
+  As one use-case, `org-file-apps' associates a regular expression to
+  match file names with a method on how to display them (do `M-x
+  describe-variable' and then search for `org-file-apps' to read its
+  documentation). Thus, the user can use something like the following in
+  their Org or Denote configuration:
+
+  ┌────
+  │ ;; Tell Org to use Emacs when opening files that end in .md
+  │ (add-to-list 'org-file-apps '("\\.md\\'" . emacs))
+  │ 
+  │ ;; Do the same for .html
+  │ (add-to-list 'org-file-apps '("\\.html\\'" . emacs))
+  └────
+
+  Each of these adds a new entry to the existing value of that user
+  option. Replace `md' or `html' with the desired file type extension.
+
+
+[Renaming files] See section 4
+
+
+23.10 Speed up backlinks’ buffer creation?
+──────────────────────────────────────────
 
   Denote leverages the built-in `xref' library to search for the
   identifier of the current file and return any links to it.  For users
@@ -6213,7 +6256,7 @@ section 15.14
   └────
 
 
-23.10 Why do I get “Search failed with status 1” when I search for backlinks?
+23.11 Why do I get “Search failed with status 1” when I search for backlinks?
 ─────────────────────────────────────────────────────────────────────────────
 
   Denote uses [Emacs’ Xref] to find backlinks.  Xref requires `xargs'
@@ -6234,7 +6277,7 @@ section 15.14
 [Emacs’ Xref] <info:emacs#Xref>
 
 
-23.11 Why do I get a double `#+title' in Doom Emacs?
+23.12 Why do I get a double `#+title' in Doom Emacs?
 ────────────────────────────────────────────────────
 
   Doom Emacs provides a set of bespoke templates for Org. One of those
@@ -6261,15 +6304,16 @@ section 15.14
         Boal, Charanjit Singh, Clemens Radermacher, Colin McLear, Damien
         Cassou, Eduardo Grajeda, Elias Storms, Eshel Yaron, Florian,
         Glenna D., Graham Marlow, Hilde Rhyne, Ivan Sokolov, Jack Baty,
-        Jean-Charles Bagneris, Jean-Philippe Gagné Guay, Jianwei Hou,
-        Joseph Turner, Jürgen Hötzel, Kaushal Modi, Kai von Fintel,
-        Kostas Andreadis, Kristoffer Balintona, Kyle Meyer, Marc Fargas,
-        Matthew Lemon, Noboru Ota (nobiot), Norwid Behrnd, Peter Prevos,
-        Philip Kaludercic, Quiliro Ordóñez, Stephen R. Kifer, Stefan
-        Monnier, Stefan Thesing, Thibaut Benjamin, Tomasz Hołubowicz,
-        Vedang Manerikar, Wesley Harvey, Zhenxu Xu, arsaber101, ezchi,
-        jarofromel, leinfink (Henrik), l-o-l-h (Lincoln), mattyonweb,
-        maxbrieiev, mentalisttraceur, pmenair, relict007.
+        Jakub Szczerbowski, Jean-Charles Bagneris, Jean-Philippe Gagné
+        Guay, Jianwei Hou, Joseph Turner, Jürgen Hötzel, Kaushal Modi,
+        Kai von Fintel, Kostas Andreadis, Kristoffer Balintona, Kyle
+        Meyer, Marc Fargas, Matthew Lemon, Noboru Ota (nobiot), Norwid
+        Behrnd, Peter Prevos, Philip Kaludercic, Quiliro Ordóñez,
+        Stephen R. Kifer, Stefan Monnier, Stefan Thesing, Thibaut
+        Benjamin, Tomasz Hołubowicz, Vedang Manerikar, Wesley Harvey,
+        Zhenxu Xu, arsaber101, ezchi, jarofromel, leinfink (Henrik),
+        l-o-l-h (Lincoln), mattyonweb, maxbrieiev, mentalisttraceur,
+        pmenair, relict007.
 
   Ideas and/or user feedback
         Abin Simon, Aditya Yadav, Alan Schmitt, Aleksandr Vityazev, Alex
@@ -6287,7 +6331,8 @@ section 15.14
         Stankus, Vick (VicZz), Viktor Haag, Wade Mealing, Yi Liu, Ypot,
         atanasj, azegas, babusri, doolio, duli, drcxd, elge70,
         fingerknight, hpgisler, mentalisttraceur, pRot0ta1p, rbenit68,
-        relict007, sienic, sundar bp, yetanotherfossman, zadca123
+        relict007, sienic, skissue, sundar bp, yetanotherfossman,
+        zadca123
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.

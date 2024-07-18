@@ -1,2 +1,3 @@
-loco is a library and minor mode for entering key sequences.
-For full details, see the README.md file distributed with this file.
+Loco is a library and minor mode to help you enter complex key sequences
+with ease. For full details, see the documentation distributed with this
+file.
