@@ -1266,7 +1266,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20240710)
+      [(20240718)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1275,7 +1275,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "8e242228e9987aa7ec2e708efd4b109311d778e2"))])
+	(:commit . "515e29bf3566911ec5566964a7b994c59f6a9e93"))])
  (ef-themes .
 	    [(1 7 0)
 	     ((emacs
@@ -1346,6 +1346,25 @@
 		      ("William Xu" . "william.xwl@gmail.com"))
 		     (:url . "https://elpa.gnu.org/packages/electric-spacing.html")
 		     (:commit . "122ac5d08c3d3d91251752136abab9721d90e36c"))])
+ (elisa .
+	[(1 0 2)
+	 ((emacs
+	   (29 2))
+	  (ellama
+	   (0 11 2))
+	  (llm
+	   (0 9 1))
+	  (async
+	   (1 9 8))
+	  (plz
+	   (0 9)))
+	 "Emacs Lisp Information System Assistant" tar
+	 ((:url . "http://github.com/s-kostyaev/elisa")
+	  (:keywords "help" "local" "tools")
+	  (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
+	  (:authors
+	   ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
+	  (:commit . "c842f1ce32569f40571bf37b589454c0eeabb5e2"))])
  (elisp-benchmarks .
 		   [(1 16)
 		    nil "elisp benchmarks collection" tar

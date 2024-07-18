@@ -45,9 +45,11 @@ accent.
 
 Interactively Toggle the mode on and off =M-x selected-window-accent-mode=
 
-Interactively change the current style
-=M-x selected-window-accent--switch-selected-window-accent-style=
-which will present a =completing-read= selection in the minibuffer
+A transient map is available (Emacs 28.1+):
+
+(global-set-key (kbd "C-c w") 'selected-window-accent-transient)
+
+which will bring up a transient menu
 
 The styles that are currently supported :
 
