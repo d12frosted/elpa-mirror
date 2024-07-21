@@ -4,6 +4,7 @@
   [file:https://img.shields.io/badge/license-GPL_3-green.svg]
   [file:https://melpa.org/packages/elisa-badge.svg]
   [file:https://stable.melpa.org/packages/elisa-badge.svg]
+  [https://elpa.gnu.org/packages/elisa.svg]
 
   ELISA (Emacs Lisp Information System Assistant) is a system designed
   to provide informative answers to user queries by leveraging a
@@ -18,6 +19,9 @@
 
 [file:https://stable.melpa.org/packages/elisa-badge.svg]
 <https://stable.melpa.org/#/elisa>
+
+[https://elpa.gnu.org/packages/elisa.svg]
+<https://elpa.gnu.org/packages/elisa.html>
 
 1.0.1 Data Sources and Processing
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
