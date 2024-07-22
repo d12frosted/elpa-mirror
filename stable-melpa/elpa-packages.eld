@@ -2365,7 +2365,7 @@
   (helm-fish-completion :url "https://github.com/emacs-helm/helm-fish-completion.git")
   (helm-flx :url "https://github.com/PythonNut/helm-flx.git")
   (helm-flycheck :url "https://github.com/yasuyk/helm-flycheck.git")
-  (helm-flymake :url "https://github.com/tam17aki/helm-flymake.git")
+  (helm-flymake :url "https://github.com/emacs-helm/helm-flymake.git")
   (helm-flyspell :url "https://github.com/pronobis/helm-flyspell.git")
   (helm-frame :url "https://github.com/chee/helm-frame.git")
   (helm-fuz :url "https://github.com/rustify-emacs/fuz.el.git")
