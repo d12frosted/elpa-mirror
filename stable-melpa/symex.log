@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/drym-org/symex.el.git
 
 Updating /mnt/store/melpa/working/symex/
-Checking out 6ef879ca83c111a0863c71dea29461138ae6331d
+Checking out fe45b0bb13a6a906cc6ac7d836a4021ee4a82421
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/symex/
-  to /tmp/symexoNV3tZ/symex-20240627.419
+  to /tmp/symexDWzLcH/symex-20240721.2333
     symex-computations.el -> symex-computations.el
     symex-custom.el -> symex-custom.el
     symex-data.el -> symex-data.el
@@ -37,40 +37,42 @@ Copying files (->) and directories (=>)
     symex-utils-ts.el -> symex-utils-ts.el
     symex-utils.el -> symex-utils.el
     symex.el -> symex.el
-Created symex-20240627.419.tar containing:
-  symex-20240627.419/
-  symex-20240627.419/symex-computations.el
-  symex-20240627.419/symex-custom.el
-  symex-20240627.419/symex-data.el
-  symex-20240627.419/symex-dsl.el
-  symex-20240627.419/symex-evaluator.el
-  symex-20240627.419/symex-evil-support.el
-  symex-20240627.419/symex-evil.el
-  symex-20240627.419/symex-hydra.el
-  symex-20240627.419/symex-interface-arc.el
-  symex-20240627.419/symex-interface-builtins.el
-  symex-20240627.419/symex-interface-clojure.el
-  symex-20240627.419/symex-interface-common-lisp.el
-  symex-20240627.419/symex-interface-elisp.el
-  symex-20240627.419/symex-interface-fennel.el
-  symex-20240627.419/symex-interface-racket.el
-  symex-20240627.419/symex-interface-scheme.el
-  symex-20240627.419/symex-interface.el
-  symex-20240627.419/symex-interop.el
-  symex-20240627.419/symex-misc.el
-  symex-20240627.419/symex-pkg.el
-  symex-20240627.419/symex-primitives-lisp.el
-  symex-20240627.419/symex-primitives.el
-  symex-20240627.419/symex-transformations-lisp.el
-  symex-20240627.419/symex-transformations-ts.el
-  symex-20240627.419/symex-transformations.el
-  symex-20240627.419/symex-traversals.el
-  symex-20240627.419/symex-ts.el
-  symex-20240627.419/symex-ui.el
-  symex-20240627.419/symex-utils-ts.el
-  symex-20240627.419/symex-utils.el
-  symex-20240627.419/symex.el
+Created symex-20240721.2333.tar containing:
+  symex-20240721.2333/
+  symex-20240721.2333/symex-computations.el
+  symex-20240721.2333/symex-custom.el
+  symex-20240721.2333/symex-data.el
+  symex-20240721.2333/symex-dsl.el
+  symex-20240721.2333/symex-evaluator.el
+  symex-20240721.2333/symex-evil-support.el
+  symex-20240721.2333/symex-evil.el
+  symex-20240721.2333/symex-hydra.el
+  symex-20240721.2333/symex-interface-arc.el
+  symex-20240721.2333/symex-interface-builtins.el
+  symex-20240721.2333/symex-interface-clojure.el
+  symex-20240721.2333/symex-interface-common-lisp.el
+  symex-20240721.2333/symex-interface-elisp.el
+  symex-20240721.2333/symex-interface-fennel.el
+  symex-20240721.2333/symex-interface-racket.el
+  symex-20240721.2333/symex-interface-scheme.el
+  symex-20240721.2333/symex-interface.el
+  symex-20240721.2333/symex-interop.el
+  symex-20240721.2333/symex-misc.el
+  symex-20240721.2333/symex-pkg.el
+  symex-20240721.2333/symex-primitives-lisp.el
+  symex-20240721.2333/symex-primitives.el
+  symex-20240721.2333/symex-transformations-lisp.el
+  symex-20240721.2333/symex-transformations-ts.el
+  symex-20240721.2333/symex-transformations.el
+  symex-20240721.2333/symex-traversals.el
+  symex-20240721.2333/symex-ts.el
+  symex-20240721.2333/symex-ui.el
+  symex-20240721.2333/symex-utils-ts.el
+  symex-20240721.2333/symex-utils.el
+  symex-20240721.2333/symex.el
  ✓ Success:
   2024-07-21T22:45:41+0000  symex-20240627.419.entry
   2024-07-21T22:45:41+0000  symex-20240627.419.tar
-Built symex in 4.478s, finished at 2024-07-21T22:45:43+0000
+  2024-07-22T01:29:38+0000  symex-20240721.2333.entry
+  2024-07-22T01:29:37+0000  symex-20240721.2333.tar
+Built symex in 5.283s, finished at 2024-07-22T01:29:39+0000
