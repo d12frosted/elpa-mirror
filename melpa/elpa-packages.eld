@@ -1437,7 +1437,7 @@
   (epm :url "https://github.com/xuchunyang/epm.git")
   (epresent :url "https://github.com/dakrone/epresent.git")
   (eproject :url "https://github.com/jrockway/eproject.git")
-  (equake :url "https://gitlab.com/emacsomancer/equake.git")
+  (equake :url "https://github.com/emacsomancer/equake.git")
   (eradio :url "https://github.com/olavfosse/eradio.git")
   (erblint :url "https://github.com/leodcs/erblint-emacs.git")
   (erc-colorize :url "https://github.com/thisirs/erc-colorize.git")
