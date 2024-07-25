@@ -2321,7 +2321,7 @@
   (helm-bibtexkey :url "https://github.com/kenbeese/helm-bibtexkey.git")
   (helm-bind-key :url "https://github.com/myuhe/helm-bind-key.el.git")
   (helm-bitbucket :url "https://github.com/dragonwasrobot/helm-bitbucket.git")
-  (helm-bm :url "https://github.com/thierryvolpiatto/helm-bm.git")
+  (helm-bm :url "https://github.com/emacs-helm/helm-bm.git")
   (helm-books :url "https://github.com/grugrut/helm-books.git")
   (helm-bufler :url "https://github.com/alphapapa/bufler.el.git")
   (helm-bundle-show :url "https://github.com/masutaka/emacs-helm-bundle-show.git")
