@@ -514,18 +514,18 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "855a9cb092eecf1e5c17ea56c440a0200f95eb4c"))])
  (cape .
-       [(1 5)
+       [(1 6)
 	((emacs
 	  (27 1))
 	 (compat
-	  (29 1 4 4)))
+	  (30)))
 	"Completion At Point Extensions" tar
 	((:url . "https://github.com/minad/cape")
 	 (:keywords "abbrev" "convenience" "matching" "completion" "text")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "bf22aa6ce0ffca1a1a77b693dddcd05eddc386f0"))])
+	 (:commit . "5c468d6d657e8dc604ddf3feb80f70e1e05ac0a1"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -2248,18 +2248,18 @@
 		(:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
 		(:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx .
-       [(1 9)
+       [(1 10)
 	((emacs
 	  (27 1))
 	 (compat
-	  (29 1 4 4)))
+	  (30)))
 	"Enchanted Spell Checker" tar
 	((:url . "https://github.com/minad/jinx")
 	 (:keywords "convenience" "text")
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "4580aad8a0267bf30c98d210b6bdc1a08b1aad75"))])
+	 (:commit . "4c89699db3851c3ecfa5d007ab56c810e8e3ffeb"))])
  (jit-spell .
 	    [(0 4)
 	     ((emacs

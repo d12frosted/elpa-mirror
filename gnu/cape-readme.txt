@@ -80,8 +80,8 @@ Table of Contents
   the list since each of the Capfs adds a small runtime cost. Note that
   the Capfs which occur earlier in the list take precedence, such that
   the first Capf returning a result will win and the later Capfs may not
-  get a chance to run. In order to merge Capfs you can try the
-  experimental function `cape-capf-super'.
+  get a chance to run. In order to merge Capfs you can try the function
+  `cape-capf-super'.
 
   One must distinguish the buffer-local and the global value of the
   `completion-at-point-functions' variable. The buffer-local value of
@@ -100,42 +100,24 @@ Table of Contents
   │ 
   │ ;; Add extensions
   │ (use-package cape
-  │   ;; Bind dedicated completion commands
-  │   ;; Alternative prefix keys: C-c p, M-p, M-+, ...
-  │   :bind (("C-c p p" . completion-at-point) ;; capf
-  │ 	 ("C-c p t" . complete-tag)        ;; etags
-  │ 	 ("C-c p d" . cape-dabbrev)        ;; or dabbrev-completion
-  │ 	 ("C-c p h" . cape-history)
-  │ 	 ("C-c p f" . cape-file)
-  │ 	 ("C-c p k" . cape-keyword)
-  │ 	 ("C-c p s" . cape-elisp-symbol)
-  │ 	 ("C-c p e" . cape-elisp-block)
-  │ 	 ("C-c p a" . cape-abbrev)
-  │ 	 ("C-c p l" . cape-line)
-  │ 	 ("C-c p w" . cape-dict)
-  │ 	 ("C-c p :" . cape-emoji)
-  │ 	 ("C-c p \\" . cape-tex)
-  │ 	 ("C-c p _" . cape-tex)
-  │ 	 ("C-c p ^" . cape-tex)
-  │ 	 ("C-c p &" . cape-sgml)
-  │ 	 ("C-c p r" . cape-rfc1345))
+  │   ;; Bind prefix keymap providing all Cape commands under a mnemonic key.
+  │   ;; Press C-c p ? to for help.
+  │   :bind ("C-c p" . cape-prefix-map) ;; Alternative keys: M-p, M-+, ...
+  │   ;; Alternatively bind Cape commands individually.
+  │   ;; :bind (("C-c p d" . cape-dabbrev)
+  │   ;;        ("C-c p h" . cape-history)
+  │   ;;        ("C-c p f" . cape-file)
+  │   ;;        ...)
   │   :init
   │   ;; Add to the global default value of `completion-at-point-functions' which is
   │   ;; used by `completion-at-point'.  The order of the functions matters, the
   │   ;; first function returning a result wins.  Note that the list of buffer-local
   │   ;; completion functions takes precedence over the global list.
-  │   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
-  │   (add-to-list 'completion-at-point-functions #'cape-file)
-  │   (add-to-list 'completion-at-point-functions #'cape-elisp-block)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-history)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-tex)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-dict)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-elisp-symbol)
-  │   ;;(add-to-list 'completion-at-point-functions #'cape-line)
+  │   (add-hook 'completion-at-point-functions #'cape-dabbrev)
+  │   (add-hook 'completion-at-point-functions #'cape-file)
+  │   (add-hook 'completion-at-point-functions #'cape-elisp-block)
+  │   ;; (add-hook 'completion-at-point-functions #'cape-history)
+  │   ;; ...
   │ )
   └────
 
@@ -222,10 +204,9 @@ Table of Contents
   /Throw multiple Capfs under the Cape and get a Super-Capf!/
 
   Cape supports merging multiple Capfs using the function
-  `cape-capf-super'. This feature is *EXPERIMENTAL* and should only be
-  used carefully in special scenarios.  Due to some technical details,
-  not all Capfs can be merged successfully. Merge Capfs one by one and
-  make sure that you get the desired outcome.
+  `cape-capf-super'. Due to some technical details, not all Capfs can be
+  merged successfully. Merge Capfs one by one and make sure that you get
+  the desired outcome.
 
   Note that `cape-capf-super' is not needed if multiple Capfs should
   betried one after the other, for example you can use `cape-file'
@@ -354,7 +335,7 @@ Table of Contents
   │ ;; pressing RET.
   │ (defun my-cape-dabbrev-accept-all ()
   │   (cape-wrap-accept-all #'cape-dabbrev))
-  │ (add-to-list 'completion-at-point-functions #'my-cape-dabbrev-accept-all)
+  │ (add-hook 'completion-at-point-functions #'my-cape-dabbrev-accept-all)
   │ 
   │ ;; Example 6: Define interactive Capf which can be bound to a key.  Here we wrap
   │ ;; the `elisp-completion-at-point' such that we can complete Elisp code
