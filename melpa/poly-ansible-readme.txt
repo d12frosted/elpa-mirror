@@ -1,11 +1,17 @@
 Edit YAML files for Ansible containing embedded Jinja2 templating.
 
-You will need to ensure that at least one of the following is installed:
-• The tree-sitter-yaml Tree-sitter parser (Emacs 29 and higher only).
-  https://github.com/tree-sitter-grammars/tree-sitter-yaml
-• The yaml-mode Emacs package.
-  https://github.com/yoshiki/yaml-mode
+This is a polymode, gluing jinja2-mode into either yaml-mode or
+yaml-ts-mode.  If you usually use yaml-ts-mode to edit YAML files,
+then that mode will be used as the host mode; otherwise, yaml-mode
+will be used.  In either case, minor modes ansible-mode and
+ansible-doc-mode are both also activated.
 
-If you have installed Emacs with your operating system’s package
-manager, it may have automatically installed the Tree-sitter parser
-for you, in which case you should be good to go.
+Also included is poly-systemd-jinja2-mode, a polymode gluing
+jinja2-mode into systemd-mode, for when you’re using templates to
+create Systemd unit configurations.
+
+Aside: Although yaml-ts-mode is built in to Emacs, as of version 29
+it is missing basic features compared to yaml-mode (such as
+indentation).  It also requires the separate installation of the
+tree-sitter-yaml Tree-sitter parser (either via your operating
+system’s package manager, via treesit-auto, or manually).
