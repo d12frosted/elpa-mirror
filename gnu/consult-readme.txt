@@ -61,7 +61,8 @@ Table of Contents
 3. Configuration
 .. 1. Use-package example
 .. 2. Custom variables
-.. 3. Fine-tuning
+.. 3. Project support
+.. 4. Fine-tuning
 4. Recommended packages
 5. Bug reports
 6. Contributions
@@ -268,12 +269,12 @@ Table of Contents
     literally, escape the space with a backslash. The `filter-string' is
     passed to the /fast/ Emacs filtering to further narrow down the list
     of matches. This is particularly useful if you are using an advanced
-    completion style like orderless. `consult-grep' supports preview. If
-    the `consult-project-function' returns non-nil, `consult-grep'
-    searches the current project directory.  Otherwise the
-    `default-directory' is searched. If `consult-grep' is invoked with
-    prefix argument `C-u M-s g', you can specify one or more
-    comma-separated files and directories manually.
+    completion style like orderless. `consult-grep' supports
+    preview. `consult-grep' searches the current [project directory] if
+    a project is found. Otherwise the `default-directory' is
+    searched. If `consult-grep' is invoked with prefix argument `C-u M-s
+    g', you can specify one or more comma-separated files and
+    directories manually.
   • `consult-find', `consult-fd', `consult-locate': Find file by
     matching the path against a regexp. Like for `consult-grep', either
     the project root or the current directory is the root directory for
@@ -281,6 +282,9 @@ Table of Contents
     where the first part is passed to find, and the second part is used
     for Emacs filtering. Prefix arguments to `consult-find' work just
     like those for the consult grep commands.
+
+
+[project directory] See section 3.3
 
 
 1.7 Compilation
@@ -814,7 +818,7 @@ Table of Contents
   ┌────
   │ ;; Example configuration for Consult
   │ (use-package consult
-  │   ;; Replace bindings. Lazily loaded due by `use-package'.
+  │   ;; Replace bindings. Lazily loaded by `use-package'.
   │   :bind (;; C-c bindings in `mode-specific-map'
   │ 	 ("C-c M-x" . consult-mode-command)
   │ 	 ("C-c h" . consult-history)
@@ -915,21 +919,7 @@ Table of Contents
   │ 
   │   ;; Optionally make narrowing help available in the minibuffer.
   │   ;; You may want to use `embark-prefix-help-command' or which-key instead.
-  │   ;; (define-key consult-narrow-map (vconcat consult-narrow-key "?") #'consult-narrow-help)
-  │ 
-  │   ;; By default `consult-project-function' uses `project-root' from project.el.
-  │   ;; Optionally configure a different project root function.
-  │   ;;;; 1. project.el (the default)
-  │   ;; (setq consult-project-function #'consult--default-project--function)
-  │   ;;;; 2. vc.el (vc-root-dir)
-  │   ;; (setq consult-project-function (lambda (_) (vc-root-dir)))
-  │   ;;;; 3. locate-dominating-file
-  │   ;; (setq consult-project-function (lambda (_) (locate-dominating-file "." ".git")))
-  │   ;;;; 4. projectile.el (projectile-project-root)
-  │   ;; (autoload 'projectile-project-root "projectile")
-  │   ;; (setq consult-project-function (lambda (_) (projectile-project-root)))
-  │   ;;;; 5. No project support
-  │   ;; (setq consult-project-function nil)
+  │   ;; (keymap-set consult-narrow-map (concat consult-narrow-key " ?") #'consult-narrow-help)
   │ )
   └────
 
@@ -978,6 +968,7 @@ Table of Contents
    consult-point-placement           Placement of the point when jumping to matches      
    consult-preview-key               Keys which triggers preview                         
    consult-preview-allowed-hooks     List of hooks to allow during preview               
+   consult-preview-excluded-buffers  Predicate to exclude buffers from preview           
    consult-preview-excluded-files    Regexps matched against file names during preview   
    consult-preview-max-count         Maximum number of files to keep open during preview 
    consult-preview-partial-size      Files larger than this size are previewed partially 
@@ -996,7 +987,34 @@ Table of Contents
 [Marginalia] <https://github.com/minad/marginalia>
 
 
-3.3 Fine-tuning of individual commands
+3.3 Project support
+───────────────────
+
+  Multiple Consult search commands like `consult-grep' try to discover
+  the current project and search in the project top level directory by
+  default, if a project is found. Otherwise they fall back to the
+  `default-directory'. By default, Consult uses the Emacs built-in
+  project discovery support (`project-current' and `project-root'). It
+  is possible to configure alternative methods via the customization
+  variable `consult-project-function'.
+
+  ┌────
+  │ ;; Optionally configure a different project root function.
+  │ ;; 1. project.el (the default)
+  │ (setq consult-project-function #'consult--default-project--function)
+  │ ;; 2. vc.el (vc-root-dir)
+  │ (setq consult-project-function (lambda (_) (vc-root-dir)))
+  │ ;; 3. locate-dominating-file
+  │ (setq consult-project-function (lambda (_) (locate-dominating-file "." ".git")))
+  │ ;; 4. projectile.el (projectile-project-root)
+  │ (autoload 'projectile-project-root "projectile")
+  │ (setq consult-project-function (lambda (_) (projectile-project-root)))
+  │ ;; 5. Disable project support
+  │ (setq consult-project-function nil)
+  └────
+
+
+3.4 Fine-tuning of individual commands
 ──────────────────────────────────────
 
   *NOTE:* Consult supports fine-grained customization of individual

@@ -1,0 +1,66 @@
+Cursor-undo allows you to undo cursor movement commands using the Emacs
+standard `undo' command.
+
+For frequent cursor movements such as up/down/left/right, it combines
+the movements of the same direction into a single undo entry.  This
+prevents the undo command from reversing each individual character
+movement separately.  For example, if you move the cursor 20 characters
+to the right and then 10 lines up, the first undo will go down 10 lines
+back, and the next undo move back 20 characters left.  On the other
+hand, for search commands that often jump across multiple pages, each
+search command has its own undo entry, allowing you to undo them one at
+a time rather than as a combined operation.
+
+This cursor-undo functionality has existed in my local Emacs init file
+for over 11+ years, since version 0 on 2013-06-26.  It was originally
+intended to support my Brief Editor Mode only, but I later found it
+would be more useful if implemented in a more generalized way.  For
+years I have hoped for an official implementation of this feature,
+which is commonly seen among various editors.  Considering my
+implementation using advice functions a bit inelegant so I have always
+hesitated to release it till recently.
+
+Until there is official support for the cursor undo feature, this
+package serves most common daily needs.  The core design is to align
+with Emacs's native `undo' function by recording cursor positions
+and screen-relative position undo entries in the `buffer-undo-list'
+in accordance with its documentation.
+
+As this package primarily consists of advice functions to wrap cursor
+movement commands, each cursor movement command needs to be manually
+wrapped with `def-cursor-undo'.  For interactive functions that
+heavily invoke advised cursor movement commands, you may even need to
+advise them with `disable-cursor-tracking' to prevent generating
+numerous distinct cursor undo entries from a single command.  For user
+convenience, we have prepared ready `def-cursor-undo' advice sets for
+standard Emacs cursor movement commands, Brief Editor mode, Viper
+mode, and EVIL mode.
+
+Usage:
+
+  Once this package is installed, you only need to enable cursor-undo
+  mode by adding the following line into your Emacs init file .emacs or
+  init.el:
+
+    (cursor-undo 1)
+
+Notes for EVIL mode user:
+
+  If you choose to use default Emacs `undo' system, you should be able
+  to use `evil-undo' to undo cursor movements.  If your choice is
+  tree-undo or another undo system, you might need to use Emacs default
+  `undo' (C-_, C-/ or C-x u ...) to undo cursor movements.
+
+Notes for Viper mode user:
+
+  The default `viper-undo' is advised to allow cursor-undo.  If you
+  find the advised function not working properly, consider comment out
+  the following source code `(define-advice viper-undo ...' to restore
+  the original `viper-undo' function and use Emacs default `undo'
+  (C-_, C-/ or C-x u ...) to undo cursor movements.
+
+Future TODO thoughts: a more desired implementation is to integrate it
+into Emacs source by extending the `interactive' spec to add code
+letters for various cursor undo information.
+
+Luke Lee [2024-07-19 Fri.]

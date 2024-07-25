@@ -478,18 +478,28 @@ Table of Contents
 3.1.3 The `denote-templates' option
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
+  [ Updated as part of 3.1.0-dev to accept a function that returns a
+    string. This is in addition to accepting a string. ]
+
   The user option `denote-templates' is an alist of content templates
   for new notes.  A template is arbitrary text that Denote will add to a
   newly created note right below the front matter.
 
-  Templates are expressed as a `(KEY . STRING)' association.
+  Templates are expressed as a `(KEY . VALUE)' association.
 
   • The `KEY' is the name which identifies the template.  It is an
     arbitrary symbol, such as `report', `memo', `statement'.
 
-  • The `STRING' is ordinary text that Denote will insert as-is.  It can
-    contain newline characters to add spacing.  Below we show some
-    concrete examples.
+  • The `VALUE' is either a string or the symbol of a function.
+
+    • If it is a string, it is ordinary text that Denote will insert
+      as-is.  It can contain newline characters to add spacing.  The
+      manual of Denote contains examples on how to use the `concat'
+      function, beside writing a generic string.
+
+    • If it is a function, it is called without arguments and is
+      expected to return a string.  Denote will call the function and
+      insert the result in the buffer.
 
   The user can choose a template either by invoking the command
   `denote-template' or by changing the user option `denote-prompts' to
@@ -532,6 +542,24 @@ Table of Contents
   a comma to the expression that should be evaluated.  The `concat' form
   here is not sensitive to indentation, so it is easier to adjust for
   legibility.
+
+  For when the `VALUE' is a function, we have this:
+
+  ┌────
+  │ (setq denote-templates
+  │       `((report . "* Some heading\n\n* Another heading")
+  │ 	(blog . my-denote-template-function-for-blog) ; a function to return a string
+  │ 	(memo . ,(concat "* Some heading"
+  │ 			 "\n\n"
+  │ 			 "* Another heading"
+  │ 			 "\n\n"))))
+  └────
+
+  [ This is part of 3.1.0-dev. ]
+
+  In this example, `my-denote-template-function-for-blog' is a function
+  that returns a string. Denote will take care to insert it in the
+  buffer.
 
   DEV NOTE: We do not provide more examples at this point, though feel
   welcome to ask for help if the information provided herein is not
@@ -3407,6 +3435,9 @@ section 7.3
   • The `%d' is the same as `%i' (`DATE' mnemonic).
   • The `%s' is the Denote `SIGNATURE' of the file.
   • The `%k' is the Denote `KEYWORDS' of the file.
+  • The `%b' is an indicator of whether or not the file has backlinks
+    pointing to it. The indicator string is defined in the user option
+    `denote-buffer-has-backlinks-string' [ Part of 3.1.0-dev ].
   • The `%%' is a literal percent sign.
 
   In addition, the following flags are available for each of the
@@ -3437,8 +3468,11 @@ section 7.3
   prefix.  Examples:
 
   ┌────
-  │ ;; Use the title (default)
-  │ (setq denote-rename-buffer-format "%t")
+  │ ;; Use the title prefixed with the backlink indicator (default)
+  │ (setq denote-rename-buffer-format "%b%t")
+  │ 
+  │ ;; Customize what the backlink indicator looks like
+  │ (setq denote-buffer-has-backlinks-string "!! ")
   │ 
   │ ;; Use the title and keywords with some emoji in between
   │ (setq denote-rename-buffer-format "%t 🤨 %k")
@@ -6313,7 +6347,7 @@ section 15.14
         Benjamin, Tomasz Hołubowicz, Vedang Manerikar, Wesley Harvey,
         Zhenxu Xu, arsaber101, ezchi, jarofromel, leinfink (Henrik),
         l-o-l-h (Lincoln), mattyonweb, maxbrieiev, mentalisttraceur,
-        pmenair, relict007.
+        pmenair, relict007, skissue.
 
   Ideas and/or user feedback
         Abin Simon, Aditya Yadav, Alan Schmitt, Aleksandr Vityazev, Alex

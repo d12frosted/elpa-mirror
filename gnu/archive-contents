@@ -708,16 +708,16 @@
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "09dce8a193c5a70277512263782b82fa1cba84c0"))])
  (consult .
-	  [(1 7)
+	  [(1 8)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (29 1 4 4)))
+	     (30)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "fe4852280006e61be7f1374d021ee06155ce5a26"))])
+	    (:commit . "4889458dccf842ab6223099f8a73ff8b147e9459"))])
  (consult-denote .
 		 [(0 1 1)
 		  ((emacs
@@ -872,6 +872,15 @@
 	      ("Francis J. Wright" . "F.J.Wright@qmul.ac.uk"))
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
 	     (:commit . "6e8b70504236325989b2f6e19b38602a23f57ba3"))])
+ (cursor-undo .
+	      [(1 1)
+	       nil "Undo Cursor Movement" tar
+	       ((:keywords "undo" "cursor")
+		(:maintainer "Luke Lee" . "luke.yx.lee@gmail.com")
+		(:authors
+		 ("Luke Lee" . "luke.yx.lee@gmail.com"))
+		(:url . "https://elpa.gnu.org/packages/cursor-undo.html")
+		(:commit . "3fe6c281d045dbfed07e39b75bc3c3a9915cc7aa"))])
  (cursory .
 	  [(1 0 1)
 	   ((emacs
@@ -962,7 +971,7 @@
 	     ("Phil Sainty" . "psainty@orcon.net.nz"))
 	    (:commit . "a763ec1e5c2987efea3ce2ee6d9c979f56ab6528"))])
  (denote .
-	 [(3 0 7)
+	 [(3 0 8)
 	  ((emacs
 	    (28 1)))
 	  "Simple notes with an efficient file-naming scheme" tar
@@ -970,7 +979,7 @@
 	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "ba79556066ec7a6f1a29cdd7d7c2cb8600d7823b"))])
+	   (:commit . "75312084112aa8ade19eb98d2ea3dbf6e16434cb"))])
  (denote-menu .
 	      [(1 2 0)
 	       ((emacs
@@ -3033,18 +3042,18 @@
 		  ("Hanno Perrey" . "hanno@hoowl.se"))
 		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern .
-	     [(1 3)
+	     [(1 4)
 	      ((emacs
 		(27 1))
 	       (compat
-		(29 1 4 4)))
+		(30)))
 	      "Modern looks for Org" tar
 	      ((:url . "https://github.com/minad/org-modern")
 	       (:keywords "outlines" "hypermedia" "text")
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "0b7af08548e586c0d3b0ca4a683253da407220d1"))])
+	       (:commit . "431c3b35619d461f8a988b5d29a47b3002093d69"))])
  (org-notify .
 	     [(0 1 1)
 	      ((emacs
