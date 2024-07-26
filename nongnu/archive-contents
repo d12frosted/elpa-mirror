@@ -2494,18 +2494,18 @@
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
-	      [(3 3 4)
+	      [(3 4 0)
 	       ((emacs
 		 (25 1))
 		(compat
-		 (29 1 4 5)))
+		 (30 0 0 0)))
 	       "Use the Emacsclient as $EDITOR" tar
 	       ((:url . "https://github.com/magit/with-editor")
 		(:keywords "processes" "terminals")
 		(:maintainer "Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev")
 		(:authors
 		 ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-		(:commit . "322ee26d3a7d3d67840293041837b7e70cffa8d1"))])
+		(:commit . "62dc8ba2184bef074ff0e90eefb70bfa34c21d3c"))])
  (with-simulated-input .
 		       [(3 0)
 			((emacs
