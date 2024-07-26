@@ -156,7 +156,7 @@ Table of Contents
   │   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
   │   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
   │ 
-  │   ;; Enable Corfu only for certain modes.
+  │   ;; Enable Corfu only for certain modes. See also `global-corfu-modes'.
   │   ;; :hook ((prog-mode . corfu-mode)
   │   ;;        (shell-mode . corfu-mode)
   │   ;;        (eshell-mode . corfu-mode))
@@ -169,22 +169,22 @@ Table of Contents
   │ 
   │ ;; A few more useful configurations...
   │ (use-package emacs
-  │   :init
+  │   :custom
   │   ;; TAB cycle if there are only few candidates
-  │   ;; (setq completion-cycle-threshold 3)
+  │   ;; (completion-cycle-threshold 3)
   │ 
   │   ;; Enable indentation+completion using the TAB key.
   │   ;; `completion-at-point' is often bound to M-TAB.
-  │   (setq tab-always-indent 'complete)
+  │   (tab-always-indent 'complete)
   │ 
   │   ;; Emacs 30 and newer: Disable Ispell completion function. As an alternative,
   │   ;; try `cape-dict'.
-  │   (setq text-mode-ispell-word-completion nil)
+  │   (text-mode-ispell-word-completion nil)
   │ 
   │   ;; Emacs 28 and newer: Hide commands in M-x which do not apply to the current
   │   ;; mode.  Corfu commands are hidden, since they are not used via M-x. This
   │   ;; setting is useful beyond Corfu.
-  │   (setq read-extended-command-predicate #'command-completion-default-include-p))
+  │   (read-extended-command-predicate #'command-completion-default-include-p))
   └────
 
   Dabbrev completion is based on `completion-in-region' and can be used
@@ -216,13 +216,13 @@ Table of Contents
   ┌────
   │ ;; Optionally use the `orderless' completion style.
   │ (use-package orderless
-  │   :init
+  │   :custom
   │   ;; Configure a custom style dispatcher (see the Consult wiki)
-  │   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
-  │   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
-  │   (setq completion-styles '(orderless basic)
-  │ 	completion-category-defaults nil
-  │ 	completion-category-overrides '((file (styles partial-completion)))))
+  │   ;; (orderless-style-dispatchers '(+orderless-dispatch))
+  │   ;; (orderless-component-separator #'orderless-escapable-split-on-space)
+  │   (completion-styles '(orderless basic))
+  │   (completion-category-defaults nil)
+  │   (completion-category-overrides '((file (styles partial-completion)))))
   └────
 
   The `basic' completion style is specified as fallback in addition to
@@ -322,41 +322,27 @@ Table of Contents
   child frames to display the candidates. The Corfu popup can be shown
   even if it doesn't fully fit inside the minibuffer.
 
-  By default, `global-corfu-mode' does not activate `corfu-mode' in the
-  minibuffer, to avoid interference with specialised minibuffer
-  completion UIs like Vertico or Mct. However you may still want to
-  enable Corfu completion for commands like `M-:' (`eval-expression') or
-  `M-!' (`shell-command'), which read from the minibuffer. In order to
-  detect minibuffers with completion we check if the variable
-  `completion-at-point-functions' is set locally.
+  `global-corfu-mode' activates `corfu-mode' in the minibuffer if the
+  variable `global-corfu-minibuffer' is non-nil. In order to avoid
+  interference with specialised minibuffer completion UIs like Vertico
+  or Mct, Corfu is only enabled if the minibuffer sets the variable
+  `completion-at-point-functions' locally. This way minibuffers with
+  completion can be detected, such that minibuffer commands like `M-:'
+  (`eval-expression') or `M-!' (`shell-command') are enhanced with Corfu
+  completion.
+
+  If needed, one can also enable Corfu more generally in all
+  minibuffers, as long as no completion UI is active. In the following
+  example we set `global-corfu-minibuffer' to a predicate function,
+  which checks for Mct and Vertico. Furthermore we ensure that Corfu is
+  not enabled if a password is read from the minibuffer.
 
   ┌────
-  │ (defun corfu-enable-in-minibuffer ()
-  │   "Enable Corfu in the minibuffer."
-  │   (when (local-variable-p 'completion-at-point-functions)
-  │     ;; (setq-local corfu-auto nil) ;; Enable/disable auto completion
-  │     (setq-local corfu-echo-delay nil ;; Disable automatic echo and popup
-  │ 		corfu-popupinfo-delay nil)
-  │     (corfu-mode 1)))
-  │ (add-hook 'minibuffer-setup-hook #'corfu-enable-in-minibuffer)
-  └────
-
-  This is not recommended, but one can also enable Corfu more generally
-  for every minibuffer, as long as no completion UI is active. In the
-  following example we check for Mct and Vertico. Furthermore we ensure
-  that Corfu is not enabled if a password is read from the minibuffer.
-
-  ┌────
-  │ (defun corfu-enable-always-in-minibuffer ()
-  │   "Enable Corfu in the minibuffer if Vertico/Mct are not active."
-  │   (unless (or (bound-and-true-p mct--active)
-  │ 	      (bound-and-true-p vertico--input)
-  │ 	      (eq (current-local-map) read-passwd-map))
-  │     ;; (setq-local corfu-auto nil) ;; Enable/disable auto completion
-  │     (setq-local corfu-echo-delay nil ;; Disable automatic echo and popup
-  │ 		corfu-popupinfo-delay nil)
-  │     (corfu-mode 1)))
-  │ (add-hook 'minibuffer-setup-hook #'corfu-enable-always-in-minibuffer 1)
+  │ (setq global-corfu-minibuffer
+  │       (lambda ()
+  │ 	(not (or (bound-and-true-p mct--active)
+  │ 		 (bound-and-true-p vertico--input)
+  │ 		 (eq (current-local-map) read-passwd-map)))))
   └────
 
 
@@ -379,19 +365,10 @@ Table of Contents
   currently selected candidate, but it does not send the prompt input to
   Eshell or the Comint process. Therefore you often have to press `RET'
   twice which feels like an unnecessary double confirmation. Fortunately
-  it is easy to improve this! In my configuration I define the advice
-  `corfu-send-shell' which sends the candidate after insertion.
+  it is easy to improve this by using the command `corfu-send' instead.
 
   ┌────
-  │ (defun corfu-send-shell (&rest _)
-  │   "Send completion candidate when inside comint/eshell."
-  │   (cond
-  │    ((and (derived-mode-p 'eshell-mode) (fboundp 'eshell-send-input))
-  │     (eshell-send-input))
-  │    ((and (derived-mode-p 'comint-mode)  (fboundp 'comint-send-input))
-  │     (comint-send-input))))
-  │ 
-  │ (advice-add #'corfu-insert :after #'corfu-send-shell)
+  │ (keymap-set corfu-map "RET" #'corfu-send)
   └────
 
   Shell completion uses the flexible Pcomplete mechanism internally,
@@ -403,21 +380,17 @@ Table of Contents
 
   Pcomplete has a few bugs on Emacs 28 and older. We can work around the
   issues with the [Cape] library (Completion at point extensions). Cape
-  provides wrappers which sanitize the Pcomplete function. If you use
-  Emacs 28 or older installing these advices is recommended such that
-  Pcomplete works properly. On Emacs 29 the advices should not be
-  necessary anymore, since most relevant bugs have been fixed. I
-  therefore recommend to avoid the advices on Emacs 29 and eventually
-  report any remaining Pcomplete issues upstream.
+  provides wrappers which sanitize the Pcomplete function. On Emacs 29
+  the advices should not be necessary anymore, since most relevant bugs
+  have been fixed. In case you discover any remaining Pcomplete issues,
+  please report them upstream.
 
   ┌────
-  │ ;; The advices are only needed on Emacs 28 and older.
+  │ ;; Sanitize the `pcomplete-completions-at-point' Capf.  The Capf has undesired
+  │ ;; side effects on Emacs 28 and earlier.  These advices are not needed on Emacs
+  │ ;; 29 and newer.
   │ (when (< emacs-major-version 29)
-  │   ;; Silence the pcomplete capf. Hide errors or messages.
   │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
-  │ 
-  │   ;; Ensure that pcomplete does not write to the buffer and behaves as a
-  │   ;; `completion-at-point-function' without side-effects.
   │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
   └────
 
@@ -505,7 +478,7 @@ Table of Contents
   with auto completion. `RET' may accidentally commit an automatically
   selected candidate, while you actually wanted to start a new line. As
   an alternative we can unbind the `RET' key completely from `corfu-map'
-  or reserve the `RET' key only in shell modes.
+  or reserve the `RET' key only in shell modes using a menu-item filter.
 
   ┌────
   │ ;; TAB-only configuration
@@ -520,19 +493,14 @@ Table of Contents
   │ 	;; Option 1: Unbind RET completely
   │ 	;;; ("RET" . nil)
   │ 	;; Option 2: Use RET only in shell modes
-  │ 	("RET" . (menu-item "" nil :filter corfu-insert-shell-filter)))
+  │ 	("RET" . (menu-item
+  │ 		  "" nil :filter
+  │ 		  (lambda (&optional _)
+  │ 		    (and (or (derived-mode-p 'eshell-mode) (derived-mode-p 'comint-mode))
+  │ 			 #'corfu-send)))))
   │ 
   │   :init
   │   (global-corfu-mode))
-  │ 
-  │ (defun corfu-insert-shell-filter (&optional _)
-  │   "Insert completion candidate and send when inside comint/eshell."
-  │   (when (or (derived-mode-p 'eshell-mode) (derived-mode-p 'comint-mode))
-  │     (lambda ()
-  │       (interactive)
-  │       (corfu-insert)
-  │       ;; `corfu-send-shell' was defined above
-  │       (corfu-send-shell))))
   └────
 
 
