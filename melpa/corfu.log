@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/minad/corfu.git
 
 Updating /mnt/store/melpa/working/corfu/
-Checking out df7d95241a60adae9bea4b12df9e2bd7633a3bc4
+Checking out 5e3a959766d2313651c5db3beedd937bfc27b57a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/corfu/
-  to /tmp/corfupr4dQZ/corfu-20240720.842
+  to /tmp/corfuIjuEtG/corfu-20240726.359
     corfu.el -> corfu.el
   ! extensions/corfu-echo.el -> corfu-echo.el
   ! extensions/corfu-history.el -> corfu-history.el
@@ -14,17 +14,19 @@ Copying files (->) and directories (=>)
   ! extensions/corfu-info.el -> corfu-info.el
   ! extensions/corfu-popupinfo.el -> corfu-popupinfo.el
   ! extensions/corfu-quick.el -> corfu-quick.el
-Created corfu-20240720.842.tar containing:
-  corfu-20240720.842/
-  corfu-20240720.842/corfu-echo.el
-  corfu-20240720.842/corfu-history.el
-  corfu-20240720.842/corfu-indexed.el
-  corfu-20240720.842/corfu-info.el
-  corfu-20240720.842/corfu-pkg.el
-  corfu-20240720.842/corfu-popupinfo.el
-  corfu-20240720.842/corfu-quick.el
-  corfu-20240720.842/corfu.el
+Created corfu-20240726.359.tar containing:
+  corfu-20240726.359/
+  corfu-20240726.359/corfu-echo.el
+  corfu-20240726.359/corfu-history.el
+  corfu-20240726.359/corfu-indexed.el
+  corfu-20240726.359/corfu-info.el
+  corfu-20240726.359/corfu-pkg.el
+  corfu-20240726.359/corfu-popupinfo.el
+  corfu-20240726.359/corfu-quick.el
+  corfu-20240726.359/corfu.el
  ✓ Success:
   2024-07-26T03:23:52+0000  corfu-20240720.842.entry
   2024-07-26T03:23:52+0000  corfu-20240720.842.tar
-Built corfu in 3.969s, finished at 2024-07-26T03:23:53+0000
+  2024-07-26T06:10:10+0000  corfu-20240726.359.entry
+  2024-07-26T06:10:09+0000  corfu-20240726.359.tar
+Built corfu in 4.754s, finished at 2024-07-26T06:10:11+0000
