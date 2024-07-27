@@ -1,4 +1,17 @@
-Hide dotfiles in dired.
+This package is deprecated but can rather easily be replaced by
+`dired-omit-mode` like this:
+
+```emacs-lisp
+(use-package dired
+  :hook (dired-mode . dired-omit-mode))
+  :bind (:map dired-mode-map
+          ( "."     . dired-omit-mode))
+  :custom (dired-omit-files (rx (seq bol ".")))
+```
+
+Also see [#8][issue-8].
+
+Hide dotfiles in Dired.
 
 To activate this mode add something like this to your init.el:
 
