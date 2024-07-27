@@ -322,7 +322,32 @@ activity.
 5 Changelog
 ═══════════
 
-5.1 v0.7
+5.1 v0.7.1
+──────────
+
+  *Fixes*
+  ⁃ Race condition when restoring multiple activities in rapid
+    succession from user code.  ([#98].  Thanks to [JD Smith].)
+  ⁃ Command `activities-resume' resets when called with a universal
+    prefix argument.  ([#75].  Thanks to [Joseph Turner].)
+  ⁃ Refreshing activities list.  ([#77].  Thanks to [Joseph Turner].)
+  ⁃ Autoload bookmark handler.  ([#114].  Thanks to [Joseph Turner].)
+
+
+[#98] <https://github.com/alphapapa/activity.el/pull/98>
+
+[JD Smith] <https://github.com/jdtsmith>
+
+[#75] <https://github.com/alphapapa/activities.el/pull/75>
+
+[Joseph Turner] <https://breatheoutbreathe.in>
+
+[#77] <https://github.com/alphapapa/activities.el/pull/77>
+
+[#114] <https://github.com/alphapapa/activity.el/pull/114>
+
+
+5.2 v0.7
 ────────
 
   *Additions*
@@ -338,12 +363,18 @@ activity.
   *Fixes*
   ⁃ Suspending/killing an activity when only one frame/tab is open.
   ⁃ Generation of Info manual on GNU ELPA.  (Thanks to Stefan Monnier.)
+  ⁃ Ignore minimum window sizes and fixed size restrictions.  ([#56].
+    Thanks to [Jelle Licht].)
 
 
 [#46] <https://github.com/alphapapa/activities.el/issues/46>
 
+[#56] <https://github.com/alphapapa/activity.el/issues/56>
 
-5.2 v0.6
+[Jelle Licht] <https://github.com/jellelicht>
+
+
+5.3 v0.6
 ────────
 
   *Additions*
@@ -375,14 +406,14 @@ activity.
 [Al M.] <https://github.com/yrns>
 
 
-5.3 v0.5.1
+5.4 v0.5.1
 ──────────
 
   *Fixes*
   ⁃ Listing activities without last-saved states.
 
 
-5.4 v0.5
+5.5 v0.5
 ────────
 
   *Additions*
@@ -433,7 +464,7 @@ activity.
 [#25] <https://github.com/alphapapa/activity.el/issues/25>
 
 
-5.5 v0.4
+5.6 v0.4
 ────────
 
   *Additions*
@@ -452,7 +483,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.6 v0.3.3
+5.7 v0.3.3
 ──────────
 
   *Fixes*
@@ -467,13 +498,13 @@ activity.
 [fuzy112] <https://github.com/fuzy112>
 
 
-5.7 v0.3.2
+5.8 v0.3.2
 ──────────
 
   Updated documentation, etc.
 
 
-5.8 v0.3.1
+5.9 v0.3.1
 ──────────
 
   *Fixes*
@@ -485,8 +516,8 @@ activity.
 [#7] <https://github.com/alphapapa/activities.el/issues/7>
 
 
-5.9 v0.3
-────────
+5.10 v0.3
+─────────
 
   *Additions*
   ⁃ Command `activities-list' lists activities in a `vtable' buffer in
@@ -496,7 +527,7 @@ activity.
   ⁃ Record times at which activities' states were updated.
 
 
-5.10 v0.2
+5.11 v0.2
 ─────────
 
   *Additions*
@@ -515,7 +546,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.11 v0.1.3
+5.12 v0.1.3
 ───────────
 
   *Fixes*
@@ -523,21 +554,21 @@ activity.
   ⁃ Command aliases.
 
 
-5.12 v0.1.2
+5.13 v0.1.2
 ───────────
 
   *Fixes*
   ⁃ Some single-window configurations were not restored properly.
 
 
-5.13 v0.1.1
+5.14 v0.1.1
 ───────────
 
   *Fixes*
   ⁃ Silence message about non-file-visiting buffers.
 
 
-5.14 v0.1
+5.15 v0.1
 ─────────
 
   Initial release.

@@ -20,7 +20,7 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (activities .
-	     [(0 7)
+	     [(0 7 1)
 	      ((emacs
 		(29 1))
 	       (persist
@@ -31,7 +31,7 @@
 	       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	       (:authors
 		("Adam Porter" . "adam@alphapapa.net"))
-	       (:commit . "b63ccc58fc3b5b3e6ed5b74bf84bd4eff9bb1660"))])
+	       (:commit . "8bc2028e81a0a6a08e7a44144b340c58a5ffadab"))])
  (ada-mode .
 	   [(8 1 0)
 	    ((uniquify-files
@@ -2589,11 +2589,11 @@
 	(:url . "https://elpa.gnu.org/packages/map.html")
 	(:commit . "9da2efb670574b473ab864ae0456b4f1b38e680b"))])
  (marginalia .
-	     [(1 6)
+	     [(1 7)
 	      ((emacs
 		(27 1))
 	       (compat
-		(29 1 4 4)))
+		(30)))
 	      "Enrich existing commands with completion annotations" tar
 	      ((:url . "https://github.com/minad/marginalia")
 	       (:keywords "docs" "help" "matching" "completion")
@@ -2603,7 +2603,7 @@
 	       (:authors
 		("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "58eb5fd6e5cc21b12c5455ae69e7ae93579647bc"))])
+	       (:commit . "7a7f3363d042d1bf43ae697f4401638ed18230a5"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" tar
@@ -4664,18 +4664,18 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "b2d18ff944ae374fa03579ca2574f1fba8ae2e4b"))])
  (vertico .
-	  [(1 8)
+	  [(1 9)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (29 1 4 4)))
+	     (30)))
 	   "VERTical Interactive COmpletion" tar
 	   ((:url . "https://github.com/minad/vertico")
 	    (:keywords "convenience" "files" "matching" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "1def56a1e678ff9a8eeafafda9c474a5fbb097c4"))])
+	    (:commit . "d70fdeb67be9ecc88c438039eefa9ef0e2104005"))])
  (vertico-posframe .
 		   [(0 7 7)
 		    ((emacs

@@ -97,14 +97,14 @@ Table of Contents
   `annotation-function' or an `affixation-function', avoiding the
   Marginalia dependency this way. The `annotation-function' and
   `affixation-function' are documented in the [Elisp manual]. If you use
-  `consult--read', you can specify an `:annotate' keyword
-  argument. There is an exception to our recommendation: If you want to
-  implement annotations for an existing package `hypothetic.el', which
-  does not have annotations and where annotations cannot be added, then
-  the creation of a `marginalia-hypothetic.el' package is a good idea,
-  since Marginalia provides the facilities to enhance existing commands
-  from the outside. If you have questions feel free to ask on the
-  Marginalia issue tracker.
+  `consult--read', you can specify an `:annotate' keyword argument.
+
+  There is an exception to our recommendation: If you want to implement
+  annotations for an existing package `hypothetic.el', which does not
+  have annotations and where annotations cannot be added, then the
+  creation of a `marginalia-hypothetic.el' package is a good idea, since
+  Marginalia provides the facilities to enhance existing commands from
+  the outside.
 
   Commands that support minibuffer completion use a completion table of
   all the available candidates. Candidates are associated with a
@@ -158,10 +158,6 @@ Table of Contents
   │ 	    (propertize "The quick brown fox jumps over the lazy dog" 'face sym))))
   └────
 
-  Look at Marginalia's various annotators for examples of formatting
-  annotations.  In particular, the helper function `marginalia--fields'
-  can be used to format information into columns.
-
   After defining a new annotator, associate it with a category in the
   annotator registry as follows:
 
@@ -192,21 +188,28 @@ Table of Contents
   annotators by default and only activate the annotators on demand by
   invoking `marginalia-cycle'.
 
-  In order to use the builtin annotators by default, you can use the
-  following command. Replace `builtin' by `none' to disable annotators
-  by default.
+  In order to disable an annotator permanently, the
+  `marginalia-annotator-registry' can be modified. For example if you
+  prefer to never see file annotations, you can delete all file
+  annotators from the registry.
 
   ┌────
-  │ (defun marginalia-use-builtin ()
-  │   (interactive)
-  │   (mapc
-  │    (lambda (x)
-  │      (setcdr x (cons 'builtin (remq 'builtin (cdr x)))))
-  │    marginalia-annotator-registry))
+  │ (setq marginalia-annotator-registry
+  │       (assq-delete-all 'file marginalia-annotator-registry))
   └────
 
-  If a completion category supports two annotators, you can toggle
-  between those using this command.
+  To use the builtin annotators by default, you can run the following
+  code.  Replace `builtin' by `none' to disable annotators by default.
+
+  ┌────
+  │ (mapc (lambda (x)
+  │ 	(setcdr x (cons 'builtin (remq 'builtin (cdr x)))))
+  │       marginalia-annotator-registry)
+  └────
+
+  As an alternative to `marginalia-cycle', if a completion category
+  supports two annotators, you can toggle between them using the
+  following command.
 
   ┌────
   │ (defun marginalia-toggle ()
@@ -231,39 +234,26 @@ Table of Contents
   │ 					 marginalia-annotator-registry))))
   └────
 
-  In order to disable an annotator permanently, the
-  `marginalia-annotator-registry' can be modified. For example if you
-  prefer to never see file annotations, you can delete all file
-  annotators from the registry.
-
-  ┌────
-  │ (setq marginalia-annotator-registry
-  │       (assq-delete-all 'file marginalia-annotator-registry))
-  └────
-
 
 5 Icons in the minibuffer
 ═════════════════════════
 
-  Icons in the minibuffer completion UI are a commonly requested
-  feature.  Marginalia focuses on text annotations only. The following
-  packages are compatible with Marginalia and use special fonts to add
-  icons in front of completion candidates. There also exist related
-  packages to enhance Dired, Ibuffer and other modes with icons
-  consistently.
+  Marginalia focuses on text annotations. The following packages are
+  compatible with Marginalia and use special fonts to add icons in front
+  of completion candidates. There also exist related packages to enhance
+  Dired, Ibuffer, Corfu and other modes with icons consistently.
 
-  • [all-the-icons-completion]: Relies on the `all-the-icons.el' package
+  • [nerd-icons-completion]: Uses the NerdFonts. It can even work even
+    in the terminal where only a single font can be used.
+  • [all-the-icons-completion]: Uses the `all-the-icons.el' package
     which configures multiple icon fonts.
-  • [nerd-icons-completion]: Relies on patched fonts including
-    icons. This package works even in the terminal where only a single
-    font can be used.
 
-
-[all-the-icons-completion]
-<https://github.com/iyefrat/all-the-icons-completion>
 
 [nerd-icons-completion]
 <https://github.com/rainstormstudio/nerd-icons-completion>
+
+[all-the-icons-completion]
+<https://github.com/iyefrat/all-the-icons-completion>
 
 
 6 Contributions

@@ -129,21 +129,13 @@ Table of Contents
   ┌────
   │ ;; Enable vertico
   │ (use-package vertico
+  │   :custom
+  │   ;; (vertico-scroll-margin 0) ;; Different scroll margin
+  │   ;; (vertico-count 20) ;; Show more candidates
+  │   ;; (vertico-resize t) ;; Grow and shrink the Vertico minibuffer
+  │   ;; (vertico-cycle t) ;; Enable cycling for `vertico-next/previous'
   │   :init
-  │   (vertico-mode)
-  │ 
-  │   ;; Different scroll margin
-  │   ;; (setq vertico-scroll-margin 0)
-  │ 
-  │   ;; Show more candidates
-  │   ;; (setq vertico-count 20)
-  │ 
-  │   ;; Grow and shrink the Vertico minibuffer
-  │   ;; (setq vertico-resize t)
-  │ 
-  │   ;; Optionally enable cycling for `vertico-next' and `vertico-previous'.
-  │   ;; (setq vertico-cycle t)
-  │   )
+  │   (vertico-mode))
   │ 
   │ ;; Persist history over Emacs restarts. Vertico sorts by history position.
   │ (use-package savehist
@@ -152,6 +144,13 @@ Table of Contents
   │ 
   │ ;; A few more useful configurations...
   │ (use-package emacs
+  │   :custom
+  │   ;; Support opening new minibuffers from inside existing minibuffers.
+  │   (enable-recursive-minibuffers t)
+  │   ;; Emacs 28 and newer: Hide commands in M-x which do not work in the current
+  │   ;; mode.  Vertico commands are hidden in normal buffers. This setting is
+  │   ;; useful beyond Vertico.
+  │   (read-extended-command-predicate #'command-completion-default-include-p)
   │   :init
   │   ;; Add prompt indicator to `completing-read-multiple'.
   │   ;; We display [CRM<separator>], e.g., [CRM,] if the separator is a comma.
@@ -167,15 +166,7 @@ Table of Contents
   │   ;; Do not allow the cursor in the minibuffer prompt
   │   (setq minibuffer-prompt-properties
   │ 	'(read-only t cursor-intangible t face minibuffer-prompt))
-  │   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode)
-  │ 
-  │   ;; Support opening new minibuffers from inside existing minibuffers.
-  │   (setq enable-recursive-minibuffers t)
-  │ 
-  │   ;; Emacs 28 and newer: Hide commands in M-x which do not work in the current
-  │   ;; mode.  Vertico commands are hidden in normal buffers. This setting is
-  │   ;; useful beyond Vertico.
-  │   (setq read-extended-command-predicate #'command-completion-default-include-p))
+  │   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode))
   └────
 
   I recommend to give Orderless completion a try, which is different
@@ -185,13 +176,13 @@ Table of Contents
   ┌────
   │ ;; Optionally use the `orderless' completion style.
   │ (use-package orderless
-  │   :init
+  │   :custom
   │   ;; Configure a custom style dispatcher (see the Consult wiki)
-  │   ;; (setq orderless-style-dispatchers '(+orderless-consult-dispatch orderless-affix-dispatch)
-  │   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
-  │   (setq completion-styles '(orderless basic)
-  │ 	completion-category-defaults nil
-  │ 	completion-category-overrides '((file (styles partial-completion)))))
+  │   ;; (orderless-style-dispatchers '(+orderless-consult-dispatch orderless-affix-dispatch))
+  │   ;; (orderless-component-separator #'orderless-escapable-split-on-space)
+  │   (completion-styles '(orderless basic))
+  │   (completion-category-defaults nil)
+  │   (completion-category-overrides '((file (styles partial-completion)))))
   └────
 
   The `basic' completion style is specified as fallback in addition to

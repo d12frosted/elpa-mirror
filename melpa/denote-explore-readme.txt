@@ -9,4 +9,4 @@ Functionality:
 3. Janitor: Maintenance on you Denote collection
 3. Network diagrams: visualise the structure of your notes
 
-The Denote-Explore manual is in info-mode `C-h R denote-explore`
+The Denote-Explore manual is available in info-mode `C-h R denote-explore`
