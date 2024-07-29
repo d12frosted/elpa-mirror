@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out c31a6e7d049c0dc0a02065993b21c4ffab95fb04
+Checking out a03117f117e2eaf63c56061e2beb7f4868111596
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekggMpUha/ekg-20240728.452
+  to /tmp/ekgZpYg32/ekg-20240728.1623
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-denote.el -> ekg-denote.el
     ekg-embedding.el -> ekg-embedding.el
@@ -17,23 +17,23 @@ Copying files (->) and directories (=>)
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekggMpUha/ekg-20240728.452/doclicense.info
-Generating /tmp/ekggMpUha/ekg-20240728.452/ekg.info
-Created ekg-20240728.452.tar containing:
-  ekg-20240728.452/
-  ekg-20240728.452/dir
-  ekg-20240728.452/doclicense.info
-  ekg-20240728.452/ekg-auto-save.el
-  ekg-20240728.452/ekg-denote.el
-  ekg-20240728.452/ekg-embedding.el
-  ekg-20240728.452/ekg-llm.el
-  ekg-20240728.452/ekg-logseq.el
-  ekg-20240728.452/ekg-org-roam.el
-  ekg-20240728.452/ekg-pkg.el
-  ekg-20240728.452/ekg-test-utils.el
-  ekg-20240728.452/ekg.el
-  ekg-20240728.452/ekg.info
+Generating /tmp/ekgZpYg32/ekg-20240728.1623/doclicense.info
+Generating /tmp/ekgZpYg32/ekg-20240728.1623/ekg.info
+Created ekg-20240728.1623.tar containing:
+  ekg-20240728.1623/
+  ekg-20240728.1623/dir
+  ekg-20240728.1623/doclicense.info
+  ekg-20240728.1623/ekg-auto-save.el
+  ekg-20240728.1623/ekg-denote.el
+  ekg-20240728.1623/ekg-embedding.el
+  ekg-20240728.1623/ekg-llm.el
+  ekg-20240728.1623/ekg-logseq.el
+  ekg-20240728.1623/ekg-org-roam.el
+  ekg-20240728.1623/ekg-pkg.el
+  ekg-20240728.1623/ekg-test-utils.el
+  ekg-20240728.1623/ekg.el
+  ekg-20240728.1623/ekg.info
  ✓ Success:
-  2024-07-28T14:48:25+0000  ekg-20240728.452.entry
-  2024-07-28T14:48:24+0000  ekg-20240728.452.tar
-Built ekg in 16.892s, finished at 2024-07-28T14:48:28+0000
+  2024-07-28T22:55:22+0000  ekg-20240728.1623.entry
+  2024-07-28T22:55:21+0000  ekg-20240728.1623.tar
+Built ekg in 11.112s, finished at 2024-07-28T22:55:23+0000
