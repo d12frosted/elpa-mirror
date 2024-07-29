@@ -2071,11 +2071,13 @@
 	       ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	      (:commit . "3c32b141f083c31539bb24700eb0aa23ea55918c"))])
  (scala-mode .
-	     [(0 23)
-	      nil "Major mode for editing Scala" tar
-	      ((:url . "https://github.com/ensime/emacs-scala-mode")
+	     [(1 1 0)
+	      ((emacs
+		(24 2)))
+	      "Major mode for editing Scala" tar
+	      ((:url . "https://github.com/hvesalai/emacs-scala-mode")
 	       (:keywords "languages")
-	       (:commit . "3989897168bc0e687e43b8f9a3cf4328f6c79f41"))])
+	       (:commit . "889f6067fc96d8f7869e9584dbfef94b40c7c89e"))])
  (scroll-on-drag .
 		 [(0 1)
 		  ((emacs
