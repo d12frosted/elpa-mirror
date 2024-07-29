@@ -1,6 +1,7 @@
 An umbrella package to support a single installation point for all Casual
 porcelains. Included are porcelains for the following packages:
 
+- Bookmarks (casual-bookmarks)
 - Calc (casual-calc)
 - Dired (casual-dired)
 - I-Search (casual-isearch)
@@ -28,3 +29,4 @@ The following code is a TL;DR initialization for Casual Suite.
 (keymap-global-set "M-g" #'casual-avy-tmenu)
 (keymap-set reb-mode-map "C-o" #'casual-re-builder-tmenu)
 (keymap-set reb-lisp-mode-map "C-o" #'casual-re-builder-tmenu)
+(keymap-set bookmark-bmenu-mode-map "C-o" #'casual-bookmarks-tmenu)

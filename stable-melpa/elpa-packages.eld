@@ -1212,6 +1212,7 @@
   (easy-kill :url "https://github.com/leoliu/easy-kill.git")
   (easy-kill-extras :url "https://github.com/knu/easy-kill-extras.el.git")
   (easy-repeat :url "https://github.com/xuchunyang/easy-repeat.el.git")
+  (easysession :url "https://github.com/jamescherti/easysession.el.git")
   (ebdb-mua-sidecar :url "https://git.sr.ht/~swflint/emacs-universal-sidecar")
   (ebf :url "https://github.com/rexim/ebf.git")
   (ebib :url "https://github.com/joostkremers/ebib.git")
