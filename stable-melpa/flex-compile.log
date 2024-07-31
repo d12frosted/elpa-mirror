@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/plandes/flex-compile.git
 
 Updating /mnt/store/melpa/working/flex-compile/
-Checking out 817dd32411748682c13f752786b901041a470504
+Checking out 335f6f2e9abb5b5bc1ccabf1136688a3a4e851b6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flex-compile/
-  to /tmp/flex-compilerV24ET/flex-compile-20231219.2113
+  to /tmp/flex-compile18akps/flex-compile-20240729.1757
     flex-compile-base.el -> flex-compile-base.el
     flex-compile-choice-program.el -> flex-compile-choice-program.el
     flex-compile-cli.el -> flex-compile-cli.el
@@ -26,29 +26,29 @@ Copying files (->) and directories (=>)
     flex-compile-xml-validate.el -> flex-compile-xml-validate.el
     flex-compile.el -> flex-compile.el
     flex-compiler.el -> flex-compiler.el
-Created flex-compile-20231219.2113.tar containing:
-  flex-compile-20231219.2113/
-  flex-compile-20231219.2113/flex-compile-base.el
-  flex-compile-20231219.2113/flex-compile-choice-program.el
-  flex-compile-20231219.2113/flex-compile-cli.el
-  flex-compile-20231219.2113/flex-compile-clojure.el
-  flex-compile-20231219.2113/flex-compile-comint.el
-  flex-compile-20231219.2113/flex-compile-command.el
-  flex-compile-20231219.2113/flex-compile-config.el
-  flex-compile-20231219.2113/flex-compile-ess.el
-  flex-compile-20231219.2113/flex-compile-lisp.el
-  flex-compile-20231219.2113/flex-compile-make.el
-  flex-compile-20231219.2113/flex-compile-manage.el
-  flex-compile-20231219.2113/flex-compile-org-export.el
-  flex-compile-20231219.2113/flex-compile-pkg.el
-  flex-compile-20231219.2113/flex-compile-python.el
-  flex-compile-20231219.2113/flex-compile-repl.el
-  flex-compile-20231219.2113/flex-compile-script.el
-  flex-compile-20231219.2113/flex-compile-single-buffer.el
-  flex-compile-20231219.2113/flex-compile-xml-validate.el
-  flex-compile-20231219.2113/flex-compile.el
-  flex-compile-20231219.2113/flex-compiler.el
+Created flex-compile-20240729.1757.tar containing:
+  flex-compile-20240729.1757/
+  flex-compile-20240729.1757/flex-compile-base.el
+  flex-compile-20240729.1757/flex-compile-choice-program.el
+  flex-compile-20240729.1757/flex-compile-cli.el
+  flex-compile-20240729.1757/flex-compile-clojure.el
+  flex-compile-20240729.1757/flex-compile-comint.el
+  flex-compile-20240729.1757/flex-compile-command.el
+  flex-compile-20240729.1757/flex-compile-config.el
+  flex-compile-20240729.1757/flex-compile-ess.el
+  flex-compile-20240729.1757/flex-compile-lisp.el
+  flex-compile-20240729.1757/flex-compile-make.el
+  flex-compile-20240729.1757/flex-compile-manage.el
+  flex-compile-20240729.1757/flex-compile-org-export.el
+  flex-compile-20240729.1757/flex-compile-pkg.el
+  flex-compile-20240729.1757/flex-compile-python.el
+  flex-compile-20240729.1757/flex-compile-repl.el
+  flex-compile-20240729.1757/flex-compile-script.el
+  flex-compile-20240729.1757/flex-compile-single-buffer.el
+  flex-compile-20240729.1757/flex-compile-xml-validate.el
+  flex-compile-20240729.1757/flex-compile.el
+  flex-compile-20240729.1757/flex-compiler.el
  ✓ Success:
-  2024-07-29T15:40:04+0000  flex-compile-20231219.2113.entry
-  2024-07-29T15:40:04+0000  flex-compile-20231219.2113.tar
-Built flex-compile in 4.232s, finished at 2024-07-29T15:40:05+0000
+  2024-07-31T10:50:37+0000  flex-compile-20240729.1757.entry
+  2024-07-31T10:50:37+0000  flex-compile-20240729.1757.tar
+Built flex-compile in 4.559s, finished at 2024-07-31T10:50:39+0000

@@ -1275,7 +1275,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20240726)
+      [(20240731)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1284,7 +1284,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "55f2548e3fdaec9977c7b58f4502979787030cec"))])
+	(:commit . "c4f6a3d489d47fd2b2005e9fd75f71d9905aeee0"))])
  (ef-themes .
 	    [(1 7 0)
 	     ((emacs
@@ -4342,7 +4342,7 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "44036b32ba398cf284320285b60be35874b6eea5"))])
  (tramp .
-	[(2 7 1)
+	[(2 7 1 1)
 	 ((emacs
 	   (27 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -4351,7 +4351,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "fe5699e6627f883fa50964ea01b7d23555832ec4"))])
+	  (:commit . "ae4ffa7b9015b6983ee20e357f08a04b5c9dc412"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
@@ -4882,14 +4882,14 @@
 	    (:url . "https://elpa.gnu.org/packages/wpuzzle.html")
 	    (:commit . "9373cbc013b978b31e38822bfdcc9a7fc5e0ed99"))])
  (wrap-search .
-	      [(4 16 13)
+	      [(4 16 15)
 	       nil "wrapped, non-incremental search" tar
-	       ((:url . "https://dataswamp.org/~incal/emacs-init/wrap-search.el")
+	       ((:url . "https://dataswamp.org/~incal/elpa/wrap-search.el")
 		(:keywords "matching")
 		(:maintainer "Emanuel Berg" . "incal@dataswamp.org")
 		(:authors
 		 ("Emanuel Berg" . "incal@dataswamp.org"))
-		(:commit . "d4f73decdf1c624bb2bb3e0bf2292bae4b660fde"))])
+		(:commit . "54259280da4a78835e76c82262eace5c811abcc0"))])
  (xclip .
 	[(1 11)
 	 nil "Copy&paste GUI clipboard from text terminal" tar
