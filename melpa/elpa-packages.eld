@@ -5013,7 +5013,6 @@
   (sql-sqlline :url "https://gitlab.com/matteoredaelli/sql-sqlline.git")
   (sql-trino :url "https://github.com/regadas/sql-trino.git")
   (sqlformat :url "https://github.com/purcell/sqlformat.git")
-  (sqlite :url "https://gitlab.com/cnngimenez/sqlite.el.git")
   (sqlite-mode-extras :url "https://github.com/xenodium/sqlite-mode-extras.git")
   (sqlite3 :url "https://github.com/pekingduck/emacs-sqlite3-api.git")
   (sqlup-mode :url "https://github.com/Trevoke/sqlup-mode.el.git")
