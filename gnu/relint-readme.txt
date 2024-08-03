@@ -35,7 +35,7 @@ skip-syntax-forward and skip-syntax-backward.
 
   - From batch mode:
 
-      emacs -batch -l relint.el -f relint-batch FILES-AND-DIRS...
+      emacs -batch -l relint -f relint-batch FILES-AND-DIRS...
 
     where directories are scanned recursively.
     (Options for finding relint and xr need to be added after
@@ -64,15 +64,30 @@ skip-syntax-forward and skip-syntax-backward.
   it will be installed automatically.
 
 
-* Configuration
+* User options
 
-  No configuration is required.
+  - variable 'relint-xr-checks'
 
-  There is a single user option, 'relint-xr-checks'.
-  If set to 'all', it enables more thorough checks that detect more
-  errors and performance problems but may also produce more false
-  warnings. The default value is 'nil', limiting warnings to ones that
-  are likely to be accurate.
+      If set to 'all', it enables checks that detect more errors and
+      performance problems but may also produce more false warnings.
+      The default value is 'nil' which limits warnings to ones that
+      are likely to be accurate.
+
+  - variable 'relint-batch-highlight'
+
+      This variable controls the diagnostics output of 'relint-batch'.
+      If set to a string pair (BEGIN . END), these strings will be
+      used to highlight the part of a regexp that a message is talking
+      about. The default value makes that part appear in reverse video
+      in a (VT100-compatible) terminal.
+      The value 'caret' uses ASCII symbols to mark the interesting part
+      instead.
+      The value 'nil' disables highlighting entirely.
+
+  - face 'relint-buffer-highlight'
+
+      This is the face used to highlight text warned about for a
+      message appearing in the '*relint*' buffer.
 
 
 * What the diagnostics mean
@@ -121,6 +136,7 @@ skip-syntax-forward and skip-syntax-backward.
     ranges are caused by a misplaced hyphen.
 
   - Character 'B' included in range 'A-C'
+  - Range 'A-C' includes character 'B'
 
     A range includes a character that also occurs individually. This
     is often caused by a misplaced hyphen.
@@ -206,14 +222,14 @@ skip-syntax-forward and skip-syntax-backward.
     the repeated sequence, resulting in a*\(?:c[ab]+\)* in the example
     above.
 
-  - End-of-line anchor followed by non-newline
-  - Non-newline followed by line-start anchor
+  - Non-newline follows end-of-line anchor
+  - Line-start anchor follows non-newline
 
     A pattern that does not match a newline occurs right after an
     end-of-line anchor ($) or before a line-start anchor (^).
     This combination can never match.
 
-  - End-of-text anchor followed by non-empty pattern
+  - Non-empty pattern follows end-of-text anchor
 
     A pattern that only matches a non-empty string occurs right after
     an end-of-text anchor (\'). This combination can never match.

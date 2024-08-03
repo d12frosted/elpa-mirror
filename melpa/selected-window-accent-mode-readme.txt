@@ -47,7 +47,9 @@ Interactively Toggle the mode on and off =M-x selected-window-accent-mode=
 
 A transient map is available (Emacs 28.1+):
 
-(global-set-key (kbd "C-c w") 'selected-window-accent-transient)
+(eval-after-load 'selected-window-accent-mode
+  '(progn
+     (define-key global-map (kbd "C-c w") 'selected-window-accent-transient)))
 
 which will bring up a transient menu
 
