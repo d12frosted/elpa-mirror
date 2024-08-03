@@ -9,7 +9,7 @@ With Easysession.el, you can effortlessly switch between sessions,
 ensuring a consistent and uninterrupted editing experience.
 
 Key features include:
-- Minimalistic design focused on performance and simplicity, avoiding
+- Minimalist design focused on performance and simplicity, avoiding
   unnecessary complexity.
 - Quickly switch between sessions while editing without disrupting the frame
   geometry, enabling you to resume work immediately.
