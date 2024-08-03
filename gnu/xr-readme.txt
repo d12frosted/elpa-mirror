@@ -98,6 +98,7 @@ The xr package can be used interactively or by other code as a library.
     ranges are caused by a misplaced hyphen.
 
   - Character 'B' included in range 'A-C'
+  - Range 'A-C' includes character 'B'
 
     A range includes a character that also occurs individually. This
     is often caused by a misplaced hyphen.
@@ -183,14 +184,14 @@ The xr package can be used interactively or by other code as a library.
     the repeated sequence, resulting in a*\(?:c[ab]+\)* in the example
     above.
 
-  - End-of-line anchor followed by non-newline
-  - Non-newline followed by line-start anchor
+  - Non-newline follows end-of-line anchor
+  - Line-start anchor follows non-newline
 
     A pattern that does not match a newline occurs right after an
     end-of-line anchor ($) or before a line-start anchor (^).
     This combination can never match.
 
-  - End-of-text anchor followed by non-empty pattern
+  - Non-empty pattern follows end-of-text anchor
 
     A pattern that only matches a non-empty string occurs right after
     an end-of-text anchor (\'). This combination can never match.

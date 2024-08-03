@@ -4940,16 +4940,16 @@
 	 ("Thien-Thi Nguyen" . "ttn@gnu.org"))
 	(:commit . "85e5c412dde7ec3c3f64c64d37079e233293e4d0"))])
  (xr .
-     [(1 25)
+     [(2 0)
       ((emacs
-	(26 1)))
+	(27 1)))
       "Convert string regexp to rx notation" tar
       ((:url . "https://github.com/mattiase/xr")
        (:keywords "lisp" "regexps")
        (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
        (:authors
 	("Mattias Engdegård" . "mattiase@acm.org"))
-       (:commit . "b3310b138e7f8a9fe315dd435739f83935c5769d"))])
+       (:commit . "9048d15a8de605ad1ee9eba889e4ec90944d8416"))])
  (xref .
        [(1 7 0)
 	((emacs
