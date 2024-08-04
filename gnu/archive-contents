@@ -1275,7 +1275,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20240731)
+      [(20240803)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1284,7 +1284,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "c4f6a3d489d47fd2b2005e9fd75f71d9905aeee0"))])
+	(:commit . "2cac1d27a18ed6a77f43f19e87df662e344983b5"))])
  (ef-themes .
 	    [(1 7 0)
 	     ((emacs
@@ -2488,7 +2488,7 @@
 		      ("Sean Whitton" . "spwhitton@spwhitton.name"))
 		     (:commit . "c22a15e86acf28da716532c26ba1371574c8e979"))])
  (llm .
-      [(0 17 0)
+      [(0 17 1)
        ((emacs
 	 (28 1))
 	(plz
@@ -2498,7 +2498,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "518757bcf3e7090f076c872e59d161865a2dc83c"))])
+	(:commit . "806a703b91580c1c34d3bb5fe1d556b659f89bcf"))])
  (lmc .
       [(1 4)
        nil "Little Man Computer in Elisp" tar

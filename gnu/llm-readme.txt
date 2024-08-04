@@ -188,8 +188,8 @@
 ──────────
 
   [Ollama] is a way to run large language models locally. There are
-  [many different models] you can use with it. You set it up with the
-  following parameters:
+  [many different models] you can use with it, and some of them support
+  function calling. You set it up with the following parameters:
   • `:scheme': The scheme (http/https) for the connection to ollama.
     This default to "http".
   • `:host': The host that ollama is run on.  This is optional and will
@@ -198,8 +198,10 @@
     default to the default ollama port.
   • `:chat-model': The model name to use for chat.  This is not optional
     for chat use, since there is no default.
-  • `:embedding-model': The model name to use for embeddings.  This is
-    not optional for embedding use, since there is no default.
+  • `:embedding-model': The model name to use for embeddings (only [some
+    models](<https://ollama.com/search?q=&c=embedding>) can be used for
+    embeddings.  This is not optional for embedding use, since there is
+    no default.
 
 
 [Ollama] <https://ollama.ai/>
