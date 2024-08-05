@@ -2447,16 +2447,16 @@
 	(:url . "https://elpa.gnu.org/packages/lex.html")
 	(:commit . "c7d76551cce66901b9f172f903ce720526c0fb52"))])
  (lin .
-      [(1 0 0)
+      [(1 1 0)
        ((emacs
 	 (27 1)))
        "Make `hl-line-mode' more suitable for selection UIs" tar
-       ((:url . "https://git.sr.ht/~protesilaos/lin")
+       ((:url . "https://github.com/protesilaos/lin")
 	(:keywords "convenience" "faces" "theme")
-	(:maintainer "Lin Development" . "~protesilaos/lin@lists.sr.ht")
+	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	(:commit . "09cf249c78385502a2ead30c4fa1468cf96939f7"))])
+	(:commit . "647be281945185a20f37363fd335e99ad0540eff"))])
  (listen .
 	 [(0 9)
 	  ((emacs

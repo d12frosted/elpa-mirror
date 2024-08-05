@@ -1,34 +1,33 @@
-		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		       LIN IS NOTICEABLE (LIN.EL)
+                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                       LIN IS NOTICEABLE (LIN.EL)
 
-			  Protesilaos Stavrou
-			  info@protesilaos.com
-		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          Protesilaos Stavrou
+                          info@protesilaos.com
+                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This manual, written by Protesilaos Stavrou, describes the specifics of
 `lin.el'.
 
 The documentation furnished herein corresponds to stable version 1.0.0,
-released on 2022-09-08.  Any reference to a newer feature which does not
+released on 2024-08-05.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.1.0-dev.
+Current development target is 1.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `lin'
 ⁃ Official manual: <https://protesilaos.com/emacs/lin>
 ⁃ Change log: <https://protesilaos.com/emacs/lin-changelog>
-⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/lin>
-  • Mirrors:
-    ⁃ GitHub: <https://github.com/protesilaos/lin>
-    ⁃ GitLab: <https://gitlab.com/protesilaos/lin>
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/lin>
+⁃ Git repositories:
+  ⁃ GitHub: <https://github.com/protesilaos/lin>
+  ⁃ GitLab: <https://gitlab.com/protesilaos/lin>
+⁃ Backronym: LIN Is Noticeable.
 
 Table of Contents
 ─────────────────
 
 1. COPYING
-2. Overview LIN
+2. Overview
 3. Installation
 .. 1. GNU ELPA package
 .. 2. Manual installation
@@ -44,7 +43,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2021-2022 Free Software Foundation, Inc.
+  Copyright (C) 2021-2023 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -59,8 +58,8 @@ Table of Contents
         copy and modify this GNU manual.”
 
 
-2 Overview LIN
-══════════════
+2 Overview
+══════════
 
   Lin is a stylistic enhancement for Emacs’ built-in `hl-line-mode'.  It
   remaps the `hl-line' face (or equivalent) buffer-locally to a style
@@ -93,6 +92,10 @@ Table of Contents
   background attribute.  The Lin faces with the `-override-fg' suffix
   set a foreground value which replaces that of the underlying text.
   Whereas the others only specify a background attribute.
+
+  The user option `lin-remap-current-line-number' controls whether to
+  apply the Lin style also to the currently highlighted line number.
+  Line numbers come from the built-in `display-line-numbers-mode'.
 
 
 3 Installation
@@ -173,7 +176,7 @@ Table of Contents
   │ 	ledger-report-mode-hook
   │ 	log-view-mode-hook
   │ 	magit-log-mode-hook
-  │ 	mu4e-headers-mode
+  │ 	mu4e-headers-mode-hook
   │ 	notmuch-search-mode-hook
   │ 	notmuch-tree-mode-hook
   │ 	occur-mode-hook
@@ -199,7 +202,7 @@ Table of Contents
 
   Contributions to code or documentation
         Christian Tietze, Damien Cassou, Federico Stilman, Gautier
-        Ponsinet, Kai von Fintel, Nicolas De Jaeghere.
+        Ponsinet, Kai von Fintel, Nicolas De Jaeghere, Simon Pugnet.
 
 
 6 GNU Free Documentation License
