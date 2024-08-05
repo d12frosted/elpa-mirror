@@ -1,6 +1,6 @@
 The `wrap-search' package offers non-incremental search.
 It shows hitss (hits and only hits) and search only starts
-when one hits RET.
+when one presses RET.
 
 `wrap-search' searches forward by default, but it wraps
 and continues up and until the search start position if
