@@ -1026,11 +1026,11 @@
 		("Florian Ragwitz" . "rafl@debian.org")
 		("Marius Vollmer" . "marius.vollmer@gmail.com")))])
  (git-modes .
-	    [(1 4 3)
+	    [(1 4 4)
 	     ((emacs
-	       (25 1))
+	       (26 1))
 	      (compat
-	       (29 1 4 5)))
+	       (30 0 0 0)))
 	     "Major modes for editing Git configuration files" tar
 	     ((:url . "https://github.com/magit/git-modes")
 	      (:keywords "convenience" "vc" "git")
@@ -1039,7 +1039,7 @@
 	       ("Sebastian Wiesner" . "lunaryorn@gmail.com")
 	       ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
 	       ("Jonas Bernoulli" . "emacs.git-modes@jonas.bernoulli.dev"))
-	      (:commit . "7901415b39bef1b789d161ca2c10dfb910d13780"))])
+	      (:commit . "f99010bbeb8b6d8a0819fac0195a2ef0159d08f0"))])
  (gnu-apl-mode .
 	       [(1 5 1)
 		nil "Emacs mode for GNU APL" tar
@@ -1386,18 +1386,18 @@
 	       (:keywords "languages")
 	       (:commit . "6408b96c1c97e41bc2af060d661afee4f7b22e89"))])
  (keycast .
-	  [(1 4 0)
+	  [(1 4 1)
 	   ((emacs
-	     (25 3))
+	     (26 1))
 	    (compat
-	     (29 1 4 5)))
+	     (30 0 0 0)))
 	   "Show current command and its binding" tar
 	   ((:url . "https://github.com/tarsius/keycast")
 	    (:keywords "multimedia")
 	    (:maintainer "Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev")
 	    (:authors
 	     ("Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev"))
-	    (:commit . "f04466cd8f8226715f113635204dc978171f63b7"))])
+	    (:commit . "c44618d2867fc2410e5061fef2a805e974198cf2"))])
  (kotlin-mode .
 	      [(2 0 0)
 	       ((emacs
