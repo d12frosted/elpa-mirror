@@ -1,4 +1,4 @@
-Casual Bookmarks is an opinionated Transient-based porcelain for Emacs Bookmarks.
+Casual Bookmarks is an opinionated Transient-based user interface for Emacs Bookmarks.
 
 INSTALLATION
 (require 'casual-bookmarks) ;; optional

@@ -11,4 +11,9 @@ Enter the code below into your init file to load and install
 `casual-isearch-tmenu'.  Tune the keybinding to your taste.
 
 (require 'casual-isearch)
-(keymap-set isearch-mode-map "<f2>" #'casual-isearch-tmenu)
+(keymap-set isearch-mode-map "C-o" #'casual-isearch-tmenu)
+
+Alternately with `use-package':
+(use-package casual-isearch
+  :ensure t
+  :bind (:map isearch-mode-map ("C-o" . casual-isearch-tmenu)))
