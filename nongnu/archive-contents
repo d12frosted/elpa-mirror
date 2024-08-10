@@ -551,6 +551,16 @@
 	   (:authors
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "0bd12913940a047724d830725bf8649e4f8df499"))])
+ (emacsql .
+	  [(4 0 0)
+	   ((emacs
+	     (25 1)))
+	   "High-level SQL database front-end" tar
+	   ((:url . "https://github.com/magit/emacsql")
+	    (:maintainer "Jonas Bernoulli" . "emacs.emacsql@jonas.bernoulli.dev")
+	    (:authors
+	     ("Christopher Wellons" . "wellons@nullprogram.com"))
+	    (:commit . "3d9622aabbf3ab925beadd12ce928370d7704573"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib
@@ -1007,24 +1017,27 @@
 		   ("Jeronimo Pellegrini" . "(j_p@aleph0.info)"))
 		  (:commit . "3358d0cc01436bd8f71a500175db2716e75b2eed"))])
  (git-commit .
-	     [(3 3 0)
+	     [(4 0 0)
 	      ((emacs
-		(25 1))
-	       (dash
-		(2 19 1))
+		(26 1))
+	       (compat
+		(30 0 0 0))
+	       (seq
+		(2 24))
 	       (transient
-		(0 3 6))
+		(0 7 4))
 	       (with-editor
-		(3 0 5)))
+		(3 4 1)))
 	      "Edit Git commit messages" tar
 	      ((:url . "https://github.com/magit/magit")
 	       (:keywords "git" "tools" "vc")
-	       (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	       (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 	       (:authors
-		("Jonas Bernoulli" . "jonas@bernoul.li")
+		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 		("Sebastian Wiesner" . "lunaryorn@gmail.com")
 		("Florian Ragwitz" . "rafl@debian.org")
-		("Marius Vollmer" . "marius.vollmer@gmail.com")))])
+		("Marius Vollmer" . "marius.vollmer@gmail.com"))
+	       (:commit . "020aca7c9c4154dbc4a72acbd56165ecccea1bf1"))])
  (git-modes .
 	    [(1 4 4)
 	     ((emacs
@@ -1479,17 +1492,22 @@
 	   ("Marius Vollmer" . "marius.vollmer@gmail.com")
 	   ("Jonas Bernoulli" . "jonas@bernoul.li")))])
  (magit-section .
-		[(3 3 0)
+		[(4 0 0)
 		 ((emacs
-		   (25 1))
+		   (26 1))
+		  (compat
+		   (30 0 0 0))
 		  (dash
-		   (2 19 1)))
+		   (2 19 1))
+		  (seq
+		   (2 24)))
 		 "Sections for read-only buffers" tar
 		 ((:url . "https://github.com/magit/magit")
 		  (:keywords "tools")
-		  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		  (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 		  (:authors
-		   ("Jonas Bernoulli" . "jonas@bernoul.li")))])
+		   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
+		  (:commit . "020aca7c9c4154dbc4a72acbd56165ecccea1bf1"))])
  (markdown-mode .
 		[(2 6)
 		 ((emacs
