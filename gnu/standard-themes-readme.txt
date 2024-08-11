@@ -11,23 +11,20 @@ This manual, written by Protesilaos Stavrou, describes the Emacs package
 called `standard-themes', and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 2.0.0,
-released on 2023-11-27.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 2.1.0,
+released on 2024-08-11.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 2.1.0-dev.
+Current development target is 2.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `standard-themes'
 ⁃ Official manual: <https://protesilaos.com/emacs/standard-themes>
 ⁃ Change log: <https://protesilaos.com/emacs/standard-themes-changelog>
 ⁃ Sample pictures:
   <https://protesilaos.com/emacs/standard-themes-pictures>
-⁃ Git repo on SourceHut:
-  <https://git.sr.ht/~protesilaos/standard-themes>
-  • Mirrors:
-    ⁃ GitHub: <https://github.com/protesilaos/standard-themes>
-    ⁃ GitLab: <https://gitlab.com/protesilaos/standard-themes>
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/standard-themes>
+⁃ Git repositories:
+  ⁃ GitHub: <https://github.com/protesilaos/standard-themes>
+  ⁃ GitLab: <https://gitlab.com/protesilaos/standard-themes>
 ⁃ Backronym: Standard Themes Are Not Derivatives but the Affectionately
   Reimagined Default … themes.
 
@@ -1180,6 +1177,8 @@ Table of Contents
   • elfeed
   • embark
   • epa
+  • erc
+  • ert
   • eshell
   • eww
   • flycheck
@@ -1206,6 +1205,7 @@ Table of Contents
   • mode-line
   • mu4e
   • nerd-icons
+  • nerd-icons-completion
   • nerd-icons-dired
   • nerd-icons-ibuffer
   • neotree
@@ -1250,6 +1250,7 @@ Table of Contents
   • widget
   • writegood-mode
   • woman
+  • ztree
 
 
 11.2 Implicitly supported packages or face groups
@@ -1357,7 +1358,8 @@ Table of Contents
         Clemens Radermacher.
 
   Ideas and/or user feedback
-        Fritz Grabo, Manuel Uberti, Tassilo Horn, Zack Weinberg.
+        Filippo Argiolas, Fritz Grabo, Manuel Uberti, Tassilo Horn, Zack
+        Weinberg.
 
 
 13 GNU Free Documentation License
