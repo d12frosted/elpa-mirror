@@ -62,5 +62,13 @@ Example 2:
             '(lambda ()
                (local-set-key (kbd "C-c C-u") 'string-inflection-java-style-cycle)))
 
-You can also set `string-inflection-skip-backward-when-done' to `t' if
-you don't like `string-inflect' moving your point to the end of the word.
+You can configure where the cursor should end up after the inflection using the
+`string-inflection-final-position' option.
+
+When a region is active during the inflect operation there are two effects:
+
+* If the region marks a part of a symbol the operation is only performed on that
+  part.
+* If the region contains more than one symbols, the operation is performed on all
+  the symbols in the region.
+* The region is preserved after the operation.
