@@ -951,9 +951,9 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:commit . "9e7ed54e5629f759660569bc7efc3d75dbabbc5f"))])
  (geiser-guile .
-	       [(0 28 1)
+	       [(0 28 2)
 		((emacs
-		  (25 1))
+		  (26 1))
 		 (transient
 		  (0 3))
 		 (geiser
@@ -964,7 +964,7 @@
 		 (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
 		 (:authors
 		  ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-		 (:commit . "f57bfd5039ce158de95d2ef2933e64fb16def4f6"))])
+		 (:commit . "5a856c2982030ff77e2d151ead4fcd991512f362"))])
  (geiser-kawa .
 	      [(0 0 1)
 	       ((emacs

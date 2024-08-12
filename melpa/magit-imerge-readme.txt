@@ -15,8 +15,16 @@ transient.  If you use `magit-imerge' regularly, you may want to
 bind it in `magit-mode-map'.  One option is to free up "i" for
 `magit-imerge' by moving `magit-gitignore' to another binding:
 
-   (define-key magit-mode-map (kbd "C-c C-i") 'magit-gitignore)
-   (define-key magit-mode-map "i" 'magit-imerge)
+  (define-key magit-mode-map (kbd "C-c C-i") 'magit-gitignore)
+  (define-key magit-mode-map "i" 'magit-imerge)
+
+And, if you prefer, you can also update `magit-dispatch' to reflect
+those changes:
+
+  (transient-replace-suffix 'magit-dispatch "i"
+    '("i" "Imerge" magit-imerge))
+  (transient-append-suffix 'magit-dispatch "!"
+    '("C-c C-i" "Ignore" magit-gitignore))
 
 Once an incremental merge has been started with one of the commands
 above, the imerge popup will display the following sequence
