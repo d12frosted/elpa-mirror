@@ -25,7 +25,7 @@ used, then, for `wrap-search', here are the keys and what
 they do,
 
         C-u C-s  do case-sensitive search
-    C-u C-u C-s  do revere search, direction north from point
+    C-u C-u C-s  do reverse search, direction north from point
 C-u C-u C-u C-s  do case-sensitive, reverse search
 
 and for `wrap-search-again', using a corresponding interface
