@@ -16,8 +16,6 @@ including JSON, XML, HTML, and binary data. It is used in the [LLM]
 library to handle decoding of various streaming and non-streaming media
 type formats.
 
-👷🏽 NOTE: This is work in progress. The library is not yet on ELPA.
-
 • Package name (GNU ELPA): plz-media-type
 • Official manual:
   [https://github.com/r0man/plz-media-type/blob/main/plz-media-type.org]
