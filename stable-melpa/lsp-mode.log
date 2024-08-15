@@ -3,272 +3,38 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-mode.git
 
 Updating /mnt/store/melpa/working/lsp-mode/
-Checking out c8d8bd0f5c40123821bf7c90afa5b6abb05074cb
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lsp-mode/
-  to /tmp/lsp-modexGbYUO/lsp-mode-20240801.2341
-    lsp-completion.el -> lsp-completion.el
-    lsp-diagnostics.el -> lsp-diagnostics.el
-    lsp-dired.el -> lsp-dired.el
-    lsp-headerline.el -> lsp-headerline.el
-    lsp-icons.el -> lsp-icons.el
-    lsp-ido.el -> lsp-ido.el
-    lsp-iedit.el -> lsp-iedit.el
-    lsp-lens.el -> lsp-lens.el
-    lsp-mode.el -> lsp-mode.el
-    lsp-modeline.el -> lsp-modeline.el
-    lsp-protocol.el -> lsp-protocol.el
-    lsp-semantic-tokens.el -> lsp-semantic-tokens.el
-    lsp.el -> lsp.el
-  ! clients/lsp-actionscript.el -> lsp-actionscript.el
-  ! clients/lsp-ada.el -> lsp-ada.el
-  ! clients/lsp-angular.el -> lsp-angular.el
-  ! clients/lsp-ansible.el -> lsp-ansible.el
-  ! clients/lsp-asm.el -> lsp-asm.el
-  ! clients/lsp-astro.el -> lsp-astro.el
-  ! clients/lsp-autotools.el -> lsp-autotools.el
-  ! clients/lsp-awk.el -> lsp-awk.el
-  ! clients/lsp-bash.el -> lsp-bash.el
-  ! clients/lsp-beancount.el -> lsp-beancount.el
-  ! clients/lsp-bufls.el -> lsp-bufls.el
-  ! clients/lsp-camel.el -> lsp-camel.el
-  ! clients/lsp-clangd.el -> lsp-clangd.el
-  ! clients/lsp-clojure.el -> lsp-clojure.el
-  ! clients/lsp-cmake.el -> lsp-cmake.el
-  ! clients/lsp-cobol.el -> lsp-cobol.el
-  ! clients/lsp-credo.el -> lsp-credo.el
-  ! clients/lsp-crystal.el -> lsp-crystal.el
-  ! clients/lsp-csharp.el -> lsp-csharp.el
-  ! clients/lsp-css.el -> lsp-css.el
-  ! clients/lsp-cucumber.el -> lsp-cucumber.el
-  ! clients/lsp-cypher.el -> lsp-cypher.el
-  ! clients/lsp-d.el -> lsp-d.el
-  ! clients/lsp-dhall.el -> lsp-dhall.el
-  ! clients/lsp-dockerfile.el -> lsp-dockerfile.el
-  ! clients/lsp-dot.el -> lsp-dot.el
-  ! clients/lsp-earthly.el -> lsp-earthly.el
-  ! clients/lsp-elixir.el -> lsp-elixir.el
-  ! clients/lsp-elm.el -> lsp-elm.el
-  ! clients/lsp-emmet.el -> lsp-emmet.el
-  ! clients/lsp-erlang.el -> lsp-erlang.el
-  ! clients/lsp-eslint.el -> lsp-eslint.el
-  ! clients/lsp-fortran.el -> lsp-fortran.el
-  ! clients/lsp-fsharp.el -> lsp-fsharp.el
-  ! clients/lsp-gdscript.el -> lsp-gdscript.el
-  ! clients/lsp-gleam.el -> lsp-gleam.el
-  ! clients/lsp-glsl.el -> lsp-glsl.el
-  ! clients/lsp-go.el -> lsp-go.el
-  ! clients/lsp-golangci-lint.el -> lsp-golangci-lint.el
-  ! clients/lsp-graphql.el -> lsp-graphql.el
-  ! clients/lsp-groovy.el -> lsp-groovy.el
-  ! clients/lsp-hack.el -> lsp-hack.el
-  ! clients/lsp-haxe.el -> lsp-haxe.el
-  ! clients/lsp-html.el -> lsp-html.el
-  ! clients/lsp-hy.el -> lsp-hy.el
-  ! clients/lsp-idris.el -> lsp-idris.el
-  ! clients/lsp-javascript.el -> lsp-javascript.el
-  ! clients/lsp-jq.el -> lsp-jq.el
-  ! clients/lsp-json.el -> lsp-json.el
-  ! clients/lsp-jsonnet.el -> lsp-jsonnet.el
-  ! clients/lsp-kotlin.el -> lsp-kotlin.el
-  ! clients/lsp-lisp.el -> lsp-lisp.el
-  ! clients/lsp-lua.el -> lsp-lua.el
-  ! clients/lsp-magik.el -> lsp-magik.el
-  ! clients/lsp-markdown.el -> lsp-markdown.el
-  ! clients/lsp-marksman.el -> lsp-marksman.el
-  ! clients/lsp-mdx.el -> lsp-mdx.el
-  ! clients/lsp-meson.el -> lsp-meson.el
-  ! clients/lsp-mint.el -> lsp-mint.el
-  ! clients/lsp-mojo.el -> lsp-mojo.el
-  ! clients/lsp-move.el -> lsp-move.el
-  ! clients/lsp-nginx.el -> lsp-nginx.el
-  ! clients/lsp-nim.el -> lsp-nim.el
-  ! clients/lsp-nix.el -> lsp-nix.el
-  ! clients/lsp-nushell.el -> lsp-nushell.el
-  ! clients/lsp-ocaml.el -> lsp-ocaml.el
-  ! clients/lsp-openscad.el -> lsp-openscad.el
-  ! clients/lsp-perl.el -> lsp-perl.el
-  ! clients/lsp-perlnavigator.el -> lsp-perlnavigator.el
-  ! clients/lsp-php.el -> lsp-php.el
-  ! clients/lsp-pls.el -> lsp-pls.el
-  ! clients/lsp-prolog.el -> lsp-prolog.el
-  ! clients/lsp-purescript.el -> lsp-purescript.el
-  ! clients/lsp-pwsh.el -> lsp-pwsh.el
-  ! clients/lsp-pyls.el -> lsp-pyls.el
-  ! clients/lsp-pylsp.el -> lsp-pylsp.el
-  ! clients/lsp-qml.el -> lsp-qml.el
-  ! clients/lsp-r.el -> lsp-r.el
-  ! clients/lsp-racket.el -> lsp-racket.el
-  ! clients/lsp-remark.el -> lsp-remark.el
-  ! clients/lsp-rf.el -> lsp-rf.el
-  ! clients/lsp-roslyn.el -> lsp-roslyn.el
-  ! clients/lsp-rpm-spec.el -> lsp-rpm-spec.el
-  ! clients/lsp-rubocop.el -> lsp-rubocop.el
-  ! clients/lsp-ruby-lsp.el -> lsp-ruby-lsp.el
-  ! clients/lsp-ruby-syntax-tree.el -> lsp-ruby-syntax-tree.el
-  ! clients/lsp-ruff-lsp.el -> lsp-ruff-lsp.el
-  ! clients/lsp-rust.el -> lsp-rust.el
-  ! clients/lsp-semgrep.el -> lsp-semgrep.el
-  ! clients/lsp-sml.el -> lsp-sml.el
-  ! clients/lsp-solargraph.el -> lsp-solargraph.el
-  ! clients/lsp-solidity.el -> lsp-solidity.el
-  ! clients/lsp-sorbet.el -> lsp-sorbet.el
-  ! clients/lsp-sql.el -> lsp-sql.el
-  ! clients/lsp-sqls.el -> lsp-sqls.el
-  ! clients/lsp-steep.el -> lsp-steep.el
-  ! clients/lsp-svelte.el -> lsp-svelte.el
-  ! clients/lsp-terraform.el -> lsp-terraform.el
-  ! clients/lsp-tex.el -> lsp-tex.el
-  ! clients/lsp-tilt.el -> lsp-tilt.el
-  ! clients/lsp-toml.el -> lsp-toml.el
-  ! clients/lsp-trunk.el -> lsp-trunk.el
-  ! clients/lsp-ttcn3.el -> lsp-ttcn3.el
-  ! clients/lsp-typeprof.el -> lsp-typeprof.el
-  ! clients/lsp-v.el -> lsp-v.el
-  ! clients/lsp-vala.el -> lsp-vala.el
-  ! clients/lsp-verilog.el -> lsp-verilog.el
-  ! clients/lsp-vetur.el -> lsp-vetur.el
-  ! clients/lsp-vhdl.el -> lsp-vhdl.el
-  ! clients/lsp-vimscript.el -> lsp-vimscript.el
-  ! clients/lsp-volar.el -> lsp-volar.el
-  ! clients/lsp-wgsl.el -> lsp-wgsl.el
-  ! clients/lsp-xml.el -> lsp-xml.el
-  ! clients/lsp-yaml.el -> lsp-yaml.el
-  ! clients/lsp-yang.el -> lsp-yang.el
-  ! clients/lsp-zig.el -> lsp-zig.el
-Created lsp-mode-20240801.2341.tar containing:
-  lsp-mode-20240801.2341/
-  lsp-mode-20240801.2341/lsp-actionscript.el
-  lsp-mode-20240801.2341/lsp-ada.el
-  lsp-mode-20240801.2341/lsp-angular.el
-  lsp-mode-20240801.2341/lsp-ansible.el
-  lsp-mode-20240801.2341/lsp-asm.el
-  lsp-mode-20240801.2341/lsp-astro.el
-  lsp-mode-20240801.2341/lsp-autotools.el
-  lsp-mode-20240801.2341/lsp-awk.el
-  lsp-mode-20240801.2341/lsp-bash.el
-  lsp-mode-20240801.2341/lsp-beancount.el
-  lsp-mode-20240801.2341/lsp-bufls.el
-  lsp-mode-20240801.2341/lsp-camel.el
-  lsp-mode-20240801.2341/lsp-clangd.el
-  lsp-mode-20240801.2341/lsp-clojure.el
-  lsp-mode-20240801.2341/lsp-cmake.el
-  lsp-mode-20240801.2341/lsp-cobol.el
-  lsp-mode-20240801.2341/lsp-completion.el
-  lsp-mode-20240801.2341/lsp-credo.el
-  lsp-mode-20240801.2341/lsp-crystal.el
-  lsp-mode-20240801.2341/lsp-csharp.el
-  lsp-mode-20240801.2341/lsp-css.el
-  lsp-mode-20240801.2341/lsp-cucumber.el
-  lsp-mode-20240801.2341/lsp-cypher.el
-  lsp-mode-20240801.2341/lsp-d.el
-  lsp-mode-20240801.2341/lsp-dhall.el
-  lsp-mode-20240801.2341/lsp-diagnostics.el
-  lsp-mode-20240801.2341/lsp-dired.el
-  lsp-mode-20240801.2341/lsp-dockerfile.el
-  lsp-mode-20240801.2341/lsp-dot.el
-  lsp-mode-20240801.2341/lsp-earthly.el
-  lsp-mode-20240801.2341/lsp-elixir.el
-  lsp-mode-20240801.2341/lsp-elm.el
-  lsp-mode-20240801.2341/lsp-emmet.el
-  lsp-mode-20240801.2341/lsp-erlang.el
-  lsp-mode-20240801.2341/lsp-eslint.el
-  lsp-mode-20240801.2341/lsp-fortran.el
-  lsp-mode-20240801.2341/lsp-fsharp.el
-  lsp-mode-20240801.2341/lsp-gdscript.el
-  lsp-mode-20240801.2341/lsp-gleam.el
-  lsp-mode-20240801.2341/lsp-glsl.el
-  lsp-mode-20240801.2341/lsp-go.el
-  lsp-mode-20240801.2341/lsp-golangci-lint.el
-  lsp-mode-20240801.2341/lsp-graphql.el
-  lsp-mode-20240801.2341/lsp-groovy.el
-  lsp-mode-20240801.2341/lsp-hack.el
-  lsp-mode-20240801.2341/lsp-haxe.el
-  lsp-mode-20240801.2341/lsp-headerline.el
-  lsp-mode-20240801.2341/lsp-html.el
-  lsp-mode-20240801.2341/lsp-hy.el
-  lsp-mode-20240801.2341/lsp-icons.el
-  lsp-mode-20240801.2341/lsp-ido.el
-  lsp-mode-20240801.2341/lsp-idris.el
-  lsp-mode-20240801.2341/lsp-iedit.el
-  lsp-mode-20240801.2341/lsp-javascript.el
-  lsp-mode-20240801.2341/lsp-jq.el
-  lsp-mode-20240801.2341/lsp-json.el
-  lsp-mode-20240801.2341/lsp-jsonnet.el
-  lsp-mode-20240801.2341/lsp-kotlin.el
-  lsp-mode-20240801.2341/lsp-lens.el
-  lsp-mode-20240801.2341/lsp-lisp.el
-  lsp-mode-20240801.2341/lsp-lua.el
-  lsp-mode-20240801.2341/lsp-magik.el
-  lsp-mode-20240801.2341/lsp-markdown.el
-  lsp-mode-20240801.2341/lsp-marksman.el
-  lsp-mode-20240801.2341/lsp-mdx.el
-  lsp-mode-20240801.2341/lsp-meson.el
-  lsp-mode-20240801.2341/lsp-mint.el
-  lsp-mode-20240801.2341/lsp-mode-pkg.el
-  lsp-mode-20240801.2341/lsp-mode.el
-  lsp-mode-20240801.2341/lsp-modeline.el
-  lsp-mode-20240801.2341/lsp-mojo.el
-  lsp-mode-20240801.2341/lsp-move.el
-  lsp-mode-20240801.2341/lsp-nginx.el
-  lsp-mode-20240801.2341/lsp-nim.el
-  lsp-mode-20240801.2341/lsp-nix.el
-  lsp-mode-20240801.2341/lsp-nushell.el
-  lsp-mode-20240801.2341/lsp-ocaml.el
-  lsp-mode-20240801.2341/lsp-openscad.el
-  lsp-mode-20240801.2341/lsp-perl.el
-  lsp-mode-20240801.2341/lsp-perlnavigator.el
-  lsp-mode-20240801.2341/lsp-php.el
-  lsp-mode-20240801.2341/lsp-pls.el
-  lsp-mode-20240801.2341/lsp-prolog.el
-  lsp-mode-20240801.2341/lsp-protocol.el
-  lsp-mode-20240801.2341/lsp-purescript.el
-  lsp-mode-20240801.2341/lsp-pwsh.el
-  lsp-mode-20240801.2341/lsp-pyls.el
-  lsp-mode-20240801.2341/lsp-pylsp.el
-  lsp-mode-20240801.2341/lsp-qml.el
-  lsp-mode-20240801.2341/lsp-r.el
-  lsp-mode-20240801.2341/lsp-racket.el
-  lsp-mode-20240801.2341/lsp-remark.el
-  lsp-mode-20240801.2341/lsp-rf.el
-  lsp-mode-20240801.2341/lsp-roslyn.el
-  lsp-mode-20240801.2341/lsp-rpm-spec.el
-  lsp-mode-20240801.2341/lsp-rubocop.el
-  lsp-mode-20240801.2341/lsp-ruby-lsp.el
-  lsp-mode-20240801.2341/lsp-ruby-syntax-tree.el
-  lsp-mode-20240801.2341/lsp-ruff-lsp.el
-  lsp-mode-20240801.2341/lsp-rust.el
-  lsp-mode-20240801.2341/lsp-semantic-tokens.el
-  lsp-mode-20240801.2341/lsp-semgrep.el
-  lsp-mode-20240801.2341/lsp-sml.el
-  lsp-mode-20240801.2341/lsp-solargraph.el
-  lsp-mode-20240801.2341/lsp-solidity.el
-  lsp-mode-20240801.2341/lsp-sorbet.el
-  lsp-mode-20240801.2341/lsp-sql.el
-  lsp-mode-20240801.2341/lsp-sqls.el
-  lsp-mode-20240801.2341/lsp-steep.el
-  lsp-mode-20240801.2341/lsp-svelte.el
-  lsp-mode-20240801.2341/lsp-terraform.el
-  lsp-mode-20240801.2341/lsp-tex.el
-  lsp-mode-20240801.2341/lsp-tilt.el
-  lsp-mode-20240801.2341/lsp-toml.el
-  lsp-mode-20240801.2341/lsp-trunk.el
-  lsp-mode-20240801.2341/lsp-ttcn3.el
-  lsp-mode-20240801.2341/lsp-typeprof.el
-  lsp-mode-20240801.2341/lsp-v.el
-  lsp-mode-20240801.2341/lsp-vala.el
-  lsp-mode-20240801.2341/lsp-verilog.el
-  lsp-mode-20240801.2341/lsp-vetur.el
-  lsp-mode-20240801.2341/lsp-vhdl.el
-  lsp-mode-20240801.2341/lsp-vimscript.el
-  lsp-mode-20240801.2341/lsp-volar.el
-  lsp-mode-20240801.2341/lsp-wgsl.el
-  lsp-mode-20240801.2341/lsp-xml.el
-  lsp-mode-20240801.2341/lsp-yaml.el
-  lsp-mode-20240801.2341/lsp-yang.el
-  lsp-mode-20240801.2341/lsp-zig.el
-  lsp-mode-20240801.2341/lsp.el
- ✓ Success:
-  2024-08-14T11:11:11+0000  lsp-mode-20240801.2341.entry
-  2024-08-14T11:11:10+0000  lsp-mode-20240801.2341.tar
-Built lsp-mode in 4.220s, finished at 2024-08-14T11:11:11+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/emacs-lsp/lsp-mode.git/': The requested URL returned error: 500
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-1581d1f05f94> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x63 ...) (x64 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-1581d1f05f94> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-1581d1f05f94>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-1581d1f05f94> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-1581d1f05f94>)
+  funcall(package-build--fetch #<package-github-recipe package-github-recipe-1581d1f05f94>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (package-recipe--upstream-url rcp)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-build "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (funcall package-build-fetch-function rcp) (if package-build--inhibit-build nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x95 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("lsp-mode")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"lsp-mode\")"))
+  command-line()
+  normal-top-level()
+

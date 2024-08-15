@@ -3,142 +3,38 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-mssql.git
 
 Updating /mnt/store/melpa/working/lsp-mssql/
-Checking out a0dba8f86a2ace7e800a9dc8f814767625a509af
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lsp-mssql/
-  to /tmp/lsp-mssqlB5Icmd/lsp-mssql-20230510.1124
-    lsp-mssql.el -> lsp-mssql.el
-    images => images
-    snippets => snippets
-Created lsp-mssql-20230510.1124.tar containing:
-  lsp-mssql-20230510.1124/
-  lsp-mssql-20230510.1124/images/
-  lsp-mssql-20230510.1124/images/AggregateFunction.png
-  lsp-mssql-20230510.1124/images/AggregateFunctionParameter_Input.png
-  lsp-mssql-20230510.1124/images/AggregateFunctionParameter_Output.png
-  lsp-mssql-20230510.1124/images/AggregateFunctionParameter_Return.png
-  lsp-mssql-20230510.1124/images/ApplicationRole.png
-  lsp-mssql-20230510.1124/images/Assembly.png
-  lsp-mssql-20230510.1124/images/AsymmetricKey.png
-  lsp-mssql-20230510.1124/images/BrokerPriority.png
-  lsp-mssql-20230510.1124/images/Certificate.png
-  lsp-mssql-20230510.1124/images/Column.png
-  lsp-mssql-20230510.1124/images/ColumnEncryptionKey.png
-  lsp-mssql-20230510.1124/images/ColumnMasterKey.png
-  lsp-mssql-20230510.1124/images/Constraint.png
-  lsp-mssql-20230510.1124/images/Contract.png
-  lsp-mssql-20230510.1124/images/Database.png
-  lsp-mssql-20230510.1124/images/DatabaseAndQueueEventNotification.png
-  lsp-mssql-20230510.1124/images/DatabaseAuditSpecification.png
-  lsp-mssql-20230510.1124/images/DatabaseEncryptionKey.png
-  lsp-mssql-20230510.1124/images/DatabaseRole.png
-  lsp-mssql-20230510.1124/images/DatabaseScopedCredential.png
-  lsp-mssql-20230510.1124/images/DatabaseTrigger.png
-  lsp-mssql-20230510.1124/images/Database_Unavailable.png
-  lsp-mssql-20230510.1124/images/DefaultIcon.png
-  lsp-mssql-20230510.1124/images/ExternalDataSource.png
-  lsp-mssql-20230510.1124/images/ExternalFileFormat.png
-  lsp-mssql-20230510.1124/images/FileGroupFile.png
-  lsp-mssql-20230510.1124/images/Folder.png
-  lsp-mssql-20230510.1124/images/FullTextCatalog.png
-  lsp-mssql-20230510.1124/images/FullTextStopList.png
-  lsp-mssql-20230510.1124/images/HDFSFolder.png
-  lsp-mssql-20230510.1124/images/Index.png
-  lsp-mssql-20230510.1124/images/Key_ForeignKey.png
-  lsp-mssql-20230510.1124/images/Key_PrimaryKey.png
-  lsp-mssql-20230510.1124/images/Key_UniqueKey.png
-  lsp-mssql-20230510.1124/images/MasterKey.png
-  lsp-mssql-20230510.1124/images/MessageType.png
-  lsp-mssql-20230510.1124/images/PartitionFunction.png
-  lsp-mssql-20230510.1124/images/PartitionScheme.png
-  lsp-mssql-20230510.1124/images/Queue.png
-  lsp-mssql-20230510.1124/images/RemoteServiceBinding.png
-  lsp-mssql-20230510.1124/images/Route.png
-  lsp-mssql-20230510.1124/images/ScalarValuedFunction.png
-  lsp-mssql-20230510.1124/images/ScalarValuedFunctionParameter_Input.png
-  lsp-mssql-20230510.1124/images/ScalarValuedFunctionParameter_Output.png
-  lsp-mssql-20230510.1124/images/ScalarValuedFunctionParameter_Return.png
-  lsp-mssql-20230510.1124/images/Schema.png
-  lsp-mssql-20230510.1124/images/SearchPropertyList.png
-  lsp-mssql-20230510.1124/images/SecurityPolicy.png
-  lsp-mssql-20230510.1124/images/Sequence.png
-  lsp-mssql-20230510.1124/images/ServerLevelCredential.png
-  lsp-mssql-20230510.1124/images/ServerLevelCryptographicProvider.png
-  lsp-mssql-20230510.1124/images/ServerLevelEndpoint.png
-  lsp-mssql-20230510.1124/images/ServerLevelLinkedServer.png
-  lsp-mssql-20230510.1124/images/ServerLevelLinkedServerLogin.png
-  lsp-mssql-20230510.1124/images/ServerLevelLinkedServerLogin_Disabled.png
-  lsp-mssql-20230510.1124/images/ServerLevelLogin.png
-  lsp-mssql-20230510.1124/images/ServerLevelLogin_Disabled.png
-  lsp-mssql-20230510.1124/images/ServerLevelServerAudit.png
-  lsp-mssql-20230510.1124/images/ServerLevelServerAuditSpecification.png
-  lsp-mssql-20230510.1124/images/ServerLevelServerRole.png
-  lsp-mssql-20230510.1124/images/ServerLevelServerTrigger.png
-  lsp-mssql-20230510.1124/images/Server_green.png
-  lsp-mssql-20230510.1124/images/Server_red.png
-  lsp-mssql-20230510.1124/images/Service.png
-  lsp-mssql-20230510.1124/images/SqlLogFile.png
-  lsp-mssql-20230510.1124/images/Statistic.png
-  lsp-mssql-20230510.1124/images/StoredProcedure.png
-  lsp-mssql-20230510.1124/images/StoredProcedureParameter_Input.png
-  lsp-mssql-20230510.1124/images/StoredProcedureParameter_Output.png
-  lsp-mssql-20230510.1124/images/StoredProcedureParameter_Return.png
-  lsp-mssql-20230510.1124/images/SymmetricKey.png
-  lsp-mssql-20230510.1124/images/Synonym.png
-  lsp-mssql-20230510.1124/images/SystemApproximateNumeric.png
-  lsp-mssql-20230510.1124/images/SystemBinaryString.png
-  lsp-mssql-20230510.1124/images/SystemCharacterString.png
-  lsp-mssql-20230510.1124/images/SystemClrDataType.png
-  lsp-mssql-20230510.1124/images/SystemContract.png
-  lsp-mssql-20230510.1124/images/SystemDateAndTime.png
-  lsp-mssql-20230510.1124/images/SystemExactNumeric.png
-  lsp-mssql-20230510.1124/images/SystemMessageType.png
-  lsp-mssql-20230510.1124/images/SystemOtherDataType.png
-  lsp-mssql-20230510.1124/images/SystemQueue.png
-  lsp-mssql-20230510.1124/images/SystemService.png
-  lsp-mssql-20230510.1124/images/SystemSpatialDataType.png
-  lsp-mssql-20230510.1124/images/SystemUnicodeCharacterString.png
-  lsp-mssql-20230510.1124/images/Table.png
-  lsp-mssql-20230510.1124/images/TableValuedFunction.png
-  lsp-mssql-20230510.1124/images/TableValuedFunctionParameter_Input.png
-  lsp-mssql-20230510.1124/images/TableValuedFunctionParameter_Output.png
-  lsp-mssql-20230510.1124/images/TableValuedFunctionParameter_Return.png
-  lsp-mssql-20230510.1124/images/Table_Temporal.png
-  lsp-mssql-20230510.1124/images/Trigger.png
-  lsp-mssql-20230510.1124/images/Trigger_Disabled.png
-  lsp-mssql-20230510.1124/images/User.png
-  lsp-mssql-20230510.1124/images/UserDefinedDataType.png
-  lsp-mssql-20230510.1124/images/UserDefinedTableType.png
-  lsp-mssql-20230510.1124/images/UserDefinedTableTypeColumn.png
-  lsp-mssql-20230510.1124/images/UserDefinedTableTypeConstraint.png
-  lsp-mssql-20230510.1124/images/UserDefinedType.png
-  lsp-mssql-20230510.1124/images/User_Disabled.png
-  lsp-mssql-20230510.1124/images/View.png
-  lsp-mssql-20230510.1124/images/XmlSchemaCollection.png
-  lsp-mssql-20230510.1124/images/add.png
-  lsp-mssql-20230510.1124/images/add_inverse.png
-  lsp-mssql-20230510.1124/lsp-mssql-pkg.el
-  lsp-mssql-20230510.1124/lsp-mssql.el
-  lsp-mssql-20230510.1124/snippets/
-  lsp-mssql-20230510.1124/snippets/sql-mode/
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlAddColumn
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlCreateDatabase
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlCreateStoredProc
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlCreateTable
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDeleteRows
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDropColumn
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDropDatabase
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDropStoredProc
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlDropTable
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlExtensionHelp
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlGetSpaceUsed
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlInsertRows
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlListColumns
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlListDatabases
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlListTablesAndViews
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlSelect
-  lsp-mssql-20230510.1124/snippets/sql-mode/sqlUpdateRows
- ✓ Success:
-  2024-08-14T11:11:13+0000  lsp-mssql-20230510.1124.entry
-  2024-08-14T11:11:12+0000  lsp-mssql-20230510.1124.tar
-Built lsp-mssql in 3.299s, finished at 2024-08-14T11:11:13+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/emacs-lsp/lsp-mssql.git/': The requested URL returned error: 500
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-157adbab7794> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x63 ...) (x64 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-157adbab7794> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-157adbab7794>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-157adbab7794> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-157adbab7794>)
+  funcall(package-build--fetch #<package-github-recipe package-github-recipe-157adbab7794>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (package-recipe--upstream-url rcp)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-build "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (funcall package-build-fetch-function rcp) (if package-build--inhibit-build nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x95 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("lsp-mssql")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"lsp-mssql\")"))
+  command-line()
+  normal-top-level()
+

@@ -3,99 +3,38 @@ Fetcher: github
 Source:  https://github.com/skissue/meow-tree-sitter.git
 
 Updating /mnt/store/melpa/working/meow-tree-sitter/
-Checking out d8dce964fac631a6d44b650a733075e14854159c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/meow-tree-sitter/
-  to /tmp/meow-tree-sitter5mskj0/meow-tree-sitter-20240701.1422
-    meow-tree-sitter.el -> meow-tree-sitter.el
-    queries => queries
-Created meow-tree-sitter-20240701.1422.tar containing:
-  meow-tree-sitter-20240701.1422/
-  meow-tree-sitter-20240701.1422/meow-tree-sitter-pkg.el
-  meow-tree-sitter-20240701.1422/meow-tree-sitter.el
-  meow-tree-sitter-20240701.1422/queries/
-  meow-tree-sitter-20240701.1422/queries/_typescript.scm
-  meow-tree-sitter-20240701.1422/queries/ada.scm
-  meow-tree-sitter-20240701.1422/queries/adl.scm
-  meow-tree-sitter-20240701.1422/queries/awk.scm
-  meow-tree-sitter-20240701.1422/queries/bash.scm
-  meow-tree-sitter-20240701.1422/queries/c-sharp.scm
-  meow-tree-sitter-20240701.1422/queries/c.scm
-  meow-tree-sitter-20240701.1422/queries/cairo.scm
-  meow-tree-sitter-20240701.1422/queries/cmake.scm
-  meow-tree-sitter-20240701.1422/queries/cpp.scm
-  meow-tree-sitter-20240701.1422/queries/crystal.scm
-  meow-tree-sitter-20240701.1422/queries/d.scm
-  meow-tree-sitter-20240701.1422/queries/dart.scm
-  meow-tree-sitter-20240701.1422/queries/dhall.scm
-  meow-tree-sitter-20240701.1422/queries/earthfile.scm
-  meow-tree-sitter-20240701.1422/queries/ecma.scm
-  meow-tree-sitter-20240701.1422/queries/elixir.scm
-  meow-tree-sitter-20240701.1422/queries/elm.scm
-  meow-tree-sitter-20240701.1422/queries/erlang.scm
-  meow-tree-sitter-20240701.1422/queries/fish.scm
-  meow-tree-sitter-20240701.1422/queries/gas.scm
-  meow-tree-sitter-20240701.1422/queries/gdscript.scm
-  meow-tree-sitter-20240701.1422/queries/git-commit.scm
-  meow-tree-sitter-20240701.1422/queries/gjs.scm
-  meow-tree-sitter-20240701.1422/queries/gleam.scm
-  meow-tree-sitter-20240701.1422/queries/glsl.scm
-  meow-tree-sitter-20240701.1422/queries/go.scm
-  meow-tree-sitter-20240701.1422/queries/graphql.scm
-  meow-tree-sitter-20240701.1422/queries/gts.scm
-  meow-tree-sitter-20240701.1422/queries/haskell.scm
-  meow-tree-sitter-20240701.1422/queries/hcl.scm
-  meow-tree-sitter-20240701.1422/queries/heex.scm
-  meow-tree-sitter-20240701.1422/queries/hurl.scm
-  meow-tree-sitter-20240701.1422/queries/inko.scm
-  meow-tree-sitter-20240701.1422/queries/java.scm
-  meow-tree-sitter-20240701.1422/queries/javascript.scm
-  meow-tree-sitter-20240701.1422/queries/json.scm
-  meow-tree-sitter-20240701.1422/queries/jsx.scm
-  meow-tree-sitter-20240701.1422/queries/julia.scm
-  meow-tree-sitter-20240701.1422/queries/just.scm
-  meow-tree-sitter-20240701.1422/queries/kdl.scm
-  meow-tree-sitter-20240701.1422/queries/latex.scm
-  meow-tree-sitter-20240701.1422/queries/llvm-mir.scm
-  meow-tree-sitter-20240701.1422/queries/llvm.scm
-  meow-tree-sitter-20240701.1422/queries/lua.scm
-  meow-tree-sitter-20240701.1422/queries/matlab.scm
-  meow-tree-sitter-20240701.1422/queries/mojo.scm
-  meow-tree-sitter-20240701.1422/queries/nasm.scm
-  meow-tree-sitter-20240701.1422/queries/nim.scm
-  meow-tree-sitter-20240701.1422/queries/nix.scm
-  meow-tree-sitter-20240701.1422/queries/ohm.scm
-  meow-tree-sitter-20240701.1422/queries/opencl.scm
-  meow-tree-sitter-20240701.1422/queries/pascal.scm
-  meow-tree-sitter-20240701.1422/queries/perl.scm
-  meow-tree-sitter-20240701.1422/queries/pest.scm
-  meow-tree-sitter-20240701.1422/queries/php.scm
-  meow-tree-sitter-20240701.1422/queries/pkgbuild.scm
-  meow-tree-sitter-20240701.1422/queries/po.scm
-  meow-tree-sitter-20240701.1422/queries/ponylang.scm
-  meow-tree-sitter-20240701.1422/queries/protobuf.scm
-  meow-tree-sitter-20240701.1422/queries/purescript.scm
-  meow-tree-sitter-20240701.1422/queries/python.scm
-  meow-tree-sitter-20240701.1422/queries/rescript.scm
-  meow-tree-sitter-20240701.1422/queries/ruby.scm
-  meow-tree-sitter-20240701.1422/queries/rust.scm
-  meow-tree-sitter-20240701.1422/queries/sage.scm
-  meow-tree-sitter-20240701.1422/queries/scala.scm
-  meow-tree-sitter-20240701.1422/queries/slint.scm
-  meow-tree-sitter-20240701.1422/queries/solidity.scm
-  meow-tree-sitter-20240701.1422/queries/starlark.scm
-  meow-tree-sitter-20240701.1422/queries/sway.scm
-  meow-tree-sitter-20240701.1422/queries/tablegen.scm
-  meow-tree-sitter-20240701.1422/queries/tact.scm
-  meow-tree-sitter-20240701.1422/queries/toml.scm
-  meow-tree-sitter-20240701.1422/queries/tsx.scm
-  meow-tree-sitter-20240701.1422/queries/typescript.scm
-  meow-tree-sitter-20240701.1422/queries/v.scm
-  meow-tree-sitter-20240701.1422/queries/vala.scm
-  meow-tree-sitter-20240701.1422/queries/verilog.scm
-  meow-tree-sitter-20240701.1422/queries/wren.scm
-  meow-tree-sitter-20240701.1422/queries/zig.scm
- ✓ Success:
-  2024-08-14T11:12:53+0000  meow-tree-sitter-20240701.1422.entry
-  2024-08-14T11:12:52+0000  meow-tree-sitter-20240701.1422.tar
-Built meow-tree-sitter in 3.070s, finished at 2024-08-14T11:12:53+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/skissue/meow-tree-sitter.git/': The requested URL returned error: 500
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-1579c14c3394> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x63 ...) (x64 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-1579c14c3394> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-1579c14c3394>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-1579c14c3394> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-1579c14c3394>)
+  funcall(package-build--fetch #<package-github-recipe package-github-recipe-1579c14c3394>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (package-recipe--upstream-url rcp)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-build "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (funcall package-build-fetch-function rcp) (if package-build--inhibit-build nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x95 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("meow-tree-sitter")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"meow-tree-sitter\")"))
+  command-line()
+  normal-top-level()
+
