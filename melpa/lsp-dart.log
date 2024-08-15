@@ -3,38 +3,46 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-dart.git
 
 Updating /mnt/store/melpa/working/lsp-dart/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/emacs-lsp/lsp-dart.git/': The requested URL returned error: 500
-
-Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
-  error("%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
-  package-build--error(#<package-github-recipe package-github-recipe-155b68dea394> "%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x63 (car-safe val)) (x64 (cdr-safe val))) (let ((command x63) (args x64)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x63 ...) (x64 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-github-recipe package-github-recipe-155b68dea394> "git" "fetch" "-f" "--tags" "origin")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-155b68dea394>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-build--working-tree rcp t)) (url (package-recipe--upstream-url rcp)) (protocol (package-recipe--upstream-protocol rcp))) (if (member protocol package-build-allowed-git-protocols) nil (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) (cond ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-155b68dea394> nil)
-  package-build--fetch(#<package-github-recipe package-github-recipe-155b68dea394>)
-  funcall(package-build--fetch #<package-github-recipe package-github-recipe-155b68dea394>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (package-recipe--upstream-url rcp)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-build "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (funcall package-build-fetch-function rcp) (if package-build--inhibit-build nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x95 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  package-build-archive("lsp-dart")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"lsp-dart\")"))
-  command-line()
-  normal-top-level()
-
+Checking out 1f52e81c9371055ff9188117ace81f009d1c79f2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-dart/
+  to /tmp/lsp-dartF7i8in/lsp-dart-20240520.1834
+    lsp-dart-closing-labels.el -> lsp-dart-closing-labels.el
+    lsp-dart-code-lens.el -> lsp-dart-code-lens.el
+    lsp-dart-commands.el -> lsp-dart-commands.el
+    lsp-dart-dap.el -> lsp-dart-dap.el
+    lsp-dart-devtools.el -> lsp-dart-devtools.el
+    lsp-dart-flutter-colors.el -> lsp-dart-flutter-colors.el
+    lsp-dart-flutter-daemon.el -> lsp-dart-flutter-daemon.el
+    lsp-dart-flutter-fringe-colors.el -> lsp-dart-flutter-fringe-colors.el
+    lsp-dart-flutter-widget-guide.el -> lsp-dart-flutter-widget-guide.el
+    lsp-dart-outline.el -> lsp-dart-outline.el
+    lsp-dart-protocol.el -> lsp-dart-protocol.el
+    lsp-dart-test-output.el -> lsp-dart-test-output.el
+    lsp-dart-test-support.el -> lsp-dart-test-support.el
+    lsp-dart-test-tree.el -> lsp-dart-test-tree.el
+    lsp-dart-utils.el -> lsp-dart-utils.el
+    lsp-dart.el -> lsp-dart.el
+Created lsp-dart-20240520.1834.tar containing:
+  lsp-dart-20240520.1834/
+  lsp-dart-20240520.1834/lsp-dart-closing-labels.el
+  lsp-dart-20240520.1834/lsp-dart-code-lens.el
+  lsp-dart-20240520.1834/lsp-dart-commands.el
+  lsp-dart-20240520.1834/lsp-dart-dap.el
+  lsp-dart-20240520.1834/lsp-dart-devtools.el
+  lsp-dart-20240520.1834/lsp-dart-flutter-colors.el
+  lsp-dart-20240520.1834/lsp-dart-flutter-daemon.el
+  lsp-dart-20240520.1834/lsp-dart-flutter-fringe-colors.el
+  lsp-dart-20240520.1834/lsp-dart-flutter-widget-guide.el
+  lsp-dart-20240520.1834/lsp-dart-outline.el
+  lsp-dart-20240520.1834/lsp-dart-pkg.el
+  lsp-dart-20240520.1834/lsp-dart-protocol.el
+  lsp-dart-20240520.1834/lsp-dart-test-output.el
+  lsp-dart-20240520.1834/lsp-dart-test-support.el
+  lsp-dart-20240520.1834/lsp-dart-test-tree.el
+  lsp-dart-20240520.1834/lsp-dart-utils.el
+  lsp-dart-20240520.1834/lsp-dart.el
+ ✓ Success:
+  2024-08-15T03:30:19+0000  lsp-dart-20240520.1834.entry
+  2024-08-15T03:30:19+0000  lsp-dart-20240520.1834.tar
+Built lsp-dart in 3.338s, finished at 2024-08-15T03:30:20+0000
