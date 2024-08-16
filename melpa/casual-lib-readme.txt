@@ -1,1 +1,1 @@
-Library routines for Casual porcelains.
+Library routines for Casual user interfaces.
