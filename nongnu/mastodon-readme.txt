@@ -74,9 +74,12 @@
 1.1.4 Emoji
 ╌╌╌╌╌╌╌╌╌╌╌
 
-  `mastodon-mode' will enable [Emojify] if it is loaded in your Emacs
-  environment, so there's no need to write your own hook
-  anymore. `emojify-mode' is not required.
+  Since Emacs 28, it has builtin emoji support with `emoji.el'. If you
+  prefer to use [Emojify], `require' it and set `mastodon-use-emojify'
+  to non-nil to display emoji in timelines and to use it when composing
+  toots. `Emoji.el' is the better option, but for now only `emojify'
+  supports downloading and using custom emoji from your instance. From
+  personal experience, `emojify' also tends to result in less TOFU.
 
 
 [Emojify] <https://github.com/iqbalansari/emacs-emojify>
@@ -213,6 +216,7 @@
    `i'                     (un)pin your toot at point                                                      
    `d'                     delete your toot at point, and reload current timeline                          
    `D'                     delete and redraft toot at point, preserving reply/CW/visibility                
+   `!'                     toggle folding of toot at point                                                 
    (`S-C-') `W', `M', `B'  (un)follow, (un)mute, (un)block author of toot at point                         
   ─────────────────────────────────────────────────────────────────────────────────────────────────────────
                            *Profile view*                                                                  
@@ -284,21 +288,21 @@
 
 ◊ 1.2.3.1 Keybindings
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Key         Action                             
-  ────────────────────────────────────────────────
-   `C-c C-c'   Send toot                          
-   `C-c C-k'   Cancel toot                        
-   `C-c C-w'   Add content warning                
-   `C-c C-v'   Change toot visibility             
-   `C-c C-n'   Add sensitive media/nsfw flag      
-   `C-c C-a'   Upload attachment(s)               
-   `C-c !'     Remove all attachments             
-   `C-c C-e'   Add emoji (if `emojify' installed) 
-   `C-c C-p'   Create a poll                      
-   `C-c C-l'   Set toot language                  
-   `-C-c C-s'  Schedule toot                      
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Key         Action                        
+  ───────────────────────────────────────────
+   `C-c C-c'   Send toot                     
+   `C-c C-k'   Cancel toot                   
+   `C-c C-w'   Add content warning           
+   `C-c C-v'   Change toot visibility        
+   `C-c C-n'   Add sensitive media/nsfw flag 
+   `C-c C-a'   Upload attachment(s)          
+   `C-c !'     Remove all attachments        
+   `C-c C-e'   Insert emoji                  
+   `C-c C-p'   Create a poll                 
+   `C-c C-l'   Set toot language             
+   `-C-c C-s'  Schedule toot                 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 ◊ 1.2.3.2 Autocompletion of mentions, tags and emoji
@@ -308,7 +312,8 @@
   `mastodon-toot--enable-completion' is enabled by default.
 
   To trigger completion, type a prefix followed by a few letters, `@'
-  for mentions, `#' for tags, and `:' for emoji.
+  for mentions, `#' for tags, and `:' for emoji (for now this only works
+  when using `emojify.el').
 
   If you want to enable `company-mode' in the toot compose buffer, set
   `mastodon-toot--use-company-for-completion' to `t'. (`mastodon.el'
@@ -509,14 +514,12 @@
 1.2.10 Bookmarks and `mastodon.el'
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  `mastodon.el' doesn’t currently implement its own bookmark record and
-  handler, which means that emacs bookmarks will not work as is. Until
-  we implement them, you can get bookmarks going immediately by using
-  [bookmark+.el].
-
-
-[bookmark+.el]
-<https://github.com/emacsmirror/emacswiki.org/blob/master/bookmark%2b.el>
+  `mastodon.el' implements a basic bookmark record and
+  handler. Currently, this means that you can bookmark a post item and
+  later load it in thread view. This could be expanded to any item with
+  an id, but probably not to things like timeline views. If you want to
+  be able to bookmark something, open an issue and ask, as it's trivial
+  to expand the bookmarking code.
 
 
 1.3 Dependencies
@@ -527,7 +530,7 @@
   • `persist' for storing some settings across sessions
 
   Optional dependencies (install yourself, `mastodon.el' can use them):
-  • `emojify' for inserting and viewing emojis
+  • `emojify' to use custom emoji (else we use builtin `emoji.el')
   • `mpv' and `mpv.el' for viewing videos and gifs
   • `lingva.el' for translating toots
 
@@ -649,3 +652,15 @@
   • <https://alexjgriffith.itch.io>
   • <https://github.com/hdurer>
   • <https://codeberg.org/Red_Starfish>
+
+
+1.8 screenshots
+───────────────
+
+  Here's a (federated) timeline:
+
+  <file:screenshot-tl.png>
+
+  Here's a notifcations view plus a compose buffer:
+
+  <file:screenshot-notifs+compose.png>
