@@ -3281,7 +3281,7 @@
 	     (:url . "https://elpa.gnu.org/packages/pinentry.html")
 	     (:commit . "ef0d62bba29dfab07624d030032ec0f67d34e865"))])
  (plz .
-      [(0 9)
+      [(0 9 1)
        ((emacs
 	 (27 1)))
        "HTTP library" tar
@@ -3290,7 +3290,7 @@
 	(:maintainer "Adam Porter" . "adam@alphapapa.net")
 	(:authors
 	 ("Adam Porter" . "adam@alphapapa.net"))
-	(:commit . "399ad3e1aafa7b86c1ce0cfab8bcf2e09cb0e956"))])
+	(:commit . "c579f039ffdb52ff61775ff25510a9c26e25d0c5"))])
  (plz-event-source .
 		   [(0 1 1)
 		    ((emacs
@@ -4215,7 +4215,7 @@
 	 ("Onnie Lynn Winebarger" . "owinebar@gmail.com"))
 	(:commit . "c254ec9f646ef5527eb1f834a90e5897caa977cf"))])
  (taxy .
-       [(0 10 1)
+       [(0 10 2)
 	((emacs
 	  (26 3)))
 	"Programmable taxonomical grouping for arbitrary objects" tar
@@ -4224,9 +4224,9 @@
 	 (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	 (:authors
 	  ("Adam Porter" . "adam@alphapapa.net"))
-	 (:commit . "b27fa67ecf3f8954ce0d5c2747d1de4dc94ff09f"))])
+	 (:commit . "3099ae5cb27a34961e06a3af67555919c62c12d7"))])
  (taxy-magit-section .
-		     [(0 13)
+		     [(0 14)
 		      ((emacs
 			(26 3))
 		       (magit-section
@@ -4239,7 +4239,7 @@
 		       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 		       (:authors
 			("Adam Porter" . "adam@alphapapa.net"))
-		       (:commit . "9d79793edaa98a8a06674723ad5a53ebc4fc237c"))])
+		       (:commit . "c4d8c1c5393807c41a5b20030a6347beb088b47e"))])
  (temp-buffer-browse .
 		     [(1 5)
 		      ((emacs

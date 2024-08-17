@@ -146,7 +146,8 @@ be simple and well-organized.  Every feature is tested against
         • `(file ~FILENAME)' to pass `FILENAME' after having saved the
           response body to it without decoding.  `FILENAME' must be a
           non-existent file; if it exists, it will not be overwritten,
-          and an error will be signaled.
+          and an error will be signaled.  `FILENAME' is passed through
+          `expand-file-name', which see.
         • A function, which is called in the response buffer with it
           narrowed to the response body (suitable for,
           e.g. `json-read').
@@ -248,7 +249,20 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.9
+3.1 0.9.1
+─────────
+
+  *Fixes*
+
+  ⁃ Expand filenames when downloading to files (which was already
+    applied to filenames passed for uploading).  (Thanks to [Joseph
+    Turner].)
+
+
+[Joseph Turner] <https://github.com/josephmturner>
+
+
+3.2 0.9
 ───────
 
   *Compatibility*
@@ -308,7 +322,7 @@ be simple and well-organized.  Every feature is tested against
 [#57] <https://github.com/alphapapa/plz.el/issues/57>
 
 
-3.2 0.8
+3.3 0.8
 ───────
 
   *Additions*
@@ -325,7 +339,7 @@ be simple and well-organized.  Every feature is tested against
 [Roman Scherer] <https://github.com/r0man>
 
 
-3.3 0.7.3
+3.4 0.7.3
 ─────────
 
   *Fixes*
@@ -333,7 +347,7 @@ be simple and well-organized.  Every feature is tested against
     longer committed to Git.)
 
 
-3.4 0.7.2
+3.5 0.7.2
 ─────────
 
   *Fixes*
@@ -346,7 +360,7 @@ be simple and well-organized.  Every feature is tested against
 [Joseph Turner] <https://github.com/josephmturner>
 
 
-3.5 0.7.1
+3.6 0.7.1
 ─────────
 
   *Fixes*
@@ -357,7 +371,7 @@ be simple and well-organized.  Every feature is tested against
 [Daniel Hubmann] <https://github.com/hubisan>
 
 
-3.6 0.7
+3.7 0.7
 ───────
 
   *Changes*
@@ -403,7 +417,7 @@ be simple and well-organized.  Every feature is tested against
 [httpbin] <https://github.com/postmanlabs/httpbin>
 
 
-3.7 0.6
+3.8 0.6
 ───────
 
   *Additions*
@@ -419,7 +433,7 @@ be simple and well-organized.  Every feature is tested against
   ⁃ Handle HTTP 3xx redirects when using `:as 'response'.
 
 
-3.8 0.5.4
+3.9 0.5.4
 ─────────
 
   *Fixes*
@@ -427,8 +441,8 @@ be simple and well-organized.  Every feature is tested against
     features should not be designed and released on a Friday.)
 
 
-3.9 0.5.3
-─────────
+3.10 0.5.3
+──────────
 
   *Fixes*
   ⁃ Move new slot in `plz-queue' struct to end to prevent invalid
@@ -436,7 +450,7 @@ be simple and well-organized.  Every feature is tested against
     would require them to be recompiled after upgrading `plz').
 
 
-3.10 0.5.2
+3.11 0.5.2
 ──────────
 
   *Fixes*
@@ -444,7 +458,7 @@ be simple and well-organized.  Every feature is tested against
     when specified.
 
 
-3.11 0.5.1
+3.12 0.5.1
 ──────────
 
   *Fixes*
@@ -455,7 +469,7 @@ be simple and well-organized.  Every feature is tested against
 [Dan Oriani] <https://github.com/redchops>
 
 
-3.12 0.5
+3.13 0.5
 ────────
 
   *Additions*
@@ -463,7 +477,7 @@ be simple and well-organized.  Every feature is tested against
     queue is finished.
 
 
-3.13 0.4
+3.14 0.4
 ────────
 
   *Additions*
@@ -495,7 +509,7 @@ be simple and well-organized.  Every feature is tested against
 [#17] <https://github.com/alphapapa/plz.el/issues/17>
 
 
-3.14 0.3
+3.15 0.3
 ────────
 
   *Additions*
@@ -514,21 +528,21 @@ be simple and well-organized.  Every feature is tested against
 [Sawyer Zheng] <https://github.com/sawyerzheng>
 
 
-3.15 0.2.1
+3.16 0.2.1
 ──────────
 
   *Fixes*
   ⁃ Handle when Curl process is interrupted.
 
 
-3.16 0.2
+3.17 0.2
 ────────
 
   *Added*
   ⁃ Simple request queueing.
 
 
-3.17 0.1
+3.18 0.1
 ────────
 
   Initial release.

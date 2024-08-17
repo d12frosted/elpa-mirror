@@ -30,7 +30,15 @@ This library renders [Taxy] structs with [magit-section].
 2 Changelog
 ═══════════
 
-2.1 0.13
+2.1 0.14
+────────
+
+  *Fixes*
+  ⁃ Reduce the potential width of macro-expanded docstrings to prevent
+    byte-compiler warnings.
+
+
+2.2 0.13
 ────────
 
   *Additions*
@@ -42,28 +50,28 @@ This library renders [Taxy] structs with [magit-section].
     allows section visibility to be cached concisely.
 
 
-2.2 0.12.2
+2.3 0.12.2
 ──────────
 
   *Fixes*
   ⁃ Header alignment.
 
 
-2.3 0.12.1
+2.4 0.12.1
 ──────────
 
   *Fixes*
   ⁃ Compilation error.
 
 
-2.4 0.12
+2.5 0.12
 ────────
 
   *Fixes*
   ⁃ Section visibility caching.
 
 
-2.5 0.11
+2.6 0.11
 ────────
 
   *Additions*
@@ -71,14 +79,14 @@ This library renders [Taxy] structs with [magit-section].
     value can be viewed.
 
 
-2.6 0.10
+2.7 0.10
 ────────
 
   *Fixes*
   ⁃ Require package `taxy' in package headers.
 
 
-2.7 0.9.1
+2.8 0.9.1
 ─────────
 
   *Fixes*
@@ -89,7 +97,7 @@ This library renders [Taxy] structs with [magit-section].
     items' values.
 
 
-2.8 0.9
+2.9 0.9
 ───────
 
   ⁃ `taxy-magit-section' moved to separate package.
