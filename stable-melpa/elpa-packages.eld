@@ -1961,7 +1961,7 @@
   (foreign-regexp :url "https://github.com/k-talo/foreign-regexp.el.git")
   (foreman-mode :url "https://github.com/zweifisch/foreman-mode.git")
   (forest-blue-theme :url "https://github.com/olkinn/forest-blue-emacs.git")
-  (forge :url "https://github.com/magit/forge.git")
+  (forge :url "https://github.com/magit/forge.git" :branch "melpa")
   (form-feed :url "https://depp.brause.cc/form-feed.git")
   (form-feed-st :url "https://github.com/leodag/form-feed-st.git")
   (format-all :url "https://github.com/lassik/emacs-format-all-the-code.git")
