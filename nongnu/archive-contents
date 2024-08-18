@@ -1736,14 +1736,14 @@
 	       ((:url . "http://github.com/bastibe/org-journal")
 		(:commit . "18df4d5ae5e15580df42562c143d007c6d28d75f"))])
  (org-mime .
-	   [(0 3 2)
+	   [(0 3 3)
 	    ((emacs
-	      (25 1)))
+	      (27 1)))
 	    "org html export for text/html MIME emails" tar
 	    ((:url . "http://github.com/org-mime/org-mime")
 	     (:keywords "mime" "mail" "email" "html")
 	     (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
-	     (:commit . "cc00afcf0291633324364c1c83bfe2833cfdc1bf"))])
+	     (:commit . "468604b8404d3c7d6148be83a4cf308ee95d2cfb"))])
  (org-present .
 	      [(0 1)
 	       ((org

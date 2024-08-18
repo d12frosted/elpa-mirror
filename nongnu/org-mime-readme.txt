@@ -1,29 +1,3 @@
-Table of Contents
-─────────────────
-
-1. org-mime
-2. Setup
-3. Usage
-.. 1. `M-x org-mime-htmlize'
-.. 2. `M-x org-mime-org-buffer-htmlize'
-.. 3. `M-x org-mime-org-subtree-htmlize'
-4. Tips
-.. 1. Embed image into mail body
-.. 2. CSS style customization
-.. 3. Beautify quoted mail when replying
-.. 4. Export options
-.. 5. Latex export problem
-.. 6. fix exported plain text and html
-.. 7. Keep gpg signatures outside of multipart
-.. 8. ASCII export options for text/plain
-.. 9. Prompt for confirmation if message has no HTML
-5. Support legacy Emacs versions
-6. Development
-7. Credits
-8. Report bug
-9. Licence
-
-
 1 org-mime
 ══════════
 
@@ -130,8 +104,8 @@ Table of Contents
 
   `org-mime-org-subtree-htmlize' is similar to
   `org-mime-org-buffer-htmlize' but works on subtree. It can also read
-  subtree properties MAIL_SUBJECT, MAIL_TO, MAIL_CC, and MAIL_BCC. Here
-  is the sample of subtree:
+  subtree properties MAIL_SUBJECT, MAIL_TO, MAIL_CC, MAIL_BCC, and
+  MAIL_IN_REPLY_TO. Here is the sample of subtree:
   ┌────
   │ * mail one
   │  :PROPERTIES:
@@ -139,6 +113,7 @@ Table of Contents
   │  :MAIL_TO: person1@gmail.com
   │  :MAIL_CC: person2@gmail.com
   │  :MAIL_BCC: person3@gmail.com
+  │  :MAIL_IN_REPLY_TO: <MESSAGE-ID>
   │  :END:
   │ some text here ...
   └────
@@ -206,7 +181,7 @@ Table of Contents
   overrides Org default settings (but still inferior to file-local
   settings),
   ┌────
-  │ (setq org-mime-export-options '(:with-latex dvipng
+  │ (setq org-mime-export-options '(:with-latex imagemagick
   │ 				:section-numbers nil
   │ 				:with-author nil
   │ 				:with-toc nil))
