@@ -13,7 +13,7 @@ encoding.
 
 `org-mime-org-subtree-htmlize' is similar to `org-mime-org-buffer-htmlize'
 but works on current subtree.  It can read following subtree properties:
-MAIL_SUBJECT, MAIL_TO, MAIL_FROM, MAIL_CC, and MAIL_BCC. MAIL_IN_REPLY_TO
+MAIL_SUBJECT, MAIL_TO, MAIL_FROM, MAIL_CC, MAIL_BCC, MAIL_IN_REPLY_TO
 
 Here is the sample of a subtree:
 * mail one
@@ -28,7 +28,7 @@ Here is the sample of a subtree:
 
 To avoid exporting the table of contents, you can setup
 `org-mime-export-options' as below,
-  (setq org-mime-export-options '(:with-latex dvipng
+  (setq org-mime-export-options '(:with-latex imagemagick
                                   :section-numbers nil
                                   :with-author nil
                                   :with-toc nil))
