@@ -4273,6 +4273,7 @@
   (poly-R :url "https://github.com/polymode/poly-R.git")
   (poly-ansible :url "https://gitlab.com/mavit/poly-ansible.git")
   (poly-erb :url "https://github.com/polymode/poly-erb.git")
+  (poly-gams :url "https://github.com/ShiroTakeda/poly-gams.git")
   (poly-markdown :url "https://github.com/polymode/poly-markdown.git")
   (poly-noweb :url "https://github.com/polymode/poly-noweb.git")
   (poly-org :url "https://github.com/polymode/poly-org.git")

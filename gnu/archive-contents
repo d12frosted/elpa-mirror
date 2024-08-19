@@ -873,14 +873,14 @@
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
 	     (:commit . "a16e9d8b0952de1badf6da8e652b178a7f6c4498"))])
  (cursor-undo .
-	      [(1 1 4)
+	      [(1 1 5)
 	       nil "Undo Cursor Movement" tar
 	       ((:keywords "undo" "cursor")
 		(:maintainer "Luke Lee" . "luke.yx.lee@gmail.com")
 		(:authors
 		 ("Luke Lee" . "luke.yx.lee@gmail.com"))
 		(:url . "https://elpa.gnu.org/packages/cursor-undo.html")
-		(:commit . "c544a74e5e4e46bc1211fdad25248200c330ec7b"))])
+		(:commit . "e82084c3d491ff7199e14cc8da69c250b9bda492"))])
  (cursory .
 	  [(1 0 1)
 	   ((emacs
@@ -3001,7 +3001,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "3847f311077efa17951a786d2759f2639c5f43c8"))])
  (org .
-      [(9 7 9)
+      [(9 7 10)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3010,7 +3010,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "233a0ced97366090c31ef94562879bb2f729b120"))])
+	(:commit . "5ebd973e09d7a46d056f1cd9b5efc44e878cce9c"))])
  (org-contacts .
 	       [(1 1)
 		((emacs

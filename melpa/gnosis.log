@@ -3,26 +3,28 @@ Fetcher: git
 Source:  https://git.thanosapollo.org/gnosis
 
 Updating /mnt/store/melpa/working/gnosis/
-Checking out fe019d58f26e99e59a5601d2e276ad06676b1b66
+Checking out 4fe415d70277046f6b81a00e8e012634e4f0ac05
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosisuK2Ost/gnosis-20240811.2007
+  to /tmp/gnosisW43iQA/gnosis-20240818.2127
     gnosis-algorithm.el -> gnosis-algorithm.el
     gnosis-dashboard.el -> gnosis-dashboard.el
     gnosis-string-edit.el -> gnosis-string-edit.el
     gnosis.el -> gnosis.el
   ! doc/gnosis.info -> gnosis.info
   ! doc/gnosis.texi -> gnosis.texi
-Created gnosis-20240811.2007.tar containing:
-  gnosis-20240811.2007/
-  gnosis-20240811.2007/dir
-  gnosis-20240811.2007/gnosis-algorithm.el
-  gnosis-20240811.2007/gnosis-dashboard.el
-  gnosis-20240811.2007/gnosis-pkg.el
-  gnosis-20240811.2007/gnosis-string-edit.el
-  gnosis-20240811.2007/gnosis.el
-  gnosis-20240811.2007/gnosis.info
+Created gnosis-20240818.2127.tar containing:
+  gnosis-20240818.2127/
+  gnosis-20240818.2127/dir
+  gnosis-20240818.2127/gnosis-algorithm.el
+  gnosis-20240818.2127/gnosis-dashboard.el
+  gnosis-20240818.2127/gnosis-pkg.el
+  gnosis-20240818.2127/gnosis-string-edit.el
+  gnosis-20240818.2127/gnosis.el
+  gnosis-20240818.2127/gnosis.info
  ✓ Success:
-  2024-08-18T11:52:47+0000  gnosis-20240811.2007.entry
-  2024-08-18T11:52:47+0000  gnosis-20240811.2007.tar
-Built gnosis in 4.445s, finished at 2024-08-18T11:52:48+0000
+  2024-08-18T21:26:20+0000  gnosis-20240811.2007.entry
+  2024-08-18T21:26:20+0000  gnosis-20240811.2007.tar
+  2024-08-18T23:23:38+0000  gnosis-20240818.2127.entry
+  2024-08-18T23:23:38+0000  gnosis-20240818.2127.tar
+Built gnosis in 5.204s, finished at 2024-08-18T23:23:40+0000
