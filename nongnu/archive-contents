@@ -552,7 +552,7 @@
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "0bd12913940a047724d830725bf8649e4f8df499"))])
  (emacsql .
-	  [(4 0 0)
+	  [(4 0 1)
 	   ((emacs
 	     (25 1)))
 	   "High-level SQL database front-end" tar
@@ -560,7 +560,7 @@
 	    (:maintainer "Jonas Bernoulli" . "emacs.emacsql@jonas.bernoulli.dev")
 	    (:authors
 	     ("Christopher Wellons" . "wellons@nullprogram.com"))
-	    (:commit . "3d9622aabbf3ab925beadd12ce928370d7704573"))])
+	    (:commit . "e5f0928a047dba8e3a00b6333400422b301bac35"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib

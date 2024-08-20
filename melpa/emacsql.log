@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/emacsql.git
 
 Updating /mnt/store/melpa/working/emacsql/
-Checking out 3d9622aabbf3ab925beadd12ce928370d7704573
+Checking out e5f0928a047dba8e3a00b6333400422b301bac35
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emacsql/
-  to /tmp/emacsqlYwdrgd/emacsql-20240808.1856
+  to /tmp/emacsql07BXYW/emacsql-20240819.1559
     emacsql-compiler.el -> emacsql-compiler.el
     emacsql-mysql.el -> emacsql-mysql.el
     emacsql-pg.el -> emacsql-pg.el
@@ -16,25 +16,27 @@ Copying files (->) and directories (=>)
     emacsql-sqlite-module.el -> emacsql-sqlite-module.el
     emacsql-sqlite.el -> emacsql-sqlite.el
     emacsql.el -> emacsql.el
+    README.md -> README.md
     sqlite => sqlite
-Created emacsql-20240808.1856.tar containing:
-  emacsql-20240808.1856/
-  emacsql-20240808.1856/emacsql-compiler.el
-  emacsql-20240808.1856/emacsql-mysql.el
-  emacsql-20240808.1856/emacsql-pg.el
-  emacsql-20240808.1856/emacsql-pkg.el
-  emacsql-20240808.1856/emacsql-psql.el
-  emacsql-20240808.1856/emacsql-sqlite-builtin.el
-  emacsql-20240808.1856/emacsql-sqlite-common.el
-  emacsql-20240808.1856/emacsql-sqlite-module.el
-  emacsql-20240808.1856/emacsql-sqlite.el
-  emacsql-20240808.1856/emacsql.el
-  emacsql-20240808.1856/sqlite/
-  emacsql-20240808.1856/sqlite/Makefile
-  emacsql-20240808.1856/sqlite/emacsql.c
-  emacsql-20240808.1856/sqlite/sqlite3.c
-  emacsql-20240808.1856/sqlite/sqlite3.h
+Created emacsql-20240819.1559.tar containing:
+  emacsql-20240819.1559/
+  emacsql-20240819.1559/README.md
+  emacsql-20240819.1559/emacsql-compiler.el
+  emacsql-20240819.1559/emacsql-mysql.el
+  emacsql-20240819.1559/emacsql-pg.el
+  emacsql-20240819.1559/emacsql-pkg.el
+  emacsql-20240819.1559/emacsql-psql.el
+  emacsql-20240819.1559/emacsql-sqlite-builtin.el
+  emacsql-20240819.1559/emacsql-sqlite-common.el
+  emacsql-20240819.1559/emacsql-sqlite-module.el
+  emacsql-20240819.1559/emacsql-sqlite.el
+  emacsql-20240819.1559/emacsql.el
+  emacsql-20240819.1559/sqlite/
+  emacsql-20240819.1559/sqlite/Makefile
+  emacsql-20240819.1559/sqlite/emacsql.c
+  emacsql-20240819.1559/sqlite/sqlite3.c
+  emacsql-20240819.1559/sqlite/sqlite3.h
  ✓ Success:
-  2024-08-19T10:59:09+0000  emacsql-20240808.1856.entry
-  2024-08-19T10:59:09+0000  emacsql-20240808.1856.tar
-Built emacsql in 3.381s, finished at 2024-08-19T10:59:10+0000
+  2024-08-19T23:00:13+0000  emacsql-20240819.1559.entry
+  2024-08-19T23:00:12+0000  emacsql-20240819.1559.tar
+Built emacsql in 3.551s, finished at 2024-08-19T23:00:14+0000
