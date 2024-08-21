@@ -4581,7 +4581,7 @@
 	      ("Stefan Kangas" . "stefankangas@gmail.com"))
 	     (:commit . "ccf30c3647cd6a560cadc795bd92769c0a0c9de9"))])
  (use-package .
-	      [(2 4 5)
+	      [(2 4 6)
 	       ((emacs
 		 (24 3))
 		(bind-key
@@ -4592,7 +4592,7 @@
 		(:maintainer "John Wiegley" . "johnw@newartisans.com")
 		(:authors
 		 ("John Wiegley" . "johnw@newartisans.com"))
-		(:commit . "c8d548097278683c94eced742a1a1bea387ced2d"))])
+		(:commit . "d8e9eb73c2b5f93adf3ae29d1349ce2161e23cb4"))])
  (validate .
 	   [(1 0 4)
 	    ((emacs
