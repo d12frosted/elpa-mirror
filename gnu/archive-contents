@@ -195,7 +195,7 @@
 	   (:url . "https://elpa.gnu.org/packages/assess.html")
 	   (:commit . "cadeb24a5d8261fad4bdfdc09e7d571cc395a6ca"))])
  (async .
-	[(1 9 8)
+	[(1 9 9)
 	 ((emacs
 	   (24 4)))
 	 "Asynchronous processing in Emacs" tar
@@ -204,7 +204,7 @@
 	  (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	  (:authors
 	   ("John Wiegley" . "jwiegley@gmail.com"))
-	  (:commit . "00e07e060218fbd1e16faaf10116c03b12e62580"))])
+	  (:commit . "f317b0c9c3e60a959f45d035ed5e31a78f1263ac"))])
  (auctex .
 	 [(14 0 6)
 	  ((emacs
@@ -2725,7 +2725,7 @@
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	     (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (modus-themes .
-	       [(4 4 0)
+	       [(4 5 0)
 		((emacs
 		  (27 1)))
 		"Elegant, highly legible and customizable themes" tar
@@ -2734,7 +2734,7 @@
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "a082d7739f627523c6d9098c869cf143fa60b014"))])
+		 (:commit . "db70c2ca923261591419de084f9e4c806b409b60"))])
  (mpdired .
 	  [(2)
 	   ((emacs
@@ -3260,6 +3260,17 @@
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
+ (phpinspect .
+	     [(1)
+	      ((compat
+		(29)))
+	      "PHP parsing and code intelligence package" tar
+	      ((:keywords "php" "languages" "tools" "convenience")
+	       (:maintainer "Hugo Thunnissen" . "devel@hugot.nl")
+	       (:authors
+		("Hugo Thunnissen" . "devel@hugot.nl"))
+	       (:url . "https://elpa.gnu.org/packages/phpinspect.html")
+	       (:commit . "d38b28686ab686dbb075420f27074c5a53f83018"))])
  (phps-mode .
 	    [(0 4 49)
 	     ((emacs

@@ -1,0 +1,1 @@
+See docstrings for documentation, starting with `phpinspect-mode'.
