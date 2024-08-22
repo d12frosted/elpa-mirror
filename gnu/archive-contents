@@ -3261,7 +3261,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
  (phpinspect .
-	     [(1)
+	     [(1 1 0)
 	      ((compat
 		(29)))
 	      "PHP parsing and code intelligence package" tar
@@ -3270,7 +3270,7 @@
 	       (:authors
 		("Hugo Thunnissen" . "devel@hugot.nl"))
 	       (:url . "https://elpa.gnu.org/packages/phpinspect.html")
-	       (:commit . "d38b28686ab686dbb075420f27074c5a53f83018"))])
+	       (:commit . "de248b090175b1ca2161a33eae963c6f9db5f45d"))])
  (phps-mode .
 	    [(0 4 49)
 	     ((emacs
