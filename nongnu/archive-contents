@@ -1228,7 +1228,7 @@
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
 	 (:commit . "aa51c1a8d6ff4e1e88e61e989f41ac3aa808a592"))])
  (helm-core .
-	    [(3 9 9)
+	    [(4 0)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -1238,7 +1238,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "aa51c1a8d6ff4e1e88e61e989f41ac3aa808a592"))])
+	      (:commit . "e0d028081f1f24da8e649f6ea3ecea42216d4632"))])
  (hideshowvis .
 	      [(0 8)
 	       ((emacs
@@ -2084,13 +2084,16 @@
 	    (:keywords "project" "convenience")
 	    (:commit . "608a3c1dccab9a3af467ce75d94dedfbfd37b21d"))])
  (rust-mode .
-	    [(1 0 5)
+	    [(1 0 6)
 	     ((emacs
 	       (25 1)))
 	     "A major-mode for editing Rust source code" tar
 	     ((:url . "https://github.com/rust-lang/rust-mode")
 	      (:keywords "languages")
-	      (:commit . "7bff48894dc532caf4010be3060370d315ef75f6"))])
+	      (:maintainer "Mozilla" . "rust-mode@noreply.github.com")
+	      (:authors
+	       ("Mozilla" . "rust-mode@noreply.github.com"))
+	      (:commit . "a8c69ce8f5e7793d2f81dbef60fb37b4b93afccf"))])
  (sass-mode .
 	    [(3 0 16)
 	     ((haml-mode

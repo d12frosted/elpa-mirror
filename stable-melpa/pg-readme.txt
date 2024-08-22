@@ -40,8 +40,5 @@ McNaught and Pavel Janik for bug fixes.
 
 ; TODO
 
-* Provide support for client-side certificates to authenticate network
-  connections over TLS.
-
 * Implement the SASLPREP algorithm for usernames and passwords that contain
   unprintable characters (used for SCRAM-SHA-256 authentication).
