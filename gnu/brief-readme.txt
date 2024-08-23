@@ -1,4 +1,4 @@
-Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
+
 
 
 1 _Brief_
@@ -125,10 +125,10 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
   ──────────────────────────────────────────────────────────────────────
    'G'oto line:                                   `<Alt>-G'             
   ──────────────────────────────────────────────────────────────────────
-   'L'ine oriented text selecting:                `<Alt>-L'             
+   'L'ine oriented text selection:                `<Alt>-L'             
    followed by cursor movements                                         
   ──────────────────────────────────────────────────────────────────────
-   'C'olumn oriented text selecting:              `<Alt>-C'             
+   'C'olumn oriented text selection:              `<Alt>-C'             
    followed by cursor movements                                         
   ──────────────────────────────────────────────────────────────────────
    Start line 'M'arking:                          `<Alt>-M'             
@@ -391,10 +391,11 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-5 There are some less favored default Emacs settings which makes the editing
-════════════════════════════════════════════════════════════════════════════
+5 Less favored default Emacs settings:
+══════════════════════════════════════
 
-  experience in Emacs quite unlike others, especially for
+  There are some less favored default Emacs settings which makes the
+  editing experience in Emacs quite unlike others, especially for
   programmers. For example, text wrapping is by default enabled so a
   program line could easily wrapped to next line if window size changed;
   text scrolling is jumppy in both horizontal and vertical directions
@@ -426,9 +427,10 @@ Brief Mode / Brief Emulator / Brief Editor -*- mode: org; -*-
   `brief-easy-start'.
 
 
-6 For more details like Cygwin 2.x users note, please check the comments in the
-═══════════════════════════════════════════════════════════════════════════════
+6 Cygwin:
+═════════
 
-  source code "brief.el".
+  For more details like Cygwin 2.x users note, please check the comments
+  in the source code "brief.el".
 
   Luke Lee

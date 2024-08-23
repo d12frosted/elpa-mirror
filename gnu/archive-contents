@@ -429,7 +429,7 @@
 	       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
 	       (:commit . "ff5fb77e2556c42aee9f1131f824bdfb955d861f"))])
  (brief .
-	[(5 91)
+	[(5 92)
 	 ((nadvice
 	   (0 3))
 	  (cl-lib
@@ -440,7 +440,7 @@
 	  (:authors
 	   ("Luke Lee" . "luke.yx.lee@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/brief.html")
-	  (:commit . "1d1d8fe291d785512eaa746dc2e5cd6dac96585c"))])
+	  (:commit . "58c2f484100fecd89248c476e3baf222cda5c7c7"))])
  (buffer-env .
 	     [(0 6)
 	      ((emacs
@@ -3261,7 +3261,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
  (phpinspect .
-	     [(1 1 0)
+	     [(1 2 0)
 	      ((compat
 		(29)))
 	      "PHP parsing and code intelligence package" tar
@@ -3270,7 +3270,7 @@
 	       (:authors
 		("Hugo Thunnissen" . "devel@hugot.nl"))
 	       (:url . "https://elpa.gnu.org/packages/phpinspect.html")
-	       (:commit . "de248b090175b1ca2161a33eae963c6f9db5f45d"))])
+	       (:commit . "1ce40146b7294d257414ca4a3a6a834c0385d3e5"))])
  (phps-mode .
 	    [(0 4 49)
 	     ((emacs
@@ -4545,7 +4545,7 @@
 		   (:url . "https://elpa.gnu.org/packages/uniquify-files.html")
 		   (:commit . "1d76b4f0e283afaff2be053d85f8726ffc3abd6e"))])
  (urgrep .
-	 [(0 5 0)
+	 [(0 5 1)
 	  ((emacs
 	    (27 1))
 	   (compat
@@ -4555,7 +4555,7 @@
 	  "Universal recursive grep" tar
 	  ((:url . "https://github.com/jimporter/urgrep")
 	   (:keywords "grep" "search")
-	   (:commit . "df0bb61b3b99c9d1dabec42cb560a84230d20a4e"))])
+	   (:commit . "8af67d13dea234cf68868086d539f9fcbaf058ec"))])
  (url-http-ntlm .
 		[(2 0 5)
 		 ((cl-lib
