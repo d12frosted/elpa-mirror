@@ -1216,17 +1216,18 @@
 		     (:keywords "languages")
 		     (:commit . "59640ceec33cd4df37096289e11ff6f4b876be03"))])
  (helm .
-       [(3 9 9)
+       [(4 0)
 	((helm-core
-	  (3 9 9))
+	  (4 0))
 	 (wfnames
 	  (1 2)))
 	"Helm is an Emacs incremental and narrowing framework" tar
 	((:url . "https://emacs-helm.github.io/helm/")
+	 (:keywords "helm" "convenience" "files" "buffers" "grep" "completion" "lisp" "matching" "tools" "help")
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "aa51c1a8d6ff4e1e88e61e989f41ac3aa808a592"))])
+	 (:commit . "e0d028081f1f24da8e649f6ea3ecea42216d4632"))])
  (helm-core .
 	    [(4 0)
 	     ((emacs
