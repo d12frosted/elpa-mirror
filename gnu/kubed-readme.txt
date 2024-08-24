@@ -1,14 +1,14 @@
 This library defines commands for interacting with Kubernetes
-resources, such as Kuberenetes pods, services, deployments, and more.
+resources, such as Kubernetes pods, services, deployments, and more.
 
-Use `kubed-display-pod' to display a Kuberenetes pod,
+Use `kubed-display-pod' to display a Kubernetes pod,
 `kubed-edit-pod' to edit it, `kubed-delete-pods' to delete it, and
 `kubed-list-pods' to see a menu of all pods.  You can create new pods
 from YAML or JSON files with `kubed-create-pod'.
 
 Similar commands are defined for other types of resources as well.
 
-This library interacts with Kuberenetes via `kubectl', and uses the
+This library interacts with Kubernetes via `kubectl', and uses the
 current `kubectl' context and namespace by default.  To change your
 current context or namespace, use commands `kubed-use-context' and
 `kubed-set-namespace' respectively; you can also interact with

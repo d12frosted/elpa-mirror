@@ -24,7 +24,7 @@ Features:
   to directories listed in the variable `dir-config-allowed-directories',
   ensuring control over where configuration files are sourced from.
 
-- The `global-dir-config-mode' mode: Automatically loads the '.dir-config.el'
+- The `dir-config-mode' mode: Automatically loads the '.dir-config.el'
   file whenever a file or directory is opened, leveraging the
   `find-file-hook' to ensure that the dir configurations are applied.
 
