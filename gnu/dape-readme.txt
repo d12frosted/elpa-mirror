@@ -300,7 +300,20 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 [release] <https://github.com/xdebug/vscode-php-debug/releases>
 
 
-4.14 Other untested adapters
+4.14 OCaml - ocamlearlybird
+───────────────────────────
+
+  Install with `opam install earlybird'.
+  1. Point `:program' to bytecode file
+  2. Place breakpoints inside of `_build/default/*'
+
+  See [ocamlearlybird] for more information.
+
+
+[ocamlearlybird] <https://github.com/hackwaly/ocamlearlybird>
+
+
+4.15 Other untested adapters
 ────────────────────────────
 
   If you find a working configuration for any other debug adapter please
