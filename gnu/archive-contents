@@ -514,7 +514,7 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "855a9cb092eecf1e5c17ea56c440a0200f95eb4c"))])
  (cape .
-       [(1 6)
+       [(1 7)
 	((emacs
 	  (27 1))
 	 (compat
@@ -525,7 +525,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "5c468d6d657e8dc604ddf3feb80f70e1e05ac0a1"))])
+	 (:commit . "9110956a5155d5e3c460160fa1b4dac59322c229"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -1957,7 +1957,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 11 15)
+	  [(0 11 16)
 	   ((emacs
 	     (26 1))
 	    (seq
@@ -1970,7 +1970,7 @@
 	    (:maintainer "Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com")
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
-	    (:commit . "6664c20a6a6a32e3a6c31d13a160fb8c9c8e118c"))])
+	    (:commit . "bb41986d49870c80a53903891648175d2dbb4ff3"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" tar

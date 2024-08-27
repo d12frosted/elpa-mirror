@@ -40,6 +40,7 @@ _________________
 
   ,----
   | (add-hook 'yaml-mode-hook #'flymake-actionlint-action-load-when-actions-file)
+  | (add-hook 'yaml-ts-mode-hook #'flymake-actionlint-action-load-when-actions-file)
   `----
   `flymake-actionlint-action-load-when-actions-file' automatically turns
   `flymake-actionlint' on only when the current file is a yaml file in
