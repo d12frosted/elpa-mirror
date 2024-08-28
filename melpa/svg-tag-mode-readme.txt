@@ -19,7 +19,6 @@ Each item has the form '(KEYWORD (TAG COMMAND HELP)) where:
  - HELP is a string to be displayed when mouse pointer is over
    the tag. It can be nil if no command is associated with the tag.
 
-
 Examples:
 ---------
 
