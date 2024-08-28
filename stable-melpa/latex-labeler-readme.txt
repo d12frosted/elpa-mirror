@@ -18,7 +18,7 @@ Getting started
 If you use AUCTeX, add the following code to your Emacs
 configuration file (e.g.  ~/.emacs.d/init.el):
 
-(with-eval-after-load 'latex (require 'latex-labeler))
+(add-hook 'LaTeX-mode-hook #'latex-labeler-mode)
 
 Additionaly, it is recommended to add the following code.  This
 code suppresses the prompt for inserting an equation label when
@@ -26,11 +26,9 @@ executing the `LaTeX-environment' command (C-c C-e):
 
 (setq LaTeX-equation-label nil)
 
-
 If you use YaTeX instead of AUCTeX, add the following code:
 
-(with-eval-after-load 'yatex (require 'latex-labeler))
-
+(add-hook 'yatex-mode-hook #'latex-labeler-mode)
 
 Usage
 

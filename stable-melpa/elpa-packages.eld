@@ -158,7 +158,7 @@
   (apib-mode :url "https://github.com/w-vi/apib-mode.git")
   (apiwrap :url "https://github.com/vermiculus/apiwrap.el.git")
   (app-monochrome-themes :url "https://github.com/Greybeard-Entertainment/app-monochrome.git")
-  (apparmor-mode :url "https://github.com/alexmurray/apparmor-mode.git")
+  (apparmor-mode :url "https://gitlab.com/apparmor/apparmor-mode.git")
   (apples-mode :url "https://github.com/tequilasunset/apples-mode.git")
   (applescript-mode :url "https://github.com/emacsorphanage/applescript-mode.git")
   (aproject :url "https://github.com/vietor/aproject.git")

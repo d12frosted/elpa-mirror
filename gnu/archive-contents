@@ -707,6 +707,17 @@
 	    ("Philip Kaludercic" . "philipk@posteo.net")
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "09dce8a193c5a70277512263782b82fa1cba84c0"))])
+ (constants .
+	    [(2 11 1)
+	     ((emacs
+	       (24 1)))
+	     "Enter definition of constants into source code" tar
+	     ((:url . "https://github.com/cdominik/constants-for-Emacs")
+	      (:keywords "programming" "languages")
+	      (:maintainer "Carsten Dominik" . "carsten.dominik@gmail.com")
+	      (:authors
+	       ("Carsten Dominik" . "carsten.dominik@gmail.com"))
+	      (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult .
 	  [(1 8)
 	   ((emacs
@@ -1286,7 +1297,7 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "39f6dfdd1d38e169469ff56ac93a0881a3fe1c8b"))])
  (ef-themes .
-	    [(1 7 0)
+	    [(1 8 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
@@ -1295,7 +1306,7 @@
 	      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "4d7cd1fdef459b9f76b9c1f35ec063d0eafe469a"))])
+	      (:commit . "18960c3bcb87e72418e638602a843be58aef07d1"))])
  (eglot .
 	[(1 17)
 	 ((emacs
