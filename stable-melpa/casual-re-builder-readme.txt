@@ -9,9 +9,15 @@ Alternately with `use-package'
 (use-package re-builder
   :defer t)
 (use-package casual-re-builder
-  :ensure t
+  :ensure nil
   :bind (:map
          reb-mode-map ("C-o" . casual-re-builder-tmenu)
          :map
          reb-lisp-mode-map ("C-o" . casual-re-builder-tmenu))
   :after (re-builder))
+
+NOTE: This package requires `casual-lib' which in turn requires an update of
+the built-in package `transient' ≥ 0.6.0. Please customize the variable
+`package-install-upgrade-built-in' to t to allow for `transient' to be
+updated. For further details, consult the INSTALL section of this package's
+README.
