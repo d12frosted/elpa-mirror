@@ -11,20 +11,18 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `pulsar' (or `pulsar.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.0.0,
-released on 2023-08-12.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.1.0,
+released on 2024-08-29.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.1.0-dev.
+Current development target is 1.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `pulsar'
 ⁃ Official manual: <https://protesilaos.com/emacs/pulsar>
 ⁃ Change log: <https://protesilaos.com/emacs/pulsar-changelog>
-⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/pulsar>
-  • Mirrors:
-    ⁃ GitHub: <https://github.com/protesilaos/pulsar>
-    ⁃ GitLab: <https://gitlab.com/protesilaos/pulsar>
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/pulsar>
+⁃ Git repositories:
+  ⁃ GitHub: <https://github.com/protesilaos/pulsar>
+  ⁃ GitLab: <https://gitlab.com/protesilaos/pulsar>
 ⁃ Backronym: Pulsar Unquestionably Luminates, Strictly Absent the
   Radiation.
 
@@ -52,7 +50,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2023 Free Software Foundation, Inc.
+  Copyright (C) 2022-2024 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -76,6 +74,15 @@ Table of Contents
   when either `pulsar-mode' (buffer-local) or `pulsar-global-mode' is
   enabled.
 
+  #+vindex; pulsar-resolve-pulse-function-aliases By default, Pulsar
+  does not try behave the same way for a function’s aliases. If those
+  are not added explicitly to the `pulsar-pulse-functions', they will
+  not have a pulse effect. However, the user option
+  `pulsar-resolve-pulse-function-aliases' can be set to a non-nil value
+  to change this behaviour, meaning that Pulsar will cover a function’s
+  aliases even if those are not explicitly added to the
+  `pulsar-pulse-functions'.
+
   The overall duration of the highlight is determined by a combination
   of `pulsar-delay' and `pulsar-iterations'.  The latter determines the
   number of blinks in a pulse, while the former sets their delay in
@@ -91,6 +98,10 @@ Table of Contents
   will pulse before fading away.  Whereas the `pulsar-highlight-line'
   command never pulses the line: the highlight stays in place as if
   `pulsar-pulse' is nil.
+
+  The command `pulsar-pulse-region' pulses the active region. The effect
+  of the pulse is controlled by the aforementioned user options, namely,
+  `pulsar-delay', `pulsar-iterations', `pulsar-face'.
 
   A do-what-I-mean command is also on offer: `pulsar-highlight-dwim'.
   It highlights the current line line like `pulsar-highlight-line'.  If
@@ -308,8 +319,8 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to the code or manual
-        Aymeric Agon-Rambosson, Daniel Mendler, Ivan Popovych, JD Smith,
-        Ryan Kaskel.
+        Aymeric Agon-Rambosson, Bahman Movaqar, Daniel Mendler, Ivan
+        Popovych, JD Smith, Maxim Dunaevsky, Ryan Kaskel, shipmints.
 
   Ideas and user feedback
         Duy Nguyen, Mark Barton, Petter Storvik, Rudolf Adamkovič, Toon
