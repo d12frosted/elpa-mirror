@@ -3693,7 +3693,7 @@
 			("Rocky Bernstein" . "rocky@gnu.org"))
 		       (:commit . "f758f48266d90775643454e72214e40a4ed320b8"))])
  (rec-mode .
-	   [(1 9 3)
+	   [(1 9 4)
 	    ((emacs
 	      (25)))
 	    "Major mode for viewing/editing rec files" tar
@@ -3701,7 +3701,7 @@
 	     (:maintainer "Antoine Kalmbach" . "ane@iki.fi")
 	     (:authors
 	      ("Jose E. Marchesi" . "jemarch@gnu.org"))
-	     (:commit . "dcd339458469d6c3c499b11df9d3b44e6de98ff5"))])
+	     (:commit . "8d9b73870acdd0a282a5c2829b139a93a39366dc"))])
  (register-list .
 		[(0 1)
 		 nil "Interactively list/edit registers" tar
