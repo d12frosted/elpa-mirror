@@ -1,9 +1,9 @@
-			 ━━━━━━━━━━━━━━━━━━━━━━
-			      TMR MAY RING
+                         ━━━━━━━━━━━━━━━━━━━━━━
+                              TMR MAY RING
 
-			  Protesilaos Stavrou
-			  info@protesilaos.com
-			 ━━━━━━━━━━━━━━━━━━━━━━
+                          Protesilaos Stavrou
+                          info@protesilaos.com
+                         ━━━━━━━━━━━━━━━━━━━━━━
 
 
 This manual, written by Protesilaos Stavrou, describes the customization
@@ -11,20 +11,19 @@ options for `tmr' (or TMR, TMR May Ring, …), and provides every other
 piece of information pertinent to it.  The name of the package is
 pronounced as “timer” or “T-M-R”.
 
-The documentation furnished herein corresponds to stable version 0.4.0,
-released on 2022-07-07.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.0.0,
+released on 2024-08-30.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.5.0-dev.
+Current development target is 1.1.0-dev.
 
 ⁃ Package name (GNU ELPA): `tmr'
 ⁃ Official manual: <https://protesilaos.com/emacs/tmr>
 ⁃ Change log: <https://protesilaos.com/emacs/tmr-changelog>
-⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/tmr>
-  • Mirrors:
-    ⁃ GitHub: <https://github.com/protesilaos/tmr>
-    ⁃ GitLab: <https://gitlab.com/protesilaos/tmr>
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/tmr>
+⁃ Git repositories:
+  ⁃ GitHub: <https://github.com/protesilaos/tmr>
+  ⁃ GitLab: <https://gitlab.com/protesilaos/tmr>
+⁃ Backronym: TMR May Ring; Timer Must Run.
 
 Table of Contents
 ─────────────────
@@ -51,7 +50,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2021-2022 Free Software Foundation, Inc.
+  Copyright (C) 2021-2023 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -101,19 +100,25 @@ Table of Contents
   default key bindings), it asks for a description to be associated with
   the given timer.
 
-  An alternative to the `tmr' command is `tmr-with-description'.  The
+  An alternative to the `tmr' command is `tmr-with-details'.  The
   difference between the two is that the latter always prompts for a
-  description.
+  description and if the timer should be acknowledged.
 
   The command `tmr-edit-description' can change the description a given
   timer object.
+
+  The command `tmr-toggle-acknowledge' toggles the acknowledge flag of a
+  given timer object.  A timer that needs to be acknowledged prompts for
+  confirmation after it elapses.  The user can either confirm and thus
+  dismiss the timer, or set a new duration for the next reminder, using
+  the familiar TMR input.
 
   The user option `tmr-descriptions-list' defines the completion
   candidates that are shown at the description prompt.  Its value can be
   either a list of strings or the symbol of a variable that holds a list
   of strings.  The default value of `tmr-description-history', is the
   name of a variable that contains input provided by the user at the
-  relevant prompt of the `tmr' and `tmr-with-description' commands.
+  relevant prompt of the `tmr' and `tmr-with-details' commands.
 
   When the timer is set, a message is sent to the echo area recording
   the current time and the point in the future when the timer elapses.
@@ -122,11 +127,11 @@ Table of Contents
   command `tmr-tabulated-view', which has more features than the generic
   `*Messages*' buffer ([Grid view]).
 
-  The `tmr-cancel' command cancels running timers without erasesing them
+  The `tmr-cancel' command cancels running timers without erasing them
   from the list of created timer objects.  Timers at the completion
   prompt are described by the exact time they were set and the input
   that was used to create them, including the optional description that
-  `tmr' and `tmr-with-description' accept.
+  `tmr' and `tmr-with-details' accept.
 
   The `tmr-remove' command is like `tmr-cancel', except it is not
   limited to active timers: it can target elapsed ones as well.
@@ -136,7 +141,7 @@ Table of Contents
   argument (`C-u' by default), this command prompts for a duration.  If
   a double prefix argument is supplied (`C-u C-u'), the command asks for
   a duration and then a description.  The default values of such prompts
-  as those of the original timer.
+  are those of the original timer.
 
   The command `tmr-reschedule' changes the duration of the given timer
   to a new one provided at the prompt.  In practice this is a shortcut
@@ -148,7 +153,7 @@ Table of Contents
 
   By default, TMR uses minibuffer completion to pick a timer object in
   operations such as cloning and cancelling.  If the user option
-  `tmr-confirm-single-timer' is set nil, TMR will not use completion
+  `tmr-confirm-single-timer' is set to nil, TMR will not use completion
   when there is only one timer available: it will perform the specified
   command outright.
 
@@ -156,8 +161,11 @@ Table of Contents
   completion ([Hooks]).  TMR can also integrate with the desktop
   environment to send notifications ([Sound and desktop notifications]).
 
-  TMR does not specify any global key bindings.  The user must configure
-  their own ([Sample configuration]).
+  TMR does not specify global key bindings. Instead, it sets up the
+  `tmr-prefix-map', which specifies keys for the relevant commands. The
+  user has the option to either bind the map to a prefix key, such as
+  `C-c t' (so `tmr' is `C-c t t'), or bind individual commands to the
+  desired keys ([Sample configuration]).
 
 
 [Grid view] See section 2.1
@@ -171,8 +179,9 @@ Table of Contents
 2.1 Grid view
 ─────────────
 
-  Timers can be viewed in a grid with `tmr-tabulated-view'.  The data is
-  placed in the `*tmr-tabulated-view*' buffer and looks like this:
+  Timers can be viewed in a grid with `tmr-tabulated-view' (alias
+  `tmr-list-timers'). The data is placed in the `*tmr-tabulated-view*'
+  buffer and looks like this:
 
   ┌────
   │ Start      End        Remaining  Description
@@ -192,10 +201,10 @@ Table of Contents
   is to use minibuffer completion to pick a timer to operate on.
 
   The `tmr-tabulated-view' command relies on Emacs’
-  `tabulated-list-mode'.  From the `*tmr-tabulated-view*' buffer, invoke
-  the command `describe-mode' (`C-h m' with standard key bindings) to
-  learn about the applicable functionality, such as how to
-  expand/contract columns and toggle their sort.
+  `tabulated-list-mode'.  From the `*tmr-tabulated-view*' buffer, one
+  can invoke the command `describe-mode' (`C-h m' with standard key
+  bindings) to learn about the applicable functionality, such as how to
+  expand/contract columns and toggle sorting.
 
   While in this grid view, one can perform all the operations on timers
   we have already covered herein (the `C-h m' will show you their key
@@ -208,23 +217,21 @@ Table of Contents
   TMR provides the following hooks:
 
   `tmr-timer-created-functions'
-        This is triggered by the `tmr' command.  By default, it will
-        print a message in the echo area showing the newly created
-        timer’s start and end time as well as its optional description
-        (if provided).
+        This is triggered by the `tmr' command.  By default, it prints a
+        message in the echo area showing the newly created timer’s start
+        and end time as well as its optional description (if provided).
 
   `tmr-timer-finished-functions'
-        This runs when a timer elapses.  By default, it will (i) produce
-        a desktop notification which describes the timer’s start/end
-        time and optional description (if available), (ii) play an alarm
-        sound ([Sound and desktop notifications]), and (iii) print a
+        This runs when a timer elapses.  By default, it (i) produces a
+        desktop notification which describes the timer’s start/end time
+        and optional description (if available), (ii) plays an alarm
+        sound ([Sound and desktop notifications]), and (iii) prints a
         message in the echo area which is basically the same as the
         desktop notification.
 
   `tmr-timer-cancelled-functions'
-        This is called by `tmr-cancel'.  By default, it will print a
-        message in the echo area describing the timer that was
-        cancelled.
+        This is called by `tmr-cancel'.  By default, it prints a message
+        in the echo area describing the timer that was cancelled.
 
 
 [Sound and desktop notifications] See section 2.3
@@ -233,9 +240,9 @@ Table of Contents
 2.3 Sound and desktop notifications
 ───────────────────────────────────
 
-  Once the timer runs its course, it produces a desktop notification and
-  plays an alarm sound.  The notification’s message is practically the
-  same as that which is sent to the echo area.
+  Once the timer has run its course, it produces a desktop notification
+  and plays an alarm sound.  The notification’s message is practically
+  the same as that which is sent to the echo area.
 
   The sound file for the alarm is defined in `tmr-sound-file', while the
   urgency of the notification can be set through the user option
@@ -251,7 +258,7 @@ Table of Contents
 
   Desktop notifications work only if Emacs is built with DBus
   functionality.  This is the norm.  If such functionality is not
-  available, TMR will issue warning informing the user accordingly.
+  available, TMR will issue a warning informing the user accordingly.
 
 
 2.4 Minibuffer histories
@@ -265,7 +272,7 @@ Table of Contents
   ┌────
   │ (require 'savehist)
   │ (setq savehist-file (locate-user-emacs-file "savehist"))
-  │ (setq history-length 10000)
+  │ (setq history-length 500)
   │ (setq history-delete-duplicates t)
   │ (setq savehist-save-minibuffer-history t)
   │ (add-hook 'after-init-hook #'savehist-mode)
@@ -331,28 +338,20 @@ Table of Contents
 ══════════════════════
 
   ┌────
-  │ ;; Load the `tmr' library
-  │ (require 'tmr)
-  │ 
-  │ ;; set to nil to disable the sound
+  │ ;; Set to nil to disable the sound
   │ (setq tmr-sound-file "/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga")
   │ 
+  │ ;; Desktop notification urgency level
   │ (setq tmr-notification-urgency 'normal)
   │ 
   │ ;; Read the `tmr-descriptions-list' doc string
   │ (setq tmr-descriptions-list 'tmr-description-history)
   │ 
-  │ ;; OPTIONALLY set global key bindings:
-  │ (let ((map global-map))
-  │   (define-key map (kbd "C-c t t") #'tmr)
-  │   (define-key map (kbd "C-c t T") #'tmr-with-description)
-  │   (define-key map (kbd "C-c t l") #'tmr-tabulated-view) ; "list timers" mnemonic
-  │   (define-key map (kbd "C-c t c") #'tmr-clone)
-  │   (define-key map (kbd "C-c t k") #'tmr-cancel)
-  │   (define-key map (kbd "C-c t s") #'tmr-reschedule)
-  │   (define-key map (kbd "C-c t e") #'tmr-edit-description)
-  │   (define-key map (kbd "C-c t r") #'tmr-remove)
-  │   (define-key map (kbd "C-c t R") #'tmr-remove-finished))
+  │ ;; Set global prefix bindings (autoloaded):
+  │ (define-key global-map "\C-ct" 'tmr-prefix-map)
+  │ 
+  │ ;; Alternatively bind tmr command (autoloaded):
+  │ (define-key global-map "\C-ct" 'tmr)
   └────
 
 
@@ -361,28 +360,9 @@ Table of Contents
 
   The `embark' package provides standards-compliant infrastructure to
   run context-dependent actions on all sorts of targets (symbol at
-  point, current completion candidate, etc.).  TMR is set up to make its
-  timer objects recognisable by Embark.  All the user needs is something
-  like the following glue code:
-
-  ┌────
-  │ (defvar tmr-action-map
-  │   (let ((map (make-sparse-keymap)))
-  │     (define-key map "k" #'tmr-remove)
-  │     (define-key map "r" #'tmr-remove)
-  │     (define-key map "R" #'tmr-remove-finished)
-  │     (define-key map "c" #'tmr-clone)
-  │     (define-key map "e" #'tmr-edit-description)
-  │     (define-key map "s" #'tmr-reschedule)
-  │     map))
-  │ 
-  │ (with-eval-after-load 'embark
-  │   (add-to-list 'embark-keymap-alist '(tmr-timer . tmr-action-map))
-  │   (cl-loop
-  │    for cmd the key-bindings of tmr-action-map
-  │    if (commandp cmd) do
-  │    (add-to-list 'embark-post-action-hooks (list cmd 'embark--restart))))
-  └────
+  point, current completion candidate, etc.). TMR is set up to make its
+  timer objects recognisable by Embark and registers the
+  `tmr-action-map' in Embark.
 
 
 6 Acknowledgements
@@ -394,7 +374,7 @@ Table of Contents
         Protesilaos Stavrou (maintainer), Damien Cassou, Daniel Mendler.
 
   Contributions to the code or manual
-        Christian Tietze, Nathan R. DeGruchy.
+        Christian Tietze, Ed Tavinor, Nathan R. DeGruchy.
 
 
 7 GNU Free Documentation License

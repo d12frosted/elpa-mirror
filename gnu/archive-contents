@@ -2927,7 +2927,7 @@
 	      (:url . "https://elpa.gnu.org/packages/num3-mode.html")
 	      (:commit . "fdf4d633e541875a6f765f5c3c8e0d4911122ed3"))])
  (oauth2 .
-	 [(0 16)
+	 [(0 17)
 	  ((cl-lib
 	    (0 5))
 	   (nadvice
@@ -2938,7 +2938,7 @@
 	   (:authors
 	    ("Julien Danjou" . "julien@danjou.info"))
 	   (:url . "https://elpa.gnu.org/packages/oauth2.html")
-	   (:commit . "dc069550616fb0a72507489ea796d0e1bd8b48c9"))])
+	   (:commit . "0147cabd8e82e46af27aef07aeed402b0bb9a0fb"))])
  (ob-asymptote .
 	       [(1 0)
 		nil "Babel Functions for Asymptote" tar
@@ -4352,18 +4352,20 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tmr .
-      [(0 4 0)
+      [(1 0 0)
        ((emacs
-	 (27 1)))
+	 (27 1))
+	(compat
+	 (30 0 0 0)))
        "Set timers using a convenient notation" tar
-       ((:url . "https://git.sr.ht/~protesilaos/tmr")
+       ((:url . "https://github.com/protesilaos/tmr")
 	(:keywords "convenience" "timer")
-	(:maintainer "TMR Development" . "~protesilaos/tmr@lists.sr.ht")
+	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com")
 	 ("Damien Cassou" . "damien@cassou.me")
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "0d6ce6979c980f0d61c61d1f6478f805612315b4"))])
+	(:commit . "5d9b9683febe5e38838e70bb575e7f8739d77827"))])
  (tomelr .
 	 [(0 4 3)
 	  ((emacs
@@ -4401,7 +4403,7 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "44036b32ba398cf284320285b60be35874b6eea5"))])
  (tramp .
-	[(2 7 1 1)
+	[(2 7 1 2)
 	 ((emacs
 	   (27 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -4410,7 +4412,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "ae4ffa7b9015b6983ee20e357f08a04b5c9dc412"))])
+	  (:commit . "10d7de235368896ba3e1354f7869e92fb6b806fb"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
