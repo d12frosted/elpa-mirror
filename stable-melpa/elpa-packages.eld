@@ -2080,7 +2080,7 @@
   (git-blamed :url "https://github.com/tsgates/git-emacs.git")
   (git-cliff :url "https://github.com/liuyinz/git-cliff.el.git")
   (git-command :url "https://github.com/10sr/git-command-el.git")
-  (git-commit :url "https://github.com/magit/magit.git")
+  (git-commit :url "https://github.com/magit/magit.git" :branch "legacy-stub")
   (git-commit-insert-issue :url "https://gitlab.com/emacs-stuff/git-commit-insert-issue.git")
   (git-commit-ts-mode :url "https://github.com/danilshvalov/git-commit-ts-mode.git")
   (git-dwim :url "https://github.com/rubikitch/emacs-git-dwim.git")
