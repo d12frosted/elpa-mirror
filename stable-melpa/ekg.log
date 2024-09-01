@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg.git
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out 92432c150144b597c9d865e0a64a72f628f4e05f
+Checking out 12d2524b4b7fdbb2e60b564456c463e594919ca2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekg1QBqmV/ekg-20240901.546
+  to /tmp/ekgjzNyi9/ekg-20240901.1906
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-denote.el -> ekg-denote.el
     ekg-embedding.el -> ekg-embedding.el
@@ -17,23 +17,25 @@ Copying files (->) and directories (=>)
     ekg.el -> ekg.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
-Generating /tmp/ekg1QBqmV/ekg-20240901.546/doclicense.info
-Generating /tmp/ekg1QBqmV/ekg-20240901.546/ekg.info
-Created ekg-20240901.546.tar containing:
-  ekg-20240901.546/
-  ekg-20240901.546/dir
-  ekg-20240901.546/doclicense.info
-  ekg-20240901.546/ekg-auto-save.el
-  ekg-20240901.546/ekg-denote.el
-  ekg-20240901.546/ekg-embedding.el
-  ekg-20240901.546/ekg-llm.el
-  ekg-20240901.546/ekg-logseq.el
-  ekg-20240901.546/ekg-org-roam.el
-  ekg-20240901.546/ekg-pkg.el
-  ekg-20240901.546/ekg-test-utils.el
-  ekg-20240901.546/ekg.el
-  ekg-20240901.546/ekg.info
+Generating /tmp/ekgjzNyi9/ekg-20240901.1906/doclicense.info
+Generating /tmp/ekgjzNyi9/ekg-20240901.1906/ekg.info
+Created ekg-20240901.1906.tar containing:
+  ekg-20240901.1906/
+  ekg-20240901.1906/dir
+  ekg-20240901.1906/doclicense.info
+  ekg-20240901.1906/ekg-auto-save.el
+  ekg-20240901.1906/ekg-denote.el
+  ekg-20240901.1906/ekg-embedding.el
+  ekg-20240901.1906/ekg-llm.el
+  ekg-20240901.1906/ekg-logseq.el
+  ekg-20240901.1906/ekg-org-roam.el
+  ekg-20240901.1906/ekg-pkg.el
+  ekg-20240901.1906/ekg-test-utils.el
+  ekg-20240901.1906/ekg.el
+  ekg-20240901.1906/ekg.info
  ✓ Success:
-  2024-09-01T10:25:45+0000  ekg-20240901.546.entry
-  2024-09-01T10:25:44+0000  ekg-20240901.546.tar
-Built ekg in 6.051s, finished at 2024-09-01T10:25:45+0000
+  2024-09-01T17:23:36+0000  ekg-20240901.1541.entry
+  2024-09-01T17:23:36+0000  ekg-20240901.1541.tar
+  2024-09-01T19:08:24+0000  ekg-20240901.1906.entry
+  2024-09-01T19:08:24+0000  ekg-20240901.1906.tar
+Built ekg in 6.348s, finished at 2024-09-01T19:08:25+0000

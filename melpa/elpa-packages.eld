@@ -4021,6 +4021,7 @@
   (osx-trash :url "https://github.com/emacsorphanage/osx-trash.git")
   (otama :url "https://github.com/yoshinari-nomura/otama.git")
   (other-emacs-eval :url "https://github.com/xuchunyang/other-emacs-eval.git")
+  (otpp :url "https://github.com/abougouffa/one-tab-per-project.git")
   (ouroboros :url "https://github.com/Titan-C/cardano.el.git")
   (outline-indent :url "https://github.com/jamescherti/outline-indent.el.git")
   (outline-magic :url "https://github.com/tj64/outline-magic.git")
