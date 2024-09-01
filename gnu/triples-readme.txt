@@ -1,20 +1,38 @@
-			       ━━━━━━━━━
-				TRIPLES
-			       ━━━━━━━━━
+                               ━━━━━━━━━
+                                TRIPLES
+                               ━━━━━━━━━
 
 
-The `triples' module is a standard database module designed for use in
+The `triples' package is a standard database package designed for use in
 other emacs modules.  It works with either the builtin sqlite in Emacs
-29 or the [emacsql] module, and provides a simple way of storing
-entities and their associated schema.  The triples module is well suited
-to graph-like applications, where links between entities are important.
-The module has wrappers for most common operations, but it is
-anticipated that occasionally client modules would need to make their
+29 or the [emacsql] package, and provides a simple way of storing
+entities and their associated schema.  The triples package is well
+suited to graph-like applications, where links between entities are
+important.  The package has wrappers for most common operations, but it
+is anticipated that occasionally client modules would need to make their
 own sqlite calls.  Many different database instances can be handled by
-the `triples' module.  It is expected that clients supply the database
+the `triples' package.  It is expected that clients supply the database
 connection.  However, a standard triples database can be used, which is
 defined in `triples-default-database-filename', and used when no
 filename is used to connect to by clients of the triples library.
+
+This package is useful for simple applications that don't want to write
+their own SQL calls, as well as more complicated applications that want
+to store many different kinds of objects without having to set up and
+manage a variety of tables, especially when there is a graph-like
+relationship between the entities.  It also is suited for applications
+where different packages want to store different data about the same set
+of entities, or store the same data about very different sets of
+entities.  For example, having everything that has a creation time be
+treated uniformly, regardless of the type of entity, is something that
+would be require more advanced solutions in normal SQL but is standard
+and easy in a Triple database.  These benefits are due to the fact that
+the storage is extremely regular and flexible, with a schema defining
+multiple types that are independent of each other, and with all the
+schema being software-managed, but installed in the database itself.
+The disadvantage is that it can be significantly more inefficient.
+However, for the kind of applications that emacs typically uses, the
+inefficiencies typically are not significant.
 
 
 [emacsql] <https://github.com/magit/emacsql>
@@ -105,6 +123,12 @@ filename is used to connect to by clients of the triples library.
   keep it in sync, we can just get it by querying for when the Bob is
   the object and `manager' is the predicate.
 
+  The ideas behind the database and notes on design can be found in the
+  [triples-design.org file].
+
+
+[triples-design.org file] <file:triples-design.org>
+
 
 3.3 Connecting
 ──────────────
@@ -167,6 +191,10 @@ filename is used to connect to by clients of the triples library.
   │ '(:manager "bob" :reportees '("catherine" "dennis"))
   └────
 
+  Note that these subject names are just for demonstration purposes, and
+  wouldn't make good subjects because they wouldn't be unique in
+  practice.  See [our document on triples design] for more information.
+
   There are other useful functions, including:
   • `triples-get-types', which gets all the types a subject has,
   • `triples-delete-subject', which deletes all data associated with a
@@ -177,6 +205,11 @@ filename is used to connect to by clients of the triples library.
     predicate is equal to /object/,
   • `triples-subjects-of-type', get all subjects which have a particular
     type.
+  • `triples-remove-schema-type' , remove a type and all associated data
+    from the schema (should be rarely used).
+
+
+[our document on triples design] <file:triples-design.org>
 
 
 3.5 Predicates, with type and without

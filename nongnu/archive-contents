@@ -552,7 +552,7 @@
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "0bd12913940a047724d830725bf8649e4f8df499"))])
  (emacsql .
-	  [(4 0 1)
+	  [(4 0 2)
 	   ((emacs
 	     (25 1)))
 	   "High-level SQL database front-end" tar
@@ -560,7 +560,7 @@
 	    (:maintainer "Jonas Bernoulli" . "emacs.emacsql@jonas.bernoulli.dev")
 	    (:authors
 	     ("Christopher Wellons" . "wellons@nullprogram.com"))
-	    (:commit . "e5f0928a047dba8e3a00b6333400422b301bac35"))])
+	    (:commit . "07699353a43f629848c66c0949e7170e8f29e299"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib
@@ -1016,28 +1016,6 @@
 		  (:authors
 		   ("Jeronimo Pellegrini" . "(j_p@aleph0.info)"))
 		  (:commit . "3358d0cc01436bd8f71a500175db2716e75b2eed"))])
- (git-commit .
-	     [(4 0 0)
-	      ((emacs
-		(26 1))
-	       (compat
-		(30 0 0 0))
-	       (seq
-		(2 24))
-	       (transient
-		(0 7 4))
-	       (with-editor
-		(3 4 1)))
-	      "Edit Git commit messages" tar
-	      ((:url . "https://github.com/magit/magit")
-	       (:keywords "git" "tools" "vc")
-	       (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
-	       (:authors
-		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
-		("Sebastian Wiesner" . "lunaryorn@gmail.com")
-		("Florian Ragwitz" . "rafl@debian.org")
-		("Marius Vollmer" . "marius.vollmer@gmail.com"))
-	       (:commit . "020aca7c9c4154dbc4a72acbd56165ecccea1bf1"))])
  (git-modes .
 	    [(1 4 4)
 	     ((emacs
@@ -2542,7 +2520,7 @@
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
-	      [(3 4 1)
+	      [(3 4 2)
 	       ((emacs
 		 (26 1))
 		(compat
@@ -2553,7 +2531,7 @@
 		(:maintainer "Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev")
 		(:authors
 		 ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-		(:commit . "78c303a0181f2132e2254f965176b549044d74f2"))])
+		(:commit . "77cb2403158cfea9d8bfb8adad81b84d1d6d7c6a"))])
  (with-simulated-input .
 		       [(3 0)
 			((emacs
