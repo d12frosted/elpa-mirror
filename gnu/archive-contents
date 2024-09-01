@@ -3012,7 +3012,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "3847f311077efa17951a786d2759f2639c5f43c8"))])
  (org .
-      [(9 7 10)
+      [(9 7 11)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3021,7 +3021,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "5ebd973e09d7a46d056f1cd9b5efc44e878cce9c"))])
+	(:commit . "6a5d0ed342efeb3a4c402672fbe9bfebd80af8b6"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -3272,7 +3272,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
  (phpinspect .
-	     [(1 2 0)
+	     [(2 0 0)
 	      ((compat
 		(29)))
 	      "PHP parsing and code intelligence package" tar
@@ -3281,7 +3281,7 @@
 	       (:authors
 		("Hugo Thunnissen" . "devel@hugot.nl"))
 	       (:url . "https://elpa.gnu.org/packages/phpinspect.html")
-	       (:commit . "1ce40146b7294d257414ca4a3a6a834c0385d3e5"))])
+	       (:commit . "95a29a39828e5122a13ebdec21734db5a46312d5"))])
  (phps-mode .
 	    [(0 4 49)
 	     ((emacs
