@@ -878,7 +878,7 @@
 		("Akib Azmain Turja" . "akib@disroot.org"))
 	       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser .
-	 [(0 31)
+	 [(0 31 1)
 	  ((emacs
 	    (27 1))
 	   (project
@@ -889,7 +889,7 @@
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
 	   (:authors
 	    ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-	   (:commit . "b6b4ac070d136345345c80ff649f0084e3c512a5"))])
+	   (:commit . "c034c129cfa7442881f13ae146c87785b367cff5"))])
  (geiser-chez .
 	      [(0 18)
 	       ((emacs
@@ -1495,7 +1495,7 @@
 	   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
 	  (:commit . "020aca7c9c4154dbc4a72acbd56165ecccea1bf1"))])
  (magit-section .
-		[(4 0 0)
+		[(4 1 0)
 		 ((emacs
 		   (26 1))
 		  (compat
@@ -1510,7 +1510,7 @@
 		  (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 		  (:authors
 		   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-		  (:commit . "020aca7c9c4154dbc4a72acbd56165ecccea1bf1"))])
+		  (:commit . "0aa26864e3fc4e6949711a4821caf6819e7ab171"))])
  (markdown-mode .
 		[(2 6)
 		 ((emacs
