@@ -73,6 +73,9 @@ E.g.,
 (setq mb-url-http-backend 'mb-url-http-curl)
 ```
 
+NOTE: All clients are required to support automatically decompressing
+response bodies.
+
 #### [cURL][]
 
 [cURL]: http://curl.haxx.se/
