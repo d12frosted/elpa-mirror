@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `fontaine' (or `fontaine.el'), and provides every other
 piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 2.0.0,
-released on 2024-04-16.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 2.1.0,
+released on 2024-09-02.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 2.0.0-dev.
+Current development target is 2.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `fontaine'
 ⁃ Official manual: <https://protesilaos.com/emacs/fontaine>
@@ -70,18 +70,9 @@ Table of Contents
 2 Overview
 ══════════
 
-  [ The command `fontaine-set-face-font' is removed from the 2.0.0-dev
-    because it is not consistent with the rest of the functionality of
-    Fontaine. ]
-
   Fontaine lets the user specify presets of font configurations and set
   them on demand on graphical Emacs frames.  The user option
   `fontaine-presets' holds all such presets.
-
-  [ The support for the mode line, header line, line number, tab bar,
-    and tab line faces is part of 2.0.0-dev.  Same for the introduction
-    of the variables `fontaine-weights', `fontaine-slants',
-    `fontaine-faces'. ]
 
   Presets consist of a list of properties that govern the family,
   weight, height, and slant of the faces listed in the value of the
@@ -99,61 +90,73 @@ Table of Contents
   │  :default-family "Monospace"
   │  :default-weight regular
   │  :default-slant normal
+  │  :default-width normal
   │  :default-height 100
   │ 
   │  :fixed-pitch-family nil
   │  :fixed-pitch-weight nil
   │  :fixed-pitch-slant nil
+  │  :fixed-pitch-width nil
   │  :fixed-pitch-height 1.0
   │ 
   │  :fixed-pitch-serif-family nil
   │  :fixed-pitch-serif-weight nil
   │  :fixed-pitch-serif-slant nil
+  │  :fixed-pitch-serif-width nil
   │  :fixed-pitch-serif-height 1.0
   │ 
   │  :variable-pitch-family "Sans"
   │  :variable-pitch-weight nil
   │  :variable-pitch-slant nil
+  │  :variable-pitch-width nil
   │  :variable-pitch-height 1.0
   │ 
   │  :mode-line-active-family nil
   │  :mode-line-active-weight nil
   │  :mode-line-active-slant nil
+  │  :mode-line-active-width nil
   │  :mode-line-active-height 1.0
   │ 
   │  :mode-line-inactive-family nil
   │  :mode-line-inactive-weight nil
   │  :mode-line-inactive-slant nil
+  │  :mode-line-inactive-width nil
   │  :mode-line-inactive-height 1.0
   │ 
   │  :header-line-family nil
   │  :header-line-weight nil
   │  :header-line-slant nil
+  │  :header-line-width nil
   │  :header-line-height 1.0
   │ 
   │  :line-number-family nil
   │  :line-number-weight nil
   │  :line-number-slant nil
+  │  :line-number-width nil
   │  :line-number-height 1.0
   │ 
   │  :tab-bar-family nil
   │  :tab-bar-weight nil
   │  :tab-bar-slant nil
+  │  :tab-bar-width nil
   │  :tab-bar-height 1.0
   │ 
   │  :tab-line-family nil
   │  :tab-line-weight nil
   │  :tab-line-slant nil
+  │  :tab-line-width nil
   │  :tab-line-height 1.0
   │ 
   │  :bold-family nil
   │  :bold-slant nil
   │  :bold-weight bold
+  │  :bold-width nil
   │  :bold-height 1.0
   │ 
   │  :italic-family nil
   │  :italic-weight nil
   │  :italic-slant italic
+  │  :italic-width nil
   │  :italic-height 1.0
   │ 
   │  :line-spacing nil)
@@ -178,11 +181,6 @@ Table of Contents
 
   [Shared and implicit fallback values for presets].
 
-  [ As part of 2.0.0-dev, the `fontaine-set-preset' always prompts for a
-    preset when called interactively, even if there is only one preset
-    available. This is how all prompts work in Emacs, so better be
-    consistent with them. ]
-
   The command `fontaine-set-preset' applies the desired preset. If
   called interactively, it produces a minibuffer prompt with completion
   among the available presets. When called from Lisp, it requires a
@@ -203,7 +201,7 @@ Table of Contents
   supplying the prefix argument.
 
   As a final step, `fontaine-set-preset' calls the
-  `fontaine-set-preset-hook'.  [ This is part of 2.0.0-dev. ]
+  `fontaine-set-preset-hook'.
 
   The latest value of `fontaine-set-preset' is stored in a file whose
   location is defined in `fontaine-latest-state-file' (normally part of
@@ -212,6 +210,11 @@ Table of Contents
   (e.g. `kill-emacs-hook').  To restore that value, the user can call
   the function `fontaine-restore-latest-preset' (such as by adding it to
   their init file).
+
+  The command `fontaine-toggle-preset' can toggle between the last two
+  valid presets, as set by `fontaine-set-preset'. If it cannot find two
+  different presets, then it prompts using minibuffer completion. As a
+  final step, it calls the `fontaine-set-preset-hook'.
 
   For users of the `no-littering' package, `fontaine-latest-state-file'
   is not stored in their `.emacs.d', but in a standard directory
@@ -684,7 +687,7 @@ Table of Contents
 4.1 Persist font configurations on theme switch
 ───────────────────────────────────────────────
 
-  [ As part of 2.0.0-dev, there exists the `fontaine-mode' which does
+  [ Since version `2.0.0', there exists the `fontaine-mode' which does
     this automatically. ]
 
   Themes re-apply face definitions when they are loaded.  This is
@@ -710,7 +713,7 @@ Table of Contents
 4.2 Theme-agnostic hook for Emacs 29 or higher
 ──────────────────────────────────────────────
 
-  [ As part of 2.0.0-dev, there exists the `fontaine-mode' which does
+  [ Since version `2.0.0', there exists the `fontaine-mode' which does
     this automatically. ]
 
   Emacs 29 provides the `enable-theme-functions', which we can use to
@@ -728,7 +731,7 @@ Table of Contents
 4.3 Theme-agnostic hook before Emacs 29
 ───────────────────────────────────────
 
-  [ As part of 2.0.0-dev, there exists the `fontaine-mode' which does
+  [ Since version `2.0.0', there exists the `fontaine-mode' which does
     this automatically. ]
 
   For versions of Emacs before 29, there is no built-in theme-agnostic

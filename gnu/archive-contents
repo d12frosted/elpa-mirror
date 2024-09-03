@@ -1744,7 +1744,7 @@
 		       ("Manuel Uberti" . "manuel.uberti@inventati.org"))
 		      (:commit . "9c68ee881f18f554f0ab5bbf5bee1a4b753d792b"))])
  (fontaine .
-	   [(2 0 0)
+	   [(2 1 0)
 	    ((emacs
 	      (29 1)))
 	    "Set font configurations using presets" tar
@@ -1752,7 +1752,7 @@
 	     (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	     (:authors
 	      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	     (:commit . "353e03ece05f31131bd160176b9c3c4bc2b7b365"))])
+	     (:commit . "18e39174cc453fd47b2b27d0f6b7a431c7be73cb"))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" tar
@@ -3272,16 +3272,16 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
  (phpinspect .
-	     [(2 0 0)
+	     [(2 0 1)
 	      ((compat
 		(29)))
 	      "PHP parsing and code intelligence package" tar
-	      ((:keywords "php" "languages" "tools" "convenience")
+	      ((:url . "https://github.com/hugot/phpinspect.el")
+	       (:keywords "php" "languages" "tools" "convenience")
 	       (:maintainer "Hugo Thunnissen" . "devel@hugot.nl")
 	       (:authors
 		("Hugo Thunnissen" . "devel@hugot.nl"))
-	       (:url . "https://elpa.gnu.org/packages/phpinspect.html")
-	       (:commit . "95a29a39828e5122a13ebdec21734db5a46312d5"))])
+	       (:commit . "7d75e95355a04a2b3c26c3be43ff40eb4f28fd65"))])
  (phps-mode .
 	    [(0 4 49)
 	     ((emacs
