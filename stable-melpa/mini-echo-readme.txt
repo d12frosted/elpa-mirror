@@ -1,1 +1,1 @@
-Echo buffer status in minibuffer window
+Show buffer status in echo area, get rid of mode-line !

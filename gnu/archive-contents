@@ -2563,16 +2563,16 @@
 	    ("Alexey Veretennikov" . "alexey.veretennikov@gmail.com"))
 	   (:commit . "2120345933a1617cc5359dabd7636fd3479441bf"))])
  (logos .
-	[(1 1 1)
+	[(1 2 0)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
-	 ((:url . "https://git.sr.ht/~protesilaos/logos")
+	 ((:url . "https://github.com/protesilaos/logos")
 	  (:keywords "convenience" "focus" "writing" "presentation" "narrowing")
-	  (:maintainer "Logos Development" . "~protesilaos/logos@lists.sr.ht")
+	  (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "eeedd3ef289faa4fa2b726013255747a41a6ba9c"))])
+	  (:commit . "79270ec67d81f45f4431d850fbbb31eaca92f24f"))])
  (luwak .
 	[(1 0 0)
 	 ((emacs
