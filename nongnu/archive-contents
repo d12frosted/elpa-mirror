@@ -1193,6 +1193,17 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages")
 		     (:commit . "59640ceec33cd4df37096289e11ff6f4b876be03"))])
+ (haskell-ts-mode .
+		  [(1)
+		   ((emacs
+		     (29 3)))
+		   "A treesit based major mode for haskell" tar
+		   ((:url . "https://codeberg.org/pranshu/haskell-ts-mode")
+		    (:keywords "languages" "haskell")
+		    (:maintainer "Pranshu Sharma" . "pranshusharma366atgmail")
+		    (:authors
+		     ("Pranshu Sharma" . "pranshusharma366atgmail"))
+		    (:commit . "58d158bef475536e78e2a145f2029c49924fb19a"))])
  (helm .
        [(4 0)
 	((helm-core
