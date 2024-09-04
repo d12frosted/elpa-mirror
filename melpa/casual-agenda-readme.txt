@@ -13,7 +13,8 @@ Alternately install using `use-package':
          org-agenda-mode-map
          ("C-o" . casual-agenda-tmenu)
          ("M-j" . org-agenda-clock-goto) ; optional
-         ("J" . bookmark-jump))) ; optional
+         ("J" . bookmark-jump)) ; optional
+  :after (org-agenda))
 
 This package requires that the built-in packages `org' and `transient' be
 upgraded. By default, `package.el' will not upgrade a built-in package
