@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 3.0.0,
-released on 2024-06-30.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 3.1.0,
+released on 2024-09-04.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 3.1.0-dev.
+Current development target is 3.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote>
@@ -42,11 +42,13 @@ Table of Contents
 ..... 3. The `denote-templates' option
 ..... 4. Convenience commands for note creation
 ..... 5. The `denote-save-buffers' option
-..... 6. The `denote-date-prompt-use-org-read-date' option
+..... 6. The `denote-kill-buffers' option
+..... 7. The `denote-date-prompt-use-org-read-date' option
 .. 2. Create a note from the current Org subtree
 .. 3. Create note using Org capture
 .. 4. Create note with specific prompts using Org capture
 .. 5. Create a note with the region’s contents
+..... 1. A custom `denote-region' that references the source
 .. 6. Open an existing note or create it if missing
 .. 7. Maintain separate directory silos for notes
 ..... 1. How to switch a silo
@@ -69,11 +71,13 @@ Table of Contents
 .. 7. Rename a file by adding or removing a title interactively
 .. 8. Rename a file by adding or removing keywords interactively
 .. 9. Rename a file by adding or removing a signature interactively
-.. 10. Faces used by rename commands
+.. 10. Find duplicate identifiers and put them in a Dired buffer
+.. 11. Faces used by rename commands
 5. The file-naming scheme
 .. 1. Change the order of file name components
 .. 2. Sluggification of file name components
 .. 3. User-defined sluggification of file name components
+..... 1. Custom sluggification to remove non-ASCII characters
 .. 4. Features of the file-naming scheme for searching or filtering
 6. Front matter
 .. 1. Change the front matter format
@@ -100,9 +104,15 @@ Table of Contents
 10. Automatically rename Denote buffers
 .. 1. The `denote-rename-buffer-format' option
 11. Use Org dynamic blocks
-.. 1. Org dynamic blocks to insert links or backlinks
-.. 2. Org dynamic block to insert file contents
+.. 1. Org dynamic blocks to insert links
+.. 2. The Org dynamic block to insert missing links only
+.. 3. The Org dynamic block to insert backlinks
+.. 4. Org dynamic block to insert file contents
+.. 5. Org dynamic block to insert Org files as headings
 12. Sort files by component
+.. 1. Configure what extra prompts `denote-sort-dired' issues
+.. 2. Define a sorting function per component
+..... 1. Sort signatures that include Luhmann-style sequences
 13. Keep a journal or diary
 .. 1. Journaling with a timer
 14. Minibuffer histories
@@ -433,7 +443,7 @@ Table of Contents
 
 [The `denote-history-completion-in-prompts' option] See section 3.1.2
 
-[The denote-date-prompt-use-org-read-date option] See section 3.1.6
+[The denote-date-prompt-use-org-read-date option] See section 3.1.7
 
 [The denote-templates option] See section 3.1.3
 
@@ -477,9 +487,6 @@ Table of Contents
 
 3.1.3 The `denote-templates' option
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-
-  [ Updated as part of 3.1.0-dev to accept a function that returns a
-    string. This is in addition to accepting a string. ]
 
   The user option `denote-templates' is an alist of content templates
   for new notes.  A template is arbitrary text that Denote will add to a
@@ -554,8 +561,6 @@ Table of Contents
   │ 			 "* Another heading"
   │ 			 "\n\n"))))
   └────
-
-  [ This is part of 3.1.0-dev. ]
 
   In this example, `my-denote-template-function-for-blog' is a function
   that returns a string. Denote will take care to insert it in the
@@ -660,7 +665,7 @@ Table of Contents
 
 [The denote-prompts option] See section 3.1.1
 
-[The denote-date-prompt-use-org-read-date option] See section 3.1.6
+[The denote-date-prompt-use-org-read-date option] See section 3.1.7
 
 [The denote-templates option] See section 3.1.3
 
@@ -757,6 +762,8 @@ Table of Contents
   feature is familiar with the `denote-rename-file' operation (or
   related) and knows it is reliable ([Renaming files]).
 
+  [The `denote-kill-buffers' option].
+
 
 [Points of entry] See section 3
 
@@ -764,8 +771,50 @@ Table of Contents
 
 [Renaming files] See section 4
 
+[The `denote-kill-buffers' option] See section 3.1.6
 
-3.1.6 The `denote-date-prompt-use-org-read-date' option
+
+3.1.6 The `denote-kill-buffers' option
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The user option `denote-kill-buffers' controls whether to kill a
+  buffer that was generated by a Denote command. This can happen when
+  creating a new file or renaming an existing one.
+
+  • [Points of entry].
+  • [Renaming files].
+
+  The default behaviour of creation or renaming commands such as
+  `denote' or `denote-rename-file' is to not kill the buffer they create
+  or modify at the end of their operation. The idea is to give the user
+  the chance to confirm that everything is in order.
+
+  If this user option is nil (the default), buffers affected by a
+  creation or renaming command are not automatically killed.
+
+  If set to the symbol `on-creation', new notes are automatically
+  killed.
+
+  If set to the symbol `on-rename', renamed notes are automatically
+  killed.
+
+  If set to t, new and renamed notes are killed.
+
+  If a buffer is killed, it is also saved, as if `denote-save-buffers'
+  were t ([The `denote-save-buffers' option]).
+
+  In all cases, if the buffer already existed before the Denote
+  operation it is NOT automatically killed.
+
+
+[Points of entry] See section 3
+
+[Renaming files] See section 4
+
+[The `denote-save-buffers' option] See section 3.1.5
+
+
+3.1.7 The `denote-date-prompt-use-org-read-date' option
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   By default, Denote uses its own simple prompt for date or date+time
@@ -1019,6 +1068,74 @@ Table of Contents
 
   Remember that `denote-region-after-new-note-functions' are not called
   if `denote-region' is used without an active region.
+
+
+3.5.1 A custom `denote-region' that references the source
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The `denote-region' command simply creates a new note and includes the
+  highlighted region’s contents as the initial text of the note ([Create
+  a note with the region’s contents]).  However, users may want a more
+  streamlined workflow where the command is always used to capture
+  quotes from other sources. In this example, we consider “other
+  sources” to come from Emacs EWW buffers (with `M-x eww') or regular
+  files outside the `denote-directory'.
+
+  [ This is a proof-of-concept that does not cover all cases. If anyone
+    wants to use a variation of this, just let me know. ]
+
+  ┌────
+  │ ;; Variant of `my-denote-region' to reference the source
+  │ 
+  │ (defun my-denote-region-get-source-reference ()
+  │   "Get a reference to the source for use with `my-denote-region'.
+  │ The reference is a URL or an Org-formatted link to a file."
+  │   ;; We use a `cond' here because we can extend it to cover move
+  │   ;; cases.
+  │   (cond
+  │    ((derived-mode-p 'eww-mode)
+  │     (plist-get eww-data :url))
+  │    ;; Here we are just assuming an Org format.  We can make this more
+  │    ;; involved, if needed.
+  │    (buffer-file-name
+  │     (format "[[file:%s][%s]]" buffer-file-name (buffer-name)))))
+  │ 
+  │ (defun my-denote-region ()
+  │   "Like `denote-region', but add the context afterwards.
+  │ For how the context is retrieved, see `my-denote-region-get-source-reference'."
+  │   (interactive)
+  │   (let ((context (my-denote-region-get-source-reference)))
+  │     (call-interactively 'denote-region)
+  │     (when context
+  │       (goto-char (point-max))
+  │       (insert "\n")
+  │       (insert context))))
+  │ 
+  │ ;; Add quotes around snippets of text captured with `denote-region' or `my-denote-region'.
+  │ 
+  │ (defun my-denote-region-org-structure-template (beg end)
+  │   "Automatically quote (with Org syntax) the contents of `denote-region'."
+  │   (when (derived-mode-p 'org-mode)
+  │     (goto-char end)
+  │     (insert "#+end_quote\n")
+  │     (goto-char beg)
+  │     (insert "#+begin_quote\n")))
+  │ 
+  │ (add-hook 'denote-region-after-new-note-functions #'my-denote-region-org-structure-template)
+  └────
+
+  With the above in place, calling the `my-denote-region' command does
+  the following:
+
+  • It creates a new note as usual, prompting for the relevant data.
+  • Inserts the contents of the region below the front matter of the new
+    note.
+  • Adds Org-style quotation block markers around the inserted region.
+  • Adds a link to the URL or file from where `my-denote-region' was
+    called.
+
+
+[Create a note with the region’s contents] See section 3.5
 
 
 3.6 Open an existing note or create it if missing
@@ -1548,6 +1665,8 @@ Table of Contents
 
   [Automatically rename Denote buffers].
 
+  [Find duplicate identifiers and put them in a Dired buffer].
+
 
 [The file-naming scheme] See section 5
 
@@ -1556,6 +1675,9 @@ Table of Contents
 [Change the order of file name components] See section 5.1
 
 [Automatically rename Denote buffers] See section 10
+
+[Find duplicate identifiers and put them in a Dired buffer] See section
+4.10
 
 4.1 Rename a single file
 ────────────────────────
@@ -2053,7 +2175,58 @@ Table of Contents
 [The file-naming scheme] See section 5
 
 
-4.10 Faces used by rename commands
+4.10 Find duplicate identifiers and put them in a Dired buffer
+──────────────────────────────────────────────────────────────
+
+  Denote takes care to create unique identifiers, though its mechanism
+  relies on reading the existing identifiers in the `denote-directory'
+  or the current directory. When we are renaming files across different
+  directories, there is a small chance that some files have the same
+  attributes and are thus assigned identical identifiers. If those files
+  ever make it into a consolidated `denote-directory', we will have
+  duplicates, which break the linking mechanism.
+
+  As this is an edge case, we do not include any code to address it in
+  the Denote code base. Though here is a way to find duplicate
+  identifiers inside the current directory:
+
+  ┌────
+  │ (defun my-denote--get-files-in-dir (directory)
+  │   "Return file names in DIRECTORY."
+  │   (directory-files directory :full-paths directory-files-no-dot-files-regexp))
+  │ 
+  │ (defun my-denote--same-identifier-p (file1 file2)
+  │   "Return non-nil if FILE1 and FILE2 have the same identifier."
+  │   (let ((id1 (denote-retrieve-filename-identifier file1))
+  │ 	(id2 (denote-retrieve-filename-identifier file2)))
+  │     (equal id1 id2)))
+  │ 
+  │ (defun my-denote-find-duplicate-identifiers (directory)
+  │   "Find all files in DIRECTORY that need a new identifier."
+  │   (let* ((ids (my-denote--get-files-in-dir directory))
+  │ 	 (unique-ids (seq-uniq ids #'my-denote--same-identifier-p)))
+  │     (seq-difference ids unique-ids #'equal)))
+  │ 
+  │ (defun my-denote-dired-show-duplicate-identifiers (directory)
+  │   "Put duplicate identifiers from DIRECTORY in a dedicated Dired buffer."
+  │   (interactive
+  │    (list
+  │     (read-directory-name "Select DIRECTORY to check for duplicate identifiers: " default-directory)))
+  │   (if-let ((duplicates (my-denote-find-duplicate-identifiers directory)))
+  │       (dired (cons (format "Denote duplicate identifiers" directory) duplicates))
+  │     (message "No duplicates identifiers in `%s'" directory)))
+  └────
+
+  Evaluate this code and then call the command
+  `my-denote-dired-show-duplicate-identifiers'.  If there are
+  duplicates, it will put them in a dedicated Dired buffer.  From there,
+  you can view the file contents as usual, and manually edit the
+  identifiers as you see fit (e.g. edit them one by one, or change to
+  the writable Dired and record a keyboard macro that makes use of a
+  counter to increment by 1—contact me if you need any help).
+
+
+4.11 Faces used by rename commands
 ──────────────────────────────────
 
   These are the faces used by the various Denote rename commands to
@@ -2362,7 +2535,8 @@ section 5.4
   │ 	(keyword . denote-sluggify-keyword)))
   └────
 
-  Follow this principle for all the sluggification functions.
+  Follow this principle for all the sluggification functions ([Custom
+  sluggification to remove non-ASCII characters]).
 
   To access the source code, use either of the following built-in
   methods:
@@ -2387,6 +2561,56 @@ section 5.4
 [Sluggification of file name components] See section 5.2
 
 [The file-naming scheme] See section 5
+
+[Custom sluggification to remove non-ASCII characters] See section 5.3.1
+
+5.3.1 Custom sluggification to remove non-ASCII characters
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  A common use-case for Denote is to rename files such as videos
+  downloaded from the Internet. Sometimes, those files have Unicode
+  characters that (i) not all fonts support and (ii) create all sorts of
+  problems with pattern matching, such as when searching through file
+  names.
+
+  By default, Denote does not remove Unicode characters because users
+  may actually want them (e.g. Latin characters with accents). Those who
+  do, however, wish to keep everything limited to the ASCII range can
+  use the following in their Emacs configuration ([User-defined
+  sluggification of file name components]).
+
+  ┌────
+  │ ;; These are the same as the default Denote sluggification functions,
+  │ ;; except they remove all non-ASCII characters.
+  │ (defun my-denote-sluggify-title (str)
+  │   (downcase
+  │    (denote--slug-hyphenate
+  │     (denote--slug-no-punct
+  │      (denote-slug-keep-only-ascii str)))))
+  │ 
+  │ (defun my-denote-sluggify-signature (str)
+  │   (downcase
+  │    (denote--slug-put-equals
+  │     (denote--slug-no-punct-for-signature
+  │      (denote-slug-keep-only-ascii str)
+  │      "-+"))))
+  │ 
+  │ (defun my-denote-sluggify-keyword (str)
+  │   (downcase
+  │    (replace-regexp-in-string
+  │     "-" ""
+  │     (denote--slug-hyphenate
+  │      (denote--slug-no-punct
+  │       (denote-slug-keep-only-ascii str))))))
+  │ 
+  │ (defcustom denote-file-name-slug-functions
+  │   '((title . my-denote-sluggify-title)
+  │     (signature . my-denote-sluggify-signature)
+  │     (keyword . my-denote-sluggify-keyword)))
+  └────
+
+
+[User-defined sluggification of file name components] See section 5.3
 
 
 5.4 Features of the file-naming scheme for searching or filtering
@@ -3050,6 +3274,9 @@ section 7.3
   │ 62: indifference.  In [[denote:20220614T130812][On being honest]] I alluded
   └────
 
+  The command `denote-backlinks-toggle-context' will toggle between the
+  compact and detailed views inside of the current backlinks buffer.
+
   Note that the width of the lines in the context depends on the
   underlying file.  In the above example, the lines are split at the
   `fill-column'.  Long lines will show up just fine.  Also note that the
@@ -3078,15 +3305,15 @@ section 7.3
   command ([Visiting linked files via the minibuffer]).
 
   The placement of the backlinks’ buffer is subject to the user option
-  `denote-link-backlinks-display-buffer-action'.  Due to the nature of
-  the underlying `display-buffer' mechanism, this inevitably is a
-  relatively advanced feature.  By default, the backlinks’ buffer is
-  displayed below the current window.  The doc string of our user option
-  includes a sample configuration that places the buffer in a left side
-  window instead.  Reproducing it here for the sake of convenience:
+  `denote-backlinks-display-buffer-action'. Due to the nature of the
+  underlying `display-buffer' mechanism, this inevitably is a relatively
+  advanced feature. By default, the backlinks’ buffer is displayed below
+  the current window. The doc string of our user option includes a
+  sample configuration that places the buffer in a left side window
+  instead. Reproducing it here for the sake of convenience:
 
   ┌────
-  │ (setq denote-link-backlinks-display-buffer-action
+  │ (setq denote-backlinks-display-buffer-action
   │       '((display-buffer-reuse-window
   │ 	 display-buffer-in-side-window)
   │ 	(side . left)
@@ -3107,19 +3334,23 @@ backlinks?] See section 23.11
 7.8.1 Backlinks for Org headings
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  The optional `denote-org-extras.el' can produce Denote links to
+  The optional `denote-org-extras.el' can generate Denote links to
   individual headings ([Insert link to an Org file with a further
   pointer to a heading]).  It is then possible to produce a
   corresponding backlinks buffer with the command
   `denote-org-extras-backlinks-for-heading'. The resulting buffer
   behaves the same way as the standard backlinks buffer we provide ([The
-  backlinks’ buffer]).
+  backlinks’ buffer]). An Org dynamic block with backlinks to the
+  current heading is also an option ([Org dynamic blocks to insert links
+  or backlinks]).
 
 
 [Insert link to an Org file with a further pointer to a heading] See
 section 7.3
 
 [The backlinks’ buffer] See section 7.8
+
+[Org dynamic blocks to insert links or backlinks] See section 11.1
 
 
 7.9 Writing metanotes
@@ -3437,7 +3668,8 @@ section 7.3
   • The `%k' is the Denote `KEYWORDS' of the file.
   • The `%b' is an indicator of whether or not the file has backlinks
     pointing to it. The indicator string is defined in the user option
-    `denote-buffer-has-backlinks-string' [ Part of 3.1.0-dev ].
+    `denote-rename-buffer-backlinks-indicator', alias
+    `denote-buffer-has-backlinks-string'.
   • The `%%' is a literal percent sign.
 
   In addition, the following flags are available for each of the
@@ -3468,16 +3700,22 @@ section 7.3
   prefix.  Examples:
 
   ┌────
-  │ ;; Use the title prefixed with the backlink indicator (default)
-  │ (setq denote-rename-buffer-format "%b%t")
+  │ ;; Use a literal [D] prefix, followed by the title and then the
+  │ ;; backlinks indicator (default).
+  │ (setq denote-rename-buffer-format "[D] %t%b")
   │ 
-  │ ;; Customize what the backlink indicator looks like
-  │ (setq denote-buffer-has-backlinks-string "!! ")
+  │ ;; Customize what the backlink indicator looks like.  This two-faced
+  │ ;; arrow is the default.
+  │ (setq denote-rename-buffer-backlinks-indicator  "<-->")
   │ 
-  │ ;; Use the title and keywords with some emoji in between
+  │ ;; Use just the title and keywords with some emoji in between, because
+  │ ;; why not?
   │ (setq denote-rename-buffer-format "%t 🤨 %k")
   │ 
-  │ ;; Use the title with a literal "[D]" before it
+  │ ;; Use the title with a literal "[D]" before it.
+  │ (setq denote-rename-buffer-format "[D] %t")
+  │ 
+  │ ;; As above, but also add the `denote-rename-buffer-backlinks-indicator' at the end.
   │ (setq denote-rename-buffer-format "[D] %t")
   └────
 
@@ -3494,7 +3732,7 @@ section 7.3
   [ As part of version 2.3.0, all dynamic blocks are defined in the file
     `denote-org-extras.el'. The file which was once called
     `denote-org-dblock.el' contains aliases for the new function names
-    and dipslays a warning about its deprecation. There is no need to
+    and displays a warning about its deprecation. There is no need to
     `require' the `denote-org-extras' feature because all of Denote’s
     Org dynamic blocks are autoloaded (meaning that they work as soon as
     they are used). For backward compatibility, all dynamic blocks
@@ -3529,17 +3767,17 @@ section 7.3
 
 [Org dynamic blocks to insert links or backlinks] See section 11.1
 
-[Org dynamic block to insert file contents] See section 11.2
+[Org dynamic block to insert file contents] See section 11.4
 
 [Writing metanotes] See section 7.9
 
-11.1 Org dynamic blocks to insert links or backlinks
-────────────────────────────────────────────────────
+11.1 Org dynamic blocks to insert links
+───────────────────────────────────────
 
   [ As part of version 2.3.0, all dynamic blocks are defined in the file
     `denote-org-extras.el'. The file which was once called
     `denote-org-dblock.el' contains aliases for the new function names
-    and dipslays a warning about its deprecation. There is no need to
+    and displays a warning about its deprecation. There is no need to
     `require' the `denote-org-extras' feature because all of Denote’s
     Org dynamic blocks are autoloaded (meaning that they work as soon as
     they are used). For backward compatibility, all dynamic blocks
@@ -3550,11 +3788,13 @@ section 7.3
   following in an Org file:
 
   ┌────
-  │ #+BEGIN: denote-links :regexp "YOUR REGEXP HERE" :sort-by-component nil :reverse-sort nil :id-only nil
+  │ #+BEGIN: denote-links :regexp "YOUR REGEXP HERE" :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :include-date nil
   │ 
   │ #+END:
   └────
 
+
+  All the parameters except for `:regexp' are optional.
 
   The `denote-links' block is also registered as an option for the
   command `org-dynamic-block-insert-dblock'.
@@ -3573,6 +3813,21 @@ section 7.3
     you do not need to write an actual regular expression to get
     meaningful results: even something like `_journal' will work to
     include all files that have a `journal' keyword.
+
+  • The `:excluded-dirs-regexp' is a string that contains a word or
+    regular expression that matches against directory files names
+    to-be-excluded from the results. This has the same meaning as
+    setting the `denote-excluded-directories-regexp' user option
+    ([Exclude certain directories from all operations]). The user option
+    has a global effect, which is overridden locally in the dynamic
+    block. When the value of `:excluded-dirs-regexp' is nil (the
+    default), the value of `denote-excluded-directories-regexp' is used
+    (which is also nil by default, meaning that all directories are
+    included). When the value of `excluded-dirs-regexp' is `t' or some
+    other symbol, then the `denote-excluded-directories-regexp' is
+    ignored altogether. This is useful in the scenario where the user
+    option is set to exclude some directories but the dynamic blocks
+    wants to lift that restriction.
 
   • The `:sort-by-component' parameter is optional. It sorts the files
     by the given Denote file name component. The value it accepts is an
@@ -3593,52 +3848,109 @@ section 7.3
     with the `denote-link' command and related facilities ([Linking
     notes]).
 
+  • The `:include-date' parameter controls whether to display the date
+    of the file name after the title. This is done when its value is
+    `t'. By default (a nil value), no date is shown.
+
   • An optional `:block-name' parameter can be specified with a string
     value to add a `#+name' to the results. This is useful for further
     processing using Org facilities (a feature that is outside Denote’s
     purview).
 
-  The same as above except for the `:regexp' parameter are true for the
-  `denote-backlinks' block. The block can be inserted at point with the
-  command `denote-org-extras-dblock-insert-backlinks' or by manually
-  writing this in an Org file:
+  In some workflows, users may want to have a separate block to see what
+  other links they are missing since they last updated the dynamic
+  block. We cover that case as well ([The Org dynamic block to insert
+  missing links only]).
+
+
+[Insert links matching a regexp] See section 7.4
+
+[Exclude certain directories from all operations] See section 3.9
+
+[Linking notes] See section 7
+
+[The Org dynamic block to insert missing links only] See section 11.2
+
+
+11.2 The Org dynamic block to insert missing links only
+───────────────────────────────────────────────────────
+
+  The `denote-missing-links' block is available with the command
+  `denote-org-extras-dblock-insert-missing-links'. It is like the
+  aforementioned `denote-links' block, except it only lists links to
+  files that are not present in the current buffer ([Org dynamic blocks
+  to insert links]).  The parameters are otherwise the same and are all
+  optional except for `:regexp':
 
   ┌────
-  │ #+BEGIN: denote-backlinks :sort-by-component nil :reverse-sort nil :id-only nil
+  │ #+BEGIN: denote-missing-links :regexp "YOUR REGEXP HERE" :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :include-date nil
   │ 
   │ #+END:
   └────
 
 
-  Finally, the `denote-missing-links' block is available with the
-  command `denote-org-extras-dblock-insert-missing-links'. It is like
-  the aforementioned `denote-links' block, except it only lists links to
-  files that are not present in the current buffer. The parameters are
-  otherwise the same:
-
-  ┌────
-  │ #+BEGIN: denote-missing-links :regexp "YOUR REGEXP HERE" :sort-by-component nil :reverse-sort nil :id-only nil
-  │ 
-  │ #+END:
-  └────
-
+  The `denote-missing-links' block is also registered as an option for
+  the command `org-dynamic-block-insert-dblock'.
 
   Remember to type `C-c C-x C-u' (`org-dblock-update') with point on the
   `#+BEGIN' line to update the block.
 
 
-[Insert links matching a regexp] See section 7.4
-
-[Linking notes] See section 7
+[Org dynamic blocks to insert links] See section 11.1
 
 
-11.2 Org dynamic block to insert file contents
+11.3 The Org dynamic block to insert backlinks
+──────────────────────────────────────────────
+
+  Apart from links to files matching a regular expression, we can also
+  produce a list of backlinks to the current file. The dynamic block can
+  be inserted at point with the command
+  `denote-org-extras-dblock-insert-backlinks' or by manually writing
+  this in an Org file:
+
+  ┌────
+  │ #+BEGIN: denote-backlinks :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :this-heading-only nil :include-date nil
+  │ 
+  │ #+END:
+  └────
+
+
+  The `denote-backlinks' block is also registered as an option for the
+  command `org-dynamic-block-insert-dblock'.
+
+  Remember to type `C-c C-x C-u' (`org-dblock-update') with point on the
+  `#+BEGIN' line to update the block.
+
+  The parameters recognised by this dynamic block are almost the same as
+  that for inserting links ([Org dynamic blocks to insert links]). They
+  are all optional in this case and there is no parameter expecting a
+  regular expression for matching files to link to.
+
+  Additionally, the `denote-backlinks' block also recognises the
+  `:this-heading-only' parameter. It determines if the backlinks are
+  about the file or the heading under which the dynamic block is
+  inserted ([Backlinks for Org headings]). When this parameter is
+  omitted or nil (the default), then the backlinks are about the whole
+  file, but if this parameter has a `t' value then the backlinks are
+  specifically for the heading ([Insert link to an Org file with a
+  further pointer to a heading]).
+
+
+[Org dynamic blocks to insert links] See section 11.1
+
+[Backlinks for Org headings] See section 7.8.1
+
+[Insert link to an Org file with a further pointer to a heading] See
+section 7.3
+
+
+11.4 Org dynamic block to insert file contents
 ──────────────────────────────────────────────
 
   [ As part of version 2.3.0, all dynamic blocks are defined in the file
     `denote-org-extras.el'. The file which was once called
     `denote-org-dblock.el' contains aliases for the new function names
-    and dipslays a warning about its deprecation. There is no need to
+    and displays a warning about its deprecation. There is no need to
     `require' the `denote-org-extras' feature because all of Denote’s
     Org dynamic blocks are autoloaded (meaning that they work as soon as
     they are used). For backward compatibility, all dynamic blocks
@@ -3662,20 +3974,22 @@ section 7.3
   recalculate the block):
 
   ┌────
-  │ #+BEGIN: denote-files :regexp "YOUR REGEXP HERE"
-  │ 
-  │ #+END:
-  └────
-
-
-  To fully control the output, include these additional optional
-  parameters, which are described further below:
-
-  ┌────
   │ #+BEGIN: denote-files :regexp "YOUR REGEXP HERE" :sort-by-component nil :reverse-sort nil :no-front-matter nil :file-separator nil :add-links nil
   │ 
   │ #+END:
   └────
+
+
+  All parameters are optional except for `:regexp'.
+
+  The `denote-files' block is also registered as an option for the
+  command `org-dynamic-block-insert-dblock'.
+
+  Remember to type `C-c C-x C-u' (`org-dblock-update') with point on the
+  `#+BEGIN' line to update the block.
+
+  To fully control the output, include these additional optional
+  parameters, which are described further below:
 
 
   • The `:regexp' parameter is mandatory. Its value is a string,
@@ -3685,6 +3999,21 @@ section 7.3
     backlinks]).  Note that you do not need to write an actual regular
     expression to get meaningful results: even something like `_journal'
     will work to include all files that have a `journal' keyword.
+
+  • The `:excluded-dirs-regexp' is a string that contains a word or
+    regular expression that matches against directory files names
+    to-be-excluded from the results. This has the same meaning as
+    setting the `denote-excluded-directories-regexp' user option
+    ([Exclude certain directories from all operations]). The user option
+    has a global effect, which is overridden locally in the dynamic
+    block. When the value of `:excluded-dirs-regexp' is nil (the
+    default), the value of `denote-excluded-directories-regexp' is used
+    (which is also nil by default, meaning that all directories are
+    included). When the value of `excluded-dirs-regexp' is `t' or some
+    other symbol, then the `denote-excluded-directories-regexp' is
+    ignored altogether. This is useful in the scenario where the user
+    option is set to exclude some directories but the dynamic blocks
+    wants to lift that restriction.
 
   • The `:sort-by-component' parameter is optional. It sorts the files
     by the given Denote file name component. The value it accepts is an
@@ -3741,6 +4070,105 @@ section 7.3
 
 [Org dynamic blocks to insert links or backlinks] See section 11.1
 
+[Exclude certain directories from all operations] See section 3.9
+
+[Linking notes] See section 7
+
+
+11.5 Org dynamic block to insert Org files as headings
+──────────────────────────────────────────────────────
+
+  [ IMPORTANT NOTE: This dynamic block only works with Org files,
+    because it has to assume the Org notation in order to insert each
+    file’s contents as its own heading. ]
+
+  As a variation of the previously covered block that inserts file
+  contents, we have the
+  `denote-org-extras-dblock-insert-files-as-headings' command ([Org
+  dynamic block to insert file contents]). It Turn the `#+title' of each
+  file into a top-level heading. Then it increments all original
+  headings in the file by one, so that they become subheadings of what
+  once was the `#+title'. Similarly, the `#+filetags' of each file as
+  tags for the top-level heading (what was the `#+title').
+
+  Because of how it is meant to work, this dynamic block only works with
+  Org files.
+
+  In its simplest form, this dynamic block looks like this, with
+  `:regexp' as the only mandatory parameter:
+
+  ┌────
+  │ #+BEGIN: denote-files-as-headings :regexp "YOUR REGEXP HERE"
+  │ 
+  │ #+END:
+  └────
+
+
+  Though when you use the command
+  `denote-org-extras-dblock-insert-files-as-headings' you get all the
+  parameters included:
+
+  ┌────
+  │ #+BEGIN: denote-files-as-headings :regexp "YOUR REGEXP HERE" :excluded-dirs-regexp nil :sort-by-component title :reverse-sort nil :add-links t
+  │ 
+  │ #+END:
+  └────
+
+
+  • The `:regexp' parameter is mandatory. Its value is a string,
+    representing a regular expression to match Denote file names. Its
+    value may also be an `rx' expression instead of a string, as noted
+    in the previous section ([Org dynamic blocks to insert links or
+    backlinks]).  Note that you do not need to write an actual regular
+    expression to get meaningful results: even something like `_journal'
+    will work to include all files that have a `journal' keyword.
+
+  • The `:excluded-dirs-regexp' is a string that contains a word or
+    regular expression that matches against directory files names
+    to-be-excluded from the results. This has the same meaning as
+    setting the `denote-excluded-directories-regexp' user option
+    ([Exclude certain directories from all operations]). The user option
+    has a global effect, which is overridden locally in the dynamic
+    block. When the value of `:excluded-dirs-regexp' is nil (the
+    default), the value of `denote-excluded-directories-regexp' is used
+    (which is also nil by default, meaning that all directories are
+    included). When the value of `excluded-dirs-regexp' is `t' or some
+    other symbol, then the `denote-excluded-directories-regexp' is
+    ignored altogether. This is useful in the scenario where the user
+    option is set to exclude some directories but the dynamic blocks
+    wants to lift that restriction.
+
+  • The `:sort-by-component' parameter is optional. It sorts the files
+    by the given Denote file name component. The value it accepts is an
+    unquoted symbol among `title', `keywords', `signature',
+    `identifier'.  When using the command
+    `denote-org-extras-dblock-insert-files', this parameter is
+    automatically inserted together with the (`:regexp' parameter) and
+    the user is prompted for a file name component.
+
+  • The `:reverse-sort' parameter is optional. It reverses the order in
+    which files appear in. This is meaningful even without the presence
+    of the parameter `:sort-by-component', though it also combines with
+    it.
+
+  • The `:add-links' parameter is optional. When it is set to a `t'
+    value, all the top-level headings (those that were the `#+title' of
+    each file) are generated as links, pointing to the original file.
+    This has the same meaning as with the `denote-link' command and
+    related facilities ([Linking notes]).
+
+  • An optional `:block-name' parameter can be specified with a string
+    value to add a `#+name' to the results. This is useful for further
+    processing using Org facilities (a feature that is outside Denote’s
+    purview).
+
+
+[Org dynamic block to insert file contents] See section 11.4
+
+[Org dynamic blocks to insert links or backlinks] See section 11.1
+
+[Exclude certain directories from all operations] See section 3.9
+
 [Linking notes] See section 7
 
 
@@ -3752,8 +4180,9 @@ section 7.3
   given file name component ([The file-naming scheme]).
 
   The command `denote-sort-dired' produces a Dired file listing with a
-  flat, filtered, and sorted set of files from the `denote-directory'.
-  It does so by means of three minibuffer prompts:
+  flat, filtered, and sorted set of files from the `denote-directory'
+  ([Define a sorting function per component]). It does so by means of
+  three minibuffer prompts:
 
   1. It first asks for a regular expression with which to match Denote
      files. Remember that due to Denote’s efficient file-naming scheme,
@@ -3773,22 +4202,134 @@ section 7.3
   The dynamic Org blocks that Denote defines to insert file contents
   also use this feature ([Org dynamic block to insert file contents]).
 
-  DEVELOPMENT NOTE as of 2023-11-30 07:24 +0200: The sort mechanism will
-  be incorporated in more functions on a case-by-case basis, subject to
-  user feedback. For the time being, I am not documenting the functions
-  that are only accessed from Lisp. Do not hesitate to contact me
-  (Protesilaos) in person or on one of the development sources (mailing
-  list or GitHub/GitLab mirror) if you have a use-case where sorting
-  seems useful. I am happy to help but do not want to roll this feature
-  everywhere before eliciting relevant feedback: once we add it, we are
-  not going back.
+
+[The file-naming scheme] See section 5
+
+[Define a sorting function per component] See section 12.2
+
+[Use `dired-virtual-mode' for arbitrary file listings] See section 15.3
+
+[Org dynamic block to insert file contents] See section 11.4
+
+12.1 Configure what extra prompts `denote-sort-dired' issues
+────────────────────────────────────────────────────────────
+
+  By default, the `denote-sort-dired' command prompts for (i) a query to
+  match file names, (ii) a file name component to sort by, and (iii)
+  whether to reverse the sorting. Users can configure the latter two by
+  modifying the user option `denote-sort-dired-extra-prompts'.
+
+  It accepts either a nil value or a list of symbols among
+  `sort-by-component' and `reverse-sort'. The order those symbols appear
+  in the list is significant, with the leftmost coming first.
+
+  In case of a nil value, those extra prompts will not happen, meaning
+  that `denote-sort-dired' will fall back to using
+  `denote-sort-dired-default-sort-component' and
+  `denote-sort-dired-default-reverse-sort'.
+
+  Here are some examples:
+
+  ┌────
+  │ ;; The default extra prompts...
+  │ (setq denote-sort-dired-extra-prompts '(sort-by-component reverse-sort))
+  │ 
+  │ ;; When using `denote-sort-dired', ask whether to reverse the sort and
+  │ ;; then which file name component to sort by.  These are always done
+  │ ;; after the prompt to search for files matching a regexp.
+  │ (setq denote-sort-dired-extra-prompts '(reverse-sort sort-by-component))
+  │ 
+  │ ;; Do not prompt for a reverse sort.  Just use the value of
+  │ ;; `denote-sort-dired-default-reverse-sort' (which is nil out-of-the-box).
+  │ (setq denote-sort-dired-extra-prompts '(sort-by-component))
+  │ 
+  │ ;; Do not issue any extra prompts.  Always sort by the `title' file
+  │ ;; name component and never do a reverse sort.
+  │ (setq denote-sort-dired-extra-prompts nil)
+  │ (setq denote-sort-dired-default-sort-component 'title)
+  │ (setq denote-sort-dired-default-reverse-sort nil)
+  └────
+
+
+12.2 Define a sorting function per component
+────────────────────────────────────────────
+
+  When sorting by `title', `keywords', or `signature' with the
+  `denote-sort-dired' command, Denote will internally apply a sorting
+  function that is specific to each component. These are subject to user
+  configuration:
+
+  • `denote-sort-title-comparison-function'
+
+  • `denote-sort-keywords-comparison-function'
+
+  • `denote-sort-signature-comparison-function'
+
+  By default, all these user options use the same sorting function,
+  namely `string-collate-lessp'. Users who have specific needs for any
+  of those file name components can write their own sorting algorithms
+  ([Sort signatures that include Luhmann-style sequences]).
+
+
+[Sort signatures that include Luhmann-style sequences] See section
+12.2.1
+
+12.2.1 Sort signatures that include Luhmann-style sequences
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Niklas Luhmann would edit notes to form sequences of thoughts with
+  branching paths, such as `1.1', `1.1a', `1.2', `1.2a', `1.2b', etc.
+  With the Denote file-naming scheme, we make the word separator in each
+  file name component use the same character as the entire field, so
+  words in a title have a dash between them and signatures have the
+  equals sign ([The file-naming scheme]). Thus, our Luhmann-style
+  signature will be slightly different in their looks: `1=1', `1=1a',
+  `1=2', `1=2a', `1=2b'.
+
+  When using the `denote-sort-dired' command with default settings, our
+  signatures will not sort in an intuitive way. This is because they
+  combine numbers and letters, which require a different approach than
+  what the default sorting function is using ([Define a sorting function
+  per component]).  In the following code block, we show a sorting
+  algorithm that should do the right thing while dealing with
+  Luhmann-style signatures.
+
+  ┌────
+  │ (defun my-denote--split-luhman-sig (signature)
+  │   "Split numbers and letters in Luhmann-style SIGNATURE string."
+  │   (replace-regexp-in-string
+  │    "\\([a-zA-Z]+?\\)\\([0-9]\\)" "\\1=\\2"
+  │    (replace-regexp-in-string
+  │     "\\([0-9]+?\\)\\([a-zA-Z]\\)" "\\1=\\2"
+  │     signature)))
+  │ 
+  │ (defun my-denote--pad-sig (signature)
+  │   "Create a new signature with padded spaces for all components"
+  │   (combine-and-quote-strings
+  │    (mapcar
+  │     (lambda (x)
+  │       (string-pad x 5 32 t))
+  │     (split-string (my-denote--split-luhman-sig signature) "=" t))
+  │    "="))
+  │ 
+  │ (defun my-denote-sort-for-signatures (sig1 sig2)
+  │   "Return non-nil if SIG1 is smaller that SIG2.
+  │ Perform the comparison with `string<'."
+  │   (string< (my-denote--pad-sig sig1) (my-denote--pad-sig sig2)))
+  │ 
+  │ ;; Change the sorting function only when we sort by signature.
+  │ (setq denote-sort-signature-comparison-function #'my-denote-sort-for-signatures)
+  └────
+
+  DEVELOPMENT NOTE 2024-08-01 08:27 +0300: If you need to sort in a
+  certain way but do not know how to write the relevant Elisp, please
+  let me know. I am happy to help and we can then include our findings
+  in the manual for the benefit of the community.
 
 
 [The file-naming scheme] See section 5
 
-[Use `dired-virtual-mode' for arbitrary file listings] See section 15.3
-
-[Org dynamic block to insert file contents] See section 11.2
+[Define a sorting function per component] See section 12.2
 
 
 13 Keep a journal or diary
@@ -3890,7 +4431,7 @@ section 7.3
 [Features of the file-naming scheme for searching or filtering] See
 section 5.4
 
-[The `denote-date-prompt-use-org-read-date' option] See section 3.1.6
+[The `denote-date-prompt-use-org-read-date' option] See section 3.1.7
 
 [Journaling with a timer] See section 13.1
 
@@ -4838,7 +5379,7 @@ section 15.14
   │ ;; file names.  This provides a more informative view.
   │ (setq denote-backlinks-show-context t)
   │ 
-  │ ;; Also see `denote-link-backlinks-display-buffer-action' which is a bit
+  │ ;; Also see `denote-backlinks-display-buffer-action' which is a bit
   │ ;; advanced.
   │ 
   │ ;; If you use Markdown or plain text files (Org renders links as buttons
@@ -4965,6 +5506,9 @@ section 15.14
         understanding of what we should be omitting, we will update
         things accordingly.
 
+  Function `denote-identifier-p'
+        Return non-nil if `IDENTIFIER' string is a Denote identifier.
+
   Function `denote-file-is-note-p'
         Return non-nil if `FILE' is an actual Denote note. For our
         purposes, a note must satisfy `file-regular-p' and
@@ -5071,8 +5615,14 @@ section 15.14
   Function `denote-get-path-by-id'
         Return absolute path of `ID' string in `denote-directory-files'.
 
-  Function `denote-barf-duplicate-id'
-        Throw a `user-error' if `IDENTIFIER' already exists.
+  Function `denote-get-identifier-at-point'
+        Return the identifier at point or `POINT'.
+
+  Function `denote-slug-keep-only-ascii'
+        Remove all non-ASCII characters from `STR' and replace them with
+        spaces. This is useful as a helper function to construct
+        `denote-file-name-slug-functions' ([Custom sluggification to
+        remove non-ASCII characters]).
 
   Function `denote-sluggify'
         Make `STR' an appropriate slug for file name `COMPONENT'
@@ -5578,11 +6128,13 @@ section 15.14
 
 [Maintain separate directories for notes] See section 3.7
 
+[Custom sluggification to remove non-ASCII characters] See section 5.3.1
+
 [Sluggification of file name components] See section 5.2
 
 [The `denote-history-completion-in-prompts' option] See section 3.1.2
 
-[The denote-date-prompt-use-org-read-date option] See section 3.1.6
+[The denote-date-prompt-use-org-read-date option] See section 3.1.7
 
 [Points of entry] See section 3
 
@@ -6345,25 +6897,27 @@ section 15.14
         Behrnd, Peter Prevos, Philip Kaludercic, Quiliro Ordóñez,
         Stephen R. Kifer, Stefan Monnier, Stefan Thesing, Thibaut
         Benjamin, Tomasz Hołubowicz, Vedang Manerikar, Wesley Harvey,
-        Zhenxu Xu, arsaber101, ezchi, jarofromel, leinfink (Henrik),
-        l-o-l-h (Lincoln), mattyonweb, maxbrieiev, mentalisttraceur,
-        pmenair, relict007, skissue.
+        Zhenxu Xu, arsaber101, bryanrinders, ezchi, jarofromel, leinfink
+        (Henrik), l-o-l-h (Lincoln), mattyonweb, maxbrieiev,
+        mentalisttraceur, pmenair, relict007, skissue.
 
   Ideas and/or user feedback
         Abin Simon, Aditya Yadav, Alan Schmitt, Aleksandr Vityazev, Alex
-        Hirschfeld, Alexis Purslane, Alfredo Borrás, Ashton Wiersdorf,
-        Benjamin Kästner, Claudiu Tănăselia, Colin McLear, Damien
-        Cassou, Elias Storms, Federico Stilman, Florian, Frédéric Willem
-        Frank Ehmsen, Glenna D., Guo Yong, Hanspeter Gisler Harold
-        Ollivier, Jack Baty, Jay Rajput, Jean-Charles Bagneris, Jens
-        Östlund, Jeremy Friesen, Jonathan Sahar, Johan Bolmsjö,
-        Jousimies, Juanjo Presa, Julian Hoch, Kai von Fintel, Kaushal
-        Modi, Kolmas, M. Hadi Timachi, Maikol Solis, Mark Olson, Mirko
-        Hernandez, Niall Dooley, Nick Bell, Paul van Gelder, Peter
-        Prevos, Peter Smith, Samuel W. Flint, Suhail Singh, Shreyas
-        Ragavan, Stefan Thesing, Summer Emacs, Sven Seebeck, Taoufik, TJ
-        Stankus, Vick (VicZz), Viktor Haag, Wade Mealing, Yi Liu, Ypot,
-        atanasj, azegas, babusri, doolio, duli, drcxd, elge70,
+        Hirschfeld, Alexis Purslane, Alfredo Borrás, Alp Eren Kose,
+        Ashton Wiersdorf, Benjamin Kästner, Claudio Migliorelli, Claudiu
+        Tănăselia, Colin McLear, Damien Cassou, Elias Storms, Federico
+        Stilman, Florian, Frédéric Willem Frank Ehmsen, Glenna D., Guo
+        Yong, Hanspeter Gisler Harold Ollivier, Jack Baty, Jay Rajput,
+        Jean-Charles Bagneris, Jens Östlund, Jeremy Friesen, Jonathan
+        Sahar, Johan Bolmsjö, Jonas Großekathöfer, Jousimies, Juanjo
+        Presa, Julian Hoch, Kai von Fintel, Kaushal Modi, Kolmas,
+        M. Hadi Timachi, Maikol Solis, Mark Olson, Mirko Hernandez,
+        Niall Dooley, Nick Bell, Paul van Gelder, Peter Prevos, Peter
+        Smith, Riccardo Giannitrapani, Samuel W. Flint, Sergio Rey,
+        Suhail Singh, Shreyas Ragavan, Stefan Thesing, Summer Emacs,
+        Sven Seebeck, Taoufik, TJ Stankus, Vick (VicZz), Viktor Haag,
+        Vineet C. Kulkarni, Wade Mealing, Yi Liu, Ypot, atanasj, azegas,
+        babusri, coherentstate, doolio, duli, drcxd, elge70,
         fingerknight, hpgisler, mentalisttraceur, pRot0ta1p, rbenit68,
         relict007, sienic, skissue, sundar bp, yetanotherfossman,
         zadca123
