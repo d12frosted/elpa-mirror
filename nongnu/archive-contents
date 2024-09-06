@@ -1032,11 +1032,11 @@
 	       ("Jonas Bernoulli" . "emacs.git-modes@jonas.bernoulli.dev"))
 	      (:commit . "f99010bbeb8b6d8a0819fac0195a2ef0159d08f0"))])
  (gnosis .
-	 [(0 4 1)
+	 [(0 4 2)
 	  ((emacs
 	    (27 2))
 	   (emacsql
-	    (4 0 0))
+	    (4 0 1))
 	   (compat
 	    (29 1 4 2))
 	   (transient
@@ -1047,7 +1047,7 @@
 	   (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
 	   (:authors
 	    ("Thanos Apollo" . "public@thanosapollo.org"))
-	   (:commit . "4fe415d70277046f6b81a00e8e012634e4f0ac05"))])
+	   (:commit . "d034335bde30c7873768bfbbae531a704d011245"))])
  (gnu-apl-mode .
 	       [(1 5 1)
 		nil "Emacs mode for GNU APL" tar
@@ -2249,7 +2249,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:commit . "d5e48886f4472a644c1c406dd8994b357abd15d8"))])
  (sweeprolog .
-	     [(0 27 5)
+	     [(0 27 6)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2260,7 +2260,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "d8ea9790b40d74f444ff147f7b98f2023ef2e61a"))])
+	       (:commit . "bd31199a34c0619b346954f25875fcb7239e2b86"))])
  (swift-mode .
 	     [(9 1 0)
 	      ((emacs
