@@ -16,8 +16,8 @@ more to be experienced than explained.
 
 Compared to other systems:
 
-- org-roam: Same idea, compatible disk format(!), but org-node is much
-  faster, does not depend on SQLite, lets you opt out of file-level property
+- org-roam: Same idea, compatible disk format(!), but org-node is faster,
+  does not depend on SQLite, lets you opt out of file-level property
   drawers, does not support "roam:" links, and tries to rely in a bare-metal
   way on upstream org-id and org-capture.  As a drawback, if a heading in
   some Git README has an ID, it's considered part of your collection --
