@@ -437,6 +437,14 @@ Important change in v1.0.0
   using generic functions such as `subed-jump-to-subtitle-id'.
 
 
+Testing
+───────
+
+  You'll need to install the `buttercup' and `package-lint' Emacs
+  packages. You'll also need `GNU Make' so that you can work with
+  Makefiles. To run the tests, use the command `make test'.
+
+
 Contributions
 ─────────────
 
