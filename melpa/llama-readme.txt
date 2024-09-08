@@ -21,6 +21,7 @@ their names have to begin with `&'.  Symbol `&*' specifies extra
 Instead of `%1', the shorthand `%' can be used; but that should
 only be done if it is the only argument, and using both `%1' and
 `%' is not allowed.  Likewise `&' can be substituted for `&1'.
+Both shorthands cannot be used in function position.
 
 Instead of:
 

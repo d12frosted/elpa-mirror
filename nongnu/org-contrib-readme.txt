@@ -55,6 +55,8 @@ from <https://elpa.nongnu.org/nongnu/>.
   If a file has a "Homepage:" keyword, it will be removed from the next
   minor or major release.
 
+  • `ox-taskjuggler.el'
+
 
 5 Other files
 ═════════════
@@ -80,10 +82,6 @@ from <https://elpa.nongnu.org/nongnu/>.
         Measuring your personal effectiveness
   org-eldoc.el
         Eldoc documentation for SRC blocks
-  org-eval.el
-        The <lisp> tag, adapted from Muse
-  org-eval-light.el
-        Evaluate in-buffer code on demand
   org-expiry.el
         Expiry mechanism for Org entries
   org-git-link.el
@@ -110,8 +108,6 @@ from <https://elpa.nongnu.org/nongnu/>.
         Take and manage screenshots in Org-mode files
   org-secretary.el
         Team management with org-mode
-  org-static-mathjax.el
-        Muse-like tags in Org-mode
   org-sudoku.el
         Create and solve SUDOKU puzzles in Org tables
   org-toc.el
@@ -139,8 +135,6 @@ from <https://elpa.nongnu.org/nongnu/>.
         Groff exporter
   ox-s5.el
         S5 presentations exporter
-  ox-taskjuggler.el
-        TaskJuggler exporter
 
 
 5.3 Org link
@@ -165,10 +159,6 @@ from <https://elpa.nongnu.org/nongnu/>.
 
   ob-abc.el
         Org-mode Babel Functions for ABC
-  ob-asymptote.el
-        Org-mode Babel Functions for Asymptote
-  ob-coq.el
-        Org-mode Babel Functions for Coq
   ob-csharp.el
         Org-mode Babel Functions for csharp evaluation
   ob-ebnf.el
