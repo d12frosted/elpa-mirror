@@ -8,6 +8,6 @@ to locations.  Furthermore the package provides commands to measure
 distances, search for locations by name and to open and display GPX
 tracks.
 
-osm.el requires Emacs 27 and depends on the external `curl' program.
+osm.el requires Emacs 28 and depends on the external `curl' program.
 Emacs must be built with libxml, libjansson, librsvg, libjpeg and
 libpng support.

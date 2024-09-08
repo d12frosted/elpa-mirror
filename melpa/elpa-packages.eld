@@ -499,6 +499,7 @@
   (casual-lib :url "https://github.com/kickingvegas/casual-lib.git")
   (casual-re-builder :url "https://github.com/kickingvegas/casual-re-builder.git")
   (casual-suite :url "https://github.com/kickingvegas/casual-suite.git")
+  (casual-symbol-overlay :url "https://github.com/kickingvegas/casual-symbol-overlay.git")
   (catmacs :url "https://bitbucket.org/pymaximus/catmacs")
   (catppuccin-theme :url "https://github.com/catppuccin/emacs.git")
   (cats :url "https://github.com/Fuco1/emacs-cats.git")
