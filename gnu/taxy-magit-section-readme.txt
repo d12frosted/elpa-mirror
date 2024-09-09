@@ -30,7 +30,27 @@ This library renders [Taxy] structs with [magit-section].
 2 Changelog
 ═══════════
 
-2.1 0.14
+2.1 0.14.1
+──────────
+
+  *Fixes*
+  ⁃ Don't pass string as `ELLIPSIS' argument to
+    `truncate-string-to-width'; pass t, which defaults to value of
+    variable `truncate-string-ellipsis'.  (The width of the string
+    passed before, the U+2026 HORIZONTAL ELLIPSIS character, varies by
+    font, and fonts which display it with a width different than that of
+    a single space cause misalignment of columns.  Now users may specify
+    the ellipsis string according to their needs.)
+  ⁃ Try to find a graphical frame when calculating image widths for
+    column widths (or signal an error if none are available, rather than
+    leaving `image-size' to signal an error).  (For example, if both
+    graphical and text frames are available, and a column's values
+    contain an image, and the buffer is being redisplayed on a text
+    frame, try to use a graphical frame for calculating the image width,
+    rather than just signaling an error.)
+
+
+2.2 0.14
 ────────
 
   *Fixes*
@@ -38,7 +58,7 @@ This library renders [Taxy] structs with [magit-section].
     byte-compiler warnings.
 
 
-2.2 0.13
+2.3 0.13
 ────────
 
   *Additions*
@@ -50,28 +70,28 @@ This library renders [Taxy] structs with [magit-section].
     allows section visibility to be cached concisely.
 
 
-2.3 0.12.2
+2.4 0.12.2
 ──────────
 
   *Fixes*
   ⁃ Header alignment.
 
 
-2.4 0.12.1
+2.5 0.12.1
 ──────────
 
   *Fixes*
   ⁃ Compilation error.
 
 
-2.5 0.12
+2.6 0.12
 ────────
 
   *Fixes*
   ⁃ Section visibility caching.
 
 
-2.6 0.11
+2.7 0.11
 ────────
 
   *Additions*
@@ -79,14 +99,14 @@ This library renders [Taxy] structs with [magit-section].
     value can be viewed.
 
 
-2.7 0.10
+2.8 0.10
 ────────
 
   *Fixes*
   ⁃ Require package `taxy' in package headers.
 
 
-2.8 0.9.1
+2.9 0.9.1
 ─────────
 
   *Fixes*
@@ -97,8 +117,8 @@ This library renders [Taxy] structs with [magit-section].
     items' values.
 
 
-2.9 0.9
-───────
+2.10 0.9
+────────
 
   ⁃ `taxy-magit-section' moved to separate package.
   ⁃ Better align columns whose values are images.
