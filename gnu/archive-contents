@@ -3882,6 +3882,17 @@
 	       ("Eric Schulte" . "schulte.eric@gmail.com"))
 	      (:url . "https://elpa.gnu.org/packages/shen-mode.html")
 	      (:commit . "df28df31317188a6d87c9df93444543ace4f7f4f"))])
+ (show-font .
+	    [(0 1 1)
+	     ((emacs
+	       (28 1)))
+	     "Show font features in a buffer" tar
+	     ((:url . "https://github.com/protesilaos/show-font")
+	      (:keywords "convenience" "writing" "font")
+	      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	      (:authors
+	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
+	      (:commit . "0f46562e42a4cc7f2546392360debed724be87e0"))])
  (sisu-mode .
 	    [(7 1 8)
 	     nil "Major mode for SiSU markup text" tar

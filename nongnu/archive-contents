@@ -1281,27 +1281,29 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/htmlize.html")
 	    (:commit . "7b63aa058c3dd0d9f8c07706cd8bb4e56aaa1fb3"))])
  (hyperdrive .
-	     [(0 3)
+	     [(0 4)
 	      ((emacs
 		(28 1))
 	       (map
 		(3 0))
 	       (compat
-		(29 1 4 0))
+		(30 0 0 0))
+	       (org
+		(9 7 6))
 	       (plz
-		(0 7))
+		(0 9 1))
 	       (persist
-		(0 5))
+		(0 6 1))
 	       (taxy-magit-section
-		(0 12 1))
+		(0 14))
 	       (transient
-		(0 5 0)))
+		(0 7 4)))
 	      "P2P filesystem" tar
 	      ((:url . "https://git.sr.ht/~ushin/hyperdrive.el")
 	       (:maintainer "Joseph Turner" . "~ushin/ushin@lists.sr.ht")
 	       (:authors
 		("Joseph Turner" . "joseph@ushin.org"))
-	       (:commit . "38d9b17dc0eefab1c31124d8aae3728372535e70"))])
+	       (:commit . "aee81766c8f3415a31b539a30f4295899688b2d1"))])
  (idle-highlight-mode .
 		      [(1 1 4)
 		       ((emacs
