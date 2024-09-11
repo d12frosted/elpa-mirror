@@ -1,0 +1,22 @@
+Package: starhugger
+Fetcher: gitlab
+Source:  https://gitlab.com/daanturo/starhugger.el.git
+
+Updating /mnt/store/melpa/working/starhugger/
+Checking out 22eceb806947edc1ad35e10fb99bdfc65fe26ca3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/starhugger/
+  to /tmp/starhuggerJxQlSh/starhugger-20240731.347
+    starhugger-grep-context.el -> starhugger-grep-context.el
+    starhugger.el -> starhugger.el
+    starhugger-grep-context-process.py -> starhugger-grep-context-process.py
+Created starhugger-20240731.347.tar containing:
+  starhugger-20240731.347/
+  starhugger-20240731.347/starhugger-grep-context-process.py
+  starhugger-20240731.347/starhugger-grep-context.el
+  starhugger-20240731.347/starhugger-pkg.el
+  starhugger-20240731.347/starhugger.el
+ ✓ Success:
+  2024-09-11T03:31:55+0000  starhugger-20240731.347.entry
+  2024-09-11T03:31:55+0000  starhugger-20240731.347.tar
+Built starhugger in 2.827s, finished at 2024-09-11T03:31:55+0000
