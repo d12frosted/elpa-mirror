@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-rustic/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
-Checking out d765680373234a6c231acf20c76b07422afcfdf9
+Checking out b6a75c7653b6c44d979ef60ca675b07ecaa6bf7f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rustic/
-  to /tmp/rusticp3Ao9c/rustic-20240823.1611
+  to /tmp/rusticvBdP0G/rustic-20240912.225
     rustic-babel.el -> rustic-babel.el
     rustic-cargo.el -> rustic-cargo.el
     rustic-clippy.el -> rustic-clippy.el
@@ -23,26 +23,28 @@ Copying files (->) and directories (=>)
     rustic-rustfmt.el -> rustic-rustfmt.el
     rustic-spellcheck.el -> rustic-spellcheck.el
     rustic.el -> rustic.el
-Created rustic-20240823.1611.tar containing:
-  rustic-20240823.1611/
-  rustic-20240823.1611/rustic-babel.el
-  rustic-20240823.1611/rustic-cargo.el
-  rustic-20240823.1611/rustic-clippy.el
-  rustic-20240823.1611/rustic-comint.el
-  rustic-20240823.1611/rustic-compile.el
-  rustic-20240823.1611/rustic-doc.el
-  rustic-20240823.1611/rustic-expand.el
-  rustic-20240823.1611/rustic-flycheck.el
-  rustic-20240823.1611/rustic-interaction.el
-  rustic-20240823.1611/rustic-lsp.el
-  rustic-20240823.1611/rustic-pkg.el
-  rustic-20240823.1611/rustic-playground.el
-  rustic-20240823.1611/rustic-popup.el
-  rustic-20240823.1611/rustic-rustfix.el
-  rustic-20240823.1611/rustic-rustfmt.el
-  rustic-20240823.1611/rustic-spellcheck.el
-  rustic-20240823.1611/rustic.el
+Created rustic-20240912.225.tar containing:
+  rustic-20240912.225/
+  rustic-20240912.225/rustic-babel.el
+  rustic-20240912.225/rustic-cargo.el
+  rustic-20240912.225/rustic-clippy.el
+  rustic-20240912.225/rustic-comint.el
+  rustic-20240912.225/rustic-compile.el
+  rustic-20240912.225/rustic-doc.el
+  rustic-20240912.225/rustic-expand.el
+  rustic-20240912.225/rustic-flycheck.el
+  rustic-20240912.225/rustic-interaction.el
+  rustic-20240912.225/rustic-lsp.el
+  rustic-20240912.225/rustic-pkg.el
+  rustic-20240912.225/rustic-playground.el
+  rustic-20240912.225/rustic-popup.el
+  rustic-20240912.225/rustic-rustfix.el
+  rustic-20240912.225/rustic-rustfmt.el
+  rustic-20240912.225/rustic-spellcheck.el
+  rustic-20240912.225/rustic.el
  ✓ Success:
-  2024-09-11T22:44:22+0000  rustic-20240823.1611.entry
-  2024-09-11T22:44:22+0000  rustic-20240823.1611.tar
-Built rustic in 2.539s, finished at 2024-09-11T22:44:23+0000
+  2024-09-12T02:13:34+0000  rustic-20240823.1611.entry
+  2024-09-12T02:13:34+0000  rustic-20240823.1611.tar
+  2024-09-12T03:56:21+0000  rustic-20240912.225.entry
+  2024-09-12T03:56:21+0000  rustic-20240912.225.tar
+Built rustic in 2.664s, finished at 2024-09-12T03:56:22+0000
