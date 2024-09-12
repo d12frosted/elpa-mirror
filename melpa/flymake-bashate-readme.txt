@@ -1,4 +1,4 @@
-The flymake-bashate provides a Flymake backend for the bashate, a style
+The flymake-bashate package provides a Flymake backend for bashate, a style
 checker for Bash shell scripts.
 
 (Bashate is a Bash script syntax checker, enforcing a set of style and syntax
