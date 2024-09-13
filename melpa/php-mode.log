@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-php/php-mode.git
 
 Updating /mnt/store/melpa/working/php-mode/
-Checking out 84e6828751685749fcd11729e5e6109aa21bec5d
+Checking out 3e8113c72a454f0f87a1593c22578b894549c53b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-modeJpvDyu/php-mode-20240911.1855
+  to /tmp/php-modenVhHdU/php-mode-20240912.2234
   ! lisp/php-align.el -> php-align.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-defs.el -> php-defs.el
@@ -20,23 +20,25 @@ Copying files (->) and directories (=>)
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
   ! lisp/php.el -> php.el
-Created php-mode-20240911.1855.tar containing:
-  php-mode-20240911.1855/
-  php-mode-20240911.1855/php-align.el
-  php-mode-20240911.1855/php-complete.el
-  php-mode-20240911.1855/php-defs.el
-  php-mode-20240911.1855/php-face.el
-  php-mode-20240911.1855/php-flymake.el
-  php-mode-20240911.1855/php-format.el
-  php-mode-20240911.1855/php-ide-phpactor.el
-  php-mode-20240911.1855/php-ide.el
-  php-mode-20240911.1855/php-local-manual.el
-  php-mode-20240911.1855/php-mode-debug.el
-  php-mode-20240911.1855/php-mode-pkg.el
-  php-mode-20240911.1855/php-mode.el
-  php-mode-20240911.1855/php-project.el
-  php-mode-20240911.1855/php.el
+Created php-mode-20240912.2234.tar containing:
+  php-mode-20240912.2234/
+  php-mode-20240912.2234/php-align.el
+  php-mode-20240912.2234/php-complete.el
+  php-mode-20240912.2234/php-defs.el
+  php-mode-20240912.2234/php-face.el
+  php-mode-20240912.2234/php-flymake.el
+  php-mode-20240912.2234/php-format.el
+  php-mode-20240912.2234/php-ide-phpactor.el
+  php-mode-20240912.2234/php-ide.el
+  php-mode-20240912.2234/php-local-manual.el
+  php-mode-20240912.2234/php-mode-debug.el
+  php-mode-20240912.2234/php-mode-pkg.el
+  php-mode-20240912.2234/php-mode.el
+  php-mode-20240912.2234/php-project.el
+  php-mode-20240912.2234/php.el
  ✓ Success:
-  2024-09-12T19:25:18+0000  php-mode-20240911.1855.entry
-  2024-09-12T19:25:18+0000  php-mode-20240911.1855.tar
-Built php-mode in 2.951s, finished at 2024-09-12T19:25:19+0000
+  2024-09-12T21:09:24+0000  php-mode-20240911.1855.entry
+  2024-09-12T21:09:24+0000  php-mode-20240911.1855.tar
+  2024-09-12T22:52:50+0000  php-mode-20240912.2234.entry
+  2024-09-12T22:52:50+0000  php-mode-20240912.2234.tar
+Built php-mode in 5.052s, finished at 2024-09-12T22:52:51+0000

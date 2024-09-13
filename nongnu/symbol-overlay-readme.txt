@@ -31,7 +31,7 @@ Toggle overlays to be showed in buffer or only in scope:
 `symbol-overlay-toggle-in-scope'
 Jump back to the position before a recent jump: `symbol-overlay-echo-mark'
 Jump to the definition of symbol at point: `symbol-overlay-jump-to-definition'
-Isearch symbol at point literally, without `regexp-quote' the symbol:
+Isearch symbol at point literally:
 `symbol-overlay-isearch-literally'
 Query replace symbol at point: `symbol-overlay-query-replace'
 Rename symbol at point on all its occurrences: `symbol-overlay-rename'

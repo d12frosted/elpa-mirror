@@ -2280,16 +2280,18 @@
 		("Arthur Evstifeev" . "lod@pisem.net"))
 	       (:commit . "e58417ec871d260fe47183ffe4b7e47ac09bc682"))])
  (symbol-overlay .
-		 [(4 1)
+		 [(4 2)
 		  ((emacs
-		    (24 3)))
+		    (24 3))
+		   (seq
+		    (2 2)))
 		  "Highlight symbols with keymap-enabled overlays" tar
 		  ((:url . "https://github.com/wolray/symbol-overlay/")
 		   (:keywords "faces" "matching")
 		   (:maintainer "wolray" . "wolray@foxmail.com")
 		   (:authors
 		    ("wolray" . "wolray@foxmail.com"))
-		   (:commit . "d1464042783e252f5cac1fcac82fee16fc3534db"))])
+		   (:commit . "8891c43ad4c5ceaacd5af4589abf3e76d01921f9"))])
  (systemd .
 	  [(1 6 1)
 	   ((emacs
