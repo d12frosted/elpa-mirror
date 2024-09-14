@@ -26,7 +26,7 @@ To toggle smooth scrolling feature, just type:
 while smooth scrolling feature is enabled, the string "SScr" will
 be displayed on mode line.
 
-Also check out the customization group
+Also check out the customization group by:
 
   `M-x customize-group RET smooth-scroll RET'
 

@@ -1,36 +1,36 @@
-	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-	     CURSORY.EL: MANAGE CURSOR STYLES USING PRESETS
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+             CURSORY.EL: MANAGE CURSOR STYLES USING PRESETS
 
-			  Protesilaos Stavrou
-			  info@protesilaos.com
-	    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          Protesilaos Stavrou
+                          info@protesilaos.com
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 This manual, written by Protesilaos Stavrou, describes the customization
 options for `cursory' (or `cursory.el'), and provides every other piece
 of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.0.0,
-released on 2023-06-09.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.1.0,
+released on 2024-09-14.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.1.0-dev.
+Current development target is 1.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `cursory'
 ⁃ Official manual: <https://protesilaos.com/emacs/cursory>
 ⁃ Change log: <https://protesilaos.com/emacs/cursory-changelog>
-⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/cursory>
-  • Mirrors:
-    ⁃ GitHub: <https://github.com/protesilaos/cursory>
-    ⁃ GitLab: <https://gitlab.com/protesilaos/cursory>
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/cursory>
-⁃ Backronym: Cursor Usability Requires Styles Objectively Rated Yearlong
+⁃ Git repositories:
+  ⁃ GitHub: <https://github.com/protesilaos/cursory>
+  ⁃ GitLab: <https://gitlab.com/protesilaos/cursory>
+⁃ Backronym: Cursor Usability Requires Styles Objectively Rated
+  Yearlong.
 
 Table of Contents
 ─────────────────
 
 1. COPYING
 2. Overview
+.. 1. Example hooks after setting a preset
 3. Installation
 .. 1. GNU ELPA package
 .. 2. Manual installation
@@ -47,7 +47,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2023 Free Software Foundation, Inc.
+  Copyright (C) 2022-2024 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -77,6 +77,11 @@ Table of Contents
   `cursory-set-preset' is applies one among them.  The command supports
   minibuffer completion when there are multiple presets, else sets the
   single preset outright.
+
+  The `cursory-set-preset' comman calls the `cursory-set-preset-hook' as
+  its final step. Use this to run other functions after changing the
+  cursor ([Example hooks after setting a preset]). The variable
+  `cursory-last-selected-preset' may prove useful.
 
   Presets consist of an arbitrary symbol broadly described the style set
   followed by a list of properties that govern the cursor type in the
@@ -195,8 +200,39 @@ Table of Contents
 
   [Sample configuration].
 
+  Instead of manually storing the latest Cursory preset, users can
+  enable the `cursory-mode'. It arranges to track the latest preset each
+  time after using `cursory-set-preset' or Emacs is closed.
+
+
+[Example hooks after setting a preset] See section 2.1
 
 [Sample configuration] See section 4
+
+2.1 Example hooks after setting a preset
+────────────────────────────────────────
+
+  The `cursory-set-preset-hook' is a normal hook (where functions are
+  invoked without any arguments), which is called after the command
+  `cursory-set-preset'. Here are some ideas on how to use it:
+
+  ┌────
+  │ ;; Imagine you have a preset where you want minimal cursor styles.
+  │ ;; You call this `focus' and want when you switch to it to change the
+  │ ;; cursor color.
+  │ (defun my-cursory-change-color ()
+  │ "Change to a subtle color when the `focus' Cursory preset is selected."
+  │   (if (eq cursory-last-selected-preset 'focus)
+  │       (set-face-background 'cursor "#999999")
+  │     (face-spec-recalc 'cursor nil)))
+  │ 
+  │ (defun my-cursory-change-color-disable-line-numbers ()
+  │   "Disable line numbers if the Cursory preset is `presentation' or `focus'."
+  │   (when (member cursory-last-selected-preset '(presentation focus))
+  │     (display-line-numbers-mode -1)))
+  └────
+
+  I am happy to include more examples here, if users have any questions.
 
 
 3 Installation
@@ -241,7 +277,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "cursory"
-  │ git clone https://git.sr.ht/~protesilaos/cursory cursory
+  │ git clone https://github.com/protesilaos/cursory cursory
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
@@ -270,8 +306,8 @@ Table of Contents
   │ ;; Set last preset or fall back to desired style from `cursory-presets'.
   │ (cursory-set-preset (or (cursory-restore-latest-preset) 'bar))
   │ 
-  │ ;; The other side of `cursory-restore-latest-preset'.
-  │ (add-hook 'kill-emacs-hook #'cursory-store-latest-preset)
+  │ ;; Arrange to keep track of the latest Cursory preset.
+  │ (cursory-mode 1)
   │ 
   │ ;; We have to use the "point" mnemonic, because C-c c is often the
   │ ;; suggested binding for `org-capture'.
