@@ -5,11 +5,8 @@ These keyword variables are available:
 `morlock-el-font-lock-keywords' expressions that aren't
     covered by the default keywords.
 `morlock-op-font-lock-keywords' expressions that would be
-    operators in other languages: `or', `xor', `and' and `not'.
-`morlock-cl-font-lock-keywords' expressions that used to be
-    covered by the default keywords but aren't anymore since
-    the `cl-' prefix was added.
-`morlock-font-lock-keywords' combines the above three.
+    operators in other languages: `xor', `not' and `null'.
+`morlock-font-lock-keywords' combines the above two.
 
 To use `morlock-font-lock-keywords' in `emacs-lisp-mode' and
 `lisp-interaction-mode' enable `global-morlock-mode'.
