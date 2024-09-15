@@ -1968,7 +1968,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 11 16)
+	  [(0 11 17)
 	   ((emacs
 	     (26 1))
 	    (seq
@@ -1981,7 +1981,7 @@
 	    (:maintainer "Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com")
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
-	    (:commit . "bb41986d49870c80a53903891648175d2dbb4ff3"))])
+	    (:commit . "a9628d29f642f6ea8f1ed2c0778b3e8073fff867"))])
  (greenbar .
 	   [(1 1)
 	    nil "Mark comint output with \"greenbar\" background" tar
@@ -3274,7 +3274,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
  (phpinspect .
-	     [(2 0 1)
+	     [(2 1 0)
 	      ((compat
 		(29)))
 	      "PHP parsing and code intelligence package" tar
@@ -3283,7 +3283,7 @@
 	       (:maintainer "Hugo Thunnissen" . "devel@hugot.nl")
 	       (:authors
 		("Hugo Thunnissen" . "devel@hugot.nl"))
-	       (:commit . "7d75e95355a04a2b3c26c3be43ff40eb4f28fd65"))])
+	       (:commit . "1cdfd9aaf6fee003554d3c7832224455ddd9eaa1"))])
  (phps-mode .
 	    [(0 4 49)
 	     ((emacs
