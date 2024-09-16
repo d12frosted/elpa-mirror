@@ -4,15 +4,16 @@ Source:  https://github.com/webframp/sicp-info.git
 
 Updating /mnt/store/melpa/working/sicp/
 Checking out 552b44fd873b5cadde4e76d10cef4d6e21a4287a
+Warning: sicp :files spec is equivalent to the default
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sicp/
-  to /tmp/sicpPWyVKe/sicp-20240826.1844
+  to /tmp/sicphKuF87/sicp-20240826.1844
     sicp.el -> sicp.el
     dir -> dir
     sicp.info -> sicp.info
     sicp.texi -> sicp.texi
 Generating sicp.info
-Command `makeinfo --no-split sicp.texi -o /tmp/sicpPWyVKe/sicp-20240826.1844/sicp.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split sicp.texi -o /tmp/sicphKuF87/sicp-20240826.1844/sicp.info' exited with non-zero exit-code: 1
 sicp.texi:55: unknown command `setshortcontentsaftertitlepage'
 sicp.texi:59: @sp arg must be numeric, not `0.5'
 sicp.texi:61: @sp arg must be numeric, not `0.2'
@@ -359,7 +360,7 @@ sicp.texi:31905: warning: @cindex should only appear at the beginning of a line 
 sicp.texi:33257: warning: @cindex should only appear at the beginning of a line (possibly involving @newterm)
 sicp.texi:33287: warning: @cindex should only appear at the beginning of a line (possibly involving @newterm)
 
-Error: (error "Command `makeinfo --no-split sicp.texi -o /tmp/sicpPWyVKe/sicp-20240826.1844/sicp.info' exited with non-zero exit-code: 1")
+Error: (error "Command `makeinfo --no-split sicp.texi -o /tmp/sicphKuF87/sicp-20240826.1844/sicp.info' exited with non-zero exit-code: 1")
 Created sicp-20240826.1844.tar containing:
   sicp-20240826.1844/
   sicp-20240826.1844/dir
@@ -367,6 +368,6 @@ Created sicp-20240826.1844.tar containing:
   sicp-20240826.1844/sicp.el
   sicp-20240826.1844/sicp.info
  ✓ Success:
-  2024-09-16T11:21:14+0000  sicp-20240826.1844.entry
-  2024-09-16T11:21:14+0000  sicp-20240826.1844.tar
-Built sicp in 5.543s, finished at 2024-09-16T11:21:15+0000
+  2024-09-16T19:14:19+0000  sicp-20240826.1844.entry
+  2024-09-16T19:14:19+0000  sicp-20240826.1844.tar
+Built sicp in 5.589s, finished at 2024-09-16T19:14:20+0000

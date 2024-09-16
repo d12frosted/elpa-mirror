@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/cheerilee/
 Checking out 41bd81b5b0bb657241ceda5be6af5e07254d7376
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cheerilee/
-  to /tmp/cheerileeMRrHoM/cheerilee-20160313.1835
+  to /tmp/cheerileeMf67kl/cheerilee-20160313.1835
     cheerilee-actions.el -> cheerilee-actions.el
     cheerilee-classes.el -> cheerilee-classes.el
     cheerilee-clear.el -> cheerilee-clear.el
@@ -20,12 +20,6 @@ Copying files (->) and directories (=>)
     cheerilee.el -> cheerilee.el
     dir -> dir
     cheerilee.info -> cheerilee.info
-    cheerilee.texi -> cheerilee.texi
-Generating cheerilee.info
-Command `makeinfo --no-split cheerilee.texi -o /tmp/cheerileeMRrHoM/cheerilee-20160313.1835/cheerilee.info' exited with non-zero exit-code: 1
-cheerilee.texi:568: @include: could not find fdl.texi
-
-Error: (error "Command `makeinfo --no-split cheerilee.texi -o /tmp/cheerileeMRrHoM/cheerilee-20160313.1835/cheerilee.info' exited with non-zero exit-code: 1")
 Created cheerilee-20160313.1835.tar containing:
   cheerilee-20160313.1835/
   cheerilee-20160313.1835/cheerilee-actions.el
@@ -42,6 +36,6 @@ Created cheerilee-20160313.1835.tar containing:
   cheerilee-20160313.1835/cheerilee.info
   cheerilee-20160313.1835/dir
  ✓ Success:
-  2024-09-16T10:36:32+0000  cheerilee-20160313.1835.entry
-  2024-09-16T10:36:32+0000  cheerilee-20160313.1835.tar
-Built cheerilee in 3.837s, finished at 2024-09-16T10:36:33+0000
+  2024-09-16T18:29:33+0000  cheerilee-20160313.1835.entry
+  2024-09-16T18:29:33+0000  cheerilee-20160313.1835.tar
+Built cheerilee in 2.604s, finished at 2024-09-16T18:29:34+0000

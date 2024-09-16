@@ -12,7 +12,7 @@ Provides tree-sitter based implementations for the following features:
 Contributions:
   This major mode is still under active development!
   Check contributing guidelines:
-    - https://github.com/gmlarumbe/vhdl-ext#contributing
+    - https://github.com/gmlarumbe/vhdl-ts-mode#contributing
 
   For some highlight queries examples, check the link below:
    - https://github.com/alemuller/tree-sitter-vhdl/blob/main/queries/highlights.scm
