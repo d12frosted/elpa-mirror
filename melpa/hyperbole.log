@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/hyperbole/
 Checking out ae6188cbd900813e0a6b1667718943a57852afaf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperbole/
-  to /tmp/hyperboleb5NVmq/hyperbole-20240914.2042
+  to /tmp/hyperboleKOh8jm/hyperbole-20240914.2042
     hact.el -> hact.el
     hactypes.el -> hactypes.el
     hargs.el -> hargs.el
@@ -166,6 +166,7 @@ Copying files (->) and directories (=>)
     test/hy-test-coverage.el -> test/hy-test-coverage.el
     test/hy-test-dependencies.el -> test/hy-test-dependencies.el
     test/hy-test-helpers.el -> test/hy-test-helpers.el
+Generating hyperbole.info
 Created hyperbole-20240914.2042.tar containing:
   hyperbole-20240914.2042/
   hyperbole-20240914.2042/.hypb
@@ -248,6 +249,7 @@ Created hyperbole-20240914.2042.tar containing:
   hyperbole-20240914.2042/hyperbole-banner.png
   hyperbole-20240914.2042/hyperbole-pkg.el
   hyperbole-20240914.2042/hyperbole.el
+  hyperbole-20240914.2042/hyperbole.info
   hyperbole-20240914.2042/hyrolo-demo.el
   hyperbole-20240914.2042/hyrolo-logic.el
   hyperbole-20240914.2042/hyrolo-menu.el
@@ -277,6 +279,7 @@ Created hyperbole-20240914.2042.tar containing:
   hyperbole-20240914.2042/man/hyperbole.html
   hyperbole-20240914.2042/man/hyperbole.info
   hyperbole-20240914.2042/man/hyperbole.pdf
+  hyperbole-20240914.2042/man/hyperbole.texi
   hyperbole-20240914.2042/man/im/
   hyperbole-20240914.2042/man/im/C-hh.png
   hyperbole-20240914.2042/man/im/demo.png
@@ -334,6 +337,6 @@ Created hyperbole-20240914.2042.tar containing:
   hyperbole-20240914.2042/test/smart-org-tests.el
   hyperbole-20240914.2042/topwin.py
  ✓ Success:
-  2024-09-15T23:27:06+0000  hyperbole-20240914.2042.entry
-  2024-09-15T23:27:06+0000  hyperbole-20240914.2042.tar
-Built hyperbole in 3.782s, finished at 2024-09-15T23:27:07+0000
+  2024-09-16T03:06:43+0000  hyperbole-20240914.2042.entry
+  2024-09-16T03:06:43+0000  hyperbole-20240914.2042.tar
+Built hyperbole in 11.452s, finished at 2024-09-16T03:06:44+0000

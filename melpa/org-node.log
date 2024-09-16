@@ -3,26 +3,31 @@ Fetcher: github
 Source:  https://github.com/meedstrom/org-node.git
 
 Updating /mnt/store/melpa/working/org-node/
-Checking out e7159dce57d6657f2f914b4941b7a3603a9bdd87
+Checking out 03c7e26611b1097fade5a016a96e6ad8d7d34908
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-node/
-  to /tmp/org-nodem3RGiu/org-node-20240915.1605
+  to /tmp/org-nodey7XRi4/org-node-20240916.37
     org-node-backlink.el -> org-node-backlink.el
     org-node-changes.el -> org-node-changes.el
     org-node-parser.el -> org-node-parser.el
     org-node.el -> org-node.el
   ! doc/org-node.info -> org-node.info
   ! doc/org-node.texi -> org-node.texi
-Created org-node-20240915.1605.tar containing:
-  org-node-20240915.1605/
-  org-node-20240915.1605/dir
-  org-node-20240915.1605/org-node-backlink.el
-  org-node-20240915.1605/org-node-changes.el
-  org-node-20240915.1605/org-node-parser.el
-  org-node-20240915.1605/org-node-pkg.el
-  org-node-20240915.1605/org-node.el
-  org-node-20240915.1605/org-node.info
+Command `install-info --dir\=dir doc/org-node.info' exited with non-zero exit-code: 1
+install-info: No such file or directory for doc/org-node.info
+
+Error: (error "Command `install-info --dir\\=dir doc/org-node.info' exited with non-zero exit-code: 1")
+Generating org-node.info
+Created org-node-20240916.37.tar containing:
+  org-node-20240916.37/
+  org-node-20240916.37/dir
+  org-node-20240916.37/org-node-backlink.el
+  org-node-20240916.37/org-node-changes.el
+  org-node-20240916.37/org-node-parser.el
+  org-node-20240916.37/org-node-pkg.el
+  org-node-20240916.37/org-node.el
+  org-node-20240916.37/org-node.info
  ✓ Success:
-  2024-09-15T23:40:32+0000  org-node-20240915.1605.entry
-  2024-09-15T23:40:32+0000  org-node-20240915.1605.tar
-Built org-node in 2.986s, finished at 2024-09-15T23:40:33+0000
+  2024-09-16T03:19:54+0000  org-node-20240916.37.entry
+  2024-09-16T03:19:54+0000  org-node-20240916.37.tar
+Built org-node in 4.803s, finished at 2024-09-16T03:19:55+0000

@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/nu-mode/
 Checking out d5fb4d26d1b0bb383ea2827cc5af5dfb2a269d2b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nu-mode/
-  to /tmp/nu-mode8eg6wY/nu-mode-20190404.2032
+  to /tmp/nu-modexvpL5i/nu-mode-20190404.2032
   ! nu-mode/nu-commands.el -> nu-commands.el
   ! nu-mode/nu-common.el -> nu-common.el
   ! nu-mode/nu-helm.el -> nu-helm.el
@@ -26,6 +26,10 @@ Copying files (->) and directories (=>)
   ! nu-mode/nu-tile.el -> nu-tile.el
   ! nu-mode/nu-vars.el -> nu-vars.el
   ! doc/nu-mode.info -> nu-mode.info
+Command `install-info --dir\=dir doc/nu-mode.info' exited with non-zero exit-code: 1
+install-info: No such file or directory for doc/nu-mode.info
+
+Error: (error "Command `install-info --dir\\=dir doc/nu-mode.info' exited with non-zero exit-code: 1")
 Created nu-mode-20190404.2032.tar containing:
   nu-mode-20190404.2032/
   nu-mode-20190404.2032/dir
@@ -49,6 +53,6 @@ Created nu-mode-20190404.2032.tar containing:
   nu-mode-20190404.2032/nu-tile.el
   nu-mode-20190404.2032/nu-vars.el
  ✓ Success:
-  2024-09-15T23:37:48+0000  nu-mode-20190404.2032.entry
-  2024-09-15T23:37:48+0000  nu-mode-20190404.2032.tar
-Built nu-mode in 2.600s, finished at 2024-09-15T23:37:49+0000
+  2024-09-16T03:17:20+0000  nu-mode-20190404.2032.entry
+  2024-09-16T03:17:20+0000  nu-mode-20190404.2032.tar
+Built nu-mode in 2.707s, finished at 2024-09-16T03:17:21+0000

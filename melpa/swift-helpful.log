@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/swift-helpful/
 Checking out b46c580e4b8f55761431ec677866de3fc66592e9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/swift-helpful/
-  to /tmp/swift-helpfultU1I2g/swift-helpful-20220707.846
+  to /tmp/swift-helpfulPtF6u9/swift-helpful-20220707.846
     swift-helpful-regex.el -> swift-helpful-regex.el
     swift-helpful.el -> swift-helpful.el
   ! swift-info/swift-reference.info -> swift-reference.info
@@ -72,6 +72,14 @@ Copying files (->) and directories (=>)
   ! swift-info/images/weakReference01_2x.png -> images/weakReference01_2x.png
   ! swift-info/images/weakReference02_2x.png -> images/weakReference02_2x.png
   ! swift-info/images/weakReference03_2x.png -> images/weakReference03_2x.png
+Command `install-info --dir\=dir swift-info/swift-reference.info' exited with non-zero exit-code: 1
+install-info: No such file or directory for swift-info/swift-reference.info
+
+Error: (error "Command `install-info --dir\\=dir swift-info/swift-reference.info' exited with non-zero exit-code: 1")
+Command `install-info --dir\=dir swift-info/swift.info' exited with non-zero exit-code: 1
+install-info: No such file or directory for swift-info/swift.info
+
+Error: (error "Command `install-info --dir\\=dir swift-info/swift.info' exited with non-zero exit-code: 1")
 Created swift-helpful-20220707.846.tar containing:
   swift-helpful-20220707.846/
   swift-helpful-20220707.846/dir
@@ -143,6 +151,6 @@ Created swift-helpful-20220707.846.tar containing:
   swift-helpful-20220707.846/swift-reference.info
   swift-helpful-20220707.846/swift.info
  ✓ Success:
-  2024-09-15T23:52:53+0000  swift-helpful-20220707.846.entry
-  2024-09-15T23:52:53+0000  swift-helpful-20220707.846.tar
-Built swift-helpful in 3.891s, finished at 2024-09-15T23:52:54+0000
+  2024-09-16T03:32:20+0000  swift-helpful-20220707.846.entry
+  2024-09-16T03:32:20+0000  swift-helpful-20220707.846.tar
+Built swift-helpful in 3.477s, finished at 2024-09-16T03:32:21+0000
