@@ -147,8 +147,33 @@
 3 Variants
 ══════════
 
-  This package contains the additional functions `tex-parens-burp-left',
-  `tex-parens-burp-right', `tex-parens-mark-inner',
-  `tex-parens-beginning-of-list' and `tex-parens-end-of-list', which are
-  defined in terms of the sexp/list primitives; see the `C-h f'
-  documentation for details.
+  This package contains the following additional functions defined in
+  terms of the sexp/list primitives:
+
+  • `tex-parens-burp-left', `tex-parens-burp-right': Slurp or barf sexps
+    in and out of the current list.
+  • `tex-parens-mark-inner': Mark the innermost balanced group around
+    point.
+  • `tex-parens-beginning-of-list', `tex-parens-end-of-list': Move to
+    the beginning or end of the current balanced group.
+  • `tex-parens-kill-to-end-of-list',
+    `tex-parens-kill-to-beginning-of-list': Kill text between point and
+    the end or beginning of the current list.
+
+  See the `C-h f' documentation for each function for more details.
+  They may be bound in the same manner as described above.
+
+
+3.1 Avy Integration
+───────────────────
+
+  There are additional commands that use Avy to jump to and copy math
+  expressions:
+
+  • `tex-parens-avy-jump-to-math': Jump to and enter a math expression
+    using Avy.
+  • `tex-parens-avy-copy-math': Copy a math expression selected using
+    Avy.
+
+  To use these commands, make sure you have Avy installed and loaded,
+  then bind them in your config as described above.

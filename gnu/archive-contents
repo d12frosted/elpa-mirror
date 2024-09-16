@@ -4322,18 +4322,16 @@
 	      ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
 	     (:commit . "ee1957f3bce6ed04627b985e95a17db190781e06"))])
  (tex-parens .
-	     [(0 4)
+	     [(0 5)
 	      ((emacs
-		(27 1))
-	       (auctex
-		(14 0 5)))
+		(27 1)))
 	      "like lisp.el but for tex" tar
 	      ((:url . "https://github.com/ultronozm/tex-parens.el")
 	       (:keywords "tex" "convenience")
 	       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
 	       (:authors
 		("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-	       (:commit . "6972f5127ad96aca7ed6025526e72e4b72841835"))])
+	       (:commit . "7f03698353b6c43e5fc2633c7d38b7b23e5fefd1"))])
  (theme-buffet .
 	       [(0 1 2)
 		((emacs
