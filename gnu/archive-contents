@@ -627,7 +627,7 @@
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:commit . "945c9905af2045ab2e57717c01e5b20a907f939a"))])
  (comint-mime .
-	      [(0 4)
+	      [(0 5)
 	       ((emacs
 		 (28 1)))
 	       "Display content of various MIME types in comint buffers" tar
@@ -636,7 +636,7 @@
 		(:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 		(:authors
 		 ("Augusto Stoffel" . "arstoffel@gmail.com"))
-		(:commit . "9d4fe3694d1cb558e26cffb4f92f7d2ffc40498d"))])
+		(:commit . "66d0cc309f1862da84051f87010cb4a0a961ce2e"))])
  (compact-docstrings .
 		     [(0 2)
 		      nil "Shrink blank lines in docstrings and doc comments" tar
