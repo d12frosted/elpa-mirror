@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/meedstrom/org-node.git
 
 Updating /mnt/store/melpa/working/org-node/
-Checking out 4157a01bc132e60c85818857bc163112f9753d28
+Checking out 8d1c1913790fc54d843ea4f7275dc021d17287e8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-node/
-  to /tmp/org-nodesXfFxx/org-node-20240917.1724
+  to /tmp/org-nodeReorFk/org-node-20240918.141
     org-node-backlink.el -> org-node-backlink.el
     org-node-changes.el -> org-node-changes.el
     org-node-parser.el -> org-node-parser.el
@@ -14,16 +14,18 @@ Copying files (->) and directories (=>)
   ! doc/org-node.info -> org-node.info
   ! doc/org-node.texi -> org-node.texi
 Generating org-node.info
-Created org-node-20240917.1724.tar containing:
-  org-node-20240917.1724/
-  org-node-20240917.1724/dir
-  org-node-20240917.1724/org-node-backlink.el
-  org-node-20240917.1724/org-node-changes.el
-  org-node-20240917.1724/org-node-parser.el
-  org-node-20240917.1724/org-node-pkg.el
-  org-node-20240917.1724/org-node.el
-  org-node-20240917.1724/org-node.info
+Created org-node-20240918.141.tar containing:
+  org-node-20240918.141/
+  org-node-20240918.141/dir
+  org-node-20240918.141/org-node-backlink.el
+  org-node-20240918.141/org-node-changes.el
+  org-node-20240918.141/org-node-parser.el
+  org-node-20240918.141/org-node-pkg.el
+  org-node-20240918.141/org-node.el
+  org-node-20240918.141/org-node.info
  ✓ Success:
-  2024-09-17T22:37:55+0000  org-node-20240917.1724.entry
-  2024-09-17T22:37:55+0000  org-node-20240917.1724.tar
-Built org-node in 4.957s, finished at 2024-09-17T22:37:56+0000
+  2024-09-18T00:35:19+0000  org-node-20240917.1724.entry
+  2024-09-18T00:35:19+0000  org-node-20240917.1724.tar
+  2024-09-18T02:33:08+0000  org-node-20240918.141.entry
+  2024-09-18T02:33:08+0000  org-node-20240918.141.tar
+Built org-node in 4.988s, finished at 2024-09-18T02:33:09+0000
