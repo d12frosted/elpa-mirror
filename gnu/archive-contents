@@ -2112,6 +2112,19 @@
 	  (:authors
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:commit . "5a57e52122fe483fa9bd39049c13a25334e408da"))])
+ (indent-bars .
+	      [(0 7 3)
+	       ((emacs
+		 (27 1))
+		(compat
+		 (29 1)))
+	       "Highlight indentation with bars" tar
+	       ((:url . "https://github.com/jdtsmith/indent-bars")
+		(:keywords "convenience")
+		(:maintainer "J.D. Smith" . "jdtsmith+elpa@gmail.com")
+		(:authors
+		 ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
+		(:commit . "1390dd2a0e62d2976c46c967b8085a3a92936d44"))])
  (inspector .
 	    [(0 38)
 	     ((emacs

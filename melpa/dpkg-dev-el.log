@@ -1,0 +1,30 @@
+Package: dpkg-dev-el
+Fetcher: git
+Source:  https://salsa.debian.org/emacsen-team/dpkg-dev-el.git
+
+Updating /mnt/store/melpa/working/dpkg-dev-el/
+Checking out 113c08e96f2d010a3082b038dfc0fd5188209fb1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dpkg-dev-el/
+  to /tmp/dpkg-dev-elr9n33w/dpkg-dev-el-20240728.519
+    debian-autopkgtest-control-mode.el -> debian-autopkgtest-control-mode.el
+    debian-bts-control.el -> debian-bts-control.el
+    debian-changelog-mode.el -> debian-changelog-mode.el
+    debian-control-mode.el -> debian-control-mode.el
+    debian-copyright.el -> debian-copyright.el
+    dpkg-dev-el.el -> dpkg-dev-el.el
+    readme-debian.el -> readme-debian.el
+Created dpkg-dev-el-20240728.519.tar containing:
+  dpkg-dev-el-20240728.519/
+  dpkg-dev-el-20240728.519/debian-autopkgtest-control-mode.el
+  dpkg-dev-el-20240728.519/debian-bts-control.el
+  dpkg-dev-el-20240728.519/debian-changelog-mode.el
+  dpkg-dev-el-20240728.519/debian-control-mode.el
+  dpkg-dev-el-20240728.519/debian-copyright.el
+  dpkg-dev-el-20240728.519/dpkg-dev-el-pkg.el
+  dpkg-dev-el-20240728.519/dpkg-dev-el.el
+  dpkg-dev-el-20240728.519/readme-debian.el
+ ✓ Success:
+  2024-09-18T11:53:46+0000  dpkg-dev-el-20240728.519.entry
+  2024-09-18T11:53:46+0000  dpkg-dev-el-20240728.519.tar
+Built dpkg-dev-el in 2.548s, finished at 2024-09-18T11:53:47+0000
