@@ -3,30 +3,32 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/guile.git
 
 Updating /mnt/store/melpa/working/geiser-guile/
-Checking out 5a856c2982030ff77e2d151ead4fcd991512f362
+Checking out ab6e0b3103eb2f9986520eeef39625ac3ecb1968
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-guile/
-  to /tmp/geiser-guileVIyRLk/geiser-guile-20240811.1520
+  to /tmp/geiser-guilekEGWuH/geiser-guile-20240918.2320
     geiser-guile.el -> geiser-guile.el
     geiser-guile.texi -> geiser-guile.texi
     src/geiser => src/geiser
 Generating geiser-guile.info
-Created geiser-guile-20240811.1520.tar containing:
-  geiser-guile-20240811.1520/
-  geiser-guile-20240811.1520/dir
-  geiser-guile-20240811.1520/geiser-guile-pkg.el
-  geiser-guile-20240811.1520/geiser-guile.el
-  geiser-guile-20240811.1520/geiser-guile.info
-  geiser-guile-20240811.1520/src/
-  geiser-guile-20240811.1520/src/geiser/
-  geiser-guile-20240811.1520/src/geiser/completion.scm
-  geiser-guile-20240811.1520/src/geiser/doc.scm
-  geiser-guile-20240811.1520/src/geiser/emacs.scm
-  geiser-guile-20240811.1520/src/geiser/evaluation.scm
-  geiser-guile-20240811.1520/src/geiser/modules.scm
-  geiser-guile-20240811.1520/src/geiser/utils.scm
-  geiser-guile-20240811.1520/src/geiser/xref.scm
+Created geiser-guile-20240918.2320.tar containing:
+  geiser-guile-20240918.2320/
+  geiser-guile-20240918.2320/dir
+  geiser-guile-20240918.2320/geiser-guile-pkg.el
+  geiser-guile-20240918.2320/geiser-guile.el
+  geiser-guile-20240918.2320/geiser-guile.info
+  geiser-guile-20240918.2320/src/
+  geiser-guile-20240918.2320/src/geiser/
+  geiser-guile-20240918.2320/src/geiser/completion.scm
+  geiser-guile-20240918.2320/src/geiser/doc.scm
+  geiser-guile-20240918.2320/src/geiser/emacs.scm
+  geiser-guile-20240918.2320/src/geiser/evaluation.scm
+  geiser-guile-20240918.2320/src/geiser/modules.scm
+  geiser-guile-20240918.2320/src/geiser/utils.scm
+  geiser-guile-20240918.2320/src/geiser/xref.scm
  ✓ Success:
-  2024-09-18T19:56:20+0000  geiser-guile-20240811.1520.entry
-  2024-09-18T19:56:20+0000  geiser-guile-20240811.1520.tar
-Built geiser-guile in 4.163s, finished at 2024-09-18T19:56:21+0000
+  2024-09-18T21:54:11+0000  geiser-guile-20240811.1520.entry
+  2024-09-18T21:54:11+0000  geiser-guile-20240811.1520.tar
+  2024-09-18T23:51:00+0000  geiser-guile-20240918.2320.entry
+  2024-09-18T23:51:00+0000  geiser-guile-20240918.2320.tar
+Built geiser-guile in 4.409s, finished at 2024-09-18T23:51:00+0000
