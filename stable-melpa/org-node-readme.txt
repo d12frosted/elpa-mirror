@@ -11,8 +11,8 @@ less every entry you'd ever want to jump to.  Pretty soon you've forgot that
 your files have names.
 
 Anyway, that's just the core of it as described to someone not familiar with
-zettelkasten.  In fact, out of the simplicity arises something powerful,
-more to be experienced than explained.
+zettelkasten software.  In fact, out of the simplicity arises something
+powerful, more to be experienced than explained.
 
 Compared to other systems:
 
@@ -20,9 +20,9 @@ Compared to other systems:
   does not depend on SQLite, lets you opt out of file-level property
   drawers, does not support "roam:" links, and tries to rely in a bare-metal
   way on upstream org-id and org-capture.  As a drawback, if a heading in
-  some Git README has an ID, it's considered part of your collection --
-  simply because if it's known to org-id, it's known to org-node.  These
-  headings can be filtered after-the-fact.
+  some Git README or whatever has an ID, it's considered part of your
+  collection -- simply because if it's known to org-id, it's known to
+  org-node.  These headings can be filtered after-the-fact.
 
 - denote: Org-node is Org only, no Markdown, no support for "denote:" links.
   Filenames have no meaning (so could match the Denote format if you like),

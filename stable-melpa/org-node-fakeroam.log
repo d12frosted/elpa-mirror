@@ -3,16 +3,21 @@ Fetcher: github
 Source:  https://github.com/meedstrom/org-node-fakeroam.git
 
 Updating /mnt/store/melpa/working/org-node-fakeroam/
-Checking out 8682b838bce8fffef56624d105c0e303cc841197
+Checking out fa94304ae8c5cb039770f861ffdb0690898e52dd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-node-fakeroam/
-  to /tmp/org-node-fakeroamE310kR/org-node-fakeroam-20240917.1923
+  to /tmp/org-node-fakeroamF356CR/org-node-fakeroam-20240919.2329
     org-node-fakeroam.el -> org-node-fakeroam.el
-Created org-node-fakeroam-20240917.1923.tar containing:
-  org-node-fakeroam-20240917.1923/
-  org-node-fakeroam-20240917.1923/org-node-fakeroam-pkg.el
-  org-node-fakeroam-20240917.1923/org-node-fakeroam.el
+    org-node-fakeroam.info -> org-node-fakeroam.info
+    org-node-fakeroam.texi -> org-node-fakeroam.texi
+Generating org-node-fakeroam.info
+Created org-node-fakeroam-20240919.2329.tar containing:
+  org-node-fakeroam-20240919.2329/
+  org-node-fakeroam-20240919.2329/dir
+  org-node-fakeroam-20240919.2329/org-node-fakeroam-pkg.el
+  org-node-fakeroam-20240919.2329/org-node-fakeroam.el
+  org-node-fakeroam-20240919.2329/org-node-fakeroam.info
  ✓ Success:
-  2024-09-19T15:52:18+0000  org-node-fakeroam-20240917.1923.entry
-  2024-09-19T15:52:18+0000  org-node-fakeroam-20240917.1923.tar
-Built org-node-fakeroam in 3.015s, finished at 2024-09-19T15:52:18+0000
+  2024-09-20T03:42:48+0000  org-node-fakeroam-20240919.2329.entry
+  2024-09-20T03:42:48+0000  org-node-fakeroam-20240919.2329.tar
+Built org-node-fakeroam in 4.405s, finished at 2024-09-20T03:42:49+0000
