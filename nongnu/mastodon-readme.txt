@@ -391,6 +391,12 @@
   • `mastodon-switch-to-buffer': switch between mastodon buffers.
 
 
+  • `mastodon-tl--get-remote-local-timeline': View a local timeline of a
+    remote instance.
+  • `mastodon-tl--remote-tag-timeline': View a tag timeline on a remote
+    instance.
+
+
   • `mastodon-profile--update-display-name': Update the display name for
     your account.
   • `mastodon-profile--update-user-profile-note': Update your bio note.
