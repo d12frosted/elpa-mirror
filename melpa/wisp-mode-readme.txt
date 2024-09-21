@@ -15,6 +15,11 @@ compiler[1], have a look at wispjs-mode[2].
 
 ChangeLog:
 
+ - 0.4.0: provide wisp--eval-block (C-M-x)
+          to send the current block to a buffer nammed *shell*.
+          wisp--find-begin-and-end-of-block-around-region can cope with empty lines.
+          wisp--eval-with-geiser converts wisp to regular scheme (with wisp2lisp) and pushes it to geiser.
+          thanks to cwebber!
  - 0.3.0: provide wisp-color-indentation-minor-mode
           that highlights the indentation levels, following wisp-semantics (period and colon)
  - 0.2.9: enabled imenu - thanks to Greg Reagle!
