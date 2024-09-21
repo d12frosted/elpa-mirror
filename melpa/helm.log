@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm/
-Checking out f728686f9df5fcd20dbdc4fb8efd0f05b4b7f167
+Checking out 5a0862f4ab176f0778d28dacaf50e8eca618342b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmrxVIF2/helm-20240919.1800
+  to /tmp/helmHWxCzn/helm-20240921.334
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
     helm-buffers.el -> helm-buffers.el
@@ -47,50 +47,50 @@ Copying files (->) and directories (=>)
     helm-x-files.el -> helm-x-files.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20240919.1800.tar containing:
-  helm-20240919.1800/
-  helm-20240919.1800/emacs-helm.sh
-  helm-20240919.1800/helm-adaptive.el
-  helm-20240919.1800/helm-bookmark.el
-  helm-20240919.1800/helm-buffers.el
-  helm-20240919.1800/helm-color.el
-  helm-20240919.1800/helm-command.el
-  helm-20240919.1800/helm-dabbrev.el
-  helm-20240919.1800/helm-easymenu.el
-  helm-20240919.1800/helm-elisp.el
-  helm-20240919.1800/helm-epa.el
-  helm-20240919.1800/helm-eshell.el
-  helm-20240919.1800/helm-eval.el
-  helm-20240919.1800/helm-external.el
-  helm-20240919.1800/helm-fd.el
-  helm-20240919.1800/helm-files.el
-  helm-20240919.1800/helm-find.el
-  helm-20240919.1800/helm-font.el
-  helm-20240919.1800/helm-for-files.el
-  helm-20240919.1800/helm-global-bindings.el
-  helm-20240919.1800/helm-grep.el
-  helm-20240919.1800/helm-help.el
-  helm-20240919.1800/helm-id-utils.el
-  helm-20240919.1800/helm-imenu.el
-  helm-20240919.1800/helm-info.el
-  helm-20240919.1800/helm-locate.el
-  helm-20240919.1800/helm-man.el
-  helm-20240919.1800/helm-misc.el
-  helm-20240919.1800/helm-mode.el
-  helm-20240919.1800/helm-net.el
-  helm-20240919.1800/helm-occur.el
-  helm-20240919.1800/helm-packages.el
-  helm-20240919.1800/helm-pkg.el
-  helm-20240919.1800/helm-regexp.el
-  helm-20240919.1800/helm-ring.el
-  helm-20240919.1800/helm-semantic.el
-  helm-20240919.1800/helm-sys.el
-  helm-20240919.1800/helm-tags.el
-  helm-20240919.1800/helm-types.el
-  helm-20240919.1800/helm-utils.el
-  helm-20240919.1800/helm-x-files.el
-  helm-20240919.1800/helm.el
+Created helm-20240921.334.tar containing:
+  helm-20240921.334/
+  helm-20240921.334/emacs-helm.sh
+  helm-20240921.334/helm-adaptive.el
+  helm-20240921.334/helm-bookmark.el
+  helm-20240921.334/helm-buffers.el
+  helm-20240921.334/helm-color.el
+  helm-20240921.334/helm-command.el
+  helm-20240921.334/helm-dabbrev.el
+  helm-20240921.334/helm-easymenu.el
+  helm-20240921.334/helm-elisp.el
+  helm-20240921.334/helm-epa.el
+  helm-20240921.334/helm-eshell.el
+  helm-20240921.334/helm-eval.el
+  helm-20240921.334/helm-external.el
+  helm-20240921.334/helm-fd.el
+  helm-20240921.334/helm-files.el
+  helm-20240921.334/helm-find.el
+  helm-20240921.334/helm-font.el
+  helm-20240921.334/helm-for-files.el
+  helm-20240921.334/helm-global-bindings.el
+  helm-20240921.334/helm-grep.el
+  helm-20240921.334/helm-help.el
+  helm-20240921.334/helm-id-utils.el
+  helm-20240921.334/helm-imenu.el
+  helm-20240921.334/helm-info.el
+  helm-20240921.334/helm-locate.el
+  helm-20240921.334/helm-man.el
+  helm-20240921.334/helm-misc.el
+  helm-20240921.334/helm-mode.el
+  helm-20240921.334/helm-net.el
+  helm-20240921.334/helm-occur.el
+  helm-20240921.334/helm-packages.el
+  helm-20240921.334/helm-pkg.el
+  helm-20240921.334/helm-regexp.el
+  helm-20240921.334/helm-ring.el
+  helm-20240921.334/helm-semantic.el
+  helm-20240921.334/helm-sys.el
+  helm-20240921.334/helm-tags.el
+  helm-20240921.334/helm-types.el
+  helm-20240921.334/helm-utils.el
+  helm-20240921.334/helm-x-files.el
+  helm-20240921.334/helm.el
  ✓ Success:
-  2024-09-21T03:09:51+0000  helm-20240919.1800.entry
-  2024-09-21T03:09:51+0000  helm-20240919.1800.tar
-Built helm in 3.361s, finished at 2024-09-21T03:09:52+0000
+  2024-09-21T11:01:16+0000  helm-20240921.334.entry
+  2024-09-21T11:01:16+0000  helm-20240921.334.tar
+Built helm in 3.267s, finished at 2024-09-21T11:01:17+0000

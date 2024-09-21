@@ -15,6 +15,12 @@ Ebuku provides a basic interface to the
 Install [Ebuku from MELPA](https://melpa.org/#/ebuku), or put the
 `ebuku' folder in your load-path and do a `(load "ebuku")'.
 
+Windows users should ensure that the `LC_' environment variables,
+and the `LC_ALL' environment variable in particular, are set
+correctly for their locale (e.g. `zh_CN.UTF-8'). The value of an
+environment variable can be determined via the `getenv' command
+(e.g. `M-x getenv RET LC_ALL RET').
+
 ## Usage
 
 Create an Ebuku buffer with `M-x ebuku'.
