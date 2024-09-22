@@ -25,11 +25,11 @@ If you'd like this shorten-header mode to be enabled by default, you should
 add `sticky-shell-shorten-header-set-mode' to `sticky-shell-mode-hook'
 
 Note that `sticky-shell-shorten-header-mode' doesn't work properly in
-`term-mode' and `vterm-mode'. This is not because of an issue with
+`term-mode' and `vterm-mode'.  This is not because of an issue with
 `sticky-shell-shorten-header-mode' itself, but because `sticky-shell-mode'
 uses `(thing-at-point 'line)' to read a prompt: in terminal modes, this
 function returns a line within the borders of a window rather than up to the
-first newline character. The result is that the header will always be cut-off
+first newline character.  The result is that the header will always be cut-off
 at the window-border.
 Right now I'd rather keep this general implementation simple rather than
 overfit for these particular modes.
