@@ -744,9 +744,11 @@
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		   (:commit . "eb46c0b19ea2c385d4e8f21c3e953fc621626cf2"))])
  (consult-hoogle .
-		 [(0 2 1)
+		 [(0 2 2)
 		  ((emacs
 		    (27 1))
+		   (consult
+		    (0 18))
 		   (haskell-mode
 		    (16 1)))
 		  "Hoogle frontend using consult" tar
@@ -755,7 +757,7 @@
 		   (:maintainer "rahguzar" . "rahguzar@zohomail.eu")
 		   (:authors
 		    ("rahguzar" . "rahguzar@zohomail.eu"))
-		   (:commit . "188c8d90a04adeb08c61a0835f5f9a9a10255495"))])
+		   (:commit . "635418813c6c6089576cc3b1abb45d173e853aab"))])
  (consult-recoll .
 		 [(0 8 1)
 		  ((emacs

@@ -11,6 +11,7 @@ user interfaces. Included are user interfaces for the following packages:
 - Org Agenda (casual-agenda)
 - Avy (casual-avy)
 - Symbol Overlay (casual-symbol-overlay)
+- EditKit (casual-editkit)
 
 INSTALLATION
 
@@ -34,6 +35,7 @@ The following code is a TL;DR initialization for Casual Suite.
 (keymap-set bookmark-bmenu-mode-map "C-o" #'casual-bookmarks-tmenu)
 (keymap-set org-agenda-mode-map "C-o" #'casual-agenda-tmenu)
 (keymap-set symbol-overlay-map "C-o" #'casual-symbol-overlay-tmenu)
+(keymap-global-set "C-o" #'casual-editkit-main-tmenu)
 
 NOTE: This package requires `casual-lib' which in turn requires an update of
 the built-in package `transient' ≥ 0.6.0. Please customize the variable
