@@ -1306,6 +1306,20 @@
 	       (:authors
 		("Joseph Turner" . "joseph@ushin.org"))
 	       (:commit . "8e646524d282a8e4746238770e69b64adb6d409b"))])
+ (hyperdrive-org-transclusion .
+			      [(0 1)
+			       ((emacs
+				 (28 1))
+				(hyperdrive
+				 (0 4 1))
+				(org-transclusion
+				 (1 4 0)))
+			       "Tranclude hyperdrive content" tar
+			       ((:url . "https://git.sr.ht/~ushin/hyperdrive-org-transclusion")
+				(:maintainer "Joseph Turner" . "~ushin/ushin@lists.sr.ht")
+				(:authors
+				 ("Joseph Turner" . "joseph@ushin.org"))
+				(:commit . "96eb5b8092f21b21c24c2bb6a0a66148f1bc5e6f"))])
  (idle-highlight-mode .
 		      [(1 1 4)
 		       ((emacs

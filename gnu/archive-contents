@@ -647,14 +647,14 @@
 			("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
 		       (:commit . "50b9ec928193f339c3c2ae20f088ea62cc82bb9d"))])
  (company .
-	  [(1 0 1)
+	  [(1 0 2)
 	   ((emacs
 	     (25 1)))
 	   "Modular text completion framework" tar
 	   ((:url . "http://company-mode.github.io/")
 	    (:keywords "abbrev" "convenience" "matching")
 	    (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-	    (:commit . "87dd4ddb757afb8f88be8c8ededb71b991b926af"))])
+	    (:commit . "393940f76aec1f2500441d4e0b97f783acbb536b"))])
  (company-ebdb .
 	       [(1 1)
 		((company
@@ -2393,7 +2393,7 @@
 	(:url . "https://elpa.gnu.org/packages/kmb.html")
 	(:commit . "4fee1c87e7e286d7ecd759fb74aa7a112bb51e3a"))])
  (kubed .
-	[(0 4 0)
+	[(0 4 1)
 	 ((emacs
 	   (29 1)))
 	 "Kubernetes, Emacs, done!" tar
@@ -2402,7 +2402,7 @@
 	  (:maintainer "Eshel Yaron" . "~eshel/kubed-devel@lists.sr.ht")
 	  (:authors
 	   ("Eshel Yaron" . "me@eshelyaron.com"))
-	  (:commit . "e5a83d7ff92f6f3c67f681ac97805a749658b664"))])
+	  (:commit . "31fede551314dcf832de12be4a4ba916355cd589"))])
  (landmark .
 	   [(1 0)
 	    nil "Neural-network robot that learns landmarks" tar
@@ -3509,14 +3509,16 @@
 	  ("Feng Shu" . "tumashu@163.com"))
 	 (:commit . "f22c20f2e6af55b3a758defabe4c842fb94cde2b"))])
  (pyim-basedict .
-		[(0 5 4)
-		 nil "The default pinyin dict of pyim" tar
+		[(0 5 5)
+		 ((pyim
+		   (3 7)))
+		 "The default pinyin dict of pyim" tar
 		 ((:url . "https://github.com/tumashu/pyim-basedict")
 		  (:keywords "convenience" "chinese" "pinyin" "input-method" "complete")
 		  (:maintainer "Feng Shu" . "tumashu@163.com")
 		  (:authors
 		   ("Feng Shu" . "tumashu@163.com"))
-		  (:commit . "d61af27686f7a39e6c138b7261a686e7ea7a0ef7"))])
+		  (:commit . "55d9b324831b0fc79ff62f1c6f21aad72341a114"))])
  (python .
 	 [(0 28)
 	  ((emacs

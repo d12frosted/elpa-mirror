@@ -4223,7 +4223,7 @@
   (phoenix-dark-pink-theme :url "https://github.com/j0ni/phoenix-dark-pink.git")
   (php-boris :url "https://github.com/tomterl/php-boris.git")
   (php-boris-minor-mode :url "https://framagit.org/steckerhalter/php-boris-minor-mode.git")
-  (php-cs-fixer :url "https://github.com/OVYA/php-cs-fixer.git")
+  (php-cs-fixer :url "https://github.com/pivaldi/php-cs-fixer.git")
   (php-eldoc :url "https://github.com/sabof/php-eldoc.git")
   (php-mode :url "https://github.com/emacs-php/php-mode.git")
   (php-quickhelp :url "https://github.com/vpxyz/php-quickhelp.git")
