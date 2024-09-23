@@ -1186,6 +1186,7 @@
   (dummyparens :url "https://github.com/snosov1/dummyparens.git")
   (dune :url "https://github.com/ocaml/dune.git")
   (dune-format :url "https://github.com/purcell/emacs-dune-format.git")
+  (dup-transform :url "https://github.com/garyo/dup-transform.el.git")
   (duplexer :url "https://github.com/liuyinz/duplexer.el.git")
   (duplicate-thing :url "https://github.com/ongaeshi/duplicate-thing.git")
   (dut-mode :url "https://github.com/dut-lang/dut-mode.git")
