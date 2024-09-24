@@ -1839,7 +1839,7 @@
 	       (:url . "https://elpa.nongnu.org/nongnu/p4-16-mode.html")
 	       (:commit . "794dd0056b4ca736ae5ecb39072547f22a006137"))])
  (package-lint .
-	       [(0 23)
+	       [(0 24)
 		((emacs
 		  (24 4))
 		 (let-alist
@@ -1853,7 +1853,7 @@
 		 (:authors
 		  ("Steve Purcell" . "steve@sanityinc.com")
 		  ("Fanael Linithien" . "fanael4@gmail.com"))
-		 (:commit . "17e4ab20dd3e36fa540007b4f4047170c23bdb10"))])
+		 (:commit . "e3d3fb254221d053c75edfd9f0ebfa58d1eb52f9"))])
  (pacmacs .
 	  [(0 1 1)
 	   ((emacs
@@ -2011,7 +2011,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20240921 204525)
+	      [(1 0 20240923 101637)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
