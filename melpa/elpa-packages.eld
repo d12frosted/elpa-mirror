@@ -5792,6 +5792,7 @@
   (zettelkasten :url "https://github.com/ymherklotz/emacs-zettelkasten.git")
   (zetz-mode :url "https://github.com/damon-kwok/zetz-mode.git")
   (zig-mode :url "https://github.com/ziglang/zig-mode.git")
+  (zig-ts-mode :url "https://codeberg.org/meow_king/zig-ts-mode.git")
   (zim-wiki-mode :url "https://github.com/WillForan/zim-wiki-mode.git")
   (zimports :url "https://github.com/schmir/zimports.el.git")
   (zk :url "https://github.com/localauthor/zk.git")
