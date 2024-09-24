@@ -1,8 +1,3 @@
-DO NOT USE MELPA STABLE
-https://old.reddit.com/r/emacs/comments/etikbz/
-
--------------------------------------------------------------------------
-
 What is Org-node?
 
 If you were the sort of person to prefer "id:" links over "file:" links or
