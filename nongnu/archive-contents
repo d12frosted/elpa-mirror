@@ -1283,7 +1283,7 @@
 	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
 	    (:commit . "5d2751c4ca101fa0884ce8662f5566736f8257fe"))])
  (hyperdrive .
-	     [(0 4 1)
+	     [(0 4 2)
 	      ((emacs
 		(28 1))
 	       (map
@@ -1305,9 +1305,9 @@
 	       (:maintainer "Joseph Turner" . "~ushin/ushin@lists.sr.ht")
 	       (:authors
 		("Joseph Turner" . "joseph@ushin.org"))
-	       (:commit . "8e646524d282a8e4746238770e69b64adb6d409b"))])
+	       (:commit . "6b70954da945664ca798bf483f1d60e9d5859409"))])
  (hyperdrive-org-transclusion .
-			      [(0 1)
+			      [(0 2)
 			       ((emacs
 				 (28 1))
 				(hyperdrive
@@ -1319,7 +1319,7 @@
 				(:maintainer "Joseph Turner" . "~ushin/ushin@lists.sr.ht")
 				(:authors
 				 ("Joseph Turner" . "joseph@ushin.org"))
-				(:commit . "96eb5b8092f21b21c24c2bb6a0a66148f1bc5e6f"))])
+				(:commit . "3cfb18514c53a9ab7d421f8720cbf23b6ba8eb90"))])
  (idle-highlight-mode .
 		      [(1 1 4)
 		       ((emacs
@@ -2011,7 +2011,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20240923 215918)
+	      [(1 0 20240924 164110)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
