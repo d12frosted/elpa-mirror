@@ -3,41 +3,43 @@ Fetcher: github
 Source:  https://github.com/merrickluo/liberime
 
 Updating /mnt/store/melpa/working/liberime/
-Checking out c5839f541763f661a4d46784f3f14adad28ee2b0
+Checking out 23c0caa1bf73f4e9ab58d52dc46cf21088dc6c54
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/liberime/
-  to /tmp/liberimeJMP4qn/liberime-20240515.255
+  to /tmp/liberimeebwOH8/liberime-20240927.141
     liberime.el -> liberime.el
     src => src
     emacs-module => emacs-module
     LICENSE -> LICENSE
     Makefile -> Makefile
     README.org -> README.org
-Created liberime-20240515.255.tar containing:
-  liberime-20240515.255/
-  liberime-20240515.255/LICENSE
-  liberime-20240515.255/Makefile
-  liberime-20240515.255/README.org
-  liberime-20240515.255/emacs-module/
-  liberime-20240515.255/emacs-module/26/
-  liberime-20240515.255/emacs-module/26/emacs-module.h
-  liberime-20240515.255/emacs-module/27/
-  liberime-20240515.255/emacs-module/27/emacs-module.h
-  liberime-20240515.255/emacs-module/28/
-  liberime-20240515.255/emacs-module/28/emacs-module.h
-  liberime-20240515.255/emacs-module/29/
-  liberime-20240515.255/emacs-module/29/emacs-module.h
-  liberime-20240515.255/emacs-module/30/
-  liberime-20240515.255/emacs-module/30/emacs-module.h
-  liberime-20240515.255/liberime-pkg.el
-  liberime-20240515.255/liberime.el
-  liberime-20240515.255/src/
-  liberime-20240515.255/src/init.c
-  liberime-20240515.255/src/interface.c
-  liberime-20240515.255/src/interface.h
-  liberime-20240515.255/src/liberime-core.c
-  liberime-20240515.255/src/liberime-core.h
+Created liberime-20240927.141.tar containing:
+  liberime-20240927.141/
+  liberime-20240927.141/LICENSE
+  liberime-20240927.141/Makefile
+  liberime-20240927.141/README.org
+  liberime-20240927.141/emacs-module/
+  liberime-20240927.141/emacs-module/26/
+  liberime-20240927.141/emacs-module/26/emacs-module.h
+  liberime-20240927.141/emacs-module/27/
+  liberime-20240927.141/emacs-module/27/emacs-module.h
+  liberime-20240927.141/emacs-module/28/
+  liberime-20240927.141/emacs-module/28/emacs-module.h
+  liberime-20240927.141/emacs-module/29/
+  liberime-20240927.141/emacs-module/29/emacs-module.h
+  liberime-20240927.141/emacs-module/30/
+  liberime-20240927.141/emacs-module/30/emacs-module.h
+  liberime-20240927.141/liberime-pkg.el
+  liberime-20240927.141/liberime.el
+  liberime-20240927.141/src/
+  liberime-20240927.141/src/init.c
+  liberime-20240927.141/src/interface.c
+  liberime-20240927.141/src/interface.h
+  liberime-20240927.141/src/liberime-core.c
+  liberime-20240927.141/src/liberime-core.h
  ✓ Success:
-  2024-09-26T22:59:58+0000  liberime-20240515.255.entry
-  2024-09-26T22:59:58+0000  liberime-20240515.255.tar
-Built liberime in 2.648s, finished at 2024-09-26T22:59:59+0000
+  2024-09-27T01:01:29+0000  liberime-20240515.255.entry
+  2024-09-27T01:01:29+0000  liberime-20240515.255.tar
+  2024-09-27T03:02:05+0000  liberime-20240927.141.entry
+  2024-09-27T03:02:05+0000  liberime-20240927.141.tar
+Built liberime in 2.768s, finished at 2024-09-27T03:02:06+0000
