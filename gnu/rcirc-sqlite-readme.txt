@@ -85,6 +85,7 @@
   • `M-x rcirc-sqlite-logs-from-nick' display the logs from a specific
     nick.
   • `M-x rcirc-sqlite-stats' displays some stats.
+  • `M-x rcirc-sqlite-stats-per-month' displays counts per month.
 
 
 3.1 `rcirc-sqlite-view-log'
@@ -172,7 +173,13 @@
   "RET" key, or the left mouse button.
 
 
-3.5 Key bindings in the buffer `*rcirc log*'
+3.5 `rcirc-sqlite-stats-per-month'
+──────────────────────────────────
+
+  This command gives an overview of the number of messages per month.
+
+
+3.6 Key bindings in the buffer `*rcirc log*'
 ────────────────────────────────────────────
 
   In the log buffer showing the channel, time, nick, and message a
@@ -192,6 +199,8 @@
    `c'    Copy the selected message, nicely formatted, to the kill-ring   
    `R'    Insert the selected message, nicely formatted, into a register  
    `r'    Same, but append to the register                                
+   `('    Suppress display of server in channel name                      
+   `)'    Activate display of server in channel name                      
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   The register to insert or append messages is default register `r'. A

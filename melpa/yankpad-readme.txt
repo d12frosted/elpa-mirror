@@ -27,10 +27,9 @@ snippet could be an `org-mode' src-block, which will then be executed when
 you use the snippet.
 
 If you name a category to a major-mode name, that category will be switched
-to when you change major-mode.  If you have projectile installed, you can also
-name a categories to the same name as your projecile projects, and they will
-be switched to when using `projectile-find-file'.  These snippets will be
-appended to your active snippets if you change category.
+to when you change major-mode.  You can also name categories to the same name
+as your project.el or projectile projects.  These snippets will be appended to
+your active snippets if you change category.
 
 To insert a snippet from the yankpad, use `yankpad-insert' or
 `yankpad-expand'.  `yankpad-expand' will look for a keyword at point, and

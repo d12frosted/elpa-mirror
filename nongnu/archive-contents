@@ -1418,11 +1418,13 @@
 	       ((:url . "https://elpa.nongnu.org/nongnu/jinja2-mode.html")
 		(:commit . "a598357069a68b0ac2bf128c19edd8e899084cdc"))])
  (julia-mode .
-	     [(0 4)
-	      nil "Major mode for editing Julia source code" tar
-	      ((:url . "https://github.com/JuliaLang/julia")
+	     [(1 0 0)
+	      ((emacs
+		(26 1)))
+	      "Major mode for editing Julia source code" tar
+	      ((:url . "https://github.com/JuliaEditorSupport/julia-emacs")
 	       (:keywords "languages")
-	       (:commit . "6408b96c1c97e41bc2af060d661afee4f7b22e89"))])
+	       (:commit . "ee086a779b80f2fab83db484f453c7d41509e73e"))])
  (keycast .
 	  [(1 4 1)
 	   ((emacs
