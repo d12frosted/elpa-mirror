@@ -1,5 +1,5 @@
-Auto-Dark is an auto-changer between 2 sets of themes, dark/light, respecting
-the overall settings of MacOS, Linux and Windows.
+Auto-Dark is an auto-changer between 2 themes, dark/light, respecting the
+overall settings of MacOS, Linux and Windows.
 To enable it, install the package and add it to your load path:
 
     (require 'auto-dark)
