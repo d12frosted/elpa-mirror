@@ -60,8 +60,34 @@ snippets, etc.
   supported, and you need to call `plt.show()' and `plt.close()'
   manually to display and create new figures.
 
+  *Advertisement:* For an even more featureful Python shell with
+  improved completion, graphic capabilities and more, have a look at the
+  [dREPL] package.
 
-2 Extending
+
+[dREPL] <http://elpa.gnu.org/packages/drepl.html>
+
+
+2 Customization
+═══════════════
+
+  The follow options are available:
+
+  • `comint-mime-latex-render-method': This variable determines how
+    LaTeX fragments are rendered.  The default is `nil', which means
+    that the raw LaTeX source code is displayed.  The other
+    possibilities are:
+    • `mathjax': Use the [mathjax-node] library, which you need to
+      ensure to be installed in such a way that Node will find it.
+    • `org': Use Org mode's built-in rendering machinery.  Beware that,
+      depending on your system configuration, this may allow execution
+      of arbitrary code embedded in the LaTeX fragments.
+
+
+[mathjax-node] <https://www.npmjs.com/package/mathjax-node>
+
+
+3 Extending
 ═══════════
 
   To add support for new MIME types, see `comint-mime-renderer-alist'.
@@ -92,13 +118,13 @@ snippets, etc.
   using a temporary file for large data transfers.
 
 
-3 Todos
+4 Todos
 ═══════
 
   • Improve the HTML rendering of numeric tables
 
 
-4 Contributing
+5 Contributing
 ══════════════
 
   Discussions, suggestions and code contributions are welcome! Since

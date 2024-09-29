@@ -627,7 +627,7 @@
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:commit . "945c9905af2045ab2e57717c01e5b20a907f939a"))])
  (comint-mime .
-	      [(0 5)
+	      [(0 6)
 	       ((emacs
 		 (28 1)))
 	       "Display content of various MIME types in comint buffers" tar
@@ -636,7 +636,7 @@
 		(:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 		(:authors
 		 ("Augusto Stoffel" . "arstoffel@gmail.com"))
-		(:commit . "66d0cc309f1862da84051f87010cb4a0a961ce2e"))])
+		(:commit . "b8a5347f80ffc55421997493b646eb922450c720"))])
  (compact-docstrings .
 		     [(0 2)
 		      nil "Shrink blank lines in docstrings and doc comments" tar
@@ -2115,7 +2115,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:commit . "5a57e52122fe483fa9bd39049c13a25334e408da"))])
  (indent-bars .
-	      [(0 7 5)
+	      [(0 7 6)
 	       ((emacs
 		 (27 1))
 		(compat
@@ -2126,7 +2126,7 @@
 		(:maintainer "J.D. Smith" . "jdtsmith+elpa@gmail.com")
 		(:authors
 		 ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
-		(:commit . "975798092ad04c73a64d97976fb3e610e4ef9c0d"))])
+		(:commit . "5119ae8f8d9f24f1c793fbff362ea6416e035a77"))])
  (inspector .
 	    [(0 38)
 	     ((emacs

@@ -58,7 +58,7 @@
 			("Andrey Kotlarski" . "m00naticus@gmail.com"))
 		       (:commit . "c80cc51bb1aaf11dd53b9d08e01d61bc9b32622f"))])
  (anzu .
-       [(0 64)
+       [(0 65)
 	((emacs
 	  (25 1)))
 	"Show number of matches in mode-line while searching" tar
@@ -66,7 +66,7 @@
 	 (:maintainer "Neil Okamoto" . "neil.okamoto+melpa@gmail.com")
 	 (:authors
 	  ("Syohei YOSHIDA" . "syohex@gmail.com"))
-	 (:commit . "bdb3da5028935a4aea55c40769bc191a81afb54e"))])
+	 (:commit . "7681fe702a377fb64b0b5646acba75f27e23f493"))])
  (apache-mode .
 	      [(2 2 0)
 	       nil "Major mode for editing Apache httpd configuration files" tar
@@ -2602,14 +2602,14 @@
 	     ((:url . "https://github.com/lewang/ws-butler")
 	      (:commit . "323b651dd70ee40a25accc940b8f80c3a3185205"))])
  (xah-fly-keys .
-	       [(26 5 20240927134725)
+	       [(26 5 20240928104513)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "7f638f05e0f8f8bfa2b8824b0084ea6ba60b336f"))])
+		 (:commit . "59655bc78f26c1ce8fcafd460565414cfa4af75e"))])
  (xkcd .
        [(1 1)
 	((json
