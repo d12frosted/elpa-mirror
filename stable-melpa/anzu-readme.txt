@@ -1,9 +1,9 @@
 `anzu.el' is an Emacs port of `anzu.vim'.
 
-`anzu.el' provides a minor mode which displays 'current match/total
-matches' in the mode-line in various search modes.  This makes it
-easy to understand how many matches there are in the current buffer
-for your search query.
+`anzu.el' provides a minor mode which displays the match count for
+various search commands in the mode-line, using the format
+`current/total'.  This makes it easy to know how many matches your
+search query has in the current buffer.
 
 To use this package, add following code to your init.el or .emacs
 
