@@ -58,15 +58,15 @@
 			("Andrey Kotlarski" . "m00naticus@gmail.com"))
 		       (:commit . "c80cc51bb1aaf11dd53b9d08e01d61bc9b32622f"))])
  (anzu .
-       [(0 65)
+       [(0 66)
 	((emacs
 	  (25 1)))
 	"Show number of matches in mode-line while searching" tar
 	((:url . "https://github.com/emacsorphanage/anzu")
-	 (:maintainer "Neil Okamoto" . "neil.okamoto+melpa@gmail.com")
+	 (:maintainer "LemonBreezes" . "look@strawberrytea.xyz")
 	 (:authors
 	  ("Syohei YOSHIDA" . "syohex@gmail.com"))
-	 (:commit . "7681fe702a377fb64b0b5646acba75f27e23f493"))])
+	 (:commit . "bc3a0032bb6aa7f5886f10460cd53eb7b8b020af"))])
  (apache-mode .
 	      [(2 2 0)
 	       nil "Major mode for editing Apache httpd configuration files" tar

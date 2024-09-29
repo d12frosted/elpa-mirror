@@ -36,5 +36,4 @@ C-u C-u C-u C-r  reverse previous search case-sensitive and reverse settings
 
 and the search is done again, with those settings.
 
-See the docstrings for `wrap-search' and
-`wrap-search-again'.
+See the `wrap-search' and `wrap-search-again' docstrings.
