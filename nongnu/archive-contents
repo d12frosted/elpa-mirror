@@ -1761,14 +1761,14 @@
 	       ((:url . "http://github.com/bastibe/org-journal")
 		(:commit . "18df4d5ae5e15580df42562c143d007c6d28d75f"))])
  (org-mime .
-	   [(0 3 3)
+	   [(0 3 4)
 	    ((emacs
 	      (27 1)))
 	    "org html export for text/html MIME emails" tar
 	    ((:url . "http://github.com/org-mime/org-mime")
 	     (:keywords "mime" "mail" "email" "html")
 	     (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
-	     (:commit . "468604b8404d3c7d6148be83a4cf308ee95d2cfb"))])
+	     (:commit . "90aa9081ec00a1705552434cb45ff223aa9f8711"))])
  (org-present .
 	      [(0 1)
 	       ((org
@@ -2013,7 +2013,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20240929 145735)
+	      [(1 0 20241001 105847)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
