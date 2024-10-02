@@ -1288,7 +1288,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20240925)
+      [(20241002)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1297,7 +1297,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "43131f4af5f5a01b86731049202d2dd31e0ba25f"))])
+	(:commit . "d2d846f31d2a204f33b001c43c0a42aced8d0f9e"))])
  (ef-themes .
 	    [(1 8 0)
 	     ((emacs
@@ -4472,7 +4472,7 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 7 5)
+	    [(0 7 6)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -4485,7 +4485,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "3430943eaa3222cd2a487d4c102ec51e10e7e3c9"))])
+	      (:commit . "c06015cd6750f8625081f4184c68c94350eb0217"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs
