@@ -12,11 +12,11 @@ BODY and returns its value.  Its own arguments are derived from
 symbols found in ARGS.
 
 Each symbol from `%1' through `%9', which appears in BODY,
-specifies an argument.  Each symbol from `&1' through `&9', which
-appears in BODY, specifies an optional argument.  All arguments
-following an optional argument have to be optional as well, thus
-their names have to begin with `&'.  Symbol `&*' specifies extra
-(`&rest') arguments.
+specifies a mandatory argument.  Each symbol from `&1' through
+`&9', which appears in BODY, specifies an optional argument.
+All arguments following an optional argument have to be optional
+as well, thus their names have to begin with `&'.  Symbol `&*'
+specifies extra (`&rest') arguments.
 
 The shorter symbol `%' can be used instead of `%1', but using both
 in the same expression is not allowed.  Likewise `&' can be used
@@ -24,7 +24,7 @@ instead of `&1'.
 
 Instead of:
 
-  (lambda (a _ &optional c &rest d)
+  (lambda (a &optional _ c &rest d)
     (foo a (bar c) d))
 
 you can use this macro and write:
