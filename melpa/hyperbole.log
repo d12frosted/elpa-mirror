@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/hyperbole/
 Checking out d9ace571e979cc8db763b6020400bbb213eee5a4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperbole/
-  to /tmp/hyperboleO2sRXz/hyperbole-20240922.705
+  to /tmp/hyperboleHCKlhG/hyperbole-20240922.705
     hact.el -> hact.el
     hactypes.el -> hactypes.el
     hargs.el -> hargs.el
@@ -167,10 +167,10 @@ Copying files (->) and directories (=>)
     test/hy-test-dependencies.el -> test/hy-test-dependencies.el
     test/hy-test-helpers.el -> test/hy-test-helpers.el
 Generating hyperbole.info
-Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperboleO2sRXz/hyperbole-20240922.705/hyperbole.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperboleHCKlhG/hyperbole-20240922.705/hyperbole.info' exited with non-zero exit-code: 1
 hyperbole.texi:637: @code missing closing brace
 
-Error: (error "Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperboleO2sRXz/hyperbole-20240922.705/hyperbole.info' exited with non-zero exit-code: 1")
+Error: (error "Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperboleHCKlhG/hyperbole-20240922.705/hyperbole.info' exited with non-zero exit-code: 1")
 Command `install-info --dir\=dir hyperbole.info' exited with non-zero exit-code: 1
 install-info: No such file or directory for hyperbole.info
 
@@ -344,6 +344,6 @@ Created hyperbole-20240922.705.tar containing:
   hyperbole-20240922.705/test/smart-org-tests.el
   hyperbole-20240922.705/topwin.py
  ✓ Success:
-  2024-10-04T01:57:23+0000  hyperbole-20240922.705.entry
-  2024-10-04T01:57:22+0000  hyperbole-20240922.705.tar
-Built hyperbole in 8.221s, finished at 2024-10-04T01:57:23+0000
+  2024-10-04T10:50:53+0000  hyperbole-20240922.705.entry
+  2024-10-04T10:50:53+0000  hyperbole-20240922.705.tar
+Built hyperbole in 10.639s, finished at 2024-10-04T10:50:54+0000
