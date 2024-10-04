@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/minad/vertico
 
 Updating /mnt/store/melpa/working/vertico/
-Checking out 7741da042ddf4102d2f87a8110028363f36bc9e8
+Checking out e826dfcb14af5e2cfd88ed110d0208ddc2d37788
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vertico/
-  to /tmp/verticosxlURm/vertico-20240926.924
+  to /tmp/verticoZvcQ3t/vertico-20241004.1350
     vertico.el -> vertico.el
   ! extensions/vertico-buffer.el -> vertico-buffer.el
   ! extensions/vertico-directory.el -> vertico-directory.el
@@ -20,23 +20,25 @@ Copying files (->) and directories (=>)
   ! extensions/vertico-reverse.el -> vertico-reverse.el
   ! extensions/vertico-suspend.el -> vertico-suspend.el
   ! extensions/vertico-unobtrusive.el -> vertico-unobtrusive.el
-Created vertico-20240926.924.tar containing:
-  vertico-20240926.924/
-  vertico-20240926.924/vertico-buffer.el
-  vertico-20240926.924/vertico-directory.el
-  vertico-20240926.924/vertico-flat.el
-  vertico-20240926.924/vertico-grid.el
-  vertico-20240926.924/vertico-indexed.el
-  vertico-20240926.924/vertico-mouse.el
-  vertico-20240926.924/vertico-multiform.el
-  vertico-20240926.924/vertico-pkg.el
-  vertico-20240926.924/vertico-quick.el
-  vertico-20240926.924/vertico-repeat.el
-  vertico-20240926.924/vertico-reverse.el
-  vertico-20240926.924/vertico-suspend.el
-  vertico-20240926.924/vertico-unobtrusive.el
-  vertico-20240926.924/vertico.el
+Created vertico-20241004.1350.tar containing:
+  vertico-20241004.1350/
+  vertico-20241004.1350/vertico-buffer.el
+  vertico-20241004.1350/vertico-directory.el
+  vertico-20241004.1350/vertico-flat.el
+  vertico-20241004.1350/vertico-grid.el
+  vertico-20241004.1350/vertico-indexed.el
+  vertico-20241004.1350/vertico-mouse.el
+  vertico-20241004.1350/vertico-multiform.el
+  vertico-20241004.1350/vertico-pkg.el
+  vertico-20241004.1350/vertico-quick.el
+  vertico-20241004.1350/vertico-repeat.el
+  vertico-20241004.1350/vertico-reverse.el
+  vertico-20241004.1350/vertico-suspend.el
+  vertico-20241004.1350/vertico-unobtrusive.el
+  vertico-20241004.1350/vertico.el
  ✓ Success:
-  2024-10-04T11:23:49+0000  vertico-20240926.924.entry
-  2024-10-04T11:23:49+0000  vertico-20240926.924.tar
-Built vertico in 3.429s, finished at 2024-10-04T11:23:50+0000
+  2024-10-04T13:37:37+0000  vertico-20240926.924.entry
+  2024-10-04T13:37:37+0000  vertico-20240926.924.tar
+  2024-10-04T15:51:38+0000  vertico-20241004.1350.entry
+  2024-10-04T15:51:38+0000  vertico-20241004.1350.tar
+Built vertico in 3.070s, finished at 2024-10-04T15:51:39+0000
