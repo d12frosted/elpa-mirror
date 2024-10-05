@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/jupyter/
 Checking out 674af0481a94f2ce56c62aa7668a966254ef26ef
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jupyter/
-  to /tmp/jupyterMy95Xy/jupyter-20241004.241
+  to /tmp/jupyterjyoE1n/jupyter-20241004.241
     jupyter-R.el -> jupyter-R.el
     jupyter-base.el -> jupyter-base.el
     jupyter-c++.el -> jupyter-c++.el
@@ -39,3 +39,48 @@ Copying files (->) and directories (=>)
     Makefile -> Makefile
     widget.html -> widget.html
     js => js
+Created jupyter-20241004.241.tar containing:
+  jupyter-20241004.241/
+  jupyter-20241004.241/Makefile
+  jupyter-20241004.241/js/
+  jupyter-20241004.241/js/Makefile
+  jupyter-20241004.241/js/emacs-jupyter.js
+  jupyter-20241004.241/js/index.js
+  jupyter-20241004.241/js/manager.js
+  jupyter-20241004.241/js/package.json
+  jupyter-20241004.241/js/webpack.config.js
+  jupyter-20241004.241/jupyter-R.el
+  jupyter-20241004.241/jupyter-base.el
+  jupyter-20241004.241/jupyter-c++.el
+  jupyter-20241004.241/jupyter-channel-ioloop.el
+  jupyter-20241004.241/jupyter-channel.el
+  jupyter-20241004.241/jupyter-client.el
+  jupyter-20241004.241/jupyter-env.el
+  jupyter-20241004.241/jupyter-ioloop.el
+  jupyter-20241004.241/jupyter-javascript.el
+  jupyter-20241004.241/jupyter-julia.el
+  jupyter-20241004.241/jupyter-kernel-process.el
+  jupyter-20241004.241/jupyter-kernel.el
+  jupyter-20241004.241/jupyter-kernelspec.el
+  jupyter-20241004.241/jupyter-messages.el
+  jupyter-20241004.241/jupyter-mime.el
+  jupyter-20241004.241/jupyter-monads.el
+  jupyter-20241004.241/jupyter-org-client.el
+  jupyter-20241004.241/jupyter-org-extensions.el
+  jupyter-20241004.241/jupyter-pkg.el
+  jupyter-20241004.241/jupyter-python.el
+  jupyter-20241004.241/jupyter-repl.el
+  jupyter-20241004.241/jupyter-rest-api.el
+  jupyter-20241004.241/jupyter-server-kernel.el
+  jupyter-20241004.241/jupyter-server.el
+  jupyter-20241004.241/jupyter-tramp.el
+  jupyter-20241004.241/jupyter-widget-client.el
+  jupyter-20241004.241/jupyter-zmq-channel-ioloop.el
+  jupyter-20241004.241/jupyter-zmq-channel.el
+  jupyter-20241004.241/jupyter.el
+  jupyter-20241004.241/ob-jupyter.el
+  jupyter-20241004.241/widget.html
+ ✓ Success:
+  2024-10-05T10:19:34+0000  jupyter-20241004.241.entry
+  2024-10-05T10:19:34+0000  jupyter-20241004.241.tar
+Built jupyter in 3.710s, finished at 2024-10-05T10:19:35+0000
