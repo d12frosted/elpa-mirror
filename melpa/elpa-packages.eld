@@ -345,7 +345,7 @@
   (bind-chord :url "https://github.com/jwiegley/use-package")
   (bind-key :url "https://github.com/jwiegley/use-package")
   (bind-map :url "https://github.com/justbur/emacs-bind-map")
-  (binder :url "https://github.com/rnkn/binder")
+  (binder :url "https://codeberg.org/divyaranjan/binder")
   (bing-dict :url "https://github.com/cute-jumper/bing-dict.el")
   (binky :url "https://github.com/liuyinz/binky.el")
   (biome :url "https://github.com/SqrtMinusOne/biome")
