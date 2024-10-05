@@ -3,65 +3,33 @@ Fetcher: github
 Source:  https://github.com/factor/factor
 
 Updating /mnt/store/melpa/working/fuel/
-Checking out beb857f27c2f478e048ad670e5772b4822f3a015
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fuel/
-  to /tmp/fuelXgsNAn/fuel-20240930.2217
-  ! misc/fuel/factor-mode.el -> factor-mode.el
-  ! misc/fuel/factor-smie.el -> factor-smie.el
-  ! misc/fuel/fuel-autodoc.el -> fuel-autodoc.el
-  ! misc/fuel/fuel-autohelp.el -> fuel-autohelp.el
-  ! misc/fuel/fuel-base.el -> fuel-base.el
-  ! misc/fuel/fuel-completion.el -> fuel-completion.el
-  ! misc/fuel/fuel-connection.el -> fuel-connection.el
-  ! misc/fuel/fuel-debug-uses.el -> fuel-debug-uses.el
-  ! misc/fuel/fuel-debug.el -> fuel-debug.el
-  ! misc/fuel/fuel-edit.el -> fuel-edit.el
-  ! misc/fuel/fuel-eval.el -> fuel-eval.el
-  ! misc/fuel/fuel-help.el -> fuel-help.el
-  ! misc/fuel/fuel-listener.el -> fuel-listener.el
-  ! misc/fuel/fuel-log.el -> fuel-log.el
-  ! misc/fuel/fuel-markup.el -> fuel-markup.el
-  ! misc/fuel/fuel-menu.el -> fuel-menu.el
-  ! misc/fuel/fuel-mode.el -> fuel-mode.el
-  ! misc/fuel/fuel-pkg.el -> fuel-pkg.el
-  ! misc/fuel/fuel-popup.el -> fuel-popup.el
-  ! misc/fuel/fuel-refactor.el -> fuel-refactor.el
-  ! misc/fuel/fuel-scaffold.el -> fuel-scaffold.el
-  ! misc/fuel/fuel-stack.el -> fuel-stack.el
-  ! misc/fuel/fuel-table.el -> fuel-table.el
-  ! misc/fuel/fuel-tests.el -> fuel-tests.el
-  ! misc/fuel/fuel-xref.el -> fuel-xref.el
-  ! misc/fuel/fuel.el -> fuel.el
-Created fuel-20240930.2217.tar containing:
-  fuel-20240930.2217/
-  fuel-20240930.2217/factor-mode.el
-  fuel-20240930.2217/factor-smie.el
-  fuel-20240930.2217/fuel-autodoc.el
-  fuel-20240930.2217/fuel-autohelp.el
-  fuel-20240930.2217/fuel-base.el
-  fuel-20240930.2217/fuel-completion.el
-  fuel-20240930.2217/fuel-connection.el
-  fuel-20240930.2217/fuel-debug-uses.el
-  fuel-20240930.2217/fuel-debug.el
-  fuel-20240930.2217/fuel-edit.el
-  fuel-20240930.2217/fuel-eval.el
-  fuel-20240930.2217/fuel-help.el
-  fuel-20240930.2217/fuel-listener.el
-  fuel-20240930.2217/fuel-log.el
-  fuel-20240930.2217/fuel-markup.el
-  fuel-20240930.2217/fuel-menu.el
-  fuel-20240930.2217/fuel-mode.el
-  fuel-20240930.2217/fuel-pkg.el
-  fuel-20240930.2217/fuel-popup.el
-  fuel-20240930.2217/fuel-refactor.el
-  fuel-20240930.2217/fuel-scaffold.el
-  fuel-20240930.2217/fuel-stack.el
-  fuel-20240930.2217/fuel-table.el
-  fuel-20240930.2217/fuel-tests.el
-  fuel-20240930.2217/fuel-xref.el
-  fuel-20240930.2217/fuel.el
- ✓ Success:
-  2024-10-04T23:03:49+0000  fuel-20240930.2217.entry
-  2024-10-04T23:03:49+0000  fuel-20240930.2217.tar
-Built fuel in 7.870s, finished at 2024-10-04T23:03:50+0000
+Checking out 1d9aca2f646a176d1ba8ab4bd521a3aa51a5c216
+Warning: fuel :files spec is equivalent to the default
+Debugger entered--Lisp error: (error "No matching file(s) found in /mnt/store/melpa/work...")
+  error("%s" "No matching file(s) found in /mnt/store/melpa/work...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error("fuel" "No matching file(s) found in %s using %s" "/mnt/store/melpa/working/fuel/" ("misc/fuel/*.el"))
+  (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec")))
+  (progn (if (and rcp spec (equal files (package-build--expand-files-spec-1 package-build-default-files-spec))) (progn (message "Warning: %s :files spec is equivalent to the defau..." name))) (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec"))))
+  (if assert (progn (if (and rcp spec (equal files (package-build--expand-files-spec-1 package-build-default-files-spec))) (progn (message "Warning: %s :files spec is equivalent to the defau..." name))) (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec")))))
+  (let ((files (package-build--expand-files-spec-1 (or spec package-build-default-files-spec)))) (if assert (progn (if (and rcp spec (equal files (package-build--expand-files-spec-1 package-build-default-files-spec))) (progn (message "Warning: %s :files spec is equivalent to the defau..." name))) (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec"))))) files)
+  (let ((default-directory (or repo (package-recipe--working-tree rcp))) (spec (or spec (eieio-oref rcp 'files))) (name (eieio-oref rcp 'name))) (if (eq (car spec) :defaults) (progn (setq spec (append package-build-default-files-spec (cdr spec))))) (let ((files (package-build--expand-files-spec-1 (or spec package-build-default-files-spec)))) (if assert (progn (if (and rcp spec (equal files (package-build--expand-files-spec-1 package-build-default-files-spec))) (progn (message "Warning: %s :files spec is equivalent to the defau..." name))) (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec"))))) files))
+  package-build-expand-files-spec(#<package-github-recipe package-github-recipe-1570523d075c> t)
+  (let ((files (package-build-expand-files-spec rcp t))) (cond ((= (length files) 0) (package-build--error rcp "Unable to find files matching recipe patterns")) (package-build-build-function (funcall package-build-build-function rcp files)) ((= (length files) 1) (package-build--build-single-file-package rcp files)) (t (package-build--build-multi-file-package rcp files))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)) nil)) (let ((files (package-build-expand-files-spec rcp t))) (cond ((= (length files) 0) (package-build--error rcp "Unable to find files matching recipe patterns")) (package-build-build-function (funcall package-build-build-function rcp files)) ((= (length files) 1) (package-build--build-single-file-package rcp files)) (t (package-build--build-multi-file-package rcp files))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)) nil)) (let ((files (package-build-expand-files-spec rcp t))) (cond ((= (length files) 0) (package-build--error rcp "Unable to find files matching recipe patterns")) (package-build-build-function (funcall package-build-build-function rcp files)) ((= (length files) 1) (package-build--build-single-file-package rcp files)) (t (package-build--build-multi-file-package rcp files))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp ...)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp ...)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)) nil)) (let ((files (package-build-expand-files-spec rcp t))) (cond ((= (length files) 0) (package-build--error rcp "Unable to find files matching recipe patterns")) (package-build-build-function (funcall package-build-build-function rcp files)) ((= (length files) 1) (package-build--build-single-file-package rcp files)) (t (package-build--build-multi-file-package rcp files))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s ...))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s ...))) (if targets (progn (package-build--message "Running make %s" ...) (apply ... rcp "make" targets)) nil)) (let ((files (package-build-expand-files-spec rcp t))) (cond ((= ... 0) (package-build--error rcp "Unable to find files matching recipe patterns")) (package-build-build-function (funcall package-build-build-function rcp files)) ((= ... 1) (package-build--build-single-file-package rcp files)) (t (package-build--build-multi-file-package rcp files))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s ...) (command ...)) (if command (progn ... ...))) (let* ((s ...) (targets ...)) (if targets (progn ... ...) nil)) (let ((files ...)) (cond (... ...) (package-build-build-function ...) (... ...) (t ...)) (if package-build-badge-data (progn ...))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* (... ...) (if command ...)) (let* (... ...) (if targets ... nil)) (let (...) (cond ... ... ... ...) (if package-build-badge-data ...))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 ...)) (x140 (eieio-oref x0 ...)) (x141 (eieio-oref x0 ...)) (x142 (eieio-oref x0 ...))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ... ...) (let* ... ...) (let ... ... ...)))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-1570523d075c>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 (car --dolist-tail--))) (progn (ignore (consp x136)) (let* (... ...) (let ... ...))) (setq --dolist-tail-- (cdr --dolist-tail--)))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("fuel")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"fuel\")"))
+  command-line()
+  normal-top-level()
+
