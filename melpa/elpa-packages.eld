@@ -2062,6 +2062,7 @@
   (gemini-write :url "https://alexschroeder.ch/cgit/gemini-write")
   (gemtext-mode :url "https://git.sr.ht/~arjca/gemtext-mode.el")
   (general :url "https://github.com/noctuid/general.el")
+  (genexpr-mode :url "https://github.com/larme/genexpr-mode")
   (genrnc :url "https://github.com/aki2o/emacs-genrnc")
   (geoip :url "https://github.com/xuchunyang/geoip.el")
   (geolocation :url "https://github.com/gonewest818/geolocation.el")
