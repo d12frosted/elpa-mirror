@@ -1,6 +1,6 @@
 This is the README file for the AUCTeX distribution.
 
-     Copyright (C) 2008, 2017, 2018 Free Software Foundation, Inc.
+     Copyright (C) 2008, 2017, 2018, 2024 Free Software Foundation, Inc.
 
      Copying and distribution of this file, with or without
      modification, are permitted in any medium without royalty provided
@@ -40,24 +40,21 @@ information, see further below.
 
 More detailed information about the features and usage of AUCTeX can be
 found in the AUCTeX manual.  You can access it from within Emacs by
-typing 'C-h i d m auctex <RET>'.  If you prefer the standalone info
-reader, issue the command 'info auctex' in a terminal.
+typing 'C-h i d m auctex <RET>'.
 
 AUCTeX is written entirely in Emacs Lisp, and hence you can easily add
 new features for your own needs.  It is a GNU project and distributed
 under the 'GNU General Public License Version 3'.
 
-The most recent version is always available at
-<https://ftp.gnu.org/pub/gnu/auctex/>.
+AUCTeX is a package distributed at ELPA, Emacs Lisp Package Archive.
+You can manage it in Emacs package manager.
 
 WWW users may want to check out the AUCTeX page at
-<https://www.gnu.org/software/auctex/>.
-
-For comprehensive information about how to install AUCTeX read the file
-'INSTALL' or 'INSTALL.windows', respectively.
+<https://www.gnu.org/software/auctex/> and
+<https://elpa.gnu.org/packages/auctex.html>.
 
 If you are considering upgrading AUCTeX, the recent changes are
-described in the 'CHANGES' file.
+described on the latter of the above WWW sites.
 
 If you want to discuss AUCTeX with other users or its developers, there
 are several mailing lists you can use.
@@ -71,6 +68,7 @@ you should usually file with the 'M-x TeX-submit-bug-report <RET>'
 command.  If you want to address the developers of AUCTeX themselves
 with technical issues, they can be found on the discussion list
 <auctex-devel@gnu.org>.
+
 preview-latex in a nutshell
 ***************************
 
@@ -107,16 +105,10 @@ background and providing fast interactive response.
 2 Activating preview-latex
 **************************
 
-After installation, the package may need to be activated (and remember
-to activate AUCTeX too).  If preview-latex is installed via the Emacs
-package manager (ELPA), activation should be automatic upon
-installation.
+Successful installation automatically activates the package at Emacs
+startup.
 
-The usual activation (if it is not done automatically) would be
-
-     (load "preview-latex.el" nil t t)
-
-If you still don't get a "Preview" menu in LaTeX mode in spite of AUCTeX
+If you don't get a "Preview" menu in LaTeX mode in spite of AUCTeX
 showing its "Command", your installation is broken.  One possible cause
 are duplicate Lisp files that might be detectable with 'M-x
 list-load-path-shadows <RET>'.
@@ -125,17 +117,16 @@ list-load-path-shadows <RET>'.
 *****************
 
 Once activated, preview-latex and its documentation will be accessible
-via its menus (note that preview-latex requires AUCTeX to be loaded).
-When you have loaded a LaTeX document (a sample document 'circ.tex' is
-included in the distribution, but most documents including math and/or
-figures should do), you can use its menu or 'C-c C-p C-d' (for
-'Preview/Document').  Previews will now be generated for various objects
-in your document.  You can use the time to take a short look at the
-other menu entries and key bindings in the 'Preview' menu.  You'll see
-the previewed objects change into a roadworks sign when preview-latex
-has determined just what it is going to preview.  Note that you can
-freely navigate the buffer while this is going on.  When the process is
-finished you will see the objects typeset in your buffer.
+via its menus.  When you have loaded a LaTeX document (a sample document
+'circ.tex' is included in the distribution, but most documents including
+math and/or figures should do), you can use its menu or 'C-c C-p C-d'
+(for 'Preview/Document').  Previews will now be generated for various
+objects in your document.  You can use the time to take a short look at
+the other menu entries and key bindings in the 'Preview' menu.  You'll
+see the previewed objects change into a roadworks sign when
+preview-latex has determined just what it is going to preview.  Note
+that you can freely navigate the buffer while this is going on.  When
+the process is finished you will see the objects typeset in your buffer.
 
 It is a bad idea, however, to edit the buffer before the roadworks signs
 appear, since that is the moment when the correlation between the
@@ -173,9 +164,8 @@ The default is 'png' (the most efficient image type).  A special setting
 is 'dvipng' in case you have the 'dvipng' program installed.  In this
 case, 'dvipng' will be used for converting DVI files and Ghostscript
 (with a 'PNG' device) for converting PDF files.  'dvipng' is much faster
-than the combination of Dvips and Ghostscript.  You can get downloads,
-access to its CVS archive and further information from its project site
-(https://savannah.nongnu.org/projects/dvipng).
+than the combination of Dvips and Ghostscript.  'dvipng' is included in
+standard TeX Live distribution.
 
 5 More documentation
 ********************
@@ -205,10 +195,6 @@ will display it.
 
 The preview-latex project is now part of AUCTeX and accessible as part
 of the AUCTeX project page (https://savannah.gnu.org/projects/auctex).
-You can get its files from the AUCTeX download area
-(https://ftp.gnu.org/pub/gnu/auctex/).  As of AUCTeX 11.81,
-preview-latex should already be integrated into AUCTeX, so no separate
-download will be necessary.
 
 Anonymous Git is available at <git://git.savannah.gnu.org/auctex.git> or
 <https://git.savannah.gnu.org/git/auctex.git>.  You can also browse the
@@ -236,6 +222,5 @@ in the subject to <info-auctex-request@gnu.org>.
 Offers to support further development will be appreciated.  If you want
 to show your appreciation with a donation to the main developer, you can
 do so via PayPal to <dak@gnu.org>, and of course you can arrange for
-service contracts or for added functionality.  Take a look at the 'TODO'
-list for suggestions in that area.
+service contracts or for added functionality.
 

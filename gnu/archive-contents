@@ -206,14 +206,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "f317b0c9c3e60a959f45d035ed5e31a78f1263ac"))])
  (auctex .
-	 [(14 0 6)
+	 [(14 0 7)
 	  ((emacs
 	    (27 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "be36aa96c813125a1f3849e13223fc68cd09e847"))])
+	   (:commit . "3bdc30d3c91c6b84d7592f19959cdbe25a497fbc"))])
  (auctex-cont-latexmk .
 		      [(0 2)
 		       ((emacs
@@ -1630,13 +1630,13 @@
 			(:url . "https://elpa.gnu.org/packages/external-completion.html")
 			(:commit . "4bc9c8972ac0a3dfa237a9c5704de89ef24ad82b"))])
  (exwm .
-       [(0 31)
+       [(0 32)
 	((emacs
 	  (27 1))
 	 (xelb
-	  (0 19))
+	  (0 20))
 	 (compat
-	  (29 1)))
+	  (30)))
 	"Emacs X Window Manager" tar
 	((:url . "https://github.com/emacs-exwm/exwm")
 	 (:keywords "unix")
@@ -1646,7 +1646,7 @@
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:authors
 	  ("Chris Feng" . "chris.w.feng@gmail.com"))
-	 (:commit . "512d0f0ef9f02211a463fdae04e6732de80bb5de"))])
+	 (:commit . "1485fcf064cee1766444472b09a681654c68636e"))])
  (f90-interface-browser .
 			[(1 1)
 			 nil "Parse and browse f90 interfaces" single
@@ -4472,7 +4472,7 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 7 6)
+	    [(0 7 7)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -4485,7 +4485,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "c06015cd6750f8625081f4184c68c94350eb0217"))])
+	      (:commit . "fc03c0b75826aa771b682137aa3f4e24130a9e3c"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs

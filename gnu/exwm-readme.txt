@@ -24,7 +24,10 @@ Here are the minimal steps to get EXWM working:
    (setq exwm-input-global-keys `(([?\s-r] . exwm-reset)))
    (exwm-enable)
 
-3. Link or copy the file 'xinitrc' to '~/.xinitrc'.
+3. Add the following lines to '~/.xinitrc':
+
+   exec emacs
+
 4. Launch EXWM in a console (e.g. tty1) with
 
    xinit -- vt01
