@@ -5488,6 +5488,7 @@
   (vale-mode :url "https://github.com/jaybosamiya/vale-mode.el")
   (validate-html :url "https://github.com/arthurgleckler/validate-html")
   (vampyricdark-theme :url "https://github.com/VampyricDark/emacs")
+  (varuga :url "https://git.systemreboot.net/varuga/")
   (vbasense :url "https://github.com/aki2o/emacs-vbasense")
   (vc-auto-commit :url "https://github.com/thisirs/vc-auto-commit")
   (vc-check-status :url "https://github.com/thisirs/vc-check-status")
