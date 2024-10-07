@@ -3,38 +3,38 @@ Fetcher: github
 Source:  https://github.com/nnicandro/emacs-zmq
 
 Updating /mnt/store/melpa/working/zmq/
-Checking out 1d9d5a3b46cfd1a90a45ff777f200eb4d5d6fd9e
+Checking out fe856c43286674aa6770d95a81d915363f5df399
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/zmq/
-  to /tmp/zmqSGEReR/zmq-20240716.2000
+  to /tmp/zmqRNLqYE/zmq-20241006.1857
     zmq.el -> zmq.el
     Makefile -> Makefile
     src => src
-Created zmq-20240716.2000.tar containing:
-  zmq-20240716.2000/
-  zmq-20240716.2000/Makefile
-  zmq-20240716.2000/src/
-  zmq-20240716.2000/src/Makefile.am
-  zmq-20240716.2000/src/configure.ac
-  zmq-20240716.2000/src/constants.c
-  zmq-20240716.2000/src/context.c
-  zmq-20240716.2000/src/context.h
-  zmq-20240716.2000/src/core.c
-  zmq-20240716.2000/src/core.h
-  zmq-20240716.2000/src/emacs-module.h
-  zmq-20240716.2000/src/emacs-zmq.c
-  zmq-20240716.2000/src/emacs-zmq.h
-  zmq-20240716.2000/src/msg.c
-  zmq-20240716.2000/src/msg.h
-  zmq-20240716.2000/src/poll.c
-  zmq-20240716.2000/src/poll.h
-  zmq-20240716.2000/src/socket.c
-  zmq-20240716.2000/src/socket.h
-  zmq-20240716.2000/src/util.c
-  zmq-20240716.2000/src/util.h
-  zmq-20240716.2000/zmq-pkg.el
-  zmq-20240716.2000/zmq.el
+Created zmq-20241006.1857.tar containing:
+  zmq-20241006.1857/
+  zmq-20241006.1857/Makefile
+  zmq-20241006.1857/src/
+  zmq-20241006.1857/src/Makefile.am
+  zmq-20241006.1857/src/configure.ac
+  zmq-20241006.1857/src/constants.c
+  zmq-20241006.1857/src/context.c
+  zmq-20241006.1857/src/context.h
+  zmq-20241006.1857/src/core.c
+  zmq-20241006.1857/src/core.h
+  zmq-20241006.1857/src/emacs-module.h
+  zmq-20241006.1857/src/emacs-zmq.c
+  zmq-20241006.1857/src/emacs-zmq.h
+  zmq-20241006.1857/src/msg.c
+  zmq-20241006.1857/src/msg.h
+  zmq-20241006.1857/src/poll.c
+  zmq-20241006.1857/src/poll.h
+  zmq-20241006.1857/src/socket.c
+  zmq-20241006.1857/src/socket.h
+  zmq-20241006.1857/src/util.c
+  zmq-20241006.1857/src/util.h
+  zmq-20241006.1857/zmq-pkg.el
+  zmq-20241006.1857/zmq.el
  ✓ Success:
-  2024-10-06T17:58:13+0000  zmq-20240716.2000.entry
-  2024-10-06T17:58:13+0000  zmq-20240716.2000.tar
-Built zmq in 2.735s, finished at 2024-10-06T17:58:14+0000
+  2024-10-06T22:24:15+0000  zmq-20241006.1857.entry
+  2024-10-06T22:24:15+0000  zmq-20241006.1857.tar
+Built zmq in 4.437s, finished at 2024-10-06T22:24:16+0000
