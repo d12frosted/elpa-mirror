@@ -2260,14 +2260,14 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 2 15)
+	[(1 2 16)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
 	 ((:url . "https://github.com/sachac/subed")
 	  (:keywords "convenience" "files" "hypermedia" "multimedia")
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-	  (:commit . "47403ce79d084d7dec8599553456f35370d8aef2"))])
+	  (:commit . "4558c30f392e32a4658cfbcca335368035bf8da9"))])
  (sweeprolog .
 	     [(0 27 6)
 	      ((emacs
