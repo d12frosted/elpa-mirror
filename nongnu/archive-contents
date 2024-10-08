@@ -241,14 +241,14 @@
 	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:commit . "2905a436e956c5bba16c4633a6e4c4fceefa6535"))])
  (cdlatex .
-	  [(4 18 4)
+	  [(4 18 5)
 	   nil "Fast input methods for LaTeX environments and math" tar
 	   ((:keywords "tex")
 	    (:maintainer "Carsten Dominik" . "carsten.dominik@gmail.com")
 	    (:authors
 	     ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
-	    (:commit . "33770dec73138909714711b05a63e79da5a19ccd"))])
+	    (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider .
 	[(1 16 0)
 	 ((emacs
