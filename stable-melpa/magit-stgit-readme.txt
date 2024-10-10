@@ -14,7 +14,7 @@ When `magit-stgit-mode' is turned on then the current patch series
 is displayed in the status buffer.  While point is on a patch the
 changes it introduces can be shown using `RET', it can be selected
 as the current patch using `a', and it can be discarded using `k'.
-Other StGit commands are available from the StGit popup on `/'.
+Other StGit commands are available from the StGit transient on `/'.
 
 To enable the mode in a particular repository use:
 
