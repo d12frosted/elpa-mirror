@@ -2115,7 +2115,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:commit . "5a57e52122fe483fa9bd39049c13a25334e408da"))])
  (indent-bars .
-	      [(0 7 6)
+	      [(0 8)
 	       ((emacs
 		 (27 1))
 		(compat
@@ -2126,7 +2126,7 @@
 		(:maintainer "J.D. Smith" . "jdtsmith+elpa@gmail.com")
 		(:authors
 		 ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
-		(:commit . "5119ae8f8d9f24f1c793fbff362ea6416e035a77"))])
+		(:commit . "912486722771d9ef5c6000011edf7e6d6c0cebc2"))])
  (inspector .
 	    [(0 38)
 	     ((emacs
@@ -4741,7 +4741,7 @@
 	   ("Justin Burkett" . "justin@burkett.cc"))
 	  (:commit . "007e44be19d068fd6b49874b6e9b8df8b1f552bd"))])
  (verilog-mode .
-	       [(2024 3 1 121933719)
+	       [(2024 10 9 140346409)
 		nil "major mode for editing verilog source in Emacs" tar
 		((:url . "https://www.veripool.org")
 		 (:keywords "languages")
@@ -4751,7 +4751,7 @@
 		 (:authors
 		  ("Michael McNamara" . "mac@verilog.com")
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
-		 (:commit . "b2d18ff944ae374fa03579ca2574f1fba8ae2e4b"))])
+		 (:commit . "cb0b6a405706f6367d9adfb3ee447590c2a0876f"))])
  (vertico .
 	  [(1 9)
 	   ((emacs
