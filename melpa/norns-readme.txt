@@ -1,8 +1,8 @@
 
 This package provides an interactive development for monome norns.
 
-This package allows to spawn REPLs that bind to remote maiden and
-SuperCollider REPLs (via commands `norns-maiden-repl', `norns-sc-repl')
+This package allows to spawn REPLs that bind to remote matron and
+SuperCollider REPLs (via commands `norns-matron-repl', `norns-sc-repl')
 and associated commands to interact with them from Lua and SuperCollider
 source files.
 
@@ -14,16 +14,16 @@ instead).  This behaviors can be changed by setting value of
 `norns-access-policy' to ":current" or ":default".
 
 
-To connect to a REPL, use commands `norns-maiden-repl' and
+To connect to a REPL, use commands `norns-matron-repl' and
 `norns-sc-repl'.  Those REPL provide prompts but one can send text
-through the minibuffer with `norns-maiden-send' and `norns-sc-send'.
+through the minibuffer with `norns-matron-send' and `norns-sc-send'.
 
 Commands that send input to any of the REPL will automatically make the
 REPL pop in a window if not already visible.  This can be turned off by
 setting `norns-repl-switch-on-cmd' to nil.
 
 Additionally, to send a selected region to the appropriate REPL, use
-`norns-maiden-send-selection'.
+`norns-matron-send-selection'.
 
 The currently visited script can be loaded with
 `norns-load-current-script'.  If current script has several
