@@ -1,0 +1,23 @@
+Package: butler
+Fetcher: github
+Source:  https://github.com/AshtonKem/Butler
+
+Updating /mnt/store/melpa/working/butler/
+Checking out 10943ccdf2030187b2f7bd97337d78acb7fd31c9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/butler/
+  to /tmp/butlerRKtvu3/butler-20210928.230
+    butler-pkg.el -> butler-pkg.el
+    butler-servers.el -> butler-servers.el
+    butler-util.el -> butler-util.el
+    butler.el -> butler.el
+Created butler-20210928.230.tar containing:
+  butler-20210928.230/
+  butler-20210928.230/butler-pkg.el
+  butler-20210928.230/butler-servers.el
+  butler-20210928.230/butler-util.el
+  butler-20210928.230/butler.el
+ ✓ Success:
+  2024-10-12T14:21:18+0000  butler-20210928.230.entry
+  2024-10-12T14:21:18+0000  butler-20210928.230.tar
+Built butler in 2.927s, finished at 2024-10-12T14:21:19+0000
