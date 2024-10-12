@@ -34,12 +34,12 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ⁃ No external dependencies outside of core Emacs
 
   With `(setq dape-buffer-window-arrangement 'right)':
-  <https://raw.githubusercontent.com/svaante/dape/resources/c-right-14.0.0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_16_0.png>
   And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
   `completion-in-region-function':
-  <https://raw.githubusercontent.com/svaante/dape/resources/js-gud-14.0.0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_16_0.png>
   With `minibuffer' adapter configuration hints:
-  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer-hints-14.0.0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_16_0.png>
   Screenshots taken with [standard-light].
 
 
@@ -67,37 +67,37 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   │   ;; Load breakpoints on startup
   │   ;;  (after-init . dape-breakpoint-load))
   │ 
-  │   :init
-  │   ;; To use window configuration like gud (gdb-mi)
-  │   ;; (setq dape-buffer-window-arrangement 'gud)
-  │ 
   │   :config
+  │   ;; Turn on global bindings for setting breakpoints with mouse
+  │   ;; (dape-breakpoint-global-mode)
+  │ 
   │   ;; Info buffers to the right
   │   ;; (setq dape-buffer-window-arrangement 'right)
   │ 
-  │   ;; Global bindings for setting breakpoints with mouse
-  │   ;; (dape-breakpoint-global-mode)
+  │   ;; Info buffers like gud (gdb-mi)
+  │   ;; (setq dape-buffer-window-arrangement 'gud)
+  │   ;; (setq dape-info-hide-mode-line nil)
   │ 
   │   ;; Pulse source line (performance hit)
   │   ;; (add-hook 'dape-display-source-hook 'pulse-momentary-highlight-one-line)
   │ 
-  │   ;; To not display info and/or buffers on startup
-  │   ;; (remove-hook 'dape-start-hook 'dape-info)
-  │   ;; (remove-hook 'dape-start-hook 'dape-repl)
-  │ 
-  │   ;; To display info and/or repl buffers on stopped
-  │   ;; (add-hook 'dape-stopped-hook 'dape-info)
-  │   ;; (add-hook 'dape-stopped-hook 'dape-repl)
-  │ 
-  │   ;; Kill compile buffer on build success
-  │   ;; (add-hook 'dape-compile-hook 'kill-buffer)
+  │   ;; Showing inlay hints
+  │   ;; (setq dape-inlay-hints t)
   │ 
   │   ;; Save buffers on startup, useful for interpreted languages
   │   ;; (add-hook 'dape-start-hook (lambda () (save-some-buffers t t)))
   │ 
+  │   ;; Kill compile buffer on build success
+  │   ;; (add-hook 'dape-compile-hook 'kill-buffer)
+  │ 
   │   ;; Projectile users
   │   ;; (setq dape-cwd-fn 'projectile-project-root)
   │   )
+  │ 
+  │ ;; Enable repeat mode for more ergonomic `dape' use
+  │ (use-package repeat
+  │   :config
+  │   (repeat-mode))
   └────
 
 
@@ -313,7 +313,24 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 [ocamlearlybird] <https://github.com/hackwaly/ocamlearlybird>
 
 
-4.15 Other untested adapters
+4.15 Bash - bash-debug
+──────────────────────
+
+  1. Install `node'
+  2. Download latest `vsix' [release] of DAP adapter
+     `bash-debug-<version>.vsix'
+  3. Unpack `mkdir -p ~/.emacs.d/debug-adapters && unzip
+     bash-debug-<version>.vsix -d ~/.emacs.d/debug-adapters/bash-debug'
+
+  See [bash-debug] for more information.
+
+
+[release] <https://github.com/rogalmic/vscode-bash-debug/releases>
+
+[bash-debug] <https://github.com/rogalmic/vscode-bash-debug>
+
+
+4.16 Other untested adapters
 ────────────────────────────
 
   If you find a working configuration for any other debug adapter please
