@@ -2018,7 +2018,7 @@
   (fsbot-data-browser :url "https://github.com/Benaiah/fsbot-data-browser")
   (fsharp-mode :url "https://github.com/fsharp/emacs-fsharp-mode")
   (fstar-mode :url "https://github.com/FStarLang/fstar-mode.el")
-  (fuel :url "https://github.com/factor/factor")
+  (fuel :url "https://github.com/factor/fuel")
   (fuff :url "https://github.com/joelmo/fuff")
   (full-ack :url "https://github.com/nschum/full-ack")
   (fullframe :url "https://git.sr.ht/~tomterl/fullframe")
