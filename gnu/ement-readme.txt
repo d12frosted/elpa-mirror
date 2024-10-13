@@ -415,6 +415,86 @@ Encrypted room support through Pantalaimon
 3 Changelog
 ═══════════
 
+0.16
+────
+
+  *Compatibility*
+
+  ⁃ Use authenticated media requests (part of Matrix 1.11; see [MSC3916]
+    and [matrix.org's sunsetting unauthenticated media]).
+
+  *Additions*
+
+  ⁃ When option `ement-room-images' is disabled (preventing automatic
+    download and display of images), individual images may be shown by
+    clicking the button in their events.
+
+  *Changes*
+
+  ⁃ Option `ement-room-coalesce-events' may now be set to (and defaults
+    to) a maximum number of events to coalesce together.  (This avoids
+    potential performance problems in rare cases.  See [#247].  Thanks
+    to [Arto Jantunen] for reporting and [Sergio Durigan Junior] for
+    testing.)
+
+  *Fixes*
+  ⁃ Replies to edited messages are correctly sent to the original event
+    (whereas previously they were sent to the edit, which caused
+    reactions to not be shown).  ([#230], [#277].  Thanks to [Phil
+    Sainty] for suggesting, and to [dionisos] for reporting.)
+  ⁃ Set `filter-buffer-substring-function' in room buffers to prevent
+    undesired text properties from being included in copied text.
+    ([#278].  Thanks to [Phil Sainty].)
+  ⁃ Command `ement-disconnect' no longer shows an error message.
+    ([#208].)
+  ⁃ Retrieval of earlier events in a just-joined room.  ([#148].  Thanks
+    to [Richard Brežák] for reporting, and to [Phil Sainty] for
+    testing.)
+  ⁃ Cache computed displaynames in rooms (avoiding unnecessary
+    reiteration and recalculation).  ([#298].  Thanks to [Rutherther]
+    for reporting and testing, and to [Phil Sainty].)
+  ⁃ Customization group for options `ement-room-mode-hook' and
+    `ement-room-self-insert-mode'.  (Thanks to [Phil Sainty].)
+  ⁃ Inheritance for some faces.  ([#303].  Thanks to [Jonas Bernoulli].)
+
+
+[MSC3916]
+<https://github.com/matrix-org/matrix-spec-proposals/pull/3916>
+
+[matrix.org's sunsetting unauthenticated media]
+<https://matrix.org/blog/2024/06/26/sunsetting-unauthenticated-media/>
+
+[#247] <https://github.com/alphapapa/ement.el/issues/247>
+
+[Arto Jantunen] <https://github.com/viiru->
+
+[Sergio Durigan Junior] <https://github.com/sergiodj>
+
+[#230] <https://github.com/alphapapa/ement.el/issues/230>
+
+[#277] <https://github.com/alphapapa/ement.el/issues/277>
+
+[Phil Sainty] <https://github.com/phil-s>
+
+[dionisos] <https://github.com/dionisos2>
+
+[#278] <https://github.com/alphapapa/ement.el/pull/278>
+
+[#208] <https://github.com/alphapapa/ement.el/issues/208>
+
+[#148] <https://github.com/alphapapa/ement.el/issues/148>
+
+[Richard Brežák] <https://github.com/MagicRB>
+
+[#298] <https://github.com/alphapapa/ement.el/issues/298>
+
+[Rutherther] <https://github.com/Rutherther>
+
+[#303] <https://github.com/alphapapa/ement.el/pull/303>
+
+[Jonas Bernoulli] <https://github.com/tarsius>
+
+
 0.15.1
 ──────
 
