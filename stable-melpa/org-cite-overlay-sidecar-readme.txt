@@ -21,3 +21,8 @@ exposed as customization variables:
   `universal-sidecar-citeproc-default-style'.
 - `:header' allows you to change the header of the section from the
   default "References".
+
+;; Bug Reports and Patches
+
+If you find an error or have a patch to improve these packages,
+please send an email to `~swflint/emacs-utilities@lists.sr.ht'.

@@ -22,3 +22,9 @@ not loaded.
    to format the todo state.
  - `org-inline-pdfcomment-format-tags-function' is a function used
    to format the task tags.
+
+
+;; Bug Reports and Patches
+
+If you find an error or have a patch to improve these packages,
+please send an email to `~swflint/emacs-utilities@lists.sr.ht'.
