@@ -36,9 +36,11 @@ example and loads it.
 M-x `compiler-explorer-new-session' kills the current session and
 creates a new one, asking for source language.
 
-M-x `compiler-explorer-previous-session' lets you cycle between
-previous sessions.  With a prefix argument, allows selecting the
-specific session to restore.
+M-x `compiler-explorer-previous-session' lets you restore previous
+sessions.
+
+M-x `compiler-explorer-discard-session' kills the current or selected
+sessions and forgets about them forever.
 
 M-x `compiler-explorer-make-link' generates a link for current
 compilation so it can be opened in a browser and shared.
