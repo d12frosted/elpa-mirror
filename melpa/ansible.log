@@ -3,300 +3,36 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-ansible/emacs-ansible
 
 Updating /mnt/store/melpa/working/ansible/
-Checking out e171dacc12eeaba5dbd7fd887f94d11b357fe958
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ansible/
-  to /tmp/ansibleLsFup9/ansible-20240926.2144
-    ansible.el -> ansible.el
-    snippets => snippets
-    dict => dict
-Created ansible-20240926.2144.tar containing:
-  ansible-20240926.2144/
-  ansible-20240926.2144/ansible-pkg.el
-  ansible-20240926.2144/ansible.el
-  ansible-20240926.2144/dict/
-  ansible-20240926.2144/dict/ansible
-  ansible-20240926.2144/snippets/
-  ansible-20240926.2144/snippets/text-mode/
-  ansible-20240926.2144/snippets/text-mode/ansible/
-  ansible-20240926.2144/snippets/text-mode/ansible/a10/
-  ansible-20240926.2144/snippets/text-mode/ansible/a10/a10_server
-  ansible-20240926.2144/snippets/text-mode/ansible/a10/a10_service_group
-  ansible-20240926.2144/snippets/text-mode/ansible/a10/a10_virtual_server
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/cloudformation
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_ami
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_ami_search
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_asg
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_eip
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_elb
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_elb_lb
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_facts
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_group
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_instance
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_instance_info
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_key
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_lc
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_metric_alarm
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_scaling_policy
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_snapshot
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_tag
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_vol
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/ec2_vpc
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/elasticache
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/rds
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/rds_param_group
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/rds_subnet_group
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/route53
-  ansible-20240926.2144/snippets/text-mode/ansible/amazon/s3
-  ansible-20240926.2144/snippets/text-mode/ansible/azure/
-  ansible-20240926.2144/snippets/text-mode/ansible/azure/azure
-  ansible-20240926.2144/snippets/text-mode/ansible/basics/
-  ansible-20240926.2144/snippets/text-mode/ansible/basics/get_url
-  ansible-20240926.2144/snippets/text-mode/ansible/basics/slurp
-  ansible-20240926.2144/snippets/text-mode/ansible/basics/uri
-  ansible-20240926.2144/snippets/text-mode/ansible/citrix/
-  ansible-20240926.2144/snippets/text-mode/ansible/citrix/netscaler
-  ansible-20240926.2144/snippets/text-mode/ansible/commands/
-  ansible-20240926.2144/snippets/text-mode/ansible/commands/command
-  ansible-20240926.2144/snippets/text-mode/ansible/commands/raw
-  ansible-20240926.2144/snippets/text-mode/ansible/commands/script
-  ansible-20240926.2144/snippets/text-mode/ansible/commands/shell
-  ansible-20240926.2144/snippets/text-mode/ansible/digital_ocean/
-  ansible-20240926.2144/snippets/text-mode/ansible/digital_ocean/digital_ocean
-  ansible-20240926.2144/snippets/text-mode/ansible/digital_ocean/digital_ocean_domain
-  ansible-20240926.2144/snippets/text-mode/ansible/digital_ocean/digital_ocean_sshkey
-  ansible-20240926.2144/snippets/text-mode/ansible/docker/
-  ansible-20240926.2144/snippets/text-mode/ansible/docker/_docker_image
-  ansible-20240926.2144/snippets/text-mode/ansible/docker/docker
-  ansible-20240926.2144/snippets/text-mode/ansible/f5/
-  ansible-20240926.2144/snippets/text-mode/ansible/f5/bigip_facts
-  ansible-20240926.2144/snippets/text-mode/ansible/f5/bigip_monitor_http
-  ansible-20240926.2144/snippets/text-mode/ansible/f5/bigip_monitor_tcp
-  ansible-20240926.2144/snippets/text-mode/ansible/f5/bigip_node
-  ansible-20240926.2144/snippets/text-mode/ansible/f5/bigip_pool
-  ansible-20240926.2144/snippets/text-mode/ansible/f5/bigip_pool_member
-  ansible-20240926.2144/snippets/text-mode/ansible/files/
-  ansible-20240926.2144/snippets/text-mode/ansible/files/acl
-  ansible-20240926.2144/snippets/text-mode/ansible/files/assemble
-  ansible-20240926.2144/snippets/text-mode/ansible/files/copy
-  ansible-20240926.2144/snippets/text-mode/ansible/files/fetch
-  ansible-20240926.2144/snippets/text-mode/ansible/files/file
-  ansible-20240926.2144/snippets/text-mode/ansible/files/ini_file
-  ansible-20240926.2144/snippets/text-mode/ansible/files/lineinfile
-  ansible-20240926.2144/snippets/text-mode/ansible/files/replace
-  ansible-20240926.2144/snippets/text-mode/ansible/files/stat
-  ansible-20240926.2144/snippets/text-mode/ansible/files/synchronize
-  ansible-20240926.2144/snippets/text-mode/ansible/files/template
-  ansible-20240926.2144/snippets/text-mode/ansible/files/unarchive
-  ansible-20240926.2144/snippets/text-mode/ansible/files/xattr
-  ansible-20240926.2144/snippets/text-mode/ansible/google/
-  ansible-20240926.2144/snippets/text-mode/ansible/google/gc_storage
-  ansible-20240926.2144/snippets/text-mode/ansible/google/gce
-  ansible-20240926.2144/snippets/text-mode/ansible/google/gce_lb
-  ansible-20240926.2144/snippets/text-mode/ansible/google/gce_net
-  ansible-20240926.2144/snippets/text-mode/ansible/google/gce_pd
-  ansible-20240926.2144/snippets/text-mode/ansible/helper/
-  ansible-20240926.2144/snippets/text-mode/ansible/helper/accelerate
-  ansible-20240926.2144/snippets/text-mode/ansible/helper/fireball
-  ansible-20240926.2144/snippets/text-mode/ansible/inventory/
-  ansible-20240926.2144/snippets/text-mode/ansible/inventory/add_host
-  ansible-20240926.2144/snippets/text-mode/ansible/inventory/group_by
-  ansible-20240926.2144/snippets/text-mode/ansible/language/
-  ansible-20240926.2144/snippets/text-mode/ansible/language/composer
-  ansible-20240926.2144/snippets/text-mode/ansible/language/cpanm
-  ansible-20240926.2144/snippets/text-mode/ansible/language/easy_install
-  ansible-20240926.2144/snippets/text-mode/ansible/language/gem
-  ansible-20240926.2144/snippets/text-mode/ansible/language/npm
-  ansible-20240926.2144/snippets/text-mode/ansible/language/pip
-  ansible-20240926.2144/snippets/text-mode/ansible/linode/
-  ansible-20240926.2144/snippets/text-mode/ansible/linode/linode
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/assert
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/async_status
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/debug
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/fail
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/include_vars
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/pause
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/set_fact
-  ansible-20240926.2144/snippets/text-mode/ansible/logic/wait_for
-  ansible-20240926.2144/snippets/text-mode/ansible/messaging/
-  ansible-20240926.2144/snippets/text-mode/ansible/messaging/rabbitmq_parameter
-  ansible-20240926.2144/snippets/text-mode/ansible/messaging/rabbitmq_plugin
-  ansible-20240926.2144/snippets/text-mode/ansible/messaging/rabbitmq_policy
-  ansible-20240926.2144/snippets/text-mode/ansible/messaging/rabbitmq_user
-  ansible-20240926.2144/snippets/text-mode/ansible/messaging/rabbitmq_vhost
-  ansible-20240926.2144/snippets/text-mode/ansible/misc/
-  ansible-20240926.2144/snippets/text-mode/ansible/misc/mongodb_user
-  ansible-20240926.2144/snippets/text-mode/ansible/misc/ovirt
-  ansible-20240926.2144/snippets/text-mode/ansible/misc/redis
-  ansible-20240926.2144/snippets/text-mode/ansible/misc/riak
-  ansible-20240926.2144/snippets/text-mode/ansible/misc/virt
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/airbrake_deployment
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/bigpanda
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/boundary_meter
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/datadog_event
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/librato_annotation
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/logentries
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/monit
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/nagios
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/newrelic_deployment
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/pagerduty
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/pingdom
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/rollbar_deployment
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/stackdriver
-  ansible-20240926.2144/snippets/text-mode/ansible/monitoring/zabbix_maintenance
-  ansible-20240926.2144/snippets/text-mode/ansible/mysql/
-  ansible-20240926.2144/snippets/text-mode/ansible/mysql/mysql_db
-  ansible-20240926.2144/snippets/text-mode/ansible/mysql/mysql_replication
-  ansible-20240926.2144/snippets/text-mode/ansible/mysql/mysql_user
-  ansible-20240926.2144/snippets/text-mode/ansible/mysql/mysql_variables
-  ansible-20240926.2144/snippets/text-mode/ansible/network/
-  ansible-20240926.2144/snippets/text-mode/ansible/network/dnsimple
-  ansible-20240926.2144/snippets/text-mode/ansible/network/dnsmadeeasy
-  ansible-20240926.2144/snippets/text-mode/ansible/network/lldp
-  ansible-20240926.2144/snippets/text-mode/ansible/network/openvswitch_bridge
-  ansible-20240926.2144/snippets/text-mode/ansible/network/openvswitch_port
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/campfire
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/flowdock
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/grove
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/hipchat
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/irc
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/jabber
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/mail
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/mqtt
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/nexmo
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/osx_say
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/slack
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/sns
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/twilio
-  ansible-20240926.2144/snippets/text-mode/ansible/notification/typetalk
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/glance_image
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/keystone_user
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/nova_compute
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/nova_keypair
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/quantum_floating_ip
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/quantum_floating_ip_associate
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/quantum_network
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/quantum_router
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/quantum_router_gateway
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/quantum_router_interface
-  ansible-20240926.2144/snippets/text-mode/ansible/openstack/quantum_subnet
-  ansible-20240926.2144/snippets/text-mode/ansible/os/
-  ansible-20240926.2144/snippets/text-mode/ansible/os/apt
-  ansible-20240926.2144/snippets/text-mode/ansible/os/apt_key
-  ansible-20240926.2144/snippets/text-mode/ansible/os/apt_repository
-  ansible-20240926.2144/snippets/text-mode/ansible/os/apt_rpm
-  ansible-20240926.2144/snippets/text-mode/ansible/os/homebrew
-  ansible-20240926.2144/snippets/text-mode/ansible/os/homebrew_cask
-  ansible-20240926.2144/snippets/text-mode/ansible/os/homebrew_tap
-  ansible-20240926.2144/snippets/text-mode/ansible/os/layman
-  ansible-20240926.2144/snippets/text-mode/ansible/os/macports
-  ansible-20240926.2144/snippets/text-mode/ansible/os/openbsd_pkg
-  ansible-20240926.2144/snippets/text-mode/ansible/os/opkg
-  ansible-20240926.2144/snippets/text-mode/ansible/os/pacman
-  ansible-20240926.2144/snippets/text-mode/ansible/os/pkgin
-  ansible-20240926.2144/snippets/text-mode/ansible/os/pkgng
-  ansible-20240926.2144/snippets/text-mode/ansible/os/pkgutil
-  ansible-20240926.2144/snippets/text-mode/ansible/os/portage
-  ansible-20240926.2144/snippets/text-mode/ansible/os/portinstall
-  ansible-20240926.2144/snippets/text-mode/ansible/os/redhat_subscription
-  ansible-20240926.2144/snippets/text-mode/ansible/os/rhn_channel
-  ansible-20240926.2144/snippets/text-mode/ansible/os/rhn_register
-  ansible-20240926.2144/snippets/text-mode/ansible/os/rpm_key
-  ansible-20240926.2144/snippets/text-mode/ansible/os/svr4pkg
-  ansible-20240926.2144/snippets/text-mode/ansible/os/swdepot
-  ansible-20240926.2144/snippets/text-mode/ansible/os/urpmi
-  ansible-20240926.2144/snippets/text-mode/ansible/os/yum
-  ansible-20240926.2144/snippets/text-mode/ansible/os/zypper
-  ansible-20240926.2144/snippets/text-mode/ansible/os/zypper_repository
-  ansible-20240926.2144/snippets/text-mode/ansible/postgresql/
-  ansible-20240926.2144/snippets/text-mode/ansible/postgresql/postgresql_db
-  ansible-20240926.2144/snippets/text-mode/ansible/postgresql/postgresql_privs
-  ansible-20240926.2144/snippets/text-mode/ansible/postgresql/postgresql_user
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_cbs
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_cbs_attachments
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_cdb
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_cdb_database
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_cdb_user
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_clb
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_clb_nodes
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_dns
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_dns_record
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_facts
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_files
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_files_objects
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_identity
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_keypair
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_meta
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_network
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_queue
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_scaling_group
-  ansible-20240926.2144/snippets/text-mode/ansible/rackspace/rax_scaling_policy
-  ansible-20240926.2144/snippets/text-mode/ansible/source_control/
-  ansible-20240926.2144/snippets/text-mode/ansible/source_control/bzr
-  ansible-20240926.2144/snippets/text-mode/ansible/source_control/git
-  ansible-20240926.2144/snippets/text-mode/ansible/source_control/github_hooks
-  ansible-20240926.2144/snippets/text-mode/ansible/source_control/hg
-  ansible-20240926.2144/snippets/text-mode/ansible/source_control/subversion
-  ansible-20240926.2144/snippets/text-mode/ansible/system/
-  ansible-20240926.2144/snippets/text-mode/ansible/system/alternatives
-  ansible-20240926.2144/snippets/text-mode/ansible/system/at
-  ansible-20240926.2144/snippets/text-mode/ansible/system/authorized_key
-  ansible-20240926.2144/snippets/text-mode/ansible/system/capabilities
-  ansible-20240926.2144/snippets/text-mode/ansible/system/cron
-  ansible-20240926.2144/snippets/text-mode/ansible/system/debconf
-  ansible-20240926.2144/snippets/text-mode/ansible/system/facter
-  ansible-20240926.2144/snippets/text-mode/ansible/system/filesystem
-  ansible-20240926.2144/snippets/text-mode/ansible/system/firewalld
-  ansible-20240926.2144/snippets/text-mode/ansible/system/getent
-  ansible-20240926.2144/snippets/text-mode/ansible/system/group
-  ansible-20240926.2144/snippets/text-mode/ansible/system/hostname
-  ansible-20240926.2144/snippets/text-mode/ansible/system/kernel_blacklist
-  ansible-20240926.2144/snippets/text-mode/ansible/system/locale_gen
-  ansible-20240926.2144/snippets/text-mode/ansible/system/lvg
-  ansible-20240926.2144/snippets/text-mode/ansible/system/lvol
-  ansible-20240926.2144/snippets/text-mode/ansible/system/modprobe
-  ansible-20240926.2144/snippets/text-mode/ansible/system/mount
-  ansible-20240926.2144/snippets/text-mode/ansible/system/ohai
-  ansible-20240926.2144/snippets/text-mode/ansible/system/open_iscsi
-  ansible-20240926.2144/snippets/text-mode/ansible/system/ping
-  ansible-20240926.2144/snippets/text-mode/ansible/system/seboolean
-  ansible-20240926.2144/snippets/text-mode/ansible/system/selinux
-  ansible-20240926.2144/snippets/text-mode/ansible/system/service
-  ansible-20240926.2144/snippets/text-mode/ansible/system/setup
-  ansible-20240926.2144/snippets/text-mode/ansible/system/sysctl
-  ansible-20240926.2144/snippets/text-mode/ansible/system/ufw
-  ansible-20240926.2144/snippets/text-mode/ansible/system/user
-  ansible-20240926.2144/snippets/text-mode/ansible/system/zfs
-  ansible-20240926.2144/snippets/text-mode/ansible/vmware/
-  ansible-20240926.2144/snippets/text-mode/ansible/vmware/vsphere_guest
-  ansible-20240926.2144/snippets/text-mode/ansible/web_infrastructure/
-  ansible-20240926.2144/snippets/text-mode/ansible/web_infrastructure/apache2_module
-  ansible-20240926.2144/snippets/text-mode/ansible/web_infrastructure/django_manage
-  ansible-20240926.2144/snippets/text-mode/ansible/web_infrastructure/ejabberd_user
-  ansible-20240926.2144/snippets/text-mode/ansible/web_infrastructure/htpasswd
-  ansible-20240926.2144/snippets/text-mode/ansible/web_infrastructure/jboss
-  ansible-20240926.2144/snippets/text-mode/ansible/web_infrastructure/jira
-  ansible-20240926.2144/snippets/text-mode/ansible/web_infrastructure/supervisorctl
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/win_feature
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/win_get_url
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/win_group
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/win_msi
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/win_ping
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/win_service
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/win_stat
-  ansible-20240926.2144/snippets/text-mode/ansible/windows/win_user
-  ansible-20240926.2144/snippets/yaml-mode/
-  ansible-20240926.2144/snippets/yaml-mode/.yas-parents
- ✓ Success:
-  2024-10-14T06:14:17+0000  ansible-20240926.2144.entry
-  2024-10-14T06:14:17+0000  ansible-20240926.2144.tar
-Built ansible in 4.042s, finished at 2024-10-14T06:14:18+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://gitlab.com/emacs-ansible/emacs-ansible/': Recv failure: Connection reset by peer
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-gitlab-recipe package-gitlab-recipe-157e6bf39f5c> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-gitlab-recipe package-gitlab-recipe-157e6bf39f5c> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-gitlab-recipe package-gitlab-recipe-157e6bf39f5c>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-gitlab-recipe package-gitlab-recipe-157e6bf39f5c> nil)
+  package-build--fetch(#<package-gitlab-recipe package-gitlab-recipe-157e6bf39f5c>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("ansible")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"ansible\")"))
+  command-line()
+  normal-top-level()
+
