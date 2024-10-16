@@ -47,9 +47,10 @@
   │ ;; YOU DON'T NEED NONE OF THIS CODE FOR SIMPLE INSTALL
   │ ;; IT IS AN EXAMPLE OF CUSTOMIZATION.
   │ (use-package ellama
+  │   :bind ("C-c e" . ellama-transient-main-menu)
   │   :init
   │   ;; setup key bindings
-  │   (setopt ellama-keymap-prefix "C-c e")
+  │   ;; (setopt ellama-keymap-prefix "C-c e")
   │   ;; language you want ellama to translate to
   │   (setopt ellama-language "German")
   │   ;; could be llm-openai for example
