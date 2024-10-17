@@ -11,5 +11,5 @@ Use C-c ] to jump to the next annotation and C-c [ to jump to
 the previous annotation.  Use M-x annotate-export-annotations to
 save annotations as a no-difference diff file.
 
-Important note: annotation can not overlaps and newline character
+Important note for developers: annotation can not overlaps and newline character
 can not be annotated.
