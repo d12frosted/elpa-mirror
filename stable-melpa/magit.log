@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/magit
 
 Updating /mnt/store/melpa/working/magit/
-Checking out c479be8785dadd6da051ec43e0c1562295d41811
+Checking out 914285a5e88e34179a72422ea0fffc41d1a43815
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit/
-  to /tmp/magitPljqqV/magit-20241017.2220
+  to /tmp/magitZ93er8/magit-20241018.1452
   ! lisp/magit-apply.el -> magit-apply.el
   ! lisp/magit-autorevert.el -> magit-autorevert.el
   ! lisp/magit-base.el -> magit-base.el
@@ -56,59 +56,59 @@ Copying files (->) and directories (=>)
   ! docs/AUTHORS.md -> AUTHORS.md
     LICENSE -> LICENSE
 Generating magit.info
-Created magit-20241017.2220.tar containing:
-  magit-20241017.2220/
-  magit-20241017.2220/AUTHORS.md
-  magit-20241017.2220/LICENSE
-  magit-20241017.2220/dir
-  magit-20241017.2220/git-commit.el
-  magit-20241017.2220/git-rebase.el
-  magit-20241017.2220/magit-apply.el
-  magit-20241017.2220/magit-autorevert.el
-  magit-20241017.2220/magit-base.el
-  magit-20241017.2220/magit-bisect.el
-  magit-20241017.2220/magit-blame.el
-  magit-20241017.2220/magit-bookmark.el
-  magit-20241017.2220/magit-branch.el
-  magit-20241017.2220/magit-bundle.el
-  magit-20241017.2220/magit-clone.el
-  magit-20241017.2220/magit-commit.el
-  magit-20241017.2220/magit-core.el
-  magit-20241017.2220/magit-diff.el
-  magit-20241017.2220/magit-ediff.el
-  magit-20241017.2220/magit-extras.el
-  magit-20241017.2220/magit-fetch.el
-  magit-20241017.2220/magit-files.el
-  magit-20241017.2220/magit-git.el
-  magit-20241017.2220/magit-gitignore.el
-  magit-20241017.2220/magit-log.el
-  magit-20241017.2220/magit-margin.el
-  magit-20241017.2220/magit-merge.el
-  magit-20241017.2220/magit-mode.el
-  magit-20241017.2220/magit-notes.el
-  magit-20241017.2220/magit-patch.el
-  magit-20241017.2220/magit-pkg.el
-  magit-20241017.2220/magit-process.el
-  magit-20241017.2220/magit-pull.el
-  magit-20241017.2220/magit-push.el
-  magit-20241017.2220/magit-reflog.el
-  magit-20241017.2220/magit-refs.el
-  magit-20241017.2220/magit-remote.el
-  magit-20241017.2220/magit-repos.el
-  magit-20241017.2220/magit-reset.el
-  magit-20241017.2220/magit-sequence.el
-  magit-20241017.2220/magit-sparse-checkout.el
-  magit-20241017.2220/magit-stash.el
-  magit-20241017.2220/magit-status.el
-  magit-20241017.2220/magit-submodule.el
-  magit-20241017.2220/magit-subtree.el
-  magit-20241017.2220/magit-tag.el
-  magit-20241017.2220/magit-transient.el
-  magit-20241017.2220/magit-wip.el
-  magit-20241017.2220/magit-worktree.el
-  magit-20241017.2220/magit.el
-  magit-20241017.2220/magit.info
+Created magit-20241018.1452.tar containing:
+  magit-20241018.1452/
+  magit-20241018.1452/AUTHORS.md
+  magit-20241018.1452/LICENSE
+  magit-20241018.1452/dir
+  magit-20241018.1452/git-commit.el
+  magit-20241018.1452/git-rebase.el
+  magit-20241018.1452/magit-apply.el
+  magit-20241018.1452/magit-autorevert.el
+  magit-20241018.1452/magit-base.el
+  magit-20241018.1452/magit-bisect.el
+  magit-20241018.1452/magit-blame.el
+  magit-20241018.1452/magit-bookmark.el
+  magit-20241018.1452/magit-branch.el
+  magit-20241018.1452/magit-bundle.el
+  magit-20241018.1452/magit-clone.el
+  magit-20241018.1452/magit-commit.el
+  magit-20241018.1452/magit-core.el
+  magit-20241018.1452/magit-diff.el
+  magit-20241018.1452/magit-ediff.el
+  magit-20241018.1452/magit-extras.el
+  magit-20241018.1452/magit-fetch.el
+  magit-20241018.1452/magit-files.el
+  magit-20241018.1452/magit-git.el
+  magit-20241018.1452/magit-gitignore.el
+  magit-20241018.1452/magit-log.el
+  magit-20241018.1452/magit-margin.el
+  magit-20241018.1452/magit-merge.el
+  magit-20241018.1452/magit-mode.el
+  magit-20241018.1452/magit-notes.el
+  magit-20241018.1452/magit-patch.el
+  magit-20241018.1452/magit-pkg.el
+  magit-20241018.1452/magit-process.el
+  magit-20241018.1452/magit-pull.el
+  magit-20241018.1452/magit-push.el
+  magit-20241018.1452/magit-reflog.el
+  magit-20241018.1452/magit-refs.el
+  magit-20241018.1452/magit-remote.el
+  magit-20241018.1452/magit-repos.el
+  magit-20241018.1452/magit-reset.el
+  magit-20241018.1452/magit-sequence.el
+  magit-20241018.1452/magit-sparse-checkout.el
+  magit-20241018.1452/magit-stash.el
+  magit-20241018.1452/magit-status.el
+  magit-20241018.1452/magit-submodule.el
+  magit-20241018.1452/magit-subtree.el
+  magit-20241018.1452/magit-tag.el
+  magit-20241018.1452/magit-transient.el
+  magit-20241018.1452/magit-wip.el
+  magit-20241018.1452/magit-worktree.el
+  magit-20241018.1452/magit.el
+  magit-20241018.1452/magit.info
  ✓ Success:
-  2024-10-18T11:43:09+0000  magit-20241017.2220.entry
-  2024-10-18T11:43:09+0000  magit-20241017.2220.tar
-Built magit in 10.831s, finished at 2024-10-18T11:43:10+0000
+  2024-10-18T18:23:36+0000  magit-20241018.1452.entry
+  2024-10-18T18:23:36+0000  magit-20241018.1452.tar
+Built magit in 10.887s, finished at 2024-10-18T18:23:37+0000
