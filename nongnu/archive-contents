@@ -2397,6 +2397,17 @@
 	      (:authors
 	       ("Vivek Das Mohapatra" . "vivek@etla.org"))
 	      (:commit . "v1.0"))])
+ (tp .
+     [(0 2)
+      ((emacs
+	(28 1)))
+      "Transient utilities for posting to an API" tar
+      ((:url . "https://codeberg.org/martianh/transient-post.el")
+       (:keywords "convenience" "api" "requests")
+       (:maintainer "Marty Hiatt" . "martianhiatus@riseup.net")
+       (:authors
+	("Marty Hiatt" . "martianhiatus@riseup.net"))
+       (:commit . "5e70a0002ed541c2889daf3be8b51db1cc6bf177"))])
  (treeview .
 	   [(1 2 0)
 	    ((emacs

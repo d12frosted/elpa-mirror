@@ -3596,7 +3596,7 @@
   (nix-ts-mode :url "https://github.com/nix-community/nix-ts-mode")
   (nix-update :url "https://github.com/jwiegley/nix-update-el")
   (nixfmt :url "https://github.com/purcell/emacs-nixfmt")
-  (nixos-options :url "https://github.com/travisbhartwell/nix-emacs")
+  (nixos-options :url "https://github.com/nix-community/nix-emacs")
   (nixpkgs-fmt :url "https://github.com/purcell/emacs-nixpkgs-fmt")
   (nlinum-hl :url "https://github.com/hlissner/emacs-nlinum-hl")
   (nlinum-relative :url "https://github.com/xcodebuild/nlinum-relative")
