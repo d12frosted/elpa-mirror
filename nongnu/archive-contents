@@ -1597,13 +1597,13 @@
 	    ("Stefan Kangas" . "stefankangas@gmail.com"))
 	   (:commit . "480602f2ec5467aa2418ee98b328fb85d3b58d0c"))])
  (meow .
-       [(1 4 5)
+       [(1 5 0)
 	((emacs
 	  (27 1)))
 	"Yet Another modal editing" tar
 	((:url . "https://www.github.com/DogLooksGood/meow")
 	 (:keywords "convenience" "modal-editing")
-	 (:commit . "54d4e933039827c158a4f593a94681a64e0d8042"))])
+	 (:commit . "ebf7ebb5eb3ac7bb3cfaca9c32d9063f385aee9a"))])
  (minibar .
 	  [(0 3)
 	   ((emacs
@@ -2398,16 +2398,16 @@
 	       ("Vivek Das Mohapatra" . "vivek@etla.org"))
 	      (:commit . "v1.0"))])
  (tp .
-     [(0 3)
+     [(0 4)
       ((emacs
 	(28 1)))
       "Transient utilities for posting to an API" tar
       ((:url . "https://codeberg.org/martianh/tp.el")
        (:keywords "convenience" "api" "requests")
-       (:maintainer "Marty Hiatt" . "martianhiatus@riseup.net")
+       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
        (:authors
-	("Marty Hiatt" . "martianhiatus@riseup.net"))
-       (:commit . "90745226da81c50f7323e295e932ed6b99cd0456"))])
+	("Marty Hiatt" . "mousebot@disroot.org"))
+       (:commit . "7de076a34cb75d445c13c4d08e5b3978946ee23b"))])
  (treeview .
 	   [(1 2 0)
 	    ((emacs
