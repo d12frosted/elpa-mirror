@@ -1,7 +1,6 @@
-
-This major mode for GNU Emacs provides support for editing MATLAB(R) dot-m
-files.  It automatically indents for block structures (including nested
-functions), line continuations (e.g., ...), and comments.
+This major mode for GNU Emacs provides support for editing MATLAB(R)
+dot-m files.  It automatically indents for block structures (including
+nested functions), line continuations (e.g., ...), and comments.
 
 Additional features include auto-fill including auto-additions of
 ellipsis for commands, and even strings.  Block/end construct

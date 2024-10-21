@@ -1,7 +1,5 @@
-ushin-shapes.el replaces ushin tags with ushin shapes
-(https://ushin.org/#shapes) in org documents.
+This package replaces ushin tags with ushin shapes in org documents.
+See https://ushin.org/#shapes to learn about ushin shapes.
 
-;; Usage
-
-Use `ushin-shapes-mode' in all org buffers
-(global-ushin-shapes-mode)
+To use `ushin-shapes-mode' in all org buffers enable
+`global-ushin-shapes-mode'.

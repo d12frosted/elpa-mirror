@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el
 
 Updating /mnt/store/melpa/working/mastodon/
-Checking out e593ad461ae275c641c6c4c90f67d62a920610a0
+Checking out 35242a90c65bbee22c4690c8fa7393b9d48dd5d5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonWLMLjs/mastodon-20240920.1839
+  to /tmp/mastodonitCXFP/mastodon-20241021.1717
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -20,33 +20,43 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-search.el -> mastodon-search.el
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
+  ! lisp/mastodon-transient.el -> mastodon-transient.el
   ! lisp/mastodon-views.el -> mastodon-views.el
   ! lisp/mastodon.el -> mastodon.el
     dir -> dir
     mastodon.info -> mastodon.info
     mastodon.texi -> mastodon.texi
 Generating mastodon.info
-Created mastodon-20240920.1839.tar containing:
-  mastodon-20240920.1839/
-  mastodon-20240920.1839/dir
-  mastodon-20240920.1839/mastodon-async.el
-  mastodon-20240920.1839/mastodon-auth.el
-  mastodon-20240920.1839/mastodon-client.el
-  mastodon-20240920.1839/mastodon-discover.el
-  mastodon-20240920.1839/mastodon-http.el
-  mastodon-20240920.1839/mastodon-inspect.el
-  mastodon-20240920.1839/mastodon-iso.el
-  mastodon-20240920.1839/mastodon-media.el
-  mastodon-20240920.1839/mastodon-notifications.el
-  mastodon-20240920.1839/mastodon-pkg.el
-  mastodon-20240920.1839/mastodon-profile.el
-  mastodon-20240920.1839/mastodon-search.el
-  mastodon-20240920.1839/mastodon-tl.el
-  mastodon-20240920.1839/mastodon-toot.el
-  mastodon-20240920.1839/mastodon-views.el
-  mastodon-20240920.1839/mastodon.el
-  mastodon-20240920.1839/mastodon.info
+Command `makeinfo --no-split mastodon.texi -o /tmp/mastodonitCXFP/mastodon-20241021.1717/mastodon.info' exited with non-zero exit-code: 1
+mastodon.texi:4: warning: @settitle missing argument
+mastodon.texi:16: warning: @title missing argument
+mastodon.texi:821: unknown command `disroot'
+
+Error: (error "Command `makeinfo --no-split mastodon.texi -o /tmp/mastodonitCXFP/mastodon-20241021.1717/mastodon.info' exited with non-zero exit-code: 1")
+Created mastodon-20241021.1717.tar containing:
+  mastodon-20241021.1717/
+  mastodon-20241021.1717/dir
+  mastodon-20241021.1717/mastodon-async.el
+  mastodon-20241021.1717/mastodon-auth.el
+  mastodon-20241021.1717/mastodon-client.el
+  mastodon-20241021.1717/mastodon-discover.el
+  mastodon-20241021.1717/mastodon-http.el
+  mastodon-20241021.1717/mastodon-inspect.el
+  mastodon-20241021.1717/mastodon-iso.el
+  mastodon-20241021.1717/mastodon-media.el
+  mastodon-20241021.1717/mastodon-notifications.el
+  mastodon-20241021.1717/mastodon-pkg.el
+  mastodon-20241021.1717/mastodon-profile.el
+  mastodon-20241021.1717/mastodon-search.el
+  mastodon-20241021.1717/mastodon-tl.el
+  mastodon-20241021.1717/mastodon-toot.el
+  mastodon-20241021.1717/mastodon-transient.el
+  mastodon-20241021.1717/mastodon-views.el
+  mastodon-20241021.1717/mastodon.el
+  mastodon-20241021.1717/mastodon.info
  ✓ Success:
-  2024-10-21T14:18:33+0000  mastodon-20240920.1839.entry
-  2024-10-21T14:18:33+0000  mastodon-20240920.1839.tar
-Built mastodon in 6.693s, finished at 2024-10-21T14:18:34+0000
+  2024-10-21T16:32:45+0000  mastodon-20241021.1514.entry
+  2024-10-21T16:32:45+0000  mastodon-20241021.1514.tar
+  2024-10-21T18:47:00+0000  mastodon-20241021.1717.entry
+  2024-10-21T18:47:00+0000  mastodon-20241021.1717.tar
+Built mastodon in 6.009s, finished at 2024-10-21T18:47:01+0000
