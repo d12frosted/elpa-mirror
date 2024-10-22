@@ -467,7 +467,15 @@
 [mastodon-alt] <https://github.com/rougier/mastodon-alt>
 
 
-1.2.8 Live-updating timelines: `mastodon-async-mode'
+1.2.8 mastodon hydra
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  A user made a hydra for handling basic mastodon.el commands. It's
+  available at
+  <https://holgerschurig.github.io/en/emacs-mastodon-hydra/>.
+
+
+1.2.9 Live-updating timelines: `mastodon-async-mode'
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   (code taken from [mastodon-future].)
@@ -486,8 +494,8 @@
 [mastodon-future] <https://github.com/alexjgriffith/mastodon-future.el>
 
 
-1.2.9 Translating toots
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+1.2.10 Translating toots
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   You can translate toots with `mastodon-toot--translate-toot-text' (`a'
   in a timeline). At the moment this requires [lingva.el], a little
@@ -517,7 +525,7 @@
 [lingva.ml] <https://lingva.ml>
 
 
-1.2.10 Bookmarks and `mastodon.el'
+1.2.11 Bookmarks and `mastodon.el'
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   `mastodon.el' implements a basic bookmark record and
@@ -670,3 +678,13 @@
   Here's a notifcations view plus a compose buffer:
 
   <file:screenshot-notifs+compose.png>
+
+  Here's a user settings transient (active values green, current server
+  values commented and, if a boolean, underlined):
+
+  <file:screenshot-transient-1.jpg>
+
+  Here's a user profile fields transient (changed fields green, current
+  server values commented):
+
+  <file:screenshot-transient-2.jpg>
