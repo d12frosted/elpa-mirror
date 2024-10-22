@@ -1,3 +1,9 @@
+NOTICE
+This package `casual-lib' has been superseded by the package `casual'.
+Please update to the `casual' package from either MELPA or MELPA stable. Upon
+installation and upgrade of the `casual' package, this package will be
+removed.
+
 Library routines for Casual user interfaces.
 
 INSTALLATION

@@ -1,3 +1,9 @@
+NOTICE
+This package `casual-agenda' has been superseded by the package `casual'.
+Please update to the `casual' package from either MELPA or MELPA stable. Upon
+installation and upgrade of the `casual' package, this package will be
+removed from your local Emacs configuration.
+
 Casual Agenda is an opinionated Transient user interface for Org Agenda.
 
 INSTALLATION

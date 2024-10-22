@@ -1,11 +1,11 @@
 Casual Avy is an opinionated Transient-based menu for Avy.
 
 INSTALLATION
-(require 'casual-avy)
+(require 'casual-avy) ; optional if using autoloaded menu
 (keymap-global-set "M-g" #'casual-avy-tmenu)
 
-NOTE: This package requires `casual-lib' which in turn requires an update of
-the built-in package `transient' ≥ 0.6.0. Please customize the variable
-`package-install-upgrade-built-in' to t to allow for `transient' to be
-updated. For further details, consult the INSTALL section of this package's
-README.
+If you are using Emacs ≤ 30.0, you will need to update the built-in package
+`transient'. By default, `package.el' will not upgrade a built-in package.
+Set the customizable variable `package-install-upgrade-built-in' to `t' to
+override this. For more details, please refer to the "Install" section on
+this project's repository web page.

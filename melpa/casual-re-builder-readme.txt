@@ -1,3 +1,9 @@
+NOTICE
+This package `casual-re-builder' has been superseded by the package `casual'.
+Please update to the `casual' package from either MELPA or MELPA stable. Upon
+installation and upgrade of the `casual' package, this package will be
+removed.
+
 Casual RE-Builder is an opinionated Transient-based porcelain for the Emacs regular expression editor.
 
 INSTALLATION

@@ -1,17 +1,19 @@
 An umbrella package to support a single installation point for all Casual
 user interfaces. Included are user interfaces for the following packages:
 
-- Bookmarks (casual-bookmarks)
-- Calc (casual-calc)
-- Dired (casual-dired)
-- I-Search (casual-isearch)
-- IBuffer (casual-ibuffer)
-- Info (casual-info)
-- RE-Builder (casual-re-builder)
-- Org Agenda (casual-agenda)
+- casual
+  - Bookmarks (casual-bookmarks)
+  - Calc (casual-calc)
+  - Dired (casual-dired)
+  - EditKit (casual-editkit)
+  - I-Search (casual-isearch)
+  - IBuffer (casual-ibuffer)
+  - Info (casual-info)
+  - RE-Builder (casual-re-builder)
+  - Org Agenda (casual-agenda)
 - Avy (casual-avy)
 - Symbol Overlay (casual-symbol-overlay)
-- EditKit (casual-editkit)
+
 
 INSTALLATION
 
@@ -37,8 +39,8 @@ The following code is a TL;DR initialization for Casual Suite.
 (keymap-set symbol-overlay-map "C-o" #'casual-symbol-overlay-tmenu)
 (keymap-global-set "C-o" #'casual-editkit-main-tmenu)
 
-NOTE: This package requires `casual-lib' which in turn requires an update of
-the built-in package `transient' ≥ 0.6.0. Please customize the variable
-`package-install-upgrade-built-in' to t to allow for `transient' to be
-updated. For further details, consult the INSTALL section of this package's
-README.
+If you are using Emacs ≤ 30.0, you will need to update the built-in package
+`transient'. By default, `package.el' will not upgrade a built-in package.
+Set the customizable variable `package-install-upgrade-built-in' to `t' to
+override this. For more details, please refer to the "Install" section on
+this project's repository web page.

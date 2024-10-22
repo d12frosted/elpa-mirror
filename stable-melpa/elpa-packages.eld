@@ -490,6 +490,7 @@
   (cask-mode :url "https://github.com/Wilfred/cask-mode")
   (cask-package-toolset :url "https://github.com/AdrieanKhisbe/cask-package-toolset.el")
   (caskxy :url "https://github.com/aki2o/caskxy")
+  (casual :url "https://github.com/kickingvegas/casual")
   (casual-agenda :url "https://github.com/kickingvegas/casual-agenda")
   (casual-avy :url "https://github.com/kickingvegas/casual-avy")
   (casual-bookmarks :url "https://github.com/kickingvegas/casual-bookmarks")
