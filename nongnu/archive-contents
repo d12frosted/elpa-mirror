@@ -1307,11 +1307,11 @@
 		("Joseph Turner" . "joseph@ushin.org"))
 	       (:commit . "6b70954da945664ca798bf483f1d60e9d5859409"))])
  (hyperdrive-org-transclusion .
-			      [(0 2)
+			      [(0 3)
 			       ((emacs
 				 (28 1))
 				(hyperdrive
-				 (0 4 1))
+				 (0 4 2))
 				(org-transclusion
 				 (1 4 0)))
 			       "Tranclude hyperdrive content" tar
@@ -1319,7 +1319,7 @@
 				(:maintainer "Joseph Turner" . "~ushin/ushin@lists.sr.ht")
 				(:authors
 				 ("Joseph Turner" . "joseph@ushin.org"))
-				(:commit . "3cfb18514c53a9ab7d421f8720cbf23b6ba8eb90"))])
+				(:commit . "a56c47144ea5fd085c2ef3f610fd2cb184f86f93"))])
  (idle-highlight-mode .
 		      [(1 1 4)
 		       ((emacs
@@ -2615,14 +2615,14 @@
 	     ((:url . "https://github.com/lewang/ws-butler")
 	      (:commit . "323b651dd70ee40a25accc940b8f80c3a3185205"))])
  (xah-fly-keys .
-	       [(26 6 20241009212806)
+	       [(26 6 20241021131107)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "1ca81019cff66f04e83eeef74e7e475ffc21a5ed"))])
+		 (:commit . "3fb8453d4b4144e5105dd3e65c852be2e6770da8"))])
  (xkcd .
        [(1 1)
 	((json

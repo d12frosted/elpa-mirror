@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/martianh/mastodon.el
 
 Updating /mnt/store/melpa/working/mastodon/
-Checking out 35242a90c65bbee22c4690c8fa7393b9d48dd5d5
+Checking out 31df8d9a0ae57342961ff46fe032c6871d2cefbb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonOQsriK/mastodon-20241021.1717
+  to /tmp/mastodonJzUOy3/mastodon-20241022.604
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -27,34 +27,28 @@ Copying files (->) and directories (=>)
     mastodon.info -> mastodon.info
     mastodon.texi -> mastodon.texi
 Generating mastodon.info
-Command `makeinfo --no-split mastodon.texi -o /tmp/mastodonOQsriK/mastodon-20241021.1717/mastodon.info' exited with non-zero exit-code: 1
-mastodon.texi:4: warning: @settitle missing argument
-mastodon.texi:16: warning: @title missing argument
-mastodon.texi:821: unknown command `disroot'
-
-Error: (error "Command `makeinfo --no-split mastodon.texi -o /tmp/mastodonOQsriK/mastodon-20241021.1717/mastodon.info' exited with non-zero exit-code: 1")
-Created mastodon-20241021.1717.tar containing:
-  mastodon-20241021.1717/
-  mastodon-20241021.1717/dir
-  mastodon-20241021.1717/mastodon-async.el
-  mastodon-20241021.1717/mastodon-auth.el
-  mastodon-20241021.1717/mastodon-client.el
-  mastodon-20241021.1717/mastodon-discover.el
-  mastodon-20241021.1717/mastodon-http.el
-  mastodon-20241021.1717/mastodon-inspect.el
-  mastodon-20241021.1717/mastodon-iso.el
-  mastodon-20241021.1717/mastodon-media.el
-  mastodon-20241021.1717/mastodon-notifications.el
-  mastodon-20241021.1717/mastodon-pkg.el
-  mastodon-20241021.1717/mastodon-profile.el
-  mastodon-20241021.1717/mastodon-search.el
-  mastodon-20241021.1717/mastodon-tl.el
-  mastodon-20241021.1717/mastodon-toot.el
-  mastodon-20241021.1717/mastodon-transient.el
-  mastodon-20241021.1717/mastodon-views.el
-  mastodon-20241021.1717/mastodon.el
-  mastodon-20241021.1717/mastodon.info
+Created mastodon-20241022.604.tar containing:
+  mastodon-20241022.604/
+  mastodon-20241022.604/dir
+  mastodon-20241022.604/mastodon-async.el
+  mastodon-20241022.604/mastodon-auth.el
+  mastodon-20241022.604/mastodon-client.el
+  mastodon-20241022.604/mastodon-discover.el
+  mastodon-20241022.604/mastodon-http.el
+  mastodon-20241022.604/mastodon-inspect.el
+  mastodon-20241022.604/mastodon-iso.el
+  mastodon-20241022.604/mastodon-media.el
+  mastodon-20241022.604/mastodon-notifications.el
+  mastodon-20241022.604/mastodon-pkg.el
+  mastodon-20241022.604/mastodon-profile.el
+  mastodon-20241022.604/mastodon-search.el
+  mastodon-20241022.604/mastodon-tl.el
+  mastodon-20241022.604/mastodon-toot.el
+  mastodon-20241022.604/mastodon-transient.el
+  mastodon-20241022.604/mastodon-views.el
+  mastodon-20241022.604/mastodon.el
+  mastodon-20241022.604/mastodon.info
  ✓ Success:
-  2024-10-22T05:55:44+0000  mastodon-20241021.1717.entry
-  2024-10-22T05:55:44+0000  mastodon-20241021.1717.tar
-Built mastodon in 5.612s, finished at 2024-10-22T05:55:45+0000
+  2024-10-22T10:23:20+0000  mastodon-20241022.604.entry
+  2024-10-22T10:23:20+0000  mastodon-20241022.604.tar
+Built mastodon in 6.163s, finished at 2024-10-22T10:23:21+0000
