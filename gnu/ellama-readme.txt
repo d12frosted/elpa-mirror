@@ -44,8 +44,6 @@
   case you should customize ellama configuration like this:
 
   ┌────
-  │ ;; YOU DON'T NEED NONE OF THIS CODE FOR SIMPLE INSTALL
-  │ ;; IT IS AN EXAMPLE OF CUSTOMIZATION.
   │ (use-package ellama
   │   :bind ("C-c e" . ellama-transient-main-menu)
   │   :init
@@ -56,36 +54,44 @@
   │   ;; could be llm-openai for example
   │   (require 'llm-ollama)
   │   (setopt ellama-provider
-  │ 	(make-llm-ollama
-  │ 	 ;; this model should be pulled to use it
-  │ 	 ;; value should be the same as you print in terminal during pull
-  │ 	 :chat-model "llama3:8b-instruct-q8_0"
-  │ 	 :embedding-model "nomic-embed-text"
-  │ 	 :default-chat-non-standard-params '(("num_ctx" . 8192))))
+  │ 	  (make-llm-ollama
+  │ 	   ;; this model should be pulled to use it
+  │ 	   ;; value should be the same as you print in terminal during pull
+  │ 	   :chat-model "llama3:8b-instruct-q8_0"
+  │ 	   :embedding-model "nomic-embed-text"
+  │ 	   :default-chat-non-standard-params '(("num_ctx" . 8192))))
+  │   (setopt ellama-summarization-provider
+  │ 	  (make-llm-ollama
+  │ 	   :chat-model "qwen2.5:3b"
+  │ 	   :embedding-model "nomic-embed-text"
+  │ 	   :default-chat-non-standard-params '(("num_ctx" . 32768))))
   │   ;; Predefined llm providers for interactive switching.
   │   ;; You shouldn't add ollama providers here - it can be selected interactively
   │   ;; without it. It is just example.
   │   (setopt ellama-providers
-  │ 		  '(("zephyr" . (make-llm-ollama
-  │ 				 :chat-model "zephyr:7b-beta-q6_K"
-  │ 				 :embedding-model "zephyr:7b-beta-q6_K"))
-  │ 		    ("mistral" . (make-llm-ollama
-  │ 				  :chat-model "mistral:7b-instruct-v0.2-q6_K"
-  │ 				  :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
-  │ 		    ("mixtral" . (make-llm-ollama
-  │ 				  :chat-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"
-  │ 				  :embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"))))
+  │ 	  '(("zephyr" . (make-llm-ollama
+  │ 			 :chat-model "zephyr:7b-beta-q6_K"
+  │ 			 :embedding-model "zephyr:7b-beta-q6_K"))
+  │ 	    ("mistral" . (make-llm-ollama
+  │ 			  :chat-model "mistral:7b-instruct-v0.2-q6_K"
+  │ 			  :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
+  │ 	    ("mixtral" . (make-llm-ollama
+  │ 			  :chat-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"
+  │ 			  :embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"))))
   │   ;; Naming new sessions with llm
   │   (setopt ellama-naming-provider
-  │ 	(make-llm-ollama
-  │ 	 :chat-model "llama3:8b-instruct-q8_0"
-  │ 	 :embedding-model "nomic-embed-text"
-  │ 	 :default-chat-non-standard-params '(("stop" . ("\n")))))
+  │ 	  (make-llm-ollama
+  │ 	   :chat-model "llama3:8b-instruct-q8_0"
+  │ 	   :embedding-model "nomic-embed-text"
+  │ 	   :default-chat-non-standard-params '(("stop" . ("\n")))))
   │   (setopt ellama-naming-scheme 'ellama-generate-name-by-llm)
   │   ;; Translation llm provider
-  │   (setopt ellama-translation-provider (make-llm-ollama
-  │ 				     :chat-model "phi3:14b-medium-128k-instruct-q6_K"
-  │ 				     :embedding-model "nomic-embed-text")))
+  │   (setopt ellama-translation-provider
+  │ 	(make-llm-ollama
+  │ 	 :chat-model "qwen2.5:3b"
+  │ 	 :embedding-model "nomic-embed-text"
+  │ 	 :default-chat-non-standard-params
+  │ 	 '(("num_ctx" . 32768)))))
   └────
 
 
@@ -432,6 +438,8 @@
     by LLM. If not set `ellama-provider' will be used.
   • `ellama-chat-translation-enabled': Enable chat translations if set.
   • `ellama-translation-provider': LLM translation provider.
+    `ellama-provider' will be used if not set.
+  • `ellama-summarization-provider' LLM summarization provider.
     `ellama-provider' will be used if not set.
   • `ellama-show-quotes': Show quotes content in chat buffer. Disabled
     by default.
