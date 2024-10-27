@@ -67,11 +67,10 @@
 1.0.4 PDF files support
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Currently PDF files parsing not supported. You can use [marker] to
-  convert it and then create collection from result markdown files.
+  For pdf, doc and other complex documents support used [Apache Tika].
 
 
-[marker] <https://github.com/VikParuchuri/marker>
+[Apache Tika] <https://tika.apache.org>
 
 
 1.1 Installation
@@ -138,7 +137,20 @@
   <https://github.com/ollama/ollama?tab=readme-ov-file#create-a-model>
 
 
-◊ 1.1.1.3 Reranker
+◊ 1.1.1.3 Complex documents
+
+  For pdf, doc etc. you need to run [Apache Tika] service locally. You
+  can do it using docker:
+
+  ┌────
+  │ docker run -d -p 127.0.0.1:9998:9998 apache/tika:latest-full
+  └────
+
+
+  [Apache Tika] <https://tika.apache.org>
+
+
+◊ 1.1.1.4 Reranker
 
   Reranker disabled by default to decrease number of system
   dependencies, but it improves quality of retrieving and answers
@@ -149,7 +161,7 @@
   [here] <https://github.com/s-kostyaev/reranker>
 
 
-◊ 1.1.1.4 Web search provider
+◊ 1.1.1.5 Web search provider
 
   By defauld [duckduckgo] used for web search. But I prefer
   [searxng]. The simplest way to use searxng is [docker]. You need to
@@ -166,7 +178,7 @@
   <https://docs.searxng.org/admin/settings/settings_search.html#settings-search>
 
 
-◊ 1.1.1.5 Parse info manuals
+◊ 1.1.1.6 Parse info manuals
 
   Create index for builtin, external or all info manuals by one of this
   commands:
@@ -475,6 +487,23 @@
     ‣ Description: Toggles whether invisible files and directories
       should be ignored during parsing.
     ‣ Default: `t' (true)
+
+  ⁃ `elisa-tika-url':
+    ‣ Type: String
+    ‣ Description: Apache tika url for file parsing.
+    ‣ Default: `"http://localhost:9998/"'
+
+  ⁃ `elisa-complex-file-extraction-function':
+    ‣ Type: Function
+    ‣ Description: Function to get buffer with complex file (like pdf,
+      odt etc.) content.
+    ‣ Default: `#'elisa-parse-with-tika-buffer'
+
+  ⁃ `elisa-supported-complex-document-extensions':
+    ‣ Type: List of strings
+    ‣ Description: Supported complex document file extensions.
+    ‣ Default: `'("doc" "dot" "ppt" "xls" "rtf" "docx" "pptx" "xlsx"
+      "xlsm" "pdf" "epub" "msg" "odt" "odp" "ods" "odg" "docm")'
 
 
 ◊ 1.3.1.7 ELISA Chat Collections
