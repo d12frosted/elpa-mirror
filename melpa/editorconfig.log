@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/editorconfig/editorconfig-emacs
 
 Updating /mnt/store/melpa/working/editorconfig/
-Checking out c707d8d0f19d61fdb20acba3f27674c3d4e470d6
+Checking out 24f5b2b1cd4e37adc245fb59f7edeb6872a707a4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfiglOj4BF/editorconfig-20241025.1932
+  to /tmp/editorconfigIg8Z68/editorconfig-20241027.1815
     editorconfig-conf-mode.el -> editorconfig-conf-mode.el
     editorconfig-core-handle.el -> editorconfig-core-handle.el
     editorconfig-core.el -> editorconfig-core.el
@@ -15,18 +15,20 @@ Copying files (->) and directories (=>)
     editorconfig.el -> editorconfig.el
   ! doc/editorconfig.texi -> editorconfig.texi
 Generating editorconfig.info
-Created editorconfig-20241025.1932.tar containing:
-  editorconfig-20241025.1932/
-  editorconfig-20241025.1932/dir
-  editorconfig-20241025.1932/editorconfig-conf-mode.el
-  editorconfig-20241025.1932/editorconfig-core-handle.el
-  editorconfig-20241025.1932/editorconfig-core.el
-  editorconfig-20241025.1932/editorconfig-fnmatch.el
-  editorconfig-20241025.1932/editorconfig-pkg.el
-  editorconfig-20241025.1932/editorconfig-tools.el
-  editorconfig-20241025.1932/editorconfig.el
-  editorconfig-20241025.1932/editorconfig.info
+Created editorconfig-20241027.1815.tar containing:
+  editorconfig-20241027.1815/
+  editorconfig-20241027.1815/dir
+  editorconfig-20241027.1815/editorconfig-conf-mode.el
+  editorconfig-20241027.1815/editorconfig-core-handle.el
+  editorconfig-20241027.1815/editorconfig-core.el
+  editorconfig-20241027.1815/editorconfig-fnmatch.el
+  editorconfig-20241027.1815/editorconfig-pkg.el
+  editorconfig-20241027.1815/editorconfig-tools.el
+  editorconfig-20241027.1815/editorconfig.el
+  editorconfig-20241027.1815/editorconfig.info
  ✓ Success:
-  2024-10-27T14:32:30+0000  editorconfig-20241025.1932.entry
-  2024-10-27T14:32:30+0000  editorconfig-20241025.1932.tar
-Built editorconfig in 4.473s, finished at 2024-10-27T14:32:31+0000
+  2024-10-27T16:45:17+0000  editorconfig-20241025.1932.entry
+  2024-10-27T16:45:17+0000  editorconfig-20241025.1932.tar
+  2024-10-27T18:57:33+0000  editorconfig-20241027.1815.entry
+  2024-10-27T18:57:33+0000  editorconfig-20241027.1815.tar
+Built editorconfig in 4.863s, finished at 2024-10-27T18:57:34+0000
