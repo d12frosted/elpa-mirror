@@ -1,0 +1,25 @@
+Package: javadoc-lookup
+Fetcher: github
+Source:  https://github.com/skeeto/javadoc-lookup
+
+Updating /mnt/store/melpa/working/javadoc-lookup/
+Checking out 507a2dd443d60b537b8f779c1847e2cd0ccd1382
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/javadoc-lookup/
+  to /tmp/javadoc-lookupCabtcI/javadoc-lookup-20160214.31
+    javadoc-import.el -> javadoc-import.el
+    javadoc-lookup.el -> javadoc-lookup.el
+    maven-fetch.el -> maven-fetch.el
+    webcache/http+++docs.oracle.com+javase+8+docs+api+.v4 -> webcache/http+++docs.oracle.com+javase+8+docs+api+.v4
+Created javadoc-lookup-20160214.31.tar containing:
+  javadoc-lookup-20160214.31/
+  javadoc-lookup-20160214.31/javadoc-import.el
+  javadoc-lookup-20160214.31/javadoc-lookup-pkg.el
+  javadoc-lookup-20160214.31/javadoc-lookup.el
+  javadoc-lookup-20160214.31/maven-fetch.el
+  javadoc-lookup-20160214.31/webcache/
+  javadoc-lookup-20160214.31/webcache/http+++docs.oracle.com+javase+8+docs+api+.v4
+ ✓ Success:
+  2024-10-28T06:20:02+0000  javadoc-lookup-20160214.31.entry
+  2024-10-28T06:20:02+0000  javadoc-lookup-20160214.31.tar
+Built javadoc-lookup in 4.570s, finished at 2024-10-28T06:20:03+0000
