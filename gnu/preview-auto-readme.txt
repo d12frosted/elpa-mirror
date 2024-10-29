@@ -54,7 +54,8 @@
   package-vc-install, straight, elpaca, …), and add something like the
   following to your [init file]:
   ┌────
-  │ (use-package preview-auto)
+  │ (use-package preview-auto
+  │   :hook (LaTeX-mode . preview-auto-setup))
   └────
 
   Customization options can be discovered via `M-x customize-group
@@ -117,14 +118,20 @@
   ┌────
   │ (use-package preview-auto
   │   :after latex
+  │   :hook (LaTeX-mode . preview-auto-setup)
   │   :config
   │   (setq preview-protect-point t)
   │   (setq preview-locating-previews-message nil)
   │   (setq preview-leave-open-previews-visible t)
   │   :custom
   │   (preview-auto-interval 0.1)
-  │   (preview-LaTeX-command-replacements
-  │    '(preview-LaTeX-disable-pdfoutput)))  
+  │ 
+  │   ;; Uncomment the following only if you have followed the above
+  │   ;; instructions concerning, e.g., hyperref:
+  │ 
+  │   ;; (preview-LaTeX-command-replacements
+  │   ;;  '(preview-LaTeX-disable-pdfoutput))
+  │   )
   └────
 
   My precise current setup may be found in [the LaTeX part of my config]
