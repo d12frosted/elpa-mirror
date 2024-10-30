@@ -67,7 +67,7 @@
   │   :ensure t)
   └────
 
-  The minimum Emacs version is now 27.1. But if you are running an older
+  The minimum Emacs version is now 28.1. But if you are running an older
   version it shouldn't be very hard to get it working.
 
 
@@ -643,8 +643,8 @@
 
   If you'd like to support continued development of `mastodon.el', I
   accept donations via paypal: [paypal.me/martianh]. If you would prefer
-  a different payment method, please write to me at <martianhiatus [at]
-  riseup [dot] net> and I can provide IBAN or other bank account
+  a different payment method, please write to me at
+  <mousebot@disroot.org> and I can provide IBAN or other bank account
   details.
 
   I don't have a tech worker's income, so even a small tip would help

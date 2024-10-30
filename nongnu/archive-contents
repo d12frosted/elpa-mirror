@@ -1552,9 +1552,9 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
  (mastodon .
-	   [(1 1 0)
+	   [(1 1 2)
 	    ((emacs
-	      (27 1))
+	      (28 1))
 	     (request
 	      (0 3 0))
 	     (persist
@@ -1563,11 +1563,11 @@
 	      (0 1)))
 	    "Client for fediverse services using the Mastodon API" tar
 	    ((:url . "https://codeberg.org/martianh/mastodon.el")
-	     (:maintainer "Marty Hiatt" . "martianhiatus@riseup.net")
+	     (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
-	      ("Marty Hiatt" . "martianhiatus@riseup.net"))
-	     (:commit . "390c1d0c2dec6f247830cd507d8d1e8ca4db3479"))])
+	      ("Marty Hiatt" . "mousebot@disroot.org"))
+	     (:commit . "7d23c74ed57a56a1a0b640c4cf443c269486ab09"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
