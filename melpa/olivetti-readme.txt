@@ -77,17 +77,6 @@ For bugs, please ensure you can reproduce with:
     $ emacs -Q -l olivetti.el
 
 
-Hints
------
-
-To always use a different width for a specific file, set a File
-Variable:
-
-    M-x add-file-local-variable RET olivetti-body-width RET 66 RET
-
-See (info "(emacs) File Variables")
-
-
 Alternatives
 ------------
 
@@ -97,3 +86,12 @@ larger scope, I recommend [Writeroom Mode](https://github.com/joostkremers/write
 
 [1]: https://stable.melpa.org/#/olivetti
 [2]: https://melpa.org/#/olivetti
+
+
+Donations
+---------
+
+Donations are graciously accepted via [Github][3], or [Liberapay][4].
+
+[3]: https://github.com/sponsors/rnkn
+[4]: https://liberapay.com/rnkn/
