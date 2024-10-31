@@ -2015,7 +2015,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20241025 131733)
+	      [(1 0 20241030 84822)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
@@ -2400,16 +2400,16 @@
 	       ("Vivek Das Mohapatra" . "vivek@etla.org"))
 	      (:commit . "v1.0"))])
  (tp .
-     [(0 4)
+     [(0 5)
       ((emacs
 	(28 1)))
-      "Transient utilities for posting to an API" tar
+      "Utilities for transient menu that POST to an API." tar
       ((:url . "https://codeberg.org/martianh/tp.el")
        (:keywords "convenience" "api" "requests")
        (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
        (:authors
 	("Marty Hiatt" . "mousebot@disroot.org"))
-       (:commit . "7de076a34cb75d445c13c4d08e5b3978946ee23b"))])
+       (:commit . "6a2676d9de2d018f957a361abdfa2d6d13950e1b"))])
  (treeview .
 	   [(1 3 0)
 	    ((emacs
