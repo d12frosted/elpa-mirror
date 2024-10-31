@@ -3575,7 +3575,7 @@
   (nikola :url "https://gitlab.com/drymerisnothere/nikola-el")
   (nim-mode :url "https://github.com/nim-lang/nim-mode")
   (nimbus-theme :url "https://github.com/mrcnski/nimbus-theme")
-  (ninja-mode :url "https://github.com/ninja-build/ninja")
+  (ninja-mode :url "https://github.com/jhasse/ninja-emacs")
   (nix-buffer :url "https://github.com/shlevy/nix-buffer")
   (nix-env-install :url "https://github.com/akirak/nix-env-install")
   (nix-haskell-mode :url "https://github.com/matthewbauer/nix-haskell-mode")
