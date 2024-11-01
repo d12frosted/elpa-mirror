@@ -1,3 +1,8 @@
+                          ━━━━━━━━━━━━━━━━━━━
+                           A MASTODON CLIENT
+                          ━━━━━━━━━━━━━━━━━━━
+
+
 
 
 
@@ -643,9 +648,8 @@
 
   If you'd like to support continued development of `mastodon.el', I
   accept donations via paypal: [paypal.me/martianh]. If you would prefer
-  a different payment method, please write to me at
-  <mousebot@disroot.org> and I can provide IBAN or other bank account
-  details.
+  a different payment method, please write to me at <mousebot {at}
+  disroot.org> and I can provide IBAN or other bank account details.
 
   I don't have a tech worker's income, so even a small tip would help
   out.

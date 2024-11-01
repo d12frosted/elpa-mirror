@@ -1552,7 +1552,7 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
  (mastodon .
-	   [(1 1 2)
+	   [(1 1 4)
 	    ((emacs
 	      (28 1))
 	     (request
@@ -1560,14 +1560,14 @@
 	     (persist
 	      (0 4))
 	     (tp
-	      (0 1)))
+	      (0 6)))
 	    "Client for fediverse services using the Mastodon API" tar
 	    ((:url . "https://codeberg.org/martianh/mastodon.el")
 	     (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "mousebot@disroot.org"))
-	     (:commit . "7d23c74ed57a56a1a0b640c4cf443c269486ab09"))])
+	     (:commit . "1e18934c705514dc3aad6170a50cd5875dab86bf"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
@@ -2015,7 +2015,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20241030 84822)
+	      [(1 0 20241031 113937)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
