@@ -3,3 +3,28 @@ Fetcher: github
 Source:  https://github.com/minad/corfu
 
 Updating /mnt/store/melpa/working/corfu/
+Checking out 16d5aef839477ac54790fb797c1e85dfdbbd313f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/corfu/
+  to /tmp/corfu3KTOqa/corfu-20241101.1037
+    corfu.el -> corfu.el
+  ! extensions/corfu-echo.el -> corfu-echo.el
+  ! extensions/corfu-history.el -> corfu-history.el
+  ! extensions/corfu-indexed.el -> corfu-indexed.el
+  ! extensions/corfu-info.el -> corfu-info.el
+  ! extensions/corfu-popupinfo.el -> corfu-popupinfo.el
+  ! extensions/corfu-quick.el -> corfu-quick.el
+Created corfu-20241101.1037.tar containing:
+  corfu-20241101.1037/
+  corfu-20241101.1037/corfu-echo.el
+  corfu-20241101.1037/corfu-history.el
+  corfu-20241101.1037/corfu-indexed.el
+  corfu-20241101.1037/corfu-info.el
+  corfu-20241101.1037/corfu-pkg.el
+  corfu-20241101.1037/corfu-popupinfo.el
+  corfu-20241101.1037/corfu-quick.el
+  corfu-20241101.1037/corfu.el
+ ✓ Success:
+  2024-11-01T14:23:23+0000  corfu-20241101.1037.entry
+  2024-11-01T14:23:23+0000  corfu-20241101.1037.tar
+Built corfu in 1.576s, finished at 2024-11-01T14:23:23+0000
