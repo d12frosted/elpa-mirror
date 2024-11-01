@@ -2413,16 +2413,16 @@
 	("Marty Hiatt" . "mousebot@disroot.org"))
        (:commit . "40f1cbd73d9951adaaf7094cba0f0820410879ff"))])
  (treeview .
-	   [(1 3 0)
+	   [(1 3 1)
 	    ((emacs
-	      (29 1)))
+	      (25 1)))
 	    "A generic tree navigation library" tar
 	    ((:url . "https://github.com/tilmanrassy/emacs-treeview")
 	     (:keywords "lisp" "tools" "internal" "convenience")
 	     (:maintainer "Tilman Rassy" . "tilman.rassy@googlemail.com")
 	     (:authors
 	      ("Tilman Rassy" . "tilman.rassy@googlemail.com"))
-	     (:commit . "f8b678ba1dd52171002585bfc13921a509658af3"))])
+	     (:commit . "9a1a16f84fc3c368443641f7a71aa2407ad91d38"))])
  (tuareg .
 	 [(3 0 1)
 	  ((emacs
