@@ -3,24 +3,26 @@ Fetcher: github
 Source:  https://github.com/emacscollective/borg
 
 Updating /mnt/store/melpa/working/borg/
-Checking out cd4bb2b4b670f671611c72227869197c918b8ea7
+Checking out d1bee4874b2203ba1a067530f4142e969200f97d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borgiZeDpw/borg-20241102.1204
+  to /tmp/borgiaYnIL/borg-20241102.1638
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
   ! docs/borg.texi -> borg.texi
     borg.mk -> borg.mk
 Generating borg.info
-Created borg-20241102.1204.tar containing:
-  borg-20241102.1204/
-  borg-20241102.1204/borg-elpa.el
-  borg-20241102.1204/borg-pkg.el
-  borg-20241102.1204/borg.el
-  borg-20241102.1204/borg.info
-  borg-20241102.1204/borg.mk
-  borg-20241102.1204/dir
+Created borg-20241102.1638.tar containing:
+  borg-20241102.1638/
+  borg-20241102.1638/borg-elpa.el
+  borg-20241102.1638/borg-pkg.el
+  borg-20241102.1638/borg.el
+  borg-20241102.1638/borg.info
+  borg-20241102.1638/borg.mk
+  borg-20241102.1638/dir
  ✓ Success:
   2024-11-02T19:57:43+0000  borg-20241102.1204.entry
   2024-11-02T19:57:43+0000  borg-20241102.1204.tar
-Built borg in 4.420s, finished at 2024-11-02T19:57:43+0000
+  2024-11-02T22:11:22+0000  borg-20241102.1638.entry
+  2024-11-02T22:11:22+0000  borg-20241102.1638.tar
+Built borg in 4.352s, finished at 2024-11-02T22:11:23+0000
