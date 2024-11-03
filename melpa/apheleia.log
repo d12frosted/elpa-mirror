@@ -3,3 +3,37 @@ Fetcher: github
 Source:  https://github.com/radian-software/apheleia
 
 Updating /mnt/store/melpa/working/apheleia/
+Checking out 429daf5f28859c265aaf8e0e27682785a3f506a2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/apheleia/
+  to /tmp/apheleia1m3MvI/apheleia-20241018.35
+    apheleia-dp.el -> apheleia-dp.el
+    apheleia-formatter-context.el -> apheleia-formatter-context.el
+    apheleia-formatters.el -> apheleia-formatters.el
+    apheleia-log.el -> apheleia-log.el
+    apheleia-rcs.el -> apheleia-rcs.el
+    apheleia-utils.el -> apheleia-utils.el
+    apheleia.el -> apheleia.el
+    scripts/formatters => scripts/formatters
+Created apheleia-20241018.35.tar containing:
+  apheleia-20241018.35/
+  apheleia-20241018.35/apheleia-dp.el
+  apheleia-20241018.35/apheleia-formatter-context.el
+  apheleia-20241018.35/apheleia-formatters.el
+  apheleia-20241018.35/apheleia-log.el
+  apheleia-20241018.35/apheleia-pkg.el
+  apheleia-20241018.35/apheleia-rcs.el
+  apheleia-20241018.35/apheleia-utils.el
+  apheleia-20241018.35/apheleia.el
+  apheleia-20241018.35/scripts/
+  apheleia-20241018.35/scripts/formatters/
+  apheleia-20241018.35/scripts/formatters/apheleia-docformatter
+  apheleia-20241018.35/scripts/formatters/apheleia-from-project-root
+  apheleia-20241018.35/scripts/formatters/apheleia-mix-format
+  apheleia-20241018.35/scripts/formatters/apheleia-npx
+  apheleia-20241018.35/scripts/formatters/apheleia-phpcs
+  apheleia-20241018.35/scripts/formatters/pnp-bin.js
+ ✓ Success:
+  2024-11-03T03:43:44+0000  apheleia-20241018.35.entry
+  2024-11-03T03:43:44+0000  apheleia-20241018.35.tar
+Built apheleia in 2.846s, finished at 2024-11-03T03:43:45+0000
