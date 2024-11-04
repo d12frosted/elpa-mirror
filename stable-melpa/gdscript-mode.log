@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/godotengine/emacs-gdscript-mode
 
 Updating /mnt/store/melpa/working/gdscript-mode/
-Checking out 52b3637df8524c341eeae04452e9c196f0818207
+Checking out bee7f99c6f780497ec112bf01196181fc83511c8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gdscript-mode/
-  to /tmp/gdscript-mode9w9j3F/gdscript-mode-20241102.1010
+  to /tmp/gdscript-modeNiNU7q/gdscript-mode-20241104.821
     gdscript-comint-gdformat.el -> gdscript-comint-gdformat.el
     gdscript-comint.el -> gdscript-comint.el
     gdscript-completion.el -> gdscript-completion.el
@@ -28,31 +28,31 @@ Copying files (->) and directories (=>)
     gdscript-syntax.el -> gdscript-syntax.el
     gdscript-ts-mode.el -> gdscript-ts-mode.el
     gdscript-utils.el -> gdscript-utils.el
-Created gdscript-mode-20241102.1010.tar containing:
-  gdscript-mode-20241102.1010/
-  gdscript-mode-20241102.1010/gdscript-comint-gdformat.el
-  gdscript-mode-20241102.1010/gdscript-comint.el
-  gdscript-mode-20241102.1010/gdscript-completion.el
-  gdscript-mode-20241102.1010/gdscript-customization.el
-  gdscript-mode-20241102.1010/gdscript-debug.el
-  gdscript-mode-20241102.1010/gdscript-docs.el
-  gdscript-mode-20241102.1010/gdscript-eglot.el
-  gdscript-mode-20241102.1010/gdscript-fill-paragraph.el
-  gdscript-mode-20241102.1010/gdscript-format.el
-  gdscript-mode-20241102.1010/gdscript-godot.el
-  gdscript-mode-20241102.1010/gdscript-history.el
-  gdscript-mode-20241102.1010/gdscript-hydra.el
-  gdscript-mode-20241102.1010/gdscript-imenu.el
-  gdscript-mode-20241102.1010/gdscript-indent-and-nav.el
-  gdscript-mode-20241102.1010/gdscript-keywords.el
-  gdscript-mode-20241102.1010/gdscript-mode-pkg.el
-  gdscript-mode-20241102.1010/gdscript-mode.el
-  gdscript-mode-20241102.1010/gdscript-project.el
-  gdscript-mode-20241102.1010/gdscript-rx.el
-  gdscript-mode-20241102.1010/gdscript-syntax.el
-  gdscript-mode-20241102.1010/gdscript-ts-mode.el
-  gdscript-mode-20241102.1010/gdscript-utils.el
+Created gdscript-mode-20241104.821.tar containing:
+  gdscript-mode-20241104.821/
+  gdscript-mode-20241104.821/gdscript-comint-gdformat.el
+  gdscript-mode-20241104.821/gdscript-comint.el
+  gdscript-mode-20241104.821/gdscript-completion.el
+  gdscript-mode-20241104.821/gdscript-customization.el
+  gdscript-mode-20241104.821/gdscript-debug.el
+  gdscript-mode-20241104.821/gdscript-docs.el
+  gdscript-mode-20241104.821/gdscript-eglot.el
+  gdscript-mode-20241104.821/gdscript-fill-paragraph.el
+  gdscript-mode-20241104.821/gdscript-format.el
+  gdscript-mode-20241104.821/gdscript-godot.el
+  gdscript-mode-20241104.821/gdscript-history.el
+  gdscript-mode-20241104.821/gdscript-hydra.el
+  gdscript-mode-20241104.821/gdscript-imenu.el
+  gdscript-mode-20241104.821/gdscript-indent-and-nav.el
+  gdscript-mode-20241104.821/gdscript-keywords.el
+  gdscript-mode-20241104.821/gdscript-mode-pkg.el
+  gdscript-mode-20241104.821/gdscript-mode.el
+  gdscript-mode-20241104.821/gdscript-project.el
+  gdscript-mode-20241104.821/gdscript-rx.el
+  gdscript-mode-20241104.821/gdscript-syntax.el
+  gdscript-mode-20241104.821/gdscript-ts-mode.el
+  gdscript-mode-20241104.821/gdscript-utils.el
  ✓ Success:
-  2024-11-04T06:37:49+0000  gdscript-mode-20241102.1010.entry
-  2024-11-04T06:37:49+0000  gdscript-mode-20241102.1010.tar
-Built gdscript-mode in 3.374s, finished at 2024-11-04T06:37:50+0000
+  2024-11-04T11:03:41+0000  gdscript-mode-20241104.821.entry
+  2024-11-04T11:03:41+0000  gdscript-mode-20241104.821.tar
+Built gdscript-mode in 3.443s, finished at 2024-11-04T11:03:42+0000
