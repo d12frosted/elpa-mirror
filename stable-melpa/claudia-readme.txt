@@ -9,8 +9,3 @@ and please review Anthropic's Terms of Service before using
 Claudia:
 
 https://www.anthropic.com/legal/consumer-terms
-
-Todos:
-
-- defcustom magit-commit cleanup chats (flag)
-- chat-lists: show percentage of project knowledge used
