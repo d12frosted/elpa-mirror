@@ -31,6 +31,7 @@ be used.  It works well with the following families:
 - Agave
 - JuliaMono
 - FreeMono
+- Iosevka Comfy Fixed
 
 Also, the encoding of the file must support UNICODE.
 One way to do that, is to add a line like this one

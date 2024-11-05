@@ -1,26 +1,28 @@
-This package implements the macro `##', which provides compact
-syntax for short `lambda', without actually being new syntax,
-which would be difficult to get merged into Emacs.  Past attempts
-to add syntax were met with determined pushback and the use of a
-macro was suggested as an alternative.
+This package implements a macro named `##', which provides a compact way
+to write short `lambda' expressions.
 
-The `##' macro, whose signature is (## FN &rest BODY), expands
-to a `lambda' expression, which wraps around these arguments.
+The signature of the macro is (## FN &rest BODY) and it expands to a
+`lambda' expression, which calls the function FN with the arguments BODY
+and returns the value of that.  The arguments of the `lambda' expression
+are derived from symbols found in BODY.
 
-This `lambda' expression calls the function FN with arguments
-BODY and returns its value.  Its own arguments are derived from
-symbols found in ARGS.
+Each symbol from `%1' through `%9', which appears in an unquoted part
+of BODY, specifies a mandatory argument.  Each symbol from `&1' through
+`&9', which appears in an unquoted part of BODY, specifies an optional
+argument.  The symbol `&*' specifies extra (`&rest') arguments.
 
-Each symbol from `%1' through `%9', which appears in BODY,
-specifies a mandatory argument.  Each symbol from `&1' through
-`&9', which appears in BODY, specifies an optional argument.
-All arguments following an optional argument have to be optional
-as well, thus their names have to begin with `&'.  Symbol `&*'
-specifies extra (`&rest') arguments.
+The shorter symbol `%' can be used instead of `%1', but using both in
+the same expression is not allowed.  Likewise `&' can be used instead
+of `&1'.  These shorthands are not recognized in function position.
 
-The shorter symbol `%' can be used instead of `%1', but using both
-in the same expression is not allowed.  Likewise `&' can be used
-instead of `&1'.
+To support binding forms that use a vector as VARLIST (such as `-let'
+from the `dash' package), argument symbols are also detected inside of
+vectors.
+
+The space between `##' and FN can be omitted because `##' is read-syntax
+for the symbol whose name is the empty string.  If you prefer you can
+place a space there anyway, and if you prefer to not use this somewhat
+magical symbol at all, you can instead use the alternative name `llama'.
 
 Instead of:
 
@@ -36,8 +38,8 @@ which expands to:
   (lambda (%1 &optional _&2 &3 &rest &*)
     (foo %1 (bar &3) &*))
 
-Unused trailing arguments and mandatory unused arguments at the
-border between mandatory and optional arguments are also supported:
+Unused trailing arguments and mandatory unused arguments at the border
+between mandatory and optional arguments are also supported:
 
   (##list %1 _%3 &5 _&6)
 
@@ -46,10 +48,6 @@ becomes:
   (lambda (%1 _%2 _%3 &optional _&4 &5 _&6)
     (list %1 &5))
 
-Note how `_%3' and `_&6' are removed from the body, because their
-names begin with an underscore.  Also note that `_&4' is optional,
-unlike the explicitly specified `_%3'.
-
-The name `##' was chosen because that allows (optionally)
-omitting the whitespace between it and the following symbol.
-It also looks similar to #'function.
+Note how `_%3' and `_&6' are removed from the body, because their names
+begin with an underscore.  Also note that `_&4' is optional, unlike the
+explicitly specified `_%3'.
