@@ -32,6 +32,7 @@ be used.  It works well with the following families:
 - JuliaMono
 - FreeMono
 - Iosevka Comfy Fixed
+- Source Code Pro
 
 Also, the encoding of the file must support UNICODE.
 One way to do that, is to add a line like this one
