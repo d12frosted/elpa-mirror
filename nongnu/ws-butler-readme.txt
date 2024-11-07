@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/lewang/ws-butler.png)](http://travis-ci.org/lewang/ws-butler)
+[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/ws-butler.svg)](https://elpa.nongnu.org/nongnu/ws-butler.html)
 
 ## ws-butler -- an unobtrusive way to trim spaces from end of line
 
@@ -38,6 +39,17 @@ There might be lines you don't want to get trimmed, e.g. spaces in multiline str
 
 `apt-get install elpa-ws-butler`
 
+### Configuration
+
+To use ws-butler, require it and add ws-butler-mode as a hook on any mode
+where you would like it to be enabled. For example, to enable for all 
+programming language modes, add this to your .emacs:
+
+    (require 'ws-butler)
+    (add-hook 'prog-mode-hook #'ws-butler-mode)
+
+Alternatively, you can use ws-butler-global-mode to turn it on everywhere.
+
 ## History
 
 1. I started by trimming all spaces at EOL in source code in a
@@ -59,8 +71,5 @@ There might be lines you don't want to get trimmed, e.g. spaces in multiline str
 
 4. Now, the dependency on `highlight-changes-mode` has been removed and we
    handle change changing through text properties ourselves.
-
-
-## This is the result
 
 [ws-trim]: ftp://ftp.lysator.liu.se/pub/emacs/ws-trim.el

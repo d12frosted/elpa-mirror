@@ -1032,7 +1032,7 @@
 	       ("Jonas Bernoulli" . "emacs.git-modes@jonas.bernoulli.dev"))
 	      (:commit . "f99010bbeb8b6d8a0819fac0195a2ef0159d08f0"))])
  (gnosis .
-	 [(0 4 6)
+	 [(0 4 7)
 	  ((emacs
 	    (27 2))
 	   (emacsql
@@ -1047,7 +1047,7 @@
 	   (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
 	   (:authors
 	    ("Thanos Apollo" . "public@thanosapollo.org"))
-	   (:commit . "f4050f4f27e1ac0eab25168b0849017afd04aa31"))])
+	   (:commit . "bfce6f94671611a2da298aa484194fe222223c3d"))])
  (gnu-apl-mode .
 	       [(1 5 1)
 		nil "Emacs mode for GNU APL" tar
@@ -2612,10 +2612,10 @@
 		   (:keywords "writing" "weasel-words" "grammar")
 		   (:commit . "d54eadeedb8bf3aa0e0a584c0a7373c69644f4b8"))])
  (ws-butler .
-	    [(0 6)
+	    [(0 7)
 	     nil "Unobtrusively remove trailing whitespace." tar
 	     ((:url . "https://github.com/lewang/ws-butler")
-	      (:commit . "323b651dd70ee40a25accc940b8f80c3a3185205"))])
+	      (:commit . "d3927f6131f215e9cd3e1f747be5a91e5be8ca9a"))])
  (xah-fly-keys .
 	       [(26 6 20241021131107)
 		((emacs
