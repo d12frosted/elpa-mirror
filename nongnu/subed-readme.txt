@@ -478,6 +478,48 @@ License
 [GNU General Public License] <https://www.gnu.org/licenses/gpl-3.0.txt>
 
 
+Build tips
+══════════
+
+  Here's a post-commit hook that will make it easier to remember to tag
+  releases:
+
+  ┌────
+  │ #!/usr/bin/python
+  │ 
+  │ # place in .git/hooks/post-commit
+  │ # Based on https://gist.github.com/ajmirsky/1245103
+  │ 
+  │ import subprocess
+  │ import re
+  │ 
+  │ print("checking for version change...",)
+  │ 
+  │ output = subprocess.check_output(['git', 'diff', 'HEAD^', 'HEAD', '-U0']).decode("utf-8")
+  │ 
+  │ version_info = None
+  │ for d in output.split("\n"):
+  │     rg = re.compile(r'\+(?:;;\s+)?Version:\s+(?P<major>[0-9]+)\.(?P<minor>[0-9]+)\.(?P<rev>[0-9]+)')
+  │     m = rg.search(d)
+  │     if m:
+  │ 	version_info = m.groupdict()
+  │ 	break
+  │ 
+  │ if version_info:
+  │     tag = "v%s.%s.%s" % (version_info['major'], version_info['minor'], version_info['rev'])
+  │     existing = subprocess.check_output(['git', 'tag']).decode("utf-8").split("\n")
+  │     if tag in existing:
+  │ 	print("%s is already tagged, not updating" % tag)
+  │     else:
+  │ 	result = subprocess.run(['git', 'tag', '-f', tag])
+  │ 	if result.returncode:
+  │ 	    raise Exception('tagging not successful: %s %s' % (result.stdout, result.returncode))
+  │ 	print("tagged revision: %s" % tag)
+  │ else:
+  │     print("none found.")
+  └────
+
+
 Other resources
 ═══════════════
 
