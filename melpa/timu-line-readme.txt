@@ -67,6 +67,7 @@ III.  Options
      - `timu-line-show-org-capture-keys' - default value is t
      - `timu-line-show-mu4e-context' - default value is t
      - `timu-line-show-elfeed-counts' - default value is t
+     - `timu-line-show-monkeytype-stats' - default value is nil
      - `timu-line-show-evil-state' - default value is nil
      - `timu-line-show-tramp-host' - default value is nil
 
