@@ -65,7 +65,6 @@
   The command `rcirc-sqlite-log-mode' toggles between activation and
   deactivation of `rcirc-sqlite'.
 
-
   To start `rcirc-sqlite' automatically when `rcirc' is started, add the
   following to your init file:
 
@@ -195,6 +194,7 @@
    `>'    Same, but also include the next day                             
    `^'    Same, but also include the previous day                         
    `a'    Same, but also include all following days                       
+   `b'    Browse URL in the message                                       
    `<'    Show logs of the channel,date, and nick of the selected message 
    `c'    Copy the selected message, nicely formatted, to the kill-ring   
    `R'    Insert the selected message, nicely formatted, into a register  
