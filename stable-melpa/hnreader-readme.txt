@@ -23,6 +23,7 @@ hnreader-view-comments-in-same-window: if nil then will not create new window
 when viewing comments
 
 ; Changelog
+0.2.6 2024-11-09 update css class capture
 0.2.5 2022-11-16 handle all kinds of items
 0.2.4 2022-11-16 add reply link
 0.2.3 2022-11-14 add reply link
