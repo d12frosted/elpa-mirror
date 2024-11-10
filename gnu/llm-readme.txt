@@ -19,19 +19,25 @@
   compatibility regardless of whether the user has a local LLM or is
   paying for API access.
 
-  LLMs exhibit varying functionalities and APIs. This library aims to
-  abstract functionality to a higher level, as some high-level concepts
-  might be supported by an API while others require more low-level
-  implementations. An example of such a concept is "examples," where the
-  client offers example interactions to demonstrate a pattern for the
-  LLM. While the GCloud Vertex API has an explicit API for examples,
-  OpenAI's API requires specifying examples by modifying the system
-  prompt. OpenAI also introduces the concept of a system prompt, which
-  does not exist in the Vertex API. Our library aims to conceal these
-  API variations by providing higher-level concepts in our API.
+  This library abstracts several kinds of features:
+  • Chat functionality: the ability to query the LLM and get a response,
+    and continue to take turns writing to the LLM and receiving
+    responses.  The library supports both synchronous, asynchronous, and
+    streaming responses.
+  • Chat with image and other kinda of media inputs are also supported,
+    so that the user can input images and discuss them with the LLM.
+  • Function calling (aka "tool use") is supported, for having the LLM
+    call elisp functions that it chooses, with arguments it provides.
+  • Embeddings: Send text and receive a vector that encodes the semantic
+    meaning of the underlying text.  Can be used in a search system to
+    find similar passages.
+  • Prompt construction: Create a prompt to give to an LLM from one more
+    sources of data.
 
   Certain functionalities might not be available in some LLMs. Any such
-  unsupported functionality will raise a `'not-implemented' signal.
+  unsupported functionality will raise a `'not-implemented' signal, or
+  it may fail in some other way.  Clients are recommended to check
+  `llm-capabilities' when trying to do something beyond basic text chat.
 
 
 2 Setting up providers
@@ -84,7 +90,7 @@
     AI's APIs.  Remember to keep this private.  This is non-optional.
   • `:chat-model': A model name from the [list of Open AI's model
     names.]  Keep in mind some of these are not available to everyone.
-    This is optional, and will default to a reasonable 3.5 model.
+    This is optional, and will default to a reasonable model.
   • `:embedding-model': A model name from [list of Open AI's embedding
     model names.]  This is optional, and will default to a reasonable
     model.
@@ -109,7 +115,17 @@
     if you wanted to do that, just use `make-llm-openai' instead.
 
 
-2.3 Gemini (not via Google Cloud)
+2.3 Azure's Open AI
+───────────────────
+
+  Microsoft Azure has an Open AI integration, although it doesn't
+  support everything Open AI does, such as function calling.  You can
+  set it up with `make-llm-azure', with the following parameter:
+  • `:url', the endpoint URL, such as
+    "<https://docs-test-001.openai.azure.com/>".
+
+
+2.4 Gemini (not via Google Cloud)
 ─────────────────────────────────
 
   This is Google's AI model.  You can get an API key via their [page on
@@ -127,7 +143,7 @@
 [page on Google AI Studio] <https://makersuite.google.com/app/apikey>
 
 
-2.4 Vertex (Gemini via Google Cloud)
+2.5 Vertex (Gemini via Google Cloud)
 ────────────────────────────────────
 
   This is mostly for those who want to use Google Cloud specifically,
@@ -165,7 +181,7 @@
 <https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings#supported_models>
 
 
-2.5 Claude
+2.6 Claude
 ──────────
 
   [Claude] is Anthropic's large language model.  It does not support
@@ -184,7 +200,7 @@
 [Claude models] <https://docs.anthropic.com/claude/docs/models-overview>
 
 
-2.6 Ollama
+2.7 Ollama
 ──────────
 
   [Ollama] is a way to run large language models locally. There are
@@ -209,7 +225,7 @@
 [many different models] <https://ollama.ai/library>
 
 
-2.7 GPT4All
+2.8 GPT4All
 ───────────
 
   [GPT4All] is a way to run large language models locally.  To use it
@@ -229,7 +245,7 @@
 [GPT4All] <https://gpt4all.io/index.html>
 
 
-2.8 llama.cpp
+2.9 llama.cpp
 ─────────────
 
   [llama.cpp] is a way to run large language models locally.  To use it
@@ -248,8 +264,8 @@
 [llama.cpp] <https://github.com/ggerganov/llama.cpp>
 
 
-2.9 Fake
-────────
+2.10 Fake
+─────────
 
   This is a client that makes no call, but it just there for testing and
   debugging.  Mostly this is of use to programmatic clients of the llm
@@ -264,7 +280,38 @@
     error.
 
 
-3 `llm' and the use of non-free LLMs
+3 Models
+════════
+
+  When picking a chat or embedding model, anything can be used, as long
+  as the service thinks it is valid.  However, models vary on context
+  size and capabilities.  The `llm-prompt' module, and any client, can
+  depend on the context size of the model via `llm-chat-token-limit'.
+  Similarly, some models have different capabilities, exposed in
+  `llm-capabilities'.  The `llm-models' module defines a list of popular
+  models, but this isn't a comprehensive list.  If you want to add a
+  model, it is fairly easy to do, for example here is adding the Mistral
+  model (which is already included, though):
+
+  ┌────
+  │ (require 'llm-models)
+  │ (add-to-list
+  │  'llm-models
+  │  (make-llm-model
+  │   :name "Mistral" :symbol 'mistral
+  │   :capabilities '(generation tool-use free-software)
+  │   :context-length 8192
+  │   :regex "mistral"))
+  └────
+
+  The `:regex' needs to uniquely identify the model passed in from a
+  provider's chat or embedding model.
+
+  Once this is done, the model will be recognized to have the given
+  context length and capabilities.
+
+
+4 `llm' and the use of non-free LLMs
 ════════════════════════════════════
 
   The `llm' package is part of GNU Emacs by being part of GNU ELPA.
@@ -291,7 +338,7 @@
   └────
 
 
-4 Programmatic use
+5 Programmatic use
 ══════════════════
 
   Client applications should require the `llm' package, and code against
@@ -307,7 +354,7 @@
   will be executed in a temporary buffer instead.
 
 
-4.1 Main functions
+5.1 Main functions
 ──────────────────
 
   • `llm-chat provider prompt': With user-chosen `provider' , and a
@@ -335,6 +382,13 @@
     asynchronously. `vector-callback' is called with the vector
     embedding, and, in case of error, `error-callback' is called with
     the same arguments as in `llm-chat-async'.
+  • `llm-batch-embedding provider strings': same as `llm-embedding', but
+    takes in a list of strings, and returns a list of vectors whose
+    order corresponds to the ordering of the strings.
+  • `llm-batch-embedding-async provider strings vectors-callback
+    error-callback': same as `llm-embedding-async', but takes in a list
+    of strings, and returns a list of vectors whose order corresponds to
+    the ordering of the strings.
   • `llm-count-tokens provider string': Count how many tokens are in
     `string'.  This may vary by `provider', because some provideres
     implement an API for this, but typically is always about the same.
@@ -371,7 +425,7 @@
       is optional, and defaults to `'user'.
 
 
-4.2 Logging
+5.2 Logging
 ───────────
 
   Interactions with the `llm' package can be logged by setting `llm-log'
@@ -379,7 +433,7 @@
   log can be found in the `*llm log*' buffer.
 
 
-4.3 How to handle conversations
+5.3 How to handle conversations
 ───────────────────────────────
 
   Conversations can take place by repeatedly calling `llm-chat' and its
@@ -406,7 +460,7 @@
   └────
 
 
-4.4 Caution about `llm-chat-prompt-interactions'
+5.4 Caution about `llm-chat-prompt-interactions'
 ────────────────────────────────────────────────
 
   The interactions in a prompt may be modified by conversation or by the
@@ -423,10 +477,10 @@
   wouldn't work for all providers.
 
 
-4.5 Function calling
+5.5 Function calling
 ────────────────────
 
-  *Note: function calling functionality is currently alpha quality.  If
+  *Note: function calling functionality is currently beta quality.  If
    you want to use function calling, please watch the `llm'
    [discussions] for any announcements about changes.*
 
@@ -491,7 +545,25 @@
 [discussions] <https://github.com/ahyatt/llm/discussions>
 
 
-4.6 Advanced prompt creation
+5.6 Media input
+───────────────
+
+  *Note: media input functionality is currently alpha quality.  If you
+   want to use it, please watch the `llm' [discussions] for any
+   announcements about changes.*
+
+  Media can be used in `llm-chat' and related functions.  To use media,
+  you can use `llm-multipart' in `llm-make-chat-prompt', and pass it an
+  Emacs image or an `llm-media' object for other kinds of media.
+  Besides images, some models support video and audio.  Not all
+  providers or models support these, with images being the most
+  frequently supported media type, and video and audio more rare.
+
+
+[discussions] <https://github.com/ahyatt/llm/discussions>
+
+
+5.7 Advanced prompt creation
 ────────────────────────────
 
   The `llm-prompt' module provides helper functions to create prompts
@@ -575,6 +647,13 @@
   single value will not enter into the ticket system, but rather be
   prefilled before any tickets are used.
 
+  Values supplied in either the list or generators can be the values
+  themselves, or conses.  If a cons, the variable to fill is the `car'
+  of the cons, and the `cdr' is the place to fill the new value, `front'
+  or `back'.  The `front' is the default: new values will be appended to
+  the end.  `back' will add new values to the start of the filled text
+  for the variable instead.
+
   So, to illustrate with this example, here's how the prompt will be
   filled:
 
@@ -588,7 +667,10 @@
      variables to fill.
   4. If the variable won't make the text too large, fill the variable
      with one entry retrieved from a supplied generator, otherwise
-     ignore.
+     ignore.  These are values are not conses, so values will be
+     appended to the end of the generated text for each variable (so a
+     new variable generated for tags will append after other generated
+     tags but before the subsequent "and" in the text.
   5. Goto 2
 
   The prompt can be filled two ways, one using predefined prompt
@@ -620,7 +702,7 @@
 [ekg] <https://github.com/ahyatt/ekg>
 
 
-5 Contributions
+6 Contributions
 ═══════════════
 
   If you are interested in creating a provider, please send a pull
