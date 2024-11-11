@@ -748,20 +748,18 @@
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		   (:commit . "9fbe0f6a2636f46928f02ddde9c454f36aa45f39"))])
  (consult-hoogle .
-		 [(0 2 2)
+		 [(0 3 0)
 		  ((emacs
-		    (27 1))
+		    (28 1))
 		   (consult
-		    (0 18))
-		   (haskell-mode
-		    (16 1)))
+		    (0 18)))
 		  "Hoogle frontend using consult" tar
 		  ((:url . "https://codeberg.org/rahguzar/consult-hoogle")
 		   (:keywords "docs" "languages")
 		   (:maintainer "rahguzar" . "rahguzar@zohomail.eu")
 		   (:authors
 		    ("rahguzar" . "rahguzar@zohomail.eu"))
-		   (:commit . "635418813c6c6089576cc3b1abb45d173e853aab"))])
+		   (:commit . "2eae2976d8b097183a448f1e1bdbdcba8f8027bf"))])
  (consult-recoll .
 		 [(0 8 1)
 		  ((emacs
