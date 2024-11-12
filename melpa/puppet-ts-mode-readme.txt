@@ -1,6 +1,6 @@
 This package uses a Tree-sitter parser to provide syntax highlighting,
-indentation, alignment, xref navigation and code checking for the Puppet
-domain-specific language.
+indentation, alignment, completion, xref navigation and code checking
+for the Puppet domain-specific language.
 
 Syntax highlighting: Fontification is supported using custom faces for
   Puppet syntax elements like comments, strings, variables, constants,
@@ -14,6 +14,10 @@ Alignment: Alignment rules for common Puppet expressions are included.
   The function `puppet-ts-align-block' (bound to "C-c C-a") aligns the
   current block with respect to "=>" for attributes and hashes or "=" for
   parameter lists.
+
+Completion: The mode updates the `completion-at-point' component to
+  complete variable names and resource types.  Tree-sitter is used to
+  extract the local variable names from the current buffer.
 
 Imenu: Navigation to the resource types and variable assignments used in
   a file is implemented using the imenu facility.
