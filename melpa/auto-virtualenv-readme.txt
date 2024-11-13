@@ -1,52 +1,31 @@
 
-Auto Virtualenv is an Emacs package that automatically activates Python virtual
-environments based on the project directory you're working in. It simplifies
-switching between Python projects by detecting both local (e.g., `.venv`) and
-global (e.g., `~/.pyenv/versions/`) environments. It supports common Python
-project files (like `setup.py`, `pyproject.toml`) and can optionally integrate
-with `projectile` if installed, without making it a strict dependency.
+Auto Virtualenv is a powerful Emacs package for Python developers, offering
+automatic virtual environment management based on the directory of the current
+project. This tool simplifies working across multiple Python projects by
+dynamically detecting and activating virtual environments, reducing the need
+for manual configuration.
+
+It integrates seamlessly with `lsp-mode` and `pyright`, optionally reloading
+the LSP workspace upon environment activation to maintain accurate imports and
+environment settings. Auto Virtualenv identifies Python projects using a
+customizable set of markers (e.g., `setup.py`, `pyproject.toml`) and supports
+common virtual environment locations, both local and global (e.g., `~/.pyenv/versions/`).
 
 Features:
-- Auto-detects and activates virtual environments based on project root directory.
-- Displays active environment in the mode line; shows "Venv: N/A" when none is active.
-- Fallback to global virtual environments if no local `.venv` is found.
-- Allows users to set custom directories and file markers for project detection.
-- Optionally integrates with `projectile` if available for project root detection.
-
-Installation:
-- **MELPA**: Once available, use `M-x package-install` and search for `auto-virtualenv`.
-- **Straight.el**:
-  ```emacs-lisp
-  (use-package auto-virtualenv
-    :straight (:host github :repo "marcwebbie/auto-virtualenv")
-    :config
-    (setq auto-virtualenv-verbose t)
-    (auto-virtualenv-setup))
-  ```
-- **use-package** (for users not using `straight.el`):
-  ```emacs-lisp
-  (use-package auto-virtualenv
-    :load-path "path/to/auto-virtualenv.el"
-    :config
-    (setq auto-virtualenv-verbose t)
-    (auto-virtualenv-setup))
-  ```
+- **Automatic Virtual Environment Detection and Activation**: Based on project root,
+  auto-virtualenv locates and activates virtual environments in either a local
+  project directory or in specified global directories.
+- **LSP Reload Support**: With `lsp-mode` or `pyright`, optionally reload the LSP workspace
+  on environment changes to keep code assistance up-to-date.
+- **Modeline Integration**: Displays the active environment in the modeline. When no
+  environment is active, "Venv: N/A" is shown.
+- **Configurable and Extensible**: Users can add directories for environment searches, set
+  custom project markers, and control verbosity for debugging.
 
 Usage:
-Simply open a Python file within a project directory. `auto-virtualenv` will
-automatically search for a local virtual environment (e.g., `.venv` in the project
-root), falling back to a global directory (such as `~/.pyenv/versions/`) if no local
-environment is found. Upon detection, it activates the virtual environment and updates
-the mode line to display the environment name.
+1. Add `auto-virtualenv` to your `load-path` and enable it with `auto-virtualenv-setup`.
+2. Configure `auto-virtualenv-global-dirs`, `auto-virtualenv-python-project-files`,
+   and `auto-virtualenv-reload-lsp` as needed.
+3. Use it with project management packages like `projectile` or independently.
 
-Customization:
-- `auto-virtualenv-global-dirs`: Directories to search for virtual environments by project name.
-- `auto-virtualenv-python-project-files`: List of files that identify a Python project.
-- `auto-virtualenv-activation-hooks`: Hooks that trigger virtual environment activation.
-- `auto-virtualenv-verbose`: Enable verbose output for debugging.
-
-Known Alternatives & Inspiration:
-- `pyvenv`: A popular package for managing virtual environments manually.
-- `pyenv-mode`: Integrates with `pyenv` to manage Python versions.
-- `pipenv.el`: Specific to `pipenv` workflows.
-- `projectile`: Project management with extensive file and project navigation features.
+See the README for detailed setup and configuration examples.
