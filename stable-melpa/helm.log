@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm
 
 Updating /mnt/store/melpa/working/helm/
-Checking out 79c914247b2640c3053faf64815bb8f51247ea90
+Checking out 0e2aef09de299e72f7fd914191713989de760166
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmoczZMT/helm-20241104.43
+  to /tmp/helmZpueR9/helm-20241112.620
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
     helm-buffers.el -> helm-buffers.el
@@ -47,50 +47,52 @@ Copying files (->) and directories (=>)
     helm-x-files.el -> helm-x-files.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20241104.43.tar containing:
-  helm-20241104.43/
-  helm-20241104.43/emacs-helm.sh
-  helm-20241104.43/helm-adaptive.el
-  helm-20241104.43/helm-bookmark.el
-  helm-20241104.43/helm-buffers.el
-  helm-20241104.43/helm-color.el
-  helm-20241104.43/helm-command.el
-  helm-20241104.43/helm-dabbrev.el
-  helm-20241104.43/helm-easymenu.el
-  helm-20241104.43/helm-elisp.el
-  helm-20241104.43/helm-epa.el
-  helm-20241104.43/helm-eshell.el
-  helm-20241104.43/helm-eval.el
-  helm-20241104.43/helm-external.el
-  helm-20241104.43/helm-fd.el
-  helm-20241104.43/helm-files.el
-  helm-20241104.43/helm-find.el
-  helm-20241104.43/helm-font.el
-  helm-20241104.43/helm-for-files.el
-  helm-20241104.43/helm-global-bindings.el
-  helm-20241104.43/helm-grep.el
-  helm-20241104.43/helm-help.el
-  helm-20241104.43/helm-id-utils.el
-  helm-20241104.43/helm-imenu.el
-  helm-20241104.43/helm-info.el
-  helm-20241104.43/helm-locate.el
-  helm-20241104.43/helm-man.el
-  helm-20241104.43/helm-misc.el
-  helm-20241104.43/helm-mode.el
-  helm-20241104.43/helm-net.el
-  helm-20241104.43/helm-occur.el
-  helm-20241104.43/helm-packages.el
-  helm-20241104.43/helm-pkg.el
-  helm-20241104.43/helm-regexp.el
-  helm-20241104.43/helm-ring.el
-  helm-20241104.43/helm-semantic.el
-  helm-20241104.43/helm-sys.el
-  helm-20241104.43/helm-tags.el
-  helm-20241104.43/helm-types.el
-  helm-20241104.43/helm-utils.el
-  helm-20241104.43/helm-x-files.el
-  helm-20241104.43/helm.el
+Created helm-20241112.620.tar containing:
+  helm-20241112.620/
+  helm-20241112.620/emacs-helm.sh
+  helm-20241112.620/helm-adaptive.el
+  helm-20241112.620/helm-bookmark.el
+  helm-20241112.620/helm-buffers.el
+  helm-20241112.620/helm-color.el
+  helm-20241112.620/helm-command.el
+  helm-20241112.620/helm-dabbrev.el
+  helm-20241112.620/helm-easymenu.el
+  helm-20241112.620/helm-elisp.el
+  helm-20241112.620/helm-epa.el
+  helm-20241112.620/helm-eshell.el
+  helm-20241112.620/helm-eval.el
+  helm-20241112.620/helm-external.el
+  helm-20241112.620/helm-fd.el
+  helm-20241112.620/helm-files.el
+  helm-20241112.620/helm-find.el
+  helm-20241112.620/helm-font.el
+  helm-20241112.620/helm-for-files.el
+  helm-20241112.620/helm-global-bindings.el
+  helm-20241112.620/helm-grep.el
+  helm-20241112.620/helm-help.el
+  helm-20241112.620/helm-id-utils.el
+  helm-20241112.620/helm-imenu.el
+  helm-20241112.620/helm-info.el
+  helm-20241112.620/helm-locate.el
+  helm-20241112.620/helm-man.el
+  helm-20241112.620/helm-misc.el
+  helm-20241112.620/helm-mode.el
+  helm-20241112.620/helm-net.el
+  helm-20241112.620/helm-occur.el
+  helm-20241112.620/helm-packages.el
+  helm-20241112.620/helm-pkg.el
+  helm-20241112.620/helm-regexp.el
+  helm-20241112.620/helm-ring.el
+  helm-20241112.620/helm-semantic.el
+  helm-20241112.620/helm-sys.el
+  helm-20241112.620/helm-tags.el
+  helm-20241112.620/helm-types.el
+  helm-20241112.620/helm-utils.el
+  helm-20241112.620/helm-x-files.el
+  helm-20241112.620/helm.el
  ✓ Success:
-  2024-11-13T02:34:23+0000  helm-20241104.43.entry
-  2024-11-13T02:34:23+0000  helm-20241104.43.tar
-Built helm in 4.118s, finished at 2024-11-13T02:34:24+0000
+  2024-11-13T04:47:33+0000  helm-20241104.43.entry
+  2024-11-13T04:47:32+0000  helm-20241104.43.tar
+  2024-11-13T07:01:17+0000  helm-20241112.620.entry
+  2024-11-13T07:01:17+0000  helm-20241112.620.tar
+Built helm in 4.650s, finished at 2024-11-13T07:01:18+0000
