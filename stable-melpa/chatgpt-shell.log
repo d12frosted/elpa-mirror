@@ -3,16 +3,18 @@ Fetcher: github
 Source:  https://github.com/xenodium/chatgpt-shell
 
 Updating /mnt/store/melpa/working/chatgpt-shell/
-Checking out 42d24de2e2e7e6badb0137ad642b98cfba8a6ccc
+Checking out fa383b47ed258c1d7b61d7399df02f74a0f8aa98
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chatgpt-shell/
-  to /tmp/chatgpt-shell9FNxGe/chatgpt-shell-20241112.1907
+  to /tmp/chatgpt-shelluvnViS/chatgpt-shell-20241113.2229
+    chatgpt-shell-openai.el -> chatgpt-shell-openai.el
     chatgpt-shell.el -> chatgpt-shell.el
-Created chatgpt-shell-20241112.1907.tar containing:
-  chatgpt-shell-20241112.1907/
-  chatgpt-shell-20241112.1907/chatgpt-shell-pkg.el
-  chatgpt-shell-20241112.1907/chatgpt-shell.el
+Created chatgpt-shell-20241113.2229.tar containing:
+  chatgpt-shell-20241113.2229/
+  chatgpt-shell-20241113.2229/chatgpt-shell-openai.el
+  chatgpt-shell-20241113.2229/chatgpt-shell-pkg.el
+  chatgpt-shell-20241113.2229/chatgpt-shell.el
  ✓ Success:
-  2024-11-13T22:19:17+0000  chatgpt-shell-20241112.1907.entry
-  2024-11-13T22:19:17+0000  chatgpt-shell-20241112.1907.tar
-Built chatgpt-shell in 3.433s, finished at 2024-11-13T22:19:18+0000
+  2024-11-14T02:50:28+0000  chatgpt-shell-20241113.2229.entry
+  2024-11-14T02:50:27+0000  chatgpt-shell-20241113.2229.tar
+Built chatgpt-shell in 3.372s, finished at 2024-11-14T02:50:28+0000
