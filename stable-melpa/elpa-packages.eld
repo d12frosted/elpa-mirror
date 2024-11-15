@@ -865,6 +865,7 @@
   (cql-mode :url "https://github.com/Yuki-Inoue/cql-mode")
   (cquery :url "https://github.com/cquery-project/emacs-cquery")
   (crappy-jsp-mode :url "https://github.com/magnars/crappy-jsp-mode")
+  (crc :url "https://codeberg.org/WammKD/Emacs-CRC")
   (creamsody-theme :url "https://github.com/emacsfodder/emacs-theme-creamsody")
   (create-link :url "https://github.com/kijimaD/create-link")
   (creds :url "https://github.com/ardumont/emacs-creds")
