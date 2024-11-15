@@ -33,5 +33,6 @@ change the `justl-executable` variable to set any explicit path.
 You can also control the width of the RECIPE column in the justl
 buffer via `justl-recipe width`.  By default it has a value of 20.
 
-You can change the shell between `eshell' and `vterm' using the `justl-shell'
-variable. Using vterm requires the `vterm' package to be installed.
+You can change the shell between `eshell' and `vterm' using the
+`justl-shell' variable.  Using vterm requires the `vterm' package to
+be installed.
