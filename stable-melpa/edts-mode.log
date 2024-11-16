@@ -1,0 +1,209 @@
+Package: edts-mode
+Fetcher: github
+Source:  https://github.com/sebastiw/edts
+
+Updating /mnt/store/melpa/working/edts-mode/
+Checking out 5c3cded3fab56baa60874f4e1efd14155cec587f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/edts-mode/
+  to /tmp/edts-modethiS2J/edts-mode-20230926.2146
+    edts-mode.el -> edts-mode.el
+    edts-pkg.el -> edts-pkg.el
+    edts-start.el -> edts-start.el
+    COPYING -> COPYING
+    COPYING.LESSER -> COPYING.LESSER
+    Makefile -> Makefile
+    README.md -> README.md
+    start -> start
+    start.bat -> start.bat
+    edts-escript -> edts-escript
+    edts-release.config -> edts-release.config
+    elisp/edts/edts-alist.el -> elisp/edts/edts-alist.el
+    elisp/edts/edts-api.el -> elisp/edts/edts-api.el
+    elisp/edts/edts-code.el -> elisp/edts/edts-code.el
+    elisp/edts/edts-complete-built-in-function-source.el -> elisp/edts/edts-complete-built-in-function-source.el
+    elisp/edts/edts-complete-exported-function-source.el -> elisp/edts/edts-complete-exported-function-source.el
+    elisp/edts/edts-complete-imported-function-source.el -> elisp/edts/edts-complete-imported-function-source.el
+    elisp/edts/edts-complete-keyword-source.el -> elisp/edts/edts-complete-keyword-source.el
+    elisp/edts/edts-complete-local-function-source.el -> elisp/edts/edts-complete-local-function-source.el
+    elisp/edts/edts-complete-macro-source.el -> elisp/edts/edts-complete-macro-source.el
+    elisp/edts/edts-complete-module-source.el -> elisp/edts/edts-complete-module-source.el
+    elisp/edts/edts-complete-record-source.el -> elisp/edts/edts-complete-record-source.el
+    elisp/edts/edts-complete-variable-source.el -> elisp/edts/edts-complete-variable-source.el
+    elisp/edts/edts-complete.el -> elisp/edts/edts-complete.el
+    elisp/edts/edts-doc.el -> elisp/edts/edts-doc.el
+    elisp/edts/edts-event.el -> elisp/edts/edts-event.el
+    elisp/edts/edts-face.el -> elisp/edts/edts-face.el
+    elisp/edts/edts-log.el -> elisp/edts/edts-log.el
+    elisp/edts/edts-man.el -> elisp/edts/edts-man.el
+    elisp/edts/edts-navigate.el -> elisp/edts/edts-navigate.el
+    elisp/edts/edts-plugin.el -> elisp/edts/edts-plugin.el
+    elisp/edts/edts-project.el -> elisp/edts/edts-project.el
+    elisp/edts/edts-refactor.el -> elisp/edts/edts-refactor.el
+    elisp/edts/edts-rpc.el -> elisp/edts/edts-rpc.el
+    elisp/edts/edts-shell.el -> elisp/edts/edts-shell.el
+    elisp/edts/edts.el -> elisp/edts/edts.el
+    elisp/edts/ferl.el -> elisp/edts/ferl.el
+    lib/edts/Makefile -> lib/edts/Makefile
+    lib/edts/include/logger.hrl -> lib/edts/include/logger.hrl
+    lib/edts/include/otp_workarounds.hrl -> lib/edts/include/otp_workarounds.hrl
+    lib/edts/priv/dispatch.conf -> lib/edts/priv/dispatch.conf
+    lib/edts/src/edts.app.src -> lib/edts/src/edts.app.src
+    lib/edts/src/edts.erl -> lib/edts/src/edts.erl
+    lib/edts/src/edts_app.erl -> lib/edts/src/edts_app.erl
+    lib/edts/src/edts_cmd.erl -> lib/edts/src/edts_cmd.erl
+    lib/edts/src/edts_cmd_compile_and_load.erl -> lib/edts/src/edts_cmd_compile_and_load.erl
+    lib/edts/src/edts_cmd_get_event.erl -> lib/edts/src/edts_cmd_get_event.erl
+    lib/edts/src/edts_cmd_get_free_vars.erl -> lib/edts/src/edts_cmd_get_free_vars.erl
+    lib/edts/src/edts_cmd_get_function_info.erl -> lib/edts/src/edts_cmd_get_function_info.erl
+    lib/edts/src/edts_cmd_get_mfas.erl -> lib/edts/src/edts_cmd_get_mfas.erl
+    lib/edts/src/edts_cmd_get_module_info.erl -> lib/edts/src/edts_cmd_get_module_info.erl
+    lib/edts/src/edts_cmd_get_modules.erl -> lib/edts/src/edts_cmd_get_modules.erl
+    lib/edts/src/edts_cmd_get_nodes.erl -> lib/edts/src/edts_cmd_get_nodes.erl
+    lib/edts/src/edts_cmd_init_node.erl -> lib/edts/src/edts_cmd_init_node.erl
+    lib/edts/src/edts_cmd_lib.erl -> lib/edts/src/edts_cmd_lib.erl
+    lib/edts/src/edts_cmd_pretty_print.erl -> lib/edts/src/edts_cmd_pretty_print.erl
+    lib/edts/src/edts_cmd_run_eunit.erl -> lib/edts/src/edts_cmd_run_eunit.erl
+    lib/edts/src/edts_code.erl -> lib/edts/src/edts_code.erl
+    lib/edts/src/edts_dist.erl -> lib/edts/src/edts_dist.erl
+    lib/edts/src/edts_eunit.erl -> lib/edts/src/edts_eunit.erl
+    lib/edts/src/edts_eunit_listener.erl -> lib/edts/src/edts_eunit_listener.erl
+    lib/edts/src/edts_event.erl -> lib/edts/src/edts_event.erl
+    lib/edts/src/edts_events_node_down.erl -> lib/edts/src/edts_events_node_down.erl
+    lib/edts/src/edts_logger.erl -> lib/edts/src/edts_logger.erl
+    lib/edts/src/edts_mochiweb.erl -> lib/edts/src/edts_mochiweb.erl
+    lib/edts/src/edts_module_server.erl -> lib/edts/src/edts_module_server.erl
+    lib/edts/src/edts_plugins.erl -> lib/edts/src/edts_plugins.erl
+    lib/edts/src/edts_server.erl -> lib/edts/src/edts_server.erl
+    lib/edts/src/edts_sup.erl -> lib/edts/src/edts_sup.erl
+    lib/edts/src/edts_syntax.erl -> lib/edts/src/edts_syntax.erl
+    lib/edts/src/edts_util.erl -> lib/edts/src/edts_util.erl
+    lib/edts_debug/edts-debug-list-breakpoint-mode.el -> lib/edts_debug/edts-debug-list-breakpoint-mode.el
+    lib/edts_debug/edts-debug-list-interpreted-mode.el -> lib/edts_debug/edts-debug-list-interpreted-mode.el
+    lib/edts_debug/edts-debug-list-processes-mode.el -> lib/edts_debug/edts-debug-list-processes-mode.el
+    lib/edts_debug/edts-debug-mode.el -> lib/edts_debug/edts-debug-mode.el
+    lib/edts_debug/edts-debug.el -> lib/edts_debug/edts-debug.el
+    lib/edts_debug/Makefile -> lib/edts_debug/Makefile
+    lib/edts_debug/src/edts_debug.app.src -> lib/edts_debug/src/edts_debug.app.src
+    lib/edts_debug/src/edts_debug.erl -> lib/edts_debug/src/edts_debug.erl
+    lib/edts_debug/src/edts_debug_server.erl -> lib/edts_debug/src/edts_debug_server.erl
+    lib/edts_debug/src/edts_events_debug.erl -> lib/edts_debug/src/edts_events_debug.erl
+    lib/edts_dialyzer/edts-dialyzer.el -> lib/edts_dialyzer/edts-dialyzer.el
+    lib/edts_dialyzer/Makefile -> lib/edts_dialyzer/Makefile
+    lib/edts_dialyzer/src/edts_dialyzer.app.src -> lib/edts_dialyzer/src/edts_dialyzer.app.src
+    lib/edts_dialyzer/src/edts_dialyzer.erl -> lib/edts_dialyzer/src/edts_dialyzer.erl
+    lib/edts_xref/edts-xref.el -> lib/edts_xref/edts-xref.el
+    lib/edts_xref/Makefile -> lib/edts_xref/Makefile
+    lib/edts_xref/src/edts_xref.app.src -> lib/edts_xref/src/edts_xref.app.src
+    lib/edts_xref/src/edts_xref.erl -> lib/edts_xref/src/edts_xref.erl
+    lib/edts_xref/src/edts_xref_server.erl -> lib/edts_xref/src/edts_xref_server.erl
+Created edts-mode-20230926.2146.tar containing:
+  edts-mode-20230926.2146/
+  edts-mode-20230926.2146/COPYING
+  edts-mode-20230926.2146/COPYING.LESSER
+  edts-mode-20230926.2146/Makefile
+  edts-mode-20230926.2146/README.md
+  edts-mode-20230926.2146/edts-escript
+  edts-mode-20230926.2146/edts-mode-pkg.el
+  edts-mode-20230926.2146/edts-mode.el
+  edts-mode-20230926.2146/edts-pkg.el
+  edts-mode-20230926.2146/edts-release.config
+  edts-mode-20230926.2146/edts-start.el
+  edts-mode-20230926.2146/elisp/
+  edts-mode-20230926.2146/elisp/edts/
+  edts-mode-20230926.2146/elisp/edts/edts-alist.el
+  edts-mode-20230926.2146/elisp/edts/edts-api.el
+  edts-mode-20230926.2146/elisp/edts/edts-code.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-built-in-function-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-exported-function-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-imported-function-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-keyword-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-local-function-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-macro-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-module-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-record-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete-variable-source.el
+  edts-mode-20230926.2146/elisp/edts/edts-complete.el
+  edts-mode-20230926.2146/elisp/edts/edts-doc.el
+  edts-mode-20230926.2146/elisp/edts/edts-event.el
+  edts-mode-20230926.2146/elisp/edts/edts-face.el
+  edts-mode-20230926.2146/elisp/edts/edts-log.el
+  edts-mode-20230926.2146/elisp/edts/edts-man.el
+  edts-mode-20230926.2146/elisp/edts/edts-navigate.el
+  edts-mode-20230926.2146/elisp/edts/edts-plugin.el
+  edts-mode-20230926.2146/elisp/edts/edts-project.el
+  edts-mode-20230926.2146/elisp/edts/edts-refactor.el
+  edts-mode-20230926.2146/elisp/edts/edts-rpc.el
+  edts-mode-20230926.2146/elisp/edts/edts-shell.el
+  edts-mode-20230926.2146/elisp/edts/edts.el
+  edts-mode-20230926.2146/elisp/edts/ferl.el
+  edts-mode-20230926.2146/lib/
+  edts-mode-20230926.2146/lib/edts/
+  edts-mode-20230926.2146/lib/edts/Makefile
+  edts-mode-20230926.2146/lib/edts/include/
+  edts-mode-20230926.2146/lib/edts/include/logger.hrl
+  edts-mode-20230926.2146/lib/edts/include/otp_workarounds.hrl
+  edts-mode-20230926.2146/lib/edts/priv/
+  edts-mode-20230926.2146/lib/edts/priv/dispatch.conf
+  edts-mode-20230926.2146/lib/edts/src/
+  edts-mode-20230926.2146/lib/edts/src/edts.app.src
+  edts-mode-20230926.2146/lib/edts/src/edts.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_app.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_compile_and_load.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_get_event.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_get_free_vars.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_get_function_info.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_get_mfas.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_get_module_info.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_get_modules.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_get_nodes.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_init_node.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_lib.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_pretty_print.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_cmd_run_eunit.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_code.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_dist.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_eunit.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_eunit_listener.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_event.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_events_node_down.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_logger.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_mochiweb.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_module_server.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_plugins.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_server.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_sup.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_syntax.erl
+  edts-mode-20230926.2146/lib/edts/src/edts_util.erl
+  edts-mode-20230926.2146/lib/edts_debug/
+  edts-mode-20230926.2146/lib/edts_debug/Makefile
+  edts-mode-20230926.2146/lib/edts_debug/edts-debug-list-breakpoint-mode.el
+  edts-mode-20230926.2146/lib/edts_debug/edts-debug-list-interpreted-mode.el
+  edts-mode-20230926.2146/lib/edts_debug/edts-debug-list-processes-mode.el
+  edts-mode-20230926.2146/lib/edts_debug/edts-debug-mode.el
+  edts-mode-20230926.2146/lib/edts_debug/edts-debug.el
+  edts-mode-20230926.2146/lib/edts_debug/src/
+  edts-mode-20230926.2146/lib/edts_debug/src/edts_debug.app.src
+  edts-mode-20230926.2146/lib/edts_debug/src/edts_debug.erl
+  edts-mode-20230926.2146/lib/edts_debug/src/edts_debug_server.erl
+  edts-mode-20230926.2146/lib/edts_debug/src/edts_events_debug.erl
+  edts-mode-20230926.2146/lib/edts_dialyzer/
+  edts-mode-20230926.2146/lib/edts_dialyzer/Makefile
+  edts-mode-20230926.2146/lib/edts_dialyzer/edts-dialyzer.el
+  edts-mode-20230926.2146/lib/edts_dialyzer/src/
+  edts-mode-20230926.2146/lib/edts_dialyzer/src/edts_dialyzer.app.src
+  edts-mode-20230926.2146/lib/edts_dialyzer/src/edts_dialyzer.erl
+  edts-mode-20230926.2146/lib/edts_xref/
+  edts-mode-20230926.2146/lib/edts_xref/Makefile
+  edts-mode-20230926.2146/lib/edts_xref/edts-xref.el
+  edts-mode-20230926.2146/lib/edts_xref/src/
+  edts-mode-20230926.2146/lib/edts_xref/src/edts_xref.app.src
+  edts-mode-20230926.2146/lib/edts_xref/src/edts_xref.erl
+  edts-mode-20230926.2146/lib/edts_xref/src/edts_xref_server.erl
+  edts-mode-20230926.2146/start
+  edts-mode-20230926.2146/start.bat
+ ✓ Success:
+  2024-11-16T02:04:29+0000  edts-mode-20230926.2146.entry
+  2024-11-16T02:04:29+0000  edts-mode-20230926.2146.tar
+Built edts-mode in 3.135s, finished at 2024-11-16T02:04:30+0000
