@@ -631,16 +631,20 @@
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:commit . "945c9905af2045ab2e57717c01e5b20a907f939a"))])
  (comint-mime .
-	      [(0 6)
+	      [(0 7)
 	       ((emacs
-		 (28 1)))
+		 (28 1))
+		(compat
+		 (29 1))
+		(mathjax
+		 (0 1)))
 	       "Display content of various MIME types in comint buffers" tar
 	       ((:url . "https://github.com/astoff/comint-mime")
 		(:keywords "processes" "multimedia")
 		(:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 		(:authors
 		 ("Augusto Stoffel" . "arstoffel@gmail.com"))
-		(:commit . "b8a5347f80ffc55421997493b646eb922450c720"))])
+		(:commit . "5e7b609a4f8c4ba8ec6d1d994c01143b79b93c33"))])
  (compact-docstrings .
 		     [(0 2)
 		      nil "Shrink blank lines in docstrings and doc comments" tar
@@ -1301,16 +1305,16 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "25c810004c2201960f32a60b362eb6ebe524de9f"))])
  (ef-themes .
-	    [(1 8 0)
+	    [(1 9 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
-	     ((:url . "https://git.sr.ht/~protesilaos/ef-themes")
+	     ((:url . "https://github.com/protesilaos/ef-themes")
 	      (:keywords "faces" "theme" "accessibility")
 	      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "18960c3bcb87e72418e638602a843be58aef07d1"))])
+	      (:commit . "b1333b703805a21ed6414386830cb5d1977475b7"))])
  (eglot .
 	[(1 17)
 	 ((emacs

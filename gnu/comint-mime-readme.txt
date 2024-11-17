@@ -9,21 +9,20 @@ Emacs parlance) to display graphics and other types of special content.
 <https://raw.githubusercontent.com/astoff/comint-mime/images/python-shell.png>
 
 The main motivation behind this package is to display plots in the
-Python shell. However, it does more than that.
+Python shell.  However, it does more than that.
 
 First, it is not constrained to graphics, and can display other "MIME
-attachments" such as HTML and LaTeX content. In fact, the Python backend
-of the package implements IPython's [rich display interface]. A use-case
-beyond the displaying of graphics is to render dataframes as HTML
-tables; this opens up the possibility of typographical improvements over
-the usual pure-text representation. You can also easily define rich
-representations for your own classes.
+attachments" such as HTML and LaTeX content.  In fact, the Python
+backend of the package implements IPython's [rich display interface],
+which includes, among other things, special treatment of dataframes and
+symbolic math expressions.  You can even define rich representations for
+your own classes.
 
 Second, the package defines a flexible communication protocol between
 Emacs and the inferior process, and, consequently, can be extended to
-other comint types. Currently, besides Python, there is support for the
-regular (Unix) shell. In this case, a special command, `mimecat', is
-provided to display content. Again, this works for images, HTML, LaTeX
+other Comint types.  Currently, besides Python, there is support for the
+regular (Unix) shell.  In this case, a special command, `mimecat', is
+provided to display content.  Again, this works for images, HTML, LaTeX
 snippets, etc.
 
 <https://raw.githubusercontent.com/astoff/comint-mime/images/shell.png>
@@ -71,20 +70,23 @@ snippets, etc.
 2 Customization
 ═══════════════
 
-  The follow options are available:
+  The following options are available:
 
-  • `comint-mime-latex-render-method': This variable determines how
-    LaTeX fragments are rendered.  The default is `nil', which means
-    that the raw LaTeX source code is displayed.  The other
-    possibilities are:
-    • `mathjax': Use the [mathjax-node] library, which you need to
-      ensure to be installed in such a way that Node will find it.
-    • `org': Use Org mode's built-in rendering machinery.  Beware that,
-      depending on your system configuration, this may allow execution
-      of arbitrary code embedded in the LaTeX fragments.
+  • `comint-mime-use-mathjax': Whether to use the [mathjax] package to
+    render LaTeX fragments.  It is true by default, as long as you have
+    the necessary external prerequisites installed (namely, the Node
+    JavaScript runtime.)
+
+  • `comint-mime-use-vtable': Whether to use the [vtable] package when
+    displaying HTML tables.  This improves alignment and makes the
+    tables navigable and sortable.  This option is enabled by default if
+    vtable is available (Emacs 29 or newer).
 
 
-[mathjax-node] <https://www.npmjs.com/package/mathjax-node>
+[mathjax] <https://elpa.gnu.org/packages/mathjax.html>
+
+[vtable]
+<https://www.gnu.org/software/emacs/manual/html_mono/vtable.html>
 
 
 3 Extending
@@ -92,7 +94,7 @@ snippets, etc.
 
   To add support for new MIME types, see `comint-mime-renderer-alist'.
 
-  To add support for new comints, an entry should be added to
+  To add support for new Comints, an entry should be added to
   `comint-mime-setup-function-alist'. This function should arrange for
   the inferior process to emit an escape sequence whenever some MIME
   content is to be displayed.
@@ -114,17 +116,11 @@ snippets, etc.
   should be deleted after it is read.
 
   Note that it can take considerable time to insert large amounts of
-  data in a comint buffer, specially if it contains long lines. Consider
+  data in a Comint buffer, specially if it contains long lines. Consider
   using a temporary file for large data transfers.
 
 
-4 Todos
-═══════
-
-  • Improve the HTML rendering of numeric tables
-
-
-5 Contributing
+4 Contributing
 ══════════════
 
   Discussions, suggestions and code contributions are welcome! Since
