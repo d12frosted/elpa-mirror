@@ -123,6 +123,10 @@
   set it up with `make-llm-azure', with the following parameter:
   • `:url', the endpoint URL, such as
     "<https://docs-test-001.openai.azure.com/>".
+  • `:key', the Azure key for Azure OpenAI service.
+  • `:chat-model', the chat model, which must be deployed in Azure.
+  • `embedding-model', the embedding model which must be deployed in
+    Azure.
 
 
 2.4 Gemini (not via Google Cloud)
