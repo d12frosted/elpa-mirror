@@ -15,6 +15,8 @@ subed
 
   <file:https://raw.githubusercontent.com/sachac/subed/master/screenshot.jpg>
 
+  <file:word-data-and-waveform.png>
+
 
 [mpv] <https://mpv.io/>
 
@@ -383,8 +385,8 @@ Writing subtitles from scratch
   can use `subed-align' to convert it into timestamped captions.
 
 
-Resynchronizing subtitles
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+Timing / resynchronizing subtitles
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   If you're using `subed-waveform-show-current' or
   `subed-waveform-show-all', you can use `M-mouse-2' (Meta-middle-click,
@@ -395,6 +397,18 @@ Resynchronizing subtitles
   To do this with the keyboard, you can use
   `subed-shift-subtitles-to-start-at-timestamp' if you want to specify a
   timestamp or `subed-shift-subtitles' to specify a millisecond offset.
+
+  To use word timing data from something like WhisperX, load
+  subed-word-data.el and then use `subed-word-data-load-from-file'. The
+  word times will then be used when you split subtitles with
+  `subed-split-subtitle'.
+
+  Rodrigo Morales also has some functions for [playing part of the
+  subtitles and changing them by a little bit].
+
+
+[playing part of the subtitles and changing them by a little bit]
+<https://rodrigo.morales.pe/2024/11/17/my-subed-configuration-for-adding-subtitles-to-emacsconf-2024/>
 
 
 Exporting text for review
@@ -523,11 +537,21 @@ Build tips
 Other resources
 ═══════════════
 
+  • [My subed customizations for editing captions of Emacsconf 2024 –
+    Rodrigo Morales]
+  • [Sacha Chua's subed-related blog posts]
   • [Marcin Borkowski: 2023-09-18 Making Anki flashcards from subtitles]
   • [sachac/subed-record: Record audio in segments and compile it into a
     file]
   • [EmacsConf - Captioning tips]
 
+
+[My subed customizations for editing captions of Emacsconf 2024 –
+Rodrigo Morales]
+<https://rodrigo.morales.pe/2024/11/17/my-subed-configuration-for-adding-subtitles-to-emacsconf-2024/>
+
+[Sacha Chua's subed-related blog posts]
+<https://sachachua.com/blog/category/subed>
 
 [Marcin Borkowski: 2023-09-18 Making Anki flashcards from subtitles]
 <https://mbork.pl/2023-09-18_Making_Anki_flashcards_from_subtitles>
