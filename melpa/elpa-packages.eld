@@ -5163,7 +5163,6 @@
   (syntree :url "https://github.com/enricoflor/syntree")
   (sysctl :url "https://github.com/dantecatalfamo/sysctl.el")
   (syslog-mode :url "https://github.com/vapniks/syslog-mode")
-  (system-packages :url "https://gitlab.com/jabranham/system-packages")
   (system-specific-settings :url "https://github.com/DarwinAwardWinner/emacs-system-specific-settings")
   (systemd :url "https://github.com/holomorph/systemd-mode")
   (systemtap-mode :url "https://github.com/ruediger/systemtap-mode")
