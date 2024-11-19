@@ -23,3 +23,7 @@ issue:
    temporary buffers with the `inheritenv' macro.
 2. End users can modify commands like `shell-command-to-string' using
    the `inheritenv-add-advice' macro.
+
+Any buffer-local values for TRAMP's corresponding vars
+(`tramp-remote-path' and `tramp-remote-process-environment') are
+also propagated.
