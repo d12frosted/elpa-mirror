@@ -4,37 +4,37 @@
 
 
 This package lets you efficiently navigate, edit and execute code split
-into cells according to certain magic comments.  If you have [Jupytext]
-or [Pandoc] installed, you can also open ipynb notebook files directly
-in Emacs.  They will be automatically converted to a script for editing,
-and converted back to notebook format when saving.
+into cells according to certain magic comments.  Moreover, if you have
+[Jupytext] or [Pandoc] installed, you can also open ipynb notebook files
+directly in Emacs.  They will be automatically converted to a script for
+editing, and converted back to notebook format when saving.
 
 <https://raw.githubusercontent.com/astoff/code-cells.el/images/screenshot.png>
 
-By default, three styles of comments are recognized as cell boundaries:
+By default, the following kinds of comment lines are recognized as cell
+boundaries:
 
 ┌────
 │ # In[<number>]:
-│ 
 │ # %% Optional title
-│ 
-│ #* Optional title
 └────
 
 The first is what you get by exporting a notebook to a script on
 Jupyter's web interface or with the command `jupyter nbconvert'.  The
 second style is compatible with Jupytext, among several other tools.
-The third is in the spirit of Emacs's outline mode.  Further percent
-signs or asterisks signify nested cells.
+More percent signs signify nested cells.  See section “Customization”
+below to learn how to change the cell boundary pattern.
 
-*Note.* As of version 0.3, the “outline mode” style heading requires /no
-space/ between the comment character and the asterisk.  The previous
-behavior, which allowed spaces, led to many false positives.
+*Advertisement:* To complement this package, you may be interested in
+[dREPL], a fully featured shell for Python and other languages with
+graphical capabilities.
 
 
 [Jupytext] <https://github.com/mwouts/jupytext>
 
 [Pandoc] <https://pandoc.org/>
+
+[dREPL] <http://elpa.gnu.org/packages/drepl.html>
 
 
 1 Minor mode
@@ -67,17 +67,28 @@ behavior, which allowed spaces, led to many false positives.
 2 Editing commands
 ══════════════════
 
-  The following editing and navigation commands are provided.  Their
-  keybindings in `code-cells-mode-map' are also shown.  Note, however,
-  that these commands do not require the minor mode to be active.
+  This package provides a number of cell editing commands.  They are
+  listed below together with their bindings in `code-cells-mode-map'.
+  Note, however, that these commands do not require the minor mode to be
+  active; you can bind them to other keys or call them via `M-x'
+  anywhere you like.
 
-  • `C-c % e': `code-cells-eval'
-  • `C-c % b': `code-cells-backward-cell'
-  • `C-c % f': `code-cells-forward-cell'
-  • `C-c % B': `code-cells-move-cell-up'
-  • `C-c % F': `code-cells-move-cell-down'
-  • `C-c % ;': `code-cells-comment-or-uncomment'
-  • `C-c % @': `code-cells-mark-cell'
+  • `code-cells-backward-cell' (`C-c % p')
+  • `code-cells-forward-cell' (`C-c % n')
+  • `code-cells-move-cell-up' (`C-c % P')
+  • `code-cells-move-cell-down' (`C-c % N')
+  • `code-cells-comment-or-uncomment' (`C-c % ;')
+  • `code-cells-copy' (`C-c % w')
+  • `code-cells-delete'
+  • `code-cells-duplicate' (`C-c % d')
+  • `code-cells-eval' (`C-c % e')
+  • `code-cells-eval-and-step' (`C-c % s')
+  • `code-cells-eval-above' (`C-c % a')
+  • `code-cells-eval-below'
+  • `code-cells-eval-whole-buffer'
+  • `code-cells-indent' (`C-c % \')
+  • `code-cells-kill' (`C-c % C-w')
+  • `code-cells-mark-cell' (`C-c % @')
 
   The `code-cells-eval' command sends the current cell to a suitable
   REPL, chosen according to the current major and minor modes.  The
@@ -92,18 +103,88 @@ behavior, which allowed spaces, led to many false positives.
   ┌────
   │ (with-eval-after-load 'code-cells
   │   (let ((map code-cells-mode-map))
-  │     (define-key map (kbd "M-p") 'code-cells-backward-cell)
-  │     (define-key map (kbd "M-n") 'code-cells-forward-cell)
-  │     (define-key map (kbd "C-c C-c") 'code-cells-eval)
+  │     (keymap-set map "M-p" 'code-cells-backward-cell)
+  │     (keymap-set map "M-n" 'code-cells-forward-cell)
+  │     (keymap-set map "C-c C-c" 'code-cells-eval)
   │     ;; Overriding other minor mode bindings requires some insistence...
-  │     (define-key map [remap jupyter-eval-line-or-region] 'code-cells-eval)))
+  │     (keymap-set map "<remap> <jupyter-eval-line-or-region>" 'code-cells-eval)))
   └────
 
+  Finally, a remark on prefix arguments.  For most commands, the logic
+  is that the absolute value of the numeric prefix stipulates the number
+  of cells around the current cell to act on, with the sign determining
+  whether to include cells above or below it.  The numeric prefixes 0
+  and -1 have a special meaning: they tell to act on the half of the
+  current cell below respective above the current line.
 
-3 Speed keys
+
+3 Customization
+═══════════════
+
+  Type `M-x customize-group RET code-cells RET' to see a listing of all
+  customization options.
+
+  The most important option is `code-cells-boundary-regexp', which
+  determines which lines of a buffer should be regarded as a cell
+  boundary.  Some alternatives to the default value include:
+
+  • `"^#\\(#+\\)"': This recognizes lines starting with 2 or more hash
+    characters as cell boundaries, which is an interesting option, say,
+    for Python:
+    ┌────
+    │ ## Cell title (optional)
+    │ # Some commentary, which normally starts with
+    │ # a single hash character.
+    │ print("hello")
+    └────
+  • `"^;;\\(;+\\) "': This recognizes lines starting with 3 or more
+    semicolons as cell boundaries, which is an interesting option, say,
+    for Emacs Lisp code split into sections:
+    ┌────
+    │ ;;; Section title
+    │ ;; Some commentary, which by convention starts
+    │ ;; with double semicolons.
+    │ (message "hello")
+    └────
+  • `"^\\s<+\\(\\*+\\)"': This regular expression recognizes lines of
+    the following form as cell boundaries:
+    ┌────
+    │ #*
+    │ #**
+    │ #***
+    └────
+    This implements a kind of "reverse literate programming" where the
+    prose part is behind comments and can have Org-like syntax (the
+    number of asterisks determines the heading level).
+
+  As usual, you can customize `code-cells-boundary-regexp' globally, or
+  change it for a single major mode, for instance with
+
+  ┌────
+  │ (add-hook 'emacs-lisp-mode-hook
+  │ 	  (lambda () (setq-local code-cells-boundary-regexp "^;;\\(;+\\)")))
+  └────
+
+  or even modify it in a single project using [directory-local
+  variables], e.g. by typing the following:
+
+  ┌────
+  │ M-x add-dir-local-variable RET python-mode RET code-cells-boundary-regexp RET "^#\\(#+\\)" RET
+  └────
+
+  *Note:* Until version 0.4, the third cell boundary style above was
+  included in the default settings.  Use the suggested customization to
+  recover the old behavior.
+
+
+[directory-local variables]
+<https://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Directory-Local-Variables>
+
+
+4 Speed keys
 ════════════
 
-  Similarly to org-mode's [speed keys], the `code-cells-speed-key'
+  Similarly to Org mode's [speed keys], the `code-cells-speed-key'
   function returns a key definition that only acts when the point is at
   the beginning of a cell boundary.  Since this is usually not an
   interesting place to insert text, you can assign short keybindings
@@ -137,7 +218,7 @@ behavior, which allowed spaces, led to many false positives.
 [speed keys] <https://orgmode.org/manual/Speed-Keys.html>
 
 
-4 Handling Jupyter notebook files
+5 Handling Jupyter notebook files
 ═════════════════════════════════
 
   With this package, you can edit Jupyter notebook (`*.ipynb') files as
@@ -158,7 +239,7 @@ behavior, which allowed spaces, led to many false positives.
 
 [Jupytext] <https://github.com/mwouts/jupytext>
 
-4.1 Tweaking the ipynb conversion
+5.1 Tweaking the ipynb conversion
 ─────────────────────────────────
 
   If relegating markdown cells to comment blocks offends your literate
@@ -172,16 +253,16 @@ behavior, which allowed spaces, led to many false positives.
   │     cell_markers: '"""'
   └────
 
-  It is also possible to convert notebooks to markdown or org format.
-  For markdown, use the following:
+  It is also possible to convert notebooks to markdown or Org mode
+  format.  For markdown, use the following:
 
   ┌────
   │ (setq code-cells-convert-ipynb-style '(("jupytext" "--to" "ipynb" "--from" "markdown")
   │ 				       ("jupytext" "--to" "markdown" "--from" "ipynb")
-  │ 				       (lamdba () #'markdown-mode)))
+  │ 				       (lambda () #'markdown-mode)))
   └────
 
-  To edit ipynb files as org documents, try using [Pandoc] with the
+  To edit ipynb files as Org documents, try using [Pandoc] with the
   configuration below.  In combination with org-babel, this can provide
   a more notebook-like experience, with interspersed code and results.
 
@@ -200,7 +281,7 @@ behavior, which allowed spaces, led to many false positives.
 [Pandoc] <https://pandoc.org/>
 
 
-5 Alternatives
+6 Alternatives
 ══════════════
 
   [python-cell.el] provides similar cell editing commands.  It seems to
@@ -224,7 +305,7 @@ behavior, which allowed spaces, led to many false positives.
 [EIN] <https://github.com/dickmao/emacs-ipython-notebook>
 
 
-6 Contributing
+7 Contributing
 ══════════════
 
   Discussions, suggestions and code contributions are welcome! Since

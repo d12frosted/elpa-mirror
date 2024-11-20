@@ -607,16 +607,18 @@
 	       (:url . "https://elpa.gnu.org/packages/cobol-mode.html")
 	       (:commit . "bd7879daa71908616277688ba51d27b60c88b0a2"))])
  (code-cells .
-	     [(0 4)
+	     [(0 5)
 	      ((emacs
-		(27 1)))
+		(27 1))
+	       (compat
+		(29 1)))
 	      "Lightweight notebooks with support for ipynb files" tar
 	      ((:url . "https://github.com/astoff/code-cells.el")
 	       (:keywords "convenience" "outlines")
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
-	       (:commit . "44546ca256f3da29e3ac884e3d699c8455acbd6e"))])
+	       (:commit . "caffb420be106cebbdfe4474ed0507a601603f83"))])
  (colorful-mode .
 		[(1 0 4)
 		 ((emacs
