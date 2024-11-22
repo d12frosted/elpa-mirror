@@ -1,0 +1,25 @@
+Package: elmpd
+Fetcher: github
+Source:  https://github.com/sp1ff/elmpd
+
+Updating /mnt/store/melpa/working/elmpd/
+Checking out db808e58993310a01419649985b2f732b1067e9e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elmpd/
+  to /tmp/elmpdXFB63l/elmpd-20240902.1520
+    elmpd.el -> elmpd.el
+  ! doc/elmpd.texi -> elmpd.texi
+  ! doc/version.texi -> version.texi
+Generating elmpd.info
+Generating version.info
+Created elmpd-20240902.1520.tar containing:
+  elmpd-20240902.1520/
+  elmpd-20240902.1520/dir
+  elmpd-20240902.1520/elmpd-pkg.el
+  elmpd-20240902.1520/elmpd.el
+  elmpd-20240902.1520/elmpd.info
+  elmpd-20240902.1520/version.info
+ ✓ Success:
+  2024-11-21T22:20:43+0000  elmpd-20240902.1520.entry
+  2024-11-21T22:20:42+0000  elmpd-20240902.1520.tar
+Built elmpd in 5.384s, finished at 2024-11-21T22:20:43+0000
