@@ -284,19 +284,25 @@
   Enable collection for `elisa-chat'.
 
 
-1.2.13 elisa-disable-collection
+1.2.13 elisa-enable-all-collections
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Enable all collections.
+
+
+1.2.14 elisa-disable-collection
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Disable collection.
 
 
-1.2.14 elisa-disble-all-collections
+1.2.15 elisa-disble-all-collections
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Disable all collections.
 
 
-1.2.15 elisa-remove-collection
+1.2.16 elisa-remove-collection
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Removes collection and all its data from index.
