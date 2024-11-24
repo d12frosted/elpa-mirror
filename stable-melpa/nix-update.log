@@ -3,16 +3,18 @@ Fetcher: github
 Source:  https://github.com/jwiegley/nix-update-el
 
 Updating /mnt/store/melpa/working/nix-update/
-Checking out aab70a38165575a9cb41726f1cc67df60fbf2832
+Checking out 77022ccd918d665acbb519b243e7e3dc5eae1c47
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-update/
-  to /tmp/nix-updatehTxY2Z/nix-update-20220816.2212
+  to /tmp/nix-update357UYV/nix-update-20241123.2159
     nix-update.el -> nix-update.el
-Created nix-update-20220816.2212.tar containing:
-  nix-update-20220816.2212/
-  nix-update-20220816.2212/nix-update-pkg.el
-  nix-update-20220816.2212/nix-update.el
+Created nix-update-20241123.2159.tar containing:
+  nix-update-20241123.2159/
+  nix-update-20241123.2159/nix-update-pkg.el
+  nix-update-20241123.2159/nix-update.el
  ✓ Success:
-  2024-11-23T19:23:18+0000  nix-update-20220816.2212.entry
-  2024-11-23T19:23:18+0000  nix-update-20220816.2212.tar
-Built nix-update in 2.535s, finished at 2024-11-23T19:23:19+0000
+  2024-11-23T21:36:36+0000  nix-update-20220816.2212.entry
+  2024-11-23T21:36:36+0000  nix-update-20220816.2212.tar
+  2024-11-23T23:49:34+0000  nix-update-20241123.2159.entry
+  2024-11-23T23:49:34+0000  nix-update-20241123.2159.tar
+Built nix-update in 2.551s, finished at 2024-11-23T23:49:35+0000

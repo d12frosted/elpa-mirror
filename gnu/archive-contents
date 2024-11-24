@@ -1296,7 +1296,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "ea8710335eec483b576c7a800c92b8fd214aa6dd"))])
  (eev .
-      [(20241022)
+      [(20241123)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1305,7 +1305,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "25c810004c2201960f32a60b362eb6ebe524de9f"))])
+	(:commit . "be6786072fb38edaafea4a0051f5e81e8c5d4c1e"))])
  (ef-themes .
 	    [(1 9 0)
 	     ((emacs
@@ -1377,13 +1377,13 @@
 		     (:url . "https://elpa.gnu.org/packages/electric-spacing.html")
 		     (:commit . "122ac5d08c3d3d91251752136abab9721d90e36c"))])
  (elisa .
-	[(1 1 1)
+	[(1 1 2)
 	 ((emacs
 	   (29 2))
 	  (ellama
 	   (0 11 2))
 	  (llm
-	   (0 9 1))
+	   (0 18 1))
 	  (async
 	   (1 9 8))
 	  (plz
@@ -1394,7 +1394,7 @@
 	  (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	  (:authors
 	   ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	  (:commit . "4a4d1db3594a53fd90fcd453cf642d96f70a70ff"))])
+	  (:commit . "1c1e0f17155a5e6fc8a019403aac5888d7f12dcd"))])
  (elisp-benchmarks .
 		   [(1 16)
 		    nil "elisp benchmarks collection" tar
@@ -1405,7 +1405,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 12 5)
+	 [(0 12 6)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1413,7 +1413,7 @@
 	   (spinner
 	    (1 7 4))
 	   (transient
-	    (0 7 6))
+	    (0 7))
 	   (compat
 	    (29 1)))
 	  "Tool for interacting with LLMs" tar
@@ -1422,7 +1422,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "e8f64969d66aa71341804e0a4f8d3e7c632bf3b6"))])
+	   (:commit . "c44d58f3f8ed05b67980fdf57279664fc0a22846"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs

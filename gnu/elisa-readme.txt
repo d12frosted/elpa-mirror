@@ -420,6 +420,10 @@
     ‣ Description: Template used for rewriting prompts for better
       retrieval.
 
+  ⁃ `elisa-batch-embeddings-enabled':
+    ‣ Type: Boolean
+    ‣ Description: Enable batch embeddings if supported.
+
 
 ◊ 1.3.1.4 Web Search and Integration
 
