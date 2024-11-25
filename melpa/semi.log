@@ -1,13 +1,14 @@
 Package: semi
 Fetcher: github
-Source:  https://github.com/wanderlust/semi
+Source:  https://github.com/emacsmirror/semi
 
 Updating /mnt/store/melpa/working/semi/
-Checking out 85a52b899ac89be504d9e38d8d406bba98f4b0b3
+Checking out 425098e6a57e7668ba2eeccba31f73e59c3d3a7f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/semi/
-  to /tmp/semiVNIxwv/semi-20240606.1327
+  to /tmp/semijDgfYU/semi-20170314.1219
     mail-mime-setup.el -> mail-mime-setup.el
+    mime-bbdb.el -> mime-bbdb.el
     mime-edit.el -> mime-edit.el
     mime-image.el -> mime-image.el
     mime-mac.el -> mime-mac.el
@@ -21,38 +22,142 @@ Copying files (->) and directories (=>)
     mime-vcard.el -> mime-vcard.el
     mime-view.el -> mime-view.el
     mime-w3.el -> mime-w3.el
+    postpet.el -> postpet.el
     semi-def.el -> semi-def.el
     semi-pkg.el -> semi-pkg.el
     semi-setup.el -> semi-setup.el
-    signature.el -> signature.el
+    semi.el -> semi.el
     mime-ui-en.texi -> mime-ui-en.texi
     mime-ui-ja.texi -> mime-ui-ja.texi
 Generating mime-ui-en.info
 Generating mime-ui-ja.info
-Created semi-20240606.1327.tar containing:
-  semi-20240606.1327/
-  semi-20240606.1327/dir
-  semi-20240606.1327/mail-mime-setup.el
-  semi-20240606.1327/mime-edit.el
-  semi-20240606.1327/mime-image.el
-  semi-20240606.1327/mime-mac.el
-  semi-20240606.1327/mime-partial.el
-  semi-20240606.1327/mime-pgp.el
-  semi-20240606.1327/mime-play.el
-  semi-20240606.1327/mime-setup.el
-  semi-20240606.1327/mime-shr.el
-  semi-20240606.1327/mime-signature.el
-  semi-20240606.1327/mime-tnef.el
-  semi-20240606.1327/mime-ui-en.info
-  semi-20240606.1327/mime-ui-ja.info
-  semi-20240606.1327/mime-vcard.el
-  semi-20240606.1327/mime-view.el
-  semi-20240606.1327/mime-w3.el
-  semi-20240606.1327/semi-def.el
-  semi-20240606.1327/semi-pkg.el
-  semi-20240606.1327/semi-setup.el
-  semi-20240606.1327/signature.el
+Command `makeinfo --no-split mime-ui-ja.texi -o /tmp/semijDgfYU/semi-20170314.1219/mime-ui-ja.info' exited with non-zero exit-code: 1
+mime-ui-ja.texi:3: warning: encoding `iso-2022-jp' is not a canonical texinfo encoding
+mime-ui-ja.texi:3: warning: unrecognized encoding name `iso-2022-jp'
+mime-ui-ja.texi:11: unknown command `bL'
+mime-ui-ja.texi:13: unknown command `bL'
+mime-ui-ja.texi:18: unknown command `bL'
+mime-ui-ja.texi:22: warning: @refill is obsolete.
+mime-ui-ja.texi:24: unknown command `bL'
+mime-ui-ja.texi:24: unexpected @
+mime-ui-ja.texi:41: warning: @refill is obsolete.
+mime-ui-ja.texi:44: warning: @refill is obsolete.
+mime-ui-ja.texi:48: warning: @refill is obsolete.
+mime-ui-ja.texi:50: unknown command `8'
+mime-ui-ja.texi:50: warning: @refill is obsolete.
+mime-ui-ja.texi:59: warning: @refill is obsolete.
+mime-ui-ja.texi:63: misplaced }
+mime-ui-ja.texi:68: @b expected braces
+mime-ui-ja.texi:74: @b expected braces
+mime-ui-ja.texi:79: unknown command `8l7w'
+mime-ui-ja.texi:82: unknown command `8l7w'
+mime-ui-ja.texi:83: warning: @refill is obsolete.
+mime-ui-ja.texi:87: unexpected @
+mime-ui-ja.texi:87: unexpected @
+mime-ui-ja.texi:88: unknown command `8'
+mime-ui-ja.texi:90: unexpected @
+mime-ui-ja.texi:92: unexpected @
+mime-ui-ja.texi:93: unknown command `8'
+mime-ui-ja.texi:93: misplaced }
+mime-ui-ja.texi:94: misplaced }
+mime-ui-ja.texi:94: unexpected @
+mime-ui-ja.texi:95: misplaced }
+mime-ui-ja.texi:96: unknown command `8'
+mime-ui-ja.texi:96: unexpected @
+mime-ui-ja.texi:98: unknown command `8Ey'
+mime-ui-ja.texi:98: misplaced }
+mime-ui-ja.texi:99: unknown command `8'
+mime-ui-ja.texi:99: misplaced }
+mime-ui-ja.texi:99: warning: @refill is obsolete.
+mime-ui-ja.texi:103: warning: @refill is obsolete.
+mime-ui-ja.texi:113: warning: @refill is obsolete.
+mime-ui-ja.texi:125: unexpected @
+mime-ui-ja.texi:140: misplaced }
+mime-ui-ja.texi:191: unknown command `hF'
+mime-ui-ja.texi:192: warning: @refill is obsolete.
+mime-ui-ja.texi:203: unknown command `aHV9f'
+mime-ui-ja.texi:204: warning: @refill is obsolete.
+mime-ui-ja.texi:223: warning: @refill is obsolete.
+mime-ui-ja.texi:236: misplaced {
+mime-ui-ja.texi:251: warning: @refill is obsolete.
+mime-ui-ja.texi:253: warning: @refill is obsolete.
+mime-ui-ja.texi:255: warning: @refill is obsolete.
+mime-ui-ja.texi:258: warning: @refill is obsolete.
+mime-ui-ja.texi:266: warning: @refill is obsolete.
+mime-ui-ja.texi:301: unknown command `8'
+mime-ui-ja.texi:312: unknown command `8'
+mime-ui-ja.texi:312: warning: @refill is obsolete.
+mime-ui-ja.texi:314: warning: @refill is obsolete.
+mime-ui-ja.texi:322: unexpected @
+mime-ui-ja.texi:323: warning: @refill is obsolete.
+mime-ui-ja.texi:359: warning: @refill is obsolete.
+mime-ui-ja.texi:373: warning: @refill is obsolete.
+mime-ui-ja.texi:385: warning: @refill is obsolete.
+mime-ui-ja.texi:389: warning: @refill is obsolete.
+mime-ui-ja.texi:392: warning: @refill is obsolete.
+mime-ui-ja.texi:395: warning: @refill is obsolete.
+mime-ui-ja.texi:434: unexpected @
+mime-ui-ja.texi:493: unknown command `bL'
+mime-ui-ja.texi:493: unexpected @
+mime-ui-ja.texi:535: warning: @refill is obsolete.
+mime-ui-ja.texi:539: misplaced {
+mime-ui-ja.texi:539: warning: @refill is obsolete.
+mime-ui-ja.texi:541: misplaced {
+mime-ui-ja.texi:542: unexpected @
+mime-ui-ja.texi:546: misplaced {
+mime-ui-ja.texi:546: warning: @refill is obsolete.
+mime-ui-ja.texi:560: unknown command `55'
+mime-ui-ja.texi:583: unexpected @
+mime-ui-ja.texi:605: warning: @refill is obsolete.
+mime-ui-ja.texi:609: warning: @refill is obsolete.
+mime-ui-ja.texi:613: warning: @refill is obsolete.
+mime-ui-ja.texi:621: unexpected @
+mime-ui-ja.texi:622: warning: @refill is obsolete.
+mime-ui-ja.texi:630: misplaced }
+mime-ui-ja.texi:636: warning: @refill is obsolete.
+mime-ui-ja.texi:639: warning: @refill is obsolete.
+mime-ui-ja.texi:641: misplaced {
+mime-ui-ja.texi:641: warning: @refill is obsolete.
+mime-ui-ja.texi:676: warning: @refill is obsolete.
+mime-ui-ja.texi:685: unknown command `55'
+mime-ui-ja.texi:697: unexpected @
+mime-ui-ja.texi:707: warning: @refill is obsolete.
+mime-ui-ja.texi:715: warning: @refill is obsolete.
+mime-ui-ja.texi:723: warning: @refill is obsolete.
+mime-ui-ja.texi:730: unexpected @
+mime-ui-ja.texi:731: unexpected @
+mime-ui-ja.texi:763: unexpected @
+mime-ui-ja.texi:767: warning: @refill is obsolete.
+mime-ui-ja.texi:769: warning: @refill is obsolete.
+mime-ui-ja.texi:772: warning: @refill is obsolete.
+mime-ui-ja.texi:775: warning: @refill is obsolete.
+
+Error: (error "Command `makeinfo --no-split mime-ui-ja.texi -o /tmp/semijDgfYU/semi-20170314.1219/mime-ui-ja.info' exited with non-zero exit-code: 1")
+Created semi-20170314.1219.tar containing:
+  semi-20170314.1219/
+  semi-20170314.1219/dir
+  semi-20170314.1219/mail-mime-setup.el
+  semi-20170314.1219/mime-bbdb.el
+  semi-20170314.1219/mime-edit.el
+  semi-20170314.1219/mime-image.el
+  semi-20170314.1219/mime-mac.el
+  semi-20170314.1219/mime-partial.el
+  semi-20170314.1219/mime-pgp.el
+  semi-20170314.1219/mime-play.el
+  semi-20170314.1219/mime-setup.el
+  semi-20170314.1219/mime-shr.el
+  semi-20170314.1219/mime-signature.el
+  semi-20170314.1219/mime-tnef.el
+  semi-20170314.1219/mime-ui-en.info
+  semi-20170314.1219/mime-vcard.el
+  semi-20170314.1219/mime-view.el
+  semi-20170314.1219/mime-w3.el
+  semi-20170314.1219/postpet.el
+  semi-20170314.1219/semi-def.el
+  semi-20170314.1219/semi-pkg.el
+  semi-20170314.1219/semi-setup.el
+  semi-20170314.1219/semi.el
  ✓ Success:
-  2024-11-24T22:13:41+0000  semi-20240606.1327.entry
-  2024-11-24T22:13:41+0000  semi-20240606.1327.tar
-Built semi in 6.146s, finished at 2024-11-24T22:13:42+0000
+  2024-11-25T02:39:54+0000  semi-20170314.1219.entry
+  2024-11-25T02:39:54+0000  semi-20170314.1219.tar
+Built semi in 5.923s, finished at 2024-11-25T02:39:54+0000
