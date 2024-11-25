@@ -34,16 +34,12 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ⁃ No external dependencies outside of core Emacs
 
   With `(setq dape-buffer-window-arrangement 'right)':
-  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_16_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_17_0.png>
   And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
   `completion-in-region-function':
-  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_16_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_17_0.png>
   With `minibuffer' adapter configuration hints:
-  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_16_0.png>
-  Screenshots taken with [standard-light].
-
-
-[standard-light] <https://elpa.gnu.org/packages/standard-themes.html>
+  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_17_0.png>
 
 
 2 Configuration
@@ -63,9 +59,9 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   │ 
   │   :hook
   │   ;; Save breakpoints on quit
-  │   ;; ((kill-emacs . dape-breakpoint-save)
+  │   ;; (kill-emacs . dape-breakpoint-save)
   │   ;; Load breakpoints on startup
-  │   ;;  (after-init . dape-breakpoint-load))
+  │   ;; (after-init . dape-breakpoint-load)
   │ 
   │   :config
   │   ;; Turn on global bindings for setting breakpoints with mouse
