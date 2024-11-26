@@ -3,16 +3,24 @@ Fetcher: github
 Source:  https://github.com/countvajhula/dynaring
 
 Updating /mnt/store/melpa/working/dynaring/
-Checking out 90daf413abee1723c37697e72bb700a06727ff4b
+Checking out 61f7eef54f80c568e3a7c48f877d86776dd07fc6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dynaring/
-  to /tmp/dynaringv5fjsL/dynaring-20240615.129
+  to /tmp/dynaringY9Hl6b/dynaring-20241126.202
+    dynaring-dll.el -> dynaring-dll.el
+    dynaring-ring.el -> dynaring-ring.el
+    dynaring-segment.el -> dynaring-segment.el
     dynaring.el -> dynaring.el
-Created dynaring-20240615.129.tar containing:
-  dynaring-20240615.129/
-  dynaring-20240615.129/dynaring-pkg.el
-  dynaring-20240615.129/dynaring.el
+Created dynaring-20241126.202.tar containing:
+  dynaring-20241126.202/
+  dynaring-20241126.202/dynaring-dll.el
+  dynaring-20241126.202/dynaring-pkg.el
+  dynaring-20241126.202/dynaring-ring.el
+  dynaring-20241126.202/dynaring-segment.el
+  dynaring-20241126.202/dynaring.el
  ✓ Success:
   2024-11-26T00:14:32+0000  dynaring-20240615.129.entry
   2024-11-26T00:14:32+0000  dynaring-20240615.129.tar
-Built dynaring in 2.798s, finished at 2024-11-26T00:14:33+0000
+  2024-11-26T02:27:55+0000  dynaring-20241126.202.entry
+  2024-11-26T02:27:55+0000  dynaring-20241126.202.tar
+Built dynaring in 2.746s, finished at 2024-11-26T02:27:55+0000
