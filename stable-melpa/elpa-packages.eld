@@ -1626,7 +1626,6 @@
   (evil-visual-mark-mode :url "https://github.com/roman/evil-visual-mark-mode")
   (evil-visual-replace :url "https://github.com/troyp/evil-visual-replace")
   (evil-visualstar :url "https://github.com/bling/evil-visualstar")
-  (evm :url "https://github.com/rejeep/evm.el")
   (evm-mode :url "https://github.com/taquangtrung/emacs-evm-mode")
   (ewal :url "https://github.com/cyruseuros/ewal")
   (ewal-doom-themes :url "https://github.com/cyruseuros/ewal")
