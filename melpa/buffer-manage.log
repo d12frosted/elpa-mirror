@@ -1,0 +1,28 @@
+Package: buffer-manage
+Fetcher: github
+Source:  https://github.com/plandes/buffer-manage
+
+Updating /mnt/store/melpa/working/buffer-manage/
+Checking out 819bbfd9ae2f028361f484bc3b60d751623a2df5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/buffer-manage/
+  to /tmp/buffer-manageqDgxHP/buffer-manage-20211122.1957
+    buffer-manage.el -> buffer-manage.el
+    config-manage-base.el -> config-manage-base.el
+    config-manage-declare.el -> config-manage-declare.el
+    config-manage-mode.el -> config-manage-mode.el
+    config-manage-prop.el -> config-manage-prop.el
+    config-manage.el -> config-manage.el
+Created buffer-manage-20211122.1957.tar containing:
+  buffer-manage-20211122.1957/
+  buffer-manage-20211122.1957/buffer-manage-pkg.el
+  buffer-manage-20211122.1957/buffer-manage.el
+  buffer-manage-20211122.1957/config-manage-base.el
+  buffer-manage-20211122.1957/config-manage-declare.el
+  buffer-manage-20211122.1957/config-manage-mode.el
+  buffer-manage-20211122.1957/config-manage-prop.el
+  buffer-manage-20211122.1957/config-manage.el
+ ✓ Success:
+  2024-11-27T18:20:28+0000  buffer-manage-20211122.1957.entry
+  2024-11-27T18:20:28+0000  buffer-manage-20211122.1957.tar
+Built buffer-manage in 2.757s, finished at 2024-11-27T18:20:29+0000
