@@ -67,4 +67,4 @@ For example:
 Links:
 ------
 - More information about outline-indent (Frequently asked questions, usage...):
-https://github.com/jamescherti/outline-indent.el
+  https://github.com/jamescherti/outline-indent.el
