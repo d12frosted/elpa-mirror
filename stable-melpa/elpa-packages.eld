@@ -1256,7 +1256,7 @@
   (editorconfig-generate :url "https://github.com/10sr/editorconfig-generate-el")
   (edn :url "https://github.com/expez/edn.el")
   (ednc :url "https://github.com/sinic/ednc")
-  (edts :url "https://github.com/emacsmirror/edts")
+  (edts :url "https://github.com/sebastiw/edts")
   (edwina :url "https://gitlab.com/ajgrf/edwina")
   (efar :url "https://github.com/suntsov/efar")
   (eff :url "https://github.com/oxidase/eff")
