@@ -13,7 +13,9 @@ Indentation: Automatic indentation according to the Puppet coding
 Alignment: Alignment rules for common Puppet expressions are included.
   The function `puppet-ts-align-block' (bound to "C-c C-a") aligns the
   current block with respect to "=>" for attributes and hashes or "=" for
-  parameter lists.
+  parameter lists.  The fat arrow and equal sign are electric and they
+  perform automatic alignment.  Electricity is controlled by
+  `puppet-ts-greater-is-electric' and `puppet-ts-equal-is-electric'.
 
 Completion: The mode updates the `completion-at-point' component to
   complete variable names and resource types.  Tree-sitter is used to

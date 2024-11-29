@@ -447,6 +447,19 @@
 	      (:authors
 	       ("Campbell Barton" . "ideasman42@gmail.com"))
 	      (:commit . "71336e614e3150c47c58f99f2df10a3af73370ac"))])
+ (dirvish .
+	  [(2 0 53)
+	   ((emacs
+	     (27 1))
+	    (transient
+	     (0 3 7)))
+	   "A modern file manager based on dired mode" tar
+	   ((:url . "https://github.com/alexluigit/dirvish")
+	    (:keywords "files" "convenience")
+	    (:maintainer "Alex Lu" . "https://github.com/alexluigit")
+	    (:authors
+	     ("Alex Lu" . "https://github.com/alexluigit"))
+	    (:commit . "c535e2147171be5506f4ff34e862bacbfb3de768"))])
  (doc-show-inline .
 		  [(0 1)
 		   ((emacs
