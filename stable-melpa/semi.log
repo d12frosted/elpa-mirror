@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/semi/
 Checking out 425098e6a57e7668ba2eeccba31f73e59c3d3a7f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/semi/
-  to /tmp/semiSV1lNm/semi-20170314.1219
+  to /tmp/semiQMBMxU/semi-20170314.1219
     mail-mime-setup.el -> mail-mime-setup.el
     mime-bbdb.el -> mime-bbdb.el
     mime-edit.el -> mime-edit.el
@@ -31,7 +31,7 @@ Copying files (->) and directories (=>)
     mime-ui-ja.texi -> mime-ui-ja.texi
 Generating mime-ui-en.info
 Generating mime-ui-ja.info
-Command `makeinfo --no-split mime-ui-ja.texi -o /tmp/semiSV1lNm/semi-20170314.1219/mime-ui-ja.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split mime-ui-ja.texi -o /tmp/semiQMBMxU/semi-20170314.1219/mime-ui-ja.info' exited with non-zero exit-code: 1
 mime-ui-ja.texi:3: warning: encoding `iso-2022-jp' is not a canonical texinfo encoding
 mime-ui-ja.texi:3: warning: unrecognized encoding name `iso-2022-jp'
 mime-ui-ja.texi:11: unknown command `bL'
@@ -132,7 +132,7 @@ mime-ui-ja.texi:769: warning: @refill is obsolete.
 mime-ui-ja.texi:772: warning: @refill is obsolete.
 mime-ui-ja.texi:775: warning: @refill is obsolete.
 
-Error: (error "Command `makeinfo --no-split mime-ui-ja.texi -o /tmp/semiSV1lNm/semi-20170314.1219/mime-ui-ja.info' exited with non-zero exit-code: 1")
+Error: (error "Command `makeinfo --no-split mime-ui-ja.texi -o /tmp/semiQMBMxU/semi-20170314.1219/mime-ui-ja.info' exited with non-zero exit-code: 1")
 Created semi-20170314.1219.tar containing:
   semi-20170314.1219/
   semi-20170314.1219/dir
@@ -158,6 +158,6 @@ Created semi-20170314.1219.tar containing:
   semi-20170314.1219/semi-setup.el
   semi-20170314.1219/semi.el
  ✓ Success:
-  2024-11-29T02:18:39+0000  semi-20170314.1219.entry
-  2024-11-29T02:18:39+0000  semi-20170314.1219.tar
-Built semi in 5.908s, finished at 2024-11-29T02:18:40+0000
+  2024-11-29T06:45:11+0000  semi-20170314.1219.entry
+  2024-11-29T06:45:11+0000  semi-20170314.1219.tar
+Built semi in 5.951s, finished at 2024-11-29T06:45:12+0000
