@@ -65,6 +65,19 @@
   such as GitHub, because your key must be kept private. Anyone with
   your key can use the API, and you will be charged.
 
+  You can also use a function as a key, so you can store your key in a
+  secure place and retrieve it via a function.  For example, you could
+  add a line to `~/.authinfo.gpg':
+
+  ┌────
+  │ machine llm.openai password <key>
+  └────
+
+  And then set up your provider like:
+  ┌────
+  │ (setq llm-refactoring-provider (make-llm-openai :key (plist-get (car (auth-source-search :host "llm.openai")) :secret)))
+  └────
+
   All of the providers (except for `llm-fake'), can also take default
   parameters that will be used if they are not specified in the prompt.
   These are the same parameters as appear in the prompt, but prefixed
@@ -408,16 +421,22 @@
 
     And the following helper functions:
     • `llm-make-chat-prompt text &keys context examples functions
-      temperature max-tokens': This is how you make prompts.  `text' can
-      be a string (the user input to the llm chatbot), or a list
-      representing a series of back-and-forth exchanges, of odd number,
-      with the last element of the list representing the user's latest
-      input.  This supports inputting context (also commonly called a
-      system prompt, although it isn't guaranteed to replace the actual
-      system prompt), examples, and other important elements, all
-      detailed in the docstring for this function.  The
+      temperature max-tokens response-format non-standard-params': This
+      is how you make prompts.  `text' can be a string (the user input
+      to the llm chatbot), or a list representing a series of
+      back-and-forth exchanges, of odd number, with the last element of
+      the list representing the user's latest input.  This supports
+      inputting context (also commonly called a system prompt, although
+      it isn't guaranteed to replace the actual system prompt),
+      examples, and other important elements, all detailed in the
+      docstring for this function.  `response-format' can be `'json', to
+      force JSON output, but the prompt also needs to mention and
+      ideally go into detail about what kind of JSON response is
+      desired.  Providers with the `json-response' capability support
+      JSON output, and it will be ignored if unsupported.  The
       `non-standard-params' let you specify other options that might
-      vary per-provider.  The correctness is up to the client.
+      vary per-provider, and for this, the correctness is up to the
+      client.
     • `llm-chat-prompt-to-text prompt': From a prompt, return a string
       representation.  This is not usually suitable for passing to LLMs,
       but for debugging purposes.
