@@ -1,0 +1,111 @@
+Package: alchemist
+Fetcher: github
+Source:  https://github.com/tonini/alchemist.el
+
+Updating /mnt/store/melpa/working/alchemist/
+Checking out 6f99367511ae209f8fe2c990779764bbb4ccb6ed
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/alchemist/
+  to /tmp/alchemistYKDqnE/alchemist-20180312.1304
+    alchemist-company.el -> alchemist-company.el
+    alchemist-compile.el -> alchemist-compile.el
+    alchemist-complete.el -> alchemist-complete.el
+    alchemist-eval.el -> alchemist-eval.el
+    alchemist-execute.el -> alchemist-execute.el
+    alchemist-file.el -> alchemist-file.el
+    alchemist-goto.el -> alchemist-goto.el
+    alchemist-help.el -> alchemist-help.el
+    alchemist-hex.el -> alchemist-hex.el
+    alchemist-hooks.el -> alchemist-hooks.el
+    alchemist-iex.el -> alchemist-iex.el
+    alchemist-info.el -> alchemist-info.el
+    alchemist-interact.el -> alchemist-interact.el
+    alchemist-key.el -> alchemist-key.el
+    alchemist-macroexpand.el -> alchemist-macroexpand.el
+    alchemist-message.el -> alchemist-message.el
+    alchemist-mix.el -> alchemist-mix.el
+    alchemist-phoenix.el -> alchemist-phoenix.el
+    alchemist-project.el -> alchemist-project.el
+    alchemist-refcard.el -> alchemist-refcard.el
+    alchemist-report.el -> alchemist-report.el
+    alchemist-scope.el -> alchemist-scope.el
+    alchemist-server.el -> alchemist-server.el
+    alchemist-test-mode.el -> alchemist-test-mode.el
+    alchemist-utils.el -> alchemist-utils.el
+    alchemist.el -> alchemist.el
+    alchemist-server => alchemist-server
+Created alchemist-20180312.1304.tar containing:
+  alchemist-20180312.1304/
+  alchemist-20180312.1304/alchemist-company.el
+  alchemist-20180312.1304/alchemist-compile.el
+  alchemist-20180312.1304/alchemist-complete.el
+  alchemist-20180312.1304/alchemist-eval.el
+  alchemist-20180312.1304/alchemist-execute.el
+  alchemist-20180312.1304/alchemist-file.el
+  alchemist-20180312.1304/alchemist-goto.el
+  alchemist-20180312.1304/alchemist-help.el
+  alchemist-20180312.1304/alchemist-hex.el
+  alchemist-20180312.1304/alchemist-hooks.el
+  alchemist-20180312.1304/alchemist-iex.el
+  alchemist-20180312.1304/alchemist-info.el
+  alchemist-20180312.1304/alchemist-interact.el
+  alchemist-20180312.1304/alchemist-key.el
+  alchemist-20180312.1304/alchemist-macroexpand.el
+  alchemist-20180312.1304/alchemist-message.el
+  alchemist-20180312.1304/alchemist-mix.el
+  alchemist-20180312.1304/alchemist-phoenix.el
+  alchemist-20180312.1304/alchemist-pkg.el
+  alchemist-20180312.1304/alchemist-project.el
+  alchemist-20180312.1304/alchemist-refcard.el
+  alchemist-20180312.1304/alchemist-report.el
+  alchemist-20180312.1304/alchemist-scope.el
+  alchemist-20180312.1304/alchemist-server.el
+  alchemist-20180312.1304/alchemist-server/
+  alchemist-20180312.1304/alchemist-server/.gitignore
+  alchemist-20180312.1304/alchemist-server/.travis.yml
+  alchemist-20180312.1304/alchemist-server/Makefile
+  alchemist-20180312.1304/alchemist-server/README.md
+  alchemist-20180312.1304/alchemist-server/lib/
+  alchemist-20180312.1304/alchemist-server/lib/api/
+  alchemist-20180312.1304/alchemist-server/lib/api/comp.exs
+  alchemist-20180312.1304/alchemist-server/lib/api/defl.exs
+  alchemist-20180312.1304/alchemist-server/lib/api/docl.exs
+  alchemist-20180312.1304/alchemist-server/lib/api/eval.exs
+  alchemist-20180312.1304/alchemist-server/lib/api/info.exs
+  alchemist-20180312.1304/alchemist-server/lib/api/ping.exs
+  alchemist-20180312.1304/alchemist-server/lib/api/version.exs
+  alchemist-20180312.1304/alchemist-server/lib/helpers/
+  alchemist-20180312.1304/alchemist-server/lib/helpers/capture_io.exs
+  alchemist-20180312.1304/alchemist-server/lib/helpers/complete.exs
+  alchemist-20180312.1304/alchemist-server/lib/helpers/module_info.exs
+  alchemist-20180312.1304/alchemist-server/lib/helpers/process_commands.exs
+  alchemist-20180312.1304/alchemist-server/lib/helpers/response.exs
+  alchemist-20180312.1304/alchemist-server/lib/server.exs
+  alchemist-20180312.1304/alchemist-server/lib/server/
+  alchemist-20180312.1304/alchemist-server/lib/server/io.exs
+  alchemist-20180312.1304/alchemist-server/lib/server/socket.exs
+  alchemist-20180312.1304/alchemist-server/run.exs
+  alchemist-20180312.1304/alchemist-server/test/
+  alchemist-20180312.1304/alchemist-server/test/api/
+  alchemist-20180312.1304/alchemist-server/test/api/comp_test.exs
+  alchemist-20180312.1304/alchemist-server/test/api/defl_test.exs
+  alchemist-20180312.1304/alchemist-server/test/api/docl_test.exs
+  alchemist-20180312.1304/alchemist-server/test/api/ping_test.exs
+  alchemist-20180312.1304/alchemist-server/test/api_test.exs
+  alchemist-20180312.1304/alchemist-server/test/fixtures/
+  alchemist-20180312.1304/alchemist-server/test/fixtures/.gitkeep
+  alchemist-20180312.1304/alchemist-server/test/helpers/
+  alchemist-20180312.1304/alchemist-server/test/helpers/complete_test.exs
+  alchemist-20180312.1304/alchemist-server/test/helpers/module_info_test.exs
+  alchemist-20180312.1304/alchemist-server/test/helpers/process_commands_test.exs
+  alchemist-20180312.1304/alchemist-server/test/server/
+  alchemist-20180312.1304/alchemist-server/test/server/socket_test.exs
+  alchemist-20180312.1304/alchemist-server/test/server_test.exs
+  alchemist-20180312.1304/alchemist-server/test/test_helper.exs
+  alchemist-20180312.1304/alchemist-test-mode.el
+  alchemist-20180312.1304/alchemist-utils.el
+  alchemist-20180312.1304/alchemist.el
+ ✓ Success:
+  2024-11-30T06:19:48+0000  alchemist-20180312.1304.entry
+  2024-11-30T06:19:48+0000  alchemist-20180312.1304.tar
+Built alchemist in 3.466s, finished at 2024-11-30T06:19:49+0000
