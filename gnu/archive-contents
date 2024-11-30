@@ -1405,7 +1405,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 12 8)
+	 [(0 13 0)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1422,7 +1422,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "7a714c9114e9ac58370adcd4eb0642ddff59051a"))])
+	   (:commit . "d4927093e2988084eac86c3254a7b7f5d4cbd761"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -5081,6 +5081,17 @@
 	       (:authors
 		("Philip Kaludercic" . "philipk@posteo.net"))
 	       (:commit . "2bb88d0dc526177c3c6612d6585cee6b2c57803a"))])
+ (yaml .
+       [(1 0 0)
+	((emacs
+	  (25 1)))
+	"YAML parser for Elisp" tar
+	((:url . "https://github.com/zkry/yaml.el")
+	 (:keywords "tools")
+	 (:maintainer "Zachary Romero" . "zkry@posteo.org")
+	 (:authors
+	  ("Zachary Romero" . "zkry@posteo.org"))
+	 (:commit . "cd3edfc02cb12514426c00e07160b87bd8340f4a"))])
  (yasnippet .
 	    [(0 14 1)
 	     ((cl-lib
