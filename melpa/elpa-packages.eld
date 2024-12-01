@@ -161,7 +161,6 @@
   (apparmor-mode :url "https://gitlab.com/apparmor/apparmor-mode")
   (apples-mode :url "https://github.com/tequilasunset/apples-mode")
   (applescript-mode :url "https://github.com/emacsorphanage/applescript-mode")
-  (aproject :url "https://github.com/vietor/aproject")
   (apropospriate-theme :url "https://github.com/waymondo/apropospriate-theme")
   (apt-sources-list :url "https://git.korewanetadesu.com/apt-sources-list.git")
   (aqi :url "https://github.com/zzkt/aqi")
