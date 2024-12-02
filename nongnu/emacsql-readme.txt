@@ -11,7 +11,7 @@ closures. EmacSQL has no concept of "TEXT" values; it's all just lisp
 objects. The lisp object `nil` corresponds 1:1 with `NULL` in the
 database.
 
-Requires Emacs 25 or later.
+Requires Emacs 26 or later.
 
 [![Compile](https://github.com/magit/emacsql/actions/workflows/compile.yml/badge.svg)](https://github.com/magit/emacsql/actions/workflows/compile.yml)
 [![Test](https://github.com/magit/emacsql/actions/workflows/test.yml/badge.svg)](https://github.com/magit/emacsql/actions/workflows/test.yml)
@@ -312,14 +312,6 @@ rows.
 
 This is why rows must be vectors and not lists.
 
-## SQLite Support
-
-The custom EmacSQL SQLite binary is compiled with [Soundex][soundex] and
-[full-text search][fts] (FTS3, FTS4, and FTS5) enabled -- features
-disabled by the default SQLite build. This back-end should work on any
-system with a conforming ANSI C compiler installed under a command name
-listed in `emacsql-sqlite-c-compilers`.
-
 ### Ignored Features
 
 EmacSQL doesn't cover all of SQLite's features. Here are a list of
@@ -434,9 +426,7 @@ the emacsql-protocol-mixin class to do most of the work.
  * [SQLite Documentation](https://www.sqlite.org/docs.html)
 
 [readable]: http://nullprogram.com/blog/2013/12/30/#almost_everything_prints_readably
-[fts]: http://www.sqlite.org/fts3.html
-[soundex]: http://www.sqlite.org/compile.html#soundex
 [mistake]: https://github.com/magit/emacsql/issues/35#issuecomment-346352439
 
-<!-- LocalWords: EIEIO Elisp EmacSQL FTS MELPA Makefile NOCASE RTRIM SQL's Soundex -->
-<!-- LocalWords: autocommit el emacsql mixin psql schemas unprinted whitespace -->
+<!-- LocalWords: EIEIO Elisp EmacSQL MELPA Makefile NOCASE RTRIM  -->
+<!-- LocalWords: SQL's autocommit el emacsql unprinted whitespace -->

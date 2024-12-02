@@ -565,15 +565,15 @@
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "a1c5fbf16b528fb67d087437d44d66e9edc99664"))])
  (emacsql .
-	  [(4 0 3)
+	  [(4 1 0)
 	   ((emacs
-	     (25 1)))
+	     (26 1)))
 	   "High-level SQL database front-end" tar
 	   ((:url . "https://github.com/magit/emacsql")
 	    (:maintainer "Jonas Bernoulli" . "emacs.emacsql@jonas.bernoulli.dev")
 	    (:authors
 	     ("Christopher Wellons" . "wellons@nullprogram.com"))
-	    (:commit . "fb05d0f72729a4b4452a3b1168a9b7b35a851a53"))])
+	    (:commit . "d6529f010a0573630122b826230e72157ab8fa88"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib
@@ -2579,7 +2579,7 @@
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
-	      [(3 4 2)
+	      [(3 4 3)
 	       ((emacs
 		 (26 1))
 		(compat
@@ -2590,7 +2590,7 @@
 		(:maintainer "Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev")
 		(:authors
 		 ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-		(:commit . "77cb2403158cfea9d8bfb8adad81b84d1d6d7c6a"))])
+		(:commit . "ca902ae02972bdd6919a902be2593d8cb6bd991b"))])
  (with-simulated-input .
 		       [(3 0)
 			((emacs

@@ -41,11 +41,12 @@ If you would like to use base directories different from what
 `no-littering' uses by default, then you have to set the respective
 variables before loading the feature.
 
-  (setq no-littering-etc-directory
-        (expand-file-name "config/" user-emacs-directory))
-  (setq no-littering-var-directory
-        (expand-file-name "data/" user-emacs-directory))
-  (require 'no-littering)
+  (eval-and-compile ; Ensure values don't differ at compile time.
+    (setq no-littering-etc-directory
+          (expand-file-name "config/" user-emacs-directory))
+    (setq no-littering-var-directory
+          (expand-file-name "data/" user-emacs-directory))
+    (require 'no-littering)
 
 For additional optional settings see "README.org".
 
