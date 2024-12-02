@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-jupyter/jupyter
 
 Updating /mnt/store/melpa/working/jupyter/
-Checking out 577371744b36aa0afa117b7ded21d08f60331ff6
+Checking out d06b2912a2a839ac12f265756965f8d89a7e1d35
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jupyter/
-  to /tmp/jupyterk8tZJb/jupyter-20241120.230
+  to /tmp/jupyterzUn01f/jupyter-20241202.1021
     jupyter-R.el -> jupyter-R.el
     jupyter-base.el -> jupyter-base.el
     jupyter-c++.el -> jupyter-c++.el
@@ -39,48 +39,50 @@ Copying files (->) and directories (=>)
     Makefile -> Makefile
     widget.html -> widget.html
     js => js
-Created jupyter-20241120.230.tar containing:
-  jupyter-20241120.230/
-  jupyter-20241120.230/Makefile
-  jupyter-20241120.230/js/
-  jupyter-20241120.230/js/Makefile
-  jupyter-20241120.230/js/emacs-jupyter.js
-  jupyter-20241120.230/js/index.js
-  jupyter-20241120.230/js/manager.js
-  jupyter-20241120.230/js/package.json
-  jupyter-20241120.230/js/webpack.config.js
-  jupyter-20241120.230/jupyter-R.el
-  jupyter-20241120.230/jupyter-base.el
-  jupyter-20241120.230/jupyter-c++.el
-  jupyter-20241120.230/jupyter-channel-ioloop.el
-  jupyter-20241120.230/jupyter-channel.el
-  jupyter-20241120.230/jupyter-client.el
-  jupyter-20241120.230/jupyter-env.el
-  jupyter-20241120.230/jupyter-ioloop.el
-  jupyter-20241120.230/jupyter-javascript.el
-  jupyter-20241120.230/jupyter-julia.el
-  jupyter-20241120.230/jupyter-kernel-process.el
-  jupyter-20241120.230/jupyter-kernel.el
-  jupyter-20241120.230/jupyter-kernelspec.el
-  jupyter-20241120.230/jupyter-messages.el
-  jupyter-20241120.230/jupyter-mime.el
-  jupyter-20241120.230/jupyter-monads.el
-  jupyter-20241120.230/jupyter-org-client.el
-  jupyter-20241120.230/jupyter-org-extensions.el
-  jupyter-20241120.230/jupyter-pkg.el
-  jupyter-20241120.230/jupyter-python.el
-  jupyter-20241120.230/jupyter-repl.el
-  jupyter-20241120.230/jupyter-rest-api.el
-  jupyter-20241120.230/jupyter-server-kernel.el
-  jupyter-20241120.230/jupyter-server.el
-  jupyter-20241120.230/jupyter-tramp.el
-  jupyter-20241120.230/jupyter-widget-client.el
-  jupyter-20241120.230/jupyter-zmq-channel-ioloop.el
-  jupyter-20241120.230/jupyter-zmq-channel.el
-  jupyter-20241120.230/jupyter.el
-  jupyter-20241120.230/ob-jupyter.el
-  jupyter-20241120.230/widget.html
+Created jupyter-20241202.1021.tar containing:
+  jupyter-20241202.1021/
+  jupyter-20241202.1021/Makefile
+  jupyter-20241202.1021/js/
+  jupyter-20241202.1021/js/Makefile
+  jupyter-20241202.1021/js/emacs-jupyter.js
+  jupyter-20241202.1021/js/index.js
+  jupyter-20241202.1021/js/manager.js
+  jupyter-20241202.1021/js/package.json
+  jupyter-20241202.1021/js/webpack.config.js
+  jupyter-20241202.1021/jupyter-R.el
+  jupyter-20241202.1021/jupyter-base.el
+  jupyter-20241202.1021/jupyter-c++.el
+  jupyter-20241202.1021/jupyter-channel-ioloop.el
+  jupyter-20241202.1021/jupyter-channel.el
+  jupyter-20241202.1021/jupyter-client.el
+  jupyter-20241202.1021/jupyter-env.el
+  jupyter-20241202.1021/jupyter-ioloop.el
+  jupyter-20241202.1021/jupyter-javascript.el
+  jupyter-20241202.1021/jupyter-julia.el
+  jupyter-20241202.1021/jupyter-kernel-process.el
+  jupyter-20241202.1021/jupyter-kernel.el
+  jupyter-20241202.1021/jupyter-kernelspec.el
+  jupyter-20241202.1021/jupyter-messages.el
+  jupyter-20241202.1021/jupyter-mime.el
+  jupyter-20241202.1021/jupyter-monads.el
+  jupyter-20241202.1021/jupyter-org-client.el
+  jupyter-20241202.1021/jupyter-org-extensions.el
+  jupyter-20241202.1021/jupyter-pkg.el
+  jupyter-20241202.1021/jupyter-python.el
+  jupyter-20241202.1021/jupyter-repl.el
+  jupyter-20241202.1021/jupyter-rest-api.el
+  jupyter-20241202.1021/jupyter-server-kernel.el
+  jupyter-20241202.1021/jupyter-server.el
+  jupyter-20241202.1021/jupyter-tramp.el
+  jupyter-20241202.1021/jupyter-widget-client.el
+  jupyter-20241202.1021/jupyter-zmq-channel-ioloop.el
+  jupyter-20241202.1021/jupyter-zmq-channel.el
+  jupyter-20241202.1021/jupyter.el
+  jupyter-20241202.1021/ob-jupyter.el
+  jupyter-20241202.1021/widget.html
  ✓ Success:
-  2024-12-02T07:40:16+0000  jupyter-20241120.230.entry
-  2024-12-02T07:40:16+0000  jupyter-20241120.230.tar
-Built jupyter in 3.842s, finished at 2024-12-02T07:40:17+0000
+  2024-12-02T09:54:31+0000  jupyter-20241120.230.entry
+  2024-12-02T09:54:31+0000  jupyter-20241120.230.tar
+  2024-12-02T12:07:56+0000  jupyter-20241202.1021.entry
+  2024-12-02T12:07:56+0000  jupyter-20241202.1021.tar
+Built jupyter in 3.764s, finished at 2024-12-02T12:07:57+0000
