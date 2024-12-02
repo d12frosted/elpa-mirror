@@ -6,8 +6,8 @@ their execution if they would break the parenthetical structure. This
 guarantees that your Lisp code remains syntactically correct while retaining
 the editing features of evil-mode.
 
-Installation:
--------------
+Installation from MELPA:
+------------------------
 (use-package enhanced-evil-paredit
   :ensure t
   :config

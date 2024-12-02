@@ -19,7 +19,7 @@ origami.el or yafolding.el. Since outline-indent.el is based on
 outline-minor-mode, it's also much much faster than origami.el and
 yafolding.el.
 
-Installation:
+Installation from MELPA:
 -------------
 (use-package outline-indent
   :ensure t

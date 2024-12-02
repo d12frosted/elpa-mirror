@@ -13,17 +13,15 @@ Turbo Pascal, as well as tools such as Midnight Commander which featured blue
 backgrounds by default. There's something special about the early days of
 programming and the tools we used that brings back fond memories.
 
-Installation:
--------------
-To install `tomorrow-night-deepblue-theme` from MELPA:
-
-  (use-package tomorrow-night-deepblue-theme
-    :ensure t
-    :config
-    ;; Disable all themes and load the Tomorrow Night Deep Blue theme
-    (mapc #'disable-theme custom-enabled-themes)
-    ;; Load the tomorrow-night-deepblue theme
-    (load-theme 'tomorrow-night-deepblue t))
+Installation from MELPA:
+------------------------
+(use-package tomorrow-night-deepblue-theme
+  :ensure t
+  :config
+  ;; Disable all themes and load the Tomorrow Night Deep Blue theme
+  (mapc #'disable-theme custom-enabled-themes)
+  ;; Load the tomorrow-night-deepblue theme
+  (load-theme 'tomorrow-night-deepblue t))
 
 Links:
 ------
