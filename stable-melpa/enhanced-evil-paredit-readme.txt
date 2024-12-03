@@ -12,3 +12,8 @@ Installation from MELPA:
   :ensure t
   :config
   (add-hook 'paredit-mode-hook #'enhanced-evil-paredit-mode))
+
+Links:
+------
+- enhanced-evil-paredit @GitHub:
+  https://github.com/jamescherti/enhanced-evil-paredit.el
