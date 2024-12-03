@@ -12,7 +12,7 @@ package:
                       #'outline-minor-faces-mode))
 
 For non-lisp major modes the highlighting provided by this package
-and by the built-in support is essentiall the same, i.e., the first
+and by the built-in support is essentially the same, i.e., the first
 lines of top-level expressions *are* highlighted.
 
 This package also defines separate faces for use in the minor mode.
