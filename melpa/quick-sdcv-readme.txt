@@ -1,4 +1,3 @@
-
 The quick-sdcv package serves as a lightweight Emacs interface for the
 sdcv command-line interface, which is the console version of the StarDict
 dictionary application.
@@ -17,3 +16,28 @@ Below are the commands you can use:
   displays the result in a buffer.
 - `quick-sdcv-search-input': Searches the input word and displays the result
   in a buffer.
+
+Installation from MELPA:
+------------------------
+(use-package quick-sdcv
+  :ensure t
+  :straight (quick-sdcv
+             :type git
+             :host github
+             :repo "jamescherti/quick-sdcv.el")
+  :custom
+  (quick-sdcv-dictionary-prefix-symbol "►")
+  (quick-sdcv-ellipsis " ▼ "))
+
+Usage:
+------
+To retrieve the word under the cursor and display its definition in a buffer:
+  (quick-sdcv-search-at-point)
+
+To prompt the user for a word and display its definition in a buffer:
+  (quick-sdcv-search-input)
+
+Links:
+------
+More information about quick-sdcv (Usage, Frequently Asked Questions, etc.):
+https://github.com/jamescherti/quick-sdcv.el

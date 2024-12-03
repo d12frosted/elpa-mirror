@@ -9,7 +9,7 @@
 1 README
 ════════
 
-  `mastodon.el' is an Emacs client for the AcitivityPub social networks
+  `mastodon.el' is an Emacs client for the ActivityPub social networks
   that implement the Mastodon API. For info see [joinmastodon.org].
 
   NB: `mastodon.el' now ships this readme as an .info file, so if you
@@ -205,6 +205,7 @@
    `K'                     view bookmarked toots                                                           
    `X'                     view/edit/create/delete lists                                                   
    `S'                     view your scheduled toots                                                       
+   `S-:'                   view profile/account settings transient menu                                    
   ─────────────────────────────────────────────────────────────────────────────────────────────────────────
                            *Toot actions*                                                                  
    `t'                     Compose a new toot                                                              
@@ -226,7 +227,7 @@
   ─────────────────────────────────────────────────────────────────────────────────────────────────────────
                            *Profile view*                                                                  
    `C-c C-c'               cycle between statuses, statuses without boosts, followers, and following       
-                           `mastodon-profile--account-account-to-list' (see lists view)                    
+                           `mastodon-profile--add-account-to-list' (see lists view)                        
   ─────────────────────────────────────────────────────────────────────────────────────────────────────────
                            *Notifications view*                                                            
    `a', `j'                accept/reject follow request                                                    
@@ -293,21 +294,22 @@
 
 ◊ 1.2.3.1 Keybindings
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Key         Action                        
-  ───────────────────────────────────────────
-   `C-c C-c'   Send toot                     
-   `C-c C-k'   Cancel toot                   
-   `C-c C-w'   Add content warning           
-   `C-c C-v'   Change toot visibility        
-   `C-c C-n'   Add sensitive media/nsfw flag 
-   `C-c C-a'   Upload attachment(s)          
-   `C-c !'     Remove all attachments        
-   `C-c C-e'   Insert emoji                  
-   `C-c C-p'   Create a poll                 
-   `C-c C-l'   Set toot language             
-   `-C-c C-s'  Schedule toot                 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Key        Action                        
+  ──────────────────────────────────────────
+   `C-c C-c'  Send toot                     
+   `C-c C-k'  Cancel toot                   
+   `C-c C-w'  Add content warning           
+   `C-c C-v'  Change toot visibility        
+   `C-c C-n'  Add sensitive media/nsfw flag 
+   `C-c C-a'  Upload attachment(s)          
+   `C-c !'    Remove all attachments        
+   `C-c C-e'  Insert emoji                  
+   `C-c C-p'  Create a poll                 
+   `C-c C-o'  Cancel poll                   
+   `C-c C-l'  Set toot language             
+   `C-c C-s'  Schedule toot                 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 ◊ 1.2.3.2 Autocompletion of mentions, tags and emoji
@@ -361,7 +363,9 @@
     on your instance.
   • `mastodon-search--trending-statuses': View a list of trending
     statuses on your instance.
-
+  • `mastodon-search--trending-links': View a list of trending links on
+    your instance (+ click through to a timeline of posts featuring a
+    given link)
 
   • `mastodon-tl--add-toot-account-at-point-to-list': Add the account of
     the toot at point to a list.
@@ -402,25 +406,20 @@
     instance.
 
 
-  • `mastodon-profile--update-display-name': Update the display name for
-    your account.
-  • `mastodon-profile--update-user-profile-note': Update your bio note.
-  • `mastodon-profile--update-meta-fields': Update your metadata fields.
-  • `mastodon-profile--set-default-toot-visibility': Set the default
-    visibility for your toots.
-  • `mastodon-profile--account-locked-toggle': Toggle the locked status
-    of your account. Locked accounts have to manually approve follow
-    requests.
-  • `mastodon-profile--account-discoverable-toggle': Toggle the
-    discoverable status of your account. Non-discoverable accounts are
-    not listed in the profile directory.
-  • `mastodon-profile--account-bot-toggle': Toggle whether your account
-    is flagged as a bot.
-  • `mastodon-profile--account-sensitive-toggle': Toggle whether your
-    posts are marked as sensitive (nsfw) by default.
+  • `mastodon-user-settings': Launch a transient menu to update various
+    account settings.
 
 
-1.2.5 Customization
+1.2.5 Notifications
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Mastodon from 4.3 supports grouped notifications. These are
+  implemented by `mastodon.el'. If you are on an instance that doesn't
+  implement grouped notifications, set `mastodon-group-notifications' to
+  nil.
+
+
+1.2.6 Customization
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   See `M-x customize-group RET mastodon' to view all customize options.
@@ -446,7 +445,7 @@
     • Display user's profile note in follow requests
 
 
-1.2.6 Commands and variables index
+1.2.7 Commands and variables index
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   An index of all user-facing commands and custom variables is available
@@ -460,8 +459,10 @@
 [mastodon-index.org] <file:mastodon-index.org>
 
 
-1.2.7 Alternative timeline layout
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+1.2.8 Packages related to `mastodon.el'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+◊ 1.2.8.1 Alternative timeline layout
 
   The incomparable Nicholas Rougier has written an alternative timeline
   layout for `mastodon.el'.
@@ -469,15 +470,21 @@
   The repo is at [mastodon-alt].
 
 
-[mastodon-alt] <https://github.com/rougier/mastodon-alt>
+  [mastodon-alt] <https://github.com/rougier/mastodon-alt>
 
 
-1.2.8 mastodon hydra
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+◊ 1.2.8.2 Mastodon hydra
 
-  A user made a hydra for handling basic mastodon.el commands. It's
+  A user made a hydra for handling basic `mastodon.el' commands. It's
   available at
   <https://holgerschurig.github.io/en/emacs-mastodon-hydra/>.
+
+
+◊ 1.2.8.3 Narrow to timeline item
+
+  A simple code snippet to enable narrowing to current item in
+  timelines:
+  <http://takeonrules.com/2024/10/31/hacking-on-mastodon-emacs-package-to-narrow-viewing/>
 
 
 1.2.9 Live-updating timelines: `mastodon-async-mode'
@@ -547,6 +554,7 @@
   Hard dependencies (should all install with `mastodon.el'):
   • `request' (for uploading attachments), [emacs-request]
   • `persist' for storing some settings across sessions
+  • `tp.el' for transient menus
 
   Optional dependencies (install yourself, `mastodon.el' can use them):
   • `emojify' to use custom emoji (else we use builtin `emoji.el')
@@ -672,7 +680,7 @@
   • <https://codeberg.org/Red_Starfish>
 
 
-1.8 screenshots
+1.8 Screenshots
 ───────────────
 
   Here's a (federated) timeline:
