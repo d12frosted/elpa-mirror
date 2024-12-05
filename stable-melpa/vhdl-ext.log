@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/vhdl-ext
 
 Updating /mnt/store/melpa/working/vhdl-ext/
-Checking out 28838b9722933889c8af4b9b543db07ccd2d2b66
+Checking out 3f5f0778e87d9d4272903797a2366e603f9f1641
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vhdl-ext/
-  to /tmp/vhdl-extClWpq1/vhdl-ext-20241016.1217
+  to /tmp/vhdl-ext3TxYDO/vhdl-ext-20241205.1630
     vhdl-ext-beautify.el -> vhdl-ext-beautify.el
     vhdl-ext-capf.el -> vhdl-ext-capf.el
     vhdl-ext-compile.el -> vhdl-ext-compile.el
@@ -30,38 +30,38 @@ Copying files (->) and directories (=>)
     vhdl-ext.el -> vhdl-ext.el
     snippets => snippets
     langserver => langserver
-Created vhdl-ext-20241016.1217.tar containing:
-  vhdl-ext-20241016.1217/
-  vhdl-ext-20241016.1217/langserver/
-  vhdl-ext-20241016.1217/langserver/ghdl-ls.json
-  vhdl-ext-20241016.1217/langserver/hdl-checker.json
-  vhdl-ext-20241016.1217/langserver/rust-hdl.json
-  vhdl-ext-20241016.1217/langserver/vhdl-tool.json
-  vhdl-ext-20241016.1217/snippets/
-  vhdl-ext-20241016.1217/snippets/PLACEHOLDER
-  vhdl-ext-20241016.1217/vhdl-ext-beautify.el
-  vhdl-ext-20241016.1217/vhdl-ext-capf.el
-  vhdl-ext-20241016.1217/vhdl-ext-compile.el
-  vhdl-ext-20241016.1217/vhdl-ext-eglot.el
-  vhdl-ext-20241016.1217/vhdl-ext-flycheck.el
-  vhdl-ext-20241016.1217/vhdl-ext-font-lock.el
-  vhdl-ext-20241016.1217/vhdl-ext-hierarchy.el
-  vhdl-ext-20241016.1217/vhdl-ext-hs.el
-  vhdl-ext-20241016.1217/vhdl-ext-imenu.el
-  vhdl-ext-20241016.1217/vhdl-ext-lsp-bridge.el
-  vhdl-ext-20241016.1217/vhdl-ext-lsp.el
-  vhdl-ext-20241016.1217/vhdl-ext-lspce.el
-  vhdl-ext-20241016.1217/vhdl-ext-nav.el
-  vhdl-ext-20241016.1217/vhdl-ext-pkg.el
-  vhdl-ext-20241016.1217/vhdl-ext-ports.el
-  vhdl-ext-20241016.1217/vhdl-ext-tags.el
-  vhdl-ext-20241016.1217/vhdl-ext-template.el
-  vhdl-ext-20241016.1217/vhdl-ext-time-stamp.el
-  vhdl-ext-20241016.1217/vhdl-ext-utils.el
-  vhdl-ext-20241016.1217/vhdl-ext-which-func.el
-  vhdl-ext-20241016.1217/vhdl-ext-xref.el
-  vhdl-ext-20241016.1217/vhdl-ext.el
+Created vhdl-ext-20241205.1630.tar containing:
+  vhdl-ext-20241205.1630/
+  vhdl-ext-20241205.1630/langserver/
+  vhdl-ext-20241205.1630/langserver/ghdl-ls.json
+  vhdl-ext-20241205.1630/langserver/hdl-checker.json
+  vhdl-ext-20241205.1630/langserver/rust-hdl.json
+  vhdl-ext-20241205.1630/langserver/vhdl-tool.json
+  vhdl-ext-20241205.1630/snippets/
+  vhdl-ext-20241205.1630/snippets/PLACEHOLDER
+  vhdl-ext-20241205.1630/vhdl-ext-beautify.el
+  vhdl-ext-20241205.1630/vhdl-ext-capf.el
+  vhdl-ext-20241205.1630/vhdl-ext-compile.el
+  vhdl-ext-20241205.1630/vhdl-ext-eglot.el
+  vhdl-ext-20241205.1630/vhdl-ext-flycheck.el
+  vhdl-ext-20241205.1630/vhdl-ext-font-lock.el
+  vhdl-ext-20241205.1630/vhdl-ext-hierarchy.el
+  vhdl-ext-20241205.1630/vhdl-ext-hs.el
+  vhdl-ext-20241205.1630/vhdl-ext-imenu.el
+  vhdl-ext-20241205.1630/vhdl-ext-lsp-bridge.el
+  vhdl-ext-20241205.1630/vhdl-ext-lsp.el
+  vhdl-ext-20241205.1630/vhdl-ext-lspce.el
+  vhdl-ext-20241205.1630/vhdl-ext-nav.el
+  vhdl-ext-20241205.1630/vhdl-ext-pkg.el
+  vhdl-ext-20241205.1630/vhdl-ext-ports.el
+  vhdl-ext-20241205.1630/vhdl-ext-tags.el
+  vhdl-ext-20241205.1630/vhdl-ext-template.el
+  vhdl-ext-20241205.1630/vhdl-ext-time-stamp.el
+  vhdl-ext-20241205.1630/vhdl-ext-utils.el
+  vhdl-ext-20241205.1630/vhdl-ext-which-func.el
+  vhdl-ext-20241205.1630/vhdl-ext-xref.el
+  vhdl-ext-20241205.1630/vhdl-ext.el
  ✓ Success:
-  2024-12-05T14:06:03+0000  vhdl-ext-20241016.1217.entry
-  2024-12-05T14:06:03+0000  vhdl-ext-20241016.1217.tar
-Built vhdl-ext in 0.942s, finished at 2024-12-05T14:06:03+0000
+  2024-12-05T18:58:21+0000  vhdl-ext-20241205.1630.entry
+  2024-12-05T18:58:21+0000  vhdl-ext-20241205.1630.tar
+Built vhdl-ext in 1.041s, finished at 2024-12-05T18:58:21+0000
