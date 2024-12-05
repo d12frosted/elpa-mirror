@@ -7,7 +7,7 @@ gptel supports
 
 - The services ChatGPT, Azure, Gemini, Anthropic AI, Anyscale, Together.ai,
   Perplexity, Anyscale, OpenRouter, Groq, PrivateGPT, DeepSeek, Cerebras,
-  Github Models and Kagi (FastGPT & Summarizer)
+  Github Models, xAI and Kagi (FastGPT & Summarizer)
 - Local models via Ollama, Llama.cpp, Llamafiles or GPT4All
 
  Additionally, any LLM service (local or remote) that provides an
@@ -80,7 +80,7 @@ To use this in a dedicated buffer:
   Use a prefix argument (`C-u C-c RET') to access a menu.  In this menu you
   can set chat parameters like the system directives, active backend or
   model, or choose to redirect the input or output elsewhere (such as to the
-  kill ring).
+  kill ring or the echo area).
 
 - You can save this buffer to a file.  When opening this file, turn on
   `gptel-mode' before editing it to restore the conversation state and
@@ -105,8 +105,8 @@ When context is available, gptel will include it with each LLM query.
 Rewrite/refactor interface
 
 In any buffer: with a region selected, you can rewrite prose, refactor code
-or fill in the region.  Use gptel's menu (C-u M-x `gptel-send') to access
-this feature.
+or fill in the region.  This is accessible via `gptel-rewrite', and also from
+the `gptel-send' menu.
 
 gptel in Org mode:
 

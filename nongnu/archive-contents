@@ -700,16 +700,16 @@
 		     ("Sylvain Benner" . "sylvain.benner@gmail.com"))
 		    (:commit . "3c65fecd9917a41eaf6460f22187e2323821f3ce"))])
  (evil-matchit .
-	       [(3 0 4)
+	       [(4 0 1)
 		((emacs
-		  (25 1)))
+		  (27 1)))
 		"Vim matchit ported to Evil" tar
 		((:url . "http://github.com/redguardtoo/evil-matchit")
 		 (:keywords "matchit" "vim" "evil")
 		 (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 		 (:authors
 		  ("Chen Bin" . "chenbin.sh@gmail.com"))
-		 (:commit . "1c4fefa9bb11cc4b1d7f10614d2021c12ed12e89"))])
+		 (:commit . "84a6d34c1a1282c43c6ccef2ead3eaa41fd1535f"))])
  (evil-nerd-commenter .
 		      [(3 6 1)
 		       ((emacs
@@ -1131,7 +1131,7 @@
 	      ("David Andersson" . "l.david.anderssonsverige.nu"))
 	     (:commit . "278cd3e6d5107693aa2bb33189ca503f22f227d0"))])
  (gptel .
-	[(0 9 6)
+	[(0 9 7)
 	 ((emacs
 	   (27 1))
 	  (transient
@@ -1144,7 +1144,7 @@
 	  (:maintainer "Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com")
 	  (:authors
 	   ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-	  (:commit . "f24e5ad4740ce5f9829b14e499c9181f9bd7c76e"))])
+	  (:commit . "5a5cddb93d610bd59ec52a070b0f89a9ec842152"))])
  (graphql-mode .
 	       [(1 0 0)
 		((emacs

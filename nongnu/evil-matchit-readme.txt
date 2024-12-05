@@ -49,7 +49,7 @@
   If EVIL is not installed, most commands still work. So *EVIL is only
   optional dependency*.
 
-  Tested on Emacs 25, 26, 27, 28
+  Tested on Emacs 27, 28, 29
 
 
 [https://github.com/redguardtoo/evil-matchit/actions/workflows/test.yml/badge.svg]
@@ -381,7 +381,40 @@
   └────
 
 
-7.2.1 Support languages using indentation to identify a block of code
+7.2.1 Integrate third party jump tag function
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Use `evilmi-add-one-plugin-rule' to add one new plugin rule for
+  specific MAJOR-MODE.
+
+  For example, to integrate `rjsx-jump-tag' into this package is as
+  simple as,
+  ┌────
+  │ (evilmi-add-one-plugin-rule #'rjsx-mode #'my-rjsx-jump-tag)
+  └────
+
+  Or,
+  ┌────
+  │ (defun my-rjsx-jump-tag ()
+  │   (when (string-match "</?>" (string-trim (evilmi-sdk-curline)))
+  │     (rjsx-jump-tag)))
+  │ (evilmi-add-one-plugin-rule #'rjsx-mode #'my-rjsx-jump-tag)
+  └────
+
+  Or,
+  ┌────
+  │ (defun my-rjsx-get-tag()
+  │   (let ((info ("some info")))
+  │     info))
+  │ (defun my-rjsx-jump-tag (info num)
+  │   (rjsx-jump-tag)
+  │   (point))
+  │ (defvar append-p t)
+  │ (evilmi-add-one-plugin-rule #'rjsx-mode #'my-rjsx-jump-tag #'my-rjsx-get-tag append-p)
+  └────
+
+
+7.2.2 Support languages using indentation to identify a block of code
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   It's easy to support such language (Python, Yaml, …).
