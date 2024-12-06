@@ -3,20 +3,26 @@ Fetcher: github
 Source:  https://github.com/brownts/gpr-ts-mode
 
 Updating /mnt/store/melpa/working/gpr-ts-mode/
-Checking out 2f23e4ca2225c614314b4d66ab5312dd9cfdd419
+Checking out 1d0609aa83d26596e4cd11559d658453ced018b7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gpr-ts-mode/
-  to /tmp/gpr-ts-moderdPdnF/gpr-ts-mode-20241127.2221
+  to /tmp/gpr-ts-modex1TgAR/gpr-ts-mode-20241206.1352
+    gpr-ts-casing.el -> gpr-ts-casing.el
+    gpr-ts-completion.el -> gpr-ts-completion.el
     gpr-ts-mode.el -> gpr-ts-mode.el
   ! doc/gpr-ts-mode.texi -> gpr-ts-mode.texi
 Generating gpr-ts-mode.info
-Created gpr-ts-mode-20241127.2221.tar containing:
-  gpr-ts-mode-20241127.2221/
-  gpr-ts-mode-20241127.2221/dir
-  gpr-ts-mode-20241127.2221/gpr-ts-mode-pkg.el
-  gpr-ts-mode-20241127.2221/gpr-ts-mode.el
-  gpr-ts-mode-20241127.2221/gpr-ts-mode.info
+Created gpr-ts-mode-20241206.1352.tar containing:
+  gpr-ts-mode-20241206.1352/
+  gpr-ts-mode-20241206.1352/dir
+  gpr-ts-mode-20241206.1352/gpr-ts-casing.el
+  gpr-ts-mode-20241206.1352/gpr-ts-completion.el
+  gpr-ts-mode-20241206.1352/gpr-ts-mode-pkg.el
+  gpr-ts-mode-20241206.1352/gpr-ts-mode.el
+  gpr-ts-mode-20241206.1352/gpr-ts-mode.info
  ✓ Success:
-  2024-12-06T06:24:48+0000  gpr-ts-mode-20241127.2221.entry
-  2024-12-06T06:24:48+0000  gpr-ts-mode-20241127.2221.tar
-Built gpr-ts-mode in 2.900s, finished at 2024-12-06T06:24:49+0000
+  2024-12-06T13:39:29+0000  gpr-ts-mode-20241127.2221.entry
+  2024-12-06T13:39:28+0000  gpr-ts-mode-20241127.2221.tar
+  2024-12-06T16:05:26+0000  gpr-ts-mode-20241206.1352.entry
+  2024-12-06T16:05:26+0000  gpr-ts-mode-20241206.1352.tar
+Built gpr-ts-mode in 2.868s, finished at 2024-12-06T16:05:27+0000

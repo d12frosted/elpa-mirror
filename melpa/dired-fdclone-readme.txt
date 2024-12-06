@@ -20,6 +20,7 @@ dired-fdclone.el provides the following interactive commands:
 * diredfd-enter-root-directory
 * diredfd-history-backward
 * diredfd-history-forward
+* diredfd-toggle-insert-subdir
 * diredfd-follow-symlink
 * diredfd-do-pack
 * diredfd-do-rename

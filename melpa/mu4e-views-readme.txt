@@ -4,5 +4,5 @@ emails using an xwidgets window, but the user provided viewing methods are
 also supported.
 
 Also provides methods for user defined viewing methods to access content
-extracted from an email, e.g., urls or attachments.  This makes it easier to
+extracted from an email, e.g., urls or attachments.  This makes \it easier to
 build new views.
