@@ -1,5 +1,5 @@
 This file provides a source for linenote that manages notes based on the line
-number in a buffer. The package provides some interactive functions:
+number in a buffer.  The package provides some interactive functions:
 
 - org-linenote-move-forward
 - org-linenote-move-backward
