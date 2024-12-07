@@ -545,6 +545,16 @@
 		 (:authors
 		  ("EditorConfig Team" . "editorconfig@googlegroups.com"))
 		 (:commit . "f1531bab5b57e40759167b7e5db49acbbc09972f"))])
+ (eglot-inactive-regions .
+			 [(0 6 3)
+			  ((emacs
+			    (29 1)))
+			  "Highlight inactive code regions with eglot power" tar
+			  ((:url . "https://github.com/fargiolas/eglot-inactive-regions")
+			   (:maintainer "Filippo Argiolas" . "filippo.argiolas@gmail.com")
+			   (:authors
+			    ("Filippo Argiolas" . "filippo.argiolas@gmail.com"))
+			   (:commit . "2c83a3230d4ee9336b0311dbaa6fa77c2d2538c6"))])
  (elixir-mode .
 	      [(2 5 0)
 	       ((emacs
@@ -2028,7 +2038,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20241129 85359)
+	      [(1 0 20241206 91913)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
