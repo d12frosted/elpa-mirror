@@ -3054,7 +3054,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "416c62a4a8e7199567a5df63d03cf320dc4d6ab0"))])
  (org .
-      [(9 7 16)
+      [(9 7 17)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3063,7 +3063,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "ba9734aedc22ef70a0263cfe9bc766d4a167919f"))])
+	(:commit . "3ae179a5e2d4fedbc33ce7c7ac8ca280f0820655"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -4073,6 +4073,19 @@
 		     (:authors
 		      ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		     (:commit . "e48f3335f50217e40081631abacc40964150f3ab"))])
+ (speedrect .
+	    [(0 6)
+	     ((emacs
+	       (29 1))
+	      (compat
+	       (30)))
+	     "Fast modal rectangle commands" tar
+	     ((:url . "https://github.com/jdtsmith/speedrect")
+	      (:keywords "convenience")
+	      (:maintainer "JD Smith" . "jdtsmith+elpa@gmail.com")
+	      (:authors
+	       ("JD Smith" . "jdtsmith+elpa@gmail.com"))
+	      (:commit . "4603a1ff092462e3d918493fe9ee935380ddd775"))])
  (spinner .
 	  [(1 7 4)
 	   ((emacs
@@ -4497,7 +4510,7 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 7 9)
+	    [(0 8 0)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -4510,7 +4523,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "00fabc76eb3dc75f742d8d2720c44e25e5772e8f"))])
+	      (:commit . "005e50bf4683cbb58b5c48c873609e7f4af7ac5f"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs
