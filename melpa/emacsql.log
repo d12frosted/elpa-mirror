@@ -3,3 +3,34 @@ Fetcher: github
 Source:  https://github.com/magit/emacsql
 
 Updating /mnt/store/melpa/working/emacsql/
+Checking out d6529f010a0573630122b826230e72157ab8fa88
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emacsql/
+  to /tmp/emacsql2MlVZD/emacsql-20241201.1551
+    emacsql-compiler.el -> emacsql-compiler.el
+    emacsql-mysql.el -> emacsql-mysql.el
+    emacsql-pg.el -> emacsql-pg.el
+    emacsql-psql.el -> emacsql-psql.el
+    emacsql-sqlite-builtin.el -> emacsql-sqlite-builtin.el
+    emacsql-sqlite-common.el -> emacsql-sqlite-common.el
+    emacsql-sqlite-module.el -> emacsql-sqlite-module.el
+    emacsql-sqlite.el -> emacsql-sqlite.el
+    emacsql.el -> emacsql.el
+    README.md -> README.md
+Created emacsql-20241201.1551.tar containing:
+  emacsql-20241201.1551/
+  emacsql-20241201.1551/README.md
+  emacsql-20241201.1551/emacsql-compiler.el
+  emacsql-20241201.1551/emacsql-mysql.el
+  emacsql-20241201.1551/emacsql-pg.el
+  emacsql-20241201.1551/emacsql-pkg.el
+  emacsql-20241201.1551/emacsql-psql.el
+  emacsql-20241201.1551/emacsql-sqlite-builtin.el
+  emacsql-20241201.1551/emacsql-sqlite-common.el
+  emacsql-20241201.1551/emacsql-sqlite-module.el
+  emacsql-20241201.1551/emacsql-sqlite.el
+  emacsql-20241201.1551/emacsql.el
+ ✓ Success:
+  2024-12-08T06:31:33+0000  emacsql-20241201.1551.entry
+  2024-12-08T06:31:33+0000  emacsql-20241201.1551.tar
+Built emacsql in 4.926s, finished at 2024-12-08T06:31:34+0000
