@@ -1521,7 +1521,7 @@
 	       ("Jon Oddie" . "j.j.oddie@gmail.com"))
 	      (:commit . "31d4adcca4f08cfd7a45f85e691aaa7a9316b355"))])
  (magit .
-	[(4 1 2)
+	[(4 1 3)
 	 ((emacs
 	   (26 1))
 	  (compat
@@ -1529,13 +1529,13 @@
 	  (dash
 	   (2 19 1))
 	  (magit-section
-	   (4 1 2))
+	   (4 1 3))
 	  (seq
 	   (2 24))
 	  (transient
-	   (0 7 8))
+	   (0 8 0))
 	  (with-editor
-	   (3 4 2)))
+	   (3 4 3)))
 	 "A Git porcelain inside Emacs" tar
 	 ((:url . "https://github.com/magit/magit")
 	  (:keywords "git" "tools" "vc")
@@ -1545,7 +1545,7 @@
 	  (:authors
 	   ("Marius Vollmer" . "marius.vollmer@gmail.com")
 	   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-	  (:commit . "4992c3d1f64e0e983692c7a61d47069f47380dbf"))])
+	  (:commit . "7adad8c8d3bd61ae36659638751223cfa2c7d720"))])
  (magit-section .
 		[(4 1 3)
 		 ((emacs
@@ -2038,7 +2038,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20241206 163553)
+	      [(1 0 20241207 124605)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
