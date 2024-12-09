@@ -2683,6 +2683,20 @@
 	    (:authors
 	     ("Augusto Stoffel" . "arstoffel@gmail.com"))
 	    (:commit . "db669451bbee7d2ea9872c28661c4679391b9644"))])
+ (matlab-mode .
+	      [(6 3)
+	       ((emacs
+		 (27 2)))
+	       "major mode for MATLAB(R) dot-m files" tar
+	       ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
+		(:keywords "matlab(r)")
+		(:maintainer
+		 ("Eric M. Ludlam" . "eludlam@mathworks.com")
+		 ("Uwe Brauer" . "oub@mat.ucm.es"))
+		(:authors
+		 ("Matt Wette" . "mwette@alumni.caltech.edu")
+		 ("Eric M. Ludlam" . "eludlam@mathworks.com"))
+		(:commit . "935137844e16551a5369f928d2591556be7fb9c2"))])
  (mct .
       [(1 0 0)
        ((emacs
