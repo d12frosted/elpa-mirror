@@ -3,3 +3,58 @@ Fetcher: github
 Source:  https://github.com/magit/forge
 
 Updating /mnt/store/melpa/working/forge/
+Checking out b2bf67a8fef501ebe01a19b39fa832482738f2f5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/forge/
+  to /tmp/forgeeO4wnl/forge-20241208.2219
+  ! lisp/forge-bitbucket.el -> forge-bitbucket.el
+  ! lisp/forge-commands.el -> forge-commands.el
+  ! lisp/forge-core.el -> forge-core.el
+  ! lisp/forge-db.el -> forge-db.el
+  ! lisp/forge-gitea.el -> forge-gitea.el
+  ! lisp/forge-github.el -> forge-github.el
+  ! lisp/forge-gitlab.el -> forge-gitlab.el
+  ! lisp/forge-gogs.el -> forge-gogs.el
+  ! lisp/forge-issue.el -> forge-issue.el
+  ! lisp/forge-notify.el -> forge-notify.el
+  ! lisp/forge-post.el -> forge-post.el
+  ! lisp/forge-pullreq.el -> forge-pullreq.el
+  ! lisp/forge-repo.el -> forge-repo.el
+  ! lisp/forge-repos.el -> forge-repos.el
+  ! lisp/forge-revnote.el -> forge-revnote.el
+  ! lisp/forge-semi.el -> forge-semi.el
+  ! lisp/forge-tablist.el -> forge-tablist.el
+  ! lisp/forge-topic.el -> forge-topic.el
+  ! lisp/forge-topics.el -> forge-topics.el
+  ! lisp/forge.el -> forge.el
+  ! docs/forge.texi -> forge.texi
+Generating forge.info
+Created forge-20241208.2219.tar containing:
+  forge-20241208.2219/
+  forge-20241208.2219/dir
+  forge-20241208.2219/forge-bitbucket.el
+  forge-20241208.2219/forge-commands.el
+  forge-20241208.2219/forge-core.el
+  forge-20241208.2219/forge-db.el
+  forge-20241208.2219/forge-gitea.el
+  forge-20241208.2219/forge-github.el
+  forge-20241208.2219/forge-gitlab.el
+  forge-20241208.2219/forge-gogs.el
+  forge-20241208.2219/forge-issue.el
+  forge-20241208.2219/forge-notify.el
+  forge-20241208.2219/forge-pkg.el
+  forge-20241208.2219/forge-post.el
+  forge-20241208.2219/forge-pullreq.el
+  forge-20241208.2219/forge-repo.el
+  forge-20241208.2219/forge-repos.el
+  forge-20241208.2219/forge-revnote.el
+  forge-20241208.2219/forge-semi.el
+  forge-20241208.2219/forge-tablist.el
+  forge-20241208.2219/forge-topic.el
+  forge-20241208.2219/forge-topics.el
+  forge-20241208.2219/forge.el
+  forge-20241208.2219/forge.info
+ ✓ Success:
+  2024-12-09T22:32:57+0000  forge-20241208.2219.entry
+  2024-12-09T22:32:57+0000  forge-20241208.2219.tar
+Built forge in 7.774s, finished at 2024-12-09T22:32:58+0000
