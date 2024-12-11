@@ -1,0 +1,100 @@
+Package: awk-yasnippets
+Fetcher: github
+Source:  https://github.com/uberkael/awk-yasnippets
+
+Updating /mnt/store/melpa/working/awk-yasnippets/
+Checking out 12e8e0b49878099bda5d3e4915cc3c738c87b95c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/awk-yasnippets/
+  to /tmp/awk-yasnippetsNPAarz/awk-yasnippets-20230515.1756
+    awk-yasnippets.el -> awk-yasnippets.el
+    awk-mode => awk-mode
+Created awk-yasnippets-20230515.1756.tar containing:
+  awk-yasnippets-20230515.1756/
+  awk-yasnippets-20230515.1756/awk-mode/
+  awk-yasnippets-20230515.1756/awk-mode/.yas-make-groups
+  awk-yasnippets-20230515.1756/awk-mode/IO/
+  awk-yasnippets-20230515.1756/awk-mode/IO/close
+  awk-yasnippets-20230515.1756/awk-mode/IO/fflush
+  awk-yasnippets-20230515.1756/awk-mode/IO/getfile
+  awk-yasnippets-20230515.1756/awk-mode/IO/getvar
+  awk-yasnippets-20230515.1756/awk-mode/IO/nextfile
+  awk-yasnippets-20230515.1756/awk-mode/IO/piperead
+  awk-yasnippets-20230515.1756/awk-mode/IO/pri
+  awk-yasnippets-20230515.1756/awk-mode/IO/prif
+  awk-yasnippets-20230515.1756/awk-mode/IO/system
+  awk-yasnippets-20230515.1756/awk-mode/bits/
+  awk-yasnippets-20230515.1756/awk-mode/bits/and
+  awk-yasnippets-20230515.1756/awk-mode/bits/compl
+  awk-yasnippets-20230515.1756/awk-mode/bits/lshift
+  awk-yasnippets-20230515.1756/awk-mode/bits/or
+  awk-yasnippets-20230515.1756/awk-mode/bits/rshift
+  awk-yasnippets-20230515.1756/awk-mode/bits/xor
+  awk-yasnippets-20230515.1756/awk-mode/control/
+  awk-yasnippets-20230515.1756/awk-mode/control/break
+  awk-yasnippets-20230515.1756/awk-mode/control/cont
+  awk-yasnippets-20230515.1756/awk-mode/control/del
+  awk-yasnippets-20230515.1756/awk-mode/control/do
+  awk-yasnippets-20230515.1756/awk-mode/control/exit
+  awk-yasnippets-20230515.1756/awk-mode/control/fora
+  awk-yasnippets-20230515.1756/awk-mode/control/fori
+  awk-yasnippets-20230515.1756/awk-mode/control/if
+  awk-yasnippets-20230515.1756/awk-mode/control/ife
+  awk-yasnippets-20230515.1756/awk-mode/control/switch
+  awk-yasnippets-20230515.1756/awk-mode/control/while
+  awk-yasnippets-20230515.1756/awk-mode/fragments/
+  awk-yasnippets-20230515.1756/awk-mode/fragments/PROCINFO
+  awk-yasnippets-20230515.1756/awk-mode/fragments/append
+  awk-yasnippets-20230515.1756/awk-mode/fragments/func
+  awk-yasnippets-20230515.1756/awk-mode/fragments/pipe
+  awk-yasnippets-20230515.1756/awk-mode/fragments/shebang
+  awk-yasnippets-20230515.1756/awk-mode/fragments/socket
+  awk-yasnippets-20230515.1756/awk-mode/numeric/
+  awk-yasnippets-20230515.1756/awk-mode/numeric/atan2
+  awk-yasnippets-20230515.1756/awk-mode/numeric/cos
+  awk-yasnippets-20230515.1756/awk-mode/numeric/exp
+  awk-yasnippets-20230515.1756/awk-mode/numeric/int
+  awk-yasnippets-20230515.1756/awk-mode/numeric/log
+  awk-yasnippets-20230515.1756/awk-mode/numeric/rand
+  awk-yasnippets-20230515.1756/awk-mode/numeric/sin
+  awk-yasnippets-20230515.1756/awk-mode/numeric/sqrt
+  awk-yasnippets-20230515.1756/awk-mode/numeric/srand
+  awk-yasnippets-20230515.1756/awk-mode/rule/
+  awk-yasnippets-20230515.1756/awk-mode/rule/3
+  awk-yasnippets-20230515.1756/awk-mode/rule/B
+  awk-yasnippets-20230515.1756/awk-mode/rule/BF
+  awk-yasnippets-20230515.1756/awk-mode/rule/E
+  awk-yasnippets-20230515.1756/awk-mode/rule/EF
+  awk-yasnippets-20230515.1756/awk-mode/strings/
+  awk-yasnippets-20230515.1756/awk-mode/strings/asort
+  awk-yasnippets-20230515.1756/awk-mode/strings/asorti
+  awk-yasnippets-20230515.1756/awk-mode/strings/gensub
+  awk-yasnippets-20230515.1756/awk-mode/strings/gsub
+  awk-yasnippets-20230515.1756/awk-mode/strings/index
+  awk-yasnippets-20230515.1756/awk-mode/strings/length
+  awk-yasnippets-20230515.1756/awk-mode/strings/match
+  awk-yasnippets-20230515.1756/awk-mode/strings/patsplit
+  awk-yasnippets-20230515.1756/awk-mode/strings/split
+  awk-yasnippets-20230515.1756/awk-mode/strings/sprintf
+  awk-yasnippets-20230515.1756/awk-mode/strings/strtonum
+  awk-yasnippets-20230515.1756/awk-mode/strings/sub
+  awk-yasnippets-20230515.1756/awk-mode/strings/substr
+  awk-yasnippets-20230515.1756/awk-mode/strings/tolower
+  awk-yasnippets-20230515.1756/awk-mode/strings/toupper
+  awk-yasnippets-20230515.1756/awk-mode/templates/
+  awk-yasnippets-20230515.1756/awk-mode/templates/adel
+  awk-yasnippets-20230515.1756/awk-mode/templates/getcom
+  awk-yasnippets-20230515.1756/awk-mode/templates/getlinevar
+  awk-yasnippets-20230515.1756/awk-mode/time/
+  awk-yasnippets-20230515.1756/awk-mode/time/mktime
+  awk-yasnippets-20230515.1756/awk-mode/time/strftime
+  awk-yasnippets-20230515.1756/awk-mode/time/syst
+  awk-yasnippets-20230515.1756/awk-mode/type/
+  awk-yasnippets-20230515.1756/awk-mode/type/isarray
+  awk-yasnippets-20230515.1756/awk-mode/type/typeof
+  awk-yasnippets-20230515.1756/awk-yasnippets-pkg.el
+  awk-yasnippets-20230515.1756/awk-yasnippets.el
+ ✓ Success:
+  2024-12-10T22:32:28+0000  awk-yasnippets-20230515.1756.entry
+  2024-12-10T22:32:28+0000  awk-yasnippets-20230515.1756.tar
+Built awk-yasnippets in 2.845s, finished at 2024-12-10T22:32:29+0000

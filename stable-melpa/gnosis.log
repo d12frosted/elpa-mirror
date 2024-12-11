@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://git.thanosapollo.org/gnosis
 
 Updating /mnt/store/melpa/working/gnosis/
-Checking out 112693dd653ea6ea8bbdf05506ac8aacc4f5e3df
+Checking out e5fd01a34c2488023118d26a4d2e8a5fdde282ba
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosisrdm7w6/gnosis-20241210.1511
+  to /tmp/gnosisa8BT7z/gnosis-20241210.2147
     gnosis-algorithm.el -> gnosis-algorithm.el
     gnosis-org.el -> gnosis-org.el
     gnosis-string-edit.el -> gnosis-string-edit.el
@@ -14,16 +14,18 @@ Copying files (->) and directories (=>)
   ! doc/gnosis.info -> gnosis.info
   ! doc/gnosis.texi -> gnosis.texi
 Generating gnosis.info
-Created gnosis-20241210.1511.tar containing:
-  gnosis-20241210.1511/
-  gnosis-20241210.1511/dir
-  gnosis-20241210.1511/gnosis-algorithm.el
-  gnosis-20241210.1511/gnosis-org.el
-  gnosis-20241210.1511/gnosis-pkg.el
-  gnosis-20241210.1511/gnosis-string-edit.el
-  gnosis-20241210.1511/gnosis.el
-  gnosis-20241210.1511/gnosis.info
+Created gnosis-20241210.2147.tar containing:
+  gnosis-20241210.2147/
+  gnosis-20241210.2147/dir
+  gnosis-20241210.2147/gnosis-algorithm.el
+  gnosis-20241210.2147/gnosis-org.el
+  gnosis-20241210.2147/gnosis-pkg.el
+  gnosis-20241210.2147/gnosis-string-edit.el
+  gnosis-20241210.2147/gnosis.el
+  gnosis-20241210.2147/gnosis.info
  ✓ Success:
-  2024-12-10T18:04:10+0000  gnosis-20241210.1511.entry
-  2024-12-10T18:04:09+0000  gnosis-20241210.1511.tar
-Built gnosis in 4.516s, finished at 2024-12-10T18:04:10+0000
+  2024-12-10T20:31:40+0000  gnosis-20241210.1511.entry
+  2024-12-10T20:31:39+0000  gnosis-20241210.1511.tar
+  2024-12-10T22:57:12+0000  gnosis-20241210.2147.entry
+  2024-12-10T22:57:12+0000  gnosis-20241210.2147.tar
+Built gnosis in 5.557s, finished at 2024-12-10T22:57:12+0000
