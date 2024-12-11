@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/erlang/otp
 
 Updating /mnt/store/melpa/working/erlang/
-Checking out 7cbfeee1e0d5a7645fa5931ae916eb944520fb17
+Checking out ef867dfd52aa4d0886b0f3aba5d216b624171af3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangyY6sOC/erlang-20241107.1409
+  to /tmp/erlang3p24dX/erlang-20241211.916
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -17,19 +17,21 @@ Copying files (->) and directories (=>)
   ! lib/tools/emacs/erlang-test.el -> erlang-test.el
   ! lib/tools/emacs/erlang.el -> erlang.el
   ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20241107.1409.tar containing:
-  erlang-20241107.1409/
-  erlang-20241107.1409/erlang-edoc.el
-  erlang-20241107.1409/erlang-eunit.el
-  erlang-20241107.1409/erlang-flymake.el
-  erlang-20241107.1409/erlang-pkg.el
-  erlang-20241107.1409/erlang-skels-old.el
-  erlang-20241107.1409/erlang-skels.el
-  erlang-20241107.1409/erlang-start.el
-  erlang-20241107.1409/erlang-test.el
-  erlang-20241107.1409/erlang.el
-  erlang-20241107.1409/erldoc.el
+Created erlang-20241211.916.tar containing:
+  erlang-20241211.916/
+  erlang-20241211.916/erlang-edoc.el
+  erlang-20241211.916/erlang-eunit.el
+  erlang-20241211.916/erlang-flymake.el
+  erlang-20241211.916/erlang-pkg.el
+  erlang-20241211.916/erlang-skels-old.el
+  erlang-20241211.916/erlang-skels.el
+  erlang-20241211.916/erlang-start.el
+  erlang-20241211.916/erlang-test.el
+  erlang-20241211.916/erlang.el
+  erlang-20241211.916/erldoc.el
  ✓ Success:
-  2024-12-11T06:07:15+0000  erlang-20241107.1409.entry
-  2024-12-11T06:07:15+0000  erlang-20241107.1409.tar
-Built erlang in 10.255s, finished at 2024-12-11T06:07:16+0000
+  2024-12-11T08:37:56+0000  erlang-20241107.1409.entry
+  2024-12-11T08:37:55+0000  erlang-20241107.1409.tar
+  2024-12-11T11:04:01+0000  erlang-20241211.916.entry
+  2024-12-11T11:04:00+0000  erlang-20241211.916.tar
+Built erlang in 9.928s, finished at 2024-12-11T11:04:02+0000
