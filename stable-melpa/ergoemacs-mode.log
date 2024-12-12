@@ -3,3 +3,58 @@ Fetcher: github
 Source:  https://github.com/ergoemacs/ergoemacs-mode
 
 Updating /mnt/store/melpa/working/ergoemacs-mode/
+Checking out 3c9081fe83f70cf791abc98d6b9184f8ea7fb714
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ergoemacs-mode/
+  to /tmp/ergoemacs-modeSYb9W2/ergoemacs-mode-20240809.2246
+    ergoemacs-advice.el -> ergoemacs-advice.el
+    ergoemacs-calculate-bindings.el -> ergoemacs-calculate-bindings.el
+    ergoemacs-command-loop.el -> ergoemacs-command-loop.el
+    ergoemacs-cua.el -> ergoemacs-cua.el
+    ergoemacs-debug.el -> ergoemacs-debug.el
+    ergoemacs-functions.el -> ergoemacs-functions.el
+    ergoemacs-key-description.el -> ergoemacs-key-description.el
+    ergoemacs-layouts.el -> ergoemacs-layouts.el
+    ergoemacs-lib.el -> ergoemacs-lib.el
+    ergoemacs-macros.el -> ergoemacs-macros.el
+    ergoemacs-map-properties.el -> ergoemacs-map-properties.el
+    ergoemacs-map.el -> ergoemacs-map.el
+    ergoemacs-mapkeymap.el -> ergoemacs-mapkeymap.el
+    ergoemacs-mode.el -> ergoemacs-mode.el
+    ergoemacs-test.el -> ergoemacs-test.el
+    ergoemacs-theme-engine.el -> ergoemacs-theme-engine.el
+    ergoemacs-themes.el -> ergoemacs-themes.el
+    ergoemacs-translate.el -> ergoemacs-translate.el
+    kbd-ergo.svg -> kbd-ergo.svg
+    kbd.svg -> kbd.svg
+    ahk-us.ahk -> ahk-us.ahk
+    os_x_qwerty.dict.txt -> os_x_qwerty.dict.txt
+Created ergoemacs-mode-20240809.2246.tar containing:
+  ergoemacs-mode-20240809.2246/
+  ergoemacs-mode-20240809.2246/ahk-us.ahk
+  ergoemacs-mode-20240809.2246/ergoemacs-advice.el
+  ergoemacs-mode-20240809.2246/ergoemacs-calculate-bindings.el
+  ergoemacs-mode-20240809.2246/ergoemacs-command-loop.el
+  ergoemacs-mode-20240809.2246/ergoemacs-cua.el
+  ergoemacs-mode-20240809.2246/ergoemacs-debug.el
+  ergoemacs-mode-20240809.2246/ergoemacs-functions.el
+  ergoemacs-mode-20240809.2246/ergoemacs-key-description.el
+  ergoemacs-mode-20240809.2246/ergoemacs-layouts.el
+  ergoemacs-mode-20240809.2246/ergoemacs-lib.el
+  ergoemacs-mode-20240809.2246/ergoemacs-macros.el
+  ergoemacs-mode-20240809.2246/ergoemacs-map-properties.el
+  ergoemacs-mode-20240809.2246/ergoemacs-map.el
+  ergoemacs-mode-20240809.2246/ergoemacs-mapkeymap.el
+  ergoemacs-mode-20240809.2246/ergoemacs-mode-pkg.el
+  ergoemacs-mode-20240809.2246/ergoemacs-mode.el
+  ergoemacs-mode-20240809.2246/ergoemacs-test.el
+  ergoemacs-mode-20240809.2246/ergoemacs-theme-engine.el
+  ergoemacs-mode-20240809.2246/ergoemacs-themes.el
+  ergoemacs-mode-20240809.2246/ergoemacs-translate.el
+  ergoemacs-mode-20240809.2246/kbd-ergo.svg
+  ergoemacs-mode-20240809.2246/kbd.svg
+  ergoemacs-mode-20240809.2246/os_x_qwerty.dict.txt
+ ✓ Success:
+  2024-12-12T06:35:25+0000  ergoemacs-mode-20240809.2246.entry
+  2024-12-12T06:35:25+0000  ergoemacs-mode-20240809.2246.tar
+Built ergoemacs-mode in 3.991s, finished at 2024-12-12T06:35:26+0000
