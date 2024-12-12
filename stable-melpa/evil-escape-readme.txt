@@ -37,6 +37,9 @@ the variable `evil-escape-delay'. Default is `0.1'.
 The key sequence can be entered in any order by setting
 the variable `evil-escape-unordered-key-sequence' to non nil.
 
+The key sequence can be made case-insensitive by setting
+the variable `evil-escape-case-insensitive-key-sequence' to non nil.
+
 A major mode can be excluded by adding it to the list
 `evil-escape-excluded-major-modes'.
 
