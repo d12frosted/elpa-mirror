@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `pulsar' (or `pulsar.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.1.0,
-released on 2024-08-29.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.2.0,
+released on 2024-12-12.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.2.0-dev.
+Current development target is 1.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `pulsar'
 ⁃ Official manual: <https://protesilaos.com/emacs/pulsar>
@@ -74,14 +74,24 @@ Table of Contents
   when either `pulsar-mode' (buffer-local) or `pulsar-global-mode' is
   enabled.
 
-  #+vindex; pulsar-resolve-pulse-function-aliases By default, Pulsar
-  does not try behave the same way for a function’s aliases. If those
-  are not added explicitly to the `pulsar-pulse-functions', they will
-  not have a pulse effect. However, the user option
-  `pulsar-resolve-pulse-function-aliases' can be set to a non-nil value
-  to change this behaviour, meaning that Pulsar will cover a function’s
-  aliases even if those are not explicitly added to the
-  `pulsar-pulse-functions'.
+  By default, Pulsar does not try to behave the same way for a
+  function’s aliases. If those are not added explicitly to the
+  `pulsar-pulse-functions', they will not have a pulse effect. However,
+  the user option `pulsar-resolve-pulse-function-aliases' can be set to
+  a non-nil value to change this behaviour, meaning that Pulsar will
+  cover a function’s aliases even if those are not explicitly added to
+  the `pulsar-pulse-functions'.
+
+  Pulsar can also produce an effect over a specific region. This is
+  useful to, for example, highlight the area covered by text that is
+  pasted in the buffer. The user option `pulsar-pulse-region-functions'
+  defines a list of functions that are region-aware in this regard. The
+  default value covers copyring, pasting, and undoing/redoing.
+
+  The pulse effect also happens whenever there is a change to the window
+  layout. This includes the selection, addition, deletion, resize of
+  windows in a frame. Users who do not want this to happen can set the
+  user option `pulsar-pulse-on-window-change' to a nil value.
 
   The overall duration of the highlight is determined by a combination
   of `pulsar-delay' and `pulsar-iterations'.  The latter determines the
@@ -92,6 +102,12 @@ Table of Contents
   To disable the pulse but keep the temporary highlight, set the user
   option `pulsar-pulse' to nil.  The current line will remain
   highlighted until another command is invoked.
+
+  The user option `pulsar-inhibit-hidden-buffers' controls whether
+  Pulsar is active in hidden buffers. These are buffers that users
+  normally do not interact with and are not displayed in the interface
+  of the various buffer-switching commands. When this user option is
+  nil, `pulsar-mode' will work in those buffers as well.
 
   To highlight the current line on demand, use the `pulsar-pulse-line'
   command.  When `pulsar-pulse' is non-nil (the default), its highlight
@@ -187,7 +203,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "pulsar"
-  │ git clone https://git.sr.ht/~protesilaos/pulsar pulsar
+  │ git clone https://github.com/protesilaos/pulsar pulsar
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
@@ -319,12 +335,14 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to the code or manual
-        Aymeric Agon-Rambosson, Bahman Movaqar, Daniel Mendler, Ivan
-        Popovych, JD Smith, Maxim Dunaevsky, Ryan Kaskel, shipmints.
+        Abdelhak Bougouffa, Aymeric Agon-Rambosson, Bahman Movaqar,
+        Daniel Mendler, Ivan Popovych, JD Smith, Maxim Dunaevsky, Ryan
+        Kaskel, shipmints, ukiran03.
 
   Ideas and user feedback
-        Duy Nguyen, Mark Barton, Petter Storvik, Rudolf Adamkovič, Toon
-        Claes, and users djl, kb.
+        Anwesh Gangula, Diego Alvarez, Duy Nguyen, Mark Barton, Petter
+        Storvik, Ronny Randen, Rudolf Adamkovič, Toon Claes, and users
+        djl, kb.
 
 
 7 GNU Free Documentation License

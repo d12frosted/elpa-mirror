@@ -206,14 +206,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "f317b0c9c3e60a959f45d035ed5e31a78f1263ac"))])
  (auctex .
-	 [(14 0 7)
+	 [(14 0 8)
 	  ((emacs
 	    (27 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "3bdc30d3c91c6b84d7592f19959cdbe25a497fbc"))])
+	   (:commit . "b34aff234099fb52fd5616bbbdf86920f029d765"))])
  (auctex-cont-latexmk .
 		      [(0 3)
 		       ((emacs
@@ -3521,7 +3521,7 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pulsar .
-	 [(1 1 0)
+	 [(1 2 0)
 	  ((emacs
 	    (28 1)))
 	  "Pulse highlight on demand or after select functions" tar
@@ -3530,7 +3530,7 @@
 	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "b4b967786afef50ad848a2a0104dd05acd6051d7"))])
+	   (:commit . "2b9c9736b6ff3559acf2a65e3a29574dc7787523"))])
  (pyim .
        [(5 3 4)
 	((emacs
