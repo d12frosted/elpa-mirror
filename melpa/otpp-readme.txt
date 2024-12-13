@@ -45,7 +45,7 @@ this:
   different path. In this case, `otpp' will create a tab named
   `backend[project2]` and renames the previously opened tab to
   `backend[project1]`. This conflict resolution is provided by the
-  `otpp-uniq' library.
+  `otpp-uniq-*' routines.
 
 - For some cases, you might need to attach a manually created tab (by
   `tab-bar-new-tab') to an opened project so you have two tabs dedicated to
