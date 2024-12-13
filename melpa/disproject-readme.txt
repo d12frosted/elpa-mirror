@@ -1,4 +1,5 @@
-Disproject is a `transient.el' interface that provides integration with
-`project.el' for managing and interacting with projects.  It is similar to
-(and inspired by) the function `project-switch-project', but also attempts to
-improve on its feature set in addition to the use of Transient.
+Disproject implements Transient menus for dispatching project-related
+commands on top of the `project.el' library.  It aims to provide a more
+featureful version of the `project-switch-project' command, which it is
+inspired by.  Those who are familiar with Projectile may also find
+similarities to `projectile-commander'.
