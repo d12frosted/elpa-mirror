@@ -3276,7 +3276,7 @@
 	    ("Junpeng Qiu" . "qjpchmail@gmail.com"))
 	   (:keywords "extensions"))])
  (parser-generator .
-		   [(0 2 1)
+		   [(0 2 3)
 		    ((emacs
 		      (26)))
 		    "Parser Generator library" tar
@@ -3285,7 +3285,7 @@
 		     (:maintainer "Christian Johansson" . "christian@cvj.se")
 		     (:authors
 		      ("Christian Johansson" . "christian@cvj.se"))
-		     (:commit . "0d4b9a42ea207bfa6c995c9cf5834c4bf68b9c44"))])
+		     (:commit . "37732431e129f380d254a4d0d4f6c760975e9399"))])
  (path-iterator .
 		[(1 0)
 		 ((emacs
