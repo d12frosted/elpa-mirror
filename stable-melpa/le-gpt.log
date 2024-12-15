@@ -1,0 +1,30 @@
+Package: le-gpt
+Fetcher: github
+Source:  https://github.com/AnselmC/le-gpt.el
+
+Cloning https://github.com/AnselmC/le-gpt.el to /mnt/store/melpa/working/le-gpt/
+Checking out 3966cab122cdaf851de6d48c23257eb772487ce3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/le-gpt/
+  to /tmp/le-gptwalh5m/le-gpt-20241212.1114
+    le-gpt-chat.el -> le-gpt-chat.el
+    le-gpt-completion.el -> le-gpt-completion.el
+    le-gpt-core.el -> le-gpt-core.el
+    le-gpt-project.el -> le-gpt-project.el
+    le-gpt-transform.el -> le-gpt-transform.el
+    le-gpt.el -> le-gpt.el
+    le-gpt.py -> le-gpt.py
+Created le-gpt-20241212.1114.tar containing:
+  le-gpt-20241212.1114/
+  le-gpt-20241212.1114/le-gpt-chat.el
+  le-gpt-20241212.1114/le-gpt-completion.el
+  le-gpt-20241212.1114/le-gpt-core.el
+  le-gpt-20241212.1114/le-gpt-pkg.el
+  le-gpt-20241212.1114/le-gpt-project.el
+  le-gpt-20241212.1114/le-gpt-transform.el
+  le-gpt-20241212.1114/le-gpt.el
+  le-gpt-20241212.1114/le-gpt.py
+ ✓ Success:
+  2024-12-15T19:53:17+0000  le-gpt-20241212.1114.entry
+  2024-12-15T19:53:17+0000  le-gpt-20241212.1114.tar
+Built le-gpt in 3.407s, finished at 2024-12-15T19:53:18+0000
