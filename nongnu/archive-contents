@@ -556,16 +556,16 @@
 			    ("Filippo Argiolas" . "filippo.argiolas@gmail.com"))
 			   (:commit . "2c83a3230d4ee9336b0311dbaa6fa77c2d2538c6"))])
  (eldoc-diffstat .
-		 [(0 1)
+		 [(1 0)
 		  ((emacs
 		    (29 1)))
 		  "Make VCS diffstat available via eldoc" tar
-		  ((:keywords "vc" "docs")
+		  ((:url . "https://github.com/kljohann/eldoc-diffstat/")
+		   (:keywords "vc" "docs")
 		   (:maintainer "Johann Klähn" . "johann@jklaehn.de")
 		   (:authors
 		    ("Johann Klähn" . "johann@jklaehn.de"))
-		   (:url . "https://elpa.nongnu.org/nongnu/eldoc-diffstat.html")
-		   (:commit . "a15690a8a79ca05d64aefb263b396844a2c0fb60"))])
+		   (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (elixir-mode .
 	      [(2 5 0)
 	       ((emacs
