@@ -5240,6 +5240,7 @@
   (tern-auto-complete :url "https://github.com/ternjs/tern")
   (tern-context-coloring :url "https://github.com/jacksonrayhamilton/tern-context-coloring")
   (terraform-doc :url "https://github.com/TxGVNN/terraform-doc")
+  (terraform-docs :url "https://github.com/loispostula/terraform-docs.el")
   (terraform-mode :url "https://github.com/hcl-emacs/terraform-mode")
   (tesouro :url "https://github.com/rberaldo/tesouro.el")
   (test-c :url "https://github.com/aaptel/test-c")
