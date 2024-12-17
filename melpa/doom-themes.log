@@ -3,180 +3,36 @@ Fetcher: github
 Source:  https://github.com/doomemacs/themes
 
 Updating /mnt/store/melpa/working/doom-themes/
-Checking out 3c03f525d5c0ac0859f31231778f97e10a705e0d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/doom-themes/
-  to /tmp/doom-themesVLurQs/doom-themes-20241120.157
-    doom-themes-base.el -> doom-themes-base.el
-    doom-themes.el -> doom-themes.el
-  ! themes/doom-1337-theme.el -> doom-1337-theme.el
-  ! themes/doom-Iosvkem-theme.el -> doom-Iosvkem-theme.el
-  ! themes/doom-acario-dark-theme.el -> doom-acario-dark-theme.el
-  ! themes/doom-acario-light-theme.el -> doom-acario-light-theme.el
-  ! themes/doom-ayu-dark-theme.el -> doom-ayu-dark-theme.el
-  ! themes/doom-ayu-light-theme.el -> doom-ayu-light-theme.el
-  ! themes/doom-ayu-mirage-theme.el -> doom-ayu-mirage-theme.el
-  ! themes/doom-badger-theme.el -> doom-badger-theme.el
-  ! themes/doom-bluloco-dark-theme.el -> doom-bluloco-dark-theme.el
-  ! themes/doom-bluloco-light-theme.el -> doom-bluloco-light-theme.el
-  ! themes/doom-challenger-deep-theme.el -> doom-challenger-deep-theme.el
-  ! themes/doom-city-lights-theme.el -> doom-city-lights-theme.el
-  ! themes/doom-dark+-theme.el -> doom-dark+-theme.el
-  ! themes/doom-dracula-theme.el -> doom-dracula-theme.el
-  ! themes/doom-earl-grey-theme.el -> doom-earl-grey-theme.el
-  ! themes/doom-ephemeral-theme.el -> doom-ephemeral-theme.el
-  ! themes/doom-fairy-floss-theme.el -> doom-fairy-floss-theme.el
-  ! themes/doom-feather-dark-theme.el -> doom-feather-dark-theme.el
-  ! themes/doom-feather-light-theme.el -> doom-feather-light-theme.el
-  ! themes/doom-flatwhite-theme.el -> doom-flatwhite-theme.el
-  ! themes/doom-gruvbox-light-theme.el -> doom-gruvbox-light-theme.el
-  ! themes/doom-gruvbox-theme.el -> doom-gruvbox-theme.el
-  ! themes/doom-henna-theme.el -> doom-henna-theme.el
-  ! themes/doom-homage-black-theme.el -> doom-homage-black-theme.el
-  ! themes/doom-homage-white-theme.el -> doom-homage-white-theme.el
-  ! themes/doom-horizon-theme.el -> doom-horizon-theme.el
-  ! themes/doom-ir-black-theme.el -> doom-ir-black-theme.el
-  ! themes/doom-lantern-theme.el -> doom-lantern-theme.el
-  ! themes/doom-laserwave-theme.el -> doom-laserwave-theme.el
-  ! themes/doom-manegarm-theme.el -> doom-manegarm-theme.el
-  ! themes/doom-material-dark-theme.el -> doom-material-dark-theme.el
-  ! themes/doom-material-theme.el -> doom-material-theme.el
-  ! themes/doom-meltbus-theme.el -> doom-meltbus-theme.el
-  ! themes/doom-miramare-theme.el -> doom-miramare-theme.el
-  ! themes/doom-molokai-theme.el -> doom-molokai-theme.el
-  ! themes/doom-monokai-classic-theme.el -> doom-monokai-classic-theme.el
-  ! themes/doom-monokai-machine-theme.el -> doom-monokai-machine-theme.el
-  ! themes/doom-monokai-octagon-theme.el -> doom-monokai-octagon-theme.el
-  ! themes/doom-monokai-pro-theme.el -> doom-monokai-pro-theme.el
-  ! themes/doom-monokai-ristretto-theme.el -> doom-monokai-ristretto-theme.el
-  ! themes/doom-monokai-spectrum-theme.el -> doom-monokai-spectrum-theme.el
-  ! themes/doom-moonlight-theme.el -> doom-moonlight-theme.el
-  ! themes/doom-nord-aurora-theme.el -> doom-nord-aurora-theme.el
-  ! themes/doom-nord-light-theme.el -> doom-nord-light-theme.el
-  ! themes/doom-nord-theme.el -> doom-nord-theme.el
-  ! themes/doom-nova-theme.el -> doom-nova-theme.el
-  ! themes/doom-oceanic-next-theme.el -> doom-oceanic-next-theme.el
-  ! themes/doom-oksolar-dark-theme.el -> doom-oksolar-dark-theme.el
-  ! themes/doom-oksolar-light-theme.el -> doom-oksolar-light-theme.el
-  ! themes/doom-old-hope-theme.el -> doom-old-hope-theme.el
-  ! themes/doom-one-light-theme.el -> doom-one-light-theme.el
-  ! themes/doom-one-theme.el -> doom-one-theme.el
-  ! themes/doom-opera-light-theme.el -> doom-opera-light-theme.el
-  ! themes/doom-opera-theme.el -> doom-opera-theme.el
-  ! themes/doom-outrun-electric-theme.el -> doom-outrun-electric-theme.el
-  ! themes/doom-palenight-theme.el -> doom-palenight-theme.el
-  ! themes/doom-peacock-theme.el -> doom-peacock-theme.el
-  ! themes/doom-pine-theme.el -> doom-pine-theme.el
-  ! themes/doom-plain-dark-theme.el -> doom-plain-dark-theme.el
-  ! themes/doom-plain-theme.el -> doom-plain-theme.el
-  ! themes/doom-rouge-theme.el -> doom-rouge-theme.el
-  ! themes/doom-shades-of-purple-theme.el -> doom-shades-of-purple-theme.el
-  ! themes/doom-snazzy-theme.el -> doom-snazzy-theme.el
-  ! themes/doom-solarized-dark-high-contrast-theme.el -> doom-solarized-dark-high-contrast-theme.el
-  ! themes/doom-solarized-dark-theme.el -> doom-solarized-dark-theme.el
-  ! themes/doom-solarized-light-theme.el -> doom-solarized-light-theme.el
-  ! themes/doom-sourcerer-theme.el -> doom-sourcerer-theme.el
-  ! themes/doom-spacegrey-theme.el -> doom-spacegrey-theme.el
-  ! themes/doom-tokyo-night-theme.el -> doom-tokyo-night-theme.el
-  ! themes/doom-tomorrow-day-theme.el -> doom-tomorrow-day-theme.el
-  ! themes/doom-tomorrow-night-theme.el -> doom-tomorrow-night-theme.el
-  ! themes/doom-vibrant-theme.el -> doom-vibrant-theme.el
-  ! themes/doom-wilmersdorf-theme.el -> doom-wilmersdorf-theme.el
-  ! themes/doom-winter-is-coming-dark-blue-theme.el -> doom-winter-is-coming-dark-blue-theme.el
-  ! themes/doom-winter-is-coming-light-theme.el -> doom-winter-is-coming-light-theme.el
-  ! themes/doom-xcode-theme.el -> doom-xcode-theme.el
-  ! themes/doom-zenburn-theme.el -> doom-zenburn-theme.el
-  ! extensions/doom-themes-ext-neotree.el -> doom-themes-ext-neotree.el
-  ! extensions/doom-themes-ext-org.el -> doom-themes-ext-org.el
-  ! extensions/doom-themes-ext-treemacs.el -> doom-themes-ext-treemacs.el
-  ! extensions/doom-themes-ext-visual-bell.el -> doom-themes-ext-visual-bell.el
-Created doom-themes-20241120.157.tar containing:
-  doom-themes-20241120.157/
-  doom-themes-20241120.157/doom-1337-theme.el
-  doom-themes-20241120.157/doom-Iosvkem-theme.el
-  doom-themes-20241120.157/doom-acario-dark-theme.el
-  doom-themes-20241120.157/doom-acario-light-theme.el
-  doom-themes-20241120.157/doom-ayu-dark-theme.el
-  doom-themes-20241120.157/doom-ayu-light-theme.el
-  doom-themes-20241120.157/doom-ayu-mirage-theme.el
-  doom-themes-20241120.157/doom-badger-theme.el
-  doom-themes-20241120.157/doom-bluloco-dark-theme.el
-  doom-themes-20241120.157/doom-bluloco-light-theme.el
-  doom-themes-20241120.157/doom-challenger-deep-theme.el
-  doom-themes-20241120.157/doom-city-lights-theme.el
-  doom-themes-20241120.157/doom-dark+-theme.el
-  doom-themes-20241120.157/doom-dracula-theme.el
-  doom-themes-20241120.157/doom-earl-grey-theme.el
-  doom-themes-20241120.157/doom-ephemeral-theme.el
-  doom-themes-20241120.157/doom-fairy-floss-theme.el
-  doom-themes-20241120.157/doom-feather-dark-theme.el
-  doom-themes-20241120.157/doom-feather-light-theme.el
-  doom-themes-20241120.157/doom-flatwhite-theme.el
-  doom-themes-20241120.157/doom-gruvbox-light-theme.el
-  doom-themes-20241120.157/doom-gruvbox-theme.el
-  doom-themes-20241120.157/doom-henna-theme.el
-  doom-themes-20241120.157/doom-homage-black-theme.el
-  doom-themes-20241120.157/doom-homage-white-theme.el
-  doom-themes-20241120.157/doom-horizon-theme.el
-  doom-themes-20241120.157/doom-ir-black-theme.el
-  doom-themes-20241120.157/doom-lantern-theme.el
-  doom-themes-20241120.157/doom-laserwave-theme.el
-  doom-themes-20241120.157/doom-manegarm-theme.el
-  doom-themes-20241120.157/doom-material-dark-theme.el
-  doom-themes-20241120.157/doom-material-theme.el
-  doom-themes-20241120.157/doom-meltbus-theme.el
-  doom-themes-20241120.157/doom-miramare-theme.el
-  doom-themes-20241120.157/doom-molokai-theme.el
-  doom-themes-20241120.157/doom-monokai-classic-theme.el
-  doom-themes-20241120.157/doom-monokai-machine-theme.el
-  doom-themes-20241120.157/doom-monokai-octagon-theme.el
-  doom-themes-20241120.157/doom-monokai-pro-theme.el
-  doom-themes-20241120.157/doom-monokai-ristretto-theme.el
-  doom-themes-20241120.157/doom-monokai-spectrum-theme.el
-  doom-themes-20241120.157/doom-moonlight-theme.el
-  doom-themes-20241120.157/doom-nord-aurora-theme.el
-  doom-themes-20241120.157/doom-nord-light-theme.el
-  doom-themes-20241120.157/doom-nord-theme.el
-  doom-themes-20241120.157/doom-nova-theme.el
-  doom-themes-20241120.157/doom-oceanic-next-theme.el
-  doom-themes-20241120.157/doom-oksolar-dark-theme.el
-  doom-themes-20241120.157/doom-oksolar-light-theme.el
-  doom-themes-20241120.157/doom-old-hope-theme.el
-  doom-themes-20241120.157/doom-one-light-theme.el
-  doom-themes-20241120.157/doom-one-theme.el
-  doom-themes-20241120.157/doom-opera-light-theme.el
-  doom-themes-20241120.157/doom-opera-theme.el
-  doom-themes-20241120.157/doom-outrun-electric-theme.el
-  doom-themes-20241120.157/doom-palenight-theme.el
-  doom-themes-20241120.157/doom-peacock-theme.el
-  doom-themes-20241120.157/doom-pine-theme.el
-  doom-themes-20241120.157/doom-plain-dark-theme.el
-  doom-themes-20241120.157/doom-plain-theme.el
-  doom-themes-20241120.157/doom-rouge-theme.el
-  doom-themes-20241120.157/doom-shades-of-purple-theme.el
-  doom-themes-20241120.157/doom-snazzy-theme.el
-  doom-themes-20241120.157/doom-solarized-dark-high-contrast-theme.el
-  doom-themes-20241120.157/doom-solarized-dark-theme.el
-  doom-themes-20241120.157/doom-solarized-light-theme.el
-  doom-themes-20241120.157/doom-sourcerer-theme.el
-  doom-themes-20241120.157/doom-spacegrey-theme.el
-  doom-themes-20241120.157/doom-themes-base.el
-  doom-themes-20241120.157/doom-themes-ext-neotree.el
-  doom-themes-20241120.157/doom-themes-ext-org.el
-  doom-themes-20241120.157/doom-themes-ext-treemacs.el
-  doom-themes-20241120.157/doom-themes-ext-visual-bell.el
-  doom-themes-20241120.157/doom-themes-pkg.el
-  doom-themes-20241120.157/doom-themes.el
-  doom-themes-20241120.157/doom-tokyo-night-theme.el
-  doom-themes-20241120.157/doom-tomorrow-day-theme.el
-  doom-themes-20241120.157/doom-tomorrow-night-theme.el
-  doom-themes-20241120.157/doom-vibrant-theme.el
-  doom-themes-20241120.157/doom-wilmersdorf-theme.el
-  doom-themes-20241120.157/doom-winter-is-coming-dark-blue-theme.el
-  doom-themes-20241120.157/doom-winter-is-coming-light-theme.el
-  doom-themes-20241120.157/doom-xcode-theme.el
-  doom-themes-20241120.157/doom-zenburn-theme.el
- ✓ Success:
-  2024-12-17T03:02:21+0000  doom-themes-20241120.157.entry
-  2024-12-17T03:02:21+0000  doom-themes-20241120.157.tar
-Built doom-themes in 1.224s, finished at 2024-12-17T03:02:22+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/doomemacs/themes/': The requested URL returned error: 502
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-155bdbb9ee3a> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-155bdbb9ee3a> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-155bdbb9ee3a>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-155bdbb9ee3a> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-155bdbb9ee3a>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("doom-themes")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"doom-themes\")"))
+  command-line()
+  normal-top-level()
+
