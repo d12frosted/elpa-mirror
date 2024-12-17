@@ -322,7 +322,22 @@ activity.
 5 Changelog
 ═══════════
 
-5.1 v0.7.1
+5.1 v0.7.2
+──────────
+
+  *Fixes*
+  ⁃ Handle errors from window parameter deserializers.  ([#44].  Thanks
+    to [Karthik Chikmagalur] and [stardiviner] for reporting.)
+
+
+[#44] <https://github.com/alphapapa/activities.el/issues/44>
+
+[Karthik Chikmagalur] <https://github.com/karthink>
+
+[stardiviner] <https://github.com/stardiviner>
+
+
+5.2 v0.7.1
 ──────────
 
   *Fixes*
@@ -347,7 +362,7 @@ activity.
 [#114] <https://github.com/alphapapa/activity.el/pull/114>
 
 
-5.2 v0.7
+5.3 v0.7
 ────────
 
   *Additions*
@@ -374,7 +389,7 @@ activity.
 [Jelle Licht] <https://github.com/jellelicht>
 
 
-5.3 v0.6
+5.4 v0.6
 ────────
 
   *Additions*
@@ -406,14 +421,14 @@ activity.
 [Al M.] <https://github.com/yrns>
 
 
-5.4 v0.5.1
+5.5 v0.5.1
 ──────────
 
   *Fixes*
   ⁃ Listing activities without last-saved states.
 
 
-5.5 v0.5
+5.6 v0.5
 ────────
 
   *Additions*
@@ -464,7 +479,7 @@ activity.
 [#25] <https://github.com/alphapapa/activity.el/issues/25>
 
 
-5.6 v0.4
+5.7 v0.4
 ────────
 
   *Additions*
@@ -483,7 +498,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.7 v0.3.3
+5.8 v0.3.3
 ──────────
 
   *Fixes*
@@ -498,14 +513,14 @@ activity.
 [fuzy112] <https://github.com/fuzy112>
 
 
-5.8 v0.3.2
+5.9 v0.3.2
 ──────────
 
   Updated documentation, etc.
 
 
-5.9 v0.3.1
-──────────
+5.10 v0.3.1
+───────────
 
   *Fixes*
   ⁃ Handle case in which `activities-tabs-mode' is enabled again without
@@ -516,7 +531,7 @@ activity.
 [#7] <https://github.com/alphapapa/activities.el/issues/7>
 
 
-5.10 v0.3
+5.11 v0.3
 ─────────
 
   *Additions*
@@ -527,7 +542,7 @@ activity.
   ⁃ Record times at which activities' states were updated.
 
 
-5.11 v0.2
+5.12 v0.2
 ─────────
 
   *Additions*
@@ -546,7 +561,7 @@ activity.
 [JD Smith] <https://github.com/jdtsmith>
 
 
-5.12 v0.1.3
+5.13 v0.1.3
 ───────────
 
   *Fixes*
@@ -554,21 +569,21 @@ activity.
   ⁃ Command aliases.
 
 
-5.13 v0.1.2
+5.14 v0.1.2
 ───────────
 
   *Fixes*
   ⁃ Some single-window configurations were not restored properly.
 
 
-5.14 v0.1.1
+5.15 v0.1.1
 ───────────
 
   *Fixes*
   ⁃ Silence message about non-file-visiting buffers.
 
 
-5.15 v0.1
+5.16 v0.1
 ─────────
 
   Initial release.

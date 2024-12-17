@@ -20,7 +20,7 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:commit . "90c90a80322aa9f26ce88f2f24a224afc4c994b8"))])
  (activities .
-	     [(0 7 1)
+	     [(0 7 2)
 	      ((emacs
 		(29 1))
 	       (persist
@@ -31,7 +31,7 @@
 	       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	       (:authors
 		("Adam Porter" . "adam@alphapapa.net"))
-	       (:commit . "8bc2028e81a0a6a08e7a44144b340c58a5ffadab"))])
+	       (:commit . "a7e7842c615e149ad7d7e57f383936b49dcb129f"))])
  (ada-mode .
 	   [(8 1 0)
 	    ((uniquify-files
@@ -923,7 +923,7 @@
 		 (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
 		 (:commit . "836b19b39651419876e65cdb1a91e3eef83cc4e7"))])
  (dape .
-       [(0 17 0)
+       [(0 18 0)
 	((emacs
 	  (29 1))
 	 (jsonrpc
@@ -931,7 +931,7 @@
 	"Debug Adapter Protocol for Emacs" tar
 	((:url . "https://github.com/svaante/dape")
 	 (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-	 (:commit . "f4489aa9ff1fe0e33b7be76e77db61fc25ab902e"))])
+	 (:commit . "4523745b583fe5049c8831c61d748fb1abb949da"))])
  (darkroom .
 	   [(0 3)
 	    ((cl-lib
