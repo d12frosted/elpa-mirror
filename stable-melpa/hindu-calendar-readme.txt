@@ -8,11 +8,13 @@ or purnimanta.
 Usage:
     All of the functions can be called interactively or programmatically.
 
-Sidereal lunar:          M-x hindu-calendar-sidereal-lunar
-Tropical lunar:          M-x hindu-calendar-tropical-lunar
-Sidereal solar:          M-x hindu-calendar-sidereal-solar
-Tropical solar:          M-x hindu-calendar-tropical-solar
-Nakshatra (sidereal):    M-x hindu-calendar-asterism
-Personal customization:  M-x customize-group RET hindu-calendar-group
+(require 'hindu-calendar)
 
-See README.md for more instructions and customizations.
+Sidereal lunar:        M-x hindu-calendar-sidereal-lunar
+Tropical lunar:        M-x hindu-calendar-tropical-lunar
+Sidereal solar:        M-x hindu-calendar-sidereal-solar
+Tropical solar:        M-x hindu-calendar-tropical-solar
+Nakshatra (sidereal):  M-x hindu-calendar-asterism
+Tweak variables:       M-x customize-group RET hindu-calendar
+
+(hindu-calendar-keybindings) ; Optional
