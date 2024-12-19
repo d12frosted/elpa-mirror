@@ -96,13 +96,16 @@
 		 (:maintainer "stardiviner" . "numbchild@gmail.com")
 		 (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
  (auto-dim-other-buffers .
-			 [(2 1 1)
-			  nil "Makes windows without focus less prominent" tar
+			 [(2 2 0)
+			  ((emacs
+			    (27 1)))
+			  "Makes windows without focus less prominent" tar
 			  ((:url . "https://github.com/mina86/auto-dim-other-buffers.el")
+			   (:keywords "faces")
 			   (:maintainer "Michal Nazarewicz" . "mina86@mina86.com")
 			   (:authors
 			    ("Michal Nazarewicz" . "mina86@mina86.com"))
-			   (:commit . "33b5f88b799a17947c266b04ad59462c5aeb4ed7"))])
+			   (:commit . "31de605fc0904b15a679d9079c6f7ca9f7abfb29"))])
  (autothemer .
 	     [(0 2 18)
 	      ((dash
