@@ -312,6 +312,35 @@ Getting started
 Some workflow ideas
 ───────────────────
 
+Editing subtitles
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  You can use `subed-mpv-jump-to-current-subtitle' (`M-j') to play the
+  current subtitle and use `subed-mpv-toggle-pause' (`M-SPC') to stop at
+  the right time.  Use `subed-toggle-loop-over-current-subtitle' (`C-c
+  C-l') if you want to keep looping automatically.
+
+  If you have wdiff installed, you can use
+  `subed-wdiff-subtitle-text-with-file' to compare the subtitle text
+  with a script or another subtitle file.
+
+
+Writing subtitles from scratch
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  One way is to start with one big subtitle that covers the whole media
+  file. You can create this manually by using the media file duration or
+  a very large ending timestamp (ex: 24:00:000), or you can use `M-x
+  subed-insert-subtitle-for-whole-file'.  Use `C-c C-p'
+  (`subed-toggle-pause-while-typing') to enable pausing while
+  typing. Start playback with `M-SPC' (`subed-mpv-toggle-pause'), type
+  as you listen, and split using using `subed-split-subtitle' (`M-.').
+
+  Another way is to type as much of the text as you can without worrying
+  about timestamps, putting each caption on a separate line. Then you
+  can use `subed-align' to convert it into timestamped captions.
+
+
 Reflowing subtitles into shorter or longer lines
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
@@ -343,15 +372,6 @@ Adjusting timestamps
   keep looping automatically. Use `subed-mpv-toggle-pause' (`M-SPC') to
   stop at the right time.
 
-  `subed-waveform-show-current' or `subed-waveform-show-all' can be
-  useful for adjusting start and end timestamps. Use
-  `subed-waveform-set-start' (`mouse-1', which is left click) or
-  `subed-waveform-set-stop' (`mouse-3', which is right-click) to adjust
-  only the current subtitle's timestamps, or use
-  `subed-waveform-set-start-and-copy-to-previous' (`S-mouse-1' or
-  `M-mouse-1') or `subed-waveform-set-stop-and-copy-to-next'
-  (`S-mouse-3' or `M-mouse-3') to adjust adjacent subtitles as well.
-
   You can also manually adjust
 
   • subtitle start: `M-[' / `M-]'
@@ -360,55 +380,107 @@ Adjusting timestamps
   A prefix argument sets the number of milliseconds (e.g. `C-u 1000 M-[
   M-[ M-[' decreases start time by 3 seconds).
 
+  Rodrigo Morales also has some functions for [playing part of the
+  subtitles and changing them by a little bit].
 
-Editing subtitles
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-
-  You can use `subed-mpv-jump-to-current-subtitle' (`M-j') to play the
-  current subtitle and use `subed-mpv-toggle-pause' (`M-SPC') to stop at
-  the right time.  Use `subed-toggle-loop-over-current-subtitle' (`C-c
-  C-l') if you want to keep looping automatically.
-
-  If you have wdiff installed, you can use
-  `subed-wdiff-subtitle-text-with-file' to compare the subtitle text
-  with a script or another subtitle file.
+  You can shift subtitles to start at a specific timestamp with
+  `subed-shift-subtitles-to-start-at-timestamp' . To use a millisecond
+  offset instead, use `subed-shift-subtitles'.
 
 
-Writing subtitles from scratch
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+[playing part of the subtitles and changing them by a little bit]
+<https://rodrigo.morales.pe/2024/11/17/my-subed-configuration-for-adding-subtitles-to-emacsconf-2024/>
 
-  One way is to start with one big subtitle that covers the whole media
-  file, and then split it using `subed-split-subtitle' (`M-.').
+◊ Waveforms
 
-  Another way is to type as much of the text as you can without worrying
-  about timestamps, putting each caption on a separate line. Then you
-  can use `subed-align' to convert it into timestamped captions.
+  Use `subed-waveform-show-current' or `subed-waveform-show-all'
+  together with FFmpeg to display waveforms for subtitles.
 
+  Use `subed-waveform-set-start' (`mouse-1', which is left click) or
+  `subed-waveform-set-stop' (`mouse-3', which is right-click) to adjust
+  only the current subtitle's timestamps, or use
+  `subed-waveform-set-start-and-copy-to-previous' (`S-mouse-1' or
+  `M-mouse-1') or `subed-waveform-set-stop-and-copy-to-next'
+  (`S-mouse-3' or `M-mouse-3') to adjust adjacent subtitles as well.
 
-Timing / resynchronizing subtitles
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-
-  If you're using `subed-waveform-show-current' or
-  `subed-waveform-show-all', you can use `M-mouse-2' (Meta-middle-click,
+  You can use `M-mouse-2' (Meta-middle-click,
   `subed-waveform-shift-subtitles') to shift the current subtitle and
   succeeding subtitles so that they start at the position you clicked
   on.
 
-  To do this with the keyboard, you can use
-  `subed-shift-subtitles-to-start-at-timestamp' if you want to specify a
-  timestamp or `subed-shift-subtitles' to specify a millisecond offset.
+
+◊ A transient map for retiming subtitles
+
+  You can use `subed-retime-subtitles' to set new times for subtitles by
+  pressing `SPC' when the current subtitle should stop. It will start
+  with the current subtitle and then continue until you press a key that
+  is not in the temporary keymap.
+
+  Keys:
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   `SPC'                    set stop and move forward 
+   `<left>' or `j'          replay current subtitle   
+   `<right>' or `n' or `f'  next                      
+   `b'                      back                      
+   `p'                      pause                     
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+◊ Aeneas forced alignment tool
+
+  The [aeneas forced alignment tool] (Python) can take a media file and
+  a text file (one cue per line) or subtitle file, and create a subtitle
+  file with the timings determined by matching synthesized speech with
+  the waveforms.
+
+  To use Aeneas to re-time subtitles or text, install Aeneas and its
+  prerequisites, then call `M-x subed-align' to align the entire buffer.
+
+  You can also select a region and then use `M-x subed-align-region' to
+  recalculate the timestamps for just that region. One way to use this
+  is:
+
+  1. Determine the last correctly-timed subtitle. We'll call this
+     subtitle A. Go to the beginning of subtitle A and use `C-SPC'
+     (`set-mark-command') to set the mark.
+  2. Pick a subtitle in the incorrectly-timed section. We'll call this
+     subtitle B. Use `subed-mpv-jump-to-current-subtitle' to seek to
+     that position. Play it and listen for the words. If you can't
+     figure out which subtitle matches the position currently being
+     played, choose a different subtitle starting point B until you find
+     one that's recognizable.
+  3. Reset the playback position by using
+     `subed-mpv-jump-to-current-subtitle' on subtitle B.
+  4. Now look for the subtitle that matches the words you heard at the
+     playback position for subtitle B. We'll call that one subtitle D.
+  5. Go to the subtitle before subtitle D. We'll call that subtitle
+     C. Use `C-c ]' (`subed-copy-player-pos-to-stop-time') to set the
+     stop time of subtitle C (the one immediately before D) to the
+     playback position, which is the same time as the incorrect starting
+     time for subtitle B.
+  6. Go to the end of subtitle C.
+  7. Use `M-x subed-align-region' to recalculate the timestamps within
+     that section.
+
+  Aeneas tends to have trouble with subtitle times where there are long
+  silences, background noises, inaccurate transcripts (especially where
+  the speaker has skipped or added many words), overlapping speakers,
+  and non-English languages.  It may take several tries to figure out a
+  span of subtitles where Aeneas is more accurate.  Doublechecking with
+  the word timing data can help quickly verify if the subtitle times are
+  reasonable.
+
+
+  [aeneas forced alignment tool] <https://www.readbeyond.it/aeneas/>
+
+
+◊ Word timing data
 
   To use word timing data from something like WhisperX, load
   subed-word-data.el and then use `subed-word-data-load-from-file'. The
   word times will then be used when you split subtitles with
   `subed-split-subtitle'.
-
-  Rodrigo Morales also has some functions for [playing part of the
-  subtitles and changing them by a little bit].
-
-
-[playing part of the subtitles and changing them by a little bit]
-<https://rodrigo.morales.pe/2024/11/17/my-subed-configuration-for-adding-subtitles-to-emacsconf-2024/>
 
 
 Exporting text for review
@@ -417,6 +489,8 @@ Exporting text for review
   You can use `subed-copy-region-text' to copy the text of the subtitles
   for pasting into another buffer. Call it with the universal prefix
   `C-u' to copy comments as well.
+
+  You can also use `subed-convert' to convert subtitles to a text file.
 
 
 Troubleshooting

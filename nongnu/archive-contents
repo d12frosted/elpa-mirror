@@ -96,7 +96,7 @@
 		 (:maintainer "stardiviner" . "numbchild@gmail.com")
 		 (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
  (auto-dim-other-buffers .
-			 [(2 2 0)
+			 [(2 2 1)
 			  ((emacs
 			    (27 1)))
 			  "Makes windows without focus less prominent" tar
@@ -105,7 +105,7 @@
 			   (:maintainer "Michal Nazarewicz" . "mina86@mina86.com")
 			   (:authors
 			    ("Michal Nazarewicz" . "mina86@mina86.com"))
-			   (:commit . "31de605fc0904b15a679d9079c6f7ca9f7abfb29"))])
+			   (:commit . "0164908fd3f8d8e83aa636f08096dcc843d6b2fa"))])
  (autothemer .
 	     [(0 2 18)
 	      ((dash
@@ -2299,14 +2299,14 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 2 21)
+	[(1 2 23)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
 	 ((:url . "https://github.com/sachac/subed")
 	  (:keywords "convenience" "files" "hypermedia" "multimedia")
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-	  (:commit . "ace4b62fd06554fad1e2ae62339b448c30c9ae70"))])
+	  (:commit . "0a1b5adbd038fd16dce0a72886fbb106442d7816"))])
  (sweeprolog .
 	     [(0 27 6)
 	      ((emacs

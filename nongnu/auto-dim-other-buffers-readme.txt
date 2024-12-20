@@ -11,8 +11,9 @@ a non-intrusive but still noticeable visual indicator.
 [![Demo](screenshot.gif)](https://www.youtube.com/watch?v=2djOHSWhyD4)
 
 The mode provides two indications of the selected window.  Firstly,
-background of non-selected windows is dimmed.  Secondly, fringes of the
-selected windows are highlighted (not visualised in the image above).
+background of non-selected windows is dimmed.  Secondly, fringes of
+the selected windows are highlighted (not visualised in the image
+above).
 
 
 ## Installation
@@ -38,9 +39,9 @@ initialisation file (typically `~/.emacs`, `~/.emacs.d/init.el` or
 ## Customisation
 
 To configure how dimmed buffers look, customise
-`auto-dim-other-buffers-face`.  This can be accomplished by:
+`auto-dim-other-buffers`.  This can be accomplished by:
 
-    M-x customize-face RET auto-dim-other-buffers-face RET
+    M-x customize-face RET auto-dim-other-buffers RET
 
 More options can be found in `auto-dim-other-buffers` customisation
 group which can be accessed with:
@@ -67,22 +68,22 @@ section above for instruction how to do it.
 
 ### Text which should be hidden in org-mode is not
 
-To hide text, `org-mode` uses `org-hide` face whose foreground is set to
-the background colour of the `default` face.  When
+To hide text, `org-mode` uses `org-hide` face whose foreground is set
+to the background colour of the `default` face.  When
 `auto-dim-other-buffers-mode` changes background of a dimmed window it
-also needs to be applied to the `org-hide` face.  The good news is that
-this is supported out of the box.  The caveat is that it requires that
-`auto-dim-other-buffers-face` and `auto-dim-other-buffers-hide-face` are
+also needs to be applied to the `org-hide` face.  The good news is
+that this is supported out of the box.  The caveat is that it requires
+that `auto-dim-other-buffers` and `auto-dim-other-buffers-hide` are
 changed in sync.
 
-If text which should be hidden in org-mode is visible faintly, the most
-likely reason is that the latter face has not been updated.  The
+If text which should be hidden in org-mode is visible faintly, the
+most likely reason is that the latter face has not been updated.  The
 solution is to customise it via
 
-    M-x customize-face RET auto-dim-other-buffers-hide-face RET
+    M-x customize-face RET auto-dim-other-buffers-hide RET
 
 and set its foreground and background to match background of the
-`auto-dim-other-buffers-face`.
+`auto-dim-other-buffers`.
 
 
 ## Afterword
