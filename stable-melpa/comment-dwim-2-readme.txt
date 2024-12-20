@@ -16,7 +16,7 @@ https://github.com/remyferre/comment-dwim-2
 
 You need to add your own key binding first, for instance:
 
-  (global-set-key (kbd "M-;") 'comment-dwim-2)
+   (keymap-global-set "M-;" #'comment-dwim-2)
 
 # Customization
 
@@ -32,26 +32,28 @@ You can customize this behavior.
 If you always want to fully comment lines (Lisp modes included),
 add this to your configuration file:
 
-  (setq cd2/region-command 'cd2/comment-or-uncomment-lines)
+   (setopt comment-dwim-2-region-function
+    #'comment-dwim-2-comment-or-uncomment-lines)
 
 If you only want to comment the selected region (like
 `comment-dwim' does), add this:
 
-  (setq cd2/region-command 'cd2/comment-or-uncomment-region)
+   (setopt comment-dwim-2-region-function
+    #'comment-dwim-2-comment-or-uncomment-region)
 
 # Org-mode
 
-For org-mode, consider using `org-comment-dwim-2':
-
-  (define-key org-mode-map (kbd "M-;") 'org-comment-dwim-2)
+In `org-mode' code blocks, `comment-dwim-2' will work as expected.
+When editing regular `org-mode' content, it will fallback to
+`org-toggle-comment' instead.
 
 ## Behavior when command is repeated
 
 `comment-dwim-2' will by default try to kill any end-of-line
-comments when repeated. If you wish to reindent these comments
+comments when repeated.  If you wish to reindent these comments
 instead, add this to your configuration file:
 
-  (setq comment-dwim-2--inline-comment-behavior 'reindent-comment)
+   (setopt comment-dwim-2-inline-comment-behavior 'reindent-comment)
 
 If you use this setting, you will still be able to kill comments by
 calling `comment-dwim-2' with a prefix argument.
