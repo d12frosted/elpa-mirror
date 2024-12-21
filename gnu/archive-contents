@@ -1046,6 +1046,19 @@
 		       (:authors
 			("Aleksandr Vityazev" . "avityazew@gmail.com"))
 		       (:commit . "bc07c1124545cbf6e5ebe64e92bfaa306e309033"))])
+ (dicom .
+	[(0 1)
+	 ((emacs
+	   (28 1))
+	  (compat
+	   (30)))
+	 "DICOM viewer" tar
+	 ((:url . "https://github.com/minad/dicom")
+	  (:keywords "multimedia" "hypermedia" "files")
+	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	  (:authors
+	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	  (:commit . "35a2a99b459aacbb9e91d9945adfa01cf693b0e8"))])
  (dict-tree .
 	    [(0 17)
 	     ((trie
@@ -3276,7 +3289,7 @@
 	    ("Junpeng Qiu" . "qjpchmail@gmail.com"))
 	   (:keywords "extensions"))])
  (parser-generator .
-		   [(0 2 3)
+		   [(0 2 4)
 		    ((emacs
 		      (26)))
 		    "Parser Generator library" tar
@@ -3285,7 +3298,7 @@
 		     (:maintainer "Christian Johansson" . "christian@cvj.se")
 		     (:authors
 		      ("Christian Johansson" . "christian@cvj.se"))
-		     (:commit . "37732431e129f380d254a4d0d4f6c760975e9399"))])
+		     (:commit . "06458c9c925a07eb548d1c1ac6502ed7ca320e87"))])
  (path-iterator .
 		[(1 0)
 		 ((emacs
