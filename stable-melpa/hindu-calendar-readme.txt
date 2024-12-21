@@ -2,8 +2,8 @@
 This package provides traditional Hindu calendars (solar and lunar) using
 arithmetic based on the mean motions of the Sun and Moon.  It calculates
 tithi and nakshatra.  It provides both tropical (sayana) and sidereal
-(nirayana/Lahiri) variants.  Lunar calendar can be chosen between amanta
-or purnimanta.
+(nirayana/Chitrapaksha) variants.  Lunar calendar can be chosen between
+amanta or purnimanta.
 
 Usage:
     All of the functions can be called interactively or programmatically.
