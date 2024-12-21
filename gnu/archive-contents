@@ -923,7 +923,7 @@
 		 (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
 		 (:commit . "836b19b39651419876e65cdb1a91e3eef83cc4e7"))])
  (dape .
-       [(0 18 0)
+       [(0 19 0)
 	((emacs
 	  (29 1))
 	 (jsonrpc
@@ -931,7 +931,7 @@
 	"Debug Adapter Protocol for Emacs" tar
 	((:url . "https://github.com/svaante/dape")
 	 (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-	 (:commit . "4523745b583fe5049c8831c61d748fb1abb949da"))])
+	 (:commit . "aa46e40fd1d5085bf7eae7bcebc16b15a064cd17"))])
  (darkroom .
 	   [(0 3)
 	    ((cl-lib
@@ -1047,7 +1047,7 @@
 			("Aleksandr Vityazev" . "avityazew@gmail.com"))
 		       (:commit . "bc07c1124545cbf6e5ebe64e92bfaa306e309033"))])
  (dicom .
-	[(0 1)
+	[(0 2)
 	 ((emacs
 	   (28 1))
 	  (compat
@@ -1058,7 +1058,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "35a2a99b459aacbb9e91d9945adfa01cf693b0e8"))])
+	  (:commit . "a69cc62d0cdc6117ef16ef7b859680b2d51606e0"))])
  (dict-tree .
 	    [(0 17)
 	     ((trie
