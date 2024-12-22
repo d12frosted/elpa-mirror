@@ -15,7 +15,7 @@ Jinx's high performance and low resource usage comes from directly
 calling the widely-used API of the Enchant library, see
 https://rrthomas.github.io/enchant/.  Jinx automatically compiles
 jinx-mod.c and loads the dynamic module at startup.  By binding
-directly to the native Enchant API, Jinx avoids the slower backend
-process communication with Aspell.
+directly to the native Enchant API, Jinx avoids slower inter-process
+communication.
 
 See the manual for further information.
