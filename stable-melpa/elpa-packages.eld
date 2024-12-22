@@ -1712,7 +1712,6 @@
   (fill-page :url "https://github.com/jcs-elpa/fill-page")
   (fillcode :url "https://github.com/snarfed/fillcode")
   (filldent :url "https://codeberg.org/acdw/filldent.el")
-  (finalize :url "https://github.com/skeeto/elisp-finalize")
   (find-by-pinyin-dired :url "https://github.com/redguardtoo/find-by-pinyin-dired")
   (find-dupes-dired :url "https://github.com/ShuguangSun/find-dupes-dired")
   (find-file-in-project :url "https://github.com/redguardtoo/find-file-in-project")
