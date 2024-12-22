@@ -147,9 +147,9 @@ Table of Contents
   │   :custom
   │   ;; Support opening new minibuffers from inside existing minibuffers.
   │   (enable-recursive-minibuffers t)
-  │   ;; Emacs 28 and newer: Hide commands in M-x which do not work in the current
-  │   ;; mode.  Vertico commands are hidden in normal buffers. This setting is
-  │   ;; useful beyond Vertico.
+  │   ;; Hide commands in M-x which do not work in the current mode.  Vertico
+  │   ;; commands are hidden in normal buffers. This setting is useful beyond
+  │   ;; Vertico.
   │   (read-extended-command-predicate #'command-completion-default-include-p)
   │   :init
   │   ;; Add prompt indicator to `completing-read-multiple'.
@@ -169,9 +169,8 @@ Table of Contents
   │   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode))
   └────
 
-  I recommend to give Orderless completion a try, which is different
-  from the prefix TAB completion used by the basic default completion
-  system or in shells.
+  I recommend to give Orderless completion a try, which is more flexible
+  and powerful than the default completion styles.
 
   ┌────
   │ ;; Optionally use the `orderless' completion style.
@@ -226,7 +225,7 @@ Table of Contents
   can add new bindings or even replace the Vertico bindings. For example
   you can use `M-TAB' to expand the prefix of candidates (TAB complete)
   or cycle between candidates if `completion-cycle-threshold' is
-  non-nil.
+  non-nil, with the following configuration.
 
   ┌────
   │ ;; Option 1: Additional bindings
@@ -238,23 +237,16 @@ Table of Contents
   │ ;; (keymap-set vertico-map "TAB" #'minibuffer-complete)
   └────
 
-  The `orderless' completion style does not support expansion of a
-  common candidate prefix, as supported by shells or the basic default
-  completion system. The reason is that the Orderless input string is
-  usually not a prefix. In order to support completing prefixes, combine
-  `orderless' with `substring' in your `completion-styles'
-  configuration.
-
-  ┌────
-  │ (setq completion-styles '(substring orderless basic))
-  └────
-
-  Alternatively you can use the built-in completion-styles, e.g.,
-  `partial-completion', `flex' or `initials'. The `partial-completion'
-  style is important if you want to open multiple files at once with
-  `find-file' using wildcards. In order to open multiple files with a
-  wildcard at once, you have to submit the prompt with
-  `M-RET'. Alternative first move to the prompt and then press `RET'.
+  The command `minibuffer-complete' performs prefix expansion for the
+  `basic' completion style, while the `orderless' and `substring'
+  completion styles expand to the longest candidate
+  substring. Alternatively you can use completion-styles like
+  `partial-completion', `flex' or `initials', which perform different
+  expansion and filtering. The `partial-completion' style is important
+  if you want to open multiple files at once with `find-file' using
+  wildcards. In order to open multiple files with a wildcard at once,
+  you have to submit the prompt with `M-RET'.  Alternative first move to
+  the prompt and then press `RET'.
 
   ┌────
   │ (setq completion-styles '(basic substring partial-completion flex))
@@ -264,7 +256,7 @@ Table of Contents
   system, further customization of completion behavior can be achieved
   by setting the designated Emacs variables. For example, one may wish
   to disable case-sensitivity for file and buffer matching when built-in
-  completion styles are used instead of `orderless':
+  completion styles are used:
 
   ┌────
   │ (setq read-file-name-completion-ignore-case t
@@ -636,7 +628,7 @@ Table of Contents
     fully compatible with every Emacs completion command and dynamic
     completion tables, since it uses its own filtering infrastructure,
     which deviates from the standard Emacs completion facilities.
-  • Icomplete: Emacs 28 comes with a builtin `icomplete-vertical-mode',
+  • Icomplete: Emacs comes with the builtin `icomplete-vertical-mode',
     which is a more bare-bone than Vertico. Vertico offers additional
     flexibility thanks to its [extensions].
 
@@ -819,9 +811,13 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 12.3 `tmm-menubar'
 ──────────────────
 
+  *NOTE*: I have implemented a fix for this problem which is part of
+  Emacs 31. You can set `completion-eager-display' to `nil' in your
+  configuration. See [bug#74616] for the upstream bug report.
+
   The text menu bar works well with Vertico but always shows a
-  `*Completions*' buffer, which is unwanted if you use the Vertico
-  UI. This completion buffer can be disabled with an advice. If you
+  `*Completions*' buffer, which is unwanted if Vertico is used. Right
+  now the completion buffer can be disabled with an advice. If you
   disabled the standard GUI menu bar and prefer the Vertico interface
   you may also overwrite the default F10 keybinding.
 
@@ -831,12 +827,19 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
+[bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
+
+
 12.4 `ffap-menu'
 ────────────────
 
+  *NOTE*: I have implemented a fix for this problem which is part of
+  Emacs 31. You can set `completion-eager-display' to `nil' in your
+  configuration. See [bug#74616] for the upstream bug report.
+
   The command `ffap-menu' shows the `*Completions*' buffer by default
-  like `tmm-menubar', which is unnecessary with Vertico. This completion
-  buffer can be disabled as follows.
+  like `tmm-menubar', which is unwanted if Vertico is used. The
+  completions buffer can be disabled as follows.
 
   ┌────
   │ (advice-add #'ffap-menu-ask :around
@@ -845,6 +848,9 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   │ 			 #'ignore))
   │ 		(apply args))))
   └────
+
+
+[bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
 
 
 12.5 `completion-table-dynamic'
@@ -903,9 +909,9 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 12.7 Tramp hostname and username completion
 ───────────────────────────────────────────
 
-  *NOTE:* On upcoming Emacs 29.2 and Tramp 2.6.1.5 the workarounds
-  described in this section are not necessary anymore, since the
-  relevant completion tables have been improved.
+  *NOTE:* On Emacs 29.2 and Tramp 2.7 the workarounds described in this
+  section are not necessary anymore, since the relevant completion
+  tables have been improved.
 
   In combination with Orderless or other non-prefix completion styles
   like `substring' or `flex', host names and user names are not made

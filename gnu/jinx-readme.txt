@@ -16,12 +16,12 @@ intervention. Jinx can be used completely on its own, but can also
 safely co-exist with Emacs's built-in spell-checker Ispell.
 
 Jinx's high performance and low resource usage comes from directly
-calling the widely-used API of the Enchant library (see
-[libenchant]). Jinx automatically compiles `jinx-mod.c' and loads the
-dynamic module at startup. By binding directly to the native Enchant
-API, Jinx avoids the slower backend process communication with
-Aspell. Enchant is widely used by other text editors and supports
-[Nuspell], [Hunspell], [Aspell] and a few language-specific backends.
+calling the widely-used API of the [Enchant library]. Jinx automatically
+compiles `jinx-mod.c' and loads the dynamic module at startup. By
+binding directly to the native Enchant API, Jinx avoids the slower
+backend process communication with Aspell.  Enchant is widely used by
+other text editors and supports [Nuspell], [Hunspell], [Aspell] and a
+few language-specific backends.
 
 Jinx supports spell-checking multiple languages in the same buffer. See
 the `jinx-languages' variable to customize for multiple languages. Jinx
@@ -33,7 +33,7 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
 `PascalCase' are accepted.
 
 
-[libenchant] <https://abiword.github.io/enchant/>
+[Enchant library] <https://rrthomas.github.io/enchant/>
 
 [Nuspell] <https://nuspell.github.io/>
 
@@ -48,11 +48,12 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   Jinx can be installed from GNU ELPA or MELPA directly with
   `package-install'.
 
-  Jinx requires `libenchant'. Enchant library is a required dependency
-  for Jinx to compile its module at install time. If `pkgconf' or
-  `pkg-config' is available when installing Jinx, Jinx will use it to
-  locate `libenchant'. Depending on your BSD or Linux distribution you
-  have to install different packages:
+  Most importantly your Emacs must be compiled with dynamic module
+  support. Jinx requires `libenchant', which is needed to compile the
+  native module at install time. If `pkgconf' or `pkg-config' is
+  available, Jinx will use it to locate `libenchant' during
+  installation. Depending on your BSD or Linux distribution you have to
+  install different packages:
 
   • Debian, Ubuntu: `libenchant-2-dev', `pkgconf'
   • Arch, Gentoo: `enchant', `pkgconf'
@@ -181,10 +182,9 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   are ordered as specified in the personal configuration file
   `~/.config/enchant/enchant.ordering' and the system-wide configuration
   file `/usr/share/enchant-2/enchant.ordering'. Enchant uses Hunspell as
-  default backend for most languages. There are a few exceptions. For
+  default backend for most languages barring a few exceptions. For
   English Enchant prefers Aspell and for Finnish and Turkish special
-  backends called Voikko and Zemberek are used. On some operating
-  systems Enchant may also integrate with the system spell-checker.
+  backends called Voikko and Zemberek are used.
 
   Depending on the backend the personal dictionary will be taken from
   different locations, e.g., `~/.aspell.LANG.pws' or
@@ -193,11 +193,11 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   checkers. See the [Enchant manual] for details.
 
 
-[Enchant manual] <https://abiword.github.io/enchant/lib/enchant.html>
+[Enchant manual] <https://rrthomas.github.io/enchant/lib/enchant.html>
 
 
-6 Alternative spell-checking packages
-═════════════════════════════════════
+6 Alternatives
+══════════════
 
   There exist multiple alternative spell-checking packages for Emacs,
   most famously the builtin ispell.el and flyspell.el packages. The main
@@ -206,7 +206,7 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   dictionaries at once. The following three alternative packages come
   closest to the behavior of Jinx.
 
-  • [jit-spell]: Jinx UI borrows ideas from Augusto Stoffel's
+  • [jit-spell]: Jinx borrows ideas from Augusto Stoffel's
     Jit-spell. Jit-spell uses the less efficient Ispell process
     communication instead of Jinx's calling a native API. Since
     Jit-spell does not restrict spell checking to the visible text only,

@@ -113,37 +113,49 @@
   └────
 
 
-3 Alternatives
+3 Incompatibilities
+═══════════════════
+
+  • `org-indent-mode' is not compatible with the block prettification in
+    the fringe.  If `org-indent-mode' is enabled, `org-modern' will
+    disable the block prettification.
+  • `org-num-mode' interferes with the `org-modern' prettification of
+    TODO keywords.
+  • `visual-wrap-prefix-mode' relies on the `wrap-prefix' text property
+    which is also used by `org-modern'.
+
+
+4 Alternatives
 ══════════════
 
   The tag style of `org-modern' is inspired by Nicholas Rougier's
-  beautiful [svg-tag-mode]. In contrast to `svg-tag-mode', this package
-  avoids images and uses cheap and fast Emacs box text properties. By
-  only styling the text via text properties, the styled text, e.g.,
-  dates or tags stay editable and are easy to interact with.
+  [svg-tag-mode]. In contrast to `svg-tag-mode', the package
+  `org-modern' avoids images and uses more efficient Emacs box text
+  properties. By only styling the text via text properties, the styled
+  text, e.g., dates or tags stay editable and are easy to interact with.
 
-  The approach restricts our flexibility and may lead to font-dependent
-  issues. We do our best, but for example there is no way we can get
-  round corners. Combining `org-modern-mode' with `svg-tag-mode' is
-  possible. You can use SVG tags and use the table and block styling
-  from `org-modern'. If you are interested in further tweaks, Emacs
-  comes with the builtin `prettify-symbols-mode' which can be used for
+  The approach used here restricts the flexibility (e.g., no rounded
+  corners) and creates dependence on the size and alignment of the
+  font. Combining `org-modern-mode' with `svg-tag-mode' is possible. You
+  can use SVG tags and use the table and block styling from
+  `org-modern'. If you are interested in further tweaks, Emacs comes
+  with the builtin `prettify-symbols-mode' which can be used for
   individual styling of custom keywords.
 
-  Popular alternatives are the older `org-superstar' and `org-bullets'
-  packages, which have are more limited and mainly adjust headlines and
+  Alternatives are the older `org-superstar' and `org-bullets' packages,
+  which are more limited and mainly adjust headlines and
   lists. `org-superstar' relies on character composition, while
   `org-modern' uses text properties, which are considered more
   future-proof. Note that `org-modern' is a full replacement for both
-  `org-superstar' and `org-bullets'. You can easily disable styling of
-  certain elements, e.g., `org-modern-timestamp', if you only want to
-  use a subset of `org-modern'.
+  `org-superstar' and `org-bullets'. You can disable styling of certain
+  elements, e.g., `org-modern-timestamp', if you only want to use the
+  subset of `org-modern' equivalent to `org-superstar'.
 
 
 [svg-tag-mode] <https://github.com/rougier/svg-tag-mode>
 
 
-4 Contributions
+5 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

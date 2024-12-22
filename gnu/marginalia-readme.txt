@@ -238,22 +238,15 @@ Table of Contents
 5 Icons in the minibuffer
 ═════════════════════════
 
-  Marginalia focuses on text annotations. The following packages are
-  compatible with Marginalia and use special fonts to add icons in front
-  of completion candidates. There also exist related packages to enhance
-  Dired, Ibuffer, Corfu and other modes with icons consistently.
-
-  • [nerd-icons-completion]: Uses the NerdFonts. It can even work even
-    in the terminal where only a single font can be used.
-  • [all-the-icons-completion]: Uses the `all-the-icons.el' package
-    which configures multiple icon fonts.
+  Marginalia focuses on text annotations. The [nerd-icons-completion]
+  package is compatible with Marginalia and uses the special NerdFonts
+  to add icons in front of minibuffer completion candidates. There exist
+  related packages to enhance Dired, Ibuffer, Corfu and other modes with
+  icons consistently.
 
 
 [nerd-icons-completion]
 <https://github.com/rainstormstudio/nerd-icons-completion>
-
-[all-the-icons-completion]
-<https://github.com/iyefrat/all-the-icons-completion>
 
 
 6 Contributions

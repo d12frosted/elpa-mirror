@@ -5,7 +5,7 @@
 
 Tempel is a tiny template package for Emacs, which uses the syntax of
 the Emacs Tempo library. Tempo is an ancient temple of the church of
-Emacs. It is 27 years old, but still in good shape since it successfully
+Emacs. It is 30 years old, but still in good shape since it successfully
 resisted change over the decades. However it may look a bit dusty here
 and there. Therefore we present Tempel, a new implementation of Tempo
 with inline expansion and integration with recent Emacs
@@ -125,15 +125,16 @@ Table of Contents
 
   The templates are defined in a Lisp data file configured by
   `tempel-path'. Lisp data files are files containing Lisp s-expressions
-  (see `lisp-data-mode'). By default the file
-  `~/.config/emacs/templates' is used. The templates are grouped by
-  major mode with an optional `:when' condition. Each template is a list
-  in the concise form of the Emacs Tempo syntax. The first element of
-  each list is the name of the template. I recommend to use avoid
-  special letters for the template names, since special letters may
-  carry meaning during completion filtering and as such make it harder
-  to select the desired template. Thus the name `lett' is better than
-  `let*'. Behind the name, the Tempo syntax elements follow.
+  (see `lisp-data-mode'). By default the file `templates' in the
+  `user-emacs-directory' is used, e.g., `~/.config/emacs/templates'. The
+  templates are grouped by major mode with an optional `:when'
+  condition. Each template is a list in the concise form of the Emacs
+  Tempo syntax. The first element of each list is the name of the
+  template.  I recommend to use avoid special letters for the template
+  names, since special letters may carry meaning during completion
+  filtering and as such make it harder to select the desired
+  template. Thus the name `lett' is better than `let*'. Behind the name,
+  the Tempo syntax elements follow.
 
   In addition, each template may specify a `:pre' and/or `:post' key
   with a FORM that is evaluated before the template is expanded or after
@@ -188,6 +189,12 @@ Table of Contents
   │ (trivlist "\\begin{trivlist}\n" r> n> "\\end{trivlist}")
   │ (verbatim "\\begin{verbatim}\n" r> n> "\\end{verbatim}")
   │ (verbatimm "\\begin{verbatim*}\n" r> n> "\\end{verbatim*}")
+  │ (matrix (p (read-number "Rows: ") rows noinsert)
+  │ 	(p (read-number "Cols: ") cols noinsert)
+  │ 	"\\begin{" (p "pmatrix" type) "}" n
+  │ 	(* (1- rows) (p " ") (* (1- cols) " & " (p " ")) "\\\\" n)
+  │ 	(p " ") (* (1- cols) " & " (p " ")) n
+  │ 	"\\end{" type "}")
   │ 
   │ texinfo-mode
   │ 
@@ -235,11 +242,12 @@ Table of Contents
   │ (advice "(defun " (p "adv" name) " (&rest app)" n> p n> "(apply app))" n>
   │ 	"(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
   │ (header ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
-  │ 	" -- " p " -*- lexical-binding: t -*-" n
+  │ 	" --- " p " -*- lexical-binding: t -*-" n
   │ 	";;; Commentary:" n ";;; Code:" n n)
   │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
   │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
   │ 	 " ends here" n)
+  │ (package (i header) r n n (i provide))
   │ 
   │ eshell-mode
   │ 
@@ -263,6 +271,11 @@ Table of Contents
   │      "--8<---------------cut here---------------end--------------->8---" n)
   │ (rot13 (p "plain text" text) n "----" n (rot13 text))
   │ (calc (p "taylor(sin(x),x=0,3)" formula) n "----" n (format "%s" (calc-eval formula)))
+  │ (table (p (read-number "Rows: ") rows noinsert)
+  │        (p (read-number "Cols: ") cols noinsert)
+  │        "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n
+  │        "|" (* cols "----|") n
+  │        (* rows "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n))
   │ 
   │ rst-mode
   │ 
@@ -367,11 +380,44 @@ Table of Contents
   element.
 
   ┌────
-  │ (header ";;; " (or (buffer-file-name) (buffer-name)) " -- " p
-  │ 	" -*- lexical-binding: t -*-" n n)
+  │ (header ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │ 	" --- " p " -*- lexical-binding: t -*-" n
+  │ 	";;; Commentary:" n ";;; Code:" n n)
   │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
-  │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name))) " ends here" n)
+  │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │ 	 " ends here" n)
   │ (package (i header) r n n (i provide))
+  └────
+
+  If a custom user element needs an access to named fields, the hook
+  function should take the second argument `fields', which refers to an
+  alist that maps the field name to its value in the current
+  template. For example here we define a custom element `*' to repeat a
+  template a number of times:
+
+  ┌────
+  │ (defun tempel-repeat (elt fields)
+  │   (pcase elt
+  │     (`(* ,count . ,rest)
+  │      (cons 'l (cl-loop for i below (eval count fields) append rest)))))
+  │ (add-to-list 'tempel-user-elements #'tempel-repeat)
+  └────
+
+  The `*' custom element can be used to expand dynamic tables or LaTeX
+  matrices:
+
+  ┌────
+  │ (table (p (read-number "Rows: ") rows noinsert)
+  │        (p (read-number "Cols: ") cols noinsert)
+  │        "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n
+  │        "|" (* cols "----|") n
+  │        (* rows "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n))
+  │ (matrix (p (read-number "Rows: ") rows noinsert)
+  │ 	(p (read-number "Cols: ") cols noinsert)
+  │ 	"\\begin{" (p "pmatrix" type) "}" n
+  │ 	(* (1- rows) (p " ") (* (1- cols) " & " (p " ")) "\\\\" n)
+  │ 	(p " ") (* (1- cols) " & " (p " ")) n
+  │ 	"\\end{" type "}")
   └────
 
 
@@ -417,7 +463,7 @@ Table of Contents
 
   ┌────
   │ (tempel-key "C-c t f" fun emacs-lisp-mode-map)
-  │ (tempel-key "C-c t d" (format-time-string "%Y-%m-%d"))
+  │ (tempel-key "C-c t d" ("DATE: " (format-time-string "%Y-%m-%d")))
   └────
 
   Internally `tempel-key' uses `tempel-insert' to trigger the

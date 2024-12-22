@@ -149,15 +149,16 @@
   Google AI Studio].  Set this up with `make-llm-gemini', with the
   following parameters:
   • `:key', the Google AI key that you get from Google AI Studio.
-  • `:chat-model', the model name, from the
-    [[<https://ai.google.dev/models>][list of models.  This is optional
-    and will default to the text Gemini model.
+  • `:chat-model', the model name, from the [list] of models.  This is
+    optional and will default to the text Gemini model.
   • `:embedding-model': the model name, currently must be
     "embedding-001".  This is optional and will default to
     "embedding-001".
 
 
 [page on Google AI Studio] <https://makersuite.google.com/app/apikey>
+
+[list] <https://ai.google.dev/models>
 
 
 2.5 Vertex (Gemini via Google Cloud)
@@ -337,7 +338,7 @@
   hand, by use of the `llm' package, the user can make sure that any
   client that codes against it will work with free models that come
   along.  It's likely that sophisticated free LLMs will, emerge,
-  although it's unclear right now what free software means with respsect
+  although it's unclear right now what free software means with respect
   to LLMs.  Because of this tradeoff, we have decided to warn the user
   when using non-free LLMs (which is every LLM supported right now
   except the fake one).  You can turn this off the same way you turn off
@@ -430,13 +431,13 @@
       it isn't guaranteed to replace the actual system prompt),
       examples, and other important elements, all detailed in the
       docstring for this function.  `response-format' can be `'json', to
-      force JSON output, but the prompt also needs to mention and
-      ideally go into detail about what kind of JSON response is
-      desired.  Providers with the `json-response' capability support
-      JSON output, and it will be ignored if unsupported.  The
-      `non-standard-params' let you specify other options that might
-      vary per-provider, and for this, the correctness is up to the
-      client.
+      force JSON output, or a JSON schema (see below) but the prompt
+      also needs to mention and ideally go into detail about what kind
+      of JSON response is desired.  Providers with the `json-response'
+      capability support JSON output, and it will be ignored if
+      unsupported.  The `non-standard-params' let you specify other
+      options that might vary per-provider, and for this, the
+      correctness is up to the client.
     • `llm-chat-prompt-to-text prompt': From a prompt, return a string
       representation.  This is not usually suitable for passing to LLMs,
       but for debugging purposes.
@@ -446,6 +447,44 @@
     • `llm-chat-prompt-append-response prompt response role': Append a
       new response (from the user, usually) to the prompt.  The `role'
       is optional, and defaults to `'user'.
+
+
+5.1.1 JSON schema
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  By using the `response-format' argument to `llm-make-chat-prompt', you
+  can ask the LLM to return items according to a specified JSON schema,
+  based on the [JSON Schema Spec].  Not everything is supported, but the
+  most commonly used parts are.  To specify the JSON schema, we use a
+  plist-based approach.  JSON objects are defined with `(:type object
+  :properties (:<var1> <schema1> :<var2> <schema2> ... :<varn>
+  <scheman>) :required (<req var1> ... <req varn>))'.  Arrays are
+  defined with `(:type array :items <schema>)'.  Enums are defined with
+  `(:enum (<val1> <val2> <val3>))'.  You can also request integers,
+  strings, and other types defined by the JSON Schema Spec, by just
+  having `(:type <type>)'.  Typically, LLMs often require the top-level
+  schema object to be an object, and often that all properties on the
+  top-level object must be required.
+
+  Some examples:
+  ┌────
+  │ (llm-chat my-provider (llm-make-chat-prompt
+  │ 				"How many countries are there?  Return the result as JSON."
+  │ 				:response-format
+  │ 				'(:type object :properties (:num (:type integer)) :required (num))))
+  └────
+
+  ┌────
+  │ (llm-chat ash/llm-openai-small (llm-make-chat-prompt
+  │ 				"Which editor is hard to quit?  Return the result as JSON."
+  │ 				:response-format
+  │ 				'(:type object :properties (:editor (:enum ("emacs" "vi" "vscode"))
+  │ 								    :authors (:type array :items (:type string)))
+  │ 					:required (editor authors))))
+  └────
+
+
+[JSON Schema Spec] <https://json-schema.org>
 
 
 5.2 Logging

@@ -65,9 +65,12 @@ Table of Contents
 .. 4. Fine-tuning
 4. Recommended packages
 5. Bug reports
-6. Contributions
-7. Acknowledgments
-8. Indices
+6. Hacking
+.. 1. Creating asynchronous completion commands
+.. 2. Live preview
+7. Contributions
+8. Acknowledgments
+9. Indices
 .. 1. Function index
 .. 2. Concept index
 
@@ -129,6 +132,9 @@ Table of Contents
     • r File registers
     • m Bookmarks
     • p Project
+    • B Project buffers
+    • F Project files
+    • R Project roots
     • Custom [other sources] configured in `consult-buffer-sources'.
   • `consult-buffer-other-window', `consult-buffer-other-frame',
     `consult-buffer-other-tab': Variants of `consult-buffer'.
@@ -174,8 +180,8 @@ Table of Contents
     contents. For quick access use the commands `consult-register-load',
     `consult-register-store' or the built-in Emacs register commands.
   • `consult-register-format': Set `register-preview-function' to this
-    function for an enhanced register formatting. See the [example
-    configuration].
+    function for an enhanced register formatting. Used automatically by
+    `consult-register-window'.
   • `consult-register-window': Replace `register-preview' with this
     function for a better register window. See the [example
     configuration].
@@ -274,7 +280,9 @@ Table of Contents
     a project is found. Otherwise the `default-directory' is
     searched. If `consult-grep' is invoked with prefix argument `C-u M-s
     g', you can specify one or more comma-separated files and
-    directories manually.
+    directories manually. If invoked with two prefix arguments `C-u C-u
+    M-s g', you can first select a project if you are not yet inside a
+    project.
   • `consult-find', `consult-fd', `consult-locate': Find file by
     matching the path against a regexp. Like for `consult-grep', either
     the project root or the current directory is the root directory for
@@ -805,12 +813,16 @@ Table of Contents
 
   The Consult package only provides commands and does not add any
   keybindings or modes. Therefore the package is non-intrusive but
-  requires a little setup effort. In order to use the Consult commands,
-  it is advised to add keybindings for commands which are accessed
-  often. Rarely used commands can be invoked via `M-x'. Feel free to
-  only bind the commands you consider useful to your workflow.  The
-  configuration shown here relies on the `use-package' macro, which is a
-  convenient tool to manage package configurations.
+  requires a little setup effort. While the configuration example is
+  long, it consists essentially of key bindings only, such that the risk
+  of interference with other Emacs functionality is minimized.
+
+  In order to use the Consult commands, it is recommended to add
+  keybindings for commands which are accessed often. Rarely used
+  commands can be invoked via `M-x'.  Feel free to only bind the
+  commands you consider useful to your workflow. The configuration shown
+  here relies on the `use-package' macro, which is a convenient tool to
+  manage package configurations.
 
   *NOTE:* There is the [Consult wiki], where you can contribute
   additional configuration examples.
@@ -879,15 +891,12 @@ Table of Contents
   │   ;; The :init configuration is always executed (Not lazy)
   │   :init
   │ 
-  │   ;; Optionally configure the register formatting. This improves the register
-  │   ;; preview for `consult-register', `consult-register-load',
-  │   ;; `consult-register-store' and the Emacs built-ins.
-  │   (setq register-preview-delay 0.5
-  │ 	register-preview-function #'consult-register-format)
-  │ 
-  │   ;; Optionally tweak the register preview window.
-  │   ;; This adds thin lines, sorting and hides the mode line of the window.
+  │   ;; Tweak the register preview for `consult-register-load',
+  │   ;; `consult-register-store' and the built-in commands.  This improves the
+  │   ;; register formatting, adds thin separator lines, register sorting and hides
+  │   ;; the window mode line.
   │   (advice-add #'register-preview :override #'consult-register-window)
+  │   (setq register-preview-delay 0.5)
   │ 
   │   ;; Use Consult to select xref locations with preview
   │   (setq xref-show-xrefs-function #'consult-xref
@@ -980,7 +989,6 @@ Table of Contents
    consult-ripgrep-args              Command line arguments for ripgrep                  
    consult-themes                    List of themes to be presented for selection        
    consult-widen-key                 Widening key during completion                      
-   consult-yank-rotate               Rotate kill ring                                    
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
@@ -1032,6 +1040,7 @@ Table of Contents
   • `:prompt' set the prompt string
   • `:preview-key' set the preview key, default is `consult-preview-key'
   • `:initial' set the initial input
+  • `:initial-narrow' set the initial narrow key
   • `:default' set the default value
   • `:history' set the history variable symbol
   • `:add-history' add items to the future history, for example symbol
@@ -1107,7 +1116,7 @@ Table of Contents
   model fits best for you.
 
   • The builtin completion UI, which pops up the `*Completions*' buffer.
-  • The builtin `icomplete-vertical-mode' in Emacs 28 or newer.
+  • The builtin `icomplete-vertical-mode'.
   • [mct by Protesilaos Stavrou]: Minibuffer and Completions in Tandem,
     which builds on the default completion UI.
 
@@ -1213,7 +1222,82 @@ Table of Contents
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html>
 
 
-6 Contributions
+6 Hacking
+═════════
+
+6.1 Creating asynchronous completion commands
+─────────────────────────────────────────────
+
+  If you have a completion source that's both dynamic and expensive to
+  generate, `completing-read' may not be the best choice. Instead,
+  `consult--read' serves as a thin wrapper around `completing-read' that
+  provides this functionality. For example, consider the following slow
+  script that splits its input on space:
+
+  ┌────
+  │ #!/usr/bin/env bash
+  │ # simulate work
+  │ sleep .1
+  │ # generate completion candidates
+  │ printf "%s\n" "$*" | tr " " "\n" | sort
+  └────
+
+  Let's assume this script is callable as `testibus hello world'. To
+  have Consult use it for completion, use `consult--async-command':
+
+  ┌────
+  │ (consult--read
+  │  (consult--async-command (lambda (input) (list "testibus" (string-trim input))))
+  │  :prompt "run testibus: ")
+  └────
+
+  If the completion candidates are generated by Lisp instead, use
+  `consult--dynamic-collection':
+
+  ┌────
+  │ (consult--read
+  │  (consult--dynamic-collection
+  │   (lambda (input)
+  │     (sleep-for 0.1) ;; Simulate work
+  │     (sort (split-string (string-trim input) nil t) #'string<)))
+  │  :prompt "run testibus: ")
+  └────
+
+
+6.2 Live preview
+────────────────
+
+  Implementing live preview requires the definition of a state or
+  preview function as defined by `consult--with-preview'. The preview
+  function receives the candidate and some action to perform (e.g.,
+  `'preview'). In its simplest form supporting live preview, it looks
+  something like this:
+
+  ┌────
+  │ (defun testibus--preview (action cand)
+  │   (pcase action
+  │     ('preview
+  │      (with-current-buffer-window " *testibus*" 'action nil
+  │        (erase-buffer)
+  │        (insert (format "input: %s\n" cand))))))
+  └────
+
+  See the docstring of `consult--with-preview' for the lifecycle of the
+  action argument. Once defined, we can use this preview function in
+  `consult--read':
+
+  ┌────
+  │ (consult--read
+  │  (consult--dynamic-collection
+  │   (lambda (input)
+  │     (sleep-for 0.1) ;; Simulate work
+  │     (sort (split-string (string-trim input) nil t) #'string<)))
+  │  :prompt "run testibus: "
+  │  :state #'testibus--preview)
+  └────
+
+
+7 Contributions
 ═══════════════
 
   Consult is a community effort, please participate in the discussions.
@@ -1238,7 +1322,7 @@ Table of Contents
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
 
-7 Acknowledgments
+8 Acknowledgments
 ═════════════════
 
   This package took inspiration from [Counsel] by Oleh Krehel. Some of
@@ -1344,12 +1428,12 @@ Table of Contents
 [Protesilaos Stavrou] <https://protesilaos.com>
 
 
-8 Indices
+9 Indices
 ═════════
 
-8.1 Function index
+9.1 Function index
 ──────────────────
 
 
-8.2 Concept index
+9.2 Concept index
 ─────────────────

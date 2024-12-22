@@ -4,10 +4,9 @@
 
 
 Corfu enhances in-buffer completion with a small completion popup. The
-current candidates are shown in a popup below or above the point. The
-candidates can be selected by moving up and down. Corfu is the
-minimalistic in-buffer completion counterpart of the [Vertico]
-minibuffer UI.
+current candidates are shown in a popup below or above the point, and
+can be selected by moving up and down. Corfu is the minimalistic
+in-buffer completion counterpart of the [Vertico] minibuffer UI.
 
 Corfu is a small package, which relies on the Emacs completion
 facilities and concentrates on providing a polished completion
@@ -20,12 +19,11 @@ user. Completions at point are either provided by commands like
 implement a Capf. Corfu does not include its own completion
 backends. The Emacs built-in Capfs and the Capfs provided by third-party
 programming language packages are often sufficient. Additional Capfs and
-completion utilities are provided by the [Cape] package.
+completion utilities are provided by the separate [Cape] package.
 
-*NOTE*: Corfu uses child frames to show the popup and falls back to the
-default setting of the `completion-in-region-function' on non-graphical
-displays. If you want to use Corfu in the terminal, install the package
-[corfu-terminal], which provides an alternative overlay-based display.
+*NOTE*: Corfu relies on child frames to show the popup. Emacs 31
+supports child frames also for terminal Emacs. On older Emacs versions,
+you can use the [corfu-terminal] package.
 
 Table of Contents
 ─────────────────
@@ -35,12 +33,12 @@ Table of Contents
 3. Key bindings
 4. Configuration
 .. 1. Auto completion
-.. 2. Completing in the minibuffer
-.. 3. Completing in the Eshell or Shell
-.. 4. Orderless completion
-.. 5. TAB-only completion
-.. 6. TAB-and-Go completion
-.. 7. Expanding to the common candidate prefix with TAB
+.. 2. Buffer-local/Corfu-only completion styles
+.. 3. Completing in the minibuffer
+.. 4. Completing in the Eshell or Shell
+.. 5. Orderless completion
+.. 6. TAB-only completion
+.. 7. TAB-and-Go completion
 .. 8. Transfer completion to the minibuffer
 5. Extensions
 6. Complementary packages
@@ -59,12 +57,13 @@ Table of Contents
 1 Features
 ══════════
 
-  • Timer-based auto-completions (/off/ by default, set `corfu-auto').
+  • Timer-based auto-completions (/off/ by default).
   • Popup display with scrollbar indicator and arrow key navigation.
   • The popup can be summoned explicitly by pressing `TAB' at any time.
   • The current candidate is inserted with `TAB' and selected with
     `RET'.
-  • Candidate sorting by prefix, string length and alphabetically.
+  • Sorting by prefix, string length and alphabetically, optionally by
+    history.
   • The selected candidate is previewed (configurable via
     `corfu-preview-current').
   • The selected candidate is automatically committed on further input
@@ -72,11 +71,11 @@ Table of Contents
   • Supports the [Orderless] completion style. The filter string can
     contain arbitrary characters, after inserting a space via `M-SPC'
     (configurable via `corfu-quit-at-boundary' and `corfu-separator').
-  • Lazy completion candidate highlighting for performance.
+  • Lazy candidate highlighting for performance.
   • Support for candidate annotations (`annotation-function',
     `affixation-function').
   • Deprecated candidates are displayed as crossed out.
-  • Icons can be provided by an external package via margin formatter
+  • Icons are provided by external packages via margin formatter
     functions.
   • Rich set of extensions: Quick keys, Index keys, Sorting by history,
     Candidate documentation in echo area, popup or separate buffer.
@@ -89,10 +88,10 @@ Table of Contents
 ══════════════
 
   Corfu is available from [GNU ELPA]. You can install it directly via
-  `M-x package-install RET corfu RET'.  After installation, activate the
-  global minor mode with `M-x global-corfu-mode RET'.  Set the variable
-  `corfu-auto' to t in order to enable auto completion. For manual
-  completion press `M-TAB' (or `TAB') within a buffer.
+  `M-x package-install RET corfu RET'. After installation, activate the
+  global minor mode with `M-x global-corfu-mode RET'. For completion
+  press `M-TAB' (or `TAB') within a buffer. Auto completion is disabled
+  by default for safety and unobtrusiveness.
 
 
 [GNU ELPA] <https://elpa.gnu.org/packages/corfu.html>
@@ -136,9 +135,14 @@ Table of Contents
   precisely to your requirements. However in order to quickly try out
   the Corfu completion package, it should be sufficient to activate
   `global-corfu-mode'. You can experiment with manual completion for
-  example in an Elisp buffer or in an Eshell or Shell buffer. For auto
-  completion, set `corfu-auto' to t before turning on
-  `global-corfu-mode'.
+  example in an Elisp buffer or in an Eshell or Shell buffer.
+
+  Auto completion is disabled by default in Corfu. Note that completion
+  can be vulnerable to arbitrary code execution in untrusted files. In
+  particular the `elisp-completion-at-point' completion function
+  performs macro expansion and code evaluation. Auto completion can be
+  enabled by setting `corfu-auto' to t locally or globally before
+  enabling the local `corfu-mode' or the `global-corfu-mode'.
 
   Here is an example configuration:
 
@@ -147,14 +151,11 @@ Table of Contents
   │   ;; Optional customizations
   │   ;; :custom
   │   ;; (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
-  │   ;; (corfu-auto t)                 ;; Enable auto completion
-  │   ;; (corfu-separator ?\s)          ;; Orderless field separator
   │   ;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
   │   ;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
   │   ;; (corfu-preview-current nil)    ;; Disable current candidate preview
   │   ;; (corfu-preselect 'prompt)      ;; Preselect the prompt
   │   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
-  │   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
   │ 
   │   ;; Enable Corfu only for certain modes. See also `global-corfu-modes'.
   │   ;; :hook ((prog-mode . corfu-mode)
@@ -177,13 +178,13 @@ Table of Contents
   │   ;; `completion-at-point' is often bound to M-TAB.
   │   (tab-always-indent 'complete)
   │ 
-  │   ;; Emacs 30 and newer: Disable Ispell completion function. As an alternative,
-  │   ;; try `cape-dict'.
+  │   ;; Emacs 30 and newer: Disable Ispell completion function.
+  │   ;; Try `cape-dict' as an alternative.
   │   (text-mode-ispell-word-completion nil)
   │ 
-  │   ;; Emacs 28 and newer: Hide commands in M-x which do not apply to the current
-  │   ;; mode.  Corfu commands are hidden, since they are not used via M-x. This
-  │   ;; setting is useful beyond Corfu.
+  │   ;; Hide commands in M-x which do not apply to the current mode.  Corfu
+  │   ;; commands are hidden, since they are not used via M-x. This setting is
+  │   ;; useful beyond Corfu.
   │   (read-extended-command-predicate #'command-completion-default-include-p))
   └────
 
@@ -207,18 +208,17 @@ Table of Contents
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'tags-table-mode))
   └────
 
-  If you start to configure the package more deeply, I recommend to give
+  If you start to configure Corfu more thoroughly, I recommend to give
   the Orderless completion style a try for filtering. Orderless
-  completion is different from the familiar prefix TAB completion. Corfu
-  can be used with the default completion styles. The use of Orderless
-  is not a necessity.
+  completion offers more flexible filtering than the default completion
+  styles. Note that Orderless is not a necessity; Corfu can be used just
+  as well with the default completion styles.
 
   ┌────
   │ ;; Optionally use the `orderless' completion style.
   │ (use-package orderless
   │   :custom
-  │   ;; Configure a custom style dispatcher (see the Consult wiki)
-  │   ;; (orderless-style-dispatchers '(+orderless-dispatch))
+  │   ;; (orderless-style-dispatchers '(orderless-affix-dispatch))
   │   ;; (orderless-component-separator #'orderless-escapable-split-on-space)
   │   (completion-styles '(orderless basic))
   │   (completion-category-defaults nil)
@@ -228,13 +228,11 @@ Table of Contents
   The `basic' completion style is specified as fallback in addition to
   `orderless' in order to ensure that completion commands which rely on
   dynamic completion tables, e.g., `completion-table-dynamic' or
-  `completion-table-in-turn', work correctly. See `+orderless-dispatch'
-  in the [Consult wiki] for an advanced Orderless style
-  dispatcher. Additionally enable `partial-completion' for file path
-  expansion. `partial-completion' is important for file wildcard
-  support. Multiple files can be opened at once with `find-file' if you
-  enter a wildcard. You may also give the `initials' completion style a
-  try.
+  `completion-table-in-turn', work correctly. Additionally enable
+  `partial-completion' for file path expansion.  `partial-completion' is
+  important for file wildcard support. Multiple files can be opened at
+  once with `find-file' if you enter a wildcard. You may also give the
+  `initials' completion style a try.
 
   See also the [Corfu Wiki] and the [Cape manual] for additional Capf
   configuration tips. For more general documentation read the chapter
@@ -244,8 +242,6 @@ Table of Contents
 
 
 [Cape] <https://github.com/minad/cape>
-
-[Consult wiki] <https://github.com/minad/consult/wiki>
 
 [Corfu Wiki] <https://github.com/minad/corfu/wiki>
 
@@ -260,10 +256,15 @@ Table of Contents
 4.1 Auto completion
 ───────────────────
 
-  Auto completion is disabled by default, but can be enabled by setting
-  `corfu-auto' to t. Furthermore you may want to configure Corfu to quit
-  completion eagerly, such that the completion popup stays out of your
-  way when it appeared unexpectedly.
+  Auto completion is disabled by default for safety and
+  unobtrusiveness. Note that completion can be vulnerable to arbitrary
+  code execution. Auto completion can be enabled by setting `corfu-auto'
+  to t. Only enable auto completion locally in trusted buffers or
+  globally if you edit trusted files only.
+
+  You may want to configure Corfu to quit completion eagerly, such that
+  the completion popup stays out of your way when it appeared
+  unexpectedly.
 
   ┌────
   │ ;; Enable auto completion and configure quitting
@@ -279,25 +280,61 @@ Table of Contents
 
   In case you like auto completion settings, where the completion popup
   appears immediately, better use a cheap completion style like `basic',
-  which performs prefix filtering. In this case Corfu completion should
+  which performs prefix filtering. See the next section about setting
+  Corfu-only completion styles. In this case Corfu completion should
   still be fast in buffers with efficient completion backends. You can
   try the following settings in an Elisp buffer or the Emacs scratch
   buffer. Note that such settings can slow down Emacs due to the high
   load on the Lisp runtime and garbage collector.
 
   ┌────
-  │ (setq-local corfu-auto        t
-  │ 	    corfu-auto-delay  0 ;; TOO SMALL - NOT RECOMMENDED
-  │ 	    corfu-auto-prefix 1 ;; TOO SMALL - NOT RECOMMENDED
-  │ 	    completion-styles '(basic))
+  │ (setq corfu-auto        t
+  │       corfu-auto-delay  0  ;; TOO SMALL - NOT RECOMMENDED!
+  │       corfu-auto-prefix 0) ;; TOO SMALL - NOT RECOMMENDED!
+  │ 
+  │ (add-hook 'corfu-mode-hook
+  │ 	  (lambda ()
+  │ 	    ;; Settings only for Corfu
+  │ 	    (setq-local completion-styles '(basic)
+  │ 			completion-category-overrides nil
+  │ 			completion-category-defaults nil)))
+  └────
+
+
+4.2 Buffer-local/Corfu-only completion styles
+─────────────────────────────────────────────
+
+  Sometimes it makes sense to use separate completion style settings for
+  minibuffer completion and in-buffer Corfu completion. For example
+  inside the minibuffer you may prefer advanced Orderless completion,
+  while for Corfu, faster prefix completion is needed or literal-only
+  completion is sufficient.
+
+  This matters in particular if you use aggressive auto completion
+  settings, where the completion popup appears immediately. Then a cheap
+  completion style like `basic' should be used, which performs prefix
+  filtering only.
+
+  Such Corfu-only configurations are possible by setting the
+  `completion-styles' variables buffer-locally, as follows:
+
+  ┌────
+  │ (orderless-define-completion-style orderless-literal-only
+  │   (orderless-style-dispatchers nil)
+  │   (orderless-matching-styles '(orderless-literal)))
+  │ 
+  │ (add-hook 'corfu-mode-hook
+  │ 	  (lambda ()
+  │ 	    (setq-local completion-styles '(orderless-literal-only basic)
+  │ 			completion-category-overrides nil
+  │ 			completion-category-defaults nil)))
   └────
 
   If you want to combine fast prefix filtering and Orderless filtering
   you can still do that by defining a custom Orderless completion style
   via `orderless-define-completion-style'. We use a custom style
   dispatcher, which enables efficient prefix filtering for input shorter
-  than 4 characters. Note that such a setup is advanced. Please refer to
-  the Orderless documentation and source code for further details.
+  than 4 characters.
 
   ┌────
   │ (defun orderless-fast-dispatch (word index total)
@@ -308,19 +345,25 @@ Table of Contents
   │   (orderless-style-dispatchers '(orderless-fast-dispatch))
   │   (orderless-matching-styles '(orderless-literal orderless-regexp)))
   │ 
-  │ (setq-local corfu-auto        t
-  │ 	    corfu-auto-delay  0 ;; TOO SMALL - NOT RECOMMENDED
-  │ 	    corfu-auto-prefix 1 ;; TOO SMALL - NOT RECOMMENDED
-  │ 	    completion-styles '(orderless-fast basic))
+  │ (setq corfu-auto        t
+  │       corfu-auto-delay  0  ;; TOO SMALL - NOT RECOMMENDED
+  │       corfu-auto-prefix 0) ;; TOO SMALL - NOT RECOMMENDED
+  │ 
+  │ (add-hook 'corfu-mode-hook
+  │ 	  (lambda ()
+  │ 	    (setq-local completion-styles '(orderless-fast basic)
+  │ 			completion-category-overrides nil
+  │ 			completion-category-defaults nil)))
   └────
 
 
-4.2 Completing in the minibuffer
+4.3 Completing in the minibuffer
 ────────────────────────────────
 
   Corfu can be used for completion in the minibuffer, since it relies on
-  child frames to display the candidates. The Corfu popup can be shown
-  even if it doesn't fully fit inside the minibuffer.
+  child frames to display the candidates. The Corfu popup floats on top
+  of the Emacs frame and can be shown even if it doesn't fit inside the
+  minibuffer.
 
   `global-corfu-mode' activates `corfu-mode' in the minibuffer if the
   variable `global-corfu-minibuffer' is non-nil. In order to avoid
@@ -346,7 +389,7 @@ Table of Contents
   └────
 
 
-4.3 Completing in the Eshell or Shell
+4.4 Completing in the Eshell or Shell
 ─────────────────────────────────────
 
   When completing in the Eshell I recommend conservative local settings
@@ -354,10 +397,9 @@ Table of Contents
   to widely used shells like Bash, Zsh or Fish.
 
   ┌────
-  │ (add-hook 'eshell-mode-hook
-  │ 	  (lambda ()
-  │ 	    (setq-local corfu-auto nil)
-  │ 	    (corfu-mode)))
+  │ (add-hook 'eshell-mode-hook (lambda ()
+  │ 			      (setq-local corfu-auto nil)
+  │ 			      (corfu-mode)))
   └────
 
   When pressing `RET' while the Corfu popup is visible, the
@@ -401,7 +443,7 @@ Table of Contents
 [Cape] <https://github.com/minad/cape>
 
 
-4.4 Orderless completion
+4.5 Orderless completion
 ────────────────────────
 
   [Orderless] is an advanced completion style that supports
@@ -470,7 +512,7 @@ Table of Contents
 [Orderless] <https://github.com/oantolin/orderless>
 
 
-4.5 TAB-only completion
+4.6 TAB-only completion
 ───────────────────────
 
   By default, Corfu steals both the `RET' and `TAB' keys, when the Corfu
@@ -487,24 +529,22 @@ Table of Contents
   │   (corfu-auto t)               ;; Enable auto completion
   │   (corfu-preselect 'directory) ;; Select the first candidate, except for directories
   │ 
-  │   ;; Free the RET key for less intrusive behavior.
-  │   :bind
-  │   (:map corfu-map
-  │ 	;; Option 1: Unbind RET completely
-  │ 	;;; ("RET" . nil)
-  │ 	;; Option 2: Use RET only in shell modes
-  │ 	("RET" . (menu-item
-  │ 		  "" nil :filter
-  │ 		  (lambda (&optional _)
-  │ 		    (and (or (derived-mode-p 'eshell-mode) (derived-mode-p 'comint-mode))
-  │ 			 #'corfu-send)))))
-  │ 
   │   :init
-  │   (global-corfu-mode))
+  │   (global-corfu-mode)
+  │ 
+  │   :config
+  │   ;; Free the RET key for less intrusive behavior.
+  │   ;; Option 1: Unbind RET completely
+  │   ;; (keymap-unset corfu-map "RET")
+  │   ;; Option 2: Use RET only in shell modes
+  │   (keymap-set corfu-map "RET" `( menu-item "" nil :filter
+  │ 				 ,(lambda (&optional _)
+  │ 				    (and (derived-mode-p 'eshell-mode 'comint-mode)
+  │ 					 #'corfu-send)))))
   └────
 
 
-4.6 TAB-and-Go completion
+4.7 TAB-and-Go completion
 ─────────────────────────
 
   You may be interested in configuring Corfu in TAB-and-Go
@@ -531,33 +571,6 @@ Table of Contents
   │ 
   │   :init
   │   (global-corfu-mode))
-  └────
-
-
-4.7 Expanding to the common candidate prefix with TAB
-─────────────────────────────────────────────────────
-
-  If you leave the default configuration of the completion styles, such
-  that the `basic' completion style is still present, then pressing
-  `M-TAB' (`corfu-expand') will expand the current input to the common
-  prefix of all completion candidates. In contrast, `TAB'
-  (`corfu-complete') behaves differently and expands input to the
-  currently selected candidate.
-
-  If you use the `orderless' completion style, then expansion works
-  differently by default. Orderless only expands to single matching
-  candidates, since due to its multi-component input, there does not
-  necessarily exist an expansion to a common candidate prefix. However
-  it is possible to define a separate `tab' completion style. The `tab'
-  completion style will only take over `TAB' completion (if prefix
-  expansion is possible), but besides that won't affect Orderless
-  candidate filtering.
-
-  ┌────
-  │ (add-to-list 'completion-styles-alist
-  │ 	     '(tab completion-basic-try-completion ignore
-  │ 	       "Completion style which provides TAB completion only."))
-  │ (setq completion-styles '(tab orderless basic)))
   └────
 
 
@@ -649,14 +662,14 @@ Table of Contents
   already provide a Capf out of the box. Nevertheless you may want to
   look into complementary packages to enhance your setup.
 
-  • [corfu-terminal]: The corfu-terminal package provides an
-    overlay-based display for Corfu, such that you can use Corfu in
-    terminal Emacs.
-
   • [corfu-candidate-overlay]: Shows as-you-type auto-suggestion
     candidate overlay with a visual indication of whether there are many
     or exactly one candidate available (works only with `corfu-auto'
     disabled).
+
+  • [corfu-terminal]: Child frames are supported by terminal Emacs 31
+    out of the box. On older Emacs versions, this package provides an
+    overlay-based popup display.
 
   • [Orderless]: Corfu supports completion styles, including the
     advanced `orderless' completion style, where the filter expressions
@@ -669,7 +682,7 @@ Table of Contents
     provides the `cape-company-to-capf' adapter to reuse Company
     backends in Corfu.
 
-  • [nerd-icons-corfu], [kind-icon]: Icons are supported by Corfu via
+  • [kind-icon], [nerd-icons-corfu]: Icons are supported by Corfu via
     external packages. The nerd-icons-corfu package relies on the Nerd
     icon font, which is even supported on terminal, while kind-icon uses
     SVGs from monochromatic icon sets.
@@ -681,18 +694,18 @@ Table of Contents
     package. Vertico is the minibuffer completion counterpart of Corfu.
 
 
-[corfu-terminal] <https://codeberg.org/akib/emacs-corfu-terminal>
-
 [corfu-candidate-overlay]
 <https://code.bsdgeek.org/adam/corfu-candidate-overlay>
+
+[corfu-terminal] <https://codeberg.org/akib/emacs-corfu-terminal>
 
 [Orderless] <https://github.com/oantolin/orderless>
 
 [Cape] <https://github.com/minad/cape>
 
-[nerd-icons-corfu] <https://github.com/LuigiPiucco/nerd-icons-corfu>
-
 [kind-icon] <https://github.com/jdtsmith/kind-icon>
+
+[nerd-icons-corfu] <https://github.com/LuigiPiucco/nerd-icons-corfu>
 
 [Tempel] <https://github.com/minad/tempel>
 
@@ -709,12 +722,13 @@ Table of Contents
     completion backends, following its own API, which are incompatible
     with the Emacs completion infrastructure. Company provides an
     adapter `company-capf' to handle Capfs as a Company backend. As a
-    result of this design, Company is a more complex package than
-    Corfu. Company by default uses overlays for the popup in contrast to
-    the child frames used by Corfu. Overall both packages work well, but
-    Company integrates less tightly with Emacs. The `completion-styles'
-    support is more limited and the `completion-at-point' command and
-    the `completion-in-region' function do not invoke Company.
+    result of this design, Company is a more complex package than Corfu,
+    three times as large, even without backends. Company by default uses
+    overlays for the popup in contrast to the child frames used by
+    Corfu. Overall both packages work well, but Company integrates less
+    tightly with Emacs. The `completion-styles' support is more limited
+    and the `completion-at-point' command and the `completion-in-region'
+    function do not invoke Company.
 
   • [consult-completion-in-region]: The Consult package provides the
     function `consult-completion-in-region' which can be set as
@@ -761,6 +775,10 @@ Table of Contents
   ┌────
   │ (setq completion-at-point-functions (list (cape-capf-debug #'cape-dict)))
   └────
+
+  Note that you will sometimes find crashes inside Capfs. Such issues
+  are bugs in the Capfs must be fixed there. They cannot be worked
+  around in Corfu.
 
 
 9 Contributions

@@ -102,7 +102,7 @@ Table of Contents
   │ (use-package cape
   │   ;; Bind prefix keymap providing all Cape commands under a mnemonic key.
   │   ;; Press C-c p ? to for help.
-  │   :bind ("C-c p" . cape-prefix-map) ;; Alternative keys: M-p, M-+, ...
+  │   :bind ("C-c p" . cape-prefix-map) ;; Alternative key: M-<tab>, M-p, M-+
   │   ;; Alternatively bind Cape commands individually.
   │   ;; :bind (("C-c p d" . cape-dabbrev)
   │   ;;        ("C-c p h" . cape-history)
@@ -303,6 +303,7 @@ Table of Contents
     ensure that it does not modify the buffer.
   • `cape-capf-silent', `cape-wrap-silent': Silence Capf messages and
     errors.
+  • `cape-capf-sort', `cape-wrap-sort': Add sort function to a Capf.
   • `cape-capf-super', `cape-wrap-super': Merge multiple Capfs into a
     Super-Capf.
 
@@ -312,8 +313,8 @@ Table of Contents
 
   ┌────
   │ ;; Example 1: Sanitize the `pcomplete-completions-at-point' Capf.  The Capf has
-  │ ;; undesired side effects on Emacs 28 and earlier.  These advices are not needed
-  │ ;; on Emacs 29 and newer.
+  │ ;; undesired side effects on Emacs 28.  These advices are not needed on Emacs 29
+  │ ;; and newer.
   │ (when (< emacs-major-version 29)
   │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
   │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
