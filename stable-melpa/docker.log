@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/Silex/docker.el
 
 Updating /mnt/store/melpa/working/docker/
-Checking out ec2391a8e3404958cefee3dda23b2c89dcf807a2
+Checking out 813c00410b40917cbfe7e8227ebd4fd60a027937
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/dockerfPpwLl/docker-20241111.859
+  to /tmp/docker9dKAU5/docker-20241223.1023
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-context.el -> docker-context.el
@@ -19,22 +19,24 @@ Copying files (->) and directories (=>)
     docker-utils.el -> docker-utils.el
     docker-volume.el -> docker-volume.el
     docker.el -> docker.el
-Created docker-20241111.859.tar containing:
-  docker-20241111.859/
-  docker-20241111.859/docker-compose.el
-  docker-20241111.859/docker-container.el
-  docker-20241111.859/docker-context.el
-  docker-20241111.859/docker-core.el
-  docker-20241111.859/docker-faces.el
-  docker-20241111.859/docker-group.el
-  docker-20241111.859/docker-image.el
-  docker-20241111.859/docker-network.el
-  docker-20241111.859/docker-pkg.el
-  docker-20241111.859/docker-process.el
-  docker-20241111.859/docker-utils.el
-  docker-20241111.859/docker-volume.el
-  docker-20241111.859/docker.el
+Created docker-20241223.1023.tar containing:
+  docker-20241223.1023/
+  docker-20241223.1023/docker-compose.el
+  docker-20241223.1023/docker-container.el
+  docker-20241223.1023/docker-context.el
+  docker-20241223.1023/docker-core.el
+  docker-20241223.1023/docker-faces.el
+  docker-20241223.1023/docker-group.el
+  docker-20241223.1023/docker-image.el
+  docker-20241223.1023/docker-network.el
+  docker-20241223.1023/docker-pkg.el
+  docker-20241223.1023/docker-process.el
+  docker-20241223.1023/docker-utils.el
+  docker-20241223.1023/docker-volume.el
+  docker-20241223.1023/docker.el
  ✓ Success:
-  2024-12-23T06:20:04+0000  docker-20241111.859.entry
-  2024-12-23T06:20:03+0000  docker-20241111.859.tar
-Built docker in 1.343s, finished at 2024-12-23T06:20:04+0000
+  2024-12-23T08:41:13+0000  docker-20241111.859.entry
+  2024-12-23T08:41:12+0000  docker-20241111.859.tar
+  2024-12-23T11:03:07+0000  docker-20241223.1023.entry
+  2024-12-23T11:03:07+0000  docker-20241223.1023.tar
+Built docker in 1.093s, finished at 2024-12-23T11:03:07+0000
