@@ -12,10 +12,10 @@ much intervention.  Jinx can be used completely on its own, but can
 also safely co-exist with Emacs's built-in spell-checker Ispell.
 
 Jinx's high performance and low resource usage comes from directly
-calling the widely-used API of the Enchant library, see
+calling the API of the Enchant library, see
 https://rrthomas.github.io/enchant/.  Jinx automatically compiles
 jinx-mod.c and loads the dynamic module at startup.  By binding
-directly to the native Enchant API, Jinx avoids slower inter-process
-communication.
+directly to the native Enchant API, Jinx avoids slower
+inter-process communication.
 
 See the manual for further information.

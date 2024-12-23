@@ -1015,6 +1015,7 @@
   (dianyou :url "https://github.com/redguardtoo/dianyou")
   (diary-manager :url "https://github.com/radian-software/diary-manager")
   (dic-lookup-w3m :url "https://github.com/emacsattic/dic-lookup-w3m")
+  (dicom :url "https://github.com/minad/dicom")
   (dictcc :url "https://github.com/martenlienen/dictcc.el")
   (dictionary :url "https://github.com/myrkr/dictionary-el")
   (didyoumean :url "https://gitlab.com/kisaragi-hiu/didyoumean.el")
