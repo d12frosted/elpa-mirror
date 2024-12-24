@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/karthink/gptel
 
 Updating /mnt/store/melpa/working/gptel/
-Checking out 9b454b5ef3a74aa4f9fef7a7786af9926f16ea7c
+Checking out c165342f436b4090bfddc4aab3d54a2843d206e7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptelvi9Z6Y/gptel-20241222.516
+  to /tmp/gptelJ319BY/gptel-20241224.1611
     gptel-anthropic.el -> gptel-anthropic.el
     gptel-context.el -> gptel-context.el
     gptel-curl.el -> gptel-curl.el
@@ -19,22 +19,24 @@ Copying files (->) and directories (=>)
     gptel-rewrite.el -> gptel-rewrite.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20241222.516.tar containing:
-  gptel-20241222.516/
-  gptel-20241222.516/gptel-anthropic.el
-  gptel-20241222.516/gptel-context.el
-  gptel-20241222.516/gptel-curl.el
-  gptel-20241222.516/gptel-gemini.el
-  gptel-20241222.516/gptel-kagi.el
-  gptel-20241222.516/gptel-ollama.el
-  gptel-20241222.516/gptel-openai.el
-  gptel-20241222.516/gptel-org.el
-  gptel-20241222.516/gptel-pkg.el
-  gptel-20241222.516/gptel-privategpt.el
-  gptel-20241222.516/gptel-rewrite.el
-  gptel-20241222.516/gptel-transient.el
-  gptel-20241222.516/gptel.el
+Created gptel-20241224.1611.tar containing:
+  gptel-20241224.1611/
+  gptel-20241224.1611/gptel-anthropic.el
+  gptel-20241224.1611/gptel-context.el
+  gptel-20241224.1611/gptel-curl.el
+  gptel-20241224.1611/gptel-gemini.el
+  gptel-20241224.1611/gptel-kagi.el
+  gptel-20241224.1611/gptel-ollama.el
+  gptel-20241224.1611/gptel-openai.el
+  gptel-20241224.1611/gptel-org.el
+  gptel-20241224.1611/gptel-pkg.el
+  gptel-20241224.1611/gptel-privategpt.el
+  gptel-20241224.1611/gptel-rewrite.el
+  gptel-20241224.1611/gptel-transient.el
+  gptel-20241224.1611/gptel.el
  ✓ Success:
   2024-12-24T15:40:16+0000  gptel-20241222.516.entry
   2024-12-24T15:40:16+0000  gptel-20241222.516.tar
-Built gptel in 2.392s, finished at 2024-12-24T15:40:16+0000
+  2024-12-24T18:02:07+0000  gptel-20241224.1611.entry
+  2024-12-24T18:02:06+0000  gptel-20241224.1611.tar
+Built gptel in 3.737s, finished at 2024-12-24T18:02:07+0000
