@@ -23,7 +23,7 @@
 ────────────────
 
   You can install `mastodon.el' from ELPA, MELPA, or directly from this
-  repo. It is also available as a GUIX package.
+  repo.  It is also available as a GUIX package.
 
 
 1.1.1 ELPA
@@ -57,8 +57,8 @@
 1.1.3 Repo
 ╌╌╌╌╌╌╌╌╌╌
 
-  Clone this repository and add the lisp directory to your load path.
-  Then, require it and go.
+  Clone this repository and add the lisp directory to your load
+  path. Then, require it and go.
 
   ┌────
   │ (add-to-list 'load-path "/path/to/mastodon.el/lisp")
@@ -155,7 +155,7 @@
 
   Opens a `*mastodon-home*' buffer in the major mode and displays
   toots. If your credentials are not yet saved, you will be prompted for
-  email and password.  The app registration process will take place if
+  email and password. The app registration process will take place if
   your `mastodon-token-file' does not contain `:client_id' and
   `:client_secret'.
 
@@ -173,8 +173,8 @@
                            *Timeline actions*                                                              
    `n'                     Go to next item (toot, notification, user)                                      
    `p'                     Go to previous item (toot, notification, user)                                  
-   `M-n=/=<tab>'           Go to the next interesting thing that has an action                             
-   `M-p=/=<S-tab>'         Go to the previous interesting thing that has an action                         
+   `M-n/<tab>'             Go to the next interesting thing that has an action                             
+   `M-p/<S-tab>'           Go to the previous interesting thing that has an action                         
    `F'                     Open federated timeline (1 prefix arg: hide-replies, 2 prefix args: media only) 
    `H'                     Open home timeline  (1 prefix arg: hide-replies)                                
    `L'                     Open local timeline (1 prefix arg: hide-replies, 2 prefix args: media only)     
@@ -232,6 +232,7 @@
                            *Notifications view*                                                            
    `a', `j'                accept/reject follow request                                                    
    `C-k'                   clear notification at point                                                     
+   `C-c C-c'               cycle between notification types                                                
                            see `mastodon-notifications--get-*' functions for filtered views                
   ─────────────────────────────────────────────────────────────────────────────────────────────────────────
                            *Quitting*                                                                      
@@ -251,7 +252,7 @@
   ───────────────────────────────────────────
    `(🔁)' (or `(B)')  I boosted this toot    
    `(⭐)' (or `(F)')  I favourited this toot 
-   `(🔖)' (or (`K'))  I bookmarked this toot 
+   `(🔖)' (or `(K)')  I bookmarked this toot 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
@@ -414,9 +415,10 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Mastodon from 4.3 supports grouped notifications. These are
-  implemented by `mastodon.el'. If you are on an instance that doesn't
-  implement grouped notifications, set `mastodon-group-notifications' to
-  nil.
+  implemented by `mastodon.el' but disabled by default out of
+  consideration to users on instances that don't support them. If you
+  are on an instance that implements grouped notifications, set
+  `mastodon-group-notifications' to `t' to enable them.
 
 
 1.2.6 Customization
@@ -443,6 +445,7 @@
 
   • Nofitication options:
     • Display user's profile note in follow requests
+    • Group notifications
 
 
 1.2.7 Commands and variables index
@@ -495,7 +498,7 @@
   Works for federated, local, and home timelines and for
   notifications. It's a little touchy, one thing to avoid is trying to
   load a timeline more than once at a time. It can go off the rails a
-  bit, but it's still pretty cool. The current maintainer of
+  bit, but it's still pretty cool.  The current maintainer of
   `mastodon.el' is unable to debug or improve this feature.
 
   To enable, it, add `(require 'mastodon-async)' to your `init.el'. Then
@@ -552,9 +555,9 @@
 ────────────────
 
   Hard dependencies (should all install with `mastodon.el'):
-  • `request' (for uploading attachments), [emacs-request]
-  • `persist' for storing some settings across sessions
-  • `tp.el' for transient menus
+  • `request' (for uploading attachments, [emacs-request])
+  • `persist' (for storing some settings across sessions, [persist])
+  • `tp.el' (for transient menus, [tp.el])
 
   Optional dependencies (install yourself, `mastodon.el' can use them):
   • `emojify' to use custom emoji (else we use builtin `emoji.el')
@@ -563,6 +566,10 @@
 
 
 [emacs-request] <https://github.com/tkf/emacs-request>
+
+[persist] <https://elpa.gnu.org/packages/persist.html>
+
+[tp.el] <https://codeberg.org/martianh/tp.el>
 
 
 1.4 Network compatibility
@@ -575,6 +582,7 @@
   • Pleroma ([pleroma.social])
   • Akkoma ([akkoma.social])
   • Gotosocial ([gotosocial.org])
+  • Sharkey ([joinsharkey.org])
 
   It does not support the non-Mastodon API servers Misskey
   ([misskey.io]), Firefish ([joinfirefish.org], formerly Calkey) and
@@ -590,6 +598,8 @@
 [akkoma.social] <https://akkoma.social/>
 
 [gotosocial.org] <https://gotosocial.org/>
+
+[joinsharkey.org] <https://joinsharkey.org>
 
 [misskey.io] <https://misskey.io/>
 
@@ -642,9 +652,8 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   • This library uses an unconvential double dash (`--') between file
-    namespaces and function names, which contradicts normal Elisp
-    style. This needs to be respected until the whole library is
-    changed.
+    namespaces and function names, which contradicts normal Elisp style.
+    This needs to be respected until the whole library is changed.
   • Use `aggressive-indent-mode' or similar to keep your code indented.
   • Single spaces end sentences in docstrings.
   • There's no need for a blank line after the first docstring line (one
