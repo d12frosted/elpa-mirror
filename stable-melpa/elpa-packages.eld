@@ -4792,6 +4792,7 @@
   (select-themes :url "https://github.com/jasonm23/emacs-select-themes")
   (selected :url "https://github.com/Kungsgeten/selected.el")
   (selected-window-accent-mode :url "https://github.com/captainflasmr/selected-window-accent-mode")
+  (selected-window-contrast :url "https://codeberg.org/Anoncheg/selected-window-contrast")
   (selectric-mode :url "https://github.com/rbanffy/selectric-mode")
   (selectrum :url "https://github.com/radian-software/selectrum")
   (selectrum-prescient :url "https://github.com/radian-software/prescient.el")
