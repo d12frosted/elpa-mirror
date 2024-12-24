@@ -131,7 +131,7 @@ prefixes as well as in `magit-blame-read-only-map'.  Please refer to
 
 You can adjust what bindings you want to have configured by changing values
 of `difftastic-bindings-alist', `difftastic-bindings-prefixes', and
-`difftastic-bindings-keymaps'. You need to turn the
+`difftastic-bindings-keymaps'.  You need to turn the
 `difftastic-bindings-mode' off and on again to apply the changes.
 
 The `difftastic-bindings=mode' was designed to have minimal dependencies
