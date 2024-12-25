@@ -2617,6 +2617,7 @@
   (hyperlist-mode :url "https://github.com/vifon/hyperlist-mode")
   (hyperspace :url "https://codeberg.org/emacs-weirdware/hyperspace")
   (hyperstitional-themes :url "https://github.com/precompute/hyperstitional-themes")
+  (hyprlang-ts-mode :url "https://github.com/Nathan-Melaku/hyprlang-ts-mode")
   (i-ching :url "https://github.com/zzkt/i-ching")
   (i2b2-mode :url "https://github.com/danlamanna/i2b2-mode")
   (i3bar :url "https://github.com/Stebalien/i3bar.el")

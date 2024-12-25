@@ -4289,15 +4289,15 @@
 		    ("Tassilo Horn" . "tsdh@gnu.org"))
 		   (:commit . "c743c47b7b4326c411470ba98410b7bfe3685edc"))])
  (sxhkdrc-mode .
-	       [(1 0 0)
+	       [(1 1 0)
 		((emacs
 		  (27 1)))
 		"Major mode for sxhkdrc files (Simple X Hot Key Daemon)" tar
-		((:url . "https://git.sr.ht/~protesilaos/sxhkdrc-mode")
-		 (:maintainer "Protesilaos Stavrou General Issues" . "~protesilaos/general-issues@lists.sr.ht")
+		((:url . "https://github.com/protesilaos/sxhkdrc-mode")
+		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "112970f8d2355c0cfa0269bb92cd1ecc18790bc9"))])
+		 (:commit . "82816999f82a5ed5bc7c26d8ff95dbb4833dc011"))])
  (system-packages .
 		  [(1 0 13)
 		   ((emacs
