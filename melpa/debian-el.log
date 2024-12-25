@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
-Checking out 89e0fdfb0c6a387c1fd693b34ee9608d758d0742
+Checking out 874d25e0f647852d4dd0e499e02fa1d451af59bb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/debian-el/
-  to /tmp/debian-elDQ5Str/debian-el-20241026.559
+  to /tmp/debian-elfjcJG1/debian-el-20241225.1207
     apt-sources.el -> apt-sources.el
     apt-utils.el -> apt-utils.el
     deb-view.el -> deb-view.el
@@ -17,20 +17,20 @@ Copying files (->) and directories (=>)
     preseed.el -> preseed.el
     debian-el.texi -> debian-el.texi
 Generating debian-el.info
-Created debian-el-20241026.559.tar containing:
-  debian-el-20241026.559/
-  debian-el-20241026.559/apt-sources.el
-  debian-el-20241026.559/apt-utils.el
-  debian-el-20241026.559/deb-view.el
-  debian-el-20241026.559/debian-autoloads.el
-  debian-el-20241026.559/debian-bug.el
-  debian-el-20241026.559/debian-el-pkg.el
-  debian-el-20241026.559/debian-el.el
-  debian-el-20241026.559/debian-el.info
-  debian-el-20241026.559/dir
-  debian-el-20241026.559/gnus-BTS.el
-  debian-el-20241026.559/preseed.el
+Created debian-el-20241225.1207.tar containing:
+  debian-el-20241225.1207/
+  debian-el-20241225.1207/apt-sources.el
+  debian-el-20241225.1207/apt-utils.el
+  debian-el-20241225.1207/deb-view.el
+  debian-el-20241225.1207/debian-autoloads.el
+  debian-el-20241225.1207/debian-bug.el
+  debian-el-20241225.1207/debian-el-pkg.el
+  debian-el-20241225.1207/debian-el.el
+  debian-el-20241225.1207/debian-el.info
+  debian-el-20241225.1207/dir
+  debian-el-20241225.1207/gnus-BTS.el
+  debian-el-20241225.1207/preseed.el
  ✓ Success:
-  2024-12-25T10:17:54+0000  debian-el-20241026.559.entry
-  2024-12-25T10:17:54+0000  debian-el-20241026.559.tar
-Built debian-el in 3.223s, finished at 2024-12-25T10:17:55+0000
+  2024-12-25T15:01:03+0000  debian-el-20241225.1207.entry
+  2024-12-25T15:01:03+0000  debian-el-20241225.1207.tar
+Built debian-el in 3.894s, finished at 2024-12-25T15:01:04+0000
