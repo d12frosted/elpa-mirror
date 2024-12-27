@@ -9,7 +9,7 @@ M-x `chatgpt-shell-prompt-compose'
 M-x `chatgpt-shell-describe-image'
 M-x `chatgpt-shell-japanese-lookup'
 
-You must set an API key for most cloud services. Check out:
+You must set an API key for most cloud services.  Check out:
 
   `chatgpt-shell-openai-key'.
   `chatgpt-shell-anthropic-key'.
