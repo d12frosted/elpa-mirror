@@ -1,4 +1,5 @@
-ob-deno is babel functions for Javascript/TypeScript with Deno.  It's based on ob-js.
+ob-deno is babel functions for Javascript/TypeScript with Deno.
+It's based on ob-js.
 
 Parameters supported:
   - :cmd

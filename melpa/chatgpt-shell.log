@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/xenodium/chatgpt-shell
 
 Updating /mnt/store/melpa/working/chatgpt-shell/
-Checking out 36f1094707b613225b031242de537fdecee31c6c
+Checking out ec58fa006bb9f45d262607cc08f45af341fb9a88
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chatgpt-shell/
-  to /tmp/chatgpt-shell0KkwfC/chatgpt-shell-20241228.26
+  to /tmp/chatgpt-shellWbUJ96/chatgpt-shell-20241228.1651
     chatgpt-shell-anthropic.el -> chatgpt-shell-anthropic.el
     chatgpt-shell-google.el -> chatgpt-shell-google.el
     chatgpt-shell-kagi.el -> chatgpt-shell-kagi.el
@@ -15,18 +15,20 @@ Copying files (->) and directories (=>)
     chatgpt-shell-perplexity.el -> chatgpt-shell-perplexity.el
     chatgpt-shell-prompt-compose.el -> chatgpt-shell-prompt-compose.el
     chatgpt-shell.el -> chatgpt-shell.el
-Created chatgpt-shell-20241228.26.tar containing:
-  chatgpt-shell-20241228.26/
-  chatgpt-shell-20241228.26/chatgpt-shell-anthropic.el
-  chatgpt-shell-20241228.26/chatgpt-shell-google.el
-  chatgpt-shell-20241228.26/chatgpt-shell-kagi.el
-  chatgpt-shell-20241228.26/chatgpt-shell-ollama.el
-  chatgpt-shell-20241228.26/chatgpt-shell-openai.el
-  chatgpt-shell-20241228.26/chatgpt-shell-perplexity.el
-  chatgpt-shell-20241228.26/chatgpt-shell-pkg.el
-  chatgpt-shell-20241228.26/chatgpt-shell-prompt-compose.el
-  chatgpt-shell-20241228.26/chatgpt-shell.el
+Created chatgpt-shell-20241228.1651.tar containing:
+  chatgpt-shell-20241228.1651/
+  chatgpt-shell-20241228.1651/chatgpt-shell-anthropic.el
+  chatgpt-shell-20241228.1651/chatgpt-shell-google.el
+  chatgpt-shell-20241228.1651/chatgpt-shell-kagi.el
+  chatgpt-shell-20241228.1651/chatgpt-shell-ollama.el
+  chatgpt-shell-20241228.1651/chatgpt-shell-openai.el
+  chatgpt-shell-20241228.1651/chatgpt-shell-perplexity.el
+  chatgpt-shell-20241228.1651/chatgpt-shell-pkg.el
+  chatgpt-shell-20241228.1651/chatgpt-shell-prompt-compose.el
+  chatgpt-shell-20241228.1651/chatgpt-shell.el
  ✓ Success:
+  2024-12-28T18:16:57+0000  chatgpt-shell-20241228.1651.entry
+  2024-12-28T18:16:57+0000  chatgpt-shell-20241228.1651.tar
   2024-12-28T15:55:19+0000  chatgpt-shell-20241228.26.entry
   2024-12-28T15:55:19+0000  chatgpt-shell-20241228.26.tar
-Built chatgpt-shell in 2.535s, finished at 2024-12-28T15:55:20+0000
+Built chatgpt-shell in 3.889s, finished at 2024-12-28T18:16:58+0000
