@@ -1,0 +1,76 @@
+Package: symex
+Fetcher: github
+Source:  https://github.com/drym-org/symex.el
+
+Updating /mnt/store/melpa/working/symex/
+Checking out 2a5ad0113a906aca9f4adade2776706657b314bc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/symex/
+  to /tmp/symexOrAbN8/symex-20241126.352
+    symex-computations.el -> symex-computations.el
+    symex-custom.el -> symex-custom.el
+    symex-data.el -> symex-data.el
+    symex-dsl.el -> symex-dsl.el
+    symex-evaluator.el -> symex-evaluator.el
+    symex-evil-support.el -> symex-evil-support.el
+    symex-evil.el -> symex-evil.el
+    symex-hydra.el -> symex-hydra.el
+    symex-interface-arc.el -> symex-interface-arc.el
+    symex-interface-builtins.el -> symex-interface-builtins.el
+    symex-interface-clojure.el -> symex-interface-clojure.el
+    symex-interface-common-lisp.el -> symex-interface-common-lisp.el
+    symex-interface-elisp.el -> symex-interface-elisp.el
+    symex-interface-fennel.el -> symex-interface-fennel.el
+    symex-interface-racket.el -> symex-interface-racket.el
+    symex-interface-scheme.el -> symex-interface-scheme.el
+    symex-interface.el -> symex-interface.el
+    symex-interop.el -> symex-interop.el
+    symex-misc.el -> symex-misc.el
+    symex-primitives-lisp.el -> symex-primitives-lisp.el
+    symex-primitives.el -> symex-primitives.el
+    symex-transformations-lisp.el -> symex-transformations-lisp.el
+    symex-transformations-ts.el -> symex-transformations-ts.el
+    symex-transformations.el -> symex-transformations.el
+    symex-traversals.el -> symex-traversals.el
+    symex-ts.el -> symex-ts.el
+    symex-ui.el -> symex-ui.el
+    symex-utils-ts.el -> symex-utils-ts.el
+    symex-utils.el -> symex-utils.el
+    symex.el -> symex.el
+Created symex-20241126.352.tar containing:
+  symex-20241126.352/
+  symex-20241126.352/symex-computations.el
+  symex-20241126.352/symex-custom.el
+  symex-20241126.352/symex-data.el
+  symex-20241126.352/symex-dsl.el
+  symex-20241126.352/symex-evaluator.el
+  symex-20241126.352/symex-evil-support.el
+  symex-20241126.352/symex-evil.el
+  symex-20241126.352/symex-hydra.el
+  symex-20241126.352/symex-interface-arc.el
+  symex-20241126.352/symex-interface-builtins.el
+  symex-20241126.352/symex-interface-clojure.el
+  symex-20241126.352/symex-interface-common-lisp.el
+  symex-20241126.352/symex-interface-elisp.el
+  symex-20241126.352/symex-interface-fennel.el
+  symex-20241126.352/symex-interface-racket.el
+  symex-20241126.352/symex-interface-scheme.el
+  symex-20241126.352/symex-interface.el
+  symex-20241126.352/symex-interop.el
+  symex-20241126.352/symex-misc.el
+  symex-20241126.352/symex-pkg.el
+  symex-20241126.352/symex-primitives-lisp.el
+  symex-20241126.352/symex-primitives.el
+  symex-20241126.352/symex-transformations-lisp.el
+  symex-20241126.352/symex-transformations-ts.el
+  symex-20241126.352/symex-transformations.el
+  symex-20241126.352/symex-traversals.el
+  symex-20241126.352/symex-ts.el
+  symex-20241126.352/symex-ui.el
+  symex-20241126.352/symex-utils-ts.el
+  symex-20241126.352/symex-utils.el
+  symex-20241126.352/symex.el
+ ✓ Success:
+  2024-12-28T14:29:22+0000  symex-20241126.352.entry
+  2024-12-28T14:29:22+0000  symex-20241126.352.tar
+Built symex in 2.309s, finished at 2024-12-28T14:29:23+0000
