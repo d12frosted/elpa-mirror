@@ -1336,7 +1336,6 @@
   (elfeed-summary :url "https://github.com/SqrtMinusOne/elfeed-summary")
   (elfeed-tube :url "https://github.com/karthink/elfeed-tube")
   (elfeed-tube-mpv :url "https://github.com/karthink/elfeed-tube")
-  (elfeed-web :url "https://github.com/skeeto/elfeed")
   (elfeed-webkit :url "https://github.com/fritzgrabo/elfeed-webkit")
   (elforth :url "https://github.com/lassik/elforth")
   (elgrep :url "https://github.com/TobiasZawada/elgrep")
