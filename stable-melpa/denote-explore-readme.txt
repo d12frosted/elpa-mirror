@@ -1,7 +1,7 @@
 
 Denote-Explore provides functionality to explore, maintain and visualise
-your collection of Denote files. The major version number indicates compa-
-tability with the relevantDenote version.
+your collection of Denote files. The major version number indicates
+compatability with the relevant Denote major version.
 
 Functionality:
 
