@@ -3783,7 +3783,7 @@
 		  (:url . "https://elpa.gnu.org/packages/register-list.html")
 		  (:commit . "14d719a6f3596856228f08d3746a7bf92dd13240"))])
  (relint .
-	 [(2 0)
+	 [(2 1)
 	  ((xr
 	    (2 0))
 	   (emacs
@@ -3794,7 +3794,7 @@
 	   (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
 	   (:authors
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
-	   (:commit . "a9a792dccbf4a34e6ae51f0cacd5ce3da2349209"))])
+	   (:commit . "9eda48e439e13479151be4abbf47906326bc732f"))])
  (repology .
 	   [(1 2 4)
 	    ((emacs
@@ -5094,7 +5094,7 @@
 	 ("Thien-Thi Nguyen" . "ttn@gnu.org"))
 	(:commit . "85e5c412dde7ec3c3f64c64d37079e233293e4d0"))])
  (xr .
-     [(2 0)
+     [(2 1)
       ((emacs
 	(27 1)))
       "Convert string regexp to rx notation" tar
@@ -5103,7 +5103,7 @@
        (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
        (:authors
 	("Mattias Engdegård" . "mattiase@acm.org"))
-       (:commit . "9048d15a8de605ad1ee9eba889e4ec90944d8416"))])
+       (:commit . "31cd397f54591e3692bf88d6e1995236928e3561"))])
  (xref .
        [(1 7 0)
 	((emacs

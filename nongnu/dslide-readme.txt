@@ -1,7 +1,8 @@
 DSL IDE creates presentations out of org mode documents.  Every single step
-in a presentation can be individually configured or customized.  Org
-headings and elements are configured with extensible actions.  Custom steps
-can be scripted with babel blocks.  Frequent customizations can be made
+in a presentation can be individually configured, customized, or
+programmed.  Org headings and elements are configured with extensible
+actions.  Custom steps can be scripted with babel blocks.  Keyboard macros
+can play back real command sequences.  Frequent customizations can be made
 into custom actions.  DSL IDE achieves a good result with no preparation
 but can achieve anything Emacs can display if you need it to.
 
