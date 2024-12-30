@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the Emacs package
 called `standard-themes', and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 2.1.0,
-released on 2024-08-11.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 2.2.0,
+released on 2024-12-29.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 2.2.0-dev.
+Current development target is 2.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `standard-themes'
 ⁃ Official manual: <https://protesilaos.com/emacs/standard-themes>
@@ -42,13 +42,15 @@ Table of Contents
 4. Sample configuration
 5. Customization options
 .. 1. Option to disable other themes
-.. 2. Option to enable mixed fonts
-.. 3. Option to control the UI typeface
-.. 4. Option to enable more bold constructs
-.. 5. Option to enable more italic constructs
-.. 6. Option for command prompts
-.. 7. Option for headings
-.. 8. Palette overrides
+.. 2. Option for themes to toggle
+.. 3. Option for themes to rotate
+.. 4. Option to enable mixed fonts
+.. 5. Option to control the UI typeface
+.. 6. Option to enable more bold constructs
+.. 7. Option to enable more italic constructs
+.. 8. Option for command prompts
+.. 9. Option for headings
+.. 10. Palette overrides
 6. Loading a theme
 7. Preview theme colors
 8. Use colors from the active Standard theme
@@ -94,10 +96,14 @@ Table of Contents
 2 About the Standard themes
 ═══════════════════════════
 
-  The `standard-themes' are a pair of light and dark themes for GNU
-  Emacs.  They emulate the out-of-the-box looks of Emacs (which
-  technically do NOT constitute a theme) while bringing to them thematic
-  consistency, customizability, and extensibility.
+  The `standard-themes' are a collection of light and dark themes for
+  GNU Emacs. The `standard-light' and `standard-dark' emulate the
+  out-of-the-box looks of Emacs (which technically do NOT constitute a
+  theme) while bringing to them thematic consistency, customizability,
+  and extensibility. Other themes are stylistic variations of those.
+
+  Why call them “standard”? Obviously because: Standard Themes Are Not
+  Derivatives but the Affectionately Reimagined Default … themes.
 
 
 3 Installation
@@ -142,7 +148,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "standard-themes"
-  │ git clone https://git.sr.ht/~protesilaos/standard-themes standard-themes
+  │ git clone https://github.com/protesilaos/standard-themes standard-themes
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
@@ -171,6 +177,8 @@ Table of Contents
   │       standard-themes-mixed-fonts t
   │       standard-themes-variable-pitch-ui t
   │       standard-themes-prompts '(extrabold italic)
+  │       standard-themes-to-toggle '(standard-light standard-dark)
+  │       standard-themes-to-rotate '(standard-light standard-light-tinted standard-dark standard-dark-tinted)
   │ 
   │       ;; more complex alist to set weight, height, and optional
   │       ;; `variable-pitch' per heading level (t is for any level not
@@ -188,9 +196,11 @@ Table of Contents
   │ 	(agenda-structure . (variable-pitch light 1.8))
   │ 	(t . (variable-pitch 1.1))))
   │ 
-  │ (standard-themes-load-light) ; OR (standard-themes-load-dark)
+  │ ;; All the Standard themes are listed in `standard-themes-items'.
+  │ (standard-themes-load-theme 'standard-light)
   │ 
   │ (define-key global-map (kbd "<f5>") #'standard-themes-toggle)
+  │ (define-key global-map (kbd "M-<f5>") #'standard-themes-rotate)
   └────
 
 
@@ -231,7 +241,25 @@ Table of Contents
 [Loading a theme] See section 6
 
 
-5.2 Option to enable mixed fonts
+5.2 Option for themes to toggle
+───────────────────────────────
+
+  The user option `standard-themes-to-toggle' is a list of Standard
+  themes to switch between when using the command
+  `standard-themes-toggle'.
+
+  The list must include two items. If there are more, they are ignored.
+
+
+5.3 Option for themes to rotate
+───────────────────────────────
+
+  The user option `standard-themes-to-rotate' is a list of Standard
+  themes to switch between when using the command
+  `standard-themes-rotate'.
+
+
+5.4 Option to enable mixed fonts
 ────────────────────────────────
 
   The user option `standard-themes-mixed-fonts' controls whether
@@ -261,7 +289,7 @@ Table of Contents
   regard.
 
 
-5.3 Option to control the UI typeface
+5.5 Option to control the UI typeface
 ─────────────────────────────────────
 
   The user option `standard-themes-variable-pitch-ui' controls whether
@@ -286,7 +314,7 @@ Table of Contents
   regard.
 
 
-5.4 Option to enable more bold constructs
+5.6 Option to enable more bold constructs
 ─────────────────────────────────────────
 
   The user option `standard-themes-bold-constructs' determines whether
@@ -300,7 +328,7 @@ Table of Contents
 [Configure bold and italic faces] See section 9.5
 
 
-5.5 Option to enable more italic constructs
+5.7 Option to enable more italic constructs
 ───────────────────────────────────────────
 
   The user option `standard-themes-italic-constructs' determines whether
@@ -314,7 +342,7 @@ Table of Contents
 [Configure bold and italic faces] See section 9.5
 
 
-5.6 Option for command prompts
+5.8 Option for command prompts
 ──────────────────────────────
 
   The user option `standard-themes-prompts' controls the style of all
@@ -370,10 +398,10 @@ Table of Contents
   applying palette overrides ([Palette overrides]).
 
 
-[Palette overrides] See section 5.8
+[Palette overrides] See section 5.10
 
 
-5.7 Option for headings
+5.9 Option for headings
 ───────────────────────
 
   The user option `standard-themes-headings' provides support for
@@ -488,11 +516,11 @@ Table of Contents
   modified by applying palette overrides ([Palette overrides]).
 
 
-[Palette overrides] See section 5.8
+[Palette overrides] See section 5.10
 
 
-5.8 Palette overrides
-─────────────────────
+5.10 Palette overrides
+──────────────────────
 
   The Standard themes define their own color palette as well as semantic
   color mappings.  The former is the set of color values such as what
@@ -636,7 +664,7 @@ Table of Contents
   and `=*standard-light-list-mappings*' for the semantic color mappings.
 
 
-[Palette overrides] See section 5.8
+[Palette overrides] See section 5.10
 
 
 8 Use colors from the active Standard theme
@@ -741,7 +769,7 @@ Table of Contents
 
 [Preview theme colors] See section 7
 
-[Palette overrides] See section 5.8
+[Palette overrides] See section 5.10
 
 
 9.2 The general approach to advanced DIY changes
@@ -1035,7 +1063,7 @@ Table of Contents
   For any further issues, you are welcome to ask for help.
 
 
-[Enable mixed fonts] See section 5.2
+[Enable mixed fonts] See section 5.4
 
 
 9.7 Tweak goto-address-mode faces

@@ -1047,7 +1047,7 @@
 			("Aleksandr Vityazev" . "avityazew@gmail.com"))
 		       (:commit . "bc07c1124545cbf6e5ebe64e92bfaa306e309033"))])
  (dicom .
-	[(0 4)
+	[(0 5)
 	 ((emacs
 	   (28 1))
 	  (compat
@@ -1058,7 +1058,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "d7136f4e48120ee02a559e2a415bb15a1fc3ed98"))])
+	  (:commit . "54440a704c573cd91b663ac79a01264a1aa59c51"))])
  (dict-tree .
 	    [(0 17)
 	     ((trie
@@ -4182,16 +4182,16 @@
 		("Christian Johansson" . "christian@cvj.se"))
 	       (:commit . "95fb076c9b657c5f1bfad3ee5bf1f8691c50d428"))])
  (standard-themes .
-		  [(2 1 0)
+		  [(2 2 0)
 		   ((emacs
-		     (27 1)))
+		     (28 1)))
 		   "Like the default theme but more consistent" tar
 		   ((:url . "https://github.com/protesilaos/standard-themes")
 		    (:keywords "faces" "theme" "accessibility")
 		    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "9a982c4fad9a6d1a68e211bd83342bdd47dd7979"))])
+		    (:commit . "4b97416543a20f9d16515ff54e6481c852911843"))])
  (stream .
 	 [(2 3 0)
 	  ((emacs
