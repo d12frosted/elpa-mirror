@@ -58,7 +58,7 @@ _________________
 
   While `lsp-tex.el', included by [lsp-mode], provides minimal setting
   for [Texlab], `lsp-latex.el' provides full features of [Texlab]
-  v5.19.0.
+  v5.21.0.
 
 
 [lsp-mode] <https://github.com/emacs-lsp/lsp-mode>
@@ -146,9 +146,11 @@ _________________
    lsp-latex-latex-formatter                         texlab.latexFormatter
    lsp-latex-latexindent-local                       texlab.latexindent.local
    lsp-latex-latexindent-modify-line-breaks          texlab.latexindent.modifyLineBreaks
+   lsp-latex-latexindent-replacement                 texlab.latexindent.replacement
    lsp-latex-completion-matcher                      texlab.completion.matcher
    lsp-latex-inlay-hints-label-definitions           texlab.inlayHints.labelDefinitions
    lsp-latex-inlay-hints-label-references            texlab.inlayHints.labelReferences
+   lsp-latex-inlay-hints-max-length                  texlab.inlayHints.maxLength
    lsp-latex-experimental-math-environments          texlab.experimental.mathEnvironments
    lsp-latex-experimental-enum-environments          texlab.experimental.enumEnvironments
    lsp-latex-experimental-verbatim-environments      texlab.experimental.verbatimEnvironments
