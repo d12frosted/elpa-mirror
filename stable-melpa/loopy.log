@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out ccd4d83ee84c3bfe3bc7db9e24708dde98497892
+Checking out b1103eda2a040cdae478381ffb308ba9b5ed1ec5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyUGb5U0/loopy-20241212.345
+  to /tmp/loopyjKu4Ji/loopy-20250101.1740
     loopy-commands.el -> loopy-commands.el
     loopy-destructure.el -> loopy-destructure.el
     loopy-instrs.el -> loopy-instrs.el
@@ -19,21 +19,23 @@ Copying files (->) and directories (=>)
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
 Generating loopy.info
-Created loopy-20241212.345.tar containing:
-  loopy-20241212.345/
-  loopy-20241212.345/dir
-  loopy-20241212.345/loopy-commands.el
-  loopy-20241212.345/loopy-destructure.el
-  loopy-20241212.345/loopy-instrs.el
-  loopy-20241212.345/loopy-iter.el
-  loopy-20241212.345/loopy-misc.el
-  loopy-20241212.345/loopy-pcase.el
-  loopy-20241212.345/loopy-pkg.el
-  loopy-20241212.345/loopy-seq.el
-  loopy-20241212.345/loopy-vars.el
-  loopy-20241212.345/loopy.el
-  loopy-20241212.345/loopy.info
+Created loopy-20250101.1740.tar containing:
+  loopy-20250101.1740/
+  loopy-20250101.1740/dir
+  loopy-20250101.1740/loopy-commands.el
+  loopy-20250101.1740/loopy-destructure.el
+  loopy-20250101.1740/loopy-instrs.el
+  loopy-20250101.1740/loopy-iter.el
+  loopy-20250101.1740/loopy-misc.el
+  loopy-20250101.1740/loopy-pcase.el
+  loopy-20250101.1740/loopy-pkg.el
+  loopy-20250101.1740/loopy-seq.el
+  loopy-20250101.1740/loopy-vars.el
+  loopy-20250101.1740/loopy.el
+  loopy-20250101.1740/loopy.info
  ✓ Success:
-  2025-01-01T14:39:05+0000  loopy-20241212.345.entry
-  2025-01-01T14:39:05+0000  loopy-20241212.345.tar
-Built loopy in 5.542s, finished at 2025-01-01T14:39:06+0000
+  2025-01-01T17:00:22+0000  loopy-20241212.345.entry
+  2025-01-01T17:00:21+0000  loopy-20241212.345.tar
+  2025-01-01T19:22:42+0000  loopy-20250101.1740.entry
+  2025-01-01T19:22:42+0000  loopy-20250101.1740.tar
+Built loopy in 5.733s, finished at 2025-01-01T19:22:42+0000

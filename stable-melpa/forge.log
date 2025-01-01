@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/forge
 
 Updating /mnt/store/melpa/working/forge/
-Checking out 8bace81bce397af6942c7efe012498dc181466d1
+Checking out 0c9060626200902f7b0078a85566ef0eea8cc0b6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forge/
-  to /tmp/forgeg6STyp/forge-20241223.1032
+  to /tmp/forgeQOcjm3/forge-20250101.1813
   ! lisp/forge-bitbucket.el -> forge-bitbucket.el
   ! lisp/forge-commands.el -> forge-commands.el
   ! lisp/forge-core.el -> forge-core.el
@@ -29,32 +29,34 @@ Copying files (->) and directories (=>)
   ! lisp/forge.el -> forge.el
   ! docs/forge.texi -> forge.texi
 Generating forge.info
-Created forge-20241223.1032.tar containing:
-  forge-20241223.1032/
-  forge-20241223.1032/dir
-  forge-20241223.1032/forge-bitbucket.el
-  forge-20241223.1032/forge-commands.el
-  forge-20241223.1032/forge-core.el
-  forge-20241223.1032/forge-db.el
-  forge-20241223.1032/forge-gitea.el
-  forge-20241223.1032/forge-github.el
-  forge-20241223.1032/forge-gitlab.el
-  forge-20241223.1032/forge-gogs.el
-  forge-20241223.1032/forge-issue.el
-  forge-20241223.1032/forge-notify.el
-  forge-20241223.1032/forge-pkg.el
-  forge-20241223.1032/forge-post.el
-  forge-20241223.1032/forge-pullreq.el
-  forge-20241223.1032/forge-repo.el
-  forge-20241223.1032/forge-repos.el
-  forge-20241223.1032/forge-revnote.el
-  forge-20241223.1032/forge-semi.el
-  forge-20241223.1032/forge-tablist.el
-  forge-20241223.1032/forge-topic.el
-  forge-20241223.1032/forge-topics.el
-  forge-20241223.1032/forge.el
-  forge-20241223.1032/forge.info
+Created forge-20250101.1813.tar containing:
+  forge-20250101.1813/
+  forge-20250101.1813/dir
+  forge-20250101.1813/forge-bitbucket.el
+  forge-20250101.1813/forge-commands.el
+  forge-20250101.1813/forge-core.el
+  forge-20250101.1813/forge-db.el
+  forge-20250101.1813/forge-gitea.el
+  forge-20250101.1813/forge-github.el
+  forge-20250101.1813/forge-gitlab.el
+  forge-20250101.1813/forge-gogs.el
+  forge-20250101.1813/forge-issue.el
+  forge-20250101.1813/forge-notify.el
+  forge-20250101.1813/forge-pkg.el
+  forge-20250101.1813/forge-post.el
+  forge-20250101.1813/forge-pullreq.el
+  forge-20250101.1813/forge-repo.el
+  forge-20250101.1813/forge-repos.el
+  forge-20250101.1813/forge-revnote.el
+  forge-20250101.1813/forge-semi.el
+  forge-20250101.1813/forge-tablist.el
+  forge-20250101.1813/forge-topic.el
+  forge-20250101.1813/forge-topics.el
+  forge-20250101.1813/forge.el
+  forge-20250101.1813/forge.info
  ✓ Success:
-  2025-01-01T14:25:37+0000  forge-20241223.1032.entry
-  2025-01-01T14:25:37+0000  forge-20241223.1032.tar
-Built forge in 4.361s, finished at 2025-01-01T14:25:38+0000
+  2025-01-01T16:47:08+0000  forge-20241223.1032.entry
+  2025-01-01T16:47:07+0000  forge-20241223.1032.tar
+  2025-01-01T19:09:10+0000  forge-20250101.1813.entry
+  2025-01-01T19:09:09+0000  forge-20250101.1813.tar
+Built forge in 5.407s, finished at 2025-01-01T19:09:10+0000
