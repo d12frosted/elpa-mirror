@@ -1,7 +1,8 @@
 An Emacs media player, based on mpv.  More precisely this package
 provides somewhat comprehensive interface to mpv with bunch of
 convenient functionality like an embedded radio manager, YouTube
-interface, local music/video library manager etc.
+interface, Subsonic/Navidrome client, local music/video library
+manager etc.
 
 Lots of interactive functions are at your disposal.  To view the
 most essential ones, type `M-x describe-keymap empv-map`.  It is
