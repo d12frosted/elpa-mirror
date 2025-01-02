@@ -42,8 +42,8 @@
 
   • [scad-dbus]: Interact with a running OpenSCAD instance from Emacs
     via DBUS
-  • `lsp-mode' or `eglot': The `openscad-lsp' server can be used with
-    `scad-mode'
+  • `lsp-mode', `eglot' or `lsp-bridge': The `openscad-lsp' server can
+    be used with `scad-mode'
 
 
 [scad-dbus] <https://github.com/lenbok/scad-dbus>

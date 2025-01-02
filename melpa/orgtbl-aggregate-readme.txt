@@ -39,7 +39,7 @@ exist for each day), typing C-c C-c
 #+END
 
 A wizard can be used:
-M-x orgtbl-aggregate-insert-dblock-aggregate
+C-c C-x x aggregate
 
 Full documentation here:
   https://github.com/tbanel/orgaggregate/blob/master/README.org
