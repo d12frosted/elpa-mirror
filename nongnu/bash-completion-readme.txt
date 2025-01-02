@@ -13,11 +13,22 @@ Bash completion for Emacs:
 - is configurable through programmable bash completion
 - works on remote shells, through TRAMP.
 
-A simpler and more complete alternative to bash-completion.el is to
-run a bash shell in a buffer in term mode (`M-x ansi-term`).
-Unfortunately, many Emacs editing features are not available when
-running in term mode.  Also, term mode is not available in
-shell-command prompts.
+However, bash-completion.el only works with bash. If you run
+other shells or other interactive programs that support completion,
+bash-completion will not be able to help.
+
+A more powerful alternative to bash-completion.el is [MisTTY],
+as it works with all shells and most interactive programs that support
+completion. On the other hand, MisTTY cannot integrate with Emacs
+completion and is not able to provide completion in shell-command
+prompts nor in eshell mode.
+
+> [!NOTE]
+> While I'm still maintaining bash-completion.el, I've switched
+> to [MisTTY] for day-to-day operation, so that package is more
+> likely to receive updates. -- szermatt
+
+[MisTTY]: http://github.com/szermatt/mistty
 
 ## INSTALLATION
 
@@ -64,41 +75,38 @@ from normal shell processes.
 
 ### Completion at point
 
-Additionally, you can enable bash completion in any buffer that contains bash 
-commands. To do that, call 
+You can also use bash completion as an additional completion function
+in any buffer that contains bash commands. To do that, add
+`bash-completion-capf-nonexclusive` to the buffer-local
+`completion-at-point-functions`. For example, you can setup bash
+completion in `eshell-mode` by invoking
+
+```elisp
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (add-hook 'completion-at-point-functions
+                      'bash-completion-capf-nonexclusive nil t)))
+```
+
+There is also a lower-level function
+`bash-completion-dynamic-complete-nocomint` which allows you to
+construct your own `completion-at-point` function.
+
 ```elisp
 (bash-completion-dynamic-complete-nocomint COMP-START COMP-POS DYNAMIC-TABLE)
-``` 
-from a function added to `completion-at-point-functions`. 
+```
 
-The trickiest part is setting COMP-START to where the bash command starts;
-It depends on the mode of the calling buffer and might, in some cases, span 
-multiple lines.
+COMP-START is where the bash command starts --- it depends on the mode
+of the calling buffer. In most cases, `line-beginning-position` works
+because it uses `field` boundaries.
 
 COMP-POS is usually the current position of the cursor.
 
-When calling from `completion-at-point`, make sure to pass a non-nil value 
-to the DYNAMIC-TABLE argument so it returns a function instead of a list
-of strings. This isn't just an optimization: returning a function instead 
-of a list tells Emacs it should avoids post-filtering the results and 
-possibly discarding useful completion from bash.
-
-For example, here's a function to to do bash completion from an 
-eshell buffer. To try it out, add the function below to your init file
-and bind `bash-completion-from-eshell` to a custom shortcut.
-
-```elisp
-(defun bash-completion-from-eshell ()
-  (interactive)
-  (let ((completion-at-point-functions
-         '(bash-completion-eshell-capf)))
-    (completion-at-point)))
-
-(defun bash-completion-eshell-capf ()
-  (bash-completion-dynamic-complete-nocomint
-   (save-excursion (eshell-bol) (point))
-   (point) t))
-```
+When calling from `completion-at-point`, make sure to pass a non-nil
+value to the DYNAMIC-TABLE argument so it returns a function instead
+of a list of strings. This isn't just an optimization: returning a
+function instead of a list tells Emacs it should avoids post-filtering
+the results and possibly discarding useful completion from bash.
 
 ## TROUBLESHOOTING
 
@@ -107,33 +115,30 @@ the following:
 
 * Does bash behave differently when run outside of Emacs? If not, check
   your shell configuration.
-* Did you start a new bash process, with `exec bash` or `sudo` ? If yes, 
-  call `bash-completion-refresh` to configure the new bash process.
-* Call `M-x bash-completion-debug` and look at the completion table
-  at the bottom. Does it match your expectation? If not, call 
-  `M-x bash-completion-refresh` to refresh the copy of the completion 
-  table kept by Emacs, or if you're in a  `M-x execute` or `M-x compile` 
-  prompt, call `M-x bash-completion-reset-all`, then try again.
-* Still on `M-x bash-completion-debug`, does the `output-buffer` section
-  match the expected set of completion? If yes, it might be a display
-  problem. Are you using a completion engine other than the default, 
-  such as ivy or helm? Try turning it off to confirm, then [file
-  a bug][new_issue]
-* If all else fails, [file a bug][new_issue]. Please include the output 
-  of `M-x bash-completion-debug`, the command you're trying to use
-  and the function or package providing completion for that command and
-  where to download it. 
+* Call `M-x bash-completion-debug` and look at the `output-buffer`
+  section. Does it  match the expected set of completion? If yes,
+  it might be a display problem. Are you using a completion engine
+  other than the default, such as ivy or helm? Try turning it off to
+  confirm, then [file a bug](
+    https://github.com/szermatt/emacs-bash-completion/issues/new).
+* If all else fails, [file a bug](
+  https://github.com/szermatt/emacs-bash-completion/issues/new). Please
+  include the output of `M-x bash-completion-debug`, the command you're
+  trying to use and the function or package providing completion for
+  that command and where to download it.
 
 ## CONTRIBUTING
 
-To report bugs, features or even to ask questions, please open an [issue](https://github.com/szermatt/emacs-bash-completion/issues). To contribute code or documentation, please open a [pull request](https://github.com/szermatt/emacs-bash-completion/pulls). 
+To report bugs, features, please open an [issue](
+https://github.com/szermatt/emacs-bash-completion/issues/new). To ask 
+questions or just for general comments, add a new [discussion](
+https://github.com/szermatt/emacs-bash-completion/discussions). To 
+contribute code or documentation, please open a [pull request](
+https://github.com/szermatt/emacs-bash-completion/pulls).
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more details. 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## COMPATIBILITY
 
-bash-completion.el is known to work with Bash 4 and 5, on Emacs,
-starting with version 25.3, under Linux and OSX. It does not work on
-XEmacs.
-
-[new_issue]: https://github.com/szermatt/emacs-bash-completion/issues/new
+bash-completion.el is known to work with Bash 4.2 and later and Bash
+5, on Emacs, starting with version 25.3, under Linux and OSX.

@@ -128,7 +128,7 @@
 	    ("Vivek Das Mohapatra" . "vivek@etla.org"))
 	   (:commit . "v1.0"))])
  (bash-completion .
-		  [(3 1 1)
+		  [(3 2)
 		   ((emacs
 		     (25 3)))
 		   "Bash completion for the shell buffer" tar
@@ -137,7 +137,7 @@
 		    (:maintainer "Stephane Zermatten" . "szermatt@gmail.com")
 		    (:authors
 		     ("Stephane Zermatten" . "szermatt@gmx.net"))
-		    (:commit . "a021468eec8ff8cacb74a9ea595d3587186e29ea"))])
+		    (:commit . "ed9c76252ac82d6352ba438f664b390fdd0b5d6c"))])
  (beancount .
 	    [(0 9)
 	     nil "A major mode to edit Beancount input files." tar
@@ -1561,11 +1561,11 @@
 	   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
 	  (:commit . "7adad8c8d3bd61ae36659638751223cfa2c7d720"))])
  (magit-section .
-		[(4 1 3)
+		[(4 2 0)
 		 ((emacs
-		   (26 1))
+		   (27 1))
 		  (compat
-		   (30 0 0 0))
+		   (30 0 1 0))
 		  (dash
 		   (2 19 1))
 		  (seq
@@ -1576,7 +1576,7 @@
 		  (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 		  (:authors
 		   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-		  (:commit . "7adad8c8d3bd61ae36659638751223cfa2c7d720"))])
+		  (:commit . "7dfebba55bf687a25049882c2316166d968048ea"))])
  (markdown-mode .
 		[(2 6)
 		 ((emacs

@@ -4537,7 +4537,7 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 8 1)
+	    [(0 8 2)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -4550,7 +4550,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "dbe18e3f5e0812b8d086f92ca776935e41fafc75"))])
+	      (:commit . "ab22ba0e3b4c088b2981b22857fa09211a2c74ee"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs
@@ -4806,7 +4806,7 @@
 	   ("Justin Burkett" . "justin@burkett.cc"))
 	  (:commit . "007e44be19d068fd6b49874b6e9b8df8b1f552bd"))])
  (verilog-mode .
-	       [(2024 10 9 140346409)
+	       [(2025 1 1 100165202)
 		nil "major mode for editing verilog source in Emacs" tar
 		((:url . "https://www.veripool.org")
 		 (:keywords "languages")
@@ -4816,7 +4816,7 @@
 		 (:authors
 		  ("Michael McNamara" . "mac@verilog.com")
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
-		 (:commit . "cb0b6a405706f6367d9adfb3ee447590c2a0876f"))])
+		 (:commit . "78bc5949db489b143f7424540d6cc56fc529c9ea"))])
  (vertico .
 	  [(1 10)
 	   ((emacs
