@@ -18,8 +18,9 @@ Alignment: Alignment rules for common Puppet expressions are included.
   `puppet-ts-greater-is-electric' and `puppet-ts-equal-is-electric'.
 
 Completion: The mode updates the `completion-at-point' component to
-  complete variable names and resource types.  Tree-sitter is used to
-  extract the local variable names from the current buffer.
+  complete variable names, resource types and resource parameters.
+  Tree-sitter is used to extract the local variable names from the
+  current buffer.
 
 Imenu: Navigation to the resource types and variable assignments used in
   a file is implemented using the imenu facility.
