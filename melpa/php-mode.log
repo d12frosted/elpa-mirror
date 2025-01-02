@@ -1,0 +1,42 @@
+Package: php-mode
+Fetcher: github
+Source:  https://github.com/emacs-php/php-mode
+
+Updating /mnt/store/melpa/working/php-mode/
+Checking out c3fa4e020cdb631743dbb7b6007ea546a8db1f34
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/php-mode/
+  to /tmp/php-modefIwBSv/php-mode-20241219.1610
+  ! lisp/php-align.el -> php-align.el
+  ! lisp/php-complete.el -> php-complete.el
+  ! lisp/php-defs.el -> php-defs.el
+  ! lisp/php-face.el -> php-face.el
+  ! lisp/php-flymake.el -> php-flymake.el
+  ! lisp/php-format.el -> php-format.el
+  ! lisp/php-ide-phpactor.el -> php-ide-phpactor.el
+  ! lisp/php-ide.el -> php-ide.el
+  ! lisp/php-local-manual.el -> php-local-manual.el
+  ! lisp/php-mode-debug.el -> php-mode-debug.el
+  ! lisp/php-mode.el -> php-mode.el
+  ! lisp/php-project.el -> php-project.el
+  ! lisp/php.el -> php.el
+Created php-mode-20241219.1610.tar containing:
+  php-mode-20241219.1610/
+  php-mode-20241219.1610/php-align.el
+  php-mode-20241219.1610/php-complete.el
+  php-mode-20241219.1610/php-defs.el
+  php-mode-20241219.1610/php-face.el
+  php-mode-20241219.1610/php-flymake.el
+  php-mode-20241219.1610/php-format.el
+  php-mode-20241219.1610/php-ide-phpactor.el
+  php-mode-20241219.1610/php-ide.el
+  php-mode-20241219.1610/php-local-manual.el
+  php-mode-20241219.1610/php-mode-debug.el
+  php-mode-20241219.1610/php-mode-pkg.el
+  php-mode-20241219.1610/php-mode.el
+  php-mode-20241219.1610/php-project.el
+  php-mode-20241219.1610/php.el
+ ✓ Success:
+  2025-01-02T02:43:10+0000  php-mode-20241219.1610.entry
+  2025-01-02T02:43:10+0000  php-mode-20241219.1610.tar
+Built php-mode in 2.035s, finished at 2025-01-02T02:43:11+0000
