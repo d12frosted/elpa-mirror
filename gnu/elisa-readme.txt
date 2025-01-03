@@ -119,7 +119,7 @@
   ┌────
   │ ollama pull gemma2:9b-instruct-q6_K
   │ ollama pull qwen2.5:3b
-  │ ollama pull chatfire/bge-m3:q8_0
+  │ ollama pull snowflake-arctic-embed2
   └────
 
 
@@ -308,6 +308,14 @@
   Removes collection and all its data from index.
 
 
+1.2.17 elisa-async-recalculate-embeddings
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Recalculate embeddings asynchronously. Use it after changing
+  `elisa-embeddings-provider' variable. Can take some time. Works faster
+  with `elisa-batch-embeddings-enabled'.
+
+
 1.3 Configuration
 ─────────────────
 
@@ -328,7 +336,7 @@
   │   ;; (setopt elisa-chat-provider
   │   ;; 	  (make-llm-ollama
   │   ;; 	   :chat-model "gemma2:9b-instruct-q6_K"
-  │   ;; 	   :embedding-model "chatfire/bge-m3:q8_0"
+  │   ;; 	   :embedding-model "snowflake-arctic-embed2"
   │   ;; 	   ;; set context window to 8k
   │   ;; 	   :default-chat-non-standard-params '(("num_ctx" . 8192))))
   │   ;;
@@ -336,11 +344,13 @@
   │   (setopt elisa-chat-provider
   │ 	(make-llm-ollama
   │ 	 :chat-model "qwen2.5:3b"
-  │ 	 :embedding-model "chatfire/bge-m3:q8_0"
+  │ 	 :embedding-model "snowflake-arctic-embed2"
   │ 	 :default-chat-temperature 0.1
   │ 	 :default-chat-non-standard-params '(("num_ctx" . 32768))))
   │   ;; this embedding model has stong multilingual capabilities
-  │   (setopt elisa-embeddings-provider (make-llm-ollama :embedding-model "chatfire/bge-m3:q8_0"))
+  │   (setopt elisa-embeddings-provider (make-llm-ollama :embedding-model "snowflake-arctic-embed2"))
+  │   ;; enable batch embeddings for faster processing
+  │   (setopt elisa-batch-embeddings-enabled t)
   │   :config
   │   ;; searxng works better than duckduckgo in my tests
   │   (setopt elisa-web-search-function 'elisa-search-searxng))
@@ -429,6 +439,12 @@
   ⁃ `elisa-batch-embeddings-enabled':
     ‣ Type: Boolean
     ‣ Description: Enable batch embeddings if supported.
+
+  ⁃ `elisa-batch-size':
+    ‣ Type: Integer
+    ‣ Description: Batch size to send to provider during batch
+      embeddings calculation.
+    ‣ Default: 300
 
 
 ◊ 1.3.1.4 Web Search and Integration

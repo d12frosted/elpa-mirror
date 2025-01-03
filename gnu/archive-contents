@@ -966,7 +966,7 @@
 		 (:url . "https://elpa.gnu.org/packages/dbus-codegen.html")
 		 (:commit . "4b0d8525943ebba797e1ebaf97fd9a608aef5ec1"))])
  (debbugs .
-	  [(0 42)
+	  [(0 43)
 	   ((emacs
 	     (26 1))
 	    (soap-client
@@ -977,7 +977,7 @@
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
 	    (:url . "https://elpa.gnu.org/packages/debbugs.html")
-	    (:commit . "7de261af1c2d20afb4d126aed83fb05d1b4959aa"))])
+	    (:commit . "268a377e48709b8dae88f773277215472581beaf"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
@@ -1390,7 +1390,7 @@
 		     (:url . "https://elpa.gnu.org/packages/electric-spacing.html")
 		     (:commit . "122ac5d08c3d3d91251752136abab9721d90e36c"))])
  (elisa .
-	[(1 1 3)
+	[(1 1 4)
 	 ((emacs
 	   (29 2))
 	  (ellama
@@ -1407,7 +1407,7 @@
 	  (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	  (:authors
 	   ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	  (:commit . "322d7eb839f1e981b8aa09a6ee4a7d6a22173772"))])
+	  (:commit . "bac0e51c7cad21ab25a0824ea816386ea78858b2"))])
  (elisp-benchmarks .
 		   [(1 16)
 		    nil "elisp benchmarks collection" tar
@@ -1418,7 +1418,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(0 13 0)
+	 [(0 13 1)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1435,7 +1435,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "d4927093e2988084eac86c3254a7b7f5d4cbd761"))])
+	   (:commit . "d208ec10cebbea5412e6dd333f741a2be7919f87"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -4193,7 +4193,7 @@
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		    (:commit . "4b97416543a20f9d16515ff54e6481c852911843"))])
  (stream .
-	 [(2 3 0)
+	 [(2 4 0)
 	  ((emacs
 	    (25)))
 	  "Implementation of streams" tar
@@ -4202,7 +4202,7 @@
 	   (:authors
 	    ("Nicolas Petton" . "nicolas@petton.fr"))
 	   (:url . "https://elpa.gnu.org/packages/stream.html")
-	   (:commit . "5c0ffd088fbc344aedb11cc76bd7c0b28f3bc43b"))])
+	   (:commit . "b9b3ad5c38063703cfa5a06522031e631c49b7e3"))])
  (substitute .
 	     [(0 3 1)
 	      ((emacs
