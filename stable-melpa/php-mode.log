@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-php/php-mode
 
 Updating /mnt/store/melpa/working/php-mode/
-Checking out c3fa4e020cdb631743dbb7b6007ea546a8db1f34
+Checking out b45992a6a9d019fafe7a9dcde19401b0f20a20bf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-modeVOJ3uA/php-mode-20241219.1610
+  to /tmp/php-modeUVgPnS/php-mode-20250103.157
   ! lisp/php-align.el -> php-align.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-defs.el -> php-defs.el
@@ -20,23 +20,25 @@ Copying files (->) and directories (=>)
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
   ! lisp/php.el -> php.el
-Created php-mode-20241219.1610.tar containing:
-  php-mode-20241219.1610/
-  php-mode-20241219.1610/php-align.el
-  php-mode-20241219.1610/php-complete.el
-  php-mode-20241219.1610/php-defs.el
-  php-mode-20241219.1610/php-face.el
-  php-mode-20241219.1610/php-flymake.el
-  php-mode-20241219.1610/php-format.el
-  php-mode-20241219.1610/php-ide-phpactor.el
-  php-mode-20241219.1610/php-ide.el
-  php-mode-20241219.1610/php-local-manual.el
-  php-mode-20241219.1610/php-mode-debug.el
-  php-mode-20241219.1610/php-mode-pkg.el
-  php-mode-20241219.1610/php-mode.el
-  php-mode-20241219.1610/php-project.el
-  php-mode-20241219.1610/php.el
+Created php-mode-20250103.157.tar containing:
+  php-mode-20250103.157/
+  php-mode-20250103.157/php-align.el
+  php-mode-20250103.157/php-complete.el
+  php-mode-20250103.157/php-defs.el
+  php-mode-20250103.157/php-face.el
+  php-mode-20250103.157/php-flymake.el
+  php-mode-20250103.157/php-format.el
+  php-mode-20250103.157/php-ide-phpactor.el
+  php-mode-20250103.157/php-ide.el
+  php-mode-20250103.157/php-local-manual.el
+  php-mode-20250103.157/php-mode-debug.el
+  php-mode-20250103.157/php-mode-pkg.el
+  php-mode-20250103.157/php-mode.el
+  php-mode-20250103.157/php-project.el
+  php-mode-20250103.157/php.el
  ✓ Success:
-  2025-01-02T19:33:01+0000  php-mode-20241219.1610.entry
-  2025-01-02T19:33:01+0000  php-mode-20241219.1610.tar
-Built php-mode in 3.890s, finished at 2025-01-02T19:33:02+0000
+  2025-01-03T00:28:20+0000  php-mode-20241219.1610.entry
+  2025-01-03T00:28:20+0000  php-mode-20241219.1610.tar
+  2025-01-03T02:56:37+0000  php-mode-20250103.157.entry
+  2025-01-03T02:56:37+0000  php-mode-20250103.157.tar
+Built php-mode in 4.186s, finished at 2025-01-03T02:56:38+0000

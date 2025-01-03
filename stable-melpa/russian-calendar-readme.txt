@@ -1,5 +1,5 @@
 
-2024, 2025  (updated 22/11/24)
+2025  (updated 03/01/25)
 
 What:
 - Russian holidays
