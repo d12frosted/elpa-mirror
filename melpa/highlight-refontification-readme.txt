@@ -68,12 +68,12 @@ highlighting rules).
 
 Font Lock Studio lets you *single-step* Font Lock keywords --
 matchers, highlights, and anchored rules, so that you can see what
-happens when a buffer is fontified.  You can set *breakpoints* on or
-inside rules and *run* until one has been hit.  When inside a rule,
-matches are *visualized* using a palette of background colors.  The
-*explainer* can describe a rule in plain-text English.  Tight
-integration with *Edebug* allows you to step into Lisp expressions
-that are part of the Font Lock keywords.
+happens when a buffer is fontified.  You can set *breakpoints* on
+or inside rules and *run* until one has been hit.  When inside a
+rule, matches are *visualized* using a palette of background
+colors.  The *explainer* can describe a rule in plain-text English.
+Tight integration with *Edebug* allows you to step into Lisp
+expressions that are part of the Font Lock keywords.
 
 
 Font Lock Profiler:
@@ -115,6 +115,63 @@ standard Emacs regression test system.
 
 The Faceup markup language is a generic markup language, regression
 testing is merely one way to use it.
+
+
+Face Explorer:
+
+Library and tools for faces and text properties.
+
+This library is useful for packages that convert syntax highlighted
+buffers to other formats.  The functions can be used to determine
+how a face or a face text property looks, in terms of primitive
+face attributes (e.g. foreground and background colors).  Two sets
+of functions are provided, one for existing frames and one for
+fictitious displays, like 8 color tty.
+
+In addition, the following tools are provided:
+
+- `face-explorer-list-faces' -- list all available faces.  Like
+  `list-faces-display' but with information on how a face is
+  defined.  In addition, a sample for the selected frame and for a
+  fictitious display is shown.
+
+- `face-explorer-describe-face' -- Print detailed information on
+  how a face is defined, and list all underlying definitions.
+
+- `face-explorer-describe-face-prop' -- Describe the `face' text
+  property at the point in terms of primitive face attributes.
+  Also show how it would look on a fictitious display.
+
+- `face-explorer-list-display-features' -- Show which features a
+  display supports.  Most graphical displays support all, or most,
+  features.  However, many tty:s don't support, for example,
+  strike-through.  Using specially constructed faces, the resulting
+  buffer will render differently in different displays, e.g. a
+  graphical frame and a tty connected using `emacsclient -nw'.
+
+- `face-explorer-list-face-prop-examples' -- Show a buffer with an
+  assortment of `face' text properties.  A sample text is shown in
+  four variants: Native, a manually maintained reference vector,
+  the result of `face-explorer-face-prop-attributes' and
+  `face-explorer-face-prop-attributes-for-fictitious-display'.  Any
+  package that convert a buffer to another format (like HTML, ANSI,
+  or LaTeX) could use this buffer to ensure that everything work as
+  intended.
+
+- `face-explorer-list-overlay-examples' -- Show a buffer with a
+  number of examples of overlays, some are mixed with `face' text
+  properties.  Any package that convert a buffer to another format
+  (like HTML, ANSI, or LaTeX) could use this buffer to ensure that
+  everything work as intended.
+
+- `face-explorer-tooltip-mode' -- Minor mode that shows tooltips
+  containing text properties and overlays at the mouse pointer.
+
+- `face-explorer-simulate-display-mode' -- Minor mode for make a
+  buffer look like it would on a fictitious display.  Using this
+  you can, for example, see how a theme would look in using dark or
+  light background, a 8 color tty, or on a grayscale graphical
+  monitor.
 
 
 Font Lock Regression Suite:
