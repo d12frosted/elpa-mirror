@@ -4,9 +4,9 @@ Features:
 
 * Syntax highlight support.
 
-* Inherits from `prog-mode' (if present).  The effect is that global
-  minor modes that activates themselves in `prog-mode' buffers
-  automatically work in `ini-mode'.
+* Inherits from `prog-mode'.  The effect is that global minor modes
+  that activates themselves in `prog-mode' buffers automatically
+  work in `ini-mode'.
 
 Example:
 

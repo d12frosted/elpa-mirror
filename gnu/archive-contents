@@ -3081,7 +3081,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "2b7a1688f24cc8ef5a3c3a6dab8e00d833bcda59"))])
  (org .
-      [(9 7 18)
+      [(9 7 19)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3090,7 +3090,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "1463ab7f5b6961e9bf6502c18ba432aaf67fc151"))])
+	(:commit . "5a4686915e568ace469f490c0606d2a016c1101c"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -4537,7 +4537,7 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 8 2)
+	    [(0 8 3)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -4550,7 +4550,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "ab22ba0e3b4c088b2981b22857fa09211a2c74ee"))])
+	      (:commit . "000ff15942878aa1108abaa020da86ada675fea9"))])
  (transient-cycles .
 		   [(1 0)
 		    ((emacs
