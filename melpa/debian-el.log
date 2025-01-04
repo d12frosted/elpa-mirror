@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
-Checking out 874d25e0f647852d4dd0e499e02fa1d451af59bb
+Checking out 3e7afbae0513a237220b64b08f378b1f78eb460b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/debian-el/
-  to /tmp/debian-elvK10fq/debian-el-20241225.1207
+  to /tmp/debian-el6AoJwS/debian-el-20250103.2349
     apt-sources.el -> apt-sources.el
     apt-utils.el -> apt-utils.el
     deb-view.el -> deb-view.el
@@ -17,20 +17,20 @@ Copying files (->) and directories (=>)
     preseed.el -> preseed.el
     debian-el.texi -> debian-el.texi
 Generating debian-el.info
-Created debian-el-20241225.1207.tar containing:
-  debian-el-20241225.1207/
-  debian-el-20241225.1207/apt-sources.el
-  debian-el-20241225.1207/apt-utils.el
-  debian-el-20241225.1207/deb-view.el
-  debian-el-20241225.1207/debian-autoloads.el
-  debian-el-20241225.1207/debian-bug.el
-  debian-el-20241225.1207/debian-el-pkg.el
-  debian-el-20241225.1207/debian-el.el
-  debian-el-20241225.1207/debian-el.info
-  debian-el-20241225.1207/dir
-  debian-el-20241225.1207/gnus-BTS.el
-  debian-el-20241225.1207/preseed.el
+Created debian-el-20250103.2349.tar containing:
+  debian-el-20250103.2349/
+  debian-el-20250103.2349/apt-sources.el
+  debian-el-20250103.2349/apt-utils.el
+  debian-el-20250103.2349/deb-view.el
+  debian-el-20250103.2349/debian-autoloads.el
+  debian-el-20250103.2349/debian-bug.el
+  debian-el-20250103.2349/debian-el-pkg.el
+  debian-el-20250103.2349/debian-el.el
+  debian-el-20250103.2349/debian-el.info
+  debian-el-20250103.2349/dir
+  debian-el-20250103.2349/gnus-BTS.el
+  debian-el-20250103.2349/preseed.el
  ✓ Success:
-  2025-01-03T22:21:22+0000  debian-el-20241225.1207.entry
-  2025-01-03T22:21:22+0000  debian-el-20241225.1207.tar
-Built debian-el in 6.908s, finished at 2025-01-03T22:21:22+0000
+  2025-01-04T03:17:56+0000  debian-el-20250103.2349.entry
+  2025-01-04T03:17:56+0000  debian-el-20250103.2349.tar
+Built debian-el in 3.292s, finished at 2025-01-04T03:17:57+0000
