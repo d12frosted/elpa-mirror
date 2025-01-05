@@ -8,5 +8,3 @@ shortcuts and project management.
 
 It is suitable for almost all languages.
 The browsing features are provided by Ctags and Cscope.
-
-Homepage: https://software.hjuvi.fr.eu.org/eide/

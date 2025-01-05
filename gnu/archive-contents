@@ -406,11 +406,11 @@
 	  ("Amy Grinn" . "grinn.amy@gmail.com"))
 	 (:commit . "c019061cbb3b8a3c93e1720ff4532ef915173adb"))])
  (boxy-headings .
-		[(2 1 6)
+		[(2 1 8)
 		 ((emacs
 		   (26 1))
 		  (boxy
-		   (1 1))
+		   (2 0))
 		  (org
 		   (9 4)))
 		 "View org files in a boxy diagram" tar
@@ -419,7 +419,7 @@
 		  (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
 		  (:authors
 		   ("Amy Grinn" . "grinn.amy@gmail.com"))
-		  (:commit . "d38a3598753d2c36c4a47b9c4b39123554d58106"))])
+		  (:commit . "090aee55d8d613b9dee732d787e155d3bf8eb5cd"))])
  (breadcrumb .
 	     [(1 0 1)
 	      ((emacs
@@ -704,7 +704,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:commit . "e62157d43b2c874d2edbd547c3bdfb05d0a7ae5c"))])
  (compat .
-	 [(30 0 1 0)
+	 [(30 0 2 0)
 	  ((emacs
 	    (24 4))
 	   (seq
@@ -716,7 +716,7 @@
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net")
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "3626216e7665bfe20f41f9b3d6bbeb1a7de2b1a6"))])
+	   (:commit . "e87b984bf763aa6c574dde58b3cb4458b3b7db17"))])
  (constants .
 	    [(2 11 1)
 	     ((emacs
@@ -3157,11 +3157,11 @@
 		("Peter Münster" . "pm@a16n.net"))
 	       (:commit . "c08cf5b931960bc12eb782c1fe1ec82266cb4bc8"))])
  (org-real .
-	   [(1 0 9)
+	   [(1 0 11)
 	    ((emacs
 	      (26 1))
 	     (boxy
-	      (1 1))
+	      (2 0))
 	     (org
 	      (9 3)))
 	    "Keep track of real things as org-mode links" tar
@@ -3170,7 +3170,7 @@
 	     (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
 	     (:authors
 	      ("Amy Grinn" . "grinn.amy@gmail.com"))
-	     (:commit . "b6df63b9c8f19c32367b03791ca47410708a10e1"))])
+	     (:commit . "aa45c5dc795779e4f25e4a8200da06454e070a79"))])
  (org-remark .
 	     [(1 2 2)
 	      ((emacs
