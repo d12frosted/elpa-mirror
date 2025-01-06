@@ -9,5 +9,6 @@ Add a hook to the mode that you're using with Rust, for example, `rust-mode`:
 ; C-c a b - `cargo-mode-build` - Build the project (`cargo build`).
 ; C-c a o - `cargo-mode-test-current-buffer` - Run all tests in the current buffer.
 ; C-c a f - `cargo-mode-test-current-test` - Run the current test where pointer is located.
+; C-c a c - `cargo-mode-clippy` - Run Clippy in the project (`cargo clippy`).
 ;
 ; Use `C-u` to add extra command line params before executing a command.

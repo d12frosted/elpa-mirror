@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm
 
 Updating /mnt/store/melpa/working/helm/
-Checking out 39e585745b5c68a3dd08262458d37c9d6879948b
+Checking out d0683e146550a1737633d508cffdd79d9d3f35cc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmCTEW1I/helm-20250105.1652
+  to /tmp/helm2cvjgK/helm-20250106.730
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
     helm-buffers.el -> helm-buffers.el
@@ -47,50 +47,52 @@ Copying files (->) and directories (=>)
     helm-x-files.el -> helm-x-files.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20250105.1652.tar containing:
-  helm-20250105.1652/
-  helm-20250105.1652/emacs-helm.sh
-  helm-20250105.1652/helm-adaptive.el
-  helm-20250105.1652/helm-bookmark.el
-  helm-20250105.1652/helm-buffers.el
-  helm-20250105.1652/helm-color.el
-  helm-20250105.1652/helm-command.el
-  helm-20250105.1652/helm-dabbrev.el
-  helm-20250105.1652/helm-easymenu.el
-  helm-20250105.1652/helm-elisp.el
-  helm-20250105.1652/helm-epa.el
-  helm-20250105.1652/helm-eshell.el
-  helm-20250105.1652/helm-eval.el
-  helm-20250105.1652/helm-external.el
-  helm-20250105.1652/helm-fd.el
-  helm-20250105.1652/helm-files.el
-  helm-20250105.1652/helm-find.el
-  helm-20250105.1652/helm-font.el
-  helm-20250105.1652/helm-for-files.el
-  helm-20250105.1652/helm-global-bindings.el
-  helm-20250105.1652/helm-grep.el
-  helm-20250105.1652/helm-help.el
-  helm-20250105.1652/helm-id-utils.el
-  helm-20250105.1652/helm-imenu.el
-  helm-20250105.1652/helm-info.el
-  helm-20250105.1652/helm-locate.el
-  helm-20250105.1652/helm-man.el
-  helm-20250105.1652/helm-misc.el
-  helm-20250105.1652/helm-mode.el
-  helm-20250105.1652/helm-net.el
-  helm-20250105.1652/helm-occur.el
-  helm-20250105.1652/helm-packages.el
-  helm-20250105.1652/helm-pkg.el
-  helm-20250105.1652/helm-regexp.el
-  helm-20250105.1652/helm-ring.el
-  helm-20250105.1652/helm-semantic.el
-  helm-20250105.1652/helm-sys.el
-  helm-20250105.1652/helm-tags.el
-  helm-20250105.1652/helm-types.el
-  helm-20250105.1652/helm-utils.el
-  helm-20250105.1652/helm-x-files.el
-  helm-20250105.1652/helm.el
+Created helm-20250106.730.tar containing:
+  helm-20250106.730/
+  helm-20250106.730/emacs-helm.sh
+  helm-20250106.730/helm-adaptive.el
+  helm-20250106.730/helm-bookmark.el
+  helm-20250106.730/helm-buffers.el
+  helm-20250106.730/helm-color.el
+  helm-20250106.730/helm-command.el
+  helm-20250106.730/helm-dabbrev.el
+  helm-20250106.730/helm-easymenu.el
+  helm-20250106.730/helm-elisp.el
+  helm-20250106.730/helm-epa.el
+  helm-20250106.730/helm-eshell.el
+  helm-20250106.730/helm-eval.el
+  helm-20250106.730/helm-external.el
+  helm-20250106.730/helm-fd.el
+  helm-20250106.730/helm-files.el
+  helm-20250106.730/helm-find.el
+  helm-20250106.730/helm-font.el
+  helm-20250106.730/helm-for-files.el
+  helm-20250106.730/helm-global-bindings.el
+  helm-20250106.730/helm-grep.el
+  helm-20250106.730/helm-help.el
+  helm-20250106.730/helm-id-utils.el
+  helm-20250106.730/helm-imenu.el
+  helm-20250106.730/helm-info.el
+  helm-20250106.730/helm-locate.el
+  helm-20250106.730/helm-man.el
+  helm-20250106.730/helm-misc.el
+  helm-20250106.730/helm-mode.el
+  helm-20250106.730/helm-net.el
+  helm-20250106.730/helm-occur.el
+  helm-20250106.730/helm-packages.el
+  helm-20250106.730/helm-pkg.el
+  helm-20250106.730/helm-regexp.el
+  helm-20250106.730/helm-ring.el
+  helm-20250106.730/helm-semantic.el
+  helm-20250106.730/helm-sys.el
+  helm-20250106.730/helm-tags.el
+  helm-20250106.730/helm-types.el
+  helm-20250106.730/helm-utils.el
+  helm-20250106.730/helm-x-files.el
+  helm-20250106.730/helm.el
  ✓ Success:
   2025-01-06T06:24:00+0000  helm-20250105.1652.entry
   2025-01-06T06:24:00+0000  helm-20250105.1652.tar
-Built helm in 3.811s, finished at 2025-01-06T06:24:01+0000
+  2025-01-06T09:15:45+0000  helm-20250106.730.entry
+  2025-01-06T09:15:44+0000  helm-20250106.730.tar
+Built helm in 4.691s, finished at 2025-01-06T09:15:45+0000
