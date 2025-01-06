@@ -66,6 +66,7 @@ III.  Options
      - `timu-line-show-python-virtual-env' - default value is t
      - `timu-line-show-org-capture-keys' - default value is t
      - `timu-line-show-mu4e-context' - default value is t
+     - `timu-line-show-mu4e-index-update-indicator' - default value is nil
      - `timu-line-show-elfeed-counts' - default value is t
      - `timu-line-show-monkeytype-stats' - default value is nil
      - `timu-line-show-evil-state' - default value is nil
