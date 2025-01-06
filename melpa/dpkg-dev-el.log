@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/dpkg-dev-el.git
 
 Updating /mnt/store/melpa/working/dpkg-dev-el/
-Checking out 719c1dbea93f4b524937d280f18871981714a012
+Checking out 604d3a229d220474a64fc87250439fbd0d1851ea
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dpkg-dev-el/
-  to /tmp/dpkg-dev-elAwgk99/dpkg-dev-el-20241026.627
+  to /tmp/dpkg-dev-elKwsDaF/dpkg-dev-el-20250106.759
     debian-autopkgtest-control-mode.el -> debian-autopkgtest-control-mode.el
     debian-bts-control.el -> debian-bts-control.el
     debian-changelog-mode.el -> debian-changelog-mode.el
@@ -14,17 +14,19 @@ Copying files (->) and directories (=>)
     debian-copyright.el -> debian-copyright.el
     dpkg-dev-el.el -> dpkg-dev-el.el
     readme-debian.el -> readme-debian.el
-Created dpkg-dev-el-20241026.627.tar containing:
-  dpkg-dev-el-20241026.627/
-  dpkg-dev-el-20241026.627/debian-autopkgtest-control-mode.el
-  dpkg-dev-el-20241026.627/debian-bts-control.el
-  dpkg-dev-el-20241026.627/debian-changelog-mode.el
-  dpkg-dev-el-20241026.627/debian-control-mode.el
-  dpkg-dev-el-20241026.627/debian-copyright.el
-  dpkg-dev-el-20241026.627/dpkg-dev-el-pkg.el
-  dpkg-dev-el-20241026.627/dpkg-dev-el.el
-  dpkg-dev-el-20241026.627/readme-debian.el
+Created dpkg-dev-el-20250106.759.tar containing:
+  dpkg-dev-el-20250106.759/
+  dpkg-dev-el-20250106.759/debian-autopkgtest-control-mode.el
+  dpkg-dev-el-20250106.759/debian-bts-control.el
+  dpkg-dev-el-20250106.759/debian-changelog-mode.el
+  dpkg-dev-el-20250106.759/debian-control-mode.el
+  dpkg-dev-el-20250106.759/debian-copyright.el
+  dpkg-dev-el-20250106.759/dpkg-dev-el-pkg.el
+  dpkg-dev-el-20250106.759/dpkg-dev-el.el
+  dpkg-dev-el-20250106.759/readme-debian.el
  ✓ Success:
   2025-01-06T08:56:43+0000  dpkg-dev-el-20241026.627.entry
   2025-01-06T08:56:43+0000  dpkg-dev-el-20241026.627.tar
-Built dpkg-dev-el in 3.388s, finished at 2025-01-06T08:56:44+0000
+  2025-01-06T12:25:27+0000  dpkg-dev-el-20250106.759.entry
+  2025-01-06T12:25:27+0000  dpkg-dev-el-20250106.759.tar
+Built dpkg-dev-el in 5.006s, finished at 2025-01-06T12:25:28+0000
