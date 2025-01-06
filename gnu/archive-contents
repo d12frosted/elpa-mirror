@@ -406,7 +406,7 @@
 	  ("Amy Grinn" . "grinn.amy@gmail.com"))
 	 (:commit . "c019061cbb3b8a3c93e1720ff4532ef915173adb"))])
  (boxy-headings .
-		[(2 1 8)
+		[(2 1 9)
 		 ((emacs
 		   (26 1))
 		  (boxy
@@ -419,7 +419,7 @@
 		  (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
 		  (:authors
 		   ("Amy Grinn" . "grinn.amy@gmail.com"))
-		  (:commit . "090aee55d8d613b9dee732d787e155d3bf8eb5cd"))])
+		  (:commit . "b62851fc91165a7cad75e53e4aef8016a1e04076"))])
  (breadcrumb .
 	     [(1 0 1)
 	      ((emacs
@@ -740,7 +740,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:commit . "0d0ae4659ecaa3c12927fa3982c49610da573a88"))])
  (consult-denote .
-		 [(0 2 2)
+		 [(0 2 3)
 		  ((emacs
 		    (28 1))
 		   (denote
@@ -752,7 +752,7 @@
 		   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		   (:authors
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		   (:commit . "9fbe0f6a2636f46928f02ddde9c454f36aa45f39"))])
+		   (:commit . "885a427581034de1f3c1c5c04e7dfb31ee32c8dd"))])
  (consult-hoogle .
 		 [(0 3 0)
 		  ((emacs
@@ -923,7 +923,7 @@
 		 (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
 		 (:commit . "836b19b39651419876e65cdb1a91e3eef83cc4e7"))])
  (dape .
-       [(0 19 0)
+       [(0 20 0)
 	((emacs
 	  (29 1))
 	 (jsonrpc
@@ -931,7 +931,7 @@
 	"Debug Adapter Protocol for Emacs" tar
 	((:url . "https://github.com/svaante/dape")
 	 (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-	 (:commit . "aa46e40fd1d5085bf7eae7bcebc16b15a064cd17"))])
+	 (:commit . "0001878211412ab54d8e2bb224a3f539beed579c"))])
  (darkroom .
 	   [(0 3)
 	    ((cl-lib

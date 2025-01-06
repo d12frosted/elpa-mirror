@@ -4680,6 +4680,7 @@
   (roc-ts-mode :url "https://gitlab.com/tad-lispy/roc-ts-mode")
   (roguel-ike :url "https://github.com/stevenremot/roguel-ike")
   (rom-party :url "https://github.com/LaurenceWarne/rom-party.el")
+  (romanian-holidays :url "https://github.com/petrem/romanian-holidays")
   (ron-mode :url "https://codeberg.org/Hutzdog/ron-mode")
   (rope-read-mode :url "https://gitlab.com/marcowahl/rope-read-mode")
   (ropgadget :url "https://github.com/yvie-k/ropgadget-el")
