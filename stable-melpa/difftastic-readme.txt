@@ -315,4 +315,6 @@ please strive to add tests for it as well.
 To run tests:
 - open the <file:test/difftastic.t.el>
 - type `M-x eval-buffer <RET>'
+- open the <file:test/difftastic-bindings.t.el>
+- type `M-x eval-buffer <RET>'
 - type `M-x ert <RET> t <RET>'
