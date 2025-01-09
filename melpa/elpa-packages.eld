@@ -476,8 +476,6 @@
   (capnp-mode :url "https://github.com/capnproto/capnproto")
   (capture :url "https://github.com/pashinin/capture.el")
   (carbon-now-sh :url "https://github.com/veelenga/carbon-now-sh.el")
-  (cardano-tx :url "https://github.com/Titan-C/cardano.el")
-  (cardano-wallet :url "https://github.com/Titan-C/cardano.el")
   (cargo :url "https://github.com/kwrooijen/cargo.el")
   (cargo-mode :url "https://github.com/ayrat555/cargo-mode")
   (cargo-transient :url "https://github.com/peterstuart/cargo-transient")
