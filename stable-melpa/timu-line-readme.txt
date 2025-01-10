@@ -27,7 +27,9 @@ II.  Features
      - Display evil state
      - Display Tramp host if applicable
      - Display buffer/file name
-     - Display keybindings for org capture in the capture buffer
+     - Display keybindings hint for the org capture buffer
+     - Display keybindings hint for the git commit message buffer
+     - Display keybindings hint for the forge post buffer
      - Display the vc branch
      - Display the python venv
      - Display Mu4e context
@@ -65,6 +67,8 @@ III.  Options
      - `timu-line-show-eglot-indicator' - default value is nil
      - `timu-line-show-python-virtual-env' - default value is t
      - `timu-line-show-org-capture-keys' - default value is t
+     - `timu-line-show-git-commit-keys' - default value is t
+     - `timu-line-show-forge-post-keys' - default value is t
      - `timu-line-show-mu4e-context' - default value is t
      - `timu-line-show-mu4e-index-update-indicator' - default value is nil
      - `timu-line-show-elfeed-counts' - default value is t
