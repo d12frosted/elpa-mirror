@@ -76,14 +76,22 @@ III.  Options
      - `timu-line-show-evil-state' - default value is nil
      - `timu-line-show-tramp-host' - default value is nil
 
-  C. Org capture hints for keybindings
+  C. Delay time for forcing the mode-line update
+     Some commands to not trigger a mode-line update.
+     The `post-command-hook' `timu-line-delayed-force-update' tries to mitigate that.
+     It forces the update of the mode-line with a delay for performance reasons.
+     This variable controls the delay:
+
+     - `timu-line-update-timer-time' - default value is 0.5
+
+  D. Org capture hints for keybindings
      The variable `timu-line-org-capture-keys-string' contains the string to
      show in the mode line as keybindings hint in the org capture buffer.
 
-  D. Modes for mu4e context
+  E. Modes for mu4e context
      `timu-line-mu4e-context-modes' is a custom variable containing a list of
      major modes in which to display the Mu4e context in the mode line.
 
-  E. Modes for mu4e context
+  F. Modes for mu4e context
      `timu-line-elfeed-modes' controls in which modes the custom
      Elfeed string is displayed.
