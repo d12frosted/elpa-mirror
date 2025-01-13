@@ -40,6 +40,7 @@ II.  Features
   B. Right side
      - Display the major mode
      - Display Mu4e mail count (works only with `mu' installed)
+     - Display Mu4e index update indicator
      - Display tab number `current:total'
      - Display column number of the point
 
@@ -77,7 +78,7 @@ III.  Options
      - `timu-line-show-tramp-host' - default value is nil
 
   C. Delay time for forcing the mode-line update
-     Some commands to not trigger a mode-line update.
+     Some commands do not trigger a mode-line update.
      The `post-command-hook' `timu-line-delayed-force-update' tries to mitigate that.
      It forces the update of the mode-line with a delay for performance reasons.
      This variable controls the delay:
@@ -88,10 +89,10 @@ III.  Options
      The variable `timu-line-org-capture-keys-string' contains the string to
      show in the mode line as keybindings hint in the org capture buffer.
 
-  E. Modes for mu4e context
+  E. Modes for Mu4e context
      `timu-line-mu4e-context-modes' is a custom variable containing a list of
      major modes in which to display the Mu4e context in the mode line.
 
-  F. Modes for mu4e context
+  F. Modes for Elfeed string
      `timu-line-elfeed-modes' controls in which modes the custom
      Elfeed string is displayed.
