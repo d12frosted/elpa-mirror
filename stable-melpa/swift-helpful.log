@@ -3,37 +3,146 @@ Fetcher: github
 Source:  https://github.com/danielmartin/swift-helpful
 
 Updating /mnt/store/melpa/working/swift-helpful/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Debugger entered--Lisp error: (error "Command `git remote set-head origin --auto' exited...")
-  error("%s" "Command `git remote set-head origin --auto' exited...")
-  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
-  package-build--error(#<package-github-recipe package-github-recipe-1581bbcf419a> "%s" "Command `git remote set-head origin --auto' exited...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-github-recipe package-github-recipe-1581bbcf419a> "git" "remote" "set-head" "origin" "--auto")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-1581bbcf419a>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-1581bbcf419a> nil)
-  package-build--fetch(#<package-github-recipe package-github-recipe-1581bbcf419a>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  package-build-archive("swift-helpful")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"swift-helpful\")"))
-  command-line()
-  normal-top-level()
-
+Checking out b46c580e4b8f55761431ec677866de3fc66592e9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/swift-helpful/
+  to /tmp/swift-helpfultLs5Bl/swift-helpful-20220707.846
+    swift-helpful-regex.el -> swift-helpful-regex.el
+    swift-helpful.el -> swift-helpful.el
+  ! swift-info/swift-reference.info -> swift-reference.info
+  ! swift-info/swift.info -> swift.info
+  ! swift-info/images/CollectionTypes_intro_2x.png -> images/CollectionTypes_intro_2x.png
+  ! swift-info/images/UTF16_2x.png -> images/UTF16_2x.png
+  ! swift-info/images/UTF8_2x.png -> images/UTF8_2x.png
+  ! swift-info/images/UnicodeScalar_2x.png -> images/UnicodeScalar_2x.png
+  ! swift-info/images/barcode_QR_2x.png -> images/barcode_QR_2x.png
+  ! swift-info/images/barcode_UPC_2x.png -> images/barcode_UPC_2x.png
+  ! swift-info/images/bitshiftSignedAddition_2x.png -> images/bitshiftSignedAddition_2x.png
+  ! swift-info/images/bitshiftSignedFour_2x.png -> images/bitshiftSignedFour_2x.png
+  ! swift-info/images/bitshiftSignedMinusFourValue_2x.png -> images/bitshiftSignedMinusFourValue_2x.png
+  ! swift-info/images/bitshiftSignedMinusFour_2x.png -> images/bitshiftSignedMinusFour_2x.png
+  ! swift-info/images/bitshiftSigned_2x.png -> images/bitshiftSigned_2x.png
+  ! swift-info/images/bitshiftUnsigned_2x.png -> images/bitshiftUnsigned_2x.png
+  ! swift-info/images/bitwiseAND_2x.png -> images/bitwiseAND_2x.png
+  ! swift-info/images/bitwiseNOT_2x.png -> images/bitwiseNOT_2x.png
+  ! swift-info/images/bitwiseOR_2x.png -> images/bitwiseOR_2x.png
+  ! swift-info/images/bitwiseXOR_2x.png -> images/bitwiseXOR_2x.png
+  ! swift-info/images/chessBoard_2x.png -> images/chessBoard_2x.png
+  ! swift-info/images/closureReferenceCycle01_2x.png -> images/closureReferenceCycle01_2x.png
+  ! swift-info/images/closureReferenceCycle02_2x.png -> images/closureReferenceCycle02_2x.png
+  ! swift-info/images/computedProperties_2x.png -> images/computedProperties_2x.png
+  ! swift-info/images/coordinateGraphComplex_2x.png -> images/coordinateGraphComplex_2x.png
+  ! swift-info/images/coordinateGraphMedium_2x.png -> images/coordinateGraphMedium_2x.png
+  ! swift-info/images/coordinateGraphSimple_2x.png -> images/coordinateGraphSimple_2x.png
+  ! swift-info/images/initializerDelegation01_2x.png -> images/initializerDelegation01_2x.png
+  ! swift-info/images/initializerDelegation02_2x.png -> images/initializerDelegation02_2x.png
+  ! swift-info/images/initializersExample01_2x.png -> images/initializersExample01_2x.png
+  ! swift-info/images/initializersExample02_2x.png -> images/initializersExample02_2x.png
+  ! swift-info/images/initializersExample03_2x.png -> images/initializersExample03_2x.png
+  ! swift-info/images/memory_increment_2x.png -> images/memory_increment_2x.png
+  ! swift-info/images/memory_share_health_maria_2x.png -> images/memory_share_health_maria_2x.png
+  ! swift-info/images/memory_share_health_oscar_2x.png -> images/memory_share_health_oscar_2x.png
+  ! swift-info/images/memory_shopping_2x.png -> images/memory_shopping_2x.png
+  ! swift-info/images/multilineStringWhitespace_2x.png -> images/multilineStringWhitespace_2x.png
+  ! swift-info/images/overflowAddition_2x.png -> images/overflowAddition_2x.png
+  ! swift-info/images/overflowSignedSubtraction_2x.png -> images/overflowSignedSubtraction_2x.png
+  ! swift-info/images/overflowUnsignedSubtraction_2x.png -> images/overflowUnsignedSubtraction_2x.png
+  ! swift-info/images/referenceCycle01_2x.png -> images/referenceCycle01_2x.png
+  ! swift-info/images/referenceCycle02_2x.png -> images/referenceCycle02_2x.png
+  ! swift-info/images/referenceCycle03_2x.png -> images/referenceCycle03_2x.png
+  ! swift-info/images/remainderInteger_2x.png -> images/remainderInteger_2x.png
+  ! swift-info/images/setEulerDiagram_2x.png -> images/setEulerDiagram_2x.png
+  ! swift-info/images/setVennDiagram_2x.png -> images/setVennDiagram_2x.png
+  ! swift-info/images/sharedStateClass_2x.png -> images/sharedStateClass_2x.png
+  ! swift-info/images/sharedStateStruct_2x.png -> images/sharedStateStruct_2x.png
+  ! swift-info/images/snakesAndLadders_2x.png -> images/snakesAndLadders_2x.png
+  ! swift-info/images/stackPoppedOneString_2x.png -> images/stackPoppedOneString_2x.png
+  ! swift-info/images/stackPushPop_2x.png -> images/stackPushPop_2x.png
+  ! swift-info/images/stackPushedFourStrings_2x.png -> images/stackPushedFourStrings_2x.png
+  ! swift-info/images/staticPropertiesVUMeter_2x.png -> images/staticPropertiesVUMeter_2x.png
+  ! swift-info/images/stringSubstring_2x.png -> images/stringSubstring_2x.png
+  ! swift-info/images/subscriptMatrix01_2x.png -> images/subscriptMatrix01_2x.png
+  ! swift-info/images/subscriptMatrix02_2x.png -> images/subscriptMatrix02_2x.png
+  ! swift-info/images/twoPhaseInitialization01_2x.png -> images/twoPhaseInitialization01_2x.png
+  ! swift-info/images/twoPhaseInitialization02_2x.png -> images/twoPhaseInitialization02_2x.png
+  ! swift-info/images/unownedOptionalReference_2x.png -> images/unownedOptionalReference_2x.png
+  ! swift-info/images/unownedReference01_2x.png -> images/unownedReference01_2x.png
+  ! swift-info/images/unownedReference02_2x.png -> images/unownedReference02_2x.png
+  ! swift-info/images/vectorAddition_2x.png -> images/vectorAddition_2x.png
+  ! swift-info/images/weakReference01_2x.png -> images/weakReference01_2x.png
+  ! swift-info/images/weakReference02_2x.png -> images/weakReference02_2x.png
+  ! swift-info/images/weakReference03_2x.png -> images/weakReference03_2x.png
+Created swift-helpful-20220707.846.tar containing:
+  swift-helpful-20220707.846/
+  swift-helpful-20220707.846/dir
+  swift-helpful-20220707.846/images/
+  swift-helpful-20220707.846/images/CollectionTypes_intro_2x.png
+  swift-helpful-20220707.846/images/UTF16_2x.png
+  swift-helpful-20220707.846/images/UTF8_2x.png
+  swift-helpful-20220707.846/images/UnicodeScalar_2x.png
+  swift-helpful-20220707.846/images/barcode_QR_2x.png
+  swift-helpful-20220707.846/images/barcode_UPC_2x.png
+  swift-helpful-20220707.846/images/bitshiftSignedAddition_2x.png
+  swift-helpful-20220707.846/images/bitshiftSignedFour_2x.png
+  swift-helpful-20220707.846/images/bitshiftSignedMinusFourValue_2x.png
+  swift-helpful-20220707.846/images/bitshiftSignedMinusFour_2x.png
+  swift-helpful-20220707.846/images/bitshiftSigned_2x.png
+  swift-helpful-20220707.846/images/bitshiftUnsigned_2x.png
+  swift-helpful-20220707.846/images/bitwiseAND_2x.png
+  swift-helpful-20220707.846/images/bitwiseNOT_2x.png
+  swift-helpful-20220707.846/images/bitwiseOR_2x.png
+  swift-helpful-20220707.846/images/bitwiseXOR_2x.png
+  swift-helpful-20220707.846/images/chessBoard_2x.png
+  swift-helpful-20220707.846/images/closureReferenceCycle01_2x.png
+  swift-helpful-20220707.846/images/closureReferenceCycle02_2x.png
+  swift-helpful-20220707.846/images/computedProperties_2x.png
+  swift-helpful-20220707.846/images/coordinateGraphComplex_2x.png
+  swift-helpful-20220707.846/images/coordinateGraphMedium_2x.png
+  swift-helpful-20220707.846/images/coordinateGraphSimple_2x.png
+  swift-helpful-20220707.846/images/initializerDelegation01_2x.png
+  swift-helpful-20220707.846/images/initializerDelegation02_2x.png
+  swift-helpful-20220707.846/images/initializersExample01_2x.png
+  swift-helpful-20220707.846/images/initializersExample02_2x.png
+  swift-helpful-20220707.846/images/initializersExample03_2x.png
+  swift-helpful-20220707.846/images/memory_increment_2x.png
+  swift-helpful-20220707.846/images/memory_share_health_maria_2x.png
+  swift-helpful-20220707.846/images/memory_share_health_oscar_2x.png
+  swift-helpful-20220707.846/images/memory_shopping_2x.png
+  swift-helpful-20220707.846/images/multilineStringWhitespace_2x.png
+  swift-helpful-20220707.846/images/overflowAddition_2x.png
+  swift-helpful-20220707.846/images/overflowSignedSubtraction_2x.png
+  swift-helpful-20220707.846/images/overflowUnsignedSubtraction_2x.png
+  swift-helpful-20220707.846/images/referenceCycle01_2x.png
+  swift-helpful-20220707.846/images/referenceCycle02_2x.png
+  swift-helpful-20220707.846/images/referenceCycle03_2x.png
+  swift-helpful-20220707.846/images/remainderInteger_2x.png
+  swift-helpful-20220707.846/images/setEulerDiagram_2x.png
+  swift-helpful-20220707.846/images/setVennDiagram_2x.png
+  swift-helpful-20220707.846/images/sharedStateClass_2x.png
+  swift-helpful-20220707.846/images/sharedStateStruct_2x.png
+  swift-helpful-20220707.846/images/snakesAndLadders_2x.png
+  swift-helpful-20220707.846/images/stackPoppedOneString_2x.png
+  swift-helpful-20220707.846/images/stackPushPop_2x.png
+  swift-helpful-20220707.846/images/stackPushedFourStrings_2x.png
+  swift-helpful-20220707.846/images/staticPropertiesVUMeter_2x.png
+  swift-helpful-20220707.846/images/stringSubstring_2x.png
+  swift-helpful-20220707.846/images/subscriptMatrix01_2x.png
+  swift-helpful-20220707.846/images/subscriptMatrix02_2x.png
+  swift-helpful-20220707.846/images/twoPhaseInitialization01_2x.png
+  swift-helpful-20220707.846/images/twoPhaseInitialization02_2x.png
+  swift-helpful-20220707.846/images/unownedOptionalReference_2x.png
+  swift-helpful-20220707.846/images/unownedReference01_2x.png
+  swift-helpful-20220707.846/images/unownedReference02_2x.png
+  swift-helpful-20220707.846/images/vectorAddition_2x.png
+  swift-helpful-20220707.846/images/weakReference01_2x.png
+  swift-helpful-20220707.846/images/weakReference02_2x.png
+  swift-helpful-20220707.846/images/weakReference03_2x.png
+  swift-helpful-20220707.846/swift-helpful-pkg.el
+  swift-helpful-20220707.846/swift-helpful-regex.el
+  swift-helpful-20220707.846/swift-helpful.el
+  swift-helpful-20220707.846/swift-reference.info
+  swift-helpful-20220707.846/swift.info
+ ✓ Success:
+  2025-01-14T02:54:14+0000  swift-helpful-20220707.846.entry
+  2025-01-14T02:54:14+0000  swift-helpful-20220707.846.tar
+Built swift-helpful in 3.269s, finished at 2025-01-14T02:54:14+0000

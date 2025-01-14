@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/danielfm/smudge
 
 Updating /mnt/store/melpa/working/smudge/
-Checking out ae5c66c2104c1cb268702d06f06343e887f0ac9a
+Checking out 6f1bd002df6117bdcb49a425bdba2868e205c1fc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/smudge/
-  to /tmp/smudgeTBcMpZ/smudge-20250112.1655
+  to /tmp/smudgeAOGsUQ/smudge-20250114.101
     smudge-api.el -> smudge-api.el
     smudge-apple.el -> smudge-apple.el
     smudge-connect.el -> smudge-connect.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
     smudge-remote.el -> smudge-remote.el
     smudge-track.el -> smudge-track.el
     smudge.el -> smudge.el
-Created smudge-20250112.1655.tar containing:
-  smudge-20250112.1655/
-  smudge-20250112.1655/smudge-api.el
-  smudge-20250112.1655/smudge-apple.el
-  smudge-20250112.1655/smudge-connect.el
-  smudge-20250112.1655/smudge-controller.el
-  smudge-20250112.1655/smudge-dbus.el
-  smudge-20250112.1655/smudge-device-select.el
-  smudge-20250112.1655/smudge-pkg.el
-  smudge-20250112.1655/smudge-playlist.el
-  smudge-20250112.1655/smudge-remote.el
-  smudge-20250112.1655/smudge-track.el
-  smudge-20250112.1655/smudge.el
+Created smudge-20250114.101.tar containing:
+  smudge-20250114.101/
+  smudge-20250114.101/smudge-api.el
+  smudge-20250114.101/smudge-apple.el
+  smudge-20250114.101/smudge-connect.el
+  smudge-20250114.101/smudge-controller.el
+  smudge-20250114.101/smudge-dbus.el
+  smudge-20250114.101/smudge-device-select.el
+  smudge-20250114.101/smudge-pkg.el
+  smudge-20250114.101/smudge-playlist.el
+  smudge-20250114.101/smudge-remote.el
+  smudge-20250114.101/smudge-track.el
+  smudge-20250114.101/smudge.el
  ✓ Success:
   2025-01-13T23:34:36+0000  smudge-20250112.1655.entry
   2025-01-13T23:34:36+0000  smudge-20250112.1655.tar
-Built smudge in 2.940s, finished at 2025-01-13T23:34:37+0000
+  2025-01-14T02:52:10+0000  smudge-20250114.101.entry
+  2025-01-14T02:52:09+0000  smudge-20250114.101.tar
+Built smudge in 3.063s, finished at 2025-01-14T02:52:10+0000

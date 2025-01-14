@@ -3,37 +3,40 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out 95f7d12f0175519d86c40ecd8c5159dd7b99e540
+Checking out c494f035f5202d17b0f16a44199141b20bc5c18a
+Warning: loopy :files spec is equivalent to the default
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyZMI9vc/loopy-20250104.2303
-    loopy-commands.el -> loopy-commands.el
-    loopy-destructure.el -> loopy-destructure.el
-    loopy-instrs.el -> loopy-instrs.el
-    loopy-iter.el -> loopy-iter.el
-    loopy-misc.el -> loopy-misc.el
-    loopy-pcase.el -> loopy-pcase.el
-    loopy-pkg.el -> loopy-pkg.el
-    loopy-seq.el -> loopy-seq.el
-    loopy-vars.el -> loopy-vars.el
-    loopy.el -> loopy.el
+  to /tmp/loopySaJylw/loopy-20250114.217
+  ! lisp/loopy-commands.el -> loopy-commands.el
+  ! lisp/loopy-destructure.el -> loopy-destructure.el
+  ! lisp/loopy-instrs.el -> loopy-instrs.el
+  ! lisp/loopy-iter.el -> loopy-iter.el
+  ! lisp/loopy-misc.el -> loopy-misc.el
+  ! lisp/loopy-pcase.el -> loopy-pcase.el
+  ! lisp/loopy-pkg.el -> loopy-pkg.el
+  ! lisp/loopy-seq.el -> loopy-seq.el
+  ! lisp/loopy-vars.el -> loopy-vars.el
+  ! lisp/loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
 Generating loopy.info
-Created loopy-20250104.2303.tar containing:
-  loopy-20250104.2303/
-  loopy-20250104.2303/dir
-  loopy-20250104.2303/loopy-commands.el
-  loopy-20250104.2303/loopy-destructure.el
-  loopy-20250104.2303/loopy-instrs.el
-  loopy-20250104.2303/loopy-iter.el
-  loopy-20250104.2303/loopy-misc.el
-  loopy-20250104.2303/loopy-pcase.el
-  loopy-20250104.2303/loopy-pkg.el
-  loopy-20250104.2303/loopy-seq.el
-  loopy-20250104.2303/loopy-vars.el
-  loopy-20250104.2303/loopy.el
-  loopy-20250104.2303/loopy.info
+Created loopy-20250114.217.tar containing:
+  loopy-20250114.217/
+  loopy-20250114.217/dir
+  loopy-20250114.217/loopy-commands.el
+  loopy-20250114.217/loopy-destructure.el
+  loopy-20250114.217/loopy-instrs.el
+  loopy-20250114.217/loopy-iter.el
+  loopy-20250114.217/loopy-misc.el
+  loopy-20250114.217/loopy-pcase.el
+  loopy-20250114.217/loopy-pkg.el
+  loopy-20250114.217/loopy-seq.el
+  loopy-20250114.217/loopy-vars.el
+  loopy-20250114.217/loopy.el
+  loopy-20250114.217/loopy.info
  ✓ Success:
   2025-01-13T23:09:24+0000  loopy-20250104.2303.entry
   2025-01-13T23:09:24+0000  loopy-20250104.2303.tar
-Built loopy in 6.793s, finished at 2025-01-13T23:09:25+0000
+  2025-01-14T02:27:21+0000  loopy-20250114.217.entry
+  2025-01-14T02:27:21+0000  loopy-20250114.217.tar
+Built loopy in 7.246s, finished at 2025-01-14T02:27:22+0000

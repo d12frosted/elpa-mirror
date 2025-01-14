@@ -3,37 +3,170 @@ Fetcher: github
 Source:  https://github.com/emacs-tree-sitter/tree-sitter-langs
 
 Updating /mnt/store/melpa/working/tree-sitter-langs/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/emacs-tree-sitter/tree-sitter-langs/': The requested URL returned error: 500
-
-Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
-  error("%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
-  package-build--error(#<package-github-recipe package-github-recipe-158df428199a> "%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-github-recipe package-github-recipe-158df428199a> "git" "fetch" "-f" "--tags" "origin")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-158df428199a>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-158df428199a> nil)
-  package-build--fetch(#<package-github-recipe package-github-recipe-158df428199a>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  package-build-archive("tree-sitter-langs")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"tree-sitter-langs\")"))
-  command-line()
-  normal-top-level()
-
+Checking out 4f951dbb530d254a0eb223431a0e0d63b2a7399a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tree-sitter-langs/
+  to /tmp/tree-sitter-langswEWGQb/tree-sitter-langs-20250105.755
+    tree-sitter-langs-build.el -> tree-sitter-langs-build.el
+    tree-sitter-langs.el -> tree-sitter-langs.el
+    queries => queries
+Created tree-sitter-langs-20250105.755.tar containing:
+  tree-sitter-langs-20250105.755/
+  tree-sitter-langs-20250105.755/queries/
+  tree-sitter-langs-20250105.755/queries/agda/
+  tree-sitter-langs-20250105.755/queries/agda/highlights.scm
+  tree-sitter-langs-20250105.755/queries/arduino/
+  tree-sitter-langs-20250105.755/queries/arduino/highlights.scm
+  tree-sitter-langs-20250105.755/queries/asm/
+  tree-sitter-langs-20250105.755/queries/asm/highlights.scm
+  tree-sitter-langs-20250105.755/queries/astro/
+  tree-sitter-langs-20250105.755/queries/astro/highlights.scm
+  tree-sitter-langs-20250105.755/queries/bash/
+  tree-sitter-langs-20250105.755/queries/bash/highlights.scm
+  tree-sitter-langs-20250105.755/queries/bibtex/
+  tree-sitter-langs-20250105.755/queries/bibtex/highlights.scm
+  tree-sitter-langs-20250105.755/queries/c/
+  tree-sitter-langs-20250105.755/queries/c/highlights.scm
+  tree-sitter-langs-20250105.755/queries/cmake/
+  tree-sitter-langs-20250105.755/queries/cmake/highlights.scm
+  tree-sitter-langs-20250105.755/queries/cpp/
+  tree-sitter-langs-20250105.755/queries/cpp/highlights.scm
+  tree-sitter-langs-20250105.755/queries/css/
+  tree-sitter-langs-20250105.755/queries/css/highlights.scm
+  tree-sitter-langs-20250105.755/queries/csv/
+  tree-sitter-langs-20250105.755/queries/csv/highlights.scm
+  tree-sitter-langs-20250105.755/queries/dart/
+  tree-sitter-langs-20250105.755/queries/dart/highlights.scm
+  tree-sitter-langs-20250105.755/queries/dockerfile/
+  tree-sitter-langs-20250105.755/queries/dockerfile/highlights.scm
+  tree-sitter-langs-20250105.755/queries/doxygen/
+  tree-sitter-langs-20250105.755/queries/doxygen/highlights.scm
+  tree-sitter-langs-20250105.755/queries/ecma/
+  tree-sitter-langs-20250105.755/queries/ecma/highlights.scm
+  tree-sitter-langs-20250105.755/queries/editorconfig/
+  tree-sitter-langs-20250105.755/queries/editorconfig/highlights.scm
+  tree-sitter-langs-20250105.755/queries/elixir/
+  tree-sitter-langs-20250105.755/queries/elixir/highlights.scm
+  tree-sitter-langs-20250105.755/queries/elm/
+  tree-sitter-langs-20250105.755/queries/elm/highlights.scm
+  tree-sitter-langs-20250105.755/queries/fish/
+  tree-sitter-langs-20250105.755/queries/fish/highlights.scm
+  tree-sitter-langs-20250105.755/queries/gdscript/
+  tree-sitter-langs-20250105.755/queries/gdscript/highlights.scm
+  tree-sitter-langs-20250105.755/queries/git-rebase/
+  tree-sitter-langs-20250105.755/queries/git-rebase/highlights.scm
+  tree-sitter-langs-20250105.755/queries/gitattributes/
+  tree-sitter-langs-20250105.755/queries/gitattributes/highlights.scm
+  tree-sitter-langs-20250105.755/queries/gitcommit/
+  tree-sitter-langs-20250105.755/queries/gitcommit/highlights.scm
+  tree-sitter-langs-20250105.755/queries/gitignore/
+  tree-sitter-langs-20250105.755/queries/gitignore/highlights.scm
+  tree-sitter-langs-20250105.755/queries/glsl/
+  tree-sitter-langs-20250105.755/queries/glsl/highlights.scm
+  tree-sitter-langs-20250105.755/queries/go/
+  tree-sitter-langs-20250105.755/queries/go/highlights.scm
+  tree-sitter-langs-20250105.755/queries/groovy/
+  tree-sitter-langs-20250105.755/queries/groovy/highlights.scm
+  tree-sitter-langs-20250105.755/queries/haskell/
+  tree-sitter-langs-20250105.755/queries/haskell/highlights.scm
+  tree-sitter-langs-20250105.755/queries/haxe/
+  tree-sitter-langs-20250105.755/queries/haxe/highlights.scm
+  tree-sitter-langs-20250105.755/queries/hcl/
+  tree-sitter-langs-20250105.755/queries/hcl/highlights.scm
+  tree-sitter-langs-20250105.755/queries/hcl/highlights.terraform-mode.scm
+  tree-sitter-langs-20250105.755/queries/heex/
+  tree-sitter-langs-20250105.755/queries/heex/highlights.scm
+  tree-sitter-langs-20250105.755/queries/hlsl/
+  tree-sitter-langs-20250105.755/queries/hlsl/highlights.scm
+  tree-sitter-langs-20250105.755/queries/html/
+  tree-sitter-langs-20250105.755/queries/html/highlights.scm
+  tree-sitter-langs-20250105.755/queries/html_tags/
+  tree-sitter-langs-20250105.755/queries/html_tags/highlights.scm
+  tree-sitter-langs-20250105.755/queries/jai/
+  tree-sitter-langs-20250105.755/queries/jai/highlights.scm
+  tree-sitter-langs-20250105.755/queries/java/
+  tree-sitter-langs-20250105.755/queries/java/highlights.scm
+  tree-sitter-langs-20250105.755/queries/javascript/
+  tree-sitter-langs-20250105.755/queries/javascript/highlights.scm
+  tree-sitter-langs-20250105.755/queries/json/
+  tree-sitter-langs-20250105.755/queries/json/highlights.scm
+  tree-sitter-langs-20250105.755/queries/julia/
+  tree-sitter-langs-20250105.755/queries/julia/highlights.scm
+  tree-sitter-langs-20250105.755/queries/kotlin/
+  tree-sitter-langs-20250105.755/queries/kotlin/highlights.scm
+  tree-sitter-langs-20250105.755/queries/llvm-mir/
+  tree-sitter-langs-20250105.755/queries/llvm-mir/highlights.scm
+  tree-sitter-langs-20250105.755/queries/llvm/
+  tree-sitter-langs-20250105.755/queries/llvm/highlights.scm
+  tree-sitter-langs-20250105.755/queries/lua/
+  tree-sitter-langs-20250105.755/queries/lua/highlights.scm
+  tree-sitter-langs-20250105.755/queries/make/
+  tree-sitter-langs-20250105.755/queries/make/highlights.scm
+  tree-sitter-langs-20250105.755/queries/matlab/
+  tree-sitter-langs-20250105.755/queries/matlab/highlights.scm
+  tree-sitter-langs-20250105.755/queries/mermaid/
+  tree-sitter-langs-20250105.755/queries/mermaid/highlights.scm
+  tree-sitter-langs-20250105.755/queries/ninja/
+  tree-sitter-langs-20250105.755/queries/ninja/highlights.scm
+  tree-sitter-langs-20250105.755/queries/nix/
+  tree-sitter-langs-20250105.755/queries/nix/highlights.scm
+  tree-sitter-langs-20250105.755/queries/ocaml-interface/
+  tree-sitter-langs-20250105.755/queries/ocaml-interface/highlights.scm
+  tree-sitter-langs-20250105.755/queries/ocaml/
+  tree-sitter-langs-20250105.755/queries/ocaml/highlights.scm
+  tree-sitter-langs-20250105.755/queries/pascal/
+  tree-sitter-langs-20250105.755/queries/pascal/highlights.scm
+  tree-sitter-langs-20250105.755/queries/pgn/
+  tree-sitter-langs-20250105.755/queries/pgn/highlights.scm
+  tree-sitter-langs-20250105.755/queries/php/
+  tree-sitter-langs-20250105.755/queries/php/highlights.scm
+  tree-sitter-langs-20250105.755/queries/psv/
+  tree-sitter-langs-20250105.755/queries/psv/highlights.scm
+  tree-sitter-langs-20250105.755/queries/purescript/
+  tree-sitter-langs-20250105.755/queries/purescript/highlights.scm
+  tree-sitter-langs-20250105.755/queries/purescript/locals.scm
+  tree-sitter-langs-20250105.755/queries/python/
+  tree-sitter-langs-20250105.755/queries/python/highlights.scm
+  tree-sitter-langs-20250105.755/queries/r/
+  tree-sitter-langs-20250105.755/queries/r/highlights.scm
+  tree-sitter-langs-20250105.755/queries/r/locals.scm
+  tree-sitter-langs-20250105.755/queries/r/tags.scm
+  tree-sitter-langs-20250105.755/queries/racket/
+  tree-sitter-langs-20250105.755/queries/racket/highlights.scm
+  tree-sitter-langs-20250105.755/queries/ruby/
+  tree-sitter-langs-20250105.755/queries/ruby/highlights.scm
+  tree-sitter-langs-20250105.755/queries/rust/
+  tree-sitter-langs-20250105.755/queries/rust/highlights.scm
+  tree-sitter-langs-20250105.755/queries/solidity/
+  tree-sitter-langs-20250105.755/queries/solidity/highlights.scm
+  tree-sitter-langs-20250105.755/queries/sql/
+  tree-sitter-langs-20250105.755/queries/sql/highlights.scm
+  tree-sitter-langs-20250105.755/queries/svelte/
+  tree-sitter-langs-20250105.755/queries/svelte/highlights.scm
+  tree-sitter-langs-20250105.755/queries/tablegen/
+  tree-sitter-langs-20250105.755/queries/tablegen/highlights.scm
+  tree-sitter-langs-20250105.755/queries/tcl/
+  tree-sitter-langs-20250105.755/queries/tcl/highlights.scm
+  tree-sitter-langs-20250105.755/queries/tsv/
+  tree-sitter-langs-20250105.755/queries/tsv/highlights.scm
+  tree-sitter-langs-20250105.755/queries/tsx/
+  tree-sitter-langs-20250105.755/queries/tsx/highlights.scm
+  tree-sitter-langs-20250105.755/queries/twig/
+  tree-sitter-langs-20250105.755/queries/twig/highlights.scm
+  tree-sitter-langs-20250105.755/queries/typescript/
+  tree-sitter-langs-20250105.755/queries/typescript/highlights.scm
+  tree-sitter-langs-20250105.755/queries/typst/
+  tree-sitter-langs-20250105.755/queries/typst/highlights.scm
+  tree-sitter-langs-20250105.755/queries/xml/
+  tree-sitter-langs-20250105.755/queries/xml/highlights.scm
+  tree-sitter-langs-20250105.755/queries/yaml/
+  tree-sitter-langs-20250105.755/queries/yaml/highlights.scm
+  tree-sitter-langs-20250105.755/queries/zig/
+  tree-sitter-langs-20250105.755/queries/zig/highlights.scm
+  tree-sitter-langs-20250105.755/tree-sitter-langs-build.el
+  tree-sitter-langs-20250105.755/tree-sitter-langs-pkg.el
+  tree-sitter-langs-20250105.755/tree-sitter-langs.el
+ ✓ Success:
+  2025-01-14T02:57:14+0000  tree-sitter-langs-20250105.755.entry
+  2025-01-14T02:57:14+0000  tree-sitter-langs-20250105.755.tar
+Built tree-sitter-langs in 3.361s, finished at 2025-01-14T02:57:15+0000
