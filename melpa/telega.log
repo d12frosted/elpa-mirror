@@ -3,177 +3,36 @@ Fetcher: github
 Source:  https://github.com/zevlg/telega.el
 
 Updating /mnt/store/melpa/working/telega/
-Checking out 3836cff15393fe1dc1addb4fe46b11878dab4891
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/telega/
-  to /tmp/telegaTkqeBm/telega-20241220.1052
-    telega-chat.el -> telega-chat.el
-    telega-company.el -> telega-company.el
-    telega-core.el -> telega-core.el
-    telega-customize.el -> telega-customize.el
-    telega-emoji.el -> telega-emoji.el
-    telega-ffplay.el -> telega-ffplay.el
-    telega-filter.el -> telega-filter.el
-    telega-folders.el -> telega-folders.el
-    telega-i18n.el -> telega-i18n.el
-    telega-info.el -> telega-info.el
-    telega-inline.el -> telega-inline.el
-    telega-ins.el -> telega-ins.el
-    telega-match.el -> telega-match.el
-    telega-media.el -> telega-media.el
-    telega-modes.el -> telega-modes.el
-    telega-msg.el -> telega-msg.el
-    telega-notifications.el -> telega-notifications.el
-    telega-obsolete.el -> telega-obsolete.el
-    telega-root.el -> telega-root.el
-    telega-server.el -> telega-server.el
-    telega-sort.el -> telega-sort.el
-    telega-sticker.el -> telega-sticker.el
-    telega-story.el -> telega-story.el
-    telega-tdlib-events.el -> telega-tdlib-events.el
-    telega-tdlib.el -> telega-tdlib.el
-    telega-tme.el -> telega-tme.el
-    telega-topic.el -> telega-topic.el
-    telega-user.el -> telega-user.el
-    telega-util.el -> telega-util.el
-    telega-voip.el -> telega-voip.el
-    telega-vvnote.el -> telega-vvnote.el
-    telega-webpage.el -> telega-webpage.el
-    telega.el -> telega.el
-    etc => etc
-    server => server
-    contrib => contrib
-    Makefile -> Makefile
-Created telega-20241220.1052.tar containing:
-  telega-20241220.1052/
-  telega-20241220.1052/Makefile
-  telega-20241220.1052/contrib/
-  telega-20241220.1052/contrib/ol-telega.el
-  telega-20241220.1052/contrib/telega-adblock.el
-  telega-20241220.1052/contrib/telega-alert.el
-  telega-20241220.1052/contrib/telega-bridge-bot.el
-  telega-20241220.1052/contrib/telega-channels-export.el
-  telega-20241220.1052/contrib/telega-dashboard.el
-  telega-20241220.1052/contrib/telega-dired-dwim.el
-  telega-20241220.1052/contrib/telega-emacs-stories.el
-  telega-20241220.1052/contrib/telega-live-location.el
-  telega-20241220.1052/contrib/telega-mnz.el
-  telega-20241220.1052/contrib/telega-status-history.el
-  telega-20241220.1052/contrib/telega-transient.el
-  telega-20241220.1052/contrib/telega-url-shorten.el
-  telega-20241220.1052/etc/
-  telega-20241220.1052/etc/Dockerfile
-  telega-20241220.1052/etc/TODO-tdlib-1.4.0.org
-  telega-20241220.1052/etc/TODO-tdlib-1.5.0.org
-  telega-20241220.1052/etc/TODO-tdlib-1.6.0.org
-  telega-20241220.1052/etc/TODO-tdlib-1.7.0.org
-  telega-20241220.1052/etc/asound.conf
-  telega-20241220.1052/etc/chat_emacs_telega.svg
-  telega-20241220.1052/etc/donate_btc.jpg
-  telega-20241220.1052/etc/donate_ton.jpg
-  telega-20241220.1052/etc/donate_usdt.jpg
-  telega-20241220.1052/etc/emacs-stories.svg
-  telega-20241220.1052/etc/emacs-stories64.png
-  telega-20241220.1052/etc/emojis.alist
-  telega-20241220.1052/etc/fa-brands/
-  telega-20241220.1052/etc/fa-brands/github-octocat.svg
-  telega-20241220.1052/etc/fa-brands/github.svg
-  telega-20241220.1052/etc/fa-brands/gitlab-rgb.svg
-  telega-20241220.1052/etc/fa-brands/gitlab.svg
-  telega-20241220.1052/etc/fa-brands/instagram-rgb.svg
-  telega-20241220.1052/etc/fa-brands/instagram.svg
-  telega-20241220.1052/etc/fa-brands/tiktok-rgb.svg
-  telega-20241220.1052/etc/fa-brands/wikipedia-rgb.svg
-  telega-20241220.1052/etc/fa-brands/wikipedia.svg
-  telega-20241220.1052/etc/fa-brands/youtube-rgb.svg
-  telega-20241220.1052/etc/fa-brands/youtube.svg
-  telega-20241220.1052/etc/langs/
-  telega-20241220.1052/etc/langs/en.plist
-  telega-20241220.1052/etc/langs/zh.plist
-  telega-20241220.1052/etc/sounds/
-  telega-20241220.1052/etc/sounds/call_busy.mp3
-  telega-20241220.1052/etc/sounds/call_connect.mp3
-  telega-20241220.1052/etc/sounds/call_end.mp3
-  telega-20241220.1052/etc/sounds/call_incoming.mp3
-  telega-20241220.1052/etc/sounds/call_outgoing.mp3
-  telega-20241220.1052/etc/sounds/msg_incoming.mp3
-  telega-20241220.1052/etc/symbols/
-  telega-20241220.1052/etc/symbols/button-close.svg
-  telega-20241220.1052/etc/symbols/forum.svg
-  telega-20241220.1052/etc/symbols/forward.svg
-  telega-20241220.1052/etc/symbols/premium.svg
-  telega-20241220.1052/etc/symbols/reaction.svg
-  telega-20241220.1052/etc/symbols/reply-quote.svg
-  telega-20241220.1052/etc/symbols/reply.svg
-  telega-20241220.1052/etc/symbols/right-arrow.svg
-  telega-20241220.1052/etc/symbols/story-reply.svg
-  telega-20241220.1052/etc/symbols/story.svg
-  telega-20241220.1052/etc/symbols/tag-end.svg
-  telega-20241220.1052/etc/symbols/typing.svg
-  telega-20241220.1052/etc/td-api-1.3.0.tl
-  telega-20241220.1052/etc/td-api-1.4.0.tl
-  telega-20241220.1052/etc/td-api-1.5.0.tl
-  telega-20241220.1052/etc/td-api-1.6.0.tl
-  telega-20241220.1052/etc/td-api-1.6.6.tl
-  telega-20241220.1052/etc/td-api-1.7.0.tl
-  telega-20241220.1052/etc/td-api-1.7.3.tl
-  telega-20241220.1052/etc/telega-logo.png
-  telega-20241220.1052/etc/telega-logo.svg
-  telega-20241220.1052/etc/telega-logo.xpm
-  telega-20241220.1052/etc/telega-logo64.png
-  telega-20241220.1052/etc/telega-make.el
-  telega-20241220.1052/etc/telegram-logo.png
-  telega-20241220.1052/etc/telegram-logo.svg
-  telega-20241220.1052/etc/telegram-logo.xpm
-  telega-20241220.1052/etc/telegram-msgin.wav
-  telega-20241220.1052/etc/ton-lite-client-test1.config.json
-  telega-20241220.1052/etc/tonlib_api.tl
-  telega-20241220.1052/etc/verified.svg
-  telega-20241220.1052/server/
-  telega-20241220.1052/server/Makefile
-  telega-20241220.1052/server/run_tests.py
-  telega-20241220.1052/server/telega-appindicator.c
-  telega-20241220.1052/server/telega-dat.c
-  telega-20241220.1052/server/telega-dat.h
-  telega-20241220.1052/server/telega-emoji.h
-  telega-20241220.1052/server/telega-pngext.c
-  telega-20241220.1052/server/telega-server.c
-  telega-20241220.1052/server/telega-voip.cpp
-  telega-20241220.1052/telega-chat.el
-  telega-20241220.1052/telega-company.el
-  telega-20241220.1052/telega-core.el
-  telega-20241220.1052/telega-customize.el
-  telega-20241220.1052/telega-emoji.el
-  telega-20241220.1052/telega-ffplay.el
-  telega-20241220.1052/telega-filter.el
-  telega-20241220.1052/telega-folders.el
-  telega-20241220.1052/telega-i18n.el
-  telega-20241220.1052/telega-info.el
-  telega-20241220.1052/telega-inline.el
-  telega-20241220.1052/telega-ins.el
-  telega-20241220.1052/telega-match.el
-  telega-20241220.1052/telega-media.el
-  telega-20241220.1052/telega-modes.el
-  telega-20241220.1052/telega-msg.el
-  telega-20241220.1052/telega-notifications.el
-  telega-20241220.1052/telega-obsolete.el
-  telega-20241220.1052/telega-pkg.el
-  telega-20241220.1052/telega-root.el
-  telega-20241220.1052/telega-server.el
-  telega-20241220.1052/telega-sort.el
-  telega-20241220.1052/telega-sticker.el
-  telega-20241220.1052/telega-story.el
-  telega-20241220.1052/telega-tdlib-events.el
-  telega-20241220.1052/telega-tdlib.el
-  telega-20241220.1052/telega-tme.el
-  telega-20241220.1052/telega-topic.el
-  telega-20241220.1052/telega-user.el
-  telega-20241220.1052/telega-util.el
-  telega-20241220.1052/telega-voip.el
-  telega-20241220.1052/telega-vvnote.el
-  telega-20241220.1052/telega-webpage.el
-  telega-20241220.1052/telega.el
- ✓ Success:
-  2025-01-13T18:19:00+0000  telega-20241220.1052.entry
-  2025-01-13T18:18:59+0000  telega-20241220.1052.tar
-Built telega in 4.093s, finished at 2025-01-13T18:19:00+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/zevlg/telega.el/': The requested URL returned error: 503
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-1556a69a9d9a> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-1556a69a9d9a> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-1556a69a9d9a>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-1556a69a9d9a> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-1556a69a9d9a>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("telega")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"telega\")"))
+  command-line()
+  normal-top-level()
+
