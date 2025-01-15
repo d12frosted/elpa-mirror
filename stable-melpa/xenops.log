@@ -1,0 +1,58 @@
+Package: xenops
+Fetcher: github
+Source:  https://github.com/dandavison/xenops
+
+Updating /mnt/store/melpa/working/xenops/
+Checking out 6d9a8d654a6102484ac9087f25931f0664e7dd07
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xenops/
+  to /tmp/xenops8an0cm/xenops-20250103.1420
+  ! lisp/xenops-aio.el -> xenops-aio.el
+  ! lisp/xenops-apply.el -> xenops-apply.el
+  ! lisp/xenops-auctex.el -> xenops-auctex.el
+  ! lisp/xenops-avy.el -> xenops-avy.el
+  ! lisp/xenops-doctor.el -> xenops-doctor.el
+  ! lisp/xenops-element.el -> xenops-element.el
+  ! lisp/xenops-elements.el -> xenops-elements.el
+  ! lisp/xenops-font.el -> xenops-font.el
+  ! lisp/xenops-footnote.el -> xenops-footnote.el
+  ! lisp/xenops-image.el -> xenops-image.el
+  ! lisp/xenops-math-latex.el -> xenops-math-latex.el
+  ! lisp/xenops-math.el -> xenops-math.el
+  ! lisp/xenops-minted.el -> xenops-minted.el
+  ! lisp/xenops-overlay.el -> xenops-overlay.el
+  ! lisp/xenops-parse.el -> xenops-parse.el
+  ! lisp/xenops-png.el -> xenops-png.el
+  ! lisp/xenops-src.el -> xenops-src.el
+  ! lisp/xenops-style.el -> xenops-style.el
+  ! lisp/xenops-util.el -> xenops-util.el
+  ! lisp/xenops-xen.el -> xenops-xen.el
+  ! lisp/xenops.el -> xenops.el
+Created xenops-20250103.1420.tar containing:
+  xenops-20250103.1420/
+  xenops-20250103.1420/xenops-aio.el
+  xenops-20250103.1420/xenops-apply.el
+  xenops-20250103.1420/xenops-auctex.el
+  xenops-20250103.1420/xenops-avy.el
+  xenops-20250103.1420/xenops-doctor.el
+  xenops-20250103.1420/xenops-element.el
+  xenops-20250103.1420/xenops-elements.el
+  xenops-20250103.1420/xenops-font.el
+  xenops-20250103.1420/xenops-footnote.el
+  xenops-20250103.1420/xenops-image.el
+  xenops-20250103.1420/xenops-math-latex.el
+  xenops-20250103.1420/xenops-math.el
+  xenops-20250103.1420/xenops-minted.el
+  xenops-20250103.1420/xenops-overlay.el
+  xenops-20250103.1420/xenops-parse.el
+  xenops-20250103.1420/xenops-pkg.el
+  xenops-20250103.1420/xenops-png.el
+  xenops-20250103.1420/xenops-src.el
+  xenops-20250103.1420/xenops-style.el
+  xenops-20250103.1420/xenops-util.el
+  xenops-20250103.1420/xenops-xen.el
+  xenops-20250103.1420/xenops.el
+ ✓ Success:
+  2025-01-15T10:45:06+0000  xenops-20250103.1420.entry
+  2025-01-15T10:45:06+0000  xenops-20250103.1420.tar
+Built xenops in 3.433s, finished at 2025-01-15T10:45:07+0000

@@ -467,6 +467,8 @@
     `ellama-chat'.
   • `ellama-instant-display-action-function': Display action function
     for `ellama-instant'.
+  • `ellama-translate-italic': Translate italic during markdown to org
+    transformations. Enabled by default.
 
 
 [zephyr] <https://ollama.ai/library/zephyr>
