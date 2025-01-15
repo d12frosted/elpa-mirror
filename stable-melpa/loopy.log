@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out c494f035f5202d17b0f16a44199141b20bc5c18a
+Checking out 15dbf1d69219fc68b0c32ae88e81271cbe763255
 Warning: loopy :files spec is equivalent to the default
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyQvVVKz/loopy-20250114.217
+  to /tmp/loopyhoTUBw/loopy-20250115.37
   ! lisp/loopy-commands.el -> loopy-commands.el
   ! lisp/loopy-destructure.el -> loopy-destructure.el
   ! lisp/loopy-instrs.el -> loopy-instrs.el
@@ -20,21 +20,23 @@ Copying files (->) and directories (=>)
   ! lisp/loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
 Generating loopy.info
-Created loopy-20250114.217.tar containing:
-  loopy-20250114.217/
-  loopy-20250114.217/dir
-  loopy-20250114.217/loopy-commands.el
-  loopy-20250114.217/loopy-destructure.el
-  loopy-20250114.217/loopy-instrs.el
-  loopy-20250114.217/loopy-iter.el
-  loopy-20250114.217/loopy-misc.el
-  loopy-20250114.217/loopy-pcase.el
-  loopy-20250114.217/loopy-pkg.el
-  loopy-20250114.217/loopy-seq.el
-  loopy-20250114.217/loopy-vars.el
-  loopy-20250114.217/loopy.el
-  loopy-20250114.217/loopy.info
+Created loopy-20250115.37.tar containing:
+  loopy-20250115.37/
+  loopy-20250115.37/dir
+  loopy-20250115.37/loopy-commands.el
+  loopy-20250115.37/loopy-destructure.el
+  loopy-20250115.37/loopy-instrs.el
+  loopy-20250115.37/loopy-iter.el
+  loopy-20250115.37/loopy-misc.el
+  loopy-20250115.37/loopy-pcase.el
+  loopy-20250115.37/loopy-pkg.el
+  loopy-20250115.37/loopy-seq.el
+  loopy-20250115.37/loopy-vars.el
+  loopy-20250115.37/loopy.el
+  loopy-20250115.37/loopy.info
  ✓ Success:
   2025-01-14T23:43:42+0000  loopy-20250114.217.entry
   2025-01-14T23:43:42+0000  loopy-20250114.217.tar
-Built loopy in 6.776s, finished at 2025-01-14T23:43:43+0000
+  2025-01-15T02:20:54+0000  loopy-20250115.37.entry
+  2025-01-15T02:20:54+0000  loopy-20250115.37.tar
+Built loopy in 6.948s, finished at 2025-01-15T02:20:55+0000
