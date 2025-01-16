@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/xenodium/chatgpt-shell
 
 Updating /mnt/store/melpa/working/chatgpt-shell/
-Checking out 99db92a3ba19872280249321198c2f6eb1af3e73
+Checking out 9c896feda89a2a879de807a5bd652beec7d6a3f6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chatgpt-shell/
-  to /tmp/chatgpt-shellyY7oe2/chatgpt-shell-20250115.1025
+  to /tmp/chatgpt-shell864KBq/chatgpt-shell-20250116.1203
     chatgpt-shell-anthropic.el -> chatgpt-shell-anthropic.el
     chatgpt-shell-google.el -> chatgpt-shell-google.el
     chatgpt-shell-kagi.el -> chatgpt-shell-kagi.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     chatgpt-shell-perplexity.el -> chatgpt-shell-perplexity.el
     chatgpt-shell-prompt-compose.el -> chatgpt-shell-prompt-compose.el
     chatgpt-shell.el -> chatgpt-shell.el
-Created chatgpt-shell-20250115.1025.tar containing:
-  chatgpt-shell-20250115.1025/
-  chatgpt-shell-20250115.1025/chatgpt-shell-anthropic.el
-  chatgpt-shell-20250115.1025/chatgpt-shell-google.el
-  chatgpt-shell-20250115.1025/chatgpt-shell-kagi.el
-  chatgpt-shell-20250115.1025/chatgpt-shell-ollama.el
-  chatgpt-shell-20250115.1025/chatgpt-shell-openai.el
-  chatgpt-shell-20250115.1025/chatgpt-shell-openrouter.el
-  chatgpt-shell-20250115.1025/chatgpt-shell-perplexity.el
-  chatgpt-shell-20250115.1025/chatgpt-shell-pkg.el
-  chatgpt-shell-20250115.1025/chatgpt-shell-prompt-compose.el
-  chatgpt-shell-20250115.1025/chatgpt-shell.el
+Created chatgpt-shell-20250116.1203.tar containing:
+  chatgpt-shell-20250116.1203/
+  chatgpt-shell-20250116.1203/chatgpt-shell-anthropic.el
+  chatgpt-shell-20250116.1203/chatgpt-shell-google.el
+  chatgpt-shell-20250116.1203/chatgpt-shell-kagi.el
+  chatgpt-shell-20250116.1203/chatgpt-shell-ollama.el
+  chatgpt-shell-20250116.1203/chatgpt-shell-openai.el
+  chatgpt-shell-20250116.1203/chatgpt-shell-openrouter.el
+  chatgpt-shell-20250116.1203/chatgpt-shell-perplexity.el
+  chatgpt-shell-20250116.1203/chatgpt-shell-pkg.el
+  chatgpt-shell-20250116.1203/chatgpt-shell-prompt-compose.el
+  chatgpt-shell-20250116.1203/chatgpt-shell.el
  ✓ Success:
   2025-01-16T10:45:11+0000  chatgpt-shell-20250115.1025.entry
   2025-01-16T10:45:11+0000  chatgpt-shell-20250115.1025.tar
-Built chatgpt-shell in 4.332s, finished at 2025-01-16T10:45:12+0000
+  2025-01-16T14:12:16+0000  chatgpt-shell-20250116.1203.entry
+  2025-01-16T14:12:15+0000  chatgpt-shell-20250116.1203.tar
+Built chatgpt-shell in 4.041s, finished at 2025-01-16T14:12:16+0000

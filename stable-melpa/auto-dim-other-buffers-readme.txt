@@ -70,7 +70,7 @@ and set its foreground and background to match background of the
 
 ## Afterword
 
-Note that despite it, the mode operates on *windows* rather than buffers.  In
-other words, selected window is highlighted and all other windows are dimmed
-even if they display the same buffer.  The package is named
-`auto-dim-other-buffer' for historical reasons.
+Note that despite its name, the mode operates on *windows* rather than
+buffers.  In other words, selected window is highlighted and all other
+windows are dimmed even if they display the same buffer.  The package is
+named `auto-dim-other-buffer' for historical reasons.
