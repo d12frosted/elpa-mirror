@@ -4831,20 +4831,20 @@
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	    (:commit . "6ef99c9219b55b7618d111d352caf795ba07bc54"))])
  (vertico-posframe .
-		   [(0 7 8)
+		   [(0 8 0)
 		    ((emacs
 		      (26 0))
 		     (posframe
 		      (1 4 0))
 		     (vertico
-		      (1 1)))
+		      (1 10)))
 		    "Using posframe to show Vertico" tar
 		    ((:url . "https://github.com/tumashu/vertico-posframe")
 		     (:keywords "abbrev" "convenience" "matching" "vertico")
 		     (:maintainer "Feng Shu" . "tumashu@163.com")
 		     (:authors
 		      ("Feng Shu" . "tumashu@163.com"))
-		     (:commit . "b1bcba60550ac2cf7676ad00c3f735dc43489869"))])
+		     (:commit . "781ee08f8d92f640dff8a0d8838b67a13a391846"))])
  (vigenere .
 	   [(1 0)
 	    ((emacs
