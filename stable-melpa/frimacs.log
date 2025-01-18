@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/pdo/frimacs
 
 Updating /mnt/store/melpa/working/frimacs/
-Checking out b7df4fd128a8432d40e8e9034e03e27ff26493d3
+Checking out 6b66f78b7b299789658dc9664655e4c5672b9f71
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/frimacs/
-  to /tmp/frimacsbuauVZ/frimacs-20250118.1009
+  to /tmp/frimacsjOi5oQ/frimacs-20250118.1725
     frimacs-base.el -> frimacs-base.el
     frimacs-boot-mode.el -> frimacs-boot-mode.el
     frimacs-buffer-menu.el -> frimacs-buffer-menu.el
@@ -21,25 +21,27 @@ Copying files (->) and directories (=>)
     data/fricas-standard-domain-info.dat -> data/fricas-standard-domain-info.dat
     data/fricas-standard-operation-info.dat -> data/fricas-standard-operation-info.dat
     data/fricas-standard-package-info.dat -> data/fricas-standard-package-info.dat
-Created frimacs-20250118.1009.tar containing:
-  frimacs-20250118.1009/
-  frimacs-20250118.1009/data/
-  frimacs-20250118.1009/data/fricas-standard-category-info.dat
-  frimacs-20250118.1009/data/fricas-standard-domain-info.dat
-  frimacs-20250118.1009/data/fricas-standard-operation-info.dat
-  frimacs-20250118.1009/data/fricas-standard-package-info.dat
-  frimacs-20250118.1009/frimacs-base.el
-  frimacs-20250118.1009/frimacs-boot-mode.el
-  frimacs-20250118.1009/frimacs-buffer-menu.el
-  frimacs-20250118.1009/frimacs-domain-explorer.el
-  frimacs-20250118.1009/frimacs-help-mode.el
-  frimacs-20250118.1009/frimacs-input-mode.el
-  frimacs-20250118.1009/frimacs-pkg.el
-  frimacs-20250118.1009/frimacs-process-mode.el
-  frimacs-20250118.1009/frimacs-selector.el
-  frimacs-20250118.1009/frimacs-spad-mode.el
-  frimacs-20250118.1009/frimacs.el
+Created frimacs-20250118.1725.tar containing:
+  frimacs-20250118.1725/
+  frimacs-20250118.1725/data/
+  frimacs-20250118.1725/data/fricas-standard-category-info.dat
+  frimacs-20250118.1725/data/fricas-standard-domain-info.dat
+  frimacs-20250118.1725/data/fricas-standard-operation-info.dat
+  frimacs-20250118.1725/data/fricas-standard-package-info.dat
+  frimacs-20250118.1725/frimacs-base.el
+  frimacs-20250118.1725/frimacs-boot-mode.el
+  frimacs-20250118.1725/frimacs-buffer-menu.el
+  frimacs-20250118.1725/frimacs-domain-explorer.el
+  frimacs-20250118.1725/frimacs-help-mode.el
+  frimacs-20250118.1725/frimacs-input-mode.el
+  frimacs-20250118.1725/frimacs-pkg.el
+  frimacs-20250118.1725/frimacs-process-mode.el
+  frimacs-20250118.1725/frimacs-selector.el
+  frimacs-20250118.1725/frimacs-spad-mode.el
+  frimacs-20250118.1725/frimacs.el
  ✓ Success:
   2025-01-18T16:03:33+0000  frimacs-20250118.1009.entry
   2025-01-18T16:03:33+0000  frimacs-20250118.1009.tar
-Built frimacs in 3.303s, finished at 2025-01-18T16:03:34+0000
+  2025-01-18T19:14:07+0000  frimacs-20250118.1725.entry
+  2025-01-18T19:14:06+0000  frimacs-20250118.1725.tar
+Built frimacs in 6.142s, finished at 2025-01-18T19:14:09+0000
