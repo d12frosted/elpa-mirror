@@ -1,11 +1,10 @@
-The "leuven" color theme is an elegant and visually appealing theme designed
-to enhance the appearance of Emacs, particularly in Org mode and other
-contexts.  It provides a carefully crafted color scheme optimized for a white
-background, creating a pleasant and readable environment for your Emacs
-sessions.
+The "leuven" color theme offers a clean, elegant, and visually appealing
+design for Emacs. While especially suited for Org mode, it enhances
+readability across various contexts. Designed for white backgrounds, it
+provides a pleasant and highly readable environment for extended use.
 
-To use the "leuven" theme, simply add the following line to your Emacs
-configuration file:
+To enable the "leuven" theme, add the following line to your Emacs
+configuration:
 
   (load-theme 'leuven t)
 

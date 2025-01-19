@@ -1,20 +1,9 @@
-This library defines more font-lock keywords for Emacs Lisp.
+This package provides `morlock-mode' which highlights additional
+expressions in Emacs Lisp mode.
 
-These keyword variables are available:
+Symbols are highlighted if their `morlock-font-lock-keyword' symbol
+property is non-nil.  This package does this for a few symbols, and
+you can do it yourself for additional symbols.
 
-`morlock-el-font-lock-keywords' expressions that aren't
-    covered by the default keywords.
-`morlock-op-font-lock-keywords' expressions that would be
-    operators in other languages: `xor', `not' and `null'.
-`morlock-font-lock-keywords' combines the above two.
-
-To use `morlock-font-lock-keywords' in `emacs-lisp-mode' and
-`lisp-interaction-mode' enable `global-morlock-mode'.
-
-If you want to only enable some of the keywords and/or only in
-`emacs-lisp-mode', then require `morlock' and activate the keywords
-in one of the variables using `font-lock-add-keywords'.  Doing so
-is also slightly more efficient.
-
-    (font-lock-add-keywords 'emacs-lisp-mode
-                             morlock-el-font-lock-keywords)
+The `morlock-font-lock-keywords' variable is used for more complex
+expressions.
