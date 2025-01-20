@@ -14,6 +14,8 @@ desired. And put the following expression into your ~/.emacs.
     (define-key ctl-x-r-map "K" 'rectplus-rectangle-to-kill-ring)
     (define-key ctl-x-r-map "\M-l" 'rectplus-downcase-rectangle)
     (define-key ctl-x-r-map "\M-u" 'rectplus-upcase-rectangle)
+    (define-key ctl-x-r-map "E" 'rectplus-copy-to-eol)
+    (define-key ctl-x-r-map "\M-E" 'rectplus-kill-to-eol)
 
 ```********** Emacs 22 or earlier **********```
 
@@ -26,3 +28,5 @@ desired. And put the following expression into your ~/.emacs.
     (global-set-key "\C-xrK" 'rectplus-rectangle-to-kill-ring)
     (global-set-key "\C-xr\M-l" 'rectplus-downcase-rectangle)
     (global-set-key "\C-xr\M-u" 'rectplus-upcase-rectangle)
+    (global-set-key "\C-xrE" 'rectplus-copy-to-eol)
+    (global-set-key "\C-xr\M-E" 'rectplus-kill-to-eol)
