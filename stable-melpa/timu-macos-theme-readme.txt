@@ -71,12 +71,15 @@ II. Configuration
     To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
       (customize-set-variable 'timu-macos-org-intense-colors t)
 
-  D. Muted colors for the theme
-    You can set muted colors for the dark flavour of the theme.
+  D. Color contrast for the theme
+    You can set the color contras for the dark flavour of the theme.
 
-    By default muted colors are turned off.
-    To turn this on add the following to your =~/.emacs.d/init.el= or =~/.emacs=:
-      (customize-set-variable 'timu-macos-muted-colors t)
+    By default the color contrast is set to `normal'.
+    To set the desired contrast add one of the following to your
+    `~/.emacs.d/init.el' or `~/.emacs':
+      (customize-set-variable 'timu-macos-colors-contrast 'normal)
+      (customize-set-variable 'timu-macos-colors-contrast 'muted)
+      (customize-set-variable 'timu-macos-colors-contrast 'contrasted)
 
   E. Border for the `mode-line'
     You can set a variable to set the border type for the `mode-line'.
@@ -103,8 +106,11 @@ III. Utility functions
   B. Toggle between intense and non intense colors for `org-mode'
       M-x timu-macos-toggle-org-colors-intensity RET.
 
-  C. Toggle between border types for the `mode-line'
+  C. Toggle between the 3 different colors contrasts
+      M-x timu-macos-toggle-color-contrast RET.
+
+  D. Toggle between border types for the `mode-line'
       M-x timu-macos-toggle-mode-line-border RET.
 
-  D. Toggle between background and no background for the `mode-line'
+  E. Toggle between background and no background for the `mode-line'
       M-x timu-macos-toggle-mode-line-background RET.
