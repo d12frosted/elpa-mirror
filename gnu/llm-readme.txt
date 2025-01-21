@@ -573,16 +573,16 @@
   programs are advised for right now to keep function to simple types.
 
   The way to call functions is to attach a list of functions to the
-  `tools' slot in the prompt. This is a list of `llm-tool-function'
-  structs, which is a tool that is an elisp function, with a name, a
-  description, and a list of arguments. The docstrings give an
-  explanation of the format.  An example is:
+  `tools' slot in the prompt. This is a list of `llm-tool' structs,
+  which is a tool that is an elisp function, with a name, a description,
+  and a list of arguments. The docstrings give an explanation of the
+  format.  An example is:
 
   ┌────
   │ (llm-chat-async my-llm-provider (llm-make-chat-prompt
   │    "What is the capital of France?"
   │    :tools
-  │    (list (llm-make-tool-function
+  │    (list (llm-make-tool
   │ 	  :function (lambda (callback result)
   │ 		      ;; In this example function the assumption is that the
   │ 		      ;; callback will be called after processing the result is
