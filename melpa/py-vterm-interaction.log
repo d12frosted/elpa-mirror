@@ -3,25 +3,27 @@ Fetcher: github
 Source:  https://github.com/vale981/py-vterm-interaction.el
 
 Updating /mnt/store/melpa/working/py-vterm-interaction/
-Checking out 95d6842790767c5b8ed1043c1a10c437d955b436
+Checking out 27dc1af6713b129bc433e0750844390c95aee54b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/py-vterm-interaction/
-  to /tmp/py-vterm-interactionWO0qpG/py-vterm-interaction-20240915.2042
+  to /tmp/py-vterm-interactionZJ9PrM/py-vterm-interaction-20250121.1734
     py-vterm-interaction.el -> py-vterm-interaction.el
   ! scripts/get_env.py -> scripts//get_env.py
   ! scripts/is_ipython.py -> scripts//is_ipython.py
   ! scripts/star_import_script.py -> scripts//star_import_script.py
   ! scripts/utility.py -> scripts//utility.py
-Created py-vterm-interaction-20240915.2042.tar containing:
-  py-vterm-interaction-20240915.2042/
-  py-vterm-interaction-20240915.2042/py-vterm-interaction-pkg.el
-  py-vterm-interaction-20240915.2042/py-vterm-interaction.el
-  py-vterm-interaction-20240915.2042/scripts/
-  py-vterm-interaction-20240915.2042/scripts/get_env.py
-  py-vterm-interaction-20240915.2042/scripts/is_ipython.py
-  py-vterm-interaction-20240915.2042/scripts/star_import_script.py
-  py-vterm-interaction-20240915.2042/scripts/utility.py
+Created py-vterm-interaction-20250121.1734.tar containing:
+  py-vterm-interaction-20250121.1734/
+  py-vterm-interaction-20250121.1734/py-vterm-interaction-pkg.el
+  py-vterm-interaction-20250121.1734/py-vterm-interaction.el
+  py-vterm-interaction-20250121.1734/scripts/
+  py-vterm-interaction-20250121.1734/scripts/get_env.py
+  py-vterm-interaction-20250121.1734/scripts/is_ipython.py
+  py-vterm-interaction-20250121.1734/scripts/star_import_script.py
+  py-vterm-interaction-20250121.1734/scripts/utility.py
  ✓ Success:
   2025-01-21T14:39:26+0000  py-vterm-interaction-20240915.2042.entry
   2025-01-21T14:39:26+0000  py-vterm-interaction-20240915.2042.tar
-Built py-vterm-interaction in 3.685s, finished at 2025-01-21T14:39:27+0000
+  2025-01-21T17:47:10+0000  py-vterm-interaction-20250121.1734.entry
+  2025-01-21T17:47:10+0000  py-vterm-interaction-20250121.1734.tar
+Built py-vterm-interaction in 4.082s, finished at 2025-01-21T17:47:11+0000
