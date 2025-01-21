@@ -421,6 +421,7 @@
   (buffer-manage :url "https://github.com/plandes/buffer-manage")
   (buffer-move :url "https://github.com/lukhas/buffer-move")
   (buffer-name-relative :url "https://codeberg.org/ideasman42/emacs-buffer-name-relative")
+  (buffer-ring :url "https://github.com/countvajhula/buffer-ring")
   (buffer-sets :url "https://git.sr.ht/~swflint/buffer-sets")
   (buffer-terminator :url "https://github.com/jamescherti/buffer-terminator.el")
   (buffer-utils :url "https://github.com/rolandwalker/buffer-utils")
