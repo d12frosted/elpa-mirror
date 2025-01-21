@@ -26,8 +26,8 @@
     streaming responses.
   • Chat with image and other kinda of media inputs are also supported,
     so that the user can input images and discuss them with the LLM.
-  • Function calling (aka "tool use") is supported, for having the LLM
-    call elisp functions that it chooses, with arguments it provides.
+  • Tool use is supported, for having the LLM call elisp functions that
+    it chooses, with arguments it provides.
   • Embeddings: Send text and receive a vector that encodes the semantic
     meaning of the underlying text.  Can be used in a search system to
     find similar passages.
@@ -132,8 +132,8 @@
 ───────────────────
 
   Microsoft Azure has an Open AI integration, although it doesn't
-  support everything Open AI does, such as function calling.  You can
-  set it up with `make-llm-azure', with the following parameter:
+  support everything Open AI does, such as tool use.  You can set it up
+  with `make-llm-azure', with the following parameter:
   • `:url', the endpoint URL, such as
     "<https://docs-test-001.openai.azure.com/>".
   • `:key', the Azure key for Azure OpenAI service.
@@ -203,8 +203,7 @@
 ──────────
 
   [Claude] is Anthropic's large language model.  It does not support
-  embeddings.  It does support function calling, but currently not in
-  streaming.  You can set it up with the following parameters:
+  embeddings.  You can set it up with the following parameters:
 
   `:key': The API key you get from [Claude's settings page].  This is
   required.  `:chat-model': One of the [Claude models].  Defaults to
@@ -222,8 +221,8 @@
 ──────────
 
   [Ollama] is a way to run large language models locally. There are
-  [many different models] you can use with it, and some of them support
-  function calling. You set it up with the following parameters:
+  [many different models] you can use with it, and some of them [support
+  tool use]. You set it up with the following parameters:
   • `:scheme': The scheme (http/https) for the connection to ollama.
     This default to "http".
   • `:host': The host that ollama is run on.  This is optional and will
@@ -232,15 +231,18 @@
     default to the default ollama port.
   • `:chat-model': The model name to use for chat.  This is not optional
     for chat use, since there is no default.
-  • `:embedding-model': The model name to use for embeddings (only [some
-    models](<https://ollama.com/search?q=&c=embedding>) can be used for
-    embeddings.  This is not optional for embedding use, since there is
-    no default.
+  • `:embedding-model': The model name to use for embeddings.  Only
+    [some models] can be used for embeddings.  This is not optional for
+    embedding use, since there is no default.
 
 
 [Ollama] <https://ollama.ai/>
 
 [many different models] <https://ollama.ai/library>
+
+[support tool use] <https://ollama.com/search?c=tools>
+
+[some models] <https://ollama.com/search?q=&c=embedding>
 
 
 2.8 GPT4All
@@ -313,13 +315,11 @@
 
   ┌────
   │ (require 'llm-models)
-  │ (add-to-list
-  │  'llm-models
-  │  (make-llm-model
-  │   :name "Mistral" :symbol 'mistral
-  │   :capabilities '(generation tool-use free-software)
-  │   :context-length 8192
-  │   :regex "mistral"))
+  │ (llm-models-add
+  │  :name "Mistral" :symbol 'mistral
+  │  :capabilities '(generation tool-use free-software)
+  │  :context-length 8192
+  │  :regex "mistral"))
   └────
 
   The `:regex' needs to uniquely identify the model passed in from a
@@ -421,7 +421,7 @@
     model isn't selected or known by this library.
 
     And the following helper functions:
-    • `llm-make-chat-prompt text &keys context examples functions
+    • `llm-make-chat-prompt text &keys context examples tools
       temperature max-tokens response-format non-standard-params': This
       is how you make prompts.  `text' can be a string (the user input
       to the llm chatbot), or a list representing a series of
@@ -460,7 +460,7 @@
   :properties (:<var1> <schema1> :<var2> <schema2> ... :<varn>
   <scheman>) :required (<req var1> ... <req varn>))'.  Arrays are
   defined with `(:type array :items <schema>)'.  Enums are defined with
-  `(:enum (<val1> <val2> <val3>))'.  You can also request integers,
+  `(:enum [<val1> <val2> <val3>])'.  You can also request integers,
   strings, and other types defined by the JSON Schema Spec, by just
   having `(:type <type>)'.  Typically, LLMs often require the top-level
   schema object to be an object, and often that all properties on the
@@ -471,16 +471,16 @@
   │ (llm-chat my-provider (llm-make-chat-prompt
   │ 				"How many countries are there?  Return the result as JSON."
   │ 				:response-format
-  │ 				'(:type object :properties (:num (:type integer)) :required (num))))
+  │ 				'(:type object :properties (:num (:type "integer")) :required ["num"])))
   └────
 
   ┌────
-  │ (llm-chat ash/llm-openai-small (llm-make-chat-prompt
+  │ (llm-chat my-provider (llm-make-chat-prompt
   │ 				"Which editor is hard to quit?  Return the result as JSON."
   │ 				:response-format
-  │ 				'(:type object :properties (:editor (:enum ("emacs" "vi" "vscode"))
-  │ 								    :authors (:type array :items (:type string)))
-  │ 					:required (editor authors))))
+  │ 				'(:type object :properties (:editor (:enum ["emacs" "vi" "vscode"])
+  │ 								    :authors (:type "array" :items (:type "string")))
+  │ 					:required ["editor" "authors"])))
   └────
 
 
@@ -539,61 +539,84 @@
   wouldn't work for all providers.
 
 
-5.5 Function calling
-────────────────────
+5.5 Tool use
+────────────
 
-  *Note: function calling functionality is currently beta quality.  If
-   you want to use function calling, please watch the `llm'
-   [discussions] for any announcements about changes.*
+  *Note: tool use is currently beta quality.  If you want to use tool
+   use, please watch the `llm' [discussions] for any announcements about
+   changes.*
 
-  Function calling is a way to give the LLM a list of functions it can
-  call, and have it call the functions for you.  The standard
-  interaction has the following steps:
-  1. The client sends the LLM a prompt with functions it can call.
-  2. The LLM may return which functions to execute, and with what
-     arguments, or text as normal.
-  3. If the LLM has decided to call one or more functions, those
+  Tool use is a way to give the LLM a list of functions it can call, and
+  have it call the functions for you.  The standard interaction has the
+  following steps:
+  1. The client sends the LLM a prompt with tools it can use.
+  2. The LLM may return which tools to use, and with what arguments, or
+     text as normal.
+  3. If the LLM has decided to use one or more tools, those tool's
      functions should be called, and their results sent back to the LLM.
+     This could be the final step depending on if any follow-on is
+     needed.
   4. The LLM will return with a text response based on the initial
-     prompt and the results of the function calling.
+     prompt and the results of the tool use.
   5. The client can now can continue the conversation.
 
   This basic structure is useful because it can guarantee a
-  well-structured output (if the LLM does decide to call the
-  function). *Not every LLM can handle function calling, and those that
-  do not will ignore the functions entirely*. The function
-  `llm-capabilities' will return a list with `function-calls' in it if
-  the LLM supports function calls. Right now only Gemini, Vertex,
-  Claude, and Open AI support function calling. Ollama should get
-  function calling soon. However, even for LLMs that handle function
-  calling, there is a fair bit of difference in the capabilities. Right
-  now, it is possible to write function calls that succeed in Open AI
-  but cause errors in Gemini, because Gemini does not appear to handle
-  functions that have types that contain other types.  So client
+  well-structured output (if the LLM does decide to use the tool). *Not
+  every LLM can handle tool use, and those that do not will ignore the
+  tools entirely*. The function `llm-capabilities' will return a list
+  with `tool-use' in it if the LLM supports tool use. Right now only
+  Gemini, Vertex, Claude, and Open AI support tool use.  However, even
+  for LLMs that handle tool use, there is sometimes a difference in the
+  capabilities. Right now, it is possible to write tools that succeed in
+  Open AI but cause errors in Gemini, because Gemini does not appear to
+  handle tools that have types that contain other types.  So client
   programs are advised for right now to keep function to simple types.
 
   The way to call functions is to attach a list of functions to the
-  `llm-function-call' slot in the prompt. This is a list of
-  `llm-function-call' structs, which takes a function, a name, a
-  description, and a list of `llm-function-arg' structs. The docstrings
-  give an explanation of the format.
+  `tools' slot in the prompt. This is a list of `llm-tool-function'
+  structs, which is a tool that is an elisp function, with a name, a
+  description, and a list of arguments. The docstrings give an
+  explanation of the format.  An example is:
 
-  The various chat APIs will execute the functions defined in
-  `llm-function-call' with the arguments supplied by the LLM. Instead of
-  returning (or passing to a callback) a string, instead an alist will
-  be returned of function names and return values.
+  ┌────
+  │ (llm-chat-async my-llm-provider (llm-make-chat-prompt
+  │    "What is the capital of France?"
+  │    :tools
+  │    (list (llm-make-tool-function
+  │ 	  :function (lambda (callback result)
+  │ 		      ;; In this example function the assumption is that the
+  │ 		      ;; callback will be called after processing the result is
+  │ 		      ;; complete.
+  │ 		      (notify-user-of-capital result callback))
+  │ 	  :name "capital_of_country"
+  │ 	  :description "Get the capital of a country."
+  │ 	  :args '((:name "country"
+  │ 		   :description "The country whose capital to look up."
+  │ 		   :type string))
+  │ 	  :async t))))
+  └────
 
-  After sending a function call, the client could use the result, but if
-  you want to proceed with the conversation, or get a textual response
-  that accompany the function you should just send the prompt back with
-  no modifications.  This is because the LLM gives the function call to
-  make as a response, and then expects to get back the results of that
-  function call.  The results were already executed at the end of the
-  previous call, which also stores the result of that execution in the
+  Note that tools have the same arguments and structure as the tool
+  definitions in [GTPel].
+
+  The various chat APIs will execute the functions defined in `tools'
+  slot with the arguments supplied by the LLM. The chat functions will,
+  Instead of returning (or passing to a callback) a string, instead a
+  list will be returned of tool names and return values.  This is not
+  technically an alist because the same tool might be used several
+  times, so the `car' can be equivalent.
+
+  After the tool is called, the client could use the result, but if you
+  want to proceed with the conversation, or get a textual response that
+  accompany the function you should just send the prompt back with no
+  modifications.  This is because the LLM gives the tool use to perform,
+  and then expects to get back the results of that tool use.  The
+  results were already executed at the end of the call which returned
+  the tools used, which also stores the result of that execution in the
   prompt.  This is why it should be sent back without further
   modifications.
 
-  Be aware that there is no gaurantee that the function will be called
+  Be aware that there is no gaurantee that the tool will be called
   correctly.  While the LLMs mostly get this right, they are trained on
   Javascript functions, so imitating Javascript names is
   recommended. So, "write_email" is a better name for a function than
@@ -601,10 +624,12 @@
 
   Examples can be found in `llm-tester'. There is also a function call
   to generate function calls from existing elisp functions in
-  `utilities/elisp-to-function-call.el'.
+  `utilities/elisp-to-tool.el'.
 
 
 [discussions] <https://github.com/ahyatt/llm/discussions>
+
+[GTPel] <https://github.com/karthink/gptel>
 
 
 5.6 Media input

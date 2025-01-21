@@ -1331,30 +1331,34 @@
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	      (:commit . "b1333b703805a21ed6414386830cb5d1977475b7"))])
  (eglot .
-	[(1 17)
+	[(1 18)
 	 ((emacs
 	   (26 3))
-	  (jsonrpc
-	   (1 0 24))
-	  (flymake
-	   (1 2 1))
-	  (project
-	   (0 9 8))
-	  (xref
-	   (1 6 2))
+	  (compat
+	   (27 1))
 	  (eldoc
 	   (1 14 0))
+	  (external-completion
+	   (0 1))
+	  (flymake
+	   (1 2 1))
+	  (jsonrpc
+	   (1 0 24))
+	  (project
+	   (0 9 8))
 	  (seq
 	   (2 23))
-	  (external-completion
-	   (0 1)))
+	  (track-changes
+	   (1 2))
+	  (xref
+	   (1 6 2)))
 	 "The Emacs Client for LSP servers" tar
 	 ((:url . "https://github.com/joaotavora/eglot")
 	  (:keywords "convenience" "languages")
 	  (:maintainer "João Távora" . "joaotavora@gmail.com")
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
-	  (:commit . "b014bca833a17f5b2258e88115f03cffa983d0bd"))])
+	  (:commit . "49f449bb5bc90bc1eca6b4a1f013d4c0b5460d65"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -2548,7 +2552,7 @@
 		      ("Sean Whitton" . "spwhitton@spwhitton.name"))
 		     (:commit . "c22a15e86acf28da716532c26ba1371574c8e979"))])
  (llm .
-      [(0 20 0)
+      [(0 21 0)
        ((emacs
 	 (28 1))
 	(plz
@@ -2562,7 +2566,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "8a489f2178f7cc6ccf7fab63e196ff9db2a5fadf"))])
+	(:commit . "1e92cfb0373740215666a9d4c716d4073b623ffa"))])
  (lmc .
       [(1 4)
        nil "Little Man Computer in Elisp" tar
