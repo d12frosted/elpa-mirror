@@ -1,0 +1,34 @@
+Package: docopt
+Fetcher: github
+Source:  https://github.com/r0man/docopt.el
+
+Updating /mnt/store/melpa/working/docopt/
+Checking out 21c575db68d4ccadb3125241a62136a0f8b76f63
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docopt/
+  to /tmp/docoptyfrwFi/docopt-20230216.957
+  ! src/docopt-abbrev.el -> docopt-abbrev.el
+  ! src/docopt-analyzer.el -> docopt-analyzer.el
+  ! src/docopt-argv.el -> docopt-argv.el
+  ! src/docopt-ast.el -> docopt-ast.el
+  ! src/docopt-generic.el -> docopt-generic.el
+  ! src/docopt-parser.el -> docopt-parser.el
+  ! src/docopt-transient.el -> docopt-transient.el
+  ! src/docopt-util.el -> docopt-util.el
+  ! src/docopt.el -> docopt.el
+Created docopt-20230216.957.tar containing:
+  docopt-20230216.957/
+  docopt-20230216.957/docopt-abbrev.el
+  docopt-20230216.957/docopt-analyzer.el
+  docopt-20230216.957/docopt-argv.el
+  docopt-20230216.957/docopt-ast.el
+  docopt-20230216.957/docopt-generic.el
+  docopt-20230216.957/docopt-parser.el
+  docopt-20230216.957/docopt-pkg.el
+  docopt-20230216.957/docopt-transient.el
+  docopt-20230216.957/docopt-util.el
+  docopt-20230216.957/docopt.el
+ ✓ Success:
+  2025-01-22T11:13:04+0000  docopt-20230216.957.entry
+  2025-01-22T11:13:04+0000  docopt-20230216.957.tar
+Built docopt in 4.130s, finished at 2025-01-22T11:13:05+0000

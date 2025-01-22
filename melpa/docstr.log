@@ -1,0 +1,60 @@
+Package: docstr
+Fetcher: github
+Source:  https://github.com/emacs-vs/docstr
+
+Updating /mnt/store/melpa/working/docstr/
+Checking out 76bfff172a1b915165854ed1ad3478d0366d528f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docstr/
+  to /tmp/docstrLA9UzX/docstr-20250101.908
+    docstr-faces.el -> docstr-faces.el
+    docstr-key.el -> docstr-key.el
+    docstr-util.el -> docstr-util.el
+    docstr-writers.el -> docstr-writers.el
+    docstr.el -> docstr.el
+  ! langs/docstr-actionscript.el -> docstr-actionscript.el
+  ! langs/docstr-c++.el -> docstr-c++.el
+  ! langs/docstr-c.el -> docstr-c.el
+  ! langs/docstr-csharp.el -> docstr-csharp.el
+  ! langs/docstr-go.el -> docstr-go.el
+  ! langs/docstr-groovy.el -> docstr-groovy.el
+  ! langs/docstr-java.el -> docstr-java.el
+  ! langs/docstr-js.el -> docstr-js.el
+  ! langs/docstr-lua.el -> docstr-lua.el
+  ! langs/docstr-objc.el -> docstr-objc.el
+  ! langs/docstr-php.el -> docstr-php.el
+  ! langs/docstr-python.el -> docstr-python.el
+  ! langs/docstr-ruby.el -> docstr-ruby.el
+  ! langs/docstr-rust.el -> docstr-rust.el
+  ! langs/docstr-scala.el -> docstr-scala.el
+  ! langs/docstr-swift.el -> docstr-swift.el
+  ! langs/docstr-typescript.el -> docstr-typescript.el
+Created docstr-20250101.908.tar containing:
+  docstr-20250101.908/
+  docstr-20250101.908/docstr-actionscript.el
+  docstr-20250101.908/docstr-c++.el
+  docstr-20250101.908/docstr-c.el
+  docstr-20250101.908/docstr-csharp.el
+  docstr-20250101.908/docstr-faces.el
+  docstr-20250101.908/docstr-go.el
+  docstr-20250101.908/docstr-groovy.el
+  docstr-20250101.908/docstr-java.el
+  docstr-20250101.908/docstr-js.el
+  docstr-20250101.908/docstr-key.el
+  docstr-20250101.908/docstr-lua.el
+  docstr-20250101.908/docstr-objc.el
+  docstr-20250101.908/docstr-php.el
+  docstr-20250101.908/docstr-pkg.el
+  docstr-20250101.908/docstr-python.el
+  docstr-20250101.908/docstr-ruby.el
+  docstr-20250101.908/docstr-rust.el
+  docstr-20250101.908/docstr-scala.el
+  docstr-20250101.908/docstr-swift.el
+  docstr-20250101.908/docstr-typescript.el
+  docstr-20250101.908/docstr-util.el
+  docstr-20250101.908/docstr-writers.el
+  docstr-20250101.908/docstr.el
+ ✓ Success:
+  2025-01-22T11:13:05+0000  docstr-20250101.908.entry
+  2025-01-22T11:13:05+0000  docstr-20250101.908.tar
+Built docstr in 4.124s, finished at 2025-01-22T11:13:07+0000
