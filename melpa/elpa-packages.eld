@@ -4754,7 +4754,6 @@
   (sayid :url "https://github.com/clojure-emacs/sayid")
   (sbt-mode :url "https://github.com/hvesalai/emacs-sbt-mode")
   (scad-mode :url "https://github.com/openscad/emacs-scad-mode")
-  (scad-preview :url "https://github.com/zk-phi/scad-preview")
   (scala-mode :url "https://github.com/hvesalai/emacs-scala-mode")
   (scala-repl :url "https://github.com/sheepduke/scala-repl.el")
   (scala-ts-mode :url "https://github.com/KaranAhlawat/scala-ts-mode")
