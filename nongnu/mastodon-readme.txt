@@ -476,14 +476,23 @@
   [mastodon-alt] <https://github.com/rougier/mastodon-alt>
 
 
-◊ 1.2.8.2 Mastodon hydra
+◊ 1.2.8.2 Org links, archive search
+
+  [toot-suite] implements an org link type for fediverse posts, and also
+  provides a way to browse an offline archive of your account.
+
+
+  [toot-suite] <https://codeberg.org/chrmoe/toot-suite>
+
+
+◊ 1.2.8.3 Mastodon hydra
 
   A user made a hydra for handling basic `mastodon.el' commands. It's
   available at
   <https://holgerschurig.github.io/en/emacs-mastodon-hydra/>.
 
 
-◊ 1.2.8.3 Narrow to timeline item
+◊ 1.2.8.4 Narrow to timeline item
 
   A simple code snippet to enable narrowing to current item in
   timelines:

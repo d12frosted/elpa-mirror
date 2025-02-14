@@ -11,20 +11,18 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `altcaps' (or `altcaps.el'), and provides every other piece
 of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.2.0,
-released on 2023-09-22.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.3.0,
+released on 2025-01-28.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.3.0-dev.
+Current development target is 1.4.0-dev.
 
 ⁃ Package name (GNU ELPA): `altcaps'
 ⁃ Official manual: <https://protesilaos.com/emacs/altcaps>
 ⁃ Change log: <https://protesilaos.com/emacs/altcaps-changelog>
-⁃ Git repo on SourceHut: <https://git.sr.ht/~protesilaos/altcaps>
-  • Mirrors:
-    ⁃ GitHub: <https://github.com/protesilaos/altcaps>
-    ⁃ GitLab: <https://gitlab.com/protesilaos/altcaps>
-⁃ Mailing list: <https://lists.sr.ht/~protesilaos/general-issues>
+⁃ Git repositories:
+  ⁃ GitHub: <https://github.com/protesilaos/altcaps>
+  ⁃ GitLab: <https://gitlab.com/protesilaos/altcaps>
 ⁃ Backronyms: Alternating Letters Transform Casual Asides to Playful
   Statements.  ALTCAPS Lets Trolls Convert Aphorisms to Proper
   Shitposts.
@@ -49,7 +47,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2023 Free Software Foundation, Inc.
+  Copyright (C) 2022-2025 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -180,7 +178,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "altcaps"
-  │ git clone https://git.sr.ht/~protesilaos/altcaps altcaps
+  │ git clone https://github.com/protesilaos/altcaps altcaps
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
@@ -212,6 +210,20 @@ Table of Contents
   │ ;; - `altcaps-word'
   │ ;; - `altcaps-region'
   │ ;; - `altcaps-dwim'
+  └────
+
+  With `use-package':
+
+  ┌────
+  │ (use-package altcaps
+  │   :ensure t
+  │   :bind
+  │   ("C-x C-a" . altcaps-dwim)
+  │   :config
+  │   ;; Optionally force letter casing for certain characters (for legibility).
+  │   (setq altcaps-force-character-casing
+  │       '(("i" . downcase)
+  │ 	("l" . upcase))))
   └────
 
 

@@ -361,7 +361,8 @@ Table of Contents
 
   • `consult-man': Find Unix man page, via Unix `apropos' or `man
     -k'. `consult-man' opens the selected man page using the Emacs `man'
-    command.
+    command. Supports live preview of the theme while scrolling through
+    the candidates.
   • `consult-info': Full text search through info pages. If the command
     is invoked from within an `*info*' buffer, it will search through
     the current manual. You may want to create your own commands which
@@ -475,7 +476,7 @@ Table of Contents
 
   ┌────
   │ (consult-customize
-  │  consult-ripgrep consult-git-grep consult-grep
+  │  consult-ripgrep consult-git-grep consult-grep consult-man
   │  consult-bookmark consult-recent-file consult-xref
   │  consult--source-bookmark consult--source-file-register
   │  consult--source-recent-file consult--source-project-recent-file
@@ -634,13 +635,13 @@ Table of Contents
 2.4 Multiple sources
 ────────────────────
 
-  Multiple synchronous candidate sources can be combined. This feature
-  is used by the `consult-buffer' command to present buffer-like
-  candidates in a single menu for quick access. By default
-  `consult-buffer' includes buffers, bookmarks, recent files and
-  project-specific buffers and files. It is possible to configure the
-  list of sources via the `consult-buffer-sources' variable. Arbitrary
-  custom sources can be defined.
+  Multiple static and asynchronous candidate sources can be
+  combined. This feature is used by the `consult-buffer' command to
+  present buffer-like candidates in a single menu for quick access. By
+  default `consult-buffer' includes buffers, bookmarks, recent files and
+  project-specific buffers and files. The `consult-buffer-sources'
+  variable configures the list of sources. Arbitrary custom sources can
+  be added to this list.
 
   As an example, the bookmark source is defined as follows:
 
@@ -655,15 +656,21 @@ Table of Contents
   │     :action   ,#'consult--bookmark-action))
   └────
 
-  Required source fields:
-  • `:category' Completion category.
+  Either the `:items' or the `:async' source field is required:
   • `:items' List of strings to select from or function returning list
-    of strings.  A list of cons cells is not supported.
+    of strings.  The strings can carry metadata in text properties,
+    which is then available to the `:annotate', `:action' and `:state'
+    functions. The list can also consist of pairs, with the string in
+    the `car' used for display and the `cdr' the actual candidate.
+  • `:async' Alternative to `:items' for asynchronous sources. See the
+    docstring for details.
 
   Optional source fields:
   • `:name' Name of the source, used for narrowing, group titles and
     annotations.
-  • `:narrow' Narrowing character or `(character . string)' pair.
+  • `:narrow' Narrowing character, `(char . string)' pair or list of
+    pairs.
+  • `:category' Completion category.
   • `:preview-key' Preview key or keys which trigger preview.
   • `:enabled' Function which must return t if the source is enabled.
   • `:hidden' When t candidates of this source are hidden by default.
@@ -915,7 +922,7 @@ Table of Contents
   │   ;; :preview-key on a per-command basis using the `consult-customize' macro.
   │   (consult-customize
   │    consult-theme :preview-key '(:debounce 0.2 any)
-  │    consult-ripgrep consult-git-grep consult-grep
+  │    consult-ripgrep consult-git-grep consult-grep consult-man
   │    consult-bookmark consult-recent-file consult-xref
   │    consult--source-bookmark consult--source-file-register
   │    consult--source-recent-file consult--source-project-recent-file
@@ -955,6 +962,7 @@ Table of Contents
    consult-async-refresh-delay       Refresh delay for asynchronous commands             
    consult-async-split-style         Splitting style used for async commands             
    consult-async-split-styles-alist  Available splitting styles used for async commands  
+   consult-async-indicator           Async indicator characters                          
    consult-bookmark-narrow           Narrowing configuration for `consult-bookmark'      
    consult-buffer-filter             Filter for `consult-buffer'                         
    consult-buffer-sources            List of virtual buffer sources                      
@@ -1243,11 +1251,12 @@ Table of Contents
   └────
 
   Let's assume this script is callable as `testibus hello world'. To
-  have Consult use it for completion, use `consult--async-command':
+  have Consult use it for completion, use `consult--process-collection':
 
   ┌────
   │ (consult--read
-  │  (consult--async-command (lambda (input) (list "testibus" (string-trim input))))
+  │  (consult--process-collection
+  │   (lambda (input) (list "testibus" (string-trim input))))
   │  :prompt "run testibus: ")
   └────
 
@@ -1259,9 +1268,27 @@ Table of Contents
   │  (consult--dynamic-collection
   │   (lambda (input)
   │     (sleep-for 0.1) ;; Simulate work
-  │     (sort (split-string (string-trim input) nil t) #'string<)))
+  │     (split-string input nil t)))
   │  :prompt "run testibus: ")
   └────
+
+  `consult--dynamic-collection' can take a function with a callback such
+  that the completion UI can update for long running computations.
+
+  ┌────
+  │ (consult--read
+  │  (consult--dynamic-collection
+  │   (lambda (input callback)
+  │     (dotimes (i 3)
+  │       (sleep-for 0.1) ;; Simulate work
+  │       (funcall callback (mapcar (lambda (s) (format "%s%s" s i))
+  │ 				(split-string input nil t))))))
+  │  :prompt "run testibus: ")
+  └────
+
+  The asynchronous completion collections `consult--dynamic-collection'
+  and `consult--process-collection' can be used for `consult--multi'
+  sources. Specify them as `:async' field of the source plist.
 
 
 6.2 Live preview
@@ -1289,9 +1316,11 @@ Table of Contents
   ┌────
   │ (consult--read
   │  (consult--dynamic-collection
-  │   (lambda (input)
-  │     (sleep-for 0.1) ;; Simulate work
-  │     (sort (split-string (string-trim input) nil t) #'string<)))
+  │   (lambda (input callback)
+  │     (dotimes (i 3)
+  │       (sleep-for 0.1) ;; Simulate work
+  │       (funcall callback (mapcar (lambda (s) (format "%s%s" s i))
+  │ 				(split-string input nil t))))))
   │  :prompt "run testibus: "
   │  :state #'testibus--preview)
   └────

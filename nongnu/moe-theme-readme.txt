@@ -1,57 +1,5 @@
-Table of Contents
-─────────────────
-
-1. moe-theme
-.. 1. Acknowedgement
-.. 2. Screenshot
-.. 3. What Special?
-.. 4. Requirements
-.. 5. Download
-..... 1. Via package.el
-..... 2. Manually
-.. 6. Customizations
-..... 1. Resize Titles
-..... 2. Change Color of Mode-line (or Powerline)
-.. 7. Frenquently Asked Problems
-..... 1. No 256-Color Output?
-..... 2. Parenthesis Is Hard To Read?
-.. 8. Known Issues
-.. 9. License
-
-
 1 moe-theme
 ═══════════
-
-  #+BEGIN_QUOTE
-
-
-1.1 Acknowedgement
-──────────────────
-
-  Latest version is under inactive development. I haven't finished it
-  indeed, however, I personally have already used it for quite a long
-  time.
-
-  Currently free time is precious for me, to rest from work, to learn
-  foreign languages, to study Harmony & Voice Leading, to compose, to
-  practice piano and violin, to exercise. So I will not spend more
-  massive time on this project for any large modification. I've ever
-  spent too much time on this project before to hold more passion and
-  patience to write merely a color theme, even not an application. (You
-  will not believe how much it is if you has never done such tedious
-  task for EACH mode and find a color balances manually for them) I
-  think it's enough now.
-
-  *If you want to try or help to QA the latest development version, see
-   `dev' branch.*
-
-  *If you want to make `moe-theme` supports more modes, please send a PR
-   (but be aesthetic; patch with too ugly color balance will be
-   rejected.^^||| )*. Currently I honestly has no more free time and
-   passion on such a tedious time-costing trial-and-error task.
-
-  The last but not the least, thanks for your using and happy hacking!
-  #+END_QUOTE
 
   <a
   href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png>"><img
@@ -59,7 +7,7 @@ Table of Contents
   width="720" height="401"/></a>
 
 
-1.2 Screenshot
+1.1 Screenshot
 ──────────────
 
   <a
@@ -87,7 +35,7 @@ Table of Contents
   src="pics/mode-line-preview.png" width="710" height="182"/></a>
 
 
-1.3 What Special?
+1.2 What Special?
 ─────────────────
 
   Most basic:
@@ -100,7 +48,7 @@ Table of Contents
   3. Customizable
      • Optional `Monokai' / `Tomorrow' for syntax-highlighting (or
        totally customize by yourself)
-     • Changable Mode-line / Powerline color.
+     • Mode-line / Powerline color
      • Titles font sizes for .
   4. Fully-supported for each modes:
      • Diff / EDiff
@@ -121,17 +69,17 @@ Table of Contents
      • ……etc
 
 
-1.4 Requirements
+1.3 Requirements
 ────────────────
 
   • Emacs 25.3 or above.
   • 256-colors (or higher) terminal.
 
 
-1.5 Download
+1.4 Download
 ────────────
 
-1.5.1 Via package.el
+1.4.1 Via package.el
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   `Moe-theme' is available in [MELPA] repository now, so you can install
@@ -141,7 +89,7 @@ Table of Contents
 [MELPA] <https://github.com/milkypostman/melpa>
 
 
-1.5.2 Manually
+1.4.2 Manually
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Download the archive of `moe-theme' (or `git clone' it) to
@@ -156,7 +104,7 @@ Table of Contents
   └────
 
 
-1.6 Customizations
+1.5 Customizations
 ──────────────────
 
   It's impossible to satisfy everyone with one fixed theme, but
@@ -179,12 +127,12 @@ Table of Contents
   │ (setq moe-theme-highlight-buffer-id t)
   │ 
   │ ;; Resize titles (optional).
-  │ (setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
-  │ (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
-  │ (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
+  │ (setq moe-theme-resize-title-markdown '(1.5 1.4 1.3 1.2 1.0 1.0))
+  │ (setq moe-theme-resize-title-org '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
+  │ (setq moe-theme-resize-title-rst '(1.5 1.4 1.3 1.2 1.1 1.0))
   │ 
-  │ ;; Choose a color for mode-line.(Default: blue)
-  │ (moe-theme-set-color 'cyan)
+  │ ;; Choose a color for modeline.(Default: blue)
+  │ (setq moe-theme-modeline-color 'cyan)
   │ 
   │ ;; Finally, apply moe-theme now.
   │ ;; Choose what you like, (moe-light) or (moe-dark)
@@ -213,7 +161,7 @@ Table of Contents
         └────
 
 
-1.6.1 Resize Titles
+1.5.1 Resize Titles
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   You may want to resize titles in `markdown-mode', `org-mode', or
@@ -221,9 +169,9 @@ Table of Contents
 
   ┌────
   │ ;; Resize titles
-  │ (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
-  │ (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
-  │ (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
+  │ (setq moe-theme-resize-title-markdown '(2.0 1.7 1.5 1.3 1.0 1.0))
+  │ (setq moe-theme-resize-title-org '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+  │ (setq moe-theme-resize-title-rst '(2.0 1.7 1.5 1.3 1.1 1.0))
   └────
 
         Markdown should have 6 items; org has 9 items; rst has 6
@@ -237,21 +185,21 @@ Table of Contents
   the same size.
 
 
-1.6.2 Change Color of Mode-line (or Powerline)
+1.5.2 Change Color of Mode-line (or Powerline)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ┌────
-  │ (moe-theme-set-color 'orange)
+  │ (setq moe-theme-modeline-color 'orange)
   │ ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
   └────
 
-  You can also use `M-x' `moe-theme-select-color' to change color
-  interactively.
+  You can also use `M-x' `moe-theme-modeline-select-color' to change
+  color interactively.
 
-  Or `M-x' `moe-theme-random-color' to have a good luck.
+  Or `M-x' `moe-theme-modeline-random-color' to have a good luck.
 
 
-◊ 1.6.2.1 Powerline support
+◊ 1.5.2.1 Powerline support
 
   Now `moe-theme' supports [Powerline]. Run `powerline-moe-theme' if
   `powerline' installed.
@@ -264,10 +212,34 @@ Table of Contents
   [Powerline] <https://github.com/milkypostman/powerline>
 
 
-1.7 Frenquently Asked Problems
+1.5.3 Switch between light and dark theme by time of daylight
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  This package also contains some rudimentary functionality for swapping
+  between the `moe-light' and `moe-dark' themes automatically, to match
+  the time of day. To enable it, you can use the following:
+
+  ┌────
+  │ (require 'moe-theme-switcher)
+  │ (setq calendar-latitude +25
+  │       calendar-longitude +121
+  │       moe-theme-switch-by-sunrise-and-sunset t)
+  │ (moe-theme-switcher-mode 1)
+  └────
+
+  For packages that provides more sophisticated switching functionality,
+  see [circadian.el] or [theme-changer].
+
+
+[circadian.el] <https://github.com/guidoschmidt/circadian.el>
+
+[theme-changer] <https://github.com/hadronzoo/theme-changer>
+
+
+1.6 Frenquently Asked Problems
 ──────────────────────────────
 
-1.7.1 No 256-Color Output?
+1.6.1 No 256-Color Output?
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   If your terminal emulator doesn't render 256-color output correctly,
@@ -295,7 +267,7 @@ Table of Contents
     └────
 
 
-1.7.2 Parenthesis Is Hard To Read?
+1.6.2 Parenthesis Is Hard To Read?
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   I recommend set the value of `show-paren-style' to `expression' for
@@ -305,6 +277,26 @@ Table of Contents
   │ (show-paren-mode t)
   │ (setq show-paren-style 'expression)
   └────
+
+
+1.7 Changelog
+─────────────
+
+  Notable changes from earlier versions of `moe-theme':
+
+
+1.7.1 v1.1.0
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • `moe-theme-switcher' is now a minor mode
+
+    In previous versions, `moe-theme-switcher' was enabled automatically
+    by just loading the module. As it has now been turned into a minor
+    mode, users will need to update their configuration to enable this
+    mode. See [this section] for details on how to do this.
+
+
+[this section] See section 1.5.3
 
 
 1.8 Known Issues

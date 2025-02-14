@@ -374,7 +374,130 @@
   • `o': Open the bookmark in another window.
   • `v': Select the bookmarks (the MG0-convention).  How multiple
     bookmarks are opened is controlled by the variable
-    `blist-select-manner'.  See its documentation for details.
+    `blist-select-manner'.  This will be detailed in the following
+    subsection.
+
+
+3.9.1 Opening multiple bookmarks
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The function `blist-select' can open multiple bookmarks at the same
+  time.  It opens the bookmarks selected according to the
+  MG0-convention, as the above already said.  Now we will see how these
+  multiple bookmarks are opened.
+
+  If the finction `blist-select' is invoked without prefix argument, the
+  variable `blist-select-manner' will be used to determine the way
+  multiple bookmarks are opened; otherwise, it will prompt the user and
+  read a list of opening options.
+
+  As a quick summary, if the list does not contain /left/, it means to
+  use /right/; if no /up/, it means /down/; if no /vertical/, it means
+  /horizontal/.
+
+  There will be no errors if there are unrecognized symbols in the list:
+  they are simply ignored.
+
+  To be more precise, the variable `blist-select-manner' controls how
+  the windows that hold the opened bookmarks will be placed, as follows:
+
+  • /vertical/: The windows will be placed in a /vertical/ direction.
+    Its direction is upwards or downwards, according to further options
+    below.
+  • /horizontal/: The windows will be placed in a /horizontal/
+    direction.  Its direction is leftwards or rightwards, according to
+    further options below.
+
+    If both /vertical/ and /horizontal/ are present, /vertical/ take
+    precedence.
+  • /spiral/: The windows are opened in a spiral manner: first a window
+    is opened below (or above) the reference window, then another window
+    is opened to the left (or right) of the first window, with size half
+    that of the first window.  This process of vertical / horizontal
+    alteration continues afterwards.
+
+    The up / down / left / right direction is determined by the options
+    below.
+  • /main-side/: The first window is opened as the main window, and the
+    other windows are put in side slides.  If /vertical/ is present, the
+    side windows are either at the bottom or at the top; otherwise the
+    side windows are either at the left or at the right.  This takes
+    precedence over /spiral/.
+  • /left/, /right/, /up/, /down/: Determines the direction of opening
+    windows.  The precedence relation is that /left/ takes precedence
+    over /right/ and /up/ over /down/.
+  • /onetab/: All the windows and bookmarks are opened in a new tab.
+
+    If `blist-select' is invoked with a prefix argument, the function
+    will prompt the user for a name of the new tab.  The user can leave
+    the name empty, and then the name of the new tab will be determined
+    automatically.  The bookmark names of the selected items will be
+    available through the histories while entering the name of the new
+    tab.
+
+    Note that this requires the package `tab-bar'.
+  • /one-per-tab/: A new tab will be created for each bookmark.  If this
+    option is present, all other options will be ignored, as each
+    bookmark is opened as the only window in the dedicated tab, and
+    there is no need to bother with the window directions.  The tab for
+    the first item will be selected after the execution of this
+    function.
+
+    The names of the new tabs will be determined in the following
+    manner:
+
+    After creating a tab and jumping to the corresponding bookmark in
+    that tab, the user will be prompted for how to name the tab.  The
+    user has the following options.
+    ⁃ `y': The user will be prompted for the name of the new tab.  The
+      user can leave the name empty for automatic naming.
+
+    ⁃ `Y': For each following item, it will be assumed that the user
+      will enter `y'.
+
+    ⁃ `n': The tab name will not be modified.
+
+      The user can also enter some (possibly negative) number before
+      entering `n', and that number of tabs will be skipped.
+
+    ⁃ `N', `!': For each following item, it will be assumed that the
+      user will enter `n'.
+
+    ⁃ `b': The name of the new tab will be the name of the corresponding
+      bookmark.
+
+    ⁃ `B', `=': For each following item, it will be assumed that the
+      user will enter `b'.
+
+    ⁃ `p': The function will jump to the previous tab and run the same
+      procedure to allow the user to change the previous tab name.
+
+      The user can also enter some number before entering `p', so that
+      this procedure simply rolls back that number of items.
+
+      If no more previous tabs exist, just ask the same question again.
+
+    ⁃ `C-g': Quit the bookmark opening, tab-creating, tab-naming
+      procedure.  Note that those already-opened tabs will not be
+      closed.
+
+    ⁃ *anything else*: A help screen will be displayed, a help message
+      will be shown, and the same question will be asked again.  If the
+      user presses keys that are not listed above in a row, then the
+      help screen will be scrolled.  The user can press `-' before
+      pressing such a key, and the help screen will be scrolled in the
+      other direction.
+
+    In addition, while the user is in the process of determing how to
+    name the tabs, if ther user presses `tab' or `C-i', the prompt will
+    include additional information about how many items remain to be
+    determined, what tabs are already opened, and which tab we are in
+    right now.
+
+    After the execution of this function, the information about tabs
+    will also be shown in the echo area.
+
+    Note that this requires the package `tab-bar'.
 
 
 3.10 Annotations

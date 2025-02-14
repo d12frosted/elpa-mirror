@@ -16,21 +16,20 @@ intervention. Jinx can be used completely on its own, but can also
 safely co-exist with Emacs's built-in spell-checker Ispell.
 
 Jinx's high performance and low resource usage comes from directly
-calling the widely-used API of the [Enchant library]. Jinx automatically
-compiles `jinx-mod.c' and loads the dynamic module at startup. By
-binding directly to the native Enchant API, Jinx avoids the slower
-backend process communication with Aspell.  Enchant is widely used by
-other text editors and supports [Nuspell], [Hunspell], [Aspell] and a
-few language-specific backends.
+calling the API of the [Enchant library]. Jinx automatically compiles
+`jinx-mod.c' and loads the dynamic module at startup. By binding
+directly to the native Enchant API, Jinx avoids slower inter-process
+communication. Enchant is used by other text editors and supports
+multiple backends like [Nuspell], [Hunspell] and [Aspell].
 
 Jinx supports spell-checking multiple languages in the same buffer. See
 the `jinx-languages' variable to customize for multiple languages. Jinx
 can flexibly ignore misspellings via faces (`jinx-exclude-faces' and
 `jinx-include-faces'), regular expressions (`jinx-exclude-regexps'), and
 programmable predicates. Jinx comes preconfigured for the most important
-Emacs major modes. Modes like Java, Ruby or Rust are listed in
-`jinx-camel-modes'. For these modes composite words in `camelCase' and
-`PascalCase' are accepted.
+Emacs major modes. Modes like JavaScript, TypeScript, Java, Ruby or Rust
+are listed in `jinx-camel-modes'. For these modes composite words in
+`camelCase' and `PascalCase' are accepted.
 
 
 [Enchant library] <https://rrthomas.github.io/enchant/>
@@ -182,9 +181,9 @@ Emacs major modes. Modes like Java, Ruby or Rust are listed in
   are ordered as specified in the personal configuration file
   `~/.config/enchant/enchant.ordering' and the system-wide configuration
   file `/usr/share/enchant-2/enchant.ordering'. Enchant uses Hunspell as
-  default backend for most languages barring a few exceptions. For
-  English Enchant prefers Aspell and for Finnish and Turkish special
-  backends called Voikko and Zemberek are used.
+  default backend for most languages. For English Enchant prefers Aspell
+  and for Finnish and Turkish special backends called Voikko and
+  Zemberek are used.
 
   Depending on the backend the personal dictionary will be taken from
   different locations, e.g., `~/.aspell.LANG.pws' or

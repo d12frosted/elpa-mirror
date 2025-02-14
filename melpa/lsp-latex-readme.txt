@@ -121,44 +121,46 @@ _________________
 
   These variables are connected to Texlab configuration variables.  See
   also [Texlab official wiki].
-   Custom variable in Emacs                          Configuration provided by Texlab
-  -----------------------------------------------------------------------------------------------
-   lsp-latex-build-executable                        texlab.build.executable
-   lsp-latex-build-args                              texlab.build.args
-   lsp-latex-build-forward-search-after              texlab.build.forwardSearchAfter
-   lsp-latex-build-on-save                           texlab.build.onSave
-   lsp-latex-build-use-file-list                     texlab.build.useFileList
-   lsp-latex-build-aux-directory                     texlab.build.auxDirectory
-   lsp-latex-build-log-directory                     texlab.build.logDirectory
-   lsp-latex-build-pdf-directory                     texlab.build.pdfDirectory
-   lsp-latex-forward-search-executable               texlab.forwardSearch.executable
-   lsp-latex-forward-search-args                     texlab.forwardSearch.args
-   lsp-latex-chktex-additional-args                  texlab.chktex.additionalArgs
-   lsp-latex-chktex-on-open-and-save                 texlab.chktex.onOpenAndSave
-   lsp-latex-chktex-on-edit                          texlab.chktex.onEdit
-   lsp-latex-diagnostics-delay                       texlab.diagnosticsDelay
-   lsp-latex-diagnostics-allowed-patterns            texlab.diagnostics.allowedPatterns
-   lsp-latex-diagnostics-ignored-patterns            texlab.diagnostics.ignoredPatterns
-   lsp-latex-symbol-allowed-patterns                 texlab.symbol.allowedPatterns
-   lsp-latex-symbol-ignored-patterns                 texlab.symbol.ignoredPatterns
-   lsp-latex-bibtex-formatter-line-length            texlab.formatterLineLength
-   lsp-latex-bibtex-formatter                        texlab.bibtexFormatter
-   lsp-latex-latex-formatter                         texlab.latexFormatter
-   lsp-latex-latexindent-local                       texlab.latexindent.local
-   lsp-latex-latexindent-modify-line-breaks          texlab.latexindent.modifyLineBreaks
-   lsp-latex-latexindent-replacement                 texlab.latexindent.replacement
-   lsp-latex-completion-matcher                      texlab.completion.matcher
-   lsp-latex-inlay-hints-label-definitions           texlab.inlayHints.labelDefinitions
-   lsp-latex-inlay-hints-label-references            texlab.inlayHints.labelReferences
-   lsp-latex-inlay-hints-max-length                  texlab.inlayHints.maxLength
-   lsp-latex-experimental-math-environments          texlab.experimental.mathEnvironments
-   lsp-latex-experimental-enum-environments          texlab.experimental.enumEnvironments
-   lsp-latex-experimental-verbatim-environments      texlab.experimental.verbatimEnvironments
-   lsp-latex-experimental-citation-commands          texlab.experimental.citationCommands
-   lsp-latex-experimental-label-reference-commands   texlab.experimental.labelReferenceCommands
-   lsp-latex-experimental-label-definition-commands  texlab.experimental.labelDefinitionCommands
-   lsp-latex-experimental-label-reference-prefixes   texlab.experimental.labelReferencePrefixes
-   lsp-latex-experimental-label-definition-prefixes  texlab.experimental.labelDefinitionPrefixes
+   Custom variable in Emacs                               Configuration provided by Texlab
+  --------------------------------------------------------------------------------------------------------
+   lsp-latex-build-executable                             texlab.build.executable
+   lsp-latex-build-args                                   texlab.build.args
+   lsp-latex-build-forward-search-after                   texlab.build.forwardSearchAfter
+   lsp-latex-build-on-save                                texlab.build.onSave
+   lsp-latex-build-use-file-list                          texlab.build.useFileList
+   lsp-latex-build-aux-directory                          texlab.build.auxDirectory
+   lsp-latex-build-log-directory                          texlab.build.logDirectory
+   lsp-latex-build-pdf-directory                          texlab.build.pdfDirectory
+   lsp-latex-forward-search-executable                    texlab.forwardSearch.executable
+   lsp-latex-forward-search-args                          texlab.forwardSearch.args
+   lsp-latex-chktex-additional-args                       texlab.chktex.additionalArgs
+   lsp-latex-chktex-on-open-and-save                      texlab.chktex.onOpenAndSave
+   lsp-latex-chktex-on-edit                               texlab.chktex.onEdit
+   lsp-latex-diagnostics-delay                            texlab.diagnosticsDelay
+   lsp-latex-diagnostics-allowed-patterns                 texlab.diagnostics.allowedPatterns
+   lsp-latex-diagnostics-ignored-patterns                 texlab.diagnostics.ignoredPatterns
+   lsp-latex-symbols-custom-environments                  texlab.symbols.customEnvironments
+   lsp-latex-symbols-allowed-patterns                     texlab.symbol.allowedPatterns
+   lsp-latex-symbols-ignored-patterns                     texlab.symbol.ignoredPatterns
+   lsp-latex-bibtex-formatter-line-length                 texlab.formatterLineLength
+   lsp-latex-bibtex-formatter                             texlab.bibtexFormatter
+   lsp-latex-latex-formatter                              texlab.latexFormatter
+   lsp-latex-latexindent-local                            texlab.latexindent.local
+   lsp-latex-latexindent-modify-line-breaks               texlab.latexindent.modifyLineBreaks
+   lsp-latex-latexindent-replacement                      texlab.latexindent.replacement
+   lsp-latex-completion-matcher                           texlab.completion.matcher
+   lsp-latex-inlay-hints-label-definitions                texlab.inlayHints.labelDefinitions
+   lsp-latex-inlay-hints-label-references                 texlab.inlayHints.labelReferences
+   lsp-latex-inlay-hints-max-length                       texlab.inlayHints.maxLength
+   lsp-latex-experimental-math-environments               texlab.experimental.mathEnvironments
+   lsp-latex-experimental-enum-environments               texlab.experimental.enumEnvironments
+   lsp-latex-experimental-verbatim-environments           texlab.experimental.verbatimEnvironments
+   lsp-latex-experimental-citation-commands               texlab.experimental.citationCommands
+   lsp-latex-experimental-label-reference-commands        texlab.experimental.labelReferenceCommands
+   lsp-latex-experimental-label-reference-range-commands  texlab.experimental.labelReferenceRangeCommands
+   lsp-latex-experimental-label-definition-commands       texlab.experimental.labelReferenceCommands
+   lsp-latex-experimental-label-reference-prefixes        texlab.experimental.labelReferencePrefixes
+   lsp-latex-experimental-label-definition-prefixes       texlab.experimental.labelDefinitionPrefixes
 
 
 [Texlab official wiki]

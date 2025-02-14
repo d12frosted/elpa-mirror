@@ -34,14 +34,14 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ⁃ No external dependencies outside of core Emacs
 
   With `(setq dape-buffer-window-arrangement 'right)':
-  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_21_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_22_0.png>
   And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
   `completion-in-region-function':
-  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_21_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_22_0.png>
   With "rich" REPL output:
-  <https://raw.githubusercontent.com/svaante/dape/resources/repl_0_21_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/repl_0_22_0.png>
   With `minibuffer' adapter configuration hints:
-  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_21_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_22_0.png>
 
 
 2 Configuration
@@ -273,14 +273,25 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   See <https://github.com/eclipse-jdtls/eclipse.jdt.ls> for installation
   of JDTLS.  See <https://github.com/microsoft/java-debug> for
   installation of the Java Debug Server plugin.  The Java config depends
-  on Eglot running JDTLS with the plugin prior to starting Dape.  Extend
-  `eglot-server-programs' as follows to have JDTLS load the plugin:
+  on Eglot running JDTLS with the plugin prior to starting Dape.  Either
+  globally extend `eglot-server-programs' as follows to have JDTLS
+  always load the plugin:
   ┌────
   │ (add-to-list 'eglot-server-programs
-  │ 	     `((java-mode java-ts-mode) .
+  │ 	     '((java-mode java-ts-mode) .
   │ 	       ("jdtls"
   │ 		:initializationOptions
   │ 		(:bundles ["/PATH/TO/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-VERSION.jar"]))))
+  └────
+
+  Alternatively, set the variable `eglot-workspace-configuration' in the
+  file `.dir-locals.el' in a project's root directory, to have JDTLS
+  load the plugin for that project:
+  ┌────
+  │ ;; content of /project/.dir-locals.el
+  │ ((nil . ((eglot-workspace-configuration
+  │ 	  . (:jdtls (:initializationOptions
+  │ 		     (:bundles ["/PATH/TO/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-VERSION.jar"])))))))
   └────
 
 

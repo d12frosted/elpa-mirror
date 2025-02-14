@@ -260,7 +260,40 @@ inefficiencies typically are not significant.
   `emacsql'.
 
 
-3.7 Backups
+3.7 Search
+──────────
+
+  Triples supports [SQLite's FTS5 extension], which lets you run full
+  text searches with scored results over text objects in the triples
+  database.  This will create new FTS tables to store the data necessary
+  for the search.  It is only available using the built-in sqlite in
+  Emacs 29.1 and later.  To enable:
+
+  ┌────
+  │ (require 'triples-fts)
+  │ (triples-fts-setup db)
+  │ 
+  │ ;; If you need to rebuild the index
+  │ (triples-fts-rebuild db)
+  │ 
+  │ ;; Find the subjects for all objects that contain "panda", ordering by most
+  │ ;; relevant to least.
+  │ (triples-fts-query-subject db "panda")
+  │ 
+  │ ;; Find the subjects for all objects with the predicate `description/text' (type
+  │ ;; description, property text) that contain the word "panda", ordering by most
+  │ ;; relevant to least.
+  │ (triples-fts-query-subject db "description/text:panda")
+  │ 
+  │ ;; The same, but with substitution with an abbreviation.
+  │ (triples-fts-query-subject db "desc:panda" '(("desc" . "description/text")))
+  └────
+
+
+[SQLite's FTS5 extension] <https://www.sqlite.org/fts5.html>
+
+
+3.8 Backups
 ───────────
 
   If your application wants to back up your database, the function

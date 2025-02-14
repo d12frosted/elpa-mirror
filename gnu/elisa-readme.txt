@@ -296,8 +296,8 @@
   Disable collection.
 
 
-1.2.15 elisa-disble-all-collections
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+1.2.15 elisa-disable-all-collections
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Disable all collections.
 

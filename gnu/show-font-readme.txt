@@ -10,17 +10,20 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `show-font' (or `show-font.el'),
 and provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.1.0,
-released on 2024-09-10.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.2.0,
+released on 2025-01-25.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.2.0-dev.
+Current development target is 0.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `show-font'
 ⁃ Official manual: <https://protesilaos.com/emacs/show-font>
 ⁃ Change log: <https://protesilaos.com/emacs/show-font-changelog>
 ⁃ Git repository: <https://github.com/protesilaos/show-font>
-⁃ Backronym: Show How Outlines Will Feature Only in Non-TTY.
+⁃ Sample pictures:
+  <https://protesilaos.com/codelog/2024-09-10-emacs-show-font-0-1-0/>
+⁃ Backronym: Should Highlight Only With the Family Of the Named
+  Typeface.
 
 If you are viewing the README.org version of this file, please note that
 the GNU ELPA machinery automatically generates an Info manual out of it.
@@ -48,19 +51,30 @@ Table of Contents
   With `show-font' the user has the means to preview fonts inside of
   Emacs. This can be done in the following ways:
 
-  • The command `show-font-select-preview' uses the minibuffer to
-    completion with completion for a font on the system. The selected
-    font is then displayed in a bespoke buffer.
+  • The command `show-font-select-preview' uses the minibuffer to prompt
+    with completion for a font on the system. The selected font is then
+    displayed in a bespoke buffer.
 
   • The command `show-font-list' produces a list with all the fonts
-    available on the system each font on display is styled with its
-    given character set.
+    available on the system. Each font on display is styled with its
+    given character set. With an optional prefix argument (`C-u' by
+    default), it prompt for a string or regular expression to limit the
+    list of fonts to only the matching ones.
+
+  • The command `show-font-tabulated' is almost the same as
+    `show-font-list' except it uses the built-in Emacs framework of a
+    tabulated view. Concretely, users can sort by column and may prefer
+    the slightly more compact listing.
 
   • The `show-font-mode' is a major mode that gets activated when the
     user visits a `.ttf' or `.otf' file. It will preview with the font,
     if it is installed on the system, else it will provide a helpful
     message and an option to install the font (NOTE 2024-09-10: this
     only works on Linux).
+
+  Where the buffer which previews the font is displayed is controlled by
+  the user option `show-font-display-buffer-action-alist'. The default
+  value is to show the buffer at the bottom of the frame.
 
   The previews include a pangram, which is controlled by the user option
   `show-font-pangram'. The default value is a playful take on the more
@@ -161,6 +175,7 @@ Table of Contents
   │ 
   │ (define-key global-map (kbd "C-c s f") #'show-font-select-preview)
   │ (define-key global-map (kbd "C-c s l") #'show-font-list)
+  │ (define-key global-map (kbd "C-c s t") #'show-font-tabulated)
   └────
 
 
@@ -183,7 +198,7 @@ Table of Contents
 5 COPYING
 ═════════
 
-  Copyright (C) 2023 Free Software Foundation, Inc.
+  Copyright (C) 2024-2025 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free

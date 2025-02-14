@@ -142,7 +142,26 @@
     Azure.
 
 
-2.4 Gemini (not via Google Cloud)
+2.4 GitHub Models
+─────────────────
+
+  GitHub now has its own platform for interacting with AI models.  For a
+  list of models check the [marketplace].  You can set it up with
+  `make-llm-github', with the following parameters:
+  • `:key', a GitHub token or an Azure AI production key.
+  • `:chat-model', the chat model, which can be any of the ones you have
+    access for (currently o1 is restricted).
+  • `:embedding-model', the embedding model, which can be better found
+    [through a filter]a.
+
+
+[marketplace] <https://github.com/marketplace/models>
+
+[through a filter]
+<https://github.com/marketplace?type=models&task=Embeddings>
+
+
+2.5 Gemini (not via Google Cloud)
 ─────────────────────────────────
 
   This is Google's AI model.  You can get an API key via their [page on
@@ -161,7 +180,7 @@
 [list] <https://ai.google.dev/models>
 
 
-2.5 Vertex (Gemini via Google Cloud)
+2.6 Vertex (Gemini via Google Cloud)
 ────────────────────────────────────
 
   This is mostly for those who want to use Google Cloud specifically,
@@ -199,7 +218,7 @@
 <https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings#supported_models>
 
 
-2.6 Claude
+2.7 Claude
 ──────────
 
   [Claude] is Anthropic's large language model.  It does not support
@@ -217,7 +236,7 @@
 [Claude models] <https://docs.anthropic.com/claude/docs/models-overview>
 
 
-2.7 Ollama
+2.8 Ollama
 ──────────
 
   [Ollama] is a way to run large language models locally. There are
@@ -245,7 +264,7 @@
 [some models] <https://ollama.com/search?q=&c=embedding>
 
 
-2.8 GPT4All
+2.9 GPT4All
 ───────────
 
   [GPT4All] is a way to run large language models locally.  To use it
@@ -265,8 +284,8 @@
 [GPT4All] <https://gpt4all.io/index.html>
 
 
-2.9 llama.cpp
-─────────────
+2.10 llama.cpp
+──────────────
 
   [llama.cpp] is a way to run large language models locally.  To use it
   with the `llm' package, you need to start the server (with the
@@ -284,7 +303,7 @@
 [llama.cpp] <https://github.com/ggerganov/llama.cpp>
 
 
-2.10 Fake
+2.11 Fake
 ─────────
 
   This is a client that makes no call, but it just there for testing and

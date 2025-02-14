@@ -31,7 +31,21 @@
   details.
 
 
-1.1 Key-bindings and usage
+1.1 Installation
+────────────────
+
+  Install `macrostep' from Emacs with `M-x package-install macrostep'.
+
+  `macrostep' is available on [ NonGNU ELPA.]  For further details, see
+  [the macrostep page.]
+
+
+[ NonGNU ELPA.] <https://elpa.nongnu.org/>
+
+[the macrostep page.] <https://elpa.nongnu.org/nongnu/macrostep.html>
+
+
+1.2 Key-bindings and usage
 ──────────────────────────
 
   The standard keybindings in `macrostep-mode' are the following:
@@ -62,7 +76,7 @@
   typing `c' to collapse all surrounding expansions.
 
 
-1.2 Customization options
+1.3 Customization options
 ─────────────────────────
 
   Type `M-x customize-group RET macrostep RET' to customize options and
@@ -82,7 +96,7 @@
   `macrostep-gensym-5' to alter the appearance of macro expansions.
 
 
-1.3 Locally-bound macros
+1.4 Locally-bound macros
 ────────────────────────
 
   As of version 0.9, `macrostep' can expand calls to a locally-bound
@@ -119,7 +133,7 @@
   expanded text so that they can be fontified accurately.
 
 
-1.4 Expanding sub-forms
+1.5 Expanding sub-forms
 ───────────────────────
 
   By moving point around in the macro expansion using
@@ -137,7 +151,7 @@
   `macroexpand-all'.
 
 
-1.5 Extending macrostep for other languages
+1.6 Extending macrostep for other languages
 ───────────────────────────────────────────
 
   Since version 0.9, it is possible to extend macrostep to work with
@@ -174,7 +188,7 @@
   preprocessor to obtain their expansions.
 
 
-1.6 Bugs and known limitations
+1.7 Bugs and known limitations
 ──────────────────────────────
 
   You can evaluate and edebug macro-expanded forms and step through the
@@ -188,7 +202,7 @@
   Please send other bug reports and feature requests to the author.
 
 
-1.7 Acknowledgements
+1.8 Acknowledgements
 ────────────────────
 
   Thanks to:
@@ -216,9 +230,17 @@
 <http://dorophone.blogspot.co.uk/2011/05/monadic-parser-combinators-in-elisp.html>
 
 
-1.8 Changelog
+1.9 Changelog
 ─────────────
 
+  • v0.9.4, 2024-05-09:
+    • add compat dependency for defvar-keymap
+  • v0.9.3, 2024-04-30:
+    • code simplifications, checkdoc fixes.
+  • v0.9.2, 2023-05-12:
+    • name the keymap macrostep-mode-map, fixing a regression in v0.9.1
+  • v0.9.1, 2023-03-12:
+    • bug fixes, cleanup and modernization
   • v0.9, 2015-10-01:
     • separate into Elisp-specific and generic components
     • highlight and expand compiler macros
@@ -233,3 +255,18 @@
     macro-expansion
   • v0.3, 2012-10-30: print dotted lists correctly. autoload
     definitions.
+
+
+2 Contributions
+═══════════════
+
+  Please note that as this package is intended to be part of Emacs soon,
+  non-trivial code contributions require FSF copyright assignment prior
+  to acceptance.
+
+  The copyright assignment policy is at
+  <https://www.fsf.org/licensing/contributor-faq>
+
+  Any legally significant contributions can only be merged after the
+  author has completed their paperwork.
+  <https://www.gnu.org/prep/maintain/html_node/Legally-Significant.html#Legally-Significant>

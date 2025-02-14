@@ -3,38 +3,38 @@ Fetcher: github
 Source:  https://github.com/karthink/gptel
 
 Updating /mnt/store/melpa/working/gptel/
-Checking out af6b114cfb9b88f08923b96fb2c2e68fbdaaf85b
+Checking out 7425ec9f6c3ec5627b15b6c218650f9cccecaa95
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptel3MJujk/gptel-20250124.432
+  to /tmp/gptel6dkT7h/gptel-20250214.332
     gptel-anthropic.el -> gptel-anthropic.el
     gptel-context.el -> gptel-context.el
     gptel-curl.el -> gptel-curl.el
     gptel-gemini.el -> gptel-gemini.el
     gptel-kagi.el -> gptel-kagi.el
     gptel-ollama.el -> gptel-ollama.el
+    gptel-openai-extras.el -> gptel-openai-extras.el
     gptel-openai.el -> gptel-openai.el
     gptel-org.el -> gptel-org.el
-    gptel-privategpt.el -> gptel-privategpt.el
     gptel-rewrite.el -> gptel-rewrite.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20250124.432.tar containing:
-  gptel-20250124.432/
-  gptel-20250124.432/gptel-anthropic.el
-  gptel-20250124.432/gptel-context.el
-  gptel-20250124.432/gptel-curl.el
-  gptel-20250124.432/gptel-gemini.el
-  gptel-20250124.432/gptel-kagi.el
-  gptel-20250124.432/gptel-ollama.el
-  gptel-20250124.432/gptel-openai.el
-  gptel-20250124.432/gptel-org.el
-  gptel-20250124.432/gptel-pkg.el
-  gptel-20250124.432/gptel-privategpt.el
-  gptel-20250124.432/gptel-rewrite.el
-  gptel-20250124.432/gptel-transient.el
-  gptel-20250124.432/gptel.el
+Created gptel-20250214.332.tar containing:
+  gptel-20250214.332/
+  gptel-20250214.332/gptel-anthropic.el
+  gptel-20250214.332/gptel-context.el
+  gptel-20250214.332/gptel-curl.el
+  gptel-20250214.332/gptel-gemini.el
+  gptel-20250214.332/gptel-kagi.el
+  gptel-20250214.332/gptel-ollama.el
+  gptel-20250214.332/gptel-openai-extras.el
+  gptel-20250214.332/gptel-openai.el
+  gptel-20250214.332/gptel-org.el
+  gptel-20250214.332/gptel-pkg.el
+  gptel-20250214.332/gptel-rewrite.el
+  gptel-20250214.332/gptel-transient.el
+  gptel-20250214.332/gptel.el
  ✓ Success:
-  2025-01-24T10:03:53+0000  gptel-20250124.432.entry
-  2025-01-24T10:03:53+0000  gptel-20250124.432.tar
-Built gptel in 4.762s, finished at 2025-01-24T10:03:54+0000
+  2025-02-14T11:49:54+0000  gptel-20250214.332.entry
+  2025-02-14T11:49:53+0000  gptel-20250214.332.tar
+Built gptel in 3.792s, finished at 2025-02-14T11:49:54+0000

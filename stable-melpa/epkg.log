@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out d28ce2f7d57c2f082506d25e653b68673daf33c2
+Checking out dad7206206f9d329695b5559a601591a2037709f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgOqaQs5/epkg-20250101.1751
+  to /tmp/epkgLuOzpD/epkg-20250205.1933
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -15,20 +15,22 @@ Copying files (->) and directories (=>)
   ! lisp/epkg-utils.el -> epkg-utils.el
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
+    .dir-locals.el -> .dir-locals.el
 Generating epkg.info
-Created epkg-20250101.1751.tar containing:
-  epkg-20250101.1751/
-  epkg-20250101.1751/dir
-  epkg-20250101.1751/epkg-desc.el
-  epkg-20250101.1751/epkg-elpa.el
-  epkg-20250101.1751/epkg-list.el
-  epkg-20250101.1751/epkg-org.el
-  epkg-20250101.1751/epkg-pkg.el
-  epkg-20250101.1751/epkg-schemata.el
-  epkg-20250101.1751/epkg-utils.el
-  epkg-20250101.1751/epkg.el
-  epkg-20250101.1751/epkg.info
+Created epkg-20250205.1933.tar containing:
+  epkg-20250205.1933/
+  epkg-20250205.1933/.dir-locals.el
+  epkg-20250205.1933/dir
+  epkg-20250205.1933/epkg-desc.el
+  epkg-20250205.1933/epkg-elpa.el
+  epkg-20250205.1933/epkg-list.el
+  epkg-20250205.1933/epkg-org.el
+  epkg-20250205.1933/epkg-pkg.el
+  epkg-20250205.1933/epkg-schemata.el
+  epkg-20250205.1933/epkg-utils.el
+  epkg-20250205.1933/epkg.el
+  epkg-20250205.1933/epkg.info
  ✓ Success:
-  2025-01-24T09:51:26+0000  epkg-20250101.1751.entry
-  2025-01-24T09:51:26+0000  epkg-20250101.1751.tar
-Built epkg in 5.581s, finished at 2025-01-24T09:51:27+0000
+  2025-02-14T11:40:03+0000  epkg-20250205.1933.entry
+  2025-02-14T11:40:03+0000  epkg-20250205.1933.tar
+Built epkg in 5.039s, finished at 2025-02-14T11:40:04+0000

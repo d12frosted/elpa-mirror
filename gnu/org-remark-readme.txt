@@ -81,8 +81,19 @@ Table of Contents
 
     ⁃ Info documentation
 
+    ⁃ [wallabag.el] (it has been [reported])
+
+  Refer to [NEWS] file for a list of new features and fixes.
+
 
 [nov.el] <https://depp.brause.cc/nov.el/>
+
+[wallabag.el] <https://github.com/chenyanming/wallabag.el>
+
+[reported]
+<https://github.com/nobiot/org-remark/issues/92#issuecomment-2601307855>
+
+[NEWS] <https://github.com/nobiot/org-remark/blob/main/NEWS>
 
 
 3 Installation
@@ -150,9 +161,22 @@ Table of Contents
   above.
 
   ┌────
+  │ (use-package org-remark-global-tracking
+  │   ;; It is recommended that `org-remark-global-tracking-mode' be
+  │   ;; enabled when Emacs initializes. You can set it in
+  │   ;; `after-init-hook'.
+  │   :hook after-init
+  │   :config
+  │   ;; Selectively keep or comment out the following if you want to use
+  │   ;; extensions for Info-mode, EWW, and NOV.el (EPUB) respectively.
+  │   (use-package org-remark-info :after info :config (org-remark-info-mode +1))
+  │   (use-package org-remark-eww  :after eww  :config (org-remark-eww-mode +1))
+  │   (use-package org-remark-nov  :after nov  :config (org-remark-nov-mode +1)))
+  │ 
   │ (use-package org-remark
   │   :bind (;; :bind keyword also implicitly defers org-remark itself.
-  │ 	 ;; Keybindings before :map is set for global-map.
+  │ 	 ;; Keybindings before :map is set for global-map. Adjust the keybinds
+  │ 	 ;; as you see fit.
   │ 	 ("C-c n m" . org-remark-mark)
   │ 	 ("C-c n l" . org-remark-mark-line)
   │ 	 :map org-remark-mode-map
@@ -160,19 +184,7 @@ Table of Contents
   │ 	 ("C-c n ]" . org-remark-view-next)
   │ 	 ("C-c n [" . org-remark-view-prev)
   │ 	 ("C-c n r" . org-remark-remove)
-  │ 	 ("C-c n d" . org-remark-delete))
-  │   ;; Alternative way to enable `org-remark-global-tracking-mode' in
-  │   ;; `after-init-hook'.
-  │   ;; :hook (after-init . org-remark-global-tracking-mode)
-  │   :init
-  │   ;; It is recommended that `org-remark-global-tracking-mode' be
-  │   ;; enabled when Emacs initializes. Alternatively, you can put it to
-  │   ;; `after-init-hook' as in the comment above
-  │   (org-remark-global-tracking-mode +1)
-  │   :config
-  │   (use-package org-remark-info :after info :config (org-remark-info-mode +1))
-  │   (use-package org-remark-eww  :after eww  :config (org-remark-eww-mode +1))
-  │   (use-package org-remark-nov  :after nov  :config (org-remark-nov-mode +1)))
+  │ 	 ("C-c n d" . org-remark-delete)))
   └────
 
 
@@ -206,6 +218,8 @@ Table of Contents
 
   *New features*
 
+  • User option `org-remark-report-no-highlights`by Kristoffer Balintona
+    (@krisbalintona)
   • EPUB books (nov.el) support would not have been possible without
     collaboration with @sati-bodhi
   • `echo-text' update from the marginal notes to the source buffer by
@@ -214,7 +228,8 @@ Table of Contents
 
   *Bug fixes*
 
-  @alan-w-255, Nan Jun Jie (@nanjj), @sgati-bodhi
+  Joseph Turner (@josephmturner) @alan-w-255, Nan Jun Jie (@nanjj),
+  @sgati-bodhi
 
   *Documentation (including README, NEWS, CHANGELOG)*
 

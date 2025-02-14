@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magnars/multiple-cursors.el
 
 Updating /mnt/store/melpa/working/multiple-cursors/
-Checking out 46635e7f693560213b56ca8eca1adb13559672e5
+Checking out 89f1a8df9b1fc721b1672b4c7b6d3ab451e7e3ef
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/multiple-cursors/
-  to /tmp/multiple-cursorsmLhWcN/multiple-cursors-20241201.1841
+  to /tmp/multiple-cursorsstZDRa/multiple-cursors-20250210.1813
     mc-cycle-cursors.el -> mc-cycle-cursors.el
     mc-edit-lines.el -> mc-edit-lines.el
     mc-hide-unmatched-lines-mode.el -> mc-hide-unmatched-lines-mode.el
@@ -14,22 +14,21 @@ Copying files (->) and directories (=>)
     mc-mark-pop.el -> mc-mark-pop.el
     mc-separate-operations.el -> mc-separate-operations.el
     multiple-cursors-core.el -> multiple-cursors-core.el
-    multiple-cursors-pkg.el -> multiple-cursors-pkg.el
     multiple-cursors.el -> multiple-cursors.el
     rectangular-region-mode.el -> rectangular-region-mode.el
-Created multiple-cursors-20241201.1841.tar containing:
-  multiple-cursors-20241201.1841/
-  multiple-cursors-20241201.1841/mc-cycle-cursors.el
-  multiple-cursors-20241201.1841/mc-edit-lines.el
-  multiple-cursors-20241201.1841/mc-hide-unmatched-lines-mode.el
-  multiple-cursors-20241201.1841/mc-mark-more.el
-  multiple-cursors-20241201.1841/mc-mark-pop.el
-  multiple-cursors-20241201.1841/mc-separate-operations.el
-  multiple-cursors-20241201.1841/multiple-cursors-core.el
-  multiple-cursors-20241201.1841/multiple-cursors-pkg.el
-  multiple-cursors-20241201.1841/multiple-cursors.el
-  multiple-cursors-20241201.1841/rectangular-region-mode.el
+Created multiple-cursors-20250210.1813.tar containing:
+  multiple-cursors-20250210.1813/
+  multiple-cursors-20250210.1813/mc-cycle-cursors.el
+  multiple-cursors-20250210.1813/mc-edit-lines.el
+  multiple-cursors-20250210.1813/mc-hide-unmatched-lines-mode.el
+  multiple-cursors-20250210.1813/mc-mark-more.el
+  multiple-cursors-20250210.1813/mc-mark-pop.el
+  multiple-cursors-20250210.1813/mc-separate-operations.el
+  multiple-cursors-20250210.1813/multiple-cursors-core.el
+  multiple-cursors-20250210.1813/multiple-cursors-pkg.el
+  multiple-cursors-20250210.1813/multiple-cursors.el
+  multiple-cursors-20250210.1813/rectangular-region-mode.el
  ✓ Success:
-  2025-01-24T10:24:13+0000  multiple-cursors-20241201.1841.entry
-  2025-01-24T10:24:13+0000  multiple-cursors-20241201.1841.tar
-Built multiple-cursors in 5.817s, finished at 2025-01-24T10:24:15+0000
+  2025-02-14T12:06:51+0000  multiple-cursors-20250210.1813.entry
+  2025-02-14T12:06:51+0000  multiple-cursors-20250210.1813.tar
+Built multiple-cursors in 3.400s, finished at 2025-02-14T12:06:52+0000

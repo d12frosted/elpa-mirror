@@ -1,18 +1,24 @@
 Package: kixtart-mode
-Fetcher: github
-Source:  https://github.com/ryrun/kixtart-mode
+Fetcher: sourcehut
+Source:  https://git.sr.ht/~mew/kixtart-mode
 
 Updating /mnt/store/melpa/working/kixtart-mode/
-Checking out 1c2356797e7b766bbaaa2b341176a8b10499cd79
+Checking out 1d08d755969d27c5460193e09f5a1121614dbe22
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kixtart-mode/
-  to /tmp/kixtart-mode2iePNp/kixtart-mode-20150611.1604
+  to /tmp/kixtart-mode94UDcw/kixtart-mode-20250208.1949
+  ! doc/kixtart-mode.texi -> kixtart-mode.texi
+    kixtart-docstrings.el -> kixtart-docstrings.el
     kixtart-mode.el -> kixtart-mode.el
-Created kixtart-mode-20150611.1604.tar containing:
-  kixtart-mode-20150611.1604/
-  kixtart-mode-20150611.1604/kixtart-mode-pkg.el
-  kixtart-mode-20150611.1604/kixtart-mode.el
+Generating kixtart-mode.info
+Created kixtart-mode-20250208.1949.tar containing:
+  kixtart-mode-20250208.1949/
+  kixtart-mode-20250208.1949/dir
+  kixtart-mode-20250208.1949/kixtart-docstrings.el
+  kixtart-mode-20250208.1949/kixtart-mode-pkg.el
+  kixtart-mode-20250208.1949/kixtart-mode.el
+  kixtart-mode-20250208.1949/kixtart-mode.info
  ✓ Success:
-  2025-01-24T10:15:37+0000  kixtart-mode-20150611.1604.entry
-  2025-01-24T10:15:37+0000  kixtart-mode-20150611.1604.tar
-Built kixtart-mode in 3.380s, finished at 2025-01-24T10:15:38+0000
+  2025-02-14T11:59:48+0000  kixtart-mode-20250208.1949.entry
+  2025-02-14T11:59:47+0000  kixtart-mode-20250208.1949.tar
+Built kixtart-mode in 5.946s, finished at 2025-02-14T11:59:48+0000
