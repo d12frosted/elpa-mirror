@@ -1,0 +1,34 @@
+Package: weibo
+Fetcher: github
+Source:  https://github.com/austin-----/weibo.emacs
+
+Updating /mnt/store/melpa/working/weibo/
+Checking out a8abb50b7602fe15fe2bc6400ac29780e956b390
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/weibo/
+  to /tmp/weiboMYMTSm/weibo-20150307.2242
+    weibo-authorize.el -> weibo-authorize.el
+    weibo-comment.el -> weibo-comment.el
+    weibo-image.el -> weibo-image.el
+    weibo-post.el -> weibo-post.el
+    weibo-status-comment.el -> weibo-status-comment.el
+    weibo-status.el -> weibo-status.el
+    weibo-timeline.el -> weibo-timeline.el
+    weibo-user.el -> weibo-user.el
+    weibo.el -> weibo.el
+Created weibo-20150307.2242.tar containing:
+  weibo-20150307.2242/
+  weibo-20150307.2242/weibo-authorize.el
+  weibo-20150307.2242/weibo-comment.el
+  weibo-20150307.2242/weibo-image.el
+  weibo-20150307.2242/weibo-pkg.el
+  weibo-20150307.2242/weibo-post.el
+  weibo-20150307.2242/weibo-status-comment.el
+  weibo-20150307.2242/weibo-status.el
+  weibo-20150307.2242/weibo-timeline.el
+  weibo-20150307.2242/weibo-user.el
+  weibo-20150307.2242/weibo.el
+ ✓ Success:
+  2025-02-14T22:53:58+0000  weibo-20150307.2242.entry
+  2025-02-14T22:53:58+0000  weibo-20150307.2242.tar
+Built weibo in 3.336s, finished at 2025-02-14T22:53:59+0000

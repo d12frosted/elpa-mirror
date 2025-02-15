@@ -29,27 +29,27 @@
 2 Screenshots
 ═════════════
 
-  [https://user-images.githubusercontent.com/16313743/187678438-18c2032c-d937-4417-aca7-c59d72dcf38b.png]
+  [https://user-images.githubusercontent.com/16313743/189978788-900b3de7-b3e5-42a6-9f28-426e1e80c314.png]
 
-  [https://user-images.githubusercontent.com/16313743/187436132-f15cdbf7-ed05-47ed-aa08-37c64baca2c0.png]
+  [https://user-images.githubusercontent.com/16313743/189978802-f6fb09ea-13a2-4dc9-828b-992523d51dd5.png]
 
-  [https://user-images.githubusercontent.com/16313743/187674778-20aad9d6-0398-4a95-a10f-f01ab164d454.png]
+  [https://user-images.githubusercontent.com/16313743/190370038-1d64a7aa-ac1c-4436-a2a3-05cd801de0a4.png]
 
 
-[https://user-images.githubusercontent.com/16313743/187678438-18c2032c-d937-4417-aca7-c59d72dcf38b.png]
-<https://user-images.githubusercontent.com/16313743/187678438-18c2032c-d937-4417-aca7-c59d72dcf38b.png>
+[https://user-images.githubusercontent.com/16313743/189978788-900b3de7-b3e5-42a6-9f28-426e1e80c314.png]
+<https://user-images.githubusercontent.com/16313743/189978788-900b3de7-b3e5-42a6-9f28-426e1e80c314.png>
 
-[https://user-images.githubusercontent.com/16313743/187436132-f15cdbf7-ed05-47ed-aa08-37c64baca2c0.png]
-<https://user-images.githubusercontent.com/16313743/187436132-f15cdbf7-ed05-47ed-aa08-37c64baca2c0.png>
+[https://user-images.githubusercontent.com/16313743/189978802-f6fb09ea-13a2-4dc9-828b-992523d51dd5.png]
+<https://user-images.githubusercontent.com/16313743/189978802-f6fb09ea-13a2-4dc9-828b-992523d51dd5.png>
 
-[https://user-images.githubusercontent.com/16313743/187674778-20aad9d6-0398-4a95-a10f-f01ab164d454.png]
-<https://user-images.githubusercontent.com/16313743/187674778-20aad9d6-0398-4a95-a10f-f01ab164d454.png>
+[https://user-images.githubusercontent.com/16313743/190370038-1d64a7aa-ac1c-4436-a2a3-05cd801de0a4.png]
+<https://user-images.githubusercontent.com/16313743/190370038-1d64a7aa-ac1c-4436-a2a3-05cd801de0a4.png>
 
 
 3 Prerequisites
 ═══════════════
 
-  This package requires `GNU ls' (`gls' on some OSs), and /optionally/:
+  This package requires `GNU ls' (`gls' on macOS), and /optionally/:
 
   ⁃ `fd' as a faster alternative to `find'
   ⁃ `imagemagick' for image preview
@@ -122,6 +122,11 @@
 
     Dirvish takes care all of your Dired entries.
 
+  ⁃ `M-x dirvish-dwim RET'
+
+    If the selected window is the only window, open Dirvish, otherwise
+    open Dired.
+
 
 6 Resources
 ═══════════
@@ -130,6 +135,7 @@
   ⁃ [Extensions]
   ⁃ [Related projects]
   ⁃ [Changelog]
+  ⁃ [Absolute beginner's guide]
   ⁃ [Discussions]
 
 
@@ -141,13 +147,34 @@
 
 [Changelog] <file:docs/CHANGELOG.org>
 
+[Absolute beginner's guide] <file:docs/EMACS-NEWCOMERS.org>
+
 [Discussions] <https://github.com/alexluigit/dirvish/discussions>
 
 
 7 Acknowledgements
 ══════════════════
 
+  This package took inspiration from the terminal file manager [ranger]
+  and [treemacs] from Alexander Miller.  Some of the extensions was
+  initially a rewrite of packages provided by [dired-hacks]. These
+  extensions have been greatly enhanced in comparison to the original
+  versions.
+
   Thanks Fox Kiester (@noctuid) for the awesome [summary] of Dirvish.
+
+  *Code contributions*:
+
+
+
+  *Useful advice and discussions*:
+
+  • [Fox Kiester]
+  • [JD Smith]
+  • [karthink]
+  • [gcv]
+  • [aikrahguzar]
+  • [Daniel Mendler]
 
   The name *dirvish* is a tribute to [vim-dirvish].
   ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -156,7 +183,25 @@
   [file:https://github.com/alexluigit/dirvish/actions/workflows/melpazoid.yml/badge.svg]
 
 
+[ranger] <https://github.com/ranger/ranger>
+
+[treemacs] <https://github.com/Alexander-Miller/treemacs>
+
+[dired-hacks] <https://github.com/Fuco1/dired-hacks>
+
 [summary] <https://github.com/alexluigit/dirvish/issues/34>
+
+[Fox Kiester] <https://github.com/noctuid>
+
+[JD Smith] <https://github.com/jdtsmith>
+
+[karthink] <https://github.com/karthink>
+
+[gcv] <https://github.com/gcv>
+
+[aikrahguzar] <https://github.com/aikrahguzar>
+
+[Daniel Mendler] <https://github.com/minad>
 
 [vim-dirvish] <https://github.com/justinmk/vim-dirvish>
 
