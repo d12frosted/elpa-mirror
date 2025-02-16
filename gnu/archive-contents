@@ -654,7 +654,7 @@
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
 	       (:commit . "caffb420be106cebbdfe4474ed0507a601603f83"))])
  (colorful-mode .
-		[(1 1 0)
+		[(1 2 0)
 		 ((emacs
 		   (28 1))
 		  (compat
@@ -662,10 +662,12 @@
 		 "Preview any color in your buffer in real time" tar
 		 ((:url . "https://github.com/DevelopmentCool2449/colorful-mode")
 		  (:keywords "faces" "tools" "matching" "convenience")
-		  (:maintainer "Jen-Chieh" . "jcs090218@gmail.com")
+		  (:maintainer
+		   ("Jen-Chieh" . "jcs090218@gmail.com")
+		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:authors
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
-		  (:commit . "1aece9055546b30157c83b3b7cb51e808eeeca37"))])
+		  (:commit . "d6d093e55ea63ce3c2b7524f4ffb9ff7cf10cfc9"))])
  (comint-mime .
 	      [(0 7)
 	       ((emacs

@@ -21,29 +21,37 @@ buffer in real time and in a user friendly way based/inspired on
 ═════════════
 
   • Real time color highlight.
-  • Supports hexadecimal (#RRGGBB, #RGB, #RRGGBBAA, #RGBA), color names,
-    rgb(a)/hsl(a) and LaTex colors (gray, rbg, RGB, HTML)
-  • Convert current color at point to other formats such as hexadecimal
-    or color names(only available for some colors) with mouse click
-    support.
-  • Optionally use a prefix/suffix string instead highlight.
-  • Optionally highlight colors only inside in strings.
-  • Omitting color keywords from being highlighted.
+  • Supports:
+    • Hexadecimal (#RRGGBB, #RGB, #RRGGBBAA, #RGBA).
+    • Color names (Emacs, HTML, CSS).
+    • CSS rgb/rgba, hsl/hsla and user-defined colors variables:
+      • @define_color
+      • var()
+    • LaTex colors (gray, rbg, RGB, HTML)
+  • Convert current color at point or in region to other formats such as
+    hexadecimal or color names *(only available for some colors)* with
+    mouse click support.
+  • Prefix/suffix string instead highlight /(Optional)/.
+  • Highlight only in strings /(Optional)/.
+  • Blacklist color keywords from being highlighted.
 
 
 2 Screenshots and animated GIFs 📷
 ══════════════════════════════════
 
+  <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/screenshot1.png>
+  Supports for both GUI/TUI.
+
+  <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/screenshot2.png>
+  Support for custom color string indicator.
+
   <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/gif1.gif>
-  /With prefix instead highlight/.
 
   <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/gif2.gif>
-  <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/gif3.gif>
-  <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/screenshot1.png>
-  <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/screenshot2.png>
+  Change color support in real time.
 
-  <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/screenshot3.png>
-  /With a custom prefix (in this example a custom character)/.
+  <https://raw.githubusercontent.com/DevelopmentCool2449/colorful-mode/main/assets/gif3.gif>
+  Support for color changing at region.
 
 
 3 User Options 🔧
@@ -66,11 +74,12 @@ buffer in real time and in a user friendly way based/inspired on
   • `colorful-prefix-alignment (default: 'left)' The position to put
     prefix string.  The value can be left or right.  Only relevant if
     `colorful-use-prefix' is non-nil.
-  • `colorful-extra-color-keyword-functions' default: '((emacs-lisp-mode
-    . colorful-add-color-names) ((mhtml-mode html-ts-mode css-mode
-    css-ts-mode) . (colorful-add-rgb-colors colorful-add-hsl-colors
-    colorful-add-color-names)) (latex-mode . colorful-add-latex-colors)
-    colorful-add-hex-colors) List of functions to add extra color
+  • `colorful-extra-color-keyword-functions' default:
+    '(colorful-add-hex-colors (emacs-lisp-mode
+    . colorful-add-color-names) ((html-mode css-mode) .
+    (colorful-add-css-variables-colors colorful-add-rgb-colors
+    colorful-add-hsl-colors colorful-add-color-names)) (latex-mode
+    . colorful-add-latex-colors)) List of functions to add extra color
     keywords to colorful-color-keywords.
 
     It can be a cons cell specifying the mode (or a list of modes) e.g:
@@ -86,16 +95,17 @@ buffer in real time and in a user friendly way based/inspired on
     Available functions are:
     ⁃ colorful-add-hex-colors.
     ⁃ colorful-add-color-names.
+    ⁃ colorful-add-css-variables-colors.
     ⁃ colorful-add-rgb-colors.
     ⁃ colorful-add-hsl-colors.
     ⁃ colorful-add-latex-colors
 
-  • `colorful-exclude-colors (default: '("#def"))' List of keyword to
+  • `colorful-exclude-colors (default: '("#define"))' List of keyword to
     don't highlight.
-  • `colorful-short-hex-conversions (default: 2)' If set to 2, hex
-    values converted by colorful should be as short as possible.
-    Setting this to 2 will make hex values follow a 24-bit specification
-    and can make them inaccurate.
+  • `colorful-short-hex-conversions (default: t)' If non-nil, hex values
+    converted by colorful should be as short as possible.  Setting this
+    to 2 will make hex values follow a 24-bit specification
+    (#RRGGBB[AA]) and can make them inaccurate.
   • `colorful-only-strings (default: nil)' If non-nil colorful will only
     highlight colors inside strings.  If set to only-prog, only
     highlight colors in strings if current major mode is derived from
@@ -108,9 +118,8 @@ buffer in real time and in a user friendly way based/inspired on
 3.2 Faces
 ─────────
 
-  • `colorful-base' Face used as base for highlight color names.  Only
-    used for draw box and change font &c., changing box color and/or
-    background/foreground color face doesn't have effect.
+  • `colorful-base' Face used as base for highlight color names.
+    Changing background or foreground color will have no effect.
 
 
 3.3 Interactive User Functions.
@@ -118,10 +127,11 @@ buffer in real time and in a user friendly way based/inspired on
 
   • `colorful-change-or-copy-color' Change or copy color to a converted
     format at current cursor position.
-  • `colorful-convert-and-change-color' Convert color to a valid format
-    and replace color at current cursor position.
-  • `colorful-convert-and-copy-color' Convert color to a valid format
-    and copy it at current cursor position.
+  • `colorful-convert-and-change-color' Convert color to other format
+    and replace color at point or active mark.  If mark is active,
+    convert colors in mark.
+  • `colorful-convert-and-copy-color' Convert color to an other and copy
+    it at point.
   • `colorful-mode' Buffer-local minor mode.
   • `global-colorful-mode' Global minor mode.
 
@@ -156,11 +166,13 @@ buffer in real time and in a user friendly way based/inspired on
   colorful provides extra functions out-the-box that enable additional
   highlighting:
 
-  • `colorful-add-hex-colors' Add Hexadecimal Colors.
-  • `colorful-add-color-names' Add color names.
-  • `colorful-add-rgb-colors' Add CSS RGB colors.
-  • `colorful-add-hsl-colors' Add CSS HSL colors.
-  • `colorful-add-latex-colors' Add LaTex rgb/RGB/HTML/Grey colors.
+  • `colorful-add-hex-colors': Add Hexadecimal Colors.
+  • `colorful-add-color-names': Add color names.
+  • `colorful-add-css-variables-colors': Add CSS user-defined color
+    variables.
+  • `colorful-add-rgb-colors': Add CSS RGB colors.
+  • `colorful-add-hsl-colors': Add CSS HSL colors.
+  • `colorful-add-latex-colors': Add LaTex rgb/RGB/HTML/Grey colors.
 
   See: `colorful-extra-color-keyword-functions' for more details.
 
@@ -201,12 +213,12 @@ buffer in real time and in a user friendly way based/inspired on
    Compatible with hl-line and other overlays?            ✓                 ❌               ❌                          
    Convert color to other formats?                        ✓                 ❌               ❌                          
    Optionally use string prefix/suffix instead highlight  ✓                 ❌               ❌                          
-   Exclude keywords/colors?                               ✓                 ❌^{1}           ❌                          
+   Blacklist colors?                                      ✓                 ❌^{1}           ❌                          
    Allow highlight specifics colors in specific modes     ✓                 ✓^{2}            ❌                          
    Optionally highlight only in strings                   ✓                 ❌               ❌                          
    No performance issues?^{3}                             ❌                ✓                ✓                           
-                                                                                                                       
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
   ┌────
   │ [1] rainbow-mode (like colorful) uses regex for highlight some
   │     keywords, however it cannot exclude specifics colors keywords
