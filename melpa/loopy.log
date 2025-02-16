@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out 36f76980ea52a31a4c7682f7bd26c4baa32a1d4c
+Checking out d00aa7d8edab5f48f6acc6bd984c6667c7ec25fd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyNjv3QK/loopy-20250119.135
+  to /tmp/loopyY0hE0d/loopy-20250215.2146
   ! lisp/loopy-commands.el -> loopy-commands.el
   ! lisp/loopy-destructure.el -> loopy-destructure.el
   ! lisp/loopy-instrs.el -> loopy-instrs.el
@@ -18,21 +18,23 @@ Copying files (->) and directories (=>)
   ! lisp/loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
 Generating loopy.info
-Created loopy-20250119.135.tar containing:
-  loopy-20250119.135/
-  loopy-20250119.135/dir
-  loopy-20250119.135/loopy-commands.el
-  loopy-20250119.135/loopy-destructure.el
-  loopy-20250119.135/loopy-instrs.el
-  loopy-20250119.135/loopy-iter.el
-  loopy-20250119.135/loopy-misc.el
-  loopy-20250119.135/loopy-pcase.el
-  loopy-20250119.135/loopy-pkg.el
-  loopy-20250119.135/loopy-seq.el
-  loopy-20250119.135/loopy-vars.el
-  loopy-20250119.135/loopy.el
-  loopy-20250119.135/loopy.info
+Created loopy-20250215.2146.tar containing:
+  loopy-20250215.2146/
+  loopy-20250215.2146/dir
+  loopy-20250215.2146/loopy-commands.el
+  loopy-20250215.2146/loopy-destructure.el
+  loopy-20250215.2146/loopy-instrs.el
+  loopy-20250215.2146/loopy-iter.el
+  loopy-20250215.2146/loopy-misc.el
+  loopy-20250215.2146/loopy-pcase.el
+  loopy-20250215.2146/loopy-pkg.el
+  loopy-20250215.2146/loopy-seq.el
+  loopy-20250215.2146/loopy-vars.el
+  loopy-20250215.2146/loopy.el
+  loopy-20250215.2146/loopy.info
  ✓ Success:
-  2025-02-15T17:47:23+0000  loopy-20250119.135.entry
-  2025-02-15T17:47:23+0000  loopy-20250119.135.tar
-Built loopy in 7.744s, finished at 2025-02-15T17:47:24+0000
+  2025-02-15T20:15:13+0000  loopy-20250119.135.entry
+  2025-02-15T20:15:12+0000  loopy-20250119.135.tar
+  2025-02-15T22:42:38+0000  loopy-20250215.2146.entry
+  2025-02-15T22:42:38+0000  loopy-20250215.2146.tar
+Built loopy in 18.507s, finished at 2025-02-15T22:42:39+0000

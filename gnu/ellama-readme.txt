@@ -15,6 +15,7 @@
 
   The name "ellama" is derived from "Emacs Large LAnguage Model
   Assistant". Previous sentence was written by Ellama itself.
+  <file:imgs/reasoning-models.gif>
 
 
 [file:https://img.shields.io/badge/license-GPL_3-green.svg]
@@ -45,6 +46,7 @@
 
   ┌────
   │ (use-package ellama
+  │   :ensure t
   │   :bind ("C-c e" . ellama-transient-main-menu)
   │   :init
   │   ;; setup key bindings
@@ -249,7 +251,7 @@
   Generate and insert new code based on description. This function
   prompts the user to describe the code they want to generate. If a
   region is active, it includes the selected text as context for code
-  generation.
+  generation.  <file:imgs/writing-code.gif>
 
 
 1.2.21 ellama-code-edit
