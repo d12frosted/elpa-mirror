@@ -398,6 +398,9 @@
 1.3 Keymap
 ──────────
 
+  In any buffer where there is active ellama streaming, you can press
+  `C-g' and it will cancel current stream.
+
   Here is a table of keybindings and their associated functions in
   Ellama, using the `ellama-keymap-prefix' prefix (not set by default):
 
