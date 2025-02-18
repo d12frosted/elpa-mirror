@@ -253,7 +253,7 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
 	    (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider .
-	[(1 16 1)
+	[(1 17 0)
 	 ((emacs
 	   (26))
 	  (clojure-mode
@@ -281,7 +281,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "588c5790f0c09f5c09076885e11a73eaef70c262"))])
+	  (:commit . "371729b371f88fe9eb24419b0a9fecab312fa348"))])
  (clojure-mode .
 	       [(5 19 0)
 		((emacs
@@ -2140,7 +2140,7 @@
 		 ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
 		(:commit . "HEAD"))])
  (radio .
-	[(0 2 1)
+	[(0 3 0)
 	 ((emacs
 	   (29 1)))
 	 "Listen to Internet radio" tar
@@ -2149,7 +2149,7 @@
 	  (:maintainer "Roi Martin" . "jroi.martin@gmail.com")
 	  (:authors
 	   ("Roi Martin" . "jroi.martin@gmail.com"))
-	  (:commit . "b62b114860416a016222097211739285b153b18e"))])
+	  (:commit . "831ec8a27064e1590075c18e4857f6d86514e0da"))])
  (rainbow-delimiters .
 		     [(2 1 5)
 		      nil "Highlight brackets according to their depth" tar

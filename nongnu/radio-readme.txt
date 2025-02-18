@@ -29,7 +29,7 @@ of the package:
  -- User Option: radio-command
      Command used to play a radio station.
 
-     The string :url is replaced with the URL of the radio station.
+     The `:url' keyword is replaced with the URL of the radio station.
 
    The `customize' interface can be used to configure these variables.
 Specifically, the `radio' group contains all the relevant settings.
@@ -39,7 +39,7 @@ file, then the following code can serve as an example:
 
      (customize-set-variable
       'radio-command
-      '("mpv" "--terminal=no" "--video=no" ":url"))
+      '("mpv" "--terminal=no" "--video=no" :url))
 
      (customize-set-variable
       'radio-stations-alist
