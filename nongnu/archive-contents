@@ -2773,10 +2773,16 @@
 		   (:keywords "writing" "weasel-words" "grammar")
 		   (:commit . "d54eadeedb8bf3aa0e0a584c0a7373c69644f4b8"))])
  (ws-butler .
-	    [(0 7)
-	     nil "Unobtrusively remove trailing whitespace." tar
-	     ((:url . "https://github.com/lewang/ws-butler")
-	      (:commit . "d3927f6131f215e9cd3e1f747be5a91e5be8ca9a"))])
+	    [(1 0)
+	     ((emacs
+	       (24 1)))
+	     "Unobtrusively remove trailing whitespace" tar
+	     ((:url . "https://elpa.nongnu.org/nongnu/ws-butler.html")
+	      (:keywords "text")
+	      (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name")
+	      (:authors
+	       ("Le Wang" . "l26wang@gmail.com"))
+	      (:commit . "82b7d688db77c9e6f2f0bf41e8b4cdf13567dda1"))])
  (xah-fly-keys .
 	       [(26 9 20250205172500)
 		((emacs
