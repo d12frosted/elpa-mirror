@@ -318,3 +318,14 @@ To run tests:
 - open the <file:test/difftastic-bindings.t.el>
 - type `M-x eval-buffer <RET>'
 - type `M-x ert <RET> t <RET>'
+
+
+Documentation autoring
+~~~~~~~~~~~~~~~~~~~~~~
+
+This package uses [org-commentary.el] (different from the one available on
+MELPA!) to generate and validate commentary section in `difftastic.el'.
+Please see the package documentation for usage instructions.
+
+
+[org-commentary.el] <https://github.com/pkryger/org-commentary.el>
