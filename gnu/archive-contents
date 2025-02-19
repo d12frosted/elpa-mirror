@@ -790,9 +790,9 @@
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		   (:commit . "e07001ce3ded4b226f59264d3c8162761580c052"))])
  (consult-hoogle .
-		 [(0 4 1)
+		 [(0 5 0)
 		  ((emacs
-		    (28 1))
+		    (27 1))
 		   (consult
 		    (2 0)))
 		  "Hoogle frontend using consult" tar
@@ -801,7 +801,7 @@
 		   (:maintainer "rahguzar" . "rahguzar@mailbox.org")
 		   (:authors
 		    ("rahguzar" . "rahguzar@mailbox.org"))
-		   (:commit . "5b16f2f6c8c9c81a2539ba8371db1f76e6e4cc68"))])
+		   (:commit . "384959016022d071464dc6e611e4fcded562834e"))])
  (consult-recoll .
 		 [(1 0 0)
 		  ((emacs
@@ -1458,7 +1458,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 1 7)
+	 [(1 2 0)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1477,7 +1477,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "da2063e49f3c6081c07370f862fac1faeab515f8"))])
+	   (:commit . "c25340e6fd673d025ba13f747a491364b96dcafc"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs

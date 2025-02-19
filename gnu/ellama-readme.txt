@@ -362,19 +362,47 @@
   Clear global context.
 
 
-1.2.38 ellama-chat-translation-enable
+1.2.38 ellama-manage-context
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Manage the global context. Inside context management buffer you can
+  see ellama context elements. Availible actions with key bindings:
+  • *`n'*: Move to the next line.
+  • *`p'*: Move to the previous line.
+  • *`q'*: Quit the window.
+  • *`g'*: Update context management buffer.
+  • *`a'*: Open the transient context menu for adding new elements.
+  • *`d'*: Remove the context element at the current point.
+  • *`RET'*: Preview the context element at the current point.
+
+
+1.2.39 ellama-preview-context-element-at-point
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Preview ellama context element at point. Works inside ellama context
+  management buffer.
+
+
+1.2.40 ellama-remove-context-element-at-point
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Remove ellama context element at point from global context. Works
+  inside ellama context management buffer.
+
+
+1.2.41 ellama-chat-translation-enable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation enable.
 
 
-1.2.39 ellama-chat-translation-disable
+1.2.42 ellama-chat-translation-disable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation disable.
 
 
-1.2.40 ellama-solve-reasoning-problem
+1.2.43 ellama-solve-reasoning-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Solve reasoning problem with [Absctraction of Thought] technique. It
@@ -388,7 +416,7 @@
 [phi3-mini] <https://ollama.com/library/phi3>
 
 
-1.2.41 ellama-solve-domain-specific-problem
+1.2.44 ellama-solve-domain-specific-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Solve domain specific problem with simple chain. It makes LLMs act
@@ -524,6 +552,13 @@
   • `ellama-output-remove-reasoning': Eliminate internal reasoning from
     ellama output to enhance the versatility of reasoning models across
     diverse applications.
+  • `ellama-context-posframe-enabled': Enable showing posframe with
+    ellama context. Enabled by default.
+  • `ellama-manage-context-display-action-function': Display action
+    function for `ellama-render-context'. Default value
+    `display-buffer-same-window'.
+  • `ellama-preview-context-element-display-action-function': Display
+    action function for `ellama-preview-context-element'.
 
 
 [zephyr] <https://ollama.ai/library/zephyr>
