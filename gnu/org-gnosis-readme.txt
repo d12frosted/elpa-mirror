@@ -1,8 +1,21 @@
-org-gnosis
-==========
-
-Roam-inspired note-taking system for GNU Emacs.  It is designed to
-serve as a minimalistic, drop-in alternative to org-roam.
+                              ━━━━━━━━━━━━
+                               ORG GNOSIS
+                              ━━━━━━━━━━━━
 
 
-- Project's Page: <https://thanosapollo.org/projects/org-gnosis/>
+
+
+
+1 About
+═══════
+
+  Org Gnosis (GNU-sis) is a Roam-inspired note-taking system for GNU
+  Emacs.
+
+  ⁃ [Homepage]
+  ⁃ [Manual]
+
+
+[Homepage] <https://thanosapollo.org/projects/org-gnosis/>
+
+[Manual] <https://thanosapollo.org/user-manual/org-gnosis/>

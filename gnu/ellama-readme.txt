@@ -338,31 +338,37 @@
   Add file to context.
 
 
-1.2.34 ellama-context-add-buffer
+1.2.34 ellama-context-add-directory
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Add all files in directory to the context.
+
+
+1.2.35 ellama-context-add-buffer
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add buffer to context.
 
 
-1.2.35 ellama-context-add-selection
+1.2.36 ellama-context-add-selection
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add selected region to context.
 
 
-1.2.36 ellama-context-add-info-node
+1.2.37 ellama-context-add-info-node
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add info node to context.
 
 
-1.2.37 ellama-context-reset
+1.2.38 ellama-context-reset
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Clear global context.
 
 
-1.2.38 ellama-manage-context
+1.2.39 ellama-manage-context
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Manage the global context. Inside context management buffer you can
@@ -376,33 +382,33 @@
   • *`RET'*: Preview the context element at the current point.
 
 
-1.2.39 ellama-preview-context-element-at-point
+1.2.40 ellama-preview-context-element-at-point
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Preview ellama context element at point. Works inside ellama context
   management buffer.
 
 
-1.2.40 ellama-remove-context-element-at-point
+1.2.41 ellama-remove-context-element-at-point
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Remove ellama context element at point from global context. Works
   inside ellama context management buffer.
 
 
-1.2.41 ellama-chat-translation-enable
+1.2.42 ellama-chat-translation-enable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation enable.
 
 
-1.2.42 ellama-chat-translation-disable
+1.2.43 ellama-chat-translation-disable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation disable.
 
 
-1.2.43 ellama-solve-reasoning-problem
+1.2.44 ellama-solve-reasoning-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Solve reasoning problem with [Absctraction of Thought] technique. It
@@ -416,7 +422,7 @@
 [phi3-mini] <https://ollama.com/library/phi3>
 
 
-1.2.44 ellama-solve-domain-specific-problem
+1.2.45 ellama-solve-domain-specific-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Solve domain specific problem with simple chain. It makes LLMs act
@@ -468,6 +474,7 @@
    "d w"   ellama-define-word               Define word                  
    "x b"   ellama-context-add-buffer        Context add buffer           
    "x f"   ellama-context-add-file          Context add file             
+   "x d"   ellama-context-add-directory     Context add directory        
    "x s"   ellama-context-add-selection     Context add selection        
    "x i"   ellama-context-add-info-node     Context add info node        
    "x r"   ellama-context-reset             Context reset                
