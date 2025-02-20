@@ -4,7 +4,7 @@ to make parentheses less visible in Lisp code by dimming them.
 
 We lispers probably don't need to be constantly made aware of
 the existence of the parentheses.  Dimming them might be even
-more useful for people new to lisp who have not yet learned to
+more useful for people new to Lisp who have not yet learned to
 subconsciously blend out the parentheses.
 
 To use the `parenthesis' face, turn on `global-paren-face-mode'.
