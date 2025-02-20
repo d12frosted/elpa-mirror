@@ -27,7 +27,6 @@ below:
   (require 'gptai)
   ;; set standard configurations
   (setq gptai-model "<MODEL-HERE>")
-  (setq gptai-username "<USERNAME-HERE>")
   (setq gptai-api-key "<API-KEY-HERE>")
   ;; set keybindings optionally
   (global-set-key (kbd "C-c o") 'gptai-send-query)
