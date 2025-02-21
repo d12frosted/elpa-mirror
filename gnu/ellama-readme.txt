@@ -34,15 +34,16 @@
 ────────────────
 
   Just `M-x' `package-install' Enter `ellama' Enter. By default it uses
-  [ollama] provider and [zephyr] model. If you ok with it, you need to
-  install [ollama] and pull [zephyr] like this:
+  [ollama] provider. If you ok with it, you need to install [ollama] and
+  pull [any ollama model] like this:
 
   ┌────
-  │ ollama pull zephyr
+  │ ollama pull qwen2.5:3b
   └────
 
-  You can use `ellama' with other model or other llm provider.  In that
-  case you should customize ellama configuration like this:
+  You can use `ellama' with other model or other llm provider.  Without
+  any configuration, the first available ollama model will be used.  You
+  can customize ellama configuration like this:
 
   ┌────
   │ (use-package ellama
@@ -116,7 +117,7 @@
 
 [ollama] <https://github.com/jmorganca/ollama>
 
-[zephyr] <https://ollama.ai/library/zephyr>
+[any ollama model] <https://ollama.com/models>
 
 
 1.2 Commands

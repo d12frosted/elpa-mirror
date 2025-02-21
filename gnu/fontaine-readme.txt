@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `fontaine' (or `fontaine.el'), and provides every other
 piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 2.1.0,
-released on 2024-09-02.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 3.0.0,
+released on 2025-02-20.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 2.2.0-dev.
+Current development target is 3.1.0-dev.
 
 ⁃ Package name (GNU ELPA): `fontaine'
 ⁃ Official manual: <https://protesilaos.com/emacs/fontaine>
@@ -52,7 +52,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2023 Free Software Foundation, Inc.
+  Copyright (C) 2022-2025 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -170,7 +170,7 @@ Table of Contents
   │    ;; More properties here
   │    )
   │   (medium
-  │    :default-family "Iosevka Comfy Wide")
+  │    :default-family "Aporetic Serif Mono")
   │   ;; More presets here
   │   )
   └────
@@ -256,7 +256,7 @@ Table of Contents
   │ 	 :italic-slant italic
   │ 	 :line-spacing 1)
   │ 	(large
-  │ 	 :default-family "Iosevka"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-weight normal
   │ 	 :default-height 150
   │ 	 :fixed-pitch-family nil ; falls back to :default-family
@@ -294,7 +294,7 @@ Table of Contents
   │ 
   │ 	 :line-spacing 1)
   │ 	(large
-  │ 	 :default-family "Iosevka"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 
   │ 	 :default-height 150
   │ 
@@ -323,7 +323,7 @@ Table of Contents
   │ 	 :italic-family "Source Code Pro"
   │ 	 :line-spacing 1)
   │ 	(large
-  │ 	 :default-family "Iosevka"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-height 150
   │ 	 :variable-pitch-family "FiraGO"
   │ 	 :line-spacing 1)))
@@ -347,7 +347,7 @@ Table of Contents
   │ ;; Notice the duplication of properties and how we will avoid it.
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-family "Iosevka Comfy"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-weight normal
   │ 	 :default-height 100
   │ 	 :fixed-pitch-family nil ; falls back to :default-family
@@ -362,7 +362,7 @@ Table of Contents
   │ 	 :italic-slant italic
   │ 	 :line-spacing nil)
   │ 	(medium
-  │ 	 :default-family "Iosevka Comfy"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-weight semilight
   │ 	 :default-height 140
   │ 	 :fixed-pitch-family nil ; falls back to :default-family
@@ -377,7 +377,7 @@ Table of Contents
   │ 	 :italic-slant italic
   │ 	 :line-spacing nil)
   │ 	(large
-  │ 	 :default-family "Iosevka Comfy"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-weight semilight
   │ 	 :default-height 180
   │ 	 :fixed-pitch-family nil ; falls back to :default-family
@@ -403,7 +403,7 @@ Table of Contents
   │ 	 :default-height 180
   │ 	 :bold-weight extrabold)
   │ 	(t ; our shared fallback properties
-  │ 	 :default-family "Iosevka Comfy"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-weight normal
   │ 	 ;; :default-height 100
   │ 	 :fixed-pitch-family nil ; falls back to :default-family
@@ -438,7 +438,7 @@ Table of Contents
   │ 	 :default-height 180
   │ 	 :bold-weight extrabold)
   │ 	(t ; our shared fallback properties
-  │ 	 :default-family "Iosevka Comfy"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-weight normal
   │ 	 ;; :default-height 100
   │ 	 :fixed-pitch-family nil ; falls back to :default-family
@@ -465,7 +465,7 @@ Table of Contents
   │ 	 :default-height 180
   │ 	 :bold-weight extrabold)
   │ 	(t ; our shared fallback properties
-  │ 	 :default-family "Iosevka Comfy"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-weight normal
   │ 	 :variable-pitch-family "FiraGO"
   │ 	 :variable-pitch-height 1.05)))
@@ -573,7 +573,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "fontaine"
-  │ git clone https://git.sr.ht/~protesilaos/fontaine fontaine
+  │ git clone https://github.com/protesilaos/fontaine fontaine
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
@@ -597,15 +597,13 @@ Table of Contents
   │ (setq fontaine-latest-state-file
   │       (locate-user-emacs-file "fontaine-latest-state.eld"))
   │ 
-  │ ;; Iosevka Comfy is my highly customised build of Iosevka with
-  │ ;; monospaced and duospaced (quasi-proportional) variants as well as
-  │ ;; support or no support for ligatures:
-  │ ;; <https://github.com/protesilaos/iosevka-comfy>.
+  │ ;; Aporetic is my highly customised build of Iosevka:
+  │ ;; <https://github.com/protesilaos/aporetic>.
   │ (setq fontaine-presets
   │       '((small
-  │ 	 :default-family "Iosevka Comfy Motion"
+  │ 	 :default-family "Aporetic Serif Mono"
   │ 	 :default-height 80
-  │ 	 :variable-pitch-family "Iosevka Comfy Duo")
+  │ 	 :variable-pitch-family "Aporetic Sans")
   │ 	(regular) ; like this it uses all the fallback values and is named `regular'
   │ 	(medium
   │ 	 :default-weight semilight
@@ -620,7 +618,7 @@ Table of Contents
   │ 	 ;; I keep all properties for didactic purposes, but most can be
   │ 	 ;; omitted.  See the fontaine manual for the technicalities:
   │ 	 ;; <https://protesilaos.com/emacs/fontaine>.
-  │ 	 :default-family "Iosevka Comfy"
+  │ 	 :default-family "Aporetic Sans Mono"
   │ 	 :default-weight regular
   │ 	 :default-height 100
   │ 
@@ -632,7 +630,7 @@ Table of Contents
   │ 	 :fixed-pitch-serif-weight nil ; falls back to :default-weight
   │ 	 :fixed-pitch-serif-height 1.0
   │ 
-  │ 	 :variable-pitch-family "Iosevka Comfy Motion Duo"
+  │ 	 :variable-pitch-family "Aporetic Serif"
   │ 	 :variable-pitch-weight nil
   │ 	 :variable-pitch-height 1.0
   │ 
@@ -688,7 +686,9 @@ Table of Contents
 ───────────────────────────────────────────────
 
   [ Since version `2.0.0', there exists the `fontaine-mode' which does
-    this automatically. ]
+    this automatically. The `fontaine-apply-current-preset' is obsolete
+    as of version `3.0.0' because Fontaine is now implemented as a
+    “theme” and thus does not get overwritten by other themes. ]
 
   Themes re-apply face definitions when they are loaded.  This is
   necessary to render the theme.  For certain faces, such as `bold' and
@@ -714,7 +714,9 @@ Table of Contents
 ──────────────────────────────────────────────
 
   [ Since version `2.0.0', there exists the `fontaine-mode' which does
-    this automatically. ]
+    this automatically. The `fontaine-apply-current-preset' is obsolete
+    as of version `3.0.0' because Fontaine is now implemented as a
+    “theme” and thus does not get overwritten by other themes. ]
 
   Emacs 29 provides the `enable-theme-functions', which we can use to
   persist or restore a font preset thus ([Persist font configurations on
@@ -732,7 +734,9 @@ Table of Contents
 ───────────────────────────────────────
 
   [ Since version `2.0.0', there exists the `fontaine-mode' which does
-    this automatically. ]
+    this automatically. The `fontaine-apply-current-preset' is obsolete
+    as of version `3.0.0' because Fontaine is now implemented as a
+    “theme” and thus does not get overwritten by other themes. ]
 
   For versions of Emacs before 29, there is no built-in theme-agnostic
   solution to persisting or restoring a font preset ([Theme-agnostic
@@ -774,11 +778,12 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to the code or manual
-        Christopher League, Eli Zaretskii, Florent Teissier, Terry
-        F. Torrey.
+        Christopher League, Eli Zaretskii, Florent Teissier, Jorge
+        Gomez, Terry F. Torrey.
 
   Ideas and user feedback
-        Adam Porter (alphapapa), Ashlin Eldridge, Joe Higton, Ted Reed.
+        Adam Porter (alphapapa), Ashlin Eldridge, Emily Hyland, Joe
+        Higton, Haruko, Ted Reed.
 
 
 6 GNU Free Documentation License

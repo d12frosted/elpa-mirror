@@ -1458,7 +1458,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 2 2)
+	 [(1 2 3)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1477,7 +1477,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "d6cdcbcf69f7efddd45f82a11fdc2658666d7630"))])
+	   (:commit . "231c2600a5164ece34b65f2c3aa97c577f1227eb"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1811,7 +1811,7 @@
 		       ("Manuel Uberti" . "manuel.uberti@inventati.org"))
 		      (:commit . "9c68ee881f18f554f0ab5bbf5bee1a4b753d792b"))])
  (fontaine .
-	   [(2 1 0)
+	   [(3 0 0)
 	    ((emacs
 	      (29 1)))
 	    "Set font configurations using presets" tar
@@ -1819,7 +1819,7 @@
 	     (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	     (:authors
 	      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	     (:commit . "18e39174cc453fd47b2b27d0f6b7a431c7be73cb"))])
+	     (:commit . "fe78a2be64b09f55748fa0c6e62d59e787b761b4"))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" tar
