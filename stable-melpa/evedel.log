@@ -3,16 +3,24 @@ Fetcher: github
 Source:  https://github.com/daedsidog/evedel
 
 Updating /mnt/store/melpa/working/evedel/
-Checking out a801d3a1011ce7ab7e9f61aff5387eeacb109c92
+Checking out 71fdec53ef878a9dce8e00a6df0912b70abdbb25
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evedel/
-  to /tmp/evedelKrRFC2/evedel-20250217.2343
+  to /tmp/evedelVQfXHP/evedel-20250221.12
+    evedel-gptel.el -> evedel-gptel.el
+    evedel-instructions.el -> evedel-instructions.el
+    evedel-restorer.el -> evedel-restorer.el
+    evedel-utilities.el -> evedel-utilities.el
     evedel.el -> evedel.el
-Created evedel-20250217.2343.tar containing:
-  evedel-20250217.2343/
-  evedel-20250217.2343/evedel-pkg.el
-  evedel-20250217.2343/evedel.el
+Created evedel-20250221.12.tar containing:
+  evedel-20250221.12/
+  evedel-20250221.12/evedel-gptel.el
+  evedel-20250221.12/evedel-instructions.el
+  evedel-20250221.12/evedel-pkg.el
+  evedel-20250221.12/evedel-restorer.el
+  evedel-20250221.12/evedel-utilities.el
+  evedel-20250221.12/evedel.el
  ✓ Success:
-  2025-02-20T22:13:09+0000  evedel-20250217.2343.entry
-  2025-02-20T22:13:09+0000  evedel-20250217.2343.tar
-Built evedel in 2.756s, finished at 2025-02-20T22:13:10+0000
+  2025-02-21T03:04:28+0000  evedel-20250221.12.entry
+  2025-02-21T03:04:27+0000  evedel-20250221.12.tar
+Built evedel in 3.042s, finished at 2025-02-21T03:04:28+0000
