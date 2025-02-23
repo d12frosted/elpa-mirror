@@ -1458,26 +1458,22 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 2 5)
+	 [(1 3 0)
 	  ((emacs
 	    (28 1))
 	   (llm
 	    (0 22 0))
-	   (spinner
-	    (1 7 4))
 	   (transient
 	    (0 7))
 	   (compat
-	    (29 1))
-	   (posframe
-	    (1 4 0)))
+	    (29 1)))
 	  "Tool for interacting with LLMs" tar
 	  ((:url . "http://github.com/s-kostyaev/ellama")
 	   (:keywords "help" "local" "tools")
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "984b772c31941e2bea8800683eca947244b9a7e7"))])
+	   (:commit . "a2d3bdfcf7dd0d4ad487a52c4d74fc29e293d11e"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -3123,7 +3119,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "2b7a1688f24cc8ef5a3c3a6dab8e00d833bcda59"))])
  (org .
-      [(9 7 22)
+      [(9 7 23)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3132,7 +3128,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "2f5add467c0c20c9f2427cc77597c9aa1b742a75"))])
+	(:commit . "ec72678881b73d04f8cf4e574cbb7a470e9155d3"))])
  (org-contacts .
 	       [(1 1)
 		((emacs

@@ -57,59 +57,61 @@
   │   ;; could be llm-openai for example
   │   (require 'llm-ollama)
   │   (setopt ellama-provider
-  │ 	  (make-llm-ollama
-  │ 	   ;; this model should be pulled to use it
-  │ 	   ;; value should be the same as you print in terminal during pull
-  │ 	   :chat-model "llama3:8b-instruct-q8_0"
-  │ 	   :embedding-model "nomic-embed-text"
-  │ 	   :default-chat-non-standard-params '(("num_ctx" . 8192))))
+  │ 	(make-llm-ollama
+  │ 	 ;; this model should be pulled to use it
+  │ 	 ;; value should be the same as you print in terminal during pull
+  │ 	 :chat-model "llama3:8b-instruct-q8_0"
+  │ 	 :embedding-model "nomic-embed-text"
+  │ 	 :default-chat-non-standard-params '(("num_ctx" . 8192))))
   │   (setopt ellama-summarization-provider
-  │ 	  (make-llm-ollama
-  │ 	   :chat-model "qwen2.5:3b"
-  │ 	   :embedding-model "nomic-embed-text"
-  │ 	   :default-chat-non-standard-params '(("num_ctx" . 32768))))
+  │ 	(make-llm-ollama
+  │ 	 :chat-model "qwen2.5:3b"
+  │ 	 :embedding-model "nomic-embed-text"
+  │ 	 :default-chat-non-standard-params '(("num_ctx" . 32768))))
   │   (setopt ellama-coding-provider
-  │ 	  (make-llm-ollama
-  │ 	   :chat-model "qwen2.5-coder:3b"
-  │ 	   :embedding-model "nomic-embed-text"
-  │ 	   :default-chat-non-standard-params '(("num_ctx" . 32768))))
+  │ 	(make-llm-ollama
+  │ 	 :chat-model "qwen2.5-coder:3b"
+  │ 	 :embedding-model "nomic-embed-text"
+  │ 	 :default-chat-non-standard-params '(("num_ctx" . 32768))))
   │   ;; Predefined llm providers for interactive switching.
   │   ;; You shouldn't add ollama providers here - it can be selected interactively
   │   ;; without it. It is just example.
   │   (setopt ellama-providers
-  │ 	  '(("zephyr" . (make-llm-ollama
-  │ 			 :chat-model "zephyr:7b-beta-q6_K"
-  │ 			 :embedding-model "zephyr:7b-beta-q6_K"))
-  │ 	    ("mistral" . (make-llm-ollama
-  │ 			  :chat-model "mistral:7b-instruct-v0.2-q6_K"
-  │ 			  :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
-  │ 	    ("mixtral" . (make-llm-ollama
-  │ 			  :chat-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"
-  │ 			  :embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"))))
+  │ 	'(("zephyr" . (make-llm-ollama
+  │ 		       :chat-model "zephyr:7b-beta-q6_K"
+  │ 		       :embedding-model "zephyr:7b-beta-q6_K"))
+  │ 	  ("mistral" . (make-llm-ollama
+  │ 			:chat-model "mistral:7b-instruct-v0.2-q6_K"
+  │ 			:embedding-model "mistral:7b-instruct-v0.2-q6_K"))
+  │ 	  ("mixtral" . (make-llm-ollama
+  │ 			:chat-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"
+  │ 			:embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"))))
   │   ;; Naming new sessions with llm
   │   (setopt ellama-naming-provider
-  │ 	  (make-llm-ollama
-  │ 	   :chat-model "llama3:8b-instruct-q8_0"
-  │ 	   :embedding-model "nomic-embed-text"
-  │ 	   :default-chat-non-standard-params '(("stop" . ("\n")))))
+  │ 	(make-llm-ollama
+  │ 	 :chat-model "llama3:8b-instruct-q8_0"
+  │ 	 :embedding-model "nomic-embed-text"
+  │ 	 :default-chat-non-standard-params '(("stop" . ("\n")))))
   │   (setopt ellama-naming-scheme 'ellama-generate-name-by-llm)
   │   ;; Translation llm provider
   │   (setopt ellama-translation-provider
-  │ 	  (make-llm-ollama
-  │ 	   :chat-model "qwen2.5:3b"
-  │ 	   :embedding-model "nomic-embed-text"
-  │ 	   :default-chat-non-standard-params
-  │ 	   '(("num_ctx" . 32768))))
+  │ 	(make-llm-ollama
+  │ 	 :chat-model "qwen2.5:3b"
+  │ 	 :embedding-model "nomic-embed-text"
+  │ 	 :default-chat-non-standard-params
+  │ 	 '(("num_ctx" . 32768))))
   │   (setopt ellama-extraction-provider (make-llm-ollama
-  │ 				      :chat-model "qwen2.5-coder:7b-instruct-q8_0"
-  │ 				      :embedding-model "nomic-embed-text"
-  │ 				      :default-chat-non-standard-params
-  │ 				      '(("num_ctx" . 32768))))
+  │ 				    :chat-model "qwen2.5-coder:7b-instruct-q8_0"
+  │ 				    :embedding-model "nomic-embed-text"
+  │ 				    :default-chat-non-standard-params
+  │ 				    '(("num_ctx" . 32768))))
   │   ;; customize display buffer behaviour
   │   ;; see ~(info "(elisp) Buffer Display Action Functions")~
   │   (setopt ellama-chat-display-action-function #'display-buffer-full-frame)
   │   (setopt ellama-instant-display-action-function #'display-buffer-at-bottom)
   │   :config
+  │   ;; show ellama context in header line in all buffers
+  │   (ellama-context-header-line-global-mode +1)
   │   ;; send last message in chat buffer with C-c C-c
   │   (add-hook 'org-ctrl-c-ctrl-c-hook #'ellama-chat-send-last-message))
   └────
@@ -315,10 +317,10 @@
   Load ellama session from file.
 
 
-1.2.30 ellama-session-remove
+1.2.30 ellama-session-delete
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Remove ellama session.
+  Delete ellama session.
 
 
 1.2.31 ellama-session-switch
@@ -454,7 +456,7 @@
    "s c"   ellama-summarize-killring        Summarize killring           
    "s l"   ellama-load-session              Session Load                 
    "s r"   ellama-session-rename            Session rename               
-   "s d"   ellama-session-remove            Session delete               
+   "s d"   ellama-session-delete            Delete delete                
    "s a"   ellama-session-switch            Session activate             
    "P"     ellama-proofread                 Proofread                    
    "i w"   ellama-improve-wording           Improve wording              
@@ -500,6 +502,7 @@
   [llm documentation].
   • `ellama-providers': association list of model llm providers with
     name as key.
+  • `ellama-spinner-enabled': Enable spinner during text generation.
   • `ellama-spinner-type': Spinner type for ellama. Default type is
   `progress-bar'.
   • `ellama-ollama-binary': Path to ollama binary.
@@ -518,9 +521,6 @@
   • `ellama-sessions-directory': Directory for saved ellama sessions.
   • `ellama-major-mode': Major mode for ellama commands. Org mode by
     default.
-  • `ellama-long-lines-length': Long lines length for fill paragraph
-    call. Too low value can break generated code by splitting long
-    comment lines. Default value 100.
   • `ellama-session-auto-save': Automatically save ellama sessions if
     set. Enabled by default.
   • `ellama-naming-scheme': How to name new sessions.
@@ -548,8 +548,6 @@
     buffer.  `posframe-poshandler-frame-top-center' will be used if not
     set.
   • `ellama-context-border-width': Border width for the context buffer.
-  • `ellama-context-element-padding-size': Padding size for context
-    elements.
   • `ellama-session-remove-reasoning': Remove internal reasoning from
     the session after ellama provide an answer. This can improve
     long-term communication with reasoning models. Enabled by default.
@@ -561,7 +559,7 @@
     ellama output to enhance the versatility of reasoning models across
     diverse applications.
   • `ellama-context-posframe-enabled': Enable showing posframe with
-    ellama context. Enabled by default.
+    ellama context.
   • `ellama-manage-context-display-action-function': Display action
     function for `ellama-render-context'. Default value
     `display-buffer-same-window'.
@@ -574,7 +572,84 @@
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
 
 
-1.5 Acknowledgments
+1.5 Minor modes
+───────────────
+
+1.5.1 ellama-context-header-line-mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  *Description:* Toggle the Ellama Context header line mode. This minor
+  mode updates the header line to display context-specific information.
+
+  *Usage:* To enable or disable `ellama-context-header-line-mode', use
+  the command:
+
+  M-x ellama-context-header-line-mode
+
+  When enabled, this mode adds a hook to `window-state-change-hook' to
+  update the header line whenever the window state changes. It also
+  calls `ellama-context-update-header-line' to initialize the header
+  line with context-specific information.
+
+  When disabled, it removes the evaluation of `(:eval
+  (ellama-context-line))' from `header-line-format'.
+
+
+1.5.2 ellama-context-header-line-global-mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  *Description:* Globalized version of
+  `ellama-context-header-line-mode'. This mode ensures that
+  `ellama-context-header-line-mode' is enabled in all buffers.
+
+  *Usage:* To enable or disable
+  `ellama-context-header-line-global-mode', use the command:
+
+  M-x ellama-context-header-line-global-mode
+
+  This globalized minor mode provides a convenient way to ensure that
+  context-specific header line information is always available,
+  regardless of the buffer being edited.
+
+
+1.5.3 ellama-context-mode-line-mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  *Description:* Toggle the Ellama Context mode line mode. This minor
+  mode updates the mode line to display context-specific information.
+
+  *Usage:* To enable or disable `ellama-context-mode-line-mode', use the
+  command:
+
+  M-x ellama-context-mode-line-mode
+
+  When enabled, this mode adds a hook to `window-state-change-hook' to
+  update the mode line whenever the window state changes. It also calls
+  `ellama-context-update-mode-line' to initialize the mode line with
+  context-specific information.
+
+  When disabled, it removes the evaluation of `(:eval
+  (ellama-context-line))' from `mode-line-format'.
+
+
+1.5.4 ellama-context-mode-line-global-mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  *Description:* Globalized version of
+  `ellama-context-mode-line-mode'. This mode ensures that
+  `ellama-context-mode-line-mode' is enabled in all buffers.
+
+  *Usage:* To enable or disable `ellama-context-mode-line-global-mode',
+  use the command:
+
+  M-x ellama-context-mode-line-global-mode
+
+  This globalized minor mode provides a convenient way to ensure that
+  context-specific mode line information is always available, regardless
+  of the buffer being edited.
+
+
+1.6 Acknowledgments
 ───────────────────
 
   Thanks [Jeffrey Morgan] for excellent project [ollama]. This project

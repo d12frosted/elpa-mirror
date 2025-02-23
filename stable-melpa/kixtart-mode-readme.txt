@@ -1,3 +1,4 @@
 Support for editing KiXtart scripts.
 
-See the manual for configuration examples and instructions.
+See the KiXtart Mode manual for configuration examples and descriptions of
+available editing features.
