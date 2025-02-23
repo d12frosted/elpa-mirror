@@ -1,14 +1,7 @@
-                              ━━━━━━━━━━━
-                               POPPER.EL
-                              ━━━━━━━━━━━
+                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                    POPPER: POPUP BUFFERS FOR EMACS
+                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-
-[file:https://melpa.org/packages/popper-badge.svg]
-
-• /New in v0.45: popper-echo-mode for displaying popup names in the echo
-  area and dispatching on them/
-• /New in v0.40: Auto-hide or suppress popup buffers, assign popups by
-  predicate/
 
 Popper is a minor-mode to tame the flood of ephemeral windows Emacs
 produces, while still keeping them within arm's reach.
@@ -33,9 +26,6 @@ respects window rules for buffers that you might have in
 `shackle.el'. Popper summons windows defined by the user as "popups" by
 simply calling `display-buffer'.
 
-
-[file:https://melpa.org/packages/popper-badge.svg]
-<https://melpa.org/#/popper>
 
 [detailed demo of Popper here]
 <https://www.youtube.com/watch?v=E-xUNlZi3rI>
@@ -132,9 +122,8 @@ simply calling `display-buffer'.
 2 Setup
 ═══════
 
-  `popper' is available in MELPA, so you can install it with `M-x
-  package-install RET popper RET' after adding MELPA to your package
-  archives list.
+  `popper' is available on GNU ELPA, so you can install it with `M-x
+  package-install RET popper RET'.
 
 
 2.1 With `use-package'
