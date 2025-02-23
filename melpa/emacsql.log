@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/emacsql
 
 Updating /mnt/store/melpa/working/emacsql/
-Checking out 48cbd1600b932ba0f7ecfcae3404d47c3685f721
+Checking out ad9d1b97156975bf808ecdd8eb65b374b24db1a6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emacsql/
-  to /tmp/emacsqlHKsAaq/emacsql-20250220.1155
+  to /tmp/emacsqlL0SIuY/emacsql-20250223.1203
     emacsql-compiler.el -> emacsql-compiler.el
     emacsql-mysql.el -> emacsql-mysql.el
     emacsql-pg.el -> emacsql-pg.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
     emacsql-sqlite.el -> emacsql-sqlite.el
     emacsql.el -> emacsql.el
     README.md -> README.md
-Created emacsql-20250220.1155.tar containing:
-  emacsql-20250220.1155/
-  emacsql-20250220.1155/README.md
-  emacsql-20250220.1155/emacsql-compiler.el
-  emacsql-20250220.1155/emacsql-mysql.el
-  emacsql-20250220.1155/emacsql-pg.el
-  emacsql-20250220.1155/emacsql-pkg.el
-  emacsql-20250220.1155/emacsql-psql.el
-  emacsql-20250220.1155/emacsql-sqlite-builtin.el
-  emacsql-20250220.1155/emacsql-sqlite-common.el
-  emacsql-20250220.1155/emacsql-sqlite-module.el
-  emacsql-20250220.1155/emacsql-sqlite.el
-  emacsql-20250220.1155/emacsql.el
+Created emacsql-20250223.1203.tar containing:
+  emacsql-20250223.1203/
+  emacsql-20250223.1203/README.md
+  emacsql-20250223.1203/emacsql-compiler.el
+  emacsql-20250223.1203/emacsql-mysql.el
+  emacsql-20250223.1203/emacsql-pg.el
+  emacsql-20250223.1203/emacsql-pkg.el
+  emacsql-20250223.1203/emacsql-psql.el
+  emacsql-20250223.1203/emacsql-sqlite-builtin.el
+  emacsql-20250223.1203/emacsql-sqlite-common.el
+  emacsql-20250223.1203/emacsql-sqlite-module.el
+  emacsql-20250223.1203/emacsql-sqlite.el
+  emacsql-20250223.1203/emacsql.el
  ✓ Success:
   2025-02-23T10:50:58+0000  emacsql-20250220.1155.entry
   2025-02-23T10:50:58+0000  emacsql-20250220.1155.tar
-Built emacsql in 2.974s, finished at 2025-02-23T10:50:59+0000
+  2025-02-23T13:27:58+0000  emacsql-20250223.1203.entry
+  2025-02-23T13:27:58+0000  emacsql-20250223.1203.tar
+Built emacsql in 3.171s, finished at 2025-02-23T13:27:59+0000
