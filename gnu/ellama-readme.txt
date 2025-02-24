@@ -329,49 +329,55 @@
   Change current active session.
 
 
-1.2.32 ellama-session-rename
+1.2.32 ellama-session-kill
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Select and kill one of active sessions.
+
+
+1.2.33 ellama-session-rename
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Rename current ellama session.
 
 
-1.2.33 ellama-context-add-file
+1.2.34 ellama-context-add-file
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add file to context.
 
 
-1.2.34 ellama-context-add-directory
+1.2.35 ellama-context-add-directory
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add all files in directory to the context.
 
 
-1.2.35 ellama-context-add-buffer
+1.2.36 ellama-context-add-buffer
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add buffer to context.
 
 
-1.2.36 ellama-context-add-selection
+1.2.37 ellama-context-add-selection
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add selected region to context.
 
 
-1.2.37 ellama-context-add-info-node
+1.2.38 ellama-context-add-info-node
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add info node to context.
 
 
-1.2.38 ellama-context-reset
+1.2.39 ellama-context-reset
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Clear global context.
 
 
-1.2.39 ellama-manage-context
+1.2.40 ellama-manage-context
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Manage the global context. Inside context management buffer you can
@@ -385,33 +391,33 @@
   • *`RET'*: Preview the context element at the current point.
 
 
-1.2.40 ellama-preview-context-element-at-point
+1.2.41 ellama-preview-context-element-at-point
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Preview ellama context element at point. Works inside ellama context
   management buffer.
 
 
-1.2.41 ellama-remove-context-element-at-point
+1.2.42 ellama-remove-context-element-at-point
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Remove ellama context element at point from global context. Works
   inside ellama context management buffer.
 
 
-1.2.42 ellama-chat-translation-enable
+1.2.43 ellama-chat-translation-enable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation enable.
 
 
-1.2.43 ellama-chat-translation-disable
+1.2.44 ellama-chat-translation-disable
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Chat translation disable.
 
 
-1.2.44 ellama-solve-reasoning-problem
+1.2.45 ellama-solve-reasoning-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Solve reasoning problem with [Absctraction of Thought] technique. It
@@ -425,11 +431,26 @@
 [phi3-mini] <https://ollama.com/library/phi3>
 
 
-1.2.45 ellama-solve-domain-specific-problem
+1.2.46 ellama-solve-domain-specific-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Solve domain specific problem with simple chain. It makes LLMs act
   like a professional and adds a planning step.
+
+
+1.2.47 ellama-community-prompts-select-blueprint
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Select a prompt from the community prompt collection.  The user is
+  prompted to choose a role, and then a corresponding prompt is inserted
+  into a blueprint buffer.
+
+
+1.2.48 ellama-community-prompts-update-variables
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Prompt user for values of variables found in current buffer and update
+  them.
 
 
 1.3 Keymap
@@ -565,6 +586,13 @@
     `display-buffer-same-window'.
   • `ellama-preview-context-element-display-action-function': Display
     action function for `ellama-preview-context-element'.
+  • `ellama-context-line-always-visible': Make context header or mode
+    line always visible, even with empty context.
+  • `ellama-community-prompts-url': The URL of the community prompts
+    collection.
+  • `ellama-community-prompts-file': Path to the CSV file containing
+    community prompts.  This file is expected to be located inside an
+    `ellama' subdirectory within your `user-emacs-directory'.
 
 
 [zephyr] <https://ollama.ai/library/zephyr>
