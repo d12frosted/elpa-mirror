@@ -49,6 +49,22 @@
   │ (use-package ellama
   │   :ensure t
   │   :bind ("C-c e" . ellama-transient-main-menu)
+  │   ;; send last message in chat buffer with C-c C-c
+  │   :hook (org-ctrl-c-ctrl-c-final . ellama-chat-send-last-message)
+  │   :init (setopt ellama-auto-scroll t)
+  │   :config
+  │   ;; show ellama context in header line in all buffers
+  │   (ellama-context-header-line-global-mode +1))
+  └────
+
+  More sofisticated configuration example:
+
+  ┌────
+  │ (use-package ellama
+  │   :ensure t
+  │   :bind ("C-c e" . ellama-transient-main-menu)
+  │   ;; send last message in chat buffer with C-c C-c
+  │   :hook (org-ctrl-c-ctrl-c-final . ellama-chat-send-last-message)
   │   :init
   │   ;; setup key bindings
   │   ;; (setopt ellama-keymap-prefix "C-c e")
@@ -111,9 +127,7 @@
   │   (setopt ellama-instant-display-action-function #'display-buffer-at-bottom)
   │   :config
   │   ;; show ellama context in header line in all buffers
-  │   (ellama-context-header-line-global-mode +1)
-  │   ;; send last message in chat buffer with C-c C-c
-  │   (add-hook 'org-ctrl-c-ctrl-c-hook #'ellama-chat-send-last-message))
+  │   (ellama-context-header-line-global-mode +1))
   └────
 
 
@@ -517,10 +531,9 @@
   • `ellama-assistant-nick': The assistant nick in logs.
   • `ellama-language': The language for Ollama translation. Default
   language is english.
-  • `ellama-provider': llm provider for ellama. Default provider is
-  `ollama' with [zephyr] model.  There are many supported providers:
-  `ollama', `open ai', `vertex', `GPT4All'. For more information see
-  [llm documentation].
+  • `ellama-provider': llm provider for ellama.
+  There are many supported providers: `ollama', `open ai', `vertex',
+  `GPT4All'. For more information see [llm documentation].
   • `ellama-providers': association list of model llm providers with
     name as key.
   • `ellama-spinner-enabled': Enable spinner during text generation.
@@ -594,8 +607,6 @@
     community prompts.  This file is expected to be located inside an
     `ellama' subdirectory within your `user-emacs-directory'.
 
-
-[zephyr] <https://ollama.ai/library/zephyr>
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
 

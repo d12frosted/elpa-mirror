@@ -8,24 +8,21 @@ perform these tasks.
 
 (use-package ollama-buddy
    :load-path "path/to/ollama-buddy"
-   :bind ("C-c l" . ollama-buddy-menu)
-   :config (ollama-buddy-enable-monitor)
+   :bind ("C-c o" . ollama-buddy-menu)
    :custom ollama-buddy-default-model "llama:latest")
 
 OR
 
 (add-to-list 'load-path "path/to/ollama-buddy")
 (require 'ollama-buddy)
-(global-set-key (kbd "C-c l") #'ollama-buddy-menu)
-(ollama-buddy-enable-monitor)
+(global-set-key (kbd "C-c o") #'ollama-buddy-menu)
 (setq ollama-buddy-default-model "llama:latest")
 
 OR (when added to MELPA)
 
 (use-package ollama-buddy
    :ensure t
-   :bind ("C-c l" . ollama-buddy-menu)
-   :config (ollama-buddy-enable-monitor)
+   :bind ("C-c o" . ollama-buddy-menu)
    :custom ollama-buddy-default-model "llama:latest")
 
 ; Usage
@@ -34,4 +31,4 @@ M-x ollama-buddy-menu
 
 OR
 
-C-c l
+C-c o
