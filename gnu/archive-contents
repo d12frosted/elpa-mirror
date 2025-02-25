@@ -2236,16 +2236,16 @@
 	      (:url . "https://elpa.gnu.org/packages/iterators.html")
 	      (:commit . "99bdcc8bdfcbc6a8de3d2675450c2fe0aa0e72fd"))])
  (ivy .
-      [(0 14 2)
+      [(0 15 0)
        ((emacs
 	 (24 5)))
        "Incremental Vertical completYon" tar
        ((:url . "https://github.com/abo-abo/swiper")
 	(:keywords "matching")
-	(:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+	(:maintainer "Basil L. Contovounesios" . "basil@contovou.net")
 	(:authors
 	 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	(:commit . "97dfa3e7991aa7b713c04918ca0fbf43b7e3a201"))])
+	(:commit . "9d99a8b78457eab732c9fb68c14bdb30bdb76ac9"))])
  (ivy-avy .
 	  [(0 14 2)
 	   ((emacs
@@ -4616,7 +4616,7 @@
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
 	      (:commit . "e5cb1fd7e8d35e264313436f47972acae0819764"))])
  (transient-cycles .
-		   [(1 0)
+		   [(1 1)
 		    ((emacs
 		      (27 1)))
 		    "Define command variants with transient cycling" tar
@@ -4625,7 +4625,7 @@
 		     (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name")
 		     (:authors
 		      ("Sean Whitton" . "spwhitton@spwhitton.name"))
-		     (:commit . "a5b86dd04e84e7ff1cf8c4062843fccb92991145"))])
+		     (:commit . "456495db28a72a343907e58ee43e7470144282aa"))])
  (tree-inspector .
 		 [(0 4)
 		  ((emacs

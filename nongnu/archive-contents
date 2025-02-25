@@ -2773,7 +2773,7 @@
 		   (:keywords "writing" "weasel-words" "grammar")
 		   (:commit . "d54eadeedb8bf3aa0e0a584c0a7373c69644f4b8"))])
  (ws-butler .
-	    [(1 1)
+	    [(1 2)
 	     ((emacs
 	       (24 1)))
 	     "Unobtrusively remove trailing whitespace" tar
@@ -2782,7 +2782,7 @@
 	      (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name")
 	      (:authors
 	       ("Le Wang" . "l26wang@gmail.com"))
-	      (:commit . "77e7aa3d6faa3c2d0ce76283c21bc3f0aa6b3db3"))])
+	      (:commit . "5c1b4f89f0fc60b61646dbd64e946d07ab515a24"))])
  (xah-fly-keys .
 	       [(26 9 20250205172500)
 		((emacs
