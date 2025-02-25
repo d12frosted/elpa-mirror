@@ -3,24 +3,24 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm
 
 Updating /mnt/store/melpa/working/helm-core/
-Checking out 4cc95582b2c45d89397322bd7c0fc4492607b96d
+Checking out af3a6a3d842c350b469a735b31ee00bd22fedcc9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-core/
-  to /tmp/helm-coreRsydb2/helm-core-20250225.750
+  to /tmp/helm-coretXVSQ2/helm-core-20250225.1446
     helm-core.el -> helm-core.el
     helm-lib.el -> helm-lib.el
     helm-source.el -> helm-source.el
     helm-multi-match.el -> helm-multi-match.el
-Created helm-core-20250225.750.tar containing:
-  helm-core-20250225.750/
-  helm-core-20250225.750/helm-core-pkg.el
-  helm-core-20250225.750/helm-core.el
-  helm-core-20250225.750/helm-lib.el
-  helm-core-20250225.750/helm-multi-match.el
-  helm-core-20250225.750/helm-source.el
+Created helm-core-20250225.1446.tar containing:
+  helm-core-20250225.1446/
+  helm-core-20250225.1446/helm-core-pkg.el
+  helm-core-20250225.1446/helm-core.el
+  helm-core-20250225.1446/helm-lib.el
+  helm-core-20250225.1446/helm-multi-match.el
+  helm-core-20250225.1446/helm-source.el
  ✓ Success:
-  2025-02-25T09:10:50+0000  helm-core-20250224.847.entry
-  2025-02-25T09:10:50+0000  helm-core-20250224.847.tar
+  2025-02-25T15:05:19+0000  helm-core-20250225.1446.entry
+  2025-02-25T15:05:19+0000  helm-core-20250225.1446.tar
   2025-02-25T12:05:47+0000  helm-core-20250225.750.entry
   2025-02-25T12:05:47+0000  helm-core-20250225.750.tar
-Built helm-core in 4.398s, finished at 2025-02-25T12:05:48+0000
+Built helm-core in 4.889s, finished at 2025-02-25T15:05:20+0000

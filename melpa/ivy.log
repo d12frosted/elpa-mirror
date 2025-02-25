@@ -3,3 +3,30 @@ Fetcher: github
 Source:  https://github.com/abo-abo/swiper
 
 Updating /mnt/store/melpa/working/ivy/
+Checking out 7a0d554aaf4ebbb2c45f2451d77747df4f7e2742
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivy/
+  to /tmp/ivypzhbob/ivy-20250224.2125
+    colir.el -> colir.el
+    elpa.el -> elpa.el
+    ivy-faces.el -> ivy-faces.el
+    ivy-overlay.el -> ivy-overlay.el
+    ivy.el -> ivy.el
+  ! doc/ivy.texi -> ivy.texi
+  ! doc/ivy-help.org -> ivy-help.org
+Generating ivy.info
+Created ivy-20250224.2125.tar containing:
+  ivy-20250224.2125/
+  ivy-20250224.2125/colir.el
+  ivy-20250224.2125/dir
+  ivy-20250224.2125/elpa.el
+  ivy-20250224.2125/ivy-faces.el
+  ivy-20250224.2125/ivy-help.org
+  ivy-20250224.2125/ivy-overlay.el
+  ivy-20250224.2125/ivy-pkg.el
+  ivy-20250224.2125/ivy.el
+  ivy-20250224.2125/ivy.info
+ ✓ Success:
+  2025-02-25T15:11:30+0000  ivy-20250224.2125.entry
+  2025-02-25T15:11:30+0000  ivy-20250224.2125.tar
+Built ivy in 6.567s, finished at 2025-02-25T15:11:31+0000
