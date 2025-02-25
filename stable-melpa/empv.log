@@ -3,16 +3,20 @@ Fetcher: github
 Source:  https://github.com/isamert/empv.el
 
 Updating /mnt/store/melpa/working/empv/
-Checking out 3673dae751417a66f63a2decc8dfbcbe2712e5fc
+Checking out 4c660fe44f7ea562896924ce9de28cd37ef15a38
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/empv/
-  to /tmp/empv3QC6mL/empv-20250217.1236
+  to /tmp/empv8PclDA/empv-20250225.1652
+    empv-hydra.el -> empv-hydra.el
     empv.el -> empv.el
-Created empv-20250217.1236.tar containing:
-  empv-20250217.1236/
-  empv-20250217.1236/empv-pkg.el
-  empv-20250217.1236/empv.el
+Created empv-20250225.1652.tar containing:
+  empv-20250225.1652/
+  empv-20250225.1652/empv-hydra.el
+  empv-20250225.1652/empv-pkg.el
+  empv-20250225.1652/empv.el
  ✓ Success:
   2025-02-25T14:50:48+0000  empv-20250217.1236.entry
   2025-02-25T14:50:48+0000  empv-20250217.1236.tar
-Built empv in 4.048s, finished at 2025-02-25T14:50:49+0000
+  2025-02-25T17:43:56+0000  empv-20250225.1652.entry
+  2025-02-25T17:43:56+0000  empv-20250225.1652.tar
+Built empv in 3.719s, finished at 2025-02-25T17:43:57+0000
