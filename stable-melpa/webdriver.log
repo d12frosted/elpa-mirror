@@ -3,22 +3,26 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mauroaranda/emacs-webdriver
 
 Updating /mnt/store/melpa/working/webdriver/
-Checking out f73fc53aea5733d630e66d8da178218983d5898a
+Checking out dfe26adc9482d50c7c6ca765916443bd74cf548d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/webdriver/
-  to /tmp/webdriverYl7Rjg/webdriver-20231016.1331
+  to /tmp/webdriverP5SShl/webdriver-20250224.2303
     webdriver-chrome.el -> webdriver-chrome.el
+    webdriver-firefox.el -> webdriver-firefox.el
     webdriver.el -> webdriver.el
     webdriver.texi -> webdriver.texi
 Generating webdriver.info
-Created webdriver-20231016.1331.tar containing:
-  webdriver-20231016.1331/
-  webdriver-20231016.1331/dir
-  webdriver-20231016.1331/webdriver-chrome.el
-  webdriver-20231016.1331/webdriver-pkg.el
-  webdriver-20231016.1331/webdriver.el
-  webdriver-20231016.1331/webdriver.info
+Created webdriver-20250224.2303.tar containing:
+  webdriver-20250224.2303/
+  webdriver-20250224.2303/dir
+  webdriver-20250224.2303/webdriver-chrome.el
+  webdriver-20250224.2303/webdriver-firefox.el
+  webdriver-20250224.2303/webdriver-pkg.el
+  webdriver-20250224.2303/webdriver.el
+  webdriver-20250224.2303/webdriver.info
  ✓ Success:
   2025-02-24T22:49:28+0000  webdriver-20231016.1331.entry
   2025-02-24T22:49:28+0000  webdriver-20231016.1331.tar
-Built webdriver in 5.916s, finished at 2025-02-24T22:49:29+0000
+  2025-02-25T01:34:23+0000  webdriver-20250224.2303.entry
+  2025-02-25T01:34:23+0000  webdriver-20250224.2303.tar
+Built webdriver in 6.110s, finished at 2025-02-25T01:34:24+0000
