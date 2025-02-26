@@ -1264,9 +1264,9 @@
 		     ("Pranshu Sharma" . "pranshusharma366atgmail"))
 		    (:commit . "58d158bef475536e78e2a145f2029c49924fb19a"))])
  (helm .
-       [(4 0 1)
+       [(4 0 2)
 	((helm-core
-	  (4 0 1))
+	  (4 0 2))
 	 (wfnames
 	  (1 2)))
 	"Helm is an Emacs incremental and narrowing framework" tar
@@ -1275,7 +1275,7 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "98c0d4e62ee3690da97323a4215bddda7f51e4fa"))])
+	 (:commit . "af3a6a3d842c350b469a735b31ee00bd22fedcc9"))])
  (helm-core .
 	    [(4 0 2)
 	     ((emacs
@@ -1655,7 +1655,7 @@
 		   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
 		  (:commit . "f52dfada8fa0fa6cd70886819868d84e198773a3"))])
  (markdown-mode .
-		[(2 6)
+		[(2 7)
 		 ((emacs
 		   (27 1)))
 		 "Major mode for Markdown-formatted text" tar
@@ -1664,7 +1664,7 @@
 		  (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
 		  (:authors
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
-		  (:commit . "193b61605f44c85d261b8bd82e0a213fd8f1ff32"))])
+		  (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
  (mastodon .
 	   [(1 1 10)
 	    ((emacs

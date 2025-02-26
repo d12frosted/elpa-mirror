@@ -148,7 +148,7 @@ maintainer if not).
    * Ubuntu Linux: [elpa-markdown-mode][elpa-ubuntu] and [emacs-goodies-el][emacs-goodies-el-ubuntu]
    * RedHat and Fedora Linux: [emacs-goodies][]
    * NetBSD: [textproc/markdown-mode][]
-   * MacPorts: [markdown-mode.el][macports-package] ([pending][macports-ticket])
+   * MacPorts: [markdown-mode.el][macports-package]
    * FreeBSD: [textproc/markdown-mode.el][freebsd-port]
 
  [elpa-markdown-mode]: https://packages.debian.org/sid/lisp/elpa-markdown-mode
@@ -157,8 +157,7 @@ maintainer if not).
  [emacs-goodies-el-ubuntu]: http://packages.ubuntu.com/search?keywords=emacs-goodies-el
  [emacs-goodies]: https://apps.fedoraproject.org/packages/emacs-goodies
  [textproc/markdown-mode]: http://pkgsrc.se/textproc/markdown-mode
- [macports-package]: https://trac.macports.org/browser/trunk/dports/editors/markdown-mode.el/Portfile
- [macports-ticket]: http://trac.macports.org/ticket/35716
+ [macports-package]: https://ports.macports.org/port/markdown-mode.el/
  [freebsd-port]: http://svnweb.freebsd.org/ports/head/textproc/markdown-mode.el
 
 **Dependencies**
@@ -179,8 +178,7 @@ tend to be associated with paired delimiters such as <kbd>M-{</kbd> and
 <kbd>M-}</kbd> or <kbd>C-c <</kbd> and <kbd>C-c ></kbd>.  Outline navigation keybindings the
 same as in `org-mode`.  Finally, commands for running Markdown or
 doing maintenance on an open file are grouped under the <kbd>C-c C-c</kbd>
-prefix.  The most commonly used commands are described below. You
-can obtain a list of all keybindings by pressing <kbd>C-c C-h</kbd>.
+prefix.  The most commonly used commands are described below.
 
   * Links and Images: <kbd>C-c C-l</kbd> and <kbd>C-c C-i</kbd>
 
@@ -774,6 +772,9 @@ provides an interface to all of the possible customizations:
     (default: `t`).  When set to nil, they will be treated as
     `[[PageName|link text]]`.
 
+  * `markdown-wiki-link-retain-case nil` - set a non-nil value not to
+     change wiki link file name case
+
   * `markdown-uri-types` - a list of protocol schemes (e.g., "http")
     for URIs that `markdown-mode` should highlight.
 
@@ -935,6 +936,15 @@ provides an interface to all of the possible customizations:
   * `markdown-fontify-whole-heading-line` - font lock for highlighting
      the whole line for headings.(default: `nil`)
 
+  * `markdown-special-ctrl-a/e` - set to non-nil to behave specially in
+    headlines and items. When `t`, `C-a` will bring back the cursor to the
+    beginning of the headline text. In an item, this will be the position after
+    bullet and check-box, if any. `C-e` will jump to the end of the headline,
+    ignoring the presence of closing tags in the headline. When set to the
+    symbol `reversed`, the first `C-a` or `C-e` works normally, going to the
+    true line boundary first. Only a directly following, identical keypress will
+    bring the cursor to the special positions (default: `nil`).
+
 Additionally, the faces used for syntax highlighting can be modified to
 your liking by issuing <kbd>M-x customize-group RET markdown-faces</kbd>
 or by using the "Markdown Faces" link at the bottom of the mode
@@ -1066,13 +1076,13 @@ by `markdown-mode` and `gfm-mode` as described below.
     ```
 
 * **Preview:** GFM-specific preview can be powered by setting
-  `markdown-command` to use [Docter][].  This may also be
+  `markdown-command` to use [marked][].  This may also be
   configured to work with [Marked 2][] for `markdown-open-command`.
 
 [GFM]: http://github.github.com/github-flavored-markdown/
 [GFM comments]: https://help.github.com/articles/writing-on-github/
 [since 2014]: https://github.com/blog/1825-task-lists-in-all-markdown-documents
-[Docter]: https://github.com/alampros/Docter
+[marked]: https://marked.js.org/
 
 ## Acknowledgments
 
@@ -1116,6 +1126,7 @@ first version was released on May 24, 2007.
   * 2020-05-30: [Version 2.4][]
   * 2022-02-12: [Version 2.5][]
   * 2023-08-30: [Version 2.6][]
+  * 2025-02-26: [Version 2.7][]
 
 [Version 1.1]: https://jblevins.org/projects/markdown-mode/rev-1-1
 [Version 1.2]: https://jblevins.org/projects/markdown-mode/rev-1-2
@@ -1134,3 +1145,4 @@ first version was released on May 24, 2007.
 [Version 2.4]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.4
 [Version 2.5]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.5
 [Version 2.6]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.6
+[Version 2.7]: https://github.com/jrblevin/markdown-mode/releases/tag/v2.7
