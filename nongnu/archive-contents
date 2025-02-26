@@ -253,7 +253,7 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
 	    (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider .
-	[(1 17 0)
+	[(1 17 1)
 	 ((emacs
 	   (26))
 	  (clojure-mode
@@ -281,7 +281,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "371729b371f88fe9eb24419b0a9fecab312fa348"))])
+	  (:commit . "d2f34b60e5c5e569d4b7f4f79b36893f5c4dfa20"))])
  (clojure-mode .
 	       [(5 19 0)
 		((emacs
@@ -486,13 +486,13 @@
 		     ("Campbell Barton" . "ideasman42@gmail.com"))
 		    (:commit . "1c5837d2a667d977a1bd90ba44ebd911cc660f26"))])
  (dockerfile-mode .
-		  [(1 7)
+		  [(1 9)
 		   ((emacs
 		     (24)))
 		   "Major mode for editing Docker's Dockerfiles" tar
 		   ((:url . "https://github.com/spotify/dockerfile-mode")
-		    (:keywords "docker")
-		    (:commit . "74ed3dfd1584298a0ea9881115d33ba1808a4c3f"))])
+		    (:keywords "docker" "languages" "processes" "tools")
+		    (:commit . "7ce17e054eca4d56ca8bc1e4a6a0dbf58efd8d52"))])
  (dracula-theme .
 		[(1 8 2)
 		 ((emacs
@@ -1277,7 +1277,7 @@
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
 	 (:commit . "98c0d4e62ee3690da97323a4215bddda7f51e4fa"))])
  (helm-core .
-	    [(4 0 1)
+	    [(4 0 2)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -1287,7 +1287,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "98c0d4e62ee3690da97323a4215bddda7f51e4fa"))])
+	      (:commit . "af3a6a3d842c350b469a735b31ee00bd22fedcc9"))])
  (hideshowvis .
 	      [(0 8)
 	       ((emacs
