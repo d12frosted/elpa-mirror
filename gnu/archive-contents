@@ -1458,7 +1458,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 4 2)
+	 [(1 4 4)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1475,7 +1475,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "682686da7c7dbbf361d02b6bf7bf27e76f44d558"))])
+	   (:commit . "92cdebd10f0adc9511c54e9b6dff896a1e837f87"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -3160,7 +3160,7 @@
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:commit . "8258a4dfa00aa522249cdf9aeea5be4de97bd7c1"))])
  (org-gnosis .
-	     [(0 0 7)
+	     [(0 0 9)
 	      ((emacs
 		(27 2))
 	       (emacsql
@@ -3173,7 +3173,7 @@
 	       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
 	       (:authors
 		("Thanos Apollo" . "public@thanosapollo.org"))
-	       (:commit . "5027605e2dfea1031ffe97da1f1e8d35c63e2479"))])
+	       (:commit . "2f1ed5320b8e9b31c67c0720be2693fe416f16a1"))])
  (org-jami-bot .
 	       [(0 0 5)
 		((emacs
