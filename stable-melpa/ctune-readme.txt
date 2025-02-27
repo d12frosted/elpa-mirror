@@ -30,6 +30,6 @@ M-x add-dir-local-variable to do the saving.
 your init file: I don't like this option, but it does the job.  It's pretty
 easy and straight-forward.
 
-ctune tries to handle both 3 ways by providing an easy way to add the Noise
-Macro to the right variable and save the values in the `dir-locals-file'
-file.
+ctune tries to handle these 3 ways by providing an easy way to add the
+Noise Macro to the right variable and save the values in the
+`dir-locals-file' file.
