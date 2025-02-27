@@ -67,6 +67,7 @@ III.  Options
      - `timu-line-show-lsp-indicator' - default value is nil
      - `timu-line-show-eglot-indicator' - default value is nil
      - `timu-line-show-python-virtual-env' - default value is t
+     - `timu-line-show-wdired-keys' - default value is nil
      - `timu-line-show-org-capture-keys' - default value is t
      - `timu-line-show-git-commit-keys' - default value is t
      - `timu-line-show-forge-post-keys' - default value is t
