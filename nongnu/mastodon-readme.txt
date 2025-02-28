@@ -533,7 +533,7 @@
   looks like:
 
   ┌────
-  │ (defun mastodon-toot--translate-toot-text ()
+  │ (defun mastodon-toot-translate-toot-text ()
   │   "Translate text of toot at point.
   │   Uses `lingva.el'."
   │     (interactive)
