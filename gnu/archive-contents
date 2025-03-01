@@ -3460,18 +3460,18 @@
 	 ("Adam Porter" . "adam@alphapapa.net"))
 	(:commit . "c579f039ffdb52ff61775ff25510a9c26e25d0c5"))])
  (plz-event-source .
-		   [(0 1 1)
+		   [(0 1 2)
 		    ((emacs
 		      (26 3))
 		     (plz-media-type
-		      (0 1 0)))
+		      (0 2 3)))
 		    "Plz Event Source" tar
 		    ((:url . "https://github.com/r0man/plz-event-source")
 		     (:keywords "comm" "network" "http")
 		     (:maintainer "r0man" . "roman@burningswell.com")
 		     (:authors
 		      ("r0man" . "roman@burningswell.com"))
-		     (:commit . "09e650c8667d0b43be84fb58d9116a739a058bef"))])
+		     (:commit . "70e93039ffa843475591dc98b11df6fe5c4d85d0"))])
  (plz-media-type .
 		 [(0 2 3)
 		  ((emacs

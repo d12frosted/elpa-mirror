@@ -11,7 +11,7 @@
 source implementation for the [Server Sent Event (SSE)] protocol. It is
 used in the [LLM] library to handle server sent events.
 
-• Package name (GNU ELPA): plz-event-source
+• Package name (GNU ELPA): [plz-event-source]
 • Official manual:
   [https://github.com/r0man/plz-event-source/blob/main/plz-event-source.org]
 • Git repository: [https://github.com/r0man/plz-event-source]
@@ -32,6 +32,8 @@ used in the [LLM] library to handle server sent events.
 <https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events>
 
 [LLM] <https://github.com/ahyatt/llm>
+
+[plz-event-source] <https://elpa.gnu.org/packages/plz-event-source.html>
 
 [https://github.com/r0man/plz-event-source/blob/main/plz-event-source.org]
 <https://github.com/r0man/plz-event-source/blob/main/plz-event-source.org>
