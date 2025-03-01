@@ -1049,6 +1049,19 @@
 		(:authors
 		 ("Mohamed Suliman" . "sulimanm@tcd.ie"))
 		(:commit . "d3b890648404eb4df2dabbb3d783105672e0ea23"))])
+ (denote-search .
+		[(1 0 2)
+		 ((emacs
+		   (29 1))
+		  (denote
+		   (3 0)))
+		 "Search the contents of your notes" tar
+		 ((:url . "https://github.com/lmq-10/denote-search")
+		  (:keywords "matching")
+		  (:maintainer "Lucas Quintana" . "lmq10@protonmail.com")
+		  (:authors
+		   ("Lucas Quintana" . "lmq10@protonmail.com"))
+		  (:commit . "02d2d6d361d5e86376b2a1b102515cc899efabd2"))])
  (detached .
 	   [(0 10 1)
 	    ((emacs
@@ -3460,18 +3473,18 @@
 		      ("r0man" . "roman@burningswell.com"))
 		     (:commit . "09e650c8667d0b43be84fb58d9116a739a058bef"))])
  (plz-media-type .
-		 [(0 2 2)
+		 [(0 2 3)
 		  ((emacs
 		    (26 3))
 		   (plz
-		    (0 9)))
+		    (0 9 1)))
 		  "Plz Media Types" tar
 		  ((:url . "https://github.com/r0man/plz-media-type")
 		   (:keywords "comm" "network" "http")
 		   (:maintainer "r0man" . "roman@burningswell.com")
 		   (:authors
 		    ("r0man" . "roman@burningswell.com"))
-		   (:commit . "c0a109307010c275706892a0a3152835c383aedc"))])
+		   (:commit . "72a8149ccbb8a2a0fe83da342103d6d7f1cd5a96"))])
  (plz-see .
 	  [(0 1)
 	   ((emacs

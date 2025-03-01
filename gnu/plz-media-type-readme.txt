@@ -16,7 +16,7 @@ including JSON, XML, HTML, and binary data. It is used in the [LLM]
 library to handle decoding of various streaming and non-streaming media
 type formats.
 
-• Package name (GNU ELPA): plz-media-type
+• Package name (GNU ELPA): [plz-media-type]
 • Official manual:
   [https://github.com/r0man/plz-media-type/blob/main/plz-media-type.org]
 • Git repository: [https://github.com/r0man/plz-media-type]
@@ -34,6 +34,8 @@ type formats.
 [plz.el] <https://github.com/alphapapa/plz.el>
 
 [LLM] <https://github.com/ahyatt/llm>
+
+[plz-media-type] <http://elpa.gnu.org/packages/plz-media-type.html>
 
 [https://github.com/r0man/plz-media-type/blob/main/plz-media-type.org]
 <https://github.com/r0man/plz-media-type/blob/main/plz-media-type.org>
