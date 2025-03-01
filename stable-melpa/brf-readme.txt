@@ -5,7 +5,7 @@ provides an accurate implementation in Emacs of specific features that I miss
 from `Brief'.
 
 The emphasis is on *accurately* implementing these features in Emacs rather than doing
-what Brief emulations tend to do, which is mapping the Brief key-sequences to somewhat
+what `Brief' emulations tend to do, which is mapping the `Brief' key-sequences to somewhat
 similar functions in Emacs.
 
 The provided features are:
@@ -19,9 +19,9 @@ The provided features are:
 
 They have been implemented in an Emacs-style. This means the functions respond to prefix
 args and where they override Emacs functions, they live on the Emacs key bindings as well
-as the original Brief keys.
+as the original `Brief' keys.
 
-Moreover, functionality has been extended to those parts of Emacs that were never part of Brief.
+Moreover, functionality has been extended to those parts of Emacs that were never part of `Brief'.
 For example, text cut/copied in line or column-mode can be saved/recalled in registers.
 
-See the website, Info manual or README.org for further details.
+See the Info manual, Website or README.org for further details.
