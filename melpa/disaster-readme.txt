@@ -6,7 +6,12 @@ Disaster lets you press `C-c d` to see the compiled assembly code for the
 C, C++ or Fortran file you're currently editing. It even jumps to and
 highlights the line of assembly corresponding to the line beneath your cursor.
 
-It works by creating a `.o` file using `make` (if you have a Makefile), or
-`cmake` (if you have a `compile_commands.json` file) or the default system
-compiler. It then runs that file through `objdump` to generate the
-human-readable assembly.
+It works in the following manner:
+
+- If there is a `Makefile`, creating a `.o` file using `make`
+- If there is a `compile_commands.json` file, use it to get the compilation
+  command for the file.
+- If none of the above files is presnet, use the default system compiler.
+
+After compiling the source to a `.o` file, `disaster' runs that file through
+`objdump` to generate the human-readable assembly.
