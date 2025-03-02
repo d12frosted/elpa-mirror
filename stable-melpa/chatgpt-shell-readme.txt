@@ -11,10 +11,12 @@ M-x `chatgpt-shell-japanese-lookup'
 
 You must set an API key for most cloud services.  Check out:
 
-  `chatgpt-shell-openai-key'.
   `chatgpt-shell-anthropic-key'.
+  `chatgpt-shell-deepseek-key'
   `chatgpt-shell-google-key'.
   `chatgpt-shell-kagi-key'.
+  `chatgpt-shell-openai-key'.
+  `chatgpt-shell-openrouter-key'
   `chatgpt-shell-perplexity-key'.
 
 Alternatively, local services like Ollama do not require an API key.
