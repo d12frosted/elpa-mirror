@@ -600,7 +600,7 @@
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "a1c5fbf16b528fb67d087437d44d66e9edc99664"))])
  (emacsql .
-	  [(4 1 0)
+	  [(4 2 0)
 	   ((emacs
 	     (26 1)))
 	   "High-level SQL database front-end" tar
@@ -608,7 +608,7 @@
 	    (:maintainer "Jonas Bernoulli" . "emacs.emacsql@jonas.bernoulli.dev")
 	    (:authors
 	     ("Christopher Wellons" . "wellons@nullprogram.com"))
-	    (:commit . "d6529f010a0573630122b826230e72157ab8fa88"))])
+	    (:commit . "f111b0acc79eadeeb3c6c1332d943f11fd6932ff"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib
@@ -1485,18 +1485,18 @@
 	       (:keywords "languages")
 	       (:commit . "0f4d74f9049df28e2f522733141bfc5b7a0f69a3"))])
  (keycast .
-	  [(1 4 1)
+	  [(1 4 2)
 	   ((emacs
-	     (26 1))
+	     (28 1))
 	    (compat
-	     (30 0 0 0)))
+	     (30 0 2 0)))
 	   "Show current command and its binding" tar
 	   ((:url . "https://github.com/tarsius/keycast")
 	    (:keywords "multimedia")
 	    (:maintainer "Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev")
 	    (:authors
 	     ("Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev"))
-	    (:commit . "c44618d2867fc2410e5061fef2a805e974198cf2"))])
+	    (:commit . "df329db48c22a3905d540c4240ac65c7b45f51dd"))])
  (kotlin-mode .
 	      [(2 0 0)
 	       ((emacs
@@ -1509,7 +1509,7 @@
 		(:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
 		(:commit . "d92c3b773473e9fe15f61f6177e4fbf097aadd05"))])
  (llama .
-	[(0 6 0)
+	[(0 6 1)
 	 ((emacs
 	   (26 1))
 	  (compat
@@ -1517,7 +1517,7 @@
 	 "Compact syntax for short lambda" tar
 	 ((:url . "https://github.com/tarsius/llama")
 	  (:keywords "extensions")
-	  (:commit . "9802c215a3eea748d9d7f81a1465850388006897"))])
+	  (:commit . "c1b320d6308a68d8841116745310cc55ac5ce74b"))])
  (logview .
 	  [(0 19 1)
 	   ((emacs
