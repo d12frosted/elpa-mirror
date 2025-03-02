@@ -1638,13 +1638,13 @@
 	   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
 	  (:commit . "f52dfada8fa0fa6cd70886819868d84e198773a3"))])
  (magit-section .
-		[(4 3 0)
+		[(4 3 1)
 		 ((emacs
 		   (27 1))
 		  (compat
 		   (30 0 2 0))
 		  (llama
-		   (0 6 0))
+		   (0 6 1))
 		  (seq
 		   (2 24)))
 		 "Sections for read-only buffers" tar
@@ -1653,7 +1653,7 @@
 		  (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 		  (:authors
 		   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-		  (:commit . "f52dfada8fa0fa6cd70886819868d84e198773a3"))])
+		  (:commit . "28d272ce0bcecc2e312d22ed15a48ad4cea564eb"))])
  (markdown-mode .
 		[(2 7)
 		 ((emacs
@@ -2784,14 +2784,14 @@
 	       ("Le Wang" . "l26wang@gmail.com"))
 	      (:commit . "5c1b4f89f0fc60b61646dbd64e946d07ab515a24"))])
  (xah-fly-keys .
-	       [(26 9 20250205172500)
+	       [(26 9 20250301145516)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "efd164009e8206252bbf71efd8a6977c3492ed94"))])
+		 (:commit . "ef106ee92f7e178e08a5bd2bcdf1846f360473f5"))])
  (xkcd .
        [(1 1)
 	((json
