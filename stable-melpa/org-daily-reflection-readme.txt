@@ -5,5 +5,5 @@ You can use like one does with a paper three- or five-year diary,
 to see what was happening on this day last year, and the year prior, etc.
 
 But you could also look at the last six days of daily journals, or dailies
-at other specified intervals (e.g. days, weeks, fortnights, months,
+at other specified intervals (e.g., days, weeks, fortnights, months,
 years, decades, centuries).
