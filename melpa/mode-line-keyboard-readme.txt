@@ -4,10 +4,6 @@ keyboard, such as touch devices.  Concretely, the Android
 application "Termux" provides a Linux terminal environment that
 includes a terminal version of Emacs.
 
-NOTE: This is an "early release" intended to be tested by a small
-audience.  Please, DO NOT add it to package archives like Melpa --
-I will do that once this package has gotten some mileage.
-
 Activate:
 
 Enable the mode in a single buffer using:

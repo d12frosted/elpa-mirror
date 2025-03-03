@@ -1,9 +1,7 @@
 
-If there is a string like \"[[ref:1234]]\" in some buffer, then this minor mode
-will turn it into a \"Reference\". A reference may be viewed as a button
-such that a click will search for the matching \"Location\" in files'
-content, file names and buffers. A matching location may be a string
-\"[[id:1234]]\" or a file named \"1234\".
+A reference like \"[[ref:1234]]\" should be transformed into a button. A click should
+display the matching locations \"[[id:1234]]\" in files' content, file names and
+buffers. A click on a location should display the references to it.
 
 More precisely:
 
@@ -17,8 +15,4 @@ More precisely:
   - or [[ref:<ID>]]
   - or [[ref:<ID>][<name>]]
 
-This package requires `ripgrep' and `fd' to be installed on your system
-for full functionality.
-
-- Ripgrep: For fast text search.
-- fd: For fast file search.
+This package requires `ripgrep' and `fd'.
