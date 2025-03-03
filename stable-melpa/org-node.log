@@ -3,28 +3,32 @@ Fetcher: github
 Source:  https://github.com/meedstrom/org-node
 
 Updating /mnt/store/melpa/working/org-node/
-Checking out e01c5893b8274fabddfb8a5900619cdf299d0bfa
+Checking out 67203470eba5cbb5f1e6ee259ea263f689364855
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-node/
-  to /tmp/org-node7auPb4/org-node-20250303.118
+  to /tmp/org-nodedY3EEu/org-node-20250303.1456
     org-node-backlink.el -> org-node-backlink.el
     org-node-changes.el -> org-node-changes.el
+    org-node-context.el -> org-node-context.el
     org-node-parser.el -> org-node-parser.el
     org-node-seq.el -> org-node-seq.el
     org-node.el -> org-node.el
     org-node.texi -> org-node.texi
 Generating org-node.info
-Created org-node-20250303.118.tar containing:
-  org-node-20250303.118/
-  org-node-20250303.118/dir
-  org-node-20250303.118/org-node-backlink.el
-  org-node-20250303.118/org-node-changes.el
-  org-node-20250303.118/org-node-parser.el
-  org-node-20250303.118/org-node-pkg.el
-  org-node-20250303.118/org-node-seq.el
-  org-node-20250303.118/org-node.el
-  org-node-20250303.118/org-node.info
+Created org-node-20250303.1456.tar containing:
+  org-node-20250303.1456/
+  org-node-20250303.1456/dir
+  org-node-20250303.1456/org-node-backlink.el
+  org-node-20250303.1456/org-node-changes.el
+  org-node-20250303.1456/org-node-context.el
+  org-node-20250303.1456/org-node-parser.el
+  org-node-20250303.1456/org-node-pkg.el
+  org-node-20250303.1456/org-node-seq.el
+  org-node-20250303.1456/org-node.el
+  org-node-20250303.1456/org-node.info
  ✓ Success:
-  2025-03-03T09:38:25+0000  org-node-20250303.118.entry
-  2025-03-03T09:38:25+0000  org-node-20250303.118.tar
-Built org-node in 6.365s, finished at 2025-03-03T09:38:26+0000
+  2025-03-03T12:17:15+0000  org-node-20250303.118.entry
+  2025-03-03T12:17:15+0000  org-node-20250303.118.tar
+  2025-03-03T14:57:30+0000  org-node-20250303.1456.entry
+  2025-03-03T14:57:30+0000  org-node-20250303.1456.tar
+Built org-node in 12.992s, finished at 2025-03-03T14:57:32+0000

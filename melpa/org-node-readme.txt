@@ -19,13 +19,14 @@ explained.
 
 Compared to org-roam:
 
-  - Same idea, compatible disk format
-  - Fast
-  - Does not need SQLite
+  + Same idea, compatible disk format
+  + Fast
+  + Does not need SQLite
+  + Lets you opt out of those file-level property drawers
+  + Tries to rely in a bare-metal way on upstream org-id and org-capture
+  + Ships extra commands to e.g. auto-rename files and links
+
   - Does not support "roam:" links
-  - Lets you opt out of those file-level property drawers
-  - Tries to rely in a bare-metal way on upstream org-id and org-capture
-  - Ships extra commands to e.g. auto-rename files and links
 
   As a drawback of relying on the org-id table, if a heading in some
   vendor README.org or whatever has an ID, it's considered part of
@@ -35,9 +36,10 @@ Compared to org-roam:
 
 Compared to denote:
 
-  - Org only, no Markdown nor other file types
-  - Does not support "denote:" links
-  - Filenames have no meaning (can match the Denote format if you like)
-  - You can have as many "notes" as you want inside one file.  You
+  + Filenames have no meaning (can match the Denote format if you like)
+  + You can have as many "notes" as you want inside one file.  You
     could possibly use Denote to search files and org-node
     as a more granular search.
+
+  - Org only, no Markdown nor other file types
+  - Does not support "denote:" links
