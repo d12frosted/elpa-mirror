@@ -1612,19 +1612,19 @@
 	       ("Jon Oddie" . "j.j.oddie@gmail.com"))
 	      (:commit . "8e8487712d150178be7297604d0f47fd036a6d8d"))])
  (magit .
-	[(4 3 0)
+	[(4 3 1)
 	 ((emacs
 	   (27 1))
 	  (compat
 	   (30 0 2 0))
 	  (llama
-	   (0 6 0))
+	   (0 6 1))
 	  (magit-section
-	   (4 3 0))
+	   (4 3 1))
 	  (seq
 	   (2 24))
 	  (transient
-	   (0 8 4))
+	   (0 8 5))
 	  (with-editor
 	   (3 4 3)))
 	 "A Git porcelain inside Emacs" tar
@@ -1636,7 +1636,7 @@
 	  (:authors
 	   ("Marius Vollmer" . "marius.vollmer@gmail.com")
 	   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-	  (:commit . "f52dfada8fa0fa6cd70886819868d84e198773a3"))])
+	  (:commit . "28d272ce0bcecc2e312d22ed15a48ad4cea564eb"))])
  (magit-section .
 		[(4 3 1)
 		 ((emacs
@@ -1933,22 +1933,22 @@
 		    ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
 		   (:commit . "941e7e6cb8a5a0b193345263ed912cceecae1887"))])
  (orgit .
-	[(2 0 0)
+	[(2 0 1)
 	 ((emacs
 	   (26 1))
 	  (compat
-	   (30 0 0 0))
+	   (30 0 2 0))
 	  (magit
-	   (4 0 0))
+	   (4 3 1))
 	  (org
-	   (9 7 8)))
+	   (9 7 11)))
 	 "Support for Org links to Magit buffers" tar
 	 ((:url . "https://github.com/magit/orgit")
 	  (:keywords "hypermedia" "vc")
 	  (:maintainer "Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev")
 	  (:authors
 	   ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-	  (:commit . "59d21fdb21f84238c3172d37fdd2446b753e98dc"))])
+	  (:commit . "6ad0dc35c8df54fae4ef27e5145760e22fbbf890"))])
  (p4-16-mode .
 	     [(0 3)
 	      nil "Support for the P4_16 programming language" tar

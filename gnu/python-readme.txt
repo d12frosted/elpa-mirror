@@ -5,7 +5,8 @@ found in GNU Emacs.
 Implements Syntax highlighting, Indentation, Movement, Shell
 interaction, Shell completion, Shell virtualenv support, Shell
 package support, Shell syntax highlighting, Pdb tracking, Symbol
-completion, Skeletons, FFAP, Code Check, ElDoc, Imenu.
+completion, Skeletons, FFAP, Code Check, ElDoc, Imenu, Flymake,
+Import management.
 
 Syntax highlighting: Fontification of code is provided and supports
 python's triple quoted strings properly.
@@ -40,7 +41,7 @@ your default interpreter and commandline arguments by setting the
 variables.  This example enables IPython globally:
 
 (setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "-i")
+      python-shell-interpreter-args "--simple-prompt")
 
 Using the "console" subcommand to start IPython in server-client
 mode is known to fail intermittently due a bug on IPython itself
@@ -63,7 +64,7 @@ Missing or delayed output used to happen due to differences between
 Operating Systems' pipe buffering (e.g. CPython 3.3.4 in Windows 7.
 See URL `https://debbugs.gnu.org/cgi/bugreport.cgi?bug=17304').  To
 avoid this, the `python-shell-unbuffered' defaults to non-nil and
-controls whether `python-shell-calculate-process-environment'
+controls whether `python-shell--calculate-process-environment'
 should set the "PYTHONUNBUFFERED" environment variable on startup:
 See URL `https://docs.python.org/3/using/cmdline.html#cmdoption-u'.
 
@@ -95,9 +96,9 @@ and enables auto-completion for shells that do not support
 receiving escape sequences (with some limitations, i.e. completion
 in blocks does not work).  The code executed for the "fallback"
 completion can be found in `python-shell-completion-setup-code' and
-`python-shell-completion-string-code' variables.  Their default
-values enable completion for both CPython and IPython, and probably
-any readline based shell (it's known to work with PyPy).  If your
+`python-shell-completion-get-completions'.  Their default values
+enable completion for both CPython and IPython, and probably any
+readline based shell (it's known to work with PyPy).  If your
 Python installation lacks readline (like CPython for Windows),
 installing pyreadline (URL `https://ipython.org/pyreadline.html')
 should suffice.  To troubleshoot why you are not getting any
@@ -107,6 +108,12 @@ completions, you can try the following in your Python shell:
 
 If you see an error, then you need to either install pyreadline or
 setup custom code that avoids that dependency.
+
+By default, the "native" completion uses the built-in rlcompleter.
+To use other readline completer (e.g. Jedi) or a custom one, you just
+need to set it in the PYTHONSTARTUP file.  You can set an
+Emacs-specific completer by testing the environment variable
+INSIDE_EMACS.
 
 Shell virtualenv support: The shell also contains support for
 virtualenvs and other special environment modifications thanks to
@@ -120,7 +127,7 @@ virtualenv:
 (setq python-shell-process-environment
       (list
        (format "PATH=%s" (mapconcat
-                          'identity
+                          #'identity
                           (reverse
                            (cons (getenv "PATH")
                                  '("/path/to/env/bin/")))
@@ -194,19 +201,17 @@ default one, builds the alist in form of a tree) and
 `python-imenu-format-parent-item-jump-label-function' variables for
 changing the way labels are formatted in the tree version.
 
-If you used python-mode.el you may miss auto-indentation when
-inserting newlines.  To achieve the same behavior you have two
-options:
+Flymake: A Flymake backend, using the pyflakes program by default,
+is provided.  You can also use flake8 or pylint by customizing
+`python-flymake-command'.
 
-1) Enable the minor-mode `electric-indent-mode' (enabled by
-   default) and use RET.  If this mode is disabled use
-   `newline-and-indent', bound to C-j.
+Import management: The commands `python-sort-imports',
+`python-add-import', `python-remove-import', and
+`python-fix-imports' automate the editing of import statements at
+the top of the buffer, which tend to be a tedious task in larger
+projects.  These commands require that the isort library is
+available to the interpreter pointed at by `python-interpreter'.
+The last command also requires pyflakes.  These dependencies can be
+installed, among other methods, with the following command:
 
-2) Add the following hook in your .emacs:
-
-(add-hook 'python-mode-hook
-  (lambda ()
-    (define-key python-mode-map "\C-m" 'newline-and-indent)))
-
-I'd recommend the first one since you'll get the same behavior for
-all modes out-of-the-box.
+    pip install isort pyflakes

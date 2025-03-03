@@ -1,5 +1,7 @@
 # denote-search: A simple search utility for Denote
 
+<a href="https://elpa.gnu.org/packages/denote-search.html"><img alt="GNU ELPA" src="https://elpa.gnu.org/packages/denote-search.svg"/></a>
+
 This package provides a search utility for Denote, the simple-to-use,
 focused-in-scope, and effective note-taking tool for Emacs.
 
@@ -19,8 +21,14 @@ See the `README.org` file for a comprehensive manual.
 
 ## Installation
 
-If you are using Emacs 29.1 onwards, you can install the package by
-evaluating the following code:
+denote-search is available in GNU ELPA. You can install the package by doing:
+
+```
+M-x package-refresh-contents RET
+M-x package-install RET denote-search RET
+```
+
+If for whatever reason you prefer to install it from source, you can do so by evaluating the following code:
 
 ```elisp
 (package-vc-install
@@ -29,15 +37,11 @@ evaluating the following code:
    :doc "README.org"))
 ```
 
-Alternatively, you can use the :vc keyword from use-package, as shown
-in the sample configuration:
+## Sample configuration
 
 ```elisp
 (use-package denote-search
   :ensure t
-  ;; Installation with VC
-  :vc (:url "https://github.com/lmq-10/denote-search"
-       :rev :newest)
   :bind
   ;; Customize keybindings to your liking
   (("C-c s s" . denote-search)
@@ -49,6 +53,3 @@ in the sample configuration:
   ;; Display keywords in results buffer
   (denote-search-format-heading-function #'denote-search-format-heading-with-keywords))
 ```
-
-Of course, you can also install it manually or use an alternative
-package manager such as quelpa.

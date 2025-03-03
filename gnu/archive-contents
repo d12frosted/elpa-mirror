@@ -1050,7 +1050,7 @@
 		 ("Mohamed Suliman" . "sulimanm@tcd.ie"))
 		(:commit . "d3b890648404eb4df2dabbb3d783105672e0ea23"))])
  (denote-search .
-		[(1 0 2)
+		[(1 0 3)
 		 ((emacs
 		   (29 1))
 		  (denote
@@ -1061,7 +1061,7 @@
 		  (:maintainer "Lucas Quintana" . "lmq10@protonmail.com")
 		  (:authors
 		   ("Lucas Quintana" . "lmq10@protonmail.com"))
-		  (:commit . "02d2d6d361d5e86376b2a1b102515cc899efabd2"))])
+		  (:commit . "4df3e77a495b4f0df7fe56924509afe7f2fa735d"))])
  (detached .
 	   [(0 10 1)
 	    ((emacs
@@ -3134,7 +3134,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "2b7a1688f24cc8ef5a3c3a6dab8e00d833bcda59"))])
  (org .
-      [(9 7 23)
+      [(9 7 24)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3143,7 +3143,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "ec72678881b73d04f8cf4e574cbb7a470e9155d3"))])
+	(:commit . "7fa7a541ee97366c8a0741d2ecfd3a2b7790b320"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -3649,10 +3649,16 @@
 		   ("Feng Shu" . "tumashu@163.com"))
 		  (:commit . "55d9b324831b0fc79ff62f1c6f21aad72341a114"))])
  (python .
-	 [(0 28)
+	 [(0 29)
 	  ((emacs
-	    (24 2))
-	   (cl-lib
+	    (29 1))
+	   (compat
+	    (29 1 1 0))
+	   (seq
+	    (2 23))
+	   (project
+	    (0 1))
+	   (flymake
 	    (1 0)))
 	  "Python's flying circus support for Emacs" tar
 	  ((:url . "https://github.com/fgallina/python.el")
@@ -3660,7 +3666,7 @@
 	   (:maintainer nil . "emacs-devel@gnu.org")
 	   (:authors
 	    ("Fabián E. Gallina" . "fgallina@gnu.org"))
-	   (:commit . "b3d0f53b296a0876ec7a55ae840868e65ed54e14"))])
+	   (:commit . "538ab57dc5b8371b3a6d3ccb635deb8b35133fc4"))])
  (quarter-plane .
 		[(0 1)
 		 nil "editing using quarter-plane screen model" tar
