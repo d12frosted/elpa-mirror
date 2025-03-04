@@ -1471,7 +1471,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 4 4)
+	 [(1 4 5)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1488,7 +1488,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "92cdebd10f0adc9511c54e9b6dff896a1e837f87"))])
+	   (:commit . "3b555e71bbf9f21466b5b1aa6ab1e9f931af1e11"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -3429,7 +3429,7 @@
 		("Hugo Thunnissen" . "devel@hugot.nl"))
 	       (:commit . "1cdfd9aaf6fee003554d3c7832224455ddd9eaa1"))])
  (phps-mode .
-	    [(0 4 49)
+	    [(0 4 50)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -3438,7 +3438,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "98fdd10d6299dfc5ad24cc214c9eaa0fdba946e4"))])
+	      (:commit . "6a44501e58457240ea4f1818e9096d52b502e7c6"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" tar

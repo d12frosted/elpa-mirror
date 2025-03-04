@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-jabber/emacs-jabber
 
 Updating /mnt/store/melpa/working/jabber/
-Checking out f904c98c530b86bb1dc20a854b59ac64dd8f9f65
+Checking out 0b888629280131012ce508e7f44991f6bf541823
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jabber/
-  to /tmp/jabbery8QYJS/jabber-20250223.420
+  to /tmp/jabberFLCUnk/jabber-20250303.2114
   ! lisp/jabber-activity.el -> jabber-activity.el
   ! lisp/jabber-ahc-presence.el -> jabber-ahc-presence.el
   ! lisp/jabber-ahc.el -> jabber-ahc.el
@@ -71,74 +71,76 @@ Copying files (->) and directories (=>)
     DEV.org -> DEV.org
     README.org -> README.org
 Generating jabber.info
-Created jabber-20250223.420.tar containing:
-  jabber-20250223.420/
-  jabber-20250223.420/CHANGELOG.org
-  jabber-20250223.420/DEV.org
-  jabber-20250223.420/README.org
-  jabber-20250223.420/dir
-  jabber-20250223.420/jabber-activity.el
-  jabber-20250223.420/jabber-ahc-presence.el
-  jabber-20250223.420/jabber-ahc.el
-  jabber-20250223.420/jabber-alert.el
-  jabber-20250223.420/jabber-autoaway.el
-  jabber-20250223.420/jabber-avatar.el
-  jabber-20250223.420/jabber-awesome.el
-  jabber-20250223.420/jabber-bookmarks.el
-  jabber-20250223.420/jabber-browse.el
-  jabber-20250223.420/jabber-carbons.el
-  jabber-20250223.420/jabber-chat.el
-  jabber-20250223.420/jabber-chatbuffer.el
-  jabber-20250223.420/jabber-chatstates.el
-  jabber-20250223.420/jabber-compose.el
-  jabber-20250223.420/jabber-conn.el
-  jabber-20250223.420/jabber-console.el
-  jabber-20250223.420/jabber-core.el
-  jabber-20250223.420/jabber-disco.el
-  jabber-20250223.420/jabber-events.el
-  jabber-20250223.420/jabber-export.el
-  jabber-20250223.420/jabber-feature-neg.el
-  jabber-20250223.420/jabber-festival.el
-  jabber-20250223.420/jabber-history.el
-  jabber-20250223.420/jabber-httpupload.el
-  jabber-20250223.420/jabber-iq.el
-  jabber-20250223.420/jabber-keepalive.el
-  jabber-20250223.420/jabber-keymap.el
-  jabber-20250223.420/jabber-libnotify.el
-  jabber-20250223.420/jabber-logon.el
-  jabber-20250223.420/jabber-menu.el
-  jabber-20250223.420/jabber-modeline.el
-  jabber-20250223.420/jabber-muc-nick-coloring.el
-  jabber-20250223.420/jabber-muc-nick-completion.el
-  jabber-20250223.420/jabber-muc.el
-  jabber-20250223.420/jabber-notifications.el
-  jabber-20250223.420/jabber-ping.el
-  jabber-20250223.420/jabber-pkg.el
-  jabber-20250223.420/jabber-presence.el
-  jabber-20250223.420/jabber-private.el
-  jabber-20250223.420/jabber-ratpoison.el
-  jabber-20250223.420/jabber-register.el
-  jabber-20250223.420/jabber-roster.el
-  jabber-20250223.420/jabber-rtt.el
-  jabber-20250223.420/jabber-sasl.el
-  jabber-20250223.420/jabber-sawfish.el
-  jabber-20250223.420/jabber-screen.el
-  jabber-20250223.420/jabber-search.el
-  jabber-20250223.420/jabber-time.el
-  jabber-20250223.420/jabber-tmux.el
-  jabber-20250223.420/jabber-truncate.el
-  jabber-20250223.420/jabber-util.el
-  jabber-20250223.420/jabber-vcard-avatars.el
-  jabber-20250223.420/jabber-vcard.el
-  jabber-20250223.420/jabber-version.el
-  jabber-20250223.420/jabber-watch.el
-  jabber-20250223.420/jabber-widget.el
-  jabber-20250223.420/jabber-wmii.el
-  jabber-20250223.420/jabber-xmessage.el
-  jabber-20250223.420/jabber-xml.el
-  jabber-20250223.420/jabber.el
-  jabber-20250223.420/jabber.info
+Created jabber-20250303.2114.tar containing:
+  jabber-20250303.2114/
+  jabber-20250303.2114/CHANGELOG.org
+  jabber-20250303.2114/DEV.org
+  jabber-20250303.2114/README.org
+  jabber-20250303.2114/dir
+  jabber-20250303.2114/jabber-activity.el
+  jabber-20250303.2114/jabber-ahc-presence.el
+  jabber-20250303.2114/jabber-ahc.el
+  jabber-20250303.2114/jabber-alert.el
+  jabber-20250303.2114/jabber-autoaway.el
+  jabber-20250303.2114/jabber-avatar.el
+  jabber-20250303.2114/jabber-awesome.el
+  jabber-20250303.2114/jabber-bookmarks.el
+  jabber-20250303.2114/jabber-browse.el
+  jabber-20250303.2114/jabber-carbons.el
+  jabber-20250303.2114/jabber-chat.el
+  jabber-20250303.2114/jabber-chatbuffer.el
+  jabber-20250303.2114/jabber-chatstates.el
+  jabber-20250303.2114/jabber-compose.el
+  jabber-20250303.2114/jabber-conn.el
+  jabber-20250303.2114/jabber-console.el
+  jabber-20250303.2114/jabber-core.el
+  jabber-20250303.2114/jabber-disco.el
+  jabber-20250303.2114/jabber-events.el
+  jabber-20250303.2114/jabber-export.el
+  jabber-20250303.2114/jabber-feature-neg.el
+  jabber-20250303.2114/jabber-festival.el
+  jabber-20250303.2114/jabber-history.el
+  jabber-20250303.2114/jabber-httpupload.el
+  jabber-20250303.2114/jabber-iq.el
+  jabber-20250303.2114/jabber-keepalive.el
+  jabber-20250303.2114/jabber-keymap.el
+  jabber-20250303.2114/jabber-libnotify.el
+  jabber-20250303.2114/jabber-logon.el
+  jabber-20250303.2114/jabber-menu.el
+  jabber-20250303.2114/jabber-modeline.el
+  jabber-20250303.2114/jabber-muc-nick-coloring.el
+  jabber-20250303.2114/jabber-muc-nick-completion.el
+  jabber-20250303.2114/jabber-muc.el
+  jabber-20250303.2114/jabber-notifications.el
+  jabber-20250303.2114/jabber-ping.el
+  jabber-20250303.2114/jabber-pkg.el
+  jabber-20250303.2114/jabber-presence.el
+  jabber-20250303.2114/jabber-private.el
+  jabber-20250303.2114/jabber-ratpoison.el
+  jabber-20250303.2114/jabber-register.el
+  jabber-20250303.2114/jabber-roster.el
+  jabber-20250303.2114/jabber-rtt.el
+  jabber-20250303.2114/jabber-sasl.el
+  jabber-20250303.2114/jabber-sawfish.el
+  jabber-20250303.2114/jabber-screen.el
+  jabber-20250303.2114/jabber-search.el
+  jabber-20250303.2114/jabber-time.el
+  jabber-20250303.2114/jabber-tmux.el
+  jabber-20250303.2114/jabber-truncate.el
+  jabber-20250303.2114/jabber-util.el
+  jabber-20250303.2114/jabber-vcard-avatars.el
+  jabber-20250303.2114/jabber-vcard.el
+  jabber-20250303.2114/jabber-version.el
+  jabber-20250303.2114/jabber-watch.el
+  jabber-20250303.2114/jabber-widget.el
+  jabber-20250303.2114/jabber-wmii.el
+  jabber-20250303.2114/jabber-xmessage.el
+  jabber-20250303.2114/jabber-xml.el
+  jabber-20250303.2114/jabber.el
+  jabber-20250303.2114/jabber.info
  ✓ Success:
   2025-03-03T19:57:54+0000  jabber-20250223.420.entry
   2025-03-03T19:57:53+0000  jabber-20250223.420.tar
-Built jabber in 7.607s, finished at 2025-03-03T19:57:54+0000
+  2025-03-03T22:37:44+0000  jabber-20250303.2114.entry
+  2025-03-03T22:37:44+0000  jabber-20250303.2114.tar
+Built jabber in 8.533s, finished at 2025-03-03T22:37:45+0000
