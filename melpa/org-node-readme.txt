@@ -1,10 +1,8 @@
-What is Org-node?
-
-If you were the sort of person to prefer "id:" links over "file:" links
-or radio-targets or any other type of link, you're in the right place!
+If you were the sort of person to prefer "id:" links, over "file:" links,
+radio-targets or any other type of link, you're in the right place!
 
 Now you can worry less about mentally tracking your subtree hierarchies and
-directory structures.  As long as you've assigned an ID to something, you
+directory structures.  Once you've assigned an ID to something, you
 can find it later.
 
 The philosophy is the same as org-roam: if you assign an ID every
