@@ -30,7 +30,7 @@ TODO:
 - use something like prolog-clause-start to define M-a/e etc.
 - indentation function (based on prolog again?)
 - the rest of the keywords
-- https://visl.sdu.dk/cg3/single/#regex-icase
+- https://edu.visl.dk/cg3/single/#regex-icase
 - keyword tab-completion
 - `font-lock-syntactic-keywords' is obsolete since 24.1
 - show definition of set/list-at-point in modeline
