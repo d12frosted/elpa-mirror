@@ -77,9 +77,9 @@ II. Configuration
     By default the color contrast is set to `normal'.
     To set the desired contrast add one of the following to your
     `~/.emacs.d/init.el' or `~/.emacs':
-      (customize-set-variable 'timu-macos-colors-contrast 'normal)
-      (customize-set-variable 'timu-macos-colors-contrast 'muted)
-      (customize-set-variable 'timu-macos-colors-contrast 'contrasted)
+      (customize-set-variable 'timu-macos-color-contrast 'normal)
+      (customize-set-variable 'timu-macos-color-contrast 'muted)
+      (customize-set-variable 'timu-macos-color-contrast 'contrasted)
 
   E. Border for the `mode-line'
     You can set a variable to set the border type for the `mode-line'.
