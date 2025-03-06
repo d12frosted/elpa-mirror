@@ -24,10 +24,14 @@ buffer in real time and in a user friendly way based/inspired on
   • Supports:
     • Hexadecimal (#RRGGBB, #RGB, #RRGGBBAA, #RGBA).
     • Color names (Emacs, HTML, CSS).
-    • CSS rgb/rgba, hsl/hsla and user-defined colors variables:
-      • @define_color
-      • var()
-    • LaTex colors (gray, rbg, RGB, HTML)
+    • CSS
+      • rgb/rgba
+      • hsl/hsla
+      • oklab/oklch
+      • user-defined colors variables:
+        • @define_color
+        • var()
+    • LaTeX colors (gray, rbg, RGB, HTML)
   • Convert current color at point or in region to other formats such as
     hexadecimal or color names *(only available for some colors)* with
     mouse click support.
@@ -78,9 +82,10 @@ buffer in real time and in a user friendly way based/inspired on
     '(colorful-add-hex-colors (emacs-lisp-mode
     . colorful-add-color-names) ((html-mode css-mode) .
     (colorful-add-css-variables-colors colorful-add-rgb-colors
-    colorful-add-hsl-colors colorful-add-color-names)) (latex-mode
-    . colorful-add-latex-colors)) List of functions to add extra color
-    keywords to colorful-color-keywords.
+    colorful-add-hsl-colors colorful-add-oklab-oklch-colors
+    colorful-add-color-names)) (latex-mode . colorful-add-latex-colors))
+    List of functions to add extra color keywords to
+    colorful-color-keywords.
 
     It can be a cons cell specifying the mode (or a list of modes) e.g:
 
@@ -166,13 +171,16 @@ buffer in real time and in a user friendly way based/inspired on
   colorful provides extra functions out-the-box that enable additional
   highlighting:
 
-  • `colorful-add-hex-colors': Add Hexadecimal Colors.
-  • `colorful-add-color-names': Add color names.
+  • `colorful-add-hex-colors': Add Hexadecimal colors highlighting.
+  • `colorful-add-color-names': Add color names highlighting.
   • `colorful-add-css-variables-colors': Add CSS user-defined color
-    variables.
-  • `colorful-add-rgb-colors': Add CSS RGB colors.
-  • `colorful-add-hsl-colors': Add CSS HSL colors.
-  • `colorful-add-latex-colors': Add LaTex rgb/RGB/HTML/Grey colors.
+    variables highlighting.
+  • `colorful-add-rgb-colors': Add CSS RGB colors highlighting.
+  • `colorful-add-oklab-oklch-colors': Add CSS OkLab and OkLch colors
+    highlighting.
+  • `colorful-add-hsl-colors': Add CSS HSL colors highlighting.
+  • `colorful-add-latex-colors': Add LaTeX rgb/RGB/HTML/Grey colors
+    highlighting.
 
   See: `colorful-extra-color-keyword-functions' for more details.
 
@@ -189,19 +197,51 @@ buffer in real time and in a user friendly way based/inspired on
   buffer with `M-x colorful-mode', if want enable it globally without
   using hooks then you can do `M-x global-colorful-mode'
 
-  Or if you prefer using `use-package' macro:
+
+6 Configuration ⚙️
+═════════════════
+
+  Example /(Personal)/ configuration for your `init.el':
+
   ┌────
-  │ 
   │ (use-package colorful-mode
-  │   :ensure t ; Optional
-  │   :hook (prog-mode text-mode)
-  │   ;; :config (global-colorful-mode) ; Enable it globally
-  │   ...)
-  │ 
+  │   ;; :diminish
+  │   ;; :ensure t ; Optional
+  │   :custom
+  │   (colorful-use-prefix t)
+  │   (colorful-only-strings 'only-prog)
+  │   (css-fontify-colors nil)
+  │   :config
+  │   (global-colorful-mode t)
+  │   (add-to-list 'global-colorful-modes 'helpful-mode))
   └────
 
 
-6 How does it compare to `rainbow-mode' or built-in `css fontify colors'?
+6.1 Disable colorful in regions
+───────────────────────────────
+
+  If you want to disable colorful at region this hack may be useful for
+  you:
+
+  ┌────
+  │ (add-hook 'post-command-hook
+  │ 	  (lambda ()
+  │ 	    "delete colorful overlay on active mark"
+  │ 	    (when-let (colorful-mode
+  │ 		       (beg (region-beginning))
+  │ 		       (end (region-end)))
+  │ 	      (if (use-region-p)
+  │ 		  (dolist (ov (overlays-in beg end))
+  │ 		    (when (overlay-get ov 'colorful--overlay)
+  │ 		      (remove-overlays (overlay-start ov) (overlay-end ov)
+  │ 				       'colorful--overlay t)))
+  │ 		(save-excursion
+  │ 		  (font-lock-fontify-region beg end)))))
+  │ 	  nil t)
+  └────
+
+
+7 How does it compare to `rainbow-mode' or built-in `css fontify colors'?
 ═════════════════════════════════════════════════════════════════════════
 
   `colorful-mode' improves `rainbow-mode' and `css-fontify-colors' in
@@ -242,7 +282,7 @@ buffer in real time and in a user friendly way based/inspired on
   prefix strings and more features you can use `colorful-mode.el'.
 
 
-7 [How to Contribute]
+8 [How to Contribute]
 ═════════════════════
 
   colorful-mode is part of GNU ELPA, if you want send patches you will
