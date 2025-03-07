@@ -7,7 +7,9 @@ its heyday EIN never fully reconciled emac's monolithic buffer
 architecture to the notebook's by-cell discretization, leaving
 gaping functional holes like crippled undo.
 
-Certainly in 2012 when jupyter was much smaller, an emacs client
-made perfect sense.  With many years of hindsight, it's now clear
-the json-driven, git-averse notebook format is anathema to emacs's
-plain text ethos.
+**As of 2025, a greenfield notebook implementation resides at,**
+
+https://github.com/commercial-emacs/xjupyter.git
+
+It features full-fledged undo and relies on "mode overlays"
+instead of the complex and fragile polymode.
