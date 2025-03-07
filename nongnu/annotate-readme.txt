@@ -233,7 +233,7 @@
 2.3.6 `C-c C-c' (function annotate-change-annotation-colors)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Change the color of the annotation below point (both higlight and
+  Change the color of the annotation below point (both highlight and
   annotation text colors are changed).
 
   These changes are kept after the buffer is killed.
@@ -373,17 +373,29 @@
   Shows or hides the annotation's text in the whole buffer.
 
 
-7 More documentation
+7 Other customization variables
+═══════════════════════════════
+
+7.1 annotate-autosave
+─────────────────────
+
+  Whether annotations should be saved after each user action, e.g. new
+  annotation created, existing one amended or deleted. Boolean value,
+  default is `nil' i.e. do not perform autosave and update the
+  annotations in a buffer, just after killing buffer or quitting Emacs.
+
+
+8 More documentation
 ════════════════════
 
   Please check `M-x customize-group RET annotate' as there is extensive
   documentation for each customizable variable.
 
 
-8 BUGS
+9 BUGS
 ══════
 
-8.1 Known bugs
+9.1 Known bugs
 ──────────────
 
   • Annotations in org-mode source blocks will be underlined, but the
@@ -418,7 +430,7 @@
     annotation (this turned out to be useful, though).
 
 
-8.2 Report bugs
+9.2 Report bugs
 ───────────────
 
   To report bugs please, point your browser to the [issue tracker].
@@ -427,8 +439,8 @@
 [issue tracker] <https://github.com/bastibe/annotate.el/issues>
 
 
-9 Query Language
-════════════════
+10 Query Language
+═════════════════
 
   The summary window can shows results filtered by criteria specified
   with a very simple query language, the basis syntax for that language
@@ -449,8 +461,8 @@
         the text of annotation must match this regular expression.
 
 
-9.1 Examples
-────────────
+10.1 Examples
+─────────────
 
   ┌────
   │ lisp$ and TODO
@@ -491,7 +503,7 @@
   `return' at prompt).
 
 
-10 FAQ
+11 FAQ
 ══════
 
   Sometimes the package does not respect the customizable variable's
@@ -506,7 +518,7 @@
   window limits if an huge font is used by the annotated text.
 
 
-11 LICENSE
+12 LICENSE
 ══════════
 
   This package is released under the MIT license, see file [LICENSE]

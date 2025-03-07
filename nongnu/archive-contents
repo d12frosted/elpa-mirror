@@ -42,13 +42,13 @@
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com"))
 		(:commit . "33691c93ee302690e41f631f82083bcc15d229e8"))])
  (annotate .
-	   [(2 2 3)
+	   [(2 3 0)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer
 	      ("Bastian Bechtold" . "bastibe.dev@mailbox.org")
 	      ("cage" . "cage-dev@twistfold.it"))
-	     (:commit . "4b0c353d43c64932b5506e150d6c82ef8d6e685b"))])
+	     (:commit . "c25878b779e96bb6c7ee86da98047ce0ec8fed63"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -589,7 +589,7 @@
 		(:keywords "languages" "elixir")
 		(:commit . "00d6580a040a750e019218f9392cf9a4c2dac23a"))])
  (elpher .
-	 [(3 6 4)
+	 [(3 6 5)
 	  ((emacs
 	    (27 1)))
 	  "A friendly gopher and gemini client" tar
@@ -598,7 +598,7 @@
 	   (:maintainer "Tim Vaughan" . "plugd@thelambdalab.xyz")
 	   (:authors
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
-	   (:commit . "a1c5fbf16b528fb67d087437d44d66e9edc99664"))])
+	   (:commit . "972a069f240f071a79da23c98d3519df45bb5851"))])
  (emacsql .
 	  [(4 2 0)
 	   ((emacs
@@ -1519,7 +1519,7 @@
 	  (:keywords "extensions")
 	  (:commit . "c1b320d6308a68d8841116745310cc55ac5ce74b"))])
  (logview .
-	  [(0 19 1)
+	  [(0 19 2)
 	   ((emacs
 	     (25 1))
 	    (datetime
@@ -1534,7 +1534,7 @@
 	    (:maintainer "Paul Pogonyshev" . "pogonyshev@gmail.com")
 	    (:authors
 	     ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
-	    (:commit . "9ce423a9fc319bb919c681e16939b9f561f7a942"))])
+	    (:commit . "e9b40730c6abea7d1e0235fa5ba790d175b008ef"))])
  (loopy .
 	[(0 14 0)
 	 ((emacs

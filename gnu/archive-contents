@@ -654,7 +654,7 @@
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
 	       (:commit . "caffb420be106cebbdfe4474ed0507a601603f83"))])
  (colorful-mode .
-		[(1 2 1)
+		[(1 2 3)
 		 ((emacs
 		   (28 1))
 		  (compat
@@ -667,7 +667,7 @@
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:authors
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
-		  (:commit . "0bba38e8c67b8c42873dc1d3f17217909e0f372e"))])
+		  (:commit . "f749116188d4be195050c2c96baf5b7899734dab"))])
  (comint-mime .
 	      [(0 7)
 	       ((emacs
@@ -753,6 +753,14 @@
 	    ("Philip Kaludercic" . "philipk@posteo.net")
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "e87b984bf763aa6c574dde58b3cb4458b3b7db17"))])
+ (cond-star .
+	    [(1 0)
+	     ((emacs
+	       (24 3)))
+	     "Extended form of `cond' construct" tar
+	     ((:maintainer "Richard Stallman" . "rms@gnu.org")
+	      (:url . "https://elpa.gnu.org/packages/cond-star.html")
+	      (:commit . "4719df9f42c157e2683ac641883cff5efaa480bc"))])
  (constants .
 	    [(2 11 1)
 	     ((emacs
