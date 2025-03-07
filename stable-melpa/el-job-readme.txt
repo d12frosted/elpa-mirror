@@ -6,4 +6,12 @@ in many subprocesses (one per CPU core), then merges their outputs and
 passes it back to the current Emacs.  In the meantime, current Emacs does
 not hang at all.
 
-The only public API is the function `el-job-launch'.
+Public API:
+- `el-job-launch' (also main documentation)
+- `el-job-await'
+- `el-job-is-busy'
+
+Dev tools:
+- `el-job-cycle-debug-level'
+- `el-job-show-info'
+- `el-job-kill-all'
