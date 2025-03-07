@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/purescript-emacs/purescript-mode
 
 Updating /mnt/store/melpa/working/purescript-mode/
-Checking out b51d489e5b143d91feebf36ee4db7f5b3736a27b
+Checking out a3d6ca4ba5b6ead6f19cf635258f2560c25a6e1f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/purescript-mode/
-  to /tmp/purescript-modemRz802/purescript-mode-20250228.410
+  to /tmp/purescript-modeIQChxJ/purescript-mode-20250307.416
     purescript-align-imports.el -> purescript-align-imports.el
     purescript-collapse.el -> purescript-collapse.el
     purescript-decl-scan.el -> purescript-decl-scan.el
@@ -17,7 +17,6 @@ Copying files (->) and directories (=>)
     purescript-move-nested.el -> purescript-move-nested.el
     purescript-navigate-imports.el -> purescript-navigate-imports.el
     purescript-presentation-mode.el -> purescript-presentation-mode.el
-    purescript-show.el -> purescript-show.el
     purescript-simple-indent.el -> purescript-simple-indent.el
     purescript-sort-imports.el -> purescript-sort-imports.el
     purescript-str.el -> purescript-str.el
@@ -29,57 +28,56 @@ Copying files (->) and directories (=>)
     NEWS -> NEWS
     snippets => snippets
 Generating purescript-mode.info
-Created purescript-mode-20250228.410.tar containing:
-  purescript-mode-20250228.410/
-  purescript-mode-20250228.410/NEWS
-  purescript-mode-20250228.410/dir
-  purescript-mode-20250228.410/purescript-align-imports.el
-  purescript-mode-20250228.410/purescript-collapse.el
-  purescript-mode-20250228.410/purescript-decl-scan.el
-  purescript-mode-20250228.410/purescript-font-lock.el
-  purescript-mode-20250228.410/purescript-indent.el
-  purescript-mode-20250228.410/purescript-indentation.el
-  purescript-mode-20250228.410/purescript-mode-pkg.el
-  purescript-mode-20250228.410/purescript-mode.el
-  purescript-mode-20250228.410/purescript-mode.info
-  purescript-mode-20250228.410/purescript-move-nested.el
-  purescript-mode-20250228.410/purescript-navigate-imports.el
-  purescript-mode-20250228.410/purescript-presentation-mode.el
-  purescript-mode-20250228.410/purescript-show.el
-  purescript-mode-20250228.410/purescript-simple-indent.el
-  purescript-mode-20250228.410/purescript-sort-imports.el
-  purescript-mode-20250228.410/purescript-str.el
-  purescript-mode-20250228.410/purescript-string.el
-  purescript-mode-20250228.410/purescript-unicode-input-method.el
-  purescript-mode-20250228.410/purescript-utils.el
-  purescript-mode-20250228.410/purescript-yas.el
-  purescript-mode-20250228.410/snippets/
-  purescript-mode-20250228.410/snippets/README.md
-  purescript-mode-20250228.410/snippets/haskell-mode/
-  purescript-mode-20250228.410/snippets/haskell-mode/.yas-ignore-filenames-as-triggers
-  purescript-mode-20250228.410/snippets/haskell-mode/.yas-make-groups
-  purescript-mode-20250228.410/snippets/haskell-mode/case
-  purescript-mode-20250228.410/snippets/haskell-mode/comment.block
-  purescript-mode-20250228.410/snippets/haskell-mode/constraint
-  purescript-mode-20250228.410/snippets/haskell-mode/data.inline
-  purescript-mode-20250228.410/snippets/haskell-mode/data.record
-  purescript-mode-20250228.410/snippets/haskell-mode/fn
-  purescript-mode-20250228.410/snippets/haskell-mode/fn.clause
-  purescript-mode-20250228.410/snippets/haskell-mode/fn.guarded
-  purescript-mode-20250228.410/snippets/haskell-mode/get
-  purescript-mode-20250228.410/snippets/haskell-mode/if.block
-  purescript-mode-20250228.410/snippets/haskell-mode/if.inline
-  purescript-mode-20250228.410/snippets/haskell-mode/import
-  purescript-mode-20250228.410/snippets/haskell-mode/import.qualified
-  purescript-mode-20250228.410/snippets/haskell-mode/instance
-  purescript-mode-20250228.410/snippets/haskell-mode/lambda
-  purescript-mode-20250228.410/snippets/haskell-mode/lang-pragma
-  purescript-mode-20250228.410/snippets/haskell-mode/let
-  purescript-mode-20250228.410/snippets/haskell-mode/main
-  purescript-mode-20250228.410/snippets/haskell-mode/module
-  purescript-mode-20250228.410/snippets/haskell-mode/module.exports
-  purescript-mode-20250228.410/snippets/haskell-mode/newtype
+Created purescript-mode-20250307.416.tar containing:
+  purescript-mode-20250307.416/
+  purescript-mode-20250307.416/NEWS
+  purescript-mode-20250307.416/dir
+  purescript-mode-20250307.416/purescript-align-imports.el
+  purescript-mode-20250307.416/purescript-collapse.el
+  purescript-mode-20250307.416/purescript-decl-scan.el
+  purescript-mode-20250307.416/purescript-font-lock.el
+  purescript-mode-20250307.416/purescript-indent.el
+  purescript-mode-20250307.416/purescript-indentation.el
+  purescript-mode-20250307.416/purescript-mode-pkg.el
+  purescript-mode-20250307.416/purescript-mode.el
+  purescript-mode-20250307.416/purescript-mode.info
+  purescript-mode-20250307.416/purescript-move-nested.el
+  purescript-mode-20250307.416/purescript-navigate-imports.el
+  purescript-mode-20250307.416/purescript-presentation-mode.el
+  purescript-mode-20250307.416/purescript-simple-indent.el
+  purescript-mode-20250307.416/purescript-sort-imports.el
+  purescript-mode-20250307.416/purescript-str.el
+  purescript-mode-20250307.416/purescript-string.el
+  purescript-mode-20250307.416/purescript-unicode-input-method.el
+  purescript-mode-20250307.416/purescript-utils.el
+  purescript-mode-20250307.416/purescript-yas.el
+  purescript-mode-20250307.416/snippets/
+  purescript-mode-20250307.416/snippets/README.md
+  purescript-mode-20250307.416/snippets/haskell-mode/
+  purescript-mode-20250307.416/snippets/haskell-mode/.yas-ignore-filenames-as-triggers
+  purescript-mode-20250307.416/snippets/haskell-mode/.yas-make-groups
+  purescript-mode-20250307.416/snippets/haskell-mode/case
+  purescript-mode-20250307.416/snippets/haskell-mode/comment.block
+  purescript-mode-20250307.416/snippets/haskell-mode/constraint
+  purescript-mode-20250307.416/snippets/haskell-mode/data.inline
+  purescript-mode-20250307.416/snippets/haskell-mode/data.record
+  purescript-mode-20250307.416/snippets/haskell-mode/fn
+  purescript-mode-20250307.416/snippets/haskell-mode/fn.clause
+  purescript-mode-20250307.416/snippets/haskell-mode/fn.guarded
+  purescript-mode-20250307.416/snippets/haskell-mode/get
+  purescript-mode-20250307.416/snippets/haskell-mode/if.block
+  purescript-mode-20250307.416/snippets/haskell-mode/if.inline
+  purescript-mode-20250307.416/snippets/haskell-mode/import
+  purescript-mode-20250307.416/snippets/haskell-mode/import.qualified
+  purescript-mode-20250307.416/snippets/haskell-mode/instance
+  purescript-mode-20250307.416/snippets/haskell-mode/lambda
+  purescript-mode-20250307.416/snippets/haskell-mode/lang-pragma
+  purescript-mode-20250307.416/snippets/haskell-mode/let
+  purescript-mode-20250307.416/snippets/haskell-mode/main
+  purescript-mode-20250307.416/snippets/haskell-mode/module
+  purescript-mode-20250307.416/snippets/haskell-mode/module.exports
+  purescript-mode-20250307.416/snippets/haskell-mode/newtype
  ✓ Success:
-  2025-03-07T02:12:51+0000  purescript-mode-20250228.410.entry
-  2025-03-07T02:12:51+0000  purescript-mode-20250228.410.tar
-Built purescript-mode in 7.612s, finished at 2025-03-07T02:12:52+0000
+  2025-03-07T07:14:22+0000  purescript-mode-20250307.416.entry
+  2025-03-07T07:14:21+0000  purescript-mode-20250307.416.tar
+Built purescript-mode in 8.981s, finished at 2025-03-07T07:14:23+0000
