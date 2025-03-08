@@ -264,8 +264,27 @@
 [some models] <https://ollama.com/search?q=&c=embedding>
 
 
-2.9 GPT4All
-───────────
+2.9 Deepseek
+────────────
+
+  [Deepseek] is a company offers both reasoning and chat high-quality
+  models.  This provider connects to their server.  It is also possible
+  to run their model locally as a free model via Ollama.  To use the
+  service, you can set it up with the following parameters:
+
+  `:key': The API Key you get from DeepSeek [API key page].  This is
+  required.  `:chat-model': One of the models from their [model list.]
+
+
+[Deepseek] <https://deepseek.com>
+
+[API key page] <https://platform.deepseek.com/api_keys>
+
+[model list.] <https://api-docs.deepseek.com/quick_start/pricing>
+
+
+2.10 GPT4All
+────────────
 
   [GPT4All] is a way to run large language models locally.  To use it
   with `llm' package, you must click "Enable API Server" in the
@@ -284,7 +303,7 @@
 [GPT4All] <https://gpt4all.io/index.html>
 
 
-2.10 llama.cpp
+2.11 llama.cpp
 ──────────────
 
   [llama.cpp] is a way to run large language models locally.  To use it
@@ -303,7 +322,7 @@
 [llama.cpp] <https://github.com/ggerganov/llama.cpp>
 
 
-2.11 Fake
+2.12 Fake
 ─────────
 
   This is a client that makes no call, but it just there for testing and
@@ -394,20 +413,21 @@
 5.1 Main functions
 ──────────────────
 
-  • `llm-chat provider prompt': With user-chosen `provider' , and a
-    `llm-chat-prompt' structure (created by `llm-make-chat-prompt'),
-    send that prompt to the LLM and wait for the string output.
-  • `llm-chat-async provider prompt response-callback error-callback':
-    Same as `llm-chat', but executes in the background.  Takes a
-    `response-callback' which will be called with the text response.
-    The `error-callback' will be called in case of error, with the error
-    symbol and an error message.
+  • `llm-chat provider prompt multi-output': With user-chosen `provider'
+    , and a `llm-chat-prompt' structure (created by
+    `llm-make-chat-prompt'), send that prompt to the LLM and wait for
+    the string output.
+  • `llm-chat-async provider prompt response-callback error-callback
+    multi-output': Same as `llm-chat', but executes in the background.
+    Takes a `response-callback' which will be called with the text
+    response.  The `error-callback' will be called in case of error,
+    with the error symbol and an error message.
   • `llm-chat-streaming provider prompt partial-callback
-    response-callback error-callback': Similar to `llm-chat-async', but
-    request a streaming response.  As the response is built up,
-    `partial-callback' is called with the all the text retrieved up to
-    the current point.  Finally, `reponse-callback' is called with the
-    complete text.
+    response-callback error-callback multi-output': Similar to
+    `llm-chat-async', but request a streaming response.  As the response
+    is built up, `partial-callback' is called with the all the text
+    retrieved up to the current point.  Finally, `reponse-callback' is
+    called with the complete text.
   • `llm-embedding provider string': With the user-chosen `provider',
     send a string and get an embedding, which is a large vector of
     floating point values.  The embedding represents the semantic
@@ -435,6 +455,10 @@
     functions.
   • `llm-name provider'.  Provides a short name of the model or
     provider, suitable for showing to users.
+  • `llm-models provider'.  Return a list of all the available model
+    names for the provider.  This could be either embedding or chat
+    models.  You can use `llm-models-match' to filter on models that
+    have a certain capability (as long as they are in `llm-models').
   • `llm-chat-token-limit'.  Gets the token limit for the chat model.
     This isn't possible for some backends like `llama.cpp', in which the
     model isn't selected or known by this library.
@@ -468,7 +492,30 @@
       is optional, and defaults to `'user'.
 
 
-5.1.1 JSON schema
+5.1.1 Return and multi-output
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The default return value is text except for when tools are called, in
+  which case it is a record of the return values of the tools called.
+
+  Models can potentially return many types of information, though, so
+  the `multi-output' option was added to the `llm-chat' calls so that
+  the single return value can instead be a plist that represents the
+  various possible values.  In the case of `llm-chat', this plist is
+  returned, in `llm-chat-async', it is passed to the success function.
+  In `llm-chat-streaming', it is passed to the success function, and
+  each partial update will be a plist, with no guarantee that the same
+  keys will always be present.
+
+  The possible plist keys are:
+  • `:text' , for the main textual output.
+  • `:reasoning', for reasoning output, when the model separates it.
+  • `:tool-uses', the tools that the llm identified to be called, as a
+    list of plists, with `:name' and `:args' values.
+  • `:tool-results', the results of calling the tools.
+
+
+5.1.2 JSON schema
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   By using the `response-format' argument to `llm-make-chat-prompt', you
@@ -583,13 +630,16 @@
   well-structured output (if the LLM does decide to use the tool). *Not
   every LLM can handle tool use, and those that do not will ignore the
   tools entirely*. The function `llm-capabilities' will return a list
-  with `tool-use' in it if the LLM supports tool use. Right now only
-  Gemini, Vertex, Claude, and Open AI support tool use.  However, even
-  for LLMs that handle tool use, there is sometimes a difference in the
-  capabilities. Right now, it is possible to write tools that succeed in
-  Open AI but cause errors in Gemini, because Gemini does not appear to
-  handle tools that have types that contain other types.  So client
-  programs are advised for right now to keep function to simple types.
+  with `tool-use' in it if the LLM supports tool use.  Because not all
+  providers support tool use when streaming, `streaming-tool-use'
+  indicates the ability to use tool uses in `llm-chat-streaming'. Right
+  now only Gemini, Vertex, Claude, and Open AI support tool use.
+  However, even for LLMs that handle tool use, there is sometimes a
+  difference in the capabilities. Right now, it is possible to write
+  tools that succeed in Open AI but cause errors in Gemini, because
+  Gemini does not appear to handle tools that have types that contain
+  other types.  So client programs are advised for right now to keep
+  function to simple types.
 
   The way to call functions is to attach a list of functions to the
   `tools' slot in the prompt. This is a list of `llm-tool' structs,
@@ -598,21 +648,27 @@
   format.  An example is:
 
   ┌────
-  │ (llm-chat-async my-llm-provider (llm-make-chat-prompt
-  │    "What is the capital of France?"
-  │    :tools
-  │    (list (llm-make-tool
-  │ 	  :function (lambda (callback result)
-  │ 		      ;; In this example function the assumption is that the
-  │ 		      ;; callback will be called after processing the result is
-  │ 		      ;; complete.
-  │ 		      (notify-user-of-capital result callback))
-  │ 	  :name "capital_of_country"
-  │ 	  :description "Get the capital of a country."
-  │ 	  :args '((:name "country"
-  │ 		   :description "The country whose capital to look up."
-  │ 		   :type string))
-  │ 	  :async t))))
+  │ (llm-chat-async
+  │  my-llm-provider
+  │  (llm-make-chat-prompt
+  │   "What is the capital of France?"
+  │   :tools
+  │   (list (llm-make-tool
+  │ 	 :function
+  │ 	 (lambda (callback result)
+  │ 	   ;; In this example function the assumption is that the
+  │ 	   ;; callback will be called after processing the result is
+  │ 	   ;; complete.
+  │ 	   (notify-user-of-capital result callback))
+  │ 	 :name "capital_of_country"
+  │ 	 :description "Get the capital of a country."
+  │ 	 :args '((:name "country"
+  │ 			:description "The country whose capital to look up."
+  │ 			:type string))
+  │ 	 :async t)))
+  │  #'identity  ;; No need to process the result in this example.
+  │  (lambda (_ err)
+  │    (error "Error on getting capital: %s" err)))
   └────
 
   Note that tools have the same arguments and structure as the tool
