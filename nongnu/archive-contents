@@ -464,7 +464,7 @@
 	       ("Campbell Barton" . "ideasman42@gmail.com"))
 	      (:commit . "71336e614e3150c47c58f99f2df10a3af73370ac"))])
  (dirvish .
-	  [(2 1 0)
+	  [(2 2 0)
 	   ((emacs
 	     (28 1)))
 	   "A modern file manager based on dired mode" tar
@@ -473,7 +473,7 @@
 	    (:maintainer "Alex Lu" . "https://github.com/alexluigit")
 	    (:authors
 	     ("Alex Lu" . "https://github.com/alexluigit"))
-	    (:commit . "8771edc00cc7befefd9d65e218fa7a6a84f923cc"))])
+	    (:commit . "d0569dd886e544617eceac4a80dbea1f257a0f17"))])
  (doc-show-inline .
 		  [(0 1)
 		   ((emacs
@@ -1959,7 +1959,7 @@
 	       (:url . "https://elpa.nongnu.org/nongnu/p4-16-mode.html")
 	       (:commit . "794dd0056b4ca736ae5ecb39072547f22a006137"))])
  (package-lint .
-	       [(0 24)
+	       [(0 25)
 		((emacs
 		  (24 4))
 		 (let-alist
@@ -1973,7 +1973,7 @@
 		 (:authors
 		  ("Steve Purcell" . "steve@sanityinc.com")
 		  ("Fanael Linithien" . "fanael4@gmail.com"))
-		 (:commit . "e3d3fb254221d053c75edfd9f0ebfa58d1eb52f9"))])
+		 (:commit . "6170c1e5b79f9b9f606ab17ab4d9ffb9bce3ebde"))])
  (pacmacs .
 	  [(0 1 1)
 	   ((emacs
