@@ -464,7 +464,7 @@
 	       ("Campbell Barton" . "ideasman42@gmail.com"))
 	      (:commit . "71336e614e3150c47c58f99f2df10a3af73370ac"))])
  (dirvish .
-	  [(2 2 0)
+	  [(2 2 3)
 	   ((emacs
 	     (28 1)))
 	   "A modern file manager based on dired mode" tar
@@ -473,7 +473,7 @@
 	    (:maintainer "Alex Lu" . "https://github.com/alexluigit")
 	    (:authors
 	     ("Alex Lu" . "https://github.com/alexluigit"))
-	    (:commit . "d0569dd886e544617eceac4a80dbea1f257a0f17"))])
+	    (:commit . "fa4987895ff0068618c776f7b49e4ae57248d16f"))])
  (doc-show-inline .
 		  [(0 1)
 		   ((emacs
@@ -2784,14 +2784,14 @@
 	       ("Le Wang" . "l26wang@gmail.com"))
 	      (:commit . "5c1b4f89f0fc60b61646dbd64e946d07ab515a24"))])
  (xah-fly-keys .
-	       [(26 9 20250307132754)
+	       [(26 10 20250308091402)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "be07d739cc9f95de3508a1fd0eaa4c5b0da363f8"))])
+		 (:commit . "1f965c7e2de8ee190fe909c50c3683842deb3afb"))])
  (xkcd .
        [(1 1)
 	((json

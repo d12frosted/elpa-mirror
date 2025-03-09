@@ -1479,7 +1479,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 4 5)
+	 [(1 5 0)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1496,7 +1496,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "3b555e71bbf9f21466b5b1aa6ab1e9f931af1e11"))])
+	   (:commit . "32886c9c168c29b9fa54fdb17b32aa098957b709"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1952,6 +1952,17 @@
 		   ("Daiki Ueno" . "ueno@gnu.org"))
 		  (:keywords "gnome" "c" "coding style")
 		  (:url . "http://elpa.gnu.org/packages/gnome-c-style.html"))])
+ (gnome-dark-style .
+		   [(0 1)
+		    ((emacs
+		      (30 1)))
+		    "Sync theme with GNOME color-scheme" tar
+		    ((:url . "https://github.com/dimagid/gnome-dark-style")
+		     (:keywords "themes" "gnome" "sync" "dark" "light" "color-scheme")
+		     (:maintainer "David Dimagid" . "davidimagid@gmail.com")
+		     (:authors
+		      ("David Dimagid" . "davidimagid@gmail.com"))
+		     (:commit . "ee6bc5da41f067889bac0c7184076e8efdaee07a"))])
  (gnorb .
 	[(1 6 11)
 	 ((cl-lib

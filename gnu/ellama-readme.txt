@@ -434,13 +434,13 @@
 1.2.45 ellama-solve-reasoning-problem
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Solve reasoning problem with [Absctraction of Thought] technique. It
+  Solve reasoning problem with [Abstraction of Thought] technique. It
   uses a chain of multiple messages to LLM and help it to provide much
   better answers on reasoning problems. Even small LLMs like [phi3-mini]
   provides much better results on reasoning tasks using AoT.
 
 
-[Absctraction of Thought] <https://arxiv.org/pdf/2406.12442>
+[Abstraction of Thought] <https://arxiv.org/pdf/2406.12442>
 
 [phi3-mini] <https://ollama.com/library/phi3>
 
@@ -688,7 +688,115 @@
   of the buffer being edited.
 
 
-1.6 Acknowledgments
+1.6 Using Blueprints
+────────────────────
+
+  Blueprints in Ellama refer to predefined templates or structures that
+  facilitate the creation and management of chat sessions. These
+  blueprints are designed to streamline the process of generating
+  consistent and high-quality outputs by providing a structured
+  framework for interactions.
+
+
+1.6.1 Key Components of Ellama Blueprints
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  1. *Act*: This is the primary identifier for a blueprint, representing
+      the
+  action or purpose of the blueprint.
+  1. *Prompt*: The content that will be used to initiate the chat
+      session. This
+  can include instructions, context, or any other relevant information
+  needed to guide the conversation.
+  1. *For Developers*: A flag indicating whether the blueprint is
+      intended for
+  developers.
+
+
+1.6.2 Creating and Managing Blueprints
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Ellama provides several functions to create, select, and manage
+  blueprints:
+
+  • *`ellama-blueprint-create'*: This function allows users to create a
+    new blueprint from the current buffer. It prompts for a name and
+    whether the blueprint is for developers, then saves the content of
+    the current buffer as the prompt.
+
+  • *`ellama-blueprint-new'*: This function creates a new buffer for a
+    blueprint, optionally inserting the content of the current region if
+    active.
+
+  • *`ellama-blueprint-select'*: This function allows users to select a
+    prompt from the collection of blueprints. It filters prompts based
+    on whether they are for developers and their source (user-defined,
+    community, or all).
+
+
+1.6.3 Variable Management
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Blueprints can include variables that need to be filled before running
+  the chat session. Ellama provides command to fill these variables:
+
+  • *`ellama-blueprint-fill-variables'*: Prompts the user to enter
+    values for variables found in the current buffer and fills them.
+
+
+1.6.4 Keymap and Mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Ellama provides a local keymap `ellama-blueprint-mode-map' for
+  managing blueprints within buffers. The mode includes key bindings for
+  sending the buffer to a new chat session, killing the current buffer,
+  creating a new blueprint, and filling variables.
+
+  The `ellama-blueprint-mode' is a derived mode from `text-mode',
+  providing syntax highlighting for variables in curly braces and
+  setting up the local keymap.
+
+  When in `ellama-blueprint-mode', the following keybindings are
+  available:
+
+  • `C-c C-c': Send current buffer to a new chat session and kill the
+    current buffer.
+  • `C-c C-k': Kill the current buffer.
+  • `C-c c': Create a blueprint from the current buffer.
+  • `C-c v': Fill variables in the current blueprint.
+
+
+1.6.5 Transient Menus
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Ellama includes transient menus for easy access to blueprint
+  commands. The `ellama-transient-blueprint-menu' provides options for
+  chatting with a selected blueprint, creating a new blueprint, and
+  quitting the menu.
+
+  The `ellama-transient-main-menu' integrates the blueprint menu into
+  the main menu, providing a comprehensive interface for all Ellama
+  commands.
+
+
+1.6.6 Running Blueprints programmatically
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The `ellama-blueprint-run' function initiates a chat session using a
+  specified blueprint. It pre-fills variables based on the provided
+  arguments.
+
+  ┌────
+  │ (defun my-chat-with-morpheus ()
+  │   "Start chat with Morpheus."
+  │   (interactive)
+  │   (ellama-blueprint-run "Character" '(:character "Morpheus" :series "Matrix")))
+  │ 
+  │ (global-set-key (kbd "C-c e M") #'my-chat-with-morpheus)
+  └────
+
+
+1.7 Acknowledgments
 ───────────────────
 
   Thanks [Jeffrey Morgan] for excellent project [ollama]. This project
