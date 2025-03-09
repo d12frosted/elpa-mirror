@@ -1,17 +1,20 @@
-Imagine you have a function you'd like to run on a long list of inputs.  You
-could run (mapcar #'FN INPUTS), but that hangs Emacs until done.
+Imagine you have a function you'd like to run on a long list of inputs.
+You could run (mapcar #'FN INPUTS), but that hangs Emacs until done.
 
-This library gives you the tools to split up the inputs and run the function
-in many subprocesses (one per CPU core), then merges their outputs and
-passes it back to the current Emacs.  In the meantime, current Emacs does
-not hang at all.
+This library lets you split up the inputs and run the function in many
+subprocesses---one per CPU core---then merge their outputs and handle the
+result as if it had been returned by that `mapcar'.  In the meantime,
+current Emacs does not hang at all.
+
+You need to know the concept of a callback.
 
 Public API:
-- `el-job-launch' (also main documentation)
-- `el-job-await'
-- `el-job-is-busy'
+- Function `el-job-launch' (read its docstring)
+- Function `el-job-await'
+- Function `el-job-is-busy'
+- Variable `el-job-major-version'
 
 Dev tools:
-- `el-job-cycle-debug-level'
-- `el-job-show-info'
-- `el-job-kill-all'
+- Command `el-job-cycle-debug-level'
+- Command `el-job-show-info'
+- Command `el-job-kill-all'

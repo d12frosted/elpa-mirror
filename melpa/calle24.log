@@ -1,0 +1,126 @@
+Package: calle24
+Fetcher: github
+Source:  https://github.com/kickingvegas/calle24
+
+Cloning https://github.com/kickingvegas/calle24 to /mnt/store/melpa/working/calle24/
+Checking out c5152bc1f9ee305b371f6ea9553320c80df91688
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/calle24/
+  to /tmp/calle24ODwYdd/calle24-20250309.140
+  ! lisp/calle24.el -> calle24.el
+    images => images
+Created calle24-20250309.140.tar containing:
+  calle24-20250309.140/
+  calle24-20250309.140/calle24-pkg.el
+  calle24-20250309.140/calle24.el
+  calle24-20250309.140/images/
+  calle24-20250309.140/images/attach.xpm
+  calle24-20250309.140/images/attach_dark.xpm
+  calle24-20250309.140/images/back-arrow.xpm
+  calle24-20250309.140/images/back-arrow_dark.xpm
+  calle24-20250309.140/images/bookmark.xpm
+  calle24-20250309.140/images/bookmark_add.xpm
+  calle24-20250309.140/images/bookmark_add_dark.xpm
+  calle24-20250309.140/images/bookmark_dark.xpm
+  calle24-20250309.140/images/cancel.xpm
+  calle24-20250309.140/images/cancel_dark.xpm
+  calle24-20250309.140/images/checked.xpm
+  calle24-20250309.140/images/checked_dark.xpm
+  calle24-20250309.140/images/close.xpm
+  calle24-20250309.140/images/close_dark.xpm
+  calle24-20250309.140/images/connect-to-url.xpm
+  calle24-20250309.140/images/connect-to-url_dark.xpm
+  calle24-20250309.140/images/connect.xpm
+  calle24-20250309.140/images/connect_dark.xpm
+  calle24-20250309.140/images/contact.xpm
+  calle24-20250309.140/images/contact_dark.xpm
+  calle24-20250309.140/images/copy.xpm
+  calle24-20250309.140/images/copy_dark.xpm
+  calle24-20250309.140/images/cut.xpm
+  calle24-20250309.140/images/cut_dark.xpm
+  calle24-20250309.140/images/delete.xpm
+  calle24-20250309.140/images/delete_dark.xpm
+  calle24-20250309.140/images/diropen.xpm
+  calle24-20250309.140/images/diropen_dark.xpm
+  calle24-20250309.140/images/exit.xpm
+  calle24-20250309.140/images/exit_dark.xpm
+  calle24-20250309.140/images/fwd-arrow.xpm
+  calle24-20250309.140/images/fwd-arrow_dark.xpm
+  calle24-20250309.140/images/help.xpm
+  calle24-20250309.140/images/help_dark.xpm
+  calle24-20250309.140/images/hide.xpm
+  calle24-20250309.140/images/hide_dark.xpm
+  calle24-20250309.140/images/home.xpm
+  calle24-20250309.140/images/home_dark.xpm
+  calle24-20250309.140/images/index.xpm
+  calle24-20250309.140/images/index_dark.xpm
+  calle24-20250309.140/images/info.xpm
+  calle24-20250309.140/images/info_dark.xpm
+  calle24-20250309.140/images/jump-to.xpm
+  calle24-20250309.140/images/jump-to_dark.xpm
+  calle24-20250309.140/images/last-page.xpm
+  calle24-20250309.140/images/last-page_dark.xpm
+  calle24-20250309.140/images/left-arrow.xpm
+  calle24-20250309.140/images/left-arrow_dark.xpm
+  calle24-20250309.140/images/lock-broken.xpm
+  calle24-20250309.140/images/lock-broken_dark.xpm
+  calle24-20250309.140/images/lock-ok.xpm
+  calle24-20250309.140/images/lock-ok_dark.xpm
+  calle24-20250309.140/images/lock-open.xpm
+  calle24-20250309.140/images/lock-open_dark.xpm
+  calle24-20250309.140/images/lock.xpm
+  calle24-20250309.140/images/lock_dark.xpm
+  calle24-20250309.140/images/new.xpm
+  calle24-20250309.140/images/new_dark.xpm
+  calle24-20250309.140/images/next-node.xpm
+  calle24-20250309.140/images/next-node_dark.xpm
+  calle24-20250309.140/images/next-page.xpm
+  calle24-20250309.140/images/next-page_dark.xpm
+  calle24-20250309.140/images/open.xpm
+  calle24-20250309.140/images/open_dark.xpm
+  calle24-20250309.140/images/paste.xpm
+  calle24-20250309.140/images/paste_dark.xpm
+  calle24-20250309.140/images/preferences.xpm
+  calle24-20250309.140/images/preferences_dark.xpm
+  calle24-20250309.140/images/prev-node.xpm
+  calle24-20250309.140/images/prev-node_dark.xpm
+  calle24-20250309.140/images/prev-page.xpm
+  calle24-20250309.140/images/prev-page_dark.xpm
+  calle24-20250309.140/images/print.xpm
+  calle24-20250309.140/images/print_dark.xpm
+  calle24-20250309.140/images/redo.xpm
+  calle24-20250309.140/images/redo_dark.xpm
+  calle24-20250309.140/images/refresh.xpm
+  calle24-20250309.140/images/refresh_dark.xpm
+  calle24-20250309.140/images/right-arrow.xpm
+  calle24-20250309.140/images/right-arrow_dark.xpm
+  calle24-20250309.140/images/save.xpm
+  calle24-20250309.140/images/save_dark.xpm
+  calle24-20250309.140/images/saveas.xpm
+  calle24-20250309.140/images/saveas_dark.xpm
+  calle24-20250309.140/images/search-replace.xpm
+  calle24-20250309.140/images/search-replace_dark.xpm
+  calle24-20250309.140/images/search.xpm
+  calle24-20250309.140/images/search2.xpm
+  calle24-20250309.140/images/search2_dark.xpm
+  calle24-20250309.140/images/search_dark.xpm
+  calle24-20250309.140/images/share.xpm
+  calle24-20250309.140/images/share_dark.xpm
+  calle24-20250309.140/images/show.xpm
+  calle24-20250309.140/images/show_dark.xpm
+  calle24-20250309.140/images/unchecked.xpm
+  calle24-20250309.140/images/unchecked_dark.xpm
+  calle24-20250309.140/images/undo.xpm
+  calle24-20250309.140/images/undo_dark.xpm
+  calle24-20250309.140/images/up-arrow.xpm
+  calle24-20250309.140/images/up-arrow_dark.xpm
+  calle24-20250309.140/images/up-node.xpm
+  calle24-20250309.140/images/up-node_dark.xpm
+  calle24-20250309.140/images/zoom-in.xpm
+  calle24-20250309.140/images/zoom-in_dark.xpm
+  calle24-20250309.140/images/zoom-out.xpm
+  calle24-20250309.140/images/zoom-out_dark.xpm
+ ✓ Success:
+  2025-03-09T17:45:28+0000  calle24-20250309.140.entry
+  2025-03-09T17:45:28+0000  calle24-20250309.140.tar
+Built calle24 in 3.246s, finished at 2025-03-09T17:45:29+0000
