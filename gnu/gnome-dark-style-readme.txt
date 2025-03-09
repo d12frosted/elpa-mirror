@@ -35,6 +35,19 @@
 4 Installation
 ══════════════
 
+4.1 GNU ELPA package
+────────────────────
+
+  The package is available as gnome-dark-style. Simply do:
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install
+  └────
+
+
+4.2 Manual installation
+───────────────────────
+
   1. Clone the repository or download the `gnome-dark-style.el' file.
   2. Add the following to your Emacs configuration file `init.el':
 
@@ -64,7 +77,6 @@
   ┌────
   │ ;; Sync Emacs theme with GNOME's color scheme
   │ (use-package gnome-dark-style
-  │   :load-path "/path/to/gnome-dark-style"
   │   ;; Uncomment and set your preferred themes
   │   ;; :custom
   │   ;; (gnome-light-theme 'ef-eagle)  ; default: nil
