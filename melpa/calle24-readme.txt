@@ -1,4 +1,4 @@
-Calle 24 provides toolbar support for SF symbols. It achieves this by
+Calle 24 provides toolbar support for SF Symbols. It achieves this by
 substituting Emacs image assets with SF Symbols by proxy.
 
 This package is only intended to be used by Emacs (NS variant) running on

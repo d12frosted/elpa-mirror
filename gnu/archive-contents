@@ -1479,7 +1479,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 5 0)
+	 [(1 5 1)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1496,7 +1496,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "32886c9c168c29b9fa54fdb17b32aa098957b709"))])
+	   (:commit . "30058c4771708e7ad0fa9d93fe0bd00c2889a483"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -1953,7 +1953,7 @@
 		  (:keywords "gnome" "c" "coding style")
 		  (:url . "http://elpa.gnu.org/packages/gnome-c-style.html"))])
  (gnome-dark-style .
-		   [(0 2 1)
+		   [(0 2 2)
 		    ((emacs
 		      (30 1)))
 		    "Sync theme with GNOME color-scheme" tar
@@ -1962,7 +1962,7 @@
 		     (:maintainer "David Dimagid" . "davidimagid@gmail.com")
 		     (:authors
 		      ("David Dimagid" . "davidimagid@gmail.com"))
-		     (:commit . "2d6bf27ee19d749c538778dc97b70b7fc521aa23"))])
+		     (:commit . "cbc4fbe8f24ec28b5ca754c6022f60d09879d20c"))])
  (gnorb .
 	[(1 6 11)
 	 ((cl-lib
@@ -3153,7 +3153,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "2b7a1688f24cc8ef5a3c3a6dab8e00d833bcda59"))])
  (org .
-      [(9 7 24)
+      [(9 7 25)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3162,7 +3162,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "7fa7a541ee97366c8a0741d2ecfd3a2b7790b320"))])
+	(:commit . "bdf9f949d75f24f064b83971a0bb6311b3915f81"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
