@@ -19,7 +19,6 @@ Compared to org-roam:
 
   + Compatible (you can use both packages and compare)
   + Fast
-    + Speedup factor around 500x
   + No SQLite
   + Never again sit through a slow `org-id-update-id-locations'
   + If you want, opt out of those file-level :PROPERTIES: drawers

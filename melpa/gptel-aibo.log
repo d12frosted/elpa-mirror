@@ -3,28 +3,34 @@ Fetcher: github
 Source:  https://github.com/dolmens/gptel-aibo
 
 Updating /mnt/store/melpa/working/gptel-aibo/
-Checking out 05aa4cda81b2864959442518d4bdfbcbabe91f81
+Checking out de2734945a393a36900beef6524aea3ba4431391
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel-aibo/
-  to /tmp/gptel-aiboPlfQg4/gptel-aibo-20250306.1405
+  to /tmp/gptel-aibomjXu0y/gptel-aibo-20250310.248
     gptel-aibo-action-org-parser.el -> gptel-aibo-action-org-parser.el
     gptel-aibo-action-parser.el -> gptel-aibo-action-parser.el
     gptel-aibo-action.el -> gptel-aibo-action.el
     gptel-aibo-context.el -> gptel-aibo-context.el
     gptel-aibo-face.el -> gptel-aibo-face.el
+    gptel-aibo-inplace-diff.el -> gptel-aibo-inplace-diff.el
     gptel-aibo-planner.el -> gptel-aibo-planner.el
+    gptel-aibo-summon.el -> gptel-aibo-summon.el
     gptel-aibo.el -> gptel-aibo.el
-Created gptel-aibo-20250306.1405.tar containing:
-  gptel-aibo-20250306.1405/
-  gptel-aibo-20250306.1405/gptel-aibo-action-org-parser.el
-  gptel-aibo-20250306.1405/gptel-aibo-action-parser.el
-  gptel-aibo-20250306.1405/gptel-aibo-action.el
-  gptel-aibo-20250306.1405/gptel-aibo-context.el
-  gptel-aibo-20250306.1405/gptel-aibo-face.el
-  gptel-aibo-20250306.1405/gptel-aibo-pkg.el
-  gptel-aibo-20250306.1405/gptel-aibo-planner.el
-  gptel-aibo-20250306.1405/gptel-aibo.el
+Created gptel-aibo-20250310.248.tar containing:
+  gptel-aibo-20250310.248/
+  gptel-aibo-20250310.248/gptel-aibo-action-org-parser.el
+  gptel-aibo-20250310.248/gptel-aibo-action-parser.el
+  gptel-aibo-20250310.248/gptel-aibo-action.el
+  gptel-aibo-20250310.248/gptel-aibo-context.el
+  gptel-aibo-20250310.248/gptel-aibo-face.el
+  gptel-aibo-20250310.248/gptel-aibo-inplace-diff.el
+  gptel-aibo-20250310.248/gptel-aibo-pkg.el
+  gptel-aibo-20250310.248/gptel-aibo-planner.el
+  gptel-aibo-20250310.248/gptel-aibo-summon.el
+  gptel-aibo-20250310.248/gptel-aibo.el
  ✓ Success:
-  2025-03-09T22:59:51+0000  gptel-aibo-20250306.1405.entry
-  2025-03-09T22:59:51+0000  gptel-aibo-20250306.1405.tar
-Built gptel-aibo in 2.884s, finished at 2025-03-09T22:59:52+0000
+  2025-03-10T01:25:50+0000  gptel-aibo-20250306.1405.entry
+  2025-03-10T01:25:50+0000  gptel-aibo-20250306.1405.tar
+  2025-03-10T03:51:10+0000  gptel-aibo-20250310.248.entry
+  2025-03-10T03:51:10+0000  gptel-aibo-20250310.248.tar
+Built gptel-aibo in 3.505s, finished at 2025-03-10T03:51:11+0000
