@@ -7,9 +7,8 @@ https://bilibili.com is a popular Chinese video website.
 
 使用步骤:
 
- 1. 安装 `mpvi'
- 2. 将本包加入 `load-path' 并 \\=(require 'bilibili)
- 3. 在 org buffer 中调用 `bilibili-insert-xxx' 插入相关视频
- 4. 点击链接进行播放
+ 1. 安装 `mpvi', (use-package bilibili :ensure t)
+ 2. 在 org buffer 中调用 `bilibili-insert-xxx' 插入相关视频
+ 3. 点击链接进行播放
 
-https://github.com/SocialSisterYi/bilibili-API-collect
+;; https://github.com/SocialSisterYi/bilibili-API-collect
