@@ -23,6 +23,7 @@ Table of Contents
 4. Configuration
 .. 1. Completion styles and TAB completion
 .. 2. Completion-at-point and completion-in-region
+.. 3. Completing-read-multiple
 5. Extensions
 .. 1. Configure Vertico per command or completion category
 6. Complementary packages
@@ -127,7 +128,7 @@ Table of Contents
   configuration:
 
   ┌────
-  │ ;; Enable vertico
+  │ ;; Enable Vertico.
   │ (use-package vertico
   │   :custom
   │   ;; (vertico-scroll-margin 0) ;; Different scroll margin
@@ -142,7 +143,7 @@ Table of Contents
   │   :init
   │   (savehist-mode))
   │ 
-  │ ;; A few more useful configurations...
+  │ ;; Emacs minibuffer configurations.
   │ (use-package emacs
   │   :custom
   │   ;; Support opening new minibuffers from inside existing minibuffers.
@@ -151,22 +152,9 @@ Table of Contents
   │   ;; commands are hidden in normal buffers. This setting is useful beyond
   │   ;; Vertico.
   │   (read-extended-command-predicate #'command-completion-default-include-p)
-  │   :init
-  │   ;; Add prompt indicator to `completing-read-multiple'.
-  │   ;; We display [CRM<separator>], e.g., [CRM,] if the separator is a comma.
-  │   (defun crm-indicator (args)
-  │     (cons (format "[CRM%s] %s"
-  │ 		  (replace-regexp-in-string
-  │ 		   "\\`\\[.*?]\\*\\|\\[.*?]\\*\\'" ""
-  │ 		   crm-separator)
-  │ 		  (car args))
-  │ 	  (cdr args)))
-  │   (advice-add #'completing-read-multiple :filter-args #'crm-indicator)
-  │ 
   │   ;; Do not allow the cursor in the minibuffer prompt
-  │   (setq minibuffer-prompt-properties
-  │ 	'(read-only t cursor-intangible t face minibuffer-prompt))
-  │   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode))
+  │   (minibuffer-prompt-properties
+  │    '(read-only t cursor-intangible t face minibuffer-prompt)))
   └────
 
   I recommend to give Orderless completion a try, which is more flexible
@@ -276,14 +264,7 @@ Table of Contents
   `consult-completion-in-region' provided by the Consult package.
 
   ┌────
-  │ ;; Use `consult-completion-in-region' if Vertico is enabled.
-  │ ;; Otherwise use the default `completion--in-region' function.
-  │ (setq completion-in-region-function
-  │       (lambda (&rest args)
-  │ 	(apply (if vertico-mode
-  │ 		   #'consult-completion-in-region
-  │ 		 #'completion--in-region)
-  │ 	       args)))
+  │ (setq completion-in-region-function #'consult-completion-in-region)
   └────
 
   You may also want to look into my [Corfu] package, which provides a
@@ -293,6 +274,32 @@ Table of Contents
 
 
 [Corfu] <https://github.com/minad/corfu>
+
+
+4.3 Completing-read-multiple
+────────────────────────────
+
+  The function `completing-read-multiple' is similar to
+  `completing-read' but returns a list of completed strings. The strings
+  are separated by `crm-separator' in the minibuffer. However
+  `completing-read-multiple' does not indicate to the user that multiple
+  strings can be completed. I have contributed a patch to Emacs 31,
+  which fixes this minor issue. See the variable `crm-prompt' and
+  [bug#76028]. On older Emacs versions you can use the following:
+
+  ┌────
+  │ ;; Prompt indicator for `completing-read-multiple'.
+  │ (when (< emacs-major-version 31)
+  │   (advice-add #'completing-read-multiple :filter-args
+  │ 	      (lambda (args)
+  │ 		(cons (format "[CRM%s] %s"
+  │ 			      (string-replace "[ \t]*" "" crm-separator)
+  │ 			      (car args))
+  │ 		      (cdr args))))))
+  └────
+
+
+[bug#76028] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=76028>
 
 
 5 Extensions

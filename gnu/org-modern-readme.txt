@@ -11,9 +11,9 @@
 
   This package implements a modern style for your Org buffers using font
   locking and text properties. The package styles headlines, keywords,
-  tables and source blocks. The styling is configurable, you can enable,
-  disable or modify the style of each syntax element individually via
-  the `org-modern' customization group.
+  tables and source blocks. The styling is configurable, you can disable
+  or modify the style of each syntax element individually via the
+  `org-modern' customization group.
 
   <https://github.com/minad/org-modern/blob/screenshots/example.gif?raw=true>
 
@@ -28,7 +28,8 @@
   font, e.g., Iosevka Term Curly.  `org-modern-mode' tries to adjust the
   tag label display based on the value of `line-spacing'. This looks
   best if `line-spacing' has a value between 0.1 and 0.4 in the Org
-  buffer.
+  buffer. Larger values of `line-spacing' are not recommended, since
+  Emacs does not center the text vertically (see Emacs [bug#76390]).
 
 
 [example.org] <file:example.org>
@@ -36,6 +37,8 @@
 [modus-operandi] <https://protesilaos.com/emacs/modus-themes>
 
 [Iosevka] <https://github.com/be5invis/Iosevka>
+
+[bug#76390] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=76390>
 
 
 2 Configuration
@@ -57,7 +60,7 @@
   └────
 
   Try the following more extensive setup in `emacs -Q' to reproduce the
-  looks of the screenshot above.
+  looks of the screenshot above after the installation of `org-modern'.
 
   ┌────
   │ ;; Minimal UI
@@ -94,20 +97,8 @@
   │  ;; Org styling, hide markup etc.
   │  org-hide-emphasis-markers t
   │  org-pretty-entities t
-  │ 
-  │  ;; Agenda styling
   │  org-agenda-tags-column 0
-  │  org-agenda-block-separator ?─
-  │  org-agenda-time-grid
-  │  '((daily today require-timed)
-  │    (800 1000 1200 1400 1600 1800 2000)
-  │    " ┄┄┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
-  │  org-agenda-current-time-string
-  │  "◀── now ─────────────────────────────────────────────────")
-  │ 
-  │ ;; Ellipsis styling
-  │ (setq org-ellipsis "…")
-  │ (set-face-attribute 'org-ellipsis nil :inherit 'default :box nil)
+  │  org-ellipsis "…")
   │ 
   │ (global-org-modern-mode)
   └────

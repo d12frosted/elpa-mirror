@@ -401,14 +401,7 @@ Table of Contents
     `completion-in-region-function'. Then your minibuffer completion UI
     (e.g., Vertico or Icomplete) will be used for `completion-at-point'.
     ┌────
-    │ ;; Use `consult-completion-in-region' if Vertico is enabled.
-    │ ;; Otherwise use the default `completion--in-region' function.
-    │ (setq completion-in-region-function
-    │       (lambda (&rest args)
-    │ 	(apply (if vertico-mode
-    │ 		   #'consult-completion-in-region
-    │ 		 #'completion--in-region)
-    │ 	       args)))
+    │ (setq completion-in-region-function #'consult-completion-in-region)
     └────
     Instead of `consult-completion-in-region', you may prefer to see the
     completions directly in the buffer as a small popup. In that case, I

@@ -552,7 +552,7 @@
 	     ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
 	    (:commit . "855a9cb092eecf1e5c17ea56c440a0200f95eb4c"))])
  (cape .
-       [(1 9)
+       [(2 0)
 	((emacs
 	  (28 1))
 	 (compat
@@ -563,7 +563,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "118db73710466ab03708e7511f4bff7827057000"))])
+	 (:commit . "2e86b6deed2844fc1345ff01bc92c3a849a33778"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -773,7 +773,7 @@
 	       ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	      (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult .
-	  [(2 0)
+	  [(2 1)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -782,7 +782,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "03fa8f6b7482eab1dee85d32ab604f0b7312cf82"))])
+	    (:commit . "d557305b730f7666d46bc3eb04c87cfcc493a8e5"))])
  (consult-denote .
 		 [(0 2 4)
 		  ((emacs
@@ -1479,7 +1479,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 5 2)
+	 [(1 5 3)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1496,7 +1496,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "b996115b90a8edda01d6078dc391c99c243f6496"))])
+	   (:commit . "c221cc97796df8bcb03a47bf5a2687c270c38bf4"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2378,7 +2378,7 @@
 		(:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
 		(:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx .
-       [(1 12)
+       [(2 0)
 	((emacs
 	  (28 1))
 	 (compat
@@ -2389,7 +2389,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "2144d03f7bcc3f461b4e67f913dfc0055e4ad7e2"))])
+	 (:commit . "9c778357ffaac972c86f4acd39d70c547abcaf46"))])
  (jit-spell .
 	    [(0 4)
 	     ((emacs
@@ -3220,7 +3220,7 @@
 		  ("Hanno Perrey" . "hanno@hoowl.se"))
 		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern .
-	     [(1 6)
+	     [(1 7)
 	      ((emacs
 		(28 1))
 	       (compat
@@ -3231,7 +3231,7 @@
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "8420e4f839bee2c34488ce94fa08212dfe0b2797"))])
+	       (:commit . "e7a4c5e4a1d309895c60b3a3b3e62ab1f6a926b4"))])
  (org-notify .
 	     [(0 1 1)
 	      ((emacs
@@ -4920,7 +4920,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "78bc5949db489b143f7424540d6cc56fc529c9ea"))])
  (vertico .
-	  [(1 11)
+	  [(2 0)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -4931,7 +4931,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "9eb0168d32ddc4cb43a8a7c916094ae7b1d696d6"))])
+	    (:commit . "026a81a9c893b1d73cdbcb12436a0fad3ebdeb5f"))])
  (vertico-posframe .
 		   [(0 8 0)
 		    ((emacs

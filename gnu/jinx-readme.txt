@@ -129,7 +129,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   completion menu. You can press the displayed digit keys to quickly
   select a suggestion. Furthermore the menu offers options to save the
   word temporarily for the current session, in the personal dictionary
-  or in the file-local variables.
+  or in the file-local or directory-local variables.
 
   You can enter arbitrary input at the correction prompt in order to
   make the correction or to store a modified word in the personal
