@@ -34,6 +34,7 @@ Compared to org-roam:
 
 Compared to denote:
 
+  + Compatible (you can use both packages and compare)
   + No mandatory filename style (can match Denote format if you like)
   + You can have as many "notes" as you want inside one file.
     + You could possibly use Denote for coarse browsing,
