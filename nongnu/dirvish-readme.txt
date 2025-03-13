@@ -63,11 +63,12 @@
 
   ⁃ `M-x dirvish RET'
 
-    Welcome to Dirvish!  Use your favorite dired commands here!
+    Welcome to Dirvish!  Use your favorite dired commands here, press
+    `q' to quit.
 
   ⁃ `M-x dirvish-dwim RET'
 
-    Works the same as `dirvish` when the selected window is the only
+    Works the same as `dirvish' when the selected window is the only
     window; otherwise, it avoids occupying the entire frame.
 
   ⁃ `M-x dirvish-dispatch RET'

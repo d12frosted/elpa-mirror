@@ -988,16 +988,16 @@
 	     (:url . "https://elpa.gnu.org/packages/darkroom.html")
 	     (:commit . "4496945487130ae1123a9f17b40674ec24c54e8f"))])
  (dash .
-       [(2 19 1)
+       [(2 20 0)
 	((emacs
 	  (24)))
 	"A modern list library for Emacs" tar
 	((:url . "https://github.com/magnars/dash.el")
 	 (:keywords "extensions" "lisp")
-	 (:maintainer "Magnar Sveen" . "magnars@gmail.com")
+	 (:maintainer "Basil L. Contovounesios" . "basil@contovou.net")
 	 (:authors
 	  ("Magnar Sveen" . "magnars@gmail.com"))
-	 (:commit . "39d067b9fbb2db65fc7a6938bfb21489ad990cb4"))])
+	 (:commit . "fcb5d831fc08a43f984242c7509870f30983c27c"))])
  (dbus-codegen .
 	       [(0 1)
 		((cl-lib
@@ -1479,7 +1479,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 5 3)
+	 [(1 5 4)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1496,7 +1496,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "c221cc97796df8bcb03a47bf5a2687c270c38bf4"))])
+	   (:commit . "baef2248121afcc8367c4c6213f582b3f292030b"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
