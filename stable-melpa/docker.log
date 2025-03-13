@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/Silex/docker.el
 
 Updating /mnt/store/melpa/working/docker/
-Checking out 46b597a711492e1c19d1260951f39372450278f5
+Checking out 36cc66f2a975d2a1864545d0bd57dd4b6db3e6a5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/docker2ONAc8/docker-20250109.810
+  to /tmp/dockerf9wW2i/docker-20250313.2007
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-context.el -> docker-context.el
@@ -19,22 +19,24 @@ Copying files (->) and directories (=>)
     docker-utils.el -> docker-utils.el
     docker-volume.el -> docker-volume.el
     docker.el -> docker.el
-Created docker-20250109.810.tar containing:
-  docker-20250109.810/
-  docker-20250109.810/docker-compose.el
-  docker-20250109.810/docker-container.el
-  docker-20250109.810/docker-context.el
-  docker-20250109.810/docker-core.el
-  docker-20250109.810/docker-faces.el
-  docker-20250109.810/docker-group.el
-  docker-20250109.810/docker-image.el
-  docker-20250109.810/docker-network.el
-  docker-20250109.810/docker-pkg.el
-  docker-20250109.810/docker-process.el
-  docker-20250109.810/docker-utils.el
-  docker-20250109.810/docker-volume.el
-  docker-20250109.810/docker.el
+Created docker-20250313.2007.tar containing:
+  docker-20250313.2007/
+  docker-20250313.2007/docker-compose.el
+  docker-20250313.2007/docker-container.el
+  docker-20250313.2007/docker-context.el
+  docker-20250313.2007/docker-core.el
+  docker-20250313.2007/docker-faces.el
+  docker-20250313.2007/docker-group.el
+  docker-20250313.2007/docker-image.el
+  docker-20250313.2007/docker-network.el
+  docker-20250313.2007/docker-pkg.el
+  docker-20250313.2007/docker-process.el
+  docker-20250313.2007/docker-utils.el
+  docker-20250313.2007/docker-volume.el
+  docker-20250313.2007/docker.el
  ✓ Success:
-  2025-03-13T15:08:01+0000  docker-20250109.810.entry
-  2025-03-13T15:08:01+0000  docker-20250109.810.tar
-Built docker in 3.828s, finished at 2025-03-13T15:08:02+0000
+  2025-03-13T17:37:41+0000  docker-20250109.810.entry
+  2025-03-13T17:37:41+0000  docker-20250109.810.tar
+  2025-03-13T20:08:00+0000  docker-20250313.2007.entry
+  2025-03-13T20:08:00+0000  docker-20250313.2007.tar
+Built docker in 3.887s, finished at 2025-03-13T20:08:01+0000
