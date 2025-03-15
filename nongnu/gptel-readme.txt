@@ -3,28 +3,31 @@ models and backends.
 
 It works in the spirit of Emacs, available at any time and in any buffer.
 
-gptel supports
+gptel supports:
 
 - The services ChatGPT, Azure, Gemini, Anthropic AI, Anyscale, Together.ai,
   Perplexity, Anyscale, OpenRouter, Groq, PrivateGPT, DeepSeek, Cerebras,
-  Github Models, xAI and Kagi (FastGPT & Summarizer)
+  Github Models, Novita AI, xAI and Kagi (FastGPT & Summarizer).
 - Local models via Ollama, Llama.cpp, Llamafiles or GPT4All
 
- Additionally, any LLM service (local or remote) that provides an
- OpenAI-compatible API is supported.
+Additionally, any LLM service (local or remote) that provides an
+OpenAI-compatible API is supported.
 
 Features:
+
 - It’s async and fast, streams responses.
 - Interact with LLMs from anywhere in Emacs (any buffer, shell, minibuffer,
-  wherever)
+  wherever).
 - LLM responses are in Markdown or Org markup.
 - Supports conversations and multiple independent sessions.
+- Supports tool-use to equip LLMs with agentic capabilities.
 - Supports multi-modal models (send images, documents).
+- Supports "reasoning" content in LLM responses.
 - Save chats as regular Markdown/Org/Text files and resume them later.
 - You can go back and edit your previous prompts or LLM responses when
   continuing a conversation.  These will be fed back to the model.
 - Redirect prompts and responses easily
-- Rewrite, refactor or fill in regions in buffers
+- Rewrite, refactor or fill in regions in buffers.
 - Write your own commands for custom tasks with a simple API.
 
 Requirements for ChatGPT, Azure, Gemini or Kagi:
@@ -33,15 +36,17 @@ Requirements for ChatGPT, Azure, Gemini or Kagi:
   key or to a function of no arguments that returns the key.  (It tries to
   use `auth-source' by default)
 
-  ChatGPT is configured out of the box.  For the other sources:
+ChatGPT is configured out of the box.  For the other sources:
 
 - For Azure: define a gptel-backend with `gptel-make-azure', which see.
 - For Gemini: define a gptel-backend with `gptel-make-gemini', which see.
 - For Anthropic (Claude): define a gptel-backend with `gptel-make-anthropic',
-  which see
-- For Together.ai, Anyscale, Perplexity, Groq, OpenRouter, DeepSeek, Cerebras or
+  which see.
+- For Together.ai, Anyscale, Groq, OpenRouter, DeepSeek, Cerebras or
   Github Models: define a gptel-backend with `gptel-make-openai', which see.
 - For PrivateGPT: define a backend with `gptel-make-privategpt', which see.
+- For Perplexity: define a backend with `gptel-make-perplexity', which see.
+- For Deepseek: define a backend with `gptel-make-deepseek', which see.
 - For Kagi: define a gptel-backend with `gptel-make-kagi', which see.
 
 For local models using Ollama, Llama.cpp or GPT4All:
@@ -49,7 +54,7 @@ For local models using Ollama, Llama.cpp or GPT4All:
 - The model has to be running on an accessible address (or localhost)
 - Define a gptel-backend with `gptel-make-ollama' or `gptel-make-gpt4all',
   which see.
-- Llama.cpp or Llamafiles: Define a gptel-backend with `gptel-make-openai',
+- Llama.cpp or Llamafiles: Define a gptel-backend with `gptel-make-openai'.
 
 Consult the package README for examples and more help with configuring
 backends.
@@ -74,7 +79,7 @@ To use this in any buffer:
 
 To use this in a dedicated buffer:
 
-- M-x gptel: Start a chat session
+- M-x gptel: Start a chat session.
 
 - In the chat session: Press `C-c RET' (`gptel-send') to send your prompt.
   Use a prefix argument (`C-u C-c RET') to access a menu.  In this menu you
@@ -94,15 +99,16 @@ To use this in a dedicated buffer:
 Include more context with requests:
 
 If you want to provide the LLM with more context, you can add arbitrary
-regions, buffers or files to the query with `gptel-add'.  To add text or
-media files, call `gptel-add' in Dired or use the dedicated `gptel-add-file'.
+regions, buffers, files or directories to the query with `gptel-add'.  To add
+text or media files, call `gptel-add' in Dired or use the dedicated
+`gptel-add-file'.
 
-You can also add context from gptel's menu instead (gptel-send with a prefix
-arg), as well as examine or modify context.
+You can also add context from gptel's menu instead (`gptel-send' with a
+prefix arg), as well as examine or modify context.
 
 When context is available, gptel will include it with each LLM query.
 
-Rewrite/refactor interface
+Rewrite interface
 
 In any buffer: with a region selected, you can rewrite prose, refactor code
 or fill in the region.  This is accessible via `gptel-rewrite', and also from
@@ -110,7 +116,8 @@ the `gptel-send' menu.
 
 gptel in Org mode:
 
-gptel offers a few extra conveniences in Org mode.
+gptel offers a few extra conveniences in Org mode:
+
 - You can limit the conversation context to an Org heading with
   `gptel-org-set-topic'.
   
@@ -124,5 +131,6 @@ gptel offers a few extra conveniences in Org mode.
   will always use these settings, allowing you to create mostly reproducible
   LLM chat notebooks.
 
-Finally, gptel offers a general purpose API for writing LLM ineractions
-that suit your workflow, see `gptel-request'.
+Finally, gptel offers a general purpose API for writing LLM ineractions that
+suit your workflow.  See `gptel-request', and `gptel-fsm' for more advanced
+usage.

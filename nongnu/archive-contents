@@ -560,7 +560,7 @@
 		  ("EditorConfig Team" . "editorconfig@googlegroups.com"))
 		 (:commit . "f1531bab5b57e40759167b7e5db49acbbc09972f"))])
  (eglot-inactive-regions .
-			 [(0 6 3)
+			 [(0 6 4)
 			  ((emacs
 			    (29 1)))
 			  "Highlight inactive code regions with eglot power" tar
@@ -568,7 +568,7 @@
 			   (:maintainer "Filippo Argiolas" . "filippo.argiolas@gmail.com")
 			   (:authors
 			    ("Filippo Argiolas" . "filippo.argiolas@gmail.com"))
-			   (:commit . "2c83a3230d4ee9336b0311dbaa6fa77c2d2538c6"))])
+			   (:commit . "cbe09a531f1f86d7601c70fc071f5fa4bf13499e"))])
  (eldoc-diffstat .
 		 [(1 0)
 		  ((emacs
@@ -1177,20 +1177,20 @@
 	      ("David Andersson" . "l.david.anderssonsverige.nu"))
 	     (:commit . "278cd3e6d5107693aa2bb33189ca503f22f227d0"))])
  (gptel .
-	[(0 9 7)
+	[(0 9 8)
 	 ((emacs
 	   (27 1))
 	  (transient
-	   (0 4 0))
+	   (0 7 4))
 	  (compat
 	   (29 1 4 1)))
 	 "Interact with ChatGPT or other LLMs" tar
 	 ((:url . "https://github.com/karthink/gptel")
-	  (:keywords "convenience")
+	  (:keywords "convenience" "tools")
 	  (:maintainer "Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com")
 	  (:authors
 	   ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-	  (:commit . "5a5cddb93d610bd59ec52a070b0f89a9ec842152"))])
+	  (:commit . "4c5f7e6953c3e4dac36b4c9cf4b4a2c854febfad"))])
  (graphql-mode .
 	       [(1 0 0)
 		((emacs
@@ -1509,7 +1509,7 @@
 		(:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
 		(:commit . "d92c3b773473e9fe15f61f6177e4fbf097aadd05"))])
  (llama .
-	[(0 6 1)
+	[(0 6 2)
 	 ((emacs
 	   (26 1))
 	  (compat
@@ -1517,7 +1517,7 @@
 	 "Compact syntax for short lambda" tar
 	 ((:url . "https://github.com/tarsius/llama")
 	  (:keywords "extensions")
-	  (:commit . "c1b320d6308a68d8841116745310cc55ac5ce74b"))])
+	  (:commit . "48e5bc4919a4a29665362832d59ade8e248b0c3e"))])
  (logview .
 	  [(0 19 2)
 	   ((emacs
@@ -2131,7 +2131,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20250212 102351)
+	      [(1 0 20250312 143158)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar
