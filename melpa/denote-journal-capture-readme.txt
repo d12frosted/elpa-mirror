@@ -1,5 +1,5 @@
 This library provides basic integration between
-`denote-journal-extras' and `org-capture', providing a function to
+`denote-journal' and `org-capture', providing a function to
 allow a specific date to be captured to, while saving the date for
 later editing as part of the capture process.
 

@@ -1,5 +1,5 @@
 This file contains a simple integration between Denote and
-Org-Agenda.  It is aware of `denote-journal-extras', and provides
+Org-Agenda.  It is aware of `denote-journal', and provides
 three configuration options.
 
 - `denote-agenda-static-files' A list of files which should always
@@ -7,7 +7,7 @@ three configuration options.
 - `denote-agenda-include-regexp' A regexp to determine files which
   should be included on the fly.
 - `denote-agenda-include-journal' Set to t if
-  `denote-journal-extras' files should be included.  If set, only
+  `denote-journal' files should be included.  If set, only
   journal entries for the current and future days will be included.
 - `denote-agenda-include-journal-limit' Set to nil if all
   current/future journal entries should be included, or a positive
