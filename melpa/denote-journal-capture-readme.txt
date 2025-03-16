@@ -17,6 +17,11 @@ Then, as shown above, in the template, the expansion of
 `%(denote-journal-capture-template)' can be used to prompt
 for (and reuse) the date that was selected as for capturing.
 
+Additionally, the expansion `%(denote-journal-capture-insert-date)'
+will insert the capture target's date.  This function takes an
+optional argument, `inactivep', which if non-nil will cause an
+inactive timestamp to be inserted.
+
 ;; Errors and Patches
 
 If you find an error, or have a patch to improve this package,
