@@ -21,6 +21,17 @@
 		    (:authors
 		     ("Ozan Sener" . "ozan@ozansener.com"))
 		    (:commit . "b58731c3b0bbaac9d3ed8d5ae900063df5db090d"))])
+ (aidermacs .
+	    [(1 0)
+	     ((emacs
+	       (29 1)))
+	     "AI pair programming with Aider" tar
+	     ((:url . "https://github.com/MatthewZMD/aidermacs")
+	      (:keywords "ai" "emacs" "llm" "aider" "ai-pair-programming" "tools")
+	      (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
+	      (:authors
+	       ("Mingde Zeng" . "matthewzmd@posteo.net"))
+	      (:commit . "5157e8fb760b239ae04f57d0c8a7f4bb87e7b6ad"))])
  (alect-themes .
 	       [(0 10)
 		((emacs
