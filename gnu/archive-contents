@@ -3198,20 +3198,20 @@
 	     ("Philip Kaludercic" . "philipk@posteo.net"))
 	    (:commit . "69254001eae10b3b162200082bcbc684363e84d7"))])
  (orderless .
-	    [(1 3)
+	    [(1 4)
 	     ((emacs
 	       (27 1))
 	      (compat
 	       (30)))
 	     "Completion style for matching regexps in any order" tar
 	     ((:url . "https://github.com/oantolin/orderless")
-	      (:keywords "extensions")
+	      (:keywords "matching" "completion")
 	      (:maintainer
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx")
 	       ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	      (:authors
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-	      (:commit . "2b7a1688f24cc8ef5a3c3a6dab8e00d833bcda59"))])
+	      (:commit . "254f2412489bbbf62700f9d3d5f18e537841dcc3"))])
  (org .
       [(9 7 25)
        ((emacs
