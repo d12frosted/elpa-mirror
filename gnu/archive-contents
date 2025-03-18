@@ -1070,7 +1070,7 @@
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		    (:commit . "74c509aef815e18a3d9139afde7b013d9967fe93"))])
  (denote-menu .
-	      [(1 3 0)
+	      [(1 4 0)
 	       ((emacs
 		 (28 1))
 		(denote
@@ -1080,7 +1080,7 @@
 		(:maintainer "Mohamed Suliman" . "sulimanm@tcd.ie")
 		(:authors
 		 ("Mohamed Suliman" . "sulimanm@tcd.ie"))
-		(:commit . "d3b890648404eb4df2dabbb3d783105672e0ea23"))])
+		(:commit . "247a9b66d67b3fe409eda8f896feae87546f5b4d"))])
  (denote-org .
 	     [(0 0 0 1)
 	      ((emacs
@@ -2785,7 +2785,7 @@
 	(:url . "https://elpa.gnu.org/packages/map.html")
 	(:commit . "9da2efb670574b473ab864ae0456b4f1b38e680b"))])
  (marginalia .
-	     [(1 8)
+	     [(2 0)
 	      ((emacs
 		(28 1))
 	       (compat
@@ -2799,7 +2799,7 @@
 	       (:authors
 		("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "006a7cd0a14dd651dcff65ed96c0d52d2067b8c1"))])
+	       (:commit . "c51fd9e4d4258543e0cd8dedda941789163bec5a"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" tar
