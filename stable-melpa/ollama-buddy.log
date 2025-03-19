@@ -3,20 +3,36 @@ Fetcher: github
 Source:  https://github.com/captainflasmr/ollama-buddy
 
 Updating /mnt/store/melpa/working/ollama-buddy/
-Checking out fb68fcf4e75d2f0800aca3cfc2c8c4ba602810a2
+Checking out 82ba5d35ec6ceb1a57772d2b56fb8f0beee73cf4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ollama-buddy/
-  to /tmp/ollama-buddy3Q4Dly/ollama-buddy-20250318.1333
+  to /tmp/ollama-buddyavlAWn/ollama-buddy-20250318.2040
+    ollama-buddy--preset__bard.el -> ollama-buddy--preset__bard.el
+    ollama-buddy--preset__buffy.el -> ollama-buddy--preset__buffy.el
+    ollama-buddy--preset__default.el -> ollama-buddy--preset__default.el
+    ollama-buddy--preset__developer.el -> ollama-buddy--preset__developer.el
+    ollama-buddy--preset__emacs.el -> ollama-buddy--preset__emacs.el
+    ollama-buddy--preset__janeway.el -> ollama-buddy--preset__janeway.el
+    ollama-buddy--preset__translator.el -> ollama-buddy--preset__translator.el
+    ollama-buddy--preset__writer.el -> ollama-buddy--preset__writer.el
     ollama-buddy-fabric.el -> ollama-buddy-fabric.el
     ollama-buddy-transient.el -> ollama-buddy-transient.el
     ollama-buddy.el -> ollama-buddy.el
-Created ollama-buddy-20250318.1333.tar containing:
-  ollama-buddy-20250318.1333/
-  ollama-buddy-20250318.1333/ollama-buddy-fabric.el
-  ollama-buddy-20250318.1333/ollama-buddy-pkg.el
-  ollama-buddy-20250318.1333/ollama-buddy-transient.el
-  ollama-buddy-20250318.1333/ollama-buddy.el
+Created ollama-buddy-20250318.2040.tar containing:
+  ollama-buddy-20250318.2040/
+  ollama-buddy-20250318.2040/ollama-buddy--preset__bard.el
+  ollama-buddy-20250318.2040/ollama-buddy--preset__buffy.el
+  ollama-buddy-20250318.2040/ollama-buddy--preset__default.el
+  ollama-buddy-20250318.2040/ollama-buddy--preset__developer.el
+  ollama-buddy-20250318.2040/ollama-buddy--preset__emacs.el
+  ollama-buddy-20250318.2040/ollama-buddy--preset__janeway.el
+  ollama-buddy-20250318.2040/ollama-buddy--preset__translator.el
+  ollama-buddy-20250318.2040/ollama-buddy--preset__writer.el
+  ollama-buddy-20250318.2040/ollama-buddy-fabric.el
+  ollama-buddy-20250318.2040/ollama-buddy-pkg.el
+  ollama-buddy-20250318.2040/ollama-buddy-transient.el
+  ollama-buddy-20250318.2040/ollama-buddy.el
  ✓ Success:
-  2025-03-18T19:19:25+0000  ollama-buddy-20250318.1333.entry
-  2025-03-18T19:19:25+0000  ollama-buddy-20250318.1333.tar
-Built ollama-buddy in 3.653s, finished at 2025-03-18T19:19:26+0000
+  2025-03-19T00:26:06+0000  ollama-buddy-20250318.2040.entry
+  2025-03-19T00:26:06+0000  ollama-buddy-20250318.2040.tar
+Built ollama-buddy in 4.007s, finished at 2025-03-19T00:26:07+0000
