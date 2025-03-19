@@ -127,7 +127,10 @@
   │   (setopt ellama-instant-display-action-function #'display-buffer-at-bottom)
   │   :config
   │   ;; show ellama context in header line in all buffers
-  │   (ellama-context-header-line-global-mode +1))
+  │   (ellama-context-header-line-global-mode +1)
+  │   ;; handle scrolling events
+  │   (advice-add 'pixel-scroll-precision :before #'ellama-disable-scroll)
+  │   (advice-add 'end-of-buffer :after #'ellama-enable-scroll))
   └────
 
 
@@ -606,6 +609,10 @@
   • `ellama-community-prompts-file': Path to the CSV file containing
     community prompts.  This file is expected to be located inside an
     `ellama' subdirectory within your `user-emacs-directory'.
+  • `ellama-show-reasoning': Show reasoning in separate buffer if
+    enabled. Enabled by default.
+  • `ellama-reasoning-display-action-function': Display action function
+    for reasoning.
 
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>

@@ -1539,11 +1539,11 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 5 6)
+	 [(1 6 0)
 	  ((emacs
 	    (28 1))
 	   (llm
-	    (0 22 0))
+	    (0 24 0))
 	   (plz
 	    (0 8))
 	   (transient
@@ -1556,7 +1556,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "d04c7bbb4d089ad53630ace932e99ef9188dc100"))])
+	   (:commit . "fca903ac1348b551d3372314b7b03511164da908"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
