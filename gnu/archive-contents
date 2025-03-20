@@ -2231,6 +2231,19 @@
 		 (:authors
 		  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		 (:commit . "784c471a9ea9ae817d70b222ec6fbe90ac64a057"))])
+ (hugoista .
+	   [(0 2 0)
+	    ((emacs
+	      (24 3))
+	     (seq
+	      (0)))
+	    "Manage Hugo posts like a barista" tar
+	    ((:url . "https://codeberg.org/c-alpha/hugoista")
+	     (:maintainer "Alexander Adolf" . "alexander.adolf@condition-alpha.com")
+	     (:authors
+	      ("Alexander Adolf" . "alexander.adolf@condition-alpha.com")
+	      ("Thanos Apollo" . "public@thanosapollo.org"))
+	     (:commit . "1769fde5fb9c3a7cccea56c2f730861483d3571c"))])
  (hydra .
 	[(0 15 0)
 	 ((cl-lib
