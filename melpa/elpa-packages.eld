@@ -4855,7 +4855,7 @@
   (sexp-diff :url "https://github.com/xuchunyang/sexp-diff.el")
   (sexp-move :url "https://gitlab.com/elzair/sexp-move")
   (sexy-monochrome-theme :url "https://github.com/voloyev/sexy-monochrome-theme")
-  (sexy-theme :url "https://github.com/bgcicca/sexy-theme.el")
+  (sexy-theme :url "https://github.com/thebigcicca/sexy-theme.el")
   (sfz-mode :url "https://github.com/sfztools/emacs-sfz-mode")
   (shackle :url "https://depp.brause.cc/shackle.git")
   (shadchen :url "https://github.com/VincentToups/shadchen-el")
