@@ -28,6 +28,8 @@ howdoyou-number-of-answers:       maximal number of answers to show, default is 
 howdoyou-switch-to-answer-buffer: switch to answer buffer if non nil, default is nil
 
 ; Changelog
+2025-03-20:
+- update google search extraction
 2021-09-09:
 - back to use curl if possible
 2021-09-02:
