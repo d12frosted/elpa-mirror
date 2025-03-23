@@ -4685,6 +4685,7 @@
   (reykjavik-theme :url "https://github.com/mswift42/reykjavik-theme")
   (rfc-mode :url "https://github.com/galdor/rfc-mode")
   (rg :url "https://github.com/dajva/rg.el")
+  (rg-themes :url "https://github.com/raegnald/rg-themes")
   (rgb :url "https://gitlab.com/cwpitts/rgb.el")
   (rhq :url "https://github.com/ROCKTAKEY/rhq")
   (rhtml-mode :url "https://github.com/eschulte/rhtml")
