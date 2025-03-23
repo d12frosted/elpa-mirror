@@ -126,8 +126,8 @@
   │   (TeX-mode . tex-parens-setup))
   └────
 
-  The precise use-package declaration that I use may be found in [the
-  LaTeX part of my config] (elpaca branch).
+  The precise use-package declaration that I use may be found in [my
+  config].
 
   Use `M-x customize-group tex-parens' to configure further.  If you
   tweak the customization variables concerning delimiters and modifiers,
@@ -140,8 +140,7 @@
 
 [AUCTeX] <https://www.gnu.org/software/auctex/>
 
-[the LaTeX part of my config]
-<https://github.com/ultronozm/emacsd/blob/main/init-latex.el>
+[my config] <https://github.com/ultronozm/emacsd/blob/main/init.el>
 
 
 3 Variants
@@ -177,3 +176,37 @@
 
   To use these commands, make sure you have Avy installed and loaded,
   then bind them in your config as described above.
+
+
+3.2 Adjusting Delimiter Size
+────────────────────────────
+
+  We provide the commands `tex-parens-increase-delimiter-size' and
+  `tex-parens-decrease-delimiter-size' for adjusting delimiter sizes:
+  `(...)' -> `\left(...\right)' -> `\bigl(...\bigr)' -> `...'.  These
+  operate on the left delimiter at point.  It may be convenient to put
+  them in a [repeat map], which can be achieved by adding something like
+  the following to your `use-package' declaration:
+
+  ┌────
+  │ (use-package tex-parens
+  │   ;; ...
+  │   :bind
+  │   (:map
+  │    LaTeX-mode-map
+  │    ;; ...
+  │    ("C-c p =" . tex-parens-increase-delimiter-size)
+  │    ("C-c p -" . tex-parens-decrease-delimiter-size))
+  │   (:repeat-map
+  │    tex-parens-delimiter-size-repeat-map
+  │    ("=" . tex-parens-increase-delimiter-size)
+  │    ("-" . tex-parens-decrease-delimiter-size))
+  │   ;; ...
+  │   :config
+  │   ;; ...
+  │   (repeat-mode 1))
+  └────
+
+
+[repeat map]
+<https://www.gnu.org/software/emacs/manual/html_node/use-package/Binding-to-repeat_002dmaps.html>

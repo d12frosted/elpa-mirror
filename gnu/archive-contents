@@ -1476,6 +1476,17 @@
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
 	  (:commit . "49f449bb5bc90bc1eca6b4a1f013d4c0b5460d65"))])
+ (el-job .
+	 [(2 3 1)
+	  ((emacs
+	    (29 1)))
+	  "Contrived way to call a function using all CPU cores" tar
+	  ((:url . "https://github.com/meedstrom/el-job")
+	   (:keywords "processes")
+	   (:maintainer "Martin Edström" . "meedstrom91@gmail.com")
+	   (:authors
+	    ("Martin Edström" . "meedstrom91@gmail.com"))
+	   (:commit . "23a698822e44c73843a59180745bbf0a9b6712a6"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -3226,7 +3237,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "254f2412489bbbf62700f9d3d5f18e537841dcc3"))])
  (org .
-      [(9 7 25)
+      [(9 7 26)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3235,7 +3246,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "bdf9f949d75f24f064b83971a0bb6311b3915f81"))])
+	(:commit . "07e380f76d8741a499a3ffe66df03615f5b31804"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -4579,16 +4590,16 @@
 	      ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
 	     (:commit . "ee1957f3bce6ed04627b985e95a17db190781e06"))])
  (tex-parens .
-	     [(0 6)
+	     [(0 7)
 	      ((emacs
 		(27 1)))
-	      "like lisp.el but for tex" tar
+	      "Like lisp.el, but for tex" tar
 	      ((:url . "https://github.com/ultronozm/tex-parens.el")
 	       (:keywords "tex" "convenience")
 	       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
 	       (:authors
 		("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-	       (:commit . "f0717e7aa1918825505b4870d665012cc7b49fd1"))])
+	       (:commit . "00e41b4110b4fc049513a1e31d4a00c295580026"))])
  (theme-buffet .
 	       [(0 1 2)
 		((emacs
