@@ -4,11 +4,11 @@
 
 # Aidermacs: AI Pair Programming in Emacs
 [![MELPA](https://melpa.org/packages/aidermacs-badge.svg)](https://melpa.org/#/aidermacs)
-[![EMACS](https://img.shields.io/badge/Emacs-29.1-922793?logo=gnu-emacs&logoColor=b39ddb&.svg)](https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html)
+[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/aidermacs.svg)](https://elpa.nongnu.org/nongnu/aidermacs.html)
+[![EMACS](https://img.shields.io/badge/Emacs-26.1-922793?logo=gnu-emacs&logoColor=b39ddb&.svg)](https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html)
 [![LICENSE](https://img.shields.io/github/license/MatthewZMD/aidermacs?logo=apache&.svg)](https://github.com/MatthewZMD/aidermacs/blob/master/LICENSE)
 [![CONTRIBUTORS](https://img.shields.io/github/contributors/MatthewZMD/aidermacs.svg)](https://github.com/MatthewZMD/aidermacs/graphs/contributors)
 [![ISSUES](https://img.shields.io/github/issues/MatthewZMD/aidermacs.svg)](https://github.com/MatthewZMD/aidermacs/issues)
-[![PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/MatthewZMD/aidermacs/pull/new)
 
 Missing [Cursor](https://cursor.sh) but prefer living in Emacs? Aidermacs brings Cursor-like AI-powered development to your Emacs workflow by integrating [Aider](https://github.com/paul-gauthier/aider), one of the most powerful open-source AI pair programming tools. As a community-driven project, Aidermacs prioritizes Emacs users' needs and preferences while providing the same powerful features found in Cursor!
 
@@ -59,10 +59,10 @@ Here's what the community is saying about Aidermacs:
 ## Quick Start
 
 1. Requirements
-- Emacs ≥ 28.1
+- Emacs ≥ 26.1
 - [Aider](https://aider.chat/docs/install.html)
 - [Transient](https://github.com/magit/transient)
-2. Download Aidermacs through [melpa](https://melpa.org/#/aidermacs), or clone manually
+2. Download Aidermacs through [Melpa](https://melpa.org/#/aidermacs) or [Non-GNU Elpa](https://elpa.nongnu.org/nongnu/aidermacs.html), or clone manually
 2. Modify this **sample config** and place it in your Emacs `init.el`:
 ```emacs-lisp
 (use-package aidermacs
@@ -147,9 +147,39 @@ When Architect mode is enabled, the `aidermacs-default-model` setting is ignored
 
 ```emacs-lisp
 (setq aidermacs-use-architect-mode t)
-(setq aidermacs-architect-model "o1-mini") ; default
-(setq aidermacs-editor-model "deepseek/deepseek-chat") ;; defaults to aidermacs-default-model
 ```
+You can switch to it persistently by `M-x aidermacs-switch-to-architect-mode` (`3` in `aidermacs-transient-menu`), or temporarily with `M-x aidermacs-architect-this-code` (`r` in `aidermacs-transient-menu`).
+
+You can configure each model independently:
+```emacs-lisp
+;; Architect model for reasoning (initially defaults to aidermacs-default-model)
+(setq aidermacs-architect-model "sonnet")
+
+;; Editor model for code generation (initially defaults to aidermacs-default-model)
+(setq aidermacs-editor-model "deepseek/deepseek-chat")
+```
+
+The model hierarchy works as follows:
+- When Architect mode is enabled:
+    - The Architect model handles high-level reasoning and solution design
+    - The Editor model executes the actual code changes
+- When Architect mode is disabled, only `aidermacs-default-model` is used
+- You can configure both models independently or let them default to `aidermacs-default-model`
+
+*Note: The architect and editor models only inherit from `aidermacs-default-model` when first initialized. Changing `aidermacs-default-model` later will not update the other models. For consistent behavior, set each model explicitly.*
+
+*Note: These configurations will be overwritten by the existence of an `.aider.conf.yml` file (see [details](#Overwrite-Configuration-with-Configuration-File)).*
+
+### Customize Weak Model
+
+The Weak model is used for commit messages (if you have `aidermacs-auto-commits` set to `t`) and chat history summarization (default depends on –model). You can customize it using
+
+```emacs-lisp
+;; default to nil
+(setq aidermacs-weak-model "deepseek/deepseek-chat")
+```
+
+You can change the Weak model during a session by using `C-u o` (`aidermacs-change-model` with a prefix argument). In most cases, you won't need to change this as Aider will automatically select an appropriate Weak model based on your main model.
 
 *Note: These configurations will be overwritten by the existence of an `.aider.conf.yml` file (see [details](#Overwrite-Configuration-with-Configuration-File)).*
 
@@ -180,6 +210,13 @@ Available backends:
 - `comint` (default): Uses Emacs' built-in terminal emulation
 - `vterm`: Leverages vterm for better terminal compatibility
 
+### Emacs theme support
+The vterm backend will use the faces defined by your active Emacs theme to set the colors for aider. It tries to guess some reasonable color values based on your themes. In some cases this will not work perfectly; if text is unreadable for you, you can turn this off as follows:
+
+``` emacs-lisp
+;; don't match emacs theme colors
+(setopt aidermacs-vterm-use-theme-colors nil)
+```
 
 ### Multiline Input Configuration
 
@@ -211,6 +248,19 @@ Example usage:
 M-x aidermacs-transient-menu
 ```
 
+### Prompt Selection and History
+
+Aidermacs makes it easy to reuse prompts through:
+
+1. **Prompt History** - Your previously used prompts are saved and can be quickly selected
+2. **Common Prompts** - A curated list of frequently used prompts for common tasks defined in `aidermacs-common-prompts`:
+
+When entering a prompt, you can:
+- Select from your history or common prompts using completion
+- Still type custom prompts when needed
+
+The prompt history and common prompts are available across all sessions.
+
 ### Diff and Change Review
 
 Control whether to show diffs for AI-generated changes with `aidermacs-show-diff-after-change`:
@@ -238,7 +288,7 @@ With auto-commits disabled, you must manually commit changes using your preferre
 
 *Note: This configuration will be overwritten by the existence of an `.aider.conf.yml` file (see [details](#Overwrite-Configuration-with-Configuration-File)).*
 
-### Customizing Aider Options with `aidermacs-extra-args`
+### Customize Aider Options with `aidermacs-extra-args`
 
 If these configurations aren't sufficient, the `aidermacs-extra-args` variable enables passing any Aider-supported command-line options.
 
@@ -355,6 +405,19 @@ Once the transient menu is open, you can navigate and execute commands using the
 - `!`: Debug Exception
 
 The `All File Actions` and `All Code Actions` entries open submenus with more specialized commands. Use the displayed keys to navigate these submenus.
+
+### File Management and AI Interaction
+
+When using Aidermacs, you have the flexibility to decide which files the AI should read and edit. Here are some guidelines:
+
+- **Editable Files**: Add files you want the AI to potentially edit. This grants the AI permission to both read and modify these files if necessary.
+- **Read-Only Files**: If you want the AI to read a file without editing it, you can add it as read-only. In Aidermacs, all add file commands can be prefixed with `C-u` to specify read-only access.
+- **Session Scratchpads**: Use the session scratchpads (`S`) to paste notes or documentation that will be fed to the AI as read-only.
+- **External Files**: The "Add file to session" (`G`) command allows you to include files outside the current project (or files in `.gitignore`), as Aider doesn't automatically include these files in its context.
+
+The AI can sometimes determine relevant files on its own, depending on the model and the context of the codebase. However, for precise control, it's often beneficial to manually specify files, especially when dealing with complex projects.
+
+Aider encourages a collaborative approach, similar to working with a human co-worker. Sometimes the AI will need explicit guidance, while other times it can infer the necessary context on its own.
 
 ### Prompt Files Minor Mode
 
