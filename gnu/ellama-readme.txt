@@ -613,6 +613,8 @@
     enabled. Enabled by default.
   • `ellama-reasoning-display-action-function': Display action function
     for reasoning.
+  • `ellama-session-line-template': Template for formatting the current
+    session line.
 
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
@@ -693,6 +695,65 @@
   This globalized minor mode provides a convenient way to ensure that
   context-specific mode line information is always available, regardless
   of the buffer being edited.
+
+
+1.5.5 Ellama Session Header Line Mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The `ellama-session-header-line-mode' is a minor mode that allows you
+  to display the current Ellama session ID in the header line of your
+  Emacs buffers. This feature helps keep track of which session you are
+  working with, especially useful when managing multiple sessions.
+
+
+◊ 1.5.5.1 Enabling and Disabling
+
+  To enable this mode, use the following command:
+  ┌────
+  │ M-x ellama-session-header-line-mode
+  └────
+
+  This will toggle the display of the session ID in the header line. You
+  can also enable or disable it globally across all buffers using:
+  ┌────
+  │ M-x ellama-session-header-line-global-mode
+  └────
+
+
+◊ 1.5.5.2 Customization
+
+  The session ID is displayed with a customizable face called
+  `ellama-face'. You can customize this face to change its appearance.
+
+
+1.5.6 Ellama Session Mode Line Mode
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The `ellama-session-mode-line-mode' is a minor mode that allows you to
+  display the current Ellama session ID in the mode line of your Emacs
+  buffers. This feature provides an additional way to keep track of
+  which session you are working with, especially useful when managing
+  multiple sessions.
+
+
+◊ 1.5.6.1 Enabling and Disabling
+
+  To enable this mode, use the following command:
+  ┌────
+  │ M-x ellama-session-mode-line-mode
+  └────
+
+  This will toggle the display of the session ID in the mode line. You
+  can also enable or disable it globally across all buffers using:
+  ┌────
+  │ M-x ellama-session-mode-line-global-mode
+  └────
+
+
+◊ 1.5.6.2 Customization
+
+  The session ID is displayed with a customizable face called
+  `ellama-face'. You can customize this face to change its appearance.
 
 
 1.6 Using Blueprints
