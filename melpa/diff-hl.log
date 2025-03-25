@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/dgutov/diff-hl
 
 Updating /mnt/store/melpa/working/diff-hl/
-Checking out dafd697d2f376275abdf457b0ec7f5bceafd0aab
+Checking out 5ac6dce3f33b297fe45305605f79114b98b4652c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/diff-hl/
-  to /tmp/diff-hlgxXUlf/diff-hl-20250317.242
+  to /tmp/diff-hlk4V3kA/diff-hl-20250324.2121
     diff-hl-amend.el -> diff-hl-amend.el
     diff-hl-dired.el -> diff-hl-dired.el
     diff-hl-flydiff.el -> diff-hl-flydiff.el
@@ -15,18 +15,20 @@ Copying files (->) and directories (=>)
     diff-hl-show-hunk-posframe.el -> diff-hl-show-hunk-posframe.el
     diff-hl-show-hunk.el -> diff-hl-show-hunk.el
     diff-hl.el -> diff-hl.el
-Created diff-hl-20250317.242.tar containing:
-  diff-hl-20250317.242/
-  diff-hl-20250317.242/diff-hl-amend.el
-  diff-hl-20250317.242/diff-hl-dired.el
-  diff-hl-20250317.242/diff-hl-flydiff.el
-  diff-hl-20250317.242/diff-hl-inline-popup.el
-  diff-hl-20250317.242/diff-hl-margin.el
-  diff-hl-20250317.242/diff-hl-pkg.el
-  diff-hl-20250317.242/diff-hl-show-hunk-posframe.el
-  diff-hl-20250317.242/diff-hl-show-hunk.el
-  diff-hl-20250317.242/diff-hl.el
+Created diff-hl-20250324.2121.tar containing:
+  diff-hl-20250324.2121/
+  diff-hl-20250324.2121/diff-hl-amend.el
+  diff-hl-20250324.2121/diff-hl-dired.el
+  diff-hl-20250324.2121/diff-hl-flydiff.el
+  diff-hl-20250324.2121/diff-hl-inline-popup.el
+  diff-hl-20250324.2121/diff-hl-margin.el
+  diff-hl-20250324.2121/diff-hl-pkg.el
+  diff-hl-20250324.2121/diff-hl-show-hunk-posframe.el
+  diff-hl-20250324.2121/diff-hl-show-hunk.el
+  diff-hl-20250324.2121/diff-hl.el
  ✓ Success:
   2025-03-24T19:57:11+0000  diff-hl-20250317.242.entry
   2025-03-24T19:57:11+0000  diff-hl-20250317.242.tar
-Built diff-hl in 3.676s, finished at 2025-03-24T19:57:12+0000
+  2025-03-24T22:38:27+0000  diff-hl-20250324.2121.entry
+  2025-03-24T22:38:27+0000  diff-hl-20250324.2121.tar
+Built diff-hl in 3.746s, finished at 2025-03-24T22:38:28+0000

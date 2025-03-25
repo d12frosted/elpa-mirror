@@ -54,7 +54,9 @@
   │   :init (setopt ellama-auto-scroll t)
   │   :config
   │   ;; show ellama context in header line in all buffers
-  │   (ellama-context-header-line-global-mode +1))
+  │   (ellama-context-header-line-global-mode +1)
+  │   ;; show ellama session id in header line in all buffers
+  │   (ellama-session-header-line-global-mode +1))
   └────
 
   More sofisticated configuration example:
@@ -128,6 +130,8 @@
   │   :config
   │   ;; show ellama context in header line in all buffers
   │   (ellama-context-header-line-global-mode +1)
+  │   ;; show ellama session id in header line in all buffers
+  │   (ellama-session-header-line-global-mode +1)
   │   ;; handle scrolling events
   │   (advice-add 'pixel-scroll-precision :before #'ellama-disable-scroll)
   │   (advice-add 'end-of-buffer :after #'ellama-enable-scroll))

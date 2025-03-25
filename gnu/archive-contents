@@ -1550,7 +1550,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 6 1)
+	 [(1 6 2)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1567,7 +1567,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "6907f69d3de6c878991bb668946af881e6494dba"))])
+	   (:commit . "eb8584e610c520697063355941cd1f22a5814263"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs
@@ -2254,7 +2254,7 @@
 		  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		 (:commit . "784c471a9ea9ae817d70b222ec6fbe90ac64a057"))])
  (hugoista .
-	   [(0 2 0)
+	   [(0 2 1)
 	    ((emacs
 	      (24 3))
 	     (seq
@@ -2265,7 +2265,7 @@
 	     (:authors
 	      ("Alexander Adolf" . "alexander.adolf@condition-alpha.com")
 	      ("Thanos Apollo" . "public@thanosapollo.org"))
-	     (:commit . "1769fde5fb9c3a7cccea56c2f730861483d3571c"))])
+	     (:commit . "22b543c0cb9c74ede7e762a16d44173c08c906ab"))])
  (hydra .
 	[(0 15 0)
 	 ((cl-lib
