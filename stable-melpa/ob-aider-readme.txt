@@ -10,7 +10,7 @@ Requirements:
 
 - Emacs 27.1 or later
 - Org mode 9.4 or later
-- aider.el (https://github.com/tninja/aider.el)
+- aider.el (https://github.com/tninja/aider.el) or Aidermacs (https://github.com/MatthewZMD/aidermacs)
 
 Usage:
 

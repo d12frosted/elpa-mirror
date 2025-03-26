@@ -146,7 +146,7 @@
   (ansi :url "https://github.com/rejeep/ansi.el")
   (ansible :url "https://gitlab.com/emacs-ansible/emacs-ansible")
   (ansible-doc :url "https://github.com/emacsorphanage/ansible-doc")
-  (ansible-vault :url "https://github.com/zellio/ansible-vault-mode" :branch "master")
+  (ansible-vault :url "https://github.com/freehck/ansible-vault-mode" :branch "master")
   (ansilove :url "https://gitlab.com/xgqt/emacs-ansilove")
   (ant :url "https://github.com/apg/ant-el")
   (anti-zenburn-theme :url "https://github.com/m00natic/anti-zenburn-theme")

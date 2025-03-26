@@ -3,10 +3,11 @@ Fetcher: github
 Source:  https://github.com/captainflasmr/ollama-buddy
 
 Updating /mnt/store/melpa/working/ollama-buddy/
-Checking out 2ac2b0a31b2c636f0ff9ae16561ea1a77bcb39e2
+Checking out 47281f332ae52755a3e4d37b380b0a16c2a0e522
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ollama-buddy/
-  to /tmp/ollama-buddybSl4qd/ollama-buddy-20250325.1524
+  to /tmp/ollama-buddykuWjXd/ollama-buddy-20250325.2027
+    ollama-buddy-claude.el -> ollama-buddy-claude.el
     ollama-buddy-core.el -> ollama-buddy-core.el
     ollama-buddy-fabric.el -> ollama-buddy-fabric.el
     ollama-buddy-openai.el -> ollama-buddy-openai.el
@@ -15,19 +16,18 @@ Copying files (->) and directories (=>)
   ! docs/ollama-buddy.info -> ollama-buddy.info
   ! docs/ollama-buddy.texi -> ollama-buddy.texi
 Generating ollama-buddy.info
-Created ollama-buddy-20250325.1524.tar containing:
-  ollama-buddy-20250325.1524/
-  ollama-buddy-20250325.1524/dir
-  ollama-buddy-20250325.1524/ollama-buddy-core.el
-  ollama-buddy-20250325.1524/ollama-buddy-fabric.el
-  ollama-buddy-20250325.1524/ollama-buddy-openai.el
-  ollama-buddy-20250325.1524/ollama-buddy-pkg.el
-  ollama-buddy-20250325.1524/ollama-buddy-transient.el
-  ollama-buddy-20250325.1524/ollama-buddy.el
-  ollama-buddy-20250325.1524/ollama-buddy.info
+Created ollama-buddy-20250325.2027.tar containing:
+  ollama-buddy-20250325.2027/
+  ollama-buddy-20250325.2027/dir
+  ollama-buddy-20250325.2027/ollama-buddy-claude.el
+  ollama-buddy-20250325.2027/ollama-buddy-core.el
+  ollama-buddy-20250325.2027/ollama-buddy-fabric.el
+  ollama-buddy-20250325.2027/ollama-buddy-openai.el
+  ollama-buddy-20250325.2027/ollama-buddy-pkg.el
+  ollama-buddy-20250325.2027/ollama-buddy-transient.el
+  ollama-buddy-20250325.2027/ollama-buddy.el
+  ollama-buddy-20250325.2027/ollama-buddy.info
  ✓ Success:
-  2025-03-25T15:26:00+0000  ollama-buddy-20250324.1051.entry
-  2025-03-25T15:26:00+0000  ollama-buddy-20250324.1051.tar
-  2025-03-25T18:32:00+0000  ollama-buddy-20250325.1524.entry
-  2025-03-25T18:32:00+0000  ollama-buddy-20250325.1524.tar
-Built ollama-buddy in 17.884s, finished at 2025-03-25T18:32:01+0000
+  2025-03-26T00:21:59+0000  ollama-buddy-20250325.2027.entry
+  2025-03-26T00:21:59+0000  ollama-buddy-20250325.2027.tar
+Built ollama-buddy in 14.421s, finished at 2025-03-26T00:22:01+0000
