@@ -575,7 +575,7 @@
 		  ("EditorConfig Team" . "editorconfig@googlegroups.com"))
 		 (:commit . "f1531bab5b57e40759167b7e5db49acbbc09972f"))])
  (eglot-inactive-regions .
-			 [(0 6 4)
+			 [(0 6 5)
 			  ((emacs
 			    (29 1)))
 			  "Highlight inactive code regions with eglot power" tar
@@ -583,7 +583,7 @@
 			   (:maintainer "Filippo Argiolas" . "filippo.argiolas@gmail.com")
 			   (:authors
 			    ("Filippo Argiolas" . "filippo.argiolas@gmail.com"))
-			   (:commit . "cbe09a531f1f86d7601c70fc071f5fa4bf13499e"))])
+			   (:commit . "3d973b45afbf3afa835abaf3d99c993b5426a596"))])
  (eldoc-diffstat .
 		 [(1 0)
 		  ((emacs
@@ -2799,14 +2799,14 @@
 	       ("Le Wang" . "l26wang@gmail.com"))
 	      (:commit . "9ee5a7657a22e836618813c2e2b64a548d27d2ff"))])
  (xah-fly-keys .
-	       [(26 11 20250324000003)
+	       [(26 11 20250325184849)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "b3dd7a1c7c3c0f8225a8d195cefcf2f4c7429bfb"))])
+		 (:commit . "e8ba384256e8c88c7fe218b85c7da9e44d9b2074"))])
  (xkcd .
        [(1 1)
 	((json

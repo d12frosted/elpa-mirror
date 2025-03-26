@@ -1,8 +1,3 @@
-<a href="<https://repology.org/project/emacs%3Ael-job/versions>"> <img
-    src="<https://repology.org/badge/vertical-allrepos/emacs%3Ael-job.svg>"
-    alt="Packaging status"> </a>
-
-
 1 el-job
 ════════
 
