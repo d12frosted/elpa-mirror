@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/karthink/gptel
 
 Updating /mnt/store/melpa/working/gptel/
-Checking out 6a000d64b97ce0933ed42136e52cb21f179fd1cb
+Checking out 5caa292bbfd291cd4583ab9937224ee40873cf3b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptelWuw1SB/gptel-20250326.304
+  to /tmp/gptel2sE68Z/gptel-20250326.1553
     gptel-anthropic.el -> gptel-anthropic.el
     gptel-context.el -> gptel-context.el
     gptel-curl.el -> gptel-curl.el
@@ -19,22 +19,24 @@ Copying files (->) and directories (=>)
     gptel-rewrite.el -> gptel-rewrite.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20250326.304.tar containing:
-  gptel-20250326.304/
-  gptel-20250326.304/gptel-anthropic.el
-  gptel-20250326.304/gptel-context.el
-  gptel-20250326.304/gptel-curl.el
-  gptel-20250326.304/gptel-gemini.el
-  gptel-20250326.304/gptel-kagi.el
-  gptel-20250326.304/gptel-ollama.el
-  gptel-20250326.304/gptel-openai-extras.el
-  gptel-20250326.304/gptel-openai.el
-  gptel-20250326.304/gptel-org.el
-  gptel-20250326.304/gptel-pkg.el
-  gptel-20250326.304/gptel-rewrite.el
-  gptel-20250326.304/gptel-transient.el
-  gptel-20250326.304/gptel.el
+Created gptel-20250326.1553.tar containing:
+  gptel-20250326.1553/
+  gptel-20250326.1553/gptel-anthropic.el
+  gptel-20250326.1553/gptel-context.el
+  gptel-20250326.1553/gptel-curl.el
+  gptel-20250326.1553/gptel-gemini.el
+  gptel-20250326.1553/gptel-kagi.el
+  gptel-20250326.1553/gptel-ollama.el
+  gptel-20250326.1553/gptel-openai-extras.el
+  gptel-20250326.1553/gptel-openai.el
+  gptel-20250326.1553/gptel-org.el
+  gptel-20250326.1553/gptel-pkg.el
+  gptel-20250326.1553/gptel-rewrite.el
+  gptel-20250326.1553/gptel-transient.el
+  gptel-20250326.1553/gptel.el
  ✓ Success:
+  2025-03-26T17:53:56+0000  gptel-20250326.1553.entry
+  2025-03-26T17:53:56+0000  gptel-20250326.1553.tar
   2025-03-26T14:49:53+0000  gptel-20250326.304.entry
   2025-03-26T14:49:53+0000  gptel-20250326.304.tar
-Built gptel in 5.080s, finished at 2025-03-26T14:49:54+0000
+Built gptel in 4.793s, finished at 2025-03-26T17:53:57+0000
