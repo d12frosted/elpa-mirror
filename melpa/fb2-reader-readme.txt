@@ -5,7 +5,7 @@ Features:
 - read .fb2 and .fb2.zip files
 - rich book formatting
 - showing current title in header line
-- internal links (select from keyboard, jumb back and forth)
+- internal links (select from keyboard, jump back and forth)
 - navigation (next/previous chapters, imenu support)
 - restoring last read position
 - displaying raw xml
