@@ -1,0 +1,22 @@
+Package: ssh-deploy
+Fetcher: github
+Source:  https://github.com/cjohansson/emacs-ssh-deploy
+
+Updating /mnt/store/melpa/working/ssh-deploy/
+Checking out dc8882d1806c0fdd635bc625b109179dfa3c929c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ssh-deploy/
+  to /tmp/ssh-deployrWe5d2/ssh-deploy-20241117.1850
+    ssh-deploy-diff-mode.el -> ssh-deploy-diff-mode.el
+    ssh-deploy-hydra.el -> ssh-deploy-hydra.el
+    ssh-deploy.el -> ssh-deploy.el
+Created ssh-deploy-20241117.1850.tar containing:
+  ssh-deploy-20241117.1850/
+  ssh-deploy-20241117.1850/ssh-deploy-diff-mode.el
+  ssh-deploy-20241117.1850/ssh-deploy-hydra.el
+  ssh-deploy-20241117.1850/ssh-deploy-pkg.el
+  ssh-deploy-20241117.1850/ssh-deploy.el
+ ✓ Success:
+  2025-03-27T03:26:35+0000  ssh-deploy-20241117.1850.entry
+  2025-03-27T03:26:35+0000  ssh-deploy-20241117.1850.tar
+Built ssh-deploy in 5.988s, finished at 2025-03-27T03:26:37+0000
