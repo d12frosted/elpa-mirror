@@ -3,24 +3,34 @@ Fetcher: github
 Source:  https://github.com/s-kostyaev/ellama
 
 Updating /mnt/store/melpa/working/ellama/
-Checking out a5bea6db68bcb32fae4d0b08cfa3efc2edaf29a6
+Checking out f00f7188ccc0fb62324db16db8211e2feb11e153
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ellama/
-  to /tmp/ellamaxQET27/ellama-20250324.1326
+  to /tmp/ellamatLqXGv/ellama-20250328.1939
     ellama-blueprint.el -> ellama-blueprint.el
     ellama-community-prompts.el -> ellama-community-prompts.el
     ellama-context.el -> ellama-context.el
+    ellama-manual.el -> ellama-manual.el
     ellama-transient.el -> ellama-transient.el
     ellama.el -> ellama.el
-Created ellama-20250324.1326.tar containing:
-  ellama-20250324.1326/
-  ellama-20250324.1326/ellama-blueprint.el
-  ellama-20250324.1326/ellama-community-prompts.el
-  ellama-20250324.1326/ellama-context.el
-  ellama-20250324.1326/ellama-pkg.el
-  ellama-20250324.1326/ellama-transient.el
-  ellama-20250324.1326/ellama.el
+    ellama.info -> ellama.info
+    doclicense.texi -> doclicense.texi
+Generating doclicense.info
+Created ellama-20250328.1939.tar containing:
+  ellama-20250328.1939/
+  ellama-20250328.1939/dir
+  ellama-20250328.1939/doclicense.info
+  ellama-20250328.1939/ellama-blueprint.el
+  ellama-20250328.1939/ellama-community-prompts.el
+  ellama-20250328.1939/ellama-context.el
+  ellama-20250328.1939/ellama-manual.el
+  ellama-20250328.1939/ellama-pkg.el
+  ellama-20250328.1939/ellama-transient.el
+  ellama-20250328.1939/ellama.el
+  ellama-20250328.1939/ellama.info
  ✓ Success:
-  2025-03-28T13:49:41+0000  ellama-20250324.1326.entry
-  2025-03-28T13:49:41+0000  ellama-20250324.1326.tar
-Built ellama in 5.356s, finished at 2025-03-28T13:49:43+0000
+  2025-03-28T16:47:21+0000  ellama-20250324.1326.entry
+  2025-03-28T16:47:21+0000  ellama-20250324.1326.tar
+  2025-03-28T19:39:57+0000  ellama-20250328.1939.entry
+  2025-03-28T19:39:57+0000  ellama-20250328.1939.tar
+Built ellama in 6.673s, finished at 2025-03-28T19:39:58+0000
