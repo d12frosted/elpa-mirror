@@ -3,36 +3,142 @@ Fetcher: codeberg
 Source:  https://codeberg.org/emacs-jabber/emacs-jabber
 
 Updating /mnt/store/melpa/working/jabber/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/emacs-jabber/emacs-jabber/': The requested URL returned error: 502
-
-Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
-  error("%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
-  package-build--error(#<package-codeberg-recipe package-codeberg-recipe-1568811cc642> "%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-codeberg-recipe package-codeberg-recipe-1568811cc642> "git" "fetch" "-f" "--tags" "origin")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-codeberg-recipe package-codeberg-recipe-1568811cc642>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-codeberg-recipe package-codeberg-recipe-1568811cc642> nil)
-  package-build--fetch(#<package-codeberg-recipe package-codeberg-recipe-1568811cc642>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  package-build-archive("jabber")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"jabber\")"))
-  command-line()
-  normal-top-level()
-
+Checking out 30c023b6b54601594d347956cc2918e7841e5ed4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jabber/
+  to /tmp/jabbergFxrzA/jabber-20250310.305
+  ! lisp/jabber-activity.el -> jabber-activity.el
+  ! lisp/jabber-ahc-presence.el -> jabber-ahc-presence.el
+  ! lisp/jabber-ahc.el -> jabber-ahc.el
+  ! lisp/jabber-alert.el -> jabber-alert.el
+  ! lisp/jabber-autoaway.el -> jabber-autoaway.el
+  ! lisp/jabber-avatar.el -> jabber-avatar.el
+  ! lisp/jabber-awesome.el -> jabber-awesome.el
+  ! lisp/jabber-bookmarks.el -> jabber-bookmarks.el
+  ! lisp/jabber-browse.el -> jabber-browse.el
+  ! lisp/jabber-carbons.el -> jabber-carbons.el
+  ! lisp/jabber-chat.el -> jabber-chat.el
+  ! lisp/jabber-chatbuffer.el -> jabber-chatbuffer.el
+  ! lisp/jabber-chatstates.el -> jabber-chatstates.el
+  ! lisp/jabber-compose.el -> jabber-compose.el
+  ! lisp/jabber-conn.el -> jabber-conn.el
+  ! lisp/jabber-console.el -> jabber-console.el
+  ! lisp/jabber-core.el -> jabber-core.el
+  ! lisp/jabber-disco.el -> jabber-disco.el
+  ! lisp/jabber-events.el -> jabber-events.el
+  ! lisp/jabber-export.el -> jabber-export.el
+  ! lisp/jabber-feature-neg.el -> jabber-feature-neg.el
+  ! lisp/jabber-festival.el -> jabber-festival.el
+  ! lisp/jabber-history.el -> jabber-history.el
+  ! lisp/jabber-httpupload.el -> jabber-httpupload.el
+  ! lisp/jabber-iq.el -> jabber-iq.el
+  ! lisp/jabber-keepalive.el -> jabber-keepalive.el
+  ! lisp/jabber-keymap.el -> jabber-keymap.el
+  ! lisp/jabber-libnotify.el -> jabber-libnotify.el
+  ! lisp/jabber-logon.el -> jabber-logon.el
+  ! lisp/jabber-menu.el -> jabber-menu.el
+  ! lisp/jabber-modeline.el -> jabber-modeline.el
+  ! lisp/jabber-muc-nick-coloring.el -> jabber-muc-nick-coloring.el
+  ! lisp/jabber-muc-nick-completion.el -> jabber-muc-nick-completion.el
+  ! lisp/jabber-muc.el -> jabber-muc.el
+  ! lisp/jabber-notifications.el -> jabber-notifications.el
+  ! lisp/jabber-ping.el -> jabber-ping.el
+  ! lisp/jabber-presence.el -> jabber-presence.el
+  ! lisp/jabber-private.el -> jabber-private.el
+  ! lisp/jabber-ratpoison.el -> jabber-ratpoison.el
+  ! lisp/jabber-register.el -> jabber-register.el
+  ! lisp/jabber-roster.el -> jabber-roster.el
+  ! lisp/jabber-rtt.el -> jabber-rtt.el
+  ! lisp/jabber-sasl.el -> jabber-sasl.el
+  ! lisp/jabber-sawfish.el -> jabber-sawfish.el
+  ! lisp/jabber-screen.el -> jabber-screen.el
+  ! lisp/jabber-search.el -> jabber-search.el
+  ! lisp/jabber-time.el -> jabber-time.el
+  ! lisp/jabber-tmux.el -> jabber-tmux.el
+  ! lisp/jabber-truncate.el -> jabber-truncate.el
+  ! lisp/jabber-util.el -> jabber-util.el
+  ! lisp/jabber-vcard-avatars.el -> jabber-vcard-avatars.el
+  ! lisp/jabber-vcard.el -> jabber-vcard.el
+  ! lisp/jabber-version.el -> jabber-version.el
+  ! lisp/jabber-watch.el -> jabber-watch.el
+  ! lisp/jabber-widget.el -> jabber-widget.el
+  ! lisp/jabber-wmii.el -> jabber-wmii.el
+  ! lisp/jabber-xmessage.el -> jabber-xmessage.el
+  ! lisp/jabber-xml.el -> jabber-xml.el
+  ! lisp/jabber.el -> jabber.el
+    jabber.texi -> jabber.texi
+    CHANGELOG.org -> CHANGELOG.org
+    DEV.org -> DEV.org
+    README.org -> README.org
+Generating jabber.info
+Created jabber-20250310.305.tar containing:
+  jabber-20250310.305/
+  jabber-20250310.305/CHANGELOG.org
+  jabber-20250310.305/DEV.org
+  jabber-20250310.305/README.org
+  jabber-20250310.305/dir
+  jabber-20250310.305/jabber-activity.el
+  jabber-20250310.305/jabber-ahc-presence.el
+  jabber-20250310.305/jabber-ahc.el
+  jabber-20250310.305/jabber-alert.el
+  jabber-20250310.305/jabber-autoaway.el
+  jabber-20250310.305/jabber-avatar.el
+  jabber-20250310.305/jabber-awesome.el
+  jabber-20250310.305/jabber-bookmarks.el
+  jabber-20250310.305/jabber-browse.el
+  jabber-20250310.305/jabber-carbons.el
+  jabber-20250310.305/jabber-chat.el
+  jabber-20250310.305/jabber-chatbuffer.el
+  jabber-20250310.305/jabber-chatstates.el
+  jabber-20250310.305/jabber-compose.el
+  jabber-20250310.305/jabber-conn.el
+  jabber-20250310.305/jabber-console.el
+  jabber-20250310.305/jabber-core.el
+  jabber-20250310.305/jabber-disco.el
+  jabber-20250310.305/jabber-events.el
+  jabber-20250310.305/jabber-export.el
+  jabber-20250310.305/jabber-feature-neg.el
+  jabber-20250310.305/jabber-festival.el
+  jabber-20250310.305/jabber-history.el
+  jabber-20250310.305/jabber-httpupload.el
+  jabber-20250310.305/jabber-iq.el
+  jabber-20250310.305/jabber-keepalive.el
+  jabber-20250310.305/jabber-keymap.el
+  jabber-20250310.305/jabber-libnotify.el
+  jabber-20250310.305/jabber-logon.el
+  jabber-20250310.305/jabber-menu.el
+  jabber-20250310.305/jabber-modeline.el
+  jabber-20250310.305/jabber-muc-nick-coloring.el
+  jabber-20250310.305/jabber-muc-nick-completion.el
+  jabber-20250310.305/jabber-muc.el
+  jabber-20250310.305/jabber-notifications.el
+  jabber-20250310.305/jabber-ping.el
+  jabber-20250310.305/jabber-pkg.el
+  jabber-20250310.305/jabber-presence.el
+  jabber-20250310.305/jabber-private.el
+  jabber-20250310.305/jabber-ratpoison.el
+  jabber-20250310.305/jabber-register.el
+  jabber-20250310.305/jabber-roster.el
+  jabber-20250310.305/jabber-rtt.el
+  jabber-20250310.305/jabber-sasl.el
+  jabber-20250310.305/jabber-sawfish.el
+  jabber-20250310.305/jabber-screen.el
+  jabber-20250310.305/jabber-search.el
+  jabber-20250310.305/jabber-time.el
+  jabber-20250310.305/jabber-tmux.el
+  jabber-20250310.305/jabber-truncate.el
+  jabber-20250310.305/jabber-util.el
+  jabber-20250310.305/jabber-vcard-avatars.el
+  jabber-20250310.305/jabber-vcard.el
+  jabber-20250310.305/jabber-version.el
+  jabber-20250310.305/jabber-watch.el
+  jabber-20250310.305/jabber-widget.el
+  jabber-20250310.305/jabber-wmii.el
+  jabber-20250310.305/jabber-xmessage.el
+  jabber-20250310.305/jabber-xml.el
+  jabber-20250310.305/jabber.el
+  jabber-20250310.305/jabber.info
+ ✓ Success:
+  2025-03-28T14:12:16+0000  jabber-20250310.305.entry
+  2025-03-28T14:12:16+0000  jabber-20250310.305.tar
+Built jabber in 9.493s, finished at 2025-03-28T14:12:17+0000
