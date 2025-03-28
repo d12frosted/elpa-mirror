@@ -3,8 +3,8 @@ Description
 
 The `company-forge' is a [company-mode] completion backend for [forge].  It
 uses current `forge' repository data to offer completions for assignees
-(`@' mentions of users and teams) and topics (`#' references to issues and
-pull requests).
+(`@' mentions of users and teams) and topics (`#' references to issues,
+discussions, and pull requests).
 
 
 [company-mode] <https://github.com/company-mode/company-mode>
@@ -16,11 +16,11 @@ Features
 ========
 
 - Offer completion after entering `@' and `#'
-- Support for users, teams, issues, and pull requests.
+- Support for users, teams, issues, discussions, and pull requests.
 - Suppoet for different matching types (see `company-forge-match-type').
 - Display [octicons] for candidates (see `company-forge-icons-mode').
-- Display issues and pull-request text as a documentation with
-  `quickhelp-string' and `doc-buffer' `company' commands.
+- Display issues, discussions, and pull-request text as a documentation
+  with `quickhelp-string' and `doc-buffer' `company' commands.
 
 
 [octicons] <https://github.com/primer/octicons>
