@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/chep/copilot-chat.el
 
 Updating /mnt/store/melpa/working/copilot-chat/
-Checking out fb789c721e0697e587b8a5bbdd4e46e6104f80bc
+Checking out 92c4476ee7c27a78c8ef8e4ac624920a19032620
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/copilot-chat/
-  to /tmp/copilot-chatT3eQL6/copilot-chat-20250327.1424
+  to /tmp/copilot-chat448Weh/copilot-chat-20250328.1952
     copilot-chat-command.el -> copilot-chat-command.el
     copilot-chat-common.el -> copilot-chat-common.el
     copilot-chat-copilot.el -> copilot-chat-copilot.el
@@ -21,24 +21,26 @@ Copying files (->) and directories (=>)
     copilot-chat-shell-maker.el -> copilot-chat-shell-maker.el
     copilot-chat-transient.el -> copilot-chat-transient.el
     copilot-chat.el -> copilot-chat.el
-Created copilot-chat-20250327.1424.tar containing:
-  copilot-chat-20250327.1424/
-  copilot-chat-20250327.1424/copilot-chat-command.el
-  copilot-chat-20250327.1424/copilot-chat-common.el
-  copilot-chat-20250327.1424/copilot-chat-copilot.el
-  copilot-chat-20250327.1424/copilot-chat-curl.el
-  copilot-chat-20250327.1424/copilot-chat-frontend.el
-  copilot-chat-20250327.1424/copilot-chat-instance.el
-  copilot-chat-20250327.1424/copilot-chat-markdown.el
-  copilot-chat-20250327.1424/copilot-chat-org.el
-  copilot-chat-20250327.1424/copilot-chat-pkg.el
-  copilot-chat-20250327.1424/copilot-chat-prompt-mode.el
-  copilot-chat-20250327.1424/copilot-chat-prompts.el
-  copilot-chat-20250327.1424/copilot-chat-request.el
-  copilot-chat-20250327.1424/copilot-chat-shell-maker.el
-  copilot-chat-20250327.1424/copilot-chat-transient.el
-  copilot-chat-20250327.1424/copilot-chat.el
+Created copilot-chat-20250328.1952.tar containing:
+  copilot-chat-20250328.1952/
+  copilot-chat-20250328.1952/copilot-chat-command.el
+  copilot-chat-20250328.1952/copilot-chat-common.el
+  copilot-chat-20250328.1952/copilot-chat-copilot.el
+  copilot-chat-20250328.1952/copilot-chat-curl.el
+  copilot-chat-20250328.1952/copilot-chat-frontend.el
+  copilot-chat-20250328.1952/copilot-chat-instance.el
+  copilot-chat-20250328.1952/copilot-chat-markdown.el
+  copilot-chat-20250328.1952/copilot-chat-org.el
+  copilot-chat-20250328.1952/copilot-chat-pkg.el
+  copilot-chat-20250328.1952/copilot-chat-prompt-mode.el
+  copilot-chat-20250328.1952/copilot-chat-prompts.el
+  copilot-chat-20250328.1952/copilot-chat-request.el
+  copilot-chat-20250328.1952/copilot-chat-shell-maker.el
+  copilot-chat-20250328.1952/copilot-chat-transient.el
+  copilot-chat-20250328.1952/copilot-chat.el
  ✓ Success:
   2025-03-28T19:31:35+0000  copilot-chat-20250327.1424.entry
   2025-03-28T19:31:35+0000  copilot-chat-20250327.1424.tar
-Built copilot-chat in 5.629s, finished at 2025-03-28T19:31:37+0000
+  2025-03-28T22:23:32+0000  copilot-chat-20250328.1952.entry
+  2025-03-28T22:23:32+0000  copilot-chat-20250328.1952.tar
+Built copilot-chat in 5.269s, finished at 2025-03-28T22:23:33+0000

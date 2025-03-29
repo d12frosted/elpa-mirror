@@ -835,7 +835,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:commit . "1b30a28857727202d1f6a027f83ad66151fb1e92"))])
  (corfu .
-	[(1 7)
+	[(2 0)
 	 ((emacs
 	   (28 1))
 	  (compat
@@ -846,7 +846,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "2c476b442ccfda9935e472b26d9cd60d45726560"))])
+	  (:commit . "061d926d0f0eb2633416deeddc403a1a67b062ae"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
@@ -1550,7 +1550,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama .
-	 [(1 6 2)
+	 [(1 7 2)
 	  ((emacs
 	    (28 1))
 	   (llm
@@ -1567,7 +1567,7 @@
 	   (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
 	   (:authors
 	    ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-	   (:commit . "eb8584e610c520697063355941cd1f22a5814263"))])
+	   (:commit . "213da10f885dcb2f040245276ca8b9f755c0f1a8"))])
  (emacs-gc-stats .
 		 [(1 4 2)
 		  ((emacs

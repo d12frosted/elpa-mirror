@@ -420,8 +420,8 @@ Table of Contents
   offers the `pcomplete-from-help' function which parses the `--help'
   output of a command and produces completions for command line options.
 
-  Pcomplete has a few bugs on Emacs 28 and older. We can work around the
-  issues with the [Cape] library (Completion at point extensions). Cape
+  Pcomplete has a few bugs on Emacs 28. We can work around the issues
+  with the [Cape] library (Completion at point extensions). Cape
   provides wrappers which sanitize the Pcomplete function. On Emacs 29
   the advices should not be necessary anymore, since most relevant bugs
   have been fixed. In case you discover any remaining Pcomplete issues,
@@ -429,8 +429,7 @@ Table of Contents
 
   ┌────
   │ ;; Sanitize the `pcomplete-completions-at-point' Capf.  The Capf has undesired
-  │ ;; side effects on Emacs 28 and earlier.  These advices are not needed on Emacs
-  │ ;; 29 and newer.
+  │ ;; side effects on Emacs 28.  These advices are not needed on Emacs 29 and newer.
   │ (when (< emacs-major-version 29)
   │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
   │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
@@ -684,8 +683,9 @@ Table of Contents
 
   • [kind-icon], [nerd-icons-corfu]: Icons are supported by Corfu via
     external packages. The nerd-icons-corfu package relies on the Nerd
-    icon font, which is even supported on terminal, while kind-icon uses
-    SVGs from monochromatic icon sets.
+    icon font, which is supported on terminal, while kind-icon uses SVGs
+    from monochromatic icon sets, or colored-coded text badges for
+    terminal or simpler appearance.
 
   • [Tempel]: Tiny template/snippet package with templates in Lisp
     syntax, which can be used in conjunction with Corfu.
