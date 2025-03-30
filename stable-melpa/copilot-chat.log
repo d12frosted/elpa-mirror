@@ -3,42 +3,56 @@ Fetcher: github
 Source:  https://github.com/chep/copilot-chat.el
 
 Updating /mnt/store/melpa/working/copilot-chat/
-Checking out 92c4476ee7c27a78c8ef8e4ac624920a19032620
+Checking out 2af9260b3ec46a1ec9d44ff55824c04d506dea1d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/copilot-chat/
-  to /tmp/copilot-chatThlF3Q/copilot-chat-20250328.1952
+  to /tmp/copilot-chat8ZavLC/copilot-chat-20250330.1825
+    copilot-chat-body.el -> copilot-chat-body.el
     copilot-chat-command.el -> copilot-chat-command.el
     copilot-chat-common.el -> copilot-chat-common.el
+    copilot-chat-connection.el -> copilot-chat-connection.el
     copilot-chat-copilot.el -> copilot-chat-copilot.el
     copilot-chat-curl.el -> copilot-chat-curl.el
+    copilot-chat-debug.el -> copilot-chat-debug.el
     copilot-chat-frontend.el -> copilot-chat-frontend.el
+    copilot-chat-git.el -> copilot-chat-git.el
     copilot-chat-instance.el -> copilot-chat-instance.el
     copilot-chat-markdown.el -> copilot-chat-markdown.el
+    copilot-chat-model.el -> copilot-chat-model.el
     copilot-chat-org.el -> copilot-chat-org.el
     copilot-chat-prompt-mode.el -> copilot-chat-prompt-mode.el
     copilot-chat-prompts.el -> copilot-chat-prompts.el
     copilot-chat-request.el -> copilot-chat-request.el
     copilot-chat-shell-maker.el -> copilot-chat-shell-maker.el
+    copilot-chat-spinner.el -> copilot-chat-spinner.el
     copilot-chat-transient.el -> copilot-chat-transient.el
     copilot-chat.el -> copilot-chat.el
-Created copilot-chat-20250328.1952.tar containing:
-  copilot-chat-20250328.1952/
-  copilot-chat-20250328.1952/copilot-chat-command.el
-  copilot-chat-20250328.1952/copilot-chat-common.el
-  copilot-chat-20250328.1952/copilot-chat-copilot.el
-  copilot-chat-20250328.1952/copilot-chat-curl.el
-  copilot-chat-20250328.1952/copilot-chat-frontend.el
-  copilot-chat-20250328.1952/copilot-chat-instance.el
-  copilot-chat-20250328.1952/copilot-chat-markdown.el
-  copilot-chat-20250328.1952/copilot-chat-org.el
-  copilot-chat-20250328.1952/copilot-chat-pkg.el
-  copilot-chat-20250328.1952/copilot-chat-prompt-mode.el
-  copilot-chat-20250328.1952/copilot-chat-prompts.el
-  copilot-chat-20250328.1952/copilot-chat-request.el
-  copilot-chat-20250328.1952/copilot-chat-shell-maker.el
-  copilot-chat-20250328.1952/copilot-chat-transient.el
-  copilot-chat-20250328.1952/copilot-chat.el
+Created copilot-chat-20250330.1825.tar containing:
+  copilot-chat-20250330.1825/
+  copilot-chat-20250330.1825/copilot-chat-body.el
+  copilot-chat-20250330.1825/copilot-chat-command.el
+  copilot-chat-20250330.1825/copilot-chat-common.el
+  copilot-chat-20250330.1825/copilot-chat-connection.el
+  copilot-chat-20250330.1825/copilot-chat-copilot.el
+  copilot-chat-20250330.1825/copilot-chat-curl.el
+  copilot-chat-20250330.1825/copilot-chat-debug.el
+  copilot-chat-20250330.1825/copilot-chat-frontend.el
+  copilot-chat-20250330.1825/copilot-chat-git.el
+  copilot-chat-20250330.1825/copilot-chat-instance.el
+  copilot-chat-20250330.1825/copilot-chat-markdown.el
+  copilot-chat-20250330.1825/copilot-chat-model.el
+  copilot-chat-20250330.1825/copilot-chat-org.el
+  copilot-chat-20250330.1825/copilot-chat-pkg.el
+  copilot-chat-20250330.1825/copilot-chat-prompt-mode.el
+  copilot-chat-20250330.1825/copilot-chat-prompts.el
+  copilot-chat-20250330.1825/copilot-chat-request.el
+  copilot-chat-20250330.1825/copilot-chat-shell-maker.el
+  copilot-chat-20250330.1825/copilot-chat-spinner.el
+  copilot-chat-20250330.1825/copilot-chat-transient.el
+  copilot-chat-20250330.1825/copilot-chat.el
  ✓ Success:
-  2025-03-30T14:11:21+0000  copilot-chat-20250328.1952.entry
-  2025-03-30T14:11:21+0000  copilot-chat-20250328.1952.tar
-Built copilot-chat in 4.654s, finished at 2025-03-30T14:11:22+0000
+  2025-03-30T16:59:40+0000  copilot-chat-20250330.1413.entry
+  2025-03-30T16:59:40+0000  copilot-chat-20250330.1413.tar
+  2025-03-30T19:52:44+0000  copilot-chat-20250330.1825.entry
+  2025-03-30T19:52:44+0000  copilot-chat-20250330.1825.tar
+Built copilot-chat in 4.584s, finished at 2025-03-30T19:52:45+0000
