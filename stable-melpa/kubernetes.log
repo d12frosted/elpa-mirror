@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/kubernetes-el/kubernetes-el
 
 Updating /mnt/store/melpa/working/kubernetes/
-Checking out 2c172e20d3f3430fe4933d215e7b5c9f9b8134e9
+Checking out 32b8f38f13e501600f14d05376e532234b91c1b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kubernetes/
-  to /tmp/kubernetesQXW4vs/kubernetes-20250330.430
+  to /tmp/kubernetesHmladg/kubernetes-20250330.1358
     kubernetes-ast.el -> kubernetes-ast.el
     kubernetes-commands.el -> kubernetes-commands.el
     kubernetes-configmaps.el -> kubernetes-configmaps.el
@@ -45,48 +45,50 @@ Copying files (->) and directories (=>)
     kubernetes-vars.el -> kubernetes-vars.el
     kubernetes-yaml.el -> kubernetes-yaml.el
     kubernetes.el -> kubernetes.el
-Created kubernetes-20250330.430.tar containing:
-  kubernetes-20250330.430/
-  kubernetes-20250330.430/kubernetes-ast.el
-  kubernetes-20250330.430/kubernetes-commands.el
-  kubernetes-20250330.430/kubernetes-configmaps.el
-  kubernetes-20250330.430/kubernetes-contexts.el
-  kubernetes-20250330.430/kubernetes-core.el
-  kubernetes-20250330.430/kubernetes-cronjobs.el
-  kubernetes-20250330.430/kubernetes-deployments.el
-  kubernetes-20250330.430/kubernetes-describe.el
-  kubernetes-20250330.430/kubernetes-el-tramp.el
-  kubernetes-20250330.430/kubernetes-errors.el
-  kubernetes-20250330.430/kubernetes-events.el
-  kubernetes-20250330.430/kubernetes-exec.el
-  kubernetes-20250330.430/kubernetes-ingress.el
-  kubernetes-20250330.430/kubernetes-jobs.el
-  kubernetes-20250330.430/kubernetes-kubectl.el
-  kubernetes-20250330.430/kubernetes-labels.el
-  kubernetes-20250330.430/kubernetes-loading-container.el
-  kubernetes-20250330.430/kubernetes-logs.el
-  kubernetes-20250330.430/kubernetes-modes.el
-  kubernetes-20250330.430/kubernetes-namespaces.el
-  kubernetes-20250330.430/kubernetes-networkpolicies.el
-  kubernetes-20250330.430/kubernetes-nodes.el
-  kubernetes-20250330.430/kubernetes-overview.el
-  kubernetes-20250330.430/kubernetes-persistentvolumeclaims.el
-  kubernetes-20250330.430/kubernetes-pkg.el
-  kubernetes-20250330.430/kubernetes-pod-line.el
-  kubernetes-20250330.430/kubernetes-pods.el
-  kubernetes-20250330.430/kubernetes-popups.el
-  kubernetes-20250330.430/kubernetes-process.el
-  kubernetes-20250330.430/kubernetes-replicasets.el
-  kubernetes-20250330.430/kubernetes-resources.el
-  kubernetes-20250330.430/kubernetes-secrets.el
-  kubernetes-20250330.430/kubernetes-services.el
-  kubernetes-20250330.430/kubernetes-state.el
-  kubernetes-20250330.430/kubernetes-statefulsets.el
-  kubernetes-20250330.430/kubernetes-utils.el
-  kubernetes-20250330.430/kubernetes-vars.el
-  kubernetes-20250330.430/kubernetes-yaml.el
-  kubernetes-20250330.430/kubernetes.el
+Created kubernetes-20250330.1358.tar containing:
+  kubernetes-20250330.1358/
+  kubernetes-20250330.1358/kubernetes-ast.el
+  kubernetes-20250330.1358/kubernetes-commands.el
+  kubernetes-20250330.1358/kubernetes-configmaps.el
+  kubernetes-20250330.1358/kubernetes-contexts.el
+  kubernetes-20250330.1358/kubernetes-core.el
+  kubernetes-20250330.1358/kubernetes-cronjobs.el
+  kubernetes-20250330.1358/kubernetes-deployments.el
+  kubernetes-20250330.1358/kubernetes-describe.el
+  kubernetes-20250330.1358/kubernetes-el-tramp.el
+  kubernetes-20250330.1358/kubernetes-errors.el
+  kubernetes-20250330.1358/kubernetes-events.el
+  kubernetes-20250330.1358/kubernetes-exec.el
+  kubernetes-20250330.1358/kubernetes-ingress.el
+  kubernetes-20250330.1358/kubernetes-jobs.el
+  kubernetes-20250330.1358/kubernetes-kubectl.el
+  kubernetes-20250330.1358/kubernetes-labels.el
+  kubernetes-20250330.1358/kubernetes-loading-container.el
+  kubernetes-20250330.1358/kubernetes-logs.el
+  kubernetes-20250330.1358/kubernetes-modes.el
+  kubernetes-20250330.1358/kubernetes-namespaces.el
+  kubernetes-20250330.1358/kubernetes-networkpolicies.el
+  kubernetes-20250330.1358/kubernetes-nodes.el
+  kubernetes-20250330.1358/kubernetes-overview.el
+  kubernetes-20250330.1358/kubernetes-persistentvolumeclaims.el
+  kubernetes-20250330.1358/kubernetes-pkg.el
+  kubernetes-20250330.1358/kubernetes-pod-line.el
+  kubernetes-20250330.1358/kubernetes-pods.el
+  kubernetes-20250330.1358/kubernetes-popups.el
+  kubernetes-20250330.1358/kubernetes-process.el
+  kubernetes-20250330.1358/kubernetes-replicasets.el
+  kubernetes-20250330.1358/kubernetes-resources.el
+  kubernetes-20250330.1358/kubernetes-secrets.el
+  kubernetes-20250330.1358/kubernetes-services.el
+  kubernetes-20250330.1358/kubernetes-state.el
+  kubernetes-20250330.1358/kubernetes-statefulsets.el
+  kubernetes-20250330.1358/kubernetes-utils.el
+  kubernetes-20250330.1358/kubernetes-vars.el
+  kubernetes-20250330.1358/kubernetes-yaml.el
+  kubernetes-20250330.1358/kubernetes.el
  ✓ Success:
+  2025-03-30T14:43:11+0000  kubernetes-20250330.1358.entry
+  2025-03-30T14:43:11+0000  kubernetes-20250330.1358.tar
   2025-03-30T11:57:52+0000  kubernetes-20250330.430.entry
   2025-03-30T11:57:52+0000  kubernetes-20250330.430.tar
-Built kubernetes in 4.559s, finished at 2025-03-30T11:57:54+0000
+Built kubernetes in 4.379s, finished at 2025-03-30T14:43:12+0000
