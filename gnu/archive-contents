@@ -2363,7 +2363,7 @@
 	      (:url . "https://elpa.gnu.org/packages/iterators.html")
 	      (:commit . "99bdcc8bdfcbc6a8de3d2675450c2fe0aa0e72fd"))])
  (ivy .
-      [(0 15 0)
+      [(0 15 1)
        ((emacs
 	 (24 5)))
        "Incremental Vertical completYon" tar
@@ -2372,7 +2372,7 @@
 	(:maintainer "Basil L. Contovounesios" . "basil@contovou.net")
 	(:authors
 	 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	(:commit . "9d99a8b78457eab732c9fb68c14bdb30bdb76ac9"))])
+	(:commit . "d63d52f140105d4a072fbc18f1405ab8313a4cd5"))])
  (ivy-avy .
 	  [(0 15 0)
 	   ((emacs
@@ -3248,7 +3248,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "254f2412489bbbf62700f9d3d5f18e537841dcc3"))])
  (org .
-      [(9 7 26)
+      [(9 7 27)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3257,7 +3257,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "07e380f76d8741a499a3ffe66df03615f5b31804"))])
+	(:commit . "74dde3abae74c97ba336a11a1d0efcb79585e32f"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
