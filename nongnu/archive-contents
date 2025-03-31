@@ -1681,11 +1681,9 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
  (mastodon .
-	   [(1 1 12)
+	   [(2 0 0)
 	    ((emacs
 	      (28 1))
-	     (request
-	      (0 3 0))
 	     (persist
 	      (0 4))
 	     (tp
@@ -1696,7 +1694,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "mousebot@disroot.org"))
-	     (:commit . "a80d29dd320b8f8f568e37635105b97750985e96"))])
+	     (:commit . "30091255352c891b6054a15e428927b2a45abdae"))])
  (material-theme .
 		 [(2015)
 		  ((emacs

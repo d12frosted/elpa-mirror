@@ -143,9 +143,38 @@
   variables and restarting Emacs.
 
   If you were using mastodon.el before 2FA was implemented and the above
-  steps do not work, delete the old file specified by
-  `mastodon-client--token-file' and restart Emacs and follow the steps
-  again.
+  steps do not work, call `(mastodon-forget-all-logins)', restart Emacs
+  and follow the steps again.
+
+
+◊ 1.2.1.1 encrypted access tokens (from 2.0.0)
+
+  By default, user access tokens are now stored in the user's auth
+  source file (typically `~/.authinfo.gpg', check the value of
+  `auth-sources'). When you first update to 2.0.0, or if you encounter
+  issues due to old credentials, call `(mastodon-forget-all-logins)' to
+  remove the old mastodon.el plstore, and then authenticate again. If
+  you don't want to use the auth source file, set
+  `mastodon-auth-use-auth-source' to nil. Entries will instead be stored
+  encrypted in `mastodon-client--token-file', a plstore.
+
+  If for some reason you reauthenticate, you'll need to either remove
+  the entry in your auth sources file, or manually update the token in
+  it after doing so, as mastodon.el is unable to reliably update (or
+  even remove) entires.
+
+  The format for a mastodon.el auth source entry is as follows:
+
+  `machine INSTANCE login USERNAME password AUTHTOKEN'
+
+  with the token being what you copy from the browser when
+  authenticating.  If you have `auth-source-save-behavior' set to nil,
+  you'll also need to add such an entry manually.
+
+  Finally, if you find you're asked for your key passphrase too often
+  while authenticating, consider setting `epa-file-encrypt-to' (for
+  auth-source encryption) and `plstore-encrypt-to' (for plstore
+  encryption) to your preferred key ID.
 
 
 1.2.2 Timelines
@@ -497,6 +526,13 @@
   A simple code snippet to enable narrowing to current item in
   timelines:
   <http://takeonrules.com/2024/10/31/hacking-on-mastodon-emacs-package-to-narrow-viewing/>
+
+
+◊ 1.2.8.5 Sachac's config goodies
+
+  The incomparable sachac has a bunch of `mastodon.el' extensions and
+  goodies in their literate config, available here:
+  <https://sachachua.com/dotemacs/index.html#mastodon>.
 
 
 1.2.9 Live-updating timelines: `mastodon-async-mode'
