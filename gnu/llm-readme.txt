@@ -122,10 +122,15 @@
   There are many Open AI compatible APIs and proxies of Open AI.  You
   can set up one with `make-llm-openai-compatible', with the following
   parameter:
-  • `:url', the URL of leading up to the command ("embeddings" or
-    "chat/completions").  So, for example,
-    "<https://api.openai.com/v1/>" is the URL to use Open AI (although
-    if you wanted to do that, just use `make-llm-openai' instead.
+  1) `:url', the URL of leading up to the command ("embeddings" or
+     "chat/completions").  So, for example,
+     "<https://api.openai.com/v1/>" is the URL to use Open AI (although
+     if you wanted to do that, just use `make-llm-openai' instead).
+  2) `:chat-model': The chat model that is supported by the provider.
+     Some providers don't need a model to be set, but still require it
+     in the API, so we default to "unset".
+  3) `:embedding-model': An embedding model name that is supported by
+     the provider.  This is also defaulted to "unset".
 
 
 2.3 Azure's Open AI
