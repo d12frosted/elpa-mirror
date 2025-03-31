@@ -3261,6 +3261,7 @@
   (magit-gitflow :url "https://github.com/jtatarik/magit-gitflow")
   (magit-gitlab :url "https://gitlab.com/arvidnl/magit-gitlab")
   (magit-gptcommit :url "https://github.com/douo/magit-gptcommit")
+  (magit-ido :url "https://github.com/emacsorphanage/magit-ido")
   (magit-imerge :url "https://github.com/magit/magit-imerge")
   (magit-lfs :url "https://github.com/Ailrun/magit-lfs")
   (magit-org-todos :url "https://github.com/danielma/magit-org-todos.el")
