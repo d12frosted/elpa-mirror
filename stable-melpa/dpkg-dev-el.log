@@ -3,28 +3,30 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/dpkg-dev-el.git
 
 Updating /mnt/store/melpa/working/dpkg-dev-el/
-Checking out ce30b11acdf44f262bd0fd59074bdb87ef7484bc
+Checking out 1f75d3a714c60762cf56f319c3affe8c4ea2ee04
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dpkg-dev-el/
-  to /tmp/dpkg-dev-elZHNi4k/dpkg-dev-el-20250401.745
+  to /tmp/dpkg-dev-elJ6DhuP/dpkg-dev-el-20250401.2244
     debian-autopkgtest-control-mode.el -> debian-autopkgtest-control-mode.el
     debian-bts-control.el -> debian-bts-control.el
     debian-changelog-mode.el -> debian-changelog-mode.el
     debian-control-mode.el -> debian-control-mode.el
     debian-copyright.el -> debian-copyright.el
+    dpkg-dev-common-utils.el -> dpkg-dev-common-utils.el
     dpkg-dev-el.el -> dpkg-dev-el.el
     readme-debian.el -> readme-debian.el
-Created dpkg-dev-el-20250401.745.tar containing:
-  dpkg-dev-el-20250401.745/
-  dpkg-dev-el-20250401.745/debian-autopkgtest-control-mode.el
-  dpkg-dev-el-20250401.745/debian-bts-control.el
-  dpkg-dev-el-20250401.745/debian-changelog-mode.el
-  dpkg-dev-el-20250401.745/debian-control-mode.el
-  dpkg-dev-el-20250401.745/debian-copyright.el
-  dpkg-dev-el-20250401.745/dpkg-dev-el-pkg.el
-  dpkg-dev-el-20250401.745/dpkg-dev-el.el
-  dpkg-dev-el-20250401.745/readme-debian.el
+Created dpkg-dev-el-20250401.2244.tar containing:
+  dpkg-dev-el-20250401.2244/
+  dpkg-dev-el-20250401.2244/debian-autopkgtest-control-mode.el
+  dpkg-dev-el-20250401.2244/debian-bts-control.el
+  dpkg-dev-el-20250401.2244/debian-changelog-mode.el
+  dpkg-dev-el-20250401.2244/debian-control-mode.el
+  dpkg-dev-el-20250401.2244/debian-copyright.el
+  dpkg-dev-el-20250401.2244/dpkg-dev-common-utils.el
+  dpkg-dev-el-20250401.2244/dpkg-dev-el-pkg.el
+  dpkg-dev-el-20250401.2244/dpkg-dev-el.el
+  dpkg-dev-el-20250401.2244/readme-debian.el
  ✓ Success:
-  2025-04-02T01:19:44+0000  dpkg-dev-el-20250401.745.entry
-  2025-04-02T01:19:43+0000  dpkg-dev-el-20250401.745.tar
-Built dpkg-dev-el in 7.449s, finished at 2025-04-02T01:19:45+0000
+  2025-04-02T07:32:21+0000  dpkg-dev-el-20250401.2244.entry
+  2025-04-02T07:32:21+0000  dpkg-dev-el-20250401.2244.tar
+Built dpkg-dev-el in 4.721s, finished at 2025-04-02T07:32:22+0000
