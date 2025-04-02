@@ -2956,6 +2956,20 @@
 	     ("David Engster" . "deng@randomsample.de"))
 	    (:url . "https://elpa.gnu.org/packages/minimap.html")
 	    (:commit . "2ff29c5d6abae3637d6174d889f39745fcd13fa5"))])
+ (minuet .
+	 [(0 4 4)
+	  ((emacs
+	    (29))
+	   (plz
+	    (0 9))
+	   (dash
+	    (2 19 1)))
+	  "Code completion using LLM" tar
+	  ((:url . "https://github.com/milanglacier/minuet-ai.el")
+	   (:maintainer "Milan Glacier" . "dev@milanglacier.com")
+	   (:authors
+	    ("Milan Glacier" . "dev@milanglacier.com"))
+	   (:commit . "fffbb3a39a996fabb65b8f06ab5422bb53c500cd"))])
  (mmm-mode .
 	   [(0 5 11)
 	    ((emacs
@@ -4734,11 +4748,11 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 8 6)
+	    [(0 8 7)
 	     ((emacs
 	       (26 1))
 	      (compat
-	       (30 0 0 0))
+	       (30 0 2 0))
 	      (seq
 	       (2 24)))
 	     "Transient commands" tar
@@ -4747,7 +4761,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "52f737a696cad846d528a5a06e412f740a1de38a"))])
+	      (:commit . "afc88b24e4faa5c7e246303648e70b4507652f32"))])
  (transient-cycles .
 		   [(1 1)
 		    ((emacs
