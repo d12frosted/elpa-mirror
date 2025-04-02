@@ -740,7 +740,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:commit . "e62157d43b2c874d2edbd547c3bdfb05d0a7ae5c"))])
  (compat .
-	 [(30 0 2 0)
+	 [(30 1 0 0)
 	  ((emacs
 	    (24 4))
 	   (seq
@@ -752,7 +752,7 @@
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net")
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "e87b984bf763aa6c574dde58b3cb4458b3b7db17"))])
+	   (:commit . "7179960b7c82a7cca6bac60d79dd7fe09ae390a0"))])
  (cond-star .
 	    [(1 0)
 	     ((emacs
@@ -773,7 +773,7 @@
 	       ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	      (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult .
-	  [(2 1)
+	  [(2 2)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -782,7 +782,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "d557305b730f7666d46bc3eb04c87cfcc493a8e5"))])
+	    (:commit . "30a42ac8f3d42f653eda234ee538c1960704f4f2"))])
  (consult-denote .
 		 [(0 2 4)
 		  ((emacs
