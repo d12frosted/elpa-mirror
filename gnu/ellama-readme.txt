@@ -323,8 +323,7 @@ Assistant". Previous sentence was written by Ellama itself.
     name as key.
   • `ellama-spinner-enabled': Enable spinner during text generation.
   • `ellama-spinner-type': Spinner type for ellama. Default type is
-  `progress-bar'.
-  • `ellama-ollama-binary': Path to ollama binary.
+    `progress-bar'.
   • `ellama-auto-scroll': If enabled ellama buffer will scroll
     automatically during generation. Disabled by default.
   • `ellama-fill-paragraphs': Option to customize ellama paragraphs
@@ -413,7 +412,9 @@ Assistant". Previous sentence was written by Ellama itself.
 
   A “global context” is maintained, which is a collection of text blocks
   accessible to the LLM when responding to prompts. This global context
-  is prepened to your prompt before transmission to the LLM.
+  is prepended to your prompt before transmission to the
+  LLM. Additionally, Ellama supports an "ephemeral context," which is
+  temporary and only available for a single request.
 
 
 5.1 Transient Menus for Context Management
@@ -428,12 +429,15 @@ Assistant". Previous sentence was written by Ellama itself.
 
   Context Commands:
 
-  • Add: Provides options for adding content to the global context.
-    • “b” "Add Buffer" `ellama-context-add-buffer'
-    • “d” "Add Directory" `ellama-context-add-directory'
-    • “f” "Add File" `ellama-context-add-file'
-    • “s” "Add Selection" `ellama-context-add-selection'
-    • “i” "Add Info Node" `ellama-context-add-info-node'
+  • Options: Provides options for managing ephemeral context.
+    • “-e” "Use Ephemeral Context" `--ephemeral'
+  • Add: Provides options for adding content to the global or ephemeral
+    context.
+    • “b” "Add Buffer" `ellama-transient-add-buffer'
+    • “d” "Add Directory" `ellama-transient-add-directory'
+    • “f” "Add File" `ellama-transient-add-file'
+    • “s” "Add Selection" `ellama-transient-add-selection'
+    • “i” "Add Info Node" `ellama-transient-add-info-node'
   • Manage: Provides options for managing the global context.
     • “m” "Manage context" `ellama-context-manage' - Opens the context
       management buffer.
