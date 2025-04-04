@@ -1,7 +1,11 @@
-- [Minuet AI](#minuet-ai)
+- [Minuet](#minuet)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Quick Start: LLM Provider Examples](#quick-start-llm-provider-examples)
+  - [Ollama Qwen-2.5-coder:3b](#ollama-qwen-25-coder3b)
+  - [OpenRouter Qwen2.5-32B-Instruct](#openrouter-qwen25-32b-instruct)
+  - [Llama.cpp Qwen-2.5-coder:1.5b](#llamacpp-qwen-25-coder15b)
 - [API Keys](#api-keys)
 - [Selecting a Provider or Model](#selecting-a-provider-or-model)
 - [Prompt](#prompt)
@@ -12,6 +16,8 @@
   - [minuet-request-timeout](#minuet-request-timeout)
   - [minuet-add-single-line-entry](#minuet-add-single-line-entry)
   - [minuet-n-completions](#minuet-n-completions)
+  - [minuet-auto-suggestion-debounce-delay](#minuet-auto-suggestion-debounce-delay)
+  - [minuet-auto-suggestion-throttle-delay](#minuet-auto-suggestion-throttle-delay)
 - [Provider Options](#provider-options)
   - [OpenAI](#openai)
   - [Claude](#claude)
@@ -19,22 +25,33 @@
   - [Gemini](#gemini)
   - [OpenAI-compatible](#openai-compatible)
   - [OpenAI-FIM-Compatible](#openai-fim-compatible)
+- [Troubleshooting](#troubleshooting)
+- [Contributions](#contributions)
+- [Acknowledgement](#acknowledgement)
 
-# Minuet AI
+# Minuet
 
-Minuet AI: Dance with Intelligence in Your Code 💃.
+[![GNU ELPA badge][gnu-elpa-badge]][gnu-elpa-link]
+[![MELPA badge][melpa-badge]][melpa-link]
 
-`Minuet-ai` brings the grace and harmony of a minuet to your coding process.
-Just as dancers move during a minuet.
+[gnu-elpa-link]: https://elpa.gnu.org/packages/minuet.html
+[gnu-elpa-badge]: https://elpa.gnu.org/packages/minuet.svg
+[melpa-link]: https://melpa.org/#/minuet
+[melpa-badge]: https://melpa.org/packages/minuet-badge.svg
+
+Minuet: Dance with LLM in Your Code 💃.
+
+`Minuet` brings the grace and harmony of a minuet to your coding process. Just
+as dancers move during a minuet.
 
 # Features
 
-- AI-powered code completion with dual modes:
+- LLM-powered code completion with dual modes:
   - Specialized prompts and various enhancements for chat-based LLMs on code
     completion tasks.
   - Fill-in-the-middle (FIM) completion for compatible models (DeepSeek,
     Codestral, and some Ollama models).
-- Support for multiple AI providers (OpenAI, Claude, Gemini, Codestral, Ollama,
+- Support for multiple LLM providers (OpenAI, Claude, Gemini, Codestral, Ollama,
   Llama.cpp and OpenAI-compatible providers)
 - Customizable configuration options
 - Streaming support to enable completion delivery even with slower LLMs
@@ -52,12 +69,12 @@ Just as dancers move during a minuet.
 - emacs 29+ compiled with native JSON support (verify with `json-available-p`).
 - plz 0.9+
 - dash
-- An API key for at least one of the supported AI providers
+- An API key for at least one of the supported LLM providers
 
 # Installation
 
-`minuet` is available on MELPA and can be installed using your preferred package
-managers.
+`minuet` is available on ELPA and MELPA and can be installed using your
+preferred package managers.
 
 ```elisp
 
@@ -90,17 +107,27 @@ managers.
     ;; You can use M-x minuet-configure-provider to interactively configure provider and model
     (setq minuet-provider 'openai-fim-compatible)
 
-    ;; Required when defining minuet-ative-mode-map in insert/normal states.
-    ;; Not required when defining minuet-active-mode-map without evil state.
-    (add-hook 'minuet-active-mode-hook #'evil-normalize-keymaps)
+    (minuet-set-optional-options minuet-openai-fim-compatible-options :max_tokens 64))
 
-    (minuet-set-optional-options minuet-openai-fim-compatible-options :max_tokens 256))
+    ;; For Evil users: When defining `minuet-ative-mode-map` in insert
+    ;; or normal states, the following one-liner is required.
+
+    ;; (add-hook 'minuet-active-mode-hook #'evil-normalize-keymaps)
+
+    ;; This is *not* necessary when defining `minuet-active-mode-map`.
+
+    ;; To minimize frequent overhead, it is recommended to avoid adding
+    ;; `evil-normalize-keymaps` to `minuet-active-mode-hook`. Instead,
+    ;; bind keybindings directly within `minuet-active-mode-map` using
+    ;; standard Emacs key sequences, such as `M-xxx`. This approach should
+    ;; not conflict with Evil's keybindings, as Evil primarily avoids
+    ;; using `M-xxx` bindings.
 
 ```
 
-**LLM Provider Examples**:
+# Quick Start: LLM Provider Examples
 
-**Ollama (`qwen-2.5-coder:3b`)**:
+## Ollama Qwen-2.5-coder:3b
 
 <details>
 
@@ -126,7 +153,7 @@ managers.
 
 </details>
 
-**Openrouter (`llama-3.3-70b`)**:
+## OpenRouter Qwen2.5-32B-Instruct
 
 <details>
 
@@ -140,7 +167,7 @@ managers.
 
     (plist-put minuet-openai-compatible-options :end-point "https://openrouter.ai/api/v1/chat/completions")
     (plist-put minuet-openai-compatible-options :api-key "OPENROUTER_API_KEY")
-    (plist-put minuet-openai-compatible-options :model "meta-llama/llama-3.3-70b-instruct")
+    (plist-put minuet-openai-compatible-options :model "qwen/qwen2.5-32b-instruct")
 
 
     ;; Prioritize throughput for faster completion
@@ -151,7 +178,7 @@ managers.
 
 </details>
 
-**Llama.cpp (`qwen-2.5-coder:1.5b`)**:
+## Llama.cpp Qwen-2.5-coder:1.5b
 
 <details>
 
@@ -210,8 +237,7 @@ computing power, please refer to [recipes.md](./recipes.md).
 
 # API Keys
 
-Minuet AI requires API keys to function. Set the following environment
-variables:
+Minuet requires API keys to function. Set the following environment variables:
 
 - `OPENAI_API_KEY` for OpenAI
 - `GEMINI_API_KEY` for Gemini
@@ -458,12 +484,12 @@ The following config is the default.
       :api-key "GEMINI_API_KEY"
       :system
       (:template minuet-default-system-template
-       :prompt minuet-default-prompt
+       :prompt minuet-default-prompt-prefix-first
        :guidelines minuet-default-guidelines
        :n-completions-template minuet-default-n-completion-template)
-      :fewshots minuet-default-fewshots
+      :fewshots minuet-default-fewshots-prefix-first
       :chat-input
-      (:template minuet-default-chat-input-template
+      (:template minuet-default-chat-input-template-prefix-first
        :language-and-tab minuet--default-chat-input-language-and-tab-function
        :context-before-cursor minuet--default-chat-input-before-cursor-function
        :context-after-cursor minuet--default-chat-input-after-cursor-function)
@@ -492,14 +518,6 @@ settings following the example:
                                :threshold "BLOCK_NONE")])
 ```
 
-### Experimental Configuration
-
-Gemini appears to perform better with an alternative input structure, unlike
-other chat-based LLMs. This observation is currently experimental and requires
-further validation. For details on the experimental prompt setup currently in
-use by the maintainer, please refer to the
-[prompt documentation](./prompt.md#an-experimental-configuration-setup-for-gemini).
-
 </details>
 
 ## OpenAI-compatible
@@ -515,9 +533,9 @@ The following config is the default.
 
 ```lisp
 (defvar minuet-openai-compatible-options
-    `(:end-point "https://api.groq.com/openai/v1/chat/completions"
-      :api-key "GROQ_API_KEY"
-      :model "llama-3.3-70b-versatile"
+    `(:end-point "https://openrouter.ai/api/v1/chat/completions"
+      :api-key "OPENROUTER_API_KEY"
+      :model "qwen/qwen2.5-32b-instruct"
       :system
       (:template minuet-default-system-template
        :prompt minuet-default-prompt
@@ -546,8 +564,8 @@ request timeout from outputing too many tokens.
 ## OpenAI-FIM-Compatible
 
 Use any provider compatible with OpenAI's completion API. This request uses the
-text completion API, not chat completion, so system prompts and few-shot
-examples are not applicable.
+text `/completions` endpoint, **not** `/chat/completions` endpoint, so system
+prompts and few-shot examples are not applicable.
 
 For example, you can set the `end_point` to
 `http://localhost:11434/v1/completions` to use `ollama`, or set it to
@@ -584,10 +602,10 @@ request timeout from outputing too many tokens.
 (minuet-set-optional-options minuet-openai-fim-compatible-options :top_p 0.9)
 ```
 
-For example bash scripts to run llama.cpp based on your local
-computing power, please refer to [recipes.md](./recipes.md). Note
-that the model for `llama.cpp` must be determined when you launch the
-`llama.cpp` server and cannot be changed thereafter.
+For example bash scripts to run llama.cpp based on your local computing power,
+please refer to [recipes.md](./recipes.md). Note that the model for `llama.cpp`
+must be determined when you launch the `llama.cpp` server and cannot be changed
+thereafter.
 
 </details>
 
@@ -607,6 +625,15 @@ If your setup failed, there are two most likely reasons:
    - Set a longer request timeout (e.g., `request-timeout = 5`)
 
 To diagnose issues, examine the buffer content from `*minuet*`.
+
+# Contributions
+
+Since this package is part of GNU ELPA, substantial contributions require a
+copyright assignment to the Free Software Foundation (FSF).
+
+However, minor contributions—such as small bug fixes or documentation
+improvements—are welcome even without copyright assignment. If you're unsure
+where to begin, feel free to open an issue for guidance.
 
 # Acknowledgement
 
