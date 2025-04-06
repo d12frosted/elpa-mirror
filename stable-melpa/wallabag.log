@@ -1,0 +1,30 @@
+Package: wallabag
+Fetcher: github
+Source:  https://github.com/chenyanming/wallabag.el
+
+Updating /mnt/store/melpa/working/wallabag/
+Checking out 071cf68d3b150c4ae20eef79e301c3ba96d312ab
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/wallabag/
+  to /tmp/wallabagEoEc5D/wallabag-20250331.118
+    wallabag-db.el -> wallabag-db.el
+    wallabag-faces.el -> wallabag-faces.el
+    wallabag-org.el -> wallabag-org.el
+    wallabag-util.el -> wallabag-util.el
+    wallabag.el -> wallabag.el
+    default.css -> default.css
+    emojis.alist -> emojis.alist
+Created wallabag-20250331.118.tar containing:
+  wallabag-20250331.118/
+  wallabag-20250331.118/default.css
+  wallabag-20250331.118/emojis.alist
+  wallabag-20250331.118/wallabag-db.el
+  wallabag-20250331.118/wallabag-faces.el
+  wallabag-20250331.118/wallabag-org.el
+  wallabag-20250331.118/wallabag-pkg.el
+  wallabag-20250331.118/wallabag-util.el
+  wallabag-20250331.118/wallabag.el
+ ✓ Success:
+  2025-04-06T19:35:54+0000  wallabag-20250331.118.entry
+  2025-04-06T19:35:53+0000  wallabag-20250331.118.tar
+Built wallabag in 5.068s, finished at 2025-04-06T19:35:55+0000
