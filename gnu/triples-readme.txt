@@ -205,6 +205,8 @@ inefficiencies typically are not significant.
     predicate is equal to /object/,
   • `triples-subjects-of-type', get all subjects which have a particular
     type.
+  • `triples-search', get all properties where a predicate matches given
+    text.  Can take an optional limit to restrict the number of results.
   • `triples-remove-schema-type' , remove a type and all associated data
     from the schema (should be rarely used).
 
@@ -288,6 +290,10 @@ inefficiencies typically are not significant.
   │ ;; The same, but with substitution with an abbreviation.
   │ (triples-fts-query-subject db "desc:panda" '(("desc" . "description/text")))
   └────
+
+  This is different than `triples-search' which does a straight text
+  match on a particular predicate only, and returns results without
+  ranking them.
 
 
 [SQLite's FTS5 extension] <https://www.sqlite.org/fts5.html>
