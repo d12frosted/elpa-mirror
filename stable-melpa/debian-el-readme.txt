@@ -3,6 +3,7 @@ This package provides emacs helper libraries specific to Debian users.
 This package contains the following libraries:
 
 `apt-sources' Major-mode for editing Debian sources.list files.
+`apt-deb822-sources' Major-mode for editing deb822-style APT source files.
 `apt-utils'   Interface to APT (Debian package management).
 `debian-bug'  An Emacs command to submit a bug report.
 `deb-view'    View contents of Debian package, similarly to tar-mode.
