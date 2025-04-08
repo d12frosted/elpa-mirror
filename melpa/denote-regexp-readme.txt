@@ -13,12 +13,12 @@ user-provided input.  Each of them take the following arguments:
    `denote-file-name-components-order', the "@@" prefix will be
    added.
 
- - `:signature' a Denote file signature.  This will be sluggified
-   using `denote-sluggify', and the "==" prefix will be added.
+ - `:signature' a Denote file signature.  This will be prefixed with "==".  If a string, it will be sluggified with `denote-sluggify'; if a regular expression (i.e., a list), it will be passed through otherwise.
 
- - `:title' a note's title.  This should be a string, not a regular
-   expression (a future feature).  This will be sluggified (using
-   `denote-sluggify'), and prefixed with "--".
+ - `:title' a note's title.  This will be prefixed with "--".  If a
+   string, it will be sluggified with `denote-sluggify'; if a
+   regular expression (i.e., a list), it will be passed through
+   otherwise.
 
  - `:keywords' keywords for a note.  This will be prefixed with
    "__".  The format of this argument is as follows:

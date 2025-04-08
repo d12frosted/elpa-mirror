@@ -6,6 +6,9 @@ three configuration options.
   be included.
 - `denote-agenda-include-regexp' A regexp to determine files which
   should be included on the fly.
+- `denote-agenda-include-not-regexp' A regexp to filter files
+  matched by `denote-agenda-include-regexp'.  In particular, files
+  which match this will be /removed/.
 - `denote-agenda-include-journal' Set to t if
   `denote-journal' files should be included.  If set, only
   journal entries for the current and future days will be included.
