@@ -3,156 +3,36 @@ Fetcher: git
 Source:  https://git.savannah.gnu.org/git/emms.git
 
 Updating /mnt/store/melpa/working/emms/
-Checking out abb4f614dae6b7e90ee1f275d8a5e40721c39d54
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/emms/
-  to /tmp/emmsfjH5q7/emms-20250405.1417
-    emms-bookmarks.el -> emms-bookmarks.el
-    emms-browser.el -> emms-browser.el
-    emms-cache.el -> emms-cache.el
-    emms-compat.el -> emms-compat.el
-    emms-cue.el -> emms-cue.el
-    emms-history.el -> emms-history.el
-    emms-i18n.el -> emms-i18n.el
-    emms-idapi-browser.el -> emms-idapi-browser.el
-    emms-idapi-musicbrainz.el -> emms-idapi-musicbrainz.el
-    emms-idapi.el -> emms-idapi.el
-    emms-info-exiftool.el -> emms-info-exiftool.el
-    emms-info-libtag.el -> emms-info-libtag.el
-    emms-info-metaflac.el -> emms-info-metaflac.el
-    emms-info-mp3info.el -> emms-info-mp3info.el
-    emms-info-native-flac.el -> emms-info-native-flac.el
-    emms-info-native-mp3.el -> emms-info-native-mp3.el
-    emms-info-native-ogg.el -> emms-info-native-ogg.el
-    emms-info-native-opus.el -> emms-info-native-opus.el
-    emms-info-native-spc.el -> emms-info-native-spc.el
-    emms-info-native-vorbis.el -> emms-info-native-vorbis.el
-    emms-info-native.el -> emms-info-native.el
-    emms-info-ogginfo.el -> emms-info-ogginfo.el
-    emms-info-opusinfo.el -> emms-info-opusinfo.el
-    emms-info-tinytag.el -> emms-info-tinytag.el
-    emms-info.el -> emms-info.el
-    emms-jack.el -> emms-jack.el
-    emms-last-played.el -> emms-last-played.el
-    emms-later-do.el -> emms-later-do.el
-    emms-librefm-scrobbler.el -> emms-librefm-scrobbler.el
-    emms-librefm-stream.el -> emms-librefm-stream.el
-    emms-listenbrainz-scrobbler.el -> emms-listenbrainz-scrobbler.el
-    emms-lyrics-lrclib.el -> emms-lyrics-lrclib.el
-    emms-lyrics.el -> emms-lyrics.el
-    emms-maint.el -> emms-maint.el
-    emms-mark.el -> emms-mark.el
-    emms-metaplaylist-mode.el -> emms-metaplaylist-mode.el
-    emms-mode-line-icon.el -> emms-mode-line-icon.el
-    emms-mode-line.el -> emms-mode-line.el
-    emms-mpris.el -> emms-mpris.el
-    emms-player-mpd.el -> emms-player-mpd.el
-    emms-player-mpg321-remote.el -> emms-player-mpg321-remote.el
-    emms-player-mplayer.el -> emms-player-mplayer.el
-    emms-player-mpv.el -> emms-player-mpv.el
-    emms-player-simple.el -> emms-player-simple.el
-    emms-player-vlc.el -> emms-player-vlc.el
-    emms-player-xine.el -> emms-player-xine.el
-    emms-playing-time.el -> emms-playing-time.el
-    emms-playlist-limit.el -> emms-playlist-limit.el
-    emms-playlist-mode.el -> emms-playlist-mode.el
-    emms-playlist-sort.el -> emms-playlist-sort.el
-    emms-radio-browser.el -> emms-radio-browser.el
-    emms-score.el -> emms-score.el
-    emms-setup.el -> emms-setup.el
-    emms-show-all.el -> emms-show-all.el
-    emms-source-beets.el -> emms-source-beets.el
-    emms-source-file.el -> emms-source-file.el
-    emms-source-playlist.el -> emms-source-playlist.el
-    emms-stream-info.el -> emms-stream-info.el
-    emms-streams.el -> emms-streams.el
-    emms-tag-editor.el -> emms-tag-editor.el
-    emms-tag-tracktag.el -> emms-tag-tracktag.el
-    emms-url.el -> emms-url.el
-    emms-volume-amixer.el -> emms-volume-amixer.el
-    emms-volume-mixerctl.el -> emms-volume-mixerctl.el
-    emms-volume-mpv.el -> emms-volume-mpv.el
-    emms-volume-pulse.el -> emms-volume-pulse.el
-    emms-volume-sndioctl.el -> emms-volume-sndioctl.el
-    emms-volume.el -> emms-volume.el
-    emms.el -> emms.el
-  ! doc/emms.texinfo -> emms.texinfo
-Generating emms.info
-Created emms-20250405.1417.tar containing:
-  emms-20250405.1417/
-  emms-20250405.1417/dir
-  emms-20250405.1417/emms-bookmarks.el
-  emms-20250405.1417/emms-browser.el
-  emms-20250405.1417/emms-cache.el
-  emms-20250405.1417/emms-compat.el
-  emms-20250405.1417/emms-cue.el
-  emms-20250405.1417/emms-history.el
-  emms-20250405.1417/emms-i18n.el
-  emms-20250405.1417/emms-idapi-browser.el
-  emms-20250405.1417/emms-idapi-musicbrainz.el
-  emms-20250405.1417/emms-idapi.el
-  emms-20250405.1417/emms-info-exiftool.el
-  emms-20250405.1417/emms-info-libtag.el
-  emms-20250405.1417/emms-info-metaflac.el
-  emms-20250405.1417/emms-info-mp3info.el
-  emms-20250405.1417/emms-info-native-flac.el
-  emms-20250405.1417/emms-info-native-mp3.el
-  emms-20250405.1417/emms-info-native-ogg.el
-  emms-20250405.1417/emms-info-native-opus.el
-  emms-20250405.1417/emms-info-native-spc.el
-  emms-20250405.1417/emms-info-native-vorbis.el
-  emms-20250405.1417/emms-info-native.el
-  emms-20250405.1417/emms-info-ogginfo.el
-  emms-20250405.1417/emms-info-opusinfo.el
-  emms-20250405.1417/emms-info-tinytag.el
-  emms-20250405.1417/emms-info.el
-  emms-20250405.1417/emms-jack.el
-  emms-20250405.1417/emms-last-played.el
-  emms-20250405.1417/emms-later-do.el
-  emms-20250405.1417/emms-librefm-scrobbler.el
-  emms-20250405.1417/emms-librefm-stream.el
-  emms-20250405.1417/emms-listenbrainz-scrobbler.el
-  emms-20250405.1417/emms-lyrics-lrclib.el
-  emms-20250405.1417/emms-lyrics.el
-  emms-20250405.1417/emms-maint.el
-  emms-20250405.1417/emms-mark.el
-  emms-20250405.1417/emms-metaplaylist-mode.el
-  emms-20250405.1417/emms-mode-line-icon.el
-  emms-20250405.1417/emms-mode-line.el
-  emms-20250405.1417/emms-mpris.el
-  emms-20250405.1417/emms-pkg.el
-  emms-20250405.1417/emms-player-mpd.el
-  emms-20250405.1417/emms-player-mpg321-remote.el
-  emms-20250405.1417/emms-player-mplayer.el
-  emms-20250405.1417/emms-player-mpv.el
-  emms-20250405.1417/emms-player-simple.el
-  emms-20250405.1417/emms-player-vlc.el
-  emms-20250405.1417/emms-player-xine.el
-  emms-20250405.1417/emms-playing-time.el
-  emms-20250405.1417/emms-playlist-limit.el
-  emms-20250405.1417/emms-playlist-mode.el
-  emms-20250405.1417/emms-playlist-sort.el
-  emms-20250405.1417/emms-radio-browser.el
-  emms-20250405.1417/emms-score.el
-  emms-20250405.1417/emms-setup.el
-  emms-20250405.1417/emms-show-all.el
-  emms-20250405.1417/emms-source-beets.el
-  emms-20250405.1417/emms-source-file.el
-  emms-20250405.1417/emms-source-playlist.el
-  emms-20250405.1417/emms-stream-info.el
-  emms-20250405.1417/emms-streams.el
-  emms-20250405.1417/emms-tag-editor.el
-  emms-20250405.1417/emms-tag-tracktag.el
-  emms-20250405.1417/emms-url.el
-  emms-20250405.1417/emms-volume-amixer.el
-  emms-20250405.1417/emms-volume-mixerctl.el
-  emms-20250405.1417/emms-volume-mpv.el
-  emms-20250405.1417/emms-volume-pulse.el
-  emms-20250405.1417/emms-volume-sndioctl.el
-  emms-20250405.1417/emms-volume.el
-  emms-20250405.1417/emms.el
-  emms-20250405.1417/emms.info
- ✓ Success:
-  2025-04-08T10:24:14+0000  emms-20250405.1417.entry
-  2025-04-08T10:24:13+0000  emms-20250405.1417.tar
-Built emms in 19.088s, finished at 2025-04-08T10:24:15+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.savannah.gnu.org/git/emms.git/': The requested URL returned error: 502
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-git-recipe package-git-recipe-1584390e9242> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-git-recipe package-git-recipe-1584390e9242> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-git-recipe package-git-recipe-1584390e9242>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-git-recipe package-git-recipe-1584390e9242> nil)
+  package-build--fetch(#<package-git-recipe package-git-recipe-1584390e9242>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("emms")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"emms\")"))
+  command-line()
+  normal-top-level()
+
