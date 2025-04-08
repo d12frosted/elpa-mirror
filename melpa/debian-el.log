@@ -3,10 +3,10 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
-Checking out 7459b21a4cefa285db428860ae94e2a31555e4b9
+Checking out 2d3a258341425b04257a144a95ed2d35b211f648
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/debian-el/
-  to /tmp/debian-elVzV4Cv/debian-el-20250407.837
+  to /tmp/debian-elak1A4W/debian-el-20250407.2125
     apt-deb822-sources.el -> apt-deb822-sources.el
     apt-sources.el -> apt-sources.el
     apt-utils.el -> apt-utils.el
@@ -18,21 +18,23 @@ Copying files (->) and directories (=>)
     preseed.el -> preseed.el
     debian-el.texi -> debian-el.texi
 Generating debian-el.info
-Created debian-el-20250407.837.tar containing:
-  debian-el-20250407.837/
-  debian-el-20250407.837/apt-deb822-sources.el
-  debian-el-20250407.837/apt-sources.el
-  debian-el-20250407.837/apt-utils.el
-  debian-el-20250407.837/deb-view.el
-  debian-el-20250407.837/debian-autoloads.el
-  debian-el-20250407.837/debian-bug.el
-  debian-el-20250407.837/debian-el-pkg.el
-  debian-el-20250407.837/debian-el.el
-  debian-el-20250407.837/debian-el.info
-  debian-el-20250407.837/dir
-  debian-el-20250407.837/gnus-BTS.el
-  debian-el-20250407.837/preseed.el
+Created debian-el-20250407.2125.tar containing:
+  debian-el-20250407.2125/
+  debian-el-20250407.2125/apt-deb822-sources.el
+  debian-el-20250407.2125/apt-sources.el
+  debian-el-20250407.2125/apt-utils.el
+  debian-el-20250407.2125/deb-view.el
+  debian-el-20250407.2125/debian-autoloads.el
+  debian-el-20250407.2125/debian-bug.el
+  debian-el-20250407.2125/debian-el-pkg.el
+  debian-el-20250407.2125/debian-el.el
+  debian-el-20250407.2125/debian-el.info
+  debian-el-20250407.2125/dir
+  debian-el-20250407.2125/gnus-BTS.el
+  debian-el-20250407.2125/preseed.el
  ✓ Success:
+  2025-04-07T22:39:41+0000  debian-el-20250407.2125.entry
+  2025-04-07T22:39:41+0000  debian-el-20250407.2125.tar
   2025-04-07T19:38:18+0000  debian-el-20250407.837.entry
   2025-04-07T19:38:18+0000  debian-el-20250407.837.tar
-Built debian-el in 6.191s, finished at 2025-04-07T19:38:19+0000
+Built debian-el in 7.053s, finished at 2025-04-07T22:39:42+0000
