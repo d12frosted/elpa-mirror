@@ -2957,7 +2957,7 @@
 	    (:url . "https://elpa.gnu.org/packages/minimap.html")
 	    (:commit . "2ff29c5d6abae3637d6174d889f39745fcd13fa5"))])
  (minuet .
-	 [(0 5 1)
+	 [(0 5 3)
 	  ((emacs
 	    (29))
 	   (plz
@@ -2969,7 +2969,7 @@
 	   (:maintainer "Milan Glacier" . "dev@milanglacier.com")
 	   (:authors
 	    ("Milan Glacier" . "dev@milanglacier.com"))
-	   (:commit . "03726e4605757b43ad9bf5cfbee9b2e2e68c7622"))])
+	   (:commit . "60a8cf0a5df5c26d09a695297bf4b967b2a7a48b"))])
  (mmm-mode .
 	   [(0 5 11)
 	    ((emacs
@@ -4707,7 +4707,7 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "ffb7d656a2c89f86ccd2de51379de9612c7a4aa3"))])
  (tramp .
-	[(2 7 2 2)
+	[(2 7 2 3 1)
 	 ((emacs
 	   (27 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -4715,8 +4715,9 @@
 	  (:keywords "comm" "processes")
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
-	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "03ee1a30d526613dbfd970ddbc2ca6c657e8d865"))])
+	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")
+	   ("Michael Albinus" . "michael.albinus@gmx.de"))
+	  (:commit . "7ccd3818b74245cb0b4ffe1aac8b71ad2aef79a9"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
