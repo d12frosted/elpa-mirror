@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/blahgeek/emacs-pr-review
 
 Updating /mnt/store/melpa/working/pr-review/
-Checking out 6b3895c7919762b87a57e4373920ff3592e4a696
+Checking out 25b71053c404070629c1d5a6112a1158ffdb704c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pr-review/
-  to /tmp/pr-review1RpfRn/pr-review-20250328.132
+  to /tmp/pr-reviewKXprst/pr-review-20250410.1615
     pr-review-action.el -> pr-review-action.el
     pr-review-api.el -> pr-review-api.el
     pr-review-common.el -> pr-review-common.el
@@ -17,42 +17,44 @@ Copying files (->) and directories (=>)
     pr-review-search.el -> pr-review-search.el
     pr-review.el -> pr-review.el
     graphql => graphql
-Created pr-review-20250328.132.tar containing:
-  pr-review-20250328.132/
-  pr-review-20250328.132/graphql/
-  pr-review-20250328.132/graphql/add-comment.graphql
-  pr-review-20250328.132/graphql/add-labels.graphql
-  pr-review-20250328.132/graphql/add-review-comment-reply.graphql
-  pr-review-20250328.132/graphql/add-review.graphql
-  pr-review-20250328.132/graphql/clear-labels.graphql
-  pr-review-20250328.132/graphql/close-pr.graphql
-  pr-review-20250328.132/graphql/get-assignable-users.graphql
-  pr-review-20250328.132/graphql/get-pull-request-for-notification.inc.graphql
-  pr-review-20250328.132/graphql/get-pull-request.graphql
-  pr-review-20250328.132/graphql/merge-pr.graphql
-  pr-review-20250328.132/graphql/reopen-pr.graphql
-  pr-review-20250328.132/graphql/request-reviews.graphql
-  pr-review-20250328.132/graphql/resolve-review-thread.graphql
-  pr-review-20250328.132/graphql/search-prs.graphql
-  pr-review-20250328.132/graphql/submit-review.graphql
-  pr-review-20250328.132/graphql/unresolve-review-thread.graphql
-  pr-review-20250328.132/graphql/update-comment.graphql
-  pr-review-20250328.132/graphql/update-pr.graphql
-  pr-review-20250328.132/graphql/update-review-comment.graphql
-  pr-review-20250328.132/graphql/update-review.graphql
-  pr-review-20250328.132/graphql/update-subscription.graphql
-  pr-review-20250328.132/graphql/whoami.graphql
-  pr-review-20250328.132/pr-review-action.el
-  pr-review-20250328.132/pr-review-api.el
-  pr-review-20250328.132/pr-review-common.el
-  pr-review-20250328.132/pr-review-input.el
-  pr-review-20250328.132/pr-review-listview.el
-  pr-review-20250328.132/pr-review-notification.el
-  pr-review-20250328.132/pr-review-pkg.el
-  pr-review-20250328.132/pr-review-render.el
-  pr-review-20250328.132/pr-review-search.el
-  pr-review-20250328.132/pr-review.el
+Created pr-review-20250410.1615.tar containing:
+  pr-review-20250410.1615/
+  pr-review-20250410.1615/graphql/
+  pr-review-20250410.1615/graphql/add-comment.graphql
+  pr-review-20250410.1615/graphql/add-labels.graphql
+  pr-review-20250410.1615/graphql/add-review-comment-reply.graphql
+  pr-review-20250410.1615/graphql/add-review.graphql
+  pr-review-20250410.1615/graphql/clear-labels.graphql
+  pr-review-20250410.1615/graphql/close-pr.graphql
+  pr-review-20250410.1615/graphql/get-assignable-users.graphql
+  pr-review-20250410.1615/graphql/get-pull-request-for-notification.inc.graphql
+  pr-review-20250410.1615/graphql/get-pull-request.graphql
+  pr-review-20250410.1615/graphql/merge-pr.graphql
+  pr-review-20250410.1615/graphql/reopen-pr.graphql
+  pr-review-20250410.1615/graphql/request-reviews.graphql
+  pr-review-20250410.1615/graphql/resolve-review-thread.graphql
+  pr-review-20250410.1615/graphql/search-prs.graphql
+  pr-review-20250410.1615/graphql/submit-review.graphql
+  pr-review-20250410.1615/graphql/unresolve-review-thread.graphql
+  pr-review-20250410.1615/graphql/update-comment.graphql
+  pr-review-20250410.1615/graphql/update-pr.graphql
+  pr-review-20250410.1615/graphql/update-review-comment.graphql
+  pr-review-20250410.1615/graphql/update-review.graphql
+  pr-review-20250410.1615/graphql/update-subscription.graphql
+  pr-review-20250410.1615/graphql/whoami.graphql
+  pr-review-20250410.1615/pr-review-action.el
+  pr-review-20250410.1615/pr-review-api.el
+  pr-review-20250410.1615/pr-review-common.el
+  pr-review-20250410.1615/pr-review-input.el
+  pr-review-20250410.1615/pr-review-listview.el
+  pr-review-20250410.1615/pr-review-notification.el
+  pr-review-20250410.1615/pr-review-pkg.el
+  pr-review-20250410.1615/pr-review-render.el
+  pr-review-20250410.1615/pr-review-search.el
+  pr-review-20250410.1615/pr-review.el
  ✓ Success:
   2025-04-10T16:06:12+0000  pr-review-20250328.132.entry
   2025-04-10T16:06:12+0000  pr-review-20250328.132.tar
-Built pr-review in 2.983s, finished at 2025-04-10T16:06:13+0000
+  2025-04-10T18:38:40+0000  pr-review-20250410.1615.entry
+  2025-04-10T18:38:40+0000  pr-review-20250410.1615.tar
+Built pr-review in 3.024s, finished at 2025-04-10T18:38:41+0000
