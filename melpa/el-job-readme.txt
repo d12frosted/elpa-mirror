@@ -9,7 +9,7 @@ current Emacs does not hang at all.
 You need to know the concept of a callback.
 
 Public API:
-- Function `el-job-launch' (read its docstring)
+- Function `el-job-launch' (main entry point)
 - Function `el-job-await'
 - Function `el-job-is-busy'
 - Variable `el-job-major-version'
