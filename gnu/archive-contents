@@ -1477,7 +1477,7 @@
 	   ("João Távora" . "joaotavora@gmail.com"))
 	  (:commit . "49f449bb5bc90bc1eca6b4a1f013d4c0b5460d65"))])
  (el-job .
-	 [(2 4 3)
+	 [(2 4 4)
 	  ((emacs
 	    (29 1)))
 	  "Contrived way to call a function using all CPU cores" tar
@@ -1486,7 +1486,7 @@
 	   (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
 	   (:authors
 	    ("Martin Edström" . "meedstrom@runbox.eu"))
-	   (:commit . "b80bc0380edca448b1e856441659d8eb4d97a3f7"))])
+	   (:commit . "eb3058e44df3d694cd7b24e0bbb6f92e831ea53d"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -1821,7 +1821,7 @@
 		("Philip Kaludercic" . "philipk@posteo.net"))
 	       (:commit . "671e53fdef9ed3fdb9ee768216d05b90e3ce592a"))])
  (filechooser .
-	      [(0 2 1)
+	      [(0 2 2)
 	       ((emacs
 		 (28 1))
 		(compat
@@ -1829,10 +1829,10 @@
 	       "An xdg-desktop-portal filechooser" tar
 	       ((:url . "https://codeberg.org/rahguzar/filechooser")
 		(:keywords "convenience" "files" "tools" "unix")
-		(:maintainer "rahguzar" . "rahguzar@zohomail.eu")
+		(:maintainer "rahguzar" . "rahguzar@mailbox.org")
 		(:authors
-		 ("rahguzar" . "rahguzar@zohomail.eu"))
-		(:commit . "62a9ef588331b06c818ea5db5a73e756f20fd13d"))])
+		 ("rahguzar" . "rahguzar@mailbox.org"))
+		(:commit . "7ccb253b0a6f16e129cb886a144199dce015b07c"))])
  (filladapt .
 	    [(2 12 2)
 	     ((emacs
