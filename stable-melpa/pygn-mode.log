@@ -3,3 +3,40 @@ Fetcher: github
 Source:  https://github.com/dwcoates/pygn-mode
 
 Updating /mnt/store/melpa/working/pygn-mode/
+Checking out 3f1ce4efd1c34b9fc347c848eb4426bfcc851118
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pygn-mode/
+  to /tmp/pygn-modefxn3FL/pygn-mode-20241216.1959
+    pygn-mode.el -> pygn-mode.el
+    pygn_server.py -> pygn_server.py
+    lib => lib
+Created pygn-mode-20241216.1959.tar containing:
+  pygn-mode-20241216.1959/
+  pygn-mode-20241216.1959/lib/
+  pygn-mode-20241216.1959/lib/python/
+  pygn-mode-20241216.1959/lib/python/site-packages/
+  pygn-mode-20241216.1959/lib/python/site-packages/chess-1.11.1.dist-info/
+  pygn-mode-20241216.1959/lib/python/site-packages/chess-1.11.1.dist-info/INSTALLER
+  pygn-mode-20241216.1959/lib/python/site-packages/chess-1.11.1.dist-info/LICENSE.txt
+  pygn-mode-20241216.1959/lib/python/site-packages/chess-1.11.1.dist-info/METADATA
+  pygn-mode-20241216.1959/lib/python/site-packages/chess-1.11.1.dist-info/RECORD
+  pygn-mode-20241216.1959/lib/python/site-packages/chess-1.11.1.dist-info/REQUESTED
+  pygn-mode-20241216.1959/lib/python/site-packages/chess-1.11.1.dist-info/WHEEL
+  pygn-mode-20241216.1959/lib/python/site-packages/chess-1.11.1.dist-info/top_level.txt
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/__init__.py
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/engine.py
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/gaviota.py
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/pgn.py
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/polyglot.py
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/py.typed
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/svg.py
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/syzygy.py
+  pygn-mode-20241216.1959/lib/python/site-packages/chess/variant.py
+  pygn-mode-20241216.1959/pygn-mode-pkg.el
+  pygn-mode-20241216.1959/pygn-mode.el
+  pygn-mode-20241216.1959/pygn_server.py
+ ✓ Success:
+  2025-04-14T03:06:28+0000  pygn-mode-20241216.1959.entry
+  2025-04-14T03:06:28+0000  pygn-mode-20241216.1959.tar
+Built pygn-mode in 5.745s, finished at 2025-04-14T03:06:30+0000

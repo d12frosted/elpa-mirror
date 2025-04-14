@@ -15,9 +15,6 @@ This package is available on MELPA.
   :straight t
   :after project
   :init
-  ;; If you like to define some aliases for better user experience
-  (defalias 'one-tab-per-project-mode 'otpp-mode)
-  (defalias 'one-tab-per-project-override-mode 'otpp-override-mode)
   ;; Enable `otpp-mode' globally
   (otpp-mode 1)
   ;; If you want to advice the commands in `otpp-override-commands'
