@@ -1324,6 +1324,17 @@
 	    (:authors
 	     ("Daniel Laurens Nicolai" . "dalanicolai@gmail.com"))
 	    (:commit . "4a179fbacd7bc9efbd6cfcdc8772d42935e6de29"))])
+ (doc-view-follow .
+		  [(0 3)
+		   ((emacs
+		     (29 1)))
+		   "Synchronize windows showing the same document" tar
+		   ((:url . "https://github.com/ultronozm/doc-view-follow.el")
+		    (:keywords "convenience")
+		    (:maintainer "Paul D. Nelson" . "ultrono@gmail.com")
+		    (:authors
+		     ("Paul D. Nelson" . "ultrono@gmail.com"))
+		    (:commit . "758037957bf0096879e49b6d84624db31cd49511"))])
  (docbook .
 	  [(0 1)
 	   nil "Info-like viewer for DocBook" tar

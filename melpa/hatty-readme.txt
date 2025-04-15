@@ -3,5 +3,5 @@ This package provides functionality for drawing and locating
 visible portion of the buffer in the current window.
 
 Setup: Call ‘global-hatty-mode’ to start displaying hats.  The
-position of a hat may then be queried using the function
-‘hatty-locate’.
+token of a hat may then be queried using the function
+‘hatty-locate-token’.
