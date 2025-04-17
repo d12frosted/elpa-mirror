@@ -3,35 +3,37 @@ Fetcher: github
 Source:  https://github.com/captainflasmr/ollama-buddy
 
 Updating /mnt/store/melpa/working/ollama-buddy/
-Checking out 4ca76759897159cbd37710fc7d2e0f203c1435ac
+Checking out 2b92a4104a8bfd7dd84e2b9228d0d7616260c97f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ollama-buddy/
-  to /tmp/ollama-buddy7xnua7/ollama-buddy-20250417.925
+  to /tmp/ollama-buddyKlvL58/ollama-buddy-20250417.1227
     ollama-buddy-awesome.el -> ollama-buddy-awesome.el
     ollama-buddy-claude.el -> ollama-buddy-claude.el
     ollama-buddy-core.el -> ollama-buddy-core.el
     ollama-buddy-fabric.el -> ollama-buddy-fabric.el
+    ollama-buddy-gemini.el -> ollama-buddy-gemini.el
     ollama-buddy-openai.el -> ollama-buddy-openai.el
     ollama-buddy-transient.el -> ollama-buddy-transient.el
     ollama-buddy.el -> ollama-buddy.el
   ! docs/ollama-buddy.info -> ollama-buddy.info
   ! docs/ollama-buddy.texi -> ollama-buddy.texi
 Generating ollama-buddy.info
-Created ollama-buddy-20250417.925.tar containing:
-  ollama-buddy-20250417.925/
-  ollama-buddy-20250417.925/dir
-  ollama-buddy-20250417.925/ollama-buddy-awesome.el
-  ollama-buddy-20250417.925/ollama-buddy-claude.el
-  ollama-buddy-20250417.925/ollama-buddy-core.el
-  ollama-buddy-20250417.925/ollama-buddy-fabric.el
-  ollama-buddy-20250417.925/ollama-buddy-openai.el
-  ollama-buddy-20250417.925/ollama-buddy-pkg.el
-  ollama-buddy-20250417.925/ollama-buddy-transient.el
-  ollama-buddy-20250417.925/ollama-buddy.el
-  ollama-buddy-20250417.925/ollama-buddy.info
+Created ollama-buddy-20250417.1227.tar containing:
+  ollama-buddy-20250417.1227/
+  ollama-buddy-20250417.1227/dir
+  ollama-buddy-20250417.1227/ollama-buddy-awesome.el
+  ollama-buddy-20250417.1227/ollama-buddy-claude.el
+  ollama-buddy-20250417.1227/ollama-buddy-core.el
+  ollama-buddy-20250417.1227/ollama-buddy-fabric.el
+  ollama-buddy-20250417.1227/ollama-buddy-gemini.el
+  ollama-buddy-20250417.1227/ollama-buddy-openai.el
+  ollama-buddy-20250417.1227/ollama-buddy-pkg.el
+  ollama-buddy-20250417.1227/ollama-buddy-transient.el
+  ollama-buddy-20250417.1227/ollama-buddy.el
+  ollama-buddy-20250417.1227/ollama-buddy.info
  ✓ Success:
-  2025-04-17T06:54:19+0000  ollama-buddy-20250416.1427.entry
-  2025-04-17T06:54:18+0000  ollama-buddy-20250416.1427.tar
-  2025-04-17T09:36:25+0000  ollama-buddy-20250417.925.entry
-  2025-04-17T09:36:25+0000  ollama-buddy-20250417.925.tar
-Built ollama-buddy in 15.443s, finished at 2025-04-17T09:36:25+0000
+  2025-04-17T14:57:32+0000  ollama-buddy-20250417.1227.entry
+  2025-04-17T14:57:32+0000  ollama-buddy-20250417.1227.tar
+  2025-04-17T12:17:11+0000  ollama-buddy-20250417.925.entry
+  2025-04-17T12:17:11+0000  ollama-buddy-20250417.925.tar
+Built ollama-buddy in 14.950s, finished at 2025-04-17T14:57:33+0000
