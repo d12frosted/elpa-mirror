@@ -11,13 +11,13 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.0.0,
-released on N/A.  Any reference to a newer feature which does not yet
-form part of the latest tagged commit, is explicitly marked as such.
+The documentation furnished herein corresponds to stable version 0.1.0,
+released on 2025-04-15.  Any reference to a newer feature which does not
+yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.1.0-dev.
+Current development target is 0.2.0-dev.
 
-⁃ Package name (GNU ELPA): `denote-sequence' (⚠️ Not available yet)
+⁃ Package name (GNU ELPA): `denote-sequence'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-sequence>
 ⁃ Git repository: <https://github.com/protesilaos/denote-sequence>
 ⁃ Backronym: Denote… Sequences Efficiently Queue Unsorted Entries
@@ -71,8 +71,6 @@ Table of Contents
 2 Write sequence notes or "folgezettel"
 ═══════════════════════════════════════
 
-  [ The `denote-sequence.el' is part of 0.1.0-dev. ]
-
   The `denote-sequence' package provides an optional extension to
   `denote' for naming files with a sequencing scheme. The idea is to
   establish hiearchical relationships between files, such that the
@@ -114,8 +112,6 @@ Table of Contents
 2.1 Select a sequencing scheme for `denote-sequence-scheme'
 ───────────────────────────────────────────────────────────
 
-  [ The `denote-sequence.el' is part of 0.1.0-dev. ]
-
   The user option `denote-sequence-scheme' allows users to select either
   the `numeric' scheme, which is like `1=1=2' or the `alphanumeric'
   scheme, which is `1a2' for the same sequence ([Convert from one
@@ -147,8 +143,6 @@ Table of Contents
 2.1.1 Convert from one sequencing scheme to another
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  [ The `denote-sequence.el' is part of 0.1.0-dev. ]
-
   The decision on the desired `denote-sequence-scheme' wil affect new
   notes long-term ([Select a sequencing scheme for
   `denote-sequence-scheme']).  It thus is important to think through
@@ -177,8 +171,6 @@ Table of Contents
 
 2.2 Create parent, child, or sibling sequence notes
 ───────────────────────────────────────────────────
-
-  [ The `denote-sequence.el' is part of 0.1.0-dev. ]
 
   [ In the interest of simplicity, here we provide examples using the
     `numeric' value of `denote-sequence-scheme', though the
@@ -237,8 +229,6 @@ Table of Contents
 2.3 Find a relative of the current sequence
 ───────────────────────────────────────────
 
-  [ The `denote-sequence.el' is part of 0.1.0-dev. ]
-
   While reading a file with a sequence, you may want to find what its
   relatives are about. To this end, the command `denote-sequence-find'
   prompts for a type among `parent', `sibling', `child', and then asks
@@ -256,8 +246,6 @@ Table of Contents
 2.4 Link only to sequences
 ──────────────────────────
 
-  [ The `denote-sequence.el' is part of 0.1.0-dev. ]
-
   The command `denote-sequence-link' is a variant of the standard
   `denote-link' command which limits the list of files only to those
   which contain a sequence (read the Denote manual about link-related
@@ -274,8 +262,6 @@ Table of Contents
 2.5 Re-parent a file to extend a given sequence
 ───────────────────────────────────────────────
 
-  [ The `denote-sequence.el' is part of 0.1.0-dev. ]
-
   The command `denote-sequence-reparent' can be used from inside a file
   or for the file-at-point in Dired to make that file a child of a given
   sequence. It does so by prompting for the target file using minibuffer
@@ -289,8 +275,6 @@ Table of Contents
 
 2.6 Show all or some sequences in a Dired buffer
 ────────────────────────────────────────────────
-
-  [ The `denote-sequence.el' is part of 0.1.0-dev. ]
 
   [ In the interest of simplicity, here we provide examples using the
     `numeric' value of `denote-sequence-scheme', though the

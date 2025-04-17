@@ -12,11 +12,157 @@ highlighting), indentation, and navigation support for the
 [tree-sitter-clojure](https://github.com/sogaiu/tree-sitter-clojure)
 [tree-sitter](https://tree-sitter.github.io/tree-sitter/) grammar.
 
+## Rationale
+
+[clojure-mode](https://github.com/clojure-emacs/clojure-mode) has served us well
+for a very long time, but it suffers from a few [long-standing
+problems](https://github.com/clojure-emacs/clojure-mode#caveats), related to
+Emacs limitations baked into its design. The introduction of built-in support
+for Tree-sitter in Emacs 29 presents a natural opportunity to address many of
+them. Enter `clojure-ts-mode`, which makes use of TreeSitter to provide:
+
+- fast, accurate and more granular font-locking
+- fast indentation
+- common Emacs functionality like structured navigation, `imenu` (an outline of a source buffer), current form inference (used internally by various Emacs modes and utilities), etc
+
+Working with TreeSitter is significantly easier than the legacy Emacs APIs for font-locking and
+indentation, which makes it easier to contribute to `clojure-ts-mode`, and to improve it in general.
+
+Keep in mind that the transition to `clojure-ts-mode` won't happen overnight for several reasons:
+
+- getting to feature parity with `clojure-mode` will take some time
+- tools that depend on `clojure-mode` will need to be updated to work with `clojure-ts-mode`
+- we still need to support users of older Emacs versions that don't support Tree-sitter
+
+That's why `clojure-ts-mode` is being developed independently of `clojure-mode`
+and will one day replace it when the time is right. (e.g. 3 major Emacs version
+down the road, so circa Emacs 32)
+
+You can read more about the vision for `clojure-ts-mode` [here](https://metaredux.com/posts/2023/03/12/clojure-mode-meets-tree-sitter.html).
+
+## Current Status
+
+> [!WARNING]
+>
+> This library is still under active development. Breaking changes should be expected.
+
+The currently provided functionality should cover the needs of most Clojure programmers, but you
+can expect to encounter some bugs and missing functionality here and there.
+
+Those will be addressed over the time, as more and more people use `clojure-ts-mode`.
+
+## Installation
+
+### Requirements
+
+For `clojure-ts-mode` to work, you need Emacs 30+ built with TreeSitter support.
+To check if your Emacs supports TreeSitter run the following (e.g. by using `M-:`):
+
+``` emacs-lisp
+(treesit-available-p)
+```
+
+Additionally, you'll need to have Git and some C compiler (`cc`) installed and available
+in your `$PATH` (or Emacs's `exec-path`), for `clojure-ts-mode` to be able to install the required
+TreeSitter grammars automatically.
+
+> [!TIP]
+>
+> As the TreeSitter support in Emacs is still fairly new and under active development itself, for optimal
+> results you should use the latest stable Emacs release or even the development version of Emacs.
+> See the "Caveats" section for more on the subject.
+
+### Install clojure-ts-mode
+
+> [!NOTE]
+>
+> That's the recommended way to install `clojure-ts-mode`.
+
+If you have `git` and a C compiler (`cc`) available on your system's `PATH`,
+`clojure-ts-mode` will install the
+grammars
+
+clojure-ts-mode is available on [MElPA](https://melpa.org/#/clojure-ts-mode) and
+[NonGNU ELPA](https://elpa.nongnu.org/nongnu/clojure-ts-mode.html).
+It can be installed with:
+
+``` emacs-lisp
+(package-install 'clojure-ts-mode)
+```
+
+#### package-vc
+
+Emacs also includes `package-vc-install`, so you can run:
+
+``` emacs-lisp
+(package-vc-install "https://github.com/clojure-emacs/clojure-ts-mode")
+```
+
+to install this package from source.
+
+#### Manual installation
+
+You can install it by cloning the repository and adding it to your load path.
+
+```bash
+git clone https://github.com/clojure-emacs/clojure-ts-mode.git
+```
+
+```emacs-lisp
+(add-to-list 'load-path "~/path/to/clojure-ts-mode/")
+```
+
+Once installed, evaluate `clojure-ts-mode.el` and you should be ready to go.
+
+### Install tree-sitter grammars
+
+> [!NOTE]
+>
+> `clojure-ts-mode` install the required grammars automatically, so for most
+> people no manual actions will be required.
+
+`clojure-ts-mode` makes use of two TreeSitter grammars to work properly:
+
+- The Clojure grammar, mentioned earlier
+- [markdown-inline](https://github.com/MDeiml/tree-sitter-markdown), which
+will be used for docstrings if available and if `clojure-ts-use-markdown-inline` is enabled.
+
+If you have `git` and a C compiler (`cc`) available on your system's `PATH`,
+`clojure-ts-mode` will install the
+grammars when you first open a Clojure file and `clojure-ts-ensure-grammars` is
+set to `t` (the default).
+
+If `clojure-ts-mode` fails to automatically install the grammar, you have the
+option to install it manually, Please, refer to the installation instructions of
+each required grammar and make sure you're install the versions expected. (see
+`clojure-ts-grammar-recipes` for details)
+
+### Upgrading tree-sitter grammars
+
+To reinstall or upgrade TreeSitter grammars, you can execute:
+
+```emacs-lisp
+M-x clojure-ts-reinstall-grammars
+```
+
+This will install the latest compatible grammars, even if they are already
+installed.
+
 ## Configuration
 
 To see a list of available configuration options do `M-x customize-group <RET> clojure-ts`.
 
 Most configuration changes will require reverting any active `clojure-ts-mode` buffers.
+
+### Remapping of `clojure-mode` buffers
+
+By default, `clojure-ts-mode` assumes command over all buffers and file extensions previously associated with `clojure-mode` (and derived major modes like `clojurescript-mode`). To disable this remapping, set
+
+``` emacs-lisp
+(setopt clojure-ts-auto-remap nil)
+```
+
+You can also use the commands `clojure-ts-activate` / `clojure-ts-deactivate` to interactively change this behavior.
 
 ### Indentation
 
@@ -31,7 +177,67 @@ Set the var `clojure-ts-indent-style` to change it.
 (setq clojure-ts-indent-style 'fixed)
 ```
 
-**Note:** You can find [this article](https://metaredux.com/posts/2020/12/06/semantic-clojure-formatting.html) comparing semantic and fixed indentation useful.
+> [!TIP]
+>
+> You can find [this article](https://metaredux.com/posts/2020/12/06/semantic-clojure-formatting.html) comparing semantic and fixed indentation useful.
+
+#### Customizing semantic indentation
+
+The indentation of special forms and macros with bodies is controlled via
+`clojure-ts-semantic-indent-rules`. Nearly all special forms and built-in macros
+with bodies have special indentation settings in clojure-ts-mode, which are
+aligned with cljfmt indent rules. You can add/alter the indentation settings in
+your personal config. Let's assume you want to indent `->>` and `->` like this:
+
+```clojure
+(->> something
+  ala
+  bala
+  portokala)
+```
+
+You can do so by putting the following in your config:
+
+```emacs-lisp
+(setopt clojure-ts-semantic-indent-rules '(("->" . ((:block 1)))
+                                           ("->>" . ((:block 1)))))
+```
+
+This means that the body of the `->`/`->>` is after the first argument.
+
+The default set of rules is defined as
+`clojure-ts--semantic-indent-rules-defaults`, any rule can be overridden using
+customization option.
+
+Two types of rules are supported: `:block` and `:inner`, mirroring those in
+cljfmt. When a rule is defined as `:block n`, `n` represents the number of
+arguments preceding the body. When a rule is defined as `:inner n`, each form
+within the expression's body, nested `n` levels deep, is indented by two
+spaces. These rule definitions fully reflect the [cljfmt rules](https://github.com/weavejester/cljfmt/blob/0.13.0/docs/INDENTS.md).
+
+For example:
+- `do` has a rule `((:block 0))`.
+- `when` has a rule `((:block 1))`.
+- `defn` and `fn` have a rule `((:inner 0))`.
+- `letfn` has a rule `((:block 1) (:inner 2 0))`.
+
+Note that `clojure-ts-semantic-indent-rules` should be set using the
+customization interface or `setopt`; otherwise, it will not be applied
+correctly.
+
+#### Project local indentation
+
+Custom indentation rules can be set for individual projects. To achieve this,
+you need to create a `.dir-locals.el` file in the project root. The content
+should look like:
+
+```emacs-lisp
+((clojure-ts-mode . ((clojure-ts-semantic-indent-rules . (("with-transaction" . ((:block 1)))
+                                                          ("with-retry" . ((:block 1))))))))
+```
+
+In order to apply directory-local variables to existing buffers, they must be
+reverted.
 
 ### Font Locking
 
@@ -43,6 +249,14 @@ To highlight entire rich `comment` expression with the comment font face, set
 
 By default this is `nil`, so that anything within a `comment` expression is
 highlighted like regular clojure code.
+
+> [!TIP]
+>
+> You can customize the exact level of font-locking via the variables
+> `treesit-font-lock-level` (the default value is 3) and
+> `treesit-font-lock-features-list`. Check [this
+> section](https://www.gnu.org/software/emacs/manual/html_node/emacs/Parser_002dbased-Font-Lock.html)
+> of the Emacs manual for more details.
 
 ### Highlight markdown syntax in docstrings
 
@@ -72,145 +286,18 @@ Every new line in the docstrings is indented by
 `clojure-ts-docstring-fill-prefix-width` number of spaces (set to 2 by default
 which matches the `clojure-mode` settings).
 
-## Rationale
+#### imenu
 
-[clojure-mode](https://github.com/clojure-emacs/clojure-mode) has served us well
-for a very long time, but it suffers from a few [long-standing
-problems](https://github.com/clojure-emacs/clojure-mode#caveats), related to
-Emacs limitations baked into its design. The introduction of built-in support
-for Tree-sitter in Emacs 29 provides a natural opportunity to address many of
-them. Enter `clojure-ts-mode`.
+`clojure-ts-mode` supports various types of definition that can be navigated
+using `imenu`, such as:
 
-Keep in mind that the transition to `clojure-ts-mode` won't happen overnight for several reasons:
-
-- getting to feature parity with `clojure-mode` will take some time
-- tools that depend on `clojure-mode` will need to be updated to work with `clojure-ts-mode`
-- we still need to support users of older Emacs versions that don't support Tree-sitter
-
-That's why `clojure-ts-mode` is being developed independently of `clojure-mode`
-and will one day replace it when the time is right. (e.g. 3 major Emacs version
-down the road, so circa Emacs 32)
-
-You can read more about the vision for `clojure-ts-mode` [here](https://metaredux.com/posts/2023/03/12/clojure-mode-meets-tree-sitter.html).
-
-## Current Status
-
-**This library is still under development. Breaking changes should be expected.**
-
-## Installation
-
-### Emacs 29
-
-This package requires Emacs 29 built with tree-sitter support from the [emacs-29 branch](https://git.savannah.gnu.org/cgit/emacs.git/log/?h=emacs-29).
-
-If you decide to build Emacs from source there's some useful information on this in the Emacs repository:
-
-- [Emacs tree-sitter starter-guide](https://git.savannah.gnu.org/cgit/emacs.git/tree/admin/notes/tree-sitter/starter-guide?h=emacs-29)
-- [Emacs install instructions](https://git.savannah.gnu.org/cgit/emacs.git/tree/INSTALL.REPO).
-
-To check if your Emacs supports tree sitter run the following (e.g. by using `M-:`):
-
-``` emacs-lisp
-(treesit-available-p)
-```
-
-### Install clojure-ts-mode
-
-clojure-ts-mode is available on [MElPA](https://melpa.org/#/clojure-ts-mode) and
-[NonGNU ELPA](https://elpa.nongnu.org/nongnu/clojure-ts-mode.html).
-It can be installed with
-
-``` emacs-lisp
-(package-install 'clojure-ts-mode)
-```
-
-#### package-vc
-
-Emacs 29 also includes `package-vc-install`, so you can run
-
-``` emacs-lisp
-(package-vc-install "https://github.com/clojure-emacs/clojure-ts-mode")
-```
-
-to install this package from source.
-
-#### Manual installation
-
-You can install it by cloning the repository and adding it to your load path.
-
-```bash
-git clone https://github.com/clojure-emacs/clojure-ts-mode.git
-```
-
-```emacs-lisp
-(add-to-list 'load-path "~/path/to/clojure-ts-mode/")
-```
-
-Once installed, evaluate clojure-ts-mode.el and you should be ready to go.
-
-### Install tree-sitter grammars
-
-The compile tree-sitter clojure shared library must be available to Emacs.
-Additionally, the tree-sitter
-[markdown_inline](https://github.com/MDeiml/tree-sitter-markdown) shared library
-will also be used for docstrings if available.
-
-If you have `git` and a C compiler (`cc`) available on your system's `PATH`,
-**then these steps should not be necessary**.  clojure-ts-mode will install the
-grammars when you first open a Clojure file and `clojure-ts-ensure-grammars` is
-set to `t` (the default).
-
-If clojure-ts-mode fails to automatically install the grammar, you have the option to install it manually.
-
-#### From your OS
-
-Some distributions may package the tree-sitter-clojure grammar in their package repositories.
-If yours does you may be able to install tree-sitter-clojure with your system package manager.
-
-If the version packaged by your OS is out of date, you may see errors in the `*Messages*` buffer or your clojure buffers will not have any syntax highlighting.
-
-If this happens you should install the grammar manually with `M-x treesit-install-language-grammar <RET> clojure` and follow the prompts.
-Recommended values for these prompts can be seen in `clojure-ts-grammar-recipes`.
-
-#### Compile From Source
-
-If all else fails, you can attempt to download and compile manually.
-All you need is `git` and a C compiler (GCC works well).
-
-To start, clone [tree-sitter-clojure](https://github.com/sogaiu/tree-sitter-clojure).
-
-Then run the following code (depending on your OS) from the tree-sitter-clojure repository on your machine.
-
-#### Linux
-
-```bash
-mkdir -p dist
-cc -c -I./src src/parser.c -o "parser.o"
-cc -fPIC -shared src/parser.o -o "dist/libtree-sitter-clojure.so"
-```
-
-#### macOS
-
-```bash
-mkdir -p dist
-cc -c -I./src src/parser.c -o "parser.o"
-cc -fPIC -shared src/parser.o -o "dist/libtree-sitter-clojure.dylib"
-```
-
-#### Windows
-
-I don't know how to do this on Windows. Patches welcome!
-
-#### Finally, in emacs
-
-Then tell Emacs where to find the shared library by adding something like this to your init file:
-
-```emacs-lisp
-(setq treesit-extra-load-path '( "~/path/to/tree-sitter-clojure/dist"))
-```
-
-OR you can move the `libtree-sitter-clojure.so`/`libtree-sitter-clojure.dylib` to a directory named `tree-sitter`
-under your `user-emacs-directory` (typically `~/.emacs.d` on Unix systems).
+- namespace
+- function
+- macro
+- var
+- interface (forms such as `defprotocol`, `definterface` and `defmulti`)
+- class (forms such as `deftype`, `defrecord` and `defstruct`)
+- keyword (for example, spec definitions)
 
 ## Migrating to clojure-ts-mode
 
@@ -236,14 +323,36 @@ After installing the package do the following.
   (cider-clojure-cli-aliases . ":test:repl")))
 ```
 
+## Caveats
+
+As the TreeSitter Emacs APIs are new and keep evolving there are some
+differences in the behavior of `clojure-ts-mode` on different Emacs versions.
+Here are some notable examples:
+
+- On Emacs 29 the parent mode is `prog-mode`, but on Emacs 30+ it's both `prog-mode`
+and `clojure-mode` (this is very helpful when dealing with `derived-mode-p` checks)
+- Navigation by sexp/lists might work differently on Emacs versions lower
+  than 31. Starting with version 31, Emacs uses TreeSitter 'things' settings, if
+  available, to rebind some commands.
+- The indentation of list elements with metadata is inconsistent with other
+  collections. This inconsistency stems from the grammar's interpretation of
+  nearly every definition or function call as a list. Therefore, modifying the
+  indentation for list elements would adversely affect the indentation of
+  numerous other forms.
+
 ## Frequently Asked Questions
+
+### What `clojure-mode` features are currently missing?
+
+As of version 0.2.x, the most obvious missing feature are the various
+refactoring commands in `clojure-mode`.
 
 ### Does `clojure-ts-mode` work with CIDER?
 
 Yes! Preliminary support for `clojure-ts-mode` was released in [CIDER
-1.14](https://github.com/clojure-emacs/cider/releases/tag/v1.14.0). Make sure to
-grab the latest CIDER from MELPA/GitHub. Note that `clojure-mode` is still
-needed for some APIs that haven't yet been ported to `clojure-ts-mode`.
+1.14](https://github.com/clojure-emacs/cider/releases/tag/v1.14.0). Note that
+`clojure-mode` is still needed for some APIs that haven't yet been ported to
+`clojure-ts-mode`.
 
 For now, when you take care of the keybindings for the CIDER commands you use
 and ensure `cider-mode` is enabled for `clojure-ts-mode` buffers in your config,
@@ -255,13 +364,18 @@ most functionality should already work:
 
 Check out [this article](https://metaredux.com/posts/2024/02/19/cider-preliminary-support-for-clojure-ts-mode.html) for more details.
 
+> [!NOTE]
+>
+> The dynamic indentation feature in CIDER requires clojure-ts-mode 0.3+.
+> Dynamic font-locking currently doesn't work with clojure-ts-mode.
+
 ### Does `clojure-ts-mode` work with `inf-clojure`?
 
 Currently, there is an [open PR](https://github.com/clojure-emacs/inf-clojure/pull/215) adding support for inf-clojure.
 
 ## License
 
-Copyright © 2022-2025 Danny Freeman and [contributors][].
+Copyright © 2022-2025 Danny Freeman, Bozhidar Batsov and [contributors][].
 
 Distributed under the GNU General Public License; type <kbd>C-h C-c</kbd> to view it.
 

@@ -19,6 +19,12 @@
   In particular, this allows for a convenient "book view," with two
   windows showing consecutive pages side-by-side.
 
+  This package supports the built-in `doc-view-mode' as well as
+  `pdf-view-mode' from [pdf-tools].
+
+
+[pdf-tools] <https://github.com/vedang/pdf-tools>
+
 
 2 Installation
 ══════════════
@@ -30,22 +36,6 @@
   ┌────
   │ M-x package-install-file RET /path/to/doc-view-follow.el RET
   └────
-
-
-2.1 PDF-Tools Support (Optional)
-────────────────────────────────
-
-  This package supports the built-in `doc-view-mode' as well as
-  `pdf-view-mode' from [pdf-tools].  If you use pdf-tools, add the
-  following to your init file:
-
-  ┌────
-  │ (with-eval-after-load 'pdf-view
-  │   (require 'doc-view-follow-pdf-tools))
-  └────
-
-
-[pdf-tools] <https://github.com/vedang/pdf-tools>
 
 
 3 Usage

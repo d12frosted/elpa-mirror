@@ -12,13 +12,13 @@ options for the Emacs package called `denote-markdown' (or
 `denote-markdown.el'), and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.0.0,
-released on N/A.  Any reference to a newer feature which does not yet
-form part of the latest tagged commit, is explicitly marked as such.
+The documentation furnished herein corresponds to stable version 0.1.0,
+released on 2025-04-15.  Any reference to a newer feature which does not
+yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.1.0-dev.
+Current development target is 0.2.0-dev.
 
-⁃ Package name (GNU ELPA): `denote-markdown' (⚠️ Not available yet)
+⁃ Package name (GNU ELPA): `denote-markdown'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-markdown>
 ⁃ Git repository: <https://github.com/protesilaos/denote-markdown>
 ⁃ Backronyms: Denote… Markdown’s Ambitious Reimplimentations Knowingly

@@ -191,14 +191,7 @@ Table of Contents
   └────
 
   The default behaviour of `fontaine-set-preset' is to change fonts
-  across all graphical frames.  The user can, however, limit the changes
-  to a given frame.  For interactive use, this is done by invoking the
-  command with a universal prefix argument (`C-u' by default), which
-  changes fonts only in the current frame.  When used in Lisp, the FRAME
-  argument can be a frame object (satisfies `framep') or a non-nil
-  value: the former applies the effects to the given object, while the
-  latter means the current frame and thus is the same as interactively
-  supplying the prefix argument.
+  across all graphical frames.
 
   As a final step, `fontaine-set-preset' calls the
   `fontaine-set-preset-hook'.
@@ -779,7 +772,7 @@ Table of Contents
 
   Contributions to the code or manual
         Christopher League, Eli Zaretskii, Florent Teissier, Jorge
-        Gomez, Terry F. Torrey.
+        Gomez, Nicolas Venegas, Terry F.  Torrey.
 
   Ideas and user feedback
         Adam Porter (alphapapa), Ashlin Eldridge, Emily Hyland, Joe

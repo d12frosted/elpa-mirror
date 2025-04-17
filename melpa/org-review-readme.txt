@@ -18,9 +18,12 @@ LAST_REVIEW + REVIEW_DELAY, if it is in the past).
 
 To mark an entry as reviewed, use the function
 `org-review-insert-last-review' to set the LAST_REVIEW date to the
-current date. If `org-review-sets-next-date' is set (which is the
-default), this function also computes the date of the next review
-and inserts it as NEXT_REVIEW.
+current date. If `org-review-sets-next-date' is set to t (which is
+the default), this function also computes the date of the next
+review and inserts it as NEXT_REVIEW. If
+`org-review-sets-next-date' is set to 'only-future, this computed
+next review date is inserted only if it is after the current next
+review date.
 
 Example use.
 
@@ -40,6 +43,8 @@ Example use.
 
 ; Changes
 
+2025-04-16: expand `org-review-sets-next-date' with 'only-future option
+2025-04-14: add `org-review-unreviewed' to review never reviewed entries
 2022-04-11: systematically insert name of week day in date
 2016-08-18: better detection of org-agenda buffers
 2014-05-08: added the ability to specify next review dates

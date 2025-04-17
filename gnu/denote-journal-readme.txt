@@ -11,13 +11,13 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.0.0,
-released on N/A.  Any reference to a newer feature which does not yet
-form part of the latest tagged commit, is explicitly marked as such.
+The documentation furnished herein corresponds to stable version 0.1.0,
+released on 2025-04-15.  Any reference to a newer feature which does not
+yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.1.0-dev.
+Current development target is 0.2.0-dev.
 
-⁃ Package name (GNU ELPA): `denote-journal' (⚠️ Not available yet)
+⁃ Package name (GNU ELPA): `denote-journal'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-journal>
 ⁃ Git repository: <https://github.com/protesilaos/denote-journal>
 ⁃ Backronym: Denote… Journaling Obviously Utilises Reasonableness
@@ -30,19 +30,20 @@ Table of Contents
 ─────────────────
 
 1. COPYING
-2. Overview
+2. Installation
+.. 1. GNU ELPA package
+.. 2. Manual installation
+3. Sample configuration
+4. Overview
 .. 1. Create new journal entry
 .. 2. Create a new journal entry or use an existing one
 .. 3. Link to a journal entry or create it if missing
-.. 4. The `denote-journal-directory'
-.. 5. Title format of new journal entries
-.. 6. Create a journal entry using Org capture
-.. 7. The `denote-journal-hook'
-.. 8. Journaling with a timer
-3. Installation
-.. 1. GNU ELPA package
-.. 2. Manual installation
-4. Sample configuration
+.. 4. Integrate with the `calendar' to view or create journal entries
+.. 5. The `denote-journal-directory'
+.. 6. Title format of new journal entries
+.. 7. Create a journal entry using Org capture
+.. 8. The `denote-journal-hook'
+.. 9. Journaling with a timer
 5. Acknowledgements
 6. GNU Free Documentation License
 7. Indices
@@ -69,7 +70,86 @@ Table of Contents
         copy and modify this GNU manual.”
 
 
-2 Overview
+2 Installation
+══════════════
+
+
+
+
+2.1 GNU ELPA package
+────────────────────
+
+  The package is available as `denote-journal'.  Simply do:
+
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install
+  └────
+
+
+  And search for it.
+
+  GNU ELPA provides the latest stable release.  Those who prefer to
+  follow the development process in order to report bugs or suggest
+  changes, can use the version of the package from the GNU-devel ELPA
+  archive.  Read:
+  <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
+
+
+2.2 Manual installation
+───────────────────────
+
+  Assuming your Emacs files are found in `~/.emacs.d/', execute the
+  following commands in a shell prompt:
+
+  ┌────
+  │ cd ~/.emacs.d
+  │ 
+  │ # Create a directory for manually-installed packages
+  │ mkdir manual-packages
+  │ 
+  │ # Go to the new directory
+  │ cd manual-packages
+  │ 
+  │ # Clone this repo, naming it "denote-journal"
+  │ git clone https://github.com/protesilaos/denote-journal denote-journal
+  └────
+
+  Finally, in your `init.el' (or equivalent) evaluate this:
+
+  ┌────
+  │ ;; Make Elisp files in that directory available to the user.
+  │ (add-to-list 'load-path "~/.emacs.d/manual-packages/denote-journal")
+  └────
+
+  Everything is in place to set up the package.
+
+
+3 Sample configuration
+══════════════════════
+
+  ┌────
+  │ (use-package denote-journal
+  │   :ensure t
+  │   ;; Bind those to some key for your convenience.
+  │   :commands ( denote-journal-new-entry
+  │ 	      denote-journal-new-or-existing-entry
+  │ 	      denote-journal-link-or-create-entry )
+  │   :hook (calendar-mode . denote-journal-calendar-mode)
+  │   :config
+  │   ;; Use the "journal" subdirectory of the `denote-directory'.  Set this
+  │   ;; to nil to use the `denote-directory' instead.
+  │   (setq denote-journal-directory
+  │ 	(expand-file-name "journal" denote-directory))
+  │   ;; Default keyword for new journal entries. It can also be a list of
+  │   ;; strings.
+  │   (setq denote-journal-keyword "journal")
+  │   ;; Read the doc string of `denote-journal-title-format'.
+  │   (setq denote-journal-title-format 'day-date-month-year))
+  └────
+
+
+4 Overview
 ══════════
 
   The `denote-journal' package makes it easier to use Denote for
@@ -85,7 +165,7 @@ Table of Contents
   `denote-journal' across their configuration.
 
 
-2.1 Create new journal entry
+4.1 Create new journal entry
 ────────────────────────────
 
   The command `denote-journal-new-entry' creates a new entry in the
@@ -108,14 +188,14 @@ Table of Contents
   ([Create a new journal entry or use an existing one]).
 
 
-[The `denote-journal-hook'] See section 2.7
+[The `denote-journal-hook'] See section 4.8
 
-[The `denote-journal-directory'] See section 2.4
+[The `denote-journal-directory'] See section 4.5
 
-[Create a new journal entry or use an existing one] See section 2.2
+[Create a new journal entry or use an existing one] See section 4.2
 
 
-2.2 Create a new journal entry or use an existing one
+4.2 Create a new journal entry or use an existing one
 ─────────────────────────────────────────────────────
 
   The command `denote-journal-new-or-existing-entry' locates an existing
@@ -132,22 +212,26 @@ Table of Contents
   capture]).
 
   When called with a prefix argument (`C-u' with default key bindings),
-  the command `denote-journal-new-or-existing-entry' prompts for a date.
-  It then determines whether to visit an existing file or create a new
-  one, as described above. The date selection interface is controlled by
-  the user option `denote-date-prompt-use-org-read-date', which is part
-  of the main `denote' package. By default, this is a simple minibuffer
-  prompt, though users can opt in to the more advanced
+  the command `denote-journal-new-or-existing-entry' prompts for a date
+  ([Integrate with the `calendar' to view or create journal
+  entries]). It then determines whether to visit an existing file or
+  create a new one, as described above. The date selection interface is
+  controlled by the user option `denote-date-prompt-use-org-read-date',
+  which is part of the main `denote' package. By default, this is a
+  simple minibuffer prompt, though users can opt in to the more advanced
   minibuffer+calendar date picker that Org uses for its own date
   selection operations.
 
 
-[Create new journal entry] See section 2.1
+[Create new journal entry] See section 4.1
 
-[Create a journal entry using Org capture] See section 2.6
+[Create a journal entry using Org capture] See section 4.7
+
+[Integrate with the `calendar' to view or create journal entries] See
+section 4.4
 
 
-2.3 Link to a journal entry or create it if missing
+4.3 Link to a journal entry or create it if missing
 ───────────────────────────────────────────────────
 
   The command `denote-journal-link-or-create-entry' links to the journal
@@ -161,7 +245,39 @@ Table of Contents
   file’s identifier.
 
 
-2.4 The `denote-journal-directory'
+4.4 Integrate with the `calendar' to view or create journal entries
+───────────────────────────────────────────────────────────────────
+
+  The command `denote-journal-calendar-new-or-existing' creates a new
+  journal entry for the date at point in the `M-x calendar' buffer. If
+  an entry exists, it visits it. This is the same as the command
+  `denote-journal-new-or-existing-entry' ([Create a new journal entry or
+  use an existing one]).
+
+  The command `denote-journal-calendar-find-file' visits the Denote
+  journal entry corresponding to the date at point in the `M-x
+  calendar'. If there are multiple entries, it prompts with minibuffer
+  completion to select one among them.
+
+  The buffer-local minor mode `denote-journal-calendar-mode' marks the
+  dates in the `M-x calendar' that have a Denote journal entry. The face
+  applied to them is the `denote-journal-calendar'. Activate the mode
+  via the `calendar-mode-hook':
+
+  ┌────
+  │ (add-hook 'calendar-mode-hook #'denote-journal-calendar-mode)
+  └────
+
+  The `denote-journal-calendar-mode' also activates the key map called
+  `denote-journal-calendar-mode-map'. It defines bindings for the
+  aforementioned commands: `F' for `denote-journal-calendar-find-file'
+  and `N' for `denote-journal-calendar-new-or-existing'.
+
+
+[Create a new journal entry or use an existing one] See section 4.2
+
+
+4.5 The `denote-journal-directory'
 ──────────────────────────────────
 
   New journal entries are placed in the `denote-journal-directory',
@@ -175,39 +291,38 @@ Table of Contents
   the file-naming scheme for searching or filtering”).
 
 
-2.5 Title format of new journal entries
+4.6 Title format of new journal entries
 ───────────────────────────────────────
 
-  New journal entries will use the current date as the title of the new
+  New journal entries will use the current date as the title of the
   entry. The exact format is controlled by the user option
-  `denote-journal-title-format'. Acceptable values for this user option
-  and their corresponding styles are:
+  `denote-journal-title-format'. The value it can take is either nil, a
+  custom string, or a symbol:
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Symbol                   Style                             
-  ────────────────────────────────────────────────────────────
-   day                      Monday                            
-   day-date-month-year      Monday 19 September 2023          
-   day-date-month-year-24h  Monday 19 September 2023 20:49    
-   day-date-month-year-12h  Monday 19 September 2023 08:49 PM 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  • When `denote-journal-title-format' is set to a nil value, then new
+    journal entries always prompt for a title. Users will want this if
+    they prefer to journal using a given theme for the day rather than
+    the date itself (e.g. instead of “1st of April 2025” they may prefer
+    something like “Early Spring at the hut”).
 
-  For example:
+  • When `denote-journal-title-format' is set to an empty or blank
+    string (string with only spaces), then new journal entries will not
+    use a file title.
 
-  ┌────
-  │ (setq denote-journal-title-format 'day-date-month-year)
-  └────
+  • When `denote-journal-title-format' is set to a symbol, it is one
+    among `day' (results in a title like `Tuesday'),
+    `day-date-month-year' (for a result like `Tuesday 1 April 2025'),
+    `day-date-month-year-24h' (for `Tuesday 1 April 2025 13:46'), or
+    `day-date-month-year-12h' (e.g. `Tuesday 1 April 2025 02:46 PM').
 
-  If the value of this user option is `nil', then the command
-  `denote-journal-new-entry' will prompt for a title. In terms of
-  workflow, using the current date as the title is better for
-  maintaining a daily journal. A prompt for an arbitrary title is more
-  suitable for those who like to keep a record of something like a
-  thought or event (though this can also be achieved with the regular
-  `denote' command or a variant thereof like `denote-subdirectory').
+  • When `denote-journal-title-format' is set to a string, it is used
+    literally except for any “format specifiers”, as interpreted by the
+    function `format-time-string', which are replaced by their given
+    date component. For example, the `"Week %V on %A %e %B %Y at %H:%M"'
+    will yield a title like `Week 14 on 1 April 2025 at 13:48'.
 
 
-2.6 Create a journal entry using Org capture
+4.7 Create a journal entry using Org capture
 ────────────────────────────────────────────
 
   Users who prefer to consolidate all their note-creating or todo-making
@@ -232,10 +347,10 @@ Table of Contents
   documentation of `org-capture-templates'.
 
 
-[Create a new journal entry or use an existing one] See section 2.2
+[Create a new journal entry or use an existing one] See section 4.2
 
 
-2.7 The `denote-journal-hook'
+4.8 The `denote-journal-hook'
 ─────────────────────────────
 
   All commands that create a new journal entry call the normal hook
@@ -244,10 +359,10 @@ Table of Contents
   package from GNU ELPA ([Journaling with a timer]).
 
 
-[Journaling with a timer] See section 2.8
+[Journaling with a timer] See section 4.9
 
 
-2.8 Journaling with a timer
+4.9 Journaling with a timer
 ───────────────────────────
 
   Sometimes journaling is done with the intent to hone one’s writing
@@ -310,85 +425,7 @@ Table of Contents
   ⁃ Backronym: TMR May Ring; Timer Must Run.
 
 
-[The `denote-journal-hook'] See section 2.7
-
-
-3 Installation
-══════════════
-
-
-
-
-3.1 GNU ELPA package
-────────────────────
-
-  The package is available as `denote-journal'.  Simply do:
-
-  ┌────
-  │ M-x package-refresh-contents
-  │ M-x package-install
-  └────
-
-
-  And search for it.
-
-  GNU ELPA provides the latest stable release.  Those who prefer to
-  follow the development process in order to report bugs or suggest
-  changes, can use the version of the package from the GNU-devel ELPA
-  archive.  Read:
-  <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
-
-
-3.2 Manual installation
-───────────────────────
-
-  Assuming your Emacs files are found in `~/.emacs.d/', execute the
-  following commands in a shell prompt:
-
-  ┌────
-  │ cd ~/.emacs.d
-  │ 
-  │ # Create a directory for manually-installed packages
-  │ mkdir manual-packages
-  │ 
-  │ # Go to the new directory
-  │ cd manual-packages
-  │ 
-  │ # Clone this repo, naming it "denote-journal"
-  │ git clone https://github.com/protesilaos/denote-journal denote-journal
-  └────
-
-  Finally, in your `init.el' (or equivalent) evaluate this:
-
-  ┌────
-  │ ;; Make Elisp files in that directory available to the user.
-  │ (add-to-list 'load-path "~/.emacs.d/manual-packages/denote-journal")
-  └────
-
-  Everything is in place to set up the package.
-
-
-4 Sample configuration
-══════════════════════
-
-  ┌────
-  │ (use-package denote-journal
-  │   :ensure t
-  │   ;; Bind those to some key for your convenience.
-  │   :commands ( denote-journal-new-entry
-  │ 	      denote-journal-new-or-existing-entry
-  │ 	      denote-journal-link-or-create-entry )
-  │   :config
-  │   ;; Use the "journal" subdirectory of the `denote-directory'.  Set this
-  │   ;; to nil to use the `denote-directory' instead.
-  │   (setq denote-journal-directory
-  │ 	(expand-file-name "journal" denote-directory))
-  │   ;; Default keyword for new journal entries. It can also be a list of
-  │   ;; strings.
-  │   (setq denote-journal-keyword "journal")
-  │   ;; Read the doc string of `denote-journal-title-format'.
-  │   (setq denote-journal-title-format 'day-date-month-year))
-  └────
+[The `denote-journal-hook'] See section 4.8
 
 
 5 Acknowledgements
@@ -399,6 +436,12 @@ Table of Contents
 
   Author/maintainer
         Protesilaos Stavrou.
+
+  Contributions to code or the manual
+        Honza Pokorny, Stefan Monnier, Vineet C. Kulkarni.
+
+  Ideas and/or user feedback
+        Alan Schmitt, Kevin McCarthy.
 
 
 6 GNU Free Documentation License

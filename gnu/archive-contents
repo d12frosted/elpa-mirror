@@ -784,7 +784,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:commit . "30a42ac8f3d42f653eda234ee538c1960704f4f2"))])
  (consult-denote .
-		 [(0 2 4)
+		 [(0 3 0)
 		  ((emacs
 		    (28 1))
 		   (denote
@@ -796,7 +796,7 @@
 		   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		   (:authors
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		   (:commit . "e07001ce3ded4b226f59264d3c8162761580c052"))])
+		   (:commit . "62a1b64ebebb927bc204b87e61c4b1a1c576954e"))])
  (consult-hoogle .
 		 [(0 5 0)
 		  ((emacs
@@ -1036,7 +1036,7 @@
 	     ("Phil Sainty" . "psainty@orcon.net.nz"))
 	    (:commit . "a763ec1e5c2987efea3ce2ee6d9c979f56ab6528"))])
  (denote .
-	 [(3 1 0)
+	 [(4 0 0)
 	  ((emacs
 	    (28 1)))
 	  "Simple notes with an efficient file-naming scheme" tar
@@ -1044,9 +1044,9 @@
 	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "3bb05f212cc29fa6953e6d703e5e0c2e982882a9"))])
+	   (:commit . "c98c74ec74fb6f0c894c5bf730d092d716e55b84"))])
  (denote-journal .
-		 [(0 0 0 1)
+		 [(0 1 0)
 		  ((emacs
 		    (28 1))
 		   (denote
@@ -1056,9 +1056,9 @@
 		   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		   (:authors
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		   (:commit . "674c1b63f25986c703e962619f819e55e2bc1d09"))])
+		   (:commit . "47fd533e381bd15a7308939271800b2ed87ecc5d"))])
  (denote-markdown .
-		  [(0 0 0 1)
+		  [(0 1 0)
 		   ((emacs
 		     (28 1))
 		    (denote
@@ -1068,7 +1068,7 @@
 		    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "74c509aef815e18a3d9139afde7b013d9967fe93"))])
+		    (:commit . "2f62d7975d943ba2eef21b031bf9207d128db8a9"))])
  (denote-menu .
 	      [(1 4 0)
 	       ((emacs
@@ -1082,7 +1082,7 @@
 		 ("Mohamed Suliman" . "sulimanm@tcd.ie"))
 		(:commit . "247a9b66d67b3fe409eda8f896feae87546f5b4d"))])
  (denote-org .
-	     [(0 0 0 1)
+	     [(0 1 0)
 	      ((emacs
 		(28 1))
 	       (denote
@@ -1092,7 +1092,7 @@
 	       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	       (:authors
 		("Protesilaos Stavrou" . "info@protesilaos.com"))
-	       (:commit . "0aefda419e38622e69b4f3b42c0e5b69c1f3d2a1"))])
+	       (:commit . "7c8d53bf8e4ee073b1654ad0221be01e7801d4c6"))])
  (denote-search .
 		[(1 0 3)
 		 ((emacs
@@ -1107,7 +1107,7 @@
 		   ("Lucas Quintana" . "lmq10@protonmail.com"))
 		  (:commit . "4df3e77a495b4f0df7fe56924509afe7f2fa735d"))])
  (denote-sequence .
-		  [(0 0 0 1)
+		  [(0 1 0)
 		   ((emacs
 		     (28 1))
 		    (denote
@@ -1117,9 +1117,9 @@
 		    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "22c0af06e7dba199163a83b431505bd87d99294d"))])
+		    (:commit . "fd938da75573cc8b70e77ea00248c0c446613d43"))])
  (denote-silo .
-	      [(0 0 0 1)
+	      [(0 1 0)
 	       ((emacs
 		 (28 1))
 		(denote
@@ -1129,7 +1129,7 @@
 		(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		(:authors
 		 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		(:commit . "1d49f7613ef62c514f1719e9f1c1b78a8928042e"))])
+		(:commit . "cd85764fcceb21fc11a163da0d36bf4b7f166f53"))])
  (detached .
 	   [(0 10 1)
 	    ((emacs
@@ -1325,7 +1325,7 @@
 	     ("Daniel Laurens Nicolai" . "dalanicolai@gmail.com"))
 	    (:commit . "4a179fbacd7bc9efbd6cfcdc8772d42935e6de29"))])
  (doc-view-follow .
-		  [(0 3)
+		  [(0 3 1)
 		   ((emacs
 		     (29 1)))
 		   "Synchronize windows showing the same document" tar
@@ -1334,7 +1334,7 @@
 		    (:maintainer "Paul D. Nelson" . "ultrono@gmail.com")
 		    (:authors
 		     ("Paul D. Nelson" . "ultrono@gmail.com"))
-		    (:commit . "758037957bf0096879e49b6d84624db31cd49511"))])
+		    (:commit . "78f18efb3d9769d5df281d71c3ddeb4a956b7c0d"))])
  (docbook .
 	  [(0 1)
 	   nil "Info-like viewer for DocBook" tar
@@ -1923,7 +1923,7 @@
 		       ("Manuel Uberti" . "manuel.uberti@inventati.org"))
 		      (:commit . "9c68ee881f18f554f0ab5bbf5bee1a4b753d792b"))])
  (fontaine .
-	   [(3 0 0)
+	   [(3 0 1)
 	    ((emacs
 	      (29 1)))
 	    "Set font configurations using presets" tar
@@ -1931,7 +1931,7 @@
 	     (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	     (:authors
 	      ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	     (:commit . "fe78a2be64b09f55748fa0c6e62d59e787b761b4"))])
+	     (:commit . "34d8b04bef350b270f52dc4defc9bac3e9617bf0"))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" tar

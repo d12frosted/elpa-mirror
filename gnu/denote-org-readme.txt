@@ -11,13 +11,13 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.0.0,
-released on N/A.  Any reference to a newer feature which does not yet
-form part of the latest tagged commit, is explicitly marked as such.
+The documentation furnished herein corresponds to stable version 0.1.0,
+released on 2025-04-15.  Any reference to a newer feature which does not
+yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.1.0-dev.
+Current development target is 0.2.0-dev.
 
-⁃ Package name (GNU ELPA): `denote-org' (⚠️ Not available yet)
+⁃ Package name (GNU ELPA): `denote-org'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-org>
 ⁃ Git repository: <https://github.com/protesilaos/denote-org>
 ⁃ Backronym: Denote… Ordinarily Restricts Gyrations.
@@ -154,8 +154,7 @@ Table of Contents
     include all files that have a `journal' keyword.
 
   • The `:not-regexp' parameter is optional. It is a regular expression
-    that applies after `:regexp' to filter out the matching files. [
-    Part of 0.1.0-dev. ]
+    that applies after `:regexp' to filter out the matching files.
 
   • The `:excluded-dirs-regexp' is a string that contains a word or
     regular expression that matches against directory files names
@@ -327,8 +326,7 @@ section 5
     will work to include all files that have a `journal' keyword.
 
   • The `:not-regexp' parameter is optional. It is a regular expression
-    that applies after `:regexp' to filter out the matching files. [
-    Part of 0.1.0-dev. ]
+    that applies after `:regexp' to filter out the matching files.
 
   • The `:excluded-dirs-regexp' is a string that contains a word or
     regular expression that matches against directory files names
@@ -447,8 +445,7 @@ section 5
     will work to include all files that have a `journal' keyword.
 
   • The `:not-regexp' parameter is optional. It is a regular expression
-    that applies after `:regexp' to filter out the matching files. [
-    Part of 0.1.0-dev. ]
+    that applies after `:regexp' to filter out the matching files.
 
   • The `:excluded-dirs-regexp' is a string that contains a word or
     regular expression that matches against directory files names
@@ -691,7 +688,7 @@ section 5
   ┌────
   │ (use-package denote-org
   │   :ensure t
-  │   :command
+  │   :commands
   │   ;; I list the commands here so that you can discover them more
   │   ;; easily.  You might want to bind the most frequently used ones to
   │   ;; the `org-mode-map'.

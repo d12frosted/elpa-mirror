@@ -12,13 +12,13 @@ options for the Emacs package called `denote-silo' (or
 `denote-silo.el'), and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.0.0,
-released on N/A.  Any reference to a newer feature which does not yet
-form part of the latest tagged commit, is explicitly marked as such.
+The documentation furnished herein corresponds to stable version 0.1.0,
+released on 2025-04-15.  Any reference to a newer feature which does not
+yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.1.0-dev.
+Current development target is 0.2.0-dev.
 
-⁃ Package name (GNU ELPA): `denote-silo' (⚠️ Not available yet)
+⁃ Package name (GNU ELPA): `denote-silo'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-silo>
 ⁃ Git repository: <https://github.com/protesilaos/denote-silo>
 ⁃ Backronym: Denote… Silos Insulate Localised Objects.
@@ -239,7 +239,14 @@ Table of Contents
   │ 	      denote-silo-open-or-create
   │ 	      denote-silo-select-silo-then-command
   │ 	      denote-silo-dired
-  │ 	      denote-silo-cd ))
+  │ 	      denote-silo-cd )
+  │   :config
+  │   ;; Add your silos to this list.  By default, it only includes the
+  │   ;; value of the variable `denote-directory'.
+  │   (setq denote-silo-directories
+  │ 	(list denote-directory
+  │ 	      "~/Documents/personal/"
+  │ 	      "~/Documents/work/")))
   └────
 
 
