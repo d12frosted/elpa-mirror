@@ -2995,16 +2995,16 @@
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	     (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (modus-themes .
-	       [(4 6 0)
+	       [(4 7 0)
 		((emacs
-		  (27 1)))
+		  (28 1)))
 		"Elegant, highly legible and customizable themes" tar
 		((:url . "https://github.com/protesilaos/modus-themes")
 		 (:keywords "faces" "theme" "accessibility")
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "895e10936adac93aa8187c9cc91092dbca898677"))])
+		 (:commit . "d5a0eeb4f0fc5f865862465c6d17482d166b3b3d"))])
  (mpdired .
 	  [(3)
 	   ((emacs
