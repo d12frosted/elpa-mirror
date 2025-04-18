@@ -3,36 +3,350 @@ Fetcher: git
 Source:  https://git.savannah.gnu.org/git/hyperbole.git
 
 Updating /mnt/store/melpa/working/hyperbole/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://git.savannah.gnu.org/git/hyperbole.git/': The requested URL returned error: 502
-
-Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
-  error("%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
-  package-build--error(#<package-git-recipe package-git-recipe-157d921d5a42> "%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-git-recipe package-git-recipe-157d921d5a42> "git" "fetch" "-f" "--tags" "origin")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-git-recipe package-git-recipe-157d921d5a42>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-git-recipe package-git-recipe-157d921d5a42> nil)
-  package-build--fetch(#<package-git-recipe package-git-recipe-157d921d5a42>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  package-build-archive("hyperbole")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"hyperbole\")"))
-  command-line()
-  normal-top-level()
-
+Checking out a366cc9ffdf7e3c6034cd4333ed5e5f46c3aec88
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hyperbole/
+  to /tmp/hyperbolemHVDuj/hyperbole-20250417.802
+    hact.el -> hact.el
+    hactypes.el -> hactypes.el
+    hargs.el -> hargs.el
+    hasht.el -> hasht.el
+    hbdata.el -> hbdata.el
+    hbmap.el -> hbmap.el
+    hbut.el -> hbut.el
+    hgnus.el -> hgnus.el
+    hhist.el -> hhist.el
+    hib-debbugs.el -> hib-debbugs.el
+    hib-doc-id.el -> hib-doc-id.el
+    hib-kbd.el -> hib-kbd.el
+    hib-social.el -> hib-social.el
+    hibtypes.el -> hibtypes.el
+    hinit.el -> hinit.el
+    hload-path.el -> hload-path.el
+    hmail.el -> hmail.el
+    hmh.el -> hmh.el
+    hmoccur.el -> hmoccur.el
+    hmouse-drv.el -> hmouse-drv.el
+    hmouse-info.el -> hmouse-info.el
+    hmouse-key.el -> hmouse-key.el
+    hmouse-mod.el -> hmouse-mod.el
+    hmouse-sh.el -> hmouse-sh.el
+    hmouse-tag.el -> hmouse-tag.el
+    hpath.el -> hpath.el
+    hproperty.el -> hproperty.el
+    hrmail.el -> hrmail.el
+    hsettings.el -> hsettings.el
+    hsmail.el -> hsmail.el
+    hsys-consult.el -> hsys-consult.el
+    hsys-ert.el -> hsys-ert.el
+    hsys-flymake.el -> hsys-flymake.el
+    hsys-org-roam.el -> hsys-org-roam.el
+    hsys-org.el -> hsys-org.el
+    hsys-www.el -> hsys-www.el
+    hsys-xref.el -> hsys-xref.el
+    hsys-youtube.el -> hsys-youtube.el
+    htz.el -> htz.el
+    hui-dired-sidebar.el -> hui-dired-sidebar.el
+    hui-jmenu.el -> hui-jmenu.el
+    hui-menu.el -> hui-menu.el
+    hui-mini.el -> hui-mini.el
+    hui-mouse.el -> hui-mouse.el
+    hui-register.el -> hui-register.el
+    hui-select.el -> hui-select.el
+    hui-treemacs.el -> hui-treemacs.el
+    hui-window.el -> hui-window.el
+    hui.el -> hui.el
+    hvar.el -> hvar.el
+    hversion.el -> hversion.el
+    hycontrol.el -> hycontrol.el
+    hynote.el -> hynote.el
+    hypb-ert.el -> hypb-ert.el
+    hypb-maintenance.el -> hypb-maintenance.el
+    hypb.el -> hypb.el
+    hyperbole.el -> hyperbole.el
+    hyrolo-demo.el -> hyrolo-demo.el
+    hyrolo-logic.el -> hyrolo-logic.el
+    hyrolo-menu.el -> hyrolo-menu.el
+    hyrolo.el -> hyrolo.el
+    hywconfig.el -> hywconfig.el
+    hywiki.el -> hywiki.el
+    set.el -> set.el
+    MANIFEST -> MANIFEST
+    ChangeLog -> ChangeLog
+    Makefile -> Makefile
+    HY-ABOUT -> HY-ABOUT
+    HY-ANNOUNCE -> HY-ANNOUNCE
+    HY-CONCEPTS.kotl -> HY-CONCEPTS.kotl
+    HY-NEWS -> HY-NEWS
+    HY-WHY.kotl -> HY-WHY.kotl
+    INSTALL -> INSTALL
+    DEMO -> DEMO
+    DEMO-ROLO.otl -> DEMO-ROLO.otl
+    FAST-DEMO -> FAST-DEMO
+    README.md -> README.md
+    _hypb -> _hypb
+    .hypb -> .hypb
+    hyrolo.py -> hyrolo.py
+    smart-clib-sym -> smart-clib-sym
+    topwin.py -> topwin.py
+    hyperbole-banner.png -> hyperbole-banner.png
+    kotl/MANIFEST -> kotl/MANIFEST
+    kotl/EXAMPLE.kotl -> kotl/EXAMPLE.kotl
+    kotl/kcell.el -> kotl/kcell.el
+    kotl/kexport.el -> kotl/kexport.el
+    kotl/kfile.el -> kotl/kfile.el
+    kotl/kfill.el -> kotl/kfill.el
+    kotl/kimport.el -> kotl/kimport.el
+    kotl/klabel.el -> kotl/klabel.el
+    kotl/klink.el -> kotl/klink.el
+    kotl/kmenu.el -> kotl/kmenu.el
+    kotl/kotl-mode.el -> kotl/kotl-mode.el
+    kotl/kotl-orgtbl.el -> kotl/kotl-orgtbl.el
+    kotl/kproperty.el -> kotl/kproperty.el
+    kotl/kview.el -> kotl/kview.el
+    kotl/kvspec.el -> kotl/kvspec.el
+    man/hyperbole.texi -> man/hyperbole.texi
+    man/hyperbole.css -> man/hyperbole.css
+    man/hkey-help.txt -> man/hkey-help.txt
+    man/hyperbole.info -> man/hyperbole.info
+    man/hyperbole.html -> man/hyperbole.html
+    man/hyperbole.pdf -> man/hyperbole.pdf
+    man/im/C-hh.png -> man/im/C-hh.png
+    man/im/demo.png -> man/im/demo.png
+    man/im/hyperbole-cv.png -> man/im/hyperbole-cv.png
+    man/im/koutliner.png -> man/im/koutliner.png
+    man/im/menu-customization.png -> man/im/menu-customization.png
+    man/im/menu-display-referents.png -> man/im/menu-display-referents.png
+    man/im/menu-find.png -> man/im/menu-find.png
+    man/im/menu-hyperbole.png -> man/im/menu-hyperbole.png
+    man/im/menu-key-bindings.png -> man/im/menu-key-bindings.png
+    man/im/menu-koutline.png -> man/im/menu-koutline.png
+    man/im/menu-rolo.png -> man/im/menu-rolo.png
+    man/im/menu-url-browser.png -> man/im/menu-url-browser.png
+    man/im/menu-web-search-browser.png -> man/im/menu-web-search-browser.png
+    man/im/wgrid-2x2.png -> man/im/wgrid-2x2.png
+    man/im/wgrid-2x3.png -> man/im/wgrid-2x3.png
+    man/im/wgrid-3x5.png -> man/im/wgrid-3x5.png
+    man/im/wgrid-4x6.png -> man/im/wgrid-4x6.png
+    man/im/wgrid4x3.png -> man/im/wgrid4x3.png
+    HY-TALK/.hypb -> HY-TALK/.hypb
+    HY-TALK/HYPB -> HY-TALK/HYPB
+    HY-TALK/HY-TALK.org -> HY-TALK/HY-TALK.org
+    HY-TALK/HYPERAMP.org -> HY-TALK/HYPERAMP.org
+    HY-TALK/HYPERORG.org -> HY-TALK/HYPERORG.org
+    test/MANIFEST -> test/MANIFEST
+    test/demo-tests.el -> test/demo-tests.el
+    test/hact-tests.el -> test/hact-tests.el
+    test/hactypes-tests.el -> test/hactypes-tests.el
+    test/hargs-tests.el -> test/hargs-tests.el
+    test/hbut-tests.el -> test/hbut-tests.el
+    test/hib-kbd-tests.el -> test/hib-kbd-tests.el
+    test/hib-social-tests.el -> test/hib-social-tests.el
+    test/hibtypes-tests.el -> test/hibtypes-tests.el
+    test/hmouse-drv-tests.el -> test/hmouse-drv-tests.el
+    test/hmouse-info-tests.el -> test/hmouse-info-tests.el
+    test/hpath-tests.el -> test/hpath-tests.el
+    test/hproperty-tests.el -> test/hproperty-tests.el
+    test/hsys-org-tests.el -> test/hsys-org-tests.el
+    test/hui-mini-tests.el -> test/hui-mini-tests.el
+    test/hui-mouse-tests.el -> test/hui-mouse-tests.el
+    test/hui-register-tests.el -> test/hui-register-tests.el
+    test/hui-select-tests.el -> test/hui-select-tests.el
+    test/hui-tests.el -> test/hui-tests.el
+    test/hycontrol-tests.el -> test/hycontrol-tests.el
+    test/hypb-ert-tests.el -> test/hypb-ert-tests.el
+    test/hypb-tests.el -> test/hypb-tests.el
+    test/hyperbole-tests.el -> test/hyperbole-tests.el
+    test/hyrolo-tests.el -> test/hyrolo-tests.el
+    test/hywconfig-tests.el -> test/hywconfig-tests.el
+    test/hywiki-tests.el -> test/hywiki-tests.el
+    test/kcell-tests.el -> test/kcell-tests.el
+    test/kexport-tests.el -> test/kexport-tests.el
+    test/kimport-tests.el -> test/kimport-tests.el
+    test/kotl-mode-tests.el -> test/kotl-mode-tests.el
+    test/kotl-orgtbl-tests.el -> test/kotl-orgtbl-tests.el
+    test/set-tests.el -> test/set-tests.el
+    test/smart-org-tests.el -> test/smart-org-tests.el
+    test/test-helpers-tests.el -> test/test-helpers-tests.el
+    test/hy-test-coverage.el -> test/hy-test-coverage.el
+    test/hy-test-dependencies.el -> test/hy-test-dependencies.el
+    test/hy-test-helpers.el -> test/hy-test-helpers.el
+Generating hyperbole.info
+Created hyperbole-20250417.802.tar containing:
+  hyperbole-20250417.802/
+  hyperbole-20250417.802/.hypb
+  hyperbole-20250417.802/ChangeLog
+  hyperbole-20250417.802/DEMO
+  hyperbole-20250417.802/DEMO-ROLO.otl
+  hyperbole-20250417.802/FAST-DEMO
+  hyperbole-20250417.802/HY-ABOUT
+  hyperbole-20250417.802/HY-ANNOUNCE
+  hyperbole-20250417.802/HY-CONCEPTS.kotl
+  hyperbole-20250417.802/HY-NEWS
+  hyperbole-20250417.802/HY-TALK/
+  hyperbole-20250417.802/HY-TALK/.hypb
+  hyperbole-20250417.802/HY-TALK/HY-TALK.org
+  hyperbole-20250417.802/HY-TALK/HYPB
+  hyperbole-20250417.802/HY-TALK/HYPERAMP.org
+  hyperbole-20250417.802/HY-TALK/HYPERORG.org
+  hyperbole-20250417.802/HY-WHY.kotl
+  hyperbole-20250417.802/INSTALL
+  hyperbole-20250417.802/MANIFEST
+  hyperbole-20250417.802/Makefile
+  hyperbole-20250417.802/README.md
+  hyperbole-20250417.802/_hypb
+  hyperbole-20250417.802/dir
+  hyperbole-20250417.802/hact.el
+  hyperbole-20250417.802/hactypes.el
+  hyperbole-20250417.802/hargs.el
+  hyperbole-20250417.802/hasht.el
+  hyperbole-20250417.802/hbdata.el
+  hyperbole-20250417.802/hbmap.el
+  hyperbole-20250417.802/hbut.el
+  hyperbole-20250417.802/hgnus.el
+  hyperbole-20250417.802/hhist.el
+  hyperbole-20250417.802/hib-debbugs.el
+  hyperbole-20250417.802/hib-doc-id.el
+  hyperbole-20250417.802/hib-kbd.el
+  hyperbole-20250417.802/hib-social.el
+  hyperbole-20250417.802/hibtypes.el
+  hyperbole-20250417.802/hinit.el
+  hyperbole-20250417.802/hload-path.el
+  hyperbole-20250417.802/hmail.el
+  hyperbole-20250417.802/hmh.el
+  hyperbole-20250417.802/hmoccur.el
+  hyperbole-20250417.802/hmouse-drv.el
+  hyperbole-20250417.802/hmouse-info.el
+  hyperbole-20250417.802/hmouse-key.el
+  hyperbole-20250417.802/hmouse-mod.el
+  hyperbole-20250417.802/hmouse-sh.el
+  hyperbole-20250417.802/hmouse-tag.el
+  hyperbole-20250417.802/hpath.el
+  hyperbole-20250417.802/hproperty.el
+  hyperbole-20250417.802/hrmail.el
+  hyperbole-20250417.802/hsettings.el
+  hyperbole-20250417.802/hsmail.el
+  hyperbole-20250417.802/hsys-consult.el
+  hyperbole-20250417.802/hsys-ert.el
+  hyperbole-20250417.802/hsys-flymake.el
+  hyperbole-20250417.802/hsys-org-roam.el
+  hyperbole-20250417.802/hsys-org.el
+  hyperbole-20250417.802/hsys-www.el
+  hyperbole-20250417.802/hsys-xref.el
+  hyperbole-20250417.802/hsys-youtube.el
+  hyperbole-20250417.802/htz.el
+  hyperbole-20250417.802/hui-dired-sidebar.el
+  hyperbole-20250417.802/hui-jmenu.el
+  hyperbole-20250417.802/hui-menu.el
+  hyperbole-20250417.802/hui-mini.el
+  hyperbole-20250417.802/hui-mouse.el
+  hyperbole-20250417.802/hui-register.el
+  hyperbole-20250417.802/hui-select.el
+  hyperbole-20250417.802/hui-treemacs.el
+  hyperbole-20250417.802/hui-window.el
+  hyperbole-20250417.802/hui.el
+  hyperbole-20250417.802/hvar.el
+  hyperbole-20250417.802/hversion.el
+  hyperbole-20250417.802/hycontrol.el
+  hyperbole-20250417.802/hynote.el
+  hyperbole-20250417.802/hypb-ert.el
+  hyperbole-20250417.802/hypb-maintenance.el
+  hyperbole-20250417.802/hypb.el
+  hyperbole-20250417.802/hyperbole-banner.png
+  hyperbole-20250417.802/hyperbole-pkg.el
+  hyperbole-20250417.802/hyperbole.el
+  hyperbole-20250417.802/hyperbole.info
+  hyperbole-20250417.802/hyrolo-demo.el
+  hyperbole-20250417.802/hyrolo-logic.el
+  hyperbole-20250417.802/hyrolo-menu.el
+  hyperbole-20250417.802/hyrolo.el
+  hyperbole-20250417.802/hyrolo.py
+  hyperbole-20250417.802/hywconfig.el
+  hyperbole-20250417.802/hywiki.el
+  hyperbole-20250417.802/kotl/
+  hyperbole-20250417.802/kotl/EXAMPLE.kotl
+  hyperbole-20250417.802/kotl/MANIFEST
+  hyperbole-20250417.802/kotl/kcell.el
+  hyperbole-20250417.802/kotl/kexport.el
+  hyperbole-20250417.802/kotl/kfile.el
+  hyperbole-20250417.802/kotl/kfill.el
+  hyperbole-20250417.802/kotl/kimport.el
+  hyperbole-20250417.802/kotl/klabel.el
+  hyperbole-20250417.802/kotl/klink.el
+  hyperbole-20250417.802/kotl/kmenu.el
+  hyperbole-20250417.802/kotl/kotl-mode.el
+  hyperbole-20250417.802/kotl/kotl-orgtbl.el
+  hyperbole-20250417.802/kotl/kproperty.el
+  hyperbole-20250417.802/kotl/kview.el
+  hyperbole-20250417.802/kotl/kvspec.el
+  hyperbole-20250417.802/man/
+  hyperbole-20250417.802/man/hkey-help.txt
+  hyperbole-20250417.802/man/hyperbole.css
+  hyperbole-20250417.802/man/hyperbole.html
+  hyperbole-20250417.802/man/hyperbole.info
+  hyperbole-20250417.802/man/hyperbole.pdf
+  hyperbole-20250417.802/man/hyperbole.texi
+  hyperbole-20250417.802/man/im/
+  hyperbole-20250417.802/man/im/C-hh.png
+  hyperbole-20250417.802/man/im/demo.png
+  hyperbole-20250417.802/man/im/hyperbole-cv.png
+  hyperbole-20250417.802/man/im/koutliner.png
+  hyperbole-20250417.802/man/im/menu-customization.png
+  hyperbole-20250417.802/man/im/menu-display-referents.png
+  hyperbole-20250417.802/man/im/menu-find.png
+  hyperbole-20250417.802/man/im/menu-hyperbole.png
+  hyperbole-20250417.802/man/im/menu-key-bindings.png
+  hyperbole-20250417.802/man/im/menu-koutline.png
+  hyperbole-20250417.802/man/im/menu-rolo.png
+  hyperbole-20250417.802/man/im/menu-url-browser.png
+  hyperbole-20250417.802/man/im/menu-web-search-browser.png
+  hyperbole-20250417.802/man/im/wgrid-2x2.png
+  hyperbole-20250417.802/man/im/wgrid-2x3.png
+  hyperbole-20250417.802/man/im/wgrid-3x5.png
+  hyperbole-20250417.802/man/im/wgrid-4x6.png
+  hyperbole-20250417.802/man/im/wgrid4x3.png
+  hyperbole-20250417.802/set.el
+  hyperbole-20250417.802/smart-clib-sym
+  hyperbole-20250417.802/test/
+  hyperbole-20250417.802/test/MANIFEST
+  hyperbole-20250417.802/test/demo-tests.el
+  hyperbole-20250417.802/test/hact-tests.el
+  hyperbole-20250417.802/test/hactypes-tests.el
+  hyperbole-20250417.802/test/hargs-tests.el
+  hyperbole-20250417.802/test/hbut-tests.el
+  hyperbole-20250417.802/test/hib-kbd-tests.el
+  hyperbole-20250417.802/test/hib-social-tests.el
+  hyperbole-20250417.802/test/hibtypes-tests.el
+  hyperbole-20250417.802/test/hmouse-drv-tests.el
+  hyperbole-20250417.802/test/hmouse-info-tests.el
+  hyperbole-20250417.802/test/hpath-tests.el
+  hyperbole-20250417.802/test/hproperty-tests.el
+  hyperbole-20250417.802/test/hsys-org-tests.el
+  hyperbole-20250417.802/test/hui-mini-tests.el
+  hyperbole-20250417.802/test/hui-mouse-tests.el
+  hyperbole-20250417.802/test/hui-register-tests.el
+  hyperbole-20250417.802/test/hui-select-tests.el
+  hyperbole-20250417.802/test/hui-tests.el
+  hyperbole-20250417.802/test/hy-test-coverage.el
+  hyperbole-20250417.802/test/hy-test-dependencies.el
+  hyperbole-20250417.802/test/hy-test-helpers.el
+  hyperbole-20250417.802/test/hycontrol-tests.el
+  hyperbole-20250417.802/test/hypb-ert-tests.el
+  hyperbole-20250417.802/test/hypb-tests.el
+  hyperbole-20250417.802/test/hyperbole-tests.el
+  hyperbole-20250417.802/test/hyrolo-tests.el
+  hyperbole-20250417.802/test/hywconfig-tests.el
+  hyperbole-20250417.802/test/hywiki-tests.el
+  hyperbole-20250417.802/test/kcell-tests.el
+  hyperbole-20250417.802/test/kexport-tests.el
+  hyperbole-20250417.802/test/kimport-tests.el
+  hyperbole-20250417.802/test/kotl-mode-tests.el
+  hyperbole-20250417.802/test/kotl-orgtbl-tests.el
+  hyperbole-20250417.802/test/set-tests.el
+  hyperbole-20250417.802/test/smart-org-tests.el
+  hyperbole-20250417.802/test/test-helpers-tests.el
+  hyperbole-20250417.802/topwin.py
+ ✓ Success:
+  2025-04-18T06:10:24+0000  hyperbole-20250417.802.entry
+  2025-04-18T06:10:24+0000  hyperbole-20250417.802.tar
+Built hyperbole in 16.140s, finished at 2025-04-18T06:10:25+0000
