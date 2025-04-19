@@ -3,3 +3,26 @@ Fetcher: github
 Source:  https://github.com/tromey/emacs-status
 
 Updating /mnt/store/melpa/working/status/
+Checking out b62c74bf272566f82a68622f29fb9edafea0f241
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/status/
+  to /tmp/statusiIQEqL/status-20151230.1408
+    emms-status.el -> emms-status.el
+    erc-status.el -> erc-status.el
+    status.el -> status.el
+    status.py -> status.py
+    player_pause.png -> player_pause.png
+    player_play.png -> player_play.png
+Created status-20151230.1408.tar containing:
+  status-20151230.1408/
+  status-20151230.1408/emms-status.el
+  status-20151230.1408/erc-status.el
+  status-20151230.1408/player_pause.png
+  status-20151230.1408/player_play.png
+  status-20151230.1408/status-pkg.el
+  status-20151230.1408/status.el
+  status-20151230.1408/status.py
+ ✓ Success:
+  2025-04-19T18:37:26+0000  status-20151230.1408.entry
+  2025-04-19T18:37:26+0000  status-20151230.1408.tar
+Built status in 2.851s, finished at 2025-04-19T18:37:27+0000
