@@ -23,8 +23,8 @@ Supported features:
    "message bus" and Emacs as event publisher and consumer).
 
 
-This is a low level API, and won't be useful to end users. If you're looking for a
-browsing/editing interface to PostgreSQL, see the PGmacs module from
+This is a low level API, and won't be useful to end users. If you're looking for an
+Emacs-based browsing/editing interface to PostgreSQL, see the PGmacs library at
 https://github.com/emarsden/pgmacs/.
 
 
