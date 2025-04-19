@@ -11,11 +11,11 @@ options for `tmr' (or TMR, TMR May Ring, …), and provides every other
 piece of information pertinent to it.  The name of the package is
 pronounced as “timer” or “T-M-R”.
 
-The documentation furnished herein corresponds to stable version 1.0.0,
-released on 2024-08-30.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.1.0,
+released on 2025-04-18.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.1.0-dev.
+Current development target is 1.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `tmr'
 ⁃ Official manual: <https://protesilaos.com/emacs/tmr>
@@ -30,7 +30,7 @@ Table of Contents
 
 1. COPYING
 2. Overview
-.. 1. Grid view
+.. 1. Grid or tabulated view
 .. 2. Hooks
 .. 3. Sound and desktop notifications
 .. 4. Minibuffer histories
@@ -50,7 +50,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2021-2023 Free Software Foundation, Inc.
+  Copyright (C) 2021-2025 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -176,8 +176,8 @@ Table of Contents
 
 [Sample configuration] See section 4
 
-2.1 Grid view
-─────────────
+2.1 Grid or tabulated view
+──────────────────────────
 
   Timers can be viewed in a grid with `tmr-tabulated-view' (alias
   `tmr-list-timers'). The data is placed in the `*tmr-tabulated-view*'
@@ -209,6 +209,22 @@ Table of Contents
   While in this grid view, one can perform all the operations on timers
   we have already covered herein (the `C-h m' will show you their key
   bindings in this mode).
+
+  The user option `tmr-list-timers-action-alist' controls how the
+  command `tmr-tabulated-view' displays its buffer. Its default
+  behaviour is to (i) place the buffer at the bottom of the Emacs frame,
+  (ii) resize the window to match the height of the buffer, and (iii)
+  select that window.
+
+  The value of this user option is the same data that is passed to
+  `display-buffer-alist'. It is meant to be customised by advanced
+  users. Evaluate `(info "(elisp) Displaying Buffers")' to read the
+  relevant entry in the manual.
+
+  The `tmr-list-timers-action-alist' is relevant only when the command
+  `tmr-tabulated-view' is called interactively. In Lisp, the
+  `tmr-tabulated-view' requires the buffer it should use and the
+  concomitant action alist.
 
 
 2.2 Hooks
@@ -321,7 +337,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "tmr"
-  │ git clone https://git.sr.ht/~protesilaos/tmr tmr
+  │ git clone https://github.com/protesilaos/tmr tmr
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:

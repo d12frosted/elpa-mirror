@@ -1972,7 +1972,7 @@
 	       (:url . "https://elpa.nongnu.org/nongnu/p4-16-mode.html")
 	       (:commit . "794dd0056b4ca736ae5ecb39072547f22a006137"))])
  (package-lint .
-	       [(0 25)
+	       [(0 26)
 		((emacs
 		  (24 4))
 		 (let-alist
@@ -1986,7 +1986,7 @@
 		 (:authors
 		  ("Steve Purcell" . "steve@sanityinc.com")
 		  ("Fanael Linithien" . "fanael4@gmail.com"))
-		 (:commit . "6170c1e5b79f9b9f606ab17ab4d9ffb9bce3ebde"))])
+		 (:commit . "26b27201f1276a71257d328513152494e3edfc5d"))])
  (pacmacs .
 	  [(0 1 1)
 	   ((emacs
@@ -2806,14 +2806,14 @@
 	       ("Le Wang" . "l26wang@gmail.com"))
 	      (:commit . "9ee5a7657a22e836618813c2e2b64a548d27d2ff"))])
  (xah-fly-keys .
-	       [(26 11 20250412183917)
+	       [(26 11 20250418094205)
 		((emacs
 		  (28 3)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "c110ad7f02fdf8de3e96eea0bf1764afb1eeb1f0"))])
+		 (:commit . "51afc8dd22843167063ecf0ce852e939f3797921"))])
  (xkcd .
        [(1 1)
 	((json

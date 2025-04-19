@@ -1,0 +1,1 @@
+A backend for vc.el to handle Jujutsu repositories.
