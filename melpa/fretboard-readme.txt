@@ -7,6 +7,7 @@ The package supports various features:
 - Support for various scale types (major, minor, pentatonic, etc.)
 - Support for various chord types (major, minor, 7th, etc.)
 - Multiple tuning options (standard, drop-D, open-G, etc.)
+- Support for 4 and 6 string instruments.
 - Interactive navigation between notes, scales, and chord types
 
 Usage:
