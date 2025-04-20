@@ -2715,7 +2715,7 @@
 	    ("Adam Porter" . "adam@alphapapa.net"))
 	   (:commit . "61c511541af474027c012de7063ddfdb3f8cc780"))])
  (literate-scratch .
-		   [(2 0)
+		   [(2 1)
 		    ((emacs
 		      (29 1)))
 		    "Lisp Interaction w/ text paragraphs" tar
@@ -2724,7 +2724,7 @@
 		     (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name")
 		     (:authors
 		      ("Sean Whitton" . "spwhitton@spwhitton.name"))
-		     (:commit . "2317f456e6047b4d595b7c5082dc8106dc1fc01d"))])
+		     (:commit . "d3fcd76d214f93fbd430f913717c27a731bffdc4"))])
  (llm .
       [(0 24 2)
        ((emacs
