@@ -58,7 +58,8 @@ Table of Contents
     `RET'.
   • Non-existing candidates can be submitted with `M-RET' or by moving
     the point to the prompt.
-  • Efficient sorting by history position, length and alphabetically.
+  • Efficient sorting by history position, frequency, length and
+    alphabetically.
   • Long candidates with newlines are formatted to take up less space.
   • Lazy completion candidate highlighting for performance.
   • Annotations are displayed next to the candidates (`annotation-' and
@@ -330,6 +331,8 @@ Table of Contents
   • [vertico-repeat]: The command `vertico-repeat' repeats the last
     completion session.
   • [vertico-reverse]: `vertico-reverse-mode' to reverse the display.
+  • [vertico-sort]: Provides optimized sort functions, by history, by
+    length and lexical.
   • [vertico-suspend]: The command `vertico-suspend' suspends and
     restores the current session.
   • [vertico-unobtrusive]: `vertico-unobtrusive-mode' displays only the
@@ -394,6 +397,9 @@ Table of Contents
 [vertico-reverse]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-reverse.el>
 
+[vertico-sort]
+<https://github.com/minad/vertico/blob/main/extensions/vertico-sort.el>
+
 [vertico-suspend]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-suspend.el>
 
@@ -434,17 +440,19 @@ Table of Contents
   │ 	(consult-grep buffer)))
   └────
 
-  Temporary toggling between the different display modes is
-  possible. The following commands are bound by default in the
-  `vertico-multiform-map'. You can of course change these bindings if
-  you like.
+  The different display modes can be toggled temporarily. The
+  `vertico-multiform-map' binds the following toggle commands to
+  keys. Depending on preference, these bindings can be changed in the
+  `vertico-multiform-map'.
 
-  • `M-B' -> `vertico-multiform-buffer'
-  • `M-F' -> `vertico-multiform-flat'
-  • `M-G' -> `vertico-multiform-grid'
-  • `M-R' -> `vertico-multiform-reverse'
-  • `M-U' -> `vertico-multiform-unobtrusive'
-  • `M-V' -> `vertico-multiform-vertical'
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   `M-B'  `vertico-multiform-buffer'      
+   `M-F'  `vertico-multiform-flat'        
+   `M-G'  `vertico-multiform-grid'        
+   `M-R'  `vertico-multiform-reverse'     
+   `M-U'  `vertico-multiform-unobtrusive' 
+   `M-V'  `vertico-multiform-vertical'    
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   For special configuration you can use your own functions or even
   lambdas to configure the completion behavior per command or per
