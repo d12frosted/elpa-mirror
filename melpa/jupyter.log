@@ -3,3 +3,84 @@ Fetcher: github
 Source:  https://github.com/emacs-jupyter/jupyter
 
 Updating /mnt/store/melpa/working/jupyter/
+Checking out 3615c2de16988c4dd9d1978bfa10ee3092e85b33
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jupyter/
+  to /tmp/jupyterTwJdsU/jupyter-20250402.1740
+    jupyter-R.el -> jupyter-R.el
+    jupyter-base.el -> jupyter-base.el
+    jupyter-c++.el -> jupyter-c++.el
+    jupyter-channel-ioloop.el -> jupyter-channel-ioloop.el
+    jupyter-channel.el -> jupyter-channel.el
+    jupyter-client.el -> jupyter-client.el
+    jupyter-env.el -> jupyter-env.el
+    jupyter-ioloop.el -> jupyter-ioloop.el
+    jupyter-javascript.el -> jupyter-javascript.el
+    jupyter-julia.el -> jupyter-julia.el
+    jupyter-kernel-process.el -> jupyter-kernel-process.el
+    jupyter-kernel.el -> jupyter-kernel.el
+    jupyter-kernelspec.el -> jupyter-kernelspec.el
+    jupyter-messages.el -> jupyter-messages.el
+    jupyter-mime.el -> jupyter-mime.el
+    jupyter-monads.el -> jupyter-monads.el
+    jupyter-org-client.el -> jupyter-org-client.el
+    jupyter-org-extensions.el -> jupyter-org-extensions.el
+    jupyter-python.el -> jupyter-python.el
+    jupyter-repl.el -> jupyter-repl.el
+    jupyter-rest-api.el -> jupyter-rest-api.el
+    jupyter-server-kernel.el -> jupyter-server-kernel.el
+    jupyter-server.el -> jupyter-server.el
+    jupyter-tramp.el -> jupyter-tramp.el
+    jupyter-widget-client.el -> jupyter-widget-client.el
+    jupyter-zmq-channel-ioloop.el -> jupyter-zmq-channel-ioloop.el
+    jupyter-zmq-channel.el -> jupyter-zmq-channel.el
+    jupyter.el -> jupyter.el
+    ob-jupyter.el -> ob-jupyter.el
+    Makefile -> Makefile
+    widget.html -> widget.html
+    js => js
+Created jupyter-20250402.1740.tar containing:
+  jupyter-20250402.1740/
+  jupyter-20250402.1740/Makefile
+  jupyter-20250402.1740/js/
+  jupyter-20250402.1740/js/Makefile
+  jupyter-20250402.1740/js/emacs-jupyter.js
+  jupyter-20250402.1740/js/index.js
+  jupyter-20250402.1740/js/manager.js
+  jupyter-20250402.1740/js/package.json
+  jupyter-20250402.1740/js/webpack.config.js
+  jupyter-20250402.1740/jupyter-R.el
+  jupyter-20250402.1740/jupyter-base.el
+  jupyter-20250402.1740/jupyter-c++.el
+  jupyter-20250402.1740/jupyter-channel-ioloop.el
+  jupyter-20250402.1740/jupyter-channel.el
+  jupyter-20250402.1740/jupyter-client.el
+  jupyter-20250402.1740/jupyter-env.el
+  jupyter-20250402.1740/jupyter-ioloop.el
+  jupyter-20250402.1740/jupyter-javascript.el
+  jupyter-20250402.1740/jupyter-julia.el
+  jupyter-20250402.1740/jupyter-kernel-process.el
+  jupyter-20250402.1740/jupyter-kernel.el
+  jupyter-20250402.1740/jupyter-kernelspec.el
+  jupyter-20250402.1740/jupyter-messages.el
+  jupyter-20250402.1740/jupyter-mime.el
+  jupyter-20250402.1740/jupyter-monads.el
+  jupyter-20250402.1740/jupyter-org-client.el
+  jupyter-20250402.1740/jupyter-org-extensions.el
+  jupyter-20250402.1740/jupyter-pkg.el
+  jupyter-20250402.1740/jupyter-python.el
+  jupyter-20250402.1740/jupyter-repl.el
+  jupyter-20250402.1740/jupyter-rest-api.el
+  jupyter-20250402.1740/jupyter-server-kernel.el
+  jupyter-20250402.1740/jupyter-server.el
+  jupyter-20250402.1740/jupyter-tramp.el
+  jupyter-20250402.1740/jupyter-widget-client.el
+  jupyter-20250402.1740/jupyter-zmq-channel-ioloop.el
+  jupyter-20250402.1740/jupyter-zmq-channel.el
+  jupyter-20250402.1740/jupyter.el
+  jupyter-20250402.1740/ob-jupyter.el
+  jupyter-20250402.1740/widget.html
+ ✓ Success:
+  2025-04-20T14:47:03+0000  jupyter-20250402.1740.entry
+  2025-04-20T14:47:03+0000  jupyter-20250402.1740.tar
+Built jupyter in 4.958s, finished at 2025-04-20T14:47:04+0000
