@@ -2,8 +2,12 @@ This package provides some simple linkage between Denote notes and
 projects.  It does so by providing two buffer/directory-local
 variables that can be set through a provided command
 (`denote-project-notes-set-identifier').  The notes can then be
-displayed using `denote-project-notes-show'.  It is recomended to
-bind one or both of these commands to a convenient key.
+displayed using `denote-project-notes-show'.  Additionally, a more
+user-friendly DWIM command, `denote-project-notes-dwim' is
+available: this will show project notes if the notes identifier is
+set, or ask you to set the identifier; additionally, you can force
+changing the notes with the prefix argument.  It is recomended to
+bind one of these commands to a convenient key.
 
 The primary variable to select notes is
 `denote-project-notes-identifier', whish should be set to a Denote
