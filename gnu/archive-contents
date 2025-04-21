@@ -1873,7 +1873,7 @@
 	    (:url . "https://elpa.gnu.org/packages/flylisp.html")
 	    (:commit . "20fe3e77bb73773c8678e65ae38020b0b7f996eb"))])
  (flymake .
-	  [(1 3 7)
+	  [(1 4 0)
 	   ((emacs
 	     (26 1))
 	    (eldoc
@@ -1882,11 +1882,11 @@
 	     (0 7 1)))
 	   "A universal on-the-fly syntax checker" tar
 	   ((:keywords "c" "languages" "tools")
-	    (:maintainer "João Távora" . "joaotavora@gmail.com")
+	    (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
 	    (:authors
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
 	    (:url . "https://elpa.gnu.org/packages/flymake.html")
-	    (:commit . "309823ff7796416414cee8c6f4d2650615c19f64"))])
+	    (:commit . "64f4fbde8ae84c10f9e86ad1293c67ff78e867f0"))])
  (flymake-clippy .
 		 [(1 1 0)
 		  ((emacs
