@@ -162,11 +162,17 @@ Table of Contents
   │   ;;        (shell-mode . corfu-mode)
   │   ;;        (eshell-mode . corfu-mode))
   │ 
-  │   ;; Recommended: Enable Corfu globally.  This is recommended since Dabbrev can
-  │   ;; be used globally (M-/).  See also the customization variable
-  │   ;; `global-corfu-modes' to exclude certain modes.
   │   :init
-  │   (global-corfu-mode))
+  │ 
+  │   ;; Recommended: Enable Corfu globally.  Recommended since many modes provide
+  │   ;; Capfs and Dabbrev can be used globally (M-/).  See also the customization
+  │   ;; variable `global-corfu-modes' to exclude certain modes.
+  │   (global-corfu-mode)
+  │ 
+  │   ;; Enable optional extension modes:
+  │   ;; (corfu-history-mode)
+  │   ;; (corfu-popupinfo-mode)
+  │   )
   │ 
   │ ;; A few more useful configurations...
   │ (use-package emacs
@@ -202,7 +208,8 @@ Table of Contents
   │ 	 ("C-M-/" . dabbrev-expand))
   │   :config
   │   (add-to-list 'dabbrev-ignored-buffer-regexps "\\` ")
-  │   ;; Since 29.1, use `dabbrev-ignored-buffer-regexps' on older.
+  │   ;; Available since Emacs 29 (Use `dabbrev-ignored-buffer-regexps' on older Emacs)
+  │   (add-to-list 'dabbrev-ignored-buffer-modes 'authinfo-mode)
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'doc-view-mode)
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'pdf-view-mode)
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'tags-table-mode))
@@ -620,7 +627,7 @@ Table of Contents
   • [corfu-echo]: `corfu-echo-mode' displays a brief candidate
     documentation in the echo area.
   • [corfu-history]: `corfu-history-mode' remembers selected candidates
-    and sorts the candidates by their history position.
+    and sorts the candidates by their history position and frequency.
   • [corfu-indexed]: `corfu-indexed-mode' allows you to select indexed
     candidates with prefix arguments.
   • [corfu-info]: Actions to access the candidate location and
