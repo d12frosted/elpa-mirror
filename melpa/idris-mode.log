@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/idris-hackers/idris-mode
 
 Updating /mnt/store/melpa/working/idris-mode/
-Checking out a797d7763d20f8b3986d6a86ceb18cda00d05084
+Checking out b264cbf643bd6c45275b583557d5eeedf941b058
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/idris-mode/
-  to /tmp/idris-modegcNn86/idris-mode-20250415.1109
+  to /tmp/idris-modeW06e3V/idris-mode-20250422.1159
     flycheck-idris.el -> flycheck-idris.el
     idris-commands.el -> idris-commands.el
     idris-common-utils.el -> idris-common-utils.el
@@ -32,35 +32,37 @@ Copying files (->) and directories (=>)
     idris-xref.el -> idris-xref.el
     inferior-idris.el -> inferior-idris.el
     logo-small.png -> logo-small.png
-Created idris-mode-20250415.1109.tar containing:
-  idris-mode-20250415.1109/
-  idris-mode-20250415.1109/flycheck-idris.el
-  idris-mode-20250415.1109/idris-commands.el
-  idris-mode-20250415.1109/idris-common-utils.el
-  idris-mode-20250415.1109/idris-compat.el
-  idris-mode-20250415.1109/idris-core.el
-  idris-mode-20250415.1109/idris-events.el
-  idris-mode-20250415.1109/idris-highlight-input.el
-  idris-mode-20250415.1109/idris-hole-list.el
-  idris-mode-20250415.1109/idris-info.el
-  idris-mode-20250415.1109/idris-ipkg-mode.el
-  idris-mode-20250415.1109/idris-keys.el
-  idris-mode-20250415.1109/idris-log.el
-  idris-mode-20250415.1109/idris-mode-pkg.el
-  idris-mode-20250415.1109/idris-mode.el
-  idris-mode-20250415.1109/idris-navigate.el
-  idris-mode-20250415.1109/idris-prover.el
-  idris-mode-20250415.1109/idris-repl.el
-  idris-mode-20250415.1109/idris-settings.el
-  idris-mode-20250415.1109/idris-simple-indent.el
-  idris-mode-20250415.1109/idris-syntax.el
-  idris-mode-20250415.1109/idris-tree-info.el
-  idris-mode-20250415.1109/idris-warnings-tree.el
-  idris-mode-20250415.1109/idris-warnings.el
-  idris-mode-20250415.1109/idris-xref.el
-  idris-mode-20250415.1109/inferior-idris.el
-  idris-mode-20250415.1109/logo-small.png
+Created idris-mode-20250422.1159.tar containing:
+  idris-mode-20250422.1159/
+  idris-mode-20250422.1159/flycheck-idris.el
+  idris-mode-20250422.1159/idris-commands.el
+  idris-mode-20250422.1159/idris-common-utils.el
+  idris-mode-20250422.1159/idris-compat.el
+  idris-mode-20250422.1159/idris-core.el
+  idris-mode-20250422.1159/idris-events.el
+  idris-mode-20250422.1159/idris-highlight-input.el
+  idris-mode-20250422.1159/idris-hole-list.el
+  idris-mode-20250422.1159/idris-info.el
+  idris-mode-20250422.1159/idris-ipkg-mode.el
+  idris-mode-20250422.1159/idris-keys.el
+  idris-mode-20250422.1159/idris-log.el
+  idris-mode-20250422.1159/idris-mode-pkg.el
+  idris-mode-20250422.1159/idris-mode.el
+  idris-mode-20250422.1159/idris-navigate.el
+  idris-mode-20250422.1159/idris-prover.el
+  idris-mode-20250422.1159/idris-repl.el
+  idris-mode-20250422.1159/idris-settings.el
+  idris-mode-20250422.1159/idris-simple-indent.el
+  idris-mode-20250422.1159/idris-syntax.el
+  idris-mode-20250422.1159/idris-tree-info.el
+  idris-mode-20250422.1159/idris-warnings-tree.el
+  idris-mode-20250422.1159/idris-warnings.el
+  idris-mode-20250422.1159/idris-xref.el
+  idris-mode-20250422.1159/inferior-idris.el
+  idris-mode-20250422.1159/logo-small.png
  ✓ Success:
   2025-04-22T11:53:09+0000  idris-mode-20250415.1109.entry
   2025-04-22T11:53:08+0000  idris-mode-20250415.1109.tar
-Built idris-mode in 4.155s, finished at 2025-04-22T11:53:09+0000
+  2025-04-22T14:35:05+0000  idris-mode-20250422.1159.entry
+  2025-04-22T14:35:05+0000  idris-mode-20250422.1159.tar
+Built idris-mode in 4.425s, finished at 2025-04-22T14:35:06+0000
