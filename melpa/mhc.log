@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/yoshinari-nomura/mhc
 
 Updating /mnt/store/melpa/working/mhc/
-Checking out b527a88748651d06222ad24f7417941088515275
+Checking out 2b22bc6c2041170df40e96b718d4b99a8330e3e3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mhc/
-  to /tmp/mhcoACXXh/mhc-20240419.10
+  to /tmp/mhcvfF0mm/mhc-20250423.342
   ! emacs/mhc-calendar.el -> mhc-calendar.el
   ! emacs/mhc-calfw.el -> mhc-calfw.el
   ! emacs/mhc-compat.el -> mhc-compat.el
@@ -32,35 +32,37 @@ Copying files (->) and directories (=>)
   ! emacs/mhc-sync.el -> mhc-sync.el
   ! emacs/mhc-vars.el -> mhc-vars.el
   ! emacs/mhc.el -> mhc.el
-Created mhc-20240419.10.tar containing:
-  mhc-20240419.10/
-  mhc-20240419.10/mhc-calendar.el
-  mhc-20240419.10/mhc-calfw.el
-  mhc-20240419.10/mhc-compat.el
-  mhc-20240419.10/mhc-date.el
-  mhc-20240419.10/mhc-day.el
-  mhc-20240419.10/mhc-db.el
-  mhc-20240419.10/mhc-draft.el
-  mhc-20240419.10/mhc-e21.el
-  mhc-20240419.10/mhc-face.el
-  mhc-20240419.10/mhc-file.el
-  mhc-20240419.10/mhc-guess.el
-  mhc-20240419.10/mhc-header.el
-  mhc-20240419.10/mhc-logic.el
-  mhc-20240419.10/mhc-message.el
-  mhc-20240419.10/mhc-minibuf.el
-  mhc-20240419.10/mhc-misc.el
-  mhc-20240419.10/mhc-parse.el
-  mhc-20240419.10/mhc-pkg.el
-  mhc-20240419.10/mhc-process.el
-  mhc-20240419.10/mhc-ps.el
-  mhc-20240419.10/mhc-record.el
-  mhc-20240419.10/mhc-schedule.el
-  mhc-20240419.10/mhc-summary.el
-  mhc-20240419.10/mhc-sync.el
-  mhc-20240419.10/mhc-vars.el
-  mhc-20240419.10/mhc.el
+Created mhc-20250423.342.tar containing:
+  mhc-20250423.342/
+  mhc-20250423.342/mhc-calendar.el
+  mhc-20250423.342/mhc-calfw.el
+  mhc-20250423.342/mhc-compat.el
+  mhc-20250423.342/mhc-date.el
+  mhc-20250423.342/mhc-day.el
+  mhc-20250423.342/mhc-db.el
+  mhc-20250423.342/mhc-draft.el
+  mhc-20250423.342/mhc-e21.el
+  mhc-20250423.342/mhc-face.el
+  mhc-20250423.342/mhc-file.el
+  mhc-20250423.342/mhc-guess.el
+  mhc-20250423.342/mhc-header.el
+  mhc-20250423.342/mhc-logic.el
+  mhc-20250423.342/mhc-message.el
+  mhc-20250423.342/mhc-minibuf.el
+  mhc-20250423.342/mhc-misc.el
+  mhc-20250423.342/mhc-parse.el
+  mhc-20250423.342/mhc-pkg.el
+  mhc-20250423.342/mhc-process.el
+  mhc-20250423.342/mhc-ps.el
+  mhc-20250423.342/mhc-record.el
+  mhc-20250423.342/mhc-schedule.el
+  mhc-20250423.342/mhc-summary.el
+  mhc-20250423.342/mhc-sync.el
+  mhc-20250423.342/mhc-vars.el
+  mhc-20250423.342/mhc.el
  ✓ Success:
   2025-04-23T03:49:17+0000  mhc-20240419.10.entry
   2025-04-23T03:49:17+0000  mhc-20240419.10.tar
-Built mhc in 4.188s, finished at 2025-04-23T03:49:18+0000
+  2025-04-23T06:25:50+0000  mhc-20250423.342.entry
+  2025-04-23T06:25:50+0000  mhc-20250423.342.tar
+Built mhc in 4.731s, finished at 2025-04-23T06:25:51+0000
