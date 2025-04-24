@@ -858,11 +858,11 @@
 	   ((:url . "https://github.com/lewang/flx")
 	    (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
  (flycheck .
-	   [(34 1)
+	   [(35 0)
 	    ((emacs
-	      (26 1)))
+	      (27 1)))
 	    "On-the-fly syntax checking" tar
-	    ((:url . "http://www.flycheck.org")
+	    ((:url . "https://www.flycheck.org")
 	     (:keywords "convenience" "languages" "tools")
 	     (:maintainer
 	      ("Clément Pit-Claudel" . "clement.pitclaudel@live.com")
@@ -870,7 +870,7 @@
 	      ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
 	     (:authors
 	      ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-	     (:commit . "5a9ff918f91e230ae08a6bdce7ec1f107864a5e2"))])
+	     (:commit . "6e43c07e83406cdd3f75952ee988d61d7573ec11"))])
  (flymake-guile .
 		[(0 5)
 		 ((emacs
@@ -2144,7 +2144,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20250421 81943)
+	      [(1 0 20250423 143818)
 	       ((emacs
 		 (25 1)))
 	       "Racket editing, REPL, and more" tar

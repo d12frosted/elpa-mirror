@@ -11,7 +11,7 @@ list.
 It comes with a rich interface for custom syntax checkers and other
 extensions, and has already many 3rd party extensions adding new features.
 
-Please read the online manual at http://www.flycheck.org for more
+Please read the online manual at https://www.flycheck.org for more
 information.  You can open the manual directly from Emacs with `M-x
 flycheck-manual'.
 
