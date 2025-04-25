@@ -1339,7 +1339,7 @@
   (electric-ospl :url "https://git.sr.ht/~swflint/electric-ospl-mode")
   (electric-spacing :url "https://github.com/xwl/electric-spacing")
   (elegant-agenda-mode :url "https://github.com/justinbarclay/elegant-agenda-mode")
-  (elein :url "https://github.com/remvee/elein")
+  (elein :url "https://codeberg.org/rwv/elein")
   (elescope :url "https://github.com/freesteph/elescope")
   (elf-mode :url "https://github.com/abo-abo/elf-mode")
   (elfeed :url "https://github.com/skeeto/elfeed")
