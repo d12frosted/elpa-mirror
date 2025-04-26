@@ -115,8 +115,16 @@
   │   (haskell-ts-font-lock-level 4)
   │   (haskell-ts-use-indent t)
   │   (haskell-ts-ghci "ghci")
-  │   (haskell-ts-use-indent t))
+  │   (haskell-ts-use-indent t)
+  │   :config
+  │   (add-to-list 'treesit-language-source-alist
+  │    '(haskell . ("https://github.com/tree-sitter/tree-sitter-haskell" "v0.23.1")))
+  │   (unless (treesit-grammar-location 'haskell)
+  │    (treesit-install-language-grammar 'haskell)))
   └────
+
+  That is all.  This will install the grammars if not already installed.
+  However, you might need to update the grammar version in the future.
 
 
 9 Customization
