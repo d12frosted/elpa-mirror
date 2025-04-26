@@ -3,17 +3,17 @@ Fetcher: github
 Source:  https://github.com/alexluigit/dirvish
 
 Updating /mnt/store/melpa/working/dirvish/
-Checking out f85a88216dfc6e952854595281b56c5b7b716557
+Checking out 7926fec51b8d31a13f65b24b49fab814c1ac75c5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dirvish/
-  to /tmp/dirvish9P3n3t/dirvish-20250419.448
+  to /tmp/dirvishWXq6IB/dirvish-20250426.749
     dirvish-extras.el -> dirvish-extras.el
+    dirvish-fd.el -> dirvish-fd.el
     dirvish-tramp.el -> dirvish-tramp.el
     dirvish-widgets.el -> dirvish-widgets.el
     dirvish.el -> dirvish.el
   ! extensions/dirvish-collapse.el -> dirvish-collapse.el
   ! extensions/dirvish-emerge.el -> dirvish-emerge.el
-  ! extensions/dirvish-fd.el -> dirvish-fd.el
   ! extensions/dirvish-history.el -> dirvish-history.el
   ! extensions/dirvish-icons.el -> dirvish-icons.el
   ! extensions/dirvish-ls.el -> dirvish-ls.el
@@ -25,28 +25,30 @@ Copying files (->) and directories (=>)
   ! extensions/dirvish-subtree.el -> dirvish-subtree.el
   ! extensions/dirvish-vc.el -> dirvish-vc.el
   ! extensions/dirvish-yank.el -> dirvish-yank.el
-Created dirvish-20250419.448.tar containing:
-  dirvish-20250419.448/
-  dirvish-20250419.448/dirvish-collapse.el
-  dirvish-20250419.448/dirvish-emerge.el
-  dirvish-20250419.448/dirvish-extras.el
-  dirvish-20250419.448/dirvish-fd.el
-  dirvish-20250419.448/dirvish-history.el
-  dirvish-20250419.448/dirvish-icons.el
-  dirvish-20250419.448/dirvish-ls.el
-  dirvish-20250419.448/dirvish-narrow.el
-  dirvish-20250419.448/dirvish-peek.el
-  dirvish-20250419.448/dirvish-pkg.el
-  dirvish-20250419.448/dirvish-quick-access.el
-  dirvish-20250419.448/dirvish-rsync.el
-  dirvish-20250419.448/dirvish-side.el
-  dirvish-20250419.448/dirvish-subtree.el
-  dirvish-20250419.448/dirvish-tramp.el
-  dirvish-20250419.448/dirvish-vc.el
-  dirvish-20250419.448/dirvish-widgets.el
-  dirvish-20250419.448/dirvish-yank.el
-  dirvish-20250419.448/dirvish.el
+Created dirvish-20250426.749.tar containing:
+  dirvish-20250426.749/
+  dirvish-20250426.749/dirvish-collapse.el
+  dirvish-20250426.749/dirvish-emerge.el
+  dirvish-20250426.749/dirvish-extras.el
+  dirvish-20250426.749/dirvish-fd.el
+  dirvish-20250426.749/dirvish-history.el
+  dirvish-20250426.749/dirvish-icons.el
+  dirvish-20250426.749/dirvish-ls.el
+  dirvish-20250426.749/dirvish-narrow.el
+  dirvish-20250426.749/dirvish-peek.el
+  dirvish-20250426.749/dirvish-pkg.el
+  dirvish-20250426.749/dirvish-quick-access.el
+  dirvish-20250426.749/dirvish-rsync.el
+  dirvish-20250426.749/dirvish-side.el
+  dirvish-20250426.749/dirvish-subtree.el
+  dirvish-20250426.749/dirvish-tramp.el
+  dirvish-20250426.749/dirvish-vc.el
+  dirvish-20250426.749/dirvish-widgets.el
+  dirvish-20250426.749/dirvish-yank.el
+  dirvish-20250426.749/dirvish.el
  ✓ Success:
-  2025-04-26T03:10:26+0000  dirvish-20250419.448.entry
-  2025-04-26T03:10:26+0000  dirvish-20250419.448.tar
-Built dirvish in 3.867s, finished at 2025-04-26T03:10:27+0000
+  2025-04-26T05:36:08+0000  dirvish-20250426.444.entry
+  2025-04-26T05:36:07+0000  dirvish-20250426.444.tar
+  2025-04-26T08:04:04+0000  dirvish-20250426.749.entry
+  2025-04-26T08:04:03+0000  dirvish-20250426.749.tar
+Built dirvish in 4.213s, finished at 2025-04-26T08:04:04+0000
