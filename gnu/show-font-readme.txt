@@ -10,11 +10,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `show-font' (or `show-font.el'),
 and provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2025-01-25.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2025-04-26.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 ⁃ Package name (GNU ELPA): `show-font'
 ⁃ Official manual: <https://protesilaos.com/emacs/show-font>
@@ -31,11 +31,11 @@ the GNU ELPA machinery automatically generates an Info manual out of it.
 Table of Contents
 ─────────────────
 
-1. Overview
-2. Installation
+1. Installation
 .. 1. GNU ELPA package
 .. 2. Manual installation
-3. Sample configuration
+2. Sample configuration
+3. Overview
 4. Acknowledgements
 5. COPYING
 6. GNU Free Documentation License
@@ -45,80 +45,13 @@ Table of Contents
 .. 3. Concept index
 
 
-1 Overview
-══════════
-
-  With `show-font' the user has the means to preview fonts inside of
-  Emacs. This can be done in the following ways:
-
-  • The command `show-font-select-preview' uses the minibuffer to prompt
-    with completion for a font on the system. The selected font is then
-    displayed in a bespoke buffer.
-
-  • The command `show-font-list' produces a list with all the fonts
-    available on the system. Each font on display is styled with its
-    given character set. With an optional prefix argument (`C-u' by
-    default), it prompt for a string or regular expression to limit the
-    list of fonts to only the matching ones.
-
-  • The command `show-font-tabulated' is almost the same as
-    `show-font-list' except it uses the built-in Emacs framework of a
-    tabulated view. Concretely, users can sort by column and may prefer
-    the slightly more compact listing.
-
-  • The `show-font-mode' is a major mode that gets activated when the
-    user visits a `.ttf' or `.otf' file. It will preview with the font,
-    if it is installed on the system, else it will provide a helpful
-    message and an option to install the font (NOTE 2024-09-10: this
-    only works on Linux).
-
-  Where the buffer which previews the font is displayed is controlled by
-  the user option `show-font-display-buffer-action-alist'. The default
-  value is to show the buffer at the bottom of the frame.
-
-  The previews include a pangram, which is controlled by the user option
-  `show-font-pangram'. The default value is a playful take on the more
-  familiar “the quick brown fox jumps over the lazy dog” phrase. Users
-  can select among a few presets, or define their own custom string.
-
-  The function `show-font-pangram-p' is available for those who wish to
-  experiment with writing their own pangrams (it is not actually limited
-  to the Latin alphabet).
-
-  The user option `show-font-character-sample' provides a more complete
-  character set that is intended for use in full buffer previews (i.e.
-  not in the list of fonts). It can be set to any string. The default
-  value is a set of alphanumeric characters that are commonly used in
-  programming: a good monospaced font should render all of them
-  unambiguously.
-
-  Finally, the following faces control the appearance of various
-  elements.
-
-  • `show-font-small'
-
-  • `show-font-regular'
-
-  • `show-font-medium'
-
-  • `show-font-large'
-
-  • `show-font-title'
-
-  • `show-font-title-small'
-
-  • `show-font-misc'
-
-  • `show-font-button'
-
-
-2 Installation
+1 Installation
 ══════════════
 
 
 
 
-2.1 GNU ELPA package
+1.1 GNU ELPA package
 ────────────────────
 
   The package is available as `show-font'.  Simply do:
@@ -138,7 +71,7 @@ Table of Contents
   <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-2.2 Manual installation
+1.2 Manual installation
 ───────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
@@ -167,16 +100,96 @@ Table of Contents
   Everything is in place to set up the package.
 
 
-3 Sample configuration
+2 Sample configuration
 ══════════════════════
 
   ┌────
   │ (require 'show-font)
   │ 
   │ (define-key global-map (kbd "C-c s f") #'show-font-select-preview)
-  │ (define-key global-map (kbd "C-c s l") #'show-font-list)
   │ (define-key global-map (kbd "C-c s t") #'show-font-tabulated)
   └────
+
+  Or with `use-package':
+
+  ┌────
+  │ (use-package show-font
+  │   :ensure t
+  │   :bind
+  │   (("C-c s f" . show-font-select-preview)
+  │    ("C-c s t" . show-font-tabulated)))
+  └────
+
+
+3 Overview
+══════════
+
+  With `show-font' the user has the means to preview fonts inside of
+  Emacs. This can be done in the following ways:
+
+  • The command `show-font-select-preview' uses the minibuffer to prompt
+    with completion for a font on the system. The selected font is then
+    displayed in a bespoke buffer.
+
+  • The command `show-font-tabulated' (alias `show-font-list') produces
+    a list with all the fonts available on the system. Each font on
+    display is styled with its given character set. With an optional
+    prefix argument (`C-u' by default), it prompt for a string or
+    regular expression to limit the list of fonts to only the matching
+    ones. In this tabulated interface, users can sort by column and may
+    prefer the slightly more compact listing.
+
+  • The `show-font-mode' is a major mode that gets activated when the
+    user visits a `.ttf' or `.otf' file. It will preview with the font,
+    if it is installed on the system, else it will provide a helpful
+    message and an option to install the font (NOTE 2024-09-10: this
+    only works on Linux).
+
+  Where the buffer which previews the font is displayed is controlled by
+  the user option `show-font-display-buffer-action-alist'. The default
+  value is to show the buffer at the bottom of the frame.
+
+  The previews include a pangram, which is controlled by the user option
+  `show-font-pangram'. The default value is a playful take on the more
+  familiar “the quick brown fox jumps over the lazy dog” phrase. Users
+  can select among a few presets, or define their own custom string.
+
+  The function `show-font-pangram-p' is available for those who wish to
+  experiment with writing their own pangrams (it is not actually limited
+  to the Latin alphabet).
+
+  The user option `show-font-character-sample' provides a more complete
+  character set that is intended for use in full buffer previews (i.e.
+  not in the list of fonts). It can be set to any string. The default
+  value is a set of alphanumeric characters that are commonly used in
+  programming: a good monospaced font should render all of them
+  unambiguously. This text is shown in the buffer of the command
+  `show-font-select-preview'.
+
+  The user option `show-font-sentences-sample' is a list of strings that
+  can be used to showcase common patterns and letter combinations in
+  words. The default value should cover many such examples. Those are
+  displayed in the buffer produced by the command
+  `show-font-select-preview'.
+
+  Finally, the following faces control the appearance of various
+  elements.
+
+  • `show-font-small'
+
+  • `show-font-regular'
+
+  • `show-font-medium'
+
+  • `show-font-large'
+
+  • `show-font-title'
+
+  • `show-font-title-in-listing'
+
+  • `show-font-misc'
+
+  • `show-font-button'
 
 
 4 Acknowledgements

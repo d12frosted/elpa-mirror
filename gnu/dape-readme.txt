@@ -35,14 +35,14 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ⁃ No external dependencies outside of core Emacs
 
   With `(setq dape-buffer-window-arrangement 'right)':
-  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_23_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_24_0.png>
   And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
   `completion-in-region-function':
-  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_23_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_24_0.png>
   With "rich" REPL output:
-  <https://raw.githubusercontent.com/svaante/dape/resources/repl_0_23_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/repl_0_24_0.png>
   With `minibuffer' adapter configuration hints:
-  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_23_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_24_0.png>
 
 
 2 Configuration

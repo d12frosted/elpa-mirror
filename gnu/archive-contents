@@ -967,7 +967,7 @@
 		 (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
 		 (:commit . "836b19b39651419876e65cdb1a91e3eef83cc4e7"))])
  (dape .
-       [(0 23 0)
+       [(0 24 0)
 	((emacs
 	  (29 1))
 	 (jsonrpc
@@ -975,7 +975,7 @@
 	"Debug Adapter Protocol for Emacs" tar
 	((:url . "https://github.com/svaante/dape")
 	 (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-	 (:commit . "4348c957986dbca5c1537b392a4220558ad8be3f"))])
+	 (:commit . "b3b15053ea19821205f43528b61cc2d9e0a4a21a"))])
  (darkroom .
 	   [(0 3)
 	    ((cl-lib
@@ -4187,16 +4187,16 @@
 	      (:url . "https://elpa.gnu.org/packages/shen-mode.html")
 	      (:commit . "df28df31317188a6d87c9df93444543ace4f7f4f"))])
  (show-font .
-	    [(0 2 1)
+	    [(0 3 0)
 	     ((emacs
-	       (28 1)))
+	       (29 1)))
 	     "Show font features in a buffer" tar
 	     ((:url . "https://github.com/protesilaos/show-font")
 	      (:keywords "convenience" "writing" "font")
 	      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "af941f3eafc1ee03e0d807c147ba07b878656222"))])
+	      (:commit . "44da364c0a884008f91a12a9f9766d1d3b37f95c"))])
  (sisu-mode .
 	    [(7 1 8)
 	     nil "Major mode for SiSU markup text" tar
