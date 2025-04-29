@@ -1,7 +1,7 @@
 Provides font-lock, indentation, and navigation for the
 Clojure programming language (http://clojure.org).
 
-For the tree-sitter grammar this mode is based on,
+For the Tree-sitter grammar this mode is based on,
 see https://github.com/sogaiu/tree-sitter-clojure.
 
 Using clojure-ts-mode with paredit or smartparens is highly recommended.
