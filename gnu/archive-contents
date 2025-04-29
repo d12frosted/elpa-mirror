@@ -1325,7 +1325,7 @@
 	     ("Daniel Laurens Nicolai" . "dalanicolai@gmail.com"))
 	    (:commit . "4a179fbacd7bc9efbd6cfcdc8772d42935e6de29"))])
  (doc-view-follow .
-		  [(0 3 1)
+		  [(0 3 2)
 		   ((emacs
 		     (29 1)))
 		   "Synchronize windows showing the same document" tar
@@ -1334,7 +1334,7 @@
 		    (:maintainer "Paul D. Nelson" . "ultrono@gmail.com")
 		    (:authors
 		     ("Paul D. Nelson" . "ultrono@gmail.com"))
-		    (:commit . "78f18efb3d9769d5df281d71c3ddeb4a956b7c0d"))])
+		    (:commit . "0393bfc9cdbec698201c9c69c247b201558f8511"))])
  (docbook .
 	  [(0 1)
 	   nil "Info-like viewer for DocBook" tar
@@ -3273,7 +3273,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "254f2412489bbbf62700f9d3d5f18e537841dcc3"))])
  (org .
-      [(9 7 28)
+      [(9 7 29)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3282,7 +3282,7 @@
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "b47e041deb221b7161168a5f8aa6fff4ebbc33ec"))])
+	(:commit . "79781bac69896150fd617e5fde65905fa4822b72"))])
  (org-contacts .
 	       [(1 1)
 		((emacs
@@ -3579,7 +3579,7 @@
 		("Hugo Thunnissen" . "devel@hugot.nl"))
 	       (:commit . "1cdfd9aaf6fee003554d3c7832224455ddd9eaa1"))])
  (phps-mode .
-	    [(0 4 50)
+	    [(0 4 51)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -3588,7 +3588,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "6a44501e58457240ea4f1818e9096d52b502e7c6"))])
+	      (:commit . "ff5fbd617d8e67f14f8928fd21f4de56bead987a"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" tar
