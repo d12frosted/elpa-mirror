@@ -1,0 +1,77 @@
+Package: ac-clang
+Fetcher: github
+Source:  https://github.com/yaruopooner/ac-clang
+
+Updating /mnt/store/melpa/working/ac-clang/
+Checking out 3294b968eb1a8317049190940193f9da47c085ef
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-clang/
+  to /tmp/ac-clangS73ncf/ac-clang-20180710.546
+    ac-clang.el -> ac-clang.el
+    clang-server.el -> clang-server.el
+    sample-pic-complete.png -> sample-pic-complete.png
+    build => build
+    clang-server => clang-server
+Created ac-clang-20180710.546.tar containing:
+  ac-clang-20180710.546/
+  ac-clang-20180710.546/ac-clang-pkg.el
+  ac-clang-20180710.546/ac-clang.el
+  ac-clang-20180710.546/build/
+  ac-clang-20180710.546/build/_build-archives-for-windows.sh
+  ac-clang-20180710.546/build/_debug-build-archives.sh
+  ac-clang-20180710.546/build/build.bat
+  ac-clang-20180710.546/build/build.bat.ini.template
+  ac-clang-20180710.546/build/build.sh
+  ac-clang-20180710.546/build/build.sh.opt.template
+  ac-clang-20180710.546/clang-server.el
+  ac-clang-20180710.546/clang-server/
+  ac-clang-20180710.546/clang-server/.nosearch
+  ac-clang-20180710.546/clang-server/CMakeLists.txt
+  ac-clang-20180710.546/clang-server/ClangServer.cpp
+  ac-clang-20180710.546/clang-server/ClangServer.hpp
+  ac-clang-20180710.546/clang-server/ClangSession.cpp
+  ac-clang-20180710.546/clang-server/ClangSession.hpp
+  ac-clang-20180710.546/clang-server/Command.cpp
+  ac-clang-20180710.546/clang-server/Command.hpp
+  ac-clang-20180710.546/clang-server/Common.cpp
+  ac-clang-20180710.546/clang-server/Common.hpp
+  ac-clang-20180710.546/clang-server/DataObject.hpp
+  ac-clang-20180710.546/clang-server/Profiler.hpp
+  ac-clang-20180710.546/clang-server/changes.org
+  ac-clang-20180710.546/clang-server/clang-c/
+  ac-clang-20180710.546/clang-server/clang-c/BuildSystem.h
+  ac-clang-20180710.546/clang-server/clang-c/CXCompilationDatabase.h
+  ac-clang-20180710.546/clang-server/clang-c/CXErrorCode.h
+  ac-clang-20180710.546/clang-server/clang-c/CXString.h
+  ac-clang-20180710.546/clang-server/clang-c/Documentation.h
+  ac-clang-20180710.546/clang-server/clang-c/Index.h
+  ac-clang-20180710.546/clang-server/clang-c/Platform.h
+  ac-clang-20180710.546/clang-server/clang-c/module.modulemap
+  ac-clang-20180710.546/clang-server/library/
+  ac-clang-20180710.546/clang-server/library/x86_32/
+  ac-clang-20180710.546/clang-server/library/x86_32/debug/
+  ac-clang-20180710.546/clang-server/library/x86_32/debug/.gitkeep
+  ac-clang-20180710.546/clang-server/library/x86_32/release/
+  ac-clang-20180710.546/clang-server/library/x86_32/release/.gitkeep
+  ac-clang-20180710.546/clang-server/library/x86_64/
+  ac-clang-20180710.546/clang-server/library/x86_64/debug/
+  ac-clang-20180710.546/clang-server/library/x86_64/debug/.gitkeep
+  ac-clang-20180710.546/clang-server/library/x86_64/release/
+  ac-clang-20180710.546/clang-server/library/x86_64/release/.gitkeep
+  ac-clang-20180710.546/clang-server/main.cpp
+  ac-clang-20180710.546/clang-server/parser/
+  ac-clang-20180710.546/clang-server/parser/CommandLine.hpp
+  ac-clang-20180710.546/clang-server/parser/Lisp.hpp
+  ac-clang-20180710.546/clang-server/parser/json.hpp
+  ac-clang-20180710.546/clang-server/patch/
+  ac-clang-20180710.546/clang-server/patch/invalidate-mmap.patch
+  ac-clang-20180710.546/clang-server/patch/libclang-x86_64.patch
+  ac-clang-20180710.546/clang-server/readme.ja.md
+  ac-clang-20180710.546/clang-server/readme.ja.org
+  ac-clang-20180710.546/clang-server/readme.md
+  ac-clang-20180710.546/clang-server/readme.org
+  ac-clang-20180710.546/sample-pic-complete.png
+ ✓ Success:
+  2025-04-29T15:09:27+0000  ac-clang-20180710.546.entry
+  2025-04-29T15:09:27+0000  ac-clang-20180710.546.tar
+Built ac-clang in 2.873s, finished at 2025-04-29T15:09:28+0000
