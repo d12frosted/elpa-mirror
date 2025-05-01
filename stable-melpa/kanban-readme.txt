@@ -52,7 +52,9 @@ TODO: kanban-todo sometimes inserts no tasks at all if there are multiple tasks 
 
 ChangeLog:
 
- - tip:   cleanup of titles from remote files
+ - tip:
+ - 0.2.5: cleanup of titles from remote files
+          links within the same file do not get a file-prefix
  - 0.2.4: fix bold and link handling in headlines
  - 0.2.3: fix breakage when org returned :title as list (use :raw-value instead)
  - 0.2.2: actually (require 'org)

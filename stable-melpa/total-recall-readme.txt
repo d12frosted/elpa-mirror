@@ -24,6 +24,10 @@ Example of an exercise:
 
 #+begin_src org
 * Emacs
+:PROPERTIES:⁣
+:TYPE: b0d53cd4-ad89-4333-9ef1-4d9e0995a4d8
+:ID: ced2b42b-bfba-4af5-913c-9d903ac78433
+:END:
 
 ** What is GNU Emacs?
 
