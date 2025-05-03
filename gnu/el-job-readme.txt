@@ -77,8 +77,23 @@
 <https://github.com/emacs-mirror/emacs/blob/master/etc/NEWS.30>
 
 
-1.2 News 2.1.0
-──────────────
+1.2 News 2.4
+────────────
+
+  • Jobs must now have `:inputs'.  If `:inputs' nil and there was
+    nothing queued, `el-job-launch' will no-op and return the symbol
+    `inputs-were-empty'.
+
+
+1.3 News 2.3
+────────────
+
+  • Some renames to follow Elisp convention
+    • `el-job:timestamps' and friends now `el-job-timestamps'.
+
+
+1.4 News 2.1
+────────────
 
   • DROP SUPPORT Emacs 28
     • It likely has not been working for a while anyway.  Maybe works on
@@ -88,22 +103,22 @@
 [v0.3 branch] <https://github.com/meedstrom/el-job/tree/v0.3>
 
 
-1.3 News 2.0.0
-──────────────
+1.5 News 2.0
+────────────
 
   • Jobs must now have `:id' (no more anonymous jobs).
   • Pruned many code paths.
 
 
-1.4 News 1.1.0
-──────────────
+1.6 News 1.1
+────────────
 
   • Changed internals so that all builds of Emacs can be expected to
     perform similarly well.
 
 
-1.5 News 1.0.0
-──────────────
+1.7 News 1.0
+────────────
 
   • No longer keeps processes alive forever.  All jobs are kept alive
     for up to 30 seconds of disuse, then reaped.
@@ -112,7 +127,7 @@
     docstring of `el-job-launch' again.
 
 
-1.6 Limitations
+1.8 Limitations
 ───────────────
 
   1. The return value from the `:funcall-per-input' function must always
@@ -121,7 +136,7 @@
      For example, org-node passes `:funcall-per-input
      #'org-node-parser--scan-file' to el-job, and if you look in
      [org-node-parser.el] for the defun of `org-node-parser--scan-file',
-     this is its final return value:
+     it always returns a list of 6 items:
 
      ┌────
      │ (list (if missing-file (list missing-file)) ; List of 0 or 1 item
@@ -132,8 +147,9 @@
      │       (if problem (list problem))))         ; List of 0 or 1 item
      └────
 
-     It may seem clunky to return lists of only one item, but you could
-     consider it a minor expense in exchange for simpler library code.
+     It may look clunky to return sub-lists of only one item, but you
+     could consider it a minor expense in exchange for simpler library
+     code.
 
   2. Some data types cannot be exchanged with the children: those whose
      printed form look like `#<...>'.  For example, `#<buffer
@@ -144,9 +160,12 @@
      – so even if you could send it, it would not be usable by the
      recipient anyway.
 
-     In days past, hash tables also looked like that when printed, but
-     not since Emacs 25 or so: they now look like `#s(hash-table data
-     ...)', which works fine to read back.
+  3. For now, this library tends to be applicable only to a narrow set
+     of use-cases, since you can only pass one `:inputs' list which
+     would tend to contain a single kind of thing, e.g. it could be a
+     list of files to visit, to be split between child processes.  In
+     many potential use-cases, you'd actually want multiple input lists
+     and split them differently, and that's not supported yet.
 
 
 [org-node-parser.el]

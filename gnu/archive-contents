@@ -1,6 +1,6 @@
 (1
  (a68-mode .
-	   [(1 0)
+	   [(1 1)
 	    ((emacs
 	      (24 3)))
 	    "Major mode for editing Algol 68 code" tar
@@ -9,7 +9,7 @@
 	     (:maintainer "Jose E. Marchesi" . "jemarch@gnu.org")
 	     (:authors
 	      ("Omar Polo" . "op@omarpolo.com"))
-	     (:commit . "2a191fae4c73839d34d19c086ec75af35a0937e4"))])
+	     (:commit . "def69a9ed14834803168a7681dd2f0680149df85"))])
  (ace-window .
 	     [(0 10 0)
 	      ((avy
@@ -1488,7 +1488,7 @@
 	   ("João Távora" . "joaotavora@gmail.com"))
 	  (:commit . "49f449bb5bc90bc1eca6b4a1f013d4c0b5460d65"))])
  (el-job .
-	 [(2 4 4)
+	 [(2 4 5)
 	  ((emacs
 	    (29 1)))
 	  "Contrived way to call a function using all CPU cores" tar
@@ -1497,7 +1497,7 @@
 	   (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
 	   (:authors
 	    ("Martin Edström" . "meedstrom@runbox.eu"))
-	   (:commit . "eb3058e44df3d694cd7b24e0bbb6f92e831ea53d"))])
+	   (:commit . "3ce81b50804d96a6892e8f60959a982154c4552c"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -5299,7 +5299,7 @@
 	  (:url . "https://elpa.gnu.org/packages/xclip.html")
 	  (:commit . "7febe164de2a881b83b9d604d3c7cf20b69f422d"))])
  (xeft .
-       [(3 5)
+       [(3 6)
 	((emacs
 	  (26 0)))
 	"Deft feat. Xapian" tar
@@ -5308,7 +5308,7 @@
 	 (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	 (:authors
 	  ("Yuan Fu" . "casouri@gmail.com"))
-	 (:commit . "21465bba67c83a923b71808e1788ab1060745976"))])
+	 (:commit . "6c63bc4c40eae8fe7a3213efe11b75dfe73aaaa4"))])
  (xelb .
        [(0 20)
 	((emacs
