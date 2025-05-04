@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/lsp-mode/
 Checking out 54251da4ffcf1e604296352bb78ff6ce0377351b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-mode/
-  to /tmp/lsp-modezxEtvq/lsp-mode-20250424.918
+  to /tmp/lsp-modeprt8e8/lsp-mode-20250424.918
     lsp-completion.el -> lsp-completion.el
     lsp-diagnostics.el -> lsp-diagnostics.el
     lsp-dired.el -> lsp-dired.el
@@ -111,6 +111,7 @@ Copying files (->) and directories (=>)
   ! clients/lsp-remark.el -> lsp-remark.el
   ! clients/lsp-rf.el -> lsp-rf.el
   ! clients/lsp-roc.el -> lsp-roc.el
+  ! clients/lsp-roslyn-stdpipe.ps1 -> lsp-roslyn-stdpipe.ps1
   ! clients/lsp-roslyn.el -> lsp-roslyn.el
   ! clients/lsp-rpm-spec.el -> lsp-rpm-spec.el
   ! clients/lsp-rubocop.el -> lsp-rubocop.el
@@ -253,6 +254,7 @@ Created lsp-mode-20250424.918.tar containing:
   lsp-mode-20250424.918/lsp-remark.el
   lsp-mode-20250424.918/lsp-rf.el
   lsp-mode-20250424.918/lsp-roc.el
+  lsp-mode-20250424.918/lsp-roslyn-stdpipe.ps1
   lsp-mode-20250424.918/lsp-roslyn.el
   lsp-mode-20250424.918/lsp-rpm-spec.el
   lsp-mode-20250424.918/lsp-rubocop.el
@@ -293,6 +295,6 @@ Created lsp-mode-20250424.918.tar containing:
   lsp-mode-20250424.918/lsp-zig.el
   lsp-mode-20250424.918/lsp.el
  ✓ Success:
-  2025-05-04T13:58:14+0000  lsp-mode-20250424.918.entry
-  2025-05-04T13:58:14+0000  lsp-mode-20250424.918.tar
-Built lsp-mode in 6.107s, finished at 2025-05-04T13:58:15+0000
+  2025-05-04T18:58:58+0000  lsp-mode-20250424.918.entry
+  2025-05-04T18:58:58+0000  lsp-mode-20250424.918.tar
+Built lsp-mode in 5.598s, finished at 2025-05-04T18:58:59+0000
