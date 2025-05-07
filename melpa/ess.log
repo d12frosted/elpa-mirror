@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-ess/ESS
 
 Updating /mnt/store/melpa/working/ess/
-Checking out d19efaae125a1a76840e53259eaa4880747f968f
+Checking out 09df73c091a28db530628e444dbfe843f9f019ff
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ess/
-  to /tmp/essUisQdX/ess-20250428.901
+  to /tmp/essgVEOCV/ess-20250507.730
   ! lisp/ess-bugs-d.el -> ess-bugs-d.el
   ! lisp/ess-bugs-l.el -> ess-bugs-l.el
   ! lisp/ess-custom.el -> ess-custom.el
@@ -55,85 +55,85 @@ Copying files (->) and directories (=>)
   ! lisp/obsolete/mouseme.el -> obsolete/mouseme.el
   ! lisp/obsolete/msdos.el -> obsolete/msdos.el
 Generating ess.info
-Created ess-20250428.901.tar containing:
-  ess-20250428.901/
-  ess-20250428.901/dir
-  ess-20250428.901/ess-bugs-d.el
-  ess-20250428.901/ess-bugs-l.el
-  ess-20250428.901/ess-custom.el
-  ess-20250428.901/ess-gretl.el
-  ess-20250428.901/ess-help.el
-  ess-20250428.901/ess-inf.el
-  ess-20250428.901/ess-jags-d.el
-  ess-20250428.901/ess-julia.el
-  ess-20250428.901/ess-mode.el
-  ess-20250428.901/ess-pkg.el
-  ess-20250428.901/ess-r-completion.el
-  ess-20250428.901/ess-r-flymake.el
-  ess-20250428.901/ess-r-mode.el
-  ess-20250428.901/ess-r-package.el
-  ess-20250428.901/ess-r-syntax.el
-  ess-20250428.901/ess-r-xref.el
-  ess-20250428.901/ess-rd.el
-  ess-20250428.901/ess-rdired.el
-  ess-20250428.901/ess-roxy.el
-  ess-20250428.901/ess-s-lang.el
-  ess-20250428.901/ess-sas-a.el
-  ess-20250428.901/ess-sas-d.el
-  ess-20250428.901/ess-sas-l.el
-  ess-20250428.901/ess-site.el
-  ess-20250428.901/ess-sp6-d.el
-  ess-20250428.901/ess-toolbar.el
-  ess-20250428.901/ess-tracebug.el
-  ess-20250428.901/ess-trns.el
-  ess-20250428.901/ess-utils.el
-  ess-20250428.901/ess.el
-  ess-20250428.901/ess.info
-  ess-20250428.901/essd-els.el
-  ess-20250428.901/etc/
-  ess-20250428.901/etc/ESSR.rds
-  ess-20250428.901/etc/ESSR/
-  ess-20250428.901/etc/ESSR/BUILDESSR
-  ess-20250428.901/etc/ESSR/LOADREMOTE
-  ess-20250428.901/etc/ESSR/R/
-  ess-20250428.901/etc/ESSR/R/.basic.R
-  ess-20250428.901/etc/ESSR/R/.load.R
-  ess-20250428.901/etc/ESSR/R/completion.R
-  ess-20250428.901/etc/ESSR/R/debug.R
-  ess-20250428.901/etc/ESSR/R/misc.R
-  ess-20250428.901/etc/ESSR/R/mpi.R
-  ess-20250428.901/etc/ESSR/R/ns-eval.R
-  ess-20250428.901/etc/ESSR/R/pkg.R
-  ess-20250428.901/etc/Makefile
-  ess-20250428.901/etc/all.txt
-  ess-20250428.901/etc/ess-julia.jl
-  ess-20250428.901/etc/ess-sas-sh-command
-  ess-20250428.901/etc/func.sas
-  ess-20250428.901/etc/icons/
-  ess-20250428.901/etc/icons/README
-  ess-20250428.901/etc/icons/rbuffer.xpm
-  ess-20250428.901/etc/icons/rfunction.xpm
-  ess-20250428.901/etc/icons/rline.xpm
-  ess-20250428.901/etc/icons/rregion.xpm
-  ess-20250428.901/etc/icons/splus_letter_small.xpm
-  ess-20250428.901/etc/icons/splus_letters_large.png
-  ess-20250428.901/etc/icons/splus_letters_large.xpm
-  ess-20250428.901/etc/icons/spluslogo.xpm
-  ess-20250428.901/etc/icons/spluslogo.xpm.safe
-  ess-20250428.901/etc/icons/startr.xpm
-  ess-20250428.901/etc/icons/switch_ess.xpm
-  ess-20250428.901/etc/icons/switchr.xpm
-  ess-20250428.901/etc/icons/switchs.xpm
-  ess-20250428.901/etc/proc.sas
-  ess-20250428.901/etc/proc.txt
-  ess-20250428.901/obsolete/
-  ess-20250428.901/obsolete/ess-eldoc.el
-  ess-20250428.901/obsolete/ess-font-lock.el
-  ess-20250428.901/obsolete/ess-mouse.el
-  ess-20250428.901/obsolete/ess-r-a.el
-  ess-20250428.901/obsolete/mouseme.el
-  ess-20250428.901/obsolete/msdos.el
+Created ess-20250507.730.tar containing:
+  ess-20250507.730/
+  ess-20250507.730/dir
+  ess-20250507.730/ess-bugs-d.el
+  ess-20250507.730/ess-bugs-l.el
+  ess-20250507.730/ess-custom.el
+  ess-20250507.730/ess-gretl.el
+  ess-20250507.730/ess-help.el
+  ess-20250507.730/ess-inf.el
+  ess-20250507.730/ess-jags-d.el
+  ess-20250507.730/ess-julia.el
+  ess-20250507.730/ess-mode.el
+  ess-20250507.730/ess-pkg.el
+  ess-20250507.730/ess-r-completion.el
+  ess-20250507.730/ess-r-flymake.el
+  ess-20250507.730/ess-r-mode.el
+  ess-20250507.730/ess-r-package.el
+  ess-20250507.730/ess-r-syntax.el
+  ess-20250507.730/ess-r-xref.el
+  ess-20250507.730/ess-rd.el
+  ess-20250507.730/ess-rdired.el
+  ess-20250507.730/ess-roxy.el
+  ess-20250507.730/ess-s-lang.el
+  ess-20250507.730/ess-sas-a.el
+  ess-20250507.730/ess-sas-d.el
+  ess-20250507.730/ess-sas-l.el
+  ess-20250507.730/ess-site.el
+  ess-20250507.730/ess-sp6-d.el
+  ess-20250507.730/ess-toolbar.el
+  ess-20250507.730/ess-tracebug.el
+  ess-20250507.730/ess-trns.el
+  ess-20250507.730/ess-utils.el
+  ess-20250507.730/ess.el
+  ess-20250507.730/ess.info
+  ess-20250507.730/essd-els.el
+  ess-20250507.730/etc/
+  ess-20250507.730/etc/ESSR.rds
+  ess-20250507.730/etc/ESSR/
+  ess-20250507.730/etc/ESSR/BUILDESSR
+  ess-20250507.730/etc/ESSR/LOADREMOTE
+  ess-20250507.730/etc/ESSR/R/
+  ess-20250507.730/etc/ESSR/R/.basic.R
+  ess-20250507.730/etc/ESSR/R/.load.R
+  ess-20250507.730/etc/ESSR/R/completion.R
+  ess-20250507.730/etc/ESSR/R/debug.R
+  ess-20250507.730/etc/ESSR/R/misc.R
+  ess-20250507.730/etc/ESSR/R/mpi.R
+  ess-20250507.730/etc/ESSR/R/ns-eval.R
+  ess-20250507.730/etc/ESSR/R/pkg.R
+  ess-20250507.730/etc/Makefile
+  ess-20250507.730/etc/all.txt
+  ess-20250507.730/etc/ess-julia.jl
+  ess-20250507.730/etc/ess-sas-sh-command
+  ess-20250507.730/etc/func.sas
+  ess-20250507.730/etc/icons/
+  ess-20250507.730/etc/icons/README
+  ess-20250507.730/etc/icons/rbuffer.xpm
+  ess-20250507.730/etc/icons/rfunction.xpm
+  ess-20250507.730/etc/icons/rline.xpm
+  ess-20250507.730/etc/icons/rregion.xpm
+  ess-20250507.730/etc/icons/splus_letter_small.xpm
+  ess-20250507.730/etc/icons/splus_letters_large.png
+  ess-20250507.730/etc/icons/splus_letters_large.xpm
+  ess-20250507.730/etc/icons/spluslogo.xpm
+  ess-20250507.730/etc/icons/spluslogo.xpm.safe
+  ess-20250507.730/etc/icons/startr.xpm
+  ess-20250507.730/etc/icons/switch_ess.xpm
+  ess-20250507.730/etc/icons/switchr.xpm
+  ess-20250507.730/etc/icons/switchs.xpm
+  ess-20250507.730/etc/proc.sas
+  ess-20250507.730/etc/proc.txt
+  ess-20250507.730/obsolete/
+  ess-20250507.730/obsolete/ess-eldoc.el
+  ess-20250507.730/obsolete/ess-font-lock.el
+  ess-20250507.730/obsolete/ess-mouse.el
+  ess-20250507.730/obsolete/ess-r-a.el
+  ess-20250507.730/obsolete/mouseme.el
+  ess-20250507.730/obsolete/msdos.el
  ✓ Success:
-  2025-05-07T06:10:52+0000  ess-20250428.901.entry
-  2025-05-07T06:10:52+0000  ess-20250428.901.tar
-Built ess in 8.080s, finished at 2025-05-07T06:10:53+0000
+  2025-05-07T11:05:24+0000  ess-20250507.730.entry
+  2025-05-07T11:05:23+0000  ess-20250507.730.tar
+Built ess in 14.113s, finished at 2025-05-07T11:05:25+0000
