@@ -385,6 +385,25 @@
   annotations in a buffer, just after killing buffer or quitting Emacs.
 
 
+7.2 annotate-annotation-expansion-map
+─────────────────────────────────────
+
+  The Expansion map for the annotation text. If a substring in the
+  annotation text matches the string in the car value of each cons cell
+  of this alist, it is expanded with the results of passing the cdr of
+  each cell to a system shell. Example below.
+
+  The expression:
+
+  ┌────
+  │ (setf annotate-annotation-expansion-map
+  │       '(("%d" . "date +%Y-%m-%d")))
+  └────
+
+  Will expand any occurrence of "%d" in the annotation's text with the
+  current date (format: "YYYY-MM-DD").
+
+
 8 More documentation
 ════════════════════
 
