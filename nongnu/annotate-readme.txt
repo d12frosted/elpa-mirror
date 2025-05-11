@@ -388,20 +388,24 @@
 7.2 annotate-annotation-expansion-map
 ─────────────────────────────────────
 
-  The Expansion map for the annotation text. If a substring in the
-  annotation text matches the string in the car value of each cons cell
-  of this alist, it is expanded with the results of passing the cdr of
-  each cell to a system shell. Example below.
+  The expansion map for the annotation text. If a substring in the
+  annotation text matches the string in the first item of each element
+  of this list, it will be expanded with the results of passing the
+  second item — as a command — to a system shell, if the third item is
+  not null, the output string of the command's results will be trimmed
+  (spaces or some others non printable characters will be removed from
+  both ends, see: `string-trim'). Example below.
 
   The expression:
 
   ┌────
   │ (setf annotate-annotation-expansion-map
-  │       '(("%d" . "date +%Y-%m-%d")))
+  │       '((\"%d\" \"date +%Y-%m-%d\" t)))
   └────
 
-  Will expand any occurrence of "%d" in the annotation's text with the
-  current date (format: "YYYY-MM-DD").
+  Will expand any occurrence of \"%d\" in the annotation's text with the
+  current date (format: \"YYYY-MM-DD\"), moreover the results will be
+  trimmed.
 
 
 8 More documentation
