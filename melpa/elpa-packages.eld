@@ -2300,6 +2300,7 @@
   (guess-language :url "https://github.com/tmalsburg/guess-language.el")
   (guide-key :url "https://github.com/kai2nenobu/guide-key")
   (guide-key-tip :url "https://github.com/aki2o/guide-key-tip")
+  (guix :url "https://codeberg.org/guix/emacs-guix")
   (gulp-task-runner :url "https://github.com/NicolasPetton/gulp-task-runner")
   (gumshoe :url "https://github.com/Overdr0ne/gumshoe")
   (guru-mode :url "https://github.com/bbatsov/guru-mode")

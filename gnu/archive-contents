@@ -3342,17 +3342,6 @@
 		 (:authors
 		  ("Hanno Perrey" . "hanno@hoowl.se"))
 		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
- (org-mathsheet .
-		[(1 0)
-		 ((peg
-		   (1 0)))
-		 "Generate dynamic math worksheets" tar
-		 ((:url . "https://gitlab.com/ianxm/org-mathsheet")
-		  (:keywords "tools" "education" "math")
-		  (:maintainer "Ian Martins" . "ianxm@jhu.edu")
-		  (:authors
-		   ("Ian Martins" . "ianxm@jhu.edu"))
-		  (:commit . "3ef5907f2c9a79d5769ea027d5c80bf69bb9f2ea"))])
  (org-modern .
 	     [(1 7)
 	      ((emacs
@@ -4824,7 +4813,7 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:commit . "e7326a61b1cd2605867063fcfc5ddddaeed6d993"))])
  (triples .
-	  [(0 5 1)
+	  [(0 6 0)
 	   ((seq
 	     (2 0))
 	    (emacs
@@ -4835,7 +4824,7 @@
 	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	    (:authors
 	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	    (:commit . "3c42e4b3c891cfbc2dd32fe10d7fa82047027bc6"))])
+	    (:commit . "5e17182a5374a1656761bb26832fd21c6f168685"))])
  (typo .
        [(1 0 1)
 	((emacs

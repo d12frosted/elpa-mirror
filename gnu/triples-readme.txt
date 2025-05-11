@@ -96,6 +96,9 @@ inefficiencies typically are not significant.
   supplied with values, but rather can get them from the reversed
   relation of `employee/manager'.
 
+  A valid `base/type' maps to elisp types, so can be values such as
+  `integer', `float', `vector', `cons', `symbol', or `string'.
+
   We'll explore how these types are used can be used in the section
   after next.
 
