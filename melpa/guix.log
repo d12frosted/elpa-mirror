@@ -2,11 +2,11 @@ Package: guix
 Fetcher: codeberg
 Source:  https://codeberg.org/guix/emacs-guix
 
-Cloning https://codeberg.org/guix/emacs-guix to /mnt/store/melpa/working/guix/
+Updating /mnt/store/melpa/working/guix/
 Checking out 287fc4fbea0c90efca01af8fd0d64748903253cf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guix/
-  to /tmp/guixknSyKe/guix-20250309.2106
+  to /tmp/guixyzHl73/guix-20250309.2106
   ! elisp/guix-about.el -> guix-about.el
   ! elisp/guix-auto-mode.el -> guix-auto-mode.el
   ! elisp/guix-build-log.el -> guix-build-log.el
@@ -126,6 +126,6 @@ Created guix-20250309.2106.tar containing:
   guix-20250309.2106/scheme/emacs-guix/system.scm
   guix-20250309.2106/scheme/emacs-guix/utils.scm
  ✓ Success:
-  2025-05-11T10:10:30+0000  guix-20250309.2106.entry
-  2025-05-11T10:10:29+0000  guix-20250309.2106.tar
-Built guix in 8.635s, finished at 2025-05-11T10:10:30+0000
+  2025-05-11T15:07:43+0000  guix-20250309.2106.entry
+  2025-05-11T15:07:43+0000  guix-20250309.2106.tar
+Built guix in 7.653s, finished at 2025-05-11T15:07:44+0000
