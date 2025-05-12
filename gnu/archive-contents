@@ -2185,13 +2185,13 @@
 	     (:url . "https://elpa.gnu.org/packages/greenbar.html")
 	     (:commit . "9526f29d073c533c3e54f0a7597eef1587ffb99e"))])
  (gtags-mode .
-	     [(1 8 4)
+	     [(1 8 5)
 	      ((emacs
 		(28)))
 	      "GNU Global integration with xref, project and imenu." tar
 	      ((:url . "https://github.com/Ergus/gtags-mode")
 	       (:keywords "xref" "project" "imenu" "gtags" "global")
-	       (:commit . "a3d29799acc6ebdbf81684bfac45fff2c8a9f975"))])
+	       (:commit . "333b0ac032397d9803fc0c4cf7012f0b7c2e68fb"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib
@@ -4761,11 +4761,11 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 8 7)
+	    [(0 8 8)
 	     ((emacs
 	       (26 1))
 	      (compat
-	       (30 0 2 0))
+	       (30 1 0 0))
 	      (seq
 	       (2 24)))
 	     "Transient commands" tar
@@ -4774,7 +4774,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "afc88b24e4faa5c7e246303648e70b4507652f32"))])
+	      (:commit . "25b994a565ce8035330b0a3071ee430c0282349e"))])
  (transient-cycles .
 		   [(1 1)
 		    ((emacs
