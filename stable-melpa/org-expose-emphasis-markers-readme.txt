@@ -9,4 +9,4 @@ hide when cursor leave.
 
 Install this packge, then use it by turning on the mode:
 
-  (add-hook 'org-mode-hook (lambda () (org-expose-emphasis-markers-mode t)))
+  (add-hook 'org-mode-hook (lambda () (org-expose-emphasis-markers 'paragraph)))
