@@ -21,6 +21,7 @@ Features:
 - LLM responses are in Markdown or Org markup.
 - Supports conversations and multiple independent sessions.
 - Supports tool-use to equip LLMs with agentic capabilities.
+- Supports Model Context Protocol (MCP) integration using the mcp.el package.
 - Supports multi-modal models (send images, documents).
 - Supports "reasoning" content in LLM responses.
 - Save chats as regular Markdown/Org/Text files and resume them later.
@@ -107,6 +108,21 @@ You can also add context from gptel's menu instead (`gptel-send' with a
 prefix arg), as well as examine or modify context.
 
 When context is available, gptel will include it with each LLM query.
+
+LLM Tool use:
+
+gptel supports "tool calling" behavior, where LLMs can specify arguments with
+which to call provided "tools" (elisp functions).  The results of running the
+tools are fed back to the LLM, giving it capabilities and knowledge beyond
+what is available out of the box.  For example, tools can perform web
+searches or API lookups, modify files and directories, and so on.
+
+Tools can be specified via `gptel-make-tool', or obtained from other
+repositories, or from Model Context Protocol (MCP) servers using the mcp.el
+package.  See the README for details.
+
+Tools can be included with LLM queries using gptel's menu, or from
+`gptel-tools'.
 
 Rewrite interface
 
