@@ -19,8 +19,10 @@ Features
 - Chunks and file navigation using `n' / `N' and `p' / `P' in generated
   diffs.
 - DWIM workflows from `magit'.
+- Use difftastic do compare files and buffers (also directly from `dired').
 - Rerun `difftastic' with `g' to use current window width to "reflow"
   content and/or to force language change (when called with prefix).
+- Use double prefix argument to specify all `difftastic' arguments.
 
 
 Installation
@@ -221,6 +223,15 @@ The following commands are meant to help to interact with `difftastic'.
   `difftastic-files' instead of the built-in `diff'.
 - `difftastic-git-diff-range' - transform `ARGS' for difftastic and show
   the result of `git diff ARGS REV-OR-RANGE -- FILES' with `difftastic'.
+
+All above commands (and `difftastic-rerun' described below) support
+specification of `difft' arguments when called with a double prefix
+argument.  This is in addition to a command specific handling of a single
+prefix argument.  In order to aid arguments entry, a `transient' menu is
+used, however some - less commonly used - arguments are not visible in
+default configuration.  Type `C-x l' in the menu to make them visible.
+Note that in some cases arguments will take precedence over standard and
+computed values, for example `--width' is one such a argument.
 
 
 `difftastic-mode' commands
