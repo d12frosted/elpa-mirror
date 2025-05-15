@@ -1296,7 +1296,7 @@
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
 	 (:commit . "af3a6a3d842c350b469a735b31ee00bd22fedcc9"))])
  (helm-core .
-	    [(4 0 2)
+	    [(4 0 3)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -1306,7 +1306,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "af3a6a3d842c350b469a735b31ee00bd22fedcc9"))])
+	      (:commit . "063fe595ace5dd008cf2cbbfc27b90f7752c44dd"))])
  (hideshowvis .
 	      [(0 8)
 	       ((emacs
@@ -2148,9 +2148,11 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20250507 84244)
+	      [(1 0 20250514 102731)
 	       ((emacs
-		 (25 1)))
+		 (25 1))
+		(compat
+		 (30 0 20 0)))
 	       "Racket editing, REPL, and more" tar
 	       ((:url . "https://www.racket-mode.com/")
 		(:authors
