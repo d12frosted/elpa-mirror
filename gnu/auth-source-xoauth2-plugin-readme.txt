@@ -31,9 +31,9 @@
 
   `auth-source-xoauth2-plugin' is on [GNU ELPA], and you can install it
   with `package-install' (see also [the Emacs document on how to use
-  package-install]).  Or you can clone the repository or simply download
-  the `auth-source-xoauth2-plugin.el' file and put it anywhere in your
-  Emacs' `load-path'.
+  package-install]).  Or you can clone the repository from [GitLab] or
+  simply download the `auth-source-xoauth2-plugin.el' file and put it
+  anywhere in your Emacs' `load-path'.
 
   Then add the following lines in your Emacs configuration:
 
@@ -104,6 +104,8 @@
 [the Emacs document on how to use package-install]
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Package-Installation.html>
 
+[GitLab] <https://gitlab.com/manphiz/auth-source-xoauth2-plugin/>
+
 
 3 Comparison with other xoauth2 implementations
 ═══════════════════════════════════════════════
@@ -149,7 +151,20 @@
   entities.
 
 
-5 Notes on Implementation
+5 Bug reporting
+═══════════════
+
+  Please use `M-x report-emacs-bug' or open an issue on [GitLab] and
+  include debug info collected following section [Debugging].
+
+
+[GitLab]
+<https://gitlab.com/manphiz/auth-source-xoauth2-plugin/-/issues>
+
+[Debugging] <file:README.org::*Debugging>
+
+
+6 Notes on Implementation
 ═════════════════════════
 
   `auth-source' uses the `secret' field in auth-source file as password
