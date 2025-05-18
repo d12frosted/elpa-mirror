@@ -4234,6 +4234,7 @@
   (pd-remote :url "https://github.com/agraef/pd-remote")
   (pdb-capf :url "https://github.com/muffinmad/emacs-pdb-capf")
   (pdb-mode :url "https://github.com/sixpi/pdb-mode")
+  (pdd :url "https://github.com/lorniu/pdd.el")
   (pdf-meta-edit :url "https://github.com/krisbalintona/pdf-meta-edit")
   (pdf-tools :url "https://github.com/vedang/pdf-tools")
   (pdf-view-pagemark :url "https://github.com/kimim/pdf-view-pagemark")
