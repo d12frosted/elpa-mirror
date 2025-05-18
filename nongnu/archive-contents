@@ -1274,7 +1274,7 @@
 		     (:keywords "languages")
 		     (:commit . "59640ceec33cd4df37096289e11ff6f4b876be03"))])
  (haskell-ts-mode .
-		  [(1 1 4)
+		  [(1 2 0)
 		   ((emacs
 		     (29 3)))
 		   "A treesit based major mode for haskell" tar
@@ -1283,7 +1283,7 @@
 		    (:maintainer "Pranshu Sharma" . "pranshu@bauherren.ovh")
 		    (:authors
 		     ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
-		    (:commit . "34faec17375cecfa4624fe4fbf5e8643b64df8ce"))])
+		    (:commit . "81876a51920931710408e17b45ec8ac19206b318"))])
  (helm .
        [(4 0 3)
 	((helm-core
@@ -2814,14 +2814,14 @@
 	       ("Le Wang" . "l26wang@gmail.com"))
 	      (:commit . "9ee5a7657a22e836618813c2e2b64a548d27d2ff"))])
  (xah-fly-keys .
-	       [(26 12 20250503115607)
+	       [(26 12 20250517213917)
 		((emacs
 		  (28 3)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "239f93ce99550be46a451df91c636b4bd5d6af8b"))])
+		 (:commit . "edde947a4f27658c4a0b958461a77512176b8904"))])
  (xkcd .
        [(1 1)
 	((json
