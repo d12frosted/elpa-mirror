@@ -729,6 +729,9 @@
   prompt.  This is why it should be sent back without further
   modifications.
 
+  Tools will be called with vectors for array results, `nil' for false
+  boolean results, and plists for objects.
+
   Be aware that there is no gaurantee that the tool will be called
   correctly.  While the LLMs mostly get this right, they are trained on
   Javascript functions, so imitating Javascript names is
