@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacsmirror/apel
 
 Updating /mnt/store/melpa/working/apel/
-Checking out c58622cc6d2f6b503d3a930a2c48050be8e695cf
+Checking out bfd3ca11343ef5839dd1247622959891c740294b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/apel/
-  to /tmp/apelLbKpqN/apel-20241127.1623
+  to /tmp/apelrXDsij/apel-20250519.1829
     alist.el -> alist.el
     apel-ver.el -> apel-ver.el
     apel.el -> apel.el
@@ -36,39 +36,41 @@ Copying files (->) and directories (=>)
     pym.el -> pym.el
     richtext.el -> richtext.el
     static.el -> static.el
-Created apel-20241127.1623.tar containing:
-  apel-20241127.1623/
-  apel-20241127.1623/alist.el
-  apel-20241127.1623/apel-pkg.el
-  apel-20241127.1623/apel-ver.el
-  apel-20241127.1623/apel.el
-  apel-20241127.1623/atype.el
-  apel-20241127.1623/broken.el
-  apel-20241127.1623/calist.el
-  apel-20241127.1623/emu.el
-  apel-20241127.1623/filename.el
-  apel-20241127.1623/inv-23.el
-  apel-20241127.1623/invisible.el
-  apel-20241127.1623/mcharset.el
-  apel-20241127.1623/mcs-20.el
-  apel-20241127.1623/mcs-e20.el
-  apel-20241127.1623/mule-caesar.el
-  apel-20241127.1623/path-util.el
-  apel-20241127.1623/pccl-20.el
-  apel-20241127.1623/pccl.el
-  apel-20241127.1623/pces-20.el
-  apel-20241127.1623/pces-e20.el
-  apel-20241127.1623/pces.el
-  apel-20241127.1623/pcustom.el
-  apel-20241127.1623/poe.el
-  apel-20241127.1623/poem-e20.el
-  apel-20241127.1623/poem-e20_3.el
-  apel-20241127.1623/poem.el
-  apel-20241127.1623/product.el
-  apel-20241127.1623/pym.el
-  apel-20241127.1623/richtext.el
-  apel-20241127.1623/static.el
+Created apel-20250519.1829.tar containing:
+  apel-20250519.1829/
+  apel-20250519.1829/alist.el
+  apel-20250519.1829/apel-pkg.el
+  apel-20250519.1829/apel-ver.el
+  apel-20250519.1829/apel.el
+  apel-20250519.1829/atype.el
+  apel-20250519.1829/broken.el
+  apel-20250519.1829/calist.el
+  apel-20250519.1829/emu.el
+  apel-20250519.1829/filename.el
+  apel-20250519.1829/inv-23.el
+  apel-20250519.1829/invisible.el
+  apel-20250519.1829/mcharset.el
+  apel-20250519.1829/mcs-20.el
+  apel-20250519.1829/mcs-e20.el
+  apel-20250519.1829/mule-caesar.el
+  apel-20250519.1829/path-util.el
+  apel-20250519.1829/pccl-20.el
+  apel-20250519.1829/pccl.el
+  apel-20250519.1829/pces-20.el
+  apel-20250519.1829/pces-e20.el
+  apel-20250519.1829/pces.el
+  apel-20250519.1829/pcustom.el
+  apel-20250519.1829/poe.el
+  apel-20250519.1829/poem-e20.el
+  apel-20250519.1829/poem-e20_3.el
+  apel-20250519.1829/poem.el
+  apel-20250519.1829/product.el
+  apel-20250519.1829/pym.el
+  apel-20250519.1829/richtext.el
+  apel-20250519.1829/static.el
  ✓ Success:
-  2025-05-19T14:55:28+0000  apel-20241127.1623.entry
-  2025-05-19T14:55:28+0000  apel-20241127.1623.tar
-Built apel in 3.099s, finished at 2025-05-19T14:55:29+0000
+  2025-05-19T17:02:53+0000  apel-20241127.1623.entry
+  2025-05-19T17:02:53+0000  apel-20241127.1623.tar
+  2025-05-19T19:09:40+0000  apel-20250519.1829.entry
+  2025-05-19T19:09:40+0000  apel-20250519.1829.tar
+Built apel in 3.087s, finished at 2025-05-19T19:09:41+0000
