@@ -6,7 +6,7 @@ subprocesses---one per CPU core---then merge their outputs and handle the
 result as if it had been returned by that `mapcar'.  In the meantime,
 current Emacs does not hang at all.
 
-You need to know the concept of a callback.
+You do need to grok the concept of a callback.
 
 Public API:
 - Function `el-job-launch' (main entry point)
