@@ -3,3 +3,23 @@ Fetcher: github
 Source:  https://github.com/magit/transient
 
 Updating /mnt/store/melpa/working/transient/
+Checking out cb6550d5b111b7815feec97b236ecb051de70dbe
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/transient/
+  to /tmp/transientk3khrr/transient-20250520.1040
+  ! lisp/transient.el -> transient.el
+  ! docs/gpl.texi -> gpl.texi
+  ! docs/transient.texi -> transient.texi
+Generating gpl.info
+Generating transient.info
+Created transient-20250520.1040.tar containing:
+  transient-20250520.1040/
+  transient-20250520.1040/dir
+  transient-20250520.1040/gpl.info
+  transient-20250520.1040/transient-pkg.el
+  transient-20250520.1040/transient.el
+  transient-20250520.1040/transient.info
+ ✓ Success:
+  2025-05-21T18:15:13+0000  transient-20250520.1040.entry
+  2025-05-21T18:15:13+0000  transient-20250520.1040.tar
+Built transient in 7.057s, finished at 2025-05-21T18:15:14+0000

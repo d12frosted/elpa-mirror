@@ -21,6 +21,8 @@ Features
 - Display [octicons] for candidates (see `company-forge-icons-mode').
 - Display issues, discussions, and pull-request text as a documentation
   with `quickhelp-string' and `doc-buffer' `company' commands.
+- Provide `company-forge-completion-at-point-function' compatible with
+  built in command `completion-at-point'.
 
 
 [octicons] <https://github.com/primer/octicons>
@@ -86,7 +88,9 @@ startup.  If you have installed `company-forge' using built-in `package' or
   (company-forge-icons-mode) ;; Display icons
   (advice-add #'forge--pull ;; Reset cache after forge pull
               :filter-args #'company-forge-reset-cache-after-pull)
-  (add-to-list 'company-backends 'company-forge))
+  (add-to-list 'company-backends 'company-forge)
+  (add-to-list 'completion-at-point-functions
+               #'company-forge-completion-at-point-function))
 
 
 Customization
@@ -101,6 +105,8 @@ refer to documentation of respective symbol for more details.
   the backend is enabled
 - user option: `company-forge-use-cache': control whether cache is used for
   candidates retrieval
+- user option: `company-forge-capf-doc-buffer-function': a function used do
+  show documentation when `company' backend `company-capf' is used
 - minor mode: `comany-forge-icons-mode': control whether to display icons
   for candidates
 - function: `company-forge-reset-cache-after-pull': designed as a
