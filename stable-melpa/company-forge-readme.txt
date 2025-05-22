@@ -89,8 +89,8 @@ startup.  If you have installed `company-forge' using built-in `package' or
   (advice-add #'forge--pull ;; Reset cache after forge pull
               :filter-args #'company-forge-reset-cache-after-pull)
   (add-to-list 'company-backends 'company-forge)
-  (add-to-list 'completion-at-point-functions
-               #'company-forge-completion-at-point-function))
+  (add-hook 'completion-at-point-functions
+            #'company-forge-completion-at-point-function))
 
 
 Customization

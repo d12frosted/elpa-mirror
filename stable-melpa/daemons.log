@@ -1,0 +1,28 @@
+Package: daemons
+Fetcher: github
+Source:  https://github.com/cbowdon/daemons.el
+
+Updating /mnt/store/melpa/working/daemons/
+Checking out 7b08ce315c0be901d88c1099483f9607c653712e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/daemons/
+  to /tmp/daemonsHAcq3I/daemons-20250514.1107
+    daemons-brew.el -> daemons-brew.el
+    daemons-openrc.el -> daemons-openrc.el
+    daemons-shepherd.el -> daemons-shepherd.el
+    daemons-systemd.el -> daemons-systemd.el
+    daemons-sysvinit.el -> daemons-sysvinit.el
+    daemons.el -> daemons.el
+Created daemons-20250514.1107.tar containing:
+  daemons-20250514.1107/
+  daemons-20250514.1107/daemons-brew.el
+  daemons-20250514.1107/daemons-openrc.el
+  daemons-20250514.1107/daemons-pkg.el
+  daemons-20250514.1107/daemons-shepherd.el
+  daemons-20250514.1107/daemons-systemd.el
+  daemons-20250514.1107/daemons-sysvinit.el
+  daemons-20250514.1107/daemons.el
+ ✓ Success:
+  2025-05-22T06:18:31+0000  daemons-20250514.1107.entry
+  2025-05-22T06:18:31+0000  daemons-20250514.1107.tar
+Built daemons in 2.807s, finished at 2025-05-22T06:18:32+0000
