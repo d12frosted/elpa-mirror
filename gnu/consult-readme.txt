@@ -191,8 +191,8 @@ Table of Contents
     on the current context with an action menu. With an active region,
     store/append/prepend the contents, optionally deleting the region
     when a prefix argument is given.  With a numeric prefix argument,
-    store/add the number. Otherwise store point, frameset, window or
-    kmacro. Usage examples:
+    store/add the number. Otherwise store point, file, buffer, frameset,
+    window or kmacro. Usage examples:
     ‣ `M-' x': If no region is active, store point in register `x'.  If
       a region is active, store the region in register `x'.
     ‣ `M-' M-w x': Store window configuration in register `x'.
@@ -298,8 +298,8 @@ Table of Contents
 1.7 Compilation
 ───────────────
 
-  • `consult-compile-error': Jump to a compilation error. Supports live
-    preview narrowing and recursive editing.
+  • `consult-compile-error': Jump to a compilation error or grep search
+    result.  Supports live preview narrowing and recursive editing.
   • `consult-flymake': Jump to Flymake diagnostic. Supports live preview
     and recursive editing. The command supports narrowing. Press `e
     SPC', `w SPC', `n SPC' to only show errors, warnings and notes
