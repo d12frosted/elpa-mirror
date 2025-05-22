@@ -20,7 +20,7 @@ After that, configure it with (use sonnet as example):
 
 For more details, see https://github.com/tninja/aider.el
 
-Comparison of aider.el to aidermacs:
+Comparison of aider.el to aidermacs (a fork version of aider.el):
 - More Focus on build prompts using your code (buffer/selection).
 - Less configurations, simplified menu.
 - Reuse prompts easily, fuzzy search with helm.
