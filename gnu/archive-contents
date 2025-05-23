@@ -1347,6 +1347,17 @@
 	     ("Chong Yidong" . "cyd@gnu.org"))
 	    (:url . "https://elpa.gnu.org/packages/docbook.html")
 	    (:commit . "a59f87c0dc04bcfcf9f55a124658c2e7a585dbd2"))])
+ (doric-themes .
+	       [(0 0 1)
+		((emacs
+		  (29 1)))
+		"Minimalist themes" tar
+		((:url . "https://github.com/protesilaos/doric-themes")
+		 (:keywords "faces" "theme" "accessibility")
+		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+		 (:authors
+		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
+		 (:commit . "858412fd694cb769fb427e3323d2e1344ff10d98"))])
  (drepl .
 	[(0 3)
 	 ((emacs
