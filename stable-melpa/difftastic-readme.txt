@@ -16,8 +16,8 @@ Features
 
 - Configure faces to your likening.  By default `magit-diff-*' faces from
   your user them are used for consistent visual experience.
-- Chunks and file navigation using `n' / `N' and `p' / `P' in generated
-  diffs.
+- Chunks and file navigation using `n' / `N' (or `M-n') and `p' / `P' (or
+  `M-p'), as well as `C-M-f', `C-M-b', and `C-M-SPC' in generated diffs.
 - DWIM workflows from `magit'.
 - Use difftastic do compare files and buffers (also directly from `dired').
 - Rerun `difftastic' with `g' to use current window width to "reflow"
@@ -268,14 +268,27 @@ Commands are followed by their default keybindings (in parenthesis).
   `difftastic-requested-window-width-function').  It will also reuse
   current buffer and will not call `difftastic-display-buffer-function'.
   When called with prefix argument it will ask for language to use.
-- `difftastic-next-chunk' (`n'), `difftastic-next-file' (`N') - move point
-  to a next logical chunk or a next file respectively.
-- `difftastic-previous-chunk' (`p'), `difftastic-previous-file' (`P') -
-  move point to a previous logical chunk or a previous file respectively.
+- `difftastic-next-chunk' (`n'), `difftastic-next-file' (`N' or `M-n') -
+  move point to a next logical chunk or a next file respectively.
+- `difftastic-previous-chunk' (`p'), `difftastic-previous-file' (`P' or
+  `M-p') - move point to a previous logical chunk or a previous file
+  respectively.
 - `difftastic-toggle-chunk' (`TAB' or `C-i') - toggle visibility of a chunk
   at point.  The point has to be in a chunk header.  When called with a
   prefix toggle all file chunks from the header to the end of the file.
   See also `difftastic-hide-chunk' and `difftastic=show-chunk'.
+- `forward-sexp' (`C-M-f') - move point to end of current chunk or to an
+  end of next chunk when point is already at the end of the chunk.  When
+  called with argument move by that many chunks.  Binding is from a default
+  `global-map'.
+- `backward-sexp' (`C-M-b') - move point to beginning of current chunk or
+  to a beginning of previous chunk when point is already at the beginning
+  of the chunk.  When called with argument move by that many chunks.
+  Binding is from a default `global-map'.
+- `mark-sexp' (`C-M-SPC') - set mark and move point to end of current chunk
+  or to an end of next chunk when point is already at the end of the chunk.
+  When called with argument move by that many chunks.  Binding is from a
+  default `global-map'.
 - `difftastic-diff-visit-file' (`RET'),
   `difftastic-diff-visit-file-other-window',
   `difftastic-diff-visit-file-other-frame' - from a diff visit appropriate

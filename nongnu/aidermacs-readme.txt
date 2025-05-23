@@ -390,6 +390,20 @@ Aidermacs will take note of all the comments that start or end with `AI`. Commen
 
 *Note: These configurations will be overwritten by the existence of an `.aider.conf.yml` file (see [details](#Overwrite-Configuration-with-Configuration-File)).*
 
+### Read-Only Files
+
+You can configure certain files to always be added as read-only when starting any Aidermacs session by setting the `aidermacs-global-read-only-files` and `aidermacs-project-read-only-files`.
+
+```emacs-lisp
+;; Always add these files as read-only to all Aidermacs sessions
+;; For files that exists outside the project directory
+(setq aidermacs-global-read-only-files '("~/.aider/AI_RULES.md"))
+;; For files that exists within the project directory
+(setq aidermacs-project-read-only-files '("CONVENTIONS.md" "README.md"))
+```
+
+When an Aidermacs session starts, these files will be automatically added as read-only if they exist in the project. This is useful for documentation files or other references that you want the AI to be aware of but not modify.
+
 ### Diff and Change Review
 
 Control whether to show diffs for AI-generated changes with `aidermacs-show-diff-after-change`:
@@ -515,6 +529,68 @@ And adjust aidermacs program with below config.
 ```elisp
 (setq aidermacs-program (expand-file-name "~/.local/bin/aider"))
 ```
+
+### Aidermacs vs Aider CLI vs aider.el?
+
+Aidermacs is designed to provide a more Emacs-native experience while integrating with [Aider CLI](https://github.com/paul-gauthier/aider). It began as a fork of `aider.el`, but has since diverged significantly to prioritize Emacs workflow integration, built by Emacser, for Emacser.
+
+While aider.el tries to mirror Aider's CLI behavior, Aidermacs is built around Emacs-specific features and paradigms. This design philosophy allows you to harness Aider's powerful capabilities through a natural, Emacs-native coding experience.
+
+With Aidermacs, you get:
+
+1. Built-in Ediff Integration for AI-Generated Changes
+   - Seamless Code Review: Automatically shows diffs for all AI-modified files using Emacs' powerful `ediff` interface
+   - Familiar Interface: Uses Emacs' native `ediff` workflow for reviewing changes
+   - Interactive Workflow: Accept or reject changes with standard `ediff` commands
+   - Syntax Highlighting: Maintains proper syntax highlighting during comparisons
+   - Safe Change Management: Preserves original file states for easy comparison and rollback
+
+2. Intelligent Model Selection
+   - Automatic discovery of available models from multiple providers
+   - Real-time model compatibility checking
+   - Seamless integration with your configured API keys
+   - Caching for quick access to frequently used models
+   - Support for both popular pre-configured models and dynamically discovered ones
+
+3. Flexible Terminal Backend Support
+   - Aidermacs supports multiple terminal backends (comint and vterm) for better compatibility and performance
+   - Easy configuration to choose your preferred terminal emulation
+   - Extensible architecture for adding new backends
+
+4. Smarter Syntax Highlighting
+   - AI-generated code appears with proper syntax highlighting in major languages.
+   - Ensures clarity and readability without additional configuration.
+
+5. Better Support for Multiline Input
+   - Aider is designed as a CLI program, where multiline input is restricted by terminal limitations.
+   - Terminal-based tools require special syntax or manual formatting to handle multiline input, which can be cumbersome and unintuitive.
+   - Aidermacs eliminates these restrictions by handling multiline prompts natively within Emacs, allowing you to compose complex AI requests just like any other text input.
+   - Whether you're pasting blocks of code or refining AI-generated responses, multiline interactions in Aidermacs feel natural and seamless.
+
+6. Enhanced File Management from Emacs
+   - List files currently in chat with `M-x aidermacs-list-added-files`
+   - Drop specific files from chat with `M-x aidermacs-drop-file`
+   - View output history with `M-x aidermacs-show-output-history`
+   - Interactively select files to add with `M-x aidermacs-add-files-interactively`
+   - Add content from any file to a specific session with `M-x aidermacs-add-file-to-session`
+   - Create a temporary file for adding code snippets or notes to the Aider session with `M-x aidermacs-create-session-scratchpad`
+   - Full support for remote files via Tramp (SSH, Docker, etc.)
+   - and more
+
+7. Greater Configurability
+   - Aidermacs offers more customization options to tailor the experience to your preferences.
+
+8. Streamlined Transient Menu Selection
+   - The transient menus have been completely redesigned to encompass functionality and ergonomics, prioritizing user experience.
+
+9. Flexible Ways to Add Content
+   - Aidermacs provides multiple ways to add content to the Aider session, including adding files, creating temporary scratchpad files, and more.
+
+10. Community-Driven Development
+    - Aidermacs is actively developed and maintained by the community, incorporating user feedback and contributions.
+    - We prioritize features and improvements that directly benefit Emacs users, ensuring a tool that evolves with your needs.
+
+... and more to come 🚀
 
 ## Video Demo
 
