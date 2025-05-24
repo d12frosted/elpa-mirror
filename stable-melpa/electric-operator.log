@@ -3,18 +3,22 @@ Fetcher: github
 Source:  https://github.com/davidshepherd7/electric-operator
 
 Updating /mnt/store/melpa/working/electric-operator/
-Checking out c5201bd5a70847ebb37b4962264c12e1bac05c43
+Checking out 7caf4955a6470cb61c743ab0fd9d4a8d8b15367b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/electric-operator/
-  to /tmp/electric-operator5VxNfE/electric-operator-20250120.734
+  to /tmp/electric-operatorzQ8PGf/electric-operator-20250524.1712
     electric-operator-benchmark.el -> electric-operator-benchmark.el
     electric-operator.el -> electric-operator.el
-Created electric-operator-20250120.734.tar containing:
-  electric-operator-20250120.734/
-  electric-operator-20250120.734/electric-operator-benchmark.el
-  electric-operator-20250120.734/electric-operator-pkg.el
-  electric-operator-20250120.734/electric-operator.el
+    test-helper.el -> test-helper.el
+Created electric-operator-20250524.1712.tar containing:
+  electric-operator-20250524.1712/
+  electric-operator-20250524.1712/electric-operator-benchmark.el
+  electric-operator-20250524.1712/electric-operator-pkg.el
+  electric-operator-20250524.1712/electric-operator.el
+  electric-operator-20250524.1712/test-helper.el
  ✓ Success:
-  2025-05-24T14:31:53+0000  electric-operator-20250120.734.entry
-  2025-05-24T14:31:53+0000  electric-operator-20250120.734.tar
-Built electric-operator in 3.267s, finished at 2025-05-24T14:31:54+0000
+  2025-05-24T16:43:36+0000  electric-operator-20250120.734.entry
+  2025-05-24T16:43:36+0000  electric-operator-20250120.734.tar
+  2025-05-24T18:55:02+0000  electric-operator-20250524.1712.entry
+  2025-05-24T18:55:02+0000  electric-operator-20250524.1712.tar
+Built electric-operator in 2.966s, finished at 2025-05-24T18:55:03+0000
