@@ -19,7 +19,6 @@ Clojure/ClojureScript/ClojureCLR development:
 * Apropos
 * Macroexpansion
 * Support connecting to socket REPLs
-* Support for Lumo
 * Support for Planck
 * Support for Joker
 

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/polymode/polymode
 
 Updating /mnt/store/melpa/working/polymode/
-Checking out ca060e081a1f849a880732670dc15370ac987b89
+Checking out 789ba7340e352bcdb4b51bb91fda523f7fa2bb9b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/polymode/
-  to /tmp/polymodeQK59AJ/polymode-20230317.1218
+  to /tmp/polymodeteNJ7E/polymode-20250525.1030
     poly-lock.el -> poly-lock.el
     polymode-base.el -> polymode-base.el
     polymode-classes.el -> polymode-classes.el
@@ -19,22 +19,24 @@ Copying files (->) and directories (=>)
     polymode-test-utils.el -> polymode-test-utils.el
     polymode-weave.el -> polymode-weave.el
     polymode.el -> polymode.el
-Created polymode-20230317.1218.tar containing:
-  polymode-20230317.1218/
-  polymode-20230317.1218/poly-lock.el
-  polymode-20230317.1218/polymode-base.el
-  polymode-20230317.1218/polymode-classes.el
-  polymode-20230317.1218/polymode-compat.el
-  polymode-20230317.1218/polymode-core.el
-  polymode-20230317.1218/polymode-debug.el
-  polymode-20230317.1218/polymode-export.el
-  polymode-20230317.1218/polymode-methods.el
-  polymode-20230317.1218/polymode-pkg.el
-  polymode-20230317.1218/polymode-tangle.el
-  polymode-20230317.1218/polymode-test-utils.el
-  polymode-20230317.1218/polymode-weave.el
-  polymode-20230317.1218/polymode.el
+Created polymode-20250525.1030.tar containing:
+  polymode-20250525.1030/
+  polymode-20250525.1030/poly-lock.el
+  polymode-20250525.1030/polymode-base.el
+  polymode-20250525.1030/polymode-classes.el
+  polymode-20250525.1030/polymode-compat.el
+  polymode-20250525.1030/polymode-core.el
+  polymode-20250525.1030/polymode-debug.el
+  polymode-20250525.1030/polymode-export.el
+  polymode-20250525.1030/polymode-methods.el
+  polymode-20250525.1030/polymode-pkg.el
+  polymode-20250525.1030/polymode-tangle.el
+  polymode-20250525.1030/polymode-test-utils.el
+  polymode-20250525.1030/polymode-weave.el
+  polymode-20250525.1030/polymode.el
  ✓ Success:
-  2025-05-25T06:23:55+0000  polymode-20230317.1218.entry
-  2025-05-25T06:23:55+0000  polymode-20230317.1218.tar
-Built polymode in 3.068s, finished at 2025-05-25T06:23:56+0000
+  2025-05-25T08:35:30+0000  polymode-20230317.1218.entry
+  2025-05-25T08:35:30+0000  polymode-20230317.1218.tar
+  2025-05-25T10:47:46+0000  polymode-20250525.1030.entry
+  2025-05-25T10:47:46+0000  polymode-20250525.1030.tar
+Built polymode in 3.417s, finished at 2025-05-25T10:47:47+0000

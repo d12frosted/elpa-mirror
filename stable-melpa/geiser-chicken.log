@@ -1,0 +1,23 @@
+Package: geiser-chicken
+Fetcher: gitlab
+Source:  https://gitlab.com/emacs-geiser/chicken
+
+Updating /mnt/store/melpa/working/geiser-chicken/
+Checking out 5f2c1bb446af6ae4aec9c8d74d4ecb34031706fd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-chicken/
+  to /tmp/geiser-chickene4qFiP/geiser-chicken-20241204.1442
+    geiser-chicken.el -> geiser-chicken.el
+    src => src
+Created geiser-chicken-20241204.1442.tar containing:
+  geiser-chicken-20241204.1442/
+  geiser-chicken-20241204.1442/geiser-chicken-pkg.el
+  geiser-chicken-20241204.1442/geiser-chicken.el
+  geiser-chicken-20241204.1442/src/
+  geiser-chicken-20241204.1442/src/geiser/
+  geiser-chicken-20241204.1442/src/geiser/chicken4.scm
+  geiser-chicken-20241204.1442/src/geiser/chicken5.scm
+ ✓ Success:
+  2025-05-25T10:21:40+0000  geiser-chicken-20241204.1442.entry
+  2025-05-25T10:21:40+0000  geiser-chicken-20241204.1442.tar
+Built geiser-chicken in 2.812s, finished at 2025-05-25T10:21:40+0000
