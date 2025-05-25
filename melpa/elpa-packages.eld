@@ -187,7 +187,7 @@
   (asm-blox :url "https://github.com/zkry/asm-blox")
   (asn1-mode :url "https://github.com/kawabata/asn1-mode")
   (assess :url "https://github.com/phillord/assess")
-  (astro-ts-mode :url "https://github.com/Sorixelle/astro-ts-mode")
+  (astro-ts-mode :url "https://git.isincredibly.gay/srxl/astro-ts-mode.git")
   (astute :url "https://github.com/rnkn/astute")
   (astyle :url "https://github.com/storvik/emacs-astyle")
   (asx :url "https://github.com/ragone/asx")
