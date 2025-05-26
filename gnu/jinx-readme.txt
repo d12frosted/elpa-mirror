@@ -152,7 +152,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   ┌────
   │ (add-to-list 'vertico-multiform-categories
   │ 	     '(jinx grid (vertico-grid-annotate . 20) (vertico-count . 4)))
-  │ (vertico-multiform-mode 1)
+  │ (vertico-multiform-mode)
   └────
 
 

@@ -838,7 +838,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:commit . "1b30a28857727202d1f6a027f83ad66151fb1e92"))])
  (corfu .
-	[(2 1)
+	[(2 2)
 	 ((emacs
 	   (28 1))
 	  (compat
@@ -849,7 +849,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "6db826974963f8fb5d8b9832e7c09da2fea3296a"))])
+	  (:commit . "77e639bc6b982be09f355390beef6f200936109a"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
@@ -2498,7 +2498,7 @@
 		(:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
 		(:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx .
-       [(2 1)
+       [(2 2)
 	((emacs
 	  (28 1))
 	 (compat
@@ -2509,7 +2509,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "84fc35aedddfbf24de144245fe9d1c8a61852f7a"))])
+	 (:commit . "1e143deb27ff9906bf93bd17bbf07e244cc7ca58"))])
  (jit-spell .
 	    [(0 4)
 	     ((emacs
@@ -3356,9 +3356,11 @@
 		  ("Hanno Perrey" . "hanno@hoowl.se"))
 		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern .
-	     [(1 7)
+	     [(1 8)
 	      ((emacs
 		(28 1))
+	       (org
+		(9 5))
 	       (compat
 		(30)))
 	      "Modern looks for Org" tar
@@ -3367,7 +3369,7 @@
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "e7a4c5e4a1d309895c60b3a3b3e62ab1f6a926b4"))])
+	       (:commit . "a58534475b4312b0920aa9d3824272470c8e3500"))])
  (org-notify .
 	     [(0 1 1)
 	      ((emacs
@@ -5068,7 +5070,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "78bc5949db489b143f7424540d6cc56fc529c9ea"))])
  (vertico .
-	  [(2 1)
+	  [(2 2)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -5079,7 +5081,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "3e1e55319fb377a59954ebce4acf772dbb5c9b10"))])
+	    (:commit . "bb6abf63cc439601cd65682cfd549e4b6d63d409"))])
  (vertico-posframe .
 		   [(0 8 0)
 		    ((emacs

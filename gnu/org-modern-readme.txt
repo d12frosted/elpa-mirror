@@ -107,13 +107,17 @@
 3 Incompatibilities
 ═══════════════════
 
-  • `org-indent-mode' is not compatible with the block prettification in
-    the fringe.  If `org-indent-mode' is enabled, `org-modern' will
-    disable the block prettification.
+  • If `org-indent-mode' is enabled, `org-modern' will disable the block
+    prettification in the fringe. See the package [org-modern-indent]
+    which provides a different mechanism for block styling, than using
+    the fringe.
   • `org-num-mode' interferes with the `org-modern' prettification of
     TODO keywords.
   • `visual-wrap-prefix-mode' relies on the `wrap-prefix' text property
     which is also used by `org-modern'.
+
+
+[org-modern-indent] <https://github.com/jdtsmith/org-modern-indent>
 
 
 4 Alternatives
@@ -133,7 +137,7 @@
   with the builtin `prettify-symbols-mode' which can be used for
   individual styling of custom keywords.
 
-  Alternatives are the older `org-superstar' and `org-bullets' packages,
+  Alternatives are the older [org-superstar] and [org-bullets] packages,
   which are more limited and mainly adjust headlines and
   lists. `org-superstar' relies on character composition, while
   `org-modern' uses text properties, which are considered more
@@ -142,8 +146,18 @@
   elements, e.g., `org-modern-timestamp', if you only want to use the
   subset of `org-modern' equivalent to `org-superstar'.
 
+  For an alternative source block styling technique, please take a look
+  at the [org-modern-indent] package. Org-modern-indent can even style
+  source blocks when `org-indent-mode' is enabled.
+
 
 [svg-tag-mode] <https://github.com/rougier/svg-tag-mode>
+
+[org-superstar] <https://github.com/integral-dw/org-superstar-mode>
+
+[org-bullets] <https://github.com/sabof/org-bullets>
+
+[org-modern-indent] <https://github.com/jdtsmith/org-modern-indent>
 
 
 5 Contributions

@@ -545,9 +545,10 @@ Table of Contents
   6. Install Consult if you want additional featureful completion
      commands, e.g., the buffer switcher `consult-buffer' with preview
      or the line-based search `consult-line'.
-  7. Install Embark-Consult and Wgrep for export from `consult-line' to
-     `occur-mode' buffers and from `consult-grep' to editable
-     `grep-mode' buffers.
+  7. Install Embark-Consult for export from `consult-line' to editable
+     `occur-mode' buffers and from `consult-grep' to `grep-mode'
+     buffers. On Emacs 31, use `grep-edit-mode' for editing or [wgrep]
+     on older Emacs version.
   8. Fine tune Vertico with [extensions].
 
   The ecosystem is modular. You don't have to use all of these
@@ -566,6 +567,8 @@ Table of Contents
 [Embark] <https://github.com/oantolin/embark>
 
 [Orderless] <https://github.com/oantolin/orderless>
+
+[wgrep] <https://github.com/mhayashi1120/Emacs-wgrep>
 
 [extensions] See section 5
 
@@ -627,35 +630,29 @@ Table of Contents
   philosophy:
 
   • [Mct]: Minibuffer and Completions in Tandem. Mct reuses the default
-    `*Completions*' buffer and enhances it with automatic updates and
-    additional keybindings, to select a candidate and move between
-    minibuffer and completions buffer. Since Mct uses a fully functional
-    buffer you can use familiar buffer commands inside the completions
-    buffer. The main distinction to Vertico's approach is that
+    `*Completions*' buffer and enhances it with automatic updates. Since
+    Mct uses a regular buffer you can use the usual movement
+    commands. The main distinction to Vertico's approach is that
     `*Completions*' buffer displays all matching candidates. This has
     the advantage that you can interact freely with the candidates and
     jump around with Isearch or Avy. On the other hand it necessarily
     causes a slowdown.
+  • Icomplete: Emacs comes with the builtin `icomplete-vertical-mode',
+    which is more bare-bone than Vertico. Vertico offers additional
+    flexibility via its [extensions].
   • [Selectrum]: Selectrum is the predecessor of Vertico has been
     deprecated in favor of Vertico. Read the [migration guide] when
-    migrating from Selectrum.  Vertico was designed specifically to
-    address the technical shortcomings of Selectrum. Selectrum is not
-    fully compatible with every Emacs completion command and dynamic
-    completion tables, since it uses its own filtering infrastructure,
-    which deviates from the standard Emacs completion facilities.
-  • Icomplete: Emacs comes with the builtin `icomplete-vertical-mode',
-    which is a more bare-bone than Vertico. Vertico offers additional
-    flexibility thanks to its [extensions].
+    migrating from Selectrum.
 
 
 [Mct] <https://git.sr.ht/~protesilaos/mct>
+
+[extensions] See section 5
 
 [Selectrum] <https://github.com/radian-software/selectrum>
 
 [migration guide]
 <https://github.com/minad/vertico/wiki/Migrating-from-Selectrum-to-Vertico>
-
-[extensions] See section 5
 
 
 9 Resources
@@ -727,23 +724,9 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 11 Debugging Vertico
 ════════════════════
 
-  When you observe an error in the `vertico--exhibit' post command hook,
-  you should install an advice to enforce debugging. This allows you to
-  obtain a stack trace in order to narrow down the location of the
-  error. The reason is that post command hooks are automatically
-  disabled (and not debugged) by Emacs. Otherwise Emacs would become
-  unusable, given that the hooks are executed after every command.
-
-  ┌────
-  │ (setq debug-on-error t)
-  │ 
-  │ (defun force-debug (func &rest args)
-  │   (condition-case e
-  │       (apply func args)
-  │     ((debug error) (signal (car e) (cdr e)))))
-  │ 
-  │ (advice-add #'vertico--exhibit :around #'force-debug)
-  └────
+  Vertico will automatically print a stack trace to the `*Messages*'
+  buffer when an error is detected. The stack trace allows you to narrow
+  down the exact code location which caused the error.
 
 
 12 Problematic completion commands

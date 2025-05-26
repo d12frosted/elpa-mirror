@@ -7,7 +7,7 @@ extends `clojure-mode` with commands to evaluate forms directly in the
 REPL.
 
 `inf-clojure` provides a set of essential features for interactive
-Clojure(Script) development:
+Clojure/ClojureScript/ClojureCLR development:
 
 * REPL
 * Interactive code evaluation
@@ -18,7 +18,6 @@ Clojure(Script) development:
 * Apropos
 * Macroexpansion
 * Support connecting to socket REPLs
-* Support for Lumo
 * Support for Planck
 * Support for Joker
 
