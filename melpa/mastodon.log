@@ -1,0 +1,56 @@
+Package: mastodon
+Fetcher: codeberg
+Source:  https://codeberg.org/martianh/mastodon.el
+
+Updating /mnt/store/melpa/working/mastodon/
+Checking out 163ba2b0b89a292b99bff0f574f5584ec888469a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mastodon/
+  to /tmp/mastodonTTou9R/mastodon-20250330.1519
+  ! lisp/mastodon-async.el -> mastodon-async.el
+  ! lisp/mastodon-auth.el -> mastodon-auth.el
+  ! lisp/mastodon-client.el -> mastodon-client.el
+  ! lisp/mastodon-discover.el -> mastodon-discover.el
+  ! lisp/mastodon-http.el -> mastodon-http.el
+  ! lisp/mastodon-inspect.el -> mastodon-inspect.el
+  ! lisp/mastodon-iso.el -> mastodon-iso.el
+  ! lisp/mastodon-media.el -> mastodon-media.el
+  ! lisp/mastodon-notifications.el -> mastodon-notifications.el
+  ! lisp/mastodon-profile.el -> mastodon-profile.el
+  ! lisp/mastodon-search.el -> mastodon-search.el
+  ! lisp/mastodon-tl.el -> mastodon-tl.el
+  ! lisp/mastodon-toot.el -> mastodon-toot.el
+  ! lisp/mastodon-transient.el -> mastodon-transient.el
+  ! lisp/mastodon-views.el -> mastodon-views.el
+  ! lisp/mastodon-widget.el -> mastodon-widget.el
+  ! lisp/mastodon.el -> mastodon.el
+    dir -> dir
+    mastodon.info -> mastodon.info
+    mastodon.texi -> mastodon.texi
+Generating mastodon.info
+Created mastodon-20250330.1519.tar containing:
+  mastodon-20250330.1519/
+  mastodon-20250330.1519/dir
+  mastodon-20250330.1519/mastodon-async.el
+  mastodon-20250330.1519/mastodon-auth.el
+  mastodon-20250330.1519/mastodon-client.el
+  mastodon-20250330.1519/mastodon-discover.el
+  mastodon-20250330.1519/mastodon-http.el
+  mastodon-20250330.1519/mastodon-inspect.el
+  mastodon-20250330.1519/mastodon-iso.el
+  mastodon-20250330.1519/mastodon-media.el
+  mastodon-20250330.1519/mastodon-notifications.el
+  mastodon-20250330.1519/mastodon-pkg.el
+  mastodon-20250330.1519/mastodon-profile.el
+  mastodon-20250330.1519/mastodon-search.el
+  mastodon-20250330.1519/mastodon-tl.el
+  mastodon-20250330.1519/mastodon-toot.el
+  mastodon-20250330.1519/mastodon-transient.el
+  mastodon-20250330.1519/mastodon-views.el
+  mastodon-20250330.1519/mastodon-widget.el
+  mastodon-20250330.1519/mastodon.el
+  mastodon-20250330.1519/mastodon.info
+ ✓ Success:
+  2025-05-27T18:31:38+0000  mastodon-20250330.1519.entry
+  2025-05-27T18:31:38+0000  mastodon-20250330.1519.tar
+Built mastodon in 10.519s, finished at 2025-05-27T18:31:40+0000
