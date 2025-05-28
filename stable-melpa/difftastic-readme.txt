@@ -18,6 +18,8 @@ Features
   your user them are used for consistent visual experience.
 - Chunks and file navigation using `n' / `N' (or `M-n') and `p' / `P' (or
   `M-p'), as well as `C-M-f', `C-M-b', and `C-M-SPC' in generated diffs.
+- Hide chunks and files with `TAB' when on a chunk/file header.  Use `C-u
+  TAB' to hide whole file.
 - DWIM workflows from `magit'.
 - Use difftastic do compare files and buffers (also directly from `dired').
 - Rerun `difftastic' with `g' to use current window width to "reflow"
@@ -367,6 +369,8 @@ aspects of interaction with `difft':
 `difftastic-mode' Behavior
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+- `difftastic-visibility-indicator' - controls whether and how to show
+  hidden/visible chunk/files.
 - `difftastic-diff-visit-avoid-head-blob' - controls whether to avoid
   visiting blob of a `HEAD' revision when visiting file form a
   `difftastic-mode' buffer.
