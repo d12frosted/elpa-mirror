@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/tninja/aider.el
 
 Updating /mnt/store/melpa/working/aider/
-Checking out d32f78df7a1ad99990970c1998269f001c16412f
+Checking out 0dc66268f1e49ea21c07d9a748bcd918765fda1d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/aider/
-  to /tmp/aiderMCD3tI/aider-20250527.1350
+  to /tmp/aider57nHUM/aider-20250528.1432
     aider-agile.el -> aider-agile.el
     aider-bootstrap.el -> aider-bootstrap.el
     aider-code-change.el -> aider-code-change.el
@@ -21,82 +21,82 @@ Copying files (->) and directories (=>)
     aider-software-planning.el -> aider-software-planning.el
     aider.el -> aider.el
     snippets => snippets
-Created aider-20250527.1350.tar containing:
-  aider-20250527.1350/
-  aider-20250527.1350/aider-agile.el
-  aider-20250527.1350/aider-bootstrap.el
-  aider-20250527.1350/aider-code-change.el
-  aider-20250527.1350/aider-code-read.el
-  aider-20250527.1350/aider-core.el
-  aider-20250527.1350/aider-discussion.el
-  aider-20250527.1350/aider-doom.el
-  aider-20250527.1350/aider-file.el
-  aider-20250527.1350/aider-helm.el
-  aider-20250527.1350/aider-legacy-code.el
-  aider-20250527.1350/aider-pkg.el
-  aider-20250527.1350/aider-prompt-mode.el
-  aider-20250527.1350/aider-software-planning.el
-  aider-20250527.1350/aider.el
-  aider-20250527.1350/snippets/
-  aider-20250527.1350/snippets/aider-prompt-mode/
-  aider-20250527.1350/snippets/aider-prompt-mode/add-comments
-  aider-20250527.1350/snippets/aider-prompt-mode/add-documentation
-  aider-20250527.1350/snippets/aider-prompt-mode/add-parameter
-  aider-20250527.1350/snippets/aider-prompt-mode/algorithm
-  aider-20250527.1350/snippets/aider-prompt-mode/architecture-diagram
-  aider-20250527.1350/snippets/aider-prompt-mode/class
-  aider-20250527.1350/snippets/aider-prompt-mode/code-alternatives
-  aider-20250527.1350/snippets/aider-prompt-mode/code-review
-  aider-20250527.1350/snippets/aider-prompt-mode/codegen
-  aider-20250527.1350/snippets/aider-prompt-mode/commit
-  aider-20250527.1350/snippets/aider-prompt-mode/create-boilerplate
-  aider-20250527.1350/snippets/aider-prompt-mode/create-class
-  aider-20250527.1350/snippets/aider-prompt-mode/create-function
-  aider-20250527.1350/snippets/aider-prompt-mode/create-tests
-  aider-20250527.1350/snippets/aider-prompt-mode/debug
-  aider-20250527.1350/snippets/aider-prompt-mode/debug-component
-  aider-20250527.1350/snippets/aider-prompt-mode/design
-  aider-20250527.1350/snippets/aider-prompt-mode/diff-change
-  aider-20250527.1350/snippets/aider-prompt-mode/docs
-  aider-20250527.1350/snippets/aider-prompt-mode/entity-relationship-diagram
-  aider-20250527.1350/snippets/aider-prompt-mode/explain
-  aider-20250527.1350/snippets/aider-prompt-mode/explain-code
-  aider-20250527.1350/snippets/aider-prompt-mode/fix-errors
-  aider-20250527.1350/snippets/aider-prompt-mode/follow-style-guidelines
-  aider-20250527.1350/snippets/aider-prompt-mode/generate-cheat-sheet
-  aider-20250527.1350/snippets/aider-prompt-mode/generate-dockerfile
-  aider-20250527.1350/snippets/aider-prompt-mode/generate-readme
-  aider-20250527.1350/snippets/aider-prompt-mode/improve
-  aider-20250527.1350/snippets/aider-prompt-mode/improve-error-handling
-  aider-20250527.1350/snippets/aider-prompt-mode/improve-performance
-  aider-20250527.1350/snippets/aider-prompt-mode/init
-  aider-20250527.1350/snippets/aider-prompt-mode/merge
-  aider-20250527.1350/snippets/aider-prompt-mode/mermaid-architecture-diagram
-  aider-20250527.1350/snippets/aider-prompt-mode/modernize-best-practices
-  aider-20250527.1350/snippets/aider-prompt-mode/modernize-code
-  aider-20250527.1350/snippets/aider-prompt-mode/optimize
-  aider-20250527.1350/snippets/aider-prompt-mode/optimize-prompt
-  aider-20250527.1350/snippets/aider-prompt-mode/practices
-  aider-20250527.1350/snippets/aider-prompt-mode/query
-  aider-20250527.1350/snippets/aider-prompt-mode/refactor-code
-  aider-20250527.1350/snippets/aider-prompt-mode/review
-  aider-20250527.1350/snippets/aider-prompt-mode/review-code
-  aider-20250527.1350/snippets/aider-prompt-mode/review-logical-errors
-  aider-20250527.1350/snippets/aider-prompt-mode/rewrite-code
-  aider-20250527.1350/snippets/aider-prompt-mode/rewrite-prompt
-  aider-20250527.1350/snippets/aider-prompt-mode/schema
-  aider-20250527.1350/snippets/aider-prompt-mode/security
-  aider-20250527.1350/snippets/aider-prompt-mode/suggest-improvements
-  aider-20250527.1350/snippets/aider-prompt-mode/transpile-code
-  aider-20250527.1350/snippets/aider-prompt-mode/unit-tests
-  aider-20250527.1350/snippets/aider-prompt-mode/validate-recommendations
-  aider-20250527.1350/snippets/aider-prompt-mode/validate-recommendations-reflection
-  aider-20250527.1350/snippets/aider-prompt-mode/world-class-engineer
-  aider-20250527.1350/snippets/aider-prompt-mode/write-blog
-  aider-20250527.1350/snippets/aider-prompt-mode/write-code
-  aider-20250527.1350/snippets/aider-prompt-mode/write-regex
-  aider-20250527.1350/snippets/aider-prompt-mode/write-terms-conditions
+Created aider-20250528.1432.tar containing:
+  aider-20250528.1432/
+  aider-20250528.1432/aider-agile.el
+  aider-20250528.1432/aider-bootstrap.el
+  aider-20250528.1432/aider-code-change.el
+  aider-20250528.1432/aider-code-read.el
+  aider-20250528.1432/aider-core.el
+  aider-20250528.1432/aider-discussion.el
+  aider-20250528.1432/aider-doom.el
+  aider-20250528.1432/aider-file.el
+  aider-20250528.1432/aider-helm.el
+  aider-20250528.1432/aider-legacy-code.el
+  aider-20250528.1432/aider-pkg.el
+  aider-20250528.1432/aider-prompt-mode.el
+  aider-20250528.1432/aider-software-planning.el
+  aider-20250528.1432/aider.el
+  aider-20250528.1432/snippets/
+  aider-20250528.1432/snippets/aider-prompt-mode/
+  aider-20250528.1432/snippets/aider-prompt-mode/add-comments
+  aider-20250528.1432/snippets/aider-prompt-mode/add-documentation
+  aider-20250528.1432/snippets/aider-prompt-mode/add-parameter
+  aider-20250528.1432/snippets/aider-prompt-mode/algorithm
+  aider-20250528.1432/snippets/aider-prompt-mode/architecture-diagram
+  aider-20250528.1432/snippets/aider-prompt-mode/class
+  aider-20250528.1432/snippets/aider-prompt-mode/code-alternatives
+  aider-20250528.1432/snippets/aider-prompt-mode/code-review
+  aider-20250528.1432/snippets/aider-prompt-mode/codegen
+  aider-20250528.1432/snippets/aider-prompt-mode/commit
+  aider-20250528.1432/snippets/aider-prompt-mode/create-boilerplate
+  aider-20250528.1432/snippets/aider-prompt-mode/create-class
+  aider-20250528.1432/snippets/aider-prompt-mode/create-function
+  aider-20250528.1432/snippets/aider-prompt-mode/create-tests
+  aider-20250528.1432/snippets/aider-prompt-mode/debug
+  aider-20250528.1432/snippets/aider-prompt-mode/debug-component
+  aider-20250528.1432/snippets/aider-prompt-mode/design
+  aider-20250528.1432/snippets/aider-prompt-mode/diff-change
+  aider-20250528.1432/snippets/aider-prompt-mode/docs
+  aider-20250528.1432/snippets/aider-prompt-mode/entity-relationship-diagram
+  aider-20250528.1432/snippets/aider-prompt-mode/explain
+  aider-20250528.1432/snippets/aider-prompt-mode/explain-code
+  aider-20250528.1432/snippets/aider-prompt-mode/fix-errors
+  aider-20250528.1432/snippets/aider-prompt-mode/follow-style-guidelines
+  aider-20250528.1432/snippets/aider-prompt-mode/generate-cheat-sheet
+  aider-20250528.1432/snippets/aider-prompt-mode/generate-dockerfile
+  aider-20250528.1432/snippets/aider-prompt-mode/generate-readme
+  aider-20250528.1432/snippets/aider-prompt-mode/improve
+  aider-20250528.1432/snippets/aider-prompt-mode/improve-error-handling
+  aider-20250528.1432/snippets/aider-prompt-mode/improve-performance
+  aider-20250528.1432/snippets/aider-prompt-mode/init
+  aider-20250528.1432/snippets/aider-prompt-mode/merge
+  aider-20250528.1432/snippets/aider-prompt-mode/mermaid-architecture-diagram
+  aider-20250528.1432/snippets/aider-prompt-mode/modernize-best-practices
+  aider-20250528.1432/snippets/aider-prompt-mode/modernize-code
+  aider-20250528.1432/snippets/aider-prompt-mode/optimize
+  aider-20250528.1432/snippets/aider-prompt-mode/optimize-prompt
+  aider-20250528.1432/snippets/aider-prompt-mode/practices
+  aider-20250528.1432/snippets/aider-prompt-mode/query
+  aider-20250528.1432/snippets/aider-prompt-mode/refactor-code
+  aider-20250528.1432/snippets/aider-prompt-mode/review
+  aider-20250528.1432/snippets/aider-prompt-mode/review-code
+  aider-20250528.1432/snippets/aider-prompt-mode/review-logical-errors
+  aider-20250528.1432/snippets/aider-prompt-mode/rewrite-code
+  aider-20250528.1432/snippets/aider-prompt-mode/rewrite-prompt
+  aider-20250528.1432/snippets/aider-prompt-mode/schema
+  aider-20250528.1432/snippets/aider-prompt-mode/security
+  aider-20250528.1432/snippets/aider-prompt-mode/suggest-improvements
+  aider-20250528.1432/snippets/aider-prompt-mode/transpile-code
+  aider-20250528.1432/snippets/aider-prompt-mode/unit-tests
+  aider-20250528.1432/snippets/aider-prompt-mode/validate-recommendations
+  aider-20250528.1432/snippets/aider-prompt-mode/validate-recommendations-reflection
+  aider-20250528.1432/snippets/aider-prompt-mode/world-class-engineer
+  aider-20250528.1432/snippets/aider-prompt-mode/write-blog
+  aider-20250528.1432/snippets/aider-prompt-mode/write-code
+  aider-20250528.1432/snippets/aider-prompt-mode/write-regex
+  aider-20250528.1432/snippets/aider-prompt-mode/write-terms-conditions
  ✓ Success:
-  2025-05-28T14:03:06+0000  aider-20250527.1350.entry
-  2025-05-28T14:03:06+0000  aider-20250527.1350.tar
-Built aider in 3.294s, finished at 2025-05-28T14:03:07+0000
+  2025-05-28T18:27:02+0000  aider-20250528.1432.entry
+  2025-05-28T18:27:02+0000  aider-20250528.1432.tar
+Built aider in 3.542s, finished at 2025-05-28T18:27:03+0000
