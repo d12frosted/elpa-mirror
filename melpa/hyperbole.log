@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/hyperbole/
 Checking out b8d3e67c58a01f22b5a9a376472944d983279469
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperbole/
-  to /tmp/hyperbolerAD7Pv/hyperbole-20250528.240
+  to /tmp/hyperbolem7r5NS/hyperbole-20250528.240
     hact.el -> hact.el
     hactypes.el -> hactypes.el
     hargs.el -> hargs.el
@@ -171,13 +171,13 @@ Copying files (->) and directories (=>)
     test/hy-test-dependencies.el -> test/hy-test-dependencies.el
     test/hy-test-helpers.el -> test/hy-test-helpers.el
 Generating hyperbole.info
-Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperbolerAD7Pv/hyperbole-20250528.240/hyperbole.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperbolem7r5NS/hyperbole-20250528.240/hyperbole.info' exited with non-zero exit-code: 1
 hyperbole.texi:10945: @node seen before @end group
 hyperbole.texi:10945: @node seen before @end format
 hyperbole.texi:11059: unmatched `@end group'
 hyperbole.texi:11060: unmatched `@end format'
 
-Error: (error "Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperbolerAD7Pv/hyperbole-20250528.240/hyperbole.info' exited with non-zero exit-code: 1")
+Error: (error "Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperbolem7r5NS/hyperbole-20250528.240/hyperbole.info' exited with non-zero exit-code: 1")
 Command `install-info --dir\=dir hyperbole.info' exited with non-zero exit-code: 1
 install-info: No such file or directory for hyperbole.info
 
@@ -355,6 +355,6 @@ Created hyperbole-20250528.240.tar containing:
   hyperbole-20250528.240/test/test-helpers-tests.el
   hyperbole-20250528.240/topwin.py
  ✓ Success:
-  2025-05-29T18:56:08+0000  hyperbole-20250528.240.entry
-  2025-05-29T18:56:08+0000  hyperbole-20250528.240.tar
-Built hyperbole in 11.101s, finished at 2025-05-29T18:56:10+0000
+  2025-05-30T03:31:02+0000  hyperbole-20250528.240.entry
+  2025-05-30T03:31:01+0000  hyperbole-20250528.240.tar
+Built hyperbole in 8.241s, finished at 2025-05-30T03:31:03+0000
