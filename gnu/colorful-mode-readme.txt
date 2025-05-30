@@ -105,19 +105,24 @@ buffer in real time and in a user friendly way based/inspired on
     ⁃ colorful-add-hsl-colors.
     ⁃ colorful-add-latex-colors
 
-  • `colorful-exclude-colors (default: '("#define"))' List of keyword to
-    don't highlight.
-  • `colorful-short-hex-conversions (default: t)' If non-nil, hex values
-    converted by colorful should be as short as possible.  Setting this
-    to 2 will make hex values follow a 24-bit specification
-    (#RRGGBB[AA]) and can make them inaccurate.
-  • `colorful-only-strings (default: nil)' If non-nil colorful will only
-    highlight colors inside strings.  If set to only-prog, only
-    highlight colors in strings if current major mode is derived from
-    prog-mode.
-  • `global-colorful-modes (default: '(mhtml-mode html-ts-mode scss-mode
-    css-mode css-ts-mode prog-mode))' Which major modes
-    global-colorful-mode is switched on in (globally).
+  • `colorful-exclude-colors (default: '("#define"))' List of keywords
+    not to highlight.
+  • `colorful-short-hex-conversions (default: t)' If non-nil, colorful
+    will converted long hex colors to \"#RRGGBB\" format.  Setting this
+    to non-nil can make converted hex inaccurate.
+  • `colorful-only-strings (default: nil)' If non-nil, colorful will
+    only highlight colors inside strings.  If set to `only-prog', the
+    colors in `prog-mode' will be highlighted only if they are inside a
+    string, this doesn't include `css-mode' and derived.
+  • `colorful-highlight-in-comments' If non-nil, colorful will highlight
+    colors inside comments.  NOTE: If this is set, this will highlight
+    any keyword within the comments, including color names, which can be
+    annoying.
+  • `colorful-html-colors-alist' Alist of HTML colors. Each entry should
+    have the form (COLOR-NAME . HEXADECIMAL-COLOR).
+  • `global-colorful-modes (default: '(prog-mode help-mode html-mode
+    css-mode latex-mode))' Which major modes global-colorful-mode is
+    switched on in (globally).
 
 
 3.2 Faces
@@ -130,13 +135,12 @@ buffer in real time and in a user friendly way based/inspired on
 3.3 Interactive User Functions.
 ───────────────────────────────
 
-  • `colorful-change-or-copy-color' Change or copy color to a converted
-    format at current cursor position.
-  • `colorful-convert-and-change-color' Convert color to other format
-    and replace color at point or active mark.  If mark is active,
-    convert colors in mark.
-  • `colorful-convert-and-copy-color' Convert color to an other and copy
-    it at point.
+  • `colorful-change-or-copy-color' Change or copy color at point to
+    another format.
+  • `colorful-convert-and-change-color' Convert color at point or colors
+    in region to another format.
+  • `colorfu-convert-and-copy-color' Convert color at point to another
+    format and copy it to the kill ring.
   • `colorful-mode' Buffer-local minor mode.
   • `global-colorful-mode' Global minor mode.
 
@@ -227,17 +231,22 @@ buffer in real time and in a user friendly way based/inspired on
   │ (add-hook 'post-command-hook
   │ 	  (lambda ()
   │ 	    "delete colorful overlay on active mark"
-  │ 	    (when-let (colorful-mode
-  │ 		       (beg (region-beginning))
-  │ 		       (end (region-end)))
-  │ 	      (if (use-region-p)
+  │ 	    (when-let* (colorful-mode
+  │ 			(beg (use-region-beginning))
+  │ 			(end (use-region-end)))
+  │ 	      ;; Remove full colorful overlay instead only the part where
+  │ 	      ;; the region is.
   │ 		  (dolist (ov (overlays-in beg end))
   │ 		    (when (overlay-get ov 'colorful--overlay)
-  │ 		      (remove-overlays (overlay-start ov) (overlay-end ov)
-  │ 				       'colorful--overlay t)))
-  │ 		(save-excursion
-  │ 		  (font-lock-fontify-region beg end)))))
-  │ 	  nil t)
+  │ 		      (delete-overlay ov))))))
+  │ 
+  │ (add-hook 'deactivate-mark-hook
+  │ 	  (lambda ()
+  │ 	    "refontify deleted mark"
+  │ 	    (when-let* (colorful-mode
+  │ 			(beg (region-beginning))
+  │ 			(end (region-end)))
+  │ 	      (font-lock-flush beg end))))
   └────
 
 

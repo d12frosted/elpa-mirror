@@ -657,11 +657,11 @@
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
 	       (:commit . "caffb420be106cebbdfe4474ed0507a601603f83"))])
  (colorful-mode .
-		[(1 2 3)
+		[(1 2 4)
 		 ((emacs
 		   (28 1))
 		  (compat
-		   (30 0 2 0)))
+		   (30 1 0 0)))
 		 "Preview any color in your buffer in real time" tar
 		 ((:url . "https://github.com/DevelopmentCool2449/colorful-mode")
 		  (:keywords "faces" "tools" "matching" "convenience")
@@ -670,7 +670,7 @@
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:authors
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
-		  (:commit . "f749116188d4be195050c2c96baf5b7899734dab"))])
+		  (:commit . "25ad453e4d4e6d9d9e9adf6ccc510231a6059483"))])
  (comint-mime .
 	      [(0 7)
 	       ((emacs
@@ -4734,7 +4734,7 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "ffb7d656a2c89f86ccd2de51379de9612c7a4aa3"))])
  (tramp .
-	[(2 7 2 3 1)
+	[(2 7 2 4)
 	 ((emacs
 	   (27 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -4744,7 +4744,7 @@
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 	   ("Michael Albinus" . "michael.albinus@gmx.de"))
-	  (:commit . "7ccd3818b74245cb0b4ffe1aac8b71ad2aef79a9"))])
+	  (:commit . "c37e5fa5f4e60a19b38089672fbad377035a33a2"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
