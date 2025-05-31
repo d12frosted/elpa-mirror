@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/mohkale/projection
 
 Updating /mnt/store/melpa/working/projection/
-Checking out 50d4f0ec4edfddd24f7c1c540f299a919aa4c151
+Checking out c92a64088947d2d7381a1a53b53473a89bc57e87
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection/
-  to /tmp/projection4UyVPZ/projection-20241107.2107
+  to /tmp/projectiontsXSwN/projection-20250531.1124
   ! src/projection-artifacts.el -> projection-artifacts.el
   ! src/projection-commands.el -> projection-commands.el
   ! src/projection-core-cache.el -> projection-core-cache.el
@@ -28,31 +28,33 @@ Copying files (->) and directories (=>)
   ! src/projection-types.el -> projection-types.el
   ! src/projection-utils.el -> projection-utils.el
   ! src/projection.el -> projection.el
-Created projection-20241107.2107.tar containing:
-  projection-20241107.2107/
-  projection-20241107.2107/projection-artifacts.el
-  projection-20241107.2107/projection-commands.el
-  projection-20241107.2107/projection-core-cache.el
-  projection-20241107.2107/projection-core-commands.el
-  projection-20241107.2107/projection-core-completion.el
-  projection-20241107.2107/projection-core-log.el
-  projection-20241107.2107/projection-core-match.el
-  projection-20241107.2107/projection-core-misc.el
-  projection-20241107.2107/projection-core-type.el
-  projection-20241107.2107/projection-core.el
-  projection-20241107.2107/projection-find.el
-  projection-20241107.2107/projection-hook.el
-  projection-20241107.2107/projection-ibuffer.el
-  projection-20241107.2107/projection-pkg.el
-  projection-20241107.2107/projection-recentf.el
-  projection-20241107.2107/projection-type-cmake.el
-  projection-20241107.2107/projection-type-golang.el
-  projection-20241107.2107/projection-type-gradle.el
-  projection-20241107.2107/projection-type-meson.el
-  projection-20241107.2107/projection-types.el
-  projection-20241107.2107/projection-utils.el
-  projection-20241107.2107/projection.el
+Created projection-20250531.1124.tar containing:
+  projection-20250531.1124/
+  projection-20250531.1124/projection-artifacts.el
+  projection-20250531.1124/projection-commands.el
+  projection-20250531.1124/projection-core-cache.el
+  projection-20250531.1124/projection-core-commands.el
+  projection-20250531.1124/projection-core-completion.el
+  projection-20250531.1124/projection-core-log.el
+  projection-20250531.1124/projection-core-match.el
+  projection-20250531.1124/projection-core-misc.el
+  projection-20250531.1124/projection-core-type.el
+  projection-20250531.1124/projection-core.el
+  projection-20250531.1124/projection-find.el
+  projection-20250531.1124/projection-hook.el
+  projection-20250531.1124/projection-ibuffer.el
+  projection-20250531.1124/projection-pkg.el
+  projection-20250531.1124/projection-recentf.el
+  projection-20250531.1124/projection-type-cmake.el
+  projection-20250531.1124/projection-type-golang.el
+  projection-20250531.1124/projection-type-gradle.el
+  projection-20250531.1124/projection-type-meson.el
+  projection-20250531.1124/projection-types.el
+  projection-20250531.1124/projection-utils.el
+  projection-20250531.1124/projection.el
  ✓ Success:
-  2025-05-31T07:27:35+0000  projection-20241107.2107.entry
-  2025-05-31T07:27:35+0000  projection-20241107.2107.tar
-Built projection in 2.897s, finished at 2025-05-31T07:27:36+0000
+  2025-05-31T09:33:36+0000  projection-20241107.2107.entry
+  2025-05-31T09:33:36+0000  projection-20241107.2107.tar
+  2025-05-31T11:40:21+0000  projection-20250531.1124.entry
+  2025-05-31T11:40:20+0000  projection-20250531.1124.tar
+Built projection in 3.003s, finished at 2025-05-31T11:40:21+0000
