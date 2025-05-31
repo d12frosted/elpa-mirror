@@ -1,6 +1,6 @@
-			  ━━━━━━━━━━━━━━━━━━━
-			   GNUPLOT FOR EMACS
-			  ━━━━━━━━━━━━━━━━━━━
+                          ━━━━━━━━━━━━━━━━━━━
+                           GNUPLOT FOR EMACS
+                          ━━━━━━━━━━━━━━━━━━━
 
 
 This package allows running [gnuplot] files from within the [GNU Emacs]
@@ -24,12 +24,9 @@ gnuplot version 5.0 or above.
 1 Installation
 ══════════════
 
-1.1 Using MELPA
-───────────────
-
   The easiest way to install `gnuplot-mode' is to directly get it from
-  [MELPA]. After [configuring Emacs to use MELPA], you should be able to
-  install gnuplot-mode by typing
+  [NonGNU ELPA] or [MELPA]. After configuring Emacs to use MELPA, you
+  should be able to install gnuplot-mode by typing
 
   ┌────
   │ M-x install-package RET gnuplot RET
@@ -39,90 +36,25 @@ gnuplot version 5.0 or above.
   or do `M-x list-packages' and search for `gnuplot' in the list.
 
 
-[MELPA] <http://melpa.milkbox.net>
+[NonGNU ELPA] <https://elpa.nongnu.org/>
 
-[configuring Emacs to use MELPA] <http://melpa.milkbox.net/#installing>
-
-
-1.2 Using `el-get'
-──────────────────
-
-  The [el-get] package includes a gnuplot-mode recipe. So to install
-  simply call
-
-  ┌────
-  │ M-x el-get-install RET gnuplot-mode
-  └────
-
-
-  Alternatively, you can directly place the following in your init file
-  so that `el-get' can install and load gnuplot-mode at Emacs start up:
-
-  ┌────
-  │ (el-get 'sync 'gnuplot-mode)
-  └────
-
-
-[el-get] <https://github.com/dimitri/el-get.git>
-
-
-1.3 From source
-───────────────
-
-  After fetching the package's source from [the homepage], byte-compile
-  the package's files using the `make' command and move the compiled
-  `.elc' files to your chosen target directory.
-
-
-[the homepage] <https://github.com/emacs-gnuplot/gnuplot>
+[MELPA] <http://melpa.org>
 
 
 2 Configuration
 ═══════════════
 
-2.1 Load Path
-─────────────
-
-  First of all, make sure that `gnuplot.el' is in your load-path (this
-  is automatic if using a package helper like use-package). To do so
-  manually, add the following snippet in your emacs configuration file
-
-  ┌────
-  │ (add-to-list 'load-path "/path/to/gnuplot")
-  └────
-
-
-2.2 Info File
-─────────────
-
-  The function `gnuplot-info-lookup-symbol' looks at the Gnuplot info
-  file. For that function to work, a `gnuplot.info' file must be placed
-  somewhere where info can find it. The following snippet allows you to
-  put the `gnuplot.info' any place convenient:
-
-  ┌────
-  │ (add-to-list 'Info-default-directory-list "/path/to/info/file")
-  └────
-
-
-2.3 Enable Mode
-───────────────
-
-  You can automatically enable `gnuplot-mode' using the snippet below:
-
-  ┌────
-  │ (autoload 'gnuplot-mode "gnuplot" "Gnuplot major mode" t)
-  │ (autoload 'gnuplot-make-buffer "gnuplot" "open a buffer in gnuplot-mode" t)
-  │ (setq auto-mode-alist (append '(("\\.gp$" . gnuplot-mode)) auto-mode-alist))
-  └────
+  `gnuplot-mode' is enabled automatically for `*.gp' files. The function
+  `gnuplot-info-lookup-symbol' looks at the Gnuplot info file.
 
 
 3 Usage
 ═══════
 
-  Apart from enabling `gnuplot-mode' automatically (see above), these
-  two functions are useful for starting up gnuplot-mode:
+  Apart from enabling `gnuplot-mode' automatically for `*.gp' files,
+  these functions are useful for starting up gnuplot-mode:
 
+  • `M-x run-gnuplot' : start gnuplot repl
   • `M-x gnuplot-mode' : start gnuplot-mode in the current buffer
   • `M-x gnuplot-make-buffer' : open a new buffer (which is not visiting
     a file) and start gnuplot-mode in that buffer
@@ -133,26 +65,24 @@ gnuplot version 5.0 or above.
 
   When `gnuplot-mode' is on, the following keybindings are available:
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   C-c C-l         send current line to gnuplot                         
-   C-c C-v         send current line to gnuplot and move forward 1 line 
-   C-c C-r         send current region to gnuplot                       
-   C-c C-b         send entire buffer to gnuplot                        
-   C-c C-f         send a file to gnuplot                               
-   C-c C-i         insert filename at point                             
-   C-c C-n         negate set option on current line                    
-   C-c C-c         comment region                                       
-   C-c C-o         set arguments for command at point                   
-   S-mouse-2       set arguments for command under mouse cursor         
-   C-c C-d         read the gnuplot info file                           
-   C-c C-e         show-gnuplot-buffer                                  
-   C-c C-k         kill gnuplot process                                 
-   C-c C-z         customize gnuplot-mode                               
-   M-tab or M-ret  complete keyword before point                        
-   ret             newline and indent                                   
-   tab             indent current line                                  
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   C-c C-l    send current line to gnuplot                         
+   C-c C-v    send current line to gnuplot and move forward 1 line 
+   C-c C-r    send current region to gnuplot                       
+   C-c C-b    send entire buffer to gnuplot                        
+   C-c C-f    send a file to gnuplot                               
+   C-c C-i    insert filename at point                             
+   C-c C-n    negate set option on current line                    
+   C-c C-c    comment region                                       
+   C-c C-o    set arguments for command at point                   
+   S-mouse-2  set arguments for command under mouse cursor         
+   C-c C-d    read the gnuplot info file                           
+   C-c C-e    show gnuplot buffer                                  
+   C-c C-k    kill gnuplot process                                 
+   C-c C-z    customize gnuplot-mode                               
+   M-tab      complete keyword before point                        
+   tab        indent current line                                  
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   With the exception of the commands for sending commands to Gnuplot,
   most of the above commands also work in the Gnuplot comint buffer, in
@@ -172,14 +102,11 @@ gnuplot version 5.0 or above.
   and suggest only relevant completion candidates on typing `M-TAB' or
   `TAB'. For example, with point after the `with' of a `plot' command,
   tab completion will suggest only plotting styles. This also enables
-  more specific help topic lookup in the gnuplot info file, provided you
-  have the right version of `gnuplot.info' installed (see the
-  Installation section for isntructions).
+  more specific help topic lookup in the gnuplot info file.
 
   If the context-sensitivity annoys you, you can get simple
   non-context-sensitive completion back by toggling
-  `gnuplot-context-sensitive-mode'. See also the variable
-  `gnuplot-tab-completion'.
+  `gnuplot-context-sensitive-mode'.
 
   By its nature, the completion code has to know a fair bit about the
   structure of the gnuplot language. If you use it with an old version
@@ -191,21 +118,20 @@ gnuplot version 5.0 or above.
 3.3 Eldoc mode
 ──────────────
 
-  If you install the file `gnuplot-eldoc.el' from a recent Gnuplot
-  distribution, gnuplot-mode can show syntax hints in the modeline when
-  `eldoc-mode' is turned on and context sensitivity is enabled.
+  `gnuplot-mode' shows syntax hints in the modeline when `eldoc-mode' is
+  turned on and context sensitivity is enabled. Both are enabled by
+  default.
 
 
 3.4 Inline Images
 ─────────────────
 
-  You can optionally have plots displayed inline in the Gnuplot comint
-  process buffer. This is handy for trying things out without having to
-  switch between Emacs and the Gnuplot display. Call
-  `gnuplot-inline-display-mode' in a gnuplot-mode buffer to try it
-  out. This feature is implemented using temporary `png' files, and is
-  also somewhat experimental. It requires Gnuplot to have `png' support
-  and a GNU Emacs with image support. Please report bugs.
+  You can have plots displayed inline in the Gnuplot comint process
+  buffer. This is handy for trying things out without having to switch
+  between Emacs and the Gnuplot display. It requires Gnuplot to have
+  `png' support and a GNU Emacs with image support. Call
+  `gnuplot-external-display-mode' in a gnuplot-mode buffer to disable
+  the feature.
 
 
 4 FAQ / Remarks
@@ -236,10 +162,10 @@ gnuplot version 5.0 or above.
      has been reported to work (see [here] for a reference).
 
   2. Use the simpler [gnuplot-mode] package that sends the entire buffer
-     to gnuplot. Since no `comint' is involved, it should function
-     correctly, but you lose most features of the `gnuplot.el' package.
-     We would like to implement a send-buffer without comint as well
-     eventually.
+     to gnuplot.  Since no `comint' is involved, it should function
+     correctly, but you lose most features of the `gnuplot.el'
+     package. We would like to implement a send-buffer without comint as
+     well eventually.
 
   More information on `gnuplot.el' and Windows can be found on these
   threads: [1], [2]
@@ -285,3 +211,14 @@ gnuplot version 5.0 or above.
 <https://unix.stackexchange.com/questions/496206/unicode-in-gnuplot-terminal/496245#496245>
 
 [rolandog] <https://github.com/rolandog>
+
+
+5 Maintenance
+═════════════
+
+  Regenerate gnuplot.texi and gnuplot-eldoc.el from the Gnuplot source.
+
+  1. `emacs -batch -l doc2texi.el -f d2t-doc-to-texi' inside the
+     gnuplot-*/docs/ directory
+  2. `makeinfo --no-split gnuplot.texi' and ensure that it compiles
+     cleanly

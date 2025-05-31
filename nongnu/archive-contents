@@ -1149,7 +1149,7 @@
 		("Akib Azmain Turja" . "akib@disroot.org"))
 	       (:commit . "6bb82ce89ed93222dd919bc65e0f46ac4aa13479"))])
  (gnuplot .
-	  [(0 8 1)
+	  [(0 9)
 	   ((emacs
 	     (25 1)))
 	   "Major-mode and interactive frontend for gnuplot" tar
@@ -1158,7 +1158,7 @@
 	    (:maintainer
 	     ("Maxime Tréca" . "maxime@gmail.com")
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "663a89d263d4f26b996796d01b6a3b783449e0f5"))])
+	    (:commit . "dad0462cd04190da3ec2603fba601260fa5e8a72"))])
  (go-mode .
 	  [(1 6 0)
 	   ((emacs
