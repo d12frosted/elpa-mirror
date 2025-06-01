@@ -4161,6 +4161,7 @@
   (ox-wk :url "https://github.com/w-vi/ox-wk.el")
   (ox-yaow :url "https://github.com/LaurenceWarne/ox-yaow.el")
   (ox-zenn :url "https://github.com/conao3/ox-zenn.el")
+  (p-search :url "https://github.com/zkry/p-search")
   (p4 :url "https://github.com/gareth-rees/p4.el")
   (p4-ts-mode :url "https://github.com/oxidecomputer/p4-ts-mode")
   (pabbrev :url "https://github.com/phillord/pabbrev")
