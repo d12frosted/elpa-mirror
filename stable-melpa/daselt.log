@@ -1,0 +1,163 @@
+Package: daselt
+Fetcher: gitlab
+Source:  https://gitlab.com/nameiwillforget/d-emacs
+
+Updating /mnt/store/melpa/working/daselt/
+Checking out 6c44cabefa4e6a36f64d4bc250e6d1cf8f2901df
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/daselt/
+  to /tmp/daselt65Thbr/daselt-20250601.1703
+    daselt.el -> daselt.el
+    daselt-base.el -> daselt-base.el
+    daselt-coords.el -> daselt-coords.el
+    daselt-xkb.el -> daselt-xkb.el
+    daselt-dfk.el -> daselt-dfk.el
+    daselt-bind.el -> daselt-bind.el
+    daselt-dirs.el -> daselt-dirs.el
+    example-user-defined-bindlist.dbl -> example-user-defined-bindlist.dbl
+    daselt-stump/daselt-stump.el -> daselt-stump/daselt-stump.el
+    daselt-stump/pkg-configs => daselt-stump/pkg-configs
+    daselt-tri/daselt-tri.el -> daselt-tri/daselt-tri.el
+    daselt-tri/daselt-tri.dbl -> daselt-tri/daselt-tri.dbl
+    daselt-mode/daselt-mode.el -> daselt-mode/daselt-mode.el
+    daselt-mode/pkg-configs => daselt-mode/pkg-configs
+Created daselt-20250601.1703.tar containing:
+  daselt-20250601.1703/
+  daselt-20250601.1703/daselt-base.el
+  daselt-20250601.1703/daselt-bind.el
+  daselt-20250601.1703/daselt-coords.el
+  daselt-20250601.1703/daselt-dfk.el
+  daselt-20250601.1703/daselt-dirs.el
+  daselt-20250601.1703/daselt-mode/
+  daselt-20250601.1703/daselt-mode/daselt-mode.el
+  daselt-20250601.1703/daselt-mode/pkg-configs/
+  daselt-20250601.1703/daselt-mode/pkg-configs/auctex/
+  daselt-20250601.1703/daselt-mode/pkg-configs/auctex/auctex.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/auctex/daselt-auctex.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/avy/
+  daselt-20250601.1703/daselt-mode/pkg-configs/avy/avy-act/
+  daselt-20250601.1703/daselt-mode/pkg-configs/avy/avy-act/avy-act-special-recenter.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/avy/avy-act/avy-act.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/avy/avy-act/avy-act.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/avy/avy.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/back-button/
+  daselt-20250601.1703/daselt-mode/pkg-configs/back-button/.gitkeep
+  daselt-20250601.1703/daselt-mode/pkg-configs/bookmark/
+  daselt-20250601.1703/daselt-mode/pkg-configs/bookmark/bookmark.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/cdlatex/
+  daselt-20250601.1703/daselt-mode/pkg-configs/cdlatex/cdlatex-special-math-modify.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/cdlatex/cdlatex-special-math-symbol.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/cdlatex/cdlatex.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/cdlatex/cdlatex.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/cdlatex/daselt-cdlatex.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/consult/
+  daselt-20250601.1703/daselt-mode/pkg-configs/consult/.gitkeep
+  daselt-20250601.1703/daselt-mode/pkg-configs/corfu/
+  daselt-20250601.1703/daselt-mode/pkg-configs/corfu/corfu.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/corfu/corfu.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/corfu/daselt-corfu.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/daselt-mode/
+  daselt-20250601.1703/daselt-mode/pkg-configs/daselt-mode/daselt-ext.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/daselt-mode/daselt-mode.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/daselt-mode/daselt-mode.tut
+  daselt-20250601.1703/daselt-mode/pkg-configs/dired/
+  daselt-20250601.1703/daselt-mode/pkg-configs/dired/dired.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/doremi/
+  daselt-20250601.1703/daselt-mode/pkg-configs/doremi/daselt-doremi.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/doremi/doremi-special-customs.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/easy-kill/
+  daselt-20250601.1703/daselt-mode/pkg-configs/easy-kill/easy-kill.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/easy-kill/easy-kill.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/edebug/
+  daselt-20250601.1703/daselt-mode/pkg-configs/edebug/edebug.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/ekg/
+  daselt-20250601.1703/daselt-mode/pkg-configs/ekg/ekg.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/elgrep/
+  daselt-20250601.1703/daselt-mode/pkg-configs/elgrep/elgrep.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/emacs/
+  daselt-20250601.1703/daselt-mode/pkg-configs/emacs/daselt-emacs.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/emacs/emacs.daf
+  daselt-20250601.1703/daselt-mode/pkg-configs/emacs/emacs.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/emacs/emacs.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/emacs/special-answers.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/eshell/
+  daselt-20250601.1703/daselt-mode/pkg-configs/eshell/daselt-eshell.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/eww/
+  daselt-20250601.1703/daselt-mode/pkg-configs/eww/daselt-eww.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/eww/eww.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/flycheck/
+  daselt-20250601.1703/daselt-mode/pkg-configs/flycheck/flycheck.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/gnus/
+  daselt-20250601.1703/daselt-mode/pkg-configs/gnus/daselt-gnus.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/gnus/gnus.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/help/
+  daselt-20250601.1703/daselt-mode/pkg-configs/help/daselt-help.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/icicles/
+  daselt-20250601.1703/daselt-mode/pkg-configs/icicles/daselt-icicles.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/icicles/icicles-special-customs.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/image/
+  daselt-20250601.1703/daselt-mode/pkg-configs/image/image.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/info/
+  daselt-20250601.1703/daselt-mode/pkg-configs/info/info.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/magit/
+  daselt-20250601.1703/daselt-mode/pkg-configs/magit/magit.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/org-brain/
+  daselt-20250601.1703/daselt-mode/pkg-configs/org-brain/org-brain.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/org-noter/
+  daselt-20250601.1703/daselt-mode/pkg-configs/org-noter/org-noter.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/org-roam/
+  daselt-20250601.1703/daselt-mode/pkg-configs/org-roam/.gitkeep
+  daselt-20250601.1703/daselt-mode/pkg-configs/org/
+  daselt-20250601.1703/daselt-mode/pkg-configs/org/daselt-org.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/org/org-speed-commands-special.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/org/org.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/org/org.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/pdf-tools/
+  daselt-20250601.1703/daselt-mode/pkg-configs/pdf-tools/daselt-pdf-tools.del
+  daselt-20250601.1703/daselt-mode/pkg-configs/pdf-tools/pdf-tools.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/quick-keys.dbf
+  daselt-20250601.1703/daselt-mode/pkg-configs/shr/
+  daselt-20250601.1703/daselt-mode/pkg-configs/shr/shr.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/smartparens/
+  daselt-20250601.1703/daselt-mode/pkg-configs/smartparens/.gitkeep
+  daselt-20250601.1703/daselt-mode/pkg-configs/tabgo/
+  daselt-20250601.1703/daselt-mode/pkg-configs/tabgo/tabgo.dal
+  daselt-20250601.1703/daselt-mode/pkg-configs/tabgo/tabgo.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/tabulated-list/
+  daselt-20250601.1703/daselt-mode/pkg-configs/tabulated-list/tabulated-list.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/undo-tree/
+  daselt-20250601.1703/daselt-mode/pkg-configs/undo-tree/undo-tree.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/vertico/
+  daselt-20250601.1703/daselt-mode/pkg-configs/vertico/vertico.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/vertico/vertico.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/vterm/
+  daselt-20250601.1703/daselt-mode/pkg-configs/vterm/vterm.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/vterm/vterm.dcl
+  daselt-20250601.1703/daselt-mode/pkg-configs/xref/
+  daselt-20250601.1703/daselt-mode/pkg-configs/xref/xref.dbl
+  daselt-20250601.1703/daselt-mode/pkg-configs/yasnippet/
+  daselt-20250601.1703/daselt-mode/pkg-configs/yasnippet/yasnippet.dbl
+  daselt-20250601.1703/daselt-pkg.el
+  daselt-20250601.1703/daselt-stump/
+  daselt-20250601.1703/daselt-stump/daselt-stump.el
+  daselt-20250601.1703/daselt-stump/pkg-configs/
+  daselt-20250601.1703/daselt-stump/pkg-configs/binwarp/
+  daselt-20250601.1703/daselt-stump/pkg-configs/binwarp/binwarp-special.dbl
+  daselt-20250601.1703/daselt-stump/pkg-configs/iresize/
+  daselt-20250601.1703/daselt-stump/pkg-configs/iresize/iresize-special.dbl
+  daselt-20250601.1703/daselt-stump/pkg-configs/stumpwm/
+  daselt-20250601.1703/daselt-stump/pkg-configs/stumpwm/remapped-keys-special.dbl
+  daselt-20250601.1703/daselt-stump/pkg-configs/stumpwm/stumpwm-init.lisp
+  daselt-20250601.1703/daselt-stump/pkg-configs/stumpwm/stumpwm.dbl
+  daselt-20250601.1703/daselt-tri/
+  daselt-20250601.1703/daselt-tri/daselt-tri.dbl
+  daselt-20250601.1703/daselt-tri/daselt-tri.el
+  daselt-20250601.1703/daselt-xkb.el
+  daselt-20250601.1703/daselt.el
+  daselt-20250601.1703/example-user-defined-bindlist.dbl
+ ✓ Success:
+  2025-06-01T16:30:24+0000  daselt-20250531.2031.entry
+  2025-06-01T16:30:23+0000  daselt-20250531.2031.tar
+  2025-06-01T18:39:03+0000  daselt-20250601.1703.entry
+  2025-06-01T18:39:03+0000  daselt-20250601.1703.tar
+Built daselt in 4.858s, finished at 2025-06-01T18:39:04+0000
