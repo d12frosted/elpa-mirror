@@ -621,7 +621,7 @@
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "972a069f240f071a79da23c98d3519df45bb5851"))])
  (emacsql .
-	  [(4 3 0)
+	  [(4 3 1)
 	   ((emacs
 	     (26 1)))
 	   "High-level SQL database front-end" tar
@@ -629,7 +629,7 @@
 	    (:maintainer "Jonas Bernoulli" . "emacs.emacsql@jonas.bernoulli.dev")
 	    (:authors
 	     ("Christopher Wellons" . "wellons@nullprogram.com"))
-	    (:commit . "5470adaf5dcabebc80c913ac831258fd47a87cbe"))])
+	    (:commit . "ced062890061b6e4fbe4d00c0617f7ff84fff25c"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib
@@ -1530,15 +1530,15 @@
 		(:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
 		(:commit . "d92c3b773473e9fe15f61f6177e4fbf097aadd05"))])
  (llama .
-	[(0 6 2)
+	[(0 6 3)
 	 ((emacs
 	   (26 1))
 	  (compat
-	   (30 0 2 0)))
+	   (30 1)))
 	 "Compact syntax for short lambda" tar
 	 ((:url . "https://github.com/tarsius/llama")
 	  (:keywords "extensions")
-	  (:commit . "48e5bc4919a4a29665362832d59ade8e248b0c3e"))])
+	  (:commit . "6a67e4253cc02aa9ce85ef96290c95198b65d913"))])
  (logview .
 	  [(0 19 2)
 	   ((emacs
@@ -1659,13 +1659,13 @@
 	   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
 	  (:commit . "04ee83d93fabbfbe202e9e7dc781b0dcd4d5b502"))])
  (magit-section .
-		[(4 3 5)
+		[(4 3 6)
 		 ((emacs
 		   (27 1))
 		  (compat
-		   (30 0 2 0))
+		   (30 1))
 		  (llama
-		   (0 6 1))
+		   (0 6 3))
 		  (seq
 		   (2 24)))
 		 "Sections for read-only buffers" tar
@@ -1674,7 +1674,7 @@
 		  (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 		  (:authors
 		   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-		  (:commit . "04ee83d93fabbfbe202e9e7dc781b0dcd4d5b502"))])
+		  (:commit . "2f1ff91f128f28aa277e0e060ef44b4be8a989c1"))])
  (markdown-mode .
 		[(2 7)
 		 ((emacs
