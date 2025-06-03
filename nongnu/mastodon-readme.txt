@@ -683,12 +683,16 @@
 1.5.2 Fixes and features
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  1. Create an [issue] detailing what you'd like to do.
-  2. Fork the repository and create a branch off of `develop'.
-  3. Run the tests and ensure that your code doesn't break any of them.
-  4. Create a pull request (to develop) referencing the issue created in
-     step 1.
+  1. Install [Cask] if you don't already have it installed
+  2. Create an [issue] detailing what you'd like to do.
+  3. Fork the repository and create a branch off of `develop'.
+  4. Run the tests (with `make tests') and ensure that your code doesn't
+     break any of them.
+  5. Create a pull request (to develop) referencing the issue created in
+     step 2.
 
+
+[Cask] <https://cask.readthedocs.io/en/latest/guide/installation.html>
 
 [issue] <https://codeberg.org/martianh/mastodon.el/issues>
 
