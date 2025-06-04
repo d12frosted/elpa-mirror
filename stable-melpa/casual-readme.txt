@@ -57,6 +57,10 @@ supported:
   An interface for the Emacs regular expression tool.
   URL: `https://github.com/kickingvegas/casual/blob/main/docs/re-builder.org'
 
+- Timezone (Elisp library: `casual-timezone')
+  A library of commands to work with different time zones.
+  URL: `https://github.com/kickingvegas/casual/blob/main/docs/timezone.org'
+
 Users can choose any or all of the user interfaces made available by Casual
 at their pleasure.
 
@@ -99,8 +103,8 @@ That said, if you have used :ensure t to install a superseded package, you
 must remove that configuration. After doing so, please follow the above
 instructions for installing `casual'.
 
-If you are using Emacs ≤ 30.0, you will need to update the built-in package
-`transient'. By default, `package.el' will not upgrade a built-in package.
-Set the customizable variable `package-install-upgrade-built-in' to `t' to
-override this. For more details, please refer to the "Install" section on
-this project's repository web page.
+Casual relies on the latest stable release of `transient' which may differ
+from the version that is preinstalled as a built-in. By b default, `package.el'
+will not upgrade a built-in package. Set the customizable variable
+`package-install-upgrade-built-in' to `t' to override this. For more details,
+please refer to the "Install" section on this project's repository web page.
