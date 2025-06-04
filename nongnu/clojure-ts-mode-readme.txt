@@ -123,21 +123,51 @@ Once installed, evaluate `clojure-ts-mode.el` and you should be ready to go.
 > `clojure-ts-mode` install the required grammars automatically, so for most
 > people no manual actions will be required.
 
-`clojure-ts-mode` makes use of two Tree-sitter grammars to work properly:
+`clojure-ts-mode` makes use of the following Tree-sitter grammars:
 
-- The Clojure grammar, mentioned earlier
-- [markdown-inline](https://github.com/MDeiml/tree-sitter-markdown), which
-will be used for docstrings if available and if `clojure-ts-use-markdown-inline` is enabled.
+- The [experimental](https://github.com/sogaiu/tree-sitter-clojure/tree/unstable-20250526) version Clojure grammar. This version includes a few
+  improvements, which potentially will be promoted to a stable release (See [the
+  discussion](https://github.com/sogaiu/tree-sitter-clojure/issues/65)). This grammar is required for proper work of `clojure-ts-mode`.
+- [markdown-inline](https://github.com/MDeiml/tree-sitter-markdown), which will be used for docstrings if available and if
+  `clojure-ts-use-markdown-inline` is enabled.
+- [tree-sitter-regex](https://github.com/tree-sitter/tree-sitter-regex/releases/tag/v0.24.3), which will be used for regex literals if available and if
+  `clojure-ts-use-regex-parser` is not `nil`.
+
+`clojure-ts-clojurescript-mode` can optionally use `tree-sitter-javascript` grammar
+to highlight JS syntax in `js*` forms.  This is enabled by default and can be
+turned off by setting `clojure-ts-clojurescript-use-js-parser` to `nil`.
+
+`clojure-ts-jank-mode` can optionally use `tree-sitter-cpp` grammar to highlight C++
+syntax in `native/raw` forms.  This is enabled by default and can be turned off by
+setting `clojure-ts-jank-use-cpp-parser` to `nil`.
 
 If you have `git` and a C compiler (`cc`) available on your system's `PATH`,
 `clojure-ts-mode` will install the
 grammars when you first open a Clojure file and `clojure-ts-ensure-grammars` is
-set to `t` (the default).
+set to `t` (the default). macOS users can install the required tools like this:
+
+```shell
+xcode-select --install
+```
+
+Similarly, Debian/Ubuntu users can do something like:
+
+```shell
+sudo apt install build-essential
+```
+
+This installs GCC, G++, `make`, and other essential development tools.
 
 If `clojure-ts-mode` fails to automatically install the grammar, you have the
-option to install it manually, Please, refer to the installation instructions of
-each required grammar and make sure you're install the versions expected. (see
-`clojure-ts-grammar-recipes` for details)
+option to install it manually. Please, refer to the installation instructions of
+each required grammar and make sure you're install the versions expected (see
+`clojure-ts-grammar-recipes` for details).
+
+If `clojure-ts-ensure-grammars` is enabled, `clojure-ts-mode` will try to upgrade
+the Clojure grammar if it's outdated. This might happen, when you activate
+`clojure-ts-mode` for the first time after package update. If grammar was
+previously installed, you might need to restart Emacs, because it has to reload
+the grammar binary.
 
 ### Upgrading Tree-sitter grammars
 
@@ -179,7 +209,7 @@ interactively change this behavior.
 Set the var `clojure-ts-indent-style` to change it.
 
 ``` emacs-lisp
-(setq clojure-ts-indent-style 'fixed)
+(setopt clojure-ts-indent-style 'fixed)
 ```
 
 > [!TIP]
@@ -231,7 +261,7 @@ Note that `clojure-ts-semantic-indent-rules` should be set using the
 customization interface or `setopt`; otherwise, it will not be applied
 correctly.
 
-#### Project local indentation
+#### Project-specific indentation
 
 Custom indentation rules can be set for individual projects. To achieve this,
 you need to create a `.dir-locals.el` file in the project root. The content
@@ -243,7 +273,7 @@ should look like:
 ```
 
 In order to apply directory-local variables to existing buffers, they must be
-reverted.
+"reverted" (reloaded).
 
 ### Vertical alignment
 
@@ -286,7 +316,7 @@ Forms that can be aligned vertically are configured via the following variables:
 To highlight entire rich `comment` expression with the comment font face, set
 
 ``` emacs-lisp
-(setq clojure-ts-comment-macro-font-lock-body t)
+(setopt clojure-ts-comment-macro-font-lock-body t)
 ```
 
 By default this is `nil`, so that anything within a `comment` expression is
@@ -299,6 +329,40 @@ highlighted like regular Clojure code.
 > `treesit-font-lock-features-list`. Check [this
 > section](https://www.gnu.org/software/emacs/manual/html_node/emacs/Parser_002dbased-Font-Lock.html)
 > of the Emacs manual for more details.
+
+#### Extending font-lock rules
+
+In `clojure-ts-mode` it is possible to specify additional defn-like forms that
+should be fontified.  For example to highlight the following form from Hiccup
+library as a function definition:
+
+```clojure
+(defelem file-upload
+  "Creates a file upload input."
+  [name]
+  (input-field "file" name nil))
+```
+
+You can add `defelem` to `clojure-ts-extra-def-forms` list like this:
+
+```emacs-lisp
+(add-to-list 'clojure-ts-extra-def-forms "defelem")
+```
+
+or set this variable using `setopt`:
+
+```emacs-lisp
+(setopt clojure-ts-extra-def-forms '("defelem"))
+```
+
+This setting will highlight `defelem` symbol, function name and the docstring.
+
+> [!IMPORTANT]
+>
+> Setting `clojure-ts-extra-def-forms` won't change the indentation rule for
+> these forms.  For indentation rules you should use
+> `clojure-ts-semantic-indent-rules` variable (see [semantic
+> indentation](#customizing-semantic-indentation) section).
 
 ### Highlight markdown syntax in docstrings
 
@@ -332,7 +396,7 @@ Example of regex syntax highlighting:
 To make forms inside of `(comment ...)` forms appear as top-level forms for evaluation and navigation, set
 
 ``` emacs-lisp
-(setq clojure-ts-toplevel-inside-comment-form t)
+(setopt clojure-ts-toplevel-inside-comment-form t)
 ```
 
 ### Fill paragraph
@@ -448,7 +512,7 @@ set. The following commands are available:
 `clojure-ts-add-arity`: Add a new arity to an existing single-arity or
 multi-arity function or macro. Function can be defined using `defn`, `fn` or
 `defmethod` form. This command also supports functions defined inside forms like
-`letfn`, `defprotol`, `reify` or `proxy`.
+`letfn`, `defprotol`, `reify`, `extend-protocol` or `proxy`.
 
 ### Default keybindings
 
@@ -474,6 +538,21 @@ multi-arity function or macro. Function can be defined using `defn`, `fn` or
 
 By default prefix for all refactoring commands is `C-c C-r`. It can be changed
 by customizing `clojure-ts-refactor-map-prefix` variable.
+
+## Code completion
+
+`clojure-ts-mode` provides basic code completion functionality.  Completion only
+works for the current source buffer and includes completion of top-level
+definitions and local bindings.  This feature can be turned off by setting:
+
+```emacs-lisp
+(setopt clojure-ts-completion-enabled nil)
+```
+
+Here's the short video illustrating the feature with Emacs's built-in completion UI (it
+should also work well with more advanced packages like `company` and `corfu`):
+
+https://github.com/user-attachments/assets/7c37179f-5a5d-424f-9bd6-9c8525f6b2f7
 
 ## Migrating to clojure-ts-mode
 
@@ -512,17 +591,12 @@ and `clojure-mode` (this is very helpful when dealing with `derived-mode-p` chec
 - Navigation by sexp/lists might work differently on Emacs versions lower
   than 31. Starting with version 31, Emacs uses Tree-sitter 'things' settings, if
   available, to rebind some commands.
-- The indentation of list elements with metadata is inconsistent with other
-  collections. This inconsistency stems from the grammar's interpretation of
-  nearly every definition or function call as a list. Therefore, modifying the
-  indentation for list elements would adversely affect the indentation of
-  numerous other forms.
 
 ## Frequently Asked Questions
 
 ### What `clojure-mode` features are currently missing?
 
-As of version 0.4.x, `clojure-ts-mode` provides almost all `clojure-mode` features.
+As of version 0.5.x, `clojure-ts-mode` provides almost all `clojure-mode` features.
 Currently only a few refactoring commands are missing.
 
 ### Does `clojure-ts-mode` work with CIDER?
@@ -548,7 +622,15 @@ Check out [this article](https://metaredux.com/posts/2024/02/19/cider-preliminar
 
 ### Does `clojure-ts-mode` work with `inf-clojure`?
 
-Currently, there is an [open PR](https://github.com/clojure-emacs/inf-clojure/pull/215) adding support for inf-clojure.
+Yes, it does. `inf-clojure` 3.3+ supports `clojure-ts-mode`.
+
+### Why does `clojure-ts-mode` require Emacs 30?
+
+You might be wondering why does `clojure-ts-mode` require Emacs 30 instead of
+Emacs 29, which introduced the built-in Tree-sitter support. The answer is
+simple - the initial Tree-sitter support in Emacs 29 had quite a few issues and
+we felt it's better to nudge most people interested in using it to Emacs 30,
+which fixed a lot of the problems.
 
 ## License
 

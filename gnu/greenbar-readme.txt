@@ -22,11 +22,10 @@ from `comint-mode', then you need to add `greenbar-mode' only to
 the desired derived mode hook.  Adding `greenbar-mode' to
 `comint-mode-hook' enables it for all comint derived modes.
 
-The variable `greenbar-color-theme' is a list of predefined bar
-background colors.  Each element of the list is a list: the first
-member of which is a symbol that is the name of the theme; the rest
-of the list are color names which are used as background colors for
-successive bands of lines.
+The variable `greenbar-color-theme' is an Alist of predefined bar
+background colors.  Each element of the Alist consists of a symbol
+that is the name of the theme; the rest of the list are color names
+which are used as background colors for successive bands of lines.
 
 The variable `greenbar-color-list' controls which set of color bars
 are to be applied.  The value is either a name from color theme

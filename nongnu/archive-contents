@@ -311,14 +311,14 @@
 		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
 		 (:commit . "d336db623e7ae8cffff50aaaea3f1b05cc4ccecb"))])
  (clojure-ts-mode .
-		  [(0 4 0)
+		  [(0 5 0)
 		   ((emacs
 		     (30 1)))
 		   "Major mode for Clojure code" tar
 		   ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
 		    (:keywords "languages" "clojure" "clojurescript" "lisp")
 		    (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-		    (:commit . "c2269ea10a9129113a98eb58fc8abd8888a07e94"))])
+		    (:commit . "bd08cd02612507c4012d078eb94ccd7aa9b567b1"))])
  (coffee-mode .
 	      [(0 6 3)
 	       ((emacs
