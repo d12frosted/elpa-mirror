@@ -1,5 +1,5 @@
 This library provides functions to resolve JSON pointers, as defined in
-RFC6901 (https://datatracker.ietf.org/doc/html/rfc6901p),
+RFC6901 (https://datatracker.ietf.org/doc/html/rfc6901),
 within parsed JSON objects, also supporting remote resolution (fetching
 JSON from a URI).
 
