@@ -74,9 +74,8 @@ Table of Contents
 ═════════════════════════════════════
 
   In general, to learn more about what different annotations mean, a
-  good starting point is to look at `marginalia-annotator-registry', and
-  follow up to the annotation function of the category you are
-  interested in.
+  good starting point is to look at `marginalia-annotators', and follow
+  up to the annotation function of the category you are interested in.
 
   For example the annotations for Elisp symbols include their symbol
   class - `v' for variable, `f' for function, `c' for command, etc. For
@@ -141,11 +140,11 @@ Table of Contents
   Marginalia's classifiers.
 
   Once the category of the candidates is known, Marginalia looks in the
-  `marginalia-annotator-registry' to find the associated annotator to
-  use. An annotator is a function that takes a completion candidate
-  string as an argument and returns an annotation string to be displayed
-  after the candidate in the minibuffer. More than one annotator can be
-  assigned to each each category, displaying more, less or different
+  `marginalia-annotators' to find the associated annotator to use. An
+  annotator is a function that takes a completion candidate string as an
+  argument and returns an annotation string to be displayed after the
+  candidate in the minibuffer. More than one annotator can be assigned
+  to each each category, displaying more, less or different
   information. Use the `marginalia-cycle' command to cycle between the
   annotations of different annotators defined for the current category.
 
@@ -162,7 +161,7 @@ Table of Contents
   annotator registry as follows:
 
   ┌────
-  │ (add-to-list 'marginalia-annotator-registry
+  │ (add-to-list 'marginalia-annotators
   │ 	     '(face my-face-annotator marginalia-annotate-face builtin none))
   └────
 
@@ -189,13 +188,13 @@ Table of Contents
   invoking `marginalia-cycle'.
 
   In order to disable an annotator permanently, the
-  `marginalia-annotator-registry' can be modified. For example if you
-  prefer to never see file annotations, you can delete all file
-  annotators from the registry.
+  `marginalia-annotators' can be modified. For example if you prefer to
+  never see file annotations, you can delete all file annotators from
+  the registry.
 
   ┌────
-  │ (setq marginalia-annotator-registry
-  │       (assq-delete-all 'file marginalia-annotator-registry))
+  │ (setq marginalia-annotators
+  │       (assq-delete-all 'file marginalia-annotators))
   └────
 
   To use the builtin annotators by default, you can run the following
@@ -204,7 +203,7 @@ Table of Contents
   ┌────
   │ (mapc (lambda (x)
   │ 	(setcdr x (cons 'builtin (remq 'builtin (cdr x)))))
-  │       marginalia-annotator-registry)
+  │       marginalia-annotators)
   └────
 
   As an alternative to `marginalia-cycle', if a completion category
@@ -219,7 +218,7 @@ Table of Contents
   │      (setcdr x (append (reverse (remq 'none
   │ 				      (remq 'builtin (cdr x))))
   │ 		       '(builtin none))))
-  │    marginalia-annotator-registry))
+  │    marginalia-annotators))
   └────
 
   After cycling the annotators you may want to automatically save the
@@ -230,8 +229,8 @@ Table of Contents
   │ (advice-add #'marginalia-cycle :after
   │ 	    (lambda ()
   │ 	      (let ((inhibit-message t))
-  │ 		(customize-save-variable 'marginalia-annotator-registry
-  │ 					 marginalia-annotator-registry))))
+  │ 		(customize-save-variable 'marginalia-annotators
+  │ 					 marginalia-annotators))))
   └────
 
 

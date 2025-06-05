@@ -1167,7 +1167,7 @@
 			("Aleksandr Vityazev" . "avityazew@gmail.com"))
 		       (:commit . "bc07c1124545cbf6e5ebe64e92bfaa306e309033"))])
  (dicom .
-	[(0 5)
+	[(0 6)
 	 ((emacs
 	   (28 1))
 	  (compat
@@ -1178,7 +1178,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "54440a704c573cd91b663ac79a01264a1aa59c51"))])
+	  (:commit . "33ef616725fb65270aecda68362caf1eaf8cbe07"))])
  (dict-tree .
 	    [(0 17)
 	     ((trie
@@ -2849,7 +2849,7 @@
 	(:url . "https://elpa.gnu.org/packages/map.html")
 	(:commit . "9da2efb670574b473ab864ae0456b4f1b38e680b"))])
  (marginalia .
-	     [(2 0)
+	     [(2 1)
 	      ((emacs
 		(28 1))
 	       (compat
@@ -2863,7 +2863,7 @@
 	       (:authors
 		("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "c51fd9e4d4258543e0cd8dedda941789163bec5a"))])
+	       (:commit . "151ac0abd70da0fc4cae753e2ac156bbaa10d317"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" tar

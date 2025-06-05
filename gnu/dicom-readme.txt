@@ -18,29 +18,31 @@ DICOMDIR directory files or DICOM image files interactively.
 ══════════════
 
   Dicom.el is available from [GNU ELPA]. You can install it directly via
-  `M-x package-install RET dicom RET'.  After installation, you can open
+  `M-x package-install RET dicom RET'. After installation, you can open
   `DICOMDIR' and DICOM image files.
 
   Emacs must be compiled with support for PNG, SVG and XML. The package
-  relies on external programs from the dcmtk DICOM toolkit, which are
-  all widely available on Linux distributions.
+  relies on external programs from the [DCMTK] DICOM toolkit, which are
+  all widely available on GNU/Linux distributions.
 
-  • `dcm2xml' and `dcmj2pnm' from the dcmtk DICOM toolkit
+  • `dcm2xml' and `dcmj2pnm' from the [DCMTK] DICOM toolkit
   • `ffmpeg' for video conversion (optional)
   • `mpv' for video playing (optional)
 
 
 [GNU ELPA] <https://elpa.gnu.org/packages/dicom.html>
 
+[DCMTK] <https://dcmtk.org/en/dcmtk/>
+
 
 2 Supported files
 ═════════════════
 
-  The DICOM format is quite diverse. Since `dcm2xml' tool from the DICOM
-  toolkit is used to read the metadata, most uncorrupted DICOM files can
-  be read. It can still happen that the DICOM viewer is unable to
-  display files nicely, if the metadata records are not interpreted
-  properly. Any help improving the package is welcome.
+  The DICOM format is quite diverse. The `dcm2xml' tool can read the
+  metadata of most uncorrupted DICOM files. It can still happen that the
+  DICOM viewer is unable to display files nicely, if the metadata
+  records are not interpreted properly. In such cases, any help
+  improving the package is welcome.
 
 
 3 Contributions
