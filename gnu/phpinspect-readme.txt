@@ -1,6 +1,6 @@
 PHPInspect is a minor mode that provides code intelligence for PHP in Emacs.
 At its core is a PHP parser implemented in Emacs Lisp.  PHPInspect comes with
-backends for `completion-at-point`, `company-mode` and `eldoc`.  A backend
+backends for `completion-at-point` and `eldoc`.  A backend
 for `xref` (which provides go-to-definition functionality) is planned to be
 implemented at a later date.
 

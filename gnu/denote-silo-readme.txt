@@ -259,6 +259,9 @@ Table of Contents
   Author/maintainer
         Protesilaos Stavrou.
 
+  Ideas and/or user feedback
+        Daniel Kahlenberg.
+
 
 6 GNU Free Documentation License
 ════════════════════════════════

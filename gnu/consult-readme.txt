@@ -129,7 +129,7 @@ Table of Contents
     • SPC Hidden buffers
     • * Modified buffers
     • f Files (Requires `recentf-mode')
-    • r File registers
+    • r File and buffer registers
     • m Bookmarks
     • p Project
     • B Project buffers
@@ -763,13 +763,13 @@ Table of Contents
   `occur-edit-mode' (press key `e'). Similarly, Embark supports
   exporting the matches found by `consult-grep', `consult-ripgrep' and
   `consult-git-grep' to a Grep buffer, where the matches across files
-  can be edited, if the [wgrep] package is installed. These three
-  workflows are symmetric.
+  can be edited, via `grep-edit-mode' on Emacs 31 (or via the [wgrep]
+  package). These three workflows are symmetric.
 
   ⁃ `consult-line' -> `embark-export' to `occur-mode' buffer ->
-    `occur-edit-mode' for editing of matches in buffer.
-  ⁃ `consult-grep' -> `embark-export' to `grep-mode' buffer -> `wgrep'
-    for editing of all matches.
+    `occur-edit-mode' for editing of matches.
+  ⁃ `consult-grep' -> `embark-export' to `grep-mode' buffer ->
+    `grep-edit-mode' for editing of matches.
   ⁃ `consult-find' -> `embark-export' to `dired-mode' buffer ->
     `wdired-change-to-wdired-mode' for editing.
 
@@ -1104,8 +1104,8 @@ Table of Contents
     completion candidates
   • [orderless]: Completion style which offers flexible candidate
     filtering
-  • [wgrep]: Editing of grep buffers. Use with `consult-grep' via
-    `embark-export'.
+  • [wgrep] (or `grep-edit-mode' on Emacs 31): Editing of grep
+    buffers. Use with `consult-grep' via `embark-export'.
 
   There exist multiple fine completion UIs beside Vertico, which are
   supported by Consult. Give them a try and find out which interaction

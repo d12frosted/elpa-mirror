@@ -776,7 +776,7 @@
 	       ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	      (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult .
-	  [(2 4)
+	  [(2 5)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -785,7 +785,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "e57fbb65584f3160f98a2569b1674c8065ec8df8"))])
+	    (:commit . "b6fd7feda74267a53f9f1cf1bd122e519a308132"))])
  (consult-denote .
 		 [(0 3 1)
 		  ((emacs
@@ -1122,7 +1122,7 @@
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		    (:commit . "08fc66d1e115567f4fe4c94968210b3c56b5acfb"))])
  (denote-silo .
-	      [(0 1 1)
+	      [(0 1 2)
 	       ((emacs
 		 (28 1))
 		(denote
@@ -1132,7 +1132,7 @@
 		(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		(:authors
 		 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		(:commit . "5617998a4c37aa61d37f8ab9607aeca35c7ae263"))])
+		(:commit . "247ce2685baa2521c37f1671ec3ee1d1c01f5497"))])
  (detached .
 	   [(0 10 1)
 	    ((emacs
@@ -2198,13 +2198,13 @@
 	     (:url . "https://elpa.gnu.org/packages/greenbar.html")
 	     (:commit . "7b651257bd0536d454f4b896212b3fe1f8c75024"))])
  (gtags-mode .
-	     [(1 8 6)
+	     [(1 8 7)
 	      ((emacs
 		(28)))
 	      "GNU Global integration with xref, project and imenu." tar
 	      ((:url . "https://github.com/Ergus/gtags-mode")
 	       (:keywords "xref" "project" "imenu" "gtags" "global")
-	       (:commit . "db8eb5d566c33ceb46650e45d85b569dc3ed5930"))])
+	       (:commit . "a83bf3898d1e489d45071739d33ea696d884c142"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib
@@ -3577,7 +3577,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
  (phpinspect .
-	     [(2 1 0)
+	     [(3 0 1)
 	      ((compat
 		(29)))
 	      "PHP parsing and code intelligence package" tar
@@ -3586,7 +3586,7 @@
 	       (:maintainer "Hugo Thunnissen" . "devel@hugot.nl")
 	       (:authors
 		("Hugo Thunnissen" . "devel@hugot.nl"))
-	       (:commit . "1cdfd9aaf6fee003554d3c7832224455ddd9eaa1"))])
+	       (:commit . "ce64041a4be5da24514356a3d6e7f6b9fafdd51b"))])
  (phps-mode .
 	    [(0 4 51)
 	     ((emacs
