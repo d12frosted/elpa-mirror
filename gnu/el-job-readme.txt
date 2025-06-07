@@ -15,11 +15,10 @@
   to the use of all CPU cores!
 
   For real-world usage, search for `el-job' in the source of
-  [org-node.el].
+  [org-mem.el].
 
 
-[org-node.el]
-<https://github.com/meedstrom/org-node/blob/main/org-node.el>
+[org-mem.el] <https://github.com/meedstrom/org-mem/blob/main/org-mem.el>
 
 1.1 Design rationale
 ────────────────────
@@ -133,16 +132,15 @@
   1. The return value from the `:funcall-per-input' function must always
      be a list with a fixed length, where the elements are also lists.
 
-     For example, org-node passes `:funcall-per-input
-     #'org-node-parser--scan-file' to el-job, and if you look in
-     [org-node-parser.el] for the defun of `org-node-parser--scan-file',
-     it always returns a list of 6 items:
+     For example, org-mem passes `:funcall-per-input
+     #'org-mem-parser--parse-file' to el-job, and if you look in
+     [org-mem-parser.el] for the defun of `org-mem-parser--parse-file',
+     it always returns a list of 5 items:
 
      ┌────
      │ (list (if missing-file (list missing-file)) ; List of 0 or 1 item
      │       (if file-mtime (list file-mtime))     ; List of 0 or 1 item
-     │       found-nodes                           ; List of many items
-     │       org-node-parser--paths-types          ; List of many items
+     │       found-entries                         ; List of many items
      │       org-node-parser--found-links          ; List of many items
      │       (if problem (list problem))))         ; List of 0 or 1 item
      └────
@@ -168,5 +166,5 @@
      and split them differently, and that's not supported yet.
 
 
-[org-node-parser.el]
-<https://github.com/meedstrom/org-node/blob/main/org-node-parser.el>
+[org-mem-parser.el]
+<https://github.com/meedstrom/org-mem/blob/main/org-mem-parser.el>

@@ -2152,7 +2152,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20250603 110418)
+	      [(1 0 20250605 164918)
 	       ((emacs
 		 (25 1))
 		(compat
@@ -2816,14 +2816,14 @@
 	       ("Le Wang" . "l26wang@gmail.com"))
 	      (:commit . "9ee5a7657a22e836618813c2e2b64a548d27d2ff"))])
  (xah-fly-keys .
-	       [(26 12 20250517213917)
+	       [(26 12 20250606101544)
 		((emacs
 		  (28 3)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "edde947a4f27658c4a0b958461a77512176b8904"))])
+		 (:commit . "6ea524610ab805607e153b7b210a380a8fc79471"))])
  (xkcd .
        [(1 1)
 	((json

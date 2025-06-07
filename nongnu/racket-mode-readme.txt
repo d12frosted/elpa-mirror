@@ -10,7 +10,7 @@
   check-syntax, debug, profile, logging, and more. The edit/run
   experience is similar to [DrRacket].
 
-  Compatible with *Emacs 25.1+* and *Racket 6.12+*.
+  Compatible with *Emacs 25.1+* and *Racket 7.8+*.
 
 
 [https://github.com/greghendershott/racket-mode/workflows/CI/badge.svg]

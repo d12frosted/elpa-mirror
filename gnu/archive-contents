@@ -1502,7 +1502,7 @@
 	   ("João Távora" . "joaotavora@gmail.com"))
 	  (:commit . "49f449bb5bc90bc1eca6b4a1f013d4c0b5460d65"))])
  (el-job .
-	 [(2 4 7)
+	 [(2 4 8)
 	  ((emacs
 	    (29 1)))
 	  "Contrived way to call a function using all CPU cores" tar
@@ -1511,7 +1511,7 @@
 	   (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
 	   (:authors
 	    ("Martin Edström" . "meedstrom@runbox.eu"))
-	   (:commit . "9258e707ad154170a8beae3f84b25161f42aa200"))])
+	   (:commit . "6520508920acca44be090bd655ad943751e20ef1"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -3556,7 +3556,7 @@
 	(:url . "https://elpa.gnu.org/packages/peg.html")
 	(:commit . "90c9004a8347209f94a37c8d9506425721098402"))])
  (perl-doc .
-	   [(0 81)
+	   [(0 82)
 	    ((emacs
 	      (27)))
 	    "Read Perl documentation" tar
@@ -3565,7 +3565,7 @@
 	     (:maintainer "Harald Jörg" . "haj@posteo.de")
 	     (:authors
 	      ("Harald Jörg" . "haj@posteo.de"))
-	     (:commit . "638009f98a144790ea85fd0fa311d7499fdac94f"))])
+	     (:commit . "9ac4eeb55b554601c2f0205f099645806a05dc82"))])
  (persist .
 	  [(0 6 1)
 	   ((emacs
