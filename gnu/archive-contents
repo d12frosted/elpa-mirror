@@ -1451,7 +1451,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "ea8710335eec483b576c7a800c92b8fd214aa6dd"))])
  (eev .
-      [(20250216)
+      [(20250607)
        ((emacs
 	 (25 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1460,7 +1460,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "5c3013b291a17a5e8ec11e6a5d18e5b3b5aa0b17"))])
+	(:commit . "0365f9a21b8494a2fab75838022141b364731e25"))])
  (ef-themes .
 	    [(1 10 0)
 	     ((emacs
@@ -4892,7 +4892,7 @@
 		   (:url . "https://elpa.gnu.org/packages/uniquify-files.html")
 		   (:commit . "1d76b4f0e283afaff2be053d85f8726ffc3abd6e"))])
  (urgrep .
-	 [(0 5 1)
+	 [(0 5 2)
 	  ((emacs
 	    (27 1))
 	   (compat
@@ -4902,7 +4902,7 @@
 	  "Universal recursive grep" tar
 	  ((:url . "https://github.com/jimporter/urgrep")
 	   (:keywords "grep" "search")
-	   (:commit . "8af67d13dea234cf68868086d539f9fcbaf058ec"))])
+	   (:commit . "d53d3168e52b021738515491de391d66e4bf865c"))])
  (url-http-ntlm .
 		[(2 0 5)
 		 ((cl-lib
