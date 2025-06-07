@@ -9,14 +9,14 @@ This package allows you to store and run per-project commands, in the
 style of Makefile, but more Emacs-specific and tailored for this need.
 The separate window for the command execution is inspired by modern IDEs.
 
-User can create a command bt calling ‘epx-add-command’. They will
+User can create a command by calling ‘epx-add-command’.  They will
 be prompted for the command itself, its name, whether to use
-compilation buffer for this command, andenvironment variables -
+compilation buffer for this command, and environment variables -
 one name and one value at a time.
 
 Then created command can be executed by calling ‘epx-run-command-in-shell’.
-This command provides completion for command name. It runs the command,
-setting environment variables temporarily. Command is ran in a separate
+This command provides completion for command name.  It runs the command,
+setting environment variables temporarily.  Command is ran in a separate
 window, which will contail either shell or compilation buffer, depending
 on command’s :compile option.
 
