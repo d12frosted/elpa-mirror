@@ -3,13 +3,11 @@ Fetcher: github
 Source:  https://github.com/Chobbes/org-chef
 
 Updating /mnt/store/melpa/working/org-chef/
-Checking out 1710b54441ed744dcdfb125d08fb88cfaf452f10
+Checking out 5bb361c4b2ade95b45e698bd30ce8024c40fa6f2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-chef/
-  to /tmp/org-chefpQC9iM/org-chef-20231127.1601
-    org-chef-24kitchen.el -> org-chef-24kitchen.el
+  to /tmp/org-chef8hffsi/org-chef-20250607.2152
     org-chef-basics-with-babish.el -> org-chef-basics-with-babish.el
-    org-chef-bbc-food.el -> org-chef-bbc-food.el
     org-chef-bbc-good-food.el -> org-chef-bbc-good-food.el
     org-chef-binging-with-babish.el -> org-chef-binging-with-babish.el
     org-chef-chef-koch.el -> org-chef-chef-koch.el
@@ -21,11 +19,7 @@ Copying files (->) and directories (=>)
     org-chef-json-ld.el -> org-chef-json-ld.el
     org-chef-kotikokki.el -> org-chef-kotikokki.el
     org-chef-marmiton.el -> org-chef-marmiton.el
-    org-chef-martha-stewart.el -> org-chef-martha-stewart.el
-    org-chef-nytimes.el -> org-chef-nytimes.el
     org-chef-recipetin-eats.el -> org-chef-recipetin-eats.el
-    org-chef-reluctant-gourmet.el -> org-chef-reluctant-gourmet.el
-    org-chef-saveur.el -> org-chef-saveur.el
     org-chef-serious-eats.el -> org-chef-serious-eats.el
     org-chef-simply-recipes.el -> org-chef-simply-recipes.el
     org-chef-taste.el -> org-chef-taste.el
@@ -33,36 +27,32 @@ Copying files (->) and directories (=>)
     org-chef-wordpress.el -> org-chef-wordpress.el
     org-chef-xiachufang.el -> org-chef-xiachufang.el
     org-chef.el -> org-chef.el
-Created org-chef-20231127.1601.tar containing:
-  org-chef-20231127.1601/
-  org-chef-20231127.1601/org-chef-24kitchen.el
-  org-chef-20231127.1601/org-chef-basics-with-babish.el
-  org-chef-20231127.1601/org-chef-bbc-food.el
-  org-chef-20231127.1601/org-chef-bbc-good-food.el
-  org-chef-20231127.1601/org-chef-binging-with-babish.el
-  org-chef-20231127.1601/org-chef-chef-koch.el
-  org-chef-20231127.1601/org-chef-cultures-for-health.el
-  org-chef-20231127.1601/org-chef-edit.el
-  org-chef-20231127.1601/org-chef-fine-cooking.el
-  org-chef-20231127.1601/org-chef-genius-kitchen.el
-  org-chef-20231127.1601/org-chef-jamie-oliver.el
-  org-chef-20231127.1601/org-chef-json-ld.el
-  org-chef-20231127.1601/org-chef-kotikokki.el
-  org-chef-20231127.1601/org-chef-marmiton.el
-  org-chef-20231127.1601/org-chef-martha-stewart.el
-  org-chef-20231127.1601/org-chef-nytimes.el
-  org-chef-20231127.1601/org-chef-pkg.el
-  org-chef-20231127.1601/org-chef-recipetin-eats.el
-  org-chef-20231127.1601/org-chef-reluctant-gourmet.el
-  org-chef-20231127.1601/org-chef-saveur.el
-  org-chef-20231127.1601/org-chef-serious-eats.el
-  org-chef-20231127.1601/org-chef-simply-recipes.el
-  org-chef-20231127.1601/org-chef-taste.el
-  org-chef-20231127.1601/org-chef-utils.el
-  org-chef-20231127.1601/org-chef-wordpress.el
-  org-chef-20231127.1601/org-chef-xiachufang.el
-  org-chef-20231127.1601/org-chef.el
+Created org-chef-20250607.2152.tar containing:
+  org-chef-20250607.2152/
+  org-chef-20250607.2152/org-chef-basics-with-babish.el
+  org-chef-20250607.2152/org-chef-bbc-good-food.el
+  org-chef-20250607.2152/org-chef-binging-with-babish.el
+  org-chef-20250607.2152/org-chef-chef-koch.el
+  org-chef-20250607.2152/org-chef-cultures-for-health.el
+  org-chef-20250607.2152/org-chef-edit.el
+  org-chef-20250607.2152/org-chef-fine-cooking.el
+  org-chef-20250607.2152/org-chef-genius-kitchen.el
+  org-chef-20250607.2152/org-chef-jamie-oliver.el
+  org-chef-20250607.2152/org-chef-json-ld.el
+  org-chef-20250607.2152/org-chef-kotikokki.el
+  org-chef-20250607.2152/org-chef-marmiton.el
+  org-chef-20250607.2152/org-chef-pkg.el
+  org-chef-20250607.2152/org-chef-recipetin-eats.el
+  org-chef-20250607.2152/org-chef-serious-eats.el
+  org-chef-20250607.2152/org-chef-simply-recipes.el
+  org-chef-20250607.2152/org-chef-taste.el
+  org-chef-20250607.2152/org-chef-utils.el
+  org-chef-20250607.2152/org-chef-wordpress.el
+  org-chef-20250607.2152/org-chef-xiachufang.el
+  org-chef-20250607.2152/org-chef.el
  ✓ Success:
-  2025-06-07T17:50:22+0000  org-chef-20231127.1601.entry
-  2025-06-07T17:50:22+0000  org-chef-20231127.1601.tar
-Built org-chef in 2.920s, finished at 2025-06-07T17:50:23+0000
+  2025-06-07T20:11:05+0000  org-chef-20231127.1601.entry
+  2025-06-07T20:11:05+0000  org-chef-20231127.1601.tar
+  2025-06-07T22:32:25+0000  org-chef-20250607.2152.entry
+  2025-06-07T22:32:25+0000  org-chef-20250607.2152.tar
+Built org-chef in 3.206s, finished at 2025-06-07T22:32:26+0000
