@@ -1,8 +1,10 @@
-P-SEARCH is an tool for combining and executing searches in Emacs.
-The tool takes its inspiration from Bayesian search theory where it
-is assumed that the thing being searched for has a prior
-distribution of where it can be found, and that the act of looking
-should update our posterior probability distribution.
+p-search is a tool for executing searches locally. It does this by
+running multiple commands like grep, and combining the results
+using algorithms from the field of information retrieval.  The tool
+takes its inspiration from Bayesian search theory where it is
+assumed that the thing being searched for has a prior distribution
+of where it can be found, and that the act of looking should update
+our posterior probability distribution.
 
 Terminology: In p-search there are two parts of the search, the
 prior and likelihood.  The prior is specified via certain
