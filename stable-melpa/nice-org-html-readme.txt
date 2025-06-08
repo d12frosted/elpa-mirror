@@ -18,7 +18,6 @@ nice-org-html-export-to-html
 nice-org-html-export-to-html-file
 nice-org-html-publish-to-html
 nice-org-html-publishing-function
-nice-org-html-make-publishing-function
 
 ==============================================================================
 TODO:
