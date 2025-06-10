@@ -12,7 +12,10 @@ bind one of these commands to a convenient key.
 The primary variable to select notes is
 `denote-project-notes-identifier', whish should be set to a Denote
 identifier that can be found in
-`denote-project-notes-denote-directory' (a Denote silo).
+`denote-project-notes-denote-directory' (a Denote silo).  An
+additional option includes using a username-to-identifier alist
+(this must be set using `customize-dirlocals' or by editing the
+.dir-locals.el file manually).
 
 Display can be customized using either `display-buffer-alist' (the
 default), or through `denote-project-notes-display-action' (a
