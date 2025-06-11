@@ -17,8 +17,8 @@ Note that this must be called *before* Emacs calendar is loaded.
 
 You can also do the same with functions:
 After loading the package, in your =init.el= add a call to:
-    (holiday-polish-holidays-set) ;;
+    (polish-holidays-set) ;;
 to enable Polish calendar and disable other calendars,
 or add a call to:
-    (holiday-polish-holidays-append)
+    (polish-holidays-append)
 to append Polish calendar to the current list of calendars
