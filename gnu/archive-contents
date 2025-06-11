@@ -2198,13 +2198,13 @@
 	     (:url . "https://elpa.gnu.org/packages/greenbar.html")
 	     (:commit . "7b651257bd0536d454f4b896212b3fe1f8c75024"))])
  (gtags-mode .
-	     [(1 8 8)
+	     [(1 9 1)
 	      ((emacs
 		(28)))
 	      "GNU Global integration with xref, project and imenu." tar
 	      ((:url . "https://github.com/Ergus/gtags-mode")
 	       (:keywords "xref" "project" "imenu" "gtags" "global")
-	       (:commit . "7eb301e2344c542132118012e4332a3db81ccd16"))])
+	       (:commit . "11d3372329d30307d7360065871533c9c651c6d6"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib
@@ -3013,7 +3013,7 @@
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	     (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (modus-themes .
-	       [(4 7 0)
+	       [(4 8 0)
 		((emacs
 		  (28 1)))
 		"Elegant, highly legible and customizable themes" tar
@@ -3022,7 +3022,7 @@
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "d5a0eeb4f0fc5f865862465c6d17482d166b3b3d"))])
+		 (:commit . "b7aa3ae780975b6dda98a75197a6ff89876bb7b7"))])
  (mpdired .
 	  [(3)
 	   ((emacs
@@ -5072,7 +5072,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "78bc5949db489b143f7424540d6cc56fc529c9ea"))])
  (vertico .
-	  [(2 2)
+	  [(2 3)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -5083,7 +5083,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "bb6abf63cc439601cd65682cfd549e4b6d63d409"))])
+	    (:commit . "b43b594bb318e722b908f01a6a11409af14b1413"))])
  (vertico-posframe .
 		   [(0 8 0)
 		    ((emacs
