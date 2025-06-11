@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/ideasman42/emacs-mono-complete
 
 Updating /mnt/store/melpa/working/mono-complete/
-Checking out b55a2ee553a3d96d38400309497a31ce6a75a357
+Checking out 3e4b84606f2c5c4563c4491ca63f88baf5b0f465
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mono-complete/
-  to /tmp/mono-completeCEjA5I/mono-complete-20250127.427
+  to /tmp/mono-completew0hRlj/mono-complete-20250611.321
     mono-complete-backend-capf.el -> mono-complete-backend-capf.el
     mono-complete-backend-dabbrev.el -> mono-complete-backend-dabbrev.el
     mono-complete-backend-filesystem.el -> mono-complete-backend-filesystem.el
@@ -15,18 +15,20 @@ Copying files (->) and directories (=>)
     mono-complete-backend-word-predict.el -> mono-complete-backend-word-predict.el
     mono-complete.el -> mono-complete.el
     mono-complete-backend-word-predict.py -> mono-complete-backend-word-predict.py
-Created mono-complete-20250127.427.tar containing:
-  mono-complete-20250127.427/
-  mono-complete-20250127.427/mono-complete-backend-capf.el
-  mono-complete-20250127.427/mono-complete-backend-dabbrev.el
-  mono-complete-20250127.427/mono-complete-backend-filesystem.el
-  mono-complete-20250127.427/mono-complete-backend-spell-fu.el
-  mono-complete-20250127.427/mono-complete-backend-whole-line.el
-  mono-complete-20250127.427/mono-complete-backend-word-predict.el
-  mono-complete-20250127.427/mono-complete-backend-word-predict.py
-  mono-complete-20250127.427/mono-complete-pkg.el
-  mono-complete-20250127.427/mono-complete.el
+Created mono-complete-20250611.321.tar containing:
+  mono-complete-20250611.321/
+  mono-complete-20250611.321/mono-complete-backend-capf.el
+  mono-complete-20250611.321/mono-complete-backend-dabbrev.el
+  mono-complete-20250611.321/mono-complete-backend-filesystem.el
+  mono-complete-20250611.321/mono-complete-backend-spell-fu.el
+  mono-complete-20250611.321/mono-complete-backend-whole-line.el
+  mono-complete-20250611.321/mono-complete-backend-word-predict.el
+  mono-complete-20250611.321/mono-complete-backend-word-predict.py
+  mono-complete-20250611.321/mono-complete-pkg.el
+  mono-complete-20250611.321/mono-complete.el
  ✓ Success:
-  2025-06-10T23:28:21+0000  mono-complete-20250127.427.entry
-  2025-06-10T23:28:21+0000  mono-complete-20250127.427.tar
-Built mono-complete in 3.482s, finished at 2025-06-10T23:28:22+0000
+  2025-06-11T01:49:58+0000  mono-complete-20250127.427.entry
+  2025-06-11T01:49:58+0000  mono-complete-20250127.427.tar
+  2025-06-11T04:11:03+0000  mono-complete-20250611.321.entry
+  2025-06-11T04:11:03+0000  mono-complete-20250611.321.tar
+Built mono-complete in 3.740s, finished at 2025-06-11T04:11:04+0000
