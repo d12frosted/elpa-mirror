@@ -77,6 +77,7 @@ To find in current directory, use `find-file-in-current-directory'
 and `find-file-in-current-directory-by-selected'.
 
 `ffip-fix-file-path-at-point' replaces path at point with correct relative/absolute path.
+The path can be cleaned up by `ffip-fix-file-path-at-point-strip-regex'.
 
 File/directory searching actions are automatically stored into `ffip-find-files-history'.
 Use `ffip-find-files-resume' to replay any previous action.
