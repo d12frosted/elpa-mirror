@@ -33,7 +33,8 @@
 │ - Agave
 │ - JuliaMono
 │ - FreeMono
-│ - Iosevka Comfy Fixed
+│ - Iosevka Comfy Fixed, Iosevka Comfy Wide Fixed
+│ - Aporetic Sans Mono, Aporetic Serif Mono
 │ - Source Code Pro
 ╰──────────────────────────╮
 ╭─UTF-8────────────────────╯

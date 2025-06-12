@@ -838,7 +838,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:commit . "1b30a28857727202d1f6a027f83ad66151fb1e92"))])
  (corfu .
-	[(2 2)
+	[(2 3)
 	 ((emacs
 	   (28 1))
 	  (compat
@@ -849,7 +849,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "77e639bc6b982be09f355390beef6f200936109a"))])
+	  (:commit . "53aa6c85be72ce220a4321487c535295b0de0488"))])
  (coterm .
 	 [(1 6)
 	  ((emacs
@@ -3358,7 +3358,7 @@
 		  ("Hanno Perrey" . "hanno@hoowl.se"))
 		 (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern .
-	     [(1 8)
+	     [(1 9)
 	      ((emacs
 		(28 1))
 	       (org
@@ -3371,7 +3371,7 @@
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "a58534475b4312b0920aa9d3824272470c8e3500"))])
+	       (:commit . "16bef888cb8e0198dd26f869b85c10c4491a3444"))])
  (org-notify .
 	     [(0 1 1)
 	      ((emacs
