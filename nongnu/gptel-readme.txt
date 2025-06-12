@@ -5,9 +5,10 @@ It works in the spirit of Emacs, available at any time and in any buffer.
 
 gptel supports:
 
-- The services ChatGPT, Azure, Gemini, Anthropic AI, Anyscale, Together.ai,
-  Perplexity, Anyscale, OpenRouter, Groq, PrivateGPT, DeepSeek, Cerebras,
-  Github Models, Novita AI, xAI and Kagi (FastGPT & Summarizer).
+- The services ChatGPT, Azure, Gemini, Anthropic AI, Together.ai, Perplexity,
+  Anyscale, OpenRouter, Groq, PrivateGPT, DeepSeek, Cerebras, Github Models,
+  GitHub Copilot chat, AWS Bedrock, Novita AI, xAI, Sambanova, Mistral Le
+  Chat and Kagi (FastGPT & Summarizer).
 - Local models via Ollama, Llama.cpp, Llamafiles or GPT4All
 
 Additionally, any LLM service (local or remote) that provides an
@@ -21,6 +22,7 @@ Features:
 - LLM responses are in Markdown or Org markup.
 - Supports conversations and multiple independent sessions.
 - Supports tool-use to equip LLMs with agentic capabilities.
+- Supports Model Context Protocol (MCP) integration using the mcp.el package.
 - Supports multi-modal models (send images, documents).
 - Supports "reasoning" content in LLM responses.
 - Save chats as regular Markdown/Org/Text files and resume them later.
@@ -108,11 +110,35 @@ prefix arg), as well as examine or modify context.
 
 When context is available, gptel will include it with each LLM query.
 
+LLM Tool use:
+
+gptel supports "tool calling" behavior, where LLMs can specify arguments with
+which to call provided "tools" (elisp functions).  The results of running the
+tools are fed back to the LLM, giving it capabilities and knowledge beyond
+what is available out of the box.  For example, tools can perform web
+searches or API lookups, modify files and directories, and so on.
+
+Tools can be specified via `gptel-make-tool', or obtained from other
+repositories, or from Model Context Protocol (MCP) servers using the mcp.el
+package.  See the README for details.
+
+Tools can be included with LLM queries using gptel's menu, or from
+`gptel-tools'.
+
 Rewrite interface
 
 In any buffer: with a region selected, you can rewrite prose, refactor code
 or fill in the region.  This is accessible via `gptel-rewrite', and also from
 the `gptel-send' menu.
+
+Presets
+
+Define a bundle of configuration (model, backend, system message, tools etc)
+as a "preset" that can be applied together, making it easy to switch between
+tasks in gptel.  Presets can be saved and applied from gptel's transient
+menu.  You can also include a cookie of the form "@preset-name" in the prompt
+to send a request with a preset applied.  This feature works everywhere, but
+preset cookies are also fontified in chat buffers.
 
 gptel in Org mode:
 
