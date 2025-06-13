@@ -1,0 +1,30 @@
+Package: gnuplot
+Fetcher: github
+Source:  https://github.com/emacs-gnuplot/gnuplot
+
+Updating /mnt/store/melpa/working/gnuplot/
+Checking out f10d42221856e86c57dd5cc7400c078c021ba710
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gnuplot/
+  to /tmp/gnuplotWu1rUs/gnuplot-20250613.1223
+    gnuplot.el -> gnuplot.el
+    gnuplot-gui.el -> gnuplot-gui.el
+    gnuplot-context.el -> gnuplot-context.el
+    gnuplot-eldoc.el -> gnuplot-eldoc.el
+    gnuplot.texi -> gnuplot.texi
+Generating gnuplot.info
+Created gnuplot-20250613.1223.tar containing:
+  gnuplot-20250613.1223/
+  gnuplot-20250613.1223/dir
+  gnuplot-20250613.1223/gnuplot-context.el
+  gnuplot-20250613.1223/gnuplot-eldoc.el
+  gnuplot-20250613.1223/gnuplot-gui.el
+  gnuplot-20250613.1223/gnuplot-pkg.el
+  gnuplot-20250613.1223/gnuplot.el
+  gnuplot-20250613.1223/gnuplot.info
+ ✓ Success:
+  2025-06-13T12:12:41+0000  gnuplot-20250606.1928.entry
+  2025-06-13T12:12:41+0000  gnuplot-20250606.1928.tar
+  2025-06-13T14:30:23+0000  gnuplot-20250613.1223.entry
+  2025-06-13T14:30:23+0000  gnuplot-20250613.1223.tar
+Built gnuplot in 10.873s, finished at 2025-06-13T14:30:23+0000
