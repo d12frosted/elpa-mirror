@@ -24,6 +24,6 @@ For the most basic use, add the following configuration:
         :engines (list (gt-google-engine) (gt-bing-engine))
         :render (gt-buffer-render)))
 
-Then start your translate with command `gt-do-translate'.
+Then start your translate with command `gt-translate'.
 
 See README.org for details.

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/lorniu/go-translate
 
 Updating /mnt/store/melpa/working/go-translate/
-Checking out a924e0bd6b37d424c222377982e6f71a4ddf4452
+Checking out 7e0e124f8956b0de8c031170dfae0b05dcf5c36f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/go-translate/
-  to /tmp/go-translatelLoWAu/go-translate-20250318.907
+  to /tmp/go-translateYHxrmw/go-translate-20250613.937
     go-translate.el -> go-translate.el
     gt-core.el -> gt-core.el
     gt-engine-bing.el -> gt-engine-bing.el
@@ -19,30 +19,46 @@ Copying files (->) and directories (=>)
     gt-engine-osxdict.el -> gt-engine-osxdict.el
     gt-engine-stardict.el -> gt-engine-stardict.el
     gt-engine-youdao.el -> gt-engine-youdao.el
-    gt-extension.el -> gt-extension.el
+    gt-extensions.el -> gt-extensions.el
     gt-faces.el -> gt-faces.el
-    gt-httpx.el -> gt-httpx.el
+    gt-render-alert.el -> gt-render-alert.el
+    gt-render-buffer.el -> gt-render-buffer.el
+    gt-render-insert.el -> gt-render-insert.el
+    gt-render-kill-ring.el -> gt-render-kill-ring.el
+    gt-render-overlay.el -> gt-render-overlay.el
+    gt-render-posframe.el -> gt-render-posframe.el
+    gt-taker-buffer-prompt.el -> gt-taker-buffer-prompt.el
+    gt-taker-fresh-words.el -> gt-taker-fresh-words.el
     gt-text-utility.el -> gt-text-utility.el
-Created go-translate-20250318.907.tar containing:
-  go-translate-20250318.907/
-  go-translate-20250318.907/go-translate-pkg.el
-  go-translate-20250318.907/go-translate.el
-  go-translate-20250318.907/gt-core.el
-  go-translate-20250318.907/gt-engine-bing.el
-  go-translate-20250318.907/gt-engine-chatgpt.el
-  go-translate-20250318.907/gt-engine-deepl.el
-  go-translate-20250318.907/gt-engine-echo.el
-  go-translate-20250318.907/gt-engine-google-rpc.el
-  go-translate-20250318.907/gt-engine-google.el
-  go-translate-20250318.907/gt-engine-libre.el
-  go-translate-20250318.907/gt-engine-osxdict.el
-  go-translate-20250318.907/gt-engine-stardict.el
-  go-translate-20250318.907/gt-engine-youdao.el
-  go-translate-20250318.907/gt-extension.el
-  go-translate-20250318.907/gt-faces.el
-  go-translate-20250318.907/gt-httpx.el
-  go-translate-20250318.907/gt-text-utility.el
+Created go-translate-20250613.937.tar containing:
+  go-translate-20250613.937/
+  go-translate-20250613.937/go-translate-pkg.el
+  go-translate-20250613.937/go-translate.el
+  go-translate-20250613.937/gt-core.el
+  go-translate-20250613.937/gt-engine-bing.el
+  go-translate-20250613.937/gt-engine-chatgpt.el
+  go-translate-20250613.937/gt-engine-deepl.el
+  go-translate-20250613.937/gt-engine-echo.el
+  go-translate-20250613.937/gt-engine-google-rpc.el
+  go-translate-20250613.937/gt-engine-google.el
+  go-translate-20250613.937/gt-engine-libre.el
+  go-translate-20250613.937/gt-engine-osxdict.el
+  go-translate-20250613.937/gt-engine-stardict.el
+  go-translate-20250613.937/gt-engine-youdao.el
+  go-translate-20250613.937/gt-extensions.el
+  go-translate-20250613.937/gt-faces.el
+  go-translate-20250613.937/gt-render-alert.el
+  go-translate-20250613.937/gt-render-buffer.el
+  go-translate-20250613.937/gt-render-insert.el
+  go-translate-20250613.937/gt-render-kill-ring.el
+  go-translate-20250613.937/gt-render-overlay.el
+  go-translate-20250613.937/gt-render-posframe.el
+  go-translate-20250613.937/gt-taker-buffer-prompt.el
+  go-translate-20250613.937/gt-taker-fresh-words.el
+  go-translate-20250613.937/gt-text-utility.el
  ✓ Success:
   2025-06-13T07:33:43+0000  go-translate-20250318.907.entry
   2025-06-13T07:33:43+0000  go-translate-20250318.907.tar
-Built go-translate in 3.674s, finished at 2025-06-13T07:33:43+0000
+  2025-06-13T09:52:16+0000  go-translate-20250613.937.entry
+  2025-06-13T09:52:16+0000  go-translate-20250613.937.tar
+Built go-translate in 3.424s, finished at 2025-06-13T09:52:16+0000
