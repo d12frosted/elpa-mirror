@@ -158,13 +158,13 @@
 		     ("Stephane Zermatten" . "szermatt@gmx.net"))
 		    (:commit . "ed9c76252ac82d6352ba438f664b390fdd0b5d6c"))])
  (beancount .
-	    [(0 9)
+	    [(0 9 0)
 	     nil "A major mode to edit Beancount input files." tar
 	     ((:maintainer "Martin Blais" . "blais@furius.ca")
 	      (:authors
 	       ("Martin Blais" . "blais@furius.ca"))
 	      (:url . "https://elpa.nongnu.org/nongnu/beancount.html")
-	      (:commit . "71c16222461d947b82e45e4b986d01880b492bbb"))])
+	      (:commit . "2303612b2230de8b5849b9c407d3564edd189012"))])
  (better-jumper .
 		[(1 0 1)
 		 ((emacs
