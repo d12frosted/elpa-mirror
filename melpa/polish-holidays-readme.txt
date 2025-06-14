@@ -22,3 +22,15 @@ to enable Polish calendar and disable other calendars,
 or add a call to:
     (polish-holidays-append)
 to append Polish calendar to the current list of calendars
+additionally, you can set below variable
+    (setq polish-holidays-use-all-p t)
+to use all the holidays (i.e. include catholic holidays)
+
+* Example configuration:
+    (use-package polish-holidays
+      :ensure t
+      :after holidays
+      :config
+      (setq polish-holidays-use-all-p nil)  ; 'notable' holidays
+      ;; (setq polish-holidays-use-all-p t) ; include catholic holidays
+      (polish-holidays-set))
