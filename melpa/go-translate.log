@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/lorniu/go-translate
 
 Updating /mnt/store/melpa/working/go-translate/
-Checking out 61fbcb7a892f00bd564366c4a3fd2ae6436c2526
+Checking out 1afcffb954f4897192bb21a89d35d3f65d08e14f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/go-translate/
-  to /tmp/go-translateFvo5la/go-translate-20250615.1335
+  to /tmp/go-translateTTq6m5/go-translate-20250616.1511
     go-translate.el -> go-translate.el
     gt-core.el -> gt-core.el
     gt-engine-bing.el -> gt-engine-bing.el
@@ -30,33 +30,35 @@ Copying files (->) and directories (=>)
     gt-taker-buffer-prompt.el -> gt-taker-buffer-prompt.el
     gt-taker-fresh-words.el -> gt-taker-fresh-words.el
     gt-text-utility.el -> gt-text-utility.el
-Created go-translate-20250615.1335.tar containing:
-  go-translate-20250615.1335/
-  go-translate-20250615.1335/go-translate-pkg.el
-  go-translate-20250615.1335/go-translate.el
-  go-translate-20250615.1335/gt-core.el
-  go-translate-20250615.1335/gt-engine-bing.el
-  go-translate-20250615.1335/gt-engine-chatgpt.el
-  go-translate-20250615.1335/gt-engine-deepl.el
-  go-translate-20250615.1335/gt-engine-echo.el
-  go-translate-20250615.1335/gt-engine-google-rpc.el
-  go-translate-20250615.1335/gt-engine-google.el
-  go-translate-20250615.1335/gt-engine-libre.el
-  go-translate-20250615.1335/gt-engine-osxdict.el
-  go-translate-20250615.1335/gt-engine-stardict.el
-  go-translate-20250615.1335/gt-engine-youdao.el
-  go-translate-20250615.1335/gt-extensions.el
-  go-translate-20250615.1335/gt-faces.el
-  go-translate-20250615.1335/gt-render-alert.el
-  go-translate-20250615.1335/gt-render-buffer.el
-  go-translate-20250615.1335/gt-render-insert.el
-  go-translate-20250615.1335/gt-render-kill-ring.el
-  go-translate-20250615.1335/gt-render-overlay.el
-  go-translate-20250615.1335/gt-render-posframe.el
-  go-translate-20250615.1335/gt-taker-buffer-prompt.el
-  go-translate-20250615.1335/gt-taker-fresh-words.el
-  go-translate-20250615.1335/gt-text-utility.el
+Created go-translate-20250616.1511.tar containing:
+  go-translate-20250616.1511/
+  go-translate-20250616.1511/go-translate-pkg.el
+  go-translate-20250616.1511/go-translate.el
+  go-translate-20250616.1511/gt-core.el
+  go-translate-20250616.1511/gt-engine-bing.el
+  go-translate-20250616.1511/gt-engine-chatgpt.el
+  go-translate-20250616.1511/gt-engine-deepl.el
+  go-translate-20250616.1511/gt-engine-echo.el
+  go-translate-20250616.1511/gt-engine-google-rpc.el
+  go-translate-20250616.1511/gt-engine-google.el
+  go-translate-20250616.1511/gt-engine-libre.el
+  go-translate-20250616.1511/gt-engine-osxdict.el
+  go-translate-20250616.1511/gt-engine-stardict.el
+  go-translate-20250616.1511/gt-engine-youdao.el
+  go-translate-20250616.1511/gt-extensions.el
+  go-translate-20250616.1511/gt-faces.el
+  go-translate-20250616.1511/gt-render-alert.el
+  go-translate-20250616.1511/gt-render-buffer.el
+  go-translate-20250616.1511/gt-render-insert.el
+  go-translate-20250616.1511/gt-render-kill-ring.el
+  go-translate-20250616.1511/gt-render-overlay.el
+  go-translate-20250616.1511/gt-render-posframe.el
+  go-translate-20250616.1511/gt-taker-buffer-prompt.el
+  go-translate-20250616.1511/gt-taker-fresh-words.el
+  go-translate-20250616.1511/gt-text-utility.el
  ✓ Success:
-  2025-06-16T11:20:28+0000  go-translate-20250615.1335.entry
-  2025-06-16T11:20:28+0000  go-translate-20250615.1335.tar
-Built go-translate in 3.139s, finished at 2025-06-16T11:20:29+0000
+  2025-06-16T13:37:31+0000  go-translate-20250615.1335.entry
+  2025-06-16T13:37:31+0000  go-translate-20250615.1335.tar
+  2025-06-16T15:53:40+0000  go-translate-20250616.1511.entry
+  2025-06-16T15:53:40+0000  go-translate-20250616.1511.tar
+Built go-translate in 3.379s, finished at 2025-06-16T15:53:40+0000
