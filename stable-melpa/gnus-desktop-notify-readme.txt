@@ -6,7 +6,7 @@ with `gnus-daemon', put the following:
 
 (require 'gnus-desktop-notify)
 (gnus-desktop-notify-mode)
-(gnus-demon-add-scanmail)
+(gnus-demon-add-rescan)
 
 into your ``.gnus`` file. The default is to use `alert' if available, which
 works on every operating system and allows the user to customize the

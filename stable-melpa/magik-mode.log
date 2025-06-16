@@ -3,12 +3,11 @@ Fetcher: github
 Source:  https://github.com/roadrunner1776/magik
 
 Updating /mnt/store/melpa/working/magik-mode/
-Checking out e32caf604cbffc6addae11ab533a40f3175b626b
+Checking out 3d059bda1e68f32f11ff04782b782b1f491c50ec
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magik-mode/
-  to /tmp/magik-modelPbV7G/magik-mode-20250605.908
+  to /tmp/magik-modeDZjCzo/magik-mode-20250616.932
     magik-aliases.el -> magik-aliases.el
-    magik-cb-ac.el -> magik-cb-ac.el
     magik-cb.el -> magik-cb.el
     magik-doc-gen.el -> magik-doc-gen.el
     magik-electric.el -> magik-electric.el
@@ -31,122 +30,123 @@ Copying files (->) and directories (=>)
     magik-utils.el -> magik-utils.el
     magik-version.el -> magik-version.el
     snippets => snippets
-Created magik-mode-20250605.908.tar containing:
-  magik-mode-20250605.908/
-  magik-mode-20250605.908/magik-aliases.el
-  magik-mode-20250605.908/magik-cb-ac.el
-  magik-mode-20250605.908/magik-cb.el
-  magik-mode-20250605.908/magik-doc-gen.el
-  magik-mode-20250605.908/magik-electric.el
-  magik-mode-20250605.908/magik-indent.el
-  magik-mode-20250605.908/magik-keys.el
-  magik-mode-20250605.908/magik-lint.el
-  magik-mode-20250605.908/magik-loadlist.el
-  magik-mode-20250605.908/magik-menu.el
-  magik-mode-20250605.908/magik-mode-pkg.el
-  magik-mode-20250605.908/magik-mode.el
-  magik-mode-20250605.908/magik-module.el
-  magik-mode-20250605.908/magik-msg.el
-  magik-mode-20250605.908/magik-pragma.el
-  magik-mode-20250605.908/magik-product.el
-  magik-mode-20250605.908/magik-session-extras.el
-  magik-mode-20250605.908/magik-session-filter.el
-  magik-mode-20250605.908/magik-session.el
-  magik-mode-20250605.908/magik-template.el
-  magik-mode-20250605.908/magik-trn.el
-  magik-mode-20250605.908/magik-ts-mode.el
-  magik-mode-20250605.908/magik-utils.el
-  magik-mode-20250605.908/magik-version.el
-  magik-mode-20250605.908/snippets/
-  magik-mode-20250605.908/snippets/magik-mode/
-  magik-mode-20250605.908/snippets/magik-mode/.yas-setup.el
-  magik-mode-20250605.908/snippets/magik-mode/abstract_method
-  magik-mode-20250605.908/snippets/magik-mode/block
-  magik-mode-20250605.908/snippets/magik-mode/catch
-  magik-mode-20250605.908/snippets/magik-mode/clone
-  magik-mode-20250605.908/snippets/magik-mode/construct
-  magik-mode-20250605.908/snippets/magik-mode/def_indexed_exemplar
-  magik-mode-20250605.908/snippets/magik-mode/def_mixin
-  magik-mode-20250605.908/snippets/magik-mode/def_property
-  magik-mode-20250605.908/snippets/magik-mode/def_slotted_exemplar
-  magik-mode-20250605.908/snippets/magik-mode/define_binary_operator_case
-  magik-mode-20250605.908/snippets/magik-mode/define_condition
-  magik-mode-20250605.908/snippets/magik-mode/define_print_attributes
-  magik-mode-20250605.908/snippets/magik-mode/define_property
-  magik-mode-20250605.908/snippets/magik-mode/define_pseudo_slot
-  magik-mode-20250605.908/snippets/magik-mode/define_shared_constant
-  magik-mode-20250605.908/snippets/magik-mode/define_shared_variable
-  magik-mode-20250605.908/snippets/magik-mode/define_show_attributes
-  magik-mode-20250605.908/snippets/magik-mode/define_slot_access
-  magik-mode-20250605.908/snippets/magik-mode/define_slot_externally_readable
-  magik-mode-20250605.908/snippets/magik-mode/define_slot_externally_writable
-  magik-mode-20250605.908/snippets/magik-mode/documentation
-  magik-mode-20250605.908/snippets/magik-mode/documentation_block
-  magik-mode-20250605.908/snippets/magik-mode/elif
-  magik-mode-20250605.908/snippets/magik-mode/for
-  magik-mode-20250605.908/snippets/magik-mode/if
-  magik-mode-20250605.908/snippets/magik-mode/if_elif
-  magik-mode-20250605.908/snippets/magik-mode/if_elif_else
-  magik-mode-20250605.908/snippets/magik-mode/if_else
-  magik-mode-20250605.908/snippets/magik-mode/if_oneline
-  magik-mode-20250605.908/snippets/magik-mode/iter_method
-  magik-mode-20250605.908/snippets/magik-mode/lock
-  magik-mode-20250605.908/snippets/magik-mode/loop
-  magik-mode-20250605.908/snippets/magik-mode/loopbody
-  magik-mode-20250605.908/snippets/magik-mode/message_handler
-  magik-mode-20250605.908/snippets/magik-mode/method
-  magik-mode-20250605.908/snippets/magik-mode/over
-  magik-mode-20250605.908/snippets/magik-mode/package
-  magik-mode-20250605.908/snippets/magik-mode/pragma
-  magik-mode-20250605.908/snippets/magik-mode/private_method
-  magik-mode-20250605.908/snippets/magik-mode/proc
-  magik-mode-20250605.908/snippets/magik-mode/proc_oneline
-  magik-mode-20250605.908/snippets/magik-mode/protect
-  magik-mode-20250605.908/snippets/magik-mode/protect_locking
-  magik-mode-20250605.908/snippets/magik-mode/raise
-  magik-mode-20250605.908/snippets/magik-mode/remex
-  magik-mode-20250605.908/snippets/magik-mode/self
-  magik-mode-20250605.908/snippets/magik-mode/slot
-  magik-mode-20250605.908/snippets/magik-mode/super
-  magik-mode-20250605.908/snippets/magik-mode/throw
-  magik-mode-20250605.908/snippets/magik-mode/throw_with
-  magik-mode-20250605.908/snippets/magik-mode/try
-  magik-mode-20250605.908/snippets/magik-mode/try_when
-  magik-mode-20250605.908/snippets/magik-mode/try_with_when
-  magik-mode-20250605.908/snippets/magik-mode/while
-  magik-mode-20250605.908/snippets/magik-module-mode/
-  magik-mode-20250605.908/snippets/magik-module-mode/condition_message_accessor
-  magik-mode-20250605.908/snippets/magik-module-mode/description
-  magik-mode-20250605.908/snippets/magik-module-mode/do_not_translate
-  magik-mode-20250605.908/snippets/magik-module-mode/hidden
-  magik-mode-20250605.908/snippets/magik-module-mode/install_requires
-  magik-mode-20250605.908/snippets/magik-module-mode/language
-  magik-mode-20250605.908/snippets/magik-module-mode/messages
-  magik-mode-20250605.908/snippets/magik-module-mode/new
-  magik-mode-20250605.908/snippets/magik-module-mode/optional
-  magik-mode-20250605.908/snippets/magik-module-mode/required_by
-  magik-mode-20250605.908/snippets/magik-module-mode/requires
-  magik-mode-20250605.908/snippets/magik-module-mode/requires_datamodel
-  magik-mode-20250605.908/snippets/magik-module-mode/requires_java
-  magik-mode-20250605.908/snippets/magik-module-mode/templates
-  magik-mode-20250605.908/snippets/magik-module-mode/test
-  magik-mode-20250605.908/snippets/magik-module-mode/tests_modules
-  magik-mode-20250605.908/snippets/magik-product-mode/
-  magik-mode-20250605.908/snippets/magik-product-mode/description
-  magik-mode-20250605.908/snippets/magik-product-mode/do_not_translate
-  magik-mode-20250605.908/snippets/magik-product-mode/new
-  magik-mode-20250605.908/snippets/magik-product-mode/requires
-  magik-mode-20250605.908/snippets/magik-product-mode/title
-  magik-mode-20250605.908/snippets/magik-product-mode/version
-  magik-mode-20250605.908/snippets/magik-session-mode/
-  magik-mode-20250605.908/snippets/magik-session-mode/.yas-parents
-  magik-mode-20250605.908/snippets/magik-trn-mode/
-  magik-mode-20250605.908/snippets/magik-trn-mode/enumerator
-  magik-mode-20250605.908/snippets/magik-trn-mode/external_name
-  magik-mode-20250605.908/snippets/magik-trn-mode/field_value
-  magik-mode-20250605.908/snippets/magik-ts-mode/
-  magik-mode-20250605.908/snippets/magik-ts-mode/.yas-parents
+Created magik-mode-20250616.932.tar containing:
+  magik-mode-20250616.932/
+  magik-mode-20250616.932/magik-aliases.el
+  magik-mode-20250616.932/magik-cb.el
+  magik-mode-20250616.932/magik-doc-gen.el
+  magik-mode-20250616.932/magik-electric.el
+  magik-mode-20250616.932/magik-indent.el
+  magik-mode-20250616.932/magik-keys.el
+  magik-mode-20250616.932/magik-lint.el
+  magik-mode-20250616.932/magik-loadlist.el
+  magik-mode-20250616.932/magik-menu.el
+  magik-mode-20250616.932/magik-mode-pkg.el
+  magik-mode-20250616.932/magik-mode.el
+  magik-mode-20250616.932/magik-module.el
+  magik-mode-20250616.932/magik-msg.el
+  magik-mode-20250616.932/magik-pragma.el
+  magik-mode-20250616.932/magik-product.el
+  magik-mode-20250616.932/magik-session-extras.el
+  magik-mode-20250616.932/magik-session-filter.el
+  magik-mode-20250616.932/magik-session.el
+  magik-mode-20250616.932/magik-template.el
+  magik-mode-20250616.932/magik-trn.el
+  magik-mode-20250616.932/magik-ts-mode.el
+  magik-mode-20250616.932/magik-utils.el
+  magik-mode-20250616.932/magik-version.el
+  magik-mode-20250616.932/snippets/
+  magik-mode-20250616.932/snippets/magik-mode/
+  magik-mode-20250616.932/snippets/magik-mode/.yas-setup.el
+  magik-mode-20250616.932/snippets/magik-mode/abstract_method
+  magik-mode-20250616.932/snippets/magik-mode/block
+  magik-mode-20250616.932/snippets/magik-mode/catch
+  magik-mode-20250616.932/snippets/magik-mode/clone
+  magik-mode-20250616.932/snippets/magik-mode/construct
+  magik-mode-20250616.932/snippets/magik-mode/def_indexed_exemplar
+  magik-mode-20250616.932/snippets/magik-mode/def_mixin
+  magik-mode-20250616.932/snippets/magik-mode/def_property
+  magik-mode-20250616.932/snippets/magik-mode/def_slotted_exemplar
+  magik-mode-20250616.932/snippets/magik-mode/define_binary_operator_case
+  magik-mode-20250616.932/snippets/magik-mode/define_condition
+  magik-mode-20250616.932/snippets/magik-mode/define_print_attributes
+  magik-mode-20250616.932/snippets/magik-mode/define_property
+  magik-mode-20250616.932/snippets/magik-mode/define_pseudo_slot
+  magik-mode-20250616.932/snippets/magik-mode/define_shared_constant
+  magik-mode-20250616.932/snippets/magik-mode/define_shared_variable
+  magik-mode-20250616.932/snippets/magik-mode/define_show_attributes
+  magik-mode-20250616.932/snippets/magik-mode/define_slot_access
+  magik-mode-20250616.932/snippets/magik-mode/define_slot_externally_readable
+  magik-mode-20250616.932/snippets/magik-mode/define_slot_externally_writable
+  magik-mode-20250616.932/snippets/magik-mode/documentation
+  magik-mode-20250616.932/snippets/magik-mode/documentation_block
+  magik-mode-20250616.932/snippets/magik-mode/elif
+  magik-mode-20250616.932/snippets/magik-mode/for
+  magik-mode-20250616.932/snippets/magik-mode/if
+  magik-mode-20250616.932/snippets/magik-mode/if_elif
+  magik-mode-20250616.932/snippets/magik-mode/if_elif_else
+  magik-mode-20250616.932/snippets/magik-mode/if_else
+  magik-mode-20250616.932/snippets/magik-mode/if_oneline
+  magik-mode-20250616.932/snippets/magik-mode/iter_method
+  magik-mode-20250616.932/snippets/magik-mode/lock
+  magik-mode-20250616.932/snippets/magik-mode/loop
+  magik-mode-20250616.932/snippets/magik-mode/loopbody
+  magik-mode-20250616.932/snippets/magik-mode/message_handler
+  magik-mode-20250616.932/snippets/magik-mode/method
+  magik-mode-20250616.932/snippets/magik-mode/over
+  magik-mode-20250616.932/snippets/magik-mode/package
+  magik-mode-20250616.932/snippets/magik-mode/pragma
+  magik-mode-20250616.932/snippets/magik-mode/private_method
+  magik-mode-20250616.932/snippets/magik-mode/proc
+  magik-mode-20250616.932/snippets/magik-mode/proc_oneline
+  magik-mode-20250616.932/snippets/magik-mode/protect
+  magik-mode-20250616.932/snippets/magik-mode/protect_locking
+  magik-mode-20250616.932/snippets/magik-mode/raise
+  magik-mode-20250616.932/snippets/magik-mode/remex
+  magik-mode-20250616.932/snippets/magik-mode/self
+  magik-mode-20250616.932/snippets/magik-mode/slot
+  magik-mode-20250616.932/snippets/magik-mode/super
+  magik-mode-20250616.932/snippets/magik-mode/throw
+  magik-mode-20250616.932/snippets/magik-mode/throw_with
+  magik-mode-20250616.932/snippets/magik-mode/try
+  magik-mode-20250616.932/snippets/magik-mode/try_when
+  magik-mode-20250616.932/snippets/magik-mode/try_with_when
+  magik-mode-20250616.932/snippets/magik-mode/while
+  magik-mode-20250616.932/snippets/magik-module-mode/
+  magik-mode-20250616.932/snippets/magik-module-mode/condition_message_accessor
+  magik-mode-20250616.932/snippets/magik-module-mode/description
+  magik-mode-20250616.932/snippets/magik-module-mode/do_not_translate
+  magik-mode-20250616.932/snippets/magik-module-mode/hidden
+  magik-mode-20250616.932/snippets/magik-module-mode/install_requires
+  magik-mode-20250616.932/snippets/magik-module-mode/language
+  magik-mode-20250616.932/snippets/magik-module-mode/messages
+  magik-mode-20250616.932/snippets/magik-module-mode/new
+  magik-mode-20250616.932/snippets/magik-module-mode/optional
+  magik-mode-20250616.932/snippets/magik-module-mode/required_by
+  magik-mode-20250616.932/snippets/magik-module-mode/requires
+  magik-mode-20250616.932/snippets/magik-module-mode/requires_datamodel
+  magik-mode-20250616.932/snippets/magik-module-mode/requires_java
+  magik-mode-20250616.932/snippets/magik-module-mode/templates
+  magik-mode-20250616.932/snippets/magik-module-mode/test
+  magik-mode-20250616.932/snippets/magik-module-mode/tests_modules
+  magik-mode-20250616.932/snippets/magik-product-mode/
+  magik-mode-20250616.932/snippets/magik-product-mode/description
+  magik-mode-20250616.932/snippets/magik-product-mode/do_not_translate
+  magik-mode-20250616.932/snippets/magik-product-mode/new
+  magik-mode-20250616.932/snippets/magik-product-mode/requires
+  magik-mode-20250616.932/snippets/magik-product-mode/title
+  magik-mode-20250616.932/snippets/magik-product-mode/version
+  magik-mode-20250616.932/snippets/magik-session-mode/
+  magik-mode-20250616.932/snippets/magik-session-mode/.yas-parents
+  magik-mode-20250616.932/snippets/magik-trn-mode/
+  magik-mode-20250616.932/snippets/magik-trn-mode/enumerator
+  magik-mode-20250616.932/snippets/magik-trn-mode/external_name
+  magik-mode-20250616.932/snippets/magik-trn-mode/field_value
+  magik-mode-20250616.932/snippets/magik-ts-mode/
+  magik-mode-20250616.932/snippets/magik-ts-mode/.yas-parents
  ✓ Success:
-  2025-06-16T07:04:55+0000  magik-mode-20250605.908.entry
-  2025-06-16T07:04:55+0000  magik-mode-20250605.908.tar
-Built magik-mode in 3.490s, finished at 2025-06-16T07:04:56+0000
+  2025-06-16T09:19:37+0000  magik-mode-20250605.908.entry
+  2025-06-16T09:19:37+0000  magik-mode-20250605.908.tar
+  2025-06-16T11:32:56+0000  magik-mode-20250616.932.entry
+  2025-06-16T11:32:56+0000  magik-mode-20250616.932.tar
+Built magik-mode in 5.411s, finished at 2025-06-16T11:32:57+0000
