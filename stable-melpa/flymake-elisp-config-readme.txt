@@ -67,6 +67,8 @@ _________________
         Emacs Lisp project managed by `keg'.
   `flymake-elisp-config-as-cask'
         Emacs Lisp project managed by `cask'.
+  `flymake-elisp-config-as-eask'
+        Emacs Lisp project managed by `eask'.
   `flymake-elisp-config-as-default'
         Default Emacs Lisp file.  It uses same `load-path' as default
         flymake.
