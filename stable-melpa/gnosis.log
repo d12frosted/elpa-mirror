@@ -3,27 +3,20 @@ Fetcher: git
 Source:  https://git.thanosapollo.org/gnosis
 
 Updating /mnt/store/melpa/working/gnosis/
-Checking out 263075f83498b387161fef3e82b8b6f3619ff77a
+Checking out 5247d657672f88ef27f8bec454be13adf7b9248a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosisonucVl/gnosis-20241212.147
+  to /tmp/gnosisEE1iGx/gnosis-20250617.1224
     gnosis-algorithm.el -> gnosis-algorithm.el
-    gnosis-org.el -> gnosis-org.el
-    gnosis-string-edit.el -> gnosis-string-edit.el
     gnosis.el -> gnosis.el
-  ! doc/gnosis.info -> gnosis.info
-  ! doc/gnosis.texi -> gnosis.texi
-Generating gnosis.info
-Created gnosis-20241212.147.tar containing:
-  gnosis-20241212.147/
-  gnosis-20241212.147/dir
-  gnosis-20241212.147/gnosis-algorithm.el
-  gnosis-20241212.147/gnosis-org.el
-  gnosis-20241212.147/gnosis-pkg.el
-  gnosis-20241212.147/gnosis-string-edit.el
-  gnosis-20241212.147/gnosis.el
-  gnosis-20241212.147/gnosis.info
+Created gnosis-20250617.1224.tar containing:
+  gnosis-20250617.1224/
+  gnosis-20250617.1224/gnosis-algorithm.el
+  gnosis-20250617.1224/gnosis-pkg.el
+  gnosis-20250617.1224/gnosis.el
  ✓ Success:
   2025-06-17T11:51:54+0000  gnosis-20241212.147.entry
   2025-06-17T11:51:54+0000  gnosis-20241212.147.tar
-Built gnosis in 8.801s, finished at 2025-06-17T11:51:54+0000
+  2025-06-17T14:05:13+0000  gnosis-20250617.1224.entry
+  2025-06-17T14:05:13+0000  gnosis-20250617.1224.tar
+Built gnosis in 3.793s, finished at 2025-06-17T14:05:14+0000
