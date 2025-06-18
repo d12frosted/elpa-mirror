@@ -1112,11 +1112,11 @@
 	       ("Jonas Bernoulli" . "emacs.git-modes@jonas.bernoulli.dev"))
 	      (:commit . "27af84f31ed022267b7108ad10ea286631f88e88"))])
  (gnosis .
-	 [(0 4 10)
+	 [(0 5 0)
 	  ((emacs
 	    (27 2))
 	   (emacsql
-	    (4 0 1))
+	    (4 1 0))
 	   (compat
 	    (29 1 4 2))
 	   (transient
@@ -1127,7 +1127,7 @@
 	   (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
 	   (:authors
 	    ("Thanos Apollo" . "public@thanosapollo.org"))
-	   (:commit . "42b3f00f88bc6dc8c8b207be7548f29a7777b136"))])
+	   (:commit . "b20d71b2a0beee4d1fc7900ba9f9aeaec3e28b4f"))])
  (gnu-apl-mode .
 	       [(1 5 1)
 		nil "Emacs mode for GNU APL" tar
