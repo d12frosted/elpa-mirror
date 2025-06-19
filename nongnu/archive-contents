@@ -1289,9 +1289,9 @@
 		     ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
 		    (:commit . "95388599a3b5ca33342d4445ebcae3094068c151"))])
  (helm .
-       [(4 0 3)
+       [(4 0 4)
 	((helm-core
-	  (4 0 3))
+	  (4 0 4))
 	 (wfnames
 	  (1 2)))
 	"Helm is an Emacs incremental and narrowing framework" tar
@@ -1300,7 +1300,7 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "063fe595ace5dd008cf2cbbfc27b90f7752c44dd"))])
+	 (:commit . "6befd6e60f756936062fed6d4b905e508aa141fc"))])
  (helm-core .
 	    [(4 0 4)
 	     ((emacs
