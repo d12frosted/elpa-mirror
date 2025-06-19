@@ -3,8 +3,8 @@ Description
 
 The `company-forge' is a [company-mode] completion backend for [forge].  It
 uses current `forge' repository data to offer completions for assignees
-(`@' mentions of users and teams) and topics (`#' references to issues,
-discussions, and pull requests).
+(`@' mentions of users and teams) and topics (`#' (or `!' for GitLab)
+references to issues, discussions, and pull requests).
 
 
 [company-mode] <https://github.com/company-mode/company-mode>
@@ -15,7 +15,7 @@ discussions, and pull requests).
 Features
 ========
 
-- Offer completion after entering `@' and `#'
+- Offer completion after entering `@' and `#' (or `!' for GitLab).
 - Support for users, teams, issues, discussions, and pull requests.
 - Suppoet for different matching types (see `company-forge-match-type').
 - Display [octicons] for candidates (see `company-forge-icons-mode').
@@ -88,9 +88,19 @@ startup.  If you have installed `company-forge' using built-in `package' or
   (company-forge-icons-mode) ;; Display icons
   (advice-add #'forge--pull ;; Reset cache after forge pull
               :filter-args #'company-forge-reset-cache-after-pull)
-  (add-to-list 'company-backends 'company-forge)
-  (add-hook 'completion-at-point-functions
-            #'company-forge-completion-at-point-function))
+  (add-to-list 'company-backends 'company-forge))
+
+As an alternative to using `company-forge' backend (which is a recommended
+way) a function `company-forge-completion-function' can be used.  This
+function has been designed to be used in `completion-at-point-functions'
+and can be added there with, for example:
+
+(add-hook 'completion-at-point-functions
+            #'company-forge-completion-at-point-function)
+
+The user option `company-forge-capf-doc-buffer-function' controls how the
+documentation buffer (and `company-posframe' quickdoc) is displayed in such
+a case.
 
 
 Customization

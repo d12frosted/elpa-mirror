@@ -3,27 +3,29 @@ Fetcher: github
 Source:  https://github.com/vale981/py-vterm-interaction.el
 
 Updating /mnt/store/melpa/working/py-vterm-interaction/
-Checking out e9b4171a3acce9071cc27ee89ad117e4c59b0861
+Checking out f6320d0560e28fa1301439ab29b0dfa33988492a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/py-vterm-interaction/
-  to /tmp/py-vterm-interactionAmSm9u/py-vterm-interaction-20250618.1338
+  to /tmp/py-vterm-interactionX6Zn1a/py-vterm-interaction-20250619.108
     py-vterm-interaction.el -> py-vterm-interaction.el
   ! scripts/delete_history.py -> scripts//delete_history.py
   ! scripts/get_env.py -> scripts//get_env.py
   ! scripts/is_ipython.py -> scripts//is_ipython.py
+  ! scripts/print_banner.py -> scripts//print_banner.py
   ! scripts/star_import_script.py -> scripts//star_import_script.py
   ! scripts/utility.py -> scripts//utility.py
-Created py-vterm-interaction-20250618.1338.tar containing:
-  py-vterm-interaction-20250618.1338/
-  py-vterm-interaction-20250618.1338/py-vterm-interaction-pkg.el
-  py-vterm-interaction-20250618.1338/py-vterm-interaction.el
-  py-vterm-interaction-20250618.1338/scripts/
-  py-vterm-interaction-20250618.1338/scripts/delete_history.py
-  py-vterm-interaction-20250618.1338/scripts/get_env.py
-  py-vterm-interaction-20250618.1338/scripts/is_ipython.py
-  py-vterm-interaction-20250618.1338/scripts/star_import_script.py
-  py-vterm-interaction-20250618.1338/scripts/utility.py
+Created py-vterm-interaction-20250619.108.tar containing:
+  py-vterm-interaction-20250619.108/
+  py-vterm-interaction-20250619.108/py-vterm-interaction-pkg.el
+  py-vterm-interaction-20250619.108/py-vterm-interaction.el
+  py-vterm-interaction-20250619.108/scripts/
+  py-vterm-interaction-20250619.108/scripts/delete_history.py
+  py-vterm-interaction-20250619.108/scripts/get_env.py
+  py-vterm-interaction-20250619.108/scripts/is_ipython.py
+  py-vterm-interaction-20250619.108/scripts/print_banner.py
+  py-vterm-interaction-20250619.108/scripts/star_import_script.py
+  py-vterm-interaction-20250619.108/scripts/utility.py
  ✓ Success:
-  2025-06-18T19:01:34+0000  py-vterm-interaction-20250618.1338.entry
-  2025-06-18T19:01:34+0000  py-vterm-interaction-20250618.1338.tar
-Built py-vterm-interaction in 2.756s, finished at 2025-06-18T19:01:35+0000
+  2025-06-19T04:01:09+0000  py-vterm-interaction-20250619.108.entry
+  2025-06-19T04:01:09+0000  py-vterm-interaction-20250619.108.tar
+Built py-vterm-interaction in 4.504s, finished at 2025-06-19T04:01:11+0000
