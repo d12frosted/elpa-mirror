@@ -5,10 +5,7 @@ REST APIs of Gitlab, Gitea, Gogs and Bitbucket.
 
 Ghub abstracts access to API resources using only a handful of basic
 functions such as `ghub-get'.  These are convenience wrappers around
-`ghub-request'.  Additional forge-specific wrappers like `glab-put',
-`gtea-put', `gogs-post' and `buck-delete' are also available.  Ghub
-does not provide any resource-specific functions, with the exception
-of `FORGE-repository-id'.
+`ghub-request'.
 
 When accessing Github, then Ghub handles the creation and storage of
 access tokens using a setup wizard to make it easier for users to get
