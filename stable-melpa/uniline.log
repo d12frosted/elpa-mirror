@@ -3,19 +3,27 @@ Fetcher: github
 Source:  https://github.com/tbanel/uniline
 
 Updating /mnt/store/melpa/working/uniline/
-Checking out b7232c0da9533e1bf1bf7ef3eb1094e63f9f7922
+Checking out 7ede354080cef4f7293356aad1967c8c43476314
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/uniline/
-  to /tmp/unilinePTBV7r/uniline-20250617.1633
+  to /tmp/unilineicyxLp/uniline-20250620.908
+    uniline-core.el -> uniline-core.el
+    uniline-hydra.el -> uniline-hydra.el
+    uniline-transient.el -> uniline-transient.el
     uniline.el -> uniline.el
     uniline.info -> uniline.info
-Created uniline-20250617.1633.tar containing:
-  uniline-20250617.1633/
-  uniline-20250617.1633/dir
-  uniline-20250617.1633/uniline-pkg.el
-  uniline-20250617.1633/uniline.el
-  uniline-20250617.1633/uniline.info
+Created uniline-20250620.908.tar containing:
+  uniline-20250620.908/
+  uniline-20250620.908/dir
+  uniline-20250620.908/uniline-core.el
+  uniline-20250620.908/uniline-hydra.el
+  uniline-20250620.908/uniline-pkg.el
+  uniline-20250620.908/uniline-transient.el
+  uniline-20250620.908/uniline.el
+  uniline-20250620.908/uniline.info
  ✓ Success:
-  2025-06-20T06:06:18+0000  uniline-20250617.1633.entry
-  2025-06-20T06:06:17+0000  uniline-20250617.1633.tar
-Built uniline in 5.632s, finished at 2025-06-20T06:06:19+0000
+  2025-06-20T08:49:46+0000  uniline-20250620.840.entry
+  2025-06-20T08:49:46+0000  uniline-20250620.840.tar
+  2025-06-20T11:17:24+0000  uniline-20250620.908.entry
+  2025-06-20T11:17:23+0000  uniline-20250620.908.tar
+Built uniline in 5.742s, finished at 2025-06-20T11:17:25+0000
