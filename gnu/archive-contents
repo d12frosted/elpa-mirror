@@ -743,7 +743,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:commit . "e62157d43b2c874d2edbd547c3bdfb05d0a7ae5c"))])
  (compat .
-	 [(30 1 0 0)
+	 [(30 1 0 1)
 	  ((emacs
 	    (24 4))
 	   (seq
@@ -755,7 +755,7 @@
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net")
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "7179960b7c82a7cca6bac60d79dd7fe09ae390a0"))])
+	   (:commit . "cccd41f549fa88031a32deb26253b462021d7e12"))])
  (cond-star .
 	    [(1 0)
 	     ((emacs
