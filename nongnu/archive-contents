@@ -1278,7 +1278,7 @@
 		     (:keywords "languages")
 		     (:commit . "59640ceec33cd4df37096289e11ff6f4b876be03"))])
  (haskell-ts-mode .
-		  [(1 2 1)
+		  [(1 2 2)
 		   ((emacs
 		     (29 3)))
 		   "A treesit based major mode for haskell" tar
@@ -1287,7 +1287,7 @@
 		    (:maintainer "Pranshu Sharma" . "pranshu@bauherren.ovh")
 		    (:authors
 		     ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
-		    (:commit . "95388599a3b5ca33342d4445ebcae3094068c151"))])
+		    (:commit . "ba817b79c1cf05782a1fcb04fc36411a17c3a7a5"))])
  (helm .
        [(4 0 4)
 	((helm-core

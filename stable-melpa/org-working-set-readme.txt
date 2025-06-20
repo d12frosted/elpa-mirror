@@ -26,8 +26,8 @@ Purpose:
  The list of ids from the nodes of your working-set is stored within the
  property-drawer of a distinguished node specified via
  `org-working-set-id'; this node will also collect an ever-growing
- journal of nodes added to the working-set, which may serve as a
- reference later.
+ journal of nodes added to or removed from the working-set, which may
+ serve as a reference later.
 
 
 Similar Packages:
