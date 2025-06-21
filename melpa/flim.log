@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacsmirror/flim
 
 Updating /mnt/store/melpa/working/flim/
-Checking out 405b5954ab846b975a2e8c4b7c4f3edf2d50ed77
+Checking out f586caed9251f4bf9e6798a267c5e03e22c608db
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flim/
-  to /tmp/flimHb2OIu/flim-20250608.1812
+  to /tmp/flimMrtcyg/flim-20250621.1317
     mime-en.texi -> mime-en.texi
     mime-ja.texi -> mime-ja.texi
     sasl.texi -> sasl.texi
@@ -38,39 +38,41 @@ Copying files (->) and directories (=>)
 Generating mime-en.info
 Generating mime-ja.info
 Generating sasl.info
-Created flim-20250608.1812.tar containing:
-  flim-20250608.1812/
-  flim-20250608.1812/dir
-  flim-20250608.1812/eword-decode.el
-  flim-20250608.1812/eword-encode.el
-  flim-20250608.1812/flim-pkg.el
-  flim-20250608.1812/flim.el
-  flim-20250608.1812/hmac-sha1.el
-  flim-20250608.1812/luna.el
-  flim-20250608.1812/lunit.el
-  flim-20250608.1812/mel-g.el
-  flim-20250608.1812/mel-q-ccl.el
-  flim-20250608.1812/mel-q.el
-  flim-20250608.1812/mel-u.el
-  flim-20250608.1812/mel.el
-  flim-20250608.1812/mime-conf.el
-  flim-20250608.1812/mime-def.el
-  flim-20250608.1812/mime-en.info
-  flim-20250608.1812/mime-ja.info
-  flim-20250608.1812/mime-parse.el
-  flim-20250608.1812/mime.el
-  flim-20250608.1812/mmbuffer.el
-  flim-20250608.1812/mmcooked.el
-  flim-20250608.1812/mmexternal.el
-  flim-20250608.1812/mmgeneric.el
-  flim-20250608.1812/qmtp.el
-  flim-20250608.1812/sasl-scram.el
-  flim-20250608.1812/sasl-xoauth2.el
-  flim-20250608.1812/sasl.el
-  flim-20250608.1812/sasl.info
-  flim-20250608.1812/smtp.el
-  flim-20250608.1812/std11.el
+Created flim-20250621.1317.tar containing:
+  flim-20250621.1317/
+  flim-20250621.1317/dir
+  flim-20250621.1317/eword-decode.el
+  flim-20250621.1317/eword-encode.el
+  flim-20250621.1317/flim-pkg.el
+  flim-20250621.1317/flim.el
+  flim-20250621.1317/hmac-sha1.el
+  flim-20250621.1317/luna.el
+  flim-20250621.1317/lunit.el
+  flim-20250621.1317/mel-g.el
+  flim-20250621.1317/mel-q-ccl.el
+  flim-20250621.1317/mel-q.el
+  flim-20250621.1317/mel-u.el
+  flim-20250621.1317/mel.el
+  flim-20250621.1317/mime-conf.el
+  flim-20250621.1317/mime-def.el
+  flim-20250621.1317/mime-en.info
+  flim-20250621.1317/mime-ja.info
+  flim-20250621.1317/mime-parse.el
+  flim-20250621.1317/mime.el
+  flim-20250621.1317/mmbuffer.el
+  flim-20250621.1317/mmcooked.el
+  flim-20250621.1317/mmexternal.el
+  flim-20250621.1317/mmgeneric.el
+  flim-20250621.1317/qmtp.el
+  flim-20250621.1317/sasl-scram.el
+  flim-20250621.1317/sasl-xoauth2.el
+  flim-20250621.1317/sasl.el
+  flim-20250621.1317/sasl.info
+  flim-20250621.1317/smtp.el
+  flim-20250621.1317/std11.el
  ✓ Success:
-  2025-06-21T09:44:43+0000  flim-20250608.1812.entry
-  2025-06-21T09:44:43+0000  flim-20250608.1812.tar
-Built flim in 10.343s, finished at 2025-06-21T09:44:44+0000
+  2025-06-21T12:24:24+0000  flim-20250608.1812.entry
+  2025-06-21T12:24:24+0000  flim-20250608.1812.tar
+  2025-06-21T15:05:06+0000  flim-20250621.1317.entry
+  2025-06-21T15:05:06+0000  flim-20250621.1317.tar
+Built flim in 11.112s, finished at 2025-06-21T15:05:07+0000
