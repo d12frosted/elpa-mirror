@@ -3,3 +3,34 @@ Fetcher: github
 Source:  https://github.com/boogie-org/boogie-friends
 
 Updating /mnt/store/melpa/working/boogie-friends/
+Checking out 54905dab2944e7e808aa9445727646d7a3855174
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/boogie-friends/
+  to /tmp/boogie-friendsVflLR9/boogie-friends-20250310.1610
+  ! emacs/boogie-friends-pkg.el -> boogie-friends-pkg.el
+  ! emacs/boogie-friends.el -> boogie-friends.el
+  ! emacs/boogie-mode.el -> boogie-mode.el
+  ! emacs/dafny-docs.el -> dafny-docs.el
+  ! emacs/dafny-mode.el -> dafny-mode.el
+  ! emacs/inferior-dafny.el -> inferior-dafny.el
+  ! emacs/lsp-dafny.el -> lsp-dafny.el
+  ! emacs/z3-smt2-mode.el -> z3-smt2-mode.el
+  ! emacs/etc => etc
+Created boogie-friends-20250310.1610.tar containing:
+  boogie-friends-20250310.1610/
+  boogie-friends-20250310.1610/boogie-friends-pkg.el
+  boogie-friends-20250310.1610/boogie-friends.el
+  boogie-friends-20250310.1610/boogie-mode.el
+  boogie-friends-20250310.1610/dafny-docs.el
+  boogie-friends-20250310.1610/dafny-mode.el
+  boogie-friends-20250310.1610/etc/
+  boogie-friends-20250310.1610/etc/dafny-attributes
+  boogie-friends-20250310.1610/etc/dafny-docs.html.gz
+  boogie-friends-20250310.1610/etc/dafny-snippets
+  boogie-friends-20250310.1610/inferior-dafny.el
+  boogie-friends-20250310.1610/lsp-dafny.el
+  boogie-friends-20250310.1610/z3-smt2-mode.el
+ ✓ Success:
+  2025-06-21T22:43:57+0000  boogie-friends-20250310.1610.entry
+  2025-06-21T22:43:57+0000  boogie-friends-20250310.1610.tar
+Built boogie-friends in 3.650s, finished at 2025-06-21T22:43:58+0000
