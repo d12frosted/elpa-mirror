@@ -1,75 +1,105 @@
 
-This package provides `total-recall'.
+`total-recall.el` is a spaced repetition system for Emacs that helps users review and
+retain knowledge stored in Org Mode files. It searches for definitions and exercises
+in Org files under a configurable root directory, schedules reviews based on past
+performance, presents exercises via a user interface, and persists results in a
+SQLite database.
 
-The command `M-x total-recall' uses Ripgrep to search for Org files in
-the directory set by `total-recall-root-dir' that contain
-exercises. It lists the exercises from each file and provides a user
-interface to view them. The list of exercises follows a depth first
-order /i.e./ a bottom-up review order.
+* Goals
 
-Each exercise displays its question first, followed by the answer. The
-user's performance—whether they answered correctly—is recorded in an
-SQLite database at `total-recall-database'. This data determines when
-an exercise should be reviewed next.
+- Enable users to create and review learning content (definitions and exercises) in
+  Org Mode files.
+- Implement spaced repetition to optimize retention by scheduling reviews at
+  increasing intervals based on success.
+- Provide a modular, extensible architecture using an actor model for managing system
+  components.
+- Offer a customizable UI and configuration options for integration into diverse
+  Emacs workflows.
 
-An exercise is any Org file heading that meets these criteria:
-- Has a `TYPE' property set to `total-recall-type-id'.
-- Has an `ID' property with a UUID value.
-- Contains two subheadings:
-  - The first subheading is the question.
-  - The second subheading is the answer.
-- Is located in `total-recall-root-dir'.
+* User Workflows
 
-Example of an exercise:
+1. *Setup*:
+   - Users configure ~total-recall-root-dir~ for the search directory,
+     ~total-recall-database~ for the SQLite database path, and keybindings (e.g.,
+     ~total-recall-key-skip~).
+   - Org files are created with headings marked by ~:TYPE:~ (matching
+     ~total-recall-def-type~ or ~total-recall-ex-type~) and ~:ID:~ (UUIDs).
+   - Exercises have subheadings for questions and answers; definitions have content.
 
-#+begin_src org
-* Emacs
-:PROPERTIES:⁣
+2. *Running Total Recall*:
+   - Invoke ~M-x total-recall~ to start the system.
+   - The system searches for Org files, parses exercises, and selects those due for
+     review based on prior ratings.
+   - Exercises are shown in a dedicated frame (~UI~), where users press keys to reveal
+     answers, mark success/failure/skip, or quit.
+   - Results are saved to the database, and a report is displayed in a buffer
+     (~total-recall-io-buffer-name~).
+
+3. *Review Process*:
+   - For each exercise, users view the question, choose to reveal the answer, and
+     rate their performance.
+   - The ~Planner~ schedules future reviews: successful reviews double the interval
+     (e.g., 1, 2, 4 days), while failures reset the schedule.
+   - Definitions are treated as exercises with a fixed question ("* Definition?") and
+     content as the answer.
+
+* Example Org File Structure
+
+#+begin_example
+,* Topic
+:PROPERTIES:
+:TYPE: f590edb9-5fa3-4a07-8f3d-f513950d5663
+:ID:   123e4567-e89b-12d3-a456-426614174000
+:END:
+Definition content...
+
+,* Exercise
+:PROPERTIES:
 :TYPE: b0d53cd4-ad89-4333-9ef1-4d9e0995a4d8
-:ID: ced2b42b-bfba-4af5-913c-9d903ac78433
+:ID:   789abcde-f012-3456-7890-abcdef123456
 :END:
 
-** What is GNU Emacs?
+,** Question
+What is the capital of France?
 
-[optional content]
+,** Answer
+The capital of France is Paris.
+#+end_example
 
-** Answer
+* Components and Interactions
 
-An extensible, customizable, free/libre text editor—and more. Its core
-is an interpreter for Emacs Lisp, a Lisp dialect with extensions for
-text editing.
-#+end_src
+The system comprises several actors, each handling a specific responsibility:
+- *Searcher*: Uses Ripgrep to find Org files containing definitions or exercises,
+  identified by UUIDs in ~:ID:~ and ~:TYPE:~ properties.
+- *Parser*: Extracts definitions and exercises from Org files in depth-first order,
+  converting them into actors (~Definition~ and ~Exercise~).
+- *Planner*: Selects exercises due for review based on a spaced repetition algorithm,
+  using ratings stored in the database.
+- *DB*: Manages persistence of review results (ratings) in a SQLite database, storing
+  success, failure, or skip outcomes with timestamps.
+- *Clock*: Provides time-related functionality, including current time and review
+  scheduling logic.
+- *UI*: Displays exercises to the user, collects input (success, failure, skip, quit),
+  and shows reports.
+- *Report*: Aggregates execution logs for user feedback.
+- *IO*: Handles output to a buffer and minibuffer for reports and notifications.
+- *TotalRecall*: Orchestrates the workflow, coordinating other actors to search, parse,
+  schedule, display, and save results.
 
-Exercises can be embedded in any Org Mode document for context:
+The workflow begins with ~total-recall~, which initializes a ~TotalRecall~ actor. This
+actor:
+1. Uses ~Searcher~ to locate relevant Org files.
+2. Employs ~Parser~ to extract exercises and definitions.
+3. Filters exercises with ~Planner~ based on review schedules stored in ~DB~.
+4. Presents exercises via ~UI~, collecting user ratings.
+5. Saves ratings to ~DB~ and generates a ~Report~ for output via ~IO~.
 
-#+begin_src org
-* Title
-** Section
-*** Sub-section
-**** Exercise 1
-**** Exercise 2
-*** Exercise 3
-*** Exercise 4
-#+end_src
+* Extensibility
 
-which would lead to this review order:
+The actor model allows new components (e.g., alternative UIs or scheduling
+algorithms) to be added by defining new actors and messages. Users can customize
+keybindings, database paths, and UI dimensions via ~defcustom~ variables.
 
-1) Title/Section/Sub-section/Exercise 1
-2) Title/Section/Sub-section/Exercise 2
-3) Title/Section/Exercise 3
-4) Title/Section/Exercise 4
-
-which may be pruned by the scheduling algorithm to:
-
-1) Title/Section/Sub-section/Exercise 1
-2) Title/Section/Exercise 4
-
-depending on accumulated data so far.
-
-A reference to the exercise in its original content is displayed
-as its subject using the format:
-
-[[ref:<ExerciseID>][A/B/C]]
-
-When interpreted with the `locs-and-refs' package, it lets you display
-the exercise in context in another frame.
+This system integrates seamlessly with Emacs, leveraging Org Mode for content
+management and SQLite for persistence, providing a robust tool for knowledge
+retention.
