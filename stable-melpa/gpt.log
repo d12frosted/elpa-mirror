@@ -6,15 +6,29 @@ Updating /mnt/store/melpa/working/gpt/
 Checking out ff19f3ca3ea30c87650cc1e6d673b57607daa52d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gpt/
-  to /tmp/gptKHdH9y/gpt-20250615.1811
+  to /tmp/gpt31QTct/gpt-20250615.1811
     gpt-api.el -> gpt-api.el
     gpt-core.el -> gpt-core.el
     gpt-mode.el -> gpt-mode.el
     gpt-ui.el -> gpt-ui.el
     gpt.el -> gpt.el
     gpt.py -> gpt.py
+    providers => providers
+  ! providers/__init__.py -> __init__.py
+  ! providers/anthropic_provider.py -> anthropic_provider.py
+  ! providers/common.py -> common.py
+  ! providers/google_provider.py -> google_provider.py
+  ! providers/openai_provider.py -> openai_provider.py
+  ! providers/test_anthropic_provider.py -> test_anthropic_provider.py
+  ! providers/test_common.py -> test_common.py
+  ! providers/test_google_provider.py -> test_google_provider.py
+  ! providers/test_openai_provider.py -> test_openai_provider.py
 Created gpt-20250615.1811.tar containing:
   gpt-20250615.1811/
+  gpt-20250615.1811/__init__.py
+  gpt-20250615.1811/anthropic_provider.py
+  gpt-20250615.1811/common.py
+  gpt-20250615.1811/google_provider.py
   gpt-20250615.1811/gpt-api.el
   gpt-20250615.1811/gpt-core.el
   gpt-20250615.1811/gpt-mode.el
@@ -22,7 +36,22 @@ Created gpt-20250615.1811.tar containing:
   gpt-20250615.1811/gpt-ui.el
   gpt-20250615.1811/gpt.el
   gpt-20250615.1811/gpt.py
+  gpt-20250615.1811/openai_provider.py
+  gpt-20250615.1811/providers/
+  gpt-20250615.1811/providers/__init__.py
+  gpt-20250615.1811/providers/anthropic_provider.py
+  gpt-20250615.1811/providers/common.py
+  gpt-20250615.1811/providers/google_provider.py
+  gpt-20250615.1811/providers/openai_provider.py
+  gpt-20250615.1811/providers/test_anthropic_provider.py
+  gpt-20250615.1811/providers/test_common.py
+  gpt-20250615.1811/providers/test_google_provider.py
+  gpt-20250615.1811/providers/test_openai_provider.py
+  gpt-20250615.1811/test_anthropic_provider.py
+  gpt-20250615.1811/test_common.py
+  gpt-20250615.1811/test_google_provider.py
+  gpt-20250615.1811/test_openai_provider.py
  ✓ Success:
-  2025-06-22T14:27:47+0000  gpt-20250615.1811.entry
-  2025-06-22T14:27:47+0000  gpt-20250615.1811.tar
-Built gpt in 3.047s, finished at 2025-06-22T14:27:48+0000
+  2025-06-22T19:36:19+0000  gpt-20250615.1811.entry
+  2025-06-22T19:36:18+0000  gpt-20250615.1811.tar
+Built gpt in 2.926s, finished at 2025-06-22T19:36:19+0000
