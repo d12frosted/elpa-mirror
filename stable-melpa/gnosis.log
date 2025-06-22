@@ -3,3 +3,23 @@ Fetcher: git
 Source:  https://git.thanosapollo.org/gnosis
 
 Updating /mnt/store/melpa/working/gnosis/
+Checking out fb2120a9e6a2935926d02fa6c4c976400fa92328
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gnosis/
+  to /tmp/gnosisA09Q0U/gnosis-20250622.138
+    gnosis-algorithm.el -> gnosis-algorithm.el
+    gnosis.el -> gnosis.el
+  ! doc/gnosis.info -> gnosis.info
+  ! doc/gnosis.texi -> gnosis.texi
+Generating gnosis.info
+Created gnosis-20250622.138.tar containing:
+  gnosis-20250622.138/
+  gnosis-20250622.138/dir
+  gnosis-20250622.138/gnosis-algorithm.el
+  gnosis-20250622.138/gnosis-pkg.el
+  gnosis-20250622.138/gnosis.el
+  gnosis-20250622.138/gnosis.info
+ ✓ Success:
+  2025-06-22T06:49:03+0000  gnosis-20250622.138.entry
+  2025-06-22T06:49:03+0000  gnosis-20250622.138.tar
+Built gnosis in 6.491s, finished at 2025-06-22T06:49:04+0000
