@@ -1,3 +1,41 @@
+This package provides four global minor modes:
+
+- `transient-cycles-buffer-siblings-mode'
+  Enhances buffer switching commands by adding transient cycling.
+  After typing 'C-x b', 'C-x 4 C-o', 'C-h i' and others, you can use
+  <left>/<right> to switch between other closely related buffers.
+  For example, after using 'C-x b' to switch to a buffer which has a
+  (possibly indirect) clone, <right> will switch to the clone, and a
+  subsequent <left> will take you back.
+
+- `transient-cycles-window-buffers-mode'
+  Enhances 'C-x <left>' and 'C-x <right>' by adding transient cycling.
+  After typing one of these commands, you can use <left>/<right> to move
+  further forwards or backwards in a list of the buffer's previous,
+  current and next buffers.  But this list is virtual: after exiting
+  transient cycling, it is as though you used an exact numeric prefix
+  argument to 'C-x <left>' or 'C-x <right>' to go to the final destination
+  buffer in just one command, without visiting the others.
+
+- `transient-cycles-tab-bar-mode'
+  Enhances 'C-x t o' and 'C-x t O' by adding transient cycling.
+  After typing one of these commands, you can use <left>/<right> to move
+  further in the list of tabs.  But after exiting transient cycling, it is
+  as though you did not visit the intervening tabs and went straight to
+  your destination tab.  In particular, 'M-x tab-recent' toggles between
+  the initial and final tabs.
+
+- `transient-cycles-shells-mode'
+  Enhances 'C-x p s' (or C-x p e) with transient cycling, and completely
+  replaces 'M-!', 'M-&', and Dired's '!' and '&' commands.  These new
+  commands all switch to shell buffers instead of doing minibuffer
+  prompting, automatically starting fresh shell buffers when others are
+  busy running commands.  In addition, after switching to a shell, you can
+  use <left>/<right> to quickly switch to other shell buffers.
+  There is support for both `shell-mode' inferior shells and Eshell.
+
+Further discussion:
+
 Many commands can be conceptualised as selecting an item from an ordered
 list or ring.  Sometimes after running such a command, you find that the
 item selected is not the one you would have preferred, but the preferred

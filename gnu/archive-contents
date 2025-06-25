@@ -4793,16 +4793,16 @@
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
 	      (:commit . "f3f498aa155f88c7e2ab6d1d01d1361813059db8"))])
  (transient-cycles .
-		   [(1 1)
+		   [(2 0)
 		    ((emacs
-		      (27 1)))
+		      (29 1)))
 		    "Define command variants with transient cycling" tar
 		    ((:url . "https://git.spwhitton.name/dotfiles/tree/.emacs.d/site-lisp/transient-cycles.el")
-		     (:keywords "buffer" "window" "minor-mode" "convenience")
+		     (:keywords "buffer" "window" "processes" "minor-mode" "convenience")
 		     (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name")
 		     (:authors
 		      ("Sean Whitton" . "spwhitton@spwhitton.name"))
-		     (:commit . "456495db28a72a343907e58ee43e7470144282aa"))])
+		     (:commit . "11e547c11b84fa81bb4ef8ec33ee777f96576e8c"))])
  (tree-inspector .
 		 [(0 4)
 		  ((emacs
