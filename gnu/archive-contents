@@ -4904,29 +4904,29 @@
 	   (:keywords "grep" "search")
 	   (:commit . "d53d3168e52b021738515491de391d66e4bf865c"))])
  (url-http-ntlm .
-		[(2 0 5)
-		 ((cl-lib
-		   (0 5))
+		[(2 0 6)
+		 ((emacs
+		   (24 4))
 		  (ntlm
-		   (2 1 0))
-		  (nadvice
-		   (0 3)))
+		   (2 1 0)))
 		 "NTLM authentication for the url library" tar
 		 ((:url . "https://code.google.com/p/url-http-ntlm/")
 		  (:keywords "comm" "data" "processes" "hypermedia")
 		  (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		  (:authors
 		   ("Tom Schutzer-Weissmann" . "tom.weissmann@gmail.com"))
-		  (:commit . "2c76d9491304e485a91c9d457fc25130279e1324"))])
+		  (:commit . "234228e02682b9000015f5aa668875ea5d4fe6f0"))])
  (url-http-oauth .
-		 [(0 8 3)
-		  nil "OAuth 2.0 for URL library" tar
+		 [(0 8 4)
+		  ((emacs
+		    (24 4)))
+		  "OAuth 2.0 for URL library" tar
 		  ((:keywords "comm" "data" "processes" "hypermedia")
 		   (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
 		   (:authors
 		    ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
 		   (:url . "https://elpa.gnu.org/packages/url-http-oauth.html")
-		   (:commit . "c2d06036f22ce61f5a1e3084c8b265d897b7fcab"))])
+		   (:commit . "f951bb71c5c34542cc75940d5e179d023f352ad4"))])
  (url-scgi .
 	   [(0 9)
 	    ((emacs
