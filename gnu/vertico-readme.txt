@@ -285,11 +285,11 @@ Table of Contents
 
   The function `completing-read-multiple' is similar to
   `completing-read' but returns a list of completed strings. The strings
-  are separated by `crm-separator' in the minibuffer. However
-  `completing-read-multiple' does not indicate to the user that multiple
-  strings can be completed. I have contributed a patch to Emacs 31,
-  which fixes this minor issue. See the variable `crm-prompt' and
-  [bug#76028]. On older Emacs versions you can use the following:
+  are separated by `crm-separator' in the minibuffer. On Emacs 30 and
+  older, `completing-read-multiple' does not indicate to the user that
+  multiple strings can be completed. I have contributed a patch to Emacs
+  31, which fixes this issue. See the variable `crm-prompt' and
+  [bug#76028]. On older Emacs versions you can use the following advice:
 
   ┌────
   │ ;; Prompt indicator for `completing-read-multiple'.
@@ -476,17 +476,26 @@ Table of Contents
   │ ;; Change the default sorting function.
   │ ;; See `vertico-sort-function' and `vertico-sort-override-function'.
   │ (setq vertico-multiform-commands
-  │       '((describe-symbol (vertico-sort-function . vertico-sort-alpha))))
+  │       '((describe-symbol (vertico-sort-function . vertico-sort-alpha))
+  │ 	(execute-extended-command (:keymap "X" execute-extended-command-cycle))))
   │ 
   │ (setq vertico-multiform-categories
   │       '((symbol (vertico-sort-function . vertico-sort-alpha))
-  │ 	(file (vertico-sort-function . sort-directories-first))))
+  │ 	(file (vertico-sort-function . vertico-sort-directories-first)
+  │ 	      (:keymap . vertico-directory-map))))
+  └────
+
+  Key maps or key bindings can be set per command or category.
+
+  ┌────
+  │ ;; Bind "X" to `execute-extended-command-cycle' in M-x.
+  │ (setq vertico-multiform-commands
+  │       '((execute-extended-command (:keymap "X" execute-extended-command-cycle))))
   │ 
-  │ ;; Sort directories before files
-  │ (defun sort-directories-first (files)
-  │   (setq files (vertico-sort-history-length-alpha files))
-  │   (nconc (seq-filter (lambda (x) (string-suffix-p "/" x)) files)
-  │ 	 (seq-remove (lambda (x) (string-suffix-p "/" x)) files)))
+  │ ;; Bind directory commands for all commands in file category.
+  │ (setq vertico-multiform-categories
+  │       '((file (vertico-sort-function . vertico-sort-directories-first)
+  │ 	      (:keymap . vertico-directory-map))))
   └────
 
   Combining these features allows us to fine-tune the completion display
@@ -812,9 +821,9 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 12.3 `tmm-menubar'
 ──────────────────
 
-  *NOTE*: I have implemented a fix for this problem which is part of
-  Emacs 31. You can set `completion-eager-display' to `nil' in your
-  configuration. See [bug#74616] for the upstream bug report.
+  *NOTE*: I have implemented a fix for this problem upstream in Emacs,
+  see [bug#74616]. From Emacs 31 and newer the workaround is not needed
+  anymore.
 
   The text menu bar works well with Vertico but always shows a
   `*Completions*' buffer, which is unwanted if Vertico is used. Right
@@ -834,9 +843,9 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 12.4 `ffap-menu'
 ────────────────
 
-  *NOTE*: I have implemented a fix for this problem which is part of
-  Emacs 31. You can set `completion-eager-display' to `nil' in your
-  configuration. See [bug#74616] for the upstream bug report.
+  *NOTE*: I have implemented a fix for this problem upstream in Emacs,
+  see [bug#74616]. From Emacs 31 and newer the workaround is not needed
+  anymore.
 
   The command `ffap-menu' shows the `*Completions*' buffer by default
   like `tmm-menubar', which is unwanted if Vertico is used. The
