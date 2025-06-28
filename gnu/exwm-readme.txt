@@ -22,7 +22,7 @@ Here are the minimal steps to get EXWM working:
 
    (require 'exwm)
    (setq exwm-input-global-keys `(([?\s-r] . exwm-reset)))
-   (exwm-enable)
+   (exwm-wm-mode)
 
 3. Add the following lines to '~/.xinitrc':
 

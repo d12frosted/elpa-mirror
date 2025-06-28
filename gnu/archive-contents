@@ -1810,7 +1810,7 @@
 			(:url . "https://elpa.gnu.org/packages/external-completion.html")
 			(:commit . "4bc9c8972ac0a3dfa237a9c5704de89ef24ad82b"))])
  (exwm .
-       [(0 33)
+       [(0 34)
 	((emacs
 	  (27 1))
 	 (xelb
@@ -1826,7 +1826,7 @@
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:authors
 	  ("Chris Feng" . "chris.w.feng@gmail.com"))
-	 (:commit . "da034e67784a9e2600383e75606a6ade6925f374"))])
+	 (:commit . "254fa6c43f2e2c29f87dcac404a054a393a6a0ea"))])
  (f90-interface-browser .
 			[(1 1)
 			 nil "Parse and browse f90 interfaces" single
@@ -5319,11 +5319,11 @@
 	  ("Yuan Fu" . "casouri@gmail.com"))
 	 (:commit . "6c63bc4c40eae8fe7a3213efe11b75dfe73aaaa4"))])
  (xelb .
-       [(0 20)
+       [(0 21)
 	((emacs
 	  (27 1))
 	 (compat
-	  (29 1)))
+	  (30)))
 	"X protocol Emacs Lisp Binding" tar
 	((:url . "https://github.com/emacs-exwm/xelb")
 	 (:keywords "unix")
@@ -5333,7 +5333,7 @@
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:authors
 	  ("Chris Feng" . "chris.w.feng@gmail.com"))
-	 (:commit . "bdf3a69214c70611fbce71942598c85c4fe3d6b7"))])
+	 (:commit . "02abf74fa5eeb255c9c174eedc2f04097a9571d9"))])
  (xpm .
       [(1 0 5)
        ((cl-lib
