@@ -776,7 +776,7 @@
 	       ("Carsten Dominik" . "carsten.dominik@gmail.com"))
 	      (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult .
-	  [(2 5)
+	  [(2 6)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -785,7 +785,7 @@
 	   ((:url . "https://github.com/minad/consult")
 	    (:keywords "matching" "files" "completion")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-	    (:commit . "b6fd7feda74267a53f9f1cf1bd122e519a308132"))])
+	    (:commit . "4314c45d84d9e00d45d2b611562d8fe2e4ddcf48"))])
  (consult-denote .
 		 [(0 3 1)
 		  ((emacs
@@ -4730,9 +4730,9 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "ffb7d656a2c89f86ccd2de51379de9612c7a4aa3"))])
  (tramp .
-	[(2 7 2 4)
+	[(2 8 0)
 	 ((emacs
-	   (27 1)))
+	   (28 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
 	 ((:url . "https://www.gnu.org/software/tramp/")
 	  (:keywords "comm" "processes")
@@ -4740,7 +4740,7 @@
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 	   ("Michael Albinus" . "michael.albinus@gmx.de"))
-	  (:commit . "c37e5fa5f4e60a19b38089672fbad377035a33a2"))])
+	  (:commit . "34921006953b49f5ec04389bbc901122a3549265"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
