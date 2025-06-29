@@ -3,12 +3,13 @@ Fetcher: github
 Source:  https://github.com/unmonoqueteclea/jira.el
 
 Updating /mnt/store/melpa/working/jira/
-Checking out 2f0260e7d1affa3e3c4398a1902c59ee980975a4
+Checking out 63838f091d452b7e89c840b4e63fb74990539e75
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jira/
-  to /tmp/jirabkZMtM/jira-20250627.1241
+  to /tmp/jiratIWnVx/jira-20250629.1657
     jira-actions.el -> jira-actions.el
     jira-api.el -> jira-api.el
+    jira-complete.el -> jira-complete.el
     jira-detail.el -> jira-detail.el
     jira-doc.el -> jira-doc.el
     jira-fmt.el -> jira-fmt.el
@@ -17,20 +18,21 @@ Copying files (->) and directories (=>)
     jira-tempo.el -> jira-tempo.el
     jira-utils.el -> jira-utils.el
     jira.el -> jira.el
-Created jira-20250627.1241.tar containing:
-  jira-20250627.1241/
-  jira-20250627.1241/jira-actions.el
-  jira-20250627.1241/jira-api.el
-  jira-20250627.1241/jira-detail.el
-  jira-20250627.1241/jira-doc.el
-  jira-20250627.1241/jira-fmt.el
-  jira-20250627.1241/jira-issues.el
-  jira-20250627.1241/jira-pkg.el
-  jira-20250627.1241/jira-table.el
-  jira-20250627.1241/jira-tempo.el
-  jira-20250627.1241/jira-utils.el
-  jira-20250627.1241/jira.el
+Created jira-20250629.1657.tar containing:
+  jira-20250629.1657/
+  jira-20250629.1657/jira-actions.el
+  jira-20250629.1657/jira-api.el
+  jira-20250629.1657/jira-complete.el
+  jira-20250629.1657/jira-detail.el
+  jira-20250629.1657/jira-doc.el
+  jira-20250629.1657/jira-fmt.el
+  jira-20250629.1657/jira-issues.el
+  jira-20250629.1657/jira-pkg.el
+  jira-20250629.1657/jira-table.el
+  jira-20250629.1657/jira-tempo.el
+  jira-20250629.1657/jira-utils.el
+  jira-20250629.1657/jira.el
  ✓ Success:
-  2025-06-29T14:35:57+0000  jira-20250627.1241.entry
-  2025-06-29T14:35:57+0000  jira-20250627.1241.tar
-Built jira in 3.585s, finished at 2025-06-29T14:35:58+0000
+  2025-06-29T19:43:13+0000  jira-20250629.1657.entry
+  2025-06-29T19:43:13+0000  jira-20250629.1657.tar
+Built jira in 3.703s, finished at 2025-06-29T19:43:13+0000
