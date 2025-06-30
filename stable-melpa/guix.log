@@ -3,129 +3,36 @@ Fetcher: codeberg
 Source:  https://codeberg.org/guix/emacs-guix
 
 Updating /mnt/store/melpa/working/guix/
-Checking out 66b935020d93cdbbff0b0ed3b1d2195724a46821
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/guix/
-  to /tmp/guixbQ2KQT/guix-20250525.1711
-  ! elisp/guix-about.el -> guix-about.el
-  ! elisp/guix-auto-mode.el -> guix-auto-mode.el
-  ! elisp/guix-build-log.el -> guix-build-log.el
-  ! elisp/guix-command.el -> guix-command.el
-  ! elisp/guix-config.el -> guix-config.el
-  ! elisp/guix-default-config.el -> guix-default-config.el
-  ! elisp/guix-derivation.el -> guix-derivation.el
-  ! elisp/guix-devel.el -> guix-devel.el
-  ! elisp/guix-env-var.el -> guix-env-var.el
-  ! elisp/guix-external.el -> guix-external.el
-  ! elisp/guix-geiser.el -> guix-geiser.el
-  ! elisp/guix-graph.el -> guix-graph.el
-  ! elisp/guix-guile.el -> guix-guile.el
-  ! elisp/guix-hash.el -> guix-hash.el
-  ! elisp/guix-help-vars.el -> guix-help-vars.el
-  ! elisp/guix-help.el -> guix-help.el
-  ! elisp/guix-license.el -> guix-license.el
-  ! elisp/guix-location.el -> guix-location.el
-  ! elisp/guix-misc.el -> guix-misc.el
-  ! elisp/guix-package.el -> guix-package.el
-  ! elisp/guix-pcomplete.el -> guix-pcomplete.el
-  ! elisp/guix-popup.el -> guix-popup.el
-  ! elisp/guix-prettify.el -> guix-prettify.el
-  ! elisp/guix-profiles.el -> guix-profiles.el
-  ! elisp/guix-read.el -> guix-read.el
-  ! elisp/guix-repl.el -> guix-repl.el
-  ! elisp/guix-scheme.el -> guix-scheme.el
-  ! elisp/guix-service.el -> guix-service.el
-  ! elisp/guix-ui-generation.el -> guix-ui-generation.el
-  ! elisp/guix-ui-license.el -> guix-ui-license.el
-  ! elisp/guix-ui-lint-checker.el -> guix-ui-lint-checker.el
-  ! elisp/guix-ui-messages.el -> guix-ui-messages.el
-  ! elisp/guix-ui-package-location.el -> guix-ui-package-location.el
-  ! elisp/guix-ui-package.el -> guix-ui-package.el
-  ! elisp/guix-ui-profile.el -> guix-ui-profile.el
-  ! elisp/guix-ui-service-location.el -> guix-ui-service-location.el
-  ! elisp/guix-ui-service.el -> guix-ui-service.el
-  ! elisp/guix-ui-store-item.el -> guix-ui-store-item.el
-  ! elisp/guix-ui-system-generation.el -> guix-ui-system-generation.el
-  ! elisp/guix-ui-system.el -> guix-ui-system.el
-  ! elisp/guix-ui.el -> guix-ui.el
-  ! elisp/guix-utils.el -> guix-utils.el
-  ! elisp/guix.el -> guix.el
-  ! doc/emacs-guix.texi -> emacs-guix.texi
-    images/guix-logo.svg -> images/guix-logo.svg
-    scheme/emacs-guix => scheme/emacs-guix
-    scheme/emacs-guix.scm -> scheme/emacs-guix.scm
-Generating emacs-guix.info
-Created guix-20250525.1711.tar containing:
-  guix-20250525.1711/
-  guix-20250525.1711/dir
-  guix-20250525.1711/emacs-guix.info
-  guix-20250525.1711/guix-about.el
-  guix-20250525.1711/guix-auto-mode.el
-  guix-20250525.1711/guix-build-log.el
-  guix-20250525.1711/guix-command.el
-  guix-20250525.1711/guix-config.el
-  guix-20250525.1711/guix-default-config.el
-  guix-20250525.1711/guix-derivation.el
-  guix-20250525.1711/guix-devel.el
-  guix-20250525.1711/guix-env-var.el
-  guix-20250525.1711/guix-external.el
-  guix-20250525.1711/guix-geiser.el
-  guix-20250525.1711/guix-graph.el
-  guix-20250525.1711/guix-guile.el
-  guix-20250525.1711/guix-hash.el
-  guix-20250525.1711/guix-help-vars.el
-  guix-20250525.1711/guix-help.el
-  guix-20250525.1711/guix-license.el
-  guix-20250525.1711/guix-location.el
-  guix-20250525.1711/guix-misc.el
-  guix-20250525.1711/guix-package.el
-  guix-20250525.1711/guix-pcomplete.el
-  guix-20250525.1711/guix-pkg.el
-  guix-20250525.1711/guix-popup.el
-  guix-20250525.1711/guix-prettify.el
-  guix-20250525.1711/guix-profiles.el
-  guix-20250525.1711/guix-read.el
-  guix-20250525.1711/guix-repl.el
-  guix-20250525.1711/guix-scheme.el
-  guix-20250525.1711/guix-service.el
-  guix-20250525.1711/guix-ui-generation.el
-  guix-20250525.1711/guix-ui-license.el
-  guix-20250525.1711/guix-ui-lint-checker.el
-  guix-20250525.1711/guix-ui-messages.el
-  guix-20250525.1711/guix-ui-package-location.el
-  guix-20250525.1711/guix-ui-package.el
-  guix-20250525.1711/guix-ui-profile.el
-  guix-20250525.1711/guix-ui-service-location.el
-  guix-20250525.1711/guix-ui-service.el
-  guix-20250525.1711/guix-ui-store-item.el
-  guix-20250525.1711/guix-ui-system-generation.el
-  guix-20250525.1711/guix-ui-system.el
-  guix-20250525.1711/guix-ui.el
-  guix-20250525.1711/guix-utils.el
-  guix-20250525.1711/guix.el
-  guix-20250525.1711/images/
-  guix-20250525.1711/images/guix-logo.svg
-  guix-20250525.1711/scheme/
-  guix-20250525.1711/scheme/emacs-guix.scm
-  guix-20250525.1711/scheme/emacs-guix/
-  guix-20250525.1711/scheme/emacs-guix/actions.scm
-  guix-20250525.1711/scheme/emacs-guix/commands.scm
-  guix-20250525.1711/scheme/emacs-guix/emacs.scm
-  guix-20250525.1711/scheme/emacs-guix/generations.scm
-  guix-20250525.1711/scheme/emacs-guix/graph.scm
-  guix-20250525.1711/scheme/emacs-guix/hash.scm
-  guix-20250525.1711/scheme/emacs-guix/licenses.scm
-  guix-20250525.1711/scheme/emacs-guix/lint.scm
-  guix-20250525.1711/scheme/emacs-guix/pack.scm
-  guix-20250525.1711/scheme/emacs-guix/packages.scm
-  guix-20250525.1711/scheme/emacs-guix/profiles.scm
-  guix-20250525.1711/scheme/emacs-guix/refresh.scm
-  guix-20250525.1711/scheme/emacs-guix/services.scm
-  guix-20250525.1711/scheme/emacs-guix/store-items.scm
-  guix-20250525.1711/scheme/emacs-guix/system-generations.scm
-  guix-20250525.1711/scheme/emacs-guix/system.scm
-  guix-20250525.1711/scheme/emacs-guix/utils.scm
- ✓ Success:
-  2025-06-30T13:44:48+0000  guix-20250525.1711.entry
-  2025-06-30T13:44:47+0000  guix-20250525.1711.tar
-Built guix in 21.546s, finished at 2025-06-30T13:44:50+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://codeberg.org/guix/emacs-guix/': Failed to connect to codeberg.org port 443 after 129939 ms: Couldn't connect to server
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-codeberg-recipe package-codeberg-recipe-1575abc42e42> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-codeberg-recipe package-codeberg-recipe-1575abc42e42> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-codeberg-recipe package-codeberg-recipe-1575abc42e42>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-codeberg-recipe package-codeberg-recipe-1575abc42e42> nil)
+  package-build--fetch(#<package-codeberg-recipe package-codeberg-recipe-1575abc42e42>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("guix")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"guix\")"))
+  command-line()
+  normal-top-level()
+
