@@ -4,4 +4,4 @@ Features include:
 - Multiple chats with different models
 - Completion at point
 - Region transformations
-- Project context awareness
+- Context awareness

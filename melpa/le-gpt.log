@@ -3,28 +3,46 @@ Fetcher: github
 Source:  https://github.com/AnselmC/le-gpt.el
 
 Updating /mnt/store/melpa/working/le-gpt/
-Checking out f1c43803df8078ee5f0de5d1e5300ca8b3449568
+Checking out 3ae0bacaae68ee6bd6c1e2d73ea312c2224b4e21
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/le-gpt/
-  to /tmp/le-gptGOgzO4/le-gpt-20250311.1510
+  to /tmp/le-gptoCDLmc/le-gpt-20250630.244
+    le-gpt-buffer-list.el -> le-gpt-buffer-list.el
+    le-gpt-chat-persistence.el -> le-gpt-chat-persistence.el
     le-gpt-chat.el -> le-gpt-chat.el
     le-gpt-completion.el -> le-gpt-completion.el
+    le-gpt-consult.el -> le-gpt-consult.el
+    le-gpt-context-buffers.el -> le-gpt-context-buffers.el
+    le-gpt-context-files.el -> le-gpt-context-files.el
+    le-gpt-context-history.el -> le-gpt-context-history.el
+    le-gpt-context-lang.el -> le-gpt-context-lang.el
+    le-gpt-context-utils.el -> le-gpt-context-utils.el
+    le-gpt-context.el -> le-gpt-context.el
     le-gpt-core.el -> le-gpt-core.el
-    le-gpt-project.el -> le-gpt-project.el
     le-gpt-transform.el -> le-gpt-transform.el
     le-gpt.el -> le-gpt.el
     le-gpt.py -> le-gpt.py
-Created le-gpt-20250311.1510.tar containing:
-  le-gpt-20250311.1510/
-  le-gpt-20250311.1510/le-gpt-chat.el
-  le-gpt-20250311.1510/le-gpt-completion.el
-  le-gpt-20250311.1510/le-gpt-core.el
-  le-gpt-20250311.1510/le-gpt-pkg.el
-  le-gpt-20250311.1510/le-gpt-project.el
-  le-gpt-20250311.1510/le-gpt-transform.el
-  le-gpt-20250311.1510/le-gpt.el
-  le-gpt-20250311.1510/le-gpt.py
+Created le-gpt-20250630.244.tar containing:
+  le-gpt-20250630.244/
+  le-gpt-20250630.244/le-gpt-buffer-list.el
+  le-gpt-20250630.244/le-gpt-chat-persistence.el
+  le-gpt-20250630.244/le-gpt-chat.el
+  le-gpt-20250630.244/le-gpt-completion.el
+  le-gpt-20250630.244/le-gpt-consult.el
+  le-gpt-20250630.244/le-gpt-context-buffers.el
+  le-gpt-20250630.244/le-gpt-context-files.el
+  le-gpt-20250630.244/le-gpt-context-history.el
+  le-gpt-20250630.244/le-gpt-context-lang.el
+  le-gpt-20250630.244/le-gpt-context-utils.el
+  le-gpt-20250630.244/le-gpt-context.el
+  le-gpt-20250630.244/le-gpt-core.el
+  le-gpt-20250630.244/le-gpt-pkg.el
+  le-gpt-20250630.244/le-gpt-transform.el
+  le-gpt-20250630.244/le-gpt.el
+  le-gpt-20250630.244/le-gpt.py
  ✓ Success:
-  2025-06-29T22:19:00+0000  le-gpt-20250311.1510.entry
-  2025-06-29T22:18:59+0000  le-gpt-20250311.1510.tar
-Built le-gpt in 2.926s, finished at 2025-06-29T22:19:00+0000
+  2025-06-30T03:25:53+0000  le-gpt-20250630.244.entry
+  2025-06-30T03:25:53+0000  le-gpt-20250630.244.tar
+  2025-06-30T00:52:33+0000  le-gpt-20250630.4.entry
+  2025-06-30T00:52:33+0000  le-gpt-20250630.4.tar
+Built le-gpt in 3.631s, finished at 2025-06-30T03:25:54+0000
