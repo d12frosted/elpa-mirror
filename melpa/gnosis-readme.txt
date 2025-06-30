@@ -1,10 +1,6 @@
-Gnosis (γνῶσις) is a spaced repetition system that enhances memory
+Gnosis is a spaced repetition system-like that enhances memory
 retention through active recall.  It employs a Q&A format, where each
-note consists of a question, answer, and explanation.  Notes are
-reviewed at optimally spaced intervals based on the user's success or
-failure to recall the answer.  Key benefits arise from writing out
-answers when reviewing notes, fostering deeper understanding
-and improved memory retention.
+gnosis consists of a question, answer, and explanation.
 
 Gnosis algorithm is highly adjustable, allowing users to set specific
 values not just for note decks but for tags as well.  Gnosis'
