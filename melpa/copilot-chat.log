@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/chep/copilot-chat.el
 
 Updating /mnt/store/melpa/working/copilot-chat/
-Checking out 97a9252218b32a0f9ad2b1610b349b51bf6f2632
+Checking out ddbaa2a5c4409853502bca795c508a11facc4bfa
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/copilot-chat/
-  to /tmp/copilot-chat9hi7rP/copilot-chat-20250620.1534
+  to /tmp/copilot-chatUDG5z5/copilot-chat-20250701.944
     copilot-chat-backend.el -> copilot-chat-backend.el
     copilot-chat-body.el -> copilot-chat-body.el
     copilot-chat-command.el -> copilot-chat-command.el
@@ -28,31 +28,33 @@ Copying files (->) and directories (=>)
     copilot-chat-spinner.el -> copilot-chat-spinner.el
     copilot-chat-transient.el -> copilot-chat-transient.el
     copilot-chat.el -> copilot-chat.el
-Created copilot-chat-20250620.1534.tar containing:
-  copilot-chat-20250620.1534/
-  copilot-chat-20250620.1534/copilot-chat-backend.el
-  copilot-chat-20250620.1534/copilot-chat-body.el
-  copilot-chat-20250620.1534/copilot-chat-command.el
-  copilot-chat-20250620.1534/copilot-chat-common.el
-  copilot-chat-20250620.1534/copilot-chat-connection.el
-  copilot-chat-20250620.1534/copilot-chat-copilot.el
-  copilot-chat-20250620.1534/copilot-chat-curl.el
-  copilot-chat-20250620.1534/copilot-chat-debug.el
-  copilot-chat-20250620.1534/copilot-chat-frontend.el
-  copilot-chat-20250620.1534/copilot-chat-git.el
-  copilot-chat-20250620.1534/copilot-chat-instance.el
-  copilot-chat-20250620.1534/copilot-chat-markdown.el
-  copilot-chat-20250620.1534/copilot-chat-model.el
-  copilot-chat-20250620.1534/copilot-chat-org.el
-  copilot-chat-20250620.1534/copilot-chat-pkg.el
-  copilot-chat-20250620.1534/copilot-chat-prompt-mode.el
-  copilot-chat-20250620.1534/copilot-chat-prompts.el
-  copilot-chat-20250620.1534/copilot-chat-request.el
-  copilot-chat-20250620.1534/copilot-chat-shell-maker.el
-  copilot-chat-20250620.1534/copilot-chat-spinner.el
-  copilot-chat-20250620.1534/copilot-chat-transient.el
-  copilot-chat-20250620.1534/copilot-chat.el
+Created copilot-chat-20250701.944.tar containing:
+  copilot-chat-20250701.944/
+  copilot-chat-20250701.944/copilot-chat-backend.el
+  copilot-chat-20250701.944/copilot-chat-body.el
+  copilot-chat-20250701.944/copilot-chat-command.el
+  copilot-chat-20250701.944/copilot-chat-common.el
+  copilot-chat-20250701.944/copilot-chat-connection.el
+  copilot-chat-20250701.944/copilot-chat-copilot.el
+  copilot-chat-20250701.944/copilot-chat-curl.el
+  copilot-chat-20250701.944/copilot-chat-debug.el
+  copilot-chat-20250701.944/copilot-chat-frontend.el
+  copilot-chat-20250701.944/copilot-chat-git.el
+  copilot-chat-20250701.944/copilot-chat-instance.el
+  copilot-chat-20250701.944/copilot-chat-markdown.el
+  copilot-chat-20250701.944/copilot-chat-model.el
+  copilot-chat-20250701.944/copilot-chat-org.el
+  copilot-chat-20250701.944/copilot-chat-pkg.el
+  copilot-chat-20250701.944/copilot-chat-prompt-mode.el
+  copilot-chat-20250701.944/copilot-chat-prompts.el
+  copilot-chat-20250701.944/copilot-chat-request.el
+  copilot-chat-20250701.944/copilot-chat-shell-maker.el
+  copilot-chat-20250701.944/copilot-chat-spinner.el
+  copilot-chat-20250701.944/copilot-chat-transient.el
+  copilot-chat-20250701.944/copilot-chat.el
  ✓ Success:
   2025-07-01T07:26:38+0000  copilot-chat-20250620.1534.entry
   2025-07-01T07:26:37+0000  copilot-chat-20250620.1534.tar
-Built copilot-chat in 4.440s, finished at 2025-07-01T07:26:38+0000
+  2025-07-01T09:53:22+0000  copilot-chat-20250701.944.entry
+  2025-07-01T09:53:21+0000  copilot-chat-20250701.944.tar
+Built copilot-chat in 4.652s, finished at 2025-07-01T09:53:22+0000
