@@ -1637,7 +1637,7 @@
 	       ("Jon Oddie" . "j.j.oddie@gmail.com"))
 	      (:commit . "8e8487712d150178be7297604d0f47fd036a6d8d"))])
  (magit .
-	[(4 3 6)
+	[(4 3 7)
 	 ((emacs
 	   (27 1))
 	  (compat
@@ -1645,11 +1645,11 @@
 	  (llama
 	   (0 6 3))
 	  (magit-section
-	   (4 3 6))
+	   (4 3 7))
 	  (seq
 	   (2 24))
 	  (transient
-	   (0 9 0))
+	   (0 9 3))
 	  (with-editor
 	   (3 4 4)))
 	 "A Git porcelain inside Emacs" tar
@@ -1661,9 +1661,9 @@
 	  (:authors
 	   ("Marius Vollmer" . "marius.vollmer@gmail.com")
 	   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-	  (:commit . "2f1ff91f128f28aa277e0e060ef44b4be8a989c1"))])
+	  (:commit . "0686ea8d63016ed275ffa191dce02d4fdb5bccfa"))])
  (magit-section .
-		[(4 3 6)
+		[(4 3 7)
 		 ((emacs
 		   (27 1))
 		  (compat
@@ -1678,7 +1678,7 @@
 		  (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 		  (:authors
 		   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-		  (:commit . "2f1ff91f128f28aa277e0e060ef44b4be8a989c1"))])
+		  (:commit . "0686ea8d63016ed275ffa191dce02d4fdb5bccfa"))])
  (markdown-mode .
 		[(2 7)
 		 ((emacs
