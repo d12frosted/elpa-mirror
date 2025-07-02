@@ -1,10 +1,6 @@
 
- Depends on playerctl currently, not sure if I'm going
- to add support for anything else but feel free to contribute
- another provider :D
+ Media player support for doom-modeline.
+ Supports both playerctl (Linux) and AppleScript (macOS).
 
- The below line need to be manually ran somewhere at your behest
-
+ To enable:
  (doom-modeline-now-playing-timer)
-
- If you wish for the staus to update
