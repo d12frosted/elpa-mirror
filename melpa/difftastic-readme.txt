@@ -1,5 +1,8 @@
-Description
-===========
+                 ________________________________________
+
+                  DIFFTASTIC.EL - WRAPPER FOR DIFFTASTIC
+                 ________________________________________
+
 
 The `difftastic' Emacs package is designed to integrate [difftastic] - a
 structural diff tool - into your Emacs workflow, enhancing your code review
@@ -89,8 +92,9 @@ installation from GitHub or a an existing checkout.  That could be
 
 [Installing from MELPA] See section Installing from MELPA
 
+
 Manual Installation
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Note, that this method does not generate autoloads.  As a consequence it
 will cause the whole package and it's dependencies (including `magit') to
@@ -287,7 +291,7 @@ Commands are followed by their default keybindings (in parenthesis).
 - `difftastic-toggle-chunk' (`TAB' or `C-i') - toggle visibility of a chunk
   at point.  The point has to be in a chunk header.  When called with a
   prefix toggle all file chunks from the header to the end of the file.
-  See also `difftastic-hide-chunk' and `difftastic=show-chunk'.
+  See also `difftastic-hide-chunk' and `difftastic-show-chunk'.
 - `forward-sexp' (`C-M-f') - move point to end of current chunk or to an
   end of next chunk when point is already at the end of the chunk.  When
   called with argument move by that many chunks.  Binding is from a default
@@ -442,9 +446,21 @@ bytecompile lint relint checkdoc commentary test'.
 Documentation Autoring
 ~~~~~~~~~~~~~~~~~~~~~~
 
-This package uses [org-commentary.el] (different from the one available on
-MELPA!) to generate and validate commentary section in `difftastic.el'.
-Please see the package documentation for usage instructions.
+This package uses the following packages to help with documentation
+authoring:
+
+- [org-commentary.el] (which is different from the one available on MELPA!)
+  to generate and validate commentary section in `difftastic.el'.  Please
+  see the package documentation for usage instructions.
+
+- [org-make-toc] to generate and validate table of contents in the
+  `README.org' file.
+
+Appropriate functions from both of these packages are added to
+`after-save-hook' and `before-save-hook' respectively, when packages are
+available in user's Emacs (see `dir-locals.el').
 
 
 [org-commentary.el] <https://github.com/pkryger/org-commentary.el>
+
+[org-make-toc] <https://github.com/alphapapa/org-make-toc>

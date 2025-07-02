@@ -1,5 +1,9 @@
-Description
-===========
+           ____________________________________________________
+
+             COMPANY-FORGE.EL - COMPANY BACKEND FOR ASSIGNEES
+                           AND TOPICS FROM FORGE
+           ____________________________________________________
+
 
 The `company-forge' is a [company-mode] completion backend for [forge].  It
 uses current `forge' repository data to offer completions for assignees
@@ -148,9 +152,21 @@ To run tests:
 Documentation autoring
 ~~~~~~~~~~~~~~~~~~~~~~
 
-This package uses [org-commentary.el] (different from the one available on
-MELPA!) to generate and validate commentary section in `company-forge.el'.
-Please see the package documentation for usage instructions.
+This package uses the following packages to help with documentation
+authoring:
+
+- [org-commentary.el] (which is different from the one available on MELPA!)
+  to generate and validate commentary section in `difftastic.el'.  Please
+  see the package documentation for usage instructions.
+
+- [org-make-toc] to generate and validate table of contents in the
+  `README.org' file.
+
+Appropriate functions from both of these packages are added to
+`after-save-hook' and `before-save-hook' respectively, when packages are
+available in user's Emacs (see `dir-locals.el').
 
 
 [org-commentary.el] <https://github.com/pkryger/org-commentary.el>
+
+[org-make-toc] <https://github.com/alphapapa/org-make-toc>
