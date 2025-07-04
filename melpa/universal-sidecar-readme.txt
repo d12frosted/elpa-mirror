@@ -24,12 +24,13 @@ which will advise functions listed in
 `universal-sidecar-uninsinuate'.  Additionally,
 `universal-sidecar-insinuate' will add `universal-sidecar-refresh'
 to the `focus-in-hook', and will set an idle timer to refresh all
-sidecar buffers (idle time configured with
-`universal-sidecar-refresh-time').  Buffers can be ignored by
-modifying the `universal-sidecar-ignore-buffer-regexp', or using
-the (irregular) `universal-sidecar-ignore-buffer-functions' hook.
-This hook will be run with an argument (the buffer) and run until a
-non-nil result.
+sidecar buffers if `universal-sidecar-enable-timer' is non-nil
+(idle time configured with `universal-sidecar-refresh-time').
+Buffers can be ignored by modifying the
+`universal-sidecar-ignore-buffer-regexp', or using the (irregular)
+`universal-sidecar-ignore-buffer-functions' hook.  This hook will
+be run with an argument (the buffer) and run until a non-nil
+result.
 
 ;; Configuration
 
