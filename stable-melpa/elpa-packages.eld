@@ -2638,7 +2638,7 @@
   (html-to-hiccup :url "https://github.com/plexus/html-to-hiccup")
   (html-to-markdown :url "https://github.com/Malabarba/html-to-markdown")
   (html2org :url "https://github.com/lujun9972/html2org.el")
-  (htmlize :url "https://github.com/hniksic/emacs-htmlize")
+  (htmlize :url "https://github.com/emacsorphanage/htmlize")
   (htmltagwrap :url "https://github.com/emacs-vs/htmltagwrap")
   (http :url "https://github.com/emacs-pe/http.el")
   (http-post-simple :url "https://github.com/emacsorphanage/http-post-simple")
