@@ -1,1 +1,1 @@
-Formats your JavaScript code using 'prettier' on file save.
+Formats your code using 'prettier' on file save.
