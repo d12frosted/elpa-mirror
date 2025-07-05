@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/rust-lang/rust-mode
 
 Updating /mnt/store/melpa/working/rust-mode/
-Checking out 75cc63b6c19028c11e302c237a8ec64db3345780
+Checking out f7334861bfc1d3dbcfbde464751837be2ec09ef3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rust-mode/
-  to /tmp/rust-modeXfUcNU/rust-mode-20250621.1548
+  to /tmp/rust-mode7lKrcM/rust-mode-20250705.1444
     rust-cargo.el -> rust-cargo.el
     rust-common.el -> rust-common.el
     rust-compile.el -> rust-compile.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     rust-prog-mode.el -> rust-prog-mode.el
     rust-rustfmt.el -> rust-rustfmt.el
     rust-utils.el -> rust-utils.el
-Created rust-mode-20250621.1548.tar containing:
-  rust-mode-20250621.1548/
-  rust-mode-20250621.1548/rust-cargo.el
-  rust-mode-20250621.1548/rust-common.el
-  rust-mode-20250621.1548/rust-compile.el
-  rust-mode-20250621.1548/rust-mode-pkg.el
-  rust-mode-20250621.1548/rust-mode-treesitter.el
-  rust-mode-20250621.1548/rust-mode.el
-  rust-mode-20250621.1548/rust-playpen.el
-  rust-mode-20250621.1548/rust-prog-mode.el
-  rust-mode-20250621.1548/rust-rustfmt.el
-  rust-mode-20250621.1548/rust-utils.el
+Created rust-mode-20250705.1444.tar containing:
+  rust-mode-20250705.1444/
+  rust-mode-20250705.1444/rust-cargo.el
+  rust-mode-20250705.1444/rust-common.el
+  rust-mode-20250705.1444/rust-compile.el
+  rust-mode-20250705.1444/rust-mode-pkg.el
+  rust-mode-20250705.1444/rust-mode-treesitter.el
+  rust-mode-20250705.1444/rust-mode.el
+  rust-mode-20250705.1444/rust-playpen.el
+  rust-mode-20250705.1444/rust-prog-mode.el
+  rust-mode-20250705.1444/rust-rustfmt.el
+  rust-mode-20250705.1444/rust-utils.el
  ✓ Success:
-  2025-07-05T10:03:19+0000  rust-mode-20250621.1548.entry
-  2025-07-05T10:03:19+0000  rust-mode-20250621.1548.tar
-Built rust-mode in 4.309s, finished at 2025-07-05T10:03:20+0000
+  2025-07-05T12:31:18+0000  rust-mode-20250621.1548.entry
+  2025-07-05T12:31:18+0000  rust-mode-20250621.1548.tar
+  2025-07-05T15:01:10+0000  rust-mode-20250705.1444.entry
+  2025-07-05T15:01:10+0000  rust-mode-20250705.1444.tar
+Built rust-mode in 3.807s, finished at 2025-07-05T15:01:11+0000
