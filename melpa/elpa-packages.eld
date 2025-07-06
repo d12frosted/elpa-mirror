@@ -1729,6 +1729,7 @@
   (fedi :url "https://codeberg.org/martianh/fedi.el")
   (feebleline :url "https://github.com/tautologyclub/feebleline")
   (feed-discovery :url "https://github.com/HKey/feed-discovery")
+  (feline :url "https://github.com/chee/feline-mode")
   (fennel-mode :url "https://git.sr.ht/~technomancy/fennel-mode")
   (fetch :url "https://github.com/cbrst/fetch.el")
   (ffmpeg-player :url "https://github.com/jcs-elpa/ffmpeg-player")
