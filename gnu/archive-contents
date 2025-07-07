@@ -2901,15 +2901,15 @@
 		 ("Eric M. Ludlam" . "eludlam@mathworks.com"))
 		(:commit . "935137844e16551a5369f928d2591556be7fb9c2"))])
  (mct .
-      [(1 0 0)
+      [(1 1 0)
        ((emacs
 	 (29 1)))
        "Minibuffer Confines Transcended" tar
-       ((:url . "https://git.sr.ht/~protesilaos/mct")
+       ((:url . "https://github.com/protesilaos/mct")
 	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	(:commit . "2cbf74edb4f4553d7075b34e06adcf59e96efda2"))])
+	(:commit . "306cb704196c643b552aceb5893693641ca747d9"))])
  (memory-usage .
 	       [(0 2)
 		nil "Analyze the memory usage of Emacs in various ways" tar
