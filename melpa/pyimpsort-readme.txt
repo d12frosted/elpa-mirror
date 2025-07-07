@@ -4,6 +4,7 @@ Currently uses [pyimpsort.py](pyimpsort.py) to process the way to sort python
 imports.
 
 ; Setup
+
 Add the following snippet to your `init.el':
 
     (require 'pyimpsort)
