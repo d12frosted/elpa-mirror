@@ -5511,7 +5511,6 @@
   (typespec-ts-mode :url "https://github.com/pradyuman/typespec-ts-mode")
   (typewriter-roll-mode :url "https://github.com/KeyWeeUsr/typewriter-roll-mode")
   (typing :url "https://github.com/kensanata/typing")
-  (typing-game :url "https://github.com/lordnik22/el-typing-game")
   (typit :url "https://github.com/mrkkrp/typit")
   (typo :url "https://codeberg.org/pkal/typo.el")
   (typo-suggest :url "https://github.com/kadircancetin/typo-suggest")
