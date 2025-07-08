@@ -22,7 +22,7 @@
 		     ("Ozan Sener" . "ozan@ozansener.com"))
 		    (:commit . "b58731c3b0bbaac9d3ed8d5ae900063df5db090d"))])
  (aidermacs .
-	    [(1 4)
+	    [(1 5)
 	     ((emacs
 	       (26 1))
 	      (transient
@@ -37,7 +37,7 @@
 	      (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
 	      (:authors
 	       ("Mingde Zeng" . "matthewzmd@posteo.net"))
-	      (:commit . "878d55f644bf6e4b86ca77944fd37e74400371c4"))])
+	      (:commit . "5084913506b8b243c732a77b6de4768f18edcff3"))])
  (alect-themes .
 	       [(0 10)
 		((emacs
@@ -2154,7 +2154,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20250609 112224)
+	      [(1 0 20250707 155225)
 	       ((emacs
 		 (25 1))
 		(compat
