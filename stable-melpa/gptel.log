@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/karthink/gptel
 
 Updating /mnt/store/melpa/working/gptel/
-Checking out 61bac0aada02cb3d1b98fbec458e490bc0063a3f
+Checking out bed2402c5442fec21cc336a76821a5c89c1b254b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptelXpMCQu/gptel-20250709.1023
+  to /tmp/gptelAmnoMa/gptel-20250709.2220
     gptel-anthropic.el -> gptel-anthropic.el
     gptel-bedrock.el -> gptel-bedrock.el
     gptel-context.el -> gptel-context.el
@@ -22,25 +22,27 @@ Copying files (->) and directories (=>)
     gptel-rewrite.el -> gptel-rewrite.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20250709.1023.tar containing:
-  gptel-20250709.1023/
-  gptel-20250709.1023/gptel-anthropic.el
-  gptel-20250709.1023/gptel-bedrock.el
-  gptel-20250709.1023/gptel-context.el
-  gptel-20250709.1023/gptel-curl.el
-  gptel-20250709.1023/gptel-gemini.el
-  gptel-20250709.1023/gptel-gh.el
-  gptel-20250709.1023/gptel-integrations.el
-  gptel-20250709.1023/gptel-kagi.el
-  gptel-20250709.1023/gptel-ollama.el
-  gptel-20250709.1023/gptel-openai-extras.el
-  gptel-20250709.1023/gptel-openai.el
-  gptel-20250709.1023/gptel-org.el
-  gptel-20250709.1023/gptel-pkg.el
-  gptel-20250709.1023/gptel-rewrite.el
-  gptel-20250709.1023/gptel-transient.el
-  gptel-20250709.1023/gptel.el
+Created gptel-20250709.2220.tar containing:
+  gptel-20250709.2220/
+  gptel-20250709.2220/gptel-anthropic.el
+  gptel-20250709.2220/gptel-bedrock.el
+  gptel-20250709.2220/gptel-context.el
+  gptel-20250709.2220/gptel-curl.el
+  gptel-20250709.2220/gptel-gemini.el
+  gptel-20250709.2220/gptel-gh.el
+  gptel-20250709.2220/gptel-integrations.el
+  gptel-20250709.2220/gptel-kagi.el
+  gptel-20250709.2220/gptel-ollama.el
+  gptel-20250709.2220/gptel-openai-extras.el
+  gptel-20250709.2220/gptel-openai.el
+  gptel-20250709.2220/gptel-org.el
+  gptel-20250709.2220/gptel-pkg.el
+  gptel-20250709.2220/gptel-rewrite.el
+  gptel-20250709.2220/gptel-transient.el
+  gptel-20250709.2220/gptel.el
  ✓ Success:
-  2025-07-09T15:37:33+0000  gptel-20250709.1023.entry
-  2025-07-09T15:37:33+0000  gptel-20250709.1023.tar
-Built gptel in 4.686s, finished at 2025-07-09T15:37:34+0000
+  2025-07-09T20:31:12+0000  gptel-20250709.1624.entry
+  2025-07-09T20:31:12+0000  gptel-20250709.1624.tar
+  2025-07-09T22:54:38+0000  gptel-20250709.2220.entry
+  2025-07-09T22:54:37+0000  gptel-20250709.2220.tar
+Built gptel in 4.865s, finished at 2025-07-09T22:54:38+0000
