@@ -1528,7 +1528,7 @@
 	      (:url . "https://elpa.gnu.org/packages/el-search.html")
 	      (:commit . "43779b910025aba2574213cf3eabee2132c0a175"))])
  (eldoc .
-	[(1 15 0)
+	[(1 16 0)
 	 ((emacs
 	   (26 3)))
 	 "Show function arglist or variable docstring in echo area" tar
@@ -1537,7 +1537,7 @@
 	  (:authors
 	   ("Noah Friedman" . "friedman@splode.com"))
 	  (:url . "https://elpa.gnu.org/packages/eldoc.html")
-	  (:commit . "dc744fe6f3cd185bd9d29f61b08cd4c524e3969e"))])
+	  (:commit . "b85d9048f4a32c7c50894e991423d021d9f95317"))])
  (electric-spacing .
 		   [(5 0)
 		    nil "Insert operators with surrounding spaces smartly" tar
