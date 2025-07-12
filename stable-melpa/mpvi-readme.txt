@@ -1,8 +1,9 @@
 
-Integrate MPV, EMMS, Org and others with Emacs, make watching/download/convert
-video or audio conveniently and taking notes easily.
+Integrate MPV, EMMS, Org and other utilities with Emacs.
 
-Make EMMS support Windows.
+ - Make watch/download/convert video or audio conveniently.
+ - Make take video notes easily in Org Mode.
+ - Make EMMS support Windows.
 
 Installation:
  - Install `emms' and `mpvi' from MELPA and load them
