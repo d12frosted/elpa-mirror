@@ -205,7 +205,7 @@ Table of Contents
         Eli Zaretskii, Philip Kaludercic, Swapnil Mahajan.
 
   Ideas and/or user feedback
-        Darryl Hebbes, Perry Metzger.
+        Darryl Hebbes, Perry Metzger, Zhengyi Fu.
 
 
 5 COPYING
