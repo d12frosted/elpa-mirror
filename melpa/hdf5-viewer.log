@@ -1,0 +1,20 @@
+Package: hdf5-viewer
+Fetcher: github
+Source:  https://github.com/hdf5-viewer/hdf5-viewer
+
+Updating /mnt/store/melpa/working/hdf5-viewer/
+Checking out 0700e660579012ab20650d337ccf8c40700d83b9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hdf5-viewer/
+  to /tmp/hdf5-viewereVSHh5/hdf5-viewer-20250625.519
+    hdf5-viewer.el -> hdf5-viewer.el
+    h5parse.py -> h5parse.py
+Created hdf5-viewer-20250625.519.tar containing:
+  hdf5-viewer-20250625.519/
+  hdf5-viewer-20250625.519/h5parse.py
+  hdf5-viewer-20250625.519/hdf5-viewer-pkg.el
+  hdf5-viewer-20250625.519/hdf5-viewer.el
+ ✓ Success:
+  2025-07-13T18:35:08+0000  hdf5-viewer-20250625.519.entry
+  2025-07-13T18:35:08+0000  hdf5-viewer-20250625.519.tar
+Built hdf5-viewer in 2.715s, finished at 2025-07-13T18:35:09+0000

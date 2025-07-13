@@ -31,8 +31,8 @@ this:
 - When you switch to a project `project-switch-project' (bound by default to
   `C-x p p`), `otpp' will create a tab with the project name.
 
-- When you kill a project with all its buffers with `project-kill-buffers', the
-  tab is closed.
+- When you kill a project with all its buffers with `project-kill-buffers',
+  the tab is closed.
 
 - Lets say you've switched to the project under
   `/home/user/project1/backend/', `otpp' will create a tab named `backend'
@@ -84,8 +84,8 @@ In my workflow, I would like to always restrict the commands like
 current tab, even if I'm visiting a file which is not part of this project.
 If you like this behavior, you can enable the `otpp-override-mode'. This mode
 will advice all the commands defined in `otpp-override-commands' to be ran in
-the current's tab root directory (_a.k.a._, in the project bound to the
-current tab).
+the current's tab root directory (_i.e._, in the project bound to the current
+tab).
 
 When `otpp-override-mode' is enabled, the `otpp-prefix' acts inversely. While
 all `otpp-override-commands' are restricted to the current's tab project by
