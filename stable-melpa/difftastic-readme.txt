@@ -258,7 +258,8 @@ In order to aid arguments entry and provide similarity to workflows in
 example, some - less commonly used - arguments are not visible in default
 configuration.  Type `C-x l' in the menu to make them visible.  Type `C-h
 C-h' for `difftastic' help (`man difft').  Any other `transient' commands
-should work as well.
+should work as well, for example saving values as described in Info node
+`(transient)Saving Values'.
 
 Note that in some cases arguments will take precedence over standard and
 computed values, for example `--width' is one such a argument.
@@ -384,6 +385,8 @@ aspects of interaction with `difft':
 
 - `difftastic-visibility-indicator' - controls whether and how to show
   hidden/visible chunk/files.
+- `difftastic-buttonize-urls' - controls whether to transform URLs into
+  buttons in difftastic buffers.
 - `difftastic-diff-visit-avoid-head-blob' - controls whether to avoid
   visiting blob of a `HEAD' revision when visiting file form a
   `difftastic-mode' buffer.
