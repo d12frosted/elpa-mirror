@@ -12,7 +12,7 @@ Features include:
 - Optional restriction to a subdirectory within the project
 - Case sensitivity and binary file handling options
 - Customisable include/exclude file patterns
-- Clickable results in a standard `*grep*` buffer
+- Clickable results in a standard *grep* buffer
 
 For installation, configuration, and usage examples, see the README and
 the tutorial at https://github.com/BHFock/repo-grep.
