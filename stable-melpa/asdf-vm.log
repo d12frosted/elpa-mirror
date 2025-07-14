@@ -1,0 +1,40 @@
+Package: asdf-vm
+Fetcher: github
+Source:  https://github.com/zellio/emacs-asdf-vm
+
+Updating /mnt/store/melpa/working/asdf-vm/
+Checking out f6dbb4b6560cd7e5bb05006e9fc416c5c323b567
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/asdf-vm/
+  to /tmp/asdf-vmPEYA1x/asdf-vm-20250710.1053
+    asdf-vm-config.el -> asdf-vm-config.el
+    asdf-vm-core.el -> asdf-vm-core.el
+    asdf-vm-error.el -> asdf-vm-error.el
+    asdf-vm-installer.el -> asdf-vm-installer.el
+    asdf-vm-mode.el -> asdf-vm-mode.el
+    asdf-vm-plugin-menu.el -> asdf-vm-plugin-menu.el
+    asdf-vm-plugin.el -> asdf-vm-plugin.el
+    asdf-vm-process.el -> asdf-vm-process.el
+    asdf-vm-tool-versions.el -> asdf-vm-tool-versions.el
+    asdf-vm-ui.el -> asdf-vm-ui.el
+    asdf-vm-util.el -> asdf-vm-util.el
+    asdf-vm.el -> asdf-vm.el
+Created asdf-vm-20250710.1053.tar containing:
+  asdf-vm-20250710.1053/
+  asdf-vm-20250710.1053/asdf-vm-config.el
+  asdf-vm-20250710.1053/asdf-vm-core.el
+  asdf-vm-20250710.1053/asdf-vm-error.el
+  asdf-vm-20250710.1053/asdf-vm-installer.el
+  asdf-vm-20250710.1053/asdf-vm-mode.el
+  asdf-vm-20250710.1053/asdf-vm-pkg.el
+  asdf-vm-20250710.1053/asdf-vm-plugin-menu.el
+  asdf-vm-20250710.1053/asdf-vm-plugin.el
+  asdf-vm-20250710.1053/asdf-vm-process.el
+  asdf-vm-20250710.1053/asdf-vm-tool-versions.el
+  asdf-vm-20250710.1053/asdf-vm-ui.el
+  asdf-vm-20250710.1053/asdf-vm-util.el
+  asdf-vm-20250710.1053/asdf-vm.el
+ ✓ Success:
+  2025-07-13T22:51:02+0000  asdf-vm-20250710.1053.entry
+  2025-07-13T22:51:02+0000  asdf-vm-20250710.1053.tar
+Built asdf-vm in 3.188s, finished at 2025-07-13T22:51:03+0000

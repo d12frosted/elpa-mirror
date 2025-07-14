@@ -183,6 +183,7 @@
   (arxiv-citation :url "https://gitlab.com/slotThe/arxiv-citation")
   (arxiv-mode :url "https://github.com/fizban007/arxiv-mode")
   (ascii-table :url "https://github.com/lassik/emacs-ascii-table")
+  (asdf-vm :url "https://github.com/zellio/emacs-asdf-vm")
   (asilea :url "https://github.com/Fanael/asilea")
   (asm-blox :url "https://github.com/zkry/asm-blox")
   (asn1-mode :url "https://github.com/kawabata/asn1-mode")
