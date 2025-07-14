@@ -5532,6 +5532,7 @@
   (ujelly-theme :url "https://github.com/marktran/color-theme-ujelly")
   (ukrainian-holidays :url "https://github.com/abo-abo/ukrainian-holidays")
   (ulisp-mode :url "https://codeberg.org/deadblackclover/ulisp-mode")
+  (ultra-scroll :url "https://github.com/jdtsmith/ultra-scroll")
   (uml-mode :url "https://github.com/ianxm/emacs-uml")
   (uncrustify-mode :url "https://github.com/koko1000ban/emacs-uncrustify-mode")
   (undercover :url "https://github.com/undercover-el/undercover.el")
