@@ -1691,7 +1691,7 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
  (mastodon .
-	   [(2 0 1)
+	   [(2 0 2)
 	    ((emacs
 	      (28 1))
 	     (persist
@@ -1704,7 +1704,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "mousebot@disroot.org"))
-	     (:commit . "e24f6ee5db2594cbfe5b7d503d97261ebd4142c4"))])
+	     (:commit . "165c8903d86477b82f984f0df8f666abb2b17129"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
@@ -2091,6 +2091,19 @@
 	      (:authors
 	       ("Andreas Politz" . "mail@andreas-politz.de"))
 	      (:commit . "a9c9a12c3ecf2005fa641059368ac8284f507620"))])
+ (pg .
+     [(0 55)
+      ((emacs
+	(28 1))
+       (peg
+	(1 0 1)))
+      "Socket-level interface to the PostgreSQL database" tar
+      ((:url . "https://github.com/emarsden/pg-el")
+       (:keywords "data" "comm" "database" "postgresql")
+       (:maintainer "Eric Marsden" . "eric.marsden@risk-engineering.org")
+       (:authors
+	("Eric Marsden" . "eric.marsden@risk-engineering.org"))
+       (:commit . "63690547ce37f627b163c3138bcf28c8f07ef3bc"))])
  (php-mode .
 	   [(1 26 1)
 	    ((emacs
@@ -2634,7 +2647,7 @@
 		    (:keywords "typescript" "languages")
 		    (:commit . "2a58631230fe2d176352af262a0efdecc21f90ac"))])
  (typst-ts-mode .
-		[(0 12 1)
+		[(0 12 2)
 		 ((emacs
 		   (29 1)))
 		 "Tree Sitter support for Typst" tar
@@ -2645,7 +2658,7 @@
 		   ("Huan Nguyen" . "nguyenthieuhuan@gmail.com"))
 		  (:authors
 		   ("Ziqi Yang" . "mr.meowking@anche.no"))
-		  (:commit . "c3c78a9a2c57e85fb042ad0495584bf3ebcd1422"))])
+		  (:commit . "9e95d143e519600ea32c7a546ddb72fc349d17fc"))])
  (ujelly-theme .
 	       [(1 3 6)
 		nil "Ujelly theme for GNU Emacs 24 (deftheme)" tar
