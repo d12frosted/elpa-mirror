@@ -6,7 +6,7 @@ Updating /mnt/store/melpa/working/org-node/
 Checking out 15d4c452af2485dbb45952c9e2b6648861837837
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-node/
-  to /tmp/org-nodeNyBqz3/org-node-20250715.1107
+  to /tmp/org-nodesZ1y7e/org-node-20250715.1107
     org-node-backlink.el -> org-node-backlink.el
     org-node-changes.el -> org-node-changes.el
     org-node-context.el -> org-node-context.el
@@ -14,10 +14,10 @@ Copying files (->) and directories (=>)
     org-node.el -> org-node.el
     org-node.texi -> org-node.texi
 Generating org-node.info
-Command `makeinfo --no-split org-node.texi -o /tmp/org-nodeNyBqz3/org-node-20250715.1107/org-node.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split org-node.texi -o /tmp/org-nodesZ1y7e/org-node-20250715.1107/org-node.info' exited with non-zero exit-code: 1
 org-node.texi:97: raising the section level of @section which is too low
 
-Error: (error "Command `makeinfo --no-split org-node.texi -o /tmp/org-nodeNyBqz3/org-node-20250715.1107/org-node.info' exited with non-zero exit-code: 1")
+Error: (error "Command `makeinfo --no-split org-node.texi -o /tmp/org-nodesZ1y7e/org-node-20250715.1107/org-node.info' exited with non-zero exit-code: 1")
 Created org-node-20250715.1107.tar containing:
   org-node-20250715.1107/
   org-node-20250715.1107/org-node-backlink.el
@@ -27,6 +27,6 @@ Created org-node-20250715.1107.tar containing:
   org-node-20250715.1107/org-node-seq.el
   org-node-20250715.1107/org-node.el
  ✓ Success:
-  2025-07-15T22:17:05+0000  org-node-20250715.1107.entry
-  2025-07-15T22:17:05+0000  org-node-20250715.1107.tar
-Built org-node in 5.963s, finished at 2025-07-15T22:17:06+0000
+  2025-07-16T02:57:42+0000  org-node-20250715.1107.entry
+  2025-07-16T02:57:42+0000  org-node-20250715.1107.tar
+Built org-node in 5.938s, finished at 2025-07-16T02:57:43+0000
