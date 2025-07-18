@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/meedstrom/org-node
 
 Updating /mnt/store/melpa/working/org-node/
-Checking out 15d4c452af2485dbb45952c9e2b6648861837837
+Checking out c032a0bc238dd8df5a71868cd5c736e258dd9918
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-node/
-  to /tmp/org-nodeHzKU6Y/org-node-20250715.1107
+  to /tmp/org-node7mdtLY/org-node-20250718.1701
     org-node-backlink.el -> org-node-backlink.el
     org-node-changes.el -> org-node-changes.el
     org-node-context.el -> org-node-context.el
@@ -14,19 +14,19 @@ Copying files (->) and directories (=>)
     org-node.el -> org-node.el
     org-node.texi -> org-node.texi
 Generating org-node.info
-Command `makeinfo --no-split org-node.texi -o /tmp/org-nodeHzKU6Y/org-node-20250715.1107/org-node.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split org-node.texi -o /tmp/org-node7mdtLY/org-node-20250718.1701/org-node.info' exited with non-zero exit-code: 1
 org-node.texi:97: raising the section level of @section which is too low
 
-Error: (error "Command `makeinfo --no-split org-node.texi -o /tmp/org-nodeHzKU6Y/org-node-20250715.1107/org-node.info' exited with non-zero exit-code: 1")
-Created org-node-20250715.1107.tar containing:
-  org-node-20250715.1107/
-  org-node-20250715.1107/org-node-backlink.el
-  org-node-20250715.1107/org-node-changes.el
-  org-node-20250715.1107/org-node-context.el
-  org-node-20250715.1107/org-node-pkg.el
-  org-node-20250715.1107/org-node-seq.el
-  org-node-20250715.1107/org-node.el
+Error: (error "Command `makeinfo --no-split org-node.texi -o /tmp/org-node7mdtLY/org-node-20250718.1701/org-node.info' exited with non-zero exit-code: 1")
+Created org-node-20250718.1701.tar containing:
+  org-node-20250718.1701/
+  org-node-20250718.1701/org-node-backlink.el
+  org-node-20250718.1701/org-node-changes.el
+  org-node-20250718.1701/org-node-context.el
+  org-node-20250718.1701/org-node-pkg.el
+  org-node-20250718.1701/org-node-seq.el
+  org-node-20250718.1701/org-node.el
  ✓ Success:
-  2025-07-18T14:53:34+0000  org-node-20250715.1107.entry
-  2025-07-18T14:53:33+0000  org-node-20250715.1107.tar
-Built org-node in 6.390s, finished at 2025-07-18T14:53:34+0000
+  2025-07-18T20:02:49+0000  org-node-20250718.1701.entry
+  2025-07-18T20:02:49+0000  org-node-20250718.1701.tar
+Built org-node in 5.984s, finished at 2025-07-18T20:02:50+0000
