@@ -8,7 +8,7 @@ coercions from a range of SQL types to the equivalent Emacs Lisp type.
 Supported features:
 
  - SCRAM-SHA-256 authentication (the default method since PostgreSQL version 14) and MD5
- - authentication.
+   authentication.
 
  - Encrypted (TLS) connections between Emacs and the PostgreSQL backend.
 
