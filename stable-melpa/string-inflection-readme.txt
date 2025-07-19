@@ -62,7 +62,7 @@ Example 2:
             '(lambda ()
                (local-set-key (kbd "C-c C-u") 'string-inflection-java-style-cycle)))
 
-You can configure where the cursor should end up after the inflection using the
+You can configure where the point should end up after the inflection using the
 `string-inflection-final-position' option.
 
 When a region is active during the inflect operation there are two effects:
