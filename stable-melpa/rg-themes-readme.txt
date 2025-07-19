@@ -4,7 +4,8 @@ defined through the `rg-themes-define-palette' function, that
 ensures a certain degree of consistency between all the themes in
 this package. The themes are:
 
-  Ellas           (light, rg-themes-ellas.el)
-  Somnus          ( dark, rg-themes-somnus.el)
-  Cappuccino noir ( dark, rg-themes-cappuccino-noir.el)
-  Purpurina       ( dark, rg-themes-cappuccino-purpurina.el)
+  Ellas           (light, rg-themes-ellas-theme.el)
+  Somnus          ( dark, rg-themes-somnus-theme.el)
+  Cappuccino noir ( dark, rg-themes-cappuccino-noir-theme.el)
+  Purpurina       ( dark, rg-themes-cappuccino-purpurina-theme.el)
+  Bosque          ( dark, rg-themes-bosque-theme.el)
