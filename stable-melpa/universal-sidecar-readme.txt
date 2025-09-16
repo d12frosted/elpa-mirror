@@ -91,6 +91,9 @@ normal window motion commands
                                          (no-delete-other-windows . t)))))
 
 
+Additionally, buffers can be ignored by setting the buffer-local
+value of `universal-sidecar-ignore-buffer' to non-nil.
+
 Finally, errors in sections or section definitions are by default
 logged to the *Warnings* buffer.  This is done in a way to allow
 for debugging.  Moreover, the logging can be disabled by setting
@@ -192,3 +195,6 @@ programmatic advising.
 
 v1.5.2 (2024-01-15): `universal-sidecar-buffer-mode-hook' is now
 customizable.
+
+v1.8.0 (2025-07-30): local variable
+`universal-sidecar-ignore-buffer' added.

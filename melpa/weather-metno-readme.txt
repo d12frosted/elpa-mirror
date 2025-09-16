@@ -1,2 +1,4 @@
+Weather data from met.no in Emacs.
+
 See http://api.met.no/weatherapi/documentation
 and http://api.met.no/license_data.html

@@ -3,16 +3,38 @@ Fetcher: github
 Source:  https://github.com/hexmode/mediawiki-el
 
 Updating /mnt/store/melpa/working/mediawiki/
-Checking out dbf07320b63bf1adaa4a53eb4d0f8d5da52040b6
+Checking out e0e45e73be527d75127b31746998824115dcf6a5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mediawiki/
-  to /tmp/mediawikicRczNn/mediawiki-20250718.426
+  to /tmp/mediawikidAKgLF/mediawiki-20250914.2305
+    mediawiki-api.el -> mediawiki-api.el
+    mediawiki-auth.el -> mediawiki-auth.el
+    mediawiki-core.el -> mediawiki-core.el
+    mediawiki-draft.el -> mediawiki-draft.el
+    mediawiki-faces.el -> mediawiki-faces.el
+    mediawiki-font-lock.el -> mediawiki-font-lock.el
+    mediawiki-http.el -> mediawiki-http.el
+    mediawiki-mode.el -> mediawiki-mode.el
+    mediawiki-page.el -> mediawiki-page.el
+    mediawiki-site.el -> mediawiki-site.el
+    mediawiki-utils.el -> mediawiki-utils.el
     mediawiki.el -> mediawiki.el
-Created mediawiki-20250718.426.tar containing:
-  mediawiki-20250718.426/
-  mediawiki-20250718.426/mediawiki-pkg.el
-  mediawiki-20250718.426/mediawiki.el
+Created mediawiki-20250914.2305.tar containing:
+  mediawiki-20250914.2305/
+  mediawiki-20250914.2305/mediawiki-api.el
+  mediawiki-20250914.2305/mediawiki-auth.el
+  mediawiki-20250914.2305/mediawiki-core.el
+  mediawiki-20250914.2305/mediawiki-draft.el
+  mediawiki-20250914.2305/mediawiki-faces.el
+  mediawiki-20250914.2305/mediawiki-font-lock.el
+  mediawiki-20250914.2305/mediawiki-http.el
+  mediawiki-20250914.2305/mediawiki-mode.el
+  mediawiki-20250914.2305/mediawiki-page.el
+  mediawiki-20250914.2305/mediawiki-pkg.el
+  mediawiki-20250914.2305/mediawiki-site.el
+  mediawiki-20250914.2305/mediawiki-utils.el
+  mediawiki-20250914.2305/mediawiki.el
  ✓ Success:
-  2025-07-20T07:31:01+0000  mediawiki-20250718.426.entry
-  2025-07-20T07:31:01+0000  mediawiki-20250718.426.tar
-Built mediawiki in 3.097s, finished at 2025-07-20T07:31:02+0000
+  2025-09-16T11:03:35+0000  mediawiki-20250914.2305.entry
+  2025-09-16T11:03:35+0000  mediawiki-20250914.2305.tar
+Built mediawiki in 2.719s, finished at 2025-09-16T11:03:35+0000

@@ -130,17 +130,20 @@ Table of Contents
   templates are grouped by major mode with an optional `:when'
   condition. Each template is a list in the concise form of the Emacs
   Tempo syntax. The first element of each list is the name of the
-  template.  I recommend to use avoid special letters for the template
+  template.  I recommend to avoid special letters for the template
   names, since special letters may carry meaning during completion
   filtering and as such make it harder to select the desired
   template. Thus the name `lett' is better than `let*'. Behind the name,
   the Tempo syntax elements follow.
 
-  In addition, each template may specify a `:pre' and/or `:post' key
-  with a FORM that is evaluated before the template is expanded or after
-  it is finalized, respectively. The `:post' form is evaluated in the
-  lexical scope of the template, which means that it can access the
-  template's named fields.
+  In addition, /after/ the template elements, each template may specify
+  several key/value pairs. Specifically, templates may specify `:pre'
+  and/or `:post' keys with a FORM that is evaluated before the template
+  is expanded or after it is finalized, respectively. The `:post' form
+  is evaluated in the lexical scope of the template, which means that it
+  can access the template's named fields. Beyond that, templates may
+  include an `:ann' and `:doc' key with strings that are used as
+  annotation and documentation respectively.
 
   The following examples are written on a single line, but this is is of
   course not a requirement. Strings can even contain line breaks, which
@@ -151,7 +154,9 @@ Table of Contents
   │ 
   │ fundamental-mode ;; Available everywhere
   │ 
-  │ (today (format-time-string "%Y-%m-%d"))
+  │ (today (format-time-string "%Y-%m-%d")
+  │        :ann "Today's date"
+  │        :doc "Insert today's date")
   │ 
   │ prog-mode
   │ 
@@ -263,10 +268,10 @@ Table of Contents
   │ 
   │ (box "┌─" (make-string (length str) ?─) "─┐" n
   │      "│ " (s str)                       " │" n
-  │      "└─" (make-string (length str) ?─) "─┘" n)
+  │      "└─" (make-string (length str) ?─) "─┘" n :doc "UNICODE BOX")
   │ (abox "+-" (make-string (length str) ?-) "-+" n
   │       "| " (s str)                       " |" n
-  │       "+-" (make-string (length str) ?-) "-+" n)
+  │       "+-" (make-string (length str) ?-) "-+" n :doc "ASCII BOX")
   │ (cut "--8<---------------cut here---------------start------------->8---" n r n
   │      "--8<---------------cut here---------------end--------------->8---" n)
   │ (rot13 (p "plain text" text) n "----" n (rot13 text))

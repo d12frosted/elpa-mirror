@@ -32,3 +32,4 @@ Customize options:
 - ‘eldoc-box-cleanup-interval’
 - ‘eldoc-box-fringe-use-same-bg’
 - ‘eldoc-box-self-insert-command-list’
+- ‘eldoc-box-hover-display-frame-above-point’

@@ -1,69 +1,17 @@
-			  ━━━━━━━━━━━━━━━━━━━━
-			   ORG-SUPERSTAR-MODE
-			  ━━━━━━━━━━━━━━━━━━━━
+                          ━━━━━━━━━━━━━━━━━━━━
+                           ORG-SUPERSTAR-MODE
+                          ━━━━━━━━━━━━━━━━━━━━
 
 
-Table of Contents
-─────────────────
-
-1. About
-.. 1. Planned features
-.. 2. Demos
-2. Installation
-3. Customization
-.. 1. "Can you make it more like `org-bullets'?"
-..... 1. `org-superstar-configure-like-org-bullets'
-.. 2. "Where do I find UTF8-bullets to use?"
-.. 3. Custom UTF8-bullets for heading lines
-..... 1. `org-superstar-headline-bullets-list'
-..... 2. `org-superstar-cycle-headline-bullets'
-..... 3. `org-superstar-leading-bullet'
-..... 4. `org-superstar-first-inlinetask-bullet'
-..... 5. Hide leading stars
-..... 6. Fancy `TODO' items
-..... 7. No `TODO' bullets
-.. 4. Custom UTF8-Bullets for plain lists
-..... 1. `org-superstar-item-bullet-alist'
-..... 2. `org-superstar-prettify-item-bullets'
-..... 3. Fast Plain List Items
-.. 5. Custom faces
-..... 1. `org-superstar-header-bullet': "Use `org-level-N', but…"
-..... 2. `org-superstar-leading'
-..... 3. `org-superstar-item'
-..... 4. `org-superstar-first'
-4. FAQ / Troubleshooting
-.. 1. "Question marks everywhere!  Help!"
-..... 1. Question mark salad on terminal
-..... 2. Borked even in graphical sessions
-.. 2. "This mode causes significant slowdown!"
-..... 1. "I experience lag when working with long plain lists!"
-.. 3. "I get an error when trying to use it."
-..... 1. Unknown function: `org-element-lineage'
-.. 4. "What are these weird points in front of heading bullets?"
-5. NEWS
-.. 1. `2021-02-16'
-.. 2. `2021-02-11'
-6. Announcement Log
-.. 1. `2020-02-02'
-.. 2. `2020-02-03'
-.. 3. `2020-02-04'
-.. 4. `2020-02-15'
-.. 5. `2020-02-16'
-.. 6. `2020-02-17'
-.. 7. `2020-02-26'
-.. 8. `2020-03-08'
-.. 9. `2020-04-01'
-.. 10. `2020-04-14'
-.. 11. `2020-08-08'
-.. 12. `2020-08-29'
-.. 13. `2020-08-18'
-
-
+[https://elpa.nongnu.org/nongnu/org-superstar.svg]
 [file:https://melpa.org/packages/org-superstar-badge.svg]
 [file:https://stable.melpa.org/packages/org-superstar-badge.svg]
 
 <file:sample_image.png>
 
+
+[https://elpa.nongnu.org/nongnu/org-superstar.svg]
+<https://elpa.nongnu.org/nongnu/org-superstar.html>
 
 [file:https://melpa.org/packages/org-superstar-badge.svg]
 <https://melpa.org/#/org-superstar>
@@ -151,23 +99,22 @@ Table of Contents
 2 Installation
 ══════════════
 
-  The package is available [on MELPA]!
+  The package is available on [NonGNU ELPA] and [MELPA]!
 
-  Furthermore, it ships with [Spacemacs] and [Doom Emacs].
+  Furthermore, it ships with [Spacemacs].
 
   If you prefer a manual installation, just plug `org-superstar.el' into
   your load path and add the following to your `.emacs':
   ┌────
-  │ (require 'org-superstar)
   │ (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
   └────
 
 
-[on MELPA] <https://melpa.org/#/org-superstar>
+[NonGNU ELPA] <https://elpa.nongnu.org/nongnu/org-superstar.html>
+
+[MELPA] <https://melpa.org/#/org-superstar>
 
 [Spacemacs] <https://github.com/syl20bnr/spacemacs>
-
-[Doom Emacs] <https://github.com/hlissner/doom-emacs>
 
 
 3 Customization
@@ -240,7 +187,8 @@ Table of Contents
 
 [Dingbats] <https://en.wikipedia.org/wiki/Dingbat#Unicode>
 
-[Geometric Shapes] <https://en.wikipedia.org/wiki/Geometric_Shapes>
+[Geometric Shapes]
+<https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)>
 
 [Miscellaneous Symbols]
 <https://en.wikipedia.org/wiki/Miscellaneous_Symbols>
@@ -276,7 +224,10 @@ Table of Contents
   characters as well as specific lists, with characters being the new
   default way of providing bullets.  Lists on the other hand provide the
   user with the means to access advanced composition features and
-  fallback options for terminal users.
+  fallback options for terminal users.  Since version *1.5.0*, a value
+  of `nil' is also recognized, causing the headline bullet to be hidden
+  from view the same way leading stars are when setting
+  `org-superstar-remove-leading-stars'.
 
 
 3.3.2 `org-superstar-cycle-headline-bullets'
@@ -288,8 +239,10 @@ Table of Contents
 
   `nil'
         Go through the list, then repeat the last entry indefinitely.
-  any integer /k/
+  any positive integer /k/
         Cycle through the first /k/ elements of the list.
+  any negative integer /k/
+        Cycle through the last -/k/ elements of the list.
 
 
 3.3.3 `org-superstar-leading-bullet'
@@ -388,10 +341,13 @@ Table of Contents
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Exactly as it says on the tin.  Set this variable to `nil' to stop
-  `org-superstar-mode' from prettifying lists.
+  `org-superstar-mode' from prettifying lists.  If set to the symbol
+  `only', this disables prettifying Org headings entirely.  As of
+  version *1.6.0*, ordered list bullets can be customized with an
+  independent face, but are not otherwise prettified.
 
 
-3.4.3 Fast Plain List Items
+3.4.3 Fast plain list items
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   The default syntax-checking done to ensure only actual plain list
@@ -448,13 +404,67 @@ Table of Contents
   `org-superstar-prettify-item-bullets' is enabled.
 
 
-3.5.4 `org-superstar-first'
+3.5.4 `org-superstar-ordered-item'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  A face used to display prettified ordered list bullets if
+  `org-superstar-prettify-item-bullets' is enabled.
+
+
+3.5.5 `org-superstar-first'
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   A face used for the marker star of inline tasks (see the package
   `org-inlinetask', in particular `org-inlinetask-show-first-star'
   instead of the default `org-warning', which it inherits from by
   default.
+
+
+3.6 Hacking
+───────────
+
+  As of version *1.7.0*, Org Superstar exposes a handful of previously
+  internal functions as well as dedicated hooks to allow full,
+  fine-grained control over the style of headlines.
+
+
+3.6.1 `org-superstar-prettify-headline-hook'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  This hook is run each time Superstar prettifies a headline, not
+  counting inline tasks.  Hook functions have access to the same match
+  data (see the documentation string) that Superstar functions use,
+  allowing the user to manually set text properties as they see fit.
+
+
+3.6.2 `org-superstar-prettify-inlinetask-hook'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  This hook is run each time Superstar prettifies an inline task.  Hook
+  functions have access to the same match data (see the documentation
+  string of `org-superstar-prettify-headline-hook') that Superstar
+  functions use, allowing the user to manually set text properties as
+  they see fit.
+
+
+3.6.3 Accessor functions
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Various functions which used to be internals not meant to be accessed
+  by users are now exposed to the user.  These functions rely on the
+  match data available to functions in the above hooks.
+
+  `org-superstar-heading-level'
+        Simple function computing the level of the heading.
+  `org-superstar-hbullet'
+        Returns the heading bullet Superstar would use at the current
+        heading, taking into account the variety of implemented features
+        and settings, including returning fallback options for
+        non-graphical displays.
+  `org-superstar-lbullet'
+        Display-aware accessor for leading bullet character.
+  `org-superstar-fbullet'
+        Display-aware accessor for the first inline task star.
 
 
 4 FAQ / Troubleshooting
@@ -515,7 +525,7 @@ Table of Contents
 
   I have looked into the matter [in the past], and from what I
   understand the usual cause of this is relates to a deeper rooted issue
-  involving fonts and font-lock reliant packages.  I recommend adding
+  involving [fonts] and font-lock reliant packages.  I recommend adding
   the following to your `.emacs':
   ┌────
   │ (setq inhibit-compacting-font-caches t)
@@ -528,6 +538,8 @@ Table of Contents
 
 [in the past]
 <https://github.com/integral-dw/org-superstar-mode/issues/3>
+
+[fonts] <https://github.com/integral-dw/org-superstar-mode/issues/27>
 
 4.2.1 "I experience lag when working with long plain lists!"
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
@@ -578,7 +590,30 @@ Table of Contents
 5 NEWS
 ══════
 
-5.1 `2021-02-16'
+5.1 `2025-09-13'
+────────────────
+
+  Version *1.7.0* is now available, significantly enhancing
+  customization options by providing hooks and exposing previously
+  internal functions to the user.  The new version also comes with a
+  small number of assorted bug fixes related to the removal of leading
+  stars.
+
+
+5.2 `2025-08-31'
+────────────────
+
+  *1.6.0* has been released, adding minor support for numbered lists.
+  Many years have passed since my last update, and we have even
+  surpassed the 262144 (2^18) downloads milestone.. I hope that you,
+  dear reader, find continued enjoyment in this little aesthetics tweak
+  to Org.  While I doubt that I will be as active as I was back in 2020,
+  Superstar is far from dead! I will continue to support it and am
+  slowly working on reducing the amount of open issues.  Thank you all
+  so much for your patience.
+
+
+5.3 `2021-02-16'
 ────────────────
 
   *1.5.0* has been released, adding support for hiding TODO item bullets
@@ -588,7 +623,10 @@ Table of Contents
   number change.
 
 
-5.2 `2021-02-11'
+6 Announcement Log
+══════════════════
+
+6.1 `2021-02-11'
 ────────────────
 
   Since I have been asked whether there is a way to extend Superstar to
@@ -604,10 +642,7 @@ Table of Contents
 [Superstar Kit] <https://github.com/integral-dw/superstar-kit>
 
 
-6 Announcement Log
-══════════════════
-
-6.1 `2020-02-02'
+6.2 `2020-02-02'
 ────────────────
 
   *Good news!* The project is reaching an /acceptable/ first draft
@@ -617,20 +652,20 @@ Table of Contents
   available on MELPA is roughly by the end of this month.
 
 
-6.2 `2020-02-03'
+6.3 `2020-02-03'
 ────────────────
 
   Everything went better than expected!  The tests seem to cover most
   use cases now, and it seems I have added proper terminal support.
 
 
-6.3 `2020-02-04'
+6.4 `2020-02-04'
 ────────────────
 
   I set up a pull request, we will see how this goes.
 
 
-6.4 `2020-02-15'
+6.5 `2020-02-15'
 ────────────────
 
   Version *0.3.0* is out and tagged for your convenience.  I am now
@@ -640,14 +675,14 @@ Table of Contents
   however.
 
 
-6.5 `2020-02-16'
+6.6 `2020-02-16'
 ────────────────
 
   Version *0.4.0* has been released!  You can now associate `TODO'
   keywords with special headline bullets.
 
 
-6.6 `2020-02-17'
+6.7 `2020-02-17'
 ────────────────
 
   Version *0.5.0* now supports a new kind of way to hide leading
@@ -656,7 +691,7 @@ Table of Contents
   emphasis markers (see `org-hide-emphasis-markers').
 
 
-6.7 `2020-02-26'
+6.8 `2020-02-26'
 ────────────────
 
   Version *1.0.0* has been released!  With this I consider the package
@@ -668,7 +703,7 @@ Table of Contents
     version number change.
 
 
-6.8 `2020-03-08'
+6.9 `2020-03-08'
 ────────────────
 
   The package is now available on MELPA!  My sincerest thanks to all the
@@ -676,8 +711,8 @@ Table of Contents
   would not have managed without you! :)
 
 
-6.9 `2020-04-01'
-────────────────
+6.10 `2020-04-01'
+─────────────────
 
   A minor status update.  [We cracked the 500 downloads mark on MELPA!]
   Unbelievable! Thank you all for your support!  Should we reach the
@@ -694,7 +729,7 @@ Table of Contents
 <https://melpa.org/#/org-superstar>
 
 
-6.10 `2020-04-14'
+6.11 `2020-04-14'
 ─────────────────
 
   Version *1.2.0* is now available.  This version adds support for using
@@ -710,7 +745,7 @@ Table of Contents
 [over 1000 downloads on MELPA] <https://melpa.org/#/org-superstar>
 
 
-6.11 `2020-08-08'
+6.12 `2020-08-08'
 ─────────────────
 
   Version *1.3.0* is here!  This version adds support for using advanced
@@ -737,7 +772,7 @@ Table of Contents
 [Doom Emacs] <https://github.com/hlissner/doom-emacs>
 
 
-6.12 `2020-08-29'
+6.13 `2020-08-29'
 ─────────────────
 
   org-superstar has reached over 32768 (2^{15}) downloads this week!
@@ -745,7 +780,7 @@ Table of Contents
   very open to suggestions from the community!
 
 
-6.13 `2020-08-18'
+6.14 `2020-08-18'
 ─────────────────
 
   We have reached version *1.4.0*, which concludes the series of feature

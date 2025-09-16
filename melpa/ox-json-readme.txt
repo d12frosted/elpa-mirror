@@ -34,3 +34,6 @@ Export options:
 :json-include-extra-properties (bool) - Whether to export node properties not listed
   in the :json-property-types option. If true these properties will be exported
   using `ox-json-encode-auto'.
+
+:json-postprocess (symbol) - How to postprocess the final output. Values are `pretty'
+  (indent properly), `minimal' (remove whitespace), and nil (nothing, maybe faster?).

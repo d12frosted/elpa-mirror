@@ -36,7 +36,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
 
 [Nuspell] <https://nuspell.github.io/>
 
-[Hunspell] <http://hunspell.github.io/>
+[Hunspell] <https://hunspell.github.io/>
 
 [Aspell] <http://aspell.net/>
 

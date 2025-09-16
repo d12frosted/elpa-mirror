@@ -8,7 +8,7 @@ By default this package uses the service at
 However, you can also configure your own setup
 if you so desire. The Plaster server app can
 be obtained at
-  https://github.com/Shirakumo/plaster
+  https://shirakumo.org/project/plaster
 
 The following commands are available:
 

@@ -4,10 +4,11 @@
 - [Installation](#installation)
 - [Quick Start: LLM Provider Examples](#quick-start-llm-provider-examples)
   - [Ollama Qwen-2.5-coder:3b](#ollama-qwen-25-coder3b)
-  - [OpenRouter Qwen2.5-32B-Instruct](#openrouter-qwen25-32b-instruct)
+  - [OpenRouter Kimi-K2](#openrouter-kimi-k2)
   - [Llama.cpp Qwen-2.5-coder:1.5b](#llamacpp-qwen-25-coder15b)
 - [API Keys](#api-keys)
 - [Selecting a Provider or Model](#selecting-a-provider-or-model)
+  - [Understanding Model Speed](#understanding-model-speed)
 - [Prompt](#prompt)
 - [Configuration](#configuration)
   - [minuet-provider](#minuet-provider)
@@ -59,6 +60,9 @@ as dancers move during a minuet.
 - Streaming support to enable completion delivery even with slower LLMs
 
 **With minibuffer frontend**:
+
+Note: Previewing insertion results within the buffer requires the `consult`
+package.
 
 ![example-completion-in-region](./assets/minuet-completion-in-region.jpg)
 
@@ -145,7 +149,9 @@ preferred package managers.
     ;; you should adjust the context window to a larger value.
     (setq minuet-context-window 512)
     (plist-put minuet-openai-fim-compatible-options :end-point "http://localhost:11434/v1/completions")
-    ;; an arbitrary non-null environment variable as placeholder
+    ;; an arbitrary non-null environment variable as placeholder.
+    ;; For Windows users, TERM may not be present in environment variables.
+    ;; Consider using APPDATA instead.
     (plist-put minuet-openai-fim-compatible-options :name "Ollama")
     (plist-put minuet-openai-fim-compatible-options :api-key "TERM")
     (plist-put minuet-openai-fim-compatible-options :model "qwen2.5-coder:3b")
@@ -155,7 +161,7 @@ preferred package managers.
 
 </details>
 
-## OpenRouter Qwen2.5-32B-Instruct
+## OpenRouter Kimi-K2
 
 <details>
 
@@ -169,12 +175,12 @@ preferred package managers.
 
     (plist-put minuet-openai-compatible-options :end-point "https://openrouter.ai/api/v1/chat/completions")
     (plist-put minuet-openai-compatible-options :api-key "OPENROUTER_API_KEY")
-    (plist-put minuet-openai-compatible-options :model "qwen/qwen2.5-32b-instruct")
+    (plist-put minuet-openai-compatible-options :model "moonshotai/kimi-k2")
 
 
     ;; Prioritize throughput for faster completion
     (minuet-set-optional-options minuet-openai-compatible-options :provider '(:sort "throughput"))
-    (minuet-set-optional-options minuet-openai-compatible-options :max_tokens 128)
+    (minuet-set-optional-options minuet-openai-compatible-options :max_tokens 56)
     (minuet-set-optional-options minuet-openai-compatible-options :top_p 0.9))
 ```
 
@@ -209,6 +215,8 @@ llama-server \
     (setq minuet-context-window 512)
     (plist-put minuet-openai-fim-compatible-options :end-point "http://localhost:8012/v1/completions")
     ;; an arbitrary non-null environment variable as placeholder
+    ;; For Windows users, TERM may not be present in environment variables.
+    ;; Consider using APPDATA instead.
     (plist-put minuet-openai-fim-compatible-options :name "Llama.cpp")
     (plist-put minuet-openai-fim-compatible-options :api-key "TERM")
     ;; The model is set by the llama-cpp server and cannot be altered
@@ -218,7 +226,7 @@ llama-server \
     ;; Llama.cpp does not support the `suffix` option in FIM completion.
     ;; Therefore, we must disable it and manually populate the special
     ;; tokens required for FIM completion.
-    (minuet-set-optional-options minuet-openai-fim-compatible-options :suffix nil :template)
+    (minuet-set-nested-plist minuet-openai-fim-compatible-options nil :template :suffix)
     (minuet-set-optional-options
      minuet-openai-fim-compatible-options
      :prompt
@@ -281,6 +289,38 @@ significantly slow down the default provider used by Minuet
 (`openai-fim-compatible` with deepseek). We recommend trying alternative
 providers instead.
 
+We **do not** recommend using thinking models, as this mode
+significantly increases latency—even with the fastest models. However,
+if you choose to use thinking models, please ensure that their
+thinking capabilities are disabled.  Refer to the following examples
+for guidance on how to disable the thinking feature.
+
+Note: You can review the buffer contents in `*minuet*` to identify any
+errors returned by the provider in case of misconfiguration in your
+options.
+
+## Understanding Model Speed
+
+For cloud-based providers,
+[Openrouter](https://openrouter.ai/google/gemini-2.0-flash-001/providers) offers
+a valuable resource for comparing the speed of both closed-source and
+open-source models hosted by various cloud inference providers.
+
+When assessing model speed, two key metrics are latency (time to first token)
+and throughput (tokens per second). Latency is often a more critical factor than
+throughput.
+
+Ideally, one would aim for a latency of less than 1 second and a throughput
+exceeding 100 tokens per second.
+
+For local LLM,
+[llama.cpp#4167](https://github.com/ggml-org/llama.cpp/discussions/4167)
+provides valuable data on model speed for 7B models running on Apple M-series
+chips. The two crucial metrics are `Q4_0 PP [t/s]`, which measures latency
+(tokens per second to process the KV cache, equivalent to the time to generate
+the first token), and `Q4_0 TG [t/s]`, which indicates the tokens per second
+generation speed.
+
 # Prompt
 
 See [prompt](./prompt.md) for the default prompt used by `minuet` and
@@ -330,11 +370,10 @@ timeout, the incomplete completion items will be delivered. The default is `3`.
 
 ## minuet-show-error-message-on-minibuffer
 
-Whether to show the error messages in minibuffer. The default value is
-`nil`.  When non-nil, if a request fails or times out without
-generating even a single token, the error message will be shown in the
-minibuffer.  Note that you can always inspect `minuet-buffer-name` to
-view the complete error log.
+Whether to show the error messages in minibuffer. The default value is `nil`.
+When non-nil, if a request fails or times out without generating even a single
+token, the error message will be shown in the minibuffer. Note that you can
+always inspect `minuet-buffer-name` to view the complete error log.
 
 ## minuet-add-single-line-entry
 
@@ -370,8 +409,8 @@ You can customize the provider options using `plist-put`, for example:
 
 ```lisp
 (with-eval-after-load 'minuet
-    ;; change openai model to gpt-4o
-    (plist-put minuet-openai-options :model "gpt-4o")
+    ;; change openai model to gpt-4.1
+    (plist-put minuet-openai-options :model "gpt-4.1")
 
     ;; change openai-compatible provider to use fireworks
     (setq minuet-provider 'openai-compatible)
@@ -397,7 +436,7 @@ Below is the default value:
 
 ```lisp
 (defvar minuet-openai-options
-    `(:model "gpt-4o-mini"
+    `(:model "gpt-4.1-mini"
       :api-key "OPENAI_API_KEY"
       :system
       (:template minuet-default-system-template
@@ -413,6 +452,12 @@ Below is the default value:
       :optional nil)
     "config options for Minuet OpenAI provider")
 
+```
+
+You can disable thinking mode with the following configuration:
+
+```lisp
+(minuet-set-optional-options minuet-openai-options :reasoning_effort "minimal")
 ```
 
 </details>
@@ -512,21 +557,31 @@ request timeout from outputing too many tokens. You can also adjust the safety
 settings following the example:
 
 ```lisp
-(minuet-set-optional-options minuet-gemini-options
-                             :generationConfig
-                             '(:maxOutputTokens 256
-                               :topP 0.9))
-(minuet-set-optional-options minuet-gemini-options
-                             :safetySettings
-                             [(:category "HARM_CATEGORY_DANGEROUS_CONTENT"
-                               :threshold "BLOCK_NONE")
-                              (:category "HARM_CATEGORY_HATE_SPEECH"
-                               :threshold "BLOCK_NONE")
-                              (:category "HARM_CATEGORY_HARASSMENT"
-                               :threshold "BLOCK_NONE")
-                              (:category "HARM_CATEGORY_SEXUALLY_EXPLICIT"
-                               :threshold "BLOCK_NONE")])
+(minuet-set-optional-options
+ minuet-gemini-options :generationConfig
+ '(:maxOutputTokens 256
+   :topP 0.9
+   ;; When using `gemini-2.5-flash`, it is recommended to entirely
+   ;; disable thinking for faster completion retrieval.
+   :thinkingConfig (:thinkingBudget 0)))
+
+(minuet-set-optional-options
+ minuet-gemini-options :safetySettings
+ [(:category "HARM_CATEGORY_DANGEROUS_CONTENT"
+   :threshold "BLOCK_NONE")
+  (:category "HARM_CATEGORY_HATE_SPEECH"
+   :threshold "BLOCK_NONE")
+  (:category "HARM_CATEGORY_HARASSMENT"
+   :threshold "BLOCK_NONE")
+  (:category "HARM_CATEGORY_SEXUALLY_EXPLICIT"
+   :threshold "BLOCK_NONE")])
 ```
+
+We recommend using `gemini-2.0-flash` over `gemini-2.5-flash`, as the 2.0
+version offers significantly lower costs with comparable performance. The
+primary improvement in version 2.5 lies in its extended thinking mode, which
+provides minimal value for code completion scenarios. Furthermore, the thinking
+mode substantially increases latency, so we recommend disabling it entirely.
 
 </details>
 
@@ -545,7 +600,7 @@ The following config is the default.
 (defvar minuet-openai-compatible-options
     `(:end-point "https://openrouter.ai/api/v1/chat/completions"
       :api-key "OPENROUTER_API_KEY"
-      :model "qwen/qwen2.5-32b-instruct"
+      :model "mistralai/devstral-small"
       :system
       (:template minuet-default-system-template
        :prompt minuet-default-prompt

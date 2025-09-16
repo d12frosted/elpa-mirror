@@ -30,6 +30,19 @@ will be used as input for the executed program.
 M-x `compiler-explorer-jump' jumps to ASM block for the source line at
 point and vice versa.
 
+M-x `compiler-explorer-add-tool' asks for the name of a tool, adds it
+to current compilation and displays a new buffer showing the tool's
+output.
+
+M-x `compiler-explorer-remove-tool' prompts for the name of an added
+tool to remove.
+
+M-x `compiler-explorer-set-tool-args' sets the arguments for an added
+tool.
+
+M-x `compiler-explorer-set-tool-input' reads a string from minibuffer
+that will be used as input for an added tool.
+
 M-x `compiler-explorer-load-example' prompts for a name of a builtin
 example and loads it.
 

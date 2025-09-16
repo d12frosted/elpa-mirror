@@ -3,7 +3,7 @@ the Internet Printing Protocol (IPP). IPP was intended to replace the LPD
 protocol for interacting with network printers. It specifies mechanisms for
 “driverless printing” (submitting and cancelling jobs), queue monitoring and
 querying printer capabilities. More recent versions of the standard are
-called “IPP Everywhere”.
+called “IPP Everywhere”. We implement IPP/1.0 (RFC2566).
 
 You can find out whether a device is IPP-capable by trying to telnet to port 631. If it
 accepts the connection it probably understands IPP. You then need to discover the path
@@ -38,7 +38,7 @@ menus via the front panel or its HTTP interface, or by analyzing DNS Service Dis
 
 
 
-Usage: load this package by putting in your ~/.emacs.el
+Usage: load this package by putting in your Emacs initialization file
 
    (require 'ipp)
 

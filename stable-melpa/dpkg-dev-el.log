@@ -3,30 +3,34 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/dpkg-dev-el.git
 
 Updating /mnt/store/melpa/working/dpkg-dev-el/
-Checking out 14a47e96b4f0e20ab9008bac6dc554d07335cbd6
+Checking out 38f1fb20892dbb7c0e5ab6e23b7dee1f3fd926b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dpkg-dev-el/
-  to /tmp/dpkg-dev-elOKjxVW/dpkg-dev-el-20250408.635
+  to /tmp/dpkg-dev-elIC4c27/dpkg-dev-el-20250912.823
     debian-autopkgtest-control-mode.el -> debian-autopkgtest-control-mode.el
     debian-bts-control.el -> debian-bts-control.el
     debian-changelog-mode.el -> debian-changelog-mode.el
     debian-control-mode.el -> debian-control-mode.el
     debian-copyright.el -> debian-copyright.el
+    debian-rfc822-mode.el -> debian-rfc822-mode.el
+    debian-rfc822-watch-mode.el -> debian-rfc822-watch-mode.el
     dpkg-dev-common-utils.el -> dpkg-dev-common-utils.el
     dpkg-dev-el.el -> dpkg-dev-el.el
     readme-debian.el -> readme-debian.el
-Created dpkg-dev-el-20250408.635.tar containing:
-  dpkg-dev-el-20250408.635/
-  dpkg-dev-el-20250408.635/debian-autopkgtest-control-mode.el
-  dpkg-dev-el-20250408.635/debian-bts-control.el
-  dpkg-dev-el-20250408.635/debian-changelog-mode.el
-  dpkg-dev-el-20250408.635/debian-control-mode.el
-  dpkg-dev-el-20250408.635/debian-copyright.el
-  dpkg-dev-el-20250408.635/dpkg-dev-common-utils.el
-  dpkg-dev-el-20250408.635/dpkg-dev-el-pkg.el
-  dpkg-dev-el-20250408.635/dpkg-dev-el.el
-  dpkg-dev-el-20250408.635/readme-debian.el
+Created dpkg-dev-el-20250912.823.tar containing:
+  dpkg-dev-el-20250912.823/
+  dpkg-dev-el-20250912.823/debian-autopkgtest-control-mode.el
+  dpkg-dev-el-20250912.823/debian-bts-control.el
+  dpkg-dev-el-20250912.823/debian-changelog-mode.el
+  dpkg-dev-el-20250912.823/debian-control-mode.el
+  dpkg-dev-el-20250912.823/debian-copyright.el
+  dpkg-dev-el-20250912.823/debian-rfc822-mode.el
+  dpkg-dev-el-20250912.823/debian-rfc822-watch-mode.el
+  dpkg-dev-el-20250912.823/dpkg-dev-common-utils.el
+  dpkg-dev-el-20250912.823/dpkg-dev-el-pkg.el
+  dpkg-dev-el-20250912.823/dpkg-dev-el.el
+  dpkg-dev-el-20250912.823/readme-debian.el
  ✓ Success:
-  2025-07-20T07:03:32+0000  dpkg-dev-el-20250408.635.entry
-  2025-07-20T07:03:32+0000  dpkg-dev-el-20250408.635.tar
-Built dpkg-dev-el in 6.154s, finished at 2025-07-20T07:03:34+0000
+  2025-09-16T10:35:14+0000  dpkg-dev-el-20250912.823.entry
+  2025-09-16T10:35:14+0000  dpkg-dev-el-20250912.823.tar
+Built dpkg-dev-el in 3.655s, finished at 2025-09-16T10:35:15+0000

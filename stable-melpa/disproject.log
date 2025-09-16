@@ -3,16 +3,26 @@ Fetcher: github
 Source:  https://github.com/aurtzy/disproject
 
 Updating /mnt/store/melpa/working/disproject/
-Checking out ed818cd90042581e2b893b38af5dfca2b64dd0a0
+Checking out 5ab01bdfd3732db4aafe934da3665abf57a036f4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/disproject/
-  to /tmp/disprojectCMHIZR/disproject-20250622.133
+  to /tmp/disprojectTp8pKN/disproject-20250822.2145
     disproject.el -> disproject.el
-Created disproject-20250622.133.tar containing:
-  disproject-20250622.133/
-  disproject-20250622.133/disproject-pkg.el
-  disproject-20250622.133/disproject.el
+  ! doc/disproject.texi -> disproject.texi
+  ! doc/doclicense.texi -> doclicense.texi
+  ! doc/gpl.texi -> gpl.texi
+Generating disproject.info
+Generating doclicense.info
+Generating gpl.info
+Created disproject-20250822.2145.tar containing:
+  disproject-20250822.2145/
+  disproject-20250822.2145/dir
+  disproject-20250822.2145/disproject-pkg.el
+  disproject-20250822.2145/disproject.el
+  disproject-20250822.2145/disproject.info
+  disproject-20250822.2145/doclicense.info
+  disproject-20250822.2145/gpl.info
  ✓ Success:
-  2025-07-20T07:02:35+0000  disproject-20250622.133.entry
-  2025-07-20T07:02:35+0000  disproject-20250622.133.tar
-Built disproject in 3.052s, finished at 2025-07-20T07:02:36+0000
+  2025-09-16T10:34:26+0000  disproject-20250822.2145.entry
+  2025-09-16T10:34:26+0000  disproject-20250822.2145.tar
+Built disproject in 12.849s, finished at 2025-09-16T10:34:28+0000

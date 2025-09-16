@@ -1,0 +1,62 @@
+Package: gt
+Fetcher: github
+Source:  https://github.com/lorniu/gt.el
+
+Updating /mnt/store/melpa/working/gt/
+Checking out f9febd8583ea482f72139e02f440f3972502f5a2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gt/
+  to /tmp/gtpAhgX5/gt-20250727.230
+    gt-core.el -> gt-core.el
+    gt-engine-bing.el -> gt-engine-bing.el
+    gt-engine-chatgpt.el -> gt-engine-chatgpt.el
+    gt-engine-deepl.el -> gt-engine-deepl.el
+    gt-engine-echo.el -> gt-engine-echo.el
+    gt-engine-google-rpc.el -> gt-engine-google-rpc.el
+    gt-engine-google.el -> gt-engine-google.el
+    gt-engine-libre.el -> gt-engine-libre.el
+    gt-engine-osxdict.el -> gt-engine-osxdict.el
+    gt-engine-stardict.el -> gt-engine-stardict.el
+    gt-engine-youdao.el -> gt-engine-youdao.el
+    gt-extensions.el -> gt-extensions.el
+    gt-faces.el -> gt-faces.el
+    gt-render-alert.el -> gt-render-alert.el
+    gt-render-buffer.el -> gt-render-buffer.el
+    gt-render-insert.el -> gt-render-insert.el
+    gt-render-kill-ring.el -> gt-render-kill-ring.el
+    gt-render-overlay.el -> gt-render-overlay.el
+    gt-render-posframe.el -> gt-render-posframe.el
+    gt-taker-buffer-prompt.el -> gt-taker-buffer-prompt.el
+    gt-taker-fresh-words.el -> gt-taker-fresh-words.el
+    gt-text-utility.el -> gt-text-utility.el
+    gt.el -> gt.el
+Created gt-20250727.230.tar containing:
+  gt-20250727.230/
+  gt-20250727.230/gt-core.el
+  gt-20250727.230/gt-engine-bing.el
+  gt-20250727.230/gt-engine-chatgpt.el
+  gt-20250727.230/gt-engine-deepl.el
+  gt-20250727.230/gt-engine-echo.el
+  gt-20250727.230/gt-engine-google-rpc.el
+  gt-20250727.230/gt-engine-google.el
+  gt-20250727.230/gt-engine-libre.el
+  gt-20250727.230/gt-engine-osxdict.el
+  gt-20250727.230/gt-engine-stardict.el
+  gt-20250727.230/gt-engine-youdao.el
+  gt-20250727.230/gt-extensions.el
+  gt-20250727.230/gt-faces.el
+  gt-20250727.230/gt-pkg.el
+  gt-20250727.230/gt-render-alert.el
+  gt-20250727.230/gt-render-buffer.el
+  gt-20250727.230/gt-render-insert.el
+  gt-20250727.230/gt-render-kill-ring.el
+  gt-20250727.230/gt-render-overlay.el
+  gt-20250727.230/gt-render-posframe.el
+  gt-20250727.230/gt-taker-buffer-prompt.el
+  gt-20250727.230/gt-taker-fresh-words.el
+  gt-20250727.230/gt-text-utility.el
+  gt-20250727.230/gt.el
+ ✓ Success:
+  2025-09-16T10:49:27+0000  gt-20250727.230.entry
+  2025-09-16T10:49:27+0000  gt-20250727.230.tar
+Built gt in 3.795s, finished at 2025-09-16T10:49:28+0000

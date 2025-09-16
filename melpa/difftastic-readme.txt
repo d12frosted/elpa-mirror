@@ -258,8 +258,16 @@ In order to aid arguments entry and provide similarity to workflows in
 example, some - less commonly used - arguments are not visible in default
 configuration.  Type `C-x l' in the menu to make them visible.  Type `C-h
 C-h' for `difftastic' help (`man difft').  Any other `transient' commands
-should work as well, for example saving values as described in Info node
-`(transient)Saving Values'.
+should work as well.
+
+When `difftastic-use-transient-arguments' is non-nil, and extra difftastic
+arguments were saved in `transient' (as described in Info node
+`(transient)Saving Values'), these values will be used for future `difft'
+invocations.  However, when there's a need to tune these arguments for a
+specific `difft' call, a difftastic command can be called with double
+prefix argument to bring a popup allowing to specify arguments.  Any
+arguments changed in the popup (that were not saved) will be used for the
+following `difft' invocation only.
 
 Note that in some cases arguments will take precedence over standard and
 computed values, for example `--width' is one such a argument.
@@ -408,6 +416,10 @@ When creating a pull request make sure all tests in
 <file:test/difftastic.t.el> are passing.  When adding a new functionality,
 please strive to add tests for it as well.
 
+This repository uses a [custom fork of `el-mock'] which has a few more
+features and some slight semantic differences.  Please make sure you're
+using that fork before you report issues with tests.
+
 To run tests interactively:
 - open the <file:test/difftastic.t.el>
 - type `M-x eval-buffer <RET>'
@@ -435,6 +447,8 @@ relevant lines.
 You can run all checks performed by Github Actions, by typing: `make
 bytecompile lint relint checkdoc commentary test'.
 
+
+[custom fork of `el-mock'] <https://github.com/pkryger/el-mock.el>
 
 [Cask] <https://github.com/cask/cask>
 

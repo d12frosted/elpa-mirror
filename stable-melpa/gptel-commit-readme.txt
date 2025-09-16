@@ -1,4 +1,5 @@
 This package provides functions to generate Git commit messages using GPTel.
+It also supports Claude Code as an alternative backend.
 It analyzes staged changes and generates appropriate commit messages following
 conventional Git commit formats.
 

@@ -1,107 +1,69 @@
 
 Overview
-========
-This library provides minor mode `volatile-highlights-mode', which
-brings visual feedback to some operations by highlighting portions
-relating to the operations.
+--------
+`volatile-highlights-mode' is a global minor mode that provides
+transient, visual feedback for common editing operations.  After an
+operation completes, the affected text is highlighted briefly and
+cleared on the next user command.
 
-All of highlights made by this library will be removed
-when any new operation is executed.
+Features (when the mode is enabled):
+- undo: highlight the text restored by undo
+- yank and yank-pop: highlight inserted text
+- kill/delete: show where text used to be (optionally as a point)
+- definitions: Emacs 25.1+ uses xref; older Emacs use find-tag
+- occur: Emacs < 28 only (Emacs 28+ has built-in occur highlighting)
+- non-incremental search commands
+- hideshow: highlight shown blocks
 
+Customization
+------------
+Customize the group `volatile-highlights' (M-x customize-group RET
+volatile-highlights RET).
+- vhl/animation-style (default: 'static): animation style
+  for highlights.
+  - 'static  : No animation.
+  - 'fade-in : Fade in, then keep highlight until next command.
+  - 'pulse   : Fade out, then clear automatically.
+- vhl/highlight-zero-width-ranges (default: nil): also mark deletion
+  points as a 1-character highlight.
+- vhl/default-face: face used for highlights; adjust to match your theme.
+Per-feature toggles are available via `vhl/use-<name>-extension-p'.
+The xref integration is available but defaults to disabled.
+
+Notes for developers
+--------------------
+- The public APIs `vhl/add-range' and `vhl/add-position' are
+  mode-aware and act as no-ops when `volatile-highlights-mode' is
+  disabled.
+- To integrate with your own commands, compute the range to
+  highlight and call these APIs.  See docs/extending.md for patterns
+  and examples.
+
+See README.md for installation and quick configuration, and
+docs/extending.md for integration patterns and API reference.
 
 INSTALLING
-==========
-To install this library, save this file to a directory in your
-`load-path' (you can view the current `load-path' using "C-h v
-load-path" within Emacs), then add the following line to your
-.emacs start up file:
+----------
+Place this file on your `load-path', then enable the mode globally:
 
-   (require 'volatile-highlights)
-   (volatile-highlights-mode t)
+  (require 'volatile-highlights)
+  (volatile-highlights-mode 1)
 
-
-USING
-=====
-To toggle volatile highlighting, type `M-x volatile-highlights-mode <RET>'.
-
-While this minor mode is on, a string `VHl' will be displayed on the modeline.
-
-Currently, operations listed below will be highlighted While the minor mode
-`volatile-highlights-mode' is on:
-
-   - `undo':
-     Volatile highlights will be put on the text inserted by `undo'.
-
-   - `yank' and `yank-pop':
-     Volatile highlights will be put on the text inserted by `yank'
-     or `yank-pop'.
-
-   - `kill-region', `kill-line', any other killing function:
-     Volatile highlights will be put at the positions where the
-     killed text used to be.
-
-   - `delete-region':
-     Same as `kill-region', but not as reliable since
-     `delete-region' is an inline function.
-
-   - `find-tag':
-     Volatile highlights will be put on the tag name which was found
-     by `find-tag'.
-
-   - `occur-mode-goto-occurrence' and `occur-mode-display-occurrence':
-     Volatile highlights will be put on the occurrence which is selected
-     by `occur-mode-goto-occurrence' or `occur-mode-display-occurrence'.
-
-   - Non incremental search operations:
-     Volatile highlights will be put on the the text found by
-     commands listed below:
-
-       `nonincremental-search-forward'
-       `nonincremental-search-backward'
-       `nonincremental-re-search-forward'
-       `nonincremental-re-search-backward'
-       `nonincremental-repeat-search-forward'
-       `nonincremental-repeat-search-backwar'
-
-Highlighting support for each operations can be turned on/off individually
-via customization. Also check out the customization group
-
-  `M-x customize-group RET volatile-highlights RET'
-
-
-ADJUSTING THE LOOKS TO SUIT YOUR TASTE
-======================================
-The following user options are provided to help you get the look you want:
-
-   - `vhl/use-pulsing-visual-effect-p'
-     Whether to use visual effect 'pulsing' for volatile highlighting.
-     Pulsing involves a bright highlight that slowly shifts to the
-     background color.
-
-     If the value is nil, highlight with an unchanging color until
-     next command occurs.
-
-     If `vhl/use-pulsing-visual-effect-p' is non-nil, but the return value of
-     the function `vhl/pulse/available-p' is nil, then this flag is ignored.
-
-     Default value is `nil'.
-
-   - `vhl/pulse-iterations'
-     Number of iterations of a pulse animation for volatile highlights.
-
-     Default value is `8'.
-
-   - `vhl/pulse-start-delay'
-     Delay before pulse animation begins in seconds.
+   - `vhl/animation-start-delay'
+     Delay before the highlight animation begins in seconds.  For
+     animated styles, this delay is counted after Emacs becomes idle
+     (idle timer) to avoid interrupting rapid command sequences; set
+     to 0 to start as soon as Emacs is idle.  For 'static, highlights
+     appear immediately without waiting for idle.
 
      Default value is `0.15'.
 
-   - `vhl/pulse-iteration-delay'
-     Delay between iterations of the pulse animation in seconds.
+   - `vhl/animation-iteration-delay'
+     Delay between iterations of the highlight animation in seconds.
 
      Default value is `0.02'.
 
-   - `Vhl/highlight-zero-width-ranges'
+   - `vhl/highlight-zero-width-ranges'
      If `t', highlight the positions of zero-width ranges.
 
      For example, if a deletion is highlighted, then the position

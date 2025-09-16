@@ -34,8 +34,8 @@ Introduction
   persistence for frames, tabs, and sets of frames/tabs to help you
   manage your transient workflows. Bufferlo bookmarks are compatible
   with built-in features such as `bookmark-bmenu-list' and third-party
-  packages such as [consult] which offers consult-bookmark for
-  interactive bookmark selection.
+  packages such as [consult] which offers `consult-bookmark' and
+  `consult-buffer' for interactive bookmark and buffer selection.
 
 
 [consult] <https://github.com/minad/consult>
@@ -317,6 +317,10 @@ Tab bookmark commands
 Bookmark set commands
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
+  Most bookmark-set prompts use `completing-read-multiple' aka CRM, so
+  keep in mind the default CRM separator key is a comma which you should
+  press between each selection.
+
   • `bufferlo-set-save-interactive' (alias `bufferlo-set-save'): Save a
     bufferlo bookmark set for the specified active bookmarks. Frame
     bookmark names are stored along with their geometry for optional
@@ -326,6 +330,12 @@ Bookmark set commands
   • `bufferlo-set-save-current-interactive' (alias
     `bufferlo-set-save-curr'): Update the content of all active
     constituent bookmarks in selected bookmark sets.
+
+  • `bufferlo-set-add-interactive' (alias `bufferlo-set-add'): Add an
+    active bookmark to an active bookmark set.
+
+  • `bufferlo-set-remove-interactive' (alias `bufferlo-set-remove'):
+    Remove an active bookmark from an active bookmark set.
 
   • `bufferlo-set-load-interactive' (alias `bufferlo-set-load'): Prompt
     to load bufferlo set bookmarks. This will restore each set's
@@ -558,6 +568,25 @@ Bookmark duplicates
   └────
 
 
+Changing bookmark types
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  You can save an active bookmark of one type, as another type. An
+  active frame bookmark can be saved as a tab or set bookmark under the
+  same name as the active one. Similarly, a tab can be saved as a frame
+  or a set, and a set can be saved as a tab or a frame.
+
+  Bufferlo will warn you if you are about to overwrite a bookmark of a
+  different type with the same name. If you choose to proceed, the
+  active open bookmark will be cleared in your session.
+
+  If you save an active tab or frame bookmark as a set, existing set
+  bookmarks are scanned to see if they contain the tab or frame
+  bookmark, and bufferlo will warn you if one does. Note: When you load
+  an existing sets that contain stale references to bookmarks now saved
+  as a set, bufferlo skip those entries.
+
+
 Save current, other, or all frame bookmarks
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
@@ -602,6 +631,17 @@ Frame bookmark options
   └────
   Note: 'raise is considered to act as 'clear by bookmark set loading.
 
+  ┌────
+  │ ;; store frame names in their bookmarks, and restore them when loading
+  │ (setq bufferlo-bookmark-frame-persist-frame-name t) ; default nil
+  └────
+  ┌────
+  │ ;; control the restoration of tab groups
+  │ (setq bufferlo-bookmark-restore-tab-groups nil) ; do not restore tab groups, the default
+  │ (setq bufferlo-bookmark-restore-tab-groups t) ; restore tab groups
+  │ (setq bufferlo-bookmark-restore-tab-groups 'frames) ; restore tab groups only for frame bookmarks
+  └────
+
 
 Tab bookmark options
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
@@ -644,6 +684,16 @@ Tab bookmark options
   │ (setq bufferlo-bookmark-tab-failed-buffer-policy 'placeholder-orig) ; placeholder buffer with original buffer name
   │ (setq bufferlo-bookmark-tab-failed-buffer-policy "*scratch*") ; default to a specific buffer
   │ (setq bufferlo-bookmark-tab-failed-buffer-policy #'my/failed-bookmark-handler) ; function to call that returns a buffer
+  └────
+  ┌────
+  │ ;; restore the tab's explicit name (if set)
+  │ (setq bufferlo-bookmark-tab-restore-explicit-name t) ; default
+  └────
+  ┌────
+  │ ;; control the restoration of tab groups
+  │ (setq bufferlo-bookmark-restore-tab-groups nil) ; do not restore tab groups, the default
+  │ (setq bufferlo-bookmark-restore-tab-groups t) ; restore tab groups
+  │ (setq bufferlo-bookmark-restore-tab-groups 'tabs) ; restore tab groups only for tab bookmarks
   └────
 
 
@@ -961,9 +1011,18 @@ Package integration
 Consult
 ───────
 
-  You can integrate bufferlo with `consult-buffer'.
+  You can integrate bufferlo with `consult-buffer' in two ways.
 
-  This is an example configuration:
+  The first can display both local and non-local bufferlo buffers in the
+  `consult' buffer list.
+
+  The second `consult' integration is simpler to configure, but a little
+  more cumbersome when you want to select non-local buffers.
+
+  Don't configure both methods, pick one or the other to avoid consult
+  narrowing keys interfering with one another.
+
+  This is an example of the first configuration method:
   ┌────
   │ (defvar my:bufferlo-consult--source-local-buffer
   │   (list :name "Bufferlo Local Buffers"
@@ -1044,6 +1103,19 @@ Consult
   (`consult--source-hidden-buffer'). If you still need the hidden buffer
   list, you can make a new source for it, for example, with period as
   the narrowing key (`:narrow ?.').
+
+  This is the second, simpler `consult' integration method using its
+  native buffer filter. This shows local bufferlo buffers as the default
+  `consult' buffer list. To view non-local buffers, "narrow" the list
+  using key sequence "< O" (where "<" is the default consult narrowing
+  character) and the `consult' buffer list switches to to non-local
+  buffers. To return to the local buffer list, enter the key sequence "<
+  <" to undo list narrowing.
+
+  ┌────
+  │ ;; This defaults to #'buffer-list which shows all buffers.
+  │ (setq consult-buffer-list-function #'bufferlo-local-buffers)
+  └────
 
 
 Ivy
@@ -1132,6 +1204,9 @@ Complete configuration sample
   │    ;; sets
   │    ("C-z s s" . bufferlo-set-save)                  ; save
   │    ("C-z s u" . bufferlo-set-save-curr)             ; update
+  │    ("C-z s +" . bufferlo-set-add)                   ; add bookmark
+  │    ("C-z s =" . bufferlo-set-add)                   ; add bookmark
+  │    ("C-z s -" . bufferlo-set-remove)                ; remove bookmark
   │    ("C-z s l" . bufferlo-set-load)                  ; load
   │    ("C-z s 0" . bufferlo-set-close)                 ; kill
   │    ("C-z s c" . bufferlo-set-clear)                 ; clear
@@ -1187,6 +1262,7 @@ Complete configuration sample
   │   (setq bufferlo-bookmark-frame-load-make-frame 'restore-geometry)
   │   (setq bufferlo-bookmark-frame-load-policy 'prompt)
   │   (setq bufferlo-bookmark-frame-duplicate-policy 'prompt)
+  │   (setq bufferlo-bookmark-frame-persist-frame-name nil)
   │   (setq bufferlo-bookmark-tab-replace-policy 'new)
   │   (setq bufferlo-bookmark-tab-duplicate-policy 'prompt)
   │   (setq bufferlo-bookmark-tab-in-bookmarked-frame-policy 'prompt)
@@ -1288,7 +1364,8 @@ CRM prompt enhancement
   specify more than one input selection; e.g., when opening multiple
   bookmarks at once using `bufferlo-bookmarks-load-interactive'. Emacs
   31 will be getting a proper CRM prompt that displays the CRM separator
-  character as a reminder hint. Note: The default separator is a comma.
+  character as a reminder hint. Note: The default separator key is a
+  comma.
 
   Per [vertico#completing-read-multiple] from the author of the Emacs
   CRM patch, we recommend adding the following snippet to your Emacs

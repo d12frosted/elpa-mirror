@@ -3,16 +3,17 @@ Fetcher: github
 Source:  https://github.com/emacs-circe/circe
 
 Updating /mnt/store/melpa/working/circe/
-Checking out a0aada8cbb381228c80d98b81ebdec30012c512e
+Checking out b8e75a0b52b3157fc57224e9342e33c53f1f63e7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/circe/
-  to /tmp/circe6vppSu/circe-20250713.1752
+  to /tmp/circe4wyh0Y/circe-20250916.146
     circe-chanop.el -> circe-chanop.el
     circe-color-nicks.el -> circe-color-nicks.el
     circe-compat.el -> circe-compat.el
     circe-display-images.el -> circe-display-images.el
     circe-lagmon.el -> circe-lagmon.el
     circe-new-day-notifier.el -> circe-new-day-notifier.el
+    circe-pingmon.el -> circe-pingmon.el
     circe.el -> circe.el
     irc.el -> irc.el
     lcs.el -> lcs.el
@@ -26,29 +27,30 @@ Copying files (->) and directories (=>)
     make-tls-process.el -> make-tls-process.el
     shorten.el -> shorten.el
     tracking.el -> tracking.el
-Created circe-20250713.1752.tar containing:
-  circe-20250713.1752/
-  circe-20250713.1752/circe-chanop.el
-  circe-20250713.1752/circe-color-nicks.el
-  circe-20250713.1752/circe-compat.el
-  circe-20250713.1752/circe-display-images.el
-  circe-20250713.1752/circe-lagmon.el
-  circe-20250713.1752/circe-new-day-notifier.el
-  circe-20250713.1752/circe-pkg.el
-  circe-20250713.1752/circe.el
-  circe-20250713.1752/irc.el
-  circe-20250713.1752/lcs.el
-  circe-20250713.1752/lui-autopaste.el
-  circe-20250713.1752/lui-format.el
-  circe-20250713.1752/lui-irc-colors.el
-  circe-20250713.1752/lui-logging.el
-  circe-20250713.1752/lui-track-bar.el
-  circe-20250713.1752/lui-track.el
-  circe-20250713.1752/lui.el
-  circe-20250713.1752/make-tls-process.el
-  circe-20250713.1752/shorten.el
-  circe-20250713.1752/tracking.el
+Created circe-20250916.146.tar containing:
+  circe-20250916.146/
+  circe-20250916.146/circe-chanop.el
+  circe-20250916.146/circe-color-nicks.el
+  circe-20250916.146/circe-compat.el
+  circe-20250916.146/circe-display-images.el
+  circe-20250916.146/circe-lagmon.el
+  circe-20250916.146/circe-new-day-notifier.el
+  circe-20250916.146/circe-pingmon.el
+  circe-20250916.146/circe-pkg.el
+  circe-20250916.146/circe.el
+  circe-20250916.146/irc.el
+  circe-20250916.146/lcs.el
+  circe-20250916.146/lui-autopaste.el
+  circe-20250916.146/lui-format.el
+  circe-20250916.146/lui-irc-colors.el
+  circe-20250916.146/lui-logging.el
+  circe-20250916.146/lui-track-bar.el
+  circe-20250916.146/lui-track.el
+  circe-20250916.146/lui.el
+  circe-20250916.146/make-tls-process.el
+  circe-20250916.146/shorten.el
+  circe-20250916.146/tracking.el
  ✓ Success:
-  2025-07-20T06:55:41+0000  circe-20250713.1752.entry
-  2025-07-20T06:55:40+0000  circe-20250713.1752.tar
-Built circe in 3.588s, finished at 2025-07-20T06:55:41+0000
+  2025-09-16T10:27:15+0000  circe-20250916.146.entry
+  2025-09-16T10:27:15+0000  circe-20250916.146.tar
+Built circe in 3.699s, finished at 2025-09-16T10:27:16+0000

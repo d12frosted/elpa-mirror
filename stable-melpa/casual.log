@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/kickingvegas/casual
 
 Updating /mnt/store/melpa/working/casual/
-Checking out a587b65b5e04003410610c1d264cf5f7d6bdf32a
+Checking out 5e004a06eef3b66865b785bca51512cdb89ff6a9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/casual/
-  to /tmp/casualmGgadu/casual-20250709.1922
+  to /tmp/casualtoF3kc/casual-20250817.2347
   ! lisp/casual-agenda-settings.el -> casual-agenda-settings.el
   ! lisp/casual-agenda-utils.el -> casual-agenda-utils.el
   ! lisp/casual-agenda.el -> casual-agenda.el
@@ -43,6 +43,9 @@ Copying files (->) and directories (=>)
   ! lisp/casual-calendar-settings.el -> casual-calendar-settings.el
   ! lisp/casual-calendar-utils.el -> casual-calendar-utils.el
   ! lisp/casual-calendar.el -> casual-calendar.el
+  ! lisp/casual-compile-settings.el -> casual-compile-settings.el
+  ! lisp/casual-compile-utils.el -> casual-compile-utils.el
+  ! lisp/casual-compile.el -> casual-compile.el
   ! lisp/casual-dired-settings.el -> casual-dired-settings.el
   ! lisp/casual-dired-sort-by.el -> casual-dired-sort-by.el
   ! lisp/casual-dired-utils.el -> casual-dired-utils.el
@@ -52,6 +55,9 @@ Copying files (->) and directories (=>)
   ! lisp/casual-editkit-settings.el -> casual-editkit-settings.el
   ! lisp/casual-editkit-utils.el -> casual-editkit-utils.el
   ! lisp/casual-editkit.el -> casual-editkit.el
+  ! lisp/casual-elisp-settings.el -> casual-elisp-settings.el
+  ! lisp/casual-elisp-utils.el -> casual-elisp-utils.el
+  ! lisp/casual-elisp.el -> casual-elisp.el
   ! lisp/casual-eshell-settings.el -> casual-eshell-settings.el
   ! lisp/casual-eshell-utils.el -> casual-eshell-utils.el
   ! lisp/casual-eshell.el -> casual-eshell.el
@@ -87,91 +93,172 @@ Copying files (->) and directories (=>)
   ! lisp/casual-timezone.el -> casual-timezone.el
   ! lisp/casual.el -> casual.el
   ! docs/casual.info -> casual.info
-Created casual-20250709.1922.tar containing:
-  casual-20250709.1922/
-  casual-20250709.1922/casual-agenda-settings.el
-  casual-20250709.1922/casual-agenda-utils.el
-  casual-20250709.1922/casual-agenda.el
-  casual-20250709.1922/casual-bookmarks-settings.el
-  casual-20250709.1922/casual-bookmarks-utils.el
-  casual-20250709.1922/casual-bookmarks.el
-  casual-20250709.1922/casual-calc--calc.el
-  casual-20250709.1922/casual-calc-algebra.el
-  casual-20250709.1922/casual-calc-angle-measure.el
-  casual-20250709.1922/casual-calc-binary.el
-  casual-20250709.1922/casual-calc-complex.el
-  casual-20250709.1922/casual-calc-conversion.el
-  casual-20250709.1922/casual-calc-fileio.el
-  casual-20250709.1922/casual-calc-financial.el
-  casual-20250709.1922/casual-calc-graphics.el
-  casual-20250709.1922/casual-calc-labels.el
-  casual-20250709.1922/casual-calc-logarithmic.el
-  casual-20250709.1922/casual-calc-predicates.el
-  casual-20250709.1922/casual-calc-radix.el
-  casual-20250709.1922/casual-calc-random.el
-  casual-20250709.1922/casual-calc-rounding.el
-  casual-20250709.1922/casual-calc-settings.el
-  casual-20250709.1922/casual-calc-stack.el
-  casual-20250709.1922/casual-calc-symbolic.el
-  casual-20250709.1922/casual-calc-time.el
-  casual-20250709.1922/casual-calc-trail.el
-  casual-20250709.1922/casual-calc-trigonometric.el
-  casual-20250709.1922/casual-calc-units.el
-  casual-20250709.1922/casual-calc-utils.el
-  casual-20250709.1922/casual-calc-variables.el
-  casual-20250709.1922/casual-calc-vector.el
-  casual-20250709.1922/casual-calc.el
-  casual-20250709.1922/casual-calendar-constants.el
-  casual-20250709.1922/casual-calendar-settings.el
-  casual-20250709.1922/casual-calendar-utils.el
-  casual-20250709.1922/casual-calendar.el
-  casual-20250709.1922/casual-dired-settings.el
-  casual-20250709.1922/casual-dired-sort-by.el
-  casual-20250709.1922/casual-dired-utils.el
-  casual-20250709.1922/casual-dired-variables.el
-  casual-20250709.1922/casual-dired.el
-  casual-20250709.1922/casual-editkit-constants.el
-  casual-20250709.1922/casual-editkit-settings.el
-  casual-20250709.1922/casual-editkit-utils.el
-  casual-20250709.1922/casual-editkit.el
-  casual-20250709.1922/casual-eshell-settings.el
-  casual-20250709.1922/casual-eshell-utils.el
-  casual-20250709.1922/casual-eshell.el
-  casual-20250709.1922/casual-help-settings.el
-  casual-20250709.1922/casual-help-utils.el
-  casual-20250709.1922/casual-help.el
-  casual-20250709.1922/casual-ibuffer-filter.el
-  casual-20250709.1922/casual-ibuffer-settings.el
-  casual-20250709.1922/casual-ibuffer-utils.el
-  casual-20250709.1922/casual-ibuffer.el
-  casual-20250709.1922/casual-image-settings.el
-  casual-20250709.1922/casual-image-utils.el
-  casual-20250709.1922/casual-image.el
-  casual-20250709.1922/casual-info-settings.el
-  casual-20250709.1922/casual-info-utils.el
-  casual-20250709.1922/casual-info-variables.el
-  casual-20250709.1922/casual-info.el
-  casual-20250709.1922/casual-isearch-settings.el
-  casual-20250709.1922/casual-isearch-utils.el
-  casual-20250709.1922/casual-isearch.el
-  casual-20250709.1922/casual-lib.el
-  casual-20250709.1922/casual-make-settings.el
-  casual-20250709.1922/casual-make-utils.el
-  casual-20250709.1922/casual-make.el
-  casual-20250709.1922/casual-man-settings.el
-  casual-20250709.1922/casual-man-utils.el
-  casual-20250709.1922/casual-man.el
-  casual-20250709.1922/casual-pkg.el
-  casual-20250709.1922/casual-re-builder-settings.el
-  casual-20250709.1922/casual-re-builder-utils.el
-  casual-20250709.1922/casual-re-builder.el
-  casual-20250709.1922/casual-timezone-settings.el
-  casual-20250709.1922/casual-timezone-utils.el
-  casual-20250709.1922/casual-timezone.el
-  casual-20250709.1922/casual.el
-  casual-20250709.1922/casual.info
-  casual-20250709.1922/dir
+  ! docs/casual.texi -> casual.texi
+  ! docs/images => images
+Generating casual.info
+Created casual-20250817.2347.tar containing:
+  casual-20250817.2347/
+  casual-20250817.2347/casual-agenda-settings.el
+  casual-20250817.2347/casual-agenda-utils.el
+  casual-20250817.2347/casual-agenda.el
+  casual-20250817.2347/casual-bookmarks-settings.el
+  casual-20250817.2347/casual-bookmarks-utils.el
+  casual-20250817.2347/casual-bookmarks.el
+  casual-20250817.2347/casual-calc--calc.el
+  casual-20250817.2347/casual-calc-algebra.el
+  casual-20250817.2347/casual-calc-angle-measure.el
+  casual-20250817.2347/casual-calc-binary.el
+  casual-20250817.2347/casual-calc-complex.el
+  casual-20250817.2347/casual-calc-conversion.el
+  casual-20250817.2347/casual-calc-fileio.el
+  casual-20250817.2347/casual-calc-financial.el
+  casual-20250817.2347/casual-calc-graphics.el
+  casual-20250817.2347/casual-calc-labels.el
+  casual-20250817.2347/casual-calc-logarithmic.el
+  casual-20250817.2347/casual-calc-predicates.el
+  casual-20250817.2347/casual-calc-radix.el
+  casual-20250817.2347/casual-calc-random.el
+  casual-20250817.2347/casual-calc-rounding.el
+  casual-20250817.2347/casual-calc-settings.el
+  casual-20250817.2347/casual-calc-stack.el
+  casual-20250817.2347/casual-calc-symbolic.el
+  casual-20250817.2347/casual-calc-time.el
+  casual-20250817.2347/casual-calc-trail.el
+  casual-20250817.2347/casual-calc-trigonometric.el
+  casual-20250817.2347/casual-calc-units.el
+  casual-20250817.2347/casual-calc-utils.el
+  casual-20250817.2347/casual-calc-variables.el
+  casual-20250817.2347/casual-calc-vector.el
+  casual-20250817.2347/casual-calc.el
+  casual-20250817.2347/casual-calendar-constants.el
+  casual-20250817.2347/casual-calendar-settings.el
+  casual-20250817.2347/casual-calendar-utils.el
+  casual-20250817.2347/casual-calendar.el
+  casual-20250817.2347/casual-compile-settings.el
+  casual-20250817.2347/casual-compile-utils.el
+  casual-20250817.2347/casual-compile.el
+  casual-20250817.2347/casual-dired-settings.el
+  casual-20250817.2347/casual-dired-sort-by.el
+  casual-20250817.2347/casual-dired-utils.el
+  casual-20250817.2347/casual-dired-variables.el
+  casual-20250817.2347/casual-dired.el
+  casual-20250817.2347/casual-editkit-constants.el
+  casual-20250817.2347/casual-editkit-settings.el
+  casual-20250817.2347/casual-editkit-utils.el
+  casual-20250817.2347/casual-editkit.el
+  casual-20250817.2347/casual-elisp-settings.el
+  casual-20250817.2347/casual-elisp-utils.el
+  casual-20250817.2347/casual-elisp.el
+  casual-20250817.2347/casual-eshell-settings.el
+  casual-20250817.2347/casual-eshell-utils.el
+  casual-20250817.2347/casual-eshell.el
+  casual-20250817.2347/casual-help-settings.el
+  casual-20250817.2347/casual-help-utils.el
+  casual-20250817.2347/casual-help.el
+  casual-20250817.2347/casual-ibuffer-filter.el
+  casual-20250817.2347/casual-ibuffer-settings.el
+  casual-20250817.2347/casual-ibuffer-utils.el
+  casual-20250817.2347/casual-ibuffer.el
+  casual-20250817.2347/casual-image-settings.el
+  casual-20250817.2347/casual-image-utils.el
+  casual-20250817.2347/casual-image.el
+  casual-20250817.2347/casual-info-settings.el
+  casual-20250817.2347/casual-info-utils.el
+  casual-20250817.2347/casual-info-variables.el
+  casual-20250817.2347/casual-info.el
+  casual-20250817.2347/casual-isearch-settings.el
+  casual-20250817.2347/casual-isearch-utils.el
+  casual-20250817.2347/casual-isearch.el
+  casual-20250817.2347/casual-lib.el
+  casual-20250817.2347/casual-make-settings.el
+  casual-20250817.2347/casual-make-utils.el
+  casual-20250817.2347/casual-make.el
+  casual-20250817.2347/casual-man-settings.el
+  casual-20250817.2347/casual-man-utils.el
+  casual-20250817.2347/casual-man.el
+  casual-20250817.2347/casual-pkg.el
+  casual-20250817.2347/casual-re-builder-settings.el
+  casual-20250817.2347/casual-re-builder-utils.el
+  casual-20250817.2347/casual-re-builder.el
+  casual-20250817.2347/casual-timezone-settings.el
+  casual-20250817.2347/casual-timezone-utils.el
+  casual-20250817.2347/casual-timezone.el
+  casual-20250817.2347/casual.el
+  casual-20250817.2347/casual.info
+  casual-20250817.2347/dir
+  casual-20250817.2347/images/
+  casual-20250817.2347/images/bookmarks-main-menu.png
+  casual-20250817.2347/images/casual-agenda-almanac-screenshot.png
+  casual-20250817.2347/images/casual-agenda-mark-screenshot.png
+  casual-20250817.2347/images/casual-agenda-operations-screenshot.png
+  casual-20250817.2347/images/casual-agenda-screenshot.png
+  casual-20250817.2347/images/casual-agenda-settings-screenshot.png
+  casual-20250817.2347/images/casual-agenda-unicode-screenshot.png
+  casual-20250817.2347/images/casual-bookmarks-screenshot.png
+  casual-20250817.2347/images/casual-bookmarks-unicode-screenshot.png
+  casual-20250817.2347/images/casual-calc-tmenu.png
+  casual-20250817.2347/images/casual-calendar-calendars-menu.png
+  casual-20250817.2347/images/casual-calendar-diary-menu.png
+  casual-20250817.2347/images/casual-calendar-lunar-menu.png
+  casual-20250817.2347/images/casual-calendar-screenshot.png
+  casual-20250817.2347/images/casual-calendar-settings-menu.png
+  casual-20250817.2347/images/casual-compile-grep-screenshot.png
+  casual-20250817.2347/images/casual-compile-screenshot.png
+  casual-20250817.2347/images/casual-dired-link.png
+  casual-20250817.2347/images/casual-dired-screenshot-unicode.png
+  casual-20250817.2347/images/casual-dired-screenshot.png
+  casual-20250817.2347/images/casual-dired-search-replace.png
+  casual-20250817.2347/images/casual-dired-settings-screenshot.png
+  casual-20250817.2347/images/casual-dired-sort-by-screenshot.png
+  casual-20250817.2347/images/casual-dired-utils-screenshot.png
+  casual-20250817.2347/images/casual-editkit-bookmarks-screenshot.png
+  casual-20250817.2347/images/casual-editkit-copy-screenshot.png
+  casual-20250817.2347/images/casual-editkit-delete-screenshot.png
+  casual-20250817.2347/images/casual-editkit-edit-screenshot.png
+  casual-20250817.2347/images/casual-editkit-emoji-symbols-screenshot.png
+  casual-20250817.2347/images/casual-editkit-kill-screenshot.png
+  casual-20250817.2347/images/casual-editkit-macro-screenshot.png
+  casual-20250817.2347/images/casual-editkit-main-screenshot.png
+  casual-20250817.2347/images/casual-editkit-mark-screenshot.png
+  casual-20250817.2347/images/casual-editkit-move-screenshot.png
+  casual-20250817.2347/images/casual-editkit-narrow-screenshot.png
+  casual-20250817.2347/images/casual-editkit-open-screenshot.png
+  casual-20250817.2347/images/casual-editkit-project-screenshot.png
+  casual-20250817.2347/images/casual-editkit-rectangle-screenshot.png
+  casual-20250817.2347/images/casual-editkit-reformat-screenshot.png
+  casual-20250817.2347/images/casual-editkit-registers-screenshot.png
+  casual-20250817.2347/images/casual-editkit-search-screenshot.png
+  casual-20250817.2347/images/casual-editkit-settings-screenshot.png
+  casual-20250817.2347/images/casual-editkit-sort-screenshot.png
+  casual-20250817.2347/images/casual-editkit-tools-screenshot.png
+  casual-20250817.2347/images/casual-editkit-transform-screenshot.png
+  casual-20250817.2347/images/casual-editkit-transpose-screenshot.png
+  casual-20250817.2347/images/casual-editkit-window-delete-screenshot.png
+  casual-20250817.2347/images/casual-editkit-window-screenshot.png
+  casual-20250817.2347/images/casual-editkit-window-unicode-screenshot.png
+  casual-20250817.2347/images/casual-elisp-edebug-screenshot.png
+  casual-20250817.2347/images/casual-elisp-screenshot.png
+  casual-20250817.2347/images/casual-eshell-process-screenshot.png
+  casual-20250817.2347/images/casual-eshell-screenshot.png
+  casual-20250817.2347/images/casual-help-screenshot.png
+  casual-20250817.2347/images/casual-ibuffer-filter-screenshot.png
+  casual-20250817.2347/images/casual-ibuffer-main-screenshot.png
+  casual-20250817.2347/images/casual-ibuffer-screenshot.png
+  casual-20250817.2347/images/casual-ibuffer-sortby-screenshot.png
+  casual-20250817.2347/images/casual-image-main-screenshot.png
+  casual-20250817.2347/images/casual-image-resize-screenshot.png
+  casual-20250817.2347/images/casual-info-screenshot.png
+  casual-20250817.2347/images/casual-isearch-tmenu.png
+  casual-20250817.2347/images/casual-make-automatic-variables-screenshot.png
+  casual-20250817.2347/images/casual-make-mode-select-screenshot.png
+  casual-20250817.2347/images/casual-make-screenshot.png
+  casual-20250817.2347/images/casual-man-screenshot.png
+  casual-20250817.2347/images/casual-man-settings.png
+  casual-20250817.2347/images/casual-re-builder-screenshot.png
+  casual-20250817.2347/images/casual-timezone-planner-screenshot.png
+  casual-20250817.2347/images/casual-timezone-tmenu-screenshot.png
+  casual-20250817.2347/images/default-yellow.png
  ✓ Success:
-  2025-07-20T06:54:40+0000  casual-20250709.1922.entry
-  2025-07-20T06:54:39+0000  casual-20250709.1922.tar
-Built casual in 5.126s, finished at 2025-07-20T06:54:40+0000
+  2025-09-16T10:26:16+0000  casual-20250817.2347.entry
+  2025-09-16T10:26:16+0000  casual-20250817.2347.tar
+Built casual in 9.148s, finished at 2025-09-16T10:26:17+0000

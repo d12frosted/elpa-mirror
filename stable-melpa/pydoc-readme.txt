@@ -4,11 +4,12 @@ linked to open the source code, or to run pydoc on them. Some things are
 colorized for readability, e.g. environment variables and strings, function
 names and arguments.
 
-https://github.com/statmobile/pydoc
+The pydoc.el module provides the following functions:
 
-pydoc.el provides the following functions.
 `pydoc' Run this anywhere, and enter the module/class/function you want documentation for
-`pydoc-at-point' Run this in a Python script to see what doc jedi can find for the point
+`pydoc-at-point' Run this in a Python buffer to look up the object at point
+`pydoc-at-point-jedi' Perform at-point object lookup using Jedi
+`pydoc-at-point-no-jedi' Perform at-point object lookup without Jedi
 `pydoc-browse' Launches a web browser with documentation.
 `pydoc-browse-kill' kills the pydoc web server.
 

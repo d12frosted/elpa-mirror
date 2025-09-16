@@ -24,6 +24,9 @@
   ~org-beautify-theme-use-box-hack~ variable and set it to nil (false).
 
 * Changelog
+   - v0.5 :: [2025-07-30]
+     - ACTUALLY fix checkboxes
+     - Fix lint errors
    - v0.4 :: [2017-09-08]
      - Add org-beautify-theme-use-box-hack to allow the user to
        fix ugly boxes.

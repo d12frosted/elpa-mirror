@@ -107,7 +107,7 @@
   ┌────
   │ (use-package preview-auto
   │   :hook
-  │   (LaTeX-mode . czm-preview-mode-conditionally-enable))
+  │   (LaTeX-mode . preview-auto-conditionally-enable))
   └────
 
 
@@ -134,12 +134,10 @@
   │   )
   └────
 
-  My precise current setup may be found in [the LaTeX part of my config]
-  (`elpaca' branch).
+  My precise current setup may be found in [my config].
 
 
-[the LaTeX part of my config]
-<https://github.com/ultronozm/emacsd/blob/main/init-latex.el>
+[my config] <https://github.com/ultronozm/emacsd/blob/main/init.el>
 
 
 2.5 Non-file buffers and other modes
@@ -188,9 +186,9 @@
   If you want `preview-auto-mode' to preview such environments
   automatically (including when they are not wrapped in some math
   environment), then you should add "tikzpicture" to the customizable
-  list variable `preview-auto--extra-environments', e.g., by putting
+  list variable `preview-auto-extra-environments', e.g., by putting
   ┌────
-  │ (add-to-list 'preview-auto--extra-environments "tikzpicture")
+  │ (add-to-list 'preview-auto-extra-environments "tikzpicture")
   └────
   in your config.  I keep this disabled by default because of the extra
   setup required in the document preamble, without which `preview-latex'

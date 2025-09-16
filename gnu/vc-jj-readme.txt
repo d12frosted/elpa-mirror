@@ -1,3 +1,6 @@
+
+
+
 1 jj (Jujutsu) integration with Emacs vc.el and project.el
 ══════════════════════════════════════════════════════════
 
@@ -44,3 +47,27 @@
   the standard FSF copyright assignment in place; feel free to contact
   us for details.  Note that "trivial" (below 15 lines or obvious) code
   suggestions in bug reports are fine.
+
+
+2 Other Emacs packages for Jujutsu
+══════════════════════════════════
+
+  The scope of the `vc-jj.el' project is to add jj support to the Emacs
+  built-in `vc' and `project' libraries.  In case you look for a package
+  with more specialized jujutsu support, here are some that might fit
+  the bill:
+
+  [bolivier/jj-mode.el]
+        “Jujutsu version control mode for Emacs inspired by Magit”
+  [bennyandresen/jujutsu.el]
+        “An Emacs interface for jujutsu, inspired by magit and humbly
+        not attempting to match it in scope.”
+  [~puercopop/jujutsushi]
+        “A emacs interface to jujutsu”
+
+
+[bolivier/jj-mode.el] <https://github.com/bolivier/jj-mode.el>
+
+[bennyandresen/jujutsu.el] <https://github.com/bennyandresen/jujutsu.el>
+
+[~puercopop/jujutsushi] <https://git.sr.ht/~puercopop/jujutsushi>

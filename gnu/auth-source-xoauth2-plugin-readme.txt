@@ -31,7 +31,7 @@
 
   `auth-source-xoauth2-plugin' is on [GNU ELPA], and you can install it
   with `package-install' (see also [the Emacs document on how to use
-  package-install]).  Or you can clone the repository from [GitLab] or
+  package-install]).  Or you can clone the repository from [GitLab], or
   simply download the `auth-source-xoauth2-plugin.el' file and put it
   anywhere in your Emacs' `load-path'.
 
@@ -66,13 +66,78 @@
   To disable, just toggle the minor mode off by calling `M-x
   auth-source-xoauth2-plugin-mode' again.
 
+
+[GNU ELPA]
+<https://elpa.gnu.org/packages/auth-source-xoauth2-plugin.html>
+
+[the Emacs document on how to use package-install]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/Package-Installation.html>
+
+[GitLab] <https://gitlab.com/manphiz/auth-source-xoauth2-plugin/>
+
+
+3 auth-source settings
+══════════════════════
+
   When xoauth2 authentication is enabled, it will try to get the
   following data from the auth-source entry: `auth-url', `token-url',
   `scope', `client-id', `client-secret', `redirect-uri', and optionally
-  `state'.  An example Authinfo entry (in JSON format as
-  `~/.authinfo.json.gpg') for an Gmail account may look like below (you
-  need to fill in the data between `<' and `>' based on your account
-  settings):
+  `state'.
+
+  There are two ways to set those info:
+  1. Use a predefined source which has already registered their app to
+     the service (e.g. thunderbird) and you can just use their public
+     authentication info, such as `client_id', `client_secret', etc.
+  2. Register your own app for oauth2 authentication and set those info
+     yourself.
+
+
+3.1 Use predefined services
+───────────────────────────
+
+  Using a predefined service is very easy.  An example `authinfo' entry
+  (in JSON format as `~/.authinfo.json.gpg') for Gmail will look like
+  below (you need to fill in the info of your account between "<" and
+  ">"):
+
+  ┌────
+  │ [
+  │   ...
+  │   {
+  │     "machine": "<your_imap_address_or_email>",
+  │     "login": "<your_email>",
+  │     "port": "imaps",
+  │     "auth": "xoauth2",
+  │     "auth-source-xoauth2-predefined-service": "google"
+  │   },
+  │   ...
+  │ ]
+  └────
+
+  This will then use the OAuth2 credentials from Thunderbird for
+  authentication.  Currently `google' and `microsoft' are supported from
+  Thunderbird for use with Gmail and Outlook which the author has
+  tested.  It is possible to add support for more services (e.g. yahoo)
+  and other sources (e.g. Evolution).  Suggestions and patches are
+  welcome.
+
+  Once correctly set up, the plugin will then use `oauth2.el' to
+  retrieve the access-token with those information, use it to construct
+  the oauth2 authentication string, and let `auth-source' do the rest.
+
+
+3.2 Use your own registered app
+───────────────────────────────
+
+  If you would like more control over your authentication credentials,
+  you can register your own app on your email service provider for
+  OAuth2 authentication.  The registration process is outside the scope
+  of this document, but the gist is to make sure that you set the access
+  control of your app (also `scope') to enable using IMAP and SMTP for
+  email.
+
+  Once that's done, you can fill in the credentials from your app to
+  achieve the same.  For an Gmail account it may look like below:
 
   ┌────
   │ [
@@ -93,24 +158,25 @@
   │ ]
   └────
 
-  It will then use `oauth2.el' to retrieve the access-token with those
-  information, use it to construct the oauth2 authentication string, and
-  let `auth-source' do the rest.
+  The rest will work in the same way.
 
 
-[GNU ELPA]
-<https://elpa.gnu.org/packages/auth-source-xoauth2-plugin.html>
+3.2.1 Initial set up
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-[the Emacs document on how to use package-install]
-<https://www.gnu.org/software/emacs/manual/html_node/emacs/Package-Installation.html>
+  Once auth-source is configured correctly, you can proceed to initiate
+  the connections.  Please check out [the steps for initial set up].
+  Once everything goes through the plugin will handle the future
+  authentication automatically.
 
-[GitLab] <https://gitlab.com/manphiz/auth-source-xoauth2-plugin/>
+
+[the steps for initial set up] <file:docs/oauth2-initial-set-up.org>
 
 
-3 Comparison with other xoauth2 implementations
+4 Comparison with other xoauth2 implementations
 ═══════════════════════════════════════════════
 
-3.1 auth-source-xoauth2
+4.1 auth-source-xoauth2
 ───────────────────────
 
   This plugin takes inspirations from [auth-source-xoauth2] to advice
@@ -127,7 +193,7 @@
 [auth-source-xoauth2] <https://github.com/ccrusius/auth-source-xoauth2>
 
 
-4 Debugging
+5 Debugging
 ═══════════
 
   In case you encounter any issues, you may consider enabling verbose
@@ -151,7 +217,7 @@
   entities.
 
 
-5 Bug reporting
+6 Bug reporting
 ═══════════════
 
   Please use `M-x report-emacs-bug' or open an issue on [GitLab] and
@@ -164,7 +230,7 @@
 [Debugging] <file:README.org::*Debugging>
 
 
-6 Notes on Implementation
+7 Notes on Implementation
 ═════════════════════════
 
   `auth-source' uses the `secret' field in auth-source file as password

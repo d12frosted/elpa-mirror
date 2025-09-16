@@ -10,11 +10,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `show-font' (or `show-font.el'),
 and provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.3.0,
-released on 2025-04-26.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.0.0,
+released on 2025-09-07.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.4.0-dev.
+Current development target is 1.1.0-dev.
 
 ⁃ Package name (GNU ELPA): `show-font'
 ⁃ Official manual: <https://protesilaos.com/emacs/show-font>
@@ -134,10 +134,16 @@ Table of Contents
   • The command `show-font-tabulated' (alias `show-font-list') produces
     a list with all the fonts available on the system. Each font on
     display is styled with its given character set. With an optional
-    prefix argument (`C-u' by default), it prompt for a string or
+    prefix argument (`C-u' by default), it prompts for a string or
     regular expression to limit the list of fonts to only the matching
     ones. In this tabulated interface, users can sort by column and may
-    prefer the slightly more compact listing.
+    prefer the slightly more compact listing. In this tabulated view,
+    the `RET' key calls the command
+    `show-font-tabulated-select-preview', which is the same as running
+    the aforementioned `show-font-select-preview' with the font family
+    referenced on the current line. In this same view, the `w' key calls
+    the command `show-font-tabulated-copy-name', which copies into the
+    `kill-ring' the name of the font family on the current line.
 
   • The `show-font-mode' is a major mode that gets activated when the
     user visits a `.ttf' or `.otf' file. It will preview with the font,
@@ -171,6 +177,21 @@ Table of Contents
   words. The default value should cover many such examples. Those are
   displayed in the buffer produced by the command
   `show-font-select-preview'.
+
+  The user options `show-font-emoji-sample' and `show-font-icon-sample'
+  take a string value with characters that can be displayed by an emoji
+  or icon font, respectively. The sample is used in the buffer produced
+  by the commands `show-font-select-preview' and `show-font-tabulated'.
+  A `show-font-mathematics-sample' is also available for font that
+  specialise in mathematics, while `show-font-symbols-sample' is for
+  other symbols and `show-font-music-sample' is for music notation.
+
+  The package also supports Arabic, Chinese, Greek, Japanese, Korean,
+  and Russian (and the plan is to extend it further). Relevant user
+  options for the character sample of the respective languages are:
+  `show-font-arabic-sample', `show-font-chinese-sample',
+  `show-font-greek-sample', `show-font-japanese-sample',
+  `show-font-korean-sample', `show-font-russian-sample'.
 
   Finally, the following faces control the appearance of various
   elements.
