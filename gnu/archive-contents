@@ -510,6 +510,19 @@
 	      ("Florian Rommel" . "mail@florommel.de")
 	      ("Stephane Marks" . "shipmints@gmail.com"))
 	     (:commit . "8fc587ba341b2ec8189b4d948accc90140469147"))])
+ (buframe .
+	  [(0 2)
+	   ((emacs
+	     (27 1))
+	    (timeout
+	     (2 1)))
+	   "Buffer-local frames" tar
+	   ((:url . "https://github.com/haji-ali/buframe")
+	    (:keywords "buffer" "frames" "convenience")
+	    (:maintainer "Al Haji-Ali" . "abdo.haji.ali@gmail.com")
+	    (:authors
+	     ("Al Haji-Ali" . "abdo.haji.ali@gmail.com"))
+	    (:commit . "d2f1fcdb5f320a5ac583e1f4edc22397106e830a"))])
  (bug-hunter .
 	     [(1 3 1)
 	      ((seq
