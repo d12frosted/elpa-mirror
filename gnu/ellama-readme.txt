@@ -396,6 +396,7 @@ Assistant". Previous sentence was written by Ellama itself.
     for reasoning.
   • `ellama-session-line-template': Template for formatting the current
     session line.
+  • `ellama-debug': Enable debug.
 
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
