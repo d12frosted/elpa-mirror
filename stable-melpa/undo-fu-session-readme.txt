@@ -19,4 +19,4 @@ If you prefer to enable this per-mode, you may do so using
 mode hooks instead of calling `undo-fu-session-global-mode'.
 The following example enables this for org-mode:
 
-  (add-hook 'org-mode-hook (lambda () (undo-fu-session-mode))
+  (add-hook 'org-mode-hook (lambda () (undo-fu-session-mode)))
