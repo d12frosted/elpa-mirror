@@ -396,7 +396,11 @@ Assistant". Previous sentence was written by Ellama itself.
     for reasoning.
   • `ellama-session-line-template': Template for formatting the current
     session line.
-  • `ellama-debug': Enable debug.
+  • `ellama-debug': Enable debug. When enabled, generated text is now
+    logged to a `*ellama-debug*' buffer with a separator for easier
+    tracking of debug information. The debug output includes the raw
+    text being processed and is appended to the end of the debug buffer
+    each time.
 
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
