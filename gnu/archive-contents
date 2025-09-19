@@ -4223,16 +4223,16 @@
 	      (:keywords "text" "syntax" "processes" "tools")
 	      (:commit . "456acbde87a9fa9da0ed8b441c3f22c4d5310296"))])
  (site-lisp .
-	    [(0 1 2)
+	    [(0 2 0)
 	     ((emacs
 	       (25 1)))
 	     "Manage site-lisp directories" tar
-	     ((:url . "https://git.sr.ht/~pkal/site-lisp")
+	     ((:url . "https://codeberg.org/pkal/site-lisp.el")
 	      (:keywords "lisp" "local")
-	      (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
+	      (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
 	      (:authors
 	       ("Philip Kaludercic" . "philipk@posteo.net"))
-	      (:commit . "3f7a99472a4940bc63ed032de016e5a40fec0965"))])
+	      (:commit . "3b0c3abab49cf4ab70a43e2c882bb8a2a6db45a1"))])
  (sketch-mode .
 	      [(1 0 4)
 	       nil "Quickly create svg sketches using keyboard and mouse" tar
@@ -4988,14 +4988,18 @@
 	    ("Yuan Fu" . "casouri@gmail.com"))
 	   (:commit . "421c8c0cb4636e5fd87ac1022d6b8268c320f74f"))])
  (vc-backup .
-	    [(1 1 0)
-	     nil "VC backend for versioned backups" tar
-	     ((:url . "https://git.sr.ht/~pkal/vc-backup")
+	    [(1 1 1)
+	     ((emacs
+	       (24 3))
+	      (compat
+	       (28 1 1 0)))
+	     "VC backend for versioned backups" tar
+	     ((:url . "https://codeberg.org/pkal/vc-backup.el")
 	      (:keywords "vc")
 	      (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
 	      (:authors
 	       ("Philip Kaludercic" . "philipk@posteo.net"))
-	      (:commit . "397af1e12b2e73a00370cc3ac054ffe2402b3352"))])
+	      (:commit . "28412c81c3b046616fd8edf82d05bb2d83d0c306"))])
  (vc-got .
 	 [(1 2)
 	  ((emacs
