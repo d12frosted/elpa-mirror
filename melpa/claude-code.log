@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/yuya373/claude-code-emacs
 
 Updating /mnt/store/melpa/working/claude-code/
-Checking out b221b8adfd498a63abbfd5acd90f1115e2c0dd58
+Checking out d89623f81e4fd558bba68081f443e380537e2e5f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/claude-code/
-  to /tmp/claude-code5IeG02/claude-code-20250918.1025
+  to /tmp/claude-codepbLLkn/claude-code-20250919.1755
     claude-code-commands.el -> claude-code-commands.el
     claude-code-core.el -> claude-code-core.el
     claude-code-mcp-connection.el -> claude-code-mcp-connection.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
     claude-code-prompt.el -> claude-code-prompt.el
     claude-code-ui.el -> claude-code-ui.el
     claude-code.el -> claude-code.el
-Created claude-code-20250918.1025.tar containing:
-  claude-code-20250918.1025/
-  claude-code-20250918.1025/claude-code-commands.el
-  claude-code-20250918.1025/claude-code-core.el
-  claude-code-20250918.1025/claude-code-mcp-connection.el
-  claude-code-20250918.1025/claude-code-mcp-events.el
-  claude-code-20250918.1025/claude-code-mcp-protocol.el
-  claude-code-20250918.1025/claude-code-mcp-tools.el
-  claude-code-20250918.1025/claude-code-mcp.el
-  claude-code-20250918.1025/claude-code-pkg.el
-  claude-code-20250918.1025/claude-code-prompt.el
-  claude-code-20250918.1025/claude-code-ui.el
-  claude-code-20250918.1025/claude-code.el
+Created claude-code-20250919.1755.tar containing:
+  claude-code-20250919.1755/
+  claude-code-20250919.1755/claude-code-commands.el
+  claude-code-20250919.1755/claude-code-core.el
+  claude-code-20250919.1755/claude-code-mcp-connection.el
+  claude-code-20250919.1755/claude-code-mcp-events.el
+  claude-code-20250919.1755/claude-code-mcp-protocol.el
+  claude-code-20250919.1755/claude-code-mcp-tools.el
+  claude-code-20250919.1755/claude-code-mcp.el
+  claude-code-20250919.1755/claude-code-pkg.el
+  claude-code-20250919.1755/claude-code-prompt.el
+  claude-code-20250919.1755/claude-code-ui.el
+  claude-code-20250919.1755/claude-code.el
  ✓ Success:
   2025-09-19T15:39:45+0000  claude-code-20250918.1025.entry
   2025-09-19T15:39:44+0000  claude-code-20250918.1025.tar
-Built claude-code in 3.214s, finished at 2025-09-19T15:39:45+0000
+  2025-09-19T18:07:16+0000  claude-code-20250919.1755.entry
+  2025-09-19T18:07:16+0000  claude-code-20250919.1755.tar
+Built claude-code in 3.393s, finished at 2025-09-19T18:07:17+0000
