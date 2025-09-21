@@ -10,6 +10,9 @@ Features (when the mode is enabled):
 - undo: highlight the text restored by undo
 - yank and yank-pop: highlight inserted text
 - kill/delete: show where text used to be (optionally as a point)
+- replacements: highlight results of `query-replace' and `replace-string'
+- transposition commands: highlight swapped text from transpose-* and
+  transpose-regions operations
 - definitions: Emacs 25.1+ uses xref; older Emacs use find-tag
 - occur: Emacs < 28 only (Emacs 28+ has built-in occur highlighting)
 - non-incremental search commands
@@ -58,10 +61,10 @@ Place this file on your `load-path', then enable the mode globally:
 
      Default value is `0.15'.
 
-   - `vhl/animation-iteration-delay'
-     Delay between iterations of the highlight animation in seconds.
+   - `vhl/animation-frame-interval'
+     Delay between animation ticks in seconds.
 
-     Default value is `0.02'.
+     Default value is `0.04'.
 
    - `vhl/highlight-zero-width-ranges'
      If `t', highlight the positions of zero-width ranges.
