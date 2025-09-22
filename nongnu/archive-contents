@@ -1297,7 +1297,7 @@
 		     (:keywords "languages")
 		     (:commit . "59640ceec33cd4df37096289e11ff6f4b876be03"))])
  (haskell-ts-mode .
-		  [(1 3 2)
+		  [(1 3 3)
 		   ((emacs
 		     (29 3)))
 		   "A treesit based major mode for haskell" tar
@@ -1306,7 +1306,7 @@
 		    (:maintainer "Pranshu Sharma" . "pranshu@bauherren.ovh")
 		    (:authors
 		     ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
-		    (:commit . "b47211699944997bfb03fd88b1157dd71727bad7"))])
+		    (:commit . "6b85f668cde0fe6e5018c3b9bca5a84b0f381256"))])
  (helm .
        [(4 0 6)
 	((helm-core
@@ -2115,7 +2115,7 @@
 	       ("Andreas Politz" . "mail@andreas-politz.de"))
 	      (:commit . "a9c9a12c3ecf2005fa641059368ac8284f507620"))])
  (pg .
-     [(0 59)
+     [(0 60)
       ((emacs
 	(28 1))
        (peg
@@ -2126,7 +2126,7 @@
        (:maintainer "Eric Marsden" . "eric.marsden@risk-engineering.org")
        (:authors
 	("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-       (:commit . "b764ead94d2bb8ff030d812df429e86beb3edb4e"))])
+       (:commit . "215cec9499d9069b387a4638a00b16c08d1e0c19"))])
  (php-mode .
 	   [(1 26 1)
 	    ((emacs
