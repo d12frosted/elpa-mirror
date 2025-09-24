@@ -17,7 +17,7 @@ Or with `use-package':
 
 If you prefer to enable this per-mode, you may do so using
 mode hooks instead of calling `hl-prog-extra-global-mode'.
-The following example enables this for org-mode:
+The following example enables this for python-mode:
 
   (add-hook 'python-mode-hook
     (lambda ()
