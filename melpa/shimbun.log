@@ -3,284 +3,36 @@ Fetcher: github
 Source:  https://github.com/emacs-w3m/emacs-w3m
 
 Updating /mnt/store/melpa/working/shimbun/
-Checking out 7945f3bbd52288e671bfb4d0bee30d908ae0289b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/shimbun/
-  to /tmp/shimbunztDYdX/shimbun-20250806.224
-  ! shimbun/mew-shimbun.el -> mew-shimbun.el
-  ! shimbun/nnshimbun.el -> nnshimbun.el
-  ! shimbun/sb-2ch.el -> sb-2ch.el
-  ! shimbun/sb-airs.el -> sb-airs.el
-  ! shimbun/sb-aljazeera.el -> sb-aljazeera.el
-  ! shimbun/sb-arch-bluegate.el -> sb-arch-bluegate.el
-  ! shimbun/sb-asahi-html.el -> sb-asahi-html.el
-  ! shimbun/sb-asahi-mytown.el -> sb-asahi-mytown.el
-  ! shimbun/sb-asahi.el -> sb-asahi.el
-  ! shimbun/sb-atmarkit.el -> sb-atmarkit.el
-  ! shimbun/sb-atom-hash.el -> sb-atom-hash.el
-  ! shimbun/sb-atom.el -> sb-atom.el
-  ! shimbun/sb-bbc.el -> sb-bbc.el
-  ! shimbun/sb-bbdb-ml.el -> sb-bbdb-ml.el
-  ! shimbun/sb-cgi-board.el -> sb-cgi-board.el
-  ! shimbun/sb-chise.el -> sb-chise.el
-  ! shimbun/sb-cnet-jp.el -> sb-cnet-jp.el
-  ! shimbun/sb-cnet.el -> sb-cnet.el
-  ! shimbun/sb-cnn-jp.el -> sb-cnn-jp.el
-  ! shimbun/sb-coldsync.el -> sb-coldsync.el
-  ! shimbun/sb-debian-jp.el -> sb-debian-jp.el
-  ! shimbun/sb-debian.el -> sb-debian.el
-  ! shimbun/sb-debugmagazin-de.el -> sb-debugmagazin-de.el
-  ! shimbun/sb-dennou.el -> sb-dennou.el
-  ! shimbun/sb-digiko.el -> sb-digiko.el
-  ! shimbun/sb-elips.el -> sb-elips.el
-  ! shimbun/sb-emacs-w3m.el -> sb-emacs-w3m.el
-  ! shimbun/sb-emacswiki.el -> sb-emacswiki.el
-  ! shimbun/sb-engadget-ja.el -> sb-engadget-ja.el
-  ! shimbun/sb-excite.el -> sb-excite.el
-  ! shimbun/sb-exconn.el -> sb-exconn.el
-  ! shimbun/sb-f1fan.el -> sb-f1fan.el
-  ! shimbun/sb-fau.el -> sb-fau.el
-  ! shimbun/sb-ffii.el -> sb-ffii.el
-  ! shimbun/sb-fml.el -> sb-fml.el
-  ! shimbun/sb-geocrawler.el -> sb-geocrawler.el
-  ! shimbun/sb-glimpse.el -> sb-glimpse.el
-  ! shimbun/sb-gnome.el -> sb-gnome.el
-  ! shimbun/sb-haiku-os.el -> sb-haiku-os.el
-  ! shimbun/sb-hash.el -> sb-hash.el
-  ! shimbun/sb-heise.el -> sb-heise.el
-  ! shimbun/sb-hns.el -> sb-hns.el
-  ! shimbun/sb-ibm-dev.el -> sb-ibm-dev.el
-  ! shimbun/sb-impress.el -> sb-impress.el
-  ! shimbun/sb-infoshop.el -> sb-infoshop.el
-  ! shimbun/sb-itmedia.el -> sb-itmedia.el
-  ! shimbun/sb-japantimes.el -> sb-japantimes.el
-  ! shimbun/sb-javaconf.el -> sb-javaconf.el
-  ! shimbun/sb-jpilot.el -> sb-jpilot.el
-  ! shimbun/sb-jpo.el -> sb-jpo.el
-  ! shimbun/sb-kantei.el -> sb-kantei.el
-  ! shimbun/sb-kde.el -> sb-kde.el
-  ! shimbun/sb-kyoko-np.el -> sb-kyoko-np.el
-  ! shimbun/sb-laut-de.el -> sb-laut-de.el
-  ! shimbun/sb-linuxce-jp.el -> sb-linuxce-jp.el
-  ! shimbun/sb-lotusex.el -> sb-lotusex.el
-  ! shimbun/sb-lump.el -> sb-lump.el
-  ! shimbun/sb-m17n.el -> sb-m17n.el
-  ! shimbun/sb-macosx-jp.el -> sb-macosx-jp.el
-  ! shimbun/sb-mailarc.el -> sb-mailarc.el
-  ! shimbun/sb-mailman.el -> sb-mailman.el
-  ! shimbun/sb-mainichi.el -> sb-mainichi.el
-  ! shimbun/sb-makanai.el -> sb-makanai.el
-  ! shimbun/sb-marc-aims.el -> sb-marc-aims.el
-  ! shimbun/sb-meadow.el -> sb-meadow.el
-  ! shimbun/sb-mew.el -> sb-mew.el
-  ! shimbun/sb-mhonarc.el -> sb-mhonarc.el
-  ! shimbun/sb-mozilla-jp.el -> sb-mozilla-jp.el
-  ! shimbun/sb-msdn.el -> sb-msdn.el
-  ! shimbun/sb-msports-nifty.el -> sb-msports-nifty.el
-  ! shimbun/sb-multi.el -> sb-multi.el
-  ! shimbun/sb-n24-de.el -> sb-n24-de.el
-  ! shimbun/sb-namazu.el -> sb-namazu.el
-  ! shimbun/sb-netbsd.el -> sb-netbsd.el
-  ! shimbun/sb-nikkangendai.el -> sb-nikkangendai.el
-  ! shimbun/sb-nikkansports.el -> sb-nikkansports.el
-  ! shimbun/sb-nikkei.el -> sb-nikkei.el
-  ! shimbun/sb-nytimes.el -> sb-nytimes.el
-  ! shimbun/sb-opentechpress-jp.el -> sb-opentechpress-jp.el
-  ! shimbun/sb-orca.el -> sb-orca.el
-  ! shimbun/sb-palmfan.el -> sb-palmfan.el
-  ! shimbun/sb-pcweb-column.el -> sb-pcweb-column.el
-  ! shimbun/sb-perlentaucher-de.el -> sb-perlentaucher-de.el
-  ! shimbun/sb-pilot-link.el -> sb-pilot-link.el
-  ! shimbun/sb-pilot-mailsync.el -> sb-pilot-mailsync.el
-  ! shimbun/sb-plucker.el -> sb-plucker.el
-  ! shimbun/sb-pocketgames.el -> sb-pocketgames.el
-  ! shimbun/sb-rakuten.el -> sb-rakuten.el
-  ! shimbun/sb-redhat.el -> sb-redhat.el
-  ! shimbun/sb-rediff.el -> sb-rediff.el
-  ! shimbun/sb-rss-blogs.el -> sb-rss-blogs.el
-  ! shimbun/sb-rss-hash.el -> sb-rss-hash.el
-  ! shimbun/sb-rss.el -> sb-rss.el
-  ! shimbun/sb-ruby.el -> sb-ruby.el
-  ! shimbun/sb-sankei.el -> sb-sankei.el
-  ! shimbun/sb-savannah.el -> sb-savannah.el
-  ! shimbun/sb-scipy.el -> sb-scipy.el
-  ! shimbun/sb-security-memo.el -> sb-security-memo.el
-  ! shimbun/sb-slashdot-jp.el -> sb-slashdot-jp.el
-  ! shimbun/sb-slashdot.el -> sb-slashdot.el
-  ! shimbun/sb-sml.el -> sb-sml.el
-  ! shimbun/sb-sourceforge-jp.el -> sb-sourceforge-jp.el
-  ! shimbun/sb-spiegel.el -> sb-spiegel.el
-  ! shimbun/sb-sponichi.el -> sb-sponichi.el
-  ! shimbun/sb-squeak-dev.el -> sb-squeak-dev.el
-  ! shimbun/sb-squeak-ja.el -> sb-squeak-ja.el
-  ! shimbun/sb-sueddeutsche-de.el -> sb-sueddeutsche-de.el
-  ! shimbun/sb-tcup.el -> sb-tcup.el
-  ! shimbun/sb-tdiary-ml.el -> sb-tdiary-ml.el
-  ! shimbun/sb-tdiary.el -> sb-tdiary.el
-  ! shimbun/sb-tech-on.el -> sb-tech-on.el
-  ! shimbun/sb-texfaq.el -> sb-texfaq.el
-  ! shimbun/sb-text.el -> sb-text.el
-  ! shimbun/sb-the-onion.el -> sb-the-onion.el
-  ! shimbun/sb-the-register.el -> sb-the-register.el
-  ! shimbun/sb-tigris.el -> sb-tigris.el
-  ! shimbun/sb-toshiba.el -> sb-toshiba.el
-  ! shimbun/sb-vinelinux.el -> sb-vinelinux.el
-  ! shimbun/sb-w3m-dev.el -> sb-w3m-dev.el
-  ! shimbun/sb-welt-de.el -> sb-welt-de.el
-  ! shimbun/sb-wiki.el -> sb-wiki.el
-  ! shimbun/sb-wikimedia.el -> sb-wikimedia.el
-  ! shimbun/sb-wincefan.el -> sb-wincefan.el
-  ! shimbun/sb-wired-jp.el -> sb-wired-jp.el
-  ! shimbun/sb-x51.el -> sb-x51.el
-  ! shimbun/sb-xemacs.el -> sb-xemacs.el
-  ! shimbun/sb-yahoo-auctions.el -> sb-yahoo-auctions.el
-  ! shimbun/sb-yahoo-sports.el -> sb-yahoo-sports.el
-  ! shimbun/sb-yahoo.el -> sb-yahoo.el
-  ! shimbun/sb-yomiuri-html.el -> sb-yomiuri-html.el
-  ! shimbun/sb-yomiuri.el -> sb-yomiuri.el
-  ! shimbun/sb-yoshirin.el -> sb-yoshirin.el
-  ! shimbun/sb-zdnet-jp.el -> sb-zdnet-jp.el
-  ! shimbun/sb-zeit-de.el -> sb-zeit-de.el
-  ! shimbun/shimbun.el -> shimbun.el
-Created shimbun-20250806.224.tar containing:
-  shimbun-20250806.224/
-  shimbun-20250806.224/mew-shimbun.el
-  shimbun-20250806.224/nnshimbun.el
-  shimbun-20250806.224/sb-2ch.el
-  shimbun-20250806.224/sb-airs.el
-  shimbun-20250806.224/sb-aljazeera.el
-  shimbun-20250806.224/sb-arch-bluegate.el
-  shimbun-20250806.224/sb-asahi-html.el
-  shimbun-20250806.224/sb-asahi-mytown.el
-  shimbun-20250806.224/sb-asahi.el
-  shimbun-20250806.224/sb-atmarkit.el
-  shimbun-20250806.224/sb-atom-hash.el
-  shimbun-20250806.224/sb-atom.el
-  shimbun-20250806.224/sb-bbc.el
-  shimbun-20250806.224/sb-bbdb-ml.el
-  shimbun-20250806.224/sb-cgi-board.el
-  shimbun-20250806.224/sb-chise.el
-  shimbun-20250806.224/sb-cnet-jp.el
-  shimbun-20250806.224/sb-cnet.el
-  shimbun-20250806.224/sb-cnn-jp.el
-  shimbun-20250806.224/sb-coldsync.el
-  shimbun-20250806.224/sb-debian-jp.el
-  shimbun-20250806.224/sb-debian.el
-  shimbun-20250806.224/sb-debugmagazin-de.el
-  shimbun-20250806.224/sb-dennou.el
-  shimbun-20250806.224/sb-digiko.el
-  shimbun-20250806.224/sb-elips.el
-  shimbun-20250806.224/sb-emacs-w3m.el
-  shimbun-20250806.224/sb-emacswiki.el
-  shimbun-20250806.224/sb-engadget-ja.el
-  shimbun-20250806.224/sb-excite.el
-  shimbun-20250806.224/sb-exconn.el
-  shimbun-20250806.224/sb-f1fan.el
-  shimbun-20250806.224/sb-fau.el
-  shimbun-20250806.224/sb-ffii.el
-  shimbun-20250806.224/sb-fml.el
-  shimbun-20250806.224/sb-geocrawler.el
-  shimbun-20250806.224/sb-glimpse.el
-  shimbun-20250806.224/sb-gnome.el
-  shimbun-20250806.224/sb-haiku-os.el
-  shimbun-20250806.224/sb-hash.el
-  shimbun-20250806.224/sb-heise.el
-  shimbun-20250806.224/sb-hns.el
-  shimbun-20250806.224/sb-ibm-dev.el
-  shimbun-20250806.224/sb-impress.el
-  shimbun-20250806.224/sb-infoshop.el
-  shimbun-20250806.224/sb-itmedia.el
-  shimbun-20250806.224/sb-japantimes.el
-  shimbun-20250806.224/sb-javaconf.el
-  shimbun-20250806.224/sb-jpilot.el
-  shimbun-20250806.224/sb-jpo.el
-  shimbun-20250806.224/sb-kantei.el
-  shimbun-20250806.224/sb-kde.el
-  shimbun-20250806.224/sb-kyoko-np.el
-  shimbun-20250806.224/sb-laut-de.el
-  shimbun-20250806.224/sb-linuxce-jp.el
-  shimbun-20250806.224/sb-lotusex.el
-  shimbun-20250806.224/sb-lump.el
-  shimbun-20250806.224/sb-m17n.el
-  shimbun-20250806.224/sb-macosx-jp.el
-  shimbun-20250806.224/sb-mailarc.el
-  shimbun-20250806.224/sb-mailman.el
-  shimbun-20250806.224/sb-mainichi.el
-  shimbun-20250806.224/sb-makanai.el
-  shimbun-20250806.224/sb-marc-aims.el
-  shimbun-20250806.224/sb-meadow.el
-  shimbun-20250806.224/sb-mew.el
-  shimbun-20250806.224/sb-mhonarc.el
-  shimbun-20250806.224/sb-mozilla-jp.el
-  shimbun-20250806.224/sb-msdn.el
-  shimbun-20250806.224/sb-msports-nifty.el
-  shimbun-20250806.224/sb-multi.el
-  shimbun-20250806.224/sb-n24-de.el
-  shimbun-20250806.224/sb-namazu.el
-  shimbun-20250806.224/sb-netbsd.el
-  shimbun-20250806.224/sb-nikkangendai.el
-  shimbun-20250806.224/sb-nikkansports.el
-  shimbun-20250806.224/sb-nikkei.el
-  shimbun-20250806.224/sb-nytimes.el
-  shimbun-20250806.224/sb-opentechpress-jp.el
-  shimbun-20250806.224/sb-orca.el
-  shimbun-20250806.224/sb-palmfan.el
-  shimbun-20250806.224/sb-pcweb-column.el
-  shimbun-20250806.224/sb-perlentaucher-de.el
-  shimbun-20250806.224/sb-pilot-link.el
-  shimbun-20250806.224/sb-pilot-mailsync.el
-  shimbun-20250806.224/sb-plucker.el
-  shimbun-20250806.224/sb-pocketgames.el
-  shimbun-20250806.224/sb-rakuten.el
-  shimbun-20250806.224/sb-redhat.el
-  shimbun-20250806.224/sb-rediff.el
-  shimbun-20250806.224/sb-rss-blogs.el
-  shimbun-20250806.224/sb-rss-hash.el
-  shimbun-20250806.224/sb-rss.el
-  shimbun-20250806.224/sb-ruby.el
-  shimbun-20250806.224/sb-sankei.el
-  shimbun-20250806.224/sb-savannah.el
-  shimbun-20250806.224/sb-scipy.el
-  shimbun-20250806.224/sb-security-memo.el
-  shimbun-20250806.224/sb-slashdot-jp.el
-  shimbun-20250806.224/sb-slashdot.el
-  shimbun-20250806.224/sb-sml.el
-  shimbun-20250806.224/sb-sourceforge-jp.el
-  shimbun-20250806.224/sb-spiegel.el
-  shimbun-20250806.224/sb-sponichi.el
-  shimbun-20250806.224/sb-squeak-dev.el
-  shimbun-20250806.224/sb-squeak-ja.el
-  shimbun-20250806.224/sb-sueddeutsche-de.el
-  shimbun-20250806.224/sb-tcup.el
-  shimbun-20250806.224/sb-tdiary-ml.el
-  shimbun-20250806.224/sb-tdiary.el
-  shimbun-20250806.224/sb-tech-on.el
-  shimbun-20250806.224/sb-texfaq.el
-  shimbun-20250806.224/sb-text.el
-  shimbun-20250806.224/sb-the-onion.el
-  shimbun-20250806.224/sb-the-register.el
-  shimbun-20250806.224/sb-tigris.el
-  shimbun-20250806.224/sb-toshiba.el
-  shimbun-20250806.224/sb-vinelinux.el
-  shimbun-20250806.224/sb-w3m-dev.el
-  shimbun-20250806.224/sb-welt-de.el
-  shimbun-20250806.224/sb-wiki.el
-  shimbun-20250806.224/sb-wikimedia.el
-  shimbun-20250806.224/sb-wincefan.el
-  shimbun-20250806.224/sb-wired-jp.el
-  shimbun-20250806.224/sb-x51.el
-  shimbun-20250806.224/sb-xemacs.el
-  shimbun-20250806.224/sb-yahoo-auctions.el
-  shimbun-20250806.224/sb-yahoo-sports.el
-  shimbun-20250806.224/sb-yahoo.el
-  shimbun-20250806.224/sb-yomiuri-html.el
-  shimbun-20250806.224/sb-yomiuri.el
-  shimbun-20250806.224/sb-yoshirin.el
-  shimbun-20250806.224/sb-zdnet-jp.el
-  shimbun-20250806.224/sb-zeit-de.el
-  shimbun-20250806.224/shimbun-pkg.el
-  shimbun-20250806.224/shimbun.el
- ✓ Success:
-  2025-09-24T18:51:28+0000  shimbun-20250806.224.entry
-  2025-09-24T18:51:28+0000  shimbun-20250806.224.tar
-Built shimbun in 4.904s, finished at 2025-09-24T18:51:29+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/emacs-w3m/emacs-w3m/': Failed to connect to github.com port 443 after 131148 ms: Couldn't connect to server
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-15810feb6c24> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-15810feb6c24> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-15810feb6c24>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-15810feb6c24> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-15810feb6c24>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("shimbun")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"shimbun\")"))
+  command-line()
+  normal-top-level()
+

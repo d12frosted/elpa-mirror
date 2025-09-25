@@ -3,137 +3,36 @@ Fetcher: github
 Source:  https://github.com/emacs-ess/ESS
 
 Updating /mnt/store/melpa/working/ess/
-Checking out b8341e9a4e343ca6bf8b5038359a204a09b454c5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ess/
-  to /tmp/essKgeaXt/ess-20250725.847
-  ! lisp/ess-bugs-d.el -> ess-bugs-d.el
-  ! lisp/ess-bugs-l.el -> ess-bugs-l.el
-  ! lisp/ess-custom.el -> ess-custom.el
-  ! lisp/ess-gretl.el -> ess-gretl.el
-  ! lisp/ess-help.el -> ess-help.el
-  ! lisp/ess-inf.el -> ess-inf.el
-  ! lisp/ess-jags-d.el -> ess-jags-d.el
-  ! lisp/ess-julia.el -> ess-julia.el
-  ! lisp/ess-mode.el -> ess-mode.el
-  ! lisp/ess-r-completion.el -> ess-r-completion.el
-  ! lisp/ess-r-flymake.el -> ess-r-flymake.el
-  ! lisp/ess-r-mode.el -> ess-r-mode.el
-  ! lisp/ess-r-package.el -> ess-r-package.el
-  ! lisp/ess-r-syntax.el -> ess-r-syntax.el
-  ! lisp/ess-r-xref.el -> ess-r-xref.el
-  ! lisp/ess-rd.el -> ess-rd.el
-  ! lisp/ess-rdired.el -> ess-rdired.el
-  ! lisp/ess-roxy.el -> ess-roxy.el
-  ! lisp/ess-s-lang.el -> ess-s-lang.el
-  ! lisp/ess-sas-a.el -> ess-sas-a.el
-  ! lisp/ess-sas-d.el -> ess-sas-d.el
-  ! lisp/ess-sas-l.el -> ess-sas-l.el
-  ! lisp/ess-site.el -> ess-site.el
-  ! lisp/ess-sp6-d.el -> ess-sp6-d.el
-  ! lisp/ess-toolbar.el -> ess-toolbar.el
-  ! lisp/ess-tracebug.el -> ess-tracebug.el
-  ! lisp/ess-trns.el -> ess-trns.el
-  ! lisp/ess-utils.el -> ess-utils.el
-  ! lisp/ess.el -> ess.el
-  ! lisp/essd-els.el -> essd-els.el
-  ! doc/ess.texi -> ess.texi
-    etc/ESSR => etc/ESSR
-    etc/ESSR.rds -> etc/ESSR.rds
-    etc/Makefile -> etc/Makefile
-    etc/all.txt -> etc/all.txt
-    etc/ess-julia.jl -> etc/ess-julia.jl
-    etc/ess-sas-sh-command -> etc/ess-sas-sh-command
-    etc/func.sas -> etc/func.sas
-    etc/icons => etc/icons
-    etc/proc.sas -> etc/proc.sas
-    etc/proc.txt -> etc/proc.txt
-  ! lisp/obsolete/ess-eldoc.el -> obsolete/ess-eldoc.el
-  ! lisp/obsolete/ess-font-lock.el -> obsolete/ess-font-lock.el
-  ! lisp/obsolete/ess-mouse.el -> obsolete/ess-mouse.el
-  ! lisp/obsolete/ess-r-a.el -> obsolete/ess-r-a.el
-  ! lisp/obsolete/mouseme.el -> obsolete/mouseme.el
-  ! lisp/obsolete/msdos.el -> obsolete/msdos.el
-Generating ess.info
-Created ess-20250725.847.tar containing:
-  ess-20250725.847/
-  ess-20250725.847/dir
-  ess-20250725.847/ess-bugs-d.el
-  ess-20250725.847/ess-bugs-l.el
-  ess-20250725.847/ess-custom.el
-  ess-20250725.847/ess-gretl.el
-  ess-20250725.847/ess-help.el
-  ess-20250725.847/ess-inf.el
-  ess-20250725.847/ess-jags-d.el
-  ess-20250725.847/ess-julia.el
-  ess-20250725.847/ess-mode.el
-  ess-20250725.847/ess-pkg.el
-  ess-20250725.847/ess-r-completion.el
-  ess-20250725.847/ess-r-flymake.el
-  ess-20250725.847/ess-r-mode.el
-  ess-20250725.847/ess-r-package.el
-  ess-20250725.847/ess-r-syntax.el
-  ess-20250725.847/ess-r-xref.el
-  ess-20250725.847/ess-rd.el
-  ess-20250725.847/ess-rdired.el
-  ess-20250725.847/ess-roxy.el
-  ess-20250725.847/ess-s-lang.el
-  ess-20250725.847/ess-sas-a.el
-  ess-20250725.847/ess-sas-d.el
-  ess-20250725.847/ess-sas-l.el
-  ess-20250725.847/ess-site.el
-  ess-20250725.847/ess-sp6-d.el
-  ess-20250725.847/ess-toolbar.el
-  ess-20250725.847/ess-tracebug.el
-  ess-20250725.847/ess-trns.el
-  ess-20250725.847/ess-utils.el
-  ess-20250725.847/ess.el
-  ess-20250725.847/ess.info
-  ess-20250725.847/essd-els.el
-  ess-20250725.847/etc/
-  ess-20250725.847/etc/ESSR.rds
-  ess-20250725.847/etc/ESSR/
-  ess-20250725.847/etc/ESSR/BUILDESSR
-  ess-20250725.847/etc/ESSR/LOADREMOTE
-  ess-20250725.847/etc/ESSR/R/
-  ess-20250725.847/etc/ESSR/R/.basic.R
-  ess-20250725.847/etc/ESSR/R/.load.R
-  ess-20250725.847/etc/ESSR/R/completion.R
-  ess-20250725.847/etc/ESSR/R/debug.R
-  ess-20250725.847/etc/ESSR/R/misc.R
-  ess-20250725.847/etc/ESSR/R/mpi.R
-  ess-20250725.847/etc/ESSR/R/ns-eval.R
-  ess-20250725.847/etc/ESSR/R/pkg.R
-  ess-20250725.847/etc/Makefile
-  ess-20250725.847/etc/all.txt
-  ess-20250725.847/etc/ess-julia.jl
-  ess-20250725.847/etc/ess-sas-sh-command
-  ess-20250725.847/etc/func.sas
-  ess-20250725.847/etc/icons/
-  ess-20250725.847/etc/icons/README
-  ess-20250725.847/etc/icons/rbuffer.xpm
-  ess-20250725.847/etc/icons/rfunction.xpm
-  ess-20250725.847/etc/icons/rline.xpm
-  ess-20250725.847/etc/icons/rregion.xpm
-  ess-20250725.847/etc/icons/splus_letter_small.xpm
-  ess-20250725.847/etc/icons/splus_letters_large.png
-  ess-20250725.847/etc/icons/splus_letters_large.xpm
-  ess-20250725.847/etc/icons/spluslogo.xpm
-  ess-20250725.847/etc/icons/spluslogo.xpm.safe
-  ess-20250725.847/etc/icons/startr.xpm
-  ess-20250725.847/etc/icons/switch_ess.xpm
-  ess-20250725.847/etc/icons/switchr.xpm
-  ess-20250725.847/etc/icons/switchs.xpm
-  ess-20250725.847/etc/proc.sas
-  ess-20250725.847/etc/proc.txt
-  ess-20250725.847/obsolete/
-  ess-20250725.847/obsolete/ess-eldoc.el
-  ess-20250725.847/obsolete/ess-font-lock.el
-  ess-20250725.847/obsolete/ess-mouse.el
-  ess-20250725.847/obsolete/ess-r-a.el
-  ess-20250725.847/obsolete/mouseme.el
-  ess-20250725.847/obsolete/msdos.el
- ✓ Success:
-  2025-09-24T18:08:37+0000  ess-20250725.847.entry
-  2025-09-24T18:08:37+0000  ess-20250725.847.tar
-Built ess in 7.998s, finished at 2025-09-24T18:08:38+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/emacs-ess/ESS/': Failed to connect to github.com port 443 after 129332 ms: Couldn't connect to server
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-15649ab9175e> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-15649ab9175e> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-15649ab9175e>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-15649ab9175e> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-15649ab9175e>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("ess")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"ess\")"))
+  command-line()
+  normal-top-level()
+

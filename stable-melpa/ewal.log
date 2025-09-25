@@ -3,276 +3,36 @@ Fetcher: github
 Source:  https://github.com/cyruseuros/ewal
 
 Updating /mnt/store/melpa/working/ewal/
-Checking out 4ecc355dae9c7d648cd2874e01a15dfa02b9350d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ewal/
-  to /tmp/ewalk2CdMx/ewal-20200305.230
-    ewal.el -> ewal.el
-    palettes => palettes
-Created ewal-20200305.230.tar containing:
-  ewal-20200305.230/
-  ewal-20200305.230/ewal-pkg.el
-  ewal-20200305.230/ewal.el
-  ewal-20200305.230/palettes/
-  ewal-20200305.230/palettes/dark/
-  ewal-20200305.230/palettes/dark/3024.json
-  ewal-20200305.230/palettes/dark/ashes.json
-  ewal-20200305.230/palettes/dark/base16-3024.json
-  ewal-20200305.230/palettes/dark/base16-apathy.json
-  ewal-20200305.230/palettes/dark/base16-ashes.json
-  ewal-20200305.230/palettes/dark/base16-atelier-cave.json
-  ewal-20200305.230/palettes/dark/base16-atelier-dune.json
-  ewal-20200305.230/palettes/dark/base16-atelier-estuary.json
-  ewal-20200305.230/palettes/dark/base16-atelier-forest.json
-  ewal-20200305.230/palettes/dark/base16-atelier-heath.json
-  ewal-20200305.230/palettes/dark/base16-atelier-lakeside.json
-  ewal-20200305.230/palettes/dark/base16-atelier-plateau.json
-  ewal-20200305.230/palettes/dark/base16-atelier-savanna.json
-  ewal-20200305.230/palettes/dark/base16-atelier-seaside.json
-  ewal-20200305.230/palettes/dark/base16-atelier-sulphurpool.json
-  ewal-20200305.230/palettes/dark/base16-bespin.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-bathory.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-burzum.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-funeral.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-gorgoroth.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-immortal.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-khold.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-marduk.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-mayhem.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-nile.json
-  ewal-20200305.230/palettes/dark/base16-black-metal-venom.json
-  ewal-20200305.230/palettes/dark/base16-black-metal.json
-  ewal-20200305.230/palettes/dark/base16-brewer.json
-  ewal-20200305.230/palettes/dark/base16-bright.json
-  ewal-20200305.230/palettes/dark/base16-brushtrees.json
-  ewal-20200305.230/palettes/dark/base16-chalk.json
-  ewal-20200305.230/palettes/dark/base16-circus.json
-  ewal-20200305.230/palettes/dark/base16-classic.json
-  ewal-20200305.230/palettes/dark/base16-codeschool.json
-  ewal-20200305.230/palettes/dark/base16-default.json
-  ewal-20200305.230/palettes/dark/base16-dracula.json
-  ewal-20200305.230/palettes/dark/base16-eighties.json
-  ewal-20200305.230/palettes/dark/base16-embers.json
-  ewal-20200305.230/palettes/dark/base16-flat.json
-  ewal-20200305.230/palettes/dark/base16-google.json
-  ewal-20200305.230/palettes/dark/base16-grayscale.json
-  ewal-20200305.230/palettes/dark/base16-greenscreen.json
-  ewal-20200305.230/palettes/dark/base16-gruvbox-hard.json
-  ewal-20200305.230/palettes/dark/base16-gruvbox-medium.json
-  ewal-20200305.230/palettes/dark/base16-gruvbox-pale.json
-  ewal-20200305.230/palettes/dark/base16-gruvbox-soft.json
-  ewal-20200305.230/palettes/dark/base16-harmonic.json
-  ewal-20200305.230/palettes/dark/base16-hopscotch.json
-  ewal-20200305.230/palettes/dark/base16-icy.json
-  ewal-20200305.230/palettes/dark/base16-irblack.json
-  ewal-20200305.230/palettes/dark/base16-isotope.json
-  ewal-20200305.230/palettes/dark/base16-macintosh.json
-  ewal-20200305.230/palettes/dark/base16-marrakesh.json
-  ewal-20200305.230/palettes/dark/base16-materia.json
-  ewal-20200305.230/palettes/dark/base16-material-palenight.json
-  ewal-20200305.230/palettes/dark/base16-material.json
-  ewal-20200305.230/palettes/dark/base16-materialer.json
-  ewal-20200305.230/palettes/dark/base16-mellow-purple.json
-  ewal-20200305.230/palettes/dark/base16-mocha.json
-  ewal-20200305.230/palettes/dark/base16-monokai.json
-  ewal-20200305.230/palettes/dark/base16-nord.json
-  ewal-20200305.230/palettes/dark/base16-ocean.json
-  ewal-20200305.230/palettes/dark/base16-oceanicnext.json
-  ewal-20200305.230/palettes/dark/base16-onedark.json
-  ewal-20200305.230/palettes/dark/base16-outrun.json
-  ewal-20200305.230/palettes/dark/base16-paraiso.json
-  ewal-20200305.230/palettes/dark/base16-phd.json
-  ewal-20200305.230/palettes/dark/base16-pico.json
-  ewal-20200305.230/palettes/dark/base16-pop.json
-  ewal-20200305.230/palettes/dark/base16-porple.json
-  ewal-20200305.230/palettes/dark/base16-railscasts.json
-  ewal-20200305.230/palettes/dark/base16-rebecca.json
-  ewal-20200305.230/palettes/dark/base16-seti.json
-  ewal-20200305.230/palettes/dark/base16-solarflare.json
-  ewal-20200305.230/palettes/dark/base16-solarized.json
-  ewal-20200305.230/palettes/dark/base16-spacemacs.json
-  ewal-20200305.230/palettes/dark/base16-summerfruit.json
-  ewal-20200305.230/palettes/dark/base16-tomorrow-night.json
-  ewal-20200305.230/palettes/dark/base16-tube.json
-  ewal-20200305.230/palettes/dark/base16-twilight.json
-  ewal-20200305.230/palettes/dark/base16-unikitty.json
-  ewal-20200305.230/palettes/dark/base16-woodland.json
-  ewal-20200305.230/palettes/dark/base16-xcode-dusk.json
-  ewal-20200305.230/palettes/dark/base16-zenburn.json
-  ewal-20200305.230/palettes/dark/base16tooth.json
-  ewal-20200305.230/palettes/dark/darktooth.json
-  ewal-20200305.230/palettes/dark/dkeg-5725.json
-  ewal-20200305.230/palettes/dark/dkeg-amiox.json
-  ewal-20200305.230/palettes/dark/dkeg-bark.json
-  ewal-20200305.230/palettes/dark/dkeg-blend.json
-  ewal-20200305.230/palettes/dark/dkeg-blok.json
-  ewal-20200305.230/palettes/dark/dkeg-bluetype.json
-  ewal-20200305.230/palettes/dark/dkeg-blumune.json
-  ewal-20200305.230/palettes/dark/dkeg-book.json
-  ewal-20200305.230/palettes/dark/dkeg-branch.json
-  ewal-20200305.230/palettes/dark/dkeg-brownstone.json
-  ewal-20200305.230/palettes/dark/dkeg-bulb.json
-  ewal-20200305.230/palettes/dark/dkeg-chaires.json
-  ewal-20200305.230/palettes/dark/dkeg-coco.json
-  ewal-20200305.230/palettes/dark/dkeg-corduroy.json
-  ewal-20200305.230/palettes/dark/dkeg-depth.json
-  ewal-20200305.230/palettes/dark/dkeg-designr.json
-  ewal-20200305.230/palettes/dark/dkeg-diner.json
-  ewal-20200305.230/palettes/dark/dkeg-escen.json
-  ewal-20200305.230/palettes/dark/dkeg-fendr.json
-  ewal-20200305.230/palettes/dark/dkeg-flapr.json
-  ewal-20200305.230/palettes/dark/dkeg-forst.json
-  ewal-20200305.230/palettes/dark/dkeg-fury.json
-  ewal-20200305.230/palettes/dark/dkeg-harbing.json
-  ewal-20200305.230/palettes/dark/dkeg-kit.json
-  ewal-20200305.230/palettes/dark/dkeg-leaf.json
-  ewal-20200305.230/palettes/dark/dkeg-link.json
-  ewal-20200305.230/palettes/dark/dkeg-mattd.json
-  ewal-20200305.230/palettes/dark/dkeg-novmbr.json
-  ewal-20200305.230/palettes/dark/dkeg-owl.json
-  ewal-20200305.230/palettes/dark/dkeg-paints.json
-  ewal-20200305.230/palettes/dark/dkeg-parkd.json
-  ewal-20200305.230/palettes/dark/dkeg-pastely.json
-  ewal-20200305.230/palettes/dark/dkeg-petal.json
-  ewal-20200305.230/palettes/dark/dkeg-poly.json
-  ewal-20200305.230/palettes/dark/dkeg-prevail.json
-  ewal-20200305.230/palettes/dark/dkeg-provrb.json
-  ewal-20200305.230/palettes/dark/dkeg-raild.json
-  ewal-20200305.230/palettes/dark/dkeg-relax.json
-  ewal-20200305.230/palettes/dark/dkeg-scag.json
-  ewal-20200305.230/palettes/dark/dkeg-scape.json
-  ewal-20200305.230/palettes/dark/dkeg-shade.json
-  ewal-20200305.230/palettes/dark/dkeg-simplicity.json
-  ewal-20200305.230/palettes/dark/dkeg-skigh.json
-  ewal-20200305.230/palettes/dark/dkeg-slate.json
-  ewal-20200305.230/palettes/dark/dkeg-soundwave.json
-  ewal-20200305.230/palettes/dark/dkeg-spire.json
-  ewal-20200305.230/palettes/dark/dkeg-sprout.json
-  ewal-20200305.230/palettes/dark/dkeg-squares.json
-  ewal-20200305.230/palettes/dark/dkeg-stv.json
-  ewal-20200305.230/palettes/dark/dkeg-subtle.json
-  ewal-20200305.230/palettes/dark/dkeg-sundr.json
-  ewal-20200305.230/palettes/dark/dkeg-tealights.json
-  ewal-20200305.230/palettes/dark/dkeg-traffic.json
-  ewal-20200305.230/palettes/dark/dkeg-transposet.json
-  ewal-20200305.230/palettes/dark/dkeg-urban.json
-  ewal-20200305.230/palettes/dark/dkeg-vans.json
-  ewal-20200305.230/palettes/dark/dkeg-victory.json
-  ewal-20200305.230/palettes/dark/dkeg-view.json
-  ewal-20200305.230/palettes/dark/dkeg-wintry.json
-  ewal-20200305.230/palettes/dark/gruvbox.json
-  ewal-20200305.230/palettes/dark/hybrid-material.json
-  ewal-20200305.230/palettes/dark/monokai.json
-  ewal-20200305.230/palettes/dark/sexy-astromouse.json
-  ewal-20200305.230/palettes/dark/sexy-belge.json
-  ewal-20200305.230/palettes/dark/sexy-bitmute.json
-  ewal-20200305.230/palettes/dark/sexy-cloud.json
-  ewal-20200305.230/palettes/dark/sexy-colorfulcolors.json
-  ewal-20200305.230/palettes/dark/sexy-dawn.json
-  ewal-20200305.230/palettes/dark/sexy-deafened.json
-  ewal-20200305.230/palettes/dark/sexy-derp.json
-  ewal-20200305.230/palettes/dark/sexy-digerati.json
-  ewal-20200305.230/palettes/dark/sexy-doomicideocean.json
-  ewal-20200305.230/palettes/dark/sexy-dotshare.json
-  ewal-20200305.230/palettes/dark/sexy-dwmrob.json
-  ewal-20200305.230/palettes/dark/sexy-eqie6.json
-  ewal-20200305.230/palettes/dark/sexy-euphrasia.json
-  ewal-20200305.230/palettes/dark/sexy-gjm.json
-  ewal-20200305.230/palettes/dark/sexy-gnometerm.json
-  ewal-20200305.230/palettes/dark/sexy-gotham.json
-  ewal-20200305.230/palettes/dark/sexy-gslob-nature-suede.json
-  ewal-20200305.230/palettes/dark/sexy-hund.json
-  ewal-20200305.230/palettes/dark/sexy-hybrid.json
-  ewal-20200305.230/palettes/dark/sexy-insignificato.json
-  ewal-20200305.230/palettes/dark/sexy-invisibone.json
-  ewal-20200305.230/palettes/dark/sexy-jasonwryan.json
-  ewal-20200305.230/palettes/dark/sexy-kasugano.json
-  ewal-20200305.230/palettes/dark/sexy-material.json
-  ewal-20200305.230/palettes/dark/sexy-mikado.json
-  ewal-20200305.230/palettes/dark/sexy-mikazuki.json
-  ewal-20200305.230/palettes/dark/sexy-monokai.json
-  ewal-20200305.230/palettes/dark/sexy-muse.json
-  ewal-20200305.230/palettes/dark/sexy-nancy.json
-  ewal-20200305.230/palettes/dark/sexy-navy-and-ivory.json
-  ewal-20200305.230/palettes/dark/sexy-neon.json
-  ewal-20200305.230/palettes/dark/sexy-numixdarkest.json
-  ewal-20200305.230/palettes/dark/sexy-orangish.json
-  ewal-20200305.230/palettes/dark/sexy-parker_brothers.json
-  ewal-20200305.230/palettes/dark/sexy-phrak1.json
-  ewal-20200305.230/palettes/dark/sexy-pretty-and-pastel.json
-  ewal-20200305.230/palettes/dark/sexy-rasi.json
-  ewal-20200305.230/palettes/dark/sexy-rezza.json
-  ewal-20200305.230/palettes/dark/sexy-rydgel.json
-  ewal-20200305.230/palettes/dark/sexy-s3r0-modified.json
-  ewal-20200305.230/palettes/dark/sexy-sexcolors.json
-  ewal-20200305.230/palettes/dark/sexy-simple_rainbow.json
-  ewal-20200305.230/palettes/dark/sexy-splurge.json
-  ewal-20200305.230/palettes/dark/sexy-swayr.json
-  ewal-20200305.230/palettes/dark/sexy-sweetlove.json
-  ewal-20200305.230/palettes/dark/sexy-tango.json
-  ewal-20200305.230/palettes/dark/sexy-tangoesque.json
-  ewal-20200305.230/palettes/dark/sexy-tartan.json
-  ewal-20200305.230/palettes/dark/sexy-theme2.json
-  ewal-20200305.230/palettes/dark/sexy-thwump.json
-  ewal-20200305.230/palettes/dark/sexy-tlh.json
-  ewal-20200305.230/palettes/dark/sexy-trim-yer-beard.json
-  ewal-20200305.230/palettes/dark/sexy-user-77-mashup-colors.json
-  ewal-20200305.230/palettes/dark/sexy-vacuous2.json
-  ewal-20200305.230/palettes/dark/sexy-visibone-alt-2.json
-  ewal-20200305.230/palettes/dark/sexy-visibone.json
-  ewal-20200305.230/palettes/dark/sexy-x-dotshare.json
-  ewal-20200305.230/palettes/dark/sexy-zenburn.json
-  ewal-20200305.230/palettes/dark/solarized.json
-  ewal-20200305.230/palettes/dark/tempus_autumn.json
-  ewal-20200305.230/palettes/dark/tempus_dusk.json
-  ewal-20200305.230/palettes/dark/tempus_future.json
-  ewal-20200305.230/palettes/dark/tempus_rift.json
-  ewal-20200305.230/palettes/dark/tempus_spring.json
-  ewal-20200305.230/palettes/dark/tempus_summer.json
-  ewal-20200305.230/palettes/dark/tempus_warp.json
-  ewal-20200305.230/palettes/dark/tempus_winter.json
-  ewal-20200305.230/palettes/dark/vscode.json
-  ewal-20200305.230/palettes/dark/zenburn.json
-  ewal-20200305.230/palettes/light/
-  ewal-20200305.230/palettes/light/3024.json
-  ewal-20200305.230/palettes/light/ashes.json
-  ewal-20200305.230/palettes/light/base16-atelier-cave.json
-  ewal-20200305.230/palettes/light/base16-atelier-dune.json
-  ewal-20200305.230/palettes/light/base16-atelier-estuary.json
-  ewal-20200305.230/palettes/light/base16-atelier-forest.json
-  ewal-20200305.230/palettes/light/base16-atelier-heath.json
-  ewal-20200305.230/palettes/light/base16-atelier-lakeside.json
-  ewal-20200305.230/palettes/light/base16-atelier-plateau.json
-  ewal-20200305.230/palettes/light/base16-atelier-savanna.json
-  ewal-20200305.230/palettes/light/base16-atelier-seaside.json
-  ewal-20200305.230/palettes/light/base16-atelier-sulphurpool.json
-  ewal-20200305.230/palettes/light/base16-classic.json
-  ewal-20200305.230/palettes/light/base16-cupcake.json
-  ewal-20200305.230/palettes/light/base16-cupertino.json
-  ewal-20200305.230/palettes/light/base16-default.json
-  ewal-20200305.230/palettes/light/base16-github.json
-  ewal-20200305.230/palettes/light/base16-google.json
-  ewal-20200305.230/palettes/light/base16-grayscale.json
-  ewal-20200305.230/palettes/light/base16-gruvbox-hard.json
-  ewal-20200305.230/palettes/light/base16-gruvbox-medium.json
-  ewal-20200305.230/palettes/light/base16-gruvbox-soft.json
-  ewal-20200305.230/palettes/light/base16-harmonic.json
-  ewal-20200305.230/palettes/light/base16-materialer.json
-  ewal-20200305.230/palettes/light/base16-mexico.json
-  ewal-20200305.230/palettes/light/base16-one.json
-  ewal-20200305.230/palettes/light/base16-shapeshifter.json
-  ewal-20200305.230/palettes/light/base16-solarized.json
-  ewal-20200305.230/palettes/light/base16-summerfruit.json
-  ewal-20200305.230/palettes/light/base16-tomorrow.json
-  ewal-20200305.230/palettes/light/base16-unikitty.json
-  ewal-20200305.230/palettes/light/github.json
-  ewal-20200305.230/palettes/light/sexy-mostly-bright.json
-  ewal-20200305.230/palettes/light/solarized.json
-  ewal-20200305.230/palettes/light/tempus_dawn.json
-  ewal-20200305.230/palettes/light/tempus_fugit.json
-  ewal-20200305.230/palettes/light/tempus_past.json
-  ewal-20200305.230/palettes/light/tempus_totus.json
- ✓ Success:
-  2025-09-24T18:10:04+0000  ewal-20200305.230.entry
-  2025-09-24T18:10:04+0000  ewal-20200305.230.tar
-Built ewal in 6.241s, finished at 2025-09-24T18:10:06+0000
+Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/cyruseuros/ewal/': Failed to connect to github.com port 443 after 130300 ms: Couldn't connect to server
+
+Debugger entered--Lisp error: (error "Command `git remote set-head origin --auto' exited...")
+  error("%s" "Command `git remote set-head origin --auto' exited...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-158751da1024> "%s" "Command `git remote set-head origin --auto' exited...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-158751da1024> "git" "remote" "set-head" "origin" "--auto")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-158751da1024>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-158751da1024> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-158751da1024>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("ewal")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"ewal\")"))
+  command-line()
+  normal-top-level()
+

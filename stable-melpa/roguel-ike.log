@@ -3,105 +3,36 @@ Fetcher: github
 Source:  https://github.com/stevenremot/roguel-ike
 
 Updating /mnt/store/melpa/working/roguel-ike/
-Checking out e2e0c089129353f0d4c08b42baf6dc9d66a05175
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/roguel-ike/
-  to /tmp/roguel-ikeXFs0Xp/roguel-ike-20241228.929
-    roguel-ike.el -> roguel-ike.el
-    roguel-ike => roguel-ike
-    roguel-ike-lib => roguel-ike-lib
-Created roguel-ike-20241228.929.tar containing:
-  roguel-ike-20241228.929/
-  roguel-ike-20241228.929/roguel-ike-lib/
-  roguel-ike-20241228.929/roguel-ike-lib/cell.el
-  roguel-ike-20241228.929/roguel-ike-lib/dispatcher.el
-  roguel-ike-20241228.929/roguel-ike-lib/fov.el
-  roguel-ike-20241228.929/roguel-ike-lib/level.el
-  roguel-ike-20241228.929/roguel-ike-lib/level/
-  roguel-ike-20241228.929/roguel-ike-lib/level/generator/
-  roguel-ike-20241228.929/roguel-ike-lib/level/generator/binary-node.el
-  roguel-ike-20241228.929/roguel-ike-lib/los.el
-  roguel-ike-20241228.929/roguel-ike-lib/math.el
-  roguel-ike-20241228.929/roguel-ike-lib/path-finding.el
-  roguel-ike-20241228.929/roguel-ike-lib/renderer.el
-  roguel-ike-20241228.929/roguel-ike-pkg.el
-  roguel-ike-20241228.929/roguel-ike.el
-  roguel-ike-20241228.929/roguel-ike/
-  roguel-ike-20241228.929/roguel-ike/behaviour.el
-  roguel-ike-20241228.929/roguel-ike/behaviour/
-  roguel-ike-20241228.929/roguel-ike/behaviour/ai.el
-  roguel-ike-20241228.929/roguel-ike/behaviour/manual.el
-  roguel-ike-20241228.929/roguel-ike/buffer-manager.el
-  roguel-ike-20241228.929/roguel-ike/controller.el
-  roguel-ike-20241228.929/roguel-ike/custom.el
-  roguel-ike-20241228.929/roguel-ike/data/
-  roguel-ike-20241228.929/roguel-ike/data/effects.el
-  roguel-ike-20241228.929/roguel-ike/data/races.el
-  roguel-ike-20241228.929/roguel-ike/data/skills.el
-  roguel-ike-20241228.929/roguel-ike/dungeon.el
-  roguel-ike-20241228.929/roguel-ike/entity.el
-  roguel-ike-20241228.929/roguel-ike/entity/
-  roguel-ike-20241228.929/roguel-ike/entity/factory/
-  roguel-ike-20241228.929/roguel-ike/entity/factory/hero.el
-  roguel-ike-20241228.929/roguel-ike/fov.el
-  roguel-ike-20241228.929/roguel-ike/game-screen.el
-  roguel-ike-20241228.929/roguel-ike/game-screen/
-  roguel-ike-20241228.929/roguel-ike/game-screen/arena.el
-  roguel-ike-20241228.929/roguel-ike/game-screen/dungeon-rampage.el
-  roguel-ike-20241228.929/roguel-ike/game-screen/fight.el
-  roguel-ike-20241228.929/roguel-ike/game-screen/select-hero.el
-  roguel-ike-20241228.929/roguel-ike/game-screen/select-mode.el
-  roguel-ike-20241228.929/roguel-ike/game-screen/test.el
-  roguel-ike-20241228.929/roguel-ike/game.el
-  roguel-ike-20241228.929/roguel-ike/graphics/
-  roguel-ike-20241228.929/roguel-ike/graphics/faces.el
-  roguel-ike-20241228.929/roguel-ike/graphics/renderer/
-  roguel-ike-20241228.929/roguel-ike/graphics/renderer/game.el
-  roguel-ike-20241228.929/roguel-ike/graphics/renderer/stats.el
-  roguel-ike-20241228.929/roguel-ike/graphics/widget/
-  roguel-ike-20241228.929/roguel-ike/graphics/widget/entity.el
-  roguel-ike-20241228.929/roguel-ike/graphics/widget/stats.el
-  roguel-ike-20241228.929/roguel-ike/hero-data.el
-  roguel-ike-20241228.929/roguel-ike/hero-data/
-  roguel-ike-20241228.929/roguel-ike/hero-data/manager.el
-  roguel-ike-20241228.929/roguel-ike/interactive-object.el
-  roguel-ike-20241228.929/roguel-ike/interactive-object/
-  roguel-ike-20241228.929/roguel-ike/interactive-object/door.el
-  roguel-ike-20241228.929/roguel-ike/interactive-object/stairs.el
-  roguel-ike-20241228.929/roguel-ike/level.el
-  roguel-ike-20241228.929/roguel-ike/level/
-  roguel-ike-20241228.929/roguel-ike/level/cell.el
-  roguel-ike-20241228.929/roguel-ike/level/cell/
-  roguel-ike-20241228.929/roguel-ike/level/cell/ground.el
-  roguel-ike-20241228.929/roguel-ike/level/cell/object.el
-  roguel-ike-20241228.929/roguel-ike/level/factory/
-  roguel-ike-20241228.929/roguel-ike/level/factory/all-rooms.el
-  roguel-ike-20241228.929/roguel-ike/level/factory/layout.el
-  roguel-ike-20241228.929/roguel-ike/level/factory/string.el
-  roguel-ike-20241228.929/roguel-ike/level/populator/
-  roguel-ike-20241228.929/roguel-ike/level/populator/arena.el
-  roguel-ike-20241228.929/roguel-ike/level/populator/periodic.el
-  roguel-ike-20241228.929/roguel-ike/message-logger.el
-  roguel-ike-20241228.929/roguel-ike/mode.el
-  roguel-ike-20241228.929/roguel-ike/mode/
-  roguel-ike-20241228.929/roguel-ike/mode/menu.el
-  roguel-ike-20241228.929/roguel-ike/path-finding.el
-  roguel-ike-20241228.929/roguel-ike/physics/
-  roguel-ike-20241228.929/roguel-ike/physics/motion.el
-  roguel-ike-20241228.929/roguel-ike/physics/world.el
-  roguel-ike-20241228.929/roguel-ike/race.el
-  roguel-ike-20241228.929/roguel-ike/skill.el
-  roguel-ike-20241228.929/roguel-ike/skill/
-  roguel-ike-20241228.929/roguel-ike/skill/object/
-  roguel-ike-20241228.929/roguel-ike/skill/object/fireball.el
-  roguel-ike-20241228.929/roguel-ike/skill/object/fractalball.el
-  roguel-ike-20241228.929/roguel-ike/stats.el
-  roguel-ike-20241228.929/roguel-ike/stats/
-  roguel-ike-20241228.929/roguel-ike/stats/effect.el
-  roguel-ike-20241228.929/roguel-ike/stats/regenerator.el
-  roguel-ike-20241228.929/roguel-ike/stats/slot.el
-  roguel-ike-20241228.929/roguel-ike/time-manager.el
- ✓ Success:
-  2025-09-24T18:48:58+0000  roguel-ike-20241228.929.entry
-  2025-09-24T18:48:58+0000  roguel-ike-20241228.929.tar
-Built roguel-ike in 3.167s, finished at 2025-09-24T18:48:58+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/stevenremot/roguel-ike/': Failed to connect to github.com port 443 after 129276 ms: Couldn't connect to server
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-15660b433024> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-15660b433024> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-15660b433024>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-15660b433024> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-15660b433024>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("roguel-ike")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"roguel-ike\")"))
+  command-line()
+  normal-top-level()
+

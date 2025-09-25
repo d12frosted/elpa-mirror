@@ -3,141 +3,36 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/verilog-ext
 
 Updating /mnt/store/melpa/working/verilog-ext/
-Checking out 740ce49e9d6f70486acd2aa0952b5f25d8a324fd
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/verilog-ext/
-  to /tmp/verilog-exttVatsm/verilog-ext-20250821.1213
-    verilog-ext-beautify.el -> verilog-ext-beautify.el
-    verilog-ext-block-end-comments.el -> verilog-ext-block-end-comments.el
-    verilog-ext-capf.el -> verilog-ext-capf.el
-    verilog-ext-compile.el -> verilog-ext-compile.el
-    verilog-ext-eglot.el -> verilog-ext-eglot.el
-    verilog-ext-flycheck.el -> verilog-ext-flycheck.el
-    verilog-ext-font-lock.el -> verilog-ext-font-lock.el
-    verilog-ext-formatter.el -> verilog-ext-formatter.el
-    verilog-ext-hierarchy.el -> verilog-ext-hierarchy.el
-    verilog-ext-hs.el -> verilog-ext-hs.el
-    verilog-ext-imenu.el -> verilog-ext-imenu.el
-    verilog-ext-lsp-bridge.el -> verilog-ext-lsp-bridge.el
-    verilog-ext-lsp.el -> verilog-ext-lsp.el
-    verilog-ext-lspce.el -> verilog-ext-lspce.el
-    verilog-ext-nav.el -> verilog-ext-nav.el
-    verilog-ext-ports.el -> verilog-ext-ports.el
-    verilog-ext-tags.el -> verilog-ext-tags.el
-    verilog-ext-template.el -> verilog-ext-template.el
-    verilog-ext-time-stamp.el -> verilog-ext-time-stamp.el
-    verilog-ext-typedef.el -> verilog-ext-typedef.el
-    verilog-ext-utils.el -> verilog-ext-utils.el
-    verilog-ext-which-func.el -> verilog-ext-which-func.el
-    verilog-ext-xref.el -> verilog-ext-xref.el
-    verilog-ext.el -> verilog-ext.el
-    snippets => snippets
-    langserver => langserver
-Created verilog-ext-20250821.1213.tar containing:
-  verilog-ext-20250821.1213/
-  verilog-ext-20250821.1213/langserver/
-  verilog-ext-20250821.1213/langserver/hdl-checker.json
-  verilog-ext-20250821.1213/langserver/svlangserver.json
-  verilog-ext-20250821.1213/langserver/svls.json
-  verilog-ext-20250821.1213/langserver/verible.json
-  verilog-ext-20250821.1213/langserver/veridian.json
-  verilog-ext-20250821.1213/snippets/
-  verilog-ext-20250821.1213/snippets/makefile-mode/
-  verilog-ext-20250821.1213/snippets/makefile-mode/verilog-template
-  verilog-ext-20250821.1213/snippets/uvm_agent/
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_agent.svh
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_agent_config.svh
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_agent_pkg.sv
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_driver.svh
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_driver_bfm.sv
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_if.sv
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_monitor.svh
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_monitor_bfm.sv
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_seq_item.svh
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_seq_lib.svh
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_sva.sv
-  verilog-ext-20250821.1213/snippets/uvm_agent/uvm_types.svh
-  verilog-ext-20250821.1213/snippets/verilog-mode/
-  verilog-ext-20250821.1213/snippets/verilog-mode/always
-  verilog-ext-20250821.1213/snippets/verilog-mode/always_comb
-  verilog-ext-20250821.1213/snippets/verilog-mode/always_ff
-  verilog-ext-20250821.1213/snippets/verilog-mode/always_latch
-  verilog-ext-20250821.1213/snippets/verilog-mode/assert
-  verilog-ext-20250821.1213/snippets/verilog-mode/assert_prop
-  verilog-ext-20250821.1213/snippets/verilog-mode/assign
-  verilog-ext-20250821.1213/snippets/verilog-mode/begin
-  verilog-ext-20250821.1213/snippets/verilog-mode/class
-  verilog-ext-20250821.1213/snippets/verilog-mode/clk_event
-  verilog-ext-20250821.1213/snippets/verilog-mode/clocking
-  verilog-ext-20250821.1213/snippets/verilog-mode/constraint
-  verilog-ext-20250821.1213/snippets/verilog-mode/covergroup
-  verilog-ext-20250821.1213/snippets/verilog-mode/display
-  verilog-ext-20250821.1213/snippets/verilog-mode/do-while
-  verilog-ext-20250821.1213/snippets/verilog-mode/else
-  verilog-ext-20250821.1213/snippets/verilog-mode/else-if
-  verilog-ext-20250821.1213/snippets/verilog-mode/final
-  verilog-ext-20250821.1213/snippets/verilog-mode/for
-  verilog-ext-20250821.1213/snippets/verilog-mode/foreach
-  verilog-ext-20250821.1213/snippets/verilog-mode/forever
-  verilog-ext-20250821.1213/snippets/verilog-mode/fork
-  verilog-ext-20250821.1213/snippets/verilog-mode/fork_any
-  verilog-ext-20250821.1213/snippets/verilog-mode/fork_none
-  verilog-ext-20250821.1213/snippets/verilog-mode/function
-  verilog-ext-20250821.1213/snippets/verilog-mode/generate
-  verilog-ext-20250821.1213/snippets/verilog-mode/if
-  verilog-ext-20250821.1213/snippets/verilog-mode/initial
-  verilog-ext-20250821.1213/snippets/verilog-mode/interface
-  verilog-ext-20250821.1213/snippets/verilog-mode/localparam
-  verilog-ext-20250821.1213/snippets/verilog-mode/logic
-  verilog-ext-20250821.1213/snippets/verilog-mode/logic_vector
-  verilog-ext-20250821.1213/snippets/verilog-mode/modport
-  verilog-ext-20250821.1213/snippets/verilog-mode/module
-  verilog-ext-20250821.1213/snippets/verilog-mode/module_param
-  verilog-ext-20250821.1213/snippets/verilog-mode/once
-  verilog-ext-20250821.1213/snippets/verilog-mode/package
-  verilog-ext-20250821.1213/snippets/verilog-mode/parameter
-  verilog-ext-20250821.1213/snippets/verilog-mode/program
-  verilog-ext-20250821.1213/snippets/verilog-mode/property
-  verilog-ext-20250821.1213/snippets/verilog-mode/repeat
-  verilog-ext-20250821.1213/snippets/verilog-mode/sequence
-  verilog-ext-20250821.1213/snippets/verilog-mode/star_comment
-  verilog-ext-20250821.1213/snippets/verilog-mode/task
-  verilog-ext-20250821.1213/snippets/verilog-mode/typedef
-  verilog-ext-20250821.1213/snippets/verilog-mode/uvm_component
-  verilog-ext-20250821.1213/snippets/verilog-mode/uvm_error
-  verilog-ext-20250821.1213/snippets/verilog-mode/uvm_fatal
-  verilog-ext-20250821.1213/snippets/verilog-mode/uvm_info
-  verilog-ext-20250821.1213/snippets/verilog-mode/uvm_object
-  verilog-ext-20250821.1213/snippets/verilog-mode/uvm_report
-  verilog-ext-20250821.1213/snippets/verilog-mode/uvm_typeid_create
-  verilog-ext-20250821.1213/snippets/verilog-mode/uvm_warning
-  verilog-ext-20250821.1213/snippets/verilog-mode/while
-  verilog-ext-20250821.1213/verilog-ext-beautify.el
-  verilog-ext-20250821.1213/verilog-ext-block-end-comments.el
-  verilog-ext-20250821.1213/verilog-ext-capf.el
-  verilog-ext-20250821.1213/verilog-ext-compile.el
-  verilog-ext-20250821.1213/verilog-ext-eglot.el
-  verilog-ext-20250821.1213/verilog-ext-flycheck.el
-  verilog-ext-20250821.1213/verilog-ext-font-lock.el
-  verilog-ext-20250821.1213/verilog-ext-formatter.el
-  verilog-ext-20250821.1213/verilog-ext-hierarchy.el
-  verilog-ext-20250821.1213/verilog-ext-hs.el
-  verilog-ext-20250821.1213/verilog-ext-imenu.el
-  verilog-ext-20250821.1213/verilog-ext-lsp-bridge.el
-  verilog-ext-20250821.1213/verilog-ext-lsp.el
-  verilog-ext-20250821.1213/verilog-ext-lspce.el
-  verilog-ext-20250821.1213/verilog-ext-nav.el
-  verilog-ext-20250821.1213/verilog-ext-pkg.el
-  verilog-ext-20250821.1213/verilog-ext-ports.el
-  verilog-ext-20250821.1213/verilog-ext-tags.el
-  verilog-ext-20250821.1213/verilog-ext-template.el
-  verilog-ext-20250821.1213/verilog-ext-time-stamp.el
-  verilog-ext-20250821.1213/verilog-ext-typedef.el
-  verilog-ext-20250821.1213/verilog-ext-utils.el
-  verilog-ext-20250821.1213/verilog-ext-which-func.el
-  verilog-ext-20250821.1213/verilog-ext-xref.el
-  verilog-ext-20250821.1213/verilog-ext.el
- ✓ Success:
-  2025-09-24T18:59:52+0000  verilog-ext-20250821.1213.entry
-  2025-09-24T18:59:52+0000  verilog-ext-20250821.1213.tar
-Built verilog-ext in 3.682s, finished at 2025-09-24T18:59:52+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://github.com/gmlarumbe/verilog-ext/': Failed to connect to github.com port 443 after 130232 ms: Couldn't connect to server
+
+Debugger entered--Lisp error: (error "Command `git fetch -f --tags origin' exited with n...")
+  error("%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
+  package-build--error(#<package-github-recipe package-github-recipe-158f292d4024> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-158f292d4024> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-158f292d4024>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-158f292d4024> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-158f292d4024>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (cond ((not noninteractive) (message " • %s package %s (from %s)..." (if package-build--inhibit-update "Fetching" "Building") name (if repo (format "%s:%s" fetcher repo) url))) (package-build-verbose (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  package-build-archive("verilog-ext")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"verilog-ext\")"))
+  command-line()
+  normal-top-level()
+
