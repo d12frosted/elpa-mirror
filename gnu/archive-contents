@@ -1017,7 +1017,7 @@
 		 (:url . "https://elpa.gnu.org/packages/dbus-codegen.html")
 		 (:commit . "4b0d8525943ebba797e1ebaf97fd9a608aef5ec1"))])
  (debbugs .
-	  [(0 44)
+	  [(0 45)
 	   ((emacs
 	     (26 1))
 	    (soap-client
@@ -1028,7 +1028,7 @@
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
 	    (:url . "https://elpa.gnu.org/packages/debbugs.html")
-	    (:commit . "4fde9fbcbd872b8c30f2e95c8c6513ae7578bdea"))])
+	    (:commit . "a6619cf88bd188ecc16ee755881247f320a41afc"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
@@ -2890,7 +2890,7 @@
 	     ("Augusto Stoffel" . "arstoffel@gmail.com"))
 	    (:commit . "db669451bbee7d2ea9872c28661c4679391b9644"))])
  (mathsheet .
-	    [(1 2)
+	    [(1 3)
 	     ((peg
 	       (1 0))
 	      (emacs
@@ -2901,7 +2901,7 @@
 	      (:maintainer "Ian Martins" . "ianxm@jhu.edu")
 	      (:authors
 	       ("Ian Martins" . "ianxm@jhu.edu"))
-	      (:commit . "344d10db24358c0974bdd9fffc2e3f8d960fbb07"))])
+	      (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode .
 	      [(6 3)
 	       ((emacs
@@ -4757,7 +4757,7 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "ffb7d656a2c89f86ccd2de51379de9612c7a4aa3"))])
  (tramp .
-	[(2 8 0 2)
+	[(2 8 0 3)
 	 ((emacs
 	   (28 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -4767,7 +4767,7 @@
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 	   ("Michael Albinus" . "michael.albinus@gmx.de"))
-	  (:commit . "01599cd23fff35b4f90f9125a02bb281fb141958"))])
+	  (:commit . "4f7278970eaecf096bb0a984191e71e7a49fa58e"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs

@@ -109,6 +109,10 @@ Mathsheet allows for the following customizations:
 -   **`mathsheet-output-directory`:** This is where worksheets should be
     written. It defaults to your home directory. You'll probably want to
     move it somewhere else.
+-   **`dired-guess-shell-alist-user`:** This is an existing variable that
+    comes with dired which can be used to configure which programs are
+    associated with various file types. When mathsheet tries to open the
+    new worksheet, this will determine which program is used.
 
 
 ### Problem Templates
@@ -214,7 +218,7 @@ format.
     ;; Author: Ian Martins <ianxm@jhu.edu>
     ;; Keywords: tools, education, math
     ;; Homepage: https://gitlab.com/ianxm/mathsheet
-    ;; Version: 1.2
+    ;; Version: 1.3
     ;; Package-Requires: ((peg "1.0")
     ;;                    (emacs "28.1"))
     
@@ -253,6 +257,8 @@ included in Emacs but we need to make sure they have been loaded.
     
     (declare-function math-read-expr "calc-ext")
     (declare-function calc-set-language "calc-lang")
+    (declare-function dired-do-shell-command "dired-aux")
+    (declare-function dired-guess-shell-command "dired-aux")
 
 
 ### Variables
@@ -321,6 +327,10 @@ scope where the macro is called.
     
     (defvar mathsheet--field-problems nil
       "The form record problems field.")
+
+In addition to these variables, we also use
+`dired-guess-shell-alist-user` to determine which program to use to open
+the generated PDF file.
 
 
 ## UI Form
@@ -533,15 +543,17 @@ This function is used to parse each problem row.
               ;; absolute path without extension
               (fname (concat
                       (file-name-as-directory mathsheet-output-directory)
-                      (string-replace " " "-" (alist-get :name config)))))
+                      (string-replace " " "-" (alist-get :name config))
+                      ".pdf")))
           (mathsheet--write-worksheet
            fname
            (alist-get :instr config)
            problems
            (alist-get :cols config))
-          (message "Wrote %s problems to %s.pdf"
+          (message "Wrote %s problems to %s"
                    (alist-get :count config)
-                   fname))))
+                   fname)
+          (mathsheet--open-worksheet fname))))
 
 
 ## Problem generation
@@ -985,7 +997,7 @@ of how each section is filled in is described below.
         (let* ((default-directory mathsheet-output-directory)
                (ret (shell-command-on-region
                      (point-min) (point-max)
-                     (format "groff -mm -e -Tpdf - > %s" (concat fname ".pdf")))))
+                     (format "groff -mm -e -Tpdf - > %s" fname))))
           (unless (eq ret 0)
             (error "PDF generation failed")))))
 
@@ -1043,7 +1055,7 @@ fill-problems:
          (unless (= index 0)
            (insert ".NCOL\n"))
          (dolist (row group)
-           (message "convert to eqn %s -> %s" (car row) (mathsheet--convert-to-eqn (car row)))
+           ;; (message "convert to eqn %s -> %s" (car row) (mathsheet--convert-to-eqn (car row)))
            (insert (format (if (nth 3 row)
                                ".LI\n.EQ\n%s\n.EN\n.SP \\n[vs]p\n"
                              ".LI\n.EQ\n%s =\n.EN\n\\l'5\\_'\n.SP \\n[vs]p\n")
@@ -1068,6 +1080,29 @@ fill-answers:
                  (mathsheet--convert-to-eqn (cadr row))
                  (if (< index (length problems)) "\",\"~" "")
                  (if (< index (length problems)) "\n" "")))))
+
+
+### Open new worksheet
+
+This opens the worksheet PDF file after it is written. This makes it
+easy to review and print.
+
+This uses `dired-do-shell-command` to open the file, and
+`dired-guess-shell-command` to choose the program to use to open the
+file. The file should be a PDF so the program should be a PDF
+viewer. This can be configured for the local system using the variable
+`dired-guess-shell-alist-user`.
+
+    (defun mathsheet--open-worksheet (fname)
+      "Open the worksheet FNAME.
+    
+    FNAME is the file to open, probably a worksheet."
+      (dired-do-shell-command
+       (dired-guess-shell-command
+        (format "Open %s with " fname)
+        (list fname))
+       nil
+       (list fname)))
 
 
 ## Convenience functions
