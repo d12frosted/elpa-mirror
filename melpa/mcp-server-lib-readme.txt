@@ -9,6 +9,7 @@ For users of MCP-enabled Emacs packages:
 
 Additional commands:
 - M-x mcp-server-lib-stop: Stop the MCP server
+- M-x mcp-server-lib-describe-setup: View registered tools and resources
 - M-x mcp-server-lib-show-metrics: View usage statistics
 - M-x mcp-server-lib-uninstall: Remove the stdio transport script
 
