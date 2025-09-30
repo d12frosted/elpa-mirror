@@ -2903,19 +2903,20 @@
 	       ("Ian Martins" . "ianxm@jhu.edu"))
 	      (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode .
-	      [(6 3)
+	      [(7 1 0)
 	       ((emacs
 		 (27 2)))
-	       "major mode for MATLAB(R) dot-m files" tar
+	       "Major mode for MATLAB(R) dot-m files" tar
 	       ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
 		(:keywords "matlab(r)")
 		(:maintainer
 		 ("Eric M. Ludlam" . "eludlam@mathworks.com")
-		 ("Uwe Brauer" . "oub@mat.ucm.es"))
+		 ("Uwe Brauer" . "oub@mat.ucm.es")
+		 ("John Ciolfi" . "john.ciolfi.32@gmail.com"))
 		(:authors
 		 ("Matt Wette" . "mwette@alumni.caltech.edu")
 		 ("Eric M. Ludlam" . "eludlam@mathworks.com"))
-		(:commit . "935137844e16551a5369f928d2591556be7fb9c2"))])
+		(:commit . "c5ce50ebe5c94fae0814278e7d7f50a7e271467d"))])
  (mct .
       [(1 1 0)
        ((emacs

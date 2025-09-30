@@ -6,18 +6,75 @@
 
   [MathWorks] MATLAB® and [GNU Emacs] integration:
 
-  1. matlab-mode for editing `*.m' files.
+  1. MATLAB mode, *matlab-ts-mode* or *matlab-mode*, for editing `*.m'
+     files.
 
      • Edit MATLAB code with syntax highlighting and smart indentation.
      • Lint MATLAB code with fix-it's using the MATLAB Code Analyzer.
 
-  2. `M-x matlab-shell' for running and debugging MATLAB within Emacs
-     (Unix-only).
+     The *matlab-ts-mode* is a more capable, performant, and accurate
+     than *matlab-mode*.
 
+  2. *Code navigation and more*
+
+     • The [MATLAB Language Server with Emacs], matlabls, provides code
+       navigation, code completion, go to definition, find references,
+       and more.
+
+     • Imenu support for quickly jumping to function declarations in the
+       current `*.m' or `*.tlc' file.  See [doc/matlab-imenu.org].
+
+  3. *M-x matlab-shell* for running and debugging MATLAB within Emacs
+      (Unix only).
+
+     • MATLAB command window errors are hyper-linked and files open in
+       Emacs
+     • Debugging support is available from the MATLAB menu.
      • matlab-shell uses company-mode for completions.
 
-  3. MATLAB and <http://orgmode.org> for creation of scientific papers,
-     theses, and documents.
+     See [doc/matlab-shell-for-unix.org]
+
+  4. *M-x matlab-shell* to run remote Unix MATLAB within your local
+      Emacs session.
+
+     ┌────
+     │ +----------------+                 +-----------------+
+     │ | Local Computer |                 | Remote Computer |
+     │ |                |<===============>|                 |
+     │ |     Emacs      |      ssh        |      MATLAB     |
+     │ +----------------+                 +-----------------+
+     └────
+
+     You use Emacs on your local computer to edit files on the remote
+     computer, run and debug remote MATLAB in a matlab-shell in your
+     local Emacs.  See [doc/remote-matlab-shell.org].
+
+  5. *M-x matlab-netshell* for running MATLAB code on Microsoft Windows
+     within Emacs using an attached MATLAB.
+
+     ┌────
+     │ +--------------- Emacs ----------------+         +------------  MATLAB  ------------+
+     │ |                                      |         |                                  |
+     │ | (1) M-x matlab-netshell-server-start |         | (2) connect to Emacs             |
+     │ |                                      |<=======>| >> addpath <matlab-mode>/toolbox |
+     │ | (3) Visit script *.m files and use   |         | >> emacsinit                     |
+     │ |     "MATLAB -> Code Sections" menu   |         | >>                               |
+     │ |     or the key bindings              |         |                                  |
+     │ +--------------------------------------+         +----------------------------------+
+     └────
+
+  6. *Code sections* support for MATLAB script files. See
+      [doc/matlab-code-sections.org].
+
+     • After visiting a MATLAB script, you have a *"MATLAB -> Code
+       Sections"* menu and key bindings which lets you navigate, run,
+       and move code sections.
+
+     • Try out code sections using:
+       [./examples/matlab-sections/tryout_matlabsection.m].
+
+  7. *Creation of scientific papers, theses, and documents* using MATLAB
+      and <http://orgmode.org>.
 
      • Org enables [literate programming] which directly supports
        reproducible research by allowing scientists and engineers to
@@ -35,13 +92,27 @@
        directory contains a [PDF] generated from
        [./examples/matlab-and-org-mode/matlab-and-org-mode.org].
 
-  4. tlc-mode for editing `*.tlc' files. The Target Language Compiler
+  8. *tlc-mode* for editing `*.tlc' files. The Target Language Compiler
      (TLC) is part of Simulink® Coder™.
 
 
 [MathWorks] <https://mathworks.com>
 
 [GNU Emacs] <https://www.gnu.org/software/emacs/>
+
+[MATLAB Language Server with Emacs]
+<file:doc/matlab-language-server-lsp-mode.org>
+
+[doc/matlab-imenu.org] <file:doc/matlab-imenu.org>
+
+[doc/matlab-shell-for-unix.org] <file:doc/matlab-shell-for-unix.org>
+
+[doc/remote-matlab-shell.org] <file:doc/remote-matlab-shell.org>
+
+[doc/matlab-code-sections.org] <file:doc/matlab-code-sections.org>
+
+[./examples/matlab-sections/tryout_matlabsection.m]
+<file:examples/matlab-sections/tryout_matlabsection.m>
 
 [literate programming]
 <https://en.wikipedia.org/wiki/Literate_programming>
@@ -57,53 +128,76 @@
 2 Installation
 ══════════════
 
-2.1 Install via MELPA
-─────────────────────
+  1. Install the MATLAB package via [MELPA] or [ELPA]. MELPA contains
+     the latest version.  To install from MELPA, add to your `~/.emacs'
 
-  Installing via [MELPA] is recommended because MELPA will contain the
-  latest validated release.
+     ┌────
+     │ (require 'package)
+     │ (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+     └────
 
-  Add to your `~/.emacs':
+     Restart Emacs and then
 
-  ┌────
-  │ (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-  └────
+     ┌────
+     │ M-x package-install RET matlab-mode RET
+     └────
 
-  then run
 
-  ┌────
-  │ M-x RET package-list-packages RET
-  └────
+     Note: to all available packages, `M-x RET list-packages RET'
+
+  2. [Optional] Install the `company' package which is used for TAB
+     completions.
+
+     ┌────
+     │ M-x package-install RET company RET
+     └────
+
+  3. [Optional] Install MATLAB tree-sitter for matlab-ts-mode, which
+     provides improved editing capabilities and improved performance.
+
+     The MATLAB tree-sitter leverages [Tree-sitter] to create a parse
+     tree for MATLAB code.  The parse tree is updated incrementally and
+     is robust to syntax errors. It is highly performant and achieves
+     this by being implemented in C to create a shared object that is
+     loaded into the Emacs process.  *matlab-ts-mode* leverages the
+     MATLAB tree-sitter to give an improved MATLAB editing experience
+     when compared with matlab-mode.
+
+     See [doc/install-matlab-tree-sitter-grammar.org]
+
+  4. [Optional] Install lsp-mode and the [MATLAB Language Server] for an
+     improved editing experience.
+
+  5. [Optional] Check your installation setup.
+
+     If you are using *matlab-ts-mode*, visit a `*.m' MATLAB file and
+     select the menu item:
+
+     ┌────
+     │ MATLAB -> Check setup
+     └────
 
 
 [MELPA] <https://melpa.org>
 
+[ELPA] <https://elpa.gnu.org/>
 
-2.2 Install from this repository
+[Tree-sitter] <https://tree-sitter.github.io/tree-sitter/>
+
+[doc/install-matlab-tree-sitter-grammar.org]
+<file:doc/install-matlab-tree-sitter-grammar.org>
+
+[MATLAB Language Server] <file:doc/matlab-language-server-lsp-mode.org>
+
+2.1 Install from this repository
 ────────────────────────────────
 
-  Build:
+  If you are contributing to the Emacs MATLAB Mode package, see
+  [contributing/install-emacs-matlab-from-git.org]
 
-  ┌────
-  │ cd /path/to/Emacs-MATLAB-mode
-  │ 
-  │ # Build lisp and run tests (requires MATLAB executable):
-  │ make
-  │ # Alternatively, build lisp and run tests using a specific MATLAB executable:
-  │ make MATLAB_EXE=/path/to/matlab
-  │ 
-  │ # If desired, you can separate the building of lisp and running tests using:
-  │ make lisp
-  │ make tests
-  │ make tests MATLAB_EXE=/path/to/matlab # if using a specific MATLAB executable
-  └────
 
-  Add the following to your `~/.emacs' file:
-
-  ┌────
-  │ (add-to-list 'load-path "/path/to/Emacs-MATLAB-mode")
-  │ (load-library "matlab-autoload")
-  └────
+[contributing/install-emacs-matlab-from-git.org]
+<file:contributing/install-emacs-matlab-from-git.org>
 
 
 3 MathWorks Products ([https://www.mathworks.com])
@@ -139,73 +233,24 @@
 6 FAQ
 ═════
 
-6.1 How do I customize matlab-mode?
-───────────────────────────────────
-
-  You can configure matlab-emacs using the "matlab" or "matlab-shell"
-  customization groups:
-
-  ┌────
-  │ Emacs -> Options -> Customize Emacs -> Specific Group
-  └────
+  See [doc/faq.org]
 
 
-6.2 How do I customize "edit file.m" behavior?
-──────────────────────────────────────────────
-
-  By default when you run
-
-  ┌────
-  │ M-x matlab-shell
-  │ 
-  │ >> edit file.m
-  └────
-
-  file.m will open in emacs using 'emacsclient -n'. matlab-shell achieve
-  this behavior by instructing MATLAB to use 'emacsclient -n' as the
-  external text editor.
-
-  You can customize this by setting `matlab-shell-emacsclient-command'
-  in the matlab-shell customization group. You can change this command
-  to what's appropriate. If you set it to the empty string, 'edit
-  file.m' will use the default MATLAB editor setting.
-
-  The default MATLAB editor setting is controlled in the MATLAB
-  preferences, (e.g. R2018a Home tab, Environment section, Preferences)
-  where you can select which editor you want to edit a text file. MATLAB
-  Editor or an external text editor. If you always want to use Emacs as
-  your matlab editor even when running MATLAB outside of emacs, select
-  Text editor and set it to the appropriate 'emacsclient -n' command.
+[doc/faq.org] <file:doc/faq.org>
 
 
-6.3 The code-sections are not highlighted properly. What do I do?
-─────────────────────────────────────────────────────────────────
+7 Mailing list
+══════════════
 
-  There can be several reasons for this. One reason would be if you are
-  using syntax highlighting from a different package (such as
-  tree-sitter) which is over-riding the font-lock provided by
-  matlab-mode.
+  <mailto:matlab-emacs-discuss@lists.sourceforge.net>
 
-  In this case, add the following hook to your config:
-  ┌────
-  │ (add-hook 'matlab-sections-mode-hook
-  │ 	(lambda () (interactive)
-  │ 	    (font-lock-add-keywords
-  │ 	   nil
-  │ 	   `((,matlab-sections-section-break-regexp
-  │ 		1 'matlab-sections-section-break-face prepend)))
-  │ 	    (font-lock-flush)))
-  └────
-  Ensure that this is included after matlab-mode as well as your syntax
-  highlighter are initialized in your config.
+  <https://sourceforge.net/projects/matlab-emacs/>
 
 
-7 History
-═════════
+8 Releases
+══════════
 
-  matlab-mode has a history dating back many years. Older contributions
-  can be found in [https://sourceforge.net/projects/matlab-emacs/].
+  See [NEWS.org]
 
 
-[https://sourceforge.net/projects/matlab-emacs/]
-<https://sourceforge.net/projects/matlab-emacs/>
+[NEWS.org] <file:NEWS.org>

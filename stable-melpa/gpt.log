@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/stuhlmueller/gpt.el
 
 Updating /mnt/store/melpa/working/gpt/
-Checking out 1be47d4e3c0310d061d0a0d8178bf074f78b7749
+Checking out bd10b618af9b50a678bd992eb8a22a64053e2134
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gpt/
-  to /tmp/gptuNi7nU/gpt-20250920.2043
+  to /tmp/gpt72tv9k/gpt-20250929.1735
     gpt-api.el -> gpt-api.el
     gpt-core.el -> gpt-core.el
     gpt-mode.el -> gpt-mode.el
@@ -23,35 +23,35 @@ Copying files (->) and directories (=>)
   ! providers/test_common.py -> test_common.py
   ! providers/test_google_provider.py -> test_google_provider.py
   ! providers/test_openai_provider.py -> test_openai_provider.py
-Created gpt-20250920.2043.tar containing:
-  gpt-20250920.2043/
-  gpt-20250920.2043/__init__.py
-  gpt-20250920.2043/anthropic_provider.py
-  gpt-20250920.2043/common.py
-  gpt-20250920.2043/google_provider.py
-  gpt-20250920.2043/gpt-api.el
-  gpt-20250920.2043/gpt-core.el
-  gpt-20250920.2043/gpt-mode.el
-  gpt-20250920.2043/gpt-pkg.el
-  gpt-20250920.2043/gpt-ui.el
-  gpt-20250920.2043/gpt.el
-  gpt-20250920.2043/gpt.py
-  gpt-20250920.2043/openai_provider.py
-  gpt-20250920.2043/providers/
-  gpt-20250920.2043/providers/__init__.py
-  gpt-20250920.2043/providers/anthropic_provider.py
-  gpt-20250920.2043/providers/common.py
-  gpt-20250920.2043/providers/google_provider.py
-  gpt-20250920.2043/providers/openai_provider.py
-  gpt-20250920.2043/providers/test_anthropic_provider.py
-  gpt-20250920.2043/providers/test_common.py
-  gpt-20250920.2043/providers/test_google_provider.py
-  gpt-20250920.2043/providers/test_openai_provider.py
-  gpt-20250920.2043/test_anthropic_provider.py
-  gpt-20250920.2043/test_common.py
-  gpt-20250920.2043/test_google_provider.py
-  gpt-20250920.2043/test_openai_provider.py
+Created gpt-20250929.1735.tar containing:
+  gpt-20250929.1735/
+  gpt-20250929.1735/__init__.py
+  gpt-20250929.1735/anthropic_provider.py
+  gpt-20250929.1735/common.py
+  gpt-20250929.1735/google_provider.py
+  gpt-20250929.1735/gpt-api.el
+  gpt-20250929.1735/gpt-core.el
+  gpt-20250929.1735/gpt-mode.el
+  gpt-20250929.1735/gpt-pkg.el
+  gpt-20250929.1735/gpt-ui.el
+  gpt-20250929.1735/gpt.el
+  gpt-20250929.1735/gpt.py
+  gpt-20250929.1735/openai_provider.py
+  gpt-20250929.1735/providers/
+  gpt-20250929.1735/providers/__init__.py
+  gpt-20250929.1735/providers/anthropic_provider.py
+  gpt-20250929.1735/providers/common.py
+  gpt-20250929.1735/providers/google_provider.py
+  gpt-20250929.1735/providers/openai_provider.py
+  gpt-20250929.1735/providers/test_anthropic_provider.py
+  gpt-20250929.1735/providers/test_common.py
+  gpt-20250929.1735/providers/test_google_provider.py
+  gpt-20250929.1735/providers/test_openai_provider.py
+  gpt-20250929.1735/test_anthropic_provider.py
+  gpt-20250929.1735/test_common.py
+  gpt-20250929.1735/test_google_provider.py
+  gpt-20250929.1735/test_openai_provider.py
  ✓ Success:
-  2025-09-29T16:03:56+0000  gpt-20250920.2043.entry
-  2025-09-29T16:03:56+0000  gpt-20250920.2043.tar
-Built gpt in 3.675s, finished at 2025-09-29T16:03:57+0000
+  2025-09-29T23:08:14+0000  gpt-20250929.1735.entry
+  2025-09-29T23:08:14+0000  gpt-20250929.1735.tar
+Built gpt in 3.442s, finished at 2025-09-29T23:08:15+0000
