@@ -3567,15 +3567,17 @@
 	      ("Harald Jörg" . "haj@posteo.de"))
 	     (:commit . "9ac4eeb55b554601c2f0205f099645806a05dc82"))])
  (persist .
-	  [(0 6 1)
+	  [(0 7)
 	   ((emacs
-	     (26 1)))
+	     (26 1))
+	    (compat
+	     (30 0 2 0)))
 	   "Persist Variables between Emacs Sessions" tar
 	   ((:maintainer "Joseph Turner" . "persist-el@breatheoutbreathe.in")
 	    (:authors
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
-	    (:commit . "5ea8f32ef50ce2b444d6918e17eedce9f74629af"))])
+	    (:commit . "eeb48ef6d8dc940fbcd3782cc9c19a42ac1b0a3f"))])
  (phpinspect .
 	     [(3 0 1)
 	      ((compat
