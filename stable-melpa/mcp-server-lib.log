@@ -3,24 +3,26 @@ Fetcher: github
 Source:  https://github.com/laurynas-biveinis/mcp-server-lib.el
 
 Updating /mnt/store/melpa/working/mcp-server-lib/
-Checking out de56935d7ac05317e9663b34170a9759d68cbdd9
+Checking out 090d63ccb0a4e31f8761e2e60dcd3de425584089
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mcp-server-lib/
-  to /tmp/mcp-server-libxzwylq/mcp-server-lib-20250929.728
+  to /tmp/mcp-server-lib9ctGOc/mcp-server-lib-20250930.1506
     mcp-server-lib-commands.el -> mcp-server-lib-commands.el
     mcp-server-lib-ert.el -> mcp-server-lib-ert.el
     mcp-server-lib-metrics.el -> mcp-server-lib-metrics.el
     mcp-server-lib.el -> mcp-server-lib.el
     emacs-mcp-stdio.sh -> emacs-mcp-stdio.sh
-Created mcp-server-lib-20250929.728.tar containing:
-  mcp-server-lib-20250929.728/
-  mcp-server-lib-20250929.728/emacs-mcp-stdio.sh
-  mcp-server-lib-20250929.728/mcp-server-lib-commands.el
-  mcp-server-lib-20250929.728/mcp-server-lib-ert.el
-  mcp-server-lib-20250929.728/mcp-server-lib-metrics.el
-  mcp-server-lib-20250929.728/mcp-server-lib-pkg.el
-  mcp-server-lib-20250929.728/mcp-server-lib.el
+Created mcp-server-lib-20250930.1506.tar containing:
+  mcp-server-lib-20250930.1506/
+  mcp-server-lib-20250930.1506/emacs-mcp-stdio.sh
+  mcp-server-lib-20250930.1506/mcp-server-lib-commands.el
+  mcp-server-lib-20250930.1506/mcp-server-lib-ert.el
+  mcp-server-lib-20250930.1506/mcp-server-lib-metrics.el
+  mcp-server-lib-20250930.1506/mcp-server-lib-pkg.el
+  mcp-server-lib-20250930.1506/mcp-server-lib.el
  ✓ Success:
-  2025-09-30T10:53:48+0000  mcp-server-lib-20250929.728.entry
-  2025-09-30T10:53:48+0000  mcp-server-lib-20250929.728.tar
-Built mcp-server-lib in 2.615s, finished at 2025-09-30T10:53:49+0000
+  2025-09-30T13:11:15+0000  mcp-server-lib-20250930.1050.entry
+  2025-09-30T13:11:15+0000  mcp-server-lib-20250930.1050.tar
+  2025-09-30T15:30:40+0000  mcp-server-lib-20250930.1506.entry
+  2025-09-30T15:30:40+0000  mcp-server-lib-20250930.1506.tar
+Built mcp-server-lib in 5.802s, finished at 2025-09-30T15:30:41+0000
