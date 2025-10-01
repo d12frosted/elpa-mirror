@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/meedstrom/org-mem
 
 Updating /mnt/store/melpa/working/org-mem/
-Checking out cc93a19ee9b51f216f58c8c59a99766395f97830
+Checking out bc52b62723c9d4661a0f44879953a4a09cc8f011
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-mem/
-  to /tmp/org-memjJ0KMN/org-mem-20250925.1621
+  to /tmp/org-memdS7QQW/org-mem-20251001.1103
     org-mem-db1.el -> org-mem-db1.el
     org-mem-list.el -> org-mem-list.el
     org-mem-parser.el -> org-mem-parser.el
@@ -20,23 +20,27 @@ Copying files (->) and directories (=>)
   ! lisp/indexed-x.el -> indexed-x.el
   ! lisp/indexed.el -> indexed.el
   ! lisp/org-mem-x.el -> org-mem-x.el
-Created org-mem-20250925.1621.tar containing:
-  org-mem-20250925.1621/
-  org-mem-20250925.1621/indexed-list.el
-  org-mem-20250925.1621/indexed-org-parser.el
-  org-mem-20250925.1621/indexed-orgdb.el
-  org-mem-20250925.1621/indexed-roam.el
-  org-mem-20250925.1621/indexed-x.el
-  org-mem-20250925.1621/indexed.el
-  org-mem-20250925.1621/org-mem-db1.el
-  org-mem-20250925.1621/org-mem-list.el
-  org-mem-20250925.1621/org-mem-parser.el
-  org-mem-20250925.1621/org-mem-pkg.el
-  org-mem-20250925.1621/org-mem-roamy.el
-  org-mem-20250925.1621/org-mem-updater.el
-  org-mem-20250925.1621/org-mem-x.el
-  org-mem-20250925.1621/org-mem.el
+    org-mem.texi -> org-mem.texi
+Generating org-mem.info
+Created org-mem-20251001.1103.tar containing:
+  org-mem-20251001.1103/
+  org-mem-20251001.1103/dir
+  org-mem-20251001.1103/indexed-list.el
+  org-mem-20251001.1103/indexed-org-parser.el
+  org-mem-20251001.1103/indexed-orgdb.el
+  org-mem-20251001.1103/indexed-roam.el
+  org-mem-20251001.1103/indexed-x.el
+  org-mem-20251001.1103/indexed.el
+  org-mem-20251001.1103/org-mem-db1.el
+  org-mem-20251001.1103/org-mem-list.el
+  org-mem-20251001.1103/org-mem-parser.el
+  org-mem-20251001.1103/org-mem-pkg.el
+  org-mem-20251001.1103/org-mem-roamy.el
+  org-mem-20251001.1103/org-mem-updater.el
+  org-mem-20251001.1103/org-mem-x.el
+  org-mem-20251001.1103/org-mem.el
+  org-mem-20251001.1103/org-mem.info
  ✓ Success:
-  2025-10-01T10:06:53+0000  org-mem-20250925.1621.entry
-  2025-10-01T10:06:53+0000  org-mem-20250925.1621.tar
-Built org-mem in 3.646s, finished at 2025-10-01T10:06:54+0000
+  2025-10-01T14:42:48+0000  org-mem-20251001.1103.entry
+  2025-10-01T14:42:48+0000  org-mem-20251001.1103.tar
+Built org-mem in 5.152s, finished at 2025-10-01T14:42:49+0000
