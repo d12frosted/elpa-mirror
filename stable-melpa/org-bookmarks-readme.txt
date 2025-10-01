@@ -7,7 +7,7 @@ Usage
   :custom ((org-bookmarks-file "~/Org/Bookmarks/Bookmarks.org")
            (org-bookmarks-add-org-capture-template t))
   :commands (org-bookmarks)
-  :init (org-bookmarks-add-org-capture-template))
+  :hook (emacs-startup . org-bookmarks-add-to-org-capture-templates))
 
 1. Record bookmark information into Org mode file.
 
