@@ -1,4 +1,4 @@
-A minimal interface to [[https://github.com/git-bug/][git-bug]] for EMACS.
+A minimal interface to git-bug (https://github.com/git-bug/).
 
 This package provides a =completing-read= menu to match existing bugs
 and another menu to act on a bug.
