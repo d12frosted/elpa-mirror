@@ -39,6 +39,15 @@ Usage:
 (russian-calendar-fix-list-holidays)
 (russian-calendar-check-year-not-obsolate)
 
+Other packages:
+- Navigation in Dired, Packages, Buffers modes https://github.com/Anoncheg1/firstly-search
+- Search with Chinese			https://github.com/Anoncheg1/pinyin-isearch
+- Ediff fix					https://github.com/Anoncheg1/ediffnw
+- Dired history				https://github.com/Anoncheg1/dired-hist
+- Selected window contrast			https://github.com/Anoncheg1/selected-window-contrast
+- Copy link to clipboard			https://github.com/Anoncheg1/org-links
+- Solution for "callback hell"		https://github.com/Anoncheg1/emacs-async1
+
 *DONATE MONEY*:
 You can sponsor author directly with crypto currencies:
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25

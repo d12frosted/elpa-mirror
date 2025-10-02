@@ -18,11 +18,12 @@ Example TinTin++ code this mode highlights:
   }
 
 Features:
+- Enhanced indentation that handles empty lines and nested blocks
+- Context-aware completion for commands, variables, and functions
+- Smart newline handling for brace pairs
 - Syntax highlighting for TinTin++ commands, variables, and functions
-- Proper indentation with customizable offset
 - Comment support (#nop commands)
 - Imenu integration for navigation to functions and variables
 - Electric pair insertion for braces and parentheses
 - Outline mode support for code folding
-- Command completion for TinTin++ keywords
 - Which-function-mode support
