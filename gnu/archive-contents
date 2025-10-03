@@ -4189,16 +4189,16 @@
 	    (:url . "https://elpa.gnu.org/packages/shelisp.html")
 	    (:commit . "32f91342f0039aa0e78a032b5b2a651ed5b1b79e"))])
  (shell-command+ .
-		 [(2 4 2)
+		 [(2 5 0)
 		  ((emacs
 		    (24 3)))
 		  "An extended shell-command" tar
-		  ((:url . "https://git.sr.ht/~pkal/shell-command-plus")
+		  ((:url . "https://codeberg.org/pkal/shell-command-plus.el")
 		   (:keywords "unix" "processes" "convenience")
-		   (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
+		   (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
 		   (:authors
 		    ("Philip Kaludercic" . "philipk@posteo.net"))
-		   (:commit . "7121adb48e6fb5f03030701b9f1e25b929cb3cd3"))])
+		   (:commit . "8388de44c488106a53913e7028b0e3f3859982bb"))])
  (shen-mode .
 	    [(0 1)
 	     nil "A major mode for editing shen source code" tar

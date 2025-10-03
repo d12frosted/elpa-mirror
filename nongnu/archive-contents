@@ -1504,11 +1504,11 @@
 	     ("Akib Azmain Turja" . "akib@disroot.org"))
 	    (:commit . "3f43991f747edcf7ed5782e7b2f68dab24574ae0"))])
  (j-mode .
-	 [(2 0 1)
+	 [(2 0 2)
 	  nil "Major mode for editing J programs" tar
-	  ((:url . "http://github.com/ldbeth/j-mode")
-	   (:keywords "j" "langauges")
-	   (:commit . "65753691027760178f60efa2dec850d372ae931b"))])
+	  ((:url . "http://github.com/zellio/j-mode")
+	   (:keywords "j" "languages")
+	   (:commit . "1365e5a3fe772609685b3787bbd2960331c1a02f"))])
  (jade-mode .
 	    [(1 0 1)
 	     nil "Major mode for editing .jade files" tar
