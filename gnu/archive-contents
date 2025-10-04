@@ -4636,6 +4636,16 @@
 	   (:authors
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	   (:commit . "aa0f6fab4013d4661c34f9352531ceac1f0973a8"))])
+ (termint .
+	  [(0 1 1)
+	   ((emacs
+	     (29 1)))
+	   "Run REPLs in a terminal backend" tar
+	   ((:url . "https://github.com/milanglacier/termint.el")
+	    (:maintainer "Milan Glacier" . "dev@milanglacier.com")
+	    (:authors
+	     ("Milan Glacier" . "dev@milanglacier.com"))
+	    (:commit . "7d265907a960f7e0fab84a107185228860351f54"))])
  (test-simple .
 	      [(1 3 0)
 	       ((cl-lib
