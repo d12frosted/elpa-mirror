@@ -6,6 +6,9 @@ latter must be loaded first - see the above URL for more info.
 
 ; News
 
+0.2.6
+- Added grep as an option for the search. It works but is much slower.
+
 0.2.5
 - Breaking changes: the user should now activate `cuckoo-search-global-mode'
 prior to running cuckoo-search
