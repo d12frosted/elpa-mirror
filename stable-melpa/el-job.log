@@ -3,18 +3,30 @@ Fetcher: github
 Source:  https://github.com/meedstrom/el-job
 
 Updating /mnt/store/melpa/working/el-job/
-Checking out 00f7372c1999400e73c9927161f8afba3360ea62
+Checking out 1a85e885bac1ed90108d7d23d12cc4aab4b0d05e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/el-job/
-  to /tmp/el-job3y40Jp/el-job-20250919.1619
+  to /tmp/el-jobhGX0N4/el-job-20251006.1507
     el-job-child.el -> el-job-child.el
+    el-job-ng.el -> el-job-ng.el
+    el-job-old-child.el -> el-job-old-child.el
+    el-job-old.el -> el-job-old.el
     el-job.el -> el-job.el
-Created el-job-20250919.1619.tar containing:
-  el-job-20250919.1619/
-  el-job-20250919.1619/el-job-child.el
-  el-job-20250919.1619/el-job-pkg.el
-  el-job-20250919.1619/el-job.el
+    el-job.texi -> el-job.texi
+Generating el-job.info
+Created el-job-20251006.1507.tar containing:
+  el-job-20251006.1507/
+  el-job-20251006.1507/dir
+  el-job-20251006.1507/el-job-child.el
+  el-job-20251006.1507/el-job-ng.el
+  el-job-20251006.1507/el-job-old-child.el
+  el-job-20251006.1507/el-job-old.el
+  el-job-20251006.1507/el-job-pkg.el
+  el-job-20251006.1507/el-job.el
+  el-job-20251006.1507/el-job.info
  ✓ Success:
-  2025-10-06T11:00:18+0000  el-job-20250919.1619.entry
-  2025-10-06T11:00:18+0000  el-job-20250919.1619.tar
-Built el-job in 3.726s, finished at 2025-10-06T11:00:19+0000
+  2025-10-06T13:20:08+0000  el-job-20251006.1313.entry
+  2025-10-06T13:20:08+0000  el-job-20251006.1313.tar
+  2025-10-06T15:39:53+0000  el-job-20251006.1507.entry
+  2025-10-06T15:39:53+0000  el-job-20251006.1507.tar
+Built el-job in 5.393s, finished at 2025-10-06T15:39:54+0000

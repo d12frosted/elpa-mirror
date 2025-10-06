@@ -9,12 +9,12 @@ current Emacs does not hang at all.
 You do need to grok the concept of a callback.
 
 Public API:
-- Function `el-job-launch' (main entry point)
-- Function `el-job-await'
-- Function `el-job-is-busy'
-- Variable `el-job-major-version'
+- Function `el-job-old-launch' (main entry point)
+- Function `el-job-old-await'
+- Function `el-job-old-is-busy'
+- Variable `el-job-old-major-version'
 
 Dev tools:
-- Command `el-job-cycle-debug-level'
-- Command `el-job-show-info'
-- Command `el-job-kill-all'
+- Command `el-job-old-cycle-debug-level'
+- Command `el-job-old-show-info'
+- Command `el-job-old-kill-all'
