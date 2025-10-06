@@ -11,11 +11,11 @@ options for `tmr' (or TMR, TMR May Ring, …), and provides every other
 piece of information pertinent to it.  The name of the package is
 pronounced as “timer” or “T-M-R”.
 
-The documentation furnished herein corresponds to stable version 1.1.0,
-released on 2025-04-18.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.2.0,
+released on 2025-10-06.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.2.0-dev.
+Current development target is 1.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `tmr'
 ⁃ Official manual: <https://protesilaos.com/emacs/tmr>
@@ -31,9 +31,10 @@ Table of Contents
 1. COPYING
 2. Overview
 .. 1. Grid or tabulated view
-.. 2. Hooks
-.. 3. Sound and desktop notifications
-.. 4. Minibuffer histories
+.. 2. Display timers on the mode line
+.. 3. Hooks
+.. 4. Sound and desktop notifications
+.. 5. Minibuffer histories
 3. Installation
 .. 1. GNU ELPA package
 .. 2. Manual installation
@@ -170,9 +171,9 @@ Table of Contents
 
 [Grid view] See section 2.1
 
-[Hooks] See section 2.2
+[Hooks] See section 2.3
 
-[Sound and desktop notifications] See section 2.3
+[Sound and desktop notifications] See section 2.4
 
 [Sample configuration] See section 4
 
@@ -184,15 +185,15 @@ Table of Contents
   buffer and looks like this:
 
   ┌────
-  │ Start      End        Remaining  Description
-  │ 10:11:49   10:11:54   ✔
-  │ 10:11:36   10:31:36   19m 35s
-  │ 10:11:32   10:26:32   14m 31s    Yet another test
-  │ 10:11:16   10:21:16   9m 14s     Testing how it works
+  │ Start      End        Duration   Remaining  Acknowlegde?   Description
+  │ 
+  │ 10:26:05   10:36:05   10m        9m 45s                    Prepare tea
+  │ 10:25:50   10:30:50   5m         4m 31s     Yes            Test the feature
+  │ 10:25:04   10:35:04   10m        8m 44s
   └────
 
   If a timer has elapsed, it has a check mark associated with it,
-  otherwise the `Remaining' column shows the time left.  A `Description'
+  otherwise the `Remaining' column shows the time left. A `Description'
   is shown only if it is provided while setting the timer, otherwise the
   field is left blank.
 
@@ -226,8 +227,64 @@ Table of Contents
   `tmr-tabulated-view' requires the buffer it should use and the
   concomitant action alist.
 
+  Faces used in the tabulated view:
 
-2.2 Hooks
+  `tmr-tabulated-start-time'
+        The time the timer started.
+
+  `tmr-tabulated-end-time'
+        The time the timer will end.
+
+  `tmr-tabulated-remaining-time'
+        The timer’s remaining time.
+
+  `tmr-tabulated-acknowledgement'
+        Whether the timer needs to be acknowledged.
+
+  `tmr-tabulated-description'
+        The description of the timer.
+
+
+2.2 Display timers on the mode line
+───────────────────────────────────
+
+  The `tmr-mode-line-mode' is a minor mode that displays running timers
+  on the mode line. Specifically, the timers are shown as part of the
+  `global-mode-string'. This means that they may be displayed on the
+  `tab-bar-mode' instead of the mode line if the user option
+  `tab-bar-format' is configured accordingly.
+
+  The user option `tmr-mode-line-format' controls how the timers are
+  rendered. This is a string that treats specially the `%r' and `%d'
+  specifiers. The `%r' represents the remaining time, while `%d' is the
+  description of the timer.
+
+  The user option `tmr-mode-line-max-desc-length' sets the maximum
+  length of a timers description, when the `tmr-mode-line-format' is
+  configured to show descriptions.
+
+  The user option `tmr-mode-line-max-timers' sets the maximum number of
+  running timers that are shown on the mode line at any one time.
+
+  The user option `tmr-mode-line-separator' specifies a string that is
+  inserted between timers on the mode line to visually separate them.
+
+  The user option `tmr-mode-line-prefix' specifies a string that is
+  prepended to the indicator with all the running timers.
+
+  Applicable faces for this case are:
+
+  `tmr-mode-line-active'
+        Any active timer.
+
+  `tmr-mode-line-soon'
+        A timer that expires within 2 minutes.
+
+  `tmr-mode-line-urgent'
+        A timer that expires within 30 seconds.
+
+
+2.3 Hooks
 ─────────
 
   TMR provides the following hooks:
@@ -250,10 +307,10 @@ Table of Contents
         in the echo area describing the timer that was cancelled.
 
 
-[Sound and desktop notifications] See section 2.3
+[Sound and desktop notifications] See section 2.4
 
 
-2.3 Sound and desktop notifications
+2.4 Sound and desktop notifications
 ───────────────────────────────────
 
   Once the timer has run its course, it produces a desktop notification
@@ -277,7 +334,7 @@ Table of Contents
   available, TMR will issue a warning informing the user accordingly.
 
 
-2.4 Minibuffer histories
+2.5 Minibuffer histories
 ────────────────────────
 
   TMR defines two variables that store user input:
@@ -387,10 +444,12 @@ Table of Contents
   TMR is meant to be a collective effort.  Every bit of help matters.
 
   Authors
-        Protesilaos Stavrou (maintainer), Damien Cassou, Daniel Mendler.
+        Protesilaos Stavrou (maintainer), Damien Cassou, Daniel Mendler,
+        Steven Allen.
 
   Contributions to the code or manual
-        Christian Tietze, Ed Tavinor, Nathan R. DeGruchy.
+        Christian Tietze, Ed Tavinor, Eugene Mikhaylov, Lucas Quintana,
+        Mirko Hernandez, Nathan R.  DeGruchy, jpg.
 
 
 7 GNU Free Documentation License
