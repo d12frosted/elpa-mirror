@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/ahyatt/ekg
 
 Updating /mnt/store/melpa/working/ekg/
-Checking out 2945f755bda32993add3c1700db9516027ef8bc8
+Checking out 48f6188a6c7661ef8b5094d434b8c6b442d8d7de
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgnkfSNg/ekg-20251005.1815
+  to /tmp/ekg3rpPCW/ekg-20251006.437
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-denote.el -> ekg-denote.el
     ekg-embedding.el -> ekg-embedding.el
@@ -19,21 +19,23 @@ Copying files (->) and directories (=>)
   ! doc/ekg.texi -> ekg.texi
 Generating doclicense.info
 Generating ekg.info
-Created ekg-20251005.1815.tar containing:
-  ekg-20251005.1815/
-  ekg-20251005.1815/dir
-  ekg-20251005.1815/doclicense.info
-  ekg-20251005.1815/ekg-auto-save.el
-  ekg-20251005.1815/ekg-denote.el
-  ekg-20251005.1815/ekg-embedding.el
-  ekg-20251005.1815/ekg-llm.el
-  ekg-20251005.1815/ekg-logseq.el
-  ekg-20251005.1815/ekg-org-roam.el
-  ekg-20251005.1815/ekg-pkg.el
-  ekg-20251005.1815/ekg-test-utils.el
-  ekg-20251005.1815/ekg.el
-  ekg-20251005.1815/ekg.info
+Created ekg-20251006.437.tar containing:
+  ekg-20251006.437/
+  ekg-20251006.437/dir
+  ekg-20251006.437/doclicense.info
+  ekg-20251006.437/ekg-auto-save.el
+  ekg-20251006.437/ekg-denote.el
+  ekg-20251006.437/ekg-embedding.el
+  ekg-20251006.437/ekg-llm.el
+  ekg-20251006.437/ekg-logseq.el
+  ekg-20251006.437/ekg-org-roam.el
+  ekg-20251006.437/ekg-pkg.el
+  ekg-20251006.437/ekg-test-utils.el
+  ekg-20251006.437/ekg.el
+  ekg-20251006.437/ekg.info
  ✓ Success:
   2025-10-06T04:04:01+0000  ekg-20251005.1815.entry
   2025-10-06T04:04:01+0000  ekg-20251005.1815.tar
-Built ekg in 5.996s, finished at 2025-10-06T04:04:02+0000
+  2025-10-06T06:23:23+0000  ekg-20251006.437.entry
+  2025-10-06T06:23:23+0000  ekg-20251006.437.tar
+Built ekg in 5.948s, finished at 2025-10-06T06:23:24+0000
