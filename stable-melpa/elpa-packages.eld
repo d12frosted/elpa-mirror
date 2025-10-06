@@ -892,7 +892,7 @@
   (cp5022x :url "https://github.com/awasira/cp5022x.el")
   (cpanfile-mode :url "https://github.com/zakame/cpanfile-mode")
   (cpp-auto-include :url "https://github.com/emacsorphanage/cpp-auto-include")
-  (cppinsights :url "https://github.com/chrischen3121/cppinsights.el")
+  (cppinsights :url "https://github.com/ignity21/cppinsights.el")
   (cpputils-cmake :url "https://github.com/redguardtoo/cpputils-cmake")
   (cpu-sos :url "https://github.com/oitofelix/cpu-sos")
   (cql-mode :url "https://github.com/Yuki-Inoue/cql-mode")
