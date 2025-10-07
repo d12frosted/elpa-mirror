@@ -161,7 +161,7 @@
   If for some reason you reauthenticate, you'll need to either remove
   the entry in your auth sources file, or manually update the token in
   it after doing so, as mastodon.el is unable to reliably update (or
-  even remove) entires.
+  even remove) entries.
 
   The format for a mastodon.el auth source entry is as follows:
 
@@ -169,7 +169,8 @@
 
   with the token being what you copy from the browser when
   authenticating.  If you have `auth-source-save-behavior' set to nil,
-  you'll also need to add such an entry manually.
+  you'll also need to add such an entry manually. Moreover, you should
+  ensure that your `auth-sources' file is actually writable.
 
   Finally, if you find you're asked for your key passphrase too often
   while authenticating, consider setting `epa-file-encrypt-to' (for
@@ -535,6 +536,13 @@
   <https://sachachua.com/dotemacs/index.html#mastodon>.
 
 
+◊ 1.2.8.6 syntax highlighting in posts
+
+  If you would like to have syntax highlighting when viewing posts
+  containing code (provided it is in `<pre>' tags), consider installing
+  <https://github.com/xuchunyang/shr-tag-pre-highlight.el>.
+
+
 1.2.9 Live-updating timelines: `mastodon-async-mode'
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
@@ -713,9 +721,15 @@
 ────────────────────────────
 
   If you'd like to support continued development of `mastodon.el', I
-  accept donations via paypal: [paypal.me/martianh]. If you would prefer
-  a different payment method, please write to me at <mousebot {at}
-  disroot.org> and I can provide IBAN or other bank account details.
+  accept donations via paypal: [paypal.me/martianh].
+
+  I also accept support via liberapay:
+
+
+
+  If you would prefer a different payment method, please write to me at
+  <mousebot {at} disroot.org> and I can provide IBAN or other bank
+  account details.
 
   I don't have a tech worker's income, so even a small tip would help
   out.

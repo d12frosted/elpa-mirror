@@ -1506,7 +1506,7 @@
 	   ("João Távora" . "joaotavora@gmail.com"))
 	  (:commit . "49f449bb5bc90bc1eca6b4a1f013d4c0b5460d65"))])
  (el-job .
-	 [(2 4 8)
+	 [(2 5 2)
 	  ((emacs
 	    (29 1)))
 	  "Contrived way to call a function using all CPU cores" tar
@@ -1515,7 +1515,7 @@
 	   (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
 	   (:authors
 	    ("Martin Edström" . "meedstrom@runbox.eu"))
-	   (:commit . "6520508920acca44be090bd655ad943751e20ef1"))])
+	   (:commit . "ba82d46d96cf97f47adaf8afd72f28802d208b4d"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs
@@ -4813,7 +4813,7 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 10 0)
+	    [(0 10 1)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -4826,7 +4826,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "1d109f34b7c6af7af830c141bb0a3b4d33803e75"))])
+	      (:commit . "053d56e4de2dd78bf32f7af7ed5f289a91cdb6ac"))])
  (transient-cycles .
 		   [(2 0)
 		    ((emacs

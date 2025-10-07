@@ -1656,7 +1656,7 @@
 	       ("Jon Oddie" . "j.j.oddie@gmail.com"))
 	      (:commit . "8e8487712d150178be7297604d0f47fd036a6d8d"))])
  (magit .
-	[(4 4 0)
+	[(4 4 2)
 	 ((emacs
 	   (28 1))
 	  (compat
@@ -1682,9 +1682,9 @@
 	  (:authors
 	   ("Marius Vollmer" . "marius.vollmer@gmail.com")
 	   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-	  (:commit . "dc0094bd88a5307fdfa1c2a48f3ec5b33891f1f0"))])
+	  (:commit . "b828afbb4b45641998fb6483a08effb1efb214e1"))])
  (magit-section .
-		[(4 4 0)
+		[(4 4 2)
 		 ((emacs
 		   (28 1))
 		  (compat
@@ -1701,7 +1701,7 @@
 		  (:maintainer "Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev")
 		  (:authors
 		   ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-		  (:commit . "dc0094bd88a5307fdfa1c2a48f3ec5b33891f1f0"))])
+		  (:commit . "b828afbb4b45641998fb6483a08effb1efb214e1"))])
  (markdown-mode .
 		[(2 7)
 		 ((emacs
@@ -1714,11 +1714,11 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
  (mastodon .
-	   [(2 0 2)
+	   [(2 0 3)
 	    ((emacs
 	      (28 1))
 	     (persist
-	      (0 4))
+	      (0 7))
 	     (tp
 	      (0 7)))
 	    "Client for fediverse services using the Mastodon API" tar
@@ -1727,7 +1727,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "mousebot@disroot.org"))
-	     (:commit . "165c8903d86477b82f984f0df8f666abb2b17129"))])
+	     (:commit . "b16ee14b60a47115611ecdde0ddc4656cd0a1278"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
