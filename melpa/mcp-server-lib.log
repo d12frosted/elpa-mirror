@@ -3,24 +3,26 @@ Fetcher: github
 Source:  https://github.com/laurynas-biveinis/mcp-server-lib.el
 
 Updating /mnt/store/melpa/working/mcp-server-lib/
-Checking out 82d8655498f35e8eb8adae35009dc45e58e8dd90
+Checking out c1955e7a758de4717087756c51a8d7bc6301dd49
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mcp-server-lib/
-  to /tmp/mcp-server-lib3pWTL9/mcp-server-lib-20251005.939
+  to /tmp/mcp-server-libfq7Uvi/mcp-server-lib-20251008.1306
     mcp-server-lib-commands.el -> mcp-server-lib-commands.el
     mcp-server-lib-ert.el -> mcp-server-lib-ert.el
     mcp-server-lib-metrics.el -> mcp-server-lib-metrics.el
     mcp-server-lib.el -> mcp-server-lib.el
     emacs-mcp-stdio.sh -> emacs-mcp-stdio.sh
-Created mcp-server-lib-20251005.939.tar containing:
-  mcp-server-lib-20251005.939/
-  mcp-server-lib-20251005.939/emacs-mcp-stdio.sh
-  mcp-server-lib-20251005.939/mcp-server-lib-commands.el
-  mcp-server-lib-20251005.939/mcp-server-lib-ert.el
-  mcp-server-lib-20251005.939/mcp-server-lib-metrics.el
-  mcp-server-lib-20251005.939/mcp-server-lib-pkg.el
-  mcp-server-lib-20251005.939/mcp-server-lib.el
+Created mcp-server-lib-20251008.1306.tar containing:
+  mcp-server-lib-20251008.1306/
+  mcp-server-lib-20251008.1306/emacs-mcp-stdio.sh
+  mcp-server-lib-20251008.1306/mcp-server-lib-commands.el
+  mcp-server-lib-20251008.1306/mcp-server-lib-ert.el
+  mcp-server-lib-20251008.1306/mcp-server-lib-metrics.el
+  mcp-server-lib-20251008.1306/mcp-server-lib-pkg.el
+  mcp-server-lib-20251008.1306/mcp-server-lib.el
  ✓ Success:
   2025-10-08T11:52:18+0000  mcp-server-lib-20251005.939.entry
   2025-10-08T11:52:18+0000  mcp-server-lib-20251005.939.tar
-Built mcp-server-lib in 3.107s, finished at 2025-10-08T11:52:19+0000
+  2025-10-08T14:12:30+0000  mcp-server-lib-20251008.1306.entry
+  2025-10-08T14:12:30+0000  mcp-server-lib-20251008.1306.tar
+Built mcp-server-lib in 3.363s, finished at 2025-10-08T14:12:31+0000
