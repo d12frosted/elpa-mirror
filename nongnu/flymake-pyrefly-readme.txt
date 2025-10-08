@@ -46,7 +46,7 @@
 
   If Pyrefly binary is not visible from current Python virtual
   environment, you can set it through the interface `M-x
-  customize-variable RET flymake-pyrefly-binary-path RET'.
+  customize-variable RET flymake-pyrefly-binary-file RET'.
 
 
 [nonGNU Emacs Lisp Package Archive] <https://elpa.nongnu.org/>
