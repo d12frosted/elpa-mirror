@@ -8,7 +8,6 @@ Provides tree-sitter based implementations for the following features:
 - Navigation functions
 - Completion at point
 
-
 Contributions:
   This major mode is still under active development!
   Check contributing guidelines:

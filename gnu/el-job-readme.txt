@@ -1,29 +1,112 @@
-1 el-job
-════════
-
-  Imagine you have a function you'd like to run on a long list of
-  inputs.  You could run `(mapcar #'FN INPUTS)', but that hangs Emacs
-  until done.
-
-  This library lets you run the same function in many subprocesses (one
-  per CPU core), each with their own split of the `INPUTS' list, then
-  merge their outputs and pass it back to the current Emacs.
-
-  In the meantime, current Emacs does not hang at all.
-
-  Best of all, it completes /faster/ than `(mapcar #'FN INPUTS)', owing
-  to the use of all CPU cores!
-
-  For real-world usage, search for `el-job' in the source of
-  [org-mem.el].
+                                ━━━━━━━━
+                                 EL-JOB
+                                ━━━━━━━━
 
 
-[org-mem.el] <https://github.com/meedstrom/org-mem/blob/main/org-mem.el>
+Imagine you have a function you'd like to run on a long list of inputs.
+You could run `(mapcar #'FN INPUTS)', but that hangs Emacs until done.
 
-1.1 Design rationale
+This library lets you run the same function in many subprocesses (one
+per CPU core), each with their own split of the `INPUTS' list, then
+merge their outputs and pass it back to the current Emacs.
+
+In the meantime, current Emacs does not hang at all.
+
+Best of all, it completes /faster/ than `(mapcar #'FN INPUTS)', owing to
+the use of all CPU cores!
+
+That's it in a nutshell.  You can look at real-world usage by searching
+for "el-job" in these packages:
+• [org-mem.el]
+• [org-roam-async.el]
+
+
+[org-mem.el]
+<https://raw.githubusercontent.com/meedstrom/org-mem/refs/heads/main/org-mem.el>
+
+[org-roam-async.el]
+<https://raw.githubusercontent.com/meedstrom/org-roam-async/refs/heads/main/org-roam-async.el>
+
+
+1 Since 2.5.0
+═════════════
+
+  Released [2025-10-06 Mon], v2.5.0 comes with a variant library
+  "el-job-ng".
+
+  I find it simpler and easier to reason about.  400 lines of code
+  instead of 800.
+
+  Some differences:
+
+  • Does /not/ ever keep a process alive
+  • Does /not/ merge the subprocesses' outputs in a bespoke way, just
+    uses `append'.
+  • Does /not/ look up `load-history' to try hard to find an .eln
+    variant of your libraries, instead it lets `require' look up
+    `load-path' normally.
+  • Removed argument `:if-busy', you can manage this yourself with
+    `el-job-ng-busy-p' and `el-job-ng-kill'.
+  • Argument `:funcall-per-input' now takes a function of two (2)
+    arguments, not one.
+  • Argument `:callback' now takes a function of one (1) argument, not
+    two.
+  • Added optional argument `:eval'.
+
+  The design is always changing in response to my needs, so feel free to
+  file an issue or email!  It's instructive to hear about other people's
+  needs.
+
+
+1.1 Future work
+───────────────
+
+  I may write yet another variant.
+
+  Something that came with experience is that it's best to make a new
+  variant library for a narrow use-case, rather than complicate one
+  library with different code flows.  When it comes to this type of
+  library, you really want to keep it easy to reason about!
+
+  Ideas as of [2025-10-06 Mon]:
+
+  File IPC
+        Sending input and output by writing and reading files, instead
+        of through the pipe connection.
+
+        Theory: performance can sometimes be a lot better, with large
+        inputs and outputs.  I would guess it depends a lot on the
+        machine.
+
+        Drawback: if the data sent is sensitive, those files probably
+        should be encrypted, and that could negate any performance
+        benefit.
+
+  Worker daemons
+        Keeping subprocesses alive forever, so they are available at
+        beck and call – think worker daemons.
+
+        That's basically implemented in "el-job-old", and partly why it
+        got so hairy, but it could be remade to put this usage
+        front-and-center, with a "happy path" UX.
+
+        At this time, I do not have a demanding use-case to experiment
+        with, to discover what that happy path should be, how the
+        affordances should be.
+
+        If you need this now, I recommend [async.el].
+
+
+[async.el] <https://github.com/jwiegley/emacs-async>
+
+
+2 README for 2.4.8
+══════════════════
+
+2.1 Design rationale
 ────────────────────
 
-  I want to shorten the round-trip as much as possible, *between the
+  I wanted to shorten the round-trip as much as possible, *between the
   start of an async task and having the results*.
 
   For example, say you have some lisp that collects completion
@@ -32,7 +115,7 @@
   still like it to return as soon as possible.
 
 
-1.1.1 Processes stay alive
+2.1.1 Processes stay alive
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   In the above example, a user might only delay a fraction of a second
@@ -51,7 +134,7 @@
   killed an el-job subprocess, instead of the Emacs they see on screen.
 
 
-1.1.2 Emacs 30 `fast-read-process-output'
+2.1.2 Emacs 30 `fast-read-process-output'
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Some other libraries, like the popular [async.el], are designed around
@@ -76,7 +159,7 @@
 <https://github.com/emacs-mirror/emacs/blob/master/etc/NEWS.30>
 
 
-1.2 News 2.4
+2.2 News 2.4
 ────────────
 
   • Jobs must now have `:inputs'.  If `:inputs' nil and there was
@@ -84,14 +167,14 @@
     `inputs-were-empty'.
 
 
-1.3 News 2.3
+2.3 News 2.3
 ────────────
 
   • Some renames to follow Elisp convention
     • `el-job:timestamps' and friends now `el-job-timestamps'.
 
 
-1.4 News 2.1
+2.4 News 2.1
 ────────────
 
   • DROP SUPPORT Emacs 28
@@ -102,21 +185,21 @@
 [v0.3 branch] <https://github.com/meedstrom/el-job/tree/v0.3>
 
 
-1.5 News 2.0
+2.5 News 2.0
 ────────────
 
   • Jobs must now have `:id' (no more anonymous jobs).
   • Pruned many code paths.
 
 
-1.6 News 1.1
+2.6 News 1.1
 ────────────
 
   • Changed internals so that all builds of Emacs can be expected to
     perform similarly well.
 
 
-1.7 News 1.0
+2.7 News 1.0
 ────────────
 
   • No longer keeps processes alive forever.  All jobs are kept alive
@@ -126,7 +209,7 @@
     docstring of `el-job-launch' again.
 
 
-1.8 Limitations
+2.8 Limitations
 ───────────────
 
   1. The return value from the `:funcall-per-input' function must always
