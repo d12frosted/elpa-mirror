@@ -35,14 +35,14 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ⁃ No external dependencies outside of core Emacs
 
   With `(setq dape-buffer-window-arrangement 'right)':
-  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_24_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/right_0_25_0.png>
   And with `(setq dape-buffer-window-arrangement 'gud)' + `corfu' as
   `completion-in-region-function':
-  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_24_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/gud_0_25_0.png>
   With "rich" REPL output:
-  <https://raw.githubusercontent.com/svaante/dape/resources/repl_0_24_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/repl_0_25_0.png>
   With `minibuffer' adapter configuration hints:
-  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_24_0.png>
+  <https://raw.githubusercontent.com/svaante/dape/resources/minibuffer_0_25_0.png>
 
 
 2 Configuration
@@ -66,37 +66,39 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   │   ;; Load breakpoints on startup
   │   ;; (after-init . dape-breakpoint-load)
   │ 
-  │   :config
+  │   :custom
   │   ;; Turn on global bindings for setting breakpoints with mouse
-  │   ;; (dape-breakpoint-global-mode)
+  │   ;; (dape-breakpoint-global-mode +1)
   │ 
   │   ;; Info buffers to the right
-  │   ;; (setq dape-buffer-window-arrangement 'right)
-  │ 
+  │   ;; (dape-buffer-window-arrangement 'right)
   │   ;; Info buffers like gud (gdb-mi)
-  │   ;; (setq dape-buffer-window-arrangement 'gud)
-  │   ;; (setq dape-info-hide-mode-line nil)
+  │   ;; (dape-buffer-window-arrangement 'gud)
+  │   ;; (dape-info-hide-mode-line nil)
   │ 
+  │   ;; Projectile users
+  │   ;; (dape-cwd-function #'projectile-project-root)
+  │ 
+  │   :config
   │   ;; Pulse source line (performance hit)
-  │   ;; (add-hook 'dape-display-source-hook 'pulse-momentary-highlight-one-line)
-  │ 
-  │   ;; Showing inlay hints
-  │   ;; (setq dape-inlay-hints t)
+  │   ;; (add-hook 'dape-display-source-hook #'pulse-momentary-highlight-one-line)
   │ 
   │   ;; Save buffers on startup, useful for interpreted languages
   │   ;; (add-hook 'dape-start-hook (lambda () (save-some-buffers t t)))
   │ 
   │   ;; Kill compile buffer on build success
-  │   ;; (add-hook 'dape-compile-hook 'kill-buffer)
-  │ 
-  │   ;; Projectile users
-  │   ;; (setq dape-cwd-function 'projectile-project-root)
+  │   ;; (add-hook 'dape-compile-hook #'kill-buffer)
   │   )
   │ 
-  │ ;; Enable repeat mode for more ergonomic `dape' use
+  │ ;; For a more ergonomic Emacs and `dape' experience
   │ (use-package repeat
-  │   :config
-  │   (repeat-mode))
+  │   :custom
+  │   (repeat-mode +1))
+  │ 
+  │ ;; Left and right side windows occupy full frame height
+  │ (use-package emacs
+  │   :custom
+  │   (window-sides-vertical t))
   └────
 
 
