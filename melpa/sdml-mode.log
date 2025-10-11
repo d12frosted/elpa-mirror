@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/sdm-lang/emacs-sdml-mode
 
 Updating /mnt/store/melpa/working/sdml-mode/
-Checking out 75d627413a13d23c8872a474b4dc16d77d0a7a93
+Checking out e12752c0a9686a9edb33166011f5f685e1ef5629
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sdml-mode/
-  to /tmp/sdml-modePnpMZT/sdml-mode-20251005.2315
+  to /tmp/sdml-modeI7DYuU/sdml-mode-20251010.2312
     sdml-mode-abbrev.el -> sdml-mode-abbrev.el
     sdml-mode-cli.el -> sdml-mode-cli.el
     sdml-mode-ctags.el -> sdml-mode-ctags.el
@@ -20,25 +20,27 @@ Copying files (->) and directories (=>)
     sdml-ts-mode-font-lock.el -> sdml-ts-mode-font-lock.el
     sdml-ts-mode-imenu.el -> sdml-ts-mode-imenu.el
     sdml-ts-mode-indent.el -> sdml-ts-mode-indent.el
+    sdml-ts-mode-query.el -> sdml-ts-mode-query.el
     sdml-ts-mode.el -> sdml-ts-mode.el
-Created sdml-mode-20251005.2315.tar containing:
-  sdml-mode-20251005.2315/
-  sdml-mode-20251005.2315/sdml-mode-abbrev.el
-  sdml-mode-20251005.2315/sdml-mode-cli.el
-  sdml-mode-20251005.2315/sdml-mode-ctags.el
-  sdml-mode-20251005.2315/sdml-mode-hl.el
-  sdml-mode-20251005.2315/sdml-mode-hydra.el
-  sdml-mode-20251005.2315/sdml-mode-indent.el
-  sdml-mode-20251005.2315/sdml-mode-pkg.el
-  sdml-mode-20251005.2315/sdml-mode.el
-  sdml-mode-20251005.2315/sdml-ts-mode-abbrev.el
-  sdml-mode-20251005.2315/sdml-ts-mode-autoloads.el
-  sdml-mode-20251005.2315/sdml-ts-mode-fold.el
-  sdml-mode-20251005.2315/sdml-ts-mode-font-lock.el
-  sdml-mode-20251005.2315/sdml-ts-mode-imenu.el
-  sdml-mode-20251005.2315/sdml-ts-mode-indent.el
-  sdml-mode-20251005.2315/sdml-ts-mode.el
+Created sdml-mode-20251010.2312.tar containing:
+  sdml-mode-20251010.2312/
+  sdml-mode-20251010.2312/sdml-mode-abbrev.el
+  sdml-mode-20251010.2312/sdml-mode-cli.el
+  sdml-mode-20251010.2312/sdml-mode-ctags.el
+  sdml-mode-20251010.2312/sdml-mode-hl.el
+  sdml-mode-20251010.2312/sdml-mode-hydra.el
+  sdml-mode-20251010.2312/sdml-mode-indent.el
+  sdml-mode-20251010.2312/sdml-mode-pkg.el
+  sdml-mode-20251010.2312/sdml-mode.el
+  sdml-mode-20251010.2312/sdml-ts-mode-abbrev.el
+  sdml-mode-20251010.2312/sdml-ts-mode-autoloads.el
+  sdml-mode-20251010.2312/sdml-ts-mode-fold.el
+  sdml-mode-20251010.2312/sdml-ts-mode-font-lock.el
+  sdml-mode-20251010.2312/sdml-ts-mode-imenu.el
+  sdml-mode-20251010.2312/sdml-ts-mode-indent.el
+  sdml-mode-20251010.2312/sdml-ts-mode-query.el
+  sdml-mode-20251010.2312/sdml-ts-mode.el
  ✓ Success:
-  2025-10-10T19:44:08+0000  sdml-mode-20251005.2315.entry
-  2025-10-10T19:44:08+0000  sdml-mode-20251005.2315.tar
-Built sdml-mode in 3.210s, finished at 2025-10-10T19:44:09+0000
+  2025-10-11T02:38:59+0000  sdml-mode-20251010.2312.entry
+  2025-10-11T02:38:58+0000  sdml-mode-20251010.2312.tar
+Built sdml-mode in 3.363s, finished at 2025-10-11T02:38:59+0000
