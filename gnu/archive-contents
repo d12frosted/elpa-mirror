@@ -1363,18 +1363,18 @@
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		 (:commit . "2216b91c89f0063d80e9abb53eef7afdbab67157"))])
  (drepl .
-	[(0 3)
+	[(0 4)
 	 ((emacs
 	   (29 1))
 	  (comint-mime
-	   (0 3)))
+	   (0 7)))
 	 "REPL protocol for the dumb terminal" tar
 	 ((:url . "https://github.com/astoff/drepl")
 	  (:keywords "languages" "processes")
 	  (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	  (:authors
 	   ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	  (:commit . "07c4503763b5880f163b417194d580677f37a819"))])
+	  (:commit . "949cc68612d9427e482d12c2b344a61082f25949"))])
  (dts-mode .
 	   [(1 0)
 	    ((emacs
@@ -5088,7 +5088,7 @@
 	   ("Justin Burkett" . "justin@burkett.cc"))
 	  (:commit . "007e44be19d068fd6b49874b6e9b8df8b1f552bd"))])
  (vecdb .
-	[(0 2)
+	[(0 2 2)
 	 ((emacs
 	   (29 1))
 	  (plz
@@ -5100,7 +5100,7 @@
 	  (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	  (:authors
 	   ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	  (:commit . "e89d5a9a3abb6b1c0a72dbe2849ee8193a3c4019"))])
+	  (:commit . "a0240be7a917dca47b95e401382affd1c11abea1"))])
  (verilog-mode .
 	       [(2025 1 1 100165202)
 		nil "major mode for editing verilog source in Emacs" tar

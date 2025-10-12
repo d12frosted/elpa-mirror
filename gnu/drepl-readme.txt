@@ -11,6 +11,7 @@ the moment it supports the following interpreters:
 • Various *SQL and NoSQL* databases: based on [usql], requires a Go
   compiler.
 • *Node.js*: uses the built-in REPL library.
+• *SageMath*, a computer algebra system.
 
 The following features are available, subject to variations across
 different REPLs (IPython supports all of them):
@@ -35,7 +36,7 @@ then the backend implementation is also reasonably straightforward.
 
 [dkjson] <https://luarocks.org/modules/dhkolf/dkjson>
 
-[usql] <https://github.com/xo/usq>
+[usql] <https://github.com/xo/usql>
 
 [comint-mime] <https://github.com/astoff/comint-mime>
 
