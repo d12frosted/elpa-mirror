@@ -21,8 +21,9 @@ from <https://elpa.nongnu.org/nongnu/>.
   user, please carefully track the new URL where the add-on is now
   maintained.
 
-  If you want to maintain some of these add-ons, please send me an email
-  at `bzg@gnu.org' once you set up a separate repository for them.
+  If you want to maintain some of these add-ons, please send an email to
+  <mailto:emacs-orgmode@gnu.org> or to <mailto:yantar92@posteo.net>
+  (privately) once you set up a separate repository for them.
 
 
 [the Worg repository]
@@ -43,10 +44,10 @@ from <https://elpa.nongnu.org/nongnu/>.
 3 Contribute
 ════════════
 
-  You can send patches to `~bzg/dev@lists.sr.ht' and configure your
-  local copy of the repository like this:
+  You can send patches to `emacs-orgmode@gnu.org'.
 
-  `git config format.subjectPrefix 'PATCH org-contrib''
+  See <https://orgmode.org/worg/org-contribute.html> for advice on how
+  to contribute efficiently.
 
 
 4 Files to remove from the next release
@@ -55,7 +56,7 @@ from <https://elpa.nongnu.org/nongnu/>.
   If a file has a "Homepage:" keyword, it will be removed from the next
   minor or major release.
 
-  • `ox-taskjuggler.el'
+  `ob-csharp.el'
 
 
 5 Other files
@@ -159,8 +160,6 @@ from <https://elpa.nongnu.org/nongnu/>.
 
   ob-abc.el
         Org-mode Babel Functions for ABC
-  ob-csharp.el
-        Org-mode Babel Functions for csharp evaluation
   ob-ebnf.el
         Org-mode Babel Functions for EBNF
   ob-eukleides.el
