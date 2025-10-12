@@ -5,5 +5,5 @@ Borg package manager is available, then it uses information
 provided by that as well.
 
   (with-eval-after-load 'marginalia
-    (setcar (alist-get 'package marginalia-annotator-registry)
+    (setcar (alist-get 'package marginalia-annotators)
             #'epkg-marginalia-annotate-package))
