@@ -38,17 +38,46 @@ package-install RET jit-spell RET'.
   │ (add-hook 'text-mode-hook 'jit-spell-mode)
   │ (add-hook 'prog-mode-hook 'jit-spell-mode)
   │ (with-eval-after-load 'jit-spell
-  │   (define-key jit-spell-mode-map (kbd "C-;") 'jit-spell-correct-word))
+  │   (keymap-set jit-spell-mode-map "C-;" 'jit-spell-correct-word))
   └────
 
-  To pick a spell checker and dictionaries, jit-spell uses Emacs's
-  built-in ispell support code.  For instance,
-  `ispell-change-dictionary' temporarily changes the dictionary of the
-  current buffer.  Try also `M-x customize-group RET ispell RET' to see
-  a listing of all possible settings.
+  Try also `M-x customize-group RET jit-spell RET' to see a listing of
+  all possible customization options.
+
+  Many customization options from the built-in `ispell' library are also
+  relevant, notably `ispell-program-name'.  Hunspell and Aspell are the
+  most common choices.  Aspell is faster, but in my experience Hunspell
+  has better correction suggestions and is sufficiently performant.
 
 
-2 Major mode support
+2 Language selection
+════════════════════
+
+  Type `M-x jit-spell-change-dictionary RET' to choose a different
+  spelling language.  If you use Hunspell, you will be able to select
+  multiple languages.  Other spellchecking programs are limited to a
+  single language.
+
+  The default spellchecking language is determined from your system
+  settings.  To change that, customize the variable `ispell-dictionary'.
+  To change the spellchecking language of a specific file, type `M-x
+  add-file-local-variable RET ispell-local-dictionary RET' followed by
+  the desired language (remember to enclose it in quotation marks, since
+  that variable must be a string).  Similarly, you can use
+  [directory-local variables] to adjust the spellchecking language for
+  collections of files.
+
+  When using Hunspell, you can set those variables to a comma-separated
+  list of dictionaries for multi-language spellchecking.  See the
+  explanation of the `-d' switch in Hunspell's man page for more
+  information.
+
+
+[directory-local variables]
+<https://www.gnu.org/software/emacs/manual/html_node/elisp/Directory-Local-Variables.html>
+
+
+3 Major mode support
 ════════════════════
 
   Often there are regions of the buffer that should be ignored for
@@ -65,7 +94,7 @@ package-install RET jit-spell RET'.
   the variable `jit-spell-prog-mode-faces'.
 
 
-3 Contributing
+4 Contributing
 ══════════════
 
   Discussions, suggestions and code contributions are welcome!  Since

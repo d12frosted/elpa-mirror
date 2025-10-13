@@ -1663,7 +1663,7 @@
 	   ("Adam Porter" . "adam@alphapapa.net"))
 	  (:commit . "26bf5a4efd08bc724cf29c412c36c2909d72bb13"))])
  (emms .
-       [(23)
+       [(24)
 	((cl-lib
 	  (0 5))
 	 (nadvice
@@ -1676,7 +1676,7 @@
 	 (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 	 (:authors
 	  ("Jorgen Schäfer" . "forcer@forcix.cx"))
-	 (:commit . "09f829b04804af37d00280e31a0e0257bcd2329e"))])
+	 (:commit . "53db2bf1f0475c9404f56d67ab75edf1fdf18dfe"))])
  (engrave-faces .
 		[(0 3 1)
 		 ((emacs
@@ -2510,7 +2510,7 @@
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	 (:commit . "214d98c18c01897eab108a880b18aa3b64632a03"))])
  (jit-spell .
-	    [(0 4)
+	    [(0 5)
 	     ((emacs
 	       (27 1))
 	      (compat
@@ -2521,7 +2521,7 @@
 	      (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	      (:authors
 	       ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	      (:commit . "db9cedbb2d2515ffc441fa27c839c42a657a6b71"))])
+	      (:commit . "e6f3525b848c48906f06bf21a9e8678b95ccd3bf"))])
  (js2-mode .
 	   [(20231224)
 	    ((emacs
