@@ -10,4 +10,4 @@ Customize `outli-heading-config' to set the "stem" and "repeat"
 character for comment-based headings and to influence how the
 headings are styled.  Customize `outli-speed-commands' to alter or
 disable speed keys, which work at the beginning of heading lines
-only.
+only.  Outli inherits heading colors from the `outline-*' faces.

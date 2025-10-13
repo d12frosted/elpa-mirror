@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/Feyorsh/nethack-el
 
 Updating /mnt/store/melpa/working/nethack/
-Checking out 53e6a0a304bedfcca3a8a16a142614d4d9fcfddc
+Checking out 52bbbd80602e150f7e063c2fe319fd1eeedf617a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nethack/
-  to /tmp/nethack43vsOR/nethack-20251012.204
+  to /tmp/nethackSzLFsj/nethack-20251013.230
     nethack-api.el -> nethack-api.el
     nethack-cmd.el -> nethack-cmd.el
     nethack-compat.el -> nethack-compat.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
     nethack.el -> nethack.el
     enh-367.patch -> enh-367.patch
     enh-370.patch -> enh-370.patch
-Created nethack-20251012.204.tar containing:
-  nethack-20251012.204/
-  nethack-20251012.204/enh-367.patch
-  nethack-20251012.204/enh-370.patch
-  nethack-20251012.204/nethack-api.el
-  nethack-20251012.204/nethack-cmd.el
-  nethack-20251012.204/nethack-compat.el
-  nethack-20251012.204/nethack-gen-tiles.el
-  nethack-20251012.204/nethack-keys.el
-  nethack-20251012.204/nethack-lisprec.el
-  nethack-20251012.204/nethack-options.el
-  nethack-20251012.204/nethack-pkg.el
-  nethack-20251012.204/nethack.el
+Created nethack-20251013.230.tar containing:
+  nethack-20251013.230/
+  nethack-20251013.230/enh-367.patch
+  nethack-20251013.230/enh-370.patch
+  nethack-20251013.230/nethack-api.el
+  nethack-20251013.230/nethack-cmd.el
+  nethack-20251013.230/nethack-compat.el
+  nethack-20251013.230/nethack-gen-tiles.el
+  nethack-20251013.230/nethack-keys.el
+  nethack-20251013.230/nethack-lisprec.el
+  nethack-20251013.230/nethack-options.el
+  nethack-20251013.230/nethack-pkg.el
+  nethack-20251013.230/nethack.el
  ✓ Success:
-  2025-10-12T18:21:50+0000  nethack-20251012.204.entry
-  2025-10-12T18:21:50+0000  nethack-20251012.204.tar
-Built nethack in 3.444s, finished at 2025-10-12T18:21:51+0000
+  2025-10-13T01:16:27+0000  nethack-20251013.11.entry
+  2025-10-13T01:16:27+0000  nethack-20251013.11.tar
+  2025-10-13T03:35:05+0000  nethack-20251013.230.entry
+  2025-10-13T03:35:05+0000  nethack-20251013.230.tar
+Built nethack in 3.704s, finished at 2025-10-13T03:35:06+0000
