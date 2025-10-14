@@ -49,11 +49,11 @@ Table of Contents
   ⁃ `cape-abbrev': Complete abbreviation (`add-global-abbrev',
     `add-mode-abbrev').
   ⁃ `cape-dabbrev': Complete word from current buffers. See also
-    `dabbrev-capf' on Emacs 29.
+    `dabbrev-capf'.
   ⁃ `cape-dict': Complete word from dictionary file.
   ⁃ `cape-elisp-block': Complete Elisp in Org or Markdown code block.
   ⁃ `cape-elisp-symbol': Complete Elisp symbol.
-  ⁃ `cape-emoji': Complete Emoji. Available on Emacs 29 and newer.
+  ⁃ `cape-emoji': Complete Emoji.
   ⁃ `cape-file': Complete file name.
   ⁃ `cape-history': Complete from Eshell, Comint or minibuffer history.
   ⁃ `cape-keyword': Complete programming language keyword.
@@ -312,25 +312,18 @@ Table of Contents
   some of these tweaks in my personal configuration.
 
   ┌────
-  │ ;; Example 1: Sanitize the `pcomplete-completions-at-point' Capf.  The Capf has
-  │ ;; undesired side effects on Emacs 28.  These advices are not needed on Emacs 29
-  │ ;; and newer.
-  │ (when (< emacs-major-version 29)
-  │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
-  │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
-  │ 
-  │ ;; Example 2: Configure a Capf with a specific auto completion prefix length
+  │ ;; Example 1: Configure a Capf with a specific auto completion prefix length
   │ (setq-local completion-at-point-functions
   │ 	    (list (cape-capf-prefix-length #'cape-dabbrev 2)))
   │ 
-  │ ;; Example 3: Create a Capf with debugging messages
+  │ ;; Example 2: Create a Capf with debugging messages
   │ (setq-local completion-at-point-functions (list (cape-capf-debug #'cape-dict)))
   │ 
-  │ ;; Example 4: Named Capf
+  │ ;; Example 3: Named Capf
   │ (defalias 'cape-dabbrev-min-2 (cape-capf-prefix-length #'cape-dabbrev 2))
   │ (setq-local completion-at-point-functions (list #'cape-dabbrev-min-2))
   │ 
-  │ ;; Example 5: Define a defensive Dabbrev Capf, which accepts all inputs.  If you
+  │ ;; Example 4: Define a defensive Dabbrev Capf, which accepts all inputs.  If you
   │ ;; use Corfu and `corfu-auto=t', the first candidate won't be auto selected if
   │ ;; `corfu-preselect=valid', such that it cannot be accidentally committed when
   │ ;; pressing RET.
@@ -338,17 +331,23 @@ Table of Contents
   │   (cape-wrap-accept-all #'cape-dabbrev))
   │ (add-hook 'completion-at-point-functions #'my-cape-dabbrev-accept-all)
   │ 
-  │ ;; Example 6: Define interactive Capf which can be bound to a key.  Here we wrap
+  │ ;; Example 5: Define interactive Capf which can be bound to a key.  Here we wrap
   │ ;; the `elisp-completion-at-point' such that we can complete Elisp code
   │ ;; explicitly in arbitrary buffers.
   │ (keymap-global-set "C-c p e" (cape-capf-interactive #'elisp-completion-at-point))
   │ 
-  │ ;; Example 7: Ignore :keywords in Elisp completion.
+  │ ;; Example 6: Ignore :keywords in Elisp completion.
   │ (defun ignore-elisp-keywords (sym)
   │   (not (keywordp sym)))
   │ (setq-local completion-at-point-functions
   │ 	    (list (cape-capf-predicate #'elisp-completion-at-point
   │ 				       #'ignore-elisp-keywords)))
+  │ 
+  │ ;; Example 7: Sanitize broken Capfs. Catch errors with `cape-wrap-silent' or
+  │ ;; make sure that the Capf does not modify the buffer itself.
+  │ (advice-add 'dabbrev-capf :around #'cape-wrap-silent)
+  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent) ;; Was necessary on Emacs 28
+  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify) ;; Was necessary on Emacs 28
   └────
 
 

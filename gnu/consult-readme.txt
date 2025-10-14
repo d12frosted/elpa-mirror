@@ -4,20 +4,21 @@
 
 
 Consult provides search and navigation commands based on the Emacs
-completion function [completing-read]. Completion allows you to quickly
-select an item from a list of candidates. Consult offers asynchronous
-and interactive `consult-grep' and `consult-ripgrep' commands, and the
-line-based search command `consult-line'.  Furthermore Consult provides
-an advanced buffer switching command `consult-buffer' to switch between
-buffers, recently opened files, bookmarks and buffer-like candidates
-from other sources. Some of the Consult commands are enhanced versions
-of built-in Emacs commands. For example the command `consult-imenu'
-presents a flat list of the Imenu with [live preview], [grouping and
-narrowing].  Please take a look at the [full list of commands].
+completion function [completing-read] documented in the [Elisp
+manual]. Completion allows you to quickly select an item from a list of
+candidates. Consult offers asynchronous and interactive `consult-grep'
+and `consult-ripgrep' commands, and the line-based search command
+`consult-line'. Furthermore Consult provides an advanced buffer
+switching command `consult-buffer' to switch between buffers, recently
+opened files, bookmarks and buffer-like candidates from other
+sources. Some of the Consult commands are enhanced versions of built-in
+Emacs commands. For example the command `consult-imenu' presents a flat
+list of the Imenu with [live preview], [grouping and narrowing]. Please
+take a look at the [full list of commands].
 
 Consult is fully compatible with completion systems centered around the
-standard Emacs `completing-read' API, notably the default completion
-system, [Vertico], [Mct], and [Icomplete].
+standard Emacs `completing-read' API, [Vertico], [Mct], and the built-in
+default completion system and Icomplete.
 
 This package keeps the completion system specifics to a minimum. The
 ability of the Consult commands to work well with arbitrary completion
@@ -66,8 +67,9 @@ Table of Contents
 4. Recommended packages
 5. Bug reports
 6. Hacking
-.. 1. Creating asynchronous completion commands
-.. 2. Live preview
+.. 1. Creating simple commands
+.. 2. Creating asynchronous completion commands
+.. 3. Live preview
 7. Contributions
 8. Acknowledgments
 9. Indices
@@ -77,6 +79,8 @@ Table of Contents
 
 [completing-read]
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Minibuffer-Completion.html>
+
+[Elisp manual] <info:elisp#Minibuffer Completion>
 
 [live preview] See section 2.1
 
@@ -88,12 +92,9 @@ Table of Contents
 
 [Mct] <https://github.com/protesilaos/mct>
 
-[Icomplete]
-<https://www.gnu.org/software/emacs/manual/html_node/emacs/Icomplete.html>
+[Marginalia] <https://github.com/minad/marginalia>
 
-[Marginalia] <https://github.com/minad/marginalia/>
-
-[Embark] <https://github.com/oantolin/embark/>
+[Embark] <https://github.com/oantolin/embark>
 
 [Orderless] <https://github.com/oantolin/orderless>
 
@@ -797,8 +798,8 @@ Table of Contents
   There is the [Consult wiki], where additional configuration examples
   can be contributed.
 
-  *IMPORTANT:* It is recommended that you enable [lexical binding] in
-  your configuration. Many Consult-related code snippets require lexical
+  *IMPORTANT:* It is recommended that you enable lexical binding in your
+  configuration. Many Consult-related code snippets require lexical
   binding, since they use lambdas and closures.
 
 
@@ -807,9 +808,6 @@ Table of Contents
 [MELPA] <https://melpa.org/#/consult>
 
 [Consult wiki] <https://github.com/minad/consult/wiki>
-
-[lexical binding]
-<https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html>
 
 3.1 Use-package example
 ───────────────────────
@@ -1218,20 +1216,77 @@ Table of Contents
     the box, but there is some support in [evil-collection].
 
   When evaluating Consult-related code snippets you should enable
-  [lexical binding].  Consult often relies on lambdas and lexical
-  closures.
+  lexical binding.  Consult relies on lambdas and lexical closures.
 
 
 [evil-collection] <https://github.com/emacs-evil/evil-collection>
-
-[lexical binding]
-<https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html>
 
 
 6 Hacking
 ═════════
 
-6.1 Creating asynchronous completion commands
+6.1 Creating simple commands
+────────────────────────────
+
+  When creating simple commands you can either use `consult--read' or
+  directly rely on the built-in `completing-read'
+  function. `consult--read' provides a nicer and more featureful API on
+  top of `completing-read'. You can specify the completion candidates
+  directly.
+
+  ┌────
+  │ (consult--read
+  │  '("String A"
+  │    "String B"
+  │    "String C")
+  │  :sort nil
+  │  :prompt "Select: ")
+  └────
+
+  If you pass it an alist of `(completion-string . value)', you can look
+  up the value.
+
+  ┌────
+  │ (consult--read
+  │  '(("String A" . value-a)
+  │    ("String B" . value-b)
+  │    ("String C" . value-c))
+  │  :prompt "Select: "
+  │  :sort nil
+  │  :lookup #'consult--lookup-cdr)
+  └────
+
+  You can add the result as a text property.
+
+  ┌────
+  │ (consult--read
+  │  (list
+  │   (propertize "String A" 'consult--candidate 'value-a)
+  │   (propertize "String B" 'consult--candidate 'value-b)
+  │   (propertize "String C" 'consult--candidate 'value-c))
+  │  :prompt "Select: "
+  │  :sort nil
+  │  :lookup #'consult--lookup-candidate)
+  └────
+
+  You can add other text properties.
+
+  ┌────
+  │ (consult--read
+  │  (mapcar (lambda (value)
+  │ 	   (propertize
+  │ 	    (format "%s %s"
+  │ 		    (propertize "Option" 'face 'font-lock-comment-face)
+  │ 		    value)
+  │ 	    'consult--candidate value))
+  │ 	 '("A" "B" "C"))
+  │  :prompt "Select: "
+  │  :sort nil
+  │  :lookup #'consult--lookup-candidate)
+  └────
+
+
+6.2 Creating asynchronous completion commands
 ─────────────────────────────────────────────
 
   If you have a completion source that's both dynamic and expensive to
@@ -1289,7 +1344,7 @@ Table of Contents
   sources. Specify them as `:async' field of the source plist.
 
 
-6.2 Live preview
+6.3 Live preview
 ────────────────
 
   Implementing live preview requires the definition of a state or
@@ -1382,11 +1437,11 @@ Table of Contents
 
 [Ashton Wiersdorf] <https://github.com/ashton314>
 
-[Adam Spiers] <https://github.com/aspiers/>
+[Adam Spiers] <https://github.com/aspiers>
 
 [Augusto Stoffel] <https://github.com/astoff>
 
-[Clemens Radermacher] <https://github.com/clemera/>
+[Clemens Radermacher] <https://github.com/clemera>
 
 [Zhengyi] <https://github.com/fuzy112>
 
@@ -1408,9 +1463,9 @@ Table of Contents
 
 [Fox Kiester] <https://github.com/noctuid>
 
-[Omar Antolín Camarena] <https://github.com/oantolin/>
+[Omar Antolín Camarena] <https://github.com/oantolin>
 
-[Earl Hyatt] <https://github.com/okamsn/>
+[Earl Hyatt] <https://github.com/okamsn>
 
 [Omar Polo] <https://github.com/omar-polo>
 
@@ -1418,7 +1473,7 @@ Table of Contents
 
 [Robert Weiner] <https://github.com/rswgnu>
 
-[Sergey Kostyaev] <https://github.com/s-kostyaev/>
+[Sergey Kostyaev] <https://github.com/s-kostyaev>
 
 [Alexandru Scvorțov] <https://github.com/scvalex>
 
@@ -1426,7 +1481,7 @@ Table of Contents
 
 [Sylvain Rousseau] <https://github.com/thisirs>
 
-[Tom Fitzhenry] <https://github.com/tomfitzhenry/>
+[Tom Fitzhenry] <https://github.com/tomfitzhenry>
 
 [Iñigo Serna] <https://hg.serna.eu>
 
@@ -1434,21 +1489,21 @@ Table of Contents
 
 [Enrique Kessler Martínez] <https://github.com/Qkessler>
 
-[Adam Porter] <https://github.com/alphapapa/>
+[Adam Porter] <https://github.com/alphapapa>
 
 [Bruce d'Arcus] <https://github.com/bdarcus>
 
-[Dmitry Gutov] <https://github.com/dgutov/>
+[Dmitry Gutov] <https://github.com/dgutov>
 
-[Howard Melman] <https://github.com/hmelman/>
+[Howard Melman] <https://github.com/hmelman>
 
 [Itai Y. Efrat] <https://github.com/iyefrat>
 
-[Manuel Uberti] <https://github.com/manuel-uberti/>
+[Manuel Uberti] <https://github.com/manuel-uberti>
 
-[Stefan Monnier] <https://github.com/monnier/>
+[Stefan Monnier] <https://github.com/monnier>
 
-[Steve Purcell] <https://github.com/purcell/>
+[Steve Purcell] <https://github.com/purcell>
 
 [Radon Rosborough] <https://github.com/raxod502>
 

@@ -208,7 +208,6 @@ Table of Contents
   │ 	 ("C-M-/" . dabbrev-expand))
   │   :config
   │   (add-to-list 'dabbrev-ignored-buffer-regexps "\\` ")
-  │   ;; Available since Emacs 29 (Use `dabbrev-ignored-buffer-regexps' on older Emacs)
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'authinfo-mode)
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'doc-view-mode)
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'pdf-view-mode)
@@ -228,8 +227,9 @@ Table of Contents
   │   ;; (orderless-style-dispatchers '(orderless-affix-dispatch))
   │   ;; (orderless-component-separator #'orderless-escapable-split-on-space)
   │   (completion-styles '(orderless basic))
-  │   (completion-category-defaults nil)
-  │   (completion-category-overrides '((file (styles partial-completion)))))
+  │   (completion-category-overrides '((file (styles partial-completion))))
+  │   (completion-category-defaults nil) ;; Disable defaults, use our settings
+  │   (completion-pcm-leading-wildcard t)) ;; Emacs 31: partial-completion behaves like substring
   └────
 
   The `basic' completion style is specified as fallback in addition to
@@ -423,24 +423,13 @@ Table of Contents
   Shell completion uses the flexible Pcomplete mechanism internally,
   which allows you to program the completions per shell command. If you
   want to know more, look into this [blog post], which shows how to
-  configure Pcomplete for git commands.  Since Emacs 29, Pcomplete
-  offers the `pcomplete-from-help' function which parses the `--help'
-  output of a command and produces completions for command line options.
-
-  Pcomplete has a few bugs on Emacs 28. We can work around the issues
-  with the [Cape] library (Completion at point extensions). Cape
-  provides wrappers which sanitize the Pcomplete function. On Emacs 29
-  the advices should not be necessary anymore, since most relevant bugs
-  have been fixed. In case you discover any remaining Pcomplete issues,
+  configure Pcomplete for git commands.  Pcomplete offers the
+  `pcomplete-from-help' function which parses the `--help' output of a
+  command and produces completions for command line options. In the
+  past, before Emacs 29, Pcomplete had a few bugs, which had to be
+  worked around using the [Cape] library (Completion at point
+  extensions). In case you discover any remaining Pcomplete issues,
   please report them upstream.
-
-  ┌────
-  │ ;; Sanitize the `pcomplete-completions-at-point' Capf.  The Capf has undesired
-  │ ;; side effects on Emacs 28.  These advices are not needed on Emacs 29 and newer.
-  │ (when (< emacs-major-version 29)
-  │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
-  │   (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
-  └────
 
 
 [blog post]

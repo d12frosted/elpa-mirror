@@ -45,12 +45,14 @@ Table of Contents
 ═══════════════
 
   The package is available on GNU ELPA and can be installed with
-  `package-install'.  Note that Osm.el requires Emacs 28 and depends on
+  `package-install'.  Note that Osm.el requires Emacs 29 and depends on
   the external `curl' program.  Emacs must be built with `libxml',
-  `libjansson', `librsvg', `libjpeg' and `libpng' support. The following
-  is an example configuration which relies on `use-package'.  Please
-  take a look at the [wiki] for additional tile server configurations,
-  e.g., Google Maps.
+  `librsvg', `libjpeg' and `libpng' support. Emacs 30 comes with a
+  native JSON parser, while on Emacs 29, `libjansson' is needed. The
+  following is an example configuration which relies on
+  `use-package'. Please take a look at the [wiki] for additional tile
+  server configurations, e.g., Google Maps for satellite and aerial
+  maps.
 
   ┌────
   │ (use-package osm
