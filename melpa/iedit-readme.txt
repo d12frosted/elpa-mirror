@@ -13,7 +13,7 @@ Normal work flow of Iedit mode is like:
 
  - Move point to a target by `isearch' or other moving commands
 
- - Press C-;(The default key binding) to enable Iedit mode. The thing under
+ - Press C-;(The default key binding) to enable Iedit mode.  The thing under
    the point is recognized as an occurrence, and all the occurrences in the
    buffer are highlighted
 
@@ -47,7 +47,7 @@ when in Iedit mode - it toggles hiding non-matching lines.
    pressing M-I.
 
  - Restricting the search area to the lines near the current line can
-   be done by pressing M-{ and M-}. These will expand the search
+   be done by pressing M-{ and M-}.  These will expand the search
    region one line at a time from the top and bottom.  Add a prefix
    argument to go the opposite direction.
 
