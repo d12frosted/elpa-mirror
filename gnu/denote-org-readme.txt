@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.1.0,
-released on 2025-04-15.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.2.0,
+released on 2025-10-17.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.2.0-dev.
+Current development target is 0.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote-org'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-org>
@@ -36,6 +36,7 @@ Table of Contents
 .. 3. The Org dynamic block to insert backlinks
 .. 4. Org dynamic block to insert file contents
 .. 5. Org dynamic block to insert Org files as headings
+.. 6. Org dynamic block to insert sequences
 4. Create a note from the current Org subtree
 5. Insert link to an Org file with a further pointer to a heading
 .. 1. Backlinks for Org headings
@@ -114,6 +115,9 @@ Table of Contents
   │ (info "(org) Dynamic Blocks")
   └────
 
+  The `org-dynamic-block-insert-dblock' function (`C-c C-x x') provides
+  a dropdown menu of all available dynamic blocks.
+
 
 [Org dynamic blocks to insert links or backlinks] See section 3.1
 
@@ -127,7 +131,7 @@ Table of Contents
   following in an Org file:
 
   ┌────
-  │ #+BEGIN: denote-links :regexp "YOUR REGEXP HERE" :not-regexp :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :include-date nil
+  │ #+BEGIN: denote-links :regexp "YOUR REGEXP HERE" :not-regexp nil :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :include-date nil
   │ 
   │ #+END:
   └────
@@ -173,7 +177,7 @@ Table of Contents
   • The `:sort-by-component' parameter is optional. It sorts the files
     by the given Denote file name component. The value it accepts is an
     unquoted symbol among `title', `keywords', `signature',
-    `identifier'.  When using the command
+    `identifier', `random', `last-modified'. When using the command
     `denote-org-dblock-insert-files', this parameter is automatically
     inserted together with the (`:regexp' parameter) and the user is
     prompted for a file name component.
@@ -219,7 +223,7 @@ Table of Contents
   optional except for `:regexp':
 
   ┌────
-  │ #+BEGIN: denote-missing-links :regexp "YOUR REGEXP HERE" :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :include-date nil
+  │ #+BEGIN: denote-missing-links :regexp "YOUR REGEXP HERE" :not-regexp nil :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :include-date nil
   │ 
   │ #+END:
   └────
@@ -245,7 +249,7 @@ Table of Contents
   Org file:
 
   ┌────
-  │ #+BEGIN: denote-backlinks :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :this-heading-only nil :include-date nil
+  │ #+BEGIN: denote-backlinks :not-regexp nil :excluded-dirs-regexp nil :sort-by-component nil :reverse-sort nil :id-only nil :this-heading-only nil :include-date nil
   │ 
   │ #+END:
   └────
@@ -345,7 +349,7 @@ section 5
   • The `:sort-by-component' parameter is optional. It sorts the files
     by the given Denote file name component. The value it accepts is an
     unquoted symbol among `title', `keywords', `signature',
-    `identifier'.  When using the command
+    `identifier', `random', `last-modified'. When using the command
     `denote-org-dblock-insert-files', this parameter is automatically
     inserted together with the (`:regexp' parameter) and the user is
     prompted for a file name component.
@@ -430,7 +434,7 @@ section 5
   parameters included:
 
   ┌────
-  │ #+BEGIN: denote-files-as-headings :regexp "YOUR REGEXP HERE" :not-regexp nil :excluded-dirs-regexp nil :sort-by-component title :reverse-sort nil :add-links t
+  │ #+BEGIN: denote-files-as-headings :regexp "YOUR REGEXP HERE" :not-regexp nil :excluded-dirs-regexp nil :sort-by-component title :reverse-sort nil :add-links nil :exclude-tags nil
   │ 
   │ #+END:
   └────
@@ -464,7 +468,7 @@ section 5
   • The `:sort-by-component' parameter is optional. It sorts the files
     by the given Denote file name component. The value it accepts is an
     unquoted symbol among `title', `keywords', `signature',
-    `identifier'.  When using the command
+    `identifier', `random', `last-modified'. When using the command
     `denote-org-dblock-insert-files', this parameter is automatically
     inserted together with the (`:regexp' parameter) and the user is
     prompted for a file name component.
@@ -481,6 +485,11 @@ section 5
     related facilities (those are explained at length in the Denote
     manual).
 
+  • The `:exclude-tags' parameter is optional. It controls whether the
+    `#+filetags' of the matching file are appended to the title as tags.
+    This is what happens by default. If `:exclude-tags' is non-nil, then
+    the tags are omitted.
+
   • An optional `:block-name' parameter can be specified with a string
     value to add a `#+name' to the results. This is useful for further
     processing using Org facilities (a feature that is outside Denote’s
@@ -490,6 +499,43 @@ section 5
 [Org dynamic block to insert file contents] See section 3.4
 
 [Org dynamic blocks to insert links or backlinks] See section 3.1
+
+
+3.6 Org dynamic block to insert sequences
+─────────────────────────────────────────
+
+  The Denote-Sequence package enables using the Denote signature as a
+  hierarchical indicator inspired by the Folgezettel principle in the
+  Zettelkasten methodology.
+
+  The `denote-sequence' block can be inserted at point with the command
+  `denote-org-dblock-insert-sequence' or by manually including the
+  following in an Org file:
+
+  ┌────
+  │ #+BEGIN: denote-sequence :sequence "1=1" :depth 2
+  │ 
+  │ #+END:
+  └────
+
+
+  The `:sequence' is required, while `:depth' is optional.
+
+  • The sequence is the root of the hierarchy displayed in the dynamic
+    block. It consists of the text of the sequence, whose numeric format
+    is like `1=1' or, for its alphanumeric counterpart, `1a'.
+
+    A value of `:sequence' which is an empty string `""' or the regular
+    expression for “match anything at least once”, namely `".+"', mean
+    to collect all the sequences with their children.
+
+  • The depth is the relative depth from the root note: the number 2 is
+    for the children of the given sequence, 3 for grandchildren, and so
+    on. A value of `nil' means to find all descendants of the given
+    sequence.
+
+  The list of links is indented to visualise their hierarchical
+  structure.
 
 
 4 Create a note from the current Org subtree
@@ -716,6 +762,10 @@ section 5
 
   Author/maintainer
         Protesilaos Stavrou.
+  Contributions to code or the manual
+        Peter Prevos.
+  Ideas and user feedback
+        GCamp6, Matt Nolan.
 
 
 10 GNU Free Documentation License

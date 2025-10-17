@@ -791,7 +791,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:commit . "da62326326b9b121edb46b0f31adb2569e4e896a"))])
  (consult-denote .
-		 [(0 3 1)
+		 [(0 4 0)
 		  ((emacs
 		    (28 1))
 		   (denote
@@ -803,7 +803,7 @@
 		   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		   (:authors
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		   (:commit . "7f0241dc460d9c0f06f480f506b793f0c8608dc1"))])
+		   (:commit . "c3a8dccdcf375223036188ab7cacc0c6e421406d"))])
  (consult-hoogle .
 		 [(0 5 0)
 		  ((emacs
@@ -1043,7 +1043,7 @@
 	     ("Phil Sainty" . "psainty@orcon.net.nz"))
 	    (:commit . "a763ec1e5c2987efea3ce2ee6d9c979f56ab6528"))])
  (denote .
-	 [(4 0 0)
+	 [(4 1 0)
 	  ((emacs
 	    (28 1)))
 	  "Simple notes with an efficient file-naming scheme" tar
@@ -1051,9 +1051,9 @@
 	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "c98c74ec74fb6f0c894c5bf730d092d716e55b84"))])
+	   (:commit . "d4ba0eb290bd7afe54300718f16f23919390ce9b"))])
  (denote-journal .
-		 [(0 1 1)
+		 [(0 2 0)
 		  ((emacs
 		    (28 1))
 		   (denote
@@ -1063,9 +1063,9 @@
 		   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		   (:authors
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		   (:commit . "a8684e388ba363ffdad6b0930065036417c8337f"))])
+		   (:commit . "dbc8acf85bd66cd551422acae3ba8bca15d29029"))])
  (denote-markdown .
-		  [(0 1 1)
+		  [(0 2 0)
 		   ((emacs
 		     (28 1))
 		    (denote
@@ -1075,7 +1075,7 @@
 		    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "296b24b06721c37faec24fb6e177885b4886d4fe"))])
+		    (:commit . "588729d70ba118c0ac837cbad756ba05f276afdd"))])
  (denote-menu .
 	      [(1 4 0)
 	       ((emacs
@@ -1089,7 +1089,7 @@
 		 ("Mohamed Suliman" . "sulimanm@tcd.ie"))
 		(:commit . "247a9b66d67b3fe409eda8f896feae87546f5b4d"))])
  (denote-org .
-	     [(0 1 1)
+	     [(0 2 0)
 	      ((emacs
 		(28 1))
 	       (denote
@@ -1099,7 +1099,7 @@
 	       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	       (:authors
 		("Protesilaos Stavrou" . "info@protesilaos.com"))
-	       (:commit . "0151c5a8ef525ce523c7f6c42f0c49f731ad2ff5"))])
+	       (:commit . "57bca6df0049a5a5e28b91b819b39117cba2e5c7"))])
  (denote-search .
 		[(1 0 3)
 		 ((emacs
@@ -1114,7 +1114,7 @@
 		   ("Lucas Quintana" . "lmq10@protonmail.com"))
 		  (:commit . "4df3e77a495b4f0df7fe56924509afe7f2fa735d"))])
  (denote-sequence .
-		  [(0 1 1)
+		  [(0 2 0)
 		   ((emacs
 		     (28 1))
 		    (denote
@@ -1124,9 +1124,9 @@
 		    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "08fc66d1e115567f4fe4c94968210b3c56b5acfb"))])
+		    (:commit . "22bdb31f20dd49ee13f511b74a9ae7ba5f8c2ade"))])
  (denote-silo .
-	      [(0 1 2)
+	      [(0 2 0)
 	       ((emacs
 		 (28 1))
 		(denote
@@ -1136,7 +1136,7 @@
 		(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		(:authors
 		 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		(:commit . "247ce2685baa2521c37f1671ec3ee1d1c01f5497"))])
+		(:commit . "5710b3f15e477c1b2f71ddb9c8cf719f9589f1cb"))])
  (detached .
 	   [(0 10 1)
 	    ((emacs
@@ -2739,7 +2739,7 @@
 		      ("Sean Whitton" . "spwhitton@spwhitton.name"))
 		     (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm .
-      [(0 27 2)
+      [(0 27 3)
        ((emacs
 	 (28 1))
 	(plz
@@ -2755,7 +2755,7 @@
 	(:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	(:authors
 	 ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	(:commit . "efd1e7d6cbc4d454c2d7f0b6e7ad6cf35cd11136"))])
+	(:commit . "ed64003f382a0e3ad399f886c78fdb893f973a8e"))])
  (lmc .
       [(1 4)
        nil "Little Man Computer in Elisp" tar
@@ -2903,7 +2903,7 @@
 	       ("Ian Martins" . "ianxm@jhu.edu"))
 	      (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode .
-	      [(7 1 1)
+	      [(7 1 2)
 	       ((emacs
 		 (27 2)))
 	       "Major mode for MATLAB(R) dot-m files" tar
@@ -2916,7 +2916,7 @@
 		(:authors
 		 ("Matt Wette" . "mwette@alumni.caltech.edu")
 		 ("Eric M. Ludlam" . "eludlam@mathworks.com"))
-		(:commit . "aca9a75c24848e95a2f11894d4ef2efc539bf588"))])
+		(:commit . "33673b5b7caf56f064108af5a39b9fadba02ac31"))])
  (mct .
       [(1 1 0)
        ((emacs

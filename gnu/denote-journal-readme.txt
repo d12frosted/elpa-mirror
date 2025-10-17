@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.1.0,
-released on 2025-04-15.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.2.0,
+released on 2025-10-17.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.2.0-dev.
+Current development target is 0.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote-journal'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-journal>
@@ -39,11 +39,12 @@ Table of Contents
 .. 2. Create a new journal entry or use an existing one
 .. 3. Link to a journal entry or create it if missing
 .. 4. Integrate with the `calendar' to view or create journal entries
-.. 5. The `denote-journal-directory'
-.. 6. Title format of new journal entries
-.. 7. Create a journal entry using Org capture
-.. 8. The `denote-journal-hook'
-.. 9. Journaling with a timer
+.. 5. The `denote-journal-directory' option
+.. 6. The `denote-journal-signature' option
+.. 7. Title format of new journal entries
+.. 8. Create a journal entry using Org capture
+.. 9. The `denote-journal-hook'
+.. 10. Journaling with a timer
 5. Acknowledgements
 6. GNU Free Documentation License
 7. Indices
@@ -172,7 +173,8 @@ Table of Contents
   journal. Such a file has the `denote-journal-keyword', which is the
   string `journal' by default (read the Denote manual about the
   file-naming scheme). The user can set this keyword to an arbitrary
-  string (single word is preferred) or a list of strings.
+  string (single word is preferred), a list of strings, a function that
+  returns a string or list of strings, or `nil' to not use any keywords.
 
   New journal entries are stored in the `denote-journal-directory',
   while any command that generates a new journal entry calls the
@@ -188,7 +190,7 @@ Table of Contents
   ([Create a new journal entry or use an existing one]).
 
 
-[The `denote-journal-hook'] See section 4.8
+[The `denote-journal-hook'] See section 4.9
 
 [The `denote-journal-directory'] See section 4.5
 
@@ -202,14 +204,14 @@ Table of Contents
   journal entry and opens it for editing or creates a new one.
 
   A journal entry is an editable file that has `denote-journal-keyword'
-  as part of its file name. If there are multiple journal entries for
-  the current date, `denote-journal-new-or-existing-entry' prompts to
-  select one among them using minibuffer completion. If there is only
-  one matching file, it visits it outright. If there is no journal
-  entry, it creates a new one by calling `denote-journal-new-entry'
-  ([Create new journal entry]). Depending on one’s workflow, this can
-  also be done via `org-capture' ([Create a journal entry using Org
-  capture]).
+  as part of its file name ([The `denote-journal-signature' option]). If
+  there are multiple journal entries for the current date,
+  `denote-journal-new-or-existing-entry' prompts to select one among
+  them using minibuffer completion. If there is only one matching file,
+  it visits it outright. If there is no journal entry, it creates a new
+  one by calling `denote-journal-new-entry' ([Create new journal
+  entry]).  Depending on one’s workflow, this can also be done via
+  `org-capture' ([Create a journal entry using Org capture]).
 
   When called with a prefix argument (`C-u' with default key bindings),
   the command `denote-journal-new-or-existing-entry' prompts for a date
@@ -222,10 +224,18 @@ Table of Contents
   minibuffer+calendar date picker that Org uses for its own date
   selection operations.
 
+  This command consults the user option `denote-journal-interval' to
+  determine when to create a new file or visit an existing one. The
+  `denote-journal-interval' can be set to a value of `daily', `weekly',
+  `monthly', or `yearly'. Any other value is internall treated as
+  `daily'.
+
+
+[The `denote-journal-signature' option] See section 4.6
 
 [Create new journal entry] See section 4.1
 
-[Create a journal entry using Org capture] See section 4.7
+[Create a journal entry using Org capture] See section 4.8
 
 [Integrate with the `calendar' to view or create journal entries] See
 section 4.4
@@ -277,8 +287,8 @@ section 4.4
 [Create a new journal entry or use an existing one] See section 4.2
 
 
-4.5 The `denote-journal-directory'
-──────────────────────────────────
+4.5 The `denote-journal-directory' option
+─────────────────────────────────────────
 
   New journal entries are placed in the `denote-journal-directory',
   which defaults to a subdirectory of `denote-directory' called
@@ -291,7 +301,35 @@ section 4.4
   the file-naming scheme for searching or filtering”).
 
 
-4.6 Title format of new journal entries
+4.6 The `denote-journal-signature' option
+─────────────────────────────────────────
+
+  The user option `denote-journal-signature' specifies a predefined
+  signature to use in new journal entries. This is used by
+  `denote-journal-new-entry' and all related commands ([Create new
+  journal entry]).
+
+  The value of this user option can be one of the following:
+
+  • `nil', which means to not use a predefined signature;
+  • a string, which is used as-is;
+  • a function that returns a string, which is then used as-is.
+
+  In the case of a function, users may wish to integrate the
+  `denote-journal' package with `denote-sequence'. For example, each new
+  journal entry should be defined as a new parent sequence. Thus:
+
+  ┌────
+  │ (setq denote-journal-signature
+  │       (lambda ()
+  │ 	(denote-sequence-get-new 'parent)))
+  └────
+
+
+[Create new journal entry] See section 4.1
+
+
+4.7 Title format of new journal entries
 ───────────────────────────────────────
 
   New journal entries will use the current date as the title of the
@@ -322,7 +360,7 @@ section 4.4
     will yield a title like `Week 14 on 1 April 2025 at 13:48'.
 
 
-4.7 Create a journal entry using Org capture
+4.8 Create a journal entry using Org capture
 ────────────────────────────────────────────
 
   Users who prefer to consolidate all their note-creating or todo-making
@@ -350,7 +388,7 @@ section 4.4
 [Create a new journal entry or use an existing one] See section 4.2
 
 
-4.8 The `denote-journal-hook'
+4.9 The `denote-journal-hook'
 ─────────────────────────────
 
   All commands that create a new journal entry call the normal hook
@@ -359,11 +397,11 @@ section 4.4
   package from GNU ELPA ([Journaling with a timer]).
 
 
-[Journaling with a timer] See section 4.9
+[Journaling with a timer] See section 4.10
 
 
-4.9 Journaling with a timer
-───────────────────────────
+4.10 Journaling with a timer
+────────────────────────────
 
   Sometimes journaling is done with the intent to hone one’s writing
   skills. Perhaps you are learning a new language or wish to communicate
@@ -425,7 +463,7 @@ section 4.4
   ⁃ Backronym: TMR May Ring; Timer Must Run.
 
 
-[The `denote-journal-hook'] See section 4.8
+[The `denote-journal-hook'] See section 4.9
 
 
 5 Acknowledgements
@@ -438,10 +476,12 @@ section 4.4
         Protesilaos Stavrou.
 
   Contributions to code or the manual
-        Honza Pokorny, Stefan Monnier, Vineet C. Kulkarni.
+        Abdelhak Bougouffa, Alan Schmitt, Ettore Berardi, Honza Pokorny,
+        Josh Kingsley, Stefan Monnier, Vineet C. Kulkarni, gk2803,
+        jbwfu.
 
   Ideas and/or user feedback
-        Alan Schmitt, Kevin McCarthy.
+        Alan Schmitt, Kevin McCarthy, Halogen3576.
 
 
 6 GNU Free Documentation License

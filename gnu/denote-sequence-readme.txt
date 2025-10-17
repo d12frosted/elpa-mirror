@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for the Emacs package called `denote' (or `denote.el'), and
 provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.1.0,
-released on 2025-04-15.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.2.0,
+released on 2025-10-17.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.2.0-dev.
+Current development target is 0.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote-sequence'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-sequence>
@@ -221,6 +221,10 @@ Table of Contents
         then the command behaves the same as the aforementioned
         `denote-sequence-new-sibling'.
 
+  Finally, to make an existing file use the Denote file-naming scheme
+  and become a new parent sequence, use the command
+  `denote-sequence-rename-as-parent'.
+
 
 [Select a sequencing scheme for `denote-sequence-scheme'] See section
 2.1
@@ -230,14 +234,17 @@ Table of Contents
 ───────────────────────────────────────────
 
   While reading a file with a sequence, you may want to find what its
-  relatives are about. To this end, the command `denote-sequence-find'
-  prompts for a type among `parent', `sibling', `child', and then asks
-  to select a file among those matching the given type. It then visits
-  the file.
+  relatives are. To this end, the command `denote-sequence-find' prompts
+  for a type among `parent', `sibling', `child', and then asks to select
+  a file among those matching the given type. It then visits the file.
 
   Instead of selecting a single file, the command
   `denote-sequence-find-dired' puts all the matching files in a bespoke
   Dired buffer ([Show all or some sequences in a Dired buffer]).
+
+  Finally, the commands `denote-sequence-find-next-sibling' and
+  `denote-sequence-find-previous-sibling' move between sibling files in
+  a given sequence.
 
 
 [Show all or some sequences in a Dired buffer] See section 2.6
@@ -402,10 +409,11 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to code or the manual
-        Claudio Migliorelli, Kierin Bell.
+        Ashton Wiersdorf, Claudio Migliorelli, Kierin Bell, Rory
+        Molinari, Peter Prevos.
 
   Ideas and/or user feedback
-        Mirko Hernandez.
+        Alex Carney, Mirko Hernandez.
 
 
 6 GNU Free Documentation License
