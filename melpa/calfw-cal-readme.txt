@@ -2,7 +2,7 @@ Display diary items in the calfw buffer.
 
 (require 'calfw-cal)
 
-M-x cfw:open-diary-calendar
+M-x calfw-cal-open-diary-calendar
 
 Key binding
 i : insert an entry on the date
