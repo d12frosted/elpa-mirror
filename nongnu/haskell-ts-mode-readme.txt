@@ -1,13 +1,16 @@
-*NOTICE:* Indentation has temporarily been disabled by default. SEE for
-why this was needed and what the plan is.  TLDR indentation is going
-through a full rewrite.
+*NOTICE:* Indentation has temporarily been disabled by default. SEE THE
+[INDENTATION] SECTION for why this was needed and what the plan is.
+TLDR indentation is going through a full rewrite.
+
+
+[INDENTATION] See section 9.1
 
 
 1 Contributing
 ══════════════
 
   Please contribute ideas on how the new indentation system would work.
-  See [rewriting the indentation].
+  See [rewriting the indentation] section.
 
 
 [rewriting the indentation] See section 9.1.2
