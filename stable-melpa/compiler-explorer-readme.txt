@@ -27,6 +27,9 @@ executed program.
 M-x `compiler-explorer-set-input' reads a string from minibuffer that
 will be used as input for the executed program.
 
+M-x `compiler-explorer-browse-opcode-documentation' opens a website
+that contains the documentation for the opcode at point.
+
 M-x `compiler-explorer-jump' jumps to ASM block for the source line at
 point and vice versa.
 
