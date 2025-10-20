@@ -1,0 +1,32 @@
+Package: mono-complete
+Fetcher: codeberg
+Source:  https://codeberg.org/ideasman42/emacs-mono-complete
+
+Updating /mnt/store/melpa/working/mono-complete/
+Checking out 0c09e3a295515d58150d2f404aeec9f011b7361a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mono-complete/
+  to /tmp/mono-completeVBtDsh/mono-complete-20251016.2317
+    mono-complete-backend-capf.el -> mono-complete-backend-capf.el
+    mono-complete-backend-dabbrev.el -> mono-complete-backend-dabbrev.el
+    mono-complete-backend-filesystem.el -> mono-complete-backend-filesystem.el
+    mono-complete-backend-spell-fu.el -> mono-complete-backend-spell-fu.el
+    mono-complete-backend-whole-line.el -> mono-complete-backend-whole-line.el
+    mono-complete-backend-word-predict.el -> mono-complete-backend-word-predict.el
+    mono-complete.el -> mono-complete.el
+    mono-complete-backend-word-predict.py -> mono-complete-backend-word-predict.py
+Created mono-complete-20251016.2317.tar containing:
+  mono-complete-20251016.2317/
+  mono-complete-20251016.2317/mono-complete-backend-capf.el
+  mono-complete-20251016.2317/mono-complete-backend-dabbrev.el
+  mono-complete-20251016.2317/mono-complete-backend-filesystem.el
+  mono-complete-20251016.2317/mono-complete-backend-spell-fu.el
+  mono-complete-20251016.2317/mono-complete-backend-whole-line.el
+  mono-complete-20251016.2317/mono-complete-backend-word-predict.el
+  mono-complete-20251016.2317/mono-complete-backend-word-predict.py
+  mono-complete-20251016.2317/mono-complete-pkg.el
+  mono-complete-20251016.2317/mono-complete.el
+ ✓ Success:
+  2025-10-20T02:38:03+0000  mono-complete-20251016.2317.entry
+  2025-10-20T02:38:02+0000  mono-complete-20251016.2317.tar
+Built mono-complete in 3.946s, finished at 2025-10-20T02:38:03+0000
