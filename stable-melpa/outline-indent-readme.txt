@@ -23,8 +23,9 @@ Installation from MELPA:
 ------------------------
 (use-package outline-indent
   :ensure t
+  :commands outline-indent-minor-mode
   :custom
-  (outline-indent-ellipsis " ▼ "))
+  (outline-indent-ellipsis " ▼"))
 
 Activation:
 -----------
