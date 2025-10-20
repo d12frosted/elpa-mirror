@@ -9,7 +9,7 @@ and the original `cond-let', `cond-let*', `and$' and `and>'.
 
 This package additionally provides more consistent and improved
 implementations of the binding conditionals already provided by
-Emacs.  Merely loading this library does not shawow the built-in
+Emacs.  Merely loading this library does not shadow the built-in
 implementations; this can optionally be done in the context of
 an individual library, as described below.
 
