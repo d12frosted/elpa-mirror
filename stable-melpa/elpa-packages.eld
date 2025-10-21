@@ -4740,7 +4740,6 @@
   (region-occurrences-highlighter :url "https://github.com/alvarogonzalezsotillo/region-occurrences-highlighter")
   (region-state :url "https://github.com/xuchunyang/region-state.el")
   (register-channel :url "https://github.com/YangZhao11/register-channel")
-  (register-quicknav :url "https://schlomp.space/tastytea/register-quicknav.git")
   (rego-mode :url "https://github.com/psibi/rego-mode")
   (regswap :url "https://github.com/skitov/regswap")
   (related :url "https://github.com/julien-montmartin/related")
