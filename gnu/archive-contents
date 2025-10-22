@@ -1708,7 +1708,7 @@
 		("Ted Zlatanov" . "tzz@lifelogs.com"))
 	       (:maintainer "Ted Zlatanov" . "tzz@lifelogs.com"))])
  (erc .
-      [(5 6)
+      [(5 6 1)
        ((emacs
 	 (27 1))
 	(compat
@@ -1721,7 +1721,7 @@
 	 ("F. Jason Park" . "jp@neverwas.me"))
 	(:authors
 	 ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-	(:commit . "d1e98a8f0128747030e97ffea20a8f67aa0cd923"))])
+	(:commit . "1b5fef63b483fba9908543da39365bd522ad6e4a"))])
  (ergoemacs-mode .
 		 [(5 16 10 12)
 		  ((emacs
