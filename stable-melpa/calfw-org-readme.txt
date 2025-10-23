@@ -7,4 +7,4 @@ I hope someone continue integration with the org.)
 ;; use org agenda buffer style keybinding.
 ;; (setq calfw-org-overwrite-default-keybinding t)
 
-M-x calfw-open-org-calendar
+M-x calfw-org-open-calendar
