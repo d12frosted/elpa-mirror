@@ -1149,16 +1149,18 @@
 	      ("Niklas Eklund" . "niklas.eklund@posteo.net"))
 	     (:commit . "fedb0df5b0fbba13c662107855fb07a922793096"))])
  (devdocs .
-	  [(0 6 1)
+	  [(0 7)
 	   ((emacs
-	     (27 1)))
+	     (27 1))
+	    (compat
+	     (30 1)))
 	   "Emacs viewer for DevDocs" tar
 	   ((:url . "https://github.com/astoff/devdocs.el")
 	    (:keywords "help")
 	    (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	    (:authors
 	     ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	    (:commit . "ebdd3b39bef1a928c069373337d0f8e4f2d8b8d2"))])
+	    (:commit . "25c746024ddf73570195bf42b841f761a2fee10c"))])
  (devicetree-ts-mode .
 		     [(0 3)
 		      ((emacs

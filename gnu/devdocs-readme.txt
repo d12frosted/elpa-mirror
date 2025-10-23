@@ -70,7 +70,23 @@ package-install RET devdocs'.
   this directory.
 
 
-3 Setting the default documents for a collection of buffers
+3 Customization
+═══════════════
+
+  Run `M-x customize-group RET devdocs RET' to see a listing of
+  customization options.
+
+  You can enable rendering of mathematical formulas by installing the
+  [mathjax] package.  Note that this additionally requires having
+  [Node.js] installed on your machine.
+
+
+[mathjax] <https://elpa.gnu.org/packages/mathjax.html>
+
+[Node.js] <https://nodejs.org/>
+
+
+4 Setting the default documents for a collection of buffers
 ═══════════════════════════════════════════════════════════
 
   You may wish to select a predefined list of documents in all buffers
@@ -91,7 +107,7 @@ package-install RET devdocs'.
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html>
 
 
-4 Contributing
+5 Contributing
 ══════════════
 
   Discussions, suggestions and code contributions are welcome! Since
