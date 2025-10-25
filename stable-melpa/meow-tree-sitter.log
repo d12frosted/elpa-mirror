@@ -3,101 +3,104 @@ Fetcher: github
 Source:  https://github.com/skissue/meow-tree-sitter
 
 Updating /mnt/store/melpa/working/meow-tree-sitter/
-Checking out 777f744123399b4cd430e1dd08f995d5c43a28ab
+Checking out af705960ea34763c804e9c3ea16b6fb9645cce0d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/meow-tree-sitter/
-  to /tmp/meow-tree-sitterBZstOI/meow-tree-sitter-20251023.1533
+  to /tmp/meow-tree-sitterVJylbU/meow-tree-sitter-20251025.333
     meow-tree-sitter.el -> meow-tree-sitter.el
     queries => queries
-Created meow-tree-sitter-20251023.1533.tar containing:
-  meow-tree-sitter-20251023.1533/
-  meow-tree-sitter-20251023.1533/meow-tree-sitter-pkg.el
-  meow-tree-sitter-20251023.1533/meow-tree-sitter.el
-  meow-tree-sitter-20251023.1533/queries/
-  meow-tree-sitter-20251023.1533/queries/_javascript.scm
-  meow-tree-sitter-20251023.1533/queries/_jsx.scm
-  meow-tree-sitter-20251023.1533/queries/_typescript.scm
-  meow-tree-sitter-20251023.1533/queries/ada.scm
-  meow-tree-sitter-20251023.1533/queries/adl.scm
-  meow-tree-sitter-20251023.1533/queries/awk.scm
-  meow-tree-sitter-20251023.1533/queries/bash.scm
-  meow-tree-sitter-20251023.1533/queries/c-sharp.scm
-  meow-tree-sitter-20251023.1533/queries/c.scm
-  meow-tree-sitter-20251023.1533/queries/cairo.scm
-  meow-tree-sitter-20251023.1533/queries/cmake.scm
-  meow-tree-sitter-20251023.1533/queries/cpp.scm
-  meow-tree-sitter-20251023.1533/queries/crystal.scm
-  meow-tree-sitter-20251023.1533/queries/d.scm
-  meow-tree-sitter-20251023.1533/queries/dart.scm
-  meow-tree-sitter-20251023.1533/queries/dhall.scm
-  meow-tree-sitter-20251023.1533/queries/earthfile.scm
-  meow-tree-sitter-20251023.1533/queries/ecma.scm
-  meow-tree-sitter-20251023.1533/queries/elixir.scm
-  meow-tree-sitter-20251023.1533/queries/elm.scm
-  meow-tree-sitter-20251023.1533/queries/erlang.scm
-  meow-tree-sitter-20251023.1533/queries/fish.scm
-  meow-tree-sitter-20251023.1533/queries/gas.scm
-  meow-tree-sitter-20251023.1533/queries/gdscript.scm
-  meow-tree-sitter-20251023.1533/queries/git-commit.scm
-  meow-tree-sitter-20251023.1533/queries/gjs.scm
-  meow-tree-sitter-20251023.1533/queries/gleam.scm
-  meow-tree-sitter-20251023.1533/queries/glsl.scm
-  meow-tree-sitter-20251023.1533/queries/go.scm
-  meow-tree-sitter-20251023.1533/queries/graphql.scm
-  meow-tree-sitter-20251023.1533/queries/gts.scm
-  meow-tree-sitter-20251023.1533/queries/haskell.scm
-  meow-tree-sitter-20251023.1533/queries/hcl.scm
-  meow-tree-sitter-20251023.1533/queries/heex.scm
-  meow-tree-sitter-20251023.1533/queries/hurl.scm
-  meow-tree-sitter-20251023.1533/queries/inko.scm
-  meow-tree-sitter-20251023.1533/queries/java.scm
-  meow-tree-sitter-20251023.1533/queries/javascript.scm
-  meow-tree-sitter-20251023.1533/queries/json.scm
-  meow-tree-sitter-20251023.1533/queries/jsx.scm
-  meow-tree-sitter-20251023.1533/queries/julia.scm
-  meow-tree-sitter-20251023.1533/queries/just.scm
-  meow-tree-sitter-20251023.1533/queries/kdl.scm
-  meow-tree-sitter-20251023.1533/queries/latex.scm
-  meow-tree-sitter-20251023.1533/queries/llvm-mir.scm
-  meow-tree-sitter-20251023.1533/queries/llvm.scm
-  meow-tree-sitter-20251023.1533/queries/lua.scm
-  meow-tree-sitter-20251023.1533/queries/matlab.scm
-  meow-tree-sitter-20251023.1533/queries/mojo.scm
-  meow-tree-sitter-20251023.1533/queries/nasm.scm
-  meow-tree-sitter-20251023.1533/queries/nim.scm
-  meow-tree-sitter-20251023.1533/queries/nix.scm
-  meow-tree-sitter-20251023.1533/queries/ohm.scm
-  meow-tree-sitter-20251023.1533/queries/opencl.scm
-  meow-tree-sitter-20251023.1533/queries/pascal.scm
-  meow-tree-sitter-20251023.1533/queries/perl.scm
-  meow-tree-sitter-20251023.1533/queries/pest.scm
-  meow-tree-sitter-20251023.1533/queries/php.scm
-  meow-tree-sitter-20251023.1533/queries/pkgbuild.scm
-  meow-tree-sitter-20251023.1533/queries/po.scm
-  meow-tree-sitter-20251023.1533/queries/ponylang.scm
-  meow-tree-sitter-20251023.1533/queries/protobuf.scm
-  meow-tree-sitter-20251023.1533/queries/purescript.scm
-  meow-tree-sitter-20251023.1533/queries/python.scm
-  meow-tree-sitter-20251023.1533/queries/rescript.scm
-  meow-tree-sitter-20251023.1533/queries/ruby.scm
-  meow-tree-sitter-20251023.1533/queries/rust.scm
-  meow-tree-sitter-20251023.1533/queries/sage.scm
-  meow-tree-sitter-20251023.1533/queries/scala.scm
-  meow-tree-sitter-20251023.1533/queries/slint.scm
-  meow-tree-sitter-20251023.1533/queries/solidity.scm
-  meow-tree-sitter-20251023.1533/queries/starlark.scm
-  meow-tree-sitter-20251023.1533/queries/sway.scm
-  meow-tree-sitter-20251023.1533/queries/tablegen.scm
-  meow-tree-sitter-20251023.1533/queries/tact.scm
-  meow-tree-sitter-20251023.1533/queries/toml.scm
-  meow-tree-sitter-20251023.1533/queries/tsx.scm
-  meow-tree-sitter-20251023.1533/queries/typescript.scm
-  meow-tree-sitter-20251023.1533/queries/v.scm
-  meow-tree-sitter-20251023.1533/queries/vala.scm
-  meow-tree-sitter-20251023.1533/queries/verilog.scm
-  meow-tree-sitter-20251023.1533/queries/wren.scm
-  meow-tree-sitter-20251023.1533/queries/zig.scm
+Created meow-tree-sitter-20251025.333.tar containing:
+  meow-tree-sitter-20251025.333/
+  meow-tree-sitter-20251025.333/meow-tree-sitter-pkg.el
+  meow-tree-sitter-20251025.333/meow-tree-sitter.el
+  meow-tree-sitter-20251025.333/queries/
+  meow-tree-sitter-20251025.333/queries/_javascript.scm
+  meow-tree-sitter-20251025.333/queries/_jsx.scm
+  meow-tree-sitter-20251025.333/queries/_typescript.scm
+  meow-tree-sitter-20251025.333/queries/ada.scm
+  meow-tree-sitter-20251025.333/queries/adl.scm
+  meow-tree-sitter-20251025.333/queries/awk.scm
+  meow-tree-sitter-20251025.333/queries/bash.scm
+  meow-tree-sitter-20251025.333/queries/c-sharp.scm
+  meow-tree-sitter-20251025.333/queries/c.scm
+  meow-tree-sitter-20251025.333/queries/cairo.scm
+  meow-tree-sitter-20251025.333/queries/cmake.scm
+  meow-tree-sitter-20251025.333/queries/cpp.scm
+  meow-tree-sitter-20251025.333/queries/crystal.scm
+  meow-tree-sitter-20251025.333/queries/d.scm
+  meow-tree-sitter-20251025.333/queries/dart.scm
+  meow-tree-sitter-20251025.333/queries/dhall.scm
+  meow-tree-sitter-20251025.333/queries/earthfile.scm
+  meow-tree-sitter-20251025.333/queries/ecma.scm
+  meow-tree-sitter-20251025.333/queries/elixir.scm
+  meow-tree-sitter-20251025.333/queries/elm.scm
+  meow-tree-sitter-20251025.333/queries/erlang.scm
+  meow-tree-sitter-20251025.333/queries/fish.scm
+  meow-tree-sitter-20251025.333/queries/gas.scm
+  meow-tree-sitter-20251025.333/queries/gdscript.scm
+  meow-tree-sitter-20251025.333/queries/git-commit.scm
+  meow-tree-sitter-20251025.333/queries/gjs.scm
+  meow-tree-sitter-20251025.333/queries/gleam.scm
+  meow-tree-sitter-20251025.333/queries/glsl.scm
+  meow-tree-sitter-20251025.333/queries/go.scm
+  meow-tree-sitter-20251025.333/queries/graphql.scm
+  meow-tree-sitter-20251025.333/queries/gts.scm
+  meow-tree-sitter-20251025.333/queries/haskell.scm
+  meow-tree-sitter-20251025.333/queries/hcl.scm
+  meow-tree-sitter-20251025.333/queries/heex.scm
+  meow-tree-sitter-20251025.333/queries/hurl.scm
+  meow-tree-sitter-20251025.333/queries/inko.scm
+  meow-tree-sitter-20251025.333/queries/java.scm
+  meow-tree-sitter-20251025.333/queries/javascript.scm
+  meow-tree-sitter-20251025.333/queries/json.scm
+  meow-tree-sitter-20251025.333/queries/jsx.scm
+  meow-tree-sitter-20251025.333/queries/julia.scm
+  meow-tree-sitter-20251025.333/queries/just.scm
+  meow-tree-sitter-20251025.333/queries/kdl.scm
+  meow-tree-sitter-20251025.333/queries/latex.scm
+  meow-tree-sitter-20251025.333/queries/llvm-mir.scm
+  meow-tree-sitter-20251025.333/queries/llvm.scm
+  meow-tree-sitter-20251025.333/queries/lua.scm
+  meow-tree-sitter-20251025.333/queries/matlab.scm
+  meow-tree-sitter-20251025.333/queries/mojo.scm
+  meow-tree-sitter-20251025.333/queries/nasm.scm
+  meow-tree-sitter-20251025.333/queries/nim.scm
+  meow-tree-sitter-20251025.333/queries/nix.scm
+  meow-tree-sitter-20251025.333/queries/ohm.scm
+  meow-tree-sitter-20251025.333/queries/opencl.scm
+  meow-tree-sitter-20251025.333/queries/pascal.scm
+  meow-tree-sitter-20251025.333/queries/perl.scm
+  meow-tree-sitter-20251025.333/queries/pest.scm
+  meow-tree-sitter-20251025.333/queries/php.scm
+  meow-tree-sitter-20251025.333/queries/pkgbuild.scm
+  meow-tree-sitter-20251025.333/queries/po.scm
+  meow-tree-sitter-20251025.333/queries/ponylang.scm
+  meow-tree-sitter-20251025.333/queries/protobuf.scm
+  meow-tree-sitter-20251025.333/queries/purescript.scm
+  meow-tree-sitter-20251025.333/queries/python.scm
+  meow-tree-sitter-20251025.333/queries/r.scm
+  meow-tree-sitter-20251025.333/queries/rescript.scm
+  meow-tree-sitter-20251025.333/queries/ruby.scm
+  meow-tree-sitter-20251025.333/queries/rust.scm
+  meow-tree-sitter-20251025.333/queries/sage.scm
+  meow-tree-sitter-20251025.333/queries/scala.scm
+  meow-tree-sitter-20251025.333/queries/slint.scm
+  meow-tree-sitter-20251025.333/queries/solidity.scm
+  meow-tree-sitter-20251025.333/queries/starlark.scm
+  meow-tree-sitter-20251025.333/queries/sway.scm
+  meow-tree-sitter-20251025.333/queries/tablegen.scm
+  meow-tree-sitter-20251025.333/queries/tact.scm
+  meow-tree-sitter-20251025.333/queries/toml.scm
+  meow-tree-sitter-20251025.333/queries/tsx.scm
+  meow-tree-sitter-20251025.333/queries/typescript.scm
+  meow-tree-sitter-20251025.333/queries/v.scm
+  meow-tree-sitter-20251025.333/queries/vala.scm
+  meow-tree-sitter-20251025.333/queries/verilog.scm
+  meow-tree-sitter-20251025.333/queries/wren.scm
+  meow-tree-sitter-20251025.333/queries/zig.scm
  ✓ Success:
-  2025-10-24T18:24:28+0000  meow-tree-sitter-20251023.1533.entry
-  2025-10-24T18:24:27+0000  meow-tree-sitter-20251023.1533.tar
-Built meow-tree-sitter in 3.447s, finished at 2025-10-24T18:24:28+0000
+  2025-10-25T01:29:04+0000  meow-tree-sitter-20251023.1533.entry
+  2025-10-25T01:29:04+0000  meow-tree-sitter-20251023.1533.tar
+  2025-10-25T03:48:47+0000  meow-tree-sitter-20251025.333.entry
+  2025-10-25T03:48:47+0000  meow-tree-sitter-20251025.333.tar
+Built meow-tree-sitter in 5.950s, finished at 2025-10-25T03:48:49+0000
