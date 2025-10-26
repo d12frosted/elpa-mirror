@@ -1131,7 +1131,7 @@
 	       ("Jonas Bernoulli" . "emacs.git-modes@jonas.bernoulli.dev"))
 	      (:commit . "7063d66857023e6c010cecac52de67c0baa77fb7"))])
  (gnosis .
-	 [(0 5 6)
+	 [(0 5 7)
 	  ((emacs
 	    (27 2))
 	   (emacsql
@@ -1148,7 +1148,7 @@
 	   (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
 	   (:authors
 	    ("Thanos Apollo" . "public@thanosapollo.org"))
-	   (:commit . "653e4effd598a3d362905b6b299867274bfb7490"))])
+	   (:commit . "bb0edd089351b646ad5746199678cc2626a8b539"))])
  (gnu-apl-mode .
 	       [(1 5 1)
 		nil "Emacs mode for GNU APL" tar
@@ -1714,11 +1714,11 @@
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
  (mastodon .
-	   [(2 0 3)
+	   [(2 0 5)
 	    ((emacs
 	      (28 1))
 	     (persist
-	      (0 7))
+	      (0 8))
 	     (tp
 	      (0 7)))
 	    "Client for fediverse services using the Mastodon API" tar
@@ -1727,7 +1727,7 @@
 	     (:authors
 	      ("Johnson Denen" . "johnson.denen@gmail.com")
 	      ("Marty Hiatt" . "mousebot@disroot.org"))
-	     (:commit . "b16ee14b60a47115611ecdde0ddc4656cd0a1278"))])
+	     (:commit . "587e0c347b918208db37975a483ecdb195427fa1"))])
  (material-theme .
 		 [(2015)
 		  ((emacs
