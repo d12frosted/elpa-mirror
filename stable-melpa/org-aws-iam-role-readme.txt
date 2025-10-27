@@ -25,6 +25,7 @@ In the IAM Role Viewer Buffer:
 - C-c C-e: Toggle read-only mode to enable/disable editing.
 - C-c C-s: Simulate the role's policies against specific actions.
 - C-c C-j: View a combined JSON of all permission policies.
+- C-c C-a: Get service last accessed details for the role.
 - C-c C-c: Inside a source block, apply changes to AWS.
 - C-c (:   Hide all property drawers.
 - C-c ):   Reveal all property drawers.
