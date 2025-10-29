@@ -1488,6 +1488,16 @@
 		  ("Sarah Iovan" . "sarah@hwaetageek.com")
 		  ("Campbell Barton" . "ideasman42@gmail.com"))
 		 (:commit . "de745de9ab7f67431a5ce493a63be68d408ec40e"))])
+ (isl .
+      [(1 4)
+       ((emacs
+	 (29 1)))
+       "Simple incremental search in current-buffer" tar
+       ((:url . "https://github.com/thierryvolpiatto/isearch-light")
+	(:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
+	(:authors
+	 ("Thierry Volpiatto" . "thievol@posteo.net"))
+	(:commit . "b66260d69404d8d157e1664042e2ffe6a0beb1e8"))])
  (iwindow .
 	  [(1 1)
 	   ((emacs
@@ -2190,7 +2200,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20251020 142150)
+	      [(1 0 20251027 101258)
 	       ((emacs
 		 (25 1))
 		(compat
