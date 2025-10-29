@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/mathworks/Emacs-MATLAB-Mode
 
 Updating /mnt/store/melpa/working/matlab-mode/
-Checking out 33673b5b7caf56f064108af5a39b9fadba02ac31
+Checking out 22ee71d2118ff3c62b5e1870d5ce277d5317ee49
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/matlab-mode/
-  to /tmp/matlab-modetOADXH/matlab-mode-20251016.2044
+  to /tmp/matlab-modezahohh/matlab-mode-20251028.2317
     company-matlab-shell.el -> company-matlab-shell.el
     linemark.el -> linemark.el
     matlab--access.el -> matlab--access.el
@@ -55,64 +55,64 @@ Copying files (->) and directories (=>)
     toolbox/+emacs/@EmacsServer/EmacsServer.m -> toolbox/+emacs/@EmacsServer/EmacsServer.m
     toolbox/+emacs/@Stack/Stack.m -> toolbox/+emacs/@Stack/Stack.m
     bin/matlab-emacsclient.sh -> bin/matlab-emacsclient.sh
-Created matlab-mode-20251016.2044.tar containing:
-  matlab-mode-20251016.2044/
-  matlab-mode-20251016.2044/bin/
-  matlab-mode-20251016.2044/bin/matlab-emacsclient.sh
-  matlab-mode-20251016.2044/company-matlab-shell.el
-  matlab-mode-20251016.2044/linemark.el
-  matlab-mode-20251016.2044/matlab--access.el
-  matlab-mode-20251016.2044/matlab--shared.el
-  matlab-mode-20251016.2044/matlab--shell-bridge.el
-  matlab-mode-20251016.2044/matlab-ccount.el
-  matlab-mode-20251016.2044/matlab-cgen.el
-  matlab-mode-20251016.2044/matlab-compat.el
-  matlab-mode-20251016.2044/matlab-complete.el
-  matlab-mode-20251016.2044/matlab-is-matlab-file.el
-  matlab-mode-20251016.2044/matlab-mode-pkg.el
-  matlab-mode-20251016.2044/matlab-mode.el
-  matlab-mode-20251016.2044/matlab-netshell.el
-  matlab-mode-20251016.2044/matlab-org.el
-  matlab-mode-20251016.2044/matlab-scan.el
-  matlab-mode-20251016.2044/matlab-sections.el
-  matlab-mode-20251016.2044/matlab-shell-gud.el
-  matlab-mode-20251016.2044/matlab-shell.el
-  matlab-mode-20251016.2044/matlab-syntax.el
-  matlab-mode-20251016.2044/matlab-topic.el
-  matlab-mode-20251016.2044/matlab-ts-langs-install.el
-  matlab-mode-20251016.2044/matlab-ts-mode--builtins.el
-  matlab-mode-20251016.2044/matlab-ts-mode.el
-  matlab-mode-20251016.2044/matlab.el
-  matlab-mode-20251016.2044/mlgud.el
-  matlab-mode-20251016.2044/mlint.el
-  matlab-mode-20251016.2044/semantic-matlab.el
-  matlab-mode-20251016.2044/semanticdb-matlab.el
-  matlab-mode-20251016.2044/tlc.el
-  matlab-mode-20251016.2044/toolbox/
-  matlab-mode-20251016.2044/toolbox/+emacs/
-  matlab-mode-20251016.2044/toolbox/+emacs/@Breakpoints/
-  matlab-mode-20251016.2044/toolbox/+emacs/@Breakpoints/Breakpoints.m
-  matlab-mode-20251016.2044/toolbox/+emacs/@EmacsServer/
-  matlab-mode-20251016.2044/toolbox/+emacs/@EmacsServer/EmacsServer.m
-  matlab-mode-20251016.2044/toolbox/+emacs/@Stack/
-  matlab-mode-20251016.2044/toolbox/+emacs/@Stack/Stack.m
-  matlab-mode-20251016.2044/toolbox/+emacs/set.m
-  matlab-mode-20251016.2044/toolbox/dbhotlink.m
-  matlab-mode-20251016.2044/toolbox/ebclear.m
-  matlab-mode-20251016.2044/toolbox/ebstack.m
-  matlab-mode-20251016.2044/toolbox/ebstatus.m
-  matlab-mode-20251016.2044/toolbox/ebstop.m
-  matlab-mode-20251016.2044/toolbox/emacscd.m
-  matlab-mode-20251016.2044/toolbox/emacsdocomplete.m
-  matlab-mode-20251016.2044/toolbox/emacsinit.m
-  matlab-mode-20251016.2044/toolbox/emacsnetshell.m
-  matlab-mode-20251016.2044/toolbox/emacsrun.m
-  matlab-mode-20251016.2044/toolbox/emacsrunregion.m
-  matlab-mode-20251016.2044/toolbox/emacsstripremote.m
-  matlab-mode-20251016.2044/toolbox/emacstipstring.m
-  matlab-mode-20251016.2044/toolbox/help.m
-  matlab-mode-20251016.2044/toolbox/opentoline.m
+Created matlab-mode-20251028.2317.tar containing:
+  matlab-mode-20251028.2317/
+  matlab-mode-20251028.2317/bin/
+  matlab-mode-20251028.2317/bin/matlab-emacsclient.sh
+  matlab-mode-20251028.2317/company-matlab-shell.el
+  matlab-mode-20251028.2317/linemark.el
+  matlab-mode-20251028.2317/matlab--access.el
+  matlab-mode-20251028.2317/matlab--shared.el
+  matlab-mode-20251028.2317/matlab--shell-bridge.el
+  matlab-mode-20251028.2317/matlab-ccount.el
+  matlab-mode-20251028.2317/matlab-cgen.el
+  matlab-mode-20251028.2317/matlab-compat.el
+  matlab-mode-20251028.2317/matlab-complete.el
+  matlab-mode-20251028.2317/matlab-is-matlab-file.el
+  matlab-mode-20251028.2317/matlab-mode-pkg.el
+  matlab-mode-20251028.2317/matlab-mode.el
+  matlab-mode-20251028.2317/matlab-netshell.el
+  matlab-mode-20251028.2317/matlab-org.el
+  matlab-mode-20251028.2317/matlab-scan.el
+  matlab-mode-20251028.2317/matlab-sections.el
+  matlab-mode-20251028.2317/matlab-shell-gud.el
+  matlab-mode-20251028.2317/matlab-shell.el
+  matlab-mode-20251028.2317/matlab-syntax.el
+  matlab-mode-20251028.2317/matlab-topic.el
+  matlab-mode-20251028.2317/matlab-ts-langs-install.el
+  matlab-mode-20251028.2317/matlab-ts-mode--builtins.el
+  matlab-mode-20251028.2317/matlab-ts-mode.el
+  matlab-mode-20251028.2317/matlab.el
+  matlab-mode-20251028.2317/mlgud.el
+  matlab-mode-20251028.2317/mlint.el
+  matlab-mode-20251028.2317/semantic-matlab.el
+  matlab-mode-20251028.2317/semanticdb-matlab.el
+  matlab-mode-20251028.2317/tlc.el
+  matlab-mode-20251028.2317/toolbox/
+  matlab-mode-20251028.2317/toolbox/+emacs/
+  matlab-mode-20251028.2317/toolbox/+emacs/@Breakpoints/
+  matlab-mode-20251028.2317/toolbox/+emacs/@Breakpoints/Breakpoints.m
+  matlab-mode-20251028.2317/toolbox/+emacs/@EmacsServer/
+  matlab-mode-20251028.2317/toolbox/+emacs/@EmacsServer/EmacsServer.m
+  matlab-mode-20251028.2317/toolbox/+emacs/@Stack/
+  matlab-mode-20251028.2317/toolbox/+emacs/@Stack/Stack.m
+  matlab-mode-20251028.2317/toolbox/+emacs/set.m
+  matlab-mode-20251028.2317/toolbox/dbhotlink.m
+  matlab-mode-20251028.2317/toolbox/ebclear.m
+  matlab-mode-20251028.2317/toolbox/ebstack.m
+  matlab-mode-20251028.2317/toolbox/ebstatus.m
+  matlab-mode-20251028.2317/toolbox/ebstop.m
+  matlab-mode-20251028.2317/toolbox/emacscd.m
+  matlab-mode-20251028.2317/toolbox/emacsdocomplete.m
+  matlab-mode-20251028.2317/toolbox/emacsinit.m
+  matlab-mode-20251028.2317/toolbox/emacsnetshell.m
+  matlab-mode-20251028.2317/toolbox/emacsrun.m
+  matlab-mode-20251028.2317/toolbox/emacsrunregion.m
+  matlab-mode-20251028.2317/toolbox/emacsstripremote.m
+  matlab-mode-20251028.2317/toolbox/emacstipstring.m
+  matlab-mode-20251028.2317/toolbox/help.m
+  matlab-mode-20251028.2317/toolbox/opentoline.m
  ✓ Success:
-  2025-10-28T22:06:26+0000  matlab-mode-20251016.2044.entry
-  2025-10-28T22:06:26+0000  matlab-mode-20251016.2044.tar
-Built matlab-mode in 6.709s, finished at 2025-10-28T22:06:27+0000
+  2025-10-29T02:49:51+0000  matlab-mode-20251028.2317.entry
+  2025-10-29T02:49:51+0000  matlab-mode-20251028.2317.tar
+Built matlab-mode in 6.559s, finished at 2025-10-29T02:49:52+0000
