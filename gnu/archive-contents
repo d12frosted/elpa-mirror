@@ -2901,7 +2901,7 @@
 	       ("Ian Martins" . "ianxm@jhu.edu"))
 	      (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode .
-	      [(7 1 2)
+	      [(7 2 0)
 	       ((emacs
 		 (27 2)))
 	       "Major mode for MATLAB(R) dot-m files" tar
@@ -2914,7 +2914,7 @@
 		(:authors
 		 ("Matt Wette" . "mwette@alumni.caltech.edu")
 		 ("Eric M. Ludlam" . "eludlam@mathworks.com"))
-		(:commit . "33673b5b7caf56f064108af5a39b9fadba02ac31"))])
+		(:commit . "389e8a5e730d933e9f5c568386992909196bfc10"))])
  (mct .
       [(1 1 0)
        ((emacs
@@ -4780,7 +4780,7 @@
 		  (:url . "https://elpa.gnu.org/packages/track-changes.html")
 		  (:commit . "ffb7d656a2c89f86ccd2de51379de9612c7a4aa3"))])
  (tramp .
-	[(2 8 0 3)
+	[(2 8 0 4)
 	 ((emacs
 	   (28 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -4790,7 +4790,7 @@
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 	   ("Michael Albinus" . "michael.albinus@gmx.de"))
-	  (:commit . "4f7278970eaecf096bb0a984191e71e7a49fa58e"))])
+	  (:commit . "382d8b1ed71eb3e4684d6db3aa69c3023e71ced5"))])
  (tramp-nspawn .
 	       [(1 0 1)
 		((emacs
@@ -5427,7 +5427,7 @@
 		("Philip Kaludercic" . "philipk@posteo.net"))
 	       (:commit . "2bb88d0dc526177c3c6612d6585cee6b2c57803a"))])
  (yaml .
-       [(1 2 0)
+       [(1 2 1)
 	((emacs
 	  (25 1)))
 	"YAML parser for Elisp" tar
@@ -5436,7 +5436,7 @@
 	 (:maintainer "Zachary Romero" . "zkry@posteo.org")
 	 (:authors
 	  ("Zachary Romero" . "zkry@posteo.org"))
-	 (:commit . "09e46d563f1f3ff948852e08360c7d3c76e2acba"))])
+	 (:commit . "3fbeaee97dce3c76a18b02a28c58777cbcdadf2f"))])
  (yasnippet .
 	    [(0 14 3)
 	     ((cl-lib

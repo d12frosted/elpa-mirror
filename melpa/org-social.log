@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/tanrax/org-social.el
 
 Updating /mnt/store/melpa/working/org-social/
-Checking out b5882bf072f649b9c976d48c63734b4b0644c059
+Checking out 11a53e85b1cdf8aa136d7411cc549570ceeacc02
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-social/
-  to /tmp/org-socialjAw12l/org-social-20251029.706
+  to /tmp/org-socialaeUv3m/org-social-20251030.757
     org-social-feed.el -> org-social-feed.el
     org-social-file.el -> org-social-file.el
     org-social-notifications.el -> org-social-notifications.el
@@ -16,6 +16,7 @@ Copying files (->) and directories (=>)
     org-social-raw.el -> org-social-raw.el
     org-social-relay.el -> org-social-relay.el
     org-social-ui.el -> org-social-ui.el
+    org-social-user-queue.el -> org-social-user-queue.el
     org-social-validator.el -> org-social-validator.el
     org-social-variables.el -> org-social-variables.el
     org-social.el -> org-social.el
@@ -29,32 +30,33 @@ Copying files (->) and directories (=>)
   ! ui/buffers/org-social-ui-search.el -> org-social-ui-search.el
   ! ui/buffers/org-social-ui-thread.el -> org-social-ui-thread.el
   ! ui/buffers/org-social-ui-timeline.el -> org-social-ui-timeline.el
-Created org-social-20251029.706.tar containing:
-  org-social-20251029.706/
-  org-social-20251029.706/org-social-feed.el
-  org-social-20251029.706/org-social-file.el
-  org-social-20251029.706/org-social-notifications.el
-  org-social-20251029.706/org-social-parser.el
-  org-social-20251029.706/org-social-partial-fetch.el
-  org-social-20251029.706/org-social-pkg.el
-  org-social-20251029.706/org-social-polls.el
-  org-social-20251029.706/org-social-raw.el
-  org-social-20251029.706/org-social-relay.el
-  org-social-20251029.706/org-social-ui-components.el
-  org-social-20251029.706/org-social-ui-core.el
-  org-social-20251029.706/org-social-ui-discover.el
-  org-social-20251029.706/org-social-ui-groups.el
-  org-social-20251029.706/org-social-ui-notifications.el
-  org-social-20251029.706/org-social-ui-profile.el
-  org-social-20251029.706/org-social-ui-search.el
-  org-social-20251029.706/org-social-ui-thread.el
-  org-social-20251029.706/org-social-ui-timeline.el
-  org-social-20251029.706/org-social-ui-utils.el
-  org-social-20251029.706/org-social-ui.el
-  org-social-20251029.706/org-social-validator.el
-  org-social-20251029.706/org-social-variables.el
-  org-social-20251029.706/org-social.el
+Created org-social-20251030.757.tar containing:
+  org-social-20251030.757/
+  org-social-20251030.757/org-social-feed.el
+  org-social-20251030.757/org-social-file.el
+  org-social-20251030.757/org-social-notifications.el
+  org-social-20251030.757/org-social-parser.el
+  org-social-20251030.757/org-social-partial-fetch.el
+  org-social-20251030.757/org-social-pkg.el
+  org-social-20251030.757/org-social-polls.el
+  org-social-20251030.757/org-social-raw.el
+  org-social-20251030.757/org-social-relay.el
+  org-social-20251030.757/org-social-ui-components.el
+  org-social-20251030.757/org-social-ui-core.el
+  org-social-20251030.757/org-social-ui-discover.el
+  org-social-20251030.757/org-social-ui-groups.el
+  org-social-20251030.757/org-social-ui-notifications.el
+  org-social-20251030.757/org-social-ui-profile.el
+  org-social-20251030.757/org-social-ui-search.el
+  org-social-20251030.757/org-social-ui-thread.el
+  org-social-20251030.757/org-social-ui-timeline.el
+  org-social-20251030.757/org-social-ui-utils.el
+  org-social-20251030.757/org-social-ui.el
+  org-social-20251030.757/org-social-user-queue.el
+  org-social-20251030.757/org-social-validator.el
+  org-social-20251030.757/org-social-variables.el
+  org-social-20251030.757/org-social.el
  ✓ Success:
-  2025-10-30T07:10:56+0000  org-social-20251029.706.entry
-  2025-10-30T07:10:56+0000  org-social-20251029.706.tar
-Built org-social in 4.071s, finished at 2025-10-30T07:10:57+0000
+  2025-10-30T11:51:52+0000  org-social-20251030.757.entry
+  2025-10-30T11:51:51+0000  org-social-20251030.757.tar
+Built org-social in 3.773s, finished at 2025-10-30T11:51:53+0000
