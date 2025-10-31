@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/unmonoqueteclea/jira.el
 
 Updating /mnt/store/melpa/working/jira/
-Checking out 0fb13e9c555987b5a35e89e219e07e3573bc6fa3
+Checking out 80d47ddbe6c1be59ded8327671653fb5bffad879
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jira/
-  to /tmp/jiraSZlcEG/jira-20251026.1744
+  to /tmp/jiraFyFdZ4/jira-20251031.1705
     jira-actions.el -> jira-actions.el
     jira-api.el -> jira-api.el
     jira-complete.el -> jira-complete.el
@@ -20,23 +20,25 @@ Copying files (->) and directories (=>)
     jira-users.el -> jira-users.el
     jira-utils.el -> jira-utils.el
     jira.el -> jira.el
-Created jira-20251026.1744.tar containing:
-  jira-20251026.1744/
-  jira-20251026.1744/jira-actions.el
-  jira-20251026.1744/jira-api.el
-  jira-20251026.1744/jira-complete.el
-  jira-20251026.1744/jira-detail.el
-  jira-20251026.1744/jira-doc.el
-  jira-20251026.1744/jira-edit.el
-  jira-20251026.1744/jira-fmt.el
-  jira-20251026.1744/jira-issues.el
-  jira-20251026.1744/jira-pkg.el
-  jira-20251026.1744/jira-table.el
-  jira-20251026.1744/jira-tempo.el
-  jira-20251026.1744/jira-users.el
-  jira-20251026.1744/jira-utils.el
-  jira-20251026.1744/jira.el
+Created jira-20251031.1705.tar containing:
+  jira-20251031.1705/
+  jira-20251031.1705/jira-actions.el
+  jira-20251031.1705/jira-api.el
+  jira-20251031.1705/jira-complete.el
+  jira-20251031.1705/jira-detail.el
+  jira-20251031.1705/jira-doc.el
+  jira-20251031.1705/jira-edit.el
+  jira-20251031.1705/jira-fmt.el
+  jira-20251031.1705/jira-issues.el
+  jira-20251031.1705/jira-pkg.el
+  jira-20251031.1705/jira-table.el
+  jira-20251031.1705/jira-tempo.el
+  jira-20251031.1705/jira-users.el
+  jira-20251031.1705/jira-utils.el
+  jira-20251031.1705/jira.el
  ✓ Success:
-  2025-10-31T13:45:25+0000  jira-20251026.1744.entry
-  2025-10-31T13:45:25+0000  jira-20251026.1744.tar
-Built jira in 6.861s, finished at 2025-10-31T13:45:27+0000
+  2025-10-31T16:12:32+0000  jira-20251026.1744.entry
+  2025-10-31T16:12:32+0000  jira-20251026.1744.tar
+  2025-10-31T18:41:58+0000  jira-20251031.1705.entry
+  2025-10-31T18:41:58+0000  jira-20251031.1705.tar
+Built jira in 4.156s, finished at 2025-10-31T18:41:59+0000
