@@ -4656,16 +4656,16 @@
 	     ("Milan Glacier" . "dev@milanglacier.com"))
 	    (:commit . "7d265907a960f7e0fab84a107185228860351f54"))])
  (test-simple .
-	      [(1 3 0)
+	      [(1 3 1)
 	       ((cl-lib
 		 (0)))
 	       "Simple Unit Test Framework for Emacs Lisp" tar
-	       ((:url . "http://github.com/rocky/emacs-test-simple")
+	       ((:url . "https://github.com/rocky/emacs-test-simple")
 		(:keywords "unit-test")
 		(:maintainer "Rocky Bernstein" . "rocky@gnu.org")
 		(:authors
 		 ("Rocky Bernstein" . "rocky@gnu.org"))
-		(:commit . "b3b69f52207d3a8111421ad7ab9ed82abbe85316"))])
+		(:commit . "da8ddb6fecb820c8e0809ac0892374e755e4efec"))])
  (tex-item .
 	   [(0 1)
 	    ((emacs
