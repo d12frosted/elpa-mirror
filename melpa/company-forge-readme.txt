@@ -21,7 +21,7 @@ Features
 
 - Offer completion after entering `@' and `#' (or `!' for GitLab).
 - Support for users, teams, issues, discussions, and pull requests.
-- Suppoet for different matching types (see `company-forge-match-type').
+- Support for different matching types (see `company-forge-match-type').
 - Display [octicons] for candidates (see `company-forge-icons-mode').
 - Display issues, discussions, and pull-request text as a documentation
   with `quickhelp-string' and `doc-buffer' `company' commands.
@@ -94,6 +94,27 @@ startup.  If you have installed `company-forge' using built-in `package' or
               :filter-args #'company-forge-reset-cache-after-pull)
   (add-to-list 'company-backends 'company-forge))
 
+By default `company-forge' fetches mentionable users from Github
+repositories to offer them as candidates when completing a mention.  To
+leverage this functionality, you need to add line like the following to a
+chosen `auth-sources' file:
+
+,----
+| machine api.github.com login USERNAME^company-forge password TOKEN
+`----
+
+Note the `^company-forge' after `USERNAME'.  Please see Info node
+`(forge)Setup for Githubcom' for more advanced configuration remembering to
+use `^company-forge' for this package to work.  After modifying
+`auth-sources' file `company-forge''s cache reset may be required with `C-u
+M-x company-forge-reset-cache'.
+
+
+Completion at Point Function
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:properties: :custom_id: completion-at-point-function :end
+
 As an alternative to using `company-forge' backend (which is a recommended
 way) a function `company-forge-completion-function' can be used.  This
 function has been designed to be used in `completion-at-point-functions'
@@ -114,6 +135,8 @@ Below is a list of configuration options and optional functions with their
 synopses that can be used to customize `company-forge' behavior.  Please
 refer to documentation of respective symbol for more details.
 
+- user option: `company-forge-extra-mentions': define extra mentions that
+  be presented as candidates
 - user option: `company-forge-match-type': define how to match candidates
 - user option: `company-forge-predicate': a buffer predicate to control if
   the backend is enabled
