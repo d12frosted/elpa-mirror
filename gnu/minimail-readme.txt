@@ -8,7 +8,7 @@ Minimail is a simple, non-blocking IMAP email client for Emacs.
 Minimail currently covers the basics needed for reading and replying to
 messages.  Below is a listing of implemented and planned features.
 
-• ☑ Read messages, including MIME (rendering via Gnus)
+• ☑ Read messages, including MIME content (rendering via Gnus)
 • ☑ Compose, reply to and forward messages
 • ☑ Multi-account support
 • Search
@@ -19,7 +19,7 @@ messages.  Below is a listing of implemented and planned features.
   • ☐ Fancy algorithm based on reference message IDs.
 • ☑ Move messages (also archive, move to trash, flag as junk)
 • ☐ Mark and operate on sets of messages (move, etc.)
-• ☐ "Load more messages" button
+• ☑ "Load more messages" button
 • ☐ Notifications (polling or IDLE)
 • ☐ OAuth
 
@@ -28,7 +28,9 @@ Being non-blocking doesn't mean Minimail has excellent performance
 necessary condition for such.  In fact, Minimail currently doesn't
 include any of these possible optimizations:
 
-• ☐ Caching
+• ☑ Caching
+  • in memory, no persistence
+• ☐ Support for CONDSTORE capability
 • ☐ Connection pool (for concurrent requests)
 • ☐ Prefetching of messages in the background
 
@@ -37,8 +39,8 @@ include any of these possible optimizations:
 ════════════
 
   Minimail comes pre-configured to access the Emacs mailing lists served
-  by [Yhetil] via anonymous IMAP.  Just type `minimail-find-mailbox' to
-  try it out.
+  by [Yhetil] via anonymous IMAP.  Just type `M-x
+  minimail-show-mailboxes RET' to try it out.
 
 
 [Yhetil] <https://yhetil.org/>
@@ -82,7 +84,7 @@ include any of these possible optimizations:
   │ machine smtp.gmail.com login somebody@gmail.com password xxxxxxxxxxxxxxxx
   │ 
   │ machine imap.gmail.com login webmaster@evilcorp.com password yyyyyyyyyyyyyyyy
-  │ machine smtp.gmail.com login webmaster@evilcopr.com password yyyyyyyyyyyyyyyy
+  │ machine smtp.gmail.com login webmaster@evilcorp.com password yyyyyyyyyyyyyyyy
   │ 
   │ machine imap.niceuni.edu login username password zzzzzzzzzzzzzzzz
   │ machine smtp.niceuni.edu login username password zzzzzzzzzzzzzzzz
@@ -98,6 +100,8 @@ include any of these possible optimizations:
 3 Usage
 ═══════
 
-  Type `M-x minimail-find-mailbox RET' and select a mailbox from the
-  list to read your messages.  In a mailbox or message buffer, hit `h'
+  This package has two main entry points.  The command
+  `minimail-show-mailboxes' displays the mailbox hierarchy of your
+  accounts, while `minimail-find-mailbox' directly opens a mailbox you
+  choose from the minibuffer.  In a mailbox or message buffer, hit `h'
   to see a list of available commands.

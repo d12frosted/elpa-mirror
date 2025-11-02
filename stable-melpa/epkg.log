@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacscollective/epkg
 
 Updating /mnt/store/melpa/working/epkg/
-Checking out b6922f112dd0b523df0e2da49b4cc9327b1085ba
+Checking out 6aabd58170b5385fecc873a9ea53432eb24cc993
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgWFsLBQ/epkg-20250901.1551
+  to /tmp/epkg8blqr5/epkg-20251101.2114
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-elpa.el -> epkg-elpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
   ! docs/epkg.texi -> epkg.texi
     .dir-locals.el -> .dir-locals.el
 Generating epkg.info
-Created epkg-20250901.1551.tar containing:
-  epkg-20250901.1551/
-  epkg-20250901.1551/.dir-locals.el
-  epkg-20250901.1551/dir
-  epkg-20250901.1551/epkg-desc.el
-  epkg-20250901.1551/epkg-elpa.el
-  epkg-20250901.1551/epkg-list.el
-  epkg-20250901.1551/epkg-org.el
-  epkg-20250901.1551/epkg-pkg.el
-  epkg-20250901.1551/epkg-schemata.el
-  epkg-20250901.1551/epkg-utils.el
-  epkg-20250901.1551/epkg.el
-  epkg-20250901.1551/epkg.info
+Created epkg-20251101.2114.tar containing:
+  epkg-20251101.2114/
+  epkg-20251101.2114/.dir-locals.el
+  epkg-20251101.2114/dir
+  epkg-20251101.2114/epkg-desc.el
+  epkg-20251101.2114/epkg-elpa.el
+  epkg-20251101.2114/epkg-list.el
+  epkg-20251101.2114/epkg-org.el
+  epkg-20251101.2114/epkg-pkg.el
+  epkg-20251101.2114/epkg-schemata.el
+  epkg-20251101.2114/epkg-utils.el
+  epkg-20251101.2114/epkg.el
+  epkg-20251101.2114/epkg.info
  ✓ Success:
-  2025-11-01T18:00:44+0000  epkg-20250901.1551.entry
-  2025-11-01T18:00:44+0000  epkg-20250901.1551.tar
-Built epkg in 4.788s, finished at 2025-11-01T18:00:45+0000
+  2025-11-01T20:23:02+0000  epkg-20250901.1551.entry
+  2025-11-01T20:23:02+0000  epkg-20250901.1551.tar
+  2025-11-01T22:44:42+0000  epkg-20251101.2114.entry
+  2025-11-01T22:44:42+0000  epkg-20251101.2114.tar
+Built epkg in 4.620s, finished at 2025-11-01T22:44:43+0000

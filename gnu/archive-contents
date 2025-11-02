@@ -2987,7 +2987,7 @@
 		    (:url . "https://elpa.gnu.org/packages/minibuffer-line.html")
 		    (:commit . "852874725fd06329109b2d431d8af5502b54036c"))])
  (minimail .
-	   [(0 1 1)
+	   [(0 2)
 	    ((emacs
 	      (30 1)))
 	    "Simple, non-blocking IMAP email client" tar
@@ -2996,7 +2996,7 @@
 	     (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	     (:authors
 	      ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	     (:commit . "a91cf161f67f1a768d53b7ed16146ad915c9f9aa"))])
+	     (:commit . "fb2012c9390bfafc8664c58924480d3f0048938c"))])
  (minimap .
 	  [(1 4)
 	   nil "Sidebar showing a \"mini-map\" of a buffer" tar

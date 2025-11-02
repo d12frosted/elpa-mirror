@@ -59,7 +59,7 @@
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com"))
 		(:commit . "33691c93ee302690e41f631f82083bcc15d229e8"))])
  (annotate .
-	   [(2 4 2)
+	   [(2 4 3)
 	    ((emacs
 	      (27 1)))
 	    "annotate files without changing them" tar
@@ -67,7 +67,7 @@
 	     (:maintainer
 	      ("Bastian Bechtold" . "bastibe.dev@mailbox.org")
 	      ("cage" . "cage-dev@twistfold.it"))
-	     (:commit . "54f0b96f3f2b5636fa2dfc59b5c9d699a3149aee"))])
+	     (:commit . "d9acbd91615c2cd3d919b06584ff6825726e3209"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -333,13 +333,13 @@
 		 ("Chris Wanstrath" . "chris@ozmm.org"))
 		(:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (cond-let .
-	   [(0 1 1)
+	   [(0 2 0)
 	    ((emacs
 	      (28 1)))
 	    "Additional and improved binding conditionals" tar
 	    ((:url . "https://github.com/tarsius/cond-let")
 	     (:keywords "extensions")
-	     (:commit . "79a16e1f2428f0f79f03250b987bc79cd37a029e"))])
+	     (:commit . "288b7d36563223ebaf64cb220a3b270bdffb63f1"))])
  (consult-flycheck .
 		   [(1 0)
 		    ((emacs
@@ -1539,7 +1539,7 @@
 	       (:keywords "languages")
 	       (:commit . "0f4d74f9049df28e2f522733141bfc5b7a0f69a3"))])
  (keycast .
-	  [(1 4 5)
+	  [(1 4 6)
 	   ((emacs
 	     (28 1))
 	    (compat
@@ -1550,7 +1550,7 @@
 	    (:maintainer "Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev")
 	    (:authors
 	     ("Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev"))
-	    (:commit . "f23f6823710c4d194cbdb5f1a0532d1d6fe0d968"))])
+	    (:commit . "090ade99c1c03830d45cc763e5733a1ca001c4e5"))])
  (kotlin-mode .
 	      [(2 0 0)
 	       ((emacs
@@ -1563,7 +1563,7 @@
 		(:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
 		(:commit . "d92c3b773473e9fe15f61f6177e4fbf097aadd05"))])
  (llama .
-	[(1 0 1)
+	[(1 0 2)
 	 ((emacs
 	   (26 1))
 	  (compat
@@ -1571,7 +1571,7 @@
 	 "Compact syntax for short lambda" tar
 	 ((:url . "https://github.com/tarsius/llama")
 	  (:keywords "extensions")
-	  (:commit . "ec1d4ef02f5572fc5aff3f62d3e7ef791f444456"))])
+	  (:commit . "e4803de8ab85991b6a944430bb4f543ea338636d"))])
  (logview .
 	  [(0 19 2)
 	   ((emacs
