@@ -629,7 +629,7 @@
 	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
 	   (:commit . "dcdeb86f7ae633e252f9ef8a73d3458e87c1ab12"))])
  (emacsql .
-	  [(4 3 2)
+	  [(4 3 3)
 	   ((emacs
 	     (26 1)))
 	   "High-level SQL database front-end" tar
@@ -637,7 +637,7 @@
 	    (:maintainer "Jonas Bernoulli" . "emacs.emacsql@jonas.bernoulli.dev")
 	    (:authors
 	     ("Christopher Wellons" . "wellons@nullprogram.com"))
-	    (:commit . "3e015ab99e061f3967a154683f068ce6553f168a"))])
+	    (:commit . "138fae5c3f55c81a4eded42eabe4e33483de567e"))])
  (engine-mode .
 	      [(2 2 4)
 	       ((cl-lib
@@ -1116,7 +1116,7 @@
 		   ("Jeronimo Pellegrini" . "(j_p@aleph0.info)"))
 		  (:commit . "3358d0cc01436bd8f71a500175db2716e75b2eed"))])
  (git-modes .
-	    [(1 4 6)
+	    [(1 4 7)
 	     ((emacs
 	       (26 1))
 	      (compat
@@ -1129,7 +1129,7 @@
 	       ("Sebastian Wiesner" . "lunaryorn@gmail.com")
 	       ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
 	       ("Jonas Bernoulli" . "emacs.git-modes@jonas.bernoulli.dev"))
-	      (:commit . "7063d66857023e6c010cecac52de67c0baa77fb7"))])
+	      (:commit . "dfc450d79498b7997b1155ac76629ab01f7ef355"))])
  (gnosis .
 	 [(0 5 7)
 	  ((emacs
@@ -1989,13 +1989,13 @@
 		    ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
 		   (:commit . "941e7e6cb8a5a0b193345263ed912cceecae1887"))])
  (orgit .
-	[(2 0 5)
+	[(2 1 0)
 	 ((emacs
-	   (27 1))
+	   (28 1))
 	  (compat
 	   (30 1))
 	  (magit
-	   (4 3))
+	   (4 4))
 	  (org
 	   (9 7)))
 	 "Support for Org links to Magit buffers" tar
@@ -2004,7 +2004,7 @@
 	  (:maintainer "Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev")
 	  (:authors
 	   ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-	  (:commit . "8493c248081a9ed71ad6fd61e4d6b48c8a0039ec"))])
+	  (:commit . "d85c8a09237c9d5ec370e738623fb3e2041e6a1a"))])
  (p4-16-mode .
 	     [(0 3)
 	      nil "Support for the P4_16 programming language" tar
@@ -2820,7 +2820,7 @@
 	      ("Akib Azmain Turja" . "akib@disroot.org"))
 	     (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor .
-	      [(3 4 6)
+	      [(3 4 7)
 	       ((emacs
 		 (26 1))
 		(compat
@@ -2831,7 +2831,7 @@
 		(:maintainer "Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev")
 		(:authors
 		 ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-		(:commit . "87a384a0e59260cca41ca8831d98e195b1ec8ada"))])
+		(:commit . "dbc694406c2fd8e9d3e6ffbc4f8aff4e8c28029f"))])
  (with-simulated-input .
 		       [(3 0)
 			((emacs
