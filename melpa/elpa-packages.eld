@@ -2880,7 +2880,7 @@
   (ivy-todo :url "https://github.com/Kungsgeten/ivy-todo")
   (ivy-xcdoc :url "https://github.com/hex2010/emacs-ivy-xcdoc")
   (ivy-xref :url "https://github.com/alexmurray/ivy-xref")
-  (ivy-yasnippet :url "https://github.com/mkcms/ivy-yasnippet")
+  (ivy-yasnippet :url "https://github.com/emacsattic/ivy-yasnippet")
   (ivy-ycmd :url "https://github.com/abingham/emacs-ivy-ycmd")
   (ivy-youtube :url "https://github.com/squiter/ivy-youtube")
   (ix :url "https://github.com/theanalyst/ix.el")
