@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy
 
 Updating /mnt/store/melpa/working/loopy/
-Checking out 9b6b5c09849c12142dc8b7088202db1093588908
+Checking out 1849c6c774332c6451288debd4c353449ee79a92
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopy2vjGVM/loopy-20251013.154
+  to /tmp/loopyClyR9C/loopy-20251105.108
   ! lisp/loopy-commands.el -> loopy-commands.el
   ! lisp/loopy-destructure.el -> loopy-destructure.el
   ! lisp/loopy-instrs.el -> loopy-instrs.el
@@ -18,21 +18,23 @@ Copying files (->) and directories (=>)
   ! lisp/loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
 Generating loopy.info
-Created loopy-20251013.154.tar containing:
-  loopy-20251013.154/
-  loopy-20251013.154/dir
-  loopy-20251013.154/loopy-commands.el
-  loopy-20251013.154/loopy-destructure.el
-  loopy-20251013.154/loopy-instrs.el
-  loopy-20251013.154/loopy-iter.el
-  loopy-20251013.154/loopy-misc.el
-  loopy-20251013.154/loopy-pcase.el
-  loopy-20251013.154/loopy-pkg.el
-  loopy-20251013.154/loopy-seq.el
-  loopy-20251013.154/loopy-vars.el
-  loopy-20251013.154/loopy.el
-  loopy-20251013.154/loopy.info
+Created loopy-20251105.108.tar containing:
+  loopy-20251105.108/
+  loopy-20251105.108/dir
+  loopy-20251105.108/loopy-commands.el
+  loopy-20251105.108/loopy-destructure.el
+  loopy-20251105.108/loopy-instrs.el
+  loopy-20251105.108/loopy-iter.el
+  loopy-20251105.108/loopy-misc.el
+  loopy-20251105.108/loopy-pcase.el
+  loopy-20251105.108/loopy-pkg.el
+  loopy-20251105.108/loopy-seq.el
+  loopy-20251105.108/loopy-vars.el
+  loopy-20251105.108/loopy.el
+  loopy-20251105.108/loopy.info
  ✓ Success:
   2025-11-04T23:48:42+0000  loopy-20251013.154.entry
   2025-11-04T23:48:42+0000  loopy-20251013.154.tar
-Built loopy in 7.700s, finished at 2025-11-04T23:48:43+0000
+  2025-11-05T02:16:23+0000  loopy-20251105.108.entry
+  2025-11-05T02:16:22+0000  loopy-20251105.108.tar
+Built loopy in 7.702s, finished at 2025-11-05T02:16:23+0000

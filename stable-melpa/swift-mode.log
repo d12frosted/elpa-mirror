@@ -1,0 +1,34 @@
+Package: swift-mode
+Fetcher: github
+Source:  https://github.com/swift-emacs/swift-mode
+
+Updating /mnt/store/melpa/working/swift-mode/
+Checking out c2fe47722fcab02a8bd40b443fc11687793591e9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/swift-mode/
+  to /tmp/swift-modeEIIju4/swift-mode-20250922.712
+    swift-mode-beginning-of-defun.el -> swift-mode-beginning-of-defun.el
+    swift-mode-fill.el -> swift-mode-fill.el
+    swift-mode-font-lock.el -> swift-mode-font-lock.el
+    swift-mode-imenu.el -> swift-mode-imenu.el
+    swift-mode-indent.el -> swift-mode-indent.el
+    swift-mode-lexer.el -> swift-mode-lexer.el
+    swift-mode-repl.el -> swift-mode-repl.el
+    swift-mode-standard-types.el -> swift-mode-standard-types.el
+    swift-mode.el -> swift-mode.el
+Created swift-mode-20250922.712.tar containing:
+  swift-mode-20250922.712/
+  swift-mode-20250922.712/swift-mode-beginning-of-defun.el
+  swift-mode-20250922.712/swift-mode-fill.el
+  swift-mode-20250922.712/swift-mode-font-lock.el
+  swift-mode-20250922.712/swift-mode-imenu.el
+  swift-mode-20250922.712/swift-mode-indent.el
+  swift-mode-20250922.712/swift-mode-lexer.el
+  swift-mode-20250922.712/swift-mode-pkg.el
+  swift-mode-20250922.712/swift-mode-repl.el
+  swift-mode-20250922.712/swift-mode-standard-types.el
+  swift-mode-20250922.712/swift-mode.el
+ ✓ Success:
+  2025-11-05T02:42:27+0000  swift-mode-20250922.712.entry
+  2025-11-05T02:42:27+0000  swift-mode-20250922.712.tar
+Built swift-mode in 3.596s, finished at 2025-11-05T02:42:28+0000
