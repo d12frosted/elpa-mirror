@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/editor-code-assistant/eca-emacs
 
 Updating /mnt/store/melpa/working/eca/
-Checking out c7b1f2729f2dc7e2c5c6ee1fc53d1ac1dd0e72c5
+Checking out 1f645066d5bffbc0cc51b1eaaa0ac7f9a77c6240
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eca/
-  to /tmp/eca0NhiLj/eca-20251105.48
+  to /tmp/ecaCBzj81/eca-20251105.2152
     eca-api.el -> eca-api.el
     eca-chat.el -> eca-chat.el
     eca-completion.el -> eca-completion.el
@@ -17,20 +17,22 @@ Copying files (->) and directories (=>)
     eca-rewrite.el -> eca-rewrite.el
     eca-util.el -> eca-util.el
     eca.el -> eca.el
-Created eca-20251105.48.tar containing:
-  eca-20251105.48/
-  eca-20251105.48/eca-api.el
-  eca-20251105.48/eca-chat.el
-  eca-20251105.48/eca-completion.el
-  eca-20251105.48/eca-diff.el
-  eca-20251105.48/eca-editor.el
-  eca-20251105.48/eca-mcp.el
-  eca-20251105.48/eca-pkg.el
-  eca-20251105.48/eca-process.el
-  eca-20251105.48/eca-rewrite.el
-  eca-20251105.48/eca-util.el
-  eca-20251105.48/eca.el
+Created eca-20251105.2152.tar containing:
+  eca-20251105.2152/
+  eca-20251105.2152/eca-api.el
+  eca-20251105.2152/eca-chat.el
+  eca-20251105.2152/eca-completion.el
+  eca-20251105.2152/eca-diff.el
+  eca-20251105.2152/eca-editor.el
+  eca-20251105.2152/eca-mcp.el
+  eca-20251105.2152/eca-pkg.el
+  eca-20251105.2152/eca-process.el
+  eca-20251105.2152/eca-rewrite.el
+  eca-20251105.2152/eca-util.el
+  eca-20251105.2152/eca.el
  ✓ Success:
-  2025-11-05T19:01:13+0000  eca-20251105.48.entry
-  2025-11-05T19:01:13+0000  eca-20251105.48.tar
-Built eca in 4.828s, finished at 2025-11-05T19:01:14+0000
+  2025-11-05T21:29:49+0000  eca-20251105.2117.entry
+  2025-11-05T21:29:49+0000  eca-20251105.2117.tar
+  2025-11-05T23:55:23+0000  eca-20251105.2152.entry
+  2025-11-05T23:55:23+0000  eca-20251105.2152.tar
+Built eca in 4.392s, finished at 2025-11-05T23:55:24+0000
