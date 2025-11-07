@@ -272,7 +272,7 @@
 	    (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
 	    (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider .
-	[(1 19 0)
+	[(1 20 0)
 	 ((emacs
 	   (27))
 	  (clojure-mode
@@ -300,7 +300,7 @@
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
 	   ("Steve Purcell" . "steve@sanityinc.com"))
-	  (:commit . "b5a6ffc97e3c76957721f71280ea5f49fd29d7a3"))])
+	  (:commit . "8e3091e8c427cc18f1cc511d5d5aa15424cddb62"))])
  (clojure-mode .
 	       [(5 20 0)
 		((emacs
@@ -1573,7 +1573,7 @@
 	  (:keywords "extensions")
 	  (:commit . "e4803de8ab85991b6a944430bb4f543ea338636d"))])
  (logview .
-	  [(0 19 2)
+	  [(0 19 3)
 	   ((emacs
 	     (25 1))
 	    (datetime
@@ -1588,11 +1588,11 @@
 	    (:maintainer "Paul Pogonyshev" . "pogonyshev@gmail.com")
 	    (:authors
 	     ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
-	    (:commit . "e9b40730c6abea7d1e0235fa5ba790d175b008ef"))])
+	    (:commit . "93b744ac5d57d527b8ca625116c3206549b8231f"))])
  (loopy .
-	[(0 14 0)
+	[(0 15 0)
 	 ((emacs
-	   (27 1))
+	   (28 1))
 	  (map
 	   (3 3 1))
 	  (seq
@@ -1604,7 +1604,7 @@
 	 "A looping macro" tar
 	 ((:url . "https://github.com/okamsn/loopy")
 	  (:keywords "extensions")
-	  (:commit . "36f76980ea52a31a4c7682f7bd26c4baa32a1d4c"))])
+	  (:commit . "1849c6c774332c6451288debd4c353449ee79a92"))])
  (loopy-dash .
 	     [(0 13 0)
 	      ((emacs
@@ -2200,7 +2200,7 @@
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode .
-	      [(1 0 20251029 163833)
+	      [(1 0 20251106 215641)
 	       ((emacs
 		 (25 1))
 		(compat
@@ -2877,14 +2877,14 @@
 	       ("Le Wang" . "l26wang@gmail.com"))
 	      (:commit . "9ee5a7657a22e836618813c2e2b64a548d27d2ff"))])
  (xah-fly-keys .
-	       [(28 7 20250917123258)
+	       [(28 9 20251105193146)
 		((emacs
 		  (28 3)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "8178b841acbf927728682befbe226f701dffe6e9"))])
+		 (:commit . "05a5bf1351383baf5317a4b8bc2965502c1b25df"))])
  (xkcd .
        [(1 1)
 	((json

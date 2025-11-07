@@ -3,7 +3,10 @@
                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-`loopy': [file:https://melpa.org/packages/loopy-badge.svg]
+[file:https://elpa.nongnu.org/nongnu/loopy.svg]
+[file:https://elpa.nongnu.org/nongnu-devel/loopy.svg]
+[file:https://melpa.org/packages/loopy-badge.svg]
+[file:https://stable.melpa.org/packages/loopy-badge.svg]
 
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
@@ -28,37 +31,38 @@ Constructive criticism is welcome.  If you see a place for improvement,
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
 _Recent breaking changes:_
-• Version 0.14.0:
-  • Conflicting initialization values for accumulation variables now
-    signal a warning.  In the future, they will signal an error.
-  • The positional arguments to the `numbers' command have been removed,
-    being deprecated since version 0.12.0.
-  • Some built-in aliases have been made obsolete and will be removed
-    from the list of built-in aliases in the future.  They can still be
-    added to the list of known aliases using `loopy-defalias'.  See the
-    changelog for more information.
-  • `seq' and `seq-ref' now work on generic sequences and are separate
-    commands from `sequence' and `sequence-ref'.  `sequence-index' now
-    uses `seq-length'.
-  • Improved consistency of some keyword arguments:
-    • The `:unique' keyword argument of the `map' and `map-ref' commands
-      can now be evaluable at run time.
-    • The `:close' argument of the `iter' command is now evaluable,
-      instead of only being used during macro expansion.
-    • The `:close' argument of the `iter' command is now evaluated at
-      the beginning of the loop.
-    • The `:on-failure' argument of the `find' command is now evaluated
-      at the beginning of the loop.
-  • Changed back to the old, slightly slower behavior of always
-    initializing iteration variables to `nil', instead of sometimes
-    initializing to the expected value during the first iteration step.
-    This affects `cons', `cycle', `iter', `numbers', `seq-index', and
-    `substream'.
+• Version 0.15.0:
+  • Loopy now requires at least Emacs version 28.1, increased from
+    version 27.1.
+  • `set' now warns when it is not given a value.  In the future, it
+    will signal an error.
+  • `loopy-command-parsers' and `loopy-aliases' are deprecated in favor
+    of a single hash table in the new user option `loopy-parsers'.  This
+    simplified the code and will make adding local overrides easier.
+  • `loopy-iter-bare-special-macro-arguments' and
+    `loopy-iter-bare-commands' are deprecated in favor of the single
+    variable `loopy-iter-bare-names'.
+  • `when' and `unless' are now implemented separately, fixing when the
+    commands are aliased.
+  • Modifications to an implied `loopy-result' in `finally-do' will now
+    be included in the implied return value of the macro.
+  • `loopy-default-flags' is made obsolete to avoid conflicts between
+    libraries.  Using a wrapping macro instead, such as the one given in
+    Changelog or the Org/Info documentation.
 • See the [change log] for less recent changes.
 
 
+[file:https://elpa.nongnu.org/nongnu/loopy.svg]
+<https://elpa.nongnu.org/nongnu/loopy.html>
+
+[file:https://elpa.nongnu.org/nongnu-devel/loopy.svg]
+<https://elpa.nongnu.org/nongnu-devel/loopy.html>
+
 [file:https://melpa.org/packages/loopy-badge.svg]
 <https://melpa.org/#/loopy>
+
+[file:https://stable.melpa.org/packages/loopy-badge.svg]
+<https://stable.melpa.org/#/loopy>
 
 [`cl-loop']
 <https://www.gnu.org/software/emacs/manual/html_node/cl/Loop-Facility.html#Loop-Facility>
@@ -96,28 +100,13 @@ _Recent breaking changes:_
   │ 	   (collect evens i)
   │ 	 (collect odds i))
   │        (finally-return odds evens))
-  │ 
-  │ (loopy (numbers i :from 1 :to 10)
-  │        (if (cl-evenp i)
-  │ 	   (collect i :into evens)
-  │ 	 (collect i :into odds))
-  │        (finally-return odds evens))
   └────
 
   `loopy' supports destructuring for iteration commands like `list' and
   accumulation commands like `sum' or `collect'.
 
   ┌────
-  │ ;; Summing the nth elements of arrays:
-  │ ;; => (8 10 12 14 16 18)
-  │ (loopy (list (list-elem1 list-elem2)
-  │ 	     '(([1 2 3] [4 5 6])
-  │ 	       ([7 8 9] [10 11 12])))
-  │        (sum [sum1 sum2 sum3] list-elem1)
-  │        (sum [sum4 sum5 sum6] list-elem2)
-  │        (finally-return sum1 sum2 sum3 sum4 sum5 sum6))
-  │ 
-  │ ;; Or, more simply:
+  │ ;; Summing the nth elements of sub-arrays:
   │ ;; => (8 10 12 14 16 18)
   │ (loopy (list list-elem '(([1 2 3] [4 5 6])
   │ 			 ([7 8 9] [10 11 12])))
@@ -164,7 +153,7 @@ _Recent breaking changes:_
 
   `loopy' has arguments for binding (or not binding) variables,
   executing code before or after the loop, executing code only if the
-  loop completes, and for setting the macro's return value (default
+  loop completes, and for setting the macro's return value (default:
   `nil').  This is in addition to the looping features themselves.
 
   All of this makes `loopy' a useful and convenient choice for looping
@@ -197,29 +186,10 @@ _Recent breaking changes:_
 
   Generally, all of the packages handle basic use cases in similar ways.
   One large difference is that `iterate' can embed its looping
-  constructs in arbitrary code.  Loopy is currently provides this
-  feature as a separate macro, `loopy-iter', which expands looping
-  constructs using `macroexpand'.
-
-  ┌────
-  │ (require 'loopy-iter)
-  │ 
-  │ ;; Things to node:
-  │ ;; - `accum-opt' produces more efficient accumulations for names variables
-  │ ;; - `cycling' is another name for `repeat'
-  │ ;; => ((-9 -8 -7 -6 -5 -4 -3 -2 -1)
-  │ ;;     (0)
-  │ ;;     (1 2 3 4 5 6 7 8 9 10 11))
-  │ (loopy-iter (accum-opt positives negatives zeroes)
-  │ 	    (numbering i :from -10 :to 10)
-  │ 	    ;; Normal `let' and `pcase', not Loopy constructs:
-  │ 	    (let ((var (1+ i)))
-  │ 	      (pcase var
-  │ 		((pred cl-plusp)  (collecting positives var))
-  │ 		((pred cl-minusp) (collecting negatives var))
-  │ 		((pred zerop)     (collecting zeroes var))))
-  │ 	    (finally-return negatives zeroes positives))
-  └────
+  constructs in arbitrary code.  Loopy currently provides this feature
+  as a separate macro, `loopy-iter', which expands looping constructs
+  using `macroexpand' (see [Loop Commands in Arbitrary Code] in this
+  README).
 
   Loopy is not yet feature complete.  Please request features or report
   problems in this project’s [issues tracker].  While basic uses are
@@ -231,15 +201,17 @@ _Recent breaking changes:_
 
 [For] <https://github.com/Shinmera/for/>
 
+[Loop Commands in Arbitrary Code] See section 5
+
 [issues tracker] <https://github.com/okamsn/loopy/issues>
 
 
 3 How to Install
 ════════════════
 
-  Loopy can be installed from [MELPA] as the package `loopy'.  The
-  optional package `loopy-dash' can be installed to enable using the
-  Dash library for destructuring (instead of other methods).
+  Loopy can be installed from [Non-GNU ELPA] and [MELPA] as the package
+  `loopy'.  The optional package `loopy-dash' can be installed to enable
+  using the Dash library for destructuring (instead of other methods).
 
   ┌────
   │ (use-package loopy)
@@ -266,6 +238,8 @@ _Recent breaking changes:_
   │   :demand t)
   └────
 
+
+[Non-GNU ELPA] <https://elpa.nongnu.org/nongnu/loopy.html>
 
 [MELPA] <https://melpa.org/#/loopy>
 
@@ -349,13 +323,21 @@ _Recent breaking changes:_
   │ (require 'loopy-iter)
   │ 
   │ ;; => ((1 2 3) (-3 -2 -1) (0))
-  │ (loopy-iter (accum-opt positives negatives other)
-  │ 	    (numbering i :from -3 :to 3)
-  │ 	    (pcase i
-  │ 	      ((pred cl-plusp)  (collecting positives i))
-  │ 	      ((pred cl-minusp) (collecting negatives i))
-  │ 	      (_                (collecting other i)))
-  │ 	    (finally-return positives negatives other))
+  │ ;; Things to node:
+  │ ;; - `accum-opt' produces more efficient accumulations for names variables
+  │ ;; - `cycling' is another name for `repeat'
+  │ ;; => ((-9 -8 -7 -6 -5 -4 -3 -2 -1)
+  │ ;;     (0)
+  │ ;;     (1 2 3 4 5 6 7 8 9 10 11))
+  │ (loopy-iter (accum-opt positives negatives zeroes)
+  │ 	    (numbering i :from -10 :to 10)
+  │ 	    ;; Normal `let' and `pcase', not Loopy constructs:
+  │ 	    (let ((var (1+ i)))
+  │ 	      (pcase var
+  │ 		((pred cl-plusp)  (collecting positives var))
+  │ 		((pred cl-minusp) (collecting negatives var))
+  │ 		((pred zerop)     (collecting zeroes var))))
+  │ 	    (finally-return negatives zeroes positives))
   │ 
   │ ;; => 6
   │ (loopy-iter (listing elem '(1 2 3))
