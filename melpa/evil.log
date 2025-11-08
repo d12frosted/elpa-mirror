@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-evil/evil
 
 Updating /mnt/store/melpa/working/evil/
-Checking out b06f644bdb5b06c6ac46c11b0259f15ac9ffd5da
+Checking out 729d9a58b387704011a115c9200614e32da3cefc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil/
-  to /tmp/evil6hIfQo/evil-20250929.1650
+  to /tmp/evilN4nh2B/evil-20251108.138
     evil-command-window.el -> evil-command-window.el
     evil-commands.el -> evil-commands.el
     evil-common.el -> evil-common.el
@@ -27,30 +27,32 @@ Copying files (->) and directories (=>)
     evil.el -> evil.el
   ! doc/build/texinfo/evil.texi -> evil.texi
 Generating evil.info
-Created evil-20250929.1650.tar containing:
-  evil-20250929.1650/
-  evil-20250929.1650/dir
-  evil-20250929.1650/evil-command-window.el
-  evil-20250929.1650/evil-commands.el
-  evil-20250929.1650/evil-common.el
-  evil-20250929.1650/evil-core.el
-  evil-20250929.1650/evil-development.el
-  evil-20250929.1650/evil-digraphs.el
-  evil-20250929.1650/evil-ex.el
-  evil-20250929.1650/evil-integration.el
-  evil-20250929.1650/evil-jumps.el
-  evil-20250929.1650/evil-keybindings.el
-  evil-20250929.1650/evil-macros.el
-  evil-20250929.1650/evil-maps.el
-  evil-20250929.1650/evil-pkg.el
-  evil-20250929.1650/evil-repeat.el
-  evil-20250929.1650/evil-search.el
-  evil-20250929.1650/evil-states.el
-  evil-20250929.1650/evil-types.el
-  evil-20250929.1650/evil-vars.el
-  evil-20250929.1650/evil.el
-  evil-20250929.1650/evil.info
+Created evil-20251108.138.tar containing:
+  evil-20251108.138/
+  evil-20251108.138/dir
+  evil-20251108.138/evil-command-window.el
+  evil-20251108.138/evil-commands.el
+  evil-20251108.138/evil-common.el
+  evil-20251108.138/evil-core.el
+  evil-20251108.138/evil-development.el
+  evil-20251108.138/evil-digraphs.el
+  evil-20251108.138/evil-ex.el
+  evil-20251108.138/evil-integration.el
+  evil-20251108.138/evil-jumps.el
+  evil-20251108.138/evil-keybindings.el
+  evil-20251108.138/evil-macros.el
+  evil-20251108.138/evil-maps.el
+  evil-20251108.138/evil-pkg.el
+  evil-20251108.138/evil-repeat.el
+  evil-20251108.138/evil-search.el
+  evil-20251108.138/evil-states.el
+  evil-20251108.138/evil-types.el
+  evil-20251108.138/evil-vars.el
+  evil-20251108.138/evil.el
+  evil-20251108.138/evil.info
  ✓ Success:
-  2025-11-07T22:28:51+0000  evil-20250929.1650.entry
-  2025-11-07T22:28:51+0000  evil-20250929.1650.tar
-Built evil in 6.667s, finished at 2025-11-07T22:28:52+0000
+  2025-11-08T00:57:05+0000  evil-20250929.1650.entry
+  2025-11-08T00:57:05+0000  evil-20250929.1650.tar
+  2025-11-08T03:23:51+0000  evil-20251108.138.entry
+  2025-11-08T03:23:51+0000  evil-20251108.138.tar
+Built evil in 6.843s, finished at 2025-11-08T03:23:52+0000
