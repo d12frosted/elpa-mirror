@@ -4399,7 +4399,7 @@
   (pkgbuild-mode :url "https://github.com/juergenhoetzel/pkgbuild-mode")
   (pkl-mode :url "https://github.com/sin-ack/pkl-mode")
   (plain-org-wiki :url "https://github.com/abo-abo/plain-org-wiki")
-  (plain-theme :url "https://github.com/lukateras/plain-theme")
+  (plain-theme :url "https://github.com/yegortimoshenko/plain-theme")
   (plan9-theme :url "https://github.com/john2x/plan9-theme.el")
   (planemo-mode :url "https://gitlab.com/mtekman/planemo-mode.el")
   (planet-theme :url "https://github.com/cmack/emacs-planet-theme")

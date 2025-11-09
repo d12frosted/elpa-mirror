@@ -15,6 +15,7 @@ compiler[1], have a look at wispjs-mode[2].
 
 ChangeLog:
 
+ - 0.4.1  fix linting errors: custom, deprecations, and docstrings.
  - 0.4.0: provide wisp--eval-block (C-M-x)
           to send the current block to a buffer nammed *shell*.
           wisp--find-begin-and-end-of-block-around-region can cope with empty lines.
