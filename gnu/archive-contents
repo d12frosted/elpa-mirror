@@ -1468,16 +1468,18 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "30d2b10f85b0faef4171a7a25c7d4b5a67e5ded5"))])
  (ef-themes .
-	    [(1 11 0)
+	    [(2 0 0)
 	     ((emacs
-	       (28 1)))
+	       (28 1))
+	      (modus-themes
+	       (5 0 0)))
 	     "Colorful and legible themes" tar
 	     ((:url . "https://github.com/protesilaos/ef-themes")
 	      (:keywords "faces" "theme" "accessibility")
 	      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "4253a4b92a8264a1bca0db43301cb8bf7538b7e3"))])
+	      (:commit . "8ec9692b4910b28d3f44654660fc56b6f7d74251"))])
  (eglot .
 	[(1 19)
 	 ((emacs
@@ -4446,16 +4448,18 @@
 		("Christian Johansson" . "christian@cvj.se"))
 	       (:commit . "95fb076c9b657c5f1bfad3ee5bf1f8691c50d428"))])
  (standard-themes .
-		  [(2 2 0)
+		  [(3 0 0)
 		   ((emacs
-		     (28 1)))
+		     (28 1))
+		    (modus-themes
+		     (5 0 0)))
 		   "Like the default theme but more consistent" tar
 		   ((:url . "https://github.com/protesilaos/standard-themes")
 		    (:keywords "faces" "theme" "accessibility")
 		    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		    (:authors
 		     ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		    (:commit . "4b97416543a20f9d16515ff54e6481c852911843"))])
+		    (:commit . "d62c356289178062dec9e944cfafb790a77fe587"))])
  (stream .
 	 [(2 4 0)
 	  ((emacs
@@ -5111,7 +5115,7 @@
 	   ("Andrew Hyatt" . "ahyatt@gmail.com"))
 	  (:commit . "a0240be7a917dca47b95e401382affd1c11abea1"))])
  (verilog-mode .
-	       [(2025 1 1 100165202)
+	       [(2025 11 8 248496848)
 		nil "major mode for editing verilog source in Emacs" tar
 		((:url . "https://www.veripool.org")
 		 (:keywords "languages")
@@ -5121,7 +5125,7 @@
 		 (:authors
 		  ("Michael McNamara" . "mac@verilog.com")
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
-		 (:commit . "78bc5949db489b143f7424540d6cc56fc529c9ea"))])
+		 (:commit . "266335374e29cfd304838b2109af93ab22f6009f"))])
  (vertico .
 	  [(2 5)
 	   ((emacs
