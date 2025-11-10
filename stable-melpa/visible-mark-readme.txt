@@ -13,8 +13,8 @@ Example installation:
 (require 'visible-mark)
 (global-visible-mark-mode 1) ;; or add (visible-mark-mode) to specific hooks
 
-3. Add customizations. The defaults are very minimal. They could also be set
-via customize.
+3. Add customizations.  The defaults are very minimal.
+They could also be set via customize.
 
 (defface visible-mark-active ;; put this before (require 'visible-mark)
   '((((type tty) (class mono)))
@@ -31,7 +31,7 @@ Known bugs
 
 Observed in circe, when the buffer has a right margin, and there
 is a mark at the beginning of a line, any text in the margin on that line
-gets styled with the mark's face. May also happen for left margins, but
+gets styled with the mark's face.  May also happen for left margins, but
 haven't tested yet.
 
 Patches / pull requests / feedback welcome.

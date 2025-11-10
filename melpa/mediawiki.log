@@ -1,0 +1,40 @@
+Package: mediawiki
+Fetcher: github
+Source:  https://github.com/hexmode/mediawiki-el
+
+Updating /mnt/store/melpa/working/mediawiki/
+Checking out e0e45e73be527d75127b31746998824115dcf6a5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mediawiki/
+  to /tmp/mediawikiuCNcwN/mediawiki-20250914.2305
+    mediawiki-api.el -> mediawiki-api.el
+    mediawiki-auth.el -> mediawiki-auth.el
+    mediawiki-core.el -> mediawiki-core.el
+    mediawiki-draft.el -> mediawiki-draft.el
+    mediawiki-faces.el -> mediawiki-faces.el
+    mediawiki-font-lock.el -> mediawiki-font-lock.el
+    mediawiki-http.el -> mediawiki-http.el
+    mediawiki-mode.el -> mediawiki-mode.el
+    mediawiki-page.el -> mediawiki-page.el
+    mediawiki-site.el -> mediawiki-site.el
+    mediawiki-utils.el -> mediawiki-utils.el
+    mediawiki.el -> mediawiki.el
+Created mediawiki-20250914.2305.tar containing:
+  mediawiki-20250914.2305/
+  mediawiki-20250914.2305/mediawiki-api.el
+  mediawiki-20250914.2305/mediawiki-auth.el
+  mediawiki-20250914.2305/mediawiki-core.el
+  mediawiki-20250914.2305/mediawiki-draft.el
+  mediawiki-20250914.2305/mediawiki-faces.el
+  mediawiki-20250914.2305/mediawiki-font-lock.el
+  mediawiki-20250914.2305/mediawiki-http.el
+  mediawiki-20250914.2305/mediawiki-mode.el
+  mediawiki-20250914.2305/mediawiki-page.el
+  mediawiki-20250914.2305/mediawiki-pkg.el
+  mediawiki-20250914.2305/mediawiki-site.el
+  mediawiki-20250914.2305/mediawiki-utils.el
+  mediawiki-20250914.2305/mediawiki.el
+ ✓ Success:
+  2025-11-09T22:26:13+0000  mediawiki-20250914.2305.entry
+  2025-11-09T22:26:13+0000  mediawiki-20250914.2305.tar
+Built mediawiki in 2.828s, finished at 2025-11-09T22:26:13+0000

@@ -1017,7 +1017,7 @@
 		 (:url . "https://elpa.gnu.org/packages/dbus-codegen.html")
 		 (:commit . "4b0d8525943ebba797e1ebaf97fd9a608aef5ec1"))])
  (debbugs .
-	  [(0 45)
+	  [(0 46)
 	   ((emacs
 	     (26 1))
 	    (soap-client
@@ -1028,7 +1028,7 @@
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
 	    (:url . "https://elpa.gnu.org/packages/debbugs.html")
-	    (:commit . "a6619cf88bd188ecc16ee755881247f320a41afc"))])
+	    (:commit . "b5d8fad4ac9481589294a2c4c2d392c33eb5bae2"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
