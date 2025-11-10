@@ -6,6 +6,8 @@ in modern filemanagers.
 This package require Emacs "26.1" actually, "27.1" reqqired by
 `dired-hist-tl'
 
+Personal note: I don't use it, I found that recentf package with history of folders is better.
+
 Commands:
 
 `dired-hist-mode'       : Turn on Dired history tracking
