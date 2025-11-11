@@ -1874,20 +1874,20 @@
 	    (:url . "https://elpa.gnu.org/packages/flylisp.html")
 	    (:commit . "20fe3e77bb73773c8678e65ae38020b0b7f996eb"))])
  (flymake .
-	  [(1 4 2)
+	  [(1 4 3)
 	   ((emacs
 	     (26 1))
 	    (eldoc
 	     (1 14 0))
 	    (project
-	     (0 7 1)))
+	     (0 11 1)))
 	   "A universal on-the-fly syntax checker" tar
 	   ((:keywords "c" "languages" "tools")
 	    (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
 	    (:authors
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
 	    (:url . "https://elpa.gnu.org/packages/flymake.html")
-	    (:commit . "15ce66523912f84bc735228d9efa004a9a463e83"))])
+	    (:commit . "683e7462df3d5b17e7da8956302069415bba6998"))])
  (flymake-clippy .
 		 [(1 1 0)
 		  ((emacs
@@ -2185,13 +2185,13 @@
 	     (:url . "https://elpa.gnu.org/packages/greenbar.html")
 	     (:commit . "7b651257bd0536d454f4b896212b3fe1f8c75024"))])
  (gtags-mode .
-	     [(1 9 3)
+	     [(1 9 4)
 	      ((emacs
 		(28)))
 	      "GNU Global integration with xref, project and imenu." tar
 	      ((:url . "https://github.com/Ergus/gtags-mode")
 	       (:keywords "xref" "project" "imenu" "gtags" "global")
-	       (:commit . "282f000fbe2b2a9c1a60a96e0db44c21df74ebb5"))])
+	       (:commit . "913da16515242c6ee26fd0f5af1a79b48a2daa29"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib

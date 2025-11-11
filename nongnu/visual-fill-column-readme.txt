@@ -46,6 +46,7 @@ In `auto-fill-mode`, there is an option `adaptive-fill-mode`, which ensures that
 
 Just like `visual-fill-column-mode`, this effect is just visual, the actual buffer content is not affected.
 
+
 ## Centering the text ##
 
 Another use case for Visual Fill Column is to centre the text in a window:
