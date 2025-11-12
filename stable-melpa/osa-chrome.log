@@ -3,33 +3,3 @@ Fetcher: github
 Source:  https://github.com/atomontage/osa-chrome
 
 Updating /mnt/store/melpa/working/osa-chrome/
-Checking out 53a139a6c56d52d9bddbf420b0e65f042a1259eb
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/osa-chrome/
-  to /tmp/osa-chromeK97LQH/osa-chrome-20250129.1831
-    osa-chrome.el -> osa-chrome.el
-    scripts/delete-tabs-multi.js -> scripts/delete-tabs-multi.js
-    scripts/delete-tabs-single.js -> scripts/delete-tabs-single.js
-    scripts/get-tabs-multi.js -> scripts/get-tabs-multi.js
-    scripts/get-tabs-single.js -> scripts/get-tabs-single.js
-    scripts/set-tab-multi.js -> scripts/set-tab-multi.js
-    scripts/set-tab-single.js -> scripts/set-tab-single.js
-    scripts/view-source-multi.js -> scripts/view-source-multi.js
-    scripts/view-source-single.js -> scripts/view-source-single.js
-Created osa-chrome-20250129.1831.tar containing:
-  osa-chrome-20250129.1831/
-  osa-chrome-20250129.1831/osa-chrome-pkg.el
-  osa-chrome-20250129.1831/osa-chrome.el
-  osa-chrome-20250129.1831/scripts/
-  osa-chrome-20250129.1831/scripts/delete-tabs-multi.js
-  osa-chrome-20250129.1831/scripts/delete-tabs-single.js
-  osa-chrome-20250129.1831/scripts/get-tabs-multi.js
-  osa-chrome-20250129.1831/scripts/get-tabs-single.js
-  osa-chrome-20250129.1831/scripts/set-tab-multi.js
-  osa-chrome-20250129.1831/scripts/set-tab-single.js
-  osa-chrome-20250129.1831/scripts/view-source-multi.js
-  osa-chrome-20250129.1831/scripts/view-source-single.js
- ✓ Success:
-  2025-11-12T03:21:35+0000  osa-chrome-20250129.1831.entry
-  2025-11-12T03:21:35+0000  osa-chrome-20250129.1831.tar
-Built osa-chrome in 2.850s, finished at 2025-11-12T03:21:36+0000
