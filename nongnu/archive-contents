@@ -22,7 +22,7 @@
 		     ("Ozan Sener" . "ozan@ozansener.com"))
 		    (:commit . "b58731c3b0bbaac9d3ed8d5ae900063df5db090d"))])
  (aidermacs .
-	    [(1 5)
+	    [(1 6)
 	     ((emacs
 	       (26 1))
 	      (transient
@@ -37,7 +37,7 @@
 	      (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
 	      (:authors
 	       ("Mingde Zeng" . "matthewzmd@posteo.net"))
-	      (:commit . "5084913506b8b243c732a77b6de4768f18edcff3"))])
+	      (:commit . "fc0f1381bb9398a2d5a76776bad812d7ce3507dc"))])
  (alect-themes .
 	       [(0 10)
 		((emacs
@@ -59,7 +59,7 @@
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com"))
 		(:commit . "33691c93ee302690e41f631f82083bcc15d229e8"))])
  (annotate .
-	   [(2 4 4)
+	   [(2 4 5)
 	    ((emacs
 	      (27 1)))
 	    "annotate files without changing them" tar
@@ -67,7 +67,7 @@
 	     (:maintainer
 	      ("Bastian Bechtold" . "bastibe.dev@mailbox.org")
 	      ("cage" . "cage-dev@twistfold.it"))
-	     (:commit . "2d1dac534dc04855d0056e9ded2277815fe43644"))])
+	     (:commit . "4e610f56ae5ce24e3577ffa1a293c7037ac1c2ea"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
