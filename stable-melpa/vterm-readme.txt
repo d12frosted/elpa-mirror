@@ -15,7 +15,7 @@ Emacs-libvterm requires CMake and libvterm.  If libvterm is not available,
 emacs-libvterm will downloaded and compiled.  In this case, libtool is
 needed.
 
-The reccomended way to install emacs-libvterm is from MELPA.
+The recommended way to install emacs-libvterm is from MELPA.
 
 ; Usage
 
