@@ -3,3 +3,26 @@ Fetcher: github
 Source:  https://github.com/Silex/docker-api.el
 
 Updating /mnt/store/melpa/working/docker-api/
+Checking out 206144346b7fa4165223349cfeb64a75d47ddd1b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docker-api/
+  to /tmp/docker-apihg7q7e/docker-api-20160525.720
+    docker-api-connection.el -> docker-api-connection.el
+    docker-api-containers.el -> docker-api-containers.el
+    docker-api-images.el -> docker-api-images.el
+    docker-api-networks.el -> docker-api-networks.el
+    docker-api-volumes.el -> docker-api-volumes.el
+    docker-api.el -> docker-api.el
+Created docker-api-20160525.720.tar containing:
+  docker-api-20160525.720/
+  docker-api-20160525.720/docker-api-connection.el
+  docker-api-20160525.720/docker-api-containers.el
+  docker-api-20160525.720/docker-api-images.el
+  docker-api-20160525.720/docker-api-networks.el
+  docker-api-20160525.720/docker-api-pkg.el
+  docker-api-20160525.720/docker-api-volumes.el
+  docker-api-20160525.720/docker-api.el
+ ✓ Success:
+  2025-11-13T02:35:39+0000  docker-api-20160525.720.entry
+  2025-11-13T02:35:39+0000  docker-api-20160525.720.tar
+Built docker-api in 2.768s, finished at 2025-11-13T02:35:40+0000
