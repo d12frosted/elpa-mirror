@@ -261,7 +261,7 @@
 		("Kevin Ryde" . "user42_kevin@yahoo.com.au"))
 	       (:commit . "72db1f3ee04f3d1db17487d5bd98466fcbad87fd"))])
  (auth-source-xoauth2-plugin .
-			     [(0 3 1)
+			     [(0 3 2)
 			      ((emacs
 				(28 1))
 			       (oauth2
@@ -271,7 +271,7 @@
 			       (:maintainer "Xiyue Deng" . "manphiz@gmail.com")
 			       (:authors
 				("Xiyue Deng" . "manphiz@gmail.com"))
-			       (:commit . "2e6b36f3388be0c72b207b04a63776142a00c0c8"))])
+			       (:commit . "c99b5cbe0a015890eed3764c58ea06daaa712b09"))])
  (auto-correct .
 	       [(1 1 4)
 		nil "Remembers and automatically fixes past corrections" tar
