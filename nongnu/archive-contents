@@ -855,6 +855,37 @@
 	   (:authors
 	    ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
 	   (:commit . "c7af95865ef083327d299b86c254ca87fa88a504"))])
+ (fedi .
+       [(0 2)
+	((emacs
+	  (28 1))
+	 (markdown-mode
+	  (2 5)))
+	"Helper functions for fediverse clients" tar
+	((:url . "https://codeberg.org/martianh/fedi.el")
+	 (:maintainer "Marty Hiatt" . "martianhiatus@riseup.net")
+	 (:authors
+	  ("Marty Hiatt" . "martianhiatus@riseup.net"))
+	 (:commit . "b483834e64ce311a9f0db7f758b5d2234f8c02a3"))])
+ (fj .
+     [(0 28)
+      ((emacs
+	(29 1))
+       (fedi
+	(0 2))
+       (tp
+	(0 5))
+       (transient
+	(0 9 3))
+       (magit
+	(4 3 8)))
+      "Client for Forgejo instances" tar
+      ((:url . "https://codeberg.org/martianh/fj.el")
+       (:keywords "git" "convenience")
+       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
+       (:authors
+	("Marty Hiatt" . "mousebot@disroot.org"))
+       (:commit . "7f1a5a973e387673d50c3257cb358c2d245ca930"))])
  (flx .
       [(0 6 2)
        ((cl-lib
@@ -1562,6 +1593,21 @@
 		 ("Shodai Yokoyama" . "(quantumcars@gmail.com)"))
 		(:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
 		(:commit . "d92c3b773473e9fe15f61f6177e4fbf097aadd05"))])
+ (lem .
+      [(0 24)
+       ((emacs
+	 (29 1))
+	(fedi
+	 (0 2))
+	(markdown-mode
+	 (2 5)))
+       "A lemmy client" tar
+       ((:url . "https://codeberg.org/martianh/lem.el")
+	(:keywords "multimedia" "comm" "web" "fediverse")
+	(:maintainer "martian hiatus" . "mousebot@disroot.org")
+	(:authors
+	 ("martian hiatus" . "mousebot@disroot.org"))
+	(:commit . "c746d32d2f330ed9a23ec7f8fc1f7d35ac22c357"))])
  (llama .
 	[(1 0 2)
 	 ((emacs
@@ -2168,6 +2214,17 @@
 	  (:authors
 	   ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com"))
 	  (:commit . "bfa10dc8af3f07632e5167457671ce3738ac0b7e"))])
+ (powershell .
+	     [(0 4)
+	      ((emacs
+		(24)))
+	      "Mode for editing PowerShell scripts" tar
+	      ((:url . "http://github.com/jschaf/powershell.el")
+	       (:keywords "powershell" "languages")
+	       (:maintainer "Frédéric Perrin" . "fredericperrinreselfr")
+	       (:authors
+		("Frédéric Perrin" . "fredericperrinreselfr"))
+	       (:commit . "176f9fb0c29ac60898e1e938458f26205511cc23"))])
  (projectile .
 	     [(2 9 1)
 	      ((emacs
