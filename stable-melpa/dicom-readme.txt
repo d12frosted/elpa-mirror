@@ -8,9 +8,10 @@ Furthermore the command `dicom-open' opens DICOMDIR directory files or DICOM
 image files interactively.
 
 Emacs must be compiled with support for PNG, SVG and XML.  The package relies
-on external programs from the dcmtk DICOM toolkit, which are all widely
-available on Linux distributions.
+on external programs from the dcmtk DICOM toolkit, which are widely available
+on Linux distributions.
 
-- `dcm2xml' and `dcmj2pnm' from the dcmtk DICOM toolkit
+- `dcm2xml' from the dcmtk DICOM toolkit
+- `convert' from ImageMagick
 - `ffmpeg' for video conversion (optional)
 - `mpv' for video playing (optional)
