@@ -3,16 +3,17 @@ Fetcher: github
 Source:  https://github.com/unmonoqueteclea/jira.el
 
 Updating /mnt/store/melpa/working/jira/
-Checking out e83864edacd7907cc64914d6d0684e0c6e9ccbfd
+Checking out 227c59839f90d3426d1d94c906dee69dee62ca5b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jira/
-  to /tmp/jiraJCCgQg/jira-20251114.1133
+  to /tmp/jiragWs7BX/jira-20251114.1916
     jira-actions.el -> jira-actions.el
     jira-api.el -> jira-api.el
     jira-complete.el -> jira-complete.el
     jira-detail.el -> jira-detail.el
     jira-doc.el -> jira-doc.el
     jira-edit.el -> jira-edit.el
+    jira-export.el -> jira-export.el
     jira-fmt.el -> jira-fmt.el
     jira-issues.el -> jira-issues.el
     jira-table.el -> jira-table.el
@@ -20,23 +21,24 @@ Copying files (->) and directories (=>)
     jira-users.el -> jira-users.el
     jira-utils.el -> jira-utils.el
     jira.el -> jira.el
-Created jira-20251114.1133.tar containing:
-  jira-20251114.1133/
-  jira-20251114.1133/jira-actions.el
-  jira-20251114.1133/jira-api.el
-  jira-20251114.1133/jira-complete.el
-  jira-20251114.1133/jira-detail.el
-  jira-20251114.1133/jira-doc.el
-  jira-20251114.1133/jira-edit.el
-  jira-20251114.1133/jira-fmt.el
-  jira-20251114.1133/jira-issues.el
-  jira-20251114.1133/jira-pkg.el
-  jira-20251114.1133/jira-table.el
-  jira-20251114.1133/jira-tempo.el
-  jira-20251114.1133/jira-users.el
-  jira-20251114.1133/jira-utils.el
-  jira-20251114.1133/jira.el
+Created jira-20251114.1916.tar containing:
+  jira-20251114.1916/
+  jira-20251114.1916/jira-actions.el
+  jira-20251114.1916/jira-api.el
+  jira-20251114.1916/jira-complete.el
+  jira-20251114.1916/jira-detail.el
+  jira-20251114.1916/jira-doc.el
+  jira-20251114.1916/jira-edit.el
+  jira-20251114.1916/jira-export.el
+  jira-20251114.1916/jira-fmt.el
+  jira-20251114.1916/jira-issues.el
+  jira-20251114.1916/jira-pkg.el
+  jira-20251114.1916/jira-table.el
+  jira-20251114.1916/jira-tempo.el
+  jira-20251114.1916/jira-users.el
+  jira-20251114.1916/jira-utils.el
+  jira-20251114.1916/jira.el
  ✓ Success:
-  2025-11-14T14:52:00+0000  jira-20251114.1133.entry
-  2025-11-14T14:52:00+0000  jira-20251114.1133.tar
-Built jira in 4.508s, finished at 2025-11-14T14:52:01+0000
+  2025-11-14T22:18:23+0000  jira-20251114.1916.entry
+  2025-11-14T22:18:23+0000  jira-20251114.1916.tar
+Built jira in 8.292s, finished at 2025-11-14T22:18:26+0000

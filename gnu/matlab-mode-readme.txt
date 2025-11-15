@@ -143,7 +143,7 @@
      └────
 
 
-     Note: to all available packages, `M-x RET list-packages RET'
+     Note: to see all available packages, `M-x RET list-packages RET'
 
   2. [Optional] Install the `company' package which is used for TAB
      completions.
@@ -154,6 +154,13 @@
 
   3. [Optional] Install MATLAB tree-sitter for matlab-ts-mode, which
      provides improved editing capabilities and improved performance.
+
+     After installing `matlab-mode'
+
+     ┌────
+     │ M-x matlab-ts-grammar-install
+     └────
+
 
      The MATLAB tree-sitter leverages [Tree-sitter] to create a parse
      tree for MATLAB code.  The parse tree is updated incrementally and

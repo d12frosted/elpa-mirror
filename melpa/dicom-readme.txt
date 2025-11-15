@@ -11,7 +11,7 @@ Emacs must be compiled with support for PNG, SVG and XML.  The package relies
 on external programs from the dcmtk DICOM toolkit, which are widely available
 on Linux distributions.
 
-- `dcm2xml' from the dcmtk DICOM toolkit
-- `convert' from ImageMagick
+- `dcm2xml' and `dcm2img' from the dcmtk DICOM toolkit
+- `magick' from ImageMagick
 - `ffmpeg' for video conversion (optional)
 - `mpv' for video playing (optional)
