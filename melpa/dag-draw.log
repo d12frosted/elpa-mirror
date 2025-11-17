@@ -3,10 +3,10 @@ Fetcher: codeberg
 Source:  https://codeberg.org/trevoke/dag-draw.el
 
 Updating /mnt/store/melpa/working/dag-draw/
-Checking out be7b6771db3c3396ade408e27eefc3c33fba6d87
+Checking out 02c0c0dec5b75210e20a412ba180d99324470860
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dag-draw/
-  to /tmp/dag-drawobsZW4/dag-draw-20251111.107
+  to /tmp/dag-drawuNRl4j/dag-draw-20251117.417
     dag-draw-aesthetic-principles.el -> dag-draw-aesthetic-principles.el
     dag-draw-algorithms.el -> dag-draw-algorithms.el
     dag-draw-ascii-edges.el -> dag-draw-ascii-edges.el
@@ -30,38 +30,40 @@ Copying files (->) and directories (=>)
     dag-draw-svg.el -> dag-draw-svg.el
     dag-draw-topological.el -> dag-draw-topological.el
     dag-draw.el -> dag-draw.el
+    test-visual-ascii-properties.el -> test-visual-ascii-properties.el
     dag-draw.info -> dag-draw.info
   ! doc/dag-draw.texi -> dag-draw.texi
 Generating dag-draw.info
-Created dag-draw-20251111.107.tar containing:
-  dag-draw-20251111.107/
-  dag-draw-20251111.107/dag-draw-aesthetic-principles.el
-  dag-draw-20251111.107/dag-draw-algorithms.el
-  dag-draw-20251111.107/dag-draw-ascii-edges.el
-  dag-draw-20251111.107/dag-draw-ascii-grid.el
-  dag-draw-20251111.107/dag-draw-ascii-junctions.el
-  dag-draw-20251111.107/dag-draw-ascii-nodes.el
-  dag-draw-20251111.107/dag-draw-ascii-splines.el
-  dag-draw-20251111.107/dag-draw-coord-transform.el
-  dag-draw-20251111.107/dag-draw-core.el
-  dag-draw-20251111.107/dag-draw-cycle-breaking.el
-  dag-draw-20251111.107/dag-draw-dot.el
-  dag-draw-20251111.107/dag-draw-pass1-ranking.el
-  dag-draw-20251111.107/dag-draw-pass2-ordering.el
-  dag-draw-20251111.107/dag-draw-pass3-positioning.el
-  dag-draw-20251111.107/dag-draw-pass4-splines.el
-  dag-draw-20251111.107/dag-draw-pkg.el
-  dag-draw-20251111.107/dag-draw-ports.el
-  dag-draw-20251111.107/dag-draw-quality.el
-  dag-draw-20251111.107/dag-draw-rank-balancing.el
-  dag-draw-20251111.107/dag-draw-render-gknv-compliant.el
-  dag-draw-20251111.107/dag-draw-render.el
-  dag-draw-20251111.107/dag-draw-svg.el
-  dag-draw-20251111.107/dag-draw-topological.el
-  dag-draw-20251111.107/dag-draw.el
-  dag-draw-20251111.107/dag-draw.info
-  dag-draw-20251111.107/dir
+Created dag-draw-20251117.417.tar containing:
+  dag-draw-20251117.417/
+  dag-draw-20251117.417/dag-draw-aesthetic-principles.el
+  dag-draw-20251117.417/dag-draw-algorithms.el
+  dag-draw-20251117.417/dag-draw-ascii-edges.el
+  dag-draw-20251117.417/dag-draw-ascii-grid.el
+  dag-draw-20251117.417/dag-draw-ascii-junctions.el
+  dag-draw-20251117.417/dag-draw-ascii-nodes.el
+  dag-draw-20251117.417/dag-draw-ascii-splines.el
+  dag-draw-20251117.417/dag-draw-coord-transform.el
+  dag-draw-20251117.417/dag-draw-core.el
+  dag-draw-20251117.417/dag-draw-cycle-breaking.el
+  dag-draw-20251117.417/dag-draw-dot.el
+  dag-draw-20251117.417/dag-draw-pass1-ranking.el
+  dag-draw-20251117.417/dag-draw-pass2-ordering.el
+  dag-draw-20251117.417/dag-draw-pass3-positioning.el
+  dag-draw-20251117.417/dag-draw-pass4-splines.el
+  dag-draw-20251117.417/dag-draw-pkg.el
+  dag-draw-20251117.417/dag-draw-ports.el
+  dag-draw-20251117.417/dag-draw-quality.el
+  dag-draw-20251117.417/dag-draw-rank-balancing.el
+  dag-draw-20251117.417/dag-draw-render-gknv-compliant.el
+  dag-draw-20251117.417/dag-draw-render.el
+  dag-draw-20251117.417/dag-draw-svg.el
+  dag-draw-20251117.417/dag-draw-topological.el
+  dag-draw-20251117.417/dag-draw.el
+  dag-draw-20251117.417/dag-draw.info
+  dag-draw-20251117.417/dir
+  dag-draw-20251117.417/test-visual-ascii-properties.el
  ✓ Success:
-  2025-11-15T09:43:29+0000  dag-draw-20251111.107.entry
-  2025-11-15T09:43:29+0000  dag-draw-20251111.107.tar
-Built dag-draw in 7.169s, finished at 2025-11-15T09:43:30+0000
+  2025-11-17T07:09:12+0000  dag-draw-20251117.417.entry
+  2025-11-17T07:09:12+0000  dag-draw-20251117.417.tar
+Built dag-draw in 7.052s, finished at 2025-11-17T07:09:13+0000

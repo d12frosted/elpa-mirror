@@ -1,6 +1,9 @@
 A major mode for editing q (the language written by Kx Systems, see
 URL `https://code.kx.com') in Emacs.
 
+A Flymake backend using the "q" program is also provided.
+
+
 Some of its major features include:
 
  - syntax highlighting (font lock),

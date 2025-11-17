@@ -163,14 +163,16 @@ Table of Contents
   │ 
   │ (defun demo-backend (action &optional arg &rest _)
   │   (pcase action
-  │     ('prefix (and (memq (char-before) '(?: ?\;))
-  │ 		  (cons (string (char-before)) t)))
+  │     ('prefix
+  │      (when-let (beg (save-excursion
+  │ 		      (and (re-search-backward "[;:]" (pos-bol) t) (point))))
+  │        (list (buffer-substring-no-properties beg (point)) "" t)))
   │     ('candidates (all-completions arg demo-alist))
   │     ('annotation (concat " " (cdr (assoc arg demo-alist))))
   │     ('post-completion
   │      (let ((str (buffer-substring (- (point) 3) (point))))
   │        (delete-region (- (point) 3) (point))
-  │      (insert (cdr (assoc str demo-alist)))))))
+  │        (insert (cdr (assoc str demo-alist)))))))
   │ 
   │ ;; Register demo backend with `completion-at-point'
   │ (setq completion-at-point-functions
@@ -204,13 +206,13 @@ Table of Contents
   /Throw multiple Capfs under the Cape and get a Super-Capf!/
 
   Cape supports merging multiple Capfs using the function
-  `cape-capf-super'. Due to some technical details, not all Capfs can be
-  merged successfully. Merge Capfs one by one and make sure that you get
-  the desired outcome.
+  `cape-capf-super'. Due to technical details, not all Capfs can be
+  merged successfully. Try to merge Capfs one by one and make sure that
+  you get the desired outcome.
 
-  Note that `cape-capf-super' is not needed if multiple Capfs should
-  betried one after the other, for example you can use `cape-file'
-  together with programming mode Capfs by adding `cape-file' to the
+  Note that `cape-capf-super' is not needed if multiple Capfs should be
+  tried one after another, for example you can use `cape-file' together
+  with programming mode Capfs by adding `cape-file' to the
   `completion-at-point-functions' list. File completion will then be
   available in comments and string literals, but not in normal
   code. `cape-capf-super' is only necessary if you want to combine
@@ -225,19 +227,36 @@ Table of Contents
   like `cape-dabbrev', `cape-keyword', `cape-dict', etc., but not for
   multi-step completions like `cape-file'.
 
+  The results returned by the individual Capfs are listed after each
+  other, where the the order of the completion candidates is
+  preserved. In order to override this sorting behavior use
+  `cape-capf-sort', such that the completion UI can apply its own
+  sorting.
+
   ┌────
   │ ;; Merge the dabbrev, dict and keyword capfs, display candidates together.
   │ (setq-local completion-at-point-functions
-  │ 	    (list (cape-capf-super #'cape-dabbrev #'cape-dict #'cape-keyword)))
+  │ 	    (list (cape-capf-super #'cape-dabbrev #'cape-dict)))
   │ 
-  │ ;; Alternative: Define named Capf instead of using the anonymous Capf directly
-  │ (defun cape-dabbrev-dict-keyword ()
-  │   (cape-wrap-super #'cape-dabbrev #'cape-dict #'cape-keyword))
-  │ (setq-local completion-at-point-functions (list #'cape-dabbrev-dict-keyword))
+  │ ;; Let the UI (e.g. Corfu) sort the candidates by overriding the sort function.
+  │ (setq-local completion-at-point-functions
+  │ 	    (list (cape-capf-sort (cape-capf-super #'cape-dabbrev #'cape-dict))))
+  │ 
+  │ ;; Trigger completion only after trigger character.
+  │ (setq-local corfu-auto-trigger "/"
+  │ 	    completion-at-point-functions
+  │ 	    (list (cape-capf-trigger (cape-capf-super #'cape-abbrev #'tempel-complete) ?/)))
+  │ 
+  │ ;; Define named Capf instead of using the anonymous Capf directly.
+  │ (defun cape-dabbrev-dict ()
+  │   (cape-wrap-super #'cape-dabbrev #'cape-dict))
+  │ (setq-local completion-at-point-functions (list #'cape-dabbrev-dict))
   └────
 
-  See also the aforementioned `company--multi-backend-adapter' from
-  Company, which allows you to merge multiple Company backends.
+  If you want to merge multiple Company backends, use the aforementioned
+  `company--multi-backend-adapter' from Company. In order to combine
+  multiple Capfs, such that each of the Capfs is tried one after
+  another, use `cape-capf-choose'.
 
 
 3.3 Capf-Buster - Cache busting
@@ -264,6 +283,9 @@ Table of Contents
 3.4 Capf transformers
 ─────────────────────
 
+  /Wrap one or multiple Capfs in a Cape to get a Capf of different
+  flavor!/
+
   Cape provides a set of additional Capf transformation functions, which
   are mostly meant to used by experts to fine tune the Capf behavior and
   Capf interaction. These can either be used as advices (`cape-wrap-*)'
@@ -275,6 +297,7 @@ Table of Contents
     accepts every input as valid.
   • `cape-capf-case-fold', `cape-wrap-case-fold': Create a Capf which is
     case insensitive.
+  • `cape-capf-choose', `cape-wrap-choose': Choose from multiple Capfs.
   • `cape-capf-debug', `cape-wrap-debug': Create a Capf which prints
     debugging messages.
   • `cape-capf-inside-code', `cape-wrap-inside-code': Ensure that Capf
@@ -299,31 +322,36 @@ Table of Contents
     minimal prefix length.
   • `cape-capf-properties', `cape-wrap-properties': Add completion
     properties to a Capf.
-  • `cape-capf-purify', `cape-wrap-purify': Purify a broken Capf and
-    ensure that it does not modify the buffer.
   • `cape-capf-silent', `cape-wrap-silent': Silence Capf messages and
     errors.
   • `cape-capf-sort', `cape-wrap-sort': Add sort function to a Capf.
   • `cape-capf-super', `cape-wrap-super': Merge multiple Capfs into a
     Super-Capf.
+  • `cape-capf-trigger', `cape-wrap-trigger': Create a Capf with a
+    trigger prefix character.
 
   In the following we show a few example configurations, which have come
   up on the [Cape] or [Corfu issue tracker] or the [Corfu wiki.] I use
   some of these tweaks in my personal configuration.
 
   ┌────
-  │ ;; Example 1: Configure a Capf with a specific auto completion prefix length
+  │ ;; Example 1: Configure a merged Capf with a trigger prefix character.
+  │ (setq-local corfu-auto-trigger "/"
+  │ 	    completion-at-point-functions
+  │ 	    (list (cape-capf-trigger (cape-capf-super #'cape-abbrev #'tempel-complete) ?/)))
+  │ 
+  │ ;; Example 2: Configure a Capf with a specific auto completion prefix length.
   │ (setq-local completion-at-point-functions
   │ 	    (list (cape-capf-prefix-length #'cape-dabbrev 2)))
   │ 
-  │ ;; Example 2: Create a Capf with debugging messages
+  │ ;; Example 3: Create a Capf with debugging messages.
   │ (setq-local completion-at-point-functions (list (cape-capf-debug #'cape-dict)))
   │ 
-  │ ;; Example 3: Named Capf
+  │ ;; Example 4: Named Capf.
   │ (defalias 'cape-dabbrev-min-2 (cape-capf-prefix-length #'cape-dabbrev 2))
   │ (setq-local completion-at-point-functions (list #'cape-dabbrev-min-2))
   │ 
-  │ ;; Example 4: Define a defensive Dabbrev Capf, which accepts all inputs.  If you
+  │ ;; Example 5: Define a defensive Dabbrev Capf, which accepts all inputs.  If you
   │ ;; use Corfu and `corfu-auto=t', the first candidate won't be auto selected if
   │ ;; `corfu-preselect=valid', such that it cannot be accidentally committed when
   │ ;; pressing RET.
@@ -331,23 +359,21 @@ Table of Contents
   │   (cape-wrap-accept-all #'cape-dabbrev))
   │ (add-hook 'completion-at-point-functions #'my-cape-dabbrev-accept-all)
   │ 
-  │ ;; Example 5: Define interactive Capf which can be bound to a key.  Here we wrap
+  │ ;; Example 6: Define interactive Capf which can be bound to a key.  Here we wrap
   │ ;; the `elisp-completion-at-point' such that we can complete Elisp code
   │ ;; explicitly in arbitrary buffers.
   │ (keymap-global-set "C-c p e" (cape-capf-interactive #'elisp-completion-at-point))
   │ 
-  │ ;; Example 6: Ignore :keywords in Elisp completion.
+  │ ;; Example 7: Ignore :keywords in Elisp completion.
   │ (defun ignore-elisp-keywords (sym)
   │   (not (keywordp sym)))
   │ (setq-local completion-at-point-functions
   │ 	    (list (cape-capf-predicate #'elisp-completion-at-point
   │ 				       #'ignore-elisp-keywords)))
   │ 
-  │ ;; Example 7: Sanitize broken Capfs. Catch errors with `cape-wrap-silent' or
-  │ ;; make sure that the Capf does not modify the buffer itself.
+  │ ;; Example 8: Catch errors with `cape-wrap-silent'.
   │ (advice-add 'dabbrev-capf :around #'cape-wrap-silent)
   │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent) ;; Was necessary on Emacs 28
-  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify) ;; Was necessary on Emacs 28
   └────
 
 

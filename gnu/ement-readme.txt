@@ -415,6 +415,57 @@ Encrypted room support through Pantalaimon
 3 Changelog
 ═══════════
 
+0.17
+────
+
+  *Additions*
+
+  ⁃ Command `ement-room-download-file', which downloads the file in the
+    event at point (for image, audio, video, and file messages).
+    ([#323].  Thanks to [Arto Jantunen].)
+  ⁃ Customization groups for faces.  (Thanks to [Phil Sainty].)
+  ⁃ Option `ement-room-hide-redacted-message-content', which hides the
+    content of redacted messages by default.  It may be disabled to keep
+    redacted content visible with a strikethrough face, which may be
+    useful for room moderators, but users should keep in mind that doing
+    so will leave unpleasant content visible in the current session,
+    even after being redacted by moderators.
+  ⁃ Option `ement-room-list-avatar-generation': if disabled, SVG-based
+    room avatars are not generated.  This option automatically tests
+    whether SVG support is available in Emacs, and should allow use with
+    builds of Emacs that lack `librsvg' support.
+
+  *Changes*
+
+  ⁃ Disable underline for faces `ement-room-list-direct' and
+    `ement-room-list-name' (in case a face they inherit from enables it,
+    e.g. when themed).
+
+  *Fixes*
+
+  ⁃ Call `eww-browse-url' instead of `browse-url' in
+    `ement-room-browse-mxc' (because the latter is not useful for
+    authenticated media if the user has configured it to use a different
+    browser).  ([#323].  Thanks to [Arto Jantunen].)
+  ⁃ Workaround change in `magit-section' that broke fontification in
+    room-list and directory buffers.  (See [#331].)
+  ⁃ Handle non-symbol commands in `command-history'.  ([#330].  Thanks
+    to [Alex Bennée] for reporting.)
+
+
+[#323] <https://github.com/alphapapa/ement.el/pull/323>
+
+[Arto Jantunen] <https://github.com/viiru->
+
+[Phil Sainty] <https://github.com/phil-s>
+
+[#331] <https://github.com/alphapapa/ement.el/issues/331>
+
+[#330] <https://github.com/alphapapa/ement.el/issues/330>
+
+[Alex Bennée] <https://github.com/stsquad>
+
+
 0.16
 ────
 

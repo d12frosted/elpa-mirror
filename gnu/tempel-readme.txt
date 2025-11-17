@@ -5,9 +5,9 @@
 
 Tempel is a tiny template package for Emacs, which uses the syntax of
 the Emacs Tempo library. Tempo is an ancient temple of the church of
-Emacs. It is 30 years old, but still in good shape since it successfully
-resisted change over the decades. However it may look a bit dusty here
-and there. Therefore we present Tempel, a new implementation of Tempo
+Emacs. It is over 31 years old, but still in good shape since it
+successfully resisted change over the decades. However it looks a bit
+dusty here and there. Therefore we present Tempel, its worthy successor
 with inline expansion and integration with recent Emacs
 facilities. Tempel takes advantage of the standard
 `completion-at-point-functions' mechanism which is used by Emacs for
@@ -24,8 +24,9 @@ Table of Contents
 6. Adding template sources
 7. Hooking into the Abbrev mechanism
 8. Binding important templates to a key
-9. Alternatives
-10. Contributions
+9. LSP integration
+10. Alternatives
+11. Contributions
 
 
 1 Template expansion
@@ -68,16 +69,12 @@ Table of Contents
   The package is available on GNU ELPA and MELPA and can be installed
   with `package-install'. The following example configuration relies on
   `use-package'. For some ready-made templates check out the package
-  [tempel-collection]. The collection is not comprehensive yet, but will
-  certainly grow thanks to contributions.
+  [tempel-collection]. We appreciate if more templates are contributed
+  there.
 
   ┌────
   │ ;; Configure Tempel
   │ (use-package tempel
-  │   ;; Require trigger prefix before template name when completing.
-  │   ;; :custom
-  │   ;; (tempel-trigger-prefix "<")
-  │ 
   │   :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
   │ 	 ("M-*" . tempel-insert))
   │ 
@@ -85,16 +82,20 @@ Table of Contents
   │ 
   │   ;; Setup completion at point
   │   (defun tempel-setup-capf ()
-  │     ;; Add the Tempel Capf to `completion-at-point-functions'.
-  │     ;; `tempel-expand' only triggers on exact matches. Alternatively use
-  │     ;; `tempel-complete' if you want to see all matches, but then you
-  │     ;; should also configure `tempel-trigger-prefix', such that Tempel
-  │     ;; does not trigger too often when you don't expect it. NOTE: We add
-  │     ;; `tempel-expand' *before* the main programming mode Capf, such
-  │     ;; that it will be tried first.
+  │     ;; Add the Tempel Capf to `completion-at-point-functions'.  `tempel-expand'
+  │     ;; only triggers on exact matches. We add `tempel-expand' *before* the main
+  │     ;; programming mode Capf, such that it will be tried first.
   │     (setq-local completion-at-point-functions
-  │ 		(cons #'tempel-expand
-  │ 		      completion-at-point-functions)))
+  │ 		(cons #'tempel-expand completion-at-point-functions))
+  │ 
+  │     ;; Alternatively use `tempel-complete' if you want to see all matches.  Use
+  │     ;; a trigger prefix character in order to prevent Tempel from triggering
+  │     ;; unexpectly.
+  │     ;; (setq-local corfu-auto-trigger "/"
+  │     ;;             completion-at-point-functions
+  │     ;;             (cons (cape-capf-trigger #'tempel-complete ?/)
+  │     ;;                   completion-at-point-functions))
+  │   )
   │ 
   │   (add-hook 'conf-mode-hook 'tempel-setup-capf)
   │   (add-hook 'prog-mode-hook 'tempel-setup-capf)
@@ -106,8 +107,7 @@ Table of Contents
   │   ;; (global-tempel-abbrev-mode)
   │ )
   │ 
-  │ ;; Optional: Add tempel-collection.
-  │ ;; The package is young and doesn't have comprehensive coverage.
+  │ ;; Optional: Add tempel-collection if you want ready-made templates.
   │ (use-package tempel-collection)
   │ 
   │ ;; Optional: Use the Corfu completion UI
@@ -474,17 +474,29 @@ Table of Contents
   Internally `tempel-key' uses `tempel-insert' to trigger the
   insertion. Depending on the style of your user configuration you may
   want to write your own helper macros, which allow you to conveniently
-  bind templates via [use-package], [general] or similar keybinding
-  packages.
+  bind templates via [use-package] or similar keybinding packages.
 
 
-[use-package] <https://github.com/jwiegley/use-package>
+[use-package]
+<https://www.gnu.org/software/emacs/manual/html_mono/use-package.html>
 
-[general] <https://github.com/noctuid/general>
+
+9 LSP integration
+═════════════════
+
+  See the following projects:
+
+  • [eglot-tempel]
+  • [lsp-snippet]
 
 
-9 Alternatives
-══════════════
+[eglot-tempel] <https://github.com/fejfighter/eglot-tempel>
+
+[lsp-snippet] <https://github.com/svaante/lsp-snippet>
+
+
+10 Alternatives
+═══════════════
 
   There are plenty of alternative packages which provide abbreviation or
   snippet expansion. Try Tempel if you like small and simple
@@ -534,7 +546,7 @@ Table of Contents
 [yasnippet.el] <https://github.com/joaotavora/yasnippet>
 
 
-10 Contributions
+11 Contributions
 ════════════════
 
   Since this package is part of [GNU ELPA] contributions require a

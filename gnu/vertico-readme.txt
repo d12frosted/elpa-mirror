@@ -35,11 +35,11 @@ Table of Contents
 12. Problematic completion commands
 .. 1. `org-refile'
 .. 2. `org-agenda-filter' and `org-tags-view'
-.. 3. `tmm-menubar'
-.. 4. `ffap-menu'
-.. 5. `completion-table-dynamic'
-.. 6. Submitting the empty string
-.. 7. Tramp hostname and username completion
+.. 3. `completion-table-dynamic'
+.. 4. Submitting the empty string
+.. 5. `tmm-menubar' (Fixed on Emacs 31)
+.. 6. `ffap-menu' (Fixed on Emacs 31)
+.. 7. Tramp hostname and username completion (Fixed on Emacs 29)
 
 
 [extensions] See section 5
@@ -172,8 +172,9 @@ Table of Contents
   │   ;; (orderless-style-dispatchers '(+orderless-consult-dispatch orderless-affix-dispatch))
   │   ;; (orderless-component-separator #'orderless-escapable-split-on-space)
   │   (completion-styles '(orderless basic))
-  │   (completion-category-defaults nil)
-  │   (completion-category-overrides '((file (styles partial-completion)))))
+  │   (completion-category-overrides '((file (styles partial-completion))))
+  │   (completion-category-defaults nil) ;; Disable defaults, use our settings
+  │   (completion-pcm-leading-wildcard t)) ;; Emacs 31: partial-completion behaves like substring
   └────
 
   The `basic' completion style is specified as fallback in addition to
@@ -448,14 +449,16 @@ Table of Contents
   keys. Depending on preference, these bindings can be changed in the
   `vertico-multiform-map'.
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   `M-B'  `vertico-multiform-buffer'      
-   `M-F'  `vertico-multiform-flat'        
-   `M-G'  `vertico-multiform-grid'        
-   `M-R'  `vertico-multiform-reverse'     
-   `M-U'  `vertico-multiform-unobtrusive' 
-   `M-V'  `vertico-multiform-vertical'    
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Binding  Vertico command                 
+  ──────────────────────────────────────────
+   `M-B'    `vertico-multiform-buffer'      
+   `M-F'    `vertico-multiform-flat'        
+   `M-G'    `vertico-multiform-grid'        
+   `M-R'    `vertico-multiform-reverse'     
+   `M-U'    `vertico-multiform-unobtrusive' 
+   `M-V'    `vertico-multiform-vertical'    
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   For special configuration you can use your own functions or even
   lambdas to configure the completion behavior per command or per
@@ -677,6 +680,7 @@ Table of Contents
     ⁃ [Doom Emacs Vertico Module]
     ⁃ [Crafted Emacs Completion Module]
     ⁃ [Prot's Emacs configuration]
+    ⁃ [Bedrock Emacs Base Enhancements]
   • Videos:
     ⁃ [Emacs Completion Explained] (2022-07-19) by Andrew Tropin.
     ⁃ [Emacs Minibuffer Completions] (2022-02-12) by Greg Yut.
@@ -700,6 +704,9 @@ Table of Contents
 
 [Prot's Emacs configuration]
 <https://git.sr.ht/~protesilaos/dotfiles/tree/master/item/emacs/.emacs.d/>
+
+[Bedrock Emacs Base Enhancements]
+<https://codeberg.org/ashton314/emacs-bedrock/src/branch/main/extras/base.el>
 
 [Emacs Completion Explained]
 <https://www.youtube.com/watch?v=fnE0lXoe7Y0>
@@ -818,67 +825,20 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-12.3 `tmm-menubar'
-──────────────────
-
-  *NOTE*: I have implemented a fix for this problem upstream in Emacs,
-  see [bug#74616]. From Emacs 31 and newer the workaround is not needed
-  anymore.
-
-  The text menu bar works well with Vertico but always shows a
-  `*Completions*' buffer, which is unwanted if Vertico is used. Right
-  now the completion buffer can be disabled with an advice. If you
-  disabled the standard GUI menu bar and prefer the Vertico interface
-  you may also overwrite the default F10 keybinding.
-
-  ┌────
-  │ (keymap-global-set "<f10>" #'tmm-menubar)
-  │ (advice-add #'tmm-add-prompt :after #'minibuffer-hide-completions)
-  └────
-
-
-[bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
-
-
-12.4 `ffap-menu'
-────────────────
-
-  *NOTE*: I have implemented a fix for this problem upstream in Emacs,
-  see [bug#74616]. From Emacs 31 and newer the workaround is not needed
-  anymore.
-
-  The command `ffap-menu' shows the `*Completions*' buffer by default
-  like `tmm-menubar', which is unwanted if Vertico is used. The
-  completions buffer can be disabled as follows.
-
-  ┌────
-  │ (advice-add #'ffap-menu-ask :around
-  │ 	    (lambda (&rest args)
-  │ 	      (cl-letf (((symbol-function #'minibuffer-completion-help)
-  │ 			 #'ignore))
-  │ 		(apply args))))
-  └────
-
-
-[bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
-
-
-12.5 `completion-table-dynamic'
+12.3 `completion-table-dynamic'
 ───────────────────────────────
 
   Dynamic completion tables (`completion-table-dynamic',
-  `completion-table-in-turn', …) should work well with Vertico. The only
-  requirement is that the `basic' completion style is enabled. The
-  `basic' style performs prefix filtering by passing the input to the
-  completion table (or the dynamic completion table function). The
-  `basic' completion style must not necessarily be configured with
-  highest priority, it can also come after other completion styles like
-  `orderless', `substring' or `flex', as is also recommended by the
-  Orderless documentation because of `completion-table-dynamic'.
+  `completion-table-in-turn', …) work well with Vertico. The requirement
+  is that the `basic' completion style is enabled. The `basic' style
+  performs prefix filtering by passing the input to the completion table
+  (or the dynamic completion table function). The `basic' completion
+  style must not necessarily be configured with highest priority, it can
+  also come after other completion styles like `orderless', `substring'
+  or `flex'.
 
   ┌────
-  │ (setq completion-styles '(basic))
-  │ ;; (setq completion-styles '(orderless basic))
+  │ (setq completion-styles '(orderless basic))
   │ (completing-read "Dynamic: "
   │ 		 (completion-table-dynamic
   │ 		  (lambda (str)
@@ -888,7 +848,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-12.6 Submitting the empty string
+12.4 Submitting the empty string
 ────────────────────────────────
 
   The commands `multi-occur', `auto-insert', `bbdb-create' read multiple
@@ -916,12 +876,57 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   possible by pressing `RET' only.
 
 
-12.7 Tramp hostname and username completion
-───────────────────────────────────────────
+12.5 `tmm-menubar' (Fixed on Emacs 31)
+──────────────────────────────────────
+
+  *NOTE*: I have implemented a fix for this problem upstream in Emacs,
+  see [bug#74616]. From Emacs 31 and newer the workaround is not needed
+  anymore.
+
+  The text menu bar works well with Vertico but always shows a
+  `*Completions*' buffer, which is unwanted if Vertico is used. Right
+  now the completion buffer can be disabled with an advice. If you
+  disabled the standard GUI menu bar and prefer the Vertico interface
+  you may also overwrite the default F10 keybinding.
+
+  ┌────
+  │ (keymap-global-set "<f10>" #'tmm-menubar)
+  │ (advice-add #'tmm-add-prompt :after #'minibuffer-hide-completions)
+  └────
+
+
+[bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
+
+
+12.6 `ffap-menu' (Fixed on Emacs 31)
+────────────────────────────────────
+
+  *NOTE*: I have implemented a fix for this problem upstream in Emacs,
+  see [bug#74616]. From Emacs 31 and newer the workaround is not needed
+  anymore.
+
+  The command `ffap-menu' shows the `*Completions*' buffer by default
+  like `tmm-menubar', which is unwanted if Vertico is used. The
+  completions buffer can be disabled as follows.
+
+  ┌────
+  │ (advice-add #'ffap-menu-ask :around
+  │ 	    (lambda (&rest args)
+  │ 	      (cl-letf (((symbol-function #'minibuffer-completion-help)
+  │ 			 #'ignore))
+  │ 		(apply args))))
+  └────
+
+
+[bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
+
+
+12.7 Tramp hostname and username completion (Fixed on Emacs 29)
+───────────────────────────────────────────────────────────────
 
   *NOTE:* On Emacs 29.2 and Tramp 2.7 the workarounds described in this
   section are not necessary anymore, since the relevant completion
-  tables have been improved.
+  tables have been fixed.
 
   In combination with Orderless or other non-prefix completion styles
   like `substring' or `flex', host names and user names are not made
@@ -935,25 +940,4 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   │ (setq completion-styles '(orderless basic)
   │       completion-category-defaults nil
   │       completion-category-overrides '((file (styles basic partial-completion))))
-  └────
-
-  If you are familiar with the `completion-style' machinery, you may
-  also define a custom completion style which activates only for remote
-  files. The custom completion style ensures that you can always match
-  substrings within non-remote file names, since `orderless' will stay
-  the preferred style for non-remote files.
-
-  ┌────
-  │ (defun basic-remote-try-completion (string table pred point)
-  │   (and (vertico--remote-p string)
-  │        (completion-basic-try-completion string table pred point)))
-  │ (defun basic-remote-all-completions (string table pred point)
-  │   (and (vertico--remote-p string)
-  │        (completion-basic-all-completions string table pred point)))
-  │ (add-to-list
-  │  'completion-styles-alist
-  │  '(basic-remote basic-remote-try-completion basic-remote-all-completions nil))
-  │ (setq completion-styles '(orderless basic)
-  │       completion-category-defaults nil
-  │       completion-category-overrides '((file (styles basic-remote partial-completion))))
   └────

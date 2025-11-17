@@ -21,9 +21,9 @@ backends. The Emacs built-in Capfs and the Capfs provided by third-party
 programming language packages are often sufficient. Additional Capfs and
 completion utilities are provided by the separate [Cape] package.
 
-*NOTE*: Corfu relies on child frames to show the popup. Emacs 31
-supports child frames also for terminal Emacs. On older Emacs versions,
-you can use the [corfu-terminal] package.
+*NOTE*: Corfu relies on child frames to show the popup. On Emacs 31 this
+works even for terminal Emacs, but support is still experimental. Use
+the [corfu-terminal] package on older Emacs versions.
 
 Table of Contents
 ─────────────────
@@ -57,7 +57,7 @@ Table of Contents
 1 Features
 ══════════
 
-  • Timer-based auto-completions (/off/ by default).
+  • Auto-completion with timer or character trigger (/off/ by default).
   • Popup display with scrollbar indicator and arrow key navigation.
   • The popup can be summoned explicitly by pressing `TAB' at any time.
   • The current candidate is inserted with `TAB' and selected with
@@ -77,8 +77,8 @@ Table of Contents
   • Deprecated candidates are displayed as crossed out.
   • Icons are provided by external packages via margin formatter
     functions.
-  • Rich set of extensions: Quick keys, Index keys, Sorting by history,
-    Candidate documentation in echo area, popup or separate buffer.
+  • Rich set of extensions: Quick keys, index keys, sorting by history,
+    documentation in echo area, popup or separate buffer.
 
 
 [Orderless] <https://github.com/oantolin/orderless>
@@ -88,8 +88,8 @@ Table of Contents
 ══════════════
 
   Corfu is available from [GNU ELPA]. You can install it directly via
-  `M-x package-install RET corfu RET'. After installation, activate the
-  global minor mode with `M-x global-corfu-mode RET'. For completion
+  `M-x package-install RET corfu RET'.  After installation, activate the
+  global minor mode with `M-x global-corfu-mode RET'.  For completion
   press `M-TAB' (or `TAB') within a buffer. Auto completion is disabled
   by default for safety and unobtrusiveness.
 
@@ -155,7 +155,7 @@ Table of Contents
   │   ;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
   │   ;; (corfu-preview-current nil)    ;; Disable current candidate preview
   │   ;; (corfu-preselect 'prompt)      ;; Preselect the prompt
-  │   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
+  │   ;; (corfu-on-exact-match 'insert) ;; Configure handling of exact matches
   │ 
   │   ;; Enable Corfu only for certain modes. See also `global-corfu-modes'.
   │   ;; :hook ((prog-mode . corfu-mode)
@@ -274,8 +274,10 @@ Table of Contents
   unexpectedly.
 
   ┌────
-  │ ;; Enable auto completion and configure quitting
+  │ ;; Enable auto completion, configure delay, trigger and quitting
   │ (setq corfu-auto t
+  │       corfu-auto-delay 0.2
+  │       corfu-auto-trigger "." ;; Custom trigger characters
   │       corfu-quit-no-match 'separator) ;; or t
   └────
 

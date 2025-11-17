@@ -352,7 +352,7 @@ See section 5.1
 
   Ideas and/or user feedback
         EyoelYT, Filippo Argiolas, Fritz Grabo, Manuel Uberti, Tassilo
-        Horn, Zack Weinberg.
+        Horn, Vincenzo (vpxyz), Zack Weinberg.
 
 
 7 GNU Free Documentation License
