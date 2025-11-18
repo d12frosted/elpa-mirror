@@ -23,3 +23,7 @@ Usage:
   (add-hook 'js-ts-mode-hook
             (lambda ()
               (local-set-key (kbd "M-.") #'js-ts-defs-jump-to-definition)))
+
+This gives you:
+  M-.   Jump to definition
+  M-,   Jump back
