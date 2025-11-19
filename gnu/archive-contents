@@ -4826,11 +4826,13 @@
 	       (:url . "https://elpa.gnu.org/packages/transcribe.html")
 	       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient .
-	    [(0 10 1)
+	    [(0 11 0)
 	     ((emacs
-	       (26 1))
+	       (28 1))
 	      (compat
 	       (30 1))
+	      (cond-let
+	       (0 2))
 	      (seq
 	       (2 24)))
 	     "Transient commands" tar
@@ -4839,7 +4841,7 @@
 	      (:maintainer "Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev")
 	      (:authors
 	       ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-	      (:commit . "053d56e4de2dd78bf32f7af7ed5f289a91cdb6ac"))])
+	      (:commit . "0d3f8d4fb6d41b841126820a06ecc98579bd8265"))])
  (transient-cycles .
 		   [(2 0)
 		    ((emacs
