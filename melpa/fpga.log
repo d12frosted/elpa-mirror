@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/gmlarumbe/fpga
 
 Updating /mnt/store/melpa/working/fpga/
-Checking out 82e961d636ef7cd0038478e74072d7a90a590b6a
+Checking out 48ec1572ab3c96cbc20d0c542cfe56124e05d48b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fpga/
-  to /tmp/fpgaLhDmUs/fpga-20251115.1840
+  to /tmp/fpgamhLj9D/fpga-20251119.2304
     fpga-altera.el -> fpga-altera.el
     fpga-cadence.el -> fpga-cadence.el
     fpga-lattice.el -> fpga-lattice.el
@@ -16,19 +16,21 @@ Copying files (->) and directories (=>)
     fpga-xilinx.el -> fpga-xilinx.el
     fpga-yosys.el -> fpga-yosys.el
     fpga.el -> fpga.el
-Created fpga-20251115.1840.tar containing:
-  fpga-20251115.1840/
-  fpga-20251115.1840/fpga-altera.el
-  fpga-20251115.1840/fpga-cadence.el
-  fpga-20251115.1840/fpga-lattice.el
-  fpga-20251115.1840/fpga-pkg.el
-  fpga-20251115.1840/fpga-siemens.el
-  fpga-20251115.1840/fpga-synopsys.el
-  fpga-20251115.1840/fpga-utils.el
-  fpga-20251115.1840/fpga-xilinx.el
-  fpga-20251115.1840/fpga-yosys.el
-  fpga-20251115.1840/fpga.el
+Created fpga-20251119.2304.tar containing:
+  fpga-20251119.2304/
+  fpga-20251119.2304/fpga-altera.el
+  fpga-20251119.2304/fpga-cadence.el
+  fpga-20251119.2304/fpga-lattice.el
+  fpga-20251119.2304/fpga-pkg.el
+  fpga-20251119.2304/fpga-siemens.el
+  fpga-20251119.2304/fpga-synopsys.el
+  fpga-20251119.2304/fpga-utils.el
+  fpga-20251119.2304/fpga-xilinx.el
+  fpga-20251119.2304/fpga-yosys.el
+  fpga-20251119.2304/fpga.el
  ✓ Success:
-  2025-11-19T14:44:12+0000  fpga-20251115.1840.entry
-  2025-11-19T14:44:12+0000  fpga-20251115.1840.tar
-Built fpga in 3.100s, finished at 2025-11-19T14:44:13+0000
+  2025-11-19T21:58:47+0000  fpga-20251119.1837.entry
+  2025-11-19T21:58:47+0000  fpga-20251119.1837.tar
+  2025-11-20T00:20:26+0000  fpga-20251119.2304.entry
+  2025-11-20T00:20:26+0000  fpga-20251119.2304.tar
+Built fpga in 3.035s, finished at 2025-11-20T00:20:27+0000

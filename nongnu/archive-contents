@@ -1364,15 +1364,15 @@
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
 	      (:commit . "f12e7dd3132724cc294e79b55291a2c967a8fe5c"))])
  (hideshowvis .
-	      [(0 8)
+	      [(0 9)
 	       ((emacs
-		 (24)))
+		 (27 1)))
 	       "Fringe markers for regions foldable by hideshow.el" tar
 	       ((:url . "https://github.com/sheijk/hideshowvis")
 		(:maintainer "Jan Rehders" . "jan@sheijk.net")
 		(:authors
 		 ("Jan Rehders" . "jan@sheijk.net"))
-		(:commit . "33e693dc6098825a5d2255707a2961a47d140b6c"))])
+		(:commit . "cfae9e1f57804a557b81bb1ad778ef355877bc72"))])
  (highlight-parentheses .
 			[(2 2 2)
 			 ((emacs
