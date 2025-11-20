@@ -6,6 +6,10 @@ Hooks to perform the adjustment automatically are set up by enabling
 `textsize-mode' on initialization.  e.g.:
 
     (use-package textsize
+      :custom
+      (textsize-default-points 18)
+      (textsize-monitor-size-thresholds '((0 . -3) (280 . 0) (500 . 3) (1000 . 6) (1500 . 9)))
+      (textsize-pixel-pitch-thresholds '((0 . 3) (0.12 . 0) (0.18 . -3) (0.22 . -6) (0.40 . 12)))
       :init (textsize-mode))
 
 Alternatively, the adjustment may be manually triggered by calling
