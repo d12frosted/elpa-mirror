@@ -1,12 +1,12 @@
-1 Isearch-light                                                    :TOC:
-═══════════════
+1 Isl                                                              :TOC:
+═════
 
   • 
   • 
   • 
   • 
-  • 
 
+    • 
     • 
   • 
   • 
@@ -20,8 +20,9 @@
 1.1 Introduction
 ────────────────
 
-  An Isearch replacement for Emacs.  Multi search expression(s) in
-  symbols, words and/or lines in `current-buffer'.
+  Isl like Isearch-light.  An Isearch replacement for Emacs.  Multi
+  search expression(s) in symbols, words and/or lines in
+  `current-buffer'.
 
 
 1.2 Features
@@ -54,8 +55,8 @@
   features you will never use.
 
 
-[multi matching]
-<https://github.com/thierryvolpiatto/isearch-light?tab=readme-ov-file#about-multi-matching>
+[multi matching] <https://github.com/thierryvolpiatto/isl
+?tab=readme-ov-file#about-multi-matching>
 
 
 1.3 Dependencies
@@ -76,23 +77,16 @@
 [helm-bm] <https://github.com/emacs-helm/helm-bm>
 
 
-1.4 Namespace
-─────────────
-
-  The name of the package is Isearch-light but the lisp file is named
-  isl.el and all symbols are prefixed with "isl-". For now it is ok like
-  this especially because it is not packaged in (M)Elpa. If any
-  conflicts would happen in the future I may rename package, file and
-  symbols.
-
-
-1.5 install
+1.4 Install
 ───────────
 
-  No installation from (M)Elpa and package.el is provided for now.
+1.4.1 From package
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Isl is available in NonGnu Elpa.  Use `package-install' to install it.
 
 
-1.5.1 From source
+1.4.2 From source
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Add isl.el to `load-path' and compile it.
@@ -108,7 +102,7 @@
   └────
 
 
-1.6 Configure
+1.5 Configure
 ─────────────
 
   You may want to disable all `Isearch' global bindings:
@@ -140,7 +134,7 @@
   behavior.
 
 
-1.7 Usage
+1.6 Usage
 ─────────
 
   `M-x isl-search'
@@ -153,13 +147,13 @@
   `case-fold-search'.
 
   Don't forget `C-h m' which show you all these commands while running
-  isearch-light.
+  Isl.
 
   NOTE: Another map `isl-mini-map' is used when excuting-kbd-macro, you
   may want to modify it accordingly to fit with `isl-map'.
 
 
-1.7.1 Available commands
+1.6.1 Available commands
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -187,11 +181,10 @@
    M-i      Toggle searching in invisible text                   
    C-!      Add bookmark BM to current pos                       
    C-c C-k  Kill selected occurence                              
-   C-}      Align text matching regexp in region                 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-1.8 About multi matching
+1.7 About multi matching
 ────────────────────────
 
   By default `isl-search' uses multi matching like Helm, with limitation
@@ -221,29 +214,28 @@
 [iedit-mode] <https://github.com/victorhge/iedit>
 
 
-1.9 Isearch-light vs helm-occur
-───────────────────────────────
+1.8 Isl vs helm-occur
+─────────────────────
 
-  Isearch-light is a good tool for searching words or symbols in a
-  buffer and even if it can search several words separated by spaces,
-  helm-occur is more efficient for this as it is based on line
-  searching.
+  Isl is a good tool for searching words or symbols in a buffer and even
+  if it can search several words separated by spaces, helm-occur is more
+  efficient for this as it is based on line searching.
 
   Helm-occur is not efficient when you have to search in a buffer with
   continuous text with no newlines e.g. some logs or debug logs etc… you
-  have better time using isearch-light.
+  have better time using isl.
 
-  A good compromise is to start searching with isearch-light and if it
-  turns out what you need to match is whole lines instead of words or
-  symbols, switch to helm-occur with `isl-jump-to-helm-occur' bound by
-  default to `M-s'.
+  A good compromise is to start searching with isl and if it turns out
+  what you need to match is whole lines instead of words or symbols,
+  switch to helm-occur with `isl-jump-to-helm-occur' bound by default to
+  `M-s'.
 
-  UPDATE: Isearch-light can now switch to a line based search like
-  `helm-occur' easily.
+  UPDATE: Isl can now switch to a line based search like `helm-occur'
+  easily.
 
 
-1.10 Use isearch-light for helm-help
-────────────────────────────────────
+1.9 Use Isl for helm-help
+─────────────────────────
 
   Starting from Emacs-27 Isearch works more or less with unexpected
   effects, you have better time using `isl-search' as the search command
