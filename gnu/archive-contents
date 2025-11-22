@@ -661,7 +661,7 @@
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
 	       (:commit . "caffb420be106cebbdfe4474ed0507a601603f83"))])
  (colorful-mode .
-		[(1 2 4)
+		[(1 2 5)
 		 ((emacs
 		   (28 1))
 		  (compat
@@ -674,7 +674,7 @@
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:authors
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
-		  (:commit . "25ad453e4d4e6d9d9e9adf6ccc510231a6059483"))])
+		  (:commit . "484d1b8e7c3e98ef7ccf99eddfcea2e30f5c63a2"))])
  (comint-mime .
 	      [(0 7)
 	       ((emacs
@@ -2903,7 +2903,7 @@
 	       ("Ian Martins" . "ianxm@jhu.edu"))
 	      (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode .
-	      [(7 3 1)
+	      [(7 3 2)
 	       ((emacs
 		 (27 2)))
 	       "Major mode for MATLAB(R) dot-m files" tar
@@ -2916,7 +2916,7 @@
 		(:authors
 		 ("Matt Wette" . "mwette@alumni.caltech.edu")
 		 ("Eric M. Ludlam" . "eludlam@mathworks.com"))
-		(:commit . "31563ac77a05639ebb008f3af0750ff9c00058ab"))])
+		(:commit . "899ae3c36fc9e1f850b62b09733cca27a9af9aa5"))])
  (mct .
       [(1 1 0)
        ((emacs
@@ -3226,7 +3226,7 @@
 	      (:url . "https://elpa.gnu.org/packages/num3-mode.html")
 	      (:commit . "fdf4d633e541875a6f765f5c3c8e0d4911122ed3"))])
  (oauth2 .
-	 [(0 18 3)
+	 [(0 18 4)
 	  ((emacs
 	    (27 1)))
 	  "OAuth 2.0 Authorization Protocol" tar
@@ -3237,7 +3237,7 @@
 	    (nil . "emacs-devel@gnu.org"))
 	   (:authors
 	    ("Julien Danjou" . "julien@danjou.info"))
-	   (:commit . "dc9f76dee716bad30395f079dd8dee85dce138c4"))])
+	   (:commit . "c88165b85e208a69c24fb12efe695f4c6e1333df"))])
  (ob-asymptote .
 	       [(1 0 2)
 		nil "Babel Functions for Asymptote" tar
@@ -3302,7 +3302,7 @@
 	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 	      (:commit . "31812d9252c6cfa7eae8fa04cd40c8b2081e9936"))])
  (org .
-      [(9 7 37)
+      [(9 7 38)
        ((emacs
 	 (26 1)))
        "Outline-based notes management and organizer" tar
@@ -3311,7 +3311,7 @@
 	(:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
 	(:authors
 	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:commit . "80e962c56a907fef7b79d155b69fcd64daa9da6b"))])
+	(:commit . "a8fd61c53d1b2cb68956287ee12c00c81099f701"))])
  (org-contacts .
 	       [(1 1)
 		((emacs

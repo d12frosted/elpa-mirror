@@ -29,7 +29,7 @@ buffer in real time and in a user friendly way based/inspired on
       • hsl/hsla
       • oklab/oklch
       • user-defined colors variables:
-        • @define_color
+        • gtk @define-color
         • var()
     • LaTeX colors (gray, rbg, RGB, HTML)
   • Convert current color at point or in region to other formats such as
@@ -68,11 +68,13 @@ buffer in real time and in a user friendly way based/inspired on
     mouse buttons for change color.
   • `colorful-use-prefix (default: nil)' If non-nil, use prefix for
     preview color instead highlight them.
-  ┌────
-  │ ⛔ WARNING: CSS-DERIVED MODES COLORIZE RGB AND HEX COLORS OUT THE BOX,
-  │ THIS MAY INTERFERE WITH COLORFUL PREFIX, YOU CAN DISABLE THIS SETTING
-  │ `css-fontify-colors' TO nil
-  └────
+
+        [!WARNING]
+
+        css-derived modes colorize rgb and hex colors out the box,
+        this may interfere with colorful prefix, you can disable
+        this setting 'css-fontify-colors' to nil
+
   • `colorful-prefix-string (default: "●")' String to be used in
     highlights.  Only relevant if `colorful-use-prefix' is non-nil.
   • `colorful-prefix-alignment (default: 'left)' The position to put
@@ -253,25 +255,25 @@ buffer in real time and in a user friendly way based/inspired on
 7 How does it compare to `rainbow-mode' or built-in `css fontify colors'?
 ═════════════════════════════════════════════════════════════════════════
 
-  `colorful-mode' improves `rainbow-mode' and `css-fontify-colors' in
+  `colorful-mode' improves `rainbow-mode' and `css fontify-colors' in
   adding more features:
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Comparation                                            colorful-mode.el  rainbow-mode.el  built-in css-fontify-colors 
-  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-   Compatible with hl-line and other overlays?            ✓                 ❌               ❌                          
-   Convert color to other formats?                        ✓                 ❌               ❌                          
-   Optionally use string prefix/suffix instead highlight  ✓                 ❌               ❌                          
-   Blacklist colors?                                      ✓                 ❌^{1}           ❌                          
-   Allow highlight specifics colors in specific modes     ✓                 ✓^{2}            ❌                          
-   Optionally highlight only in strings                   ✓                 ❌               ❌                          
-   No performance issues?^{3}                             ❌                ✓                ✓                           
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Comparison                                             colorful-mode.el  rainbow-mode.el  built-in css-mode 
+  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   Compatible with hl-line and other overlays?            ✓                 ❌               ❌                
+   Convert color to other formats?                        ✓                 ❌               ✓                 
+   Optionally use string prefix/suffix instead highlight  ✓                 ❌               ❌                
+   Blacklist colors?                                      ✓                 ❌^{1}           ❌                
+   Allow highlight specifics colors in specific modes     ✓                 ✓^{2}            ❌                
+   Optionally highlight only in strings                   ✓                 ❌               ❌                
+   No performance issues?^{3}                             ❌                ✓                ✓                 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   ┌────
   │ [1] rainbow-mode (like colorful) uses regex for highlight some
-  │     keywords, however it cannot exclude specifics colors keywords
-  │     (such as "#def" that overrides C "#define" keyword).
+  │     keywords, however it cannot exclude specifics colors (such as
+  │     "#def" that overrides C "#define" keyword).
   │ [2] Only for some colors.
   │ [3] I didn't a benchmark however due colorful-mode uses overlays
   │     instead text properties it can be a bit slow.
