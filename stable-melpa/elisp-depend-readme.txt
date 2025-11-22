@@ -46,7 +46,7 @@ option `elisp-depend-directory-list', like below:
 
 ;; Customize:
 
-`elisp-depend-directory-list' the install directory of emacs.
+`elisp-depend-directory-list' the install directory of Emacs.
 Or you can add others directory that you want filter.
 
 All of the above can customize by:

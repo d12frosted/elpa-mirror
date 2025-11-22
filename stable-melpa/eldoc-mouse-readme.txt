@@ -11,6 +11,14 @@ To use, ensure posframe is installed, then add the following:
   ;; enable mouse hover for eglot managed buffers, and emacs lisp buffers. ;; optional
   :hook (eglot-managed-mode emacs-lisp-mode))
 
+Or if you simply want to enable mouse hover for all buffers where eldoc-mode is available as a minor mode, then:
+
+(use-package eldoc-mouse
+  ;; replace <f1> <f1> to a key you like, "C-h ." maybe. Displaying document on a popup when you press a key.
+  :bind (:map eldoc-mouse-mode-map
+         ("<f1> <f1>" . eldoc-mouse-pop-doc-at-cursor)) ;; optional
+  :hook eldoc-mode)
+
 Or if you want to show document only when you press a key, and don't want to enable mouse hover, then:
 
 (use-package eldoc-mouse)

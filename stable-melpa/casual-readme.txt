@@ -23,6 +23,9 @@ supported:
 - Compile (Elisp library: `casual-compile.el')
   An interface for the output of the `compile' and Grep commands.
 
+- CSV (Elisp library: `casual-csv.el')
+  An interface for CSV mode.
+
 - Dired (Elisp library: `casual-dired.el')
   An interface for the venerable file manager Dired.
 
