@@ -24,8 +24,12 @@ however winring also saves point for the current buffer.
 To use, make sure this file is on your `load-path' and put the following in
 your .emacs file:
 
-(require 'winring)
-(winring-initialize)
+(use-package winring)
+
+(defun my-desktop-after-read-hook ()
+ "Initialize winring here, after all the frames have been created."
+ (winring-initialize))
+(add-hook 'desktop-after-read-hook 'my-desktop-after-read-hook)
 
 Note that by default, this binds the winring keymap to the C-x 7 prefix,
 but you can change this by setting the value of `winring-keymap-prefix',
