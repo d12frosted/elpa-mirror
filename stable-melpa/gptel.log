@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/karthink/gptel
 
 Updating /mnt/store/melpa/working/gptel/
-Checking out 9d6313ce7c6eb71bfb24a8d1edcd60fe4534eea3
+Checking out 1ca222b0bbced70a72857e31f20383e11bc355d3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptelMIJ1CT/gptel-20251118.1836
+  to /tmp/gptel0KRTn7/gptel-20251122.1850
     gptel-anthropic.el -> gptel-anthropic.el
     gptel-bedrock.el -> gptel-bedrock.el
     gptel-context.el -> gptel-context.el
@@ -22,25 +22,3 @@ Copying files (->) and directories (=>)
     gptel-rewrite.el -> gptel-rewrite.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20251118.1836.tar containing:
-  gptel-20251118.1836/
-  gptel-20251118.1836/gptel-anthropic.el
-  gptel-20251118.1836/gptel-bedrock.el
-  gptel-20251118.1836/gptel-context.el
-  gptel-20251118.1836/gptel-gemini.el
-  gptel-20251118.1836/gptel-gh.el
-  gptel-20251118.1836/gptel-integrations.el
-  gptel-20251118.1836/gptel-kagi.el
-  gptel-20251118.1836/gptel-ollama.el
-  gptel-20251118.1836/gptel-openai-extras.el
-  gptel-20251118.1836/gptel-openai.el
-  gptel-20251118.1836/gptel-org.el
-  gptel-20251118.1836/gptel-pkg.el
-  gptel-20251118.1836/gptel-request.el
-  gptel-20251118.1836/gptel-rewrite.el
-  gptel-20251118.1836/gptel-transient.el
-  gptel-20251118.1836/gptel.el
- ✓ Success:
-  2025-11-22T15:31:44+0000  gptel-20251118.1836.entry
-  2025-11-22T15:31:44+0000  gptel-20251118.1836.tar
-Built gptel in 4.667s, finished at 2025-11-22T15:31:45+0000
