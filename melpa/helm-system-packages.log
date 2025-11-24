@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-system-packages
 
 Updating /mnt/store/melpa/working/helm-system-packages/
-Checking out ca8a9c92013b4bb588f3104ba8ba8ca45d6012c8
+Checking out 586a74449a63ee368a4aa3f4fb295d83b0212e4f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-system-packages/
-  to /tmp/helm-system-packages6Wpsqe/helm-system-packages-20251123.643
+  to /tmp/helm-system-packagesjSNnrf/helm-system-packages-20251123.654
     helm-system-packages-brew.el -> helm-system-packages-brew.el
     helm-system-packages-dnf.el -> helm-system-packages-dnf.el
     helm-system-packages-dpkg.el -> helm-system-packages-dpkg.el
@@ -15,18 +15,20 @@ Copying files (->) and directories (=>)
     helm-system-packages-portage.el -> helm-system-packages-portage.el
     helm-system-packages-xbps.el -> helm-system-packages-xbps.el
     helm-system-packages.el -> helm-system-packages.el
-Created helm-system-packages-20251123.643.tar containing:
-  helm-system-packages-20251123.643/
-  helm-system-packages-20251123.643/helm-system-packages-brew.el
-  helm-system-packages-20251123.643/helm-system-packages-dnf.el
-  helm-system-packages-20251123.643/helm-system-packages-dpkg.el
-  helm-system-packages-20251123.643/helm-system-packages-guix.el
-  helm-system-packages-20251123.643/helm-system-packages-pacman.el
-  helm-system-packages-20251123.643/helm-system-packages-pkg.el
-  helm-system-packages-20251123.643/helm-system-packages-portage.el
-  helm-system-packages-20251123.643/helm-system-packages-xbps.el
-  helm-system-packages-20251123.643/helm-system-packages.el
+Created helm-system-packages-20251123.654.tar containing:
+  helm-system-packages-20251123.654/
+  helm-system-packages-20251123.654/helm-system-packages-brew.el
+  helm-system-packages-20251123.654/helm-system-packages-dnf.el
+  helm-system-packages-20251123.654/helm-system-packages-dpkg.el
+  helm-system-packages-20251123.654/helm-system-packages-guix.el
+  helm-system-packages-20251123.654/helm-system-packages-pacman.el
+  helm-system-packages-20251123.654/helm-system-packages-pkg.el
+  helm-system-packages-20251123.654/helm-system-packages-portage.el
+  helm-system-packages-20251123.654/helm-system-packages-xbps.el
+  helm-system-packages-20251123.654/helm-system-packages.el
  ✓ Success:
-  2025-11-24T06:46:08+0000  helm-system-packages-20251123.643.entry
-  2025-11-24T06:46:08+0000  helm-system-packages-20251123.643.tar
-Built helm-system-packages in 3.175s, finished at 2025-11-24T06:46:09+0000
+  2025-11-24T09:05:39+0000  helm-system-packages-20251123.643.entry
+  2025-11-24T09:05:39+0000  helm-system-packages-20251123.643.tar
+  2025-11-24T11:23:59+0000  helm-system-packages-20251123.654.entry
+  2025-11-24T11:23:59+0000  helm-system-packages-20251123.654.tar
+Built helm-system-packages in 3.088s, finished at 2025-11-24T11:24:00+0000
