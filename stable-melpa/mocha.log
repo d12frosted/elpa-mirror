@@ -1,18 +1,15 @@
-Package: mocha
-Fetcher: github
-Source:  https://github.com/scottaj/mocha.el
-
+ • Building package mocha (from github:scottaj/mocha.el)...
 Updating /mnt/store/melpa/working/mocha/
 Checking out 6a72fa20e7be6e55c09b1bc9887ee09c5df28e45
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mocha/
-  to /tmp/mochaXAUXBe/mocha-20200729.1130
+  to /tmp/mocha38Vwoc/mocha-20200729.1130
     mocha.el -> mocha.el
 Created mocha-20200729.1130.tar containing:
   mocha-20200729.1130/
   mocha-20200729.1130/mocha-pkg.el
   mocha-20200729.1130/mocha.el
  ✓ Success:
-  2025-11-24T11:35:31+0000  mocha-20200729.1130.entry
-  2025-11-24T11:35:31+0000  mocha-20200729.1130.tar
-Built mocha in 2.848s, finished at 2025-11-24T11:35:32+0000
+  2025-11-24T18:43:34+0000  mocha-20200729.1130.entry
+  2025-11-24T18:43:34+0000  mocha-20200729.1130.tar
+Built mocha in 3.064s, finished at 2025-11-24T18:43:35+0000

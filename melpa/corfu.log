@@ -1,12 +1,9 @@
-Package: corfu
-Fetcher: github
-Source:  https://github.com/minad/corfu
-
+ • Building package corfu (from github:minad/corfu)...
 Updating /mnt/store/melpa/working/corfu/
 Checking out d9f88cbdb8de0cdca8b234a99949931b42f2cf83
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/corfu/
-  to /tmp/corfuixysH2/corfu-20251116.1939
+  to /tmp/corfuTsOCRA/corfu-20251116.1939
     corfu.el -> corfu.el
   ! extensions/corfu-echo.el -> corfu-echo.el
   ! extensions/corfu-history.el -> corfu-history.el
@@ -25,6 +22,6 @@ Created corfu-20251116.1939.tar containing:
   corfu-20251116.1939/corfu-quick.el
   corfu-20251116.1939/corfu.el
  ✓ Success:
-  2025-11-24T11:03:02+0000  corfu-20251116.1939.entry
-  2025-11-24T11:03:02+0000  corfu-20251116.1939.tar
-Built corfu in 3.230s, finished at 2025-11-24T11:03:03+0000
+  2025-11-24T18:10:05+0000  corfu-20251116.1939.entry
+  2025-11-24T18:10:05+0000  corfu-20251116.1939.tar
+Built corfu in 3.438s, finished at 2025-11-24T18:10:06+0000

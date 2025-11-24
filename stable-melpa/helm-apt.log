@@ -1,18 +1,15 @@
-Package: helm-apt
-Fetcher: github
-Source:  https://github.com/emacs-helm/helm-apt
-
+ • Building package helm-apt (from github:emacs-helm/helm-apt)...
 Updating /mnt/store/melpa/working/helm-apt/
 Checking out 3ddbb62f483d2bbdbfcab4160040eaad22a82d67
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-apt/
-  to /tmp/helm-aptK5FYWh/helm-apt-20231005.423
+  to /tmp/helm-aptCZUXG5/helm-apt-20231005.423
     helm-apt.el -> helm-apt.el
 Created helm-apt-20231005.423.tar containing:
   helm-apt-20231005.423/
   helm-apt-20231005.423/helm-apt-pkg.el
   helm-apt-20231005.423/helm-apt.el
  ✓ Success:
-  2025-11-24T11:22:23+0000  helm-apt-20231005.423.entry
-  2025-11-24T11:22:23+0000  helm-apt-20231005.423.tar
-Built helm-apt in 2.489s, finished at 2025-11-24T11:22:24+0000
+  2025-11-24T18:30:01+0000  helm-apt-20231005.423.entry
+  2025-11-24T18:30:01+0000  helm-apt-20231005.423.tar
+Built helm-apt in 2.749s, finished at 2025-11-24T18:30:02+0000

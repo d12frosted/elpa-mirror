@@ -1,12 +1,9 @@
-Package: slack
-Fetcher: github
-Source:  https://github.com/emacs-slack/emacs-slack
-
+ • Building package slack (from github:emacs-slack/emacs-slack)...
 Updating /mnt/store/melpa/working/slack/
 Checking out f4bae8aa3ef954c0270a1d1ee534696c146cc3d8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/slack/
-  to /tmp/slackk9riav/slack-20251120.2352
+  to /tmp/slacklhZglY/slack-20251120.2352
     emacs-slack.el -> emacs-slack.el
     slack-action.el -> slack-action.el
     slack-activity-feed-buffer.el -> slack-activity-feed-buffer.el
@@ -169,6 +166,6 @@ Created slack-20251120.2352.tar containing:
   slack-20251120.2352/slack-websocket.el
   slack-20251120.2352/slack.el
  ✓ Success:
-  2025-11-24T11:54:54+0000  slack-20251120.2352.entry
-  2025-11-24T11:54:53+0000  slack-20251120.2352.tar
-Built slack in 7.207s, finished at 2025-11-24T11:54:55+0000
+  2025-11-24T19:03:51+0000  slack-20251120.2352.entry
+  2025-11-24T19:03:50+0000  slack-20251120.2352.tar
+Built slack in 4.644s, finished at 2025-11-24T19:03:51+0000

@@ -1,12 +1,9 @@
-Package: nim-mode
-Fetcher: github
-Source:  https://github.com/nim-lang/nim-mode
-
+ • Building package nim-mode (from github:nim-lang/nim-mode)...
 Updating /mnt/store/melpa/working/nim-mode/
 Checking out 625cc023bd75a741b7d4e629e5bec3a52f45b4be
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nim-mode/
-  to /tmp/nim-modeXT2wK5/nim-mode-20240220.1033
+  to /tmp/nim-modeGgYLmk/nim-mode-20240220.1033
     nim-capf.el -> nim-capf.el
     nim-compile.el -> nim-compile.el
     nim-fill.el -> nim-fill.el
@@ -33,6 +30,6 @@ Created nim-mode-20240220.1033.tar containing:
   nim-mode-20240220.1033/nim-util.el
   nim-mode-20240220.1033/nim-vars.el
  ✓ Success:
-  2025-11-24T11:37:49+0000  nim-mode-20240220.1033.entry
-  2025-11-24T11:37:49+0000  nim-mode-20240220.1033.tar
-Built nim-mode in 5.655s, finished at 2025-11-24T11:37:51+0000
+  2025-11-24T18:46:03+0000  nim-mode-20240220.1033.entry
+  2025-11-24T18:46:02+0000  nim-mode-20240220.1033.tar
+Built nim-mode in 3.849s, finished at 2025-11-24T18:46:04+0000

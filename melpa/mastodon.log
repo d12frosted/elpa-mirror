@@ -1,12 +1,9 @@
-Package: mastodon
-Fetcher: codeberg
-Source:  https://codeberg.org/martianh/mastodon.el
-
+ • Building package mastodon (from codeberg:martianh/mastodon.el)...
 Updating /mnt/store/melpa/working/mastodon/
 Checking out 1ac040c113c061c173206658657cdee708001471
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonbBrp9V/mastodon-20251117.1458
+  to /tmp/mastodon8jZRvf/mastodon-20251117.1458
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -51,6 +48,6 @@ Created mastodon-20251117.1458.tar containing:
   mastodon-20251117.1458/mastodon.el
   mastodon-20251117.1458/mastodon.info
  ✓ Success:
-  2025-11-24T11:34:15+0000  mastodon-20251117.1458.entry
-  2025-11-24T11:34:15+0000  mastodon-20251117.1458.tar
-Built mastodon in 7.716s, finished at 2025-11-24T11:34:16+0000
+  2025-11-24T18:42:16+0000  mastodon-20251117.1458.entry
+  2025-11-24T18:42:16+0000  mastodon-20251117.1458.tar
+Built mastodon in 7.707s, finished at 2025-11-24T18:42:17+0000

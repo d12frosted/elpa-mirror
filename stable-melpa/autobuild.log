@@ -1,18 +1,15 @@
-Package: autobuild
-Fetcher: github
-Source:  https://github.com/erjoalgo/autobuild
-
+ • Building package autobuild (from github:erjoalgo/autobuild)...
 Updating /mnt/store/melpa/working/autobuild/
 Checking out 4760f6ea843d5d15c3fcf7cbf6b69153b61739fa
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/autobuild/
-  to /tmp/autobuildo3iN7U/autobuild-20240430.1600
+  to /tmp/autobuildkYvmfT/autobuild-20240430.1600
     autobuild.el -> autobuild.el
 Created autobuild-20240430.1600.tar containing:
   autobuild-20240430.1600/
   autobuild-20240430.1600/autobuild-pkg.el
   autobuild-20240430.1600/autobuild.el
  ✓ Success:
-  2025-11-24T10:55:49+0000  autobuild-20240430.1600.entry
-  2025-11-24T10:55:49+0000  autobuild-20240430.1600.tar
-Built autobuild in 2.998s, finished at 2025-11-24T10:55:50+0000
+  2025-11-24T18:02:40+0000  autobuild-20240430.1600.entry
+  2025-11-24T18:02:40+0000  autobuild-20240430.1600.tar
+Built autobuild in 3.120s, finished at 2025-11-24T18:02:41+0000

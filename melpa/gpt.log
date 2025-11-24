@@ -1,12 +1,9 @@
-Package: gpt
-Fetcher: github
-Source:  https://github.com/stuhlmueller/gpt.el
-
+ • Building package gpt (from github:stuhlmueller/gpt.el)...
 Updating /mnt/store/melpa/working/gpt/
 Checking out bd10b618af9b50a678bd992eb8a22a64053e2134
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gpt/
-  to /tmp/gpt4cTmdB/gpt-20250929.1735
+  to /tmp/gptTAbCjf/gpt-20250929.1735
     gpt-api.el -> gpt-api.el
     gpt-core.el -> gpt-core.el
     gpt-mode.el -> gpt-mode.el
@@ -52,6 +49,6 @@ Created gpt-20250929.1735.tar containing:
   gpt-20250929.1735/test_google_provider.py
   gpt-20250929.1735/test_openai_provider.py
  ✓ Success:
-  2025-11-24T11:21:06+0000  gpt-20250929.1735.entry
-  2025-11-24T11:21:06+0000  gpt-20250929.1735.tar
-Built gpt in 3.459s, finished at 2025-11-24T11:21:07+0000
+  2025-11-24T18:28:25+0000  gpt-20250929.1735.entry
+  2025-11-24T18:28:25+0000  gpt-20250929.1735.tar
+Built gpt in 3.420s, finished at 2025-11-24T18:28:26+0000

@@ -1,12 +1,9 @@
-Package: jq-mode
-Fetcher: github
-Source:  https://github.com/ljos/jq-mode
-
+ • Building package jq-mode (from github:ljos/jq-mode)...
 Updating /mnt/store/melpa/working/jq-mode/
 Checking out 39acc77a63555b8556b8163be3d9b142d173c795
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jq-mode/
-  to /tmp/jq-modelJGdnj/jq-mode-20250929.1127
+  to /tmp/jq-modeJUpYmI/jq-mode-20250929.1127
     jq-mode.el -> jq-mode.el
     ob-jq.el -> ob-jq.el
 Created jq-mode-20250929.1127.tar containing:
@@ -15,6 +12,6 @@ Created jq-mode-20250929.1127.tar containing:
   jq-mode-20250929.1127/jq-mode.el
   jq-mode-20250929.1127/ob-jq.el
  ✓ Success:
-  2025-11-24T11:28:36+0000  jq-mode-20250929.1127.entry
-  2025-11-24T11:28:36+0000  jq-mode-20250929.1127.tar
-Built jq-mode in 2.820s, finished at 2025-11-24T11:28:37+0000
+  2025-11-24T18:36:25+0000  jq-mode-20250929.1127.entry
+  2025-11-24T18:36:25+0000  jq-mode-20250929.1127.tar
+Built jq-mode in 2.932s, finished at 2025-11-24T18:36:25+0000

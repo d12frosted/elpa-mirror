@@ -1,12 +1,9 @@
-Package: cl-format
-Fetcher: gitlab
-Source:  https://gitlab.com/akater/elisp-cl-format
-
+ • Building package cl-format (from gitlab:akater/elisp-cl-format)...
 Updating /mnt/store/melpa/working/cl-format/
 Checking out 42b662d27eefa458c1a39bea1836d6ada740b863
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cl-format/
-  to /tmp/cl-formatA8voSQ/cl-format-20230818.1726
+  to /tmp/cl-formatQ8PPDS/cl-format-20230818.1726
     cl-format-builtins.el -> cl-format-builtins.el
     cl-format-def.el -> cl-format-def.el
     cl-format-pkg.el -> cl-format-pkg.el
@@ -20,6 +17,6 @@ Created cl-format-20230818.1726.tar containing:
   cl-format-20230818.1726/cl-format.el
   cl-format-20230818.1726/clisp-format.el
  ✓ Success:
-  2025-11-24T11:00:10+0000  cl-format-20230818.1726.entry
-  2025-11-24T11:00:10+0000  cl-format-20230818.1726.tar
-Built cl-format in 3.825s, finished at 2025-11-24T11:00:11+0000
+  2025-11-24T18:07:10+0000  cl-format-20230818.1726.entry
+  2025-11-24T18:07:10+0000  cl-format-20230818.1726.tar
+Built cl-format in 3.789s, finished at 2025-11-24T18:07:11+0000

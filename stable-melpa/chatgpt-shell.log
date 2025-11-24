@@ -1,12 +1,9 @@
-Package: chatgpt-shell
-Fetcher: github
-Source:  https://github.com/xenodium/chatgpt-shell
-
+ • Building package chatgpt-shell (from github:xenodium/chatgpt-shell)...
 Updating /mnt/store/melpa/working/chatgpt-shell/
 Checking out 83b327ba55cd116d892a9b44f00bc65543b7c22e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chatgpt-shell/
-  to /tmp/chatgpt-shellqSxF3K/chatgpt-shell-20251119.744
+  to /tmp/chatgpt-shell4Ircvn/chatgpt-shell-20251119.744
     chatgpt-shell-anthropic.el -> chatgpt-shell-anthropic.el
     chatgpt-shell-deepseek.el -> chatgpt-shell-deepseek.el
     chatgpt-shell-google.el -> chatgpt-shell-google.el
@@ -33,6 +30,6 @@ Created chatgpt-shell-20251119.744.tar containing:
   chatgpt-shell-20251119.744/chatgpt-shell-transient.el
   chatgpt-shell-20251119.744/chatgpt-shell.el
  ✓ Success:
-  2025-11-24T10:59:32+0000  chatgpt-shell-20251119.744.entry
-  2025-11-24T10:59:31+0000  chatgpt-shell-20251119.744.tar
-Built chatgpt-shell in 3.902s, finished at 2025-11-24T10:59:32+0000
+  2025-11-24T18:06:33+0000  chatgpt-shell-20251119.744.entry
+  2025-11-24T18:06:33+0000  chatgpt-shell-20251119.744.tar
+Built chatgpt-shell in 4.544s, finished at 2025-11-24T18:06:34+0000

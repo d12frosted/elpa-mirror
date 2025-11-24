@@ -1,12 +1,9 @@
-Package: claude-code
-Fetcher: github
-Source:  https://github.com/yuya373/claude-code-emacs
-
+ • Building package claude-code (from github:yuya373/claude-code-emacs)...
 Updating /mnt/store/melpa/working/claude-code/
 Checking out 56cccf63709b305bfd74ab72f20bd9d3b12f7d09
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/claude-code/
-  to /tmp/claude-code8wkuhM/claude-code-20250919.1908
+  to /tmp/claude-code70ldCH/claude-code-20250919.1908
     claude-code-commands.el -> claude-code-commands.el
     claude-code-core.el -> claude-code-core.el
     claude-code-mcp-connection.el -> claude-code-mcp-connection.el
@@ -31,6 +28,6 @@ Created claude-code-20250919.1908.tar containing:
   claude-code-20250919.1908/claude-code-ui.el
   claude-code-20250919.1908/claude-code.el
  ✓ Success:
-  2025-11-24T11:00:13+0000  claude-code-20250919.1908.entry
-  2025-11-24T11:00:13+0000  claude-code-20250919.1908.tar
-Built claude-code in 3.428s, finished at 2025-11-24T11:00:14+0000
+  2025-11-24T18:07:15+0000  claude-code-20250919.1908.entry
+  2025-11-24T18:07:15+0000  claude-code-20250919.1908.tar
+Built claude-code in 3.358s, finished at 2025-11-24T18:07:16+0000

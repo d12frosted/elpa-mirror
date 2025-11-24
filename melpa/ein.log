@@ -1,12 +1,9 @@
-Package: ein
-Fetcher: github
-Source:  https://github.com/millejoh/emacs-ipython-notebook
-
+ • Building package ein (from github:millejoh/emacs-ipython-notebook)...
 Updating /mnt/store/melpa/working/ein/
 Checking out 271136654631d42105164163fff3d8ceec4c5e40
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ein/
-  to /tmp/eindy6BCp/ein-20250307.1731
+  to /tmp/ein5aRrQO/ein-20250307.1731
   ! lisp/ein-cell.el -> ein-cell.el
   ! lisp/ein-classes.el -> ein-classes.el
   ! lisp/ein-completer.el -> ein-completer.el
@@ -83,6 +80,6 @@ Created ein-20250307.1731.tar containing:
   ein-20250307.1731/ob-ein.el
   ein-20250307.1731/poly-ein.el
  ✓ Success:
-  2025-11-24T11:08:53+0000  ein-20250307.1731.entry
-  2025-11-24T11:08:53+0000  ein-20250307.1731.tar
-Built ein in 3.167s, finished at 2025-11-24T11:08:54+0000
+  2025-11-24T18:16:07+0000  ein-20250307.1731.entry
+  2025-11-24T18:16:07+0000  ein-20250307.1731.tar
+Built ein in 3.528s, finished at 2025-11-24T18:16:08+0000

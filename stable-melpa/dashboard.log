@@ -1,12 +1,9 @@
-Package: dashboard
-Fetcher: github
-Source:  https://github.com/emacs-dashboard/emacs-dashboard
-
+ • Building package dashboard (from github:emacs-dashboard/emacs-dashboard)...
 Updating /mnt/store/melpa/working/dashboard/
 Checking out 8c2cf0cfde4f5dac8c477f755380fffef6824108
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dashboard/
-  to /tmp/dashboardudSUb0/dashboard-20250708.57
+  to /tmp/dashboardTZhVcv/dashboard-20250708.57
     dashboard-widgets.el -> dashboard-widgets.el
     dashboard.el -> dashboard.el
     banners => banners
@@ -23,6 +20,6 @@ Created dashboard-20250708.57.tar containing:
   dashboard-20250708.57/dashboard-widgets.el
   dashboard-20250708.57/dashboard.el
  ✓ Success:
-  2025-11-24T11:04:53+0000  dashboard-20250708.57.entry
-  2025-11-24T11:04:53+0000  dashboard-20250708.57.tar
-Built dashboard in 3.392s, finished at 2025-11-24T11:04:54+0000
+  2025-11-24T18:11:59+0000  dashboard-20250708.57.entry
+  2025-11-24T18:11:59+0000  dashboard-20250708.57.tar
+Built dashboard in 3.632s, finished at 2025-11-24T18:12:00+0000

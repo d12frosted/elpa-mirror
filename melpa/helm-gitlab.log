@@ -1,18 +1,15 @@
-Package: helm-gitlab
-Fetcher: github
-Source:  https://github.com/nlamirault/emacs-gitlab
-
+ • Building package helm-gitlab (from github:nlamirault/emacs-gitlab)...
 Updating /mnt/store/melpa/working/helm-gitlab/
 Checking out 68318aca3206d50701039c9aae39734ca29a49f9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-gitlab/
-  to /tmp/helm-gitlabtNWN35/helm-gitlab-20180312.1647
+  to /tmp/helm-gitlabFXPFgE/helm-gitlab-20180312.1647
     helm-gitlab.el -> helm-gitlab.el
 Created helm-gitlab-20180312.1647.tar containing:
   helm-gitlab-20180312.1647/
   helm-gitlab-20180312.1647/helm-gitlab-pkg.el
   helm-gitlab-20180312.1647/helm-gitlab.el
  ✓ Success:
-  2025-11-24T11:23:03+0000  helm-gitlab-20180312.1647.entry
-  2025-11-24T11:23:03+0000  helm-gitlab-20180312.1647.tar
-Built helm-gitlab in 2.625s, finished at 2025-11-24T11:23:04+0000
+  2025-11-24T18:30:43+0000  helm-gitlab-20180312.1647.entry
+  2025-11-24T18:30:43+0000  helm-gitlab-20180312.1647.tar
+Built helm-gitlab in 3.075s, finished at 2025-11-24T18:30:44+0000

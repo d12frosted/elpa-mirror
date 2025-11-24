@@ -1,12 +1,9 @@
-Package: loopy
-Fetcher: github
-Source:  https://github.com/okamsn/loopy
-
+ • Building package loopy (from github:okamsn/loopy)...
 Updating /mnt/store/melpa/working/loopy/
 Checking out 07a9952cd6c03e9573afecf95ffb4eed7521d559
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyP9AT1X/loopy-20251116.13
+  to /tmp/loopy3AooOF/loopy-20251116.13
   ! lisp/loopy-commands.el -> loopy-commands.el
   ! lisp/loopy-destructure.el -> loopy-destructure.el
   ! lisp/loopy-instrs.el -> loopy-instrs.el
@@ -33,6 +30,6 @@ Created loopy-20251116.13.tar containing:
   loopy-20251116.13/loopy.el
   loopy-20251116.13/loopy.info
  ✓ Success:
-  2025-11-24T11:32:36+0000  loopy-20251116.13.entry
-  2025-11-24T11:32:36+0000  loopy-20251116.13.tar
-Built loopy in 6.963s, finished at 2025-11-24T11:32:37+0000
+  2025-11-24T18:40:36+0000  loopy-20251116.13.entry
+  2025-11-24T18:40:36+0000  loopy-20251116.13.tar
+Built loopy in 7.405s, finished at 2025-11-24T18:40:37+0000

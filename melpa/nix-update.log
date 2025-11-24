@@ -1,18 +1,15 @@
-Package: nix-update
-Fetcher: github
-Source:  https://github.com/jwiegley/nix-update-el
-
+ • Building package nix-update (from github:jwiegley/nix-update-el)...
 Updating /mnt/store/melpa/working/nix-update/
 Checking out d67f4f7ba8c8ec43144600f5f970c5fd958fc2f7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-update/
-  to /tmp/nix-updateTV3S2E/nix-update-20250817.1556
+  to /tmp/nix-updateYHi6S7/nix-update-20250817.1556
     nix-update.el -> nix-update.el
 Created nix-update-20250817.1556.tar containing:
   nix-update-20250817.1556/
   nix-update-20250817.1556/nix-update-pkg.el
   nix-update-20250817.1556/nix-update.el
  ✓ Success:
-  2025-11-24T11:37:59+0000  nix-update-20250817.1556.entry
-  2025-11-24T11:37:59+0000  nix-update-20250817.1556.tar
-Built nix-update in 4.151s, finished at 2025-11-24T11:38:00+0000
+  2025-11-24T18:46:08+0000  nix-update-20250817.1556.entry
+  2025-11-24T18:46:08+0000  nix-update-20250817.1556.tar
+Built nix-update in 2.851s, finished at 2025-11-24T18:46:09+0000

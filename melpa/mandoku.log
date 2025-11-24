@@ -1,12 +1,9 @@
-Package: mandoku
-Fetcher: github
-Source:  https://github.com/mandoku/mandoku
-
+ • Building package mandoku (from github:mandoku/mandoku)...
 Updating /mnt/store/melpa/working/mandoku/
 Checking out e3b7678762e9824861b1ce775a94b05b096164f5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mandoku/
-  to /tmp/mandokurdiECk/mandoku-20180403.1106
+  to /tmp/mandokuLgExa1/mandoku-20180403.1106
   ! lisp/mandoku-annot.el -> mandoku-annot.el
   ! lisp/mandoku-cbeta.el -> mandoku-cbeta.el
   ! lisp/mandoku-dict.el -> mandoku-dict.el
@@ -37,6 +34,6 @@ Created mandoku-20180403.1106.tar containing:
   mandoku-20180403.1106/mandoku.el
   mandoku-20180403.1106/w32-registry.el
  ✓ Success:
-  2025-11-24T11:33:52+0000  mandoku-20180403.1106.entry
-  2025-11-24T11:33:52+0000  mandoku-20180403.1106.tar
-Built mandoku in 3.745s, finished at 2025-11-24T11:33:53+0000
+  2025-11-24T18:41:53+0000  mandoku-20180403.1106.entry
+  2025-11-24T18:41:53+0000  mandoku-20180403.1106.tar
+Built mandoku in 3.802s, finished at 2025-11-24T18:41:54+0000

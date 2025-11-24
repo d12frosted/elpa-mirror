@@ -1,18 +1,15 @@
-Package: mozc
-Fetcher: github
-Source:  https://github.com/google/mozc
-
+ • Building package mozc (from github:google/mozc)...
 Updating /mnt/store/melpa/working/mozc/
 Checking out d703e617246b3916edcb5b95812badef1a2764bc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mozc/
-  to /tmp/mozcBS0sA2/mozc-20250602.713
+  to /tmp/mozc1Ln01i/mozc-20250602.713
   ! src/unix/emacs/mozc.el -> mozc.el
 Created mozc-20250602.713.tar containing:
   mozc-20250602.713/
   mozc-20250602.713/mozc-pkg.el
   mozc-20250602.713/mozc.el
  ✓ Success:
-  2025-11-24T11:36:10+0000  mozc-20250602.713.entry
-  2025-11-24T11:36:10+0000  mozc-20250602.713.tar
-Built mozc in 5.056s, finished at 2025-11-24T11:36:11+0000
+  2025-11-24T18:44:15+0000  mozc-20250602.713.entry
+  2025-11-24T18:44:15+0000  mozc-20250602.713.tar
+Built mozc in 5.410s, finished at 2025-11-24T18:44:16+0000

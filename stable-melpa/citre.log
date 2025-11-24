@@ -1,12 +1,9 @@
-Package: citre
-Fetcher: github
-Source:  https://github.com/universal-ctags/citre
-
+ • Building package citre (from github:universal-ctags/citre)...
 Updating /mnt/store/melpa/working/citre/
 Checking out 300596a34b61b486530ce3759e8fb722d9534325
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citre/
-  to /tmp/citre0rJSHR/citre-20251015.220
+  to /tmp/citrerqNS7X/citre-20251015.220
     citre-backend-interface.el -> citre-backend-interface.el
     citre-common-tag.el -> citre-common-tag.el
     citre-common-util.el -> citre-common-util.el
@@ -43,6 +40,6 @@ Created citre-20251015.220.tar containing:
   citre-20251015.220/citre-xref-adapter.el
   citre-20251015.220/citre.el
  ✓ Success:
-  2025-11-24T11:00:09+0000  citre-20251015.220.entry
-  2025-11-24T11:00:09+0000  citre-20251015.220.tar
-Built citre in 3.307s, finished at 2025-11-24T11:00:10+0000
+  2025-11-24T18:07:09+0000  citre-20251015.220.entry
+  2025-11-24T18:07:09+0000  citre-20251015.220.tar
+Built citre in 3.353s, finished at 2025-11-24T18:07:10+0000

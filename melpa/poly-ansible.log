@@ -1,12 +1,9 @@
-Package: poly-ansible
-Fetcher: gitlab
-Source:  https://gitlab.com/mavit/poly-ansible
-
+ • Building package poly-ansible (from gitlab:mavit/poly-ansible)...
 Updating /mnt/store/melpa/working/poly-ansible/
 Checking out fc31708bff007a40314c1cfd5a5b9659f39b024a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/poly-ansible/
-  to /tmp/poly-ansibleaDMSww/poly-ansible-20250501.1455
+  to /tmp/poly-ansiblelhB5DH/poly-ansible-20250501.1455
   ! lisp/poly-ansible-jinja2-filters.el -> poly-ansible-jinja2-filters.el
   ! lisp/poly-ansible.el -> poly-ansible.el
   ! lisp/poly-jinja2.el -> poly-jinja2.el
@@ -19,6 +16,6 @@ Created poly-ansible-20250501.1455.tar containing:
   poly-ansible-20250501.1455/poly-jinja2.el
   poly-ansible-20250501.1455/poly-systemd-jinja2.el
  ✓ Success:
-  2025-11-24T11:46:58+0000  poly-ansible-20250501.1455.entry
-  2025-11-24T11:46:58+0000  poly-ansible-20250501.1455.tar
-Built poly-ansible in 3.951s, finished at 2025-11-24T11:46:59+0000
+  2025-11-24T18:55:26+0000  poly-ansible-20250501.1455.entry
+  2025-11-24T18:55:26+0000  poly-ansible-20250501.1455.tar
+Built poly-ansible in 4.077s, finished at 2025-11-24T18:55:27+0000

@@ -1,12 +1,9 @@
-Package: ansible
-Fetcher: gitlab
-Source:  https://gitlab.com/emacs-ansible/emacs-ansible
-
+ • Building package ansible (from gitlab:emacs-ansible/emacs-ansible)...
 Updating /mnt/store/melpa/working/ansible/
 Checking out 7385222a4f209eca6d72d412c03da99097e2755f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ansible/
-  to /tmp/ansibleqm76bg/ansible-20250613.2354
+  to /tmp/ansibleVY6qH7/ansible-20250613.2354
     ansible.el -> ansible.el
     snippets => snippets
     dict => dict
@@ -94,6 +91,6 @@ Created ansible-20250613.2354.tar containing:
   ansible-20250613.2354/snippets/yaml-mode/
   ansible-20250613.2354/snippets/yaml-mode/.yas-parents
  ✓ Success:
-  2025-11-24T10:54:35+0000  ansible-20250613.2354.entry
-  2025-11-24T10:54:35+0000  ansible-20250613.2354.tar
-Built ansible in 3.854s, finished at 2025-11-24T10:54:35+0000
+  2025-11-24T18:01:23+0000  ansible-20250613.2354.entry
+  2025-11-24T18:01:22+0000  ansible-20250613.2354.tar
+Built ansible in 4.281s, finished at 2025-11-24T18:01:23+0000

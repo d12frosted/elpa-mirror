@@ -1,12 +1,9 @@
-Package: bbdb
-Fetcher: git
-Source:  https://git.savannah.nongnu.org/git/bbdb.git
-
+ • Building package bbdb (from https://git.savannah.nongnu.org/git/bbdb.git)...
 Updating /mnt/store/melpa/working/bbdb/
 Checking out 53e8ba04c47b3542db75b68f9663941daf2e6ca4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/bbdb/
-  to /tmp/bbdbfbgqLf/bbdb-20231122.1326
+  to /tmp/bbdbgFeS1l/bbdb-20231122.1326
   ! lisp/bbdb-anniv.el -> bbdb-anniv.el
   ! lisp/bbdb-com.el -> bbdb-com.el
   ! lisp/bbdb-gnus-aux.el -> bbdb-gnus-aux.el
@@ -63,6 +60,6 @@ Created bbdb-20231122.1326.tar containing:
   bbdb-20231122.1326/doclicense.info
   bbdb-20231122.1326/gpl.info
  ✓ Success:
-  2025-11-24T10:56:34+0000  bbdb-20231122.1326.entry
-  2025-11-24T10:56:34+0000  bbdb-20231122.1326.tar
-Built bbdb in 8.804s, finished at 2025-11-24T10:56:35+0000
+  2025-11-24T18:03:27+0000  bbdb-20231122.1326.entry
+  2025-11-24T18:03:27+0000  bbdb-20231122.1326.tar
+Built bbdb in 9.268s, finished at 2025-11-24T18:03:28+0000

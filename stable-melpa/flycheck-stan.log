@@ -1,12 +1,9 @@
-Package: flycheck-stan
-Fetcher: github
-Source:  https://github.com/stan-dev/stan-mode
-
+ • Building package flycheck-stan (from github:stan-dev/stan-mode)...
 Updating /mnt/store/melpa/working/flycheck-stan/
 Checking out 150bbbe5fd3ad2b5a3dbfba9d291e66eeea1a581
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flycheck-stan/
-  to /tmp/flycheck-stan5TMM1n/flycheck-stan-20211129.2051
+  to /tmp/flycheck-stanSICoO0/flycheck-stan-20211129.2051
   ! flycheck-stan/flycheck-stan.el -> flycheck-stan.el
   ! flycheck-stan/error_msgs.txt -> error_msgs.txt
 Created flycheck-stan-20211129.2051.tar containing:
@@ -15,6 +12,6 @@ Created flycheck-stan-20211129.2051.tar containing:
   flycheck-stan-20211129.2051/flycheck-stan-pkg.el
   flycheck-stan-20211129.2051/flycheck-stan.el
  ✓ Success:
-  2025-11-24T11:16:23+0000  flycheck-stan-20211129.2051.entry
-  2025-11-24T11:16:23+0000  flycheck-stan-20211129.2051.tar
-Built flycheck-stan in 3.328s, finished at 2025-11-24T11:16:24+0000
+  2025-11-24T18:23:51+0000  flycheck-stan-20211129.2051.entry
+  2025-11-24T18:23:51+0000  flycheck-stan-20211129.2051.tar
+Built flycheck-stan in 3.312s, finished at 2025-11-24T18:23:52+0000

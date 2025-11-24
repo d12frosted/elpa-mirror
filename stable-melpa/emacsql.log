@@ -1,12 +1,9 @@
-Package: emacsql
-Fetcher: github
-Source:  https://github.com/magit/emacsql
-
+ • Building package emacsql (from github:magit/emacsql)...
 Updating /mnt/store/melpa/working/emacsql/
 Checking out e1908de2cf2c7b77798ef6645d514dded1d7f8a4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emacsql/
-  to /tmp/emacsqlPLVhNV/emacsql-20251116.1655
+  to /tmp/emacsql9hV807/emacsql-20251116.1655
     emacsql-compiler.el -> emacsql-compiler.el
     emacsql-mysql.el -> emacsql-mysql.el
     emacsql-pg.el -> emacsql-pg.el
@@ -29,6 +26,6 @@ Created emacsql-20251116.1655.tar containing:
   emacsql-20251116.1655/emacsql-sqlite.el
   emacsql-20251116.1655/emacsql.el
  ✓ Success:
-  2025-11-24T11:10:32+0000  emacsql-20251116.1655.entry
-  2025-11-24T11:10:32+0000  emacsql-20251116.1655.tar
-Built emacsql in 3.047s, finished at 2025-11-24T11:10:33+0000
+  2025-11-24T18:17:48+0000  emacsql-20251116.1655.entry
+  2025-11-24T18:17:48+0000  emacsql-20251116.1655.tar
+Built emacsql in 2.796s, finished at 2025-11-24T18:17:49+0000

@@ -1,12 +1,9 @@
-Package: kubernetes
-Fetcher: github
-Source:  https://github.com/kubernetes-el/kubernetes-el
-
+ • Building package kubernetes (from github:kubernetes-el/kubernetes-el)...
 Updating /mnt/store/melpa/working/kubernetes/
 Checking out 938ef502414d093de827bf7f11bdb30843878a37
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kubernetes/
-  to /tmp/kubernetesVzt8Kk/kubernetes-20250330.1936
+  to /tmp/kubernetes1arQLL/kubernetes-20250330.1936
     kubernetes-ast.el -> kubernetes-ast.el
     kubernetes-commands.el -> kubernetes-commands.el
     kubernetes-configmaps.el -> kubernetes-configmaps.el
@@ -87,6 +84,6 @@ Created kubernetes-20250330.1936.tar containing:
   kubernetes-20250330.1936/kubernetes-yaml.el
   kubernetes-20250330.1936/kubernetes.el
  ✓ Success:
-  2025-11-24T11:30:20+0000  kubernetes-20250330.1936.entry
-  2025-11-24T11:30:20+0000  kubernetes-20250330.1936.tar
-Built kubernetes in 3.089s, finished at 2025-11-24T11:30:21+0000
+  2025-11-24T18:38:11+0000  kubernetes-20250330.1936.entry
+  2025-11-24T18:38:11+0000  kubernetes-20250330.1936.tar
+Built kubernetes in 3.753s, finished at 2025-11-24T18:38:12+0000

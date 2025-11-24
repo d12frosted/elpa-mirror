@@ -1,12 +1,9 @@
-Package: epm
-Fetcher: github
-Source:  https://github.com/xuchunyang/epm
-
+ • Building package epm (from github:xuchunyang/epm)...
 Updating /mnt/store/melpa/working/epm/
 Checking out 6375ddbf93c5f25647f6ebb25b54045b3c93a5be
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epm/
-  to /tmp/epm7RNx0h/epm-20190509.443
+  to /tmp/epmcmAEwP/epm-20190509.443
     .epm.el -> .epm.el
     epm.el -> epm.el
     epm -> epm
@@ -17,6 +14,6 @@ Created epm-20190509.443.tar containing:
   epm-20190509.443/epm-pkg.el
   epm-20190509.443/epm.el
  ✓ Success:
-  2025-11-24T11:11:13+0000  epm-20190509.443.entry
-  2025-11-24T11:11:13+0000  epm-20190509.443.tar
-Built epm in 2.799s, finished at 2025-11-24T11:11:14+0000
+  2025-11-24T18:18:30+0000  epm-20190509.443.entry
+  2025-11-24T18:18:30+0000  epm-20190509.443.tar
+Built epm in 2.959s, finished at 2025-11-24T18:18:31+0000

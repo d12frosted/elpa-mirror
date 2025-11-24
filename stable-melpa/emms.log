@@ -1,12 +1,9 @@
-Package: emms
-Fetcher: git
-Source:  https://git.savannah.gnu.org/git/emms.git
-
+ • Building package emms (from https://git.savannah.gnu.org/git/emms.git)...
 Updating /mnt/store/melpa/working/emms/
 Checking out 53db2bf1f0475c9404f56d67ab75edf1fdf18dfe
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emms/
-  to /tmp/emmsdftzH3/emms-20251012.1530
+  to /tmp/emmsH8IGip/emms-20251012.1530
     emms-bookmarks.el -> emms-bookmarks.el
     emms-browser.el -> emms-browser.el
     emms-cache.el -> emms-cache.el
@@ -155,6 +152,6 @@ Created emms-20251012.1530.tar containing:
   emms-20251012.1530/emms.el
   emms-20251012.1530/emms.info
  ✓ Success:
-  2025-11-24T11:10:49+0000  emms-20251012.1530.entry
-  2025-11-24T11:10:49+0000  emms-20251012.1530.tar
-Built emms in 8.692s, finished at 2025-11-24T11:10:50+0000
+  2025-11-24T18:18:06+0000  emms-20251012.1530.entry
+  2025-11-24T18:18:06+0000  emms-20251012.1530.tar
+Built emms in 9.550s, finished at 2025-11-24T18:18:07+0000

@@ -1,12 +1,9 @@
-Package: debian-el
-Fetcher: git
-Source:  https://salsa.debian.org/emacsen-team/debian-el.git
-
+ • Building package debian-el (from https://salsa.debian.org/emacsen-team/debian-el.git)...
 Updating /mnt/store/melpa/working/debian-el/
 Checking out ce6df85ee3c4220aedbaecdb6d623fb7b0707b21
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/debian-el/
-  to /tmp/debian-elMNTXVx/debian-el-20250411.2043
+  to /tmp/debian-elSslAgB/debian-el-20250411.2043
     apt-deb822-sources.el -> apt-deb822-sources.el
     apt-sources.el -> apt-sources.el
     apt-utils.el -> apt-utils.el
@@ -33,6 +30,6 @@ Created debian-el-20250411.2043.tar containing:
   debian-el-20250411.2043/gnus-BTS.el
   debian-el-20250411.2043/preseed.el
  ✓ Success:
-  2025-11-24T11:05:11+0000  debian-el-20250411.2043.entry
-  2025-11-24T11:05:11+0000  debian-el-20250411.2043.tar
-Built debian-el in 7.247s, finished at 2025-11-24T11:05:12+0000
+  2025-11-24T18:12:16+0000  debian-el-20250411.2043.entry
+  2025-11-24T18:12:16+0000  debian-el-20250411.2043.tar
+Built debian-el in 5.291s, finished at 2025-11-24T18:12:17+0000

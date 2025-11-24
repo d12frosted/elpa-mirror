@@ -1,12 +1,9 @@
-Package: helm
-Fetcher: github
-Source:  https://github.com/emacs-helm/helm
-
+ • Building package helm (from github:emacs-helm/helm)...
 Updating /mnt/store/melpa/working/helm/
 Checking out 9540c7e7230c4743b4b7cb2449faa1aebb216baf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmvQUzXF/helm-20251115.1450
+  to /tmp/helmE753kz/helm-20251115.1450
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
     helm-buffers.el -> helm-buffers.el
@@ -93,6 +90,6 @@ Created helm-20251115.1450.tar containing:
   helm-20251115.1450/helm-x-icons.el
   helm-20251115.1450/helm.el
  ✓ Success:
-  2025-11-24T11:22:23+0000  helm-20251115.1450.entry
-  2025-11-24T11:22:23+0000  helm-20251115.1450.tar
-Built helm in 3.869s, finished at 2025-11-24T11:22:24+0000
+  2025-11-24T18:30:00+0000  helm-20251115.1450.entry
+  2025-11-24T18:30:00+0000  helm-20251115.1450.tar
+Built helm in 3.922s, finished at 2025-11-24T18:30:01+0000

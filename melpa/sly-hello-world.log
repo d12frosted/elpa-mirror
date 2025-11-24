@@ -1,12 +1,9 @@
-Package: sly-hello-world
-Fetcher: github
-Source:  https://github.com/joaotavora/sly-hello-world
-
+ • Building package sly-hello-world (from github:joaotavora/sly-hello-world)...
 Updating /mnt/store/melpa/working/sly-hello-world/
 Checking out be257e9ad354db690c7378e89899335597348a0d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sly-hello-world/
-  to /tmp/sly-hello-worldw6nsVD/sly-hello-world-20200225.1755
+  to /tmp/sly-hello-world1HpqoH/sly-hello-world-20200225.1755
     sly-hello-world-autoloads.el -> sly-hello-world-autoloads.el
     sly-hello-world.el -> sly-hello-world.el
     slynk-hello-world.lisp -> slynk-hello-world.lisp
@@ -19,6 +16,6 @@ Created sly-hello-world-20200225.1755.tar containing:
   sly-hello-world-20200225.1755/slynk-hello-world.asd
   sly-hello-world-20200225.1755/slynk-hello-world.lisp
  ✓ Success:
-  2025-11-24T11:55:09+0000  sly-hello-world-20200225.1755.entry
-  2025-11-24T11:55:09+0000  sly-hello-world-20200225.1755.tar
-Built sly-hello-world in 3.204s, finished at 2025-11-24T11:55:10+0000
+  2025-11-24T19:04:02+0000  sly-hello-world-20200225.1755.entry
+  2025-11-24T19:04:02+0000  sly-hello-world-20200225.1755.tar
+Built sly-hello-world in 3.297s, finished at 2025-11-24T19:04:03+0000

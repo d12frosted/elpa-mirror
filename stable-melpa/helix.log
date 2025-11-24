@@ -1,12 +1,9 @@
-Package: helix
-Fetcher: github
-Source:  https://github.com/mgmarlow/helix-mode
-
+ • Building package helix (from github:mgmarlow/helix-mode)...
 Updating /mnt/store/melpa/working/helix/
 Checking out f431fe6c1def0d679f3bae987d43025f13892dba
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helix/
-  to /tmp/helixDkVzsV/helix-20251011.1609
+  to /tmp/helixfY6073/helix-20251011.1609
     helix-core.el -> helix-core.el
     helix-jj.el -> helix-jj.el
     helix-multiple-cursors.el -> helix-multiple-cursors.el
@@ -19,6 +16,6 @@ Created helix-20251011.1609.tar containing:
   helix-20251011.1609/helix-pkg.el
   helix-20251011.1609/helix.el
  ✓ Success:
-  2025-11-24T11:22:21+0000  helix-20251011.1609.entry
-  2025-11-24T11:22:21+0000  helix-20251011.1609.tar
-Built helix in 2.493s, finished at 2025-11-24T11:22:21+0000
+  2025-11-24T18:29:57+0000  helix-20251011.1609.entry
+  2025-11-24T18:29:57+0000  helix-20251011.1609.tar
+Built helix in 2.639s, finished at 2025-11-24T18:29:58+0000

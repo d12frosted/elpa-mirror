@@ -1,12 +1,9 @@
-Package: google-maps
-Fetcher: github
-Source:  https://github.com/jd/google-maps.el
-
+ • Building package google-maps (from github:jd/google-maps.el)...
 Updating /mnt/store/melpa/working/google-maps/
 Checking out 2eb16ff609f5a9f8d02c15238a111fbb7db6c146
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/google-maps/
-  to /tmp/google-mapsXu0Xia/google-maps-20181121.1532
+  to /tmp/google-mapsCsFYjn/google-maps-20181121.1532
     google-maps-base.el -> google-maps-base.el
     google-maps-geocode.el -> google-maps-geocode.el
     google-maps-static.el -> google-maps-static.el
@@ -21,6 +18,6 @@ Created google-maps-20181121.1532.tar containing:
   google-maps-20181121.1532/google-maps.el
   google-maps-20181121.1532/org-location-google-maps.el
  ✓ Success:
-  2025-11-24T11:20:45+0000  google-maps-20181121.1532.entry
-  2025-11-24T11:20:45+0000  google-maps-20181121.1532.tar
-Built google-maps in 5.385s, finished at 2025-11-24T11:20:47+0000
+  2025-11-24T18:28:04+0000  google-maps-20181121.1532.entry
+  2025-11-24T18:28:04+0000  google-maps-20181121.1532.tar
+Built google-maps in 5.674s, finished at 2025-11-24T18:28:06+0000

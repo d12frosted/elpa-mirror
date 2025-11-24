@@ -1,18 +1,15 @@
-Package: sql-sqlline
-Fetcher: gitlab
-Source:  https://gitlab.com/matteoredaelli/sql-sqlline
-
+ • Building package sql-sqlline (from gitlab:matteoredaelli/sql-sqlline)...
 Updating /mnt/store/melpa/working/sql-sqlline/
 Checking out 3d540a8cc9c6f816b241913042008f09323455af
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sql-sqlline/
-  to /tmp/sql-sqllinedudxSZ/sql-sqlline-20231109.2111
+  to /tmp/sql-sqllinevcbJYq/sql-sqlline-20231109.2111
   ! artifacts/sql-sqlline.el -> sql-sqlline.el
 Created sql-sqlline-20231109.2111.tar containing:
   sql-sqlline-20231109.2111/
   sql-sqlline-20231109.2111/sql-sqlline-pkg.el
   sql-sqlline-20231109.2111/sql-sqlline.el
  ✓ Success:
-  2025-11-24T11:56:38+0000  sql-sqlline-20231109.2111.entry
-  2025-11-24T11:56:38+0000  sql-sqlline-20231109.2111.tar
-Built sql-sqlline in 3.338s, finished at 2025-11-24T11:56:38+0000
+  2025-11-24T19:05:35+0000  sql-sqlline-20231109.2111.entry
+  2025-11-24T19:05:35+0000  sql-sqlline-20231109.2111.tar
+Built sql-sqlline in 3.111s, finished at 2025-11-24T19:05:36+0000

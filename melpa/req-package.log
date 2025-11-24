@@ -1,12 +1,9 @@
-Package: req-package
-Fetcher: github
-Source:  https://github.com/emacsorphanage/req-package
-
+ • Building package req-package (from github:emacsorphanage/req-package)...
 Updating /mnt/store/melpa/working/req-package/
 Checking out a77da72931914ac5f3f64dc61fe9dc3522b2817e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/req-package/
-  to /tmp/req-package0MT2cs/req-package-20180605.1141
+  to /tmp/req-packageZZF9zF/req-package-20180605.1141
     req-package-args.el -> req-package-args.el
     req-package-cycles.el -> req-package-cycles.el
     req-package-hooks.el -> req-package-hooks.el
@@ -19,6 +16,6 @@ Created req-package-20180605.1141.tar containing:
   req-package-20180605.1141/req-package-pkg.el
   req-package-20180605.1141/req-package.el
  ✓ Success:
-  2025-11-24T11:51:22+0000  req-package-20180605.1141.entry
-  2025-11-24T11:51:22+0000  req-package-20180605.1141.tar
-Built req-package in 3.260s, finished at 2025-11-24T11:51:23+0000
+  2025-11-24T18:59:41+0000  req-package-20180605.1141.entry
+  2025-11-24T18:59:41+0000  req-package-20180605.1141.tar
+Built req-package in 3.439s, finished at 2025-11-24T18:59:42+0000

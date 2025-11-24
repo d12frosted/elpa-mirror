@@ -1,18 +1,15 @@
-Package: nix-sandbox
-Fetcher: github
-Source:  https://github.com/nix-community/nix-emacs
-
+ • Building package nix-sandbox (from github:nix-community/nix-emacs)...
 Updating /mnt/store/melpa/working/nix-sandbox/
 Checking out d3ec98405f1f9dac833abf9e146249b1b943870d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-sandbox/
-  to /tmp/nix-sandboxkJfBEe/nix-sandbox-20210325.1622
+  to /tmp/nix-sandboxpjWEIt/nix-sandbox-20210325.1622
     nix-sandbox.el -> nix-sandbox.el
 Created nix-sandbox-20210325.1622.tar containing:
   nix-sandbox-20210325.1622/
   nix-sandbox-20210325.1622/nix-sandbox-pkg.el
   nix-sandbox-20210325.1622/nix-sandbox.el
  ✓ Success:
-  2025-11-24T11:37:58+0000  nix-sandbox-20210325.1622.entry
-  2025-11-24T11:37:58+0000  nix-sandbox-20210325.1622.tar
-Built nix-sandbox in 4.226s, finished at 2025-11-24T11:37:59+0000
+  2025-11-24T18:46:08+0000  nix-sandbox-20210325.1622.entry
+  2025-11-24T18:46:08+0000  nix-sandbox-20210325.1622.tar
+Built nix-sandbox in 2.782s, finished at 2025-11-24T18:46:09+0000

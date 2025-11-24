@@ -1,12 +1,9 @@
-Package: vsh-mode
-Fetcher: github
-Source:  https://github.com/hardenedapple/vsh
-
+ • Building package vsh-mode (from github:hardenedapple/vsh)...
 Updating /mnt/store/melpa/working/vsh-mode/
 Checking out 47c35e3062a20418340c8150c8d5ad41c1e7d6b4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vsh-mode/
-  to /tmp/vsh-modeJFcZCR/vsh-mode-20250901.1658
+  to /tmp/vsh-modeYcLM21/vsh-mode-20250901.1658
   ! vsh-mode-1.0/vsh-mode.el -> vsh-mode.el
   ! vsh-mode-1.0/integration_with_gdb.py -> integration_with_gdb.py
   ! vsh-mode-1.0/vsh_tell_editor_bindings.py -> vsh_tell_editor_bindings.py
@@ -21,6 +18,6 @@ Created vsh-mode-20250901.1658.tar containing:
   vsh-mode-20250901.1658/vsh_shell_start
   vsh-mode-20250901.1658/vsh_tell_editor_bindings.py
  ✓ Success:
-  2025-11-24T12:03:13+0000  vsh-mode-20250901.1658.entry
-  2025-11-24T12:03:13+0000  vsh-mode-20250901.1658.tar
-Built vsh-mode in 3.049s, finished at 2025-11-24T12:03:14+0000
+  2025-11-24T19:12:14+0000  vsh-mode-20250901.1658.entry
+  2025-11-24T19:12:14+0000  vsh-mode-20250901.1658.tar
+Built vsh-mode in 3.053s, finished at 2025-11-24T19:12:15+0000

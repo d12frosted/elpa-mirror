@@ -1,12 +1,9 @@
-Package: pg
-Fetcher: github
-Source:  https://github.com/emarsden/pg-el
-
+ • Building package pg (from github:emarsden/pg-el)...
 Updating /mnt/store/melpa/working/pg/
 Checking out 4746a8bd1e299157dbbafa43a127405c224d1a32
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pg/
-  to /tmp/pgPMnHrE/pg-20251122.1505
+  to /tmp/pgxFyq8b/pg-20251122.1505
     pg-bm25.el -> pg-bm25.el
     pg-geometry.el -> pg-geometry.el
     pg-gis.el -> pg-gis.el
@@ -21,6 +18,6 @@ Created pg-20251122.1505.tar containing:
   pg-20251122.1505/pg-pkg.el
   pg-20251122.1505/pg.el
  ✓ Success:
-  2025-11-24T11:45:53+0000  pg-20251122.1505.entry
-  2025-11-24T11:45:53+0000  pg-20251122.1505.tar
-Built pg in 4.140s, finished at 2025-11-24T11:45:54+0000
+  2025-11-24T18:54:18+0000  pg-20251122.1505.entry
+  2025-11-24T18:54:18+0000  pg-20251122.1505.tar
+Built pg in 4.148s, finished at 2025-11-24T18:54:19+0000

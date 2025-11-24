@@ -1,12 +1,9 @@
-Package: srefactor
-Fetcher: github
-Source:  https://github.com/tuhdo/semantic-refactor
-
+ • Building package srefactor (from github:tuhdo/semantic-refactor)...
 Updating /mnt/store/melpa/working/srefactor/
 Checking out 95c70a94b5aad4c85b35569e2f2325047791153a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/srefactor/
-  to /tmp/srefactorylCm6l/srefactor-20230504.617
+  to /tmp/srefactorPHIxzp/srefactor-20230504.617
     srefactor-lisp.el -> srefactor-lisp.el
     srefactor-ui.el -> srefactor-ui.el
     srefactor.el -> srefactor.el
@@ -17,6 +14,6 @@ Created srefactor-20230504.617.tar containing:
   srefactor-20230504.617/srefactor-ui.el
   srefactor-20230504.617/srefactor.el
  ✓ Success:
-  2025-11-24T11:56:43+0000  srefactor-20230504.617.entry
-  2025-11-24T11:56:43+0000  srefactor-20230504.617.tar
-Built srefactor in 3.195s, finished at 2025-11-24T11:56:44+0000
+  2025-11-24T19:05:42+0000  srefactor-20230504.617.entry
+  2025-11-24T19:05:42+0000  srefactor-20230504.617.tar
+Built srefactor in 2.837s, finished at 2025-11-24T19:05:42+0000
