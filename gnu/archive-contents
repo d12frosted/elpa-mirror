@@ -1354,7 +1354,7 @@
 	    (:url . "https://elpa.gnu.org/packages/docbook.html")
 	    (:commit . "a59f87c0dc04bcfcf9f55a124658c2e7a585dbd2"))])
  (doric-themes .
-	       [(0 4 0)
+	       [(0 5 0)
 		((emacs
 		  (29 1)))
 		"Highly legible minimalist themes with precise typography" tar
@@ -1363,7 +1363,7 @@
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "2216b91c89f0063d80e9abb53eef7afdbab67157"))])
+		 (:commit . "1455871b4fc20b9b4e579681c339f05aa3e9e150"))])
  (drepl .
 	[(0 4)
 	 ((emacs
@@ -2903,7 +2903,7 @@
 	       ("Ian Martins" . "ianxm@jhu.edu"))
 	      (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode .
-	      [(7 3 2)
+	      [(7 3 3)
 	       ((emacs
 		 (27 2)))
 	       "Major mode for MATLAB(R) dot-m files" tar
@@ -2916,7 +2916,7 @@
 		(:authors
 		 ("Matt Wette" . "mwette@alumni.caltech.edu")
 		 ("Eric M. Ludlam" . "eludlam@mathworks.com"))
-		(:commit . "899ae3c36fc9e1f850b62b09733cca27a9af9aa5"))])
+		(:commit . "3fac6eb00a11e8cf2f4687c49ac4d354d7547d1e"))])
  (mct .
       [(1 1 0)
        ((emacs
