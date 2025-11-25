@@ -10,7 +10,7 @@ That navigation works globally, also outside Emacs, requires that
 the window manager forwards some keys globally to Emacs;
 for KDE one can bind a one-line script that uses Emacsclient
 to forward the key to Emacs, using `dwin-input-key' defined in
-sect.  1. See etc/bin/dwin-firefox for an example.  See
+sect.  3. See etc/bin/dwin-firefox for an example.  See
 Further Details / 1 for why we do not use tools like qdotool for
 sending keys.
 
@@ -25,7 +25,7 @@ The KDE proxy uses
 i) dbus calls to org.kde.kglobalaccel (KDE's shortcuts
    application), esp.  for directional navigation, and
 ii) kdotool for navigation by name.
-See sect.  2 below.
+See sect. 4 below.
 
 🏷️ Navigation by name is provided by `dwin-switch-to-app' that will
 i) start an app, if it has no window yet,
@@ -43,16 +43,16 @@ It needs the same handling as the other apps above.
 By default, navigation by name will switch to the first window of
 an application, if it has several.  You can use a prefix arg to
 switch to a specific one, e.g., C-2 M-x my/firefox or C-2 <f11> to
-switch to the second one.  See sect.  3 below.
+switch to the second one.  See sect. 5 below.
 
 For 🔀 directional navigation, we defined a short function
 `dwin-windmove-left' for each direction.  The function tries to
 move inside Emacs via windmove, and if this fails, uses the
 window manager to move out of Emacs.
 The same method also uses the window manager to move
-directional from desktop windows.  See sect.  4.
+directional from desktop windows.  See sect.  6.
 
-Sect.  5 contains function `dwin-grab' to ⧉ arrange desktop
+Sect.  7 contains function `dwin-grab' to ⧉ arrange desktop
 windows, i.e., to resize them, reposition them etc.
 
 See etc/example-emacs-init/init.el for an example configuration.
