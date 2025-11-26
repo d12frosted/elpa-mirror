@@ -2159,7 +2159,7 @@
 	     ("Sean Allred" . "code@seanallred.com"))
 	    (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader .
-	  [(0 13 0)
+	  [(0 13 1)
 	   ((emacs
 	     (26 1))
 	    (seq
@@ -2172,7 +2172,7 @@
 	    (:maintainer "Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com")
 	    (:authors
 	     ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
-	    (:commit . "c3f28c1ca3d6dea5b44b0c7677c94a4a20d6370b"))])
+	    (:commit . "b25974aeae49f11b91bb78d94ab51913fdfcdc05"))])
  (greenbar .
 	   [(1 2)
 	    ((emacs
@@ -2903,7 +2903,7 @@
 	       ("Ian Martins" . "ianxm@jhu.edu"))
 	      (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode .
-	      [(7 3 3)
+	      [(7 3 4)
 	       ((emacs
 		 (27 2)))
 	       "Major mode for MATLAB(R) dot-m files" tar
@@ -2916,7 +2916,7 @@
 		(:authors
 		 ("Matt Wette" . "mwette@alumni.caltech.edu")
 		 ("Eric M. Ludlam" . "eludlam@mathworks.com"))
-		(:commit . "3fac6eb00a11e8cf2f4687c49ac4d354d7547d1e"))])
+		(:commit . "0e131b513486836173aff012299caaf7ef2e8ec6"))])
  (mct .
       [(1 1 0)
        ((emacs
@@ -2989,7 +2989,7 @@
 		    (:url . "https://elpa.gnu.org/packages/minibuffer-line.html")
 		    (:commit . "852874725fd06329109b2d431d8af5502b54036c"))])
  (minimail .
-	   [(0 2)
+	   [(0 3)
 	    ((emacs
 	      (30 1)))
 	    "Simple, non-blocking IMAP email client" tar
@@ -2998,7 +2998,7 @@
 	     (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	     (:authors
 	      ("Augusto Stoffel" . "arstoffel@gmail.com"))
-	     (:commit . "fb2012c9390bfafc8664c58924480d3f0048938c"))])
+	     (:commit . "897abe9606a8b1074d27b6b0da6ca67eb6e9606a"))])
  (minimap .
 	  [(1 4)
 	   nil "Sidebar showing a \"mini-map\" of a buffer" tar

@@ -3,36 +3,43 @@
                                ━━━━━━━━━━
 
 
-Minimail is a simple, non-blocking IMAP email client for Emacs.
+Minimail is a simple, non-blocking IMAP email client for Emacs.  It is a
+rather new package but covers the basics needed for reading and replying
+to messages:
 
-Minimail currently covers the basics needed for reading and replying to
-messages.  Below is a listing of implemented and planned features.
+• Displaying messages, including MIME content (rendering via Gnus)
+• Composing, replying to and forwarding messages
+• Multi-account support
+• Search (currently only full text)
+• Moving messages between mailboxes (also archive, move to trash, move
+  to junk folder)
+• Sorting by thread, in two modes:
+  • “Shallow” threading (just one nesting level, sorted by date) using
+    server-side thread information if available or subject lines as a
+    fallback.
+  • Optionally, hierarchical threads based on reference message IDs.
 
-• ☑ Read messages, including MIME content (rendering via Gnus)
-• ☑ Compose, reply to and forward messages
-• ☑ Multi-account support
-• Search
-  • ☑ Full text
-  • ☐ Structured (by sender, subject, etc.)
-• Sorting by thread
-  • ☑ Simple algorithm based on subject lines
-  • ☐ Fancy algorithm based on reference message IDs.
-• ☑ Move messages (also archive, move to trash, flag as junk)
-• ☐ Mark and operate on sets of messages (move, etc.)
-• ☑ "Load more messages" button
-• ☐ Notifications (polling or IDLE)
-• ☐ OAuth
+Here is a list of planned features:
 
-Being non-blocking doesn't mean Minimail has excellent performance
-(spoiler: it doesn't, yet); it simply means that it has one of the
-necessary condition for such.  In fact, Minimail currently doesn't
-include any of these possible optimizations:
+• Structured search (by sender, subject, etc.)
+• Marking and operating on sets of messages (move, etc.)
+• Watching for new messages and notifications
+• Login via OAuth
+• Various optimizations, perhaps a persistent cache
 
-• ☑ Caching
-  • in memory, no persistence
-• ☐ Support for CONDSTORE capability
-• ☐ Connection pool (for concurrent requests)
-• ☐ Prefetching of messages in the background
+Minimail is an [online] IMAP client.  It is intended to coexist
+peacefully with other clients accessing the same account.  Moreover, it
+is intended to remain no more complicated than your regular webmail app.
+In line with that, the following are some features which are not
+planned:
+
+• Filtering (use server-side filtering instead)
+• Offline access
+• POP, NNTP, RSS, Maildir, instant messaging, microblogging, social
+  media, virtual reality, etc.
+
+
+[online] <https://www.rfc-editor.org/rfc/rfc1733>
 
 
 1 Try it out
@@ -59,7 +66,7 @@ include any of these possible optimizations:
   │ 	 :mail-address "somebody@gmail.com"
   │ 	 :incoming-url "imaps://imap.gmail.com"
   │ 	 :outgoing-url "smtps://smtp.gmail.com")
-  │ 	(work ;; Assuming Evil Corp uses "Google Workspace" as email provider
+  │ 	(work ;; Assuming Evil Corp. uses "Google Workspace" as email provider
   │ 	 :mail-address "webmaster@evilcorp.com"
   │ 	 :incoming-url "imaps://imap.gmail.com"
   │ 	 :outgoing-url "smtps://smtp.gmail.com"
