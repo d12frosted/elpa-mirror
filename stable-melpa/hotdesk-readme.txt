@@ -1,23 +1,24 @@
 
-`hotdesk-mode' provides multiple buffer lists that adapt to your workflow.
+`hotdesk-mode' lets you split your monolithic Emacs buffer list into
+separate buffer lists, creating distinct work surfaces.
 
-This allows you to simply split Emacs monolithic buffer list into separate
-buffer lists, creating distinct work surfaces.  Example use cases:
+How it works:
 
- Standalone Emacs (single frame):
-   instantly change your active buffer-list to switch projects or tasks
-   (see quickstart below)
+  Buffer lists are identified by a label. By setting a frame label, you
+  either create a new buffer list or switch to an existing one.  That's it.
 
- Client/Server Emacs (multi frame):
-   maintain distinct workspaces with independent per-frame buffer-lists
-   (by assigning a distinct label to each frame)
+Examples:
 
-hotdesk is unopinionated and stays out the way, so doesn't interfere with
-your workflow.
+  Standalone Emacs (single frame):
+  Flip between buffer-lists to simulate switching projects (see quickstart).
 
-No configuration is required (apart from labelling your frame), and buffer
-lists are built automatically based on your usage.  Emacs' built-in `desktop`
-functions can save and restore your hotdesk sessions.
+  Client/Server Emacs (multi frame):
+  Assign each frame a different buffer-list to maintain separate workspaces.
+
+The mode is unopinionated and doesn't interfere with your workflow. No
+configuration is required (except assigning a label to begin), and buffer
+lists behave normally.  Emacs' built-in `desktop` functions save and restore
+your session of accumulated buffer lists.
 
 Quickstart:
 
@@ -27,19 +28,17 @@ Quickstart:
  2.  Demo the mode's behaviour (using default key bindings):
 
      `C-c C-d ! desk1`    label your frame 'desk1'
-     `C-c C-d ?`          verify the label is 'desk1'
      <open some buffers>
-     `C-x C-b`            show the 'desk1' buffer list
+     `C-x C-b`            show your 'desk1' buffer list
 
-     `C-c C-d ! desk2`    label your frame 'desk2'
-     `C-c C-d ?`          verify the label is 'desk2'
+     `C-c C-d ! desk2`    re-label your frame 'desk2'
      <open some different buffers>
-     `C-x C-b`            show the 'desk2' buffer list
+     `C-x C-b`            show your 'desk2' buffer list
 
-     `C-c C-d ! desk1`    swap to 'desk1' buffer list
-     `C-x C-b`            show the 'desk1' buffer list again
+     `C-c C-d ! desk1`    switch to the 'desk1' buffer list
+     `C-x C-b`            shows your 'desk1' buffers again
 
-     `C-c C-d d`          show/adjust your label assignments
+     `C-c C-d g`          show and edit your buffer assignments
 
 See README.md at project URL for more info, integration tips and advanced
 features.
