@@ -671,6 +671,7 @@
   (coc-dc :url "https://github.com/S0mbr3/coc-damage-calculator")
   (codcut :url "https://github.com/codcut/codcut-emacs")
   (code-archive :url "https://github.com/mschuldt/code-archive")
+  (code-awareness :url "https://github.com/codeawareness/kawa.emacs")
   (code-cells :url "https://github.com/astoff/code-cells.el")
   (code-compass :url "https://github.com/ag91/code-compass")
   (code-library :url "https://github.com/lujun9972/code-library")
