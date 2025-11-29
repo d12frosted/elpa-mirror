@@ -1,9 +1,9 @@
  • Building package hyperbole (from https://git.savannah.gnu.org/git/hyperbole.git)...
 Updating /mnt/store/melpa/working/hyperbole/
-Checking out 028402df7bb32b7ef471e6bfb32725ae27c318a1
+Checking out e33997759bb84c4755bca972c61aef404914d92b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperbole/
-  to /tmp/hyperbolekR5OZI/hyperbole-20251126.227
+  to /tmp/hyperbole5Gv6lO/hyperbole-20251129.1740
     hact.el -> hact.el
     hactypes.el -> hactypes.el
     hargs.el -> hargs.el
@@ -111,6 +111,7 @@ Copying files (->) and directories (=>)
     man/im/C-hh.png -> man/im/C-hh.png
     man/im/demo.png -> man/im/demo.png
     man/im/hyperbole-cv.png -> man/im/hyperbole-cv.png
+    man/im/hywiki-page.png -> man/im/hywiki-page.png
     man/im/koutliner.png -> man/im/koutliner.png
     man/im/menu-customization.png -> man/im/menu-customization.png
     man/im/menu-display-referents.png -> man/im/menu-display-referents.png
@@ -170,182 +171,3 @@ Copying files (->) and directories (=>)
     test/hy-test-dependencies.el -> test/hy-test-dependencies.el
     test/hy-test-helpers.el -> test/hy-test-helpers.el
 Generating hyperbole.info
-Created hyperbole-20251126.227.tar containing:
-  hyperbole-20251126.227/
-  hyperbole-20251126.227/.hypb
-  hyperbole-20251126.227/ChangeLog
-  hyperbole-20251126.227/DEMO
-  hyperbole-20251126.227/DEMO-ROLO.otl
-  hyperbole-20251126.227/FAST-DEMO
-  hyperbole-20251126.227/HY-ABOUT
-  hyperbole-20251126.227/HY-ANNOUNCE
-  hyperbole-20251126.227/HY-CONCEPTS.kotl
-  hyperbole-20251126.227/HY-NEWS
-  hyperbole-20251126.227/HY-TALK/
-  hyperbole-20251126.227/HY-TALK/.hypb
-  hyperbole-20251126.227/HY-TALK/HY-TALK.org
-  hyperbole-20251126.227/HY-TALK/HYPB
-  hyperbole-20251126.227/HY-TALK/HYPERAMP.org
-  hyperbole-20251126.227/HY-TALK/HYPERORG.org
-  hyperbole-20251126.227/HY-WHY.kotl
-  hyperbole-20251126.227/INSTALL
-  hyperbole-20251126.227/MANIFEST
-  hyperbole-20251126.227/Makefile
-  hyperbole-20251126.227/README.md
-  hyperbole-20251126.227/_hypb
-  hyperbole-20251126.227/dir
-  hyperbole-20251126.227/hact.el
-  hyperbole-20251126.227/hactypes.el
-  hyperbole-20251126.227/hargs.el
-  hyperbole-20251126.227/hasht.el
-  hyperbole-20251126.227/hbdata.el
-  hyperbole-20251126.227/hbmap.el
-  hyperbole-20251126.227/hbut.el
-  hyperbole-20251126.227/hgnus.el
-  hyperbole-20251126.227/hhist.el
-  hyperbole-20251126.227/hib-debbugs.el
-  hyperbole-20251126.227/hib-doc-id.el
-  hyperbole-20251126.227/hib-kbd.el
-  hyperbole-20251126.227/hib-social.el
-  hyperbole-20251126.227/hibtypes.el
-  hyperbole-20251126.227/hinit.el
-  hyperbole-20251126.227/hload-path.el
-  hyperbole-20251126.227/hmail.el
-  hyperbole-20251126.227/hmh.el
-  hyperbole-20251126.227/hmoccur.el
-  hyperbole-20251126.227/hmouse-drv.el
-  hyperbole-20251126.227/hmouse-info.el
-  hyperbole-20251126.227/hmouse-key.el
-  hyperbole-20251126.227/hmouse-mod.el
-  hyperbole-20251126.227/hmouse-sh.el
-  hyperbole-20251126.227/hmouse-tag.el
-  hyperbole-20251126.227/hpath.el
-  hyperbole-20251126.227/hproperty.el
-  hyperbole-20251126.227/hrmail.el
-  hyperbole-20251126.227/hsettings.el
-  hyperbole-20251126.227/hsmail.el
-  hyperbole-20251126.227/hsys-consult.el
-  hyperbole-20251126.227/hsys-ert.el
-  hyperbole-20251126.227/hsys-flymake.el
-  hyperbole-20251126.227/hsys-org-roam.el
-  hyperbole-20251126.227/hsys-org.el
-  hyperbole-20251126.227/hsys-www.el
-  hyperbole-20251126.227/hsys-xref.el
-  hyperbole-20251126.227/hsys-youtube.el
-  hyperbole-20251126.227/htz.el
-  hyperbole-20251126.227/hui-dired-sidebar.el
-  hyperbole-20251126.227/hui-jmenu.el
-  hyperbole-20251126.227/hui-menu.el
-  hyperbole-20251126.227/hui-mini.el
-  hyperbole-20251126.227/hui-mouse.el
-  hyperbole-20251126.227/hui-register.el
-  hyperbole-20251126.227/hui-select.el
-  hyperbole-20251126.227/hui-treemacs.el
-  hyperbole-20251126.227/hui-window.el
-  hyperbole-20251126.227/hui.el
-  hyperbole-20251126.227/hvar.el
-  hyperbole-20251126.227/hversion.el
-  hyperbole-20251126.227/hycontrol.el
-  hyperbole-20251126.227/hynote.el
-  hyperbole-20251126.227/hypb-ert.el
-  hyperbole-20251126.227/hypb-maintenance.el
-  hyperbole-20251126.227/hypb.el
-  hyperbole-20251126.227/hyperbole-banner.png
-  hyperbole-20251126.227/hyperbole-pkg.el
-  hyperbole-20251126.227/hyperbole.el
-  hyperbole-20251126.227/hyperbole.info
-  hyperbole-20251126.227/hyrolo-demo.el
-  hyperbole-20251126.227/hyrolo-logic.el
-  hyperbole-20251126.227/hyrolo-menu.el
-  hyperbole-20251126.227/hyrolo.el
-  hyperbole-20251126.227/hyrolo.py
-  hyperbole-20251126.227/hywconfig.el
-  hyperbole-20251126.227/hywiki.el
-  hyperbole-20251126.227/kotl/
-  hyperbole-20251126.227/kotl/EXAMPLE.kotl
-  hyperbole-20251126.227/kotl/MANIFEST
-  hyperbole-20251126.227/kotl/kcell.el
-  hyperbole-20251126.227/kotl/kexport.el
-  hyperbole-20251126.227/kotl/kfile.el
-  hyperbole-20251126.227/kotl/kfill.el
-  hyperbole-20251126.227/kotl/kimport.el
-  hyperbole-20251126.227/kotl/klabel.el
-  hyperbole-20251126.227/kotl/klink.el
-  hyperbole-20251126.227/kotl/kmenu.el
-  hyperbole-20251126.227/kotl/kotl-mode.el
-  hyperbole-20251126.227/kotl/kotl-orgtbl.el
-  hyperbole-20251126.227/kotl/kproperty.el
-  hyperbole-20251126.227/kotl/kview.el
-  hyperbole-20251126.227/kotl/kvspec.el
-  hyperbole-20251126.227/man/
-  hyperbole-20251126.227/man/hkey-help.txt
-  hyperbole-20251126.227/man/hyperbole.css
-  hyperbole-20251126.227/man/hyperbole.html
-  hyperbole-20251126.227/man/hyperbole.info
-  hyperbole-20251126.227/man/hyperbole.pdf
-  hyperbole-20251126.227/man/hyperbole.texi
-  hyperbole-20251126.227/man/im/
-  hyperbole-20251126.227/man/im/C-hh.png
-  hyperbole-20251126.227/man/im/demo.png
-  hyperbole-20251126.227/man/im/hyperbole-cv.png
-  hyperbole-20251126.227/man/im/koutliner.png
-  hyperbole-20251126.227/man/im/menu-customization.png
-  hyperbole-20251126.227/man/im/menu-display-referents.png
-  hyperbole-20251126.227/man/im/menu-find.png
-  hyperbole-20251126.227/man/im/menu-hyperbole.png
-  hyperbole-20251126.227/man/im/menu-key-bindings.png
-  hyperbole-20251126.227/man/im/menu-koutline.png
-  hyperbole-20251126.227/man/im/menu-rolo.png
-  hyperbole-20251126.227/man/im/menu-url-browser.png
-  hyperbole-20251126.227/man/im/menu-web-search-browser.png
-  hyperbole-20251126.227/man/im/wgrid-2x2.png
-  hyperbole-20251126.227/man/im/wgrid-2x3.png
-  hyperbole-20251126.227/man/im/wgrid-3x5.png
-  hyperbole-20251126.227/man/im/wgrid-4x6.png
-  hyperbole-20251126.227/set.el
-  hyperbole-20251126.227/smart-clib-sym
-  hyperbole-20251126.227/test/
-  hyperbole-20251126.227/test/MANIFEST
-  hyperbole-20251126.227/test/demo-tests.el
-  hyperbole-20251126.227/test/hact-tests.el
-  hyperbole-20251126.227/test/hactypes-tests.el
-  hyperbole-20251126.227/test/hargs-tests.el
-  hyperbole-20251126.227/test/hbut-tests.el
-  hyperbole-20251126.227/test/hib-kbd-tests.el
-  hyperbole-20251126.227/test/hib-social-tests.el
-  hyperbole-20251126.227/test/hibtypes-tests.el
-  hyperbole-20251126.227/test/hmouse-drv-tests.el
-  hyperbole-20251126.227/test/hmouse-info-tests.el
-  hyperbole-20251126.227/test/hpath-tests.el
-  hyperbole-20251126.227/test/hproperty-tests.el
-  hyperbole-20251126.227/test/hsettings-tests.el
-  hyperbole-20251126.227/test/hsys-org-tests.el
-  hyperbole-20251126.227/test/hui-mini-tests.el
-  hyperbole-20251126.227/test/hui-mouse-tests.el
-  hyperbole-20251126.227/test/hui-register-tests.el
-  hyperbole-20251126.227/test/hui-select-tests.el
-  hyperbole-20251126.227/test/hui-tests.el
-  hyperbole-20251126.227/test/hy-test-coverage.el
-  hyperbole-20251126.227/test/hy-test-dependencies.el
-  hyperbole-20251126.227/test/hy-test-helpers.el
-  hyperbole-20251126.227/test/hycontrol-tests.el
-  hyperbole-20251126.227/test/hypb-ert-tests.el
-  hyperbole-20251126.227/test/hypb-tests.el
-  hyperbole-20251126.227/test/hyperbole-tests.el
-  hyperbole-20251126.227/test/hyrolo-tests.el
-  hyperbole-20251126.227/test/hywconfig-tests.el
-  hyperbole-20251126.227/test/hywiki-tests.el
-  hyperbole-20251126.227/test/hywiki-yki-tests.el
-  hyperbole-20251126.227/test/kcell-tests.el
-  hyperbole-20251126.227/test/kexport-tests.el
-  hyperbole-20251126.227/test/kimport-tests.el
-  hyperbole-20251126.227/test/kotl-mode-tests.el
-  hyperbole-20251126.227/test/kotl-orgtbl-tests.el
-  hyperbole-20251126.227/test/set-tests.el
-  hyperbole-20251126.227/test/smart-org-tests.el
-  hyperbole-20251126.227/test/test-helpers-tests.el
-  hyperbole-20251126.227/topwin.py
- ✓ Success:
-  2025-11-29T15:23:09+0000  hyperbole-20251126.227.entry
-  2025-11-29T15:23:09+0000  hyperbole-20251126.227.tar
-Built hyperbole in 14.598s, finished at 2025-11-29T15:23:10+0000
