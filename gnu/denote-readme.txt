@@ -211,9 +211,6 @@ Table of Contents
 2 Installation
 ══════════════
 
-
-
-
 2.1 GNU ELPA package
 ────────────────────
 
@@ -863,7 +860,7 @@ time] See section 8.5.2
   ┌────
   │ (setq denote-templates
   │       '((report . "* Some heading\n\n* Another heading")
-  │ 	(memo . "* Some heading
+  │         (memo . "* Some heading
   │ 
   │ * Another heading
   │ 
@@ -879,10 +876,10 @@ time] See section 8.5.2
   ┌────
   │ (setq denote-templates
   │       `((report . "* Some heading\n\n* Another heading")
-  │ 	(memo . ,(concat "* Some heading"
-  │ 			 "\n\n"
-  │ 			 "* Another heading"
-  │ 			 "\n\n"))))
+  │         (memo . ,(concat "* Some heading"
+  │                          "\n\n"
+  │                          "* Another heading"
+  │                          "\n\n"))))
   └────
 
   Notice that to evaluate a function inside of an alist we use the
@@ -896,11 +893,11 @@ time] See section 8.5.2
   ┌────
   │ (setq denote-templates
   │       `((report . "* Some heading\n\n* Another heading")
-  │ 	(blog . my-denote-template-function-for-blog) ; a function to return a string
-  │ 	(memo . ,(concat "* Some heading"
-  │ 			 "\n\n"
-  │ 			 "* Another heading"
-  │ 			 "\n\n"))))
+  │         (blog . my-denote-template-function-for-blog) ; a function to return a string
+  │         (memo . ,(concat "* Some heading"
+  │                          "\n\n"
+  │                          "* Another heading"
+  │                          "\n\n"))))
   └────
 
   In this example, `my-denote-template-function-for-blog' is a function
@@ -1193,13 +1190,13 @@ time] See section 8.5.2
   ┌────
   │ (with-eval-after-load 'org-capture
   │   (add-to-list 'org-capture-templates
-  │ 	       '("n" "New note (with Denote)" plain
-  │ 		 (file denote-last-path)
-  │ 		 #'denote-org-capture
-  │ 		 :no-save t
-  │ 		 :immediate-finish nil
-  │ 		 :kill-buffer t
-  │ 		 :jump-to-captured t)))
+  │                '("n" "New note (with Denote)" plain
+  │                  (file denote-last-path)
+  │                  #'denote-org-capture
+  │                  :no-save t
+  │                  :immediate-finish nil
+  │                  :kill-buffer t
+  │                  :jump-to-captured t)))
   └────
 
   Once the template is added, it is accessed from the specified key. If,
@@ -1309,39 +1306,39 @@ time] See section 8.5.2
   ┌────
   │ ;; This prompts for TITLE, KEYWORDS, and SUBDIRECTORY
   │ (add-to-list 'org-capture-templates
-  │ 	     '("N" "New note with prompts (with denote.el)" plain
-  │ 	       (file denote-last-path)
-  │ 	       (function
-  │ 		(lambda ()
-  │ 		  (denote-org-capture-with-prompts :title :keywords :subdirectory)))
-  │ 	       :no-save t
-  │ 	       :immediate-finish nil
-  │ 	       :kill-buffer t
-  │ 	       :jump-to-captured t))
+  │              '("N" "New note with prompts (with denote.el)" plain
+  │                (file denote-last-path)
+  │                (function
+  │                 (lambda ()
+  │                   (denote-org-capture-with-prompts :title :keywords :subdirectory)))
+  │                :no-save t
+  │                :immediate-finish nil
+  │                :kill-buffer t
+  │                :jump-to-captured t))
   │ 
   │ ;; This prompts only for SUBDIRECTORY
   │ (add-to-list 'org-capture-templates
-  │ 	     '("N" "New note with prompts (with denote.el)" plain
-  │ 	       (file denote-last-path)
-  │ 	       (function
-  │ 		(lambda ()
-  │ 		  (denote-org-capture-with-prompts nil nil :subdirectory)))
-  │ 	       :no-save t
-  │ 	       :immediate-finish nil
-  │ 	       :kill-buffer t
-  │ 	       :jump-to-captured t))
+  │              '("N" "New note with prompts (with denote.el)" plain
+  │                (file denote-last-path)
+  │                (function
+  │                 (lambda ()
+  │                   (denote-org-capture-with-prompts nil nil :subdirectory)))
+  │                :no-save t
+  │                :immediate-finish nil
+  │                :kill-buffer t
+  │                :jump-to-captured t))
   │ 
   │ ;; This prompts for TITLE and SUBDIRECTORY
   │ (add-to-list 'org-capture-templates
-  │ 	     '("N" "New note with prompts (with denote.el)" plain
-  │ 	       (file denote-last-path)
-  │ 	       (function
-  │ 		(lambda ()
-  │ 		  (denote-org-capture-with-prompts :title nil :subdirectory)))
-  │ 	       :no-save t
-  │ 	       :immediate-finish nil
-  │ 	       :kill-buffer t
-  │ 	       :jump-to-captured t))
+  │              '("N" "New note with prompts (with denote.el)" plain
+  │                (file denote-last-path)
+  │                (function
+  │                 (lambda ()
+  │                   (denote-org-capture-with-prompts :title nil :subdirectory)))
+  │                :no-save t
+  │                :immediate-finish nil
+  │                :kill-buffer t
+  │                :jump-to-captured t))
   └────
 
   [ You may not need `org-capture' to do what you want ([Write your own
@@ -1377,16 +1374,16 @@ time] See section 8.5.2
   ┌────
   │ (with-eval-after-load 'org-capture
   │   (add-to-list 'org-capture-templates
-  │ 	       '("r" "New reference (with Denote)" plain
-  │ 		 (file denote-last-path)
-  │ 		 (function
-  │ 		  (lambda ()
-  │ 		    (let ((denote-use-directory (expand-file-name "reference" (denote-directory))))
-  │ 		      (denote-org-capture))))
-  │ 		 :no-save t
-  │ 		 :immediate-finish nil
-  │ 		 :kill-buffer t
-  │ 		 :jump-to-captured t)))
+  │                '("r" "New reference (with Denote)" plain
+  │                  (file denote-last-path)
+  │                  (function
+  │                   (lambda ()
+  │                     (let ((denote-use-directory (expand-file-name "reference" (denote-directory))))
+  │                       (denote-org-capture))))
+  │                  :no-save t
+  │                  :immediate-finish nil
+  │                  :kill-buffer t
+  │                  :jump-to-captured t)))
   └────
 
   The values one may predefine in this way are described elsewhere in
@@ -1402,19 +1399,19 @@ time] See section 8.5.2
   ┌────
   │ (with-eval-after-load 'org-capture
   │   (add-to-list 'org-capture-templates
-  │ 	       '("j" "New journal (with Denote)" plain
-  │ 		 (file denote-last-path)
-  │ 		 (function
-  │ 		  (lambda ()
-  │ 		    ;; The "journal" subdirectory of the `denote-directory'---this must exist!
-  │ 		    (let* ((denote-use-directory (expand-file-name "journal" (denote-directory)))
-  │ 			   ;; Use the existing `denote-prompts' as well as the one for a date.
-  │ 			   (denote-prompts (denote-add-prompts '(date))))
-  │ 		      (denote-org-capture))))
-  │ 		 :no-save t
-  │ 		 :immediate-finish nil
-  │ 		 :kill-buffer t
-  │ 		 :jump-to-captured t)))
+  │                '("j" "New journal (with Denote)" plain
+  │                  (file denote-last-path)
+  │                  (function
+  │                   (lambda ()
+  │                     ;; The "journal" subdirectory of the `denote-directory'---this must exist!
+  │                     (let* ((denote-use-directory (expand-file-name "journal" (denote-directory)))
+  │                            ;; Use the existing `denote-prompts' as well as the one for a date.
+  │                            (denote-prompts (denote-add-prompts '(date))))
+  │                       (denote-org-capture))))
+  │                  :no-save t
+  │                  :immediate-finish nil
+  │                  :kill-buffer t
+  │                  :jump-to-captured t)))
   └────
 
   The above highlights the hackability of the Denote code base, namely,
@@ -1657,7 +1654,7 @@ time] See section 8.5.2
   │ ;;;     (info "(emacs) Directory Variables")
   │ 
   │ ((nil . ((denote-directory . "/path/to/silo/")
-  │ 	 (denote-known-keywords . ("food" "drink")))))
+  │          (denote-known-keywords . ("food" "drink")))))
   └────
 
   This one is like the above, but also disables `denote-infer-keywords':
@@ -1668,8 +1665,8 @@ time] See section 8.5.2
   │ ;;;     (info "(emacs) Directory Variables")
   │ 
   │ ((nil . ((denote-directory . "/path/to/silo/")
-  │ 	 (denote-known-keywords . ("food" "drink"))
-  │ 	 (denote-infer-keywords . nil))))
+  │          (denote-known-keywords . ("food" "drink"))
+  │          (denote-infer-keywords . nil))))
   └────
 
   To expand the list of local variables to, say, cover specific major
@@ -1681,11 +1678,11 @@ time] See section 8.5.2
   │ ;;;     (info "(emacs) Directory Variables")
   │ 
   │ ((nil . ((denote-directory . "/path/to/silo/")
-  │ 	 (denote-known-keywords . ("food" "drink"))
-  │ 	 (denote-infer-keywords . nil)))
+  │          (denote-known-keywords . ("food" "drink"))
+  │          (denote-infer-keywords . nil)))
   │  (org-mode . ((org-hide-emphasis-markers . t)
-  │ 	      (org-hide-macro-markers . t)
-  │ 	      (org-hide-leading-stars . t))))
+  │               (org-hide-macro-markers . t)
+  │               (org-hide-leading-stars . t))))
   └────
 
   As not all user options have a “safe” local value, Emacs will ask the
@@ -1751,8 +1748,8 @@ See section 20.5
      │    ;;;     (info "(emacs) Directory Variables")
      │ 
      │    ((nil . ((denote-directory . "/path/to/silo/")
-     │ 	    (denote-org-front-matter .
-     │ 	     "#+title:      %s
+     │             (denote-org-front-matter .
+     │              "#+title:      %s
      │ #+date:       %s
      │ #+filetags:   %s
      │ #+identifier: %s
@@ -2475,13 +2472,13 @@ See section 20.5
   │ (defun my-denote--same-identifier-p (file1 file2)
   │   "Return non-nil if FILE1 and FILE2 have the same identifier."
   │   (let ((id1 (denote-retrieve-filename-identifier file1))
-  │ 	(id2 (denote-retrieve-filename-identifier file2)))
+  │         (id2 (denote-retrieve-filename-identifier file2)))
   │     (equal id1 id2)))
   │ 
   │ (defun my-denote-find-duplicate-identifiers (directory)
   │   "Find all files in DIRECTORY that need a new identifier."
   │   (let* ((ids (my-denote--get-files-in-dir directory))
-  │ 	 (unique-ids (seq-uniq ids #'my-denote--same-identifier-p)))
+  │          (unique-ids (seq-uniq ids #'my-denote--same-identifier-p)))
   │     (seq-difference ids unique-ids #'equal)))
   │ 
   │ (defun my-denote-dired-show-duplicate-identifiers (directory)
@@ -2761,7 +2758,7 @@ section 8.4
   File names can contain any character that the file system permits.
   Denote imposes a few additional restrictions:
 
-  ⁃ The tokens “`=", =__' and `--' are interpreted by Denote and should
+  ⁃ The tokens "`=", =__' and `--' are interpreted by Denote and should
     appear only once.
 
   ⁃ The dot character is not allowed in a note’s file name, except to
@@ -2844,8 +2841,8 @@ section 8.4
   ┌────
   │ (setq denote-file-name-slug-functions
   │       '((title . denote-sluggify-title)
-  │ 	(keyword . identity)
-  │ 	(signature . denote-sluggify-signature)))
+  │         (keyword . identity)
+  │         (signature . denote-sluggify-signature)))
   └────
 
   The `identity' function simply returns the string it receives, thus
@@ -2874,8 +2871,8 @@ section 8.4
   │ ;; letter casing.
   │ (setq denote-file-name-slug-functions
   │       '((title . my-denote-sluggify-title) ; our function here
-  │ 	(signature . denote-sluggify-signature)
-  │ 	(keyword . denote-sluggify-keyword)))
+  │         (signature . denote-sluggify-signature)
+  │         (keyword . denote-sluggify-keyword)))
   └────
 
   Follow this principle for all the sluggification functions ([Custom
@@ -2929,18 +2926,18 @@ section 8.4
   │   (downcase
   │    (denote-slug-hyphenate
   │     (replace-regexp-in-string "[][{}!@#$%^&*()+'\"?,.\|;:~`‘’“”/=]*" ""
-  │ 			      (denote-slug-keep-only-ascii str)))))
+  │                               (denote-slug-keep-only-ascii str)))))
   │ 
   │ (defun my-denote-sluggify-signature (str)
   │   (downcase
   │    (denote-slug-put-equals
   │     (replace-regexp-in-string "[][{}!@#$%^&*()+'\"?,.\|;:~`‘’“”/-]*" ""
-  │ 			      (denote-slug-keep-only-ascii str)))))
+  │                               (denote-slug-keep-only-ascii str)))))
   │ 
   │ (defun my-denote-sluggify-keyword (str)
   │   (downcase
   │    (replace-regexp-in-string "[][{}!@#$%^&*()+'\"?,.\|;:~`‘’“”/_ =-]*" ""
-  │ 			     (denote-slug-keep-only-ascii str))))
+  │                              (denote-slug-keep-only-ascii str))))
   │ 
   │ (defcustom denote-file-name-slug-functions
   │   '((title . my-denote-sluggify-title)
@@ -3057,12 +3054,12 @@ section 8.4
   │ 
   │ (defun my-denote--get-all-used-ids ()
   │   (when-let* ((ids (make-hash-table :test 'equal))
-  │ 	      (files (denote-directory-files nil nil nil nil :has-identifier))
-  │ 	      (file-names (mapcar #'file-name-nondirectory files))
-  │ 	      (names (append file-names (denote--buffer-file-names))))
+  │               (files (denote-directory-files nil nil nil nil :has-identifier))
+  │               (file-names (mapcar #'file-name-nondirectory files))
+  │               (names (append file-names (denote--buffer-file-names))))
   │     (dolist (name names)
   │       (when-let* ((id (denote-retrieve-filename-identifier name)))
-  │ 	(puthash id t ids)))
+  │         (puthash id t ids)))
   │     ids))
   │ 
   │ (defun my-denote-get-identifier (initial-identifier _date)
@@ -3073,14 +3070,14 @@ section 8.4
   │      (t
   │       (number-to-string
   │        (let ((keys nil))
-  │ 	 ;; NOTE 2025-09-19: The `string-to-number' is done with the
-  │ 	 ;; assumption that this is always an integer.  It will break
-  │ 	 ;; with the default Denote identifier scheme or, indeed,
-  │ 	 ;; anything that is not strictly numeric.
-  │ 	 (when identifiers (maphash (lambda (key value) (push (string-to-number key) keys)) identifiers))
-  │ 	 (if keys
-  │ 	     (+ (apply #'max keys) 1)
-  │ 	   1)))))))
+  │          ;; NOTE 2025-09-19: The `string-to-number' is done with the
+  │          ;; assumption that this is always an integer.  It will break
+  │          ;; with the default Denote identifier scheme or, indeed,
+  │          ;; anything that is not strictly numeric.
+  │          (when identifiers (maphash (lambda (key value) (push (string-to-number key) keys)) identifiers))
+  │          (if keys
+  │              (+ (apply #'max keys) 1)
+  │            1)))))))
   │ 
   │ 
   │ 
@@ -3108,21 +3105,21 @@ section 8.4
   │ (defun my-denote-generate-identifier-as-number (initial-identifier _date)
   │   (let ((denote-used-identifiers (or denote-used-identifiers (denote--get-all-used-ids))))
   │     (cond (;; Always use the supplied initial-identifier if possible,
-  │ 	   ;; regardless of format.
-  │ 	   (and initial-identifier
-  │ 		(not (gethash initial-identifier denote-used-identifiers)))
-  │ 	   initial-identifier)
-  │ 	  (;; If the supplied initial-identifier is already used, but
-  │ 	   ;; it has the right format, make is unique.
-  │ 	   (and initial-identifier
-  │ 		(string-match-p "[1-9][0-9]*" initial-identifier))
-  │ 	   (my-denote--find-first-unused-id-as-number initial-identifier))
-  │ 	  (;; Else, the supplied initial-identifier is nil or it is
-  │ 	   ;; already used or it does not match the supplied
-  │ 	   ;; format. Ignore it and generate a valid identifier with
-  │ 	   ;; the right format.
-  │ 	   t
-  │ 	   (my-denote--find-first-unused-id-as-number "1")))))
+  │            ;; regardless of format.
+  │            (and initial-identifier
+  │                 (not (gethash initial-identifier denote-used-identifiers)))
+  │            initial-identifier)
+  │           (;; If the supplied initial-identifier is already used, but
+  │            ;; it has the right format, make is unique.
+  │            (and initial-identifier
+  │                 (string-match-p "[1-9][0-9]*" initial-identifier))
+  │            (my-denote--find-first-unused-id-as-number initial-identifier))
+  │           (;; Else, the supplied initial-identifier is nil or it is
+  │            ;; already used or it does not match the supplied
+  │            ;; format. Ignore it and generate a valid identifier with
+  │            ;; the right format.
+  │            t
+  │            (my-denote--find-first-unused-id-as-number "1")))))
   └────
 
 
@@ -3246,8 +3243,8 @@ section 8.4
   │ (defun my-denote-format-date (date)
   │   "Format DATE using `my-denote-date-identifier-format'."
   │   (pcase-let* ((identifier-string (format-time-string my-denote-date-identifier-format date))
-  │ 	       (`(,date ,day-of-week ,time) (split-string identifier-string))
-  │ 	       (day-as-letter (my-denote-get-day-of-week-as-alpha day-of-week)))
+  │                (`(,date ,day-of-week ,time) (split-string identifier-string))
+  │                (day-as-letter (my-denote-get-day-of-week-as-alpha day-of-week)))
   │     (concat date day-as-letter time)))
   │ 
   │ (defun my-denote-generate-identifier-as-date (initial-identifier date)
@@ -3261,15 +3258,15 @@ section 8.4
   │ Slightly modified version of `denote-generate-identifier-as-date'."
   │   (let ((denote-used-identifiers (or denote-used-identifiers (denote--get-all-used-ids))))
   │     (cond ((and initial-identifier
-  │ 		(not (gethash initial-identifier denote-used-identifiers)))
-  │ 	   initial-identifier)
-  │ 	  ((and initial-identifier
-  │ 		(string-match-p denote-date-identifier-regexp initial-identifier)
-  │ 		(date-to-time initial-identifier))
-  │ 	   (denote--find-first-unused-id-as-date initial-identifier))
-  │ 	  (t
-  │ 	   (denote--find-first-unused-id-as-date
-  │ 	    (my-denote-format-date (or date (current-time))))))))
+  │                 (not (gethash initial-identifier denote-used-identifiers)))
+  │            initial-identifier)
+  │           ((and initial-identifier
+  │                 (string-match-p denote-date-identifier-regexp initial-identifier)
+  │                 (date-to-time initial-identifier))
+  │            (denote--find-first-unused-id-as-date initial-identifier))
+  │           (t
+  │            (denote--find-first-unused-id-as-date
+  │             (my-denote-format-date (or date (current-time))))))))
   └────
 
 
@@ -3321,16 +3318,16 @@ section 8.4
   │ 
   │ (defun my-denote-custom-identifier--make-unique-identifier (base-identifier date-string identifiers)
   │   (let* ((current-date-string date-string)
-  │ 	 (id (format "%sT%s" base-identifier current-date-string)))
+  │          (id (format "%sT%s" base-identifier current-date-string)))
   │     (while (gethash id identifiers)
   │       (let* ((year (string-to-number (substring current-date-string 0 4)))
-  │ 	     (month (string-to-number (substring current-date-string 4 6)))
-  │ 	     (day (string-to-number (substring current-date-string 6 8)))
-  │ 	     (time (encode-time 0 0 0 day month year))
-  │ 	     (next-day-time (seconds-to-time (+ (time-to-seconds time) 86400)))
-  │ 	     (next-date-string (format-time-string "%Y%m%d" next-day-time)))
-  │ 	(setq current-date-string next-date-string)
-  │ 	(setq id (format "%sT%s" base-identifier current-date-string))))
+  │              (month (string-to-number (substring current-date-string 4 6)))
+  │              (day (string-to-number (substring current-date-string 6 8)))
+  │              (time (encode-time 0 0 0 day month year))
+  │              (next-day-time (seconds-to-time (+ (time-to-seconds time) 86400)))
+  │              (next-date-string (format-time-string "%Y%m%d" next-day-time)))
+  │         (setq current-date-string next-date-string)
+  │         (setq id (format "%sT%s" base-identifier current-date-string))))
   │     id))
   │ 
   │ (defvar my-denote-custom-identifier-year-history nil)
@@ -3360,15 +3357,15 @@ section 8.4
   │       initial-identifier)
   │      (t
   │       (let ((base-id (concat
-  │ 		      (read-string "Year: " nil 'my-denote-custom-identifier-year-history)
-  │ 		      "E" (read-string "Edition: " nil 'my-denote-custom-identifier-edition-history)
-  │ 		      (my-denote-custom-identifier-author-format (my-denote-custom-identifier-author-prompt))
-  │ 		      "F" (read-string "Format: " nil 'my-denote-custom-identifier-format-history)
-  │ 		      "P" (read-string "Publisher: " nil 'my-denote-custom-identifier-publisher-history))))
-  │ 	(my-denote-custom-identifier--make-unique-identifier
-  │ 	 base-id
-  │ 	 (format-time-string "%Y%m%d" (or date (current-time)))
-  │ 	 denote-used-identifiers))))))
+  │                       (read-string "Year: " nil 'my-denote-custom-identifier-year-history)
+  │                       "E" (read-string "Edition: " nil 'my-denote-custom-identifier-edition-history)
+  │                       (my-denote-custom-identifier-author-format (my-denote-custom-identifier-author-prompt))
+  │                       "F" (read-string "Format: " nil 'my-denote-custom-identifier-format-history)
+  │                       "P" (read-string "Publisher: " nil 'my-denote-custom-identifier-publisher-history))))
+  │         (my-denote-custom-identifier--make-unique-identifier
+  │          base-id
+  │          (format-time-string "%Y%m%d" (or date (current-time)))
+  │          denote-used-identifiers))))))
   └────
 
 
@@ -4326,8 +4323,8 @@ backlinks?] See section 27.11
   │ ;; We use different ways to specify a path for demo purposes.
   │ (setq denote-dired-directories
   │       (list denote-directory
-  │ 	    (thread-last denote-directory (expand-file-name "attachments"))
-  │ 	    (expand-file-name "~/Documents/vlog")))
+  │             (thread-last denote-directory (expand-file-name "attachments"))
+  │             (expand-file-name "~/Documents/vlog")))
   │ 
   │ (add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)
   └────
@@ -4954,7 +4951,7 @@ section 8.4
 [Use the `consult-notes' package] See section 20.9
 
 
-20.2 Use the `denote-sequence' package to write sequence notes or "folgezettel"
+20.2 Use the `denote-sequence' package to write sequence notes or “folgezettel”
 ───────────────────────────────────────────────────────────────────────────────
 
   This section is about the external package `denote-sequence' (by
@@ -5135,7 +5132,7 @@ section 8.4
   ┌────
   │ (setq consult-notes-file-dir-sources
   │       `(("Denote Notes"  ?d ,(denote-directory))
-  │ 	("Books"  ?b "~/Documents/books/")))
+  │         ("Books"  ?b "~/Documents/books/")))
   └────
 
   With the above, `M-x consult-notes' will list the files in those two
@@ -5285,33 +5282,33 @@ section 8.4
   │ has no contents or has only the front matter."
   │   (and (denote-file-is-note-p file)
   │        (or (denote--file-with-temp-buffer file
-  │ 	     (re-search-forward "^$" nil t)
-  │ 	     (if (re-search-forward "[^\s\t\n\r]+" nil t)
-  │ 		 nil
-  │ 	       t))
-  │ 	   ;; This must come later because here we consider a file
-  │ 	   ;; "empty" even if it only has front matter.
-  │ 	   (denote--file-empty-p file))))
+  │              (re-search-forward "^$" nil t)
+  │              (if (re-search-forward "[^\s\t\n\r]+" nil t)
+  │                  nil
+  │                t))
+  │            ;; This must come later because here we consider a file
+  │            ;; "empty" even if it only has front matter.
+  │            (denote--file-empty-p file))))
   │ 
   │ (defun my-denote-sort-dired-empty-files (files-matching-regexp sort-by-component reverse exclude-regexp)
   │   "Like `denote-sort-dired' but only cover empty files.
   │ Empty files are those that satisfy `my-denote--note-has-no-contents-p'."
   │   (interactive (append (list (denote-files-matching-regexp-prompt)) (denote-sort-dired--prompts)))
   │   (pcase-let* ((`(,component . ,reverse-sort) (denote-sort-dired--get-sort-parameters sort-by-component reverse))
-  │ 	       (relative-p (denote-has-single-denote-directory-p))
-  │ 	       (files-fn `(lambda ()
-  │ 			   (let* ((files (denote-sort-get-directory-files ,files-matching-regexp ',component ,reverse-sort))
-  │ 				  (empty-files (seq-filter #'my-denote--note-has-no-contents-p files)))
-  │ 			     (if relative-p
-  │ 				 (mapcar #'file-relative-name empty-files)
-  │ 			       empty-files)))))
+  │                (relative-p (denote-has-single-denote-directory-p))
+  │                (files-fn `(lambda ()
+  │                            (let* ((files (denote-sort-get-directory-files ,files-matching-regexp ',component ,reverse-sort))
+  │                                   (empty-files (seq-filter #'my-denote--note-has-no-contents-p files)))
+  │                              (if relative-p
+  │                                  (mapcar #'file-relative-name empty-files)
+  │                                empty-files)))))
   │     (if-let* ((directory (if relative-p ; see comment in `denote-file-prompt'
-  │ 			     (car (denote-directories))
-  │ 			   (denote-directories-get-common-root)))
-  │ 	      (files (funcall files-fn))
-  │ 	      (dired-name (format-message files-matching-regexp))
-  │ 	      (buffer-name (funcall denote-sort-dired-buffer-name-function (format "%s (EMPTY)" files-matching-regexp) sort-by-component reverse-sort exclude-regexp)))
-  │ 	(denote-sort-dired--prepare-buffer directory files-fn dired-name buffer-name)
+  │                              (car (denote-directories))
+  │                            (denote-directories-get-common-root)))
+  │               (files (funcall files-fn))
+  │               (dired-name (format-message files-matching-regexp))
+  │               (buffer-name (funcall denote-sort-dired-buffer-name-function (format "%s (EMPTY)" files-matching-regexp) sort-by-component reverse-sort exclude-regexp)))
+  │         (denote-sort-dired--prepare-buffer directory files-fn dired-name buffer-name)
   │       (message "No matching files for: %s" files-matching-regexp))))
   │ 
   │ (defun my-denote-sort-dired-without-empty-files (files-matching-regexp sort-by-component reverse exclude-regexp)
@@ -5319,20 +5316,20 @@ section 8.4
   │ Empty files are those that satisfy `my-denote--note-has-no-contents-p'."
   │   (interactive (append (list (denote-files-matching-regexp-prompt)) (denote-sort-dired--prompts)))
   │   (pcase-let* ((`(,component . ,reverse-sort) (denote-sort-dired--get-sort-parameters sort-by-component reverse))
-  │ 	       (relative-p (denote-has-single-denote-directory-p))
-  │ 	       (files-fn `(lambda ()
-  │ 			   (let* ((files (denote-sort-get-directory-files ,files-matching-regexp ',component ,reverse-sort))
-  │ 				  (empty-files (seq-remove #'my-denote--note-has-no-contents-p files)))
-  │ 			     (if relative-p
-  │ 				 (mapcar #'file-relative-name empty-files)
-  │ 			       empty-files)))))
+  │                (relative-p (denote-has-single-denote-directory-p))
+  │                (files-fn `(lambda ()
+  │                            (let* ((files (denote-sort-get-directory-files ,files-matching-regexp ',component ,reverse-sort))
+  │                                   (empty-files (seq-remove #'my-denote--note-has-no-contents-p files)))
+  │                              (if relative-p
+  │                                  (mapcar #'file-relative-name empty-files)
+  │                                empty-files)))))
   │     (if-let* ((directory (if relative-p ; see comment in `denote-file-prompt'
-  │ 			     (car (denote-directories))
-  │ 			   (denote-directories-get-common-root)))
-  │ 	      (files (funcall files-fn))
-  │ 	      (dired-name (format-message files-matching-regexp))
-  │ 	      (buffer-name (funcall denote-sort-dired-buffer-name-function (format "%s (OMIT EMPTY)" files-matching-regexp) sort-by-component reverse-sort exclude-regexp)))
-  │ 	(denote-sort-dired--prepare-buffer directory files-fn dired-name buffer-name)
+  │                              (car (denote-directories))
+  │                            (denote-directories-get-common-root)))
+  │               (files (funcall files-fn))
+  │               (dired-name (format-message files-matching-regexp))
+  │               (buffer-name (funcall denote-sort-dired-buffer-name-function (format "%s (OMIT EMPTY)" files-matching-regexp) sort-by-component reverse-sort exclude-regexp)))
+  │         (denote-sort-dired--prepare-buffer directory files-fn dired-name buffer-name)
   │       (message "No matching files for: %s" files-matching-regexp))))
   │ 
   │ (defun my-denote-sort-dired-all-empty-files ()
@@ -5379,7 +5376,7 @@ section 8.4
   │ 
   │ Add this function to the `after-save-hook'."
   │   (let ((denote-rename-confirmations nil)
-  │ 	(denote-save-buffers t)) ; to save again post-rename
+  │         (denote-save-buffers t)) ; to save again post-rename
   │     (when (and buffer-file-name (denote-file-is-note-p buffer-file-name))
   │       (ignore-errors (denote-rename-file-using-front-matter buffer-file-name))
   │       (message "Buffer saved; Denote file renamed"))))
@@ -5435,9 +5432,9 @@ section 8.4
   │    (list
   │     (read-regexp
   │      (concat "Files "
-  │ 	     (when current-prefix-arg
-  │ 	       (propertize "NOT " 'face 'warning))
-  │ 	     "matching PATTERN: ")
+  │              (when current-prefix-arg
+  │                (propertize "NOT " 'face 'warning))
+  │              "matching PATTERN: ")
   │      nil 'prot-dired--limit-hist)
   │     current-prefix-arg))
   │   (dired-mark-files-regexp regexp)
@@ -5518,8 +5515,8 @@ section 8.4
   │ (defun prot-eshell--command-prompt-output ()
   │   "Capture last command prompt and its output."
   │   (let ((beg (save-excursion
-  │ 	       (goto-char (eshell-beginning-of-input))
-  │ 	       (goto-char (point-at-bol)))))
+  │                (goto-char (eshell-beginning-of-input))
+  │                (goto-char (point-at-bol)))))
   │     (when (derived-mode-p 'eshell-mode)
   │       (buffer-substring-no-properties beg (eshell-end-of-output)))))
   │ 
@@ -5533,12 +5530,12 @@ section 8.4
   │   (let ((eshell-output (prot-eshell--command-prompt-output)))
   │     (with-current-buffer (get-buffer-create prot-eshell-output-buffer)
   │       (let ((inhibit-read-only t))
-  │ 	(goto-char (point-max))
-  │ 	(unless (eq (point-min) (point-max))
-  │ 	  (insert (format "\n%s\n\n" prot-eshell-output-delimiter)))
-  │ 	(goto-char (point-at-bol))
-  │ 	(insert eshell-output)
-  │ 	(switch-to-buffer-other-window (current-buffer))))))
+  │         (goto-char (point-max))
+  │         (unless (eq (point-min) (point-max))
+  │           (insert (format "\n%s\n\n" prot-eshell-output-delimiter)))
+  │         (goto-char (point-at-bol))
+  │         (insert eshell-output)
+  │         (switch-to-buffer-other-window (current-buffer))))))
   └────
 
   Bind `prot-eshell-export' to a key in the `eshell-mode-map' and give
@@ -5605,10 +5602,10 @@ section 8.4
   │   (interactive
   │    (list
   │     (read-from-minibuffer (concat (if current-prefix-arg
-  │ 				      (propertize "Recursive" 'face 'warning)
-  │ 				    "Local")
-  │ 				  " grep for PATTERN: ")
-  │ 			  nil nil nil 'prot-search--grep-hist)
+  │                                       (propertize "Recursive" 'face 'warning)
+  │                                     "Local")
+  │                                   " grep for PATTERN: ")
+  │                           nil nil nil 'prot-search--grep-hist)
   │     current-prefix-arg))
   │   (unless grep-command
   │     (grep-compute-defaults))
@@ -5707,9 +5704,9 @@ section 8.4
   │   "Prompt for file with identifier in variable `denote-directory'.
   │ With optional INITIAL-TEXT, use it to prepopulate the minibuffer."
   │   (read-file-name "Select note: " (denote-directory) nil nil initial-text
-  │ 		  (lambda (f)
-  │ 		    (or (denote-file-has-identifier-p f)
-  │ 			(file-directory-p f)))))
+  │                   (lambda (f)
+  │                     (or (denote-file-has-identifier-p f)
+  │                         (file-directory-p f)))))
   │ 
   │ ;; Our wrapper command that changes the current `denote-file-prompt'
   │ ;; to the functionality of `denote-file-prompt-original' only when
@@ -5751,14 +5748,14 @@ section 8.4
   │   (interactive (list (denote-keywords-prompt)) image-dired-thumbnail-mode)
   │   (image-dired--with-marked
   │    (when-let* ((file (image-dired-original-file-name))
-  │ 	       (dir (file-name-directory file))
-  │ 	       (id (or (denote-retrieve-filename-identifier file) ""))
-  │ 	       (file-type (denote-filetype-heuristics file))
-  │ 	       (title (denote--retrieve-title-or-filename file file-type))
-  │ 	       (signature (or (denote-retrieve-filename-signature file) "")
-  │ 	       (extension (file-name-extension file t))
-  │ 	       (new-name (denote-format-file-name dir id keywords title extension signature))
-  │ 	       (default-directory dir))
+  │                (dir (file-name-directory file))
+  │                (id (or (denote-retrieve-filename-identifier file) ""))
+  │                (file-type (denote-filetype-heuristics file))
+  │                (title (denote--retrieve-title-or-filename file file-type))
+  │                (signature (or (denote-retrieve-filename-signature file) "")
+  │                (extension (file-name-extension file t))
+  │                (new-name (denote-format-file-name dir id keywords title extension signature))
+  │                (default-directory dir))
   │      (denote-rename-file-and-buffer file new-name))))
   └────
 
@@ -5777,13 +5774,13 @@ section 8.4
   │   (interactive (list (denote-keywords-prompt)) image-dired-thumbnail-mode)
   │   (image-dired--with-marked
   │    (when-let* ((file (image-dired-original-file-name))
-  │ 	       (dir (file-name-directory file))
-  │ 	       (file-type (denote-filetype-heuristics file))
-  │ 	       (title (denote--retrieve-title-or-filename file file-type))
-  │ 	       (extension (file-name-extension file t))
-  │ 	       (kws (denote--keywords-combine keywords))
-  │ 	       (new-name (concat dir title "__" kws extension))
-  │ 	       (default-directory dir))
+  │                (dir (file-name-directory file))
+  │                (file-type (denote-filetype-heuristics file))
+  │                (title (denote--retrieve-title-or-filename file file-type))
+  │                (extension (file-name-extension file t))
+  │                (kws (denote--keywords-combine keywords))
+  │                (new-name (concat dir title "__" kws extension))
+  │                (default-directory dir))
   │      (denote-rename-file-and-buffer file new-name))))
   └────
 
@@ -5831,15 +5828,15 @@ section 8.4
   │   (interactive nil dired-mode)
   │   (if-let* ((marks (dired-get-marked-files)))
   │       (let ((keywords (denote-keywords-prompt)))
-  │ 	(dolist (file marks)
-  │ 	  (let* ((dir (file-name-directory file))
-  │ 		 (file-type (denote-filetype-heuristics file))
-  │ 		 (title (denote--retrieve-title-or-filename file file-type))
-  │ 		 (extension (file-name-extension file t))
-  │ 		 (kws (denote--keywords-combine keywords))
-  │ 		 (new-name (concat dir title "__" kws extension)))
-  │ 	    (denote-rename-file-and-buffer file new-name)))
-  │ 	(revert-buffer))
+  │         (dolist (file marks)
+  │           (let* ((dir (file-name-directory file))
+  │                  (file-type (denote-filetype-heuristics file))
+  │                  (title (denote--retrieve-title-or-filename file file-type))
+  │                  (extension (file-name-extension file t))
+  │                  (kws (denote--keywords-combine keywords))
+  │                  (new-name (concat dir title "__" kws extension)))
+  │             (denote-rename-file-and-buffer file new-name)))
+  │         (revert-buffer))
   │     (user-error "No marked files; aborting")))
   └────
 
@@ -6046,12 +6043,12 @@ section 21.12
   │ 
   │ NAME is one among `my-denote-colleagues'."
   │   (if-let* ((files (denote-directory-files name))
-  │ 	    (length-of-files (length files)))
+  │             (length-of-files (length files)))
   │       (cond
   │        ((= length-of-files 1)
-  │ 	(car files))
+  │         (car files))
   │        ((> length-of-files 1)
-  │ 	(completing-read "Select a file: " files nil :require-match)))
+  │         (completing-read "Select a file: " files nil :require-match)))
   │     (user-error "No files for colleague with name `%s'" name)))
   │ 
   │ (defun my-denote-colleagues-new-meeting ()
@@ -6062,8 +6059,8 @@ section 21.12
   │   (declare (interactive-only t))
   │   (interactive)
   │   (let* ((name (my-denote-colleagues-prompt))
-  │ 	 (file (my-denote-colleagues-get-file name))
-  │ 	 (time (format-time-string "%F %a %R")))  ; remove %R if you do not want the time
+  │          (file (my-denote-colleagues-get-file name))
+  │          (time (format-time-string "%F %a %R")))  ; remove %R if you do not want the time
   │     (with-current-buffer (find-file file)
   │       (goto-char (point-max))
   │       ;; Here I am assuming we are in `org-mode', hence the leading
@@ -7522,12 +7519,12 @@ section 21.12
   │ (setq xref-search-program
   │       (cond
   │        ((or (executable-find "ripgrep")
-  │ 	    (executable-find "rg"))
-  │ 	'ripgrep)
+  │             (executable-find "rg"))
+  │         'ripgrep)
   │        ((executable-find "ugrep")
-  │ 	'ugrep)
+  │         'ugrep)
   │        (t
-  │ 	'grep)))
+  │         'grep)))
   └────
 
 

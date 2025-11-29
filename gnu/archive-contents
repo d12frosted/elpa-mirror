@@ -527,12 +527,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 0) ((emacs (29 1)) (compat (30))) "Consulting completing-read"
+  . [(3 1) ((emacs (29 1)) (compat (30))) "Consulting completing-read"
      tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "f2965873f94815c6a7e742bf2303135a6f59b24e"))])
+      (:commit . "d0370320d9fdde5ac6e0a27720f51138315af882"))])
  (consult-denote
   . [(0 4 1) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
@@ -701,12 +701,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "a763ec1e5c2987efea3ce2ee6d9c979f56ab6528"))])
  (denote
-  . [(4 1 2) ((emacs (28 1)))
+  . [(4 1 3) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "133439ba1e273cc3e712b046ee03642be6ca6b72"))])
+      (:commit . "d86cb704260f9e4815d863eb4059514f4e587577"))])
  (denote-journal
   . [(0 2 1) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -1652,13 +1652,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx
-  . [(2 4) ((emacs (29 1)) (compat (30))) "Enchanted Spell Checker"
+  . [(2 5) ((emacs (29 1)) (compat (30))) "Enchanted Spell Checker"
      tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "e0ad6ea90e25c363a419eb5dbc378ae82252ed0a"))])
+      (:commit . "a678be8cf0888947789a10a493c8b1c3a7066f52"))])
  (jit-spell
   . [(0 5) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -2967,12 +2967,12 @@
       (:url . "https://elpa.gnu.org/packages/stream.html")
       (:commit . "b9b3ad5c38063703cfa5a06522031e631c49b7e3"))])
  (substitute
-  . [(0 3 1) ((emacs (27 1)))
+  . [(0 4 0) ((emacs (27 1)))
      "Efficiently replace targets in the buffer or context" tar
      ((:url . "https://github.com/protesilaos/substitute")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "6e7de79f8a3436fce6acfe7d04a0a375ad80dc34"))])
+      (:commit . "63818140b432212ea2d5314a27469c53535b61f8"))])
  (svg
   . [(1 1) ((emacs (25))) "SVG image creation functions" tar
      ((:keywords "image")
@@ -3174,14 +3174,14 @@
       (:url . "https://elpa.gnu.org/packages/track-changes.html")
       (:commit . "ffb7d656a2c89f86ccd2de51379de9612c7a4aa3"))])
  (tramp
-  . [(2 8 0 4) ((emacs (28 1)))
+  . [(2 8 0 5) ((emacs (28 1)))
      "Transparent Remote Access, Multiple Protocol" tar
      ((:url . "https://www.gnu.org/software/tramp/")
       (:keywords "comm" "processes")
       (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
       (:authors ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 		("Michael Albinus" . "michael.albinus@gmx.de"))
-      (:commit . "382d8b1ed71eb3e4684d6db3aa69c3023e71ced5"))])
+      (:commit . "ffb5b3473a4054e8d5499370cae50032227e8644"))])
  (tramp-nspawn
   . [(1 0 1) ((emacs (23)))
      "Tramp integration for systemd-nspawn containers" tar

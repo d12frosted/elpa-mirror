@@ -27,14 +27,14 @@
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
       (:commit . "fc0f1381bb9398a2d5a76776bad812d7ce3507dc"))])
  (alect-themes
-  . [(0 10) ((emacs (24 0)))
+  . [(0 11) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
      tar
      ((:url . "https://github.com/alezost/alect-themes")
       (:keywords "color" "theme")
       (:maintainer "Alex Kost" . "alezost@gmail.com")
       (:authors ("Alex Kost" . "alezost@gmail.com"))
-      (:commit . "89560047934c236d05ea6b911c0c63702a8e06f3"))])
+      (:commit . "032dfebede02d44c167328f95c7ea5846d340e3c"))])
  (ample-theme
   . [(0 3 0) nil "Calm Dark Theme for Emacs" tar
      ((:url . "https://github.com/jordonbiondo/ample-theme")

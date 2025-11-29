@@ -382,8 +382,8 @@ Table of Contents
   ┌────
   │ (consult-info-define "emacs" "efaq" "elisp" "cl" "compat" "eshell")
   │ (consult-info-define 'completion
-  │ 		     "vertico" "consult" "marginalia" "orderless"
-  │ 		     "embark" "corfu" "cape" "tempel")
+  │                      "vertico" "consult" "marginalia" "orderless"
+  │                      "embark" "corfu" "cape" "tempel")
   │ (consult-info-define "org")
   │ (consult-info-define "gnus")
   │ (consult-info-define "magit")
@@ -514,10 +514,10 @@ Table of Contents
   │ (consult-customize consult-theme :preview-key '(:debounce 0.5 any))
   │ ;; Preview immediately on M-., on up/down after 0.5s, on any other key after 1s
   │ (consult-customize consult-theme
-  │ 		   :preview-key
-  │ 		   '("M-."
-  │ 		     :debounce 0.5 "<up>" "<down>"
-  │ 		     :debounce 1 any))
+  │                    :preview-key
+  │                    '("M-."
+  │                      :debounce 0.5 "<up>" "<down>"
+  │                      :debounce 1 any))
   └────
 
 
@@ -714,20 +714,20 @@ Table of Contents
   ┌────
   │ (defvar org-source
   │   (list :name     "Org Buffer"
-  │ 	:category 'buffer
-  │ 	:narrow   ?o
-  │ 	:face     'consult-buffer
-  │ 	:history  'buffer-name-history
-  │ 	:state    #'consult--buffer-state
-  │ 	:new
-  │ 	(lambda (name)
-  │ 	  (with-current-buffer (get-buffer-create name)
-  │ 	    (insert "#+title: " name "\n\n")
-  │ 	    (org-mode)
-  │ 	    (consult--buffer-action (current-buffer))))
-  │ 	:items
-  │ 	(lambda ()
-  │ 	  (consult--buffer-query :mode 'org-mode :as #'consult--buffer-pair))))
+  │         :category 'buffer
+  │         :narrow   ?o
+  │         :face     'consult-buffer
+  │         :history  'buffer-name-history
+  │         :state    #'consult--buffer-state
+  │         :new
+  │         (lambda (name)
+  │           (with-current-buffer (get-buffer-create name)
+  │             (insert "#+title: " name "\n\n")
+  │             (org-mode)
+  │             (consult--buffer-action (current-buffer))))
+  │         :items
+  │         (lambda ()
+  │           (consult--buffer-query :mode 'org-mode :as #'consult--buffer-pair))))
   │ 
   │ (add-to-list 'consult-buffer-sources 'org-source 'append)
   └────
@@ -833,58 +833,58 @@ Table of Contents
   │ (use-package consult
   │   ;; Replace bindings. Lazily loaded by `use-package'.
   │   :bind (;; C-c bindings in `mode-specific-map'
-  │ 	 ("C-c M-x" . consult-mode-command)
-  │ 	 ("C-c h" . consult-history)
-  │ 	 ("C-c k" . consult-kmacro)
-  │ 	 ("C-c m" . consult-man)
-  │ 	 ("C-c i" . consult-info)
-  │ 	 ([remap Info-search] . consult-info)
-  │ 	 ;; C-x bindings in `ctl-x-map'
-  │ 	 ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
-  │ 	 ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
-  │ 	 ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
-  │ 	 ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
-  │ 	 ("C-x t b" . consult-buffer-other-tab)    ;; orig. switch-to-buffer-other-tab
-  │ 	 ("C-x r b" . consult-bookmark)            ;; orig. bookmark-jump
-  │ 	 ("C-x p b" . consult-project-buffer)      ;; orig. project-switch-to-buffer
-  │ 	 ;; Custom M-# bindings for fast register access
-  │ 	 ("M-#" . consult-register-load)
-  │ 	 ("M-'" . consult-register-store)          ;; orig. abbrev-prefix-mark (unrelated)
-  │ 	 ("C-M-#" . consult-register)
-  │ 	 ;; Other custom bindings
-  │ 	 ("M-y" . consult-yank-pop)                ;; orig. yank-pop
-  │ 	 ;; M-g bindings in `goto-map'
-  │ 	 ("M-g e" . consult-compile-error)
-  │ 	 ("M-g r" . consult-grep-match)
-  │ 	 ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
-  │ 	 ("M-g g" . consult-goto-line)             ;; orig. goto-line
-  │ 	 ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
-  │ 	 ("M-g o" . consult-outline)               ;; Alternative: consult-org-heading
-  │ 	 ("M-g m" . consult-mark)
-  │ 	 ("M-g k" . consult-global-mark)
-  │ 	 ("M-g i" . consult-imenu)
-  │ 	 ("M-g I" . consult-imenu-multi)
-  │ 	 ;; M-s bindings in `search-map'
-  │ 	 ("M-s d" . consult-find)                  ;; Alternative: consult-fd
-  │ 	 ("M-s c" . consult-locate)
-  │ 	 ("M-s g" . consult-grep)
-  │ 	 ("M-s G" . consult-git-grep)
-  │ 	 ("M-s r" . consult-ripgrep)
-  │ 	 ("M-s l" . consult-line)
-  │ 	 ("M-s L" . consult-line-multi)
-  │ 	 ("M-s k" . consult-keep-lines)
-  │ 	 ("M-s u" . consult-focus-lines)
-  │ 	 ;; Isearch integration
-  │ 	 ("M-s e" . consult-isearch-history)
-  │ 	 :map isearch-mode-map
-  │ 	 ("M-e" . consult-isearch-history)         ;; orig. isearch-edit-string
-  │ 	 ("M-s e" . consult-isearch-history)       ;; orig. isearch-edit-string
-  │ 	 ("M-s l" . consult-line)                  ;; needed by consult-line to detect isearch
-  │ 	 ("M-s L" . consult-line-multi)            ;; needed by consult-line to detect isearch
-  │ 	 ;; Minibuffer history
-  │ 	 :map minibuffer-local-map
-  │ 	 ("M-s" . consult-history)                 ;; orig. next-matching-history-element
-  │ 	 ("M-r" . consult-history))                ;; orig. previous-matching-history-element
+  │          ("C-c M-x" . consult-mode-command)
+  │          ("C-c h" . consult-history)
+  │          ("C-c k" . consult-kmacro)
+  │          ("C-c m" . consult-man)
+  │          ("C-c i" . consult-info)
+  │          ([remap Info-search] . consult-info)
+  │          ;; C-x bindings in `ctl-x-map'
+  │          ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
+  │          ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
+  │          ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
+  │          ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
+  │          ("C-x t b" . consult-buffer-other-tab)    ;; orig. switch-to-buffer-other-tab
+  │          ("C-x r b" . consult-bookmark)            ;; orig. bookmark-jump
+  │          ("C-x p b" . consult-project-buffer)      ;; orig. project-switch-to-buffer
+  │          ;; Custom M-# bindings for fast register access
+  │          ("M-#" . consult-register-load)
+  │          ("M-'" . consult-register-store)          ;; orig. abbrev-prefix-mark (unrelated)
+  │          ("C-M-#" . consult-register)
+  │          ;; Other custom bindings
+  │          ("M-y" . consult-yank-pop)                ;; orig. yank-pop
+  │          ;; M-g bindings in `goto-map'
+  │          ("M-g e" . consult-compile-error)
+  │          ("M-g r" . consult-grep-match)
+  │          ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
+  │          ("M-g g" . consult-goto-line)             ;; orig. goto-line
+  │          ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
+  │          ("M-g o" . consult-outline)               ;; Alternative: consult-org-heading
+  │          ("M-g m" . consult-mark)
+  │          ("M-g k" . consult-global-mark)
+  │          ("M-g i" . consult-imenu)
+  │          ("M-g I" . consult-imenu-multi)
+  │          ;; M-s bindings in `search-map'
+  │          ("M-s d" . consult-find)                  ;; Alternative: consult-fd
+  │          ("M-s c" . consult-locate)
+  │          ("M-s g" . consult-grep)
+  │          ("M-s G" . consult-git-grep)
+  │          ("M-s r" . consult-ripgrep)
+  │          ("M-s l" . consult-line)
+  │          ("M-s L" . consult-line-multi)
+  │          ("M-s k" . consult-keep-lines)
+  │          ("M-s u" . consult-focus-lines)
+  │          ;; Isearch integration
+  │          ("M-s e" . consult-isearch-history)
+  │          :map isearch-mode-map
+  │          ("M-e" . consult-isearch-history)         ;; orig. isearch-edit-string
+  │          ("M-s e" . consult-isearch-history)       ;; orig. isearch-edit-string
+  │          ("M-s l" . consult-line)                  ;; needed by consult-line to detect isearch
+  │          ("M-s L" . consult-line-multi)            ;; needed by consult-line to detect isearch
+  │          ;; Minibuffer history
+  │          :map minibuffer-local-map
+  │          ("M-s" . consult-history)                 ;; orig. next-matching-history-element
+  │          ("M-r" . consult-history))                ;; orig. previous-matching-history-element
   │ 
   │   ;; Enable automatic preview at point in the *Completions* buffer. This is
   │   ;; relevant when you use the default completion UI.
@@ -902,7 +902,7 @@ Table of Contents
   │ 
   │   ;; Use Consult to select xref locations with preview
   │   (setq xref-show-xrefs-function #'consult-xref
-  │ 	xref-show-definitions-function #'consult-xref)
+  │         xref-show-definitions-function #'consult-xref)
   │ 
   │   ;; Configure other variables and modes in the :config section,
   │   ;; after lazily loading the package.
@@ -1274,12 +1274,12 @@ Table of Contents
   ┌────
   │ (consult--read
   │  (mapcar (lambda (value)
-  │ 	   (propertize
-  │ 	    (format "%s %s"
-  │ 		    (propertize "Option" 'face 'font-lock-comment-face)
-  │ 		    value)
-  │ 	    'consult--candidate value))
-  │ 	 '("A" "B" "C"))
+  │            (propertize
+  │             (format "%s %s"
+  │                     (propertize "Option" 'face 'font-lock-comment-face)
+  │                     value)
+  │             'consult--candidate value))
+  │          '("A" "B" "C"))
   │  :prompt "Select: "
   │  :sort nil
   │  :lookup #'consult--lookup-candidate)
@@ -1335,7 +1335,7 @@ Table of Contents
   │     (dotimes (i 3)
   │       (sleep-for 0.1) ;; Simulate work
   │       (funcall callback (mapcar (lambda (s) (format "%s%s" s i))
-  │ 				(split-string input nil t))))))
+  │                                 (split-string input nil t))))))
   │  :prompt "run testibus: ")
   └────
 
@@ -1373,7 +1373,7 @@ Table of Contents
   │     (dotimes (i 3)
   │       (sleep-for 0.1) ;; Simulate work
   │       (funcall callback (mapcar (lambda (s) (format "%s%s" s i))
-  │ 				(split-string input nil t))))))
+  │                                 (split-string input nil t))))))
   │  :prompt "run testibus: "
   │  :state #'testibus--preview)
   └────

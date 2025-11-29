@@ -12,8 +12,9 @@ not been checked before. Each misspelling can be corrected from a list
 of dictionary words presented as a completion menu.
 
 Installing Jinx is straight-forward and configuring should not need much
-intervention. Jinx can be used completely on its own, but can also
-safely co-exist with Emacs's built-in spell-checker Ispell.
+intervention. Jinx can be used completely on its own, and is designed as
+a full replacement for Emacs's built-in spell-checker Ispell, but it can
+also safely co-exist with it.
 
 Jinx's high performance and low resource usage comes from directly
 calling the API of the [Enchant library]. Jinx automatically compiles
@@ -47,19 +48,20 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   Jinx can be installed from GNU ELPA or MELPA directly with
   `package-install'.
 
-  Most importantly your Emacs must be compiled with dynamic module
-  support. Jinx requires `libenchant', which is needed to compile the
-  native module at install time. If `pkgconf' or `pkg-config' is
-  available, Jinx will use it to locate `libenchant' during
-  installation. Depending on your BSD or Linux distribution you have to
-  install different packages:
+  Your Emacs must be compiled with dynamic module support. Furthermore a
+  C compiler must be available on your system (`gcc' or `clang'). Jinx
+  requires `libenchant', which is needed to compile the native module at
+  install time. If `pkgconf' or `pkg-config' is available, Jinx will use
+  it to locate `libenchant' during installation. Depending on your BSD
+  or Linux distribution you have to install different packages:
 
   • Debian, Ubuntu: `libenchant-2-dev', `pkgconf'
   • Arch, Gentoo: `enchant', `pkgconf'
   • Guix: `emacs-jinx' defined in `emacs-xyz.scm'
   • Nix: `jinx' defined in `elpa-packages.nix'
-  • Void, Fedora: `enchant2-devel', `pkgconf'
-  • OpenSUSE: `emacs-jinx' or `enchant', `pkgconf'
+  • Void: `enchant2-devel', `pkgconf'
+  • Fedora: `emacs-jinx' or `enchant2-devel', `pkgconf-pkg-config'
+  • OpenSUSE: `emacs-jinx' or `enchant-devel', `pkgconf-pkg-config'
   • FreeBSD, OpenBSD, Mac: `enchant2', `pkgconf'
 
   On Windows the installation of the native module may require manual
@@ -94,9 +96,9 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   └────
 
   • `M-$' triggers correction for the misspelled word before point.
-  • `C-u M-$' triggers correction for the entire buffer.
-  • `C-u C-u M-$' forces correction of the word at point, even if it is
-    not misspelled.
+  • `C-u M-$' or `M-x jinx-correct-all' spell-checks the entire buffer.
+  • `C-u C-u M-$' or `M-x jinx-correct-word' forces correction of the
+    word at point, even if it is not misspelled.
 
   A sample configuration with the popular `use-package' macro is shown
   here:
@@ -105,7 +107,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   │ (use-package jinx
   │   :hook (emacs-startup . global-jinx-mode)
   │   :bind (("M-$" . jinx-correct)
-  │ 	 ("C-M-$" . jinx-languages)))
+  │          ("C-M-$" . jinx-languages)))
   └────
 
   See also the [Jinx Wiki] for additional configuration tips. The wiki
@@ -125,11 +127,14 @@ are listed in `jinx-camel-modes'. For these modes composite words in
 
   If you prefer to use the keyboard, invoke the command
   `jinx-correct'. The recommended binding is `M-$', see the
-  configuration section. Suggested corrections will be displayed as a
-  completion menu. You can press the displayed digit keys to quickly
-  select a suggestion. Furthermore the menu offers options to save the
-  word temporarily for the current session, in the personal dictionary
-  or in the file-local or directory-local variables.
+  configuration section. In order to check the entire buffer press the
+  keys `C-u M-$' or use `M-x jinx-correct-all'.
+
+  Suggested corrections will be displayed as a completion menu. You can
+  press the displayed digit keys to quickly select a
+  suggestion. Furthermore the menu offers options to save the word
+  temporarily for the current session, in the personal dictionary or in
+  the file-local or directory-local variables.
 
   You can enter arbitrary input at the correction prompt in order to
   make the correction or to store a modified word in the personal
@@ -151,7 +156,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
 
   ┌────
   │ (add-to-list 'vertico-multiform-categories
-  │ 	     '(jinx grid (vertico-grid-annotate . 20) (vertico-count . 4)))
+  │              '(jinx grid (vertico-grid-annotate . 20) (vertico-count . 4)))
   │ (vertico-multiform-mode)
   └────
 
