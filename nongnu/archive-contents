@@ -1573,11 +1573,11 @@
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "a668537a8da77e4425b6a4110bdaba598a295f9e"))])
  (scroll-on-jump
-  . [(0 2) ((emacs (26 2))) "Scroll when jumping to a new point" tar
-     ((:url . "https://codeberg.com/ideasman42/emacs-scroll-on-jump")
+  . [(0 3) ((emacs (26 2))) "Scroll when jumping to a new point" tar
+     ((:url . "https://codeberg.org/ideasman42/emacs-scroll-on-jump")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "b1fd97c62dfc3b4430f3a42f1f504fc231487c91"))])
+      (:commit . "a9b785d3a3dfd94800d7541353a8a6c7961e209a"))])
  (sesman
   . [(0 3 2) ((emacs (25))) "Generic Session Manager" tar
      ((:url . "https://github.com/vspinu/sesman")

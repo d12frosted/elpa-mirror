@@ -1,3 +1,11 @@
+[![GNU ELPA badge][gnu-elpa-badge]][gnu-elpa-link]
+[![MELPA badge][melpa-badge]][melpa-link]
+
+[gnu-elpa-link]: https://elpa.gnu.org/packages/termint.html
+[gnu-elpa-badge]: https://elpa.gnu.org/packages/termint.svg
+[melpa-link]: https://melpa.org/#/termint
+[melpa-badge]: https://melpa.org/packages/termint-badge.svg
+
 **Run REPLs in a terminal emulator backend**
 
 `termint.el` provides a flexible way to define and manage interactions with
@@ -39,8 +47,8 @@ sessions, send code snippets, source files, and manage the REPL window.
 
 # Installation
 
-`termint` is available on the MELPA package repository. You can install it using
-your preferred package manager.
+`termint` is available on the ELPA and MELPA package repository. You can install
+it using your preferred package manager.
 
 ```emacs-lisp
 (package-install 'termint)
@@ -143,14 +151,24 @@ customization of the REPL's behavior:
   non-empty line of the code chunk as overlay. Alongside the source command sent
   to the REPL, providing a useful hint about the actual command being executed.
   the default value is nil.
-- `termint-myrepl-send-delayed-final-ret`: When enabled, send the
-  final return with a slight delay. Some REPLs may not properly
-  recognize when a large chunk of text sent with bracketed paste mode
-  has finished being input and needs to be evaluated. This option
-  should generally remain false (the default), with Claude Code and
-  OpenAI Codex being notable exceptions that require to set to
-  true. PRs are welcome if other REPLs are found to need this option
-  enabled.
+- `termint-myrepl-send-delayed-final-ret`: When enabled, send the final return
+  with a slight delay. Some REPLs may not properly recognize when a large chunk
+  of text sent with bracketed paste mode has finished being input and needs to
+  be evaluated. This option should generally remain false (the default), with
+  Claude Code and OpenAI Codex being notable exceptions that require to set to
+  true. PRs are welcome if other REPLs are found to need this option enabled.
+
+**Global Customization Options:** Configure these before calling
+`termint-define` to ensure all schemas inherit the same extensions to avoid
+per-REPL repetition:
+
+- `termint-region-dispatchers`: Register additional region selectors to
+  automatically generate corresponding send/source commands across all schemas.
+- `termint-schema-custom-commands`: Define universal custom commands that apply
+  to every schema.
+- `termint-mode-map-additional-keys`: Specify keybindings (key + command suffix)
+  to include in all generated schema keymaps, keeping common shortcuts
+  synchronized.
 
 ## Examples
 
@@ -261,7 +279,6 @@ REPL.
 
 - **Sourcing** utilizes the `:source-syntax` to manage the code execution. The
   conventional pattern involves:
-
   1.  Writing the code to a temporary file.
   2.  Sending a command to the REPL, instructing it to execute the contents of
       that file.

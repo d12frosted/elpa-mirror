@@ -52,9 +52,10 @@ Table of Contents
   to give my [Corfu] completion at point popup UI a try. After inserting
   the template you can move between the visible template fields with the
   keys `M-{', `M-}' or `C-up/down' which are normally bound to
-  `forward/backward-paragraph'. Tempel temporarily remaps these commands
-  to `tempel-next/previous'. As soon as you move before (behind) the
-  first (last) field, the fields are finalized. The key bindings are
+  `forward-paragraph' and `backward-paragraph'. Tempel temporarily
+  remaps these commands to `tempel-next' and `tempel-previous'. If
+  `tempel-done-on-next' is non-nil, as soon as you move before (behind)
+  the first (last) field, the template is finished. The key bindings are
   defined in the `tempel-map' keymap. I recommend that you inspect the
   `tempel-map' and look at the provided key bindings. You can customize
   the key bindings there.
@@ -76,7 +77,7 @@ Table of Contents
   │ ;; Configure Tempel
   │ (use-package tempel
   │   :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
-  │ 	 ("M-*" . tempel-insert))
+  │          ("M-*" . tempel-insert))
   │ 
   │   :init
   │ 
@@ -86,7 +87,7 @@ Table of Contents
   │     ;; only triggers on exact matches. We add `tempel-expand' *before* the main
   │     ;; programming mode Capf, such that it will be tried first.
   │     (setq-local completion-at-point-functions
-  │ 		(cons #'tempel-expand completion-at-point-functions))
+  │                 (cons #'tempel-expand completion-at-point-functions))
   │ 
   │     ;; Alternatively use `tempel-complete' if you want to see all matches.  Use
   │     ;; a trigger prefix character in order to prevent Tempel from triggering
@@ -139,8 +140,8 @@ Table of Contents
   In addition, /after/ the template elements, each template may specify
   several key/value pairs. Specifically, templates may specify `:pre'
   and/or `:post' keys with a FORM that is evaluated before the template
-  is expanded or after it is finalized, respectively. The `:post' form
-  is evaluated in the lexical scope of the template, which means that it
+  is expanded or after it is finished, respectively. The `:post' form is
+  evaluated in the lexical scope of the template, which means that it
   can access the template's named fields. Beyond that, templates may
   include an `:ann' and `:doc' key with strings that are used as
   annotation and documentation respectively.
@@ -195,11 +196,11 @@ Table of Contents
   │ (verbatim "\\begin{verbatim}\n" r> n> "\\end{verbatim}")
   │ (verbatimm "\\begin{verbatim*}\n" r> n> "\\end{verbatim*}")
   │ (matrix (p (read-number "Rows: ") rows noinsert)
-  │ 	(p (read-number "Cols: ") cols noinsert)
-  │ 	"\\begin{" (p "pmatrix" type) "}" n
-  │ 	(* (1- rows) (p " ") (* (1- cols) " & " (p " ")) "\\\\" n)
-  │ 	(p " ") (* (1- cols) " & " (p " ")) n
-  │ 	"\\end{" type "}")
+  │         (p (read-number "Cols: ") cols noinsert)
+  │         "\\begin{" (p "pmatrix" type) "}" n
+  │         (* (1- rows) (p " ") (* (1- cols) " & " (p " ")) "\\\\" n)
+  │         (p " ") (* (1- cols) " & " (p " ")) n
+  │         "\\end{" type "}")
   │ 
   │ texinfo-mode
   │ 
@@ -245,13 +246,13 @@ Table of Contents
   │ (loop "(cl-loop for " p " in " p " do" n> r> ")")
   │ (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive" p ")" n> r> ")")
   │ (advice "(defun " (p "adv" name) " (&rest app)" n> p n> "(apply app))" n>
-  │ 	"(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
+  │         "(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
   │ (header ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
-  │ 	" --- " p " -*- lexical-binding: t -*-" n
-  │ 	";;; Commentary:" n ";;; Code:" n n)
+  │         " --- " p " -*- lexical-binding: t -*-" n
+  │         ";;; Commentary:" n ";;; Code:" n n)
   │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
-  │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
-  │ 	 " ends here" n)
+  │          ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │          " ends here" n)
   │ (package (i header) r n n (i provide))
   │ 
   │ eshell-mode
@@ -334,8 +335,10 @@ Table of Contents
   • `p' Inserts an unnamed placeholder field.
   • `n' Inserts a newline.
   • `>' Indents with `indent-according-to-mode'.
-  • `r' Inserts the current region.  If no region is active, quits the
-    containing template when jumped to.
+  • `r' Inserts the currently active region. If no region is active, a
+    placeholder field is inserted. If `tempel-done-on-region' is
+    non-nil, the template is finished when you jump to the field (see
+    also `q').
   • `r>' Acts like `r', but indent region.
   • `n>' Inserts a newline and indents.
   • `&' Insert newline unless there is only whitespace between line
@@ -359,7 +362,8 @@ Table of Contents
     evaluated.
   • `(FORM ...)' Other Lisp forms are evaluated. Named fields are
     lexically bound.
-  • `q' Quits the containing template when jumped to.
+  • `q' Like `p', but the template is finished if the user jumps to the
+    field (see also `r').
 
   Use caution with templates which execute arbitrary code!
 
@@ -375,7 +379,7 @@ Table of Contents
   │ (defun tempel-include (elt)
   │   (when (eq (car-safe elt) 'i)
   │     (if-let (template (alist-get (cadr elt) (tempel--templates)))
-  │ 	(cons 'l template)
+  │         (cons 'l template)
   │       (message "Template %s not found" (cadr elt))
   │       nil)))
   │ (add-to-list 'tempel-user-elements #'tempel-include)
@@ -386,11 +390,11 @@ Table of Contents
 
   ┌────
   │ (header ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
-  │ 	" --- " p " -*- lexical-binding: t -*-" n
-  │ 	";;; Commentary:" n ";;; Code:" n n)
+  │         " --- " p " -*- lexical-binding: t -*-" n
+  │         ";;; Commentary:" n ";;; Code:" n n)
   │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
-  │ 	 ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
-  │ 	 " ends here" n)
+  │          ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │          " ends here" n)
   │ (package (i header) r n n (i provide))
   └────
 
@@ -418,11 +422,11 @@ Table of Contents
   │        "|" (* cols "----|") n
   │        (* rows "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n))
   │ (matrix (p (read-number "Rows: ") rows noinsert)
-  │ 	(p (read-number "Cols: ") cols noinsert)
-  │ 	"\\begin{" (p "pmatrix" type) "}" n
-  │ 	(* (1- rows) (p " ") (* (1- cols) " & " (p " ")) "\\\\" n)
-  │ 	(p " ") (* (1- cols) " & " (p " ")) n
-  │ 	"\\end{" type "}")
+  │         (p (read-number "Cols: ") cols noinsert)
+  │         "\\begin{" (p "pmatrix" type) "}" n
+  │         (* (1- rows) (p " ") (* (1- cols) " & " (p " ")) "\\\\" n)
+  │         (p " ") (* (1- cols) " & " (p " ")) n
+  │         "\\end{" type "}")
   └────
 
 
