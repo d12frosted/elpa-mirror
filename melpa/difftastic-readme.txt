@@ -400,6 +400,18 @@ aspects of interaction with `difft':
   `difftastic-mode' buffer.
 
 
+Process Environment
+~~~~~~~~~~~~~~~~~~~
+
+The `difftastic-difft-environment' variable allows users to customize the
+environment in which `difft' runs.  This is particularly useful for
+temporary configurations via `let'-binding.
+
+This variable is defined as a `defvar' (not `defcustom') since it's
+primarily intended for programmatic use rather than permanent
+customization.
+
+
 Contributing
 ============
 

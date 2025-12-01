@@ -1,2 +1,28 @@
  • Building package py-vterm-interaction (from github:vale981/py-vterm-interaction.el)...
 Updating /mnt/store/melpa/working/py-vterm-interaction/
+Checking out 3e79540a715dc69b7998fe7712a0a8183570387d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/py-vterm-interaction/
+  to /tmp/py-vterm-interactionta8YoS/py-vterm-interaction-20251024.2208
+    py-vterm-interaction.el -> py-vterm-interaction.el
+  ! scripts/delete_history.py -> scripts//delete_history.py
+  ! scripts/get_env.py -> scripts//get_env.py
+  ! scripts/is_ipython.py -> scripts//is_ipython.py
+  ! scripts/print_banner.py -> scripts//print_banner.py
+  ! scripts/star_import_script.py -> scripts//star_import_script.py
+  ! scripts/utility.py -> scripts//utility.py
+Created py-vterm-interaction-20251024.2208.tar containing:
+  py-vterm-interaction-20251024.2208/
+  py-vterm-interaction-20251024.2208/py-vterm-interaction-pkg.el
+  py-vterm-interaction-20251024.2208/py-vterm-interaction.el
+  py-vterm-interaction-20251024.2208/scripts/
+  py-vterm-interaction-20251024.2208/scripts/delete_history.py
+  py-vterm-interaction-20251024.2208/scripts/get_env.py
+  py-vterm-interaction-20251024.2208/scripts/is_ipython.py
+  py-vterm-interaction-20251024.2208/scripts/print_banner.py
+  py-vterm-interaction-20251024.2208/scripts/star_import_script.py
+  py-vterm-interaction-20251024.2208/scripts/utility.py
+ ✓ Success:
+  2025-12-01T18:47:31+0000  py-vterm-interaction-20251024.2208.entry
+  2025-12-01T18:47:31+0000  py-vterm-interaction-20251024.2208.tar
+Built py-vterm-interaction in 4.798s, finished at 2025-12-01T18:47:33+0000
