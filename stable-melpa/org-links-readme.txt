@@ -11,7 +11,7 @@ This package (org-links) The syntax above is extended with
 - [[PATH::NUM-NUM::LINE]]
 - [[PATH::NUM-NUM]]
 
-For ex. `[[file:./notes/warehouse.el::23::(defun alina (pic))]]`
+For ex.  `[[file:./notes/warehouse.el::23::(defun alina (pic))]]`
 
 Also provided:
 1) The command `org-links-store-extended' copies a link to the
@@ -37,7 +37,6 @@ to follow PATHs.
 
 You may advanced configuration in README.md file.
 
-; Additioan information.
 *Features provided*:
 - respect org-link-context-for-files, if not set store only number.
 - correctly store file in image-dired-thumbnail-mode
@@ -45,7 +44,7 @@ You may advanced configuration in README.md file.
 
 I recommend to set those Org ol.el options for clarity:
 (setopt org-link-file-path-type 'absolute) ; create links with full path
-(setopt org-link-search-must-match-exact-headline nil) ; use fuzzy search of Org links
+(setopt org-link-search-must-match-exact-headline nil) ; fuzzy search
 (setopt org-link-descriptive nil) ; show links in raw, don't hide
 
 *How this works*:
@@ -59,20 +58,16 @@ For opening links we add hook to org-execute-file-search-functions
  default in Org mode.)  and `org-open-at-point-global'.
 
 Other packages:
-- Navigation in Dired, Packages, Buffers modes https://github.com/Anoncheg1/firstly-search
-- Search with Mandarin Chinese pinying	https://github.com/Anoncheg1/pinyin-isearch
-- Ediff fix					https://github.com/Anoncheg1/ediffnw
-- Dired history				https://github.com/Anoncheg1/dired-hist
-- Mark selected window with contrast	https://github.com/Anoncheg1/selected-window-contrast
-- Org hyperlinks enhanced			https://github.com/Anoncheg1/org-links
-- Solution for "callback hell"		https://github.com/Anoncheg1/emacs-async1
-- Call LLMs and AI agents from Org-mode ai block. https://github.com/Anoncheg1/emacs-oai
+- Modern navigation in major modes https://github.com/Anoncheg1/firstly-search
+- Search with Mandarin Chinese pinying https://github.com/Anoncheg1/pinyin-isearch
+- Ediff fix			https://github.com/Anoncheg1/ediffnw
+- Dired history		https://github.com/Anoncheg1/dired-hist
+- Mark window with contrast https://github.com/Anoncheg1/selected-window-contrast
+- Org hyperlinks enhanced	https://github.com/Anoncheg1/org-links
+- Solution for "callback hell"	 https://github.com/Anoncheg1/emacs-async1
+- Call LLMs & AIfrom Org-mode block.  https://github.com/Anoncheg1/emacs-oai
 
-*DONATE MONEY*:
-You can sponsor author directly with crypto currencies:
+*DONATE MONEY* to sponsor author directly with crypto currencies:
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25
 - USDT (Tether) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
-
-; TODO
-- each file: link should be generated with some description. (for export)
