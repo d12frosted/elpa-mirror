@@ -74,9 +74,6 @@ Table of Contents
 2 Installation
 ══════════════
 
-
-
-
 2.1 GNU ELPA package
 ────────────────────
 
@@ -134,14 +131,14 @@ Table of Contents
   │   :ensure t
   │   ;; Bind those to some key for your convenience.
   │   :commands ( denote-journal-new-entry
-  │ 	      denote-journal-new-or-existing-entry
-  │ 	      denote-journal-link-or-create-entry )
+  │               denote-journal-new-or-existing-entry
+  │               denote-journal-link-or-create-entry )
   │   :hook (calendar-mode . denote-journal-calendar-mode)
   │   :config
   │   ;; Use the "journal" subdirectory of the `denote-directory'.  Set this
   │   ;; to nil to use the `denote-directory' instead.
   │   (setq denote-journal-directory
-  │ 	(expand-file-name "journal" denote-directory))
+  │         (expand-file-name "journal" denote-directory))
   │   ;; Default keyword for new journal entries. It can also be a list of
   │   ;; strings.
   │   (setq denote-journal-keyword "journal")
@@ -322,7 +319,7 @@ section 4.4
   ┌────
   │ (setq denote-journal-signature
   │       (lambda ()
-  │ 	(denote-sequence-get-new 'parent)))
+  │         (denote-sequence-get-new 'parent)))
   └────
 
 
@@ -371,11 +368,11 @@ section 4.4
   ┌────
   │ (with-eval-after-load 'org-capture
   │   (add-to-list 'org-capture-templates
-  │ 	       '("j" "Journal" entry
-  │ 		 (file denote-journal-path-to-new-or-existing-entry)
-  │ 		 "* %U %?\n%i\n%a"
-  │ 		 :kill-buffer t
-  │ 		 :empty-lines 1)))
+  │                '("j" "Journal" entry
+  │                  (file denote-journal-path-to-new-or-existing-entry)
+  │                  "* %U %?\n%i\n%a"
+  │                  :kill-buffer t
+  │                  :empty-lines 1)))
   └────
 
   Using the above, is the same as calling the command

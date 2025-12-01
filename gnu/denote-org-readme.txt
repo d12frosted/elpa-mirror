@@ -676,9 +676,6 @@ section 5
 7 Installation
 ══════════════
 
-
-
-
 7.1 GNU ELPA package
 ────────────────────
 

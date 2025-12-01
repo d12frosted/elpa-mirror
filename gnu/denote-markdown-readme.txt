@@ -153,9 +153,6 @@ Table of Contents
 3 Installation
 ══════════════
 
-
-
-
 3.1 GNU ELPA package
 ────────────────────
 
@@ -213,9 +210,9 @@ Table of Contents
   │   :ensure t
   │   ;; Bind these commands to key bindings of your choice.
   │   :commands ( denote-markdown-convert-links-to-file-paths
-  │ 	      denote-markdown-convert-links-to-denote-type
-  │ 	      denote-markdown-convert-links-to-obsidian-type
-  │ 	      denote-markdown-convert-obsidian-links-to-denote-type ))
+  │               denote-markdown-convert-links-to-denote-type
+  │               denote-markdown-convert-links-to-obsidian-type
+  │               denote-markdown-convert-obsidian-links-to-denote-type ))
   └────
 
 

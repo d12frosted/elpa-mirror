@@ -534,12 +534,12 @@
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:commit . "d0370320d9fdde5ac6e0a27720f51138315af882"))])
  (consult-denote
-  . [(0 4 1) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
+  . [(0 4 2) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
      ((:url . "https://github.com/protesilaos/consult-denote")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "f06fd19ccac60d798b0e41609aa522f3808acde5"))])
+      (:commit . "122760ac3503f141625a2b3513d60c06c27cf84f"))])
  (consult-hoogle
   . [(0 5 0) ((emacs (27 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
@@ -708,19 +708,19 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "d86cb704260f9e4815d863eb4059514f4e587577"))])
  (denote-journal
-  . [(0 2 1) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 2 2) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
      ((:url . "https://github.com/protesilaos/denote-journal")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "cfb9cf7cc471c1a8fdce2f0ba73159753842ece3"))])
+      (:commit . "fdeacaa134e9de29a1888ad23d754b4ada3d8247"))])
  (denote-markdown
-  . [(0 2 0) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 2 1) ((emacs (28 1)) (denote (4 0 0)))
      "Extensions that better integrate Denote with Markdown" tar
      ((:url . "https://github.com/protesilaos/denote-markdown")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "588729d70ba118c0ac837cbad756ba05f276afdd"))])
+      (:commit . "a7d7e1c1dd609abec2a8bdd0197782f62885d95b"))])
  (denote-menu
   . [(1 4 0) ((emacs (28 1)) (denote (3 0 0)))
      "View denote files in a tabulated list." tar
@@ -729,12 +729,12 @@
       (:authors ("Mohamed Suliman" . "sulimanm@tcd.ie"))
       (:commit . "247a9b66d67b3fe409eda8f896feae87546f5b4d"))])
  (denote-org
-  . [(0 2 0) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 2 1) ((emacs (28 1)) (denote (4 0 0)))
      "Denote extensions for Org mode" tar
      ((:url . "https://github.com/protesilaos/denote-org")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "57bca6df0049a5a5e28b91b819b39117cba2e5c7"))])
+      (:commit . "36f24f0f0f472e4cb50025ed62a1b32351d7d294"))])
  (denote-search
   . [(1 0 3) ((emacs (29 1)) (denote (3 0)))
      "Search the contents of your notes" tar
@@ -2482,13 +2482,13 @@
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
       (:commit . "4002b7569416eac640072ec7fe04337e2747910d"))])
  (preview-tailor
-  . [(0 2) ((emacs (29 1)) (auctex (0)))
+  . [(0 2 1) ((emacs (29 1)) (auctex (0)))
      "Tailor AUCTeX preview scale to monitor/text scale" tar
      ((:url . "https://github.com/ultronozm/preview-tailor.el")
       (:keywords "tex" "multimedia")
       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-      (:commit . "bb92fac553c8ddb87f64f4c9829762b58764c1ff"))])
+      (:commit . "731d92247aab0a51c208d0fe196db3dec0d1b2e9"))])
  (project
   . [(0 11 1) ((emacs (26 1)) (xref (1 7 0)))
      "Operations on the current project" tar
