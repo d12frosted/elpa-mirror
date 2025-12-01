@@ -1,9 +1,9 @@
  • Building package w3m (from github:emacs-w3m/emacs-w3m)...
 Updating /mnt/store/melpa/working/w3m/
-Checking out fc0f30f96a69bae4d4c92f42bceafb8ccf2a72ec
+Checking out 87cacb2a0e59db00b8deb3f40a2a9f8141f3217b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mght8Q8/w3m-20250503.2349
+  to /tmp/w3mzxmmu6/w3m-20251201.129
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -34,83 +34,83 @@ Copying files (->) and directories (=>)
     w3m.el -> w3m.el
     w3mhack.el -> w3mhack.el
     icons => icons
-Created w3m-20250503.2349.tar containing:
-  w3m-20250503.2349/
-  w3m-20250503.2349/bookmark-w3m.el
-  w3m-20250503.2349/icons/
-  w3m-20250503.2349/icons/antenna-up.png
-  w3m-20250503.2349/icons/antenna-up.xpm
-  w3m-20250503.2349/icons/back-disabled.png
-  w3m-20250503.2349/icons/back-disabled.xpm
-  w3m-20250503.2349/icons/back-up.png
-  w3m-20250503.2349/icons/back-up.xpm
-  w3m-20250503.2349/icons/copy-up.png
-  w3m-20250503.2349/icons/copy-up.xpm
-  w3m-20250503.2349/icons/db-history-up.png
-  w3m-20250503.2349/icons/db-history-up.xpm
-  w3m-20250503.2349/icons/forward-disabled.png
-  w3m-20250503.2349/icons/forward-disabled.xpm
-  w3m-20250503.2349/icons/forward-up.png
-  w3m-20250503.2349/icons/forward-up.xpm
-  w3m-20250503.2349/icons/history-up.png
-  w3m-20250503.2349/icons/history-up.xpm
-  w3m-20250503.2349/icons/home-up.png
-  w3m-20250503.2349/icons/home-up.xpm
-  w3m-20250503.2349/icons/image-up.png
-  w3m-20250503.2349/icons/image-up.xpm
-  w3m-20250503.2349/icons/open-up.png
-  w3m-20250503.2349/icons/open-up.xpm
-  w3m-20250503.2349/icons/parent-disabled.png
-  w3m-20250503.2349/icons/parent-disabled.xpm
-  w3m-20250503.2349/icons/parent-up.png
-  w3m-20250503.2349/icons/parent-up.xpm
-  w3m-20250503.2349/icons/reload-up.png
-  w3m-20250503.2349/icons/reload-up.xpm
-  w3m-20250503.2349/icons/save-up.png
-  w3m-20250503.2349/icons/save-up.xpm
-  w3m-20250503.2349/icons/search-up.png
-  w3m-20250503.2349/icons/search-up.xpm
-  w3m-20250503.2349/icons/spinner.gif
-  w3m-20250503.2349/icons/state-00.png
-  w3m-20250503.2349/icons/state-00.xpm
-  w3m-20250503.2349/icons/state-01.png
-  w3m-20250503.2349/icons/state-01.xpm
-  w3m-20250503.2349/icons/state-10.png
-  w3m-20250503.2349/icons/state-10.xpm
-  w3m-20250503.2349/icons/state-11.png
-  w3m-20250503.2349/icons/state-11.xpm
-  w3m-20250503.2349/icons/weather-up.png
-  w3m-20250503.2349/icons/weather-up.xpm
-  w3m-20250503.2349/mime-w3m.el
-  w3m-20250503.2349/w3m-antenna.el
-  w3m-20250503.2349/w3m-bookmark.el
-  w3m-20250503.2349/w3m-bug.el
-  w3m-20250503.2349/w3m-cookie.el
-  w3m-20250503.2349/w3m-dtree.el
-  w3m-20250503.2349/w3m-ems.el
-  w3m-20250503.2349/w3m-favicon.el
-  w3m-20250503.2349/w3m-fb.el
-  w3m-20250503.2349/w3m-filter.el
-  w3m-20250503.2349/w3m-form.el
-  w3m-20250503.2349/w3m-hist.el
-  w3m-20250503.2349/w3m-image.el
-  w3m-20250503.2349/w3m-lnum.el
-  w3m-20250503.2349/w3m-mail.el
-  w3m-20250503.2349/w3m-namazu.el
-  w3m-20250503.2349/w3m-perldoc.el
-  w3m-20250503.2349/w3m-pkg.el
-  w3m-20250503.2349/w3m-proc.el
-  w3m-20250503.2349/w3m-rss.el
-  w3m-20250503.2349/w3m-save.el
-  w3m-20250503.2349/w3m-search.el
-  w3m-20250503.2349/w3m-session.el
-  w3m-20250503.2349/w3m-symbol.el
-  w3m-20250503.2349/w3m-tabmenu.el
-  w3m-20250503.2349/w3m-util.el
-  w3m-20250503.2349/w3m-weather.el
-  w3m-20250503.2349/w3m.el
-  w3m-20250503.2349/w3mhack.el
+Created w3m-20251201.129.tar containing:
+  w3m-20251201.129/
+  w3m-20251201.129/bookmark-w3m.el
+  w3m-20251201.129/icons/
+  w3m-20251201.129/icons/antenna-up.png
+  w3m-20251201.129/icons/antenna-up.xpm
+  w3m-20251201.129/icons/back-disabled.png
+  w3m-20251201.129/icons/back-disabled.xpm
+  w3m-20251201.129/icons/back-up.png
+  w3m-20251201.129/icons/back-up.xpm
+  w3m-20251201.129/icons/copy-up.png
+  w3m-20251201.129/icons/copy-up.xpm
+  w3m-20251201.129/icons/db-history-up.png
+  w3m-20251201.129/icons/db-history-up.xpm
+  w3m-20251201.129/icons/forward-disabled.png
+  w3m-20251201.129/icons/forward-disabled.xpm
+  w3m-20251201.129/icons/forward-up.png
+  w3m-20251201.129/icons/forward-up.xpm
+  w3m-20251201.129/icons/history-up.png
+  w3m-20251201.129/icons/history-up.xpm
+  w3m-20251201.129/icons/home-up.png
+  w3m-20251201.129/icons/home-up.xpm
+  w3m-20251201.129/icons/image-up.png
+  w3m-20251201.129/icons/image-up.xpm
+  w3m-20251201.129/icons/open-up.png
+  w3m-20251201.129/icons/open-up.xpm
+  w3m-20251201.129/icons/parent-disabled.png
+  w3m-20251201.129/icons/parent-disabled.xpm
+  w3m-20251201.129/icons/parent-up.png
+  w3m-20251201.129/icons/parent-up.xpm
+  w3m-20251201.129/icons/reload-up.png
+  w3m-20251201.129/icons/reload-up.xpm
+  w3m-20251201.129/icons/save-up.png
+  w3m-20251201.129/icons/save-up.xpm
+  w3m-20251201.129/icons/search-up.png
+  w3m-20251201.129/icons/search-up.xpm
+  w3m-20251201.129/icons/spinner.gif
+  w3m-20251201.129/icons/state-00.png
+  w3m-20251201.129/icons/state-00.xpm
+  w3m-20251201.129/icons/state-01.png
+  w3m-20251201.129/icons/state-01.xpm
+  w3m-20251201.129/icons/state-10.png
+  w3m-20251201.129/icons/state-10.xpm
+  w3m-20251201.129/icons/state-11.png
+  w3m-20251201.129/icons/state-11.xpm
+  w3m-20251201.129/icons/weather-up.png
+  w3m-20251201.129/icons/weather-up.xpm
+  w3m-20251201.129/mime-w3m.el
+  w3m-20251201.129/w3m-antenna.el
+  w3m-20251201.129/w3m-bookmark.el
+  w3m-20251201.129/w3m-bug.el
+  w3m-20251201.129/w3m-cookie.el
+  w3m-20251201.129/w3m-dtree.el
+  w3m-20251201.129/w3m-ems.el
+  w3m-20251201.129/w3m-favicon.el
+  w3m-20251201.129/w3m-fb.el
+  w3m-20251201.129/w3m-filter.el
+  w3m-20251201.129/w3m-form.el
+  w3m-20251201.129/w3m-hist.el
+  w3m-20251201.129/w3m-image.el
+  w3m-20251201.129/w3m-lnum.el
+  w3m-20251201.129/w3m-mail.el
+  w3m-20251201.129/w3m-namazu.el
+  w3m-20251201.129/w3m-perldoc.el
+  w3m-20251201.129/w3m-pkg.el
+  w3m-20251201.129/w3m-proc.el
+  w3m-20251201.129/w3m-rss.el
+  w3m-20251201.129/w3m-save.el
+  w3m-20251201.129/w3m-search.el
+  w3m-20251201.129/w3m-session.el
+  w3m-20251201.129/w3m-symbol.el
+  w3m-20251201.129/w3m-tabmenu.el
+  w3m-20251201.129/w3m-util.el
+  w3m-20251201.129/w3m-weather.el
+  w3m-20251201.129/w3m.el
+  w3m-20251201.129/w3mhack.el
  ✓ Success:
-  2025-11-30T23:28:20+0000  w3m-20250503.2349.entry
-  2025-11-30T23:28:20+0000  w3m-20250503.2349.tar
-Built w3m in 4.322s, finished at 2025-11-30T23:28:21+0000
+  2025-12-01T04:18:31+0000  w3m-20251201.129.entry
+  2025-12-01T04:18:31+0000  w3m-20251201.129.tar
+Built w3m in 3.803s, finished at 2025-12-01T04:18:32+0000
