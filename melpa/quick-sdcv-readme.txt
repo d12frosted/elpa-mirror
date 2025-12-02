@@ -21,10 +21,6 @@ Installation from MELPA:
 ------------------------
 (use-package quick-sdcv
   :ensure t
-  :straight (quick-sdcv
-             :type git
-             :host github
-             :repo "jamescherti/quick-sdcv.el")
   :custom
   (quick-sdcv-dictionary-prefix-symbol "►")
   (quick-sdcv-ellipsis " ▼ "))
