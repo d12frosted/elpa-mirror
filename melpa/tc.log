@@ -1,9 +1,9 @@
  • Building package tc (from github:kanchoku/tc)...
 Updating /mnt/store/melpa/working/tc/
-Checking out f7d81efa7a2a481e58d8fc0a404473654f7a96a1
+Checking out 4b7ed91922f3af55c56a986f6776cad153762254
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tc/
-  to /tmp/tc7H7k7X/tc-20251019.735
+  to /tmp/tcHrNTUZ/tc-20251202.751
     eelll.el -> eelll.el
     tc-bushu.el -> tc-bushu.el
     tc-complete.el -> tc-complete.el
@@ -29,62 +29,62 @@ Copying files (->) and directories (=>)
     ttc-tbl.el -> ttc-tbl.el
     tutc-tbl.el -> tutc-tbl.el
     tcode => tcode
-Created tc-20251019.735.tar containing:
-  tc-20251019.735/
-  tc-20251019.735/eelll.el
-  tc-20251019.735/tc-bushu.el
-  tc-20251019.735/tc-complete.el
-  tc-20251019.735/tc-help.el
-  tc-20251019.735/tc-image.el
-  tc-20251019.735/tc-inst.el
-  tc-20251019.735/tc-is22.el
-  tc-20251019.735/tc-ja-alnum.el
-  tc-20251019.735/tc-jiscode.el
-  tc-20251019.735/tc-mazegaki.el
-  tc-20251019.735/tc-mkmzdic.el
-  tc-20251019.735/tc-pkg.el
-  tc-20251019.735/tc-pre.el
-  tc-20251019.735/tc-setup.el
-  tc-20251019.735/tc-stat.el
-  tc-20251019.735/tc-sysdep.el
-  tc-20251019.735/tc-tbl.el
-  tc-20251019.735/tc-util.el
-  tc-20251019.735/tc.el
-  tc-20251019.735/tcode/
-  tc-20251019.735/tcode/EELLLTXT
-  tc-20251019.735/tcode/EELLLTXT.tut
-  tc-20251019.735/tcode/Makefile.am
-  tc-20251019.735/tcode/Makefile.in
-  tc-20251019.735/tcode/README
-  tc-20251019.735/tcode/bushu.expand
-  tc-20251019.735/tcode/bushu.rev
-  tc-20251019.735/tcode/greece.maz
-  tc-20251019.735/tcode/itaiji.maz
-  tc-20251019.735/tcode/jukujiku.maz
-  tc-20251019.735/tcode/mazegaki.dic
-  tc-20251019.735/tcode/mk-mzdic
-  tc-20251019.735/tcode/mkcertain.pl
-  tc-20251019.735/tcode/pd_kihon.yom
-  tc-20251019.735/tcode/step1.pl
-  tc-20251019.735/tcode/step2.pl
-  tc-20251019.735/tcode/symbol.rev
-  tc-20251019.735/tcode/t1200.dat
-  tc-20251019.735/tcode/t1353.dat
-  tc-20251019.735/tcode/t225.dat
-  tc-20251019.735/tcode/t300.dat
-  tc-20251019.735/tcode/t400.dat
-  tc-20251019.735/tcode/t450.dat
-  tc-20251019.735/tcode/t575.dat
-  tc-20251019.735/tcode/t675.dat
-  tc-20251019.735/tcode/t900.dat
-  tc-20251019.735/tcode/tcode.u
-  tc-20251019.735/try-etbl.el
-  tc-20251019.735/try-tbl.el
-  tc-20251019.735/ttc-ltbl.el
-  tc-20251019.735/ttc-rtbl.el
-  tc-20251019.735/ttc-tbl.el
-  tc-20251019.735/tutc-tbl.el
+Created tc-20251202.751.tar containing:
+  tc-20251202.751/
+  tc-20251202.751/eelll.el
+  tc-20251202.751/tc-bushu.el
+  tc-20251202.751/tc-complete.el
+  tc-20251202.751/tc-help.el
+  tc-20251202.751/tc-image.el
+  tc-20251202.751/tc-inst.el
+  tc-20251202.751/tc-is22.el
+  tc-20251202.751/tc-ja-alnum.el
+  tc-20251202.751/tc-jiscode.el
+  tc-20251202.751/tc-mazegaki.el
+  tc-20251202.751/tc-mkmzdic.el
+  tc-20251202.751/tc-pkg.el
+  tc-20251202.751/tc-pre.el
+  tc-20251202.751/tc-setup.el
+  tc-20251202.751/tc-stat.el
+  tc-20251202.751/tc-sysdep.el
+  tc-20251202.751/tc-tbl.el
+  tc-20251202.751/tc-util.el
+  tc-20251202.751/tc.el
+  tc-20251202.751/tcode/
+  tc-20251202.751/tcode/EELLLTXT
+  tc-20251202.751/tcode/EELLLTXT.tut
+  tc-20251202.751/tcode/Makefile.am
+  tc-20251202.751/tcode/Makefile.in
+  tc-20251202.751/tcode/README
+  tc-20251202.751/tcode/bushu.expand
+  tc-20251202.751/tcode/bushu.rev
+  tc-20251202.751/tcode/greece.maz
+  tc-20251202.751/tcode/itaiji.maz
+  tc-20251202.751/tcode/jukujiku.maz
+  tc-20251202.751/tcode/mazegaki.dic
+  tc-20251202.751/tcode/mk-mzdic
+  tc-20251202.751/tcode/mkcertain.pl
+  tc-20251202.751/tcode/pd_kihon.yom
+  tc-20251202.751/tcode/step1.pl
+  tc-20251202.751/tcode/step2.pl
+  tc-20251202.751/tcode/symbol.rev
+  tc-20251202.751/tcode/t1200.dat
+  tc-20251202.751/tcode/t1353.dat
+  tc-20251202.751/tcode/t225.dat
+  tc-20251202.751/tcode/t300.dat
+  tc-20251202.751/tcode/t400.dat
+  tc-20251202.751/tcode/t450.dat
+  tc-20251202.751/tcode/t575.dat
+  tc-20251202.751/tcode/t675.dat
+  tc-20251202.751/tcode/t900.dat
+  tc-20251202.751/tcode/tcode.u
+  tc-20251202.751/try-etbl.el
+  tc-20251202.751/try-tbl.el
+  tc-20251202.751/ttc-ltbl.el
+  tc-20251202.751/ttc-rtbl.el
+  tc-20251202.751/ttc-tbl.el
+  tc-20251202.751/tutc-tbl.el
  ✓ Success:
-  2025-12-02T02:25:11+0000  tc-20251019.735.entry
-  2025-12-02T02:25:11+0000  tc-20251019.735.tar
-Built tc in 7.628s, finished at 2025-12-02T02:25:13+0000
+  2025-12-02T12:15:28+0000  tc-20251202.751.entry
+  2025-12-02T12:15:28+0000  tc-20251202.751.tar
+Built tc in 4.885s, finished at 2025-12-02T12:15:29+0000
