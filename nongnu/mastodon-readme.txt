@@ -44,7 +44,7 @@
   ┌────
   │ (require 'package)
   │ (add-to-list 'package-archives
-  │ 	     '("melpa" . "http://melpa.org/packages/") t)
+  │              '("melpa" . "http://melpa.org/packages/") t)
   └────
 
   Update and install:
@@ -318,8 +318,8 @@
 
   ┌────
   │ (add-hook 'mastodon-toot-mode-hook
-  │ 	  (lambda ()
-  │ 	      (auto-fill-mode -1)))
+  │           (lambda ()
+  │               (auto-fill-mode -1)))
   └────
 
 
@@ -583,8 +583,8 @@
   │     (interactive)
   │     (let* ((toot (mastodon-tl--property 'item-json)))
   │       (if toot
-  │ 	  (lingva-translate nil (mastodon-tl--content toot))
-  │ 	(message "No toot to translate?"))))
+  │           (lingva-translate nil (mastodon-tl--content toot))
+  │         (message "No toot to translate?"))))
   └────
 
 

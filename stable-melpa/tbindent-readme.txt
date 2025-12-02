@@ -21,8 +21,8 @@ you can easily change the visual width of indentation with the
 file.
 
 This feature may appeal to people that have problems working with small
-indentation width imposed by language or team conventions.  It acts as a
-workaround: temporary change the indentation scheme to a hard-tab based
+indentation width imposed by language or team code guidelines.  It acts as
+a workaround: temporary change the indentation scheme to a hard-tab based
 indentation for editing, change the width of the hard tab for visibility
 but keep the original indentation scheme inside the file.
 
@@ -37,7 +37,7 @@ procedure:
   and the width of the variables for the major mode to a larger value.
 
 Once set-up we can see the code with a wider indentation and
-continue to work with the rules imposed by the major mode logic.
+continue to edit the buffer with the rules imposed by the major mode logic.
 
 Later, before saving the buffer back to the file, we simply perform the
 following steps:
