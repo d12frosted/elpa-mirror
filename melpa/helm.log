@@ -1,9 +1,9 @@
  • Building package helm (from github:emacs-helm/helm)...
 Updating /mnt/store/melpa/working/helm/
-Checking out b12d7fad584aa4a1e98be3dd1afbb68d312bb20a
+Checking out c84c10cf5f4f7f9d42ac040a6a8149897a86b469
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helmemZOz4/helm-20251130.758
+  to /tmp/helmjBDIBP/helm-20251205.433
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
     helm-buffers.el -> helm-buffers.el
@@ -45,51 +45,53 @@ Copying files (->) and directories (=>)
     helm-x-icons.el -> helm-x-icons.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20251130.758.tar containing:
-  helm-20251130.758/
-  helm-20251130.758/emacs-helm.sh
-  helm-20251130.758/helm-adaptive.el
-  helm-20251130.758/helm-bookmark.el
-  helm-20251130.758/helm-buffers.el
-  helm-20251130.758/helm-color.el
-  helm-20251130.758/helm-command.el
-  helm-20251130.758/helm-dabbrev.el
-  helm-20251130.758/helm-easymenu.el
-  helm-20251130.758/helm-elisp.el
-  helm-20251130.758/helm-epa.el
-  helm-20251130.758/helm-eshell.el
-  helm-20251130.758/helm-eval.el
-  helm-20251130.758/helm-external.el
-  helm-20251130.758/helm-fd.el
-  helm-20251130.758/helm-files.el
-  helm-20251130.758/helm-find.el
-  helm-20251130.758/helm-font.el
-  helm-20251130.758/helm-for-files.el
-  helm-20251130.758/helm-global-bindings.el
-  helm-20251130.758/helm-grep.el
-  helm-20251130.758/helm-help.el
-  helm-20251130.758/helm-id-utils.el
-  helm-20251130.758/helm-imenu.el
-  helm-20251130.758/helm-info.el
-  helm-20251130.758/helm-locate.el
-  helm-20251130.758/helm-man.el
-  helm-20251130.758/helm-misc.el
-  helm-20251130.758/helm-mode.el
-  helm-20251130.758/helm-net.el
-  helm-20251130.758/helm-occur.el
-  helm-20251130.758/helm-packages.el
-  helm-20251130.758/helm-pkg.el
-  helm-20251130.758/helm-regexp.el
-  helm-20251130.758/helm-ring.el
-  helm-20251130.758/helm-semantic.el
-  helm-20251130.758/helm-sys.el
-  helm-20251130.758/helm-tags.el
-  helm-20251130.758/helm-types.el
-  helm-20251130.758/helm-utils.el
-  helm-20251130.758/helm-x-files.el
-  helm-20251130.758/helm-x-icons.el
-  helm-20251130.758/helm.el
+Created helm-20251205.433.tar containing:
+  helm-20251205.433/
+  helm-20251205.433/emacs-helm.sh
+  helm-20251205.433/helm-adaptive.el
+  helm-20251205.433/helm-bookmark.el
+  helm-20251205.433/helm-buffers.el
+  helm-20251205.433/helm-color.el
+  helm-20251205.433/helm-command.el
+  helm-20251205.433/helm-dabbrev.el
+  helm-20251205.433/helm-easymenu.el
+  helm-20251205.433/helm-elisp.el
+  helm-20251205.433/helm-epa.el
+  helm-20251205.433/helm-eshell.el
+  helm-20251205.433/helm-eval.el
+  helm-20251205.433/helm-external.el
+  helm-20251205.433/helm-fd.el
+  helm-20251205.433/helm-files.el
+  helm-20251205.433/helm-find.el
+  helm-20251205.433/helm-font.el
+  helm-20251205.433/helm-for-files.el
+  helm-20251205.433/helm-global-bindings.el
+  helm-20251205.433/helm-grep.el
+  helm-20251205.433/helm-help.el
+  helm-20251205.433/helm-id-utils.el
+  helm-20251205.433/helm-imenu.el
+  helm-20251205.433/helm-info.el
+  helm-20251205.433/helm-locate.el
+  helm-20251205.433/helm-man.el
+  helm-20251205.433/helm-misc.el
+  helm-20251205.433/helm-mode.el
+  helm-20251205.433/helm-net.el
+  helm-20251205.433/helm-occur.el
+  helm-20251205.433/helm-packages.el
+  helm-20251205.433/helm-pkg.el
+  helm-20251205.433/helm-regexp.el
+  helm-20251205.433/helm-ring.el
+  helm-20251205.433/helm-semantic.el
+  helm-20251205.433/helm-sys.el
+  helm-20251205.433/helm-tags.el
+  helm-20251205.433/helm-types.el
+  helm-20251205.433/helm-utils.el
+  helm-20251205.433/helm-x-files.el
+  helm-20251205.433/helm-x-icons.el
+  helm-20251205.433/helm.el
  ✓ Success:
   2025-12-05T03:34:28+0000  helm-20251130.758.entry
   2025-12-05T03:34:28+0000  helm-20251130.758.tar
-Built helm in 3.948s, finished at 2025-12-05T03:34:29+0000
+  2025-12-05T05:56:05+0000  helm-20251205.433.entry
+  2025-12-05T05:56:05+0000  helm-20251205.433.tar
+Built helm in 4.140s, finished at 2025-12-05T05:56:06+0000
