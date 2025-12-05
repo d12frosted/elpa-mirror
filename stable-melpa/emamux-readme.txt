@@ -5,5 +5,5 @@ To use emamux, add the following code into your init.el or .emacs:
 
    (require 'emamux)
 
-Please see https://github.com/syohex/emacs-emamux/
+Please see https://github.com/emacsorphanage/emamux/
 for more information.

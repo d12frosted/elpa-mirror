@@ -1546,13 +1546,13 @@
       (:authors ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
       (:commit . "aa07a3d812c64445d44796b85fca07044864f64b"))])
  (inspector
-  . [(0 38) ((emacs (27 1)))
+  . [(0 39) ((emacs (27 1)))
      "Tool for inspection of Emacs Lisp objects" tar
      ((:url . "https://github.com/mmontone/emacs-inspector")
       (:keywords "debugging" "tool" "lisp" "development")
       (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
       (:authors ("Mariano Montone" . "marianomontone@gmail.com"))
-      (:commit . "c5617289dd40efb45f8160420c29000c7d7489de"))])
+      (:commit . "52a64993ac36ed3ed0be51b6a0d54d190edc9c74"))])
  (ioccur
   . [(2 6) ((emacs (24)) (cl-lib (0 5))) "Incremental occur" tar
      ((:url . "https://github.com/thierryvolpiatto/ioccur")
