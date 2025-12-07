@@ -3,9 +3,6 @@
                         ━━━━━━━━━━━━━━━━━━━━━━━
 
 
-
-
-
 1 Introduction
 ══════════════
 
@@ -428,7 +425,7 @@
   │   :init
   │   (require 'llm-openai)
   │   (setq llm-refactoring-provider (make-llm-openai :key my-openai-key)
-  │ 	llm-warn-on-nonfree nil)
+  │         llm-warn-on-nonfree nil)
   └────
 
 
@@ -575,18 +572,18 @@
   Some examples:
   ┌────
   │ (llm-chat my-provider (llm-make-chat-prompt
-  │ 				"How many countries are there?  Return the result as JSON."
-  │ 				:response-format
-  │ 				'(:type object :properties (:num (:type "integer")) :required ["num"])))
+  │                                 "How many countries are there?  Return the result as JSON."
+  │                                 :response-format
+  │                                 '(:type object :properties (:num (:type "integer")) :required ["num"])))
   └────
 
   ┌────
   │ (llm-chat my-provider (llm-make-chat-prompt
-  │ 				"Which editor is hard to quit?  Return the result as JSON."
-  │ 				:response-format
-  │ 				'(:type object :properties (:editor (:enum ["emacs" "vi" "vscode"])
-  │ 								    :authors (:type "array" :items (:type "string")))
-  │ 					:required ["editor" "authors"])))
+  │                                 "Which editor is hard to quit?  Return the result as JSON."
+  │                                 :response-format
+  │                                 '(:type object :properties (:editor (:enum ["emacs" "vi" "vscode"])
+  │                                                                     :authors (:type "array" :items (:type "string")))
+  │                                         :required ["editor" "authors"])))
   └────
 
 
@@ -648,10 +645,6 @@
 6.5 Tool use
 ────────────
 
-  *Note: tool use is currently beta quality.  If you want to use tool
-   use, please watch the `llm' [discussions] for any announcements about
-   changes.*
-
   Tool use is a way to give the LLM a list of functions it can call, and
   have it call the functions for you.  The standard interaction has the
   following steps:
@@ -681,11 +674,11 @@
   other types.  So client programs are advised for right now to keep
   function to simple types.
 
-  The way to call functions is to attach a list of functions to the
-  `tools' slot in the prompt. This is a list of `llm-tool' structs,
-  which is a tool that is an elisp function, with a name, a description,
-  and a list of arguments. The docstrings give an explanation of the
-  format.  An example is:
+  The way to call tools is to attach a list of tools to the `tools' slot
+  in the prompt. This is a list of `llm-tool' structs, which is a tool
+  that is an elisp function, with a name, a description, and a list of
+  arguments. The docstrings give an explanation of the format.  An
+  example is:
 
   ┌────
   │ (llm-chat-async
@@ -694,18 +687,18 @@
   │   "What is the capital of France?"
   │   :tools
   │   (list (llm-make-tool
-  │ 	 :function
-  │ 	 (lambda (callback result)
-  │ 	   ;; In this example function the assumption is that the
-  │ 	   ;; callback will be called after processing the result is
-  │ 	   ;; complete.
-  │ 	   (notify-user-of-capital result callback))
-  │ 	 :name "capital_of_country"
-  │ 	 :description "Get the capital of a country."
-  │ 	 :args '((:name "country"
-  │ 			:description "The country whose capital to look up."
-  │ 			:type string))
-  │ 	 :async t)))
+  │          :function
+  │          (lambda (callback result)
+  │            ;; In this example function the assumption is that the
+  │            ;; callback will be called after processing the result is
+  │            ;; complete.
+  │            (notify-user-of-capital result callback))
+  │          :name "capital_of_country"
+  │          :description "Get the capital of a country."
+  │          :args '((:name "country"
+  │                         :description "The country whose capital to look up."
+  │                         :type string))
+  │          :async t)))
   │  #'identity  ;; No need to process the result in this example.
   │  (lambda (_ err)
   │    (error "Error on getting capital: %s" err)))
@@ -744,8 +737,13 @@
   to generate function calls from existing elisp functions in
   `utilities/elisp-to-tool.el'.
 
+  Tool use can be controlled by the `:tool-options' param in
+  `llm-make-chat-prompt' that takes a `llm-tool-options' struct.  This
+  can be set to force or forbid tool calling, or to force a specific
+  tool to be called.  This is useful when a converastion with tools
+  happens and the tools remain constant but how they are used may need
+  to change.  Ollama does not support currently support this.
 
-[discussions] <https://github.com/ahyatt/llm/discussions>
 
 [GTPel] <https://github.com/karthink/gptel>
 
@@ -897,7 +895,7 @@
   Alternatively, you can just fill it directly:
   ┌────
   │ (llm-prompt-fill-text "Hi, I'm {{name}} and I'm here to say {{messages}}"
-  │ 		      :name "John" :messages #'my-message-retriever)
+  │                       :name "John" :messages #'my-message-retriever)
   └────
 
   As you can see in the examples, the variable values are passed in with

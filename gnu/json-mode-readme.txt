@@ -1,5 +1,5 @@
 Major mode for editing JavaScript Object Notation (JSON) data files.
-Read more about JSON at http://json.org/.
+Read more about JSON at https://www.json.org/.
 
 It provides support for indentation and syntax highlighting.
 
