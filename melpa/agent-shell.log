@@ -1,9 +1,9 @@
  • Building package agent-shell (from github:xenodium/agent-shell)...
 Updating /mnt/store/melpa/working/agent-shell/
-Checking out 44cdf2f387dfc91651a580727cc2c7ebab3440e7
+Checking out b81830ded7bdfd4ef02b498bea77982a060d1b2b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/agent-shell/
-  to /tmp/agent-shelll81CGz/agent-shell-20251206.1903
+  to /tmp/agent-shelld6EOIQ/agent-shell-20251207.1213
     agent-shell-anthropic.el -> agent-shell-anthropic.el
     agent-shell-cursor.el -> agent-shell-cursor.el
     agent-shell-diff.el -> agent-shell-diff.el
@@ -16,22 +16,24 @@ Copying files (->) and directories (=>)
     agent-shell-qwen.el -> agent-shell-qwen.el
     agent-shell-ui.el -> agent-shell-ui.el
     agent-shell.el -> agent-shell.el
-Created agent-shell-20251206.1903.tar containing:
-  agent-shell-20251206.1903/
-  agent-shell-20251206.1903/agent-shell-anthropic.el
-  agent-shell-20251206.1903/agent-shell-cursor.el
-  agent-shell-20251206.1903/agent-shell-diff.el
-  agent-shell-20251206.1903/agent-shell-google.el
-  agent-shell-20251206.1903/agent-shell-goose.el
-  agent-shell-20251206.1903/agent-shell-heartbeat.el
-  agent-shell-20251206.1903/agent-shell-openai.el
-  agent-shell-20251206.1903/agent-shell-opencode.el
-  agent-shell-20251206.1903/agent-shell-pkg.el
-  agent-shell-20251206.1903/agent-shell-prompt-compose.el
-  agent-shell-20251206.1903/agent-shell-qwen.el
-  agent-shell-20251206.1903/agent-shell-ui.el
-  agent-shell-20251206.1903/agent-shell.el
+Created agent-shell-20251207.1213.tar containing:
+  agent-shell-20251207.1213/
+  agent-shell-20251207.1213/agent-shell-anthropic.el
+  agent-shell-20251207.1213/agent-shell-cursor.el
+  agent-shell-20251207.1213/agent-shell-diff.el
+  agent-shell-20251207.1213/agent-shell-google.el
+  agent-shell-20251207.1213/agent-shell-goose.el
+  agent-shell-20251207.1213/agent-shell-heartbeat.el
+  agent-shell-20251207.1213/agent-shell-openai.el
+  agent-shell-20251207.1213/agent-shell-opencode.el
+  agent-shell-20251207.1213/agent-shell-pkg.el
+  agent-shell-20251207.1213/agent-shell-prompt-compose.el
+  agent-shell-20251207.1213/agent-shell-qwen.el
+  agent-shell-20251207.1213/agent-shell-ui.el
+  agent-shell-20251207.1213/agent-shell.el
  ✓ Success:
   2025-12-07T11:53:24+0000  agent-shell-20251206.1903.entry
   2025-12-07T11:53:24+0000  agent-shell-20251206.1903.tar
-Built agent-shell in 3.673s, finished at 2025-12-07T11:53:25+0000
+  2025-12-07T14:13:57+0000  agent-shell-20251207.1213.entry
+  2025-12-07T14:13:57+0000  agent-shell-20251207.1213.tar
+Built agent-shell in 3.615s, finished at 2025-12-07T14:13:58+0000
