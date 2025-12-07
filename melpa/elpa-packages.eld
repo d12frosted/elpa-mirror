@@ -4474,7 +4474,7 @@
   (popup-complete :url "https://github.com/emacsorphanage/popup-complete")
   (popup-edit-menu :url "https://github.com/debugfan/popup-edit-menu")
   (popup-imenu :url "https://github.com/ancane/popup-imenu")
-  (popup-kill-ring :url "https://github.com/waymondo/popup-kill-ring")
+  (popup-kill-ring :url "https://github.com/doomchild/popup-kill-ring")
   (popup-switcher :url "https://gitlab.com/kostafey/popup-switcher")
   (popwin :url "https://github.com/emacsorphanage/popwin")
   (portage-modes :url "https://github.com/OpenSauce04/portage-modes")
