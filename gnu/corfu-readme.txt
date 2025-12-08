@@ -22,8 +22,8 @@ programming language packages are often sufficient. Additional Capfs and
 completion utilities are provided by the separate [Cape] package.
 
 *NOTE*: Corfu relies on child frames to show the popup. On Emacs 31 this
-works even for terminal Emacs, but support is still experimental. Use
-the [corfu-terminal] package on older Emacs versions.
+works for terminal Emacs. Use the [corfu-terminal] package on older
+Emacs versions.
 
 Table of Contents
 ─────────────────
@@ -205,7 +205,7 @@ Table of Contents
   │ (use-package dabbrev
   │   ;; Swap M-/ and C-M-/
   │   :bind (("M-/" . dabbrev-completion)
-  │ 	 ("C-M-/" . dabbrev-expand))
+  │          ("C-M-/" . dabbrev-expand))
   │   :config
   │   (add-to-list 'dabbrev-ignored-buffer-regexps "\\` ")
   │   (add-to-list 'dabbrev-ignored-buffer-modes 'authinfo-mode)
@@ -302,11 +302,11 @@ Table of Contents
   │       corfu-auto-prefix 0) ;; TOO SMALL - NOT RECOMMENDED!
   │ 
   │ (add-hook 'corfu-mode-hook
-  │ 	  (lambda ()
-  │ 	    ;; Settings only for Corfu
-  │ 	    (setq-local completion-styles '(basic)
-  │ 			completion-category-overrides nil
-  │ 			completion-category-defaults nil)))
+  │           (lambda ()
+  │             ;; Settings only for Corfu
+  │             (setq-local completion-styles '(basic)
+  │                         completion-category-overrides nil
+  │                         completion-category-defaults nil)))
   └────
 
 
@@ -333,10 +333,10 @@ Table of Contents
   │   (orderless-matching-styles '(orderless-literal)))
   │ 
   │ (add-hook 'corfu-mode-hook
-  │ 	  (lambda ()
-  │ 	    (setq-local completion-styles '(orderless-literal-only basic)
-  │ 			completion-category-overrides nil
-  │ 			completion-category-defaults nil)))
+  │           (lambda ()
+  │             (setq-local completion-styles '(orderless-literal-only basic)
+  │                         completion-category-overrides nil
+  │                         completion-category-defaults nil)))
   └────
 
   If you want to combine fast prefix filtering and Orderless filtering
@@ -359,10 +359,10 @@ Table of Contents
   │       corfu-auto-prefix 0) ;; TOO SMALL - NOT RECOMMENDED
   │ 
   │ (add-hook 'corfu-mode-hook
-  │ 	  (lambda ()
-  │ 	    (setq-local completion-styles '(orderless-fast basic)
-  │ 			completion-category-overrides nil
-  │ 			completion-category-defaults nil)))
+  │           (lambda ()
+  │             (setq-local completion-styles '(orderless-fast basic)
+  │                         completion-category-overrides nil
+  │                         completion-category-defaults nil)))
   └────
 
 
@@ -392,9 +392,9 @@ Table of Contents
   ┌────
   │ (setq global-corfu-minibuffer
   │       (lambda ()
-  │ 	(not (or (bound-and-true-p mct--active)
-  │ 		 (bound-and-true-p vertico--input)
-  │ 		 (eq (current-local-map) read-passwd-map)))))
+  │         (not (or (bound-and-true-p mct--active)
+  │                  (bound-and-true-p vertico--input)
+  │                  (eq (current-local-map) read-passwd-map)))))
   └────
 
 
@@ -407,8 +407,8 @@ Table of Contents
 
   ┌────
   │ (add-hook 'eshell-mode-hook (lambda ()
-  │ 			      (setq-local corfu-auto nil)
-  │ 			      (corfu-mode)))
+  │                               (setq-local corfu-auto nil)
+  │                               (corfu-mode)))
   └────
 
   When pressing `RET' while the Corfu popup is visible, the
@@ -535,9 +535,9 @@ Table of Contents
   │   ;; (keymap-unset corfu-map "RET")
   │   ;; Option 2: Use RET only in shell modes
   │   (keymap-set corfu-map "RET" `( menu-item "" nil :filter
-  │ 				 ,(lambda (&optional _)
-  │ 				    (and (derived-mode-p 'eshell-mode 'comint-mode)
-  │ 					 #'corfu-send)))))
+  │                                  ,(lambda (&optional _)
+  │                                     (and (derived-mode-p 'eshell-mode 'comint-mode)
+  │                                          #'corfu-send)))))
   └────
 
 
@@ -561,10 +561,10 @@ Table of Contents
   │   ;; Use TAB for cycling, default is `corfu-complete'.
   │   :bind
   │   (:map corfu-map
-  │ 	("TAB" . corfu-next)
-  │ 	([tab] . corfu-next)
-  │ 	("S-TAB" . corfu-previous)
-  │ 	([backtab] . corfu-previous))
+  │         ("TAB" . corfu-next)
+  │         ([tab] . corfu-next)
+  │         ("S-TAB" . corfu-previous)
+  │         ([backtab] . corfu-previous))
   │ 
   │   :init
   │   (global-corfu-mode))
@@ -594,7 +594,7 @@ Table of Contents
   │   (pcase completion-in-region--data
   │     (`(,beg ,end ,table ,pred ,extras)
   │      (let ((completion-extra-properties extras)
-  │ 	   completion-cycle-threshold completion-cycling)
+  │            completion-cycle-threshold completion-cycling)
   │        (consult-completion-in-region beg end table pred)))))
   │ (keymap-set corfu-map "M-m" #'corfu-move-to-minibuffer)
   │ (add-to-list 'corfu-continue-commands #'corfu-move-to-minibuffer)
@@ -666,7 +666,7 @@ Table of Contents
 
   • [corfu-terminal]: Child frames are supported by terminal Emacs 31
     out of the box. On older Emacs versions, this package provides an
-    overlay-based popup display.
+    overlay-based popup.
 
   • [Orderless]: Corfu supports completion styles, including the
     advanced `orderless' completion style, where the filter expressions
@@ -762,8 +762,7 @@ Table of Contents
   └────
 
   Sometimes you will find errors inside Capfs. Such errors are bugs in
-  the Capfs must be fixed there, since they Corfu cannot work around
-  them.
+  the Capfs must be fixed there, since Corfu cannot work around them.
 
 
 [Cape] <https://github.com/minad/cape>
