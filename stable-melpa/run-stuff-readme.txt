@@ -12,7 +12,7 @@ using the default `run-stuff-handlers' variable.
 - '@ ' Open in an Emacs buffer.
 - '~ ' Open with default mime type (works for paths too).
 - 'http://' or 'https://' opens in a web-browser.
-- Open in terminal if its a directory.
+- Open in terminal if it's a directory.
 - Default to running the command without a terminal
   when none of the conditions above succeed.
 
@@ -21,7 +21,7 @@ so long commands may be split over multiple lines.
 This is done using the '\' character, when executing the current line
 all surrounding lines which end with '\' will be included.
 
-So you can for define a shell command as follows:
+So you can define a shell command as follows:
 
 $ make \
   -C /my/project \
