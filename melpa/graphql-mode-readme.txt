@@ -6,6 +6,7 @@ query.  The basic functionality includes:
 
 Additionally, it is able to
    - Sending GraphQL queries to an end-point URL
+   - Uploading files with GraphQL mutations (multipart requests)
 
 Files with the .graphql and .gql extensions are automatically
 opened with this mode.
