@@ -1,9 +1,9 @@
  • Building package ein (from github:millejoh/emacs-ipython-notebook)...
 Updating /mnt/store/melpa/working/ein/
-Checking out 271136654631d42105164163fff3d8ceec4c5e40
+Checking out 8fa836fcd1c22f45d36249b09590b32a890f2b9e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ein/
-  to /tmp/einxdw10w/ein-20250307.1731
+  to /tmp/einUEVIv6/ein-20251212.1623
   ! lisp/ein-cell.el -> ein-cell.el
   ! lisp/ein-classes.el -> ein-classes.el
   ! lisp/ein-completer.el -> ein-completer.el
@@ -40,46 +40,48 @@ Copying files (->) and directories (=>)
   ! lisp/ein.el -> ein.el
   ! lisp/ob-ein.el -> ob-ein.el
   ! lisp/poly-ein.el -> poly-ein.el
-Created ein-20250307.1731.tar containing:
-  ein-20250307.1731/
-  ein-20250307.1731/ein-cell.el
-  ein-20250307.1731/ein-classes.el
-  ein-20250307.1731/ein-completer.el
-  ein-20250307.1731/ein-contents-api.el
-  ein-20250307.1731/ein-core.el
-  ein-20250307.1731/ein-dev.el
-  ein-20250307.1731/ein-events.el
-  ein-20250307.1731/ein-file.el
-  ein-20250307.1731/ein-gat.el
-  ein-20250307.1731/ein-ipdb.el
-  ein-20250307.1731/ein-ipynb-mode.el
-  ein-20250307.1731/ein-jupyter.el
-  ein-20250307.1731/ein-kernel.el
-  ein-20250307.1731/ein-kernelinfo.el
-  ein-20250307.1731/ein-kill-ring.el
-  ein-20250307.1731/ein-log.el
-  ein-20250307.1731/ein-markdown-mode.el
-  ein-20250307.1731/ein-node.el
-  ein-20250307.1731/ein-notebook.el
-  ein-20250307.1731/ein-notebooklist.el
-  ein-20250307.1731/ein-notification.el
-  ein-20250307.1731/ein-output-area.el
-  ein-20250307.1731/ein-pager.el
-  ein-20250307.1731/ein-pkg.el
-  ein-20250307.1731/ein-process.el
-  ein-20250307.1731/ein-python-send.el
-  ein-20250307.1731/ein-pytools.el
-  ein-20250307.1731/ein-query.el
-  ein-20250307.1731/ein-scratchsheet.el
-  ein-20250307.1731/ein-shared-output.el
-  ein-20250307.1731/ein-traceback.el
-  ein-20250307.1731/ein-utils.el
-  ein-20250307.1731/ein-websocket.el
-  ein-20250307.1731/ein-worksheet.el
-  ein-20250307.1731/ein.el
-  ein-20250307.1731/ob-ein.el
-  ein-20250307.1731/poly-ein.el
+Created ein-20251212.1623.tar containing:
+  ein-20251212.1623/
+  ein-20251212.1623/ein-cell.el
+  ein-20251212.1623/ein-classes.el
+  ein-20251212.1623/ein-completer.el
+  ein-20251212.1623/ein-contents-api.el
+  ein-20251212.1623/ein-core.el
+  ein-20251212.1623/ein-dev.el
+  ein-20251212.1623/ein-events.el
+  ein-20251212.1623/ein-file.el
+  ein-20251212.1623/ein-gat.el
+  ein-20251212.1623/ein-ipdb.el
+  ein-20251212.1623/ein-ipynb-mode.el
+  ein-20251212.1623/ein-jupyter.el
+  ein-20251212.1623/ein-kernel.el
+  ein-20251212.1623/ein-kernelinfo.el
+  ein-20251212.1623/ein-kill-ring.el
+  ein-20251212.1623/ein-log.el
+  ein-20251212.1623/ein-markdown-mode.el
+  ein-20251212.1623/ein-node.el
+  ein-20251212.1623/ein-notebook.el
+  ein-20251212.1623/ein-notebooklist.el
+  ein-20251212.1623/ein-notification.el
+  ein-20251212.1623/ein-output-area.el
+  ein-20251212.1623/ein-pager.el
+  ein-20251212.1623/ein-pkg.el
+  ein-20251212.1623/ein-process.el
+  ein-20251212.1623/ein-python-send.el
+  ein-20251212.1623/ein-pytools.el
+  ein-20251212.1623/ein-query.el
+  ein-20251212.1623/ein-scratchsheet.el
+  ein-20251212.1623/ein-shared-output.el
+  ein-20251212.1623/ein-traceback.el
+  ein-20251212.1623/ein-utils.el
+  ein-20251212.1623/ein-websocket.el
+  ein-20251212.1623/ein-worksheet.el
+  ein-20251212.1623/ein.el
+  ein-20251212.1623/ob-ein.el
+  ein-20251212.1623/poly-ein.el
  ✓ Success:
   2025-12-12T15:12:26+0000  ein-20250307.1731.entry
   2025-12-12T15:12:26+0000  ein-20250307.1731.tar
-Built ein in 3.477s, finished at 2025-12-12T15:12:27+0000
+  2025-12-12T17:47:07+0000  ein-20251212.1623.entry
+  2025-12-12T17:47:07+0000  ein-20251212.1623.tar
+Built ein in 3.405s, finished at 2025-12-12T17:47:08+0000
