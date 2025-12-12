@@ -1994,12 +1994,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "2ff29c5d6abae3637d6174d889f39745fcd13fa5"))])
  (minuet
-  . [(0 6 0) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 7 0) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "a6f4daf27e5816dc9cddf744a844a007084a93ac"))])
+      (:commit . "10638b986ee83b15856f89fafac4ea9a689bf67f"))])
  (mmm-mode
   . [(0 5 11) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
