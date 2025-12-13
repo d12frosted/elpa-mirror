@@ -1,9 +1,9 @@
  • Building package nethack (from github:Feyorsh/nethack-el)...
 Updating /mnt/store/melpa/working/nethack/
-Checking out c3d4b8980fa812de2f07094e3d1aac90eed7d7a7
+Checking out 475d6113aa8a09fb81b581f3fb23fbfe76f7de22
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nethack/
-  to /tmp/nethackhshFLf/nethack-20251025.1205
+  to /tmp/nethackmuSakc/nethack-20251213.1310
     nethack-api.el -> nethack-api.el
     nethack-cmd.el -> nethack-cmd.el
     nethack-compat.el -> nethack-compat.el
@@ -14,20 +14,22 @@ Copying files (->) and directories (=>)
     nethack.el -> nethack.el
     enh-367.patch -> enh-367.patch
     enh-370.patch -> enh-370.patch
-Created nethack-20251025.1205.tar containing:
-  nethack-20251025.1205/
-  nethack-20251025.1205/enh-367.patch
-  nethack-20251025.1205/enh-370.patch
-  nethack-20251025.1205/nethack-api.el
-  nethack-20251025.1205/nethack-cmd.el
-  nethack-20251025.1205/nethack-compat.el
-  nethack-20251025.1205/nethack-gen-tiles.el
-  nethack-20251025.1205/nethack-keys.el
-  nethack-20251025.1205/nethack-lisprec.el
-  nethack-20251025.1205/nethack-options.el
-  nethack-20251025.1205/nethack-pkg.el
-  nethack-20251025.1205/nethack.el
+Created nethack-20251213.1310.tar containing:
+  nethack-20251213.1310/
+  nethack-20251213.1310/enh-367.patch
+  nethack-20251213.1310/enh-370.patch
+  nethack-20251213.1310/nethack-api.el
+  nethack-20251213.1310/nethack-cmd.el
+  nethack-20251213.1310/nethack-compat.el
+  nethack-20251213.1310/nethack-gen-tiles.el
+  nethack-20251213.1310/nethack-keys.el
+  nethack-20251213.1310/nethack-lisprec.el
+  nethack-20251213.1310/nethack-options.el
+  nethack-20251213.1310/nethack-pkg.el
+  nethack-20251213.1310/nethack.el
  ✓ Success:
   2025-12-13T11:39:26+0000  nethack-20251025.1205.entry
   2025-12-13T11:39:25+0000  nethack-20251025.1205.tar
-Built nethack in 3.489s, finished at 2025-12-13T11:39:27+0000
+  2025-12-13T14:06:56+0000  nethack-20251213.1310.entry
+  2025-12-13T14:06:56+0000  nethack-20251213.1310.tar
+Built nethack in 6.252s, finished at 2025-12-13T14:06:57+0000
