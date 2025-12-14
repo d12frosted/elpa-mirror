@@ -3028,12 +3028,12 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "f9bc3f6f8639d4ed9c2d848fdcc84fab4b1b6cae"))])
  (system-packages
-  . [(1 1 1) ((emacs (24 3))) "functions to manage system packages"
+  . [(1 1 2) ((emacs (24 3))) "functions to manage system packages"
      tar
      ((:url . "https://gitlab.com/jabranham/system-packages")
       (:maintainer "J. Alexander Branham" . "alex.branham@gmail.com")
       (:authors ("J. Alexander Branham" . "alex.branham@gmail.com"))
-      (:commit . "52b9bb08041e7d91ead25a9a3c6170bad9bed7b7"))])
+      (:commit . "de2a98caad223ded3b58512d8f44a8307a228a93"))])
  (tNFA
   . [(0 1 1) ((queue (0 1)))
      "Tagged non-deterministic finite-state automata" single

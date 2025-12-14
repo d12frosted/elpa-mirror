@@ -79,27 +79,27 @@ packages more convenient through Emacs.
 
   ┌────
   │ (add-to-list 'system-packages-supported-package-managers
-  │ 	     '(pacaur .
-  │ 		      ((default-sudo . nil)
-  │ 		       (install . "pacaur -S")
-  │ 		       (search . "pacaur -Ss")
-  │ 		       (uninstall . "pacaur -Rs")
-  │ 		       (update . "pacaur -Syu")
-  │ 		       (clean-cache . "pacaur -Sc")
-  │ 		       (log . "cat /var/log/pacman.log")
-  │ 		       (change-log . "pacaur -Qc")
-  │ 		       (get-info . "pacaur -Qi")
-  │ 		       (get-info-remote . "pacaur -Si")
-  │ 		       (list-files-provided-by . "pacaur -Ql")
-  │ 		       (owning-file . "pacaur -Qo")
-  │ 		       (owning-file-remote . "pacaur -F")
-  │ 		       (verify-all-packages . "pacaur -Qkk")
-  │ 		       (verify-all-dependencies . "pacaur -Dk")
-  │ 		       (remove-orphaned . "pacaur -Rns $(pacman -Qtdq)")
-  │ 		       (list-installed-packages . "pacaur -Qe")
-  │ 		       (list-installed-packages-all . "pacaur -Q")
-  │ 		       (list-dependencies-of . "pacaur -Qi")
-  │ 		       (noconfirm . "--noconfirm"))))
+  │              '(pacaur .
+  │                       ((default-sudo . nil)
+  │                        (install . "pacaur -S")
+  │                        (search . "pacaur -Ss")
+  │                        (uninstall . "pacaur -Rs")
+  │                        (update . "pacaur -Syu")
+  │                        (clean-cache . "pacaur -Sc")
+  │                        (log . "cat /var/log/pacman.log")
+  │                        (change-log . "pacaur -Qc")
+  │                        (get-info . "pacaur -Qi")
+  │                        (get-info-remote . "pacaur -Si")
+  │                        (list-files-provided-by . "pacaur -Ql")
+  │                        (owning-file . "pacaur -Qo")
+  │                        (owning-file-remote . "pacaur -F")
+  │                        (verify-all-packages . "pacaur -Qkk")
+  │                        (verify-all-dependencies . "pacaur -Dk")
+  │                        (remove-orphaned . "pacaur -Rns $(pacman -Qtdq)")
+  │                        (list-installed-packages . "pacaur -Qe")
+  │                        (list-installed-packages-all . "pacaur -Q")
+  │                        (list-dependencies-of . "pacaur -Qi")
+  │                        (noconfirm . "--noconfirm"))))
   └────
 
   Any occurrences of `%p' in a command will be replaced with the package
