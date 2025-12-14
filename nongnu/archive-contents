@@ -954,12 +954,12 @@
       (:authors ("Joseph Turner" . "joseph@ushin.org"))
       (:commit . "25570c6e4b90dce0858b80b7f557db19744b3955"))])
  (idle-highlight-mode
-  . [(1 1 4) ((emacs (27 1))) "Highlight the word the point is on" tar
+  . [(1 1 5) ((emacs (29 1))) "Highlight the word the point is on" tar
      ((:url
        . "https://codeberg.org/ideasman42/emacs-idle-highlight-mode")
       (:keywords "convenience")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
-      (:commit . "8ded8426e9fb6e2637c25d52184f6333dfa157ad"))])
+      (:commit . "425f1b247ca5176d47ff1d8b07a6a9293a066f82"))])
  (idris-mode
   . [(1 1 0) ((emacs (24)) (prop-menu (0 1)) (cl-lib (0 5)))
      "Major mode for editing Idris code" tar
