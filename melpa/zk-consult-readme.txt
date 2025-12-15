@@ -2,7 +2,7 @@ This package offers several integrations of Consult with zk:
 
 
 1. Two functions as alternatives to the default `zk-grep' functions:
-`zk-consult-grep' and `zk-consult-grep-tag-search'. Instead of displaying
+`zk-consult-grep' and `zk-consult-grep-tag-search'.  Instead of displaying
 search results in a `grep' buffer, these functions display search results
 using Consult.
 
