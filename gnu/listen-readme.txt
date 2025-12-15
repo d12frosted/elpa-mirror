@@ -16,6 +16,7 @@ Table of Contents
 
 
 [file:https://elpa.gnu.org/packages/listen.svg]
+[file:https://elpa.gnu.org/devel/listen.svg]
 
 This package aims to provide a simple audio/music player for Emacs.  It
 should "just work," with little-to-no configuration, have intuitive
@@ -23,11 +24,9 @@ commands, and be easily extended and customized.  (Contrast to setting
 up EMMS, or having to configure external players like MPD.)  A Transient
 menu, under the command `listen', is the primary entry point.
 
-The only external dependency is VLC, which is currently the only player
-backend that is supported.  (Other backends may easily be added; see
-library `listen-vlc' for example.)  Track metadata is read using EMMS's
-native Elisp metadata library, which has been imported into this
-package.
+The only external dependency is either [MPV] or [VLC], which are the
+supported player backends.  Track metadata is read using EMMS's native
+Elisp metadata library, which has been imported into this package.
 
 Queues are provided as the means to play consecutive tracks, and they
 are shown in a `vtable'-based view buffer.  They are persisted between
@@ -48,6 +47,13 @@ Note a silly limitation: a track may be present in a queue only once
 
 [file:https://elpa.gnu.org/packages/listen.svg]
 <https://elpa.gnu.org/packages/listen.html>
+
+[file:https://elpa.gnu.org/devel/listen.svg]
+<https://elpa.gnu.org/devel/listen.html>
+
+[MPV] <https://mpv.io/>
+
+[VLC] <https://www.videolan.org/vlc/>
 
 
 1 Contents
@@ -72,10 +78,12 @@ Note a silly limitation: a track may be present in a queue only once
 
   *Requirements:*
   • Emacs version 29.1 or later.
-  • [VLC]: used to play audio.
+  • [MPV] or [VLC]: used to play audio.
   • Optional: `ffprobe' (part of [FFmpeg]) is used to read tracks'
     duration when available.
 
+
+[MPV] <https://mpv.io/>
 
 [VLC] <https://www.videolan.org/vlc/>
 
@@ -107,8 +115,8 @@ Git
   all times; only minor bugs are expected to be found in it before a new
   stable release is made.
 
-  To install, it is recommended to use [quelpa-use-package], like this
-  (using [this helpful command] for upgrading versions):
+  To install from Git, it is recommended to use [quelpa-use-package],
+  like this (using [this helpful command] for upgrading versions):
 
   ┌────
   │ ;; Install and load `quelpa-use-package'.
@@ -363,10 +371,9 @@ Library buffer
 Players
 ───────
 
-  `listen' currently supports audio playback via the VLC backend.
-  Internally, any number of simultaneous player instances could be
-  controlled, but `listen''s UI provides the means to control one at a
-  time.
+  `listen' supports audio playback via MPV or VLC backends.  Internally,
+  any number of simultaneous player instances could be controlled, but
+  `listen''s UI provides the means to control one at a time.
 
   Controlling the player is mainly done through the main [Transient]
   menu, through the command `listen'.  However, all of the commands
@@ -434,18 +441,51 @@ Mode
 Tips
 ────
 
-  • Since VLC is used as a backend, [MPRIS]-based player info and
-    controls "just work", so you can use things like media hotkeys and
-    various widgets to control `listen''s playback.
+  • When using VLC as a backend, [MPRIS]-based player info and controls
+    "just work", so you can use things like media hotkeys and various
+    widgets to control `listen''s playback.  When using MPV as a
+    backend, see the [mpv-mpris] package.
   • Similarly, you might even see an icon in your task switcher
     indicating that Emacs is playing sound (e.g. with KDE Plasma).
 
 
 [MPRIS] <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>
 
+[mpv-mpris] <https://github.com/hoyon/mpv-mpris>
+
 
 6 Changelog
 ═══════════
+
+v0.10
+─────
+
+  *Additions*
+  • [MPV] support (works asynchronously, to improve performance and
+    avoid blocking Emacs).
+  • Command `listen-status', which shows a status buffer (contributions
+    to it are welcome).
+  • Command `listen-queue-add-tracks', when used in a Dired buffer, uses
+    the marked files or the one at point.
+  • Option `listen-backend', which sets the backend to use: MPV or VLC.
+    (The default is to auto-detect which is available at load time, with
+    MPV being preferred due to more robust IPC support.)
+  • Faces for parts of mode line lighter.
+
+  *Changes*
+  • Improve performance of adding large numbers of tracks to large
+    queues (using a hash table for deduplication).
+
+  *Fixes*
+  • Playing next track in queue after current track has been removed.
+  • Command `listen-queue-goto-current' automatically shows the queue's
+    buffer.
+  • Updating vtables for Emacs versions before 30.
+  • Minor fixes for Emacs 30 compatibility.
+
+
+[MPV] <https://mpv.io/>
+
 
 v0.9
 ────
