@@ -5850,6 +5850,7 @@
   (wiki-summary :url "https://github.com/jozefg/wiki-summary.el")
   (wikinfo :url "https://github.com/progfolio/wikinfo")
   (wikinforg :url "https://github.com/progfolio/wikinforg")
+  (wiktionary-bro :url "https://github.com/agzam/wiktionary-bro.el")
   (wildcharm-light-theme :url "https://github.com/habamax/wildcharm-theme")
   (wildcharm-theme :url "https://github.com/habamax/wildcharm-theme")
   (wilt :url "https://github.com/sixty-north/emacs-wilt")
