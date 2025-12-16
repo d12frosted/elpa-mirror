@@ -3,7 +3,7 @@ Updating /mnt/store/melpa/working/magit/
 Checking out 1288f655733280f3f09616d5b5b7245c8b7dc843
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit/
-  to /tmp/magitAiH2wp/magit-20251215.2222
+  to /tmp/magitPVRita/magit-20251215.2222
   ! lisp/magit-apply.el -> magit-apply.el
   ! lisp/magit-autorevert.el -> magit-autorevert.el
   ! lisp/magit-base.el -> magit-base.el
@@ -54,6 +54,35 @@ Copying files (->) and directories (=>)
   ! docs/AUTHORS.md -> AUTHORS.md
     LICENSE -> LICENSE
     .dir-locals.el -> .dir-locals.el
+    git-hooks/applypatch-msg -> git-hooks/applypatch-msg
+    git-hooks/commit-msg -> git-hooks/commit-msg
+    git-hooks/fallthrough -> git-hooks/fallthrough
+    git-hooks/fsmonitor-watchman -> git-hooks/fsmonitor-watchman
+    git-hooks/p4-changelist -> git-hooks/p4-changelist
+    git-hooks/p4-post-changelist -> git-hooks/p4-post-changelist
+    git-hooks/p4-pre-submit -> git-hooks/p4-pre-submit
+    git-hooks/p4-prepare-changelist -> git-hooks/p4-prepare-changelist
+    git-hooks/post-applypatch -> git-hooks/post-applypatch
+    git-hooks/post-checkout -> git-hooks/post-checkout
+    git-hooks/post-commit -> git-hooks/post-commit
+    git-hooks/post-index-change -> git-hooks/post-index-change
+    git-hooks/post-merge -> git-hooks/post-merge
+    git-hooks/post-receive -> git-hooks/post-receive
+    git-hooks/post-rewrite -> git-hooks/post-rewrite
+    git-hooks/post-update -> git-hooks/post-update
+    git-hooks/pre-applypatch -> git-hooks/pre-applypatch
+    git-hooks/pre-auto-gc -> git-hooks/pre-auto-gc
+    git-hooks/pre-commit -> git-hooks/pre-commit
+    git-hooks/pre-merge-commit -> git-hooks/pre-merge-commit
+    git-hooks/pre-push -> git-hooks/pre-push
+    git-hooks/pre-rebase -> git-hooks/pre-rebase
+    git-hooks/pre-receive -> git-hooks/pre-receive
+    git-hooks/prepare-commit-msg -> git-hooks/prepare-commit-msg
+    git-hooks/proc-receive -> git-hooks/proc-receive
+    git-hooks/push-to-checkout -> git-hooks/push-to-checkout
+    git-hooks/reference-transaction -> git-hooks/reference-transaction
+    git-hooks/sendemail-validate -> git-hooks/sendemail-validate
+    git-hooks/update -> git-hooks/update
 Generating magit.info
 Created magit-20251215.2222.tar containing:
   magit-20251215.2222/
@@ -62,6 +91,36 @@ Created magit-20251215.2222.tar containing:
   magit-20251215.2222/LICENSE
   magit-20251215.2222/dir
   magit-20251215.2222/git-commit.el
+  magit-20251215.2222/git-hooks/
+  magit-20251215.2222/git-hooks/applypatch-msg
+  magit-20251215.2222/git-hooks/commit-msg
+  magit-20251215.2222/git-hooks/fallthrough
+  magit-20251215.2222/git-hooks/fsmonitor-watchman
+  magit-20251215.2222/git-hooks/p4-changelist
+  magit-20251215.2222/git-hooks/p4-post-changelist
+  magit-20251215.2222/git-hooks/p4-pre-submit
+  magit-20251215.2222/git-hooks/p4-prepare-changelist
+  magit-20251215.2222/git-hooks/post-applypatch
+  magit-20251215.2222/git-hooks/post-checkout
+  magit-20251215.2222/git-hooks/post-commit
+  magit-20251215.2222/git-hooks/post-index-change
+  magit-20251215.2222/git-hooks/post-merge
+  magit-20251215.2222/git-hooks/post-receive
+  magit-20251215.2222/git-hooks/post-rewrite
+  magit-20251215.2222/git-hooks/post-update
+  magit-20251215.2222/git-hooks/pre-applypatch
+  magit-20251215.2222/git-hooks/pre-auto-gc
+  magit-20251215.2222/git-hooks/pre-commit
+  magit-20251215.2222/git-hooks/pre-merge-commit
+  magit-20251215.2222/git-hooks/pre-push
+  magit-20251215.2222/git-hooks/pre-rebase
+  magit-20251215.2222/git-hooks/pre-receive
+  magit-20251215.2222/git-hooks/prepare-commit-msg
+  magit-20251215.2222/git-hooks/proc-receive
+  magit-20251215.2222/git-hooks/push-to-checkout
+  magit-20251215.2222/git-hooks/reference-transaction
+  magit-20251215.2222/git-hooks/sendemail-validate
+  magit-20251215.2222/git-hooks/update
   magit-20251215.2222/git-rebase.el
   magit-20251215.2222/magit-apply.el
   magit-20251215.2222/magit-autorevert.el
@@ -110,8 +169,6 @@ Created magit-20251215.2222.tar containing:
   magit-20251215.2222/magit.el
   magit-20251215.2222/magit.info
  ✓ Success:
-  2025-12-15T20:09:23+0000  magit-20251215.1842.entry
-  2025-12-15T20:09:22+0000  magit-20251215.1842.tar
-  2025-12-15T22:41:32+0000  magit-20251215.2222.entry
-  2025-12-15T22:41:32+0000  magit-20251215.2222.tar
-Built magit in 21.943s, finished at 2025-12-15T22:41:34+0000
+  2025-12-16T03:28:44+0000  magit-20251215.2222.entry
+  2025-12-16T03:28:44+0000  magit-20251215.2222.tar
+Built magit in 11.872s, finished at 2025-12-16T03:28:45+0000
