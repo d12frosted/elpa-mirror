@@ -18,6 +18,7 @@
   - [minuet-show-error-message-on-minibuffer](#minuet-show-error-message-on-minibuffer)
   - [minuet-add-single-line-entry](#minuet-add-single-line-entry)
   - [minuet-n-completions](#minuet-n-completions)
+  - [minuet-auto-suggestion-block-predicates](#minuet-auto-suggestion-block-predicates)
   - [minuet-auto-suggestion-debounce-delay](#minuet-auto-suggestion-debounce-delay)
   - [minuet-auto-suggestion-throttle-delay](#minuet-auto-suggestion-throttle-delay)
 - [Provider Options](#provider-options)
@@ -58,6 +59,11 @@ as dancers move during a minuet.
   Llama.cpp and OpenAI-compatible providers)
 - Customizable configuration options
 - Streaming support to enable completion delivery even with slower LLMs
+- Accept completions continuously, one line at a time, so longer suggestions
+  can be pulled in incrementally.
+- When your typed text matches the start of a suggestion, Minuet keeps the
+  completion in sync of your typed text instead of clearing it, to avoid unnecessary
+  LLM requests and conserving resources.
 
 **With minibuffer frontend**:
 
@@ -69,6 +75,11 @@ package.
 **With overlay ghost text frontend**:
 
 ![example-overlay](./assets/minuet-overlay.jpg)
+
+https://github.com/user-attachments/assets/04716eab-9acc-46f4-a47d-d6c763eca4c2
+
+<!-- The link above is a showcase video for the virtual text feature, hosted -->
+<!-- externally on GitHub. -->
 
 # Requirements
 
@@ -277,12 +288,12 @@ completion request.
 
 # Selecting a Provider or Model
 
-The `gemini-flash` and `codestral` models offer high-quality output with free
-and fast processing. For optimal quality (albeit slower generation speed),
-consider using the `deepseek-chat` model, which is compatible with both
-`openai-fim-compatible` and `openai-compatible` providers. For local LLM
-inference, you can deploy either `qwen-2.5-coder` or `deepseek-coder-v2` through
-Ollama using the `openai-fim-compatible` provider.
+The `gemini-2.0-flash` and `codestral` models offer high-quality output with
+free and fast processing. For optimal quality, though with significantly slower
+generation speed, consider using the `deepseek-chat` model, which is compatible
+with both `openai-fim-compatible` and `openai-compatible` providers. For local
+LLM inference, you can deploy either `qwen-2.5-coder` or `deepseek-coder-v2`
+through Ollama using the `openai-fim-compatible` provider.
 
 Note: as of January 27, 2025, the high server demand from deepseek may
 significantly slow down the default provider used by Minuet
@@ -392,6 +403,12 @@ completion items specified, as this parameter serves only as a prompt guideline.
 The default is `3`.
 
 If resource efficiency is imporant, it is recommended to set this value to `1`.
+
+## minuet-auto-suggestion-block-predicates
+
+List of predicate functions that decide whether auto-suggestions should be
+suppressed. Each function is called before requesting a suggestion; if any
+returns non-nil no suggestion is requested for that moment.
 
 ## minuet-auto-suggestion-debounce-delay
 

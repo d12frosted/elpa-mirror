@@ -400,8 +400,9 @@ Table of Contents
 
   Ideas and user feedback
         Anwesh Gangula, Diego Alvarez, Duy Nguyen, Koloszár Gergely,
-        Matthias Meulien, Mark Barton, Petter Storvik, Ronny Randen,
-        Rudolf Adamkovič, Toon Claes, and users djl, kb.
+        Matthias Meulien, Mark Barton, Mehrad Mahmoudian, Nikolaos
+        Bezirgiannis, Petter Storvik, Ronny Randen, Rudolf Adamkovič,
+        Toon Claes, and users djl, kb.
 
 
 14 GNU Free Documentation License
