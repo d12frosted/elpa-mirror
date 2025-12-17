@@ -32,11 +32,13 @@ https://gitlab.com/oer/emacs-reveal
 Its howto, generated from Org source file with emacs-reveal:
 https://oer.gitlab.io/emacs-reveal-howto/howto.html
 As a real-life example, maybe check out the OER presentations
-(HTML with audio, different PDF variants, references into
-bibliography, index terms, management of metadata including
-license information and attribution, Docker image for publication
-as GitLab Pages with CI/CD) for a course on Operating Systems:
-https://oer.gitlab.io/OS/
+(HTML with audio, audio explanations generated from Org sources via
+text-to-speech [TTS]; different PDF variants; references between
+presentations and citations into bibliography;
+index terms; management of metadata including
+license information and attribution; Docker image for publication
+as GitLab Pages with CI/CD) for a course on IT Systems:
+https://oer.gitlab.io/oer-courses/it-systems/
 
 The package org-re-reveal grew out of a forked version of org-reveal
 when upstream development stopped:
