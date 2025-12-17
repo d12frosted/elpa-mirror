@@ -1,9 +1,9 @@
  • Building package slack (from github:emacs-slack/emacs-slack)...
 Updating /mnt/store/melpa/working/slack/
-Checking out e63db59ba3aeeddf20867621a5446587f2ed9993
+Checking out 8a649a4ad9558c7dc1c5773871c1de9107b475f3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/slack/
-  to /tmp/slack9bY6WT/slack-20251201.2238
+  to /tmp/slack9d0MYa/slack-20251216.2218
     emacs-slack.el -> emacs-slack.el
     slack-action.el -> slack-action.el
     slack-activity-feed-buffer.el -> slack-activity-feed-buffer.el
@@ -83,89 +83,91 @@ Copying files (->) and directories (=>)
     slack-util.el -> slack-util.el
     slack-websocket.el -> slack-websocket.el
     slack.el -> slack.el
-Created slack-20251201.2238.tar containing:
-  slack-20251201.2238/
-  slack-20251201.2238/emacs-slack.el
-  slack-20251201.2238/slack-action.el
-  slack-20251201.2238/slack-activity-feed-buffer.el
-  slack-20251201.2238/slack-all-threads-buffer.el
-  slack-20251201.2238/slack-attachment.el
-  slack-20251201.2238/slack-authorize.el
-  slack-20251201.2238/slack-block.el
-  slack-20251201.2238/slack-bot-message.el
-  slack-20251201.2238/slack-bot.el
-  slack-20251201.2238/slack-buffer.el
-  slack-20251201.2238/slack-channel.el
-  slack-20251201.2238/slack-company.el
-  slack-20251201.2238/slack-conversations.el
-  slack-20251201.2238/slack-counts.el
-  slack-20251201.2238/slack-create-message.el
-  slack-20251201.2238/slack-defcustoms.el
-  slack-20251201.2238/slack-dialog-buffer.el
-  slack-20251201.2238/slack-dialog-edit-element-buffer.el
-  slack-20251201.2238/slack-dialog.el
-  slack-20251201.2238/slack-dnd-status.el
-  slack-20251201.2238/slack-emoji.el
-  slack-20251201.2238/slack-event.el
-  slack-20251201.2238/slack-file-info-buffer.el
-  slack-20251201.2238/slack-file-list-buffer.el
-  slack-20251201.2238/slack-file.el
-  slack-20251201.2238/slack-group.el
-  slack-20251201.2238/slack-im.el
-  slack-20251201.2238/slack-image.el
-  slack-20251201.2238/slack-log.el
-  slack-20251201.2238/slack-message-attachment-preview-buffer.el
-  slack-20251201.2238/slack-message-buffer.el
-  slack-20251201.2238/slack-message-compose-buffer.el
-  slack-20251201.2238/slack-message-edit-buffer.el
-  slack-20251201.2238/slack-message-editor.el
-  slack-20251201.2238/slack-message-event.el
-  slack-20251201.2238/slack-message-faces.el
-  slack-20251201.2238/slack-message-formatter.el
-  slack-20251201.2238/slack-message-notification.el
-  slack-20251201.2238/slack-message-reaction.el
-  slack-20251201.2238/slack-message-sender.el
-  slack-20251201.2238/slack-message-share-buffer.el
-  slack-20251201.2238/slack-message.el
-  slack-20251201.2238/slack-modeline.el
-  slack-20251201.2238/slack-mrkdwn.el
-  slack-20251201.2238/slack-pinned-item.el
-  slack-20251201.2238/slack-pinned-items-buffer.el
-  slack-20251201.2238/slack-pkg.el
-  slack-20251201.2238/slack-reaction-event.el
-  slack-20251201.2238/slack-reaction.el
-  slack-20251201.2238/slack-reminder.el
-  slack-20251201.2238/slack-reply-event.el
-  slack-20251201.2238/slack-request.el
-  slack-20251201.2238/slack-room-buffer.el
-  slack-20251201.2238/slack-room-event.el
-  slack-20251201.2238/slack-room-info-buffer.el
-  slack-20251201.2238/slack-room-message-compose-buffer.el
-  slack-20251201.2238/slack-room.el
-  slack-20251201.2238/slack-scheduled-messages-buffer.el
-  slack-20251201.2238/slack-search-result-buffer.el
-  slack-20251201.2238/slack-search.el
-  slack-20251201.2238/slack-selectable.el
-  slack-20251201.2238/slack-slash-commands.el
-  slack-20251201.2238/slack-star-event.el
-  slack-20251201.2238/slack-star.el
-  slack-20251201.2238/slack-stars-buffer.el
-  slack-20251201.2238/slack-team-ws.el
-  slack-20251201.2238/slack-team.el
-  slack-20251201.2238/slack-thread-event.el
-  slack-20251201.2238/slack-thread-message-buffer.el
-  slack-20251201.2238/slack-thread-message-compose-buffer.el
-  slack-20251201.2238/slack-thread.el
-  slack-20251201.2238/slack-typing.el
-  slack-20251201.2238/slack-unescape.el
-  slack-20251201.2238/slack-user-message.el
-  slack-20251201.2238/slack-user-profile-buffer.el
-  slack-20251201.2238/slack-user.el
-  slack-20251201.2238/slack-usergroup.el
-  slack-20251201.2238/slack-util.el
-  slack-20251201.2238/slack-websocket.el
-  slack-20251201.2238/slack.el
+Created slack-20251216.2218.tar containing:
+  slack-20251216.2218/
+  slack-20251216.2218/emacs-slack.el
+  slack-20251216.2218/slack-action.el
+  slack-20251216.2218/slack-activity-feed-buffer.el
+  slack-20251216.2218/slack-all-threads-buffer.el
+  slack-20251216.2218/slack-attachment.el
+  slack-20251216.2218/slack-authorize.el
+  slack-20251216.2218/slack-block.el
+  slack-20251216.2218/slack-bot-message.el
+  slack-20251216.2218/slack-bot.el
+  slack-20251216.2218/slack-buffer.el
+  slack-20251216.2218/slack-channel.el
+  slack-20251216.2218/slack-company.el
+  slack-20251216.2218/slack-conversations.el
+  slack-20251216.2218/slack-counts.el
+  slack-20251216.2218/slack-create-message.el
+  slack-20251216.2218/slack-defcustoms.el
+  slack-20251216.2218/slack-dialog-buffer.el
+  slack-20251216.2218/slack-dialog-edit-element-buffer.el
+  slack-20251216.2218/slack-dialog.el
+  slack-20251216.2218/slack-dnd-status.el
+  slack-20251216.2218/slack-emoji.el
+  slack-20251216.2218/slack-event.el
+  slack-20251216.2218/slack-file-info-buffer.el
+  slack-20251216.2218/slack-file-list-buffer.el
+  slack-20251216.2218/slack-file.el
+  slack-20251216.2218/slack-group.el
+  slack-20251216.2218/slack-im.el
+  slack-20251216.2218/slack-image.el
+  slack-20251216.2218/slack-log.el
+  slack-20251216.2218/slack-message-attachment-preview-buffer.el
+  slack-20251216.2218/slack-message-buffer.el
+  slack-20251216.2218/slack-message-compose-buffer.el
+  slack-20251216.2218/slack-message-edit-buffer.el
+  slack-20251216.2218/slack-message-editor.el
+  slack-20251216.2218/slack-message-event.el
+  slack-20251216.2218/slack-message-faces.el
+  slack-20251216.2218/slack-message-formatter.el
+  slack-20251216.2218/slack-message-notification.el
+  slack-20251216.2218/slack-message-reaction.el
+  slack-20251216.2218/slack-message-sender.el
+  slack-20251216.2218/slack-message-share-buffer.el
+  slack-20251216.2218/slack-message.el
+  slack-20251216.2218/slack-modeline.el
+  slack-20251216.2218/slack-mrkdwn.el
+  slack-20251216.2218/slack-pinned-item.el
+  slack-20251216.2218/slack-pinned-items-buffer.el
+  slack-20251216.2218/slack-pkg.el
+  slack-20251216.2218/slack-reaction-event.el
+  slack-20251216.2218/slack-reaction.el
+  slack-20251216.2218/slack-reminder.el
+  slack-20251216.2218/slack-reply-event.el
+  slack-20251216.2218/slack-request.el
+  slack-20251216.2218/slack-room-buffer.el
+  slack-20251216.2218/slack-room-event.el
+  slack-20251216.2218/slack-room-info-buffer.el
+  slack-20251216.2218/slack-room-message-compose-buffer.el
+  slack-20251216.2218/slack-room.el
+  slack-20251216.2218/slack-scheduled-messages-buffer.el
+  slack-20251216.2218/slack-search-result-buffer.el
+  slack-20251216.2218/slack-search.el
+  slack-20251216.2218/slack-selectable.el
+  slack-20251216.2218/slack-slash-commands.el
+  slack-20251216.2218/slack-star-event.el
+  slack-20251216.2218/slack-star.el
+  slack-20251216.2218/slack-stars-buffer.el
+  slack-20251216.2218/slack-team-ws.el
+  slack-20251216.2218/slack-team.el
+  slack-20251216.2218/slack-thread-event.el
+  slack-20251216.2218/slack-thread-message-buffer.el
+  slack-20251216.2218/slack-thread-message-compose-buffer.el
+  slack-20251216.2218/slack-thread.el
+  slack-20251216.2218/slack-typing.el
+  slack-20251216.2218/slack-unescape.el
+  slack-20251216.2218/slack-user-message.el
+  slack-20251216.2218/slack-user-profile-buffer.el
+  slack-20251216.2218/slack-user.el
+  slack-20251216.2218/slack-usergroup.el
+  slack-20251216.2218/slack-util.el
+  slack-20251216.2218/slack-websocket.el
+  slack-20251216.2218/slack.el
  ✓ Success:
-  2025-12-16T19:30:28+0000  slack-20251201.2238.entry
-  2025-12-16T19:30:28+0000  slack-20251201.2238.tar
-Built slack in 4.570s, finished at 2025-12-16T19:30:29+0000
+  2025-12-16T21:56:25+0000  slack-20251201.2238.entry
+  2025-12-16T21:56:25+0000  slack-20251201.2238.tar
+  2025-12-17T00:23:17+0000  slack-20251216.2218.entry
+  2025-12-17T00:23:16+0000  slack-20251216.2218.tar
+Built slack in 4.647s, finished at 2025-12-17T00:23:17+0000
