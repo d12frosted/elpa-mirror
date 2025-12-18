@@ -9,10 +9,9 @@ Configuration:
 The package uses `calendar-latitude' and `calendar-longitude' for
 the forecast location.
 
-The sparkline display highlights lunch and commute time windows,
-which can be configured via `sparkweather-lunch-start-hour',
-`sparkweather-lunch-end-hour', `sparkweather-commute-start-hour',
-and `sparkweather-commute-end-hour'.
+The sparkline display highlights configurable time windows,
+such as lunch and commute hours.  Customize `sparkweather-time-windows'
+to add or modify highlighted periods.
 
 Weather icons use Unicode weather glyphs from the Miscellaneous
 Symbols block for broad compatibility.

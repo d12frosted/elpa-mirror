@@ -1,42 +1,40 @@
-GKNV Baseline Compliance:
+dag-draw.el: Draw directed graphs that don't suck.
 
-This is the main entry point for the GKNV graph drawing algorithm implementation.
-The package implements all four passes of "A Technique for Drawing Directed Graphs"
-by Gansner, Koutsofios, North, and Vo (1993).
+You focus on the structure (what connects to what), and dag-draw handles
+the layout (where everything goes).  No more fiddling with positions or
+untangling crossed arrows.
 
-GKNV Reference: Complete algorithm (Figure 1-1, lines 1-2166)
-Decisions: Implements all baseline decisions D1.1-D5.8
-Architecture: Four-pass hierarchical layout with ASCII/SVG rendering
+Quick Start:
 
-Algorithm Passes (see individual modules for detailed compliance):
-- Pass 1 (Ranking): Network simplex optimization → dag-draw-pass1-ranking.el
-- Pass 2 (Ordering): Weighted median + transposition → dag-draw-pass2-ordering.el
-- Pass 3 (Positioning): Auxiliary graph method → dag-draw-pass3-positioning.el
-- Pass 4 (Splines): Region-constrained Bézier curves → dag-draw-pass4-splines.el
-- ASCII Adaptation: Junction character algorithm → dag-draw-ascii-grid.el
+  (require 'dag-draw)
 
-Core Data Structures:
-- dag-draw-node: Graph nodes with GKNV λ(v) rank assignments
-- dag-draw-edge: Graph edges with GKNV δ(e) min-length and ω(e) weights
-- dag-draw-graph: Complete graph structure with GKNV parameters
+  ;; Create a graph
+  (setq my-graph (dag-draw-create-graph))
 
-Baseline Status: ✅ Compliant (85% verified in Week 1)
+  ;; Add nodes
+  (dag-draw-add-node my-graph 'start "Start Here")
+  (dag-draw-add-node my-graph 'middle "Do Work")
+  (dag-draw-add-node my-graph 'done "Finish")
 
-GKNV Figure 1-1 Algorithm Pipeline:
-"Our algorithm consists of four passes: rank assignment, node ordering,
-coordinate assignment, and edge routing."
+  ;; Connect them
+  (dag-draw-add-edge my-graph 'start 'middle)
+  (dag-draw-add-edge my-graph 'middle 'done)
 
-See doc/implementation-decisions.md for full decision rationale.
-See individual module files for pass-specific GKNV compliance details.
+  ;; Layout and render
+  (dag-draw-layout-graph my-graph)
+  (dag-draw-render-graph my-graph 'ascii)  ; or 'svg
 
-This package implements the directed graph drawing algorithm described in
-"A Technique for Drawing Directed Graphs" by Gansner, Koutsofios, North,
-and Vo (1993).  The algorithm consists of four main passes:
+Or create from a data structure in one call:
 
-1. Rank assignment using network simplex optimization
-2. Vertex ordering within ranks to minimize edge crossings
-3. Node coordinate positioning
-4. Spline edge drawing using Bézier curves
+  (dag-draw-create-from-spec
+    :nodes '((a :label "Task A") (b :label "Task B"))
+    :edges '((a b)))
 
-The package provides functions to create, manipulate, and render directed
-graphs in various formats including SVG and ASCII art.
+Output formats: ASCII (box-drawing characters) and SVG (scalable graphics).
+Both support node highlighting for "you are here" visual emphasis.
+
+See the README for full documentation, tutorials, and examples.
+
+Under the hood, this implements the GKNV algorithm from "A Technique for
+Drawing Directed Graphs" (Gansner et al., 1993) - the same algorithm that
+powers Graphviz.  See individual module files for technical details.
