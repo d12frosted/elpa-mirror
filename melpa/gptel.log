@@ -1,9 +1,9 @@
  • Building package gptel (from github:karthink/gptel)...
 Updating /mnt/store/melpa/working/gptel/
-Checking out 96774809486ad32a79f7883e8fbc4a44a8708d96
+Checking out 0f65be08ead0c9bc882fad5a4dcb604448e366a6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptelHslGTO/gptel-20251216.2222
+  to /tmp/gptel8mD7ia/gptel-20251218.224
     gptel-anthropic.el -> gptel-anthropic.el
     gptel-bedrock.el -> gptel-bedrock.el
     gptel-context.el -> gptel-context.el
@@ -19,27 +19,29 @@ Copying files (->) and directories (=>)
     gptel-rewrite.el -> gptel-rewrite.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20251216.2222.tar containing:
-  gptel-20251216.2222/
-  gptel-20251216.2222/gptel-anthropic.el
-  gptel-20251216.2222/gptel-bedrock.el
-  gptel-20251216.2222/gptel-context.el
-  gptel-20251216.2222/gptel-gemini.el
-  gptel-20251216.2222/gptel-gh.el
-  gptel-20251216.2222/gptel-integrations.el
-  gptel-20251216.2222/gptel-kagi.el
-  gptel-20251216.2222/gptel-ollama.el
-  gptel-20251216.2222/gptel-openai-extras.el
-  gptel-20251216.2222/gptel-openai.el
-  gptel-20251216.2222/gptel-org.el
-  gptel-20251216.2222/gptel-pkg.el
-  gptel-20251216.2222/gptel-request.el
-  gptel-20251216.2222/gptel-rewrite.el
-  gptel-20251216.2222/gptel-transient.el
-  gptel-20251216.2222/gptel.el
+Created gptel-20251218.224.tar containing:
+  gptel-20251218.224/
+  gptel-20251218.224/gptel-anthropic.el
+  gptel-20251218.224/gptel-bedrock.el
+  gptel-20251218.224/gptel-context.el
+  gptel-20251218.224/gptel-gemini.el
+  gptel-20251218.224/gptel-gh.el
+  gptel-20251218.224/gptel-integrations.el
+  gptel-20251218.224/gptel-kagi.el
+  gptel-20251218.224/gptel-ollama.el
+  gptel-20251218.224/gptel-openai-extras.el
+  gptel-20251218.224/gptel-openai.el
+  gptel-20251218.224/gptel-org.el
+  gptel-20251218.224/gptel-pkg.el
+  gptel-20251218.224/gptel-request.el
+  gptel-20251218.224/gptel-rewrite.el
+  gptel-20251218.224/gptel-transient.el
+  gptel-20251218.224/gptel.el
  ✓ Success:
   2025-12-16T21:23:22+0000  gptel-20251214.2047.entry
   2025-12-16T21:23:22+0000  gptel-20251214.2047.tar
-  2025-12-17T23:55:41+0000  gptel-20251216.2222.entry
-  2025-12-17T23:55:41+0000  gptel-20251216.2222.tar
-Built gptel in 4.495s, finished at 2025-12-17T23:55:42+0000
+  2025-12-18T02:18:09+0000  gptel-20251216.2222.entry
+  2025-12-18T02:18:09+0000  gptel-20251216.2222.tar
+  2025-12-18T03:30:23+0000  gptel-20251218.224.entry
+  2025-12-18T03:30:23+0000  gptel-20251218.224.tar
+Built gptel in 4.800s, finished at 2025-12-18T03:30:24+0000
