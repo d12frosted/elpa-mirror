@@ -32,6 +32,7 @@ to follow PATHs.
 *Configuration*:
 (require 'org-links)
 (add-hook 'org-execute-file-search-functions #'org-links-additional-formats)
+(add-hook 'org-open-link-functions #'org-links-fix-open-target-not-org)
 (advice-add 'org-open-file :around #'org-links-org-open-file-advice)
 (global-set-key (kbd "C-c w") #'org-links-store-extended)
 
