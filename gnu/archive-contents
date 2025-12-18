@@ -3183,12 +3183,12 @@
 		("Michael Albinus" . "michael.albinus@gmx.de"))
       (:commit . "ffb5b3473a4054e8d5499370cae50032227e8644"))])
  (tramp-hlo
-  . [(0 0 1) ((tramp (2 8 0 5)))
+  . [(0 0 2) ((tramp (2 8 0 5)))
      "High level operations as Tramp handlers" tar
      ((:url . "https://github.com/jsadusk/tramp-hlo")
       (:maintainer "Joe Sadusk" . "joe@sadusk.com")
       (:authors ("Joe Sadusk" . "joe@sadusk.com"))
-      (:commit . "3193e24a954c91c88351fd448a21643ef1e319a8"))])
+      (:commit . "a204c14a2eed4c92a455f12acae2ec7eeac6d8fd"))])
  (tramp-nspawn
   . [(1 0 1) ((emacs (23)))
      "Tramp integration for systemd-nspawn containers" tar
