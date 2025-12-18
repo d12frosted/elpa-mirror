@@ -7,14 +7,9 @@ Usage:
 `bible-gateway-get-verse' fetches the verse of the day for use as
 an emacs-dashboard footer or a scratch buffer message.
 
-`bible-gateway-get-verse-in-eu' is similar to
-`bible-gateway-get-verse' but scrapes the verse of the day from the
-BibleGateway website for users in EU where the API is not
-accessible.
-
-`bible-gateway-get-passage' fetches a specific passage and inserts
+M-x `bible-gateway-get-passage' fetches a Bible passage and inserts
 it at point. It can be called both interactively from M-x or
 programmatically with the book name and verse(s) as arguments.
 
-M-x `bible-gateway-listen-passage-in-browser' plays a specific
-audio chapter in the browser.
+M-x `bible-gateway-listen-passage' plays a Bible chapter from KJV
+Zondervan Audio in the browser.

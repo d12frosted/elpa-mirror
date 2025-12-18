@@ -44,6 +44,8 @@ The syntax for PEX (Parsing Expression) is a follows:
     Character classes	[ascii cntrl]
     Boolean-guard		(guard EXP)
     Syntax-Class		(syntax-class NAME)
+    Local definitions	(with RULES PEX...)
+    Indirect call            (funcall EXP ARGS...)
 and
     Empty-string		(null)		ε
     Beginning-of-Buffer	(bob)
@@ -60,6 +62,26 @@ as a tree, with a root rule referring to one or more "branch
 rules", all the way down to the "leaf rules" that deal with actual
 buffer text.  Rules can be recursive or mutually referential,
 though care must be taken not to create infinite loops.
+
+Named rulesets:
+
+You can define a set of rules for later use with:
+
+    (define-peg-ruleset myrules
+      (sign  () (or "+" "-" ""))
+      (digit () [0-9])
+      (nat   () digit (* digit))
+      (int   () sign digit (* digit))
+      (float () int "." nat))
+
+and later refer to it:
+
+    (with-peg-rules
+        (myrules
+         (complex float "+i" float))
+      ... (peg-parse nat "," nat "," complex) ...)
+
+Parsing actions:
 
 PEXs also support parsing actions, i.e. Lisp snippets which are
 executed when a pex matches.  This can be used to construct syntax
@@ -169,6 +191,23 @@ Here a some examples for regexps and how those could be written as pex.
     (and "\\\\[" (+ (syntax-class word)))
 
 See ";;; Examples" in `peg-tests.el' for other examples.
+
+Rule argument and indirect calls:
+
+Rules can take arguments and those arguments can themselves be PEGs.
+For example:
+
+    (define-peg-rule 2-or-more (peg)
+      (funcall peg)
+      (funcall peg)
+      (* (funcall peg)))
+
+    ... (peg-parse
+         ...
+         (2-or-more (peg foo))
+         ...
+         (2-or-more (peg bar))
+         ...)
 
 References:
 

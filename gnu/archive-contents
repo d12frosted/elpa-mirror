@@ -2359,12 +2359,12 @@
       (:url . "https://elpa.gnu.org/packages/path-iterator.html")
       (:commit . "df6a5e2d7e0399bac4f6d016dc272943bbb04e5e"))])
  (peg
-  . [(1 0 1) ((emacs (25)))
+  . [(1 0 2) ((emacs (25)))
      "Parsing Expression Grammars in Emacs Lisp" tar
      ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Helmut Eller" . "eller.helmut@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/peg.html")
-      (:commit . "90c9004a8347209f94a37c8d9506425721098402"))])
+      (:commit . "2bccc414a94f067eb571fe614270494750a5de0e"))])
  (perl-doc
   . [(0 82) ((emacs (27))) "Read Perl documentation" tar
      ((:url . "https://github.com/HaraldJoerg/emacs-perl-doc")
