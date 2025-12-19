@@ -8,8 +8,9 @@ Usage:
 an emacs-dashboard footer or a scratch buffer message.
 
 M-x `bible-gateway-get-passage' fetches a Bible passage and inserts
-it at point. It can be called both interactively from M-x or
-programmatically with the book name and verse(s) as arguments.
+it at point. It can be called both interactively from
+\\[execute-extended-command] or programmatically with the book name
+and verse(s) as arguments.
 
 M-x `bible-gateway-listen-passage' plays a Bible chapter from KJV
 Zondervan Audio in the browser.
