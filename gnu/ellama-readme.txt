@@ -247,6 +247,10 @@ Assistant". Previous sentence was written by Ellama itself.
     buffer.
   • `ellama-community-prompts-update-variables': Prompt user for values
     of variables found in current buffer and update them.
+  • `ellama-response-process-method': Configure how LLM responses are
+    processed.  Options include streaming for real-time output, async
+    for asynchronous processing, or skipping every N messages to reduce
+    resource usage.
 
 
 3 Keymap

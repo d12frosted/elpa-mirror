@@ -57,12 +57,10 @@ The following functions are introduced:
 All "python-shell-send-*" functions are also provided in a "*-and-step"
 variant that moves the point after evaluation.
 
-python-x uses `volatile-highlights', when available, for highlighting
-multi-line blocks. Installation through "melpa" is recommended (you don't
-actually need to enable `volatile-highlights-mode' itself). python-x also
-uses `folding' to interpret and define folding marks. Again, `folding-mode'
-needs to be enabled manually if code folding is also desired.
-`expand-region' is equally supported, when previously loaded.
+python-x uses `pulse' for highlighting multi-line blocks. python-x also
+uses `folding' to interpret and define folding marks. Again,
+`folding-mode' needs to be enabled manually if code folding is also
+desired. `expand-region' is equally supported, when previously loaded.
 
 The default keyboard map definition set by (python-x-setup) is
 currently tuned to the author's taste, and may change over time. You
