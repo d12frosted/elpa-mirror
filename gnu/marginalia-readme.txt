@@ -46,7 +46,7 @@ Table of Contents
   │   ;; available in the *Completions* buffer, add it to the
   │   ;; `completion-list-mode-map'.
   │   :bind (:map minibuffer-local-map
-  │ 	 ("M-A" . marginalia-cycle))
+  │          ("M-A" . marginalia-cycle))
   │ 
   │   ;; The :init section is always executed.
   │   :init
@@ -154,7 +154,7 @@ Table of Contents
   │ (defun my-face-annotator (cand)
   │   (when-let (sym (intern-soft cand))
   │     (concat (propertize " " 'display '(space :align-to center))
-  │ 	    (propertize "The quick brown fox jumps over the lazy dog" 'face sym))))
+  │             (propertize "The quick brown fox jumps over the lazy dog" 'face sym))))
   └────
 
   After defining a new annotator, associate it with a category in the
@@ -162,7 +162,7 @@ Table of Contents
 
   ┌────
   │ (add-to-list 'marginalia-annotators
-  │ 	     '(face my-face-annotator marginalia-annotate-face builtin none))
+  │              '(face my-face-annotator marginalia-annotate-face builtin none))
   └────
 
   This makes the `my-face-annotator' the first of four annotators for
@@ -202,7 +202,7 @@ Table of Contents
 
   ┌────
   │ (mapc (lambda (x)
-  │ 	(setcdr x (cons 'builtin (remq 'builtin (cdr x)))))
+  │         (setcdr x (cons 'builtin (remq 'builtin (cdr x)))))
   │       marginalia-annotators)
   └────
 
@@ -216,8 +216,8 @@ Table of Contents
   │   (mapc
   │    (lambda (x)
   │      (setcdr x (append (reverse (remq 'none
-  │ 				      (remq 'builtin (cdr x))))
-  │ 		       '(builtin none))))
+  │                                       (remq 'builtin (cdr x))))
+  │                        '(builtin none))))
   │    marginalia-annotators))
   └────
 
@@ -227,10 +227,10 @@ Table of Contents
 
   ┌────
   │ (advice-add #'marginalia-cycle :after
-  │ 	    (lambda ()
-  │ 	      (let ((inhibit-message t))
-  │ 		(customize-save-variable 'marginalia-annotators
-  │ 					 marginalia-annotators))))
+  │             (lambda ()
+  │               (let ((inhibit-message t))
+  │                 (customize-save-variable 'marginalia-annotators
+  │                                          marginalia-annotators))))
   └────
 
 

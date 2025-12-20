@@ -114,7 +114,6 @@ Table of Contents
   │ [[geo:51.48950698022105,-0.144195556640625;z=11][London, England, 51.49° -0.14°]]
   │ [[geo:55.686875255964424,12.569732666015625;z=12;s=cyclosm][København, Danmark, 55.69° 12.57° CyclOSM]]
   │ [[geo:27.961656050984658,86.89224243164062;z=13;s=opentopomap][Mount Everest, 27.96° 86.89° OpenTopoMap]]
-  │ <geo:Tour Eiffel, Av. Gustave Eiffel, Paris> (Address link)
   └────
 
 
@@ -162,6 +161,8 @@ Table of Contents
   • `h': `osm-home' - Open new map at home coordinates
   • `s': `osm-search' - Search and jump to location
   • `t': `osm-goto' - Go to coordinates
+  • `u': `osm-url' - Go to Geo URL, OpenStreetMap.org or Google Maps
+    URL.
   • `v': `osm-server' - Select server
   • `j': `osm-jump' - Jump to pin (bookmark or POI)
   • `x': `osm-gpx-show' - Show GPX file in map viewer

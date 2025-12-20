@@ -3,9 +3,6 @@
                            ━━━━━━━━━━━━━━━━━━
 
 
-
-
-
 1 Introduction
 ══════════════
 
@@ -80,8 +77,8 @@
   │  '((right-divider-width . 40)
   │    (internal-border-width . 40)))
   │ (dolist (face '(window-divider
-  │ 		window-divider-first-pixel
-  │ 		window-divider-last-pixel))
+  │                 window-divider-first-pixel
+  │                 window-divider-last-pixel))
   │   (face-spec-reset-face face)
   │   (set-face-foreground face (face-attribute 'default :background)))
   │ (set-face-background 'fringe (face-attribute 'default :background))
