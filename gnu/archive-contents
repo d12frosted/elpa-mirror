@@ -978,14 +978,14 @@
       (:authors ("Markus Triska" . "triska@metalevel.at"))
       (:commit . "ea8710335eec483b576c7a800c92b8fd214aa6dd"))])
  (eev
-  . [(20251123) ((emacs (25 1)))
+  . [(20251219) ((emacs (25 1)))
      "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)"
      tar
      ((:url . "http://anggtwu.net/#eev")
       (:keywords "lisp" "e-scripts")
       (:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-      (:commit . "35f33e17914b524c8127e713138a079d91401d57"))])
+      (:commit . "84201105b1cb885749650c32bb1e3ce240c4f164"))])
  (ef-themes
   . [(2 0 1) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
