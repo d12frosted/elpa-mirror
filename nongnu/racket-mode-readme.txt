@@ -61,7 +61,7 @@
 1.4 Alternatives
 ────────────────
 
-  • Emacs' built-in `scheme-mode` major mode plus the minor modes
+  • Emacs' built-in major mode `scheme-mode' plus the minor modes
     [Quack] and/or [Geiser].
 
 

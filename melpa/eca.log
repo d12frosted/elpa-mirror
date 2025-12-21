@@ -1,11 +1,10 @@
  • Building package eca (from github:editor-code-assistant/eca-emacs)...
 Updating /mnt/store/melpa/working/eca/
-Checking out cc44b43c1032b20fdb96485392d2e8b4d7587e4b
+Checking out d2a0a738e68c3d5ac8e4137de1e5bebf3637517d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eca/
-  to /tmp/ecan7kfOw/eca-20251220.1857
+  to /tmp/ecatAg8uy/eca-20251220.2211
     eca-api.el -> eca-api.el
-    eca-chat-media.el -> eca-chat-media.el
     eca-chat.el -> eca-chat.el
     eca-completion.el -> eca-completion.el
     eca-diff.el -> eca-diff.el
@@ -15,20 +14,19 @@ Copying files (->) and directories (=>)
     eca-rewrite.el -> eca-rewrite.el
     eca-util.el -> eca-util.el
     eca.el -> eca.el
-Created eca-20251220.1857.tar containing:
-  eca-20251220.1857/
-  eca-20251220.1857/eca-api.el
-  eca-20251220.1857/eca-chat-media.el
-  eca-20251220.1857/eca-chat.el
-  eca-20251220.1857/eca-completion.el
-  eca-20251220.1857/eca-diff.el
-  eca-20251220.1857/eca-editor.el
-  eca-20251220.1857/eca-mcp.el
-  eca-20251220.1857/eca-pkg.el
-  eca-20251220.1857/eca-process.el
-  eca-20251220.1857/eca-rewrite.el
-  eca-20251220.1857/eca-util.el
-  eca-20251220.1857/eca.el
+Created eca-20251220.2211.tar containing:
+  eca-20251220.2211/
+  eca-20251220.2211/eca-api.el
+  eca-20251220.2211/eca-chat.el
+  eca-20251220.2211/eca-completion.el
+  eca-20251220.2211/eca-diff.el
+  eca-20251220.2211/eca-editor.el
+  eca-20251220.2211/eca-mcp.el
+  eca-20251220.2211/eca-pkg.el
+  eca-20251220.2211/eca-process.el
+  eca-20251220.2211/eca-rewrite.el
+  eca-20251220.2211/eca-util.el
+  eca-20251220.2211/eca.el
  ✓ Success:
   2025-12-16T12:39:07+0000  eca-20251215.2203.entry
   2025-12-16T12:39:07+0000  eca-20251215.2203.tar
@@ -40,4 +38,10 @@ Created eca-20251220.1857.tar containing:
   2025-12-17T17:40:02+0000  eca-20251217.203.tar
   2025-12-20T19:20:31+0000  eca-20251220.1857.entry
   2025-12-20T19:20:31+0000  eca-20251220.1857.tar
-Built eca in 4.479s, finished at 2025-12-20T19:20:32+0000
+  2025-12-20T20:34:36+0000  eca-20251220.1955.entry
+  2025-12-20T20:34:36+0000  eca-20251220.1955.tar
+  2025-12-20T21:47:35+0000  eca-20251220.2127.entry
+  2025-12-20T21:47:35+0000  eca-20251220.2127.tar
+  2025-12-21T00:13:47+0000  eca-20251220.2211.entry
+  2025-12-21T00:13:47+0000  eca-20251220.2211.tar
+Built eca in 4.200s, finished at 2025-12-21T00:13:48+0000
