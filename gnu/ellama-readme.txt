@@ -251,6 +251,8 @@ Assistant". Previous sentence was written by Ellama itself.
     processed.  Options include streaming for real-time output, async
     for asynchronous processing, or skipping every N messages to reduce
     resource usage.
+  • `ellama-blueprint-variable-regexp': Regular expression to match
+    blueprint variables like `{var_name}'.
 
 
 3 Keymap
