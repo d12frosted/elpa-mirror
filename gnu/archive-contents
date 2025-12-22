@@ -2345,12 +2345,12 @@
       (:authors ("Junpeng Qiu" . "qjpchmail@gmail.com"))
       (:keywords "extensions"))])
  (parser-generator
-  . [(0 2 6) ((emacs (26))) "Parser Generator library" tar
+  . [(0 2 7) ((emacs (26))) "Parser Generator library" tar
      ((:url . "https://github.com/cjohansson/emacs-parser-generator")
       (:keywords "tools" "convenience")
       (:maintainer "Christian Johansson" . "christian@cvj.se")
       (:authors ("Christian Johansson" . "christian@cvj.se"))
-      (:commit . "4985db98b99d35e42156d8004996760e3fc0878b"))])
+      (:commit . "5015e4fd92f9c33d3c6f0a50d0c802efbcb95ec0"))])
  (path-iterator
   . [(1 0) ((emacs (25 0)))
      "An iterator for traversing a directory path." tar
