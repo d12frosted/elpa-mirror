@@ -1101,6 +1101,7 @@
   (dired-auto-readme :url "https://github.com/amno1/dired-auto-readme")
   (dired-avfs :url "https://github.com/Fuco1/dired-hacks")
   (dired-collapse :url "https://github.com/Fuco1/dired-hacks")
+  (dired-du-duc :url "https://github.com/meedstrom/dired-du-duc")
   (dired-duplicates :url "https://codeberg.org/hjudt/dired-duplicates")
   (dired-dups :url "https://github.com/vapniks/dired-dups")
   (dired-efap :url "https://github.com/juan-leon/dired-efap")
