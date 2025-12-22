@@ -1,37 +1,41 @@
  • Building package agent-shell (from github:xenodium/agent-shell)...
 Updating /mnt/store/melpa/working/agent-shell/
-Checking out a725f9da41a5af27e7fda99da20311d0697eee2c
+Checking out 013d968e387f489d6e977dfd90b96c13279f357f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/agent-shell/
-  to /tmp/agent-shellWcJsEK/agent-shell-20251220.1245
+  to /tmp/agent-shell923gMo/agent-shell-20251221.2111
     agent-shell-anthropic.el -> agent-shell-anthropic.el
     agent-shell-cursor.el -> agent-shell-cursor.el
     agent-shell-diff.el -> agent-shell-diff.el
     agent-shell-google.el -> agent-shell-google.el
     agent-shell-goose.el -> agent-shell-goose.el
     agent-shell-heartbeat.el -> agent-shell-heartbeat.el
+    agent-shell-mistral.el -> agent-shell-mistral.el
     agent-shell-openai.el -> agent-shell-openai.el
     agent-shell-opencode.el -> agent-shell-opencode.el
     agent-shell-qwen.el -> agent-shell-qwen.el
     agent-shell-ui.el -> agent-shell-ui.el
     agent-shell-viewport.el -> agent-shell-viewport.el
     agent-shell.el -> agent-shell.el
-Created agent-shell-20251220.1245.tar containing:
-  agent-shell-20251220.1245/
-  agent-shell-20251220.1245/agent-shell-anthropic.el
-  agent-shell-20251220.1245/agent-shell-cursor.el
-  agent-shell-20251220.1245/agent-shell-diff.el
-  agent-shell-20251220.1245/agent-shell-google.el
-  agent-shell-20251220.1245/agent-shell-goose.el
-  agent-shell-20251220.1245/agent-shell-heartbeat.el
-  agent-shell-20251220.1245/agent-shell-openai.el
-  agent-shell-20251220.1245/agent-shell-opencode.el
-  agent-shell-20251220.1245/agent-shell-pkg.el
-  agent-shell-20251220.1245/agent-shell-qwen.el
-  agent-shell-20251220.1245/agent-shell-ui.el
-  agent-shell-20251220.1245/agent-shell-viewport.el
-  agent-shell-20251220.1245/agent-shell.el
+Created agent-shell-20251221.2111.tar containing:
+  agent-shell-20251221.2111/
+  agent-shell-20251221.2111/agent-shell-anthropic.el
+  agent-shell-20251221.2111/agent-shell-cursor.el
+  agent-shell-20251221.2111/agent-shell-diff.el
+  agent-shell-20251221.2111/agent-shell-google.el
+  agent-shell-20251221.2111/agent-shell-goose.el
+  agent-shell-20251221.2111/agent-shell-heartbeat.el
+  agent-shell-20251221.2111/agent-shell-mistral.el
+  agent-shell-20251221.2111/agent-shell-openai.el
+  agent-shell-20251221.2111/agent-shell-opencode.el
+  agent-shell-20251221.2111/agent-shell-pkg.el
+  agent-shell-20251221.2111/agent-shell-qwen.el
+  agent-shell-20251221.2111/agent-shell-ui.el
+  agent-shell-20251221.2111/agent-shell-viewport.el
+  agent-shell-20251221.2111/agent-shell.el
  ✓ Success:
-  2025-12-21T18:14:32+0000  agent-shell-20251220.1245.entry
-  2025-12-21T18:14:32+0000  agent-shell-20251220.1245.tar
-Built agent-shell in 4.965s, finished at 2025-12-21T18:14:33+0000
+  2025-12-21T20:42:16+0000  agent-shell-20251220.1245.entry
+  2025-12-21T20:42:16+0000  agent-shell-20251220.1245.tar
+  2025-12-21T23:11:24+0000  agent-shell-20251221.2111.entry
+  2025-12-21T23:11:24+0000  agent-shell-20251221.2111.tar
+Built agent-shell in 4.614s, finished at 2025-12-21T23:11:25+0000

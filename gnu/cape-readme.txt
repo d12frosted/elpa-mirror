@@ -165,7 +165,7 @@ Table of Contents
   │   (pcase action
   │     ('prefix
   │      (when-let (beg (save-excursion
-  │ 		      (and (re-search-backward "[;:]" (pos-bol) t) (point))))
+  │                       (and (re-search-backward "[;:]" (pos-bol) t) (point))))
   │        (list (buffer-substring-no-properties beg (point)) "" t)))
   │     ('candidates (all-completions arg demo-alist))
   │     ('annotation (concat " " (cdr (assoc arg demo-alist))))
@@ -195,8 +195,8 @@ Table of Contents
   │ (setq completion-at-point-functions
   │       (list
   │        (cape-company-to-capf
-  │ 	(apply-partially #'company--multi-backend-adapter
-  │ 			 '(company-dabbrev company-elisp)))))
+  │         (apply-partially #'company--multi-backend-adapter
+  │                          '(company-dabbrev company-elisp)))))
   └────
 
 
@@ -236,16 +236,16 @@ Table of Contents
   ┌────
   │ ;; Merge the dabbrev, dict and keyword capfs, display candidates together.
   │ (setq-local completion-at-point-functions
-  │ 	    (list (cape-capf-super #'cape-dabbrev #'cape-dict)))
+  │             (list (cape-capf-super #'cape-dabbrev #'cape-dict)))
   │ 
   │ ;; Let the UI (e.g. Corfu) sort the candidates by overriding the sort function.
   │ (setq-local completion-at-point-functions
-  │ 	    (list (cape-capf-sort (cape-capf-super #'cape-dabbrev #'cape-dict))))
+  │             (list (cape-capf-sort (cape-capf-super #'cape-dabbrev #'cape-dict))))
   │ 
   │ ;; Trigger completion only after trigger character.
   │ (setq-local corfu-auto-trigger "/"
-  │ 	    completion-at-point-functions
-  │ 	    (list (cape-capf-trigger (cape-capf-super #'cape-abbrev #'tempel-complete) ?/)))
+  │             completion-at-point-functions
+  │             (list (cape-capf-trigger (cape-capf-super #'cape-abbrev #'tempel-complete) ?/)))
   │ 
   │ ;; Define named Capf instead of using the anonymous Capf directly.
   │ (defun cape-dabbrev-dict ()
@@ -276,7 +276,7 @@ Table of Contents
 
   ┌────
   │ (setq-local completion-at-point-functions
-  │ 	    (list (cape-capf-buster #'some-caching-capf)))
+  │             (list (cape-capf-buster #'some-caching-capf)))
   └────
 
 
@@ -337,12 +337,12 @@ Table of Contents
   ┌────
   │ ;; Example 1: Configure a merged Capf with a trigger prefix character.
   │ (setq-local corfu-auto-trigger "/"
-  │ 	    completion-at-point-functions
-  │ 	    (list (cape-capf-trigger (cape-capf-super #'cape-abbrev #'tempel-complete) ?/)))
+  │             completion-at-point-functions
+  │             (list (cape-capf-trigger (cape-capf-super #'cape-abbrev #'tempel-complete) ?/)))
   │ 
   │ ;; Example 2: Configure a Capf with a specific auto completion prefix length.
   │ (setq-local completion-at-point-functions
-  │ 	    (list (cape-capf-prefix-length #'cape-dabbrev 2)))
+  │             (list (cape-capf-prefix-length #'cape-dabbrev 2)))
   │ 
   │ ;; Example 3: Create a Capf with debugging messages.
   │ (setq-local completion-at-point-functions (list (cape-capf-debug #'cape-dict)))
@@ -368,8 +368,8 @@ Table of Contents
   │ (defun ignore-elisp-keywords (sym)
   │   (not (keywordp sym)))
   │ (setq-local completion-at-point-functions
-  │ 	    (list (cape-capf-predicate #'elisp-completion-at-point
-  │ 				       #'ignore-elisp-keywords)))
+  │             (list (cape-capf-predicate #'elisp-completion-at-point
+  │                                        #'ignore-elisp-keywords)))
   │ 
   │ ;; Example 8: Catch errors with `cape-wrap-silent'.
   │ (advice-add 'dabbrev-capf :around #'cape-wrap-silent)
