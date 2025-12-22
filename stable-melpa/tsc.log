@@ -1,34 +1,36 @@
  • Building package tsc (from github:emacs-tree-sitter/elisp-tree-sitter)...
 Updating /mnt/store/melpa/working/tsc/
-Checking out 909717c685ff5a2327fa2ca8fb8a25216129361c
+Checking out d12aff8ee91dcd643da0a65a3bcee7be9a3cac68
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tsc/
-  to /tmp/tscJnFoFR/tsc-20220212.1632
+  to /tmp/tsc3rmrZ2/tsc-20251222.1802
   ! core/tsc-dyn-get.el -> tsc-dyn-get.el
   ! core/tsc-obsolete.el -> tsc-obsolete.el
   ! core/tsc.el -> tsc.el
   ! core/Cargo.toml -> Cargo.toml
   ! core/Cargo.lock -> Cargo.lock
   ! core/src => src
-Created tsc-20220212.1632.tar containing:
-  tsc-20220212.1632/
-  tsc-20220212.1632/Cargo.lock
-  tsc-20220212.1632/Cargo.toml
-  tsc-20220212.1632/src/
-  tsc-20220212.1632/src/cursor.rs
-  tsc-20220212.1632/src/error.rs
-  tsc-20220212.1632/src/lang.rs
-  tsc-20220212.1632/src/lib.rs
-  tsc-20220212.1632/src/node.rs
-  tsc-20220212.1632/src/parser.rs
-  tsc-20220212.1632/src/query.rs
-  tsc-20220212.1632/src/tree.rs
-  tsc-20220212.1632/src/types.rs
-  tsc-20220212.1632/tsc-dyn-get.el
-  tsc-20220212.1632/tsc-obsolete.el
-  tsc-20220212.1632/tsc-pkg.el
-  tsc-20220212.1632/tsc.el
+Created tsc-20251222.1802.tar containing:
+  tsc-20251222.1802/
+  tsc-20251222.1802/Cargo.lock
+  tsc-20251222.1802/Cargo.toml
+  tsc-20251222.1802/src/
+  tsc-20251222.1802/src/cursor.rs
+  tsc-20251222.1802/src/error.rs
+  tsc-20251222.1802/src/lang.rs
+  tsc-20251222.1802/src/lib.rs
+  tsc-20251222.1802/src/node.rs
+  tsc-20251222.1802/src/parser.rs
+  tsc-20251222.1802/src/query.rs
+  tsc-20251222.1802/src/tree.rs
+  tsc-20251222.1802/src/types.rs
+  tsc-20251222.1802/tsc-dyn-get.el
+  tsc-20251222.1802/tsc-obsolete.el
+  tsc-20251222.1802/tsc-pkg.el
+  tsc-20251222.1802/tsc.el
  ✓ Success:
-  2025-12-22T13:56:40+0000  tsc-20220212.1632.entry
-  2025-12-22T13:56:40+0000  tsc-20220212.1632.tar
-Built tsc in 3.708s, finished at 2025-12-22T13:56:41+0000
+  2025-12-22T16:26:52+0000  tsc-20220212.1632.entry
+  2025-12-22T16:26:52+0000  tsc-20220212.1632.tar
+  2025-12-22T18:57:07+0000  tsc-20251222.1802.entry
+  2025-12-22T18:57:07+0000  tsc-20251222.1802.tar
+Built tsc in 4.085s, finished at 2025-12-22T18:57:08+0000
