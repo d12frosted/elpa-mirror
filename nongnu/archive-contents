@@ -1864,6 +1864,11 @@
       (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "9c0ecc2af21d3024a2a838c30d574e86265a52be"))])
+ (vm
+  . [(8 3 0) ((emacs (28 1)) (vcard (0 2 2))) "VM mail reader" tar
+     ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
+      (:maintainer nil . "viewmail-info@nongnu.org")
+      (:commit . "fc2b356cb58aca2c9f7bc8eef32e8f8e883bd660"))])
  (web-mode
   . [(17 3 22) ((emacs (23 1))) "major mode for editing web templates"
      tar
