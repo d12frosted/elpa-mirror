@@ -1,19 +1,25 @@
  • Building package blue (from codeberg:lapislazuli/blue.el)...
 Updating /mnt/store/melpa/working/blue/
-Checking out 1d130e8042dcbe8eca0bf87c2adc60d6a7287150
+Checking out b2778111dba48b0d7db4c17cbe352b541e6e7707
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/blue/
-  to /tmp/bluebDHwz2/blue-20251204.2112
+  to /tmp/blueARDpwZ/blue-20251223.1409
+    blue-complete.el -> blue-complete.el
     blue-replay.el -> blue-replay.el
+    blue-run.el -> blue-run.el
     blue-transient.el -> blue-transient.el
     blue.el -> blue.el
-Created blue-20251204.2112.tar containing:
-  blue-20251204.2112/
-  blue-20251204.2112/blue-pkg.el
-  blue-20251204.2112/blue-replay.el
-  blue-20251204.2112/blue-transient.el
-  blue-20251204.2112/blue.el
+Created blue-20251223.1409.tar containing:
+  blue-20251223.1409/
+  blue-20251223.1409/blue-complete.el
+  blue-20251223.1409/blue-pkg.el
+  blue-20251223.1409/blue-replay.el
+  blue-20251223.1409/blue-run.el
+  blue-20251223.1409/blue-transient.el
+  blue-20251223.1409/blue.el
  ✓ Success:
   2025-12-23T12:09:09+0000  blue-20251204.2112.entry
   2025-12-23T12:09:09+0000  blue-20251204.2112.tar
-Built blue in 6.406s, finished at 2025-12-23T12:09:11+0000
+  2025-12-23T14:34:26+0000  blue-20251223.1409.entry
+  2025-12-23T14:34:26+0000  blue-20251223.1409.tar
+Built blue in 4.907s, finished at 2025-12-23T14:34:27+0000
