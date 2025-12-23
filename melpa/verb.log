@@ -1,21 +1,23 @@
  • Building package verb (from github:federicotdn/verb)...
 Updating /mnt/store/melpa/working/verb/
-Checking out 824343ae65c1c42baeebb34179774e2eadedb7dc
+Checking out f45e31b2bcdea2a859bb28cbb1819469978457c9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/verb/
-  to /tmp/verbCKuVG9/verb-20251222.1642
+  to /tmp/verbeenZsC/verb-20251222.2151
     ob-verb.el -> ob-verb.el
+    verb-restclient.el -> verb-restclient.el
     verb-util.el -> verb-util.el
     verb.el -> verb.el
-Created verb-20251222.1642.tar containing:
-  verb-20251222.1642/
-  verb-20251222.1642/ob-verb.el
-  verb-20251222.1642/verb-pkg.el
-  verb-20251222.1642/verb-util.el
-  verb-20251222.1642/verb.el
+Created verb-20251222.2151.tar containing:
+  verb-20251222.2151/
+  verb-20251222.2151/ob-verb.el
+  verb-20251222.2151/verb-pkg.el
+  verb-20251222.2151/verb-restclient.el
+  verb-20251222.2151/verb-util.el
+  verb-20251222.2151/verb.el
  ✓ Success:
-  2025-12-22T16:28:27+0000  verb-20251216.1822.entry
-  2025-12-22T16:28:26+0000  verb-20251216.1822.tar
-  2025-12-22T18:58:39+0000  verb-20251222.1642.entry
-  2025-12-22T18:58:39+0000  verb-20251222.1642.tar
-Built verb in 3.111s, finished at 2025-12-22T18:58:40+0000
+  2025-12-22T21:26:39+0000  verb-20251222.1932.entry
+  2025-12-22T21:26:39+0000  verb-20251222.1932.tar
+  2025-12-23T00:02:35+0000  verb-20251222.2151.entry
+  2025-12-23T00:02:35+0000  verb-20251222.2151.tar
+Built verb in 2.573s, finished at 2025-12-23T00:02:35+0000
