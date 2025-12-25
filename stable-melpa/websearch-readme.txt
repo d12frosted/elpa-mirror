@@ -25,5 +25,5 @@ The full set of commands you can try is:
 * websearch-region
 * websearch-term
 
-For more information and screenshots, see:
-https://gitlab.com/xgqt/emacs-websearch/
+For more information and screenshots,
+see: https://gitlab.com/xgqt/xgqt-elisp-lib-websearch

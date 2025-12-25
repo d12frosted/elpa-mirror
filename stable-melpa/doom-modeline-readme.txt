@@ -46,4 +46,4 @@ In `init.el`,
 or
 (use-package doom-modeline
   :ensure t
-  :hook (after-init . doom-modeline-mode))
+  :init (doom-modeline-mode 1))
