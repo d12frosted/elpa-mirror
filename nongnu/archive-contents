@@ -415,13 +415,13 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (eldoc-mouse
-  . [(3 0) ((emacs (27 1)) (posframe (1 4 0)) (eglot (1 8)))
+  . [(3 0 1) ((emacs (27 1)) (posframe (1 4 0)) (eglot (1 8)))
      "Display documentation for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse")
       (:keywords "tools" "languages" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "7b4e64be8c7ce44b7fb763f40e72f7900aa4b119"))])
+      (:commit . "6a4cb7338b79e74c0a0f83163aefb04440a4d224"))])
  (elixir-mode
   . [(2 5 0) ((emacs (25))) "Major mode for editing Elixir files" tar
      ((:url . "https://github.com/elixir-editors/emacs-elixir")
