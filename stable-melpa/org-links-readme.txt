@@ -42,6 +42,7 @@ You may advanced configuration in README.md file.
 - respect org-link-context-for-files, if not set store only number.
 - correctly store file in image-dired-thumbnail-mode
 - Add support for image-dired-thumbnail-mode and image-dired-image-mode
+- fuzzy search by the begining of ::LINE, not full match
 
 I recommend to set those Org ol.el options for clarity:
 (setopt org-link-file-path-type 'absolute) ; create links with full path

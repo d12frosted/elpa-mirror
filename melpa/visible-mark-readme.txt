@@ -20,7 +20,7 @@ They could also be set via customize.
   '((((type tty) (class mono)))
     (t (:background "magenta"))) "")
 (setq visible-mark-max 2)
-(setq visible-mark-faces `(visible-mark-face1 visible-mark-face2))
+(setq visible-mark-faces '(visible-mark-face1 visible-mark-face2))
 
 
 Additional useful functions like unpoping the mark are at
