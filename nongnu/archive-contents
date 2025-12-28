@@ -415,13 +415,13 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (eldoc-mouse
-  . [(3 0 1) ((emacs (27 1)) (posframe (1 4 0)) (eglot (1 8)))
+  . [(3 0 2) ((emacs (27 1)) (posframe (1 4 0)) (eglot (1 8)))
      "Display documentation for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse")
       (:keywords "tools" "languages" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "6a4cb7338b79e74c0a0f83163aefb04440a4d224"))])
+      (:commit . "de48a1af46617861d38d9f96984869c21c0d887e"))])
  (elixir-mode
   . [(2 5 0) ((emacs (25))) "Major mode for editing Elixir files" tar
      ((:url . "https://github.com/elixir-editors/emacs-elixir")
@@ -1865,10 +1865,10 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "9c0ecc2af21d3024a2a838c30d574e86265a52be"))])
  (vm
-  . [(8 3 0) ((emacs (28 1)) (vcard (0 2 2))) "VM mail reader" tar
+  . [(8 3 1) ((emacs (28 1)) (vcard (0 2 2))) "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "fc2b356cb58aca2c9f7bc8eef32e8f8e883bd660"))])
+      (:commit . "80a927f0d052fe08596654b4a8f791c48f8c004e"))])
  (web-mode
   . [(17 3 22) ((emacs (23 1))) "major mode for editing web templates"
      tar
