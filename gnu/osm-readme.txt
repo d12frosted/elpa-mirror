@@ -10,7 +10,7 @@ servers via the `curl' program.  The package comes with a list of
 multiple preconfigured tile servers. You can bookmark your favorite
 locations using regular Emacs bookmarks or create links from Org files
 to locations. Furthermore the package provides commands to search for
-locations by name and to open and display GPX tracks.
+locations, or plan routes by name and to open and display GPX tracks.
 
 Table of Contents
 ─────────────────
@@ -36,7 +36,8 @@ Table of Contents
   • Distance measurement
   • Go to coordinate
   • Search for location by name
-  • Org link, Geo url and Elisp link support
+  • Save Geo URL, Org link or Elisp link
+  • Open Geo, Google Maps or OpenStreetMap URLs
   • Bookmarked positions with pins
   • Multiple preconfigured tile servers
 
@@ -47,10 +48,10 @@ Table of Contents
   The package is available on GNU ELPA and can be installed with
   `package-install'.  Note that Osm.el requires Emacs 29 and depends on
   the external `curl' program.  Emacs must be built with `libxml',
-  `librsvg', `libjpeg' and `libpng' support. Emacs 30 comes with a
-  native JSON parser, while on Emacs 29, `libjansson' is needed. The
-  following is an example configuration which relies on
-  `use-package'. Please take a look at the [wiki] for additional tile
+  `librsvg', `libjpeg', `libpng' and `libwebp' support.  Emacs 30 comes
+  with a native JSON parser, while on Emacs 29, `libjansson' is
+  needed. The following is an example configuration which relies on
+  `use-package'.  Please take a look at the [wiki] for additional tile
   server configurations, e.g., Google Maps for satellite and aerial
   maps.
 
@@ -110,10 +111,10 @@ Table of Contents
   links complies with the [geo URI scheme] defined by [RFC 5870].
 
   ┌────
-  │ [[geo:41.869560826994544,12.45849609375;z=6;s=opentopomap][Italia, 41.87° 12.46° OpenTopoMap]]
+  │ [[geo:41.869560826994544,12.45849609375;z=6][Italia, 41.87° 12.46°]]
   │ [[geo:51.48950698022105,-0.144195556640625;z=11][London, England, 51.49° -0.14°]]
   │ [[geo:55.686875255964424,12.569732666015625;z=12;s=cyclosm][København, Danmark, 55.69° 12.57° CyclOSM]]
-  │ [[geo:27.961656050984658,86.89224243164062;z=13;s=opentopomap][Mount Everest, 27.96° 86.89° OpenTopoMap]]
+  │ [[geo:27.961656050984658,86.89224243164062;z=13][Mount Everest, 27.96° 86.89°]]
   └────
 
 
@@ -130,10 +131,10 @@ Table of Contents
   manipulated programatically.
 
   ┌────
-  │ (osm 41.869561 12.458496 6 'opentopomap "Lazio, Italia")
+  │ (osm 41.869561 12.458496 6 "Lazio, Italia")
   │ (osm 51.489507 -0.144196 11 "London, Greater London, England, SW1A 2DX, United Kingdom")
   │ (osm 55.686875 12.569733 12 'cyclosm "København, Københavns Kommune, Region Hovedstaden, 1357, Danmark")
-  │ (osm 27.961656 86.892242 13 'opentopomap "Khumjung, Khumbupasanglahmu, सोलुखुम्बु, Province #1, Nepal")
+  │ (osm 27.961656 86.892242 13 "Khumjung, Khumbupasanglahmu, सोलुखुम्बु, Province #1, Nepal")
   │ (osm "Tour Eiffel, Av. Gustave Eiffel, Paris") ;; Address link
   └────
 
@@ -160,12 +161,13 @@ Table of Contents
 
   • `h': `osm-home' - Open new map at home coordinates
   • `s': `osm-search' - Search and jump to location
+  • `r': `osm-route' - Search for a route between two locations
   • `t': `osm-goto' - Go to coordinates
   • `u': `osm-url' - Go to Geo URL, OpenStreetMap.org or Google Maps
     URL.
   • `v': `osm-server' - Select server
   • `j': `osm-jump' - Jump to pin (bookmark or POI)
-  • `x': `osm-gpx-show' - Show GPX file in map viewer
+  • `f': `osm-open' - Open GPX file in map viewer
 
   Some additional key bindings are available in Osm buffers:
 
@@ -183,7 +185,7 @@ Table of Contents
     point)
   • `n': `osm-rename' - Rename selected pin
   • `c': `osm-center' - Center to currently selected pin
-  • `X': `osm-gpx-hide' - Hide overlays from GPX file
+  • `F', `R': `osm-hide' - Hide GPX file or route
   • `l': `org-store-link' - Store Org link
   • `u': `osm-save-url' - Save geo url in the kill ring
   • `b': `osm-bookmark-set' - Set bookmark
