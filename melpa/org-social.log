@@ -1,15 +1,16 @@
  • Building package org-social (from github:tanrax/org-social.el)...
 Updating /mnt/store/melpa/working/org-social/
-Checking out b8d9e0586a8cfdfaa610f830ad8da77fb45afaf8
+Checking out 0394bd9c207ecd9c49fb5593a6350ac731630342
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-social/
-  to /tmp/org-sociale7VEOp/org-social-20251218.930
+  to /tmp/org-socialSWwtne/org-social-20251229.1454
     org-social-accounts.el -> org-social-accounts.el
     org-social-feed.el -> org-social-feed.el
     org-social-file.el -> org-social-file.el
     org-social-notifications.el -> org-social-notifications.el
     org-social-parser.el -> org-social-parser.el
     org-social-partial-fetch.el -> org-social-partial-fetch.el
+    org-social-pkg.el -> org-social-pkg.el
     org-social-polls.el -> org-social-polls.el
     org-social-realtime.el -> org-social-realtime.el
     org-social-relay.el -> org-social-relay.el
@@ -28,34 +29,36 @@ Copying files (->) and directories (=>)
   ! ui/buffers/org-social-ui-search.el -> org-social-ui-search.el
   ! ui/buffers/org-social-ui-thread.el -> org-social-ui-thread.el
   ! ui/buffers/org-social-ui-timeline.el -> org-social-ui-timeline.el
-Created org-social-20251218.930.tar containing:
-  org-social-20251218.930/
-  org-social-20251218.930/org-social-accounts.el
-  org-social-20251218.930/org-social-feed.el
-  org-social-20251218.930/org-social-file.el
-  org-social-20251218.930/org-social-notifications.el
-  org-social-20251218.930/org-social-parser.el
-  org-social-20251218.930/org-social-partial-fetch.el
-  org-social-20251218.930/org-social-pkg.el
-  org-social-20251218.930/org-social-polls.el
-  org-social-20251218.930/org-social-realtime.el
-  org-social-20251218.930/org-social-relay.el
-  org-social-20251218.930/org-social-ui-components.el
-  org-social-20251218.930/org-social-ui-core.el
-  org-social-20251218.930/org-social-ui-discover.el
-  org-social-20251218.930/org-social-ui-groups.el
-  org-social-20251218.930/org-social-ui-notifications.el
-  org-social-20251218.930/org-social-ui-profile.el
-  org-social-20251218.930/org-social-ui-search.el
-  org-social-20251218.930/org-social-ui-thread.el
-  org-social-20251218.930/org-social-ui-timeline.el
-  org-social-20251218.930/org-social-ui-utils.el
-  org-social-20251218.930/org-social-ui.el
-  org-social-20251218.930/org-social-user-queue.el
-  org-social-20251218.930/org-social-validator.el
-  org-social-20251218.930/org-social-variables.el
-  org-social-20251218.930/org-social.el
+Created org-social-20251229.1454.tar containing:
+  org-social-20251229.1454/
+  org-social-20251229.1454/org-social-accounts.el
+  org-social-20251229.1454/org-social-feed.el
+  org-social-20251229.1454/org-social-file.el
+  org-social-20251229.1454/org-social-notifications.el
+  org-social-20251229.1454/org-social-parser.el
+  org-social-20251229.1454/org-social-partial-fetch.el
+  org-social-20251229.1454/org-social-pkg.el
+  org-social-20251229.1454/org-social-polls.el
+  org-social-20251229.1454/org-social-realtime.el
+  org-social-20251229.1454/org-social-relay.el
+  org-social-20251229.1454/org-social-ui-components.el
+  org-social-20251229.1454/org-social-ui-core.el
+  org-social-20251229.1454/org-social-ui-discover.el
+  org-social-20251229.1454/org-social-ui-groups.el
+  org-social-20251229.1454/org-social-ui-notifications.el
+  org-social-20251229.1454/org-social-ui-profile.el
+  org-social-20251229.1454/org-social-ui-search.el
+  org-social-20251229.1454/org-social-ui-thread.el
+  org-social-20251229.1454/org-social-ui-timeline.el
+  org-social-20251229.1454/org-social-ui-utils.el
+  org-social-20251229.1454/org-social-ui.el
+  org-social-20251229.1454/org-social-user-queue.el
+  org-social-20251229.1454/org-social-validator.el
+  org-social-20251229.1454/org-social-variables.el
+  org-social-20251229.1454/org-social.el
  ✓ Success:
-  2025-12-29T10:49:55+0000  org-social-20251218.930.entry
-  2025-12-29T10:49:55+0000  org-social-20251218.930.tar
-Built org-social in 3.808s, finished at 2025-12-29T10:49:56+0000
+  2025-12-29T13:18:28+0000  org-social-20251218.930.entry
+  2025-12-29T13:18:28+0000  org-social-20251218.930.tar
+  2025-12-29T15:47:15+0000  org-social-20251229.1454.entry
+  2025-12-29T15:47:15+0000  org-social-20251229.1454.tar
+Built org-social in 4.975s, finished at 2025-12-29T15:47:16+0000
