@@ -36,3 +36,4 @@ version 0.9.7,   2015-10-04 multiple ranger window support, override dired
 version 0.9.8,   2015-10-04 ranger is now a major mode
 version 0.9.8.1, 2016-08-23 ranger-override-dired-mode
 version 0.9.8.4, 2016-10-02 more mappings to match ranger
+version 0.9.9,   2024-12-22 modernization: Emacs 27.1+, advice-add, hydra support
