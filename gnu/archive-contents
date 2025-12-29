@@ -3168,11 +3168,11 @@
       (:authors ("Trevor Edwin Pogue" . "trevor.pogue@gmail.com"))
       (:commit . "33c2a6f0a11d1d88cdb2065c5a897e33507f4c86"))])
  (track-changes
-  . [(1 4) ((emacs (24))) "API to react to buffer modifications" tar
+  . [(1 5) ((emacs (24))) "API to react to buffer modifications" tar
      ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/track-changes.html")
-      (:commit . "ffb7d656a2c89f86ccd2de51379de9612c7a4aa3"))])
+      (:commit . "e119514ae8b391f41577d22d4e41cc3fea7ab9eb"))])
  (tramp
   . [(2 8 0 5) ((emacs (28 1)))
      "Transparent Remote Access, Multiple Protocol" tar
