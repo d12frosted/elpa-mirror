@@ -5,10 +5,12 @@ with the OpenAI-compatible REST APIs.  Fork of "org-ai".
 
 It allows you to:
 - Use #+begin_ai..#+end_ai blocks for org-mode
-- Chat with a language model from within an org mode buffer.
-- Call multiple requests from multiple block and buffers.
-- See how many requests in parallel now.
+- Call multiple requests from multiple block and buffers in parallel.
 - Use tags `@Backtrace` @Bt and Org links to insert target in query.
+- Highlighting for major elements.
+- Autofilling, hooks, powerful debugging
+- Customization for engineering, there is :chain for sequence of
+  calls out-of-the-box.
 
 For the Internet connection used built-in libs: url.el and url-http.el.
 
