@@ -15,6 +15,14 @@
       (:maintainer "Ozan Sener" . "ozan@ozansener.com")
       (:authors ("Ozan Sener" . "ozan@ozansener.com"))
       (:commit . "b58731c3b0bbaac9d3ed8d5ae900063df5db090d"))])
+ (age
+  . [(0 1 9) ((emacs (28 1))) "The Age Encryption Library" tar
+     ((:url . "https://github.com/anticomputer/age.el")
+      (:keywords "data")
+      (:maintainer "Bas Alberts" . "bas@anti.computer")
+      (:authors ("Daiki Ueno" . "ueno@unixuser.org")
+		("Bas Alberts" . "bas@anti.computer"))
+      (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
   . [(1 6)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
@@ -1865,10 +1873,10 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "9c0ecc2af21d3024a2a838c30d574e86265a52be"))])
  (vm
-  . [(8 3 1) ((emacs (28 1)) (vcard (0 2 2))) "VM mail reader" tar
+  . [(8 3 2) ((emacs (28 1)) (vcard (0 2 2))) "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "80a927f0d052fe08596654b4a8f791c48f8c004e"))])
+      (:commit . "790c95503d8e130f97a68ab502eb5c77f35011c8"))])
  (web-mode
   . [(17 3 22) ((emacs (23 1))) "major mode for editing web templates"
      tar
