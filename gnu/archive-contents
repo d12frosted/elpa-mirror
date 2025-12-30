@@ -1053,7 +1053,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 10 0)
+  . [(1 10 2)
      ((emacs (28 1)) (llm (0 24 0)) (plz (0 8)) (transient (0 7))
       (compat (29 1)))
      "Tool for interacting with LLMs" tar
@@ -1061,7 +1061,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "a3c9123fc9ed7c481c9dff213eaf5f3c13054438"))])
+      (:commit . "afcbca80bbe3be5a53924cb42b4b267c36e418a2"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
@@ -2517,7 +2517,7 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "ff40a936a17818152448c0f544164b9e5945c1c3"))])
  (pyim
-  . [(5 3 5) ((emacs (27 1)) (async (1 6)) (xr (1 13)))
+  . [(5 3 6) ((emacs (27 1)) (async (1 6)) (xr (1 13)))
      "A Chinese input method support quanpin, shuangpin, wubi, cangjie and rime."
      tar
      ((:url . "https://github.com/tumashu/pyim")
@@ -2525,7 +2525,7 @@
       (:maintainer "Feng Shu" . "tumashu@163.com")
       (:authors ("Ye Wenbin" . "wenbinye@163.com")
 		("Feng Shu" . "tumashu@163.com"))
-      (:commit . "bc85ecc3b2521d05c7585df97939f7c0ec5b1496"))])
+      (:commit . "a56c8d992c872addcfc295c409a7bae70d00af87"))])
  (pyim-basedict
   . [(0 5 5) ((pyim (3 7))) "The default pinyin dict of pyim" tar
      ((:url . "https://github.com/tumashu/pyim-basedict")
@@ -3299,12 +3299,12 @@
       (:authors ("Tom Schutzer-Weissmann" . "tom.weissmann@gmail.com"))
       (:commit . "234228e02682b9000015f5aa668875ea5d4fe6f0"))])
  (url-http-oauth
-  . [(0 8 4) ((emacs (24 4))) "OAuth 2.0 for URL library" tar
+  . [(0 8 5) ((emacs (24 4))) "OAuth 2.0 for URL library" tar
      ((:keywords "comm" "data" "processes" "hypermedia")
       (:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
       (:authors ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
       (:url . "https://elpa.gnu.org/packages/url-http-oauth.html")
-      (:commit . "f951bb71c5c34542cc75940d5e179d023f352ad4"))])
+      (:commit . "ff866a39ccc120d6bed930d2ed4fcec09e0662d4"))])
  (url-scgi
   . [(0 9) ((emacs (24 3))) "SCGI support for url.el" tar
      ((:url . "https://github.com/skangas/url-scgi/")

@@ -253,6 +253,18 @@ Assistant". Previous sentence was written by Ellama itself.
     resource usage.
   • `ellama-blueprint-variable-regexp': Regular expression to match
     blueprint variables like `{var_name}'.
+  • `ellama-tools-enable-by-name': Enable a specific tool by its
+    name. Use this command to activate individual tools. Requires the
+    tool name as input.
+  • `ellama-tools-enable-all': Enable all available tools at once. Use
+    this command to activate every tool in the system for comprehensive
+    functionality without manual selection.
+  • `ellama-tools-disable-by-name': Disable a specific tool by its
+    name. Use this command to deactivate individual tools when their
+    functionality is no longer needed.
+  • `ellama-tools-disable-all': Disable all enabled tools
+    simultaneously. Use this command to reset the system to a minimal
+    state, ensuring no tools are active.
 
 
 3 Keymap
@@ -407,6 +419,10 @@ Assistant". Previous sentence was written by Ellama itself.
     tracking of debug information. The debug output includes the raw
     text being processed and is appended to the end of the debug buffer
     each time.
+  • `ellama-tools-allow-all': Allow `ellama' using all the tools without
+    user confirmation. Dangerous. Use at your own risk.
+  • `ellama-tools-allowed': List of allowed `ellama' tools. Tools from
+    this list will work without user confirmation.
 
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
