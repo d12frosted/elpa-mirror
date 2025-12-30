@@ -5792,6 +5792,7 @@
   (vui :url "https://github.com/d12frosted/vui.el")
   (vuiet :url "https://github.com/mihaiolteanu/vuiet")
   (vulpea :url "https://github.com/d12frosted/vulpea")
+  (vulpea-ui :url "https://github.com/d12frosted/vulpea-ui")
   (vunit-mode :url "https://github.com/embed-me/vunit-mode")
   (vyper-mode :url "https://github.com/ralexstokes/vyper-mode")
   (w32-browser :url "https://github.com/emacsorphanage/w32-browser")

@@ -1,7 +1,7 @@
 Inspired by Robert Krahn's org-ai package <https://github.com/rksm/org-ai>
 
 OAI extend Org mode with "ai block" that allows you to interact
-with the OpenAI-compatible REST APIs.  Fork of "org-ai".
+with the OpenAI-compatible REST APIs.
 
 It allows you to:
 - Use #+begin_ai..#+end_ai blocks for org-mode
@@ -14,7 +14,7 @@ It allows you to:
 
 For the Internet connection used built-in libs: url.el and url-http.el.
 
-See see https://github.com/Anoncheg1/oai for the full set
+See see https://github.com/Anoncheg1/emacs-oai for the full set
 of features and setup instructions.
 
 Configuration:
@@ -22,25 +22,21 @@ Configuration:
 (require 'oai)
 (add-hook 'org-mode-hook #'oai-mode) ; oai.el
 (setq oai-restapi-con-token "xxx") ; oai-restapi.el
-(setopt help-window-select t) ; for `oai-expand-block' function (optional)
 
-You will need an OpenAI API key.  It can be stored in the format
-  machine api.openai.com login oai password <your-api-key>
+You will need an OpenAI API key-token.
+It can be stored in the format:
+ "machine api.openai.com login oai password <your-api-key>"
 in your ~/.authinfo.gpg file (or other auth-source) and will be picked up
 when the package is loaded.
 
 Available commands (TODO to refine):
 
 - Inside org-mode / #+begin_ai..#+end_ai blocks:
-    - C-c C-c to send the text to the OpenAI API and insert a response (org-ai.el)
+    - C-c C-c to send the text to the OpenAI API and insert a response
     - Press C-c <backspace> (oai-kill-region-at-point) to remove the chat
       part under point.  (oai-block.el)
     - oai-mark-region-at-point will mark the region at point.  (oai-block.el)
     - oai-mark-last-region will mark the last chat part.  (oai-block.el)
-
-Architecture:
-  (raw info) Interface -> (structured Org info + raw Org body) Agent ->
-  API to LLM + Callback (may be part of Agent or API)
 
 Callback write result to ORG
 
