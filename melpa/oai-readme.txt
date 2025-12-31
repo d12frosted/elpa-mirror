@@ -29,16 +29,20 @@ It can be stored in the format:
 in your ~/.authinfo.gpg file (or other auth-source) and will be picked up
 when the package is loaded.
 
-Available commands (TODO to refine):
+Keys binded by default:
 
-- Inside org-mode / #+begin_ai..#+end_ai blocks:
-    - C-c C-c to send the text to the OpenAI API and insert a response
-    - Press C-c <backspace> (oai-kill-region-at-point) to remove the chat
+- In block #+begin_ai..#+end_ai blocks:
+    - C-c C-c - to send the text to the OpenAI API and insert a response
+    - C-c . - to inspect raw data (and C-u C-c .)
+    - C-c C-. - to see url.el raw HTTP data (working only during request)
+    - M-h - mark ai block content
+    - C-u M-h - mark chat message
+    - C-c <backspace> - (kill-region-at-point) to remove the chat
       part under point.  (oai-block.el)
-    - oai-mark-region-at-point will mark the region at point.  (oai-block.el)
-    - oai-mark-last-region will mark the last chat part.  (oai-block.el)
+    - C-c m - set :max-tokens
+- in buffer with oai-mode enabled:
+    - C-g - to stop all requsts.
 
-Callback write result to ORG
 
 Other packages:
 - Modern navigation in major modes https://github.com/Anoncheg1/firstly-search
@@ -55,5 +59,3 @@ Donate:
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25
 - USDT (Tether) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
-
-Touch: Pain, water and warm.

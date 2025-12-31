@@ -1,3 +1,8 @@
+NOTE: This package has been deprecated by the "User Lisp
+Directory", added in Emacs 31.  This package provides a
+compatibility wrapper for `prepare-user-lisp' that you can invoke
+manually to make the switch easier in the future.
+
 This package automates the management of local Lisp code.  Similar
 to package.el, it will byte-compile files, scrape for autoload
 cookies and update the `load-path', but "installing" a package just

@@ -2009,13 +2009,13 @@
       (:authors ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
       (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (modus-themes
-  . [(5 1 0) ((emacs (28 1)))
+  . [(5 2 0) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "4fd8cdfc552e7e1e6a96625a752ab612706b15e3"))])
+      (:commit . "d1037f1322487e5686fff655dcd88aa644b2ad51"))])
  (mpdired
   . [(3) ((emacs (29))) "A dired-like client for Music Player Daemon"
      tar
@@ -2806,12 +2806,12 @@
       (:keywords "text" "syntax" "processes" "tools")
       (:commit . "456acbde87a9fa9da0ed8b441c3f22c4d5310296"))])
  (site-lisp
-  . [(0 2 0) ((emacs (25 1))) "Manage site-lisp directories" tar
+  . [(0 3 0) ((emacs (25 1))) "Manage site-lisp directories" tar
      ((:url . "https://codeberg.org/pkal/site-lisp.el")
       (:keywords "lisp" "local")
       (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
       (:authors ("Philip Kaludercic" . "philipk@posteo.net"))
-      (:commit . "3b0c3abab49cf4ab70a43e2c882bb8a2a6db45a1"))])
+      (:commit . "87656ba13c805285e50e7d86c29e444272b7d74f"))])
  (sketch-mode
   . [(1 0 4) nil
      "Quickly create svg sketches using keyboard and mouse" tar
