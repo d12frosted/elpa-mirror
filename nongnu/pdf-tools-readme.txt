@@ -1,6 +1,6 @@
-			   ━━━━━━━━━━━━━━━━━━
-			    PDF TOOLS README
-			   ━━━━━━━━━━━━━━━━━━
+                           ━━━━━━━━━━━━━━━━━━
+                            PDF TOOLS README
+                           ━━━━━━━━━━━━━━━━━━
 
 
 [https://circleci.com/gh/vedang/pdf-tools.svg?style=svg]
@@ -83,20 +83,28 @@ manual. All the topics on the site are listed at
   OS. Other operating systems are not officially supported, but
   `pdf-tools' is known to work on many of them.
 
-  The `epdfinfo' install script takes care of installing all the
+  The `epdfinfo' install script takes care of installing most of the
   necessary pre-requisites on supported operating systems (see list
-  below). See the section on to learn how to add your favorite Operating
-  System to this list.
+  below). See the section on [I want to add support for `pdf-tools' on
+  `My Fav OS'. How do I do that?] to learn how to add your favorite
+  Operating System to this list.
 
   Similarly, package-managers are not officially supported, but
   `pdf-tools' is known to be available on some of them. See the section
-  on to avoid manual installation of server / server prerequisites.
+  on [Installing the `epdfinfo' server from package managers] to avoid
+  manual installation of server / server prerequisites.
+
+  Pre-requisites:
+  • make: if this is not already installed, run `./server/autobuild'
+    instead of `make -s'
+  • [cask]: if this is not already installed, follow the install
+    instructions from the cask github
 
   Installation Instructions for `epdfinfo':
   ┌────
   │ $ git clone https://github.com/vedang/pdf-tools
-  │ $ cd /path/to/pdf-tools
-  │ $ make -s # If you don't have make installed, run ./server/autobuild and it will install make
+  │ $ cd pdf-tools
+  │ $ make -s
   └────
 
   This should give you no error and should compile the `epdfinfo'
@@ -122,6 +130,14 @@ manual. All the topics on the site are listed at
   • CentOS: `yum'
 
 
+[I want to add support for `pdf-tools' on `My Fav OS'. How do I do
+that?] See section 7.4
+
+[Installing the `epdfinfo' server from package managers] See section
+2.1.1
+
+[cask] <https://github.com/cask/cask>
+
 2.1.1 Installing the epdfinfo server from package managers
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
@@ -135,6 +151,7 @@ manual. All the topics on the site are listed at
     <https://packages.msys2.org/package/mingw-w64-x86_64-emacs-pdf-tools-server?repo=mingw64>
   • FreeBSD:
     <https://repology.org/metapackages/?search=pdf-tools&inrepo=freebsd>
+  • GNU Guix: <https://hpc.guix.info/package/emacs-pdf-tools>
 
 
 2.1.2 Installing the epdfinfo server from source on Windows (+ Gotchas)
@@ -149,6 +166,7 @@ manual. All the topics on the site are listed at
   2. Open `mingw64' shell (*Note:* You must use `mingw64.exe' and not
      `msys2.exe')
   3. Compile the `epdfinfo' server using Installation steps described in
+     [Installing the `epdfinfo' server]
   4. This should produce a file `server/epdfinfo.exe'. Copy this file
      into the `pdf-tools/' installation directory in your Emacs.
   5. Make sure Emacs can find `epdfinfo.exe'. Either add the MINGW
@@ -166,6 +184,8 @@ manual. All the topics on the site are listed at
 
 
 [install MSYS2] <https://www.msys2.org/>
+
+[Installing the `epdfinfo' server] See section 2.1
 
 
 2.1.3 Installing the epdfinfo server from source on macOS (+ Gotchas)
@@ -202,7 +222,7 @@ manual. All the topics on the site are listed at
   version of `tablist' is installed.
 
   We have already run the steps necessary to install `pdf-tools' as part
-  of ! These are:
+  of [the server installation]! These are:
   ┌────
   │ $ git clone https://github.com/vedang/pdf-tools
   │ $ cd /path/to/pdf-tools
@@ -234,8 +254,16 @@ manual. All the topics on the site are listed at
   │ (pdf-loader-install) ; On demand loading, leads to faster startup time
   └────
 
-  Once the Installation process is complete, check out and to get
+  Once the Installation process is complete, check out [Easy Help for
+  PDF Tools features] and [Configuring PDF Tools features] to get
   started!
+
+
+[the server installation] See section 2.1
+
+[Easy Help for PDF Tools features] See section 3.5
+
+[Configuring PDF Tools features] See section 3.6
 
 
 2.3 Updating pdf-tools
@@ -246,17 +274,22 @@ manual. All the topics on the site are listed at
   involved and the version hasn't changed. To avoid this kind of
   problems, you should delete the old package via `list-packages',
   restart Emacs, run `make distclean' and then reinstall the
-  package. Follow the steps described in .
+  package. Follow the steps described in [Installing pdf-tools elisp
+  code].
 
   This also applies when updating via MELPA / NonGNU ELPA (except for
   running the `make distclean' step).
+
+
+[Installing pdf-tools elisp code] See section 2.2
 
 
 3 Features
 ══════════
 
   View
-        View PDF documents in a buffer with DocView-like bindings. .
+        View PDF documents in a buffer with DocView-like bindings. [More
+        information here].
   Isearch
         Interactively search PDF documents like any other buffer, either
         for a string or a PCRE.
@@ -271,7 +304,7 @@ manual. All the topics on the site are listed at
         Display and list text and markup annotations (like underline),
         edit their contents and attributes (e.g. color), move them
         around, delete them or create new ones and then save the
-        modifications back to the PDF file. .
+        modifications back to the PDF file. [More information here].
   Attachments
         Save files attached to the PDF-file or list them in a dired
         buffer.
@@ -289,6 +322,10 @@ manual. All the topics on the site are listed at
         • Keep track of visited pages via a history.
         • Apply a color filter for reading in low light conditions.
 
+
+[More information here] See section 3.1
+
+[More information here] See section 3.2
 
 3.1 View and Navigate PDFs
 ──────────────────────────
@@ -351,16 +388,17 @@ manual. All the topics on the site are listed at
 3.1.2 Keybindings for manipulating display of PDF
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Display                                                   
-  ───────────────────────────────────────────────────────────
-   Zoom in / Zoom out                        `+' / `-'       
-   Fit Height / Fit Width / Fit Page         `H' / `W' / `P' 
-   Trim Margins (set slice to bounding box)  `s b'           
-   Reset Margins                             `s r'           
-   Reset Zoom                                `0'             
-   Rotate Page                               `R'             
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Display                                                           
+  ───────────────────────────────────────────────────────────────────
+   Zoom in / Zoom out                                `+' / `-'       
+   Fit Height / Fit Width / Fit Page                 `H' / `W' / `P' 
+   Trim Margins (set slice to bounding box)          `s b'           
+   Trim Margins to common bounding box of all pages  `s c'           
+   Reset Margins                                     `s r'           
+   Reset Zoom                                        `0'             
+   Rotate Page                                       `R'             
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 3.2 Annotations
@@ -376,29 +414,32 @@ manual. All the topics on the site are listed at
 3.2.1 Keybindings for working with Annotations
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Annotations                                                                             
-  ─────────────────────────────────────────────────────────────────────────────────────────
-   List Annotations                      `C-c C-a l'                                       
-   Jump to Annotations from List         `SPACE'                                           
-   Mark Annotation for Deletion          `d'                                               
-   Delete Marked Annotations             `x'                                               
-   Unmark Annotations                    `u'                                               
-   Close Annotation List                 `q'                                               
-   Enable/Disable Following Annotations  `C-c C-f'                                         
-  ─────────────────────────────────────────────────────────────────────────────────────────
-   Add and Edit Annotations              Select region via Mouse selection.                
-                                         Then left-click context menu OR keybindings below 
-  ─────────────────────────────────────────────────────────────────────────────────────────
-   Add a Markup Annotation               `C-c C-a m'                                       
-   Add a Highlight Markup Annotation     `C-c C-a h'                                       
-   Add a Strikeout Markup Annotation     `C-c C-a o'                                       
-   Add a Squiggly Markup Annotation      `C-c C-a s'                                       
-   Add an Underline Markup Annotation    `C-c C-a u'                                       
-   Add a Text Annotation                 `C-c C-a t'                                       
-  ─────────────────────────────────────────────────────────────────────────────────────────
-                                                                                         
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Annotations                                                                              
+  ──────────────────────────────────────────────────────────────────────────────────────────
+   List Annotations                      `C-c C-a l'                                        
+   Jump to Annotations from List         `SPACE'                                            
+   Mark Annotation for Deletion          `d'                                                
+   Delete Marked Annotations             `x'                                                
+   Unmark Annotations                    `u'                                                
+   Close Annotation List                 `q'                                                
+   Enable/Disable Following Annotations  `C-c C-f'                                          
+  ──────────────────────────────────────────────────────────────────────────────────────────
+   Add and Edit Annotations              Select region via Mouse selection.                 
+                                         Then left-click context menu OR keybindings below  
+  ──────────────────────────────────────────────────────────────────────────────────────────
+   Add a Markup Annotation               `C-c C-a m'                                        
+   Add a Highlight Markup Annotation     `C-c C-a h'                                        
+   Add a Strikeout Markup Annotation     `C-c C-a o'                                        
+   Add a Squiggly Markup Annotation      `C-c C-a s'                                        
+   Add an Underline Markup Annotation    `C-c C-a u'                                        
+   Add a Text Annotation                 `C-c C-a t'                                        
+  ──────────────────────────────────────────────────────────────────────────────────────────
+   Highlight an arbitrary region         Section region with Mouse Drag (Hold down Meta and 
+                                         drag). Then `C-c C-a h' to highlight that region.  
+  ──────────────────────────────────────────────────────────────────────────────────────────
+                                                                                          
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 3.3 Working with AUCTeX
@@ -522,10 +563,10 @@ manual. All the topics on the site are listed at
   │     (pdf-view-mode))
   │   ;; save file in QDF-mode
   │   (qpdf-run (list
-  │ 	     (concat "--infile="
-  │ 		     (buffer-file-name))
-  │ 	     "--qdf --object-streams=disable"
-  │ 	     "--replace-input"))
+  │              (concat "--infile="
+  │                      (buffer-file-name))
+  │              "--qdf --object-streams=disable"
+  │              "--replace-input"))
   │   ;; do replacements
   │   (text-mode)
   │   (read-only-mode -1)
@@ -605,7 +646,7 @@ manual. All the topics on the site are listed at
 
   The `server/test/docker' folder contains Dockerfile templates used for
   testing that the `epdfinfo' server compiles correctly on various
-  operating systems ().
+  operating systems ([more details here]).
 
   To see the list of operating systems where compilation testing is
   supported, run `make server-test-supported'. To see the list of
@@ -613,6 +654,9 @@ manual. All the topics on the site are listed at
   server-test-unsupported'. To add support, look into the
   `server/test/docker/templates' folder (`ubuntu' files are a good
   example to refer to)
+
+
+[more details here] See section 6.3
 
 
 6.5 Issue Template for Bug Reports
@@ -679,7 +723,15 @@ manual. All the topics on the site are listed at
 7 FAQs
 ══════
 
-7.1 PDFs are not rendering well!
+7.1 Epdfinfo has stopped working!
+─────────────────────────────────
+
+  Have you upgraded `poppler' recently? This can cause `epdfinfo' to
+  stop working, since it was compiled with the previous version of
+  `poppler'. Just run `M-x pdf-tools-install' and this should be fixed.
+
+
+7.2 PDFs are not rendering well!
 ────────────────────────────────
 
   `pdf-tools' version `1.1.0' release changed the default value of
@@ -696,7 +748,7 @@ manual. All the topics on the site are listed at
   to scale the images correctly when rendering them.
 
 
-7.2 What Emacs versions does pdf-tools support?
+7.3 What Emacs versions does pdf-tools support?
 ───────────────────────────────────────────────
 
   `pdf-tools' supports the 3 latest versions of Emacs major releases. At
@@ -704,7 +756,7 @@ manual. All the topics on the site are listed at
   Emacs version is `26.3'.
 
 
-7.3 I want to add support for pdf-tools on "My Fav OS". How do I do that?
+7.4 I want to add support for pdf-tools on "My Fav OS". How do I do that?
 ─────────────────────────────────────────────────────────────────────────
 
   I'm working on automating `pdf-tools' installation as much as
@@ -729,7 +781,8 @@ manual. All the topics on the site are listed at
      the rest of the `autobuild' script.
   4. If you are adding support for your favorite operating system,
      consider adding automated testing support as well, to help me
-     ensure that `epdfinfo' continues to compile correctly. See for more
+     ensure that `epdfinfo' continues to compile correctly. See [Add a
+     Dockerfile to automate server compilation testing] for more
      details.
 
   The idea here is to make the `server/autobuild' file the single place
@@ -742,11 +795,20 @@ manual. All the topics on the site are listed at
   install dependencies on Gentoo and Debian respectively, and are simple
   to copy / change.
 
-  When you make your changes, please be sure to test as well as as
-  described in the linked articles.
+  When you make your changes, please be sure to test [the elisp changes]
+  as well as [the server code changes] as described in the linked
+  articles.
 
 
-7.4 I am on a Macbook M1 and pdf-tools installation fails with a stack-trace
+[Add a Dockerfile to automate server compilation testing] See section
+6.4
+
+[the elisp changes] See section 6.2
+
+[the server code changes] See section 6.3
+
+
+7.5 I am on a Macbook M1 and pdf-tools installation fails with a stack-trace
 ────────────────────────────────────────────────────────────────────────────
 
   There have been a number of issues around `pdf-tools' installation
@@ -799,8 +861,12 @@ manual. All the topics on the site are listed at
   If your Emacs is compiled for x86, the `Code Type' will be `x86_64'.
 
 
-7.5 I am a developer, making changes to the pdf-tools source code
+7.6 I am a developer, making changes to the pdf-tools source code
 ─────────────────────────────────────────────────────────────────
 
   Thank you for taking the time to contribute back to the code. You may
-  find some useful notes in the section. Please be sure to check it out!
+  find some useful notes in the [Tips and Tricks for Developers]
+  section. Please be sure to check it out!
+
+
+[Tips and Tricks for Developers] See section 6

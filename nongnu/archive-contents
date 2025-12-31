@@ -1420,13 +1420,13 @@
       (:authors ("joddie" . "jonxfieldatgmail.com"))
       (:commit . "018531ba0cf8e2b28d1108136a0e031b6a45f1c1"))])
  (pdf-tools
-  . [(1 1 0) ((emacs (26 3)) (tablist (1 0)) (let-alist (1 0 4)))
+  . [(1 2 0) ((emacs (26 3)) (tablist (1 0)) (let-alist (1 0 4)))
      "Support library for PDF documents" tar
      ((:url . "http://github.com/vedang/pdf-tools/")
       (:keywords "files" "multimedia")
       (:maintainer "Vedang Manerikar" . "vedang.manerikar@gmail.com")
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
-      (:commit . "a9c9a12c3ecf2005fa641059368ac8284f507620"))])
+      (:commit . "9d948a0d8a2da08367bfe34c5d14f638ebb253b0"))])
  (pg
   . [(0 62) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
