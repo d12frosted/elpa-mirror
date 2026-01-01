@@ -1,9 +1,9 @@
  • Building package parse-it (from github:jcs-elpa/parse-it)...
 Updating /mnt/store/melpa/working/parse-it/
-Checking out 19df0d8d67f0f3b73d80ad2db57a1790f3e43beb
+Checking out d65d74f4d057b0c7754424065c2e796dc0f89f6e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parse-it/
-  to /tmp/parse-it5L8IZU/parse-it-20250101.1011
+  to /tmp/parse-itdHFmKC/parse-it-20260101.602
     parse-it-ast.el -> parse-it-ast.el
     parse-it-lex.el -> parse-it-lex.el
     parse-it-util.el -> parse-it-util.el
@@ -32,38 +32,40 @@ Copying files (->) and directories (=>)
   ! langs/parse-it-swift.el -> parse-it-swift.el
   ! langs/parse-it-typescript.el -> parse-it-typescript.el
   ! langs/parse-it-xml.el -> parse-it-xml.el
-Created parse-it-20250101.1011.tar containing:
-  parse-it-20250101.1011/
-  parse-it-20250101.1011/parse-it-actionscript.el
-  parse-it-20250101.1011/parse-it-asm.el
-  parse-it-20250101.1011/parse-it-ast.el
-  parse-it-20250101.1011/parse-it-c++.el
-  parse-it-20250101.1011/parse-it-c.el
-  parse-it-20250101.1011/parse-it-csharp.el
-  parse-it-20250101.1011/parse-it-css.el
-  parse-it-20250101.1011/parse-it-elisp.el
-  parse-it-20250101.1011/parse-it-go.el
-  parse-it-20250101.1011/parse-it-html.el
-  parse-it-20250101.1011/parse-it-java.el
-  parse-it-20250101.1011/parse-it-js.el
-  parse-it-20250101.1011/parse-it-json.el
-  parse-it-20250101.1011/parse-it-kotlin.el
-  parse-it-20250101.1011/parse-it-lex.el
-  parse-it-20250101.1011/parse-it-lisp.el
-  parse-it-20250101.1011/parse-it-lua.el
-  parse-it-20250101.1011/parse-it-markdown.el
-  parse-it-20250101.1011/parse-it-objc.el
-  parse-it-20250101.1011/parse-it-php.el
-  parse-it-20250101.1011/parse-it-pkg.el
-  parse-it-20250101.1011/parse-it-python.el
-  parse-it-20250101.1011/parse-it-r.el
-  parse-it-20250101.1011/parse-it-sql.el
-  parse-it-20250101.1011/parse-it-swift.el
-  parse-it-20250101.1011/parse-it-typescript.el
-  parse-it-20250101.1011/parse-it-util.el
-  parse-it-20250101.1011/parse-it-xml.el
-  parse-it-20250101.1011/parse-it.el
+Created parse-it-20260101.602.tar containing:
+  parse-it-20260101.602/
+  parse-it-20260101.602/parse-it-actionscript.el
+  parse-it-20260101.602/parse-it-asm.el
+  parse-it-20260101.602/parse-it-ast.el
+  parse-it-20260101.602/parse-it-c++.el
+  parse-it-20260101.602/parse-it-c.el
+  parse-it-20260101.602/parse-it-csharp.el
+  parse-it-20260101.602/parse-it-css.el
+  parse-it-20260101.602/parse-it-elisp.el
+  parse-it-20260101.602/parse-it-go.el
+  parse-it-20260101.602/parse-it-html.el
+  parse-it-20260101.602/parse-it-java.el
+  parse-it-20260101.602/parse-it-js.el
+  parse-it-20260101.602/parse-it-json.el
+  parse-it-20260101.602/parse-it-kotlin.el
+  parse-it-20260101.602/parse-it-lex.el
+  parse-it-20260101.602/parse-it-lisp.el
+  parse-it-20260101.602/parse-it-lua.el
+  parse-it-20260101.602/parse-it-markdown.el
+  parse-it-20260101.602/parse-it-objc.el
+  parse-it-20260101.602/parse-it-php.el
+  parse-it-20260101.602/parse-it-pkg.el
+  parse-it-20260101.602/parse-it-python.el
+  parse-it-20260101.602/parse-it-r.el
+  parse-it-20260101.602/parse-it-sql.el
+  parse-it-20260101.602/parse-it-swift.el
+  parse-it-20260101.602/parse-it-typescript.el
+  parse-it-20260101.602/parse-it-util.el
+  parse-it-20260101.602/parse-it-xml.el
+  parse-it-20260101.602/parse-it.el
  ✓ Success:
-  2026-01-01T03:18:38+0000  parse-it-20250101.1011.entry
-  2026-01-01T03:18:37+0000  parse-it-20250101.1011.tar
-Built parse-it in 4.327s, finished at 2026-01-01T03:18:39+0000
+  2026-01-01T05:42:19+0000  parse-it-20250101.1011.entry
+  2026-01-01T05:42:19+0000  parse-it-20250101.1011.tar
+  2026-01-01T08:09:52+0000  parse-it-20260101.602.entry
+  2026-01-01T08:09:52+0000  parse-it-20260101.602.tar
+Built parse-it in 3.288s, finished at 2026-01-01T08:09:53+0000
