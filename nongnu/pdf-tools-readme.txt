@@ -3,11 +3,10 @@
                            ━━━━━━━━━━━━━━━━━━
 
 
-[https://circleci.com/gh/vedang/pdf-tools.svg?style=svg]
+[https://github.com/vedang/pdf-tools/actions/workflows/test.yml/badge.svg]
 [http://elpa.nongnu.org/nongnu/pdf-tools.svg]
 [http://stable.melpa.org/packages/pdf-tools-badge.svg]
 [http://melpa.org/packages/pdf-tools-badge.svg]
-[https://ci.appveyor.com/api/projects/status/yqic2san0wi7o5v8/branch/master?svg=true]
 
 The `pdf-tools' Wiki is maintained at <https://pdftools.wiki>. Head to
 the site if you find it easier to navigate a website for reading a
@@ -15,8 +14,8 @@ manual. All the topics on the site are listed at
 <https://pdftools.wiki/impulse>.
 
 
-[https://circleci.com/gh/vedang/pdf-tools.svg?style=svg]
-<https://app.circleci.com/pipelines/github/vedang/pdf-tools>
+[https://github.com/vedang/pdf-tools/actions/workflows/test.yml/badge.svg]
+<https://github.com/vedang/pdf-tools/actions/workflows/test.yml>
 
 [http://elpa.nongnu.org/nongnu/pdf-tools.svg]
 <https://elpa.nongnu.org/nongnu/pdf-tools.html>
@@ -26,9 +25,6 @@ manual. All the topics on the site are listed at
 
 [http://melpa.org/packages/pdf-tools-badge.svg]
 <https://melpa.org/#/pdf-tools>
-
-[https://ci.appveyor.com/api/projects/status/yqic2san0wi7o5v8/branch/master?svg=true]
-<https://ci.appveyor.com/project/vedang/pdf-tools>
 
 
 1 About PDF Tools
@@ -513,6 +509,12 @@ that?] See section 7.4
   makes horizontal navigation (such as `C-f', `C-b', `C-x <' or `C-x >'
   ) in a document impossible.
 
+  If you use `display-line-numbers-mode' globally, you should disable it
+  for `pdf-view-mode':
+  ┌────
+  │ (add-hook 'pdf-view-mode-hook (lambda () (display-line-numbers-mode -1)))
+  └────
+
 
 4.3 auto-revert
 ───────────────
@@ -870,3 +872,25 @@ that?] See section 7.4
 
 
 [Tips and Tricks for Developers] See section 6
+
+
+7.7 How do I print a PDF?
+─────────────────────────
+
+  Use `C-c C-p' (`pdf-misc-print-document') to print the current PDF. By
+  default, this command prompts for a print program. To avoid the
+  prompt, configure the print program:
+  ┌────
+  │ (setq pdf-misc-print-program-executable "lpr")
+  └────
+
+  Note: `print-buffer' does not work with `pdf-tools' because it prints
+  buffer text, which `pdf-tools' hides using overlays while displaying
+  rendered page images.
+
+
+7.8 How do I open the current PDF in an external application?
+─────────────────────────────────────────────────────────────
+
+  Use `M-x browse-url-of-file' to open the current PDF in your system's
+  default external PDF viewer.

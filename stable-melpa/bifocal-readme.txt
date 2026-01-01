@@ -18,7 +18,3 @@ tail window), while reviewing previous output (in the head window).  Paging
 down all the way causes the split to disappear.
 
 Note if you're not on the last line of a buffer, no split will appear.
-
-This version tested with Emacs 25.2.1
-
-See README.org for more details.
