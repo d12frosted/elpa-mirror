@@ -1,16 +1,15 @@
 A major mode for editing q (the language written by Kx Systems, see
 URL `https://code.kx.com') in Emacs.
 
-A Flymake backend using the "q" program is also provided.
-
-
 Some of its major features include:
 
- - syntax highlighting (font lock),
+ - syntax highlighting (font-lock-mode),
 
- - interaction with inferior q[con] instance,
+ - syntax checking (flymake-mode),
 
- - scans declarations and places them in a menu.
+ - interaction with inferior q[con] instance (comint-mode),
+
+ - variable and function indexing (imenu).
 
 To load `q-mode' on-demand, instead of at startup, add this to your
 initialization file
@@ -59,6 +58,10 @@ the active q process buffer for direct interaction.
 If the source file exists on the same machine as the q process,
 `C-c M-l' can be used to load the file associated with the active
 buffer.
+
+Quick access to variable and function definitions can be obtained
+using the `imenu' binding `M-g i'.
+
 
 `M-x customize-group' can be used to customize the `q' group.
 Specifically, the `q-program' and `q-qcon-program' variables can be

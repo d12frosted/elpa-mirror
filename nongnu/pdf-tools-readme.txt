@@ -359,6 +359,43 @@ that?] See section 7.4
   Note that `pdf-tools' renders the PDF as images inside Emacs. This
   means that all the keybindings of `image-mode' work on individual PDF
   pages as well.
+
+
+3.1.2 Continuous Scroll Mode (Experimental)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  `pdf-tools' supports an optional continuous scroll mode that displays
+  multiple pages simultaneously and allows smooth scrolling across page
+  boundaries. This feature is experimental and off by default.
+
+  To enable continuous scroll mode:
+  ┌────
+  │ M-x pdf-view-roll-minor-mode RET
+  └────
+
+  When enabled, you will see "Continuous" in the mode-line. In this
+  mode:
+  • Multiple pages are visible at once in tall windows
+  • Scrolling is smooth and continuous across page boundaries
+  • `C-n' / `C-p' scroll by pixels instead of jumping pages
+  • Mouse wheel scrolling works smoothly across pages
+  • Works with `pixel-scroll-precision-mode' for trackpad scrolling
+
+  To enable by default for all PDFs, add to your configuration:
+  ┌────
+  │ (add-hook 'pdf-view-mode-hook #'pdf-view-roll-minor-mode)
+  └────
+
+  You can customize the appearance with:
+  • `pdf-roll-vertical-margin': Pixel height of margin between pages
+    (default: 2)
+  • `pdf-roll-margin-color': Color of the margin between pages (default:
+    "gray")
+
+  *Note*: This feature is experimental. Some features may not work
+   perfectly with continuous scroll mode enabled. If you encounter
+   issues, disable the mode with `M-x pdf-view-roll-minor-mode'.
+
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    Image Mode                                                          
   ─────────────────────────────────────────────────────────────────────
@@ -381,7 +418,7 @@ that?] See section 7.4
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-3.1.2 Keybindings for manipulating display of PDF
+3.1.3 Keybindings for manipulating display of PDF
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
