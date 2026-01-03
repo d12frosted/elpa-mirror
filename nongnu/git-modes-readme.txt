@@ -40,5 +40,5 @@
 
   ┌────
   │ (add-to-list 'auto-mode-alist
-  │ 	     (cons "/.dockerignore\\'" 'gitignore-mode))
+  │              (cons "/.dockerignore\\'" 'gitignore-mode))
   └────

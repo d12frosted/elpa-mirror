@@ -236,11 +236,11 @@
       (:authors ("Chris Wanstrath" . "chris@ozmm.org"))
       (:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (cond-let
-  . [(0 2 0) ((emacs (28 1)))
+  . [(0 2 1) ((emacs (28 1)))
      "Additional and improved binding conditionals" tar
      ((:url . "https://github.com/tarsius/cond-let")
       (:keywords "extensions")
-      (:commit . "288b7d36563223ebaf64cb220a3b270bdffb63f1"))])
+      (:commit . "0430bd1eb3493ea90d69feb6b7eb7dac3e10d0ba"))])
  (consult-flycheck
   . [(1 0) ((emacs (27 1)) (consult (1 0)) (flycheck (32)))
      "Provides the command `consult-flycheck'" tar
@@ -444,12 +444,12 @@
       (:authors ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
       (:commit . "dcdeb86f7ae633e252f9ef8a73d3458e87c1ab12"))])
  (emacsql
-  . [(4 3 3) ((emacs (26 1))) "High-level SQL database front-end" tar
+  . [(4 3 4) ((emacs (26 1))) "High-level SQL database front-end" tar
      ((:url . "https://github.com/magit/emacsql")
       (:maintainer "Jonas Bernoulli"
 		   . "emacs.emacsql@jonas.bernoulli.dev")
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "138fae5c3f55c81a4eded42eabe4e33483de567e"))])
+      (:commit . "c6a9d2373cc15184e4e34414b8574a896d070323"))])
  (engine-mode
   . [(2 2 4) ((cl-lib (0 5))) "Define and query search engines" tar
      ((:url . "https://github.com/hrs/engine-mode")
@@ -769,7 +769,7 @@
       (:authors ("Jeronimo Pellegrini" . "(j_p@aleph0.info)"))
       (:commit . "3358d0cc01436bd8f71a500175db2716e75b2eed"))])
  (git-modes
-  . [(1 4 7) ((emacs (26 1)) (compat (30 1)))
+  . [(1 4 8) ((emacs (26 1)) (compat (30 1)))
      "Major modes for editing Git configuration files" tar
      ((:url . "https://github.com/magit/git-modes")
       (:keywords "convenience" "vc" "git")
@@ -779,7 +779,7 @@
 		("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
 		("Jonas Bernoulli"
 		 . "emacs.git-modes@jonas.bernoulli.dev"))
-      (:commit . "dfc450d79498b7997b1155ac76629ab01f7ef355"))])
+      (:commit . "c3faeeea1982786f78d8c38397dec0f078eaec84"))])
  (gnosis
   . [(0 5 8)
      ((emacs (27 2)) (emacsql (4 1 0)) (compat (29 1 4 2))
@@ -1049,7 +1049,7 @@
       (:keywords "languages")
       (:commit . "0f4d74f9049df28e2f522733141bfc5b7a0f69a3"))])
  (keycast
-  . [(1 4 6) ((emacs (28 1)) (compat (30 1)))
+  . [(1 4 7) ((emacs (28 1)) (compat (30 1)))
      "Show current command and its binding" tar
      ((:url . "https://github.com/tarsius/keycast")
       (:keywords "multimedia")
@@ -1057,7 +1057,7 @@
 		   . "emacs.keycast@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.keycast@jonas.bernoulli.dev"))
-      (:commit . "090ade99c1c03830d45cc763e5733a1ca001c4e5"))])
+      (:commit . "b831e380c4deb1d51ce5db0a965b96427aec52e4"))])
  (kotlin-mode
   . [(2 0 0) ((emacs (24 3))) "Major mode for kotlin" tar
      ((:keywords "languages")
@@ -1074,11 +1074,11 @@
       (:authors ("martian hiatus" . "mousebot@disroot.org"))
       (:commit . "c746d32d2f330ed9a23ec7f8fc1f7d35ac22c357"))])
  (llama
-  . [(1 0 2) ((emacs (26 1)) (compat (30 1)))
+  . [(1 0 3) ((emacs (26 1)) (compat (30 1)))
      "Compact syntax for short lambda" tar
      ((:url . "https://github.com/tarsius/llama")
       (:keywords "extensions")
-      (:commit . "e4803de8ab85991b6a944430bb4f543ea338636d"))])
+      (:commit . "2a89ba755b0459914a44b1ffa793e57f759a5b85"))])
  (logview
   . [(0 19 3)
      ((emacs (25 1)) (datetime (0 8)) (extmap (1 0)) (compat (29)))
@@ -1915,7 +1915,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 4 7) ((emacs (26 1)) (compat (30 1)))
+  . [(3 4 8) ((emacs (26 1)) (compat (30 1)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
       (:keywords "processes" "terminals")
@@ -1923,7 +1923,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "dbc694406c2fd8e9d3e6ffbc4f8aff4e8c28029f"))])
+      (:commit . "76ecbb2107efcbad48210a393b90193bcf4008aa"))])
  (with-simulated-input
   . [(3 0) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar

@@ -8,4 +8,4 @@ To install the package manually, add the following to your init file:
 (autoload 'shift-number-down "shift-number" nil t)
 
 For more verbose description and a gif demonstration, see
-<https://github.com/alezost/shift-number.el>.
+<https://codeberg.org/ideasman42/emacs-shift-number>.
