@@ -3,6 +3,8 @@ development CLI tools. Its purpose is to offer a consistent user experience
 across different AI backends while integrating seamlessly with AI-driven
 agile development workflows.
 
+URL: https://github.com/tninja/ai-code-interface.el
+
 Supported AI coding CLIs include:
   - Claude Code (claude-code.el)
   - Gemini CLI (gemini-cli.el)
