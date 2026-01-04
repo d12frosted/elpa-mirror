@@ -1,3 +1,20 @@
+Table of Contents
+─────────────────
+
+subed
+.. Features
+.. Installation
+.. Getting started
+.. Some workflow ideas
+.. Troubleshooting
+.. Important change in v1.0.0
+.. Testing
+.. Contributions
+.. License
+Build tips
+Other resources
+
+
 subed
 ═════
 
@@ -159,24 +176,24 @@ Installing the subed package from NonGNU Elpa
 
   ┌────
   │ (with-eval-after-load 'subed-mode
-  │ 	;; Remember cursor position between sessions
-  │ 	(add-hook 'subed-mode-hook 'save-place-local-mode)
-  │ 	;; Break lines automatically while typing
-  │ 	(add-hook 'subed-mode-hook 'turn-on-auto-fill)
-  │ 	;; Break lines at 40 characters
-  │ 	(add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40)))
-  │ 	;; Some reasonable defaults
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-pause-while-typing)
-  │ 	;; As the player moves, update the point to show the current subtitle
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-sync-point-to-player)
-  │ 	;; As your point moves in Emacs, update the player to start at the current subtitle
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-sync-player-to-point)
-  │ 	;; Replay subtitles as you adjust their start or stop time with M-[, M-], M-{, or M-}
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-replay-adjusted-subtitle)
-  │ 	;; Loop over subtitles
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-loop-over-current-subtitle)
-  │ 	;; Show characters per second
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-show-cps))
+  │         ;; Remember cursor position between sessions
+  │         (add-hook 'subed-mode-hook 'save-place-local-mode)
+  │         ;; Break lines automatically while typing
+  │         (add-hook 'subed-mode-hook 'turn-on-auto-fill)
+  │         ;; Break lines at 40 characters
+  │         (add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40)))
+  │         ;; Some reasonable defaults
+  │         (add-hook 'subed-mode-hook 'subed-enable-pause-while-typing)
+  │         ;; As the player moves, update the point to show the current subtitle
+  │         (add-hook 'subed-mode-hook 'subed-enable-sync-point-to-player)
+  │         ;; As your point moves in Emacs, update the player to start at the current subtitle
+  │         (add-hook 'subed-mode-hook 'subed-enable-sync-player-to-point)
+  │         ;; Replay subtitles as you adjust their start or stop time with M-[, M-], M-{, or M-}
+  │         (add-hook 'subed-mode-hook 'subed-enable-replay-adjusted-subtitle)
+  │         ;; Loop over subtitles
+  │         (add-hook 'subed-mode-hook 'subed-enable-loop-over-current-subtitle)
+  │         ;; Show characters per second
+  │         (add-hook 'subed-mode-hook 'subed-enable-show-cps))
   └────
 
 
@@ -207,7 +224,7 @@ Manual installation
 
   ┌────
   │ emacs --quick --batch --eval "(progn (setq generated-autoload-file (expand-file-name \"subed-autoloads.el\" \"subed\") backup-inhibited t) \
-  │ 	(update-directory-autoloads \"./subed\"))"
+  │         (update-directory-autoloads \"./subed\"))"
   └────
 
   Then you can add the following to your Emacs configuration (typically
@@ -221,24 +238,24 @@ Manual installation
   │ (require 'subed-autoloads)
   │ 
   │ (with-eval-after-load 'subed-mode
-  │ 	;; Remember cursor position between sessions
-  │ 	(add-hook 'subed-mode-hook 'save-place-local-mode)
-  │ 	;; Break lines automatically while typing
-  │ 	(add-hook 'subed-mode-hook 'turn-on-auto-fill)
-  │ 	;; Break lines at 40 characters
-  │ 	(add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40)))
-  │ 	;; Some reasonable defaults
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-pause-while-typing)
-  │ 	;; As the player moves, update the point to show the current subtitle
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-sync-point-to-player)
-  │ 	;; As your point moves in Emacs, update the player to start at the current subtitle
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-sync-player-to-point)
-  │ 	;; Replay subtitles as you adjust their start or stop time with M-[, M-], M-{, or M-}
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-replay-adjusted-subtitle)
-  │ 	;; Loop over subtitles
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-loop-over-current-subtitle)
-  │ 	;; Show characters per second
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-show-cps))
+  │         ;; Remember cursor position between sessions
+  │         (add-hook 'subed-mode-hook 'save-place-local-mode)
+  │         ;; Break lines automatically while typing
+  │         (add-hook 'subed-mode-hook 'turn-on-auto-fill)
+  │         ;; Break lines at 40 characters
+  │         (add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40)))
+  │         ;; Some reasonable defaults
+  │         (add-hook 'subed-mode-hook 'subed-enable-pause-while-typing)
+  │         ;; As the player moves, update the point to show the current subtitle
+  │         (add-hook 'subed-mode-hook 'subed-enable-sync-point-to-player)
+  │         ;; As your point moves in Emacs, update the player to start at the current subtitle
+  │         (add-hook 'subed-mode-hook 'subed-enable-sync-player-to-point)
+  │         ;; Replay subtitles as you adjust their start or stop time with M-[, M-], M-{, or M-}
+  │         (add-hook 'subed-mode-hook 'subed-enable-replay-adjusted-subtitle)
+  │         ;; Loop over subtitles
+  │         (add-hook 'subed-mode-hook 'subed-enable-loop-over-current-subtitle)
+  │         ;; Show characters per second
+  │         (add-hook 'subed-mode-hook 'subed-enable-show-cps))
   └────
 
   You can reload your configuration with `M-x eval-buffer' or restart
@@ -259,27 +276,27 @@ use-package configuration
 
   ┌────
   │ (use-package subed
-  │ 	:ensure t
-  │ 	:config
-  │ 	;; Remember cursor position between sessions
-  │ 	(add-hook 'subed-mode-hook 'save-place-local-mode)
-  │ 	;; Break lines automatically while typing
-  │ 	(add-hook 'subed-mode-hook 'turn-on-auto-fill)
-  │ 	;; Break lines at 40 characters
-  │ 	(add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40)))
-  │ 	;; Some reasonable defaults
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-pause-while-typing)
-  │ 	;; As the player moves, update the point to show the current subtitle
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-sync-point-to-player)
-  │ 	;; As your point moves in Emacs, update the player to start at the current subtitle
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-sync-player-to-point)
-  │ 	;; Replay subtitles as you adjust their start or stop time with M-[, M-], M-{, or M-}
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-replay-adjusted-subtitle)
-  │ 	;; Loop over subtitles
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-loop-over-current-subtitle)
-  │ 	;; Show characters per second
-  │ 	(add-hook 'subed-mode-hook 'subed-enable-show-cps)
-  │ 	)
+  │         :ensure t
+  │         :config
+  │         ;; Remember cursor position between sessions
+  │         (add-hook 'subed-mode-hook 'save-place-local-mode)
+  │         ;; Break lines automatically while typing
+  │         (add-hook 'subed-mode-hook 'turn-on-auto-fill)
+  │         ;; Break lines at 40 characters
+  │         (add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40)))
+  │         ;; Some reasonable defaults
+  │         (add-hook 'subed-mode-hook 'subed-enable-pause-while-typing)
+  │         ;; As the player moves, update the point to show the current subtitle
+  │         (add-hook 'subed-mode-hook 'subed-enable-sync-point-to-player)
+  │         ;; As your point moves in Emacs, update the player to start at the current subtitle
+  │         (add-hook 'subed-mode-hook 'subed-enable-sync-player-to-point)
+  │         ;; Replay subtitles as you adjust their start or stop time with M-[, M-], M-{, or M-}
+  │         (add-hook 'subed-mode-hook 'subed-enable-replay-adjusted-subtitle)
+  │         ;; Loop over subtitles
+  │         (add-hook 'subed-mode-hook 'subed-enable-loop-over-current-subtitle)
+  │         ;; Show characters per second
+  │         (add-hook 'subed-mode-hook 'subed-enable-show-cps)
+  │         )
   └────
 
 
@@ -573,6 +590,13 @@ Testing
   packages. You'll also need `GNU Make' so that you can work with
   Makefiles. To run the tests, use the command `make test'.
 
+  To re-run tests automatically when files change, something like
+  nodemon might be helpful.
+
+  ┌────
+  │ nodemon -w tests/*.el -w subed/*.el -x "make test"
+  └────
+
 
 Contributions
 ─────────────
@@ -631,19 +655,19 @@ Build tips
   │     rg = re.compile(r'\+(?:;;\s+)?Version:\s+(?P<major>[0-9]+)\.(?P<minor>[0-9]+)\.(?P<rev>[0-9]+)')
   │     m = rg.search(d)
   │     if m:
-  │ 	version_info = m.groupdict()
-  │ 	break
+  │         version_info = m.groupdict()
+  │         break
   │ 
   │ if version_info:
   │     tag = "v%s.%s.%s" % (version_info['major'], version_info['minor'], version_info['rev'])
   │     existing = subprocess.check_output(['git', 'tag']).decode("utf-8").split("\n")
   │     if tag in existing:
-  │ 	print("%s is already tagged, not updating" % tag)
+  │         print("%s is already tagged, not updating" % tag)
   │     else:
-  │ 	result = subprocess.run(['git', 'tag', '-f', tag])
-  │ 	if result.returncode:
-  │ 	    raise Exception('tagging not successful: %s %s' % (result.stdout, result.returncode))
-  │ 	print("tagged revision: %s" % tag)
+  │         result = subprocess.run(['git', 'tag', '-f', tag])
+  │         if result.returncode:
+  │             raise Exception('tagging not successful: %s %s' % (result.stdout, result.returncode))
+  │         print("tagged revision: %s" % tag)
   │ else:
   │     print("none found.")
   └────
