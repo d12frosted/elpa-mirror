@@ -31,7 +31,7 @@ Basic configuration example:
 
 Key features:
   - Transient-driven Hub (C-c a) for all AI capabilities.
-  - Consistent session management across different backends.
+  - One key switching to different AI backend (C-c a s).
   - Context-aware code actions (change code, implement TODOs, explain code).
   - Agile development workflows (TDD cycle, refactoring navigator, review helper).
   - Seamless prompt management using Org-mode.
