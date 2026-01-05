@@ -2490,10 +2490,10 @@
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
       (:commit . "731d92247aab0a51c208d0fe196db3dec0d1b2e9"))])
  (project
-  . [(0 11 1) ((emacs (26 1)) (xref (1 7 0)))
+  . [(0 11 2) ((emacs (26 1)) (xref (1 7 0)))
      "Operations on the current project" tar
      ((:url . "https://elpa.gnu.org/packages/project.html")
-      (:commit . "08e38818f6ff4e514ac291bc5a7686f4390759b0"))])
+      (:commit . "b8ff1c1fae9860f48a954bd97d68b5cf2c643285"))])
  (psgml
   . [(1 3 5) nil "SGML-editing mode with parsing support" tar
      ((:keywords "languages")

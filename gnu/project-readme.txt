@@ -46,8 +46,14 @@ files, but supports additions to the list using the user option
 customization group `project-vc' for other options that control its
 behavior.
 
-If the repository is using any other VCS than Git or Hg, the file
-listing uses the default mechanism based on `find-program'.
+The file listing uses the VC backend function `project-list-files'.
+If the current VC backend does not implement it, the default
+mechanism based on `find-program' is used as fallback.
+
+  project-list-files (dir extra-ignores)
+
+DIR is a directory inside the repository.
+EXTRA-IGNORES is a list of globs in the format of `project-ignores'.
 
 This project type can also be used for non-VCS controlled
 directories, see the variable `project-vc-extra-root-markers'.
