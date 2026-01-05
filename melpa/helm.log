@@ -1,9 +1,9 @@
  • Building package helm (from github:emacs-helm/helm)...
 Updating /mnt/store/melpa/working/helm/
-Checking out e82a25e9007ed8d13723613dc69114346879e04b
+Checking out cbbaff3c5a76b3ab91ba297844acce11980f55fd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helme306VX/helm-20260103.523
+  to /tmp/helmyAcMWJ/helm-20260104.1441
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
     helm-buffers.el -> helm-buffers.el
@@ -45,51 +45,53 @@ Copying files (->) and directories (=>)
     helm-x-icons.el -> helm-x-icons.el
     helm.el -> helm.el
     emacs-helm.sh -> emacs-helm.sh
-Created helm-20260103.523.tar containing:
-  helm-20260103.523/
-  helm-20260103.523/emacs-helm.sh
-  helm-20260103.523/helm-adaptive.el
-  helm-20260103.523/helm-bookmark.el
-  helm-20260103.523/helm-buffers.el
-  helm-20260103.523/helm-color.el
-  helm-20260103.523/helm-command.el
-  helm-20260103.523/helm-dabbrev.el
-  helm-20260103.523/helm-easymenu.el
-  helm-20260103.523/helm-elisp.el
-  helm-20260103.523/helm-epa.el
-  helm-20260103.523/helm-eshell.el
-  helm-20260103.523/helm-eval.el
-  helm-20260103.523/helm-external.el
-  helm-20260103.523/helm-fd.el
-  helm-20260103.523/helm-files.el
-  helm-20260103.523/helm-find.el
-  helm-20260103.523/helm-font.el
-  helm-20260103.523/helm-for-files.el
-  helm-20260103.523/helm-global-bindings.el
-  helm-20260103.523/helm-grep.el
-  helm-20260103.523/helm-help.el
-  helm-20260103.523/helm-id-utils.el
-  helm-20260103.523/helm-imenu.el
-  helm-20260103.523/helm-info.el
-  helm-20260103.523/helm-locate.el
-  helm-20260103.523/helm-man.el
-  helm-20260103.523/helm-misc.el
-  helm-20260103.523/helm-mode.el
-  helm-20260103.523/helm-net.el
-  helm-20260103.523/helm-occur.el
-  helm-20260103.523/helm-packages.el
-  helm-20260103.523/helm-pkg.el
-  helm-20260103.523/helm-regexp.el
-  helm-20260103.523/helm-ring.el
-  helm-20260103.523/helm-semantic.el
-  helm-20260103.523/helm-sys.el
-  helm-20260103.523/helm-tags.el
-  helm-20260103.523/helm-types.el
-  helm-20260103.523/helm-utils.el
-  helm-20260103.523/helm-x-files.el
-  helm-20260103.523/helm-x-icons.el
-  helm-20260103.523/helm.el
+Created helm-20260104.1441.tar containing:
+  helm-20260104.1441/
+  helm-20260104.1441/emacs-helm.sh
+  helm-20260104.1441/helm-adaptive.el
+  helm-20260104.1441/helm-bookmark.el
+  helm-20260104.1441/helm-buffers.el
+  helm-20260104.1441/helm-color.el
+  helm-20260104.1441/helm-command.el
+  helm-20260104.1441/helm-dabbrev.el
+  helm-20260104.1441/helm-easymenu.el
+  helm-20260104.1441/helm-elisp.el
+  helm-20260104.1441/helm-epa.el
+  helm-20260104.1441/helm-eshell.el
+  helm-20260104.1441/helm-eval.el
+  helm-20260104.1441/helm-external.el
+  helm-20260104.1441/helm-fd.el
+  helm-20260104.1441/helm-files.el
+  helm-20260104.1441/helm-find.el
+  helm-20260104.1441/helm-font.el
+  helm-20260104.1441/helm-for-files.el
+  helm-20260104.1441/helm-global-bindings.el
+  helm-20260104.1441/helm-grep.el
+  helm-20260104.1441/helm-help.el
+  helm-20260104.1441/helm-id-utils.el
+  helm-20260104.1441/helm-imenu.el
+  helm-20260104.1441/helm-info.el
+  helm-20260104.1441/helm-locate.el
+  helm-20260104.1441/helm-man.el
+  helm-20260104.1441/helm-misc.el
+  helm-20260104.1441/helm-mode.el
+  helm-20260104.1441/helm-net.el
+  helm-20260104.1441/helm-occur.el
+  helm-20260104.1441/helm-packages.el
+  helm-20260104.1441/helm-pkg.el
+  helm-20260104.1441/helm-regexp.el
+  helm-20260104.1441/helm-ring.el
+  helm-20260104.1441/helm-semantic.el
+  helm-20260104.1441/helm-sys.el
+  helm-20260104.1441/helm-tags.el
+  helm-20260104.1441/helm-types.el
+  helm-20260104.1441/helm-utils.el
+  helm-20260104.1441/helm-x-files.el
+  helm-20260104.1441/helm-x-icons.el
+  helm-20260104.1441/helm.el
  ✓ Success:
   2026-01-05T04:11:19+0000  helm-20260103.523.entry
   2026-01-05T04:11:18+0000  helm-20260103.523.tar
-Built helm in 5.092s, finished at 2026-01-05T04:11:20+0000
+  2026-01-05T06:52:02+0000  helm-20260104.1441.entry
+  2026-01-05T06:52:02+0000  helm-20260104.1441.tar
+Built helm in 5.504s, finished at 2026-01-05T06:52:03+0000
