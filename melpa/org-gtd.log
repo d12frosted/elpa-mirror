@@ -1,9 +1,9 @@
  • Building package org-gtd (from github:Trevoke/org-gtd.el)...
 Updating /mnt/store/melpa/working/org-gtd/
-Checking out a94e3f1f1b5466c00b05a65e6cd9519a164509ee
+Checking out 4fa142309eb583ee3e4d6aa008cb66e2ef9bea4d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-gtd/
-  to /tmp/org-gtdHAa5KJ/org-gtd-20260103.2207
+  to /tmp/org-gtdCLgFJC/org-gtd-20260105.128
     org-gtd-accessors.el -> org-gtd-accessors.el
     org-gtd-agenda-property.el -> org-gtd-agenda-property.el
     org-gtd-agenda-transient.el -> org-gtd-agenda-transient.el
@@ -62,67 +62,69 @@ Copying files (->) and directories (=>)
     org-gtd.el -> org-gtd.el
     dir -> dir
     org-gtd.info -> org-gtd.info
-Created org-gtd-20260103.2207.tar containing:
-  org-gtd-20260103.2207/
-  org-gtd-20260103.2207/dir
-  org-gtd-20260103.2207/org-gtd-accessors.el
-  org-gtd-20260103.2207/org-gtd-agenda-property.el
-  org-gtd-20260103.2207/org-gtd-agenda-transient.el
-  org-gtd-20260103.2207/org-gtd-agenda.el
-  org-gtd-20260103.2207/org-gtd-archive.el
-  org-gtd-20260103.2207/org-gtd-areas-of-focus.el
-  org-gtd-20260103.2207/org-gtd-backward-compatibility.el
-  org-gtd-20260103.2207/org-gtd-calendar.el
-  org-gtd-20260103.2207/org-gtd-capture.el
-  org-gtd-20260103.2207/org-gtd-clarify.el
-  org-gtd-20260103.2207/org-gtd-command-center.el
-  org-gtd-20260103.2207/org-gtd-configure.el
-  org-gtd-20260103.2207/org-gtd-context.el
-  org-gtd-20260103.2207/org-gtd-core.el
-  org-gtd-20260103.2207/org-gtd-dag-draw.el
-  org-gtd-20260103.2207/org-gtd-delegate.el
-  org-gtd-20260103.2207/org-gtd-dependencies.el
-  org-gtd-20260103.2207/org-gtd-engage.el
-  org-gtd-20260103.2207/org-gtd-files.el
-  org-gtd-20260103.2207/org-gtd-graph-data.el
-  org-gtd-20260103.2207/org-gtd-graph-debug.el
-  org-gtd-20260103.2207/org-gtd-graph-filter.el
-  org-gtd-20260103.2207/org-gtd-graph-mode.el
-  org-gtd-20260103.2207/org-gtd-graph-navigation.el
-  org-gtd-20260103.2207/org-gtd-graph-transient.el
-  org-gtd-20260103.2207/org-gtd-graph-ui.el
-  org-gtd-20260103.2207/org-gtd-graph-view.el
-  org-gtd-20260103.2207/org-gtd-habit.el
-  org-gtd-20260103.2207/org-gtd-horizons.el
-  org-gtd-20260103.2207/org-gtd-id.el
-  org-gtd-20260103.2207/org-gtd-knowledge.el
-  org-gtd-20260103.2207/org-gtd-mode.el
-  org-gtd-20260103.2207/org-gtd-organize-core.el
-  org-gtd-20260103.2207/org-gtd-organize.el
-  org-gtd-20260103.2207/org-gtd-pkg.el
-  org-gtd-20260103.2207/org-gtd-process.el
-  org-gtd-20260103.2207/org-gtd-project-operations.el
-  org-gtd-20260103.2207/org-gtd-projects.el
-  org-gtd-20260103.2207/org-gtd-quick-action.el
-  org-gtd-20260103.2207/org-gtd-reactivate.el
-  org-gtd-20260103.2207/org-gtd-refile.el
-  org-gtd-20260103.2207/org-gtd-reflect.el
-  org-gtd-20260103.2207/org-gtd-single-action.el
-  org-gtd-20260103.2207/org-gtd-skip.el
-  org-gtd-20260103.2207/org-gtd-someday-review.el
-  org-gtd-20260103.2207/org-gtd-someday.el
-  org-gtd-20260103.2207/org-gtd-svg-render.el
-  org-gtd-20260103.2207/org-gtd-task-management.el
-  org-gtd-20260103.2207/org-gtd-tickler.el
-  org-gtd-20260103.2207/org-gtd-trash.el
-  org-gtd-20260103.2207/org-gtd-types.el
-  org-gtd-20260103.2207/org-gtd-upgrades.el
-  org-gtd-20260103.2207/org-gtd-value-objects.el
-  org-gtd-20260103.2207/org-gtd-view-language.el
-  org-gtd-20260103.2207/org-gtd-wip.el
-  org-gtd-20260103.2207/org-gtd.el
-  org-gtd-20260103.2207/org-gtd.info
+Created org-gtd-20260105.128.tar containing:
+  org-gtd-20260105.128/
+  org-gtd-20260105.128/dir
+  org-gtd-20260105.128/org-gtd-accessors.el
+  org-gtd-20260105.128/org-gtd-agenda-property.el
+  org-gtd-20260105.128/org-gtd-agenda-transient.el
+  org-gtd-20260105.128/org-gtd-agenda.el
+  org-gtd-20260105.128/org-gtd-archive.el
+  org-gtd-20260105.128/org-gtd-areas-of-focus.el
+  org-gtd-20260105.128/org-gtd-backward-compatibility.el
+  org-gtd-20260105.128/org-gtd-calendar.el
+  org-gtd-20260105.128/org-gtd-capture.el
+  org-gtd-20260105.128/org-gtd-clarify.el
+  org-gtd-20260105.128/org-gtd-command-center.el
+  org-gtd-20260105.128/org-gtd-configure.el
+  org-gtd-20260105.128/org-gtd-context.el
+  org-gtd-20260105.128/org-gtd-core.el
+  org-gtd-20260105.128/org-gtd-dag-draw.el
+  org-gtd-20260105.128/org-gtd-delegate.el
+  org-gtd-20260105.128/org-gtd-dependencies.el
+  org-gtd-20260105.128/org-gtd-engage.el
+  org-gtd-20260105.128/org-gtd-files.el
+  org-gtd-20260105.128/org-gtd-graph-data.el
+  org-gtd-20260105.128/org-gtd-graph-debug.el
+  org-gtd-20260105.128/org-gtd-graph-filter.el
+  org-gtd-20260105.128/org-gtd-graph-mode.el
+  org-gtd-20260105.128/org-gtd-graph-navigation.el
+  org-gtd-20260105.128/org-gtd-graph-transient.el
+  org-gtd-20260105.128/org-gtd-graph-ui.el
+  org-gtd-20260105.128/org-gtd-graph-view.el
+  org-gtd-20260105.128/org-gtd-habit.el
+  org-gtd-20260105.128/org-gtd-horizons.el
+  org-gtd-20260105.128/org-gtd-id.el
+  org-gtd-20260105.128/org-gtd-knowledge.el
+  org-gtd-20260105.128/org-gtd-mode.el
+  org-gtd-20260105.128/org-gtd-organize-core.el
+  org-gtd-20260105.128/org-gtd-organize.el
+  org-gtd-20260105.128/org-gtd-pkg.el
+  org-gtd-20260105.128/org-gtd-process.el
+  org-gtd-20260105.128/org-gtd-project-operations.el
+  org-gtd-20260105.128/org-gtd-projects.el
+  org-gtd-20260105.128/org-gtd-quick-action.el
+  org-gtd-20260105.128/org-gtd-reactivate.el
+  org-gtd-20260105.128/org-gtd-refile.el
+  org-gtd-20260105.128/org-gtd-reflect.el
+  org-gtd-20260105.128/org-gtd-single-action.el
+  org-gtd-20260105.128/org-gtd-skip.el
+  org-gtd-20260105.128/org-gtd-someday-review.el
+  org-gtd-20260105.128/org-gtd-someday.el
+  org-gtd-20260105.128/org-gtd-svg-render.el
+  org-gtd-20260105.128/org-gtd-task-management.el
+  org-gtd-20260105.128/org-gtd-tickler.el
+  org-gtd-20260105.128/org-gtd-trash.el
+  org-gtd-20260105.128/org-gtd-types.el
+  org-gtd-20260105.128/org-gtd-upgrades.el
+  org-gtd-20260105.128/org-gtd-value-objects.el
+  org-gtd-20260105.128/org-gtd-view-language.el
+  org-gtd-20260105.128/org-gtd-wip.el
+  org-gtd-20260105.128/org-gtd.el
+  org-gtd-20260105.128/org-gtd.info
  ✓ Success:
   2026-01-04T23:18:39+0000  org-gtd-20260103.2207.entry
   2026-01-04T23:18:39+0000  org-gtd-20260103.2207.tar
-Built org-gtd in 6.099s, finished at 2026-01-04T23:18:40+0000
+  2026-01-05T01:56:25+0000  org-gtd-20260105.128.entry
+  2026-01-05T01:56:25+0000  org-gtd-20260105.128.tar
+Built org-gtd in 6.252s, finished at 2026-01-05T01:56:26+0000
