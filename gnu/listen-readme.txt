@@ -457,6 +457,32 @@ Tips
 6 Changelog
 ═══════════
 
+v0.10.1
+───────
+
+  *Fixes*
+  • Race condition in MPV support.  (Fixes [#40].  Thanks to [Semyon
+    Sinchenko] and [Sjmarf] for reporting.)
+
+  *Compatibility*
+  • Accept Vorbis comments up to 16 MB in size.  (See [#34].  Thanks to
+    [@Etenil] for reporting, and [Miguel Ángel Suárez Calles] for
+    testing.)
+
+
+[#40] <https://github.com/alphapapa/listen.el/issues/40>
+
+[Semyon Sinchenko] <https://github.com/SemyonSinchenko>
+
+[Sjmarf] <https://github.com/Sjmarf>
+
+[#34] <https://github.com/alphapapa/listen.el/pull/34>
+
+[@Etenil] <https://github.com/Etenil>
+
+[Miguel Ángel Suárez Calles] <https://github.com/MinallW>
+
+
 v0.10
 ─────
 

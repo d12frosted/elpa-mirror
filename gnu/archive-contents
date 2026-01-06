@@ -1790,7 +1790,7 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "647be281945185a20f37363fd335e99ad0540eff"))])
  (listen
-  . [(0 10)
+  . [(0 10 1)
      ((emacs (29 1)) (persist (0 6)) (taxy (0 10))
       (taxy-magit-section (0 13)) (transient (0 5 3)))
      "Audio/Music player" tar
@@ -1798,7 +1798,7 @@
       (:keywords "multimedia")
       (:maintainer "Adam Porter" . "adam@alphapapa.net")
       (:authors ("Adam Porter" . "adam@alphapapa.net"))
-      (:commit . "e0a243d3c6ba0a8a14d1d16168ac23441bd5e6c9"))])
+      (:commit . "2a867549dc1fe6aaee9140cfa1f913fa5a74a3bf"))])
  (literate-scratch
   . [(2 2) ((emacs (29 1))) "Lisp Interaction w/ text paragraphs" tar
      ((:url
