@@ -16,4 +16,20 @@ Via use-package:
 
 Or directly via the `turepo` function provided by the package.
 
+Configuration:
+
+turepo-debug-mode (default: nil)
+  When enabled, displays debug messages showing the execution flow,
+  including git repository location, config file path, matched URL
+  pattern, and the URL being opened.  When disabled (default), turepo
+  operates silently on success and only displays error messages.
+
+  Enable debug mode:
+  (setq turepo-debug-mode t)
+
+  Or via use-package:
+  (use-package turepo
+    :custom
+    (turepo-debug-mode t))
+
 Developed by Swarnim B (https://smarniw.com)
