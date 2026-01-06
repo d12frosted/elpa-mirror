@@ -1,4 +1,4 @@
-Notifications when commands complete in term.el.
+Notifications when commands complete in term.el and eat.
 
 Usage
 

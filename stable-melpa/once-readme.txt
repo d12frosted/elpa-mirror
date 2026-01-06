@@ -1,9 +1,14 @@
-This library provides two main functions:
+This library provides two groups of small functions:
 
-- `once-hook', substitute for `add-hook'
-- `once-load', substitute for `eval-after-load'
+- `once-hook', `once-hook*' and `once-hook!'
+- `once-load', `once-load*' and `once-load!'
 
-They are like `add-hook' and `eval-after-load' respectively,
+The main functions
+
+- `once-hook'
+- `once-load'
+
+are like `add-hook' and `eval-after-load' respectively,
 except that they only result in calling the provided function once: at the
 next time the hook is run or the file is loaded, respectively.
 
