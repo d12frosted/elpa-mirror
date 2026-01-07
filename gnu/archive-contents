@@ -1053,7 +1053,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 10 6)
+  . [(1 10 7)
      ((emacs (28 1)) (llm (0 24 0)) (plz (0 8)) (transient (0 7))
       (compat (29 1)))
      "Tool for interacting with LLMs" tar
@@ -1061,7 +1061,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "2d9b728cb13bcdef083a1df696ff88dbd5d3b823"))])
+      (:commit . "808f78ab0503a86d79ecc1cf7a40181f61656306"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
@@ -1808,14 +1808,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 28 4)
+  . [(0 28 5)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "90d79e166a3bc21dcc41d24f01e0971dcd30a0e3"))])
+      (:commit . "fd84a736a1e6f414be705e0c4b3c8c656e9827d6"))])
  (lmc
   . [(1 4) nil "Little Man Computer in Elisp" tar
      ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")

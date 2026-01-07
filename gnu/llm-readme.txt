@@ -665,14 +665,11 @@
   tools entirely*. The function `llm-capabilities' will return a list
   with `tool-use' in it if the LLM supports tool use.  Because not all
   providers support tool use when streaming, `streaming-tool-use'
-  indicates the ability to use tool uses in `llm-chat-streaming'. Right
-  now only Gemini, Vertex, Claude, and Open AI support tool use.
-  However, even for LLMs that handle tool use, there is sometimes a
-  difference in the capabilities. Right now, it is possible to write
-  tools that succeed in Open AI but cause errors in Gemini, because
-  Gemini does not appear to handle tools that have types that contain
-  other types.  So client programs are advised for right now to keep
-  function to simple types.
+  indicates the ability to use tool uses in
+  `llm-chat-streaming'. However, even for LLMs that handle tool use,
+  there is sometimes a difference in the capabilities, for example in
+  the ability to handle nested argument types.  So client programs are
+  advised for right now to keep function to simple types.
 
   The way to call tools is to attach a list of tools to the `tools' slot
   in the prompt. This is a list of `llm-tool' structs, which is a tool
@@ -727,22 +724,35 @@
   Tools will be called with vectors for array results, `nil' for false
   boolean results, and plists for objects.
 
+  When tools are called, the result have, in `multi-output' mode will
+  have output like the following:
+
+  ┌────
+  │ (:tool-uses ((:name "capital_of_country" :args (("country" . "France" ))))
+  │             :tool-results (("capital_of_country" . "Paris")))
+  └────
+
+  The tool uses here comes from the LLM, whereas the tool results are
+  the result of the elisp function that is executed as part of the tool
+  use.
+
+  Without `multi-output' the result will be just the tool results.
+
   Be aware that there is no gaurantee that the tool will be called
   correctly.  While the LLMs mostly get this right, they are trained on
   Javascript functions, so imitating Javascript names is
   recommended. So, "write_email" is a better name for a function than
   "write-email".
 
-  Examples can be found in `llm-tester'. There is also a function call
-  to generate function calls from existing elisp functions in
-  `utilities/elisp-to-tool.el'.
-
-  Tool use can be controlled by the `:tool-options' param in
-  `llm-make-chat-prompt' that takes a `llm-tool-options' struct.  This
-  can be set to force or forbid tool calling, or to force a specific
-  tool to be called.  This is useful when a converastion with tools
-  happens and the tools remain constant but how they are used may need
-  to change.  Ollama does not support currently support this.
+  Examples can be found in `llm-tester'. There is also a tool call to
+  generate tool calls from existing elisp functions in
+  `utilities/elisp-to-tool.el'. Tool use can be controlled by the
+  `:tool-options' param in `llm-make-chat-prompt' that takes a
+  `llm-tool-options' struct.  This can be set to force or forbid tool
+  calling, or to force a specific tool to be called.  This is useful
+  when a converastion with tools happens and the tools remain constant
+  but how they are used may need to change.  Ollama does not support
+  currently support this.
 
 
 [GTPel] <https://github.com/karthink/gptel>
