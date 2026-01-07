@@ -1,35 +1,179 @@
  • Building package daselt (from codeberg:nameiwillforget/d-emacs)...
 Updating /mnt/store/melpa/working/daselt/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-fatal: unable to access 'https://codeberg.org/nameiwillforget/d-emacs/': The requested URL returned error: 503
-
-Debugger entered--Lisp error: (error "Command `git remote set-head origin --auto' exited...")
-  error("%s" "Command `git remote set-head origin --auto' exited...")
-  (let ((err (apply #'format-message format-string args))) (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert (format "%s  %-25s  %s\n" (format-time-string "%FT%T%z" nil t) (if ... ... ...) err)) (if (eq (char-before) 10) nil (insert "\n")) (goto-char (point-min)) (append-to-file (point) (1+ (line-end-position)) (expand-file-name "errors.log" package-build-archive-dir))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))) (error "%s" err))
-  package-build--error(#<package-codeberg-recipe package-codeberg-recipe-15796a637f5a> "%s" "Command `git remote set-head origin --auto' exited...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-codeberg-recipe package-codeberg-recipe-15796a637f5a> "git" "remote" "set-head" "origin" "--auto")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-codeberg-recipe package-codeberg-recipe-15796a637f5a>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-codeberg-recipe package-codeberg-recipe-15796a637f5a> nil)
-  package-build--fetch(#<package-codeberg-recipe package-codeberg-recipe-15796a637f5a>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  package-build-archive("daselt")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"daselt\")"))
-  command-line()
-  normal-top-level()
-
+Checking out 5bdba90f2600fbe4c0ddf75d8b190fc9218a5476
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/daselt/
+  to /tmp/daseltkXKmds/daselt-20260105.2019
+    daselt-base.el -> daselt-base.el
+    daselt-bind.el -> daselt-bind.el
+    daselt-coords.el -> daselt-coords.el
+    daselt-dfk.el -> daselt-dfk.el
+    daselt-dirs.el -> daselt-dirs.el
+    daselt-mode.el -> daselt-mode.el
+    daselt-stump.el -> daselt-stump.el
+    daselt-tri.el -> daselt-tri.el
+    daselt-xkb.el -> daselt-xkb.el
+    daselt.el -> daselt.el
+    example-user-defined-bindlist.dbl -> example-user-defined-bindlist.dbl
+    stump-configs => stump-configs
+    tri-configs => tri-configs
+    mode-configs => mode-configs
+Created daselt-20260105.2019.tar containing:
+  daselt-20260105.2019/
+  daselt-20260105.2019/daselt-base.el
+  daselt-20260105.2019/daselt-bind.el
+  daselt-20260105.2019/daselt-coords.el
+  daselt-20260105.2019/daselt-dfk.el
+  daselt-20260105.2019/daselt-dirs.el
+  daselt-20260105.2019/daselt-mode.el
+  daselt-20260105.2019/daselt-pkg.el
+  daselt-20260105.2019/daselt-stump.el
+  daselt-20260105.2019/daselt-tri.el
+  daselt-20260105.2019/daselt-xkb.el
+  daselt-20260105.2019/daselt.el
+  daselt-20260105.2019/example-user-defined-bindlist.dbl
+  daselt-20260105.2019/mode-configs/
+  daselt-20260105.2019/mode-configs/abv/
+  daselt-20260105.2019/mode-configs/abv/daselt-abv.del
+  daselt-20260105.2019/mode-configs/abv/guide.org
+  daselt-20260105.2019/mode-configs/abv/prompts/
+  daselt-20260105.2019/mode-configs/abv/prompts/affixes.org
+  daselt-20260105.2019/mode-configs/abv/prompts/visualization.org
+  daselt-20260105.2019/mode-configs/auctex/
+  daselt-20260105.2019/mode-configs/auctex/auctex.dbl
+  daselt-20260105.2019/mode-configs/auctex/daselt-auctex.del
+  daselt-20260105.2019/mode-configs/avy/
+  daselt-20260105.2019/mode-configs/avy/avy-act/
+  daselt-20260105.2019/mode-configs/avy/avy-act/avy-act-special-recenter.dbl
+  daselt-20260105.2019/mode-configs/avy/avy-act/avy-act.dbl
+  daselt-20260105.2019/mode-configs/avy/avy-act/avy-act.dcl
+  daselt-20260105.2019/mode-configs/avy/avy.dcl
+  daselt-20260105.2019/mode-configs/back-button/
+  daselt-20260105.2019/mode-configs/back-button/.gitkeep
+  daselt-20260105.2019/mode-configs/bookmark/
+  daselt-20260105.2019/mode-configs/bookmark/bookmark.dbl
+  daselt-20260105.2019/mode-configs/calendar/
+  daselt-20260105.2019/mode-configs/calendar/calendar.dbl
+  daselt-20260105.2019/mode-configs/cdlatex/
+  daselt-20260105.2019/mode-configs/cdlatex/cdlatex-special-math-modify.dbl
+  daselt-20260105.2019/mode-configs/cdlatex/cdlatex-special-math-symbol.dbl
+  daselt-20260105.2019/mode-configs/cdlatex/cdlatex.dbl
+  daselt-20260105.2019/mode-configs/cdlatex/cdlatex.dcl
+  daselt-20260105.2019/mode-configs/cdlatex/daselt-cdlatex.del
+  daselt-20260105.2019/mode-configs/consult/
+  daselt-20260105.2019/mode-configs/consult/.gitkeep
+  daselt-20260105.2019/mode-configs/corfu/
+  daselt-20260105.2019/mode-configs/corfu/corfu.dbl
+  daselt-20260105.2019/mode-configs/corfu/corfu.dcl
+  daselt-20260105.2019/mode-configs/corfu/daselt-corfu.del
+  daselt-20260105.2019/mode-configs/daselt-mode/
+  daselt-20260105.2019/mode-configs/daselt-mode/daselt-ext.del
+  daselt-20260105.2019/mode-configs/daselt-mode/daselt-mode.dbl
+  daselt-20260105.2019/mode-configs/daselt-mode/daselt-mode.tut
+  daselt-20260105.2019/mode-configs/dired/
+  daselt-20260105.2019/mode-configs/dired/daselt-dired.del
+  daselt-20260105.2019/mode-configs/dired/dired.dbl
+  daselt-20260105.2019/mode-configs/doremi/
+  daselt-20260105.2019/mode-configs/doremi/daselt-doremi.del
+  daselt-20260105.2019/mode-configs/doremi/doremi-special-customs.dbl
+  daselt-20260105.2019/mode-configs/easy-kill/
+  daselt-20260105.2019/mode-configs/easy-kill/easy-kill.dbl
+  daselt-20260105.2019/mode-configs/easy-kill/easy-kill.dcl
+  daselt-20260105.2019/mode-configs/edebug/
+  daselt-20260105.2019/mode-configs/edebug/edebug.dbl
+  daselt-20260105.2019/mode-configs/ekg/
+  daselt-20260105.2019/mode-configs/ekg/ekg.dbl
+  daselt-20260105.2019/mode-configs/elgrep/
+  daselt-20260105.2019/mode-configs/elgrep/elgrep.dbl
+  daselt-20260105.2019/mode-configs/emacs/
+  daselt-20260105.2019/mode-configs/emacs/daselt-emacs.del
+  daselt-20260105.2019/mode-configs/emacs/emacs.daf
+  daselt-20260105.2019/mode-configs/emacs/emacs.dbl
+  daselt-20260105.2019/mode-configs/emacs/emacs.dcl
+  daselt-20260105.2019/mode-configs/emacs/special-answers.dbl
+  daselt-20260105.2019/mode-configs/emms/
+  daselt-20260105.2019/mode-configs/emms/daselt-emms.del
+  daselt-20260105.2019/mode-configs/emms/emms.dbl
+  daselt-20260105.2019/mode-configs/eshell/
+  daselt-20260105.2019/mode-configs/eshell/daselt-eshell.dbl
+  daselt-20260105.2019/mode-configs/eww/
+  daselt-20260105.2019/mode-configs/eww/daselt-eww.del
+  daselt-20260105.2019/mode-configs/eww/eww.dbl
+  daselt-20260105.2019/mode-configs/flycheck/
+  daselt-20260105.2019/mode-configs/flycheck/flycheck.dbl
+  daselt-20260105.2019/mode-configs/gnus/
+  daselt-20260105.2019/mode-configs/gnus/daselt-gnus.del
+  daselt-20260105.2019/mode-configs/gnus/gnus.dbl
+  daselt-20260105.2019/mode-configs/help/
+  daselt-20260105.2019/mode-configs/help/daselt-help.dbl
+  daselt-20260105.2019/mode-configs/ibuffer/
+  daselt-20260105.2019/mode-configs/ibuffer/ibuffer.dbl
+  daselt-20260105.2019/mode-configs/icicles/
+  daselt-20260105.2019/mode-configs/icicles/daselt-icicles.del
+  daselt-20260105.2019/mode-configs/icicles/icicles-special-customs.dbl
+  daselt-20260105.2019/mode-configs/icicles/icicles-special.dbl
+  daselt-20260105.2019/mode-configs/icicles/icicles.dbl
+  daselt-20260105.2019/mode-configs/image/
+  daselt-20260105.2019/mode-configs/image/image.dbl
+  daselt-20260105.2019/mode-configs/info/
+  daselt-20260105.2019/mode-configs/info/info.dbl
+  daselt-20260105.2019/mode-configs/magit/
+  daselt-20260105.2019/mode-configs/magit/magit.dbl
+  daselt-20260105.2019/mode-configs/mentor/
+  daselt-20260105.2019/mode-configs/mentor/daselt-mentor.del
+  daselt-20260105.2019/mode-configs/mentor/mentor.dbl
+  daselt-20260105.2019/mode-configs/org-agenda/
+  daselt-20260105.2019/mode-configs/org-agenda/org-agenda.dbl
+  daselt-20260105.2019/mode-configs/org-brain/
+  daselt-20260105.2019/mode-configs/org-brain/org-brain.dbl
+  daselt-20260105.2019/mode-configs/org-noter/
+  daselt-20260105.2019/mode-configs/org-noter/org-noter.dbl
+  daselt-20260105.2019/mode-configs/org-roam/
+  daselt-20260105.2019/mode-configs/org-roam/.gitkeep
+  daselt-20260105.2019/mode-configs/org/
+  daselt-20260105.2019/mode-configs/org/daselt-org.del
+  daselt-20260105.2019/mode-configs/org/org-speed-commands-special.dbl
+  daselt-20260105.2019/mode-configs/org/org.dbl
+  daselt-20260105.2019/mode-configs/org/org.dcl
+  daselt-20260105.2019/mode-configs/pdf-tools/
+  daselt-20260105.2019/mode-configs/pdf-tools/daselt-pdf-tools.del
+  daselt-20260105.2019/mode-configs/pdf-tools/pdf-tools.dbl
+  daselt-20260105.2019/mode-configs/pdf-tools/pdf-tools.dhl
+  daselt-20260105.2019/mode-configs/quick-keys.dbf
+  daselt-20260105.2019/mode-configs/shr/
+  daselt-20260105.2019/mode-configs/shr/shr.dbl
+  daselt-20260105.2019/mode-configs/smartparens/
+  daselt-20260105.2019/mode-configs/smartparens/.gitkeep
+  daselt-20260105.2019/mode-configs/tabgo/
+  daselt-20260105.2019/mode-configs/tabgo/tabgo.dal
+  daselt-20260105.2019/mode-configs/tabgo/tabgo.dcl
+  daselt-20260105.2019/mode-configs/tabulated-list/
+  daselt-20260105.2019/mode-configs/tabulated-list/tabulated-list.dbl
+  daselt-20260105.2019/mode-configs/transmission/
+  daselt-20260105.2019/mode-configs/transmission/transmission.dbl
+  daselt-20260105.2019/mode-configs/undo-tree/
+  daselt-20260105.2019/mode-configs/undo-tree/undo-tree.dbl
+  daselt-20260105.2019/mode-configs/vertico/
+  daselt-20260105.2019/mode-configs/vertico/vertico.dbl
+  daselt-20260105.2019/mode-configs/vertico/vertico.dcl
+  daselt-20260105.2019/mode-configs/vterm/
+  daselt-20260105.2019/mode-configs/vterm/vterm.dbl
+  daselt-20260105.2019/mode-configs/xref/
+  daselt-20260105.2019/mode-configs/xref/xref.dbl
+  daselt-20260105.2019/mode-configs/yasnippet/
+  daselt-20260105.2019/mode-configs/yasnippet/yasnippet.dbl
+  daselt-20260105.2019/stump-configs/
+  daselt-20260105.2019/stump-configs/binwarp/
+  daselt-20260105.2019/stump-configs/binwarp/binwarp-special.dbl
+  daselt-20260105.2019/stump-configs/iresize/
+  daselt-20260105.2019/stump-configs/iresize/iresize-special.dbl
+  daselt-20260105.2019/stump-configs/stumpwm/
+  daselt-20260105.2019/stump-configs/stumpwm/remapped-keys-special.dbl
+  daselt-20260105.2019/stump-configs/stumpwm/stumpwm-init.lisp
+  daselt-20260105.2019/stump-configs/stumpwm/stumpwm.dbl
+  daselt-20260105.2019/tri-configs/
+  daselt-20260105.2019/tri-configs/daselt-tri.dbl
+ ✓ Success:
+  2026-01-07T02:16:03+0000  daselt-20260105.2019.entry
+  2026-01-07T02:16:03+0000  daselt-20260105.2019.tar
+Built daselt in 5.399s, finished at 2026-01-07T02:16:04+0000
