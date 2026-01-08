@@ -6,7 +6,7 @@ multiple preconfigured tile servers.  You can bookmark your favorite
 locations using regular Emacs bookmarks or create links from Org files
 to locations.  Furthermore the package provides commands to measure
 distances, search for locations and routes by name and to open and
-display GPX tracks.
+display GPX or TCX tracks.
 
 osm.el requires Emacs 29 and depends on the external `curl' program.
 Emacs must be built with libxml, libjansson, librsvg, libjpeg, libpng
