@@ -1,26 +1,28 @@
  • Building package gptel-agent (from github:karthink/gptel-agent)...
 Updating /mnt/store/melpa/working/gptel-agent/
-Checking out 960bb5db030d21c2d2263028c382cb88393ce04b
+Checking out a7a800af7d38e4d941d00cbeaa9aa3b2eb05ab70
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel-agent/
-  to /tmp/gptel-agentk5Q2qW/gptel-agent-20260109.812
+  to /tmp/gptel-agentmYD1P8/gptel-agent-20260109.1758
     gptel-agent-tools-introspection.el -> gptel-agent-tools-introspection.el
     gptel-agent-tools.el -> gptel-agent-tools.el
     gptel-agent.el -> gptel-agent.el
     agents => agents
-Created gptel-agent-20260109.812.tar containing:
-  gptel-agent-20260109.812/
-  gptel-agent-20260109.812/agents/
-  gptel-agent-20260109.812/agents/executor.md
-  gptel-agent-20260109.812/agents/gptel-agent.md
-  gptel-agent-20260109.812/agents/gptel-plan.md
-  gptel-agent-20260109.812/agents/introspector.md
-  gptel-agent-20260109.812/agents/researcher.md
-  gptel-agent-20260109.812/gptel-agent-pkg.el
-  gptel-agent-20260109.812/gptel-agent-tools-introspection.el
-  gptel-agent-20260109.812/gptel-agent-tools.el
-  gptel-agent-20260109.812/gptel-agent.el
+Created gptel-agent-20260109.1758.tar containing:
+  gptel-agent-20260109.1758/
+  gptel-agent-20260109.1758/agents/
+  gptel-agent-20260109.1758/agents/executor.md
+  gptel-agent-20260109.1758/agents/gptel-agent.md
+  gptel-agent-20260109.1758/agents/gptel-plan.md
+  gptel-agent-20260109.1758/agents/introspector.md
+  gptel-agent-20260109.1758/agents/researcher.md
+  gptel-agent-20260109.1758/gptel-agent-pkg.el
+  gptel-agent-20260109.1758/gptel-agent-tools-introspection.el
+  gptel-agent-20260109.1758/gptel-agent-tools.el
+  gptel-agent-20260109.1758/gptel-agent.el
  ✓ Success:
+  2026-01-09T18:03:52+0000  gptel-agent-20260109.1758.entry
+  2026-01-09T18:03:52+0000  gptel-agent-20260109.1758.tar
   2026-01-09T15:37:59+0000  gptel-agent-20260109.812.entry
   2026-01-09T15:37:58+0000  gptel-agent-20260109.812.tar
-Built gptel-agent in 4.136s, finished at 2026-01-09T15:38:00+0000
+Built gptel-agent in 3.575s, finished at 2026-01-09T18:03:53+0000
