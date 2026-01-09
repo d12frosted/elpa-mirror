@@ -1,2 +1,33 @@
  • Building package eca (from github:editor-code-assistant/eca-emacs)...
 Updating /mnt/store/melpa/working/eca/
+Checking out 93e94e43fc7a1999a1f352b00acbc7eb3b0396e6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eca/
+  to /tmp/ecaNnSFbt/eca-20260108.1523
+    eca-api.el -> eca-api.el
+    eca-chat.el -> eca-chat.el
+    eca-completion.el -> eca-completion.el
+    eca-diff.el -> eca-diff.el
+    eca-editor.el -> eca-editor.el
+    eca-mcp.el -> eca-mcp.el
+    eca-process.el -> eca-process.el
+    eca-rewrite.el -> eca-rewrite.el
+    eca-util.el -> eca-util.el
+    eca.el -> eca.el
+Created eca-20260108.1523.tar containing:
+  eca-20260108.1523/
+  eca-20260108.1523/eca-api.el
+  eca-20260108.1523/eca-chat.el
+  eca-20260108.1523/eca-completion.el
+  eca-20260108.1523/eca-diff.el
+  eca-20260108.1523/eca-editor.el
+  eca-20260108.1523/eca-mcp.el
+  eca-20260108.1523/eca-pkg.el
+  eca-20260108.1523/eca-process.el
+  eca-20260108.1523/eca-rewrite.el
+  eca-20260108.1523/eca-util.el
+  eca-20260108.1523/eca.el
+ ✓ Success:
+  2026-01-08T22:36:38+0000  eca-20260108.1523.entry
+  2026-01-08T22:36:38+0000  eca-20260108.1523.tar
+Built eca in 4.301s, finished at 2026-01-08T22:36:39+0000
