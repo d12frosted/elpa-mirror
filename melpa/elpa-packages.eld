@@ -5930,7 +5930,7 @@
   (writefreely :url "https://github.com/dangom/writefreely.el")
   (writegood-mode :url "https://github.com/bnbeckwith/writegood-mode")
   (writeroom-mode :url "https://github.com/joostkremers/writeroom-mode")
-  (ws-butler :url "https://git.savannah.gnu.org/git/emacs/nongnu.git" :branch "elpa/ws-butler")
+  (ws-butler :url "https://https.git.savannah.gnu.org/git/elpa/nongnu.git" :branch "elpa/ws-butler")
   (wsd-mode :url "https://github.com/josteink/wsd-mode")
   (wttrin :url "https://github.com/cjennings/emacs-wttrin")
   (wucuo :url "https://github.com/redguardtoo/wucuo")
