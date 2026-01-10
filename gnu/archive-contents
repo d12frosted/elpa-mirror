@@ -2300,12 +2300,12 @@
       (:url . "https://elpa.gnu.org/packages/osc.html")
       (:commit . "6b6dbb4176f45f9ff3a783c816c4556ca2931a22"))])
  (osm
-  . [(2 0) ((emacs (29 1)) (compat (30))) "OpenStreetMap viewer" tar
+  . [(2 1) ((emacs (29 1)) (compat (30))) "OpenStreetMap viewer" tar
      ((:url . "https://github.com/minad/osm")
       (:keywords "network" "multimedia" "hypermedia" "mouse")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "6adc8f8afdb2a1170d91fc55ff242cd679d33787"))])
+      (:commit . "7880b450138b3d260480e3e527fb3178cc8e2bc9"))])
  (other-frame-window
   . [(1 0 6) ((emacs (24 4)))
      "Minor mode to enable global prefix keys for other frame/window buffer placement"
@@ -2388,13 +2388,13 @@
       (:authors ("Hugo Thunnissen" . "devel@hugot.nl"))
       (:commit . "ce64041a4be5da24514356a3d6e7f6b9fafdd51b"))])
  (phps-mode
-  . [(0 4 51) ((emacs (26)))
+  . [(0 4 52) ((emacs (26)))
      "Major mode for PHP with code intelligence" tar
      ((:url . "https://github.com/cjohansson/emacs-phps-mode")
       (:keywords "tools" "convenience")
       (:maintainer "Christian Johansson" . "christian@cvj.se")
       (:authors ("Christian Johansson" . "christian@cvj.se"))
-      (:commit . "ff5fbd617d8e67f14f8928fd21f4de56bead987a"))])
+      (:commit . "81029f85ea6563d92a6091c12935600e431e4ea5"))])
  (pinentry
   . [(0 1) nil "GnuPG Pinentry server implementation" tar
      ((:keywords "gnupg") (:maintainer "Daiki Ueno" . "ueno@gnu.org")

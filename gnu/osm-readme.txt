@@ -10,7 +10,8 @@ servers via the `curl' program.  The package comes with a list of
 multiple preconfigured tile servers. You can bookmark your favorite
 locations using regular Emacs bookmarks or create links from Org files
 to locations. Furthermore the package provides commands to search for
-locations, or plan routes by name and to open and display GPX tracks.
+locations, or plan routes by name and to open and display GPX or TCX
+tracks.
 
 Table of Contents
 ─────────────────
@@ -28,7 +29,7 @@ Table of Contents
 ══════════
 
   • Responsive, zoomable and movable map display
-  • Display of tracks and POIs from GPX file
+  • Display of tracks and POIs from GPX or TCX file
   • Parallel fetching of tiles with curl
   • Moving in large and small steps
   • Mouse support (dragging, clicking, menu)
@@ -167,7 +168,7 @@ Table of Contents
     URL.
   • `v': `osm-server' - Select server
   • `j': `osm-jump' - Jump to pin (bookmark or POI)
-  • `f': `osm-open' - Open GPX file in map viewer
+  • `f': `osm-open' - Open GPX or TCX file in map viewer
 
   Some additional key bindings are available in Osm buffers:
 
@@ -185,7 +186,7 @@ Table of Contents
     point)
   • `n': `osm-rename' - Rename selected pin
   • `c': `osm-center' - Center to currently selected pin
-  • `F', `R': `osm-hide' - Hide GPX file or route
+  • `F', `R': `osm-hide' - Hide GPX or TCX file or route
   • `l': `org-store-link' - Store Org link
   • `u': `osm-save-url' - Save geo url in the kill ring
   • `b': `osm-bookmark-set' - Set bookmark
