@@ -1,54 +1,34 @@
  • Building package gpt (from github:stuhlmueller/gpt.el)...
 Updating /mnt/store/melpa/working/gpt/
-Checking out f2686a12e6703b970f569ad33762166a396bf2a2
+Checking out fb5b7a833116377f9aae05e3ddefec64805d7546
+Warning: gpt :files spec is equivalent to the default
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gpt/
-  to /tmp/gptfQjZUL/gpt-20251214.540
+  to /tmp/gptJvlBbl/gpt-20260111.423
+    gpt-anthropic.el -> gpt-anthropic.el
     gpt-api.el -> gpt-api.el
+    gpt-backend.el -> gpt-backend.el
     gpt-core.el -> gpt-core.el
+    gpt-google.el -> gpt-google.el
+    gpt-http.el -> gpt-http.el
     gpt-mode.el -> gpt-mode.el
+    gpt-openai.el -> gpt-openai.el
     gpt-ui.el -> gpt-ui.el
     gpt.el -> gpt.el
-    gpt.py -> gpt.py
-    providers => providers
-  ! providers/__init__.py -> __init__.py
-  ! providers/anthropic_provider.py -> anthropic_provider.py
-  ! providers/common.py -> common.py
-  ! providers/google_provider.py -> google_provider.py
-  ! providers/openai_provider.py -> openai_provider.py
-  ! providers/test_anthropic_provider.py -> test_anthropic_provider.py
-  ! providers/test_common.py -> test_common.py
-  ! providers/test_google_provider.py -> test_google_provider.py
-  ! providers/test_openai_provider.py -> test_openai_provider.py
-Created gpt-20251214.540.tar containing:
-  gpt-20251214.540/
-  gpt-20251214.540/__init__.py
-  gpt-20251214.540/anthropic_provider.py
-  gpt-20251214.540/common.py
-  gpt-20251214.540/google_provider.py
-  gpt-20251214.540/gpt-api.el
-  gpt-20251214.540/gpt-core.el
-  gpt-20251214.540/gpt-mode.el
-  gpt-20251214.540/gpt-pkg.el
-  gpt-20251214.540/gpt-ui.el
-  gpt-20251214.540/gpt.el
-  gpt-20251214.540/gpt.py
-  gpt-20251214.540/openai_provider.py
-  gpt-20251214.540/providers/
-  gpt-20251214.540/providers/__init__.py
-  gpt-20251214.540/providers/anthropic_provider.py
-  gpt-20251214.540/providers/common.py
-  gpt-20251214.540/providers/google_provider.py
-  gpt-20251214.540/providers/openai_provider.py
-  gpt-20251214.540/providers/test_anthropic_provider.py
-  gpt-20251214.540/providers/test_common.py
-  gpt-20251214.540/providers/test_google_provider.py
-  gpt-20251214.540/providers/test_openai_provider.py
-  gpt-20251214.540/test_anthropic_provider.py
-  gpt-20251214.540/test_common.py
-  gpt-20251214.540/test_google_provider.py
-  gpt-20251214.540/test_openai_provider.py
+Created gpt-20260111.423.tar containing:
+  gpt-20260111.423/
+  gpt-20260111.423/gpt-anthropic.el
+  gpt-20260111.423/gpt-api.el
+  gpt-20260111.423/gpt-backend.el
+  gpt-20260111.423/gpt-core.el
+  gpt-20260111.423/gpt-google.el
+  gpt-20260111.423/gpt-http.el
+  gpt-20260111.423/gpt-mode.el
+  gpt-20260111.423/gpt-openai.el
+  gpt-20260111.423/gpt-pkg.el
+  gpt-20260111.423/gpt-ui.el
+  gpt-20260111.423/gpt.el
  ✓ Success:
-  2026-01-11T03:14:17+0000  gpt-20251214.540.entry
-  2026-01-11T03:14:17+0000  gpt-20251214.540.tar
-Built gpt in 3.296s, finished at 2026-01-11T03:14:18+0000
+  2026-01-11T07:51:46+0000  gpt-20260111.423.entry
+  2026-01-11T07:51:46+0000  gpt-20260111.423.tar
+Built gpt in 5.587s, finished at 2026-01-11T07:51:47+0000
