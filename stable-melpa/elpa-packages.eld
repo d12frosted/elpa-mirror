@@ -3525,6 +3525,7 @@
   (moc :url "https://github.com/positron-solutions/moc")
   (mocha :url "https://github.com/scottaj/mocha.el")
   (mocha-snippets :url "https://github.com/cowboyd/mocha-snippets.el")
+  (mock-fs :url "https://codeberg.org/trevoke/mock-fs.el")
   (mocker :url "https://github.com/sigma/mocker.el")
   (modaled :url "https://github.com/DCsunset/modaled")
   (modalka :url "https://github.com/mrkkrp/modalka")
