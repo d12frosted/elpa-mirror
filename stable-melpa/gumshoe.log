@@ -1,21 +1,41 @@
  • Building package gumshoe (from github:Overdr0ne/gumshoe)...
 Updating /mnt/store/melpa/working/gumshoe/
-Checking out f84bec6057506ec3f145cd3e06b320f1e40efcdf
+Checking out 2f4f54a584d4460b838ae8e366c07eb0f040d408
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gumshoe/
-  to /tmp/gumshoeS8tFsW/gumshoe-20240902.2137
+  to /tmp/gumshoevq5cAX/gumshoe-20260110.1840
+    consult-gumshoe.el -> consult-gumshoe.el
+    context-perspective.el -> context-perspective.el
+    context.el -> context.el
     elpa.el -> elpa.el
-    gumshoe-core.el -> gumshoe-core.el
+    etree.el -> etree.el
+    gumshoe-backtracker.el -> gumshoe-backtracker.el
+    gumshoe-completionist.el -> gumshoe-completionist.el
+    gumshoe-footprints.el -> gumshoe-footprints.el
+    gumshoe-lib.el -> gumshoe-lib.el
     gumshoe-persp.el -> gumshoe-persp.el
+    gumshoe-peruse.el -> gumshoe-peruse.el
+    gumshoe-ring.el -> gumshoe-ring.el
+    gumshoe-tree.el -> gumshoe-tree.el
     gumshoe.el -> gumshoe.el
-Created gumshoe-20240902.2137.tar containing:
-  gumshoe-20240902.2137/
-  gumshoe-20240902.2137/elpa.el
-  gumshoe-20240902.2137/gumshoe-core.el
-  gumshoe-20240902.2137/gumshoe-persp.el
-  gumshoe-20240902.2137/gumshoe-pkg.el
-  gumshoe-20240902.2137/gumshoe.el
+Created gumshoe-20260110.1840.tar containing:
+  gumshoe-20260110.1840/
+  gumshoe-20260110.1840/consult-gumshoe.el
+  gumshoe-20260110.1840/context-perspective.el
+  gumshoe-20260110.1840/context.el
+  gumshoe-20260110.1840/elpa.el
+  gumshoe-20260110.1840/etree.el
+  gumshoe-20260110.1840/gumshoe-backtracker.el
+  gumshoe-20260110.1840/gumshoe-completionist.el
+  gumshoe-20260110.1840/gumshoe-footprints.el
+  gumshoe-20260110.1840/gumshoe-lib.el
+  gumshoe-20260110.1840/gumshoe-persp.el
+  gumshoe-20260110.1840/gumshoe-peruse.el
+  gumshoe-20260110.1840/gumshoe-pkg.el
+  gumshoe-20260110.1840/gumshoe-ring.el
+  gumshoe-20260110.1840/gumshoe-tree.el
+  gumshoe-20260110.1840/gumshoe.el
  ✓ Success:
-  2026-01-10T17:46:04+0000  gumshoe-20240902.2137.entry
-  2026-01-10T17:46:04+0000  gumshoe-20240902.2137.tar
-Built gumshoe in 3.191s, finished at 2026-01-10T17:46:05+0000
+  2026-01-10T22:35:45+0000  gumshoe-20260110.1840.entry
+  2026-01-10T22:35:45+0000  gumshoe-20260110.1840.tar
+Built gumshoe in 3.114s, finished at 2026-01-10T22:35:46+0000
