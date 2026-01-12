@@ -995,7 +995,7 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "42d202b6a92841d075b0dd4008a2e94eb2f51764"))])
  (eglot
-  . [(1 20)
+  . [(1 21)
      ((emacs (26 3)) (eldoc (1 14 0)) (external-completion (0 1))
       (flymake (1 4 2)) (jsonrpc (1 0 26)) (project (0 11 2))
       (seq (2 23)) (xref (1 6 2)))
@@ -1004,7 +1004,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "25a6f28ad5f647519eabc99177769bd310250235"))])
+      (:commit . "12730179acddc224f0c43a2b8e8a028182d1e40f"))])
  (el-job
   . [(2 6 1) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
