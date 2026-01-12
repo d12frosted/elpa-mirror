@@ -13,10 +13,9 @@ Supported AI coding CLIs include:
   - Opencode
   - Grok CLI
 
-Dependency: claude-code.el (https://github.com/stevemolitor/claude-code.el) are
-used as infrastructure (eat / vterm integration) for OpenAI Codex,
-GitHub Copilot CLI, Opencode, and Grok CLI backends. So it is
-required to install claude-code.el when using those backends.
+Dependency: ai-code-backends-infra.el provides shared terminal infrastructure
+(eat / vterm integration, which need to be installed) for OpenAI
+Codex,  GitHub Copilot CLI, Opencode, and Grok CLI backends.
 
 Many features are ported from aider.el, making it a powerful alternative for
 developers who wish to switch between modern AI coding CLIs while keeping
