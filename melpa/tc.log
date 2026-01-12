@@ -1,9 +1,9 @@
  • Building package tc (from github:kanchoku/tc)...
 Updating /mnt/store/melpa/working/tc/
-Checking out 4b7ed91922f3af55c56a986f6776cad153762254
+Checking out 5d84e847cf34545a88dc2e1555dac3aef771b21f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tc/
-  to /tmp/tc9KwnUt/tc-20251202.751
+  to /tmp/tcKSevpB/tc-20260112.1340
     eelll.el -> eelll.el
     tc-bushu.el -> tc-bushu.el
     tc-complete.el -> tc-complete.el
@@ -11,6 +11,8 @@ Copying files (->) and directories (=>)
     tc-image.el -> tc-image.el
     tc-inst.el -> tc-inst.el
     tc-is22.el -> tc-is22.el
+    tc-iscommon.el -> tc-iscommon.el
+    tc-ishelper.el -> tc-ishelper.el
     tc-ja-alnum.el -> tc-ja-alnum.el
     tc-jiscode.el -> tc-jiscode.el
     tc-mazegaki.el -> tc-mazegaki.el
@@ -29,62 +31,66 @@ Copying files (->) and directories (=>)
     ttc-tbl.el -> ttc-tbl.el
     tutc-tbl.el -> tutc-tbl.el
     tcode => tcode
-Created tc-20251202.751.tar containing:
-  tc-20251202.751/
-  tc-20251202.751/eelll.el
-  tc-20251202.751/tc-bushu.el
-  tc-20251202.751/tc-complete.el
-  tc-20251202.751/tc-help.el
-  tc-20251202.751/tc-image.el
-  tc-20251202.751/tc-inst.el
-  tc-20251202.751/tc-is22.el
-  tc-20251202.751/tc-ja-alnum.el
-  tc-20251202.751/tc-jiscode.el
-  tc-20251202.751/tc-mazegaki.el
-  tc-20251202.751/tc-mkmzdic.el
-  tc-20251202.751/tc-pkg.el
-  tc-20251202.751/tc-pre.el
-  tc-20251202.751/tc-setup.el
-  tc-20251202.751/tc-stat.el
-  tc-20251202.751/tc-sysdep.el
-  tc-20251202.751/tc-tbl.el
-  tc-20251202.751/tc-util.el
-  tc-20251202.751/tc.el
-  tc-20251202.751/tcode/
-  tc-20251202.751/tcode/EELLLTXT
-  tc-20251202.751/tcode/EELLLTXT.tut
-  tc-20251202.751/tcode/Makefile.am
-  tc-20251202.751/tcode/Makefile.in
-  tc-20251202.751/tcode/README
-  tc-20251202.751/tcode/bushu.expand
-  tc-20251202.751/tcode/bushu.rev
-  tc-20251202.751/tcode/greece.maz
-  tc-20251202.751/tcode/itaiji.maz
-  tc-20251202.751/tcode/jukujiku.maz
-  tc-20251202.751/tcode/mazegaki.dic
-  tc-20251202.751/tcode/mk-mzdic
-  tc-20251202.751/tcode/mkcertain.pl
-  tc-20251202.751/tcode/pd_kihon.yom
-  tc-20251202.751/tcode/step1.pl
-  tc-20251202.751/tcode/step2.pl
-  tc-20251202.751/tcode/symbol.rev
-  tc-20251202.751/tcode/t1200.dat
-  tc-20251202.751/tcode/t1353.dat
-  tc-20251202.751/tcode/t225.dat
-  tc-20251202.751/tcode/t300.dat
-  tc-20251202.751/tcode/t400.dat
-  tc-20251202.751/tcode/t450.dat
-  tc-20251202.751/tcode/t575.dat
-  tc-20251202.751/tcode/t675.dat
-  tc-20251202.751/tcode/t900.dat
-  tc-20251202.751/tcode/tcode.u
-  tc-20251202.751/try-etbl.el
-  tc-20251202.751/try-tbl.el
-  tc-20251202.751/ttc-ltbl.el
-  tc-20251202.751/ttc-rtbl.el
-  tc-20251202.751/ttc-tbl.el
-  tc-20251202.751/tutc-tbl.el
+Created tc-20260112.1340.tar containing:
+  tc-20260112.1340/
+  tc-20260112.1340/eelll.el
+  tc-20260112.1340/tc-bushu.el
+  tc-20260112.1340/tc-complete.el
+  tc-20260112.1340/tc-help.el
+  tc-20260112.1340/tc-image.el
+  tc-20260112.1340/tc-inst.el
+  tc-20260112.1340/tc-is22.el
+  tc-20260112.1340/tc-iscommon.el
+  tc-20260112.1340/tc-ishelper.el
+  tc-20260112.1340/tc-ja-alnum.el
+  tc-20260112.1340/tc-jiscode.el
+  tc-20260112.1340/tc-mazegaki.el
+  tc-20260112.1340/tc-mkmzdic.el
+  tc-20260112.1340/tc-pkg.el
+  tc-20260112.1340/tc-pre.el
+  tc-20260112.1340/tc-setup.el
+  tc-20260112.1340/tc-stat.el
+  tc-20260112.1340/tc-sysdep.el
+  tc-20260112.1340/tc-tbl.el
+  tc-20260112.1340/tc-util.el
+  tc-20260112.1340/tc.el
+  tc-20260112.1340/tcode/
+  tc-20260112.1340/tcode/EELLLTXT
+  tc-20260112.1340/tcode/EELLLTXT.tut
+  tc-20260112.1340/tcode/Makefile.am
+  tc-20260112.1340/tcode/Makefile.in
+  tc-20260112.1340/tcode/README
+  tc-20260112.1340/tcode/bushu.expand
+  tc-20260112.1340/tcode/bushu.rev
+  tc-20260112.1340/tcode/greece.maz
+  tc-20260112.1340/tcode/itaiji.maz
+  tc-20260112.1340/tcode/jukujiku.maz
+  tc-20260112.1340/tcode/mazegaki.dic
+  tc-20260112.1340/tcode/mk-mzdic
+  tc-20260112.1340/tcode/mkcertain.pl
+  tc-20260112.1340/tcode/pd_kihon.yom
+  tc-20260112.1340/tcode/step1.pl
+  tc-20260112.1340/tcode/step2.pl
+  tc-20260112.1340/tcode/symbol.rev
+  tc-20260112.1340/tcode/t1200.dat
+  tc-20260112.1340/tcode/t1353.dat
+  tc-20260112.1340/tcode/t225.dat
+  tc-20260112.1340/tcode/t300.dat
+  tc-20260112.1340/tcode/t400.dat
+  tc-20260112.1340/tcode/t450.dat
+  tc-20260112.1340/tcode/t575.dat
+  tc-20260112.1340/tcode/t675.dat
+  tc-20260112.1340/tcode/t900.dat
+  tc-20260112.1340/tcode/tcode.u
+  tc-20260112.1340/try-etbl.el
+  tc-20260112.1340/try-tbl.el
+  tc-20260112.1340/ttc-ltbl.el
+  tc-20260112.1340/ttc-rtbl.el
+  tc-20260112.1340/ttc-tbl.el
+  tc-20260112.1340/tutc-tbl.el
  ✓ Success:
-  2026-01-12T10:16:37+0000  tc-20251202.751.entry
-  2026-01-12T10:16:37+0000  tc-20251202.751.tar
-Built tc in 4.610s, finished at 2026-01-12T10:16:38+0000
+  2026-01-12T12:39:15+0000  tc-20251202.751.entry
+  2026-01-12T12:39:15+0000  tc-20251202.751.tar
+  2026-01-12T15:03:21+0000  tc-20260112.1340.entry
+  2026-01-12T15:03:21+0000  tc-20260112.1340.tar
+Built tc in 5.009s, finished at 2026-01-12T15:03:22+0000
