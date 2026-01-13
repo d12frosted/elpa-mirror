@@ -3614,11 +3614,11 @@
       (:authors ("Philip Kaludercic" . "philipk@posteo.net"))
       (:commit . "2bb88d0dc526177c3c6612d6585cee6b2c57803a"))])
  (yaml
-  . [(1 2 2) ((emacs (25 1))) "YAML parser for Elisp" tar
+  . [(1 2 3) ((emacs (25 1))) "YAML parser for Elisp" tar
      ((:url . "https://github.com/zkry/yaml.el") (:keywords "tools")
       (:maintainer "Zachary Romero" . "zkry@posteo.org")
       (:authors ("Zachary Romero" . "zkry@posteo.org"))
-      (:commit . "7b33b3a1b69f46e22cd6ddf92ab0dfe9c0512187"))])
+      (:commit . "f2369fb4985ed054be47ae111760ff2075dff72a"))])
  (yasnippet
   . [(0 14 3) ((cl-lib (0 5)) (emacs (24 4)))
      "Yet another snippet extension for Emacs" tar
