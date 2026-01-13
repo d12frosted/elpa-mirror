@@ -159,12 +159,12 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "f317b0c9c3e60a959f45d035ed5e31a78f1263ac"))])
  (auctex
-  . [(14 1 0) ((emacs (28 1))) "Integrated environment for *TeX*" tar
+  . [(14 1 1) ((emacs (28 1))) "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "6e1b6922d7428b839ecfd3184fe50adfe2866a7a"))])
+      (:commit . "001686a66066774c8d3d3541c09ac735aef62455"))])
  (auctex-cont-latexmk
   . [(0 3) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -527,12 +527,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 1) ((emacs (29 1)) (compat (30))) "Consulting completing-read"
-     tar
+  . [(3 2) ((emacs (29 1)) (compat (30)))
+     "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "d0370320d9fdde5ac6e0a27720f51138315af882"))])
+      (:commit . "74e6cc77609cb36cd61aa2a23848659fbb66f05a"))])
  (consult-denote
   . [(0 4 2) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
@@ -2204,14 +2204,14 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "b7bc0ede67f3e2a477f4d6ad0c46a6d80bca5aea"))])
  (org-contacts
-  . [(1 1) ((emacs (27 1)) (org (9 3 4)))
-     "Contacts management system for Org Mode" tar
+  . [(1 2) ((emacs (29 1)) (org (9 7)))
+     "Contacts management system for Org mode" tar
      ((:url . "https://repo.or.cz/org-contacts.git")
       (:keywords "contacts" "org-mode" "outlines" "hypermedia"
 		 "calendar")
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:authors ("Julien Danjou" . "julien@danjou.info"))
-      (:commit . "217ba04c9d638067a6ccb0829cf1885f54c1d568"))])
+      (:commit . "33c1efd417974896f1991b4c94833bd5ef370e92"))])
  (org-edna
   . [(1 1 2) ((emacs (25 1)) (seq (2 19)) (org (9 0 5)))
      "Extensible Dependencies 'N' Actions" tar
@@ -3614,11 +3614,11 @@
       (:authors ("Philip Kaludercic" . "philipk@posteo.net"))
       (:commit . "2bb88d0dc526177c3c6612d6585cee6b2c57803a"))])
  (yaml
-  . [(1 2 1) ((emacs (25 1))) "YAML parser for Elisp" tar
+  . [(1 2 2) ((emacs (25 1))) "YAML parser for Elisp" tar
      ((:url . "https://github.com/zkry/yaml.el") (:keywords "tools")
       (:maintainer "Zachary Romero" . "zkry@posteo.org")
       (:authors ("Zachary Romero" . "zkry@posteo.org"))
-      (:commit . "3fbeaee97dce3c76a18b02a28c58777cbcdadf2f"))])
+      (:commit . "7b33b3a1b69f46e22cd6ddf92ab0dfe9c0512187"))])
  (yasnippet
   . [(0 14 3) ((cl-lib (0 5)) (emacs (24 4)))
      "Yet another snippet extension for Emacs" tar

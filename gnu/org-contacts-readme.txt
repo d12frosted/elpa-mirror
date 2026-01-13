@@ -1,18 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Intro
-2. Screenshots
-3. Installation
-4. Usage
-.. 1. Find contact in org-contacts databse
-.. 2. Complete contact property with some functions support
-..... 1. NAME
-..... 2. NICK
-..... 3. EMAIL
-..... 4. BIRTHDAY
-
-
 1 Intro
 ═══════
 
@@ -25,40 +10,36 @@ Table of Contents
   put birthdays in your Org Agenda, and more.
 
 
-2 Screenshots
+2 Features
+══════════
+
+  • Managing contacts information in Org mode.
+  • Recording contact info in Org mode.
+  • Searching with command `org-contacts'.
+  • Used as contacts database backend for email address completing in
+    mu4e etc.
+  • Export contacts to a vCard file.
+  • Put birthdays in your Org Agenda.
+
+
+3 Screenshots
 ═════════════
 
 
-3 Installation
+4 Installation
 ══════════════
 
-  Package will be submitted to NonGNU or MELPA. Wait me have time to do
-  this work.
+  Package has been submitted to NonGNU or MELPA. You can install it
+  through those package sources.
 
 
-4 Usage
+5 Usage
 ═══════
 
-4.1 Find contact in org-contacts databse
-────────────────────────────────────────
+5.1 Search contact in org-contacts databse
+──────────────────────────────────────────
 
-  Use command `[M-x org-contacts]' to search.
-
-
-4.2 Complete contact property with some functions support
-─────────────────────────────────────────────────────────
-
-4.2.1 NAME
-╌╌╌╌╌╌╌╌╌╌
-
-
-4.2.2 NICK
-╌╌╌╌╌╌╌╌╌╌
-
-
-4.2.3 EMAIL
-╌╌╌╌╌╌╌╌╌╌╌
-
-
-4.2.4 BIRTHDAY
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+  • Use command `[M-x org-contacts]' to search and select concate
+    through `completing-read'.
+  • Use command `[M-x org-contacts-agenda]' for old behavior Org Agenda
+    matching.
