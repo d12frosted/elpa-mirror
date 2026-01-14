@@ -17,16 +17,13 @@ Dependency: ai-code-backends-infra.el provides shared terminal infrastructure
 (eat / vterm integration, which need to be installed) for Gemini CLI, OpenAI
 Codex,  GitHub Copilot CLI, Opencode, and Grok CLI backends.
 
-Many features are ported from aider.el, making it a powerful alternative for
-developers who wish to switch between modern AI coding CLIs while keeping
-the same interface and agile tools.
-
 Basic configuration example:
 
 (use-package ai-code
   :straight (:host github :repo "tninja/ai-code-interface.el")
   :config
-  (ai-code-set-backend 'claude-code-ide) ;; set your preferred backend
+  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'grok, 'claude-code-ide, 'claude-code
+  (ai-code-set-backend 'codex) ;; set your preferred backend
   (global-set-key (kbd "C-c a") #'ai-code-menu)
   (global-auto-revert-mode 1))
 
@@ -37,3 +34,7 @@ Key features:
   - Agile development workflows (TDD cycle, refactoring navigator, review helper).
   - Seamless prompt management using Org-mode.
   - AI-assisted bash commands and productivity utilities.
+
+Many features are ported from aider.el, making it a powerful alternative for
+developers who wish to switch between modern AI coding CLIs while keeping
+the same interface and agile tools.
