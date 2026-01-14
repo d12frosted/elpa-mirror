@@ -1,9 +1,9 @@
  • Building package ekg (from github:ahyatt/ekg)...
 Updating /mnt/store/melpa/working/ekg/
-Checking out bfe19d61e63aa67b376ab702f538f73020bc7843
+Checking out 893f51cd93e0b2d8be6df83db0348d4a77b5204a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgE8SYU5/ekg-20260111.1625
+  to /tmp/ekg7tf17T/ekg-20260114.223
     ekg-agent.el -> ekg-agent.el
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-denote.el -> ekg-denote.el
@@ -17,22 +17,24 @@ Copying files (->) and directories (=>)
   ! doc/ekg.texi -> ekg.texi
 Generating doclicense.info
 Generating ekg.info
-Created ekg-20260111.1625.tar containing:
-  ekg-20260111.1625/
-  ekg-20260111.1625/dir
-  ekg-20260111.1625/doclicense.info
-  ekg-20260111.1625/ekg-agent.el
-  ekg-20260111.1625/ekg-auto-save.el
-  ekg-20260111.1625/ekg-denote.el
-  ekg-20260111.1625/ekg-embedding.el
-  ekg-20260111.1625/ekg-llm.el
-  ekg-20260111.1625/ekg-logseq.el
-  ekg-20260111.1625/ekg-org-roam.el
-  ekg-20260111.1625/ekg-pkg.el
-  ekg-20260111.1625/ekg-test-utils.el
-  ekg-20260111.1625/ekg.el
-  ekg-20260111.1625/ekg.info
+Created ekg-20260114.223.tar containing:
+  ekg-20260114.223/
+  ekg-20260114.223/dir
+  ekg-20260114.223/doclicense.info
+  ekg-20260114.223/ekg-agent.el
+  ekg-20260114.223/ekg-auto-save.el
+  ekg-20260114.223/ekg-denote.el
+  ekg-20260114.223/ekg-embedding.el
+  ekg-20260114.223/ekg-llm.el
+  ekg-20260114.223/ekg-logseq.el
+  ekg-20260114.223/ekg-org-roam.el
+  ekg-20260114.223/ekg-pkg.el
+  ekg-20260114.223/ekg-test-utils.el
+  ekg-20260114.223/ekg.el
+  ekg-20260114.223/ekg.info
  ✓ Success:
-  2026-01-13T23:41:59+0000  ekg-20260111.1625.entry
-  2026-01-13T23:41:59+0000  ekg-20260111.1625.tar
-Built ekg in 7.525s, finished at 2026-01-13T23:42:00+0000
+  2026-01-14T02:05:15+0000  ekg-20260111.1625.entry
+  2026-01-14T02:05:15+0000  ekg-20260111.1625.tar
+  2026-01-14T04:26:24+0000  ekg-20260114.223.entry
+  2026-01-14T04:26:24+0000  ekg-20260114.223.tar
+Built ekg in 7.156s, finished at 2026-01-14T04:26:25+0000
