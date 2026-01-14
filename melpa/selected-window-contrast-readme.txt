@@ -30,3 +30,19 @@ How this works:
  5) apply color
 
 Customize: M-x customize-group RET selected-window-contrast
+
+Donate:
+- BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25
+- USDT (Tether) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
+- TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
+
+Other packages:
+- Modern navigation in major modes https://github.com/Anoncheg1/firstly-search
+- Search with Chinese	https://github.com/Anoncheg1/pinyin-isearch
+- Ediff no 3-th window	https://github.com/Anoncheg1/ediffnw
+- Dired history		https://github.com/Anoncheg1/dired-hist
+- Copy link to clipboard	https://github.com/Anoncheg1/emacs-org-links
+- Solution for "callback hell"	https://github.com/Anoncheg1/emacs-async1
+- Restore buffer state	https://github.com/Anoncheg1/emacs-unmodified-buffer1
+- outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
+- Call LLMs & AIfrom Org-mode block.  https://github.com/Anoncheg1/emacs-oai
