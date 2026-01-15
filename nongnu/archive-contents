@@ -456,6 +456,13 @@
       (:maintainer "Harry R. Schwartz" . "hello@harryrschwartz.com")
       (:authors ("Harry R. Schwartz" . "hello@harryrschwartz.com"))
       (:commit . "67b68c1a2bff48bad2cc4722598da0f36e3866a9"))])
+ (esxml
+  . [(0 3 8) ((emacs (24 1)) (cl-lib (0 5)))
+     "Library for working with xml via esxml and sxml" tar
+     ((:url . "https://github.com/tali713/esxml")
+      (:keywords "tools" "lisp" "comm")
+      (:authors ("Vanya Izaksonas-Smith" . "izak0002atumndotedu"))
+      (:commit . "affada143fed7e2da08f2b3d927a027f26ad4a8f"))])
  (evil
   . [(1 15 0) nil "extensible vi layer" tar
      ((:url . "https://github.com/emacs-evil/evil")
@@ -1265,6 +1272,14 @@
       (:keywords "nix" "languages" "tools" "unix")
       (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
       (:commit . "54e5626829168e22126b233e079f04dff3c71b90"))])
+ (nov
+  . [(0 5 0) ((esxml (0 3 6)) (emacs (25 1)))
+     "Featureful EPUB reader mode" tar
+     ((:url . "https://depp.brause.cc/nov.el")
+      (:keywords "hypermedia" "multimedia" "epub")
+      (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
+      (:authors ("Vasilij Schneidermann" . "mail@vasilij.de"))
+      (:commit . "b37d9380752e541db3f4b947c219ca54d50ca273"))])
  (oblivion-theme
   . [(0 1) ((emacs (24 1))) "A port of GEdit oblivion theme" tar
      ((:url . "https://gitlab.com/ideasman42/emacs-oblivion-theme")
