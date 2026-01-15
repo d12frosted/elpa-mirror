@@ -1,9 +1,9 @@
  • Building package notmuch (from https://git.notmuchmail.org/git/notmuch)...
 Updating /mnt/store/melpa/working/notmuch/
-Checking out 0469bcd1baf94548a4157effced6fee3a2f23cc6
+Checking out 97a2bad36a35399681f6c5f5a2b4390e6429d5ae
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/notmuch/
-  to /tmp/notmuchn7aFjl/notmuch-20260113.2252
+  to /tmp/notmuchjGVdNM/notmuch-20260114.2256
   ! emacs/autoloads-gen.el -> autoloads-gen.el
   ! emacs/coolj.el -> coolj.el
   ! emacs/make-deps.el -> make-deps.el
@@ -28,34 +28,36 @@ Copying files (->) and directories (=>)
   ! emacs/notmuch.el -> notmuch.el
   ! emacs/rstdoc.el -> rstdoc.el
   ! emacs/notmuch-logo.svg -> notmuch-logo.svg
-Created notmuch-20260113.2252.tar containing:
-  notmuch-20260113.2252/
-  notmuch-20260113.2252/autoloads-gen.el
-  notmuch-20260113.2252/coolj.el
-  notmuch-20260113.2252/make-deps.el
-  notmuch-20260113.2252/notmuch-address.el
-  notmuch-20260113.2252/notmuch-company.el
-  notmuch-20260113.2252/notmuch-compat.el
-  notmuch-20260113.2252/notmuch-crypto.el
-  notmuch-20260113.2252/notmuch-draft.el
-  notmuch-20260113.2252/notmuch-hello.el
-  notmuch-20260113.2252/notmuch-jump.el
-  notmuch-20260113.2252/notmuch-lib.el
-  notmuch-20260113.2252/notmuch-logo.svg
-  notmuch-20260113.2252/notmuch-maildir-fcc.el
-  notmuch-20260113.2252/notmuch-message.el
-  notmuch-20260113.2252/notmuch-mua.el
-  notmuch-20260113.2252/notmuch-parser.el
-  notmuch-20260113.2252/notmuch-pkg.el
-  notmuch-20260113.2252/notmuch-print.el
-  notmuch-20260113.2252/notmuch-query.el
-  notmuch-20260113.2252/notmuch-show.el
-  notmuch-20260113.2252/notmuch-tag.el
-  notmuch-20260113.2252/notmuch-tree.el
-  notmuch-20260113.2252/notmuch-wash.el
-  notmuch-20260113.2252/notmuch.el
-  notmuch-20260113.2252/rstdoc.el
+Created notmuch-20260114.2256.tar containing:
+  notmuch-20260114.2256/
+  notmuch-20260114.2256/autoloads-gen.el
+  notmuch-20260114.2256/coolj.el
+  notmuch-20260114.2256/make-deps.el
+  notmuch-20260114.2256/notmuch-address.el
+  notmuch-20260114.2256/notmuch-company.el
+  notmuch-20260114.2256/notmuch-compat.el
+  notmuch-20260114.2256/notmuch-crypto.el
+  notmuch-20260114.2256/notmuch-draft.el
+  notmuch-20260114.2256/notmuch-hello.el
+  notmuch-20260114.2256/notmuch-jump.el
+  notmuch-20260114.2256/notmuch-lib.el
+  notmuch-20260114.2256/notmuch-logo.svg
+  notmuch-20260114.2256/notmuch-maildir-fcc.el
+  notmuch-20260114.2256/notmuch-message.el
+  notmuch-20260114.2256/notmuch-mua.el
+  notmuch-20260114.2256/notmuch-parser.el
+  notmuch-20260114.2256/notmuch-pkg.el
+  notmuch-20260114.2256/notmuch-print.el
+  notmuch-20260114.2256/notmuch-query.el
+  notmuch-20260114.2256/notmuch-show.el
+  notmuch-20260114.2256/notmuch-tag.el
+  notmuch-20260114.2256/notmuch-tree.el
+  notmuch-20260114.2256/notmuch-wash.el
+  notmuch-20260114.2256/notmuch.el
+  notmuch-20260114.2256/rstdoc.el
  ✓ Success:
-  2026-01-14T19:32:55+0000  notmuch-20260113.2252.entry
-  2026-01-14T19:32:55+0000  notmuch-20260113.2252.tar
-Built notmuch in 4.797s, finished at 2026-01-14T19:32:56+0000
+  2026-01-14T21:53:17+0000  notmuch-20260113.2252.entry
+  2026-01-14T21:53:17+0000  notmuch-20260113.2252.tar
+  2026-01-15T00:11:46+0000  notmuch-20260114.2256.entry
+  2026-01-15T00:11:46+0000  notmuch-20260114.2256.tar
+Built notmuch in 5.167s, finished at 2026-01-15T00:11:47+0000

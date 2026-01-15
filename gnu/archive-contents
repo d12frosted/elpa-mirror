@@ -159,12 +159,12 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "f317b0c9c3e60a959f45d035ed5e31a78f1263ac"))])
  (auctex
-  . [(14 1 1) ((emacs (28 1))) "Integrated environment for *TeX*" tar
+  . [(14 1 2) ((emacs (28 1))) "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "001686a66066774c8d3d3541c09ac735aef62455"))])
+      (:commit . "5850499d0182b4ca53c078e74711a13995651337"))])
  (auctex-cont-latexmk
   . [(0 3) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
