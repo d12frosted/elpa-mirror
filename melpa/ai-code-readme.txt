@@ -12,17 +12,14 @@ Supported AI coding CLIs include:
   - GitHub Copilot CLI
   - Opencode
   - Grok CLI
-
-Dependency: ai-code-backends-infra.el provides shared terminal infrastructure
-(eat / vterm integration, which need to be installed) for Gemini CLI, OpenAI
-Codex,  GitHub Copilot CLI, Opencode, and Grok CLI backends.
+  - Cursor CLI
 
 Basic configuration example:
 
 (use-package ai-code
   :straight (:host github :repo "tninja/ai-code-interface.el")
   :config
-  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'grok, 'claude-code-ide, 'claude-code
+  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'grok, 'claude-code-ide, 'claude-code, 'cursor
   (ai-code-set-backend 'codex) ;; set your preferred backend
   (global-set-key (kbd "C-c a") #'ai-code-menu)
   (global-auto-revert-mode 1))
