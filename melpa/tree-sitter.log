@@ -1,9 +1,9 @@
  • Building package tree-sitter (from github:emacs-tree-sitter/elisp-tree-sitter)...
 Updating /mnt/store/melpa/working/tree-sitter/
-Checking out d12aff8ee91dcd643da0a65a3bcee7be9a3cac68
+Checking out 8f0bd387ad7a1cf7e8fdd5977d386a17ea70a82d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tree-sitter/
-  to /tmp/tree-sitteroeDOTK/tree-sitter-20251222.1802
+  to /tmp/tree-sitter8hEVgC/tree-sitter-20260116.9
   ! lisp/tree-sitter-cli.el -> tree-sitter-cli.el
   ! lisp/tree-sitter-debug.el -> tree-sitter-debug.el
   ! lisp/tree-sitter-extras.el -> tree-sitter-extras.el
@@ -11,17 +11,19 @@ Copying files (->) and directories (=>)
   ! lisp/tree-sitter-load.el -> tree-sitter-load.el
   ! lisp/tree-sitter-query.el -> tree-sitter-query.el
   ! lisp/tree-sitter.el -> tree-sitter.el
-Created tree-sitter-20251222.1802.tar containing:
-  tree-sitter-20251222.1802/
-  tree-sitter-20251222.1802/tree-sitter-cli.el
-  tree-sitter-20251222.1802/tree-sitter-debug.el
-  tree-sitter-20251222.1802/tree-sitter-extras.el
-  tree-sitter-20251222.1802/tree-sitter-hl.el
-  tree-sitter-20251222.1802/tree-sitter-load.el
-  tree-sitter-20251222.1802/tree-sitter-pkg.el
-  tree-sitter-20251222.1802/tree-sitter-query.el
-  tree-sitter-20251222.1802/tree-sitter.el
+Created tree-sitter-20260116.9.tar containing:
+  tree-sitter-20260116.9/
+  tree-sitter-20260116.9/tree-sitter-cli.el
+  tree-sitter-20260116.9/tree-sitter-debug.el
+  tree-sitter-20260116.9/tree-sitter-extras.el
+  tree-sitter-20260116.9/tree-sitter-hl.el
+  tree-sitter-20260116.9/tree-sitter-load.el
+  tree-sitter-20260116.9/tree-sitter-pkg.el
+  tree-sitter-20260116.9/tree-sitter-query.el
+  tree-sitter-20260116.9/tree-sitter.el
  ✓ Success:
   2026-01-15T23:59:22+0000  tree-sitter-20251222.1802.entry
   2026-01-15T23:59:22+0000  tree-sitter-20251222.1802.tar
-Built tree-sitter in 3.658s, finished at 2026-01-15T23:59:23+0000
+  2026-01-16T02:17:17+0000  tree-sitter-20260116.9.entry
+  2026-01-16T02:17:17+0000  tree-sitter-20260116.9.tar
+Built tree-sitter in 3.565s, finished at 2026-01-16T02:17:18+0000

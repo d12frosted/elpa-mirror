@@ -1,34 +1,36 @@
  • Building package tsc (from github:emacs-tree-sitter/elisp-tree-sitter)...
 Updating /mnt/store/melpa/working/tsc/
-Checking out d12aff8ee91dcd643da0a65a3bcee7be9a3cac68
+Checking out 8f0bd387ad7a1cf7e8fdd5977d386a17ea70a82d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tsc/
-  to /tmp/tscaNEje7/tsc-20251222.1802
+  to /tmp/tscX9SaYC/tsc-20260116.9
   ! core/tsc-dyn-get.el -> tsc-dyn-get.el
   ! core/tsc-obsolete.el -> tsc-obsolete.el
   ! core/tsc.el -> tsc.el
   ! core/Cargo.toml -> Cargo.toml
   ! core/Cargo.lock -> Cargo.lock
   ! core/src => src
-Created tsc-20251222.1802.tar containing:
-  tsc-20251222.1802/
-  tsc-20251222.1802/Cargo.lock
-  tsc-20251222.1802/Cargo.toml
-  tsc-20251222.1802/src/
-  tsc-20251222.1802/src/cursor.rs
-  tsc-20251222.1802/src/error.rs
-  tsc-20251222.1802/src/lang.rs
-  tsc-20251222.1802/src/lib.rs
-  tsc-20251222.1802/src/node.rs
-  tsc-20251222.1802/src/parser.rs
-  tsc-20251222.1802/src/query.rs
-  tsc-20251222.1802/src/tree.rs
-  tsc-20251222.1802/src/types.rs
-  tsc-20251222.1802/tsc-dyn-get.el
-  tsc-20251222.1802/tsc-obsolete.el
-  tsc-20251222.1802/tsc-pkg.el
-  tsc-20251222.1802/tsc.el
+Created tsc-20260116.9.tar containing:
+  tsc-20260116.9/
+  tsc-20260116.9/Cargo.lock
+  tsc-20260116.9/Cargo.toml
+  tsc-20260116.9/src/
+  tsc-20260116.9/src/cursor.rs
+  tsc-20260116.9/src/error.rs
+  tsc-20260116.9/src/lang.rs
+  tsc-20260116.9/src/lib.rs
+  tsc-20260116.9/src/node.rs
+  tsc-20260116.9/src/parser.rs
+  tsc-20260116.9/src/query.rs
+  tsc-20260116.9/src/tree.rs
+  tsc-20260116.9/src/types.rs
+  tsc-20260116.9/tsc-dyn-get.el
+  tsc-20260116.9/tsc-obsolete.el
+  tsc-20260116.9/tsc-pkg.el
+  tsc-20260116.9/tsc.el
  ✓ Success:
   2026-01-15T23:59:44+0000  tsc-20251222.1802.entry
   2026-01-15T23:59:44+0000  tsc-20251222.1802.tar
-Built tsc in 3.772s, finished at 2026-01-15T23:59:45+0000
+  2026-01-16T02:17:39+0000  tsc-20260116.9.entry
+  2026-01-16T02:17:39+0000  tsc-20260116.9.tar
+Built tsc in 3.911s, finished at 2026-01-16T02:17:40+0000
