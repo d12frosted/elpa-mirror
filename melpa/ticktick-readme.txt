@@ -6,11 +6,13 @@ FEATURES:
 
 - Bidirectional sync: changes in either TickTick or Org Mode are reflected
   in both systems
+- Task deletion synchronization: deletions on one side propagate to the other
+- Configurable deletion behavior: ask, archive, or auto-delete
 - OAuth2 authentication with automatic token refresh
 - Preserves task metadata: priorities, due dates, completion status,
   descriptions, and tags
 - Project-based organization matching TickTick's structure
-- Optional automatic syncing on focus changes
+- Optional automatic syncing on focus changes and timer-based intervals
 - Tag synchronization using Org mode's native tag syntax
 
 SETUP:
@@ -31,12 +33,16 @@ SETUP:
 USAGE:
 
 Main commands:
-- `ticktick-sync': Full bidirectional sync
+- `ticktick-sync': Full bidirectional sync (includes deletion sync)
 - `ticktick-fetch-to-org': Pull tasks from TickTick to Org
 - `ticktick-push-from-org': Push Org tasks to TickTick
 - `ticktick-authorize': Set up OAuth authentication
 - `ticktick-refresh-token': Manually refresh auth token
 - `ticktick-toggle-sync-timer': Toggle automatic timer-based syncing
+- `ticktick-delete-task-at-point': Delete task at cursor from both sides
+- `ticktick-show-sync-state': View current synchronization state
+- `ticktick-retry-failed-deletions': Retry any failed deletion operations
+- `ticktick-clear-sync-state': Reset sync state (use if corrupted)
 
 Tasks are stored in the file specified by `ticktick-sync-file'
 (defaults to ~/.emacs.d/ticktick/ticktick.org) with this structure:
@@ -63,6 +69,11 @@ Key variables you can customize:
 - `ticktick-autosync': Enable automatic syncing on focus changes
 - `ticktick-sync-interval': Enable automatic syncing every N minutes
 - `ticktick-httpd-port': Port for OAuth callback server
+- `ticktick-delete-behavior': How to handle deletions (ask/archive/delete/sync-only)
+- `ticktick-archive-location': Where to archive deleted tasks (separate-file/archive-heading)
+- `ticktick-archive-file': Path to archive file for deleted tasks
+- `ticktick-confirm-deletions': Whether to prompt for deletion confirmation
+- `ticktick-deletion-conflict-policy': How to resolve modify-delete conflicts
 
 For debugging OAuth issues:
 M-x ticktick-debug-oauth
