@@ -473,9 +473,8 @@ Table of Contents
   │  consult-bookmark consult-recent-file consult-xref
   │  consult-source-bookmark consult-source-file-register
   │  consult-source-recent-file consult-source-project-recent-file
-  │  ;; my/command-wrapping-consult    ;; disable auto previews inside my command
-  │  :preview-key '(:debounce 0.4 any) ;; Option 1: Delay preview
-  │  ;; :preview-key "M-.")            ;; Option 2: Manual preview
+  │  :preview-key '(:debounce 0.4 any)) ;; Option 1: Delay preview
+  │  ;; :preview-key "M-."              ;; Option 2: Manual preview
   └────
 
   In this case one may wonder what the difference is between using an
@@ -612,18 +611,23 @@ Table of Contents
   You can pass options to the underlying command. The following examples
   apply to ripgrep:
 
-  • `#word -- --invert-match' or `#word -- -v': Invert matching.
-  • `#word -- --context=2' or `#word -- -C2': Include two lines of
+  • `#foo bar --invert-match' or `#foo bar -v': Invert matching.
+  • `#foo bar --context=2' or `#foo bar -C2': Include two lines of
     context.
-  • `#word -- --hidden' or `#word -- -.': Search hidden files.
-  • `#word -- --glob=*.org' or `#word -- -g *.org': Search files
+  • `#foo bar --hidden' or `#foo bar -.': Search hidden files.
+  • `#foo bar --glob=*.org' or `#foo bar -g *.org': Search files
     matching the glob pattern.
-  • `#word -- --type=elisp' or `#word -- -t elisp': Search only Elisp
+  • `#foo bar --type=elisp' or `#foo bar -t elisp': Search only Elisp
     files.
-  • `#.* -- -F': Treat input as fixed string, and not as regular
+  • `#.* -F': Treat input as fixed string, and not as regular
     expression.
-  • `#word -- -s': Treat input as case sensitive (`-s'), sensitive
+  • `#foo bar -s': Treat input as case sensitive (`-s'), sensitive
     (`-i'), or smart case (`-S').
+
+  Input can come after the options and the dash can be escaped:
+
+  • `#\-foo bar': Search for `-foo' and `bar' with escaped dash.
+  • `#-v -- foo bar': Inverted search, words come after options.
 
   The asynchronous processes create an error log buffer
   `_*consult-async*' (note the leading space), which you can inspect for
@@ -1124,7 +1128,7 @@ Table of Contents
   │  ;; Sort candidates by history position
   │  completions-sort 'historical
   │  ;; Allow navigating from the minibuffer
-  │  minibuffer-visible-completions t
+  │  minibuffer-visible-completions 'up-down
   │  ;; Show completions eagerly and update automatically
   │  completion-eager-update t
   │  completion-eager-display t

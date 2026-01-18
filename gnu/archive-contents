@@ -527,12 +527,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 2) ((emacs (29 1)) (compat (30)))
+  . [(3 3) ((emacs (29 1)) (compat (30)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "74e6cc77609cb36cd61aa2a23848659fbb66f05a"))])
+      (:commit . "312f2db1a23ef5428ab9553679147d5ff3a4e57d"))])
  (consult-denote
   . [(0 4 2) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
@@ -566,13 +566,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "1b30a28857727202d1f6a027f83ad66151fb1e92"))])
  (corfu
-  . [(2 7) ((emacs (29 1)) (compat (30)))
+  . [(2 8) ((emacs (29 1)) (compat (30)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "125dd17e0c2a9028aa5649d8bf92bdbc8e334a0b"))])
+      (:commit . "fbbcdf9578a8fbea4d6956fc3bdf2dcb776b8d8b"))])
  (coterm
   . [(1 6) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -2122,13 +2122,13 @@
       (:authors ("John Heidemann" . "johnh@isi.edu"))
       (:commit . "2a25d79f7e5d9ab7298ba40e11e78d1f2ded06d2"))])
  (notmuch-indicator
-  . [(1 2 0) ((emacs (27 1)))
+  . [(1 3 0) ((emacs (27 1)))
      "Display mode line indicator with notmuch-count(1) output" tar
      ((:url . "https://github.com/protesilaos/notmuch-indicator")
       (:keywords "convenience" "mail")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "7aa1da708aeb9f729e8e0a99ef65341b7344815e"))])
+      (:commit . "d25ece77e8ead14e6f37a2d8c05f19cb60362164"))])
  (ntlm
   . [(2 1 0) nil "NTLM (NT LanManager) authentication support" tar
      ((:keywords "ntlm" "sasl" "comm")
@@ -3411,13 +3411,13 @@
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:commit . "266335374e29cfd304838b2109af93ab22f6009f"))])
  (vertico
-  . [(2 6) ((emacs (29 1)) (compat (30)))
+  . [(2 7) ((emacs (29 1)) (compat (30)))
      "VERTical Interactive COmpletion" tar
      ((:url . "https://github.com/minad/vertico")
       (:keywords "convenience" "files" "matching" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "8cff876a15203d24c42e19585fe6dcce8f735bbe"))])
+      (:commit . "c12c8f842fd184db44fb2b835b0f954bbc90c7a6"))])
  (vertico-posframe
   . [(0 9 0) ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 5)))
      "Using posframe to show Vertico" tar

@@ -1045,6 +1045,12 @@
      ((:url . "https://github.com/brianc/jade-mode")
       (:keywords "languages")
       (:commit . "dad17dc86c93401646802a639a98dd2ec875db6f"))])
+ (javelin
+  . [(0 2 3) ((emacs (28 1)))
+     "Implementation of harpoon: bookmarks on steroids" tar
+     ((:url . "https://github.com/DamianB-BitFlipper/javelin.el")
+      (:keywords "tools" "languages")
+      (:commit . "e58733d6dfb3282d5b6ad4d295e8c71a8e5abc71"))])
  (jinja2-mode
   . [(0 3) nil "A major mode for jinja2" tar
      ((:url . "https://elpa.nongnu.org/nongnu/jinja2-mode.html")

@@ -375,7 +375,7 @@ Table of Contents
   minibuffer.
 
   `global-corfu-mode' activates `corfu-mode' in the minibuffer if the
-  variable `global-corfu-minibuffer' is non-nil. In order to avoid
+  variable `global-corfu-minibuffer' is `t'. In order to avoid
   interference with specialised minibuffer completion UIs like Vertico
   or Mct, Corfu is only enabled if the minibuffer sets the variable
   `completion-at-point-functions' locally. This way minibuffers with
@@ -615,6 +615,8 @@ Table of Contents
   separately, both `corfu.el' and the `corfu-*.el' extensions. Currently
   the following extensions come with the Corfu ELPA package:
 
+  • [corfu-auto]: Auto completion is enabled if `corfu-auto' is set to
+    `t'.
   • [corfu-echo]: `corfu-echo-mode' displays a brief candidate
     documentation in the echo area.
   • [corfu-history]: `corfu-history-mode' remembers selected candidates
@@ -631,6 +633,9 @@ Table of Contents
 
 
 [extensions/] <https://github.com/minad/corfu/tree/main/extensions>
+
+[corfu-auto]
+<https://github.com/minad/corfu/blob/main/extensions/corfu-auto.el>
 
 [corfu-echo]
 <https://github.com/minad/corfu/blob/main/extensions/corfu-echo.el>

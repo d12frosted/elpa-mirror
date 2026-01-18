@@ -296,11 +296,11 @@ Table of Contents
   │ ;; Prompt indicator for `completing-read-multiple'.
   │ (when (< emacs-major-version 31)
   │   (advice-add #'completing-read-multiple :filter-args
-  │ 	      (lambda (args)
-  │ 		(cons (format "[CRM%s] %s"
-  │ 			      (string-replace "[ \t]*" "" crm-separator)
-  │ 			      (car args))
-  │ 		      (cdr args))))))
+  │               (lambda (args)
+  │                 (cons (format "[CRM%s] %s"
+  │                               (string-replace "[ \t]*" "" crm-separator)
+  │                               (car args))
+  │                       (cdr args)))))
   └────
 
 
@@ -361,9 +361,9 @@ Table of Contents
   │   :ensure nil
   │   ;; More convenient directory navigation commands
   │   :bind (:map vertico-map
-  │ 	      ("RET" . vertico-directory-enter)
-  │ 	      ("DEL" . vertico-directory-delete-char)
-  │ 	      ("M-DEL" . vertico-directory-delete-word))
+  │               ("RET" . vertico-directory-enter)
+  │               ("DEL" . vertico-directory-delete-char)
+  │               ("M-DEL" . vertico-directory-delete-word))
   │   ;; Tidy shadowed file names
   │   :hook (rfn-eshadow-update-overlay . vertico-directory-tidy))
   └────
@@ -434,14 +434,14 @@ Table of Contents
   │ ;; and a flat (Ido-like) menu for M-x.
   │ (setq vertico-multiform-commands
   │       '((consult-imenu buffer indexed)
-  │ 	(execute-extended-command unobtrusive)))
+  │         (execute-extended-command unobtrusive)))
   │ 
   │ ;; Configure the display per completion category.
   │ ;; Use the grid display for files and a buffer
   │ ;; for the consult-grep commands.
   │ (setq vertico-multiform-categories
   │       '((file grid)
-  │ 	(consult-grep buffer)))
+  │         (consult-grep buffer)))
   └────
 
   The different display modes can be toggled temporarily. The
@@ -480,12 +480,12 @@ Table of Contents
   │ ;; See `vertico-sort-function' and `vertico-sort-override-function'.
   │ (setq vertico-multiform-commands
   │       '((describe-symbol (vertico-sort-function . vertico-sort-alpha))
-  │ 	(execute-extended-command (:keymap "X" execute-extended-command-cycle))))
+  │         (execute-extended-command (:keymap "X" execute-extended-command-cycle))))
   │ 
   │ (setq vertico-multiform-categories
   │       '((symbol (vertico-sort-function . vertico-sort-alpha))
-  │ 	(file (vertico-sort-function . vertico-sort-directories-first)
-  │ 	      (:keymap . vertico-directory-map))))
+  │         (file (vertico-sort-function . vertico-sort-directories-first)
+  │               (:keymap . vertico-directory-map))))
   └────
 
   Key maps or key bindings can be set per command or category.
@@ -498,24 +498,24 @@ Table of Contents
   │ ;; Bind directory commands for all commands in file category.
   │ (setq vertico-multiform-categories
   │       '((file (vertico-sort-function . vertico-sort-directories-first)
-  │ 	      (:keymap . vertico-directory-map))))
+  │               (:keymap . vertico-directory-map))))
   └────
 
   Combining these features allows us to fine-tune the completion display
   even more by adjusting the `vertico-buffer-display-action'. We can for
-  example reuse the current window for commands of the `consult-grep'
-  category (`consult-grep', `consult-git-grep' and
-  `consult-ripgrep'). Note that this configuration is incompatible with
-  Consult preview, since the previewed buffer is usually shown in
-  exactly this window. Nevertheless this snippet demonstrates the
-  flexibility of the configuration system.
+  example reuse a window above the current window for commands of the
+  `consult-grep' category (`consult-grep', `consult-git-grep' and
+  `consult-ripgrep'). This snippet demonstrates the flexibility of the
+  configuration system.
 
   ┌────
   │ ;; Configure the buffer display and the buffer display action
   │ (setq vertico-multiform-categories
   │       '((consult-grep
-  │ 	 buffer
-  │ 	 (vertico-buffer-display-action . (display-buffer-same-window)))))
+  │          buffer
+  │          (vertico-buffer-display-action display-buffer-in-direction
+  │                                         (direction . above)
+  │                                         (window-height . 20)))))
   │ 
   │ ;; Disable preview for consult-grep commands
   │ (consult-customize consult-ripgrep consult-git-grep consult-grep :preview-key nil)
@@ -548,19 +548,20 @@ Table of Contents
   following quick start approach:
 
   1. Start with plain Emacs (`emacs -Q').
-  2. Install and enable Vertico to get incremental minibuffer
-     completion.
+  2. Install Vertico and enable `vertico-mode' to get incremental
+     minibuffer completion.
   3. Install Orderless and/or configure the built-in completion styles
      for more flexible minibuffer filtering.
-  4. Install Marginalia if you like rich minibuffer annotations.
-  5. Install Embark and add two keybindings for `embark-dwim' and
+  4. Install Marginalia and enable `marginalia-mode' if you like rich
+     minibuffer annotations.
+  5. Install Consult if you want additional featureful completion
+     commands, e.g., the buffer switcher `consult-buffer' with preview
+     or the line-based search `consult-line'.
+  6. Install Embark and add two keybindings for `embark-dwim' and
      `embark-act'.  I am using the mnemonic keybindings `M-.' and `C-.'
      since these commands allow you to act on the object at point or in
      the minibuffer.
-  6. Install Consult if you want additional featureful completion
-     commands, e.g., the buffer switcher `consult-buffer' with preview
-     or the line-based search `consult-line'.
-  7. Install Embark-Consult for export from `consult-line' to editable
+  7. Install Embark-Consult to export from `consult-line' to editable
      `occur-mode' buffers and from `consult-grep' to `grep-mode'
      buffers. On Emacs 31, use `grep-edit-mode' for editing or [wgrep]
      on older Emacs version.
@@ -645,19 +646,14 @@ Table of Contents
   philosophy:
 
   • [Mct]: Minibuffer and Completions in Tandem. Mct reuses the default
-    `*Completions*' buffer and enhances it with automatic updates. Since
-    Mct uses a regular buffer you can use the usual movement
-    commands. The main distinction to Vertico's approach is that
-    `*Completions*' buffer displays all matching candidates. This has
-    the advantage that you can interact freely with the candidates and
-    jump around with Isearch or Avy. On the other hand it necessarily
-    causes a slowdown.
-  • Icomplete: Emacs comes with the builtin `icomplete-vertical-mode',
+    `*Completions*' buffer and enhances it with automatic updates. From
+    Emacs version 31 automatic updates are built-in, see the settings
+    `completions-eager-update' and `completions-eager-display'.
+  • Icomplete: Emacs provides the builtin `icomplete-vertical-mode',
     which is more bare-bone than Vertico. Vertico offers additional
     flexibility via its [extensions].
-  • [Selectrum]: Selectrum is the predecessor of Vertico has been
-    deprecated in favor of Vertico. Read the [migration guide] when
-    migrating from Selectrum.
+  • [Selectrum]: Selectrum is the deprecated predecessor of
+    Vertico. Read the [migration guide] when migrating from Selectrum.
 
 
 [Mct] <https://git.sr.ht/~protesilaos/mct>
@@ -782,11 +778,11 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   │   (minibuffer-with-setup-hook
   │       (:append
   │        (lambda ()
-  │ 	 (let ((map (make-sparse-keymap)))
-  │ 	   (define-key map [tab] #'minibuffer-complete)
-  │ 	   (use-local-map (make-composed-keymap (list map) (current-local-map))))
-  │ 	 (setq-local completion-styles (cons 'basic completion-styles)
-  │ 		     vertico-preselect 'prompt)))
+  │          (let ((map (make-sparse-keymap)))
+  │            (define-key map [tab] #'minibuffer-complete)
+  │            (use-local-map (make-composed-keymap (list map) (current-local-map))))
+  │          (setq-local completion-styles (cons 'basic completion-styles)
+  │                      vertico-preselect 'prompt)))
   │     (apply args)))
   └────
 
@@ -840,11 +836,11 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   ┌────
   │ (setq completion-styles '(orderless basic))
   │ (completing-read "Dynamic: "
-  │ 		 (completion-table-dynamic
-  │ 		  (lambda (str)
-  │ 		    (list (concat str "1")
-  │ 			  (concat str "2")
-  │ 			  (concat str "3")))))
+  │                  (completion-table-dynamic
+  │                   (lambda (str)
+  │                     (list (concat str "1")
+  │                           (concat str "2")
+  │                           (concat str "3")))))
   └────
 
 
@@ -911,10 +907,10 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 
   ┌────
   │ (advice-add #'ffap-menu-ask :around
-  │ 	    (lambda (&rest args)
-  │ 	      (cl-letf (((symbol-function #'minibuffer-completion-help)
-  │ 			 #'ignore))
-  │ 		(apply args))))
+  │             (lambda (&rest args)
+  │               (cl-letf (((symbol-function #'minibuffer-completion-help)
+  │                          #'ignore))
+  │                 (apply args))))
   └────
 
 
