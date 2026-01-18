@@ -5507,6 +5507,7 @@
   (timu-macos-theme :url "https://gitlab.com/aimebertrand/timu-macos-theme")
   (timu-rouge-theme :url "https://gitlab.com/aimebertrand/timu-rouge-theme")
   (timu-spacegrey-theme :url "https://gitlab.com/aimebertrand/timu-spacegrey-theme")
+  (timu-symbol-extract :url "https://gitlab.com/aimebertrand/timu-symbol-extract")
   (tinkerer :url "https://github.com/yyr/tinkerer.el")
   (tintin-mode :url "https://github.com/lesharris/tintin-mode")
   (tiny :url "https://github.com/abo-abo/tiny")

@@ -164,8 +164,8 @@ Table of Contents
   │ (defun demo-backend (action &optional arg &rest _)
   │   (pcase action
   │     ('prefix
-  │      (when-let (beg (save-excursion
-  │                       (and (re-search-backward "[;:]" (pos-bol) t) (point))))
+  │      (when-let* ((beg (save-excursion
+  │                         (and (re-search-backward "[;:]" (pos-bol) t) (point)))))
   │        (list (buffer-substring-no-properties beg (point)) "" t)))
   │     ('candidates (all-completions arg demo-alist))
   │     ('annotation (concat " " (cdr (assoc arg demo-alist))))

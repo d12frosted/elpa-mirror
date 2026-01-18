@@ -242,12 +242,12 @@
       (:keywords "extensions")
       (:commit . "0430bd1eb3493ea90d69feb6b7eb7dac3e10d0ba"))])
  (consult-flycheck
-  . [(1 0) ((emacs (27 1)) (consult (1 0)) (flycheck (32)))
+  . [(1 1) ((emacs (29 1)) (consult (2 8)) (flycheck (35)))
      "Provides the command `consult-flycheck'" tar
-     ((:url . "https://github.com/minad/consult")
+     ((:url . "https://github.com/minad/consult-flycheck")
       (:keywords "languages" "tools" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "0662839aa5db429130f5ffd15c14d4a980b2e694"))])
+      (:commit . "9fe96c4b75c8566170ad41a04c3849d2e2606104"))])
  (corfu-terminal
   . [(0 7) ((emacs (26 1)) (corfu (0 36)) (popon (0 13)))
      "Corfu popup on terminal" tar
@@ -1586,13 +1586,13 @@
       (:keywords "markup" "language" "css")
       (:commit . "aee28ea552dce5aade05d8a7f91514e6eb37e59f"))])
  (scad-mode
-  . [(97 0) ((emacs (28 1)) (compat (30)))
+  . [(98 0) ((emacs (29 1)) (compat (30)))
      "A major mode for editing OpenSCAD code" tar
      ((:url . "https://github.com/openscad/emacs-scad-mode")
       (:keywords "languages")
       (:maintainer ("Len Trigg" . "lenbok@gmail.com")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "44b4ac086bd01791ff2ccb25234b4e5d701bc10a"))])
+      (:commit . "546d1507cd131f55ca930de7ae1518884e8221f4"))])
  (scala-mode
   . [(1 1 1) ((emacs (25 1))) "Major mode for editing Scala" tar
      ((:url . "https://github.com/hvesalai/emacs-scala-mode")

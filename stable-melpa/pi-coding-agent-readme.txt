@@ -17,11 +17,17 @@ Key Bindings:
     C-c C-r        Resume session
     M-p / M-n      History navigation
     C-r            Search history
+    TAB            Path/file completion
+    @              File reference (search project files)
 
   Chat buffer:
     n / p          Navigate messages
     TAB            Toggle tool output
     C-c C-p        Open menu
+
+Editor Features:
+  - File reference (@): Type @ to search project files (respects .gitignore)
+  - Path completion (Tab): Complete relative paths, ../, ~/, etc.
 
 Press C-c C-p for the full transient menu with model selection,
 thinking level, session management, and custom commands.

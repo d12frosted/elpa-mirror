@@ -23,10 +23,7 @@
   `fixed-pitch' fonts combine harmonically and have approximately the
   same height. As default font, I recommend variants of the [Iosevka]
   font, e.g., Iosevka Term Curly.  `org-modern-mode' tries to adjust the
-  tag label display based on the value of `line-spacing'. This looks
-  best if `line-spacing' has a value between 0.1 and 0.4 in the Org
-  buffer. Larger values of `line-spacing' are not recommended, since
-  Emacs does not center the text vertically (see Emacs [bug#76390]).
+  tag label display based on font height.
 
 
 [example.org] <file:example.org>
@@ -34,8 +31,6 @@
 [modus-operandi] <https://protesilaos.com/emacs/modus-themes>
 
 [Iosevka] <https://github.com/be5invis/Iosevka>
-
-[bug#76390] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=76390>
 
 
 2 Configuration
@@ -99,6 +94,15 @@
   │ 
   │ (global-org-modern-mode)
   └────
+
+  Furthermore I recommend to use `line-spacing' with a value between 0.1
+  and 0.4 to give the text some room to breathe. Unfortunately as of
+  Emacs 30, the text is not centered with `line-spacing', but I am
+  hopeful that centering will be available in Emacs 31 (see Emacs
+  [bug#76390]).
+
+
+[bug#76390] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=76390>
 
 
 3 Incompatibilities

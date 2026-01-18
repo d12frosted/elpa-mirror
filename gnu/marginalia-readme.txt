@@ -152,7 +152,7 @@ Table of Contents
 
   ┌────
   │ (defun my-face-annotator (cand)
-  │   (when-let (sym (intern-soft cand))
+  │   (when-let* ((sym (intern-soft cand)))
   │     (concat (propertize " " 'display '(space :align-to center))
   │             (propertize "The quick brown fox jumps over the lazy dog" 'face sym))))
   └────

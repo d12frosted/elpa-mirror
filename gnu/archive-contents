@@ -379,13 +379,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "dbbffe75c6a2492099e36dc93b6183800a7d6fcd"))])
  (cape
-  . [(2 4) ((emacs (29 1)) (compat (30)))
+  . [(2 5) ((emacs (29 1)) (compat (30)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "281ef8d6f44faa12d6eb9990366ac4bc920c62b1"))])
+      (:commit . "96162aab2a22158ccc40b0f5c90f61e77b03c4f8"))])
  (capf-autosuggest
   . [(0 3) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -782,13 +782,13 @@
       (:authors ("Aleksandr Vityazev" . "avityazew@gmail.com"))
       (:commit . "bc07c1124545cbf6e5ebe64e92bfaa306e309033"))])
  (dicom
-  . [(1 2) ((emacs (29 1)) (compat (30)))
+  . [(1 3) ((emacs (29 1)) (compat (30)))
      "DICOM viewer - Digital Imaging & Communications in Medicine" tar
      ((:url . "https://github.com/minad/dicom")
       (:keywords "multimedia" "hypermedia" "files")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "161d7b6b990cf608f5f71b4a6c840cfa57107d35"))])
+      (:commit . "03a12498905ef80d67ff53d138d415d828ceb12f"))])
  (dict-tree
   . [(0 17) ((trie (0 6)) (tNFA (0 1 1)) (heap (0 3)) (emacs (24 1)))
      "Dictionary data structure" tar
@@ -906,13 +906,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "a59f87c0dc04bcfcf9f55a124658c2e7a585dbd2"))])
  (doric-themes
-  . [(0 5 0) ((emacs (29 1)))
+  . [(0 6 0) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "1455871b4fc20b9b4e579681c339f05aa3e9e150"))])
+      (:commit . "92c2123e1a3b6cb8ef30539c5b81952c4f7df692"))])
  (drepl
   . [(0 4) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -1652,13 +1652,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx
-  . [(2 5) ((emacs (29 1)) (compat (30))) "Enchanted Spell Checker"
+  . [(2 6) ((emacs (29 1)) (compat (30))) "Enchanted Spell Checker"
      tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "a678be8cf0888947789a10a493c8b1c3a7066f52"))])
+      (:commit . "b412673dec759131fe0abb346998b55225fbe771"))])
  (jit-spell
   . [(0 5) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -1885,7 +1885,7 @@
       (:url . "https://elpa.gnu.org/packages/map.html")
       (:commit . "9da2efb670574b473ab864ae0456b4f1b38e680b"))])
  (marginalia
-  . [(2 7) ((emacs (29 1)) (compat (30)))
+  . [(2 8) ((emacs (29 1)) (compat (30)))
      "Enrich existing commands with completion annotations" tar
      ((:url . "https://github.com/minad/marginalia")
       (:keywords "docs" "help" "matching" "completion")
@@ -1893,7 +1893,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "49bda384bc9b4d88518255de8d1ac3b32e76c783"))])
+      (:commit . "79c1dc2c63f710f7aad900881da49930af43d729"))])
  (markchars
   . [(0 2 2) nil "Mark chars fitting certain characteristics" tar
      ((:maintainer "Lennart Borgman" . "lennart.borgman@gmail.com")
@@ -2237,13 +2237,13 @@
       (:authors ("Hanno Perrey" . "hanno@hoowl.se"))
       (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-modern
-  . [(1 11) ((emacs (29 1)) (org (9 6)) (compat (30)))
+  . [(1 12) ((emacs (29 1)) (org (9 6)) (compat (30)))
      "Modern looks for Org" tar
      ((:url . "https://github.com/minad/org-modern")
       (:keywords "outlines" "hypermedia" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "55b5bbeb1eb9483d0cb43f4803615c380bf3b1ed"))])
+      (:commit . "9bbc44cc7e085dea24e96f0cc0332ed7fcf349ca"))])
  (org-notify
   . [(0 1 2) ((emacs (25 1))) "Notifications for Org-mode" tar
      ((:url . "https://github.com/p-m/org-notify")
