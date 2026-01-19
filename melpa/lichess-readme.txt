@@ -1,9 +1,15 @@
 
-Lichess.el is a modular Emacs client for the https://lichess.org API.
+Lichess.el is an Emacs client for the https://lichess.org API.
 
-This file is a main entry point for the modular Lichess.el client.
+This file is a main entry point for the Lichess.el client.
 
-Provides a dispatcher (`M-x lichess`) to access all submodules:
-- Auth diagnostics (`M-x lichess-diagnose`)
-- Lichess TV (`M-x lichess-tv`)
-- Game preview (=M-x lichess-game-preview-fen=)
+Features:
+- Play against AI
+- Watch Lichess TV and arbitrary games
+- Board rendering styles: GUI (SVG), Unicode, and ASCII
+
+Run `M-x lichess` to open the main menu, which provides access to:
+- `lichess-tv`: Watch ongoing top games on Lichess TV
+- `lichess-game-watch`: Watch a specific game by ID
+- `lichess-ai-challenge`: Play a game against Stockfish
+- `lichess-set-style`: Configure board visualization (GUI/Unicode/ASCII)
