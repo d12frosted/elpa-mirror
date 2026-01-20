@@ -3,7 +3,7 @@ Updating /mnt/store/melpa/working/gams-mode/
 Checking out 519c64f186515157b6a01143f438dc24148d8e58
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gams-mode/
-  to /tmp/gams-modeKg0aHW/gams-mode-20260119.217
+  to /tmp/gams-mode6XQr1O/gams-mode-20260119.217
     gams-mode.el -> gams-mode.el
     gams-install.el -> gams-install.el
     gams-logo.xpm -> gams-logo.xpm
@@ -13,7 +13,7 @@ Copying files (->) and directories (=>)
     gams_install.sh -> gams_install.sh
   ! doc/gams-mode.texi -> gams-mode.texi
 Generating gams-mode.info
-Command `makeinfo --no-split gams-mode.texi -o /tmp/gams-modeKg0aHW/gams-mode-20260119.217/gams-mode.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split gams-mode.texi -o /tmp/gams-mode6XQr1O/gams-mode-20260119.217/gams-mode.info' exited with non-zero exit-code: 1
 gams-mode.texi:231: @subsection seen before @end table
 gams-mode.texi:233: @item outside of table or list
 gams-mode.texi:239: @item outside of table or list
@@ -24,7 +24,7 @@ gams-mode.texi:258: @item outside of table or list
 gams-mode.texi:265: @item outside of table or list
 gams-mode.texi:270: unmatched `@end table'
 
-Error: (error "Command `makeinfo --no-split gams-mode.texi -o /tmp/gams-modeKg0aHW/gams-mode-20260119.217/gams-mode.info' exited with non-zero exit-code: 1")
+Error: (error "Command `makeinfo --no-split gams-mode.texi -o /tmp/gams-mode6XQr1O/gams-mode-20260119.217/gams-mode.info' exited with non-zero exit-code: 1")
 Created gams-mode-20260119.217.tar containing:
   gams-mode-20260119.217/
   gams-mode-20260119.217/gams-commands-dollar.txt
@@ -36,6 +36,6 @@ Created gams-mode-20260119.217.tar containing:
   gams-mode-20260119.217/gams_install.ps1
   gams-mode-20260119.217/gams_install.sh
  ✓ Success:
-  2026-01-20T02:25:41+0000  gams-mode-20260119.217.entry
-  2026-01-20T02:25:41+0000  gams-mode-20260119.217.tar
-Built gams-mode in 4.692s, finished at 2026-01-20T02:25:42+0000
+  2026-01-20T07:05:00+0000  gams-mode-20260119.217.entry
+  2026-01-20T07:05:00+0000  gams-mode-20260119.217.tar
+Built gams-mode in 4.863s, finished at 2026-01-20T07:05:01+0000
