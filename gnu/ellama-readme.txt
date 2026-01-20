@@ -423,6 +423,8 @@ Assistant". Previous sentence was written by Ellama itself.
     user confirmation. Dangerous. Use at your own risk.
   • `ellama-tools-allowed': List of allowed `ellama' tools. Tools from
     this list will work without user confirmation.
+  • `ellama-tools-argument-max-length': Max length of function argument
+    in the confirmation prompt. Default value 50.
 
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
@@ -783,7 +785,37 @@ Assistant". Previous sentence was written by Ellama itself.
   └────
 
 
-8 Acknowledgments
+8 MCP Integration
+═════════════════
+
+  You can also use MCP (Model Context Protocol) tools with `ellama'. You
+  need Emacs 30 or higher version. Install `mcp.el' -
+  <https://github.com/lizqwerscott/mcp.el>. For example to add web
+  search capability to `ellama' you can add duckduckgo mcp server
+  (<https://github.com/nickclyde/duckduckgo-mcp-server>):
+
+  ┌────
+  │ (use-package mcp
+  │   :ensure t
+  │   :demand t
+  │   :custom
+  │   (mcp-hub-servers
+  │    `(("ddg" . (:command "uvx"
+  │                         :args
+  │                         ("duckduckgo-mcp-server")))))
+  │   :config
+  │   (require 'mcp-hub)
+  │   (mcp-hub-start-all-server
+  │    (lambda ()
+  │      (let ((tools (mcp-hub-get-all-tool :asyncp t :categoryp t)))
+  │        (mapcar #'(lambda (tool)
+  │                    (apply #'ellama-tools-define-tool
+  │                           (list tool)))
+  │                tools)))))
+  └────
+
+
+9 Acknowledgments
 ═════════════════
 
   Thanks [Jeffrey Morgan] for excellent project [ollama]. This project
@@ -813,8 +845,8 @@ Assistant". Previous sentence was written by Ellama itself.
 [Andrew Hyatt] <https://github.com/ahyatt>
 
 
-9 Contributions
-═══════════════
+10 Contributions
+════════════════
 
   To contribute, submit a pull request or report a bug. This library is
   part of GNU ELPA; major contributions must be from someone with FSF
@@ -822,5 +854,5 @@ Assistant". Previous sentence was written by Ellama itself.
   different archive like MELPA.
 
 
-10 GNU Free Documentation License
+11 GNU Free Documentation License
 ═════════════════════════════════
