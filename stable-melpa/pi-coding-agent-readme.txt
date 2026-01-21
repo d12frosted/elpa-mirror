@@ -11,7 +11,8 @@ Usage:
 
 Key Bindings:
   Input buffer:
-    C-c C-c        Send prompt
+    C-c C-c        Send prompt (queues as follow-up if busy)
+    C-c C-s        Queue steering (interrupts after current tool; busy only)
     C-c C-k        Abort streaming
     C-c C-p        Open menu
     C-c C-r        Resume session
@@ -28,6 +29,9 @@ Key Bindings:
 Editor Features:
   - File reference (@): Type @ to search project files (respects .gitignore)
   - Path completion (Tab): Complete relative paths, ../, ~/, etc.
+  - Message queuing: Submit messages while agent is working:
+      C-c C-c  queues follow-up (delivered after agent completes)
+      C-c C-s  queues steering (interrupts after current tool)
 
 Press C-c C-p for the full transient menu with model selection,
 thinking level, session management, and custom commands.
