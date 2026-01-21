@@ -3075,13 +3075,13 @@
       (:url . "https://elpa.gnu.org/packages/temp-buffer-browse.html")
       (:commit . "db6041b0413fdeefb1f1285e1d9c1039c10fbf04"))])
  (tempel
-  . [(1 9) ((emacs (29 1)) (compat (30)))
+  . [(1 10) ((emacs (29 1)) (compat (30)))
      "Tempo templates/snippets with in-buffer field editing" tar
      ((:url . "https://github.com/minad/tempel")
       (:keywords "abbrev" "languages" "tools" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "506a8d570c145f4df63a18921e34bac6bef3ebe0"))])
+      (:commit . "f69c18d89de44072e983c8ca8378b276603a1012"))])
  (termint
   . [(0 2) ((emacs (29 1))) "Run REPLs in a terminal backend" tar
      ((:url . "https://github.com/milanglacier/termint.el")
