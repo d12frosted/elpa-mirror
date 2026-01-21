@@ -24,6 +24,7 @@ Key Bindings:
   Chat buffer:
     n / p          Navigate messages
     TAB            Toggle tool output
+    RET            Visit file at point (from tool blocks)
     C-c C-p        Open menu
 
 Editor Features:
