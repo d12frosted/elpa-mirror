@@ -27,7 +27,9 @@ II.  Features
      - Display evil state
      - Display Tramp host if applicable
      - Display buffer/file name
+     - Display keybindings hint for the wdired buffer
      - Display keybindings hint for the org capture buffer
+     - Display keybindings hint for the org log note buffer
      - Display keybindings hint for the git commit message buffer
      - Display keybindings hint for the forge post buffer
      - Display the vc branch
@@ -69,6 +71,7 @@ III.  Options
      - `timu-line-show-python-virtual-env' - default value is t
      - `timu-line-show-wdired-keys' - default value is nil
      - `timu-line-show-org-capture-keys' - default value is t
+     - `timu-line-show-org-log-note-keys' - default value is nil
      - `timu-line-show-git-commit-keys' - default value is t
      - `timu-line-show-forge-post-keys' - default value is t
      - `timu-line-show-mu4e-context' - default value is t

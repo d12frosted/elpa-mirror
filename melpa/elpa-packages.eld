@@ -3196,7 +3196,7 @@
   (lice :url "https://github.com/buzztaiki/lice-el")
   (license-snippets :url "https://github.com/sei40kr/license-snippets")
   (license-templates :url "https://github.com/jcs-elpa/license-templates")
-  (lichess :url "https://github.com/tmythicator/Lichess.el")
+  (lichess :url "https://github.com/tmythicator/lichess.el")
   (life-calendar :url "https://github.com/vshender/emacs-life-calendar")
   (ligature :url "https://github.com/mickeynp/ligature.el")
   (ligature-pragmatapro :url "https://gitlab.com/wavexx/ligature-pragmatapro.el")
