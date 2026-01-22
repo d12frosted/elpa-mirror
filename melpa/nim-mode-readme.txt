@@ -17,13 +17,16 @@ automatically.
 
   (setq nimsuggest-path "path/to/nimsuggest")
 
-You may need to install below packages if you haven't installed yet.
+Flymake and completion-at-point support is enabled automatically by
+`nimsuggest-mode'.
 
--- Auto completion --
+Alternatively, You may want to install the optional packages below.
+
+-- Auto completion using company (optional) --
 You can omit if you configured company-mode on 'prog-mode-hook
   (add-hook 'nimsuggest-mode-hook 'company-mode)  ; auto complete package
 
--- Auto lint --
+-- Auto lint using flycheck (optional) --
 You can omit if you configured flycheck-mode on 'prog-mode-hook
 
   (add-hook 'nimsuggest-mode-hook 'flycheck-mode) ; auto linter package
