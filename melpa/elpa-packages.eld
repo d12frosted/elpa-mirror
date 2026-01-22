@@ -4162,6 +4162,7 @@
   (org-wc :url "https://github.com/tesujimath/org-wc")
   (org-web-tools :url "https://github.com/alphapapa/org-web-tools")
   (org-web-track :url "https://github.com/p-snow/org-web-track")
+  (org-wild-notifier :url "https://github.com/emacsorphanage/org-wild-notifier")
   (org-working-set :url "https://github.com/marcIhm/org-working-set")
   (org-wunderlist :url "https://github.com/emacsattic/org-wunderlist")
   (org-xlatex :url "https://github.com/ksqsf/org-xlatex")
