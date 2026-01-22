@@ -49,6 +49,9 @@ supported:
   An interface for Eshell, a shell-like command interpreter implemented in
   Emacs Lisp.
 
+- EWW (Elisp library: `casual-eww.el')
+  An interface for EWW (Emacs Web Wowser), a web browser for GNU Emacs.
+
 - Help (Elisp library: `casual-help.el')
   An interface for `help-mode', a major mode for viewing help text and
   navigating references in it.
