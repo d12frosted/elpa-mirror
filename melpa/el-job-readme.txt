@@ -6,15 +6,7 @@ subprocesses---one per CPU core---then merge their outputs and handle the
 result as if it had been returned by that `mapcar'.  In the meantime,
 current Emacs does not hang at all.
 
-You do need to grok the concept of a callback.
+A high-level wrapper is `el-job-parallel-mapcar', which intentionally hangs
+Emacs so as to behave as a drop-in for `mapcar' that is merely faster.
 
-Public API:
-- Function `el-job-old-launch' (main entry point)
-- Function `el-job-old-await'
-- Function `el-job-old-is-busy'
-- Variable `el-job-old-major-version'
-
-Dev tools:
-- Command `el-job-old-cycle-debug-level'
-- Command `el-job-old-show-info'
-- Command `el-job-old-kill-all'
+The more general `el-job-ng-run' can be used asynchronously.
