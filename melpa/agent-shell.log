@@ -1,11 +1,12 @@
  • Building package agent-shell (from github:xenodium/agent-shell)...
 Updating /mnt/store/melpa/working/agent-shell/
-Checking out 8af3765b2b2a7198551befdcace90a3679f114c3
+Checking out c60203934d577e88d03035038a1e247bb1ce0ded
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/agent-shell/
-  to /tmp/agent-shell0lkzZS/agent-shell-20260122.1841
+  to /tmp/agent-shell9yIhfi/agent-shell-20260122.2139
     agent-shell-anthropic.el -> agent-shell-anthropic.el
     agent-shell-auggie.el -> agent-shell-auggie.el
+    agent-shell-completion.el -> agent-shell-completion.el
     agent-shell-cursor.el -> agent-shell-cursor.el
     agent-shell-diff.el -> agent-shell-diff.el
     agent-shell-droid.el -> agent-shell-droid.el
@@ -16,32 +17,35 @@ Copying files (->) and directories (=>)
     agent-shell-mistral.el -> agent-shell-mistral.el
     agent-shell-openai.el -> agent-shell-openai.el
     agent-shell-opencode.el -> agent-shell-opencode.el
+    agent-shell-project.el -> agent-shell-project.el
     agent-shell-qwen.el -> agent-shell-qwen.el
     agent-shell-ui.el -> agent-shell-ui.el
     agent-shell-viewport.el -> agent-shell-viewport.el
     agent-shell.el -> agent-shell.el
-Created agent-shell-20260122.1841.tar containing:
-  agent-shell-20260122.1841/
-  agent-shell-20260122.1841/agent-shell-anthropic.el
-  agent-shell-20260122.1841/agent-shell-auggie.el
-  agent-shell-20260122.1841/agent-shell-cursor.el
-  agent-shell-20260122.1841/agent-shell-diff.el
-  agent-shell-20260122.1841/agent-shell-droid.el
-  agent-shell-20260122.1841/agent-shell-github.el
-  agent-shell-20260122.1841/agent-shell-google.el
-  agent-shell-20260122.1841/agent-shell-goose.el
-  agent-shell-20260122.1841/agent-shell-heartbeat.el
-  agent-shell-20260122.1841/agent-shell-mistral.el
-  agent-shell-20260122.1841/agent-shell-openai.el
-  agent-shell-20260122.1841/agent-shell-opencode.el
-  agent-shell-20260122.1841/agent-shell-pkg.el
-  agent-shell-20260122.1841/agent-shell-qwen.el
-  agent-shell-20260122.1841/agent-shell-ui.el
-  agent-shell-20260122.1841/agent-shell-viewport.el
-  agent-shell-20260122.1841/agent-shell.el
+Created agent-shell-20260122.2139.tar containing:
+  agent-shell-20260122.2139/
+  agent-shell-20260122.2139/agent-shell-anthropic.el
+  agent-shell-20260122.2139/agent-shell-auggie.el
+  agent-shell-20260122.2139/agent-shell-completion.el
+  agent-shell-20260122.2139/agent-shell-cursor.el
+  agent-shell-20260122.2139/agent-shell-diff.el
+  agent-shell-20260122.2139/agent-shell-droid.el
+  agent-shell-20260122.2139/agent-shell-github.el
+  agent-shell-20260122.2139/agent-shell-google.el
+  agent-shell-20260122.2139/agent-shell-goose.el
+  agent-shell-20260122.2139/agent-shell-heartbeat.el
+  agent-shell-20260122.2139/agent-shell-mistral.el
+  agent-shell-20260122.2139/agent-shell-openai.el
+  agent-shell-20260122.2139/agent-shell-opencode.el
+  agent-shell-20260122.2139/agent-shell-pkg.el
+  agent-shell-20260122.2139/agent-shell-project.el
+  agent-shell-20260122.2139/agent-shell-qwen.el
+  agent-shell-20260122.2139/agent-shell-ui.el
+  agent-shell-20260122.2139/agent-shell-viewport.el
+  agent-shell-20260122.2139/agent-shell.el
  ✓ Success:
-  2026-01-22T17:43:51+0000  agent-shell-20260122.1028.entry
-  2026-01-22T17:43:51+0000  agent-shell-20260122.1028.tar
   2026-01-22T20:10:54+0000  agent-shell-20260122.1841.entry
   2026-01-22T20:10:54+0000  agent-shell-20260122.1841.tar
-Built agent-shell in 4.514s, finished at 2026-01-22T20:10:55+0000
+  2026-01-22T22:56:08+0000  agent-shell-20260122.2139.entry
+  2026-01-22T22:56:08+0000  agent-shell-20260122.2139.tar
+Built agent-shell in 4.550s, finished at 2026-01-22T22:56:09+0000
