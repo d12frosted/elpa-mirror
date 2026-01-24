@@ -1014,13 +1014,13 @@
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:commit . "12730179acddc224f0c43a2b8e8a028182d1e40f"))])
  (el-job
-  . [(2 7 0) ((emacs (29 1)))
+  . [(2 7 1) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
      ((:url . "https://github.com/meedstrom/el-job")
       (:keywords "processes")
       (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
       (:authors ("Martin Edström" . "meedstrom@runbox.eu"))
-      (:commit . "5c1e1f632b8b8963d7f5fec449d2dc7da96aadbf"))])
+      (:commit . "f4ea8f705026546b401fb0912ffe2105ff084562"))])
  (el-search
   . [(1 12 6 1) ((emacs (25)) (stream (2 2 4)) (cl-print (1 0)))
      "Expression based interactive search for Emacs Lisp" tar

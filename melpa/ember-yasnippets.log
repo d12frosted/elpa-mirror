@@ -1,0 +1,83 @@
+ • Building package ember-yasnippets (from github:ronco/ember-yasnippets.el)...
+Updating /mnt/store/melpa/working/ember-yasnippets/
+Checking out 3b5bd01569646237bf1b540d097e12f9118b67f4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ember-yasnippets/
+  to /tmp/ember-yasnippetsPfjj4c/ember-yasnippets-20160526.1658
+    ember-yasnippets.el -> ember-yasnippets.el
+    snippets => snippets
+Created ember-yasnippets-20160526.1658.tar containing:
+  ember-yasnippets-20160526.1658/
+  ember-yasnippets-20160526.1658/ember-yasnippets-pkg.el
+  ember-yasnippets-20160526.1658/ember-yasnippets.el
+  ember-yasnippets-20160526.1658/snippets/
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/.yas-make-groups
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-data/
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-data/attribute.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-data/belongs-to.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-data/has-many.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-functions/
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-functions/find-id.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-functions/find.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-functions/looger-debug.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-functions/run-once.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-functions/run.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/actions.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/alias.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/inject.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/observer.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/on.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/property.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/reads.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-properties/setter.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/and-then.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/click.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/current-path.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/current-route-name.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/current-url.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/fill-in.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/find.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/key-event.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/trigger-event.snippet
+  ember-yasnippets-20160526.1658/snippets/coffee-mode/ember-test/visit.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/
+  ember-yasnippets-20160526.1658/snippets/js-mode/.yas-make-groups
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-data/
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-data/attribute.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-data/belongs-to.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-data/has-many.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-functions/
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-functions/find-id.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-functions/find.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-functions/looger-debug.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-functions/run-once.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-functions/run.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-imports/
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-imports/import-ember.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/actions.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/alias.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/inject.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/observer.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/on.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/property.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/reads.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-properties/setter.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/and-then.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/click.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/current-path.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/current-route-name.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/current-url.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/fill-in.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/find.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/key-event.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/trigger-event.snippet
+  ember-yasnippets-20160526.1658/snippets/js-mode/ember-test/visit.snippet
+ ✓ Success:
+  2026-01-24T10:47:30+0000  ember-yasnippets-20160526.1658.entry
+  2026-01-24T10:47:30+0000  ember-yasnippets-20160526.1658.tar
+Built ember-yasnippets in 3.213s, finished at 2026-01-24T10:47:31+0000
