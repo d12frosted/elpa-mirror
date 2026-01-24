@@ -13,16 +13,17 @@ Supported AI coding CLIs include:
   - Opencode
   - Grok CLI
   - Cursor CLI
+  - Kiro CLI
 
 Basic configuration example:
 
 (use-package ai-code
-  :straight (:host github :repo "tninja/ai-code-interface.el")
   :config
-  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'grok, 'claude-code-ide, 'claude-code, 'cursor
+  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'grok, 'claude-code-ide, 'claude-code, 'cursor, 'kiro
   (ai-code-set-backend 'codex) ;; set your preferred backend
   (global-set-key (kbd "C-c a") #'ai-code-menu)
-  (global-auto-revert-mode 1))
+  (global-auto-revert-mode 1)
+  (setq auto-revert-interval 1)) ;; set to 1 second for faster update
 
 Key features:
   - Transient-driven Hub (C-c a) for all AI capabilities.
