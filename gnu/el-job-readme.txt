@@ -28,8 +28,96 @@ for "el-job" in these packages:
 <https://raw.githubusercontent.com/meedstrom/org-roam-async/refs/heads/main/org-roam-async.el>
 
 
-1 Since 2.5.0
-═════════════
+1 2.7.0
+═══════
+
+  • New entry point: `el-job-parallel-mapcar'! Read more below.
+  • Argument `:inputs' are now split differently, for the sake of a
+    predictable order of outputs.  It is likely less optimal, but
+    hopefully not too much.
+  • Argument `:require' now accepts strings in addition to symbols.
+    Strings are passed to `load' instead of `require'.
+  • Value of `temporary-file-directory' no longer added to
+    `:inject-vars' for you.
+    • Now the only values added are `load-path' and
+      `native-comp-eln-load-path'.
+  • Function `el-job-ng-job' renamed to `el-job-ng-get-job'.
+    • New class `el-job-ng-job'.
+  • Delete many aliases to el-job-old.el.
+
+
+1.1 New entry point: `el-job-parallel-mapcar'
+─────────────────────────────────────────────
+
+  Until now, we had to make do with an unwieldy `el-job-ng-run' with ~5
+  keyword arguments.  And we had to understand asynchronous programming
+  to use it.
+
+  I've long dreamed to be able to brainlessly rewrite a form `(mapcar
+  #'FN INPUTS)' to something like `(multicore-mapcar #'FN INPUTS)' and
+  have it Just Work and Just Be Faster.
+
+  Finally, it is done!
+
+  The calling convention is
+
+  ┌────
+  │ (el-job-parallel-mapcar FN INPUTS &optional INJECT-VARS)
+  └────
+
+
+  Please see the docstring for what you need to know.
+
+
+1.1.1 Weaknesses
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Do not use `el-job-parallel-mapcar' with overly trivial functions.  It
+  adds some overhead per item, so it actually slows you down if the
+  function itself only takes microseconds or nanoseconds per invocation.
+
+  Example of a bad use-case:
+
+  ┌────
+  │ (let ((spam (make-list 1000000 "spam")))
+  │   (list (benchmark-elapse (mapcar #'upcase spam))
+  │         (benchmark-elapse (el-job-parallel-mapcar #'upcase spam))))
+  └────
+
+  Return value:
+
+  ┌────
+  │ (0.482017027 4.793430311)
+  └────
+
+
+  Another bad use-case is when plain `mapcar' would've been fast enough.
+  There is some constant overhead related to spinning up subprocesses.
+
+  Changing 1000000 from the earlier expression to just 100 reveals the
+  constant to be ~210ms on my machine:
+
+  ┌────
+  │ (let ((spam (make-list 100 "spam")))
+  │   (list (benchmark-elapse (mapcar #'upcase spam))
+  │         (benchmark-elapse (el-job-parallel-mapcar #'upcase spam))))
+  └────
+
+  Return value:
+
+  ┌────
+  │ (0.000041974 0.219570936)
+  └────
+
+
+2 2.6.0
+═══════
+
+  • For `el-job-old-launch', new argument `:eval'
+
+
+3 2.5.0
+═══════
 
   Released [2025-10-06 Mon], v2.5.0 comes with a variant library
   "el-job-ng".
@@ -58,7 +146,7 @@ for "el-job" in these packages:
   needs.
 
 
-1.1 Future work
+3.1 Future work
 ───────────────
 
   I may write yet another variant.
@@ -100,10 +188,10 @@ for "el-job" in these packages:
 [async.el] <https://github.com/jwiegley/emacs-async>
 
 
-2 README for 2.4.8
+4 README for 2.4.8
 ══════════════════
 
-2.1 Design rationale
+4.1 Design rationale
 ────────────────────
 
   I wanted to shorten the round-trip as much as possible, *between the
@@ -115,7 +203,7 @@ for "el-job" in these packages:
   still like it to return as soon as possible.
 
 
-2.1.1 Processes stay alive
+4.1.1 Processes stay alive
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   In the above example, a user might only delay a fraction of a second
@@ -134,7 +222,7 @@ for "el-job" in these packages:
   killed an el-job subprocess, instead of the Emacs they see on screen.
 
 
-2.1.2 Emacs 30 `fast-read-process-output'
+4.1.2 Emacs 30 `fast-read-process-output'
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Some other libraries, like the popular [async.el], are designed around
@@ -159,7 +247,7 @@ for "el-job" in these packages:
 <https://github.com/emacs-mirror/emacs/blob/master/etc/NEWS.30>
 
 
-2.2 News 2.4
+4.2 News 2.4
 ────────────
 
   • Jobs must now have `:inputs'.  If `:inputs' nil and there was
@@ -167,14 +255,14 @@ for "el-job" in these packages:
     `inputs-were-empty'.
 
 
-2.3 News 2.3
+4.3 News 2.3
 ────────────
 
   • Some renames to follow Elisp convention
     • `el-job:timestamps' and friends now `el-job-timestamps'.
 
 
-2.4 News 2.1
+4.4 News 2.1
 ────────────
 
   • DROP SUPPORT Emacs 28
@@ -185,21 +273,21 @@ for "el-job" in these packages:
 [v0.3 branch] <https://github.com/meedstrom/el-job/tree/v0.3>
 
 
-2.5 News 2.0
+4.5 News 2.0
 ────────────
 
   • Jobs must now have `:id' (no more anonymous jobs).
   • Pruned many code paths.
 
 
-2.6 News 1.1
+4.6 News 1.1
 ────────────
 
   • Changed internals so that all builds of Emacs can be expected to
     perform similarly well.
 
 
-2.7 News 1.0
+4.7 News 1.0
 ────────────
 
   • No longer keeps processes alive forever.  All jobs are kept alive
@@ -209,7 +297,7 @@ for "el-job" in these packages:
     docstring of `el-job-launch' again.
 
 
-2.8 Limitations
+4.8 Limitations
 ───────────────
 
   1. The return value from the `:funcall-per-input' function must always
