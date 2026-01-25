@@ -3148,7 +3148,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:keywords "convenience"))])
  (tmr
-  . [(1 2 1) ((emacs (29 1))) "Set timers using a convenient notation"
+  . [(1 3 0) ((emacs (29 1))) "Set timers using a convenient notation"
      tar
      ((:url . "https://github.com/protesilaos/tmr")
       (:keywords "convenience" "timer")
@@ -3157,7 +3157,7 @@
 		("Damien Cassou" . "damien@cassou.me")
 		("Daniel Mendler" . "mail@daniel-mendler.de")
 		("Steven Allen" . "steven@stebalien.com"))
-      (:commit . "f6b62106b64d4ff99875fd10aad2950be06009e7"))])
+      (:commit . "7f074024de46f4d471943057403f900a6321e299"))])
  (tomelr
   . [(0 4 3) ((emacs (26 3)) (map (3 2 1)) (seq (2 23)))
      "Convert S-expressions to TOML" tar

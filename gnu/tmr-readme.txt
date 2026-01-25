@@ -23,6 +23,8 @@ Current development target is 1.3.0-dev.
 ⁃ Git repositories:
   ⁃ GitHub: <https://github.com/protesilaos/tmr>
   ⁃ GitLab: <https://gitlab.com/protesilaos/tmr>
+⁃ Video demonstration:
+  <https://protesilaos.com/codelog/2026-01-19-emacs-timers-tmr-demo/>
 ⁃ Backronym: TMR May Ring; Timer Must Run.
 
 Table of Contents
@@ -51,7 +53,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2021-2025 Free Software Foundation, Inc.
+  Copyright (C) 2021-2026 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -109,10 +111,17 @@ Table of Contents
   timer object.
 
   The command `tmr-toggle-acknowledge' toggles the acknowledge flag of a
-  given timer object.  A timer that needs to be acknowledged prompts for
-  confirmation after it elapses.  The user can either confirm and thus
+  given timer object. A timer that needs to be acknowledged prompts for
+  confirmation after it elapses. The user can either confirm and thus
   dismiss the timer, or set a new duration for the next reminder, using
-  the familiar TMR input.
+  the familiar TMR input. The confirmation text to be provided at the
+  minibuffer prompt (`ack' by default) can be configured via the user
+  option `tmr-acknowledge-timer-text'.
+
+  The command `tmr-toggle-pause' pauses the given timer. The tabulated
+  view has a column to show when a timer is paused ([Grid or tabulated
+  view]).  Similarly, the mode line indicator adapts the text of the
+  timer to tell that it is paused ([Display timers on the mode line]).
 
   The user option `tmr-descriptions-list' defines the completion
   candidates that are shown at the description prompt.  Its value can be
@@ -169,6 +178,10 @@ Table of Contents
   desired keys ([Sample configuration]).
 
 
+[Grid or tabulated view] See section 2.1
+
+[Display timers on the mode line] See section 2.2
+
 [Grid view] See section 2.1
 
 [Hooks] See section 2.3
@@ -185,11 +198,11 @@ Table of Contents
   buffer and looks like this:
 
   ┌────
-  │ Start      End        Duration   Remaining  Acknowlegde?   Description
+  │ Start      End        Duration   Remaining  Paused?  Acknowledge?   Description
   │ 
-  │ 10:26:05   10:36:05   10m        9m 45s                    Prepare tea
-  │ 10:25:50   10:30:50   5m         4m 31s     Yes            Test the feature
-  │ 10:25:04   10:35:04   10m        8m 44s
+  │ 08:49:41   09:19:46   30m        29m 17s    Yes                     Work on TMR for 30 minutes
+  │ 08:49:31   08:54:31   5m         3m 53s                             Prepare tea
+  │ 08:49:21   08:59:21   10m        8m 42s              Yes            Edit the description with this one instead
   └────
 
   If a timer has elapsed, it has a check mark associated with it,
@@ -210,6 +223,13 @@ Table of Contents
   While in this grid view, one can perform all the operations on timers
   we have already covered herein (the `C-h m' will show you their key
   bindings in this mode).
+
+  By default, the `tmr-tabulated-view' buffer is updated automatically
+  every 5 seconds. Users can change the number of seconds by modifying
+  the user option `tmr-tabulated-refresh-interval'. A `nil' value means
+  to never refresh that buffer automatically: users can update it
+  manually by invoking the command `revert-buffer', which is bound to
+  `g' by default.
 
   The user option `tmr-list-timers-action-alist' controls how the
   command `tmr-tabulated-view' displays its buffer. Its default
@@ -237,6 +257,9 @@ Table of Contents
 
   `tmr-tabulated-remaining-time'
         The timer’s remaining time.
+
+  `tmr-tabulated-paused'
+        Whether the timer is paused or not.
 
   `tmr-tabulated-acknowledgement'
         Whether the timer needs to be acknowledged.
@@ -355,9 +378,6 @@ Table of Contents
 3 Installation
 ══════════════
 
-
-
-
 3.1 GNU ELPA package
 ────────────────────
 
@@ -411,20 +431,13 @@ Table of Contents
 ══════════════════════
 
   ┌────
-  │ ;; Set to nil to disable the sound
-  │ (setq tmr-sound-file "/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga")
-  │ 
-  │ ;; Desktop notification urgency level
-  │ (setq tmr-notification-urgency 'normal)
-  │ 
-  │ ;; Read the `tmr-descriptions-list' doc string
-  │ (setq tmr-descriptions-list 'tmr-description-history)
-  │ 
-  │ ;; Set global prefix bindings (autoloaded):
-  │ (define-key global-map "\C-ct" 'tmr-prefix-map)
-  │ 
-  │ ;; Alternatively bind tmr command (autoloaded):
-  │ (define-key global-map "\C-ct" 'tmr)
+  │ (use-package tmr
+  │   :ensure t
+  │   :config
+  │   (define-key global-map (kbd "C-c t") #'tmr-prefix-map)
+  │   (setq tmr-sound-file "/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga"
+  │         tmr-notification-urgency 'normal
+  │         tmr-description-list 'tmr-description-history))
   └────
 
 
@@ -448,8 +461,8 @@ Table of Contents
         Steven Allen.
 
   Contributions to the code or manual
-        Christian Tietze, Ed Tavinor, Eugene Mikhaylov, Lucas Quintana,
-        Mirko Hernandez, Nathan R.  DeGruchy, jpg.
+        Christian Tietze, Ed Tavinor, Eugene Mikhaylov, Karol Mróz,
+        Lucas Quintana, Mirko Hernandez, Nathan R. DeGruchy, jpg.
 
 
 7 GNU Free Documentation License
