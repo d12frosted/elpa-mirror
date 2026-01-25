@@ -3848,7 +3848,7 @@
   (ob-lesim :url "https://github.com/drghirlanda/ob-lesim")
   (ob-lfe :url "https://github.com/zweifisch/ob-lfe")
   (ob-llm :url "https://github.com/sunflowerseastar/ob-llm")
-  (ob-lurk :url "https://github.com/argumentcomputer/lurk-emacs")
+  (ob-lurk :url "https://github.com/lurk-lab/lurk-emacs")
   (ob-mermaid :url "https://github.com/arnm/ob-mermaid")
   (ob-ml-marklogic :url "https://github.com/ndw/ob-ml-marklogic")
   (ob-mongo :url "https://github.com/krisajenkins/ob-mongo")
