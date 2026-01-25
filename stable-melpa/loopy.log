@@ -1,9 +1,9 @@
  • Building package loopy (from github:okamsn/loopy)...
 Updating /mnt/store/melpa/working/loopy/
-Checking out 7996ae466a321c1244903f2c579056d86a9db7a4
+Checking out d34569439eec8f4bd6becd4e7a46107644c1f82c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopy7QEKOz/loopy-20260110.2353
+  to /tmp/loopyrPplFq/loopy-20260125.14
   ! lisp/loopy-commands.el -> loopy-commands.el
   ! lisp/loopy-destructure.el -> loopy-destructure.el
   ! lisp/loopy-instrs.el -> loopy-instrs.el
@@ -15,21 +15,23 @@ Copying files (->) and directories (=>)
   ! lisp/loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
 Generating loopy.info
-Created loopy-20260110.2353.tar containing:
-  loopy-20260110.2353/
-  loopy-20260110.2353/dir
-  loopy-20260110.2353/loopy-commands.el
-  loopy-20260110.2353/loopy-destructure.el
-  loopy-20260110.2353/loopy-instrs.el
-  loopy-20260110.2353/loopy-iter.el
-  loopy-20260110.2353/loopy-misc.el
-  loopy-20260110.2353/loopy-pcase.el
-  loopy-20260110.2353/loopy-pkg.el
-  loopy-20260110.2353/loopy-seq.el
-  loopy-20260110.2353/loopy-vars.el
-  loopy-20260110.2353/loopy.el
-  loopy-20260110.2353/loopy.info
+Created loopy-20260125.14.tar containing:
+  loopy-20260125.14/
+  loopy-20260125.14/dir
+  loopy-20260125.14/loopy-commands.el
+  loopy-20260125.14/loopy-destructure.el
+  loopy-20260125.14/loopy-instrs.el
+  loopy-20260125.14/loopy-iter.el
+  loopy-20260125.14/loopy-misc.el
+  loopy-20260125.14/loopy-pcase.el
+  loopy-20260125.14/loopy-pkg.el
+  loopy-20260125.14/loopy-seq.el
+  loopy-20260125.14/loopy-vars.el
+  loopy-20260125.14/loopy.el
+  loopy-20260125.14/loopy.info
  ✓ Success:
-  2026-01-24T19:18:23+0000  loopy-20260110.2353.entry
-  2026-01-24T19:18:23+0000  loopy-20260110.2353.tar
-Built loopy in 8.347s, finished at 2026-01-24T19:18:24+0000
+  2026-01-24T21:59:01+0000  loopy-20260110.2353.entry
+  2026-01-24T21:59:01+0000  loopy-20260110.2353.tar
+  2026-01-25T00:38:45+0000  loopy-20260125.14.entry
+  2026-01-25T00:38:45+0000  loopy-20260125.14.tar
+Built loopy in 8.876s, finished at 2026-01-25T00:38:46+0000

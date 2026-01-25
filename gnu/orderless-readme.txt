@@ -3,9 +3,6 @@
                               ━━━━━━━━━━━
 
 
-
-
-
 1 Overview
 ══════════
 
@@ -21,9 +18,8 @@
   used with the default Emacs completion UI (sometimes called minibuffer
   tab completion), with the built-in Icomplete package (which is similar
   to the more well-known Ido Mode), the icomplete-vertical variant from
-  Emacs 28 (see the external [icomplete-vertical] package to get that
-  functionality on earlier versions of Emacs), or with some third party
-  minibuffer completion frameworks such as [Mct] or [Vertico].
+  Emacs 28, or with minibuffer completion frameworks such as [Mct] or
+  [Vertico].
 
   All the completion UIs just mentioned are for minibuffer completion,
   used when Emacs commands prompt the user in the minibuffer for some
@@ -45,10 +41,11 @@
 
   With a bit of effort, it might still be possible to use `orderless'
   with other completion UIs, even if those UIs don't support the
-  standard Emacs completion styles. Currently there is support for [Ivy]
-  (see below). Also, while Company does support completion styles
-  directly, pressing `SPC' takes you out of completion, so comfortably
-  using `orderless' with it takes a bit of configuration (see below).
+  standard Emacs completion styles. Currently there is support for
+  [Ivy], as documented below. Also, while Company does support
+  completion styles directly, pressing `SPC' takes you out of
+  completion, so comfortably using `orderless' with it takes a bit of
+  configuration (see below).
 
   If you use ELPA or MELPA, the easiest way to install `orderless' is
   via `package-install'. If you use `use-package', you can use:
@@ -58,7 +55,8 @@
   │   :ensure t
   │   :custom
   │   (completion-styles '(orderless basic))
-  │   (completion-category-overrides '((file (styles basic partial-completion)))))
+  │   (completion-category-overrides '((file (styles partial-completion))))
+  │   (completion-pcm-leading-wildcard t)) ;; Emacs 31: partial-completion behaves like substring
   └────
 
   Alternatively, put `orderless.el' somewhere on your `load-path', and
@@ -67,7 +65,8 @@
   ┌────
   │ (require 'orderless)
   │ (setq completion-styles '(orderless basic)
-  │       completion-category-overrides '((file (styles basic partial-completion))))
+  │       completion-category-overrides '((file (styles partial-completion)))
+  │       completion-pcm-leading-wildcard t) ;; Emacs 31: partial-completion behaves like substring
   └────
 
   The `basic' completion style is specified as fallback in addition to
@@ -83,8 +82,6 @@
 
   Bug reports are highly welcome and appreciated!
 
-
-[icomplete-vertical] <https://github.com/oantolin/icomplete-vertical>
 
 [Mct] <https://gitlab.com/protesilaos/mct>
 
@@ -253,8 +250,8 @@
   │ 
   │ (setq orderless-matching-styles '(orderless-regexp)
   │       orderless-style-dispatchers '(first-initialism
-  │ 				    flex-if-twiddle
-  │ 				    not-if-bang))
+  │                                     flex-if-twiddle
+  │                                     not-if-bang))
   └────
 
 
@@ -299,12 +296,12 @@
   ┌────
   │ (orderless-define-completion-style orderless+initialism
   │   (orderless-matching-styles '(orderless-initialism
-  │ 			       orderless-literal
-  │ 			       orderless-regexp)))
+  │                                orderless-literal
+  │                                orderless-regexp)))
   │ (setq completion-category-overrides
   │       '((command (styles orderless+initialism))
-  │ 	(symbol (styles orderless+initialism))
-  │ 	(variable (styles orderless+initialism))))
+  │         (symbol (styles orderless+initialism))
+  │         (variable (styles orderless+initialism))))
   └────
 
   Note that in order for the `orderless+initialism' style to kick-in
@@ -369,7 +366,7 @@
   │   "Components match literally for the rest of the session."
   │   (interactive)
   │   (setq-local orderless-matching-styles '(orderless-literal)
-  │ 	      orderless-style-dispatchers nil))
+  │               orderless-style-dispatchers nil))
   │ 
   │ (define-key minibuffer-local-completion-map (kbd "C-l")
   │   #'my/match-components-literally)

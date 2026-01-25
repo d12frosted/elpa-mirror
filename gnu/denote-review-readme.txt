@@ -84,6 +84,10 @@
   of the notes that contain the `reviewdate' frontmatter. Notes without
   a `reviewdate' are ignored.
 
+  This command prompts for a keyword.  Select a keyword to display only
+  notes with that keyword, or don't select any keyword to display all
+  notes.
+
   It evaluates the value of the variables `denote-directory' and
   `denote-silo-directories'. When there is more than one directory, it
   prompts the user to select a directory, using completion.
