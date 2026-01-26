@@ -18,7 +18,7 @@ Table of Contents
 
 1. Features
 2. Configuration
-3. Bookmarks, Org links, Geo urls and Elisp links
+3. Bookmarks, Org links, Geo URLs, Google Maps and Elisp links
 4. Distance measurement
 5. Commands and Key Bindings
 6. Related projects
@@ -52,9 +52,9 @@ Table of Contents
   `librsvg', `libjpeg', `libpng' and `libwebp' support.  Emacs 30 comes
   with a native JSON parser, while on Emacs 29, `libjansson' is
   needed. The following is an example configuration which relies on
-  `use-package'.  Please take a look at the [wiki] for additional tile
-  server configurations, e.g., Google Maps for satellite and aerial
-  maps.
+  `use-package'.  Please take a look at the [OpenStreetMap Wiki] and the
+  [Osm.el Wiki] for additional tile server configurations, e.g., Google
+  Maps for satellite and aerial maps.
 
   ┌────
   │ (use-package osm
@@ -62,8 +62,10 @@ Table of Contents
   │ 
   │   :custom
   │   ;; Take a look at the customization group `osm' for more options.
-  │   (osm-server 'default) ;; Configure the tile server
-  │   (osm-copyright t)     ;; Display the copyright information
+  │   (osm-default-server 'default) ;; Configure the tile server
+  │   (osm-default-zoom 15)         ;; Default zoom level
+  │   (osm-copyright t)             ;; Display the copyright information
+  │   (osm-home (list 0 0 3))       ;; Home, configure `calendar-latitude/longitude' instead
   │ 
   │   :config
   │ 
@@ -77,14 +79,19 @@ Table of Contents
   └────
 
 
-[wiki] <https://github.com/minad/osm/wiki>
+[OpenStreetMap Wiki]
+<https://wiki.openstreetmap.org/wiki/Raster_tile_providers>
+
+[Osm.el Wiki] <https://github.com/minad/osm/wiki>
 
 
-3 Bookmarks, Org links, Geo urls and Elisp links
-════════════════════════════════════════════════
+3 Bookmarks, Org links, Geo URLs, Google Maps and Elisp links
+═════════════════════════════════════════════════════════════
 
-  There exist multiple methods to store a location, such that you can
-  return there afterwards.
+  Osm.el registers itself as handler for map URLs (Geo URLs and Google
+  Maps) via the `browse-url-default-handlers' list. This way you can
+  open these links directly in Emacs. Furthermore there exist multiple
+  methods to store a location as a link.
 
   • `b': Create a bookmark of the current location. The bookmark is
     stored as an Emacs bookmark in `bookmark-alist'. You can jump to the
@@ -92,8 +99,8 @@ Table of Contents
     `bookmark-jump'.
   • `l': Store an Org link to the current location. The link can be
     inserted subsequently into an Org buffer with `C-c C-l'.
-  • `u': Save the geo url of the current location in the kill ring. The
-    url can be inserted in another buffer via `C-y'. A geo url has the
+  • `u': Save the Geo URL of the current location in the kill ring. The
+    URL can be inserted in another buffer via `C-y'. A Geo URL has the
     form `geo:27.96,86.89;z=13'.
   • `C-u u': Save an Elisp link to the current location in the kill
     ring. An Elisp link has the form `(osm 51.49 -0.14 11)'.
@@ -188,7 +195,7 @@ Table of Contents
   • `c': `osm-center' - Center to currently selected pin
   • `F', `R': `osm-hide' - Hide GPX or TCX file or route
   • `l': `org-store-link' - Store Org link
-  • `u': `osm-save-url' - Save geo url in the kill ring
+  • `u': `osm-save-url' - Save Geo URL in the kill ring
   • `b': `osm-bookmark-set' - Set bookmark
   • `q': `quit-window' - Close buffer and window
   • `o': `clone-buffer' - Clone buffer
@@ -203,6 +210,7 @@ Table of Contents
   • <https://github.com/svenssonjoel/Emacs-OSM>
   • <https://github.com/jd/google-maps.el>
   • <https://github.com/emacsattic/org-osm-link>
+  • <https://github.com/mkcms/gpx-mode>
 
 
 7 Contributions
