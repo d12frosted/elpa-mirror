@@ -1,12 +1,12 @@
 This package provides a uniform Emacs interface for various AI-assisted software
 development CLI tools. Its purpose is to offer a consistent user experience
-across different AI backends while integrating seamlessly with AI-driven
-agile development workflows.
+across different AI backends, providing context-aware code actions, and integrating
+seamlessly with AI-driven agile development workflows.
 
 URL: https://github.com/tninja/ai-code-interface.el
 
 Supported AI coding CLIs include:
-  - Claude Code (claude-code.el)
+  - Claude Code
   - Gemini CLI
   - OpenAI Codex
   - GitHub Copilot CLI
@@ -19,7 +19,7 @@ Basic configuration example:
 
 (use-package ai-code
   :config
-  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'grok, 'claude-code-ide, 'claude-code, 'cursor, 'kiro
+  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'grok, 'claude-code-ide, 'claude-code-el, 'claude-code, 'cursor, 'kiro
   (ai-code-set-backend 'codex) ;; set your preferred backend
   (global-set-key (kbd "C-c a") #'ai-code-menu)
   (global-auto-revert-mode 1)
@@ -32,6 +32,7 @@ Key features:
   - Agile development workflows (TDD cycle, refactoring navigator, review helper).
   - Seamless prompt management using Org-mode.
   - AI-assisted bash commands and productivity utilities.
+  - Multiple AI coding sessions management.
 
 Many features are ported from aider.el, making it a powerful alternative for
 developers who wish to switch between modern AI coding CLIs while keeping
