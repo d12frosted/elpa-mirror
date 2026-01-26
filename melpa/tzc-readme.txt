@@ -5,4 +5,5 @@ Convert time between different time zones.
 time-zone to a list of favourite time-zones.
 
 A list of favourite time zones could be set using like following
-(setq tzc-favourite-time-zones-alist '(("Asia/Kolkata" "Kolkata") ("America/New_York" "New York") ("Europe/Berlin" "Berlin")))
+(setq tzc-favourite-time-zones-alist '(("Asia/Kolkata" "Kolkata")
+("America/New_York" "New York") ("Europe/Berlin" "Berlin")))

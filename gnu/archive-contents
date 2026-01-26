@@ -736,13 +736,13 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "36f24f0f0f472e4cb50025ed62a1b32351d7d294"))])
  (denote-review
-  . [(1 0 3) ((emacs (28 1)) (denote (4 1 3)))
+  . [(1 0 4) ((emacs (28 1)) (denote (4 1 3)))
      "implements review process for denote notes" tar
      ((:url . "https://codeberg.org/mattof/denote-review")
       (:keywords "files")
       (:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
-      (:commit . "06732385c0022bfbcb6efe28440025479de2486b"))])
+      (:commit . "9a4cf8a422e1bc915b2624a34ef39563709915fd"))])
  (denote-search
   . [(1 0 3) ((emacs (29 1)) (denote (3 0)))
      "Search the contents of your notes" tar
@@ -986,14 +986,14 @@
       (:authors ("Markus Triska" . "triska@metalevel.at"))
       (:commit . "ea8710335eec483b576c7a800c92b8fd214aa6dd"))])
  (eev
-  . [(20251219) ((emacs (25 1)))
+  . [(20260126) ((emacs (25 1)))
      "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)"
      tar
      ((:url . "http://anggtwu.net/#eev")
       (:keywords "lisp" "e-scripts")
       (:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-      (:commit . "84201105b1cb885749650c32bb1e3ce240c4f164"))])
+      (:commit . "ffa3b88874d064256c5221d2bbcb1564d901602a"))])
  (ef-themes
   . [(2 0 1) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
