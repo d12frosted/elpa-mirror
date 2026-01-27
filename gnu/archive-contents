@@ -2229,13 +2229,13 @@
       (:authors ("Ian Dunn" . "dunni@gnu.org"))
       (:commit . "8258a4dfa00aa522249cdf9aeea5be4de97bd7c1"))])
  (org-gnosis
-  . [(0 1 1) ((emacs (27 2)) (emacsql (4 0 0)) (compat (29 1 4 2)))
+  . [(0 1 2) ((emacs (27 2)) (emacsql (4 0 0)) (compat (29 1 4 2)))
      "Roam-like Knowledge Management System" tar
      ((:url . "https://thanosapollo.org/projects/org-gnosis/")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "7db80112f08547ae4526f4ca645dbe6e224d27c6"))])
+      (:commit . "cb0b07a307b68050eaf39cf5d85739515eb0812b"))])
  (org-jami-bot
   . [(0 0 5) ((emacs (28 1)) (jami-bot (0 0 4)))
      "Capture GNU Jami messages as notes and todos in Org mode" tar

@@ -788,7 +788,7 @@
 		 . "emacs.git-modes@jonas.bernoulli.dev"))
       (:commit . "c3faeeea1982786f78d8c38397dec0f078eaec84"))])
  (gnosis
-  . [(0 5 8)
+  . [(0 6 0)
      ((emacs (27 2)) (emacsql (4 1 0)) (compat (29 1 4 2))
       (transient (0 7 2)) (org-gnosis (0 0 9)))
      "Spaced Repetition System" tar
@@ -796,7 +796,7 @@
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "43b8ba93a7173543d16e08ebc30ce8ed3f793b7f"))])
+      (:commit . "54f6d37120a84d94451099f21d17aec1c9ab8ace"))])
  (gnu-apl-mode
   . [(1 5 1) nil "Emacs mode for GNU APL" tar
      ((:url . "http://www.gnu.org/software/apl/")
