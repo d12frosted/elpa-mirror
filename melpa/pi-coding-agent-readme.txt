@@ -17,7 +17,7 @@ Key Bindings:
     C-c C-p        Open menu
     C-c C-r        Resume session
     M-p / M-n      History navigation
-    C-r            Search history
+    C-r            Incremental history search (like readline)
     TAB            Path/file completion
     @              File reference (search project files)
 
