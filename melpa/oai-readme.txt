@@ -43,6 +43,8 @@ Keys binded by default:
 - in buffer with oai-mode enabled:
     - C-g - to stop all requsts.
 
+Terms:
+- chat roles or prefixes - [AI]: [ME:]
 
 Other packages:
 - Modern navigation in major modes https://github.com/Anoncheg1/firstly-search
