@@ -1516,12 +1516,12 @@
        ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
       (:commit . "HEAD"))])
  (radio
-  . [(0 4 1) ((emacs (29 1))) "Listen to Internet radio" tar
+  . [(0 4 2) ((emacs (29 1))) "Listen to Internet radio" tar
      ((:url . "https://github.com/jroimartin/radio")
       (:keywords "multimedia")
       (:maintainer "Roi Martin" . "jroi.martin@gmail.com")
       (:authors ("Roi Martin" . "jroi.martin@gmail.com"))
-      (:commit . "e5119a04d91dd0d82f387016611fce103d9c47fe"))])
+      (:commit . "cd443edbef40d8b282566d402a571ce745386811"))])
  (rainbow-delimiters
   . [(2 1 5) nil "Highlight brackets according to their depth" tar
      ((:url . "https://github.com/Fanael/rainbow-delimiters")

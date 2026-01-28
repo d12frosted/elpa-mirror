@@ -16,9 +16,6 @@ Table of Contents
 5. Mode Line
 
 
-
-
-
 1 Overview
 ══════════
 

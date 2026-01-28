@@ -144,6 +144,11 @@ The xr package can be used interactively or by other code as a library.
     A character class occurs twice in a single character alternative
     or skip set.
 
+  - Possibly missing ':' after character class
+
+    Something that looks like character class but missing a colon at
+    the end, like [:space] instead of [:space:].
+
   - Or-pattern more efficiently expressed as character alternative
 
     When an or-pattern can be written as a character alternative, it
