@@ -425,6 +425,16 @@ Assistant". Previous sentence was written by Ellama itself.
     this list will work without user confirmation.
   • `ellama-tools-argument-max-length': Max length of function argument
     in the confirmation prompt. Default value 50.
+  • `ellama-blueprint-global-dir': Global directory for storing
+    blueprint files.
+  • `ellama-blueprint-local-dir': Local directory name for
+    project-specific blueprints.
+  • `ellama-blueprint-file-extensions': File extensions recognized as
+    blueprint files.
+  • `ellama-skills-global-path': Path to the global directory containing
+    Agent Skills.
+  • `ellama-skills-local-path': Project-relative path for local Agent
+    Skills.  Default value is `"skills"'.
 
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
@@ -723,7 +733,16 @@ Assistant". Previous sentence was written by Ellama itself.
     community, or all).
 
 
-7.3 Variable Management
+7.3 Blueprints files
+────────────────────
+
+  You can also store blueprints as plain text files. You can store it
+  globally inside `ellama-blueprint-global-dir' or locally in the
+  project local directory `ellama-blueprint-local-dir' with
+  `ellama-blueprint-file-extensions'.
+
+
+7.4 Variable Management
 ───────────────────────
 
   Blueprints can include variables that need to be filled before running
@@ -733,7 +752,7 @@ Assistant". Previous sentence was written by Ellama itself.
     for variables found in the current buffer and fills them.
 
 
-7.4 Keymap and Mode
+7.5 Keymap and Mode
 ───────────────────
 
   Ellama provides a local keymap `ellama-blueprint-mode-map' for
@@ -755,7 +774,7 @@ Assistant". Previous sentence was written by Ellama itself.
   • `C-c v': Fill variables in the current blueprint.
 
 
-7.5 Transient Menus
+7.6 Transient Menus
 ───────────────────
 
   Ellama includes transient menus for easy access to blueprint
@@ -768,7 +787,7 @@ Assistant". Previous sentence was written by Ellama itself.
   commands.
 
 
-7.6 Running Blueprints programmatically
+7.7 Running Blueprints programmatically
 ───────────────────────────────────────
 
   The `ellama-blueprint-run' function initiates a chat session using a
@@ -815,8 +834,68 @@ Assistant". Previous sentence was written by Ellama itself.
   └────
 
 
-9 Acknowledgments
-═════════════════
+9 Agent Skills
+══════════════
+
+  Ellama supports *Agent Skills*, a lightweight format for extending AI
+  capabilities. Skills are loaded into context only when needed
+  (Progressive Disclosure).
+
+
+9.1 Directory Structure
+───────────────────────
+
+  Ellama looks for skills in two locations:
+  1. *Global*: `~/.emacs.d/ellama/skills/' (Customizable via
+  `ellama-skills-global-path')
+  1. *Project-Local*: `skills/' inside your project root (Customizable
+      via
+  `ellama-skills-local-path')
+
+  A skill is a directory containing a `SKILL.md' file. This file
+  includes metadata (`name' and `description', at minimum) and
+  instructions that tell an agent how to perform a specific task. Skills
+  can also bundle scripts, templates, and reference materials.
+
+  ┌────
+  │ my-project/
+  │ └──skills/
+  │    └── pdf-processing/
+  │        ├── SKILL.md          # Required: instructions + metadata
+  │        ├── scripts/          # Optional: executable code
+  │        ├── references/       # Optional: documentation
+  │        └── assets/           # Optional: templates, resources
+  └────
+
+
+9.2 Creating a Skill
+────────────────────
+
+  SKILL.md must contain YAML frontmatter:
+
+  ┌────
+  │ ---
+  │ name: pdf-processing
+  │ description: Extract text from PDFs and summarize them.
+  │ ---
+  │ 
+  │ # PDF Processing Instructions
+  │ To extract text from a PDF...
+  └────
+
+
+9.3 How it works
+────────────────
+
+  *Auto-Discovery*: Ellama scans skill directories automatically
+   whenever a chat starts.  *Context*: Skill metadata (name,
+   description, location) is injected into the system prompt.
+   *Activation*: The LLM uses the read_file tool to load the SKILL.md
+   content when needed.
+
+
+10 Acknowledgments
+══════════════════
 
   Thanks [Jeffrey Morgan] for excellent project [ollama]. This project
   cannot exist without it.
@@ -845,7 +924,7 @@ Assistant". Previous sentence was written by Ellama itself.
 [Andrew Hyatt] <https://github.com/ahyatt>
 
 
-10 Contributions
+11 Contributions
 ════════════════
 
   To contribute, submit a pull request or report a bug. This library is
@@ -854,5 +933,5 @@ Assistant". Previous sentence was written by Ellama itself.
   different archive like MELPA.
 
 
-11 GNU Free Documentation License
+12 GNU Free Documentation License
 ═════════════════════════════════
