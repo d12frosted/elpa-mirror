@@ -43,8 +43,14 @@ Keys binded by default:
 - in buffer with oai-mode enabled:
     - C-g - to stop all requsts.
 
+Customization:
+M-x customize-group RET oai
+M-x customize-group RET oai-faces
+
 Terms:
 - chat roles or prefixes - [AI]: [ME:]
+- parts or messages - major parts of chat with prefixes of roles
+
 
 Other packages:
 - Modern navigation in major modes https://github.com/Anoncheg1/firstly-search
