@@ -6,7 +6,8 @@
   1. MATLAB mode, *matlab-ts-mode* or *matlab-mode*, for editing `*.m'
      files.
 
-     • Edit MATLAB code with syntax highlighting and smart indentation.
+     • Edit MATLAB code with syntax highlighting, indentation (code
+       formatting), and semantic movement.
      • Lint MATLAB code with fix-it's using the MATLAB Code Analyzer.
 
      The *matlab-ts-mode* is a more capable, performant, and accurate
@@ -122,7 +123,90 @@
 <file:examples/matlab-and-org-mode/matlab-and-org-mode.org>
 
 
-2 Installation
+2 MATLAB Indent (Code Formatting)
+═════════════════════════════════
+
+  With the optional matlab-ts-mode, you have [MATLAB code indentation]
+  that
+
+  • Adjusts the indent-level (the whitespace to the left of the code),
+    and
+  • Standardizes language element spacing, aligns consecutive
+    statements, aligns matrices and structs, adds missing commas to
+    matrices.
+
+  Example:
+
+  ┌────
+  │ function out= indent_example(   in1, ...
+  │ input2)
+  │   % INDENT_EXAMPLE - an indent example
+  │      % This illustrates some of the capabilities of the matlab-ts-mode indent engine.
+  │ 
+  │     arguments
+  │         in1          = 10
+  │     input2= 20;
+  │ end
+  │ 
+  │       mat = [100,2 300.2
+  │                  3 400,4];
+  │ 
+  │       s = struct(  'f1',1, ...
+  │ 'otherField', in1+input2);
+  │ 
+  │       a = 10; % comment for a
+  │       bLongVariable = [1.3   2,3 1 - 1 -1]    ;% comment for b
+  │       cVar = a+bLongVariable  * 2;          
+  │ 
+  │  if abs(sum(in1)) > 0
+  │           out=s.f1/input2+ in1 -cVar;
+  │ else
+  │     out = mat+in1 * 2 -cVar;
+  │     end
+  │     end
+  └────
+
+  Is indented to the following using `C-x h' and then `C-M-\' (or `Edit
+  -> Select All', then `M-x indent-region'). Notice that in addition to
+  adjusting the indent-level (whitespace to the left), language element
+  spacing has been standardized, statements have been aligned, trailing
+  comments have been aligned matrices have been aligned, missing comma's
+  are added to arrays, struct fields are aligned, etc.
+
+  ┌────
+  │ function out = indent_example(in1, ...
+  │                               input2)
+  │ % INDENT_EXAMPLE - an indent example
+  │ % This illustrates some of the capabilities of the matlab-ts-mode indent engine.
+  │ 
+  │     arguments
+  │         in1    = 10
+  │         input2 = 20;
+  │     end
+  │ 
+  │     mat = [100,   2, 300.2
+  │              3, 400,     4];
+  │ 
+  │     s = struct('f1'        , 1, ...
+  │                'otherField', in1 + input2);
+  │ 
+  │     a             = 10;                     % comment for a
+  │     bLongVariable = [1.3, 2, 3, 1 - 1, -1]; % comment for b
+  │     cVar          = a + bLongVariable * 2;
+  │ 
+  │     if abs(sum(in1)) > 0
+  │         out = s.f1 / input2 + in1 - cVar;
+  │     else
+  │         out = mat + in1 * 2 - cVar;
+  │     end
+  │ end
+  └────
+
+
+[MATLAB code indentation] <file:doc/matlab_code_indent.org>
+
+
+3 Installation
 ══════════════
 
   1. Install the MATLAB package via [MELPA] or [ELPA]. MELPA contains
@@ -193,7 +277,7 @@
 
 [MATLAB Language Server] <file:doc/matlab-language-server-lsp-mode.org>
 
-2.1 Install from this repository
+3.1 Install from this repository
 ────────────────────────────────
 
   If you are contributing to the Emacs MATLAB Mode package, see
@@ -204,7 +288,7 @@
 <file:contributing/install-emacs-matlab-from-git.org>
 
 
-3 MathWorks Products ([https://www.mathworks.com])
+4 MathWorks Products ([https://www.mathworks.com])
 ══════════════════════════════════════════════════
 
   Emacs MATLAB-mode is designed to be compatible with the last six years
@@ -215,7 +299,7 @@
 [https://www.mathworks.com] <https://www.mathworks.com>
 
 
-4 License
+5 License
 ═════════
 
   GPL3, <https://www.gnu.org/licenses/gpl-3.0.en.html> (see
@@ -225,7 +309,7 @@
 [License.txt] <file:License.txt>
 
 
-5 Community Support
+6 Community Support
 ═══════════════════
 
   [MATLAB Central]
@@ -234,7 +318,7 @@
 [MATLAB Central] <https://www.mathworks.com/matlabcentral>
 
 
-6 FAQ
+7 FAQ
 ═════
 
   See [doc/faq.org]
@@ -243,7 +327,7 @@
 [doc/faq.org] <file:doc/faq.org>
 
 
-7 Mailing list
+8 Mailing list
 ══════════════
 
   <mailto:matlab-emacs-discuss@lists.sourceforge.net>
@@ -251,7 +335,7 @@
   <https://sourceforge.net/projects/matlab-emacs/>
 
 
-8 Releases
+9 Releases
 ══════════
 
   See [NEWS.org]
