@@ -39,7 +39,7 @@ Keys binded by default:
     - C-u M-h - mark chat message
     - C-c <backspace> - (kill-region-at-point) to remove the chat
       part under point.  (oai-block.el)
-    - C-c m - set :max-tokens
+    - C-c C-l - set :max-tokens
 - in buffer with oai-mode enabled:
     - C-g - to stop all requsts.
 
