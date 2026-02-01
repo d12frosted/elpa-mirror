@@ -1931,7 +1931,7 @@
       (:authors ("Ian Martins" . "ianxm@jhu.edu"))
       (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode
-  . [(8 0 1) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
+  . [(8 0 2) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
      tar
      ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
       (:keywords "matlab(r)")
@@ -1940,7 +1940,7 @@
 		   ("John Ciolfi" . "john.ciolfi.32@gmail.com"))
       (:authors ("Matt Wette" . "mwette@alumni.caltech.edu")
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
-      (:commit . "7144e1f4f2bffcda6cbe61bfca5e8c7cc5d2d76b"))])
+      (:commit . "dcff5b84679153440a7b83ac5b10b13997196e69"))])
  (mct
   . [(1 1 0) ((emacs (29 1))) "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")
@@ -3427,13 +3427,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "c12c8f842fd184db44fb2b835b0f954bbc90c7a6"))])
  (vertico-posframe
-  . [(0 9 1) ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 5)))
+  . [(0 9 2) ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))
      "Using posframe to show Vertico" tar
      ((:url . "https://github.com/tumashu/vertico-posframe")
       (:keywords "abbrev" "convenience" "matching" "vertico")
       (:maintainer "Feng Shu" . "tumashu@163.com")
       (:authors ("Feng Shu" . "tumashu@163.com"))
-      (:commit . "6ceeeff4c13663083bfaa4193879191a0c8c57de"))])
+      (:commit . "d6e06a4f1b34d24cc0ca6ec69d2d6c965191b23e"))])
  (vigenere
   . [(1 0) ((emacs (25 1)))
      "Run a vigenere cipher on a block of text ;" tar
