@@ -1,0 +1,64 @@
+ • Building package geiser (from gitlab:emacs-geiser/geiser)...
+Updating /mnt/store/melpa/working/geiser/
+Checking out 8842104d1521a00c182ce78e9d50d394e9ba86f5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser/
+  to /tmp/geiserSnE3na/geiser-20251220.2301
+  ! elisp/geiser-autodoc.el -> geiser-autodoc.el
+  ! elisp/geiser-base.el -> geiser-base.el
+  ! elisp/geiser-capf.el -> geiser-capf.el
+  ! elisp/geiser-compile.el -> geiser-compile.el
+  ! elisp/geiser-completion.el -> geiser-completion.el
+  ! elisp/geiser-connection.el -> geiser-connection.el
+  ! elisp/geiser-custom.el -> geiser-custom.el
+  ! elisp/geiser-debug.el -> geiser-debug.el
+  ! elisp/geiser-doc.el -> geiser-doc.el
+  ! elisp/geiser-edit.el -> geiser-edit.el
+  ! elisp/geiser-eval.el -> geiser-eval.el
+  ! elisp/geiser-image.el -> geiser-image.el
+  ! elisp/geiser-impl.el -> geiser-impl.el
+  ! elisp/geiser-log.el -> geiser-log.el
+  ! elisp/geiser-menu.el -> geiser-menu.el
+  ! elisp/geiser-mode.el -> geiser-mode.el
+  ! elisp/geiser-popup.el -> geiser-popup.el
+  ! elisp/geiser-reload.el -> geiser-reload.el
+  ! elisp/geiser-repl.el -> geiser-repl.el
+  ! elisp/geiser-syntax.el -> geiser-syntax.el
+  ! elisp/geiser-table.el -> geiser-table.el
+  ! elisp/geiser-xref.el -> geiser-xref.el
+  ! elisp/geiser.el -> geiser.el
+  ! doc/dir -> dir
+  ! doc/geiser.texi -> geiser.texi
+Generating geiser.info
+Created geiser-20251220.2301.tar containing:
+  geiser-20251220.2301/
+  geiser-20251220.2301/dir
+  geiser-20251220.2301/geiser-autodoc.el
+  geiser-20251220.2301/geiser-base.el
+  geiser-20251220.2301/geiser-capf.el
+  geiser-20251220.2301/geiser-compile.el
+  geiser-20251220.2301/geiser-completion.el
+  geiser-20251220.2301/geiser-connection.el
+  geiser-20251220.2301/geiser-custom.el
+  geiser-20251220.2301/geiser-debug.el
+  geiser-20251220.2301/geiser-doc.el
+  geiser-20251220.2301/geiser-edit.el
+  geiser-20251220.2301/geiser-eval.el
+  geiser-20251220.2301/geiser-image.el
+  geiser-20251220.2301/geiser-impl.el
+  geiser-20251220.2301/geiser-log.el
+  geiser-20251220.2301/geiser-menu.el
+  geiser-20251220.2301/geiser-mode.el
+  geiser-20251220.2301/geiser-pkg.el
+  geiser-20251220.2301/geiser-popup.el
+  geiser-20251220.2301/geiser-reload.el
+  geiser-20251220.2301/geiser-repl.el
+  geiser-20251220.2301/geiser-syntax.el
+  geiser-20251220.2301/geiser-table.el
+  geiser-20251220.2301/geiser-xref.el
+  geiser-20251220.2301/geiser.el
+  geiser-20251220.2301/geiser.info
+ ✓ Success:
+  2026-02-01T03:45:38+0000  geiser-20251220.2301.entry
+  2026-02-01T03:45:38+0000  geiser-20251220.2301.tar
+Built geiser in 7.691s, finished at 2026-02-01T03:45:39+0000

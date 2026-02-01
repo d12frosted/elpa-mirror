@@ -1,3 +1,31 @@
  • Building package gams-mode (from github:ShiroTakeda/gams-mode)...
 Updating /mnt/store/melpa/working/gams-mode/
 Checking out eeb4cfcf98d113388a5d66b2fa65cb32563ef9af
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gams-mode/
+  to /tmp/gams-mode56SkDD/gams-mode-20260121.924
+    gams-mode.el -> gams-mode.el
+    gams-install.el -> gams-install.el
+    gams-logo.xpm -> gams-logo.xpm
+    gams-commands.txt -> gams-commands.txt
+    gams-commands-dollar.txt -> gams-commands-dollar.txt
+    gams_install.ps1 -> gams_install.ps1
+    gams_install.sh -> gams_install.sh
+  ! doc/gams-mode.texi -> gams-mode.texi
+Generating gams-mode.info
+Created gams-mode-20260121.924.tar containing:
+  gams-mode-20260121.924/
+  gams-mode-20260121.924/dir
+  gams-mode-20260121.924/gams-commands-dollar.txt
+  gams-mode-20260121.924/gams-commands.txt
+  gams-mode-20260121.924/gams-install.el
+  gams-mode-20260121.924/gams-logo.xpm
+  gams-mode-20260121.924/gams-mode-pkg.el
+  gams-mode-20260121.924/gams-mode.el
+  gams-mode-20260121.924/gams-mode.info
+  gams-mode-20260121.924/gams_install.ps1
+  gams-mode-20260121.924/gams_install.sh
+ ✓ Success:
+  2026-02-01T03:45:27+0000  gams-mode-20260121.924.entry
+  2026-02-01T03:45:27+0000  gams-mode-20260121.924.tar
+Built gams-mode in 6.802s, finished at 2026-02-01T03:45:28+0000
