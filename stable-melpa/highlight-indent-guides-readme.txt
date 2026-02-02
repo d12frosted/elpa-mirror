@@ -1,3 +1,4 @@
+
 This minor mode highlights indentation levels via font-lock.  Indent widths
 are dynamically discovered, which means this correctly highlights in any
 mode, regardless of indent width, even in languages with non-uniform
