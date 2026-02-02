@@ -1,3 +1,9 @@
+#+begin_html
+<p align="center">
+  <a href="https://github.com/sponsors/d12frosted"><img alt="Sponsor" src="https://img.shields.io/badge/Sponsor-d12frosted-pink?logo=githubsponsors&logoColor=white"/></a>
+</p>
+#+end_html
+
 * =elpa-mirror=
 
 Mirrors for some Emacs package archives. These mirrors should be used only when
@@ -54,3 +60,7 @@ To use =elpa-mirror= with Spacemacs, you need to modify
 For more grained control over =package-archives= (e. g. if you wish to use
 mirror only when one of the official repositories is down) checkout how it's
 implemented in Spacemacs.
+
+* Support
+
+If you enjoy this project, you can support its development via [[https://github.com/sponsors/d12frosted][GitHub Sponsors]] or [[https://www.patreon.com/d12frosted][Patreon]].
