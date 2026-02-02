@@ -24,7 +24,7 @@
   Each version that is released should be checked with this checklist:
 
   • ☐ All ert test passing
-  • ☐ Functional test passing on emacs 23 and 24
+  • ☐ Functional tests passing
   • ☐ websocket.el byte compiling cleanly.
 
 

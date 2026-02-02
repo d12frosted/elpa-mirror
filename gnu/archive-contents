@@ -1061,7 +1061,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 11 0)
+  . [(1 11 1)
      ((emacs (28 1)) (llm (0 24 0)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1069,7 +1069,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "4868cf4333b03d720005370cf7602b24df88d9e6"))])
+      (:commit . "1358d67657b1632a6af463f75b233cf6c69c5557"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
@@ -3500,12 +3500,12 @@
       (:authors ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
       (:commit . "6037848ee495a67510d8b43f1fbe319b76dbd859"))])
  (websocket
-  . [(1 15) ((cl-lib (0 5))) "Emacs WebSocket client and server" tar
+  . [(1 16) ((cl-lib (0 5))) "Emacs WebSocket client and server" tar
      ((:url . "https://github.com/ahyatt/emacs-websocket")
       (:keywords "communication" "websocket" "server")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "40c208eaab99999d7c1e4bea883648da24c03be3"))])
+      (:commit . "03d1cca4bd910a8df73e4ec637836c6ac25213a2"))])
  (which-key
   . [(3 6 1) ((emacs (25 1))) "Display available keybindings in popup"
      tar

@@ -1,13 +1,15 @@
 1 Cond-Let — Additional and improved binding conditionals
 ═════════════════════════════════════════════════════════
 
-  *This is an ALPHA release!* Breaking changes are possible!*
+        [!WARNING] This is a BETA release!  Breaking changes are
+        unlikely but still possible!  See
+        <https://github.com/tarsius/cond-let/wiki>.
 
   Emacs provides the binding conditionals `if-let', `if-let*',
   `when-let', `when-let*', `and-let*' and `while-let'.
 
   This package implements the missing `and-let' and `while-let*', and
-  the original `cond-let', `cond-let*', `and$' and `and>'.
+  the original `cond-let', `cond-let*', `when$', `and$' and `and>'.
 
   This package additionally provides more consistent and improved
   implementations of the binding conditionals already provided by Emacs.

@@ -4,4 +4,5 @@ Features include:
 - Multiple chats with different models
 - Completion at point
 - Region transformations
-- Context awareness
+- Context awareness (files, buffers, and ad-hoc snippets)
+- System prompt snippets

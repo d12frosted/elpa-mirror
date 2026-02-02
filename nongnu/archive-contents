@@ -236,11 +236,11 @@
       (:authors ("Chris Wanstrath" . "chris@ozmm.org"))
       (:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (cond-let
-  . [(0 2 1) ((emacs (28 1)))
+  . [(0 2 2) ((emacs (28 1)))
      "Additional and improved binding conditionals" tar
      ((:url . "https://github.com/tarsius/cond-let")
       (:keywords "extensions")
-      (:commit . "0430bd1eb3493ea90d69feb6b7eb7dac3e10d0ba"))])
+      (:commit . "8bf87d45e169ebc091103b2aae325aece3aa804d"))])
  (consult-flycheck
   . [(1 1) ((emacs (29 1)) (consult (2 8)) (flycheck (35)))
      "Provides the command `consult-flycheck'" tar
@@ -444,12 +444,12 @@
       (:authors ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
       (:commit . "dcdeb86f7ae633e252f9ef8a73d3458e87c1ab12"))])
  (emacsql
-  . [(4 3 4) ((emacs (26 1))) "High-level SQL database front-end" tar
+  . [(4 3 5) ((emacs (26 1))) "High-level SQL database front-end" tar
      ((:url . "https://github.com/magit/emacsql")
       (:maintainer "Jonas Bernoulli"
 		   . "emacs.emacsql@jonas.bernoulli.dev")
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "c6a9d2373cc15184e4e34414b8574a896d070323"))])
+      (:commit . "6ef7473248fce048c7daa00c3b2ae75af987c89c"))])
  (engine-mode
   . [(2 2 4) ((cl-lib (0 5))) "Define and query search engines" tar
      ((:url . "https://github.com/hrs/engine-mode")
