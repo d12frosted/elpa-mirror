@@ -46,13 +46,37 @@ Installation from MELPA:
 (use-package easysession
   :ensure t
   :custom
-  ;; Interval between automatic session saves
-  (easysession-save-interval (* 10 60))
-  ;; Make the current session name appear in the mode-line
-  (easysession-mode-line-misc-info t)
-  :init
-  (add-hook 'emacs-startup-hook #'easysession-load-including-geometry 102)
-  (add-hook 'emacs-startup-hook #'easysession-save-mode 103))
+  (easysession-save-interval (* 10 60))  ; Save every 10 minutes
+
+  ;; Display the active session name in the mode-line lighter.
+  (easysession-save-mode-lighter-show-session-name t)
+
+  ;; Optionally, the session name can be shown in the modeline info area:
+  ;; (easysession-mode-line-misc-info t)
+
+  :config
+  ;; Key mappings
+  (global-set-key (kbd "C-c sl") #'easysession-switch-to) ; Load session
+  (global-set-key (kbd "C-c ss") #'easysession-save) ; Save session
+  (global-set-key (kbd "C-c sL")
+   #'easysession-switch-to-and-restore-geometry)
+  (global-set-key (kbd "C-c sr") #'easysession-rename)
+  (global-set-key (kbd "C-c sR") #'easysession-reset)
+  (global-set-key (kbd "C-c sd") #'easysession-delete)
+
+  ;; Non-nil: `easysession-setup' loads the session automatically.
+  ;; Nil: session is not loaded automatically; the user can load it manually.
+  (setq easysession-setup-load-session t)
+
+  ;; Priority depth used when `easysession-setup' adds `easysession' hooks.
+  ;; 102 ensures that the session is loaded after all other packages.
+  (setq easysession-setup-add-hook-depth 102)
+
+  ;; The `easysession-setup' function adds hooks:
+  ;; - To automatically load the session during `emacs-startup-hook'.
+  ;; - To automatically save the session at regular intervals, and when Emacs
+  ;; exits.
+  (easysession-setup))
 
 Usage:
 ------
@@ -61,12 +85,6 @@ It is recommended to use the following functions:
   to reload the current one,
 - (easysession-save) to save the current session as the current name or
   another name.
-
-To facilitate session management, consider using the following key mappings:
-C-c l for switching sessions with easysession-switch-to, and C-c s for
-saving the current session with easysession-save:
-  (global-set-key (kbd "C-c l") 'easysession-switch-to)
-  (global-set-key (kbd "C-c s") 'easysession-save)
 
 Links:
 ------
