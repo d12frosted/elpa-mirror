@@ -281,10 +281,10 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   always load the plugin:
   ┌────
   │ (add-to-list 'eglot-server-programs
-  │ 	     '((java-mode java-ts-mode) .
-  │ 	       ("jdtls"
-  │ 		:initializationOptions
-  │ 		(:bundles ["/PATH/TO/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-VERSION.jar"]))))
+  │              '((java-mode java-ts-mode) .
+  │                ("jdtls"
+  │                 :initializationOptions
+  │                 (:bundles ["/PATH/TO/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-VERSION.jar"]))))
   └────
 
   Alternatively, set the variable `eglot-workspace-configuration' in the
@@ -293,8 +293,8 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   ┌────
   │ ;; content of /project/.dir-locals.el
   │ ((nil . ((eglot-workspace-configuration
-  │ 	  . (:jdtls (:initializationOptions
-  │ 		     (:bundles ["/PATH/TO/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-VERSION.jar"])))))))
+  │           . (:jdtls (:initializationOptions
+  │                      (:bundles ["/PATH/TO/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-VERSION.jar"])))))))
   └────
 
 

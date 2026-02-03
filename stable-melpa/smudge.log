@@ -1,33 +1,37 @@
  • Building package smudge (from github:danielfm/smudge)...
 Updating /mnt/store/melpa/working/smudge/
-Checking out dcca1b9ac15886060788df83c7da63faa5ae027f
+Checking out c90db830e84e34ac5724f57eda2f1112a589df5c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/smudge/
-  to /tmp/smudge9EdrPp/smudge-20251224.1549
+  to /tmp/smudge9pDJd6/smudge-20260203.20
     smudge-api.el -> smudge-api.el
     smudge-apple.el -> smudge-apple.el
     smudge-connect.el -> smudge-connect.el
     smudge-controller.el -> smudge-controller.el
     smudge-dbus.el -> smudge-dbus.el
     smudge-device-select.el -> smudge-device-select.el
+    smudge-lyrics.el -> smudge-lyrics.el
     smudge-playlist.el -> smudge-playlist.el
     smudge-remote.el -> smudge-remote.el
     smudge-track.el -> smudge-track.el
     smudge.el -> smudge.el
-Created smudge-20251224.1549.tar containing:
-  smudge-20251224.1549/
-  smudge-20251224.1549/smudge-api.el
-  smudge-20251224.1549/smudge-apple.el
-  smudge-20251224.1549/smudge-connect.el
-  smudge-20251224.1549/smudge-controller.el
-  smudge-20251224.1549/smudge-dbus.el
-  smudge-20251224.1549/smudge-device-select.el
-  smudge-20251224.1549/smudge-pkg.el
-  smudge-20251224.1549/smudge-playlist.el
-  smudge-20251224.1549/smudge-remote.el
-  smudge-20251224.1549/smudge-track.el
-  smudge-20251224.1549/smudge.el
+Created smudge-20260203.20.tar containing:
+  smudge-20260203.20/
+  smudge-20260203.20/smudge-api.el
+  smudge-20260203.20/smudge-apple.el
+  smudge-20260203.20/smudge-connect.el
+  smudge-20260203.20/smudge-controller.el
+  smudge-20260203.20/smudge-dbus.el
+  smudge-20260203.20/smudge-device-select.el
+  smudge-20260203.20/smudge-lyrics.el
+  smudge-20260203.20/smudge-pkg.el
+  smudge-20260203.20/smudge-playlist.el
+  smudge-20260203.20/smudge-remote.el
+  smudge-20260203.20/smudge-track.el
+  smudge-20260203.20/smudge.el
  ✓ Success:
-  2026-02-02T16:37:30+0000  smudge-20251224.1549.entry
-  2026-02-02T16:37:30+0000  smudge-20251224.1549.tar
-Built smudge in 5.621s, finished at 2026-02-02T16:37:32+0000
+  2026-02-02T22:20:47+0000  smudge-20251224.1549.entry
+  2026-02-02T22:20:47+0000  smudge-20251224.1549.tar
+  2026-02-03T00:35:42+0000  smudge-20260203.20.entry
+  2026-02-03T00:35:42+0000  smudge-20260203.20.tar
+Built smudge in 3.397s, finished at 2026-02-03T00:35:43+0000
