@@ -35,11 +35,8 @@ Keys binded by default:
     - C-c C-c - to send the text to the OpenAI API and insert a response
     - C-c . - to inspect raw data (and C-u C-c .)
     - C-c C-. - to see url.el raw HTTP data (working only during request)
-    - M-h - mark ai block content
-    - C-u M-h - mark chat message
-    - C-c <backspace> - (kill-region-at-point) to remove the chat
-      part under point.  (oai-block.el)
-    - C-c C-l - set :max-tokens
+    - M-h - mark element in ai block (C-u M-h - mark chat message)
+    - C-c C-t - set :max-tokens
 - in buffer with oai-mode enabled:
     - C-g - to stop all requsts.
 

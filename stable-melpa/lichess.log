@@ -1,9 +1,9 @@
  • Building package lichess (from github:tmythicator/lichess.el)...
 Updating /mnt/store/melpa/working/lichess/
-Checking out 537fb54ff4eaf0f932a78d951695e20d696d59f3
+Checking out 1dd8a25ede7144c5d6be1f45f4ae3d07903783cd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lichess/
-  to /tmp/lichesswF458o/lichess-20260201.2117
+  to /tmp/lichesssXSWmw/lichess-20260203.1027
     .dev.el -> .dev.el
     .secrets.example.el -> .secrets.example.el
     lichess-ai.el -> lichess-ai.el
@@ -14,6 +14,8 @@ Copying files (->) and directories (=>)
     lichess-board.el -> lichess-board.el
     lichess-broadcast-list.el -> lichess-broadcast-list.el
     lichess-broadcast-view.el -> lichess-broadcast-view.el
+    lichess-challenge-list.el -> lichess-challenge-list.el
+    lichess-challenge.el -> lichess-challenge.el
     lichess-core.el -> lichess-core.el
     lichess-fen.el -> lichess-fen.el
     lichess-game.el -> lichess-game.el
@@ -22,42 +24,46 @@ Copying files (->) and directories (=>)
     lichess-util.el -> lichess-util.el
     lichess.el -> lichess.el
     assets => assets
-Created lichess-20260201.2117.tar containing:
-  lichess-20260201.2117/
-  lichess-20260201.2117/.dev.el
-  lichess-20260201.2117/.secrets.example.el
-  lichess-20260201.2117/assets/
-  lichess-20260201.2117/assets/pieces/
-  lichess-20260201.2117/assets/pieces/cburnett/
-  lichess-20260201.2117/assets/pieces/cburnett/bB.svg
-  lichess-20260201.2117/assets/pieces/cburnett/bK.svg
-  lichess-20260201.2117/assets/pieces/cburnett/bN.svg
-  lichess-20260201.2117/assets/pieces/cburnett/bP.svg
-  lichess-20260201.2117/assets/pieces/cburnett/bQ.svg
-  lichess-20260201.2117/assets/pieces/cburnett/bR.svg
-  lichess-20260201.2117/assets/pieces/cburnett/wB.svg
-  lichess-20260201.2117/assets/pieces/cburnett/wK.svg
-  lichess-20260201.2117/assets/pieces/cburnett/wN.svg
-  lichess-20260201.2117/assets/pieces/cburnett/wP.svg
-  lichess-20260201.2117/assets/pieces/cburnett/wQ.svg
-  lichess-20260201.2117/assets/pieces/cburnett/wR.svg
-  lichess-20260201.2117/lichess-ai.el
-  lichess-20260201.2117/lichess-announce.el
-  lichess-20260201.2117/lichess-api.el
-  lichess-20260201.2117/lichess-board-gui.el
-  lichess-20260201.2117/lichess-board-tui.el
-  lichess-20260201.2117/lichess-board.el
-  lichess-20260201.2117/lichess-broadcast-list.el
-  lichess-20260201.2117/lichess-broadcast-view.el
-  lichess-20260201.2117/lichess-core.el
-  lichess-20260201.2117/lichess-fen.el
-  lichess-20260201.2117/lichess-game.el
-  lichess-20260201.2117/lichess-http.el
-  lichess-20260201.2117/lichess-pkg.el
-  lichess-20260201.2117/lichess-tv.el
-  lichess-20260201.2117/lichess-util.el
-  lichess-20260201.2117/lichess.el
+Created lichess-20260203.1027.tar containing:
+  lichess-20260203.1027/
+  lichess-20260203.1027/.dev.el
+  lichess-20260203.1027/.secrets.example.el
+  lichess-20260203.1027/assets/
+  lichess-20260203.1027/assets/pieces/
+  lichess-20260203.1027/assets/pieces/cburnett/
+  lichess-20260203.1027/assets/pieces/cburnett/bB.svg
+  lichess-20260203.1027/assets/pieces/cburnett/bK.svg
+  lichess-20260203.1027/assets/pieces/cburnett/bN.svg
+  lichess-20260203.1027/assets/pieces/cburnett/bP.svg
+  lichess-20260203.1027/assets/pieces/cburnett/bQ.svg
+  lichess-20260203.1027/assets/pieces/cburnett/bR.svg
+  lichess-20260203.1027/assets/pieces/cburnett/wB.svg
+  lichess-20260203.1027/assets/pieces/cburnett/wK.svg
+  lichess-20260203.1027/assets/pieces/cburnett/wN.svg
+  lichess-20260203.1027/assets/pieces/cburnett/wP.svg
+  lichess-20260203.1027/assets/pieces/cburnett/wQ.svg
+  lichess-20260203.1027/assets/pieces/cburnett/wR.svg
+  lichess-20260203.1027/lichess-ai.el
+  lichess-20260203.1027/lichess-announce.el
+  lichess-20260203.1027/lichess-api.el
+  lichess-20260203.1027/lichess-board-gui.el
+  lichess-20260203.1027/lichess-board-tui.el
+  lichess-20260203.1027/lichess-board.el
+  lichess-20260203.1027/lichess-broadcast-list.el
+  lichess-20260203.1027/lichess-broadcast-view.el
+  lichess-20260203.1027/lichess-challenge-list.el
+  lichess-20260203.1027/lichess-challenge.el
+  lichess-20260203.1027/lichess-core.el
+  lichess-20260203.1027/lichess-fen.el
+  lichess-20260203.1027/lichess-game.el
+  lichess-20260203.1027/lichess-http.el
+  lichess-20260203.1027/lichess-pkg.el
+  lichess-20260203.1027/lichess-tv.el
+  lichess-20260203.1027/lichess-util.el
+  lichess-20260203.1027/lichess.el
  ✓ Success:
-  2026-02-03T06:52:25+0000  lichess-20260201.2117.entry
-  2026-02-03T06:52:24+0000  lichess-20260201.2117.tar
-Built lichess in 3.436s, finished at 2026-02-03T06:52:25+0000
+  2026-02-03T09:06:05+0000  lichess-20260201.2117.entry
+  2026-02-03T09:06:04+0000  lichess-20260201.2117.tar
+  2026-02-03T11:19:26+0000  lichess-20260203.1027.entry
+  2026-02-03T11:19:25+0000  lichess-20260203.1027.tar
+Built lichess in 3.569s, finished at 2026-02-03T11:19:26+0000
