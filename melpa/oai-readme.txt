@@ -34,7 +34,7 @@ Keys binded by default:
 - In block #+begin_ai..#+end_ai blocks:
     - C-c C-c - to send the text to the OpenAI API and insert a response
     - C-c . - to inspect raw data (and C-u C-c .)
-    - C-c C-. - to see url.el raw HTTP data (working only during request)
+    - C-c C-.  - to see url.el raw HTTP data (working only during request)
     - M-h - mark element in ai block (C-u M-h - mark chat message)
     - C-c C-t - set :max-tokens
 - in buffer with oai-mode enabled:
