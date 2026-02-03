@@ -1,9 +1,9 @@
  • Building package vulpea (from github:d12frosted/vulpea)...
 Updating /mnt/store/melpa/working/vulpea/
-Checking out 520c44645ac216d93c3339f8ae75ac0eb831a97f
+Checking out 37584d93e97be257b37ea38ecbb9d9ee9d4aab3b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vulpea/
-  to /tmp/vulpeayXQW70/vulpea-20260202.812
+  to /tmp/vulpeaQLfzh1/vulpea-20260203.1827
     vulpea-buffer.el -> vulpea-buffer.el
     vulpea-db-extract.el -> vulpea-db-extract.el
     vulpea-db-query.el -> vulpea-db-query.el
@@ -12,22 +12,26 @@ Copying files (->) and directories (=>)
     vulpea-meta.el -> vulpea-meta.el
     vulpea-note.el -> vulpea-note.el
     vulpea-select.el -> vulpea-select.el
+    vulpea-tags.el -> vulpea-tags.el
     vulpea-utils.el -> vulpea-utils.el
     vulpea.el -> vulpea.el
-Created vulpea-20260202.812.tar containing:
-  vulpea-20260202.812/
-  vulpea-20260202.812/vulpea-buffer.el
-  vulpea-20260202.812/vulpea-db-extract.el
-  vulpea-20260202.812/vulpea-db-query.el
-  vulpea-20260202.812/vulpea-db-sync.el
-  vulpea-20260202.812/vulpea-db.el
-  vulpea-20260202.812/vulpea-meta.el
-  vulpea-20260202.812/vulpea-note.el
-  vulpea-20260202.812/vulpea-pkg.el
-  vulpea-20260202.812/vulpea-select.el
-  vulpea-20260202.812/vulpea-utils.el
-  vulpea-20260202.812/vulpea.el
+Created vulpea-20260203.1827.tar containing:
+  vulpea-20260203.1827/
+  vulpea-20260203.1827/vulpea-buffer.el
+  vulpea-20260203.1827/vulpea-db-extract.el
+  vulpea-20260203.1827/vulpea-db-query.el
+  vulpea-20260203.1827/vulpea-db-sync.el
+  vulpea-20260203.1827/vulpea-db.el
+  vulpea-20260203.1827/vulpea-meta.el
+  vulpea-20260203.1827/vulpea-note.el
+  vulpea-20260203.1827/vulpea-pkg.el
+  vulpea-20260203.1827/vulpea-select.el
+  vulpea-20260203.1827/vulpea-tags.el
+  vulpea-20260203.1827/vulpea-utils.el
+  vulpea-20260203.1827/vulpea.el
  ✓ Success:
   2026-02-03T16:17:08+0000  vulpea-20260202.812.entry
   2026-02-03T16:17:08+0000  vulpea-20260202.812.tar
-Built vulpea in 3.528s, finished at 2026-02-03T16:17:09+0000
+  2026-02-03T18:32:52+0000  vulpea-20260203.1827.entry
+  2026-02-03T18:32:52+0000  vulpea-20260203.1827.tar
+Built vulpea in 6.283s, finished at 2026-02-03T18:32:54+0000
