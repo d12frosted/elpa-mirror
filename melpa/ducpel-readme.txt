@@ -13,7 +13,7 @@ Also if you keep levels separately:
 
   (setq ducpel-levels-directory "/path/to/ducpel-levels-dir")
 
-After that you can "M-x ducpel" and enjoy.  Use:
+After that, you can call "M-x ducpel" and enjoy.  Use:
 
 - arrow keys to move your man;
 - TAB to switch to another man;
