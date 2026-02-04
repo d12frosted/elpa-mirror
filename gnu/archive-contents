@@ -882,14 +882,13 @@
       (:url . "https://elpa.gnu.org/packages/djvu.html")
       (:commit . "071c8ab168588897475899c46eaa16e70141db8c"))])
  (do-at-point
-  . [(0 1 2) ((emacs (26 1)))
+  . [(0 2 0) ((emacs (26 1)))
      "Generic context-sensitive action dispatcher." tar
-     ((:url . "https://git.sr.ht/~pkal/do-at-point")
+     ((:url . "https://codeberg.org/pkal/do-at-point.el")
       (:keywords "convenience")
-      (:maintainer "Philip Kaludercic"
-		   . "~pkal/public-inbox@lists.sr.ht")
+      (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
       (:authors ("Philip Kaludercic" . "philipk@posteo.net"))
-      (:commit . "da0742df74cbb36347aefd5dcb17d674ee4846d3"))])
+      (:commit . "abdc992088f552d4dbc649955b0911f15418aead"))])
  (doc-toc
   . [(1 2) ((emacs (26 1)))
      "Manage outlines/table of contents of pdf and djvu documents" tar
