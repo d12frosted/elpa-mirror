@@ -3,7 +3,7 @@ Updating /mnt/store/melpa/working/hyperbole/
 Checking out d41a0d9ef7babee384c19f299e9d06852f3be8ad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperbole/
-  to /tmp/hyperboleWRoNbZ/hyperbole-20260203.447
+  to /tmp/hyperbolexxBNMH/hyperbole-20260203.447
     hact.el -> hact.el
     hactypes.el -> hactypes.el
     hargs.el -> hargs.el
@@ -172,11 +172,11 @@ Copying files (->) and directories (=>)
     test/hy-test-dependencies.el -> test/hy-test-dependencies.el
     test/hy-test-helpers.el -> test/hy-test-helpers.el
 Generating hyperbole.info
-Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperboleWRoNbZ/hyperbole-20260203.447/hyperbole.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperbolexxBNMH/hyperbole-20260203.447/hyperbole.info' exited with non-zero exit-code: 1
 hyperbole.texi:4631: misplaced {
 hyperbole.texi:4632: misplaced }
 
-Error: (error "Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperboleWRoNbZ/hyperbole-20260203.447/hyperbole.info' exited with non-zero exit-code: 1")
+Error: (error "Command `makeinfo --no-split hyperbole.texi -o /tmp/hyperbolexxBNMH/hyperbole-20260203.447/hyperbole.info' exited with non-zero exit-code: 1")
 Command `install-info --dir\=dir hyperbole.info' exited with non-zero exit-code: 1
 install-info: No such file or directory for hyperbole.info
 
@@ -358,6 +358,6 @@ Created hyperbole-20260203.447.tar containing:
   hyperbole-20260203.447/test/test-helpers-tests.el
   hyperbole-20260203.447/topwin.py
  ✓ Success:
-  2026-02-04T02:51:30+0000  hyperbole-20260203.447.entry
-  2026-02-04T02:51:30+0000  hyperbole-20260203.447.tar
-Built hyperbole in 8.610s, finished at 2026-02-04T02:51:31+0000
+  2026-02-04T07:19:03+0000  hyperbole-20260203.447.entry
+  2026-02-04T07:19:03+0000  hyperbole-20260203.447.tar
+Built hyperbole in 9.027s, finished at 2026-02-04T07:19:04+0000
