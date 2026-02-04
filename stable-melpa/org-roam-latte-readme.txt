@@ -4,13 +4,17 @@ org-roam node titles or aliases and highlights them, allowing you to quickly
 navigate to those nodes or convert the text into a formal link.
 
 Features:
-- Fast: Scans only the VISIBLE section of a buffer, and checks against a hash
+- Fast: Scans only the visible section of a buffer, and checks against a hash
 table. It stays snappy even with thousands of nodes.
-- Smart Linking: Highlighted words are navigatable and can be converted
-to links easily.
+- Instant: Automatically highlights keywords as you type, instantly surfacing
+potential links.
+- Non-org Modes: Allows you to have virtual, navigable links in any mode: text,
+code, shells, man pages, etc.
+- Smart Linking: Highlighted words are navigatable.
+    Click / RET: Visit the node.
+    M-RET: Convert the text into a formal org-roam ID link.
 - Pluralization: Automatically handles pluralization (e.g., a node titled
 "Algorithm" will highlight "algorithms" in your text).
-Org-roam Alias Support: Recognizes and highlights your node aliases as well.
-- Context Aware: Ignores existing Org links. Intelligent handling of code
-blocks (only highlights inside comments).
-- Theme Aware: Adapts colors automatically for Light and Dark themes.
+- Context Aware: Ignores existing Org links and node self-referencing. It
+intelligent handles code blocks (only highlights inside comments).
+- Theme Aware: Adapts colors automatically for light and dark themes.
