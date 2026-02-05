@@ -3,9 +3,6 @@
             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-
-
-
 1 Overview
 ══════════
 
@@ -23,12 +20,11 @@
 
   AUCTeX provides commands for generating previews in various regions:
   the current section, the entire document, the marked region, and so
-  on.  While these previews generate, you're not supposed to edit while
-  the previews generate, because that can mess up their positioning.  A
-  typical workflow is thus to run the command `preview-section' (`C-c
-  C-p C-s') every few minutes, during pauses in editing.  This
-  introduces a bit of overhead if you prefer to have previews on by
-  default.
+  on.  While these previews generate, you're not supposed to edit them,
+  because that can mess up their positioning.  A typical workflow is
+  thus to run the command `preview-section' (`C-c C-p C-s') every few
+  minutes, during pauses in editing.  This introduces a bit of overhead
+  if you prefer to have previews on by default.
 
   This package provides a minor mode, `preview-auto-mode', toggled via
   the command `M-x preview-auto-mode', the keybinding `C-c C-p C-a', or
@@ -173,7 +169,25 @@
 <https://orgmode.org/manual/Editing-Source-Code.html>
 
 
-2.6 tikzpicture support
+2.6 VC revision files (vc.el)
+─────────────────────────────
+
+  When you visit a revision or version backup created by `vc.el' (e.g.,
+  via `C-x v ~'), Emacs uses file names like `paper.tex.~REV~'.  AUCTeX
+  decides whether a buffer's file already has a TeX extension using
+  `TeX-file-extensions', and `preview-latex' (hence `preview-auto')
+  relies on that when computing the master file via `TeX-master-file'.
+  The default list does not match `tex.~REV~', so AUCTeX treats these
+  files as extension-less and appends `.tex', producing wrong master/aux
+  names and breaking previews.  Add the following to recognize VC
+  revision files as TeX sources:
+  ┌────
+  │ (add-to-list 'TeX-file-extensions "tex\\.~[^~]+~")
+  └────
+  `preview-auto' should then work fine in such buffers.
+
+
+2.7 tikzpicture support
 ───────────────────────
 
   According to section B.4.5 of the `preview-latex' info manual, support

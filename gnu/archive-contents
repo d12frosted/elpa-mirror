@@ -2481,13 +2481,13 @@
       (:authors ("Tom Gillespie" . "tgbugs@gmail.com"))
       (:commit . "4dad5fcdbbb362a0dc2dfa7b5a38dd5be1551c68"))])
  (preview-auto
-  . [(0 4 1) ((emacs (29 3)) (auctex (14 0 5)))
+  . [(0 4 2) ((emacs (29 3)) (auctex (14 0 5)))
      "Automatic previews in AUCTeX" tar
      ((:url . "https://github.com/ultronozm/preview-auto.el")
       (:keywords "tex" "convenience")
       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-      (:commit . "4002b7569416eac640072ec7fe04337e2747910d"))])
+      (:commit . "6da4a97bf51a3994525958cfa3736fb80003d4e7"))])
  (preview-tailor
   . [(0 2 1) ((emacs (29 1)) (auctex (0)))
      "Tailor AUCTeX preview scale to monitor/text scale" tar

@@ -18,10 +18,10 @@ See see https://github.com/Anoncheg1/emacs-oai for the full set
 of features and setup instructions.
 
 Configuration:
-(add-to-list 'load-path "path/to/oai")
+(add-to-list 'load-path "path/to/oai") ; (optional)
 (require 'oai)
 (add-hook 'org-mode-hook #'oai-mode) ; oai.el
-(setq oai-restapi-con-token "xxx") ; oai-restapi.el
+(setq oai-restapi-con-token "xxx") ; oai-restapi.el (optional)
 
 You will need an OpenAI API key-token.
 It can be stored in the format:
