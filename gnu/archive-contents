@@ -249,11 +249,11 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "0cf8b60f62876f3e75653a5fb30d5d5cdd74c586"))])
  (beframe
-  . [(1 4 0) ((emacs (28 1))) "Isolate buffers per frame" tar
+  . [(1 5 0) ((emacs (28 1))) "Isolate buffers per frame" tar
      ((:url . "https://github.com/protesilaos/beframe")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "2728f72174c1164e99bab4daaef64910e6b41c6c"))])
+      (:commit . "68260beb5d60600a75d6e5b54eb1e5e9cf8c6eac"))])
  (bicep-ts-mode
   . [(0 1 4) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
@@ -736,13 +736,13 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "36f24f0f0f472e4cb50025ed62a1b32351d7d294"))])
  (denote-review
-  . [(1 0 4) ((emacs (28 1)) (denote (4 1 3)))
+  . [(1 0 5) ((emacs (28 1)) (denote (4 1 3)))
      "implements review process for denote notes" tar
      ((:url . "https://codeberg.org/mattof/denote-review")
       (:keywords "files")
       (:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
-      (:commit . "9a4cf8a422e1bc915b2624a34ef39563709915fd"))])
+      (:commit . "1a93a32190e35731ba12e7ecde629e2971e870db"))])
  (denote-search
   . [(1 0 3) ((emacs (29 1)) (denote (3 0)))
      "Search the contents of your notes" tar
@@ -1930,7 +1930,7 @@
       (:authors ("Ian Martins" . "ianxm@jhu.edu"))
       (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode
-  . [(8 0 2) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
+  . [(8 0 3) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
      tar
      ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
       (:keywords "matlab(r)")
@@ -1939,7 +1939,7 @@
 		   ("John Ciolfi" . "john.ciolfi.32@gmail.com"))
       (:authors ("Matt Wette" . "mwette@alumni.caltech.edu")
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
-      (:commit . "dcff5b84679153440a7b83ac5b10b13997196e69"))])
+      (:commit . "eb664b938472b7d2369149ef66089eb8be4bfc0b"))])
  (mct
   . [(1 1 0) ((emacs (29 1))) "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")

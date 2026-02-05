@@ -5,6 +5,11 @@ with rendered markdown, and a separate prompt composition buffer.
 Requirements:
   - pi coding agent installed and in PATH
 
+Optional Dependencies:
+  - phscroll: Markdown tables that exceed the window width wrap awkwardly.
+    phscroll enables horizontal scrolling so tables stay readable.
+    Install from: https://github.com/misohena/phscroll
+
 Usage:
   M-x pi           Start a session in current project
   C-u M-x pi       Start a named session

@@ -187,7 +187,7 @@
   │     mat = [100,   2, 300.2
   │              3, 400,     4];
   │ 
-  │     s = struct('f1'        , 1, ...
+  │     s = struct('f1',         1, ...
   │                'otherField', in1 + input2);
   │ 
   │     a             = 10;                     % comment for a
