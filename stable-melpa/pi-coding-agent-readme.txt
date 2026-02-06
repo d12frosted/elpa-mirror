@@ -3,7 +3,7 @@ Provides a two-window interface for AI-assisted coding: chat history
 with rendered markdown, and a separate prompt composition buffer.
 
 Requirements:
-  - pi coding agent installed and in PATH
+  - pi coding agent 0.51.3 or later, installed and in PATH
 
 Optional Dependencies:
   - phscroll: Markdown tables that exceed the window width wrap awkwardly.
