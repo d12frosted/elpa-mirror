@@ -435,6 +435,11 @@ Assistant". Previous sentence was written by Ellama itself.
     Agent Skills.
   • `ellama-skills-local-path': Project-relative path for local Agent
     Skills.  Default value is `"skills"'.
+  • `ellama-tools-subagent-default-max-steps': Default maximum number of
+    auto-continue steps for a sub-agent. Default value is 30.
+  • `ellama-tools-subagent-roles': Subagent roles with provider, system
+    prompt and allowed tools. Configuration of subagents for the `task'
+    tool.
 
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>

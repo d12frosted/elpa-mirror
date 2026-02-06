@@ -13,8 +13,9 @@ code, shells, man pages, etc.
 - Smart Linking: Highlighted words are navigatable.
     Click / RET: Visit the node.
     M-RET: Convert the text into a formal org-roam ID link.
-- Pluralization: Automatically handles pluralization (e.g., a node titled
-"Algorithm" will highlight "algorithms" in your text).
+- Pluralization: Automatically manages pluralization adjustments (e.g.,
+a node titled "Algorithm" will highlight "algorithms" in your text, or vice
+versa).
 - Context Aware: Ignores existing Org links and node self-referencing. It
 intelligent handles code blocks (only highlights inside comments).
 - Theme Aware: Adapts colors automatically for light and dark themes.
