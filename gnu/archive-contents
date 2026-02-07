@@ -2437,6 +2437,11 @@
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
       (:commit . "c55e6aa2971caad582df1d449e0f57604250cae1"))])
+ (po-mode
+  . [(2 32) ((emacs (23))) "major mode for GNU gettext PO files" tar
+     ((:keywords "i18n" "gettext")
+      (:url . "https://elpa.gnu.org/packages/po-mode.html")
+      (:commit . "24d793df3cffd2fa7636be6f00c2f283577655d4"))])
  (poke
   . [(3 2) ((emacs (25))) "Emacs meets GNU poke!" tar
      ((:url . "https://www.jemarch.net/poke")
