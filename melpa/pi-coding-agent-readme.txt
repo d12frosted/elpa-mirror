@@ -1,4 +1,4 @@
-Emacs frontend for the pi coding agent (https://shittycodingagent.ai/).
+Emacs frontend for the pi coding agent (https://pi.dev).
 Provides a two-window interface for AI-assisted coding: chat history
 with rendered markdown, and a separate prompt composition buffer.
 

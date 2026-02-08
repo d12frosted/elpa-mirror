@@ -4,6 +4,8 @@ It Loop windows at frame, measure and adjust contrast.  Allow to
 This is useful for changing themes during the daytime (circadian
  package) and for highlighting selected window.  Also this works
  for modeline.
+ We also highligh cursor position, this may be disabled witha
+ M-x customize-variable RET selected-window-contrast-text-switch-mode
 
 Usage:
 
@@ -15,6 +17,12 @@ Usage:
   (setopt selected-window-contrast-text-others 0.6)
   (add-hook 'buffer-list-update-hook
             #'selected-window-contrast-highlight-selected-window))
+  ;; Experimental:
+  ;; (add-hook 'window-selection-change-functions
+  ;;   #'selected-window-contrast-mark-small-rectangle-temporary)
+
+
+Note: selected-window-contrast-text-switch-mode
 
 How this works:
  1) We get color with `face-attribute' `selected-frame' for
