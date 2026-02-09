@@ -1060,7 +1060,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 12 0)
+  . [(1 12 1)
      ((emacs (28 1)) (llm (0 24 0)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1068,7 +1068,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "36be8cc6f0dae7c2b60273ed42da26d9744c291b"))])
+      (:commit . "bcb0ffe417ee2b6ae0c0bfdc7ca5624a791a4a41"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
@@ -1930,7 +1930,7 @@
       (:authors ("Ian Martins" . "ianxm@jhu.edu"))
       (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode
-  . [(8 0 3) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
+  . [(8 0 4) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
      tar
      ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
       (:keywords "matlab(r)")
@@ -1939,7 +1939,7 @@
 		   ("John Ciolfi" . "john.ciolfi.32@gmail.com"))
       (:authors ("Matt Wette" . "mwette@alumni.caltech.edu")
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
-      (:commit . "eb664b938472b7d2369149ef66089eb8be4bfc0b"))])
+      (:commit . "61b6a80ded8d8c471878c29db71477579319f19c"))])
  (mct
   . [(1 1 0) ((emacs (29 1))) "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")
@@ -3025,13 +3025,13 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "6f9d587e7e5250cccf1d7f67394fcc59313db755"))])
  (switchy-window
-  . [(1 3) ((emacs (25 1)) (compat (29 1 4 1)))
+  . [(1 4) ((emacs (25 1)) (compat (29 1 4 1)))
      "A most-recently-used window switcher" tar
      ((:url . "https://sr.ht/~tsdh/switchy-window/")
       (:keywords "windows")
       (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
       (:authors ("Tassilo Horn" . "tsdh@gnu.org"))
-      (:commit . "c743c47b7b4326c411470ba98410b7bfe3685edc"))])
+      (:commit . "3ac4e522231a052e9beaa2d25478090d1215c7ae"))])
  (sxhkdrc-mode
   . [(1 2 0) ((emacs (27 1)))
      "Major mode for sxhkdrc files (Simple X Hot Key Daemon)" tar

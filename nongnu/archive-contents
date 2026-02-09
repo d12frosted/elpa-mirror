@@ -1450,14 +1450,14 @@
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
       (:commit . "5245f092e35712df6559a7782a93bb61896175dd"))])
  (pg
-  . [(0 62) ((emacs (28 1)) (peg (1 0 1)))
+  . [(0 63) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
      ((:url . "https://github.com/emarsden/pg-el")
       (:keywords "data" "comm" "database" "postgresql")
       (:maintainer "Eric Marsden"
 		   . "eric.marsden@risk-engineering.org")
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-      (:commit . "d0062a20788b48dba693368faee62b5e42ef5961"))])
+      (:commit . "52888cb6120407654f248877b2a78a75f7df0d99"))])
  (php-mode
   . [(1 26 1) ((emacs (26 1))) "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")

@@ -5860,6 +5860,7 @@
   (wand :url "https://github.com/cmpitg/wand")
   (wandbox :url "https://github.com/kosh04/emacs-wandbox")
   (wanderlust :url "https://github.com/emacsmirror/wanderlust")
+  (warm-mode :url "https://github.com/smallwat3r/emacs-warm-mode")
   (warm-night-theme :url "https://github.com/mswift42/warm-night-theme")
   (wasp-mode :url "https://github.com/thechampagne/wasp-mode")
   (wat-ts-mode :url "https://github.com/nverno/wat-ts-mode")

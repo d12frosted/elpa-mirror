@@ -1,2 +1,29 @@
  • Building package geiser-guile (from gitlab:emacs-geiser/guile)...
 Updating /mnt/store/melpa/working/geiser-guile/
+Checking out a0f111f8dedd31c593c4ed12c0b99745f3c1340f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-guile/
+  to /tmp/geiser-guileLllb6B/geiser-guile-20240920.35
+    geiser-guile.el -> geiser-guile.el
+    geiser-guile.texi -> geiser-guile.texi
+    src/geiser => src/geiser
+Generating geiser-guile.info
+Created geiser-guile-20240920.35.tar containing:
+  geiser-guile-20240920.35/
+  geiser-guile-20240920.35/dir
+  geiser-guile-20240920.35/geiser-guile-pkg.el
+  geiser-guile-20240920.35/geiser-guile.el
+  geiser-guile-20240920.35/geiser-guile.info
+  geiser-guile-20240920.35/src/
+  geiser-guile-20240920.35/src/geiser/
+  geiser-guile-20240920.35/src/geiser/completion.scm
+  geiser-guile-20240920.35/src/geiser/doc.scm
+  geiser-guile-20240920.35/src/geiser/emacs.scm
+  geiser-guile-20240920.35/src/geiser/evaluation.scm
+  geiser-guile-20240920.35/src/geiser/modules.scm
+  geiser-guile-20240920.35/src/geiser/utils.scm
+  geiser-guile-20240920.35/src/geiser/xref.scm
+ ✓ Success:
+  2026-02-09T00:37:43+0000  geiser-guile-20240920.35.entry
+  2026-02-09T00:37:43+0000  geiser-guile-20240920.35.tar
+Built geiser-guile in 4.998s, finished at 2026-02-09T00:37:44+0000
