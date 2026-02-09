@@ -1864,13 +1864,13 @@
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "57615408f9bd70247d2b2844a1946a00300ef5bb"))])
  (undo-fu-session
-  . [(0 7) ((emacs (28 1)))
+  . [(0 8) ((emacs (28 1)))
      "Persistent undo, available between sessions" tar
      ((:url . "https://codeberg.org/ideasman42/emacs-undo-fu-session")
       (:keywords "convenience")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "cd619e30ebdbf0770305dd4f51c50548ab08d779"))])
+      (:commit . "db5e165439c95bf36f3e48d0c87d3879cabb18f0"))])
  (vc-fossil
   . [(20230504) nil
      "VC backend for the fossil sofware configuraiton management system"

@@ -17,12 +17,11 @@ Usage:
   (setopt selected-window-contrast-text-others 0.6)
   (add-hook 'buffer-list-update-hook
             #'selected-window-contrast-highlight-selected-window))
-  ;; Experimental:
-  ;; (add-hook 'window-selection-change-functions
-  ;;   #'selected-window-contrast-mark-small-rectangle-temporary)
 
 
-Note: selected-window-contrast-text-switch-mode
+To disable highlighting window with rectangle around pointer use:
+(setopt selected-window-contrast-mode 1)
+
 
 How this works:
  1) We get color with `face-attribute' `selected-frame' for
