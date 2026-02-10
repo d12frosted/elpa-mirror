@@ -1,9 +1,9 @@
- • Building package projmake-mode (from github:ericbmerritt/projmake-mode)...
-Updating /mnt/store/melpa/working/projmake-mode/
-Checking out 93e2a23f929d69ac3d735a05d6bdcd93fca32471
+ • Building package projmake-mode (from github:emacsattic/projmake-mode)...
+Cloning https://github.com/emacsattic/projmake-mode to /mnt/store/melpa/working/projmake-mode/
+Checking out 99f10611c24e0884f1f24744adcccb3d972326f6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projmake-mode/
-  to /tmp/projmake-modeoxWMph/projmake-mode-20241228.1643
+  to /tmp/projmake-modeRVerrr/projmake-mode-20250211.1534
   ! src/projmake-banner.el -> projmake-banner.el
   ! src/projmake-build-state.el -> projmake-build-state.el
   ! src/projmake-default-parse-engine.el -> projmake-default-parse-engine.el
@@ -17,23 +17,25 @@ Copying files (->) and directories (=>)
   ! src/projmake-parse-engine.el -> projmake-parse-engine.el
   ! src/projmake-project.el -> projmake-project.el
   ! src/projmake-util.el -> projmake-util.el
-Created projmake-mode-20241228.1643.tar containing:
-  projmake-mode-20241228.1643/
-  projmake-mode-20241228.1643/projmake-banner.el
-  projmake-mode-20241228.1643/projmake-build-state.el
-  projmake-mode-20241228.1643/projmake-default-parse-engine.el
-  projmake-mode-20241228.1643/projmake-discover.el
-  projmake-mode-20241228.1643/projmake-elmm.el
-  projmake-mode-20241228.1643/projmake-error.el
-  projmake-mode-20241228.1643/projmake-log.el
-  projmake-mode-20241228.1643/projmake-markup.el
-  projmake-mode-20241228.1643/projmake-mode-pkg.el
-  projmake-mode-20241228.1643/projmake-mode.el
-  projmake-mode-20241228.1643/projmake-ocaml-parse-engine.el
-  projmake-mode-20241228.1643/projmake-parse-engine.el
-  projmake-mode-20241228.1643/projmake-project.el
-  projmake-mode-20241228.1643/projmake-util.el
+Created projmake-mode-20250211.1534.tar containing:
+  projmake-mode-20250211.1534/
+  projmake-mode-20250211.1534/projmake-banner.el
+  projmake-mode-20250211.1534/projmake-build-state.el
+  projmake-mode-20250211.1534/projmake-default-parse-engine.el
+  projmake-mode-20250211.1534/projmake-discover.el
+  projmake-mode-20250211.1534/projmake-elmm.el
+  projmake-mode-20250211.1534/projmake-error.el
+  projmake-mode-20250211.1534/projmake-log.el
+  projmake-mode-20250211.1534/projmake-markup.el
+  projmake-mode-20250211.1534/projmake-mode-pkg.el
+  projmake-mode-20250211.1534/projmake-mode.el
+  projmake-mode-20250211.1534/projmake-ocaml-parse-engine.el
+  projmake-mode-20250211.1534/projmake-parse-engine.el
+  projmake-mode-20250211.1534/projmake-project.el
+  projmake-mode-20250211.1534/projmake-util.el
  ✓ Success:
   2026-02-10T15:59:12+0000  projmake-mode-20241228.1643.entry
   2026-02-10T15:59:12+0000  projmake-mode-20241228.1643.tar
-Built projmake-mode in 2.554s, finished at 2026-02-10T15:59:13+0000
+  2026-02-10T18:12:25+0000  projmake-mode-20250211.1534.entry
+  2026-02-10T18:12:24+0000  projmake-mode-20250211.1534.tar
+Built projmake-mode in 2.340s, finished at 2026-02-10T18:12:25+0000
