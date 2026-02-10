@@ -1,9 +1,9 @@
  • Building package nethack (from github:Feyorsh/nethack-el)...
 Updating /mnt/store/melpa/working/nethack/
-Checking out c17e18049da8ddff3c5772cae3aac813e70dd2d3
+Checking out 56b48a638ddec67fe6b4ed5808320df49f053aed
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nethack/
-  to /tmp/nethackXRW5CH/nethack-20260202.54
+  to /tmp/nethackCjJisY/nethack-20260209.2249
     nethack-api.el -> nethack-api.el
     nethack-cmd.el -> nethack-cmd.el
     nethack-compat.el -> nethack-compat.el
@@ -14,20 +14,22 @@ Copying files (->) and directories (=>)
     nethack.el -> nethack.el
     enh-367.patch -> enh-367.patch
     enh-370.patch -> enh-370.patch
-Created nethack-20260202.54.tar containing:
-  nethack-20260202.54/
-  nethack-20260202.54/enh-367.patch
-  nethack-20260202.54/enh-370.patch
-  nethack-20260202.54/nethack-api.el
-  nethack-20260202.54/nethack-cmd.el
-  nethack-20260202.54/nethack-compat.el
-  nethack-20260202.54/nethack-gen-tiles.el
-  nethack-20260202.54/nethack-keys.el
-  nethack-20260202.54/nethack-lisprec.el
-  nethack-20260202.54/nethack-options.el
-  nethack-20260202.54/nethack-pkg.el
-  nethack-20260202.54/nethack.el
+Created nethack-20260209.2249.tar containing:
+  nethack-20260209.2249/
+  nethack-20260209.2249/enh-367.patch
+  nethack-20260209.2249/enh-370.patch
+  nethack-20260209.2249/nethack-api.el
+  nethack-20260209.2249/nethack-cmd.el
+  nethack-20260209.2249/nethack-compat.el
+  nethack-20260209.2249/nethack-gen-tiles.el
+  nethack-20260209.2249/nethack-keys.el
+  nethack-20260209.2249/nethack-lisprec.el
+  nethack-20260209.2249/nethack-options.el
+  nethack-20260209.2249/nethack-pkg.el
+  nethack-20260209.2249/nethack.el
  ✓ Success:
-  2026-02-09T19:49:30+0000  nethack-20260202.54.entry
-  2026-02-09T19:49:30+0000  nethack-20260202.54.tar
-Built nethack in 3.402s, finished at 2026-02-09T19:49:31+0000
+  2026-02-09T22:05:09+0000  nethack-20260209.2204.entry
+  2026-02-09T22:05:09+0000  nethack-20260209.2204.tar
+  2026-02-10T00:18:58+0000  nethack-20260209.2249.entry
+  2026-02-10T00:18:58+0000  nethack-20260209.2249.tar
+Built nethack in 5.145s, finished at 2026-02-10T00:19:00+0000
