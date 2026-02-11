@@ -1,13 +1,14 @@
  • Building package chatgpt-shell (from github:xenodium/chatgpt-shell)...
 Updating /mnt/store/melpa/working/chatgpt-shell/
-Checking out adb5c9230cf328e865bcff8fc48418e158d4bf49
+Checking out 5dd003ec70e9f45b5e8179487bc42f32bfe1037e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chatgpt-shell/
-  to /tmp/chatgpt-shelle1kAbn/chatgpt-shell-20260209.1941
+  to /tmp/chatgpt-shell1EkyHa/chatgpt-shell-20260210.2218
     chatgpt-shell-anthropic.el -> chatgpt-shell-anthropic.el
     chatgpt-shell-deepseek.el -> chatgpt-shell-deepseek.el
     chatgpt-shell-google.el -> chatgpt-shell-google.el
     chatgpt-shell-kagi.el -> chatgpt-shell-kagi.el
+    chatgpt-shell-minimax.el -> chatgpt-shell-minimax.el
     chatgpt-shell-ollama.el -> chatgpt-shell-ollama.el
     chatgpt-shell-openai.el -> chatgpt-shell-openai.el
     chatgpt-shell-openrouter.el -> chatgpt-shell-openrouter.el
@@ -15,21 +16,24 @@ Copying files (->) and directories (=>)
     chatgpt-shell-prompt-compose.el -> chatgpt-shell-prompt-compose.el
     chatgpt-shell-transient.el -> chatgpt-shell-transient.el
     chatgpt-shell.el -> chatgpt-shell.el
-Created chatgpt-shell-20260209.1941.tar containing:
-  chatgpt-shell-20260209.1941/
-  chatgpt-shell-20260209.1941/chatgpt-shell-anthropic.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-deepseek.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-google.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-kagi.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-ollama.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-openai.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-openrouter.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-perplexity.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-pkg.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-prompt-compose.el
-  chatgpt-shell-20260209.1941/chatgpt-shell-transient.el
-  chatgpt-shell-20260209.1941/chatgpt-shell.el
+Created chatgpt-shell-20260210.2218.tar containing:
+  chatgpt-shell-20260210.2218/
+  chatgpt-shell-20260210.2218/chatgpt-shell-anthropic.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-deepseek.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-google.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-kagi.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-minimax.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-ollama.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-openai.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-openrouter.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-perplexity.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-pkg.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-prompt-compose.el
+  chatgpt-shell-20260210.2218/chatgpt-shell-transient.el
+  chatgpt-shell-20260210.2218/chatgpt-shell.el
  ✓ Success:
-  2026-02-10T19:38:49+0000  chatgpt-shell-20260209.1941.entry
-  2026-02-10T19:38:49+0000  chatgpt-shell-20260209.1941.tar
-Built chatgpt-shell in 4.282s, finished at 2026-02-10T19:38:50+0000
+  2026-02-10T21:53:14+0000  chatgpt-shell-20260209.1941.entry
+  2026-02-10T21:53:14+0000  chatgpt-shell-20260209.1941.tar
+  2026-02-11T00:06:24+0000  chatgpt-shell-20260210.2218.entry
+  2026-02-11T00:06:24+0000  chatgpt-shell-20260210.2218.tar
+Built chatgpt-shell in 4.596s, finished at 2026-02-11T00:06:25+0000
