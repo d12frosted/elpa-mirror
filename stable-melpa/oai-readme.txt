@@ -27,7 +27,8 @@ Configuration, optional hooks:
 (add-hook 'oai-block-after-chat-insertion-hook #'oai-optional-remove-distant-empty-lines-hook-function)
 (add-hook 'oai-block-after-chat-insertion-hook #'oai-optional-remove-headers-hook-function)
 
-One hooks add space “ “ before lines that in ai block that looks like Org header, that fix confustion for Org logic.
+One hooks add space “ “ before lines that in ai block that looks
+like Org header, that fix confustion for Org logic.
 Another hook remove empty lines if there is too much of them in response.
 
 You will need an OpenAI API key-token.
