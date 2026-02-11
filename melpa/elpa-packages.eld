@@ -4078,7 +4078,6 @@
   (org-newtab :url "https://github.com/Zweihander-Main/org-newtab")
   (org-nix-shell :url "https://github.com/AntonHakansson/org-nix-shell")
   (org-node :url "https://github.com/meedstrom/org-node")
-  (org-node-fakeroam :url "https://github.com/meedstrom/org-node-fakeroam")
   (org-notebook :url "https://github.com/Rahi374/org-notebook")
   (org-noter :url "https://github.com/org-noter/org-noter")
   (org-noter-pdftools :url "https://github.com/fuxialexander/org-pdftools")
