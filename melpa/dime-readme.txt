@@ -1,4 +1,4 @@
-Dime is the Dylan interaction mode for Emacs.  It is essentially an
+DIME is the Dylan Interactor Mode for Emacs.  It is essentially an
 IDE (integrated development environment) for the Dylan programming
 language and the Open Dylan toolchain.
 
@@ -14,6 +14,6 @@ The main features are:
 
 * An inspector to interactively look at run-time data.
 
-Dime works by opening a socket between Emacs and Open Dylan and
-communicating via the dswank protocol.  Dime traces its history back
+DIME works by opening a socket between Emacs and Open Dylan and
+communicating via the dswank protocol.  DIME traces its history back
 to SLIME (the Superior Lisp Interaction Mode for Emacs).
