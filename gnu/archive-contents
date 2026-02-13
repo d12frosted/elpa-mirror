@@ -1060,7 +1060,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 12 5)
+  . [(1 12 6)
      ((emacs (28 1)) (llm (0 24 0)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1068,7 +1068,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "e5c63e8ff82463f35e7a2f1543dfe99a24cc537e"))])
+      (:commit . "381697858e1a32076429fd7ded5a5a9abaafd6ae"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
@@ -1311,6 +1311,13 @@
       (:maintainer "Yuan Fu" . "casouri@gmail.com")
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "d7c243ac3be2a67986f53f3dc31ba1426e82b771"))])
+ (futur
+  . [(1 0) nil "Future/promise-based async library" tar
+     ((:keywords "concurrency" "async" "promises" "futures")
+      (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
+      (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
+      (:url . "https://elpa.gnu.org/packages/futur.html")
+      (:commit . "b45f7f64487b7c6786cc2a1997bab9237a75020f"))])
  (gcmh
   . [(0 2 1) ((emacs (24))) "the Garbage Collector Magic Hack" tar
      ((:url . "https://gitlab.com/koral/gcmh") (:keywords "internal")
@@ -1789,13 +1796,13 @@
       (:url . "https://elpa.gnu.org/packages/lex.html")
       (:commit . "c7d76551cce66901b9f172f903ce720526c0fb52"))])
  (lin
-  . [(1 1 0) ((emacs (27 1)))
-     "Make `hl-line-mode' more suitable for selection UIs" tar
+  . [(2 0 0) ((emacs (27 1)))
+     "Make `hl-line-mode' more suitable for selection interfaces" tar
      ((:url . "https://github.com/protesilaos/lin")
       (:keywords "convenience" "faces" "theme")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "647be281945185a20f37363fd335e99ad0540eff"))])
+      (:commit . "fa75ea6b05070ce0f06befdef1954afa99aa5e89"))])
  (listen
   . [(0 10 1)
      ((emacs (29 1)) (persist (0 6)) (taxy (0 10))
