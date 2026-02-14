@@ -3701,6 +3701,7 @@
   (neato-graph-bar :url "https://gitlab.com/RobertCochran/neato-graph-bar")
   (neil :url "https://github.com/babashka/neil")
   (nemerle :url "https://github.com/rsdn/nemerle")
+  (neocaml :url "https://github.com/bbatsov/neocaml")
   (neon-mode :url "https://github.com/Fuco1/neon-mode")
   (neotree :url "https://github.com/jaypei/emacs-neotree")
   (nerd-icons :url "https://github.com/rainstormstudio/nerd-icons.el")
