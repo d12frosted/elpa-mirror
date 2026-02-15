@@ -1,7 +1,7 @@
 Call `system-idle-seconds' to get the number of seconds since last user
 activity on the computer.
 
-This differs from the built-in `current-idle-seconds', which can only be
+This differs from the built-in `current-idle-time', which can only be
 used for that purpose as long as Emacs is "in focus".
 
 This differs from `org-user-idle-seconds' in org-clock.el, by adding
