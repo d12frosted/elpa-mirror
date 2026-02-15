@@ -1,9 +1,9 @@
  • Building package ekg (from github:ahyatt/ekg)...
 Updating /mnt/store/melpa/working/ekg/
-Checking out 34ad48b404a91b4e88c750cefce9a53d402d3b70
+Checking out e5f2736eee9cac6d7505ce6148ee163fef607b28
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekgdZmXNM/ekg-20260214.307
+  to /tmp/ekgiwBWpL/ekg-20260215.645
     ekg-agent.el -> ekg-agent.el
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-denote.el -> ekg-denote.el
@@ -18,23 +18,25 @@ Copying files (->) and directories (=>)
   ! doc/ekg.texi -> ekg.texi
 Generating doclicense.info
 Generating ekg.info
-Created ekg-20260214.307.tar containing:
-  ekg-20260214.307/
-  ekg-20260214.307/dir
-  ekg-20260214.307/doclicense.info
-  ekg-20260214.307/ekg-agent.el
-  ekg-20260214.307/ekg-auto-save.el
-  ekg-20260214.307/ekg-denote.el
-  ekg-20260214.307/ekg-embedding.el
-  ekg-20260214.307/ekg-llm.el
-  ekg-20260214.307/ekg-logseq.el
-  ekg-20260214.307/ekg-org-roam.el
-  ekg-20260214.307/ekg-org.el
-  ekg-20260214.307/ekg-pkg.el
-  ekg-20260214.307/ekg-test-utils.el
-  ekg-20260214.307/ekg.el
-  ekg-20260214.307/ekg.info
+Created ekg-20260215.645.tar containing:
+  ekg-20260215.645/
+  ekg-20260215.645/dir
+  ekg-20260215.645/doclicense.info
+  ekg-20260215.645/ekg-agent.el
+  ekg-20260215.645/ekg-auto-save.el
+  ekg-20260215.645/ekg-denote.el
+  ekg-20260215.645/ekg-embedding.el
+  ekg-20260215.645/ekg-llm.el
+  ekg-20260215.645/ekg-logseq.el
+  ekg-20260215.645/ekg-org-roam.el
+  ekg-20260215.645/ekg-org.el
+  ekg-20260215.645/ekg-pkg.el
+  ekg-20260215.645/ekg-test-utils.el
+  ekg-20260215.645/ekg.el
+  ekg-20260215.645/ekg.info
  ✓ Success:
-  2026-02-15T03:26:58+0000  ekg-20260214.307.entry
-  2026-02-15T03:26:58+0000  ekg-20260214.307.tar
-Built ekg in 7.021s, finished at 2026-02-15T03:26:59+0000
+  2026-02-15T05:38:42+0000  ekg-20260215.527.entry
+  2026-02-15T05:38:42+0000  ekg-20260215.527.tar
+  2026-02-15T07:50:40+0000  ekg-20260215.645.entry
+  2026-02-15T07:50:40+0000  ekg-20260215.645.tar
+Built ekg in 6.993s, finished at 2026-02-15T07:50:41+0000
