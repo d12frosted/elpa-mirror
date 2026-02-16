@@ -24,8 +24,10 @@ Configuration:
 (setq oai-restapi-con-token "xxx") ; oai-restapi.el (optional)
 
 Configuration, optional hooks:
-(add-hook 'oai-block-after-chat-insertion-hook #'oai-optional-remove-distant-empty-lines-hook-function)
-(add-hook 'oai-block-after-chat-insertion-hook #'oai-optional-remove-headers-hook-function)
+(add-hook 'oai-block-after-chat-insertion-hook
+  #'oai-optional-remove-distant-empty-lines-hook-function)
+(add-hook 'oai-block-after-chat-insertion-hook
+  #'oai-optional-remove-headers-hook-function)
 
 One hooks add space “ “ before lines that in ai block that looks
 like Org header, that fix confustion for Org logic.

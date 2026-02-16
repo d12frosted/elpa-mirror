@@ -4882,7 +4882,6 @@
   (rigid-tabs :url "https://gitlab.com/wavexx/rigid-tabs.el")
   (rii :url "https://github.com/ROCKTAKEY/rii")
   (rime :url "https://github.com/DogLooksGood/emacs-rime")
-  (rimero-theme :url "https://github.com/yveszoundi/emacs-rimero-theme")
   (rinari :url "https://github.com/eschulte/rinari")
   (ring-mode :url "https://github.com/thechampagne/ring-mode")
   (rings :url "https://github.com/konr/rings")
