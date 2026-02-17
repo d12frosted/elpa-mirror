@@ -4493,7 +4493,7 @@
   (plur :url "https://github.com/xuchunyang/plur")
   (pmdm :url "https://hg.serna.eu/emacs/pmdm" :vc-backend Hg)
   (pnpm-mode :url "https://github.com/rajasegar/pnpm-mode")
-  (po-mode :url "https://github.com/emacsmirror/po-mode")
+  (po-mode :url "https://git.savannah.gnu.org/git/gettext/po-mode.git")
   (pocket-api :url "https://github.com/lujun9972/pocket-api.el")
   (pocket-lib :url "https://github.com/alphapapa/pocket-lib.el")
   (pocket-mode :url "https://github.com/lujun9972/pocket-mode")
