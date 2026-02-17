@@ -1,9 +1,9 @@
  • Building package ekg (from github:ahyatt/ekg)...
 Updating /mnt/store/melpa/working/ekg/
-Checking out e5f2736eee9cac6d7505ce6148ee163fef607b28
+Checking out c210c9f67cb9904d4b3ea394e3e6f1c9cebd3511
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekg-0cvKwJ/ekg-20260215.645
+  to /tmp/ekg-bKAitN/ekg-20260217.318
     ekg-agent.el -> ekg-agent.el
     ekg-auto-save.el -> ekg-auto-save.el
     ekg-denote.el -> ekg-denote.el
@@ -18,23 +18,25 @@ Copying files (->) and directories (=>)
   ! doc/ekg.texi -> ekg.texi
 Generating doclicense.info
 Generating ekg.info
-Created ekg-20260215.645.tar containing:
-  ekg-20260215.645/
-  ekg-20260215.645/dir
-  ekg-20260215.645/doclicense.info
-  ekg-20260215.645/ekg-agent.el
-  ekg-20260215.645/ekg-auto-save.el
-  ekg-20260215.645/ekg-denote.el
-  ekg-20260215.645/ekg-embedding.el
-  ekg-20260215.645/ekg-llm.el
-  ekg-20260215.645/ekg-logseq.el
-  ekg-20260215.645/ekg-org-roam.el
-  ekg-20260215.645/ekg-org.el
-  ekg-20260215.645/ekg-pkg.el
-  ekg-20260215.645/ekg-test-utils.el
-  ekg-20260215.645/ekg.el
-  ekg-20260215.645/ekg.info
+Created ekg-20260217.318.tar containing:
+  ekg-20260217.318/
+  ekg-20260217.318/dir
+  ekg-20260217.318/doclicense.info
+  ekg-20260217.318/ekg-agent.el
+  ekg-20260217.318/ekg-auto-save.el
+  ekg-20260217.318/ekg-denote.el
+  ekg-20260217.318/ekg-embedding.el
+  ekg-20260217.318/ekg-llm.el
+  ekg-20260217.318/ekg-logseq.el
+  ekg-20260217.318/ekg-org-roam.el
+  ekg-20260217.318/ekg-org.el
+  ekg-20260217.318/ekg-pkg.el
+  ekg-20260217.318/ekg-test-utils.el
+  ekg-20260217.318/ekg.el
+  ekg-20260217.318/ekg.info
  ✓ Success:
-  2026-02-16T23:10:18+0000  ekg-20260215.645.entry
-  2026-02-16T23:10:17+0000  ekg-20260215.645.tar
-Built ekg in 6.298s, finished at 2026-02-16T23:10:18+0000
+  2026-02-17T01:24:49+0000  ekg-20260215.645.entry
+  2026-02-17T01:24:49+0000  ekg-20260215.645.tar
+  2026-02-17T03:38:11+0000  ekg-20260217.318.entry
+  2026-02-17T03:38:11+0000  ekg-20260217.318.tar
+Built ekg in 10.675s, finished at 2026-02-17T03:38:12+0000
