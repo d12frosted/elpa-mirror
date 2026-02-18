@@ -1361,12 +1361,12 @@
       (:keywords "gnome" "c" "coding style")
       (:url . "http://elpa.gnu.org/packages/gnome-c-style.html"))])
  (gnome-dark-style
-  . [(0 2 3) ((emacs (30 1))) "Sync theme with GNOME color-scheme" tar
+  . [(0 2 4) ((emacs (30 1))) "Sync theme with GNOME color-scheme" tar
      ((:url . "https://github.com/dimagid/gnome-dark-style")
       (:keywords "themes" "gnome" "sync" "dark" "light" "color-scheme")
       (:maintainer "David Dimagid" . "davidimagid@gmail.com")
       (:authors ("David Dimagid" . "davidimagid@gmail.com"))
-      (:commit . "a2e9248ea09776c13966d8181d3f2078e9a1c7ba"))])
+      (:commit . "ede0104f21ebdc0128b6cbe2c31962ab335b0ea6"))])
  (gnorb
   . [(1 6 11) ((cl-lib (0 5))) "Glue code between Gnus, Org, and BBDB"
      tar

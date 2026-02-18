@@ -3,9 +3,6 @@
                          ━━━━━━━━━━━━━━━━━━━━━
 
 
-
-
-
 1 Description
 ═════════════
 
@@ -107,9 +104,15 @@
 8 Contributing
 ══════════════
 
-  Contributions are welcome! Please open an issue or submit a pull
-  request on the [GitHub repository].
+  Please send bug reports and suggestions by email to
+  [davidimagid@gmail.com].
 
+  You can also visit the [GitHub repository], but email is the primary
+  way to contribute and respects users' freedom by not requiring
+  non-free JavaScript.
+
+
+[davidimagid@gmail.com] <mailto:davidimagid@gmail.com>
 
 [GitHub repository] <https://github.com/dimagid/gnome-dark-style>
 
