@@ -11,7 +11,7 @@ Optional Dependencies:
     Install from: https://github.com/misohena/phscroll
 
 Usage:
-  M-x pi           Start a session in current project
+  M-x pi           DWIM: hide, reuse, or create session
   C-u M-x pi       Start a named session
 
 Key Bindings:
