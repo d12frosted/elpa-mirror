@@ -1,50 +1,40 @@
 
 Ollama Buddy is an Emacs package that provides a friendly AI assistant
 for various tasks such as code refactoring, generating commit messages,
-dictionary lookups, and more.  It interacts with the Ollama server to
-perform these tasks.
+dictionary lookups, and more.  It interacts with local LLMs via Ollama
+and supports remote providers including OpenAI, Claude, Gemini, Grok,
+GitHub Copilot, Codestral, DeepSeek, and OpenRouter.
 
 ; Quick Start
 
 (use-package ollama-buddy
-   :ensure t
-   :bind
-   ("C-c o" . ollama-buddy-menu)
-   ("C-c O" . ollama-buddy-transient-menu-wrapper))
-
-OR (to select the default model)
-
-(use-package ollama-buddy
-   :ensure t
-   :bind
-   ("C-c o" . ollama-buddy-menu)
-   ("C-c O" . ollama-buddy-transient-menu-wrapper)
-   :custom
-   ollama-buddy-default-model "tinyllama:latest")
-
-OR (use-package local)
-
-(use-package ollama-buddy
-   :load-path "path/to/ollama-buddy"
-   :bind
-   ("C-c o" . ollama-buddy-menu)
-   ("C-c O" . ollama-buddy-transient-menu-wrapper)
-   :custom ollama-buddy-default-model "tinyllama:latest")
-
-OR (the old way)
-
-(add-to-list 'load-path "path/to/ollama-buddy")
-(require 'ollama-buddy)
-(global-set-key (kbd "C-c o") #'ollama-buddy-menu)
-(global-set-key (kbd "C-c O") #'ollama-buddy-transient-menu-wrapper)
-(setq ollama-buddy-default-model "tinyllama:latest")
+  :ensure t
+  :bind
+  ("C-c o" . ollama-buddy-role-transient-menu)
+  ("C-c O" . ollama-buddy-transient-menu-wrapper))
 
 ; Usage
 
-M-x ollama-buddy-menu / C-c o
+C-c o  Role-based transient menu (main entry point)
+C-c O  Advanced transient menu (all settings and actions)
 
-OR
+From the chat buffer:
 
-M-x ollama-buddy-transient-menu-wrapper / C-c O
+  C-c C-c / C-c RET  Send prompt
+  C-c C-k            Cancel request
+  C-c m              Change model
 
-and the chat assistant buffer is presented and off you go!
+; Remote Providers (optional)
+
+Load any provider module to access its models alongside Ollama:
+
+  (require 'ollama-buddy-openai)      ; a: OpenAI
+  (require 'ollama-buddy-claude)      ; c: Anthropic Claude
+  (require 'ollama-buddy-gemini)      ; g: Google Gemini
+  (require 'ollama-buddy-grok)        ; k: xAI Grok
+  (require 'ollama-buddy-copilot)     ; p: GitHub Copilot
+  (require 'ollama-buddy-codestral)   ; s: Mistral Codestral
+  (require 'ollama-buddy-deepseek)    ; d: DeepSeek
+  (require 'ollama-buddy-openrouter)  ; r: OpenRouter (400+ models)
+
+Each provider needs an API key (see PROVIDERS.org for setup details).
