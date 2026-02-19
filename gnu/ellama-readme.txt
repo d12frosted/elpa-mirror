@@ -154,12 +154,13 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-write': This command allows you to generate text using an
     LLM. When called interactively, it prompts for an instruction that
     is then used to generate text based on the context. If a region is
-    active, the selected text is added to the context before generating
-    the response.
+    active, the selected text is added to ephemeral context before
+    generating the response.
   • `ellama-chat-send-last-message': Send last user message extracted
     from current ellama chat buffer.
   • `ellama-ask-about': Ask Ellama about a selected region or the
-    current buffer.
+    current buffer. Automatically adds selected region or current buffer
+    to ephemeral context for one request.
   • `ellama-ask-selection': Send selected region or current buffer to
     ellama chat.
   • `ellama-ask-line': Send current line to ellama chat.
@@ -173,7 +174,8 @@ Assistant". Previous sentence was written by Ellama itself.
     buffer using Ellama.
   • `ellama-summarize-killring': Summarize text from the kill ring.
   • `ellama-code-review': Review code in a selected region or the
-    current buffer using Ellama.
+    current buffer using Ellama. Automatically adds selected region or
+    current buffer to ephemeral context for one request.
   • `ellama-change': Change text in a selected region or the current
     buffer according to a provided change.
   • `ellama-make-list': Create a markdown list from the active region or
@@ -188,7 +190,7 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-code-add': Generate and insert new code based on
     description. This function prompts the user to describe the code
     they want to generate. If a region is active, it includes the
-    selected text as context for code generation.
+    selected text in ephemeral context for code generation.
   • `ellama-code-edit': Change selected code or code in the current
     buffer according to a provided change using Ellama.
   • `ellama-code-improve': Change selected code or code in the current
@@ -459,6 +461,10 @@ Assistant". Previous sentence was written by Ellama itself.
   is prepended to your prompt before transmission to the
   LLM. Additionally, Ellama supports an "ephemeral context," which is
   temporary and only available for a single request.
+
+  Some commands add context automatically as ephemeral context:
+  `ellama-ask-about', `ellama-code-review', `ellama-write', and
+  `ellama-code-add'.
 
 
 5.1 Transient Menus for Context Management
