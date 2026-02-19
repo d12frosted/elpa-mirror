@@ -3292,7 +3292,7 @@
   (lol-data-dragon :url "https://github.com/xuchunyang/lol-data-dragon.el")
   (lolcat :url "https://github.com/xuchunyang/lolcat.el")
   (lolcode-mode :url "https://github.com/bodil/lolcode-mode")
-  (lonelog :url "https://github.com/enfors/lonelog")
+  (lonelog :url "https://github.com/Enfors/lonelog")
   (look-dired :url "https://github.com/vapniks/look-dired")
   (look-mode :url "https://github.com/petermao/look-mode")
   (loop :url "https://github.com/Wilfred/loop.el")
