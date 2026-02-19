@@ -12,7 +12,7 @@ Configuration in ~/.emacs or ~/.emacs.d/init.el:
 (pinyin-isearch--activate) ; force loading (optional)
 (pinyin-isearch-activate-submodes) ; to activate isearch submodes
 
-Usage:
+;; Usage:
 
 M-x pinyin-isearch-mode
 C-u C-s for normal search.
