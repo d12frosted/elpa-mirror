@@ -632,15 +632,16 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
  (flycheck
-  . [(35 0) ((emacs (27 1))) "On-the-fly syntax checking" tar
-     ((:url . "https://www.flycheck.org")
+  . [(36 0) ((emacs (27 1)) (seq (2 24))) "On-the-fly syntax checking"
+     tar
+     ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
       (:maintainer
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com")
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "6e43c07e83406cdd3f75952ee988d61d7573ec11"))])
+      (:commit . "ebddfd89b1eea91b8590f542908672569942fb82"))])
  (flymake-guile
   . [(0 5) ((emacs (26 1)) (flymake (1 2 1))) "Guile flymake backend"
      tar
@@ -1809,13 +1810,13 @@
       (:authors ("Vivek Das Mohapatra" . "vivek@etla.org"))
       (:commit . "v1.0"))])
  (tp
-  . [(0 7) ((emacs (28 1)) (transient (0 5 0)))
+  . [(0 8) ((emacs (28 1)) (transient (0 5 0)))
      "Utilities for transient menus that POST to an API" tar
      ((:url . "https://codeberg.org/martianh/tp.el")
       (:keywords "convenience" "api" "requests")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "cce2dfe0ec2b5c070cb13a7bdf95695eeb6e3caf"))])
+      (:commit . "cef3fc2daefbbfc29ad02b7e1f39542b57c72fe8"))])
  (treesit-fold
   . [(0 2 1) ((emacs (29 1))) "Code folding using treesit" tar
      ((:url . "https://github.com/emacs-tree-sitter/treesit-fold")
