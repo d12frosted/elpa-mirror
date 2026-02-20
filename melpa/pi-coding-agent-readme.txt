@@ -11,8 +11,11 @@ Optional Dependencies:
     Install from: https://github.com/misohena/phscroll
 
 Usage:
-  M-x pi           DWIM: hide, reuse, or create session
-  C-u M-x pi       Start a named session
+  M-x pi-coding-agent         Start or focus session in current project
+  C-u M-x pi-coding-agent     Start a named session
+  M-x pi-coding-agent-toggle  Hide/show session windows in current frame
+
+Many users define an alias: (defalias 'pi 'pi-coding-agent)
 
 Key Bindings:
   Input buffer:
