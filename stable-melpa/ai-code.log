@@ -1,9 +1,9 @@
  • Building package ai-code (from github:tninja/ai-code-interface.el)...
 Updating /mnt/store/melpa/working/ai-code/
-Checking out b8d7aef928f1c4a67db2ea31ed1f500d58a5b19b
+Checking out 271cccd064966de8e13322fc70b3cff0b4650f62
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ai-code/
-  to /tmp/ai-code-kABTlo/ai-code-20260219.2126
+  to /tmp/ai-code-tbYewA/ai-code-20260221.302
     ai-code-agent-shell.el -> ai-code-agent-shell.el
     ai-code-agile.el -> ai-code-agile.el
     ai-code-ai.el -> ai-code-ai.el
@@ -28,92 +28,94 @@ Copying files (->) and directories (=>)
     ai-code-prompt-mode.el -> ai-code-prompt-mode.el
     ai-code.el -> ai-code.el
     snippets => snippets
-Created ai-code-20260219.2126.tar containing:
-  ai-code-20260219.2126/
-  ai-code-20260219.2126/ai-code-agent-shell.el
-  ai-code-20260219.2126/ai-code-agile.el
-  ai-code-20260219.2126/ai-code-ai.el
-  ai-code-20260219.2126/ai-code-aider-cli.el
-  ai-code-20260219.2126/ai-code-backends-infra.el
-  ai-code-20260219.2126/ai-code-backends.el
-  ai-code-20260219.2126/ai-code-change.el
-  ai-code-20260219.2126/ai-code-claude-code.el
-  ai-code-20260219.2126/ai-code-codebuddy-cli.el
-  ai-code-20260219.2126/ai-code-codex-cli.el
-  ai-code-20260219.2126/ai-code-cursor-cli.el
-  ai-code-20260219.2126/ai-code-discussion.el
-  ai-code-20260219.2126/ai-code-file.el
-  ai-code-20260219.2126/ai-code-gemini-cli.el
-  ai-code-20260219.2126/ai-code-git.el
-  ai-code-20260219.2126/ai-code-github-copilot-cli.el
-  ai-code-20260219.2126/ai-code-grok-cli.el
-  ai-code-20260219.2126/ai-code-input.el
-  ai-code-20260219.2126/ai-code-kiro-cli.el
-  ai-code-20260219.2126/ai-code-notifications.el
-  ai-code-20260219.2126/ai-code-opencode.el
-  ai-code-20260219.2126/ai-code-pkg.el
-  ai-code-20260219.2126/ai-code-prompt-mode.el
-  ai-code-20260219.2126/ai-code.el
-  ai-code-20260219.2126/snippets/
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/add-comments
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/add-documentation
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/add-parameter
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/algorithm
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/architecture-diagram
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/class
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/code-alternatives
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/code-review
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/codegen
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/commit
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/create-boilerplate
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/create-class
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/create-function
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/create-tests
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/debug
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/debug-component
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/design
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/diff-change
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/docs
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/entity-relationship-diagram
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/explain
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/explain-code
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/fix-errors
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/follow-style-guidelines
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/generate-cheat-sheet
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/generate-dockerfile
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/generate-readme
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/improve
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/improve-error-handling
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/improve-performance
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/init
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/merge
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/mermaid-architecture-diagram
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/modernize-best-practices
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/modernize-code
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/optimize
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/optimize-prompt
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/practices
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/query
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/refactor-code
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/review
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/review-code
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/review-logical-errors
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/rewrite-code
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/rewrite-prompt
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/schema
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/security
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/suggest-improvements
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/transpile-code
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/unit-tests
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/validate-recommendations
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/validate-recommendations-reflection
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/world-class-engineer
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/write-blog
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/write-code
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/write-regex
-  ai-code-20260219.2126/snippets/ai-code-prompt-mode/write-terms-conditions
+Created ai-code-20260221.302.tar containing:
+  ai-code-20260221.302/
+  ai-code-20260221.302/ai-code-agent-shell.el
+  ai-code-20260221.302/ai-code-agile.el
+  ai-code-20260221.302/ai-code-ai.el
+  ai-code-20260221.302/ai-code-aider-cli.el
+  ai-code-20260221.302/ai-code-backends-infra.el
+  ai-code-20260221.302/ai-code-backends.el
+  ai-code-20260221.302/ai-code-change.el
+  ai-code-20260221.302/ai-code-claude-code.el
+  ai-code-20260221.302/ai-code-codebuddy-cli.el
+  ai-code-20260221.302/ai-code-codex-cli.el
+  ai-code-20260221.302/ai-code-cursor-cli.el
+  ai-code-20260221.302/ai-code-discussion.el
+  ai-code-20260221.302/ai-code-file.el
+  ai-code-20260221.302/ai-code-gemini-cli.el
+  ai-code-20260221.302/ai-code-git.el
+  ai-code-20260221.302/ai-code-github-copilot-cli.el
+  ai-code-20260221.302/ai-code-grok-cli.el
+  ai-code-20260221.302/ai-code-input.el
+  ai-code-20260221.302/ai-code-kiro-cli.el
+  ai-code-20260221.302/ai-code-notifications.el
+  ai-code-20260221.302/ai-code-opencode.el
+  ai-code-20260221.302/ai-code-pkg.el
+  ai-code-20260221.302/ai-code-prompt-mode.el
+  ai-code-20260221.302/ai-code.el
+  ai-code-20260221.302/snippets/
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/add-comments
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/add-documentation
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/add-parameter
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/algorithm
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/architecture-diagram
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/class
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/code-alternatives
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/code-review
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/codegen
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/commit
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/create-boilerplate
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/create-class
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/create-function
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/create-tests
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/debug
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/debug-component
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/design
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/diff-change
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/docs
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/entity-relationship-diagram
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/explain
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/explain-code
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/fix-errors
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/follow-style-guidelines
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/generate-cheat-sheet
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/generate-dockerfile
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/generate-readme
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/improve
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/improve-error-handling
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/improve-performance
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/init
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/merge
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/mermaid-architecture-diagram
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/modernize-best-practices
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/modernize-code
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/optimize
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/optimize-prompt
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/practices
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/query
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/refactor-code
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/review
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/review-code
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/review-logical-errors
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/rewrite-code
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/rewrite-prompt
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/schema
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/security
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/suggest-improvements
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/transpile-code
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/unit-tests
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/validate-recommendations
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/validate-recommendations-reflection
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/world-class-engineer
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/write-blog
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/write-code
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/write-regex
+  ai-code-20260221.302/snippets/ai-code-prompt-mode/write-terms-conditions
  ✓ Success:
-  2026-02-20T23:20:47+0000  ai-code-20260219.2126.entry
-  2026-02-20T23:20:46+0000  ai-code-20260219.2126.tar
-Built ai-code in 4.035s, finished at 2026-02-20T23:20:47+0000
+  2026-02-21T01:39:48+0000  ai-code-20260219.2126.entry
+  2026-02-21T01:39:47+0000  ai-code-20260219.2126.tar
+  2026-02-21T03:57:42+0000  ai-code-20260221.302.entry
+  2026-02-21T03:57:42+0000  ai-code-20260221.302.tar
+Built ai-code in 4.209s, finished at 2026-02-21T03:57:43+0000
