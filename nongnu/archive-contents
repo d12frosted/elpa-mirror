@@ -613,15 +613,12 @@
       (:authors ("Marty Hiatt" . "martianhiatus@riseup.net"))
       (:commit . "b483834e64ce311a9f0db7f758b5d2234f8c02a3"))])
  (fj
-  . [(0 28)
-     ((emacs (29 1)) (fedi (0 2)) (tp (0 5)) (transient (0 9 3))
-      (magit (4 3 8)))
-     "Client for Forgejo instances" tar
+  . [(0 29) nil "Client for Forgejo instances" tar
      ((:url . "https://codeberg.org/martianh/fj.el")
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "7f1a5a973e387673d50c3257cb358c2d245ca930"))])
+      (:commit . "bc00bbf226e561af14bf05b4be35669957fe59c4"))])
  (flx
   . [(0 6 2) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")

@@ -61,13 +61,15 @@ For opening links we add hook to org-execute-file-search-functions
 
 Other packages:
 - Modern navigation in major modes https://github.com/Anoncheg1/firstly-search
-- Search with Mandarin Chinese pinying https://github.com/Anoncheg1/pinyin-isearch
-- Ediff fix			https://github.com/Anoncheg1/ediffnw
+- Search with Chinese	https://github.com/Anoncheg1/pinyin-isearch
+- Ediff no 3-th window	https://github.com/Anoncheg1/ediffnw
 - Dired history		https://github.com/Anoncheg1/dired-hist
-- Mark window with contrast https://github.com/Anoncheg1/selected-window-contrast
-- Org hyperlinks enhanced	https://github.com/Anoncheg1/org-links
-- Solution for "callback hell"	 https://github.com/Anoncheg1/emacs-async1
-- Call LLMs & AIfrom Org-mode block.  https://github.com/Anoncheg1/emacs-oai
+- Selected window contrast	https://github.com/Anoncheg1/selected-window-contrast
+- Copy link to clipboard	https://github.com/Anoncheg1/emacs-org-links
+- Solution for "callback hell"	https://github.com/Anoncheg1/emacs-async1
+- Restore buffer state	https://github.com/Anoncheg1/emacs-unmodified-buffer1
+- outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
+- ai_block for Org mode for chat. https://github.com/Anoncheg1/emacs-oai
 
 *DONATE MONEY* to sponsor author directly with crypto currencies:
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25

@@ -19,10 +19,29 @@
 [codeberg.org] <https://codeberg.org>
 
 
-2 getting started
+2 install
+═════════
+
+  `fj.el' is available in [ELPA].
+
+  You can also just pull it from the repo with use-package/straight,
+  such as:
+
+  ┌────
+  │ (use-package fj
+  │   :straight (:type git :host codeberg "martianh/fj.el")
+  │   :config
+  │   (setq fj-user "martianh"))
+  └────
+
+
+[ELPA] <https://elpa.nongnu.org/>
+
+
+3 getting started
 ═════════════════
 
-2.1 authentication
+3.1 authentication
 ──────────────────
 
   To get going, first set `fj-host', and `fj-user'.
@@ -50,7 +69,7 @@
   me.
 
 
-2.2 basic views
+3.2 basic views
 ───────────────
 
   Once you are authenticated, try `fj-list-own-repos' to view your
@@ -67,7 +86,7 @@
   `fj-user', and `fj-token' in your `.dir-locals.el' file.
 
 
-3 repositories
+4 repositories
 ══════════════
 
   Current repository detection should work partially automatically. If
@@ -76,14 +95,14 @@
   root directory matches the name of the Forgejo repo!
 
 
-4 features
+5 features
 ══════════
 
   Forgejo's API is vast. Currently `fj.el' just implements a few basic
   things:
 
 
-4.1 repos and repo listings
+5.1 repos and repo listings
 ───────────────────────────
 
   • create new (remote) repo
@@ -102,11 +121,11 @@
   • list repo's watchers
 
 
-4.2 rich create/edit issue/comment interface
+5.2 rich create/edit issue/comment interface
 ────────────────────────────────────────────
 
 
-4.3 issues/PRs as listings
+5.3 issues/PRs as listings
 ──────────────────────────
 
   • list repo issues and PRs
@@ -123,7 +142,7 @@
     close, reopen, delete, add label)
 
 
-4.4 viewing issues/PRs
+5.4 viewing issues/PRs
 ──────────────────────
 
   • view issue/PR discussion
@@ -141,7 +160,7 @@
   • add labels to item.
 
 
-4.5 notifications
+5.5 notifications
 ─────────────────
 
   • view your notifications
@@ -149,7 +168,7 @@
   • toggle between viewing unread and all notifications
 
 
-4.6 user/repo settings
+5.6 user/repo settings
 ──────────────────────
 
   • update repo settings transient menu
@@ -160,17 +179,17 @@
   • view users followed
 
 
-4.7 other features
+5.7 other features
 ──────────────────
 
-4.7.1 create remote links from local source files
+5.7.1 create remote links from local source files
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   If you want to insert a link to a line in your source files, consider
   using <https://github.com/sshaw/git-link>.
 
 
-4.7.2 syntax highlighting for code blocks
+5.7.2 syntax highlighting for code blocks
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   If you want verbatim code blocks in comments to have syntax
@@ -182,7 +201,7 @@
   will work.
 
 
-5 dependencies
+6 dependencies
 ══════════════
 
   • `magit-post', `magit-process' (for obtaining current repo)
@@ -196,10 +215,10 @@
 [tp.el] <https://codeberg.org/martianh/tp.el>
 
 
-6 limitations
+7 limitations
 ═════════════
 
-6.1 performance
+7.1 performance
 ───────────────
 
   Unfortunately `fj.el' is pretty slow at loading issues/PRs with lots
@@ -217,7 +236,7 @@
   this value. (The default apart from this setting would be 30.)
 
 
-6.2 general design
+7.2 general design
 ──────────────────
 
   `fj.el' started out as a tiny package around my general use-case:
@@ -229,7 +248,7 @@
   imagine other people's workflows to be.)
 
 
-7 contributions
+8 contributions
 ═══════════════
 
   Contributions are welcome, as is feedback about your needs.
@@ -241,7 +260,7 @@
   (and my own libraries), which are likely different to yours.
 
 
-8 supporting `fj.el'
+9 supporting `fj.el'
 ════════════════════
 
   If you'd like to support continued development of `fj.el', I accept
@@ -262,8 +281,8 @@
 [paypal.me/martianh] <https://paypal.me/martianh>
 
 
-9 screenshots
-═════════════
+10 screenshots
+══════════════
 
   User repos listing:
 
@@ -277,7 +296,8 @@
 
   <file:Screenshot-search.png>
 
-  Repo settings transient:
+  Repo settings transient (current setting on the server underlined,
+  current user choice in green):
 
   <file:Screenshot-transient.png>
 
@@ -285,12 +305,12 @@
 
   <file:screenshot-syntax-highlight.png>
 
-  Diffs (as code as as reviews):
+  Diffs (as commits and PRs):
 
   <file:screenshot-diff.png>
 
 
-10 commands index
+11 commands index
 ═════════════════
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -328,7 +348,6 @@
               fj-fork-repo                    Fork repo entry at point.                                           
               fj-fork-to-parent               From a repo TL listing, jump to the parent repo.                    
               fj-get-pull-commits             Return the data for the commits of the current pull.                
-              fj-git-link-code-range          Call `git-link'.                                                    
               fj-inspect-item-data            Browse the JSON data of item at point.                              
               fj-issue-compose                Compose a new post.                                                 
               fj-issue-get-labels             Get labels on ISSUE in REPO by OWNER.                               
@@ -339,8 +358,8 @@
    K          fj-item-delete                  Delete the item at point or being viewed.                           
    e          fj-item-edit                    Edit the item at point or being viewed.                             
    t          fj-item-edit-title              Edit the title of the item at point or being viewed.                
-   l          fj-item-label-add               Comment on the item at point or being viewed.                       
-              fj-item-label-remove            Comment on the item at point or being viewed.                       
+   l          fj-item-label-add               Add label to the item at point or being viewed.                     
+              fj-item-label-remove            Remove label from the item at point or being viewed.                
    n          fj-item-next                    Go to next item or notification.                                    
    p          fj-item-prev                    Goto previous item or notification.                                 
    o          fj-item-reopen                  Reopen the item at point or being viewed.                           
@@ -361,7 +380,7 @@
    W          fj-list-own-issues              List issues in repos owned by `fj-user'.                            
               fj-list-own-pulls               List pulls in repos owned by `fj-user'.                             
    O          fj-list-own-repos               List repos for `fj-user'.                                           
-   C-c C-x    fj-list-own-repos-read          List repos for `fj-user', prompting for an order type.              
+   C-c C-c    fj-list-own-repos-read          List repos for `fj-user', prompting for an order type.              
    P          fj-list-pulls                   List pulls for REPO by OWNER, filtered by STATE.                    
               fj-list-repos                   List repos for `fj-user' extended by `fj-extra-repos'.              
               fj-list-user-repos              View repos of current entry user from tabulated repos listing.      
@@ -421,12 +440,13 @@
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-11 variables index
+12 variables index
 ══════════════════
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    Custom variable               Description                                                   
   ─────────────────────────────────────────────────────────────────────────────────────────────
+   fj-compose-autocomplete       Whether to enable autocompletion in compose buffers.          
    fj-compose-comment-mode-hook  Hook run after entering or leaving `fj-compose-comment-mode'. 
    fj-compose-mode-hook          Hook run after entering or leaving `fj-compose-mode'.         
    fj-issues-sort-default        Default sort parameter for repo issues listing.               

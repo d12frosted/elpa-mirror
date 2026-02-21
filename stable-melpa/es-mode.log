@@ -1,9 +1,9 @@
  • Building package es-mode (from github:dakrone/es-mode)...
 Updating /mnt/store/melpa/working/es-mode/
-Checking out 91e09835e3d7cfb0748edef94fa4bd53a32e63ae
+Checking out cf93c9900057a9f3c89f982f778f41f48285d076
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/es-mode/
-  to /tmp/es-mode-a034J3/es-mode-20260218.2209
+  to /tmp/es-mode-8ZNOoU/es-mode-20260220.2147
     es-cc.el -> es-cc.el
     es-copyas.el -> es-copyas.el
     es-esql.el -> es-esql.el
@@ -11,29 +11,31 @@ Copying files (->) and directories (=>)
     es-parse.el -> es-parse.el
     ob-elasticsearch.el -> ob-elasticsearch.el
     snippets => snippets
-Created es-mode-20260218.2209.tar containing:
-  es-mode-20260218.2209/
-  es-mode-20260218.2209/es-cc.el
-  es-mode-20260218.2209/es-copyas.el
-  es-mode-20260218.2209/es-esql.el
-  es-mode-20260218.2209/es-mode-pkg.el
-  es-mode-20260218.2209/es-mode.el
-  es-mode-20260218.2209/es-parse.el
-  es-mode-20260218.2209/ob-elasticsearch.el
-  es-mode-20260218.2209/snippets/
-  es-mode-20260218.2209/snippets/es-mode/
-  es-mode-20260218.2209/snippets/es-mode/bool
-  es-mode-20260218.2209/snippets/es-mode/cat_nodes
-  es-mode-20260218.2209/snippets/es-mode/cat_shards
-  es-mode-20260218.2209/snippets/es-mode/debug-logging
-  es-mode-20260218.2209/snippets/es-mode/delete_index
-  es-mode-20260218.2209/snippets/es-mode/match
-  es-mode-20260218.2209/snippets/es-mode/match_all
-  es-mode-20260218.2209/snippets/es-mode/multi_match
-  es-mode-20260218.2209/snippets/es-mode/new_index
-  es-mode-20260218.2209/snippets/es-mode/search
-  es-mode-20260218.2209/snippets/es-mode/search-match-all
+Created es-mode-20260220.2147.tar containing:
+  es-mode-20260220.2147/
+  es-mode-20260220.2147/es-cc.el
+  es-mode-20260220.2147/es-copyas.el
+  es-mode-20260220.2147/es-esql.el
+  es-mode-20260220.2147/es-mode-pkg.el
+  es-mode-20260220.2147/es-mode.el
+  es-mode-20260220.2147/es-parse.el
+  es-mode-20260220.2147/ob-elasticsearch.el
+  es-mode-20260220.2147/snippets/
+  es-mode-20260220.2147/snippets/es-mode/
+  es-mode-20260220.2147/snippets/es-mode/bool
+  es-mode-20260220.2147/snippets/es-mode/cat_nodes
+  es-mode-20260220.2147/snippets/es-mode/cat_shards
+  es-mode-20260220.2147/snippets/es-mode/debug-logging
+  es-mode-20260220.2147/snippets/es-mode/delete_index
+  es-mode-20260220.2147/snippets/es-mode/match
+  es-mode-20260220.2147/snippets/es-mode/match_all
+  es-mode-20260220.2147/snippets/es-mode/multi_match
+  es-mode-20260220.2147/snippets/es-mode/new_index
+  es-mode-20260220.2147/snippets/es-mode/search
+  es-mode-20260220.2147/snippets/es-mode/search-match-all
  ✓ Success:
-  2026-02-20T19:00:47+0000  es-mode-20260218.2209.entry
-  2026-02-20T19:00:47+0000  es-mode-20260218.2209.tar
-Built es-mode in 2.912s, finished at 2026-02-20T19:00:48+0000
+  2026-02-20T21:20:05+0000  es-mode-20260218.2209.entry
+  2026-02-20T21:20:05+0000  es-mode-20260218.2209.tar
+  2026-02-20T23:38:53+0000  es-mode-20260220.2147.entry
+  2026-02-20T23:38:53+0000  es-mode-20260220.2147.tar
+Built es-mode in 3.049s, finished at 2026-02-20T23:38:54+0000
