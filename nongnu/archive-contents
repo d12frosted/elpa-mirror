@@ -613,12 +613,15 @@
       (:authors ("Marty Hiatt" . "martianhiatus@riseup.net"))
       (:commit . "b483834e64ce311a9f0db7f758b5d2234f8c02a3"))])
  (fj
-  . [(0 29) nil "Client for Forgejo instances" tar
+  . [(0 30)
+     ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
+      (magit (4 3 8)))
+     "Client for Forgejo instances" tar
      ((:url . "https://codeberg.org/martianh/fj.el")
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "bc00bbf226e561af14bf05b4be35669957fe59c4"))])
+      (:commit . "ab360df752c81be7b962d8e21f97b06c424a54bb"))])
  (flx
   . [(0 6 2) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
@@ -853,7 +856,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "278cd3e6d5107693aa2bb33189ca503f22f227d0"))])
  (gptel
-  . [(0 9 9 3)
+  . [(0 9 9 4)
      ((emacs (27 1)) (transient (0 7 4)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -862,7 +865,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "d0c392bbb0a1f7775d3a1e98220f4bdc043ab63b"))])
+      (:commit . "d221329ee3aa0198ad51c003a8d94b2af3a72dce"))])
  (graphql-mode
   . [(1 0 0) ((emacs (24 3))) "Major mode for editing GraphQL schemas"
      tar
