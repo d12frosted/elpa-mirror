@@ -3418,6 +3418,7 @@
   (mantra :url "https://github.com/countvajhula/mantra")
   (marcopolo :url "https://github.com/nlamirault/marcopolo")
   (marginalia :url "https://github.com/minad/marginalia")
+  (mark-graf :url "https://github.com/hyperZphere/mark-graf")
   (mark-multiple :url "https://github.com/magnars/mark-multiple.el")
   (mark-thing-at :url "https://github.com/plandes/mark-thing-at")
   (mark-tools :url "https://github.com/stsquad/emacs-mark-tools")

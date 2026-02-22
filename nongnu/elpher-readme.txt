@@ -114,10 +114,11 @@ all generously provided assistance and/or patches over the years:
 * Simon South <simon@simonsouth.net>
 * Daniel Semyonov <daniel@dsemy.com>
 * Bradley Thornton <bradley@northtech.us>
+* John Hamelink <me@johnhame.link>
 
 License
 -------
 
-Elpher is free software and is distributed under the terms of version
-3 the GNU General Public License, which can be found in the file named
-COPYING.
+Elpher is free software and is distributed under the terms of the GNU
+General Public License version 3 (or later).  The license can be found
+in the file named COPYING.

@@ -56,8 +56,6 @@ from <https://elpa.nongnu.org/nongnu/>.
   If a file has a "Homepage:" keyword, it will be removed from the next
   minor or major release.
 
-  `ob-csharp.el'
-
 
 5 Other files
 ═════════════
