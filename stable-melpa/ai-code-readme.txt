@@ -18,6 +18,20 @@ Supported AI coding CLIs include:
   - Aider CLI
   - agent-shell
 
+New User Quick Start:
+  1) Minimal setup:
+
+     (use-package ai-code
+       :config
+       (ai-code-set-backend 'codex)
+       (global-set-key (kbd "C-c a") #'ai-code-menu))
+
+  2) First 60 seconds:
+     - C-c a a : Start AI CLI session
+     - C-c a c : Ask AI to change current function/region
+     - C-c a q : Ask question only (no code change)
+     - C-c a z : Jump back to active AI session buffer
+
 Basic configuration example:
 
 (use-package ai-code
