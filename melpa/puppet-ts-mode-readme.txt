@@ -6,6 +6,9 @@ Syntax highlighting: Fontification is supported using custom faces for
   Puppet syntax elements like comments, strings, variables, constants,
   keywords, resource types and their metaparameters.  Syntax errors can be
   shown using a warning face by setting `treesit-font-lock-level' to 4.
+  Some generic syntax elements (comments, strings, numbers,...) use the
+  default Emacs faces.  This allows other packages like `flyspell' to
+  spell-check comments and strings without any additional setup.
 
 Indentation: Automatic indentation according to the Puppet coding
   standards is provided.
@@ -37,8 +40,9 @@ Code checking: Validate the syntax of the current buffer with
   current buffer in noop-mode with `puppet-ts-apply' (bound to "C-c C-c").
 
 The package uses a Tree-sitter library to parse Puppet code and you need
-to install the appropriate parser.  This can be done by using this Elisp
-code:
+to install the appropriate parser (which is defined by the constant
+`puppet-ts-mode-treesit-language-source').  This can be done by using
+this Elisp code:
 
    (require 'puppet-ts-mode)
    (puppet-ts-mode-install-grammar)
