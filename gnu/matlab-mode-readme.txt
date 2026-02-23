@@ -254,7 +254,9 @@
      See [doc/install-matlab-tree-sitter-grammar.org]
 
   4. [Optional] Install lsp-mode and the [MATLAB Language Server] for an
-     improved editing experience.
+     improved editing capabilities.  Code navigation: jump to definition
+     and back, find references, and rename symbols. Also provides
+     improved MATLAB code analyzer (mlint) message interaction.
 
   5. [Optional] Check your installation setup.
 

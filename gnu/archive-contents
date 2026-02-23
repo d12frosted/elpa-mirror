@@ -1013,13 +1013,13 @@
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:commit . "12730179acddc224f0c43a2b8e8a028182d1e40f"))])
  (el-job
-  . [(2 7 2) ((emacs (29 1)))
+  . [(2 7 3) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
      ((:url . "https://github.com/meedstrom/el-job")
       (:keywords "processes")
       (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
       (:authors ("Martin Edström" . "meedstrom@runbox.eu"))
-      (:commit . "62ff3fe5e570028c597a74e66269292503511398"))])
+      (:commit . "5af4975c176477cfe5f864bb9b402d8a8f2a074a"))])
  (el-search
   . [(1 12 6 1) ((emacs (25)) (stream (2 2 4)) (cl-print (1 0)))
      "Expression based interactive search for Emacs Lisp" tar
@@ -1937,7 +1937,7 @@
       (:authors ("Ian Martins" . "ianxm@jhu.edu"))
       (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode
-  . [(8 1 0) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
+  . [(8 1 1) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
      tar
      ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
       (:keywords "matlab(r)")
@@ -1946,7 +1946,7 @@
 		   ("John Ciolfi" . "john.ciolfi.32@gmail.com"))
       (:authors ("Matt Wette" . "mwette@alumni.caltech.edu")
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
-      (:commit . "af7857f5bb6e4931218ada9503889e97e4dbdccb"))])
+      (:commit . "e6923314f3ffb291e45ece6b1ce08a0961e31adb"))])
  (mct
   . [(1 1 0) ((emacs (29 1))) "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")
@@ -2235,13 +2235,13 @@
       (:authors ("Ian Dunn" . "dunni@gnu.org"))
       (:commit . "8258a4dfa00aa522249cdf9aeea5be4de97bd7c1"))])
  (org-gnosis
-  . [(0 1 2) ((emacs (27 2)) (emacsql (4 0 0)) (compat (29 1 4 2)))
-     "Roam-like Knowledge Management System" tar
+  . [(0 2 0) ((emacs (27 2)) (emacsql (4 0 0)) (compat (29 1 4 2)))
+     "Learning-focused note-taking for Gnosis" tar
      ((:url . "https://thanosapollo.org/projects/org-gnosis/")
-      (:keywords "extensions")
+      (:keywords "outlines" "extensions" "org-mode")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "cb0b07a307b68050eaf39cf5d85739515eb0812b"))])
+      (:commit . "f3ab68fa0c6a1ab4dfb26fe5f3154cd891a07c5c"))])
  (org-jami-bot
   . [(0 0 5) ((emacs (28 1)) (jami-bot (0 0 4)))
      "Capture GNU Jami messages as notes and todos in Org mode" tar
