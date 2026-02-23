@@ -1,2 +1,35 @@
  • Building package debian-el (from https://salsa.debian.org/emacsen-team/debian-el.git)...
 Updating /mnt/store/melpa/working/debian-el/
+Checking out 9637930ced261a08fbc10b83a35786593ae54ad2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/debian-el/
+  to /tmp/debian-el-YzY8MH/debian-el-20251227.312
+    apt-deb822-sources.el -> apt-deb822-sources.el
+    apt-sources.el -> apt-sources.el
+    apt-utils.el -> apt-utils.el
+    deb-view.el -> deb-view.el
+    debian-autoloads.el -> debian-autoloads.el
+    debian-bug.el -> debian-bug.el
+    debian-el.el -> debian-el.el
+    gnus-BTS.el -> gnus-BTS.el
+    preseed.el -> preseed.el
+    debian-el.texi -> debian-el.texi
+Generating debian-el.info
+Created debian-el-20251227.312.tar containing:
+  debian-el-20251227.312/
+  debian-el-20251227.312/apt-deb822-sources.el
+  debian-el-20251227.312/apt-sources.el
+  debian-el-20251227.312/apt-utils.el
+  debian-el-20251227.312/deb-view.el
+  debian-el-20251227.312/debian-autoloads.el
+  debian-el-20251227.312/debian-bug.el
+  debian-el-20251227.312/debian-el-pkg.el
+  debian-el-20251227.312/debian-el.el
+  debian-el-20251227.312/debian-el.info
+  debian-el-20251227.312/dir
+  debian-el-20251227.312/gnus-BTS.el
+  debian-el-20251227.312/preseed.el
+ ✓ Success:
+  2026-02-23T03:22:57+0000  debian-el-20251227.312.entry
+  2026-02-23T03:22:57+0000  debian-el-20251227.312.tar
+Built debian-el in 9.062s, finished at 2026-02-23T03:22:59+0000
