@@ -1321,7 +1321,7 @@
   (edit-indirect :url "https://github.com/Fanael/edit-indirect")
   (edit-indirect-region-latex :url "https://github.com/niitsuma/edit-indirect-region-latex")
   (edit-list :url "https://github.com/emacsattic/edit-list")
-  (edit-metadata :url "https://codeberg.org/mxpi/edit-metadata.git")
+  (edit-metadata :url "https://codeberg.org/mxpi/edit-metadata")
   (edit-server :url "https://github.com/stsquad/emacs_chrome")
   (edit-server-htmlize :url "https://github.com/frobtech/edit-server-htmlize")
   (editorconfig :url "https://github.com/editorconfig/editorconfig-emacs")
