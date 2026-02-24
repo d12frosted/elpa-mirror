@@ -2042,7 +2042,6 @@
   (flymake-swi-prolog :url "https://git.sr.ht/~eshel/flymake-swi-prolog")
   (flymake-vala :url "https://github.com/daniellawrence/flymake-vala")
   (flymake-vnu :url "https://github.com/theneosloth/flymake-vnu")
-  (flymake-x :url "https://github.com/mkcms/flymake-x")
   (flymake-yaml :url "https://github.com/yasuyk/flymake-yaml")
   (flymake-yamllint :url "https://codeberg.org/shaohme/flymake-yamllint")
   (flymd :url "https://github.com/mola-T/flymd")
