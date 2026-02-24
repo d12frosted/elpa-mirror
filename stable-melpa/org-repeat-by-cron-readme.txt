@@ -72,5 +72,6 @@ SCHEDULED: <2025-12-14 Sun>
 
 Tip1: If you do not want to specify the hour and minute for the repeat time,
 use the abbreviated 3-segment format.
-Tip2: You should not use org-repeat-by-cron and the built-in
-Org repeater cookie (e.g., +1w) on the same task.
+Tip2: If you use org-repeat-by-cron with the built-in Org repeater
+cookie (e.g., +1w) on the same task, the build-in cookie will
+be ignored and preserved, so you can use this package with org-habit.
