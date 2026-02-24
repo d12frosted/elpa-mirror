@@ -606,12 +606,12 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "c7af95865ef083327d299b86c254ca87fa88a504"))])
  (fedi
-  . [(0 2) ((emacs (28 1)) (markdown-mode (2 5)))
+  . [(0 3) ((emacs (28 1)) (markdown-mode (2 5)))
      "Helper functions for fediverse clients" tar
      ((:url . "https://codeberg.org/martianh/fedi.el")
-      (:maintainer "Marty Hiatt" . "martianhiatus@riseup.net")
-      (:authors ("Marty Hiatt" . "martianhiatus@riseup.net"))
-      (:commit . "b483834e64ce311a9f0db7f758b5d2234f8c02a3"))])
+      (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
+      (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
+      (:commit . "74fab520f1d008f5a389a673616a617c03c74600"))])
  (fj
   . [(0 30)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
