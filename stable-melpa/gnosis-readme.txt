@@ -1,7 +1,8 @@
-Gnosis is a learning tool that integrates a note-taking system with
-spaced repetition and self-testing.  It works together with
-org-gnosis, which provides a Zettelkasten-style note-taking system
-where notes (nodes) are org files indexed in an SQLite database.
+Gnosis is a personal knowledge management and review system that
+integrates a note-taking system with spaced repetition and
+self-testing.  It works together with org-gnosis, which provides a
+Zettelkasten-style note-taking system where notes (nodes) are org
+files indexed in an SQLite database.
 
 The intended workflow is:
 
