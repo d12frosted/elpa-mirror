@@ -613,7 +613,7 @@
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
       (:commit . "74fab520f1d008f5a389a673616a617c03c74600"))])
  (fj
-  . [(0 30)
+  . [(0 31)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
       (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -621,7 +621,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "ab360df752c81be7b962d8e21f97b06c424a54bb"))])
+      (:commit . "789f7daf3bacebf77d9758173f9ad78a5f818c29"))])
  (flx
   . [(0 6 2) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
@@ -797,7 +797,7 @@
 		 . "emacs.git-modes@jonas.bernoulli.dev"))
       (:commit . "c3faeeea1982786f78d8c38397dec0f078eaec84"))])
  (gnosis
-  . [(0 6 0)
+  . [(0 7 0)
      ((emacs (27 2)) (emacsql (4 1 0)) (compat (29 1 4 2))
       (transient (0 7 2)) (org-gnosis (0 0 9)))
      "Spaced Repetition System" tar
@@ -805,7 +805,7 @@
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "54f6d37120a84d94451099f21d17aec1c9ab8ace"))])
+      (:commit . "54660aabfa3200663053dd0063f2c215ef674ddb"))])
  (gnu-apl-mode
   . [(1 5 1) nil "Emacs mode for GNU APL" tar
      ((:url . "http://www.gnu.org/software/apl/")

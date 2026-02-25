@@ -74,7 +74,7 @@
 
   Once you are authenticated, try `fj-list-own-repos' to view your
   repos, or `fj-list-issues' to view issues of the current repo, or with
-  completing-read of a repo is no repo is found.
+  completing-read of a repo if no repo is found.
 
   If you are already viewing a repo and want to force the prompt to
   choose another, call `fj-list-issues' with a prefix arg (`C-u').
@@ -333,7 +333,7 @@
    C-c S-RET  fj-compose-remove-milestone     Remove milestone from item being composed.                          
    C-c C-c    fj-compose-send                 Submit the issue or comment to your Forgejo instance.               
    C          fj-copy-item-url                Copy URL of current item, either issue or PR.                       
-   U          fj-copy-pr-url                  Copy upstream Pull Request URL with branch name.                    
+              fj-copy-pr-url                  Copy upstream Pull Request URL with branch name.                    
    c          fj-create-issue                 Create issue in current repo or repo at point in tabulated listing. 
               fj-create-milestone             Create a milestone for REPO by OWNER.                               
               fj-create-token                 Create an access token for `fj-user' on `fj-host'.                  
@@ -383,6 +383,7 @@
    C-c C-c    fj-list-own-repos-read          List repos for `fj-user', prompting for an order type.              
    P          fj-list-pulls                   List pulls for REPO by OWNER, filtered by STATE.                    
               fj-list-repos                   List repos for `fj-user' extended by `fj-extra-repos'.              
+   C-c C-c    fj-list-repos-sort              Reload current repos listing, prompting for a sort type.            
               fj-list-user-repos              View repos of current entry user from tabulated repos listing.      
               fj-mark-notification-read       Mark notification at point as read.                                 
               fj-mark-notification-unread     Mark notification at point as unread.                               
