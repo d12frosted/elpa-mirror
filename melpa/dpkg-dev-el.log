@@ -1,2 +1,33 @@
  • Building package dpkg-dev-el (from https://salsa.debian.org/emacsen-team/dpkg-dev-el.git)...
 Updating /mnt/store/melpa/working/dpkg-dev-el/
+Checking out 314f0dbbbb6410e8ebcdb99de34e345fc12e40fb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dpkg-dev-el/
+  to /tmp/dpkg-dev-el-bun3mS/dpkg-dev-el-20251025.1006
+    debian-autopkgtest-control-mode.el -> debian-autopkgtest-control-mode.el
+    debian-bts-control.el -> debian-bts-control.el
+    debian-changelog-mode.el -> debian-changelog-mode.el
+    debian-control-mode.el -> debian-control-mode.el
+    debian-copyright.el -> debian-copyright.el
+    debian-rfc822-mode.el -> debian-rfc822-mode.el
+    debian-rfc822-watch-mode.el -> debian-rfc822-watch-mode.el
+    dpkg-dev-common-utils.el -> dpkg-dev-common-utils.el
+    dpkg-dev-el.el -> dpkg-dev-el.el
+    readme-debian.el -> readme-debian.el
+Created dpkg-dev-el-20251025.1006.tar containing:
+  dpkg-dev-el-20251025.1006/
+  dpkg-dev-el-20251025.1006/debian-autopkgtest-control-mode.el
+  dpkg-dev-el-20251025.1006/debian-bts-control.el
+  dpkg-dev-el-20251025.1006/debian-changelog-mode.el
+  dpkg-dev-el-20251025.1006/debian-control-mode.el
+  dpkg-dev-el-20251025.1006/debian-copyright.el
+  dpkg-dev-el-20251025.1006/debian-rfc822-mode.el
+  dpkg-dev-el-20251025.1006/debian-rfc822-watch-mode.el
+  dpkg-dev-el-20251025.1006/dpkg-dev-common-utils.el
+  dpkg-dev-el-20251025.1006/dpkg-dev-el-pkg.el
+  dpkg-dev-el-20251025.1006/dpkg-dev-el.el
+  dpkg-dev-el-20251025.1006/readme-debian.el
+ ✓ Success:
+  2026-02-25T03:11:13+0000  dpkg-dev-el-20251025.1006.entry
+  2026-02-25T03:11:13+0000  dpkg-dev-el-20251025.1006.tar
+Built dpkg-dev-el in 6.679s, finished at 2026-02-25T03:11:14+0000
