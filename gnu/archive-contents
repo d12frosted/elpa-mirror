@@ -541,13 +541,13 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "122760ac3503f141625a2b3513d60c06c27cf84f"))])
  (consult-hoogle
-  . [(0 5 0) ((emacs (27 1)) (consult (2 0)))
+  . [(0 6 0) ((emacs (27 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
      ((:url . "https://codeberg.org/rahguzar/consult-hoogle")
       (:keywords "docs" "languages")
       (:maintainer "rahguzar" . "rahguzar@mailbox.org")
       (:authors ("rahguzar" . "rahguzar@mailbox.org"))
-      (:commit . "384959016022d071464dc6e611e4fcded562834e"))])
+      (:commit . "b5f327a5fa1f3b13ad693e1b5f9f2efe72c45929"))])
  (consult-recoll
   . [(1 0 0) ((emacs (26 1)) (consult (2 0)))
      "Recoll queries using consult" tar

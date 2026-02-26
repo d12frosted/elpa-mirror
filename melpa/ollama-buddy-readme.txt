@@ -36,5 +36,6 @@ Load any provider module to access its models alongside Ollama:
   (require 'ollama-buddy-codestral)   ; s: Mistral Codestral
   (require 'ollama-buddy-deepseek)    ; d: DeepSeek
   (require 'ollama-buddy-openrouter)  ; r: OpenRouter (400+ models)
+  (require 'ollama-buddy-openai-compat) ; l: any OpenAI-compatible server (LM Studio, llama.cpp, vLLM…)
 
 Each provider needs an API key (see PROVIDERS.org for setup details).

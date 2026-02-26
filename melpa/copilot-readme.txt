@@ -1,1 +1,1 @@
-An unofficial Copilot plugin for Emacs
+An Emacs plugin for GitHub Copilot
