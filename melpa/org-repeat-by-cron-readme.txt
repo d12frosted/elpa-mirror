@@ -1,5 +1,7 @@
 An Org mode task repeater based on Cron expressions
+
 Modified from https://github.com/Raemi/org-reschedule-by-rule.
+
 Key Differences:
 - Uses a cron parser implemented in pure Elisp, with
   no dependency on the Python croniter package.
@@ -79,3 +81,5 @@ Tip2: If you use org-repeat-by-cron with the built-in Org repeater
 cookie (e.g., +1w) on the same task, the build-in cookie will
 be taken over and preserved, so you can use this package with
 org-habit.
+
+Check README for more usage: https://github.com/TomoeMami/org-repeat-by-cron.el
