@@ -56,7 +56,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2025 Free Software Foundation, Inc.
+  Copyright (C) 2022-2026 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -402,7 +402,8 @@ Table of Contents
         Anwesh Gangula, Diego Alvarez, Duy Nguyen, Koloszár Gergely,
         Matthias Meulien, Mark Barton, Mehrad Mahmoudian, Nikolaos
         Bezirgiannis, Petter Storvik, Ronny Randen, Rudolf Adamkovič,
-        Toon Claes, and users djl, kb.
+        Sébastien Delafond, Toon Claes, and users djl, hammerandtongs,
+        kb.
 
 
 14 GNU Free Documentation License
