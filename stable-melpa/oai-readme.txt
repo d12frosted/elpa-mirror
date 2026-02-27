@@ -9,6 +9,7 @@ It allows you to:
 - Use tags `@Backtrace` @Bt and Org links to insert target in query.
 - Highlighting for major elements.
 - Autofilling, hooks, powerful debugging
+- Noweb and tangling
 - Customization for engineering, there is :chain for sequence of
   calls out-of-the-box.
 
