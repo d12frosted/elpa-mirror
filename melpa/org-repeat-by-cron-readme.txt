@@ -7,8 +7,7 @@ Key Differences:
   no dependency on the Python croniter package.
 - Replaces the INTERVAL property with a DAY_AND property.
 - Supports toggling between SCHEDULED and DEADLINE timestamps.
-- Fully compatible with org-habit; it takes over rescheduling
-  while preserving the habit's consistency graph.
+- Fully compatible with org-habit.
 
 org-repeat-by-cron.el is a lightweight extension for Emacs Org
 mode that allows you to repeat tasks using the power of Cron expressions.

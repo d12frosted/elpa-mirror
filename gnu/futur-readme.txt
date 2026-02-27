@@ -23,9 +23,9 @@ use`futur-blocking-wait-to-get-result'.
 
 Low level API
 
-- (futur-done VAL) to create a trivial future returning VAL.
-- (futur-error ERR) to create a trivial failed future.
-- (futur-new FUN) to create a non-trivial future.
+- (futur-done VAL): Create a trivial future returning VAL.
+- (futur-failed ERR): Create a trivial failed future.
+- (futur-new FUN): Create a non-trivial future.
   FUN is called with one argument (the new `futur' object) and should
   return the "blocker" that `futur' is waiting for (used mostly
   when aborting a future).
@@ -34,7 +34,7 @@ Low level API
   successfully with VAL, and runs the clients waiting for that event.
 - (futur-deliver-failure FUTUR ERROR): Mark FUTUR as having failed
   with ERROR, and runs the clients waiting for that event.
-- (futur-register-callback FUTUR FUN): Register FUN as a client.
+- (futur--register-callback FUTUR FUN): Register FUN as a client.
   Will be called with two arg (the ERROR and the VAL) when FUTURE completes.
 - (futur-blocking-wait-to-get-result FUTUR): Busy-wait for FUTUR to complete
   and return its value.  Better use `futur-bind' or `futur-let*' instead.
@@ -53,6 +53,8 @@ Composing futures
   delayed until FUTUR completes.
 - (futur-list &rest FUTURS): Run FUTURS concurrently and return the
   resulting list of values.
+- (futur-race &rest FUTURS): Run FUTURS concurrently, return the
+  first result, and discard the rest.
 
 Related packages
 
