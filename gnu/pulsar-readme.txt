@@ -403,7 +403,7 @@ Table of Contents
         Matthias Meulien, Mark Barton, Mehrad Mahmoudian, Nikolaos
         Bezirgiannis, Petter Storvik, Ronny Randen, Rudolf Adamkovič,
         Sébastien Delafond, Toon Claes, and users djl, hammerandtongs,
-        kb.
+        irisjae, kb.
 
 
 14 GNU Free Documentation License
