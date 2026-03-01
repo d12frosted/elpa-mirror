@@ -1202,13 +1202,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
  (mastodon
-  . [(2 0 8) ((emacs (28 1)) (persist (0 8)) (tp (0 7)))
+  . [(2 0 10) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "fdeb5f2d770e516f3f119fb9a3769255ebd5cf19"))])
+      (:commit . "d1cd23268a897022d29e1714772451a0bd18770f"))])
  (material-theme
   . [(2015) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar

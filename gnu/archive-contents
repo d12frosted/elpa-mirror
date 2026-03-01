@@ -2260,6 +2260,16 @@
       (:maintainer "Hanno Perrey" . "hanno@hoowl.se")
       (:authors ("Hanno Perrey" . "hanno@hoowl.se"))
       (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
+ (org-mem
+  . [(0 32 1)
+     ((emacs (29 1)) (el-job (2 7 3)) (llama (1 0))
+      (truename-cache (0 3 2)))
+     "Fast info from a large number of Org file contents" tar
+     ((:url . "https://github.com/meedstrom/org-mem")
+      (:keywords "text")
+      (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
+      (:authors ("Martin Edström" . "meedstrom@runbox.eu"))
+      (:commit . "c0aa21916a98c4601c4063737eddb6a1625410f4"))])
  (org-modern
   . [(1 12) ((emacs (29 1)) (org (9 6)) (compat (30)))
      "Modern looks for Org" tar
@@ -3287,6 +3297,14 @@
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
       (:commit . "f2b8fe6d500e3543bece24381fd4ce34a171c860"))])
+ (truename-cache
+  . [(0 3 5) ((emacs (27 1)) (compat (30 1)))
+     "Efficiently de-dup file-names" tar
+     ((:url . "https://github.com/meedstrom/truename-cache")
+      (:keywords "lisp")
+      (:maintainer "Martin Edström" . "meedstrom91@gmail.com")
+      (:authors ("Martin Edström" . "meedstrom91@gmail.com"))
+      (:commit . "356a11ff9fc0c37413779e3f7388ba1410225ea9"))])
  (ulisp-repl
   . [(1 0 3) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
