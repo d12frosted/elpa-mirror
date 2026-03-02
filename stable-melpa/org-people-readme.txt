@@ -1,0 +1,129 @@
+A package to collect contacts from org-agenda files, and allow
+operations to be carried out on them.
+
+By default all tree-items with a "contact" tag, which contain
+properties, are considered contacts.
+
+An example pair of contacts would look like this inside an org-mode
+file:
+
+  * People
+    ** Alice                        :family:contact:
+    :PROPERTIES
+    :ADDRESS: 32 Something Street
+    :EMAIL: alice@example.com
+    :PHONE: +123 456 789
+    :CHILDREN: Mallory
+    :NICKNAME: Allu
+    :END
+    ** Bob                           :colleague:contact:
+    :PROPERTIES
+    :ADDRESS: 32 Something Lane
+    :EMAIL: bob@example.com
+    :PHONE: +123 456 987
+    :END
+
+The specific properties used don't matter, although it seems natural
+to use :ADDRESS, :EMAIL, and :PHONE.  A contact will be recorded
+if there is at least one property present and the "contact" tag
+being present.
+
+The name of the tag used to search for entries is specified in the
+org-people-search-tag variable.
+
+
+; Basic operations
+
+Once your agenda files have been loaded `org-people-summary' will
+show a buffer of all known contacts, and from there you can copy
+attributes, jump to their definitions, & etc.
+
+`org-people-insert' allows you to interactively insert data from
+your contacts with helpful TAB-completion, on the attribute name
+and person.
+
+; org-table helpers
+
+If you tag the contacts with more than just the `contacts` value
+then you may use those tags to build simple tables of matching entries.
+For example the following can auto-update:
+
+   #+NAME: get-family-contacts
+   #+BEGIN_SRC elisp :results value table
+   (org-people-tags-to-table "family")
+   #+END_SRC
+
+If you prefer to include different columns in your generated table you
+can specify them directly:
+
+  #+NAME: get-family-contacts
+  #+BEGIN_SRC elisp :results value table
+  (org-people-tags-to-table "family" '(:LINK :PHONE))
+  #+END_SRC
+
+You may also create a table including all known data about a single named
+individual:
+
+   #+NAME: steve-kemp
+   #+BEGIN_SRC elisp :results value table :colnames '("Field" "Value")
+   (org-people-person-to-table "Steve Kemp")
+   #+END_SRC
+
+In this case properties listed in `org-people-ignored-properties` will
+be ignored and excluded from the generated table.
+
+
+; Version history (brief)
+
+
+1.6 - Open the property drawers when jumping to a contact, to allow
+      viewing all appropriate details.
+
+1.5 - All linting fixes implemented.
+
+1.4 - `org-people-summary' now allows you to specify the fields
+      which are displayed, via the new `org-people-summary-properties'
+      configuration value.
+
+1.3 - `org-people-summary' can now be filtered against all known properties.
+      Not just the ones which are visible.  (i.e. Filter against ":ADDRESS")
+
+1.2 - Rudimentary (single-contact-only) VCF export.
+
+1.1 - Special support for nickname, and case insensitivity by default for
+      completion.
+      org-people-ignored-properties was introduced to ignore specific
+      properties from completion and table-generation.
+
+1.0 - Process all agenda-files by default, via a tag search for
+      ":contact:" (by default).  This is more generally useful, and
+      removes configuration and our ad-hoc caching implementation.
+
+0.9 - org-people-person-to-table shows all the data about one individual
+      as an `org-mode' table.
+      Added test-cases in new file, org-people-test.el
+
+0.8 - Provide "[[org-person:Name Here]]" support with completion,
+      clicking, and export attributes.
+      Make org-people-browse-name public and usefully available.
+
+0.7 - Provide annotations for name-completion.
+      Switch the org-people-summary to using tabulated-list-mode.
+
+0.6 - The table-creating function has been renamed and updated.
+      Now you can specify the fields to return.
+
+0.5 - Drop simple functions.  They can be user-driver.
+      Added filtering options and rewrote code to use them.
+
+0.4 - Allow searching by property value.
+      Added org-people-get-by-email, etc, using this new facility.
+
+0.3 - :TAGS shows up as a comma-separated list in org-people-summary.
+      org-people-summary is set to view-mode, so "q" buries the buffer.
+
+0.2 - Added org-people-summary.
+      Updated all contacts to have :TAGS and :NAME properties
+      where appropriate.
+
+0.1 - initial release
