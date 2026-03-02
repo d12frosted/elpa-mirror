@@ -76,6 +76,12 @@ be ignored and excluded from the generated table.
 ; Version history (brief)
 
 
+1.8.1 - Improvement: Filtering on :TAGS property in `M-x org-people-summary`
+        uses sub-string matches of entries, rather than membership testing.
+
+1.7 - BugFix: First column in org-people-summary-properties is used as the
+      default sort key.  Now allows a width to be defined too.
+
 1.6 - Open the property drawers when jumping to a contact, to allow
       viewing all appropriate details.
 
