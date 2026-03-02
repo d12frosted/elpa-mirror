@@ -1987,7 +1987,7 @@
   (flymake-aspell :url "https://github.com/leotaku/flycheck-aspell")
   (flymake-bashate :url "https://github.com/jamescherti/flymake-bashate.el")
   (flymake-biome :url "https://github.com/erickgnavar/flymake-biome")
-  (flymake-clippy :url "https://github.com/mgmarlow/flymake-clippy")
+  (flymake-clippy :url "https://github.com/mak-kirkland/flymake-clippy")
   (flymake-coffee :url "https://github.com/purcell/flymake-coffee")
   (flymake-collection :url "https://github.com/mohkale/flymake-collection")
   (flymake-cspell :url "https://github.com/fritzgrabo/flymake-cspell")

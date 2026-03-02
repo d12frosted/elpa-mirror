@@ -1,4 +1,5 @@
-Flymake backend for Clippy, the Rust linter.
+Flymake backend for Clippy (https://doc.rust-lang.org/clippy/), a
+linter for the Rust programming language.
 
-(use-package flymake-clippy
-  :hook (rust-mode . flymake-clippy-setup-backend))
+Based on "An annotated example backend" in the Flymake docs:
+https://www.gnu.org/software/emacs/manual/html_mono/flymake.html

@@ -191,6 +191,14 @@
 		("Ian T Zimmerman" . "itz@rahul.net")
 		("Damien Doligez" . "damien.doligez@inria.fr"))
       (:commit . "2905a436e956c5bba16c4633a6e4c4fceefa6535"))])
+ (casual
+  . [(2 14 2) ((emacs (29 1)) (transient (0 9 0)) (csv-mode (1 27)))
+     "Transient user interfaces for various modes" tar
+     ((:url . "https://github.com/kickingvegas/casual")
+      (:keywords "tools" "wp")
+      (:maintainer "Charles Choi" . "kickingvegas@gmail.com")
+      (:authors ("Charles Choi" . "kickingvegas@gmail.com"))
+      (:commit . "a68d05609cc40905618b72b8cadbbdde833e428e"))])
  (cdlatex
   . [(4 18 5) nil "Fast input methods for LaTeX environments and math"
      tar
@@ -613,7 +621,7 @@
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
       (:commit . "74fab520f1d008f5a389a673616a617c03c74600"))])
  (fj
-  . [(0 32)
+  . [(0 33)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
       (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -621,7 +629,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "3edfc8f0bdea6d249b71e7f5f8593d16f1eea7c2"))])
+      (:commit . "e8d95f2d7cda52cf1aae31ac46d73e7adbfbf191"))])
  (flx
   . [(0 6 2) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
@@ -1096,11 +1104,11 @@
       (:authors ("martian hiatus" . "mousebot@disroot.org"))
       (:commit . "c746d32d2f330ed9a23ec7f8fc1f7d35ac22c357"))])
  (llama
-  . [(1 0 3) ((emacs (26 1)) (compat (30 1)))
+  . [(1 0 4) ((emacs (26 1)) (compat (30 1)))
      "Compact syntax for short lambda" tar
      ((:url . "https://github.com/tarsius/llama")
       (:keywords "extensions")
-      (:commit . "2a89ba755b0459914a44b1ffa793e57f759a5b85"))])
+      (:commit . "d430d48e0b5afd2a34b5531f103dcb110c3539c4"))])
  (logview
   . [(0 19 3)
      ((emacs (25 1)) (datetime (0 8)) (extmap (1 0)) (compat (29)))
@@ -1202,13 +1210,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
  (mastodon
-  . [(2 0 10) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
+  . [(2 0 11) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "d1cd23268a897022d29e1714772451a0bd18770f"))])
+      (:commit . "f75f9f2d6411c28d1fe9e0a19b1219aa3591d34a"))])
  (material-theme
   . [(2015) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar
@@ -1372,7 +1380,7 @@
       (:authors ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
       (:commit . "941e7e6cb8a5a0b193345263ed912cceecae1887"))])
  (orgit
-  . [(2 1 1)
+  . [(2 1 2)
      ((emacs (28 1)) (compat (30 1)) (cond-let (0 2)) (magit (4 5))
       (org (9 7)))
      "Support for Org links to Magit buffers" tar
@@ -1382,7 +1390,7 @@
 		   . "emacs.orgit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-      (:commit . "24c8fe48c477d561c2ce1720223f8c5aec664f4e"))])
+      (:commit . "4fb91faff3bf32dac5f6f932654c280cd1f190f7"))])
  (p4-16-mode
   . [(0 3) nil "Support for the P4_16 programming language" tar
      ((:keywords "languages" "p4_16")
@@ -1945,7 +1953,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 4 8) ((emacs (26 1)) (compat (30 1)))
+  . [(3 4 9) ((emacs (26 1)) (compat (30 1)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
       (:keywords "processes" "terminals")
@@ -1953,7 +1961,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "76ecbb2107efcbad48210a393b90193bcf4008aa"))])
+      (:commit . "64211dcb815f2533ac3d2a7e56ff36ae804d8338"))])
  (with-simulated-input
   . [(3 0) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar
