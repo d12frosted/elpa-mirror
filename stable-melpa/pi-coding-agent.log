@@ -1,25 +1,31 @@
  • Building package pi-coding-agent (from github:dnouri/pi-coding-agent)...
 Updating /mnt/store/melpa/working/pi-coding-agent/
-Checking out 13c5b10f28137663e98386c6c7299f445d04b87a
+Checking out a5fe982e4dde139ff937a72a0c80a65c9d3b839a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pi-coding-agent/
-  to /tmp/pi-coding-agent-eOSUSK/pi-coding-agent-20260226.1310
+  to /tmp/pi-coding-agent-O58odk/pi-coding-agent-20260303.1304
+    md-ts-mode.el -> md-ts-mode.el
     pi-coding-agent-core.el -> pi-coding-agent-core.el
+    pi-coding-agent-grammars.el -> pi-coding-agent-grammars.el
     pi-coding-agent-input.el -> pi-coding-agent-input.el
     pi-coding-agent-menu.el -> pi-coding-agent-menu.el
     pi-coding-agent-render.el -> pi-coding-agent-render.el
     pi-coding-agent-ui.el -> pi-coding-agent-ui.el
     pi-coding-agent.el -> pi-coding-agent.el
-Created pi-coding-agent-20260226.1310.tar containing:
-  pi-coding-agent-20260226.1310/
-  pi-coding-agent-20260226.1310/pi-coding-agent-core.el
-  pi-coding-agent-20260226.1310/pi-coding-agent-input.el
-  pi-coding-agent-20260226.1310/pi-coding-agent-menu.el
-  pi-coding-agent-20260226.1310/pi-coding-agent-pkg.el
-  pi-coding-agent-20260226.1310/pi-coding-agent-render.el
-  pi-coding-agent-20260226.1310/pi-coding-agent-ui.el
-  pi-coding-agent-20260226.1310/pi-coding-agent.el
+Created pi-coding-agent-20260303.1304.tar containing:
+  pi-coding-agent-20260303.1304/
+  pi-coding-agent-20260303.1304/md-ts-mode.el
+  pi-coding-agent-20260303.1304/pi-coding-agent-core.el
+  pi-coding-agent-20260303.1304/pi-coding-agent-grammars.el
+  pi-coding-agent-20260303.1304/pi-coding-agent-input.el
+  pi-coding-agent-20260303.1304/pi-coding-agent-menu.el
+  pi-coding-agent-20260303.1304/pi-coding-agent-pkg.el
+  pi-coding-agent-20260303.1304/pi-coding-agent-render.el
+  pi-coding-agent-20260303.1304/pi-coding-agent-ui.el
+  pi-coding-agent-20260303.1304/pi-coding-agent.el
  ✓ Success:
-  2026-03-03T10:20:24+0000  pi-coding-agent-20260226.1310.entry
-  2026-03-03T10:20:24+0000  pi-coding-agent-20260226.1310.tar
-Built pi-coding-agent in 4.009s, finished at 2026-03-03T10:20:25+0000
+  2026-03-03T12:42:35+0000  pi-coding-agent-20260226.1310.entry
+  2026-03-03T12:42:35+0000  pi-coding-agent-20260226.1310.tar
+  2026-03-03T15:11:02+0000  pi-coding-agent-20260303.1304.entry
+  2026-03-03T15:11:02+0000  pi-coding-agent-20260303.1304.tar
+Built pi-coding-agent in 3.940s, finished at 2026-03-03T15:11:03+0000

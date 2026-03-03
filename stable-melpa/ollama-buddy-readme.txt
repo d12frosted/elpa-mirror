@@ -11,12 +11,12 @@ GitHub Copilot, Codestral, DeepSeek, and OpenRouter.
   :ensure t
   :bind
   ("C-c o" . ollama-buddy-role-transient-menu)
-  ("C-c O" . ollama-buddy-transient-menu-wrapper))
+  ("C-c O" . ollama-buddy-transient-menu))
 
 ; Usage
 
 C-c o  Role-based transient menu (main entry point)
-C-c O  Advanced transient menu (all settings and actions)
+C-c O  Main transient menu (all settings and actions)
 
 From the chat buffer:
 

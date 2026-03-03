@@ -3,12 +3,9 @@ Provides a two-window interface for AI-assisted coding: chat history
 with rendered markdown, and a separate prompt composition buffer.
 
 Requirements:
+  - Emacs 29.1 or later (tree-sitter support required)
   - pi coding agent 0.52.9 or later, installed and in PATH
-
-Optional Dependencies:
-  - phscroll: Markdown tables that exceed the window width wrap awkwardly.
-    phscroll enables horizontal scrolling so tables stay readable.
-    Install from: https://github.com/misohena/phscroll
+  - tree-sitter grammars for markdown and markdown-inline
 
 Usage:
   M-x pi-coding-agent         Start or focus session in current project
