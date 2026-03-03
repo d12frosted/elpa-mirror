@@ -1,108 +1,37 @@
  • Building package alchemist (from github:tonini/alchemist.el)...
 Updating /mnt/store/melpa/working/alchemist/
-Checking out 6f99367511ae209f8fe2c990779764bbb4ccb6ed
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/alchemist/
-  to /tmp/alchemist-ctql4M/alchemist-20180312.1304
-    alchemist-company.el -> alchemist-company.el
-    alchemist-compile.el -> alchemist-compile.el
-    alchemist-complete.el -> alchemist-complete.el
-    alchemist-eval.el -> alchemist-eval.el
-    alchemist-execute.el -> alchemist-execute.el
-    alchemist-file.el -> alchemist-file.el
-    alchemist-goto.el -> alchemist-goto.el
-    alchemist-help.el -> alchemist-help.el
-    alchemist-hex.el -> alchemist-hex.el
-    alchemist-hooks.el -> alchemist-hooks.el
-    alchemist-iex.el -> alchemist-iex.el
-    alchemist-info.el -> alchemist-info.el
-    alchemist-interact.el -> alchemist-interact.el
-    alchemist-key.el -> alchemist-key.el
-    alchemist-macroexpand.el -> alchemist-macroexpand.el
-    alchemist-message.el -> alchemist-message.el
-    alchemist-mix.el -> alchemist-mix.el
-    alchemist-phoenix.el -> alchemist-phoenix.el
-    alchemist-project.el -> alchemist-project.el
-    alchemist-refcard.el -> alchemist-refcard.el
-    alchemist-report.el -> alchemist-report.el
-    alchemist-scope.el -> alchemist-scope.el
-    alchemist-server.el -> alchemist-server.el
-    alchemist-test-mode.el -> alchemist-test-mode.el
-    alchemist-utils.el -> alchemist-utils.el
-    alchemist.el -> alchemist.el
-    alchemist-server => alchemist-server
-Created alchemist-20180312.1304.tar containing:
-  alchemist-20180312.1304/
-  alchemist-20180312.1304/alchemist-company.el
-  alchemist-20180312.1304/alchemist-compile.el
-  alchemist-20180312.1304/alchemist-complete.el
-  alchemist-20180312.1304/alchemist-eval.el
-  alchemist-20180312.1304/alchemist-execute.el
-  alchemist-20180312.1304/alchemist-file.el
-  alchemist-20180312.1304/alchemist-goto.el
-  alchemist-20180312.1304/alchemist-help.el
-  alchemist-20180312.1304/alchemist-hex.el
-  alchemist-20180312.1304/alchemist-hooks.el
-  alchemist-20180312.1304/alchemist-iex.el
-  alchemist-20180312.1304/alchemist-info.el
-  alchemist-20180312.1304/alchemist-interact.el
-  alchemist-20180312.1304/alchemist-key.el
-  alchemist-20180312.1304/alchemist-macroexpand.el
-  alchemist-20180312.1304/alchemist-message.el
-  alchemist-20180312.1304/alchemist-mix.el
-  alchemist-20180312.1304/alchemist-phoenix.el
-  alchemist-20180312.1304/alchemist-pkg.el
-  alchemist-20180312.1304/alchemist-project.el
-  alchemist-20180312.1304/alchemist-refcard.el
-  alchemist-20180312.1304/alchemist-report.el
-  alchemist-20180312.1304/alchemist-scope.el
-  alchemist-20180312.1304/alchemist-server.el
-  alchemist-20180312.1304/alchemist-server/
-  alchemist-20180312.1304/alchemist-server/.gitignore
-  alchemist-20180312.1304/alchemist-server/.travis.yml
-  alchemist-20180312.1304/alchemist-server/Makefile
-  alchemist-20180312.1304/alchemist-server/README.md
-  alchemist-20180312.1304/alchemist-server/lib/
-  alchemist-20180312.1304/alchemist-server/lib/api/
-  alchemist-20180312.1304/alchemist-server/lib/api/comp.exs
-  alchemist-20180312.1304/alchemist-server/lib/api/defl.exs
-  alchemist-20180312.1304/alchemist-server/lib/api/docl.exs
-  alchemist-20180312.1304/alchemist-server/lib/api/eval.exs
-  alchemist-20180312.1304/alchemist-server/lib/api/info.exs
-  alchemist-20180312.1304/alchemist-server/lib/api/ping.exs
-  alchemist-20180312.1304/alchemist-server/lib/api/version.exs
-  alchemist-20180312.1304/alchemist-server/lib/helpers/
-  alchemist-20180312.1304/alchemist-server/lib/helpers/capture_io.exs
-  alchemist-20180312.1304/alchemist-server/lib/helpers/complete.exs
-  alchemist-20180312.1304/alchemist-server/lib/helpers/module_info.exs
-  alchemist-20180312.1304/alchemist-server/lib/helpers/process_commands.exs
-  alchemist-20180312.1304/alchemist-server/lib/helpers/response.exs
-  alchemist-20180312.1304/alchemist-server/lib/server.exs
-  alchemist-20180312.1304/alchemist-server/lib/server/
-  alchemist-20180312.1304/alchemist-server/lib/server/io.exs
-  alchemist-20180312.1304/alchemist-server/lib/server/socket.exs
-  alchemist-20180312.1304/alchemist-server/run.exs
-  alchemist-20180312.1304/alchemist-server/test/
-  alchemist-20180312.1304/alchemist-server/test/api/
-  alchemist-20180312.1304/alchemist-server/test/api/comp_test.exs
-  alchemist-20180312.1304/alchemist-server/test/api/defl_test.exs
-  alchemist-20180312.1304/alchemist-server/test/api/docl_test.exs
-  alchemist-20180312.1304/alchemist-server/test/api/ping_test.exs
-  alchemist-20180312.1304/alchemist-server/test/api_test.exs
-  alchemist-20180312.1304/alchemist-server/test/fixtures/
-  alchemist-20180312.1304/alchemist-server/test/fixtures/.gitkeep
-  alchemist-20180312.1304/alchemist-server/test/helpers/
-  alchemist-20180312.1304/alchemist-server/test/helpers/complete_test.exs
-  alchemist-20180312.1304/alchemist-server/test/helpers/module_info_test.exs
-  alchemist-20180312.1304/alchemist-server/test/helpers/process_commands_test.exs
-  alchemist-20180312.1304/alchemist-server/test/server/
-  alchemist-20180312.1304/alchemist-server/test/server/socket_test.exs
-  alchemist-20180312.1304/alchemist-server/test/server_test.exs
-  alchemist-20180312.1304/alchemist-server/test/test_helper.exs
-  alchemist-20180312.1304/alchemist-test-mode.el
-  alchemist-20180312.1304/alchemist-utils.el
-  alchemist-20180312.1304/alchemist.el
- ✓ Success:
-  2026-03-03T14:14:36+0000  alchemist-20180312.1304.entry
-  2026-03-03T14:14:35+0000  alchemist-20180312.1304.tar
-Built alchemist in 4.193s, finished at 2026-03-03T14:14:36+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/tonini/alchemist.el/': The requested URL returned error: 500
+
+Debugger entered--Lisp error: (package-build-error . "Command `git fetch -f --tags origin' exited with n...")
+  signal(package-build-error "Command `git fetch -f --tags origin' exited with n...")
+  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
+  package-build--error(#<package-github-recipe package-github-recipe-1580334ebfce> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-1580334ebfce> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-1580334ebfce>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-1580334ebfce> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-1580334ebfce>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  (progn (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil ...))) (while --dolist-tail-- (let (...) (progn ... ...) (setq --dolist-tail-- ...)))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  package-build-archive("alchemist")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"alchemist\")"))
+  command-line()
+  normal-top-level()
+

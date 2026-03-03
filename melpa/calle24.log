@@ -1,190 +1,37 @@
  • Building package calle24 (from github:kickingvegas/calle24)...
 Updating /mnt/store/melpa/working/calle24/
-Checking out a0b3ff3333fcc44f332ea0e3e04d0392bec2991e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/calle24/
-  to /tmp/calle24-gxxlbr/calle24-20251111.1755
-  ! lisp/calle24-edebug.el -> calle24-edebug.el
-  ! lisp/calle24.el -> calle24.el
-    images => images
-Created calle24-20251111.1755.tar containing:
-  calle24-20251111.1755/
-  calle24-20251111.1755/calle24-edebug.el
-  calle24-20251111.1755/calle24-pkg.el
-  calle24-20251111.1755/calle24.el
-  calle24-20251111.1755/images/
-  calle24-20251111.1755/images/attach.xpm
-  calle24-20251111.1755/images/attach_dark.xpm
-  calle24-20251111.1755/images/back-arrow.xpm
-  calle24-20251111.1755/images/back-arrow_dark.xpm
-  calle24-20251111.1755/images/bookmark.xpm
-  calle24-20251111.1755/images/bookmark_add.xpm
-  calle24-20251111.1755/images/bookmark_add_dark.xpm
-  calle24-20251111.1755/images/bookmark_dark.xpm
-  calle24-20251111.1755/images/cancel.xpm
-  calle24-20251111.1755/images/cancel_dark.xpm
-  calle24-20251111.1755/images/checked.xpm
-  calle24-20251111.1755/images/checked_dark.xpm
-  calle24-20251111.1755/images/close.xpm
-  calle24-20251111.1755/images/close_dark.xpm
-  calle24-20251111.1755/images/connect-to-url.xpm
-  calle24-20251111.1755/images/connect-to-url_dark.xpm
-  calle24-20251111.1755/images/connect.xpm
-  calle24-20251111.1755/images/connect_dark.xpm
-  calle24-20251111.1755/images/contact.xpm
-  calle24-20251111.1755/images/contact_dark.xpm
-  calle24-20251111.1755/images/copy.xpm
-  calle24-20251111.1755/images/copy_dark.xpm
-  calle24-20251111.1755/images/cut.xpm
-  calle24-20251111.1755/images/cut_dark.xpm
-  calle24-20251111.1755/images/delete.xpm
-  calle24-20251111.1755/images/delete_dark.xpm
-  calle24-20251111.1755/images/diropen.xpm
-  calle24-20251111.1755/images/diropen_dark.xpm
-  calle24-20251111.1755/images/edebug/
-  calle24-20251111.1755/images/edebug/abort-recursive-edit.xpm
-  calle24-20251111.1755/images/edebug/abort-recursive-edit_dark.xpm
-  calle24-20251111.1755/images/edebug/bounce-point.xpm
-  calle24-20251111.1755/images/edebug/bounce-point_dark.xpm
-  calle24-20251111.1755/images/edebug/conditional-breakpoint.xpm
-  calle24-20251111.1755/images/edebug/conditional-breakpoint_dark.xpm
-  calle24-20251111.1755/images/edebug/continue-mode.xpm
-  calle24-20251111.1755/images/edebug/continue-mode_dark.xpm
-  calle24-20251111.1755/images/edebug/delete-eval-item.xpm
-  calle24-20251111.1755/images/edebug/delete-eval-item_dark.xpm
-  calle24-20251111.1755/images/edebug/eval-defun.xpm
-  calle24-20251111.1755/images/edebug/eval-defun_dark.xpm
-  calle24-20251111.1755/images/edebug/eval-expression.xpm
-  calle24-20251111.1755/images/edebug/eval-expression_dark.xpm
-  calle24-20251111.1755/images/edebug/eval-last-sexp.xpm
-  calle24-20251111.1755/images/edebug/eval-last-sexp_dark.xpm
-  calle24-20251111.1755/images/edebug/eval-print-last-sexp.xpm
-  calle24-20251111.1755/images/edebug/eval-print-last-sexp_dark.xpm
-  calle24-20251111.1755/images/edebug/forward-sexp.xpm
-  calle24-20251111.1755/images/edebug/forward-sexp_dark.xpm
-  calle24-20251111.1755/images/edebug/go-mode.xpm
-  calle24-20251111.1755/images/edebug/go-mode_dark.xpm
-  calle24-20251111.1755/images/edebug/go-nonstop-mode.xpm
-  calle24-20251111.1755/images/edebug/go-nonstop-mode_dark.xpm
-  calle24-20251111.1755/images/edebug/goto-here.xpm
-  calle24-20251111.1755/images/edebug/goto-here_dark.xpm
-  calle24-20251111.1755/images/edebug/next-breakpoint.xpm
-  calle24-20251111.1755/images/edebug/next-breakpoint_dark.xpm
-  calle24-20251111.1755/images/edebug/next-mode.xpm
-  calle24-20251111.1755/images/edebug/next-mode_dark.xpm
-  calle24-20251111.1755/images/edebug/pop-to-backtrace.xpm
-  calle24-20251111.1755/images/edebug/pop-to-backtrace_dark.xpm
-  calle24-20251111.1755/images/edebug/previous-result.xpm
-  calle24-20251111.1755/images/edebug/previous-result_dark.xpm
-  calle24-20251111.1755/images/edebug/set-breakpoint.xpm
-  calle24-20251111.1755/images/edebug/set-breakpoint_dark.xpm
-  calle24-20251111.1755/images/edebug/set-mode.xpm
-  calle24-20251111.1755/images/edebug/set-mode_dark.xpm
-  calle24-20251111.1755/images/edebug/step-in.xpm
-  calle24-20251111.1755/images/edebug/step-in_dark.xpm
-  calle24-20251111.1755/images/edebug/step-mode.xpm
-  calle24-20251111.1755/images/edebug/step-mode_dark.xpm
-  calle24-20251111.1755/images/edebug/step-out.xpm
-  calle24-20251111.1755/images/edebug/step-out_dark.xpm
-  calle24-20251111.1755/images/edebug/stop.xpm
-  calle24-20251111.1755/images/edebug/stop_dark.xpm
-  calle24-20251111.1755/images/edebug/top-level-nonstop.xpm
-  calle24-20251111.1755/images/edebug/top-level-nonstop_dark.xpm
-  calle24-20251111.1755/images/edebug/top-level.xpm
-  calle24-20251111.1755/images/edebug/top-level_dark.xpm
-  calle24-20251111.1755/images/edebug/trace-mode.xpm
-  calle24-20251111.1755/images/edebug/trace-mode_dark.xpm
-  calle24-20251111.1755/images/edebug/unset-all-breakpoints.xpm
-  calle24-20251111.1755/images/edebug/unset-all-breakpoints_dark.xpm
-  calle24-20251111.1755/images/edebug/unset-breakpoint.xpm
-  calle24-20251111.1755/images/edebug/unset-breakpoint_dark.xpm
-  calle24-20251111.1755/images/edebug/update-eval-list.xpm
-  calle24-20251111.1755/images/edebug/update-eval-list_dark.xpm
-  calle24-20251111.1755/images/edebug/view-outside.xpm
-  calle24-20251111.1755/images/edebug/view-outside_dark.xpm
-  calle24-20251111.1755/images/edebug/visit-eval-list.xpm
-  calle24-20251111.1755/images/edebug/visit-eval-list_dark.xpm
-  calle24-20251111.1755/images/edebug/where.xpm
-  calle24-20251111.1755/images/edebug/where_dark.xpm
-  calle24-20251111.1755/images/exit.xpm
-  calle24-20251111.1755/images/exit_dark.xpm
-  calle24-20251111.1755/images/fwd-arrow.xpm
-  calle24-20251111.1755/images/fwd-arrow_dark.xpm
-  calle24-20251111.1755/images/help.xpm
-  calle24-20251111.1755/images/help_dark.xpm
-  calle24-20251111.1755/images/hide.xpm
-  calle24-20251111.1755/images/hide_dark.xpm
-  calle24-20251111.1755/images/home.xpm
-  calle24-20251111.1755/images/home_dark.xpm
-  calle24-20251111.1755/images/index.xpm
-  calle24-20251111.1755/images/index_dark.xpm
-  calle24-20251111.1755/images/info.xpm
-  calle24-20251111.1755/images/info_dark.xpm
-  calle24-20251111.1755/images/jump-to.xpm
-  calle24-20251111.1755/images/jump-to_dark.xpm
-  calle24-20251111.1755/images/last-page.xpm
-  calle24-20251111.1755/images/last-page_dark.xpm
-  calle24-20251111.1755/images/left-arrow.xpm
-  calle24-20251111.1755/images/left-arrow_dark.xpm
-  calle24-20251111.1755/images/lock-broken.xpm
-  calle24-20251111.1755/images/lock-broken_dark.xpm
-  calle24-20251111.1755/images/lock-ok.xpm
-  calle24-20251111.1755/images/lock-ok_dark.xpm
-  calle24-20251111.1755/images/lock-open.xpm
-  calle24-20251111.1755/images/lock-open_dark.xpm
-  calle24-20251111.1755/images/lock.xpm
-  calle24-20251111.1755/images/lock_dark.xpm
-  calle24-20251111.1755/images/new.xpm
-  calle24-20251111.1755/images/new_dark.xpm
-  calle24-20251111.1755/images/next-node.xpm
-  calle24-20251111.1755/images/next-node_dark.xpm
-  calle24-20251111.1755/images/next-page.xpm
-  calle24-20251111.1755/images/next-page_dark.xpm
-  calle24-20251111.1755/images/open.xpm
-  calle24-20251111.1755/images/open_dark.xpm
-  calle24-20251111.1755/images/paste.xpm
-  calle24-20251111.1755/images/paste_dark.xpm
-  calle24-20251111.1755/images/preferences.xpm
-  calle24-20251111.1755/images/preferences_dark.xpm
-  calle24-20251111.1755/images/prev-node.xpm
-  calle24-20251111.1755/images/prev-node_dark.xpm
-  calle24-20251111.1755/images/prev-page.xpm
-  calle24-20251111.1755/images/prev-page_dark.xpm
-  calle24-20251111.1755/images/print.xpm
-  calle24-20251111.1755/images/print_dark.xpm
-  calle24-20251111.1755/images/redo.xpm
-  calle24-20251111.1755/images/redo_dark.xpm
-  calle24-20251111.1755/images/refresh.xpm
-  calle24-20251111.1755/images/refresh_dark.xpm
-  calle24-20251111.1755/images/right-arrow.xpm
-  calle24-20251111.1755/images/right-arrow_dark.xpm
-  calle24-20251111.1755/images/save.xpm
-  calle24-20251111.1755/images/save_dark.xpm
-  calle24-20251111.1755/images/saveas.xpm
-  calle24-20251111.1755/images/saveas_dark.xpm
-  calle24-20251111.1755/images/search-replace.xpm
-  calle24-20251111.1755/images/search-replace_dark.xpm
-  calle24-20251111.1755/images/search.xpm
-  calle24-20251111.1755/images/search2.xpm
-  calle24-20251111.1755/images/search2_dark.xpm
-  calle24-20251111.1755/images/search_dark.xpm
-  calle24-20251111.1755/images/share.xpm
-  calle24-20251111.1755/images/share_dark.xpm
-  calle24-20251111.1755/images/show.xpm
-  calle24-20251111.1755/images/show_dark.xpm
-  calle24-20251111.1755/images/unchecked.xpm
-  calle24-20251111.1755/images/unchecked_dark.xpm
-  calle24-20251111.1755/images/undo.xpm
-  calle24-20251111.1755/images/undo_dark.xpm
-  calle24-20251111.1755/images/up-arrow.xpm
-  calle24-20251111.1755/images/up-arrow_dark.xpm
-  calle24-20251111.1755/images/up-node.xpm
-  calle24-20251111.1755/images/up-node_dark.xpm
-  calle24-20251111.1755/images/zoom-in.xpm
-  calle24-20251111.1755/images/zoom-in_dark.xpm
-  calle24-20251111.1755/images/zoom-out.xpm
-  calle24-20251111.1755/images/zoom-out_dark.xpm
- ✓ Success:
-  2026-03-03T14:19:42+0000  calle24-20251111.1755.entry
-  2026-03-03T14:19:41+0000  calle24-20251111.1755.tar
-Built calle24 in 3.950s, finished at 2026-03-03T14:19:43+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+Debugger entered--Lisp error: (package-build-error . "Command `git fetch -f --tags origin' exited with n...")
+  signal(package-build-error "Command `git fetch -f --tags origin' exited with n...")
+  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
+  package-build--error(#<package-github-recipe package-github-recipe-1564157f5d26> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-github-recipe package-github-recipe-1564157f5d26> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-1564157f5d26>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-1564157f5d26> nil)
+  package-build--fetch(#<package-github-recipe package-github-recipe-1564157f5d26>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  (progn (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil ...))) (while --dolist-tail-- (let (...) (progn ... ...) (setq --dolist-tail-- ...)))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  package-build-archive("calle24")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"calle24\")"))
+  command-line()
+  normal-top-level()
+
