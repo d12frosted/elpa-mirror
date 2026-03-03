@@ -192,13 +192,13 @@
 		("Damien Doligez" . "damien.doligez@inria.fr"))
       (:commit . "2905a436e956c5bba16c4633a6e4c4fceefa6535"))])
  (casual
-  . [(2 14 2) ((emacs (29 1)) (transient (0 9 0)) (csv-mode (1 27)))
+  . [(2 14 3) ((emacs (29 1)) (transient (0 9 0)) (csv-mode (1 27)))
      "Transient user interfaces for various modes" tar
      ((:url . "https://github.com/kickingvegas/casual")
       (:keywords "tools" "wp")
       (:maintainer "Charles Choi" . "kickingvegas@gmail.com")
       (:authors ("Charles Choi" . "kickingvegas@gmail.com"))
-      (:commit . "a68d05609cc40905618b72b8cadbbdde833e428e"))])
+      (:commit . "0b04ad703efad2a53a3c756c02784e819d0f8b4e"))])
  (cdlatex
   . [(4 18 5) nil "Fast input methods for LaTeX environments and math"
      tar
