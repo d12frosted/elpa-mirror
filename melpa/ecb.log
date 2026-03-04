@@ -1,37 +1,302 @@
  • Building package ecb (from github:ecb-org/ecb)...
 Updating /mnt/store/melpa/working/ecb/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/ecb-org/ecb/': The requested URL returned error: 500
-
-Debugger entered--Lisp error: (package-build-error . "Command `git fetch -f --tags origin' exited with n...")
-  signal(package-build-error "Command `git fetch -f --tags origin' exited with n...")
-  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
-  package-build--error(#<package-github-recipe package-github-recipe-1580c7251526> "%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-github-recipe package-github-recipe-1580c7251526> "git" "fetch" "-f" "--tags" "origin")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-1580c7251526>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-1580c7251526> nil)
-  package-build--fetch(#<package-github-recipe package-github-recipe-1580c7251526>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  (progn (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil ...))) (while --dolist-tail-- (let (...) (progn ... ...) (setq --dolist-tail-- ...)))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  package-build-archive("ecb")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"ecb\")"))
-  command-line()
-  normal-top-level()
-
+Checking out 2f9028aa1d8791720e809954016dbc84fe8fc864
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ecb/
+  to /tmp/ecb-py3yVs/ecb-20251014.1427
+    ecb-advice-test.el -> ecb-advice-test.el
+    ecb-analyse.el -> ecb-analyse.el
+    ecb-autogen.el -> ecb-autogen.el
+    ecb-buffertab.el -> ecb-buffertab.el
+    ecb-cedet-wrapper.el -> ecb-cedet-wrapper.el
+    ecb-common-browser.el -> ecb-common-browser.el
+    ecb-compatibility.el -> ecb-compatibility.el
+    ecb-compilation.el -> ecb-compilation.el
+    ecb-create-layout.el -> ecb-create-layout.el
+    ecb-cycle.el -> ecb-cycle.el
+    ecb-eshell.el -> ecb-eshell.el
+    ecb-examples.el -> ecb-examples.el
+    ecb-face.el -> ecb-face.el
+    ecb-file-browser.el -> ecb-file-browser.el
+    ecb-help.el -> ecb-help.el
+    ecb-jde.el -> ecb-jde.el
+    ecb-layout-defs.el -> ecb-layout-defs.el
+    ecb-layout.el -> ecb-layout.el
+    ecb-method-browser.el -> ecb-method-browser.el
+    ecb-mode-line.el -> ecb-mode-line.el
+    ecb-multiframe.el -> ecb-multiframe.el
+    ecb-navigate.el -> ecb-navigate.el
+    ecb-semantic-wrapper.el -> ecb-semantic-wrapper.el
+    ecb-semantic.el -> ecb-semantic.el
+    ecb-speedbar.el -> ecb-speedbar.el
+    ecb-symboldef.el -> ecb-symboldef.el
+    ecb-tod.el -> ecb-tod.el
+    ecb-upgrade.el -> ecb-upgrade.el
+    ecb-util.el -> ecb-util.el
+    ecb-winman-support.el -> ecb-winman-support.el
+    ecb.el -> ecb.el
+    silentcomp.el -> silentcomp.el
+    tree-buffer.el -> tree-buffer.el
+    ecb-images => ecb-images
+    ecb2 => ecb2
+    ecb.texi -> ecb.texi
+Generating ecb.info
+Created ecb-20251014.1427.tar containing:
+  ecb-20251014.1427/
+  ecb-20251014.1427/dir
+  ecb-20251014.1427/ecb-advice-test.el
+  ecb-20251014.1427/ecb-analyse.el
+  ecb-20251014.1427/ecb-autogen.el
+  ecb-20251014.1427/ecb-buffertab.el
+  ecb-20251014.1427/ecb-cedet-wrapper.el
+  ecb-20251014.1427/ecb-common-browser.el
+  ecb-20251014.1427/ecb-compatibility.el
+  ecb-20251014.1427/ecb-compilation.el
+  ecb-20251014.1427/ecb-create-layout.el
+  ecb-20251014.1427/ecb-cycle.el
+  ecb-20251014.1427/ecb-eshell.el
+  ecb-20251014.1427/ecb-examples.el
+  ecb-20251014.1427/ecb-face.el
+  ecb-20251014.1427/ecb-file-browser.el
+  ecb-20251014.1427/ecb-help.el
+  ecb-20251014.1427/ecb-images/
+  ecb-20251014.1427/ecb-images/default/
+  ecb-20251014.1427/ecb-images/default/height-10/
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-10/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-14/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-15/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-16/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-17/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-18/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-19/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-20/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-end-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-no-guide.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-no-handle.xpm
+  ecb-20251014.1427/ecb-images/default/height-21/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/
+  ecb-20251014.1427/ecb-images/directories/height-10/
+  ecb-20251014.1427/ecb-images/directories/height-10/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-10/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-10/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-10/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/height-14/
+  ecb-20251014.1427/ecb-images/directories/height-14/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-14/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-14/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-14/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/height-15/
+  ecb-20251014.1427/ecb-images/directories/height-15/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-15/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-15/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-15/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/height-16/
+  ecb-20251014.1427/ecb-images/directories/height-16/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-16/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-16/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-16/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/height-17/
+  ecb-20251014.1427/ecb-images/directories/height-17/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-17/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-17/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-17/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/height-18/
+  ecb-20251014.1427/ecb-images/directories/height-18/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-18/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-18/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-18/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/height-19/
+  ecb-20251014.1427/ecb-images/directories/height-19/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-19/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-19/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-19/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/height-20/
+  ecb-20251014.1427/ecb-images/directories/height-20/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-20/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-20/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-20/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/directories/height-21/
+  ecb-20251014.1427/ecb-images/directories/height-21/ecb-close.xpm
+  ecb-20251014.1427/ecb-images/directories/height-21/ecb-empty.xpm
+  ecb-20251014.1427/ecb-images/directories/height-21/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/directories/height-21/ecb-open.xpm
+  ecb-20251014.1427/ecb-images/methods/
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-class-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-class-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-class-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-class-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-constructor-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-constructor-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-constructor-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-constructor-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-function-private-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-function-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-function-protected-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-function-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-function-public-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-function-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-function-unknown-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-function-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-variable-private-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-variable-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-variable-protected-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-variable-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-variable-public-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-variable-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-variable-unknown-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-abstract-variable-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-class-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-class-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-class-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-class-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-constructor-bucket.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-constructor-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-constructor-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-constructor-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-constructor-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-enum-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-enum-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-enum-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-enum-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-bucket.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-private-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-protected-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-public-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-unknown-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-function-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-parent-bucket.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-parent-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-parent-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-parent-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-parent-unknown.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-bucket.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-private-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-private.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-protected-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-protected.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-public-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-public.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-unknown-static.xpm
+  ecb-20251014.1427/ecb-images/methods/height-14_to_21/ecb-variable-unknown.xpm
+  ecb-20251014.1427/ecb-images/sources/
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/ecb-leaf.xpm
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/ecb-vc-added.xpm
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/ecb-vc-edited.xpm
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/ecb-vc-ignored.xpm
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/ecb-vc-needs-merge.xpm
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/ecb-vc-needs-patch.xpm
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/ecb-vc-unknown.xpm
+  ecb-20251014.1427/ecb-images/sources/height-14_to_21/ecb-vc-up-to-date.xpm
+  ecb-20251014.1427/ecb-jde.el
+  ecb-20251014.1427/ecb-layout-defs.el
+  ecb-20251014.1427/ecb-layout.el
+  ecb-20251014.1427/ecb-method-browser.el
+  ecb-20251014.1427/ecb-mode-line.el
+  ecb-20251014.1427/ecb-multiframe.el
+  ecb-20251014.1427/ecb-navigate.el
+  ecb-20251014.1427/ecb-pkg.el
+  ecb-20251014.1427/ecb-semantic-wrapper.el
+  ecb-20251014.1427/ecb-semantic.el
+  ecb-20251014.1427/ecb-speedbar.el
+  ecb-20251014.1427/ecb-symboldef.el
+  ecb-20251014.1427/ecb-tod.el
+  ecb-20251014.1427/ecb-upgrade.el
+  ecb-20251014.1427/ecb-util.el
+  ecb-20251014.1427/ecb-winman-support.el
+  ecb-20251014.1427/ecb.el
+  ecb-20251014.1427/ecb.info
+  ecb-20251014.1427/ecb2/
+  ecb-20251014.1427/ecb2/jn-file-tree.el
+  ecb-20251014.1427/ecb2/jn-tree-node.el
+  ecb-20251014.1427/ecb2/jn-tree-view.el
+  ecb-20251014.1427/ecb2/jn-utils.el
+  ecb-20251014.1427/ecb2/jn-window.el
+  ecb-20251014.1427/ecb2/test.el
+  ecb-20251014.1427/silentcomp.el
+  ecb-20251014.1427/tree-buffer.el
+ ✓ Success:
+  2026-03-04T00:11:47+0000  ecb-20251014.1427.entry
+  2026-03-04T00:11:47+0000  ecb-20251014.1427.tar
+Built ecb in 18.926s, finished at 2026-03-04T00:11:48+0000

@@ -1210,13 +1210,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
  (mastodon
-  . [(2 0 11) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
+  . [(2 0 12) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "f75f9f2d6411c28d1fe9e0a19b1219aa3591d34a"))])
+      (:commit . "4b8002cbc7e825c594dac34923adaaf496ede1bc"))])
  (material-theme
   . [(2015) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar
@@ -1526,7 +1526,7 @@
       (:authors ("David Christiansen" . "david@davidchristiansen.dk"))
       (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode
-  . [(1 0 20260117 121353) ((emacs (25 1)) (compat (30 0 2 0)))
+  . [(1 0 20260303 123213) ((emacs (25 1)) (compat (30 0 2 0)))
      "Racket editing, REPL, and more" tar
      ((:url . "https://www.racket-mode.com/")
       (:authors

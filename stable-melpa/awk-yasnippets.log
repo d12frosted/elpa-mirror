@@ -1,37 +1,97 @@
  • Building package awk-yasnippets (from github:uberkael/awk-yasnippets)...
 Updating /mnt/store/melpa/working/awk-yasnippets/
-Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
-Debugger entered--Lisp error: (package-build-error . "Command `git remote set-head origin --auto' exited...")
-  signal(package-build-error "Command `git remote set-head origin --auto' exited...")
-  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
-  package-build--error(#<package-github-recipe package-github-recipe-159305f873ce> "%s" "Command `git remote set-head origin --auto' exited...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-github-recipe package-github-recipe-159305f873ce> "git" "remote" "set-head" "origin" "--auto")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-159305f873ce>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-159305f873ce> nil)
-  package-build--fetch(#<package-github-recipe package-github-recipe-159305f873ce>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  (progn (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil ...))) (while --dolist-tail-- (let (...) (progn ... ...) (setq --dolist-tail-- ...)))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  package-build-archive("awk-yasnippets")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"awk-yasnippets\")"))
-  command-line()
-  normal-top-level()
-
+Checking out 12e8e0b49878099bda5d3e4915cc3c738c87b95c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/awk-yasnippets/
+  to /tmp/awk-yasnippets-b1EssE/awk-yasnippets-20230515.1756
+    awk-yasnippets.el -> awk-yasnippets.el
+    awk-mode => awk-mode
+Created awk-yasnippets-20230515.1756.tar containing:
+  awk-yasnippets-20230515.1756/
+  awk-yasnippets-20230515.1756/awk-mode/
+  awk-yasnippets-20230515.1756/awk-mode/.yas-make-groups
+  awk-yasnippets-20230515.1756/awk-mode/IO/
+  awk-yasnippets-20230515.1756/awk-mode/IO/close
+  awk-yasnippets-20230515.1756/awk-mode/IO/fflush
+  awk-yasnippets-20230515.1756/awk-mode/IO/getfile
+  awk-yasnippets-20230515.1756/awk-mode/IO/getvar
+  awk-yasnippets-20230515.1756/awk-mode/IO/nextfile
+  awk-yasnippets-20230515.1756/awk-mode/IO/piperead
+  awk-yasnippets-20230515.1756/awk-mode/IO/pri
+  awk-yasnippets-20230515.1756/awk-mode/IO/prif
+  awk-yasnippets-20230515.1756/awk-mode/IO/system
+  awk-yasnippets-20230515.1756/awk-mode/bits/
+  awk-yasnippets-20230515.1756/awk-mode/bits/and
+  awk-yasnippets-20230515.1756/awk-mode/bits/compl
+  awk-yasnippets-20230515.1756/awk-mode/bits/lshift
+  awk-yasnippets-20230515.1756/awk-mode/bits/or
+  awk-yasnippets-20230515.1756/awk-mode/bits/rshift
+  awk-yasnippets-20230515.1756/awk-mode/bits/xor
+  awk-yasnippets-20230515.1756/awk-mode/control/
+  awk-yasnippets-20230515.1756/awk-mode/control/break
+  awk-yasnippets-20230515.1756/awk-mode/control/cont
+  awk-yasnippets-20230515.1756/awk-mode/control/del
+  awk-yasnippets-20230515.1756/awk-mode/control/do
+  awk-yasnippets-20230515.1756/awk-mode/control/exit
+  awk-yasnippets-20230515.1756/awk-mode/control/fora
+  awk-yasnippets-20230515.1756/awk-mode/control/fori
+  awk-yasnippets-20230515.1756/awk-mode/control/if
+  awk-yasnippets-20230515.1756/awk-mode/control/ife
+  awk-yasnippets-20230515.1756/awk-mode/control/switch
+  awk-yasnippets-20230515.1756/awk-mode/control/while
+  awk-yasnippets-20230515.1756/awk-mode/fragments/
+  awk-yasnippets-20230515.1756/awk-mode/fragments/PROCINFO
+  awk-yasnippets-20230515.1756/awk-mode/fragments/append
+  awk-yasnippets-20230515.1756/awk-mode/fragments/func
+  awk-yasnippets-20230515.1756/awk-mode/fragments/pipe
+  awk-yasnippets-20230515.1756/awk-mode/fragments/shebang
+  awk-yasnippets-20230515.1756/awk-mode/fragments/socket
+  awk-yasnippets-20230515.1756/awk-mode/numeric/
+  awk-yasnippets-20230515.1756/awk-mode/numeric/atan2
+  awk-yasnippets-20230515.1756/awk-mode/numeric/cos
+  awk-yasnippets-20230515.1756/awk-mode/numeric/exp
+  awk-yasnippets-20230515.1756/awk-mode/numeric/int
+  awk-yasnippets-20230515.1756/awk-mode/numeric/log
+  awk-yasnippets-20230515.1756/awk-mode/numeric/rand
+  awk-yasnippets-20230515.1756/awk-mode/numeric/sin
+  awk-yasnippets-20230515.1756/awk-mode/numeric/sqrt
+  awk-yasnippets-20230515.1756/awk-mode/numeric/srand
+  awk-yasnippets-20230515.1756/awk-mode/rule/
+  awk-yasnippets-20230515.1756/awk-mode/rule/3
+  awk-yasnippets-20230515.1756/awk-mode/rule/B
+  awk-yasnippets-20230515.1756/awk-mode/rule/BF
+  awk-yasnippets-20230515.1756/awk-mode/rule/E
+  awk-yasnippets-20230515.1756/awk-mode/rule/EF
+  awk-yasnippets-20230515.1756/awk-mode/strings/
+  awk-yasnippets-20230515.1756/awk-mode/strings/asort
+  awk-yasnippets-20230515.1756/awk-mode/strings/asorti
+  awk-yasnippets-20230515.1756/awk-mode/strings/gensub
+  awk-yasnippets-20230515.1756/awk-mode/strings/gsub
+  awk-yasnippets-20230515.1756/awk-mode/strings/index
+  awk-yasnippets-20230515.1756/awk-mode/strings/length
+  awk-yasnippets-20230515.1756/awk-mode/strings/match
+  awk-yasnippets-20230515.1756/awk-mode/strings/patsplit
+  awk-yasnippets-20230515.1756/awk-mode/strings/split
+  awk-yasnippets-20230515.1756/awk-mode/strings/sprintf
+  awk-yasnippets-20230515.1756/awk-mode/strings/strtonum
+  awk-yasnippets-20230515.1756/awk-mode/strings/sub
+  awk-yasnippets-20230515.1756/awk-mode/strings/substr
+  awk-yasnippets-20230515.1756/awk-mode/strings/tolower
+  awk-yasnippets-20230515.1756/awk-mode/strings/toupper
+  awk-yasnippets-20230515.1756/awk-mode/templates/
+  awk-yasnippets-20230515.1756/awk-mode/templates/adel
+  awk-yasnippets-20230515.1756/awk-mode/templates/getcom
+  awk-yasnippets-20230515.1756/awk-mode/templates/getlinevar
+  awk-yasnippets-20230515.1756/awk-mode/time/
+  awk-yasnippets-20230515.1756/awk-mode/time/mktime
+  awk-yasnippets-20230515.1756/awk-mode/time/strftime
+  awk-yasnippets-20230515.1756/awk-mode/time/syst
+  awk-yasnippets-20230515.1756/awk-mode/type/
+  awk-yasnippets-20230515.1756/awk-mode/type/isarray
+  awk-yasnippets-20230515.1756/awk-mode/type/typeof
+  awk-yasnippets-20230515.1756/awk-yasnippets-pkg.el
+  awk-yasnippets-20230515.1756/awk-yasnippets.el
+ ✓ Success:
+  2026-03-03T23:58:21+0000  awk-yasnippets-20230515.1756.entry
+  2026-03-03T23:58:21+0000  awk-yasnippets-20230515.1756.tar
+Built awk-yasnippets in 3.160s, finished at 2026-03-03T23:58:22+0000

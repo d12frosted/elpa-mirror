@@ -45,8 +45,7 @@ simultaneous file handles.
   Example setup:
 
   ┌────
-  │ (setq org-mem-watch-dirs '("~/org/" "/mnt/stuff/notes/"))
-  │ (setq org-mem-do-sync-with-org-id t)
+  │ (setq org-mem-watch-dirs '("~/org" "/mnt/stuff/notes"))
   │ (org-mem-updater-mode)
   └────
 
@@ -55,9 +54,12 @@ simultaneous file handles.
   return a lot of results.  See examples of how to use them at section
   [Elisp API]!
 
-  The above example checks all files in `org-mem-watch-dirs'
-  recursively, as well as files mentioned in `org-id-locations' and
-  `org-id-extra-files'.
+  See an example in detail by typing `M-x org-mem-list-example'.
+
+  You do not even need to configure `org-mem-watch-dirs', if Org is
+  loaded.  Org-mem will guess where to look for Org files anyway!  That
+  is controlled by the user option `org-mem-do-look-everywhere' (default
+  t).
 
 
 [Elisp API] <https://github.com/meedstrom/org-mem#elisp-api>
@@ -173,48 +175,10 @@ simultaneous file handles.
   │ (emacsql (org-mem-roamy-db) [:select * :from files :limit 10])
   └────
 
-
-5.2 With org-roam installed
-───────────────────────────
-
-  You can use this to end your dependence on `org-roam-db-sync'.  Set
-  the following to let org-mem overwrite the "org-roam.db" file.
-
-  ┌────
-  │ (setq org-roam-db-update-on-save nil)
-  │ (setq org-mem-roamy-do-overwrite-real-db t)
-  │ (org-mem-roamy-db-mode)
-  └────
-
-  Now, you have a new, all-fake org-roam.db!  Test that org-roam's
-  `org-roam-db-query' works:
-
-  ┌────
-  │ (org-roam-db-query [:select * :from files :limit 10])
-  └────
-
-  If it works, then various packages that depend on org-roam's DB should
-  also work without issue.
-
-  N/B: because `(equal (org-roam-db) (org-mem-roamy-db))', the above is
-  equivalent to these expressions:
-
-  ┌────
-  │ (emacsql (org-roam-db) [:select * :from files :limit 10])
-  │ (emacsql (org-mem-roamy-db) [:select * :from files :limit 10])
-  └────
-
-  A known issue when when you run multiple Emacs instances: "attempt to
-  write a readonly database".  Get unstuck with `M-:
-  (org-roam-db--close-all)'.
+  For more tips, see section [SQL API].
 
 
-5.3 View what info is in the DB
-───────────────────────────────
-
-  Use `M-x org-mem-list-db-contents'.
-
-  Or the new `M-x org-roam-db-explore', with exactly the same UI.
+[SQL API] <https://github.com/meedstrom/org-mem#sql-api>
 
 
 6 Elisp API
@@ -511,10 +475,86 @@ simultaneous file handles.
   • `org-mem-updater-update'
 
 
-7 Tips
+7 SQL API
+═════════
+
+7.1 With org-roam installed
+───────────────────────────
+
+  You can use this to end your dependence on `org-roam-db-sync'.  Set
+  the following to let org-mem overwrite the "org-roam.db" file.
+
+  ┌────
+  │ (setq org-roam-db-update-on-save nil)
+  │ (setq org-mem-roamy-do-overwrite-real-db t)
+  │ (org-mem-roamy-db-mode)
+  └────
+
+  Now, you have a new, all-fake org-roam.db!  Test that org-roam's
+  `org-roam-db-query' works:
+
+  ┌────
+  │ (org-roam-db-query [:select * :from files :limit 10])
+  └────
+
+  If it works, then various packages that depend on org-roam's DB should
+  also work without issue.  However, you'll have to be content with them
+  pulling in org-roam even if you never turn it on.
+
+  N/B: because `(equal (org-roam-db) (org-mem-roamy-db))', the above is
+  equivalent to these expressions:
+
+  ┌────
+  │ (emacsql (org-roam-db) [:select * :from files :limit 10])
+  │ (emacsql (org-mem-roamy-db) [:select * :from files :limit 10])
+  └────
+
+
+7.2 To developers
+─────────────────
+
+  If you write a package that actually only needed to use org-roam's DB
+  and not its other utilities like `org-roam-capture', you should be
+  able to stop requiring org-roam, and do e.g.
+
+  ┌────
+  │ (defun my-db ()
+  │   (cond ((fboundp 'org-roam-db) (org-roam-db))
+  │         ((fboundp 'org-mem-roamy-db) (org-mem-roamy-db))
+  │         (t (error "Enable either org-roam-db-autosync-mode or org-mem-roamy-db-mode"))
+  └────
+
+  and then rewrite all your `(org-roam-db-query ...)' forms to:
+
+  ┌────
+  │ (emacsql (my-db) ...)
+  └────
+
+  In theory, anyway ;-)
+
+  Please report any issues!
+
+
+7.3 Known issue
+───────────────
+
+  Error "attempt to write a readonly database" can happen when when you
+  run multiple Emacs instances.  Get unstuck with `M-:
+  (org-roam-db--close-all)'.
+
+
+7.4 View what info is in the DB
+───────────────────────────────
+
+  Use `M-x org-mem-list-db-contents'.
+
+  Or the new `M-x org-roam-db-explore', with exactly the same UI.
+
+
+8 Tips
 ══════
 
-7.1 Encrypted files (`.org.gpg' `.org.age')
+8.1 Encrypted files (`.org.gpg' `.org.age')
 ───────────────────────────────────────────
 
   Suppose you use [age.el] to keep files encrypted.
@@ -532,10 +572,10 @@ simultaneous file handles.
 [age.el] <https://github.com/anticomputer/age.el>
 
 
-8 Current limitations
+9 Current limitations
 ═════════════════════
 
-8.1 Limitation: TRAMP
+9.1 Limitation: TRAMP
 ─────────────────────
 
   Files over TRAMP are excluded from org-mem's database, so as far as
@@ -546,21 +586,21 @@ simultaneous file handles.
   It is fixable in theory.
 
 
-8.2 Limitation: Encrypted entries
+9.2 Limitation: Encrypted entries
 ─────────────────────────────────
 
   The body text of specific entries may be encrypted by `org-crypt'.  If
   so, org-mem cannot find links nor timestamps inside.
 
 
-8.3 Limitation: SETUPFILE
+9.3 Limitation: SETUPFILE
 ─────────────────────────
 
   No support yet for buffer settings from `#+SETUPFILE:'.
 
 
-9 Future work
-═════════════
+10 Future work
+══════════════
 
   Use Org's own parser.
 

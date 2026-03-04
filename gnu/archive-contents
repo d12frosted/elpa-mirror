@@ -296,19 +296,20 @@
       (:authors ("Serghei Iakovlev" . "egrep@protonmail.ch"))
       (:commit . "a4fe013fc945d8396930bc6d0dcc1cf9d7102f41"))])
  (boxy
-  . [(2 0 0) ((emacs (26 1))) "A boxy layout framework" tar
-     ((:url . "https://gitlab.com/grinn.amy/boxy") (:keywords "tools")
-      (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
-      (:authors ("Amy Grinn" . "grinn.amy@gmail.com"))
-      (:commit . "c019061cbb3b8a3c93e1720ff4532ef915173adb"))])
- (boxy-headings
-  . [(2 1 10) ((emacs (26 1)) (boxy (2 0)) (org (9 4)))
-     "View org files in a boxy diagram" tar
-     ((:url . "https://gitlab.com/grinn.amy/boxy-headings")
+  . [(2 0 1) ((emacs (26 1))) "A boxy layout framework" tar
+     ((:url . "https://codeberg.org/strawburster/boxy")
       (:keywords "tools")
-      (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
-      (:authors ("Amy Grinn" . "grinn.amy@gmail.com"))
-      (:commit . "d9ff199273bd96011fe5bfe20cafab57dc189930"))])
+      (:maintainer "Amy Pillow" . "amypillow@lavache.com")
+      (:authors ("Amy Pillow" . "amypillow@lavache.com"))
+      (:commit . "793e3d65ffb970fa8b52e89d25e7ea5e6f39508a"))])
+ (boxy-headings
+  . [(2 1 11) ((emacs (26 1)) (boxy (2 0)) (org (9 4)))
+     "View org files in a boxy diagram" tar
+     ((:url . "https://codeberg.org/strawburster/boxy-headings")
+      (:keywords "tools")
+      (:maintainer "Amy Pillow" . "amypillow@lavache.com")
+      (:authors ("Amy Pillow" . "amypillow@lavache.com"))
+      (:commit . "08e1c84dee28f87010f50cb4e9a48c0798c8912b"))])
  (breadcrumb
   . [(1 0 1) ((emacs (28 1)) (project (0 9 8)))
      "project and imenu-based breadcrumb paths" tar
@@ -1075,6 +1076,13 @@
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Ihor Radchenko" . "yantar92@posteo.net"))
       (:commit . "05d669e123f411c9582f99a9a6182efa43d01a6b"))])
+ (emacs-lisp-intro-es
+  . [(1 0) nil "ELisp intro manual in Spanish" tar
+     ((:keywords "manual" "translation" "spanish" "español")
+      (:maintainer "David Arroyo Menéndez" . "davidam@gmail.com")
+      (:authors ("David Arroyo Menéndez" . "davidam@gmail.com"))
+      (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
+      (:commit . "5543355583f2f1a6327d5e112b370d4d628c9499"))])
  (embark
   . [(1 1) ((emacs (27 1)) (compat (29 1 4 0)))
      "Conveniently act on minibuffer completions" tar
@@ -2261,7 +2269,7 @@
       (:authors ("Hanno Perrey" . "hanno@hoowl.se"))
       (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-mem
-  . [(0 33 0)
+  . [(0 34 0)
      ((emacs (29 1)) (el-job (2 7 3)) (llama (1 0))
       (truename-cache (0 3 2)))
      "Fast info from a large number of Org file contents" tar
@@ -2269,7 +2277,7 @@
       (:keywords "text")
       (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
       (:authors ("Martin Edström" . "meedstrom@runbox.eu"))
-      (:commit . "fbe19417cacc7aab48d74bf99d4be6b40570bd1a"))])
+      (:commit . "a37b885c46b086611b43841e666a5a9f57190b2f"))])
  (org-modern
   . [(1 12) ((emacs (29 1)) (org (9 6)) (compat (30)))
      "Modern looks for Org" tar
@@ -2287,13 +2295,13 @@
       (:authors ("Peter Münster" . "pm@a16n.net"))
       (:commit . "aacd0efd8cb7906b3c0893791016d2e7f82e11e0"))])
  (org-real
-  . [(1 0 11) ((emacs (26 1)) (boxy (2 0)) (org (9 3)))
+  . [(1 0 12) ((emacs (26 1)) (boxy (2 0)) (org (9 3)))
      "Keep track of real things as org-mode links" tar
-     ((:url . "https://gitlab.com/grinn.amy/org-real")
+     ((:url . "https://codeberg.org/strawburster/org-real")
       (:keywords "tools")
-      (:maintainer "Amy Grinn" . "grinn.amy@gmail.com")
-      (:authors ("Amy Grinn" . "grinn.amy@gmail.com"))
-      (:commit . "aa45c5dc795779e4f25e4a8200da06454e070a79"))])
+      (:maintainer "Amy Pillow" . "amypillow@lavache.com")
+      (:authors ("Amy Pillow" . "amypillow@lavache.com"))
+      (:commit . "47b78418fed535c3e0e0350422e76fccd31a65ba"))])
  (org-remark
   . [(1 3 0) ((emacs (27 1)) (org (9 4)))
      "Highlight & annotate text, Info, EPUB, EWW" tar

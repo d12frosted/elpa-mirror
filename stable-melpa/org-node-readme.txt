@@ -15,6 +15,10 @@ That's just the core of it as described to someone not familiar with
 zettelkasten-inspired software.  In fact, out of the simplicity
 arises something powerful, more to be experienced than explained.
 
+  "The fixed address of each note is the alpha and omega of the
+  world of Zettelkasten. Everything becomes possible because of it."
+-- https://zettelkasten.de/introduction
+
 Compared to Org-roam:
 
   + Compatible (you can use both packages and compare)

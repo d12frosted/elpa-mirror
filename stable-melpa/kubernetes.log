@@ -1,37 +1,89 @@
  • Building package kubernetes (from github:kubernetes-el/kubernetes-el)...
 Updating /mnt/store/melpa/working/kubernetes/
-Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
-remote: Internal Server Error
-fatal: unable to access 'https://github.com/kubernetes-el/kubernetes-el/': The requested URL returned error: 500
-
-Debugger entered--Lisp error: (package-build-error . "Command `git fetch -f --tags origin' exited with n...")
-  signal(package-build-error "Command `git fetch -f --tags origin' exited with n...")
-  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
-  package-build--error(#<package-github-recipe package-github-recipe-1582035e5be4> "%s" "Command `git fetch -f --tags origin' exited with n...")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-github-recipe package-github-recipe-1582035e5be4> "git" "fetch" "-f" "--tags" "origin")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-1582035e5be4>)
-  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-1582035e5be4> nil)
-  package-build--fetch(#<package-github-recipe package-github-recipe-1582035e5be4>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  (progn (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil ...))) (while --dolist-tail-- (let (...) (progn ... ...) (setq --dolist-tail-- ...)))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  package-build-archive("kubernetes")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"kubernetes\")"))
-  command-line()
-  normal-top-level()
-
+Checking out 938ef502414d093de827bf7f11bdb30843878a37
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kubernetes/
+  to /tmp/kubernetes-xLLdmj/kubernetes-20250330.1936
+    kubernetes-ast.el -> kubernetes-ast.el
+    kubernetes-commands.el -> kubernetes-commands.el
+    kubernetes-configmaps.el -> kubernetes-configmaps.el
+    kubernetes-contexts.el -> kubernetes-contexts.el
+    kubernetes-core.el -> kubernetes-core.el
+    kubernetes-cronjobs.el -> kubernetes-cronjobs.el
+    kubernetes-deployments.el -> kubernetes-deployments.el
+    kubernetes-describe.el -> kubernetes-describe.el
+    kubernetes-el-tramp.el -> kubernetes-el-tramp.el
+    kubernetes-errors.el -> kubernetes-errors.el
+    kubernetes-events.el -> kubernetes-events.el
+    kubernetes-exec.el -> kubernetes-exec.el
+    kubernetes-ingress.el -> kubernetes-ingress.el
+    kubernetes-jobs.el -> kubernetes-jobs.el
+    kubernetes-kubectl.el -> kubernetes-kubectl.el
+    kubernetes-labels.el -> kubernetes-labels.el
+    kubernetes-loading-container.el -> kubernetes-loading-container.el
+    kubernetes-logs.el -> kubernetes-logs.el
+    kubernetes-modes.el -> kubernetes-modes.el
+    kubernetes-namespaces.el -> kubernetes-namespaces.el
+    kubernetes-networkpolicies.el -> kubernetes-networkpolicies.el
+    kubernetes-nodes.el -> kubernetes-nodes.el
+    kubernetes-overview.el -> kubernetes-overview.el
+    kubernetes-persistentvolumeclaims.el -> kubernetes-persistentvolumeclaims.el
+    kubernetes-pod-line.el -> kubernetes-pod-line.el
+    kubernetes-pods.el -> kubernetes-pods.el
+    kubernetes-popups.el -> kubernetes-popups.el
+    kubernetes-process.el -> kubernetes-process.el
+    kubernetes-replicasets.el -> kubernetes-replicasets.el
+    kubernetes-resources.el -> kubernetes-resources.el
+    kubernetes-secrets.el -> kubernetes-secrets.el
+    kubernetes-services.el -> kubernetes-services.el
+    kubernetes-state.el -> kubernetes-state.el
+    kubernetes-statefulsets.el -> kubernetes-statefulsets.el
+    kubernetes-utils.el -> kubernetes-utils.el
+    kubernetes-vars.el -> kubernetes-vars.el
+    kubernetes-yaml.el -> kubernetes-yaml.el
+    kubernetes.el -> kubernetes.el
+Created kubernetes-20250330.1936.tar containing:
+  kubernetes-20250330.1936/
+  kubernetes-20250330.1936/kubernetes-ast.el
+  kubernetes-20250330.1936/kubernetes-commands.el
+  kubernetes-20250330.1936/kubernetes-configmaps.el
+  kubernetes-20250330.1936/kubernetes-contexts.el
+  kubernetes-20250330.1936/kubernetes-core.el
+  kubernetes-20250330.1936/kubernetes-cronjobs.el
+  kubernetes-20250330.1936/kubernetes-deployments.el
+  kubernetes-20250330.1936/kubernetes-describe.el
+  kubernetes-20250330.1936/kubernetes-el-tramp.el
+  kubernetes-20250330.1936/kubernetes-errors.el
+  kubernetes-20250330.1936/kubernetes-events.el
+  kubernetes-20250330.1936/kubernetes-exec.el
+  kubernetes-20250330.1936/kubernetes-ingress.el
+  kubernetes-20250330.1936/kubernetes-jobs.el
+  kubernetes-20250330.1936/kubernetes-kubectl.el
+  kubernetes-20250330.1936/kubernetes-labels.el
+  kubernetes-20250330.1936/kubernetes-loading-container.el
+  kubernetes-20250330.1936/kubernetes-logs.el
+  kubernetes-20250330.1936/kubernetes-modes.el
+  kubernetes-20250330.1936/kubernetes-namespaces.el
+  kubernetes-20250330.1936/kubernetes-networkpolicies.el
+  kubernetes-20250330.1936/kubernetes-nodes.el
+  kubernetes-20250330.1936/kubernetes-overview.el
+  kubernetes-20250330.1936/kubernetes-persistentvolumeclaims.el
+  kubernetes-20250330.1936/kubernetes-pkg.el
+  kubernetes-20250330.1936/kubernetes-pod-line.el
+  kubernetes-20250330.1936/kubernetes-pods.el
+  kubernetes-20250330.1936/kubernetes-popups.el
+  kubernetes-20250330.1936/kubernetes-process.el
+  kubernetes-20250330.1936/kubernetes-replicasets.el
+  kubernetes-20250330.1936/kubernetes-resources.el
+  kubernetes-20250330.1936/kubernetes-secrets.el
+  kubernetes-20250330.1936/kubernetes-services.el
+  kubernetes-20250330.1936/kubernetes-state.el
+  kubernetes-20250330.1936/kubernetes-statefulsets.el
+  kubernetes-20250330.1936/kubernetes-utils.el
+  kubernetes-20250330.1936/kubernetes-vars.el
+  kubernetes-20250330.1936/kubernetes-yaml.el
+  kubernetes-20250330.1936/kubernetes.el
+ ✓ Success:
+  2026-03-04T00:33:50+0000  kubernetes-20250330.1936.entry
+  2026-03-04T00:33:49+0000  kubernetes-20250330.1936.tar
+Built kubernetes in 3.676s, finished at 2026-03-04T00:33:51+0000
