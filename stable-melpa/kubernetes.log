@@ -1,89 +1,34 @@
  • Building package kubernetes (from github:kubernetes-el/kubernetes-el)...
 Updating /mnt/store/melpa/working/kubernetes/
-Checking out 938ef502414d093de827bf7f11bdb30843878a37
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/kubernetes/
-  to /tmp/kubernetes-u6v5XK/kubernetes-20250330.1936
-    kubernetes-ast.el -> kubernetes-ast.el
-    kubernetes-commands.el -> kubernetes-commands.el
-    kubernetes-configmaps.el -> kubernetes-configmaps.el
-    kubernetes-contexts.el -> kubernetes-contexts.el
-    kubernetes-core.el -> kubernetes-core.el
-    kubernetes-cronjobs.el -> kubernetes-cronjobs.el
-    kubernetes-deployments.el -> kubernetes-deployments.el
-    kubernetes-describe.el -> kubernetes-describe.el
-    kubernetes-el-tramp.el -> kubernetes-el-tramp.el
-    kubernetes-errors.el -> kubernetes-errors.el
-    kubernetes-events.el -> kubernetes-events.el
-    kubernetes-exec.el -> kubernetes-exec.el
-    kubernetes-ingress.el -> kubernetes-ingress.el
-    kubernetes-jobs.el -> kubernetes-jobs.el
-    kubernetes-kubectl.el -> kubernetes-kubectl.el
-    kubernetes-labels.el -> kubernetes-labels.el
-    kubernetes-loading-container.el -> kubernetes-loading-container.el
-    kubernetes-logs.el -> kubernetes-logs.el
-    kubernetes-modes.el -> kubernetes-modes.el
-    kubernetes-namespaces.el -> kubernetes-namespaces.el
-    kubernetes-networkpolicies.el -> kubernetes-networkpolicies.el
-    kubernetes-nodes.el -> kubernetes-nodes.el
-    kubernetes-overview.el -> kubernetes-overview.el
-    kubernetes-persistentvolumeclaims.el -> kubernetes-persistentvolumeclaims.el
-    kubernetes-pod-line.el -> kubernetes-pod-line.el
-    kubernetes-pods.el -> kubernetes-pods.el
-    kubernetes-popups.el -> kubernetes-popups.el
-    kubernetes-process.el -> kubernetes-process.el
-    kubernetes-replicasets.el -> kubernetes-replicasets.el
-    kubernetes-resources.el -> kubernetes-resources.el
-    kubernetes-secrets.el -> kubernetes-secrets.el
-    kubernetes-services.el -> kubernetes-services.el
-    kubernetes-state.el -> kubernetes-state.el
-    kubernetes-statefulsets.el -> kubernetes-statefulsets.el
-    kubernetes-utils.el -> kubernetes-utils.el
-    kubernetes-vars.el -> kubernetes-vars.el
-    kubernetes-yaml.el -> kubernetes-yaml.el
-    kubernetes.el -> kubernetes.el
-Created kubernetes-20250330.1936.tar containing:
-  kubernetes-20250330.1936/
-  kubernetes-20250330.1936/kubernetes-ast.el
-  kubernetes-20250330.1936/kubernetes-commands.el
-  kubernetes-20250330.1936/kubernetes-configmaps.el
-  kubernetes-20250330.1936/kubernetes-contexts.el
-  kubernetes-20250330.1936/kubernetes-core.el
-  kubernetes-20250330.1936/kubernetes-cronjobs.el
-  kubernetes-20250330.1936/kubernetes-deployments.el
-  kubernetes-20250330.1936/kubernetes-describe.el
-  kubernetes-20250330.1936/kubernetes-el-tramp.el
-  kubernetes-20250330.1936/kubernetes-errors.el
-  kubernetes-20250330.1936/kubernetes-events.el
-  kubernetes-20250330.1936/kubernetes-exec.el
-  kubernetes-20250330.1936/kubernetes-ingress.el
-  kubernetes-20250330.1936/kubernetes-jobs.el
-  kubernetes-20250330.1936/kubernetes-kubectl.el
-  kubernetes-20250330.1936/kubernetes-labels.el
-  kubernetes-20250330.1936/kubernetes-loading-container.el
-  kubernetes-20250330.1936/kubernetes-logs.el
-  kubernetes-20250330.1936/kubernetes-modes.el
-  kubernetes-20250330.1936/kubernetes-namespaces.el
-  kubernetes-20250330.1936/kubernetes-networkpolicies.el
-  kubernetes-20250330.1936/kubernetes-nodes.el
-  kubernetes-20250330.1936/kubernetes-overview.el
-  kubernetes-20250330.1936/kubernetes-persistentvolumeclaims.el
-  kubernetes-20250330.1936/kubernetes-pkg.el
-  kubernetes-20250330.1936/kubernetes-pod-line.el
-  kubernetes-20250330.1936/kubernetes-pods.el
-  kubernetes-20250330.1936/kubernetes-popups.el
-  kubernetes-20250330.1936/kubernetes-process.el
-  kubernetes-20250330.1936/kubernetes-replicasets.el
-  kubernetes-20250330.1936/kubernetes-resources.el
-  kubernetes-20250330.1936/kubernetes-secrets.el
-  kubernetes-20250330.1936/kubernetes-services.el
-  kubernetes-20250330.1936/kubernetes-state.el
-  kubernetes-20250330.1936/kubernetes-statefulsets.el
-  kubernetes-20250330.1936/kubernetes-utils.el
-  kubernetes-20250330.1936/kubernetes-vars.el
-  kubernetes-20250330.1936/kubernetes-yaml.el
-  kubernetes-20250330.1936/kubernetes.el
- ✓ Success:
-  2026-03-05T04:23:45+0000  kubernetes-20250330.1936.entry
-  2026-03-05T04:23:45+0000  kubernetes-20250330.1936.tar
-Built kubernetes in 2.274s, finished at 2026-03-05T04:23:45+0000
+Checking out c084b10b1023ee14dafd6f9d745b370e59785026
+Warning: kubernetes :files spec is equivalent to the default
+Debugger entered--Lisp error: (package-build-error . "No matching file(s) found in /mnt/store/melpa/work...")
+  signal(package-build-error "No matching file(s) found in /mnt/store/melpa/work...")
+  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
+  package-build--error("kubernetes" "No matching file(s) found in %s using %s" "/mnt/store/melpa/working/kubernetes/" ("*.el" "lisp/*.el" "dir" "*.info" "*.texi" "*.texinfo" "doc/dir" "doc/*.info" "doc/*.texi" "doc/*.texinfo" "docs/dir" "docs/*.info" "docs/*.texi" "docs/*.texinfo" (:exclude ".*.el" "lisp/.*.el" "test.el" "tests.el" "*-test.el" "*-tests.el" "lisp/test.el" "lisp/tests.el" "lisp/*-test.el" "lisp/*-tests.el") (:exclude "kubernetes-evil.el")))
+  (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec")))
+  (progn (if (and rcp spec (equal files (package-build--expand-files-spec-1 package-build-default-files-spec))) (progn (message "Warning: %s :files spec is equivalent to the defau..." name))) (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec"))))
+  (if assert (progn (if (and rcp spec (equal files (package-build--expand-files-spec-1 package-build-default-files-spec))) (progn (message "Warning: %s :files spec is equivalent to the defau..." name))) (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec")))))
+  (let ((files (package-build--expand-files-spec-1 (or spec package-build-default-files-spec)))) (if assert (progn (if (and rcp spec (equal files (package-build--expand-files-spec-1 package-build-default-files-spec))) (progn (message "Warning: %s :files spec is equivalent to the defau..." name))) (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec"))))) files)
+  (let ((default-directory (or repo (package-recipe--working-tree rcp))) (spec (or spec (eieio-oref rcp 'files))) (name (eieio-oref rcp 'name))) (if (eq (car spec) :defaults) (progn (setq spec (append package-build-default-files-spec (cdr spec))))) (let ((files (package-build--expand-files-spec-1 (or spec package-build-default-files-spec)))) (if assert (progn (if (and rcp spec (equal files (package-build--expand-files-spec-1 package-build-default-files-spec))) (progn (message "Warning: %s :files spec is equivalent to the defau..." name))) (if files nil (package-build--error name "No matching file(s) found in %s using %s" default-directory (or spec "default spec"))))) files))
+  package-build-expand-files-spec(#<package-github-recipe package-github-recipe-158bafde3be4> t)
+  (and t (package-build-expand-files-spec rcp t))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ (and t package-build-run-recipe-shell-command)) (command (and _ (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((_ (and t package-build-run-recipe-make-targets)) (targets (and _ (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ (and t package-build-run-recipe-shell-command)) (command (and _ (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((_ (and t package-build-run-recipe-make-targets)) (targets (and _ (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ (and t package-build-run-recipe-shell-command)) (command (and _ (eieio-oref rcp ...)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((_ (and t package-build-run-recipe-make-targets)) (targets (and _ (eieio-oref rcp ...)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ (and t package-build-run-recipe-shell-command)) (command (and _ ...))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((_ (and t package-build-run-recipe-make-targets)) (targets (and _ ...))) (if targets (progn (package-build--message "Running make %s" ...) (apply ... rcp "make" targets)))) (let* ((files (and t ...))) (if files (funcall (or package-build-build-function ...) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ ...) (command ...)) (if command (progn ... ...))) (let* ((_ ...) (targets ...)) (if targets (progn ... ...))) (let* ((files ...)) (if files (funcall ... rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* (... ...) (if command ...)) (let* (... ...) (if targets ...)) (let* (...) (if files ... ...)) (if package-build-badge-data (progn ...))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 ...)) (x140 (eieio-oref x0 ...)) (x141 (eieio-oref x0 ...)) (x142 (eieio-oref x0 ...))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ... ...) (let* ... ...) (let* ... ...) (if package-build-badge-data ...)))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-158bafde3be4>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 (car --dolist-tail--))) (progn (ignore (consp x136)) (let* (... ...) (let ... ...))) (setq --dolist-tail-- (cdr --dolist-tail--)))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  (progn (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil ...))) (while --dolist-tail-- (let (...) (progn ... ...) (setq --dolist-tail-- ...)))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  package-build-archive("kubernetes")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"kubernetes\")"))
+  command-line()
+  normal-top-level()
+
