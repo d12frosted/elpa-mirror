@@ -2,8 +2,7 @@ numeri
 
 Numeri is an Emacs Lisp package to support the conversion of Hindu-Arabic
 numbers to Roman and vice-versa. It is built off utility functions provided
-by the Org (ox) and reStructuredText (rst) packages. Only integer numbers are
-supported.
+by the reStructuredText (rst) package. Only integer numbers are supported.
 
 INSTALL
 
