@@ -18,7 +18,8 @@ Then created command can be executed by calling ‘epx-run-command-in-shell’.
 This command provides completion for command name.  It runs the command,
 setting environment variables temporarily.  Command is ran in a separate
 window, which will contail either shell or compilation buffer, depending
-on command’s :compile option.
+on command’s :compile option.  Setting ‘epx-use-eshell’ to t will use
+eshell instead of shell for non-compilation commands.
 
 Commands are stored in dir-locals-file (e.g. .dir-locals.el) or a dedicated
 file called .epx.eld in the project root.
