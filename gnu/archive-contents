@@ -1014,13 +1014,13 @@
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:commit . "12730179acddc224f0c43a2b8e8a028182d1e40f"))])
  (el-job
-  . [(2 7 3) ((emacs (29 1)))
+  . [(2 7 4) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
      ((:url . "https://github.com/meedstrom/el-job")
       (:keywords "processes")
       (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
       (:authors ("Martin Edström" . "meedstrom@runbox.eu"))
-      (:commit . "5af4975c176477cfe5f864bb9b402d8a8f2a074a"))])
+      (:commit . "5ce8bdf4886ee275d56a238a9786296ee4697500"))])
  (el-search
   . [(1 12 6 1) ((emacs (25)) (stream (2 2 4)) (cl-print (1 0)))
      "Expression based interactive search for Emacs Lisp" tar
@@ -2421,6 +2421,15 @@
       (:authors ("Phillip Lord" . "phillip.lord@russet.org.uk"))
       (:url . "https://elpa.gnu.org/packages/persist.html")
       (:commit . "3b4b421d5185f2c33bae478aa057dff13701cc25"))])
+ (php-fill
+  . [(1 1 1) ((emacs (27 1)))
+     "Additional fill commands for PHP code editing" tar
+     ((:url . "https://github.com/arielenter/php-fill.el")
+      (:keywords "php" "languages" "tools" "convenience")
+      (:maintainer "Ariel Del Valle Lozano"
+		   . "arielmazatlan@gmail.com")
+      (:authors ("Ariel Del Valle Lozano" . "arielmazatlan@gmail.com"))
+      (:commit . "73c1c8765a84b0318f2ba852c504e8251ced43ca"))])
  (phpinspect
   . [(3 0 1) ((compat (29)))
      "PHP parsing and code intelligence package" tar
