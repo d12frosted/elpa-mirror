@@ -2269,7 +2269,7 @@
       (:authors ("Hanno Perrey" . "hanno@hoowl.se"))
       (:commit . "020b03f299dad438f65d7bcbf93553b273fd7c33"))])
  (org-mem
-  . [(0 34 0)
+  . [(0 34 1)
      ((emacs (29 1)) (el-job (2 7 3)) (llama (1 0))
       (truename-cache (0 3 2)))
      "Fast info from a large number of Org file contents" tar
@@ -2277,7 +2277,7 @@
       (:keywords "text")
       (:maintainer "Martin Edström" . "meedstrom@runbox.eu")
       (:authors ("Martin Edström" . "meedstrom@runbox.eu"))
-      (:commit . "a37b885c46b086611b43841e666a5a9f57190b2f"))])
+      (:commit . "04abbc49d936dc632672d95851b0b1f2af4c2e3f"))])
  (org-modern
   . [(1 12) ((emacs (29 1)) (org (9 6)) (compat (30)))
      "Modern looks for Org" tar
