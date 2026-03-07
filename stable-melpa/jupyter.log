@@ -1,9 +1,9 @@
  • Building package jupyter (from github:emacs-jupyter/jupyter)...
 Updating /mnt/store/melpa/working/jupyter/
-Checking out de89cbeca890db51ba84aee956658f89aaa0b642
+Checking out 3b9caed3e4cc5f4bc0348eb65d17098de76904e4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jupyter/
-  to /tmp/jupyter-ZiNdlH/jupyter-20251201.1512
+  to /tmp/jupyter-l7k9W8/jupyter-20260307.35
     jupyter-R.el -> jupyter-R.el
     jupyter-base.el -> jupyter-base.el
     jupyter-c++.el -> jupyter-c++.el
@@ -36,48 +36,50 @@ Copying files (->) and directories (=>)
     Makefile -> Makefile
     widget.html -> widget.html
     js => js
-Created jupyter-20251201.1512.tar containing:
-  jupyter-20251201.1512/
-  jupyter-20251201.1512/Makefile
-  jupyter-20251201.1512/js/
-  jupyter-20251201.1512/js/Makefile
-  jupyter-20251201.1512/js/emacs-jupyter.js
-  jupyter-20251201.1512/js/index.js
-  jupyter-20251201.1512/js/manager.js
-  jupyter-20251201.1512/js/package.json
-  jupyter-20251201.1512/js/webpack.config.js
-  jupyter-20251201.1512/jupyter-R.el
-  jupyter-20251201.1512/jupyter-base.el
-  jupyter-20251201.1512/jupyter-c++.el
-  jupyter-20251201.1512/jupyter-channel-ioloop.el
-  jupyter-20251201.1512/jupyter-channel.el
-  jupyter-20251201.1512/jupyter-client.el
-  jupyter-20251201.1512/jupyter-env.el
-  jupyter-20251201.1512/jupyter-ioloop.el
-  jupyter-20251201.1512/jupyter-javascript.el
-  jupyter-20251201.1512/jupyter-julia.el
-  jupyter-20251201.1512/jupyter-kernel-process.el
-  jupyter-20251201.1512/jupyter-kernel.el
-  jupyter-20251201.1512/jupyter-kernelspec.el
-  jupyter-20251201.1512/jupyter-messages.el
-  jupyter-20251201.1512/jupyter-mime.el
-  jupyter-20251201.1512/jupyter-monads.el
-  jupyter-20251201.1512/jupyter-org-client.el
-  jupyter-20251201.1512/jupyter-org-extensions.el
-  jupyter-20251201.1512/jupyter-pkg.el
-  jupyter-20251201.1512/jupyter-python.el
-  jupyter-20251201.1512/jupyter-repl.el
-  jupyter-20251201.1512/jupyter-rest-api.el
-  jupyter-20251201.1512/jupyter-server-kernel.el
-  jupyter-20251201.1512/jupyter-server.el
-  jupyter-20251201.1512/jupyter-tramp.el
-  jupyter-20251201.1512/jupyter-widget-client.el
-  jupyter-20251201.1512/jupyter-zmq-channel-ioloop.el
-  jupyter-20251201.1512/jupyter-zmq-channel.el
-  jupyter-20251201.1512/jupyter.el
-  jupyter-20251201.1512/ob-jupyter.el
-  jupyter-20251201.1512/widget.html
+Created jupyter-20260307.35.tar containing:
+  jupyter-20260307.35/
+  jupyter-20260307.35/Makefile
+  jupyter-20260307.35/js/
+  jupyter-20260307.35/js/Makefile
+  jupyter-20260307.35/js/emacs-jupyter.js
+  jupyter-20260307.35/js/index.js
+  jupyter-20260307.35/js/manager.js
+  jupyter-20260307.35/js/package.json
+  jupyter-20260307.35/js/webpack.config.js
+  jupyter-20260307.35/jupyter-R.el
+  jupyter-20260307.35/jupyter-base.el
+  jupyter-20260307.35/jupyter-c++.el
+  jupyter-20260307.35/jupyter-channel-ioloop.el
+  jupyter-20260307.35/jupyter-channel.el
+  jupyter-20260307.35/jupyter-client.el
+  jupyter-20260307.35/jupyter-env.el
+  jupyter-20260307.35/jupyter-ioloop.el
+  jupyter-20260307.35/jupyter-javascript.el
+  jupyter-20260307.35/jupyter-julia.el
+  jupyter-20260307.35/jupyter-kernel-process.el
+  jupyter-20260307.35/jupyter-kernel.el
+  jupyter-20260307.35/jupyter-kernelspec.el
+  jupyter-20260307.35/jupyter-messages.el
+  jupyter-20260307.35/jupyter-mime.el
+  jupyter-20260307.35/jupyter-monads.el
+  jupyter-20260307.35/jupyter-org-client.el
+  jupyter-20260307.35/jupyter-org-extensions.el
+  jupyter-20260307.35/jupyter-pkg.el
+  jupyter-20260307.35/jupyter-python.el
+  jupyter-20260307.35/jupyter-repl.el
+  jupyter-20260307.35/jupyter-rest-api.el
+  jupyter-20260307.35/jupyter-server-kernel.el
+  jupyter-20260307.35/jupyter-server.el
+  jupyter-20260307.35/jupyter-tramp.el
+  jupyter-20260307.35/jupyter-widget-client.el
+  jupyter-20260307.35/jupyter-zmq-channel-ioloop.el
+  jupyter-20260307.35/jupyter-zmq-channel.el
+  jupyter-20260307.35/jupyter.el
+  jupyter-20260307.35/ob-jupyter.el
+  jupyter-20260307.35/widget.html
  ✓ Success:
   2026-03-06T23:19:02+0000  jupyter-20251201.1512.entry
   2026-03-06T23:19:02+0000  jupyter-20251201.1512.tar
-Built jupyter in 4.238s, finished at 2026-03-06T23:19:03+0000
+  2026-03-07T02:05:51+0000  jupyter-20260307.35.entry
+  2026-03-07T02:05:51+0000  jupyter-20260307.35.tar
+Built jupyter in 6.217s, finished at 2026-03-07T02:05:53+0000
