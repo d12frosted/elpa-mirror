@@ -28,6 +28,7 @@ In the IAM Role Viewer Buffer:
 - C-c C-j: View a combined JSON of all permission policies.
 - C-c C-a: Get service last accessed details for the role.
 - C-c C-m: Find the last modified date for the role or its policies.
+- C-c C-t: Prompt for tags and apply them directly to the current role.
 - C-c C-c: Inside a source block, apply changes to AWS.
 - C-c (:   Hide all property drawers.
 - C-c ):   Reveal all property drawers.
