@@ -81,6 +81,9 @@ be ignored and excluded from the generated table.
 ; Version history (brief)
 
 
+1.9.1 - Removed some unused functions and made the code byte-compile clean
+        again.
+
 1.9  - Any column included in `org-people-summary-properties' which is 100%
        empty, and not present in any known contact, will be removed.
        Updated to ignore :ID and :CREATED by default in completion and in the
