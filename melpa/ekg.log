@@ -1,9 +1,9 @@
  • Building package ekg (from github:ahyatt/ekg)...
 Updating /mnt/store/melpa/working/ekg/
-Checking out 4452fadcd4bff3b9435cf5a370bae220986564fa
+Checking out 07c630b3227bf8714728d021b4641055def18b31
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekg-uu9YIC/ekg-20260306.2117
+  to /tmp/ekg-3TGjvz/ekg-20260309.212
     ekg-agent-pkg.el -> ekg-agent-pkg.el
     ekg-agent.el -> ekg-agent.el
     ekg-auto-save.el -> ekg-auto-save.el
@@ -21,25 +21,27 @@ Copying files (->) and directories (=>)
   ! doc/ekg.texi -> ekg.texi
 Generating doclicense.info
 Generating ekg.info
-Created ekg-20260306.2117.tar containing:
-  ekg-20260306.2117/
-  ekg-20260306.2117/dir
-  ekg-20260306.2117/doclicense.info
-  ekg-20260306.2117/ekg-agent-pkg.el
-  ekg-20260306.2117/ekg-agent.el
-  ekg-20260306.2117/ekg-auto-save.el
-  ekg-20260306.2117/ekg-denote-pkg.el
-  ekg-20260306.2117/ekg-denote.el
-  ekg-20260306.2117/ekg-embedding.el
-  ekg-20260306.2117/ekg-llm.el
-  ekg-20260306.2117/ekg-logseq.el
-  ekg-20260306.2117/ekg-org-roam.el
-  ekg-20260306.2117/ekg-org.el
-  ekg-20260306.2117/ekg-pkg.el
-  ekg-20260306.2117/ekg-test-utils.el
-  ekg-20260306.2117/ekg.el
-  ekg-20260306.2117/ekg.info
+Created ekg-20260309.212.tar containing:
+  ekg-20260309.212/
+  ekg-20260309.212/dir
+  ekg-20260309.212/doclicense.info
+  ekg-20260309.212/ekg-agent-pkg.el
+  ekg-20260309.212/ekg-agent.el
+  ekg-20260309.212/ekg-auto-save.el
+  ekg-20260309.212/ekg-denote-pkg.el
+  ekg-20260309.212/ekg-denote.el
+  ekg-20260309.212/ekg-embedding.el
+  ekg-20260309.212/ekg-llm.el
+  ekg-20260309.212/ekg-logseq.el
+  ekg-20260309.212/ekg-org-roam.el
+  ekg-20260309.212/ekg-org.el
+  ekg-20260309.212/ekg-pkg.el
+  ekg-20260309.212/ekg-test-utils.el
+  ekg-20260309.212/ekg.el
+  ekg-20260309.212/ekg.info
  ✓ Success:
   2026-03-09T01:32:00+0000  ekg-20260306.2117.entry
   2026-03-09T01:32:00+0000  ekg-20260306.2117.tar
-Built ekg in 11.459s, finished at 2026-03-09T01:32:02+0000
+  2026-03-09T05:04:05+0000  ekg-20260309.212.entry
+  2026-03-09T05:04:05+0000  ekg-20260309.212.tar
+Built ekg in 19.469s, finished at 2026-03-09T05:04:07+0000
