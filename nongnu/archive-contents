@@ -1192,13 +1192,13 @@
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
       (:commit . "c800f79c2061621fde847f6a53129eca0e8da728"))])
  (markdown-mode
-  . [(2 7) ((emacs (27 1))) "Major mode for Markdown-formatted text"
+  . [(2 8) ((emacs (28 1))) "Major mode for Markdown-formatted text"
      tar
      ((:url . "https://jblevins.org/projects/markdown-mode/")
       (:keywords "markdown" "github flavored markdown" "itex")
       (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
-      (:commit . "1c7aecba67cc478ca3f6bd7899dc06956e4762f4"))])
+      (:commit . "f5d520b3ee7722dd2231ab586ba51d8eb166e49b"))])
  (mastodon
   . [(2 0 12) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
