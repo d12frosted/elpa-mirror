@@ -1,15 +1,15 @@
 
 This package provides ways to quickly sort Dired buffers in various ways.
 With `savehist-mode' enabled (strongly recommended), the last used sorting
-criteria are automatically used when sorting, even after restarting Emacs.  A
-hydra is defined to conveniently change sorting criteria.
+criteria are automatically used when sorting, even after restarting Emacs.
+A transient menu is provided to conveniently change sorting criteria.
 
 For a quick setup, Add the following configuration to your "~/.emacs" or
 "~/.emacs.d/init.el" after autoloads are in effect:
 
     (dired-quick-sort-setup)
 
-This will bind "S" in dired-mode to invoke the quick sort hydra and new Dired
+This will bind "S" in dired-mode to invoke the sorting menu and new Dired
 buffers are automatically sorted according to the setup in this package.  See
 the document of `dired-quick-sort-setup` if you need a different setup.  It
 is recommended that at least "-l" should be put into

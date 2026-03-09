@@ -1,9 +1,9 @@
  • Building package mew (from github:kazu-yamamoto/Mew)...
 Updating /mnt/store/melpa/working/mew/
-Checking out d1a4f1f63b9c1c3f9cf7bee726ee5be5015ad361
+Checking out c0cb37388b5c58cf961d15aa34878153638f212e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mew/
-  to /tmp/mew-JN1HVj/mew-20260308.627
+  to /tmp/mew-irmsQW/mew-20260308.2328
   ! elisp/mew-addrbook.el -> mew-addrbook.el
   ! elisp/mew-attach.el -> mew-attach.el
   ! elisp/mew-auth.el -> mew-auth.el
@@ -75,115 +75,117 @@ Copying files (->) and directories (=>)
     etc => etc
   ! info/mew.info -> mew.info
   ! info/mew.ja.info -> mew.ja.info
-Created mew-20260308.627.tar containing:
-  mew-20260308.627/
-  mew-20260308.627/dir
-  mew-20260308.627/etc/
-  mew-20260308.627/etc/Mew.img
-  mew-20260308.627/etc/Mew.png
-  mew-20260308.627/etc/Mew.xbm
-  mew-20260308.627/etc/Mew.xpm
-  mew-20260308.627/etc/mew-Audio.xpm
-  mew-20260308.627/etc/mew-Blank.xpm
-  mew-20260308.627/etc/mew-External.xpm
-  mew-20260308.627/etc/mew-Folder.xpm
-  mew-20260308.627/etc/mew-Image.xpm
-  mew-20260308.627/etc/mew-Octet-Stream.xpm
-  mew-20260308.627/etc/mew-Postscript.xpm
-  mew-20260308.627/etc/mew-Rfc822.xpm
-  mew-20260308.627/etc/mew-Text.xpm
-  mew-20260308.627/etc/mew-Unknown.xpm
-  mew-20260308.627/etc/mew-Video.xpm
-  mew-20260308.627/etc/mew-attach.xpm
-  mew-20260308.627/etc/mew-cite.xpm
-  mew-20260308.627/etc/mew-forward.xpm
-  mew-20260308.627/etc/mew-inc.xpm
-  mew-20260308.627/etc/mew-lock.xpm
-  mew-20260308.627/etc/mew-next.xpm
-  mew-20260308.627/etc/mew-pgp-enc.xpm
-  mew-20260308.627/etc/mew-pgp-sigenc.xpm
-  mew-20260308.627/etc/mew-pgp-sign.xpm
-  mew-20260308.627/etc/mew-prev.xpm
-  mew-20260308.627/etc/mew-queue.xpm
-  mew-20260308.627/etc/mew-refile.xpm
-  mew-20260308.627/etc/mew-reply.xpm
-  mew-20260308.627/etc/mew-send.xpm
-  mew-20260308.627/etc/mew-sep.xpm
-  mew-20260308.627/etc/mew-show.xpm
-  mew-20260308.627/etc/mew-write.xpm
-  mew-20260308.627/etc/mew-yank.xpm
-  mew-20260308.627/mew-addrbook.el
-  mew-20260308.627/mew-attach.el
-  mew-20260308.627/mew-auth.el
-  mew-20260308.627/mew-blvs.el
-  mew-20260308.627/mew-bq.el
-  mew-20260308.627/mew-cache.el
-  mew-20260308.627/mew-complete.el
-  mew-20260308.627/mew-config.el
-  mew-20260308.627/mew-const.el
-  mew-20260308.627/mew-darwin.el
-  mew-20260308.627/mew-decode.el
-  mew-20260308.627/mew-demo.el
-  mew-20260308.627/mew-draft.el
-  mew-20260308.627/mew-edit.el
-  mew-20260308.627/mew-encode.el
-  mew-20260308.627/mew-env.el
-  mew-20260308.627/mew-env0.el
-  mew-20260308.627/mew-exec.el
-  mew-20260308.627/mew-ext.el
-  mew-20260308.627/mew-fib.el
-  mew-20260308.627/mew-func.el
-  mew-20260308.627/mew-gemacs.el
-  mew-20260308.627/mew-gnutls.el
-  mew-20260308.627/mew-header.el
-  mew-20260308.627/mew-highlight.el
-  mew-20260308.627/mew-imap.el
-  mew-20260308.627/mew-imap2.el
-  mew-20260308.627/mew-key.el
-  mew-20260308.627/mew-lang-jp.el
-  mew-20260308.627/mew-lang-kr.el
-  mew-20260308.627/mew-lang-latin.el
-  mew-20260308.627/mew-local.el
-  mew-20260308.627/mew-mark.el
-  mew-20260308.627/mew-message.el
-  mew-20260308.627/mew-mime.el
-  mew-20260308.627/mew-minibuf.el
-  mew-20260308.627/mew-mule.el
-  mew-20260308.627/mew-mule3.el
-  mew-20260308.627/mew-net.el
-  mew-20260308.627/mew-nntp.el
-  mew-20260308.627/mew-nntp2.el
-  mew-20260308.627/mew-oauth2.el
-  mew-20260308.627/mew-passwd.el
-  mew-20260308.627/mew-pgp.el
-  mew-20260308.627/mew-pick.el
-  mew-20260308.627/mew-pkg.el
-  mew-20260308.627/mew-pop.el
-  mew-20260308.627/mew-refile.el
-  mew-20260308.627/mew-scan.el
-  mew-20260308.627/mew-search.el
-  mew-20260308.627/mew-smime.el
-  mew-20260308.627/mew-smtp.el
-  mew-20260308.627/mew-sort.el
-  mew-20260308.627/mew-ssh.el
-  mew-20260308.627/mew-stunnel.el
-  mew-20260308.627/mew-summary.el
-  mew-20260308.627/mew-summary2.el
-  mew-20260308.627/mew-summary3.el
-  mew-20260308.627/mew-summary4.el
-  mew-20260308.627/mew-syntax.el
-  mew-20260308.627/mew-thread.el
-  mew-20260308.627/mew-unix.el
-  mew-20260308.627/mew-vars.el
-  mew-20260308.627/mew-vars2.el
-  mew-20260308.627/mew-vars3.el
-  mew-20260308.627/mew-varsx.el
-  mew-20260308.627/mew-virtual.el
-  mew-20260308.627/mew-win32.el
-  mew-20260308.627/mew.el
-  mew-20260308.627/mew.info
-  mew-20260308.627/mew.ja.info
+Created mew-20260308.2328.tar containing:
+  mew-20260308.2328/
+  mew-20260308.2328/dir
+  mew-20260308.2328/etc/
+  mew-20260308.2328/etc/Mew.img
+  mew-20260308.2328/etc/Mew.png
+  mew-20260308.2328/etc/Mew.xbm
+  mew-20260308.2328/etc/Mew.xpm
+  mew-20260308.2328/etc/mew-Audio.xpm
+  mew-20260308.2328/etc/mew-Blank.xpm
+  mew-20260308.2328/etc/mew-External.xpm
+  mew-20260308.2328/etc/mew-Folder.xpm
+  mew-20260308.2328/etc/mew-Image.xpm
+  mew-20260308.2328/etc/mew-Octet-Stream.xpm
+  mew-20260308.2328/etc/mew-Postscript.xpm
+  mew-20260308.2328/etc/mew-Rfc822.xpm
+  mew-20260308.2328/etc/mew-Text.xpm
+  mew-20260308.2328/etc/mew-Unknown.xpm
+  mew-20260308.2328/etc/mew-Video.xpm
+  mew-20260308.2328/etc/mew-attach.xpm
+  mew-20260308.2328/etc/mew-cite.xpm
+  mew-20260308.2328/etc/mew-forward.xpm
+  mew-20260308.2328/etc/mew-inc.xpm
+  mew-20260308.2328/etc/mew-lock.xpm
+  mew-20260308.2328/etc/mew-next.xpm
+  mew-20260308.2328/etc/mew-pgp-enc.xpm
+  mew-20260308.2328/etc/mew-pgp-sigenc.xpm
+  mew-20260308.2328/etc/mew-pgp-sign.xpm
+  mew-20260308.2328/etc/mew-prev.xpm
+  mew-20260308.2328/etc/mew-queue.xpm
+  mew-20260308.2328/etc/mew-refile.xpm
+  mew-20260308.2328/etc/mew-reply.xpm
+  mew-20260308.2328/etc/mew-send.xpm
+  mew-20260308.2328/etc/mew-sep.xpm
+  mew-20260308.2328/etc/mew-show.xpm
+  mew-20260308.2328/etc/mew-write.xpm
+  mew-20260308.2328/etc/mew-yank.xpm
+  mew-20260308.2328/mew-addrbook.el
+  mew-20260308.2328/mew-attach.el
+  mew-20260308.2328/mew-auth.el
+  mew-20260308.2328/mew-blvs.el
+  mew-20260308.2328/mew-bq.el
+  mew-20260308.2328/mew-cache.el
+  mew-20260308.2328/mew-complete.el
+  mew-20260308.2328/mew-config.el
+  mew-20260308.2328/mew-const.el
+  mew-20260308.2328/mew-darwin.el
+  mew-20260308.2328/mew-decode.el
+  mew-20260308.2328/mew-demo.el
+  mew-20260308.2328/mew-draft.el
+  mew-20260308.2328/mew-edit.el
+  mew-20260308.2328/mew-encode.el
+  mew-20260308.2328/mew-env.el
+  mew-20260308.2328/mew-env0.el
+  mew-20260308.2328/mew-exec.el
+  mew-20260308.2328/mew-ext.el
+  mew-20260308.2328/mew-fib.el
+  mew-20260308.2328/mew-func.el
+  mew-20260308.2328/mew-gemacs.el
+  mew-20260308.2328/mew-gnutls.el
+  mew-20260308.2328/mew-header.el
+  mew-20260308.2328/mew-highlight.el
+  mew-20260308.2328/mew-imap.el
+  mew-20260308.2328/mew-imap2.el
+  mew-20260308.2328/mew-key.el
+  mew-20260308.2328/mew-lang-jp.el
+  mew-20260308.2328/mew-lang-kr.el
+  mew-20260308.2328/mew-lang-latin.el
+  mew-20260308.2328/mew-local.el
+  mew-20260308.2328/mew-mark.el
+  mew-20260308.2328/mew-message.el
+  mew-20260308.2328/mew-mime.el
+  mew-20260308.2328/mew-minibuf.el
+  mew-20260308.2328/mew-mule.el
+  mew-20260308.2328/mew-mule3.el
+  mew-20260308.2328/mew-net.el
+  mew-20260308.2328/mew-nntp.el
+  mew-20260308.2328/mew-nntp2.el
+  mew-20260308.2328/mew-oauth2.el
+  mew-20260308.2328/mew-passwd.el
+  mew-20260308.2328/mew-pgp.el
+  mew-20260308.2328/mew-pick.el
+  mew-20260308.2328/mew-pkg.el
+  mew-20260308.2328/mew-pop.el
+  mew-20260308.2328/mew-refile.el
+  mew-20260308.2328/mew-scan.el
+  mew-20260308.2328/mew-search.el
+  mew-20260308.2328/mew-smime.el
+  mew-20260308.2328/mew-smtp.el
+  mew-20260308.2328/mew-sort.el
+  mew-20260308.2328/mew-ssh.el
+  mew-20260308.2328/mew-stunnel.el
+  mew-20260308.2328/mew-summary.el
+  mew-20260308.2328/mew-summary2.el
+  mew-20260308.2328/mew-summary3.el
+  mew-20260308.2328/mew-summary4.el
+  mew-20260308.2328/mew-syntax.el
+  mew-20260308.2328/mew-thread.el
+  mew-20260308.2328/mew-unix.el
+  mew-20260308.2328/mew-vars.el
+  mew-20260308.2328/mew-vars2.el
+  mew-20260308.2328/mew-vars3.el
+  mew-20260308.2328/mew-varsx.el
+  mew-20260308.2328/mew-virtual.el
+  mew-20260308.2328/mew-win32.el
+  mew-20260308.2328/mew.el
+  mew-20260308.2328/mew.info
+  mew-20260308.2328/mew.ja.info
  ✓ Success:
-  2026-03-08T19:01:48+0000  mew-20260308.627.entry
-  2026-03-08T19:01:47+0000  mew-20260308.627.tar
-Built mew in 7.108s, finished at 2026-03-08T19:01:49+0000
+  2026-03-09T02:10:57+0000  mew-20260308.2328.entry
+  2026-03-09T02:10:57+0000  mew-20260308.2328.tar
+  2026-03-08T22:37:47+0000  mew-20260308.627.entry
+  2026-03-08T22:37:46+0000  mew-20260308.627.tar
+Built mew in 6.818s, finished at 2026-03-09T02:10:59+0000
