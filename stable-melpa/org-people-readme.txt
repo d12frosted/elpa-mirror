@@ -25,11 +25,10 @@ file:
 
 The specific properties used don't matter, although it seems natural
 to use :ADDRESS, :EMAIL, and :PHONE.  A contact will be recorded
-if there is at least one property present and the "contact" tag
-being present.
+if there is at least one property present alongside the "contact" tag.
 
 The name of the tag used to search for entries is specified in the
-org-people-search-tag variable.
+`org-people-search-tag' variable and can be customized.
 
 
 ; Basic operations
@@ -41,6 +40,12 @@ attributes, jump to their definitions, & etc.
 `org-people-insert' allows you to interactively insert data from
 your contacts with helpful TAB-completion, on the attribute name
 and person.
+
+If you have links to people within your document (e.g. a link
+such as [[org-people:Steve Kemp]] you can use the helper
+`org-people-add-descriptions' to automatically add the contact
+description automatically.  This makes them look cleaner.
+
 
 ; org-table helpers
 
@@ -76,10 +81,17 @@ be ignored and excluded from the generated table.
 ; Version history (brief)
 
 
+1.9  - Any column included in `org-people-summary-properties' which is 100%
+       empty, and not present in any known contact, will be removed.
+       Updated to ignore :ID and :CREATED by default in completion and in the
+       table-generation from `org-people-person-to-table'.
+       The summary-properties may override the name, width and the attribute
+       extraction function to make things very dynamic.
+
 1.8.1 - Improvement: Filtering on :TAGS property in `M-x org-people-summary`
         uses sub-string matches of entries, rather than membership testing.
 
-1.7 - BugFix: First column in org-people-summary-properties is used as the
+1.7 - BugFix: First column in `org-people-summary-properties' is used as the
       default sort key.  Now allows a width to be defined too.
 
 1.6 - Open the property drawers when jumping to a contact, to allow
@@ -105,7 +117,7 @@ be ignored and excluded from the generated table.
       ":contact:" (by default).  This is more generally useful, and
       removes configuration and our ad-hoc caching implementation.
 
-0.9 - org-people-person-to-table shows all the data about one individual
+0.9 - `org-people-person-to-table' shows all the data about one individual
       as an `org-mode' table.
       Added test-cases in new file, org-people-test.el
 
