@@ -84,6 +84,9 @@ be ignored and excluded from the generated table.
 ; Version history (brief)
 
 
+2.0  - Improvements to org-people: link handling.
+       Default link description is now the contact name.
+
 1.9.1 - Removed some unused functions and made the code byte-compile clean
         again.  Added new test-targets to the Makefile.
         Fixed some comments and documentation.

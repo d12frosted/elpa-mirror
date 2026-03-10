@@ -2,7 +2,7 @@ bible-gateway is a simple package that fetches content from
 BibleGateway.com. It can:
 
 - Fetch and display the Bible verse of the day
-- Insert Bible passages/chapters at point
+- Insert Bible passages/chapters at point or in a dedicated buffer
 - Open audio chapters in your browser
 - Search the Bible by keyword and display results in a dedicated buffer with
   clickable references and pagination
@@ -16,6 +16,9 @@ M-x `bible-gateway-get-passage' fetches a Bible passage and inserts
 it at point. It can be called both interactively from
 \\[execute-extended-command] or programmatically with the book name
 and verse(s) as arguments.
+
+M-x `bible-gateway-read-passage' works like `bible-gateway-get-passage'
+but displays the passage in a dedicated buffer in `text-mode'.
 
 M-x `bible-gateway-listen-passage' plays a Bible chapter from KJV
 Zondervan Audio in the browser.
