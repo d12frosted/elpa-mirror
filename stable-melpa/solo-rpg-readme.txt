@@ -5,7 +5,12 @@ Features include:
 - Dice rolling
 - Oracles:
   - Yes/No Oracle with probabilities
-  - Action/Theme Oracle, inspired by the Mything Game Master Emulator
+  - Action/Theme Oracle, inspired by the Mythic Game Master Emulator
+- Generators:
+  - NPC name and appearance
+  - Dungeon rooms and random events
+  - Wilderness random events
+  - City random events
 
 To use this package, add the following to your configuration:
 

@@ -7,6 +7,9 @@ Requirements:
   - pi coding agent 0.52.9 or later, installed and in PATH
   - tree-sitter grammars for markdown and markdown-inline
 
+pi-coding-agent uses `md-ts-mode` for its chat buffers only; loading it
+does not change global Markdown file associations.
+
 Usage:
   M-x pi-coding-agent         Start or focus session in current project
   C-u M-x pi-coding-agent     Start a named session
