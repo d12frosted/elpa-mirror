@@ -216,13 +216,14 @@ Table of Contents
 
   If you prefer to have the default completion commands available you
   can add new bindings or even replace the Vertico bindings. For example
-  you can use `M-TAB' to expand the prefix of candidates (TAB complete)
-  or cycle between candidates if `completion-cycle-threshold' is
-  non-nil, with the following configuration.
+  you can use `M-TAB' to expand the prefix of candidates (TAB
+  completion) or cycle between candidates if
+  `completion-cycle-threshold' is non-nil, with the following
+  configuration.
 
   ┌────
   │ ;; Option 1: Additional bindings
-  │ (keymap-set vertico-map "?" #'minibuffer-completion-help)
+  │ (keymap-set vertico-map "M-?" #'minibuffer-completion-help)
   │ (keymap-set vertico-map "M-RET" #'minibuffer-force-complete-and-exit)
   │ (keymap-set vertico-map "M-TAB" #'minibuffer-complete)
   │ 
@@ -696,7 +697,7 @@ Table of Contents
 <https://github.com/doomemacs/doomemacs/tree/master/modules/completion/vertico>
 
 [Crafted Emacs Completion Module]
-<https://github.com/SystemCrafters/crafted-emacs/blob/master/modules/crafted-completion.el>
+<https://github.com/SystemCrafters/crafted-emacs/blob/master/modules/crafted-completion-config.el>
 
 [Prot's Emacs configuration]
 <https://git.sr.ht/~protesilaos/dotfiles/tree/master/item/emacs/.emacs.d/>

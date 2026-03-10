@@ -96,10 +96,9 @@
   └────
 
   Furthermore I recommend to use `line-spacing' with a value between 0.1
-  and 0.4 to give the text some room to breathe. Unfortunately as of
-  Emacs 30, the text is not centered with `line-spacing', but I am
-  hopeful that centering will be available in Emacs 31 (see Emacs
-  [bug#76390]).
+  and 0.4 to give the text some room to breathe. From Emacs 31, the text
+  can be centered by setting `line-spacing' to a pair of two numbers
+  (see Emacs [bug#76390]).
 
 
 [bug#76390] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=76390>

@@ -1132,9 +1132,12 @@ Table of Contents
   │  ;; Show completions eagerly and update automatically
   │  completion-eager-update t
   │  completion-eager-display t
-  │  ;; Disable noise (inline help also blocks input)
-  │  completion-show-help nil
-  │  completion-show-inline-help nil)
+  │  completion-auto-help 'always
+  │  ;; Disable noise in the *Completions* buffer
+  │  completion-show-help nil)
+  │ 
+  │ ;; Unbind `minibuffer-complete-word'
+  │ (keymap-unset minibuffer-local-completion-map "SPC")
   └────
 
 
