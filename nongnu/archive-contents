@@ -1815,6 +1815,13 @@
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
       (:commit . "cef3fc2daefbbfc29ad02b7e1f39542b57c72fe8"))])
+ (treepy
+  . [(0 1 2) ((emacs (25 1))) "Generic tree traversal tools" tar
+     ((:url . "https://github.com/volrath/treepy.el")
+      (:keywords "lisp" "maint" "tools")
+      (:maintainer "Daniel Barreto" . "daniel.barreto.n@gmail.com")
+      (:authors ("Daniel Barreto" . "daniel.barreto.n@gmail.com"))
+      (:commit . "59e573f3f18a7264b26837de482e2519afb31b51"))])
  (treesit-fold
   . [(0 2 1) ((emacs (29 1))) "Code folding using treesit" tar
      ((:url . "https://github.com/emacs-tree-sitter/treesit-fold")

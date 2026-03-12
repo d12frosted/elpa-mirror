@@ -14,7 +14,7 @@ which can be used as follows:
                 (buffer-string)))  ;; Get the process's output.
          (exitcode2 <- (futur-process-call CMD2 nil buf nil ARG3 ARG4)))
       (with-current-buffer buf
-        (buffer-string)))
+        (concat out (buffer-string))))
 
 This example builds a future which runs two commands in sequence.
 For those rare cases where you really do need to block everything
@@ -29,13 +29,11 @@ Low level API
   FUN is called with one argument (the new `futur' object) and should
   return the "blocker" that `futur' is waiting for (used mostly
   when aborting a future).
-- (futur-abort FUTUR): Aborts execution of FUTUR.
+- (futur-abort FUTUR REASON): Aborts execution of FUTUR.
 - (futur-deliver-value FUTUR VAL): Mark FUTUR as having completed
   successfully with VAL, and runs the clients waiting for that event.
 - (futur-deliver-failure FUTUR ERROR): Mark FUTUR as having failed
   with ERROR, and runs the clients waiting for that event.
-- (futur--register-callback FUTUR FUN): Register FUN as a client.
-  Will be called with two arg (the ERROR and the VAL) when FUTURE completes.
 - (futur-blocking-wait-to-get-result FUTUR): Busy-wait for FUTUR to complete
   and return its value.  Better use `futur-bind' or `futur-let*' instead.
   BEWARE: Please don't use it unless you really absolutely have to.
@@ -55,6 +53,31 @@ Composing futures
   resulting list of values.
 - (futur-race &rest FUTURS): Run FUTURS concurrently, return the
   first result, and discard the rest.
+
+Predefined future constructors
+
+- (futur-funcall FUNC &rest ARGS)
+  Like `funcall', but runs the code asynchronously.
+- (futur-timeout TIME)
+- (futur-sit-for TIME)
+- (futur-process-call PROG &optional INFILE DESTINATION _DISPLAY &rest ARGS)
+  Like `call-process' but asynchronous, thus allows parallelism between
+  Emacs and the subprocess.
+- (futur-with-temp-buffer &rest BODY)
+- (futur-unwind-protect FORM &rest FORMS)
+- (futur-concurrency-bound FUNC &rest ARGS)
+  Like `futur-funcall' but throttles execution to avoid running too
+  many tasks concurrently.
+
+Experimental
+
+- (futur-hacks-mode &optional ARG)
+  Minor mode making various Emacs features use futures.
+- (futur--elisp-funcall FUNC &rest ARGS)
+  Like `futur-funcall' but runs the code in parallel in a subprocess.
+- (futur--sandbox-funcall FUNC &rest ARGS)
+  Like `futur--elisp-funcall' but runs the code in a sandbox so it
+  can be used with untrusted code.
 
 Related packages
 
@@ -89,7 +112,7 @@ Related packages
   `future-let*' to sequence execution when one part is a future).
 - [aio](https://melpa.org/#/aio): Also provides await/async style
   coding (also using `generator.el' under the hood) but using its
-  own (much simpler) "promise" objects.
+  own "promise" objects, which are much simpler than those of `promise.el'.
 - [async1](https://melpa.org/#/async1): A more limited/ad-hoc solution to
   the problem that async/await try to solve that hence avoids the need
   to perform CPS.  Not sure if it's significantly better than `futur-let*'.
@@ -99,3 +122,20 @@ Related packages
 - [async-job-queue](https://melpa.org/#/async-job-queue):
 - [pdd](https://melpa.org/#/pdd): HTTP library that uses its own
   implementation of promises.
+- el-job: Library to run ELisp jobs in parallel in Emacs subprocesses.
+  `futur-client/server.el' took some inspiration from that package.
+
+BUGS
+
+- There might still be cases where we run code sometimes in the
+  "current" dynamic context and sometimes in the background thread.
+- Sometimes the `futur--background' thread gets blocked on some
+  operation (e.g. entering the debugger), which blocks all further
+  execution of async tasks.
+- When launching elisp/sandbox servers (or during `futur-reset-context'),
+  the client receives and displays all the `message's from the subprocess,
+  which can be annoying more than helpful.
+- When using `futur-hacks-mode' I sometimes see void-variable errors
+  about `cl-struct-eieio--class-tags' which sound like problems in
+  `futur--obarray-snapshot/revert'.  I have not investigated them yet,
+  but maybe this idea of obarray snapshots can't work reliably.

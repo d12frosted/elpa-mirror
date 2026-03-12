@@ -84,6 +84,11 @@ be ignored and excluded from the generated table.
 ; Version history (brief)
 
 
+2.1   - "F" allows filtering for contacts for whom a specific property exists.
+
+2.0.1 - When org-people: links are exported to HTML a hyperlink will be added
+        for the person if there is a :WEBSITE property defined.
+
 2.0  - Improvements to org-people: link handling.
        Default link description is now the contact name.
 
