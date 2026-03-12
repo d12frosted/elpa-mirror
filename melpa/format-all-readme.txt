@@ -54,7 +54,7 @@ Supported languages:
 - LaTeX (latexindent, auctex)
 - Ledger (ledger-mode)
 - Lua (lua-fmt, stylua, prettier plugin)
-- Markdown (prettier, prettierd, deno)
+- Markdown (prettier, prettierd, deno, markdownfmt, mdformat)
 - Meson (muon fmt, meson format)
 - Nginx (nginxfmt)
 - Nix (nixpkgs-fmt, nixfmt, alejandra)
