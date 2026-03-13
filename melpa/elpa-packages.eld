@@ -1565,7 +1565,6 @@
   (ergoemacs-mode :url "https://github.com/ergoemacs/ergoemacs-mode")
   (ergoemacs-status :url "https://github.com/ergoemacs/ergoemacs-status")
   (eri :url "https://github.com/agda/agda")
-  (erk :url "https://github.com/positron-solutions/elisp-repo-kit")
   (erlang :url "https://github.com/erlang/otp")
   (erlang-ts :url "https://github.com/erlang/emacs-erlang-ts")
   (erlstack-mode :url "https://github.com/k32/erlstack-mode")

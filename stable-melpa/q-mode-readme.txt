@@ -9,7 +9,13 @@ Some of its major features include:
 
  - interaction with inferior q[con] instance (comint-mode),
 
- - variable and function indexing (imenu).
+ - variable and function indexing (imenu),
+
+ - completion at point (CAPF),
+
+ - signature help (eldoc),
+
+ - definition/reference navigation (xref).
 
 To load `q-mode' on-demand, instead of at startup, add this to your
 initialization file
@@ -60,7 +66,10 @@ If the source file exists on the same machine as the q process,
 buffer.
 
 Quick access to variable and function definitions can be obtained
-using the `imenu' binding `M-g i'.
+using the `imenu' binding `M-g i'.  Completion is available via
+`completion-at-point' (usually `M-TAB').  Eldoc displays signatures
+while you type, and xref provides `M-.' for definitions and `M-?'
+for references.
 
 
 `M-x customize-group' can be used to customize the `q' group.

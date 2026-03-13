@@ -91,6 +91,10 @@ people who are currently marked, or if none then the person upon
 the current row.  See `org-people-summary-marked-or-current' for
 a useful helper to simplify that.
 
+A similar helper `org-people-get-property-marked-or-current' allows
+fetching the values of a given property for each marked contact,
+or the person upon the current row if nothing is marked.
+
 Currently the only user of the marking functionality are the two
 export routines we have (vCARD and CSV).
 
