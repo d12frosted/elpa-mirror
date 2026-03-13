@@ -1,10 +1,12 @@
  • Building package eca (from github:editor-code-assistant/eca-emacs)...
 Updating /mnt/store/melpa/working/eca/
-Checking out 369e6fd96b0b8f8e6d8316c14aa39d0f44681e88
+Checking out daeab7f6b01d8c58dcabe8431a04577c8095c310
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eca/
-  to /tmp/eca-u3zua3/eca-20260313.224
+  to /tmp/eca-Wpvc4C/eca-20260313.1516
     eca-api.el -> eca-api.el
+    eca-chat-context.el -> eca-chat-context.el
+    eca-chat-expandable.el -> eca-chat-expandable.el
     eca-chat.el -> eca-chat.el
     eca-completion.el -> eca-completion.el
     eca-diff.el -> eca-diff.el
@@ -15,21 +17,25 @@ Copying files (->) and directories (=>)
     eca-table.el -> eca-table.el
     eca-util.el -> eca-util.el
     eca.el -> eca.el
-Created eca-20260313.224.tar containing:
-  eca-20260313.224/
-  eca-20260313.224/eca-api.el
-  eca-20260313.224/eca-chat.el
-  eca-20260313.224/eca-completion.el
-  eca-20260313.224/eca-diff.el
-  eca-20260313.224/eca-editor.el
-  eca-20260313.224/eca-mcp.el
-  eca-20260313.224/eca-pkg.el
-  eca-20260313.224/eca-process.el
-  eca-20260313.224/eca-rewrite.el
-  eca-20260313.224/eca-table.el
-  eca-20260313.224/eca-util.el
-  eca-20260313.224/eca.el
+Created eca-20260313.1516.tar containing:
+  eca-20260313.1516/
+  eca-20260313.1516/eca-api.el
+  eca-20260313.1516/eca-chat-context.el
+  eca-20260313.1516/eca-chat-expandable.el
+  eca-20260313.1516/eca-chat.el
+  eca-20260313.1516/eca-completion.el
+  eca-20260313.1516/eca-diff.el
+  eca-20260313.1516/eca-editor.el
+  eca-20260313.1516/eca-mcp.el
+  eca-20260313.1516/eca-pkg.el
+  eca-20260313.1516/eca-process.el
+  eca-20260313.1516/eca-rewrite.el
+  eca-20260313.1516/eca-table.el
+  eca-20260313.1516/eca-util.el
+  eca-20260313.1516/eca.el
  ✓ Success:
-  2026-03-13T10:02:06+0000  eca-20260313.224.entry
-  2026-03-13T10:02:06+0000  eca-20260313.224.tar
-Built eca in 9.350s, finished at 2026-03-13T10:02:08+0000
+  2026-03-13T16:14:50+0000  eca-20260313.1516.entry
+  2026-03-13T16:14:50+0000  eca-20260313.1516.tar
+  2026-03-13T13:02:22+0000  eca-20260313.224.entry
+  2026-03-13T13:02:22+0000  eca-20260313.224.tar
+Built eca in 9.285s, finished at 2026-03-13T16:14:52+0000
