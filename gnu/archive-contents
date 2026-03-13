@@ -373,12 +373,12 @@
       (:authors ("Yuchen Pei" . "id@ypei.org"))
       (:commit . "d614eea91ca5717c2b0019dae8c85e6a24873f39"))])
  (calibre
-  . [(1 5 0) ((emacs (27 1)) (compat (29 1 4 1)))
+  . [(1 5 2) ((emacs (27 1)) (compat (29 1 4 1)))
      "Interact with Calibre libraries from Emacs" tar
      ((:url . "https://git.disroot.org/kjartanoli/calibre.el")
       (:maintainer "Kjartan Oli Agustsson" . "kjartanoli@disroot.org")
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
-      (:commit . "dbbffe75c6a2492099e36dc93b6183800a7d6fcd"))])
+      (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
   . [(2 6) ((emacs (29 1)) (compat (30)))
      "Completion At Point Extensions" tar

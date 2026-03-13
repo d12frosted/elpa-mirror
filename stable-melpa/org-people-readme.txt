@@ -95,6 +95,26 @@ Currently the only user of the marking functionality are the two
 export routines we have (vCARD and CSV).
 
 
+; complete-at-point
+
+There are a pair of functions provided for the complete-at-point
+functionality - one for names and one for email addresses.  They
+might be enabled like so:
+
+ (add-hook 'message-mode-hook
+         (lambda ()
+                 (add-hook 'completion-at-point-functions
+                     #'org-people-email-capf
+                     nil t)))
+
+ (add-hook 'text-mode-hook
+         (lambda ()
+           (add-hook 'completion-at-point-functions
+                     #'org-people-capf
+                     nil t)))
+
+
+
 
 ; Version history (brief)
 
