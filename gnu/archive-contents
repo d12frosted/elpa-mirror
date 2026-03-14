@@ -1077,12 +1077,12 @@
       (:authors ("Ihor Radchenko" . "yantar92@posteo.net"))
       (:commit . "05d669e123f411c9582f99a9a6182efa43d01a6b"))])
  (emacs-lisp-intro-es
-  . [(1 0) nil "ELisp intro manual in Spanish" tar
+  . [(1 0 1) nil "ELisp intro manual in Spanish" tar
      ((:keywords "manual" "translation" "spanish" "español")
       (:maintainer "David Arroyo Menéndez" . "davidam@gmail.com")
       (:authors ("David Arroyo Menéndez" . "davidam@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
-      (:commit . "5543355583f2f1a6327d5e112b370d4d628c9499"))])
+      (:commit . "a2c2c167837cef08a1b8f86f5eb9864f93699300"))])
  (embark
   . [(1 1) ((emacs (27 1)) (compat (29 1 4 0)))
      "Conveniently act on minibuffer completions" tar
