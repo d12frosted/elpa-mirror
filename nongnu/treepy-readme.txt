@@ -137,11 +137,11 @@ For a manual installation, just place `treepy.el` in your `load-path` and
 
 - `treepy-lefts` loc
 
-  Returns a list of the left sibilings of this LOC.
+  Returns a list of the left siblings of this LOC.
 
 - `treepy-rights` loc
 
-  Returns a list of the right sibilings of this LOC.
+  Returns a list of the right siblings of this LOC.
 
 #### Navigation
 
@@ -316,7 +316,7 @@ need to bother with if you just wanna use the library.
 
 - `<path alist>` is an alist containing the same keys and values as
   `clojure.zip`'s path map. Only difference is that *treepy* uses lists instead
-  of vectors to handle the `left` sibilings and `pnodes` parent nodes.
+  of vectors to handle the `left` siblings and `pnodes` parent nodes.
 
 ## Prior Art
 
