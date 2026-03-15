@@ -16,7 +16,6 @@ programming and the tools we used that brings back fond memories.
 Installation from MELPA:
 ------------------------
 (use-package tomorrow-night-deepblue-theme
-  :ensure t
   :config
   (let ((inhibit-redisplay t))
     ;; Disable all active themes

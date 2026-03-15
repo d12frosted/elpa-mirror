@@ -22,7 +22,6 @@ yafolding.el.
 Installation from MELPA:
 ------------------------
 (use-package outline-indent
-  :ensure t
   :commands outline-indent-minor-mode
   :custom
   (outline-indent-ellipsis " ▼"))

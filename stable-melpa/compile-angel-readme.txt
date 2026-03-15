@@ -18,7 +18,6 @@ This package offers:
 Installation from MELPA:
 ------------------------
 (use-package compile-angel
-  :ensure t
   :demand t
   :custom
   (compile-angel-verbose t)

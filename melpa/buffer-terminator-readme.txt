@@ -25,7 +25,6 @@ patterns or regular expressions, major-modes, buffer properties, etc.)
 Installation from MELPA:
 ------------------------
 (use-package buffer-terminator
-  :ensure t
   :custom
   (buffer-terminator-verbose nil)
   :config

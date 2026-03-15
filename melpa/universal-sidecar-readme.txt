@@ -200,3 +200,7 @@ customizable.
 
 v1.8.0 (2025-07-30): local variable
 `universal-sidecar-ignore-buffer' added.
+
+v1.9.2 (2026-03-14): Increase default idle timer length
+(`universal-sidecar-refresh-time') to hopefully improve
+performance.

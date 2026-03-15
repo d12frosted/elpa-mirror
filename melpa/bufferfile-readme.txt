@@ -14,5 +14,4 @@ to executing operations like renaming, deleting, or copying.)
 
 Installation from MELPA
 -----------------------
-(use-package bufferfile
-  :ensure t)
+(use-package bufferfile)

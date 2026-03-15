@@ -41,10 +41,12 @@ attributes, jump to their definitions, & etc.
 your contacts with helpful TAB-completion, on both the name of the
 contact and the attribute name to be inserted.
 
-If you have links to people within your document (e.g. a link
-such as [[org-people:Steve Kemp]] you can use the helper
-`org-people-add-descriptions' to automatically add the contact
-description automatically.  This makes them look cleaner.
+We provide a new link-type `org-people:' which allows you to jump
+to a contact's definition when followed.   If you have such links
+within your document (e.g. a link such as [[org-people:Steve Kemp]]
+you can use the helper `org-people-add-descriptions' to automatically
+add the contact description automatically - although if you used
+C-c C-l to insert such a link the description should be auto-populated.
 
 
 ; org-table helpers
@@ -95,8 +97,9 @@ A similar helper `org-people-get-property-marked-or-current' allows
 fetching the values of a given property for each marked contact,
 or the person upon the current row if nothing is marked.
 
-Currently the only user of the marking functionality are the two
-export routines we have (vCARD and CSV).
+The vCARD and CSV exporter functions use this facility, as does
+the "open website" and "compose email" functions which are bound
+by default within the summary-view.
 
 
 ; complete-at-point
@@ -117,88 +120,3 @@ might be enabled like so:
                      #'org-people-capf
                      nil t)))
 
-
-
-
-; Version history (brief)
-
-
-2.2  - Allow marking/unmarking people in the summary buffer.
-       Marked users can be exported en masse to vCARD or CSV.
-
-2.1   - "F" allows filtering for contacts for whom a specific property exists.
-
-2.0.1 - When org-people: links are exported to HTML a hyperlink will be added
-        for the person if there is a :WEBSITE property defined.
-
-2.0  - Improvements to org-people: link handling.
-       Default link description is now the contact name.
-
-1.9.1 - Removed some unused functions and made the code byte-compile clean
-        again.  Added new test-targets to the Makefile.
-        Fixed some comments and documentation.
-
-1.9  - Any column included in `org-people-summary-properties' which is 100%
-       empty, and not present in any known contact, will be removed.
-       Updated to ignore :ID and :CREATED by default in completion and in the
-       table-generation from `org-people-person-to-table'.
-       The summary-properties may override the name, width and the attribute
-       extraction function to make things very dynamic.
-
-1.8.1 - Improvement: Filtering on :TAGS property in `M-x org-people-summary`
-        uses sub-string matches of entries, rather than membership testing.
-
-1.7 - BugFix: First column in `org-people-summary-properties' is used as the
-      default sort key.  Now allows a width to be defined too.
-
-1.6 - Open the property drawers when jumping to a contact, to allow
-      viewing all appropriate details.
-
-1.5 - All linting fixes implemented.
-
-1.4 - `org-people-summary' now allows you to specify the fields
-      which are displayed, via the new `org-people-summary-properties'
-      configuration value.
-
-1.3 - `org-people-summary' can now be filtered against all known properties.
-      Not just the ones which are visible.  (i.e. Filter against ":ADDRESS")
-
-1.2 - Rudimentary (single-contact-only) VCF export.
-
-1.1 - Special support for nickname, and case insensitivity by default for
-      completion.
-      org-people-ignored-properties was introduced to ignore specific
-      properties from completion and table-generation.
-
-1.0 - Process all agenda-files by default, via a tag search for
-      ":contact:" (by default).  This is more generally useful, and
-      removes configuration and our ad-hoc caching implementation.
-
-0.9 - `org-people-person-to-table' shows all the data about one individual
-      as an `org-mode' table.
-      Added test-cases in new file, org-people-test.el
-
-0.8 - Provide "[[org-person:Name Here]]" support with completion,
-      clicking, and export attributes.
-      Make org-people-browse-name public and usefully available.
-
-0.7 - Provide annotations for name-completion.
-      Switch the org-people-summary to using tabulated-list-mode.
-
-0.6 - The table-creating function has been renamed and updated.
-      Now you can specify the fields to return.
-
-0.5 - Drop simple functions.  They can be user-driver.
-      Added filtering options and rewrote code to use them.
-
-0.4 - Allow searching by property value.
-      Added org-people-get-by-email, etc, using this new facility.
-
-0.3 - :TAGS shows up as a comma-separated list in org-people-summary.
-      org-people-summary is set to view-mode, so "q" buries the buffer.
-
-0.2 - Added org-people-summary.
-      Updated all contacts to have :TAGS and :NAME properties
-      where appropriate.
-
-0.1 - initial release
