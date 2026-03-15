@@ -1,1 +1,1 @@
-Programming language mode for Forth
+Programming language mode for Forth.
