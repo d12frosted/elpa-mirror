@@ -18,12 +18,11 @@ Currently it supports the following features:
 5. Support multiple REPL sessions for different projects/ad-hoc
    files.
 
+6. Provide a minor mode that contains some default key bindings.
+
 Note that the evaluation functionality is restricted by
 corresponding Scala REPL.
 
 Also note that this package *might* work on Emacs < 29.1, but it is
 not guaranteed.  You are welcome to open an issue on the GitHub page
 and let know if it does.
-
-This package does not define any minor mode.  You are free to bind
-its functions in scala-mode or scala-ts-mode however you like.

@@ -13,6 +13,8 @@ Features (when the mode is enabled):
 - replacements: highlight results of `query-replace' and `replace-string'
 - transposition commands: highlight swapped text from transpose-* and
   transpose-regions operations
+- duplicate commands: highlight duplicated text from duplicate-*
+  operations
 - definitions: Emacs 25.1+ uses xref; older Emacs use find-tag
 - occur: Emacs < 28 only (Emacs 28+ has built-in occur highlighting)
 - non-incremental search commands

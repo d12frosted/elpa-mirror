@@ -1,9 +1,9 @@
  • Building package agent-shell (from github:xenodium/agent-shell)...
 Updating /mnt/store/melpa/working/agent-shell/
-Checking out ff935495a78af8c93980d07ea34b07f8a268e705
+Checking out 264dc76e674bf38e5e42370a1a706e3785f90678
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/agent-shell/
-  to /tmp/agent-shell-IOrbup/agent-shell-20260314.2344
+  to /tmp/agent-shell-cU5UN4/agent-shell-20260315.935
     agent-shell-active-message.el -> agent-shell-active-message.el
     agent-shell-anthropic.el -> agent-shell-anthropic.el
     agent-shell-auggie.el -> agent-shell-auggie.el
@@ -30,36 +30,38 @@ Copying files (->) and directories (=>)
     agent-shell-viewport.el -> agent-shell-viewport.el
     agent-shell-worktree.el -> agent-shell-worktree.el
     agent-shell.el -> agent-shell.el
-Created agent-shell-20260314.2344.tar containing:
-  agent-shell-20260314.2344/
-  agent-shell-20260314.2344/agent-shell-active-message.el
-  agent-shell-20260314.2344/agent-shell-anthropic.el
-  agent-shell-20260314.2344/agent-shell-auggie.el
-  agent-shell-20260314.2344/agent-shell-cline.el
-  agent-shell-20260314.2344/agent-shell-completion.el
-  agent-shell-20260314.2344/agent-shell-cursor.el
-  agent-shell-20260314.2344/agent-shell-devcontainer.el
-  agent-shell-20260314.2344/agent-shell-diff.el
-  agent-shell-20260314.2344/agent-shell-droid.el
-  agent-shell-20260314.2344/agent-shell-github.el
-  agent-shell-20260314.2344/agent-shell-google.el
-  agent-shell-20260314.2344/agent-shell-goose.el
-  agent-shell-20260314.2344/agent-shell-heartbeat.el
-  agent-shell-20260314.2344/agent-shell-kiro.el
-  agent-shell-20260314.2344/agent-shell-mistral.el
-  agent-shell-20260314.2344/agent-shell-openai.el
-  agent-shell-20260314.2344/agent-shell-opencode.el
-  agent-shell-20260314.2344/agent-shell-pi.el
-  agent-shell-20260314.2344/agent-shell-pkg.el
-  agent-shell-20260314.2344/agent-shell-project.el
-  agent-shell-20260314.2344/agent-shell-qwen.el
-  agent-shell-20260314.2344/agent-shell-styles.el
-  agent-shell-20260314.2344/agent-shell-ui.el
-  agent-shell-20260314.2344/agent-shell-usage.el
-  agent-shell-20260314.2344/agent-shell-viewport.el
-  agent-shell-20260314.2344/agent-shell-worktree.el
-  agent-shell-20260314.2344/agent-shell.el
+Created agent-shell-20260315.935.tar containing:
+  agent-shell-20260315.935/
+  agent-shell-20260315.935/agent-shell-active-message.el
+  agent-shell-20260315.935/agent-shell-anthropic.el
+  agent-shell-20260315.935/agent-shell-auggie.el
+  agent-shell-20260315.935/agent-shell-cline.el
+  agent-shell-20260315.935/agent-shell-completion.el
+  agent-shell-20260315.935/agent-shell-cursor.el
+  agent-shell-20260315.935/agent-shell-devcontainer.el
+  agent-shell-20260315.935/agent-shell-diff.el
+  agent-shell-20260315.935/agent-shell-droid.el
+  agent-shell-20260315.935/agent-shell-github.el
+  agent-shell-20260315.935/agent-shell-google.el
+  agent-shell-20260315.935/agent-shell-goose.el
+  agent-shell-20260315.935/agent-shell-heartbeat.el
+  agent-shell-20260315.935/agent-shell-kiro.el
+  agent-shell-20260315.935/agent-shell-mistral.el
+  agent-shell-20260315.935/agent-shell-openai.el
+  agent-shell-20260315.935/agent-shell-opencode.el
+  agent-shell-20260315.935/agent-shell-pi.el
+  agent-shell-20260315.935/agent-shell-pkg.el
+  agent-shell-20260315.935/agent-shell-project.el
+  agent-shell-20260315.935/agent-shell-qwen.el
+  agent-shell-20260315.935/agent-shell-styles.el
+  agent-shell-20260315.935/agent-shell-ui.el
+  agent-shell-20260315.935/agent-shell-usage.el
+  agent-shell-20260315.935/agent-shell-viewport.el
+  agent-shell-20260315.935/agent-shell-worktree.el
+  agent-shell-20260315.935/agent-shell.el
  ✓ Success:
   2026-03-15T07:39:16+0000  agent-shell-20260314.2344.entry
   2026-03-15T07:39:16+0000  agent-shell-20260314.2344.tar
-Built agent-shell in 4.958s, finished at 2026-03-15T07:39:17+0000
+  2026-03-15T10:18:35+0000  agent-shell-20260315.935.entry
+  2026-03-15T10:18:35+0000  agent-shell-20260315.935.tar
+Built agent-shell in 5.508s, finished at 2026-03-15T10:18:36+0000
