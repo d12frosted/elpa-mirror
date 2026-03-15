@@ -69,9 +69,11 @@ Other packages:
 - Solution for "callback hell"	https://github.com/Anoncheg1/emacs-async1
 - Restore buffer state	https://github.com/Anoncheg1/emacs-unmodified-buffer1
 - outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
-- ai_block for Org mode for chat. https://github.com/Anoncheg1/emacs-oai
+- ai_block for Org mode for chat.  https://github.com/Anoncheg1/emacs-oai
 
 *DONATE MONEY* to sponsor author directly with crypto currencies:
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25
 - USDT (Tether) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
+
+Known issues: Org export not working properly with new formats.
