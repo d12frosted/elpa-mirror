@@ -1,27 +1,23 @@
 Gnosis is a personal knowledge management and review system that
 integrates a note-taking system with spaced repetition and
-self-testing.  It works together with org-gnosis, which provides a
-Zettelkasten-style note-taking system where notes (nodes) are org
-files indexed in an SQLite database.
+self-testing.  It provides Zettelkasten-style linked notes (nodes)
+alongside spaced repetition themata, all in a single SQLite database.
 
 The intended workflow is:
 
-1. Write notes on a topic using `org-gnosis-find'.
+1. Write notes on a topic using `gnosis-nodes-find'.
 2. Create themata (flashcard-like questions) related to the topic
    using `gnosis-add-thema'.
-3. Link themata to note topics by inserting org-gnosis links in
+3. Link themata to note topics by inserting node links in
    the keimenon (question text) or parathema (extra context) using
-   `org-gnosis-insert'.
+   `gnosis-nodes-insert'.
 4. Review themata with spaced repetition via `gnosis-review', or
    review all themata linked to a specific topic via
    `gnosis-review-topic'.
 
-Gnosis and org-gnosis maintain separate SQLite databases.  The
-gnosis database stores themata, decks, review history, and links
-from themata to org-gnosis nodes.  The org-gnosis database stores
-nodes, tags, and links between nodes.
+Everything lives in one database: themata, review history,
+nodes, node links, and thema-to-node links.
 
 The spaced repetition algorithm is highly adjustable, allowing
-users to set specific values not just for thema decks but for tags
-as well, creating a personalized learning environment for each
-topic.
+users to set specific values for tags, creating a personalized
+learning environment for each topic.

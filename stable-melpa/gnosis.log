@@ -1,29 +1,41 @@
  • Building package gnosis (from https://git.thanosapollo.org/gnosis)...
 Updating /mnt/store/melpa/working/gnosis/
-Checking out f90e0ddabb1ecf6b6a3a1a9e762b1ce2af56c1e5
+Checking out 27d7370e9006c8cadd186df3e253f8fe33f6081e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosis-XEovr4/gnosis-20260304.1519
+  to /tmp/gnosis-BDV3XB/gnosis-20260316.521
     gnosis-algorithm.el -> gnosis-algorithm.el
+    gnosis-anki.el -> gnosis-anki.el
     gnosis-dashboard.el -> gnosis-dashboard.el
     gnosis-export-import.el -> gnosis-export-import.el
+    gnosis-journal.el -> gnosis-journal.el
     gnosis-monkeytype.el -> gnosis-monkeytype.el
+    gnosis-nodes.el -> gnosis-nodes.el
+    gnosis-org.el -> gnosis-org.el
     gnosis-review.el -> gnosis-review.el
+    gnosis-sqlite.el -> gnosis-sqlite.el
     gnosis-tl.el -> gnosis-tl.el
     gnosis-utils.el -> gnosis-utils.el
     gnosis.el -> gnosis.el
-Created gnosis-20260304.1519.tar containing:
-  gnosis-20260304.1519/
-  gnosis-20260304.1519/gnosis-algorithm.el
-  gnosis-20260304.1519/gnosis-dashboard.el
-  gnosis-20260304.1519/gnosis-export-import.el
-  gnosis-20260304.1519/gnosis-monkeytype.el
-  gnosis-20260304.1519/gnosis-pkg.el
-  gnosis-20260304.1519/gnosis-review.el
-  gnosis-20260304.1519/gnosis-tl.el
-  gnosis-20260304.1519/gnosis-utils.el
-  gnosis-20260304.1519/gnosis.el
+Created gnosis-20260316.521.tar containing:
+  gnosis-20260316.521/
+  gnosis-20260316.521/gnosis-algorithm.el
+  gnosis-20260316.521/gnosis-anki.el
+  gnosis-20260316.521/gnosis-dashboard.el
+  gnosis-20260316.521/gnosis-export-import.el
+  gnosis-20260316.521/gnosis-journal.el
+  gnosis-20260316.521/gnosis-monkeytype.el
+  gnosis-20260316.521/gnosis-nodes.el
+  gnosis-20260316.521/gnosis-org.el
+  gnosis-20260316.521/gnosis-pkg.el
+  gnosis-20260316.521/gnosis-review.el
+  gnosis-20260316.521/gnosis-sqlite.el
+  gnosis-20260316.521/gnosis-tl.el
+  gnosis-20260316.521/gnosis-utils.el
+  gnosis-20260316.521/gnosis.el
  ✓ Success:
-  2026-03-16T00:22:25+0000  gnosis-20260304.1519.entry
-  2026-03-16T00:22:25+0000  gnosis-20260304.1519.tar
-Built gnosis in 5.658s, finished at 2026-03-16T00:22:26+0000
+  2026-03-16T03:08:37+0000  gnosis-20260304.1519.entry
+  2026-03-16T03:08:37+0000  gnosis-20260304.1519.tar
+  2026-03-16T05:49:10+0000  gnosis-20260316.521.entry
+  2026-03-16T05:49:10+0000  gnosis-20260316.521.tar
+Built gnosis in 7.012s, finished at 2026-03-16T05:49:12+0000
