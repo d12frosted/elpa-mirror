@@ -1,7 +1,11 @@
 Rewrite GFM (GitHub Flavored Markdown) pipe tables so they fit a
 given character width.  Cells that exceed their allocated column
-width are word-wrapped, producing multi-line rows that remain valid
-pipe-table syntax.
+width are word-wrapped by emitting additional pipe-table lines.
+The wrapped text is meant for readable source editing and
+round-tripping with `markdown-table-wrap-unwrap': wrapped header
+lines no longer form valid GFM tables, and wrapped body
+continuation lines and spacer lines are parsed as additional
+rows by Markdown renderers.
 
 The main entry point is `markdown-table-wrap':
 

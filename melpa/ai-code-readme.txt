@@ -25,6 +25,8 @@ New User Quick Start:
      (use-package ai-code
        :config
        (ai-code-set-backend 'codex)
+       ;; Optional: use a narrower transient menu on smaller frames.
+       ;; (setq ai-code-menu-layout 'two-columns)
        (global-set-key (kbd "C-c a") #'ai-code-menu))
 
   2) First 60 seconds:
@@ -39,6 +41,8 @@ Basic configuration example:
   :config
   ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'grok, 'claude-code-ide, 'claude-code-el, 'claude-code, 'cursor, 'kiro, 'codebuddy, 'aider, 'agent-shell, 'eca
   (ai-code-set-backend 'codex) ;; set your preferred backend
+  ;; Optional: use a narrower transient menu on smaller frames
+  ;; (setq ai-code-menu-layout 'two-columns)
   (global-set-key (kbd "C-c a") #'ai-code-menu)
   ;; Optional: Enable @ file completion in comments and AI sessions
   (ai-code-prompt-filepath-completion-mode 1)
