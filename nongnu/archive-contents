@@ -687,12 +687,12 @@
       (:authors ("Lars Tveito" . "larstvei@ifi.uio.no"))
       (:commit . "2507ec4ec5a9402647ef85540669db1815520c15"))])
  (forth-mode
-  . [(0 2) nil "Programming language mode for Forth" tar
+  . [(0 3) ((cl-lib (0 2))) "Programming language mode for Forth" tar
      ((:url . "http://github.com/larsbrinkhoff/forth-mode")
       (:keywords "languages" "forth")
       (:maintainer "Lars Brinkhoff" . "lars@nocrew.org")
       (:authors ("Lars Brinkhoff" . "lars@nocrew.org"))
-      (:commit . "38d5152011ee67e0cff9d4a5ddfb1f908e5be013"))])
+      (:commit . "4450a3a5629b579f5d2045d0d8aec84193e9a31f"))])
  (free-keys
   . [(1 0) ((cl-lib (0 3)))
      "Show free keybindings for modkeys or prefixes" tar

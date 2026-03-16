@@ -13,6 +13,8 @@ This package (org-links) The syntax above is extended with
 
 For ex.  `[[file:./notes/warehouse.el::23::(defun alina (pic))]]`
 
+Known issue: Org export not working properly with new formats.
+
 Also provided:
 1) The command `org-links-store-extended' copies a link to the
    current file, at the current point.
@@ -32,7 +34,6 @@ to follow PATHs.
 *Configuration*:
 (require 'org-links)
 (add-hook 'org-execute-file-search-functions #'org-links-additional-formats)
-(add-hook 'org-open-link-functions #'org-links-fix-open-target-not-org)
 (advice-add 'org-open-file :around #'org-links-org-open-file-advice)
 (global-set-key (kbd "C-c w") #'org-links-store-extended)
 
@@ -75,5 +76,3 @@ Other packages:
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25
 - USDT (Tether) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
-
-Known issues: Org export not working properly with new formats.
