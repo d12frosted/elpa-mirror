@@ -1,9 +1,9 @@
  • Building package agent-shell (from github:xenodium/agent-shell)...
 Updating /mnt/store/melpa/working/agent-shell/
-Checking out 20c5bb2780b94286926e1164d33fe2705d57d381
+Checking out 31ac12b299d8f00ed44465f68babe0aa9b31a981
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/agent-shell/
-  to /tmp/agent-shell-CQ2LCd/agent-shell-20260316.1325
+  to /tmp/agent-shell-1VpwW1/agent-shell-20260316.1735
     agent-shell-active-message.el -> agent-shell-active-message.el
     agent-shell-anthropic.el -> agent-shell-anthropic.el
     agent-shell-auggie.el -> agent-shell-auggie.el
@@ -30,36 +30,38 @@ Copying files (->) and directories (=>)
     agent-shell-viewport.el -> agent-shell-viewport.el
     agent-shell-worktree.el -> agent-shell-worktree.el
     agent-shell.el -> agent-shell.el
-Created agent-shell-20260316.1325.tar containing:
-  agent-shell-20260316.1325/
-  agent-shell-20260316.1325/agent-shell-active-message.el
-  agent-shell-20260316.1325/agent-shell-anthropic.el
-  agent-shell-20260316.1325/agent-shell-auggie.el
-  agent-shell-20260316.1325/agent-shell-cline.el
-  agent-shell-20260316.1325/agent-shell-completion.el
-  agent-shell-20260316.1325/agent-shell-cursor.el
-  agent-shell-20260316.1325/agent-shell-devcontainer.el
-  agent-shell-20260316.1325/agent-shell-diff.el
-  agent-shell-20260316.1325/agent-shell-droid.el
-  agent-shell-20260316.1325/agent-shell-github.el
-  agent-shell-20260316.1325/agent-shell-google.el
-  agent-shell-20260316.1325/agent-shell-goose.el
-  agent-shell-20260316.1325/agent-shell-heartbeat.el
-  agent-shell-20260316.1325/agent-shell-kiro.el
-  agent-shell-20260316.1325/agent-shell-mistral.el
-  agent-shell-20260316.1325/agent-shell-openai.el
-  agent-shell-20260316.1325/agent-shell-opencode.el
-  agent-shell-20260316.1325/agent-shell-pi.el
-  agent-shell-20260316.1325/agent-shell-pkg.el
-  agent-shell-20260316.1325/agent-shell-project.el
-  agent-shell-20260316.1325/agent-shell-qwen.el
-  agent-shell-20260316.1325/agent-shell-styles.el
-  agent-shell-20260316.1325/agent-shell-ui.el
-  agent-shell-20260316.1325/agent-shell-usage.el
-  agent-shell-20260316.1325/agent-shell-viewport.el
-  agent-shell-20260316.1325/agent-shell-worktree.el
-  agent-shell-20260316.1325/agent-shell.el
+Created agent-shell-20260316.1735.tar containing:
+  agent-shell-20260316.1735/
+  agent-shell-20260316.1735/agent-shell-active-message.el
+  agent-shell-20260316.1735/agent-shell-anthropic.el
+  agent-shell-20260316.1735/agent-shell-auggie.el
+  agent-shell-20260316.1735/agent-shell-cline.el
+  agent-shell-20260316.1735/agent-shell-completion.el
+  agent-shell-20260316.1735/agent-shell-cursor.el
+  agent-shell-20260316.1735/agent-shell-devcontainer.el
+  agent-shell-20260316.1735/agent-shell-diff.el
+  agent-shell-20260316.1735/agent-shell-droid.el
+  agent-shell-20260316.1735/agent-shell-github.el
+  agent-shell-20260316.1735/agent-shell-google.el
+  agent-shell-20260316.1735/agent-shell-goose.el
+  agent-shell-20260316.1735/agent-shell-heartbeat.el
+  agent-shell-20260316.1735/agent-shell-kiro.el
+  agent-shell-20260316.1735/agent-shell-mistral.el
+  agent-shell-20260316.1735/agent-shell-openai.el
+  agent-shell-20260316.1735/agent-shell-opencode.el
+  agent-shell-20260316.1735/agent-shell-pi.el
+  agent-shell-20260316.1735/agent-shell-pkg.el
+  agent-shell-20260316.1735/agent-shell-project.el
+  agent-shell-20260316.1735/agent-shell-qwen.el
+  agent-shell-20260316.1735/agent-shell-styles.el
+  agent-shell-20260316.1735/agent-shell-ui.el
+  agent-shell-20260316.1735/agent-shell-usage.el
+  agent-shell-20260316.1735/agent-shell-viewport.el
+  agent-shell-20260316.1735/agent-shell-worktree.el
+  agent-shell-20260316.1735/agent-shell.el
  ✓ Success:
   2026-03-16T16:31:35+0000  agent-shell-20260316.1325.entry
   2026-03-16T16:31:35+0000  agent-shell-20260316.1325.tar
-Built agent-shell in 5.671s, finished at 2026-03-16T16:31:36+0000
+  2026-03-16T19:24:16+0000  agent-shell-20260316.1735.entry
+  2026-03-16T19:24:15+0000  agent-shell-20260316.1735.tar
+Built agent-shell in 5.332s, finished at 2026-03-16T19:24:17+0000
