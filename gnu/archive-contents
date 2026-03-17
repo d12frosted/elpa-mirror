@@ -1320,12 +1320,12 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "d7c243ac3be2a67986f53f3dc31ba1426e82b771"))])
  (futur
-  . [(1 2) nil "Future/promise-based async library" tar
+  . [(1 3) nil "Future/promise-based async library" tar
      ((:keywords "concurrency" "async" "promises" "futures")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/futur.html")
-      (:commit . "576376047c87c4ffd1c653a8a0f75dafc181b4d1"))])
+      (:commit . "0ad88655f83dd7ebd41883951b5d05cfd811fed8"))])
  (gcmh
   . [(0 2 1) ((emacs (24))) "the Garbage Collector Magic Hack" tar
      ((:url . "https://gitlab.com/koral/gcmh") (:keywords "internal")
