@@ -74,7 +74,10 @@ for references.
 
 `M-x customize-group' can be used to customize the `q' group.
 Specifically, the `q-program' and `q-qcon-program' variables can be
-changed depending on your environment.
+changed depending on your environment.  The `q-rescan-idle-delay'
+variable controls how long to wait after a save before rescanning;
+it debounces rapid saves and defers the check for out-of-band disk
+changes such as those made by git pull.
 
 Q-mode indents each level based on `q-indent-step'.  To indent code
 based on {}-, ()-, and []-groups instead of equal width tabs, you
