@@ -1,10 +1,11 @@
  • Building package lesim-mode (from github:drghirlanda/lesim-mode)...
 Updating /mnt/store/melpa/working/lesim-mode/
-Checking out 74bffc63058f64b3399e685cf0fe0a8f18cc491e
+Checking out 8524702bcf9285c60066d38b4e9935b5bf053d38
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lesim-mode/
-  to /tmp/lesim-mode-xpCZ8d/lesim-mode-20230627.1350
+  to /tmp/lesim-mode-VlVaX0/lesim-mode-20260318.1318
     lesim-align.el -> lesim-align.el
+    lesim-complete.el -> lesim-complete.el
     lesim-custom.el -> lesim-custom.el
     lesim-highlight.el -> lesim-highlight.el
     lesim-locate.el -> lesim-locate.el
@@ -12,18 +13,21 @@ Copying files (->) and directories (=>)
     lesim-online.el -> lesim-online.el
     lesim-run.el -> lesim-run.el
     lesim-type.el -> lesim-type.el
-Created lesim-mode-20230627.1350.tar containing:
-  lesim-mode-20230627.1350/
-  lesim-mode-20230627.1350/lesim-align.el
-  lesim-mode-20230627.1350/lesim-custom.el
-  lesim-mode-20230627.1350/lesim-highlight.el
-  lesim-mode-20230627.1350/lesim-locate.el
-  lesim-mode-20230627.1350/lesim-mode-pkg.el
-  lesim-mode-20230627.1350/lesim-mode.el
-  lesim-mode-20230627.1350/lesim-online.el
-  lesim-mode-20230627.1350/lesim-run.el
-  lesim-mode-20230627.1350/lesim-type.el
+Created lesim-mode-20260318.1318.tar containing:
+  lesim-mode-20260318.1318/
+  lesim-mode-20260318.1318/lesim-align.el
+  lesim-mode-20260318.1318/lesim-complete.el
+  lesim-mode-20260318.1318/lesim-custom.el
+  lesim-mode-20260318.1318/lesim-highlight.el
+  lesim-mode-20260318.1318/lesim-locate.el
+  lesim-mode-20260318.1318/lesim-mode-pkg.el
+  lesim-mode-20260318.1318/lesim-mode.el
+  lesim-mode-20260318.1318/lesim-online.el
+  lesim-mode-20260318.1318/lesim-run.el
+  lesim-mode-20260318.1318/lesim-type.el
  ✓ Success:
-  2026-03-18T02:45:14+0000  lesim-mode-20230627.1350.entry
-  2026-03-18T02:45:14+0000  lesim-mode-20230627.1350.tar
-Built lesim-mode in 3.275s, finished at 2026-03-18T02:45:15+0000
+  2026-03-18T05:23:39+0000  lesim-mode-20230627.1350.entry
+  2026-03-18T05:23:39+0000  lesim-mode-20230627.1350.tar
+  2026-03-18T08:03:54+0000  lesim-mode-20260318.1318.entry
+  2026-03-18T08:03:54+0000  lesim-mode-20260318.1318.tar
+Built lesim-mode in 3.451s, finished at 2026-03-18T08:03:55+0000
