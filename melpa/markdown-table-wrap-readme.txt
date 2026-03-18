@@ -33,7 +33,10 @@ Features:
 - Graceful degradation: when a column is too narrow for markup
   overhead, markers are dropped and inner text is wrapped as
   plain text, preserving legibility over formatting.
-- Proportional column-width allocation based on content.
+- Waterfill column-width allocation: wider columns get more space
+  (proportional to sqrt of content width) but the effect is
+  dampened so narrow columns aren't starved.  Monotonic — widening
+  the terminal never shrinks any column.
 - Alignment preservation (left, right, center).
 - Optional cell-height cap with ellipsis truncation.
 - Automatic row separators for visual breathing room when wrapping
