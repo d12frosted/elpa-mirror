@@ -1,9 +1,9 @@
  • Building package ollama-buddy (from github:captainflasmr/ollama-buddy)...
 Updating /mnt/store/melpa/working/ollama-buddy/
-Checking out 587599d7879d9e3ea3cd27c72963b52a9ae82a7c
+Checking out 8226be82f4c5741b43f1c92bc512ee47e2803717
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ollama-buddy/
-  to /tmp/ollama-buddy-VlYlLM/ollama-buddy-20260318.1858
+  to /tmp/ollama-buddy-5FDlJE/ollama-buddy-20260319.1328
     ollama-buddy-claude.el -> ollama-buddy-claude.el
     ollama-buddy-codestral.el -> ollama-buddy-codestral.el
     ollama-buddy-completion.el -> ollama-buddy-completion.el
@@ -30,35 +30,37 @@ Copying files (->) and directories (=>)
   ! docs/ollama-buddy.info -> ollama-buddy.info
   ! docs/ollama-buddy.texi -> ollama-buddy.texi
 Generating ollama-buddy.info
-Created ollama-buddy-20260318.1858.tar containing:
-  ollama-buddy-20260318.1858/
-  ollama-buddy-20260318.1858/dir
-  ollama-buddy-20260318.1858/ollama-buddy-claude.el
-  ollama-buddy-20260318.1858/ollama-buddy-codestral.el
-  ollama-buddy-20260318.1858/ollama-buddy-completion.el
-  ollama-buddy-20260318.1858/ollama-buddy-copilot.el
-  ollama-buddy-20260318.1858/ollama-buddy-core.el
-  ollama-buddy-20260318.1858/ollama-buddy-curl.el
-  ollama-buddy-20260318.1858/ollama-buddy-deepseek.el
-  ollama-buddy-20260318.1858/ollama-buddy-gemini.el
-  ollama-buddy-20260318.1858/ollama-buddy-grok.el
-  ollama-buddy-20260318.1858/ollama-buddy-openai-compat.el
-  ollama-buddy-20260318.1858/ollama-buddy-openai.el
-  ollama-buddy-20260318.1858/ollama-buddy-openrouter.el
-  ollama-buddy-20260318.1858/ollama-buddy-pkg.el
-  ollama-buddy-20260318.1858/ollama-buddy-project.el
-  ollama-buddy-20260318.1858/ollama-buddy-provider.el
-  ollama-buddy-20260318.1858/ollama-buddy-rag.el
-  ollama-buddy-20260318.1858/ollama-buddy-remote.el
-  ollama-buddy-20260318.1858/ollama-buddy-rewrite.el
-  ollama-buddy-20260318.1858/ollama-buddy-tips.el
-  ollama-buddy-20260318.1858/ollama-buddy-tools.el
-  ollama-buddy-20260318.1858/ollama-buddy-transient.el
-  ollama-buddy-20260318.1858/ollama-buddy-user-prompts.el
-  ollama-buddy-20260318.1858/ollama-buddy-web-search.el
-  ollama-buddy-20260318.1858/ollama-buddy.el
-  ollama-buddy-20260318.1858/ollama-buddy.info
+Created ollama-buddy-20260319.1328.tar containing:
+  ollama-buddy-20260319.1328/
+  ollama-buddy-20260319.1328/dir
+  ollama-buddy-20260319.1328/ollama-buddy-claude.el
+  ollama-buddy-20260319.1328/ollama-buddy-codestral.el
+  ollama-buddy-20260319.1328/ollama-buddy-completion.el
+  ollama-buddy-20260319.1328/ollama-buddy-copilot.el
+  ollama-buddy-20260319.1328/ollama-buddy-core.el
+  ollama-buddy-20260319.1328/ollama-buddy-curl.el
+  ollama-buddy-20260319.1328/ollama-buddy-deepseek.el
+  ollama-buddy-20260319.1328/ollama-buddy-gemini.el
+  ollama-buddy-20260319.1328/ollama-buddy-grok.el
+  ollama-buddy-20260319.1328/ollama-buddy-openai-compat.el
+  ollama-buddy-20260319.1328/ollama-buddy-openai.el
+  ollama-buddy-20260319.1328/ollama-buddy-openrouter.el
+  ollama-buddy-20260319.1328/ollama-buddy-pkg.el
+  ollama-buddy-20260319.1328/ollama-buddy-project.el
+  ollama-buddy-20260319.1328/ollama-buddy-provider.el
+  ollama-buddy-20260319.1328/ollama-buddy-rag.el
+  ollama-buddy-20260319.1328/ollama-buddy-remote.el
+  ollama-buddy-20260319.1328/ollama-buddy-rewrite.el
+  ollama-buddy-20260319.1328/ollama-buddy-tips.el
+  ollama-buddy-20260319.1328/ollama-buddy-tools.el
+  ollama-buddy-20260319.1328/ollama-buddy-transient.el
+  ollama-buddy-20260319.1328/ollama-buddy-user-prompts.el
+  ollama-buddy-20260319.1328/ollama-buddy-web-search.el
+  ollama-buddy-20260319.1328/ollama-buddy.el
+  ollama-buddy-20260319.1328/ollama-buddy.info
  ✓ Success:
   2026-03-19T11:35:39+0000  ollama-buddy-20260318.1858.entry
   2026-03-19T11:35:39+0000  ollama-buddy-20260318.1858.tar
-Built ollama-buddy in 11.563s, finished at 2026-03-19T11:35:40+0000
+  2026-03-19T14:19:35+0000  ollama-buddy-20260319.1328.entry
+  2026-03-19T14:19:34+0000  ollama-buddy-20260319.1328.tar
+Built ollama-buddy in 12.855s, finished at 2026-03-19T14:19:36+0000
