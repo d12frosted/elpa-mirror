@@ -2,12 +2,16 @@ Solo-rpg is a set up support functions for playing solo roleplaying games
 in Emacs.
 
 Features include:
+- Syntax highlighting of the Lonelog Solo RPG notation system
 - Dice rolling
 - Oracles:
   - Yes/No Oracle with probabilities
   - Action/Theme Oracle, inspired by the Mythic Game Master Emulator
+  - Tarot cards with meanings
 - Generators:
-  - NPC name and appearance
+  - NPC name, appearance, and personality
+  - Narrative events
+  - Weather
   - Dungeon rooms and random events
   - Wilderness random events
   - City random events
