@@ -9,7 +9,6 @@ checker.)
 Installation from MELPA:
 ------------------------
 (use-package flymake-ansible-lint
-  :ensure t
   :commands flymake-ansible-lint-setup
   :hook (((yaml-ts-mode yaml-mode) . flymake-ansible-lint-setup)
          ((yaml-ts-mode yaml-mode) . flymake-mode)))
