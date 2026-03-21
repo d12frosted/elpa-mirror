@@ -1,9 +1,9 @@
  • Building package ghub (from github:magit/ghub)...
 Updating /mnt/store/melpa/working/ghub/
-Checking out 42ebf0971f7d2702a71c9461ec235b1ca136aded
+Checking out 3866c821eea83060603d28528af1700ff6a9b318
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghub-9ZYG3w/ghub-20260316.1811
+  to /tmp/ghub-03TWXy/ghub-20260321.1747
   ! lisp/ghub-graphql.el -> ghub-graphql.el
   ! lisp/ghub-legacy.el -> ghub-legacy.el
   ! lisp/ghub.el -> ghub.el
@@ -11,17 +11,19 @@ Copying files (->) and directories (=>)
   ! docs/ghub.texi -> ghub.texi
     .dir-locals.el -> .dir-locals.el
 Generating ghub.info
-Created ghub-20260316.1811.tar containing:
-  ghub-20260316.1811/
-  ghub-20260316.1811/.dir-locals.el
-  ghub-20260316.1811/dir
-  ghub-20260316.1811/ghub-graphql.el
-  ghub-20260316.1811/ghub-legacy.el
-  ghub-20260316.1811/ghub-pkg.el
-  ghub-20260316.1811/ghub.el
-  ghub-20260316.1811/ghub.info
-  ghub-20260316.1811/gsexp.el
+Created ghub-20260321.1747.tar containing:
+  ghub-20260321.1747/
+  ghub-20260321.1747/.dir-locals.el
+  ghub-20260321.1747/dir
+  ghub-20260321.1747/ghub-graphql.el
+  ghub-20260321.1747/ghub-legacy.el
+  ghub-20260321.1747/ghub-pkg.el
+  ghub-20260321.1747/ghub.el
+  ghub-20260321.1747/ghub.info
+  ghub-20260321.1747/gsexp.el
  ✓ Success:
-  2026-03-21T14:43:24+0000  ghub-20260316.1811.entry
-  2026-03-21T14:43:24+0000  ghub-20260316.1811.tar
-Built ghub in 5.670s, finished at 2026-03-21T14:43:25+0000
+  2026-03-21T17:24:36+0000  ghub-20260316.1811.entry
+  2026-03-21T17:24:36+0000  ghub-20260316.1811.tar
+  2026-03-21T20:07:26+0000  ghub-20260321.1747.entry
+  2026-03-21T20:07:26+0000  ghub-20260321.1747.tar
+Built ghub in 5.810s, finished at 2026-03-21T20:07:27+0000
