@@ -1,9 +1,9 @@
  • Building package agent-shell (from github:xenodium/agent-shell)...
 Updating /mnt/store/melpa/working/agent-shell/
-Checking out de0db122d1d57d5fd7e2c1853faf411456382235
+Checking out 0b2475403da8d91618bbfa693faccf2f910fae9f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/agent-shell/
-  to /tmp/agent-shell-1wpPHe/agent-shell-20260320.1920
+  to /tmp/agent-shell-gZZiUs/agent-shell-20260321.1130
     agent-shell-active-message.el -> agent-shell-active-message.el
     agent-shell-anthropic.el -> agent-shell-anthropic.el
     agent-shell-auggie.el -> agent-shell-auggie.el
@@ -32,38 +32,40 @@ Copying files (->) and directories (=>)
     agent-shell-viewport.el -> agent-shell-viewport.el
     agent-shell-worktree.el -> agent-shell-worktree.el
     agent-shell.el -> agent-shell.el
-Created agent-shell-20260320.1920.tar containing:
-  agent-shell-20260320.1920/
-  agent-shell-20260320.1920/agent-shell-active-message.el
-  agent-shell-20260320.1920/agent-shell-anthropic.el
-  agent-shell-20260320.1920/agent-shell-auggie.el
-  agent-shell-20260320.1920/agent-shell-cline.el
-  agent-shell-20260320.1920/agent-shell-completion.el
-  agent-shell-20260320.1920/agent-shell-cursor.el
-  agent-shell-20260320.1920/agent-shell-devcontainer.el
-  agent-shell-20260320.1920/agent-shell-diff.el
-  agent-shell-20260320.1920/agent-shell-droid.el
-  agent-shell-20260320.1920/agent-shell-experimental.el
-  agent-shell-20260320.1920/agent-shell-github.el
-  agent-shell-20260320.1920/agent-shell-google.el
-  agent-shell-20260320.1920/agent-shell-goose.el
-  agent-shell-20260320.1920/agent-shell-heartbeat.el
-  agent-shell-20260320.1920/agent-shell-kiro.el
-  agent-shell-20260320.1920/agent-shell-mistral.el
-  agent-shell-20260320.1920/agent-shell-mock-agent.el
-  agent-shell-20260320.1920/agent-shell-openai.el
-  agent-shell-20260320.1920/agent-shell-opencode.el
-  agent-shell-20260320.1920/agent-shell-pi.el
-  agent-shell-20260320.1920/agent-shell-pkg.el
-  agent-shell-20260320.1920/agent-shell-project.el
-  agent-shell-20260320.1920/agent-shell-qwen.el
-  agent-shell-20260320.1920/agent-shell-styles.el
-  agent-shell-20260320.1920/agent-shell-ui.el
-  agent-shell-20260320.1920/agent-shell-usage.el
-  agent-shell-20260320.1920/agent-shell-viewport.el
-  agent-shell-20260320.1920/agent-shell-worktree.el
-  agent-shell-20260320.1920/agent-shell.el
+Created agent-shell-20260321.1130.tar containing:
+  agent-shell-20260321.1130/
+  agent-shell-20260321.1130/agent-shell-active-message.el
+  agent-shell-20260321.1130/agent-shell-anthropic.el
+  agent-shell-20260321.1130/agent-shell-auggie.el
+  agent-shell-20260321.1130/agent-shell-cline.el
+  agent-shell-20260321.1130/agent-shell-completion.el
+  agent-shell-20260321.1130/agent-shell-cursor.el
+  agent-shell-20260321.1130/agent-shell-devcontainer.el
+  agent-shell-20260321.1130/agent-shell-diff.el
+  agent-shell-20260321.1130/agent-shell-droid.el
+  agent-shell-20260321.1130/agent-shell-experimental.el
+  agent-shell-20260321.1130/agent-shell-github.el
+  agent-shell-20260321.1130/agent-shell-google.el
+  agent-shell-20260321.1130/agent-shell-goose.el
+  agent-shell-20260321.1130/agent-shell-heartbeat.el
+  agent-shell-20260321.1130/agent-shell-kiro.el
+  agent-shell-20260321.1130/agent-shell-mistral.el
+  agent-shell-20260321.1130/agent-shell-mock-agent.el
+  agent-shell-20260321.1130/agent-shell-openai.el
+  agent-shell-20260321.1130/agent-shell-opencode.el
+  agent-shell-20260321.1130/agent-shell-pi.el
+  agent-shell-20260321.1130/agent-shell-pkg.el
+  agent-shell-20260321.1130/agent-shell-project.el
+  agent-shell-20260321.1130/agent-shell-qwen.el
+  agent-shell-20260321.1130/agent-shell-styles.el
+  agent-shell-20260321.1130/agent-shell-ui.el
+  agent-shell-20260321.1130/agent-shell-usage.el
+  agent-shell-20260321.1130/agent-shell-viewport.el
+  agent-shell-20260321.1130/agent-shell-worktree.el
+  agent-shell-20260321.1130/agent-shell.el
  ✓ Success:
   2026-03-21T11:37:20+0000  agent-shell-20260320.1920.entry
   2026-03-21T11:37:20+0000  agent-shell-20260320.1920.tar
-Built agent-shell in 4.941s, finished at 2026-03-21T11:37:21+0000
+  2026-03-21T14:14:38+0000  agent-shell-20260321.1130.entry
+  2026-03-21T14:14:38+0000  agent-shell-20260321.1130.tar
+Built agent-shell in 4.876s, finished at 2026-03-21T14:14:39+0000
