@@ -162,4 +162,4 @@ can discuss the best way to do things.
 [wgrep]: https://github.com/mhayashi1120/Emacs-wgrep
 [xref]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Xref.html
 [fsf-copyright]: https://www.gnu.org/prep/maintain/html_node/Copyright-Papers.html
-[new-issue]: https://github.com/jimporter/urgrep/issues/new
+[new-issue]: https://lists.sr.ht/~jimporter/urgrep-devel
