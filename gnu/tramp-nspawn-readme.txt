@@ -1,13 +1,3 @@
-Table of Contents
-─────────────────
-
-1. Introduction
-2. Installation
-.. 1. ELPA
-.. 2. Direct download
-3. Usage
-
-
 1 Introduction
 ══════════════
 
