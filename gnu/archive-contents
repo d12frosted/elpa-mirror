@@ -1320,12 +1320,12 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "d7c243ac3be2a67986f53f3dc31ba1426e82b771"))])
  (futur
-  . [(1 3) nil "Future/promise-based async library" tar
+  . [(1 4) nil "Future/promise-based async library" tar
      ((:keywords "concurrency" "async" "promises" "futures")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/futur.html")
-      (:commit . "0ad88655f83dd7ebd41883951b5d05cfd811fed8"))])
+      (:commit . "54608e8c009095749bd4481e4593006b1cd157eb"))])
  (gcmh
   . [(0 2 1) ((emacs (24))) "the Garbage Collector Magic Hack" tar
      ((:url . "https://gitlab.com/koral/gcmh") (:keywords "internal")
@@ -1461,13 +1461,13 @@
        ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
       (:commit . "664a2a52180779e7b7761560c461556a2012e50e"))])
  (greenbar
-  . [(1 2) ((emacs (27 1)))
+  . [(1 2 260317) ((emacs (27 1)))
      "Mark comint output with \"greenbar\" background" tar
      ((:keywords "faces" "terminals")
       (:maintainer "Michael R. Mauger" . "michael@mauger.com")
       (:authors ("Michael R. Mauger" . "michael@mauger.com"))
       (:url . "https://elpa.gnu.org/packages/greenbar.html")
-      (:commit . "7b651257bd0536d454f4b896212b3fe1f8c75024"))])
+      (:commit . "eedbec6a0c56be403fdbe0b1f38a4acd4f11d09b"))])
  (gtags-mode
   . [(1 9 4) ((emacs (28)))
      "GNU Global integration with xref, project and imenu." tar
