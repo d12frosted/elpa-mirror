@@ -15,7 +15,9 @@ Some of its major features include:
 
  - signature help (eldoc),
 
- - definition/reference navigation (xref).
+ - definition/reference navigation (xref),
+
+ - code folding (hideshow).
 
 To load `q-mode' on-demand, instead of at startup, add this to your
 initialization file
@@ -68,9 +70,19 @@ buffer.
 
 Quick access to variable and function definitions can be obtained
 using the `imenu' binding `M-g i'.  Completion is available via
-`completion-at-point' (usually `M-TAB').  Eldoc displays signatures
-while you type, and xref provides `M-.' for definitions and `M-?'
-for references.
+`completion-at-point' (usually `M-TAB').  Candidates are annotated
+with their kind (<function>, <variable>, <keyword>, or <builtin>).
+Eldoc displays signatures while you type, and xref provides `M-.'
+for definitions, `M-?' for references, and `C-M-.' for apropos
+search across all known identifiers in the project.
+
+Code folding is available via `hs-minor-mode'.  Once enabled, use
+the standard hideshow bindings to fold and unfold {} blocks.
+
+`which-function-mode' is supported and will display the name of the
+enclosing function in the mode line as you move point.  Enable it
+globally with (which-function-mode 1) in your initialization file,
+or per-buffer with M-x which-function-mode.
 
 
 `M-x customize-group' can be used to customize the `q' group.
