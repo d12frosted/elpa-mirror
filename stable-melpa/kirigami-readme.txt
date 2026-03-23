@@ -26,5 +26,4 @@ closed even when the cursor is positioned inside the content.)
 
 Installation from MELPA
 -----------------------
-(use-package kirigami
-  :ensure t)
+(use-package kirigami)
