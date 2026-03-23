@@ -9,26 +9,25 @@ file:
 
   * People
     ** Alice                        :family:contact:
-    :PROPERTIES
+    :PROPERTIES:
     :ADDRESS: 32 Something Street
     :EMAIL: alice@example.com
     :PHONE: +123 456 789
     :CHILDREN: Mallory
     :NICKNAME: Allu
-    :END
+    :END:
     ** Bob                           :colleague:contact:
-    :PROPERTIES
+    :PROPERTIES:
     :ADDRESS: 32 Something Lane
     :EMAIL: bob@example.com
     :PHONE: +123 456 987
-    :END
+    :END:
 
 The specific properties used don't matter, although it seems natural
-to use :ADDRESS, :EMAIL, and :PHONE.  A contact will be recorded
-if there is at least one property present alongside the "contact" tag.
-
-The name of the tag used to search for entries is specified in the
-`org-people-search-tag' variable and can be customized.
+to use :ADDRESS, :EMAIL, and :PHONE.  A contact will be discovered
+if there is at least one property present alongside the mandatory
+"contact" tag.  (You can change the name of the tag used to search for
+people by setting `org-people-search-tag' to your preferred alternative.)
 
 
 ; Basic operations
@@ -51,8 +50,8 @@ C-c C-l to insert such a link the description should be auto-populated.
 
 ; org-table helpers
 
-Contacts need the "contacts" tag to be added to allow them to be found
-and included in the `org-people' functions, but you can also use the
+Contacts need the "contacts" tag to be present to be discovered and
+included in the `org-people' functions, but you can also use the
 standard `org-mode' facilities to add additional tags to entries too.
 Using the extra tags you may build simple tables of matching entries.
 For example the following can auto-update when you select the code-block
