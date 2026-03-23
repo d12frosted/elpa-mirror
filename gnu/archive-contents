@@ -47,13 +47,13 @@
       (:authors ("Stephen Leake" . "stephen_leake@member.fsf.org"))
       (:commit . "b86a173c1488989fd06f0b612e7b7acee9fda070"))])
  (adaptive-wrap
-  . [(0 8) nil "Smart line-wrapping with wrap-prefix" tar
+  . [(0 9) ((emacs (24 1))) "Smart line-wrapping with wrap-prefix" tar
      ((:maintainer ("Stephen Berman" . "stephen.berman@gmx.net")
 		   ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:authors ("Stephen Berman" . "stephen.berman@gmx.net")
 		("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/adaptive-wrap.html")
-      (:commit . "026c35f59174febab2bcdb3c50fb8344c248671c"))])
+      (:commit . "e929b38c12f17aa6f8d6270326301d61fbb09cab"))])
  (adjust-parens
   . [(3 2) ((emacs (24 3)))
      "Indent and dedent Lisp code, automatically adjust close parens"
@@ -914,13 +914,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "a59f87c0dc04bcfcf9f55a124658c2e7a585dbd2"))])
  (doric-themes
-  . [(1 0 0) ((emacs (29 1)))
+  . [(1 1 0) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "03c73b9250195e82c0c37055b7767ea39b8016ff"))])
+      (:commit . "09612d87dedf8cf2083e557f6a6536ba9320afc8"))])
  (drepl
   . [(0 4) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
