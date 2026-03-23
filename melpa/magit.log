@@ -1,9 +1,9 @@
  • Building package magit (from github:magit/magit)...
 Updating /mnt/store/melpa/working/magit/
-Checking out 00e03f4fc43c6be55577f74828d404787be56919
+Checking out 3d9376af96e4f88b51599ad6b1a34748fa60d702
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit/
-  to /tmp/magit-BBL0DA/magit-20260321.1239
+  to /tmp/magit-0egpkU/magit-20260322.2109
   ! lisp/magit-apply.el -> magit-apply.el
   ! lisp/magit-autorevert.el -> magit-autorevert.el
   ! lisp/magit-base.el -> magit-base.el
@@ -84,91 +84,93 @@ Copying files (->) and directories (=>)
     git-hooks/sendemail-validate -> git-hooks/sendemail-validate
     git-hooks/update -> git-hooks/update
 Generating magit.info
-Created magit-20260321.1239.tar containing:
-  magit-20260321.1239/
-  magit-20260321.1239/.dir-locals.el
-  magit-20260321.1239/AUTHORS.md
-  magit-20260321.1239/LICENSE
-  magit-20260321.1239/dir
-  magit-20260321.1239/git-commit.el
-  magit-20260321.1239/git-hooks/
-  magit-20260321.1239/git-hooks/applypatch-msg
-  magit-20260321.1239/git-hooks/commit-msg
-  magit-20260321.1239/git-hooks/fallthrough
-  magit-20260321.1239/git-hooks/fsmonitor-watchman
-  magit-20260321.1239/git-hooks/p4-changelist
-  magit-20260321.1239/git-hooks/p4-post-changelist
-  magit-20260321.1239/git-hooks/p4-pre-submit
-  magit-20260321.1239/git-hooks/p4-prepare-changelist
-  magit-20260321.1239/git-hooks/post-applypatch
-  magit-20260321.1239/git-hooks/post-checkout
-  magit-20260321.1239/git-hooks/post-commit
-  magit-20260321.1239/git-hooks/post-index-change
-  magit-20260321.1239/git-hooks/post-merge
-  magit-20260321.1239/git-hooks/post-receive
-  magit-20260321.1239/git-hooks/post-rewrite
-  magit-20260321.1239/git-hooks/post-update
-  magit-20260321.1239/git-hooks/pre-applypatch
-  magit-20260321.1239/git-hooks/pre-auto-gc
-  magit-20260321.1239/git-hooks/pre-commit
-  magit-20260321.1239/git-hooks/pre-merge-commit
-  magit-20260321.1239/git-hooks/pre-push
-  magit-20260321.1239/git-hooks/pre-rebase
-  magit-20260321.1239/git-hooks/pre-receive
-  magit-20260321.1239/git-hooks/prepare-commit-msg
-  magit-20260321.1239/git-hooks/proc-receive
-  magit-20260321.1239/git-hooks/push-to-checkout
-  magit-20260321.1239/git-hooks/reference-transaction
-  magit-20260321.1239/git-hooks/sendemail-validate
-  magit-20260321.1239/git-hooks/update
-  magit-20260321.1239/git-rebase.el
-  magit-20260321.1239/magit-apply.el
-  magit-20260321.1239/magit-autorevert.el
-  magit-20260321.1239/magit-base.el
-  magit-20260321.1239/magit-bisect.el
-  magit-20260321.1239/magit-blame.el
-  magit-20260321.1239/magit-bookmark.el
-  magit-20260321.1239/magit-branch.el
-  magit-20260321.1239/magit-bundle.el
-  magit-20260321.1239/magit-clone.el
-  magit-20260321.1239/magit-commit.el
-  magit-20260321.1239/magit-core.el
-  magit-20260321.1239/magit-diff.el
-  magit-20260321.1239/magit-dired.el
-  magit-20260321.1239/magit-ediff.el
-  magit-20260321.1239/magit-extras.el
-  magit-20260321.1239/magit-fetch.el
-  magit-20260321.1239/magit-files.el
-  magit-20260321.1239/magit-git.el
-  magit-20260321.1239/magit-gitignore.el
-  magit-20260321.1239/magit-log.el
-  magit-20260321.1239/magit-margin.el
-  magit-20260321.1239/magit-merge.el
-  magit-20260321.1239/magit-mode.el
-  magit-20260321.1239/magit-notes.el
-  magit-20260321.1239/magit-patch.el
-  magit-20260321.1239/magit-pkg.el
-  magit-20260321.1239/magit-process.el
-  magit-20260321.1239/magit-pull.el
-  magit-20260321.1239/magit-push.el
-  magit-20260321.1239/magit-reflog.el
-  magit-20260321.1239/magit-refs.el
-  magit-20260321.1239/magit-remote.el
-  magit-20260321.1239/magit-repos.el
-  magit-20260321.1239/magit-reset.el
-  magit-20260321.1239/magit-sequence.el
-  magit-20260321.1239/magit-sparse-checkout.el
-  magit-20260321.1239/magit-stash.el
-  magit-20260321.1239/magit-status.el
-  magit-20260321.1239/magit-submodule.el
-  magit-20260321.1239/magit-subtree.el
-  magit-20260321.1239/magit-tag.el
-  magit-20260321.1239/magit-transient.el
-  magit-20260321.1239/magit-wip.el
-  magit-20260321.1239/magit-worktree.el
-  magit-20260321.1239/magit.el
-  magit-20260321.1239/magit.info
+Created magit-20260322.2109.tar containing:
+  magit-20260322.2109/
+  magit-20260322.2109/.dir-locals.el
+  magit-20260322.2109/AUTHORS.md
+  magit-20260322.2109/LICENSE
+  magit-20260322.2109/dir
+  magit-20260322.2109/git-commit.el
+  magit-20260322.2109/git-hooks/
+  magit-20260322.2109/git-hooks/applypatch-msg
+  magit-20260322.2109/git-hooks/commit-msg
+  magit-20260322.2109/git-hooks/fallthrough
+  magit-20260322.2109/git-hooks/fsmonitor-watchman
+  magit-20260322.2109/git-hooks/p4-changelist
+  magit-20260322.2109/git-hooks/p4-post-changelist
+  magit-20260322.2109/git-hooks/p4-pre-submit
+  magit-20260322.2109/git-hooks/p4-prepare-changelist
+  magit-20260322.2109/git-hooks/post-applypatch
+  magit-20260322.2109/git-hooks/post-checkout
+  magit-20260322.2109/git-hooks/post-commit
+  magit-20260322.2109/git-hooks/post-index-change
+  magit-20260322.2109/git-hooks/post-merge
+  magit-20260322.2109/git-hooks/post-receive
+  magit-20260322.2109/git-hooks/post-rewrite
+  magit-20260322.2109/git-hooks/post-update
+  magit-20260322.2109/git-hooks/pre-applypatch
+  magit-20260322.2109/git-hooks/pre-auto-gc
+  magit-20260322.2109/git-hooks/pre-commit
+  magit-20260322.2109/git-hooks/pre-merge-commit
+  magit-20260322.2109/git-hooks/pre-push
+  magit-20260322.2109/git-hooks/pre-rebase
+  magit-20260322.2109/git-hooks/pre-receive
+  magit-20260322.2109/git-hooks/prepare-commit-msg
+  magit-20260322.2109/git-hooks/proc-receive
+  magit-20260322.2109/git-hooks/push-to-checkout
+  magit-20260322.2109/git-hooks/reference-transaction
+  magit-20260322.2109/git-hooks/sendemail-validate
+  magit-20260322.2109/git-hooks/update
+  magit-20260322.2109/git-rebase.el
+  magit-20260322.2109/magit-apply.el
+  magit-20260322.2109/magit-autorevert.el
+  magit-20260322.2109/magit-base.el
+  magit-20260322.2109/magit-bisect.el
+  magit-20260322.2109/magit-blame.el
+  magit-20260322.2109/magit-bookmark.el
+  magit-20260322.2109/magit-branch.el
+  magit-20260322.2109/magit-bundle.el
+  magit-20260322.2109/magit-clone.el
+  magit-20260322.2109/magit-commit.el
+  magit-20260322.2109/magit-core.el
+  magit-20260322.2109/magit-diff.el
+  magit-20260322.2109/magit-dired.el
+  magit-20260322.2109/magit-ediff.el
+  magit-20260322.2109/magit-extras.el
+  magit-20260322.2109/magit-fetch.el
+  magit-20260322.2109/magit-files.el
+  magit-20260322.2109/magit-git.el
+  magit-20260322.2109/magit-gitignore.el
+  magit-20260322.2109/magit-log.el
+  magit-20260322.2109/magit-margin.el
+  magit-20260322.2109/magit-merge.el
+  magit-20260322.2109/magit-mode.el
+  magit-20260322.2109/magit-notes.el
+  magit-20260322.2109/magit-patch.el
+  magit-20260322.2109/magit-pkg.el
+  magit-20260322.2109/magit-process.el
+  magit-20260322.2109/magit-pull.el
+  magit-20260322.2109/magit-push.el
+  magit-20260322.2109/magit-reflog.el
+  magit-20260322.2109/magit-refs.el
+  magit-20260322.2109/magit-remote.el
+  magit-20260322.2109/magit-repos.el
+  magit-20260322.2109/magit-reset.el
+  magit-20260322.2109/magit-sequence.el
+  magit-20260322.2109/magit-sparse-checkout.el
+  magit-20260322.2109/magit-stash.el
+  magit-20260322.2109/magit-status.el
+  magit-20260322.2109/magit-submodule.el
+  magit-20260322.2109/magit-subtree.el
+  magit-20260322.2109/magit-tag.el
+  magit-20260322.2109/magit-transient.el
+  magit-20260322.2109/magit-wip.el
+  magit-20260322.2109/magit-worktree.el
+  magit-20260322.2109/magit.el
+  magit-20260322.2109/magit.info
  ✓ Success:
-  2026-03-22T17:58:24+0000  magit-20260321.1239.entry
-  2026-03-22T17:58:24+0000  magit-20260321.1239.tar
-Built magit in 14.199s, finished at 2026-03-22T17:58:25+0000
+  2026-03-22T20:42:13+0000  magit-20260322.1930.entry
+  2026-03-22T20:42:13+0000  magit-20260322.1930.tar
+  2026-03-22T23:23:28+0000  magit-20260322.2109.entry
+  2026-03-22T23:23:27+0000  magit-20260322.2109.tar
+Built magit in 13.050s, finished at 2026-03-22T23:23:29+0000

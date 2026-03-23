@@ -5565,6 +5565,7 @@
   (tiktoken :url "https://github.com/zkry/tiktoken.el")
   (tikz :url "https://github.com/emiliotorres/tikz")
   (tile :url "https://github.com/colonelpanic8/tile")
+  (tiles :url "https://github.com/ctanas/tiles")
   (time-block :url "https://git.sr.ht/~swflint/time-block-command")
   (time-ext :url "https://github.com/rubikitch/time-ext")
   (time-uuid-mode :url "https://github.com/RobertPlant/time-uuid-mode")

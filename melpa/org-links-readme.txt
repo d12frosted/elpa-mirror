@@ -1,4 +1,8 @@
-*About*:
+This package (org-links) provides facilities to help create and
+ manage Org-mode links, add new link types, have speed optimization
+ for large files.  Have facility to message if two lines was found,
+ control wheter to search for full line or by the begining of it.
+
 org-mode supports  file links  with line numbers  and line  via the
  following syntax:
 [[PATH::NUM][Link description]]
@@ -51,9 +55,9 @@ I recommend to set those Org ol.el options for clarity:
 (setopt org-link-descriptive nil) ; show links in raw, don't hide
 
 *How this works*:
-We provide new function `org-links-store-extended' that use
- standard ol.el function and we add additional format for
- programming modes.
+Provided new function `org-links-store-extended' to create and copy
+ link to clipboard kill-ring and we add advices and hooks to handle
+ opeing of new links types.
 
 For opening links we add hook to org-execute-file-search-functions
  that called from `org-link-search' function, used by Org function
