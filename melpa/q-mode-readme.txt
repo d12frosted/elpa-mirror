@@ -68,6 +68,11 @@ If the source file exists on the same machine as the q process,
 `C-c M-l' can be used to load the file associated with the active
 buffer.
 
+`C-c C-g' triggers a manual rescan of the project, re-scanning only
+files whose mtime has changed.  Prefix with `C-u' to force all files
+to be re-scanned regardless of mtime, which is useful after a branch
+switch where file timestamps may be preserved.
+
 Quick access to variable and function definitions can be obtained
 using the `imenu' binding `M-g i'.  Completion is available via
 `completion-at-point' (usually `M-TAB').  Candidates are annotated
