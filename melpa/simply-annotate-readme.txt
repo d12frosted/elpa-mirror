@@ -6,7 +6,9 @@ original content.  Enhanced with threading, collaboration, and org-mode integrat
 Quick Start:
 
 (use-package simply-annotate
- :bind ("C-c A" . simply-annotate-mode))
+ :bind (("C-c A" . simply-annotate-mode)
+        ("C-c 0" . simply-annotate-show-all)
+        ("C-c 9" . simply-annotate-jump-to-file)))
 
 1. Open any file
 2. Enable annotation mode: =C-c A=
