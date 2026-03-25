@@ -1,5 +1,5 @@
 This package provides a uniform Emacs interface for various AI-assisted software
-development CLI tools. Its purpose is to offer a consistent user experience
+development CLI tools.  Its purpose is to offer a consistent user experience
 across different AI backends, providing context-aware code actions, and integrating
 seamlessly with AI-driven agile development workflows.
 
