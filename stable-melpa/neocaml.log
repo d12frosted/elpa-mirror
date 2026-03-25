@@ -1,23 +1,27 @@
  • Building package neocaml (from github:bbatsov/neocaml)...
 Updating /mnt/store/melpa/working/neocaml/
-Checking out dc49fc2b3ae356713ee08102ff85ea5181e738d6
+Checking out 69535ba79a663ea938c03ab5ce26108db510cc4a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/neocaml/
-  to /tmp/neocaml-Qhg7tc/neocaml-20260320.1754
+  to /tmp/neocaml-Z39UDo/neocaml-20260325.713
+    neocaml-dune-interaction.el -> neocaml-dune-interaction.el
     neocaml-dune.el -> neocaml-dune.el
     neocaml-objinfo.el -> neocaml-objinfo.el
     neocaml-opam.el -> neocaml-opam.el
     neocaml-repl.el -> neocaml-repl.el
     neocaml.el -> neocaml.el
-Created neocaml-20260320.1754.tar containing:
-  neocaml-20260320.1754/
-  neocaml-20260320.1754/neocaml-dune.el
-  neocaml-20260320.1754/neocaml-objinfo.el
-  neocaml-20260320.1754/neocaml-opam.el
-  neocaml-20260320.1754/neocaml-pkg.el
-  neocaml-20260320.1754/neocaml-repl.el
-  neocaml-20260320.1754/neocaml.el
+Created neocaml-20260325.713.tar containing:
+  neocaml-20260325.713/
+  neocaml-20260325.713/neocaml-dune-interaction.el
+  neocaml-20260325.713/neocaml-dune.el
+  neocaml-20260325.713/neocaml-objinfo.el
+  neocaml-20260325.713/neocaml-opam.el
+  neocaml-20260325.713/neocaml-pkg.el
+  neocaml-20260325.713/neocaml-repl.el
+  neocaml-20260325.713/neocaml.el
  ✓ Success:
-  2026-03-25T02:37:10+0000  neocaml-20260320.1754.entry
-  2026-03-25T02:37:10+0000  neocaml-20260320.1754.tar
-Built neocaml in 7.256s, finished at 2026-03-25T02:37:12+0000
+  2026-03-25T05:22:59+0000  neocaml-20260320.1754.entry
+  2026-03-25T05:22:59+0000  neocaml-20260320.1754.tar
+  2026-03-25T08:07:52+0000  neocaml-20260325.713.entry
+  2026-03-25T08:07:52+0000  neocaml-20260325.713.tar
+Built neocaml in 4.812s, finished at 2026-03-25T08:07:53+0000
