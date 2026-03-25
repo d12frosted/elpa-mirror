@@ -2,8 +2,8 @@
 
 Requires emacs-29 compiled with treesitter support.
 
-Currently uses treesitter only for syntax-highlighting,
-*font-lock-mode*, and uses the "old" erlang-mode for everything else.
+Uses tree-sitter for syntax-highlighting and indentation.
+Other features are inherited from erlang-mode.
 
 # Install #
 
