@@ -15,6 +15,8 @@ Features include:
 - Clickable results in a standard *grep* buffer
 - Optional ripgrep (rg) backend for faster searches
 - Optional .gitignore bypass when using the rg backend
+- Optional restriction to a subdirectory within the project
+  (`repo-grep-set-subfolder', `repo-grep-clear-subfolder')
 - Optional multiple grep buffers to keep previous results intact
 - Optional in-buffer filtering via `repo-grep-filter'
 

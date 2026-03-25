@@ -1,9 +1,11 @@
 
 This package provides traditional Hindu calendars (solar and lunar) using
-arithmetic based on the mean motions of the Sun and Moon.  It calculates
-tithi and nakshatra.  It provides both tropical (sayana) and sidereal
-(nirayana/Chitrapaksha) variants.  Lunar calendar can be chosen between
-amanta or purnimanta.
+analytic equations (Meeus-style) based on astronomical motions of the Sun and
+Moon.  It calculates tithi and nakshatra.  It provides both tropical (sayana)
+and sidereal (nirayana/Chitrapaksha) variants.  Lunar calendar can be chosen
+between amanta or purnimanta.  Default location is Ujjain, which can be
+customized via `calendar-latitude', `calendar-longitude' and
+`calendar-timezone'
 
 Usage:
     All of the functions can be called interactively or programmatically.
