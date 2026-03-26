@@ -1,25 +1,29 @@
  • Building package neocaml (from github:bbatsov/neocaml)...
 Updating /mnt/store/melpa/working/neocaml/
-Checking out 963225f74f1af7ae1a8a23b9b2356be6952688ee
+Checking out 366e4721539de9ba5972bbb320c9cade29141298
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/neocaml/
-  to /tmp/neocaml-xNQKPz/neocaml-20260325.821
+  to /tmp/neocaml-irX5PP/neocaml-20260326.739
     neocaml-dune-interaction.el -> neocaml-dune-interaction.el
     neocaml-dune.el -> neocaml-dune.el
+    neocaml-menhir.el -> neocaml-menhir.el
     neocaml-objinfo.el -> neocaml-objinfo.el
+    neocaml-ocamllex.el -> neocaml-ocamllex.el
     neocaml-opam.el -> neocaml-opam.el
     neocaml-repl.el -> neocaml-repl.el
     neocaml.el -> neocaml.el
-Created neocaml-20260325.821.tar containing:
-  neocaml-20260325.821/
-  neocaml-20260325.821/neocaml-dune-interaction.el
-  neocaml-20260325.821/neocaml-dune.el
-  neocaml-20260325.821/neocaml-objinfo.el
-  neocaml-20260325.821/neocaml-opam.el
-  neocaml-20260325.821/neocaml-pkg.el
-  neocaml-20260325.821/neocaml-repl.el
-  neocaml-20260325.821/neocaml.el
+Created neocaml-20260326.739.tar containing:
+  neocaml-20260326.739/
+  neocaml-20260326.739/neocaml-dune-interaction.el
+  neocaml-20260326.739/neocaml-dune.el
+  neocaml-20260326.739/neocaml-menhir.el
+  neocaml-20260326.739/neocaml-objinfo.el
+  neocaml-20260326.739/neocaml-ocamllex.el
+  neocaml-20260326.739/neocaml-opam.el
+  neocaml-20260326.739/neocaml-pkg.el
+  neocaml-20260326.739/neocaml-repl.el
+  neocaml-20260326.739/neocaml.el
  ✓ Success:
-  2026-03-26T06:18:42+0000  neocaml-20260325.821.entry
-  2026-03-26T06:18:42+0000  neocaml-20260325.821.tar
-Built neocaml in 4.636s, finished at 2026-03-26T06:18:43+0000
+  2026-03-26T11:38:09+0000  neocaml-20260326.739.entry
+  2026-03-26T11:38:08+0000  neocaml-20260326.739.tar
+Built neocaml in 4.301s, finished at 2026-03-26T11:38:09+0000

@@ -16,6 +16,10 @@ To use, ensure posframe is installed, then add the following:
 Or if you simply want to enable mouse hover for all buffers where
 eldoc-mode is available as a minor mode, then:
 
+  (use-package eldoc :ensure t)
+  (use-package eglot :ensure t)
+if you use the eglot, elodc package from elpa, the above two lines to ensure them to be loaded before
+loading eldoc-mouse to avoid recursive load error.
   (use-package eldoc-mouse :ensure t
     ;; replace <f1> <f1> to a key you like, "C-h ." maybe.  Displaying document on a popup when you press a key.
     :bind (:map eldoc-mouse-mode-map
@@ -25,10 +29,6 @@ eldoc-mode is available as a minor mode, then:
 Or if you want to show document only when you press a key, and
 don't want to enable mouse hover, then:
 
-(use-package eldoc :ensure t)
-(use-package eglot :ensure t)
-if you use the eglot, elodc package from elpa, the above two lines to ensure them be loaded before
-loading eldoc-mouse to avoid recursive load error.
   (use-package eldoc-mouse :ensure t)
   ;; replace <f1> <f1> to a key you like.  Displaying document on a popup when you press a key.
   (global-set-key (kbd "<f1> <f1>") 'eldoc-mouse-pop-doc-at-cursor)
