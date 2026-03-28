@@ -1,9 +1,9 @@
-Highlight selected window by adjusting contrast of text
- "foreground" and background with respect of current theme.
-Working good if you switch themes frequently, contrast will be kept.
-Also this works for modeline.
-We also highligh cursor position, this may be disabled with
- (setopt selected-window-contrast-cursor-flag nil) in .emacs
+Highlight the selected window by adjusting the contrast of the text
+;  foreground and background relative to the current theme. It works
+;  well if you switch themes frequently; contrast will be
+;  preserved. This also applies to the modeline.
+We also highlight the cursor position, which can be disabled with
+(setopt selected-window-contrast-cursor-flag nil) in .emacs.
  or
  M-x customize-variable RET selected-window-contrast-cursor-flag
 
@@ -40,15 +40,3 @@ Rebind keys then:
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25
 - USDT (Tether TRX-TRON) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
-
-;; Other packages:
-
-- Modern navigation in major modes https://github.com/Anoncheg1/firstly-search
-- Search with Chinese	https://github.com/Anoncheg1/pinyin-isearch
-- Ediff no 3-th window	https://github.com/Anoncheg1/ediffnw
-- Dired history		https://github.com/Anoncheg1/dired-hist
-- Copy link to clipboard	https://github.com/Anoncheg1/emacs-org-links
-- Solution for "callback hell"	https://github.com/Anoncheg1/emacs-async1
-- Restore buffer state	https://github.com/Anoncheg1/emacs-unmodified-buffer1
-- outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
-- Call LLMs & AIfrom Org-mode block.  https://github.com/Anoncheg1/emacs-oai
