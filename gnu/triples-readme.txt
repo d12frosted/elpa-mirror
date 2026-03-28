@@ -168,7 +168,7 @@ inefficiencies typically are not significant.
 
   ┌────
   │ (triples-set-subject db "alice" '(person :name "Alice Aardvark" :age 41)
-  │ 		     '(employee :id 1901 :manager "bob"))
+  │                      '(employee :id 1901 :manager "bob"))
   └────
 
   In the second, the setting of the entire subject implies deleting

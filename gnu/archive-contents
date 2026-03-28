@@ -3305,13 +3305,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "e7326a61b1cd2605867063fcfc5ddddaeed6d993"))])
  (triples
-  . [(0 6 1) ((seq (2 0)) (emacs (28 1)))
+  . [(0 6 2) ((seq (2 0)) (emacs (28 1)))
      "A flexible triple-based database for use in apps" tar
      ((:url . "https://github.com/ahyatt/triples")
       (:keywords "triples" "kg" "data" "sqlite")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "f2b8fe6d500e3543bece24381fd4ce34a171c860"))])
+      (:commit . "127e42e98f7df3997d538d72a67604c9584517dd"))])
  (truename-cache
   . [(0 3 7) ((emacs (27 1)) (compat (30 1)))
      "Efficiently de-dup file-names" tar
