@@ -2,9 +2,9 @@
 A lightweight annotation system for Emacs that allows you to add
 persistent notes to any text file without modifying the original
 content.  Enhanced with threading, collaboration, and org-mode
-integration.
+integration.  Requires Emacs 28.1+, no external dependencies.
 
-Quick Start:
+Quick Start (use-package):
 
   (use-package simply-annotate
     :bind-keymap ("C-c a" . simply-annotate-command-map)
@@ -12,6 +12,13 @@ Quick Start:
 
   (with-eval-after-load 'simply-annotate
     (add-hook 'dired-mode-hook #'simply-annotate-dired-mode))
+
+Quick Start (require):
+
+  (require 'simply-annotate)
+  (global-set-key (kbd "C-c a") simply-annotate-command-map)
+  (add-hook 'find-file-hook #'simply-annotate-mode)
+  (add-hook 'dired-mode-hook #'simply-annotate-dired-mode)
 
 All commands live in `simply-annotate-command-map', which you bind
 to a prefix key of your choice.  With C-c a as the prefix:
