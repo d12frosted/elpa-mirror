@@ -9,13 +9,12 @@ Prerequisites:
 - Install ty (>= v0.0.8) or basedpyright as a Python language server
 - Download this file and add it to the load path
 
-Quick start:
+Quick start (package-vc):
 
-  (require 'eglot-python-preset)
-  (setopt eglot-python-preset-lsp-server 'ty)
-  ;; or
-  ;; (setopt eglot-python-preset-lsp-server 'basedpyright)
-  (eglot-python-preset-setup)
+  (use-package eglot-python-preset
+    :vc (:url "https://github.com/mwolson/eglot-python-preset")
+    :custom
+    (eglot-python-preset-lsp-server 'ty)) ; or 'basedpyright or 'rass
 
 After that, opening Python files will automatically start the LSP server using
 Eglot and handle PEP-723 magic tags within files.

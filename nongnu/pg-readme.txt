@@ -42,7 +42,7 @@ This library has support for:
 - Connections over TCP or (on Unix machines) a local Unix socket.
 
 
-Tested **PostgreSQL versions**: The code has been tested with versions 18.1, 17.6, 16.5, 15.4,
+Tested **PostgreSQL versions**: The code has been tested with versions 18.3, 17.9, 16.13, 15.4,
 13.8, 11.17, and 10.22 on Linux. It is also tested via GitHub actions on MacOS and Windows. This
 library also works, more or less, against other “PostgreSQL-compatible” databases. There are four
 main points where this compatibility may be problematic:
@@ -81,8 +81,8 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   hosts (AGPLv3 licence). Works perfectly (last tested 2025-07 with Citus version 13.0).
   
 - The [OrioleDB](https://github.com/orioledb/orioledb) extension, which adds a new storage engine
-  designed for better multithreading and solid state storage, works perfectly. Last tested 2025-10
-  with version beta12.
+  designed for better multithreading and solid state storage, works perfectly. Last tested 2026-02
+  with version beta14.
 
 - The [Microsoft DocumentDB](https://github.com/microsoft/documentdb) extension for MongoDB-like
   queries (MIT licensed). Works perfectly. Note that this is not the same product as Amazon
@@ -92,7 +92,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   storage and parallel queries (Apache license). Works perfectly (last tested 2025-05 with v1.1.2).
 
 - The [AgensGraph](https://github.com/skaiworldwide-oss/agensgraph) extension for transactional
-  graph processing (Apache 2 license) works perfectly. Last tested 2025-07 with version 2.15.
+  graph processing (Apache 2 license) works perfectly. Last tested 2026-02 with version 2.16.
 
 - The [PgBouncer](https://www.pgbouncer.org/) connection pooler for PostgreSQL (open source, ISC
   licensed). Works fine (last tested 2026-01 with version 1.24 in the default session pooling mode).
@@ -106,17 +106,17 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 - The [PgDog](https://github.com/pgdogdev/pgdog) sharding connection pooler for PostgreSQL (AGPLv3
   licensed). We encounter some errors when using the extended query protocol: unnamed prepared
   statements and prepared statments named `__pgdog_N` are reported not to exist. The pooler also
-  disconnects the client when the client-encoding is switched to `LATIN1` (last tested 2025-08).
+  disconnects the client when the client-encoding is switched to `LATIN1` (last tested 2026-03).
 
 - [Google AlloyDB Omni](https://cloud.google.com/alloydb/omni/docs/quickstart) is a proprietary fork
   of PostgreSQL with Google-developed extensions, including a columnar storage extension, adaptive
-  autovacuum, and an index advisor. It works perfectly with pg-el as of 2025-12 (version that
+  autovacuum, and an index advisor. It works perfectly with pg-el as of 2026-03 (version that
   reports itself as "17.5").
 
 - [PolarDB for PostgreSQL](https://github.com/ApsaraDB/PolarDB-for-PostgreSQL) is free software
   (Apache 2 licence) developed by Alibaba Cloud, also available as a commercial hosted service with
-  a proprietary distributed storage architecture. It works perfectly with pg-el (last tested 2026-02
-  with version 15.15).
+  a proprietary distributed storage architecture. It works perfectly with pg-el (last tested 2026-03
+  with version 17.9).
 
 - [openGauss](https://opengauss.org/en/) is an open source (Mulan PSL v2) fork of PostgreSQL
   maintained by Huawei. It works fine with pg-el (last tested 2025-12 with version 7.0.0-RC2).
@@ -130,11 +130,11 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   though the `pg_sequences` table is not implemented so certain tests fail. YugabyteDB does not have
   full compatibility with PostgreSQL SQL, and for example `GENERATED ALWAYS AS` columns are not
   supported, and `LISTEN` and `NOTIFY` are not supported. It does support certain extensions such as
-  pgvector, however. Last tested on 2026-02 against version 2.25.
+  pgvector, however. Last tested on 2026-03 against version 2025.2.2.
 
 - The [RisingWave](https://github.com/risingwavelabs/risingwave) event streaming database (Apache
   license) is mostly working. It does not support `GENERATED ALWAYS AS IDENTITY` or `SERIAL`
-  columns, nor `VACUUM ANALYZE`. Last tested 2026-02 with v2.7.2.
+  columns, nor `VACUUM ANALYZE`. Last tested 2026-03 with v2.8.1.
 
 - The [CrateDB](https://crate.io/) distributed database (Apache licence). CrateDB does not support
   rows (e.g. `SELECT (1,2)`), does not support the `time`, `varbit`, `bytea`, `jsonb` and `hstore`
@@ -142,48 +142,48 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   PostgreSQL functions such as `factorial`, does not return a correct type OID for text columns in
   rows returned from a prepared statement, doesn't support Unicode identifiers, doesn't support the
   `COPY` protocol, doesn't support `TRUNCATE TABLE`. It works with these limitations with pg-el
-  (last tested 2026-02 with version 6.3.0).
+  (last tested 2026-03 with version 6.3.0).
 
 - The [CockroachDB](https://github.com/cockroachdb/cockroach) distributed database (source-available
   but non-free software licence). Note that this database does not implement the large object
   functionality, and its interpretation of SQL occasionally differs from that of PostgreSQL.
   Currently fails with an internal error on the SQL generated by our query for `pg-table-owner`, and
   fails on the boolean vector syntax b'1001000'. Works with these limitations with pg-el (last
-  tested 2026-01 with CockroachDB CCL v25.4).
+  tested 2026-03 with CockroachDB CCL v26.1).
 
 - The [YDB by Yandex](https://ydb.tech/docs/en/postgresql/docker-connect) distributed database
   (Apache licence). Has very limited PostgreSQL compatibility. For example, an empty query string
   leads to a hung connection, and the `bit` type is returned as a string with the wrong oid. Last
-  tested 2026-02 with version 23-4.
+  tested 2026-03 with version 23-4.
 
 - The [Apache Datafusion](https://datafusion.apache.org/) query engine, designed primarily for
   incremental processing applications (“streaming”), has quite good PostgreSQL compatibility (using
   the pgwire library). It does not support the `timetz` datatype, nor `TRUNCATE TABLE`, nor
-  `UPDATE`, nor `CREATE INDEX` statements. Last tested 2026-02 with version 52.0.
+  `UPDATE`, nor `CREATE INDEX` statements. Last tested 2026-03 with version 52.4.
 
 - The [Doltgres](https://github.com/dolthub/doltgresql) version-controlled database (Apache
   licensed) has rapidly improving PostgreSQL compatibility. It does not implement ownership-related
   system tables, nor int4range functions. It works well, with these limitations, with pg-el. Last
-  tested 2026-01 with a version that is reported as 15.5.
+  tested 2026-03 with a version that is reported as 15.5.
 
 - The [Materialize](https://materialize.com/) operational database (a proprietary differential
   dataflow database) has many limitations in its PostgreSQL compatibility: no support for primary
   keys, unique constraints, check constraints, for the `bit` type for example. It works with these
-  limitations with pg-el (last tested 2026-02 with Materialize v26.10).
+  limitations with pg-el (last tested 2026-03 with Materialize v26.17).
 
 - The [CedarDB](https://cedardb.com/) database spun off from the Umbra research database developed
   at the University of Munich is fairly PostgreSQL compatible and works well with pg-el. Last tested
-  2026-02 with CedarDB version v2026-02-03.
+  2026-03 with CedarDB version v2026-03-19.
 
 - The [QuestDB](https://questdb.io/) time series database (Apache licensed) has very limited
-  PostgreSQL support, and does not support the `integer` type for example. Last tested 2026-02 with
-  version 9.3.2.
+  PostgreSQL support, and does not support the `integer` type for example. Last tested 2026-03 with
+  version 9.3.3.
 
 - The proprietary [Yellowbrick](https://yellowbrick.com/) distributed database does not implement
   `SERIAL` columns, nor datatypes such as `text`, `bit` and `timetz`, nor collation, nor enums, nor
   functions such as `gen_random_uuid`, nor large objects. It has limited support for the UTF8
   encoding, and its implementation of the `numeric` type is buggy. It works with these limitations
-  with pg-el (last tested 2025-12 with version 7.4.0 of the YellowBrick community edition).
+  with pg-el (last tested 2026-03 with version 7.4.0 of the YellowBrick community edition).
 
 - [Google Spanner](https://cloud.google.com/spanner) proprietary distributed database: tested with
   the Spanner emulator (that reports itself as `PostgreSQL 14.1`) and the PGAdapter library that
@@ -204,7 +204,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   are many limitations in the PostgreSQL compatibility: no user metainformation, no cursors, no
   server-side prepared statements, no support for various types including arrays, JSON, UUID,
   vectors, tsvector, numeric ranges, geometric types. It works with these limitations with pg-el
-  (last tested 2025-11 with YottaDB 2.0.2).
+  (last tested 2026-02 with YottaDB 2.0.2).
 
 - The [GreptimeDB](https://github.com/GrepTimeTeam/greptimedb) time series database (Apache license)
   implements quite a lot of the PostgreSQL wire protocol, but the names it uses for types in the
@@ -231,7 +231,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 
 PostgreSQL variants or proxies that **don't work** with pg-el:
 
-- The ClickHouse database, whose PostgreSQL support is too limited. As of version 25.10 in 2025-11,
+- The ClickHouse database, whose PostgreSQL support is too limited. As of version 26.3 in 2026-03,
   there is no implementation of the `pg_types` system table, no support for basic PostgreSQL-flavoured
   SQL commands such as `SET`, no support for the extended query mechanism.
   
