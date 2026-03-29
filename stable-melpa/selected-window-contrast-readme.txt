@@ -2,6 +2,7 @@ Highlight the selected window by adjusting the contrast of the text
 ;  foreground and background relative to the current theme. It works
 ;  well if you switch themes frequently; contrast will be
 ;  preserved. This also applies to the modeline.
+;  Modeline and cursor highlighting - working in TTY.
 We also highlight the cursor position, which can be disabled with
 (setopt selected-window-contrast-cursor-flag nil) in .emacs.
  or
