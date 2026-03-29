@@ -79,3 +79,72 @@ Configuration Examples:
 (setq simply-annotate-author-list '("John Doe" "Jane Smith" "Bob Wilson"))
 (setq simply-annotate-prompt-for-author 'threads-only)
 (setq simply-annotate-remember-author-per-file t)
+
+Inline Pointer Styles:
+
+When inline display is enabled, a pointer connects the annotation
+box to the annotated text.  Customise via
+`simply-annotate-inline-pointer-after' (box below text) and
+`simply-annotate-inline-pointer-above' (box above text).  Strings
+can be multiline (use \n).  Set to nil to disable.
+
+;; Simple arrows (default)
+(setq simply-annotate-inline-pointer-after "▴")
+(setq simply-annotate-inline-pointer-above "▾")
+
+;; Larger triangles
+(setq simply-annotate-inline-pointer-after "▲")
+(setq simply-annotate-inline-pointer-above "▼")
+
+;; Tall stems
+(setq simply-annotate-inline-pointer-after "  ║")
+(setq simply-annotate-inline-pointer-above "  ║")
+
+;; Speech bubble tails
+(setq simply-annotate-inline-pointer-after " ╰┐")
+(setq simply-annotate-inline-pointer-above " ╰┐")
+
+;; L-bracket connectors
+(setq simply-annotate-inline-pointer-after "│\n╰─")
+(setq simply-annotate-inline-pointer-above "╭─\n│")
+
+(setq simply-annotate-inline-pointer-after "│\n╰──▸")
+(setq simply-annotate-inline-pointer-above "╭──▸\n│")
+
+;; Heavy L-bracket
+(setq simply-annotate-inline-pointer-after "┃\n┗━▶")
+(setq simply-annotate-inline-pointer-above "┏━▶\n┃")
+
+;; Decorative single char
+(setq simply-annotate-inline-pointer-after "●")
+(setq simply-annotate-inline-pointer-above "●")
+
+(setq simply-annotate-inline-pointer-after "◆")
+(setq simply-annotate-inline-pointer-above "◆")
+
+(setq simply-annotate-inline-pointer-after "✦")
+(setq simply-annotate-inline-pointer-above "✦")
+
+(setq simply-annotate-inline-pointer-after "⟡")
+(setq simply-annotate-inline-pointer-above "⟡")
+
+;; Minimal / subtle
+(setq simply-annotate-inline-pointer-after "·")
+(setq simply-annotate-inline-pointer-above "·")
+
+(setq simply-annotate-inline-pointer-after "┊")
+(setq simply-annotate-inline-pointer-above "┊")
+
+(setq simply-annotate-inline-pointer-after "╷")
+(setq simply-annotate-inline-pointer-above "╵")
+
+;; Bracket pairs
+(setq simply-annotate-inline-pointer-after "╰─┤")
+(setq simply-annotate-inline-pointer-above "╭─┤")
+
+;; Fancy multiline
+(setq simply-annotate-inline-pointer-after "│\n│\n╰──▸")
+(setq simply-annotate-inline-pointer-above "╭──▸\n│\n│")
+
+(setq simply-annotate-inline-pointer-after "┃\n┃\n┗━━▶")
+(setq simply-annotate-inline-pointer-above "┏━━▶\n┃\n┃")
