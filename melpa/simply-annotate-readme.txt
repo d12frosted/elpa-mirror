@@ -148,3 +148,23 @@ can be multiline (use \n).  Set to nil to disable.
 
 (setq simply-annotate-inline-pointer-after "┃\n┃\n┗━━▶")
 (setq simply-annotate-inline-pointer-above "┏━━▶\n┃\n┃")
+
+Project-Aware Annotations:
+
+By default, annotations are stored in a single global database.
+Set `simply-annotate-database-strategy' to use per-project databases
+that can be committed alongside your code:
+
+;; Store annotations at the project root (.simply-annotations.el)
+(setq simply-annotate-database-strategy 'project)
+
+;; Or merge project and global databases (project wins on conflicts)
+(setq simply-annotate-database-strategy 'both)
+
+Project-scoped commands (require project.el, built-in since Emacs 28.1):
+- <prefix> P   show annotations for the current project (org listing)
+- <prefix> C-t show annotations for the current project (sortable table)
+- <prefix> f   jump to annotated file (project-scoped, C-u for all)
+
+To migrate existing global annotations into a project database:
+  M-x simply-annotate-migrate-to-project

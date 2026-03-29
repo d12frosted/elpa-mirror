@@ -5877,6 +5877,7 @@
   (vsh-mode :url "https://github.com/hardenedapple/vsh")
   (vtab :url "https://github.com/mugen-void/vtab")
   (vterm :url "https://github.com/akermu/emacs-libvterm")
+  (vterm-editor :url "https://git.andros.dev/andros/vterm-editor.el.git")
   (vterm-hotkey :url "https://github.com/rootatpixel/vterm-hotkey")
   (vterm-toggle :url "https://github.com/jixiuf/vterm-toggle")
   (vtm :url "https://github.com/laishulu/emacs-vterm-manager")
