@@ -1,25 +1,15 @@
-# Emacs Erlang mode using treesitter #
+`erlang-ts-mode' is a tree-sitter powered major mode for editing Erlang.
+It derives from `erlang-mode' and progressively replaces its features
+with tree-sitter based implementations.
 
-Requires emacs-29 compiled with treesitter support.
+Features:
+- Tree-sitter based font-locking (4 levels)
+- Tree-sitter based indentation (experimental, opt-in)
+- Embedded markdown highlighting in doc attributes (Emacs 30+)
+- Imenu support for functions, macros, records, and types
+- Everything else inherited from erlang-mode
 
-Uses tree-sitter for syntax-highlighting and indentation.
-Other features are inherited from erlang-mode.
+Install the tree-sitter grammar with:
+  M-x erlang-ts-install-grammar
 
-# Install #
-
-Add to your .emacs file:
-
-```
- (add-to-list 'treesit-language-source-alist
-      '(erlang "https://github.com/WhatsApp/tree-sitter-erlang"))
-
- (use-package erlang-ts
-     :mode ("\\.erl\\'" . erlang-ts-mode)
-     :defer 't)
-```
-Install/compile erlang treesitter support (first time or upgrade grammer):
-
-```
-  M-x treesit-install-language-grammar
-  Language: erlang
-```
+See the README for full documentation.
