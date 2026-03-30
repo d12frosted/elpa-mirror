@@ -3,7 +3,6 @@ popup when the mouse hovers over a link.
 
 To use, ensure `eldoc-mouse' is installed, then add the following:
 
-
   (use-package eldoc-mouse :ensure t
     ;; replace <f1> <f1> to a key you like, "C-h ." maybe.
     :bind (:map eldoc-mouse-mode-map
@@ -12,8 +11,7 @@ To use, ensure `eldoc-mouse' is installed, then add the following:
     :hook (eglot-managed-mode emacs-lisp-mode nov-mode))
 
   (use-package eldoc-mouse-nov
-    :ensure nil
-    :load-path "/home/huang/git/eldoc-mouse-nov/"
+    :ensure t
     :after (eldoc-mouse)
     :hook (nov-mode))
 

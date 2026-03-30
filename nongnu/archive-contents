@@ -439,13 +439,13 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "79e47a4099cd4f9144a1636d8353a07b614c0c0a"))])
  (eldoc-mouse-nov
-  . [(0 1) ((emacs (27 1)) (eldoc-mouse (3 0)))
-     "Popup link content for mouse hover" tar
+  . [(0 1 1) ((emacs (27 1)) (eldoc-mouse (3 0 2)) (nov (0 5 0)))
+     "Preview epub link for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse-nov")
       (:keywords "tools" "epub" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "d261396eadb1332cf1b5083e8f11dfbdf630094b"))])
+      (:commit . "2d89026fbc61214fda25d5dd589cd328ddce5f6e"))])
  (elixir-mode
   . [(2 5 0) ((emacs (25))) "Major mode for editing Elixir files" tar
      ((:url . "https://github.com/elixir-editors/emacs-elixir")
