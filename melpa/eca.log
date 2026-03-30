@@ -1,41 +1,47 @@
  • Building package eca (from github:editor-code-assistant/eca-emacs)...
 Updating /mnt/store/melpa/working/eca/
-Checking out 22f14d83ad28d7f8f39529d9a2f35e9e004dd1f3
+Checking out 0a768bd504737318eb039954333e32466397ee81
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eca/
-  to /tmp/eca-cxNq6b/eca-20260327.1632
+  to /tmp/eca-GgOy1l/eca-20260329.2202
     eca-api.el -> eca-api.el
     eca-chat-context.el -> eca-chat-context.el
     eca-chat-expandable.el -> eca-chat-expandable.el
     eca-chat.el -> eca-chat.el
     eca-completion.el -> eca-completion.el
+    eca-config.el -> eca-config.el
     eca-diff.el -> eca-diff.el
     eca-editor.el -> eca-editor.el
     eca-mcp.el -> eca-mcp.el
     eca-process.el -> eca-process.el
+    eca-providers.el -> eca-providers.el
     eca-rewrite.el -> eca-rewrite.el
     eca-settings.el -> eca-settings.el
     eca-table.el -> eca-table.el
     eca-util.el -> eca-util.el
     eca.el -> eca.el
-Created eca-20260327.1632.tar containing:
-  eca-20260327.1632/
-  eca-20260327.1632/eca-api.el
-  eca-20260327.1632/eca-chat-context.el
-  eca-20260327.1632/eca-chat-expandable.el
-  eca-20260327.1632/eca-chat.el
-  eca-20260327.1632/eca-completion.el
-  eca-20260327.1632/eca-diff.el
-  eca-20260327.1632/eca-editor.el
-  eca-20260327.1632/eca-mcp.el
-  eca-20260327.1632/eca-pkg.el
-  eca-20260327.1632/eca-process.el
-  eca-20260327.1632/eca-rewrite.el
-  eca-20260327.1632/eca-settings.el
-  eca-20260327.1632/eca-table.el
-  eca-20260327.1632/eca-util.el
-  eca-20260327.1632/eca.el
+Created eca-20260329.2202.tar containing:
+  eca-20260329.2202/
+  eca-20260329.2202/eca-api.el
+  eca-20260329.2202/eca-chat-context.el
+  eca-20260329.2202/eca-chat-expandable.el
+  eca-20260329.2202/eca-chat.el
+  eca-20260329.2202/eca-completion.el
+  eca-20260329.2202/eca-config.el
+  eca-20260329.2202/eca-diff.el
+  eca-20260329.2202/eca-editor.el
+  eca-20260329.2202/eca-mcp.el
+  eca-20260329.2202/eca-pkg.el
+  eca-20260329.2202/eca-process.el
+  eca-20260329.2202/eca-providers.el
+  eca-20260329.2202/eca-rewrite.el
+  eca-20260329.2202/eca-settings.el
+  eca-20260329.2202/eca-table.el
+  eca-20260329.2202/eca-util.el
+  eca-20260329.2202/eca.el
  ✓ Success:
-  2026-03-29T17:53:47+0000  eca-20260327.1632.entry
-  2026-03-29T17:53:47+0000  eca-20260327.1632.tar
-Built eca in 5.743s, finished at 2026-03-29T17:53:49+0000
+  2026-03-29T21:57:26+0000  eca-20260329.2151.entry
+  2026-03-29T21:57:26+0000  eca-20260329.2151.tar
+  2026-03-30T00:35:30+0000  eca-20260329.2202.entry
+  2026-03-30T00:35:29+0000  eca-20260329.2202.tar
+Built eca in 8.116s, finished at 2026-03-30T00:35:31+0000

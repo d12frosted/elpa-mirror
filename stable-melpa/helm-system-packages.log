@@ -1,29 +1,2 @@
  • Building package helm-system-packages (from github:emacs-helm/helm-system-packages)...
 Updating /mnt/store/melpa/working/helm-system-packages/
-Checking out 35aa6c08bc632d76c066aef0b079f6733219c634
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-system-packages/
-  to /tmp/helm-system-packages-x4FmnZ/helm-system-packages-20260105.509
-    helm-system-packages-brew.el -> helm-system-packages-brew.el
-    helm-system-packages-dnf.el -> helm-system-packages-dnf.el
-    helm-system-packages-dpkg.el -> helm-system-packages-dpkg.el
-    helm-system-packages-guix.el -> helm-system-packages-guix.el
-    helm-system-packages-pacman.el -> helm-system-packages-pacman.el
-    helm-system-packages-portage.el -> helm-system-packages-portage.el
-    helm-system-packages-xbps.el -> helm-system-packages-xbps.el
-    helm-system-packages.el -> helm-system-packages.el
-Created helm-system-packages-20260105.509.tar containing:
-  helm-system-packages-20260105.509/
-  helm-system-packages-20260105.509/helm-system-packages-brew.el
-  helm-system-packages-20260105.509/helm-system-packages-dnf.el
-  helm-system-packages-20260105.509/helm-system-packages-dpkg.el
-  helm-system-packages-20260105.509/helm-system-packages-guix.el
-  helm-system-packages-20260105.509/helm-system-packages-pacman.el
-  helm-system-packages-20260105.509/helm-system-packages-pkg.el
-  helm-system-packages-20260105.509/helm-system-packages-portage.el
-  helm-system-packages-20260105.509/helm-system-packages-xbps.el
-  helm-system-packages-20260105.509/helm-system-packages.el
- ✓ Success:
-  2026-03-29T18:11:44+0000  helm-system-packages-20260105.509.entry
-  2026-03-29T18:11:44+0000  helm-system-packages-20260105.509.tar
-Built helm-system-packages in 5.473s, finished at 2026-03-29T18:11:46+0000

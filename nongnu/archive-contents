@@ -438,6 +438,14 @@
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "79e47a4099cd4f9144a1636d8353a07b614c0c0a"))])
+ (eldoc-mouse-nov
+  . [(0 1) ((emacs (27 1)) (eldoc-mouse (3 0)))
+     "Popup link content for mouse hover" tar
+     ((:url . "https://github.com/huangfeiyu/eldoc-mouse-nov")
+      (:keywords "tools" "epub" "convenience" "mouse" "hover")
+      (:maintainer "Huang Feiyu" . "sibadake1@163.com")
+      (:authors ("Huang Feiyu" . "sibadake1@163.com"))
+      (:commit . "d261396eadb1332cf1b5083e8f11dfbdf630094b"))])
  (elixir-mode
   . [(2 5 0) ((emacs (25))) "Major mode for editing Elixir files" tar
      ((:url . "https://github.com/elixir-editors/emacs-elixir")
@@ -1623,6 +1631,14 @@
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "a9b785d3a3dfd94800d7541353a8a6c7961e209a"))])
+ (selected-window-contrast
+  . [(0 4) ((emacs (26 1))) "Highlight window and cursor at switching"
+     tar
+     ((:url . "https://codeberg.org/Anoncheg/selected-window-contrast")
+      (:keywords "color" "windows" "faces" "buffer" "background")
+      (:maintainer "Anoncheg" . "vitalij@gmx.com")
+      (:authors ("Anoncheg" . "vitalij@gmx.com"))
+      (:commit . "3e675bac6348adfb93e67a8259366dc085c6a49f"))])
  (sesman
   . [(0 3 2) ((emacs (25))) "Generic Session Manager" tar
      ((:url . "https://github.com/vspinu/sesman")
@@ -1657,12 +1673,12 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "4873352b5d0a1c5142658122de1b6950b8fe7e4d"))])
  (solarized-theme
-  . [(2 0 4) ((emacs (24 1))) "The Solarized color theme" tar
+  . [(2 1 0) ((emacs (24 1))) "The Solarized color theme" tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "3fc6c26392ff76f216c2300807e0415cafbbc424"))])
+      (:commit . "0972a0f1471ed67211b7c8918a3c049380050d7b"))])
  (spacemacs-theme
   . [(0 2) ((emacs (24)))
      "Color theme with a dark and light versions." tar
@@ -2028,11 +2044,11 @@
       (:authors ("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
       (:commit . "39e640c037f51602f821721c200ab43b71febc90"))])
  (zenburn-theme
-  . [(2 8 0) nil "A low contrast color theme for Emacs." tar
-     ((:url . "http://github.com/bbatsov/zenburn-emacs")
+  . [(2 9 0) nil "A low contrast color theme for Emacs." tar
+     ((:url . "https://github.com/bbatsov/zenburn-emacs")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com"))
-      (:commit . "8a1f9d28f503615e5d9b3eac59a2f3c14e75fc20"))])
+      (:commit . "1022240b1061369ecb605d55fa074d20d5c84aae"))])
  (zig-mode
   . [(0 0 8) ((emacs (26 1)) (reformatter (0 6)))
      "A major mode for the Zig programming language" tar
