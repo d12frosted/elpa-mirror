@@ -1,9 +1,9 @@
  • Building package erlang (from github:erlang/otp)...
 Updating /mnt/store/melpa/working/erlang/
-Checking out b7dfac8a1bc13f931f953e25610da4e019df414a
+Checking out 4f8b4cdb75867b08b488a29630e81e27fc15b81d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlang-LEjps3/erlang-20260326.1431
+  to /tmp/erlang-80ioEk/erlang-20260330.819
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -13,19 +13,21 @@ Copying files (->) and directories (=>)
   ! lib/tools/emacs/erlang-test.el -> erlang-test.el
   ! lib/tools/emacs/erlang.el -> erlang.el
   ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20260326.1431.tar containing:
-  erlang-20260326.1431/
-  erlang-20260326.1431/erlang-edoc.el
-  erlang-20260326.1431/erlang-eunit.el
-  erlang-20260326.1431/erlang-flymake.el
-  erlang-20260326.1431/erlang-pkg.el
-  erlang-20260326.1431/erlang-skels-old.el
-  erlang-20260326.1431/erlang-skels.el
-  erlang-20260326.1431/erlang-start.el
-  erlang-20260326.1431/erlang-test.el
-  erlang-20260326.1431/erlang.el
-  erlang-20260326.1431/erldoc.el
+Created erlang-20260330.819.tar containing:
+  erlang-20260330.819/
+  erlang-20260330.819/erlang-edoc.el
+  erlang-20260330.819/erlang-eunit.el
+  erlang-20260330.819/erlang-flymake.el
+  erlang-20260330.819/erlang-pkg.el
+  erlang-20260330.819/erlang-skels-old.el
+  erlang-20260330.819/erlang-skels.el
+  erlang-20260330.819/erlang-start.el
+  erlang-20260330.819/erlang-test.el
+  erlang-20260330.819/erlang.el
+  erlang-20260330.819/erldoc.el
  ✓ Success:
-  2026-03-30T03:19:31+0000  erlang-20260326.1431.entry
-  2026-03-30T03:19:31+0000  erlang-20260326.1431.tar
-Built erlang in 12.109s, finished at 2026-03-30T03:19:32+0000
+  2026-03-30T05:59:17+0000  erlang-20260326.1431.entry
+  2026-03-30T05:59:17+0000  erlang-20260326.1431.tar
+  2026-03-30T08:40:33+0000  erlang-20260330.819.entry
+  2026-03-30T08:40:33+0000  erlang-20260330.819.tar
+Built erlang in 13.810s, finished at 2026-03-30T08:40:35+0000
