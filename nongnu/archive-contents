@@ -1632,13 +1632,13 @@
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "a9b785d3a3dfd94800d7541353a8a6c7961e209a"))])
  (selected-window-contrast
-  . [(0 4) ((emacs (26 1))) "Highlight window and cursor at switching"
-     tar
+  . [(0 4 1) ((emacs (26 1)))
+     "Highlight window and cursor at switching" tar
      ((:url . "https://codeberg.org/Anoncheg/selected-window-contrast")
       (:keywords "color" "windows" "faces" "buffer" "background")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "3e675bac6348adfb93e67a8259366dc085c6a49f"))])
+      (:commit . "60779285fa1285e0b70a29a68442835a34d5b348"))])
  (sesman
   . [(0 3 2) ((emacs (25))) "Generic Session Manager" tar
      ((:url . "https://github.com/vspinu/sesman")
