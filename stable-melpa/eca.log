@@ -1,9 +1,9 @@
  • Building package eca (from github:editor-code-assistant/eca-emacs)...
 Updating /mnt/store/melpa/working/eca/
-Checking out 4e867e883cdb7733809a9c5b76c0ca9af022db98
+Checking out b7416d716fe7f93a6238be8e2e0c9e8e211f5d04
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eca/
-  to /tmp/eca-m9jAmw/eca-20260401.1515
+  to /tmp/eca-f7zu3i/eca-20260401.1807
     eca-api.el -> eca-api.el
     eca-chat-context.el -> eca-chat-context.el
     eca-chat-expandable.el -> eca-chat-expandable.el
@@ -20,28 +20,28 @@ Copying files (->) and directories (=>)
     eca-table.el -> eca-table.el
     eca-util.el -> eca-util.el
     eca.el -> eca.el
-Created eca-20260401.1515.tar containing:
-  eca-20260401.1515/
-  eca-20260401.1515/eca-api.el
-  eca-20260401.1515/eca-chat-context.el
-  eca-20260401.1515/eca-chat-expandable.el
-  eca-20260401.1515/eca-chat.el
-  eca-20260401.1515/eca-completion.el
-  eca-20260401.1515/eca-config.el
-  eca-20260401.1515/eca-diff.el
-  eca-20260401.1515/eca-editor.el
-  eca-20260401.1515/eca-mcp.el
-  eca-20260401.1515/eca-pkg.el
-  eca-20260401.1515/eca-process.el
-  eca-20260401.1515/eca-providers.el
-  eca-20260401.1515/eca-rewrite.el
-  eca-20260401.1515/eca-settings.el
-  eca-20260401.1515/eca-table.el
-  eca-20260401.1515/eca-util.el
-  eca-20260401.1515/eca.el
+Created eca-20260401.1807.tar containing:
+  eca-20260401.1807/
+  eca-20260401.1807/eca-api.el
+  eca-20260401.1807/eca-chat-context.el
+  eca-20260401.1807/eca-chat-expandable.el
+  eca-20260401.1807/eca-chat.el
+  eca-20260401.1807/eca-completion.el
+  eca-20260401.1807/eca-config.el
+  eca-20260401.1807/eca-diff.el
+  eca-20260401.1807/eca-editor.el
+  eca-20260401.1807/eca-mcp.el
+  eca-20260401.1807/eca-pkg.el
+  eca-20260401.1807/eca-process.el
+  eca-20260401.1807/eca-providers.el
+  eca-20260401.1807/eca-rewrite.el
+  eca-20260401.1807/eca-settings.el
+  eca-20260401.1807/eca-table.el
+  eca-20260401.1807/eca-util.el
+  eca-20260401.1807/eca.el
  ✓ Success:
-  2026-04-01T12:58:42+0000  eca-20260401.118.entry
-  2026-04-01T12:58:42+0000  eca-20260401.118.tar
   2026-04-01T15:45:55+0000  eca-20260401.1515.entry
   2026-04-01T15:45:55+0000  eca-20260401.1515.tar
-Built eca in 6.305s, finished at 2026-04-01T15:45:56+0000
+  2026-04-01T18:42:04+0000  eca-20260401.1807.entry
+  2026-04-01T18:42:04+0000  eca-20260401.1807.tar
+Built eca in 7.039s, finished at 2026-04-01T18:42:06+0000
