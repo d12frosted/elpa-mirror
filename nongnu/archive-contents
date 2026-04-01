@@ -1208,13 +1208,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "f5d520b3ee7722dd2231ab586ba51d8eb166e49b"))])
  (mastodon
-  . [(2 0 13) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
+  . [(2 0 14) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "0c73a734bfb6082645696eb9f40952ed48a0044d"))])
+      (:commit . "e96a3fce8c2afe6832d6aad95ff38b5633b83169"))])
  (material-theme
   . [(2015) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar
@@ -1929,11 +1929,11 @@
       (:maintainer nil . "viewmail-info@nongnu.org")
       (:commit . "790c95503d8e130f97a68ab502eb5c77f35011c8"))])
  (web-mode
-  . [(17 3 22) ((emacs (23 1))) "major mode for editing web templates"
-     tar
+  . [(17 3 23) ((emacs (24 3 1)))
+     "major mode for editing web templates" tar
      ((:url . "https://web-mode.org") (:keywords "languages")
       (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
-      (:commit . "38013bcec72b93e29ffc3ce7fc7c20e233ea5c01"))])
+      (:commit . "e93b3fb89fd6345a5ff59795bed712abd486200a"))])
  (webpaste
   . [(3 2 2) ((emacs (24 4)) (request (0 2 0)) (cl-lib (0 5)))
      "Paste to pastebin-like services" tar
