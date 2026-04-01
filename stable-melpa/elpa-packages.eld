@@ -3145,6 +3145,7 @@
   (kubedoc :url "https://github.com/r0bobo/kubedoc.el")
   (kubel :url "https://github.com/abrochard/kubel")
   (kubel-evil :url "https://github.com/abrochard/kubel")
+  (kubernetes :url "https://github.com/kubernetes-el/kubernetes-el")
   (kubernetes-evil :url "https://github.com/kubernetes-el/kubernetes-el")
   (kubernetes-helm :url "https://github.com/abrochard/kubernetes-helm")
   (kubernetes-tramp :url "https://github.com/gruggiero/kubernetes-tramp")
