@@ -2,7 +2,7 @@
 A lightweight annotation system for Emacs that allows you to add
 persistent notes to any text file without modifying the original
 content.  Enhanced with threading, collaboration, and org-mode
-integration.  Requires Emacs 28.1+, no external dependencies.
+integration.  Requires Emacs 27.2+, no external dependencies.
 
 Quick Start (use-package):
 
@@ -161,7 +161,7 @@ that can be committed alongside your code:
 ;; Or merge project and global databases (project wins on conflicts)
 (setq simply-annotate-database-strategy 'both)
 
-Project-scoped commands (require project.el, built-in since Emacs 28.1):
+Project-scoped commands (require project.el):
 - <prefix> P   show annotations for the current project (org listing)
 - <prefix> C-t show annotations for the current project (sortable table)
 - <prefix> f   jump to annotated file (project-scoped, C-u for all)
