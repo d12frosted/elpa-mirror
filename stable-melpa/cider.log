@@ -1,9 +1,9 @@
  • Building package cider (from github:clojure-emacs/cider)...
 Updating /mnt/store/melpa/working/cider/
-Checking out edd8177c44550191d9e5f391b77ac9de01371bec
+Checking out a569a5ffd9959b3e7a3ada57884b5c00530cbcb3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cider/
-  to /tmp/cider-gVqEdU/cider-20260312.626
+  to /tmp/cider-os1LHX/cider-20260402.444
   ! lisp/cider-apropos.el -> cider-apropos.el
   ! lisp/cider-browse-ns.el -> cider-browse-ns.el
   ! lisp/cider-browse-spec.el -> cider-browse-spec.el
@@ -45,51 +45,53 @@ Copying files (->) and directories (=>)
   ! lisp/cider.el -> cider.el
   ! lisp/nrepl-client.el -> nrepl-client.el
   ! lisp/nrepl-dict.el -> nrepl-dict.el
-Created cider-20260312.626.tar containing:
-  cider-20260312.626/
-  cider-20260312.626/cider-apropos.el
-  cider-20260312.626/cider-browse-ns.el
-  cider-20260312.626/cider-browse-spec.el
-  cider-20260312.626/cider-cheatsheet.el
-  cider-20260312.626/cider-classpath.el
-  cider-20260312.626/cider-client.el
-  cider-20260312.626/cider-clojuredocs.el
-  cider-20260312.626/cider-common.el
-  cider-20260312.626/cider-completion-context.el
-  cider-20260312.626/cider-completion.el
-  cider-20260312.626/cider-connection.el
-  cider-20260312.626/cider-debug.el
-  cider-20260312.626/cider-doc.el
-  cider-20260312.626/cider-docstring.el
-  cider-20260312.626/cider-eldoc.el
-  cider-20260312.626/cider-eval.el
-  cider-20260312.626/cider-find.el
-  cider-20260312.626/cider-format.el
-  cider-20260312.626/cider-inspector.el
-  cider-20260312.626/cider-jar.el
-  cider-20260312.626/cider-log.el
-  cider-20260312.626/cider-macroexpansion.el
-  cider-20260312.626/cider-mode.el
-  cider-20260312.626/cider-ns.el
-  cider-20260312.626/cider-overlays.el
-  cider-20260312.626/cider-pkg.el
-  cider-20260312.626/cider-popup.el
-  cider-20260312.626/cider-profile.el
-  cider-20260312.626/cider-repl-history.el
-  cider-20260312.626/cider-repl.el
-  cider-20260312.626/cider-resolve.el
-  cider-20260312.626/cider-scratch.el
-  cider-20260312.626/cider-selector.el
-  cider-20260312.626/cider-stacktrace.el
-  cider-20260312.626/cider-test.el
-  cider-20260312.626/cider-tracing.el
-  cider-20260312.626/cider-util.el
-  cider-20260312.626/cider-xref-backend.el
-  cider-20260312.626/cider-xref.el
-  cider-20260312.626/cider.el
-  cider-20260312.626/nrepl-client.el
-  cider-20260312.626/nrepl-dict.el
+Created cider-20260402.444.tar containing:
+  cider-20260402.444/
+  cider-20260402.444/cider-apropos.el
+  cider-20260402.444/cider-browse-ns.el
+  cider-20260402.444/cider-browse-spec.el
+  cider-20260402.444/cider-cheatsheet.el
+  cider-20260402.444/cider-classpath.el
+  cider-20260402.444/cider-client.el
+  cider-20260402.444/cider-clojuredocs.el
+  cider-20260402.444/cider-common.el
+  cider-20260402.444/cider-completion-context.el
+  cider-20260402.444/cider-completion.el
+  cider-20260402.444/cider-connection.el
+  cider-20260402.444/cider-debug.el
+  cider-20260402.444/cider-doc.el
+  cider-20260402.444/cider-docstring.el
+  cider-20260402.444/cider-eldoc.el
+  cider-20260402.444/cider-eval.el
+  cider-20260402.444/cider-find.el
+  cider-20260402.444/cider-format.el
+  cider-20260402.444/cider-inspector.el
+  cider-20260402.444/cider-jar.el
+  cider-20260402.444/cider-log.el
+  cider-20260402.444/cider-macroexpansion.el
+  cider-20260402.444/cider-mode.el
+  cider-20260402.444/cider-ns.el
+  cider-20260402.444/cider-overlays.el
+  cider-20260402.444/cider-pkg.el
+  cider-20260402.444/cider-popup.el
+  cider-20260402.444/cider-profile.el
+  cider-20260402.444/cider-repl-history.el
+  cider-20260402.444/cider-repl.el
+  cider-20260402.444/cider-resolve.el
+  cider-20260402.444/cider-scratch.el
+  cider-20260402.444/cider-selector.el
+  cider-20260402.444/cider-stacktrace.el
+  cider-20260402.444/cider-test.el
+  cider-20260402.444/cider-tracing.el
+  cider-20260402.444/cider-util.el
+  cider-20260402.444/cider-xref-backend.el
+  cider-20260402.444/cider-xref.el
+  cider-20260402.444/cider.el
+  cider-20260402.444/nrepl-client.el
+  cider-20260402.444/nrepl-dict.el
  ✓ Success:
   2026-04-02T02:56:30+0000  cider-20260312.626.entry
   2026-04-02T02:56:30+0000  cider-20260312.626.tar
-Built cider in 6.332s, finished at 2026-04-02T02:56:31+0000
+  2026-04-02T05:43:27+0000  cider-20260402.444.entry
+  2026-04-02T05:43:27+0000  cider-20260402.444.tar
+Built cider in 6.381s, finished at 2026-04-02T05:43:28+0000
