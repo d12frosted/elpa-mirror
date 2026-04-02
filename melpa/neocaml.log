@@ -1,9 +1,10 @@
  • Building package neocaml (from github:bbatsov/neocaml)...
 Updating /mnt/store/melpa/working/neocaml/
-Checking out c7d6be0b3a2b3b22e45faca0c96393dbebdec023
+Checking out c7fdecae07793253f99b27494744c1c8a0d62ebc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/neocaml/
-  to /tmp/neocaml-eUgjO4/neocaml-20260402.531
+  to /tmp/neocaml-X1axjl/neocaml-20260402.1201
+    neocaml-cram.el -> neocaml-cram.el
     neocaml-dune-interaction.el -> neocaml-dune-interaction.el
     neocaml-dune.el -> neocaml-dune.el
     neocaml-menhir.el -> neocaml-menhir.el
@@ -12,20 +13,19 @@ Copying files (->) and directories (=>)
     neocaml-opam.el -> neocaml-opam.el
     neocaml-repl.el -> neocaml-repl.el
     neocaml.el -> neocaml.el
-Created neocaml-20260402.531.tar containing:
-  neocaml-20260402.531/
-  neocaml-20260402.531/neocaml-dune-interaction.el
-  neocaml-20260402.531/neocaml-dune.el
-  neocaml-20260402.531/neocaml-menhir.el
-  neocaml-20260402.531/neocaml-objinfo.el
-  neocaml-20260402.531/neocaml-ocamllex.el
-  neocaml-20260402.531/neocaml-opam.el
-  neocaml-20260402.531/neocaml-pkg.el
-  neocaml-20260402.531/neocaml-repl.el
-  neocaml-20260402.531/neocaml.el
+Created neocaml-20260402.1201.tar containing:
+  neocaml-20260402.1201/
+  neocaml-20260402.1201/neocaml-cram.el
+  neocaml-20260402.1201/neocaml-dune-interaction.el
+  neocaml-20260402.1201/neocaml-dune.el
+  neocaml-20260402.1201/neocaml-menhir.el
+  neocaml-20260402.1201/neocaml-objinfo.el
+  neocaml-20260402.1201/neocaml-ocamllex.el
+  neocaml-20260402.1201/neocaml-opam.el
+  neocaml-20260402.1201/neocaml-pkg.el
+  neocaml-20260402.1201/neocaml-repl.el
+  neocaml-20260402.1201/neocaml.el
  ✓ Success:
-  2026-04-02T03:41:34+0000  neocaml-20260331.1929.entry
-  2026-04-02T03:41:33+0000  neocaml-20260331.1929.tar
-  2026-04-02T06:32:10+0000  neocaml-20260402.531.entry
-  2026-04-02T06:32:10+0000  neocaml-20260402.531.tar
-Built neocaml in 1.686s, finished at 2026-04-02T06:32:10+0000
+  2026-04-02T15:21:46+0000  neocaml-20260402.1201.entry
+  2026-04-02T15:21:45+0000  neocaml-20260402.1201.tar
+Built neocaml in 5.282s, finished at 2026-04-02T15:21:47+0000
