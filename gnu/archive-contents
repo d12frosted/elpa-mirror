@@ -1003,16 +1003,16 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "af6a2a588f72a40212624458278d87f1c769405b"))])
  (eglot
-  . [(1 21)
-     ((emacs (26 3)) (eldoc (1 14 0)) (external-completion (0 1))
-      (flymake (1 4 2)) (jsonrpc (1 0 26)) (project (0 11 2))
-      (seq (2 23)) (xref (1 6 2)))
+  . [(1 22)
+     ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
+      (flymake (1 4 5)) (jsonrpc (1 0 27)) (project (0 11 2))
+      (seq (2 23)) (xref (1 7 0)))
      "The Emacs Client for LSP servers" tar
      ((:url . "https://github.com/joaotavora/eglot")
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "12730179acddc224f0c43a2b8e8a028182d1e40f"))])
+      (:commit . "b93591551eba854967c3484481f6ff21ddfde793"))])
  (el-job
   . [(2 7 4) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
