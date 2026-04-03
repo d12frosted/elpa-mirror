@@ -431,13 +431,13 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (eldoc-mouse
-  . [(3 0 6) ((emacs (27 1)) (posframe (1 4 0)) (eglot (1 8)))
+  . [(3 0 7) ((emacs (27 1)) (posframe (1 4 0)) (eglot (1 8)))
      "Display documentation for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse")
       (:keywords "tools" "languages" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "79e47a4099cd4f9144a1636d8353a07b614c0c0a"))])
+      (:commit . "67bb73e54533e276e35d2548aa30e299c3a5ee18"))])
  (eldoc-mouse-nov
   . [(0 1 1) ((emacs (27 1)) (eldoc-mouse (3 0 2)) (nov (0 5 0)))
      "Preview epub link for mouse hover" tar
@@ -1055,6 +1055,14 @@
      ((:url . "http://github.com/zellio/j-mode")
       (:keywords "j" "languages")
       (:commit . "1365e5a3fe772609685b3787bbd2960331c1a02f"))])
+ (jabber
+  . [(0 10 0) ((emacs (29 1)) (fsm (0 2 0))) "A minimal Jabber client"
+     tar
+     ((:url . "https://git.thanosapollo.org/emacs-jabber")
+      (:keywords "comm")
+      (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
+      (:authors ("Magnus Henoch" . "mange@freemail.hu"))
+      (:commit . "aade6a9e3584b4eccd7a4893e1b5881c3ac1356c"))])
  (jade-mode
   . [(1 0 1) nil "Major mode for editing .jade files" tar
      ((:url . "https://github.com/brianc/jade-mode")
