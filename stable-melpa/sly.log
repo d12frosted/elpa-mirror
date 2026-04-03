@@ -1,9 +1,9 @@
  • Building package sly (from github:joaotavora/sly)...
 Updating /mnt/store/melpa/working/sly/
-Checking out b01993cf1d6626d541998a77dd802483c9687789
+Checking out 759c0ff8741ced8793257f2b7ed95a23e13e1407
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sly/
-  to /tmp/sly-4wHYpI/sly-20251212.0
+  to /tmp/sly-QFb7PO/sly-20260402.2249
     sly.el -> sly.el
   ! doc/contributors.texi -> contributors.texi
   ! doc/sly.texi -> sly.texi
@@ -13,89 +13,89 @@ Copying files (->) and directories (=>)
   ! doc/images => images
 Generating contributors.info
 Generating sly.info
-Created sly-20251212.0.tar containing:
-  sly-20251212.0/
-  sly-20251212.0/contrib/
-  sly-20251212.0/contrib/sly-autodoc.el
-  sly-20251212.0/contrib/sly-fancy-inspector.el
-  sly-20251212.0/contrib/sly-fancy-trace.el
-  sly-20251212.0/contrib/sly-fancy.el
-  sly-20251212.0/contrib/sly-fontifying-fu.el
-  sly-20251212.0/contrib/sly-indentation.el
-  sly-20251212.0/contrib/sly-mrepl.el
-  sly-20251212.0/contrib/sly-package-fu.el
-  sly-20251212.0/contrib/sly-profiler.el
-  sly-20251212.0/contrib/sly-retro.el
-  sly-20251212.0/contrib/sly-scratch.el
-  sly-20251212.0/contrib/sly-stickers.el
-  sly-20251212.0/contrib/sly-trace-dialog.el
-  sly-20251212.0/contrib/sly-tramp.el
-  sly-20251212.0/contrib/slynk-arglists.lisp
-  sly-20251212.0/contrib/slynk-fancy-inspector.lisp
-  sly-20251212.0/contrib/slynk-indentation.lisp
-  sly-20251212.0/contrib/slynk-mrepl.lisp
-  sly-20251212.0/contrib/slynk-package-fu.lisp
-  sly-20251212.0/contrib/slynk-profiler.lisp
-  sly-20251212.0/contrib/slynk-retro.lisp
-  sly-20251212.0/contrib/slynk-stickers.lisp
-  sly-20251212.0/contrib/slynk-trace-dialog.lisp
-  sly-20251212.0/contrib/sylvesters.txt
-  sly-20251212.0/contributors.info
-  sly-20251212.0/dir
-  sly-20251212.0/images/
-  sly-20251212.0/images/stickers-1-placed-stickers.png
-  sly-20251212.0/images/stickers-2-armed-stickers.png
-  sly-20251212.0/images/stickers-3-replay-stickers.png
-  sly-20251212.0/images/stickers-4-breaking-stickers.png
-  sly-20251212.0/images/stickers-5-fetch-recordings.png
-  sly-20251212.0/images/tutorial-1.png
-  sly-20251212.0/images/tutorial-2.png
-  sly-20251212.0/images/tutorial-3.png
-  sly-20251212.0/images/tutorial-4.png
-  sly-20251212.0/images/tutorial-5.png
-  sly-20251212.0/images/tutorial-6.png
-  sly-20251212.0/lib/
-  sly-20251212.0/lib/.nosearch
-  sly-20251212.0/lib/hyperspec.el
-  sly-20251212.0/lib/sly-buttons.el
-  sly-20251212.0/lib/sly-cl-indent.el
-  sly-20251212.0/lib/sly-common.el
-  sly-20251212.0/lib/sly-completion.el
-  sly-20251212.0/lib/sly-messages.el
-  sly-20251212.0/lib/sly-parse.el
-  sly-20251212.0/lib/sly-tests.el
-  sly-20251212.0/sly-pkg.el
-  sly-20251212.0/sly.el
-  sly-20251212.0/sly.info
-  sly-20251212.0/slynk/
-  sly-20251212.0/slynk/backend/
-  sly-20251212.0/slynk/backend/abcl.lisp
-  sly-20251212.0/slynk/backend/allegro.lisp
-  sly-20251212.0/slynk/backend/ccl.lisp
-  sly-20251212.0/slynk/backend/clasp.lisp
-  sly-20251212.0/slynk/backend/clisp.lisp
-  sly-20251212.0/slynk/backend/cmucl.lisp
-  sly-20251212.0/slynk/backend/corman.lisp
-  sly-20251212.0/slynk/backend/ecl.lisp
-  sly-20251212.0/slynk/backend/lispworks.lisp
-  sly-20251212.0/slynk/backend/mkcl.lisp
-  sly-20251212.0/slynk/backend/sbcl.lisp
-  sly-20251212.0/slynk/backend/scl.lisp
-  sly-20251212.0/slynk/metering.lisp
-  sly-20251212.0/slynk/slynk-apropos.lisp
-  sly-20251212.0/slynk/slynk-backend.lisp
-  sly-20251212.0/slynk/slynk-completion.lisp
-  sly-20251212.0/slynk/slynk-gray.lisp
-  sly-20251212.0/slynk/slynk-loader.lisp
-  sly-20251212.0/slynk/slynk-match.lisp
-  sly-20251212.0/slynk/slynk-rpc.lisp
-  sly-20251212.0/slynk/slynk-source-file-cache.lisp
-  sly-20251212.0/slynk/slynk-source-path-parser.lisp
-  sly-20251212.0/slynk/slynk.asd
-  sly-20251212.0/slynk/slynk.lisp
-  sly-20251212.0/slynk/start-slynk.lisp
-  sly-20251212.0/slynk/xref.lisp
+Created sly-20260402.2249.tar containing:
+  sly-20260402.2249/
+  sly-20260402.2249/contrib/
+  sly-20260402.2249/contrib/sly-autodoc.el
+  sly-20260402.2249/contrib/sly-fancy-inspector.el
+  sly-20260402.2249/contrib/sly-fancy-trace.el
+  sly-20260402.2249/contrib/sly-fancy.el
+  sly-20260402.2249/contrib/sly-fontifying-fu.el
+  sly-20260402.2249/contrib/sly-indentation.el
+  sly-20260402.2249/contrib/sly-mrepl.el
+  sly-20260402.2249/contrib/sly-package-fu.el
+  sly-20260402.2249/contrib/sly-profiler.el
+  sly-20260402.2249/contrib/sly-retro.el
+  sly-20260402.2249/contrib/sly-scratch.el
+  sly-20260402.2249/contrib/sly-stickers.el
+  sly-20260402.2249/contrib/sly-trace-dialog.el
+  sly-20260402.2249/contrib/sly-tramp.el
+  sly-20260402.2249/contrib/slynk-arglists.lisp
+  sly-20260402.2249/contrib/slynk-fancy-inspector.lisp
+  sly-20260402.2249/contrib/slynk-indentation.lisp
+  sly-20260402.2249/contrib/slynk-mrepl.lisp
+  sly-20260402.2249/contrib/slynk-package-fu.lisp
+  sly-20260402.2249/contrib/slynk-profiler.lisp
+  sly-20260402.2249/contrib/slynk-retro.lisp
+  sly-20260402.2249/contrib/slynk-stickers.lisp
+  sly-20260402.2249/contrib/slynk-trace-dialog.lisp
+  sly-20260402.2249/contrib/sylvesters.txt
+  sly-20260402.2249/contributors.info
+  sly-20260402.2249/dir
+  sly-20260402.2249/images/
+  sly-20260402.2249/images/stickers-1-placed-stickers.png
+  sly-20260402.2249/images/stickers-2-armed-stickers.png
+  sly-20260402.2249/images/stickers-3-replay-stickers.png
+  sly-20260402.2249/images/stickers-4-breaking-stickers.png
+  sly-20260402.2249/images/stickers-5-fetch-recordings.png
+  sly-20260402.2249/images/tutorial-1.png
+  sly-20260402.2249/images/tutorial-2.png
+  sly-20260402.2249/images/tutorial-3.png
+  sly-20260402.2249/images/tutorial-4.png
+  sly-20260402.2249/images/tutorial-5.png
+  sly-20260402.2249/images/tutorial-6.png
+  sly-20260402.2249/lib/
+  sly-20260402.2249/lib/.nosearch
+  sly-20260402.2249/lib/hyperspec.el
+  sly-20260402.2249/lib/sly-buttons.el
+  sly-20260402.2249/lib/sly-cl-indent.el
+  sly-20260402.2249/lib/sly-common.el
+  sly-20260402.2249/lib/sly-completion.el
+  sly-20260402.2249/lib/sly-messages.el
+  sly-20260402.2249/lib/sly-parse.el
+  sly-20260402.2249/lib/sly-tests.el
+  sly-20260402.2249/sly-pkg.el
+  sly-20260402.2249/sly.el
+  sly-20260402.2249/sly.info
+  sly-20260402.2249/slynk/
+  sly-20260402.2249/slynk/backend/
+  sly-20260402.2249/slynk/backend/abcl.lisp
+  sly-20260402.2249/slynk/backend/allegro.lisp
+  sly-20260402.2249/slynk/backend/ccl.lisp
+  sly-20260402.2249/slynk/backend/clasp.lisp
+  sly-20260402.2249/slynk/backend/clisp.lisp
+  sly-20260402.2249/slynk/backend/cmucl.lisp
+  sly-20260402.2249/slynk/backend/corman.lisp
+  sly-20260402.2249/slynk/backend/ecl.lisp
+  sly-20260402.2249/slynk/backend/lispworks.lisp
+  sly-20260402.2249/slynk/backend/mkcl.lisp
+  sly-20260402.2249/slynk/backend/sbcl.lisp
+  sly-20260402.2249/slynk/backend/scl.lisp
+  sly-20260402.2249/slynk/metering.lisp
+  sly-20260402.2249/slynk/slynk-apropos.lisp
+  sly-20260402.2249/slynk/slynk-backend.lisp
+  sly-20260402.2249/slynk/slynk-completion.lisp
+  sly-20260402.2249/slynk/slynk-gray.lisp
+  sly-20260402.2249/slynk/slynk-loader.lisp
+  sly-20260402.2249/slynk/slynk-match.lisp
+  sly-20260402.2249/slynk/slynk-rpc.lisp
+  sly-20260402.2249/slynk/slynk-source-file-cache.lisp
+  sly-20260402.2249/slynk/slynk-source-path-parser.lisp
+  sly-20260402.2249/slynk/slynk.asd
+  sly-20260402.2249/slynk/slynk.lisp
+  sly-20260402.2249/slynk/start-slynk.lisp
+  sly-20260402.2249/slynk/xref.lisp
  ✓ Success:
-  2026-04-02T18:43:36+0000  sly-20251212.0.entry
-  2026-04-02T18:43:36+0000  sly-20251212.0.tar
-Built sly in 10.844s, finished at 2026-04-02T18:43:37+0000
+  2026-04-03T03:22:10+0000  sly-20260402.2249.entry
+  2026-04-03T03:22:10+0000  sly-20260402.2249.tar
+Built sly in 12.444s, finished at 2026-04-03T03:22:12+0000
