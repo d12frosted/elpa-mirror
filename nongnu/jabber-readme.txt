@@ -6,13 +6,24 @@
 1 About
 ═══════
 
+  <https://elpa.nongnu.org/nongnu/jabber.svg>
+
   `jabber.el' is an [XMPP] client for Emacs.
 
-  ⁃ [Upstream]
-  ⁃ [Codeberg] /Mirror/
+  See the [xmpp.org page] for the full list of supported XEPs.
+
+  ⁃ [Homepage]
+
+  ⁃ Source:
+    ⁃ [Upstream]
+    ⁃ [Codeberg] /Mirror/
 
 
 [XMPP] <http://xmpp.org>
+
+[xmpp.org page] <https://xmpp.org/software/jabber-el/>
+
+[Homepage] <https://thanosapollo.org/projects/jabber/>
 
 [Upstream] <https://git.thanosapollo.org/emacs-jabber/>
 
@@ -37,6 +48,13 @@
 3 Installation
 ══════════════
 
+  `jabber.el' is available via [NonGNU ELPA].
+
+  You can install it via `M-x package-install RET jabber'
+
+
+[NonGNU ELPA] <https://elpa.nongnu.org/nongnu/jabber.html>
+
 3.1 package-vc (Emacs 30+)
 ──────────────────────────
 
@@ -51,6 +69,7 @@
   │   (jabber-account-list '(("user@example.org")))
   │   :config
   │   (jabber-modeline-mode 1)
+  │   :bind-keymap (("C-x C-j" . jabber-global-keymap))
   │   :hook (kill-emacs . jabber-disconnect))
   └────
 
@@ -76,7 +95,7 @@
 ═══════════════
 
   Accounts are configured via `jabber-account-list'.  The simplest form
-  uses auth-source (`~/.authinfo.gpg') for passwords:
+  uses auth-source `~/.authinfo.gpg' for passwords:
 
   ┌────
   │ (setq jabber-account-list '(("user@example.org")
