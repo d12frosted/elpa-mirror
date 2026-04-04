@@ -1,23 +1,39 @@
  • Building package gpr-ts-mode (from github:brownts/gpr-ts-mode)...
 Updating /mnt/store/melpa/working/gpr-ts-mode/
-Checking out b8aeca2c8fd5ed370dad0676da8f380627c916d5
+Checking out cd10a0963b4cf64966bb2e9413d787d83f5494d5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gpr-ts-mode/
-  to /tmp/gpr-ts-mode-lIjm7A/gpr-ts-mode-20250111.1503
-    gpr-ts-casing.el -> gpr-ts-casing.el
+  to /tmp/gpr-ts-mode-2Q7jXH/gpr-ts-mode-20260403.2016
+    gpr-ts-align.el -> gpr-ts-align.el
+    gpr-ts-case.el -> gpr-ts-case.el
+    gpr-ts-common.el -> gpr-ts-common.el
     gpr-ts-completion.el -> gpr-ts-completion.el
+    gpr-ts-imenu.el -> gpr-ts-imenu.el
+    gpr-ts-indent.el -> gpr-ts-indent.el
+    gpr-ts-lspclient-eglot.el -> gpr-ts-lspclient-eglot.el
+    gpr-ts-lspclient-lsp-mode.el -> gpr-ts-lspclient-lsp-mode.el
+    gpr-ts-lspclient.el -> gpr-ts-lspclient.el
     gpr-ts-mode.el -> gpr-ts-mode.el
+    gpr-ts-paren.el -> gpr-ts-paren.el
   ! doc/gpr-ts-mode.texi -> gpr-ts-mode.texi
 Generating gpr-ts-mode.info
-Created gpr-ts-mode-20250111.1503.tar containing:
-  gpr-ts-mode-20250111.1503/
-  gpr-ts-mode-20250111.1503/dir
-  gpr-ts-mode-20250111.1503/gpr-ts-casing.el
-  gpr-ts-mode-20250111.1503/gpr-ts-completion.el
-  gpr-ts-mode-20250111.1503/gpr-ts-mode-pkg.el
-  gpr-ts-mode-20250111.1503/gpr-ts-mode.el
-  gpr-ts-mode-20250111.1503/gpr-ts-mode.info
+Created gpr-ts-mode-20260403.2016.tar containing:
+  gpr-ts-mode-20260403.2016/
+  gpr-ts-mode-20260403.2016/dir
+  gpr-ts-mode-20260403.2016/gpr-ts-align.el
+  gpr-ts-mode-20260403.2016/gpr-ts-case.el
+  gpr-ts-mode-20260403.2016/gpr-ts-common.el
+  gpr-ts-mode-20260403.2016/gpr-ts-completion.el
+  gpr-ts-mode-20260403.2016/gpr-ts-imenu.el
+  gpr-ts-mode-20260403.2016/gpr-ts-indent.el
+  gpr-ts-mode-20260403.2016/gpr-ts-lspclient-eglot.el
+  gpr-ts-mode-20260403.2016/gpr-ts-lspclient-lsp-mode.el
+  gpr-ts-mode-20260403.2016/gpr-ts-lspclient.el
+  gpr-ts-mode-20260403.2016/gpr-ts-mode-pkg.el
+  gpr-ts-mode-20260403.2016/gpr-ts-mode.el
+  gpr-ts-mode-20260403.2016/gpr-ts-mode.info
+  gpr-ts-mode-20260403.2016/gpr-ts-paren.el
  ✓ Success:
-  2026-04-03T19:49:20+0000  gpr-ts-mode-20250111.1503.entry
-  2026-04-03T19:49:20+0000  gpr-ts-mode-20250111.1503.tar
-Built gpr-ts-mode in 6.485s, finished at 2026-04-03T19:49:22+0000
+  2026-04-04T07:06:18+0000  gpr-ts-mode-20260403.2016.entry
+  2026-04-04T07:06:18+0000  gpr-ts-mode-20260403.2016.tar
+Built gpr-ts-mode in 6.134s, finished at 2026-04-04T07:06:19+0000
