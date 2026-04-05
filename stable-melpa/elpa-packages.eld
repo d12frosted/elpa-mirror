@@ -2943,7 +2943,6 @@
   (iwd-manager :url "https://github.com/sarg/wifi-manager")
   (ix :url "https://github.com/theanalyst/ix.el")
   (j-mode :url "https://github.com/zellio/j-mode")
-  (jabber :url "https://codeberg.org/emacs-jabber/emacs-jabber")
   (jack :url "https://github.com/tonyaldon/jack")
   (jack-connect :url "https://bitbucket.org/sbarbit/jack-connect")
   (jack-ts-mode :url "https://github.com/nverno/jack-ts-mode")
