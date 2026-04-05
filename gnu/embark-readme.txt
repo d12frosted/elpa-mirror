@@ -4,9 +4,6 @@
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-
-
-
 1 Overview
 ══════════
 
@@ -405,19 +402,21 @@
   │   ;; (add-hook 'eldoc-documentation-functions #'embark-eldoc-first-target)
   │   ;; (setq eldoc-documentation-strategy #'eldoc-documentation-compose-eagerly)
   │ 
+  │   ;; Add Embark to the mouse context menu. Also enable `context-menu-mode'.
+  │   ;; (context-menu-mode 1)
+  │   ;; (add-hook 'context-menu-functions #'embark-context-menu 100)
+  │ 
   │   :config
   │ 
   │   ;; Hide the mode line of the Embark live/completions buffers
   │   (add-to-list 'display-buffer-alist
-  │ 	       '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
-  │ 		 nil
-  │ 		 (window-parameters (mode-line-format . none)))))
+  │                '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
+  │                  nil
+  │                  (window-parameters (mode-line-format . none)))))
   │ 
   │ ;; Consult users will also want the embark-consult package.
   │ (use-package embark-consult
-  │   :ensure t ; only need to install it, embark loads it after consult if found
-  │   :hook
-  │   (embark-collect-mode . consult-preview-at-point-mode))
+  │   :ensure t) ; only need to install it, embark loads it after consult if found
   └────
 
   About the suggested key bindings for `embark-act' and `embark-dwim':
@@ -428,8 +427,8 @@
     installations of) GNOME to input emojis, and Emacs doesn't even get
     a chance to respond to the binding. You can select a different key
     binding for `embark-act' or use `ibus-setup' to change the shortcut
-    for emoji insertion (Emacs 29 will likely use `C-x 8 e e', in case
-    you want to set the same one system-wide).
+    for emoji insertion (Emacs 29 uses `C-x 8 e e', in case you want to
+    set the same one system-wide).
   • The suggested alternative of `M-.' for `embark-dwim' is bound by
     default to `xref-find-definitions'. That is a very useful command
     but overwriting it with `embark-dwim' is sensible since in Embark's
@@ -574,8 +573,8 @@
   ┌────
   │ (setq embark-indicators
   │       '(embark-minimal-indicator  ; default is embark-mixed-indicator
-  │ 	embark-highlight-indicator
-  │ 	embark-isearch-highlight-indicator))
+  │         embark-highlight-indicator
+  │         embark-isearch-highlight-indicator))
   └────
 
   [Vertico] users may wish to configure a grid display for the actions
@@ -680,7 +679,19 @@
   └────
 
 
-3.4 Running some setup after injecting the target
+3.4 Recording acted-on minibuffer candidates in minibuffer history
+──────────────────────────────────────────────────────────────────
+
+  Confirming minibuffer input with `RET' records the selected candidate
+  in the appropriate history list.  The user option
+  `embark-record-minibuffer-history' controls how Embark records
+  acted-on candidates.  This option accepts three kinds of values: `t'
+  (always record), `nil' (never record), or `(skip ACTIONS...)' to
+  record for everything except the listed actions.  The default is a
+  `skip' form that excludes meta commands such as `embark-export'.
+
+
+3.5 Running some setup after injecting the target
 ─────────────────────────────────────────────────
 
   You can customize what happens after the target is inserted at the
@@ -750,7 +761,7 @@
   entered at that prompt!
 
 
-3.5 Running hooks before, after or around an action
+3.6 Running hooks before, after or around an action
 ───────────────────────────────────────────────────
 
   Embark has three variables, `embark-pre-action-hooks',
@@ -848,7 +859,7 @@
         configuration doesn't use this but it is available for users.
 
 
-3.6 Creating your own keymaps
+3.7 Creating your own keymaps
 ─────────────────────────────
 
   All internal keymaps are defined with the standard helper macro
@@ -870,7 +881,7 @@
   are also made available via `embark-general-map'.
 
 
-3.7 Defining actions for new categories of targets
+3.8 Defining actions for new categories of targets
 ──────────────────────────────────────────────────
 
   It is easy to configure Embark to provide actions for new types of
@@ -881,10 +892,10 @@
   similar situations where the easiest option is not available.
 
 
-3.7.1 New minibuffer target example - tab-bar tabs
+3.8.1 New minibuffer target example - tab-bar tabs
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  As an example, take the new [tab bars] from Emacs 27. I'll explain how
+  As an example let us take a look at the [tab bars]. I'll explain how
   to configure Embark to offer tab-specific actions when you use the
   tab-bar-mode commands that mention tabs by name. The configuration
   explained here is now built-in to Embark (and Marginalia), but it's
@@ -897,7 +908,7 @@
 [tab bars]
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Tab-Bars.html>
 
-◊ 3.7.1.1 Telling Embark about commands that prompt for tabs by name
+◊ 3.8.1.1 Telling Embark about commands that prompt for tabs by name
 
   For step (1), it would be great if the `tab-bar-mode' commands
   reported the completion category `tab' when asking you for a tab with
@@ -924,15 +935,15 @@
   │   (interactive
   │    (list
   │     (let ((tab-list (or (mapcar (lambda (tab) (cdr (assq 'name tab)))
-  │ 				(tab-bar-tabs))
-  │ 			(user-error "No tabs found"))))
+  │                                 (tab-bar-tabs))
+  │                         (user-error "No tabs found"))))
   │       (completing-read
   │        "Tabs: "
   │        (lambda (string predicate action)
-  │ 	 (if (eq action 'metadata)
-  │ 	     '(metadata (category . tab))
-  │ 	   (complete-with-action
-  │ 	    action tab-list string predicate)))))))
+  │          (if (eq action 'metadata)
+  │              '(metadata (category . tab))
+  │            (complete-with-action
+  │             action tab-list string predicate)))))))
   │   (tab-bar-select-tab-by-name tab))
   └────
 
@@ -947,11 +958,11 @@
   │   (interactive
   │    (list
   │     (let ((tab-list (or (mapcar (lambda (tab) (cdr (assq 'name tab)))
-  │ 				(tab-bar-tabs))
-  │ 			(user-error "No tabs found"))))
+  │                                 (tab-bar-tabs))
+  │                         (user-error "No tabs found"))))
   │       (consult--read tab-list
-  │ 		     :prompt "Tabs: "
-  │ 		     :category 'tab))))
+  │                      :prompt "Tabs: "
+  │                      :category 'tab))))
   │   (tab-bar-select-tab-by-name tab))
   └────
 
@@ -967,7 +978,7 @@
   [Consult] <https://github.com/minad/consult/>
 
 
-◊ 3.7.1.2 Defining and configuring a keymap for tab actions
+◊ 3.8.1.2 Defining and configuring a keymap for tab actions
 
   Let's say we want to offer select, rename and close actions for tabs
   (in addition to Embark general actions, such as saving the tab name to
@@ -992,7 +1003,7 @@
      ┌────
      │ (push #'embark--confirm
      │       (alist-get 'tab-bar-close-tab-by-name
-     │ 		 embark-pre-action-hooks))
+     │                  embark-pre-action-hooks))
      └────
 
   2. You can write your own command that prompts for confirmation and
@@ -1011,7 +1022,7 @@
      You can fix this if you wish as described in the previous section.
 
 
-3.7.2 New target example in regular buffers - short Wikipedia links
+3.8.2 New target example in regular buffers - short Wikipedia links
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Say you want to teach Embark to treat text of the form
@@ -1040,14 +1051,14 @@
   │   "Target a link at point of the form wikipedia:Page_Name."
   │   (save-excursion
   │     (let* ((start (progn (skip-chars-backward "[:alnum:]_:") (point)))
-  │ 	   (end (progn (skip-chars-forward "[:alnum:]_:") (point)))
-  │ 	   (str (buffer-substring-no-properties start end)))
+  │            (end (progn (skip-chars-forward "[:alnum:]_:") (point)))
+  │            (str (buffer-substring-no-properties start end)))
   │       (save-match-data
-  │ 	(when (string-match "wikipedia:\\([[:alnum:]_]+\\)" str)
-  │ 	  `(url
-  │ 	    ,(format "https://en.wikipedia.org/wiki/%s"
-  │ 		     (match-string 1 str))
-  │ 	    ,start . ,end))))))
+  │         (when (string-match "wikipedia:\\([[:alnum:]_]+\\)" str)
+  │           `(url
+  │             ,(format "https://en.wikipedia.org/wiki/%s"
+  │                      (match-string 1 str))
+  │             ,start . ,end))))))
   │ 
   │ (add-to-list 'embark-target-finders 'my-short-wikipedia-link)
   └────
@@ -1086,14 +1097,14 @@
   commands). It also allows you to write new custom actions in such a
   way that they are useful even without Embark.
 
-  Staring from version 28.1, Emacs has a variable
-  `y-or-n-p-use-read-key', which when set to `t' causes `y-or-n-p' to
-  use `read-key' instead of `read-from-minibuffer'. Setting
-  `y-or-n-p-use-read-key' to `t' is recommended for Embark users because
-  it keeps Embark from attempting to insert the target at a `y-or-n-p'
-  prompt, which would almost never be sensible. Also consider this as a
-  warning to structure your own action commands so that if they use
-  `y-or-n-p', they do so only after the prompting for the target.
+  Emacs has a variable `y-or-n-p-use-read-key', which when set to `t'
+  causes `y-or-n-p' to use `read-key' instead of `read-from-minibuffer'.
+  Setting `y-or-n-p-use-read-key' to `t' is recommended for Embark users
+  because it keeps Embark from attempting to insert the target at a
+  `y-or-n-p' prompt, which would almost never be sensible. Also consider
+  this as a warning to structure your own action commands so that if
+  they use `y-or-n-p', they do so only after the prompting for the
+  target.
 
   Here is a simple example illustrating the various ways of reading
   input from the user mentioned above. Bind the following commands to
@@ -1108,14 +1119,14 @@
   │ (defun example-action-command2 (arg input1 input2)
   │   (interactive "P\nsInput 1: \nsInput 2: ")
   │   (message "The first input %swas `%s', and the second was `%s'."
-  │ 	   (if arg "truly " "")
-  │ 	   input1
-  │ 	   input2))
+  │            (if arg "truly " "")
+  │            input1
+  │            input2))
   │ 
   │ (defun example-action-command3 ()
   │   (interactive)
   │   (message "Your selection was `%s'."
-  │ 	   (completing-read "Select: " '("E" "M" "B" "A" "R" "K"))))
+  │            (completing-read "Select: " '("E" "M" "B" "A" "R" "K"))))
   │ 
   │ (defun example-action-command4 ()
   │   (interactive)

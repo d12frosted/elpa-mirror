@@ -1084,13 +1084,13 @@
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
       (:commit . "a2c2c167837cef08a1b8f86f5eb9864f93699300"))])
  (embark
-  . [(1 1) ((emacs (27 1)) (compat (29 1 4 0)))
+  . [(1 2) ((emacs (29 1)) (compat (30)))
      "Conveniently act on minibuffer completions" tar
      ((:url . "https://github.com/oantolin/embark")
       (:keywords "convenience")
       (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-      (:commit . "195add1f1ccd1059472c9df7334c97c4d155425e"))])
+      (:commit . "27de48004242e98586b9c9661fdb6912f26fe70f"))])
  (embark-consult
   . [(1 1)
      ((emacs (27 1)) (compat (29 1 4 0)) (embark (1 0))
