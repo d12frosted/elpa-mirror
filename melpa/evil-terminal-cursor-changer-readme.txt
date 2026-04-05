@@ -1,39 +1,21 @@
-[![MELPA](http://melpa.org/packages/evil-terminal-cursor-changer-badge.svg)](http://melpa.org/#/evil-terminal-cursor-changer)
 
-## Introduce ##
+Change cursor shape and color when running Emacs in a terminal.
+Works with any package that sets `cursor-type' (evil, meow, etc.)
+or standalone.
 
-evil-terminal-cursor-changer is changing cursor shape and color by evil state for evil-mode.
+Usage:
 
-When running in terminal, It's especially helpful to recognize evil's state.
+  (unless (display-graphic-p)
+    (require 'evil-terminal-cursor-changer)
+    (etcc-on))
 
-## Install ##
+With evil-mode, it works out of the box since evil sets `cursor-type'
+per state.  Without evil, just set `cursor-type' directly:
 
-1. Config melpa: http://melpa.org/#/getting-started
+  (setq cursor-type 'bar)   ; ⎸
+  (setq cursor-type 'box)   ; █
+  (setq cursor-type 'hbar)  ; _
 
-2. M-x package-install RET evil-terminal-cursor-changer RET
-
-3. Add code to your emacs config file:（for example: ~/.emacs）：
-
-     (unless (display-graphic-p)
-             (require 'evil-terminal-cursor-changer)
-             (evil-terminal-cursor-changer-activate) ; or (etcc-on)
-             )
-
-If want change cursor shape type, add below line. This is evil's setting.
-
-     (setq evil-motion-state-cursor 'box)  ; █
-     (setq evil-visual-state-cursor 'box)  ; █
-     (setq evil-normal-state-cursor 'box)  ; █
-     (setq evil-insert-state-cursor 'bar)  ; ⎸
-     (setq evil-emacs-state-cursor  'hbar) ; _
-
-Now, works in XTerm, Gnome Terminal(Gnome Desktop), iTerm(Mac OS
-X), Konsole(KDE Desktop), dumb(etc. mintty), Apple
-Terminal.app(restrictive supporting). If using Apple Terminal.app,
-must install SIMBL(http://www.culater.net/software/SIMBL/SIMBL.php)
-and MouseTerm
-plus(https://github.com/saitoha/mouseterm-plus/releases) to use
-evil-terminal-cursor-changer. That makes to support VT's DECSCUSR
-sequence.
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Supported terminals: xterm, iTerm2, Kitty, Konsole, Apple Terminal,
+Alacritty, WezTerm, Windows Terminal, foot, Ghostty, Hyper, Rio,
+Tabby, dumb (mintty, etc.), and anything supporting DECSCUSR sequences.

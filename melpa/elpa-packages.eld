@@ -4055,6 +4055,7 @@
   (org-drawio :url "https://github.com/kimim/org-drawio")
   (org-drill :url "https://gitlab.com/phillord/org-drill")
   (org-dropbox :url "https://github.com/heikkil/org-dropbox")
+  (org-dt :url "https://codeberg.org/niqc/org-dynamic-templates")
   (org-easy-img-insert :url "https://github.com/my7h3le/org-easy-img-insert")
   (org-edit-indirect :url "https://github.com/agzam/org-edit-indirect.el")
   (org-edit-latex :url "https://github.com/et2010/org-edit-latex")
