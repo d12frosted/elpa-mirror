@@ -153,7 +153,23 @@
      the provider.  This is also defaulted to "unset".
 
 
-3.3 Azure's Open AI
+3.3 OpenRouter
+──────────────
+
+  [OpenRouter] is a popular router for different models with an Open AI
+  compatible API.  This is defined in the `llm-openai' module.
+  Configure it with the following parameters:
+  1) `:chat-model': The chat model, or list of chat models, prefixed by
+     provider. If this is a list, it will enable OpenRouter's ability to
+     do fallbacks.
+  2) `:embedding-model': An embedding model name that is supported by
+     the provider.  This is also defaulted to "unset".
+
+
+[OpenRouter] <https://openrouter.ai/>
+
+
+3.4 Azure's Open AI
 ───────────────────
 
   Microsoft Azure has an Open AI integration, although it doesn't
@@ -167,7 +183,7 @@
     Azure.
 
 
-3.4 GitHub Models
+3.5 GitHub Models
 ─────────────────
 
   GitHub now has its own platform for interacting with AI models.  For a
@@ -186,7 +202,7 @@
 <https://github.com/marketplace?type=models&task=Embeddings>
 
 
-3.5 Gemini (not via Google Cloud)
+3.6 Gemini (not via Google Cloud)
 ─────────────────────────────────
 
   This is Google's AI model.  You can get an API key via their [page on
@@ -205,7 +221,7 @@
 [list] <https://ai.google.dev/models>
 
 
-3.6 Vertex (Gemini via Google Cloud)
+3.7 Vertex (Gemini via Google Cloud)
 ────────────────────────────────────
 
   This is mostly for those who want to use Google Cloud specifically,
@@ -243,7 +259,7 @@
 <https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings#supported_models>
 
 
-3.7 Claude
+3.8 Claude
 ──────────
 
   [Claude] is Anthropic's large language model.  It does not support
@@ -261,7 +277,7 @@
 [Claude models] <https://docs.anthropic.com/claude/docs/models-overview>
 
 
-3.8 Ollama
+3.9 Ollama
 ──────────
 
   [Ollama] is a way to run large language models locally. There are
@@ -289,8 +305,8 @@
 [some models] <https://ollama.com/search?q=&c=embedding>
 
 
-3.9 Ollama (authed)
-───────────────────
+3.10 Ollama (authed)
+────────────────────
 
   This is a variant of the Ollama provider, which is set up with the
   same parameters plus:
@@ -299,7 +315,7 @@
   The key is used to send a standard `Authentication' header.
 
 
-3.10 Deepseek
+3.11 Deepseek
 ─────────────
 
   [Deepseek] is a company offers both reasoning and chat high-quality
@@ -318,7 +334,7 @@
 [model list.] <https://api-docs.deepseek.com/quick_start/pricing>
 
 
-3.11 GPT4All
+3.12 GPT4All
 ────────────
 
   [GPT4All] is a way to run large language models locally.  To use it
@@ -338,7 +354,7 @@
 [GPT4All] <https://gpt4all.io/index.html>
 
 
-3.12 llama.cpp
+3.13 llama.cpp
 ──────────────
 
   [llama.cpp] is a way to run large language models locally.  To use it
@@ -357,7 +373,7 @@
 [llama.cpp] <https://github.com/ggerganov/llama.cpp>
 
 
-3.13 Fake
+3.14 Fake
 ─────────
 
   This is a client that makes no call, but it just there for testing and
@@ -550,6 +566,12 @@
   • `:tool-uses', the tools that the llm identified to be called, as a
     list of plists, with `:name' and `:args' values.
   • `:tool-results', the results of calling the tools.
+  • `:input-tokens', the number of input tokens, when available
+  • `:output-tokens', the number of output tokens, when available
+
+  The input and output token counts should be consistently available
+  per-provider, but not all providers support output tokens, and some
+  don't support either.
 
 
 6.1.2 JSON schema
