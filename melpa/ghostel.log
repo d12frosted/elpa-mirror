@@ -1,0 +1,30 @@
+ • Building package ghostel (from github:dakra/ghostel)...
+Cloning https://github.com/dakra/ghostel to /mnt/store/melpa/working/ghostel/
+Checking out 416cf7aea4e4c69c0f0eb5b4b19ea693865691e9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ghostel/
+  to /tmp/ghostel-ZQSac5/ghostel-20260405.2019
+    ghostel-debug.el -> ghostel-debug.el
+    ghostel.el -> ghostel.el
+    etc => etc
+Created ghostel-20260405.2019.tar containing:
+  ghostel-20260405.2019/
+  ghostel-20260405.2019/etc/
+  ghostel-20260405.2019/etc/ghostel.bash
+  ghostel-20260405.2019/etc/ghostel.fish
+  ghostel-20260405.2019/etc/ghostel.zsh
+  ghostel-20260405.2019/etc/shell-integration/
+  ghostel-20260405.2019/etc/shell-integration/bash/
+  ghostel-20260405.2019/etc/shell-integration/bash/ghostel-inject.bash
+  ghostel-20260405.2019/etc/shell-integration/fish/
+  ghostel-20260405.2019/etc/shell-integration/fish/vendor_conf.d/
+  ghostel-20260405.2019/etc/shell-integration/fish/vendor_conf.d/ghostel-integration.fish
+  ghostel-20260405.2019/etc/shell-integration/zsh/
+  ghostel-20260405.2019/etc/shell-integration/zsh/.zshenv
+  ghostel-20260405.2019/ghostel-debug.el
+  ghostel-20260405.2019/ghostel-pkg.el
+  ghostel-20260405.2019/ghostel.el
+ ✓ Success:
+  2026-04-05T23:47:59+0000  ghostel-20260405.2019.entry
+  2026-04-05T23:47:59+0000  ghostel-20260405.2019.tar
+Built ghostel in 3.708s, finished at 2026-04-05T23:48:00+0000
