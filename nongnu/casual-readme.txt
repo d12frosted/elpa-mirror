@@ -1,5 +1,6 @@
 [file:https://melpa.org/packages/casual-badge.svg]
 [file:https://stable.melpa.org/packages/casual-badge.svg]
+[file:https://elpa.nongnu.org/nongnu/casual.svg]
 
 
 [file:https://melpa.org/packages/casual-badge.svg]
@@ -7,6 +8,9 @@
 
 [file:https://stable.melpa.org/packages/casual-badge.svg]
 <https://stable.melpa.org/#/casual>
+
+[file:https://elpa.nongnu.org/nongnu/casual.svg]
+<https://elpa.nongnu.org/nongnu/casual.html>
 
 
 1 Casual
@@ -50,7 +54,7 @@
 2 Requirements
 ══════════════
 
-  Casual requires Emacs 29.1+, Transient 0.9.0+, csv-mode 1.27+.
+  Casual requires Emacs 30.1+, Transient 0.9.0+, csv-mode 1.27+.
 
   Certain menus require more installed software:
 
