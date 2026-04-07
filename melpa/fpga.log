@@ -1,9 +1,9 @@
  • Building package fpga (from github:gmlarumbe/fpga)...
 Updating /mnt/store/melpa/working/fpga/
-Checking out 48ec1572ab3c96cbc20d0c542cfe56124e05d48b
+Checking out 6b22e9e034411a03e574b00377ce0bcf5dafb1d3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fpga/
-  to /tmp/fpga-z94PBI/fpga-20251119.2304
+  to /tmp/fpga-lxaahp/fpga-20260407.1246
     fpga-altera.el -> fpga-altera.el
     fpga-cadence.el -> fpga-cadence.el
     fpga-lattice.el -> fpga-lattice.el
@@ -13,19 +13,21 @@ Copying files (->) and directories (=>)
     fpga-xilinx.el -> fpga-xilinx.el
     fpga-yosys.el -> fpga-yosys.el
     fpga.el -> fpga.el
-Created fpga-20251119.2304.tar containing:
-  fpga-20251119.2304/
-  fpga-20251119.2304/fpga-altera.el
-  fpga-20251119.2304/fpga-cadence.el
-  fpga-20251119.2304/fpga-lattice.el
-  fpga-20251119.2304/fpga-pkg.el
-  fpga-20251119.2304/fpga-siemens.el
-  fpga-20251119.2304/fpga-synopsys.el
-  fpga-20251119.2304/fpga-utils.el
-  fpga-20251119.2304/fpga-xilinx.el
-  fpga-20251119.2304/fpga-yosys.el
-  fpga-20251119.2304/fpga.el
+Created fpga-20260407.1246.tar containing:
+  fpga-20260407.1246/
+  fpga-20260407.1246/fpga-altera.el
+  fpga-20260407.1246/fpga-cadence.el
+  fpga-20260407.1246/fpga-lattice.el
+  fpga-20260407.1246/fpga-pkg.el
+  fpga-20260407.1246/fpga-siemens.el
+  fpga-20260407.1246/fpga-synopsys.el
+  fpga-20260407.1246/fpga-utils.el
+  fpga-20260407.1246/fpga-xilinx.el
+  fpga-20260407.1246/fpga-yosys.el
+  fpga-20260407.1246/fpga.el
  ✓ Success:
   2026-04-07T10:25:51+0000  fpga-20251119.2304.entry
   2026-04-07T10:25:51+0000  fpga-20251119.2304.tar
-Built fpga in 2.826s, finished at 2026-04-07T10:25:52+0000
+  2026-04-07T13:36:55+0000  fpga-20260407.1246.entry
+  2026-04-07T13:36:55+0000  fpga-20260407.1246.tar
+Built fpga in 3.560s, finished at 2026-04-07T13:36:56+0000
