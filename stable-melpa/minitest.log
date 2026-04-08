@@ -1,90 +1,36 @@
  • Building package minitest (from sourcehut:shoshin/minitest-emacs)...
 Updating /mnt/store/melpa/working/minitest/
-Checking out d278e94fb1874c584699e1d6fa1b34224c1f8550
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/minitest/
-  to /tmp/minitest-lnkNSu/minitest-20250803.49
-    minitest.el -> minitest.el
-    snippets => snippets
-Created minitest-20250803.49.tar containing:
-  minitest-20250803.49/
-  minitest-20250803.49/minitest-pkg.el
-  minitest-20250803.49/minitest.el
-  minitest-20250803.49/snippets/
-  minitest-20250803.49/snippets/minitest-mode/
-  minitest-20250803.49/snippets/minitest-mode/assert
-  minitest-20250803.49/snippets/minitest-mode/assert_empty
-  minitest-20250803.49/snippets/minitest-mode/assert_empty_p
-  minitest-20250803.49/snippets/minitest-mode/assert_equal
-  minitest-20250803.49/snippets/minitest-mode/assert_equal_p
-  minitest-20250803.49/snippets/minitest-mode/assert_in_delta
-  minitest-20250803.49/snippets/minitest-mode/assert_in_delta_p
-  minitest-20250803.49/snippets/minitest-mode/assert_in_epsilon
-  minitest-20250803.49/snippets/minitest-mode/assert_in_epsilon_p
-  minitest-20250803.49/snippets/minitest-mode/assert_includes
-  minitest-20250803.49/snippets/minitest-mode/assert_includes_p
-  minitest-20250803.49/snippets/minitest-mode/assert_instance_of
-  minitest-20250803.49/snippets/minitest-mode/assert_instance_of_p
-  minitest-20250803.49/snippets/minitest-mode/assert_kind_of
-  minitest-20250803.49/snippets/minitest-mode/assert_kind_of_p
-  minitest-20250803.49/snippets/minitest-mode/assert_match
-  minitest-20250803.49/snippets/minitest-mode/assert_match_p
-  minitest-20250803.49/snippets/minitest-mode/assert_nil
-  minitest-20250803.49/snippets/minitest-mode/assert_nil_p
-  minitest-20250803.49/snippets/minitest-mode/assert_operator
-  minitest-20250803.49/snippets/minitest-mode/assert_operator_p
-  minitest-20250803.49/snippets/minitest-mode/assert_output
-  minitest-20250803.49/snippets/minitest-mode/assert_output_p
-  minitest-20250803.49/snippets/minitest-mode/assert_p
-  minitest-20250803.49/snippets/minitest-mode/assert_predicate
-  minitest-20250803.49/snippets/minitest-mode/assert_predicate_p
-  minitest-20250803.49/snippets/minitest-mode/assert_raises
-  minitest-20250803.49/snippets/minitest-mode/assert_raises_p
-  minitest-20250803.49/snippets/minitest-mode/assert_respond_to
-  minitest-20250803.49/snippets/minitest-mode/assert_respond_to_p
-  minitest-20250803.49/snippets/minitest-mode/assert_same
-  minitest-20250803.49/snippets/minitest-mode/assert_same_p
-  minitest-20250803.49/snippets/minitest-mode/assert_send
-  minitest-20250803.49/snippets/minitest-mode/assert_send_p
-  minitest-20250803.49/snippets/minitest-mode/assert_silent
-  minitest-20250803.49/snippets/minitest-mode/assert_silent_p
-  minitest-20250803.49/snippets/minitest-mode/assert_throws
-  minitest-20250803.49/snippets/minitest-mode/assert_throws_p
-  minitest-20250803.49/snippets/minitest-mode/flunk
-  minitest-20250803.49/snippets/minitest-mode/flunk_p
-  minitest-20250803.49/snippets/minitest-mode/pass
-  minitest-20250803.49/snippets/minitest-mode/pass_p
-  minitest-20250803.49/snippets/minitest-mode/refute
-  minitest-20250803.49/snippets/minitest-mode/refute_empty
-  minitest-20250803.49/snippets/minitest-mode/refute_empty_p
-  minitest-20250803.49/snippets/minitest-mode/refute_equal
-  minitest-20250803.49/snippets/minitest-mode/refute_equal_p
-  minitest-20250803.49/snippets/minitest-mode/refute_in_delta
-  minitest-20250803.49/snippets/minitest-mode/refute_in_delta_p
-  minitest-20250803.49/snippets/minitest-mode/refute_in_epsilon
-  minitest-20250803.49/snippets/minitest-mode/refute_in_epsilon_p
-  minitest-20250803.49/snippets/minitest-mode/refute_includes
-  minitest-20250803.49/snippets/minitest-mode/refute_includes_p
-  minitest-20250803.49/snippets/minitest-mode/refute_instance_of
-  minitest-20250803.49/snippets/minitest-mode/refute_instance_of_p
-  minitest-20250803.49/snippets/minitest-mode/refute_kind_of
-  minitest-20250803.49/snippets/minitest-mode/refute_kind_of_p
-  minitest-20250803.49/snippets/minitest-mode/refute_match
-  minitest-20250803.49/snippets/minitest-mode/refute_match_p
-  minitest-20250803.49/snippets/minitest-mode/refute_nil
-  minitest-20250803.49/snippets/minitest-mode/refute_nil_p
-  minitest-20250803.49/snippets/minitest-mode/refute_operator
-  minitest-20250803.49/snippets/minitest-mode/refute_operator_p
-  minitest-20250803.49/snippets/minitest-mode/refute_p
-  minitest-20250803.49/snippets/minitest-mode/refute_predicate
-  minitest-20250803.49/snippets/minitest-mode/refute_predicate_p
-  minitest-20250803.49/snippets/minitest-mode/refute_respond_to
-  minitest-20250803.49/snippets/minitest-mode/refute_respond_to_p
-  minitest-20250803.49/snippets/minitest-mode/refute_same
-  minitest-20250803.49/snippets/minitest-mode/refute_same_p
-  minitest-20250803.49/snippets/minitest-mode/skip
-  minitest-20250803.49/snippets/minitest-mode/skip_p
- ✓ Success:
-  2026-04-08T11:56:42+0000  minitest-20250803.49.entry
-  2026-04-08T11:56:42+0000  minitest-20250803.49.tar
-Built minitest in 4.959s, finished at 2026-04-08T11:56:43+0000
+Command `git fetch -f --tags origin' exited with non-zero exit-code: 128
+fatal: unable to access 'https://git.sr.ht/~shoshin/minitest-emacs/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+
+Debugger entered--Lisp error: (package-build-error . "Command `git fetch -f --tags origin' exited with n...")
+  signal(package-build-error "Command `git fetch -f --tags origin' exited with n...")
+  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
+  package-build--error(#<package-sourcehut-recipe package-sourcehut-recipe-1573b9971526> "%s" "Command `git fetch -f --tags origin' exited with n...")
+  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
+  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
+  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
+  (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat ... args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
+  (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" ... exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
+  (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary ...)) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
+  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout-secs) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code (apply ... command nil ... nil args))) (if (equal exit-code 0) nil (let (...) (message "%s" summary) (message "%s" ...) (package-build--error package "%s" summary))))))))
+  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type ...)) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" ... command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* ((exit-code ...)) (if (equal exit-code 0) nil (let ... ... ... ...))))))))
+  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not ...) (list "env" "LC_ALL=C")) (if (and package-build-timeout-secs package-build-timeout-executable) (nconc ... args) (cons command args))))) (progn (ignore (consp val)) (let* ((x77 (car-safe val)) (x78 (cdr-safe val))) (let ((command x77) (args x78)) (let* (...) (if ... nil ...))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
+  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and ... ...) (if ... ... ...)))) (progn (ignore (consp val)) (let* ((x77 ...) (x78 ...)) (let (... ...) (let* ... ...)))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
+  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc ... ...))) (progn (ignore (consp val)) (let* (... ...) (let ... ...))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
+  package-build--call-process(#<package-sourcehut-recipe package-sourcehut-recipe-1573b9971526> "git" "fetch" "-f" "--tags" "origin")
+  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
+  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
+  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
+  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
+  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car ...) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
+  (closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-sourcehut-recipe package-sourcehut-recipe-1573b9971526>)
+  apply((closure (t) (rcp) (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p ...) (let ... ...)) (if package-build--inhibit-fetch nil (let ... ... ... ...))) (t (if (file-exists-p dir) (progn ...)) (package-build--message "Cloning %s to %s" url dir) (make-directory package-build-working-dir t) (let (...) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-sourcehut-recipe package-sourcehut-recipe-1573b9971526> nil)
+  package-build--fetch(#<package-sourcehut-recipe package-sourcehut-recipe-1573b9971526>)
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
+  (progn (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil ...))) (while --dolist-tail-- (let (...) (progn ... ...) (setq --dolist-tail-- ...)))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  package-build-archive("minitest")
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build--melpa-base \"/mnt/store..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"minitest\")"))
+  command-line()
+  normal-top-level()
+
