@@ -74,21 +74,52 @@
   └────
 
 
-3.2 From source
-───────────────
+3.2 GNU Guix
+────────────
+
+  The repository ships a `guix.scm' that builds straight from the
+  current working tree, so you never need to update hashes or pin a
+  commit.  Whatever is checked out is what gets installed.  Picomemo is
+  fetched as a pinned input by `guix.scm', so the optional OMEMO
+  submodule does not need to be initialised.
 
   ┌────
   │ git clone https://git.thanosapollo.org/emacs-jabber/
   │ cd emacs-jabber
-  │ make module   # optional, for OMEMO support
   └────
 
-  Then add to your init file:
+  One-shot install into your user profile:
 
   ┌────
-  │ (add-to-list 'load-path "/path/to/emacs-jabber/lisp")
-  │ (require 'jabber)
+  │ guix package -f guix.scm
   └────
+
+  A development shell with all build dependencies:
+
+  ┌────
+  │ guix shell -D -f guix.scm
+  └────
+
+  To use `emacs-jabber' from a Guix Home configuration, load the package
+  definition and reference it from your services:
+
+  ┌────
+  │ (use-modules (gnu home)
+  │              (gnu home services)
+  │              (gnu home services guix)
+  │              (gnu services)
+  │              (guix channels)
+  │              (guix gexp))
+  │ 
+  │ (define emacs-jabber-git
+  │   (load "/path/to/emacs-jabber/guix.scm"))
+  │ 
+  │ (home-environment
+  │  (packages (list emacs-jabber-git)))
+  └────
+
+  Re-run `guix home reconfigure' after pulling new commits and the
+  package will be rebuilt from the updated checkout.
 
 
 4 Configuration
