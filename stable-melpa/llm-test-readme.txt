@@ -6,5 +6,5 @@ integrate with the standard Emacs test infrastructure.
 Usage:
   (require 'llm-test)
   (setq llm-test-provider (make-llm-openai :key "..."))
-  ;; or set LLM_TEST_PROVIDER_ELISP in the environment
+  ;; or set LLM_TEST_DEBUG=file LLM_TEST_PROVIDER_ELISP in the environment
   (llm-test-register-tests "path/to/testscripts/")
