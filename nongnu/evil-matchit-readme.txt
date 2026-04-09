@@ -174,8 +174,8 @@
   Here is an example to toggle `global-tree-sitter-mode',
   ┌────
   │ (add-hook 'evilmi-jump-hook
-  │ 	  (lambda (before-jump-p)
-  │ 	    (global-tree-sitter-mode (not before-jump-p))))
+  │           (lambda (before-jump-p)
+  │             (global-tree-sitter-mode (not before-jump-p))))
   └────
 
 
@@ -360,14 +360,14 @@
   │ ;;;###autoload
   │ (defun evilmi-script-get-tag ()
   │   (evilmi-sdk-get-tag evilmi-script-match-tags
-  │ 		      evilmi-sdk-extract-keyword-howtos))
+  │                       evilmi-sdk-extract-keyword-howtos))
   │ 
   │ ;;;###autoload
   │ (defun evilmi-script-jump (rlt num)
   │   (evilmi-sdk-jump rlt
-  │ 		   num
-  │ 		   evilmi-script-match-tags
-  │ 		   evilmi-sdk-extract-keyword-howtos))
+  │                    num
+  │                    evilmi-script-match-tags
+  │                    evilmi-sdk-extract-keyword-howtos))
   │ 
   │ (provide 'evil-matchit-script)
   └────
@@ -390,7 +390,7 @@
   For example, to integrate `rjsx-jump-tag' into this package is as
   simple as,
   ┌────
-  │ (evilmi-add-one-plugin-rule #'rjsx-mode #'my-rjsx-jump-tag)
+  │ (evilmi-add-one-plugin-rule 'rjsx-mode #'rjsx-jump-tag)
   └────
 
   Or,
@@ -398,7 +398,7 @@
   │ (defun my-rjsx-jump-tag ()
   │   (when (string-match "</?>" (string-trim (evilmi-sdk-curline)))
   │     (rjsx-jump-tag)))
-  │ (evilmi-add-one-plugin-rule #'rjsx-mode #'my-rjsx-jump-tag)
+  │ (evilmi-add-one-plugin-rule 'rjsx-mode #'my-rjsx-jump-tag)
   └────
 
   Or,
@@ -410,7 +410,7 @@
   │   (rjsx-jump-tag)
   │   (point))
   │ (defvar append-p t)
-  │ (evilmi-add-one-plugin-rule #'rjsx-mode #'my-rjsx-jump-tag #'my-rjsx-get-tag append-p)
+  │ (evilmi-add-one-plugin-rule 'rjsx-mode #'my-rjsx-jump-tag #'my-rjsx-get-tag append-p)
   └────
 
 
