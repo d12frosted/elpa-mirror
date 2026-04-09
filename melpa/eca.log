@@ -1,9 +1,9 @@
  • Building package eca (from github:editor-code-assistant/eca-emacs)...
 Updating /mnt/store/melpa/working/eca/
-Checking out c2992186f18227fc4e2032939769ffe49f06b688
+Checking out cd56d88251acc19c0c45ecd69140cc7c05a60ce4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eca/
-  to /tmp/eca-wn3NVu/eca-20260408.1605
+  to /tmp/eca-I1j9Zx/eca-20260408.2031
     eca-api.el -> eca-api.el
     eca-chat-context.el -> eca-chat-context.el
     eca-chat-expandable.el -> eca-chat-expandable.el
@@ -20,28 +20,26 @@ Copying files (->) and directories (=>)
     eca-table.el -> eca-table.el
     eca-util.el -> eca-util.el
     eca.el -> eca.el
-Created eca-20260408.1605.tar containing:
-  eca-20260408.1605/
-  eca-20260408.1605/eca-api.el
-  eca-20260408.1605/eca-chat-context.el
-  eca-20260408.1605/eca-chat-expandable.el
-  eca-20260408.1605/eca-chat.el
-  eca-20260408.1605/eca-completion.el
-  eca-20260408.1605/eca-config.el
-  eca-20260408.1605/eca-diff.el
-  eca-20260408.1605/eca-editor.el
-  eca-20260408.1605/eca-mcp.el
-  eca-20260408.1605/eca-pkg.el
-  eca-20260408.1605/eca-process.el
-  eca-20260408.1605/eca-providers.el
-  eca-20260408.1605/eca-rewrite.el
-  eca-20260408.1605/eca-settings.el
-  eca-20260408.1605/eca-table.el
-  eca-20260408.1605/eca-util.el
-  eca-20260408.1605/eca.el
+Created eca-20260408.2031.tar containing:
+  eca-20260408.2031/
+  eca-20260408.2031/eca-api.el
+  eca-20260408.2031/eca-chat-context.el
+  eca-20260408.2031/eca-chat-expandable.el
+  eca-20260408.2031/eca-chat.el
+  eca-20260408.2031/eca-completion.el
+  eca-20260408.2031/eca-config.el
+  eca-20260408.2031/eca-diff.el
+  eca-20260408.2031/eca-editor.el
+  eca-20260408.2031/eca-mcp.el
+  eca-20260408.2031/eca-pkg.el
+  eca-20260408.2031/eca-process.el
+  eca-20260408.2031/eca-providers.el
+  eca-20260408.2031/eca-rewrite.el
+  eca-20260408.2031/eca-settings.el
+  eca-20260408.2031/eca-table.el
+  eca-20260408.2031/eca-util.el
+  eca-20260408.2031/eca.el
  ✓ Success:
-  2026-04-08T14:44:05+0000  eca-20260407.1145.entry
-  2026-04-08T14:44:05+0000  eca-20260407.1145.tar
-  2026-04-08T18:00:55+0000  eca-20260408.1605.entry
-  2026-04-08T18:00:55+0000  eca-20260408.1605.tar
-Built eca in 5.109s, finished at 2026-04-08T18:00:56+0000
+  2026-04-09T03:36:35+0000  eca-20260408.2031.entry
+  2026-04-09T03:36:35+0000  eca-20260408.2031.tar
+Built eca in 4.235s, finished at 2026-04-09T03:36:36+0000
