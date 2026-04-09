@@ -39,8 +39,13 @@ M-p for navigation).  All other commands are in
   ;; Alternative: M-s prefix (replaces Emacs search-map)
   ;; Requires :demand t with global-set-key in :config
   ;; Do NOT use :bind-keymap with M-s (see docstring for details)
+  ;; Call `simply-annotate-inherit-search-map' to keep the default
+  ;; M-s bindings (occur, isearch-forward-symbol-at-point, etc.)
+  ;; working via keymap inheritance.
   :demand t
-  :config (global-set-key (kbd "M-s") simply-annotate-command-map)
+  :config
+  (global-set-key (kbd "M-s") simply-annotate-command-map)
+  (simply-annotate-inherit-search-map)
 
 Threading & Collaboration:
 
