@@ -169,7 +169,23 @@ that can be committed alongside your code:
 Project-scoped commands (require project.el):
 - <prefix> P   show annotations for the current project (org listing)
 - <prefix> C-t show annotations for the current project (sortable table)
-- <prefix> f   jump to annotated file (project-scoped, C-u for all)
+- <prefix> f   jump to annotated file
+
+Dired-aware narrowing: when the four project commands above are
+invoked from a `dired' buffer that lives under a project
+subdirectory, they automatically narrow to that subdirectory --
+useful for slicing large projects without any explicit selection
+UI.  Prefix arguments escape this:
+
+  no prefix  dired-aware project view (auto-narrow if applicable)
+  C-u        whole project, ignoring any dired auto-narrow
+  C-u C-u    every annotated file in the database (jump-to-file
+             and `simply-annotate-show-project'); for the table and
+             kanban this behaves the same as C-u
+
+In the kanban buffer, a narrowed board can be widened with `d'
+(clear directory filter) without leaving the buffer.  The currently
+active directory is shown at the front of the kanban header line.
 
 To migrate existing global annotations into a project database:
   M-x simply-annotate-migrate-to-project

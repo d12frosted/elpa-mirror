@@ -1,32 +1,30 @@
  • Building package ghostel (from github:dakra/ghostel)...
 Updating /mnt/store/melpa/working/ghostel/
-Checking out a46c7843fc072c8991a354f36ef4369669773f63
+Checking out 698d9f50a54283d8413cad2dc2594e2fb0725f15
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghostel/
-  to /tmp/ghostel-ecOImA/ghostel-20260409.827
+  to /tmp/ghostel-epdntZ/ghostel-20260409.1211
     ghostel-debug.el -> ghostel-debug.el
     ghostel.el -> ghostel.el
     etc => etc
-Created ghostel-20260409.827.tar containing:
-  ghostel-20260409.827/
-  ghostel-20260409.827/etc/
-  ghostel-20260409.827/etc/ghostel.bash
-  ghostel-20260409.827/etc/ghostel.fish
-  ghostel-20260409.827/etc/ghostel.zsh
-  ghostel-20260409.827/etc/shell-integration/
-  ghostel-20260409.827/etc/shell-integration/bash/
-  ghostel-20260409.827/etc/shell-integration/bash/ghostel-inject.bash
-  ghostel-20260409.827/etc/shell-integration/fish/
-  ghostel-20260409.827/etc/shell-integration/fish/vendor_conf.d/
-  ghostel-20260409.827/etc/shell-integration/fish/vendor_conf.d/ghostel-integration.fish
-  ghostel-20260409.827/etc/shell-integration/zsh/
-  ghostel-20260409.827/etc/shell-integration/zsh/.zshenv
-  ghostel-20260409.827/ghostel-debug.el
-  ghostel-20260409.827/ghostel-pkg.el
-  ghostel-20260409.827/ghostel.el
+Created ghostel-20260409.1211.tar containing:
+  ghostel-20260409.1211/
+  ghostel-20260409.1211/etc/
+  ghostel-20260409.1211/etc/ghostel.bash
+  ghostel-20260409.1211/etc/ghostel.fish
+  ghostel-20260409.1211/etc/ghostel.zsh
+  ghostel-20260409.1211/etc/shell-integration/
+  ghostel-20260409.1211/etc/shell-integration/bash/
+  ghostel-20260409.1211/etc/shell-integration/bash/ghostel-inject.bash
+  ghostel-20260409.1211/etc/shell-integration/fish/
+  ghostel-20260409.1211/etc/shell-integration/fish/vendor_conf.d/
+  ghostel-20260409.1211/etc/shell-integration/fish/vendor_conf.d/ghostel-integration.fish
+  ghostel-20260409.1211/etc/shell-integration/zsh/
+  ghostel-20260409.1211/etc/shell-integration/zsh/.zshenv
+  ghostel-20260409.1211/ghostel-debug.el
+  ghostel-20260409.1211/ghostel-pkg.el
+  ghostel-20260409.1211/ghostel.el
  ✓ Success:
-  2026-04-09T06:50:58+0000  ghostel-20260409.645.entry
-  2026-04-09T06:50:57+0000  ghostel-20260409.645.tar
-  2026-04-09T09:49:30+0000  ghostel-20260409.827.entry
-  2026-04-09T09:49:30+0000  ghostel-20260409.827.tar
-Built ghostel in 4.447s, finished at 2026-04-09T09:49:31+0000
+  2026-04-09T16:07:32+0000  ghostel-20260409.1211.entry
+  2026-04-09T16:07:32+0000  ghostel-20260409.1211.tar
+Built ghostel in 5.048s, finished at 2026-04-09T16:07:33+0000
