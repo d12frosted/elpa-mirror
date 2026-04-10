@@ -1,30 +1,34 @@
  • Building package ghostel (from github:dakra/ghostel)...
 Updating /mnt/store/melpa/working/ghostel/
-Checking out 698d9f50a54283d8413cad2dc2594e2fb0725f15
+Checking out 21d8439e62ff4e164d72a71efc1c5df10ab5d111
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghostel/
-  to /tmp/ghostel-viirf0/ghostel-20260409.1211
+  to /tmp/ghostel-67Jt4r/ghostel-20260410.634
     ghostel-debug.el -> ghostel-debug.el
+    ghostel-evil.el -> ghostel-evil.el
     ghostel.el -> ghostel.el
     etc => etc
-Created ghostel-20260409.1211.tar containing:
-  ghostel-20260409.1211/
-  ghostel-20260409.1211/etc/
-  ghostel-20260409.1211/etc/ghostel.bash
-  ghostel-20260409.1211/etc/ghostel.fish
-  ghostel-20260409.1211/etc/ghostel.zsh
-  ghostel-20260409.1211/etc/shell-integration/
-  ghostel-20260409.1211/etc/shell-integration/bash/
-  ghostel-20260409.1211/etc/shell-integration/bash/ghostel-inject.bash
-  ghostel-20260409.1211/etc/shell-integration/fish/
-  ghostel-20260409.1211/etc/shell-integration/fish/vendor_conf.d/
-  ghostel-20260409.1211/etc/shell-integration/fish/vendor_conf.d/ghostel-integration.fish
-  ghostel-20260409.1211/etc/shell-integration/zsh/
-  ghostel-20260409.1211/etc/shell-integration/zsh/.zshenv
-  ghostel-20260409.1211/ghostel-debug.el
-  ghostel-20260409.1211/ghostel-pkg.el
-  ghostel-20260409.1211/ghostel.el
+Created ghostel-20260410.634.tar containing:
+  ghostel-20260410.634/
+  ghostel-20260410.634/etc/
+  ghostel-20260410.634/etc/ghostel.bash
+  ghostel-20260410.634/etc/ghostel.fish
+  ghostel-20260410.634/etc/ghostel.zsh
+  ghostel-20260410.634/etc/shell-integration/
+  ghostel-20260410.634/etc/shell-integration/bash/
+  ghostel-20260410.634/etc/shell-integration/bash/ghostel-inject.bash
+  ghostel-20260410.634/etc/shell-integration/fish/
+  ghostel-20260410.634/etc/shell-integration/fish/vendor_conf.d/
+  ghostel-20260410.634/etc/shell-integration/fish/vendor_conf.d/ghostel-integration.fish
+  ghostel-20260410.634/etc/shell-integration/zsh/
+  ghostel-20260410.634/etc/shell-integration/zsh/.zshenv
+  ghostel-20260410.634/ghostel-debug.el
+  ghostel-20260410.634/ghostel-evil.el
+  ghostel-20260410.634/ghostel-pkg.el
+  ghostel-20260410.634/ghostel.el
  ✓ Success:
   2026-04-10T04:57:12+0000  ghostel-20260409.1211.entry
   2026-04-10T04:57:12+0000  ghostel-20260409.1211.tar
-Built ghostel in 4.504s, finished at 2026-04-10T04:57:13+0000
+  2026-04-10T08:02:53+0000  ghostel-20260410.634.entry
+  2026-04-10T08:02:52+0000  ghostel-20260410.634.tar
+Built ghostel in 4.309s, finished at 2026-04-10T08:02:54+0000

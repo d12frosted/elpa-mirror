@@ -1,9 +1,9 @@
  • Building package ollama-buddy (from github:captainflasmr/ollama-buddy)...
 Updating /mnt/store/melpa/working/ollama-buddy/
-Checking out 6cd8a5842f1f81387e9866d4fdaf9dad1f651ee7
+Checking out 4ee00d2f11715547778497eff38cceabb830d1a6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ollama-buddy/
-  to /tmp/ollama-buddy-E5eRcf/ollama-buddy-20260409.1658
+  to /tmp/ollama-buddy-gPrTpQ/ollama-buddy-20260410.549
     ollama-buddy-claude.el -> ollama-buddy-claude.el
     ollama-buddy-codestral.el -> ollama-buddy-codestral.el
     ollama-buddy-completion.el -> ollama-buddy-completion.el
@@ -31,36 +31,38 @@ Copying files (->) and directories (=>)
   ! docs/ollama-buddy.info -> ollama-buddy.info
   ! docs/ollama-buddy.texi -> ollama-buddy.texi
 Generating ollama-buddy.info
-Created ollama-buddy-20260409.1658.tar containing:
-  ollama-buddy-20260409.1658/
-  ollama-buddy-20260409.1658/dir
-  ollama-buddy-20260409.1658/ollama-buddy-claude.el
-  ollama-buddy-20260409.1658/ollama-buddy-codestral.el
-  ollama-buddy-20260409.1658/ollama-buddy-completion.el
-  ollama-buddy-20260409.1658/ollama-buddy-copilot.el
-  ollama-buddy-20260409.1658/ollama-buddy-core.el
-  ollama-buddy-20260409.1658/ollama-buddy-curl.el
-  ollama-buddy-20260409.1658/ollama-buddy-deepseek.el
-  ollama-buddy-20260409.1658/ollama-buddy-gemini.el
-  ollama-buddy-20260409.1658/ollama-buddy-grok.el
-  ollama-buddy-20260409.1658/ollama-buddy-openai-compat.el
-  ollama-buddy-20260409.1658/ollama-buddy-openai.el
-  ollama-buddy-20260409.1658/ollama-buddy-openrouter.el
-  ollama-buddy-20260409.1658/ollama-buddy-pkg.el
-  ollama-buddy-20260409.1658/ollama-buddy-plan.el
-  ollama-buddy-20260409.1658/ollama-buddy-project.el
-  ollama-buddy-20260409.1658/ollama-buddy-provider.el
-  ollama-buddy-20260409.1658/ollama-buddy-rag.el
-  ollama-buddy-20260409.1658/ollama-buddy-remote.el
-  ollama-buddy-20260409.1658/ollama-buddy-rewrite.el
-  ollama-buddy-20260409.1658/ollama-buddy-tips.el
-  ollama-buddy-20260409.1658/ollama-buddy-tools.el
-  ollama-buddy-20260409.1658/ollama-buddy-transient.el
-  ollama-buddy-20260409.1658/ollama-buddy-user-prompts.el
-  ollama-buddy-20260409.1658/ollama-buddy-web-search.el
-  ollama-buddy-20260409.1658/ollama-buddy.el
-  ollama-buddy-20260409.1658/ollama-buddy.info
+Created ollama-buddy-20260410.549.tar containing:
+  ollama-buddy-20260410.549/
+  ollama-buddy-20260410.549/dir
+  ollama-buddy-20260410.549/ollama-buddy-claude.el
+  ollama-buddy-20260410.549/ollama-buddy-codestral.el
+  ollama-buddy-20260410.549/ollama-buddy-completion.el
+  ollama-buddy-20260410.549/ollama-buddy-copilot.el
+  ollama-buddy-20260410.549/ollama-buddy-core.el
+  ollama-buddy-20260410.549/ollama-buddy-curl.el
+  ollama-buddy-20260410.549/ollama-buddy-deepseek.el
+  ollama-buddy-20260410.549/ollama-buddy-gemini.el
+  ollama-buddy-20260410.549/ollama-buddy-grok.el
+  ollama-buddy-20260410.549/ollama-buddy-openai-compat.el
+  ollama-buddy-20260410.549/ollama-buddy-openai.el
+  ollama-buddy-20260410.549/ollama-buddy-openrouter.el
+  ollama-buddy-20260410.549/ollama-buddy-pkg.el
+  ollama-buddy-20260410.549/ollama-buddy-plan.el
+  ollama-buddy-20260410.549/ollama-buddy-project.el
+  ollama-buddy-20260410.549/ollama-buddy-provider.el
+  ollama-buddy-20260410.549/ollama-buddy-rag.el
+  ollama-buddy-20260410.549/ollama-buddy-remote.el
+  ollama-buddy-20260410.549/ollama-buddy-rewrite.el
+  ollama-buddy-20260410.549/ollama-buddy-tips.el
+  ollama-buddy-20260410.549/ollama-buddy-tools.el
+  ollama-buddy-20260410.549/ollama-buddy-transient.el
+  ollama-buddy-20260410.549/ollama-buddy-user-prompts.el
+  ollama-buddy-20260410.549/ollama-buddy-web-search.el
+  ollama-buddy-20260410.549/ollama-buddy.el
+  ollama-buddy-20260410.549/ollama-buddy.info
  ✓ Success:
-  2026-04-10T02:22:49+0000  ollama-buddy-20260409.1658.entry
-  2026-04-10T02:22:49+0000  ollama-buddy-20260409.1658.tar
-Built ollama-buddy in 7.205s, finished at 2026-04-10T02:22:50+0000
+  2026-04-10T05:26:59+0000  ollama-buddy-20260410.453.entry
+  2026-04-10T05:26:59+0000  ollama-buddy-20260410.453.tar
+  2026-04-10T08:30:10+0000  ollama-buddy-20260410.549.entry
+  2026-04-10T08:30:10+0000  ollama-buddy-20260410.549.tar
+Built ollama-buddy in 15.935s, finished at 2026-04-10T08:30:12+0000
