@@ -169,11 +169,11 @@
       (:authors ("Dave Pearson" . "davep@davep.org"))
       (:commit . "fe676396fa7e4372e01bf2c3d9a62e8d53615d46"))])
  (buttercup
-  . [(1 38) ((emacs (24 4))) "Behavior-Driven Emacs Lisp Testing" tar
+  . [(1 39) ((emacs (24 4))) "Behavior-Driven Emacs Lisp Testing" tar
      ((:url . "https://github.com/jorgenschaefer/emacs-buttercup")
       (:maintainer "Ola Nilsson" . "ola.nilsson@gmail.com")
       (:authors ("Jorgen Schaefer" . "contact@jorgenschaefer.de"))
-      (:commit . "cc5a2ab7c7f18aaaf525fac61fe59bae5ad018dd"))])
+      (:commit . "7baf9e5a60f201542309238d77aa6bb35bd77ec0"))])
  (camera
   . [(0 3) ((emacs (25 1))) "Take picture with your camera" tar
      ((:url . "https://codeberg.org/akib/emacs-camera")
@@ -1056,12 +1056,12 @@
       (:keywords "j" "languages")
       (:commit . "1365e5a3fe772609685b3787bbd2960331c1a02f"))])
  (jabber
-  . [(0 10 4) ((emacs (29 1)) (fsm (0 2 0))) "XMPP/Jabber client" tar
+  . [(0 10 5) ((emacs (29 1)) (fsm (0 2 0))) "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "506ba148af1724ce08f561114d9f7f7dd18b2088"))])
+      (:commit . "2e7019fc32e26b0f05036bfa13d3a01c5a183c85"))])
  (jade-mode
   . [(1 0 1) nil "Major mode for editing .jade files" tar
      ((:url . "https://github.com/brianc/jade-mode")
