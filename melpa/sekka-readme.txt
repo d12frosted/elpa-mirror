@@ -1,5 +1,5 @@
 Sekka is yet another Japanese Input Method inspired by SKK.
-sekka.el is a client for Sekka IME server.
+Pure Emacs Lisp implementation -- no server required.
 [https://github.com/kiyoka/sekka]
 
 you might want to enable IME:
