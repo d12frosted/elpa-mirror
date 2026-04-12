@@ -89,6 +89,17 @@ This macro defines a schema for interacting with a specific REPL.
 (termint-define REPL-NAME REPL-CMD &rest ARGS)
 ```
 
+### Helper Functions for Project-Local Binaries
+
+- `termint-find-binary` - Search upward for executables in a subdirectory (e.g.,
+  `.venv/bin/python`). Use this for project-local binaries:
+  `(termint-define "ipython" (lambda () (termint-find-binary ".venv/bin" "ipython" "ipython")))`
+
+- `termint-ipython-cmd-function` / `termint-python-cmd-function` - Return the
+  command for IPython/Python, preferring project-local `.venv` binaries before
+  falling back to system PATH. Pass these directly as `REPL-CMD` to
+  `termint-define`.
+
 ## Generated Components
 
 For a `(termint-define "myrepl" ...)` definition, the macro generates several
@@ -196,7 +207,9 @@ In the below example, we created two REPL schemas:
 
   :config
 
-  (termint-define "ipython" "ipython" :bracketed-paste-p t
+  ;; Uses project-local ipython from .venv if available
+  (termint-define "ipython" #'termint-ipython-cmd-function
+                  :bracketed-paste-p t
                   :source-syntax termint-ipython-source-syntax-template)
 
   ;; C-c m s: `termint-ipython-start'

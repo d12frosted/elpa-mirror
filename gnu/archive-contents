@@ -3137,11 +3137,11 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "add72000e580aaf80e64195412747181fc95d231"))])
  (termint
-  . [(0 2) ((emacs (29 1))) "Run REPLs in a terminal backend" tar
+  . [(0 2 2) ((emacs (29 1))) "Run REPLs in a terminal backend" tar
      ((:url . "https://github.com/milanglacier/termint.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "b69db24ddbcd4b5973b3ae8e7f8b3c12dd0546b3"))])
+      (:commit . "689549245bb6dc0429d8af06c4830c92b09f4667"))])
  (test-simple
   . [(1 3 2) ((emacs (24 4)) (compat (30 1 0 1)))
      "Simple Unit Test Framework for Emacs Lisp" tar
@@ -3525,12 +3525,12 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "b89f719824fe5da0f6a7590fad3ece798fd59909"))])
  (wcheck-mode
-  . [(2021) nil "General interface for text checkers" tar
+  . [(2026) nil "General interface for text checkers" tar
      ((:url . "https://github.com/tlikonen/wcheck-mode")
       (:keywords "text" "spell" "check" "languages" "ispell")
       (:maintainer "Teemu Likonen" . "tlikonen@iki.fi")
       (:authors ("Teemu Likonen" . "tlikonen@iki.fi"))
-      (:commit . "e1c86e6f9e150ed25efb58fcf21db374b1b7f519"))])
+      (:commit . "5954340ec199c85d927f2f75e39cdcda452d7bd7"))])
  (wconf
   . [(0 2 1) ((emacs (24 4))) "Minimal window layout manager" tar
      ((:url . "https://github.com/ilohmar/wconf")
