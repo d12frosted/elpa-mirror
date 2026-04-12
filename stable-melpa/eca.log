@@ -1,9 +1,9 @@
  • Building package eca (from github:editor-code-assistant/eca-emacs)...
 Updating /mnt/store/melpa/working/eca/
-Checking out 73d77d635e0cc6daecef879b32057a6008a724ee
+Checking out 8e2c4296fd1ee8ca8bf73c77cebe39acb19cbdf1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eca/
-  to /tmp/eca-Wd6BtH/eca-20260409.1748
+  to /tmp/eca-bj8DKQ/eca-20260412.1803
     eca-api.el -> eca-api.el
     eca-chat-context.el -> eca-chat-context.el
     eca-chat-expandable.el -> eca-chat-expandable.el
@@ -12,6 +12,7 @@ Copying files (->) and directories (=>)
     eca-config.el -> eca-config.el
     eca-diff.el -> eca-diff.el
     eca-editor.el -> eca-editor.el
+    eca-jobs.el -> eca-jobs.el
     eca-mcp.el -> eca-mcp.el
     eca-process.el -> eca-process.el
     eca-providers.el -> eca-providers.el
@@ -20,26 +21,29 @@ Copying files (->) and directories (=>)
     eca-table.el -> eca-table.el
     eca-util.el -> eca-util.el
     eca.el -> eca.el
-Created eca-20260409.1748.tar containing:
-  eca-20260409.1748/
-  eca-20260409.1748/eca-api.el
-  eca-20260409.1748/eca-chat-context.el
-  eca-20260409.1748/eca-chat-expandable.el
-  eca-20260409.1748/eca-chat.el
-  eca-20260409.1748/eca-completion.el
-  eca-20260409.1748/eca-config.el
-  eca-20260409.1748/eca-diff.el
-  eca-20260409.1748/eca-editor.el
-  eca-20260409.1748/eca-mcp.el
-  eca-20260409.1748/eca-pkg.el
-  eca-20260409.1748/eca-process.el
-  eca-20260409.1748/eca-providers.el
-  eca-20260409.1748/eca-rewrite.el
-  eca-20260409.1748/eca-settings.el
-  eca-20260409.1748/eca-table.el
-  eca-20260409.1748/eca-util.el
-  eca-20260409.1748/eca.el
+Created eca-20260412.1803.tar containing:
+  eca-20260412.1803/
+  eca-20260412.1803/eca-api.el
+  eca-20260412.1803/eca-chat-context.el
+  eca-20260412.1803/eca-chat-expandable.el
+  eca-20260412.1803/eca-chat.el
+  eca-20260412.1803/eca-completion.el
+  eca-20260412.1803/eca-config.el
+  eca-20260412.1803/eca-diff.el
+  eca-20260412.1803/eca-editor.el
+  eca-20260412.1803/eca-jobs.el
+  eca-20260412.1803/eca-mcp.el
+  eca-20260412.1803/eca-pkg.el
+  eca-20260412.1803/eca-process.el
+  eca-20260412.1803/eca-providers.el
+  eca-20260412.1803/eca-rewrite.el
+  eca-20260412.1803/eca-settings.el
+  eca-20260412.1803/eca-table.el
+  eca-20260412.1803/eca-util.el
+  eca-20260412.1803/eca.el
  ✓ Success:
   2026-04-12T15:54:38+0000  eca-20260409.1748.entry
   2026-04-12T15:54:38+0000  eca-20260409.1748.tar
-Built eca in 5.901s, finished at 2026-04-12T15:54:40+0000
+  2026-04-12T19:02:14+0000  eca-20260412.1803.entry
+  2026-04-12T19:02:14+0000  eca-20260412.1803.tar
+Built eca in 8.871s, finished at 2026-04-12T19:02:16+0000
