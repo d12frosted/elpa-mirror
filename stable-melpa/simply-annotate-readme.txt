@@ -170,6 +170,11 @@ Project-scoped commands (require project.el):
 - <prefix> P   show annotations for the current project (org listing)
 - <prefix> C-t show annotations for the current project (sortable table)
 - <prefix> f   jump to annotated file
+- <prefix> A   cross-project overview of every project with annotations
+               (sortable table with per-status counts).  Discovers both
+               global-db entries and per-project `.simply-annotations.el'
+               files via `project-known-project-roots'.  From the table,
+               RET/L/K drill into the project's table/org/kanban view.
 
 Dired-aware narrowing: when the four project commands above are
 invoked from a `dired' buffer that lives under a project
