@@ -1,2 +1,83 @@
  • Building package angular-snippets (from github:magnars/angular-snippets.el)...
 Updating /mnt/store/melpa/working/angular-snippets/
+Checking out af5ae0a4a8603b040446c28afcf6ca01a8b4bd7b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/angular-snippets/
+  to /tmp/angular-snippets-DdooA5/angular-snippets-20140514.523
+    angular-snippets-pkg.el -> angular-snippets-pkg.el
+    angular-snippets.el -> angular-snippets.el
+    snippets => snippets
+Created angular-snippets-20140514.523.tar containing:
+  angular-snippets-20140514.523/
+  angular-snippets-20140514.523/angular-snippets-pkg.el
+  angular-snippets-20140514.523/angular-snippets.el
+  angular-snippets-20140514.523/snippets/
+  angular-snippets-20140514.523/snippets/html-mode/
+  angular-snippets-20140514.523/snippets/html-mode/ng-app.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-bind-html-unsafe.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-bind-template.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-bind.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-change.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-checked.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-class-even.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-class-odd.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-class.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-click.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-cloak.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-controller.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-csp.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-dblclick.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-disabled.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-form.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-hide.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-href.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-include.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-init.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-list.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-model.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-mousedown.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-mouseenter.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-mouseleave.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-mousemove.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-mouseover.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-mouseup.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-multiple.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-non-bindable.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-options.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-pluralize.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-readonly.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-repeat.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-selected.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-show.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-src.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-style.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-submit.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-switch.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-transclude.yasnippet
+  angular-snippets-20140514.523/snippets/html-mode/ng-view.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/
+  angular-snippets-20140514.523/snippets/js-mode/$b.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/$e.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/$f.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/$on.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/$v.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/$va.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/$w.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngc.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngd.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngfa.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngfi.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngm.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngro.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngrw.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngrwr.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngs.yasnippet
+  angular-snippets-20140514.523/snippets/js-mode/ngw.yasnippet
+  angular-snippets-20140514.523/snippets/js2-mode/
+  angular-snippets-20140514.523/snippets/js2-mode/.yas-parents
+  angular-snippets-20140514.523/snippets/web-mode/
+  angular-snippets-20140514.523/snippets/web-mode/.yas-parents
+ ✓ Success:
+  2026-04-13T04:02:10+0000  angular-snippets-20140514.523.entry
+  2026-04-13T04:02:09+0000  angular-snippets-20140514.523.tar
+Built angular-snippets in 3.879s, finished at 2026-04-13T04:02:11+0000
