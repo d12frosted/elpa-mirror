@@ -39,8 +39,7 @@ Shell integration:
     [[ "$INSIDE_EMACS" = 'ghostel' ]] && \
       source "$EMACS_GHOSTEL_PATH/etc/ghostel.zsh"
 
-Building the native module:
+Building the native module (requires Zig 0.15.2+):
 
-  Run ./build.sh from the project root, or M-x ghostel-module-compile
-  from within Emacs.  Requires Zig 0.14+ and the vendored ghostty
-  submodule.
+  Run zig build from the project root,
+  or M-x ghostel-module-compile from within Emacs.
