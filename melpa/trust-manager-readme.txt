@@ -13,3 +13,15 @@ project, just customize this user option; you can do so directly
 or via the utility command `trust-manager-customize'.  You may also
 customize `trust-manager-trust-alist' to designate some directories
 as trusted or untrusted before actually visiting files in them.
+
+By default, `trust-manager-mode' also adds a mode line indicator in
+untrusted buffers where risky features may have been disabled.
+The default indicator is a `?' shown in red.  You can customize or
+disable this indicator via the `trust-manager-untrusted-indicator'
+user option, and the face with the same name.
+Since only some features require trust, not every untrusted buffer
+needs your attention, only those in which the lack of trust matters.
+The user option `trust-manager-trust-indicator-buffer-condition'
+controls in which untrusted buffers indicator is shown.  By default
+it specifies only Emacs Lisp buffers, because several Emacs Lisp
+editing features, including on-the-fly diagnostics, require trust.
