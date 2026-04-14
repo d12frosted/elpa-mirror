@@ -1753,12 +1753,12 @@
       (:url . "https://elpa.gnu.org/packages/kmb.html")
       (:commit . "4fee1c87e7e286d7ecd759fb74aa7a112bb51e3a"))])
  (kubed
-  . [(0 6 0) ((emacs (29 1))) "Kubernetes, Emacs, done!" tar
+  . [(0 6 1) ((emacs (29 1))) "Kubernetes, Emacs, done!" tar
      ((:url . "https://eshelyaron.com/kubed.html")
       (:keywords "tools" "kubernetes" "containers")
       (:maintainer "Eshel Yaron" . "~eshel/kubed-devel@lists.sr.ht")
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
-      (:commit . "1162c245fae874aafd724bcdc24df4f52ef002a4"))])
+      (:commit . "2f231466790c5db18a6e1479e3c67945d43cbf94"))])
  (landmark
   . [(1 0) nil "Neural-network robot that learns landmarks" tar
      ((:keywords "games" "neural network" "adaptive search"
