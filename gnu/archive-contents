@@ -1469,11 +1469,11 @@
       (:url . "https://elpa.gnu.org/packages/greenbar.html")
       (:commit . "eedbec6a0c56be403fdbe0b1f38a4acd4f11d09b"))])
  (gtags-mode
-  . [(1 9 4) ((emacs (28)))
+  . [(1 9 5) ((emacs (28)))
      "GNU Global integration with xref, project and imenu." tar
      ((:url . "https://github.com/Ergus/gtags-mode")
       (:keywords "xref" "project" "imenu" "gtags" "global")
-      (:commit . "913da16515242c6ee26fd0f5af1a79b48a2daa29"))])
+      (:commit . "94de3a0a9c6b28d5a3dadc97dd52230922462a5d"))])
  (guess-language
   . [(0 0 1) ((cl-lib (0 5)) (emacs (24)) (nadvice (0 1)))
      "Robust automatic language detection" single
