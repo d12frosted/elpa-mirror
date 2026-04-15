@@ -14,14 +14,36 @@ or via the utility command `trust-manager-customize'.  You may also
 customize `trust-manager-trust-alist' to designate some directories
 as trusted or untrusted before actually visiting files in them.
 
+Another utility command is `trust-manager-set-project-trust', which
+lets you mark any project as trusted or untrusted, not necessarily
+the current project.  The command `trust-manager-set-file-trust' is
+similar, except that it supports arbitrary files/directories,
+rather than just projects.
+
+In addition, `trust-manager-mode' integrates with the command
+`project-forget-project' such that when you "forget" a project,
+its directory stops being trusted and its entry in
+`trust-manager-trust-alist' is cleared.
+
 By default, `trust-manager-mode' also adds a mode line indicator in
 untrusted buffers where risky features may have been disabled.
-The default indicator is a `?' shown in red.  You can customize or
-disable this indicator via the `trust-manager-untrusted-indicator'
-user option, and the face with the same name.
+The default indicator is a `?' shown in red.  You can click on the
+indicator to mark the buffer as trusted (it runs the command
+`trust-manager-trust-this-buffer', which you can run directly too).
+You can also customize or disable this indicator via the
+`trust-manager-untrusted-indicator' user option, and the face with
+the same name.
+
 Since only some features require trust, not every untrusted buffer
 needs your attention, only those in which the lack of trust matters.
 The user option `trust-manager-trust-indicator-buffer-condition'
-controls in which untrusted buffers indicator is shown.  By default
-it specifies only Emacs Lisp buffers, because several Emacs Lisp
-editing features, including on-the-fly diagnostics, require trust.
+controls in which untrusted buffers the indicator is shown.
+By default it specifies only Emacs Lisp buffers, because several
+Emacs Lisp editing features, including on-the-fly diagnostics,
+require trust.
+
+When `trust-manager-mode' marks a previously untrusted buffer as
+trusted, e.g. when you click on the untrusted buffer mode line
+indicator, it runs the hook `trust-manager-now-trusted-hook'.
+By default, `trust-manager-mode' uses this hook to re-enable the
+Emacs Lisp Flymake backend for on-the-fly diagnostics.

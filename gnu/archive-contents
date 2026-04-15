@@ -1113,14 +1113,14 @@
       (:authors ("Adam Porter" . "adam@alphapapa.net"))
       (:commit . "ca3b0e7da1626e692df14c56e105dc91480ef814"))])
  (emms
-  . [(25) ((cl-lib (0 5)) (nadvice (0 3)) (seq (0)))
+  . [(26) ((cl-lib (0 5)) (nadvice (0 3)) (seq (0)))
      "The Emacs Multimedia System" tar
      ((:url . "https://www.gnu.org/software/emms/")
       (:keywords "emms" "mp3" "ogg" "flac" "music" "mpeg" "video"
 		 "multimedia")
       (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
       (:authors ("Jorgen Schäfer" . "forcer@forcix.cx"))
-      (:commit . "1d48a1133db2670d839f2cf2aff17d6c32aeb15f"))])
+      (:commit . "6f704fd3c12f35e059700aaeb43ae64c35ad81b2"))])
  (engrave-faces
   . [(0 3 1) ((emacs (27 1)))
      "Convert font-lock faces to other formats" tar
