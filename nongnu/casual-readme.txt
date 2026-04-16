@@ -42,6 +42,21 @@
   Please refer to the [Casual User Guide] for detailed information about
   it. This user guide is available both in Emacs Info and HTML formats.
 
+  Shown below are some screenshots of menus offered by Casual. Many
+  [Emacs built-in modes] are supported by Casual.
+
+  /Screenshot of Dired main menu./
+
+  <file:docs/images/casual-dired-screenshot.png>
+
+  /Screenshot of EditKit edit menu./
+
+  <file:docs/images/casual-editkit-edit-screenshot.png>
+
+  /Screenshot of Calc main menu./
+
+  <file:docs/images/casual-calc-tmenu.png>
+
 
 [Transient] <https://github.com/magit/transient>
 
@@ -49,6 +64,9 @@
 <https://emacsconf.org/2024/talks/casual/>
 
 [Casual User Guide] <https://kickingvegas.github.io/casual>
+
+[Emacs built-in modes]
+<https://kickingvegas.github.io/casual/Casual-Modes.html>
 
 
 2 Requirements
