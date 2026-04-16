@@ -162,12 +162,12 @@
       (:authors ("Huan Thieu Nguyen" . "nguyenthieuhuan@gmail.com"))
       (:commit . "e9e56dec10f070367ab555c717c3d567a5962c82"))])
  (boxquote
-  . [(2 3) ((cl-lib (0 5))) "Quote text with a semi-box." tar
+  . [(2 4 1) ((emacs (28 1))) "Quote text with a semi-box" tar
      ((:url . "https://github.com/davep/boxquote.el")
-      (:keywords "quoting")
+      (:keywords "convenience" "editing" "quoting")
       (:maintainer "Dave Pearson" . "davep@davep.org")
       (:authors ("Dave Pearson" . "davep@davep.org"))
-      (:commit . "fe676396fa7e4372e01bf2c3d9a62e8d53615d46"))])
+      (:commit . "6d67daa0d7ac1a1eb0749ddd9a9f221490f2203c"))])
  (buttercup
   . [(1 40) ((emacs (24 4))) "Behavior-Driven Emacs Lisp Testing" tar
      ((:url . "https://github.com/jorgenschaefer/emacs-buttercup")

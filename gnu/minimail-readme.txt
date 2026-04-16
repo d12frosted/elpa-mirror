@@ -10,7 +10,7 @@ to messages:
 • Displaying messages, including MIME content (rendering via Gnus)
 • Composing, replying to and forwarding messages
 • Multi-account support
-• Search (currently only full text)
+• Search, via transient menu
 • Moving messages between mailboxes (also archive, move to trash, move
   to junk folder)
 • Sorting by thread, in two modes:
@@ -21,9 +21,8 @@ to messages:
 
 Here is a list of planned features:
 
-• Structured search (by sender, subject, etc.)
-• Marking and operating on sets of messages (move, etc.)
 • Watching for new messages and notifications
+• Virtual mailboxes a.k.a. bookmarked searches
 • Login via OAuth
 • Various optimizations, perhaps a persistent cache
 
@@ -63,28 +62,28 @@ planned:
   │ (setq mail-user-agent 'minimail
   │       minimail-accounts
   │       '((gmail ;; This can be any symbol you like to identify the account
-  │ 	 :mail-address "somebody@gmail.com"
-  │ 	 :incoming-url "imaps://imap.gmail.com"
-  │ 	 :outgoing-url "smtps://smtp.gmail.com")
-  │ 	(work ;; Assuming Evil Corp. uses "Google Workspace" as email provider
-  │ 	 :mail-address "webmaster@evilcorp.com"
-  │ 	 :incoming-url "imaps://imap.gmail.com"
-  │ 	 :outgoing-url "smtps://smtp.gmail.com"
-  │ 	 :signature (file "~/work/.signature"))
-  │ 	(uni
-  │ 	 :mail-address "somebody@math.niceuni.edu"
-  │ 	 ;; Include a username in the server URLs if it doesn't match
-  │ 	 ;; your email address.
-  │ 	 ;; Use `imap' and `smtp' as URL scheme if your server only
-  │ 	 ;; supports STARTTLS.
-  │ 	 :incoming-url "imap://username@imap.niceuni.edu"
-  │ 	 :outgoing-url "smtp://username@smtp.niceuni.edu")))
+  │          :mail-address "somebody@gmail.com"
+  │          :incoming-url "imaps://imap.gmail.com"
+  │          :outgoing-url "smtps://smtp.gmail.com")
+  │         (work ;; Assuming Evil Corp. uses "Google Workspace" as email provider
+  │          :mail-address "webmaster@evilcorp.com"
+  │          :incoming-url "imaps://imap.gmail.com"
+  │          :outgoing-url "smtps://smtp.gmail.com"
+  │          :signature (file "~/work/.signature"))
+  │         (uni
+  │          :mail-address "somebody@math.niceuni.edu"
+  │          ;; Include a username in the server URLs if it doesn't match
+  │          ;; your email address.
+  │          ;; Use `imap' and `smtp' as URL scheme if your server only
+  │          ;; supports STARTTLS.
+  │          :incoming-url "imap://username@imap.niceuni.edu"
+  │          :outgoing-url "smtp://username@smtp.niceuni.edu")))
   └────
 
   In addition to the above, you need to configure [auth-source] to
-  supply the passwords.  Some email provides require you to first create
-  an "app password" (for Gmail, see [this]).  Then your `~/.authinfo'
-  file should look something like this:
+  supply the passwords.  Some email providers require you to first
+  create an "app password" (for Gmail, see [this]).  Then your
+  `~/.authinfo' file should look something like this:
 
   ┌────
   │ machine imap.gmail.com login somebody@gmail.com password xxxxxxxxxxxxxxxx
