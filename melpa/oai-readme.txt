@@ -1,7 +1,7 @@
-Inspired by Robert Krahn's org-ai package <https://github.com/rksm/org-ai>
+OAI as a minor mode extend Org major mode with "ai block" that
+  allows you to interact with the OpenAI-compatible REST APIs.
 
-OAI extend Org mode with "ai block" that allows you to interact
-with the OpenAI-compatible REST APIs.
+OAI was inspired by org-ai package of Robert Krahn <https://github.com/rksm/org-ai>
 
 It allows you to:
 - Use #+begin_ai..#+end_ai blocks for org-mode
@@ -13,7 +13,7 @@ It allows you to:
 - Customization for engineering, there is :chain for sequence of
   calls out-of-the-box.
 
-For the Internet connection used built-in libs: url.el and url-http.el.
+The Internet connection uses the built-in libraries url.el and url-http.el.
 
 See see https://github.com/Anoncheg1/emacs-oai for the full set
 of features and setup instructions.
