@@ -3,7 +3,7 @@ Updating /mnt/store/melpa/working/ekg/
 Checking out be6cc349a5054154470173af6521e569cb21bcb1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg/
-  to /tmp/ekg-POCXPC/ekg-20260415.39
+  to /tmp/ekg-zj6HJ7/ekg-20260415.39
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/ekg.texi -> ekg.texi
     ekg.el -> ekg.el
@@ -13,6 +13,7 @@ Copying files (->) and directories (=>)
     ekg-org-roam.el -> ekg-org-roam.el
     ekg-org.el -> ekg-org.el
     ekg-apple-notes.el -> ekg-apple-notes.el
+    ekg-logseq.el -> ekg-logseq.el
 Generating doclicense.info
 Generating ekg.info
 Created ekg-20260415.39.tar containing:
@@ -23,12 +24,13 @@ Created ekg-20260415.39.tar containing:
   ekg-20260415.39/ekg-auto-save.el
   ekg-20260415.39/ekg-embedding.el
   ekg-20260415.39/ekg-llm.el
+  ekg-20260415.39/ekg-logseq.el
   ekg-20260415.39/ekg-org-roam.el
   ekg-20260415.39/ekg-org.el
   ekg-20260415.39/ekg-pkg.el
   ekg-20260415.39/ekg.el
   ekg-20260415.39/ekg.info
  ✓ Success:
-  2026-04-16T08:04:37+0000  ekg-20260415.39.entry
-  2026-04-16T08:04:37+0000  ekg-20260415.39.tar
-Built ekg in 8.534s, finished at 2026-04-16T08:04:38+0000
+  2026-04-24T06:20:48+0000  ekg-20260415.39.entry
+  2026-04-24T06:20:48+0000  ekg-20260415.39.tar
+Built ekg in 9.439s, finished at 2026-04-24T06:20:49+0000

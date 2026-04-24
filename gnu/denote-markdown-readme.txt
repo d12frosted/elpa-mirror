@@ -50,7 +50,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2024-2025 Free Software Foundation, Inc.
+  Copyright (C) 2024-2026 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free

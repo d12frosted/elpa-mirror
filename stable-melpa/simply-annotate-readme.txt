@@ -2,7 +2,8 @@
 A lightweight annotation system for Emacs that allows you to add
 persistent notes to any text file without modifying the original
 content.  Enhanced with threading, collaboration, and org-mode
-integration.  Requires Emacs 27.2+, no external dependencies.
+integration.  Requires Emacs 27.2+; uses `transient' (bundled with
+Emacs 28.1+, available from GNU ELPA for earlier versions).
 
 Quick Start (use-package):
 

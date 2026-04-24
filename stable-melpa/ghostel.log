@@ -1,36 +1,45 @@
  • Building package ghostel (from github:dakra/ghostel)...
 Updating /mnt/store/melpa/working/ghostel/
-Checking out 31bdc9cf923279e62c8ab1b8627dfb72689a8e65
+Checking out d33052d6f779e9b2c2c64b11e4b9c11c19f0e706
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghostel/
-  to /tmp/ghostel-mhXn9B/ghostel-20260415.2130
-    evil-ghostel.el -> evil-ghostel.el
-    ghostel-compile.el -> ghostel-compile.el
-    ghostel-debug.el -> ghostel-debug.el
-    ghostel-evil.el -> ghostel-evil.el
-    ghostel.el -> ghostel.el
+  to /tmp/ghostel-AQjcF9/ghostel-20260423.1642
+  ! lisp/ghostel-compile.el -> ghostel-compile.el
+  ! lisp/ghostel-debug.el -> ghostel-debug.el
+  ! lisp/ghostel-eshell.el -> ghostel-eshell.el
+  ! lisp/ghostel.el -> ghostel.el
     etc => etc
-Created ghostel-20260415.2130.tar containing:
-  ghostel-20260415.2130/
-  ghostel-20260415.2130/etc/
-  ghostel-20260415.2130/etc/ghostel.bash
-  ghostel-20260415.2130/etc/ghostel.fish
-  ghostel-20260415.2130/etc/ghostel.zsh
-  ghostel-20260415.2130/etc/shell-integration/
-  ghostel-20260415.2130/etc/shell-integration/bash/
-  ghostel-20260415.2130/etc/shell-integration/bash/ghostel-inject.bash
-  ghostel-20260415.2130/etc/shell-integration/fish/
-  ghostel-20260415.2130/etc/shell-integration/fish/vendor_conf.d/
-  ghostel-20260415.2130/etc/shell-integration/fish/vendor_conf.d/ghostel-integration.fish
-  ghostel-20260415.2130/etc/shell-integration/zsh/
-  ghostel-20260415.2130/etc/shell-integration/zsh/.zshenv
-  ghostel-20260415.2130/evil-ghostel.el
-  ghostel-20260415.2130/ghostel-compile.el
-  ghostel-20260415.2130/ghostel-debug.el
-  ghostel-20260415.2130/ghostel-evil.el
-  ghostel-20260415.2130/ghostel-pkg.el
-  ghostel-20260415.2130/ghostel.el
+Created ghostel-20260423.1642.tar containing:
+  ghostel-20260423.1642/
+  ghostel-20260423.1642/etc/
+  ghostel-20260423.1642/etc/shell/
+  ghostel-20260423.1642/etc/shell/bootstrap/
+  ghostel-20260423.1642/etc/shell/bootstrap/bash/
+  ghostel-20260423.1642/etc/shell/bootstrap/bash/inject.bash
+  ghostel-20260423.1642/etc/shell/bootstrap/fish/
+  ghostel-20260423.1642/etc/shell/bootstrap/fish/vendor_conf.d/
+  ghostel-20260423.1642/etc/shell/bootstrap/fish/vendor_conf.d/integration.fish
+  ghostel-20260423.1642/etc/shell/bootstrap/zsh/
+  ghostel-20260423.1642/etc/shell/bootstrap/zsh/.zshenv
+  ghostel-20260423.1642/etc/shell/ghostel.bash
+  ghostel-20260423.1642/etc/shell/ghostel.fish
+  ghostel-20260423.1642/etc/shell/ghostel.zsh
+  ghostel-20260423.1642/etc/terminfo/
+  ghostel-20260423.1642/etc/terminfo/67/
+  ghostel-20260423.1642/etc/terminfo/67/ghostty
+  ghostel-20260423.1642/etc/terminfo/78/
+  ghostel-20260423.1642/etc/terminfo/78/xterm-ghostty
+  ghostel-20260423.1642/etc/terminfo/g/
+  ghostel-20260423.1642/etc/terminfo/g/ghostty
+  ghostel-20260423.1642/etc/terminfo/x/
+  ghostel-20260423.1642/etc/terminfo/x/xterm-ghostty
+  ghostel-20260423.1642/etc/terminfo/xterm-ghostty.terminfo
+  ghostel-20260423.1642/ghostel-compile.el
+  ghostel-20260423.1642/ghostel-debug.el
+  ghostel-20260423.1642/ghostel-eshell.el
+  ghostel-20260423.1642/ghostel-pkg.el
+  ghostel-20260423.1642/ghostel.el
  ✓ Success:
-  2026-04-16T08:16:40+0000  ghostel-20260415.2130.entry
-  2026-04-16T08:16:40+0000  ghostel-20260415.2130.tar
-Built ghostel in 4.206s, finished at 2026-04-16T08:16:41+0000
+  2026-04-24T06:32:40+0000  ghostel-20260423.1642.entry
+  2026-04-24T06:32:40+0000  ghostel-20260423.1642.tar
+Built ghostel in 4.356s, finished at 2026-04-24T06:32:41+0000

@@ -22,7 +22,7 @@ After installing this package, in your config call `jarchive-mode`:
 ```
 
 or it can be called interactively, via `M-x jarchive-mode`.
-    
+
 ## Doom Emacs users: Note about when to call `jarchive-mode`
 
 Some Emacs distributions like [Doom](https://github.com/doomemacs/doomemacs "doom emacs on github") (and many personal configurations), set the `file-name-handler-alist` var to nil on startup, then restore it's value when startup is complete.

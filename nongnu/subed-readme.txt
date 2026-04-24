@@ -594,7 +594,23 @@ Testing
   nodemon might be helpful.
 
   ┌────
-  │ nodemon -w tests/*.el -w subed/*.el -x "make test"
+  │ nodemon -w "tests/*.el" -w "subed/*.el" -x "make test"
+  └────
+
+  To run only matching tests, use:
+
+  ┌────
+  │ PATTERN=regexp make test-some
+  └────
+
+  Combining the two:
+
+  ┌────
+  │ nodemon -w "tests/*.el" -w "subed/*.el" -x "PATTERN=regexp make test-some"
+  └────
+
+  ┌────
+  │ (setq coverage-dir (expand-file-name "./coverage/"))
   └────
 
 

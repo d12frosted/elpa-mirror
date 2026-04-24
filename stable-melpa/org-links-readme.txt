@@ -19,6 +19,8 @@ For ex.  `[[file:./notes/warehouse.el::23::(defun alina (pic))]]`
 
 Known issue: Org export not working properly with new formats.
 
+[[::LINE]] is equal to [[LINE]]
+
 Also provided:
 1) The command `org-links-store-extended' copies a link to the
    current file, at the current point.

@@ -716,12 +716,12 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "fdeacaa134e9de29a1888ad23d754b4ada3d8247"))])
  (denote-markdown
-  . [(0 2 1) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 2 2) ((emacs (28 1)) (denote (4 0 0)))
      "Extensions that better integrate Denote with Markdown" tar
      ((:url . "https://github.com/protesilaos/denote-markdown")
       (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "a7d7e1c1dd609abec2a8bdd0197782f62885d95b"))])
+      (:commit . "b3d19ffc68d15471f5098149467745951db883b7"))])
  (denote-menu
   . [(1 4 0) ((emacs (28 1)) (denote (3 0 0)))
      "View denote files in a tabulated list." tar
@@ -882,6 +882,14 @@
       (:authors ("Roland Winkler" . "winkler@gnu.org"))
       (:url . "https://elpa.gnu.org/packages/djvu.html")
       (:commit . "071c8ab168588897475899c46eaa16e70141db8c"))])
+ (dmsg
+  . [(0 2) ((emacs (28 1)))
+     "Timestamped debug messages with backtrace support" tar
+     ((:url . "https://github.com/haji-ali/dmsg.el")
+      (:keywords "maint" "tools")
+      (:maintainer "Al Haji-Ali" . "abdo.haji.ali@gmail.com")
+      (:authors ("Al Haji-Ali" . "abdo.haji.ali@gmail.com"))
+      (:commit . "0b39330ef2bdbbc33057157e1ba6932c49801417"))])
  (do-at-point
   . [(0 2 0) ((emacs (26 1)))
      "Generic context-sensitive action dispatcher." tar
@@ -1659,12 +1667,12 @@
       (:authors ("Hanno Perrey" . "hanno@hoowl.se"))
       (:commit . "c2ad37e2ada14b5551a83211cc4692b39be4e5fb"))])
  (jarchive
-  . [(0 11 0) ((emacs (26 1)))
+  . [(0 12 0) ((emacs (26 1)))
      "Open project dependencies in jar archives" tar
      ((:url . "https://git.sr.ht/~dannyfreeman/jarchive")
       (:keywords "tools" "languages" "jvm" "java" "clojure")
       (:maintainer "Danny Freeman" . "danny@dfreeman.email")
-      (:commit . "2c27714a72543bd115cb164ab25647b656c65b2d"))])
+      (:commit . "670b574ee3588b30acdeb096069b2739c979cac5"))])
  (javaimp
   . [(0 9 1) nil
      "Add and reorder Java import statements in Maven/Gradle projects"
@@ -1953,7 +1961,7 @@
       (:authors ("Ian Martins" . "ianxm@jhu.edu"))
       (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode
-  . [(8 1 2) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
+  . [(8 2 0) ((emacs (27 2))) "Major mode for MATLAB(R) dot-m files"
      tar
      ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
       (:keywords "matlab(r)")
@@ -1962,7 +1970,7 @@
 		   ("John Ciolfi" . "john.ciolfi.32@gmail.com"))
       (:authors ("Matt Wette" . "mwette@alumni.caltech.edu")
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
-      (:commit . "f21e88655823e25c6f72c38c6e508a5dada17088"))])
+      (:commit . "a42d34dfc498b8754ac89512b399b77481791406"))])
  (mct
   . [(1 1 0) ((emacs (29 1))) "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")
@@ -2227,13 +2235,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "6e3a09d6026fe7d7d5a3caf9a3d777cc9841fe80"))])
  (org
-  . [(9 8 2) ((emacs (28 2)))
+  . [(9 8 3) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "2ef390bfaf7f8e9206b4c923ea0a849ad427be41"))])
+      (:commit . "5d711684f1757598942e0a5fafd9712f2a6dc667"))])
  (org-contacts
   . [(1 3) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -3269,7 +3277,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient
-  . [(0 12 0)
+  . [(0 13 0)
      ((emacs (28 1)) (compat (30 1)) (cond-let (0 2)) (seq (2 24)))
      "Transient commands" tar
      ((:url . "https://github.com/magit/transient")
@@ -3278,7 +3286,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "1f7039ef8d548d6fe858084fcbeae7588eba4190"))])
+      (:commit . "cd97319a851db9b2ed3faecdb735c6d089edf4e1"))])
  (transient-cycles
   . [(2 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

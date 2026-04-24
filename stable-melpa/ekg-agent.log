@@ -3,13 +3,31 @@ Updating /mnt/store/melpa/working/ekg-agent/
 Checking out be6cc349a5054154470173af6521e569cb21bcb1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg-agent/
-  to /tmp/ekg-agent-v3TLZt/ekg-agent-20260415.39
+  to /tmp/ekg-agent-FVZNb7/ekg-agent-20260415.39
     ekg-agent.el -> ekg-agent.el
+  ! agent_tools/ekg-add-note -> ekg-add-note
+  ! agent_tools/ekg-append-note -> ekg-append-note
+  ! agent_tools/ekg-org-add-child -> ekg-org-add-child
+  ! agent_tools/ekg-org-edit -> ekg-org-edit
+  ! agent_tools/ekg-read -> ekg-read
+  ! agent_tools/ekg-tags -> ekg-tags
+  ! agent_tools/ekg-trash -> ekg-trash
+  ! agent_tools/ekg-update-tags -> ekg-update-tags
+  ! agent_tools/skill.md -> skill.md
 Created ekg-agent-20260415.39.tar containing:
   ekg-agent-20260415.39/
+  ekg-agent-20260415.39/ekg-add-note
   ekg-agent-20260415.39/ekg-agent-pkg.el
   ekg-agent-20260415.39/ekg-agent.el
+  ekg-agent-20260415.39/ekg-append-note
+  ekg-agent-20260415.39/ekg-org-add-child
+  ekg-agent-20260415.39/ekg-org-edit
+  ekg-agent-20260415.39/ekg-read
+  ekg-agent-20260415.39/ekg-tags
+  ekg-agent-20260415.39/ekg-trash
+  ekg-agent-20260415.39/ekg-update-tags
+  ekg-agent-20260415.39/skill.md
  ✓ Success:
-  2026-04-16T08:04:33+0000  ekg-agent-20260415.39.entry
-  2026-04-16T08:04:33+0000  ekg-agent-20260415.39.tar
-Built ekg-agent in 3.648s, finished at 2026-04-16T08:04:34+0000
+  2026-04-24T06:20:43+0000  ekg-agent-20260415.39.entry
+  2026-04-24T06:20:43+0000  ekg-agent-20260415.39.tar
+Built ekg-agent in 3.933s, finished at 2026-04-24T06:20:44+0000

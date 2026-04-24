@@ -1,4 +1,4 @@
-imbot provide an emacs input method using fcitx5 through dbus or librime with a dynamic module.
+imbot provide an emacs input method frontend for fcitx5 via dbus
 usage:
 (require 'imbot)
 (setq default-input-method "imbot")

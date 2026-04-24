@@ -25,6 +25,10 @@ In addition, `trust-manager-mode' integrates with the command
 its directory stops being trusted and its entry in
 `trust-manager-trust-alist' is cleared.
 
+`trust-manager-mode' also integrates with Dired: when the mode is
+enabled, you can use C-c C-t in a Dired buffer to trust one or more
+files/directories; similarly, C-c C-u can be used for untrusting.
+
 By default, `trust-manager-mode' also adds a mode line indicator in
 untrusted buffers where risky features may have been disabled.
 The default indicator is a `?' shown in red.  You can click on the
@@ -47,3 +51,11 @@ trusted, e.g. when you click on the untrusted buffer mode line
 indicator, it runs the hook `trust-manager-now-trusted-hook'.
 By default, `trust-manager-mode' uses this hook to re-enable the
 Emacs Lisp Flymake backend for on-the-fly diagnostics.
+
+`trust-manager-mode' can also extend Emacs's trust system to secure
+additional potentially risky features; the user option
+`trust-manager-secure-additional-features' says which features
+`trust-manager-mode' should hook into.  By default, this option is
+set to integrate trust into Emacs's file-local variables feature,
+such that file-specified modes and variable values are ignored in
+untrusted buffers.
