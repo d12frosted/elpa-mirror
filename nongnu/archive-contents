@@ -923,21 +923,21 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "16155f8b63ccf67d46535207a4f4378f675a8b47"))])
  (helm
-  . [(4 0 6) ((helm-core (4 0 6)) (wfnames (1 2)))
+  . [(4 0 7) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
 		 "completion" "lisp" "matching" "tools" "help")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "f12e7dd3132724cc294e79b55291a2c967a8fe5c"))])
+      (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
  (helm-core
-  . [(4 0 6) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "f12e7dd3132724cc294e79b55291a2c967a8fe5c"))])
+      (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
  (hideshowvis
   . [(0 9) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
