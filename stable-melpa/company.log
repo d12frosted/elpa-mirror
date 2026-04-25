@@ -1,45 +1,171 @@
  • Building package company (from github:company-mode/company-mode)...
 Updating /mnt/store/melpa/working/company/
-Checking out 4e0466f9925981928641839de93f9bdca5a27339
-Debugger entered--Lisp error: (end-of-file)
-  read-from-string("((emacs \"26.1\") (posframe \"1.5.1\")")
-  package-read-from-string("((emacs \"26.1\") (posframe \"1.5.1\")")
-  (package--prepare-dependencies (package-read-from-string (string-join require-lines " ")))
-  (progn (package--prepare-dependencies (package-read-from-string (string-join require-lines " "))))
-  (if require-lines (progn (package--prepare-dependencies (package-read-from-string (string-join require-lines " ")))))
-  (let* ((require-lines (and t (lm-header-multiline "package-requires")))) (if require-lines (progn (package--prepare-dependencies (package-read-from-string (string-join require-lines " "))))))
-  (cond ((fboundp 'lm-package-requires) (lm-package-requires)) ((fboundp 'package--prepare-dependencies) (let* ((require-lines (and t (lm-header-multiline "package-requires")))) (if require-lines (progn (package--prepare-dependencies (package-read-from-string (string-join require-lines " "))))))))
-  (eieio-oset rcp 'dependencies (cond ((fboundp 'lm-package-requires) (lm-package-requires)) ((fboundp 'package--prepare-dependencies) (let* ((require-lines (and t (lm-header-multiline "package-requires")))) (if require-lines (progn (package--prepare-dependencies (package-read-from-string ...))))))))
-  (progn (insert-file-contents file) (eieio-oset rcp 'summary (package-build--normalize-summary (save-excursion (goto-char (point-min)) (and (re-search-forward "^;;; [^ ]*\\.el ---[ \11]*\\(.*?\\)[ \11]*\\(-\\*-.*-\\*-[ \11..." nil t) (match-string-no-properties 1))))) (eieio-oset rcp 'dependencies (cond ((fboundp 'lm-package-requires) (lm-package-requires)) ((fboundp 'package--prepare-dependencies) (let* ((require-lines (and t ...))) (if require-lines (progn (package--prepare-dependencies ...))))))) (eieio-oset rcp 'webpage (or (let* ((site (and t (cond ... ...)))) (if site (progn (if (string-match package-build--http-regexp site) (replace-match "https" t t site 1) site)))) (let* ((format (and t (eieio-oref rcp ...)))) (if format (progn (format format (eieio-oref rcp ...))))))) (eieio-oset rcp 'keywords (lm-keywords-list)) (eieio-oset rcp 'maintainers (cond ((fboundp 'lm-maintainers) (lm-maintainers)) ((fboundp 'lm-maintainer) (let* ((maintainer (and t ...))) (if maintainer (progn (list maintainer))))))) (eieio-oset rcp 'authors (lm-authors)))
-  (unwind-protect (progn (insert-file-contents file) (eieio-oset rcp 'summary (package-build--normalize-summary (save-excursion (goto-char (point-min)) (and (re-search-forward "^;;; [^ ]*\\.el ---[ \11]*\\(.*?\\)[ \11]*\\(-\\*-.*-\\*-[ \11..." nil t) (match-string-no-properties 1))))) (eieio-oset rcp 'dependencies (cond ((fboundp 'lm-package-requires) (lm-package-requires)) ((fboundp 'package--prepare-dependencies) (let* ((require-lines ...)) (if require-lines (progn ...)))))) (eieio-oset rcp 'webpage (or (let* ((site (and t ...))) (if site (progn (if ... ... site)))) (let* ((format (and t ...))) (if format (progn (format format ...)))))) (eieio-oset rcp 'keywords (lm-keywords-list)) (eieio-oset rcp 'maintainers (cond ((fboundp 'lm-maintainers) (lm-maintainers)) ((fboundp 'lm-maintainer) (let* ((maintainer ...)) (if maintainer (progn ...)))))) (eieio-oset rcp 'authors (lm-authors))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert-file-contents file) (eieio-oset rcp 'summary (package-build--normalize-summary (save-excursion (goto-char (point-min)) (and (re-search-forward "^;;; [^ ]*\\.el ---[ \11]*\\(.*?\\)[ \11]*\\(-\\*-.*-\\*-[ \11..." nil t) (match-string-no-properties 1))))) (eieio-oset rcp 'dependencies (cond ((fboundp 'lm-package-requires) (lm-package-requires)) ((fboundp 'package--prepare-dependencies) (let* (...) (if require-lines ...))))) (eieio-oset rcp 'webpage (or (let* ((site ...)) (if site (progn ...))) (let* ((format ...)) (if format (progn ...))))) (eieio-oset rcp 'keywords (lm-keywords-list)) (eieio-oset rcp 'maintainers (cond ((fboundp 'lm-maintainers) (lm-maintainers)) ((fboundp 'lm-maintainer) (let* (...) (if maintainer ...))))) (eieio-oset rcp 'authors (lm-authors))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert-file-contents file) (eieio-oset rcp 'summary (package-build--normalize-summary (save-excursion (goto-char ...) (and ... ...)))) (eieio-oset rcp 'dependencies (cond ((fboundp ...) (lm-package-requires)) ((fboundp ...) (let* ... ...)))) (eieio-oset rcp 'webpage (or (let* (...) (if site ...)) (let* (...) (if format ...)))) (eieio-oset rcp 'keywords (lm-keywords-list)) (eieio-oset rcp 'maintainers (cond ((fboundp ...) (lm-maintainers)) ((fboundp ...) (let* ... ...)))) (eieio-oset rcp 'authors (lm-authors))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  (progn (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert-file-contents file) (eieio-oset rcp 'summary (package-build--normalize-summary (save-excursion ... ...))) (eieio-oset rcp 'dependencies (cond (... ...) (... ...))) (eieio-oset rcp 'webpage (or (let* ... ...) (let* ... ...))) (eieio-oset rcp 'keywords (lm-keywords-list)) (eieio-oset rcp 'maintainers (cond (... ...) (... ...))) (eieio-oset rcp 'authors (lm-authors))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))))
-  (if (file-exists-p file) (progn (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert-file-contents file) (eieio-oset rcp 'summary (package-build--normalize-summary ...)) (eieio-oset rcp 'dependencies (cond ... ...)) (eieio-oset rcp 'webpage (or ... ...)) (eieio-oset rcp 'keywords (lm-keywords-list)) (eieio-oset rcp 'maintainers (cond ... ...)) (eieio-oset rcp 'authors (lm-authors))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))))
-  (let* ((name (eieio-oref rcp 'name)) (file (concat name ".el")) (file (or (car (rassoc file files)) file))) (if (file-exists-p file) (progn (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (insert-file-contents file) (eieio-oset rcp ... ...) (eieio-oset rcp ... ...) (eieio-oset rcp ... ...) (eieio-oset rcp ... ...) (eieio-oset rcp ... ...) (eieio-oset rcp ... ...)) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))))))
-  package-build--extract-from-library(#<package-github-recipe package-github-recipe-155645c4a5f4> (("company-abbrev.el" . "company-abbrev.el") ("company-bbdb.el" . "company-bbdb.el") ("company-capf.el" . "company-capf.el") ("company-childframe.el" . "company-childframe.el") ("company-clang.el" . "company-clang.el") ("company-cmake.el" . "company-cmake.el") ("company-css.el" . "company-css.el") ("company-dabbrev-code.el" . "company-dabbrev-code.el") ("company-dabbrev.el" . "company-dabbrev.el") ("company-etags.el" . "company-etags.el") ("company-files.el" . "company-files.el") ("company-gtags.el" . "company-gtags.el") ("company-ispell.el" . "company-ispell.el") ("company-keywords.el" . "company-keywords.el") ("company-nxml.el" . "company-nxml.el") ("company-oddmuse.el" . "company-oddmuse.el") ("company-semantic.el" . "company-semantic.el") ("company-template.el" . "company-template.el") ("company-tempo.el" . "company-tempo.el") ("company-tng.el" . "company-tng.el") ("company-yasnippet.el" . "company-yasnippet.el") ("company.el" . "company.el") ("doc/company.texi" . "company.texi") ("icons" . "icons") ("doc/images/small/echo-meta.png" . "images/small/echo-meta.png") ("doc/images/small/echo-qa.png" . "images/small/echo-qa.png") ("doc/images/small/echo-strip-qa.png" . "images/small/echo-strip-qa.png") ("doc/images/small/echo-strip.png" . "images/small/echo-strip.png") ("doc/images/small/echo.png" . "images/small/echo.png") ("doc/images/small/preview-dark.png" . "images/small/preview-dark.png") ("doc/images/small/preview-light.png" . "images/small/preview-light.png") ("doc/images/small/tooltip-annotations.png" . "images/small/tooltip-annotations.png") ("doc/images/small/tooltip-faces-light.png" . "images/small/tooltip-faces-light.png") ("doc/images/small/tooltip-filter.png" . "images/small/tooltip-filter.png") ("doc/images/small/tooltip-flip.png" . "images/small/tooltip-flip.png") ("doc/images/small/tooltip-icon-bg.png" . "images/small/tooltip-icon-bg.png") ("doc/images/small/tooltip-icon-face.png" . "images/small/tooltip-icon-face.png") ("doc/images/small/tooltip-icons-dot.png" . "images/small/tooltip-icons-dot.png") ("doc/images/small/tooltip-icons-text.png" . "images/small/tooltip-icons-text.png") ("doc/images/small/tooltip-icons-vscode.png" . "images/small/tooltip-icons-vscode.png") ("doc/images/small/tooltip-limit.png" . "images/small/tooltip-limit.png") ("doc/images/small/tooltip-margin.png" . "images/small/tooltip-margin.png") ("doc/images/small/tooltip-minimum-above.png" . "images/small/tooltip-minimum-above.png") ("doc/images/small/tooltip-minimum-below.png" . "images/small/tooltip-minimum-below.png") ("doc/images/small/tooltip-offset-display.png" . "images/small/tooltip-offset-display.png") ("doc/images/small/tooltip-qa-faces-light.png" . "images/small/tooltip-qa-faces-light.png") ("doc/images/small/tooltip-quick-access.png" . "images/small/tooltip-quick-access.png") ("doc/images/small/tooltip-search.png" . "images/small/tooltip-search.png")))
-  (progn (if (or (rassoc (concat name ".el") files) (rassoc (concat name "-pkg.el") files)) nil (package-build--error name "%s[-pkg].el matching package name is missing" name)) (package-build--extract-from-library rcp files) (package-build--extract-from-package rcp files) (if package-build--inhibit-build nil (unwind-protect (progn (package-build--copy-package-files files target) (package-build--set-version-headers rcp target) (package-build--write-pkg-file rcp target) (package-build--generate-info-files rcp files target) (package-build--create-tar rcp tmpdir) (package-build--write-pkg-readme rcp files)) (delete-directory tmpdir t nil))) (package-build--write-archive-entry rcp))
-  (let* ((tmpdir (file-name-as-directory (make-temp-file (concat name "-") t))) (target (expand-file-name (concat name "-" version) tmpdir))) (progn (if (or (rassoc (concat name ".el") files) (rassoc (concat name "-pkg.el") files)) nil (package-build--error name "%s[-pkg].el matching package name is missing" name)) (package-build--extract-from-library rcp files) (package-build--extract-from-package rcp files) (if package-build--inhibit-build nil (unwind-protect (progn (package-build--copy-package-files files target) (package-build--set-version-headers rcp target) (package-build--write-pkg-file rcp target) (package-build--generate-info-files rcp files target) (package-build--create-tar rcp tmpdir) (package-build--write-pkg-readme rcp files)) (delete-directory tmpdir t nil))) (package-build--write-archive-entry rcp)))
-  (let ((name x147) (version x148)) (let* ((tmpdir (file-name-as-directory (make-temp-file (concat name "-") t))) (target (expand-file-name (concat name "-" version) tmpdir))) (progn (if (or (rassoc (concat name ".el") files) (rassoc (concat name "-pkg.el") files)) nil (package-build--error name "%s[-pkg].el matching package name is missing" name)) (package-build--extract-from-library rcp files) (package-build--extract-from-package rcp files) (if package-build--inhibit-build nil (unwind-protect (progn (package-build--copy-package-files files target) (package-build--set-version-headers rcp target) (package-build--write-pkg-file rcp target) (package-build--generate-info-files rcp files target) (package-build--create-tar rcp tmpdir) (package-build--write-pkg-readme rcp files)) (delete-directory tmpdir t nil))) (package-build--write-archive-entry rcp))))
-...
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-155645c4a5f4> (("company-abbrev.el" . "company-abbrev.el") ("company-bbdb.el" . "company-bbdb.el") ("company-capf.el" . "company-capf.el") ("company-childframe.el" . "company-childframe.el") ("company-clang.el" . "company-clang.el") ("company-cmake.el" . "company-cmake.el") ("company-css.el" . "company-css.el") ("company-dabbrev-code.el" . "company-dabbrev-code.el") ("company-dabbrev.el" . "company-dabbrev.el") ("company-etags.el" . "company-etags.el") ("company-files.el" . "company-files.el") ("company-gtags.el" . "company-gtags.el") ("company-ispell.el" . "company-ispell.el") ("company-keywords.el" . "company-keywords.el") ("company-nxml.el" . "company-nxml.el") ("company-oddmuse.el" . "company-oddmuse.el") ("company-semantic.el" . "company-semantic.el") ("company-template.el" . "company-template.el") ("company-tempo.el" . "company-tempo.el") ("company-tng.el" . "company-tng.el") ("company-yasnippet.el" . "company-yasnippet.el") ("company.el" . "company.el") ("doc/company.texi" . "company.texi") ("icons" . "icons") ("doc/images/small/echo-meta.png" . "images/small/echo-meta.png") ("doc/images/small/echo-qa.png" . "images/small/echo-qa.png") ("doc/images/small/echo-strip-qa.png" . "images/small/echo-strip-qa.png") ("doc/images/small/echo-strip.png" . "images/small/echo-strip.png") ("doc/images/small/echo.png" . "images/small/echo.png") ("doc/images/small/preview-dark.png" . "images/small/preview-dark.png") ("doc/images/small/preview-light.png" . "images/small/preview-light.png") ("doc/images/small/tooltip-annotations.png" . "images/small/tooltip-annotations.png") ("doc/images/small/tooltip-faces-light.png" . "images/small/tooltip-faces-light.png") ("doc/images/small/tooltip-filter.png" . "images/small/tooltip-filter.png") ("doc/images/small/tooltip-flip.png" . "images/small/tooltip-flip.png") ("doc/images/small/tooltip-icon-bg.png" . "images/small/tooltip-icon-bg.png") ("doc/images/small/tooltip-icon-face.png" . "images/small/tooltip-icon-face.png") ("doc/images/small/tooltip-icons-dot.png" . "images/small/tooltip-icons-dot.png") ("doc/images/small/tooltip-icons-text.png" . "images/small/tooltip-icons-text.png") ("doc/images/small/tooltip-icons-vscode.png" . "images/small/tooltip-icons-vscode.png") ("doc/images/small/tooltip-limit.png" . "images/small/tooltip-limit.png") ("doc/images/small/tooltip-margin.png" . "images/small/tooltip-margin.png") ("doc/images/small/tooltip-minimum-above.png" . "images/small/tooltip-minimum-above.png") ("doc/images/small/tooltip-minimum-below.png" . "images/small/tooltip-minimum-below.png") ("doc/images/small/tooltip-offset-display.png" . "images/small/tooltip-offset-display.png") ("doc/images/small/tooltip-qa-faces-light.png" . "images/small/tooltip-qa-faces-light.png") ("doc/images/small/tooltip-quick-access.png" . "images/small/tooltip-quick-access.png") ("doc/images/small/tooltip-search.png" . "images/small/tooltip-search.png")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ (and t package-build-run-recipe-shell-command)) (command (and _ (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((_ (and t package-build-run-recipe-make-targets)) (targets (and _ (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ (and t package-build-run-recipe-shell-command)) (command (and _ (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((_ (and t package-build-run-recipe-make-targets)) (targets (and _ (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ (and t package-build-run-recipe-shell-command)) (command (and _ (eieio-oref rcp ...)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((_ (and t package-build-run-recipe-make-targets)) (targets (and _ (eieio-oref rcp ...)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ (and t package-build-run-recipe-shell-command)) (command (and _ ...))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((_ (and t package-build-run-recipe-make-targets)) (targets (and _ ...))) (if targets (progn (package-build--message "Running make %s" ...) (apply ... rcp "make" targets)))) (let* ((files (and t ...))) (if files (funcall (or package-build-build-function ...) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((_ ...) (command ...)) (if command (progn ... ...))) (let* ((_ ...) (targets ...)) (if targets (progn ... ...))) (let* ((files ...)) (if files (funcall ... rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 'name)) (x140 (eieio-oref x0 'version)) (x141 (eieio-oref x0 'commit)) (x142 (eieio-oref x0 'revdesc))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* (... ...) (if command ...)) (let* (... ...) (if targets ...)) (let* (...) (if files ... ...)) (if package-build-badge-data (progn ...))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x139 (eieio-oref x0 ...)) (x140 (eieio-oref x0 ...)) (x141 (eieio-oref x0 ...)) (x142 (eieio-oref x0 ...))) (let ((name x139) (version x140) (commit x141) (revdesc x142)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ... ...) (let* ... ...) (let* ... ...) (if package-build-badge-data ...)))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-155645c4a5f4>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 (car --dolist-tail--))) (progn (ignore (consp x136)) (let* (... ...) (let ... ...))) (setq --dolist-tail-- (cdr --dolist-tail--)))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while --dolist-tail-- (let ((x136 ...)) (progn (ignore ...) (let* ... ...)) (setq --dolist-tail-- (cdr --dolist-tail--))))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))
-  (progn (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (repo (eieio-oref rcp 'repo)) (fetcher (package-recipe--fetcher rcp)) (version nil) (msg (format "%s%s package %s" (if noninteractive " • " "") (if package-build--inhibit-update "Fetching" "Building") name))) (cond ((and package-build-verbose (not noninteractive)) (message "%s..." msg) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "%s (from %s)..." msg (if repo (format "%s:%s" fetcher repo) url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (if (not version) (message " ✗ Cannot determine version!") (message " ✓ Success:") (let ((--dolist-tail-- (directory-files-and-attributes package-build-archive-dir nil ...))) (while --dolist-tail-- (let (...) (progn ... ...) (setq --dolist-tail-- ...)))))) (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  package-build-archive("company")
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-stable nil) (setq packa..." "--eval" "(progn (setq package-build-directory \"/mnt/store/m..." "--eval" "(setq package-build-timeout-secs 600)" "--eval" "()" "--load" "package-build.el" "--eval" "(package-build-archive \"company\")"))
-  command-line()
-  normal-top-level()
-
+Checking out 7a636925bf37bc7aabaed70ad9188ab427a9db2a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company/
+  to /tmp/company-3og3Hl/company-20260424.2111
+    company-abbrev.el -> company-abbrev.el
+    company-bbdb.el -> company-bbdb.el
+    company-capf.el -> company-capf.el
+    company-childframe.el -> company-childframe.el
+    company-clang.el -> company-clang.el
+    company-cmake.el -> company-cmake.el
+    company-css.el -> company-css.el
+    company-dabbrev-code.el -> company-dabbrev-code.el
+    company-dabbrev.el -> company-dabbrev.el
+    company-etags.el -> company-etags.el
+    company-files.el -> company-files.el
+    company-gtags.el -> company-gtags.el
+    company-ispell.el -> company-ispell.el
+    company-keywords.el -> company-keywords.el
+    company-nxml.el -> company-nxml.el
+    company-oddmuse.el -> company-oddmuse.el
+    company-semantic.el -> company-semantic.el
+    company-template.el -> company-template.el
+    company-tempo.el -> company-tempo.el
+    company-tng.el -> company-tng.el
+    company-yasnippet.el -> company-yasnippet.el
+    company.el -> company.el
+  ! doc/company.texi -> company.texi
+    icons => icons
+  ! doc/images/small/echo-meta.png -> images/small/echo-meta.png
+  ! doc/images/small/echo-qa.png -> images/small/echo-qa.png
+  ! doc/images/small/echo-strip-qa.png -> images/small/echo-strip-qa.png
+  ! doc/images/small/echo-strip.png -> images/small/echo-strip.png
+  ! doc/images/small/echo.png -> images/small/echo.png
+  ! doc/images/small/preview-dark.png -> images/small/preview-dark.png
+  ! doc/images/small/preview-light.png -> images/small/preview-light.png
+  ! doc/images/small/tooltip-annotations.png -> images/small/tooltip-annotations.png
+  ! doc/images/small/tooltip-faces-light.png -> images/small/tooltip-faces-light.png
+  ! doc/images/small/tooltip-filter.png -> images/small/tooltip-filter.png
+  ! doc/images/small/tooltip-flip.png -> images/small/tooltip-flip.png
+  ! doc/images/small/tooltip-icon-bg.png -> images/small/tooltip-icon-bg.png
+  ! doc/images/small/tooltip-icon-face.png -> images/small/tooltip-icon-face.png
+  ! doc/images/small/tooltip-icons-dot.png -> images/small/tooltip-icons-dot.png
+  ! doc/images/small/tooltip-icons-text.png -> images/small/tooltip-icons-text.png
+  ! doc/images/small/tooltip-icons-vscode.png -> images/small/tooltip-icons-vscode.png
+  ! doc/images/small/tooltip-limit.png -> images/small/tooltip-limit.png
+  ! doc/images/small/tooltip-margin.png -> images/small/tooltip-margin.png
+  ! doc/images/small/tooltip-minimum-above.png -> images/small/tooltip-minimum-above.png
+  ! doc/images/small/tooltip-minimum-below.png -> images/small/tooltip-minimum-below.png
+  ! doc/images/small/tooltip-offset-display.png -> images/small/tooltip-offset-display.png
+  ! doc/images/small/tooltip-qa-faces-light.png -> images/small/tooltip-qa-faces-light.png
+  ! doc/images/small/tooltip-quick-access.png -> images/small/tooltip-quick-access.png
+  ! doc/images/small/tooltip-search.png -> images/small/tooltip-search.png
+Generating company.info
+Created company-20260424.2111.tar containing:
+  company-20260424.2111/
+  company-20260424.2111/company-abbrev.el
+  company-20260424.2111/company-bbdb.el
+  company-20260424.2111/company-capf.el
+  company-20260424.2111/company-childframe.el
+  company-20260424.2111/company-clang.el
+  company-20260424.2111/company-cmake.el
+  company-20260424.2111/company-css.el
+  company-20260424.2111/company-dabbrev-code.el
+  company-20260424.2111/company-dabbrev.el
+  company-20260424.2111/company-etags.el
+  company-20260424.2111/company-files.el
+  company-20260424.2111/company-gtags.el
+  company-20260424.2111/company-ispell.el
+  company-20260424.2111/company-keywords.el
+  company-20260424.2111/company-nxml.el
+  company-20260424.2111/company-oddmuse.el
+  company-20260424.2111/company-pkg.el
+  company-20260424.2111/company-semantic.el
+  company-20260424.2111/company-template.el
+  company-20260424.2111/company-tempo.el
+  company-20260424.2111/company-tng.el
+  company-20260424.2111/company-yasnippet.el
+  company-20260424.2111/company.el
+  company-20260424.2111/company.info
+  company-20260424.2111/dir
+  company-20260424.2111/icons/
+  company-20260424.2111/icons/LICENSE
+  company-20260424.2111/icons/attribution.md
+  company-20260424.2111/icons/vscode-dark/
+  company-20260424.2111/icons/vscode-dark/folder.svg
+  company-20260424.2111/icons/vscode-dark/references.svg
+  company-20260424.2111/icons/vscode-dark/symbol-array.svg
+  company-20260424.2111/icons/vscode-dark/symbol-boolean.svg
+  company-20260424.2111/icons/vscode-dark/symbol-class.svg
+  company-20260424.2111/icons/vscode-dark/symbol-color.svg
+  company-20260424.2111/icons/vscode-dark/symbol-constant.svg
+  company-20260424.2111/icons/vscode-dark/symbol-enumerator-member.svg
+  company-20260424.2111/icons/vscode-dark/symbol-enumerator.svg
+  company-20260424.2111/icons/vscode-dark/symbol-event.svg
+  company-20260424.2111/icons/vscode-dark/symbol-field.svg
+  company-20260424.2111/icons/vscode-dark/symbol-file.svg
+  company-20260424.2111/icons/vscode-dark/symbol-interface.svg
+  company-20260424.2111/icons/vscode-dark/symbol-key.svg
+  company-20260424.2111/icons/vscode-dark/symbol-keyword.svg
+  company-20260424.2111/icons/vscode-dark/symbol-method.svg
+  company-20260424.2111/icons/vscode-dark/symbol-misc.svg
+  company-20260424.2111/icons/vscode-dark/symbol-namespace.svg
+  company-20260424.2111/icons/vscode-dark/symbol-numeric.svg
+  company-20260424.2111/icons/vscode-dark/symbol-operator.svg
+  company-20260424.2111/icons/vscode-dark/symbol-parameter.svg
+  company-20260424.2111/icons/vscode-dark/symbol-property.svg
+  company-20260424.2111/icons/vscode-dark/symbol-ruler.svg
+  company-20260424.2111/icons/vscode-dark/symbol-snippet.svg
+  company-20260424.2111/icons/vscode-dark/symbol-string.svg
+  company-20260424.2111/icons/vscode-dark/symbol-structure.svg
+  company-20260424.2111/icons/vscode-dark/symbol-variable.svg
+  company-20260424.2111/icons/vscode-light/
+  company-20260424.2111/icons/vscode-light/folder.svg
+  company-20260424.2111/icons/vscode-light/references.svg
+  company-20260424.2111/icons/vscode-light/symbol-array.svg
+  company-20260424.2111/icons/vscode-light/symbol-boolean.svg
+  company-20260424.2111/icons/vscode-light/symbol-class.svg
+  company-20260424.2111/icons/vscode-light/symbol-color.svg
+  company-20260424.2111/icons/vscode-light/symbol-constant.svg
+  company-20260424.2111/icons/vscode-light/symbol-enumerator-member.svg
+  company-20260424.2111/icons/vscode-light/symbol-enumerator.svg
+  company-20260424.2111/icons/vscode-light/symbol-event.svg
+  company-20260424.2111/icons/vscode-light/symbol-field.svg
+  company-20260424.2111/icons/vscode-light/symbol-file.svg
+  company-20260424.2111/icons/vscode-light/symbol-interface.svg
+  company-20260424.2111/icons/vscode-light/symbol-key.svg
+  company-20260424.2111/icons/vscode-light/symbol-keyword.svg
+  company-20260424.2111/icons/vscode-light/symbol-method.svg
+  company-20260424.2111/icons/vscode-light/symbol-misc.svg
+  company-20260424.2111/icons/vscode-light/symbol-namespace.svg
+  company-20260424.2111/icons/vscode-light/symbol-numeric.svg
+  company-20260424.2111/icons/vscode-light/symbol-operator.svg
+  company-20260424.2111/icons/vscode-light/symbol-parameter.svg
+  company-20260424.2111/icons/vscode-light/symbol-property.svg
+  company-20260424.2111/icons/vscode-light/symbol-ruler.svg
+  company-20260424.2111/icons/vscode-light/symbol-snippet.svg
+  company-20260424.2111/icons/vscode-light/symbol-string.svg
+  company-20260424.2111/icons/vscode-light/symbol-structure.svg
+  company-20260424.2111/icons/vscode-light/symbol-variable.svg
+  company-20260424.2111/images/
+  company-20260424.2111/images/small/
+  company-20260424.2111/images/small/echo-meta.png
+  company-20260424.2111/images/small/echo-qa.png
+  company-20260424.2111/images/small/echo-strip-qa.png
+  company-20260424.2111/images/small/echo-strip.png
+  company-20260424.2111/images/small/echo.png
+  company-20260424.2111/images/small/preview-dark.png
+  company-20260424.2111/images/small/preview-light.png
+  company-20260424.2111/images/small/tooltip-annotations.png
+  company-20260424.2111/images/small/tooltip-faces-light.png
+  company-20260424.2111/images/small/tooltip-filter.png
+  company-20260424.2111/images/small/tooltip-flip.png
+  company-20260424.2111/images/small/tooltip-icon-bg.png
+  company-20260424.2111/images/small/tooltip-icon-face.png
+  company-20260424.2111/images/small/tooltip-icons-dot.png
+  company-20260424.2111/images/small/tooltip-icons-text.png
+  company-20260424.2111/images/small/tooltip-icons-vscode.png
+  company-20260424.2111/images/small/tooltip-limit.png
+  company-20260424.2111/images/small/tooltip-margin.png
+  company-20260424.2111/images/small/tooltip-minimum-above.png
+  company-20260424.2111/images/small/tooltip-minimum-below.png
+  company-20260424.2111/images/small/tooltip-offset-display.png
+  company-20260424.2111/images/small/tooltip-qa-faces-light.png
+  company-20260424.2111/images/small/tooltip-quick-access.png
+  company-20260424.2111/images/small/tooltip-search.png
+ ✓ Success:
+  2026-04-25T02:15:58+0000  company-20260424.2111.entry
+  2026-04-25T02:15:58+0000  company-20260424.2111.tar
+Built company in 7.923s, finished at 2026-04-25T02:15:59+0000
