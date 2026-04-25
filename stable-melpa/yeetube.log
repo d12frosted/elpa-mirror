@@ -1,19 +1,29 @@
  • Building package yeetube (from https://git.thanosapollo.org/yeetube)...
 Updating /mnt/store/melpa/working/yeetube/
-Checking out 77e816972a70db86ad06ef10db56e0d8cecede5c
+Checking out 41bfc27e0aa70714fcb33e3c724853549359fdd1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/yeetube/
-  to /tmp/yeetube-v3XUVm/yeetube-20260302.1931
+  to /tmp/yeetube-b36x8Z/yeetube-20260425.1705
+    yeetube-download.el -> yeetube-download.el
+    yeetube-menu.el -> yeetube-menu.el
     yeetube-mpv.el -> yeetube-mpv.el
     yeetube-ol.el -> yeetube-ol.el
+    yeetube-scraper.el -> yeetube-scraper.el
+    yeetube-ui.el -> yeetube-ui.el
     yeetube.el -> yeetube.el
-Created yeetube-20260302.1931.tar containing:
-  yeetube-20260302.1931/
-  yeetube-20260302.1931/yeetube-mpv.el
-  yeetube-20260302.1931/yeetube-ol.el
-  yeetube-20260302.1931/yeetube-pkg.el
-  yeetube-20260302.1931/yeetube.el
+Created yeetube-20260425.1705.tar containing:
+  yeetube-20260425.1705/
+  yeetube-20260425.1705/yeetube-download.el
+  yeetube-20260425.1705/yeetube-menu.el
+  yeetube-20260425.1705/yeetube-mpv.el
+  yeetube-20260425.1705/yeetube-ol.el
+  yeetube-20260425.1705/yeetube-pkg.el
+  yeetube-20260425.1705/yeetube-scraper.el
+  yeetube-20260425.1705/yeetube-ui.el
+  yeetube-20260425.1705/yeetube.el
  ✓ Success:
   2026-04-25T14:53:30+0000  yeetube-20260302.1931.entry
   2026-04-25T14:53:30+0000  yeetube-20260302.1931.tar
-Built yeetube in 7.190s, finished at 2026-04-25T14:53:31+0000
+  2026-04-25T17:45:08+0000  yeetube-20260425.1705.entry
+  2026-04-25T17:45:08+0000  yeetube-20260425.1705.tar
+Built yeetube in 75.051s, finished at 2026-04-25T17:45:08+0000
