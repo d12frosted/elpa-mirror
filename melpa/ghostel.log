@@ -3,14 +3,21 @@ Updating /mnt/store/melpa/working/ghostel/
 Checking out 3c61db63eec06334869258905a86d1fb8af5c507
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghostel/
-  to /tmp/ghostel-irjnmu/ghostel-20260425.1212
+  to /tmp/ghostel-5ZRmmD/ghostel-20260425.1212
   ! lisp/ghostel-compile.el -> ghostel-compile.el
   ! lisp/ghostel-debug.el -> ghostel-debug.el
   ! lisp/ghostel-eshell.el -> ghostel-eshell.el
   ! lisp/ghostel.el -> ghostel.el
     etc => etc
+    src => src
+    vendor => vendor
+    build.zig -> build.zig
+    build.zig.zon -> build.zig.zon
+    symbols.map -> symbols.map
 Created ghostel-20260425.1212.tar containing:
   ghostel-20260425.1212/
+  ghostel-20260425.1212/build.zig
+  ghostel-20260425.1212/build.zig.zon
   ghostel-20260425.1212/etc/
   ghostel-20260425.1212/etc/shell/
   ghostel-20260425.1212/etc/shell/bootstrap/
@@ -39,7 +46,17 @@ Created ghostel-20260425.1212.tar containing:
   ghostel-20260425.1212/ghostel-eshell.el
   ghostel-20260425.1212/ghostel-pkg.el
   ghostel-20260425.1212/ghostel.el
+  ghostel-20260425.1212/src/
+  ghostel-20260425.1212/src/emacs.zig
+  ghostel-20260425.1212/src/ghostty.zig
+  ghostel-20260425.1212/src/input.zig
+  ghostel-20260425.1212/src/module.zig
+  ghostel-20260425.1212/src/render.zig
+  ghostel-20260425.1212/src/terminal.zig
+  ghostel-20260425.1212/symbols.map
+  ghostel-20260425.1212/vendor/
+  ghostel-20260425.1212/vendor/emacs-module.h
  ✓ Success:
-  2026-04-26T15:24:42+0000  ghostel-20260425.1212.entry
-  2026-04-26T15:24:42+0000  ghostel-20260425.1212.tar
-Built ghostel in 4.096s, finished at 2026-04-26T15:24:43+0000
+  2026-04-26T18:11:22+0000  ghostel-20260425.1212.entry
+  2026-04-26T18:11:22+0000  ghostel-20260425.1212.tar
+Built ghostel in 4.371s, finished at 2026-04-26T18:11:23+0000
