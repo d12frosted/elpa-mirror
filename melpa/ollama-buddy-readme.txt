@@ -49,6 +49,7 @@ Legacy per-provider require files still work but are deprecated:
   (require 'ollama-buddy-codestral)     ; s: Mistral Codestral
   (require 'ollama-buddy-deepseek)      ; d: DeepSeek
   (require 'ollama-buddy-openrouter)    ; r: OpenRouter (400+ models)
+  (require 'ollama-buddy-opencode)      ; n: OpenCode Go subscription
   (require 'ollama-buddy-openai-compat) ; l: any OpenAI-compatible server
 
 Each provider needs an API key (see PROVIDERS.org for setup details).
