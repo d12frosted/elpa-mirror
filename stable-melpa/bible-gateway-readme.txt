@@ -1,13 +1,17 @@
 bible-gateway is a simple package that fetches content from
-BibleGateway.com. It can:
+[BibleGateway.com](http://BibleGateway.com). It can:
 
 - Fetch and display the Bible verse of the day
 - Insert Bible passages/chapters at point or in a dedicated buffer
 - Open audio chapters in your browser
 - Search the Bible by keyword and display results in a dedicated buffer with
   clickable references and pagination
+- Follow a daily reading plan from a CSV file
 
 Usage:
+
+A transient menu (M-x `bible-gateway') gives access to all the
+commands above.
 
 `bible-gateway-get-verse' fetches the verse of the day for use as
 an emacs-dashboard footer or a scratch buffer message.
@@ -25,3 +29,7 @@ Zondervan Audio in the browser.
 
 M-x `bible-gateway-search' prompts for a search query, fetches results
 from BibleGateway, and displays them in a dedicated buffer.
+
+M-x `bible-gateway-read-today' fetches all of today's passages from
+the active reading plan (set via `bible-gateway-reading-plan') and
+displays them in a single buffer.

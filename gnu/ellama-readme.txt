@@ -185,6 +185,12 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-summarize-webpage': Summarize a webpage fetched from a URL
     using Ellama.
   • `ellama-provider-select': Select ellama provider.
+  • `ellama-select-model': Change the current provider model
+    interactively.  The model transient supports Ollama and
+    OpenAI-compatible providers, including URL editing for compatible
+    APIs.  Use "Reset model fields" to clear model, temperature, and
+    context-length overrides and let the provider use its defaults;
+    reset values are shown as `default' in the transient.
   • `ellama-code-complete': Complete selected code or code in the
     current buffer according to a provided change using Ellama.
   • `ellama-code-add': Generate and insert new code based on
@@ -211,6 +217,10 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-session-switch': Change current active session.
   • `ellama-session-kill': Select and kill one of active sessions.
   • `ellama-session-rename': Rename current ellama session.
+  • `ellama-session-compact-current': Compact current Ellama session
+    context.
+  • `ellama-session-compact': Select and compact an active Ellama
+    session context.
   • `ellama-context-add-file': Add file to context.
   • `ellama-context-add-directory': Add all files in directory to the
     context.
@@ -359,6 +369,27 @@ Assistant". Previous sentence was written by Ellama itself.
     default.
   • `ellama-session-auto-save': Automatically save ellama sessions if
     set. Enabled by default.
+  • `ellama-session-auto-compact-enabled': Automatically compact long
+    chat session context. Enabled by default.
+  • `ellama-session-auto-compact-token-threshold': Total token count
+    that triggers automatic session compaction. If not set, Ellama uses
+    `ellama-session-auto-compact-threshold-percent' of the provider
+    context window.
+  • `ellama-session-auto-compact-threshold-percent': Percentage of
+    provider context limit that triggers automatic compaction. Default
+    value is 80.
+  • `ellama-session-auto-compact-keep-last-turns': Number of recent user
+    turns to keep verbatim during compaction. Default value is 3.
+  • `ellama-session-auto-compact-target-token-threshold': Preferred
+    target token count after compaction. If not set, Ellama targets half
+    of the compaction threshold.
+  • `ellama-session-auto-compact-provider': Provider used to summarize
+    old session context. If not set, Ellama uses
+    `ellama-summarization-provider', then the session provider.
+  • `ellama-session-auto-compact-show-message': Show compaction notices
+    in chat buffers. Enabled by default.
+  • `ellama-session-auto-compact-prompt-template': Prompt template for
+    automatic session context compaction.
   • `ellama-naming-scheme': How to name new sessions.
   • `ellama-naming-provider': LLM provider for generating session names
     by LLM. If not set `ellama-provider' will be used.
@@ -465,7 +496,46 @@ Assistant". Previous sentence was written by Ellama itself.
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
 
-4.1 DLP for Tool Input/Output
+4.1 Session Compaction
+──────────────────────
+
+  Ellama can compact long chat sessions to keep them within the provider
+  context window.  Compaction summarizes older conversation turns into
+  one synthetic assistant message and keeps the most recent user turns
+  verbatim.  New messages continue from the compacted prompt, so the
+  session can keep running without resending the full history.
+
+  Automatic compaction is enabled by default with
+  `ellama-session-auto-compact-enabled'.  It runs after a response when
+  Ellama can determine or estimate token usage and the session crosses
+  the configured threshold.  Use
+  `ellama-session-auto-compact-token-threshold' for an absolute token
+  threshold, or leave it unset to use
+  `ellama-session-auto-compact-threshold-percent' of the provider
+  context limit.
+
+  You can compact sessions manually:
+
+  • `M-x ellama-session-compact-current' compacts the current session.
+  • `M-x ellama-session-compact' prompts for an active session and
+    compacts it.
+
+  The system message is not summarized by the compaction LLM.  Ellama
+  restores the original system message in the compacted session prompt
+  context, including when an LLM provider moved the system message into
+  a system interaction before the request.
+
+  Example configuration:
+
+  ┌────
+  │ (setopt ellama-session-auto-compact-enabled t)
+  │ (setopt ellama-session-auto-compact-threshold-percent 75)
+  │ (setopt ellama-session-auto-compact-keep-last-turns 4)
+  │ (setopt ellama-session-auto-compact-provider ellama-summarization-provider)
+  └────
+
+
+4.2 DLP for Tool Input/Output
 ─────────────────────────────
 
   Ellama includes an optional DLP (Data Loss Prevention) layer for tool
@@ -802,7 +872,7 @@ Assistant". Previous sentence was written by Ellama itself.
     before moving more paths to enforce
 
 
-4.2 SRT Filesystem Policy for Tools
+4.3 SRT Filesystem Policy for Tools
 ───────────────────────────────────
 
   When `ellama-tools-use-srt' is non-nil, the `srt' settings file is the

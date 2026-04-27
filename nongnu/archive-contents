@@ -629,7 +629,7 @@
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
       (:commit . "74fab520f1d008f5a389a673616a617c03c74600"))])
  (fj
-  . [(0 34)
+  . [(0 36)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
       (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -637,7 +637,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "3697ac2847180bd307e70ff0fb9ef086f59dec24"))])
+      (:commit . "76a0b6a8bfbf88371b686d67e17a579771c6db05"))])
  (flx
   . [(0 6 2) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
