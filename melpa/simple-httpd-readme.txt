@@ -72,7 +72,7 @@ customized responses.
   * `httpd-redirect'    -- redirect the browser to another url
   * `httpd-send-header' -- send custom headers
   * `httpd-error'       -- report an error to the client
-  * `httpd-log'         -- log an object to *httpd*
+  * `httpd-log'         -- log an object to the `httpd-log-buffer'
 
 Some of these functions require a process object, which isn't
 passed to `defservlet' servlets.  Use t in place of the process
