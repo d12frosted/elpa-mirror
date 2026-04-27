@@ -3329,6 +3329,13 @@
       (:maintainer "Martin Edström" . "meedstrom91@gmail.com")
       (:authors ("Martin Edström" . "meedstrom91@gmail.com"))
       (:commit . "6540dd050c0db1e73e03dfa6fe253dd5fb03b579"))])
+ (trust-manager
+  . [(0 4 1) ((emacs (30 1))) "Convenient trust management" tar
+     ((:url . "https://git.sr.ht/~eshel/trust-manager")
+      (:keywords "security" "trust" "files")
+      (:maintainer "Eshel Yaron" . "me@eshelyaron.com")
+      (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
+      (:commit . "530c559ffa01b99ced8073ba4c74f1b8152a0ef2"))])
  (ulisp-repl
   . [(1 0 3) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
