@@ -20,42 +20,42 @@ arguments (alist), and the full request object (header
 alist).  These are ordered by general importance so that some can be
 ignored.  Two macros are provided to help with writing servlets.
 
- * `with-httpd-buffer' -- Creates a temporary buffer that is
+ * `httpd-with-buffer' -- Creates a temporary buffer that is
    automatically served to the client at the end of the body.
    Additionally, `standard-output' is set to this output
    buffer.  For example, this servlet says hello,
 
     (defun httpd/hello-world (proc path &rest args)
-      (with-httpd-buffer proc "text/plain"
+      (httpd-with-buffer proc "text/plain"
         (insert "hello, " (file-name-nondirectory path))))
 
 This servlet be viewed at http://localhost:8080/hello-world/Emacs
 
-* `defservlet' -- Similar to the above macro but totally hides the
+* `httpd-servlet' -- Similar to the above macro but totally hides the
   process object from the servlet itself.  The above servlet can be
   re-written identically like so,
 
-    (defservlet hello-world text/plain (path)
+    (httpd-servlet hello-world text/plain (path)
       (insert "hello, " (file-name-nondirectory path)))
 
-Note that `defservlet' automatically sets `httpd-current-proc'.  See
-below.
+Note that `httpd-servlet' automatically sets `httpd-current-proc'.
+See below.
 
 The "function parameters" part can be left empty or contain up to
 three parameters corresponding to the final three servlet
 parameters.  For example, a servlet that shows *scratch* and doesn't
 need parameters,
 
-    (defservlet scratch text/plain ()
+    (httpd-servlet scratch text/plain ()
       (insert-buffer-substring (get-buffer-create "*scratch*")))
 
-A higher level macro `defservlet*' wraps this lower-level
-`defservlet' macro, automatically binding variables to components
+A higher level macro `httpd-servlet*' wraps this lower-level
+`httpd-servlet' macro, automatically binding variables to components
 of the request.  For example, this binds parts of the request path
 and one query parameter.  Request components not provided by the
 client are bound to nil.
 
-    (defservlet* packages/:package/:version text/plain (verbose)
+    (httpd-servlet* packages/:package/:version text/plain (verbose)
       (insert (format "%s\n%s\n" package version))
       (princ (get-description package version))
       (when verbose
@@ -75,9 +75,9 @@ customized responses.
   * `httpd-log'         -- log an object to the `httpd-log-buffer'
 
 Some of these functions require a process object, which isn't
-passed to `defservlet' servlets.  Use t in place of the process
+passed to `httpd-servlet' servlets.  Use t in place of the process
 argument to use `httpd-current-proc' (like `standard-output').
 
 If you just need to serve static from some location under some
-route on the server, use `httpd-def-file-servlet'.  It expands into
-a `defservlet' that serves files.
+route on the server, use `httpd-file-servlet'.  It expands into
+a `httpd-servlet' that serves files.
