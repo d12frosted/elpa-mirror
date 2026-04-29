@@ -1,9 +1,9 @@
  • Building package ghostel (from github:dakra/ghostel)...
 Updating /mnt/store/melpa/working/ghostel/
-Checking out 90f1f71d022910a5f86da1d413ea155422eac5dc
+Checking out 1d49fcc82560eaa5dc8518ee8cc7b487c9b7621c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghostel/
-  to /tmp/ghostel-6k3zDt/ghostel-20260428.742
+  to /tmp/ghostel-GUGEDU/ghostel-20260428.2221
   ! lisp/ghostel-compile.el -> ghostel-compile.el
   ! lisp/ghostel-debug.el -> ghostel-debug.el
   ! lisp/ghostel-eshell.el -> ghostel-eshell.el
@@ -14,49 +14,49 @@ Copying files (->) and directories (=>)
     build.zig -> build.zig
     build.zig.zon -> build.zig.zon
     symbols.map -> symbols.map
-Created ghostel-20260428.742.tar containing:
-  ghostel-20260428.742/
-  ghostel-20260428.742/build.zig
-  ghostel-20260428.742/build.zig.zon
-  ghostel-20260428.742/etc/
-  ghostel-20260428.742/etc/shell/
-  ghostel-20260428.742/etc/shell/bootstrap/
-  ghostel-20260428.742/etc/shell/bootstrap/bash/
-  ghostel-20260428.742/etc/shell/bootstrap/bash/inject.bash
-  ghostel-20260428.742/etc/shell/bootstrap/fish/
-  ghostel-20260428.742/etc/shell/bootstrap/fish/vendor_conf.d/
-  ghostel-20260428.742/etc/shell/bootstrap/fish/vendor_conf.d/integration.fish
-  ghostel-20260428.742/etc/shell/bootstrap/zsh/
-  ghostel-20260428.742/etc/shell/bootstrap/zsh/.zshenv
-  ghostel-20260428.742/etc/shell/ghostel.bash
-  ghostel-20260428.742/etc/shell/ghostel.fish
-  ghostel-20260428.742/etc/shell/ghostel.zsh
-  ghostel-20260428.742/etc/terminfo/
-  ghostel-20260428.742/etc/terminfo/67/
-  ghostel-20260428.742/etc/terminfo/67/ghostty
-  ghostel-20260428.742/etc/terminfo/78/
-  ghostel-20260428.742/etc/terminfo/78/xterm-ghostty
-  ghostel-20260428.742/etc/terminfo/g/
-  ghostel-20260428.742/etc/terminfo/g/ghostty
-  ghostel-20260428.742/etc/terminfo/x/
-  ghostel-20260428.742/etc/terminfo/x/xterm-ghostty
-  ghostel-20260428.742/etc/terminfo/xterm-ghostty.terminfo
-  ghostel-20260428.742/ghostel-compile.el
-  ghostel-20260428.742/ghostel-debug.el
-  ghostel-20260428.742/ghostel-eshell.el
-  ghostel-20260428.742/ghostel-pkg.el
-  ghostel-20260428.742/ghostel.el
-  ghostel-20260428.742/src/
-  ghostel-20260428.742/src/emacs.zig
-  ghostel-20260428.742/src/ghostty.zig
-  ghostel-20260428.742/src/input.zig
-  ghostel-20260428.742/src/module.zig
-  ghostel-20260428.742/src/render.zig
-  ghostel-20260428.742/src/terminal.zig
-  ghostel-20260428.742/symbols.map
-  ghostel-20260428.742/vendor/
-  ghostel-20260428.742/vendor/emacs-module.h
+Created ghostel-20260428.2221.tar containing:
+  ghostel-20260428.2221/
+  ghostel-20260428.2221/build.zig
+  ghostel-20260428.2221/build.zig.zon
+  ghostel-20260428.2221/etc/
+  ghostel-20260428.2221/etc/shell/
+  ghostel-20260428.2221/etc/shell/bootstrap/
+  ghostel-20260428.2221/etc/shell/bootstrap/bash/
+  ghostel-20260428.2221/etc/shell/bootstrap/bash/inject.bash
+  ghostel-20260428.2221/etc/shell/bootstrap/fish/
+  ghostel-20260428.2221/etc/shell/bootstrap/fish/vendor_conf.d/
+  ghostel-20260428.2221/etc/shell/bootstrap/fish/vendor_conf.d/integration.fish
+  ghostel-20260428.2221/etc/shell/bootstrap/zsh/
+  ghostel-20260428.2221/etc/shell/bootstrap/zsh/.zshenv
+  ghostel-20260428.2221/etc/shell/ghostel.bash
+  ghostel-20260428.2221/etc/shell/ghostel.fish
+  ghostel-20260428.2221/etc/shell/ghostel.zsh
+  ghostel-20260428.2221/etc/terminfo/
+  ghostel-20260428.2221/etc/terminfo/67/
+  ghostel-20260428.2221/etc/terminfo/67/ghostty
+  ghostel-20260428.2221/etc/terminfo/78/
+  ghostel-20260428.2221/etc/terminfo/78/xterm-ghostty
+  ghostel-20260428.2221/etc/terminfo/g/
+  ghostel-20260428.2221/etc/terminfo/g/ghostty
+  ghostel-20260428.2221/etc/terminfo/x/
+  ghostel-20260428.2221/etc/terminfo/x/xterm-ghostty
+  ghostel-20260428.2221/etc/terminfo/xterm-ghostty.terminfo
+  ghostel-20260428.2221/ghostel-compile.el
+  ghostel-20260428.2221/ghostel-debug.el
+  ghostel-20260428.2221/ghostel-eshell.el
+  ghostel-20260428.2221/ghostel-pkg.el
+  ghostel-20260428.2221/ghostel.el
+  ghostel-20260428.2221/src/
+  ghostel-20260428.2221/src/emacs.zig
+  ghostel-20260428.2221/src/ghostty.zig
+  ghostel-20260428.2221/src/input.zig
+  ghostel-20260428.2221/src/module.zig
+  ghostel-20260428.2221/src/render.zig
+  ghostel-20260428.2221/src/terminal.zig
+  ghostel-20260428.2221/symbols.map
+  ghostel-20260428.2221/vendor/
+  ghostel-20260428.2221/vendor/emacs-module.h
  ✓ Success:
-  2026-04-28T17:51:22+0000  ghostel-20260428.742.entry
-  2026-04-28T17:51:22+0000  ghostel-20260428.742.tar
-Built ghostel in 8.146s, finished at 2026-04-28T17:51:23+0000
+  2026-04-29T03:35:42+0000  ghostel-20260428.2221.entry
+  2026-04-29T03:35:42+0000  ghostel-20260428.2221.tar
+Built ghostel in 4.666s, finished at 2026-04-29T03:35:43+0000
