@@ -1658,6 +1658,12 @@
       (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "4e71f5b9199a0ad10017104a6b2bf5ef5f207dfc"))])
+ (simple-httpd
+  . [(1 5 1) ((cl-lib (0 3))) "pure elisp HTTP server" tar
+     ((:url . "https://github.com/skeeto/emacs-http-server")
+      (:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+      (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
+      (:commit . "a5eb49a6567e33586fba15dd649d63ca6e964314"))])
  (slime
   . [(2 32) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar

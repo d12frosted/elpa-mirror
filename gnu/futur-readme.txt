@@ -44,7 +44,7 @@ Composing futures
   waits for FUTUR to completes and then calls FUN (or ERROR-FUN) with the
   resulting value (or its error).  (ERROR-)FUN should itself return
   a future, tho if it doesn't it's automatically turned into a trivial one.
-- (futur-let* BINDINGS [:error-fun ERROR-FUN] BODY): Macro built on top
+- (futur-let* BINDINGS [:on-error HANDLER] BODY): Macro built on top
   of `futur-bind' which runs BINDINGS in sequence and then runs BODY.
   Each BINDING can be either a simple (PAT EXP) that is executed
   as in a `pcase-let*' or a (PAT <- FUTUR) in which case the rest is
@@ -73,10 +73,10 @@ Experimental
 
 - (futur-hacks-mode &optional ARG)
   Minor mode making various Emacs features use futures.
-- (futur--elisp-funcall FUNC &rest ARGS)
+- (futur-elisp--funcall FUNC &rest ARGS)
   Like `futur-funcall' but runs the code in parallel in a subprocess.
-- (futur--sandbox-funcall FUNC &rest ARGS)
-  Like `futur--elisp-funcall' but runs the code in a sandbox so it
+- (futur-elisp-sandbox--funcall FUNC &rest ARGS)
+  Like `futur-elisp--funcall' but runs the code in a sandbox so it
   can be used with untrusted code.
 
 Related packages
@@ -123,7 +123,7 @@ Related packages
 - [pdd](https://melpa.org/#/pdd): HTTP library that uses its own
   implementation of promises.
 - el-job: Library to run ELisp jobs in parallel in Emacs subprocesses.
-  `futur-client/server.el' took some inspiration from that package.
+  `futur-elisp/server.el' took some inspiration from that package.
 
 BUGS
 
