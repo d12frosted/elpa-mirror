@@ -1,3 +1,8 @@
+                                ━━━━━━━━
+                                 ELLAMA
+                                ━━━━━━━━
+
+
 [file:https://img.shields.io/badge/license-GPL_3-green.svg]
 [file:https://melpa.org/packages/ellama-badge.svg]
 [file:https://stable.melpa.org/packages/ellama-badge.svg]
@@ -151,6 +156,15 @@ Assistant". Previous sentence was written by Ellama itself.
     interactive buffer and continue conversation. If called with
     universal argument (`C-u') will start new session with llm model
     interactive selection.
+  • `ellama-ask-image': Ask Ellama about one image file by adding it as
+    ephemeral context for the request. If called with universal argument
+    (`C-u') will start new session with llm model interactive selection.
+  • `ellama-chat-with-image': Ask Ellama about one image file. If called
+    with universal argument (`C-u') will start new session with llm
+    model interactive selection.
+  • `ellama-chat-with-images': Ask Ellama about multiple image files. If
+    called with universal argument (`C-u') will start new session with
+    llm model interactive selection.
   • `ellama-write': This command allows you to generate text using an
     LLM. When called interactively, it prompts for an instruction that
     is then used to generate text based on the context. If a region is
@@ -222,6 +236,7 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-session-compact': Select and compact an active Ellama
     session context.
   • `ellama-context-add-file': Add file to context.
+  • `ellama-context-add-image': Add image file to context.
   • `ellama-context-add-directory': Add all files in directory to the
     context.
   • `ellama-context-add-buffer': Add buffer to context.
@@ -311,6 +326,7 @@ Assistant". Previous sentence was written by Ellama itself.
    "m f"   ellama-make-format               Make format                  
    "a a"   ellama-ask-about                 Ask about                    
    "a i"   ellama-chat                      Chat (ask interactively)     
+   "a I"   ellama-ask-image                 Ask image                    
    "a l"   ellama-ask-line                  Ask current line             
    "a s"   ellama-ask-selection             Ask selection                
    "t t"   ellama-translate                 Text translate               
@@ -398,6 +414,8 @@ Assistant". Previous sentence was written by Ellama itself.
     `ellama-provider' will be used if not set.
   • `ellama-coding-provider': LLM coding tasks provider.
     `ellama-provider' will be used if not set.
+  • `ellama-image-file-extensions': File extensions supported for image
+    input.  SVG is intentionally unsupported.
   • `ellama-summarization-provider': LLM summarization provider.
     `ellama-provider' will be used if not set.
   • `ellama-show-quotes': Show quotes content in chat buffer. Disabled
@@ -415,6 +433,9 @@ Assistant". Previous sentence was written by Ellama itself.
     buffer.  `posframe-poshandler-frame-top-center' will be used if not
     set.
   • `ellama-context-border-width': Border width for the context buffer.
+  • `ellama-image-context-default-scope': Default scope for image
+    context added interactively. Use `ephemeral' for one request only,
+    or `persistent' to keep image context until it is removed or reset.
   • `ellama-session-remove-reasoning': Remove internal reasoning from
     the session after ellama provide an answer. This can improve
     long-term communication with reasoning models. Enabled by default.
@@ -443,6 +464,10 @@ Assistant". Previous sentence was written by Ellama itself.
     enabled. Enabled by default.
   • `ellama-reasoning-display-action-function': Display action function
     for reasoning.
+  • `ellama-display-session-buffer-on-generation': Display the session
+    buffer whenever generation starts. This also applies to sub-agent
+    sessions started by the `task' tool, so delegated work is visible
+    while it runs.
   • `ellama-session-line-template': Template for formatting the current
     session line.
   • `ellama-debug': Enable debug. When enabled, generated text is now
@@ -456,6 +481,10 @@ Assistant". Previous sentence was written by Ellama itself.
     this list will work without user confirmation.
   • `ellama-tools-argument-max-length': Max length of function argument
     in the confirmation prompt. Default value 50.
+  • `ellama-tools-read-file-default-mode': Default mode for the
+    `read_file' tool. Use `auto' to read text files as text and
+    supported image files as media, `text' to force text reading, or
+    `image' to force image handling.
   • `ellama-tools-use-srt': Run shell-based tools (`shell_command',
     `grep' and `grep_in_file') via the external `srt' sandbox
     runtime. Disabled by default.  If enabled, non-shell file tools also
@@ -475,6 +504,13 @@ Assistant". Previous sentence was written by Ellama itself.
     The same arguments are also used to resolve the settings file path
     for local non-shell filesystem checks (default
     `~/.srt-settings.json' if no `--settings~/'-s~ is provided).
+  • `ellama-tools-task-template-dirs': Directories where the `task' tool
+    searches for prompt templates when no `template_base' is
+    supplied. Relative template names are resolved below these
+    directories.
+  • `ellama-tools-task-template-allow-absolute-paths': Allow absolute
+    file names in the `task' tool `template' argument. Disabled by
+    default. Relative template names are still supported.
   • `ellama-blueprint-global-dir': Global directory for storing
     blueprint files.
   • `ellama-blueprint-local-dir': Local directory name for
@@ -489,6 +525,8 @@ Assistant". Previous sentence was written by Ellama itself.
     Skills.  Default value is `"skills"'.
   • `ellama-tools-subagent-default-max-steps': Default maximum number of
     auto-continue steps for a sub-agent. Default value is 30.
+  • `ellama-tools-subagent-continue-prompt': Prompt sent to a sub-agent
+    when it finishes a turn without calling `report_result'.
   • `ellama-tools-subagent-roles': Subagent roles with provider, system
     prompt and allowed tools. Configuration of subagents for the `task'
     tool.
@@ -535,7 +573,116 @@ Assistant". Previous sentence was written by Ellama itself.
   └────
 
 
-4.2 DLP for Tool Input/Output
+4.2 Image Input
+───────────────
+
+  Ellama can send image files to providers that advertise the
+  `image-input' capability through the `llm' library. Image data is sent
+  as multipart media and is supported for PNG, JPEG, WebP and GIF files
+  by default.
+
+  Use `M-x ellama-ask-image' to ask about one image. This command
+  follows the same context-based workflow as `ellama-ask-about': it adds
+  the image as ephemeral context, sends the request with `ellama-chat',
+  and shows the image link in the chat buffer. `M-x
+  ellama-chat-with-image' and `M-x ellama-chat-with-images' use the same
+  context workflow for compatibility. The main transient menu also
+  includes "Chat with image".
+
+  Programmatic calls can also pass image files directly:
+
+  ┌────
+  │ (ellama-chat "Describe this screenshot." nil
+  │              :images '("/path/to/screenshot.png"))
+  │ 
+  │ (ellama-stream "Extract visible text."
+  │                :images '("/path/to/image.png"))
+  └────
+
+  The singular `:image' argument is also accepted as a convenience
+  alias.
+
+  Use `M-x ellama-context-add-image' to add an image to context. Image
+  context is ephemeral by default, so it is attached to the next request
+  and then removed.  Set `ellama-image-context-default-scope' to
+  `persistent' to keep image context until it is removed or the context
+  is reset. The context transient menu also provides "Add Image";
+  combine it with `--ephemeral' to force one-request image context.
+
+  The built-in `read_file' tool supports image files through a
+  configurable read mode:
+
+  • `auto': read text files as text and queue supported image files as
+    image input
+  • `text': force text reading, even for files with image-like
+    extensions
+  • `image': force image handling and return a clear text error for
+    unsupported image types, missing sessions, or providers without
+    `image-input'
+
+  Tool calls can request image handling explicitly:
+
+  ┌────
+  │ {
+  │   "file_name": "/path/to/image.png",
+  │   "mode": "image"
+  │ }
+  └────
+
+
+4.3 Task Tool Subagents
+───────────────────────
+
+  The `task' tool delegates work to an asynchronous sub-agent. The
+  parent model gets control back immediately, and the sub-agent reports
+  the final result by calling the injected `report_result' tool. If the
+  sub-agent finishes a turn without reporting a result, Ellama sends
+  `ellama-tools-subagent-continue-prompt' until the task is complete or
+  `ellama-tools-subagent-default-max-steps' is reached.
+
+  Each sub-agent runs in its own Ellama session. When
+  `ellama-display-session-buffer-on-generation' is non-nil, Ellama
+  displays both the main session and sub-agent session buffers as
+  generation starts. Sub-agent buffers include the delegated prompt
+  under the `Main agent:' label, followed by the sub-agent response.
+
+  The tool accepts either a free-form `description' or a prompt
+  template:
+
+  ┌────
+  │ {
+  │   "template": "templates/researcher.md",
+  │   "template_base": "/path/to/skill",
+  │   "arguments": {
+  │     "main_topic": "Example topic",
+  │     "subtopic_name": "Example subtopic"
+  │   },
+  │   "role": "explorer"
+  │ }
+  └────
+
+  Prompt templates are plain text files with placeholders like
+  `{main_topic}'. The `arguments' object must provide values whose keys
+  match the placeholder names. If validation fails, the tool returns an
+  error with hints listing missing and unused keys and an example object
+  to retry.
+
+  Template resolution is intentionally scoped:
+
+  • relative `template' paths are resolved under `template_base' when
+    supplied
+  • otherwise relative paths are searched under
+    `ellama-tools-task-template-dirs'
+  • path traversal outside the selected base directory is rejected
+  • absolute template paths are rejected unless
+    `ellama-tools-task-template-allow-absolute-paths' is non-nil
+
+  This keeps large prompts out of the main agent context while still
+  letting skills bundle reusable task prompts next to their `SKILL.md'
+  files.
+
+
+4.4 DLP for Tool Input/Output
 ─────────────────────────────
 
   Ellama includes an optional DLP (Data Loss Prevention) layer for tool
@@ -872,7 +1019,7 @@ Assistant". Previous sentence was written by Ellama itself.
     before moving more paths to enforce
 
 
-4.3 SRT Filesystem Policy for Tools
+4.5 SRT Filesystem Policy for Tools
 ───────────────────────────────────
 
   When `ellama-tools-use-srt' is non-nil, the `srt' settings file is the
@@ -1102,6 +1249,7 @@ Assistant". Previous sentence was written by Ellama itself.
     • “b” "Add Buffer" `ellama-transient-add-buffer'
     • “d” "Add Directory" `ellama-transient-add-directory'
     • “f” "Add File" `ellama-transient-add-file'
+    • “I” "Add Image" `ellama-transient-add-image'
     • “s” "Add Selection" `ellama-transient-add-selection'
     • “i” "Add Info Node" `ellama-transient-add-info-node'
   • Manage: Provides options for managing the global context.
