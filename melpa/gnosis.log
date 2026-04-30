@@ -1,39 +1,51 @@
  • Building package gnosis (from https://git.thanosapollo.org/gnosis)...
 Updating /mnt/store/melpa/working/gnosis/
-Checking out 32b72c9fc46978dfd248b623df2c3b3e88284e9f
+Checking out a912d97aee4ca4445b6a4f6c2427ac954328ee30
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosis-bj9K6e/gnosis-20260429.236
-    gnosis-algorithm.el -> gnosis-algorithm.el
-    gnosis-anki.el -> gnosis-anki.el
-    gnosis-dashboard.el -> gnosis-dashboard.el
-    gnosis-export-import.el -> gnosis-export-import.el
-    gnosis-journal.el -> gnosis-journal.el
-    gnosis-monkeytype.el -> gnosis-monkeytype.el
-    gnosis-nodes.el -> gnosis-nodes.el
-    gnosis-org.el -> gnosis-org.el
-    gnosis-review.el -> gnosis-review.el
-    gnosis-sqlite.el -> gnosis-sqlite.el
-    gnosis-tl.el -> gnosis-tl.el
-    gnosis-utils.el -> gnosis-utils.el
-    gnosis.el -> gnosis.el
-Created gnosis-20260429.236.tar containing:
-  gnosis-20260429.236/
-  gnosis-20260429.236/gnosis-algorithm.el
-  gnosis-20260429.236/gnosis-anki.el
-  gnosis-20260429.236/gnosis-dashboard.el
-  gnosis-20260429.236/gnosis-export-import.el
-  gnosis-20260429.236/gnosis-journal.el
-  gnosis-20260429.236/gnosis-monkeytype.el
-  gnosis-20260429.236/gnosis-nodes.el
-  gnosis-20260429.236/gnosis-org.el
-  gnosis-20260429.236/gnosis-pkg.el
-  gnosis-20260429.236/gnosis-review.el
-  gnosis-20260429.236/gnosis-sqlite.el
-  gnosis-20260429.236/gnosis-tl.el
-  gnosis-20260429.236/gnosis-utils.el
-  gnosis-20260429.236/gnosis.el
+  to /tmp/gnosis-RofHbt/gnosis-20260430.54
+  ! lisp/gnosis-algorithm.el -> gnosis-algorithm.el
+  ! lisp/gnosis-anki.el -> gnosis-anki.el
+  ! lisp/gnosis-cloze.el -> gnosis-cloze.el
+  ! lisp/gnosis-custom-values.el -> gnosis-custom-values.el
+  ! lisp/gnosis-dashboard.el -> gnosis-dashboard.el
+  ! lisp/gnosis-db.el -> gnosis-db.el
+  ! lisp/gnosis-export-import.el -> gnosis-export-import.el
+  ! lisp/gnosis-journal.el -> gnosis-journal.el
+  ! lisp/gnosis-links.el -> gnosis-links.el
+  ! lisp/gnosis-monkeytype.el -> gnosis-monkeytype.el
+  ! lisp/gnosis-nodes.el -> gnosis-nodes.el
+  ! lisp/gnosis-org.el -> gnosis-org.el
+  ! lisp/gnosis-review.el -> gnosis-review.el
+  ! lisp/gnosis-sqlite.el -> gnosis-sqlite.el
+  ! lisp/gnosis-tags.el -> gnosis-tags.el
+  ! lisp/gnosis-tl.el -> gnosis-tl.el
+  ! lisp/gnosis-utils.el -> gnosis-utils.el
+  ! lisp/gnosis-vc.el -> gnosis-vc.el
+  ! lisp/gnosis.el -> gnosis.el
+Created gnosis-20260430.54.tar containing:
+  gnosis-20260430.54/
+  gnosis-20260430.54/gnosis-algorithm.el
+  gnosis-20260430.54/gnosis-anki.el
+  gnosis-20260430.54/gnosis-cloze.el
+  gnosis-20260430.54/gnosis-custom-values.el
+  gnosis-20260430.54/gnosis-dashboard.el
+  gnosis-20260430.54/gnosis-db.el
+  gnosis-20260430.54/gnosis-export-import.el
+  gnosis-20260430.54/gnosis-journal.el
+  gnosis-20260430.54/gnosis-links.el
+  gnosis-20260430.54/gnosis-monkeytype.el
+  gnosis-20260430.54/gnosis-nodes.el
+  gnosis-20260430.54/gnosis-org.el
+  gnosis-20260430.54/gnosis-pkg.el
+  gnosis-20260430.54/gnosis-review.el
+  gnosis-20260430.54/gnosis-sqlite.el
+  gnosis-20260430.54/gnosis-tags.el
+  gnosis-20260430.54/gnosis-tl.el
+  gnosis-20260430.54/gnosis-utils.el
+  gnosis-20260430.54/gnosis-vc.el
+  gnosis-20260430.54/gnosis.el
  ✓ Success:
-  2026-04-29T19:57:23+0000  gnosis-20260429.236.entry
-  2026-04-29T19:57:22+0000  gnosis-20260429.236.tar
-Built gnosis in 21.477s, finished at 2026-04-29T19:57:23+0000
+  2026-04-30T04:17:06+0000  gnosis-20260430.54.entry
+  2026-04-30T04:17:06+0000  gnosis-20260430.54.tar
+Built gnosis in 23.196s, finished at 2026-04-30T04:17:07+0000

@@ -1,10 +1,11 @@
  • Building package oai (from github:Anoncheg1/emacs-oai)...
 Updating /mnt/store/melpa/working/oai/
-Checking out d0b07f072afd765089441a1b16843fab388b81e2
+Checking out 421189ec34293652ebe4a1e0f18441c84f79d0d3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/oai/
-  to /tmp/oai-kEJ73I/oai-20260427.1920
+  to /tmp/oai-BVYOjy/oai-20260430.229
     oai-async1.el -> oai-async1.el
+    oai-block-msgs.el -> oai-block-msgs.el
     oai-block-tags.el -> oai-block-tags.el
     oai-block.el -> oai-block.el
     oai-debug.el -> oai-debug.el
@@ -13,19 +14,22 @@ Copying files (->) and directories (=>)
     oai-restapi.el -> oai-restapi.el
     oai-timers.el -> oai-timers.el
     oai.el -> oai.el
-Created oai-20260427.1920.tar containing:
-  oai-20260427.1920/
-  oai-20260427.1920/oai-async1.el
-  oai-20260427.1920/oai-block-tags.el
-  oai-20260427.1920/oai-block.el
-  oai-20260427.1920/oai-debug.el
-  oai-20260427.1920/oai-optional.el
-  oai-20260427.1920/oai-pkg.el
-  oai-20260427.1920/oai-prompt.el
-  oai-20260427.1920/oai-restapi.el
-  oai-20260427.1920/oai-timers.el
-  oai-20260427.1920/oai.el
+Created oai-20260430.229.tar containing:
+  oai-20260430.229/
+  oai-20260430.229/oai-async1.el
+  oai-20260430.229/oai-block-msgs.el
+  oai-20260430.229/oai-block-tags.el
+  oai-20260430.229/oai-block.el
+  oai-20260430.229/oai-debug.el
+  oai-20260430.229/oai-optional.el
+  oai-20260430.229/oai-pkg.el
+  oai-20260430.229/oai-prompt.el
+  oai-20260430.229/oai-restapi.el
+  oai-20260430.229/oai-timers.el
+  oai-20260430.229/oai.el
  ✓ Success:
-  2026-04-29T20:19:25+0000  oai-20260427.1920.entry
-  2026-04-29T20:19:25+0000  oai-20260427.1920.tar
-Built oai in 6.572s, finished at 2026-04-29T20:19:27+0000
+  2026-04-30T01:55:41+0000  oai-20260429.2244.entry
+  2026-04-30T01:55:40+0000  oai-20260429.2244.tar
+  2026-04-30T04:39:50+0000  oai-20260430.229.entry
+  2026-04-30T04:39:50+0000  oai-20260430.229.tar
+Built oai in 3.979s, finished at 2026-04-30T04:39:51+0000
