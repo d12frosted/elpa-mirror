@@ -202,9 +202,10 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-select-model': Change the current provider model
     interactively.  The model transient supports Ollama and
     OpenAI-compatible providers, including URL editing for compatible
-    APIs.  Use "Reset model fields" to clear model, temperature, and
-    context-length overrides and let the provider use its defaults;
-    reset values are shown as `default' in the transient.
+    APIs.  It can also set the maximum number of output tokens.  Use
+    "Reset model fields" to clear model, temperature, context-length,
+    and max-token overrides and let the provider use its defaults; reset
+    values are shown as `default' in the transient.
   • `ellama-code-complete': Complete selected code or code in the
     current buffer according to a provided change using Ellama.
   • `ellama-code-add': Generate and insert new code based on
@@ -359,6 +360,8 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-provider': llm provider for ellama.
   There are many supported providers: `ollama', `open ai', `vertex',
   `GPT4All'. For more information see [llm documentation].
+  • `ellama-max-tokens': Maximum number of tokens to generate.  If not
+    set, use the provider default.
   • `ellama-providers': association list of model llm providers with
     name as key.
   • `ellama-spinner-enabled': Enable spinner during text generation.

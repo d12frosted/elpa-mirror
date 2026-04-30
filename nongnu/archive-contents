@@ -1056,12 +1056,13 @@
       (:keywords "j" "languages")
       (:commit . "1365e5a3fe772609685b3787bbd2960331c1a02f"))])
  (jabber
-  . [(0 10 5) ((emacs (29 1)) (fsm (0 2 0))) "XMPP/Jabber client" tar
+  . [(0 10 6) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
+     "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "2e7019fc32e26b0f05036bfa13d3a01c5a183c85"))])
+      (:commit . "6240aa8c81703e83a77b6327a60ab4c7c3d2ff2f"))])
  (jade-mode
   . [(1 0 1) nil "Major mode for editing .jade files" tar
      ((:url . "https://github.com/brianc/jade-mode")
