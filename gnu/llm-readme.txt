@@ -417,8 +417,28 @@
   Once this is done, the model will be recognized to have the given
   context length and capabilities.
 
+  The `llm' package does not attempt to enforce capabilities: if
+  settings are set that cannot be used by the model or provider, they
+  are ignored if possible.  For example, not every model supports
+  reasoning, but if the user chooses a model without it, and the client
+  sets a reasoning level, this won't result in an error.  It is the
+  responsibility of the client to enforce options via the list of
+  capabilities that they consider essential.
 
-5 `llm' and the use of non-free LLMs
+
+5 Model advice for users
+════════════════════════
+
+  This package attempts to support the latest models.  Often, providers
+  will have slightly different API use for newer models that are
+  incompatible with older models.  We do not attempt to maintain all
+  features for all models, due to complexity issues.  We try to always
+  have a recent model as the default chat model for all providers.  If
+  you choose a model yourself, then you should keep it updated as it
+  gets new versions.
+
+
+6 `llm' and the use of non-free LLMs
 ════════════════════════════════════
 
   The `llm' package is part of GNU Emacs by being part of GNU ELPA.
@@ -445,7 +465,7 @@
   └────
 
 
-6 Programmatic use
+7 Programmatic use
 ══════════════════
 
   Client applications should require the `llm' package, and code against
@@ -461,7 +481,7 @@
   will be executed in a temporary buffer instead.
 
 
-6.1 Main functions
+7.1 Main functions
 ──────────────────
 
   • `llm-chat provider prompt multi-output': With user-chosen `provider'
@@ -545,7 +565,7 @@
       is optional, and defaults to `'user'.
 
 
-6.1.1 Return and multi-output
+7.1.1 Return and multi-output
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   The default return value is text except for when tools are called, in
@@ -562,7 +582,7 @@
 
   The possible plist keys are:
   • `:text' , for the main textual output.
-  • `:reasoning', for reasoning output, when the model separates it.
+  • `:reasoning', for reasoning output, when the model provides it.
   • `:tool-uses', the tools that the llm identified to be called, as a
     list of plists, with `:name' and `:args' values.
   • `:tool-results', the results of calling the tools.
@@ -574,7 +594,7 @@
   don't support either.
 
 
-6.1.2 JSON schema
+7.1.2 JSON schema
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   By using the `response-format' argument to `llm-make-chat-prompt', you
@@ -612,7 +632,7 @@
 [JSON Schema Spec] <https://json-schema.org>
 
 
-6.2 Logging
+7.2 Logging
 ───────────
 
   Interactions with the `llm' package can be logged by setting `llm-log'
@@ -620,7 +640,7 @@
   log can be found in the `*llm log*' buffer.
 
 
-6.3 How to handle conversations
+7.3 How to handle conversations
 ───────────────────────────────
 
   Conversations can take place by repeatedly calling `llm-chat' and its
@@ -647,7 +667,7 @@
   └────
 
 
-6.4 Caution about `llm-chat-prompt-interactions'
+7.4 Caution about `llm-chat-prompt-interactions'
 ────────────────────────────────────────────────
 
   The interactions in a prompt may be modified by conversation or by the
@@ -664,7 +684,7 @@
   wouldn't work for all providers.
 
 
-6.5 Error handling
+7.5 Error handling
 ──────────────────
 
   The `llm' package defines several error symbols that can be signaled
@@ -672,7 +692,7 @@
   catch errors at different levels of specificity.
 
 
-6.5.1 Error hierarchy
+7.5.1 Error hierarchy
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   All LLM-related errors inherit from `llm-error':
@@ -700,7 +720,7 @@
         but omits a required (non-optional) argument.
 
 
-6.5.2 Error data
+7.5.2 Error data
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Most errors return a list with a string as their data (the same as the
@@ -723,7 +743,7 @@
       required argument.
 
 
-6.5.3 Example
+7.5.3 Example
 ╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   ┌────
@@ -742,7 +762,7 @@
   └────
 
 
-6.6 Tool use
+7.6 Tool use
 ────────────
 
   Tool use is a way to give the LLM a list of functions it can call, and
@@ -858,7 +878,7 @@
 [GTPel] <https://github.com/karthink/gptel>
 
 
-6.7 Media input
+7.7 Media input
 ───────────────
 
   *Note: media input functionality is currently alpha quality.  If you
@@ -876,7 +896,7 @@
 [discussions] <https://github.com/ahyatt/llm/discussions>
 
 
-6.8 Advanced prompt creation
+7.8 Advanced prompt creation
 ────────────────────────────
 
   The `llm-prompt' module provides helper functions to create prompts
@@ -1015,7 +1035,7 @@
 [ekg] <https://github.com/ahyatt/ekg>
 
 
-7 Contributions
+8 Contributions
 ═══════════════
 
   If you are interested in creating a provider, please send a pull

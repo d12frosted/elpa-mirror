@@ -244,11 +244,11 @@
       (:authors ("Chris Wanstrath" . "chris@ozmm.org"))
       (:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (cond-let
-  . [(0 2 2) ((emacs (28 1)))
+  . [(1 0 0) ((emacs (28 1)))
      "Additional and improved binding conditionals" tar
      ((:url . "https://github.com/tarsius/cond-let")
       (:keywords "extensions")
-      (:commit . "8bf87d45e169ebc091103b2aae325aece3aa804d"))])
+      (:commit . "28d3b039a9c1f27ecfea36a7df4c37a3b90e4687"))])
  (consult-flycheck
   . [(1 1) ((emacs (29 1)) (consult (2 8)) (flycheck (35)))
      "Provides the command `consult-flycheck'" tar
@@ -1980,7 +1980,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 4 9) ((emacs (26 1)) (compat (30 1)))
+  . [(3 5 0) ((emacs (26 1)) (compat (30 1)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
       (:keywords "processes" "terminals")
@@ -1988,7 +1988,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "64211dcb815f2533ac3d2a7e56ff36ae804d8338"))])
+      (:commit . "14ea1d98337a47d899ee1860f96b7cbb1ef0e2a0"))])
  (with-simulated-input
   . [(3 0) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar
