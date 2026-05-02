@@ -446,6 +446,13 @@
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "2d89026fbc61214fda25d5dd589cd328ddce5f6e"))])
+ (elfeed
+  . [(3 4 2) ((emacs (24 3))) "An Emacs Atom/RSS feed reader" tar
+     ((:url . "https://github.com/skeeto/elfeed")
+      (:keywords "network" "hypermedia")
+      (:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+      (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
+      (:commit . "cfa931a0cf56e2e7be0ddadc41fcf11dc0209232"))])
  (elixir-mode
   . [(2 5 0) ((emacs (25))) "Major mode for editing Elixir files" tar
      ((:url . "https://github.com/elixir-editors/emacs-elixir")

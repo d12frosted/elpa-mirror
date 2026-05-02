@@ -1,25 +1,15 @@
-Package: elfeed-web
-Fetcher: github
-Source:  https://github.com/skeeto/elfeed
-
+ • Building package elfeed-web (from github:emacs-elfeed/elfeed-web)...
 Updating /mnt/store/melpa/working/elfeed-web/
-Checking out 904b6d4feca78e7e5336d7dbb7b8ba53b8c4dac1
+Checking out 500f7ea52590a0fc1bcf95403b52e04053389906
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elfeed-web/
-  to /tmp/elfeed-webUu4PJw/elfeed-web-20240729.1741
-  ! web/elfeed-web-pkg.el -> elfeed-web-pkg.el
-  ! web/elfeed-web.el -> elfeed-web.el
-  ! web/elfeed.css -> elfeed.css
-  ! web/elfeed.js -> elfeed.js
-  ! web/index.html -> index.html
-Created elfeed-web-20240729.1741.tar containing:
-  elfeed-web-20240729.1741/
-  elfeed-web-20240729.1741/elfeed-web-pkg.el
-  elfeed-web-20240729.1741/elfeed-web.el
-  elfeed-web-20240729.1741/elfeed.css
-  elfeed-web-20240729.1741/elfeed.js
-  elfeed-web-20240729.1741/index.html
+  to /tmp/elfeed-web-Co4yPa/elfeed-web-20260501.1712
+    elfeed-web.el -> elfeed-web.el
+Created elfeed-web-20260501.1712.tar containing:
+  elfeed-web-20260501.1712/
+  elfeed-web-20260501.1712/elfeed-web-pkg.el
+  elfeed-web-20260501.1712/elfeed-web.el
  ✓ Success:
-  2024-12-29T17:55:31+0000  elfeed-web-20240729.1741.entry
-  2024-12-29T17:55:31+0000  elfeed-web-20240729.1741.tar
-Built elfeed-web in 0.949s, finished at 2024-12-29T17:55:31+0000
+  2026-05-01T23:00:56+0000  elfeed-web-20260501.1712.entry
+  2026-05-01T23:00:56+0000  elfeed-web-20260501.1712.tar
+Built elfeed-web in 3.014s, finished at 2026-05-01T23:00:57+0000

@@ -15,83 +15,38 @@ Emacs front-end for [Forgejo] instances (Codeberg, self-hosted, etc.).
 ⁃ `#' and `@' completion in composition buffers (`gfm-mode')
 ⁃ Repository settings editor
 
-      Requires Emacs 29.1+ (native JSON, native SQLite),
-      `markdown-mode', and [keymap-popup].
-
 
 [Forgejo] <https://forgejo.org>
 
 [AGit-Flow] <https://forgejo.org/docs/latest/user/agit-support/>
 
-[keymap-popup] <https://codeberg.org/thanosapollo/emacs-keymap-popup>
-
 
 1 Installation
 ══════════════
 
-1.1 use-package (Emacs 30+, recommended)
-────────────────────────────────────────
+1.1 use-package
+───────────────
 
-  Install `keymap-popup' first:
-
-  ┌────
-  │ (use-package keymap-popup
-  │   :vc (:url "https://codeberg.org/thanosapollo/emacs-keymap-popup"
-  │           :branch "master"
-  │           :rev :newest))
-  └────
-
-  Then install `forgejo':
+  `emacs-forgejo' is available via [GNU ELPA].
 
   ┌────
-  │ (use-package forgejo-vc
-  │   :vc (:url "https://codeberg.org/thanosapollo/emacs-forgejo"
-  │             :branch "master"
-  │           :rev :newest
-  │           :lisp-dir "lisp")
+  │ (use-package forgejo
+  │   :ensure t
   │   :custom
   │   (forgejo-hosts '(("https://codeberg.org")))
-  │   (forgejo-watch-rules '(("thanosapollo/emacs-forgejo")
-  │                          ("guix/guix" . "state:open label:team-emacs")
-  │                          ("*" . "author:<your username>")))
+  │   ;; Example watch rules
+  │   (forgejo-watch-rules
+  │    '(("thanosapollo/emacs-forgejo")
+  │      ("guix/guix" . "state:open label:team-emacs")
+  │      ("*" . "author:<your username>")))
   │   (forgejo-watch-filter-default "read:no"))
   └────
 
-  Store your token in `~/.authinfo.gpg':
-
-  ┌────
-  │ machine codeberg.org login YOUR_USERNAME password YOUR_TOKEN
-  └────
-
-  Or provide tokens inline:
-
-  ┌────
-  │ (setq forgejo-hosts '(("https://codeberg.org" "your-token")
-  │                        ("https://git.myorg.com" "other-token")))
-  └────
+  Visit a codeberg/forgejo repo and call `M-x forgejo-vc'.  It will
+  automatically handle the token creation.
 
 
-1.2 Manual
-──────────
-
-  Clone [keymap-popup] and add both to your load path:
-
-  ┌────
-  │ (add-to-list 'load-path "/path/to/emacs-keymap-popup")
-  │ (add-to-list 'load-path "/path/to/emacs-forgejo/lisp")
-  │ (require 'forgejo-vc)
-  └────
-
-
-[keymap-popup] <https://codeberg.org/thanosapollo/emacs-keymap-popup>
-
-
-1.3 Guix
-────────
-
-  ┌────
-  │ guix package -f guix.scm
-  └────
+[GNU ELPA] <https://elpa.gnu.org/packages/forgejo.html>
 
 
 2 Usage
@@ -112,9 +67,9 @@ Emacs front-end for [Forgejo] instances (Codeberg, self-hosted, etc.).
 
   ┌────
   │ (setq forgejo-watch-rules
-  │       '("thanosapollo/forgejo.el"
-  │         ("guix/guix" . "state:open label:team-emacs")
-  │         ("*" . "author:thanosapollo")))
+  │       '("thanosapollo/emacs-forgejo" ;; all for thanosapollo/emacs-forgejo repo
+  │         ("guix/guix" . "state:open label:team-emacs") ;; all state:open with team-emacs label
+  │         ("*" . "author:<your-username>"))) ;; everything in the db with author:<your-username>
   │ (forgejo-watch-mode 1)
   └────
 
@@ -157,7 +112,35 @@ Emacs front-end for [Forgejo] instances (Codeberg, self-hosted, etc.).
   └────
 
 
-3 Screenshots
+3 Comparison with other forgejo clients
+═══════════════════════════════════════
+
+3.1 fj.el
+─────────
+
+  • fj.el takes a direct-API approach while emacs-forgejo uses a local
+    SQLite cache as source of truth.
+  • fj.el supports the fork/PR workflow while emacs-forgejo supports
+    AGit-Flow.
+
+
+4 Contributing
+══════════════
+
+  This project is part of GNU ELPA.
+
+  Contributions of ~15 lines or more require [FSF copyright assignment].
+
+        See [#17] for more.
+
+
+[FSF copyright assignment]
+<https://www.gnu.org/prep/maintain/html_node/Copyright-Papers.html>
+
+[#17] <https://codeberg.org/thanosapollo/emacs-forgejo/issues/17>
+
+
+5 Screenshots
 ═════════════
 
   <https://thanosapollo.org/images/emacs-forgejo--issue-01.png>

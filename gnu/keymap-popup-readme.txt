@@ -121,8 +121,8 @@ Requires Emacs 29.1+.
   │                              (propertize kp-test--name 'face 'success)
   │                            (propertize "?" 'face 'warning))))
   │        (lambda () (interactive)
-  │          (setq-local kp-test--name (read-string "Your name: ")))
-  │        :stay-open t)
+  │          (setq-local kp-test--name (read-string "Your name: "))
+  │          (keymap-popup kp-test--map)))
   │   :group "Navigate"
   │   "s" ("Sub-menu" :keymap kp-test--sub-map)
   │   "q" ("Quit" quit-window)
@@ -161,6 +161,7 @@ Requires Emacs 29.1+.
 
   ┌────
   │ (keymap-popup-annotate dired-mode-map
+  │   :popup-key "h"
   │   :group "Navigate"
   │   dired-next-line "Next"
   │   dired-previous-line "Previous"
@@ -171,3 +172,89 @@ Requires Emacs 29.1+.
 
   Keys are resolved dynamically via `where-is-internal', so the popup
   always reflects the user's current bindings.
+
+
+4.1 Full example
+────────────────
+
+  ┌────
+  │ (require 'dired)
+  │ (require 'dired-x)
+  │ 
+  │ ;;; Helpers
+  │ 
+  │ (defun keymap-popup-live-test--marked-p ()
+  │   "Non-nil when at least one file is marked."
+  │   (dired-get-marked-files nil nil nil t))
+  │ 
+  │ (defun keymap-popup-live-test--marked-count ()
+  │   "Return count of marked files as a string."
+  │   (let ((files (dired-get-marked-files nil nil nil t)))
+  │     (if (and files (not (eq (car files) t)))
+  │         (format " [%d marked]" (length files))
+  │       "")))
+  │ 
+  │ ;;; Sub-menu: mark operations
+  │ 
+  │ (keymap-popup-define keymap-popup-live-test-mark-map
+  │   :description "Mark operations"
+  │   :group "Mark"
+  │   "m" ("Mark" dired-mark :stay-open t)
+  │   "u" ("Unmark" dired-unmark :stay-open t)
+  │   "U" ("Unmark All" dired-unmark-all-marks)
+  │   "t" ("Toggle" dired-toggle-marks :stay-open t)
+  │   :group ("Regexp" :inapt-if (lambda () (not (keymap-popup-live-test--marked-p))))
+  │   "r" ("Rename" dired-do-rename-regexp)
+  │   "c" ("Copy" dired-do-copy-regexp)
+  │   :group "Flag"
+  │   "#" ("Auto-save files" dired-flag-auto-save-files :stay-open t)
+  │   "~" ("Backups" dired-flag-backup-files :stay-open t)
+  │   "x" ("Delete Flagged" dired-do-flagged-delete))
+  │ 
+  │ ;;; Main annotated popup for dired-mode-map
+  │ 
+  │ (keymap-popup-annotate dired-mode-map
+  │   :popup-key "?"
+  │   :exit-key "x"
+  │   :description (lambda ()
+  │                  (format "Dired: %s%s"
+  │                          (abbreviate-file-name default-directory)
+  │                          (keymap-popup-live-test--marked-count)))
+  │   :group "File"
+  │   dired-find-file-other-window "Open other"
+  │   dired-view-file "View"
+  │   dired-do-copy "Copy"
+  │   dired-do-rename "Rename"
+  │   dired-do-delete "Delete"
+  │   dired-do-shell-command "Shell cmd"
+  │   dired-do-async-shell-command "Shell cmd &"
+  │   :group "Navigate"
+  │   dired-up-directory (lambda ()
+  │                        (format "Up to %s"
+  │                                (abbreviate-file-name
+  │                                 (file-name-directory
+  │                                  (directory-file-name default-directory)))))
+  │   dired-previous-line "Prev"
+  │   dired-next-line "Next"
+  │   dired-goto-file "Goto file"
+  │   :group "Directory"
+  │   revert-buffer "Revert"
+  │   wdired-change-to-wdired-mode "Edit (wdired)"
+  │   dired-hide-details-mode (lambda ()
+  │                             (if (bound-and-true-p dired-hide-details-mode)
+  │                                 "Show details" "Hide details"))
+  │   dired-omit-mode (lambda ()
+  │                     (if (bound-and-true-p dired-omit-mode)
+  │                         "Show omitted" "Omit files"))
+  │   dired-create-directory "New directory"
+  │   ;; Sub-menu via string key + :keymap
+  │   "M" ("Mark" :keymap keymap-popup-live-test-mark-map)
+  │   :group ("Bulk" :inapt-if (lambda () (not (keymap-popup-live-test--marked-p))))
+  │   dired-do-chmod "Chmod"
+  │   dired-do-chown "Chown"
+  │   dired-do-compress "Compress")
+  │ 
+  │ (dired default-directory)
+  │ (message "Press ? in the dired buffer to open the popup")
+  │ 
+  └────
