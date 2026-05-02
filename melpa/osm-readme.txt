@@ -9,5 +9,5 @@ distances, search for locations and routes by name and to open and
 display GPX or TCX tracks.
 
 osm.el requires Emacs 29 and depends on the external `curl' program.
-Emacs must be built with libxml, libjansson, librsvg, libjpeg, libpng
+Emacs must be built with libxml, librsvg, libjpeg, libpng
 and libwebp support.
