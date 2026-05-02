@@ -505,15 +505,15 @@
       (:authors ("Ingo Lohmar" . "i.lohmar@gmail.com"))
       (:commit . "e62157d43b2c874d2edbd547c3bdfb05d0a7ae5c"))])
  (compat
-  . [(30 1 0 1) ((emacs (24 4)) (seq (2 23)))
-     "Emacs Lisp Compatibility Library" tar
+  . [(31 0 0 0) ((emacs (25 1))) "Emacs Lisp Compatibility Library"
+     tar
      ((:url . "https://github.com/emacs-compat/compat")
       (:keywords "lisp" "maint")
-      (:maintainer "Compat Development"
-		   . "~pkal/compat-devel@lists.sr.ht")
+      (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
+		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Philip Kaludercic" . "philipk@posteo.net")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "cccd41f549fa88031a32deb26253b462021d7e12"))])
+      (:commit . "2ef017671bdc643dbdbe3bfb746b80d090db792a"))])
  (cond-star
   . [(1 0) ((emacs (24 3))) "Extended form of `cond' construct" tar
      ((:maintainer "Richard Stallman" . "rms@gnu.org")
