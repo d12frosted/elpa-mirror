@@ -658,11 +658,11 @@
       (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
       (:commit . "836b19b39651419876e65cdb1a91e3eef83cc4e7"))])
  (dape
-  . [(0 26 0) ((emacs (29 1)) (jsonrpc (1 0 25)))
+  . [(0 27 0) ((emacs (29 1)) (jsonrpc (1 0 25)))
      "Debug Adapter Protocol for Emacs" tar
      ((:url . "https://github.com/svaante/dape")
       (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-      (:commit . "51493a00806fe43989b87cd34de2715d523aadb8"))])
+      (:commit . "753cf92ce4fc32e82d3816c525d4da09222c2a8a"))])
  (darkroom
   . [(0 3) ((cl-lib (0 5)))
      "Remove visual distractions and focus on writing" tar
@@ -1100,15 +1100,14 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "27de48004242e98586b9c9661fdb6912f26fe70f"))])
  (embark-consult
-  . [(1 1)
-     ((emacs (27 1)) (compat (29 1 4 0)) (embark (1 0))
-      (consult (1 0)))
+  . [(1 2)
+     ((emacs (29 1)) (compat (30)) (embark (1 1)) (consult (3 2)))
      "Consult integration for Embark" tar
      ((:url . "https://github.com/oantolin/embark")
       (:keywords "convenience")
       (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-      (:commit . "195add1f1ccd1059472c9df7334c97c4d155425e"))])
+      (:commit . "80254c91da90635978fb12db8b9ab9bf54f3bfb0"))])
  (ement
   . [(0 17)
      ((emacs (27 1)) (map (2 1)) (persist (0 5)) (plz (0 6))
@@ -3198,14 +3197,15 @@
 		("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "06f1be349e9c3d124520b18742911307de9abda3"))])
  (timeout
-  . [(2 1) ((emacs (24 4))) "Throttle or debounce Elisp functions" tar
+  . [(2 1 6) ((emacs (24 4))) "Throttle or debounce Elisp functions"
+     tar
      ((:url . "https://github.com/karthink/timeout")
       (:keywords "convenience" "extensions")
       (:maintainer "Karthik Chikmagalur"
 		   . "karthikchikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthikchikmagalur@gmail.com"))
-      (:commit . "6d31046c5b1817271a52ab810e5bc635fe7ab3b4"))])
+      (:commit . "60b5ab7774f30fd12b9927e93b4d43fafb1fe925"))])
  (timerfunctions
   . [(1 4 2) ((cl-lib (0 5)) (emacs (24)))
      "Enhanced versions of some timer.el functions" single

@@ -479,6 +479,12 @@
       (:maintainer "Harry R. Schwartz" . "hello@harryrschwartz.com")
       (:authors ("Harry R. Schwartz" . "hello@harryrschwartz.com"))
       (:commit . "67b68c1a2bff48bad2cc4722598da0f36e3866a9"))])
+ (eprolog
+  . [(0 3 2) ((emacs (27 2))) "Native Prolog engine implementation"
+     tar
+     ((:url . "https://github.com/tani/eprolog")
+      (:keywords "languages" "prolog" "logic programming")
+      (:commit . "6eff9942d3de603109101f3d74e30aac495203f6"))])
  (esxml
   . [(0 3 8) ((emacs (24 1)) (cl-lib (0 5)))
      "Library for working with xml via esxml and sxml" tar
@@ -1480,14 +1486,14 @@
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
       (:commit . "5245f092e35712df6559a7782a93bb61896175dd"))])
  (pg
-  . [(0 65) ((emacs (28 1)) (peg (1 0 1)))
+  . [(0 66) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
      ((:url . "https://github.com/emarsden/pg-el")
       (:keywords "data" "comm" "database" "postgresql")
       (:maintainer "Eric Marsden"
 		   . "eric.marsden@risk-engineering.org")
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-      (:commit . "e82be0a8a69042c102119b9c7d59619f3a2277a3"))])
+      (:commit . "67eb8564c6b974bc8f9a22053d1ff7ebec2e7dc3"))])
  (php-mode
   . [(1 26 1) ((emacs (26 1))) "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")

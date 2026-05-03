@@ -168,24 +168,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 <https://sourceware.org/gdb/current/onlinedocs/gdb.html/Debugger-Adapter-Protocol.html>
 
 
-4.4 C, C++ and Rust - codelldb
-──────────────────────────────
-
-  1. Download latest `vsix' [release] for your platform
-     `codelldb-<platform>-<os>.vsix'
-  2. Unpack `mkdir -p ~/.emacs.d/debug-adapters && unzip
-     codelldb-<platform>-<os>.vsix -d
-     ~/.emacs.d/debug-adapters/codelldb'
-
-  See [manual] for more information.
-
-
-[release] <https://github.com/vadimcn/codelldb/releases>
-
-[manual] <https://github.com/vadimcn/codelldb/blob/v1.10.0/MANUAL.md>
-
-
-4.5 C and C++ - cpptools
+4.4 C and C++ - cpptools
 ────────────────────────
 
   Download latesnd unpack `vsix' file with your favorite unzipper.
@@ -208,7 +191,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 [options] <https://code.visualstudio.com/docs/cpp/launch-json-reference>
 
 
-4.6 C, C++ and Rust - lldb-dap
+4.5 C, C++ and Rust - lldb-dap
 ──────────────────────────────
 
   1. Install [lldb-dap] for your platform
@@ -217,7 +200,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 [lldb-dap]
 <https://github.com/helix-editor/helix/wiki/Debugger-Configurations#install-debuggers>
 
-4.6.1 Example for MacOS using homebrew
+4.5.1 Example for MacOS using homebrew
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   1. Install the `llvm' keg: `brew install llvm'
@@ -225,13 +208,13 @@ source buffers and `repeat-mode' for more pleasant key mappings.
      --installed llvm)/bin')
   3. `M-x dape' and pass in arguments of interest
      • To pass arguments, use `:args ["arg1" "arg2" ..]'
-     • To pass environment variables, use `:env ["RUST_LOG=WARN"
-       "FOO=BAR"]'
+     • To pass environment variables, use `:env (:RUST_LOG "WARN" :FOO
+       "BAR")'
      • To use a different program instead of `a.out' (e.g., for Rust),
        use `:program "target/debug/<crate_name>"'
 
 
-4.7 Python - debugpy
+4.6 Python - debugpy
 ────────────────────
 
   Install debugpy with pip `pip install debugpy'
@@ -243,26 +226,26 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 <https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings>
 
 
-4.8 Godot
+4.7 Godot
 ─────────
 
   Configure debug adapter port under "Editor" > "Editor Settings" >
   "Debug Adapter".
 
 
-4.9 Dart - flutter
+4.8 Dart - flutter
 ──────────────────
 
   See for installation <https://docs.flutter.dev/get-started/install>
 
 
-4.10 C# - netcoredbg
-────────────────────
+4.9 C# - netcoredbg
+───────────────────
 
   See <https://github.com/Samsung/netcoredbg> for installation
 
 
-4.11 Ruby - rdbg
+4.10 Ruby - rdbg
 ────────────────
 
   Install with `gem install debug'.
@@ -270,7 +253,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   See <https://github.com/ruby/debug> for more information
 
 
-4.12 Java - JDTLS with Java Debug Server plugin
+4.11 Java - JDTLS with Java Debug Server plugin
 ───────────────────────────────────────────────
 
   See <https://github.com/eclipse-jdtls/eclipse.jdt.ls> for installation
@@ -298,7 +281,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
   └────
 
 
-4.13 PHP - Xdebug
+4.12 PHP - Xdebug
 ─────────────────
 
   1. Install and setup `Xdebug' see [instructions]
@@ -314,7 +297,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 [release] <https://github.com/xdebug/vscode-php-debug/releases>
 
 
-4.14 OCaml - ocamlearlybird
+4.13 OCaml - ocamlearlybird
 ───────────────────────────
 
   Install with `opam install earlybird'.
@@ -327,7 +310,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 [ocamlearlybird] <https://github.com/hackwaly/ocamlearlybird>
 
 
-4.15 Bash - bash-debug
+4.14 Bash - bash-debug
 ──────────────────────
 
   1. Install `node'
@@ -344,7 +327,7 @@ source buffers and `repeat-mode' for more pleasant key mappings.
 [bash-debug] <https://github.com/rogalmic/vscode-bash-debug>
 
 
-4.16 Other untested adapters
+4.15 Other untested adapters
 ────────────────────────────
 
   If you find a working configuration for any other debug adapter please
