@@ -1,17 +1,67 @@
  • Building package meep (from codeberg:ideasman42/emacs-meep)...
 Updating /mnt/store/melpa/working/meep/
-Checking out 4e536002d97a2c0a2b589486e2eeaad2cd295a97
+Checking out e7b7e816c5601d98b36ca13acae78bb404677889
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/meep/
-  to /tmp/meep-ntGHEa/meep-20260428.1022
+  to /tmp/meep-pyaDsm/meep-20260503.1151
+    meep-preset-awk-mode.el -> meep-preset-awk-mode.el
+    meep-preset-c++-mode.el -> meep-preset-c++-mode.el
+    meep-preset-c-mode.el -> meep-preset-c-mode.el
+    meep-preset-cmake-mode.el -> meep-preset-cmake-mode.el
+    meep-preset-css-mode.el -> meep-preset-css-mode.el
+    meep-preset-dart-mode.el -> meep-preset-dart-mode.el
+    meep-preset-go-mode.el -> meep-preset-go-mode.el
+    meep-preset-haskell-mode.el -> meep-preset-haskell-mode.el
+    meep-preset-html-mode.el -> meep-preset-html-mode.el
+    meep-preset-idl-mode.el -> meep-preset-idl-mode.el
+    meep-preset-java-mode.el -> meep-preset-java-mode.el
+    meep-preset-javascript-mode.el -> meep-preset-javascript-mode.el
+    meep-preset-kotlin-mode.el -> meep-preset-kotlin-mode.el
+    meep-preset-lua-mode.el -> meep-preset-lua-mode.el
+    meep-preset-markdown-mode.el -> meep-preset-markdown-mode.el
+    meep-preset-objc-mode.el -> meep-preset-objc-mode.el
+    meep-preset-org-mode.el -> meep-preset-org-mode.el
+    meep-preset-pascal-mode.el -> meep-preset-pascal-mode.el
+    meep-preset-php-mode.el -> meep-preset-php-mode.el
+    meep-preset-pike-mode.el -> meep-preset-pike-mode.el
+    meep-preset-rst-mode.el -> meep-preset-rst-mode.el
+    meep-preset-ruby-mode.el -> meep-preset-ruby-mode.el
+    meep-preset-rust-mode.el -> meep-preset-rust-mode.el
+    meep-preset-scala-mode.el -> meep-preset-scala-mode.el
+    meep-preset-xml-mode.el -> meep-preset-xml-mode.el
     meep-region-mark.el -> meep-region-mark.el
     meep.el -> meep.el
-Created meep-20260428.1022.tar containing:
-  meep-20260428.1022/
-  meep-20260428.1022/meep-pkg.el
-  meep-20260428.1022/meep-region-mark.el
-  meep-20260428.1022/meep.el
+Created meep-20260503.1151.tar containing:
+  meep-20260503.1151/
+  meep-20260503.1151/meep-pkg.el
+  meep-20260503.1151/meep-preset-awk-mode.el
+  meep-20260503.1151/meep-preset-c++-mode.el
+  meep-20260503.1151/meep-preset-c-mode.el
+  meep-20260503.1151/meep-preset-cmake-mode.el
+  meep-20260503.1151/meep-preset-css-mode.el
+  meep-20260503.1151/meep-preset-dart-mode.el
+  meep-20260503.1151/meep-preset-go-mode.el
+  meep-20260503.1151/meep-preset-haskell-mode.el
+  meep-20260503.1151/meep-preset-html-mode.el
+  meep-20260503.1151/meep-preset-idl-mode.el
+  meep-20260503.1151/meep-preset-java-mode.el
+  meep-20260503.1151/meep-preset-javascript-mode.el
+  meep-20260503.1151/meep-preset-kotlin-mode.el
+  meep-20260503.1151/meep-preset-lua-mode.el
+  meep-20260503.1151/meep-preset-markdown-mode.el
+  meep-20260503.1151/meep-preset-objc-mode.el
+  meep-20260503.1151/meep-preset-org-mode.el
+  meep-20260503.1151/meep-preset-pascal-mode.el
+  meep-20260503.1151/meep-preset-php-mode.el
+  meep-20260503.1151/meep-preset-pike-mode.el
+  meep-20260503.1151/meep-preset-rst-mode.el
+  meep-20260503.1151/meep-preset-ruby-mode.el
+  meep-20260503.1151/meep-preset-rust-mode.el
+  meep-20260503.1151/meep-preset-scala-mode.el
+  meep-20260503.1151/meep-preset-xml-mode.el
+  meep-20260503.1151/meep-region-mark.el
+  meep-20260503.1151/meep.el
  ✓ Success:
-  2026-05-03T07:19:49+0000  meep-20260428.1022.entry
-  2026-05-03T07:19:49+0000  meep-20260428.1022.tar
-Built meep in 4.262s, finished at 2026-05-03T07:19:50+0000
+  2026-05-03T15:20:36+0000  meep-20260503.1151.entry
+  2026-05-03T15:20:36+0000  meep-20260503.1151.tar
+Built meep in 4.599s, finished at 2026-05-03T15:20:37+0000
