@@ -505,7 +505,7 @@
       (:authors ("Ingo Lohmar" . "i.lohmar@gmail.com"))
       (:commit . "e62157d43b2c874d2edbd547c3bdfb05d0a7ae5c"))])
  (compat
-  . [(31 0 0 0) ((emacs (25 1))) "Emacs Lisp Compatibility Library"
+  . [(31 0 0 1) ((emacs (25 1))) "Emacs Lisp Compatibility Library"
      tar
      ((:url . "https://github.com/emacs-compat/compat")
       (:keywords "lisp" "maint")
@@ -513,7 +513,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Philip Kaludercic" . "philipk@posteo.net")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "2ef017671bdc643dbdbe3bfb746b80d090db792a"))])
+      (:commit . "b5b48183689b536f72b1214106afeabc465da9d4"))])
  (cond-star
   . [(1 0) ((emacs (24 3))) "Extended form of `cond' construct" tar
      ((:maintainer "Richard Stallman" . "rms@gnu.org")
@@ -658,11 +658,11 @@
       (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
       (:commit . "836b19b39651419876e65cdb1a91e3eef83cc4e7"))])
  (dape
-  . [(0 27 0) ((emacs (29 1)) (jsonrpc (1 0 25)))
+  . [(0 27 1) ((emacs (29 1)) (jsonrpc (1 0 25)))
      "Debug Adapter Protocol for Emacs" tar
      ((:url . "https://github.com/svaante/dape")
       (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-      (:commit . "753cf92ce4fc32e82d3816c525d4da09222c2a8a"))])
+      (:commit . "dcbdffc68a3c89bbb89956161edde9f0fe062e64"))])
  (darkroom
   . [(0 3) ((cl-lib (0 5)))
      "Remove visual distractions and focus on writing" tar
@@ -1791,13 +1791,13 @@
       (:url . "https://elpa.gnu.org/packages/landmark.html")
       (:commit . "422d310c7726898b8d85f95f2336c79c8aaf30eb"))])
  (latex-table-wizard
-  . [(1 5 5) ((emacs (27 1)) (auctex (12 1)) (transient (0 3 7)))
+  . [(1 6 0) ((emacs (27 1)) (auctex (12 1)) (transient (0 3 7)))
      "Magic editing of LaTeX tables" tar
      ((:url . "https://github.com/enricoflor/latex-table-wizard")
       (:keywords "convenience" "tex")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "fcdc34960ec08640adf8019185927f079a2bc89d"))])
+      (:commit . "0ccd242ba521ed3b323d1dc84f49febe80b2eec7"))])
  (leaf
   . [(4 5 5) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
