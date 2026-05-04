@@ -1297,13 +1297,13 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "34d8b04bef350b270f52dc4defc9bac3e9617bf0"))])
  (forgejo
-  . [(0 1 3) ((emacs (29 1)) (keymap-popup (0 2 1)))
+  . [(0 1 4) ((emacs (29 1)) (keymap-popup (0 2 1)))
      "Emacs Forgejo Front-end" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-forgejo")
       (:keywords "tools" "vc" "git" "forgejo")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "008ee859c0c7bb2b18995d39310ddb8121a1c3c2"))])
+      (:commit . "ba59efa53b6db1e51bbff4b883f145913224b321"))])
  (frame-tabs
   . [(1 1) nil "show buffer tabs in side window" tar
      ((:keywords "frames" "tabs")
@@ -1746,12 +1746,12 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 2 3) ((emacs (29 1))) "Described keymaps with popup help" tar
+  . [(0 2 4) ((emacs (29 1))) "Described keymaps with popup help" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-keymap-popup")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "a74ff37f2dc6c60efa7df55df95a5d530e7cd9d2"))])
+      (:commit . "5f228dd3d8eae9c5b2bd3ff99b0411bd6ee09170"))])
  (kind-icon
   . [(0 2 2) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
