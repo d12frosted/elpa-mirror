@@ -1,3 +1,14 @@
+
+This package provides tree-sitter support for Markdown for Emacs
+29–30.
+
+Emacs 31+ ships with a built-in `markdown-ts-mode`, written by the
+same author and derived from this package, which supersedes it and
+makes this package obsolete and incompatible.
+
+
+
+
 `markdown-ts-mode` is a major mode that provides BASIC syntax
 highlight and iMenu navigation.
 
