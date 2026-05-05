@@ -1,25 +1,6 @@
-			     ━━━━━━━━━━━━━━
-			      EVIL NUMBERS
-			     ━━━━━━━━━━━━━━
-
-
-Table of Contents
-─────────────────
-
-1. Features
-.. 1. Detected Literals
-2. Usage
-.. 1. Customization
-.. 2. Key Bindings
-3. Install
-.. 1. Basic Installation
-.. 2. Use Package
-4. Known Bugs
-5. Similar Packages
-6. Contributors
-
-
-
+                             ━━━━━━━━━━━━━━
+                              EVIL NUMBERS
+                             ━━━━━━━━━━━━━━
 
 
 1 Features
@@ -42,6 +23,7 @@ Table of Contents
 1.1 Detected Literals
 ─────────────────────
 
+  • Decimal, e.g. `42', `-17', `+5', `007'.
   • Binary, e.g. `0b0101', `0B0101'.
   • Octal, e.g. `0o755', `0O700'.
   • Hexadecimal, e.g. `0xDEADBEEF', `0XCAFE'.
@@ -88,6 +70,13 @@ Table of Contents
 
         This is off by default as it doesn't follow VIM's behavior.
 
+  `evil-numbers-negative'
+        Configure negative number support.
+
+        • `t' Support negative numbers (default).
+        • `nil' Numbers negative prefix is ignored, useful when numbers
+          may be date/year ranges.
+
 
 2.2 Key Bindings
 ────────────────
@@ -124,17 +113,28 @@ Table of Contents
 3 Install
 ═════════
 
-3.1 Basic Installation
+3.1 Dependencies
+────────────────
+
+  This package requires the [shift-number] package, which provides the
+  core number manipulation logic.
+
+
+[shift-number] <https://melpa.org/#/shift-number>
+
+
+3.2 Basic Installation
 ──────────────────────
 
   Put in `load-path', `(require 'evil-numbers)' and set key bindings.
 
 
-3.2 Use Package
+3.3 Use Package
 ───────────────
 
   Assuming you have the `melpa' repository enabled, `use-package' can be
-  used as follows.
+  used as follows.  The `shift-number' dependency will be installed
+  automatically.
 
   ┌────
   │ (use-package evil-numbers)
@@ -144,7 +144,7 @@ Table of Contents
 4 Known Bugs
 ════════════
 
-  See <http://github.com/juliapath/evil-numbers/issues>
+  See <https://github.com/juliapath/evil-numbers/issues>
 
 
 5 Similar Packages
@@ -152,15 +152,12 @@ Table of Contents
 
   • [Mouse Slider Package]
   • [Number Package]
-  • [Shift Number Package]
   • [Emacs Wiki (Increment Number)]
 
 
 [Mouse Slider Package] <https://melpa.org/#/mouse-slider-mode>
 
 [Number Package] <https://melpa.org/#/number>
-
-[Shift Number Package] <https://melpa.org/#/shift-number>
 
 [Emacs Wiki (Increment Number)]
 <https://www.emacswiki.org/emacs/IncrementNumber>

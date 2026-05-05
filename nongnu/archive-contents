@@ -588,13 +588,13 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "3b197a2b559b06a7cf39978704b196f53dac802a"))])
  (evil-numbers
-  . [(0 7) ((emacs (24 1)) (evil (1 2 0)))
+  . [(0 8) ((emacs (24 1)) (evil (1 2 0)) (shift-number (0 2)))
      "Increment/decrement numbers like in VIM" tar
      ((:url . "http://github.com/juliapath/evil-numbers")
       (:keywords "convenience" "tools")
       (:maintainer "Julia Path" . "julia@jpath.de")
       (:authors ("Michael Markert" . "markert.michael@googlemail.com"))
-      (:commit . "61dde4e3715fd1255df8f87a37d9c8022e909bf4"))])
+      (:commit . "616aff9e5cee012954756ed2715209fa90308cdf"))])
  (evil-surround
   . [(1 0 4) ((evil (1 2 12))) "emulate surround.vim from Vim" tar
      ((:keywords "emulation" "vi" "evil")
