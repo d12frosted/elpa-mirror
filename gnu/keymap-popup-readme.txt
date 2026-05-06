@@ -102,6 +102,7 @@ Requires Emacs 29.1+.
   │ ;;; Sub-menu keymap
   │ 
   │ (keymap-popup-define kp-test--sub-map
+  │   :description "Sub menu"
   │   :group "Sub-menu"
   │   "s" ("Sub action" kp-test--sub-action)
   │   "x" ("Greet from sub" kp-test--greet))
@@ -110,7 +111,10 @@ Requires Emacs 29.1+.
   │ 
   │ (keymap-popup-define kp-test--map
   │   "Test popup"
-  │   :description "keymap-popup live test"
+  │   :description (lambda ()
+  │                  (concat (propertize (format-time-string "%H:%M:%S") 'face 'bold)
+  │                          " "
+  │                          (propertize (format-time-string "%a %d %b") 'face 'shadow)))
   │   :group "Actions"
   │   "a" ("Greet" kp-test--greet :c-u "SHOUT (C-u)")
   │   "g" ("Refresh" kp-test--refresh :stay-open t)

@@ -1766,7 +1766,7 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "bd31199a34c0619b346954f25875fcb7239e2b86"))])
  (swift-mode
-  . [(9 4 0) ((emacs (24 4)) (seq (2 3)))
+  . [(10 0 0) ((emacs (25 2)))
      "Major-mode for Apple's Swift programming language" tar
      ((:url . "https://github.com/swift-emacs/swift-mode")
       (:keywords "languages" "swift")
@@ -1775,7 +1775,7 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net"))
-      (:commit . "fc7df7bd906a2bb04aac6e0de47fc7acf33ceed3"))])
+      (:commit . "bf56866b98de2fd73029da2bca1035ca02f9e879"))])
  (symbol-overlay
   . [(4 3) ((emacs (24 3)) (seq (2 2)))
      "Highlight symbols with keymap-enabled overlays" tar
