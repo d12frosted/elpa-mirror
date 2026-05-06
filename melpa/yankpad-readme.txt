@@ -7,7 +7,7 @@ you can have different yankpads for different occasions.
 You can open your `yankpad-file' by using `yankpad-edit' (or just open it in
 any other way).  Another way to add new snippets is by using
 `yankpad-capture-snippet', which will add a snippet to the current
-`yankpad-category'.
+`yankpad-category'.  After editing the `yankpad-file', do M-x yankpad-reload.
 
 If you have yasnippet installed, yankpad will try to use it when pasting
 snippets.  This means that you can use the features that yasnippet provides
@@ -37,8 +37,7 @@ expand a snippet with a name starting with that word, followed by
 `yankpad-expand-separator' (a colon by default).  If you need to change the
 category, use `yankpad-set-category'.  If you want to append snippets from
 another category (basically having several categories active at the same
-time), use `yankpad-append-category'.  If you have company-mode enabled,
-you can also use `company-yankpad`.
+time), use `yankpad-append-category'.  You can also use `yankpad-capf'.
 
 A quick way to add short snippets with a keyword is to add a descriptive list
 to the category in your `yankpad-file'.  The key of each item in the list will be
