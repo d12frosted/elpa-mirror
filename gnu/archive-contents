@@ -1399,14 +1399,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 10 5)
+  . [(0 10 6)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 2 0)))
      "Knowledge System" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "fb810bd535ae35eb01ee1072f485a426708cc146"))])
+      (:commit . "07de9c67536fe3e8c5fef1daf61527f3bcfa46a7"))])
  (gnu-elpa
   . [(1 1) nil "Advertize GNU ELPA packages" tar
      ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
