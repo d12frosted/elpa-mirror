@@ -1,0 +1,37 @@
+ • Building package code-review (from github:wandersoncferreira/code-review)...
+Updating /mnt/store/melpa/working/code-review/
+Checking out a8bb63b53f2a1fd31302c110e668ad7b5c871b34
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/code-review/
+  to /tmp/code-review-7ZiNNC/code-review-20221206.113
+    code-review-actions.el -> code-review-actions.el
+    code-review-bitbucket.el -> code-review-bitbucket.el
+    code-review-comment.el -> code-review-comment.el
+    code-review-db.el -> code-review-db.el
+    code-review-faces.el -> code-review-faces.el
+    code-review-github.el -> code-review-github.el
+    code-review-gitlab.el -> code-review-gitlab.el
+    code-review-interfaces.el -> code-review-interfaces.el
+    code-review-parse-hunk.el -> code-review-parse-hunk.el
+    code-review-section.el -> code-review-section.el
+    code-review-utils.el -> code-review-utils.el
+    code-review.el -> code-review.el
+Created code-review-20221206.113.tar containing:
+  code-review-20221206.113/
+  code-review-20221206.113/code-review-actions.el
+  code-review-20221206.113/code-review-bitbucket.el
+  code-review-20221206.113/code-review-comment.el
+  code-review-20221206.113/code-review-db.el
+  code-review-20221206.113/code-review-faces.el
+  code-review-20221206.113/code-review-github.el
+  code-review-20221206.113/code-review-gitlab.el
+  code-review-20221206.113/code-review-interfaces.el
+  code-review-20221206.113/code-review-parse-hunk.el
+  code-review-20221206.113/code-review-pkg.el
+  code-review-20221206.113/code-review-section.el
+  code-review-20221206.113/code-review-utils.el
+  code-review-20221206.113/code-review.el
+ ✓ Success:
+  2026-05-08T14:18:01+0000  code-review-20221206.113.entry
+  2026-05-08T14:18:01+0000  code-review-20221206.113.tar
+Built code-review in 3.852s, finished at 2026-05-08T14:18:03+0000
