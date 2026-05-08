@@ -219,6 +219,7 @@ Requires Emacs 29.1+.
   │ 
   │ (keymap-popup-annotate dired-mode-map
   │   :popup-key "?"
+  │   :persistent t
   │   :exit-key "x"
   │   :description (lambda ()
   │                  (format "Dired: %s%s"
