@@ -1,9 +1,9 @@
  • Building package anju (from github:kickingvegas/anju)...
 Updating /mnt/store/melpa/working/anju/
-Checking out 7858efad028ed7a326132a37c74f32e3644e6414
+Checking out d0f2be00b4f56a8fe466f335c2c09b70cf830cd6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/anju/
-  to /tmp/anju-9suEwq/anju-20260425.1754
+  to /tmp/anju-EwaiHx/anju-20260508.2207
   ! lisp/anju-context-menu.el -> anju-context-menu.el
   ! lisp/anju-main-menu.el -> anju-main-menu.el
   ! lisp/anju-mode-line.el -> anju-mode-line.el
@@ -13,35 +13,43 @@ Copying files (->) and directories (=>)
   ! docs/anju.texi -> anju.texi
   ! docs/images => images
 Generating anju.info
-Created anju-20260425.1754.tar containing:
-  anju-20260425.1754/
-  anju-20260425.1754/anju-context-menu.el
-  anju-20260425.1754/anju-main-menu.el
-  anju-20260425.1754/anju-mode-line.el
-  anju-20260425.1754/anju-pkg.el
-  anju-20260425.1754/anju-style-text.el
-  anju-20260425.1754/anju-utils.el
-  anju-20260425.1754/anju.el
-  anju-20260425.1754/anju.info
-  anju-20260425.1754/dir
-  anju-20260425.1754/images/
-  anju-20260425.1754/images/anju-context-menu-enhanced-paste.png
-  anju-20260425.1754/images/anju-context-menu-org-checkbox.png
-  anju-20260425.1754/images/anju-context-menu-org-headline.png
-  anju-20260425.1754/images/anju-context-menu-org-item.png
-  anju-20260425.1754/images/anju-context-menu-org-table.png
-  anju-20260425.1754/images/anju-context-menu-region.png
-  anju-20260425.1754/images/anju-dired-copy-to.png
-  anju-20260425.1754/images/anju-dired-insert-subdir.png
-  anju-20260425.1754/images/anju-main-menu-bookmarks.png
-  anju-20260425.1754/images/anju-main-menu-edit-search-in-files.png
-  anju-20260425.1754/images/anju-main-menu-help.png
-  anju-20260425.1754/images/anju-main-menu-imenu.png
-  anju-20260425.1754/images/anju-main-menu-text.png
-  anju-20260425.1754/images/anju-mode-line-buffer-list.png
-  anju-20260425.1754/images/anju-mode-line-window-management.png
-  anju-20260425.1754/images/default-yellow.png
+Created anju-20260508.2207.tar containing:
+  anju-20260508.2207/
+  anju-20260508.2207/anju-context-menu.el
+  anju-20260508.2207/anju-main-menu.el
+  anju-20260508.2207/anju-mode-line.el
+  anju-20260508.2207/anju-pkg.el
+  anju-20260508.2207/anju-style-text.el
+  anju-20260508.2207/anju-utils.el
+  anju-20260508.2207/anju.el
+  anju-20260508.2207/anju.info
+  anju-20260508.2207/dir
+  anju-20260508.2207/images/
+  anju-20260508.2207/images/anju-context-menu-dired-copy-to.png
+  anju-20260508.2207/images/anju-context-menu-dired-insert-subdir.png
+  anju-20260508.2207/images/anju-context-menu-edebug.png
+  anju-20260508.2207/images/anju-context-menu-elisp-built-in.png
+  anju-20260508.2207/images/anju-context-menu-elisp.png
+  anju-20260508.2207/images/anju-context-menu-enhanced-paste.png
+  anju-20260508.2207/images/anju-context-menu-ert-result.png
+  anju-20260508.2207/images/anju-context-menu-ert.png
+  anju-20260508.2207/images/anju-context-menu-extract-lambda-1.png
+  anju-20260508.2207/images/anju-context-menu-extract-lambda-2.png
+  anju-20260508.2207/images/anju-context-menu-extract-lambda-3.png
+  anju-20260508.2207/images/anju-context-menu-org-checkbox.png
+  anju-20260508.2207/images/anju-context-menu-org-headline.png
+  anju-20260508.2207/images/anju-context-menu-org-item.png
+  anju-20260508.2207/images/anju-context-menu-org-table.png
+  anju-20260508.2207/images/anju-context-menu-region.png
+  anju-20260508.2207/images/anju-main-menu-bookmarks.png
+  anju-20260508.2207/images/anju-main-menu-edit-search-in-files.png
+  anju-20260508.2207/images/anju-main-menu-help.png
+  anju-20260508.2207/images/anju-main-menu-imenu.png
+  anju-20260508.2207/images/anju-main-menu-text.png
+  anju-20260508.2207/images/anju-mode-line-buffer-list.png
+  anju-20260508.2207/images/anju-mode-line-window-management.png
+  anju-20260508.2207/images/default-yellow.png
  ✓ Success:
-  2026-05-08T17:37:11+0000  anju-20260425.1754.entry
-  2026-05-08T17:37:11+0000  anju-20260425.1754.tar
-Built anju in 6.120s, finished at 2026-05-08T17:37:12+0000
+  2026-05-09T04:33:04+0000  anju-20260508.2207.entry
+  2026-05-09T04:33:04+0000  anju-20260508.2207.tar
+Built anju in 6.713s, finished at 2026-05-09T04:33:05+0000
