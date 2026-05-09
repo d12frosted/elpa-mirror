@@ -1,9 +1,9 @@
  • Building package mastodon (from codeberg:martianh/mastodon.el)...
 Updating /mnt/store/melpa/working/mastodon/
-Checking out 5bba23045efda9f63c36ac431bec8f318a55e76a
+Checking out 4b30b2d96625e23325ff3727daa30969b6fe2eed
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodon-og2w8v/mastodon-20260406.856
+  to /tmp/mastodon-XSKks6/mastodon-20260509.749
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -25,29 +25,31 @@ Copying files (->) and directories (=>)
     mastodon.info -> mastodon.info
     mastodon.texi -> mastodon.texi
 Generating mastodon.info
-Created mastodon-20260406.856.tar containing:
-  mastodon-20260406.856/
-  mastodon-20260406.856/dir
-  mastodon-20260406.856/mastodon-async.el
-  mastodon-20260406.856/mastodon-auth.el
-  mastodon-20260406.856/mastodon-client.el
-  mastodon-20260406.856/mastodon-discover.el
-  mastodon-20260406.856/mastodon-http.el
-  mastodon-20260406.856/mastodon-inspect.el
-  mastodon-20260406.856/mastodon-iso.el
-  mastodon-20260406.856/mastodon-media.el
-  mastodon-20260406.856/mastodon-notifications.el
-  mastodon-20260406.856/mastodon-pkg.el
-  mastodon-20260406.856/mastodon-profile.el
-  mastodon-20260406.856/mastodon-search.el
-  mastodon-20260406.856/mastodon-tl.el
-  mastodon-20260406.856/mastodon-toot.el
-  mastodon-20260406.856/mastodon-transient.el
-  mastodon-20260406.856/mastodon-views.el
-  mastodon-20260406.856/mastodon-widget.el
-  mastodon-20260406.856/mastodon.el
-  mastodon-20260406.856/mastodon.info
+Created mastodon-20260509.749.tar containing:
+  mastodon-20260509.749/
+  mastodon-20260509.749/dir
+  mastodon-20260509.749/mastodon-async.el
+  mastodon-20260509.749/mastodon-auth.el
+  mastodon-20260509.749/mastodon-client.el
+  mastodon-20260509.749/mastodon-discover.el
+  mastodon-20260509.749/mastodon-http.el
+  mastodon-20260509.749/mastodon-inspect.el
+  mastodon-20260509.749/mastodon-iso.el
+  mastodon-20260509.749/mastodon-media.el
+  mastodon-20260509.749/mastodon-notifications.el
+  mastodon-20260509.749/mastodon-pkg.el
+  mastodon-20260509.749/mastodon-profile.el
+  mastodon-20260509.749/mastodon-search.el
+  mastodon-20260509.749/mastodon-tl.el
+  mastodon-20260509.749/mastodon-toot.el
+  mastodon-20260509.749/mastodon-transient.el
+  mastodon-20260509.749/mastodon-views.el
+  mastodon-20260509.749/mastodon-widget.el
+  mastodon-20260509.749/mastodon.el
+  mastodon-20260509.749/mastodon.info
  ✓ Success:
-  2026-05-09T02:39:37+0000  mastodon-20260406.856.entry
-  2026-05-09T02:39:36+0000  mastodon-20260406.856.tar
-Built mastodon in 12.966s, finished at 2026-05-09T02:39:38+0000
+  2026-05-09T05:19:27+0000  mastodon-20260406.856.entry
+  2026-05-09T05:19:27+0000  mastodon-20260406.856.tar
+  2026-05-09T07:59:33+0000  mastodon-20260509.749.entry
+  2026-05-09T07:59:33+0000  mastodon-20260509.749.tar
+Built mastodon in 9.413s, finished at 2026-05-09T07:59:34+0000
