@@ -642,15 +642,15 @@
       (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
       (:commit . "74fab520f1d008f5a389a673616a617c03c74600"))])
  (fj
-  . [(0 36)
+  . [(0 37)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
       (magit (4 3 8)))
      "Client for Forgejo instances" tar
      ((:url . "https://codeberg.org/martianh/fj.el")
       (:keywords "git" "convenience")
-      (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
-      (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "76a0b6a8bfbf88371b686d67e17a579771c6db05"))])
+      (:maintainer "Marty Hiatt" . "martianh@disroot.org")
+      (:authors ("Marty Hiatt" . "martianh@disroot.org"))
+      (:commit . "16c1d02065c78f381cd0e30c68f6ca070f0cc8b3"))])
  (flx
   . [(0 6 2) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
@@ -1115,13 +1115,13 @@
       (:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
       (:commit . "d92c3b773473e9fe15f61f6177e4fbf097aadd05"))])
  (lem
-  . [(0 24) ((emacs (29 1)) (fedi (0 2)) (markdown-mode (2 5)))
+  . [(0 25) ((emacs (29 1)) (fedi (0 2)) (markdown-mode (2 5)))
      "A lemmy client" tar
      ((:url . "https://codeberg.org/martianh/lem.el")
       (:keywords "multimedia" "comm" "web" "fediverse")
-      (:maintainer "martian hiatus" . "mousebot@disroot.org")
-      (:authors ("martian hiatus" . "mousebot@disroot.org"))
-      (:commit . "c746d32d2f330ed9a23ec7f8fc1f7d35ac22c357"))])
+      (:maintainer "martian hiatus" . "martianh@disroot.org")
+      (:authors ("martian hiatus" . "martianh@disroot.org"))
+      (:commit . "df4c87e2ea7b7f48701615294d2d708e0f469bbf"))])
  (llama
   . [(1 0 4) ((emacs (26 1)) (compat (30 1)))
      "Compact syntax for short lambda" tar
@@ -1229,13 +1229,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "f5d520b3ee7722dd2231ab586ba51d8eb166e49b"))])
  (mastodon
-  . [(2 0 16) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
+  . [(2 0 17) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
-      (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
+      (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
-		("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "1aa4595ccacde9c10569ab8ab93de6bd25f672f1"))])
+		("Marty Hiatt" . "martianh@disroot.org"))
+      (:commit . "97434f91d1dd940fcec6df78d8aaf338a2d7a7ba"))])
  (material-theme
   . [(2015) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar

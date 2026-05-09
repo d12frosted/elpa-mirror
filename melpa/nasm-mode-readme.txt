@@ -10,8 +10,8 @@ since, without a parser equal to that of NASM itself, it's
 otherwise ambiguous between macros and labels.  This covers both
 indentation and imenu support.
 
-The keyword lists are up to date as of NASM 2.12.01.
-http://www.nasm.us/doc/nasmdocb.html
+The keyword lists are in `nasmtok.el', which is included with the NASM
+distribution since 2.16.01.
 
 TODO:
 [ ] Line continuation awareness

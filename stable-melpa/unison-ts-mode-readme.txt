@@ -15,7 +15,8 @@ For LSP support, install UCM (Unison Codebase Manager) and enable
 eglot or lsp-mode.
 
 UCM Keybindings (under C-c C-u prefix):
-  C-c C-u r - Open UCM REPL
+  C-c C-u r - Open UCM REPL (MCP-based)
+  C-c C-u i - Open inferior UCM (full TUI)
   C-c C-u a - Add definitions from current file
   C-c C-u u - Update definitions
   C-c C-u t - Run tests
