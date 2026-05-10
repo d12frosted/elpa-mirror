@@ -2,7 +2,7 @@
 The shell-pop package provides on-demand access to a terminal through a
 single, configurable key binding.
 
-The package supports multiple terminal implementations, including term,
+The package supports multiple terminal implementations, including `term',
 `eshell', `ansi-term', `vterm', and `eat', and ensures your original window
 configuration is restored when the terminal is hidden.
 

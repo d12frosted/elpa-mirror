@@ -24,7 +24,7 @@ Supported languages:
 - Clojure/ClojureScript (cljfmt, zprint)
 - CMake (cmake-format)
 - Crystal (crystal tool format)
-- CSS/Less/SCSS (prettier, prettierd)
+- CSS/Less/SCSS (prettier, prettierd, deno)
 - Cuda (clang-format)
 - D (dfmt)
 - Dart (dartfmt, dart-format)
@@ -45,7 +45,8 @@ Supported languages:
 - Haskell (brittany, fourmolu, hindent, ormolu, stylish-haskell)
 - HCL (hclfmt)
 - HLSL (clang-format)
-- HTML/XHTML/XML (tidy)
+- HTML (tidy, deno)
+- XHTML/XML (tidy)
 - Hy (Emacs)
 - Java (astyle, clang-format, google-java-format)
 - JavaScript/JSON/JSX (prettier, standard, prettierd, deno)
@@ -84,7 +85,7 @@ Supported languages:
 - V (v fmt)
 - Vue (prettier, prettierd)
 - Verilog (iStyle, Verible)
-- YAML (prettier, prettierd)
+- YAML (prettier, prettierd, deno)
 - Zig (zig)
 
 You will need to install external programs to do the formatting.

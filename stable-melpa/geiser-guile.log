@@ -1,29 +1,31 @@
  • Building package geiser-guile (from codeberg:geiser/guile)...
 Updating /mnt/store/melpa/working/geiser-guile/
-Checking out a0f111f8dedd31c593c4ed12c0b99745f3c1340f
+Checking out 31d2ab5fc4c4dc589e69dbfa7ad3a6f77410ead7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-guile/
-  to /tmp/geiser-guile-gthvVO/geiser-guile-20240920.35
+  to /tmp/geiser-guile-9A9IAw/geiser-guile-20260510.1733
     geiser-guile.el -> geiser-guile.el
     geiser-guile.texi -> geiser-guile.texi
     src/geiser => src/geiser
 Generating geiser-guile.info
-Created geiser-guile-20240920.35.tar containing:
-  geiser-guile-20240920.35/
-  geiser-guile-20240920.35/dir
-  geiser-guile-20240920.35/geiser-guile-pkg.el
-  geiser-guile-20240920.35/geiser-guile.el
-  geiser-guile-20240920.35/geiser-guile.info
-  geiser-guile-20240920.35/src/
-  geiser-guile-20240920.35/src/geiser/
-  geiser-guile-20240920.35/src/geiser/completion.scm
-  geiser-guile-20240920.35/src/geiser/doc.scm
-  geiser-guile-20240920.35/src/geiser/emacs.scm
-  geiser-guile-20240920.35/src/geiser/evaluation.scm
-  geiser-guile-20240920.35/src/geiser/modules.scm
-  geiser-guile-20240920.35/src/geiser/utils.scm
-  geiser-guile-20240920.35/src/geiser/xref.scm
+Created geiser-guile-20260510.1733.tar containing:
+  geiser-guile-20260510.1733/
+  geiser-guile-20260510.1733/dir
+  geiser-guile-20260510.1733/geiser-guile-pkg.el
+  geiser-guile-20260510.1733/geiser-guile.el
+  geiser-guile-20260510.1733/geiser-guile.info
+  geiser-guile-20260510.1733/src/
+  geiser-guile-20260510.1733/src/geiser/
+  geiser-guile-20260510.1733/src/geiser/completion.scm
+  geiser-guile-20260510.1733/src/geiser/doc.scm
+  geiser-guile-20260510.1733/src/geiser/emacs.scm
+  geiser-guile-20260510.1733/src/geiser/evaluation.scm
+  geiser-guile-20260510.1733/src/geiser/modules.scm
+  geiser-guile-20260510.1733/src/geiser/utils.scm
+  geiser-guile-20260510.1733/src/geiser/xref.scm
  ✓ Success:
-  2026-05-10T07:39:39+0000  geiser-guile-20240920.35.entry
-  2026-05-10T07:39:39+0000  geiser-guile-20240920.35.tar
-Built geiser-guile in 5.402s, finished at 2026-05-10T07:39:40+0000
+  2026-05-10T15:35:24+0000  geiser-guile-20240920.35.entry
+  2026-05-10T15:35:24+0000  geiser-guile-20240920.35.tar
+  2026-05-10T18:14:19+0000  geiser-guile-20260510.1733.entry
+  2026-05-10T18:14:19+0000  geiser-guile-20260510.1733.tar
+Built geiser-guile in 5.689s, finished at 2026-05-10T18:14:20+0000
