@@ -25,5 +25,8 @@ UCM Keybindings (under C-c C-u prefix):
   C-c C-u l - Load current file
   C-c C-u e - Send region to REPL
   C-c C-u d - Send definition at point to REPL
+  C-c C-u V - Eval expression and go to REPL
+  C-c C-u E - Send region to REPL and go
+  C-c C-u D - Send definition to REPL and go
 
 Forked from https://github.com/dariooddenino/unison-ts-mode-emacs.

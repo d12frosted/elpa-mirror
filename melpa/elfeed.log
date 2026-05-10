@@ -1,9 +1,9 @@
  • Building package elfeed (from github:emacs-elfeed/elfeed)...
 Updating /mnt/store/melpa/working/elfeed/
-Checking out 73082fdb508ee763aa350a193e085cb24f8ec029
+Checking out 4344fb23a35615a5983df1257a7941ab049d9ade
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elfeed/
-  to /tmp/elfeed-bw1rcG/elfeed-20260508.2357
+  to /tmp/elfeed-2VNsGp/elfeed-20260509.2309
     elfeed-csv.el -> elfeed-csv.el
     elfeed-curl.el -> elfeed-curl.el
     elfeed-db.el -> elfeed-db.el
@@ -12,24 +12,28 @@ Copying files (->) and directories (=>)
     elfeed-log.el -> elfeed-log.el
     elfeed-search.el -> elfeed-search.el
     elfeed-show.el -> elfeed-show.el
+    elfeed-tree.el -> elfeed-tree.el
     elfeed.el -> elfeed.el
     xml-query.el -> xml-query.el
     README.md -> README.md
-Created elfeed-20260508.2357.tar containing:
-  elfeed-20260508.2357/
-  elfeed-20260508.2357/README.md
-  elfeed-20260508.2357/elfeed-csv.el
-  elfeed-20260508.2357/elfeed-curl.el
-  elfeed-20260508.2357/elfeed-db.el
-  elfeed-20260508.2357/elfeed-lib.el
-  elfeed-20260508.2357/elfeed-link.el
-  elfeed-20260508.2357/elfeed-log.el
-  elfeed-20260508.2357/elfeed-pkg.el
-  elfeed-20260508.2357/elfeed-search.el
-  elfeed-20260508.2357/elfeed-show.el
-  elfeed-20260508.2357/elfeed.el
-  elfeed-20260508.2357/xml-query.el
+Created elfeed-20260509.2309.tar containing:
+  elfeed-20260509.2309/
+  elfeed-20260509.2309/README.md
+  elfeed-20260509.2309/elfeed-csv.el
+  elfeed-20260509.2309/elfeed-curl.el
+  elfeed-20260509.2309/elfeed-db.el
+  elfeed-20260509.2309/elfeed-lib.el
+  elfeed-20260509.2309/elfeed-link.el
+  elfeed-20260509.2309/elfeed-log.el
+  elfeed-20260509.2309/elfeed-pkg.el
+  elfeed-20260509.2309/elfeed-search.el
+  elfeed-20260509.2309/elfeed-show.el
+  elfeed-20260509.2309/elfeed-tree.el
+  elfeed-20260509.2309/elfeed.el
+  elfeed-20260509.2309/xml-query.el
  ✓ Success:
-  2026-05-09T10:09:44+0000  elfeed-20260508.2357.entry
-  2026-05-09T10:09:44+0000  elfeed-20260508.2357.tar
-Built elfeed in 3.846s, finished at 2026-05-09T10:09:45+0000
+  2026-05-09T20:52:03+0000  elfeed-20260509.2028.entry
+  2026-05-09T20:52:03+0000  elfeed-20260509.2028.tar
+  2026-05-09T23:31:07+0000  elfeed-20260509.2309.entry
+  2026-05-09T23:31:07+0000  elfeed-20260509.2309.tar
+Built elfeed in 8.478s, finished at 2026-05-09T23:31:08+0000

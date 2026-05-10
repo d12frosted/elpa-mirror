@@ -1,9 +1,9 @@
  • Building package pr-review (from github:blahgeek/emacs-pr-review)...
 Updating /mnt/store/melpa/working/pr-review/
-Checking out 23dcb45979e58c971d1d9a94f0af819f5d04d583
+Checking out 938db766007f3444a2899b2457d9e2f4b4ffbebf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pr-review/
-  to /tmp/pr-review-HncTeT/pr-review-20260423.953
+  to /tmp/pr-review-3NKdW5/pr-review-20260509.1433
     pr-review-action.el -> pr-review-action.el
     pr-review-api.el -> pr-review-api.el
     pr-review-common.el -> pr-review-common.el
@@ -19,56 +19,58 @@ Copying files (->) and directories (=>)
     pr-review-search.el -> pr-review-search.el
     pr-review.el -> pr-review.el
     graphql => graphql
-Created pr-review-20260423.953.tar containing:
-  pr-review-20260423.953/
-  pr-review-20260423.953/graphql/
-  pr-review-20260423.953/graphql/add-comment.graphql
-  pr-review-20260423.953/graphql/add-labels.graphql
-  pr-review-20260423.953/graphql/add-review-comment-reply.graphql
-  pr-review-20260423.953/graphql/add-review.graphql
-  pr-review-20260423.953/graphql/clear-labels.graphql
-  pr-review-20260423.953/graphql/close-pr.graphql
-  pr-review-20260423.953/graphql/get-assignable-users.graphql
-  pr-review-20260423.953/graphql/get-pull-request-for-notification.inc.graphql
-  pr-review-20260423.953/graphql/get-pull-request.graphql
-  pr-review-20260423.953/graphql/gitlab/
-  pr-review-20260423.953/graphql/gitlab/create-diff-note.graphql
-  pr-review-20260423.953/graphql/gitlab/create-note.graphql
-  pr-review-20260423.953/graphql/gitlab/discussion-toggle-resolve.graphql
-  pr-review-20260423.953/graphql/gitlab/get-merge-request.graphql
-  pr-review-20260423.953/graphql/gitlab/get-todos.graphql
-  pr-review-20260423.953/graphql/gitlab/todo-mark-done.graphql
-  pr-review-20260423.953/graphql/gitlab/update-merge-request.graphql
-  pr-review-20260423.953/graphql/gitlab/update-note.graphql
-  pr-review-20260423.953/graphql/merge-pr.graphql
-  pr-review-20260423.953/graphql/reopen-pr.graphql
-  pr-review-20260423.953/graphql/request-reviews.graphql
-  pr-review-20260423.953/graphql/resolve-review-thread.graphql
-  pr-review-20260423.953/graphql/search-prs.graphql
-  pr-review-20260423.953/graphql/submit-review.graphql
-  pr-review-20260423.953/graphql/unresolve-review-thread.graphql
-  pr-review-20260423.953/graphql/update-comment.graphql
-  pr-review-20260423.953/graphql/update-pr.graphql
-  pr-review-20260423.953/graphql/update-review-comment.graphql
-  pr-review-20260423.953/graphql/update-review.graphql
-  pr-review-20260423.953/graphql/update-subscription.graphql
-  pr-review-20260423.953/graphql/whoami.graphql
-  pr-review-20260423.953/pr-review-action.el
-  pr-review-20260423.953/pr-review-api.el
-  pr-review-20260423.953/pr-review-common.el
-  pr-review-20260423.953/pr-review-glab-action.el
-  pr-review-20260423.953/pr-review-glab-api.el
-  pr-review-20260423.953/pr-review-glab-notification-render.el
-  pr-review-20260423.953/pr-review-glab-render.el
-  pr-review-20260423.953/pr-review-input.el
-  pr-review-20260423.953/pr-review-listview.el
-  pr-review-20260423.953/pr-review-notification-render.el
-  pr-review-20260423.953/pr-review-notification.el
-  pr-review-20260423.953/pr-review-pkg.el
-  pr-review-20260423.953/pr-review-render.el
-  pr-review-20260423.953/pr-review-search.el
-  pr-review-20260423.953/pr-review.el
+Created pr-review-20260509.1433.tar containing:
+  pr-review-20260509.1433/
+  pr-review-20260509.1433/graphql/
+  pr-review-20260509.1433/graphql/add-comment.graphql
+  pr-review-20260509.1433/graphql/add-labels.graphql
+  pr-review-20260509.1433/graphql/add-review-comment-reply.graphql
+  pr-review-20260509.1433/graphql/add-review.graphql
+  pr-review-20260509.1433/graphql/clear-labels.graphql
+  pr-review-20260509.1433/graphql/close-pr.graphql
+  pr-review-20260509.1433/graphql/convert-pr-to-draft.graphql
+  pr-review-20260509.1433/graphql/get-assignable-users.graphql
+  pr-review-20260509.1433/graphql/get-pull-request-for-notification.inc.graphql
+  pr-review-20260509.1433/graphql/get-pull-request.graphql
+  pr-review-20260509.1433/graphql/gitlab/
+  pr-review-20260509.1433/graphql/gitlab/create-diff-note.graphql
+  pr-review-20260509.1433/graphql/gitlab/create-note.graphql
+  pr-review-20260509.1433/graphql/gitlab/discussion-toggle-resolve.graphql
+  pr-review-20260509.1433/graphql/gitlab/get-merge-request.graphql
+  pr-review-20260509.1433/graphql/gitlab/get-todos.graphql
+  pr-review-20260509.1433/graphql/gitlab/todo-mark-done.graphql
+  pr-review-20260509.1433/graphql/gitlab/update-merge-request.graphql
+  pr-review-20260509.1433/graphql/gitlab/update-note.graphql
+  pr-review-20260509.1433/graphql/mark-pr-ready-for-review.graphql
+  pr-review-20260509.1433/graphql/merge-pr.graphql
+  pr-review-20260509.1433/graphql/reopen-pr.graphql
+  pr-review-20260509.1433/graphql/request-reviews.graphql
+  pr-review-20260509.1433/graphql/resolve-review-thread.graphql
+  pr-review-20260509.1433/graphql/search-prs.graphql
+  pr-review-20260509.1433/graphql/submit-review.graphql
+  pr-review-20260509.1433/graphql/unresolve-review-thread.graphql
+  pr-review-20260509.1433/graphql/update-comment.graphql
+  pr-review-20260509.1433/graphql/update-pr.graphql
+  pr-review-20260509.1433/graphql/update-review-comment.graphql
+  pr-review-20260509.1433/graphql/update-review.graphql
+  pr-review-20260509.1433/graphql/update-subscription.graphql
+  pr-review-20260509.1433/graphql/whoami.graphql
+  pr-review-20260509.1433/pr-review-action.el
+  pr-review-20260509.1433/pr-review-api.el
+  pr-review-20260509.1433/pr-review-common.el
+  pr-review-20260509.1433/pr-review-glab-action.el
+  pr-review-20260509.1433/pr-review-glab-api.el
+  pr-review-20260509.1433/pr-review-glab-notification-render.el
+  pr-review-20260509.1433/pr-review-glab-render.el
+  pr-review-20260509.1433/pr-review-input.el
+  pr-review-20260509.1433/pr-review-listview.el
+  pr-review-20260509.1433/pr-review-notification-render.el
+  pr-review-20260509.1433/pr-review-notification.el
+  pr-review-20260509.1433/pr-review-pkg.el
+  pr-review-20260509.1433/pr-review-render.el
+  pr-review-20260509.1433/pr-review-search.el
+  pr-review-20260509.1433/pr-review.el
  ✓ Success:
-  2026-05-09T10:53:54+0000  pr-review-20260423.953.entry
-  2026-05-09T10:53:54+0000  pr-review-20260423.953.tar
-Built pr-review in 3.984s, finished at 2026-05-09T10:53:55+0000
+  2026-05-10T00:14:54+0000  pr-review-20260509.1433.entry
+  2026-05-10T00:14:54+0000  pr-review-20260509.1433.tar
+Built pr-review in 4.245s, finished at 2026-05-10T00:14:55+0000

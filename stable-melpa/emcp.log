@@ -1,23 +1,35 @@
  • Building package emcp (from codeberg:martenlienen/emcp)...
 Updating /mnt/store/melpa/working/emcp/
-Checking out 2363287cffb1b694387d3aabbae9be863bf4e549
+Checking out 26e28f22ab729886a2bd1318636dbeb4b177f6fa
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emcp/
-  to /tmp/emcp-xCBrPS/emcp-20260426.2226
+  to /tmp/emcp-4Ss6BB/emcp-20260509.1927
+    emcp-confirm.el -> emcp-confirm.el
+    emcp-core.el -> emcp-core.el
+    emcp-http.el -> emcp-http.el
     emcp-prompts.el -> emcp-prompts.el
     emcp-resources.el -> emcp-resources.el
+    emcp-tools-eval.el -> emcp-tools-eval.el
+    emcp-tools-send-keys.el -> emcp-tools-send-keys.el
     emcp-tools.el -> emcp-tools.el
+    emcp-uri.el -> emcp-uri.el
     emcp.el -> emcp.el
     emacs.svg -> emacs.svg
-Created emcp-20260426.2226.tar containing:
-  emcp-20260426.2226/
-  emcp-20260426.2226/emacs.svg
-  emcp-20260426.2226/emcp-pkg.el
-  emcp-20260426.2226/emcp-prompts.el
-  emcp-20260426.2226/emcp-resources.el
-  emcp-20260426.2226/emcp-tools.el
-  emcp-20260426.2226/emcp.el
+Created emcp-20260509.1927.tar containing:
+  emcp-20260509.1927/
+  emcp-20260509.1927/emacs.svg
+  emcp-20260509.1927/emcp-confirm.el
+  emcp-20260509.1927/emcp-core.el
+  emcp-20260509.1927/emcp-http.el
+  emcp-20260509.1927/emcp-pkg.el
+  emcp-20260509.1927/emcp-prompts.el
+  emcp-20260509.1927/emcp-resources.el
+  emcp-20260509.1927/emcp-tools-eval.el
+  emcp-20260509.1927/emcp-tools-send-keys.el
+  emcp-20260509.1927/emcp-tools.el
+  emcp-20260509.1927/emcp-uri.el
+  emcp-20260509.1927/emcp.el
  ✓ Success:
-  2026-05-09T10:11:12+0000  emcp-20260426.2226.entry
-  2026-05-09T10:11:12+0000  emcp-20260426.2226.tar
-Built emcp in 4.198s, finished at 2026-05-09T10:11:13+0000
+  2026-05-09T23:32:30+0000  emcp-20260509.1927.entry
+  2026-05-09T23:32:30+0000  emcp-20260509.1927.tar
+Built emcp in 4.310s, finished at 2026-05-09T23:32:31+0000

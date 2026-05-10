@@ -635,12 +635,12 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "c7af95865ef083327d299b86c254ca87fa88a504"))])
  (fedi
-  . [(0 3) ((emacs (28 1)) (markdown-mode (2 5)))
+  . [(0 4) ((emacs (28 1)) (markdown-mode (2 5)))
      "Helper functions for fediverse clients" tar
      ((:url . "https://codeberg.org/martianh/fedi.el")
-      (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
-      (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "74fab520f1d008f5a389a673616a617c03c74600"))])
+      (:maintainer "Marty Hiatt" . "martianh@disroot.org")
+      (:authors ("Marty Hiatt" . "martianh@disroot.org"))
+      (:commit . "91f28ee199a499b8d6e1b9c7a0f1c15f8a382198"))])
  (fj
   . [(0 37)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
@@ -1069,13 +1069,13 @@
       (:keywords "j" "languages")
       (:commit . "1365e5a3fe772609685b3787bbd2960331c1a02f"))])
  (jabber
-  . [(0 10 6) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
+  . [(0 10 7) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
-     ((:url . "https://git.thanosapollo.org/emacs-jabber")
+     ((:url . "https://codeberg.org/emacs-jabber/emacs-jabber")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "6240aa8c81703e83a77b6327a60ab4c7c3d2ff2f"))])
+      (:commit . "f07892905a79686a3fe0e70e68004013fc1e4617"))])
  (jade-mode
   . [(1 0 1) nil "Major mode for editing .jade files" tar
      ((:url . "https://github.com/brianc/jade-mode")
@@ -1851,13 +1851,13 @@
       (:authors ("Vivek Das Mohapatra" . "vivek@etla.org"))
       (:commit . "v1.0"))])
  (tp
-  . [(0 8) ((emacs (28 1)) (transient (0 5 0)))
+  . [(0 9) ((emacs (28 1)) (transient (0 5 0)))
      "Utilities for transient menus that POST to an API" tar
      ((:url . "https://codeberg.org/martianh/tp.el")
       (:keywords "convenience" "api" "requests")
-      (:maintainer "Marty Hiatt" . "mousebot@disroot.org")
-      (:authors ("Marty Hiatt" . "mousebot@disroot.org"))
-      (:commit . "cef3fc2daefbbfc29ad02b7e1f39542b57c72fe8"))])
+      (:maintainer "Marty Hiatt" . "martianh@disroot.org")
+      (:authors ("Marty Hiatt" . "martianh@disroot.org"))
+      (:commit . "4a1aa2f034676c0b37f50ee0c52f73cab33eadbb"))])
  (treepy
   . [(0 1 3) ((emacs (25 1))) "Generic tree traversal tools" tar
      ((:url . "https://github.com/volrath/treepy.el")
