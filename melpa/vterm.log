@@ -1,9 +1,9 @@
  • Building package vterm (from github:akermu/emacs-libvterm)...
 Updating /mnt/store/melpa/working/vterm/
-Checking out 54c29d14bca05bdd8ae60cda01715d727831e3f9
+Checking out 92add72b728e47852ea1e95dc9f08d01b33d4bf0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vterm/
-  to /tmp/vterm-hUDgH4/vterm-20260406.134
+  to /tmp/vterm-UDD6df/vterm-20260511.19
     CMakeLists.txt -> CMakeLists.txt
     elisp.c -> elisp.c
     elisp.h -> elisp.h
@@ -14,23 +14,25 @@ Copying files (->) and directories (=>)
     vterm.el -> vterm.el
     vterm-module.c -> vterm-module.c
     vterm-module.h -> vterm-module.h
-Created vterm-20260406.134.tar containing:
-  vterm-20260406.134/
-  vterm-20260406.134/CMakeLists.txt
-  vterm-20260406.134/elisp.c
-  vterm-20260406.134/elisp.h
-  vterm-20260406.134/emacs-module.h
-  vterm-20260406.134/etc/
-  vterm-20260406.134/etc/emacs-vterm-bash.sh
-  vterm-20260406.134/etc/emacs-vterm-zsh.sh
-  vterm-20260406.134/etc/emacs-vterm.fish
-  vterm-20260406.134/utf8.c
-  vterm-20260406.134/utf8.h
-  vterm-20260406.134/vterm-module.c
-  vterm-20260406.134/vterm-module.h
-  vterm-20260406.134/vterm-pkg.el
-  vterm-20260406.134/vterm.el
+Created vterm-20260511.19.tar containing:
+  vterm-20260511.19/
+  vterm-20260511.19/CMakeLists.txt
+  vterm-20260511.19/elisp.c
+  vterm-20260511.19/elisp.h
+  vterm-20260511.19/emacs-module.h
+  vterm-20260511.19/etc/
+  vterm-20260511.19/etc/emacs-vterm-bash.sh
+  vterm-20260511.19/etc/emacs-vterm-zsh.sh
+  vterm-20260511.19/etc/emacs-vterm.fish
+  vterm-20260511.19/utf8.c
+  vterm-20260511.19/utf8.h
+  vterm-20260511.19/vterm-module.c
+  vterm-20260511.19/vterm-module.h
+  vterm-20260511.19/vterm-pkg.el
+  vterm-20260511.19/vterm.el
  ✓ Success:
-  2026-05-10T19:05:37+0000  vterm-20260406.134.entry
-  2026-05-10T19:05:37+0000  vterm-20260406.134.tar
-Built vterm in 3.754s, finished at 2026-05-10T19:05:38+0000
+  2026-05-10T21:47:44+0000  vterm-20260406.134.entry
+  2026-05-10T21:47:44+0000  vterm-20260406.134.tar
+  2026-05-11T00:30:25+0000  vterm-20260511.19.entry
+  2026-05-11T00:30:25+0000  vterm-20260511.19.tar
+Built vterm in 3.978s, finished at 2026-05-11T00:30:26+0000

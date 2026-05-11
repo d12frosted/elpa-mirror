@@ -1,9 +1,9 @@
 Emacs provides the binding conditionals `if-let', `if-let*',
 `when-let', `when-let*', `and-let*' and `while-let'.
 
-This package implements the missing `and-let' and `while-let*',
-and the original `cond-let', `cond-let*', `when$', `and$' and
-`and>'.
+This package implements the missing `and-let' and `while-let*';
+and the original `cond-let', `cond-let*', `when$', `and$', `and>'
+and `thread$'.
 
 This package additionally provides more consistent and improved
 implementations of the binding conditionals already provided by
@@ -27,6 +27,7 @@ read-symbol-shorthands: (
   ("and>"      . "cond-let--and>")
   ("and-let"   . "cond-let--and-let")
   ("if-let"    . "cond-let--if-let")
+  ("thread$"   . "cond-let--thread$")
   ("when$"     . "cond-let--when$")
   ("when-let"  . "cond-let--when-let")
   ("while-let" . "cond-let--while-let"))
@@ -40,8 +41,8 @@ libraries, which continue to use the built-in implementations.
 Due to limitations of the shorthand implementation this has to be
 done for each individual library.  "dir-locals.el" cannot be used.
 
-If you use `when$', `and$' and `and>', you might want to add this
-to your configuration:
+If you use `when$', `and$', `and>' and `thread$', you might want
+to add this to your configuration:
 
   (with-eval-after-load 'cond-let
     (font-lock-add-keywords 'emacs-lisp-mode
