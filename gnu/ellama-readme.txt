@@ -388,6 +388,10 @@ Assistant". Previous sentence was written by Ellama itself.
     default.
   • `ellama-session-auto-save': Automatically save ellama sessions if
     set. Enabled by default.
+  • `ellama-session-persist-provider-keys': Control provider key
+    persistence in saved session files. Disabled by default; set to
+    `auth-source' to restore provider keys from auth-source lookup
+    references.
   • `ellama-session-auto-compact-enabled': Automatically compact long
     chat session context. Enabled by default.
   • `ellama-session-auto-compact-token-threshold': Total token count
@@ -537,7 +541,51 @@ Assistant". Previous sentence was written by Ellama itself.
 
 [llm documentation] <https://elpa.gnu.org/packages/llm.html>
 
-4.1 Session Compaction
+4.1 Session Provider Keys
+─────────────────────────
+
+  Ellama does not persist provider keys as plaintext in session files.
+  Saved sessions keep provider settings such as model and URL, but
+  provider key slots are removed before writing the session file.  When
+  a session is loaded, Ellama restores missing keys from the configured
+  provider when possible.
+
+  If a saved provider key cannot be restored, the session still loads.
+  Requests using that provider can fail later with the provider's normal
+  authentication error until the provider is configured again.
+
+  The upstream `llm' provider-key redaction change is merged, but
+  released versions such as `llm' 0.30.3 may not include it yet.  Until
+  a released `llm' version containing that change is installed, provider
+  keys can still appear in debugger output produced by `llm' itself.
+  Ellama avoids adding new plaintext keys to saved session files, but it
+  cannot redact every `llm' backtrace from older released `llm'
+  versions.
+
+  Set `ellama-session-persist-provider-keys' to `auth-source' to save an
+  auth-source lookup reference in the session file.  The secret itself
+  stays in auth-source and is resolved when the session is loaded.
+  Ellama uses the provider URL host when available, otherwise the
+  provider symbol or provider type, together with
+  `ellama-session-provider-key-auth-source-user' and
+  `ellama-session-provider-key-auth-source-port'.
+
+  Example auth-source entry:
+
+  ┌────
+  │ machine api.example.com login ellama port api-key password example-secret
+  └────
+
+  Example configuration:
+
+  ┌────
+  │ (setopt ellama-session-persist-provider-keys 'auth-source)
+  │ (setopt ellama-session-provider-key-auth-source-user "ellama")
+  │ (setopt ellama-session-provider-key-auth-source-port "api-key")
+  └────
+
+
+4.2 Session Compaction
 ──────────────────────
 
   Ellama can compact long chat sessions to keep them within the provider
@@ -576,7 +624,7 @@ Assistant". Previous sentence was written by Ellama itself.
   └────
 
 
-4.2 Image Input
+4.3 Image Input
 ───────────────
 
   Ellama can send image files to providers that advertise the
@@ -633,7 +681,7 @@ Assistant". Previous sentence was written by Ellama itself.
   └────
 
 
-4.3 Task Tool Subagents
+4.4 Task Tool Subagents
 ───────────────────────
 
   The `task' tool delegates work to an asynchronous sub-agent. The
@@ -685,7 +733,7 @@ Assistant". Previous sentence was written by Ellama itself.
   files.
 
 
-4.4 DLP for Tool Input/Output
+4.5 DLP for Tool Input/Output
 ─────────────────────────────
 
   Ellama includes an optional DLP (Data Loss Prevention) layer for tool
@@ -1022,7 +1070,7 @@ Assistant". Previous sentence was written by Ellama itself.
     before moving more paths to enforce
 
 
-4.5 SRT Filesystem Policy for Tools
+4.6 SRT Filesystem Policy for Tools
 ───────────────────────────────────
 
   When `ellama-tools-use-srt' is non-nil, the `srt' settings file is the
