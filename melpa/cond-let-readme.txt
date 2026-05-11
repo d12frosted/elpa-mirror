@@ -2,8 +2,8 @@ Emacs provides the binding conditionals `if-let', `if-let*',
 `when-let', `when-let*', `and-let*' and `while-let'.
 
 This package implements the missing `and-let' and `while-let*';
-and the original `cond-let', `cond-let*', `when$', `and$', `and>'
-and `thread$'.
+and the original `cond-let', `cond-let*', `when$', `and$' and
+`thread$'.
 
 This package additionally provides more consistent and improved
 implementations of the binding conditionals already provided by
@@ -23,14 +23,17 @@ of a library.
 
 Local Variables:
 read-symbol-shorthands: (
-  ("and$"      . "cond-let--and$")
-  ("and>"      . "cond-let--and>")
-  ("and-let"   . "cond-let--and-let")
-  ("if-let"    . "cond-let--if-let")
-  ("thread$"   . "cond-let--thread$")
-  ("when$"     . "cond-let--when$")
-  ("when-let"  . "cond-let--when-let")
-  ("while-let" . "cond-let--while-let"))
+  ("and$"       . "cond-let--and$")
+  ("thread$"    . "cond-let--thread$")
+  ("when$"      . "cond-let--when$")
+  ("and-let*"   . "cond-let--and-let*")
+  ("and-let"    . "cond-let--and-let")
+  ("if-let*"    . "cond-let--if-let*")
+  ("if-let"     . "cond-let--if-let")
+  ("when-let*"  . "cond-let--when-let*")
+  ("when-let"   . "cond-let--when-let")
+  ("while-let*" . "cond-let--while-let*")
+  ("while-let"  . "cond-let--while-let"))
 End:
 
 You can think of these file-local settings as import statements of
@@ -41,8 +44,8 @@ libraries, which continue to use the built-in implementations.
 Due to limitations of the shorthand implementation this has to be
 done for each individual library.  "dir-locals.el" cannot be used.
 
-If you use `when$', `and$', `and>' and `thread$', you might want
-to add this to your configuration:
+If you use `when$', `and$' and `thread$', you might want to add
+this to your configuration:
 
   (with-eval-after-load 'cond-let
     (font-lock-add-keywords 'emacs-lisp-mode
