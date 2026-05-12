@@ -4,8 +4,8 @@
   Emacs provides the binding conditionals `if-let', `if-let*',
   `when-let', `when-let*', `and-let*' and `while-let'.
 
-  This package implements the missing `and-let' and `while-let*', and
-  the original `cond-let', `cond-let*', `when$', `and$' and `and>'.
+  This package implements the missing `and-let' and `while-let*'; and
+  the original `cond-let', `cond-let*', `when$', `and$', and `thread$'.
 
   This package additionally provides more consistent and improved
   implementations of the binding conditionals already provided by Emacs.

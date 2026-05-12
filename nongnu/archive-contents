@@ -244,11 +244,15 @@
       (:authors ("Chris Wanstrath" . "chris@ozmm.org"))
       (:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (cond-let
-  . [(1 0 0) ((emacs (28 1)))
+  . [(1 1 1) ((emacs (28 1)))
      "Additional and improved binding conditionals" tar
      ((:url . "https://github.com/tarsius/cond-let")
       (:keywords "extensions")
-      (:commit . "28d3b039a9c1f27ecfea36a7df4c37a3b90e4687"))])
+      (:maintainer "Jonas Bernoulli"
+		   . "emacs.cond-let@jonas.bernoulli.dev")
+      (:authors
+       ("Jonas Bernoulli" . "emacs.cond-let@jonas.bernoulli.dev"))
+      (:commit . "7ec5ace3e6acc240179bf3cdeb6f9e6751530c38"))])
  (consult-flycheck
   . [(1 1) ((emacs (29 1)) (consult (2 8)) (flycheck (35)))
      "Provides the command `consult-flycheck'" tar

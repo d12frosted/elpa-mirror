@@ -4087,7 +4087,7 @@
   (org-edit-indirect :url "https://github.com/agzam/org-edit-indirect.el")
   (org-edit-latex :url "https://github.com/et2010/org-edit-latex")
   (org-ehtml :url "https://github.com/eschulte/org-ehtml")
-  (org-elisp-help :url "https://github.com/tarsius/org-elisp-help")
+  (org-elisp-help :url "https://github.com/emacsorphanage/org-elisp-help")
   (org-elp :url "https://github.com/guanyilun/org-elp")
   (org-emms :url "https://git.sr.ht/~jagrg/org-emms")
   (org-epa-gpg :url "https://github.com/KeyWeeUsr/org-epa-gpg")
