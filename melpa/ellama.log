@@ -1,12 +1,13 @@
  • Building package ellama (from github:s-kostyaev/ellama)...
 Updating /mnt/store/melpa/working/ellama/
-Checking out 5d133a2d1a48a411a4951d5fff374ff604ffe476
+Checking out 4311982a2a466dac60003c39d72badc69ea1d6c5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ellama/
-  to /tmp/ellama-IBHEp7/ellama-20260510.2124
+  to /tmp/ellama-qL4Whc/ellama-20260513.1818
     ellama-blueprint.el -> ellama-blueprint.el
     ellama-community-prompts.el -> ellama-community-prompts.el
     ellama-context.el -> ellama-context.el
+    ellama-eval.el -> ellama-eval.el
     ellama-manual.el -> ellama-manual.el
     ellama-skills.el -> ellama-skills.el
     ellama-tools-dlp.el -> ellama-tools-dlp.el
@@ -16,22 +17,25 @@ Copying files (->) and directories (=>)
     ellama.info -> ellama.info
     doclicense.texi -> doclicense.texi
 Generating doclicense.info
-Created ellama-20260510.2124.tar containing:
-  ellama-20260510.2124/
-  ellama-20260510.2124/dir
-  ellama-20260510.2124/doclicense.info
-  ellama-20260510.2124/ellama-blueprint.el
-  ellama-20260510.2124/ellama-community-prompts.el
-  ellama-20260510.2124/ellama-context.el
-  ellama-20260510.2124/ellama-manual.el
-  ellama-20260510.2124/ellama-pkg.el
-  ellama-20260510.2124/ellama-skills.el
-  ellama-20260510.2124/ellama-tools-dlp.el
-  ellama-20260510.2124/ellama-tools.el
-  ellama-20260510.2124/ellama-transient.el
-  ellama-20260510.2124/ellama.el
-  ellama-20260510.2124/ellama.info
+Created ellama-20260513.1818.tar containing:
+  ellama-20260513.1818/
+  ellama-20260513.1818/dir
+  ellama-20260513.1818/doclicense.info
+  ellama-20260513.1818/ellama-blueprint.el
+  ellama-20260513.1818/ellama-community-prompts.el
+  ellama-20260513.1818/ellama-context.el
+  ellama-20260513.1818/ellama-eval.el
+  ellama-20260513.1818/ellama-manual.el
+  ellama-20260513.1818/ellama-pkg.el
+  ellama-20260513.1818/ellama-skills.el
+  ellama-20260513.1818/ellama-tools-dlp.el
+  ellama-20260513.1818/ellama-tools.el
+  ellama-20260513.1818/ellama-transient.el
+  ellama-20260513.1818/ellama.el
+  ellama-20260513.1818/ellama.info
  ✓ Success:
   2026-05-13T15:56:08+0000  ellama-20260510.2124.entry
   2026-05-13T15:56:07+0000  ellama-20260510.2124.tar
-Built ellama in 11.913s, finished at 2026-05-13T15:56:09+0000
+  2026-05-13T18:44:31+0000  ellama-20260513.1818.entry
+  2026-05-13T18:44:31+0000  ellama-20260513.1818.tar
+Built ellama in 7.111s, finished at 2026-05-13T18:44:32+0000
