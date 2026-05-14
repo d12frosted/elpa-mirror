@@ -1,14 +1,14 @@
-Elfeed is a web feed client for Emacs, which supports Atom and RSS
-feeds.
+Elfeed is a web feed client for Emacs, which supports Atom, RSS
+and JSON feeds.
 
 After installation of Elfeed from a package archive, invoke M-x
 elfeed to open the Elfeed search buffer.  The list of feeds can be
 configured in your user configuration.
 
     (setq elfeed-feeds
-      '(("http://nullprogram.com/feed/" blog emacs)
-        "http://www.50ply.com/atom.xml" ;; no autotagging
-        ("http://nedroid.com/feed/" webcomic)))
+      '(("https://nullprogram.com/feed/" blog emacs)
+        "https://sachachua.com/blog/category/emacs-news/feed/" ;; no autotagging
+        ("https://nedroid.com/feed/" webcomic)))
 
 For the start a few basic commands suffice.  Inside the search
 buffer press G to refresh the feeds, s to live filter the entries,
