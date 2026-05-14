@@ -883,13 +883,13 @@
       (:url . "https://elpa.gnu.org/packages/djvu.html")
       (:commit . "071c8ab168588897475899c46eaa16e70141db8c"))])
  (dmsg
-  . [(0 2) ((emacs (28 1)))
+  . [(0 3) ((emacs (28 1)))
      "Timestamped debug messages with backtrace support" tar
      ((:url . "https://github.com/haji-ali/dmsg.el")
       (:keywords "maint" "tools")
       (:maintainer "Al Haji-Ali" . "abdo.haji.ali@gmail.com")
       (:authors ("Al Haji-Ali" . "abdo.haji.ali@gmail.com"))
-      (:commit . "0b39330ef2bdbbc33057157e1ba6932c49801417"))])
+      (:commit . "b5c383e931499f9e3693833a2863e019429c3f7b"))])
  (do-at-point
   . [(0 2 0) ((emacs (26 1)))
      "Generic context-sensitive action dispatcher." tar
@@ -1069,7 +1069,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 18 0)
+  . [(1 19 0)
      ((emacs (28 1)) (llm (0 24 0)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1077,7 +1077,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "9f268065bacca017ea823d069945521dab3420b0"))])
+      (:commit . "ab5e08ae497c6da07bd88a2d4a497095942a5a0e"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
@@ -2034,13 +2034,13 @@
       (:url . "https://elpa.gnu.org/packages/minibuffer-line.html")
       (:commit . "852874725fd06329109b2d431d8af5502b54036c"))])
  (minimail
-  . [(0 4 2) ((emacs (30 1)) (transient (0 12)))
+  . [(0 5) ((emacs (30 1)) (compat (31)) (transient (0 12)))
      "Simple, non-blocking IMAP email client" tar
      ((:url . "https://codeberg.org/astoff/minimail")
       (:keywords "mail")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "808e040da144008dea90935fbfdca1c1ed94bf2e"))])
+      (:commit . "5834c3e09d36fe7901e8dcd14f2dac36d70fe5cf"))])
  (minimap
   . [(1 4) nil "Sidebar showing a \"mini-map\" of a buffer" tar
      ((:maintainer "David Engster" . "deng@randomsample.de")
