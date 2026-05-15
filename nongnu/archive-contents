@@ -51,12 +51,12 @@
       (:authors ("Jordon Biondo" . "jordonbiondo@gmail.com"))
       (:commit . "33691c93ee302690e41f631f82083bcc15d229e8"))])
  (annotate
-  . [(2 4 5) ((emacs (27 1))) "annotate files without changing them"
+  . [(2 5 0) ((emacs (27 1))) "annotate files without changing them"
      tar
      ((:url . "https://github.com/bastibe/annotate.el")
       (:maintainer ("Bastian Bechtold" . "bastibe.dev@mailbox.org")
 		   ("cage" . "cage-dev@twistfold.it"))
-      (:commit . "4e610f56ae5ce24e3577ffa1a293c7037ac1c2ea"))])
+      (:commit . "9a7f8f1d0e19fb905a6f8d7c1347991d1e7b0d03"))])
  (anti-zenburn-theme
   . [(2 5 1) nil "Low-contrast Zenburn-inverted theme" tar
      ((:url . "https://github.com/m00natic/anti-zenburn-theme")

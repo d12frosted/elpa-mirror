@@ -303,6 +303,9 @@
 5 Alternative visualization of annotations
 ══════════════════════════════════════════
 
+5.1 Using echo area
+───────────────────
+
   For typographically difficult scenarios (or just because you prefer
   it), such as variable-width fonts or overlay-heavy modes, the default
   visualization system that renders the annotation into the buffer could
@@ -325,6 +328,20 @@
   after a delay (in seconds) defined by the variable
   `annotate-print-annotation-under-cursor-delay'.
 
+
+[this pull request] <https://github.com/bastibe/annotate.el/pull/81>
+
+◊ 5.1.0.1 related customizable variable
+
+  • `annotate-use-echo-area'
+  • `annotate-print-annotation-under-cursor'
+  • `annotate-print-annotation-under-cursor-prefix'
+  • `annotate-print-annotation-under-cursor-delay'
+
+
+5.2 Summary window
+──────────────────
+
   Another alternative way to show annotations is provided by the
   command: `annotate-summary-of-file-from-current-pos'.
 
@@ -333,15 +350,39 @@
   buffer) beyond the current cursor position.
 
 
-[this pull request] <https://github.com/bastibe/annotate.el/pull/81>
+◊ 5.2.0.1 related customizable variable
 
-◊ 5.0.0.1 related customizable variable
-
-  • `annotate-use-echo-area'
-  • `annotate-print-annotation-under-cursor'
-  • `annotate-print-annotation-under-cursor-prefix'
-  • `annotate-print-annotation-under-cursor-delay'
   • `annotate-summary-of-file-from-current-pos'.
+
+
+5.3 Annotations thread
+──────────────────────
+
+  Starting from version `2.5', each annotation can contains an arbitrary
+  number of replies that are also annotations. The results is a set of
+  annotation arranged in a tree structure called: "/thread/".
+
+
+5.3.1 `C-c C-t' (function annotate-show-thread-at-point)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Show a buffer with the annotation thread for the annotation under
+  cursor.
+
+
+5.3.2 `C-c C-r' (function annotate-reply-to)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Reply to the annotation under cursor, if such annotation exists.
+
+
+◊ 5.3.2.1 related customizable variable
+
+  • `annotate-thread-header-face';
+  • `annotate-thread-author-face';
+  • `annotate-thread-tree-arrow-face';
+  • `annotate-thread-tree-face';
+  • `annotate-thread-action-face'.
 
 
 6 Other commands
@@ -400,7 +441,7 @@
 
   ┌────
   │ (setf annotate-annotation-expansion-map
-  │       '((\"%d\" \"date +%Y-%m-%d\" t)))
+  │       '(("%d" "date +%Y-%m-%d" t)))
   └────
 
   Will expand any occurrence of \"%d\" in the annotation's text with the
