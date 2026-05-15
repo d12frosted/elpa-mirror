@@ -145,6 +145,9 @@
 4 Configuration
 ═══════════════
 
+4.1 Authentication
+──────────────────
+
   Accounts are configured via `jabber-account-list'.  The simplest form
   uses auth-source `~/.authinfo.gpg' for passwords:
 
@@ -162,17 +165,24 @@
   └────
 
 
+4.2 Bug references
+──────────────────
+
+  ┌────
+  │ (add-hook 'jabber-chat-mode-hook #'bug-reference-mode)
+  │ 
+  │ ;; Customize references
+  │ (setq jabber-bug-reference-alist
+  │       '(("jabber-el@conference\\.hmm\\.st"
+  │          "\\(#\\([0-9]+\\)\\)"
+  │          "https://codeberg.org/emacs-jabber/emacs-jabber/issues/%s")
+  │         ("#guix%irc\\.libera.chat@irc\\.biboumi-gateway\\.example"
+  │          "\\(#\\([0-9]+\\)\\)"
+  │          "https://codeberg.org/guix/guix/issues/%s")))
+  └────
+
+
 5 Basic commands
 ════════════════
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Key                   Command                          
-  ────────────────────────────────────────────────────────
-   `M-x jabber-connect'  Connect (prompts for account)    
-   `C-x C-j C-c'         Connect all accounts             
-   `C-x C-j C-d'         Disconnect                       
-   `C-x C-j C-r'         Open roster buffer               
-   `C-x C-j C-j'         Start or switch to a chat        
-   `C-x C-j C-m'         Join/switch to a MUC (groupchat) 
-   `C-x C-j C-b'         Switch to a chat buffer          
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ⁃ Use `M-x jabber-roster' or `C-x C-j C-r' to get started.
