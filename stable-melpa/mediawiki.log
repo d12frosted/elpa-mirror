@@ -1,9 +1,9 @@
  • Building package mediawiki (from github:hexmode/mediawiki-el)...
 Updating /mnt/store/melpa/working/mediawiki/
-Checking out b9594f31d612937a652d619e35ba27632f72e805
+Checking out 7ba10e435599b6d91f50c8aa0768dd0597dcacda
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mediawiki/
-  to /tmp/mediawiki-KFkEmq/mediawiki-20260514.534
+  to /tmp/mediawiki-XngDIj/mediawiki-20260515.317
     mediawiki-api.el -> mediawiki-api.el
     mediawiki-auth.el -> mediawiki-auth.el
     mediawiki-core.el -> mediawiki-core.el
@@ -12,26 +12,30 @@ Copying files (->) and directories (=>)
     mediawiki-font-lock.el -> mediawiki-font-lock.el
     mediawiki-http.el -> mediawiki-http.el
     mediawiki-mode.el -> mediawiki-mode.el
+    mediawiki-oauth.el -> mediawiki-oauth.el
     mediawiki-page.el -> mediawiki-page.el
     mediawiki-site.el -> mediawiki-site.el
     mediawiki-utils.el -> mediawiki-utils.el
     mediawiki.el -> mediawiki.el
-Created mediawiki-20260514.534.tar containing:
-  mediawiki-20260514.534/
-  mediawiki-20260514.534/mediawiki-api.el
-  mediawiki-20260514.534/mediawiki-auth.el
-  mediawiki-20260514.534/mediawiki-core.el
-  mediawiki-20260514.534/mediawiki-draft.el
-  mediawiki-20260514.534/mediawiki-faces.el
-  mediawiki-20260514.534/mediawiki-font-lock.el
-  mediawiki-20260514.534/mediawiki-http.el
-  mediawiki-20260514.534/mediawiki-mode.el
-  mediawiki-20260514.534/mediawiki-page.el
-  mediawiki-20260514.534/mediawiki-pkg.el
-  mediawiki-20260514.534/mediawiki-site.el
-  mediawiki-20260514.534/mediawiki-utils.el
-  mediawiki-20260514.534/mediawiki.el
+Created mediawiki-20260515.317.tar containing:
+  mediawiki-20260515.317/
+  mediawiki-20260515.317/mediawiki-api.el
+  mediawiki-20260515.317/mediawiki-auth.el
+  mediawiki-20260515.317/mediawiki-core.el
+  mediawiki-20260515.317/mediawiki-draft.el
+  mediawiki-20260515.317/mediawiki-faces.el
+  mediawiki-20260515.317/mediawiki-font-lock.el
+  mediawiki-20260515.317/mediawiki-http.el
+  mediawiki-20260515.317/mediawiki-mode.el
+  mediawiki-20260515.317/mediawiki-oauth.el
+  mediawiki-20260515.317/mediawiki-page.el
+  mediawiki-20260515.317/mediawiki-pkg.el
+  mediawiki-20260515.317/mediawiki-site.el
+  mediawiki-20260515.317/mediawiki-utils.el
+  mediawiki-20260515.317/mediawiki.el
  ✓ Success:
   2026-05-15T00:35:00+0000  mediawiki-20260514.534.entry
   2026-05-15T00:35:00+0000  mediawiki-20260514.534.tar
-Built mediawiki in 3.663s, finished at 2026-05-15T00:35:01+0000
+  2026-05-15T03:21:31+0000  mediawiki-20260515.317.entry
+  2026-05-15T03:21:31+0000  mediawiki-20260515.317.tar
+Built mediawiki in 3.769s, finished at 2026-05-15T03:21:31+0000
