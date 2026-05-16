@@ -1,9 +1,11 @@
- • Building package sbt-mode (from github:hvesalai/emacs-sbt-mode)...
+
+ • Building package sbt-mode
+From https://github.com/hvesalai/emacs-sbt-mode
 Updating /mnt/store/melpa/working/sbt-mode/
 Checking out c353df6aa112c05dde6dc63ccf813c2203cb472b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sbt-mode/
-  to /tmp/sbt-mode-pfHha0/sbt-mode-20260301.2016
+  to /tmp/sbt-mode-E1b6h0/sbt-mode-20260301.2016/
     sbt-mode-buffer.el -> sbt-mode-buffer.el
     sbt-mode-comint.el -> sbt-mode-comint.el
     sbt-mode-hydra.el -> sbt-mode-hydra.el
@@ -21,7 +23,4 @@ Created sbt-mode-20260301.2016.tar containing:
   sbt-mode-20260301.2016/sbt-mode-rgrep.el
   sbt-mode-20260301.2016/sbt-mode-vars.el
   sbt-mode-20260301.2016/sbt-mode.el
- ✓ Success:
-  2026-05-15T19:54:33+0000  sbt-mode-20260301.2016.entry
-  2026-05-15T19:54:33+0000  sbt-mode-20260301.2016.tar
-Built sbt-mode in 3.164s, finished at 2026-05-15T19:54:34+0000
+Built sbt-mode in 2.856s, finished at 2026-05-15T22:38:55+0000

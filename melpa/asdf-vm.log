@@ -1,9 +1,11 @@
- • Building package asdf-vm (from github:zellio/emacs-asdf-vm)...
+
+ • Building package asdf-vm
+From https://github.com/zellio/emacs-asdf-vm
 Updating /mnt/store/melpa/working/asdf-vm/
 Checking out f6dbb4b6560cd7e5bb05006e9fc416c5c323b567
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/asdf-vm/
-  to /tmp/asdf-vm-DHrXP1/asdf-vm-20250710.1053
+  to /tmp/asdf-vm-mKhade/asdf-vm-20250710.1053/
     asdf-vm-config.el -> asdf-vm-config.el
     asdf-vm-core.el -> asdf-vm-core.el
     asdf-vm-error.el -> asdf-vm-error.el
@@ -31,7 +33,4 @@ Created asdf-vm-20250710.1053.tar containing:
   asdf-vm-20250710.1053/asdf-vm-ui.el
   asdf-vm-20250710.1053/asdf-vm-util.el
   asdf-vm-20250710.1053/asdf-vm.el
- ✓ Success:
-  2026-05-15T18:43:43+0000  asdf-vm-20250710.1053.entry
-  2026-05-15T18:43:43+0000  asdf-vm-20250710.1053.tar
-Built asdf-vm in 3.536s, finished at 2026-05-15T18:43:44+0000
+Built asdf-vm in 5.147s, finished at 2026-05-16T00:12:16+0000

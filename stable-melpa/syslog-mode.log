@@ -1,9 +1,11 @@
- • Building package syslog-mode (from github:vapniks/syslog-mode)...
+
+ • Building package syslog-mode
+From https://github.com/vapniks/syslog-mode
 Updating /mnt/store/melpa/working/syslog-mode/
 Checking out f167635feae7365574755a7d61a27079c6b40aef
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/syslog-mode/
-  to /tmp/syslog-mode-A8nejb/syslog-mode-20250905.2333
+  to /tmp/syslog-mode-yP5IqX/syslog-mode-20250905.2333/
     make_notes.el -> make_notes.el
     strace_notes.el -> strace_notes.el
     syslog-mode.el -> syslog-mode.el
@@ -15,7 +17,4 @@ Created syslog-mode-20250905.2333.tar containing:
   syslog-mode-20250905.2333/syslog-mode-pkg.el
   syslog-mode-20250905.2333/syslog-mode.el
   syslog-mode-20250905.2333/syslog_notes.el
- ✓ Success:
-  2026-05-15T20:01:38+0000  syslog-mode-20250905.2333.entry
-  2026-05-15T20:01:37+0000  syslog-mode-20250905.2333.tar
-Built syslog-mode in 9.509s, finished at 2026-05-15T20:01:40+0000
+Built syslog-mode in 3.331s, finished at 2026-05-15T22:44:49+0000

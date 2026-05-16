@@ -1,9 +1,11 @@
- • Building package tree-sitter-langs (from github:emacs-tree-sitter/tree-sitter-langs)...
+
+ • Building package tree-sitter-langs
+From https://github.com/emacs-tree-sitter/tree-sitter-langs
 Updating /mnt/store/melpa/working/tree-sitter-langs/
 Checking out 0ed8fa03ccb652c2fe68637803f2e63629205b90
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tree-sitter-langs/
-  to /tmp/tree-sitter-langs-uRucrk/tree-sitter-langs-20260510.1654
+  to /tmp/tree-sitter-langs-jICqRX/tree-sitter-langs-20260510.1654/
     tree-sitter-langs-build.el -> tree-sitter-langs-build.el
     tree-sitter-langs.el -> tree-sitter-langs.el
     queries => queries
@@ -193,7 +195,4 @@ Created tree-sitter-langs-20260510.1654.tar containing:
   tree-sitter-langs-20260510.1654/tree-sitter-langs-build.el
   tree-sitter-langs-20260510.1654/tree-sitter-langs-pkg.el
   tree-sitter-langs-20260510.1654/tree-sitter-langs.el
- ✓ Success:
-  2026-05-15T20:04:49+0000  tree-sitter-langs-20260510.1654.entry
-  2026-05-15T20:04:49+0000  tree-sitter-langs-20260510.1654.tar
-Built tree-sitter-langs in 6.336s, finished at 2026-05-15T20:04:50+0000
+Built tree-sitter-langs in 6.577s, finished at 2026-05-15T22:47:53+0000

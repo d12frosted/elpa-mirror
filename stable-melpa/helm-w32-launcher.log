@@ -1,9 +1,11 @@
- • Building package helm-w32-launcher (from github:Fanael/helm-w32-launcher)...
+
+ • Building package helm-w32-launcher
+From https://github.com/Fanael/helm-w32-launcher
 Updating /mnt/store/melpa/working/helm-w32-launcher/
 Checking out 3e59ad62b89dd21d334af0203d445a83eb25dc5b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-w32-launcher/
-  to /tmp/helm-w32-launcher-FivBpL/helm-w32-launcher-20141223.2014
+  to /tmp/helm-w32-launcher-XH912h/helm-w32-launcher-20141223.2014/
     helm-w32-launcher.el -> helm-w32-launcher.el
     helper-src => helper-src
     license.txt -> license.txt
@@ -19,7 +21,4 @@ Created helm-w32-launcher-20141223.2014.tar containing:
   helm-w32-launcher-20141223.2014/helper-src/ProcessStarter.cs
   helm-w32-launcher-20141223.2014/helper-src/Program.cs
   helm-w32-launcher-20141223.2014/license.txt
- ✓ Success:
-  2026-05-15T19:19:15+0000  helm-w32-launcher-20141223.2014.entry
-  2026-05-15T19:19:15+0000  helm-w32-launcher-20141223.2014.tar
-Built helm-w32-launcher in 3.527s, finished at 2026-05-15T19:19:16+0000
+Built helm-w32-launcher in 2.870s, finished at 2026-05-15T22:06:39+0000

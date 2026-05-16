@@ -1,9 +1,11 @@
- • Building package systemd (from github:holomorph/systemd-mode)...
+
+ • Building package systemd
+From https://github.com/holomorph/systemd-mode
 Updating /mnt/store/melpa/working/systemd/
 Checking out 8742607120fbc440821acbc351fda1e8e68a8806
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/systemd/
-  to /tmp/systemd-lnBrPj/systemd-20230201.302
+  to /tmp/systemd-4LfBmR/systemd-20230201.302/
     systemd.el -> systemd.el
     network-directives.txt -> network-directives.txt
     nspawn-directives.txt -> nspawn-directives.txt
@@ -15,7 +17,4 @@ Created systemd-20230201.302.tar containing:
   systemd-20230201.302/systemd-pkg.el
   systemd-20230201.302/systemd.el
   systemd-20230201.302/unit-directives.txt
- ✓ Success:
-  2026-05-15T20:01:43+0000  systemd-20230201.302.entry
-  2026-05-15T20:01:42+0000  systemd-20230201.302.tar
-Built systemd in 7.808s, finished at 2026-05-15T20:01:44+0000
+Built systemd in 4.588s, finished at 2026-05-15T22:44:53+0000

@@ -1,9 +1,11 @@
- • Building package graphql (from github:vermiculus/graphql.el)...
+
+ • Building package graphql
+From https://github.com/vermiculus/graphql.el
 Updating /mnt/store/melpa/working/graphql/
 Checking out b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/graphql/
-  to /tmp/graphql-kMFymu/graphql-20221128.1106
+  to /tmp/graphql-sEgSap/graphql-20221128.1106/
     graphql-examples.el -> graphql-examples.el
     graphql.el -> graphql.el
 Created graphql-20221128.1106.tar containing:
@@ -11,7 +13,4 @@ Created graphql-20221128.1106.tar containing:
   graphql-20221128.1106/graphql-examples.el
   graphql-20221128.1106/graphql-pkg.el
   graphql-20221128.1106/graphql.el
- ✓ Success:
-  2026-05-15T19:15:43+0000  graphql-20221128.1106.entry
-  2026-05-15T19:15:43+0000  graphql-20221128.1106.tar
-Built graphql in 5.368s, finished at 2026-05-15T19:15:45+0000
+Built graphql in 2.727s, finished at 2026-05-15T22:03:12+0000

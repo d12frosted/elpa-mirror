@@ -1,9 +1,11 @@
- • Building package gnosis (from https://git.thanosapollo.org/gnosis)...
+
+ • Building package gnosis
+From https://git.thanosapollo.org/gnosis
 Updating /mnt/store/melpa/working/gnosis/
 Checking out 07de9c67536fe3e8c5fef1daf61527f3bcfa46a7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosis-eM7J7Z/gnosis-20260507.2347
+  to /tmp/gnosis-s8wROB/gnosis-20260507.2347/
   ! lisp/gnosis-algorithm.el -> gnosis-algorithm.el
   ! lisp/gnosis-anki.el -> gnosis-anki.el
   ! lisp/gnosis-cloze.el -> gnosis-cloze.el
@@ -45,7 +47,4 @@ Created gnosis-20260507.2347.tar containing:
   gnosis-20260507.2347/gnosis-utils.el
   gnosis-20260507.2347/gnosis-vc.el
   gnosis-20260507.2347/gnosis.el
- ✓ Success:
-  2026-05-15T19:14:42+0000  gnosis-20260507.2347.entry
-  2026-05-15T19:14:41+0000  gnosis-20260507.2347.tar
-Built gnosis in 49.994s, finished at 2026-05-15T19:14:44+0000
+Built gnosis in 55.771s, finished at 2026-05-15T22:02:51+0000

@@ -1,9 +1,11 @@
- • Building package editorconfig (from github:editorconfig/editorconfig-emacs)...
+
+ • Building package editorconfig
+From https://github.com/editorconfig/editorconfig-emacs
 Updating /mnt/store/melpa/working/editorconfig/
 Checking out 1e9931d5f38a8d8cb8a92cf726d64696550bfc95
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfig-ewV2eT/editorconfig-20260118.718
+  to /tmp/editorconfig-6V4nLt/editorconfig-20260118.718/
     editorconfig-conf-mode.el -> editorconfig-conf-mode.el
     editorconfig-core-handle.el -> editorconfig-core-handle.el
     editorconfig-core.el -> editorconfig-core.el
@@ -23,7 +25,4 @@ Created editorconfig-20260118.718.tar containing:
   editorconfig-20260118.718/editorconfig-tools.el
   editorconfig-20260118.718/editorconfig.el
   editorconfig-20260118.718/editorconfig.info
- ✓ Success:
-  2026-05-15T19:00:32+0000  editorconfig-20260118.718.entry
-  2026-05-15T19:00:32+0000  editorconfig-20260118.718.tar
-Built editorconfig in 5.584s, finished at 2026-05-15T19:00:33+0000
+Built editorconfig in 4.875s, finished at 2026-05-16T00:27:31+0000

@@ -1,9 +1,11 @@
- • Building package guix (from codeberg:guix/emacs-guix)...
+
+ • Building package guix
+From https://codeberg.org/guix/emacs-guix
 Updating /mnt/store/melpa/working/guix/
 Checking out 43151aa6902c7122e919d3ed688fd484ec004feb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guix/
-  to /tmp/guix-gXKVpy/guix-20260310.758
+  to /tmp/guix-EsKJSc/guix-20260310.758/
   ! elisp/guix-about.el -> guix-about.el
   ! elisp/guix-auto-mode.el -> guix-auto-mode.el
   ! elisp/guix-build-log.el -> guix-build-log.el
@@ -122,7 +124,4 @@ Created guix-20260310.758.tar containing:
   guix-20260310.758/scheme/emacs-guix/system-generations.scm
   guix-20260310.758/scheme/emacs-guix/system.scm
   guix-20260310.758/scheme/emacs-guix/utils.scm
- ✓ Success:
-  2026-05-15T19:16:35+0000  guix-20260310.758.entry
-  2026-05-15T19:16:35+0000  guix-20260310.758.tar
-Built guix in 8.593s, finished at 2026-05-15T19:16:36+0000
+Built guix in 8.283s, finished at 2026-05-15T22:03:48+0000

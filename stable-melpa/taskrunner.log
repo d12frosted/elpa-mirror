@@ -1,9 +1,11 @@
- • Building package taskrunner (from github:emacs-taskrunner/emacs-taskrunner)...
+
+ • Building package taskrunner
+From https://github.com/emacs-taskrunner/emacs-taskrunner
 Updating /mnt/store/melpa/working/taskrunner/
 Checking out 716323aff410b4d864d137c9ebe4bbb5b8587f5e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/taskrunner/
-  to /tmp/taskrunner-Gj7yw3/taskrunner-20190916.1608
+  to /tmp/taskrunner-1HU3KJ/taskrunner-20190916.1608/
     taskrunner-clang.el -> taskrunner-clang.el
     taskrunner-general.el -> taskrunner-general.el
     taskrunner-java.el -> taskrunner-java.el
@@ -27,7 +29,4 @@ Created taskrunner-20190916.1608.tar containing:
   taskrunner-20190916.1608/taskrunner-static-targets.el
   taskrunner-20190916.1608/taskrunner-web.el
   taskrunner-20190916.1608/taskrunner.el
- ✓ Success:
-  2026-05-15T20:02:17+0000  taskrunner-20190916.1608.entry
-  2026-05-15T20:02:17+0000  taskrunner-20190916.1608.tar
-Built taskrunner in 3.495s, finished at 2026-05-15T20:02:19+0000
+Built taskrunner in 5.250s, finished at 2026-05-15T22:45:30+0000

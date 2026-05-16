@@ -1,9 +1,11 @@
- • Building package foreign-regexp (from github:k-talo/foreign-regexp.el)...
+
+ • Building package foreign-regexp
+From https://github.com/k-talo/foreign-regexp.el
 Updating /mnt/store/melpa/working/foreign-regexp/
 Checking out e2dd47f2160cadc194eb156e7c76c3c869e6706e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/foreign-regexp/
-  to /tmp/foreign-regexp-Yd2PWk/foreign-regexp-20200325.50
+  to /tmp/foreign-regexp-Pc6T3r/foreign-regexp-20200325.50/
     foreign-regexp.el -> foreign-regexp.el
     bin/foreign-regexp-quote-meta-aux.pl -> bin/foreign-regexp-quote-meta-aux.pl
     bin/foreign-regexp-replace-aux.pl -> bin/foreign-regexp-replace-aux.pl
@@ -18,7 +20,4 @@ Created foreign-regexp-20200325.50.tar containing:
   foreign-regexp-20200325.50/bin/foreign-regexp-replace-aux.rb
   foreign-regexp-20200325.50/foreign-regexp-pkg.el
   foreign-regexp-20200325.50/foreign-regexp.el
- ✓ Success:
-  2026-05-15T19:11:23+0000  foreign-regexp-20200325.50.entry
-  2026-05-15T19:11:23+0000  foreign-regexp-20200325.50.tar
-Built foreign-regexp in 3.182s, finished at 2026-05-15T19:11:24+0000
+Built foreign-regexp in 2.793s, finished at 2026-05-16T00:37:23+0000

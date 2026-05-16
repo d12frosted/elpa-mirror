@@ -1,9 +1,11 @@
- • Building package indigo (from github:gicrisf/emacs-indigo)...
+
+ • Building package indigo
+From https://github.com/gicrisf/emacs-indigo
 Updating /mnt/store/melpa/working/indigo/
 Checking out 86433c884f5ef591ff8250b3322e5e9abd8a502d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/indigo/
-  to /tmp/indigo-b3mPxg/indigo-20260506.1617
+  to /tmp/indigo-hL00VC/indigo-20260506.1617/
     indigo-atom.el -> indigo-atom.el
     indigo-bond.el -> indigo-bond.el
     indigo-io.el -> indigo-io.el
@@ -74,7 +76,4 @@ Created indigo-20260506.1617.tar containing:
   indigo-20260506.1617/src/indigo-stateless-wrappers.c
   indigo-20260506.1617/src/indigo-system-ops.c
   indigo-20260506.1617/src/indigo-system-wrappers.c
- ✓ Success:
-  2026-05-15T19:22:20+0000  indigo-20260506.1617.entry
-  2026-05-15T19:22:20+0000  indigo-20260506.1617.tar
-Built indigo in 3.814s, finished at 2026-05-15T19:22:21+0000
+Built indigo in 3.665s, finished at 2026-05-15T22:09:17+0000

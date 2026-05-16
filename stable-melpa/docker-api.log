@@ -1,9 +1,11 @@
- • Building package docker-api (from github:Silex/docker-api.el)...
+
+ • Building package docker-api
+From https://github.com/Silex/docker-api.el
 Updating /mnt/store/melpa/working/docker-api/
 Checking out 206144346b7fa4165223349cfeb64a75d47ddd1b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker-api/
-  to /tmp/docker-api-2M3JlU/docker-api-20160525.720
+  to /tmp/docker-api-iwYvJA/docker-api-20160525.720/
     docker-api-connection.el -> docker-api-connection.el
     docker-api-containers.el -> docker-api-containers.el
     docker-api-images.el -> docker-api-images.el
@@ -19,7 +21,4 @@ Created docker-api-20160525.720.tar containing:
   docker-api-20160525.720/docker-api-pkg.el
   docker-api-20160525.720/docker-api-volumes.el
   docker-api-20160525.720/docker-api.el
- ✓ Success:
-  2026-05-15T18:58:39+0000  docker-api-20160525.720.entry
-  2026-05-15T18:58:39+0000  docker-api-20160525.720.tar
-Built docker-api in 3.004s, finished at 2026-05-15T18:58:40+0000
+Built docker-api in 2.664s, finished at 2026-05-16T00:25:54+0000

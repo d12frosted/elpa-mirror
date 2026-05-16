@@ -1,9 +1,11 @@
- • Building package dune (from github:ocaml/dune)...
+
+ • Building package dune
+From https://github.com/ocaml/dune
 Updating /mnt/store/melpa/working/dune/
 Checking out ccdb380ab5714b81f1ba71f7f8acfd792e6200bf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dune/
-  to /tmp/dune-FuBs9r/dune-20260120.2128
+  to /tmp/dune-2WvbOK/dune-20260120.2128/
   ! editor-integration/emacs/dune-flymake.el -> dune-flymake.el
   ! editor-integration/emacs/dune-watch.el -> dune-watch.el
   ! editor-integration/emacs/dune.el -> dune.el
@@ -13,7 +15,4 @@ Created dune-20260120.2128.tar containing:
   dune-20260120.2128/dune-pkg.el
   dune-20260120.2128/dune-watch.el
   dune-20260120.2128/dune.el
- ✓ Success:
-  2026-05-15T18:59:56+0000  dune-20260120.2128.entry
-  2026-05-15T18:59:56+0000  dune-20260120.2128.tar
-Built dune in 30.719s, finished at 2026-05-15T18:59:57+0000
+Built dune in 8.975s, finished at 2026-05-16T00:26:44+0000

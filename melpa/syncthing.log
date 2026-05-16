@@ -1,9 +1,11 @@
- • Building package syncthing (from github:KeyWeeUsr/emacs-syncthing)...
+
+ • Building package syncthing
+From https://github.com/KeyWeeUsr/emacs-syncthing
 Updating /mnt/store/melpa/working/syncthing/
 Checking out eac37ecf5458b6d554544b1ddb76e3c6fbe3cb2f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/syncthing/
-  to /tmp/syncthing-X3Crc5/syncthing-20250612.206
+  to /tmp/syncthing-nzZIC5/syncthing-20250612.206/
     syncthing-common.el -> syncthing-common.el
     syncthing-constants.el -> syncthing-constants.el
     syncthing-custom.el -> syncthing-custom.el
@@ -39,7 +41,4 @@ Created syncthing-20250612.206.tar containing:
   syncthing-20250612.206/syncthing-watcher.el
   syncthing-20250612.206/syncthing-widgets.el
   syncthing-20250612.206/syncthing.el
- ✓ Success:
-  2026-05-15T20:01:20+0000  syncthing-20250612.206.entry
-  2026-05-15T20:01:19+0000  syncthing-20250612.206.tar
-Built syncthing in 9.175s, finished at 2026-05-15T20:01:22+0000
+Built syncthing in 3.401s, finished at 2026-05-15T22:44:43+0000

@@ -1,9 +1,11 @@
- • Building package maxima (from gitlab:sasanidas/maxima)...
+
+ • Building package maxima
+From https://gitlab.com/sasanidas/maxima
 Updating /mnt/store/melpa/working/maxima/
 Checking out 2de798f6644753772553cd0420d3c419ed50dd0b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/maxima/
-  to /tmp/maxima-QH5rUs/maxima-20230529.1658
+  to /tmp/maxima-aguow5/maxima-20230529.1658/
     maxima.el -> maxima.el
     maxima-font-lock.el -> maxima-font-lock.el
     keywords/constants -> keywords/constants
@@ -36,7 +38,4 @@ Created maxima-20230529.1658.tar containing:
   maxima-20230529.1658/maxima-font-lock.el
   maxima-20230529.1658/maxima-pkg.el
   maxima-20230529.1658/maxima.el
- ✓ Success:
-  2026-05-15T19:31:48+0000  maxima-20230529.1658.entry
-  2026-05-15T19:31:48+0000  maxima-20230529.1658.tar
-Built maxima in 4.081s, finished at 2026-05-15T19:31:49+0000
+Built maxima in 3.982s, finished at 2026-05-15T22:18:10+0000

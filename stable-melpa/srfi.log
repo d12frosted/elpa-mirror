@@ -1,9 +1,11 @@
- • Building package srfi (from github:srfi-explorations/emacs-srfi)...
+
+ • Building package srfi
+From https://github.com/srfi-explorations/emacs-srfi
 Updating /mnt/store/melpa/working/srfi/
 Checking out 1d1841fd76cd9bb7259d03d6306783c7b3593882
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/srfi/
-  to /tmp/srfi-63OKA2/srfi-20260514.403
+  to /tmp/srfi-zj5Kas/srfi-20260514.403/
     srfi-data.el -> srfi-data.el
     srfi.el -> srfi.el
 Created srfi-20260514.403.tar containing:
@@ -11,7 +13,4 @@ Created srfi-20260514.403.tar containing:
   srfi-20260514.403/srfi-data.el
   srfi-20260514.403/srfi-pkg.el
   srfi-20260514.403/srfi.el
- ✓ Success:
-  2026-05-15T19:59:21+0000  srfi-20260514.403.entry
-  2026-05-15T19:59:21+0000  srfi-20260514.403.tar
-Built srfi in 3.902s, finished at 2026-05-15T19:59:22+0000
+Built srfi in 3.433s, finished at 2026-05-15T22:43:25+0000

@@ -1,9 +1,11 @@
- • Building package ecukes (from github:ecukes/ecukes)...
+
+ • Building package ecukes
+From https://github.com/ecukes/ecukes
 Updating /mnt/store/melpa/working/ecukes/
 Checking out 70cb0748b222b7c96ab9821ef898ffbdb45eacd8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ecukes/
-  to /tmp/ecukes-qiKzs0/ecukes-20241226.1759
+  to /tmp/ecukes-rqlExG/ecukes-20241226.1759/
     ecukes-byte-compile.el -> ecukes-byte-compile.el
     ecukes-cli.el -> ecukes-cli.el
     ecukes-core.el -> ecukes-core.el
@@ -56,7 +58,4 @@ Created ecukes-20241226.1759.tar containing:
   ecukes-20241226.1759/templates/feature.tpl
   ecukes-20241226.1759/templates/missing-step.tpl
   ecukes-20241226.1759/templates/step-definition.tpl
- ✓ Success:
-  2026-05-15T19:00:17+0000  ecukes-20241226.1759.entry
-  2026-05-15T19:00:17+0000  ecukes-20241226.1759.tar
-Built ecukes in 3.557s, finished at 2026-05-15T19:00:18+0000
+Built ecukes in 3.044s, finished at 2026-05-16T00:27:18+0000

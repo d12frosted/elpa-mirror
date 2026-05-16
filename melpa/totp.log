@@ -1,9 +1,11 @@
- • Building package totp (from github:juergenhoetzel/emacs-totp)...
+
+ • Building package totp
+From https://github.com/juergenhoetzel/emacs-totp
 Updating /mnt/store/melpa/working/totp/
 Checking out fe05ce6130ff1e9a76fc2aca289083475f70fd52
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/totp/
-  to /tmp/totp-KZEIzw/totp-20240102.1721
+  to /tmp/totp-PKyB6B/totp-20240102.1721/
     totp-widget.el -> totp-widget.el
     totp.el -> totp.el
 Created totp-20240102.1721.tar containing:
@@ -11,7 +13,4 @@ Created totp-20240102.1721.tar containing:
   totp-20240102.1721/totp-pkg.el
   totp-20240102.1721/totp-widget.el
   totp-20240102.1721/totp.el
- ✓ Success:
-  2026-05-15T20:04:16+0000  totp-20240102.1721.entry
-  2026-05-15T20:04:16+0000  totp-20240102.1721.tar
-Built totp in 3.655s, finished at 2026-05-15T20:04:17+0000
+Built totp in 3.393s, finished at 2026-05-15T22:47:20+0000

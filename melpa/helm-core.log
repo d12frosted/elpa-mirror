@@ -1,9 +1,11 @@
- • Building package helm-core (from github:emacs-helm/helm)...
+
+ • Building package helm-core
+From https://github.com/emacs-helm/helm
 Updating /mnt/store/melpa/working/helm-core/
 Checking out 3cd5097285dc10ac0898cf6f30c9699c3399e421
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-core/
-  to /tmp/helm-core-ku0KSf/helm-core-20260424.1357
+  to /tmp/helm-core-AAt9cQ/helm-core-20260424.1357/
     helm-core.el -> helm-core.el
     helm-lib.el -> helm-lib.el
     helm-source.el -> helm-source.el
@@ -15,7 +17,4 @@ Created helm-core-20260424.1357.tar containing:
   helm-core-20260424.1357/helm-lib.el
   helm-core-20260424.1357/helm-multi-match.el
   helm-core-20260424.1357/helm-source.el
- ✓ Success:
-  2026-05-15T19:17:40+0000  helm-core-20260424.1357.entry
-  2026-05-15T19:17:40+0000  helm-core-20260424.1357.tar
-Built helm-core in 4.405s, finished at 2026-05-15T19:17:41+0000
+Built helm-core in 4.435s, finished at 2026-05-15T22:05:08+0000

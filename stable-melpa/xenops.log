@@ -1,9 +1,11 @@
- • Building package xenops (from github:dandavison/xenops)...
+
+ • Building package xenops
+From https://github.com/dandavison/xenops
 Updating /mnt/store/melpa/working/xenops/
 Checking out de8bce9af99476b58742679a77ac09bdb7ea0c76
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/xenops/
-  to /tmp/xenops-keCLjx/xenops-20250318.1613
+  to /tmp/xenops-sN62aX/xenops-20250318.1613/
   ! lisp/xenops-aio.el -> xenops-aio.el
   ! lisp/xenops-apply.el -> xenops-apply.el
   ! lisp/xenops-auctex.el -> xenops-auctex.el
@@ -49,7 +51,4 @@ Created xenops-20250318.1613.tar containing:
   xenops-20250318.1613/xenops-util.el
   xenops-20250318.1613/xenops-xen.el
   xenops-20250318.1613/xenops.el
- ✓ Success:
-  2026-05-15T20:10:18+0000  xenops-20250318.1613.entry
-  2026-05-15T20:10:17+0000  xenops-20250318.1613.tar
-Built xenops in 4.723s, finished at 2026-05-15T20:10:19+0000
+Built xenops in 4.086s, finished at 2026-05-15T22:53:09+0000

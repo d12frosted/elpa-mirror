@@ -1,9 +1,11 @@
- • Building package opensource (from github:OpenSourceOrg/el-opensourceorg)...
+
+ • Building package opensource
+From https://github.com/OpenSourceOrg/el-opensourceorg
 Updating /mnt/store/melpa/working/opensource/
 Checking out 42742d5f1b9590acff7f05ee0094e3a80f4f7171
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/opensource/
-  to /tmp/opensource-NccQIP/opensource-20160926.1616
+  to /tmp/opensource-MsM3r1/opensource-20160926.1616/
     opensource-api.el -> opensource-api.el
     opensource-http.el -> opensource-http.el
     opensource-licenses.el -> opensource-licenses.el
@@ -19,7 +21,4 @@ Created opensource-20160926.1616.tar containing:
   opensource-20160926.1616/opensource-utils.el
   opensource-20160926.1616/opensource-version.el
   opensource-20160926.1616/opensource.el
- ✓ Success:
-  2026-05-15T19:39:29+0000  opensource-20160926.1616.entry
-  2026-05-15T19:39:29+0000  opensource-20160926.1616.tar
-Built opensource in 3.319s, finished at 2026-05-15T19:39:30+0000
+Built opensource in 3.142s, finished at 2026-05-15T22:25:15+0000

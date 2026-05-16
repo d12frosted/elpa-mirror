@@ -1,9 +1,11 @@
- • Building package meep (from codeberg:ideasman42/emacs-meep)...
+
+ • Building package meep
+From https://codeberg.org/ideasman42/emacs-meep
 Updating /mnt/store/melpa/working/meep/
 Checking out 01441807a29fd902a9f1c08167781d85cb330a6b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/meep/
-  to /tmp/meep-eEk4lP/meep-20260507.1310
+  to /tmp/meep-BWqeza/meep-20260507.1310/
     meep-preset-awk-mode.el -> meep-preset-awk-mode.el
     meep-preset-c++-mode.el -> meep-preset-c++-mode.el
     meep-preset-c-mode.el -> meep-preset-c-mode.el
@@ -61,7 +63,4 @@ Created meep-20260507.1310.tar containing:
   meep-20260507.1310/meep-preset-xml-mode.el
   meep-20260507.1310/meep-region-mark.el
   meep-20260507.1310/meep.el
- ✓ Success:
-  2026-05-15T19:32:07+0000  meep-20260507.1310.entry
-  2026-05-15T19:32:07+0000  meep-20260507.1310.tar
-Built meep in 6.888s, finished at 2026-05-15T19:32:08+0000
+Built meep in 4.032s, finished at 2026-05-15T22:18:23+0000

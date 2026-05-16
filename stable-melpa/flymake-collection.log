@@ -1,9 +1,11 @@
- • Building package flymake-collection (from github:mohkale/flymake-collection)...
+
+ • Building package flymake-collection
+From https://github.com/mohkale/flymake-collection
 Updating /mnt/store/melpa/working/flymake-collection/
 Checking out 909d98d9ec70c2baa5467634ec37181a058f2548
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flymake-collection/
-  to /tmp/flymake-collection-PbdIox/flymake-collection-20250831.1353
+  to /tmp/flymake-collection-KHVsBj/flymake-collection-20250831.1353/
   ! src/flymake-collection-commands.el -> flymake-collection-commands.el
   ! src/flymake-collection-define.el -> flymake-collection-define.el
   ! src/flymake-collection-hook.el -> flymake-collection-hook.el
@@ -83,7 +85,4 @@ Created flymake-collection-20250831.1353.tar containing:
   flymake-collection-20250831.1353/flymake-collection-xmllint.el
   flymake-collection-20250831.1353/flymake-collection-yamllint.el
   flymake-collection-20250831.1353/flymake-collection.el
- ✓ Success:
-  2026-05-15T19:10:12+0000  flymake-collection-20250831.1353.entry
-  2026-05-15T19:10:11+0000  flymake-collection-20250831.1353.tar
-Built flymake-collection in 4.336s, finished at 2026-05-15T19:10:13+0000
+Built flymake-collection in 3.585s, finished at 2026-05-16T00:36:20+0000

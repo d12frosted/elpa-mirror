@@ -1,9 +1,11 @@
- • Building package mason (from github:mason-org/mason.el)...
+
+ • Building package mason
+From https://github.com/mason-org/mason.el
 Updating /mnt/store/melpa/working/mason/
 Checking out 7ac4f01f8ace020cf19c41544722421d3e8f26df
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mason/
-  to /tmp/mason-7DK0Jn/mason-20260509.1646
+  to /tmp/mason-ix24ZV/mason-20260509.1646/
     mason-basic.el -> mason-basic.el
     mason-info.el -> mason-info.el
     mason-manager.el -> mason-manager.el
@@ -15,7 +17,4 @@ Created mason-20260509.1646.tar containing:
   mason-20260509.1646/mason-manager.el
   mason-20260509.1646/mason-pkg.el
   mason-20260509.1646/mason.el
- ✓ Success:
-  2026-05-15T19:31:36+0000  mason-20260509.1646.entry
-  2026-05-15T19:31:36+0000  mason-20260509.1646.tar
-Built mason in 3.249s, finished at 2026-05-15T19:31:37+0000
+Built mason in 2.992s, finished at 2026-05-15T22:18:00+0000

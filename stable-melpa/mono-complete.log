@@ -1,9 +1,11 @@
- • Building package mono-complete (from codeberg:ideasman42/emacs-mono-complete)...
+
+ • Building package mono-complete
+From https://codeberg.org/ideasman42/emacs-mono-complete
 Updating /mnt/store/melpa/working/mono-complete/
 Checking out 12eb3f326f49212787be6e34a69e830652c8a9be
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mono-complete/
-  to /tmp/mono-complete-rcMs98/mono-complete-20260105.209
+  to /tmp/mono-complete-DE24XH/mono-complete-20260105.209/
     mono-complete-backend-capf.el -> mono-complete-backend-capf.el
     mono-complete-backend-dabbrev.el -> mono-complete-backend-dabbrev.el
     mono-complete-backend-filesystem.el -> mono-complete-backend-filesystem.el
@@ -23,7 +25,4 @@ Created mono-complete-20260105.209.tar containing:
   mono-complete-20260105.209/mono-complete-backend-word-predict.py
   mono-complete-20260105.209/mono-complete-pkg.el
   mono-complete-20260105.209/mono-complete.el
- ✓ Success:
-  2026-05-15T19:33:58+0000  mono-complete-20260105.209.entry
-  2026-05-15T19:33:58+0000  mono-complete-20260105.209.tar
-Built mono-complete in 4.110s, finished at 2026-05-15T19:34:00+0000
+Built mono-complete in 3.602s, finished at 2026-05-15T22:19:50+0000

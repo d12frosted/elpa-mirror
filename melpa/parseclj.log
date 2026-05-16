@@ -1,9 +1,11 @@
- • Building package parseclj (from github:clojure-emacs/parseclj)...
+
+ • Building package parseclj
+From https://github.com/clojure-emacs/parseclj
 Updating /mnt/store/melpa/working/parseclj/
 Checking out 6af22372e0fe14df882dd300b22b12ba2d7e00b0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parseclj/
-  to /tmp/parseclj-hCIgTY/parseclj-20231203.1905
+  to /tmp/parseclj-GCpnxV/parseclj-20231203.1905/
     parseclj-alist.el -> parseclj-alist.el
     parseclj-ast.el -> parseclj-ast.el
     parseclj-lex.el -> parseclj-lex.el
@@ -17,7 +19,4 @@ Created parseclj-20231203.1905.tar containing:
   parseclj-20231203.1905/parseclj-parser.el
   parseclj-20231203.1905/parseclj-pkg.el
   parseclj-20231203.1905/parseclj.el
- ✓ Success:
-  2026-05-15T19:45:21+0000  parseclj-20231203.1905.entry
-  2026-05-15T19:45:21+0000  parseclj-20231203.1905.tar
-Built parseclj in 3.270s, finished at 2026-05-15T19:45:22+0000
+Built parseclj in 2.969s, finished at 2026-05-15T22:30:34+0000

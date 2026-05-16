@@ -1,9 +1,11 @@
- • Building package gitlab (from github:nlamirault/emacs-gitlab)...
+
+ • Building package gitlab
+From https://github.com/nlamirault/emacs-gitlab
 Updating /mnt/store/melpa/working/gitlab/
 Checking out 68318aca3206d50701039c9aae39734ca29a49f9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gitlab/
-  to /tmp/gitlab-dAXAKM/gitlab-20180312.1647
+  to /tmp/gitlab-Nmijib/gitlab-20180312.1647/
     gitlab-api.el -> gitlab-api.el
     gitlab-browse.el -> gitlab-browse.el
     gitlab-groups.el -> gitlab-groups.el
@@ -37,7 +39,4 @@ Created gitlab-20180312.1647.tar containing:
   gitlab-20180312.1647/gitlab-utils.el
   gitlab-20180312.1647/gitlab-version.el
   gitlab-20180312.1647/gitlab.el
- ✓ Success:
-  2026-05-15T19:13:37+0000  gitlab-20180312.1647.entry
-  2026-05-15T19:13:37+0000  gitlab-20180312.1647.tar
-Built gitlab in 3.630s, finished at 2026-05-15T19:13:38+0000
+Built gitlab in 2.757s, finished at 2026-05-15T22:01:40+0000

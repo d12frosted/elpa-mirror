@@ -1,9 +1,11 @@
- • Building package jupyter (from github:emacs-jupyter/jupyter)...
+
+ • Building package jupyter
+From https://github.com/emacs-jupyter/jupyter
 Updating /mnt/store/melpa/working/jupyter/
 Checking out 3b9caed3e4cc5f4bc0348eb65d17098de76904e4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jupyter/
-  to /tmp/jupyter-sgNyIN/jupyter-20260307.35
+  to /tmp/jupyter-1z5dmw/jupyter-20260307.35/
     jupyter-R.el -> jupyter-R.el
     jupyter-base.el -> jupyter-base.el
     jupyter-c++.el -> jupyter-c++.el
@@ -77,7 +79,4 @@ Created jupyter-20260307.35.tar containing:
   jupyter-20260307.35/jupyter.el
   jupyter-20260307.35/ob-jupyter.el
   jupyter-20260307.35/widget.html
- ✓ Success:
-  2026-05-15T19:25:21+0000  jupyter-20260307.35.entry
-  2026-05-15T19:25:21+0000  jupyter-20260307.35.tar
-Built jupyter in 5.185s, finished at 2026-05-15T19:25:22+0000
+Built jupyter in 4.357s, finished at 2026-05-15T22:12:23+0000

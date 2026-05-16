@@ -1,9 +1,11 @@
- • Building package electric-operator (from github:davidshepherd7/electric-operator)...
+
+ • Building package electric-operator
+From https://github.com/davidshepherd7/electric-operator
 Updating /mnt/store/melpa/working/electric-operator/
 Checking out ef39e07158cdfc1c2a461287fef17972d1985b0c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/electric-operator/
-  to /tmp/electric-operator-4q075X/electric-operator-20260314.1325
+  to /tmp/electric-operator-2jt2N5/electric-operator-20260314.1325/
     electric-operator-benchmark.el -> electric-operator-benchmark.el
     electric-operator.el -> electric-operator.el
     test-helper.el -> test-helper.el
@@ -13,7 +15,4 @@ Created electric-operator-20260314.1325.tar containing:
   electric-operator-20260314.1325/electric-operator-pkg.el
   electric-operator-20260314.1325/electric-operator.el
   electric-operator-20260314.1325/test-helper.el
- ✓ Success:
-  2026-05-15T19:01:33+0000  electric-operator-20260314.1325.entry
-  2026-05-15T19:01:33+0000  electric-operator-20260314.1325.tar
-Built electric-operator in 3.751s, finished at 2026-05-15T19:01:34+0000
+Built electric-operator in 3.220s, finished at 2026-05-16T00:28:27+0000

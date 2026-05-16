@@ -1,9 +1,11 @@
- • Building package kotlin-mode (from github:Emacs-Kotlin-Mode-Maintainers/kotlin-mode)...
+
+ • Building package kotlin-mode
+From https://github.com/Emacs-Kotlin-Mode-Maintainers/kotlin-mode
 Updating /mnt/store/melpa/working/kotlin-mode/
 Checking out fddd747e5b4736e8b27a147960f369b86179ddff
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kotlin-mode/
-  to /tmp/kotlin-mode-XEEqJz/kotlin-mode-20230123.1859
+  to /tmp/kotlin-mode-k3J17D/kotlin-mode-20230123.1859/
     kotlin-mode-indent.el -> kotlin-mode-indent.el
     kotlin-mode-lexer.el -> kotlin-mode-lexer.el
     kotlin-mode.el -> kotlin-mode.el
@@ -13,7 +15,4 @@ Created kotlin-mode-20230123.1859.tar containing:
   kotlin-mode-20230123.1859/kotlin-mode-lexer.el
   kotlin-mode-20230123.1859/kotlin-mode-pkg.el
   kotlin-mode-20230123.1859/kotlin-mode.el
- ✓ Success:
-  2026-05-15T19:26:49+0000  kotlin-mode-20230123.1859.entry
-  2026-05-15T19:26:49+0000  kotlin-mode-20230123.1859.tar
-Built kotlin-mode in 6.793s, finished at 2026-05-15T19:26:51+0000
+Built kotlin-mode in 3.327s, finished at 2026-05-15T22:13:29+0000

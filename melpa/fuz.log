@@ -1,9 +1,11 @@
- • Building package fuz (from github:rustify-emacs/fuz.el)...
+
+ • Building package fuz
+From https://github.com/rustify-emacs/fuz.el
 Updating /mnt/store/melpa/working/fuz/
 Checking out 0b6b64cebde5675be3a28520ee16234db48d3b8b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fuz/
-  to /tmp/fuz-1V0XWd/fuz-20200104.524
+  to /tmp/fuz-RjbLfa/fuz-20200104.524/
     fuz-extra.el -> fuz-extra.el
     fuz.el -> fuz.el
     Cargo.toml -> Cargo.toml
@@ -19,7 +21,4 @@ Created fuz-20200104.524.tar containing:
   fuz-20200104.524/src/
   fuz-20200104.524/src/dynmod.rs
   fuz-20200104.524/src/lib.rs
- ✓ Success:
-  2026-05-15T19:12:03+0000  fuz-20200104.524.entry
-  2026-05-15T19:12:03+0000  fuz-20200104.524.tar
-Built fuz in 3.674s, finished at 2026-05-15T19:12:04+0000
+Built fuz in 3.110s, finished at 2026-05-15T22:00:16+0000

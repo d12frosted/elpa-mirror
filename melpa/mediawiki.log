@@ -1,9 +1,11 @@
- • Building package mediawiki (from github:hexmode/mediawiki-el)...
+
+ • Building package mediawiki
+From https://github.com/hexmode/mediawiki-el
 Updating /mnt/store/melpa/working/mediawiki/
 Checking out 7ba10e435599b6d91f50c8aa0768dd0597dcacda
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mediawiki/
-  to /tmp/mediawiki-XpqMdv/mediawiki-20260515.317
+  to /tmp/mediawiki-RUPCeZ/mediawiki-20260515.317/
     mediawiki-api.el -> mediawiki-api.el
     mediawiki-auth.el -> mediawiki-auth.el
     mediawiki-core.el -> mediawiki-core.el
@@ -33,7 +35,4 @@ Created mediawiki-20260515.317.tar containing:
   mediawiki-20260515.317/mediawiki-site.el
   mediawiki-20260515.317/mediawiki-utils.el
   mediawiki-20260515.317/mediawiki.el
- ✓ Success:
-  2026-05-15T19:32:05+0000  mediawiki-20260515.317.entry
-  2026-05-15T19:32:05+0000  mediawiki-20260515.317.tar
-Built mediawiki in 6.179s, finished at 2026-05-15T19:32:07+0000
+Built mediawiki in 3.346s, finished at 2026-05-15T22:18:21+0000

@@ -1,9 +1,11 @@
- • Building package forge (from github:magit/forge)...
+
+ • Building package forge
+From https://github.com/magit/forge
 Updating /mnt/store/melpa/working/forge/
 Checking out 7002befc962729433a90f826aa24e3faa73f9804
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forge/
-  to /tmp/forge-Iu5QMa/forge-20260511.1434
+  to /tmp/forge-uIyeLr/forge-20260511.1434/
   ! lisp/forge-bitbucket.el -> forge-bitbucket.el
   ! lisp/forge-client.el -> forge-client.el
   ! lisp/forge-commands.el -> forge-commands.el
@@ -59,7 +61,4 @@ Created forge-20260511.1434.tar containing:
   forge-20260511.1434/forge-topics.el
   forge-20260511.1434/forge.el
   forge-20260511.1434/forge.info
- ✓ Success:
-  2026-05-15T19:11:27+0000  forge-20260511.1434.entry
-  2026-05-15T19:11:27+0000  forge-20260511.1434.tar
-Built forge in 6.760s, finished at 2026-05-15T19:11:28+0000
+Built forge in 6.414s, finished at 2026-05-16T00:37:28+0000

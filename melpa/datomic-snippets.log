@@ -1,9 +1,11 @@
- • Building package datomic-snippets (from github:magnars/datomic-snippets)...
+
+ • Building package datomic-snippets
+From https://github.com/magnars/datomic-snippets
 Updating /mnt/store/melpa/working/datomic-snippets/
 Checking out 4a14228840d5252e13d2bf6209670f26345bbb84
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/datomic-snippets/
-  to /tmp/datomic-snippets-GPVF4N/datomic-snippets-20180817.1045
+  to /tmp/datomic-snippets-xQVQGX/datomic-snippets-20180817.1045/
     datomic-snippets-pkg.el -> datomic-snippets-pkg.el
     datomic-snippets.el -> datomic-snippets.el
     snippets => snippets
@@ -37,7 +39,4 @@ Created datomic-snippets-20180817.1045.tar containing:
   datomic-snippets-20180817.1045/snippets/clojure-mode/datomic-schema-type-uuid
   datomic-snippets-20180817.1045/snippets/clojure-mode/datomic-schema-unique-identity
   datomic-snippets-20180817.1045/snippets/clojure-mode/datomic-schema-value-type-ref
- ✓ Success:
-  2026-05-15T18:55:50+0000  datomic-snippets-20180817.1045.entry
-  2026-05-15T18:55:50+0000  datomic-snippets-20180817.1045.tar
-Built datomic-snippets in 3.167s, finished at 2026-05-15T18:55:51+0000
+Built datomic-snippets in 2.653s, finished at 2026-05-16T00:22:59+0000

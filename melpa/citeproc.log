@@ -1,9 +1,11 @@
- • Building package citeproc (from github:andras-simonyi/citeproc-el)...
+
+ • Building package citeproc
+From https://github.com/andras-simonyi/citeproc-el
 Updating /mnt/store/melpa/working/citeproc/
 Checking out 4bde999a41803fe519ea80eab8b813d53503eebd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citeproc/
-  to /tmp/citeproc-c69J7r/citeproc-20260113.1047
+  to /tmp/citeproc-mosadX/citeproc-20260113.1047/
     citeproc-biblatex.el -> citeproc-biblatex.el
     citeproc-bibtex.el -> citeproc-bibtex.el
     citeproc-choose.el -> citeproc-choose.el
@@ -59,7 +61,4 @@ Created citeproc-20260113.1047.tar containing:
   citeproc-20260113.1047/citeproc-term.el
   citeproc-20260113.1047/citeproc-test-human.el
   citeproc-20260113.1047/citeproc.el
- ✓ Success:
-  2026-05-15T18:50:03+0000  citeproc-20260113.1047.entry
-  2026-05-15T18:50:03+0000  citeproc-20260113.1047.tar
-Built citeproc in 5.298s, finished at 2026-05-15T18:50:04+0000
+Built citeproc in 3.919s, finished at 2026-05-16T00:17:42+0000

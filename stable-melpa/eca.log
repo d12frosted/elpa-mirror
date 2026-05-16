@@ -1,9 +1,11 @@
- • Building package eca (from github:editor-code-assistant/eca-emacs)...
+
+ • Building package eca
+From https://github.com/editor-code-assistant/eca-emacs
 Updating /mnt/store/melpa/working/eca/
 Checking out 1887e4de9fe26c0d169670753749ef90a45ade56
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eca/
-  to /tmp/eca-mNLcTn/eca-20260514.1345
+  to /tmp/eca-U2XiiK/eca-20260514.1345/
     eca-api.el -> eca-api.el
     eca-chat-context.el -> eca-chat-context.el
     eca-chat-expandable.el -> eca-chat-expandable.el
@@ -43,7 +45,4 @@ Created eca-20260514.1345.tar containing:
   eca-20260514.1345/eca-table.el
   eca-20260514.1345/eca-util.el
   eca-20260514.1345/eca.el
- ✓ Success:
-  2026-05-15T19:00:14+0000  eca-20260514.1345.entry
-  2026-05-15T19:00:14+0000  eca-20260514.1345.tar
-Built eca in 5.662s, finished at 2026-05-15T19:00:15+0000
+Built eca in 5.118s, finished at 2026-05-16T00:27:16+0000

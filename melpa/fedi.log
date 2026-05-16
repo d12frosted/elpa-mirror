@@ -1,9 +1,11 @@
- • Building package fedi (from codeberg:martianh/fedi.el)...
+
+ • Building package fedi
+From https://codeberg.org/martianh/fedi.el
 Updating /mnt/store/melpa/working/fedi/
 Checking out 91f28ee199a499b8d6e1b9c7a0f1c15f8a382198
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fedi/
-  to /tmp/fedi-I9b0Tt/fedi-20260509.801
+  to /tmp/fedi-mhUqp6/fedi-20260509.801/
     fedi-auth.el -> fedi-auth.el
     fedi-http.el -> fedi-http.el
     fedi-iso.el -> fedi-iso.el
@@ -17,7 +19,4 @@ Created fedi-20260509.801.tar containing:
   fedi-20260509.801/fedi-pkg.el
   fedi-20260509.801/fedi-post.el
   fedi-20260509.801/fedi.el
- ✓ Success:
-  2026-05-15T19:07:18+0000  fedi-20260509.801.entry
-  2026-05-15T19:07:18+0000  fedi-20260509.801.tar
-Built fedi in 5.377s, finished at 2026-05-15T19:07:19+0000
+Built fedi in 4.262s, finished at 2026-05-16T00:33:42+0000

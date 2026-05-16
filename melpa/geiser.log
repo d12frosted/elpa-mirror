@@ -1,9 +1,11 @@
- • Building package geiser (from codeberg:geiser/geiser)...
+
+ • Building package geiser
+From https://codeberg.org/geiser/geiser
 Updating /mnt/store/melpa/working/geiser/
 Checking out 6071202dfec784d53e5e9a6946e9ee06be8e34c6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser/
-  to /tmp/geiser-BBa8lz/geiser-20260509.2218
+  to /tmp/geiser-L568TH/geiser-20260509.2218/
   ! elisp/geiser-autodoc.el -> geiser-autodoc.el
   ! elisp/geiser-base.el -> geiser-base.el
   ! elisp/geiser-capf.el -> geiser-capf.el
@@ -58,7 +60,4 @@ Created geiser-20260509.2218.tar containing:
   geiser-20260509.2218/geiser-xref.el
   geiser-20260509.2218/geiser.el
   geiser-20260509.2218/geiser.info
- ✓ Success:
-  2026-05-15T19:12:27+0000  geiser-20260509.2218.entry
-  2026-05-15T19:12:27+0000  geiser-20260509.2218.tar
-Built geiser in 6.575s, finished at 2026-05-15T19:12:28+0000
+Built geiser in 6.833s, finished at 2026-05-15T22:00:38+0000

@@ -1,9 +1,11 @@
- • Building package haskell-mode (from github:haskell/haskell-mode)...
+
+ • Building package haskell-mode
+From https://github.com/haskell/haskell-mode
 Updating /mnt/store/melpa/working/haskell-mode/
 Checking out 2dd755a5fa11577a9388af88f385d2a8e18f7a8d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/haskell-mode/
-  to /tmp/haskell-mode-yn9OM1/haskell-mode-20260206.1050
+  to /tmp/haskell-mode-supfAl/haskell-mode-20260206.1050/
     ghc-core.el -> ghc-core.el
     ghci-script-mode.el -> ghci-script-mode.el
     haskell-align-imports.el -> haskell-align-imports.el
@@ -97,7 +99,4 @@ Created haskell-mode-20260206.1050.tar containing:
   haskell-mode-20260206.1050/inf-haskell.el
   haskell-mode-20260206.1050/logo.svg
   haskell-mode-20260206.1050/w3m-haddock.el
- ✓ Success:
-  2026-05-15T19:17:05+0000  haskell-mode-20260206.1050.entry
-  2026-05-15T19:17:05+0000  haskell-mode-20260206.1050.tar
-Built haskell-mode in 8.296s, finished at 2026-05-15T19:17:06+0000
+Built haskell-mode in 13.008s, finished at 2026-05-15T22:04:32+0000

@@ -1,9 +1,11 @@
- • Building package web-server (from github:eschulte/emacs-web-server)...
+
+ • Building package web-server
+From https://github.com/eschulte/emacs-web-server
 Updating /mnt/store/melpa/working/web-server/
 Checking out 6357a1c2d1718778503f7ee0909585094117525b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/web-server/
-  to /tmp/web-server-suQsDo/web-server-20210708.2242
+  to /tmp/web-server-5TkYpa/web-server-20210708.2242/
     web-server-status-codes.el -> web-server-status-codes.el
     web-server.el -> web-server.el
   ! doc/doclicense.texi -> doclicense.texi
@@ -21,7 +23,4 @@ Created web-server-20210708.2242.tar containing:
   web-server-20210708.2242/web-server-status-codes.el
   web-server-20210708.2242/web-server.el
   web-server-20210708.2242/web-server.info
- ✓ Success:
-  2026-05-15T20:08:50+0000  web-server-20210708.2242.entry
-  2026-05-15T20:08:50+0000  web-server-20210708.2242.tar
-Built web-server in 8.280s, finished at 2026-05-15T20:08:51+0000
+Built web-server in 7.546s, finished at 2026-05-15T22:51:34+0000

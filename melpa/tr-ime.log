@@ -1,9 +1,11 @@
- • Building package tr-ime (from github:trueroad/tr-emacs-ime-module)...
+
+ • Building package tr-ime
+From https://github.com/trueroad/tr-emacs-ime-module
 Updating /mnt/store/melpa/working/tr-ime/
 Checking out 87f0677220b755f947fe5f373b6a34e1afb82f3c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tr-ime/
-  to /tmp/tr-ime-9tmdDl/tr-ime-20220604.1107
+  to /tmp/tr-ime-zQQRLU/tr-ime-20220604.1107/
   ! lisp/tr-ime-debug.el -> tr-ime-debug.el
   ! lisp/tr-ime-documentfeed.el -> tr-ime-documentfeed.el
   ! lisp/tr-ime-download.el -> tr-ime-download.el
@@ -41,7 +43,4 @@ Created tr-ime-20220604.1107.tar containing:
   tr-ime-20220604.1107/tr-ime-workaround-isearch.el
   tr-ime-20220604.1107/tr-ime-workaround-prefix-key.el
   tr-ime-20220604.1107/tr-ime.el
- ✓ Success:
-  2026-05-15T20:04:23+0000  tr-ime-20220604.1107.entry
-  2026-05-15T20:04:23+0000  tr-ime-20220604.1107.tar
-Built tr-ime in 5.149s, finished at 2026-05-15T20:04:24+0000
+Built tr-ime in 4.308s, finished at 2026-05-15T22:47:27+0000

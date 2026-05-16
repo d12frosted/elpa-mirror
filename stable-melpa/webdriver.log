@@ -1,9 +1,11 @@
- • Building package webdriver (from gitlab:mauroaranda/emacs-webdriver)...
+
+ • Building package webdriver
+From https://gitlab.com/mauroaranda/emacs-webdriver
 Updating /mnt/store/melpa/working/webdriver/
 Checking out dfe26adc9482d50c7c6ca765916443bd74cf548d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/webdriver/
-  to /tmp/webdriver-pAoSYp/webdriver-20250224.2303
+  to /tmp/webdriver-90cWjg/webdriver-20250224.2303/
     webdriver-chrome.el -> webdriver-chrome.el
     webdriver-firefox.el -> webdriver-firefox.el
     webdriver.el -> webdriver.el
@@ -17,7 +19,4 @@ Created webdriver-20250224.2303.tar containing:
   webdriver-20250224.2303/webdriver-pkg.el
   webdriver-20250224.2303/webdriver.el
   webdriver-20250224.2303/webdriver.info
- ✓ Success:
-  2026-05-15T20:08:50+0000  webdriver-20250224.2303.entry
-  2026-05-15T20:08:49+0000  webdriver-20250224.2303.tar
-Built webdriver in 6.230s, finished at 2026-05-15T20:08:50+0000
+Built webdriver in 5.313s, finished at 2026-05-15T22:51:33+0000

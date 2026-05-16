@@ -1,9 +1,11 @@
- • Building package projection-multi (from github:mohkale/projection)...
+
+ • Building package projection-multi
+From https://github.com/mohkale/projection
 Updating /mnt/store/melpa/working/projection-multi/
 Checking out f4b108eeb55c79b201c140bd8fe7f1fcaffd3617
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection-multi/
-  to /tmp/projection-multi-6sPDi1/projection-multi-20250921.1037
+  to /tmp/projection-multi-4j1r8x/projection-multi-20250921.1037/
   ! src/projection-multi/projection-multi-cmake.el -> projection-multi-cmake.el
   ! src/projection-multi/projection-multi-ctest.el -> projection-multi-ctest.el
   ! src/projection-multi/projection-multi-golang.el -> projection-multi-golang.el
@@ -35,7 +37,4 @@ Created projection-multi-20250921.1037.tar containing:
   projection-multi-20250921.1037/projection-multi-vscode-tasks.el
   projection-multi-20250921.1037/projection-multi-yarn-scripts.el
   projection-multi-20250921.1037/projection-multi.el
- ✓ Success:
-  2026-05-15T19:49:19+0000  projection-multi-20250921.1037.entry
-  2026-05-15T19:49:19+0000  projection-multi-20250921.1037.tar
-Built projection-multi in 3.469s, finished at 2026-05-15T19:49:20+0000
+Built projection-multi in 3.122s, finished at 2026-05-15T22:34:21+0000

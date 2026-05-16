@@ -1,9 +1,11 @@
- • Building package lsp-mode (from github:emacs-lsp/lsp-mode)...
+
+ • Building package lsp-mode
+From https://github.com/emacs-lsp/lsp-mode
 Updating /mnt/store/melpa/working/lsp-mode/
 Checking out 0951bf38f5adb0cdb413586e39940e525c188cb2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-mode/
-  to /tmp/lsp-mode-5gRYG9/lsp-mode-20260515.1736
+  to /tmp/lsp-mode-c6sk2V/lsp-mode-20260515.1736/
     lsp-completion.el -> lsp-completion.el
     lsp-diagnostics.el -> lsp-diagnostics.el
     lsp-dired.el -> lsp-dired.el
@@ -315,9 +317,4 @@ Created lsp-mode-20260515.1736.tar containing:
   lsp-mode-20260515.1736/lsp-yang.el
   lsp-mode-20260515.1736/lsp-zig.el
   lsp-mode-20260515.1736/lsp.el
- ✓ Success:
-  2026-05-15T16:41:20+0000  lsp-mode-20260514.1739.entry
-  2026-05-15T16:41:20+0000  lsp-mode-20260514.1739.tar
-  2026-05-15T19:29:49+0000  lsp-mode-20260515.1736.entry
-  2026-05-15T19:29:49+0000  lsp-mode-20260515.1736.tar
-Built lsp-mode in 6.627s, finished at 2026-05-15T19:29:51+0000
+Built lsp-mode in 6.372s, finished at 2026-05-15T22:16:28+0000

@@ -1,9 +1,11 @@
- • Building package status (from github:tromey/emacs-status)...
+
+ • Building package status
+From https://github.com/tromey/emacs-status
 Updating /mnt/store/melpa/working/status/
 Checking out b62c74bf272566f82a68622f29fb9edafea0f241
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/status/
-  to /tmp/status-1dJ4Hp/status-20151230.1408
+  to /tmp/status-Efbk1L/status-20151230.1408/
     emms-status.el -> emms-status.el
     erc-status.el -> erc-status.el
     status.el -> status.el
@@ -19,7 +21,4 @@ Created status-20151230.1408.tar containing:
   status-20151230.1408/status-pkg.el
   status-20151230.1408/status.el
   status-20151230.1408/status.py
- ✓ Success:
-  2026-05-15T19:59:36+0000  status-20151230.1408.entry
-  2026-05-15T19:59:36+0000  status-20151230.1408.tar
-Built status in 3.721s, finished at 2026-05-15T19:59:38+0000
+Built status in 2.965s, finished at 2026-05-15T22:43:38+0000

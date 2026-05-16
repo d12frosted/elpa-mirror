@@ -1,9 +1,11 @@
- • Building package geiser-racket (from codeberg:geiser/racket)...
+
+ • Building package geiser-racket
+From https://codeberg.org/geiser/racket
 Updating /mnt/store/melpa/working/geiser-racket/
 Checking out 22e56ce80389544d3872cf4beb4008fb514b2218
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-racket/
-  to /tmp/geiser-racket-wHdtdS/geiser-racket-20210421.125
+  to /tmp/geiser-racket-UGbJzg/geiser-racket-20210421.125/
     geiser-racket.el -> geiser-racket.el
     src/geiser => src/geiser
   ! bin => src/bin
@@ -29,7 +31,4 @@ Created geiser-racket-20210421.125.tar containing:
   geiser-racket-20210421.125/src/geiser/user.rkt
   geiser-racket-20210421.125/src/geiser/utils.rkt
   geiser-racket-20210421.125/src/racket-server.sh
- ✓ Success:
-  2026-05-15T19:12:35+0000  geiser-racket-20210421.125.entry
-  2026-05-15T19:12:34+0000  geiser-racket-20210421.125.tar
-Built geiser-racket in 4.538s, finished at 2026-05-15T19:12:36+0000
+Built geiser-racket in 3.754s, finished at 2026-05-15T22:00:44+0000

@@ -1,9 +1,11 @@
- • Building package projmake-mode (from github:emacsattic/projmake-mode)...
+
+ • Building package projmake-mode
+From https://github.com/emacsattic/projmake-mode
 Updating /mnt/store/melpa/working/projmake-mode/
 Checking out 99f10611c24e0884f1f24744adcccb3d972326f6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projmake-mode/
-  to /tmp/projmake-mode-L5JqTm/projmake-mode-20250211.1534
+  to /tmp/projmake-mode-QzVrQc/projmake-mode-20250211.1534/
   ! src/projmake-banner.el -> projmake-banner.el
   ! src/projmake-build-state.el -> projmake-build-state.el
   ! src/projmake-default-parse-engine.el -> projmake-default-parse-engine.el
@@ -33,7 +35,4 @@ Created projmake-mode-20250211.1534.tar containing:
   projmake-mode-20250211.1534/projmake-parse-engine.el
   projmake-mode-20250211.1534/projmake-project.el
   projmake-mode-20250211.1534/projmake-util.el
- ✓ Success:
-  2026-05-15T19:49:23+0000  projmake-mode-20250211.1534.entry
-  2026-05-15T19:49:23+0000  projmake-mode-20250211.1534.tar
-Built projmake-mode in 3.440s, finished at 2026-05-15T19:49:24+0000
+Built projmake-mode in 2.717s, finished at 2026-05-15T22:34:25+0000
