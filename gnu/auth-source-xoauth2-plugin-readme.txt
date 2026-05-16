@@ -6,9 +6,6 @@
                                2024-11-08
 
 
-
-
-
 1 Introduction
 ══════════════
 
@@ -57,10 +54,10 @@
 
   ┌────
   │ (nnimap "account_name"
-  │ 	...
-  │ 	(nnimap-authenticator xoauth2)
-  │ 	...
-  │ 	)
+  │         ...
+  │         (nnimap-authenticator xoauth2)
+  │         ...
+  │         )
   └────
 
   To disable, just toggle the minor mode off by calling `M-x
@@ -171,6 +168,18 @@
 
 
 [the steps for initial set up] <file:docs/oauth2-initial-set-up.org>
+
+
+3.2.2 For external programs
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  With a working set up, one can write an Elisp script to make the
+  OAuth2 tokens usable by external programs such as offlineimap, mbsync,
+  etc.  Please check out [this doc for an example].
+
+
+[this doc for an example]
+<file:docs/using-the-plugin-for-external-programs.org>
 
 
 4 Comparison with other xoauth2 implementations
