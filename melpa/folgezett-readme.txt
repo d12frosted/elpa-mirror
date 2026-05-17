@@ -1,8 +1,9 @@
 folgezett.el implements the Luhmann folgezettel system for org-roam.
 
-When a new org-roam note is captured, the user is prompted to choose a
-parent note.  A folgezettel ID is generated from the parent and stored in
-the FOLGEZETTEL_ID property.  The parent relationship is recorded in
+When a new org-roam note is captured, the user is prompted to choose where
+it belongs: a new chain, a branch off an existing note, or a continuation of
+an existing chain.  A folgezettel ID is generated and stored in the
+FOLGEZETTEL_ID property.  Branches and continuations record their parent in
 FOLGEZETTEL_PARENT_ID.
 
 ID structure (alternating number/letter segments):
