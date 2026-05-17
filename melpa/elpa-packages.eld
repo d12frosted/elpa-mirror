@@ -4827,6 +4827,7 @@
   (rand-theme :url "https://github.com/gopar/rand-theme")
   (random-splash-image :url "https://github.com/kakakaya/random-splash-image")
   (ranger :url "https://github.com/punassuming/ranger.el")
+  (rare-words :url "https://github.com/amolv06/rare-words")
   (rase :url "https://github.com/m00natic/rase")
   (rasi-mode :url "https://github.com/taquangtrung/emacs-rasi-mode")
   (rats :url "https://github.com/ane/rats.el")
