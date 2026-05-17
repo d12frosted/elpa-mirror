@@ -2,10 +2,10 @@
  • Building package gptel
 From https://github.com/karthink/gptel
 Updating /mnt/store/melpa/working/gptel/
-Checking out a11cd92a026b1fc89b7ac61f089034383f540a30
+Checking out 675a19aa68df693fa26070bf19b5d6fd53f2990f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel/
-  to /tmp/gptel-IrgEh6/gptel-20260517.947/
+  to /tmp/gptel-HwrQKq/gptel-20260517.1140/
     gptel-anthropic.el -> gptel-anthropic.el
     gptel-bedrock.el -> gptel-bedrock.el
     gptel-context.el -> gptel-context.el
@@ -16,6 +16,7 @@ Copying files (->) and directories (=>)
     gptel-oauth.el -> gptel-oauth.el
     gptel-ollama.el -> gptel-ollama.el
     gptel-openai-extras.el -> gptel-openai-extras.el
+    gptel-openai-oauth.el -> gptel-openai-oauth.el
     gptel-openai-responses.el -> gptel-openai-responses.el
     gptel-openai.el -> gptel-openai.el
     gptel-org.el -> gptel-org.el
@@ -23,24 +24,25 @@ Copying files (->) and directories (=>)
     gptel-rewrite.el -> gptel-rewrite.el
     gptel-transient.el -> gptel-transient.el
     gptel.el -> gptel.el
-Created gptel-20260517.947.tar containing:
-  gptel-20260517.947/
-  gptel-20260517.947/gptel-anthropic.el
-  gptel-20260517.947/gptel-bedrock.el
-  gptel-20260517.947/gptel-context.el
-  gptel-20260517.947/gptel-gemini.el
-  gptel-20260517.947/gptel-gh.el
-  gptel-20260517.947/gptel-integrations.el
-  gptel-20260517.947/gptel-kagi.el
-  gptel-20260517.947/gptel-oauth.el
-  gptel-20260517.947/gptel-ollama.el
-  gptel-20260517.947/gptel-openai-extras.el
-  gptel-20260517.947/gptel-openai-responses.el
-  gptel-20260517.947/gptel-openai.el
-  gptel-20260517.947/gptel-org.el
-  gptel-20260517.947/gptel-pkg.el
-  gptel-20260517.947/gptel-request.el
-  gptel-20260517.947/gptel-rewrite.el
-  gptel-20260517.947/gptel-transient.el
-  gptel-20260517.947/gptel.el
-Built gptel in 4.732s, finished at 2026-05-17T09:56:18+0000
+Created gptel-20260517.1140.tar containing:
+  gptel-20260517.1140/
+  gptel-20260517.1140/gptel-anthropic.el
+  gptel-20260517.1140/gptel-bedrock.el
+  gptel-20260517.1140/gptel-context.el
+  gptel-20260517.1140/gptel-gemini.el
+  gptel-20260517.1140/gptel-gh.el
+  gptel-20260517.1140/gptel-integrations.el
+  gptel-20260517.1140/gptel-kagi.el
+  gptel-20260517.1140/gptel-oauth.el
+  gptel-20260517.1140/gptel-ollama.el
+  gptel-20260517.1140/gptel-openai-extras.el
+  gptel-20260517.1140/gptel-openai-oauth.el
+  gptel-20260517.1140/gptel-openai-responses.el
+  gptel-20260517.1140/gptel-openai.el
+  gptel-20260517.1140/gptel-org.el
+  gptel-20260517.1140/gptel-pkg.el
+  gptel-20260517.1140/gptel-request.el
+  gptel-20260517.1140/gptel-rewrite.el
+  gptel-20260517.1140/gptel-transient.el
+  gptel-20260517.1140/gptel.el
+Built gptel in 4.872s, finished at 2026-05-17T14:57:29+0000
