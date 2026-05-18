@@ -12,7 +12,7 @@
 Read-Eval-Print Loops (REPLs) running inside a terminal emulator backend within
 Emacs. It allows you to easily configure how Emacs communicates with different
 REPLs, leveraging the capabilities of fully-featured terminal emulators like
-`term`, `vterm`, or `eat`.
+`term`, `vterm`, `eat`, or `ghostel`.
 
 Instead of relying on Emacs's built-in "dumb" terminal (`comint-mode`),
 `termint` runs REPLs in a full terminal emulator, enabling features like
@@ -27,8 +27,8 @@ sessions, send code snippets, source files, and manage the REPL window.
 
 - Flexible REPL Definition: Define interactions for various REPLs using the
   `termint-define` macro.
-- Multiple Backends: Supports `term`, `vterm`, and `eat` as terminal emulator
-  backends. Configure your preferred backend using `termint-backend`.
+- Multiple Backends: Supports `term`, `vterm`, `eat`, and `ghostel` as terminal
+  emulator backends. Configure your preferred backend using `termint-backend`.
 - Customizable Interaction: Control aspects like bracketed paste mode, start/end
   patterns for sending code (with different behaviour for single vs. multi-line
   input), and code preprocessing.
@@ -63,15 +63,15 @@ Choose your preferred terminal backend by customizing the `termint-backend`
 variable:
 
 ```emacs-lisp
-;; Choose one: 'term, 'vterm, or 'eat
+;; Choose one: 'term, 'vterm, 'eat, or 'ghostel
 (setq termint-backend 'eat)
 ```
 
-Make sure the corresponding backend package (`vterm` or `eat`) is installed if
-you choose it. `term` is built-in.
+Make sure the corresponding backend package (`vterm`, `eat`, or `ghostel`) is
+installed if you choose it. `term` is built-in.
 
-We recommend using `eat` or `vterm` due to their superior performance compared
-to the built-in `term`.
+We recommend using `eat`, `ghostel`, or `vterm` due to their superior
+performance compared to the built-in `term`.
 
 ## Usage
 
