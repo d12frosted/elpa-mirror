@@ -2,7 +2,8 @@ termint provides a flexible way to define and manage interactions
 with REPLs and CLI apps running inside a terminal emulator backend
 within Emacs.  It allows you to easily configure how Emacs
 communicates with different REPLs, leveraging the capabilities of
-fully-featured terminal emulators like `term', `vterm', or `eat'.
+fully-featured terminal emulators like `term', `vterm', `eat', or
+`ghostel'.
 
 Instead of relying on Emacs’s built-in “dumb” terminal
 (`comint-mode'), termint runs REPLs in a full terminal emulator,
