@@ -6,9 +6,15 @@ buffer, and user-facing commands.
 
 Usage:
 
-  M-x ghostel          Open a new terminal
-  M-x ghostel-project  Open a terminal in the current project root
-  M-x ghostel-other    Switch to next terminal or create one
+  M-x ghostel               Open a new terminal
+  M-x ghostel-project       Open a terminal in the current project root
+  M-x ghostel-other         Switch to next terminal or create one
+  M-x ghostel-next / ghostel-previous
+                            Cycle through all ghostel buffers
+  M-x ghostel-list-buffers  Pick a ghostel buffer to switch to
+  M-x ghostel-project-next / ghostel-project-previous /
+      ghostel-project-list-buffers
+                            Same, scoped to the current project
 
 Key bindings in the terminal buffer:
 
