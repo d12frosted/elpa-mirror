@@ -434,6 +434,14 @@
       (:maintainer "Clemens Radermacher" . "clemera@posteo.net")
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "ee4a0ee506c47666714cd61649334936d67e5a43"))])
+ (cm-mode
+  . [(1 10) ((emacs (25 1)) (cl-lib (0 5)))
+     "Minor mode for CriticMarkup" tar
+     ((:keywords "text" "markdown")
+      (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
+      (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
+      (:url . "https://elpa.gnu.org/packages/cm-mode.html")
+      (:commit . "a5816175548a821bf62d374b40d6974e4956c44b"))])
  (cobol-mode
   . [(1 1) ((cl-lib (0 5))) "Mode for editing COBOL code" tar
      ((:keywords "languages")
