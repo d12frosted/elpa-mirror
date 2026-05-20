@@ -1305,13 +1305,13 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "34d8b04bef350b270f52dc4defc9bac3e9617bf0"))])
  (forgejo
-  . [(0 2 1) ((emacs (29 1)) (keymap-popup (0 2 1)))
+  . [(0 2 2) ((emacs (29 1)) (keymap-popup (0 2 1)))
      "Emacs Forgejo Front-end" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-forgejo")
       (:keywords "tools" "vc" "git" "forgejo")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "a1ad09ab3fb0363b2e25431dad3b82be9ca1735b"))])
+      (:commit . "72858e17f5a2102563acf4aee43699f4c1470fe0"))])
  (frame-tabs
   . [(1 1) nil "show buffer tabs in side window" tar
      ((:keywords "frames" "tabs")

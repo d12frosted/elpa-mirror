@@ -112,19 +112,45 @@ Emacs front-end for [Forgejo] instances (Codeberg, self-hosted, etc.).
   └────
 
 
-3 Comparison with other forgejo clients
-═══════════════════════════════════════
+2.4 Bug reference integration
+─────────────────────────────
 
-3.1 fj.el
-─────────
+  `forgejo-browse-mode' intercepts Forgejo URLs and opens them in
+  forgejo.el instead of the browser.  Hook it into `bug-reference-mode'
+  so that `#N' references in source files, ERC, and vc/magit buffers
+  open directly in forgejo.el:
 
-  • fj.el takes a direct-API approach while emacs-forgejo uses a local
-    SQLite cache as source of truth.
-  • fj.el supports the fork/PR workflow while emacs-forgejo supports
-    AGit-Flow.
+  ┌────
+  │ (add-hook 'bug-reference-mode-hook #'forgejo-browse-mode)
+  │ (add-hook 'bug-reference-prog-mode-hook #'forgejo-browse-mode)
+  └────
+
+  Enable `bug-reference-mode' in buffers where you want `#N' references
+  (see [Bug Reference]):
+
+  ┌────
+  │ (add-hook 'prog-mode-hook #'bug-reference-prog-mode)
+  │ (add-hook 'log-view-mode-hook #'bug-reference-mode)
+  │ (add-hook 'vc-annotate-mode-hook #'bug-reference-mode)
+  │ (add-hook 'magit-revision-mode-hook #'bug-reference-mode)
+  └────
+
+  You can also toggle it per-buffer with `M-x forgejo-browse-mode'.
+
+  For ERC/rcirc, configure `#N' references per channel:
+
+  ┌────
+  │ (add-to-list 'bug-reference-setup-from-irc-alist
+  │              '("#guix" "Libera.Chat"
+  │                "\\(#\\([0-9]+\\)\\)\\>"
+  │                "https://codeberg.org/guix/guix/issues/%s"))
+  └────
 
 
-4 Contributing
+[Bug Reference] <info:emacs#Bug Reference>
+
+
+3 Contributing
 ══════════════
 
   This project is part of GNU ELPA.
@@ -140,7 +166,7 @@ Emacs front-end for [Forgejo] instances (Codeberg, self-hosted, etc.).
 [#17] <https://codeberg.org/thanosapollo/emacs-forgejo/issues/17>
 
 
-5 Screenshots
+4 Screenshots
 ═════════════
 
   <https://thanosapollo.org/images/emacs-forgejo--issue-01.png>

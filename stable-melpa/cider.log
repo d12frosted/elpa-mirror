@@ -2,10 +2,10 @@
  • Building package cider
 From https://github.com/clojure-emacs/cider
 Updating /mnt/store/melpa/working/cider/
-Checking out e0074ce3a6c9c3977b9e7f7b81ca1c76a5ede627
+Checking out b4a83d762fee60f68dd34852479c32a527a73906
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cider/
-  to /tmp/cider-qUfhVZ/cider-20260518.2116/
+  to /tmp/cider-Ebt2A7/cider-20260520.713/
   ! lisp/cider-apropos.el -> cider-apropos.el
   ! lisp/cider-browse-ns.el -> cider-browse-ns.el
   ! lisp/cider-browse-spec.el -> cider-browse-spec.el
@@ -53,54 +53,54 @@ Copying files (->) and directories (=>)
   ! lisp/nrepl-bencode.el -> nrepl-bencode.el
   ! lisp/nrepl-client.el -> nrepl-client.el
   ! lisp/nrepl-dict.el -> nrepl-dict.el
-Created cider-20260518.2116.tar containing:
-  cider-20260518.2116/
-  cider-20260518.2116/cider-apropos.el
-  cider-20260518.2116/cider-browse-ns.el
-  cider-20260518.2116/cider-browse-spec.el
-  cider-20260518.2116/cider-cheatsheet.el
-  cider-20260518.2116/cider-classpath.el
-  cider-20260518.2116/cider-client.el
-  cider-20260518.2116/cider-cljs.el
-  cider-20260518.2116/cider-clojuredocs.el
-  cider-20260518.2116/cider-common.el
-  cider-20260518.2116/cider-compilation.el
-  cider-20260518.2116/cider-completion-context.el
-  cider-20260518.2116/cider-completion.el
-  cider-20260518.2116/cider-connection.el
-  cider-20260518.2116/cider-debug.el
-  cider-20260518.2116/cider-doc.el
-  cider-20260518.2116/cider-docstring.el
-  cider-20260518.2116/cider-eldoc.el
-  cider-20260518.2116/cider-endpoint.el
-  cider-20260518.2116/cider-eval.el
-  cider-20260518.2116/cider-find.el
-  cider-20260518.2116/cider-format.el
-  cider-20260518.2116/cider-inspector.el
-  cider-20260518.2116/cider-inspiration.el
-  cider-20260518.2116/cider-jack-in.el
-  cider-20260518.2116/cider-log.el
-  cider-20260518.2116/cider-macroexpansion.el
-  cider-20260518.2116/cider-mode.el
-  cider-20260518.2116/cider-ns.el
-  cider-20260518.2116/cider-overlays.el
-  cider-20260518.2116/cider-pkg.el
-  cider-20260518.2116/cider-popup.el
-  cider-20260518.2116/cider-profile.el
-  cider-20260518.2116/cider-repl-history.el
-  cider-20260518.2116/cider-repl.el
-  cider-20260518.2116/cider-resolve.el
-  cider-20260518.2116/cider-scratch.el
-  cider-20260518.2116/cider-selector.el
-  cider-20260518.2116/cider-session.el
-  cider-20260518.2116/cider-stacktrace.el
-  cider-20260518.2116/cider-test.el
-  cider-20260518.2116/cider-tracing.el
-  cider-20260518.2116/cider-util.el
-  cider-20260518.2116/cider-xref-backend.el
-  cider-20260518.2116/cider-xref.el
-  cider-20260518.2116/cider.el
-  cider-20260518.2116/nrepl-bencode.el
-  cider-20260518.2116/nrepl-client.el
-  cider-20260518.2116/nrepl-dict.el
-Built cider in 7.078s, finished at 2026-05-20T05:24:14+0000
+Created cider-20260520.713.tar containing:
+  cider-20260520.713/
+  cider-20260520.713/cider-apropos.el
+  cider-20260520.713/cider-browse-ns.el
+  cider-20260520.713/cider-browse-spec.el
+  cider-20260520.713/cider-cheatsheet.el
+  cider-20260520.713/cider-classpath.el
+  cider-20260520.713/cider-client.el
+  cider-20260520.713/cider-cljs.el
+  cider-20260520.713/cider-clojuredocs.el
+  cider-20260520.713/cider-common.el
+  cider-20260520.713/cider-compilation.el
+  cider-20260520.713/cider-completion-context.el
+  cider-20260520.713/cider-completion.el
+  cider-20260520.713/cider-connection.el
+  cider-20260520.713/cider-debug.el
+  cider-20260520.713/cider-doc.el
+  cider-20260520.713/cider-docstring.el
+  cider-20260520.713/cider-eldoc.el
+  cider-20260520.713/cider-endpoint.el
+  cider-20260520.713/cider-eval.el
+  cider-20260520.713/cider-find.el
+  cider-20260520.713/cider-format.el
+  cider-20260520.713/cider-inspector.el
+  cider-20260520.713/cider-inspiration.el
+  cider-20260520.713/cider-jack-in.el
+  cider-20260520.713/cider-log.el
+  cider-20260520.713/cider-macroexpansion.el
+  cider-20260520.713/cider-mode.el
+  cider-20260520.713/cider-ns.el
+  cider-20260520.713/cider-overlays.el
+  cider-20260520.713/cider-pkg.el
+  cider-20260520.713/cider-popup.el
+  cider-20260520.713/cider-profile.el
+  cider-20260520.713/cider-repl-history.el
+  cider-20260520.713/cider-repl.el
+  cider-20260520.713/cider-resolve.el
+  cider-20260520.713/cider-scratch.el
+  cider-20260520.713/cider-selector.el
+  cider-20260520.713/cider-session.el
+  cider-20260520.713/cider-stacktrace.el
+  cider-20260520.713/cider-test.el
+  cider-20260520.713/cider-tracing.el
+  cider-20260520.713/cider-util.el
+  cider-20260520.713/cider-xref-backend.el
+  cider-20260520.713/cider-xref.el
+  cider-20260520.713/cider.el
+  cider-20260520.713/nrepl-bencode.el
+  cider-20260520.713/nrepl-client.el
+  cider-20260520.713/nrepl-dict.el
+Built cider in 6.903s, finished at 2026-05-20T10:30:19+0000
