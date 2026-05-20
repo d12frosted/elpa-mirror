@@ -1425,18 +1425,13 @@ Table of Contents
 
   Consult is a community effort, please participate in the discussions.
   Contributions are welcome, but you may want to discuss potential
-  contributions first. Since this package is part of [GNU ELPA]
-  contributions require a copyright assignment to the FSF.
+  contributions first. If you have a proposal, take a look at the
+  [Consult issue tracker] and the [Consult wishlist]. There have been
+  many prior feature discussions. Please search through the issue
+  tracker, maybe your issue or feature request has already been
+  discussed. You can contribute to the [Consult wiki], in case you want
+  to share small configuration or command snippets.
 
-  If you have a proposal, take a look at the [Consult issue tracker] and
-  the [Consult wishlist]. There have been many prior feature
-  discussions. Please search through the issue tracker, maybe your issue
-  or feature request has already been discussed. You can contribute to
-  the [Consult wiki], in case you want to share small configuration or
-  command snippets.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/consult.html>
 
 [Consult issue tracker] <https://github.com/minad/consult/issues>
 

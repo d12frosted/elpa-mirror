@@ -22,7 +22,6 @@ Table of Contents
 4. Distance measurement
 5. Commands and Key Bindings
 6. Related projects
-7. Contributions
 
 
 1 Features
@@ -46,13 +45,13 @@ Table of Contents
 2 Configuration
 ═══════════════
 
-  The package is available on GNU ELPA and can be installed with
-  `package-install'.  Note that Osm.el requires Emacs 29 and depends on
-  the external `curl' program.  Emacs must be built with `libxml',
-  `librsvg', `libjpeg', `libpng' and `libwebp' support.  Emacs 30 comes
+  The package is available from [ELPA] or [MELPA] and can be installed
+  with `package-install'. Note that Osm.el requires Emacs 29 and depends
+  on the external `curl' program. Emacs must be built with `libxml',
+  `librsvg', `libjpeg', `libpng' and `libwebp' support. Emacs 30 comes
   with a native JSON parser, while on Emacs 29, `libjansson' is
   needed. The following is an example configuration which relies on
-  `use-package'.  Please take a look at the [OpenStreetMap Wiki] and the
+  `use-package'. Please take a look at the [OpenStreetMap Wiki] and the
   [Osm.el Wiki] for additional tile server configurations, e.g., Google
   Maps for satellite and aerial maps.
 
@@ -78,6 +77,10 @@ Table of Contents
   │ )
   └────
 
+
+[ELPA] <https://elpa.gnu.org/packages/osm.html>
+
+[MELPA] <https://melpa.org/#/osm>
 
 [OpenStreetMap Wiki]
 <https://wiki.openstreetmap.org/wiki/Raster_tile_providers>
@@ -211,13 +214,3 @@ Table of Contents
   • <https://github.com/jd/google-maps.el>
   • <https://github.com/emacsattic/org-osm-link>
   • <https://github.com/mkcms/gpx-mode>
-
-
-7 Contributions
-═══════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/osm.html>

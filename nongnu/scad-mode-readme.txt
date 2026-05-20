@@ -29,9 +29,14 @@
 3 Installation
 ══════════════
 
-  Install via `M-x package-install RET scad-mode RET' from NonGNU ELPA
-  or MELPA.  After the installation `*.scad' files will be opened with
+  Install via `M-x package-install RET scad-mode RET' from [ELPA] or
+  [MELPA].  After the installation `*.scad' files will be opened with
   `scad-mode'.
+
+
+[ELPA] <https://elpa.nongnu.org/nongnu/scad-mode.html>
+
+[MELPA] <https://melpa.org/#/scad-mode>
 
 
 4 Related packages

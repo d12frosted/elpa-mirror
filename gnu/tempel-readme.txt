@@ -26,7 +26,6 @@ Table of Contents
 8. Binding important templates to a key
 9. LSP integration
 10. Alternatives
-11. Contributions
 
 
 1 Template expansion
@@ -67,7 +66,7 @@ Table of Contents
 2 Configuration
 ═══════════════
 
-  The package is available on GNU ELPA and MELPA and can be installed
+  The package is available on [ELPA] and [MELPA] and can be installed
   with `package-install'. The following example configuration relies on
   `use-package'. For some ready-made templates check out the package
   [tempel-collection]. We appreciate if more templates are contributed
@@ -117,6 +116,10 @@ Table of Contents
   │   (global-corfu-mode))
   └────
 
+
+[ELPA] <https://elpa.gnu.org/packages/tempel.html>
+
+[MELPA] <https://melpa.org/#/tempel>
 
 [tempel-collection] <https://github.com/Crandel/tempel-collection>
 
@@ -580,13 +583,3 @@ Table of Contents
 [tempo-snippets.el] <https://nschum.de/src/emacs/tempo-snippets/>
 
 [yasnippet.el] <https://github.com/joaotavora/yasnippet>
-
-
-11 Contributions
-════════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/tempel.html>

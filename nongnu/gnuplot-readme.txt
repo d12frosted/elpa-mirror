@@ -24,9 +24,8 @@ or above.
 1 Installation
 ══════════════
 
-  The easiest way to install `gnuplot' is to directly get it from
-  [NonGNU ELPA] or [MELPA]. After configuring Emacs to use MELPA, you
-  should be able to install `gnuplot' by typing
+  The easiest way to install `gnuplot' is to directly get it from [ELPA]
+  or [MELPA]. You should be able to install `gnuplot' by typing
 
   ┌────
   │ M-x install-package RET gnuplot RET
@@ -38,9 +37,9 @@ or above.
   less featureful.
 
 
-[NonGNU ELPA] <https://elpa.nongnu.org/>
+[ELPA] <https://elpa.nongnu.org/>
 
-[MELPA] <http://melpa.org>
+[MELPA] <https://melpa.org>
 
 [gnuplot-mode] <https://github.com/mkmcc/gnuplot-mode>
 

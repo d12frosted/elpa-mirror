@@ -269,10 +269,9 @@
    Even if you want to split on spaces you might want to be able to
   escape those spaces or to enclose space in double quotes (as in shell
   argument parsing). For backslash-escaped spaces set
-  `orderless-component-separator' to the function
-  `orderless-escapable-split-on-space'; for shell-like double-quotable
-  space, set it to the standard Emacs function
-  `split-string-and-unquote'.
+  `orderless-component-separator' to the function `orderless-escapable';
+  for shell-like double-quotable space, set it to the standard Emacs
+  function `split-string-and-unquote'.
 
   If you are implementing a command for which you know you want a
   different separator for the components, bind

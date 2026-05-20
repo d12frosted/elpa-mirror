@@ -35,7 +35,6 @@ Table of Contents
 .. 2. Super-Capf - Merging multiple Capfs
 .. 3. Capf-Buster - Cache busting
 .. 4. Capf transformers
-4. Contributions
 
 
 [Corfu] <https://github.com/minad/corfu>
@@ -66,7 +65,7 @@ Table of Contents
 2 Configuration
 ═══════════════
 
-  Cape is available on GNU ELPA and MELPA. You can install the package
+  Cape is available on [ELPA] and [MELPA]. You can install the package
   with `package-install'. In the following we present a sample
   configuration based on the popular `use-package' macro.
 
@@ -121,6 +120,10 @@ Table of Contents
   │ )
   └────
 
+
+[ELPA] <https://elpa.gnu.org/packages/cape.html>
+
+[MELPA] <https://melpa.org/#/cape>
 
 ["Running Hooks" in the Elisp manual] <info:elisp#Running Hooks>
 
@@ -372,7 +375,7 @@ Table of Contents
   │                                        #'ignore-elisp-keywords)))
   │ 
   │ ;; Example 8: Catch errors with `cape-wrap-silent'.
-  │ (advice-add 'dabbrev-capf :around #'cape-wrap-silent)
+  │ (advice-add 'dabbrev-capf :around #'cape-wrap-silent) ;; Was necessary on Emacs 30
   │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent) ;; Was necessary on Emacs 28
   └────
 
@@ -382,13 +385,3 @@ Table of Contents
 [Corfu issue tracker] <https://github.com/minad/corfu/issues>
 
 [Corfu wiki.] <https://github.com/minad/corfu/wiki>
-
-
-4 Contributions
-═══════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/cape.html>

@@ -25,7 +25,6 @@ Table of Contents
 3. Adding custom annotators or classifiers
 4. Disabling annotators, builtin or lightweight annotators
 5. Icons in the minibuffer
-6. Contributions
 
 
 [Marginalia] <https://en.wikipedia.org/wiki/Marginalia>
@@ -34,10 +33,11 @@ Table of Contents
 1 Configuration
 ═══════════════
 
-  It is recommended to use Marginalia together with either the
-  [Vertico], [Mct], [Icomplete] or the default completion
-  UI. Furthermore Marginalia can be combined with [Embark] for action
-  support and [Consult], which provides many useful commands.
+  The package is available from [ELPA] or [MELPA]. You can install the
+  package with `package-install'. It is recommended to use Marginalia
+  together with either the [Vertico], [Mct], [Icomplete] or the default
+  completion UI. Furthermore Marginalia can be combined with [Embark]
+  for action support and [Consult], which provides many useful commands.
 
   ┌────
   │ ;; Enable rich annotations using the Marginalia package
@@ -57,6 +57,10 @@ Table of Contents
   │   (marginalia-mode))
   └────
 
+
+[ELPA] <https://elpa.gnu.org/packages/marginalia.html>
+
+[MELPA] <https://melpa.org/#/marginalia>
 
 [Vertico] <https://github.com/minad/vertico>
 
@@ -246,13 +250,3 @@ Table of Contents
 
 [nerd-icons-completion]
 <https://github.com/rainstormstudio/nerd-icons-completion>
-
-
-6 Contributions
-═══════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/marginalia.html>

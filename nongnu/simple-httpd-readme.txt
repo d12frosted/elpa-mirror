@@ -1,83 +1,86 @@
-Use `httpd-start' to start the web server. Files are served from
-`httpd-root' on port `httpd-port' using `httpd-ip-family' at host
-`httpd-host'. While the root can be changed at any time, the server
-needs to be restarted in order for a port change to take effect.
+                             ━━━━━━━━━━━━━━
+                              SIMPLE-HTTPD
+                             ━━━━━━━━━━━━━━
 
-Everything is performed by servlets, including serving
-files. Servlets are enabled by setting `httpd-servlets' to true
-(default). Servlets are four-parameter functions that begin with
-"httpd/" where the trailing component specifies the initial path on
-the server. For example, the function `httpd/hello-world' will be
-called for the request "/hello-world" and "/hello-world/foo".
 
-The default servlet `httpd/' is the one that serves files from
-`httpd-root' and can be turned off through redefinition or setting
-`httpd-serve-files' to nil. It is used even when `httpd-servlets'
-is nil.
+A simple Emacs web server.
 
-The four parameters for a servlet are process, URI path, GET/POST
-arguments (alist), and the full request object (header
-alist). These are ordered by general importance so that some can be
-ignored. Two macros are provided to help with writing servlets.
+This used to be `httpd.el' but there are already several of these out
+there already of varying usefulness. The server can serve files,
+directory listings and custom servlets. Client requests are sanitized,
+but the server is vulnerable to denial of service attacks, so it should
+only be used for local development or automation. We make no guarantees
+regarding security.
 
- * `with-httpd-buffer' -- Creates a temporary buffer that is
-   automatically served to the client at the end of the body.
-   Additionally, `standard-output' is set to this output
-   buffer. For example, this servlet says hello,
+This package is available on [MELPA] and [ELPA].
 
-    (defun httpd/hello-world (proc path &rest args)
-      (with-httpd-buffer proc "text/plain"
-        (insert "hello, " (file-name-nondirectory path))))
 
-This servlet be viewed at http://localhost:8080/hello-world/Emacs
+[MELPA] <https://melpa.org/>
 
-* `defservlet' -- Similar to the above macro but totally hides the
-  process object from the servlet itself. The above servlet can be
-  re-written identically like so,
+[ELPA] <https://nongnu.elpa.org/>
 
-    (defservlet hello-world text/plain (path)
-      (insert "hello, " (file-name-nondirectory path)))
 
-Note that `defservlet' automatically sets `httpd-current-proc'. See
-below.
+1 Usage
+═══════
 
-The "function parameters" part can be left empty or contain up to
-three parameters corresponding to the final three servlet
-parameters. For example, a servlet that shows *scratch* and doesn't
-need parameters,
+  Once loaded, there are only two interactive functions to worry about:
+  `httpd-start' and `httpd-stop'. By default, files are served from
+  `httpd-root' on port `httpd-port'. To disable, set `httpd-serve-files'
+  to `nil'. Directory listings are enabled by default but can be
+  disabled by setting `httpd-listings' to `nil'.
 
-    (defservlet scratch text/plain ()
-      (insert-buffer-substring (get-buffer-create "*scratch*")))
+  ┌────
+  │ (require 'simple-httpd)
+  │ (setq httpd-root "/var/www")
+  │ (httpd-start)
+  └────
 
-A higher level macro `defservlet*' wraps this lower-level
-`defservlet' macro, automatically binding variables to components
-of the request. For example, this binds parts of the request path
-and one query parameter. Request components not provided by the
-client are bound to nil.
 
-    (defservlet* packages/:package/:version text/plain (verbose)
-      (insert (format "%s\n%s\n" package version))
-      (princ (get-description package version))
-      (when verbose
-        (insert (format "%S" (get-dependencies package version)))))
+2 Servlets
+══════════
 
-It would be accessed like so,
+  Servlets can be defined with `httpd-servlet'. They are enabled by
+  default but can be disabled by setting `httpd-servlets' to `nil'. This
+  one creates at servlet at `/hello-world' that says hello.
 
-    http://example.com/packages/foobar/1.0?verbose=1
+  ┌────
+  │ (httpd-servlet hello-world text/plain (path)
+  │   (insert "hello, " (file-name-nondirectory path)))
+  └────
 
-Some support functions are available for servlets for more
-customized responses.
+  Another example at `/greeting/<name>' with optional parameter
+  `?greeting=<greeting>'.
 
-  * `httpd-send-file'   -- serve a file with proper caching
-  * `httpd-redirect'    -- redirect the browser to another url
-  * `httpd-send-header' -- send custom headers
-  * `httpd-error'       -- report an error to the client
-  * `httpd-log'         -- log an object to *httpd*
+  ┌────
+  │ (httpd-servlet* greeting/:name text/plain ((greeting "hi" greeting-p))
+  │   (insert (format "%s, %s (provided: %s)" greeting name greeting-p)))
+  └────
 
-Some of these functions require a process object, which isn't
-passed to `defservlet' servlets. Use t in place of the process
-argument to use `httpd-current-proc' (like `standard-output').
+  See the comment header in `simple-httpd.el' for full details.
 
-If you just need to serve static from some location under some
-route on the server, use `httpd-def-file-servlet'. It expands into
-a `defservlet' that serves files.
+
+3 Unit tests
+════════════
+
+  The unit tests can be run with `make test'. The tests do some mocking
+  to avoid using network code during testing.
+
+
+4 Related packages
+══════════════════
+
+  Packages built on simple-httpd:
+
+  • [skewer-mode]
+  • [impatient-mode]
+  • [airplay]
+  • [elfeed-web]
+
+
+[skewer-mode] <https://github.com/skeeto/skewer-mode>
+
+[impatient-mode] <https://github.com/netguy204/imp.el>
+
+[airplay] <https://github.com/gongo/airplay-el>
+
+[elfeed-web] <https://github.com/skeeto/elfeed>

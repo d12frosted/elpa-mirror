@@ -17,13 +17,13 @@ opens `DICOMDIR' directory files or DICOM image files interactively.
 1 Installation
 ══════════════
 
-  Dicom.el is available from [GNU ELPA]. You can install it directly via
-  `M-x package-install RET dicom RET'. After installation, you can open
+  Dicom.el is available from [ELPA] or [MELPA] and can be installed via
+  `M-x package-install RET dicom RET'.  After installation, you can open
   `DICOMDIR' and DICOM image files.
 
   Emacs must be compiled with support for PNG, SVG and XML. The package
   relies on external programs from the [DCMTK] DICOM toolkit, which is
-  widely available on GNU/Linux distributions.
+  widely available on Linux distributions.
 
   • `dcm2xml' and `dcm2img' from the [DCMTK] DICOM toolkit
   • `magick' from [ImageMagick]
@@ -31,7 +31,9 @@ opens `DICOMDIR' directory files or DICOM image files interactively.
   • `mpv' for video playing (optional)
 
 
-[GNU ELPA] <https://elpa.gnu.org/packages/dicom.html>
+[ELPA] <https://elpa.gnu.org/packages/dicom.html>
+
+[MELPA] <https://melpa.org/#/dicom>
 
 [DCMTK] <https://dcmtk.org/en/dcmtk/>
 
@@ -48,13 +50,3 @@ opens `DICOMDIR' directory files or DICOM image files interactively.
   variety of underlying image formats and compressions, which might not
   be supported by ImageMagick. In such cases, any help improving the
   package is welcome.
-
-
-3 Contributions
-═══════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/dicom.html>

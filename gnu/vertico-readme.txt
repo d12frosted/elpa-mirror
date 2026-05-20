@@ -30,9 +30,8 @@ Table of Contents
 7. Child frames and Popups
 8. Alternatives
 9. Resources
-10. Contributions
-11. Debugging Vertico
-12. Problematic completion commands
+10. Debugging Vertico
+11. Problematic completion commands
 .. 1. `org-refile'
 .. 2. `org-agenda-filter' and `org-tags-view'
 .. 3. `completion-table-dynamic'
@@ -76,12 +75,15 @@ Table of Contents
 2 Installation
 ══════════════
 
-  Vertico is available from [GNU ELPA]. You can install it directly via
-  `M-x package-install RET vertico RET'.  After installation, activate
-  the global minor mode with `M-x vertico-mode RET'.
+  Vertico is available from [ELPA] or [MELPA]. You can install it
+  directly via `M-x package-install RET vertico RET'.  After
+  installation, activate the global minor mode with `M-x vertico-mode
+  RET'.
 
 
-[GNU ELPA] <https://elpa.gnu.org/packages/vertico.html>
+[ELPA] <https://elpa.gnu.org/packages/vertico.html>
+
+[MELPA] <https://melpa.org/#/vertico>
 
 
 3 Key bindings
@@ -313,12 +315,11 @@ Table of Contents
 
   We maintain small extension packages to Vertico in this repository in
   the subdirectory [extensions/]. The extensions are installed together
-  with Vertico if you pull the package from ELPA. The extensions are
-  inactive by default and can be enabled manually if
-  desired. Furthermore it is possible to install all of the files
-  separately, both `vertico.el' and the `vertico-*.el'
+  with Vertico.  The extensions are inactive by default and can be
+  enabled manually if desired.  Furthermore it is possible to install
+  all of the files separately, both `vertico.el' and the `vertico-*.el'
   extensions. Currently the following extensions come with the Vertico
-  ELPA package:
+  package:
 
   • [vertico-buffer]: `vertico-buffer-mode' to display Vertico like a
     regular buffer.
@@ -727,17 +728,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 <https://www.youtube.com/watch?v=SOxlQ7ogplA&t=1952s>
 
 
-10 Contributions
-════════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/vertico.html>
-
-
-11 Debugging Vertico
+10 Debugging Vertico
 ════════════════════
 
   Vertico will automatically print a stack trace to the `*Messages*'
@@ -745,7 +736,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   down the exact code location which caused the error.
 
 
-12 Problematic completion commands
+11 Problematic completion commands
 ══════════════════════════════════
 
   Vertico is robust in most scenarios. However some completion commands
@@ -754,7 +745,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   other UIs and require minor workarounds.
 
 
-12.1 `org-refile'
+11.1 `org-refile'
 ─────────────────
 
   `org-refile' uses `org-olpath-completing-read' to complete the outline
@@ -800,7 +791,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-12.2 `org-agenda-filter' and `org-tags-view'
+11.2 `org-agenda-filter' and `org-tags-view'
 ────────────────────────────────────────────
 
   Similar to `org-refile', the commands `org-agenda-filter' and
@@ -822,7 +813,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-12.3 `completion-table-dynamic'
+11.3 `completion-table-dynamic'
 ───────────────────────────────
 
   Dynamic completion tables (`completion-table-dynamic',
@@ -845,7 +836,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-12.4 Submitting the empty string
+11.4 Submitting the empty string
 ────────────────────────────────
 
   The commands `multi-occur', `auto-insert', `bbdb-create' read multiple
@@ -873,7 +864,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   possible by pressing `RET' only.
 
 
-12.5 `tmm-menubar' (Fixed on Emacs 31)
+11.5 `tmm-menubar' (Fixed on Emacs 31)
 ──────────────────────────────────────
 
   *NOTE*: I have implemented a fix for this problem upstream in Emacs,
@@ -895,7 +886,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 [bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
 
 
-12.6 `ffap-menu' (Fixed on Emacs 31)
+11.6 `ffap-menu' (Fixed on Emacs 31)
 ────────────────────────────────────
 
   *NOTE*: I have implemented a fix for this problem upstream in Emacs,
@@ -918,7 +909,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 [bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
 
 
-12.7 Tramp hostname and username completion (Fixed on Emacs 29)
+11.7 Tramp hostname and username completion (Fixed on Emacs 29)
 ───────────────────────────────────────────────────────────────
 
   *NOTE:* On Emacs 29.2 and Tramp 2.7 the workarounds described in this

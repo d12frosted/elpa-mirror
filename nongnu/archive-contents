@@ -844,13 +844,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "6bb82ce89ed93222dd919bc65e0f46ac4aa13479"))])
  (gnuplot
-  . [(0 11) ((emacs (28 1)) (compat (30)))
+  . [(0 12) ((emacs (28 1)) (compat (31)))
      "Major-mode and interactive frontend for gnuplot" tar
      ((:url . "https://github.com/emacs-gnuplot/gnuplot")
       (:keywords "data" "gnuplot" "plotting")
       (:maintainer ("Maxime Tréca" . "maxime@gmail.com")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "f10d42221856e86c57dd5cc7400c078c021ba710"))])
+      (:commit . "2da2ef68d4861e2e5a5b1a81340b8d92b276a3a5"))])
  (go-mode
   . [(1 6 0) ((emacs (26 1)))
      "Major mode for the Go programming language" tar
@@ -1632,13 +1632,13 @@
       (:keywords "markup" "language" "css")
       (:commit . "aee28ea552dce5aade05d8a7f91514e6eb37e59f"))])
  (scad-mode
-  . [(98 0) ((emacs (29 1)) (compat (30)))
+  . [(99 0) ((emacs (29 1)) (compat (31)))
      "A major mode for editing OpenSCAD code" tar
      ((:url . "https://github.com/openscad/emacs-scad-mode")
       (:keywords "languages")
       (:maintainer ("Len Trigg" . "lenbok@gmail.com")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "546d1507cd131f55ca930de7ae1518884e8221f4"))])
+      (:commit . "8798dca7e919705bcbc35d4ab5639556827ccb6f"))])
  (scala-mode
   . [(1 1 1) ((emacs (25 1))) "Major mode for editing Scala" tar
      ((:url . "https://github.com/hvesalai/emacs-scala-mode")
@@ -1677,11 +1677,13 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "4e71f5b9199a0ad10017104a6b2bf5ef5f207dfc"))])
  (simple-httpd
-  . [(1 5 1) ((cl-lib (0 3))) "pure elisp HTTP server" tar
+  . [(1 6) ((emacs (27 1)) (compat (31))) "Pure Elisp HTTP server" tar
      ((:url . "https://github.com/skeeto/emacs-http-server")
-      (:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+      (:keywords "network" "comm")
+      (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
+		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "a5eb49a6567e33586fba15dd649d63ca6e964314"))])
+      (:commit . "5a9c69ae93ed5e2cdca98f51b41f6a6782091d74"))])
  (slime
   . [(2 32) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar

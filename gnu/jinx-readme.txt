@@ -45,7 +45,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
 1 Installation
 ══════════════
 
-  Jinx can be installed from GNU ELPA or MELPA directly with
+  Jinx can be installed from [ELPA] or [MELPA] directly with
   `package-install'.
 
   Your Emacs must be compiled with dynamic module support. Furthermore a
@@ -66,6 +66,11 @@ are listed in `jinx-camel-modes'. For these modes composite words in
 
   On Windows the installation of the native module may require manual
   intervention.
+
+
+[ELPA] <https://elpa.gnu.org/packages/jinx.html>
+
+[MELPA] <https://melpa.org/#/jinx>
 
 
 2 Configuration
@@ -244,13 +249,3 @@ are listed in `jinx-camel-modes'. For these modes composite words in
 
 [issue on Codeberg]
 <https://codeberg.org/ideasman42/emacs-spell-fu/issues/40>
-
-
-7 Contributions
-═══════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/jinx.html>

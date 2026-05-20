@@ -36,7 +36,7 @@
 2 Configuration
 ═══════════════
 
-  The package is available on GNU ELPA and MELPA. You can install the
+  The package is available from [ELPA] or [MELPA]. You can install the
   package with `package-install'. Then `org-modern' can be enabled
   manually in an Org buffer by invoking `M-x org-modern-mode'. In order
   to enable `org-modern' for all your Org buffers, add `org-modern-mode'
@@ -101,6 +101,10 @@
   (see Emacs [bug#76390]).
 
 
+[ELPA] <https://elpa.gnu.org/packages/org-modern.html>
+
+[MELPA] <https://melpa.org/#/org-modern>
+
 [bug#76390] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=76390>
 
 
@@ -158,13 +162,3 @@
 [org-bullets] <https://github.com/sabof/org-bullets>
 
 [org-modern-indent] <https://github.com/jdtsmith/org-modern-indent>
-
-
-5 Contributions
-═══════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/org-modern.html>

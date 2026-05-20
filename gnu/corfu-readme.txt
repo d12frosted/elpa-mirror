@@ -44,7 +44,6 @@ Table of Contents
 6. Complementary packages
 7. Alternatives
 8. Debugging Corfu
-9. Contributions
 
 
 [Vertico] <https://github.com/minad/vertico>
@@ -87,14 +86,16 @@ Table of Contents
 2 Installation
 ══════════════
 
-  Corfu is available from [GNU ELPA]. You can install it directly via
+  Corfu is available from [ELPA] or [MELPA] and can be installed via
   `M-x package-install RET corfu RET'.  After installation, activate the
-  global minor mode with `M-x global-corfu-mode RET'.  For completion
+  global minor mode with `M-x global-corfu-mode RET'. For completion
   press `M-TAB' (or `TAB') within a buffer. Auto completion is disabled
   by default for safety and unobtrusiveness.
 
 
-[GNU ELPA] <https://elpa.gnu.org/packages/corfu.html>
+[ELPA] <https://elpa.gnu.org/packages/corfu.html>
+
+[MELPA] <https://melpa.org/#/corfu>
 
 
 3 Key bindings
@@ -609,11 +610,11 @@ Table of Contents
 
   We maintain small extension packages to Corfu in this repository in
   the subdirectory [extensions/]. The extensions are installed together
-  with Corfu if you pull the package from ELPA. The extensions are
-  inactive by default and can be enabled manually if
-  desired. Furthermore it is possible to install all of the files
-  separately, both `corfu.el' and the `corfu-*.el' extensions. Currently
-  the following extensions come with the Corfu ELPA package:
+  with Corfu. The extensions are inactive by default and can be enabled
+  manually if desired.  Furthermore it is possible to install all of the
+  files separately, both `corfu.el' and the `corfu-*.el'
+  extensions. Currently the following extensions come with the Corfu
+  package:
 
   • [corfu-auto]: Auto completion is enabled if `corfu-auto' is set to
     `t'.
@@ -771,13 +772,3 @@ Table of Contents
 
 
 [Cape] <https://github.com/minad/cape>
-
-
-9 Contributions
-═══════════════
-
-  Since this package is part of [GNU ELPA] contributions require a
-  copyright assignment to the FSF.
-
-
-[GNU ELPA] <https://elpa.gnu.org/packages/corfu.html>
