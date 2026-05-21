@@ -2,21 +2,20 @@
             DENOTE-SILO: CONVENIENCE FUNCTIONS TO WORK WITH
                          MULTIPLE DENOTE SILOS
 
-                          Protesilaos Stavrou
+                              Protesilaos
                           info@protesilaos.com
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This manual, written by Protesilaos Stavrou, describes the customization
-options for the Emacs package called `denote-silo' (or
-`denote-silo.el'), and provides every other piece of information
-pertinent to it.
+This manual, written by Protesilaos, describes the customization options
+for the Emacs package called `denote-silo' (or `denote-silo.el'), and
+provides every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2025-10-17.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2026-05-20.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote-silo'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-silo>
@@ -49,7 +48,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2025 Free Software Foundation, Inc.
+  Copyright (C) 2023-2026 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -157,8 +156,8 @@ Table of Contents
      │    ;;;     (info "(emacs) Directory Variables")
      │ 
      │    ((nil . ((denote-directory . "/path/to/silo/")
-     │ 	    (denote-org-front-matter .
-     │ 	     "#+title:      %s
+     │             (denote-org-front-matter .
+     │              "#+title:      %s
      │ #+date:       %s
      │ #+filetags:   %s
      │ #+identifier: %s
@@ -175,9 +174,6 @@ Table of Contents
 
 3 Installation
 ══════════════
-
-
-
 
 3.1 GNU ELPA package
 ────────────────────
@@ -236,17 +232,17 @@ Table of Contents
   │   :ensure t
   │   ;; Bind these commands to key bindings of your choice.
   │   :commands ( denote-silo-create-note
-  │ 	      denote-silo-open-or-create
-  │ 	      denote-silo-select-silo-then-command
-  │ 	      denote-silo-dired
-  │ 	      denote-silo-cd )
+  │               denote-silo-open-or-create
+  │               denote-silo-select-silo-then-command
+  │               denote-silo-dired
+  │               denote-silo-cd )
   │   :config
   │   ;; Add your silos to this list.  By default, it only includes the
   │   ;; value of the variable `denote-directory'.
   │   (setq denote-silo-directories
-  │ 	(list denote-directory
-  │ 	      "~/Documents/personal/"
-  │ 	      "~/Documents/work/")))
+  │         (list denote-directory
+  │               "~/Documents/personal/"
+  │               "~/Documents/work/")))
   └────
 
 
@@ -257,10 +253,10 @@ Table of Contents
   matters.
 
   Author/maintainer
-        Protesilaos Stavrou.
+        Protesilaos.
 
   Ideas and/or user feedback
-        Daniel Kahlenberg.
+        Daniel Kahlenberg, Wilf-bog.
 
 
 6 GNU Free Documentation License

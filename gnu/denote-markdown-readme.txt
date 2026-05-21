@@ -2,21 +2,21 @@
             DENOTE-MARKDOWN: EXTENSIONS TO BETTER INTEGRATE
                           MARKDOWN WITH DENOTE
 
-                          Protesilaos Stavrou
+                              Protesilaos
                           info@protesilaos.com
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This manual, written by Protesilaos Stavrou, describes the customization
-options for the Emacs package called `denote-markdown' (or
+This manual, written by Protesilaos, describes the customization options
+for the Emacs package called `denote-markdown' (or
 `denote-markdown.el'), and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2025-10-17.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2026-05-20.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote-markdown'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-markdown>
@@ -223,7 +223,7 @@ Table of Contents
   matters.
 
   Author/maintainer
-        Protesilaos Stavrou.
+        Protesilaos.
 
 
 6 GNU Free Documentation License

@@ -2,20 +2,20 @@
              DENOTE-ORG: EXTENSIONS TO BETTER INTEGRATE ORG
                               WITH DENOTE
 
-                          Protesilaos Stavrou
+                              Protesilaos
                           info@protesilaos.com
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This manual, written by Protesilaos Stavrou, describes the customization
-options for the Emacs package called `denote' (or `denote.el'), and
-provides every other piece of information pertinent to it.
+This manual, written by Protesilaos, describes the customization options
+for the Emacs package called `denote' (or `denote.el'), and provides
+every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2025-10-17.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2026-05-20.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote-org'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-org>
@@ -56,7 +56,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2025 Free Software Foundation, Inc.
+  Copyright (C) 2022-2026 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -758,11 +758,11 @@ section 5
   matters.
 
   Author/maintainer
-        Protesilaos Stavrou.
+        Protesilaos.
   Contributions to code or the manual
-        Peter Prevos.
+        Peter Prevos, Vedang Manerikar.
   Ideas and user feedback
-        GCamp6, Matt Nolan.
+        GCamp6, Jung Han, Matt Nolan, Tonus.
 
 
 10 GNU Free Documentation License

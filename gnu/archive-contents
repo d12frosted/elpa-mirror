@@ -543,12 +543,12 @@
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:commit . "f046ebb91473830a174fb54e3dc8119bbe7e0c7c"))])
  (consult-denote
-  . [(0 4 2) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
+  . [(0 5 0) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
      ((:url . "https://github.com/protesilaos/consult-denote")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "122760ac3503f141625a2b3513d60c06c27cf84f"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "f12c9903a0aa5c534503d9daa07fa5057dc7133c"))])
  (consult-hoogle
   . [(0 7 0) ((emacs (28 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
@@ -710,26 +710,26 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "a763ec1e5c2987efea3ce2ee6d9c979f56ab6528"))])
  (denote
-  . [(4 1 3) ((emacs (28 1)))
+  . [(4 2 0) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "d86cb704260f9e4815d863eb4059514f4e587577"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "13b2164369dd772c467fc78439bde3ec6dde965f"))])
  (denote-journal
-  . [(0 2 2) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
      ((:url . "https://github.com/protesilaos/denote-journal")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "fdeacaa134e9de29a1888ad23d754b4ada3d8247"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "374224ad2b3162c1fa92bb9ecdb61f157a781c4b"))])
  (denote-markdown
-  . [(0 2 2) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0) ((emacs (28 1)) (denote (4 0 0)))
      "Extensions that better integrate Denote with Markdown" tar
      ((:url . "https://github.com/protesilaos/denote-markdown")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "b3d19ffc68d15471f5098149467745951db883b7"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "e46945b128b8ea7b3dd9e2c5af3f120045e9243a"))])
  (denote-menu
   . [(1 4 0) ((emacs (28 1)) (denote (3 0 0)))
      "View denote files in a tabulated list." tar
@@ -738,12 +738,12 @@
       (:authors ("Mohamed Suliman" . "sulimanm@tcd.ie"))
       (:commit . "247a9b66d67b3fe409eda8f896feae87546f5b4d"))])
  (denote-org
-  . [(0 2 1) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0) ((emacs (28 1)) (denote (4 0 0)))
      "Denote extensions for Org mode" tar
      ((:url . "https://github.com/protesilaos/denote-org")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "36f24f0f0f472e4cb50025ed62a1b32351d7d294"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "b6b788db84fbf0c918bce6b3ce65508dd651bb4c"))])
  (denote-review
   . [(1 0 7) ((emacs (28 1)) (denote (4 1 3)))
      "implements review process for denote notes" tar
@@ -761,19 +761,19 @@
       (:authors ("Lucas Quintana" . "lmq10@protonmail.com"))
       (:commit . "4df3e77a495b4f0df7fe56924509afe7f2fa735d"))])
  (denote-sequence
-  . [(0 2 0) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0) ((emacs (28 1)) (denote (4 0 0)))
      "Sequence notes or Folgezettel with Denote" tar
      ((:url . "https://github.com/protesilaos/denote-sequence")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "22bdb31f20dd49ee13f511b74a9ae7ba5f8c2ade"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "13e1b88df0928c16b38a7b4eafc70525c61a8c83"))])
  (denote-silo
-  . [(0 2 0) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for using Denote in multiple silos" tar
      ((:url . "https://github.com/protesilaos/denote-silo")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "5710b3f15e477c1b2f71ddb9c8cf719f9589f1cb"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "342d5e7e1bd63ce742a0362911c47da1ec63e868"))])
  (detached
   . [(0 10 1) ((emacs (27 1)))
      "A package to launch, and manage, detached processes" tar

@@ -2,20 +2,20 @@
              DENOTE-SEQUENCE: SEQUENCE NOTES OR FOLGEZETTEL
                               WITH DENOTE
 
-                          Protesilaos Stavrou
+                              Protesilaos
                           info@protesilaos.com
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This manual, written by Protesilaos Stavrou, describes the customization
-options for the Emacs package called `denote' (or `denote.el'), and
-provides every other piece of information pertinent to it.
+This manual, written by Protesilaos, describes the customization options
+for the Emacs package called `denote' (or `denote.el'), and provides
+every other piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2025-10-17.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2026-05-20.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 ⁃ Package name (GNU ELPA): `denote-sequence'
 ⁃ Official manual: <https://protesilaos.com/emacs/denote-sequence>
@@ -31,8 +31,8 @@ Table of Contents
 
 1. COPYING
 2. Sequence notes
-.. 1. Select a sequencing scheme for `denote-sequence-scheme'
-..... 1. Convert from one sequencing scheme to another
+.. 1. Select a sequence scheme for `denote-sequence-scheme'
+..... 1. Convert from one sequence scheme to another
 .. 2. Create parent, child, or sibling sequence notes
 .. 3. Find a relative of the current sequence
 .. 4. Link only to sequences
@@ -53,7 +53,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2025 Free Software Foundation, Inc.
+  Copyright (C) 2024-2026 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -68,11 +68,11 @@ Table of Contents
         copy and modify this GNU manual.”
 
 
-2 Write sequence notes or "folgezettel"
+2 Write sequence notes or “folgezettel”
 ═══════════════════════════════════════
 
   The `denote-sequence' package provides an optional extension to
-  `denote' for naming files with a sequencing scheme. The idea is to
+  `denote' for naming files with a sequence scheme. The idea is to
   establish hiearchical relationships between files, such that the
   contents of one logically follow or complement those of another.
 
@@ -109,62 +109,83 @@ Table of Contents
 
 [Create parent, child, or sibling sequence notes] See section 2.2
 
-2.1 Select a sequencing scheme for `denote-sequence-scheme'
-───────────────────────────────────────────────────────────
+2.1 Select a sequence scheme for `denote-sequence-scheme'
+─────────────────────────────────────────────────────────
 
-  The user option `denote-sequence-scheme' allows users to select either
-  the `numeric' scheme, which is like `1=1=2' or the `alphanumeric'
-  scheme, which is `1a2' for the same sequence ([Convert from one
-  sequencing scheme to another]):
+  The user option `denote-sequence-scheme' allows users to select among
+  the `numeric', `alphanumeric', and `alphanumeric-delimited' schemes,
+  as a symbol.
 
-  Numeric sequencing scheme
+  All schemes are mutually convertable ([Convert from one sequence
+  scheme to another]).
+
+  `numeric'
         A numeric sequence consists only of numbers. The level of depth
         is derived from the number of fields in the sequence, separated
         by the equals sign. Thus, the sequence `1=1=2' consists of three
         levels of depth. For deeper sequences, the numeric scheme will
         get longer, which some users may consider unwieldy. The upside,
-        however, is that is easier to reason about larger numbers, such
+        however, is that is easier to reason about large numbers, such
         as `1=100=2=50'.
 
-  Alphanumeric sequencing scheme
+  `alphanumeric'
         An alphanumeric sequence combines numbers and letters. The level
-        of depth is undestand by the alteration from numbers to letters
-        and vice versa. As such, the sequence `1a2' has three levels of
-        depth. This scheme is more compact, which users may like but can
-        be harder to reason about large numbers, such as `1zzzv2zx'
-        corresponding to the numeric `1=100=2=50' (this is because the
-        number 26 is z, 27 is za, 52 is zz, and so on). In practice,
-        large numbers may not be a problem, though this is something to
-        keep in mind.
+        of depth is communicated by the alteration from numbers to
+        letters and vice versa. As such, the sequence `1a2' has three
+        levels of depth. This scheme is more compact, which users may
+        like but can be harder to reason about large numbers, such as
+        `1zzzv2zx' corresponding to the numeric `1=100=2=50' (this is
+        because the number 26 is z, 27 is za, 52 is zz, and so on). In
+        practice, large numbers may not be a problem, though this is
+        something to keep in mind.
+
+  `alphanumeric-delimited'
+        The alphanumeric delimited scheme is like the aforementioned
+        alphanumeric scheme except for the fact that it adds the equals
+        sign as a delimiter. The delimiter is placed after the first
+        level of depth and then after every third level of depth. For
+        example: `1=a2b=a1c'. Note that this is about levels of depth,
+        not triplets, so `1=zx1zza=1' is valid because `zx' is one level
+        of depth as is `zza', as noted above. The
+        `alphanumeric-delimited' scheme is optimal for those who prefer
+        the alphanumeric notation and want to make very long sequences
+        easier to read.
 
 
-[Convert from one sequencing scheme to another] See section 2.1.1
+[Convert from one sequence scheme to another] See section 2.1.1
 
-2.1.1 Convert from one sequencing scheme to another
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+2.1.1 Convert from one sequence scheme to another
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  The decision on the desired `denote-sequence-scheme' wil affect new
-  notes long-term ([Select a sequencing scheme for
-  `denote-sequence-scheme']).  It thus is important to think through
-  your needs and proceed accordingly.
+  The command `denote-sequence-convert' makes it easy to switch from one
+  `denote-sequence-scheme' to another ([Select a sequence scheme for
+  `denote-sequence-scheme']).
 
-  Still, one cannot be sure which scheme they prefer until they
-  experiment with it. It then is inconvenient to manually revert to the
-  alternative scheme. To this end, we provide the command
-  `denote-sequence-convert'. It convers one or more files from their
-  current scheme to its counterpart.
+  This command has a “do what I mean behaviour” with regard to which
+  file or files it should operate on:
 
-  When called from inside a Denote file, it converts that file. When
-  called from a Dired buffer, it operates on the marked files. If no
-  files are marked, it works with the Dired file at point.
+  • When called from inside a file with a Denote sequence, it operates
+    on the current file.
 
-  Note that `denote-sequence-convert' DOES NOT REPARENT OR ANYHOW CHECK
-  THE RESULTING SEQUENCES FOR DUPLICATES ([Re-parent a file to extend a
-  given sequence]).
+  • When called from a Dired buffer, it operates on all the marked
+    files.
+
+  • When there are no marked files in the Dired buffer, it operates on
+    the file at point.
+
+  The target sequence scheme for the conversion is whatever is assigned
+  to the user option `denote-sequence-scheme'. If, however, the command
+  `denote-sequence-convert' is called with a prefix argument (`C-u' by
+  default), then it will prompt for the target sequence scheme.
+
+  [ This command is for users who once used a `denote-sequence-scheme'
+    and have since decided to switch to another. IT DOES NOT REPARENT OR
+    ANYHOW CHECK THE RESULTING SEQUENCES FOR DUPLICATES: it simply
+    performs the conversion from one scheme to another ([Re-parent a
+    file to extend a given sequence]). ]
 
 
-[Select a sequencing scheme for `denote-sequence-scheme'] See section
-2.1
+[Select a sequence scheme for `denote-sequence-scheme'] See section 2.1
 
 [Re-parent a file to extend a given sequence] See section 2.5
 
@@ -174,7 +195,7 @@ Table of Contents
 
   [ In the interest of simplicity, here we provide examples using the
     `numeric' value of `denote-sequence-scheme', though the
-    `alphanumeric' will work as well ([Select a sequencing scheme for
+    `alphanumeric' will work as well ([Select a sequence scheme for
     `denote-sequence-scheme']). ]
 
   A new sequence note can be of the type `parent', `child', and
@@ -226,8 +247,7 @@ Table of Contents
   `denote-sequence-rename-as-parent'.
 
 
-[Select a sequencing scheme for `denote-sequence-scheme'] See section
-2.1
+[Select a sequence scheme for `denote-sequence-scheme'] See section 2.1
 
 
 2.3 Find a relative of the current sequence
@@ -285,7 +305,7 @@ Table of Contents
 
   [ In the interest of simplicity, here we provide examples using the
     `numeric' value of `denote-sequence-scheme', though the
-    `alphanumeric' will work as well ([Select a sequencing scheme for
+    `alphanumeric' will work as well ([Select a sequence scheme for
     `denote-sequence-scheme']). ]
 
   The command `denote-sequence-dired' produces a bespoke and fully
@@ -308,17 +328,13 @@ Table of Contents
   is also available ([Find a relative of the current sequence]).
 
 
-[Select a sequencing scheme for `denote-sequence-scheme'] See section
-2.1
+[Select a sequence scheme for `denote-sequence-scheme'] See section 2.1
 
 [Find a relative of the current sequence] See section 2.3
 
 
 3 Installation
 ══════════════
-
-
-
 
 3.1 GNU ELPA package
 ────────────────────
@@ -406,11 +422,11 @@ Table of Contents
   matters.
 
   Author/maintainer
-        Protesilaos Stavrou.
+        Protesilaos.
 
   Contributions to code or the manual
-        Ashton Wiersdorf, Claudio Migliorelli, Kierin Bell, Rory
-        Molinari, Peter Prevos.
+        Ashton Wiersdorf, Claudio Migliorelli, Kierin Bell, Nicolas
+        Semrau, Rory Molinari, Peter Prevos, alan-w-255, juh, liyingzhi.
 
   Ideas and/or user feedback
         Alex Carney, Mirko Hernandez.
