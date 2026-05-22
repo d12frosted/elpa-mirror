@@ -1237,6 +1237,15 @@
      ((:authors ("Lawrence Mitchell" . "wence@gmx.li"))
       (:maintainer "Lawrence Mitchell" . "wence@gmx.li")
       (:url . "http://github.com/wence-/f90-iface/"))])
+ (ffs
+  . [(0 2 2) ((emacs (27 1)))
+     "Form feed-separated plain text presentations" tar
+     ((:url . "https://git.kelar.org/~bandali/ffs")
+      (:keywords "convenience" "focus" "narrowing" "outlines"
+		 "presentation" "text")
+      (:maintainer "Amin Bandali" . "bandali@gnu.org")
+      (:authors ("Amin Bandali" . "bandali@gnu.org"))
+      (:commit . "71b66bcf7e1538a28ca7b354e3e1acfd3d7da444"))])
  (filechooser
   . [(0 2 4) ((emacs (28 1)) (compat (29 1)))
      "An xdg-desktop-portal filechooser" tar
