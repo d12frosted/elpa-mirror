@@ -211,9 +211,8 @@
   • `:key', the Google AI key that you get from Google AI Studio.
   • `:chat-model', the model name, from the [list] of models.  This is
     optional and will default to the text Gemini model.
-  • `:embedding-model': the model name, currently must be
-    "embedding-001".  This is optional and will default to
-    "embedding-001".
+  • `:embedding-model': the model name, which is optional, and will
+    default to a reasonable embedding model.
 
 
 [page on Google AI Studio] <https://makersuite.google.com/app/apikey>
@@ -266,8 +265,7 @@
   embeddings.  You can set it up with the following parameters:
 
   `:key': The API key you get from [Claude's settings page].  This is
-  required.  `:chat-model': One of the [Claude models].  Defaults to
-  "claude-3-opus-20240229", the most powerful model.
+  required.  `:chat-model': One of the [Claude models].
 
 
 [Claude] <https://docs.anthropic.com/claude/docs/intro-to-claude>
@@ -510,10 +508,10 @@
     asynchronously. `vector-callback' is called with the vector
     embedding, and, in case of error, `error-callback' is called with
     the same arguments as in `llm-chat-async'.
-  • `llm-batch-embedding provider strings': same as `llm-embedding', but
-    takes in a list of strings, and returns a list of vectors whose
+  • `llm-batch-embeddings provider strings': same as `llm-embedding',
+    but takes in a list of strings, and returns a list of vectors whose
     order corresponds to the ordering of the strings.
-  • `llm-batch-embedding-async provider strings vectors-callback
+  • `llm-batch-embeddings-async provider strings vectors-callback
     error-callback': same as `llm-embedding-async', but takes in a list
     of strings, and returns a list of vectors whose order corresponds to
     the ordering of the strings.

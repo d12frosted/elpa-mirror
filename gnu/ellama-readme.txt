@@ -403,6 +403,10 @@ Assistant". Previous sentence was written by Ellama itself.
     value is 80.
   • `ellama-session-auto-compact-keep-last-turns': Number of recent user
     turns to keep verbatim during compaction. Default value is 3.
+  • `ellama-session-auto-compact-allow-fewer-kept-turns': Allow
+    compaction to keep fewer recent user turns when the configured keep
+    count would otherwise prevent short but oversized sessions from
+    being compacted. Enabled by default.
   • `ellama-session-auto-compact-target-token-threshold': Preferred
     target token count after compaction. If not set, Ellama targets half
     of the compaction threshold.
@@ -601,13 +605,23 @@ Assistant". Previous sentence was written by Ellama itself.
   `ellama-session-auto-compact-token-threshold' for an absolute token
   threshold, or leave it unset to use
   `ellama-session-auto-compact-threshold-percent' of the provider
-  context limit.
+  context limit.  While a session request or compaction is still
+  running, Ellama rejects another request for the same session.  This
+  prevents accidental duplicate sends, for example by pressing `C-c C-c'
+  twice in a chat buffer.
 
   You can compact sessions manually:
 
   • `M-x ellama-session-compact-current' compacts the current session.
   • `M-x ellama-session-compact' prompts for an active session and
     compacts it.
+
+  Ellama keeps `ellama-session-auto-compact-keep-last-turns' recent user
+  turns by default.  When
+  `ellama-session-auto-compact-allow-fewer-kept-turns' is non-nil, short
+  oversized sessions may keep fewer recent turns so there is still older
+  history to summarize.  Disable this option when compaction should fail
+  instead of reducing the kept-turn count.
 
   The system message is not summarized by the compaction LLM.  Ellama
   restores the original system message in the compacted session prompt
@@ -620,6 +634,7 @@ Assistant". Previous sentence was written by Ellama itself.
   │ (setopt ellama-session-auto-compact-enabled t)
   │ (setopt ellama-session-auto-compact-threshold-percent 75)
   │ (setopt ellama-session-auto-compact-keep-last-turns 4)
+  │ (setopt ellama-session-auto-compact-allow-fewer-kept-turns t)
   │ (setopt ellama-session-auto-compact-provider ellama-summarization-provider)
   └────
 
