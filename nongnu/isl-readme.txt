@@ -1,32 +1,13 @@
-1 Isl                                                              :TOC:
-═════
+1 Introduction
+══════════════
 
-  • 
-  • 
-  • 
-  • 
-
-    • 
-    • 
-  • 
-  • 
-
-    • 
-  • 
-  • 
-  • 
+  Isl like Isearch-light.  An incremental search tool to replace
+  traditional Isearch in Emacs.  Multi search expression(s) in symbols,
+  words and/or lines in `current-buffer'.
 
 
-1.1 Introduction
-────────────────
-
-  Isl like Isearch-light.  An Isearch replacement for Emacs.  Multi
-  search expression(s) in symbols, words and/or lines in
-  `current-buffer'.
-
-
-1.2 Features
-────────────
+2 Features
+══════════
 
   • Provide [multi matching], a real minibuffer, no unexpected quit or
     errors and comprehensive mode-line indicators.
@@ -40,11 +21,16 @@
   • Select nearest match from your position, not necessarily after or
     before, this initial match can be reached back at any moment.
 
+  • When a region is detected search in this region only.
+
+  • Allow switching to query-replace.
+
   • Allow jumping to `Iedit' at any time during the search.
 
   • Allow jumping to `helm-occur' at any time.
 
-  • Allow showing only the matching lines with their context.
+  • Allow showing only the matching lines with their context (number of
+    context lines customizable).
 
   • Help available at any time during search without having to quit
     session.
@@ -59,8 +45,8 @@
 ?tab=readme-ov-file#about-multi-matching>
 
 
-1.3 Dependencies
-────────────────
+3 Dependencies
+══════════════
 
   No mandatory dependencies, but for a better experience install [Helm]
   to have `helm-occur', [Iedit] to allow jumping to iedit session and
@@ -77,17 +63,21 @@
 [helm-bm] <https://github.com/emacs-helm/helm-bm>
 
 
-1.4 Install
-───────────
+4 Install
+═════════
 
-1.4.1 From package
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+4.1 From package
+────────────────
 
-  Isl is available in NonGnu Elpa.  Use `package-install' to install it.
+  Isl is available in [NonGnu Elpa].  Use `package-install' to install
+  it.
 
 
-1.4.2 From source
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+[NonGnu Elpa] <https://elpa.nongnu.org/nongnu/isl.html>
+
+
+4.2 From source
+───────────────
 
   Add isl.el to `load-path' and compile it.
 
@@ -102,8 +92,8 @@
   └────
 
 
-1.5 Configure
-─────────────
+5 Configure
+═══════════
 
   You may want to disable all `Isearch' global bindings:
 
@@ -134,8 +124,8 @@
   behavior.
 
 
-1.6 Usage
-─────────
+6 Usage
+═══════
 
   `M-x isl-search'
 
@@ -153,8 +143,8 @@
   may want to modify it accordingly to fit with `isl-map'.
 
 
-1.6.1 Available commands
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+6.1 Available commands
+──────────────────────
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    C-h m    Display or quit this help buffer                     
@@ -184,8 +174,8 @@
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-1.7 About multi matching
-────────────────────────
+7 About multi matching
+══════════════════════
 
   By default `isl-search' uses multi matching like Helm, with limitation
   to symbol, not line like in Helm, that means "foo bar" matches
@@ -214,8 +204,8 @@
 [iedit-mode] <https://github.com/victorhge/iedit>
 
 
-1.8 Isl vs helm-occur
-─────────────────────
+8 Isl vs helm-occur
+═══════════════════
 
   Isl is a good tool for searching words or symbols in a buffer and even
   if it can search several words separated by spaces, helm-occur is more
@@ -234,8 +224,8 @@
   easily.
 
 
-1.9 Use Isl for helm-help
-─────────────────────────
+9 Use Isl for helm-help
+═══════════════════════
 
   Starting from Emacs-27 Isearch works more or less with unexpected
   effects, you have better time using `isl-search' as the search command

@@ -1053,12 +1053,13 @@
 		("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "de745de9ab7f67431a5ce493a63be68d408ec40e"))])
  (isl
-  . [(1 6) ((emacs (29 1)))
+  . [(1 7) ((emacs (29 1)))
      "Simple incremental search in current-buffer" tar
      ((:url . "https://github.com/thierryvolpiatto/isearch-light")
+      (:keywords "matching" "searching")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "c99dc44f604e30dc8c06f89edac37eba460d7351"))])
+      (:commit . "f8e2f56ea2a5c3178b26f63f014b66f1233c2c8d"))])
  (iwindow
   . [(1 1) ((emacs (24 3)) (seq (2 23)) (compat (28 1 2 2)))
      "Interactively manipulate windows" tar

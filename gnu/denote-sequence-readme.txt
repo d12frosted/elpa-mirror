@@ -426,7 +426,8 @@ Table of Contents
 
   Contributions to code or the manual
         Ashton Wiersdorf, Claudio Migliorelli, Kierin Bell, Nicolas
-        Semrau, Rory Molinari, Peter Prevos, alan-w-255, juh, liyingzhi.
+        Semrau, Rory Molinari, Peter Prevos, alan-w-255, juh, liyingzhi,
+        nescias.
 
   Ideas and/or user feedback
         Alex Carney, Mirko Hernandez.
