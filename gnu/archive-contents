@@ -1077,7 +1077,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 24 0)
+  . [(1 24 1)
      ((emacs (28 1)) (llm (0 30 2)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1085,7 +1085,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "41403b97f9549333dfdd0c3d0eadceb6c5a5f0e9"))])
+      (:commit . "16a1aebada0049e9b7c15714bcf26c6f4dc5034d"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
@@ -2888,6 +2888,14 @@
       (:authors ("Eric Schulte" . "schulte.eric@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/shen-mode.html")
       (:commit . "df28df31317188a6d87c9df93444543ace4f7f4f"))])
+ (shift-number
+  . [(0 3) ((emacs (28 1))) "Increase/decrease the number at point"
+     tar
+     ((:url . "https://codeberg.org/ideasman42/emacs-shift-number")
+      (:keywords "convenience")
+      (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+      (:authors ("Alex Kost" . "alezost@gmail.com"))
+      (:commit . "e7ec4402962471baa8d9a3b445bbbb06c71af139"))])
  (show-font
   . [(1 0 0) ((emacs (29 1))) "Show font features in a buffer" tar
      ((:url . "https://github.com/protesilaos/show-font")

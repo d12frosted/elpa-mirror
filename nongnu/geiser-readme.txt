@@ -50,23 +50,23 @@
   • Stklos 1.50, via [geiser-stklos]
 
 
-[geiser-chez] <https://gitlab.com/emacs-geiser/chez>
+[geiser-chez] <https://codeberg.org/geiser/chez>
 
-[geiser-chibi] <https://gitlab.com/emacs-geiser/chibi>
+[geiser-chibi] <https://codeberg.org/geiser/chibi>
 
-[geiser-chicken] <https://gitlab.com/emacs-geiser/chicken>
+[geiser-chicken] <https://codeberg.org/geiser/chicken>
 
-[geiser-gambit] <https://gitlab.com/emacs-geiser/gambit>
+[geiser-gambit] <https://codeberg.org/geiser/gambit>
 
 [geiser-gauche] <https://gitlab.com/emacs-geiser/gauche>
 
-[geiser-guile] <https://gitlab.com/emacs-geiser/guile>
+[geiser-guile] <https://codeberg.org/geiser/guile>
 
 [geiser-kawa] <https://gitlab.com/emacs-geiser/kawa>
 
-[geiser-mit] <https://gitlab.com/emacs-geiser/mit>
+[geiser-mit] <https://codeberg.org/geiser/mit>
 
-[geiser-racket] <https://gitlab.com/emacs-geiser/racket>
+[geiser-racket] <https://codeberg.org/geiser/racket>
 
 [geiser-stklos] <https://gitlab.com/emacs-geiser/stklos>
 
@@ -173,7 +173,7 @@
 
 
 [the user's manual cheat sheet]
-<http://geiser.nongnu.org/geiser_5.html#Cheat-sheet>
+<https://geiser.nongnu.org/Cheat-sheet.html#Cheat-sheet>
 
 5.1 In Scheme buffers:
 ──────────────────────
@@ -296,4 +296,4 @@
 
 
 [geiser-guile.el]
-<https://gitlab.com/emacs-geiser/guile/-/blob/master/geiser-guile.el>
+<https://codeberg.org/geiser/guile/src/branch/master/geiser-guile.el>
