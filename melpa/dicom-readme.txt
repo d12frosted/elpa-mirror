@@ -12,6 +12,7 @@ on external programs from the dcmtk DICOM toolkit, which are widely available
 on Linux distributions.
 
 - `dcm2xml' and `dcm2img' from the dcmtk DICOM toolkit
-- `magick' from ImageMagick
+- `magick' as fallback for image conversion (optional)
+- `gdcmconv' as fallback for image conversion (optional)
 - `ffmpeg' for video conversion (optional)
 - `mpv' for video playing (optional)

@@ -156,6 +156,11 @@ Assistant". Previous sentence was written by Ellama itself.
     interactive buffer and continue conversation. If called with
     universal argument (`C-u') will start new session with llm model
     interactive selection.
+  • `ellama-plan-and-act': Start an agent loop that first creates a
+    checklist plan and then acts on it with automatic continuations.  It
+    reuses the current chat session when possible and can be launched
+    from the main transient menu with `A' in the `Problem solving'
+    section.
   • `ellama-ask-image': Ask Ellama about one image file by adding it as
     ephemeral context for the request. If called with universal argument
     (`C-u') will start new session with llm model interactive selection.
@@ -496,6 +501,10 @@ Assistant". Previous sentence was written by Ellama itself.
     `read_file' tool. Use `auto' to read text files as text and
     supported image files as media, `text' to force text reading, or
     `image' to force image handling.
+  • `ellama-tools-edit-before-shell-commands': Shell hook plists to run
+    before mutating edit tools write files.
+  • `ellama-tools-edit-after-shell-commands': Shell hook plists to run
+    after mutating edit tools write files.
   • `ellama-tools-use-srt': Run shell-based tools (`shell_command',
     `grep' and `grep_in_file') via the external `srt' sandbox
     runtime. Disabled by default.  If enabled, non-shell file tools also
@@ -748,7 +757,95 @@ Assistant". Previous sentence was written by Ellama itself.
   files.
 
 
-4.5 DLP for Tool Input/Output
+4.5 Plan-and-Act Agent Loop
+───────────────────────────
+
+  `ellama-plan-and-act' runs a local agent in the current Ellama chat
+  session.  It starts with a planning turn, asks the model to submit a
+  checklist, and then continues automatically through the checklist
+  until the agent reports a result, marks the plan complete, becomes
+  blocked, or reaches `ellama-tools-agent-default-max-steps'.
+
+  The loop adds temporary controller tools to the session:
+
+  • `agent_submit_plan' records the initial checklist before acting
+    starts
+  • `agent_update_plan' records progress as checklist items move between
+    states
+  • `agent_report_result' finishes the loop and restores the original
+    tool set
+
+  Models or providers that cannot call tools can still participate by
+  emitting the fallback `BEGIN_ELLAMA_AGENT_STATE' block described in
+  the controller prompt.  Ellama parses that block, updates the stored
+  state, and prints visible plan or status snapshots into the chat
+  buffer.
+
+  Start the loop with `M-x ellama-plan-and-act', or open the main
+  transient with `M-x ellama' and press `A' in the `Problem solving'
+  section.  The transient entry respects the regular session options:
+  use `-n' before `A' to create a new session, and use `-e' when
+  ephemeral sessions are enabled.
+
+  Without a new-session request, the command reuses the current chat
+  buffer and session.  If that session already has an active
+  plan-and-act loop, a new user message resumes the same loop instead of
+  replacing the plan.  This makes it possible to interrupt a running
+  request with `C-g', add corrective instructions under the next `User:'
+  prompt, and continue the existing loop with `C-c C-c' or another
+  `ellama-plan-and-act' call.
+
+  Plan-and-act state is stored in the session extra data, so the loop
+  survives session compaction and regular session persistence.  The
+  visible plan/status notes in the chat buffer are for transparency; the
+  canonical state is the session state used by the continuation handler.
+
+
+4.6 Edit Tool Shell Hooks
+─────────────────────────
+
+  Projects can define shell commands that run around mutating edit
+  tools: `write_file', `append_file', `prepend_file' and `edit_file'.
+  Hooks are read from the target file buffer, so project-local values
+  from `.dir-locals.el' apply to the file being edited.
+
+  Each hook entry is a plist with a required `:command' string.  A
+  non-zero exit status is always returned to the agent.  Successful hook
+  output is returned only when that hook has `:show-output t' and
+  produced non-empty output.
+
+  Before hooks run after access checks and syntax validation, but before
+  the file is written.  A failing before hook blocks the edit.  After
+  hooks run after a successful write; failure is reported to the agent
+  and does not roll back the edit.
+
+  Example project-local configuration:
+
+  ┌────
+  │ ((nil . ((ellama-tools-edit-before-shell-commands
+  │           . ((:command "git diff --quiet")))
+  │          (ellama-tools-edit-after-shell-commands
+  │           . ((:command "make format-elisp" :show-output t)
+  │              (:command "make test"))))))
+  └────
+
+  Hook commands run from the target file's project root, or from the
+  file directory when no project is found.  The command environment
+  includes:
+
+  • `ELLAMA_HOOK_PHASE': `before' or `after'
+  • `ELLAMA_EDIT_OPERATION': `write', `append', `prepend' or `edit'
+  • `ELLAMA_TOOL_NAME': tool name such as `write_file'
+  • `ELLAMA_FILE_NAME': absolute target file name
+  • `ELLAMA_PROJECT_ROOT': directory used as hook working directory
+  • `ELLAMA_HOOK_NAME': optional `:name' value
+
+  Hook diagnostics use their own output line budget instead of sharing
+  one limit with the main tool result.  Hook output is operational
+  feedback and is not scanned by tool output DLP.
+
+
+4.7 DLP for Tool Input/Output
 ─────────────────────────────
 
   Ellama includes an optional DLP (Data Loss Prevention) layer for tool
@@ -1085,7 +1182,7 @@ Assistant". Previous sentence was written by Ellama itself.
     before moving more paths to enforce
 
 
-4.6 SRT Filesystem Policy for Tools
+4.8 SRT Filesystem Policy for Tools
 ───────────────────────────────────
 
   When `ellama-tools-use-srt' is non-nil, the `srt' settings file is the
