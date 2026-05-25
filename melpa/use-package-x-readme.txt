@@ -19,7 +19,6 @@ This package provides the following extra keywords for
 - :emacs=
 - :emacs>
 - :emacs>=
-- :mark
 
 All these keywords will autoload when used,
 No need for "(require 'use-package-x-...)".
