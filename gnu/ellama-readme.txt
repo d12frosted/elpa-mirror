@@ -545,6 +545,14 @@ Assistant". Previous sentence was written by Ellama itself.
     Skills.  Default value is `"skills"'.
   • `ellama-tools-subagent-default-max-steps': Default maximum number of
     auto-continue steps for a sub-agent. Default value is 30.
+  • `ellama-tools-subagent-loop-detection-enabled': Detect repeated
+    identical tool calls in sub-agent sessions. Enabled by default.
+  • `ellama-tools-subagent-loop-detection-repeated-threshold': Number of
+    consecutive identical sub-agent tool calls that triggers
+    recovery. Default value is 2.
+  • `ellama-tools-subagent-loop-detection-max-traces': Maximum recent
+    sub-agent tool calls retained for loop detection. Default value is
+    50.
   • `ellama-tools-subagent-continue-prompt': Prompt sent to a sub-agent
     when it finishes a turn without calling `report_result'.
   • `ellama-tools-subagent-roles': Subagent roles with provider, system
@@ -720,6 +728,17 @@ Assistant". Previous sentence was written by Ellama itself.
   displays both the main session and sub-agent session buffers as
   generation starts. Sub-agent buffers include the delegated prompt
   under the `Main agent:' label, followed by the sub-agent response.
+
+  Sub-agents also keep session-local tool loop state. When
+  `ellama-tools-subagent-loop-detection-enabled' is non-nil, the second
+  consecutive identical tool call returns a recovery message instead of
+  the normal tool result. The message includes the repeated tool name,
+  exact arguments, the latest tool result and a next action. If the same
+  consecutive call chain continues beyond
+  `ellama-tools-subagent-loop-detection-repeated-threshold', Ellama
+  finishes the subtask with a loop-detected result. A later repeated
+  call after a different tool call is treated as a new recovery
+  opportunity, not as an immediate hard loop.
 
   The tool accepts either a free-form `description' or a prompt
   template:
