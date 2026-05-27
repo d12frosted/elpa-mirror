@@ -189,12 +189,12 @@
       (:authors ("Kevin Ryde" . "user42_kevin@yahoo.com.au"))
       (:commit . "72db1f3ee04f3d1db17487d5bd98466fcbad87fd"))])
  (auth-source-xoauth2-plugin
-  . [(0 4) ((emacs (28 1)) (oauth2 (0 18)))
+  . [(0 4 1) ((emacs (28 1)) (oauth2 (0 18)))
      "Authentication source plugin for xoauth2" tar
      ((:url . "https://gitlab.com/manphiz/auth-source-xoauth2-plugin")
       (:maintainer "Xiyue Deng" . "manphiz@gmail.com")
       (:authors ("Xiyue Deng" . "manphiz@gmail.com"))
-      (:commit . "913134419ed0a8d66f33407908919730c89def69"))])
+      (:commit . "8f7725ef7fce48a548f997aceebfdebcf1b4d214"))])
  (auto-correct
   . [(1 1 4) nil "Remembers and automatically fixes past corrections"
      tar
@@ -2216,13 +2216,13 @@
       (:url . "https://elpa.gnu.org/packages/num3-mode.html")
       (:commit . "fdf4d633e541875a6f765f5c3c8e0d4911122ed3"))])
  (oauth2
-  . [(0 18 6) ((emacs (27 1))) "OAuth 2.0 Authorization Protocol" tar
+  . [(0 19) ((emacs (27 1))) "OAuth 2.0 Authorization Protocol" tar
      ((:url . "https://elpa.gnu.org/packages/oauth2.html")
       (:keywords "comm")
       (:maintainer ("Xiyue Deng" . "manphiz@gmail.com")
 		   (nil . "emacs-devel@gnu.org"))
       (:authors ("Julien Danjou" . "julien@danjou.info"))
-      (:commit . "3b448160d5a4648869ec78195520a0c702c41287"))])
+      (:commit . "d5390a3213399b2fb95e5cac940d3065226ee3f7"))])
  (ob-asymptote
   . [(1 0 2) nil "Babel Functions for Asymptote" tar
      ((:url . "https://github.com/hurrja/ob-asymptote")
