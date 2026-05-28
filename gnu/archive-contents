@@ -710,12 +710,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "a763ec1e5c2987efea3ce2ee6d9c979f56ab6528"))])
  (denote
-  . [(4 2 2) ((emacs (28 1)))
+  . [(4 2 3) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "77813e995672902a25ba056bfba15c7ebd889023"))])
+      (:commit . "9fd6692a32a99e236c377f12f114b77a91417ac2"))])
  (denote-journal
   . [(0 3 0) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -2555,13 +2555,13 @@
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
       (:commit . "91b71955db19014d7139191660272c736458d87d"))])
  (posframe
-  . [(1 5 1) ((emacs (26 1))) "Pop a posframe (just a frame) at point"
+  . [(1 5 2) ((emacs (26 1))) "Pop a posframe (just a frame) at point"
      tar
      ((:url . "https://github.com/tumashu/posframe")
       (:keywords "convenience" "tooltip")
       (:maintainer "Feng Shu" . "tumashu@163.com")
       (:authors ("Feng Shu" . "tumashu@163.com"))
-      (:commit . "4fc893c3c9ea3f6b5099ac1b369abb3c6da40b1e"))])
+      (:commit . "74c8c56131ed866db47ae4191364b72dd4852456"))])
  (pq
   . [(0 2) ((emacs (25))) "libpq binding" tar
      ((:url . "https://github.com/anse1/emacs-libpq")

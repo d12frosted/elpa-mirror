@@ -7921,9 +7921,10 @@ section 21.13
         atanasj, azegas, babusri, bdillahu, coherentstate, doolio, duli,
         drcxd, elge70, elliottw, fingerknight, GuutBoy, hpgisler,
         hyperfocus1337,johkneisl, jtpavlock, juh, leafarbelm,
-        mentalisttraceur, mjkalyan, oatmealm, Pratik-Mishra-4979,
-        pRot0ta1p, rbenit68, relict007, sarcom-sar, sienic, skissue,
-        sundar bp, wuzhihao, yetanotherfossman, zadca123
+        mentalisttraceur, mjkalyan, oatmealm, potchie-maker,
+        Pratik-Mishra-4979, pRot0ta1p, rbenit68, relict007, sarcom-sar,
+        sienic, skissue, sundar bp, wuzhihao, yetanotherfossman,
+        zadca123
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.
