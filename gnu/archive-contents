@@ -70,13 +70,13 @@
       (:url . "https://elpa.gnu.org/packages/advice-patch.html")
       (:commit . "b0575729f34d1c45f1b47d8793e84311a4770826"))])
  (aggressive-completion
-  . [(1 7) ((emacs (27 1))) "Automatic minibuffer completion" tar
+  . [(1 8) ((emacs (27 1))) "Automatic minibuffer completion" tar
      ((:keywords "minibuffer" "completion")
       (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
       (:authors ("Tassilo Horn" . "tsdh@gnu.org"))
       (:url
        . "https://elpa.gnu.org/packages/aggressive-completion.html")
-      (:commit . "d92bf2428133b6e261780e16b7030afe91d3668e"))])
+      (:commit . "c1ead4f049f4cfc9a3a9f8fa567a83a4caa0614d"))])
  (aggressive-indent
   . [(1 10 0) ((emacs (24 3)))
      "Minor mode to aggressively keep your code always indented" tar
@@ -1077,7 +1077,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 25 0)
+  . [(1 26 0)
      ((emacs (28 1)) (llm (0 30 2)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1085,7 +1085,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "286e2e5619bfc82b26fa36ce4d9a30a6c764c7ad"))])
+      (:commit . "d87ab596e220dddc1e8b94ee1ddff696134b1757"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")
@@ -1314,13 +1314,13 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "34d8b04bef350b270f52dc4defc9bac3e9617bf0"))])
  (forgejo
-  . [(0 2 2) ((emacs (29 1)) (keymap-popup (0 2 1)))
+  . [(0 2 3) ((emacs (29 1)) (keymap-popup (0 2 1)))
      "Emacs Forgejo Front-end" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-forgejo")
       (:keywords "tools" "vc" "git" "forgejo")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "72858e17f5a2102563acf4aee43699f4c1470fe0"))])
+      (:commit . "0fbe243481ec3208fc253aaed17ef06f83fb23b0"))])
  (frame-tabs
   . [(1 1) nil "show buffer tabs in side window" tar
      ((:keywords "frames" "tabs")
@@ -3582,12 +3582,12 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "b89f719824fe5da0f6a7590fad3ece798fd59909"))])
  (wcheck-mode
-  . [(2026) nil "General interface for text checkers" tar
+  . [(2026 5) nil "General interface for text checkers" tar
      ((:url . "https://github.com/tlikonen/wcheck-mode")
       (:keywords "text" "spell" "check" "languages" "ispell")
       (:maintainer "Teemu Likonen" . "tlikonen@iki.fi")
       (:authors ("Teemu Likonen" . "tlikonen@iki.fi"))
-      (:commit . "5954340ec199c85d927f2f75e39cdcda452d7bd7"))])
+      (:commit . "a5312ed2638a90a6e5340ec3315d9fa8eadc1fa6"))])
  (wconf
   . [(0 2 1) ((emacs (24 4))) "Minimal window layout manager" tar
      ((:url . "https://github.com/ilohmar/wconf")

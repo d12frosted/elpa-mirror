@@ -5,6 +5,11 @@ standard completion help (unless the number of possible completions exceeds
 `aggressive-completion-max-shown-completions' or
 `aggressive-completion-auto-completion-help' is set to nil).
 
+By default, aggressive-completion triggers immediately after entering the
+minibuffer for completion, i.e., the *Completions* buffer will be shown.
+This behavior is controllable via the user option
+`aggressive-completion-trigger-immediately'.
+
 Automatic completion is done after all commands in
 `aggressive-completion-auto-complete-commands'.  The function doing
 auto-completion is defined by `aggressive-completion-auto-complete-fn' which
