@@ -48,6 +48,16 @@ M-p for navigation).  All other commands are in
   (global-set-key (kbd "M-s") simply-annotate-command-map)
   (simply-annotate-inherit-search-map)
 
+Two features reduce prefix-typing for repeated commands:
+
+- Transient menu: <prefix> SPC (`simply-annotate-menu') opens a
+  discoverable dispatcher; navigation and display toggles stay open
+  so you can repeat them without re-opening the menu.
+- `repeat-mode' (Emacs 28.1+): enable it with M-x repeat-mode (or
+  (repeat-mode 1) in your init).  After one navigation/display
+  command you can continue with the bare keys n v ' / [ ] g -- see
+  `simply-annotate-repeat-map'.
+
 Threading & Collaboration:
 
 All keybindings below use <prefix> to denote your chosen prefix
