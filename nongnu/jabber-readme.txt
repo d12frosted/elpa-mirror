@@ -39,27 +39,23 @@
 2.1 OMEMO encryption (optional)
 ───────────────────────────────
 
-  OMEMO end-to-end encryption requires building a native C module.  You
-  need a C compiler, `pkg-config', and `libmbedtls' (development
-  headers).
+  OMEMO end-to-end encryption uses a native C module.  Build
+  dependencies: a C compiler, `pkg-config', and `libmbedtls'.
 
-  If you installed from source (`:vc' or `git clone'), Emacs will offer
-  to fetch the [picomemo] dependency and build the module on first load.
+  On first use of OMEMO, Emacs offers to fetch [picomemo] and build
+  `jabber-omemo-core' in place.  This works for all install methods
+  (`git clone', `package-vc', and NonGNU ELPA) provided the install
+  directory is writable and the build dependencies are present.
 
-  If you installed from ELPA, clone the repository and build manually:
+  If you prefer to build manually:
 
   ┌────
-  │ git clone https://git.thanosapollo.org/emacs-jabber/
-  │ cd emacs-jabber
+  │ cd /path/to/jabber-source-or-elpa-dir
   │ make module
   └────
 
-  Then copy the resulting `jabber-omemo-core.so' (or `.dylib' on macOS)
-  into your ELPA package directory, which is already on `load-path':
-
-  ┌────
-  │ cp lisp/jabber-omemo-core.so ~/.emacs.d/elpa/jabber-VERSION/
-  └────
+  The resulting `jabber-omemo-core.so' (or `.dylib' on macOS) lands
+  beside the Elisp files and is loaded automatically.
 
 
 [picomemo] <https://github.com/mierenhoop/picomemo>
