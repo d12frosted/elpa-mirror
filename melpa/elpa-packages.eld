@@ -3365,6 +3365,7 @@
   (lsp-julia :url "https://github.com/gdkrmr/lsp-julia")
   (lsp-latex :url "https://github.com/ROCKTAKEY/lsp-latex")
   (lsp-ltex :url "https://github.com/emacs-languagetool/lsp-ltex")
+  (lsp-ltex-plus :url "https://github.com/ltex-plus/emacs-ltex-plus")
   (lsp-metals :url "https://github.com/emacs-lsp/lsp-metals")
   (lsp-mode :url "https://github.com/emacs-lsp/lsp-mode")
   (lsp-mssql :url "https://github.com/emacs-lsp/lsp-mssql")
