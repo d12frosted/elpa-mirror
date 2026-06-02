@@ -137,6 +137,9 @@ Update blocks with C-c C-x C-u, insert with C-c C-x x.
 
 Changelog:
 
+  0.5   - Persistent on-disk cache (tiles-cache-file), reverse tag and
+          keyword indices for O(matching) search and dashboard filter,
+          file-notify watch (tiles-watch-files) to catch external edits.
   0.4   - First MELPA release;
   0.3.5 - Tag mode control: tiles-tag-mode can be `unrestricted' (default),
           `inhibit' (no tags, tag search/filter disabled), a list of allowed
