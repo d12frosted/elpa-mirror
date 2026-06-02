@@ -62,6 +62,7 @@ Dashboard keybindings:
   n/p       - Navigate notes
   SPC       - Open editable preview split (updates on navigation)
   RET       - Open note file
+  M-RET     - Open note file read-only
   TAB       - Toggle expanded view (private &&, keywords, stats)
   M-up/down - Reorder notes
   d         - Change note date/timestamp
@@ -137,6 +138,10 @@ Update blocks with C-c C-x C-u, insert with C-c C-x x.
 
 Changelog:
 
+  0.5.1 - Similar notes: press m in a read-only tile to list the top
+          tiles-similar-count notes most similar to it (TF-IDF over
+          shared content tokens, bold *keywords* boosted). q closes
+          the read-only buffer.
   0.5   - Persistent on-disk cache (tiles-cache-file), reverse tag and
           keyword indices for O(matching) search and dashboard filter,
           file-notify watch (tiles-watch-files) to catch external edits.

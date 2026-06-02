@@ -2,17 +2,23 @@ f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 30+)
 
 Features:
+  - Almost all statements up to F2023
   - Syntax highlighting
-  - Indentation
-  - Alignment for multiline statements where applicable
+  - Indentation of lines, regions, multiline statements and structure blocks
+  - Alignment for multiline statements with rotation and other options
   - Smart end completion
+  - Configurable leading ampersand and statement label positions
   - Breaking and joining continued lines
-  - (Un)commenting regions with configurable prefixes
+  - (Un)commenting regions with configurable prefixes and indentation rules
+  - Special comments like doc strings and separators
+    (syntax highlighting and indentation options)
+  - Keyword highlighting in comments (like TODO, Remark etc.)
   - OpenMP and preprocessor directives
+  - Coarray keywords and statements
   - Region selection based on tree-sitter nodes
   - Xref (buffer local)
-  - Imenu
-  - Fortran menu and transient keybindings
+  - Imenu and a Fortran menu in the menu bar
+  - Navigation (defun, things, Xref, tree as submenu and as side panel buffer)
 
 Features can be found by the fortran menu or a transient popup bound
 to the key C-c C-f.
