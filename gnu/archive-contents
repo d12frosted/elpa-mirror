@@ -1846,11 +1846,11 @@
      (:url . "https://elpa.gnu.org/packages/let-alist.html")
      (:commit . "77fb84e6db96cbaa70e230f4881e4ede6e028f15"))])
  (lex
-  . [(1 2) nil "Lexical analyser construction" tar
+  . [(1 3) nil "Lexical analyser construction" tar
      ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/lex.html")
-      (:commit . "c7d76551cce66901b9f172f903ce720526c0fb52"))])
+      (:commit . "ccbfa1da2d773e07c9f1e0451b70b23f721fa7d5"))])
  (lin
   . [(2 0 0) ((emacs (27 1)))
      "Make `hl-line-mode' more suitable for selection interfaces" tar
