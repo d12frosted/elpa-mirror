@@ -2,10 +2,10 @@
  • Building package el-get
 From https://github.com/dimitri/el-get
 Updating /mnt/store/melpa/working/el-get/
-Checking out dfc31d6fa215d40f2eed4a693974a5875065c0d1
+Checking out eeb48603d0d287f1b78ed3bde53ee7b07acde7ee
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/el-get/
-  to /tmp/el-get-s8pi8s/el-get-20260530.1521/
+  to /tmp/el-get-2WUyuo/el-get-20260602.241/
     el-get-autoloading.el -> el-get-autoloading.el
     el-get-build.el -> el-get-build.el
     el-get-bundle.el -> el-get-bundle.el
@@ -26,50 +26,50 @@ Copying files (->) and directories (=>)
     methods => methods
     recipes/el-get.rcp -> recipes/el-get.rcp
 Generating el-get.info
-Created el-get-20260530.1521.tar containing:
-  el-get-20260530.1521/
-  el-get-20260530.1521/dir
-  el-get-20260530.1521/el-get-autoloading.el
-  el-get-20260530.1521/el-get-build.el
-  el-get-20260530.1521/el-get-bundle.el
-  el-get-20260530.1521/el-get-byte-compile.el
-  el-get-20260530.1521/el-get-check.el
-  el-get-20260530.1521/el-get-core.el
-  el-get-20260530.1521/el-get-custom.el
-  el-get-20260530.1521/el-get-dependencies.el
-  el-get-20260530.1521/el-get-install.el
-  el-get-20260530.1521/el-get-list-packages.el
-  el-get-20260530.1521/el-get-methods.el
-  el-get-20260530.1521/el-get-notify.el
-  el-get-20260530.1521/el-get-pkg.el
-  el-get-20260530.1521/el-get-recipes.el
-  el-get-20260530.1521/el-get-status.el
-  el-get-20260530.1521/el-get.el
-  el-get-20260530.1521/el-get.info
-  el-get-20260530.1521/methods/
-  el-get-20260530.1521/methods/el-get-apt-get.el
-  el-get-20260530.1521/methods/el-get-brew.el
-  el-get-20260530.1521/methods/el-get-builtin.el
-  el-get-20260530.1521/methods/el-get-bzr.el
-  el-get-20260530.1521/methods/el-get-cvs.el
-  el-get-20260530.1521/methods/el-get-darcs.el
-  el-get-20260530.1521/methods/el-get-elpa.el
-  el-get-20260530.1521/methods/el-get-emacsmirror.el
-  el-get-20260530.1521/methods/el-get-emacswiki.el
-  el-get-20260530.1521/methods/el-get-fink.el
-  el-get-20260530.1521/methods/el-get-fossil.el
-  el-get-20260530.1521/methods/el-get-git-svn.el
-  el-get-20260530.1521/methods/el-get-git.el
-  el-get-20260530.1521/methods/el-get-github-tar.el
-  el-get-20260530.1521/methods/el-get-github-zip.el
-  el-get-20260530.1521/methods/el-get-github.el
-  el-get-20260530.1521/methods/el-get-go.el
-  el-get-20260530.1521/methods/el-get-hg.el
-  el-get-20260530.1521/methods/el-get-http-tar.el
-  el-get-20260530.1521/methods/el-get-http-zip.el
-  el-get-20260530.1521/methods/el-get-http.el
-  el-get-20260530.1521/methods/el-get-pacman.el
-  el-get-20260530.1521/methods/el-get-svn.el
-  el-get-20260530.1521/recipes/
-  el-get-20260530.1521/recipes/el-get.rcp
-Built el-get in 5.583s, finished at 2026-06-02T00:25:16+0000
+Created el-get-20260602.241.tar containing:
+  el-get-20260602.241/
+  el-get-20260602.241/dir
+  el-get-20260602.241/el-get-autoloading.el
+  el-get-20260602.241/el-get-build.el
+  el-get-20260602.241/el-get-bundle.el
+  el-get-20260602.241/el-get-byte-compile.el
+  el-get-20260602.241/el-get-check.el
+  el-get-20260602.241/el-get-core.el
+  el-get-20260602.241/el-get-custom.el
+  el-get-20260602.241/el-get-dependencies.el
+  el-get-20260602.241/el-get-install.el
+  el-get-20260602.241/el-get-list-packages.el
+  el-get-20260602.241/el-get-methods.el
+  el-get-20260602.241/el-get-notify.el
+  el-get-20260602.241/el-get-pkg.el
+  el-get-20260602.241/el-get-recipes.el
+  el-get-20260602.241/el-get-status.el
+  el-get-20260602.241/el-get.el
+  el-get-20260602.241/el-get.info
+  el-get-20260602.241/methods/
+  el-get-20260602.241/methods/el-get-apt-get.el
+  el-get-20260602.241/methods/el-get-brew.el
+  el-get-20260602.241/methods/el-get-builtin.el
+  el-get-20260602.241/methods/el-get-bzr.el
+  el-get-20260602.241/methods/el-get-cvs.el
+  el-get-20260602.241/methods/el-get-darcs.el
+  el-get-20260602.241/methods/el-get-elpa.el
+  el-get-20260602.241/methods/el-get-emacsmirror.el
+  el-get-20260602.241/methods/el-get-emacswiki.el
+  el-get-20260602.241/methods/el-get-fink.el
+  el-get-20260602.241/methods/el-get-fossil.el
+  el-get-20260602.241/methods/el-get-git-svn.el
+  el-get-20260602.241/methods/el-get-git.el
+  el-get-20260602.241/methods/el-get-github-tar.el
+  el-get-20260602.241/methods/el-get-github-zip.el
+  el-get-20260602.241/methods/el-get-github.el
+  el-get-20260602.241/methods/el-get-go.el
+  el-get-20260602.241/methods/el-get-hg.el
+  el-get-20260602.241/methods/el-get-http-tar.el
+  el-get-20260602.241/methods/el-get-http-zip.el
+  el-get-20260602.241/methods/el-get-http.el
+  el-get-20260602.241/methods/el-get-pacman.el
+  el-get-20260602.241/methods/el-get-svn.el
+  el-get-20260602.241/recipes/
+  el-get-20260602.241/recipes/el-get.rcp
+Built el-get in 5.491s, finished at 2026-06-02T05:27:20+0000
