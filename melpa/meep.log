@@ -2,16 +2,18 @@
  • Building package meep
 From https://codeberg.org/ideasman42/emacs-meep
 Updating /mnt/store/melpa/working/meep/
-Checking out d0d937067519054a401e952ae321a1241c229331
+Checking out 3f5ccd3782d12bb334fe36e619cede0e16196183
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/meep/
-  to /tmp/meep-1MdHsR/meep-20260530.503/
+  to /tmp/meep-EAVKGW/meep-20260603.147/
     meep-preset-awk-mode.el -> meep-preset-awk-mode.el
     meep-preset-c++-mode.el -> meep-preset-c++-mode.el
     meep-preset-c-mode.el -> meep-preset-c-mode.el
+    meep-preset-clojure-mode.el -> meep-preset-clojure-mode.el
     meep-preset-cmake-mode.el -> meep-preset-cmake-mode.el
     meep-preset-css-mode.el -> meep-preset-css-mode.el
     meep-preset-dart-mode.el -> meep-preset-dart-mode.el
+    meep-preset-emacs-lisp-mode.el -> meep-preset-emacs-lisp-mode.el
     meep-preset-go-mode.el -> meep-preset-go-mode.el
     meep-preset-haskell-mode.el -> meep-preset-haskell-mode.el
     meep-preset-html-mode.el -> meep-preset-html-mode.el
@@ -19,6 +21,7 @@ Copying files (->) and directories (=>)
     meep-preset-java-mode.el -> meep-preset-java-mode.el
     meep-preset-javascript-mode.el -> meep-preset-javascript-mode.el
     meep-preset-kotlin-mode.el -> meep-preset-kotlin-mode.el
+    meep-preset-lisp-mode.el -> meep-preset-lisp-mode.el
     meep-preset-lua-mode.el -> meep-preset-lua-mode.el
     meep-preset-markdown-mode.el -> meep-preset-markdown-mode.el
     meep-preset-objc-mode.el -> meep-preset-objc-mode.el
@@ -30,37 +33,42 @@ Copying files (->) and directories (=>)
     meep-preset-ruby-mode.el -> meep-preset-ruby-mode.el
     meep-preset-rust-mode.el -> meep-preset-rust-mode.el
     meep-preset-scala-mode.el -> meep-preset-scala-mode.el
+    meep-preset-scheme-mode.el -> meep-preset-scheme-mode.el
     meep-preset-xml-mode.el -> meep-preset-xml-mode.el
     meep-region-mark.el -> meep-region-mark.el
     meep.el -> meep.el
-Created meep-20260530.503.tar containing:
-  meep-20260530.503/
-  meep-20260530.503/meep-pkg.el
-  meep-20260530.503/meep-preset-awk-mode.el
-  meep-20260530.503/meep-preset-c++-mode.el
-  meep-20260530.503/meep-preset-c-mode.el
-  meep-20260530.503/meep-preset-cmake-mode.el
-  meep-20260530.503/meep-preset-css-mode.el
-  meep-20260530.503/meep-preset-dart-mode.el
-  meep-20260530.503/meep-preset-go-mode.el
-  meep-20260530.503/meep-preset-haskell-mode.el
-  meep-20260530.503/meep-preset-html-mode.el
-  meep-20260530.503/meep-preset-idl-mode.el
-  meep-20260530.503/meep-preset-java-mode.el
-  meep-20260530.503/meep-preset-javascript-mode.el
-  meep-20260530.503/meep-preset-kotlin-mode.el
-  meep-20260530.503/meep-preset-lua-mode.el
-  meep-20260530.503/meep-preset-markdown-mode.el
-  meep-20260530.503/meep-preset-objc-mode.el
-  meep-20260530.503/meep-preset-org-mode.el
-  meep-20260530.503/meep-preset-pascal-mode.el
-  meep-20260530.503/meep-preset-php-mode.el
-  meep-20260530.503/meep-preset-pike-mode.el
-  meep-20260530.503/meep-preset-rst-mode.el
-  meep-20260530.503/meep-preset-ruby-mode.el
-  meep-20260530.503/meep-preset-rust-mode.el
-  meep-20260530.503/meep-preset-scala-mode.el
-  meep-20260530.503/meep-preset-xml-mode.el
-  meep-20260530.503/meep-region-mark.el
-  meep-20260530.503/meep.el
-Built meep in 4.841s, finished at 2026-06-02T23:50:03+0000
+Created meep-20260603.147.tar containing:
+  meep-20260603.147/
+  meep-20260603.147/meep-pkg.el
+  meep-20260603.147/meep-preset-awk-mode.el
+  meep-20260603.147/meep-preset-c++-mode.el
+  meep-20260603.147/meep-preset-c-mode.el
+  meep-20260603.147/meep-preset-clojure-mode.el
+  meep-20260603.147/meep-preset-cmake-mode.el
+  meep-20260603.147/meep-preset-css-mode.el
+  meep-20260603.147/meep-preset-dart-mode.el
+  meep-20260603.147/meep-preset-emacs-lisp-mode.el
+  meep-20260603.147/meep-preset-go-mode.el
+  meep-20260603.147/meep-preset-haskell-mode.el
+  meep-20260603.147/meep-preset-html-mode.el
+  meep-20260603.147/meep-preset-idl-mode.el
+  meep-20260603.147/meep-preset-java-mode.el
+  meep-20260603.147/meep-preset-javascript-mode.el
+  meep-20260603.147/meep-preset-kotlin-mode.el
+  meep-20260603.147/meep-preset-lisp-mode.el
+  meep-20260603.147/meep-preset-lua-mode.el
+  meep-20260603.147/meep-preset-markdown-mode.el
+  meep-20260603.147/meep-preset-objc-mode.el
+  meep-20260603.147/meep-preset-org-mode.el
+  meep-20260603.147/meep-preset-pascal-mode.el
+  meep-20260603.147/meep-preset-php-mode.el
+  meep-20260603.147/meep-preset-pike-mode.el
+  meep-20260603.147/meep-preset-rst-mode.el
+  meep-20260603.147/meep-preset-ruby-mode.el
+  meep-20260603.147/meep-preset-rust-mode.el
+  meep-20260603.147/meep-preset-scala-mode.el
+  meep-20260603.147/meep-preset-scheme-mode.el
+  meep-20260603.147/meep-preset-xml-mode.el
+  meep-20260603.147/meep-region-mark.el
+  meep-20260603.147/meep.el
+Built meep in 4.016s, finished at 2026-06-03T04:53:14+0000
