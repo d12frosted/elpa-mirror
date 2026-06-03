@@ -35,7 +35,7 @@ Features:
   tag/keyword filtering, tag exclusion, and date editing
 - Moon phase in dashboard status line (days until next New/Full Moon)
 - Tag search with AND/OR logic (/ = AND, space = OR)
-- Keyword search with OR logic (space-separated terms)
+- Keyword search with AND/OR/NOT (/ = AND, space = OR, ! = NOT)
 - Two-panel search view with live preview
 - Stitched view: search results as flowing text
 - Quick capture via minibuffer (tiles-quick, tiles-yank)
@@ -107,8 +107,12 @@ Tag search syntax:
   Example: "b218/lx2026 misc" = (b218 AND lx2026) OR misc
 
 Keyword search syntax:
-  space     - OR (any term matches)
+  /         - AND (all terms in group must match)
+  space     - OR (any group matches)
+  !prefix   - NOT (term must NOT match)
   Example: "emacs Lisp" = Emacs OR Lisp
+  Example: "emacs/Lisp" = Emacs AND Lisp
+  Example: "emacs/!Lisp" = Emacs but not Lisp
 
 Other commands (M-x):
   tiles-touch       - Update a note's timestamp to now (renames file)
@@ -138,6 +142,15 @@ Update blocks with C-c C-x C-u, insert with C-c C-x x.
 
 Changelog:
 
+  0.5.2 - Keyword search now supports AND (/) and NOT (!) alongside the
+          existing space-as-OR.  Tag rename: R in the tag list renames a
+          tag across all notes (parallel to keyword rename).  New
+          dashboard key w copies the selected note (private && stripped)
+          to the kill ring.  HTML anchor in tiles-files dblocks is now
+          opt-in via tiles-dblock-html-anchor, with per-tag suppression
+          via tiles-dblock-no-anchor-tags.  Polish: g refresh preserves
+          cursor position; tiles--strip-org-markup also handles
+          underline/strikethrough/code/verbatim; touch logic deduplicated.
   0.5.1 - Similar notes: press m in a read-only tile to list the top
           tiles-similar-count notes most similar to it (TF-IDF over
           shared content tokens, bold *keywords* boosted). q closes
