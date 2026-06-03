@@ -1,12 +1,12 @@
 (1
  (adoc-mode
-  . [(0 8 0) ((emacs (28 1)))
+  . [(0 9 0) ((emacs (28 1)))
      "a major-mode for editing AsciiDoc files" tar
      ((:url . "https://github.com/bbatsov/adoc-mode")
       (:keywords "asciidoc" "text")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Florian Kaufmann" . "sensorflo@gmail.com"))
-      (:commit . "6fc5ebc9478de17b1971222485e7729f04fbcf57"))])
+      (:commit . "ba362d87d5970fa2c3287d46950063b2b686179c"))])
  (afternoon-theme
   . [(0 1) ((emacs (24 1)))
      "Dark color theme with a deep blue background" tar
