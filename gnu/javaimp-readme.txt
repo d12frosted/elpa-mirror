@@ -29,7 +29,8 @@ will still offer some functions.
 
 - Then in a Java buffer visiting a file under that project or one
 of its submodules call `javaimp-organize-imports' or
-`javaimp-add-import'.
+`javaimp-add-import'.  See doc for `javaimp-minor-mode' for
+bindings of these and other commands.
 
 
   Visiting projects & managing imports
@@ -57,7 +58,8 @@ will be used in preference to `javaimp-mvn-program' /
 `javaimp-gradle-program'.
 
 `javaimp-java-home': defcustom giving location of JDK to use.
-Classes from JDK are included into import completion candidates.
+Classes from JDK are included into import completion candidates,
+except for java.lang.* by default (see `javaimp-exclude-imports').
 Also, when invoking a Java program, JAVA_HOME environment variable
 is added to the subprocess environment.  The variable is
 initialized from JAVA_HOME environment variable, so typically you
@@ -101,7 +103,3 @@ of code in braces) in the current buffer, with support for
 
 Parsing is also used for Imenu support, for xref support and for
 navigation commands, these are installed by `javaimp-minor-mode'.
-
-`javaimp-imenu-use-sub-alists': if non-nil then Imenu items are
-presented in a nested fashion, instead of a flat list (default is
-flat list).

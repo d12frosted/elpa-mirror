@@ -1699,14 +1699,14 @@
       (:maintainer "Danny Freeman" . "danny@dfreeman.email")
       (:commit . "670b574ee3588b30acdeb096069b2739c979cac5"))])
  (javaimp
-  . [(0 9 1) nil
+  . [(0 9 2) nil
      "Add and reorder Java import statements in Maven/Gradle projects"
      tar
      ((:keywords "java" "maven" "gradle" "programming")
       (:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm")
       (:authors ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
       (:url . "https://elpa.gnu.org/packages/javaimp.html")
-      (:commit . "2ac7afce3c6f0b390c4b62c065a898883940d65a"))])
+      (:commit . "2a6cb97fb068fe8c8a96a60cd7cc6f5ae367c7b1"))])
  (jgraph-mode
   . [(1 1) ((cl-lib (0 5))) "Major mode for Jgraph files" tar
      ((:keywords "tex" "wp")
