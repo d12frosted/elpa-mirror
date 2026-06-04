@@ -14,6 +14,7 @@ Features:
   attributes, admonitions, macros, and more
 - Imenu support for section navigation
 - Outline integration for folding
+- Cross-reference and link navigation (RET, mouse, C-c C-o, or xref)
 - Comment support (// line comments)
 
 Quick start:
