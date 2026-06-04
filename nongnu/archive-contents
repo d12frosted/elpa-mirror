@@ -655,6 +655,15 @@
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "16c1d02065c78f381cd0e30c68f6ca070f0cc8b3"))])
+ (flamegraph
+  . [(0 2) ((emacs (30 1)))
+     "Flame graphs for Emacs's native profiler and folded stacks files"
+     tar
+     ((:url . "https://github.com/dgutov/emacs-flamegraph/")
+      (:keywords "lisp" "tools")
+      (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
+      (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
+      (:commit . "84e57b17520edbadbdca17e0b2dba50c56134d74"))])
  (flx
   . [(0 6 2) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
