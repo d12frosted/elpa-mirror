@@ -6,7 +6,7 @@ rules to ensure that your scripts are consistent, clean, and easy to read.)
 
 (This package can also work with Flycheck: simply use the `flymake-flycheck`
 package, which allows any Emacs Flymake backend to function as a Flycheck
-checker.)*
+checker.)
 
 Installation from MELPA:
 ------------------------
