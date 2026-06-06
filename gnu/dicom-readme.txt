@@ -26,9 +26,10 @@ opens `DICOMDIR' directory files or DICOM image files interactively.
   widely available on Linux distributions.
 
   • `dcm2xml' and `dcm2img' from the [DCMTK] DICOM toolkit
-  • `magick' from [ImageMagick]
-  • `ffmpeg' for video conversion (optional)
-  • `mpv' for video playing (optional)
+  • `magick' from [ImageMagick] (optional fallback)
+  • `gdcmconv' from [Grassroots DICOM] (optional fallback)
+  • `ffmpeg' for video conversion (optional for video)
+  • `mpv' for video playing (optional for video)
 
 
 [ELPA] <https://elpa.gnu.org/packages/dicom.html>
@@ -39,6 +40,8 @@ opens `DICOMDIR' directory files or DICOM image files interactively.
 
 [ImageMagick] <https://imagemagick.org/>
 
+[Grassroots DICOM] <https://sourceforge.net/projects/gdcm/>
+
 
 2 Supported files
 ═════════════════
@@ -48,5 +51,5 @@ opens `DICOMDIR' directory files or DICOM image files interactively.
   DICOM viewer is unable to display files, if the metadata records are
   not interpreted properly.  Furthermore the DICOM format supports a
   variety of underlying image formats and compressions, which might not
-  be supported by ImageMagick. In such cases, any help improving the
+  be supported by the converter. In such cases, any help improving the
   package is welcome.

@@ -8,16 +8,37 @@
 [file:https://stable.melpa.org/packages/ellama-badge.svg]
 [file:https://elpa.gnu.org/packages/ellama.svg]
 
-Ellama is a tool for interacting with large language models from
-Emacs. It allows you to ask questions and receive responses from the
-LLMs. Ellama can perform various tasks such as translation, code review,
-summarization, enhancing grammar/spelling or wording and more through
-the Emacs interface. Ellama natively supports streaming output, making
-it effortless to use with your preferred text editor.
+Ellama brings large language models into Emacs without turning Emacs
+into a web app.  You can use it for ordinary chat, one-shot commands
+over the current buffer or region, and longer sessions that keep their
+history.  It also has agent loops for work that needs several steps:
+make a plan, call tools, read project context, and continue from the
+previous turn.
+
+Ellama is not tied to one backend.  It uses the [llm] package, so Ollama
+works with a local model, and the same Ellama commands can be configured
+for OpenAI-compatible APIs, OpenAI, Claude, Gemini, Vertex, GPT4All,
+LlamaCpp, and other llm providers.  When a provider supports extra
+capabilities, Ellama uses them: streaming responses, model lists, image
+input, tool calls, token limits, and interactive model switching.
+
+Context is first-class.  A request can include buffers, files,
+directories, Info nodes, selections, and images.  Chat sessions can be
+saved, resumed, renamed, compacted manually, or compacted automatically
+before they run past the model context window.  The everyday commands
+cover translation, summarization, proofreading, code review and editing,
+extraction, formatting, commit-message generation, and provider
+selection.
+
+For tool-using agents, Ellama reads project instructions from
+`AGENTS.md', can load reusable skills and blueprint prompts, and runs
+plan-and-act loops or subagents from the task tool.  Tool calls are
+still subject to project policy: filesystem checks, edit hooks, and DLP
+scans can block or warn on reads, writes, shell commands, and tool
+output.
 
 The name "ellama" is derived from "Emacs Large LAnguage Model
-Assistant". Previous sentence was written by Ellama itself.
-<file:imgs/reasoning-models.gif>
+Assistant".  <file:imgs/reasoning-models.gif>
 
 
 [file:https://img.shields.io/badge/license-GPL_3-green.svg]
@@ -31,6 +52,8 @@ Assistant". Previous sentence was written by Ellama itself.
 
 [file:https://elpa.gnu.org/packages/ellama.svg]
 <https://elpa.gnu.org/packages/ellama.html>
+
+[llm] <https://elpa.gnu.org/packages/llm.html>
 
 
 1 Installation
@@ -205,12 +228,13 @@ Assistant". Previous sentence was written by Ellama itself.
     using Ellama.
   • `ellama-provider-select': Select ellama provider.
   • `ellama-select-model': Change the current provider model
-    interactively.  The model transient supports Ollama and
-    OpenAI-compatible providers, including URL editing for compatible
-    APIs.  It can also set the maximum number of output tokens.  Use
-    "Reset model fields" to clear model, temperature, context-length,
-    and max-token overrides and let the provider use its defaults; reset
-    values are shown as `default' in the transient.
+    interactively.  The model transient supports Ollama,
+    OpenAI-compatible providers, and providers with a `chat-model' slot.
+    URL editing is available when the provider has a `url' slot.  It can
+    also set the maximum number of output tokens.  Use "Reset model
+    fields" to clear model, temperature, context-length, and max-token
+    overrides and let the provider use its defaults; reset values are
+    shown as `default' in the transient.
   • `ellama-code-complete': Complete selected code or code in the
     current buffer according to a provided change using Ellama.
   • `ellama-code-add': Generate and insert new code based on
@@ -292,6 +316,12 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-tools-disable-all': Disable all enabled tools
     simultaneously. Use this command to reset the system to a minimal
     state, ensuring no tools are active.
+  • `ellama-tools-dlp-show-incident-stats': Show a summary buffer with
+    recent DLP incident statistics.
+  • `ellama-tools-dlp-clear-session-bypasses': Clear session-scoped DLP
+    bypasses.
+  • `ellama-tools-dlp-reset-runtime-state': Reset in-memory DLP runtime
+    state, including incident logs and detector caches.
 
 
 3 Keymap
@@ -452,6 +482,60 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-image-context-default-scope': Default scope for image
     context added interactively. Use `ephemeral' for one request only,
     or `persistent' to keep image context until it is removed or reset.
+  • `ellama-always-show-chain-steps': Show chain of intermediate steps
+    during reasoning.
+  • `ellama-blueprints': Directory or list of directories for blueprint
+    storage.
+  • `ellama-command-map': Keymap for ellama commands.
+  • `ellama-completion-provider': LLM provider for code completion
+    tasks.
+  • `ellama-eval-default-max-steps': Default maximum number of steps in
+    eval loop.
+  • `ellama-eval-keep-workspaces': Whether to keep workspaces after eval
+    completion.
+  • `ellama-eval-loop-detection-enabled': Enable detection of infinite
+    loops in eval loops.
+  • `ellama-eval-loop-detection-max-traces': Maximum number of traces
+    for loop detection.
+  • `ellama-eval-loop-detection-repeated-threshold': Threshold for
+    repeated elements to trigger loop detection.
+  • `ellama-eval-timeout-seconds': Timeout in seconds for eval
+    operations.
+  • `ellama-markdown-to-org-converter': Method for markdown to org
+    conversion.
+  • `ellama-pandoc-markdown-to-org-args': Arguments for pandoc
+    markdown-to-org conversion.
+  • `ellama-pandoc-program': Path to pandoc executable for
+    markdown-to-org conversion.
+  • `ellama-tools-agent-continue-prompt': Prompt template for agent
+    continue operation.
+  • `ellama-tools-agent-planning-prompt': Prompt template for agent
+    planning.
+  • `ellama-tools-balanced-edit-enabled': Enable balanced edit mode for
+    tools.
+  • `ellama-tools-balanced-edit-modes': Major modes eligible for
+    balanced edit mode.
+  • `ellama-tools-dlp-env-secret-entropy-threshold': Entropy threshold
+    for detecting environment secrets.
+  • `ellama-tools-dlp-env-secret-heuristic-stages': Stages in env secret
+    heuristic detection.
+  • `ellama-tools-dlp-env-secret-max-length': Maximum length for
+    environment secret detection.
+  • `ellama-tools-dlp-env-secret-min-length': Minimum length for
+    environment secret detection.
+  • `ellama-tools-dlp-env-secret-min-score': Minimum score for
+    environment secret heuristic.
+  • `ellama-tools-dlp-message-prefix': Prefix for DLP messages in logs.
+  • `ellama-tools-dlp-redaction-placeholder-format': Format template for
+    DLP redaction placeholders.
+  • `ellama-tools-irreversible-high-confidence-block-rules': Rules for
+    blocking high-confidence irreversible actions.
+  • `ellama-tools-read-before-write-enabled': Enable read-before-write
+    for tool operations.
+  • `ellama-tools-shell-command-default-timeout': Default timeout for
+    shell command execution.
+  • `ellama-transient-system-show-limit': Maximum number of system
+    elements to show in transient.
   • `ellama-session-remove-reasoning': Remove internal reasoning from
     the session after ellama provide an answer. This can improve
     long-term communication with reasoning models. Enabled by default.
@@ -491,6 +575,9 @@ Assistant". Previous sentence was written by Ellama itself.
     tracking of debug information. The debug output includes the raw
     text being processed and is appended to the end of the debug buffer
     each time.
+  • `ellama-undo-on-error': Undo partial buffer insertions when an LLM
+    request fails. Disabled by default; when nil, Ellama keeps partial
+    output inserted before the error.
   • `ellama-tools-allow-all': Allow `ellama' using all the tools without
     user confirmation. Dangerous. Use at your own risk.
   • `ellama-tools-allowed': List of allowed `ellama' tools. Tools from
@@ -501,10 +588,19 @@ Assistant". Previous sentence was written by Ellama itself.
     `read_file' tool. Use `auto' to read text files as text and
     supported image files as media, `text' to force text reading, or
     `image' to force image handling.
+  • `ellama-tools-dlp-safe-read-file-regexps': Canonical file-name
+    regexps whose `read_file'-style outputs skip output DLP
+    scans. Defaults to Ellama source files in the loaded Ellama
+    directory. Input DLP, other tool outputs, access checks and output
+    line budgets still apply.
   • `ellama-tools-edit-before-shell-commands': Shell hook plists to run
-    before mutating edit tools write files.
+    before mutating edit tools write files. Hooks run asynchronously
+    from Emacs' UI, but the edit tool result is returned to the agent
+    only after hook processing finishes.
   • `ellama-tools-edit-after-shell-commands': Shell hook plists to run
-    after mutating edit tools write files.
+    after mutating edit tools write files. Hooks run asynchronously from
+    Emacs' UI, but the edit tool result is returned to the agent only
+    after hook processing finishes.
   • `ellama-tools-use-srt': Run shell-based tools (`shell_command',
     `grep' and `grep_in_file') via the external `srt' sandbox
     runtime. Disabled by default.  If enabled, non-shell file tools also
@@ -543,6 +639,9 @@ Assistant". Previous sentence was written by Ellama itself.
     Agent Skills.
   • `ellama-skills-local-path': Project-relative path for local Agent
     Skills.  Default value is `"skills"'.
+  • `ellama-tools-agent-default-max-steps': Default maximum number of
+    automatic continuation steps for `ellama-plan-and-act'. Default
+    value is 40.
   • `ellama-tools-subagent-default-max-steps': Default maximum number of
     auto-continue steps for a sub-agent. Default value is 30.
   • `ellama-tools-subagent-loop-detection-enabled': Detect repeated
@@ -740,6 +839,14 @@ Assistant". Previous sentence was written by Ellama itself.
   call after a different tool call is treated as a new recovery
   opportunity, not as an immediate hard loop.
 
+  If a sub-agent LLM request fails before producing a tool result,
+  Ellama keeps the sub-agent loop alive. The first consecutive request
+  error records the failure and immediately continues the sub-agent. The
+  second consecutive request error resets the counter, compacts the
+  sub-agent session automatically, and continues the loop after
+  compaction finishes or is skipped. Any successful sub-agent response
+  resets the consecutive error counter.
+
   The tool accepts either a free-form `description' or a prompt
   template:
 
@@ -784,6 +891,13 @@ Assistant". Previous sentence was written by Ellama itself.
   checklist, and then continues automatically through the checklist
   until the agent reports a result, marks the plan complete, becomes
   blocked, or reaches `ellama-tools-agent-default-max-steps'.
+
+  If the LLM request fails before the loop receives a usable response,
+  Ellama continues the same agent loop instead of stopping it. The first
+  consecutive request error is recorded and the loop continues. The
+  second consecutive request error triggers automatic session
+  compaction, resets the error counter, and then continues the loop. A
+  successful response resets the consecutive error counter.
 
   The loop adds temporary controller tools to the session:
 
@@ -837,6 +951,12 @@ Assistant". Previous sentence was written by Ellama itself.
   the file is written.  A failing before hook blocks the edit.  After
   hooks run after a successful write; failure is reported to the agent
   and does not roll back the edit.
+
+  Hook processes are started asynchronously, so long-running hooks do
+  not block the Emacs UI. They are still blocking from the agent's point
+  of view: the edit tool callback runs only after all relevant
+  before/after hooks finish, and the agent receives the final hook
+  status together with the edit result.
 
   Example project-local configuration:
 
@@ -928,6 +1048,11 @@ Assistant". Previous sentence was written by Ellama itself.
     findings in `enforce' mode (`allow', `warn', `block', `redact').
   • `ellama-tools-dlp-output-warn-behavior': Handling for output `warn'
     verdicts (`allow', `confirm', or `block').
+  • `ellama-tools-dlp-safe-read-file-regexps': Canonical file-name
+    regexps whose file-reading outputs skip output DLP scans. This is
+    for trusted source files that should not prompt on every agent
+    read. It does not bypass input DLP, non-read tool output DLP,
+    irreversible checks, `srt' checks, or line-budget truncation.
   • `ellama-tools-dlp-policy-overrides': Per-tool/per-arg overrides and
     exceptions.  For structured input args, nested string values are
     scanned with path-like arg names (for example
@@ -970,6 +1095,26 @@ Assistant". Previous sentence was written by Ellama itself.
   • `ellama-tools-output-line-budget-save-overflow-file': Save full
     overflowing output to a temp file when the output source file is
     unknown (default `t').
+
+  Trusted read-file outputs:
+
+  `ellama-tools-dlp-safe-read-file-regexps' lets users mark known source
+  files as safe for output DLP. By default, Ellama marks its own loaded
+  `ellama*.el' source files safe, so autonomous agents can inspect
+  Ellama internals without repeated DLP approval prompts. The match is
+  performed against the canonical file name.  Only output scans for
+  file-reading tools are skipped; DLP still scans tool inputs and
+  outputs from other tools.
+
+  Example:
+
+  ┌────
+  │ (setopt ellama-tools-dlp-safe-read-file-regexps
+  │         (list (concat "\\`"
+  │                       (regexp-quote
+  │                        (file-truename "/path/to/ellama/"))
+  │                       "ellama\\(?:-[[:alnum:]-]+\\)?\\.el\\'")))
+  └────
 
   Enforcement behavior (v1):
 
@@ -1892,6 +2037,12 @@ Assistant". Previous sentence was written by Ellama itself.
   part of GNU ELPA; major contributions must be from someone with FSF
   papers. Alternatively, you can write a module and share it on a
   different archive like MELPA.
+
+  For local validation, run `make check-elisp' before pushing Elisp
+  changes. It formats Elisp files, byte-compiles, runs the ERT suite,
+  native-compiles, and runs checkdoc. Byte and native compilation
+  warnings are treated as failures, so warnings block the same way test
+  failures do.
 
 
 12 GNU Free Documentation License

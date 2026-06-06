@@ -254,12 +254,12 @@
        ("Jonas Bernoulli" . "emacs.cond-let@jonas.bernoulli.dev"))
       (:commit . "21b9e9835756ff5cd1acb971cf9eb56fff671c8b"))])
  (consult-flycheck
-  . [(1 1) ((emacs (29 1)) (consult (2 8)) (flycheck (35)))
+  . [(1 2) ((emacs (29 1)) (consult (3 5)) (flycheck (35)))
      "Provides the command `consult-flycheck'" tar
      ((:url . "https://github.com/minad/consult-flycheck")
       (:keywords "languages" "tools" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "9fe96c4b75c8566170ad41a04c3849d2e2606104"))])
+      (:commit . "9dd95361669f87e14230376f4f93c6b9a222c497"))])
  (corfu-terminal
   . [(0 7) ((emacs (26 1)) (corfu (0 36)) (popon (0 13)))
      "Corfu popup on terminal" tar
