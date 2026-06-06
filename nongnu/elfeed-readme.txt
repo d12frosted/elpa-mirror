@@ -1,2 +1,722 @@
-Elfeed is a web feed client for Emacs, inspired by notmuch. See
-the README for full documentation.
+                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      ELFEED EMACS WEB FEED READER
+                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Elfeed is an extensible web feed reader for Emacs, supporting Atom, RSS
+and JSON Feed. It requires Emacs 28.1 and is available for download from
+[ELPA] or [MELPA].  The Elfeed UI was inspired by [notmuch]. The
+database format is stable and is never expected to change.
+
+<https://github.com/emacs-elfeed/elfeed/blob/screenshots/screenshot.png?raw=true>
+
+
+[ELPA] <https://elpa.nongnu.org/packages/elfeed.html>
+
+[MELPA] <https://melpa.org/#/elfeed>
+
+[notmuch] <https://notmuchmail.org/>
+
+
+1 Prerequisites
+═══════════════
+
+  *It is strongly recommended you have curl installed*, either in your
+  PATH or configured via `elfeed-curl-program-name'. Elfeed will prefer
+  it to Emacs' own URL-fetching mechanism, `url-retrieve'. It's also
+  essential for running Elfeed on Windows, where `url-retrieve' is
+  broken. Updates using curl are significantly faster than the built-in
+  method, both for you and the feed hosts.
+
+  If this is giving you problems, fetching with curl can be disabled by
+  setting `elfeed-use-curl' to nil.
+
+
+2 Getting Started
+═════════════════
+
+  We recommend that you install Elfeed via `M-x package-install'. You
+  may want to define a a global binding for the main entry point command
+  `elfeed'.
+
+  ┌────
+  │ (keymap-global-set "C-x w" #'elfeed)
+  └────
+
+  Running the interactive function `elfeed' will pop up the
+  `*elfeed-search*' buffer, which will display feed items.
+
+  • `g': refresh view of the feed listing
+  • `G': fetch feed updates from the servers
+  • `s': update the search filter (see tags)
+  • `S': update the search filter statically
+  • `c': clear the search filter
+  • `@': add current date to the filter
+  • `=': only include current feed
+  • `~': exclude current feed
+
+  This buffer will be empty until you add your feeds to the
+  `elfeed-feeds' list and initiate an update with `M-x elfeed-update'
+  (or press `G' in the Elfeed buffer).  This will populate the Elfeed
+  database with entries.
+
+  ┌────
+  │ ;; Somewhere in your .emacs file
+  │ (setq elfeed-feeds
+  │       '("https://nullprogram.com/feed/"
+  │         "https://planet.emacslife.com/atom.xml"))
+  └────
+
+  Another option for providing a feed list is with an OPML file. Running
+  `M-x elfeed-load-opml' will fill `elfeed-feeds' with feeds listed in
+  an OPML file. When `elfeed-load-opml' is called interactively, it will
+  automatically save the feedlist to your customization file, so you
+  will only need to do this once.
+
+  If there are a lot of feeds, the initial update will take noticeably
+  longer than normal operation because of the large amount of
+  information being written the database. Future updates will only need
+  to write new or changed data. If updating feeds slows down Emacs too
+  much for you, reduce the number of concurrent fetches via
+  `elfeed-set-max-connections'.
+
+  If you're getting many "Queue timeout exceeded" errors, increase the
+  fetch timeout via `elfeed-set-timeout'.
+
+  ┌────
+  │ (setf url-queue-timeout 30)
+  └────
+
+  From the search buffer there are a number of ways to interact with
+  entries.  Entries are selected by placing the point over an
+  entry. Multiple entries are selected at once by using an active
+  region.
+
+  • `RET': view selected entry in a buffer
+  • `b': open selected entries in your browser
+  • `B': open selected entries in your secondary browser
+  • `y': copy selected entries URL to the clipboard
+  • `r': tag selected entries as read (`C-u r' to tag all)
+  • `u': tag selected entries as unread (`C-u u' to tag all)
+  • `+': add a specific tag to selected entries
+  • `-': remove a specific tag from selected entries
+  • `m': mark candidate
+  • `M': unmark candidate (`C-u M' to unmark all)
+  • `t': set title of selected entry
+  • `T': set title of selected feed
+
+
+3 Tags
+══════
+
+  Elfeed maintains a list of arbitrary tags – symbols attached to an
+  entry. The tag `unread' is treated specially by default, with unread
+  entries appearing in bold.
+
+
+3.1 Autotagging
+───────────────
+
+  Tags can automatically be applied to entries discovered in specific
+  feeds through extra syntax in `elfeed-feeds'. Normally this is a list
+  of strings, but an item can also be a list, providing set of
+  "autotags" for a feed's entries.
+
+  ┌────
+  │ (setq elfeed-feeds
+  │       '(("https://nullprogram.com/feed/" blog emacs)
+  │         "https://sachachua.com/blog/category/emacs-news/feed/" ;; no autotagging
+  │         ("https://nedroid.com/feed/" webcomic)))
+  └────
+
+
+3.2 Filter Syntax
+─────────────────
+
+  To make tags useful, the Elfeed entry listing buffer can be filtered
+  by tags.  Use `elfeed-search-set-filter' (or s) to update the
+  filter. Use `elfeed-search-clear-filter' to restore the default.
+
+  Any component of the search string beginning with a `+' or a `-' is
+  treated like a tag. `+' means the tag is required, `-' means the tag
+  must not be present.
+
+  A component beginning with a `@' indicates an age or a date range. An
+  age is a relative time expression or an absolute date
+  expression. Entries older than this age are filtered out. The age
+  description accepts plain English, but cannot have spaces, so use
+  dashes. For example, `@2-years-old', `@3-days-ago' or `@2019-06-24'.
+  The dashes and suffixes like `-old' are ignored, such that you can use
+  a shorter form , e.g., `@2years'. A date range are two ages separated
+  by a `--' e.g., `@2019-06-20--2019-06-24' or
+  `@5-days-ago--1-day-ago'. The entry must be newer than the first
+  expression but older than the second. The database is date-oriented,
+  so *filters that include an age restriction are significantly more
+  efficient.*
+
+  A component beginning with a `!' is treated as an "inverse" regular
+  expression.  This means that any entry matching this regular
+  expression will be filtered out.  The regular expression begins
+  /after/ the `!' character. You can read this as "entry not matching
+  `foo'".
+
+  A component beginning with a `#' limits the total number of entries
+  displayed to the number immediately following the symbol. For example,
+  to limit the display to 20 entries: `#20'.
+
+  A component beginning with a `=' is a regular expression matching the
+  entry's feed (title or URL). Only entries belonging to a feed that
+  matches at least one of the `=' expressions will be shown.
+
+  A component beginning with a `~' is a regular expression matching the
+  entry's feed (title or URL). Only entries belonging to a feed that
+  matches none of the `~' expressions will be shown.
+
+  All other components are treated as a regular expression, and only
+  entries matching it (title or URL) will be shown.
+
+  Here are some example filters.
+
+  • `@6months +unread'
+
+  Only show unread entries of the last six months. This is the default
+  filter.
+
+  • `linu[xs] @1-year-old'
+
+  Only show entries about Linux or Linus from the last year.
+
+  • `-unread +youtube #10'
+
+  Only show the most recent 10 previously-read entries tagged as
+  `youtube'.
+
+  • `+unread !x?emacs'
+
+  Only show unread entries not having `emacs' or `xemacs' in the title
+  or link.
+
+  • `+emacs =https://example.org/feed/'
+
+  Only show entries tagged as `emacs' from a specific feed.
+
+
+3.2.1 Default Search Filter
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  You can set your default search filter by changing the default value
+  of `elfeed-search-filter'. It only changes buffer-locally when you're
+  adjusting the filter within Elfeed.
+
+  ┌────
+  │ (setq-default elfeed-search-filter "@1week +unread")
+  └────
+
+
+3.3 Tag Hooks
+─────────────
+
+  The last example assumes you've tagged posts with `youtube'. You
+  probably want to do this sort of thing automatically, either through
+  the "autotags" feature mentioned above, or with the
+  `elfeed-new-entry-hook'. Functions in this hook are called with new
+  entries, allowing them to be manipulated, such as adding tags.
+
+  ┌────
+  │ ;; Mark all YouTube entries
+  │ (add-hook 'elfeed-new-entry-hook
+  │           (elfeed-make-tagger :feed-url "youtube\\.com"
+  │                               :add '(video youtube)))
+  └────
+
+  Avoiding tagging old entries as `unread':
+
+  ┌────
+  │ ;; Entries older than 2 weeks are tagged as read
+  │ (add-hook 'elfeed-new-entry-hook
+  │           (elfeed-make-tagger :before "2 weeks ago"
+  │                               :remove 'unread))
+  └────
+
+  Or building your own subset feeds:
+
+  ┌────
+  │ (add-hook 'elfeed-new-entry-hook
+  │           (elfeed-make-tagger :feed-url "example\\.com"
+  │                               :entry-title '(not "something interesting")
+  │                               :add 'junk
+  │                               :remove 'unread))
+  └────
+
+  Use `M-x elfeed-apply-hooks-now' to apply `elfeed-new-entry-hook' to
+  all existing entries. Otherwise hooks will only apply to new entries
+  on discovery.
+
+
+3.4 Custom Tag Faces
+────────────────────
+
+  By default, entries tagged `unread' will have bolded titles in the
+  `*elfeed-search*' listing. You can customize how tags affect an
+  entry's appearance by customizing `elfeed-search-face-alist'. For
+  example, this configuration makes entries tagged `important' stand out
+  in red.
+
+  ┌────
+  │ (defface important-elfeed-entry
+  │   '((t :foreground "#f77"))
+  │   "Marks an important Elfeed entry.")
+  │ 
+  │ (push '(important important-elfeed-entry)
+  │       elfeed-search-face-alist)
+  └────
+
+  All faces from all tags will be applied to the entry title. The faces
+  will be ordered as they appear in `elfeed-search-face-alist'.
+
+
+4 Tree view
+═══════════
+
+  Elfeed includes a tree view, which gives an overview over all feeds
+  and tags.  Invoke `M-x elfeed-tree' to open it. The feeds are
+  visualized as a tree using the feed auto tags. The first auto tag is
+  the root node, the second tag comes below, and so on. Feeds with the
+  same auto tags are grouped together. Since `outline-minor-mode' is
+  enabled in the buffer you can use `TAB' and `S-TAB' to fold like in
+  Org-mode buffers. Use `RET' or click on tags or feeds to show the
+  corresponding `elfeed-search' buffer.
+
+  For example the configuration
+
+  ┌────
+  │ (setq elfeed-feeds
+  │       '(("https://yhetil.org/emacs-devel/new.atom" emacs lists devel)
+  │         ("https://yhetil.org/emacs-bugs/new.atom" emacs lists bugs)
+  │         ("https://old.reddit.com/r/emacs.rss" emacs reddit)))
+  └────
+
+  leads to a tree of the following form.
+
+  ┌────
+  │ emacs
+  │   ├─● /r/reddit
+  │   lists
+  │     ├─● emacs-devel
+  │     ╰─● emacs-bugs
+  │ [all feeds]
+  │   ├─● …
+  │   ╰─● emacs-devel
+  │ [all tags]
+  │   ├─● …
+  │   ╰─● emacs
+  │        ├─● …
+  │        ╰─● emacs-devel
+  └────
+
+
+5 Bookmarks
+═══════════
+
+  Filters can be saved and restored using Emacs' built-in [bookmarks
+  feature]. While in the search buffer, use `M-x bookmark-set' to save
+  the current filter, and `M-x bookmark-jump' to restore a saved
+  filter. Emacs automatically persists bookmarks across sessions.
+
+
+[bookmarks feature]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/Bookmarks.html>
+
+
+6 Org-store-link and Org-capture
+════════════════════════════════
+
+  When `org-store-link' is called from an Elfeed search or an Elfeed
+  entry, a link to the search or entry is stored in Org-mode format.
+
+  This link can be inserted into an Org-mode document. If the link is
+  opened, the search or entry will be shown in Elfeed.
+
+  In addition to the link, `org-store-link' also store some additional
+  properties.  You can access them in an Org-capture template with the
+  template expansion `%:keyword'. (`org-store-link' is automatically
+  called when you do a capture.)
+
+  List of available keywords, when link is stored from an Elfeed search:
+
+  • `type' : Type of Org-mode link
+  • `link' : Org-mode link to this search, also available with `%a',
+    `%A', `%l' and `%L'
+  • `description' : The search filter
+
+  List of available keywords, when link is stored from an Elfeed entry:
+
+  • `type' : Type of Org-mode link
+  • `link' : Org-mode link to this entry, also available with `%a',
+    `%A', `%l' and `%L'
+  • `title' : Feed entry title
+  • `description' : Feed entry description, same as title
+  • `external-link' : Feed entry external link
+  • `date' : Date time of the feed entry publication, in full ISO 8601
+    format
+  • `date-timestamp' : Date time of the feed entry publication, in
+    Org-mode active timestamp format
+  • `date-inactive-timestamp' : Date time of the feed entry publication,
+    in Org-mode inactive timestamp format
+  • `authors' : List of feed entry authors names, joint by a comma
+  • `tags' : List of feed entry tags, in Org-mode tags format
+  • `content' : Content of the feed entry
+  • `feed-title' : Title of the feed
+  • `feed-external-link' : Feed external link
+  • `feed-authors' : List of feed authors names, joint by a comma
+
+  If `content' type is HTML, it is automatically embedded into an
+  Org-mode HTML quote.
+
+
+7 Feed options
+══════════════
+
+  The `elfeed-feeds' variable allows you to set options per feed as a
+  plist in addition to the auto tags which come after the options. The
+  options can be accessed like the usual metadata via `(elfeed-meta feed
+  :key)'. Right now Elfeed supports these special keys which you may
+  want to override in the `elfeed-feeds' list.
+
+  • `:no-update' : Prevent a feed from updating when invoking
+    `elfeed-update'.
+  • `:fetch-link' : Automatically fetch the content of the link and
+    display it in the `elfeed-show' buffer.
+  • `:readable' : Enable readable mode in the `elfeed-show' buffer.
+  • `:show-entry' : Specify an alternative show function, e.g.,
+    `browse-url'.
+  • `:title' : Override the feed title.
+
+  Example:
+
+  ┌────
+  │ (setq elfeed-feeds
+  │       '(("https://planet.emacslife.com/atom.xml" :no-update t :title "Planetemacs" emacs)
+  │         ("https://sachachua.com/blog/category/emacs-news/feed/" :show-entry eww-browse-url emacs)
+  │         ("https://www.debian.org/security/dsa" :fetch-link replace :readable t security)))
+  └────
+
+  You can define custom properties for your own purposes but you may
+  consider namespacing the keys with a prefix to avoid collisions.
+
+
+8 Metadata Plist
+════════════════
+
+  All feed and entry objects have plist where you can store your own
+  arbitrary, [readable values]. These values are automatically persisted
+  in the database. This metadata is accessed using the polymorphic
+  `elfeed-meta' function. The function is a generalized variable, such
+  that it is `setf'-able. The macro `setf' must have access to the
+  definition of `elfeed-meta' at compile time. Therefore you must add a
+  `(require 'elfeed)' at the top level, such that the Elisp byte
+  compiler loads the definition.
+
+  ┌────
+  │ (require 'elfeed) ;; Necessary for macro expansion of (setf (elfeed-meta ...) ...)
+  │ 
+  │ (setf (elfeed-meta entry :rating) 4)
+  │ (elfeed-meta entry :rating)
+  │ ;; => 4
+  │ 
+  │ (setf (elfeed-meta feed :title) "My Better Title")
+  └────
+
+  Elfeed itself adds some entries to this plist, some for your use, some
+  for its own use. Here are the properties that Elfeed uses:
+
+  • `:authors' : A list of author plists (`:name', `:uri', `:email').
+  • `:canonical-url' : The final URL for the feed after all redirects.
+  • `:categories' : The feed-supplied categories for this entry.
+  • `:etag' : HTTP Etag header, for conditional GETs.
+  • `:failures' : Number of times this feed has failed to update.
+  • `:last-modified' : HTTP Last-Modified header, for conditional GETs.
+  • `:title' : Overrides the feed-supplied title for display purposes,
+    both for feeds and entries. See also `elfeed-search-set-feed-title'
+    and `elfeed-search-set-entry-title'.
+  • `:link-content' : The HTML content fetched from the entry link, see
+    `elfeed-show-fetch-link'.
+
+  This list will grow in time, so you might consider namespacing your
+  own properties to avoid collisions (e.g. `:xyz/rating'), or simply not
+  using keywords as keys. Elfeed will always use keywords without a
+  slash.
+
+
+[readable values] <https://nullprogram.com/blog/2013/12/30/>
+
+
+9 Hooks
+═══════
+
+  A number of hooks are available to customize the behavior of Elfeed at
+  key points without resorting to advice.
+
+  • `elfeed-new-entry-hook' : Called each time a new entry it added to
+    the database, allowing for automating tagging and such.
+  • `elfeed-new-entry-parse-hook' : Called with each new entry and the
+    full XML structure from which it was parsed, allowing for additional
+    information to be drawn from the original feed XML.
+  • `elfeed-http-error-hook' : Allows for special behavior when HTTP
+    errors occur, beyond simply logging the error to the buffer named
+    `elfeed-log-buffer-name'.
+  • `elfeed-parse-error-hook' : Allows for special behavior when feed
+    parsing fails, beyond logging.
+  • `elfeed-db-update-hook' : Called any time the database has had a
+    major modification.
+  • `elfeed-db-unload-hook' : Called before unloading the database.
+  • `elfeed-update-hook' : Called any time a feed is updated.
+  • `elfeed-update-init-hook' : Called before feed updates.
+  • `elfeed-tag-hook' : Called before an entry gets tagged.
+  • `elfeed-untag-hook' : Called before an entry gets untagged.
+  • `elfeed-show-update-hook' : Called after the show buffer has been
+    updated.
+  • `elfeed-search-update-hook' : Called after the search buffer has
+    been updated.
+  • `elfeed-tree-update-hook' : Called after the tree buffer has been
+    updated.
+
+
+10 Viewing Entries
+══════════════════
+
+  Entries are viewed locally in Emacs by typing `RET' while over an
+  entry in the search listing. The content will be displayed in a
+  separate buffer using `elfeed-show-mode', rendered using Emacs'
+  built-in shr package. This requires an Emacs compiled with `libxml2'
+  bindings, which provides the necessary HTML parser.
+
+  Sometimes displaying images can slow down or even crash Emacs. Set
+  `shr-inhibit-images' to disable images if this is a problem.
+
+
+11 Web Interface
+════════════════
+
+  A demonstration/toy web interface for remote network access to Elfeed
+  exists in a [separate repository]. It's a single-page web application
+  that follows the database live as new entries arrive. It's packaged
+  separately as `elfeed-web'. To fire it up, run `M-x elfeed-web-start'
+  and visit <http://localhost:8080/elfeed/> (check your `httpd-port')
+  with a browser. See the `elfeed-web.el' header for endpoint
+  documentation if you'd like to access the Elfeed database through the
+  web API.
+
+  It's rough and unfinished – no keyboard shortcuts, read-only, no
+  authentication, and a narrow entry viewer. This is basically Elfeed's
+  "mobile" interface. Patches welcome.
+
+
+[separate repository] <https://github.com/emacs-elfeed/elfeed-web>
+
+
+12 Platform Support
+═══════════════════
+
+  Summary: Install curl and most problems disappear for all platforms.
+
+  I personally only use Elfeed on Linux, but it's occasionally tested on
+  Windows.  Unfortunately the Windows port of Emacs is a bit too
+  unstable for parallel feed downloads with `url-retrieve', not to
+  mention the [tiny, hard-coded, 512 open descriptor limitation], so it
+  limits itself to one feed at a time on this platform.
+
+  If you fetch HTTPS feeds without curl on /any/ platform, it's
+  essential that Emacs is built with the `--with-gnutls'
+  option. Otherwise Emacs runs gnutls in an inferior process, which
+  rarely works well.
+
+
+[tiny, hard-coded, 512 open descriptor limitation]
+<https://msdn.microsoft.com/en-us/library/kdfaxaay%28vs.71%29.aspx>
+
+
+13 Database Management
+══════════════════════
+
+  The database should keep itself under control without any manual
+  intervention, but steps can be taken to minimize the database size if
+  desired. The simplest option is to run the `elfeed-db-compact'
+  command, which will pack the loose-file content database into a single
+  compressed file. We recommend to execute `elfeed-db-compact' from time
+  to time manually.
+
+  Going further, a function could be added to `elfeed-new-entry-hook' to
+  strip unwanted/unneeded content from select entries before being
+  stored in the database. For example, for YouTube videos only the entry
+  link is of interest and the regularly-changing entry content could be
+  tossed to save time and storage.
+
+  ┌────
+  │ (defun strip-old-content ()
+  │   (let ((limit (elfeed-float-time "60 days ago")))
+  │     (elfeed-db-visit (entry feed)
+  │       (cond
+  │        ((< (elfeed-entry-date entry) limit)
+  │         (elfeed-db-return))
+  │        ((equal "https://example.com/feed/" (elfeed-feed-url feed))
+  │         (setf (elfeed-entry-content entry) nil))))))
+  └────
+
+
+14 Status and Roadmap
+═════════════════════
+
+  Elfeed is a mature and maintained Emacs package, which should
+  integrate well into your Emacs setup. It is to the point where it can
+  serve 100% of your web feed needs, even if you use hundreds of
+  feeds. We still have to decide on a future roadmap, but our goal is to
+  preserve the overall character and behavior of Elfeed.
+
+
+15 Motivation
+═════════════
+
+  As far as I know, outside of Elfeed there does not exist an
+  extensible, text-file configured, power-user web feed client that can
+  handle a reasonable number of feeds. The existing clients I've tried
+  are missing some important capability that limits its usefulness to
+  me.
+
+
+16 Extensions
+═════════════
+
+  There are projects which extend Elfeed with additional features. The
+  following packages provide significant additional functionality and
+  have more than 5K downloads on [MELPA], which hints at a certain
+  maturity. Note that no guarantees for compatibility are made.
+
+  • [elfeed-protocol]: Support for many fetching methods.
+  • [elfeed-score]: Gnus-like scoring.
+  • [elfeed-tube]: Enhancements for Youtube feeds.
+  • [elfeed-web]: Web interface to Elfeed.
+
+  Many more extensions can be found on MELPA - here is an non-exhaustive
+  list:
+
+  • [Elfeed-related packages on MELPA]
+  • [elfeed-cljsrn (Elfeed on Android)]
+  • [cuckoo-search]
+  • [elfeed-ai]
+  • [elfeed-autotag]
+  • [elfeed-curate]
+  • [elfeed-dashboard]
+  • [elfeed-goodies]
+  • [elfeed-org]
+  • [elfeed-summarize]
+  • [elfeed-summary]
+  • [elfeed-time]
+
+
+[MELPA] <https://melpa.org/#/?q=elfeed&sort=downloads&asc=false>
+
+[elfeed-protocol] <https://github.com/fasheng/elfeed-protocol>
+
+[elfeed-score] <https://github.com/sp1ff/elfeed-score>
+
+[elfeed-tube] <https://github.com/karthink/elfeed-tube>
+
+[elfeed-web] <https://github.com/emacs-elfeed/elfeed-web>
+
+[Elfeed-related packages on MELPA]
+<https://melpa.org/#/?q=elfeed&sort=downloads&asc=false>
+
+[elfeed-cljsrn (Elfeed on Android)]
+<https://github.com/areina/elfeed-cljsrn>
+
+[cuckoo-search] <https://github.com/rtrppl/cuckoo-search>
+
+[elfeed-ai] <https://github.com/benthamite/elfeed-ai>
+
+[elfeed-autotag] <https://github.com/paulelms/elfeed-autotag>
+
+[elfeed-curate] <https://github.com/rnadler/elfeed-curate>
+
+[elfeed-dashboard] <https://github.com/manojm321/elfeed-dashboard>
+
+[elfeed-goodies] <https://github.com/algernon/elfeed-goodies>
+
+[elfeed-org] <https://github.com/remyhonig/elfeed-org>
+
+[elfeed-summarize] <https://github.com/fritzgrabo/elfeed-summarize>
+
+[elfeed-summary] <https://github.com/SqrtMinusOne/elfeed-summary>
+
+[elfeed-time] <https://github.com/zabe40/elfeed-time>
+
+
+17 Blog posts
+═════════════
+
+  • [Introducing Elfeed, an Emacs Web Feed Reader].
+  • [Tips and Tricks]
+  • [Read your RSS feeds in Emacs with Elfeed]
+  • [Scoring Elfeed articles]
+  • [Using Emacs 29], [30], [31]
+  • [Take Elfeed everywhere: Mobile rss reading Emacs-style (for
+    free/cheap)]
+  • [Elfeed Rules!] ([reddit])
+  • [Elfeed with Tiny Tiny RSS] ([hn])
+  • [Open Emacs elfeed links in the background]
+  • [Using Emacs 72]
+  • [Lazy Elfeed]
+  • [Using Elfeed to View Videos]
+  • [Manage podcasts in Emacs with Elfeed and Bongo]
+  • [Nullprogram Elfeed category]
+  • [Pragmaticemacs Elfeed category]
+
+
+[Introducing Elfeed, an Emacs Web Feed Reader]
+<https://nullprogram.com/blog/2013/09/04/>
+
+[Tips and Tricks] <https://nullprogram.com/blog/2013/11/26/>
+
+[Read your RSS feeds in Emacs with Elfeed]
+<https://pragmaticemacs.wordpress.com/emacs/read-your-rss-feeds-in-emacs-with-elfeed/>
+
+[Scoring Elfeed articles]
+<https://kitchingroup.cheme.cmu.edu/blog/2017/01/05/Scoring-elfeed-articles/>
+
+[Using Emacs 29] <https://www.youtube.com/watch?v=pOFqzK1Ymr4>
+
+[30] <https://www.youtube.com/watch?v=tjnK1rkO7RU>
+
+[31] <https://www.youtube.com/watch?v=5zuSUbAHH8c>
+
+[Take Elfeed everywhere: Mobile rss reading Emacs-style (for
+free/cheap)]
+<https://babbagefiles.blogspot.com/2017/03/take-elfeed-everywhere-mobile-rss.html>
+
+[Elfeed Rules!] <https://noonker.github.io/posts/2020-04-22-elfeed/>
+
+[reddit] <https://old.reddit.com/r/emacs/comments/g6oowz/elfeed_rules/>
+
+[Elfeed with Tiny Tiny RSS]
+<https://codingquark.com/emacs/2020/04/19/elfeed-protocol-ttrss.html>
+
+[hn] <https://news.ycombinator.com/item?id=22915200>
+
+[Open Emacs elfeed links in the background]
+<https://xenodium.com/open-emacs-elfeed-links-in-background/>
+
+[Using Emacs 72]
+<https://web.archive.org/web/20241126185125/https://cestlaz.github.io/post/using-emacs-72-customizing-elfeed/>
+
+[Lazy Elfeed] <https://karthinks.com/blog/lazy-elfeed/>
+
+[Using Elfeed to View Videos]
+<https://medium.com/emacs/using-elfeed-to-view-videos-6dfc798e51e6>
+
+[Manage podcasts in Emacs with Elfeed and Bongo]
+<https://protesilaos.com/codelog/2020-09-11-emacs-elfeed-bongo/>
+
+[Nullprogram Elfeed category] <https://nullprogram.com/tags/elfeed/>
+
+[Pragmaticemacs Elfeed category]
+<https://pragmaticemacs.wordpress.com/category/elfeed/>

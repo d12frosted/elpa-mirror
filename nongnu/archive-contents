@@ -451,12 +451,29 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "2d89026fbc61214fda25d5dd589cd328ddce5f6e"))])
  (elfeed
-  . [(3 4 2) ((emacs (24 3))) "An Emacs Atom/RSS feed reader" tar
-     ((:url . "https://github.com/skeeto/elfeed")
-      (:keywords "network" "hypermedia")
-      (:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+  . [(4 0 0) ((emacs (28 1)) (compat (31))) "An Atom/RSS feed reader"
+     tar
+     ((:url . "https://github.com/emacs-elfeed/elfeed")
+      (:keywords "network" "comm" "hypermedia")
+      (:maintainer
+       ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com")
+       ("Ihor Radchenko" . "yantar92@posteo.net")
+       ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "cfa931a0cf56e2e7be0ddadc41fcf11dc0209232"))])
+      (:commit . "d9ec8b93a61f6653bf9bcc929dbfa5e49133d37f"))])
+ (elfeed-web
+  . [(4 0 0)
+     ((emacs (28 1)) (compat (31)) (elfeed (3 4 2))
+      (simple-httpd (1 6)))
+     "Web interface to Elfeed" tar
+     ((:url . "https://github.com/emacs-elfeed/elfeed-web")
+      (:keywords "network" "hypermedia")
+      (:maintainer
+       ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com")
+       ("Ihor Radchenko" . "yantar92@posteo.net")
+       ("Daniel Mendler" . "mail@daniel-mendler.de"))
+      (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
+      (:commit . "e947501a29457a55dfb0828aa791185c6b41bc37"))])
  (elixir-mode
   . [(2 5 0) ((emacs (25))) "Major mode for editing Elixir files" tar
      ((:url . "https://github.com/elixir-editors/emacs-elixir")
