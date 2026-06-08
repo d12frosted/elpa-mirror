@@ -2,3 +2,31 @@
  • Building package epkg
 From https://github.com/emacscollective/epkg
 Updating /mnt/store/melpa/working/epkg/
+Checking out 849ce2359fcd51467e7ef00faaf6130e1017e6ce
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/epkg/
+  to /tmp/epkg-QVxA2o/epkg-20260601.1620/
+  ! lisp/epkg-desc.el -> epkg-desc.el
+  ! lisp/epkg-elpa.el -> epkg-elpa.el
+  ! lisp/epkg-list.el -> epkg-list.el
+  ! lisp/epkg-org.el -> epkg-org.el
+  ! lisp/epkg-schemata.el -> epkg-schemata.el
+  ! lisp/epkg-utils.el -> epkg-utils.el
+  ! lisp/epkg.el -> epkg.el
+  ! docs/epkg.texi -> epkg.texi
+    .dir-locals.el -> .dir-locals.el
+Generating epkg.info
+Created epkg-20260601.1620.tar containing:
+  epkg-20260601.1620/
+  epkg-20260601.1620/.dir-locals.el
+  epkg-20260601.1620/dir
+  epkg-20260601.1620/epkg-desc.el
+  epkg-20260601.1620/epkg-elpa.el
+  epkg-20260601.1620/epkg-list.el
+  epkg-20260601.1620/epkg-org.el
+  epkg-20260601.1620/epkg-pkg.el
+  epkg-20260601.1620/epkg-schemata.el
+  epkg-20260601.1620/epkg-utils.el
+  epkg-20260601.1620/epkg.el
+  epkg-20260601.1620/epkg.info
+Built epkg in 5.197s, finished at 2026-06-08T16:09:24+0000
