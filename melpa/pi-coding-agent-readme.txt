@@ -11,9 +11,10 @@ pi-coding-agent uses `md-ts-mode` for its own chat and input buffers;
 loading it does not change global Markdown file associations.
 
 Usage:
-  M-x pi-coding-agent         Start or focus session in current project
-  C-u M-x pi-coding-agent     Start a named session
-  M-x pi-coding-agent-toggle  Hide/show session windows in current frame
+  M-x pi-coding-agent                    Start or focus session in current project
+  C-u M-x pi-coding-agent                Start a named session
+  M-x pi-coding-agent-open-session-file  Open a JSONL session file as live session
+  M-x pi-coding-agent-toggle             Hide/show session windows in current frame
 
 Many users define an alias: (defalias 'pi 'pi-coding-agent)
 
