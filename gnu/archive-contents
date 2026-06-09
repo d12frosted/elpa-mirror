@@ -1484,7 +1484,7 @@
       (:authors ("Sean Allred" . "code@seanallred.com"))
       (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader
-  . [(0 19 2) ((emacs (26 1)) (seq (2 24)) (compat (29 1 4 5)))
+  . [(0 19 4) ((emacs (26 1)) (seq (2 24)) (compat (29 1 4 5)))
      "Gnamù reader, send buffer contents to a speech engine" tar
      ((:url . "https://gitlab.com/michelangelo-rodriguez/greader")
       (:keywords "tools" "accessibility")
@@ -1492,7 +1492,7 @@
 		   . "michelangelo.rodriguez@gmail.com")
       (:authors
        ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
-      (:commit . "e6de15fd3fef8703bf2021a810016476ec7c5883"))])
+      (:commit . "24914f0d679c6adaa7aaa0de46fefb7a11cb1094"))])
  (greenbar
   . [(1 2 260317) ((emacs (27 1)))
      "Mark comint output with \"greenbar\" background" tar
