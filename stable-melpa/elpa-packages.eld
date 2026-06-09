@@ -3435,7 +3435,7 @@
   (magit-org-todos :url "https://github.com/danielma/magit-org-todos.el")
   (magit-p4 :url "https://github.com/emacsorphanage/magit-p4")
   (magit-patch-changelog :url "https://github.com/dickmao/magit-patch-changelog")
-  (magit-popup :url "https://github.com/magit/magit-popup")
+  (magit-popup :url "https://github.com/emacsattic/magit-popup")
   (magit-pre-commit :url "https://github.com/DamianB-BitFlipper/magit-pre-commit.el")
   (magit-prime :url "https://github.com/Azkae/magit-prime")
   (magit-rbr :url "https://github.com/fanatoly/magit-rbr")
