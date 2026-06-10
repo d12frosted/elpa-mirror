@@ -861,13 +861,13 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "bd8556eef10e57b175406c117f18e1953422c803"))])
  (dired-preview
-  . [(0 6 0) ((emacs (28 1)))
+  . [(0 6 1) ((emacs (28 1)))
      "Automatically preview file at point in Dired" tar
      ((:url . "https://github.com/protesilaos/dired-preview")
       (:keywords "files" "convenience")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "fbb47740cf7f30df29539061e84c6827210d2846"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "090eded80f801cb4f651490cdd9a78910ef63946"))])
  (disk-usage
   . [(1 3 3) ((emacs (26 1))) "Sort and browse disk usage listings"
      tar
