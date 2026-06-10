@@ -2,6 +2,12 @@
 of a buffer.  With every other line reversed reading can be like
 following a rope.
 
+Precondition
+------------
+
+rope-read-mode depends on programm gm of the GraphicsMagick-suite (for
+actual transformation of the lines.)
+
 Turning it on and off
 ---------------------
 
@@ -38,14 +44,11 @@ When =rope-read-mode= is on you can press
 Configuration
 -------------
 
-For convenience you can bind command =rope-read-mode= to a key.  For
-example to activate or deactivate =rope-read-mode= by pressing scroll
-lock two times use the line
+For convenience you can bind command =rope-read-mode= to a key.  e.g.
 
 #+BEGIN_EXAMPLE
-(global-set-key (kbd "<Scroll_Lock> <Scroll_Lock>") 'rope-read-mode)
+(keymap-global-set "C-c R" #'rope-read-mode)
 #+END_EXAMPLE
 
-You can control the flipping via customization.  See M-x
-customize-apropos rope-read.  Shortcut: With point after the next
-closing parenthesis do C-xe (customize-apropos "rope-read").
+You can control the flipping via customization.
+See M-x customize-apropos rope-read.
