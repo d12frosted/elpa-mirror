@@ -2,10 +2,10 @@
  • Building package anju
 From https://github.com/kickingvegas/anju
 Updating /mnt/store/melpa/working/anju/
-Checking out 0f06f00d5048928ba0f4bb4d86f5dd7d0fb32d85
+Checking out b7587aecc099e15116e7b180cdcfa2d9f86c4e8a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/anju/
-  to /tmp/anju-HZswlL/anju-20260609.2159/
+  to /tmp/anju-Z6uDnQ/anju-20260610.104/
   ! lisp/anju-context-menu.el -> anju-context-menu.el
   ! lisp/anju-main-menu.el -> anju-main-menu.el
   ! lisp/anju-mode-line.el -> anju-mode-line.el
@@ -15,51 +15,51 @@ Copying files (->) and directories (=>)
   ! docs/anju.texi -> anju.texi
   ! docs/images => images
 Generating anju.info
-Created anju-20260609.2159.tar containing:
-  anju-20260609.2159/
-  anju-20260609.2159/anju-context-menu.el
-  anju-20260609.2159/anju-main-menu.el
-  anju-20260609.2159/anju-mode-line.el
-  anju-20260609.2159/anju-pkg.el
-  anju-20260609.2159/anju-style-text.el
-  anju-20260609.2159/anju-utils.el
-  anju-20260609.2159/anju.el
-  anju-20260609.2159/anju.info
-  anju-20260609.2159/dir
-  anju-20260609.2159/images/
-  anju-20260609.2159/images/anju-context-menu-compilation.png
-  anju-20260609.2159/images/anju-context-menu-dired-copy-to.png
-  anju-20260609.2159/images/anju-context-menu-dired-insert-subdir.png
-  anju-20260609.2159/images/anju-context-menu-edebug.png
-  anju-20260609.2159/images/anju-context-menu-elisp-built-in.png
-  anju-20260609.2159/images/anju-context-menu-elisp.png
-  anju-20260609.2159/images/anju-context-menu-enhanced-paste.png
-  anju-20260609.2159/images/anju-context-menu-ert-result.png
-  anju-20260609.2159/images/anju-context-menu-ert.png
-  anju-20260609.2159/images/anju-context-menu-extract-lambda-1.png
-  anju-20260609.2159/images/anju-context-menu-extract-lambda-2.png
-  anju-20260609.2159/images/anju-context-menu-extract-lambda-3.png
-  anju-20260609.2159/images/anju-context-menu-info.png
-  anju-20260609.2159/images/anju-context-menu-makefile.png
-  anju-20260609.2159/images/anju-context-menu-org-copy-as.png
-  anju-20260609.2159/images/anju-context-menu-org-headline.png
-  anju-20260609.2159/images/anju-context-menu-org-item-inprogress.png
-  anju-20260609.2159/images/anju-context-menu-org-item.png
-  anju-20260609.2159/images/anju-context-menu-org-link.png
-  anju-20260609.2159/images/anju-context-menu-org-table.png
-  anju-20260609.2159/images/anju-context-menu-rectangle.png
-  anju-20260609.2159/images/anju-context-menu-region.png
-  anju-20260609.2159/images/anju-context-menu-toggle-images-markup.png
-  anju-20260609.2159/images/anju-context-menu-vc.png
-  anju-20260609.2159/images/anju-kmacro-menu.png
-  anju-20260609.2159/images/anju-main-menu-bookmarks.png
-  anju-20260609.2159/images/anju-main-menu-edit-search-in-files.png
-  anju-20260609.2159/images/anju-main-menu-help.png
-  anju-20260609.2159/images/anju-main-menu-imenu.png
-  anju-20260609.2159/images/anju-main-menu-text.png
-  anju-20260609.2159/images/anju-main-menu-tools-kmacro.png
-  anju-20260609.2159/images/anju-main-menu-tools.png
-  anju-20260609.2159/images/anju-mode-line-buffer-list.png
-  anju-20260609.2159/images/anju-mode-line-window-management.png
-  anju-20260609.2159/images/default-yellow.png
-Built anju in 5.895s, finished at 2026-06-10T00:17:31+0000
+Created anju-20260610.104.tar containing:
+  anju-20260610.104/
+  anju-20260610.104/anju-context-menu.el
+  anju-20260610.104/anju-main-menu.el
+  anju-20260610.104/anju-mode-line.el
+  anju-20260610.104/anju-pkg.el
+  anju-20260610.104/anju-style-text.el
+  anju-20260610.104/anju-utils.el
+  anju-20260610.104/anju.el
+  anju-20260610.104/anju.info
+  anju-20260610.104/dir
+  anju-20260610.104/images/
+  anju-20260610.104/images/anju-context-menu-compilation.png
+  anju-20260610.104/images/anju-context-menu-dired-copy-to.png
+  anju-20260610.104/images/anju-context-menu-dired-insert-subdir.png
+  anju-20260610.104/images/anju-context-menu-edebug.png
+  anju-20260610.104/images/anju-context-menu-elisp-built-in.png
+  anju-20260610.104/images/anju-context-menu-elisp.png
+  anju-20260610.104/images/anju-context-menu-enhanced-paste.png
+  anju-20260610.104/images/anju-context-menu-ert-result.png
+  anju-20260610.104/images/anju-context-menu-ert.png
+  anju-20260610.104/images/anju-context-menu-extract-lambda-1.png
+  anju-20260610.104/images/anju-context-menu-extract-lambda-2.png
+  anju-20260610.104/images/anju-context-menu-extract-lambda-3.png
+  anju-20260610.104/images/anju-context-menu-info.png
+  anju-20260610.104/images/anju-context-menu-makefile.png
+  anju-20260610.104/images/anju-context-menu-org-copy-as.png
+  anju-20260610.104/images/anju-context-menu-org-headline.png
+  anju-20260610.104/images/anju-context-menu-org-item-inprogress.png
+  anju-20260610.104/images/anju-context-menu-org-item.png
+  anju-20260610.104/images/anju-context-menu-org-link.png
+  anju-20260610.104/images/anju-context-menu-org-table.png
+  anju-20260610.104/images/anju-context-menu-rectangle.png
+  anju-20260610.104/images/anju-context-menu-region.png
+  anju-20260610.104/images/anju-context-menu-toggle-images-markup.png
+  anju-20260610.104/images/anju-context-menu-vc.png
+  anju-20260610.104/images/anju-kmacro-menu.png
+  anju-20260610.104/images/anju-main-menu-bookmarks.png
+  anju-20260610.104/images/anju-main-menu-edit-search-in-files.png
+  anju-20260610.104/images/anju-main-menu-help.png
+  anju-20260610.104/images/anju-main-menu-imenu.png
+  anju-20260610.104/images/anju-main-menu-text.png
+  anju-20260610.104/images/anju-main-menu-tools-kmacro.png
+  anju-20260610.104/images/anju-main-menu-tools.png
+  anju-20260610.104/images/anju-mode-line-buffer-list.png
+  anju-20260610.104/images/anju-mode-line-window-management.png
+  anju-20260610.104/images/default-yellow.png
+Built anju in 6.246s, finished at 2026-06-10T05:17:52+0000
