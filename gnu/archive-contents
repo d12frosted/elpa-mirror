@@ -2795,12 +2795,12 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "d33d2e357c8eb0b38624dbc51e8b953b08b0cc98"))])
  (rnc-mode
-  . [(0 3) nil "Emacs mode to edit Relax-NG Compact files" tar
+  . [(0 4) nil "Emacs mode to edit Relax-NG Compact files" tar
      ((:keywords "xml" "relaxng")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/rnc-mode.html")
-      (:commit . "dfee31d83208b734ed1d1fdc523565d7056db850"))])
+      (:commit . "2ffd0775392b6f5efd82c775f3a1cb5bea8c917d"))])
  (rt-liberation
   . [(7) nil "Emacs interface to RT" tar
      ((:url . "http://www.nongnu.org/rtliber/")

@@ -223,8 +223,8 @@ Manual installation
   with:
 
   ┌────
-  │ emacs --quick --batch --eval "(progn (setq generated-autoload-file (expand-file-name \"subed-autoloads.el\" \"subed\") backup-inhibited t) \
-  │         (update-directory-autoloads \"./subed\"))"
+  │ emacs --quick --batch --eval "(let ((default-directory (expand-file-name \"subed\"))) (setq generated-autoload-file \"subed-autoloads.el\" backup-inhibited t) \
+  │         (update-directory-autoloads \".\"))"
   └────
 
   Then you can add the following to your Emacs configuration (typically
@@ -296,6 +296,17 @@ use-package configuration
   │         (add-hook 'subed-mode-hook 'subed-enable-loop-over-current-subtitle)
   │         ;; Show characters per second
   │         (add-hook 'subed-mode-hook 'subed-enable-show-cps)
+  │         )
+  └────
+
+  If you want to use a local development copy, use something like this:
+
+  ┌────
+  │ (use-package subed
+  │   :load-path "~/proj/subed/subed"  ; note: use the subed/ subdirectory in the package source
+  │         :preface
+  │         (load-library "subed-autoloads")
+  │         ;; ... rest of your config ...
   │         )
   └────
 
