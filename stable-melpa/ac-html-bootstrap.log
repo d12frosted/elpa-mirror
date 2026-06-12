@@ -1,0 +1,125 @@
+
+ • Building package ac-html-bootstrap
+From https://github.com/osv/ac-html-bootstrap
+Updating /mnt/store/melpa/working/ac-html-bootstrap/
+Checking out 481e6e441cd566554ce71cd8cb28c9e7ebb1c24b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-html-bootstrap/
+  to /tmp/ac-html-bootstrap-vUM0J3/ac-html-bootstrap-20160302.1701/
+    ac-html-bootstrap.el -> ac-html-bootstrap.el
+    ac-html-fa.el -> ac-html-fa.el
+    html-stuff => html-stuff
+    fa-html-stuff => fa-html-stuff
+Created ac-html-bootstrap-20160302.1701.tar containing:
+  ac-html-bootstrap-20160302.1701/
+  ac-html-bootstrap-20160302.1701/ac-html-bootstrap-pkg.el
+  ac-html-bootstrap-20160302.1701/ac-html-bootstrap.el
+  ac-html-bootstrap-20160302.1701/ac-html-fa.el
+  ac-html-bootstrap-20160302.1701/fa-html-stuff/
+  ac-html-bootstrap-20160302.1701/fa-html-stuff/html-attributes-complete/
+  ac-html-bootstrap-20160302.1701/fa-html-stuff/html-attributes-complete/i-class
+  ac-html-bootstrap-20160302.1701/html-stuff/
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/a-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/a-data-dismiss
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/a-data-slide
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/a-data-target
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/a-data-toggle
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/abbr-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/blockquote-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/button-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/button-data-dismiss
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/button-data-slide
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/button-data-target
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/button-data-toggle
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-backdrop
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-interval
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-keyboard
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-offset-bottom
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-offset-top
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-pause
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-ride
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-show
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/div-data-wrap
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/dl-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/embed-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/form-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-animation
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-container
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-delay
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-html
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-offset
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-placement
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-selector
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-spy
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-toggle
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-trigger
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/global-data-viewport
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/h1-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/h2-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/h3-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/h4-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/h5-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/h6-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/i-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/iframe-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/img-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/input-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/input-data-dismiss
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/input-data-slide
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/input-data-target
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/input-data-toggle
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/label-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/label-data-dismiss
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/label-data-slide
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/label-data-target
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/label-data-toggle
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/li-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/li-data-slide-to
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/li-data-toggle
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/nav-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/object-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/ol-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/p-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/select-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/span-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/table-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/td-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/textarea-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/tr-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/ul-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-complete/video-class
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/a
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/button
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/div
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/fieldset
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/global
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/input
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/label
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-list/li
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-short-docs/
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-short-docs/div-data-offset-bottom
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-short-docs/div-data-offset-top
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-short-docs/div-data-ride
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-short-docs/fieldset-disabled
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-short-docs/global-data-container
+  ac-html-bootstrap-20160302.1701/html-stuff/html-attributes-short-docs/global-data-spy
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-list
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/abbr
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/address
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/blockquote
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/cite
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/del
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/em
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/footer
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/ins
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/mark
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/s
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/small
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/strong
+  ac-html-bootstrap-20160302.1701/html-stuff/html-tag-short-docs/u
+Built ac-html-bootstrap in 3.397s, finished at 2026-06-12T04:47:04+0000
