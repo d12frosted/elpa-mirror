@@ -293,14 +293,14 @@ database format is stable and is never expected to change.
   │ (setq elfeed-feeds
   │       '(("https://yhetil.org/emacs-devel/new.atom" emacs lists devel)
   │         ("https://yhetil.org/emacs-bugs/new.atom" emacs lists bugs)
-  │         ("https://old.reddit.com/r/emacs.rss" emacs reddit)))
+  │         ("https://sachachua.com/blog/category/emacs-news/feed/" emacs news)))
   └────
 
   leads to a tree of the following form.
 
   ┌────
   │ emacs
-  │   ├─● /r/reddit
+  │   ├─● emacs-news
   │   lists
   │     ├─● emacs-devel
   │     ╰─● emacs-bugs
@@ -511,8 +511,13 @@ database format is stable and is never expected to change.
   authentication, and a narrow entry viewer. This is basically Elfeed's
   "mobile" interface. Patches welcome.
 
+  There exists the [elfeed-cljsrn] Android application to access Elfeed
+  via its web API.
+
 
 [separate repository] <https://github.com/emacs-elfeed/elfeed-web>
+
+[elfeed-cljsrn] <https://github.com/areina/elfeed-cljsrn>
 
 
 12 Platform Support
@@ -601,7 +606,6 @@ database format is stable and is never expected to change.
   list:
 
   • [Elfeed-related packages on MELPA]
-  • [elfeed-cljsrn (Elfeed on Android)]
   • [cuckoo-search]
   • [elfeed-ai]
   • [elfeed-autotag]
@@ -626,9 +630,6 @@ database format is stable and is never expected to change.
 
 [Elfeed-related packages on MELPA]
 <https://melpa.org/#/?q=elfeed&sort=downloads&asc=false>
-
-[elfeed-cljsrn (Elfeed on Android)]
-<https://github.com/areina/elfeed-cljsrn>
 
 [cuckoo-search] <https://github.com/rtrppl/cuckoo-search>
 
