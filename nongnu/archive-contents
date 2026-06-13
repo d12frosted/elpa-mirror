@@ -435,13 +435,13 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (eldoc-mouse
-  . [(3 0 7) ((emacs (27 1)) (posframe (1 4 0)) (eglot (1 8)))
+  . [(3 0 8) ((emacs (27 1)) (posframe (1 5 1)) (eglot (1 23)))
      "Display documentation for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse")
       (:keywords "tools" "languages" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "67bb73e54533e276e35d2548aa30e299c3a5ee18"))])
+      (:commit . "6b7bddc4b16c0b3d6f4203e03e659b5211cab516"))])
  (eldoc-mouse-nov
   . [(0 1 1) ((emacs (27 1)) (eldoc-mouse (3 0 2)) (nov (0 5 0)))
      "Preview epub link for mouse hover" tar
