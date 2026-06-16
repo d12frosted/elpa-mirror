@@ -8,10 +8,11 @@ URL: https://github.com/tninja/ai-code-interface.el
 
 Supported AI coding CLIs include:
   - OpenAI Codex
+  - Antigravity CLI
+  - Opencode
+  - Claude Code
   - GitHub Copilot CLI
   - Gemini CLI
-  - Claude Code
-  - Opencode
   - Kilo
   - Grok CLI
   - Cursor CLI

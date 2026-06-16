@@ -2,10 +2,10 @@
  • Building package projection
 From https://github.com/mohkale/projection
 Updating /mnt/store/melpa/working/projection/
-Checking out 482789397c5e11dbb95438c87ccd0cad3d37a33a
+Checking out 870a60b26416e13a7cd37ecfd863ae730d6a13fa
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/projection/
-  to /tmp/projection-bXDJ4z/projection-20250927.1605/
+  to /tmp/projection-c9Zqus/projection-20260614.1822/
   ! src/projection-artifacts.el -> projection-artifacts.el
   ! src/projection-commands.el -> projection-commands.el
   ! src/projection-core-cache.el -> projection-core-cache.el
@@ -24,33 +24,37 @@ Copying files (->) and directories (=>)
   ! src/projection-type-cmake.el -> projection-type-cmake.el
   ! src/projection-type-golang.el -> projection-type-golang.el
   ! src/projection-type-gradle.el -> projection-type-gradle.el
+  ! src/projection-type-java.el -> projection-type-java.el
+  ! src/projection-type-maven.el -> projection-type-maven.el
   ! src/projection-type-meson.el -> projection-type-meson.el
   ! src/projection-types.el -> projection-types.el
   ! src/projection-utils.el -> projection-utils.el
   ! src/projection.el -> projection.el
-Created projection-20250927.1605.tar containing:
-  projection-20250927.1605/
-  projection-20250927.1605/projection-artifacts.el
-  projection-20250927.1605/projection-commands.el
-  projection-20250927.1605/projection-core-cache.el
-  projection-20250927.1605/projection-core-commands.el
-  projection-20250927.1605/projection-core-completion.el
-  projection-20250927.1605/projection-core-log.el
-  projection-20250927.1605/projection-core-match.el
-  projection-20250927.1605/projection-core-misc.el
-  projection-20250927.1605/projection-core-type.el
-  projection-20250927.1605/projection-core.el
-  projection-20250927.1605/projection-customize-compilation.el
-  projection-20250927.1605/projection-find.el
-  projection-20250927.1605/projection-hook.el
-  projection-20250927.1605/projection-ibuffer.el
-  projection-20250927.1605/projection-pkg.el
-  projection-20250927.1605/projection-recentf.el
-  projection-20250927.1605/projection-type-cmake.el
-  projection-20250927.1605/projection-type-golang.el
-  projection-20250927.1605/projection-type-gradle.el
-  projection-20250927.1605/projection-type-meson.el
-  projection-20250927.1605/projection-types.el
-  projection-20250927.1605/projection-utils.el
-  projection-20250927.1605/projection.el
-Built projection in 4.918s, finished at 2026-06-14T14:52:54+0000
+Created projection-20260614.1822.tar containing:
+  projection-20260614.1822/
+  projection-20260614.1822/projection-artifacts.el
+  projection-20260614.1822/projection-commands.el
+  projection-20260614.1822/projection-core-cache.el
+  projection-20260614.1822/projection-core-commands.el
+  projection-20260614.1822/projection-core-completion.el
+  projection-20260614.1822/projection-core-log.el
+  projection-20260614.1822/projection-core-match.el
+  projection-20260614.1822/projection-core-misc.el
+  projection-20260614.1822/projection-core-type.el
+  projection-20260614.1822/projection-core.el
+  projection-20260614.1822/projection-customize-compilation.el
+  projection-20260614.1822/projection-find.el
+  projection-20260614.1822/projection-hook.el
+  projection-20260614.1822/projection-ibuffer.el
+  projection-20260614.1822/projection-pkg.el
+  projection-20260614.1822/projection-recentf.el
+  projection-20260614.1822/projection-type-cmake.el
+  projection-20260614.1822/projection-type-golang.el
+  projection-20260614.1822/projection-type-gradle.el
+  projection-20260614.1822/projection-type-java.el
+  projection-20260614.1822/projection-type-maven.el
+  projection-20260614.1822/projection-type-meson.el
+  projection-20260614.1822/projection-types.el
+  projection-20260614.1822/projection-utils.el
+  projection-20260614.1822/projection.el
+Built projection in 5.449s, finished at 2026-06-16T12:32:24+0000

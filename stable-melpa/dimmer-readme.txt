@@ -7,7 +7,8 @@ form without requiring you to define what is a "dim" version of
 every face.
 
 `dimmer.el' can be configured to adjust foreground colors (default),
-background colors, or both.
+background colors, both, desaturate colors toward gray (`:desaturate`),
+or shift colors toward a target hue (`:hueshift`).
 
 Usage:
 
@@ -59,7 +60,9 @@ Please submit pull requests with configurations for other packages!
 Customization:
 
 `dimmer-adjustment-mode' controls what aspect of the color scheme is adjusted
-when dimming.  Choices are :foreground (default), :background, or :both.
+when dimming.  Choices include :foreground (default), :background, :both,
+:desaturate (desaturate toward gray), and :hueshift (shift colors toward a
+configurable target hue).  See the defcustom docstring for details.
 
 `dimmer-fraction' controls the degree to which buffers are dimmed.
 Range is 0.0 - 1.0, and default is 0.20.  Increase value if you
