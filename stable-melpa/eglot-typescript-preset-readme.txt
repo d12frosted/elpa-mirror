@@ -4,7 +4,7 @@ and optional linter/formatter integration via rassumfrassum (rass).
 
 Prerequisites:
 
-- Install typescript-language-server or deno (for TS/JS files)
+- Install typescript-language-server, deno, or tsgo (for TS/JS files)
 - Install @astrojs/language-server (for Astro files, optional)
 - Install @vue/language-server (for Vue files, optional)
 - Install svelte-language-server (for Svelte files, optional)
