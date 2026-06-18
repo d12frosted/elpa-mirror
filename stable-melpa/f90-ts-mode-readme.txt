@@ -2,7 +2,9 @@ f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 30+)
 
 Recently changed, added or improved:
-  [06-2026] Indentation within and after preprocessor blocks fixed
+  [06-2026] Indentation of lines after a structure beginning line with
+            statement label fixed.
+  [06-2026] Indentation within and after preprocessor blocks fixed.
   [06-2026] Trailing blank part "\\(\\s-+\\|$\\)" in defcustom regexps
             `f90-ts-comment-prefix-regexp' and `f90-ts-openmp-prefix-regexp'
             has been removed from the defcustom definitions and is now
