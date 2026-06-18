@@ -82,6 +82,10 @@ where a package pops up a window temporarily, and we don't want the
 dimming to change.  If any function in this list returns a non-nil
 value, dimming state will not be changed.
 
+`dimmer-reprocess-tainted-buffers' controls whether dimmer continues
+processing buffers marked tainted after a partial face-remap restore
+failure.
+
 `dimmer-watch-frame-focus-events' controls whether dimmer will dim all
 buffers when Emacs no longer has focus in the windowing system.  This
 is enabled by default.  Some users may prefer to set this to nil, and
