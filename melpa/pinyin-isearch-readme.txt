@@ -9,7 +9,7 @@ Input is transformed to regex expression like:
 Configuration in ~/.emacs or ~/.emacs.d/init.el:
 
 (require 'pinyin-isearch)
-(pinyin-isearch--activate) ; force loading (optional) before mode
+(pinyin-isearch--load) ; force loading (optional) before mode
 
 ;; Usage:
 
