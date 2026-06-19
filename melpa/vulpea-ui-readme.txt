@@ -5,7 +5,8 @@ set of default widgets and an API for creating custom widgets.
 Features:
 - Per-frame sidebar with configurable position and size
 - Widget system built on vui components
-- Default widgets: outline, backlinks, forward links, stats
+- Default widgets: outline, backlinks, unlinked mentions, forward
+  links, stats
 - Easy API for creating custom widgets
 
 Usage:
