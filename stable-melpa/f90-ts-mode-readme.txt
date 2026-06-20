@@ -7,9 +7,9 @@ Recently changed, added or improved:
   [06-2026] Indentation within and after preprocessor blocks fixed.
   [06-2026] Trailing blank part "\\(\\s-+\\|$\\)" in defcustom regexps
             `f90-ts-comment-prefix-regexp' and `f90-ts-openmp-prefix-regexp'
-            has been removed from the defcustom definitions and is now
-            always appended internally.  If these variables have been
-            customized, please adjust.
+            removed from the defcustom definitions and added as
+            `f90-ts-comment-prefix-separator-regexp'.  If the regexp
+            variables have been customized, please adjust.
 
 Features:
   - Almost all statements up to F2023
