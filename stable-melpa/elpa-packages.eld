@@ -631,6 +631,7 @@
   (clang-format :url "https://github.com/emacsmirror/clang-format")
   (clang-format+ :url "https://github.com/SavchenkoValeriy/emacs-clang-format-plus")
   (clang-format-lite :url "https://github.com/arteen1000/clang-format-lite")
+  (clatter :url "https://github.com/parenworks/clatter.el")
   (claude-code :url "https://github.com/yuya373/claude-code-emacs")
   (claude-code-context :url "https://github.com/lukehoersten/claude-code-context")
   (claude-shell :url "https://github.com/arminfriedl/claude-shell")
