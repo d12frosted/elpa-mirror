@@ -3521,14 +3521,14 @@
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
       (:commit . "a0240be7a917dca47b95e401382affd1c11abea1"))])
  (verilog-mode
-  . [(2026 1 18 88738971) nil
+  . [(2026 4 14 10117132) nil
      "major mode for editing verilog source in Emacs" tar
      ((:url . "https://www.veripool.org") (:keywords "languages")
       (:maintainer ("Michael McNamara" . "mac@verilog.com")
 		   ("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:authors ("Michael McNamara" . "mac@verilog.com")
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
-      (:commit . "72a34eceb9e7e3bfd295f908b8148b2aca41a20e"))])
+      (:commit . "b3574e6464b0cce4a878106c07f1ea8f65989a6b"))])
  (vertico
   . [(2 10) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
