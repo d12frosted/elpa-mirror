@@ -3856,6 +3856,7 @@
   (notmuch-bookmarks :url "https://github.com/publicimageltd/notmuch-bookmarks")
   (notmuch-labeler :url "https://github.com/DamienCassou/notmuch-labeler")
   (notmuch-maildir :url "https://github.com/tarsius/notmuch-maildir")
+  (notmuch-multi :url "https://github.com/pivaldi/notmuch-multi")
   (notmuch-transient :url "https://github.com/tarsius/notmuch-transient")
   (nov :url "https://depp.brause.cc/nov.el.git")
   (nova-theme :url "https://github.com/muirdm/emacs-nova-theme")

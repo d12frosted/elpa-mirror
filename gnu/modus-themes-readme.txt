@@ -67,7 +67,8 @@ The manual has a section about building on top of Modus. My
    ("C-<f5>" . modus-themes-select)
    ("M-<f5>" . modus-themes-load-random))
   :config
-  ;; Your customizations here:
+  ;; Your customizations here.  All customizations must evaluated
+  ;; BEFORE loading the theme.
   (setq modus-themes-to-toggle '(modus-operandi modus-vivendi)
         modus-themes-to-rotate modus-themes-items
         modus-themes-mixed-fonts t
@@ -88,3 +89,31 @@ The manual has a section about building on top of Modus. My
   ;; `modus-themes-load-random-light').
   (modus-themes-load-theme 'modus-operandi))
 ```
+
+## Emacs themes based on Modus
+
+This is not an exhaustive list. You are welcome to add your package here.
+
+- `ef-themes` by Protesilaos <https://github.com/protesilaos/ef-themes>
+- `standard-themes` by Protesilaos <https://github.com/protesilaos/standard-themes>
+- `modus-ewal-theme` by Oliwier Czerwiński <https://github.com/deadendpl/modus-ewal-theme>
+- `modus-flexoki` by Derek Passen <https://github.com/dpassen/modus-flexoki>
+- `faff-theme` (since version 4) by James Ferguson <https://github.com/WJCFerguson/emacs-faff-theme>
+- `modus-catpuccin` by Magnus Therning <https://gitlab.com/magus/modus-catppuccin>
+- `pixel-themes` by Lucas <https://github.com/lucasobx/pixel-themes>
+
+## Other Emacs packages based on Modus
+
+- `modus-themes-exporter` by Protesilaos <https://github.com/protesilaos/modus-themes-exporter>
+
+## Projects inspired by the Modus themes
+
+This is not an exhaustive list. You are welcome to add your project here.
+
+- `hugo-modus` by Yejun Su is a theme for the Hugo static site
+  generator: <https://github.com/goofansu/hugo-modus>. It uses colours
+  from the Modus themes.
+- `modus-themes.nvim` by Miika Nissi and others is a port for NeoVim:
+  <https://github.com/miikanissi/modus-themes.nvim>.
+- `zed-modus-themes` by Vitaly Slobodin is a port for the Zed editor:
+  <https://github.com/vitallium/zed-modus-themes>.

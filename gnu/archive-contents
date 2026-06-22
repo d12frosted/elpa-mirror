@@ -1011,13 +1011,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "ffa3b88874d064256c5221d2bbcb1564d901602a"))])
  (ef-themes
-  . [(2 1 0) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 2 0) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "af6a2a588f72a40212624458278d87f1c769405b"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "5cdb7dd361ad3b5d7310f94375a832cd94c182d8"))])
  (eglot
   . [(1 23)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
@@ -2080,13 +2080,13 @@
       (:authors ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
       (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (modus-themes
-  . [(5 2 0) ((emacs (28 1)))
+  . [(5 3 0) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "d1037f1322487e5686fff655dcd88aa644b2ad51"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "2d044ac89f3bca7011fa2bfda003cf80ce115f70"))])
  (mpdired
   . [(3) ((emacs (29))) "A dired-like client for Music Player Daemon"
      tar
