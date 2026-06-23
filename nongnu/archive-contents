@@ -1173,13 +1173,13 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "93b744ac5d57d527b8ca625116c3206549b8231f"))])
  (loopy
-  . [(0 15 0)
+  . [(0 16 0)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://github.com/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "1849c6c774332c6451288debd4c353449ee79a92"))])
+      (:commit . "09fecad848c8671902ceae7d74afecdd29a84ac5"))])
  (loopy-dash
   . [(0 13 0) ((emacs (25 1)) (loopy (0 13 0)) (dash (2 19)))
      "Dash destructuring for `loopy'" tar

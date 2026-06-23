@@ -31,6 +31,13 @@ Constructive criticism is welcome.  If you see a place for improvement,
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
 _Recent breaking changes:_
+• Version 0.16.0:
+  • Using accumulation commands with different initial values for the
+    same variable now signals an error instead of a warning.
+  • Aliases made obsolete in version 0.14.0 have been removed.  They can
+    still be added manually to `loopy-parsers'.
+  • `while' and `until' now signal a warning when receiving multiple
+    conditions.  In the future, this will be an error.
 • Version 0.15.0:
   • Loopy now requires at least Emacs version 28.1, increased from
     version 27.1.
@@ -38,7 +45,8 @@ _Recent breaking changes:_
     will signal an error.
   • `loopy-command-parsers' and `loopy-aliases' are deprecated in favor
     of a single hash table in the new user option `loopy-parsers'.  This
-    simplified the code and will make adding local overrides easier.
+    simplified the code for adding the `override' special marco
+    argument.
   • `loopy-iter-bare-special-macro-arguments' and
     `loopy-iter-bare-commands' are deprecated in favor of the single
     variable `loopy-iter-bare-names'.
@@ -89,16 +97,16 @@ _Recent breaking changes:_
   ┌────
   │ ;; A simple usage of `cl-loop':
   │ (cl-loop for i from 1 to 10
-  │ 	 if (cl-evenp i) collect i into evens
-  │ 	 else collect i into odds
-  │ 	 end ; This `end' keyword is optional here.
-  │ 	 finally return (list odds evens))
+  │          if (cl-evenp i) collect i into evens
+  │          else collect i into odds
+  │          end ; This `end' keyword is optional here.
+  │          finally return (list odds evens))
   │ 
   │ ;; How it could be done using `loopy':
   │ (loopy (numbers i :from 1 :to 10)
   │        (if (cl-evenp i)
-  │ 	   (collect evens i)
-  │ 	 (collect odds i))
+  │            (collect evens i)
+  │          (collect odds i))
   │        (finally-return odds evens))
   └────
 
@@ -109,9 +117,9 @@ _Recent breaking changes:_
   │ ;; Summing the nth elements of sub-arrays:
   │ ;; => (8 10 12 14 16 18)
   │ (loopy (list list-elem '(([1 2 3] [4 5 6])
-  │ 			 ([7 8 9] [10 11 12])))
+  │                          ([7 8 9] [10 11 12])))
   │        (sum ([sum1 sum2 sum3] [sum4 sum5 sum6])
-  │ 	    list-elem)
+  │             list-elem)
   │        (finally-return sum1 sum2 sum3 sum4 sum5 sum6))
   │ 
   │ ;; Separate the elements of sub-list:
@@ -124,26 +132,27 @@ _Recent breaking changes:_
   The `loopy' macro is configurable and extensible.  In addition to
   writing one's own "loop commands" (such as `list' in the example
   above), by using "flags", one can choose whether to instead use
-  `pcase-let', `seq-let', or even the Dash library for destructuring.
+  destructuring via the libraries `pcase.el', `seq.el', or even
+  `dash.el'.
 
   ┌────
   │ ;; Use `pcase' to destructure array elements:
   │ ;; => ((1 2 3 4) (10 12 14) (11 13 15))
   │ (loopy (flag pcase)
   │        (array (or `(,car . ,cdr) digit)
-  │ 	      [1 (10 . 11) 2 (12 . 13) 3 4 (14 . 15)])
+  │               [1 (10 . 11) 2 (12 . 13) 3 4 (14 . 15)])
   │        (if digit
-  │ 	   (collect digits digit)
-  │ 	 (collect cars car)
-  │ 	 (collect cdrs cdr))
+  │            (collect digits digit)
+  │          (collect cars car)
+  │          (collect cdrs cdr))
   │        (finally-return digits cars cdrs))
   │ 
   │ ;; Using the default destructuring:
   │ ;; => ((1 2 3 4) (10 12 14) (11 13 15))
   │ (loopy (array elem [1 (10 . 11) 2 (12 . 13) 3 4 (14 . 15)])
   │        (if (numberp elem)
-  │ 	   (collect digits elem)
-  │ 	 (collect (cars . cdrs) elem))
+  │            (collect digits elem)
+  │          (collect (cars . cdrs) elem))
   │        (finally-return digits cars cdrs))
   └────
 
@@ -279,7 +288,7 @@ _Recent breaking changes:_
   │ ;; = > ((3 5) (4 6))
   │ (loopy (flag dash)
   │        (list (&plist :a a  :b b)
-  │ 	     '((:a 3  :b 4 :c 7) (:g 8 :a 5 :b 6)))
+  │              '((:a 3  :b 4 :c 7) (:g 8 :a 5 :b 6)))
   │        (collect a-vals a)
   │        (collect b-vals b)
   │        (finally-return a-vals b-vals))
@@ -330,19 +339,19 @@ _Recent breaking changes:_
   │ ;;     (0)
   │ ;;     (1 2 3 4 5 6 7 8 9 10 11))
   │ (loopy-iter (accum-opt positives negatives zeroes)
-  │ 	    (numbering i :from -10 :to 10)
-  │ 	    ;; Normal `let' and `pcase', not Loopy constructs:
-  │ 	    (let ((var (1+ i)))
-  │ 	      (pcase var
-  │ 		((pred cl-plusp)  (collecting positives var))
-  │ 		((pred cl-minusp) (collecting negatives var))
-  │ 		((pred zerop)     (collecting zeroes var))))
-  │ 	    (finally-return negatives zeroes positives))
+  │             (numbering i :from -10 :to 10)
+  │             ;; Normal `let' and `pcase', not Loopy constructs:
+  │             (let ((var (1+ i)))
+  │               (pcase var
+  │                 ((pred cl-plusp)  (collecting positives var))
+  │                 ((pred cl-minusp) (collecting negatives var))
+  │                 ((pred zerop)     (collecting zeroes var))))
+  │             (finally-return negatives zeroes positives))
   │ 
   │ ;; => 6
   │ (loopy-iter (listing elem '(1 2 3))
-  │ 	    (funcall #'(lambda (x) (summing x))
-  │ 		     elem))
+  │             (funcall #'(lambda (x) (summing x))
+  │                      elem))
   └────
 
   For more on this, [see the documentation].
