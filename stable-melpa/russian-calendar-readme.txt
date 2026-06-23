@@ -1,5 +1,4 @@
-
-2025  (updated 24/09/25)
+2026  (updated 2026-05-04)
 
 What:
 - Russian holidays
@@ -40,16 +39,22 @@ Usage:
 (russian-calendar-check-year-not-obsolate)
 
 Other packages:
-- Navigation in Dired, Packages, Buffers modes https://github.com/Anoncheg1/firstly-search
-- Search with Mandarin Chinese pinying	https://github.com/Anoncheg1/pinyin-isearch
+- Navigation in Dired, Packages, Buffers modes
+   https://github.com/Anoncheg1/firstly-search
+- Search with Mandarin Chinese pinying
+   https://github.com/Anoncheg1/pinyin-isearch
 - Ediff fix					https://github.com/Anoncheg1/ediffnw
 - Dired history				https://github.com/Anoncheg1/dired-hist
-- Mark selected window with contrast	https://github.com/Anoncheg1/selected-window-contrast
+- Mark selected window with contrast
+   https://github.com/Anoncheg1/selected-window-contrast
 - Org hyperlinks enhanced			https://github.com/Anoncheg1/org-links
-- Solution for "callback hell"		https://github.com/Anoncheg1/emacs-async1
+- Solution for "callback hell"
+   https://github.com/Anoncheg1/emacs-async1
 - Call LLMs and AI agents from Org-mode ai block. https://github.com/Anoncheg1/emacs-oai
 - outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
 - hiding password in caffe	https://github.com/Anoncheg1/emacs-hidepass
+- TAB key reimplementation	https://github.com/Anoncheg1/emacs-indent
+- Dates for Org-mode headers	https://github.com/Anoncheg1/emacs-org-history
 
 *DONATE MONEY*:
 You can sponsor author directly with crypto currencies:

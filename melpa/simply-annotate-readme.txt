@@ -71,6 +71,9 @@ All keybindings below use <prefix> to denote your chosen prefix
 - Press <prefix> s to set status (open, in-progress, resolved, closed)
 - Press <prefix> p to set priority (low, normal, high, critical)
 - Press <prefix> t to add tags for organization
+- Press <prefix> d to toggle hiding of done/closed threads; customise
+  `simply-annotate-hide-done-statuses' (e.g. '("resolved" "closed")) and
+  `simply-annotate-hide-done-style' (`full' or `indicator')
 
 * Author Management
 - Configure team members: (setq simply-annotate-author-list '("John" "Jane" "Bob"))

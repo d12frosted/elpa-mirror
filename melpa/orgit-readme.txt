@@ -53,6 +53,6 @@ To use a remote different from `orgit-remote' but still use
 
 To explicitly define the web urls, use something like:
 
-   git config orgit.status http://example.com/repo/overview
-   git config orgit.rev http://example.com/repo/revision/%r
-   git config orgit.log http://example.com/repo/history/%r
+   git config orgit.status https://example.com/repo/overview
+   git config orgit.rev https://example.com/repo/revision/%r
+   git config orgit.log https://example.com/repo/history/%r
