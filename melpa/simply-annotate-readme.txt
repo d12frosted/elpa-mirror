@@ -9,7 +9,7 @@ Quick Start (use-package):
 
   (use-package simply-annotate
     :bind-keymap ("C-c a" . simply-annotate-command-map)
-    :hook (find-file-hook . simply-annotate-mode))
+    :hook (find-file . simply-annotate-mode))
 
   (with-eval-after-load 'simply-annotate
     (add-hook 'dired-mode-hook #'simply-annotate-dired-mode))
@@ -26,12 +26,12 @@ to a prefix key of your choice.  With C-c a as the prefix:
 
 1. Open any file
 2. Select text and press C-c a j to create your first annotation
-3. Navigate with M-n (next) and M-p (previous)
+3. Navigate with the command prefix then `n` (next) and `p` (previous)
 
 Keymap Configuration:
 
-`simply-annotate-mode-map' is intentionally minimal (only M-n and
-M-p for navigation).  All other commands are in
+`simply-annotate-mode-map' is intentionally minimal and does not
+install global `M-n`/`M-p` bindings.  All other commands are in
 `simply-annotate-command-map':
 
   ;; Recommended: C-c a prefix (defers loading until first use)
@@ -50,12 +50,12 @@ M-p for navigation).  All other commands are in
 
 Two features reduce prefix-typing for repeated commands:
 
-- Transient menu: <prefix> SPC (`simply-annotate-menu') opens a
+- Transient menu: <prefix> ? (`simply-annotate-menu') opens a
   discoverable dispatcher; navigation and display toggles stay open
   so you can repeat them without re-opening the menu.
-- `repeat-mode' (Emacs 28.1+): enable it with M-x repeat-mode (or
+- `repeat_mode' (Emacs 28.1+): enable it with M-x repeat-mode (or
   (repeat-mode 1) in your init).  After one navigation/display
-  command you can continue with the bare keys n v ' / [ ] g -- see
+  command you can continue with the bare keys n p ' / [ ] g -- see
   `simply-annotate-repeat-map'.
 
 Threading & Collaboration:
