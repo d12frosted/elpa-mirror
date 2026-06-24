@@ -74,6 +74,8 @@ All keybindings below use <prefix> to denote your chosen prefix
 - Press <prefix> d to toggle hiding of done/closed threads; customise
   `simply-annotate-hide-done-statuses' (e.g. '("resolved" "closed")) and
   `simply-annotate-hide-done-style' (`full' or `indicator')
+- Press <prefix> c to collapse/expand the inline annotation thread at
+  point (requires inline display to be on via <prefix> /)
 
 * Author Management
 - Configure team members: (setq simply-annotate-author-list '("John" "Jane" "Bob"))
