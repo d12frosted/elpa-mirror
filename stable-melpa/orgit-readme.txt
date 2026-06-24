@@ -16,11 +16,14 @@ again with completion.
 Format
 ------
 
-The three link types defined here take these forms:
+The four link types defined here take these forms:
 
    orgit:/path/to/repo/            links to a `magit-status' buffer
    orgit-rev:/path/to/repo/::REV   links to a `magit-revision' buffer
    orgit-log:/path/to/repo/::ARGS  links to a `magit-log' buffer
+   orgit-blob:/path/to/repo/::REV:path/to/file[#N[-M|,C]]
+     links to a file- or blob-visiting buffer, optionally at
+     a certain line and column (#N,C), or span of lines (#N-M)
 
 Before v1.3.0 only the first revision was stored in `orgit-log'
 links, and all other revisions were discarded.  All other arguments
@@ -56,3 +59,4 @@ To explicitly define the web urls, use something like:
    git config orgit.status https://example.com/repo/overview
    git config orgit.rev https://example.com/repo/revision/%r
    git config orgit.log https://example.com/repo/history/%r
+   git config orgit.blob https://example.com/repo/history/%r

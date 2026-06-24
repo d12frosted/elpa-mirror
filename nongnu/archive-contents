@@ -1993,11 +1993,11 @@
       (:maintainer nil . "viewmail-info@nongnu.org")
       (:commit . "790c95503d8e130f97a68ab502eb5c77f35011c8"))])
  (web-mode
-  . [(17 3 23) ((emacs (24 3 1)))
+  . [(17 3 24) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
      ((:url . "https://web-mode.org") (:keywords "languages")
       (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
-      (:commit . "e93b3fb89fd6345a5ff59795bed712abd486200a"))])
+      (:commit . "aeee2d4c82a791ff69657c1413873bf9265544df"))])
  (webpaste
   . [(3 2 2) ((emacs (24 4)) (request (0 2 0)) (cl-lib (0 5)))
      "Paste to pastebin-like services" tar
