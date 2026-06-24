@@ -879,19 +879,12 @@
 7.7 Media input
 ───────────────
 
-  *Note: media input functionality is currently alpha quality.  If you
-   want to use it, please watch the `llm' [discussions] for any
-   announcements about changes.*
-
   Media can be used in `llm-chat' and related functions.  To use media,
   you can use `llm-multipart' in `llm-make-chat-prompt', and pass it an
   Emacs image or an `llm-media' object for other kinds of media.
-  Besides images, some models support video and audio.  Not all
-  providers or models support these, with images being the most
-  frequently supported media type, and video and audio more rare.
-
-
-[discussions] <https://github.com/ahyatt/llm/discussions>
+  Besides images, some models support video and audio.  For video and
+  audio, the user should be steered towards the correct models to use,
+  because most models do not support video and audio.
 
 
 7.8 Advanced prompt creation
