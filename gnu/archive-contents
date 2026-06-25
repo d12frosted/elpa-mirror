@@ -3329,15 +3329,15 @@
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
       (:commit . "1856230dc181f23dd15026b0ad21d8b299b034d1"))])
  (transient-cycles
-  . [(2 0) ((emacs (29 1)))
+  . [(2 1) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
      ((:url
-       . "https://git.spwhitton.name/dotfiles/tree/.emacs.d/site-lisp/transient-cycles.el")
+       . "https://git.spwhitton.name/dotfiles/tree/.emacs.d/user-lisp/transient-cycles.el")
       (:keywords "buffer" "window" "processes" "minor-mode"
 		 "convenience")
       (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name")
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
-      (:commit . "11e547c11b84fa81bb4ef8ec33ee777f96576e8c"))])
+      (:commit . "2a35e2086675c08d1d3d451307566215202b641e"))])
  (tree-inspector
   . [(0 4) ((emacs (27 1)) (treeview (1 1 0)))
      "Inspector tool for Emacs Lisp object that uses a treeview" tar
