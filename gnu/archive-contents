@@ -2461,14 +2461,14 @@
       (:url . "https://elpa.gnu.org/packages/persist.html")
       (:commit . "3b4b421d5185f2c33bae478aa057dff13701cc25"))])
  (php-fill
-  . [(1 1 1) ((emacs (27 1)))
+  . [(1 1 2) ((emacs (27 1)))
      "Additional fill commands for PHP code editing" tar
      ((:url . "https://github.com/arielenter/php-fill.el")
       (:keywords "php" "languages" "tools" "convenience")
       (:maintainer "Ariel Del Valle Lozano"
 		   . "arielmazatlan@gmail.com")
       (:authors ("Ariel Del Valle Lozano" . "arielmazatlan@gmail.com"))
-      (:commit . "73c1c8765a84b0318f2ba852c504e8251ced43ca"))])
+      (:commit . "293bc8bc939cf0e4553d4aedd9c45e2ee653ae4d"))])
  (phpinspect
   . [(3 0 1) ((compat (29)))
      "PHP parsing and code intelligence package" tar

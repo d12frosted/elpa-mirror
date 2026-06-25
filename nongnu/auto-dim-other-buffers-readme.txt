@@ -8,12 +8,7 @@ windows without focus less prominent.  With many windows in a frame,
 this mode helps recognise which is the selected window by providing
 a non-intrusive but still noticeable visual indicator.
 
-[![Demo](screenshot.gif)](https://www.youtube.com/watch?v=2djOHSWhyD4)
-
-The mode provides two indications of the selected window.  Firstly,
-background of non-selected windows is dimmed.  Secondly, fringes of
-the selected windows are highlighted (not visualised in the image
-above).
+[![Demo](screenshot.gif)](https://alugha.com/videos/f4032000-ff65-11ef-a760-6dd3657f8444)
 
 
 ## Installation
@@ -88,7 +83,7 @@ and set its foreground and background to match background of the
 
 ## Afterword
 
-Note that despite it, the mode operates on *windows* rather than
+Note that despite its name, the mode operates on *windows* rather than
 buffers.  In other words, selected window is highlighted and all other
 windows are dimmed even if they display the same buffer.  The package
 is named `auto-dim-other-buffer` for historical reasons.

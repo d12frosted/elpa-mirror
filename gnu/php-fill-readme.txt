@@ -8,8 +8,8 @@
 ─────────────────────────────────────────────────────────────
 
 
-1.2 Conditionally use ‘NOSQUEEZ’ on c and c++ style comments.
-─────────────────────────────────────────────────────────────
+1.2 Conditionally use ‘NOSQUEEZE’ on spaces between words in c and c++ style comments.
+──────────────────────────────────────────────────────────────────────────────────────
 
 
 1.3 Use “<return>” to break or add a new line to string literals and doc blocks.
@@ -35,15 +35,13 @@
   were to be used, just change ‘php-mode’ with something else like
   ‘phps-mode’ instead.
 
-  While in the process of being accepted in [elpa.gnu.org] (see the
-  following archive [Here]), please download ‘php-fill.el’ and add it by
-  using its holding location, shown here as "~/.emacs.d/lisp/" as an
-  example.
+  This package is now available on [elpa], so it’s now the preferred way
+  of installation. Being the default repository, it should be easy to
+  use the following code on your init.el file.
 
   ┌────
-  │ (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
   │ (use-package php-fill
-  │   :load-path "~/.emacs.d/lisp/"
+  │   :ensure t
   │   :requires 'php-mode
   │   ;; :custom
   │   ;; (php-fill-fill-column 120) ;; Default is 80.
@@ -76,10 +74,7 @@
 
 [phps-mode] <https://elpa.gnu.org/packages/phps-mode.html>
 
-[elpa.gnu.org] <https://elpa.gnu.org/>
-
-[Here]
-<https://lists.gnu.org/archive/html/emacs-devel/2026-02/msg00710.html>
+[elpa] <https://elpa.gnu.org/>
 
 
 1.7 Special thanks to
@@ -96,7 +91,8 @@
     [emacsdocs.org].
 
   Finally thanks to the patience of the people of the [emacs-devel]
-  mailing list. Thank you all.
+  mailing list, particularly to [Kenta USAMI] and [Philip
+  Kaludercic]. Thank you all.
 
 
 [Jen-Chieh Shen] <https://github.com/jcs090218>
@@ -113,3 +109,7 @@
 [emacsdocs.org] <https://emacsdocs.org/>
 
 [emacs-devel] <https://lists.gnu.org/archive/html/emacs-devel/>
+
+[Kenta USAMI] <https://github.com/zonuexe>
+
+[Philip Kaludercic] <mailto:philipk@posteo.net>
