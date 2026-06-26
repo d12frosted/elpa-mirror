@@ -80,7 +80,7 @@ iteration.
 
 That being said, Loopy is not yet feature complete.  Please request features
 or report problems in this project’s issues tracker
-(<https://github.com/okamsn/loopy/issues>).  While most cases are covered,
+(<https://codeberg.org/okamsn/loopy/issues>).  While most cases are covered,
 full feature parity with some of the more niche uses of `cl-loop' is still
 being worked on.
 
