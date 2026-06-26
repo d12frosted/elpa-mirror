@@ -82,9 +82,10 @@ _Recent breaking changes:_
 
 [the documentation file] <file:doc/loopy-doc.org>
 
-[Loopy Dash] <https://github.com/okamsn/loopy-dash>
+[Loopy Dash] <https://codeberg.org/okamsn/loopy-dash>
 
-[change log] <https://github.com/okamsn/loopy/blob/master/CHANGELOG.md>
+[change log]
+<https://codeberg.org/okamsn/loopy/src/branch/master/CHANGELOG.md>
 
 
 1 Introduction
@@ -212,7 +213,7 @@ _Recent breaking changes:_
 
 [Loop Commands in Arbitrary Code] See section 5
 
-[issues tracker] <https://github.com/okamsn/loopy/issues>
+[issues tracker] <https://codeberg.org/okamsn/loopy/issues>
 
 
 3 How to Install
@@ -313,10 +314,10 @@ _Recent breaking changes:_
 
 
 [Basic Destructuring]
-<https://github.com/okamsn/loopy/blob/master/doc/loopy-doc.org#basic-destructuring>
+<https://codeberg.org/okamsn/loopy/src/branch/master/doc/loopy-doc.org#basic-destructuring>
 
 [Using Flags]
-<https://github.com/okamsn/loopy/blob/master/doc/loopy-doc.org#using-flags>
+<https://codeberg.org/okamsn/loopy/src/branch/master/doc/loopy-doc.org#using-flags>
 
 [-let] <https://github.com/magnars/dash.el#-let-varlist-rest-body>
 
@@ -358,7 +359,7 @@ _Recent breaking changes:_
 
 
 [see the documentation]
-<https://github.com/okamsn/loopy/blob/master/doc/loopy-doc.org#the-loopy-iter-macro>
+<https://codeberg.org/okamsn/loopy/src/branch/master/doc/loopy-doc.org#the-loopy-iter-macro>
 
 
 6 Adding Custom Commands
@@ -369,7 +370,7 @@ _Recent breaking changes:_
 
 
 [Custom Commands]
-<https://github.com/okamsn/loopy/blob/master/doc/loopy-doc.org#custom-commands>
+<https://codeberg.org/okamsn/loopy/src/branch/master/doc/loopy-doc.org#custom-commands>
 
 
 7 Comparing to `cl-loop'
@@ -380,10 +381,10 @@ _Recent breaking changes:_
 
 
 [Comparing to `cl-loop']
-<https://github.com/okamsn/loopy/blob/master/doc/loopy-doc.org#comparing-to-cl-loop>
+<https://codeberg.org/okamsn/loopy/src/branch/master/doc/loopy-doc.org#comparing-to-cl-loop>
 
 [Speed Comparisons]
-<https://github.com/okamsn/loopy/wiki/speed-comparisons>
+<https://codeberg.org/okamsn/loopy/wiki/Speed-Comparisons>
 
 
 8 Real-World Examples
@@ -392,4 +393,4 @@ _Recent breaking changes:_
   See the wiki page [Examples].
 
 
-[Examples] <https://github.com/okamsn/loopy/wiki/Examples>
+[Examples] <https://codeberg.org/okamsn/loopy/wiki/Examples>
