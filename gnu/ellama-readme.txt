@@ -60,118 +60,103 @@ Assistant".  <file:imgs/reasoning-models.gif>
 1 Installation
 ══════════════
 
-  Just `M-x' `package-install' Enter `ellama' Enter. By default it uses
-  [ollama] provider. If you are OK with it, you need to install [ollama]
-  and pull [any ollama model] like this:
+  Install Ellama from GNU ELPA:
 
   ┌────
-  │ ollama pull qwen2.5:3b
+  │ M-x package-install RET ellama RET
   └────
 
-  You can use `ellama' with other models or another LLM provider.
-  Without any configuration, the first available ollama model will be
-  used.  You can customize ellama configuration like this:
+  By default Ellama uses the first available [Ollama] model.  If you
+  want to use that default, install Ollama and pull a model from the
+  [Ollama library]:
+
+  ┌────
+  │ ollama pull qwen3.6:35b
+  └────
+
+  The examples below use `qwen3.6:35b' for agentic coding.  Replace it
+  with a model that is available in your Ollama installation if needed.
+
+  You can also use another LLM provider.  The smallest useful Emacs
+  setup is:
 
   ┌────
   │ (use-package ellama
   │   :ensure t
   │   :bind ("C-c e" . ellama)
-  │   ;; send last message in chat buffer with C-c C-c
   │   :hook (org-ctrl-c-ctrl-c-hook . ellama-chat-send-last-message)
   │   :init (setopt ellama-auto-scroll t)
   │   :config
-  │   ;; show ellama context in header line in all buffers
   │   (ellama-context-header-line-global-mode +1)
-  │   ;; show ellama session id in header line in all buffers
   │   (ellama-session-header-line-global-mode +1))
   └────
 
-  More sophisticated configuration example:
+  Agentic coding setup:
 
   ┌────
   │ (use-package ellama
   │   :ensure t
   │   :bind ("C-c e" . ellama)
-  │   ;; send last message in chat buffer with C-c C-c
   │   :hook (org-ctrl-c-ctrl-c-hook . ellama-chat-send-last-message)
   │   :init
-  │   ;; setup key bindings
-  │   ;; (setopt ellama-keymap-prefix "C-c e")
-  │   ;; language you want ellama to translate to
-  │   (setopt ellama-language "German")
-  │   ;; could be llm-openai for example
   │   (require 'llm-ollama)
   │   (setopt ellama-provider
   │           (make-llm-ollama
-  │            ;; this model should be pulled to use it
-  │            ;; value should be the same as you print in terminal during pull
-  │            :chat-model "llama3:8b-instruct-q8_0"
-  │            :embedding-model "nomic-embed-text"
-  │            :default-chat-non-standard-params '(("num_ctx" . 8192))))
-  │   (setopt ellama-summarization-provider
-  │           (make-llm-ollama
-  │            :chat-model "qwen2.5:3b"
-  │            :embedding-model "nomic-embed-text"
-  │            :default-chat-non-standard-params '(("num_ctx" . 32768))))
-  │   (setopt ellama-coding-provider
-  │           (make-llm-ollama
-  │            :chat-model "qwen2.5-coder:3b"
-  │            :embedding-model "nomic-embed-text"
-  │            :default-chat-non-standard-params '(("num_ctx" . 32768))))
-  │   ;; Predefined llm providers for interactive switching.
-  │   ;; You shouldn't add ollama providers here - it can be selected interactively
-  │   ;; without it. It is just example.
-  │   (setopt ellama-providers
-  │           '(("zephyr" . (make-llm-ollama
-  │                          :chat-model "zephyr:7b-beta-q6_K"
-  │                          :embedding-model "zephyr:7b-beta-q6_K"))
-  │             ("mistral" . (make-llm-ollama
-  │                           :chat-model "mistral:7b-instruct-v0.2-q6_K"
-  │                           :embedding-model "mistral:7b-instruct-v0.2-q6_K"))
-  │             ("mixtral" . (make-llm-ollama
-  │                           :chat-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"
-  │                           :embedding-model "mixtral:8x7b-instruct-v0.1-q3_K_M-4k"))))
-  │   ;; Naming new sessions with llm
-  │   (setopt ellama-naming-provider
-  │           (make-llm-ollama
-  │            :chat-model "llama3:8b-instruct-q8_0"
-  │            :embedding-model "nomic-embed-text"
-  │            :default-chat-non-standard-params '(("stop" . ("\n")))))
-  │   (setopt ellama-naming-scheme 'ellama-generate-name-by-llm)
-  │   ;; Translation llm provider
-  │   (setopt ellama-translation-provider
-  │           (make-llm-ollama
-  │            :chat-model "qwen2.5:3b"
-  │            :embedding-model "nomic-embed-text"
-  │            :default-chat-non-standard-params
-  │            '(("num_ctx" . 32768))))
-  │   (setopt ellama-extraction-provider (make-llm-ollama
-  │                                       :chat-model "qwen2.5-coder:7b-instruct-q8_0"
-  │                                       :embedding-model "nomic-embed-text"
-  │                                       :default-chat-non-standard-params
-  │                                       '(("num_ctx" . 32768))))
-  │   ;; customize display buffer behaviour
-  │   ;; see ~(info "(elisp) Buffer Display Action Functions")~
-  │   (setopt ellama-chat-display-action-function #'display-buffer-full-frame)
-  │   (setopt ellama-instant-display-action-function #'display-buffer-at-bottom)
+  │            :chat-model "qwen3.6:35b"
+  │            :embedding-model "nomic-embed-text"))
   │   :config
-  │   ;; show ellama context in header line in all buffers
+  │   ;; Agent defaults for long coding sessions: enable tools, compact old
+  │   ;; context, show sub-agent buffers, enforce DLP, block irreversible actions,
+  │   ;; and give agent loops enough steps to finish real work.
+  │   (ellama-setup-agentic-coding)
+  │ 
+  │   ;; With an srt policy, normal tool confirmations are skipped, ordinary DLP
+  │   ;; input findings are allowed, output findings are redacted, and
+  │   ;; irreversible actions are still blocked.  Without SRT, confirmations stay
+  │   ;; active and ordinary DLP input/output findings ask first.
+  │   ;; (ellama-setup-agentic-coding
+  │   ;;  "~/.config/ellama/srt-autonomous.json")
+  │ 
   │   (ellama-context-header-line-global-mode +1)
-  │   ;; show ellama session id in header line in all buffers
+  │   (ellama-session-header-line-global-mode +1))
+  └────
+
+  Optional provider-specific settings:
+
+  ┌────
+  │ (use-package ellama
+  │   :ensure t
+  │   :bind ("C-c e" . ellama)
+  │   :hook (org-ctrl-c-ctrl-c-hook . ellama-chat-send-last-message)
+  │   :init
+  │   (require 'llm-ollama)
+  │   (setopt ellama-provider
+  │           (make-llm-ollama
+  │            :chat-model "qwen3.6:35b"
+  │            :embedding-model "nomic-embed-text"
+  │            :default-chat-non-standard-params '(("num_ctx" . 32768))))
+  │   (setopt ellama-language "German"
+  │           ellama-naming-scheme 'ellama-generate-name-by-llm
+  │           ellama-chat-display-action-function #'display-buffer-full-frame
+  │           ellama-instant-display-action-function #'display-buffer-at-bottom)
+  │   :config
+  │   (ellama-context-header-line-global-mode +1)
   │   (ellama-session-header-line-global-mode +1)
-  │   ;; handle scrolling events
   │   (advice-add 'pixel-scroll-precision :before #'ellama-disable-scroll)
   │   (advice-add 'end-of-buffer :after #'ellama-enable-scroll))
   └────
 
 
-[ollama] <https://github.com/jmorganca/ollama>
+[Ollama] <https://ollama.com>
 
-[any ollama model] <https://ollama.com/models>
+[Ollama library] <https://ollama.com/library>
 
 
 2 Commands
 ══════════
+
+2.1 Core Chat and Agent Setup
+─────────────────────────────
 
   • `ellama': This is the entry point for Ellama. It displays the main
     transient menu, allowing you to access all other Ellama commands
@@ -180,11 +165,28 @@ Assistant".  <file:imgs/reasoning-models.gif>
     interactive buffer and continue conversation. If called with
     universal argument (`C-u') will start new session with llm model
     interactive selection.
+  • `ellama-chat-send-last-message': Send last user message extracted
+    from current ellama chat buffer.
   • `ellama-plan-and-act': Start an agent loop that first creates a
     checklist plan and then acts on it with automatic continuations.  It
     reuses the current chat session when possible and can be launched
     from the main transient menu with `A' in the `Problem solving'
     section.
+  • `ellama-setup-agentic-coding': Apply coding-agent defaults for long
+    sessions: enable all tools, enforce DLP, block irreversible actions,
+    and use longer agent loops.  Pass an `srt' settings file to enable
+    lower-prompt tool use inside that sandbox.
+
+
+2.2 Ask and Media Input
+───────────────────────
+
+  • `ellama-ask-about': Ask Ellama about a selected region or the
+    current buffer. Automatically adds selected region or current buffer
+    to ephemeral context for one request.
+  • `ellama-ask-selection': Send selected region or current buffer to
+    ellama chat.
+  • `ellama-ask-line': Send current line to ellama chat.
   • `ellama-ask-image': Ask Ellama about one image file by adding it as
     ephemeral context for the request. If called with universal argument
     (`C-u') will start new session with llm model interactive selection.
@@ -213,19 +215,16 @@ Assistant".  <file:imgs/reasoning-models.gif>
     fixed duration.
   • `ellama-stop-audio-recording': Stop microphone recording and return
     the recorded file.
+
+
+2.3 Text Writing and Transformation
+───────────────────────────────────
+
   • `ellama-write': This command allows you to generate text using an
     LLM. When called interactively, it prompts for an instruction that
     is then used to generate text based on the context. If a region is
     active, the selected text is added to ephemeral context before
     generating the response.
-  • `ellama-chat-send-last-message': Send last user message extracted
-    from current ellama chat buffer.
-  • `ellama-ask-about': Ask Ellama about a selected region or the
-    current buffer. Automatically adds selected region or current buffer
-    to ephemeral context for one request.
-  • `ellama-ask-selection': Send selected region or current buffer to
-    ellama chat.
-  • `ellama-ask-line': Send current line to ellama chat.
   • `ellama-complete': Complete text in current buffer with ellama.
   • `ellama-translate': Ask Ellama to translate a selected region or
     word at the point.
@@ -246,18 +245,23 @@ Assistant".  <file:imgs/reasoning-models.gif>
     or the current buffer using Ellama.
   • `ellama-summarize-webpage': Summarize a webpage fetched from a URL
     using Ellama.
-  • `ellama-provider-select': Select ellama provider.
-  • `ellama-select-model': Change the current provider model
-    interactively.  The model transient can switch the provider type as
-    well as the model.  Built-in choices include Ollama,
-    OpenAI-compatible, OpenAI, Claude, Gemini, DeepSeek, OpenRouter,
-    Azure OpenAI, GitHub Models, Vertex AI, GPT4All, and Llama.cpp.  It
-    also supports providers with a `chat-model' slot.  URL editing is
-    available when the provider has a `url' slot.  It can also set the
-    maximum number of output tokens.  Use "Reset model fields" to clear
-    model, temperature, context-length, and max-token overrides and let
-    the provider use its defaults; reset values are shown as `default'
-    in the transient.
+  • `ellama-proofread': Proofread selected text.
+  • `ellama-improve-wording': Enhance the wording in the currently
+    selected region or buffer using Ellama.
+  • `ellama-improve-grammar': Enhance the grammar and spelling in the
+    currently selected region or buffer using Ellama.
+  • `ellama-improve-conciseness': Make the text of the currently
+    selected region or buffer concise and simple using Ellama.
+  • `ellama-make-format': Render the currently selected text or the text
+    in the current buffer as a specified format using Ellama.
+
+
+2.4 Code
+────────
+
+  • `ellama-code-review': Review code in a selected region or the
+    current buffer using Ellama. Automatically adds selected region or
+    current buffer to ephemeral context for one request.
   • `ellama-code-complete': Complete selected code or code in the
     current buffer according to a provided change using Ellama.
   • `ellama-code-add': Generate and insert new code based on
@@ -270,15 +274,28 @@ Assistant".  <file:imgs/reasoning-models.gif>
     buffer according to a provided change using Ellama.
   • `ellama-generate-commit-message': Generate commit message based on
     diff.
-  • `ellama-proofread': Proofread selected text.
-  • `ellama-improve-wording': Enhance the wording in the currently
-    selected region or buffer using Ellama.
-  • `ellama-improve-grammar': Enhance the grammar and spelling in the
-    currently selected region or buffer using Ellama.
-  • `ellama-improve-conciseness': Make the text of the currently
-    selected region or buffer concise and simple using Ellama.
-  • `ellama-make-format': Render the currently selected text or the text
-    in the current buffer as a specified format using Ellama.
+
+
+2.5 Providers and Models
+────────────────────────
+
+  • `ellama-provider-select': Select ellama provider.
+  • `ellama-select-model': Change the current provider model
+    interactively.  The model transient can switch the provider type as
+    well as the model.  Built-in choices include Ollama,
+    OpenAI-compatible, OpenAI, Claude, Gemini, DeepSeek, OpenRouter,
+    Azure OpenAI, GitHub Models, Vertex AI, GPT4All, and Llama.cpp.  It
+    also supports providers with a `chat-model' slot.  URL editing is
+    available when the provider has a `url' slot.  It can also set the
+    maximum number of output tokens.  Use "Reset model fields" to clear
+    model, temperature, context-length, and max-token overrides and let
+    the provider use its defaults; reset values are shown as `default'
+    in the transient.
+
+
+2.6 Sessions
+────────────
+
   • `ellama-load-session': Load ellama session from file.
   • `ellama-session-delete': Delete ellama session.
   • `ellama-session-switch': Change current active session.
@@ -288,6 +305,11 @@ Assistant".  <file:imgs/reasoning-models.gif>
     context.
   • `ellama-session-compact': Select and compact an active Ellama
     session context.
+
+
+2.7 Context
+───────────
+
   • `ellama-context-add-file': Add file to context.
   • `ellama-context-add-image': Add image file to context.
   • `ellama-context-add-audio': Add audio file to context.
@@ -318,22 +340,29 @@ Assistant".  <file:imgs/reasoning-models.gif>
   • `ellama-context-remove-element-at-point': Remove ellama context
     element at point from global context. Works inside ellama context
     management buffer.
+
+
+2.8 Chat Translation
+────────────────────
+
   • `ellama-chat-translation-enable': Enable chat translation.
   • `ellama-chat-translation-disable': Disable chat translation.
-  • `ellama-solve-reasoning-problem': Solve reasoning problem with
-    Abstraction of Thought technique. It uses a chain of multiple
-    messages to an LLM and helps it to provide much better answers on
-    reasoning problems. Even small LLMs like phi3-mini provide much
-    better results on reasoning tasks using AoT.
-  • `ellama-solve-domain-specific-problem': Solve domain specific
-    problem with simple chain. It makes LLMs act like a professional and
-    adds a planning step.
+
+
+2.9 Blueprints and Community Prompts
+────────────────────────────────────
+
   • `ellama-community-prompts-select-blueprint': Select a prompt from
     the community prompt collection. The user is prompted to choose a
     role, and then a corresponding prompt is inserted into a blueprint
     buffer.
   • `ellama-blueprint-fill-variables': Prompt user for values of
     variables found in current blueprint buffer and update them.
+
+
+2.10 Tools and DLP
+──────────────────
+
   • `ellama-tools-enable-by-name': Enable a specific tool by its
     name. Use this command to activate individual tools. Requires the
     tool name as input.
@@ -421,7 +450,17 @@ Assistant".  <file:imgs/reasoning-models.gif>
 4 Configuration
 ═══════════════
 
-  The following variables can be customized for the Ellama client:
+  Ellama has many options because it covers chat, context, tools,
+  agents, DLP, SRT, blueprints, and provider-specific workflows.  The
+  reference below is grouped by area so the common settings are easier
+  to find.
+
+
+4.1 Option Reference
+────────────────────
+
+4.1.1 Core Behavior and Providers
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   • `ellama-enable-keymap': Enable the Ellama keymap.
   • `ellama-keymap-prefix': The keymap prefix for Ellama.
@@ -447,6 +486,14 @@ Assistant".  <file:imgs/reasoning-models.gif>
     processed.  Options include streaming for real-time output, async
     for asynchronous processing, or skipping every N messages to reduce
     resource usage.
+
+
+[llm documentation] <https://elpa.gnu.org/packages/llm.html>
+
+
+4.1.2 Sessions and Naming
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
   • `ellama-name-prompt-words-count': Count of words in prompt to
     generate name.
   • Prompt templates for every command.
@@ -492,6 +539,11 @@ Assistant".  <file:imgs/reasoning-models.gif>
   • `ellama-naming-scheme': How to name new sessions.
   • `ellama-naming-provider': LLM provider for generating session names
     by LLM. If not set `ellama-provider' will be used.
+
+
+4.1.3 Task Providers and Media
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
   • `ellama-chat-translation-enabled': Enable chat translations if set.
   • `ellama-translation-provider': LLM translation provider.
     `ellama-provider' will be used if not set.
@@ -501,6 +553,14 @@ Assistant".  <file:imgs/reasoning-models.gif>
     input.  SVG is intentionally unsupported.
   • `ellama-summarization-provider': LLM summarization provider.
     `ellama-provider' will be used if not set.
+  • `ellama-extraction-provider': LLM provider for data extraction.
+  • `ellama-completion-provider': LLM provider for code completion
+    tasks.
+
+
+4.1.4 Display Context and Reasoning
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
   • `ellama-show-quotes': Show quotes content in chat buffer. Disabled
     by default.
   • `ellama-chat-display-action-function': Display action function for
@@ -509,7 +569,6 @@ Assistant".  <file:imgs/reasoning-models.gif>
     for `ellama-instant'.
   • `ellama-translate-italic': Translate italic during markdown to org
     transformations. Enabled by default.
-  • `ellama-extraction-provider': LLM provider for data extraction.
   • `ellama-text-display-limit': Limit for text display in context
     elements.
   • `ellama-context-poshandler': Position handler for displaying context
@@ -521,61 +580,6 @@ Assistant".  <file:imgs/reasoning-models.gif>
     or `persistent' to keep image context until it is removed or reset.
   • `ellama-always-show-chain-steps': Show chain of intermediate steps
     during reasoning.
-  • `ellama-blueprints': Directory or list of directories for blueprint
-    storage.
-  • `ellama-command-map': Keymap for ellama commands.
-  • `ellama-completion-provider': LLM provider for code completion
-    tasks.
-  • `ellama-eval-default-max-steps': Default maximum number of steps in
-    eval loop.
-  • `ellama-eval-keep-workspaces': Whether to keep workspaces after eval
-    completion.
-  • `ellama-eval-loop-detection-enabled': Enable detection of infinite
-    loops in eval loops.
-  • `ellama-eval-loop-detection-max-traces': Maximum number of traces
-    for loop detection.
-  • `ellama-eval-loop-detection-repeated-threshold': Threshold for
-    repeated elements to trigger loop detection.
-  • `ellama-eval-timeout-seconds': Timeout in seconds for eval
-    operations.
-  • `ellama-markdown-to-org-converter': Method for markdown to org
-    conversion.
-  • `ellama-pandoc-markdown-to-org-args': Arguments for pandoc
-    markdown-to-org conversion.
-  • `ellama-pandoc-program': Path to pandoc executable for
-    markdown-to-org conversion.
-  • `ellama-tools-agent-continue-prompt': Prompt template for agent
-    continue operation.
-  • `ellama-tools-agent-planning-prompt': Prompt template for agent
-    planning.
-  • `ellama-tools-balanced-edit-enabled': Enable balanced edit mode for
-    tools.
-  • `ellama-tools-balanced-edit-modes': Major modes eligible for
-    balanced edit mode.
-  • `ellama-tools-dlp-env-secret-entropy-threshold': Entropy threshold
-    for detecting environment secrets.
-  • `ellama-tools-dlp-env-secret-heuristic-stages': Stages in env secret
-    heuristic detection.
-  • `ellama-tools-dlp-env-secret-max-length': Maximum length for
-    environment secret detection.
-  • `ellama-tools-dlp-env-secret-min-length': Minimum length for
-    environment secret detection.
-  • `ellama-tools-dlp-env-secret-min-score': Minimum score for
-    environment secret heuristic.
-  • `ellama-tools-dlp-message-prefix': Prefix for DLP messages in logs.
-  • `ellama-tools-dlp-redaction-placeholder-format': Format template for
-    DLP redaction placeholders.
-  • `ellama-tools-irreversible-high-confidence-block-rules': Rules for
-    blocking high-confidence irreversible actions.
-  • `ellama-tools-read-before-write-enabled': Enable read-before-write
-    for tool operations.
-  • `ellama-tools-shell-command-default-timeout': Default timeout for
-    shell command execution.
-  • `ellama-transient-system-show-limit': Maximum number of system
-    elements to show in transient.
-  • `ellama-transient-provider-types': Provider types available for
-    interactive switching in the model transient. Each entry specifies
-    the provider record type, display label, library, and constructor.
   • `ellama-session-remove-reasoning': Remove internal reasoning from
     the session after ellama provide an answer. This can improve
     long-term communication with reasoning models. Enabled by default.
@@ -595,11 +599,6 @@ Assistant".  <file:imgs/reasoning-models.gif>
     action function for `ellama-context-preview-element'.
   • `ellama-context-line-always-visible': Make context header or mode
     line always visible, even with empty context.
-  • `ellama-community-prompts-url': The URL of the community prompts
-    collection.
-  • `ellama-community-prompts-file': Path to the CSV file containing
-    community prompts.  This file is expected to be located inside an
-    `ellama' subdirectory within your `user-emacs-directory'.
   • `ellama-show-reasoning': Show reasoning in separate buffer if
     enabled. Enabled by default.
   • `ellama-reasoning-display-action-function': Display action function
@@ -610,6 +609,84 @@ Assistant".  <file:imgs/reasoning-models.gif>
     while it runs.
   • `ellama-session-line-template': Template for formatting the current
     session line.
+
+
+4.1.5 Blueprints Prompts and Conversion
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • `ellama-blueprints': Directory or list of directories for blueprint
+    storage.
+  • `ellama-command-map': Keymap for ellama commands.
+  • `ellama-eval-default-max-steps': Default maximum number of steps in
+    eval loop.
+  • `ellama-eval-keep-workspaces': Whether to keep workspaces after eval
+    completion.
+  • `ellama-eval-loop-detection-enabled': Enable detection of infinite
+    loops in eval loops.
+  • `ellama-eval-loop-detection-max-traces': Maximum number of traces
+    for loop detection.
+  • `ellama-eval-loop-detection-repeated-threshold': Threshold for
+    repeated elements to trigger loop detection.
+  • `ellama-eval-timeout-seconds': Timeout in seconds for eval
+    operations.
+  • `ellama-markdown-to-org-converter': Method for markdown to org
+    conversion.
+  • `ellama-pandoc-markdown-to-org-args': Arguments for pandoc
+    markdown-to-org conversion.
+  • `ellama-pandoc-program': Path to pandoc executable for
+    markdown-to-org conversion.
+
+
+4.1.6 Tool Prompts and Edit Behavior
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • `ellama-tools-agent-continue-prompt': Prompt template for agent
+    continue operation.
+  • `ellama-tools-agent-planning-prompt': Prompt template for agent
+    planning.
+  • `ellama-tools-balanced-edit-enabled': Enable balanced edit mode for
+    tools.
+  • `ellama-tools-balanced-edit-modes': Major modes eligible for
+    balanced edit mode.
+  • `ellama-tools-read-before-write-enabled': Enable read-before-write
+    for tool operations.
+  • `ellama-tools-shell-command-default-timeout': Default timeout for
+    shell command execution.
+
+
+4.1.7 DLP and Irreversible Actions
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • `ellama-tools-dlp-env-secret-entropy-threshold': Entropy threshold
+    for detecting environment secrets.
+  • `ellama-tools-dlp-env-secret-heuristic-stages': Stages in env secret
+    heuristic detection.
+  • `ellama-tools-dlp-env-secret-max-length': Maximum length for
+    environment secret detection.
+  • `ellama-tools-dlp-env-secret-min-length': Minimum length for
+    environment secret detection.
+  • `ellama-tools-dlp-env-secret-min-score': Minimum score for
+    environment secret heuristic.
+  • `ellama-tools-dlp-message-prefix': Prefix for DLP messages in logs.
+  • `ellama-tools-dlp-redaction-placeholder-format': Format template for
+    DLP redaction placeholders.
+  • `ellama-tools-irreversible-high-confidence-block-rules': Rules for
+    blocking high-confidence irreversible actions.
+
+
+4.1.8 Transient Menus Community Prompts and Diagnostics
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • `ellama-transient-system-show-limit': Maximum number of system
+    elements to show in transient.
+  • `ellama-transient-provider-types': Provider types available for
+    interactive switching in the model transient. Each entry specifies
+    the provider record type, display label, library, and constructor.
+  • `ellama-community-prompts-url': The URL of the community prompts
+    collection.
+  • `ellama-community-prompts-file': Path to the CSV file containing
+    community prompts.  This file is expected to be located inside an
+    `ellama' subdirectory within your `user-emacs-directory'.
   • `ellama-debug': Enable debug. When enabled, generated text is now
     logged to a `*ellama-debug*' buffer with a separator for easier
     tracking of debug information. The debug output includes the raw
@@ -618,6 +695,11 @@ Assistant".  <file:imgs/reasoning-models.gif>
   • `ellama-undo-on-error': Undo partial buffer insertions when an LLM
     request fails. Disabled by default; when nil, Ellama keeps partial
     output inserted before the error.
+
+
+4.1.9 Tool Access and Sandboxing
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
   • `ellama-tools-allow-all': Allow `ellama' using all the tools without
     user confirmation. Dangerous. Use at your own risk.
   • `ellama-tools-allowed': List of allowed `ellama' tools. Tools from
@@ -660,6 +742,11 @@ Assistant".  <file:imgs/reasoning-models.gif>
     The same arguments are also used to resolve the settings file path
     for local non-shell filesystem checks (default
     `~/.srt-settings.json' if no `--settings~/'-s~ is provided).
+
+
+4.1.10 Task Templates Blueprints and Skills
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
   • `ellama-tools-task-template-dirs': Directories where the `task' tool
     searches for prompt templates when no `template_base' is
     supplied. Relative template names are resolved below these
@@ -679,6 +766,11 @@ Assistant".  <file:imgs/reasoning-models.gif>
     Agent Skills.
   • `ellama-skills-local-path': Project-relative path for local Agent
     Skills.  Default value is `"skills"'.
+
+
+4.1.11 Agent and Subagent Loops
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
   • `ellama-tools-agent-default-max-steps': Default maximum number of
     automatic continuation steps for `ellama-plan-and-act'. Default
     value is 40.
@@ -699,9 +791,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
     tool.
 
 
-[llm documentation] <https://elpa.gnu.org/packages/llm.html>
-
-4.1 Session Provider Keys
+4.2 Session Provider Keys
 ─────────────────────────
 
   Ellama does not persist provider keys as plaintext in session files.
@@ -745,7 +835,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
   └────
 
 
-4.2 Session Compaction
+4.3 Session Compaction
 ──────────────────────
 
   Ellama can compact long chat sessions to keep them within the provider
@@ -795,7 +885,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
   └────
 
 
-4.3 Image Input
+4.4 Image Input
 ───────────────
 
   Ellama can send image files to providers that advertise the
@@ -855,7 +945,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
   └────
 
 
-4.4 Audio Input
+4.5 Audio Input
 ───────────────
 
   Ellama can also send audio files to providers with the `audio-input'
@@ -864,12 +954,10 @@ Assistant".  <file:imgs/reasoning-models.gif>
   transport used for image input.  Set `ellama-audio-file-extensions' if
   your provider accepts another format.
 
-  Provider capability alone is not enough: the installed `llm' package
-  must also serialize audio for that provider.  Gemini and Vertex use
-  their native inline media format.  OpenAI-compatible Chat Completions
-  requires `input_audio' support in `llm'.  Ellama checks this before
-  sending a request and rejects older `llm' versions that would
-  incorrectly encode audio as an image.
+  Audio transport depends on the installed `llm' package.  Ellama
+  requires `llm' 0.31.1 or newer, which includes audio serialization for
+  OpenAI-compatible and Ollama providers.  Gemini and Vertex use their
+  native inline media format.
 
   Use `M-x ellama-ask-audio' for one audio file, or `M-x
   ellama-chat-with-audio' inside a chat workflow.  For several files,
@@ -924,7 +1012,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
   input level, or replace it with another FFmpeg audio filter.
 
 
-4.4.1 macOS microphone permission
+4.5.1 macOS microphone permission
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Emacs may be missing from the Microphone list when its application
@@ -984,7 +1072,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
   or persistent.
 
 
-4.5 Task Tool Subagents
+4.6 Task Tool Subagents
 ───────────────────────
 
   The `task' tool delegates work to an asynchronous sub-agent. The
@@ -1055,7 +1143,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
   files.
 
 
-4.6 Plan-and-Act Agent Loop
+4.7 Plan-and-Act Agent Loop
 ───────────────────────────
 
   `ellama-plan-and-act' runs a local agent in the current Ellama chat
@@ -1106,7 +1194,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
   canonical state is the session state used by the continuation handler.
 
 
-4.7 Edit Tool Shell Hooks
+4.8 Edit Tool Shell Hooks
 ─────────────────────────
 
   Projects can define shell commands that run around mutating edit
@@ -1156,7 +1244,7 @@ Assistant".  <file:imgs/reasoning-models.gif>
   feedback and is not scanned by tool output DLP.
 
 
-4.8 DLP for Tool Input/Output
+4.9 DLP for Tool Input/Output
 ─────────────────────────────
 
   Ellama includes an optional DLP (Data Loss Prevention) layer for tool
@@ -1336,9 +1424,10 @@ Assistant".  <file:imgs/reasoning-models.gif>
 
   Autonomous agent configuration:
 
-  Autonomous agents need a low-friction policy.  Prompting on every
-  ordinary tool call trains users to approve blindly, which is worse
-  than a smaller set of high-signal prompts.  The recommended shape is:
+  Autonomous agents need fewer routine prompts, not fewer checks.  If
+  every file read or harmless edit asks for approval, users learn to
+  approve by reflex.  Keep the prompts for cases that actually need a
+  decision:
 
   • clean read/write operations inside the approved workspace run
     automatically
@@ -1349,45 +1438,33 @@ Assistant".  <file:imgs/reasoning-models.gif>
   • high-confidence destructive actions are blocked, not prompted
   • unknown MCP tools warn until they are classified
 
-  `ellama-tools-allow-all' only bypasses the normal confirmation
-  wrapper.  It does not bypass DLP, irreversible-action checks, output
-  scanning, or `srt' filesystem checks because DLP wraps the
-  confirmation layer.  This makes `allow-all' suitable only when DLP
-  enforcement is enabled and tool filesystem access is constrained.
+  `ellama-tools-allow-all' bypasses only the normal confirmation
+  wrapper.  DLP, irreversible-action checks, output scanning, and `srt'
+  filesystem checks still run because DLP wraps the confirmation layer.
+  Use `allow-all' only with DLP in `enforce' mode and a constrained
+  filesystem policy.
 
   Recommended baseline for autonomous coding:
 
   ┌────
-  │ (with-eval-after-load 'ellama-tools
-  │   ;; Let clean calls run without repetitive prompts.
-  │   (setopt ellama-tools-allow-all t)
+  │ ;; General agent defaults.  This does not configure a provider or model.
+  │ (ellama-setup-agentic-coding)
   │ 
-  │   ;; Required safety layer.
-  │   (setopt ellama-tools-dlp-enabled t)
-  │   (setopt ellama-tools-dlp-mode 'enforce)
-  │ 
-  │   ;; Prefer fail-closed behavior for autonomous operation.
-  │   (setopt ellama-tools-dlp-input-fail-open nil)
-  │   (setopt ellama-tools-dlp-output-fail-open nil)
-  │ 
-  │   ;; Keep secret and output protections active.
-  │   (setopt ellama-tools-dlp-scan-env-exact-secrets t)
-  │   (setopt ellama-tools-dlp-input-default-action 'warn)
-  │   (setopt ellama-tools-dlp-output-default-action 'redact)
-  │ 
-  │   ;; Irreversible actions require stronger intent.
-  │   (setopt ellama-tools-irreversible-enabled t)
-  │   (setopt ellama-tools-irreversible-default-action 'warn)
-  │   (setopt ellama-tools-irreversible-require-typed-confirm t)
-  │ 
-  │   ;; Keep telemetry durable enough to tune.
-  │   (setopt ellama-tools-dlp-log-targets '(memory file))
-  │ 
-  │   ;; Strongly recommended when `ellama-tools-allow-all' is enabled.
-  │   (setopt ellama-tools-use-srt t)
-  │   (setopt ellama-tools-srt-args
-  │           '("--settings" "~/.config/ellama/srt-autonomous.json")))
+  │ ;; Low-friction autonomous mode with filesystem sandboxing.
+  │ (ellama-setup-agentic-coding
+  │  "~/.config/ellama/srt-autonomous.json")
   └────
+
+  The first form enables DLP enforcement, blocks irreversible actions,
+  and tunes the agent loop, but keeps global tool auto-approval off.
+  Ordinary DLP input/output findings still ask before continuing.
+
+  The second form enables `srt' and turns on `ellama-tools-allow-all'.
+  In that mode, ordinary DLP input findings are allowed and ordinary
+  output findings are redacted, so the agent can keep working.
+  Irreversible findings still block, and built-in shell secret checks
+  still block because SRT cannot tell whether a command leaks a token to
+  an allowed destination.
 
   Use an `srt' policy that allows writes only inside the current project
   and a scratch area.  Add explicit read/write denials for secrets,
@@ -1518,8 +1595,8 @@ Assistant".  <file:imgs/reasoning-models.gif>
     before moving more paths to enforce
 
 
-4.9 SRT Filesystem Policy for Tools
-───────────────────────────────────
+4.10 SRT Filesystem Policy for Tools
+────────────────────────────────────
 
   When `ellama-tools-use-srt' is non-nil, the `srt' settings file is the
   source of truth for tool filesystem policy:

@@ -1077,7 +1077,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "1a3d97954957a95a179806e0d49ca6d178b097af"))])
  (ellama
-  . [(1 28 0)
+  . [(1 29 0)
      ((emacs (28 1)) (llm (0 31 1)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1085,7 +1085,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "e6a63d6773e3d7caec9ddd38146f5d2f7faf6102"))])
+      (:commit . "9e5eed88f01ec57b3796df489db86ee00faf4a25"))])
  (emacs-gc-stats
   . [(1 4 2) ((emacs (25 1))) "Collect Emacs GC statistics" tar
      ((:url . "https://git.sr.ht/~yantar92/emacs-gc-stats")

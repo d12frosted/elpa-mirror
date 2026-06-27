@@ -1100,13 +1100,13 @@
       (:keywords "j" "languages")
       (:commit . "1365e5a3fe772609685b3787bbd2960331c1a02f"))])
  (jabber
-  . [(0 11 0) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
+  . [(0 11 1) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://codeberg.org/emacs-jabber/emacs-jabber")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "264f971893c68715cf93e92ef05f414c11aabb7d"))])
+      (:commit . "be6c638923716bf1136d7b6a1458810bf19cc658"))])
  (jade-mode
   . [(1 0 1) nil "Major mode for editing .jade files" tar
      ((:url . "https://github.com/brianc/jade-mode")
@@ -1918,7 +1918,7 @@
       (:authors ("Tilman Rassy" . "tilman.rassy@googlemail.com"))
       (:commit . "9a1a16f84fc3c368443641f7a71aa2407ad91d38"))])
  (tuareg
-  . [(3 0 1) ((emacs (26 3)) (caml (4 8))) "OCaml mode" tar
+  . [(3 1 0) ((emacs (26 3))) "OCaml mode" tar
      ((:url . "https://github.com/ocaml/tuareg")
       (:keywords "ocaml" "languages")
       (:maintainer
@@ -1931,7 +1931,7 @@
 		("Till Varoquaux" . "till@pps.jussieu.fr")
 		("Sean McLaughlin" . "seanmcl@gmail.com")
 		("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-      (:commit . "4d94293cc5a7bba6cd043e29968719ce597d65f5"))])
+      (:commit . "29ed86896e24c9d9d9855cf05ab7a6166a030250"))])
  (typescript-mode
   . [(0 4) ((emacs (24 3))) "Major mode for editing typescript" tar
      ((:url . "http://github.com/ananthakumaran/typescript.el")
