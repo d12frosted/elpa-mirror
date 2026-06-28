@@ -4,7 +4,7 @@
 
 
 Elfeed is an extensible web feed reader for Emacs, supporting Atom, RSS
-and JSON Feed. It requires Emacs 28.1 and is available for download from
+and JSON Feed. It requires Emacs 29.1 and is available for download from
 [ELPA] or [MELPA].  The Elfeed UI was inspired by [notmuch]. The
 database format is stable and is never expected to change.
 

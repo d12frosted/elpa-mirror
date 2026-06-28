@@ -37,6 +37,6 @@ usable space.  Please check the wiki (https://github.com/emacs-exwm/exwm/wiki)
 for more detailed instructions on installation, configuration, usage, etc.
 
 References:
-+ dwm (http://dwm.suckless.org/)
++ dwm (https://dwm.suckless.org/)
 + i3 wm (https://i3wm.org/)
 + Also see references within each required library.
