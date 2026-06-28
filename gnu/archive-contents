@@ -1019,16 +1019,16 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "5cdb7dd361ad3b5d7310f94375a832cd94c182d8"))])
  (eglot
-  . [(1 23)
+  . [(1 24)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
-      (flymake (1 4 5)) (jsonrpc (1 0 28)) (project (0 11 2))
+      (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
      "The Emacs Client for LSP servers" tar
      ((:url . "https://github.com/joaotavora/eglot")
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "dc7c36ea1290c295f77ded998f72a0d9f992bef7"))])
+      (:commit . "0d67e76b94e1f0af9fe364aed8aa5db1c494c206"))])
  (el-job
   . [(2 7 4) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -1750,12 +1750,12 @@
       (:url . "https://elpa.gnu.org/packages/json-mode.html")
       (:commit . "2eb4b83db23e61fa2112688148aeedbacfc3c18e"))])
  (jsonrpc
-  . [(1 0 28) ((emacs (25 2))) "JSON-RPC library" tar
+  . [(1 0 29) ((emacs (25 2))) "JSON-RPC library" tar
      ((:keywords "processes" "languages" "extensions")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
-      (:commit . "f0fcc87a34c27f7d214107dc0a8d1ed96e6baf3b"))])
+      (:commit . "f52457d17ef3fb426b9dff07dec8b99aae3ff54c"))])
  (jumpc
   . [(3 1) nil "jump to previous insertion points" tar
      ((:maintainer "Ivan Kanis" . "ivan@kanis.fr")
@@ -3698,7 +3698,7 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "6c63bc4c40eae8fe7a3213efe11b75dfe73aaaa4"))])
  (xelb
-  . [(0 22) ((emacs (27 1)) (compat (30)))
+  . [(0 23) ((emacs (29 1)) (compat (31)))
      "X protocol Emacs Lisp Binding" tar
      ((:url . "https://github.com/emacs-exwm/xelb") (:keywords "unix")
       (:maintainer
@@ -3706,7 +3706,7 @@
        ("Steven Allen" . "steven@stebalien.com")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Chris Feng" . "chris.w.feng@gmail.com"))
-      (:commit . "9e007c9eb595cd5d58e749c7679201bda999a229"))])
+      (:commit . "638692fac2e3ef081cd8c39891d6d6e15032ff17"))])
  (xpm
   . [(1 0 5) ((cl-lib (0 5)) (queue (0 2))) "edit XPM images" tar
      ((:url . "https://www.gnuvola.org/software/xpm/")
