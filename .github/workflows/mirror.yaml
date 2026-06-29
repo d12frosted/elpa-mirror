@@ -1,0 +1,32 @@
+# Scheduled ELPA mirroring. Runs from this mirror repository itself so the repo
+# stays active and GitHub never auto-disables the schedule. Pushes back to this
+# same repo with the built-in GITHUB_TOKEN (needs "contents: write").
+
+name: mirror
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Avoid overlapping runs; let an in-progress mirror finish before the next one.
+concurrency:
+  group: mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: d12frosted/mirror-elpa@master
+        with:
+          mirror_owner: d12frosted
+          mirror_repo: elpa-mirror
+          access_login: x-access-token
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_name: Golem
+          commit_email: golem@d12frosted.io
+          emacs_version: 'snapshot'
