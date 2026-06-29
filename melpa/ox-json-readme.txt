@@ -35,5 +35,15 @@ Export options:
   in the :json-property-types option. If true these properties will be exported
   using `ox-json-encode-auto'.
 
+:json-omit-default-property-values (bool) - When non-nil, properties matching their
+  default value in `ox-json-default-property-values' are omitted from export. Set
+  to nil to include all properties (backwards-compatible behavior). Defaults to t.
+
 :json-postprocess (symbol) - How to postprocess the final output. Values are `pretty'
   (indent properly), `minimal' (remove whitespace), and nil (nothing, maybe faster?).
+
+:json-deterministic-refs (bool) - When non-nil, node refs are derived from
+  the element's structural path in the parse tree rather than a random number,
+  producing refs that are stable across repeated exports of identical source
+  and across Org versions (unlike buffer positions, which can shift between
+  parser versions). Defaults to nil (random refs, original behavior).

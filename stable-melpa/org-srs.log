@@ -2,10 +2,10 @@
  • Building package org-srs
 From https://github.com/bohonghuang/org-srs
 Updating /mnt/store/melpa/working/org-srs/
-Checking out c0aff45392b1f836fd943467cc266cef50899a44
+Checking out e6e5fbfcb8beb520141edac647ccb76af9b71df6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-srs/
-  to /tmp/org-srs-QuHALS/org-srs-20251223.1556/
+  to /tmp/org-srs-k1xhpA/org-srs-20260628.1143/
     org-srs-algorithm-fsrs-optimizer.el -> org-srs-algorithm-fsrs-optimizer.el
     org-srs-algorithm-fsrs.el -> org-srs-algorithm-fsrs.el
     org-srs-algorithm.el -> org-srs-algorithm.el
@@ -23,6 +23,7 @@ Copying files (->) and directories (=>)
     org-srs-review-cram.el -> org-srs-review-cram.el
     org-srs-review-rate.el -> org-srs-review-rate.el
     org-srs-review-strategy.el -> org-srs-review-strategy.el
+    org-srs-review-undo.el -> org-srs-review-undo.el
     org-srs-review.el -> org-srs-review.el
     org-srs-schedule-bury.el -> org-srs-schedule-bury.el
     org-srs-schedule-fuzz.el -> org-srs-schedule-fuzz.el
@@ -39,40 +40,41 @@ Copying files (->) and directories (=>)
     org-srs-ui-mouse.el -> org-srs-ui-mouse.el
     org-srs-ui.el -> org-srs-ui.el
     org-srs.el -> org-srs.el
-Created org-srs-20251223.1556.tar containing:
-  org-srs-20251223.1556/
-  org-srs-20251223.1556/org-srs-algorithm-fsrs-optimizer.el
-  org-srs-20251223.1556/org-srs-algorithm-fsrs.el
-  org-srs-20251223.1556/org-srs-algorithm.el
-  org-srs-20251223.1556/org-srs-embed.el
-  org-srs-20251223.1556/org-srs-entry.el
-  org-srs-20251223.1556/org-srs-item-card.el
-  org-srs-20251223.1556/org-srs-item-cloze-latex.el
-  org-srs-20251223.1556/org-srs-item-cloze.el
-  org-srs-20251223.1556/org-srs-item.el
-  org-srs-20251223.1556/org-srs-log.el
-  org-srs-20251223.1556/org-srs-pkg.el
-  org-srs-20251223.1556/org-srs-property.el
-  org-srs-20251223.1556/org-srs-query.el
-  org-srs-20251223.1556/org-srs-review-ahead.el
-  org-srs-20251223.1556/org-srs-review-cache.el
-  org-srs-20251223.1556/org-srs-review-cram.el
-  org-srs-20251223.1556/org-srs-review-rate.el
-  org-srs-20251223.1556/org-srs-review-strategy.el
-  org-srs-20251223.1556/org-srs-review.el
-  org-srs-20251223.1556/org-srs-schedule-bury.el
-  org-srs-20251223.1556/org-srs-schedule-fuzz.el
-  org-srs-20251223.1556/org-srs-schedule-offset.el
-  org-srs-20251223.1556/org-srs-schedule-step.el
-  org-srs-20251223.1556/org-srs-schedule.el
-  org-srs-20251223.1556/org-srs-stats-history.el
-  org-srs-20251223.1556/org-srs-stats-interval.el
-  org-srs-20251223.1556/org-srs-stats.el
-  org-srs-20251223.1556/org-srs-table.el
-  org-srs-20251223.1556/org-srs-time.el
-  org-srs-20251223.1556/org-srs-ui-child-frame.el
-  org-srs-20251223.1556/org-srs-ui-header-line.el
-  org-srs-20251223.1556/org-srs-ui-mouse.el
-  org-srs-20251223.1556/org-srs-ui.el
-  org-srs-20251223.1556/org-srs.el
-Built org-srs in 5.855s, finished at 2026-06-27T14:23:51+0000
+Created org-srs-20260628.1143.tar containing:
+  org-srs-20260628.1143/
+  org-srs-20260628.1143/org-srs-algorithm-fsrs-optimizer.el
+  org-srs-20260628.1143/org-srs-algorithm-fsrs.el
+  org-srs-20260628.1143/org-srs-algorithm.el
+  org-srs-20260628.1143/org-srs-embed.el
+  org-srs-20260628.1143/org-srs-entry.el
+  org-srs-20260628.1143/org-srs-item-card.el
+  org-srs-20260628.1143/org-srs-item-cloze-latex.el
+  org-srs-20260628.1143/org-srs-item-cloze.el
+  org-srs-20260628.1143/org-srs-item.el
+  org-srs-20260628.1143/org-srs-log.el
+  org-srs-20260628.1143/org-srs-pkg.el
+  org-srs-20260628.1143/org-srs-property.el
+  org-srs-20260628.1143/org-srs-query.el
+  org-srs-20260628.1143/org-srs-review-ahead.el
+  org-srs-20260628.1143/org-srs-review-cache.el
+  org-srs-20260628.1143/org-srs-review-cram.el
+  org-srs-20260628.1143/org-srs-review-rate.el
+  org-srs-20260628.1143/org-srs-review-strategy.el
+  org-srs-20260628.1143/org-srs-review-undo.el
+  org-srs-20260628.1143/org-srs-review.el
+  org-srs-20260628.1143/org-srs-schedule-bury.el
+  org-srs-20260628.1143/org-srs-schedule-fuzz.el
+  org-srs-20260628.1143/org-srs-schedule-offset.el
+  org-srs-20260628.1143/org-srs-schedule-step.el
+  org-srs-20260628.1143/org-srs-schedule.el
+  org-srs-20260628.1143/org-srs-stats-history.el
+  org-srs-20260628.1143/org-srs-stats-interval.el
+  org-srs-20260628.1143/org-srs-stats.el
+  org-srs-20260628.1143/org-srs-table.el
+  org-srs-20260628.1143/org-srs-time.el
+  org-srs-20260628.1143/org-srs-ui-child-frame.el
+  org-srs-20260628.1143/org-srs-ui-header-line.el
+  org-srs-20260628.1143/org-srs-ui-mouse.el
+  org-srs-20260628.1143/org-srs-ui.el
+  org-srs-20260628.1143/org-srs.el
+Built org-srs in 3.431s, finished at 2026-06-29T05:53:54+0000

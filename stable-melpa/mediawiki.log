@@ -2,16 +2,17 @@
  • Building package mediawiki
 From https://github.com/hexmode/mediawiki-el
 Updating /mnt/store/melpa/working/mediawiki/
-Checking out 8002f2fea253b5c2f601325c5b4968e568a3aa2a
+Checking out 0d62770e02b232efae8cbf1926f63adc01a4c9ef
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mediawiki/
-  to /tmp/mediawiki-RaMJ4C/mediawiki-20260619.737/
+  to /tmp/mediawiki-EaoL7m/mediawiki-20260629.302/
     mediawiki-api.el -> mediawiki-api.el
     mediawiki-auth.el -> mediawiki-auth.el
     mediawiki-cache.el -> mediawiki-cache.el
     mediawiki-completion.el -> mediawiki-completion.el
     mediawiki-core.el -> mediawiki-core.el
     mediawiki-diff.el -> mediawiki-diff.el
+    mediawiki-discussion-tools.el -> mediawiki-discussion-tools.el
     mediawiki-draft.el -> mediawiki-draft.el
     mediawiki-faces.el -> mediawiki-faces.el
     mediawiki-font-lock.el -> mediawiki-font-lock.el
@@ -21,30 +22,33 @@ Copying files (->) and directories (=>)
     mediawiki-oauth.el -> mediawiki-oauth.el
     mediawiki-page.el -> mediawiki-page.el
     mediawiki-site.el -> mediawiki-site.el
+    mediawiki-support-desk.el -> mediawiki-support-desk.el
     mediawiki-user.el -> mediawiki-user.el
     mediawiki-utils.el -> mediawiki-utils.el
     mediawiki-watchlist.el -> mediawiki-watchlist.el
     mediawiki.el -> mediawiki.el
-Created mediawiki-20260619.737.tar containing:
-  mediawiki-20260619.737/
-  mediawiki-20260619.737/mediawiki-api.el
-  mediawiki-20260619.737/mediawiki-auth.el
-  mediawiki-20260619.737/mediawiki-cache.el
-  mediawiki-20260619.737/mediawiki-completion.el
-  mediawiki-20260619.737/mediawiki-core.el
-  mediawiki-20260619.737/mediawiki-diff.el
-  mediawiki-20260619.737/mediawiki-draft.el
-  mediawiki-20260619.737/mediawiki-faces.el
-  mediawiki-20260619.737/mediawiki-font-lock.el
-  mediawiki-20260619.737/mediawiki-history.el
-  mediawiki-20260619.737/mediawiki-http.el
-  mediawiki-20260619.737/mediawiki-mode.el
-  mediawiki-20260619.737/mediawiki-oauth.el
-  mediawiki-20260619.737/mediawiki-page.el
-  mediawiki-20260619.737/mediawiki-pkg.el
-  mediawiki-20260619.737/mediawiki-site.el
-  mediawiki-20260619.737/mediawiki-user.el
-  mediawiki-20260619.737/mediawiki-utils.el
-  mediawiki-20260619.737/mediawiki-watchlist.el
-  mediawiki-20260619.737/mediawiki.el
-Built mediawiki in 4.997s, finished at 2026-06-27T14:07:30+0000
+Created mediawiki-20260629.302.tar containing:
+  mediawiki-20260629.302/
+  mediawiki-20260629.302/mediawiki-api.el
+  mediawiki-20260629.302/mediawiki-auth.el
+  mediawiki-20260629.302/mediawiki-cache.el
+  mediawiki-20260629.302/mediawiki-completion.el
+  mediawiki-20260629.302/mediawiki-core.el
+  mediawiki-20260629.302/mediawiki-diff.el
+  mediawiki-20260629.302/mediawiki-discussion-tools.el
+  mediawiki-20260629.302/mediawiki-draft.el
+  mediawiki-20260629.302/mediawiki-faces.el
+  mediawiki-20260629.302/mediawiki-font-lock.el
+  mediawiki-20260629.302/mediawiki-history.el
+  mediawiki-20260629.302/mediawiki-http.el
+  mediawiki-20260629.302/mediawiki-mode.el
+  mediawiki-20260629.302/mediawiki-oauth.el
+  mediawiki-20260629.302/mediawiki-page.el
+  mediawiki-20260629.302/mediawiki-pkg.el
+  mediawiki-20260629.302/mediawiki-site.el
+  mediawiki-20260629.302/mediawiki-support-desk.el
+  mediawiki-20260629.302/mediawiki-user.el
+  mediawiki-20260629.302/mediawiki-utils.el
+  mediawiki-20260629.302/mediawiki-watchlist.el
+  mediawiki-20260629.302/mediawiki.el
+Built mediawiki in 4.187s, finished at 2026-06-29T05:45:14+0000
