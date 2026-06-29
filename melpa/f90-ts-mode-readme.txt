@@ -2,6 +2,7 @@ f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 30+)
 
 Recently changed, added or improved:
+  [06-2026] Fill line and region operations added.
   [06-2026] Defcustom group f90-ts-comment added.
   [06-2026] Indentation of lines after a structure beginning line with
             statement label fixed.
@@ -11,6 +12,7 @@ Recently changed, added or improved:
             removed from the defcustom definitions and added as
             `f90-ts-comment-prefix-separator-regexp'.  If the regexp
             variables have been customized, please adjust.
+  [06-2026] Mark region operations complemented
 
 Features:
   - Almost all statements up to F2023
@@ -19,7 +21,9 @@ Features:
   - Alignment for multiline statements with rotation and other options
   - Smart end completion
   - Configurable leading ampersand and statement label positions
-  - Breaking and joining continued lines
+  - Breaking and joining of continued lines
+  - Filling and rebalancing of lines or regions (with rightmost breakpoint
+    selection or interactive break and join session)
   - (Un)commenting regions with configurable prefixes and indentation rules
   - Special comments like doc strings and separators
     (syntax highlighting and indentation options)
