@@ -29,4 +29,4 @@ jobs:
           access_token: ${{ secrets.GITHUB_TOKEN }}
           commit_name: Golem
           commit_email: golem@d12frosted.io
-          emacs_version: 'snapshot'
+          emacs_version: '30.2'
