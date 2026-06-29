@@ -1,0 +1,77 @@
+# org-present-mode
+[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/org-present.svg)](https://elpa.nongnu.org/nongnu/org-present.html)
+
+This is meant to be an extremely minimalist presentation tool for
+Emacs [org-mode](http://orgmode.org/).  Simply layout your
+presentation with each slide under a top-level header, start the minor
+mode with 'org-present', and page through each slide with left/right
+keys.
+
+## Philosophy
+
+Most of the time I'm giving a talk, it is a work in progress and I want to be be able to edit
+as I go along. Also, to split my frame and work on code examples with my slides still visible.
+
+## Configuration
+
+Add something like this to your emacs config:
+
+```lisp
+(add-to-list 'load-path "~/path/to/org-present")
+(autoload 'org-present "org-present" nil t)
+```
+
+Precise behaviour of org-present during start and quit is controlled
+from hooks. The following will enlarge text, show images, hide the
+cursor and make the buffer read-only:
+
+```lisp
+(eval-after-load "org-present"
+  '(progn
+     (add-hook 'org-present-mode-hook
+               (lambda ()
+                 (org-present-big)
+                 (org-display-inline-images)
+                 (org-present-hide-cursor)
+                 (org-present-read-only)))
+     (add-hook 'org-present-mode-quit-hook
+               (lambda ()
+                 (org-present-small)
+                 (org-remove-inline-images)
+                 (org-present-show-cursor)
+                 (org-present-read-write)))))
+```
+
+Then start the minor mode with:
+
+```
+M-x org-present
+```
+
+Keys are:
+- left/right for movement
+- C-c C-= for large txt
+- C-c C-- for small text
+- C-c C-q for quit (which will return you back to vanilla org-mode)
+- C-c < and C-c > to jump to first/last slide
+- C-c C-r for buffer read-only
+- C-c C-w for buffer read/write
+- C-c C-1 for one big page showing all slides
+
+## Beautification
+
+This works well with
+[hide-mode-line](http://webonastick.com/emacs-lisp/hide-mode-line.el),
+which hides the mode-line when only one frame and buffer are open.
+
+If you're on a Mac with an older emacs you might also want to look at the
+[fullscreen patch](http://cloud.github.com/downloads/typester/emacs/feature-fullscreen.patch).
+`toggle-frame-fullscreen` comes with emacs 24.
+
+## Customization
+
+David Wilson from System Crafters has made an excellent [blog post](https://systemcrafters.net/emacs-tips/presentations-with-org-present/) and [video](https://www.youtube.com/watch?v=SCPoF1PTZpI) about customization of `org-present`.
+
+## Copyright
+
+Copyright © 2014 Richard Lister.

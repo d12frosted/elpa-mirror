@@ -1,0 +1,306 @@
+                            ━━━━━━━━━━━━━━━
+                             `ENGINE-MODE'
+                            ━━━━━━━━━━━━━━━
+
+
+[https://melpa.org/packages/engine-mode-badge.svg]
+[https://stable.melpa.org/packages/engine-mode-badge.svg]
+[https://img.shields.io/badge/License-GPL%20v3-blue.svg]
+[https://github.com/hrs/engine-mode/actions/workflows/test.yml/badge.svg?branch=main]
+
+`engine-mode' is a global minor mode for Emacs. It enables you to easily
+define search engines, bind them to keybindings, and query them from the
+comfort of your editor.
+
+<file:./doc/demo.gif>
+
+For example, suppose we want to be able to easily search GitHub:
+
+┌────
+│ (defengine github
+│   "https://github.com/search?ref=simplesearch&q=%s")
+└────
+
+This defines an interactive function `engine/search-github'. When
+executed it will take the selected region (or prompt for input, if no
+region is selected) and search GitHub for it, displaying the results in
+your default browser.
+
+The `defengine' macro can also take an optional key combination,
+prefixed with `engine/keymap-prefix' (which defaults to `C-x /'). That
+keybinding will be wrapped in a call to `kbd'.
+
+┌────
+│ (defengine duckduckgo
+│   "https://duckduckgo.com/?q=%s"
+│   :keybinding "d")
+└────
+
+`C-x / d' is now bound to the new function `engine/search-duckduckgo'!
+Nifty.
+
+If you'd like to see a video on the whys and wherefores of this mode,
+check out [the talk @hrs gave at EmacsNYC].
+
+
+[https://melpa.org/packages/engine-mode-badge.svg]
+<https://melpa.org/#/engine-mode>
+
+[https://stable.melpa.org/packages/engine-mode-badge.svg]
+<https://stable.melpa.org/#/engine-mode>
+
+[https://img.shields.io/badge/License-GPL%20v3-blue.svg]
+<https://www.gnu.org/licenses/gpl-3.0>
+
+[https://github.com/hrs/engine-mode/actions/workflows/test.yml/badge.svg?branch=main]
+<https://github.com/hrs/engine-mode/actions/workflows/test.yml>
+
+[the talk @hrs gave at EmacsNYC]
+<https://www.youtube.com/watch?v=MBhJBMYfWUo>
+
+
+Installation
+════════════
+
+  `engine-mode' is available on MELPA.
+
+  Using `use-package':
+
+  ┌────
+  │ (use-package engine-mode
+  │   :ensure t
+  │ 
+  │   :config
+  │   (engine-mode t))
+  └────
+
+  You can also install it like any other elisp file by adding it to your
+  load path and globally enabling it:
+
+  ┌────
+  │ (require 'engine-mode)
+  │ (engine-mode t)
+  └────
+
+
+Changing your default browser
+═════════════════════════════
+
+  `engine-mode' uses the `engine/browser-function' variable to determine
+  which browser it should use to open the URL it constructs. To change
+  the default browser, redefine `engine/browser-function'. For example,
+  to always use Emacs' built-in `eww' browser:
+
+  ┌────
+  │ (setq engine/browser-function 'eww-browse-url)
+  └────
+
+  `engine/browser-function' defaults to `browse-url-browser-function',
+  which Emacs uses globally to open links.
+
+  The implementation of the `browse-url-browser-function' variable
+  contains a comprehensive list of possible browser functions. You can
+  get to that by hitting `C-h v browse-url-browser-function <RETURN>'
+  and following the link to `browse-url.el'.
+
+
+Changing your browser on a per-engine basis
+═══════════════════════════════════════════
+
+  To only change the browser for a single engine, use the `:browser'
+  keyword argument when you define the engine. For example, to use `eww'
+  only for your GitHub search results, try:
+
+  ┌────
+  │ (defengine github
+  │   "https://github.com/search?ref=simplesearch&q=%s"
+  │   :browser 'eww-browse-url)
+  └────
+
+  As mentioned about, see the implementation of the
+  `browse-url-browser-function' for a definitive list of browsers.
+
+
+Changing the keymap prefix
+══════════════════════════
+
+  The default keymap prefix for `engine-mode' is `C-x /'. If you'd like
+  to bind the keymap to an additional prefix (say, `C-c s'), you totally
+  can:
+
+  ┌────
+  │ (engine/set-keymap-prefix (kbd "C-c s"))
+  └────
+
+  If you use `use-package', you can achieve the same thing with:
+
+  ┌────
+  │ :bind-keymap ("C-c s" . engine-mode-prefixed-map)
+  └────
+
+
+Custom docstrings
+═════════════════
+
+  `defengine' assigns each engine a reasonable default docstring, but
+  you can override that on a case-by-case basis with the `:docstring'
+  keyword argument:
+
+  ┌────
+  │ (defengine ctan
+  │   "https://www.ctan.org/search/?x=1&PORTAL=on&phrase=%s"
+  │   :docstring "Search the Comprehensive TeX Archive Network (ctan.org)")
+  └────
+
+
+Modifying the search term before sending it
+═══════════════════════════════════════════
+
+  An engine might want to transform a search term in some way before it
+  interpolates the term into the URL. Maybe the term should have a
+  different encoding, or be capitalized differently, or, uh, be passed
+  through [ROT13].  Whatever the reason, you can apply a custom
+  transformation to a search term by passing a function to `defengine'
+  through the `:term-transformation-hook' keyword argument.
+
+  For example, to UPCASE all of your DuckDuckGo searches:
+
+  ┌────
+  │ (defengine duckduckgo
+  │   "https://duckduckgo.com/?q=%s"
+  │   :term-transformation-hook upcase)
+  └────
+
+  Or, to ensure that all your queries are encoded as latin-1:
+
+  ┌────
+  │ (defengine diec2
+  │   "dlc.iec.cat/results.asp?txtEntrada=%s"
+  │   :term-transformation-hook (lambda (term) (encode-coding-string term latin-1))
+  │   :keybinding "c")
+  └────
+
+  You could also use a `:term-transformation-hook' to make an engine
+  behave differently when given a [prefix argument] (i.e. typing `C-u'
+  before invoking the engine).
+
+  Some search engines support querying for exact phrases by enclosing
+  the search string with double quotes. Transformations could be useful
+  in this case to perform a literal search instead if the universal
+  argument is present:
+
+  ┌────
+  │ (defengine duckduckgo
+  │   "https://duckduckgo.com/?q=%s"
+  │   :term-transformation-hook (lambda (term) (if current-prefix-arg
+  │ 					  (concat "\"" term "\"")
+  │ 					term))
+  │   :keybinding "d")
+  └────
+
+  Typing `C-x / d' will perform a regular search, but typing `C-u C-x /
+  d' will wrap your query in quotes before searching for it. That's
+  especially useful when searching for the contents of the region.
+
+
+[ROT13] <https://en.wikipedia.org/wiki/ROT13>
+
+[prefix argument]
+<https://www.gnu.org/software/emacs/manual/html_node/elisp/Prefix-Command-Arguments.html>
+
+
+Importing keyword searches from other browsers
+══════════════════════════════════════════════
+
+  Since many browsers save keyword searches using the same format as
+  engine-mode (that is, by using `%s' in a url to indicate a search
+  term), it's not too hard to import them into Emacs.
+
+  [@sshaw] has written a script to [import from Chrome on OS X]. Thanks
+  for that!
+
+
+[@sshaw] <https://github.com/sshaw>
+
+[import from Chrome on OS X]
+<https://gist.github.com/sshaw/9b635eabde582ebec442>
+
+
+Comparison with `webjump'
+═════════════════════════
+
+  Emacs has a perfectly lovely built-in `webjump' package which allows
+  the user to define a set of URLs, interpolate search terms into them,
+  and visit them in the browser.
+
+  Why might you use `engine-mode' instead of `webjump'?
+
+  • You want to bind specific searches to keybindings. Because
+    `engine-mode' defines a function for each engine, keybindings in
+    `engine-mode' can be associated directly with specific searches.
+  • You'd like to associate browser functions with engines on a
+    case-by-case basis. For example, if you want to perform some
+    searches in Firefox, and other searches in `eww', that's trivial in
+    `engine-mode'.
+  • You like some of `engine-mode''s minor UI conveniences. For example,
+    if you've got a region selected, for example, `engine-mode' will use
+    that as the search query, while `webjump' will ignore it and offer
+    an empty prompt.
+
+  If you're not interested in these features, `webjump' is a great
+  choice! Honestly, the author of `engine-mode' probably wouldn't have
+  bothered writing it if they'd known `webjump' existed at the
+  time. :sweat_smile:
+
+
+Engine examples
+═══════════════
+
+  ┌────
+  │ (defengine amazon
+  │   "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=%s")
+  │ 
+  │ (defengine duckduckgo
+  │   "https://duckduckgo.com/?q=%s"
+  │   :keybinding "d")
+  │ 
+  │ (defengine github
+  │   "https://github.com/search?ref=simplesearch&q=%s")
+  │ 
+  │ (defengine google
+  │   "https://www.google.com/search?ie=utf-8&oe=utf-8&q=%s"
+  │   :keybinding "g")
+  │ 
+  │ (defengine google-images
+  │   "https://www.google.com/images?hl=en&source=hp&biw=1440&bih=795&gbv=2&aq=f&aqi=&aql=&oq=&q=%s")
+  │ 
+  │ (defengine google-maps
+  │   "https://maps.google.com/maps?q=%s"
+  │   :docstring "Mappin' it up.")
+  │ 
+  │ (defengine project-gutenberg
+  │   "https://www.gutenberg.org/ebooks/search/?query=%s")
+  │ 
+  │ (defengine qwant
+  │   "https://www.qwant.com/?q=%s")
+  │ 
+  │ (defengine stack-overflow
+  │   "https://stackoverflow.com/search?q=%s")
+  │ 
+  │ (defengine twitter
+  │   "https://twitter.com/search?q=%s")
+  │ 
+  │ (defengine wikipedia
+  │   "https://www.wikipedia.org/search-redirect.php?language=en&go=Go&search=%s"
+  │   :keybinding "w"
+  │   :docstring "Searchin' the wikis.")
+  │ 
+  │ (defengine wiktionary
+  │   "https://www.wikipedia.org/search-redirect.php?family=wiktionary&language=en&go=Go&search=%s")
+  │ 
+  │ (defengine wolfram-alpha
+  │   "https://www.wolframalpha.com/input/?i=%s")
+  │ 
+  │ (defengine youtube
+  │   "https://www.youtube.com/results?aq=f&oq=&search_query=%s")
+  └────

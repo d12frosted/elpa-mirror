@@ -1,0 +1,457 @@
+                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                       README FOR ORG TREE SLIDE
+                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+                         [2023-08-26 Sat 22:20]
+
+
+[http://melpa.org/packages/org-tree-slide-badge.svg]
+[http://stable.melpa.org/packages/org-tree-slide-badge.svg]
+
+<https://github.com/takaxp/contents/blob/master/org-tree-slide/demo1.gif>
+
+
+[http://melpa.org/packages/org-tree-slide-badge.svg]
+<http://melpa.org/#/org-tree-slide>
+
+[http://stable.melpa.org/packages/org-tree-slide-badge.svg]
+<http://stable.melpa.org/#/org-tree-slide>
+
+
+1 1. What's this?
+═════════════════
+
+  The main purpose of this elisp is to handle each tree in an org buffer
+  as a slide by simple narrowing. This emacs lisp is a minor mode for
+  Emacs Org-mode.
+
+  Main features:
+
+  • Live editable presentation
+  • Fast switching of narrowing/widen
+  • TODO pursuit with narrowing
+  • Displaying the current number of slides in mode line
+  • CONTENT view during a presentation
+  • Slide-in effect
+  • Slide header from org file's header
+  • Countdown timer
+
+
+1.1 1-1. Related packages
+─────────────────────────
+
+  There are various packages to make a presentation with org-mode. See
+  <http://orgmode.org/worg/org-tutorials/non-beamer-presentations.html>. For
+  more simple use, [presentation.el] may suitable.
+
+
+[presentation.el] <https://github.com/zonuexe/emacs-presentation-mode>
+
+
+2 2. Install
+════════════
+
+  1. Put this elisp into your load-path
+  2. Add `(require 'org-tree-slide)' in your `.emacs'
+
+  OR
+
+  1. Eval: `(auto-install-from-url
+     "https://raw.github.com/takaxp/org-tree-slide/master/org-tree-slide.el")'
+     (for auto-install users)
+  2. Add `(require 'org-tree-slide)' in your `.emacs'
+
+  Then open an org file, just type `C-<' and `C->', which means `C-M-,'
+  and `C-M-.', you can see a presentation will begin with a header,
+  slide-in effect, and slide number in mode line.
+
+  It is recommended to change the keybindings to make your presentation
+  smoothly. Here is an example.
+
+  ┌────
+  │ (with-eval-after-load "org-tree-slide"
+  │   (define-key org-tree-slide-mode-map (kbd "<f9>") 'org-tree-slide-move-previous-tree)
+  │   (define-key org-tree-slide-mode-map (kbd "<f10>") 'org-tree-slide-move-next-tree)
+  │   )
+  └────
+
+
+2.1 2.1 el-get recipe
+─────────────────────
+
+  If you are an [el-get] user, just do
+
+  ┌────
+  │ M-x el-get-install RET org-tree-slide
+  └────
+
+
+[el-get] <https://github.com/dimitri/el-get>
+
+
+2.2 2.2 MELPA
+─────────────
+
+  Now, you can install `org-tree-slide' via [MELPA].
+
+
+[MELPA] <http://melpa.org/#/org-tree-slide>
+
+
+2.3 2.2 Requirements
+────────────────────
+
+  • Org-mode 6.33x or higher version is required.
+  • This elisp doesn't require any additional packages.
+  • Emacs 25.2 or later is required. But users of Emacs 25.1 or earlier
+    (at least 24.4) can still use this package. Please load
+    `org-tree-slide-compt.el' before activating org-tree-slide.el.
+
+
+2.4 2.3 additional package (moom.el)
+────────────────────────────────────
+
+  Normally, presentations will appear in full screen or frame
+  maximized. [moom] is useful in such cases since the package can change
+  frame position and size by keyboard and the font size will be
+  increased suitably for your presentation.
+
+
+[moom] <https://github.com/takaxp/moom#org-mode-org-tree-slide>
+
+
+3 3. Recommended settings
+═════════════════════════
+
+  Assigning a single key to `org-tree-slide-mode' is recommended.
+
+  ┌────
+  │ (global-set-key (kbd "<f8>") 'org-tree-slide-mode)
+  │ (global-set-key (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle)
+  └────
+
+  OR
+
+  ┌────
+  │ (define-key org-mode-map (kbd "<f8>") 'org-tree-slide-mode)
+  │ (define-key org-mode-map (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle)
+  └────
+
+
+4 4. Profiles
+═════════════
+
+  Three useful profiles are available. Please select a profile that is
+  the most suitable for your using scenario.
+
+  If you select `simple' profile, call the following command while
+  `org-tree-slide-mode' is ON.
+
+  ┌────
+  │ M-x org-tree-slide-simple-profile
+  └────
+
+  If you want to use this setting as the default, put the following
+  configuration including recommended settings into your `.emacs'.
+
+  ┌────
+  │ (when (require 'org-tree-slide nil t)
+  │   (global-set-key (kbd "<f8>") 'org-tree-slide-mode)
+  │   (global-set-key (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle)
+  │   (org-tree-slide-simple-profile))
+  └────
+
+  `org-tree-slide-presentation-profile' and
+  `org-tree-slide-narrowing-control-profile' are also available.
+
+
+4.1 4-1. `Simple'
+─────────────────
+
+  This profile will display trees in your org buffer by simple
+  narrowing. You can change trees without `widen' command. Most of the
+  visual effect is disabled.
+
+  Type `M-x org-tree-slide-simple-profile' while `org-tree-slide-mode'
+  is ON.
+
+  1. No header display
+  2. No slide-in effect
+  3. The cursor will move to the head of the buffer when exit
+  4. No slide number display in mode line
+  5. Display every type of tree except `org-comment-string'
+     (e.g. COMMENT)
+
+
+4.2 4-2. `Presentation'
+───────────────────────
+
+  This profile is the default setting of org-tree-slide. If an org
+  buffer includes `#+title:', `#+email:', and `#+author:',
+  org-tree-slide attempts to use those variables in the slide header. A
+  date in the header will be set with the presentation of the day. You
+  can enjoy a slide-in effect, the current slide number in mode line.
+
+  If you want to show the content of your presentation, type `C-x s c'
+  or `M-x org-tree-slide-content'. All of the headings will be shown in
+  a buffer like a Table Of Content except some headings configured as
+  skipping by `org-tree-slide-skip-outline-level'. Find a heading that
+  you want to show, and type `C->', the presentation will be resumed.
+
+  It is possible to skip slides when a heading level is higher than or
+  equal to a value of `org-tree-slide-skip-outline-level'. see User
+  variables.
+
+  To exit a presentation, set `org-tree-slide-mode' OFF. The cursor move
+  to the head of the buffer and the trees will be rendered according to
+  the value of `#+startup:' if possible.
+
+  `M-x org-tree-slide-presentation-profile'
+
+  1. Display header
+  2. Enable slide-in effect
+  3. The cursor will move to the head of buffer when exit
+  4. Display slide number in mode line
+  5. Display every type of tree except `org-comment-string'
+     (e.g. COMMENT)
+
+
+4.3 4-3. `TODO Pursuit with narrowing'
+──────────────────────────────────────
+
+  This profile will display trees restricted to `TODO status' without a
+  header and slide-in effect. It is very useful to concentrate your
+  focus on the current TODO item that is not done, and go to the next
+  task by typing of `C->'. This is "TODO Pursuit with narrowing". If you
+  want to track every kind of tree including finished items, toggle `M-x
+  org-tree-slide-skip-done-toggle' OFF.
+
+  When you exit `org-tree-slide-mode', the cursor will keep the same
+  position, it is therefore possible to focus again by toggle `M-x
+  org-tree-slide-mode'.
+
+  If you feel the cursor moving is very slow, please change a value of
+  `org-tree-slide-modeline-display' to `'outside' or `nil'.
+
+  `M-x org-tree-slide-narrowing-control-profile'
+
+  1. No header display
+  2. No slide-in effect
+  3. The cursor will keep the same position when exit
+  4. Display slide number in mode line
+  5. Display TODO trees only except `org-comment-string' (e.g. COMMENT)
+
+
+5 5. User variables
+═══════════════════
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       Variable                                    Default value  Select  
+  ────────────────────────────────────────────────────────────────────────
+    1  org-tree-slide-skip-outline-level           0              Numeric 
+    2  org-tree-slide-header                       t              Boolean 
+    3  org-tree-slide-slide-in-effect              t              Boolean 
+    4  org-tree-slide-cursor-init                  t              Boolean 
+    5  org-tree-slide-slide-in-blank-lines         10             Numeric 
+    6  org-tree-slide-slide-in-waiting             0.02           Float   
+    7  org-tree-slide-heading-emphasis             nil            Boolean 
+    8  org-tree-slide-never-touch-face             nil            Boolean 
+    9  org-tree-slide-skip-done                    nil            Boolean 
+   10  org-tree-slide-skip-comments                t              [*1]    
+   11  org-tree-slide-activate-message             Hello…         String  
+   12  org-tree-slide-deactivate-message           Quit, Bye!     String  
+   13  org-tree-slide-modeline-display             'outside       [*2]    
+   14  org-tree-slide-fold-subtrees-skipped        t              Boolean 
+   15  org-tree-slide-breadcrumbs                  " > "          String  
+   16  org-tree-slide-breadcrumbs-hide-todo-state  t              Boolean 
+   17  org-tree-slide-indicator                    plist          [*3]    
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Table 1: User variables
+
+        [*1] { nil | t | 'inherit } t: skip only the current
+                 heading with COMMENT, child headings without
+                 COMMENT will be shown, 'inherit: skip headings
+                 with COMMENT and its child headings, nil: show
+                 even if it has COMMENT.  (note)
+                 `org-tree-slide-skip-comments-toggle' will switch
+                 between `t' and `nil' normally, but if
+                 `org-tree-slide-skip-comments' is specified as
+                 `'inherit', then the toggle will switch between
+                 `'inherit' and `t'.
+
+        [*2] { nil | 'lighter | 'outside } 'outside: shown in the
+          mode line outside of lighter, 'lighter: shown in lighter
+          (slow), nil: nothing to be shown.
+
+        [*3] '(:next " Next >>" :previous "<< Previous" :content
+           "<< CONTENT >>") If you prefer to show nothing for
+           entering content mode, then specify as '(:next " Next
+           >>" :previous "<< Previous" :content nil)
+
+
+5.1 5-1. Useful settings for experts
+────────────────────────────────────
+
+  If you like this elisp, the following setting is more useful. Try it!
+
+  In this case, `<f8>' / `<f9>' / `<f10>' / `<f11>' are assigned in
+  order to control org-tree-slide.
+
+  ┌────
+  │ (when (require 'org-tree-slide nil t)
+  │   (global-set-key (kbd "<f8>") 'org-tree-slide-mode)
+  │   (global-set-key (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle)
+  │   (define-key org-tree-slide-mode-map (kbd "<f9>")
+  │     'org-tree-slide-move-previous-tree)
+  │   (define-key org-tree-slide-mode-map (kbd "<f10>")
+  │     'org-tree-slide-move-next-tree)
+  │   (define-key org-tree-slide-mode-map (kbd "<f11>")
+  │     'org-tree-slide-content)
+  │   (setq org-tree-slide-skip-outline-level 4)
+  │   (org-tree-slide-narrowing-control-profile)
+  │   (setq org-tree-slide-skip-comments 'inherit)
+  │   (setq org-tree-slide-skip-done nil))
+  └────
+
+
+6 6. Functions
+══════════════
+
+6.1 Control functions
+─────────────────────
+
+  • org-tree-slide-move-next-tree (`C->')
+  • org-tree-slide-move-previous-tree (`C-<')
+  • org-tree-slide-content (`C-x s c')
+
+
+6.2 Startup options
+───────────────────
+
+  These functions will toggle `org-tree-slide-mode' ON, automatically.
+
+  • org-tree-slide-without-init-play
+  • org-tree-slide-play-with-timer
+
+
+6.3 Toggle variables
+────────────────────
+
+  • org-tree-slide-display-header-toggle
+  • org-tree-slide-slide-in-effect-toggle
+  • org-tree-slide-skip-done-toggle
+  • org-tree-slide-skip-comments-toggle
+  • org-tree-slide-heading-emphasis-toggle
+
+
+6.4 Batch setting of user variables
+───────────────────────────────────
+
+  • org-tree-slide-simple-profile
+  • org-tree-slide-presentation-profile
+  • org-tree-slide-narrowing-control-profile
+
+
+6.5 Hooks
+─────────
+
+  • org-tree-slide-play-hook
+  • org-tree-slide-stop-hook
+  • org-tree-slide-before-narrow-hook
+  • org-tree-slide-after-narrow-hook
+  • org-tree-slide-before-move-next-hook
+  • org-tree-slide-before-move-previous-hook
+
+  NOTE: For senior user, some hook were renamed, please update your
+  configurations
+
+
+7 7. Additional settings
+════════════════════════
+
+7.1 Hide org-meta-line
+──────────────────────
+
+  The following code could be useful if you want to make `#+' lines
+  invisible during presentation.
+
+  ┌────
+  │ (with-eval-after-load "org-tree-slide"
+  │   (defvar my-hide-org-meta-line-p nil)
+  │   (defun my-hide-org-meta-line ()
+  │     (interactive)
+  │     (setq my-hide-org-meta-line-p t)
+  │     (set-face-attribute 'org-meta-line nil
+  │ 					  :foreground (face-attribute 'default :background)))
+  │   (defun my-show-org-meta-line ()
+  │     (interactive)
+  │     (setq my-hide-org-meta-line-p nil)
+  │     (set-face-attribute 'org-meta-line nil :foreground nil))
+  │ 
+  │   (defun my-toggle-org-meta-line ()
+  │     (interactive)
+  │     (if my-hide-org-meta-line-p
+  │ 	      (my-show-org-meta-line) (my-hide-org-meta-line)))
+  │ 
+  │   (add-hook 'org-tree-slide-play-hook #'my-hide-org-meta-line)
+  │   (add-hook 'org-tree-slide-stop-hook #'my-show-org-meta-line))
+  └────
+
+
+8 8. History
+════════════
+
+  see also [ChangeLog] for details
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Version  Date              Description                             
+  ────────────────────────────────────────────────────────────────────
+   v2.8.0   2015-02-20@21:27  Changed Keymap, and renamed/added hooks 
+   v2.7.0   2013-07-21@05:21  Support buffers without headings        
+   v2.6.0   2012-11-21@02:14  Support dark color theme                
+   v2.5.0   2011-12-12@18:16  Remove auto-play function (TBD)         
+   v2.4.0   2011-12-08@10:51  Support TODO pursuit in a slideshow     
+   v2.3.0   2011-12-07@16:17  Support displaying a slide number       
+   v2.2.0   2011-12-07@02:15  Support minor mode                      
+   v2.0.0   2011-12-01@17:41  Add profiles and support org 6.33x      
+   v1.0.0   2011-09-28@20:59  Release the initial version             
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+[ChangeLog]
+<https://github.com/takaxp/org-tree-slide/blob/master/ChangeLog>
+
+
+9 9. Contact
+════════════
+
+  The author is Takaaki ISHIKAWA (takaxp@ieee.org).  Feel free to email
+  me or use a mention of twitter ([@takaxp])
+
+
+[@takaxp] <https://twitter.com/#!/takaxp>
+
+
+10 10. Videos
+═════════════
+
+  We can watch some videos that kindly introduce `org-tree-slide.el':
+  • [Emacs Tips - How to Give Presentations with Org Mode] (presented by
+    [System Crafters])
+  • [Show presentation using Org Mode] (presented by [Blackberry Boy])
+
+  Thank you!
+
+
+[Emacs Tips - How to Give Presentations with Org Mode]
+<https://www.youtube.com/watch?v=vz9aLmxYJB0>
+
+[System Crafters]
+<https://www.youtube.com/channel/UCAiiOTio8Yu69c3XnR7nQBQ>
+
+[Show presentation using Org Mode]
+<https://www.youtube.com/watch?v=uSwJQIGMyPk>
+
+[Blackberry Boy]
+<https://www.youtube.com/channel/UC0ds7DW6IIl7mXcyz5vMEHQ>

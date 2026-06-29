@@ -1,0 +1,1 @@
+This package provides mechanism for immediate completion, running again cycles over options.

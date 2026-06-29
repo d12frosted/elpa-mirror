@@ -1,0 +1,1 @@
+Highlight blocks surrounding the cursor.

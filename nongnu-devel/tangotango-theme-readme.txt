@@ -1,0 +1,52 @@
+[file:http://melpa.org/packages/tangotango-theme-badge.svg]
+
+This is an emacs color theme based on the tango palette colors.
+
+
+[file:http://melpa.org/packages/tangotango-theme-badge.svg]
+<http://melpa.org/#/tangotango-theme>
+
+
+1 Screenshots
+═════════════
+
+  Here is a screenshot of the color theme with an emacs-lisp file :
+
+  <https://github.com/juba/color-theme-tangotango/raw/master/screenshots/tangotango_elisp.png>
+
+  One with a Gnus summary and article buffers :
+
+  <https://github.com/juba/color-theme-tangotango/raw/master/screenshots/tangotango_gnus.png>
+
+  And one with an org-mode buffer :
+
+  <https://github.com/juba/color-theme-tangotango/raw/master/screenshots/tangotango_org.png>
+
+
+2 Installation instructions
+═══════════════════════════
+
+2.1 Package.el
+──────────────
+
+  `tangotango-theme' is available in [MELPA]. You can add this
+  repository by following its [installation instructions].
+
+  To install `tangotango-theme', just do :
+
+  ┌────
+  │ M-x package-install tangotango-theme
+  └────
+
+
+  You can then try it with `M-x load-theme'. If you want to load it
+  automatically on startup, add the following to your init file :
+
+  ┌────
+  │ (load-theme 'tangotango t)  
+  └────
+
+
+[MELPA] <http://melpa.milkbox.net>
+
+[installation instructions] <http://melpa.milkbox.net/#installing>

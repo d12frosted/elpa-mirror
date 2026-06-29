@@ -1,0 +1,1 @@
+This package overlays doc-strings (typically from C/C++ headers).

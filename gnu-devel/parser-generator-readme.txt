@@ -1,0 +1,1 @@
+The idea of this plugin is to provide functions for various kinds of context-free grammar parser generations with support for syntax-directed-translations (SDT) and semantic actions (SA) and the possibility of exporting parsers and translators (as generated stand-alone elisp code) to enable Emacs plugin-agnostic usage.

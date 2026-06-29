@@ -1,0 +1,631 @@
+1 Org-mem
+═════════
+
+  A cache of metadata about the contents of all your Org files –
+  headings, links, timestamps and so on.
+
+  Builds quickly, so that there is no need to persist data across
+  sessions.
+
+  My `M-x org-mem-reset':
+
+  ┌────
+  │ Org-mem saw 2418 files, 8388 headings, 8624 links (3418 IDs, 4874 ID-links) in 1.95s
+  └────
+
+  This library came from asking myself "what could I move out of
+  [org-node], that'd make sense in core?"  Maybe a proposal for
+  upstream, or at least a proof-of-concept.
+
+  Many notetaking packages now reinvent the wheel, when it comes to
+  keeping track of some or many files and what may be in them.
+
+  Example: org-roam's DB, org-node's hash tables, and other packages
+  just re-run grep all the time, which still leads to writing elisp to
+  cross-reference the results.
+
+  And they must do this, because Org ships no tool to query across lots
+  of files.
+
+  Well—Org does ship the agenda, which has tools.  But you know what
+  happens if you put 2,000 files into `org-agenda-files'!  It needs to
+  open each file in real-time to check anything in them, so everyday
+  commands grind to a halt, or even crash: many OSes have a cap of 1,024
+  simultaneous file handles.
+
+
+[org-node] <https://github.com/meedstrom/org-node>
+
+
+2 Quick start
+═════════════
+
+  Example setup:
+
+  ┌────
+  │ (setq org-mem-watch-dirs '("~/org" "/mnt/stuff/notes"))
+  │ (org-mem-updater-mode)
+  └────
+
+  That's it – give it a couple of seconds, and now evalling
+  `(org-mem-all-entries)', `(org-mem-all-links)' and variants should
+  return a lot of results.  See examples of how to use them at section
+  [Elisp API]!
+
+  Or see one example data object by typing `M-x org-mem-list-example'.
+
+        [!TIP] You usually do not even need to configure
+        `org-mem-watch-dirs'.  Org-mem will guess where to look
+        for Org files anyway!  That is controlled by the user
+        option `org-mem-do-look-everywhere' (default t).
+
+        If org-mem is to be used early after init, before anything
+        loads Org, it is helpful if your init enables recentf-mode
+        with a high `recentf-max-saved-items'.  If not, then you
+        may want to configure `org-mem-watch-dirs' after all.
+
+
+[Elisp API] <https://github.com/meedstrom/org-mem#elisp-api>
+
+
+3 Two APIs
+══════════
+
+  You get two different APIs to pick from, to access the same data.
+
+  • Emacs Lisp
+  • SQL
+
+  Why two?  It's free.  When the data has been gathered anyway, there is
+  no reason to /only/ insert it into a SQLite db, nor /only/ put it in a
+  hash table.
+
+  Famously, org-roam uses a SQLite DB.  My package org-node used simple
+  hash tables.  Now you get both, without having to install either.
+
+
+4 Data only
+═══════════
+
+  A design choice: Org-mem *only* delivers data.  It could easily ship
+  conveniences like, let's call it a function "org-mem-goto":
+
+  ┌────
+  │ (defun org-mem-goto (entry)
+  │   (cl-assert (org-mem-entry-p entry))
+  │   (find-file (org-mem-entry-file entry))
+  │   (goto-char (org-mem-entry-pos entry))
+  └────
+
+  but in my experience, that will spiral into dozens of lines over time,
+  to handle a variety of edge cases.  Since you may prefer to handle
+  edge cases different than I do, or have different needs, it ceases to
+  be universally applicable.
+
+  So, it is up to you to write your own "goto" function, and all else to
+  do with user interaction.
+
+
+5 No Org at init
+════════════════
+
+  A design choice: Org-mem does not use Org code to analyze your files,
+  but a [custom, more dumb parser].  That's for three reasons:
+
+  1. *Fast init*.  Since I want Emacs init to be fast, it's not allowed
+      to load Org.  Yet, I want to be able to use a command like
+      `org-node-find' to browse my Org stuff immediately after init.
+
+     Or be warned about a deadline even if I don't.
+
+     That means the data must exist before Org has loaded.
+
+  2. *Robustness.* Many users heavily customize Org, so no surprise that
+      it sometimes breaks.  In my experience, it's very nice then to
+      have an alternative way to browse, that does not depend on a
+      functional Org setup.
+
+  3. *Fast rebuild.* As they say, there are two hard things in computer
+      science: cache invalidation and naming things.
+
+     Org-mem must update its cache as the user saves, renames and
+     deletes files.  Not difficult, until you realize that files and
+     directory listings may change due to a Git operation, OS file
+     operations, a `mv' or `cp -a' command on the terminal, edits by
+     another Emacs instance, or remote edits by Logseq.
+
+     A robust approach to cache invalidation is to avoid trying: ensure
+     that a full rebuild is fast enough that you can just do /that/
+     instead.
+
+     In fact, `org-mem-updater-mode' does a bit of both, because it is
+     still important that saving a file does not lag; it does its best
+     to update only the necessary tables on save, and an idle timer
+     triggers a full reset every now and then.
+
+
+[custom, more dumb parser]
+<https://github.com/meedstrom/org-mem/blob/main/org-mem-parser.el>
+
+
+6 A SQLite database, for free
+═════════════════════════════
+
+  Included is a drop-in for [org-roam's] `(org-roam-db)', called
+  `(org-mem-roamy-db)'.
+
+  In the future we may also create something that fits [org-sql]'s DB
+  schemata, or something custom, but we'll see!
+
+
+[org-roam's] <https://github.com/org-roam/org-roam>
+
+[org-sql]
+<https://github.com/ndwarshuis/org-sql/blob/80bea9996de7fa8bc7ff891a91cfaff91111dcd8/org-sql.el#L141>
+
+6.1 Without org-roam installed
+──────────────────────────────
+
+  Activating the mode creates an in-memory database by default.
+
+  ┌────
+  │ (org-mem-roamy-db-mode)
+  └────
+
+  Test that it works:
+
+  ┌────
+  │ (emacsql (org-mem-roamy-db) [:select * :from files :limit 10])
+  └────
+
+  For more tips, see section [SQL API].
+
+
+[SQL API] <https://github.com/meedstrom/org-mem#sql-api>
+
+
+7 Elisp API
+═══════════
+
+7.1 Example: Let org-agenda cast its net wide
+─────────────────────────────────────────────
+
+  You can't put 2,000 files in `org-agenda-files', but most contain
+  nothing of interest for the agenda anyway, right?
+
+  Turns out I have only about 30 files worth checking, the challenge was
+  always knowing /which/ files ahead-of-time.  Now it's easy:
+
+  ┌────
+  │ (defun my-set-agenda-files (&rest _)
+  │   (setq org-agenda-files
+  │         (cl-loop
+  │          for file in (org-mem-all-files)
+  │          ;; Exclude *.org_archive or *archive/2025.org or similar
+  │          unless (string-search "archive" file)
+  │          when (seq-find (lambda (entry)
+  │                           (or (org-mem-entry-active-timestamps entry)
+  │                               (and (not (org-mem-entry-closed entry))
+  │                                    (or (org-mem-entry-todo-state entry)
+  │                                        (org-mem-entry-scheduled entry)
+  │                                        (org-mem-entry-deadline entry)))))
+  │                         (org-mem-entries-in file))
+  │          collect file)))
+  │ (add-hook 'org-mem-post-full-scan-functions #'my-set-agenda-files)
+  │ (org-mem-updater-mode)
+  └────
+
+
+7.2 Example: Warn about dangling clocks at init
+───────────────────────────────────────────────
+
+  While Org can warn about dangling clocks through the
+  `org-clock-persist' setting, that requires loading Org at some point
+  during your session.  Which means that if it is a matter of concern
+  for you to forget you had a clock going, that you effectively have to
+  put `(require 'org)' in your initfiles, /just in case/.
+
+  (Actually you're told to call `(org-clock-persistence-insinuate)'
+  which does load Org for you, but you might forget that if you put it
+  in a `(use-package org :config ...)' form and lazy-load it.)
+
+  Now the following is an alternative:
+
+  ┌────
+  │ (defun my-warn-dangling-clock (&rest _)
+  │   (let ((entries (seq-filter #'org-mem-entry-dangling-clocks
+  │                              (org-mem-all-entries))))
+  │     (when entries
+  │       (warn "Didn't clock out in files: %S"
+  │             (seq-uniq (mapcar #'org-mem-entry-file entries))))))
+  │ (add-hook 'org-mem-initial-scan-hook #'my-warn-dangling-clock)
+  │ (org-mem-updater-mode)
+  └────
+
+
+7.3 Entries and links
+─────────────────────
+
+  We use two types of objects to help represent file contents:
+  `org-mem-entry' objects and `org-mem-link' objects.  They involve some
+  simplifications:
+
+  • An `org-mem-link' object corresponds either to a proper Org link, or
+    to a citation fragment like `@key2' in `[cite:@key1;@key2;@key3]'.
+
+    • Check which it is with `org-mem-link-citation-p'.
+
+  • The content before the first heading also counts as an "entry", with
+    heading level zero.
+
+    • Some predictable differences from normal entries: the zeroth-level
+      entry obviously cannot have a TODO state, so
+      `org-mem-entry-todo-state' always returns nil, and so on.
+
+    • Check with `org-mem-entry-subtree-p'.
+
+      • Or if you're looking at the list of entries output by
+        `(org-mem-entries-in-file FILE)', the first element (the `car')
+        is always a zeroth-level entry, no matter if it's empty or not.
+        The rest (the `cdr') are subtrees.
+
+    • Some functions behave specially if the zeroth-level entry is
+      empty, such that the first proper Org heading is on line 1:
+      `(org-mem-entry-at-lnum-in-file 1 FILE)' then returns the entry
+      for that heading instead of the zeroth-level entry. Ditto for
+      `(org-mem-entry-at-pos-in-file 1 FILE)'.
+
+      That is hopefully intuitive.  Opinions on API design are very
+      welcome!
+
+
+7.4 Force an update
+───────────────────
+
+  If you want to force-update the cache in synchronous code, you should
+  now (since version 0.28.0) be able to do it like this.
+
+  ┌────
+  │ (org-mem-updater-update t)
+  └────
+
+  To do a full reset:
+
+  ┌────
+  │ (org-mem-reset t)
+  │ (org-mem-await "Manually resetting..." 60)
+  └────
+
+
+7.5 Full list of functions
+──────────────────────────
+
+  Updated [2026-02-26 Thu].
+
+  Getters taking no arguments
+
+  • `org-mem-all-entries'
+  • `org-mem-all-entries-with-active-timestamps'
+  • `org-mem-all-entries-with-dangling-clock'
+  • `org-mem-all-files'
+  • `org-mem-all-files-expanded'
+  • `org-mem-all-files-with-active-timestamps'
+  • `org-mem-all-file-truenames'
+  • `org-mem-all-id-links'
+  • `org-mem-all-id-nodes'
+  • `org-mem-all-ids'
+  • `org-mem-all-links'
+  • `org-mem-all-roam-reflinks'
+  • `org-mem-all-roam-refs'
+  • `org-mem-entry-at-point'
+
+  Getters operating on an entry object
+
+  • `org-mem-entry-active-timestamps'
+  • `org-mem-entry-active-timestamps-int'
+  • `org-mem-entry-children'
+  • `org-mem-entry-clocks'
+  • `org-mem-entry-clocks-int'
+  • `org-mem-entry-closed'
+  • `org-mem-entry-closed-int'
+  • `org-mem-entry-dangling-clocks'
+  • `org-mem-entry-deadline'
+  • `org-mem-entry-deadline-int'
+  • `org-mem-entry-file'
+  • `org-mem-entry-file-truename'
+  • `org-mem-entry-id'
+  • `org-mem-entry-keywords'
+  • `org-mem-entry-level'
+  • `org-mem-entry-lnum'
+  • `org-mem-entry-olpath'
+  • `org-mem-entry-olpath-with-file-title'
+  • `org-mem-entry-olpath-with-file-title-or-basename'
+  • `org-mem-entry-olpath-with-self'
+  • `org-mem-entry-olpath-with-self-with-file-title'
+  • `org-mem-entry-olpath-with-self-with-file-title-or-basename'
+  • `org-mem-entry-pos'
+  • `org-mem-entry-priority'
+  • `org-mem-entry-properties-inherited'
+  • `org-mem-entry-properties-local' — Alias `org-mem-entry-properties'
+  • `org-mem-entry-property'
+  • `org-mem-entry-property-with-inheritance'
+  • `org-mem-entry-pseudo-id'
+  • `org-mem-entry-roam-aliases'
+  • `org-mem-entry-roam-refs'
+  • `org-mem-entry-scheduled'
+  • `org-mem-entry-scheduled-int'
+  • `org-mem-entry-stats-cookies'
+  • `org-mem-entry-subtree-p'
+  • `org-mem-entry-tags'
+  • `org-mem-entry-tags-inherited'
+  • `org-mem-entry-tags-local'
+  • `org-mem-entry-text' — Always nil unless `org-mem-do-cache-text' is
+    t
+  • `org-mem-entry-title'
+  • `org-mem-entry-title-maybe'
+  • `org-mem-entry-todo-state'
+  • `org-mem-id-links-to-entry'
+  • `org-mem-links-in-entry'
+  • `org-mem-next-entry'
+  • `org-mem-previous-entry'
+  • `org-mem-roam-reflinks-to-entry'
+
+  Getters operating on a link object
+
+  • `org-mem-id-link-p'
+  • `org-mem-link-citation-p'
+  • `org-mem-link-description'
+  • `org-mem-link-entry'
+  • `org-mem-link-entry-pseudo-id'
+  • `org-mem-link-file'
+  • `org-mem-link-file-truename'
+  • `org-mem-link-nearby-id'
+  • `org-mem-link-pos'
+  • `org-mem-link-supplement'
+  • `org-mem-link-target'
+  • `org-mem-link-type'
+  • `org-mem-roam-reflink-p'
+
+  Getters operating on a file name
+
+  • `org-mem-entries-in-file' — Alias `org-mem-file-entries'
+  • `org-mem-entries-in-files'
+  • `org-mem-entry-at-lnum-in-file' — Near-alias
+    `org-mem-entry-at-file-lnum'
+  • `org-mem-entry-at-pos-in-file' — Near-alias
+    `org-mem-entry-at-file-pos'
+  • `org-mem-file-attributes'
+  • `org-mem-file-char-count'
+  • `org-mem-file-coding-system'
+  • `org-mem-file-id-strict'
+  • `org-mem-file-id-topmost'
+  • `org-mem-file-keywords'
+  • `org-mem-file-known-p'
+  • `org-mem-file-line-count'
+  • `org-mem-file-mtime'
+  • `org-mem-file-mtime-floor'
+  • `org-mem-file-ptmax'
+  • `org-mem-file-size'
+  • `org-mem-file-title-or-basename'
+  • `org-mem-file-title-strict'
+  • `org-mem-file-title-topmost'
+
+  Getters that return entries
+
+  • `org-mem-all-entries'
+  • `org-mem-all-entries-with-active-timestamps'
+  • `org-mem-all-entries-with-dangling-clock'
+  • `org-mem-all-id-nodes'
+  • `org-mem-entries-in-file' — Alias `org-mem-file-entries'
+  • `org-mem-entries-in-files'
+  • `org-mem-entry-at-lnum-in-file' — Near-alias
+    `org-mem-entry-at-file-lnum'
+  • `org-mem-entry-at-pos-in-file' — Near-alias
+    `org-mem-entry-at-file-pos'
+  • `org-mem-entry-by-id'
+  • `org-mem-entry-by-pseudo-id'
+  • `org-mem-entry-by-roam-ref'
+  • `org-mem-entry-children'
+  • `org-mem-id-node-by-title'
+  • `org-mem-id-nodes-in-files'
+  • `org-mem-link-entry'
+
+  Getters that return links
+
+  • `org-mem-all-id-links'
+  • `org-mem-all-links'
+  • `org-mem-all-roam-reflinks'
+  • `org-mem-id-links-from-id'
+  • `org-mem-id-links-into-file'
+  • `org-mem-id-links-to-entry'
+  • `org-mem-id-links-to-id'
+  • `org-mem-links-from-id'
+  • `org-mem-links-in-entry'
+  • `org-mem-links-in-file'
+  • `org-mem-links-of-type'
+  • `org-mem-links-to-roam-ref'
+  • `org-mem-links-to-target'
+  • `org-mem-links-with-type-and-path'
+  • `org-mem-roam-reflinks-into-file'
+  • `org-mem-roam-reflinks-into-files'
+  • `org-mem-roam-reflinks-to-entry'
+  • `org-mem-roam-reflinks-to-id'
+
+  Getters that return file names
+
+  • `org-mem-all-files'
+  • `org-mem-all-files-expanded'
+  • `org-mem-all-files-with-active-timestamps'
+  • `org-mem-all-file-truenames'
+  • `org-mem-entry-file'
+  • `org-mem-entry-file-truename'
+  • `org-mem-file-by-id'
+  • `org-mem-file-known-p'
+  • `org-mem-link-file'
+  • `org-mem-link-file-truename'
+
+  Misc
+
+  • `org-mem-all-ids'
+  • `org-mem-all-roam-refs'
+  • `org-mem-entry-at-point'
+  • `org-mem-id-by-title'
+
+  Some API for actually activating & using org-mem as a library:
+
+  • `org-mem-await'
+  • `org-mem-reset'
+  • `org-mem-updater-update'
+
+
+8 SQL API
+═════════
+
+8.1 With org-roam installed
+───────────────────────────
+
+  You can use this to end your dependence on `org-roam-db-sync'.  Set
+  the following to let org-mem overwrite the "org-roam.db" file.
+
+  ┌────
+  │ (setq org-roam-db-update-on-save nil)
+  │ (setq org-mem-roamy-do-overwrite-real-db t)
+  │ (org-mem-roamy-db-mode)
+  └────
+
+  Now, you have a new, all-fake org-roam.db!  Test that org-roam's
+  `org-roam-db-query' works:
+
+  ┌────
+  │ (org-roam-db-query [:select * :from files :limit 10])
+  └────
+
+  If it works, then various packages that depend on org-roam's DB should
+  also work without issue.  However, you'll have to be content with them
+  pulling in org-roam even if you never turn it on.
+
+  N/B: because `(equal (org-roam-db) (org-mem-roamy-db))', the above is
+  equivalent to these expressions:
+
+  ┌────
+  │ (emacsql (org-roam-db) [:select * :from files :limit 10])
+  │ (emacsql (org-mem-roamy-db) [:select * :from files :limit 10])
+  └────
+
+
+8.2 To developers
+─────────────────
+
+  If you write a package that actually only needed to use org-roam's DB
+  and not its other utilities like `org-roam-capture', you should be
+  able to stop requiring org-roam, and do e.g.
+
+  ┌────
+  │ (defun my-db ()
+  │   (cond ((fboundp 'org-roam-db) (org-roam-db))
+  │         ((fboundp 'org-mem-roamy-db) (org-mem-roamy-db))
+  │         (t (error "Enable either org-roam-db-autosync-mode or org-mem-roamy-db-mode"))
+  └────
+
+  and then rewrite all your `(org-roam-db-query ...)' forms to:
+
+  ┌────
+  │ (emacsql (my-db) ...)
+  └────
+
+  In theory, anyway ;-)
+
+  Please report any issues!
+
+
+8.3 Known issue
+───────────────
+
+  Error "attempt to write a readonly database" can happen when when you
+  run multiple Emacs instances.  Get unstuck with `M-:
+  (org-roam-db--close-all)'.
+
+
+8.4 View what info is in the DB
+───────────────────────────────
+
+  Use `M-x org-mem-list-db-contents'.
+
+  Or the new `M-x org-roam-db-explore', with exactly the same UI.
+
+
+9 Tips
+══════
+
+9.1 Encrypted files (`.org.gpg' `.org.age')
+───────────────────────────────────────────
+
+  Suppose you use [age.el] to keep files encrypted.
+
+  This needs extra config to tell org-mem's subprocesses how to open
+  them. The following should do the trick:
+
+  ┌────
+  │ (setq org-mem-inject-vars '(age-default-identity age-default-recipient age-program))
+  │ (setq org-mem-eval-forms '((require 'age) (age-file-enable)))
+  │ (add-to-list 'org-mem-suffixes ".org.age")
+  └────
+
+
+[age.el] <https://github.com/anticomputer/age.el>
+
+
+10 Current limitations
+══════════════════════
+
+10.1 Limitation: TRAMP
+──────────────────────
+
+  Files over TRAMP are excluded from org-mem's database, so as far as
+  org-mem is concerned, it is as if they do not exist.
+
+  This limitation comes from the fact that org-mem parses your files in
+  many parallel subprocesses that do not inherit your TRAMP connections.
+  It is fixable in theory.
+
+
+10.2 Limitation: Encrypted entries
+──────────────────────────────────
+
+  The body text of specific entries may be encrypted by `org-crypt'.  If
+  so, org-mem cannot find links nor timestamps inside.
+
+
+10.3 Limitation: SETUPFILE
+──────────────────────────
+
+  No support yet for buffer settings from `#+SETUPFILE:'.
+
+
+10.4 Limitation: diary-sexps
+────────────────────────────
+
+  If you have a timestamp that's not a plain
+
+  ┌────
+  │ SCHEDULED: [2026-03-06 Fri 06:11]
+  └────
+
+
+  but a diary-sexp like
+
+  ┌────
+  │ SCHEDULED: <%%(memq (calendar-day-of-week date) (1 2 3 4 5)))>
+  └────
+
+
+  then `(org-mem-entry-scheduled ENTRY)' returns nil, unfortunately.
+
+
+11 Future work
+══════════════
+
+  Use Org's own parser.
+
+  • <https://lists.gnu.org/archive/html/emacs-orgmode/2025-05/msg00288.html>
+  • <https://github.com/meedstrom/org-mem/issues/29>

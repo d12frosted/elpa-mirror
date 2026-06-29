@@ -1,0 +1,1 @@
+ An experimental rewrite of `haskell-mode'.

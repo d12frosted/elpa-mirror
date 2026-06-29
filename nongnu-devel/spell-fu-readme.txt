@@ -1,0 +1,1 @@
+This package checks the spelling of on-screen text.

@@ -1,0 +1,4 @@
+This package provides the `adaptive-wrap-prefix-mode' minor mode which sets
+the wrap-prefix property on the fly so that single-long-line paragraphs get
+word-wrapped in a way similar to what you'd get with M-q using
+adaptive-fill-mode, but without actually changing the buffer's text.

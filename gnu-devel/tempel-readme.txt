@@ -1,0 +1,585 @@
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                  TEMPEL - SIMPLE TEMPLATES FOR EMACS
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Tempel is a tiny template package for Emacs, which uses the syntax of
+the Emacs Tempo library. Tempo is an ancient temple of the church of
+Emacs. It is over 31 years old, but still in good shape since it
+successfully resisted change over the decades. However it looks a bit
+dusty here and there. Therefore we present Tempel, its worthy successor
+with inline expansion and integration with recent Emacs
+facilities. Tempel takes advantage of the standard
+`completion-at-point-functions' mechanism which is used by Emacs for
+in-buffer completion.
+
+Table of Contents
+─────────────────
+
+1. Template expansion
+2. Configuration
+3. Template file format
+4. Template syntax
+5. Defining custom elements
+6. Adding templates
+7. Hooking into the Abbrev mechanism
+8. Binding important templates to a key
+9. LSP integration
+10. Alternatives
+
+
+1 Template expansion
+════════════════════
+
+  Tempel comes with three commands for template expansion:
+
+  ⁃ `tempel-complete' completes a template name at point in the buffer
+    and subsequently expands the template. If called non-interactively
+    the function behaves like a Capf and can be added to
+    `completion-at-point-functions'. The Capf returns a list of
+    templates names which are presented by the completion UI for
+    selection.
+  ⁃ `tempel-expand' expands an exactly matching template name at point
+    in the buffer. If called non-interactively the function behaves like
+    a Capf and can be added to `completion-at-point-functions'. This
+    Capf returns only the single exactly matching template name, such
+    that no selection in the completion UI is possible.
+  ⁃ `tempel-insert' selects a template by name via `completing-read' and
+    insert it into the current buffer.
+
+  For the commands `tempel-complete' and `tempel-expand', you may want
+  to give my [Corfu] completion at point popup UI a try. After inserting
+  the template you can move between the visible template fields with the
+  keys `M-{', `M-}' or `C-up/down' which are normally bound to
+  `forward-paragraph' and `backward-paragraph'. Tempel temporarily
+  remaps these commands to `tempel-next' and `tempel-previous'. If
+  `tempel-done-on-next' is non-nil, as soon as you move before (behind)
+  the first (last) field, the template is finished. The key bindings are
+  defined in the `tempel-map' keymap. I recommend that you inspect the
+  `tempel-map' and look at the provided key bindings. You can customize
+  the key bindings there.
+
+
+[Corfu] <https://github.com/minad/corfu>
+
+
+2 Configuration
+═══════════════
+
+  The package is available on [ELPA] and [MELPA] and can be installed
+  with `package-install'. The following example configuration relies on
+  `use-package'. For some ready-made templates check out the package
+  [tempel-collection]. We appreciate if more templates are contributed
+  there.
+
+  ┌────
+  │ ;; Configure Tempel
+  │ (use-package tempel
+  │   :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
+  │          ("M-*" . tempel-insert))
+  │ 
+  │   :init
+  │ 
+  │   ;; Setup completion at point
+  │   (defun tempel-setup-capf ()
+  │     ;; Add the Tempel Capf to `completion-at-point-functions'.  `tempel-expand'
+  │     ;; only triggers on exact matches. We add `tempel-expand' *before* the main
+  │     ;; programming mode Capf, such that it will be tried first.
+  │     (setq-local completion-at-point-functions
+  │                 (cons #'tempel-expand completion-at-point-functions))
+  │ 
+  │     ;; Alternatively use `tempel-complete' if you want to see all matches.  Use
+  │     ;; a trigger prefix character in order to prevent Tempel from triggering
+  │     ;; unexpectly.
+  │     ;; (setq-local corfu-auto-trigger "/"
+  │     ;;             completion-at-point-functions
+  │     ;;             (cons (cape-capf-trigger #'tempel-complete ?/)
+  │     ;;                   completion-at-point-functions))
+  │   )
+  │ 
+  │   (add-hook 'conf-mode-hook 'tempel-setup-capf)
+  │   (add-hook 'prog-mode-hook 'tempel-setup-capf)
+  │   (add-hook 'text-mode-hook 'tempel-setup-capf)
+  │ 
+  │   ;; Optionally make the Tempel templates available to Abbrev,
+  │   ;; either locally or globally. `expand-abbrev' is bound to C-x '.
+  │   ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
+  │   ;; (global-tempel-abbrev-mode)
+  │ )
+  │ 
+  │ ;; Optional: Add tempel-collection if you want ready-made templates.
+  │ (use-package tempel-collection)
+  │ 
+  │ ;; Optional: Use the Corfu completion UI
+  │ (use-package corfu
+  │   :init
+  │   (global-corfu-mode))
+  └────
+
+
+[ELPA] <https://elpa.gnu.org/packages/tempel.html>
+
+[MELPA] <https://releases.melpa.org/#/tempel>
+
+[tempel-collection] <https://github.com/Crandel/tempel-collection>
+
+
+3 Template file format
+══════════════════════
+
+  The templates are defined in a Lisp data file configured by
+  `tempel-path'. Lisp data files are files containing Lisp s-expressions
+  (see `lisp-data-mode'). By default the file `templates' in the
+  `user-emacs-directory' is used, e.g., `~/.config/emacs/templates'. The
+  templates are grouped by major mode with an optional `:when'
+  condition. Each template is a list in the concise form of the Emacs
+  Tempo syntax. The first element of each list is the name of the
+  template.  I recommend to avoid special letters for the template
+  names, since special letters may carry meaning during completion
+  filtering and as such make it harder to select the desired
+  template. Thus the name `lett' is better than `let*'. Behind the name,
+  the Tempo syntax elements follow.
+
+  In addition, /after/ the template elements, each template may specify
+  several key/value pairs. Specifically, templates may specify `:pre'
+  and/or `:post' keys with a FORM that is evaluated before the template
+  is expanded or after it is finished, respectively. The `:post' form is
+  evaluated in the lexical scope of the template, which means that it
+  can access the template's named fields. Beyond that, templates may
+  include an `:ann' and `:doc' key with strings that are used as
+  annotation and documentation respectively.
+
+  The following examples are written on a single line, but this is is of
+  course not a requirement. Strings can even contain line breaks, which
+  can be useful if you want to write complex templates.
+
+  ┌────
+  │ ;; ~/.config/emacs/templates
+  │ 
+  │ fundamental-mode ;; Available everywhere
+  │ 
+  │ (today (format-time-string "%Y-%m-%d")
+  │        :ann "Today's date"
+  │        :doc "Insert today's date")
+  │ 
+  │ prog-mode
+  │ 
+  │ (fixme (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "FIXME ")
+  │ (todo (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "TODO ")
+  │ (bug (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "BUG ")
+  │ (hack (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "HACK ")
+  │ 
+  │ latex-mode
+  │ 
+  │ (abstract "\\begin{abstract}\n" r> n> "\\end{abstract}")
+  │ (align "\\begin{align}\n" r> n> "\\end{align}")
+  │ (alignn "\\begin{align*}\n" r> n> "\\end{align*}")
+  │ (gather "\\begin{gather}\n" r> n> "\\end{gather}")
+  │ (gatherr "\\begin{gather*}\n" r> n> "\\end{gather*}")
+  │ (appendix "\\begin{appendix}\n" r> n> "\\end{appendix}")
+  │ (begin "\\begin{" (s env) "}" r> n> "\\end{" (s env) "}")
+  │ (center "\\begin{center}\n" r> n> "\\end{center}")
+  │ (displaymath "\\begin{displaymath}\n" r> n> "\\end{displaymath}")
+  │ (document "\\begin{document}\n" r> n> "\\end{document}")
+  │ (enumerate "\\begin{enumerate}\n\\item " r> n> "\\end{enumerate}")
+  │ (equation "\\begin{equation}" r> n> "\\end{equation}")
+  │ (flushleft "\\begin{flushleft}" r> n> "\\end{flushleft}")
+  │ (flushright "\\begin{flushright}" r> n> "\\end{flushright}")
+  │ (frac "\\frac{" p "}{" q "}")
+  │ (fussypar "\\begin{fussypar}" r> n> "\\end{fussypar}")
+  │ (itemize "\\begin{itemize}\n\\item " r> n> "\\end{itemize}")
+  │ (letter "\\begin{letter}\n" r> n> "\\end{letter}")
+  │ (math "\\begin{math}\n" r> n> "\\end{math}")
+  │ (minipage "\\begin{minipage}[t]{0.5\linewidth}\n" r> n> "\\end{minipage}")
+  │ (quotation "\\begin{quotation}\n" r> n> "\\end{quotation}")
+  │ (quote "\\begin{quote}\n" r> n> "\\end{quote}")
+  │ (sloppypar "\\begin{sloppypar}\n" r> n> "\\end{sloppypar}")
+  │ (theindex "\\begin{theindex}\n" r> n> "\\end{theindex}")
+  │ (trivlist "\\begin{trivlist}\n" r> n> "\\end{trivlist}")
+  │ (verbatim "\\begin{verbatim}\n" r> n> "\\end{verbatim}")
+  │ (verbatimm "\\begin{verbatim*}\n" r> n> "\\end{verbatim*}")
+  │ (matrix (p (read-number "Rows: ") rows noinsert)
+  │         (p (read-number "Cols: ") cols noinsert)
+  │         "\\begin{" (p "pmatrix" type) "}" n
+  │         (* (1- rows) (p " ") (* (1- cols) " & " (p " ")) "\\\\" n)
+  │         (p " ") (* (1- cols) " & " (p " ")) n
+  │         "\\end{" type "}")
+  │ 
+  │ texinfo-mode
+  │ 
+  │ (defmac "@defmac " p n> r> "@end defmac")
+  │ (defun "@defun " p n> r> "@end defun")
+  │ (defvar "@defvar " p n> r> "@end defvar")
+  │ (example "@example " p n> r> "@end example")
+  │ (lisp "@lisp " p n> r> "@end lisp")
+  │ (bullet "@itemize @bullet{}" n> r> "@end itemize")
+  │ (code "@code{" p "}")
+  │ (var "@var{" p "}")
+  │ 
+  │ lisp-mode emacs-lisp-mode ;; Specify multiple modes
+  │ 
+  │ (lambda "(lambda (" p ")" n> r> ")")
+  │ 
+  │ emacs-lisp-mode
+  │ 
+  │ (autoload ";;;###autoload")
+  │ (pt "(point)")
+  │ (var "(defvar " p "\n  \"" p "\")")
+  │ (local "(defvar-local " p "\n  \"" p "\")")
+  │ (const "(defconst " p "\n  \"" p "\")")
+  │ (custom "(defcustom " p "\n  \"" p "\"" n> ":type '" p ")")
+  │ (face "(defface " p " '((t :inherit " p "))\n  \"" p "\")")
+  │ (group "(defgroup " p " nil\n  \"" p "\"" n> ":group '" p n> ":prefix \"" p "-\")")
+  │ (macro "(defmacro " p " (" p ")\n  \"" p "\"" n> r> ")")
+  │ (alias "(defalias '" p " '" p ")")
+  │ (fun "(defun " p " (" p ")\n  \"" p "\"" n> r> ")")
+  │ (iflet "(if-let* (" p ")" n> r> ")")
+  │ (whenlet "(when-let* (" p ")" n> r> ")")
+  │ (whilelet "(while-let (" p ")" n> r> ")")
+  │ (andlet "(and-let* (" p ")" n> r> ")")
+  │ (cond "(cond" n "(" q "))" >)
+  │ (pcase "(pcase " (p "scrutinee") n "(" q "))" >)
+  │ (let "(let (" p ")" n> r> ")")
+  │ (lett "(let* (" p ")" n> r> ")")
+  │ (pcaselet "(pcase-let (" p ")" n> r> ")")
+  │ (pcaselett "(pcase-let* (" p ")" n> r> ")")
+  │ (rec "(letrec (" p ")" n> r> ")")
+  │ (dotimes "(dotimes (" p ")" n> r> ")")
+  │ (dolist "(dolist (" p ")" n> r> ")")
+  │ (loop "(cl-loop for " p " in " p " do" n> r> ")")
+  │ (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive" p ")" n> r> ")")
+  │ (advice "(defun " (p "adv" name) " (&rest app)" n> p n> "(apply app))" n>
+  │         "(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
+  │ (header ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │         " --- " p " -*- lexical-binding: t -*-" n
+  │         ";;; Commentary:" n ";;; Code:" n n)
+  │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
+  │          ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │          " ends here" n)
+  │ (package (i header) r n n (i provide))
+  │ 
+  │ eshell-mode
+  │ 
+  │ (for "for " (p "i") " in " p " { " q " }")
+  │ (while "while { " p " } { " q " }")
+  │ (until "until { " p " } { " q " }")
+  │ (if "if { " p " } { " q " }")
+  │ (ife "if { " p " } { " p " } { " q " }")
+  │ (unl "unless { " p " } { " q " }")
+  │ (unle "unless { " p " } { " p " } { " q " }")
+  │ 
+  │ text-mode
+  │ 
+  │ (box "┌─" (make-string (length str) ?─) "─┐" n
+  │      "│ " (s str)                       " │" n
+  │      "└─" (make-string (length str) ?─) "─┘" n :doc "UNICODE BOX")
+  │ (abox "+-" (make-string (length str) ?-) "-+" n
+  │       "| " (s str)                       " |" n
+  │       "+-" (make-string (length str) ?-) "-+" n :doc "ASCII BOX")
+  │ (cut "--8<---------------cut here---------------start------------->8---" n r n
+  │      "--8<---------------cut here---------------end--------------->8---" n)
+  │ (rot13 (p "plain text" text) n "----" n (rot13 text))
+  │ (calc (p "taylor(sin(x),x=0,3)" formula) n "----" n (format "%s" (calc-eval formula)))
+  │ (table (p (read-number "Rows: ") rows noinsert)
+  │        (p (read-number "Cols: ") cols noinsert)
+  │        "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n
+  │        "|" (* cols "----|") n
+  │        (* rows "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n))
+  │ 
+  │ rst-mode
+  │ 
+  │ (title (make-string (length title) ?=) n (p "Title: " title) n (make-string (length title) ?=) n)
+  │ 
+  │ java-mode
+  │ 
+  │ (class "public class " (p (file-name-base (or (buffer-file-name) (buffer-name)))) " {" n> r> n "}")
+  │ 
+  │ c-mode :when (re-search-backward "^\\S-*$" (line-beginning-position) 'noerror)
+  │ 
+  │ (inc "#include <" (p (concat (file-name-base (or (buffer-file-name) (buffer-name))) ".h")) ">")
+  │ (incc "#include \"" (p (concat (file-name-base (or (buffer-file-name) (buffer-name))) ".h")) "\"")
+  │ 
+  │ org-mode
+  │ 
+  │ (caption "#+caption: ")
+  │ (drawer ":" p ":" n r ":end:")
+  │ (begin "#+begin_" (s name) n> r> n "#+end_" name)
+  │ (quote "#+begin_quote" n> r> n "#+end_quote")
+  │ (sidenote "#+begin_sidenote" n> r> n "#+end_sidenote")
+  │ (marginnote "#+begin_marginnote" n> r> n "#+end_marginnote")
+  │ (example "#+begin_example" n> r> n "#+end_example")
+  │ (center "#+begin_center" n> r> n "#+end_center")
+  │ (ascii "#+begin_export ascii" n> r> n "#+end_export")
+  │ (html "#+begin_export html" n> r> n "#+end_export")
+  │ (latex "#+begin_export latex" n> r> n "#+end_export")
+  │ (comment "#+begin_comment" n> r> n "#+end_comment")
+  │ (verse "#+begin_verse" n> r> n "#+end_verse")
+  │ (src "#+begin_src " q n r n "#+end_src")
+  │ (gnuplot "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n r n "#+end_src" :post (org-edit-src-code))
+  │ (elisp "#+begin_src emacs-lisp" n r n "#+end_src" :post (org-edit-src-code))
+  │ (inlsrc "src_" p "{" q "}")
+  │ (title "#+title: " p n "#+author: Daniel Mendler" n "#+language: en")
+  │ 
+  │ ;; Local Variables:
+  │ ;; mode: lisp-data
+  │ ;; outline-regexp: "[a-z]"
+  │ ;; End:
+  └────
+
+
+4 Template syntax
+═════════════════
+
+  The Tempo syntax is fully supported. The syntax elements are described
+  in the docstring of `tempel--element' in tempel.el and originally in
+  `tempo-define-template' in tempo.el. The documentation is repeated
+  here.
+
+  • `"string"' The string is inserted in the buffer.
+  • `nil' It is ignored.
+  • `p' An empty and unnamed placeholder field is inserted.
+  • `r' Inserts the currently active region. If no region is active, a
+    placeholder field is inserted. If `tempel-done-on-region' is
+    non-nil, the template is finished when you jump to the field like
+    `q'.
+  • `r>' Like `r', but it also indents the region.
+  • `n' Inserts a newline.
+  • `n>' Inserts a newline and indents line.
+  • `>' The line is indented using `indent-according-to-mode'. Note that
+    you often should place this item after the text you want on the
+    line.
+  • `&' If there is only whitespace between the line start and point,
+    nothing happens. Otherwise a newline is inserted.
+  • `%' If there is only whitespace between point and end of line,
+    nothing happens.  Otherwise a newline is inserted.
+  • `o' Like `%' but leaves the point before the newline.
+  • `(s NAME)' Inserts a named field.
+  • `(p PROMPT <NAME> <NOINSERT>)' Insert an optionally named field with
+    a prompt.  The `PROMPT' is displayed directly in the buffer as
+    default value. The field value is bound to `NAME' and updated
+    dynamically. If `NOINSERT' is non-nil, no field is inserted and the
+    minibuffer is used for prompting. For clarity, the symbol `noinsert'
+    should be used as argument.
+  • `(r PROMPT <NAME> <NOINSERT>)': Like `(p ..)', but if there is a
+    current region, it is placed here.
+  • `(r> PROMPT <NAME> <NOINSERT>)' Like `(r ..)', but it also indents
+    the region.
+  • `(l ELEMENTS..)' Insert multiple elements.
+  • Anything else is passed to each function in `tempel-user-elements'
+    until one of the functions returns non-nil, and the result is
+    inserted. If all of them return nil, the form is evaluated. The
+    result can either be a string or any other element. If the return
+    value is a string it is dynamically updated on modification of other
+    fields. Other return values are treated as elements and inserted
+    according to the rules. The element `(l ..)' is useful to return
+    multiple elements.
+
+  Tempel extends the Tempo syntax with the following elements:
+
+  • `(p FORM <NAME> <NOINSERT>)' Like `(p ..)' described above, but
+    `FORM' is evaluated.  You can for example select from various values
+    via `completing-read'.
+  • `(FORM ..)' If a Lisp form evaluates to a string, it is inserted as
+    overlay and the overlay is updated on modifications of other fields.
+  • `q' Like `p', but the template is finished if the user jumps to the
+    field.  Similarly `r' finishes the template if
+    `tempel-done-on-region' is non-nil.
+
+  Use caution with templates which execute arbitrary code!
+
+
+5 Defining custom elements
+══════════════════════════
+
+  Tempel supports custom user elements via the configuration variable
+  `tempel-user-elements'. As a demonstration we add the element `(i
+  template)' to include templates by name in another template.
+
+  ┌────
+  │ (defun tempel-include (elt)
+  │   (pcase elt
+  │     (`(i ,inc)
+  │      (cons 'l (or (alist-get inc (tempel--templates))
+  │                   (error "Template %s not found" inc))))))
+  │ (add-to-list 'tempel-user-elements #'tempel-include)
+  └────
+
+  The following example templates uses the newly defined include
+  element.
+
+  ┌────
+  │ (header ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │         " --- " p " -*- lexical-binding: t -*-" n
+  │         ";;; Commentary:" n ";;; Code:" n n)
+  │ (provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
+  │          ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+  │          " ends here" n)
+  │ (package (i header) r n n (i provide))
+  └────
+
+  If a custom user element needs an access to named fields, the hook
+  function should take the second argument `fields', which refers to an
+  alist that maps the field name to its value in the current
+  template. For example here we define a custom element `*' to repeat a
+  template a number of times:
+
+  ┌────
+  │ (defun tempel-repeat (elt fields)
+  │   (pcase elt
+  │     (`(* ,count . ,rest)
+  │      (cons 'l (cl-loop for i below (eval count fields) append rest)))))
+  │ (add-to-list 'tempel-user-elements #'tempel-repeat)
+  └────
+
+  The `*' custom element can be used to expand dynamic tables or LaTeX
+  matrices:
+
+  ┌────
+  │ (table (p (read-number "Rows: ") rows noinsert)
+  │        (p (read-number "Cols: ") cols noinsert)
+  │        "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n
+  │        "|" (* cols "----|") n
+  │        (* rows "| " (p "  ") (* (1- cols) " | " (p "  ")) " |" n))
+  │ (matrix (p (read-number "Rows: ") rows noinsert)
+  │         (p (read-number "Cols: ") cols noinsert)
+  │         "\\begin{" (p "pmatrix" type) "}" n
+  │         (* (1- rows) (p " ") (* (1- cols) " & " (p " ")) "\\\\" n)
+  │         (p " ") (* (1- cols) " & " (p " ")) n
+  │         "\\end{" type "}")
+  └────
+
+
+6 Adding templates
+══════════════════
+
+  Tempel offers a flexible mechanism for providing the templates, which
+  are applicable to the current context. The variable
+  `tempel-template-sources' specifies a list of sources or a single
+  source. A source can either be a function, which should return a list
+  of applicable templates, or the symbol of a variable, which holds a
+  list of templates. By default, Tempel configures the source
+  `tempel-path-templates', which reads the files specified by the
+  variable `tempel-path'. You can add define additional global templates
+  as follows in your configuration:
+
+  ┌────
+  │ (defvar my-global-templates
+  │   '((fixme comment-start "FIXME ")
+  │     (todo comment-start "TODO "))
+  │   "List of global templates.")
+  │ 
+  │ (add-to-list 'tempel-template-sources 'my-global-templates)
+  └────
+
+  For mode-specific templates, the following approach can be
+  used. Similarly, modes themselves can directly provide templates in
+  the same way.
+
+  ┌────
+  │ (defvar my-emacs-lisp-templates
+  │   '((lambda "(lambda (" p ")" n> r> ")")
+  │     (var "(defvar " p "\n  \"" p "\")")
+  │     (fun "(defun " p " (" p ")\n  \"" p "\"" n> r> ")"))
+  │   "List of Elisp templates.")
+  │ 
+  │ (add-hook
+  │  'emacs-lisp-mode-hook
+  │  (lambda ()
+  │    (add-hook 'tempel-template-sources 'my-emacs-lisp-templates nil 'local)))
+  └────
+
+
+7 Hooking into the Abbrev mechanism
+═══════════════════════════════════
+
+  Tempel can hook into Abbrev by enabling the `tempel-abbrev-mode' in a
+  buffer or by enabling the `global-tempel-abbrev-mode'. Then the Tempel
+  templates will be available via `expand-abbrev' which is usually bound
+  to `C-x ''.
+
+
+8 Binding important templates to a key
+══════════════════════════════════════
+
+  Important templates can be bound to a key with the small utility macro
+  `tempel-key' which accepts three arguments, a key, a template or name
+  and optionally a map.
+
+  ┌────
+  │ (tempel-key "C-c t f" fun emacs-lisp-mode-map)
+  │ (tempel-key "C-c t d" ("DATE: " (format-time-string "%Y-%m-%d")))
+  └────
+
+  Internally `tempel-key' uses `tempel-insert' to trigger the
+  insertion. Depending on the style of your user configuration you may
+  want to write your own helper macros, which allow you to conveniently
+  bind templates via [use-package] or similar keybinding packages.
+
+
+[use-package]
+<https://www.gnu.org/software/emacs/manual/html_mono/use-package.html>
+
+
+9 LSP integration
+═════════════════
+
+  See the following projects:
+
+  • [eglot-tempel]
+  • [lsp-snippet]
+
+
+[eglot-tempel] <https://github.com/fejfighter/eglot-tempel>
+
+[lsp-snippet] <https://github.com/svaante/lsp-snippet>
+
+
+10 Alternatives
+═══════════════
+
+  There are plenty of alternative packages which provide abbreviation or
+  snippet expansion. Try Tempel if you like small and simple
+  packages. With Tempel you write your templates in Lisp syntax, which
+  from my perspective fits well to the hackable nature of Emacs. Tempel
+  took inspiration from the [Tempo-Snippets] package by Nikolaj
+  Schumacher ([GitHub link]).
+
+  List of alternatives (built-in or separate packages):
+
+  • abbrev.el: Abbreviation expansion, builtin
+  • expand.el: Abbreviation expansion, builtin
+  • skeleton.el: Lisp syntax for templates, builtin
+  • tempo.el: Lisp syntax for templates, builtin
+  • srecode.el: CEDET template manager and code generator, builtin
+  • [aas.el]: Auto activating snippets
+  • [cdlatex.el]: Fast LaTeX insertion
+  • [laas.el]: Latex auto activating snippets
+  • [muban.el]: Lightweight template expansion
+  • [placeholder.el]: Treat buffers as templates
+  • [tempo-abbrev.el]: Abbrev integration for Tempo
+  • [snippet.el]: Original snippet mode, with inline expansion
+  • [tempo-snippets.el]: Interface like snippet.el for Tempo
+  • [yasnippet.el]: Template system inspired by Textmate snippets
+
+
+[Tempo-Snippets] <https://nschum.de/src/emacs/tempo-snippets/>
+
+[GitHub link] <https://github.com/nschum/tempo-snippets.el>
+
+[aas.el] <https://github.com/ymarco/auto-activating-snippets>
+
+[cdlatex.el] <https://github.com/cdominik/cdlatex>
+
+[laas.el] <https://github.com/tecosaur/LaTeX-auto-activating-snippets>
+
+[muban.el] <https://github.com/jiahaowork/muban.el>
+
+[placeholder.el] <https://github.com/oantolin/placeholder>
+
+[tempo-abbrev.el] <https://github.com/xFA25E/tempo-abbrev>
+
+[snippet.el] <https://github.com/pkazmier/snippet.el>
+
+[tempo-snippets.el] <https://nschum.de/src/emacs/tempo-snippets/>
+
+[yasnippet.el] <https://github.com/joaotavora/yasnippet>
