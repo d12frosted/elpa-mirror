@@ -18,6 +18,11 @@ Available archives, each a top-level directory in this repository:
 - =nongnu= and =nongnu-devel= ([[https://elpa.nongnu.org/nongnu/][NonGNU ELPA]] and its development builds)
 - =melpa= and =stable-melpa= ([[https://melpa.org/][MELPA]] and [[https://stable.melpa.org/][MELPA Stable]])
 
+These mirrors serve the standard =package.el= archive format, so they work with
+any =package.el=-based setup (vanilla Emacs, Spacemacs). They do *not* work with
+[[https://github.com/doomemacs/doomemacs][Doom Emacs]], which manages packages with [[https://github.com/radian-software/straight.el][straight.el]] and installs from
+upstream Git rather than from ELPA archives.
+
 ** Usage - GitHub
 
 Just setup =package-archives= in your =init.el= file (add or drop archives as
@@ -51,7 +56,7 @@ And then setup =package-archives= in your =init.el= file.
 
 To use =elpa-mirror= with Spacemacs, you need to modify
 =configuration-layer-elpa-archives=. To do so, just add following code to the
-=dotspacemacs/init= function.
+=dotspacemacs/user-init= function.
 
 #+BEGIN_SRC emacs-lisp
   ;; remote
