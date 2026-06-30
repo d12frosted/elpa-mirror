@@ -2,10 +2,10 @@
  • Building package fzfa
 From https://github.com/jojojames/fzfa
 Updating /mnt/store/melpa/working/fzfa/
-Checking out c355b8846affca363c4abe9173bd289ab05679ed
+Checking out 950b9dcca9c6f68b0fafdd58a8ab6e694b312837
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fzfa/
-  to /tmp/fzfa-ONZE6e/fzfa-20260628.2159/
+  to /tmp/fzfa-MyIG3U/fzfa-20260630.39/
     fzfa-ag.el -> fzfa-ag.el
     fzfa-chrome.el -> fzfa-chrome.el
     fzfa-company.el -> fzfa-company.el
@@ -39,48 +39,50 @@ Copying files (->) and directories (=>)
     fzfa-safari.el -> fzfa-safari.el
     fzfa-shell.el -> fzfa-shell.el
     fzfa-spotlight.el -> fzfa-spotlight.el
+    fzfa-transient.el -> fzfa-transient.el
     fzfa-ugrep.el -> fzfa-ugrep.el
     fzfa-vc.el -> fzfa-vc.el
     fzfa-vertico.el -> fzfa-vertico.el
     fzfa.el -> fzfa.el
-Created fzfa-20260628.2159.tar containing:
-  fzfa-20260628.2159/
-  fzfa-20260628.2159/fzfa-ag.el
-  fzfa-20260628.2159/fzfa-chrome.el
-  fzfa-20260628.2159/fzfa-company.el
-  fzfa-20260628.2159/fzfa-eglot.el
-  fzfa-20260628.2159/fzfa-emacs.el
-  fzfa-20260628.2159/fzfa-embark.el
-  fzfa-20260628.2159/fzfa-evil.el
-  fzfa-20260628.2159/fzfa-fd.el
-  fzfa-20260628.2159/fzfa-find.el
-  fzfa-20260628.2159/fzfa-firefox.el
-  fzfa-20260628.2159/fzfa-flymake.el
-  fzfa-20260628.2159/fzfa-git.el
-  fzfa-20260628.2159/fzfa-grep.el
-  fzfa-20260628.2159/fzfa-helm.el
-  fzfa-20260628.2159/fzfa-hg.el
-  fzfa-20260628.2159/fzfa-hungry.el
-  fzfa-20260628.2159/fzfa-imenu.el
-  fzfa-20260628.2159/fzfa-info.el
-  fzfa-20260628.2159/fzfa-ivy.el
-  fzfa-20260628.2159/fzfa-locate.el
-  fzfa-20260628.2159/fzfa-mail.el
-  fzfa-20260628.2159/fzfa-make.el
-  fzfa-20260628.2159/fzfa-music.el
-  fzfa-20260628.2159/fzfa-notmuch.el
-  fzfa-20260628.2159/fzfa-org.el
-  fzfa-20260628.2159/fzfa-pass.el
-  fzfa-20260628.2159/fzfa-pkg.el
-  fzfa-20260628.2159/fzfa-project.el
-  fzfa-20260628.2159/fzfa-regexp.el
-  fzfa-20260628.2159/fzfa-replay.el
-  fzfa-20260628.2159/fzfa-rg.el
-  fzfa-20260628.2159/fzfa-safari.el
-  fzfa-20260628.2159/fzfa-shell.el
-  fzfa-20260628.2159/fzfa-spotlight.el
-  fzfa-20260628.2159/fzfa-ugrep.el
-  fzfa-20260628.2159/fzfa-vc.el
-  fzfa-20260628.2159/fzfa-vertico.el
-  fzfa-20260628.2159/fzfa.el
-Built fzfa in 4.274s, finished at 2026-06-29T21:59:47+0000
+Created fzfa-20260630.39.tar containing:
+  fzfa-20260630.39/
+  fzfa-20260630.39/fzfa-ag.el
+  fzfa-20260630.39/fzfa-chrome.el
+  fzfa-20260630.39/fzfa-company.el
+  fzfa-20260630.39/fzfa-eglot.el
+  fzfa-20260630.39/fzfa-emacs.el
+  fzfa-20260630.39/fzfa-embark.el
+  fzfa-20260630.39/fzfa-evil.el
+  fzfa-20260630.39/fzfa-fd.el
+  fzfa-20260630.39/fzfa-find.el
+  fzfa-20260630.39/fzfa-firefox.el
+  fzfa-20260630.39/fzfa-flymake.el
+  fzfa-20260630.39/fzfa-git.el
+  fzfa-20260630.39/fzfa-grep.el
+  fzfa-20260630.39/fzfa-helm.el
+  fzfa-20260630.39/fzfa-hg.el
+  fzfa-20260630.39/fzfa-hungry.el
+  fzfa-20260630.39/fzfa-imenu.el
+  fzfa-20260630.39/fzfa-info.el
+  fzfa-20260630.39/fzfa-ivy.el
+  fzfa-20260630.39/fzfa-locate.el
+  fzfa-20260630.39/fzfa-mail.el
+  fzfa-20260630.39/fzfa-make.el
+  fzfa-20260630.39/fzfa-music.el
+  fzfa-20260630.39/fzfa-notmuch.el
+  fzfa-20260630.39/fzfa-org.el
+  fzfa-20260630.39/fzfa-pass.el
+  fzfa-20260630.39/fzfa-pkg.el
+  fzfa-20260630.39/fzfa-project.el
+  fzfa-20260630.39/fzfa-regexp.el
+  fzfa-20260630.39/fzfa-replay.el
+  fzfa-20260630.39/fzfa-rg.el
+  fzfa-20260630.39/fzfa-safari.el
+  fzfa-20260630.39/fzfa-shell.el
+  fzfa-20260630.39/fzfa-spotlight.el
+  fzfa-20260630.39/fzfa-transient.el
+  fzfa-20260630.39/fzfa-ugrep.el
+  fzfa-20260630.39/fzfa-vc.el
+  fzfa-20260630.39/fzfa-vertico.el
+  fzfa-20260630.39/fzfa.el
+Built fzfa in 7.008s, finished at 2026-06-30T02:04:31+0000
