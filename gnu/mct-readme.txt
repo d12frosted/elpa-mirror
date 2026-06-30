@@ -1,14 +1,14 @@
                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 MINIBUFFER CONFINES TRANSCENDED (MCT.EL)
 
-                          Protesilaos Stavrou
+                              Protesilaos
                           info@protesilaos.com
                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This manual, written by Protesilaos Stavrou, describes the customization
-options for `mct' (or `mct.el' and variants), and provides every other
-piece of information pertinent to it.
+This manual, written by Protesilaos, describes the customization options
+for `mct' (or `mct.el' and variants), and provides every other piece of
+information pertinent to it.
 
 The documentation furnished herein corresponds to stable version 1.1.0,
 released on 2025-07-07.  Any reference to a newer feature which does not
@@ -77,7 +77,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2021-2025 Free Software Foundation, Inc.
+  Copyright (C) 2021-2026 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -174,21 +174,21 @@ Table of Contents
   │   ;; waiting for some user input (see `mct-minimum-input') before
   │   ;; displaying and updating the completions' buffer.
   │   (setq mct-completion-passlist
-  │ 	'(;; Some commands
-  │ 	  select-frame-by-name
-  │ 	  Info-goto-node
-  │ 	  Info-index
-  │ 	  Info-menu
-  │ 	  vc-retrieve-tag
-  │ 	  ;; Some completion categories
-  │ 	  consult-buffer
-  │ 	  consult-location
-  │ 	  embark-keybinding
-  │ 	  imenu
-  │ 	  file
-  │ 	  project-file
-  │ 	  buffer
-  │ 	  kill-ring))
+  │         '(;; Some commands
+  │           select-frame-by-name
+  │           Info-goto-node
+  │           Info-index
+  │           Info-menu
+  │           vc-retrieve-tag
+  │           ;; Some completion categories
+  │           consult-buffer
+  │           consult-location
+  │           embark-keybinding
+  │           imenu
+  │           file
+  │           project-file
+  │           buffer
+  │           kill-ring))
   │ 
   │   ;; The blocklist follows the same principle as the passlist, except it
   │   ;; disables live completions altogether.
@@ -196,16 +196,16 @@ Table of Contents
   │ 
   │   ;; This is the default value but I am keeping it here for visibility.
   │   (setq mct-sort-by-command-or-category
-  │ 	'((file . mct-sort-by-directory-then-by-file)
-  │ 	  ((magit-checkout vc-retrieve-tag) . mct-sort-by-alpha-then-by-length)
-  │ 	  ((kill-ring imenu consult-location Info-goto-node Info-index Info-menu) . nil) ; no sorting
-  │ 	  (t . mct-sort-by-history)))
+  │         '((file . mct-sort-by-directory-then-by-file)
+  │           ((magit-checkout vc-retrieve-tag) . mct-sort-by-alpha-then-by-length)
+  │           ((kill-ring imenu consult-location Info-goto-node Info-index Info-menu) . nil) ; no sorting
+  │           (t . mct-sort-by-history)))
   │ 
   │   (mct-mode 1))
   └────
 
-  Other useful extras from the Emacs source code (read their doc
-  strings):
+  Other useful extras from the Emacs source code (read their
+  docstrings):
 
   ┌────
   │ ;;; General settings for the minibuffer
@@ -936,14 +936,14 @@ Table of Contents
   │ (defun my-sort-by-alpha-length (elems)
   │   "Sort ELEMS first alphabetically, then by length."
   │   (sort elems (lambda (c1 c2)
-  │ 		(or (string-version-lessp c1 c2)
-  │ 		    (< (length c1) (length c2))))))
+  │                 (or (string-version-lessp c1 c2)
+  │                     (< (length c1) (length c2))))))
   │ 
   │ (defun my-sort-by-history (elems)
   │   "Sort ELEMS by minibuffer history.
   │ Use `mct-sort-sort-by-alpha-length' if no history is available."
   │   (if-let ((hist (and (not (eq minibuffer-history-variable t))
-  │ 		      (symbol-value minibuffer-history-variable))))
+  │                       (symbol-value minibuffer-history-variable))))
   │       (minibuffer--sort-by-position hist elems)
   │     (my-sort-by-alpha-length elems)))
   │ 
@@ -990,13 +990,13 @@ section 5.5
   │ ;; the prompt.
   │ (defun crm-indicator (args)
   │   (cons (format "[`crm-separator': %s]  %s"
-  │ 		(propertize
-  │ 		 (replace-regexp-in-string
-  │ 		  "\\`\\[.*?]\\*\\|\\[.*?]\\*\\'" ""
-  │ 		  crm-separator)
-  │ 		 'face 'error)
-  │ 		(car args))
-  │ 	(cdr args)))
+  │                 (propertize
+  │                  (replace-regexp-in-string
+  │                   "\\`\\[.*?]\\*\\|\\[.*?]\\*\\'" ""
+  │                   crm-separator)
+  │                  'face 'error)
+  │                 (car args))
+  │         (cdr args)))
   │ 
   │ (advice-add #'completing-read-multiple :filter-args #'crm-indicator)
   └────
@@ -1022,7 +1022,7 @@ section 5.5
   │   (interactive nil mct-mode)
   │   (cond
   │    ((and (eq (char-before) ?/)
-  │ 	 (eq (mct--completion-category) 'file))
+  │          (eq (mct--completion-category) 'file))
   │     (when (string-equal (minibuffer-contents) "~/")
   │       (delete-minibuffer-contents)
   │       (insert (expand-file-name "~/"))
@@ -1030,7 +1030,7 @@ section 5.5
   │     (save-excursion
   │       (goto-char (1- (point)))
   │       (when (search-backward "/" (minibuffer-prompt-end) t)
-  │ 	(delete-region (1+ (point)) (point-max)))))
+  │         (delete-region (1+ (point)) (point-max)))))
   │    (t (call-interactively 'backward-delete-char))))
   │ 
   │ (define-key minibuffer-local-filename-completion-map (kbd "DEL") #'my-backward-updir)
@@ -1209,7 +1209,7 @@ section 5.5
   MCT is meant to be a collective effort.  Every bit of help matters.
 
   Author/maintainer
-        Protesilaos Stavrou.
+        Protesilaos.
 
   Contributions to code or documentation
         Daniel Mendler, James Norman Vladimir Cash, Jessie Hu, José
@@ -1219,9 +1219,9 @@ section 5.5
   Ideas and user feedback
         Andrew Tropin, Benjamin (@zealotrush), Case Duckworth, Chris
         Burroughs, Jonathan Irving, José Antonio Ortega Ruiz, Kostadin
-        Ninev, Manuel Uberti, Morgan Willcock, Philip Kaludercic,
-        Theodor Thornhill, Tomasz Hołubowicz, Z.Du.  As well as users:
-        danrobi11.
+        Ninev, Manuel Uberti, Morgan Willcock, Philip Kaludercic, Ryan
+        Davis, Theodor Thornhill, Tomasz Hołubowicz, Z.Du.  As well as
+        users: danrobi11.
 
   Packaging
         Andrew Tropin and Nicolas Goaziou (Guix).

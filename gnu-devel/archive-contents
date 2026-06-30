@@ -995,13 +995,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 1 0 0 20260628 10) ((emacs (29 1)))
+  . [(1 1 0 0 20260629 11) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f17c3afb109e4853a39d87a42d4c4184050827a3"))])
+      (:commit . "811f7ba7baba3d3b32891ce902436c3f4ea9db51"))])
  (drepl
   . [(0 4 0 20260520 140843) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -1395,12 +1395,12 @@
       (:authors ("Manuel Uberti" . "manuel.uberti@inventati.org"))
       (:commit . "d93ee5b1f0c9a20fe04f263c0988769c439b3c13"))])
  (fontaine
-  . [(3 0 1 0 20260424 102702) ((emacs (29 1)))
+  . [(3 1 0 0 20260629 0) ((emacs (29 1)))
      "Set font configurations using presets" tar
      ((:url . "https://github.com/protesilaos/fontaine")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "3fc26bc0337f2067dd5f89aa1a506067c00ceb92"))])
+      (:commit . "8cf9f6693e2a780b530ff5fd9920863b751d5bd5"))])
  (forgejo
   . [(0 2 3 0 20260619 16) ((emacs (29 1)) (keymap-popup (0 2 1)))
      "Emacs Forgejo Front-end" tar
@@ -1582,7 +1582,7 @@
       (:authors ("Sean Allred" . "code@seanallred.com"))
       (:commit . "9b3151b1de67c8a127906f11bc5c71116c12f5b5"))])
  (greader
-  . [(0 19 4 0 20260608 0)
+  . [(0 19 5 0 20260627 0)
      ((emacs (26 1)) (seq (2 24)) (compat (29 1 4 5)))
      "Gnamù reader, send buffer contents to a speech engine" tar
      ((:url . "https://gitlab.com/michelangelo-rodriguez/greader")
@@ -1591,7 +1591,7 @@
 		   . "michelangelo.rodriguez@gmail.com")
       (:authors
        ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
-      (:commit . "24914f0d679c6adaa7aaa0de46fefb7a11cb1094"))])
+      (:commit . "5c304ad008d8688e4eccd9947ba5e410399bf021"))])
  (greenbar
   . [(1 2 260317 0 20260317 232500) ((emacs (27 1)))
      "Mark comint output with \"greenbar\" background" tar
@@ -1683,7 +1683,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 0 20 20260628 1200) ((emacs (28)))
+  . [(9 0 20 20260629 1201) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1692,7 +1692,7 @@
 		 "outlines" "tools" "wp")
       (:maintainer "Robert Weiner" . "rsw@gnu.org")
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "a6ee9afb313f3eacb7fe95cdaca4551d9bec76d2"))])
+      (:commit . "323d183f7434abcccb8ee2d24733f2438f5c1e41"))])
  (ibuffer-sidebar
   . [(0 0 1 0 20260612 36) ((emacs (29 1))) "Sidebar for `ibuffer'"
      tar
@@ -2020,14 +2020,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 31 1 0 20260628 1)
+  . [(0 31 1 0 20260629 2)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "745f9b10b165aeae2175d3da02c5c794eabf603b"))])
+      (:commit . "a8d893b48ad6f647cd070699ecc696443c80722e"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -2155,12 +2155,12 @@
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
       (:commit . "83ea45983975bc6d17a908bf4acddfc47d51763a"))])
  (mct
-  . [(1 1 0 0 20260424 102720) ((emacs (29 4)))
+  . [(1 1 1 0 20260629 0) ((emacs (29 4)))
      "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "fa6b9b4817d8ab1cac64364670e4abfadc91143a"))])
+      (:commit . "ffe1555ace9041c93b78ba2fdf1f4656111394f3"))])
  (memory-usage
   . [(0 2 0 20201201 223908) nil
      "Analyze the memory usage of Emacs in various ways" tar

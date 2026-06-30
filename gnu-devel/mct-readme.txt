@@ -1219,9 +1219,9 @@ section 5.5
   Ideas and user feedback
         Andrew Tropin, Benjamin (@zealotrush), Case Duckworth, Chris
         Burroughs, Jonathan Irving, José Antonio Ortega Ruiz, Kostadin
-        Ninev, Manuel Uberti, Morgan Willcock, Philip Kaludercic,
-        Theodor Thornhill, Tomasz Hołubowicz, Z.Du.  As well as users:
-        danrobi11.
+        Ninev, Manuel Uberti, Morgan Willcock, Philip Kaludercic, Ryan
+        Davis, Theodor Thornhill, Tomasz Hołubowicz, Z.Du.  As well as
+        users: danrobi11.
 
   Packaging
         Andrew Tropin and Nicolas Goaziou (Guix).

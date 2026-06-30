@@ -11,8 +11,18 @@ input when inhibit-mouse-mode is disabled.
 Installation from MELPA:
 ------------------------
 (use-package inhibit-mouse
-  :commands inhibit-mouse-mode
-  :hook (after-init . inhibit-mouse-mode))
+  :custom
+  ;; Disable highlighting of clickable text such as URLs and hyperlinks when
+  ;; hovered by the mouse pointer.
+  (inhibit-mouse-adjust-mouse-highlight t)
+
+  ;; Disables the use of tooltips (show-help-function) during mouse events.
+  (inhibit-mouse-adjust-show-help-function t)
+
+  :config
+  (if (daemonp)
+      (add-hook 'server-after-make-frame-hook #'inhibit-mouse-mode)
+    (inhibit-mouse-mode 1)))
 
 Usage:
 ------

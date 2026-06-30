@@ -11,11 +11,11 @@ This manual, written by Protesilaos, describes the customization options
 for `fontaine' (or `fontaine.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 3.0.0,
-released on 2025-02-20.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 3.1.0,
+released on 2026-06-29.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 3.1.0-dev.
+Current development target is 3.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `fontaine'
 ⁃ Official manual: <https://protesilaos.com/emacs/fontaine>
@@ -246,8 +246,6 @@ Table of Contents
 
 3.2 Persist frame size on non-auto tiling window managers
 ─────────────────────────────────────────────────────────
-
-  [ Fontaine does this automatically as of 3.1.0-dev. ]
 
   If using a non-tiling window manager e.g. GNOME/KDE, when a new preset
   is applied the frame may be resized in order to preserve the number of

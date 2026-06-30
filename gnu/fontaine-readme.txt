@@ -2,20 +2,20 @@
                FONTAINE.EL: SET FONT CONFIGURATIONS USING
                                 PRESETS
 
-                          Protesilaos Stavrou
+                              Protesilaos
                           info@protesilaos.com
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This manual, written by Protesilaos Stavrou, describes the customization
-options for `fontaine' (or `fontaine.el'), and provides every other
-piece of information pertinent to it.
+This manual, written by Protesilaos, describes the customization options
+for `fontaine' (or `fontaine.el'), and provides every other piece of
+information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 3.0.0,
-released on 2025-02-20.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 3.1.0,
+released on 2026-06-29.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 3.1.0-dev.
+Current development target is 3.2.0-dev.
 
 ⁃ Package name (GNU ELPA): `fontaine'
 ⁃ Official manual: <https://protesilaos.com/emacs/fontaine>
@@ -31,16 +31,17 @@ Table of Contents
 ─────────────────
 
 1. COPYING
-2. Overview
-.. 1. Shared and implicit fallback values for presets
-.. 2. Inherit the properties of another named preset
-3. Installation
+2. Installation
 .. 1. GNU ELPA package
 .. 2. Manual installation
-4. Sample configuration
+3. Sample configuration
 .. 1. Persist font configurations on theme switch
-.. 2. Theme-agnostic hook for Emacs 29 or higher
-.. 3. Theme-agnostic hook before Emacs 29
+.. 2. Persist frame size on non-auto tiling window managers
+.. 3. Theme-agnostic hook for Emacs 29 or higher
+.. 4. Theme-agnostic hook before Emacs 29
+4. Overview
+.. 1. Shared and implicit fallback values for presets
+.. 2. Inherit the properties of another named preset
 5. Acknowledgements
 6. GNU Free Documentation License
 7. Indices
@@ -52,7 +53,7 @@ Table of Contents
 1 COPYING
 ═════════
 
-  Copyright (C) 2022-2025 Free Software Foundation, Inc.
+  Copyright (C) 2022-2026 Free Software Foundation, Inc.
 
         Permission is granted to copy, distribute and/or modify
         this document under the terms of the GNU Free
@@ -67,7 +68,254 @@ Table of Contents
         copy and modify this GNU manual.”
 
 
-2 Overview
+2 Installation
+══════════════
+
+2.1 GNU ELPA package
+────────────────────
+
+  The package is available as `fontaine'.  Simply do:
+
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install
+  └────
+
+
+  And search for it.
+
+  GNU ELPA provides the latest stable release.  Those who prefer to
+  follow the development process in order to report bugs or suggest
+  changes, can use the version of the package from the GNU-devel ELPA
+  archive.  Read:
+  <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
+
+
+2.2 Manual installation
+───────────────────────
+
+  Assuming your Emacs files are found in `~/.emacs.d/', execute the
+  following commands in a shell prompt:
+
+  ┌────
+  │ cd ~/.emacs.d
+  │ 
+  │ # Create a directory for manually-installed packages
+  │ mkdir manual-packages
+  │ 
+  │ # Go to the new directory
+  │ cd manual-packages
+  │ 
+  │ # Clone this repo, naming it "fontaine"
+  │ git clone https://github.com/protesilaos/fontaine fontaine
+  └────
+
+  Finally, in your `init.el' (or equivalent) evaluate this:
+
+  ┌────
+  │ ;; Make Elisp files in that directory available to the user.
+  │ (add-to-list 'load-path "~/.emacs.d/manual-packages/fontaine")
+  └────
+
+  Everything is in place to set up the package.
+
+
+3 Sample configuration
+══════════════════════
+
+  Remember to read the relevant docstrings.
+
+  ┌────
+  │ (require 'fontaine)
+  │ 
+  │ (setq fontaine-latest-state-file
+  │       (locate-user-emacs-file "fontaine-latest-state.eld"))
+  │ 
+  │ ;; Aporetic is my highly customised build of Iosevka:
+  │ ;; <https://github.com/protesilaos/aporetic>.
+  │ (setq fontaine-presets
+  │       '((small
+  │          :default-family "Aporetic Serif Mono"
+  │          :default-height 80
+  │          :variable-pitch-family "Aporetic Sans")
+  │         (regular) ; like this it uses all the fallback values and is named `regular'
+  │         (medium
+  │          :default-weight semilight
+  │          :default-height 115
+  │          :bold-weight extrabold)
+  │         (large
+  │          :inherit medium
+  │          :default-height 150)
+  │         (presentation
+  │          :default-height 180)
+  │         (t
+  │          ;; I keep all properties for didactic purposes, but most can be
+  │          ;; omitted.  See the fontaine manual for the technicalities:
+  │          ;; <https://protesilaos.com/emacs/fontaine>.
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-weight regular
+  │          :default-height 100
+  │ 
+  │          :fixed-pitch-family nil ; falls back to :default-family
+  │          :fixed-pitch-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-height 1.0
+  │ 
+  │          :fixed-pitch-serif-family nil ; falls back to :default-family
+  │          :fixed-pitch-serif-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-serif-height 1.0
+  │ 
+  │          :variable-pitch-family "Aporetic Serif"
+  │          :variable-pitch-weight nil
+  │          :variable-pitch-height 1.0
+  │ 
+  │          :mode-line-active-family nil ; falls back to :default-family
+  │          :mode-line-active-weight nil ; falls back to :default-weight
+  │          :mode-line-active-height 0.9
+  │ 
+  │          :mode-line-inactive-family nil ; falls back to :default-family
+  │          :mode-line-inactive-weight nil ; falls back to :default-weight
+  │          :mode-line-inactive-height 0.9
+  │ 
+  │          :header-line-family nil ; falls back to :default-family
+  │          :header-line-weight nil ; falls back to :default-weight
+  │          :header-line-height 0.9
+  │ 
+  │          :line-number-family nil ; falls back to :default-family
+  │          :line-number-weight nil ; falls back to :default-weight
+  │          :line-number-height 1.0
+  │ 
+  │          :tab-bar-family nil ; falls back to :default-family
+  │          :tab-bar-weight nil ; falls back to :default-weight
+  │          :tab-bar-height 1.0
+  │ 
+  │          :tab-line-family nil ; falls back to :default-family
+  │          :tab-line-weight nil ; falls back to :default-weight
+  │          :tab-line-height 1.0
+  │ 
+  │          :bold-family nil ; use whatever the underlying face has
+  │          :bold-weight bold
+  │ 
+  │          :italic-family nil
+  │          :italic-slant italic
+  │ 
+  │          :line-spacing nil)))
+  │ 
+  │ ;; Set the last preset or fall back to desired style from `fontaine-presets'
+  │ ;; (the `regular' in this case).
+  │ (fontaine-set-preset (or (fontaine-restore-latest-preset) 'regular))
+  │ 
+  │ ;; Persist the latest font preset when closing/starting Emacs and
+  │ ;; while switching between themes.
+  │ (fontaine-mode 1)
+  │ 
+  │ ;; fontaine does not define any key bindings.  This is just a sample that
+  │ ;; respects the key binding conventions.  Evaluate:
+  │ ;;
+  │ ;;     (info "(elisp) Key Binding Conventions")
+  │ (define-key global-map (kbd "C-c f") #'fontaine-set-preset)
+  └────
+
+
+3.1 Persist font configurations on theme switch
+───────────────────────────────────────────────
+
+  [ Since version `2.0.0', there exists the `fontaine-mode' which does
+    this automatically. The `fontaine-apply-current-preset' is obsolete
+    as of version `3.0.0' because Fontaine is now implemented as a
+    “theme” and thus does not get overwritten by other themes. ]
+
+  Themes re-apply face definitions when they are loaded.  This is
+  necessary to render the theme.  For certain faces, such as `bold' and
+  `italic', it means that their font family may be reset (depending on
+  the particularities of the theme).
+
+  To avoid such a potential problem, we can arrange to restore the
+  current font preset which was applied by `fontaine-set-preset'.
+  Fontaine provides the command `fontaine-apply-current-preset'. It can
+  either be called interactively after loading a theme or be assigned to
+  a hook that is ran at the post `load-theme' phase.
+
+  • [Theme-agnostic hook for Emacs 29 or higher]
+  • [Theme-agnostic hook before Emacs 29]
+
+
+[Theme-agnostic hook for Emacs 29 or higher] See section 3.3
+
+[Theme-agnostic hook before Emacs 29] See section 3.4
+
+
+3.2 Persist frame size on non-auto tiling window managers
+─────────────────────────────────────────────────────────
+
+  If using a non-tiling window manager e.g. GNOME/KDE, when a new preset
+  is applied the frame may be resized in order to preserve the number of
+  columns or lines it displays.  To disable this feature set
+  `frame-inhibit-implied-resize' to `t'.
+
+  ┌────
+  │ (setq frame-inhibit-implied-resize t)
+  └────
+
+
+3.3 Theme-agnostic hook for Emacs 29 or higher
+──────────────────────────────────────────────
+
+  [ Since version `2.0.0', there exists the `fontaine-mode' which does
+    this automatically. The `fontaine-apply-current-preset' is obsolete
+    as of version `3.0.0' because Fontaine is now implemented as a
+    “theme” and thus does not get overwritten by other themes. ]
+
+  Emacs 29 provides the `enable-theme-functions', which we can use to
+  persist or restore a font preset thus ([Persist font configurations on
+  theme switch]):
+
+  ┌────
+  │ (add-hook 'enable-theme-functions #'fontaine-apply-current-preset)
+  └────
+
+
+[Persist font configurations on theme switch] See section 3.1
+
+
+3.4 Theme-agnostic hook before Emacs 29
+───────────────────────────────────────
+
+  [ Since version `2.0.0', there exists the `fontaine-mode' which does
+    this automatically. The `fontaine-apply-current-preset' is obsolete
+    as of version `3.0.0' because Fontaine is now implemented as a
+    “theme” and thus does not get overwritten by other themes. ]
+
+  For versions of Emacs before 29, there is no built-in theme-agnostic
+  solution to persisting or restoring a font preset ([Theme-agnostic
+  hook for Emacs 29 or higher]).
+
+  Themes have to specify a hook that is called by their relevant
+  commands at the post-theme-load phase. This can also be done in a
+  generic way:
+
+  ┌────
+  │ ;; Set up the `after-enable-theme-hook'
+  │ (defvar after-enable-theme-hook nil
+  │   "Normal hook run after enabling a theme.")
+  │ 
+  │ (defun run-after-enable-theme-hook (&rest _args)
+  │   "Run `after-enable-theme-hook'."
+  │   (run-hooks 'after-enable-theme-hook))
+  │ 
+  │ (advice-add 'enable-theme :after #'run-after-enable-theme-hook)
+  └────
+
+  And then simply use that hook:
+
+  ┌────
+  │ (add-hook 'after-enable-theme-hook #'fontaine-apply-current-preset)
+  └────
+
+
+[Theme-agnostic hook for Emacs 29 or higher] See section 3.3
+
+
+4 Overview
 ══════════
 
   Fontaine lets the user specify presets of font configurations and set
@@ -175,7 +423,7 @@ Table of Contents
   │   )
   └────
 
-  The doc string of `fontaine-presets' explains all properties in detail
+  The docstring of `fontaine-presets' explains all properties in detail
   and documents some important caveats or information about font
   settings in Emacs.
 
@@ -190,8 +438,7 @@ Table of Contents
   │ (fontaine-set-preset 'regular)
   └────
 
-  The default behaviour of `fontaine-set-preset' is to change fonts
-  across all graphical frames.
+  `fontaine-set-preset' is to change fonts across all graphical frames.
 
   As a final step, `fontaine-set-preset' calls the
   `fontaine-set-preset-hook'.
@@ -219,9 +466,9 @@ Table of Contents
   Are Irrelevant in Non-graphical Emacs (because that is actually true).
 
 
-[Shared and implicit fallback values for presets] See section 2.1
+[Shared and implicit fallback values for presets] See section 4.1
 
-2.1 Shared and implicit fallback values for presets
+4.1 Shared and implicit fallback values for presets
 ───────────────────────────────────────────────────
 
   [Inherit the properties of another named preset].
@@ -234,35 +481,35 @@ Table of Contents
   │ ;; `fontaine-presets' accepts.
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-family "Hack"
-  │ 	 :default-weight normal
-  │ 	 :default-height 100
-  │ 	 :fixed-pitch-family "Fira Code"
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "Noto Sans"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.0
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight bold
-  │ 	 :italic-family "Source Code Pro"
-  │ 	 :italic-slant italic
-  │ 	 :line-spacing 1)
-  │ 	(large
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-weight normal
-  │ 	 :default-height 150
-  │ 	 :fixed-pitch-family nil ; falls back to :default-family
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.05
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight bold
-  │ 	 :italic-family nil ; use whatever the underlying face has
-  │ 	 :italic-slant italic
-  │ 	 :line-spacing 1)))
+  │          :default-family "Hack"
+  │          :default-weight normal
+  │          :default-height 100
+  │          :fixed-pitch-family "Fira Code"
+  │          :fixed-pitch-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-height 1.0
+  │          :variable-pitch-family "Noto Sans"
+  │          :variable-pitch-weight normal
+  │          :variable-pitch-height 1.0
+  │          :bold-family nil ; use whatever the underlying face has
+  │          :bold-weight bold
+  │          :italic-family "Source Code Pro"
+  │          :italic-slant italic
+  │          :line-spacing 1)
+  │         (large
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-weight normal
+  │          :default-height 150
+  │          :fixed-pitch-family nil ; falls back to :default-family
+  │          :fixed-pitch-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-height 1.0
+  │          :variable-pitch-family "FiraGO"
+  │          :variable-pitch-weight normal
+  │          :variable-pitch-height 1.05
+  │          :bold-family nil ; use whatever the underlying face has
+  │          :bold-weight bold
+  │          :italic-family nil ; use whatever the underlying face has
+  │          :italic-slant italic
+  │          :line-spacing 1)))
   └────
 
   Notice that not all properties need to be specified, as they have
@@ -272,35 +519,35 @@ Table of Contents
   ┌────
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-family "Hack"
+  │          :default-family "Hack"
   │ 
-  │ 	 :default-height 100
-  │ 	 :fixed-pitch-family "Fira Code"
-  │ 
-  │ 
-  │ 	 :variable-pitch-family "Noto Sans"
+  │          :default-height 100
+  │          :fixed-pitch-family "Fira Code"
   │ 
   │ 
-  │ 
-  │ 
-  │ 	 :italic-family "Source Code Pro"
-  │ 
-  │ 	 :line-spacing 1)
-  │ 	(large
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 
-  │ 	 :default-height 150
-  │ 
-  │ 
-  │ 
-  │ 	 :variable-pitch-family "FiraGO"
+  │          :variable-pitch-family "Noto Sans"
   │ 
   │ 
   │ 
   │ 
+  │          :italic-family "Source Code Pro"
+  │ 
+  │          :line-spacing 1)
+  │         (large
+  │          :default-family "Aporetic Sans Mono"
+  │ 
+  │          :default-height 150
   │ 
   │ 
-  │ 	 :line-spacing 1)))
+  │ 
+  │          :variable-pitch-family "FiraGO"
+  │ 
+  │ 
+  │ 
+  │ 
+  │ 
+  │ 
+  │          :line-spacing 1)))
   └────
 
   Without the empty lines, we have this, which yields the same results
@@ -309,17 +556,17 @@ Table of Contents
   ┌────
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-family "Hack"
-  │ 	 :default-height 100
-  │ 	 :fixed-pitch-family "Fira Code"
-  │ 	 :variable-pitch-family "Noto Sans"
-  │ 	 :italic-family "Source Code Pro"
-  │ 	 :line-spacing 1)
-  │ 	(large
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-height 150
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :line-spacing 1)))
+  │          :default-family "Hack"
+  │          :default-height 100
+  │          :fixed-pitch-family "Fira Code"
+  │          :variable-pitch-family "Noto Sans"
+  │          :italic-family "Source Code Pro"
+  │          :line-spacing 1)
+  │         (large
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-height 150
+  │          :variable-pitch-family "FiraGO"
+  │          :line-spacing 1)))
   └────
 
   We call the properties of the removed lines “implicit fallback
@@ -340,76 +587,76 @@ Table of Contents
   │ ;; Notice the duplication of properties and how we will avoid it.
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-weight normal
-  │ 	 :default-height 100
-  │ 	 :fixed-pitch-family nil ; falls back to :default-family
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.05
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight bold
-  │ 	 :italic-family nil
-  │ 	 :italic-slant italic
-  │ 	 :line-spacing nil)
-  │ 	(medium
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-weight semilight
-  │ 	 :default-height 140
-  │ 	 :fixed-pitch-family nil ; falls back to :default-family
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.05
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight bold
-  │ 	 :italic-family nil
-  │ 	 :italic-slant italic
-  │ 	 :line-spacing nil)
-  │ 	(large
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-weight semilight
-  │ 	 :default-height 180
-  │ 	 :fixed-pitch-family nil ; falls back to :default-family
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.05
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight extrabold
-  │ 	 :italic-family nil
-  │ 	 :italic-slant italic
-  │ 	 :line-spacing nil)))
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-weight normal
+  │          :default-height 100
+  │          :fixed-pitch-family nil ; falls back to :default-family
+  │          :fixed-pitch-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-height 1.0
+  │          :variable-pitch-family "FiraGO"
+  │          :variable-pitch-weight normal
+  │          :variable-pitch-height 1.05
+  │          :bold-family nil ; use whatever the underlying face has
+  │          :bold-weight bold
+  │          :italic-family nil
+  │          :italic-slant italic
+  │          :line-spacing nil)
+  │         (medium
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-weight semilight
+  │          :default-height 140
+  │          :fixed-pitch-family nil ; falls back to :default-family
+  │          :fixed-pitch-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-height 1.0
+  │          :variable-pitch-family "FiraGO"
+  │          :variable-pitch-weight normal
+  │          :variable-pitch-height 1.05
+  │          :bold-family nil ; use whatever the underlying face has
+  │          :bold-weight bold
+  │          :italic-family nil
+  │          :italic-slant italic
+  │          :line-spacing nil)
+  │         (large
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-weight semilight
+  │          :default-height 180
+  │          :fixed-pitch-family nil ; falls back to :default-family
+  │          :fixed-pitch-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-height 1.0
+  │          :variable-pitch-family "FiraGO"
+  │          :variable-pitch-weight normal
+  │          :variable-pitch-height 1.05
+  │          :bold-family nil ; use whatever the underlying face has
+  │          :bold-weight extrabold
+  │          :italic-family nil
+  │          :italic-slant italic
+  │          :line-spacing nil)))
   │ 
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-height 100)
-  │ 	(medium
-  │ 	 :default-weight semilight
-  │ 	 :default-height 140)
-  │ 	(large
-  │ 	 :default-weight semilight
-  │ 	 :default-height 180
-  │ 	 :bold-weight extrabold)
-  │ 	(t ; our shared fallback properties
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-weight normal
-  │ 	 ;; :default-height 100
-  │ 	 :fixed-pitch-family nil ; falls back to :default-family
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.05
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight bold
-  │ 	 :italic-family nil
-  │ 	 :italic-slant italic
-  │ 	 :line-spacing nil)))
+  │          :default-height 100)
+  │         (medium
+  │          :default-weight semilight
+  │          :default-height 140)
+  │         (large
+  │          :default-weight semilight
+  │          :default-height 180
+  │          :bold-weight extrabold)
+  │         (t ; our shared fallback properties
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-weight normal
+  │          ;; :default-height 100
+  │          :fixed-pitch-family nil ; falls back to :default-family
+  │          :fixed-pitch-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-height 1.0
+  │          :variable-pitch-family "FiraGO"
+  │          :variable-pitch-weight normal
+  │          :variable-pitch-height 1.05
+  │          :bold-family nil ; use whatever the underlying face has
+  │          :bold-weight bold
+  │          :italic-family nil
+  │          :italic-slant italic
+  │          :line-spacing nil)))
   └────
 
   The `t' preset does not need to explicitly cover all properties.  It
@@ -422,53 +669,53 @@ Table of Contents
   │ ;; The verbose form
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-height 100)
-  │ 	(medium
-  │ 	 :default-weight semilight
-  │ 	 :default-height 140)
-  │ 	(large
-  │ 	 :default-weight semilight
-  │ 	 :default-height 180
-  │ 	 :bold-weight extrabold)
-  │ 	(t ; our shared fallback properties
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-weight normal
-  │ 	 ;; :default-height 100
-  │ 	 :fixed-pitch-family nil ; falls back to :default-family
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :variable-pitch-weight normal
-  │ 	 :variable-pitch-height 1.05
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight bold
-  │ 	 :italic-family nil
-  │ 	 :italic-slant italic
-  │ 	 :line-spacing nil)))
+  │          :default-height 100)
+  │         (medium
+  │          :default-weight semilight
+  │          :default-height 140)
+  │         (large
+  │          :default-weight semilight
+  │          :default-height 180
+  │          :bold-weight extrabold)
+  │         (t ; our shared fallback properties
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-weight normal
+  │          ;; :default-height 100
+  │          :fixed-pitch-family nil ; falls back to :default-family
+  │          :fixed-pitch-weight nil ; falls back to :default-weight
+  │          :fixed-pitch-height 1.0
+  │          :variable-pitch-family "FiraGO"
+  │          :variable-pitch-weight normal
+  │          :variable-pitch-height 1.05
+  │          :bold-family nil ; use whatever the underlying face has
+  │          :bold-weight bold
+  │          :italic-family nil
+  │          :italic-slant italic
+  │          :line-spacing nil)))
   │ 
   │ ;; The concise one which relies on "implicit fallback values"
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-height 100)
-  │ 	(medium
-  │ 	 :default-weight semilight
-  │ 	 :default-height 140)
-  │ 	(large
-  │ 	 :default-weight semilight
-  │ 	 :default-height 180
-  │ 	 :bold-weight extrabold)
-  │ 	(t ; our shared fallback properties
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-weight normal
-  │ 	 :variable-pitch-family "FiraGO"
-  │ 	 :variable-pitch-height 1.05)))
+  │          :default-height 100)
+  │         (medium
+  │          :default-weight semilight
+  │          :default-height 140)
+  │         (large
+  │          :default-weight semilight
+  │          :default-height 180
+  │          :bold-weight extrabold)
+  │         (t ; our shared fallback properties
+  │          :default-family "Aporetic Sans Mono"
+  │          :default-weight normal
+  │          :variable-pitch-family "FiraGO"
+  │          :variable-pitch-height 1.05)))
   └────
 
 
-[Inherit the properties of another named preset] See section 2.2
+[Inherit the properties of another named preset] See section 4.2
 
 
-2.2 Inherit the properties of another named preset
+4.2 Inherit the properties of another named preset
 ──────────────────────────────────────────────────
 
   [Shared and implicit fallback values for presets].
@@ -489,22 +736,22 @@ Table of Contents
   ┌────
   │ (setq fontaine-presets
   │       '((regular
-  │ 	 :default-height 100)
-  │ 	(code-demo
-  │ 	 :default-family "Source Code Pro"
-  │ 	 :default-weight semilight
-  │ 	 :default-height 170
-  │ 	 :variable-pitch-family "Sans"
-  │ 	 :bold-weight extrabold)
-  │ 	(prose-demo
-  │ 	 :inherit code-demo ; copy the `code-demo' properties
-  │ 	 :default-family "Sans"
-  │ 	 :variable-pitch-family "Serif"
-  │ 	 :default-height 220)
-  │ 	(t
-  │ 	 :default-family "Monospace"
-  │ 	 ;; more generic fallback properties here...
-  │ 	 )))
+  │          :default-height 100)
+  │         (code-demo
+  │          :default-family "Source Code Pro"
+  │          :default-weight semilight
+  │          :default-height 170
+  │          :variable-pitch-family "Sans"
+  │          :bold-weight extrabold)
+  │         (prose-demo
+  │          :inherit code-demo ; copy the `code-demo' properties
+  │          :default-family "Sans"
+  │          :variable-pitch-family "Serif"
+  │          :default-height 220)
+  │         (t
+  │          :default-family "Monospace"
+  │          ;; more generic fallback properties here...
+  │          )))
   └────
 
   In this scenario, the `regular' preset gets all its properties from
@@ -521,244 +768,7 @@ Table of Contents
   future versions.
 
 
-[Shared and implicit fallback values for presets] See section 2.1
-
-
-3 Installation
-══════════════
-
-
-
-
-3.1 GNU ELPA package
-────────────────────
-
-  The package is available as `fontaine'.  Simply do:
-
-  ┌────
-  │ M-x package-refresh-contents
-  │ M-x package-install
-  └────
-
-
-  And search for it.
-
-  GNU ELPA provides the latest stable release.  Those who prefer to
-  follow the development process in order to report bugs or suggest
-  changes, can use the version of the package from the GNU-devel ELPA
-  archive.  Read:
-  <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
-
-
-3.2 Manual installation
-───────────────────────
-
-  Assuming your Emacs files are found in `~/.emacs.d/', execute the
-  following commands in a shell prompt:
-
-  ┌────
-  │ cd ~/.emacs.d
-  │ 
-  │ # Create a directory for manually-installed packages
-  │ mkdir manual-packages
-  │ 
-  │ # Go to the new directory
-  │ cd manual-packages
-  │ 
-  │ # Clone this repo, naming it "fontaine"
-  │ git clone https://github.com/protesilaos/fontaine fontaine
-  └────
-
-  Finally, in your `init.el' (or equivalent) evaluate this:
-
-  ┌────
-  │ ;; Make Elisp files in that directory available to the user.
-  │ (add-to-list 'load-path "~/.emacs.d/manual-packages/fontaine")
-  └────
-
-  Everything is in place to set up the package.
-
-
-4 Sample configuration
-══════════════════════
-
-  Remember to read the relevant doc strings.
-
-  ┌────
-  │ (require 'fontaine)
-  │ 
-  │ (setq fontaine-latest-state-file
-  │       (locate-user-emacs-file "fontaine-latest-state.eld"))
-  │ 
-  │ ;; Aporetic is my highly customised build of Iosevka:
-  │ ;; <https://github.com/protesilaos/aporetic>.
-  │ (setq fontaine-presets
-  │       '((small
-  │ 	 :default-family "Aporetic Serif Mono"
-  │ 	 :default-height 80
-  │ 	 :variable-pitch-family "Aporetic Sans")
-  │ 	(regular) ; like this it uses all the fallback values and is named `regular'
-  │ 	(medium
-  │ 	 :default-weight semilight
-  │ 	 :default-height 115
-  │ 	 :bold-weight extrabold)
-  │ 	(large
-  │ 	 :inherit medium
-  │ 	 :default-height 150)
-  │ 	(presentation
-  │ 	 :default-height 180)
-  │ 	(t
-  │ 	 ;; I keep all properties for didactic purposes, but most can be
-  │ 	 ;; omitted.  See the fontaine manual for the technicalities:
-  │ 	 ;; <https://protesilaos.com/emacs/fontaine>.
-  │ 	 :default-family "Aporetic Sans Mono"
-  │ 	 :default-weight regular
-  │ 	 :default-height 100
-  │ 
-  │ 	 :fixed-pitch-family nil ; falls back to :default-family
-  │ 	 :fixed-pitch-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-height 1.0
-  │ 
-  │ 	 :fixed-pitch-serif-family nil ; falls back to :default-family
-  │ 	 :fixed-pitch-serif-weight nil ; falls back to :default-weight
-  │ 	 :fixed-pitch-serif-height 1.0
-  │ 
-  │ 	 :variable-pitch-family "Aporetic Serif"
-  │ 	 :variable-pitch-weight nil
-  │ 	 :variable-pitch-height 1.0
-  │ 
-  │ 	 :mode-line-active-family nil ; falls back to :default-family
-  │ 	 :mode-line-active-weight nil ; falls back to :default-weight
-  │ 	 :mode-line-active-height 0.9
-  │ 
-  │ 	 :mode-line-inactive-family nil ; falls back to :default-family
-  │ 	 :mode-line-inactive-weight nil ; falls back to :default-weight
-  │ 	 :mode-line-inactive-height 0.9
-  │ 
-  │ 	 :header-line-family nil ; falls back to :default-family
-  │ 	 :header-line-weight nil ; falls back to :default-weight
-  │ 	 :header-line-height 0.9
-  │ 
-  │ 	 :line-number-family nil ; falls back to :default-family
-  │ 	 :line-number-weight nil ; falls back to :default-weight
-  │ 	 :line-number-height 0.9
-  │ 
-  │ 	 :tab-bar-family nil ; falls back to :default-family
-  │ 	 :tab-bar-weight nil ; falls back to :default-weight
-  │ 	 :tab-bar-height 1.0
-  │ 
-  │ 	 :tab-line-family nil ; falls back to :default-family
-  │ 	 :tab-line-weight nil ; falls back to :default-weight
-  │ 	 :tab-line-height 1.0
-  │ 
-  │ 	 :bold-family nil ; use whatever the underlying face has
-  │ 	 :bold-weight bold
-  │ 
-  │ 	 :italic-family nil
-  │ 	 :italic-slant italic
-  │ 
-  │ 	 :line-spacing nil)))
-  │ 
-  │ ;; Set the last preset or fall back to desired style from `fontaine-presets'
-  │ ;; (the `regular' in this case).
-  │ (fontaine-set-preset (or (fontaine-restore-latest-preset) 'regular))
-  │ 
-  │ ;; Persist the latest font preset when closing/starting Emacs and
-  │ ;; while switching between themes.
-  │ (fontaine-mode 1)
-  │ 
-  │ ;; fontaine does not define any key bindings.  This is just a sample that
-  │ ;; respects the key binding conventions.  Evaluate:
-  │ ;;
-  │ ;;     (info "(elisp) Key Binding Conventions")
-  │ (define-key global-map (kbd "C-c f") #'fontaine-set-preset)
-  └────
-
-
-4.1 Persist font configurations on theme switch
-───────────────────────────────────────────────
-
-  [ Since version `2.0.0', there exists the `fontaine-mode' which does
-    this automatically. The `fontaine-apply-current-preset' is obsolete
-    as of version `3.0.0' because Fontaine is now implemented as a
-    “theme” and thus does not get overwritten by other themes. ]
-
-  Themes re-apply face definitions when they are loaded.  This is
-  necessary to render the theme.  For certain faces, such as `bold' and
-  `italic', it means that their font family may be reset (depending on
-  the particularities of the theme).
-
-  To avoid such a potential problem, we can arrange to restore the
-  current font preset which was applied by `fontaine-set-preset'.
-  Fontaine provides the command `fontaine-apply-current-preset'. It can
-  either be called interactively after loading a theme or be assigned to
-  a hook that is ran at the post `load-theme' phase.
-
-  • [Theme-agnostic hook for Emacs 29 or higher]
-  • [Theme-agnostic hook before Emacs 29]
-
-
-[Theme-agnostic hook for Emacs 29 or higher] See section 4.2
-
-[Theme-agnostic hook before Emacs 29] See section 4.3
-
-
-4.2 Theme-agnostic hook for Emacs 29 or higher
-──────────────────────────────────────────────
-
-  [ Since version `2.0.0', there exists the `fontaine-mode' which does
-    this automatically. The `fontaine-apply-current-preset' is obsolete
-    as of version `3.0.0' because Fontaine is now implemented as a
-    “theme” and thus does not get overwritten by other themes. ]
-
-  Emacs 29 provides the `enable-theme-functions', which we can use to
-  persist or restore a font preset thus ([Persist font configurations on
-  theme switch]):
-
-  ┌────
-  │ (add-hook 'enable-theme-functions #'fontaine-apply-current-preset)
-  └────
-
-
-[Persist font configurations on theme switch] See section 4.1
-
-
-4.3 Theme-agnostic hook before Emacs 29
-───────────────────────────────────────
-
-  [ Since version `2.0.0', there exists the `fontaine-mode' which does
-    this automatically. The `fontaine-apply-current-preset' is obsolete
-    as of version `3.0.0' because Fontaine is now implemented as a
-    “theme” and thus does not get overwritten by other themes. ]
-
-  For versions of Emacs before 29, there is no built-in theme-agnostic
-  solution to persisting or restoring a font preset ([Theme-agnostic
-  hook for Emacs 29 or higher]).
-
-  Themes have to specify a hook that is called by their relevant
-  commands at the post-theme-load phase. This can also be done in a
-  generic way:
-
-  ┌────
-  │ ;; Set up the `after-enable-theme-hook'
-  │ (defvar after-enable-theme-hook nil
-  │   "Normal hook run after enabling a theme.")
-  │ 
-  │ (defun run-after-enable-theme-hook (&rest _args)
-  │   "Run `after-enable-theme-hook'."
-  │   (run-hooks 'after-enable-theme-hook))
-  │ 
-  │ (advice-add 'enable-theme :after #'run-after-enable-theme-hook)
-  └────
-
-  And then simply use that hook:
-
-  ┌────
-  │ (add-hook 'after-enable-theme-hook #'fontaine-apply-current-preset)
-  └────
-
-
-[Theme-agnostic hook for Emacs 29 or higher] See section 4.2
+[Shared and implicit fallback values for presets] See section 4.1
 
 
 5 Acknowledgements
@@ -768,11 +778,11 @@ Table of Contents
   matters.
 
   Author/maintainer
-        Protesilaos Stavrou.
+        Protesilaos.
 
   Contributions to the code or manual
         Christopher League, Eli Zaretskii, Florent Teissier, Jorge
-        Gomez, Nicolas Venegas, Terry F.  Torrey.
+        Gomez, Morgan Perry, Nicolas Venegas, Terry F. Torrey, juh2.
 
   Ideas and user feedback
         Adam Porter (alphapapa), Ashlin Eldridge, Emily Hyland, Joe

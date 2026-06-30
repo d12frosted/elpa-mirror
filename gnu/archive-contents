@@ -1307,12 +1307,12 @@
       (:authors ("Manuel Uberti" . "manuel.uberti@inventati.org"))
       (:commit . "9c68ee881f18f554f0ab5bbf5bee1a4b753d792b"))])
  (fontaine
-  . [(3 0 1) ((emacs (29 1))) "Set font configurations using presets"
+  . [(3 1 0) ((emacs (29 1))) "Set font configurations using presets"
      tar
      ((:url . "https://github.com/protesilaos/fontaine")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "34d8b04bef350b270f52dc4defc9bac3e9617bf0"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "8cf9f6693e2a780b530ff5fd9920863b751d5bd5"))])
  (forgejo
   . [(0 2 3) ((emacs (29 1)) (keymap-popup (0 2 1)))
      "Emacs Forgejo Front-end" tar
@@ -1484,7 +1484,7 @@
       (:authors ("Sean Allred" . "code@seanallred.com"))
       (:commit . "b57b5ca5d2d0837e1fb4a4f30c051d5f3e643f0f"))])
  (greader
-  . [(0 19 4) ((emacs (26 1)) (seq (2 24)) (compat (29 1 4 5)))
+  . [(0 19 5) ((emacs (26 1)) (seq (2 24)) (compat (29 1 4 5)))
      "Gnamù reader, send buffer contents to a speech engine" tar
      ((:url . "https://gitlab.com/michelangelo-rodriguez/greader")
       (:keywords "tools" "accessibility")
@@ -1492,7 +1492,7 @@
 		   . "michelangelo.rodriguez@gmail.com")
       (:authors
        ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
-      (:commit . "24914f0d679c6adaa7aaa0de46fefb7a11cb1094"))])
+      (:commit . "5c304ad008d8688e4eccd9947ba5e410399bf021"))])
  (greenbar
   . [(1 2 260317) ((emacs (27 1)))
      "Mark comint output with \"greenbar\" background" tar
@@ -2012,11 +2012,11 @@
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
       (:commit . "a42d34dfc498b8754ac89512b399b77481791406"))])
  (mct
-  . [(1 1 0) ((emacs (29 1))) "Minibuffer Confines Transcended" tar
+  . [(1 1 1) ((emacs (29 4))) "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "306cb704196c643b552aceb5893693641ca747d9"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "ffe1555ace9041c93b78ba2fdf1f4656111394f3"))])
  (memory-usage
   . [(0 2) nil "Analyze the memory usage of Emacs in various ways" tar
      ((:keywords "maint")
