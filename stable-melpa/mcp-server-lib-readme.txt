@@ -17,3 +17,5 @@ The library handles JSON-RPC 2.0 communication, manages tool and resource
 registration, and provides error handling suitable for LLM interactions.
 
 See https://modelcontextprotocol.io/ for the protocol specification.
+
+jscpd:ignore-end
