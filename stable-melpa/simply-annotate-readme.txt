@@ -169,6 +169,21 @@ can be multiline (use \n).  Set to nil to disable.
 (setq simply-annotate-inline-pointer-after "┃\n┃\n┗━━▶")
 (setq simply-annotate-inline-pointer-above "┏━━▶\n┃\n┃")
 
+Margin Inline Display:
+
+Use `simply-annotate-inline-position' set to `margin-left' or
+`margin-right' to show annotation boxes in the Emacs display margin
+(not to be confused with text margins for filling).  Each line of the
+annotation box appears in the margin next to the corresponding line
+of the annotated region.  Wraps to `simply-annotate-margin-width'
+columns (default 30).  If the annotation is longer than the annotated
+region, extra lines are truncated with "... +N lines".  Requires the
+base display style (fringe, bracket, etc.) to locate annotations in
+the buffer since the margin alone provides no markers.
+
+Press <prefix> ; to cycle `simply-annotate-inline-position' (after,
+above, margin-left, margin-right) without leaving the transient menu.
+
 Project-Aware Annotations:
 
 By default, annotations are stored in a single global database.
