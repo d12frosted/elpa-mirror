@@ -332,12 +332,12 @@
       (:authors ("Amy Pillow" . "amypillow@lavache.com"))
       (:commit . "08e1c84dee28f87010f50cb4e9a48c0798c8912b"))])
  (breadcrumb
-  . [(1 0 1 0 20260507 73535) ((emacs (28 1)) (project (0 9 8)))
+  . [(1 0 1 0 20260630 15) ((emacs (28 1)) (project (0 9 8)))
      "project and imenu-based breadcrumb paths" tar
      ((:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
-      (:commit . "e5c8670585f9edce8784fd36117373b9a3b59f08"))])
+      (:commit . "899ddc05c54ba9e005974deeea7518c798c1bd87"))])
  (brief
   . [(5 92 0 20240823 62608) ((nadvice (0 3)) (cl-lib (0 5)))
      "Brief Editor Emulator (Brief Mode)" tar
@@ -1234,14 +1234,14 @@
       (:url . "https://elpa.gnu.org/packages/epoch-view.html")
       (:commit . "7a9773a8b55491bd47f23dfdb6c4224f5cc8e50c"))])
  (erc
-  . [(5 70 20260605 12) ((emacs (27 1)) (compat (31)))
+  . [(5 70 20260630 20) ((emacs (27 1)) (compat (31)))
      "An Emacs Internet Relay Chat client" tar
      ((:url . "https://www.gnu.org/software/emacs/erc.html")
       (:keywords "irc" "chat" "client" "internet")
       (:maintainer ("Amin Bandali" . "bandali@gnu.org")
 		   ("F. Jason Park" . "jp@neverwas.me"))
       (:authors ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-      (:commit . "bf9a1e1f1659d55ae159a651fba5b9c71038cc99"))])
+      (:commit . "badce2d952db81c91521ddc988a925154370d56a"))])
  (ergoemacs-mode
   . [(5 16 10 12 0 20240828 210215)
      ((emacs (24 1)) (cl-lib (0 5)) (nadvice (0 4)))

@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 7 0 20260521 153004)
+  . [(1 7 0 20260630 1)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "9772db3e1969eec1df6a53b7d3e5597d07e3337f"))])
+      (:commit . "ae727267fded58a0715c9d3e11997d6027c06b4c"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(1 23 0 20260630 119)
+  . [(1 23 0 20260701 121)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "61abf9832d3838dc84c5fe3d6cb52da00f77e6b0"))])
+      (:commit . "0daa566ede8603c0cf253ae669c4240979e133e7"))])
  (clojure-mode
   . [(5 23 0 0 20260615 3) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -473,7 +473,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 0 0 20260628 3) ((emacs (29 1)) (compat (31)))
+  . [(4 1 0 0 20260701 4) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -482,7 +482,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "67b7f05ad4ef2695dbbebd4aa573259344d57d73"))])
+      (:commit . "0bc7b9f63de9bce1b21472cc360cf180fac2fd6a"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(2 10 0 20260630 157) ((emacs (27 1)) (compat (30)))
+  . [(2 10 0 20260701 159) ((emacs (27 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "7857e88d5e91dbba2b4d3dc481325a409b513f2f"))])
+      (:commit . "b26c0cfd9ed9580cfca04bf47a17df4ac3e0fef7"))])
  (proof-general
   . [(4 60 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -2059,14 +2059,14 @@
       (:keywords "typescript" "languages")
       (:commit . "2535780bdb318d86761b9bd21b0347ca6a89628f"))])
  (typst-ts-mode
-  . [(0 12 2 0 20260415 103532) ((emacs (29 1)))
+  . [(0 12 2 0 20260624 24) ((emacs (29 1)))
      "Tree Sitter support for Typst" tar
      ((:url . "https://codeberg.org/meow_king/typst-ts-mode")
       (:keywords "typst" "languages" "tree-sitter")
       (:maintainer ("Ziqi Yang" . "mr.meowking@anche.no")
 		   ("Huan Nguyen" . "nguyenthieuhuan@gmail.com"))
       (:authors ("Ziqi Yang" . "mr.meowking@anche.no"))
-      (:commit . "278562d702de429f5c4369c007913ca0ef1584f3"))])
+      (:commit . "155bb36cff3afe701a0f6b57bd3fe5c9effaa314"))])
  (ujelly-theme
   . [(1 3 6 0 20241111 2243) nil
      "Ujelly theme for GNU Emacs 24 (deftheme)" tar
