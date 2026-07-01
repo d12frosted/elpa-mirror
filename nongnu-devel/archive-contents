@@ -393,10 +393,10 @@
       (:keywords "docker" "languages" "processes" "tools")
       (:commit . "97733ce074b1252c1270fd5e8a53d178b66668ed"))])
  (dracula-theme
-  . [(1 8 3 0 20260519 113056) ((emacs (24 3))) "Dracula Theme" tar
+  . [(1 8 3 0 20260629 7) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")
       (:maintainer "tienne Deparis" . "etienne@depar.is")
-      (:commit . "f7ee0933b93a34a9f9cf6117293afef6c2464d9d"))])
+      (:commit . "fa562443129993e3408ea300595b230874da33db"))])
  (drupal-mode
   . [(0 8 1 0 20240816 123653) ((php-mode (1 5 0)))
      "Advanced minor mode for Drupal development" tar
@@ -1297,7 +1297,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 5 0 0 20260629 311)
+  . [(4 5 0 0 20260630 312)
      ((emacs (28 1)) (compat (31 0)) (cond-let (0 2)) (llama (1 0))
       (magit-section (4 5)) (seq (2 24)) (transient (0 13))
       (with-editor (3 4)))
@@ -1309,9 +1309,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "072763df25718cc2b34173af7f81ff20fa8a1e51"))])
+      (:commit . "55bbdde3fec0fcd486cc42a48c634e91b571ef45"))])
  (magit-section
-  . [(4 5 0 0 20260629 311)
+  . [(4 5 0 0 20260630 312)
      ((emacs (28 1)) (compat (31 0)) (cond-let (0 2)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1320,7 +1320,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "072763df25718cc2b34173af7f81ff20fa8a1e51"))])
+      (:commit . "55bbdde3fec0fcd486cc42a48c634e91b571ef45"))])
  (markdown-mode
   . [(2 90 20260425 95459) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(2 10 0 20260630 155) ((emacs (27 1)) (compat (30)))
+  . [(2 10 0 20260630 157) ((emacs (27 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "b1d2a6cf59c2c14ee32bbe0e0a84104dc87a4138"))])
+      (:commit . "7857e88d5e91dbba2b4d3dc481325a409b513f2f"))])
  (proof-general
   . [(4 60 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
