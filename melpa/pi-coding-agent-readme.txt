@@ -4,7 +4,8 @@ with rendered markdown, and a separate prompt composition buffer.
 
 Requirements:
   - Emacs 29.1 or later (tree-sitter support required)
-  - pi coding agent @earendil-works/pi-coding-agent 0.79.1 or later, installed and in PATH
+  - pi coding agent @earendil-works/pi-coding-agent 0.79.1 or later,
+    installed and in PATH on the host where Pi runs
   - tree-sitter grammars for markdown and markdown-inline
 
 pi-coding-agent uses `md-ts-mode` for its own chat and input buffers;

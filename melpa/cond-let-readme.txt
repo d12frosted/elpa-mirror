@@ -42,7 +42,7 @@ the built-in implementations.  Doing so does not affect any other
 libraries, which continue to use the built-in implementations.
 
 Due to limitations of the shorthand implementation this has to be
-done for each individual library.  "dir-locals.el" cannot be used.
+done for each individual library.  ".dir-locals.el" cannot be used.
 
 If you use `when$', `and$' and `thread$', you might want to add
 this to your configuration:
