@@ -125,7 +125,7 @@ Table of Contents
   │   :ensure t
   │   :demand t
   │   :if (display-graphic-p)
-  │   :config
+  │   :init
   │   (setq cursory-presets
   │         '((box
   │            :cursor-color success ; will typically be green
@@ -163,7 +163,7 @@ Table of Contents
   │            :blink-cursor-blinks 10
   │            :blink-cursor-interval 0.2
   │            :blink-cursor-delay 0.2)))
-  │ 
+  │   :config
   │   ;; I am using the default value of `cursory-latest-state-file'.
   │ 
   │   ;; Set last preset or fall back to desired style from
@@ -370,8 +370,8 @@ Table of Contents
         Protesilaos.
 
   Contributions to the code or manual
-        Christopher League, Mehdi Khawari, Nicholas Vollmer, Philip
-        Kaludercic, Stefan Monnier.
+        Christopher League, Johan Widén, Mehdi Khawari, Nicholas
+        Vollmer, Philip Kaludercic, Stefan Monnier.
 
 
 6 Also see

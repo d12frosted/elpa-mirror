@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 7 0 20260630 1)
+  . [(1 8 0 20260701 0)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "ae727267fded58a0715c9d3e11997d6027c06b4c"))])
+      (:commit . "7496878820661a950ef1b28ce8814177b3010825"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(1 23 0 20260701 121)
+  . [(2 0 0 20260701 2)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "0daa566ede8603c0cf253ae669c4240979e133e7"))])
+      (:commit . "8bda52abb4ae7a31eadf3056830f1364a7208137"))])
  (clojure-mode
   . [(5 23 0 0 20260615 3) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -259,7 +259,7 @@
       (:authors ("Chris Wanstrath" . "chris@ozmm.org"))
       (:commit . "1c6adeae14f3795d3b1e44321189ed7c2c93c967"))])
  (cond-let
-  . [(1 1 2 0 20260601 0) ((emacs (28 1)))
+  . [(1 1 3 0 20260701 0) ((emacs (28 1)))
      "Additional and improved binding conditionals" tar
      ((:url . "https://github.com/tarsius/cond-let")
       (:keywords "extensions")
@@ -267,7 +267,7 @@
 		   . "emacs.cond-let@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.cond-let@jonas.bernoulli.dev"))
-      (:commit . "21b9e9835756ff5cd1acb971cf9eb56fff671c8b"))])
+      (:commit . "c48600dfab6372670225f046cace263700c78eab"))])
  (consult-flycheck
   . [(1 2 0 20260628 1)
      ((emacs (29 1)) (consult (3 5)) (flycheck (35)))
@@ -1297,10 +1297,10 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 5 0 0 20260630 312)
-     ((emacs (28 1)) (compat (31 0)) (cond-let (0 2)) (llama (1 0))
-      (magit-section (4 5)) (seq (2 24)) (transient (0 13))
-      (with-editor (3 4)))
+  . [(4 6 0 0 20260701 0)
+     ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
+      (magit-section (4 6)) (seq (2 24)) (transient (0 13))
+      (with-editor (3 5)))
      "A Git porcelain inside Emacs" tar
      ((:url . "https://github.com/magit/magit")
       (:keywords "git" "tools" "vc")
@@ -1309,10 +1309,10 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "55bbdde3fec0fcd486cc42a48c634e91b571ef45"))])
+      (:commit . "b6c512597fd66abe69883a058a2d13bcea76bf33"))])
  (magit-section
-  . [(4 5 0 0 20260630 312)
-     ((emacs (28 1)) (compat (31 0)) (cond-let (0 2)) (llama (1 0))
+  . [(4 6 0 0 20260701 0)
+     ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
      ((:url . "https://github.com/magit/magit") (:keywords "tools")
@@ -1320,7 +1320,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "55bbdde3fec0fcd486cc42a48c634e91b571ef45"))])
+      (:commit . "b6c512597fd66abe69883a058a2d13bcea76bf33"))])
  (markdown-mode
   . [(2 90 20260425 95459) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1512,9 +1512,9 @@
       (:authors ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
       (:commit . "e2599a106a26ce5511095e23df4ea04be6687a8a"))])
  (orgit
-  . [(2 1 3 0 20260623 18)
+  . [(2 2 0 0 20260701 0)
      ((emacs (29 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
-      (magit (4 5)) (org (9 8)))
+      (magit (4 6)) (org (9 8)))
      "Support for Org links to Magit buffers" tar
      ((:url . "https://github.com/magit/orgit")
       (:keywords "hypermedia" "vc")
@@ -1522,7 +1522,7 @@
 		   . "emacs.orgit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-      (:commit . "1aa3a27b1cb6aec913f7365caebdd6ffbe178443"))])
+      (:commit . "7c4827cd04953166f71eaec151ad1c50872fc680"))])
  (p4-16-mode
   . [(0 3 0 20231118 161633) nil
      "Support for the P4_16 programming language" tar
@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(2 10 0 20260701 159) ((emacs (27 1)) (compat (30)))
+  . [(3 0 0 0 20260701 2) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "b26c0cfd9ed9580cfca04bf47a17df4ac3e0fef7"))])
+      (:commit . "98cf6b6dbb1fcca6ac386dd75a2656db5ca97ac5"))])
  (proof-general
   . [(4 60 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -2158,7 +2158,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 1 0 20260625 4)
+  . [(3 5 2 0 20260701 0)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2167,7 +2167,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "36c34610b6b700b4d1f39ccabd2b8b8c9642292d"))])
+      (:commit . "45bfc6084f03e3aa7f4f8db20836d559186c5957"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar

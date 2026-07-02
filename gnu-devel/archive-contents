@@ -546,7 +546,7 @@
       (:authors ("Ingo Lohmar" . "i.lohmar@gmail.com"))
       (:commit . "120e982f47e01945c044e0762ba376741c41b76c"))])
  (compat
-  . [(31 0 0 1 0 20260606 2) ((emacs (25 1)))
+  . [(31 0 0 1 0 20260701 3) ((emacs (25 1)))
      "Emacs Lisp Compatibility Library" tar
      ((:url . "https://github.com/emacs-compat/compat")
       (:keywords "lisp" "maint")
@@ -554,7 +554,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Philip Kaludercic" . "philipk@posteo.net")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "a0d646554730471579de8b33b0194077fd05abe1"))])
+      (:commit . "076dce861a56d683043ccee28d34eb55c2e27eac"))])
  (cond-star
   . [(1 0 0 20260523 114724) ((emacs (24 3)))
      "Extended form of `cond' construct" tar
@@ -691,13 +691,13 @@
       (:url . "https://elpa.gnu.org/packages/cursor-undo.html")
       (:commit . "e82084c3d491ff7199e14cc8da69c250b9bda492"))])
  (cursory
-  . [(1 2 0 0 20260424 102447) ((emacs (29 1)))
+  . [(1 2 0 0 20260701 4) ((emacs (29 1)))
      "Manage cursor styles using presets" tar
      ((:url . "https://github.com/protesilaos/cursory")
       (:keywords "convenience" "cursor")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f6dc8226094687ec23970874a567902d9692ddc1"))])
+      (:commit . "3061ee2e2b38b42b57338b8fbb8f7d7d336c20f4"))])
  (cus-abbrev
   . [(0 1 0 20250307 190425) ((emacs (29 1)))
      "Easy Customization interface for Abbrevs" tar
@@ -995,13 +995,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 1 0 0 20260629 11) ((emacs (29 1)))
+  . [(1 1 0 0 20260701 12) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "811f7ba7baba3d3b32891ce902436c3f4ea9db51"))])
+      (:commit . "4972a15b215d501789d08534da19fb65f42f4b98"))])
  (drepl
   . [(0 4 0 20260520 140843) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -1305,7 +1305,7 @@
       (:url . "https://elpa.gnu.org/packages/external-completion.html")
       (:commit . "92788f3be43b43f82876b9d0e263d5e55d00ec0e"))])
  (exwm
-  . [(0 35 0 20260627 0) ((emacs (29 1)) (xelb (0 22)) (compat (31)))
+  . [(0 35 0 20260701 1) ((emacs (29 1)) (xelb (0 22)) (compat (31)))
      "Emacs X Window Manager" tar
      ((:url . "https://github.com/emacs-exwm/exwm") (:keywords "unix")
       (:maintainer
@@ -1313,7 +1313,7 @@
        ("Steven Allen" . "steven@stebalien.com")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Chris Feng" . "chris.w.feng@gmail.com"))
-      (:commit . "fcc83b6dfaea1e32e01f0706812ee3ac01ec69f5"))])
+      (:commit . "b9abfd127e1fb2b3dbb5b2dc4650b5012ff58dcb"))])
  (f90-interface-browser
   . [(1 1 0 20221221 75553) ((cl-lib (0 7)))
      "Parse and browse f90 interfaces" tar
@@ -3615,7 +3615,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 4 0 20260617 1)
+  . [(0 13 5 0 20260701 0)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3625,7 +3625,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "9d103f338fb9fd4506a0f1651c483209ab838f49"))])
+      (:commit . "3d20a780605f0a33d6360dc0a2ce9174c69a9a92"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

@@ -3326,8 +3326,9 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient
-  . [(0 13 4)
-     ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (seq (2 24)))
+  . [(0 13 5)
+     ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
+      (seq (2 24)))
      "Transient commands" tar
      ((:url . "https://github.com/magit/transient")
       (:keywords "extensions")
@@ -3335,7 +3336,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "1856230dc181f23dd15026b0ad21d8b299b034d1"))])
+      (:commit . "3d20a780605f0a33d6360dc0a2ce9174c69a9a92"))])
  (transient-cycles
   . [(2 1) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
