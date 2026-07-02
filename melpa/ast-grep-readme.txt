@@ -8,5 +8,5 @@ Features:
 - Project-wide search
 - Integration with completing-read (Vertico, etc.)
 - Streaming JSON parsing for efficient processing
-- Async search with live results (consult, or counsel/ivy when
+- Async search with live results (consult, Helm, or counsel/ivy when
   `ivy-mode' is active)

@@ -1860,13 +1860,13 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "fa75ea6b05070ce0f06befdef1954afa99aa5e89"))])
  (lisp-ts-mode
-  . [(0 2 0) ((emacs (30 2)) (cond-star (0)) (compat (31)))
+  . [(0 2 1) ((emacs (30 2)) (cond-star (0)) (compat (31)))
      "lisp-mode with tree-sitter support" tar
      ((:url . "https://codeberg.org/zshaftel/lisp-ts-mode")
       (:keywords "lisp" "languages" "tree-sitter")
       (:maintainer "zach shaftel" . "zach@shaf.tel")
       (:authors ("zach shaftel" . "zach@shaf.tel"))
-      (:commit . "dc9fcbe59ed28517d28d9dd331b9070bbc29496c"))])
+      (:commit . "6c459f8a3757d25f4e23eb4616d0782f9908f11f"))])
  (listen
   . [(0 10 1)
      ((emacs (29 1)) (persist (0 6)) (taxy (0 10))
@@ -2861,6 +2861,11 @@
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/sed-mode.html")
       (:commit . "6009f57567959387b9e34068567e982b6991eb24"))])
+ (sendai-theme
+  . [(0 1 0) ((emacs (27 1))) "A cool blue color theme" tar
+     ((:url . "https://sr.ht/~jimporter/sendai-theme/")
+      (:keywords "theme")
+      (:commit . "e7a7fc191035f98082020113fbb5c89ac1b74f37"))])
  (seq
   . [(2 24) nil "Sequence manipulation functions" tar
      ((:keywords "sequences")
