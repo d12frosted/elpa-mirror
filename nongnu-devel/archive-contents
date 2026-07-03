@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 20260701 2)
+  . [(2 0 0 20260703 8)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "8bda52abb4ae7a31eadf3056830f1364a7208137"))])
+      (:commit . "7c74030b68b64cbe15b5db88679a8aa1c54770da"))])
  (clojure-mode
   . [(5 23 0 0 20260615 3) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -947,7 +947,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260628 46)
+  . [(0 9 9 5 0 20260702 48)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -956,7 +956,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "33ed0f6f69857157973bca72fb4d454e29965bdd"))])
+      (:commit . "7bb1f4c48a2653cd1a6aad60c2beee07a6a91e48"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar

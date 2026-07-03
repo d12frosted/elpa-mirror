@@ -2,10 +2,10 @@
  • Building package cider
 From https://github.com/clojure-emacs/cider
 Updating /mnt/store/melpa/working/cider/
-Checking out 8bda52abb4ae7a31eadf3056830f1364a7208137
+Checking out 7c74030b68b64cbe15b5db88679a8aa1c54770da
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cider/
-  to /tmp/cider-TK5ZWZ/cider-20260701.1319/
+  to /tmp/cider-VRVS7W/cider-20260703.713/
   ! lisp/cider-apropos.el -> cider-apropos.el
   ! lisp/cider-browse-ns.el -> cider-browse-ns.el
   ! lisp/cider-browse-spec.el -> cider-browse-spec.el
@@ -28,6 +28,7 @@ Copying files (->) and directories (=>)
   ! lisp/cider-eval.el -> cider-eval.el
   ! lisp/cider-find.el -> cider-find.el
   ! lisp/cider-format.el -> cider-format.el
+  ! lisp/cider-history.el -> cider-history.el
   ! lisp/cider-inspector.el -> cider-inspector.el
   ! lisp/cider-inspiration.el -> cider-inspiration.el
   ! lisp/cider-jack-in.el -> cider-jack-in.el
@@ -40,7 +41,6 @@ Copying files (->) and directories (=>)
   ! lisp/cider-overlays.el -> cider-overlays.el
   ! lisp/cider-popup.el -> cider-popup.el
   ! lisp/cider-profile.el -> cider-profile.el
-  ! lisp/cider-repl-history.el -> cider-repl-history.el
   ! lisp/cider-repl.el -> cider-repl.el
   ! lisp/cider-resolve.el -> cider-resolve.el
   ! lisp/cider-scratch.el -> cider-scratch.el
@@ -60,61 +60,61 @@ Copying files (->) and directories (=>)
   ! lisp/nrepl-bencode.el -> nrepl-bencode.el
   ! lisp/nrepl-client.el -> nrepl-client.el
   ! lisp/nrepl-dict.el -> nrepl-dict.el
-Created cider-20260701.1319.tar containing:
-  cider-20260701.1319/
-  cider-20260701.1319/cider-apropos.el
-  cider-20260701.1319/cider-browse-ns.el
-  cider-20260701.1319/cider-browse-spec.el
-  cider-20260701.1319/cider-cheatsheet.el
-  cider-20260701.1319/cider-classpath.el
-  cider-20260701.1319/cider-client.el
-  cider-20260701.1319/cider-cljs.el
-  cider-20260701.1319/cider-clojuredocs.el
-  cider-20260701.1319/cider-common.el
-  cider-20260701.1319/cider-compilation.el
-  cider-20260701.1319/cider-completion-context.el
-  cider-20260701.1319/cider-completion.el
-  cider-20260701.1319/cider-connection.el
-  cider-20260701.1319/cider-debug.el
-  cider-20260701.1319/cider-doc.el
-  cider-20260701.1319/cider-docstring.el
-  cider-20260701.1319/cider-eldoc.el
-  cider-20260701.1319/cider-endpoint.el
-  cider-20260701.1319/cider-enlighten.el
-  cider-20260701.1319/cider-eval.el
-  cider-20260701.1319/cider-find.el
-  cider-20260701.1319/cider-format.el
-  cider-20260701.1319/cider-inspector.el
-  cider-20260701.1319/cider-inspiration.el
-  cider-20260701.1319/cider-jack-in.el
-  cider-20260701.1319/cider-log.el
-  cider-20260701.1319/cider-macroexpansion.el
-  cider-20260701.1319/cider-macrostep.el
-  cider-20260701.1319/cider-mode.el
-  cider-20260701.1319/cider-ns-state.el
-  cider-20260701.1319/cider-ns.el
-  cider-20260701.1319/cider-overlays.el
-  cider-20260701.1319/cider-pkg.el
-  cider-20260701.1319/cider-popup.el
-  cider-20260701.1319/cider-profile.el
-  cider-20260701.1319/cider-repl-history.el
-  cider-20260701.1319/cider-repl.el
-  cider-20260701.1319/cider-resolve.el
-  cider-20260701.1319/cider-scratch.el
-  cider-20260701.1319/cider-selector.el
-  cider-20260701.1319/cider-session.el
-  cider-20260701.1319/cider-stacktrace.el
-  cider-20260701.1319/cider-tap.el
-  cider-20260701.1319/cider-test.el
-  cider-20260701.1319/cider-tracing.el
-  cider-20260701.1319/cider-tree-view.el
-  cider-20260701.1319/cider-util.el
-  cider-20260701.1319/cider-xref-backend.el
-  cider-20260701.1319/cider-xref-source.el
-  cider-20260701.1319/cider-xref-tree.el
-  cider-20260701.1319/cider-xref.el
-  cider-20260701.1319/cider.el
-  cider-20260701.1319/nrepl-bencode.el
-  cider-20260701.1319/nrepl-client.el
-  cider-20260701.1319/nrepl-dict.el
-Built cider in 5.788s, finished at 2026-07-03T04:29:42+0000
+Created cider-20260703.713.tar containing:
+  cider-20260703.713/
+  cider-20260703.713/cider-apropos.el
+  cider-20260703.713/cider-browse-ns.el
+  cider-20260703.713/cider-browse-spec.el
+  cider-20260703.713/cider-cheatsheet.el
+  cider-20260703.713/cider-classpath.el
+  cider-20260703.713/cider-client.el
+  cider-20260703.713/cider-cljs.el
+  cider-20260703.713/cider-clojuredocs.el
+  cider-20260703.713/cider-common.el
+  cider-20260703.713/cider-compilation.el
+  cider-20260703.713/cider-completion-context.el
+  cider-20260703.713/cider-completion.el
+  cider-20260703.713/cider-connection.el
+  cider-20260703.713/cider-debug.el
+  cider-20260703.713/cider-doc.el
+  cider-20260703.713/cider-docstring.el
+  cider-20260703.713/cider-eldoc.el
+  cider-20260703.713/cider-endpoint.el
+  cider-20260703.713/cider-enlighten.el
+  cider-20260703.713/cider-eval.el
+  cider-20260703.713/cider-find.el
+  cider-20260703.713/cider-format.el
+  cider-20260703.713/cider-history.el
+  cider-20260703.713/cider-inspector.el
+  cider-20260703.713/cider-inspiration.el
+  cider-20260703.713/cider-jack-in.el
+  cider-20260703.713/cider-log.el
+  cider-20260703.713/cider-macroexpansion.el
+  cider-20260703.713/cider-macrostep.el
+  cider-20260703.713/cider-mode.el
+  cider-20260703.713/cider-ns-state.el
+  cider-20260703.713/cider-ns.el
+  cider-20260703.713/cider-overlays.el
+  cider-20260703.713/cider-pkg.el
+  cider-20260703.713/cider-popup.el
+  cider-20260703.713/cider-profile.el
+  cider-20260703.713/cider-repl.el
+  cider-20260703.713/cider-resolve.el
+  cider-20260703.713/cider-scratch.el
+  cider-20260703.713/cider-selector.el
+  cider-20260703.713/cider-session.el
+  cider-20260703.713/cider-stacktrace.el
+  cider-20260703.713/cider-tap.el
+  cider-20260703.713/cider-test.el
+  cider-20260703.713/cider-tracing.el
+  cider-20260703.713/cider-tree-view.el
+  cider-20260703.713/cider-util.el
+  cider-20260703.713/cider-xref-backend.el
+  cider-20260703.713/cider-xref-source.el
+  cider-20260703.713/cider-xref-tree.el
+  cider-20260703.713/cider-xref.el
+  cider-20260703.713/cider.el
+  cider-20260703.713/nrepl-bencode.el
+  cider-20260703.713/nrepl-client.el
+  cider-20260703.713/nrepl-dict.el
+Built cider in 7.234s, finished at 2026-07-03T08:26:21+0000
