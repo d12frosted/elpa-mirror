@@ -473,7 +473,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 0 0 20260701 4) ((emacs (29 1)) (compat (31)))
+  . [(4 1 0 0 20260702 5) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -482,7 +482,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "0bc7b9f63de9bce1b21472cc360cf180fac2fd6a"))])
+      (:commit . "149bb4ef375c3461f7ff37620759c33050bfb132"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -1159,14 +1159,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 11 1 0 20260626 0)
+  . [(0 11 1 0 20260702 1)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://codeberg.org/emacs-jabber/emacs-jabber")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "be6c638923716bf1136d7b6a1458810bf19cc658"))])
+      (:commit . "ff30a2c22860a95d0fdb3a540ddc0b287253491b"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1613,12 +1613,12 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "e1e290bff64f4dedeaf6a3d03eaf06b2ab7284d7"))])
  (php-mode
-  . [(1 26 1 0 20251112 64638) ((emacs (27 1)))
+  . [(1 26 1 0 20260702 44) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "d9858333e42f42c1486a84bc5277e9d8e37e40cc"))])
+      (:commit . "a6a79415a834b4da213f8e74b55bbb5f4dae9210"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar

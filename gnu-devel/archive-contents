@@ -1168,11 +1168,11 @@
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
       (:commit . "a2c2c167837cef08a1b8f86f5eb9864f93699300"))])
  (emacs-lisp-intro-nl
-  . [(0 0 20260529 43) nil "ELisp intro manual in NL" tar
+  . [(0 0 20260702 44) nil "ELisp intro manual in NL" tar
      ((:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-nl.html")
-      (:commit . "b18daf7b43a666b9ec24216b367b9576ac663a63"))])
+      (:commit . "a45a02dbdeb45067e51aa51c3bf5f5d746757cb8"))])
  (embark
   . [(1 2 0 20260609 21) ((emacs (29 1)) (compat (31)))
      "Conveniently act on minibuffer completions" tar
@@ -1889,13 +1889,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 3 1 0 20260530 4) ((emacs (29 1)))
+  . [(0 3 1 0 20260702 17) ((emacs (29 1)))
      "Described keymaps with popup help" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-keymap-popup")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "72e406033618b49571ab2895bf183ce23aa7b21f"))])
+      (:commit . "25011805882a715c8b5b16650e38b86a42304e7b"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -2247,13 +2247,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "8d70286c3fda845f3b8d97a937248670ca002f13"))])
  (modus-themes
-  . [(5 3 0 0 20260628 2) ((emacs (28 1)))
+  . [(5 3 0 0 20260702 7) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "9172a0e8efda63ada2cb4aeff01124260a672c1e"))])
+      (:commit . "a071a9d8e7d1df643e7cc5cfec0928d28f00fec6"))])
  (mpdired
   . [(40 20250502 114712) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
