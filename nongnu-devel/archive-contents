@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 20260703 21)
+  . [(2 0 0 20260704 22)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "c52f6661bd57e4e3c9dac9515a0972028eeb063a"))])
+      (:commit . "1a1ca2dd5dc8afb19a4824f35229fbb43d9ddfa4"))])
  (clojure-mode
   . [(5 23 0 0 20260615 3) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -947,7 +947,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260703 52)
+  . [(0 9 9 5 0 20260704 55)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -956,7 +956,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "54197735aa2557eb9dd9554aab06afbd13e6b4a4"))])
+      (:commit . "3bc90bdfb97a7d8051b4aada66bd0609d1e26faa"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1238,13 +1238,13 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "50cac3f726abd4e7872b8fa36ede72550ce66a64"))])
  (loopy
-  . [(0 16 1 0 20260703 2)
+  . [(0 16 1 0 20260704 3)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://codeberg.org/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "5cd39a76ed340c69f07e7d5116b1df2e297e31cd"))])
+      (:commit . "c845e017afd729f766b6d0aab10eec9351703753"))])
  (loopy-dash
   . [(0 13 0 0 20260626 9)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))
@@ -1613,12 +1613,12 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "e1e290bff64f4dedeaf6a3d03eaf06b2ab7284d7"))])
  (php-mode
-  . [(1 26 1 0 20260702 44) ((emacs (27 1)))
+  . [(1 26 1 0 20260704 46) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "a6a79415a834b4da213f8e74b55bbb5f4dae9210"))])
+      (:commit . "e175393855bba23865d81c4a4d380b54c4506196"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 0 0 0 20260703 27) ((emacs (28 1)) (compat (30)))
+  . [(3 1 0 0 20260704 1) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "20790ced514d3adb1e107ade6212363ae796edd2"))])
+      (:commit . "0c60eed331593c95c61b7f774850abadb2dc716e"))])
  (proof-general
   . [(4 60 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -2240,12 +2240,12 @@
       (:authors ("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
       (:commit . "606ee926df6839243098de6d71332a697518cb86"))])
  (zenburn-theme
-  . [(2 10 0 0 20260703 1) nil "A low contrast color theme for Emacs."
+  . [(2 10 0 0 20260704 2) nil "A low contrast color theme for Emacs."
      tar
      ((:url . "https://github.com/bbatsov/zenburn-emacs")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com"))
-      (:commit . "cf78d6fc0268a415332d766e319c94076c8b4dc1"))])
+      (:commit . "53166b9f5782ada054eb8645d3096e40a38da8d6"))])
  (zig-mode
   . [(0 0 8 0 20251128 25646) ((emacs (26 1)) (reformatter (0 6)))
      "A major mode for the Zig programming language" tar

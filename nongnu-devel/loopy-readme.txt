@@ -34,6 +34,9 @@ _Recent breaking changes:_
 • Unreleased:
   • The deprecated variables `loopy-command-parsers' and `loopy-aliases'
     were removed.  Use `loopy-parsers' instead.
+  • `loopy-iter-bare-special-macro-arguments' and
+    `loopy-iter-bare-commands' were removed. Used
+    `loopy-iter-bare-names' instead.
 • Version 0.16.0:
   • Using accumulation commands with different initial values for the
     same variable now signals an error instead of a warning.
