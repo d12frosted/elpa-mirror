@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 20260703 8)
+  . [(2 0 0 20260703 21)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "7c74030b68b64cbe15b5db88679a8aa1c54770da"))])
+      (:commit . "c52f6661bd57e4e3c9dac9515a0972028eeb063a"))])
  (clojure-mode
   . [(5 23 0 0 20260615 3) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -947,7 +947,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260702 48)
+  . [(0 9 9 5 0 20260703 52)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -956,7 +956,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "7bb1f4c48a2653cd1a6aad60c2beee07a6a91e48"))])
+      (:commit . "54197735aa2557eb9dd9554aab06afbd13e6b4a4"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1238,13 +1238,13 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "50cac3f726abd4e7872b8fa36ede72550ce66a64"))])
  (loopy
-  . [(0 16 1 0 20260627 1)
+  . [(0 16 1 0 20260703 2)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://codeberg.org/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "eabf21e3d92e72d30f99acb6f6fa59cd56f560d9"))])
+      (:commit . "5cd39a76ed340c69f07e7d5116b1df2e297e31cd"))])
  (loopy-dash
   . [(0 13 0 0 20260626 9)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))
@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 0 0 0 20260701 2) ((emacs (28 1)) (compat (30)))
+  . [(3 0 0 0 20260703 27) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "98cf6b6dbb1fcca6ac386dd75a2656db5ca97ac5"))])
+      (:commit . "20790ced514d3adb1e107ade6212363ae796edd2"))])
  (proof-general
   . [(4 60 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -1824,11 +1824,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "e1c482700d2b32b09c16db3067c0a4958dd20c2a"))])
  (slime
-  . [(2 320 20260612 49) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 320 20260703 50) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "b38be925a128dc3d6524121692988cb900fbcbf8"))])
+      (:commit . "883b19c77ca42f827b5e4631c5428e244c2e063c"))])
  (sly
   . [(1 0 43 0 20260402 224912) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -1845,13 +1845,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 1 0 0 20260610 7) ((emacs (24 1))) "The Solarized color theme"
+  . [(2 1 0 0 20260703 8) ((emacs (24 1))) "The Solarized color theme"
      tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "0d9d9efff196d8d8ee4ac606e70bf062a057136b"))])
+      (:commit . "1bca851d0135b5022c405cf5e983cf3fe6f60ce0"))])
  (spacemacs-theme
   . [(0 2 0 20260523 125627) ((emacs (24)))
      "Color theme with a dark and light versions." tar
@@ -1924,13 +1924,13 @@
 		("Arthur Evstifeev" . "lod@pisem.net"))
       (:commit . "475b8186ed97381e9e58ec2efa908dbbf6a38d3f"))])
  (symbol-overlay
-  . [(4 3 0 20260423 145452) ((emacs (24 3)) (seq (2 2)))
+  . [(4 3 0 20260703 4) ((emacs (24 3)) (seq (2 2)))
      "Highlight symbols with keymap-enabled overlays" tar
      ((:url . "https://github.com/wolray/symbol-overlay/")
       (:keywords "faces" "matching")
       (:maintainer "wolray" . "wolray@foxmail.com")
       (:authors ("wolray" . "wolray@foxmail.com"))
-      (:commit . "253b957f5082603708b469d02ae8c31c58292823"))])
+      (:commit . "85d100b0cca35b70cee1b260e09af8e1fb2fcc08"))])
  (systemd
   . [(1 6 1 0 20230131 220207) ((emacs (24 4)))
      "Major mode for editing systemd units" tar
@@ -2240,12 +2240,12 @@
       (:authors ("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
       (:commit . "606ee926df6839243098de6d71332a697518cb86"))])
  (zenburn-theme
-  . [(2 10 0 0 20260601 0) nil "A low contrast color theme for Emacs."
+  . [(2 10 0 0 20260703 1) nil "A low contrast color theme for Emacs."
      tar
      ((:url . "https://github.com/bbatsov/zenburn-emacs")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com"))
-      (:commit . "8697934a57151de119744ea79fde83120e05b88d"))])
+      (:commit . "cf78d6fc0268a415332d766e319c94076c8b4dc1"))])
  (zig-mode
   . [(0 0 8 0 20251128 25646) ((emacs (26 1)) (reformatter (0 6)))
      "A major mode for the Zig programming language" tar

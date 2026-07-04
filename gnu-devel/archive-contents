@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "5faab28916603bb324d9faba057021ce028ca847"))])
  (auctex
-  . [(14 1 2 0 20260623 43) ((emacs (28 1)))
+  . [(14 1 2 0 20260703 45) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "69aa7cdd8a929995456e04f35bd23712797a1b18"))])
+      (:commit . "18623e2704230a1c8e4d5277962755c9fafe318c"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -546,7 +546,7 @@
       (:authors ("Ingo Lohmar" . "i.lohmar@gmail.com"))
       (:commit . "120e982f47e01945c044e0762ba376741c41b76c"))])
  (compat
-  . [(31 0 0 1 0 20260701 3) ((emacs (25 1)))
+  . [(31 0 0 1 0 20260703 4) ((emacs (25 1)))
      "Emacs Lisp Compatibility Library" tar
      ((:url . "https://github.com/emacs-compat/compat")
       (:keywords "lisp" "maint")
@@ -554,7 +554,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Philip Kaludercic" . "philipk@posteo.net")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "076dce861a56d683043ccee28d34eb55c2e27eac"))])
+      (:commit . "dd66b81feed6fc3f250d3b979fb56d9117014f8c"))])
  (cond-star
   . [(1 0 0 20260523 114724) ((emacs (24 3)))
      "Extended form of `cond' construct" tar
