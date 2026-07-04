@@ -9,7 +9,7 @@ Input is transformed to regex expression like:
 Configuration in ~/.emacs or ~/.emacs.d/init.el:
 
 (require 'pinyin-isearch)
-(pinyin-isearch--load) ; force loading (optional) before mode
+(pinyin-isearch-load) ; force loading (optional) before mode
 
 ;; Usage:
 
@@ -17,8 +17,9 @@ M-x pinyin-isearch-mode
 C-u C-s for normal search.
 or
 C-s M-s p/h/s - to activate (p)inyin or (h) Chonese characters (s)trict
-Chinese characters search submode.
-or without activation of minor mode
+C-s M-s F1 - to see all keys
+
+Usage without activation of minor mode is possible with:
 M-x pinyin-isearch-forward/backward
 
 Customization:
@@ -32,8 +33,7 @@ It is possible to adopt this code to many other languages.
 Search variants:
 
 By default active search for both pinyin and chinese characters
- with fallback to normal characters. Fallback works for characters
- after pinyin or chinese, not from fist one.
+ with fallback to latin normal characters.
 
 ;; Other packages:
 
@@ -53,7 +53,3 @@ By default active search for both pinyin and chinese characters
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25
 - USDT (Tether) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
-
-;; TODO:
-- fallback to latin search in pinyin or chinese characters was not
- found.
