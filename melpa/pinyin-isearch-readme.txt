@@ -1,10 +1,16 @@
 There are two types of search: for pinyin (pīnyīn) and for Chinese
 characters (汉字) text.
+查找有两种类型：一种是拼音（pīnyīn）查找，另一种是汉字（汉字）查找。
 
 You can use both or select one of them.
+你可以同时使用两种，或者只选一种。
 Pinyin without tones is used for input.
+输入时使用不带声调的拼音。
 Input is transformed to regex expression like:
+输入会被转化为类似这样的正则表达式：
 "\\([嗯唔][爱哀挨埃癌]\\|[乃奶奈耐氖艿鼐柰]\\|n\\([ūúǔùǖǘǚǜ]\\s-*e\\|ü[ēéěè]\\)\\)"
+
+Based on Emacs "chinese-sisheng", "chinese-py", "chinese-punct".
 
 Configuration in ~/.emacs or ~/.emacs.d/init.el:
 
@@ -19,7 +25,7 @@ or
 C-s M-s p/h/s - to activate (p)inyin or (h) Chonese characters (s)trict
 C-s M-s F1 - to see all keys
 
-Usage without activation of minor mode is possible with:
+Usage without activation of minor mode:
 M-x pinyin-isearch-forward/backward
 
 Customization:
@@ -53,3 +59,9 @@ By default active search for both pinyin and chinese characters
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25
 - USDT (Tether) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
+
+;; Todo:
+- Upperacase for pinyin.
+- Cangjie search
+- method for  getting pinyin for chinese characters.
+- allow connecting other input methods.
