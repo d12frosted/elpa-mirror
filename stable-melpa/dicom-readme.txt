@@ -9,7 +9,7 @@ image files interactively.
 
 Emacs must be compiled with support for PNG, SVG and XML.  The package relies
 on external programs from the dcmtk DICOM toolkit, which are widely available
-on Linux distributions.
+on Linux distributions.  Some other programs are used as optional fallbacks.
 
 - `dcm2xml' and `dcm2img' from the dcmtk DICOM toolkit
 - `magick' as fallback for image conversion (optional)

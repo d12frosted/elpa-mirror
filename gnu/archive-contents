@@ -543,12 +543,12 @@
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:commit . "9bb68cf3941eb618fff18bd7626164951c70eb8a"))])
  (consult-denote
-  . [(0 5 0) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
+  . [(0 5 1) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
      ((:url . "https://github.com/protesilaos/consult-denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f12c9903a0aa5c534503d9daa07fa5057dc7133c"))])
+      (:commit . "0fbd723e7f4d824902b0a4b712b92c66a1eaf97e"))])
  (consult-hoogle
   . [(0 7 0) ((emacs (28 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
@@ -768,12 +768,12 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "841cf148a56a6c62fb483d5529a45c689b04049e"))])
  (denote-silo
-  . [(0 3 0) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 2) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for using Denote in multiple silos" tar
      ((:url . "https://github.com/protesilaos/denote-silo")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "342d5e7e1bd63ce742a0362911c47da1ec63e868"))])
+      (:commit . "41985759d29d4a673055a0d0bd08e2ada88cffe8"))])
  (detached
   . [(0 10 1) ((emacs (27 1)))
      "A package to launch, and manage, detached processes" tar
@@ -2275,13 +2275,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "cebe19e3cf0f30604d1ed1bfaa74fff21a4e89a5"))])
  (org
-  . [(9 8 6) ((emacs (28 2)))
+  . [(9 8 7) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "dcb8f00ec7605327dcd32562c2a51ad278f7af28"))])
+      (:commit . "cdc16898fd46a30d7187c0a5830b2b898ffbd2de"))])
  (org-contacts
   . [(1 3) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar

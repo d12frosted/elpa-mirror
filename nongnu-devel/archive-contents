@@ -364,12 +364,12 @@
       (:authors ("Susam Pal" . "susam@susam.net"))
       (:commit . "c2dc9fc2886471daff654e12b46a144a4d1361ae"))])
  (diff-ansi
-  . [(0 2 0 20260524 93804) ((emacs (29 1)))
+  . [(0 2 0 20260529 60) ((emacs (29 1)))
      "Display diffs using alternative diffing tools" tar
      ((:url . "https://codeberg.org/ideasman42/emacs-diff-ansi")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "2edacc2c6bda60b1be7bf5dfdde006a9a7018af5"))])
+      (:commit . "1019b341897a2abc944a6bf9914fab344a37e5d5"))])
  (dirvish
   . [(2 3 0 0 20250504 80741) ((emacs (28 1)) (compat (30)))
      "A modern file manager based on dired mode" tar
@@ -1238,13 +1238,13 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "50cac3f726abd4e7872b8fa36ede72550ce66a64"))])
  (loopy
-  . [(0 16 1 0 20260704 3)
+  . [(0 16 1 0 20260704 4)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://codeberg.org/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "c845e017afd729f766b6d0aab10eec9351703753"))])
+      (:commit . "3e5d417d0f9ce63caf1cadd7d2776d590bccf24f"))])
  (loopy-dash
   . [(0 13 0 0 20260626 9)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))
@@ -1604,14 +1604,14 @@
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
       (:commit . "365f88238f46f9b1425685562105881800f10386"))])
  (pg
-  . [(0 67 0 20260610 2) ((emacs (28 1)) (peg (1 0 1)))
+  . [(0 67 0 20260704 4) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
      ((:url . "https://github.com/emarsden/pg-el")
       (:keywords "data" "comm" "database" "postgresql")
       (:maintainer "Eric Marsden"
 		   . "eric.marsden@risk-engineering.org")
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-      (:commit . "e1e290bff64f4dedeaf6a3d03eaf06b2ab7284d7"))])
+      (:commit . "618b6b19e8bd4c2994c4e37953e3a5eadee49406"))])
  (php-mode
   . [(1 26 1 0 20260704 46) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 1 0 0 20260704 1) ((emacs (28 1)) (compat (30)))
+  . [(3 1 0 0 20260704 4) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "0c60eed331593c95c61b7f774850abadb2dc716e"))])
+      (:commit . "e281754cf64a310276b9512cced2a31f98965f4c"))])
  (proof-general
   . [(4 60 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

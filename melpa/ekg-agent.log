@@ -2,12 +2,13 @@
  • Building package ekg-agent
 From https://github.com/ahyatt/ekg
 Updating /mnt/store/melpa/working/ekg-agent/
-Checking out 2330740b43cd68063499a8e71b9b07e66dc74082
+Checking out 370f4bce464acd3930ae5181833854983bb40072
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg-agent/
-  to /tmp/ekg-agent-cXFxL4/ekg-agent-20260624.333/
+  to /tmp/ekg-agent-TS8lRV/ekg-agent-20260704.1818/
     ekg-agent.el -> ekg-agent.el
   ! agent_tools/ekg-add-note -> ekg-add-note
+  ! agent_tools/ekg-agent-debug-analyzer => ekg-agent-debug-analyzer
   ! agent_tools/ekg-append-note -> ekg-append-note
   ! agent_tools/ekg-org-add-child -> ekg-org-add-child
   ! agent_tools/ekg-org-edit -> ekg-org-edit
@@ -16,17 +17,23 @@ Copying files (->) and directories (=>)
   ! agent_tools/ekg-trash -> ekg-trash
   ! agent_tools/ekg-update-tags -> ekg-update-tags
   ! agent_tools/skill.md -> skill.md
-Created ekg-agent-20260624.333.tar containing:
-  ekg-agent-20260624.333/
-  ekg-agent-20260624.333/ekg-add-note
-  ekg-agent-20260624.333/ekg-agent-pkg.el
-  ekg-agent-20260624.333/ekg-agent.el
-  ekg-agent-20260624.333/ekg-append-note
-  ekg-agent-20260624.333/ekg-org-add-child
-  ekg-agent-20260624.333/ekg-org-edit
-  ekg-agent-20260624.333/ekg-read
-  ekg-agent-20260624.333/ekg-tags
-  ekg-agent-20260624.333/ekg-trash
-  ekg-agent-20260624.333/ekg-update-tags
-  ekg-agent-20260624.333/skill.md
-Built ekg-agent in 2.616s, finished at 2026-07-04T16:08:42+0000
+Created ekg-agent-20260704.1818.tar containing:
+  ekg-agent-20260704.1818/
+  ekg-agent-20260704.1818/ekg-add-note
+  ekg-agent-20260704.1818/ekg-agent-debug-analyzer/
+  ekg-agent-20260704.1818/ekg-agent-debug-analyzer/SKILL.md
+  ekg-agent-20260704.1818/ekg-agent-debug-analyzer/agents/
+  ekg-agent-20260704.1818/ekg-agent-debug-analyzer/agents/openai.yaml
+  ekg-agent-20260704.1818/ekg-agent-debug-analyzer/scripts/
+  ekg-agent-20260704.1818/ekg-agent-debug-analyzer/scripts/analyze_debug_json.py
+  ekg-agent-20260704.1818/ekg-agent-pkg.el
+  ekg-agent-20260704.1818/ekg-agent.el
+  ekg-agent-20260704.1818/ekg-append-note
+  ekg-agent-20260704.1818/ekg-org-add-child
+  ekg-agent-20260704.1818/ekg-org-edit
+  ekg-agent-20260704.1818/ekg-read
+  ekg-agent-20260704.1818/ekg-tags
+  ekg-agent-20260704.1818/ekg-trash
+  ekg-agent-20260704.1818/ekg-update-tags
+  ekg-agent-20260704.1818/skill.md
+Built ekg-agent in 3.527s, finished at 2026-07-04T23:57:15+0000

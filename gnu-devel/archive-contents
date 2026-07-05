@@ -577,13 +577,13 @@
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:commit . "5849e82baeaff378b5e2d88c5d81cf7d314d43aa"))])
  (consult-denote
-  . [(0 5 0 0 20260520 122738)
+  . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
      ((:url . "https://github.com/protesilaos/consult-denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f12c9903a0aa5c534503d9daa07fa5057dc7133c"))])
+      (:commit . "0fbd723e7f4d824902b0a4b712b92c66a1eaf97e"))])
  (consult-hoogle
   . [(0 7 0 0 20260430 125841) ((emacs (28 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
@@ -818,12 +818,12 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "841cf148a56a6c62fb483d5529a45c689b04049e"))])
  (denote-silo
-  . [(0 3 0 0 20260520 122913) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 2 0 20260704 0) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for using Denote in multiple silos" tar
      ((:url . "https://github.com/protesilaos/denote-silo")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "342d5e7e1bd63ce742a0362911c47da1ec63e868"))])
+      (:commit . "41985759d29d4a673055a0d0bd08e2ada88cffe8"))])
  (detached
   . [(0 10 1 0 20221129 143049) ((emacs (27 1)))
      "A package to launch, and manage, detached processes" tar
@@ -1305,7 +1305,7 @@
       (:url . "https://elpa.gnu.org/packages/external-completion.html")
       (:commit . "92788f3be43b43f82876b9d0e263d5e55d00ec0e"))])
  (exwm
-  . [(0 35 0 20260701 1) ((emacs (29 1)) (xelb (0 22)) (compat (31)))
+  . [(0 35 0 20260704 2) ((emacs (29 1)) (xelb (0 23)) (compat (31)))
      "Emacs X Window Manager" tar
      ((:url . "https://github.com/emacs-exwm/exwm") (:keywords "unix")
       (:maintainer
@@ -1313,7 +1313,7 @@
        ("Steven Allen" . "steven@stebalien.com")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Chris Feng" . "chris.w.feng@gmail.com"))
-      (:commit . "b9abfd127e1fb2b3dbb5b2dc4650b5012ff58dcb"))])
+      (:commit . "2d0fb41793f8bc50abdea394f48b4653e8317286"))])
  (f90-interface-browser
   . [(1 1 0 20221221 75553) ((cl-lib (0 7)))
      "Parse and browse f90 interfaces" tar
@@ -1386,14 +1386,14 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "d72e3ad4cdfd5cea1509a241d55e18f54ae2aeca"))])
  (flymake-proselint
-  . [(0 3 0 0 20230325 160756) ((emacs (27 1)))
+  . [(0 3 0 0 20260704 11) ((emacs (27 1)))
      "Flymake backend for proselint" tar
      ((:url . "https://git.sr.ht/~manuel-uberti/flymake-proselint")
       (:keywords "convenience")
       (:maintainer "Manuel Uberti"
 		   . "~manuel-uberti/flymake-proselint@lists.sr.ht")
       (:authors ("Manuel Uberti" . "manuel.uberti@inventati.org"))
-      (:commit . "d93ee5b1f0c9a20fe04f263c0988769c439b3c13"))])
+      (:commit . "faa8091d83e5cd80fd6feae37d721f265ccb09d8"))])
  (fontaine
   . [(3 1 0 0 20260629 0) ((emacs (29 1)))
      "Set font configurations using presets" tar
@@ -2448,13 +2448,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "0ffd9d6903714c1f6d8fcbb6a20941fb33dd7ae5"))])
  (org
-  . [(10 0 20260629 366) ((emacs (28 2)))
+  . [(10 0 20260704 367) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "3e36999284b900dfd0059ca42558d26e63f8242d"))])
+      (:commit . "fd5d3b1a599aad17ff67a2625a1725df520976ce"))])
  (org-contacts
   . [(1 3 0 20260221 85240) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar

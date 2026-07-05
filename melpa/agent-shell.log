@@ -2,10 +2,10 @@
  • Building package agent-shell
 From https://github.com/xenodium/agent-shell
 Updating /mnt/store/melpa/working/agent-shell/
-Checking out 8d97dd46046d7aa639742efde75dcbb719ed3b38
+Checking out 720cecd2ee51349a90595c0bf3296ec5b94396c7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/agent-shell/
-  to /tmp/agent-shell-8B8WoE/agent-shell-20260704.1146/
+  to /tmp/agent-shell-cu6QSg/agent-shell-20260704.1959/
     agent-shell-active-message.el -> agent-shell-active-message.el
     agent-shell-anthropic.el -> agent-shell-anthropic.el
     agent-shell-artist.el -> agent-shell-artist.el
@@ -42,43 +42,43 @@ Copying files (->) and directories (=>)
     agent-shell-viewport.el -> agent-shell-viewport.el
     agent-shell-worktree.el -> agent-shell-worktree.el
     agent-shell.el -> agent-shell.el
-Created agent-shell-20260704.1146.tar containing:
-  agent-shell-20260704.1146/
-  agent-shell-20260704.1146/agent-shell-active-message.el
-  agent-shell-20260704.1146/agent-shell-anthropic.el
-  agent-shell-20260704.1146/agent-shell-artist.el
-  agent-shell-20260704.1146/agent-shell-auggie.el
-  agent-shell-20260704.1146/agent-shell-cline.el
-  agent-shell-20260704.1146/agent-shell-codebuddy.el
-  agent-shell-20260704.1146/agent-shell-completion.el
-  agent-shell-20260704.1146/agent-shell-config.el
-  agent-shell-20260704.1146/agent-shell-cursor.el
-  agent-shell-20260704.1146/agent-shell-devcontainer.el
-  agent-shell-20260704.1146/agent-shell-diff.el
-  agent-shell-20260704.1146/agent-shell-droid.el
-  agent-shell-20260704.1146/agent-shell-experimental.el
-  agent-shell-20260704.1146/agent-shell-github.el
-  agent-shell-20260704.1146/agent-shell-google.el
-  agent-shell-20260704.1146/agent-shell-goose.el
-  agent-shell-20260704.1146/agent-shell-heartbeat.el
-  agent-shell-20260704.1146/agent-shell-hermes.el
-  agent-shell-20260704.1146/agent-shell-kimi.el
-  agent-shell-20260704.1146/agent-shell-kiro.el
-  agent-shell-20260704.1146/agent-shell-list-edit.el
-  agent-shell-20260704.1146/agent-shell-markdown.el
-  agent-shell-20260704.1146/agent-shell-mistral.el
-  agent-shell-20260704.1146/agent-shell-mock-agent.el
-  agent-shell-20260704.1146/agent-shell-omp.el
-  agent-shell-20260704.1146/agent-shell-openai.el
-  agent-shell-20260704.1146/agent-shell-opencode.el
-  agent-shell-20260704.1146/agent-shell-pi.el
-  agent-shell-20260704.1146/agent-shell-pkg.el
-  agent-shell-20260704.1146/agent-shell-project.el
-  agent-shell-20260704.1146/agent-shell-qwen.el
-  agent-shell-20260704.1146/agent-shell-styles.el
-  agent-shell-20260704.1146/agent-shell-ui.el
-  agent-shell-20260704.1146/agent-shell-usage.el
-  agent-shell-20260704.1146/agent-shell-viewport.el
-  agent-shell-20260704.1146/agent-shell-worktree.el
-  agent-shell-20260704.1146/agent-shell.el
-Built agent-shell in 4.757s, finished at 2026-07-04T15:53:11+0000
+Created agent-shell-20260704.1959.tar containing:
+  agent-shell-20260704.1959/
+  agent-shell-20260704.1959/agent-shell-active-message.el
+  agent-shell-20260704.1959/agent-shell-anthropic.el
+  agent-shell-20260704.1959/agent-shell-artist.el
+  agent-shell-20260704.1959/agent-shell-auggie.el
+  agent-shell-20260704.1959/agent-shell-cline.el
+  agent-shell-20260704.1959/agent-shell-codebuddy.el
+  agent-shell-20260704.1959/agent-shell-completion.el
+  agent-shell-20260704.1959/agent-shell-config.el
+  agent-shell-20260704.1959/agent-shell-cursor.el
+  agent-shell-20260704.1959/agent-shell-devcontainer.el
+  agent-shell-20260704.1959/agent-shell-diff.el
+  agent-shell-20260704.1959/agent-shell-droid.el
+  agent-shell-20260704.1959/agent-shell-experimental.el
+  agent-shell-20260704.1959/agent-shell-github.el
+  agent-shell-20260704.1959/agent-shell-google.el
+  agent-shell-20260704.1959/agent-shell-goose.el
+  agent-shell-20260704.1959/agent-shell-heartbeat.el
+  agent-shell-20260704.1959/agent-shell-hermes.el
+  agent-shell-20260704.1959/agent-shell-kimi.el
+  agent-shell-20260704.1959/agent-shell-kiro.el
+  agent-shell-20260704.1959/agent-shell-list-edit.el
+  agent-shell-20260704.1959/agent-shell-markdown.el
+  agent-shell-20260704.1959/agent-shell-mistral.el
+  agent-shell-20260704.1959/agent-shell-mock-agent.el
+  agent-shell-20260704.1959/agent-shell-omp.el
+  agent-shell-20260704.1959/agent-shell-openai.el
+  agent-shell-20260704.1959/agent-shell-opencode.el
+  agent-shell-20260704.1959/agent-shell-pi.el
+  agent-shell-20260704.1959/agent-shell-pkg.el
+  agent-shell-20260704.1959/agent-shell-project.el
+  agent-shell-20260704.1959/agent-shell-qwen.el
+  agent-shell-20260704.1959/agent-shell-styles.el
+  agent-shell-20260704.1959/agent-shell-ui.el
+  agent-shell-20260704.1959/agent-shell-usage.el
+  agent-shell-20260704.1959/agent-shell-viewport.el
+  agent-shell-20260704.1959/agent-shell-worktree.el
+  agent-shell-20260704.1959/agent-shell.el
+Built agent-shell in 9.559s, finished at 2026-07-04T23:41:30+0000
