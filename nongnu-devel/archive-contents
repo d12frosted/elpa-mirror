@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 8 0 20260701 0)
+  . [(1 8 0 20260705 2)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "7496878820661a950ef1b28ce8814177b3010825"))])
+      (:commit . "2e804a3129758aaad4bd8c28f2eb625ec4794aab"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 1 0 0 20260704 4) ((emacs (28 1)) (compat (30)))
+  . [(3 1 0 0 20260705 6) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "e281754cf64a310276b9512cced2a31f98965f4c"))])
+      (:commit . "02407c70b43a43d9c2373c92c5958d9fc1a3796d"))])
  (proof-general
   . [(4 60 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

@@ -23,7 +23,8 @@ opens `DICOMDIR' directory files or DICOM image files interactively.
 
   Emacs must be compiled with support for PNG, SVG and XML. The package
   relies on external programs from the [DCMTK] DICOM toolkit, which is
-  widely available on Linux distributions.
+  widely available on Linux distributions. Some other programs are used
+  as optional fallbacks.
 
   • `dcm2xml' and `dcm2img' from the [DCMTK] DICOM toolkit
   • `magick' from [ImageMagick] (optional fallback)
@@ -51,5 +52,9 @@ opens `DICOMDIR' directory files or DICOM image files interactively.
   DICOM viewer is unable to display files, if the metadata records are
   not interpreted properly.  Furthermore the DICOM format supports a
   variety of underlying image formats and compressions, which might not
-  be supported by the converter. In such cases, any help improving the
-  package is welcome.
+  be supported by the [dicom-convert.sh] shell script.  Help improving
+  the package is very welcome!
+
+
+[dicom-convert.sh]
+<https://github.com/minad/dicom/blob/main/dicom-convert.sh>
