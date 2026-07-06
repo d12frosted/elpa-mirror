@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "5faab28916603bb324d9faba057021ce028ca847"))])
  (auctex
-  . [(14 1 2 0 20260703 45) ((emacs (28 1)))
+  . [(14 1 2 0 20260705 46) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "18623e2704230a1c8e4d5277962755c9fafe318c"))])
+      (:commit . "7c4d522678e855444c30cdefc68e51bbcd69bb50"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -818,12 +818,12 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "841cf148a56a6c62fb483d5529a45c689b04049e"))])
  (denote-silo
-  . [(0 3 2 0 20260704 0) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 2 0 20260705 4) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for using Denote in multiple silos" tar
      ((:url . "https://github.com/protesilaos/denote-silo")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "41985759d29d4a673055a0d0bd08e2ada88cffe8"))])
+      (:commit . "bbff480f6e0865513dd3a97094bdb50b4d000573"))])
  (detached
   . [(0 10 1 0 20221129 143049) ((emacs (27 1)))
      "A package to launch, and manage, detached processes" tar
@@ -2448,13 +2448,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "0ffd9d6903714c1f6d8fcbb6a20941fb33dd7ae5"))])
  (org
-  . [(10 0 20260704 367) ((emacs (28 2)))
+  . [(10 0 20260705 370) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "fd5d3b1a599aad17ff67a2625a1725df520976ce"))])
+      (:commit . "13a25caeb2f71b2ddf19a8fae3316195302e8959"))])
  (org-contacts
   . [(1 3 0 20260221 85240) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2567,13 +2567,13 @@
       (:url . "https://elpa.gnu.org/packages/osc.html")
       (:commit . "62eda3d8fb288b6a16c35a7220a507d0991c5a74"))])
  (osm
-  . [(2 3 0 20260628 4) ((emacs (29 1)) (compat (31)))
+  . [(2 4 0 20260705 0) ((emacs (29 1)) (compat (31)))
      "OpenStreetMap viewer" tar
      ((:url . "https://github.com/minad/osm")
       (:keywords "network" "multimedia" "hypermedia" "mouse")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "b94345668905e36a575906d43fc19b6255c4b8cc"))])
+      (:commit . "d6167ca4f99bead657ac6f7f163c1fcf9b34267f"))])
  (other-frame-window
   . [(1 0 6 0 20221221 81352) ((emacs (24 4)))
      "Minor mode to enable global prefix keys for other frame/window buffer placement"
@@ -3465,13 +3465,13 @@
       (:url . "https://elpa.gnu.org/packages/temp-buffer-browse.html")
       (:commit . "db6041b0413fdeefb1f1285e1d9c1039c10fbf04"))])
  (tempel
-  . [(1 13 0 20260628 2) ((emacs (29 1)) (compat (31)))
+  . [(1 14 0 20260705 0) ((emacs (29 1)) (compat (31)))
      "Tempo templates/snippets with in-buffer field editing" tar
      ((:url . "https://github.com/minad/tempel")
       (:keywords "abbrev" "languages" "tools" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "6f974483549316b9bd44921691a0b272109f99ce"))])
+      (:commit . "c5fdc3806b486d9d86a54c50efac3d4a141e789d"))])
  (termint
   . [(0 2 3 0 20260517 165016) ((emacs (29 1)))
      "Run REPLs in a terminal backend" tar
@@ -3989,13 +3989,13 @@
       (:authors ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
       (:commit . "e3ceac0f8c8ea4d742497b71141886c810fffef6"))])
  (with-command-redo
-  . [(0 1 0 20260504 211611) ((emacs (29 1)))
+  . [(0 1 0 20260705 3) ((emacs (29 1)))
      "Repeat commands with automatic undo" tar
      ((:url
        . "https://codeberg.org/ideasman42/emacs-with-command-redo")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "d1c4be4bb3fb22dff8fcfb562912760be3a685e8"))])
+      (:commit . "a792d4880627bff5b229b2cad58cc56b9f559325"))])
  (wpuzzle
   . [(1 1 0 20221221 82918) nil "find as many word in a given time"
      tar

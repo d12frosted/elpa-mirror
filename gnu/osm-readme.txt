@@ -80,7 +80,7 @@ Table of Contents
 
 [ELPA] <https://elpa.gnu.org/packages/osm.html>
 
-[MELPA] <https://melpa.org/#/osm>
+[MELPA] <https://releases.melpa.org/#/osm>
 
 [OpenStreetMap Wiki]
 <https://wiki.openstreetmap.org/wiki/Raster_tile_providers>

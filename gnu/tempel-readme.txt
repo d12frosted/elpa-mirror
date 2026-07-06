@@ -119,7 +119,7 @@ Table of Contents
 
 [ELPA] <https://elpa.gnu.org/packages/tempel.html>
 
-[MELPA] <https://melpa.org/#/tempel>
+[MELPA] <https://releases.melpa.org/#/tempel>
 
 [tempel-collection] <https://github.com/Crandel/tempel-collection>
 

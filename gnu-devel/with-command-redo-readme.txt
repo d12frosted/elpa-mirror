@@ -20,6 +20,8 @@ This package exposes:
 - ``with-command-redo`` macro.
 - ``with-command-redo-fn`` function variant.
 - ``with-command-redo-active-p`` query if a redo-chain is active, takes a single ``id`` symbol.
+- ``with-command-redo-break`` end an active redo-chain (so a later call starts a
+  new chain instead of continuing it), takes a single ``id`` symbol.
 
 
 Arguments
