@@ -10,18 +10,30 @@ using all your existing keybindings with zero rebinding.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   (require 'leadkey)
+  (require 'leadkey-which-key)  ; optional which-key integration
+
+  ;;leadkey is not enabled for your insert state
+  (add-to-list 'leadkey-pass-through-predicates #'helixel-insert-state-p)
+
   (leadkey-mode 1)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  Configuration (keyword format)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  (setq leadkey-keys
-   '((:key "<SPC>" :prefix "C-c" :modifier "C-" :fallback "C-"
-      :dispatch ((?x . (:prefix "C-x" :modifier "C-" :fallback "C-"))
-                 (?h . (:prefix "C-h" :modifier nil  :fallback "C-"))
-                 (?m . (:prefix nil  :modifier "M-" :fallback nil))))
-     (:key "," :prefix nil :modifier "C-M-" :fallback nil)))
+(setq leadkey-keys
+  '((:key "<SPC>" :prefix "C-c" :modifier nil :fallback "C-"
+      :dispatch
+      ((?x . (:prefix "C-x" :modifier "C-" :fallback nil
+               ;SPC always toggle (ignore C-x C-SPC)
+               :dispatch ((?\s . :toggle))))
+      (?h . (:prefix "C-h" :modifier nil  :fallback "C-"))
+      (?s . (:prefix "M-s" :modifier nil  :fallback "M-"))
+      (?g . (:prefix "M-g" :modifier nil  :fallback "M-"))
+      (?m . (:prefix nil  :modifier "M-" :fallback nil))))
+    (:key "," :prefix nil :modifier "M-" :fallback nil)
+    (:key "." :prefix nil :modifier "C-M-" :fallback nil
+        :pass-through-predicates (vc-dir-mode))))
 
 Each entry is a plist:
   :key       - leader key string ("<SPC>", ",")

@@ -1081,6 +1081,7 @@
   (denote-project-notes :url "https://git.sr.ht/~swflint/denote-project-notes")
   (denote-regexp :url "https://git.sr.ht/~swflint/denote-regexp")
   (denote-sections :url "https://git.sr.ht/~swflint/denote-sections")
+  (denote-solo :url "https://github.com/pavlo/denote-solo")
   (denote-wordcloud :url "https://codeberg.org/treflip/denote-wordcloud")
   (departure-times-norway :url "https://github.com/hsolg/emacs-departure-times-norway")
   (describe-hash :url "https://github.com/Junker/describe-hash")
