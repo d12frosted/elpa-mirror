@@ -8,6 +8,8 @@ Features:
 - Default widgets: outline, backlinks, unlinked mentions, forward
   links, stats
 - Easy API for creating custom widgets
+- Standalone views: schema dashboard, collection view (a sortable
+  table over a filtered set of notes with marks and bulk actions)
 
 Usage:
   (require 'vulpea-ui)
