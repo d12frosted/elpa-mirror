@@ -61,7 +61,13 @@ By default active search for both pinyin and chinese characters
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
 
 ;; Todo:
+
+- ('’) in (Fāng'àn) apostrophe, syllable delimiter (隔音符号),
+is a strict grammatical requirement used to prevent ambiguity.
+Apostrophe use is rare, generally at word boundaries or within
+compounds. to prevent misreading when a syllable starting
+with a, e, or o follows another syllable directly.
 - Upperacase for pinyin.
 - Cangjie search
 - method for  getting pinyin for chinese characters.
-- allow connecting other input methods.
+ ;; - allow connecting other input methods.
