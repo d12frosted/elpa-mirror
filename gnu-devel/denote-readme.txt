@@ -132,22 +132,23 @@ Table of Contents
 .. 3. Use the `denote-markdown' package to better integrate Markdown with Denote
 .. 4. Use the `denote-journal' package which was formerly `denote-journal-extras.el'
 .. 5. Use the `denote-silo' package which formerly was `denote-silo-extras.el'
-.. 6. Use the `denote-search' package as a search interface
-.. 7. Use the `denote-explore' package to explore your notes
-.. 8. Use the `citar-denote' package for bibliography notes
-.. 9. Use the `consult-notes' package
-.. 10. Use the `denote-menu' package
-.. 11. Use the `denote-review' package
-.. 12. Use the `denote-zettel-interface' package
-.. 13. Use the `mir' package for incremental reading
-.. 14. Use the `denote-journal-capture' package
-.. 15. Use the `denote-agenda' package
-.. 16. Use the `denote-project-notes' package
-.. 17. Use the `denote-regexp' package
-.. 18. Use the `denote-sections' package
-.. 19. Use the `denote-wordcloud' package
-.. 20. Use the `denote-lint' package
-.. 21. Use the `denote-paperless' package
+.. 6. Use the `denote-solo' package
+.. 7. Use the `denote-search' package as a search interface
+.. 8. Use the `denote-explore' package to explore your notes
+.. 9. Use the `citar-denote' package for bibliography notes
+.. 10. Use the `consult-notes' package
+.. 11. Use the `denote-menu' package
+.. 12. Use the `denote-review' package
+.. 13. Use the `denote-zettel-interface' package
+.. 14. Use the `mir' package for incremental reading
+.. 15. Use the `denote-journal-capture' package
+.. 16. Use the `denote-agenda' package
+.. 17. Use the `denote-project-notes' package
+.. 18. Use the `denote-regexp' package
+.. 19. Use the `denote-sections' package
+.. 20. Use the `denote-wordcloud' package
+.. 21. Use the `denote-lint' package
+.. 22. Use the `denote-paperless' package
 21. Extending Denote
 .. 1. Define a custom file type to automatically encrypt new notes
 .. 2. Access the data of the latest note
@@ -3536,8 +3537,9 @@ section 8.4
   • `denote-yaml-front-matter'
 
   These variables have a string value with specifiers that are used by
-  the `format' function.  The formatting operation passes four arguments
-  which include the values of the given entries.  If you are an advanced
+  the `format' function.  The formatting operation passes five arguments
+  which include the values of the given entries: `TITLE', `DATE',
+  `KEYWORDS', `IDENTIFIER', and `SIGNATURE'.  If you are an advanced
   user who wants to edit this variable to affect how front matter is
   produced, consider using something like `%2$s' to control where the
   Nth argument is placed.
@@ -3562,6 +3564,7 @@ section 8.4
   │ #+DATE:       %s
   │ #+FILETAGS:   %s
   │ #+IDENTIFIER: %s
+  │ #+SIGNATURE:  %s
   │ \n")
   │ 
   │ ;; Change the order (notice the %N$s notation)
@@ -3570,6 +3573,7 @@ section 8.4
   │ #+filetags:   %3$s
   │ #+date:       %2$s
   │ #+identifier: %4$s
+  │ #+signature:  %5$s
   │ \n")
   │ 
   │ ;; Remove the date
@@ -3577,12 +3581,14 @@ section 8.4
   │   "#+title:      %1$s
   │ #+filetags:   %3$s
   │ #+identifier: %4$s
+  │ #+signature:  %5$s
   │ \n")
   │ 
   │ ;; Remove the date and the identifier
   │ (setq denote-org-front-matter
   │   "#+title:      %1$s
   │ #+filetags:   %3$s
+  │ #+signature:  %5$s
   │ \n")
   └────
 
@@ -5026,7 +5032,7 @@ section 8.4
   `consult-notes' package]).  It also only works with Denote.
 
 
-[Use the `consult-notes' package] See section 20.9
+[Use the `consult-notes' package] See section 20.10
 
 
 20.2 Use the `denote-sequence' package to write sequence notes or “folgezettel”
@@ -5133,7 +5139,32 @@ section 8.4
 [Maintain separate directory silos for notes] See section 6.7
 
 
-20.6 Use the `denote-search' package as a search interface
+20.6 Use the `denote-solo' package
+──────────────────────────────────
+
+  Denote can operate on one of several independent note collections,
+  what Denote calls “silos” ([Maintain separate directory silos for
+  notes]).  The `denote-silo' package helps with this by prompting the
+  user to pick a silo on every command.
+
+  The `denote-solo' package by Pavlo V. Lysov takes the opposite stance:
+  instead of prompting for a directory on every command, the user picks
+  one - a *solo* - once, and every subsequent Denote command operates on
+  it until the user switches again.
+
+  The active solo is remembered across Emacs sessions and shown in the
+  mode line. Its `denote-keyword-history' is kept separate per solo, so
+  keyword completions do not leak between collections. Toggling back and
+  forth between two solos takes a single keystroke, as the previously
+  active one is pre-selected in the switching prompt.
+
+  ⁃ Git repository: <https://github.com/pavlo/denote-solo>
+
+
+[Maintain separate directory silos for notes] See section 6.7
+
+
+20.7 Use the `denote-search' package as a search interface
 ──────────────────────────────────────────────────────────
 
   [ As part of version `4.0.0', Denote comes with the `denote-grep'
@@ -5158,7 +5189,7 @@ section 8.4
 [Use `denote-grep' to search inside files] See section 17
 
 
-20.7 Use the `denote-explore' package to explore your notes
+20.8 Use the `denote-explore' package to explore your notes
 ───────────────────────────────────────────────────────────
 
   Peter Prevos has developed the `denote-explore' package which provides
@@ -5177,7 +5208,7 @@ section 8.4
   <https://lucidmanager.org/productivity/denote-explore/>.
 
 
-20.8 Use the `citar-denote' package for bibliography notes
+20.9 Use the `citar-denote' package for bibliography notes
 ──────────────────────────────────────────────────────────
 
   Peter Prevos has produced the `citar-denote' package which makes it
@@ -5194,8 +5225,8 @@ section 8.4
   <https://lucidmanager.org/productivity/bibliographic-notes-in-emacs-with-citar-denote/>.
 
 
-20.9 Use the `consult-notes' package
-────────────────────────────────────
+20.10 Use the `consult-notes' package
+─────────────────────────────────────
 
   [ Also check the `consult-denote' package by me (Protesilaos): [Use
     the `consult-denote' package for enhanced minibuffer
@@ -5239,7 +5270,7 @@ See section 20.1
 section 8.4
 
 
-20.10 Use the `denote-menu' package
+20.11 Use the `denote-menu' package
 ───────────────────────────────────
 
   Denote’s file-naming scheme is designed to be efficient and to provide
@@ -5260,7 +5291,7 @@ section 8.4
 <https://github.com/namilus/denote-menu>
 
 
-20.11 Use the `denote-review' package
+20.12 Use the `denote-review' package
 ─────────────────────────────────────
 
   The [`denote-review'] package by Matto Fransen implements a a simple
@@ -5279,7 +5310,7 @@ section 8.4
 [`denote-review'] <https://codeberg.org/mattof/denote-review>
 
 
-20.12 Use the `denote-zettel-interface' package
+20.13 Use the `denote-zettel-interface' package
 ───────────────────────────────────────────────
 
   The [`denote-zettel-interface' package by Kristoffer Balintona] is
@@ -5301,7 +5332,7 @@ section 8.4
 [The file-naming scheme] See section 8
 
 
-20.13 Use the `mir' package for incremental reading
+20.14 Use the `mir' package for incremental reading
 ───────────────────────────────────────────────────
 
   The [mir package] builds on top of `denote', `denote-sequence' and
@@ -5325,7 +5356,7 @@ section 8.4
 [mir package] <https://github.com/gvalson/mir.el>
 
 
-20.14 Use the `denote-journal-capture' package
+20.15 Use the `denote-journal-capture' package
 ──────────────────────────────────────────────
 
   The `denote-journal-capture' package by Samuel W. Flint extends the
@@ -5345,7 +5376,7 @@ section 8.4
 [Create note using Org capture] See section 6.2
 
 
-20.15 Use the `denote-agenda' package
+20.16 Use the `denote-agenda' package
 ─────────────────────────────────────
 
   The `denote-agenda' package by Samuel W. Flint makes it easier to make
@@ -5359,7 +5390,7 @@ section 8.4
   <https://git.sr.ht/~swflint/denote-agenda>.
 
 
-20.16 Use the `denote-project-notes' package
+20.17 Use the `denote-project-notes' package
 ────────────────────────────────────────────
 
   The `denote-project-notes' by Samuel W. Flint makes it possible to
@@ -5372,7 +5403,7 @@ section 8.4
   <https://git.sr.ht/~swflint/denote-project-notes>.
 
 
-20.17 Use the `denote-regexp' package
+20.18 Use the `denote-regexp' package
 ─────────────────────────────────────
 
   The `denote-regexp' package by Samuel W. Flint defines utilities to
@@ -5409,7 +5440,7 @@ section 8.4
 section 10.4
 
 
-20.18 Use the `denote-sections' package
+20.19 Use the `denote-sections' package
 ───────────────────────────────────────
 
   The `denote-sections' package by Samuel W. Flint is meant to provide a
@@ -5419,7 +5450,7 @@ section 10.4
   <https://git.sr.ht/~swflint/denote-sections>.
 
 
-20.19 Use the `denote-wordcloud' package
+20.20 Use the `denote-wordcloud' package
 ────────────────────────────────────────
 
   The `denote-wordcloud' package by Alexander Kuzmin presents a “word
@@ -5433,7 +5464,7 @@ section 10.4
   <https://codeberg.org/treflip/denote-wordcloud>.
 
 
-20.20 Use the `denote-lint' package
+20.21 Use the `denote-lint' package
 ───────────────────────────────────
 
   The `denote-lint' package by Peter Smith provides facilities that
@@ -5444,7 +5475,7 @@ section 10.4
   <https://github.com/psmith1303/denote-lint>.
 
 
-20.21 Use the `denote-paperless' package
+20.22 Use the `denote-paperless' package
 ────────────────────────────────────────
 
   The `denote-paperless' package by Matthieu Muller allows the user to
@@ -6902,23 +6933,23 @@ section 21.13
 
   Variable `denote-org-front-matter'
         Specifies the Org front matter.  It is passed to `format' with
-        arguments `TITLE', `DATE', `KEYWORDS', `ID' ([Change the front
-        matter format])
+        arguments `TITLE', `DATE', `KEYWORDS', `IDENTIFIER', `SIGNATURE'
+        ([Change the front matter format])
 
   Variable `denote-yaml-front-matter'
         Specifies the YAML (Markdown) front matter.  It is passed to
-        `format' with arguments `TITLE', `DATE', `KEYWORDS', `ID'
-        ([Change the front matter format])
+        `format' with arguments `TITLE', `DATE', `KEYWORDS',
+        `IDENTIFIER', `SIGNATURE' ([Change the front matter format])
 
   Variable `denote-toml-front-matter'
         Specifies the TOML (Markdown) front matter.  It is passed to
-        `format' with arguments `TITLE', `DATE', `KEYWORDS', `ID'
-        ([Change the front matter format])
+        `format' with arguments `TITLE', `DATE', `KEYWORDS',
+        `IDENTIFIER', `SIGNATURE' ([Change the front matter format])
 
   Variable `denote-text-front-matter'
         Specifies the plain text front matter.  It is passed to `format'
-        with arguments `TITLE', `DATE', `KEYWORDS', `ID' ([Change the
-        front matter format])
+        with arguments `TITLE', `DATE', `KEYWORDS', `IDENTIFIER',
+        `SIGNATURE' ([Change the front matter format])
 
   Function `denote-date-org-timestamp'
         Format `DATE' using the Org inactive timestamp notation.
@@ -7913,15 +7944,16 @@ section 21.13
         Andreadis, Kristoffer Balintona, Kyle Meyer, Laurent Gatto,
         Lucas Quintana, Maikol Solis, Marc Fargas, Marco Baringer,
         Matthew Batson, Matthew Lemon, Matthieu Muller, Matto Fransen,
-        Noboru Ota (nobiot), Norwid Behrnd, Octavian, Peter Prevos,
-        Philip Kaludercic, Ryota, Samuel W.  Flint, Quiliro Ordóñez,
-        Stephen R. Kifer, Stefan Monnier, Stefan Thesing, Thibaut
-        Benjamin, Tobias Lidman-Strauss, Tomasz Hołubowicz, TomoeMami ,
-        Vedang Manerikar, Wesley Harvey, Yann Dutrieux, Zhenxu Xu,
-        alvmts, arsaber101, bplubell, bryanrinders, dulikiles, eum3l,
-        experimental-code-86, ezchi, gnuhack, gvalson, jarofromel,
-        leinfink (Henrik), l-o-l-h (Lincoln), mattyonweb, maxbrieiev,
-        mentalisttraceur, nescias, pmenair, relict007, skissue.
+        Noboru Ota (nobiot), Norwid Behrnd, Octavian, Pavlo V. Lysov,
+        Peter Prevos, Philip Kaludercic, Ryota, Samuel W. Flint, Quiliro
+        Ordóñez, Stephen R. Kifer, Stefan Monnier, Stefan Thesing,
+        Thibaut Benjamin, Tobias Lidman-Strauss, Tomasz Hołubowicz,
+        TomoeMami , Vedang Manerikar, Wesley Harvey, Yann Dutrieux,
+        Zhenxu Xu, alvmts, arsaber101, bplubell, bryanrinders,
+        dulikiles, eum3l, experimental-code-86, ezchi, gnuhack, gvalson,
+        jarofromel, leinfink (Henrik), l-o-l-h (Lincoln), mattyonweb,
+        maxbrieiev, mentalisttraceur, nescias, pmenair, relict007,
+        skissue.
 
   Ideas and/or user feedback
         Abin Simon, Aditya Yadav, Alan Schmitt, Aleksandr Vityazev, Alex

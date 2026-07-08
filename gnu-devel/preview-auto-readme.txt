@@ -184,6 +184,25 @@
   are searched for latex code.  You can customize this via the defcustom
   `preview-auto-check-function'.
 
+  You can further restrict automatic previewing to selected parts of a
+  buffer by setting `preview-auto-bounds-function' buffer-locally.  The
+  function should return either a single cons cell `(BEG . END)' or a
+  list of such cons cells.  Only the portions of the normal
+  point-centered scan range that intersect those regions will be
+  previewed.
+
+  ┌────
+  │ (setq-local preview-auto-bounds-function
+  │             (lambda ()
+  │               ;; For example, return prompt or comment regions here.
+  │               (list (cons (point-min) (point-max)))))
+  └────
+
+  Packages that already know a specific region has become stale can call
+  `preview-auto-preview-region' to refresh TeX snippets in that region
+  using the same non-file-buffer handling and quiet output behavior as
+  `preview-auto-mode'.
+
 
 [indirect org-mode source blocks]
 <https://orgmode.org/manual/Editing-Source-Code.html>

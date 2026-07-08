@@ -76,6 +76,13 @@
   │ (setq preview-leave-open-previews-visible t)
   └────
 
+  In recent auctex versions the `preview-leave-open-previews-visible`
+  option has been replaced by two new options:
+  ┌────
+  │ (setopt preview-visibility-style 'always)
+  │ (setopt preview-keep-stale-images t)
+  └────
+
 
 2.2 Optimization
 ────────────────
@@ -84,6 +91,14 @@
   faster than PDF's:
   ┌────
   │ (setq preview-LaTeX-command-replacements '(preview-LaTeX-disable-pdfoutput))
+  └────
+  On some systems, especially stable-release distributions such as
+  Debian, the DVI workflow can be more robust if `preview-latex'
+  converts DVI files directly to PNG files with `dvipng' instead of
+  using Ghostscript.  After installing `dvipng', use:
+  ┌────
+  │ (setq preview-image-type 'dvi*)
+  │ (setq preview-dvi*-image-type 'png)
   └────
   If you use a package such as `hyperref' that works only with PDF's,
   then you should replace `\usepackage{hyperref}' in your TeX file with
@@ -127,6 +142,11 @@
   │ 
   │   ;; (preview-LaTeX-command-replacements
   │   ;;  '(preview-LaTeX-disable-pdfoutput))
+  │ 
+  │   ;; If you have installed dvipng and want to avoid Ghostscript in the
+  │   ;; DVI workflow:
+  │   ;; (preview-image-type 'dvi*)
+  │   ;; (preview-dvi*-image-type 'png)
   │   )
   └────
 
@@ -163,6 +183,25 @@
   The default behavior is that in programming modes, only the comments
   are searched for latex code.  You can customize this via the defcustom
   `preview-auto-check-function'.
+
+  You can further restrict automatic previewing to selected parts of a
+  buffer by setting `preview-auto-bounds-function' buffer-locally.  The
+  function should return either a single cons cell `(BEG . END)' or a
+  list of such cons cells.  Only the portions of the normal
+  point-centered scan range that intersect those regions will be
+  previewed.
+
+  ┌────
+  │ (setq-local preview-auto-bounds-function
+  │             (lambda ()
+  │               ;; For example, return prompt or comment regions here.
+  │               (list (cons (point-min) (point-max)))))
+  └────
+
+  Packages that already know a specific region has become stale can call
+  `preview-auto-preview-region' to refresh TeX snippets in that region
+  using the same non-file-buffer handling and quiet output behavior as
+  `preview-auto-mode'.
 
 
 [indirect org-mode source blocks]

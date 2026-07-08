@@ -1162,8 +1162,8 @@ Table of Contents
 
   • The builtin completion UI, which pops up the `*Completions*' buffer.
   • The builtin `icomplete-vertical-mode'.
-  • [mct by Protesilaos Stavrou]: Minibuffer and Completions in Tandem,
-    which builds on the default completion UI.
+  • [Mct] by Protesilaos: Minibuffer and Completions in Tandem, which
+    builds on the default completion UI.
 
   Note that all packages are independent and can be exchanged with
   alternative components, since there exist no hard
@@ -1190,7 +1190,7 @@ Table of Contents
 
 [wgrep] <https://github.com/mhayashi1120/Emacs-wgrep>
 
-[mct by Protesilaos Stavrou] <https://git.sr.ht/~protesilaos/mct>
+[Mct] <https://github.com/protesilaos/mct>
 
 [list of auxiliary packages]
 <https://github.com/minad/consult/wiki/Auxiliary-packages>

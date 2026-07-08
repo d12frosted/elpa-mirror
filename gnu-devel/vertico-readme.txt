@@ -658,7 +658,7 @@ Table of Contents
     Vertico. Read the [migration guide] when migrating from Selectrum.
 
 
-[Mct] <https://git.sr.ht/~protesilaos/mct>
+[Mct] <https://github.com/protesilaos/mct>
 
 [extensions] See section 5
 
@@ -701,7 +701,7 @@ Table of Contents
 <https://github.com/SystemCrafters/crafted-emacs/blob/master/modules/crafted-completion-config.el>
 
 [Prot's Emacs configuration]
-<https://git.sr.ht/~protesilaos/dotfiles/tree/master/item/emacs/.emacs.d/>
+<https://github.com/protesilaos/dotfiles/tree/master/emacs/.emacs.d>
 
 [Bedrock Emacs Base Enhancements]
 <https://codeberg.org/ashton314/emacs-bedrock/src/branch/main/extras/base.el>
