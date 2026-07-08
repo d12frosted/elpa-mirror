@@ -1191,7 +1191,7 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "350ca86924c5027e80875943fba7b912a71e5791"))])
  (ement
-  . [(0 180 20251117 191748)
+  . [(0 18 -1 0 20251117 1)
      ((emacs (27 1)) (map (2 1)) (persist (0 5)) (plz (0 6))
       (taxy (0 10)) (taxy-magit-section (0 13)) (svg-lib (0 2 5))
       (transient (0 3 7)))
@@ -1234,14 +1234,14 @@
       (:url . "https://elpa.gnu.org/packages/epoch-view.html")
       (:commit . "7a9773a8b55491bd47f23dfdb6c4224f5cc8e50c"))])
  (erc
-  . [(5 70 20260630 20) ((emacs (27 1)) (compat (31)))
+  . [(5 7 -4 0 20260630 20) ((emacs (27 1)) (compat (31)))
      "An Emacs Internet Relay Chat client" tar
      ((:url . "https://www.gnu.org/software/emacs/erc.html")
       (:keywords "irc" "chat" "client" "internet")
       (:maintainer ("Amin Bandali" . "bandali@gnu.org")
 		   ("F. Jason Park" . "jp@neverwas.me"))
       (:authors ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-      (:commit . "badce2d952db81c91521ddc988a925154370d56a"))])
+      (:commit . "202d29726d8a8494637cd54c6dc09bffcda6bd24"))])
  (ergoemacs-mode
   . [(5 16 10 12 0 20240828 210215)
      ((emacs (24 1)) (cl-lib (0 5)) (nadvice (0 4)))
@@ -1322,7 +1322,7 @@
       (:authors ("Lawrence Mitchell" . "wence@gmx.li"))
       (:commit . "4e192f6e03bc96f996923b307248b7d5b1d398fa"))])
  (ffs
-  . [(0 2 30 20260522 94521) ((emacs (27 1)))
+  . [(0 2 3 -4 0 20260522 1) ((emacs (27 1)))
      "Form feed-separated plain text presentations" tar
      ((:url . "https://git.kelar.org/~bandali/ffs")
       (:keywords "convenience" "focus" "narrowing" "outlines"
@@ -1683,7 +1683,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 0 20 20260630 1207) ((emacs (28)))
+  . [(9 0 2 -1 0 20260630 1207) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -2255,7 +2255,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "a071a9d8e7d1df643e7cc5cfec0928d28f00fec6"))])
  (mpdired
-  . [(40 20250502 114712) ((emacs (29)))
+  . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
      ((:keywords "multimedia")
       (:maintainer "Manuel Giraud" . "manuel@ledu-giraud.fr")
@@ -2393,7 +2393,7 @@
       (:url . "https://elpa.gnu.org/packages/num3-mode.html")
       (:commit . "0e3b6990b91191333132fdd56b15c84cb57a7ff7"))])
  (oauth2
-  . [(0 19 10 20260526 1) ((emacs (27 1)))
+  . [(0 19 1 -4 0 20260526 1) ((emacs (27 1)))
      "OAuth 2.0 Authorization Protocol" tar
      ((:url . "https://elpa.gnu.org/packages/oauth2.html")
       (:keywords "comm")
@@ -2448,7 +2448,7 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "0ffd9d6903714c1f6d8fcbb6a20941fb33dd7ae5"))])
  (org
-  . [(10 0 20260705 370) ((emacs (28 2)))
+  . [(10 0 -1 0 20260705 370) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
@@ -2684,14 +2684,14 @@
       (:authors ("Daiki Ueno" . "ueno@gnu.org"))
       (:commit . "0079964a1dde954ccb2ce8a28613d8020c549a36"))])
  (plz
-  . [(0 100 20250318 183534) ((emacs (27 1))) "HTTP library" tar
+  . [(0 10 -1 0 20250318 18) ((emacs (27 1))) "HTTP library" tar
      ((:url . "https://github.com/alphapapa/plz.el")
       (:keywords "comm" "network" "http")
       (:maintainer "Adam Porter" . "adam@alphapapa.net")
       (:authors ("Adam Porter" . "adam@alphapapa.net"))
       (:commit . "e2d07838e3b64ee5ebe59d4c3c9011adefb7b58e"))])
  (plz-event-source
-  . [(0 1 40 20250413 93107) ((emacs (26 3)) (plz-media-type (0 2 4)))
+  . [(0 1 4 -1 0 20250413 0) ((emacs (26 3)) (plz-media-type (0 2 4)))
      "Plz Event Source" tar
      ((:url . "https://github.com/r0man/plz-event-source")
       (:keywords "comm" "network" "http")
@@ -2699,7 +2699,7 @@
       (:authors ("r0man" . "roman@burningswell.com"))
       (:commit . "de89214ce14e2b82cbfdc30e1adcf3e77b1f250a"))])
  (plz-media-type
-  . [(0 2 50 20250412 100044) ((emacs (26 3)) (plz (0 9 1)))
+  . [(0 2 5 -1 0 20250412 0) ((emacs (26 3)) (plz (0 9 1)))
      "Plz Media Types" tar
      ((:url . "https://github.com/r0man/plz-media-type")
       (:keywords "comm" "network" "http")
@@ -3096,8 +3096,8 @@
       (:url . "https://elpa.gnu.org/packages/sed-mode.html")
       (:commit . "6009f57567959387b9e34068567e982b6991eb24"))])
  (sendai-theme
-  . [(0 1 10 20260701 2) ((emacs (27 1))) "A cool blue color theme"
-     tar
+  . [(0 1 1 -4 0 20260701 2) ((emacs (27 1)))
+     "A cool blue color theme" tar
      ((:url . "https://sr.ht/~jimporter/sendai-theme/")
       (:keywords "theme")
       (:commit . "cccc533de1f626a9e4213820bad73ae9200cb04f"))])
@@ -3440,7 +3440,7 @@
       (:authors ("Onnie Lynn Winebarger" . "owinebar@gmail.com"))
       (:commit . "0dcaa2cc9c36e0f5f6722cc0017cf0fced4d9c27"))])
  (taxy
-  . [(0 110 20251129 62050) ((emacs (26 3)))
+  . [(0 11 -1 0 20251129 2) ((emacs (26 3)))
      "Programmable taxonomical grouping for arbitrary objects" tar
      ((:url . "https://github.com/alphapapa/taxy.el")
       (:keywords "lisp")
@@ -3706,7 +3706,7 @@
       (:url . "https://elpa.gnu.org/packages/uniquify-files.html")
       (:commit . "7f84a579906eb449270ffe5e5ccc090aa3821c97"))])
  (urgrep
-  . [(0 6 10 20260619 3) ((emacs (28 1)) (compat (29 1 0 1)))
+  . [(0 6 1 -4 0 20260619 3) ((emacs (28 1)) (compat (29 1 0 1)))
      "Universal recursive grep" tar
      ((:url . "https://sr.ht/~jimporter/urgrep/")
       (:keywords "grep" "search")
