@@ -4,9 +4,6 @@
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-
-
-
 1 Overview
 ══════════
 
@@ -29,13 +26,10 @@
 2 Installation
 ══════════════
 
-  `doc-view-follow.el' should soon be available on ELPA, so you can
-  install it from there via `M-x packages-install'.
-
-  Alternatively, download the source file and run:
-  ┌────
-  │ M-x package-install-file RET /path/to/doc-view-follow.el RET
-  └────
+  `doc-view-follow.el' is available on ELPA, so you can install it from
+  there via `M-x packages-install'.  Alternatively, install it via your
+  preferred package manager, or download `doc-view-follow.el' and run
+  `M-x package-install-file'.
 
 
 3 Usage
