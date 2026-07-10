@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 -4 0 20260708 60)
+  . [(2 0 0 -4 0 20260709 63)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,21 +235,21 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "7aaf9ad906c33866b3314acbf51376b5a2aca9dc"))])
+      (:commit . "d6c58b7b206af9e5239f277c0be8292984be5bbb"))])
  (clojure-mode
-  . [(5 23 0 0 20260708 5) ((emacs (27 1)))
+  . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
      ((:url . "https://github.com/clojure-emacs/clojure-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "d7c849137fb130110be6ae9cd8f41f230ac06d72"))])
+      (:commit . "3c68569738f04a22d52f1ca28f593c2ee733bf04"))])
  (clojure-ts-mode
-  . [(0 6 0 0 20260708 47) ((emacs (30 1)))
+  . [(0 6 0 0 20260709 48) ((emacs (30 1)))
      "Major mode for Clojure code" tar
      ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "2f2da7e60eb8e1775d902586d332d73ddba8e24a"))])
+      (:commit . "ab0fac4282bf6426f4a5bce0fec7bf40d18b2e1a"))])
  (coffee-mode
   . [(0 6 3 0 20230908 103000) ((emacs (24 3)))
      "Major mode for CoffeeScript code" tar
@@ -473,7 +473,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 0 0 20260702 5) ((emacs (29 1)) (compat (31)))
+  . [(4 1 0 0 20260709 8) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -482,7 +482,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "149bb4ef375c3461f7ff37620759c33050bfb132"))])
+      (:commit . "9f5577fbd860ba7b4282985c4a162adab9d9b01c"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -1297,7 +1297,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260707 9)
+  . [(4 6 0 0 20260709 29)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1309,9 +1309,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "e5d0f0faad21dca19beb3c1bd148f32366fbcf0a"))])
+      (:commit . "5e84551b187e2c99da5b30a68e44a3edf11673aa"))])
  (magit-section
-  . [(4 6 0 0 20260707 9)
+  . [(4 6 0 0 20260709 29)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1320,7 +1320,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "e5d0f0faad21dca19beb3c1bd148f32366fbcf0a"))])
+      (:commit . "5e84551b187e2c99da5b30a68e44a3edf11673aa"))])
  (markdown-mode
   . [(2 9 -3 0 20260425 11) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1613,12 +1613,12 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "618b6b19e8bd4c2994c4e37953e3a5eadee49406"))])
  (php-mode
-  . [(1 26 1 0 20260704 46) ((emacs (27 1)))
+  . [(1 26 1 0 20260709 53) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "e175393855bba23865d81c4a4d380b54c4506196"))])
+      (:commit . "86e788eeeab57e0576fad9ec9ea1fab0c236efb7"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1816,14 +1816,14 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "173e4d632c94af6670869729c09bfb8ba484d257"))])
  (simple-httpd
-  . [(1 6 0 20260628 2) ((emacs (29 1)) (compat (31)))
+  . [(1 6 0 20260709 3) ((emacs (29 1)) (compat (31)))
      "Pure Elisp HTTP server" tar
      ((:url . "https://github.com/skeeto/emacs-http-server")
       (:keywords "network" "comm")
       (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "e1c482700d2b32b09c16db3067c0a4958dd20c2a"))])
+      (:commit . "e8551dca4f2009e332285228cb971f8594aca1c7"))])
  (slime
   . [(2 32 -4 0 20260703 50) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
