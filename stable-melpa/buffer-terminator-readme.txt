@@ -27,7 +27,7 @@ Installation from MELPA:
 (use-package buffer-terminator
   :custom
   (buffer-terminator-verbose nil)
-  :config
+  :init
   (buffer-terminator-mode 1))
 
 Links:

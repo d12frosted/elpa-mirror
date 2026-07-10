@@ -12,7 +12,7 @@ Features:
 Installation:
 -------------
 (use-package vim-tab-bar
-  :config
+  :init
   (vim-tab-bar-mode 1))
 
 Links:
