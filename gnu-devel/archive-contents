@@ -1112,13 +1112,13 @@
       (:url . "https://elpa.gnu.org/packages/el-search.html")
       (:commit . "0e146d1963da1e3a3d0fa184b9093da805fed2e3"))])
  (eldoc
-  . [(1 16 0 0 20260707 4) ((emacs (26 3)))
+  . [(1 16 0 0 20260709 6) ((emacs (26 3)))
      "Show function arglist or variable docstring in echo area" tar
      ((:keywords "extensions")
       (:maintainer "Noah Friedman" . "friedman@splode.com")
       (:authors ("Noah Friedman" . "friedman@splode.com"))
       (:url . "https://elpa.gnu.org/packages/eldoc.html")
-      (:commit . "202d29726d8a8494637cd54c6dc09bffcda6bd24"))])
+      (:commit . "a465009585bbbb0011998ace6374cfa7723124b4"))])
  (electric-spacing
   . [(5 0 0 20201201 154407) nil
      "Insert operators with surrounding spaces smartly" tar
@@ -3989,13 +3989,13 @@
       (:authors ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
       (:commit . "e3ceac0f8c8ea4d742497b71141886c810fffef6"))])
  (with-command-redo
-  . [(0 1 0 20260706 4) ((emacs (29 1)))
+  . [(0 2 0 20260710 0) ((emacs (29 1)))
      "Repeat commands with automatic undo" tar
      ((:url
        . "https://codeberg.org/ideasman42/emacs-with-command-redo")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "2996eef7ff22046c71c1ea294fc06391a9d4e25c"))])
+      (:commit . "b3e3c86e2cbeb097552a1bff000905ad28de7907"))])
  (wpuzzle
   . [(1 1 0 20221221 82918) nil "find as many word in a given time"
      tar

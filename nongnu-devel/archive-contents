@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 -4 0 20260709 63)
+  . [(2 0 0 -4 0 20260710 67)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "d6c58b7b206af9e5239f277c0be8292984be5bbb"))])
+      (:commit . "91de4e7b01d2684dc4cb94d43dc40018db1a8a77"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1159,14 +1159,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 0 0 20260709 27)
+  . [(0 12 0 0 20260710 29)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://codeberg.org/emacs-jabber/emacs-jabber")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "5965c5f534be99d96cfeb5bc4b26e5260bce73f7"))])
+      (:commit . "e62a1ed061a712b089272880d74829fc451bcc4c"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar

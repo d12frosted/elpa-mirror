@@ -3684,6 +3684,13 @@
       (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
       (:authors ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
       (:commit . "2d58879cea26b8a3b573d084d149dea94f93dfb8"))])
+ (with-command-redo
+  . [(0 2) ((emacs (29 1))) "Repeat commands with automatic undo" tar
+     ((:url
+       . "https://codeberg.org/ideasman42/emacs-with-command-redo")
+      (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+      (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
+      (:commit . "b3e3c86e2cbeb097552a1bff000905ad28de7907"))])
  (wpuzzle
   . [(1 1) nil "find as many word in a given time" tar
      ((:maintainer "Ivan Kanis" . "ivan@kanis.fr")
