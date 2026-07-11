@@ -18,15 +18,15 @@ Example use-package instalation
    (add-to-list 'srs-path-list (expand-file-name "~/notes/*.org"))
    (srs-set-prefix-kbd "s-"))
 
-┌─────────────────────────┐
-│ Usage -- Transient Menu │
-└─────────────────────────┘
+┌──────┐
+│ Menu │
+└──────┘
 M-x srs-menu provides a transient menu for accessing
 srs commands described below.
 
-┌────────────────────────────┐
-│ Usage -- Making Flashcards │
-└────────────────────────────┘
+┌───────────────────┐
+│ Making Flashcards │
+└───────────────────┘
 You can embed flashcards in any text file.  A typical flashcard
 looks like this:
 ┌──────────────────────────────────────────┐
@@ -94,23 +94,23 @@ Some examples:
 (add-to-list 'srs-path-list (expand-file-name "~/a/specific/file.txt"))
 (add-to-list 'srs-path-list (expand-file-name "~/even/source/code.el"))
 
-┌───────────────────────────────┐
-│ Usage -- Reviewing Flashcards │
-└───────────────────────────────┘
+┌──────────────────────┐
+│ Reviewing Flashcards │
+└──────────────────────┘
  M-x srs-review
 
 This is how you can review flashcards which are "due".
 
-┌─────────────────────────────┐
-│ Usage -- Editing Flashcards │
-└─────────────────────────────┘
+┌────────────────────┐
+│ Editing Flashcards │
+└────────────────────┘
 Just revise the text of your card where you wrote it.  You don't
 need to run any additional commands.  As long as the id is still
 present above your card, all is well.
 
-┌──────────────────────────────┐
-│ Usage -- Deleting Flashcards │
-└──────────────────────────────┘
+┌─────────────────────┐
+│ Deleting Flashcards │
+└─────────────────────┘
  M-x srs-card-delete-at-point
 
 Run this command with your cursor is over the line with <DESIGNATOR>: <ID>
