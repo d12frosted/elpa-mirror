@@ -100,7 +100,7 @@ without incidents.  If you make it crash, please report.
   periodically after a `LISTEN' statement by calling `pq:notifies'.
   Calling it will not cause any traffic on the connection itself.
 
-  See the testsuite <./test.el> for more implemented features.
+  See the testsuite <./pq-test.el> for more implemented features.
 
   <https://api.travis-ci.org/anse1/emacs-libpq.svg>
 

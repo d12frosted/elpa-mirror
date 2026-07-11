@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 -4 0 20260710 67)
+  . [(2 0 0 -4 0 20260711 71)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "91de4e7b01d2684dc4cb94d43dc40018db1a8a77"))])
+      (:commit . "0d1b2c5c22cf313ac074699d2714ef90a4ccbc77"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1159,14 +1159,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 0 0 20260710 29)
+  . [(0 12 1 0 20260711 0)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://codeberg.org/emacs-jabber/emacs-jabber")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "e62a1ed061a712b089272880d74829fc451bcc4c"))])
+      (:commit . "8adc03e0f851c2eecad7f4b50f49548460517019"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 2 0 -4 0 20260708 6) ((emacs (28 1)) (compat (30)))
+  . [(3 2 0 -4 0 20260711 9) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "1c29f1bc235d0eaeba4988e87ac3e3be8d20bae4"))])
+      (:commit . "9d6b20b81cce3a827fb01c98cd1359b3ae6a697e"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -1825,11 +1825,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "e8551dca4f2009e332285228cb971f8594aca1c7"))])
  (slime
-  . [(2 32 -4 0 20260703 50) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260711 51) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "883b19c77ca42f827b5e4631c5428e244c2e063c"))])
+      (:commit . "c917f01f1d208ae96683150a35e9bc1d4f56b93b"))])
  (sly
   . [(1 0 43 0 20260402 224912) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar

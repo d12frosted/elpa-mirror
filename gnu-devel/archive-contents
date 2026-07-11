@@ -2767,11 +2767,11 @@
       (:authors ("Feng Shu" . "tumashu@163.com"))
       (:commit . "74c8c56131ed866db47ae4191364b72dd4852456"))])
  (pq
-  . [(0 2 0 20240317 135839) ((emacs (25))) "libpq binding" tar
+  . [(0 2 0 20240911 1) ((emacs (25))) "libpq binding" tar
      ((:url . "https://github.com/anse1/emacs-libpq")
       (:maintainer "Tom Gillespie" . "tgbugs@gmail.com")
       (:authors ("Tom Gillespie" . "tgbugs@gmail.com"))
-      (:commit . "4dad5fcdbbb362a0dc2dfa7b5a38dd5be1551c68"))])
+      (:commit . "a4f4083e2b2ec14ff60ce556d5a457579dd62dd3"))])
  (prefixed-core
   . [(0 0 20260406 215107) nil
      "Rename core functions for a better structured namespace" tar
