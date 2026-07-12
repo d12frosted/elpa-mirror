@@ -4,7 +4,7 @@ temporary buffer for viewing.  The buffer (*look*) is writable, but
 not directly associated with the source material.  The original
 rationale was that when used with `eimp' (Emacs Image Manipulation
 Package), one could resize images without any danger of overwriting
-the original file; however, as of 2022-02, `eimp' is no required by
+the original file; however, as of 2022-02, `eimp' is no longer required by
 `look-mode'.  This may also be of interest to someone wishing to
 scan the files of a directory.
 

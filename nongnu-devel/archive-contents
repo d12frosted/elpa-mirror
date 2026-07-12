@@ -1644,13 +1644,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 2 0 -4 0 20260711 9) ((emacs (28 1)) (compat (30)))
+  . [(3 2 0 -4 0 20260712 10) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "9d6b20b81cce3a827fb01c98cd1359b3ae6a697e"))])
+      (:commit . "83d4cdec70fe1dde13b3fadc6c6bbb66764c856f"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
