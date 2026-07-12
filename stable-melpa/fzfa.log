@@ -2,10 +2,10 @@
  • Building package fzfa
 From https://github.com/jojojames/fzfa
 Updating /mnt/store/melpa/working/fzfa/
-Checking out 98951bd98eac791c2b4f85780bcf8e1b30b632d0
+Checking out 3c1742e56fba99c80f7fc18ac0165a03e030ea84
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fzfa/
-  to /tmp/fzfa-nFCAZj/fzfa-20260710.2247/
+  to /tmp/fzfa-Bq74sl/fzfa-20260711.1842/
     fzfa-ag.el -> fzfa-ag.el
     fzfa-chrome.el -> fzfa-chrome.el
     fzfa-company.el -> fzfa-company.el
@@ -25,6 +25,7 @@ Copying files (->) and directories (=>)
     fzfa-imenu.el -> fzfa-imenu.el
     fzfa-info.el -> fzfa-info.el
     fzfa-ivy.el -> fzfa-ivy.el
+    fzfa-loader.el -> fzfa-loader.el
     fzfa-locate.el -> fzfa-locate.el
     fzfa-mail.el -> fzfa-mail.el
     fzfa-make.el -> fzfa-make.el
@@ -45,46 +46,47 @@ Copying files (->) and directories (=>)
     fzfa-vc.el -> fzfa-vc.el
     fzfa-vertico.el -> fzfa-vertico.el
     fzfa.el -> fzfa.el
-Created fzfa-20260710.2247.tar containing:
-  fzfa-20260710.2247/
-  fzfa-20260710.2247/fzfa-ag.el
-  fzfa-20260710.2247/fzfa-chrome.el
-  fzfa-20260710.2247/fzfa-company.el
-  fzfa-20260710.2247/fzfa-eglot.el
-  fzfa-20260710.2247/fzfa-emacs.el
-  fzfa-20260710.2247/fzfa-embark.el
-  fzfa-20260710.2247/fzfa-evil.el
-  fzfa-20260710.2247/fzfa-fd.el
-  fzfa-20260710.2247/fzfa-find.el
-  fzfa-20260710.2247/fzfa-firefox.el
-  fzfa-20260710.2247/fzfa-flymake.el
-  fzfa-20260710.2247/fzfa-git.el
-  fzfa-20260710.2247/fzfa-grep.el
-  fzfa-20260710.2247/fzfa-helm.el
-  fzfa-20260710.2247/fzfa-hg.el
-  fzfa-20260710.2247/fzfa-hungry.el
-  fzfa-20260710.2247/fzfa-imenu.el
-  fzfa-20260710.2247/fzfa-info.el
-  fzfa-20260710.2247/fzfa-ivy.el
-  fzfa-20260710.2247/fzfa-locate.el
-  fzfa-20260710.2247/fzfa-mail.el
-  fzfa-20260710.2247/fzfa-make.el
-  fzfa-20260710.2247/fzfa-music.el
-  fzfa-20260710.2247/fzfa-notmuch.el
-  fzfa-20260710.2247/fzfa-org.el
-  fzfa-20260710.2247/fzfa-pass.el
-  fzfa-20260710.2247/fzfa-pkg.el
-  fzfa-20260710.2247/fzfa-posframe.el
-  fzfa-20260710.2247/fzfa-project.el
-  fzfa-20260710.2247/fzfa-regexp.el
-  fzfa-20260710.2247/fzfa-replay.el
-  fzfa-20260710.2247/fzfa-rg.el
-  fzfa-20260710.2247/fzfa-safari.el
-  fzfa-20260710.2247/fzfa-shell.el
-  fzfa-20260710.2247/fzfa-spotlight.el
-  fzfa-20260710.2247/fzfa-transient.el
-  fzfa-20260710.2247/fzfa-ugrep.el
-  fzfa-20260710.2247/fzfa-vc.el
-  fzfa-20260710.2247/fzfa-vertico.el
-  fzfa-20260710.2247/fzfa.el
-Built fzfa in 4.504s, finished at 2026-07-11T17:08:21+0000
+Created fzfa-20260711.1842.tar containing:
+  fzfa-20260711.1842/
+  fzfa-20260711.1842/fzfa-ag.el
+  fzfa-20260711.1842/fzfa-chrome.el
+  fzfa-20260711.1842/fzfa-company.el
+  fzfa-20260711.1842/fzfa-eglot.el
+  fzfa-20260711.1842/fzfa-emacs.el
+  fzfa-20260711.1842/fzfa-embark.el
+  fzfa-20260711.1842/fzfa-evil.el
+  fzfa-20260711.1842/fzfa-fd.el
+  fzfa-20260711.1842/fzfa-find.el
+  fzfa-20260711.1842/fzfa-firefox.el
+  fzfa-20260711.1842/fzfa-flymake.el
+  fzfa-20260711.1842/fzfa-git.el
+  fzfa-20260711.1842/fzfa-grep.el
+  fzfa-20260711.1842/fzfa-helm.el
+  fzfa-20260711.1842/fzfa-hg.el
+  fzfa-20260711.1842/fzfa-hungry.el
+  fzfa-20260711.1842/fzfa-imenu.el
+  fzfa-20260711.1842/fzfa-info.el
+  fzfa-20260711.1842/fzfa-ivy.el
+  fzfa-20260711.1842/fzfa-loader.el
+  fzfa-20260711.1842/fzfa-locate.el
+  fzfa-20260711.1842/fzfa-mail.el
+  fzfa-20260711.1842/fzfa-make.el
+  fzfa-20260711.1842/fzfa-music.el
+  fzfa-20260711.1842/fzfa-notmuch.el
+  fzfa-20260711.1842/fzfa-org.el
+  fzfa-20260711.1842/fzfa-pass.el
+  fzfa-20260711.1842/fzfa-pkg.el
+  fzfa-20260711.1842/fzfa-posframe.el
+  fzfa-20260711.1842/fzfa-project.el
+  fzfa-20260711.1842/fzfa-regexp.el
+  fzfa-20260711.1842/fzfa-replay.el
+  fzfa-20260711.1842/fzfa-rg.el
+  fzfa-20260711.1842/fzfa-safari.el
+  fzfa-20260711.1842/fzfa-shell.el
+  fzfa-20260711.1842/fzfa-spotlight.el
+  fzfa-20260711.1842/fzfa-transient.el
+  fzfa-20260711.1842/fzfa-ugrep.el
+  fzfa-20260711.1842/fzfa-vc.el
+  fzfa-20260711.1842/fzfa-vertico.el
+  fzfa-20260711.1842/fzfa.el
+Built fzfa in 7.460s, finished at 2026-07-11T21:09:48+0000

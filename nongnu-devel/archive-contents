@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 -4 0 20260711 71)
+  . [(2 0 0 -4 0 20260711 75)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "0d1b2c5c22cf313ac074699d2714ef90a4ccbc77"))])
+      (:commit . "a3b5825c464d610006f52f9bbb327610cc0ec6ef"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1297,7 +1297,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260709 30)
+  . [(4 6 0 0 20260711 37)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1309,9 +1309,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "baeaddadafd9c03605319419209a2f4275c6fb02"))])
+      (:commit . "fe56c0d10a91d00aed65f831b8435a7224bc7730"))])
  (magit-section
-  . [(4 6 0 0 20260709 30)
+  . [(4 6 0 0 20260711 37)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1320,7 +1320,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "baeaddadafd9c03605319419209a2f4275c6fb02"))])
+      (:commit . "fe56c0d10a91d00aed65f831b8435a7224bc7730"))])
  (markdown-mode
   . [(2 9 -3 0 20260425 11) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -2114,11 +2114,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(8 3 3 -4 0 20260628 43) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(8 3 3 -4 0 20260711 45) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "ba6f0201d2544fb626160cdd1dd2cc9912036770"))])
+      (:commit . "64bdc613196565776a47e181f89e88533132b023"))])
  (web-mode
   . [(17 3 24 0 20260623 0) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

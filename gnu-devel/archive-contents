@@ -2474,14 +2474,14 @@
       (:authors ("Ian Dunn" . "dunni@gnu.org"))
       (:commit . "8258a4dfa00aa522249cdf9aeea5be4de97bd7c1"))])
  (org-gnosis
-  . [(0 2 2 0 20260224 203152)
+  . [(0 2 2 0 20260711 6)
      ((emacs (27 2)) (emacsql (4 0 0)) (compat (29 1 4 2)))
      "Learning-focused note-taking for Gnosis" tar
      ((:url . "https://thanosapollo.org/projects/org-gnosis/")
       (:keywords "outlines" "extensions" "org-mode")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "e56549bfa3d30a841ba0606356a06d2d7cceed92"))])
+      (:commit . "1fdb8820f3bd14c1d7582a55ba53765d77663a3f"))])
  (org-jami-bot
   . [(0 0 5 0 20240204 184749) ((emacs (28 1)) (jami-bot (0 0 4)))
      "Capture GNU Jami messages as notes and todos in Org mode" tar
