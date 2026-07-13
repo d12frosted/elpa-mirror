@@ -747,13 +747,14 @@ Assistant".  <file:imgs/reasoning-models.gif>
 4.1.10 Task Templates Blueprints and Skills
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  • `ellama-tools-task-template-dirs': Directories where the `task' tool
-    searches for prompt templates when no `template_base' is
-    supplied. Relative template names are resolved below these
-    directories.
+  • `ellama-tools-task-template-dirs': Directories where direct
+    `ellama-tools-task-from-template-tool' calls search for prompt
+    templates when no `template_base' is supplied. Relative template
+    names are resolved below these directories.
   • `ellama-tools-task-template-allow-absolute-paths': Allow absolute
-    file names in the `task' tool `template' argument. Disabled by
-    default. Relative template names are still supported.
+    file names in the `task_from_template' tool `template'
+    argument. Disabled by default.  Relative template names are still
+    supported.
   • `ellama-blueprint-global-dir': Global directory for storing
     blueprint files.
   • `ellama-blueprint-local-dir': Local directory name for
@@ -1075,12 +1076,18 @@ Assistant".  <file:imgs/reasoning-models.gif>
 4.6 Task Tool Subagents
 ───────────────────────
 
-  The `task' tool delegates work to an asynchronous sub-agent. The
-  parent model gets control back immediately, and the sub-agent reports
-  the final result by calling the injected `report_result' tool. If the
-  sub-agent finishes a turn without reporting a result, Ellama sends
-  `ellama-tools-subagent-continue-prompt' until the task is complete or
-  `ellama-tools-subagent-default-max-steps' is reached.
+  Ellama provides two tools for delegating work to an asynchronous
+  sub-agent.  Use `task' with a free-form prompt and
+  `task_from_template' with a prompt template. Keeping these call shapes
+  separate makes both arguments and validation errors easier for local
+  models to follow.
+
+  Both tools return control to the parent model immediately. The
+  sub-agent reports its final result by calling the injected
+  `report_result' tool. If it finishes a turn without reporting a
+  result, Ellama sends `ellama-tools-subagent-continue-prompt' until the
+  task is complete or `ellama-tools-subagent-default-max-steps' is
+  reached.
 
   Each sub-agent runs in its own Ellama session. When
   `ellama-display-session-buffer-on-generation' is non-nil, Ellama
@@ -1107,8 +1114,17 @@ Assistant".  <file:imgs/reasoning-models.gif>
   compaction finishes or is skipped. Any successful sub-agent response
   resets the consecutive error counter.
 
-  The tool accepts either a free-form `description' or a prompt
-  template:
+  The `task' tool requires a non-empty `description' and a configured
+  `role':
+
+  ┌────
+  │ {
+  │   "description": "Inspect the parser and report possible edge cases.",
+  │   "role": "explorer"
+  │ }
+  └────
+
+  Use `task_from_template' when a skill provides a reusable prompt:
 
   ┌────
   │ {
@@ -1124,15 +1140,20 @@ Assistant".  <file:imgs/reasoning-models.gif>
 
   Prompt templates are plain text files with placeholders like
   `{main_topic}'. The `arguments' object must provide values whose keys
-  match the placeholder names. If validation fails, the tool returns an
-  error with hints listing missing and unused keys and an example object
-  to retry.
+  match the placeholder names. All four `task_from_template' arguments
+  are required. Skills that use this tool should include the exact call
+  shape and use their own directory as `template_base'. If validation
+  fails, the tool returns an error with the missing and unused keys and
+  an example object to retry.
+
+  Skills written for the older combined `task' interface should change
+  the tool name to `task_from_template'. Their template arguments stay
+  the same.
 
   Template resolution is intentionally scoped:
 
-  • relative `template' paths are resolved under `template_base' when
-    supplied
-  • otherwise relative paths are searched under
+  • relative `template' paths are resolved under `template_base'
+  • direct Lisp calls can omit `template_base' and search
     `ellama-tools-task-template-dirs'
   • path traversal outside the selected base directory is rejected
   • absolute template paths are rejected unless

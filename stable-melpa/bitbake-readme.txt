@@ -8,4 +8,5 @@ Emacs.  Its main features are:
   for direct testing (if your image supports read-write mode),
 - generating wic images,
 - a global minor mode providing menu and shortcuts,
-- an mmm based mode to edit bitbake recipes.
+- a major mode for editing recipes, using `polymode' to support
+  Python and shell syntax.
