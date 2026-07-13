@@ -2,10 +2,10 @@
  • Building package fzfa
 From https://github.com/jojojames/fzfa
 Updating /mnt/store/melpa/working/fzfa/
-Checking out 3c1742e56fba99c80f7fc18ac0165a03e030ea84
+Checking out 12d3c110f72e0d26bc298201d64b69e98f5765be
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fzfa/
-  to /tmp/fzfa-iDSnM6/fzfa-20260711.1842/
+  to /tmp/fzfa-q2m7cd/fzfa-20260712.1759/
     fzfa-ag.el -> fzfa-ag.el
     fzfa-chrome.el -> fzfa-chrome.el
     fzfa-company.el -> fzfa-company.el
@@ -29,6 +29,7 @@ Copying files (->) and directories (=>)
     fzfa-locate.el -> fzfa-locate.el
     fzfa-mail.el -> fzfa-mail.el
     fzfa-make.el -> fzfa-make.el
+    fzfa-media-thumbnail.el -> fzfa-media-thumbnail.el
     fzfa-music.el -> fzfa-music.el
     fzfa-notmuch.el -> fzfa-notmuch.el
     fzfa-org.el -> fzfa-org.el
@@ -46,47 +47,48 @@ Copying files (->) and directories (=>)
     fzfa-vc.el -> fzfa-vc.el
     fzfa-vertico.el -> fzfa-vertico.el
     fzfa.el -> fzfa.el
-Created fzfa-20260711.1842.tar containing:
-  fzfa-20260711.1842/
-  fzfa-20260711.1842/fzfa-ag.el
-  fzfa-20260711.1842/fzfa-chrome.el
-  fzfa-20260711.1842/fzfa-company.el
-  fzfa-20260711.1842/fzfa-eglot.el
-  fzfa-20260711.1842/fzfa-emacs.el
-  fzfa-20260711.1842/fzfa-embark.el
-  fzfa-20260711.1842/fzfa-evil.el
-  fzfa-20260711.1842/fzfa-fd.el
-  fzfa-20260711.1842/fzfa-find.el
-  fzfa-20260711.1842/fzfa-firefox.el
-  fzfa-20260711.1842/fzfa-flymake.el
-  fzfa-20260711.1842/fzfa-git.el
-  fzfa-20260711.1842/fzfa-grep.el
-  fzfa-20260711.1842/fzfa-helm.el
-  fzfa-20260711.1842/fzfa-hg.el
-  fzfa-20260711.1842/fzfa-hungry.el
-  fzfa-20260711.1842/fzfa-imenu.el
-  fzfa-20260711.1842/fzfa-info.el
-  fzfa-20260711.1842/fzfa-ivy.el
-  fzfa-20260711.1842/fzfa-loader.el
-  fzfa-20260711.1842/fzfa-locate.el
-  fzfa-20260711.1842/fzfa-mail.el
-  fzfa-20260711.1842/fzfa-make.el
-  fzfa-20260711.1842/fzfa-music.el
-  fzfa-20260711.1842/fzfa-notmuch.el
-  fzfa-20260711.1842/fzfa-org.el
-  fzfa-20260711.1842/fzfa-pass.el
-  fzfa-20260711.1842/fzfa-pkg.el
-  fzfa-20260711.1842/fzfa-posframe.el
-  fzfa-20260711.1842/fzfa-project.el
-  fzfa-20260711.1842/fzfa-regexp.el
-  fzfa-20260711.1842/fzfa-replay.el
-  fzfa-20260711.1842/fzfa-rg.el
-  fzfa-20260711.1842/fzfa-safari.el
-  fzfa-20260711.1842/fzfa-shell.el
-  fzfa-20260711.1842/fzfa-spotlight.el
-  fzfa-20260711.1842/fzfa-transient.el
-  fzfa-20260711.1842/fzfa-ugrep.el
-  fzfa-20260711.1842/fzfa-vc.el
-  fzfa-20260711.1842/fzfa-vertico.el
-  fzfa-20260711.1842/fzfa.el
-Built fzfa in 8.385s, finished at 2026-07-13T00:49:58+0000
+Created fzfa-20260712.1759.tar containing:
+  fzfa-20260712.1759/
+  fzfa-20260712.1759/fzfa-ag.el
+  fzfa-20260712.1759/fzfa-chrome.el
+  fzfa-20260712.1759/fzfa-company.el
+  fzfa-20260712.1759/fzfa-eglot.el
+  fzfa-20260712.1759/fzfa-emacs.el
+  fzfa-20260712.1759/fzfa-embark.el
+  fzfa-20260712.1759/fzfa-evil.el
+  fzfa-20260712.1759/fzfa-fd.el
+  fzfa-20260712.1759/fzfa-find.el
+  fzfa-20260712.1759/fzfa-firefox.el
+  fzfa-20260712.1759/fzfa-flymake.el
+  fzfa-20260712.1759/fzfa-git.el
+  fzfa-20260712.1759/fzfa-grep.el
+  fzfa-20260712.1759/fzfa-helm.el
+  fzfa-20260712.1759/fzfa-hg.el
+  fzfa-20260712.1759/fzfa-hungry.el
+  fzfa-20260712.1759/fzfa-imenu.el
+  fzfa-20260712.1759/fzfa-info.el
+  fzfa-20260712.1759/fzfa-ivy.el
+  fzfa-20260712.1759/fzfa-loader.el
+  fzfa-20260712.1759/fzfa-locate.el
+  fzfa-20260712.1759/fzfa-mail.el
+  fzfa-20260712.1759/fzfa-make.el
+  fzfa-20260712.1759/fzfa-media-thumbnail.el
+  fzfa-20260712.1759/fzfa-music.el
+  fzfa-20260712.1759/fzfa-notmuch.el
+  fzfa-20260712.1759/fzfa-org.el
+  fzfa-20260712.1759/fzfa-pass.el
+  fzfa-20260712.1759/fzfa-pkg.el
+  fzfa-20260712.1759/fzfa-posframe.el
+  fzfa-20260712.1759/fzfa-project.el
+  fzfa-20260712.1759/fzfa-regexp.el
+  fzfa-20260712.1759/fzfa-replay.el
+  fzfa-20260712.1759/fzfa-rg.el
+  fzfa-20260712.1759/fzfa-safari.el
+  fzfa-20260712.1759/fzfa-shell.el
+  fzfa-20260712.1759/fzfa-spotlight.el
+  fzfa-20260712.1759/fzfa-transient.el
+  fzfa-20260712.1759/fzfa-ugrep.el
+  fzfa-20260712.1759/fzfa-vc.el
+  fzfa-20260712.1759/fzfa-vertico.el
+  fzfa-20260712.1759/fzfa.el
+Built fzfa in 5.282s, finished at 2026-07-13T04:49:17+0000
