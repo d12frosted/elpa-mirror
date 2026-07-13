@@ -81,3 +81,26 @@ arguments are deliberately out of scope; for those, use transient.
 
 
 [user manual] <file:docs/keymap-popup.org>
+
+
+5 Development
+═════════════
+
+  The repository flake pins Nixpkgs and provides Emacs, GNU Make,
+  Texinfo, and package-lint.  Public Make targets enter the development
+  shell automatically when Nix is available:
+
+  ┌────
+  │ make dev
+  │ make doc
+  └────
+
+  Enter the same environment manually with `nix develop'.  Run the
+  sandboxed package build, tests, lint checks, and manual build with:
+
+  ┌────
+  │ nix flake check
+  └────
+
+  Set `USE_NIX=0' to run a Make target directly in the current
+  environment.

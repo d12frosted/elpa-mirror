@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 -4 0 20260712 79)
+  . [(2 0 0 -4 0 20260713 89)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "744f008a5ee49c277783998413f5ec1abcc9593a"))])
+      (:commit . "450cfeb1ca0989162fa8262af584c19fce4b27c9"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1013,7 +1013,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260629 22) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260712 24) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1021,14 +1021,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "4621d85329ff7528623ff8ec3488a0c2618e53c5"))])
+      (:commit . "3cc1cef0f852a277cabeb51f3d1158d78073d6b5"))])
  (helm-core
-  . [(4 0 7 0 20260629 22) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260712 24) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "4621d85329ff7528623ff8ec3488a0c2618e53c5"))])
+      (:commit . "3cc1cef0f852a277cabeb51f3d1158d78073d6b5"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1159,14 +1159,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 1 0 20260712 4)
+  . [(0 12 1 0 20260713 30)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://codeberg.org/emacs-jabber/emacs-jabber")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "ff43627ae685e7a84b9be814b2fabed002f0c052"))])
+      (:commit . "017ba3d1652bd37622c4e6d72e59c0eceeb4e287"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -2203,12 +2203,12 @@
       (:authors ("Le Wang" . "l26wang@gmail.com"))
       (:commit . "67c49cfdf5a5a9f28792c500c8eb0017cfe74a3a"))])
  (xah-fly-keys
-  . [(28 11 20260709144945 0 20260709 0) ((emacs (28 3)))
+  . [(28 11 20260712150256 0 20260712 0) ((emacs (28 3)))
      "ergonomic modal keybinding minor mode." tar
      ((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
       (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
       (:maintainer "Xah Lee" . "xah@xahlee.org")
-      (:commit . "fea73c076a5d29e32e5b0f4f766490b4a0056771"))])
+      (:commit . "158a4b12fce8e5f63694a68b75df89b064e73e14"))])
  (xkcd
   . [(1 1 0 20220503 110939) ((json (1 3))) "View xkcd from Emacs" tar
      ((:url . "https://github.com/vibhavp/emacs-xkcd")

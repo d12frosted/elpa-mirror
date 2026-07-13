@@ -174,13 +174,13 @@
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
       (:commit . "5bd2e6f96fad055e4c3f7d22109aa6573b927406"))])
  (auctex-label-numbers
-  . [(0 2) ((emacs (27 1)) (auctex (14 0 5)))
+  . [(0 3) ((emacs (27 1)) (auctex (14 0 5)))
      "Numbering for LaTeX previews and folds" tar
      ((:url . "https://github.com/ultronozm/auctex-label-numbers.el")
       (:keywords "tex")
       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-      (:commit . "202e49bb9f754bc647deb112bd2c35f9a583b942"))])
+      (:commit . "b399826caeb854073a5d3435133f5a77a7f9f683"))])
  (aumix-mode
   . [(7) nil "run the aumix program in a buffer" tar
      ((:url . "http://user42.tuxfamily.org/aumix-mode/index.html")
@@ -1763,12 +1763,12 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 3 1) ((emacs (29 1))) "Described keymaps with popup help" tar
+  . [(0 4 0) ((emacs (29 1))) "Described keymaps with popup help" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-keymap-popup")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "f9e3415f893ae7330f085ea79309974b507ba37e"))])
+      (:commit . "d0b50926a186d2de72aa12c6d6b06e384731865a"))])
  (kind-icon
   . [(0 2 2) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
