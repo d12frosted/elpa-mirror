@@ -43,10 +43,10 @@ Shell integration:
 
 Native module:
 
-  A pre-built binary is downloaded automatically on first use.  To
-  build from source instead (requires Zig 0.15.2+), run zig build --prefix .
-  from the project root, or M-x ghostel-module-compile.  M-x
-  ghostel-download-module re-fetches the pre-built binary.
+  A pre-built binary is downloaded automatically on first use.
+  To build from source instead (requires exactly Zig 0.15.2), run
+  zig build --prefix . from the project root, or M-x ghostel-module-compile.
+  M-x ghostel-download-module re-fetches the pre-built binary.
 
 See also: evil-ghostel.el (evil-mode integration), ghostel-compile.el
 (TTY-backed M-x compile replacement), ghostel-eshell.el (eshell
