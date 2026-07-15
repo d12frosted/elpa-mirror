@@ -189,13 +189,13 @@
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
       (:commit . "b495db3197fc98904ea85ba1fabd8fe2bac0f509"))])
  (auctex-label-numbers
-  . [(0 3 0 20260712 0) ((emacs (27 1)) (auctex (14 0 5)))
+  . [(0 3 0 20260714 1) ((emacs (27 1)) (auctex (14 0 5)))
      "Numbering for LaTeX previews and folds" tar
      ((:url . "https://github.com/ultronozm/auctex-label-numbers.el")
       (:keywords "tex")
       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-      (:commit . "b399826caeb854073a5d3435133f5a77a7f9f683"))])
+      (:commit . "5cd20085587efa2ba96669158d4acba6db4b0fe6"))])
  (aumix-mode
   . [(7 0 20221221 74552) nil "run the aumix program in a buffer" tar
      ((:url . "https://user42.tuxfamily.org/aumix-mode/index.html")
@@ -1402,13 +1402,13 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "8cf9f6693e2a780b530ff5fd9920863b751d5bd5"))])
  (forgejo
-  . [(0 2 3 0 20260619 16) ((emacs (29 1)) (keymap-popup (0 2 1)))
+  . [(0 2 3 0 20260715 17) ((emacs (29 1)) (keymap-popup (0 2 1)))
      "Emacs Forgejo Front-end" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-forgejo")
       (:keywords "tools" "vc" "git" "forgejo")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "7eb8b9a58efbb28f0f79d5bcce748f9639cb3556"))])
+      (:commit . "a4f60b8c0aa05eb94483cc05a4773c5857d32a1e"))])
  (frame-tabs
   . [(1 1 0 20221221 75627) nil "show buffer tabs in side window" tar
      ((:keywords "frames" "tabs")
@@ -1889,13 +1889,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 0 0 20260713 0) ((emacs (29 1)))
+  . [(0 4 0 0 20260715 2) ((emacs (29 1)))
      "Described keymaps with popup help" tar
      ((:url . "https://codeberg.org/thanosapollo/emacs-keymap-popup")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "d0b50926a186d2de72aa12c6d6b06e384731865a"))])
+      (:commit . "44ee56b4de2756460a366c7fa45de6dbf7bee9fe"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
