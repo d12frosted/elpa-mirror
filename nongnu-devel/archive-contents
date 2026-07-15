@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 0 -4 0 20260714 92)
+  . [(2 0 0 -4 0 20260714 93)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "6156c011c4e044fbede9014693676140ce9336ae"))])
+      (:commit . "e90868295c38241e57e63644fa1c8c9c3d3d0459"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -473,7 +473,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 0 0 20260709 8) ((emacs (29 1)) (compat (31)))
+  . [(4 1 0 0 20260714 9) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -482,7 +482,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "9f5577fbd860ba7b4282985c4a162adab9d9b01c"))])
+      (:commit . "e18cbb8cc4bb08e1512571449623f5f03f43f94c"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -1357,11 +1357,11 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "ed42ae8333d801c841ecf80fb5e4957badb99b51"))])
  (meow
-  . [(1 5 0 0 20260619 66) ((emacs (27 1)))
+  . [(1 5 0 0 20260714 67) ((emacs (27 1)))
      "Yet Another modal editing" tar
      ((:url . "https://www.github.com/DogLooksGood/meow")
       (:keywords "convenience" "modal-editing")
-      (:commit . "96648fa6398222e1376422d01f5249afa2a25680"))])
+      (:commit . "aa8aec19e70369b547176e625f5b95c4a8565e8e"))])
  (minibar
   . [(0 3 0 20230414 114052) ((emacs (27 2)))
      "Modular status bar in minibuffer" tar
