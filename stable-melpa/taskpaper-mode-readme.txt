@@ -7,3 +7,6 @@ TaskPaper mode is implemented on top of Outline mode. Visibility
 cycling and structure editing help to work with the outline
 structure. Special commands also provided for outline-aware filtering,
 tags manipulation, sorting, refiling, and archiving of items.
+
+Documentation is available online at
+<https://github.com/saf-dmitry/taskpaper-mode/blob/master/manual.md>.
