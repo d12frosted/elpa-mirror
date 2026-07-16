@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 1 -4 0 20260715 0)
+  . [(2 0 1 -4 0 20260716 2)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "f4c1e6b97bc58b8837a582d431bec0d350f5056d"))])
+      (:commit . "2155a400f975e7334e120c3b304985453065acf7"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -371,13 +371,13 @@
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "86c0b3525b2793b585b548c6e975d6fe6a2cea2a"))])
  (dirvish
-  . [(2 3 0 0 20250504 80741) ((emacs (28 1)) (compat (30)))
+  . [(2 3 0 0 20260716 9) ((emacs (28 1)) (compat (30)))
      "A modern file manager based on dired mode" tar
      ((:url . "https://github.com/alexluigit/dirvish")
       (:keywords "files" "convenience")
       (:maintainer "Alex Lu" . "https://github.com/alexluigit")
       (:authors ("Alex Lu" . "https://github.com/alexluigit"))
-      (:commit . "d877433f957a363ad78b228e13a8e5215f2d6593"))])
+      (:commit . "5152c80a32de3965a3e131a9314514af4aa8aa1e"))])
  (doc-show-inline
   . [(0 1 0 20260108 134251) ((emacs (29 1)))
      "Show doc-strings found in external files" tar

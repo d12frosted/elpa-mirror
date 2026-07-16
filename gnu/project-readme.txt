@@ -58,6 +58,12 @@ EXTRA-IGNORES is a list of globs in the format of `project-ignores'.
 This project type can also be used for non-VCS controlled
 directories, see the variable `project-vc-extra-root-markers'.
 
+Some of the methods on this backend cache their computations.
+Cache invalidation is done inside the `project-current' call, with
+duration determined either by variable `project-vc-cache-timeout' or
+`project-vc-non-essential-cache-timeout', depending on whether the
+argument MAYBE-PROMPT is non-nil.
+
 Utils:
 
 `project-combine-directories' and `project-subtract-directories',
