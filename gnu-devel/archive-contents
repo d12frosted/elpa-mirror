@@ -995,21 +995,21 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 0 0 20260712 0) ((emacs (29 1)))
+  . [(1 2 1 0 20260715 0) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "804c456c8ffa2da5eae2ee77ea795bf90c3bc7b5"))])
+      (:commit . "5608fa66894559b86ad7b430a4d01e8ce9b48b0c"))])
  (drepl
-  . [(0 4 0 20260520 140843) ((emacs (29 1)) (comint-mime (0 7)))
+  . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
      ((:url . "https://github.com/astoff/drepl")
       (:keywords "languages" "processes")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "6c8c00cb097604e4ffd16b2f35cec8244f50c6c1"))])
+      (:commit . "f8a9239a42962c150c4dce2353e9cf1b5dc504cf"))])
  (dts-mode
   . [(1 0 0 20221221 75311) ((emacs (24)))
      "Major mode for Device Tree source files" tar
@@ -1822,14 +1822,14 @@
       (:maintainer "Danny Freeman" . "danny@dfreeman.email")
       (:commit . "b4f59c13acf783513c897a639eb4e35c20b288d9"))])
  (javaimp
-  . [(0 9 2 0 20260625 8) nil
+  . [(0 9 2 0 20260715 9) nil
      "Add and reorder Java import statements in Maven/Gradle projects"
      tar
      ((:keywords "java" "maven" "gradle" "programming")
       (:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm")
       (:authors ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
       (:url . "https://elpa.gnu.org/packages/javaimp.html")
-      (:commit . "30f7c89bfbfc3c587be5a669b68a685bed39011d"))])
+      (:commit . "7d734bb703ccb47dc77286563a42d9d8a7407fe0"))])
  (jgraph-mode
   . [(1 1 0 20221221 80333) ((cl-lib (0 5)))
      "Major mode for Jgraph files" tar
