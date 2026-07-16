@@ -14,7 +14,8 @@ Currently available:
   evaluates to.
 - Via `project.el', execution from any buffer in a project.
   If more than one makefile is found, an interactive prompt for one is shown.
-  If `projectile' is installed, this is added to the `projectile-commander' on the 'm' key.
+  If `projectile' is installed, this is added to `projectile-dispatch',
+  or to `projectile-commander' on older Projectile releases.
 
 To enable it, use the following snippet to add the hook into 'makefile-mode':
 
