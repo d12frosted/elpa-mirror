@@ -2,15 +2,14 @@
  • Building package flex-compile
 From https://github.com/plandes/flex-compile
 Updating /mnt/store/melpa/working/flex-compile/
-Checking out 2d9d805ad6d1db8d7eeedf67460e4e13c9b06528
+Checking out 0bd757312b0118ed55d3f4eefe4adca983f588ec
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flex-compile/
-  to /tmp/flex-compile-BMJqmo/flex-compile-20260615.2248/
+  to /tmp/flex-compile-z64XhF/flex-compile-20260716.2144/
     flex-compile-base.el -> flex-compile-base.el
     flex-compile-choice-program.el -> flex-compile-choice-program.el
     flex-compile-cli.el -> flex-compile-cli.el
     flex-compile-clojure.el -> flex-compile-clojure.el
-    flex-compile-comint.el -> flex-compile-comint.el
     flex-compile-command.el -> flex-compile-command.el
     flex-compile-config.el -> flex-compile-config.el
     flex-compile-ess.el -> flex-compile-ess.el
@@ -21,30 +20,31 @@ Copying files (->) and directories (=>)
     flex-compile-python.el -> flex-compile-python.el
     flex-compile-repl.el -> flex-compile-repl.el
     flex-compile-script.el -> flex-compile-script.el
+    flex-compile-shell.el -> flex-compile-shell.el
     flex-compile-single-buffer.el -> flex-compile-single-buffer.el
     flex-compile-xml-validate.el -> flex-compile-xml-validate.el
     flex-compile.el -> flex-compile.el
     flex-compiler.el -> flex-compiler.el
-Created flex-compile-20260615.2248.tar containing:
-  flex-compile-20260615.2248/
-  flex-compile-20260615.2248/flex-compile-base.el
-  flex-compile-20260615.2248/flex-compile-choice-program.el
-  flex-compile-20260615.2248/flex-compile-cli.el
-  flex-compile-20260615.2248/flex-compile-clojure.el
-  flex-compile-20260615.2248/flex-compile-comint.el
-  flex-compile-20260615.2248/flex-compile-command.el
-  flex-compile-20260615.2248/flex-compile-config.el
-  flex-compile-20260615.2248/flex-compile-ess.el
-  flex-compile-20260615.2248/flex-compile-lisp.el
-  flex-compile-20260615.2248/flex-compile-make.el
-  flex-compile-20260615.2248/flex-compile-manage.el
-  flex-compile-20260615.2248/flex-compile-org-export.el
-  flex-compile-20260615.2248/flex-compile-pkg.el
-  flex-compile-20260615.2248/flex-compile-python.el
-  flex-compile-20260615.2248/flex-compile-repl.el
-  flex-compile-20260615.2248/flex-compile-script.el
-  flex-compile-20260615.2248/flex-compile-single-buffer.el
-  flex-compile-20260615.2248/flex-compile-xml-validate.el
-  flex-compile-20260615.2248/flex-compile.el
-  flex-compile-20260615.2248/flex-compiler.el
-Built flex-compile in 3.202s, finished at 2026-07-16T18:19:19+0000
+Created flex-compile-20260716.2144.tar containing:
+  flex-compile-20260716.2144/
+  flex-compile-20260716.2144/flex-compile-base.el
+  flex-compile-20260716.2144/flex-compile-choice-program.el
+  flex-compile-20260716.2144/flex-compile-cli.el
+  flex-compile-20260716.2144/flex-compile-clojure.el
+  flex-compile-20260716.2144/flex-compile-command.el
+  flex-compile-20260716.2144/flex-compile-config.el
+  flex-compile-20260716.2144/flex-compile-ess.el
+  flex-compile-20260716.2144/flex-compile-lisp.el
+  flex-compile-20260716.2144/flex-compile-make.el
+  flex-compile-20260716.2144/flex-compile-manage.el
+  flex-compile-20260716.2144/flex-compile-org-export.el
+  flex-compile-20260716.2144/flex-compile-pkg.el
+  flex-compile-20260716.2144/flex-compile-python.el
+  flex-compile-20260716.2144/flex-compile-repl.el
+  flex-compile-20260716.2144/flex-compile-script.el
+  flex-compile-20260716.2144/flex-compile-shell.el
+  flex-compile-20260716.2144/flex-compile-single-buffer.el
+  flex-compile-20260716.2144/flex-compile-xml-validate.el
+  flex-compile-20260716.2144/flex-compile.el
+  flex-compile-20260716.2144/flex-compiler.el
+Built flex-compile in 2.629s, finished at 2026-07-17T02:25:56+0000
