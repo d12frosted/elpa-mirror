@@ -724,7 +724,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(36 0 0 20260716 69) ((emacs (28 1)) (seq (2 24)))
+  . [(36 0 0 20260717 74) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -733,7 +733,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "829e84955e2438df5413695a84f63efca5de9a37"))])
+      (:commit . "05c3f60a0aa97df57b473e091f794897cf5b7c80"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1825,11 +1825,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "e8551dca4f2009e332285228cb971f8594aca1c7"))])
  (slime
-  . [(2 32 -4 0 20260711 51) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260717 52) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "c917f01f1d208ae96683150a35e9bc1d4f56b93b"))])
+      (:commit . "79b0b75f71aac249f00b17d95aa63ae3ff97ef75"))])
  (sly
   . [(1 0 43 0 20260402 224912) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -2114,11 +2114,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(8 3 3 -4 0 20260711 45) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(8 3 3 -4 0 20260716 51) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "64bdc613196565776a47e181f89e88533132b023"))])
+      (:commit . "4de80ac0a1687f0db29a65a049f5bcd702a19109"))])
  (web-mode
   . [(17 3 24 0 20260623 0) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
