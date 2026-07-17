@@ -56,11 +56,13 @@ Here are fancy-dabbrev's own configuration options:
 * fancy-dabbrev-expansion-context (default: 'after-symbol)
 
   Where to try to perform expansion. If 'after-symbol, only try to expand
-  after a symbol (as determined by thing-at-point). If
-  'after-symbol-or-space, also make it possible to expand after a space  (the
-  first expansion candidate will then be based on the previous symbol). If
-  'after-non-space, enable expansion after any non-space character. If
-  'almost-everywhere, enable exansion everywhere except at empty lines.
+  after or inside a symbol (as determined by thing-at-point). If
+  'after-symbol-followed-by-space, expand like 'after-symbol but not inside
+  symbols. If 'after-symbol-or-space, also make it possible to expand after a
+  space (the first expansion candidate will then be based on the previous
+  symbol). If 'after-non-space, enable expansion after any non-space
+  character. If 'almost-everywhere, enable exansion everywhere except at
+  empty lines.
 
 * fancy-dabbrev-expansion-on-preview-only (default: nil)
 
