@@ -724,7 +724,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(36 0 0 20260604 57) ((emacs (27 1)) (seq (2 24)))
+  . [(36 0 0 20260716 69) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -733,7 +733,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "96f1852c7e352c969393e6e66176178177e933be"))])
+      (:commit . "829e84955e2438df5413695a84f63efca5de9a37"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -813,13 +813,13 @@
       (:authors ("Peter" . "craven@gmx.net"))
       (:commit . "605a81ff7b2d2b275a3ec68e3ce7e5b50f85014d"))])
  (geiser-chibi
-  . [(0 17 0 20240521 155242) ((emacs (24 4)) (geiser (0 18)))
+  . [(0 17 0 20260706 3) ((emacs (24 4)) (geiser (0 18)))
      "Chibi Scheme's implementation of the geiser protocols" tar
      ((:url . "https://gitlab.com/emacs-geiser/chibi")
       (:keywords "languages" "chibi" "scheme" "geiser")
       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
       (:authors ("Peter" . "craven@gmx.net"))
-      (:commit . "2502fed1349c2703eea528b74bcc980ad6bceab8"))])
+      (:commit . "98cda369db3faf7268dd3b1705bb914dd6dad56a"))])
  (geiser-chicken
   . [(0 17 0 20250803 172103) ((emacs (24 4)) (geiser (0 19)))
      "Chicken's implementation of the geiser protocols" tar
@@ -1013,7 +1013,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260712 24) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260716 25) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1021,14 +1021,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "3cc1cef0f852a277cabeb51f3d1158d78073d6b5"))])
+      (:commit . "0046ed9ab32d6fa3e60865e84b27cf62fe386b67"))])
  (helm-core
-  . [(4 0 7 0 20260712 24) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260716 25) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "3cc1cef0f852a277cabeb51f3d1158d78073d6b5"))])
+      (:commit . "0046ed9ab32d6fa3e60865e84b27cf62fe386b67"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1613,12 +1613,12 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "618b6b19e8bd4c2994c4e37953e3a5eadee49406"))])
  (php-mode
-  . [(1 26 1 0 20260715 58) ((emacs (27 1)))
+  . [(1 26 1 0 20260716 78) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "101b3b5cad0d783a91ffc58e0e43115d06d11034"))])
+      (:commit . "5c4ebd83871fcff28f9019d5e4309f61241e19e7"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar

@@ -92,7 +92,9 @@ The manual has a section about building on top of Modus. My
 
 ## Emacs themes based on Modus
 
-This is not an exhaustive list. You are welcome to add your package here.
+This is not an exhaustive list. You are welcome to add your package
+here. Newer projects are at the bottom and are added as I am made
+aware of them.
 
 - `ef-themes` by Protesilaos <https://github.com/protesilaos/ef-themes>
 - `standard-themes` by Protesilaos <https://github.com/protesilaos/standard-themes>
@@ -103,6 +105,7 @@ This is not an exhaustive list. You are welcome to add your package here.
 - `pixel-themes` by Lucas <https://github.com/lucasobx/pixel-themes>
 - `modus-nordic` (`modus-nordic-night` and `modus-nordic-midnight`) by Ashton Wiersdorf <https://codeberg.org/ashton314/modus-nordic-night>
 - `folio-theme` by kn66 (nobu43) <https://github.com/kn66/folio-theme.el>
+- `modus-alabaster` by Derek Passen <https://github.com/dpassen/modus-alabaster>
 
 ## Other Emacs packages based on Modus
 

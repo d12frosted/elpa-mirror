@@ -546,7 +546,7 @@
       (:authors ("Ingo Lohmar" . "i.lohmar@gmail.com"))
       (:commit . "120e982f47e01945c044e0762ba376741c41b76c"))])
  (compat
-  . [(31 0 0 2 0 20260709 1) ((emacs (25 1)))
+  . [(31 0 0 2 0 20260716 2) ((emacs (25 1)))
      "Emacs Lisp Compatibility Library" tar
      ((:url . "https://github.com/emacs-compat/compat")
       (:keywords "lisp" "maint")
@@ -554,7 +554,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Philip Kaludercic" . "philipk@posteo.net")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "65c1343f50a29a8c0beb54204abd2b9f0db3c442"))])
+      (:commit . "1f3d7596173cf2851d3c4181b15d6c3573a38252"))])
  (cond-star
   . [(1 0 0 20260523 114724) ((emacs (24 3)))
      "Extended form of `cond' construct" tar
@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 6 0 20260708 4) ((emacs (29 1)) (compat (31)))
+  . [(3 6 0 20260716 5) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "e43b8315bd1a8d9125fff84ad84c4c003e177acb"))])
+      (:commit . "8c6787edc690097ccfcf2255fecf623a8ab29c7e"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -995,13 +995,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260715 0) ((emacs (29 1)))
+  . [(1 2 1 0 20260716 2) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "5608fa66894559b86ad7b430a4d01e8ce9b48b0c"))])
+      (:commit . "1f47ee1b6a12f3282877f62d111e07bbc09a3fcc"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -2247,13 +2247,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "8d70286c3fda845f3b8d97a937248670ca002f13"))])
  (modus-themes
-  . [(5 3 0 0 20260714 23) ((emacs (28 1)))
+  . [(5 3 0 0 20260716 25) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "9a46f896071f49de934e7a3243547972f907c469"))])
+      (:commit . "47dc463561710bfbb867dde1f984e5353b8c82bd"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
