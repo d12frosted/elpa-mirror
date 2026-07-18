@@ -1587,6 +1587,13 @@
 		 "outlines" "tools" "wp")
       (:maintainer "Mats Lidell" . "matsl@gnu.org")
       (:commit . "23b118ddb6e0595e3b0668dbce8fa4e8bcec5e71"))])
+ (ibuffer-sidebar
+  . [(1 0 0) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
+     ((:url . "https://github.com/jojojames/ibuffer-sidebar")
+      (:keywords "ibuffer" "files" "tools")
+      (:maintainer "James Nguyen" . "james@jojojames.com")
+      (:authors ("James Nguyen" . "james@jojojames.com"))
+      (:commit . "2781453a6967a7d16a1dddb04cfba6b907110d3e"))])
  (idlwave
   . [(6 5 1) nil "IDL editing mode for GNU Emacs" tar
      ((:keywords "languages")

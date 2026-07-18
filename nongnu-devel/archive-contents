@@ -724,7 +724,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(36 0 0 20260717 78) ((emacs (28 1)) (seq (2 24)))
+  . [(36 0 0 20260717 79) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -733,7 +733,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "5d000be6221c70c2ba65d17f0af5cb0f4440ed37"))])
+      (:commit . "51efdbcf43e1b97a52b828be7906c1abd413d693"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -797,13 +797,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser
-  . [(0 33 1 0 20260715 1) ((emacs (27 1)) (project (0 8 1)))
+  . [(0 33 1 0 20260718 4) ((emacs (27 1)) (project (0 8 1)))
      "GNU Emacs and Scheme talk to each other" tar
      ((:url . "https://gitlab.com/emacs-geiser/")
       (:keywords "languages" "scheme" "geiser")
       (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
       (:authors ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-      (:commit . "727347e968fe2e05ffd33992792acf036edef1cd"))])
+      (:commit . "3e506d06b34ccda8a50ac3e43c90d722c00065fe"))])
  (geiser-chez
   . [(0 18 0 20230707 93440) ((emacs (26 1)) (geiser (0 19)))
      "Chez and Geiser talk to each other" tar
@@ -1246,12 +1246,12 @@
       (:keywords "extensions")
       (:commit . "0895cad3714a0d588f24a8bf0d16c3c6a4d15776"))])
  (loopy-dash
-  . [(0 13 0 0 20260626 9)
+  . [(0 13 0 0 20260718 10)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))
      "Dash destructuring for `loopy'" tar
      ((:url . "https://codeberg.org/okamsn/loopy-dash")
       (:keywords "extensions")
-      (:commit . "d42ca0524fa564914a03708c67c61d90106ee007"))])
+      (:commit . "b1a12170806a6565db34f918a22c4931b0176716"))])
  (lorem-ipsum
   . [(0 4 0 20221214 105746) nil "Insert dummy pseudo Latin text" tar
      ((:url . "https://github.com/jschaf/emacs-lorem-ipsum")
@@ -2248,11 +2248,11 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com"))
       (:commit . "53166b9f5782ada054eb8645d3096e40a38da8d6"))])
  (zig-mode
-  . [(0 0 8 0 20251128 25646) ((emacs (26 1)) (reformatter (0 6)))
+  . [(0 0 8 0 20260717 49) ((emacs (26 1)) (reformatter (0 6)))
      "A major mode for the Zig programming language" tar
      ((:url . "https://codeberg.org/ziglang/zig-mode")
       (:keywords "zig" "languages")
       (:maintainer "Jen-Chieh" . "jcs090218@gmail.com")
       (:authors ("Andrea Orru" . "andreaorru1991@gmail.com")
 		("Andrew Kelley" . "superjoe30@gmail.com"))
-      (:commit . "20e395f940afe1e19e965050b0284ec418d6a9d5"))]))
+      (:commit . "62bfbaced0222e2bfbc086fa8556adf6b3298476"))]))

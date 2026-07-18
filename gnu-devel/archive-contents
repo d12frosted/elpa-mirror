@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 0 2 0 20260717 170) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 0 2 0 20260718 175) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "5bdbde0565592838e965186a122ae20a1c737886"))])
+      (:commit . "400899b6636ff849138725354de18d59096487f7"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 10 0 20260717 10) ((emacs (29 1)) (compat (31)))
+  . [(2 10 0 20260718 12) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "b470c4f117c747d9912e1734321e274dde36570e"))])
+      (:commit . "fb799537a1e37bf3740a7f4f04eb90c08a02b8d8"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1694,13 +1694,12 @@
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
       (:commit . "c467a935e89ca2e0738d662f7c0db04b3b8ae9d1"))])
  (ibuffer-sidebar
-  . [(0 0 1 0 20260612 36) ((emacs (29 1))) "Sidebar for `ibuffer'"
-     tar
+  . [(1 0 0 0 20260717 0) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
       (:keywords "ibuffer" "files" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "1330b0f156e2275acd1a9256fc13a1d22e5e3a9e"))])
+      (:commit . "2781453a6967a7d16a1dddb04cfba6b907110d3e"))])
  (idlwave
   . [(6 5 1 0 20240523 142720) nil "IDL editing mode for GNU Emacs"
      tar
