@@ -39,7 +39,7 @@ It is possible to adopt this code to many other languages.
 Search variants:
 
 By default active search for both pinyin and chinese characters
- with fallback to latin normal characters.
+with fallback to latin normal characters.
 
 ;; Other packages:
 
@@ -65,9 +65,9 @@ By default active search for both pinyin and chinese characters
 - ('’) in (Fāng'àn) apostrophe, syllable delimiter (隔音符号),
 is a strict grammatical requirement used to prevent ambiguity.
 Apostrophe use is rare, generally at word boundaries or within
-compounds. to prevent misreading when a syllable starting
+compounds.  to prevent misreading when a syllable starting
 with a, e, or o follows another syllable directly.
 - Upperacase for pinyin.
 - Cangjie search
 - method for  getting pinyin for chinese characters.
- ;; - allow connecting other input methods.
+- allow connecting other input methods.
