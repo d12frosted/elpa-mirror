@@ -13,9 +13,9 @@ Supported cargo commands:
 - run
 - test
 
-Not all commands and arguments are supported. If cargo-transient is
-missing support for something you need, please open a pull request
-or file an issue at
+Not all commands and arguments are supported.  If cargo-transient
+is missing support for something you need, please open a pull
+request or file an issue at
 <https://github.com/peterstuart/cargo-transient/>.
 
 By default, all commands will share the same compilation buffer,
