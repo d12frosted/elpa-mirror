@@ -727,12 +727,12 @@ Table of Contents
     with the Emacs completion infrastructure. Company provides an
     adapter `company-capf' to handle Capfs as a Company backend. As a
     result of this design, Company is a more complex package than Corfu,
-    three times as large, even without backends. Company by default uses
-    overlays for the popup in contrast to the child frames used by
-    Corfu. Overall both packages work well, but Company integrates less
-    tightly with Emacs. The `completion-styles' support is more limited
-    and the `completion-at-point' command and the `completion-in-region'
-    function do not invoke Company.
+    three times as large, even without backends. Older versions of
+    Company defaulted to overlays in contrast to the child frames used
+    by Corfu. Overall both packages work well, but Corfu integrates more
+    tightly with Emacs. Company's `completion-styles' support is more
+    limited and the `completion-at-point' command and the
+    `completion-in-region' function do not invoke Company.
 
   • [consult-completion-in-region]: The Consult package provides the
     function `consult-completion-in-region' which can be set as
