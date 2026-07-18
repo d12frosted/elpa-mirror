@@ -4,5 +4,9 @@ Put the following into your .emacs file (~/.emacs.d/init.el)
 
     (add-hook 'php-mode-hook #'flymake-phpstan-turn-on)
 
+Like `flycheck-phpstan', this backend reads PHPStan's JSON output, so the
+identifier and tip of each message are shown, and `phpstan-insert-ignore'
+and `phpstan-copy-dumped-type' work from a Flymake session too.
+
 For Lisp maintainers: see [GNU Flymake manual - 2.2.2 An annotated example backend]
 https://www.gnu.org/software/emacs/manual/html_node/flymake/An-annotated-example-backend.html
