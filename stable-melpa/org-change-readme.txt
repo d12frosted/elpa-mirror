@@ -6,8 +6,7 @@ org-change-replace (C-` r).  Accept or reject changes with
 org-change-accept (C-` k) and org-change-reject (C-` x).  Comment
 on a change with org-change-comment (C-` c).  Move between changes
 with org-change-next-change (C-` n) and
-org-change-previous-change (C-` p).  Show a sparse tree of all
-changes with org-change-tree (C-` \).  Count them with
+org-change-previous-change (C-` p).  Count them with
 org-change-info (C-` i).  Press C-` h for a summary of the key
 bindings.  Generate change markup from
 two versions of a document with org-change-from-diff.  When
