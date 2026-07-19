@@ -6,6 +6,7 @@
 [file:https://github.com/emacs-evil/evil-collection/actions/workflows/build.yaml/badge.svg?branch=master]
 [file:https://melpa.org/packages/evil-collection-badge.svg]
 [file:https://stable.melpa.org/packages/evil-collection-badge.svg]
+[file:https://elpa.nongnu.org/nongnu/evil-collection.svg]
 
 This is a collection of [Evil] bindings for /the parts of Emacs/ that
 Evil does not cover properly by default, such as `help-mode', `M-x
@@ -22,6 +23,9 @@ calendar', Eshell and more.
 
 [file:https://stable.melpa.org/packages/evil-collection-badge.svg]
 <https://stable.melpa.org/#/evil-collection>
+
+[file:https://elpa.nongnu.org/nongnu/evil-collection.svg]
+<https://elpa.nongnu.org/nongnu/evil-collection.html>
 
 [Evil] <https://github.com/emacs-evil/evil>
 

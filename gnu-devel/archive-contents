@@ -1694,12 +1694,12 @@
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
       (:commit . "c467a935e89ca2e0738d662f7c0db04b3b8ae9d1"))])
  (ibuffer-sidebar
-  . [(1 0 0 0 20260717 0) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
+  . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
       (:keywords "ibuffer" "files" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "2781453a6967a7d16a1dddb04cfba6b907110d3e"))])
+      (:commit . "d24edb3e7507f4cc8e6e3b336f49bafc2a6c3c8a"))])
  (idlwave
   . [(6 5 1 0 20240523 142720) nil "IDL editing mode for GNU Emacs"
      tar
@@ -2019,14 +2019,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 31 2 0 20260717 1)
+  . [(0 31 2 0 20260718 2)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "4c0fb61e9e54a3bfbedb39a97a5a86df2edc0445"))])
+      (:commit . "4e37417eb2d52d9c0ed43e6055a97bd752a6c333"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar

@@ -6,6 +6,7 @@
 [file:https://github.com/jojojames/ibuffer-sidebar/actions/workflows/ci.yml/badge.svg]
 [file:https://melpa.org/packages/ibuffer-sidebar-badge.svg]
 [file:https://stable.melpa.org/packages/ibuffer-sidebar-badge.svg]
+[file:https://elpa.gnu.org/packages/ibuffer-sidebar.svg]
 
 
 [file:https://github.com/jojojames/ibuffer-sidebar/actions/workflows/ci.yml/badge.svg]
@@ -16,6 +17,9 @@
 
 [file:https://stable.melpa.org/packages/ibuffer-sidebar-badge.svg]
 <https://stable.melpa.org/#/ibuffer-sidebar>
+
+[file:https://elpa.gnu.org/packages/ibuffer-sidebar.svg]
+<https://elpa.gnu.org/packages/ibuffer-sidebar.html>
 
 
 1 Screenshots
