@@ -192,13 +192,13 @@
 		("Damien Doligez" . "damien.doligez@inria.fr"))
       (:commit . "2905a436e956c5bba16c4633a6e4c4fceefa6535"))])
  (casual
-  . [(2 17 0) ((emacs (30 1)) (transient (0 9 0)) (csv-mode (1 27)))
+  . [(2 17 1) ((emacs (30 1)) (transient (0 9 0)) (csv-mode (1 27)))
      "Transient user interfaces for various modes" tar
      ((:url . "https://github.com/kickingvegas/casual")
       (:keywords "tools" "wp")
       (:maintainer "Charles Choi" . "kickingvegas@gmail.com")
       (:authors ("Charles Choi" . "kickingvegas@gmail.com"))
-      (:commit . "f549babc2bc449b2df5390ab41776f31c711f84e"))])
+      (:commit . "cadbeab2ec45804e63a328202c9a82fbed2413c5"))])
  (cdlatex
   . [(4 18 5) nil "Fast input methods for LaTeX environments and math"
      tar
@@ -535,6 +535,14 @@
       (:maintainer "Connor Smith" . "wconnorsmith@gmail.com")
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "2671071a4a57eaee7cc8c27b9e4b6fc60fd2ccd3"))])
+ (evil-collection
+  . [(3 0 0) ((emacs (29 1)) (evil (1 2 13)))
+     "A set of keybindings for Evil mode" tar
+     ((:url . "https://github.com/emacs-evil/evil-collection")
+      (:keywords "evil" "tools")
+      (:maintainer "James Nguyen" . "james@jojojames.com")
+      (:authors ("James Nguyen" . "james@jojojames.com"))
+      (:commit . "29acaa81d2992d9c89a4b15ead917abb3af05228"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -691,7 +699,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
  (flycheck
-  . [(36 0) ((emacs (27 1)) (seq (2 24))) "On-the-fly syntax checking"
+  . [(37 0) ((emacs (28 1)) (seq (2 24))) "On-the-fly syntax checking"
      tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -700,7 +708,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "ebddfd89b1eea91b8590f542908672569942fb82"))])
+      (:commit . "af6b60fd544c29f68c731d709a066317b8ed0628"))])
  (flymake-guile
   . [(0 5) ((emacs (26 1)) (flymake (1 2 1))) "Guile flymake backend"
      tar

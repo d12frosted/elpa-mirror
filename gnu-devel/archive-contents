@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 0 2 0 20260718 175) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 0 2 0 20260718 178) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "400899b6636ff849138725354de18d59096487f7"))])
+      (:commit . "24a4a6b129546a1ce2fcb3e3c5948259dff00685"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -1305,7 +1305,7 @@
       (:url . "https://elpa.gnu.org/packages/external-completion.html")
       (:commit . "92788f3be43b43f82876b9d0e263d5e55d00ec0e"))])
  (exwm
-  . [(0 35 0 20260704 2) ((emacs (29 1)) (xelb (0 23)) (compat (31)))
+  . [(0 35 0 20260718 3) ((emacs (29 1)) (xelb (0 23)) (compat (31)))
      "Emacs X Window Manager" tar
      ((:url . "https://github.com/emacs-exwm/exwm") (:keywords "unix")
       (:maintainer
@@ -1313,7 +1313,7 @@
        ("Steven Allen" . "steven@stebalien.com")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Chris Feng" . "chris.w.feng@gmail.com"))
-      (:commit . "2d0fb41793f8bc50abdea394f48b4653e8317286"))])
+      (:commit . "5cd76bb639df30a8a7d0f0bbf2edeacd75be0548"))])
  (f90-interface-browser
   . [(1 1 0 20221221 75553) ((cl-lib (0 7)))
      "Parse and browse f90 interfaces" tar

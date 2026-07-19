@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 8 0 20260713 3)
+  . [(1 8 0 20260718 5)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "da680e6029ee1ec0155adea922b9945824b09b9c"))])
+      (:commit . "6b805bdaa11c754e5bbfee7a3cc39fbae835b39b"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -204,14 +204,14 @@
 		("Damien Doligez" . "damien.doligez@inria.fr"))
       (:commit . "744333dc4c4bd8b93e037efa8f7362b0903b96a2"))])
  (casual
-  . [(2 17 0 0 20260715 0)
+  . [(2 17 1 0 20260718 0)
      ((emacs (30 1)) (transient (0 9 0)) (csv-mode (1 27)))
      "Transient user interfaces for various modes" tar
      ((:url . "https://github.com/kickingvegas/casual")
       (:keywords "tools" "wp")
       (:maintainer "Charles Choi" . "kickingvegas@gmail.com")
       (:authors ("Charles Choi" . "kickingvegas@gmail.com"))
-      (:commit . "f549babc2bc449b2df5390ab41776f31c711f84e"))])
+      (:commit . "cadbeab2ec45804e63a328202c9a82fbed2413c5"))])
  (cdlatex
   . [(4 18 5 0 20241007 162342) nil
      "Fast input methods for LaTeX environments and math" tar
@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 0 1 -4 0 20260717 4)
+  . [(2 0 1 -4 0 20260718 7)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "ba345e9d31cecf76cbbad74094b9720376ae9694"))])
+      (:commit . "03bffb62b7c30250979a9b4512c210f165dc36c9"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -563,6 +563,14 @@
       (:maintainer "Connor Smith" . "wconnorsmith@gmail.com")
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
+ (evil-collection
+  . [(3 0 0 0 20260718 0) ((emacs (29 1)) (evil (1 2 13)))
+     "A set of keybindings for Evil mode" tar
+     ((:url . "https://github.com/emacs-evil/evil-collection")
+      (:keywords "evil" "tools")
+      (:maintainer "James Nguyen" . "james@jojojames.com")
+      (:authors ("James Nguyen" . "james@jojojames.com"))
+      (:commit . "29acaa81d2992d9c89a4b15ead917abb3af05228"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -724,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(36 0 0 20260717 79) ((emacs (28 1)) (seq (2 24)))
+  . [(37 0 0 20260718 0) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -733,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "51efdbcf43e1b97a52b828be7906c1abd413d693"))])
+      (:commit . "af6b60fd544c29f68c731d709a066317b8ed0628"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1238,20 +1246,20 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "50cac3f726abd4e7872b8fa36ede72550ce66a64"))])
  (loopy
-  . [(0 16 1 0 20260705 9)
+  . [(0 16 1 0 20260718 10)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://codeberg.org/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "0895cad3714a0d588f24a8bf0d16c3c6a4d15776"))])
+      (:commit . "265d45b3f2d01a6e6262d01c8d48058f56de6351"))])
  (loopy-dash
-  . [(0 13 0 0 20260718 10)
+  . [(0 13 0 0 20260718 11)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))
      "Dash destructuring for `loopy'" tar
      ((:url . "https://codeberg.org/okamsn/loopy-dash")
       (:keywords "extensions")
-      (:commit . "b1a12170806a6565db34f918a22c4931b0176716"))])
+      (:commit . "d98d1a0a7b2d97a5a3517a7e3f5cc941d2331413"))])
  (lorem-ipsum
   . [(0 4 0 20221214 105746) nil "Insert dummy pseudo Latin text" tar
      ((:url . "https://github.com/jschaf/emacs-lorem-ipsum")
@@ -1297,7 +1305,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260717 42)
+  . [(4 6 0 0 20260718 46)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1309,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "4d147dd9ab7c13acb26a559cb990c8f648b0d182"))])
+      (:commit . "5429811150cc487603eaae972c0e4937b16651ac"))])
  (magit-section
-  . [(4 6 0 0 20260717 42)
+  . [(4 6 0 0 20260718 46)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1320,7 +1328,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "4d147dd9ab7c13acb26a559cb990c8f648b0d182"))])
+      (:commit . "5429811150cc487603eaae972c0e4937b16651ac"))])
  (markdown-mode
   . [(2 9 -3 0 20260425 11) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1604,14 +1612,14 @@
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
       (:commit . "365f88238f46f9b1425685562105881800f10386"))])
  (pg
-  . [(0 67 0 20260704 4) ((emacs (28 1)) (peg (1 0 1)))
+  . [(0 67 0 20260718 27) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
      ((:url . "https://github.com/emarsden/pg-el")
       (:keywords "data" "comm" "database" "postgresql")
       (:maintainer "Eric Marsden"
 		   . "eric.marsden@risk-engineering.org")
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-      (:commit . "618b6b19e8bd4c2994c4e37953e3a5eadee49406"))])
+      (:commit . "b6547e6fe09867f5d7a84b5c20d914e69af454bc"))])
  (php-mode
   . [(1 26 1 0 20260716 78) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
@@ -1644,13 +1652,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 3 0 -4 0 20260715 2) ((emacs (28 1)) (compat (30)))
+  . [(3 3 0 -4 0 20260718 4) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "9603718f1cb5958759c91daeb713ba876496abbb"))])
+      (:commit . "19de9c3be248cb14489a3b84a7f3a069128c0066"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
