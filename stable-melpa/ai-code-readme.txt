@@ -17,6 +17,7 @@ Supported AI coding CLIs include:
   - Grok CLI
   - Cursor CLI
   - Kiro CLI
+  - Open Interpreter CLI (Codex-compatible)
   - CodeBuddy Code CLI
   - Aider CLI
   - agent-shell
@@ -42,7 +43,7 @@ Basic configuration example:
 
 (use-package ai-code
   :config
-  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'opencode, 'kilo, 'grok, 'claude-code-ide, 'claude-code-el, 'claude-code, 'cursor, 'kiro, 'codebuddy, 'aider, 'agent-shell, 'eca
+  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'open-interpreter, 'opencode, 'kilo, 'grok, 'claude-code-ide, 'claude-code-el, 'claude-code, 'cursor, 'kiro, 'codebuddy, 'aider, 'agent-shell, 'eca
   (ai-code-set-backend 'codex) ;; set your preferred backend
   ;; Optional: use a narrower transient menu on smaller frames
   ;; (setq ai-code-menu-layout 'two-columns)

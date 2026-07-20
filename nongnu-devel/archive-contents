@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 9 0 20260719 0)
+  . [(1 9 0 20260719 1)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "6accda816d4726f0d4d24ebc49a458f9bb9c6899"))])
+      (:commit . "c548c5cf0d4a427a9c59d6e384ac1d96c285adbe"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -1612,14 +1612,14 @@
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
       (:commit . "365f88238f46f9b1425685562105881800f10386"))])
  (pg
-  . [(0 67 0 20260718 27) ((emacs (28 1)) (peg (1 0 1)))
+  . [(0 68 0 20260719 0) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
      ((:url . "https://github.com/emarsden/pg-el")
       (:keywords "data" "comm" "database" "postgresql")
       (:maintainer "Eric Marsden"
 		   . "eric.marsden@risk-engineering.org")
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-      (:commit . "b6547e6fe09867f5d7a84b5c20d914e69af454bc"))])
+      (:commit . "6d4b528cfd1e7f776eb0e4c14d84668fa69a041b"))])
  (php-mode
   . [(1 26 1 0 20260719 80) ((emacs (27 1)))
      "Major mode for editing PHP code" tar

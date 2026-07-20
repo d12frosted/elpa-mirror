@@ -106,7 +106,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   licensed). Works fine (last tested 2026-06 with version 1.25.1 in the default session pooling mode).
 
 - The [Odyssey](https://github.com/yandex/odyssey) connection pooler from Yandex (BSD license) works
-  perfectly with pg-el (last tested 2025-08 with version 1.4.0 in session pooling mode).
+  perfectly with pg-el (last tested 2026-07 with version 1.5.1 in session pooling mode).
 
 - The [GatewayD](https://github.com/gatewayd-io/gatewayd) firewall/proxy (AGPL v3 license) includes
   PostgreSQL proxy support which works fine with pg-el (last tested 2026-01 with version 0.10.3).
@@ -119,7 +119,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 - [Google AlloyDB Omni](https://cloud.google.com/alloydb/omni/docs/quickstart) is a proprietary fork
   of PostgreSQL with Google-developed extensions, including a columnar storage extension, adaptive
   autovacuum, and an index advisor. It works perfectly with pg-el as of 2026-07 (version that
-  reports itself as "17.7").
+  reports itself as "17.9").
 
 - [PolarDB for PostgreSQL](https://github.com/ApsaraDB/PolarDB-for-PostgreSQL) is free software
   (Apache 2 licence) developed by Alibaba Cloud, also available as a commercial hosted service with
@@ -149,9 +149,9 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   rows (e.g. `SELECT (1,2)`), does not support the `time`, `varbit`, `bytea`, `jsonb` and `hstore`
   types, does not handle a query which only contains an SQL comment, does not handle various
   PostgreSQL functions such as `factorial`, does not return a correct type OID for text columns in
-  rows returned from a prepared statement, doesn't support Unicode identifiers, doesn't support the
-  `COPY` protocol, doesn't support `TRUNCATE TABLE`. It works with these limitations with pg-el
-  (last tested 2026-06 with version 6.4.0).
+  rows returned from a prepared statement, doesn't support Unicode identifiers, doesn’t support the
+  `COPY` protocol, doesn’t support `TRUNCATE TABLE`. It works with these limitations with pg-el
+  (last tested 2026-07 with version 6.5.0).
 
 - The [CockroachDB](https://github.com/cockroachdb/cockroach) distributed database (source-available
   but non-free software licence). Note that this database does not implement the large object
@@ -180,7 +180,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 - The [Doltgres](https://github.com/dolthub/doltgresql) version-controlled database (Apache
   licensed) has rapidly improving PostgreSQL compatibility. It does not implement ownership-related
   system tables, nor int4range functions. It works well, with these limitations, with pg-el. Last
-  tested 2026-06 with a version that is reported as 15.5.
+  tested 2026-07 with a version that is reported as 15.5.
 
 - The [Materialize](https://materialize.com/) operational database (a proprietary differential
   dataflow database) has many limitations in its PostgreSQL compatibility: no support for primary
@@ -192,7 +192,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   2026-07 with CedarDB version v2026-07-10.
 
 - The [QuestDB](https://questdb.io/) time series database (Apache licensed) has very limited
-  PostgreSQL support, and does not support the `integer` type for example. Last tested 2026-06 with
+  PostgreSQL support, and does not support the `integer` type for example. Last tested 2026-07 with
   version 9.4.3.
 
 - The proprietary [Yellowbrick](https://yellowbrick.com/) distributed database does not implement
@@ -225,18 +225,18 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 - The [GreptimeDB](https://github.com/GrepTimeTeam/greptimedb) time series database built on the
   DataFusion query engine (Apache license) implements quite a lot of the PostgreSQL wire protocol,
   but has more restrictions on the use of identifiers than PostgreSQL (for example, `id` is not
-  accepted as a column name) and does not support data types such as `bit`. Last tested v1.1.2
+  accepted as a column name) and does not support data types such as `bit`. Last tested v1.1.3
   in 2026-07.
 
 - The [H2](https://github.com/h2database/h2database) embeddable database implements some aspects of
   the PostgreSQL wire protocol (MPL/EPL dual license). It does not support the `timestamptz`, `json`
   and `jsonb` data types, nor arrays, nor rowtypes, nor collation, nor cursors, nor the
   `pg_sequence` metadata table. It does not support the `CREATE FUNCTION` syntax for user-defined
-  functions. Last tested v2.4.240 in 2026-06.
+  functions. Last tested v2.4.240 in 2026-07.
 
 - The [XTDB](https://github.com/xtdb/xtdb) immutable database (MPL-2 license) can be queried using
   SQL over the PostgreSQL wire protocol. There are currently strong limitations on the DDL syntax
-  accepted. Last tested v2.1.0 in 2026-06.
+  accepted. Last tested v2.1.0 in 2026-07.
 
 - Hosted PostgreSQL services that have been tested: as of 2025-06 render.com is running a Debian
   build of PostgreSQL 16.8 and works fine (requires TLS connection), as of 2024-12
