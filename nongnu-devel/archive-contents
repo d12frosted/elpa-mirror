@@ -564,13 +564,13 @@
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
  (evil-collection
-  . [(3 0 0 0 20260718 1) ((emacs (29 1)) (evil (1 2 13)))
+  . [(3 0 0 0 20260719 2) ((emacs (29 1)) (evil (1 2 13)))
      "A set of keybindings for Evil mode" tar
      ((:url . "https://github.com/emacs-evil/evil-collection")
       (:keywords "evil" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "68817b926d1be17d613810baaee2315259481b7e"))])
+      (:commit . "03e1c04b398bc8948a21fac5f3baa4f70da1a350"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(37 0 0 20260718 0) ((emacs (28 1)) (seq (2 24)))
+  . [(37 0 0 20260720 8) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "af6b60fd544c29f68c731d709a066317b8ed0628"))])
+      (:commit . "0097c0ba01d9ebf503d0998f1322df95b4cf6355"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1652,13 +1652,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 3 0 -4 0 20260718 4) ((emacs (28 1)) (compat (30)))
+  . [(3 3 0 -4 0 20260720 5) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "19de9c3be248cb14489a3b84a7f3a069128c0066"))])
+      (:commit . "a4a91e08d49d280c9c5c2b0820bb04da198d61db"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

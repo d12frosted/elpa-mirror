@@ -172,6 +172,7 @@ Table of Contents
   │ 
   │   ;; Enable optional extension modes:
   │   ;; (corfu-history-mode)
+  │   ;; (corfu-mouse-mode)
   │   ;; (corfu-popupinfo-mode)
   │   )
   │ 
@@ -626,6 +627,7 @@ Table of Contents
     candidates with prefix arguments.
   • [corfu-info]: Actions to access the candidate location and
     documentation.
+  • [corfu-mouse]: `corfu-mouse-mode' enables mouse support.
   • [corfu-popupinfo]: Display candidate documentation or source in a
     popup next to the candidate menu.
   • [corfu-quick]: Commands to select using Avy-style quick keys.
@@ -649,6 +651,9 @@ Table of Contents
 
 [corfu-info]
 <https://github.com/minad/corfu/blob/main/extensions/corfu-info.el>
+
+[corfu-mouse]
+<https://github.com/minad/corfu/blob/main/extensions/corfu-mouse.el>
 
 [corfu-popupinfo]
 <https://github.com/minad/corfu/blob/main/extensions/corfu-popupinfo.el>

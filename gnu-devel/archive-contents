@@ -273,12 +273,12 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e4d0b4e5823c3137a70ca3f5d367c76bfadd0db0"))])
  (bicep-ts-mode
-  . [(0 1 4 0 20260619 82) nil "tree-sitter support for Bicep" tar
+  . [(0 1 4 0 20260720 83) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
       (:keywords "bicep" "languages" "tree-sitter")
       (:maintainer "Jostein Kjønigsen" . "jostein@kjonigsen.net")
       (:authors ("Jostein Kjønigsen" . "jostein@kjonigsen.net"))
-      (:commit . "8404310ae18ee7fd3d5c8f722f1b3cd4204e8e68"))])
+      (:commit . "f59889ab175bb309b474b82ca2cde4e791fe2677"))])
  (bind-key
   . [(2 4 1 0 20260408 145602) ((emacs (24 3)))
      "A simple way to manage personal keybindings" tar
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 10 0 20260718 12) ((emacs (29 1)) (compat (31)))
+  . [(2 10 0 20260719 16) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "fb799537a1e37bf3740a7f4f04eb90c08a02b8d8"))])
+      (:commit . "991224fc0387f005f4ffa896b35eca70b54c651a"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -3573,14 +3573,14 @@
       (:url . "https://elpa.gnu.org/packages/track-changes.html")
       (:commit . "17ddfd66e65c19f44dee41ee1b7ee1ce23ef3ed2"))])
  (tramp
-  . [(2 8 2 0 20260629 0) ((emacs (28 1)))
+  . [(2 8 2 0 20260720 2) ((emacs (28 1)))
      "Transparent Remote Access, Multiple Protocol" tar
      ((:url . "https://www.gnu.org/software/tramp/")
       (:keywords "comm" "processes")
       (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
       (:authors ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 		("Michael Albinus" . "michael.albinus@gmx.de"))
-      (:commit . "31866a54c93ae27f2af72e3fe9b6e180a40c3579"))])
+      (:commit . "26b197ba691140466f15c7cd29cc7db77144444c"))])
  (tramp-hlo
   . [(0 0 2 0 20251231 3054) ((tramp (2 8 0 5)))
      "High level operations as Tramp handlers" tar

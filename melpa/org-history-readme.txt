@@ -45,7 +45,7 @@ of the last commit with the "org-history" message, or just add a new
 commit.
 
 When saving, we check .dir-locals.el to see if there is a record
-for the current file and if .git exists. If not, we ask the user and
+for the current file and if .git exists.  If not, we ask the user and
 add the line:
 ("subfolder-maybe/current-file" (org-mode (mode . org-history)))
 Which checks 1) the path of the file relative to the Git directory
