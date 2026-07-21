@@ -8,7 +8,8 @@ C-` K and C-` X to move to the next change as well.  Comment
 on a change with org-change-comment (C-` c).  Move between changes
 with org-change-next-change (C-` n) and
 org-change-previous-change (C-` p).  Count them with
-org-change-info (C-` i).  Press C-` h for a summary of the key
+org-change-info (C-` i), or list them in a side window with
+org-change-overview (C-` o).  Press C-` h for a summary of the key
 bindings.  Generate change markup from
 two versions of a document with org-change-from-diff.  When
 used in org-mode, LaTeX and HTML export are available.  To change
