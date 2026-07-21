@@ -13,6 +13,14 @@ readline undo.
 Outside semi-char input mode (`line' / `copy' / `emacs' / `char' modes,
 or an alt-screen TUI) every command falls through to `evil-*'.
 
+In alt-screen apps (vim, less, fullscreen TUIs like Claude Code)
+insert-state ESC is by default routed to the app instead of switching
+to normal state, so the app keeps its ESC key.  `C-c C-r'
+(`evil-ghostel-toggle-send-escape') toggles the routing per buffer;
+the `evil-ghostel-escape' option sets the default.  `C-c <escape>'
+switches to normal state once without changing the routing (GUI
+frames; on a tty it needs the kitty keyboard protocol via kkp.el).
+
 Enable by adding to your init:
 
   (use-package evil-ghostel

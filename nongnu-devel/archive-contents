@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 9 0 20260719 1)
+  . [(1 9 0 20260720 2)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "c548c5cf0d4a427a9c59d6e384ac1d96c285adbe"))])
+      (:commit . "3ce8b3c0f8e659d80d6acde4fd8f48fa6a6c0cac"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(37 0 0 20260720 8) ((emacs (28 1)) (seq (2 24)))
+  . [(37 0 0 20260720 12) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "0097c0ba01d9ebf503d0998f1322df95b4cf6355"))])
+      (:commit . "476cc0095f833880abf35dd16e0befd3e38dc115"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1021,7 +1021,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260716 25) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260720 27) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1029,14 +1029,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "0046ed9ab32d6fa3e60865e84b27cf62fe386b67"))])
+      (:commit . "ab09703effe69217b97a2097ff3b8742bb39c6a3"))])
  (helm-core
-  . [(4 0 7 0 20260716 25) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260720 27) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "0046ed9ab32d6fa3e60865e84b27cf62fe386b67"))])
+      (:commit . "ab09703effe69217b97a2097ff3b8742bb39c6a3"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1652,13 +1652,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 3 0 -4 0 20260720 5) ((emacs (28 1)) (compat (30)))
+  . [(3 3 0 -4 0 20260720 7) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "a4a91e08d49d280c9c5c2b0820bb04da198d61db"))])
+      (:commit . "c7b801c53ec5acc226ca5c9ff65bb46a8c8d04ed"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

@@ -585,13 +585,13 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "0fbd723e7f4d824902b0a4b712b92c66a1eaf97e"))])
  (consult-hoogle
-  . [(0 7 0 0 20260430 125841) ((emacs (28 1)) (consult (2 0)))
+  . [(0 7 0 0 20260720 1) ((emacs (28 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
      ((:url . "https://codeberg.org/rahguzar/consult-hoogle")
       (:keywords "docs" "languages")
       (:maintainer "rahguzar" . "rahguzar@mailbox.org")
       (:authors ("rahguzar" . "rahguzar@mailbox.org"))
-      (:commit . "94b7800e1a23ee41db133a355d20e8c84db08c09"))])
+      (:commit . "42fa72c9e44e464801531d193e6edf45da6b2ee8"))])
  (consult-recoll
   . [(1 0 0 0 20250223 210510) ((emacs (26 1)) (consult (2 0)))
      "Recoll queries using consult" tar
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 10 0 20260719 16) ((emacs (29 1)) (compat (31)))
+  . [(2 10 0 20260720 18) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "991224fc0387f005f4ffa896b35eca70b54c651a"))])
+      (:commit . "44b926838376626c661e2ddbe9082a0ef097928c"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1144,7 +1144,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "583951606e4e19fd53acd8c5691210b9acb524d7"))])
  (ellama
-  . [(1 30 0 0 20260712 1)
+  . [(1 31 0 0 20260720 1)
      ((emacs (28 1)) (llm (0 31 1)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1152,7 +1152,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "b00c307c97a2e447948a589fe591e3cad2d4b93a"))])
+      (:commit . "5d32a48a8d1797fec776ba56279dc99dd58f399a"))])
  (emacs-gc-stats
   . [(1 4 2 0 20231206 152254) ((emacs (25 1)))
      "Collect Emacs GC statistics" tar
@@ -1991,14 +1991,14 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "65556a218fe138516ebe557726fe6e4b8b60f539"))])
  (lisp-ts-mode
-  . [(0 2 1 0 20260711 3)
+  . [(0 3 0 0 20260720 0)
      ((emacs (30 2)) (cond-star (0)) (compat (31)))
      "lisp-mode with tree-sitter support" tar
      ((:url . "https://codeberg.org/zshaftel/lisp-ts-mode")
       (:keywords "lisp" "languages" "tree-sitter")
       (:maintainer "zach shaftel" . "zach@shaf.tel")
       (:authors ("zach shaftel" . "zach@shaf.tel"))
-      (:commit . "c660a56f82691a2d884e9b385d0f88dc07ffd786"))])
+      (:commit . "15d86f40335c8be20250f7f86d0476b1c3a4ac90"))])
  (listen
   . [(0 10 1 0 20260105 223313)
      ((emacs (29 1)) (persist (0 6)) (taxy (0 10))
