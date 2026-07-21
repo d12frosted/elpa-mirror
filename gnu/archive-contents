@@ -484,11 +484,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "50b9ec928193f339c3c2ae20f088ea62cc82bb9d"))])
  (company
-  . [(1 0 2) ((emacs (25 1))) "Modular text completion framework" tar
+  . [(1 1 0) ((emacs (26 1)) (posframe (1 5 1)))
+     "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "393940f76aec1f2500441d4e0b97f783acbb536b"))])
+      (:commit . "1cc907ac9e46ae4209eb5a341131787e0c678406"))])
  (company-ebdb
   . [(1 1) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar

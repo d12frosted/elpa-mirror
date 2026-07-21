@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(37 0 0 20260720 12) ((emacs (28 1)) (seq (2 24)))
+  . [(37 0 0 20260721 19) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "476cc0095f833880abf35dd16e0befd3e38dc115"))])
+      (:commit . "2645f0a90b5b8ed0a781830e55257d6b573925b4"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1305,7 +1305,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260718 46)
+  . [(4 6 0 0 20260720 55)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1317,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "5429811150cc487603eaae972c0e4937b16651ac"))])
+      (:commit . "de78e4b2b2a0ce34082ef913ae00d465c8740c1e"))])
  (magit-section
-  . [(4 6 0 0 20260718 46)
+  . [(4 6 0 0 20260720 55)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1328,7 +1328,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "5429811150cc487603eaae972c0e4937b16651ac"))])
+      (:commit . "de78e4b2b2a0ce34082ef913ae00d465c8740c1e"))])
  (markdown-mode
   . [(2 9 -3 0 20260425 11) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1520,7 +1520,7 @@
       (:authors ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
       (:commit . "e2599a106a26ce5511095e23df4ea04be6687a8a"))])
  (orgit
-  . [(2 2 0 0 20260701 0)
+  . [(2 2 0 0 20260717 1)
      ((emacs (29 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit (4 6)) (org (9 8)))
      "Support for Org links to Magit buffers" tar
@@ -1530,7 +1530,7 @@
 		   . "emacs.orgit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-      (:commit . "7c4827cd04953166f71eaec151ad1c50872fc680"))])
+      (:commit . "47b3568fce775c756fb5bb3545c2edd48b8e2fc1"))])
  (p4-16-mode
   . [(0 3 0 20231118 161633) nil
      "Support for the P4_16 programming language" tar
@@ -1652,13 +1652,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 3 0 -4 0 20260720 7) ((emacs (28 1)) (compat (30)))
+  . [(3 3 0 -4 0 20260721 20) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "c7b801c53ec5acc226ca5c9ff65bb46a8c8d04ed"))])
+      (:commit . "15a61956add47e406e2247721a9def10b7243f7c"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

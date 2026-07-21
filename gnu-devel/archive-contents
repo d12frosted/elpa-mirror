@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 0 2 0 20260718 178) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 1 0 0 20260721 0) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "24a4a6b129546a1ce2fcb3e3c5948259dff00685"))])
+      (:commit . "1cc907ac9e46ae4209eb5a341131787e0c678406"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -995,13 +995,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260716 2) ((emacs (29 1)))
+  . [(1 2 1 0 20260721 3) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "1f47ee1b6a12f3282877f62d111e07bbc09a3fcc"))])
+      (:commit . "b080966149ce4766fc12e47bc19cc22f473d33d2"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
