@@ -601,9 +601,9 @@ prefix.  The most commonly used commands are described below.
         and then splits the data into cells accordingly.
       - <kbd>C-c C-c t</kbd> - Transpose table at point.
 
-    The table editing functions try to handle markup hiding
-    correctly when calculating column widths, however, columns
-    containing hidden markup may not always be aligned properly.
+    When markup hiding is enabled, the display is padded before
+    cell separators so that aligned tables remain visually aligned
+    even when cells contain hidden markup.
 
     <kbd>C-c C-s t</kbd> (`markdown-insert-table`) is a general command for inserting new table.
     The command prompts for table size and column alignment and inserts an empty pipe table at point.

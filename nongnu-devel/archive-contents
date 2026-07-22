@@ -1021,7 +1021,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260720 27) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260722 30) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1029,14 +1029,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "ab09703effe69217b97a2097ff3b8742bb39c6a3"))])
+      (:commit . "b934b8e25c67dbc0af973de527013d243b9e047f"))])
  (helm-core
-  . [(4 0 7 0 20260720 27) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260722 30) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "ab09703effe69217b97a2097ff3b8742bb39c6a3"))])
+      (:commit . "b934b8e25c67dbc0af973de527013d243b9e047f"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1246,13 +1246,13 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "50cac3f726abd4e7872b8fa36ede72550ce66a64"))])
  (loopy
-  . [(0 16 1 0 20260718 10)
+  . [(0 16 1 0 20260722 11)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://codeberg.org/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "265d45b3f2d01a6e6262d01c8d48058f56de6351"))])
+      (:commit . "d33417ff4ff436a221eb10c73c283c9c2af3cde1"))])
  (loopy-dash
   . [(0 13 0 0 20260718 11)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))
@@ -1305,7 +1305,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260721 56)
+  . [(4 6 0 0 20260721 57)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1317,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "05d7ea9870fead1f93def86bc1935dd48e4c77ee"))])
+      (:commit . "072ff065510021773059af8cb8387850664d5af0"))])
  (magit-section
-  . [(4 6 0 0 20260721 56)
+  . [(4 6 0 0 20260721 57)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1328,15 +1328,15 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "05d7ea9870fead1f93def86bc1935dd48e4c77ee"))])
+      (:commit . "072ff065510021773059af8cb8387850664d5af0"))])
  (markdown-mode
-  . [(2 9 -3 0 20260425 11) ((emacs (28 1)))
+  . [(2 9 -3 0 20260722 13) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
      ((:url . "https://jblevins.org/projects/markdown-mode/")
       (:keywords "markdown" "github flavored markdown" "itex")
       (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
-      (:commit . "1f72cefa6a4b759f90e335e4908725a721b17ad9"))])
+      (:commit . "f441e8bc9951e73b12c61e9198658488dd8e86e1"))])
  (mastodon
   . [(2 0 17 0 20260509 74935)
      ((emacs (29 1)) (persist (0 8)) (tp (0 8)))

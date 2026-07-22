@@ -995,13 +995,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260721 3) ((emacs (29 1)))
+  . [(1 2 1 0 20260722 4) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "b080966149ce4766fc12e47bc19cc22f473d33d2"))])
+      (:commit . "f04a0f2aec4c78a30a72ee59c1c1863a5d7a67ab"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -2246,13 +2246,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "8d70286c3fda845f3b8d97a937248670ca002f13"))])
  (modus-themes
-  . [(5 3 0 0 20260717 26) ((emacs (28 1)))
+  . [(5 3 0 0 20260722 27) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "e81c3c6ce3cdeb02266487a6fc1461cb9194c70e"))])
+      (:commit . "7d53a6959c92b40e3f819b134f7db93ec9a31352"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar

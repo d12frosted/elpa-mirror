@@ -37,6 +37,7 @@ _Recent breaking changes:_
   • `loopy-iter-bare-special-macro-arguments' and
     `loopy-iter-bare-commands' were removed. Used
     `loopy-iter-bare-names' instead.
+  • The deprecated user option `loopy-default-flags' was removed.
 • Version 0.16.0:
   • Using accumulation commands with different initial values for the
     same variable now signals an error instead of a warning.
