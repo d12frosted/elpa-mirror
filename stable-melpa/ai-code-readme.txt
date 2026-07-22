@@ -8,6 +8,7 @@ URL: https://github.com/tninja/ai-code-interface.el
 
 Supported AI coding CLIs include:
   - OpenAI Codex
+  - Pi
   - Antigravity CLI
   - Opencode
   - Claude Code
@@ -34,7 +35,7 @@ New User Quick Start:
        (global-set-key (kbd "C-c a") #'ai-code-menu))
 
   2) First 60 seconds:
-     - C-c a a : Start AI CLI session
+     - C-c a a : Start the selected AI CLI session
      - C-c a c : Ask AI to change current function/region
      - C-c a q : Ask question only (no code change)
      - C-c a z : Jump back to active AI session buffer
@@ -43,7 +44,7 @@ Basic configuration example:
 
 (use-package ai-code
   :config
-  ;; use codex as backend, other options are 'gemini, 'github-copilot-cli, 'open-interpreter, 'opencode, 'kilo, 'grok, 'claude-code-ide, 'claude-code-el, 'claude-code, 'cursor, 'kiro, 'codebuddy, 'aider, 'agent-shell, 'eca
+  ;; use codex as backend, other options are 'pi, 'gemini, 'github-copilot-cli, 'open-interpreter, 'opencode, 'kilo, 'grok, 'claude-code-ide, 'claude-code-el, 'claude-code, 'cursor, 'kiro, 'codebuddy, 'aider, 'agent-shell, 'eca
   (ai-code-set-backend 'codex) ;; set your preferred backend
   ;; Optional: use a narrower transient menu on smaller frames
   ;; (setq ai-code-menu-layout 'two-columns)
