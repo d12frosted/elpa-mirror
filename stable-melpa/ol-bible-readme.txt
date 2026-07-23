@@ -54,6 +54,8 @@ The following are examples of valid links:
   - `oremus' will open an oremus link with `eww'.
   - `link' will use a link from `ol-bible-http-provider' and
     `browse-url'
+  - `ol-bible-viewer-xiphos' which uses `xiphos-nav' to navigate the
+    current Xiphos session to the start of the reference
   - A function which takes an `ol-bible-reference' structure.
 
 - `ol-bible-description-format' provides the verse and range
