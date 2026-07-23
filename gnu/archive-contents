@@ -2096,11 +2096,11 @@
       (:authors ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
       (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (mode-line-maker
-  . [(0 2 1) ((emacs (29 1))) "Mode-line helper tools" tar
+  . [(0 2 2) ((emacs (29 1))) "Mode-line helper tools" tar
      ((:url . "https://github.com/rougier/mode-line-maker")
       (:keywords "convenience" "mode-line" "header-line")
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-      (:commit . "7af5dbe8dcf24725b106b5776008a3aef490de2b"))])
+      (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
   . [(5 3 0) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
@@ -2626,13 +2626,13 @@
       (:authors ("Scott Andrew Borton" . "scott@pp.htv.fi"))
       (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pulsar
-  . [(1 4 0) ((emacs (28 1)))
+  . [(1 4 1) ((emacs (28 1)))
      "Pulse highlight on demand or after select functions" tar
      ((:url . "https://github.com/protesilaos/pulsar")
       (:keywords "convenience" "pulse" "highlight")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "76dc758361378e1c863151cb7febceb4d5218f6f"))])
+      (:commit . "c75b0bb3e062cd1c51b31af8f7c32b049596ecde"))])
  (pyim
   . [(5 3 6) ((emacs (27 1)) (async (1 6)) (xr (1 13)))
      "A Chinese input method support quanpin, shuangpin, wubi, cangjie and rime."

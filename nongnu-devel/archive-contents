@@ -1305,7 +1305,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260722 59)
+  . [(4 6 0 0 20260722 62)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1317,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "2cefc7920ace23f529d82fbdc7799b7ad6e60762"))])
+      (:commit . "639ea6c61598f196c363c9299d21a7301b7d9fa0"))])
  (magit-section
-  . [(4 6 0 0 20260722 59)
+  . [(4 6 0 0 20260722 62)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1328,7 +1328,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "2cefc7920ace23f529d82fbdc7799b7ad6e60762"))])
+      (:commit . "639ea6c61598f196c363c9299d21a7301b7d9fa0"))])
  (markdown-mode
   . [(2 9 -3 0 20260722 13) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar

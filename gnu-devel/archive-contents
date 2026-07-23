@@ -869,13 +869,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl
-  . [(1 10 0 0 20260627 186) ((cl-lib (0 2)) (emacs (27 1)))
+  . [(1 10 0 0 20260723 188) ((cl-lib (0 2)) (emacs (27 1)))
      "Highlight uncommitted changes using VC" tar
      ((:url . "https://github.com/dgutov/diff-hl")
       (:keywords "vc" "diff")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
-      (:commit . "2d7d0714d9637f54af672987c65b6973b31e56a2"))])
+      (:commit . "91fcd4fa42fef895a754e80c4435ae6314be7822"))])
  (diffview
   . [(1 0 0 20230224 111651) nil "View diffs in side-by-side format"
      tar
@@ -2239,12 +2239,12 @@
       (:authors ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
       (:commit . "b1f5c7dbdc405e6e10d9ddd99a43a6b2ad61b176"))])
  (mode-line-maker
-  . [(0 2 1 0 20260722 0) ((emacs (29 1))) "Mode-line helper tools"
+  . [(0 2 2 0 20260722 0) ((emacs (29 1))) "Mode-line helper tools"
      tar
      ((:url . "https://github.com/rougier/mode-line-maker")
       (:keywords "convenience" "mode-line" "header-line")
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
-      (:commit . "7af5dbe8dcf24725b106b5776008a3aef490de2b"))])
+      (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
   . [(5 3 0 0 20260722 27) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
@@ -2817,13 +2817,13 @@
       (:url . "https://elpa.gnu.org/packages/pspp-mode.html")
       (:commit . "faf56c519049f0fbce3ab0a57e90702dd9f82da4"))])
  (pulsar
-  . [(1 4 0 0 20260722 0) ((emacs (28 1)))
+  . [(1 4 1 0 20260723 2) ((emacs (28 1)))
      "Pulse highlight on demand or after select functions" tar
      ((:url . "https://github.com/protesilaos/pulsar")
       (:keywords "convenience" "pulse" "highlight")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "76dc758361378e1c863151cb7febceb4d5218f6f"))])
+      (:commit . "1849c0720c3fe5eb92f800b20351b58bce8804b6"))])
  (pyim
   . [(5 3 6 0 20251230 80953)
      ((emacs (27 1)) (async (1 6)) (xr (1 13)))

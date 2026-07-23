@@ -135,7 +135,7 @@ Table of Contents
   │   :bind
   │   ( :map global-map
   │     ("C-x l" . pulsar-pulse-line) ; overrides `count-lines-page'
-  │     ("C-x L" . pulsar-highlight-permanently-dwim)) ; or use `pulsar-highlight-temporarily-dwim'
+  │     ("C-x L" . pulsar-highlight-permanently-dwim)) ; or use `pulsar-highlight-temporarily'
   │   :init
   │   (pulsar-global-mode 1)
   │   :config
@@ -257,6 +257,11 @@ Table of Contents
   static highlights from the active region or current line. This command
   operates on the entire buffer when it is called with a universal
   prefix argument (`C-u' by default).
+
+  The command `pulsar-highlight-permanently-remove-all' removes all
+  permanent highlights from the current buffer. It is the same calling
+  the above command with a prefix argument. [ Ths command is part of
+  1.5.0-dev. ]
 
   The command `pulsar-highlight-permanently-dwim' adds a permanent
   static highlight if there is none or removes it if there is one. It
@@ -402,8 +407,8 @@ Table of Contents
         Anwesh Gangula, Diego Alvarez, Duy Nguyen, Jake Miles, Koloszár
         Gergely, Matthias Meulien, Mark Barton, Mehrad Mahmoudian,
         Nikolaos Bezirgiannis, Petter Storvik, Ronny Randen, Rudolf
-        Adamkovič, Sébastien Delafond, Toon Claes, and users djl,
-        hammerandtongs, irisjae, kb.
+        Adamkovič, Sébastien Delafond, Spike-Leung, Toon Claes, and
+        users djl, hammerandtongs, irisjae, kb.
 
 
 14 GNU Free Documentation License

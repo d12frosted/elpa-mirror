@@ -135,7 +135,7 @@ Table of Contents
   │   :bind
   │   ( :map global-map
   │     ("C-x l" . pulsar-pulse-line) ; overrides `count-lines-page'
-  │     ("C-x L" . pulsar-highlight-permanently-dwim)) ; or use `pulsar-highlight-temporarily-dwim'
+  │     ("C-x L" . pulsar-highlight-permanently-dwim)) ; or use `pulsar-highlight-temporarily'
   │   :init
   │   (pulsar-global-mode 1)
   │   :config
@@ -402,8 +402,8 @@ Table of Contents
         Anwesh Gangula, Diego Alvarez, Duy Nguyen, Jake Miles, Koloszár
         Gergely, Matthias Meulien, Mark Barton, Mehrad Mahmoudian,
         Nikolaos Bezirgiannis, Petter Storvik, Ronny Randen, Rudolf
-        Adamkovič, Sébastien Delafond, Toon Claes, and users djl,
-        hammerandtongs, irisjae, kb.
+        Adamkovič, Sébastien Delafond, Spike-Leung, Toon Claes, and
+        users djl, hammerandtongs, irisjae, kb.
 
 
 14 GNU Free Documentation License
