@@ -103,7 +103,7 @@
 
 [ELPA] <https://elpa.gnu.org/packages/org-modern.html>
 
-[MELPA] <https://melpa.org/#/org-modern>
+[MELPA] <https://releases.melpa.org/#/org-modern>
 
 [bug#76390] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=76390>
 

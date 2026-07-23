@@ -2,20 +2,20 @@
              PULSAR.EL: HIGHLIGHT LINE AUTOMATICALLY AFTER
                         SOME CHANGE OR ON DEMAND
 
-                          Protesilaos Stavrou
+                              Protesilaos
                           info@protesilaos.com
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This manual, written by Protesilaos Stavrou, describes the customization
-options for `pulsar' (or `pulsar.el'), and provides every other piece of
+This manual, written by Protesilaos, describes the customization options
+for `pulsar' (or `pulsar.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.3.0,
-released on 2025-11-30.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.4.0,
+released on 2026-07-22.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.4.0-dev.
+Current development target is 1.5.0-dev.
 
 ⁃ Package name (GNU ELPA): `pulsar'
 ⁃ Official manual: <https://protesilaos.com/emacs/pulsar>
@@ -126,7 +126,7 @@ Table of Contents
 3 Sample configuration
 ══════════════════════
 
-  Remember to read the doc string of each of these variables or
+  Remember to read the docstring of each of these variables or
   functions.
 
   ┌────
@@ -391,19 +391,19 @@ Table of Contents
   Pulsar is meant to be a collective effort.  Every bit of help matters.
 
   Author/maintainer
-        Protesilaos Stavrou.
+        Protesilaos.
 
   Contributions to the code or manual
         Abdelhak Bougouffa, Aymeric Agon-Rambosson, Bahman Movaqar,
-        Daniel Mendler, Ivan Popovych, JD Smith, Maxim Dunaevsky, Ryan
-        Kaskel, shipmints, ukiran03.
+        Daniel Mendler, Ivan Popovych, Javier Pacheco, JD Smith, Maxim
+        Dunaevsky, Ryan Kaskel, Steven Allen, shipmints, ukiran03.
 
   Ideas and user feedback
-        Anwesh Gangula, Diego Alvarez, Duy Nguyen, Koloszár Gergely,
-        Matthias Meulien, Mark Barton, Mehrad Mahmoudian, Nikolaos
-        Bezirgiannis, Petter Storvik, Ronny Randen, Rudolf Adamkovič,
-        Sébastien Delafond, Toon Claes, and users djl, hammerandtongs,
-        irisjae, kb.
+        Anwesh Gangula, Diego Alvarez, Duy Nguyen, Jake Miles, Koloszár
+        Gergely, Matthias Meulien, Mark Barton, Mehrad Mahmoudian,
+        Nikolaos Bezirgiannis, Petter Storvik, Ronny Randen, Rudolf
+        Adamkovič, Sébastien Delafond, Toon Claes, and users djl,
+        hammerandtongs, irisjae, kb.
 
 
 14 GNU Free Documentation License

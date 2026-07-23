@@ -95,7 +95,7 @@ Table of Contents
 
 [ELPA] <https://elpa.gnu.org/packages/corfu.html>
 
-[MELPA] <https://melpa.org/#/corfu>
+[MELPA] <https://releases.melpa.org/#/corfu>
 
 
 3 Key bindings
@@ -172,6 +172,7 @@ Table of Contents
   │ 
   │   ;; Enable optional extension modes:
   │   ;; (corfu-history-mode)
+  │   ;; (corfu-mouse-mode)
   │   ;; (corfu-popupinfo-mode)
   │   )
   │ 
@@ -626,6 +627,7 @@ Table of Contents
     candidates with prefix arguments.
   • [corfu-info]: Actions to access the candidate location and
     documentation.
+  • [corfu-mouse]: `corfu-mouse-mode' enables mouse support.
   • [corfu-popupinfo]: Display candidate documentation or source in a
     popup next to the candidate menu.
   • [corfu-quick]: Commands to select using Avy-style quick keys.
@@ -649,6 +651,9 @@ Table of Contents
 
 [corfu-info]
 <https://github.com/minad/corfu/blob/main/extensions/corfu-info.el>
+
+[corfu-mouse]
+<https://github.com/minad/corfu/blob/main/extensions/corfu-mouse.el>
 
 [corfu-popupinfo]
 <https://github.com/minad/corfu/blob/main/extensions/corfu-popupinfo.el>
@@ -727,12 +732,12 @@ Table of Contents
     with the Emacs completion infrastructure. Company provides an
     adapter `company-capf' to handle Capfs as a Company backend. As a
     result of this design, Company is a more complex package than Corfu,
-    three times as large, even without backends. Company by default uses
-    overlays for the popup in contrast to the child frames used by
-    Corfu. Overall both packages work well, but Company integrates less
-    tightly with Emacs. The `completion-styles' support is more limited
-    and the `completion-at-point' command and the `completion-in-region'
-    function do not invoke Company.
+    three times as large, even without backends. Older versions of
+    Company defaulted to overlays in contrast to the child frames used
+    by Corfu. Overall both packages work well, but Corfu integrates more
+    tightly with Emacs. Company's `completion-styles' support is more
+    limited and the `completion-at-point' command and the
+    `completion-in-region' function do not invoke Company.
 
   • [consult-completion-in-region]: The Consult package provides the
     function `consult-completion-in-region' which can be set as

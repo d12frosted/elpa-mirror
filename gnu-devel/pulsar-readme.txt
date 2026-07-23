@@ -11,11 +11,11 @@ This manual, written by Protesilaos, describes the customization options
 for `pulsar' (or `pulsar.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 1.3.0,
-released on 2025-11-30.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.4.0,
+released on 2026-07-22.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.4.0-dev.
+Current development target is 1.5.0-dev.
 
 ⁃ Package name (GNU ELPA): `pulsar'
 ⁃ Official manual: <https://protesilaos.com/emacs/pulsar>
