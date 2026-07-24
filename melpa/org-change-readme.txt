@@ -12,6 +12,7 @@ org-change-info (C-` i), or list them in a side window with
 org-change-overview (C-` o).  Press C-` h for a summary of the key
 bindings.  Generate change markup from
 two versions of a document with org-change-from-diff.  When
-used in org-mode, LaTeX and HTML export are available.  To change
+used in org-mode, LaTeX, HTML, and plain text export are
+available.  To change
 key bindings and other settings, run M-x customize-group RET
 org-change.  More information at the package URL.
