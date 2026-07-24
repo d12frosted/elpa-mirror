@@ -995,13 +995,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260723 6) ((emacs (29 1)))
+  . [(1 2 1 0 20260724 10) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f206bc7222171b84eaf98950bf69a4a87539be7c"))])
+      (:commit . "079e8bc1c382102f4e07757cd58658958ccd017b"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -3259,13 +3259,13 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "04186129f2dccf48e288639b78adeb9c0e94be54"))])
  (spacious-padding
-  . [(0 8 0 0 20260505 183614) ((emacs (28 1)))
+  . [(0 8 0 0 20260724 4) ((emacs (28 1)))
      "Increase the padding/spacing of frames and windows" tar
      ((:url . "https://github.com/protesilaos/spacious-padding")
       (:keywords "convenience" "focus" "writing" "presentation")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "0fdbfdbd61a3ad487c776317787c1f8c2148e8fe"))])
+      (:commit . "03d475863f65fafe502141a06e919bc057554991"))])
  (speedrect
   . [(0 7 0 20241220 133155) ((emacs (29 1)) (compat (30)))
      "Fast modal rectangle commands" tar
