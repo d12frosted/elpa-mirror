@@ -803,16 +803,20 @@
   │   :tools
   │   (list (llm-make-tool
   │          :function
-  │          (lambda (callback result)
-  │            ;; In this example function the assumption is that the
-  │            ;; callback will be called after processing the result is
-  │            ;; complete.
-  │            (notify-user-of-capital result callback))
+  │          (lambda (callback country)
+  │            ;; In this example function the assumption is that the callback will
+  │            ;; be called after processing the result is complete, and receives
+  │            ;; the result of the processing as an argument.
+  │            (funcall callback (my-capital-retriever country)))
   │          :name "capital_of_country"
   │          :description "Get the capital of a country."
   │          :args '((:name "country"
   │                         :description "The country whose capital to look up."
-  │                         :type string))
+  │ 
+  │                         :type string
+  │                         ;; Default is nil. This will error if the argument is
+  │                         ;; not provided.
+  │                         :optional nil))
   │          :async t)))
   │  #'identity  ;; No need to process the result in this example.
   │  (lambda (_ err)
