@@ -58,4 +58,8 @@ additional potentially risky features; the user option
 `trust-manager-mode' should hook into.  By default, this option is
 set to integrate trust into Emacs's file-local variables feature,
 such that file-specified modes and variable values are ignored in
-untrusted buffers.
+untrusted buffers.  This includes `read-symbol-shorthands', which
+Emacs normally honors even when other file-local variables are
+disabled, and which an untrusted file could otherwise exploit to run
+arbitrary code as soon as you visit it.
+See https://yhetil.org/emacs/jwv4ihscare.fsf-monnier+emacs@gnu.org/
