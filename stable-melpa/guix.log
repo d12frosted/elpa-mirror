@@ -2,10 +2,10 @@
  • Building package guix
 From https://codeberg.org/guix/emacs-guix
 Updating /mnt/store/melpa/working/guix/
-Checking out 6833de3d97619191a06c589aa2aa7c79feb9ff79
+Checking out addac35e3fcb7a812b239c4aa76eada1743d0921
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guix/
-  to /tmp/guix-NujxqJ/guix-20260723.1811/
+  to /tmp/guix-K1eQh8/guix-20260724.1820/
   ! elisp/guix-about.el -> guix-about.el
   ! elisp/guix-auto-mode.el -> guix-auto-mode.el
   ! elisp/guix-build-log.el -> guix-build-log.el
@@ -55,75 +55,75 @@ Copying files (->) and directories (=>)
     scheme/emacs-guix => scheme/emacs-guix
     scheme/emacs-guix.scm -> scheme/emacs-guix.scm
 Generating emacs-guix.info
-Created guix-20260723.1811.tar containing:
-  guix-20260723.1811/
-  guix-20260723.1811/dir
-  guix-20260723.1811/emacs-guix.info
-  guix-20260723.1811/guix-about.el
-  guix-20260723.1811/guix-auto-mode.el
-  guix-20260723.1811/guix-build-log.el
-  guix-20260723.1811/guix-command.el
-  guix-20260723.1811/guix-config.el
-  guix-20260723.1811/guix-default-config.el
-  guix-20260723.1811/guix-derivation.el
-  guix-20260723.1811/guix-devel.el
-  guix-20260723.1811/guix-env-var.el
-  guix-20260723.1811/guix-external.el
-  guix-20260723.1811/guix-geiser.el
-  guix-20260723.1811/guix-graph.el
-  guix-20260723.1811/guix-guile.el
-  guix-20260723.1811/guix-hash.el
-  guix-20260723.1811/guix-help-vars.el
-  guix-20260723.1811/guix-help.el
-  guix-20260723.1811/guix-license.el
-  guix-20260723.1811/guix-location.el
-  guix-20260723.1811/guix-misc.el
-  guix-20260723.1811/guix-package.el
-  guix-20260723.1811/guix-pcomplete.el
-  guix-20260723.1811/guix-pkg.el
-  guix-20260723.1811/guix-popup.el
-  guix-20260723.1811/guix-prettify.el
-  guix-20260723.1811/guix-profiles.el
-  guix-20260723.1811/guix-read.el
-  guix-20260723.1811/guix-repl.el
-  guix-20260723.1811/guix-scheme.el
-  guix-20260723.1811/guix-service.el
-  guix-20260723.1811/guix-shell.el
-  guix-20260723.1811/guix-ui-generation.el
-  guix-20260723.1811/guix-ui-license.el
-  guix-20260723.1811/guix-ui-lint-checker.el
-  guix-20260723.1811/guix-ui-messages.el
-  guix-20260723.1811/guix-ui-package-location.el
-  guix-20260723.1811/guix-ui-package.el
-  guix-20260723.1811/guix-ui-profile.el
-  guix-20260723.1811/guix-ui-service-location.el
-  guix-20260723.1811/guix-ui-service.el
-  guix-20260723.1811/guix-ui-store-item.el
-  guix-20260723.1811/guix-ui-system-generation.el
-  guix-20260723.1811/guix-ui-system.el
-  guix-20260723.1811/guix-ui.el
-  guix-20260723.1811/guix-utils.el
-  guix-20260723.1811/guix.el
-  guix-20260723.1811/images/
-  guix-20260723.1811/images/guix-logo.svg
-  guix-20260723.1811/scheme/
-  guix-20260723.1811/scheme/emacs-guix.scm
-  guix-20260723.1811/scheme/emacs-guix/
-  guix-20260723.1811/scheme/emacs-guix/actions.scm
-  guix-20260723.1811/scheme/emacs-guix/commands.scm
-  guix-20260723.1811/scheme/emacs-guix/emacs.scm
-  guix-20260723.1811/scheme/emacs-guix/generations.scm
-  guix-20260723.1811/scheme/emacs-guix/graph.scm
-  guix-20260723.1811/scheme/emacs-guix/hash.scm
-  guix-20260723.1811/scheme/emacs-guix/licenses.scm
-  guix-20260723.1811/scheme/emacs-guix/lint.scm
-  guix-20260723.1811/scheme/emacs-guix/pack.scm
-  guix-20260723.1811/scheme/emacs-guix/packages.scm
-  guix-20260723.1811/scheme/emacs-guix/profiles.scm
-  guix-20260723.1811/scheme/emacs-guix/refresh.scm
-  guix-20260723.1811/scheme/emacs-guix/services.scm
-  guix-20260723.1811/scheme/emacs-guix/store-items.scm
-  guix-20260723.1811/scheme/emacs-guix/system-generations.scm
-  guix-20260723.1811/scheme/emacs-guix/system.scm
-  guix-20260723.1811/scheme/emacs-guix/utils.scm
-Built guix in 8.412s, finished at 2026-07-25T04:49:24+0000
+Created guix-20260724.1820.tar containing:
+  guix-20260724.1820/
+  guix-20260724.1820/dir
+  guix-20260724.1820/emacs-guix.info
+  guix-20260724.1820/guix-about.el
+  guix-20260724.1820/guix-auto-mode.el
+  guix-20260724.1820/guix-build-log.el
+  guix-20260724.1820/guix-command.el
+  guix-20260724.1820/guix-config.el
+  guix-20260724.1820/guix-default-config.el
+  guix-20260724.1820/guix-derivation.el
+  guix-20260724.1820/guix-devel.el
+  guix-20260724.1820/guix-env-var.el
+  guix-20260724.1820/guix-external.el
+  guix-20260724.1820/guix-geiser.el
+  guix-20260724.1820/guix-graph.el
+  guix-20260724.1820/guix-guile.el
+  guix-20260724.1820/guix-hash.el
+  guix-20260724.1820/guix-help-vars.el
+  guix-20260724.1820/guix-help.el
+  guix-20260724.1820/guix-license.el
+  guix-20260724.1820/guix-location.el
+  guix-20260724.1820/guix-misc.el
+  guix-20260724.1820/guix-package.el
+  guix-20260724.1820/guix-pcomplete.el
+  guix-20260724.1820/guix-pkg.el
+  guix-20260724.1820/guix-popup.el
+  guix-20260724.1820/guix-prettify.el
+  guix-20260724.1820/guix-profiles.el
+  guix-20260724.1820/guix-read.el
+  guix-20260724.1820/guix-repl.el
+  guix-20260724.1820/guix-scheme.el
+  guix-20260724.1820/guix-service.el
+  guix-20260724.1820/guix-shell.el
+  guix-20260724.1820/guix-ui-generation.el
+  guix-20260724.1820/guix-ui-license.el
+  guix-20260724.1820/guix-ui-lint-checker.el
+  guix-20260724.1820/guix-ui-messages.el
+  guix-20260724.1820/guix-ui-package-location.el
+  guix-20260724.1820/guix-ui-package.el
+  guix-20260724.1820/guix-ui-profile.el
+  guix-20260724.1820/guix-ui-service-location.el
+  guix-20260724.1820/guix-ui-service.el
+  guix-20260724.1820/guix-ui-store-item.el
+  guix-20260724.1820/guix-ui-system-generation.el
+  guix-20260724.1820/guix-ui-system.el
+  guix-20260724.1820/guix-ui.el
+  guix-20260724.1820/guix-utils.el
+  guix-20260724.1820/guix.el
+  guix-20260724.1820/images/
+  guix-20260724.1820/images/guix-logo.svg
+  guix-20260724.1820/scheme/
+  guix-20260724.1820/scheme/emacs-guix.scm
+  guix-20260724.1820/scheme/emacs-guix/
+  guix-20260724.1820/scheme/emacs-guix/actions.scm
+  guix-20260724.1820/scheme/emacs-guix/commands.scm
+  guix-20260724.1820/scheme/emacs-guix/emacs.scm
+  guix-20260724.1820/scheme/emacs-guix/generations.scm
+  guix-20260724.1820/scheme/emacs-guix/graph.scm
+  guix-20260724.1820/scheme/emacs-guix/hash.scm
+  guix-20260724.1820/scheme/emacs-guix/licenses.scm
+  guix-20260724.1820/scheme/emacs-guix/lint.scm
+  guix-20260724.1820/scheme/emacs-guix/pack.scm
+  guix-20260724.1820/scheme/emacs-guix/packages.scm
+  guix-20260724.1820/scheme/emacs-guix/profiles.scm
+  guix-20260724.1820/scheme/emacs-guix/refresh.scm
+  guix-20260724.1820/scheme/emacs-guix/services.scm
+  guix-20260724.1820/scheme/emacs-guix/store-items.scm
+  guix-20260724.1820/scheme/emacs-guix/system-generations.scm
+  guix-20260724.1820/scheme/emacs-guix/system.scm
+  guix-20260724.1820/scheme/emacs-guix/utils.scm
+Built guix in 7.782s, finished at 2026-07-25T08:51:02+0000

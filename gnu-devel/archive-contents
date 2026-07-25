@@ -404,13 +404,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 7 0 20260628 1) ((emacs (29 1)) (compat (31)))
+  . [(2 7 0 20260725 3) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "73e0023e7fd9f224babfe8795eb9334dba8eec47"))])
+      (:commit . "c9b949e20b35a9f6f3ab8d11e1d2f76cc7a2e4d3"))])
  (capf-autosuggest
   . [(0 3 0 20211123 104430) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -995,13 +995,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260724 11) ((emacs (29 1)))
+  . [(1 2 1 0 20260724 12) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "1c96473d90b6fc60484840bf71796077c6bff404"))])
+      (:commit . "36ba80c7ee2bcefd0dc8800929fa7a2d179f0bc4"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -2019,14 +2019,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 31 3 0 20260724 1)
+  . [(0 31 3 0 20260724 2)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "08972cd4e657d861b6725c9359660fd9fdbe68f1"))])
+      (:commit . "93a15f0ed92e0c1727fe6d5b99654dfcb794bc2e"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -2845,13 +2845,13 @@
       (:authors ("Feng Shu" . "tumashu@163.com"))
       (:commit . "55d9b324831b0fc79ff62f1c6f21aad72341a114"))])
  (python
-  . [(0 30 0 20260620 46) ((emacs (29 1)) (compat (29 1 1 0)))
+  . [(0 30 0 20260724 47) ((emacs (29 1)) (compat (29 1 1 0)))
      "Python's flying circus support for Emacs" tar
      ((:url . "https://github.com/fgallina/python.el")
       (:keywords "languages")
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
-      (:commit . "9f61797da5f7e5c7b1a50dbf8f2cae4c6355ec60"))])
+      (:commit . "cc5491c575d47eb14c7206598c515b9aed4a5724"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
@@ -3344,12 +3344,12 @@
       (:url . "https://elpa.gnu.org/packages/stream.html")
       (:commit . "b9b3ad5c38063703cfa5a06522031e631c49b7e3"))])
  (substitute
-  . [(0 5 0 0 20260724 13) ((emacs (27 1)))
+  . [(0 6 0 0 20260724 0) ((emacs (27 1)))
      "Efficiently replace targets in the buffer or context" tar
      ((:url . "https://github.com/protesilaos/substitute")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "7c58550a1ce87921a3689e879dac410d0ce9903a"))])
+      (:commit . "4582d8ba5d3f90d681a7601f3dc6bdccb059dc98"))])
  (svg
   . [(1 1 0 20260101 125434) ((emacs (25)))
      "SVG image creation functions" tar

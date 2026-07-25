@@ -15,7 +15,7 @@
   ⁃ [Homepage]
 
   ⁃ Source:
-    ⁃ [Codeberg]
+    ⁃ [git.thanosapollo.org]
 
   ⁃ Discuss the project in these XMPP MUCs:
     ⁃ `jabber-el@conference.hmm.st' for the project
@@ -29,7 +29,8 @@
 
 [Homepage] <https://thanosapollo.org/projects/jabber/>
 
-[Codeberg] <https://codeberg.org/emacs-jabber/emacs-jabber/>
+[git.thanosapollo.org]
+<https://git.thanosapollo.org/emacs-jabber/about/>
 
 
 2 Requirements
@@ -82,7 +83,7 @@
   │ 
   │ (use-package jabber
   │   :ensure nil
-  │   :vc (:url "https://codeberg.org/emacs-jabber/emacs-jabber.git"
+  │   :vc (:url "https://git.thanosapollo.org/emacs-jabber"
   │             :branch "master"
   │             :rev :newest
   │             :lisp-dir "lisp"
@@ -104,8 +105,8 @@
   │ (use-package jabber
   │   :straight `(jabber
   │               :type git
-  │               :host codeberg
-  │               :repo "emacs-jabber/emacs-jabber"
+  │               :host nil
+  │               :repo "https://git.thanosapollo.org/emacs-jabber"
   │               :branch "master"
   │               :files ("lisp/*.el"
   │                       "lisp/jabber-omemo-core.so"
@@ -180,10 +181,7 @@
   │ (setq jabber-bug-reference-alist
   │       '(("jabber-el@conference\\.hmm\\.st"
   │          "\\(#\\([0-9]+\\)\\)"
-  │          "https://codeberg.org/emacs-jabber/emacs-jabber/issues/%s")
-  │         ("#guix%irc\\.libera.chat@irc\\.biboumi-gateway\\.example"
-  │          "\\(#\\([0-9]+\\)\\)"
-  │          "https://codeberg.org/guix/guix/issues/%s")))
+  │          "https://todos.thanosapollo.org/r/emacs-jabber/%s")))
   └────
 
 

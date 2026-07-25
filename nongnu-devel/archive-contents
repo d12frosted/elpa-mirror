@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 9 0 20260724 4)
+  . [(1 10 0 20260725 0)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "205196b49208fcf0806f4ef41359d02ac1f608f2"))])
+      (:commit . "7d25f9b2eab3d4b7267fb378084f53383d834b47"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260724 5)
+  . [(2 1 0 -4 0 20260724 6)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "315bbd902fb5464b1a6278e8241d8d143ff4a6aa"))])
+      (:commit . "0e36e56428a7f3192fcf3ac7b42557ea09d4383c"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -955,7 +955,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260724 68)
+  . [(0 9 9 5 0 20260724 69)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -964,7 +964,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "99f0438bfb50e8df3707392e08194a12764bc737"))])
+      (:commit . "f01c55cdc0c4b49c6c56e9d462831ada9d68f0f2"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1167,14 +1167,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 2 0 20260724 4)
+  . [(0 12 2 0 20260725 9)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
-     ((:url . "https://codeberg.org/emacs-jabber/emacs-jabber")
+     ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "0d4fb3c58e8042efee92559f5fe288b24576353a"))])
+      (:commit . "f4afd0b795ef078e010c2c37974bd1115d5150e0"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1305,7 +1305,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260724 65)
+  . [(4 6 0 0 20260724 71)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1317,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "0e19afe0433acb62a28a28ba194b6de17a3caf3e"))])
+      (:commit . "4453f3d6dccc5be7fb00bf98e18272a4ff532ded"))])
  (magit-section
-  . [(4 6 0 0 20260724 65)
+  . [(4 6 0 0 20260724 71)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1328,7 +1328,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "0e19afe0433acb62a28a28ba194b6de17a3caf3e"))])
+      (:commit . "4453f3d6dccc5be7fb00bf98e18272a4ff532ded"))])
  (markdown-mode
   . [(2 9 -3 0 20260722 13) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -2249,12 +2249,12 @@
       (:authors ("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
       (:commit . "606ee926df6839243098de6d71332a697518cb86"))])
  (zenburn-theme
-  . [(2 10 0 0 20260723 7) nil "A low contrast color theme for Emacs."
+  . [(2 10 0 0 20260725 8) nil "A low contrast color theme for Emacs."
      tar
      ((:url . "https://github.com/bbatsov/zenburn-emacs")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com"))
-      (:commit . "e563d89d8b5349326ccdcb013784bb5f0e986bfc"))])
+      (:commit . "3797f3ae26b3649c99fc74a09a0bd6a31b40597f"))])
  (zig-mode
   . [(0 0 8 0 20260717 49) ((emacs (26 1)) (reformatter (0 6)))
      "A major mode for the Zig programming language" tar
