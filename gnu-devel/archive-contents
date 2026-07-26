@@ -404,13 +404,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 7 0 20260725 3) ((emacs (29 1)) (compat (31)))
+  . [(2 7 0 20260725 15) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "c9b949e20b35a9f6f3ab8d11e1d2f76cc7a2e4d3"))])
+      (:commit . "36114163cec8b767e98d796696e455039468213b"))])
  (capf-autosuggest
   . [(0 3 0 20211123 104430) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 11 0 20260723 6) ((emacs (29 1)) (compat (31)))
+  . [(2 11 0 20260725 8) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "3724e41bb08c1271372073c0a0eef98178c9c1f1"))])
+      (:commit . "86aacc85b11be1fbeb43b33128347b4c220070ca"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -2447,13 +2447,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "0ffd9d6903714c1f6d8fcbb6a20941fb33dd7ae5"))])
  (org
-  . [(10 0 -1 0 20260718 392) ((emacs (28 2)))
+  . [(10 0 -1 0 20260725 395) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "3c855d51aa121957227d9fd351f467c2c53c241b"))])
+      (:commit . "3192babfe9442e331eb434fdf5259404d3da2ecd"))])
  (org-contacts
   . [(1 3 0 20260221 85240) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2852,6 +2852,13 @@
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "cc5491c575d47eb14c7206598c515b9aed4a5724"))])
+ (qrencode
+  . [(1 4 -2 1 0 20260725 0) ((emacs (25 1))) "QRCode encoder" tar
+     ((:url . "https://github.com/ruediger/qrencode-el")
+      (:keywords "qrcode" "comm")
+      (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
+      (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
+      (:commit . "d96e458305c07ce845f3ebff573416972d1f8834"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
@@ -2917,7 +2924,7 @@
       (:authors ("Matto Fransen" . "matto@matto.nl"))
       (:commit . "349aabcbb6bd10b007f431d180e870a5918b9e21"))])
  (realgud
-  . [(1 6 0 0 20260609 11)
+  . [(1 6 0 0 20260725 14)
      ((load-relative (1 3 2)) (loc-changes (1 2))
       (test-simple (1 3 0)) (emacs (27)))
      "A modular front-end for interacting with external debuggers" tar
@@ -2926,7 +2933,7 @@
 		 "bashdb" "zshdb" "remake" "trepan" "perldb" "pdb")
       (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
       (:authors ("Rocky Bernstein" . "rocky@gnu.org"))
-      (:commit . "bc3fbafc190a1a38fd12459bf323ffe4dcb159af"))])
+      (:commit . "4b6bae3728fd7f81f162b0e0852fc088c1a68db1"))])
  (realgud-ipdb
   . [(1 0 0 0 20231216 160636)
      ((realgud (1 5 0)) (load-relative (1 3 1)) (emacs (25)))
@@ -2936,13 +2943,13 @@
       (:authors ("Rocky Bernstein" . "rocky@gnu.org"))
       (:commit . "d65b2f92ef9f0b27b668b1b65e677d4715bafda9"))])
  (realgud-jdb
-  . [(1 0 0 0 20200722 72030)
+  . [(1 0 0 0 20260725 17)
      ((realgud (1 5 0)) (load-relative (1 3 1)) (emacs (25)))
      "Realgud front-end to Java's jdb debugger\"" tar
      ((:url . "https://github.com/realgud/realgud-jdb")
       (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
       (:authors ("Rocky Bernstein" . "rocky@gnu.org"))
-      (:commit . "1c183b2f8aae0de60942ea01444b896bf182c66a"))])
+      (:commit . "af014859343e77f5eea408398314a066db92e253"))])
  (realgud-lldb
   . [(1 0 2 0 20260105 115809)
      ((load-relative (1 3 1)) (realgud (1 5 0)) (emacs (25)))
@@ -2986,13 +2993,13 @@
       (:authors ("Rocky Bernstein" . "rocky@gnu.org"))
       (:commit . "0ec088ea343835e24ae73da09bea96bfb02a3130"))])
  (realgud-trepan-xpy
-  . [(1 0 1 0 20230322 184556)
+  . [(1 0 1 0 20260725 2)
      ((realgud (1 5 0)) (load-relative (1 3 1)) (emacs (25)))
      "Realgud front-end to trepan-xpy" tar
      ((:url . "https://github.com/realgud/realgud-trepan-xpy")
       (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
       (:authors ("Rocky Bernstein" . "rocky@gnu.org"))
-      (:commit . "f726f8ec973eb0fb2efb7e2a8efb24bc576e2627"))])
+      (:commit . "adffadf5acf9809b2cf07e9a6b1ca3f3325d07a9"))])
  (rec-mode
   . [(1 9 4 0 20240830 70150) ((emacs (25)))
      "Major mode for viewing/editing recfiles for GNU Recutils" tar
@@ -3615,7 +3622,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 5 0 20260724 2)
+  . [(0 13 5 0 20260725 5)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3625,7 +3632,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "7600a4309440a7448fcd37d040eb6d0b41e4cdb6"))])
+      (:commit . "91c25496972566d6b1b4411c1bb7a7e669355a4c"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

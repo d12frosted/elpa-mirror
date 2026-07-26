@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260724 6)
+  . [(2 1 0 -4 0 20260725 8)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "0e36e56428a7f3192fcf3ac7b42557ea09d4383c"))])
+      (:commit . "41d038f72d8251134503f3aac9fe376f8482cfbd"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -371,13 +371,13 @@
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "86c0b3525b2793b585b548c6e975d6fe6a2cea2a"))])
  (dirvish
-  . [(2 3 0 0 20260716 9) ((emacs (28 1)) (compat (30)))
+  . [(2 3 0 0 20260725 12) ((emacs (28 1)) (compat (30)))
      "A modern file manager based on dired mode" tar
      ((:url . "https://github.com/alexluigit/dirvish")
       (:keywords "files" "convenience")
       (:maintainer "Alex Lu" . "https://github.com/alexluigit")
       (:authors ("Alex Lu" . "https://github.com/alexluigit"))
-      (:commit . "5152c80a32de3965a3e131a9314514af4aa8aa1e"))])
+      (:commit . "bf164ee21e128837ede59be03836a9900c4a41be"))])
  (doc-show-inline
   . [(0 1 0 20260108 134251) ((emacs (29 1)))
      "Show doc-strings found in external files" tar
@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(37 0 0 20260721 23) ((emacs (28 1)) (seq (2 24)))
+  . [(37 0 0 20260725 33) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "356bdd3570fe38dcff0f2228ced003d54383928d"))])
+      (:commit . "293f651864f81c4952c5866419a22f8ed5d456ca"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1167,14 +1167,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 2 0 20260725 9)
+  . [(0 12 3 0 20260725 0)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "f4afd0b795ef078e010c2c37974bd1115d5150e0"))])
+      (:commit . "9190d77a60d3c17adc4caf5881ff703ec51db26c"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1652,13 +1652,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 3 0 -4 0 20260724 30) ((emacs (28 1)) (compat (30)))
+  . [(3 3 0 -4 0 20260725 53) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "1393c9b40b4c6d620e7d303c07f728f14e101a52"))])
+      (:commit . "329d9a6e35d81ec16b530d559dbce8d67adc15ea"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -1760,13 +1760,13 @@
       (:keywords "project" "convenience")
       (:commit . "f5fd18aa810c3d3269188cbbd731ddc09006f8f5"))])
  (rust-mode
-  . [(1 0 6 0 20260618 49) ((emacs (25 1)))
+  . [(1 0 6 0 20260725 50) ((emacs (25 1)))
      "A major-mode for editing Rust source code" tar
      ((:url . "https://github.com/rust-lang/rust-mode")
       (:keywords "languages")
       (:maintainer "Mozilla" . "rust-mode@noreply.github.com")
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
-      (:commit . "93778358b6af8ad9e123a41bc2c8c91877a9ffd5"))])
+      (:commit . "0058837c048cc031ca1a13f598a6a6604777458b"))])
  (sass-mode
   . [(3 0 16 0 20190502 5315) ((haml-mode (3 0 15)) (cl-lib (0 5)))
      "Major mode for editing Sass files" tar
