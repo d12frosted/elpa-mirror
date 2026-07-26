@@ -404,13 +404,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 7 0 20260725 15) ((emacs (29 1)) (compat (31)))
+  . [(2 7 0 20260725 16) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "36114163cec8b767e98d796696e455039468213b"))])
+      (:commit . "d3dd033dd261b31cf6f87df35cd83c8a6e31573b"))])
  (capf-autosuggest
   . [(0 3 0 20211123 104430) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -1683,16 +1683,17 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 0 2 -1 0 20260712 1235) ((emacs (28)))
+  . [(9 0 2 -1 0 20260725 1277) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
       (:keywords "comm" "convenience" "files" "frames" "hypermedia"
 		 "languages" "mail" "matching" "mouse" "multimedia"
 		 "outlines" "tools" "wp")
-      (:maintainer "Robert Weiner" . "rsw@gnu.org")
+      (:maintainer ("Robert Weiner" . "rsw@gnu.org")
+		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "c467a935e89ca2e0738d662f7c0db04b3b8ae9d1"))])
+      (:commit . "586fafde0f3313cfdc8571ddd5ac8bda455fc748"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")

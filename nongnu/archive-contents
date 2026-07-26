@@ -2117,11 +2117,11 @@
       (:authors ("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
       (:commit . "39e640c037f51602f821721c200ab43b71febc90"))])
  (zenburn-theme
-  . [(2 10 0) nil "A low contrast color theme for Emacs." tar
+  . [(2 11 0) nil "A low contrast color theme for Emacs." tar
      ((:url . "https://github.com/bbatsov/zenburn-emacs")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com"))
-      (:commit . "8697934a57151de119744ea79fde83120e05b88d"))])
+      (:commit . "ae3c4d2db271c1a486f0dcb4f24a2bb80f24b67d"))])
  (zig-mode
   . [(0 0 8) ((emacs (26 1)) (reformatter (0 6)))
      "A major mode for the Zig programming language" tar
