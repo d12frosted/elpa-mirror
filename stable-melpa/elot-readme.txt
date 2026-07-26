@@ -21,6 +21,10 @@ degrade to "not available" rather than erroring at load time:
  - `ob-plantuml'  -- PlantUML rendering used by `rdfpuml-block'
  - `htmlize'      -- source-block fontification on HTML export
  - `omn-mode'     -- major mode for tangled `.omn' files
+ - `gptel'        -- LLM tool-protocol bridge.  When present, the
+                     user can opt in via `M-x elot-gptel-register-tools'
+                     to expose ELOT's lint/validate/reason/query
+                     capabilities to an LLM (see `elot-gptel').
 
 Please consult the package Github site for more information:
        <https://github.com/johanwk/elot>

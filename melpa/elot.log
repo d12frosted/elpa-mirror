@@ -2,17 +2,23 @@
  • Building package elot
 From https://github.com/johanwk/elot
 Updating /mnt/store/melpa/working/elot/
-Checking out d7e9b47207a16841bb5a08077e1dfcb47608f37f
+Checking out 80b764970b121b35dee22c9824c45be0e628fd63
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elot/
-  to /tmp/elot-kaG6Yt/elot-20260709.1716/
+  to /tmp/elot-756Aiv/elot-20260725.1947/
   ! elot-package/elot-db.el -> elot-db.el
   ! elot-package/elot-defaults.el -> elot-defaults.el
   ! elot-package/elot-flymake.el -> elot-flymake.el
+  ! elot-package/elot-gptel.el -> elot-gptel.el
+  ! elot-package/elot-id-insert.el -> elot-id-insert.el
+  ! elot-package/elot-id-move.el -> elot-id-move.el
+  ! elot-package/elot-id-rename.el -> elot-id-rename.el
+  ! elot-package/elot-id.el -> elot-id.el
   ! elot-package/elot-label-display.el -> elot-label-display.el
   ! elot-package/elot-lint.el -> elot-lint.el
   ! elot-package/elot-mode.el -> elot-mode.el
   ! elot-package/elot-owl-grammar.el -> elot-owl-grammar.el
+  ! elot-package/elot-robot.el -> elot-robot.el
   ! elot-package/elot-sources.el -> elot-sources.el
   ! elot-package/elot-tangle.el -> elot-tangle.el
   ! elot-package/elot.el -> elot.el
@@ -21,22 +27,28 @@ Copying files (->) and directories (=>)
   ! elot-package/elot-style.css -> elot-style.css
   ! elot-package/elot-nav.js -> elot-nav.js
   ! elot-package/theme-elot.setup -> theme-elot.setup
-Created elot-20260709.1716.tar containing:
-  elot-20260709.1716/
-  elot-20260709.1716/elot-db.el
-  elot-20260709.1716/elot-defaults.el
-  elot-20260709.1716/elot-flymake.el
-  elot-20260709.1716/elot-label-display.el
-  elot-20260709.1716/elot-lint.el
-  elot-20260709.1716/elot-lob.org
-  elot-20260709.1716/elot-mode.el
-  elot-20260709.1716/elot-nav.js
-  elot-20260709.1716/elot-owl-grammar.el
-  elot-20260709.1716/elot-pkg.el
-  elot-20260709.1716/elot-sources.el
-  elot-20260709.1716/elot-style.css
-  elot-20260709.1716/elot-tangle.el
-  elot-20260709.1716/elot.el
-  elot-20260709.1716/schema.sql
-  elot-20260709.1716/theme-elot.setup
-Built elot in 4.087s, finished at 2026-07-25T16:37:42+0000
+Created elot-20260725.1947.tar containing:
+  elot-20260725.1947/
+  elot-20260725.1947/elot-db.el
+  elot-20260725.1947/elot-defaults.el
+  elot-20260725.1947/elot-flymake.el
+  elot-20260725.1947/elot-gptel.el
+  elot-20260725.1947/elot-id-insert.el
+  elot-20260725.1947/elot-id-move.el
+  elot-20260725.1947/elot-id-rename.el
+  elot-20260725.1947/elot-id.el
+  elot-20260725.1947/elot-label-display.el
+  elot-20260725.1947/elot-lint.el
+  elot-20260725.1947/elot-lob.org
+  elot-20260725.1947/elot-mode.el
+  elot-20260725.1947/elot-nav.js
+  elot-20260725.1947/elot-owl-grammar.el
+  elot-20260725.1947/elot-pkg.el
+  elot-20260725.1947/elot-robot.el
+  elot-20260725.1947/elot-sources.el
+  elot-20260725.1947/elot-style.css
+  elot-20260725.1947/elot-tangle.el
+  elot-20260725.1947/elot.el
+  elot-20260725.1947/schema.sql
+  elot-20260725.1947/theme-elot.setup
+Built elot in 4.253s, finished at 2026-07-26T04:46:28+0000
