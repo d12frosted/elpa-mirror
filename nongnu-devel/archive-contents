@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 10 0 20260725 0)
+  . [(1 10 0 20260726 1)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "7d25f9b2eab3d4b7267fb378084f53383d834b47"))])
+      (:commit . "a58f5b38de9c6db3a818edc24db513d8cc99313c"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -955,7 +955,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260725 70)
+  . [(0 9 9 5 0 20260726 71)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -964,7 +964,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "88d0358e6714a07f63a82482b1968c00b7352308"))])
+      (:commit . "c91454c7b955f3ca8285375e937aa9b50c91c206"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1021,7 +1021,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260722 30) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260726 32) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1029,14 +1029,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "b934b8e25c67dbc0af973de527013d243b9e047f"))])
+      (:commit . "4b800a979df5ae11dc141005f52faea51dccd40b"))])
  (helm-core
-  . [(4 0 7 0 20260722 30) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260726 32) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "b934b8e25c67dbc0af973de527013d243b9e047f"))])
+      (:commit . "4b800a979df5ae11dc141005f52faea51dccd40b"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1167,14 +1167,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 3 0 20260726 3)
+  . [(0 12 4 0 20260726 0)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "143484245ec8cb10174a43a7e9e8699a85aafa00"))])
+      (:commit . "c96f7cf2729dffdb1cdc3ab00a67273319ac55a1"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar

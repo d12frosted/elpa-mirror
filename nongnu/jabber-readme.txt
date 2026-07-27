@@ -17,11 +17,6 @@
   ⁃ Source:
     ⁃ [git.thanosapollo.org]
 
-  ⁃ Discuss the project in these XMPP MUCs:
-    ⁃ `jabber-el@conference.hmm.st' for the project
-    ⁃ `emacs@conference.conversations.im' for Emacs peer support
-      including jabber.el
-
 
 [XMPP] <http://xmpp.org>
 
