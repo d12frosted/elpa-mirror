@@ -4101,15 +4101,15 @@
       (:maintainer "Drew Adams" . "drew.adams@oracle.com")
       (:commit . "f7e1b641ee8360ddb8bae1711d3978863efa692d"))])
  (ztree
-  . [(1 0 6 0 20230617 194317) ((cl-lib (0)))
-     "Text mode directory tree" tar
+  . [(1 0 7 0 20260726 0) ((cl-lib (0))) "Text mode directory tree"
+     tar
      ((:url . "https://github.com/fourier/ztree")
       (:keywords "files" "tools")
       (:maintainer "Alexey Veretennikov"
 		   . "alexey.veretennikov@gmail.com")
       (:authors
        ("Alexey Veretennikov" . "alexey.veretennikov@gmail.com"))
-      (:commit . "878375adf66a7993cfbc42f831acf92eee2b705b"))])
+      (:commit . "48f17807ac6c765a66cf29b2fcdd08f1aa7da7d6"))])
  (zuul
   . [(0 4 0 0 20251119 102002) ((emacs (27 1)) (project (0 8 1)))
      "Interface to Zuul" tar
