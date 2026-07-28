@@ -1683,7 +1683,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 0 2 -1 0 20260725 1277) ((emacs (28)))
+  . [(9 1 0 0 20260727 2) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1693,7 +1693,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "586fafde0f3313cfdc8571ddd5ac8bda455fc748"))])
+      (:commit . "89755af46aace89d2f2ab7c47ef48b4131d1fd08"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -3352,12 +3352,12 @@
       (:url . "https://elpa.gnu.org/packages/stream.html")
       (:commit . "b9b3ad5c38063703cfa5a06522031e631c49b7e3"))])
  (substitute
-  . [(0 6 0 0 20260724 0) ((emacs (27 1)))
+  . [(0 6 0 0 20260728 2) ((emacs (27 1)))
      "Efficiently replace targets in the buffer or context" tar
      ((:url . "https://github.com/protesilaos/substitute")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "4582d8ba5d3f90d681a7601f3dc6bdccb059dc98"))])
+      (:commit . "4e225914857725b7b5f32d6705773554ff27409e"))])
  (svg
   . [(1 1 0 20260101 125434) ((emacs (25)))
      "SVG image creation functions" tar

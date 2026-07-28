@@ -306,7 +306,7 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Use of generative AI (LLMs, diffusion models and similar technology)
-  is not acceptable for contributions to or interactions with the xmobar
+  is not acceptable for contributions to or interactions with the geiser
   project.
 
   This includes words, images and code, as well as bug reports, commit

@@ -1579,15 +1579,17 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "7081ee6d443dbf2b58e77fa7357c90e495173a2f"))])
  (hyperbole
-  . [(9 0 1) ((emacs (27 1)))
+  . [(9 1 0) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
       (:keywords "comm" "convenience" "files" "frames" "hypermedia"
 		 "languages" "mail" "matching" "mouse" "multimedia"
 		 "outlines" "tools" "wp")
-      (:maintainer "Mats Lidell" . "matsl@gnu.org")
-      (:commit . "23b118ddb6e0595e3b0668dbce8fa4e8bcec5e71"))])
+      (:maintainer ("Robert Weiner" . "rsw@gnu.org")
+		   ("Mats Lidell" . "matsl@gnu.org"))
+      (:authors ("Robert Weiner" . "rsw@gnu.org"))
+      (:commit . "1491d0d1e84fb3c5e4a4b6d3be9176f47639ecba"))])
  (ibuffer-sidebar
   . [(1 0 0) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
