@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "5faab28916603bb324d9faba057021ce028ca847"))])
  (auctex
-  . [(14 1 2 0 20260717 49) ((emacs (28 1)))
+  . [(14 1 2 0 20260727 50) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "752f54f849bf068f41d1b40156512f795214b2f8"))])
+      (:commit . "fb04fcef9e86c95c5b1df01234e9d9189466beaf"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -760,12 +760,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20260707 7) ((emacs (28 1)))
+  . [(4 2 3 0 20260727 8) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "1004f735b72af4bad59b0a13f9abe42adf3e47f1"))])
+      (:commit . "c8aa01c56a94575e7187151c0c9bfc8868022cda"))])
  (denote-journal
   . [(0 3 0 0 20260520 123338) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -3795,7 +3795,7 @@
       (:authors ("Andrii Kolomoiets" . "andreyk.mad@gmail.com"))
       (:commit . "aec2ee7733c38e55d7406c362b9fd5485b21299c"))])
  (vc-jj
-  . [(0 5 0 20260724 63)
+  . [(0 5 0 20260727 66)
      ((emacs (28 1)) (compat (30 1)) (project (0 11 2)))
      "VC backend for the Jujutsu version control system" tar
      ((:url . "https://codeberg.org/emacs-jj-vc/vc-jj.el")
@@ -3804,7 +3804,7 @@
 		   ("Kristoffer Balintona" . "krisbalintona@gmail.com"))
       (:authors ("Rudolf Schlatte" . "rudi@constantly.at")
 		("Kristoffer Balintona" . "krisbalintona@gmail.com"))
-      (:commit . "5a0c11cfc13d97cc8fdf23f9c6e0d9b483211a87"))])
+      (:commit . "17310449644cc527dfa6b8ca5320de4c33d1c7f3"))])
  (vcard
   . [(0 2 2 0 20230718 145809) ((emacs (27 1)))
      "Package for handling vCard files" tar

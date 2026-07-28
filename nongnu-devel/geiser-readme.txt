@@ -297,3 +297,17 @@
 
 [geiser-guile.el]
 <https://codeberg.org/geiser/guile/src/branch/master/geiser-guile.el>
+
+
+7 Contributing
+══════════════
+
+7.0.1 Generative AI (LLMs)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Use of generative AI (LLMs, diffusion models and similar technology)
+  is not acceptable for contributions to or interactions with the xmobar
+  project.
+
+  This includes words, images and code, as well as bug reports, commit
+  messages, email (mailing list or private) and IRC messages.

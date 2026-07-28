@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260727 19)
+  . [(2 1 0 -4 0 20260727 21)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "b110155d3f1888d73e7c84782d718a14c45d22eb"))])
+      (:commit . "57d42e3c405c3d4c56c1554d0f984434f96c2a0a"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(37 0 0 20260725 33) ((emacs (28 1)) (seq (2 24)))
+  . [(37 0 0 20260727 45) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "293f651864f81c4952c5866419a22f8ed5d456ca"))])
+      (:commit . "2e18ec8df4ec1628d7abcb1cc13a3d142317ffa3"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -805,42 +805,42 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser
-  . [(0 33 1 0 20260718 4) ((emacs (27 1)) (project (0 8 1)))
+  . [(0 33 1 0 20260727 5) ((emacs (27 1)) (project (0 8 1)))
      "GNU Emacs and Scheme talk to each other" tar
      ((:url . "https://gitlab.com/emacs-geiser/")
       (:keywords "languages" "scheme" "geiser")
       (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
       (:authors ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-      (:commit . "3e506d06b34ccda8a50ac3e43c90d722c00065fe"))])
+      (:commit . "fac634bd98de55e671a95346f79a645b08cf6541"))])
  (geiser-chez
-  . [(0 18 0 20230707 93440) ((emacs (26 1)) (geiser (0 19)))
+  . [(0 18 0 20260727 5) ((emacs (26 1)) (geiser (0 19)))
      "Chez and Geiser talk to each other" tar
      ((:url . "https://gitlab.com/emacs-geiser/chez")
       (:keywords "languages" "chez" "scheme" "geiser")
       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
       (:authors ("Peter" . "craven@gmx.net"))
-      (:commit . "605a81ff7b2d2b275a3ec68e3ce7e5b50f85014d"))])
+      (:commit . "395201236b5a09bca0c1a9ceefec236ee92c692e"))])
  (geiser-chibi
-  . [(0 17 0 20260706 3) ((emacs (24 4)) (geiser (0 18)))
+  . [(0 17 0 20260727 5) ((emacs (24 4)) (geiser (0 18)))
      "Chibi Scheme's implementation of the geiser protocols" tar
      ((:url . "https://gitlab.com/emacs-geiser/chibi")
       (:keywords "languages" "chibi" "scheme" "geiser")
       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
       (:authors ("Peter" . "craven@gmx.net"))
-      (:commit . "98cda369db3faf7268dd3b1705bb914dd6dad56a"))])
+      (:commit . "af1051d7990ef371e0414a56ea06c92e8b44893e"))])
  (geiser-chicken
-  . [(0 17 0 20250803 172103) ((emacs (24 4)) (geiser (0 19)))
+  . [(0 17 0 20260727 7) ((emacs (24 4)) (geiser (0 19)))
      "Chicken's implementation of the geiser protocols" tar
      ((:url . "https://gitlab.com/emacs-geiser/chicken")
       (:keywords "languages" "chicken" "scheme" "geiser")
-      (:commit . "8342bad8ce1c79fee3563cd95ee27a8b062f6a9e"))])
+      (:commit . "46ace7bebaa2b035aa874c7a272400348df674ef"))])
  (geiser-gambit
-  . [(0 18 1 0 20220208 135610) ((emacs (26 1)) (geiser (0 18)))
+  . [(0 18 1 0 20260727 2) ((emacs (26 1)) (geiser (0 18)))
      "Gambit's implementation of the geiser protocols" tar
      ((:url . "https://gitlab.com/emacs-geiser/gambit")
       (:keywords "languages" "gambit" "scheme" "geiser")
       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
-      (:commit . "381d74ca5059b44fe3d8b5daf42214019c6d1a88"))])
+      (:commit . "70e3d90b123221f8a09f3bc9a53fba1a968bf104"))])
  (geiser-gauche
   . [(0 0 2 0 20251213 115937) ((emacs (26 1)) (geiser (0 11 2)))
      "Gauche scheme support for Geiser" tar
@@ -850,14 +850,14 @@
       (:authors ("András Simonyi" . "andras.simonyi@gmail.com"))
       (:commit . "b8197c6288020371d2a27ca734940564876d5d98"))])
  (geiser-guile
-  . [(0 28 5 0 20260516 1909)
+  . [(0 28 5 0 20260727 2)
      ((emacs (27 1)) (transient (0 3)) (geiser (0 33)))
      "Guile and Geiser talk to each other" tar
      ((:url . "https://gitlab.com/emacs-geiser/guile")
       (:keywords "languages" "guile" "scheme" "geiser")
       (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
       (:authors ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-      (:commit . "cbab81bd2dcb4c787bcda4ae18062db3087e6887"))])
+      (:commit . "6f4d990448afedeee9a7a5f5d2d24080d5105bf6"))])
  (geiser-kawa
   . [(0 0 1 0 20210920 160740) ((emacs (26 1)) (geiser (0 16)))
      "Kawa scheme support for Geiser" tar
@@ -867,21 +867,21 @@
       (:authors ("spellcard199" . "spellcard199@protonmail.com"))
       (:commit . "5896b19642923f74f718eb68d447560b2d26d797"))])
  (geiser-mit
-  . [(0 15 0 20240909 114537) ((emacs (24 4)) (geiser (0 18)))
+  . [(0 15 0 20260727 3) ((emacs (24 4)) (geiser (0 18)))
      "MIT/GNU Scheme's implementation of the geiser protocols" tar
      ((:url . "https://gitlab.com/emacs-geiser/mit")
       (:keywords "languages" "mit" "scheme" "geiser")
       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
       (:authors ("Peter" . "craven@gmx.net"))
-      (:commit . "ddd2ba733e8274d40a26b5d6d2ee11f1bac8abe6"))])
+      (:commit . "7ea6ae00331c44470957e0b90c80adf7a6b6565b"))])
  (geiser-racket
-  . [(0 16 0 20210421 12547) ((emacs (26 1)) (geiser (0 16)))
+  . [(0 16 0 20260727 2) ((emacs (26 1)) (geiser (0 16)))
      "Support for Racket in Geiser" tar
      ((:url . "https://gitlab.com/emacs-geiser/racket")
       (:keywords "languages" "racket" "scheme" "geiser")
       (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
       (:authors ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-      (:commit . "22e56ce80389544d3872cf4beb4008fb514b2218"))])
+      (:commit . "e9e589d9d27ba6b698108fc08106494e09bfeddc"))])
  (geiser-stklos
   . [(1 8 0 20260411 100856) ((emacs (24 4)) (geiser (0 16)))
      "STklos Scheme implementation of the geiser protocols" tar
@@ -1021,7 +1021,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260726 32) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260727 34) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1029,14 +1029,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "4b800a979df5ae11dc141005f52faea51dccd40b"))])
+      (:commit . "b5da475ec4af28239326b1963f7cf12015ab5571"))])
  (helm-core
-  . [(4 0 7 0 20260726 32) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260727 34) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "4b800a979df5ae11dc141005f52faea51dccd40b"))])
+      (:commit . "b5da475ec4af28239326b1963f7cf12015ab5571"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1652,13 +1652,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 4 0 -4 0 20260727 1) ((emacs (28 1)) (compat (30)))
+  . [(3 4 0 -4 0 20260727 4) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "40fbd1595706006c4ce15ee731e51b945324b8cd"))])
+      (:commit . "268a7fe46ce6887be406ed4c668bd51ab8a16e67"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -1676,12 +1676,12 @@
       (:authors ("David Christiansen" . "david@davidchristiansen.dk"))
       (:commit . "50b102c1c0935fd3e0c465feed7f27d66b21cdf3"))])
  (racket-mode
-  . [(1 0 20260626 0) ((emacs (25 1)) (compat (30 0 2 0)))
+  . [(1 0 20260726 0) ((emacs (25 1)) (compat (30 0 2 0)))
      "Racket editing, REPL, and more" tar
      ((:url . "https://www.racket-mode.com/")
       (:authors
        ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
-      (:commit . "97d9b8b7d73a02777c0f70ce6d145a99a99b37cb"))])
+      (:commit . "f92a33dcc3b604f53ef23a538e26e1f25c4fea47"))])
  (radio
   . [(0 4 3 0 20260212 144358) ((emacs (29 1)))
      "Listen to Internet radio" tar

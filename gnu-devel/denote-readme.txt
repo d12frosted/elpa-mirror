@@ -85,6 +85,7 @@ Table of Contents
 .. 2. Sluggification of file name components
 .. 3. User-defined sluggification of file name components
 ..... 1. Custom sluggification to remove non-ASCII characters
+..... 2. Custom sluggification to remove diacterics or accented characters
 .. 4. Features of the file-naming scheme for searching or filtering
 .. 5. Define a completely custom identifier scheme
 ..... 1. A custom identifier that is a simple incrementing number scheme
@@ -2938,6 +2939,9 @@ section 8.4
 8.3.1 Custom sluggification to remove non-ASCII characters
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
+  [ Also see: [Custom sluggification to remove diacterics or accented
+  characters]. ]
+
   A common use-case for Denote is to rename files such as videos
   downloaded from the Internet. Sometimes, those files have Unicode
   characters that (i) not all fonts support and (ii) create all sorts of
@@ -2971,11 +2975,64 @@ section 8.4
   │                              (denote-slug-keep-only-ascii str))))
   │ 
   │ (defcustom denote-file-name-slug-functions
-  │   '((title . my-denote-sluggify-title)
+  │   '((identifier . identity) ; keep the original
+  │     (title . my-denote-sluggify-title)
   │     (signature . my-denote-sluggify-signature)
   │     (keyword . my-denote-sluggify-keyword)))
   └────
 
+
+[Custom sluggification to remove diacterics or accented characters] See
+section 8.3.2
+
+[User-defined sluggification of file name components] See section 8.3
+
+
+8.3.2 Custom sluggification to remove diacterics or accented characters
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  [ Also see: [Custom sluggification to remove non-ASCII characters]. ]
+
+  For languages with diacretics, like `ê' and `ñ', users may want to
+  instruct Denote to remove the diacretical marks from the underlying
+  characters. This way, the file names will be uniform and easier to
+  search through, instead of checking if, say, `être' is written thus or
+  as `etre'.
+
+  This is only for the sluggification of file name components
+  ([User-defined sluggification of file name components]).  Any front
+  matter will retain the diacretics.
+
+  ┌────
+  │ ;; These are the same as the default Denote sluggification functions,
+  │ ;; except they remove all diacretics from the underlying characters
+  │ ;; (e.g.  ê becomes e while ñ becomes n).
+  │ (defun my-denote-sluggify-title (str)
+  │   (downcase
+  │    (denote-slug-hyphenate
+  │     (replace-regexp-in-string "[][{}!@#$%^&*()+'\"?,.\|;:~`‘’“”/=]*" ""
+  │                               (denote-slug-remove-accents str)))))
+  │ 
+  │ (defun my-denote-sluggify-signature (str)
+  │   (downcase
+  │    (denote-slug-put-equals
+  │     (replace-regexp-in-string "[][{}!@#$%^&*()+'\"?,.\|;:~`‘’“”/-]*" ""
+  │                               (denote-slug-remove-accents str)))))
+  │ 
+  │ (defun my-denote-sluggify-keyword (str)
+  │   (downcase
+  │    (replace-regexp-in-string "[][{}!@#$%^&*()+'\"?,.\|;:~`‘’“”/_ =-]*" ""
+  │                              (denote-slug-remove-accents str))))
+  │ 
+  │ (defcustom denote-file-name-slug-functions
+  │   '((identifier . identity) ; keep the original
+  │     (title . my-denote-sluggify-title)
+  │     (signature . my-denote-sluggify-signature)
+  │     (keyword . my-denote-sluggify-keyword)))
+  └────
+
+
+[Custom sluggification to remove non-ASCII characters] See section 8.3.1
 
 [User-defined sluggification of file name components] See section 8.3
 
@@ -7960,24 +8017,24 @@ section 21.13
         Griffin, Alex Hirschfeld, Alexis Purslane, Alfredo Borrás, Alp
         Eren Kose, André Bering, Ashton Wiersdorf, Bhargav Kulkarni,
         Benjamin Kästner, Claudio Migliorelli, Claudiu Tănăselia, Colin
-        McLear, Cosmin-Octavian C, Damien Cassou, Elias Storms, Federico
-        Stilman, Florian, Frédéric Willem Frank Ehmsen, Glenna D., Guo
-        Yong, Hanspeter Gisler Harold Ollivier, IceAsteroid, Jack Baty,
-        Jay Rajput, Jean-Charles Bagneris, Jeff Valk, Jens Östlund,
-        Jeremy Friesen, Jonathan Sahar, Johan Bolmsjö, Jonas
-        Großekathöfer, Jousimies, Juanjo Presa, Julian Hoch, Kai von
-        Fintel, Kaushal Modi, Kevin Izevbigie, Kolmas, Lukas C. Bossert,
-        M.  Hadi Timachi, Maikol Solis, Mark Olson, Michael Jones, Mirko
-        Hernandez, Morten Kjeldgaard, Niall Dooley, Nick Bell, Oliver
-        Epper, Paul van Gelder, Peter Prevos, Peter Smith, Riccardo
-        Giannitrapani, Rory Molinari, Samuel W. Flint, Sergio Rey,
-        Suhail Singh, Shreyas Ragavan, Stefan Thesing, Summer Emacs,
-        Sven Seebeck, Taoufik, TJ Stankus, Vick (VicZz), Viktor Haag,
-        Vineet C. Kulkarni, Wade Mealing, Wilf, Yi Liu, Ypot, 82Kang,
-        atanasj, azegas, babusri, bdillahu, coherentstate, doolio, duli,
-        drcxd, elge70, elliottw, fingerknight, GuutBoy, hpgisler,
-        hyperfocus1337,johkneisl, jtpavlock, juh, leafarbelm,
-        mentalisttraceur, mjkalyan, oatmealm, potchie-maker,
+        McLear, Cosmin-Octavian C, Damien Cassou, Davi Ramos, Elias
+        Storms, Federico Stilman, Florian, Frédéric Willem Frank Ehmsen,
+        Glenna D., Guo Yong, Hanspeter Gisler Harold Ollivier,
+        IceAsteroid, Jack Baty, Jay Rajput, Jean-Charles Bagneris, Jeff
+        Valk, Jens Östlund, Jeremy Friesen, Jonathan Sahar, Johan
+        Bolmsjö, Jonas Großekathöfer, Jousimies, Juanjo Presa, Julian
+        Hoch, Kai von Fintel, Kaushal Modi, Kevin Izevbigie, Kolmas,
+        Lukas C. Bossert, M.  Hadi Timachi, Maikol Solis, Mark Olson,
+        Michael Jones, Mirko Hernandez, Morten Kjeldgaard, Niall Dooley,
+        Nick Bell, Oliver Epper, Paul van Gelder, Peter Prevos, Peter
+        Smith, Riccardo Giannitrapani, Rory Molinari, Samuel W. Flint,
+        Sergio Rey, Suhail Singh, Shreyas Ragavan, Stefan Thesing,
+        Summer Emacs, Sven Seebeck, Taoufik, TJ Stankus, Vick (VicZz),
+        Viktor Haag, Vineet C. Kulkarni, Wade Mealing, Wilf, Yi Liu,
+        Ypot, 82Kang, atanasj, azegas, babusri, bdillahu, coherentstate,
+        doolio, duli, drcxd, elge70, elliottw, fingerknight, GuutBoy,
+        hpgisler, hyperfocus1337,johkneisl, jtpavlock, juh, leafarbelm,
+        mentalisttraceur, mjkalyan, o-rxw, oatmealm, potchie-maker,
         Pratik-Mishra-4979, pRot0ta1p, rbenit68, relict007, sarcom-sar,
         sienic, skissue, sundar bp, wuzhihao, yetanotherfossman,
         zadca123
