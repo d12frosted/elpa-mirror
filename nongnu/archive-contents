@@ -1108,13 +1108,13 @@
       (:keywords "j" "languages")
       (:commit . "1365e5a3fe772609685b3787bbd2960331c1a02f"))])
  (jabber
-  . [(0 12 4) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
+  . [(0 12 5) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "c96f7cf2729dffdb1cdc3ab00a67273319ac55a1"))])
+      (:commit . "a80e9a704a7c74355995edb7285fff328436c065"))])
  (jade-mode
   . [(1 0 1) nil "Major mode for editing .jade files" tar
      ((:url . "https://github.com/brianc/jade-mode")
@@ -1745,12 +1745,12 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "4873352b5d0a1c5142658122de1b6950b8fe7e4d"))])
  (solarized-theme
-  . [(2 1 0) ((emacs (24 1))) "The Solarized color theme" tar
+  . [(2 2 0) ((emacs (24 1))) "The Solarized color theme" tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "0972a0f1471ed67211b7c8918a3c049380050d7b"))])
+      (:commit . "1443d6dce378ad2d65a8a8c45d5279481a79dfab"))])
  (spacemacs-theme
   . [(0 2) ((emacs (24)))
      "Color theme with a dark and light versions." tar

@@ -3352,12 +3352,12 @@
       (:url . "https://elpa.gnu.org/packages/stream.html")
       (:commit . "b9b3ad5c38063703cfa5a06522031e631c49b7e3"))])
  (substitute
-  . [(0 6 0 0 20260728 2) ((emacs (27 1)))
+  . [(0 6 1 0 20260728 0) ((emacs (27 1)))
      "Efficiently replace targets in the buffer or context" tar
      ((:url . "https://github.com/protesilaos/substitute")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "4e225914857725b7b5f32d6705773554ff27409e"))])
+      (:commit . "e4bf1ac7f8ae5d8cf27f05ab35412e2da4d04e3d"))])
  (svg
   . [(1 1 0 20260101 125434) ((emacs (25)))
      "SVG image creation functions" tar

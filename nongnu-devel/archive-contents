@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260728 24)
+  . [(2 1 0 -4 0 20260728 35)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "9edd63826facc8b0217b9dc6ed9611da6eaa0434"))])
+      (:commit . "4227f33b19ad9c8137c3e9fe3624658aa4d46d4d"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -539,13 +539,13 @@
       (:authors ("Vanya Izaksonas-Smith" . "izak0002atumndotedu"))
       (:commit . "6a375888a74b7563eb53176aad81faee8b858189"))])
  (evil
-  . [(1 15 0 0 20260603 296)
+  . [(1 15 0 0 20260728 297)
      ((emacs (24 1)) (cl-lib (0 5)) (goto-chg (1 6)) (nadvice (0 3)))
      "Extensible vi layer" tar
      ((:url . "https://github.com/emacs-evil/evil")
       (:keywords "emulations")
       (:maintainer "Tom Dalziel" . "tom.dalziel@gmail.com")
-      (:commit . "3b678a221ee99cc6a95b01d7a3129ce5efc4c3da"))])
+      (:commit . "6a3e1ddd04ac504a016590940d0af2a3361b9efd"))])
  (evil-anzu
   . [(0 2 0 20250316 121704) ((evil (1 0 0)) (anzu (0 46)))
      "anzu for evil-mode" tar
@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(37 0 0 20260728 48) ((emacs (28 1)) (seq (2 24)))
+  . [(37 0 0 20260728 55) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "ebb620bc32992f645dd97678fba0a79f87c7b414"))])
+      (:commit . "d983b24eaf9603b02fae0c46356657a3c0bb5034"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1021,7 +1021,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260728 35) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260728 38) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1029,14 +1029,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "c438a08d1bbc2286e13891e4de812ef1b5190628"))])
+      (:commit . "5c29e910f28f56f4f764965bcd05174c59b23a5d"))])
  (helm-core
-  . [(4 0 7 0 20260728 35) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260728 38) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "c438a08d1bbc2286e13891e4de812ef1b5190628"))])
+      (:commit . "5c29e910f28f56f4f764965bcd05174c59b23a5d"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1167,14 +1167,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 4 0 20260726 0)
+  . [(0 12 5 0 20260728 0)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "c96f7cf2729dffdb1cdc3ab00a67273319ac55a1"))])
+      (:commit . "a80e9a704a7c74355995edb7285fff328436c065"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1305,7 +1305,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260728 74)
+  . [(4 6 0 0 20260728 75)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1317,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "9ae2d599943bef206389a1b00500b55481a2b036"))])
+      (:commit . "b6c8bbcc7deec1f8bb266c1b6765857056d82304"))])
  (magit-section
-  . [(4 6 0 0 20260728 74)
+  . [(4 6 0 0 20260728 75)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1328,7 +1328,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "9ae2d599943bef206389a1b00500b55481a2b036"))])
+      (:commit . "b6c8bbcc7deec1f8bb266c1b6765857056d82304"))])
  (markdown-mode
   . [(2 9 -3 0 20260722 13) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1652,13 +1652,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 4 0 -4 0 20260728 6) ((emacs (28 1)) (compat (30)))
+  . [(3 4 0 -4 0 20260728 15) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "ab3599cd002a44cbc59d0a7f30a21c22ef06cb1f"))])
+      (:commit . "e3e5afc36d6598a23d15d6ff1b60a7e5c1d15661"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -1854,13 +1854,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 1 0 0 20260703 8) ((emacs (24 1))) "The Solarized color theme"
+  . [(2 2 0 0 20260728 0) ((emacs (24 1))) "The Solarized color theme"
      tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "1bca851d0135b5022c405cf5e983cf3fe6f60ce0"))])
+      (:commit . "1443d6dce378ad2d65a8a8c45d5279481a79dfab"))])
  (spacemacs-theme
   . [(0 2 0 20260523 125627) ((emacs (24)))
      "Color theme with a dark and light versions." tar
