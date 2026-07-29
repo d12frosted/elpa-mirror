@@ -869,6 +869,14 @@
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "090eded80f801cb4f651490cdd9a78910ef63946"))])
+ (dired-sidebar
+  . [(2 0 1) ((emacs (29 1)) (compat (30 0 0 0)))
+     "Tree browser leveraging dired" tar
+     ((:url . "https://github.com/jojojames/dired-sidebar")
+      (:keywords "dired" "files" "tools")
+      (:maintainer "James Nguyen" . "james@jojojames.com")
+      (:authors ("James Nguyen" . "james@jojojames.com"))
+      (:commit . "8159b8a8134c9b6d65e3b3b22c54e034ae54db0b"))])
  (disk-usage
   . [(1 3 3) ((emacs (26 1))) "Sort and browse disk usage listings"
      tar
