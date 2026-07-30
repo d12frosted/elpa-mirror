@@ -165,13 +165,13 @@
       (:url . "https://elpa.gnu.org/packages/assess.html")
       (:commit . "cadeb24a5d8261fad4bdfdc09e7d571cc395a6ca"))])
  (async
-  . [(1 9 9 0 20260318 110333) ((emacs (24 4)))
+  . [(1 9 9 0 20260729 33) ((emacs (24 4)))
      "Asynchronous processing in Emacs" tar
      ((:url . "https://github.com/jwiegley/emacs-async")
       (:keywords "async")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
-      (:commit . "5faab28916603bb324d9faba057021ce028ca847"))])
+      (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
   . [(14 1 2 0 20260727 50) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
@@ -760,12 +760,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20260727 8) ((emacs (28 1)))
+  . [(4 2 3 0 20260729 11) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "c8aa01c56a94575e7187151c0c9bfc8868022cda"))])
+      (:commit . "3718a603056985c0832705d4f41eea944ed5031e"))])
  (denote-journal
   . [(0 3 0 0 20260520 123338) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -925,13 +925,13 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "090eded80f801cb4f651490cdd9a78910ef63946"))])
  (dired-sidebar
-  . [(2 0 1 0 20260728 0) ((emacs (29 1)) (compat (30 0 0 0)))
+  . [(2 0 1 0 20260729 1) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar
      ((:url . "https://github.com/jojojames/dired-sidebar")
       (:keywords "dired" "files" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "8159b8a8134c9b6d65e3b3b22c54e034ae54db0b"))])
+      (:commit . "c97d0710450453170b6d850dc94ea80db17a96d7"))])
  (disk-usage
   . [(1 3 3 0 20230920 164444) ((emacs (26 1)))
      "Sort and browse disk usage listings" tar
@@ -1847,13 +1847,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "1bd355ecda036f23468d82b803146d3258a84977"))])
  (jinx
-  . [(2 8 0 20260628 1) ((emacs (29 1)) (compat (31)))
+  . [(2 8 0 20260729 11) ((emacs (29 1)) (compat (31)))
      "Enchanted Spell Checker" tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "80b3618d401a654137a48be7d4f90b67cad92748"))])
+      (:commit . "ab922067c58ef88ae69d1c288c35202c5fef2c55"))])
  (jit-spell
   . [(0 5 0 20251012 84654) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -3631,7 +3631,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 5 0 20260725 5)
+  . [(0 13 5 0 20260729 6)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3641,7 +3641,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "91c25496972566d6b1b4411c1bb7a7e669355a4c"))])
+      (:commit . "5a94048e3b2cbf72558509ba4ef9fdd9501f2480"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

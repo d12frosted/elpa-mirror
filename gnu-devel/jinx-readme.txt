@@ -21,7 +21,8 @@ calling the API of the [Enchant library]. Jinx automatically compiles
 `jinx-mod.c' and loads the dynamic module at startup. By binding
 directly to the native Enchant API, Jinx avoids slower inter-process
 communication. Enchant is used by other text editors and supports
-multiple backends like [Nuspell], [Hunspell] and [Aspell].
+multiple backends like [Nuspell], [Hunspell] and [Aspell], and the
+system spell checkers of Mac or Windows.
 
 Jinx supports spell-checking multiple languages in the same buffer. See
 the `jinx-languages' variable to customize for multiple languages. Jinx
@@ -139,7 +140,8 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   press the displayed digit keys to quickly select a
   suggestion. Furthermore the menu offers options to save the word
   temporarily for the current session, in the personal dictionary or in
-  the file-local or directory-local variables.
+  the file-local or directory-local variables. Words can be removed from
+  these places again via `M-x jinx-remove-word'.
 
   You can enter arbitrary input at the correction prompt in order to
   make the correction or to store a modified word in the personal
@@ -152,12 +154,16 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   bound to `jinx-next' and `jinx-previous' respectively and allow you to
   move the next and previous misspelled word.
 
-  The completion menu is compatible with all popular completion UIs:
-  Vertico, Mct, Icomplete, Ivy, Helm and the default completions
-  buffer. In case you use Vertico I suggest that you tweak the
-  completion display via `vertico-multiform-mode' for the completion
-  category `jinx'. You can for example use the grid display such that
-  more suggestions fit on the screen and enable annotations.
+
+4 Completion configuration
+══════════════════════════
+
+  The completion menu is compatible with the popular completion UIs:
+  Vertico, Mct, Icomplete, Helm and the default completions buffer. In
+  case you use Vertico I suggest that you tweak the completion display
+  via `vertico-multiform-mode' for the completion category `jinx'. You
+  can for example use the grid display such that more suggestions fit on
+  the screen and enable annotations.
 
   ┌────
   │ (add-to-list 'vertico-multiform-categories
@@ -166,7 +172,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   └────
 
 
-4 Navigating between misspellings
+5 Navigating between misspellings
 ═════════════════════════════════
 
   When correcting a word with `jinx-correct', the movement commands
@@ -184,7 +190,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   movement can be repeated with the keys `n' and `p'.
 
 
-5 Enchant backends and personal dictionaries
+6 Enchant backends and personal dictionaries
 ════════════════════════════════════════════
 
   Enchant uses different backends for different languages. The backends
@@ -205,7 +211,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
 [Enchant manual] <https://rrthomas.github.io/enchant/lib/enchant.html>
 
 
-6 Alternatives
+7 Alternatives
 ══════════════
 
   There exist multiple alternative spell-checking packages for Emacs,
