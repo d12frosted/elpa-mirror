@@ -1802,6 +1802,7 @@
   (face-explorer :url "https://github.com/Lindydancer/face-explorer")
   (faceup :url "https://github.com/Lindydancer/faceup")
   (factlog :url "https://github.com/tkf/factlog")
+  (faff-theme :url "https://github.com/WJCFerguson/emacs-faff-theme")
   (fakir :url "https://github.com/nicferrier/emacs-fakir")
   (fancy-battery :url "https://github.com/emacsorphanage/fancy-battery")
   (fancy-compilation :url "https://codeberg.org/ideasman42/emacs-fancy-compilation")
