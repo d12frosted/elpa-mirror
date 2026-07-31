@@ -235,11 +235,16 @@ Table of Contents
 6 Commands that act on timers
 ═════════════════════════════
 
-  All of the following commands act on existing timers ([Create a new
-  timer]).
+  All of the following commands act on existing timers by prompting to
+  select one among them ([Create a new timer]).
 
   The command `tmr-edit-description' can change the description a given
   timer object.
+
+  The command `tmr-edit-repeat-count' sets the repeat count of the given
+  timer. When the repeat count is set to `0', then the timer is no
+  longer considered repeatable. [ The command `tmr-edit-repeat-count' is
+  part of 1.4.0-dev. ]
 
   The command `tmr-toggle-acknowledge' toggles the acknowledge flag of a
   given timer object. A timer that needs to be acknowledged prompts for
