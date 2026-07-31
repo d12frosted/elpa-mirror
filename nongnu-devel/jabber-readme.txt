@@ -166,7 +166,26 @@
   └────
 
 
-4.2 Bug references
+4.2 SOCKS5 proxy
+────────────────
+
+  An account can connect through an unauthenticated SOCKS5 proxy:
+
+  ┌────
+  │ (setq jabber-account-list
+  │       '(("user@example.org"
+  │          (:proxy . (:type socks5 :host "127.0.0.1" :port 9050)))))
+  └────
+
+  The destination hostname is sent to the proxy rather than resolved
+  locally.  Proxy connections bypass SRV lookup and use the JID domain
+  on port 5222, or `:network-server' and `:port' when those are
+  configured.  STARTTLS is supported.  Direct TLS discovery, proxy
+  authentication, and other proxy protocols are not supported for
+  proxied accounts.
+
+
+4.3 Bug references
 ──────────────────
 
   ┌────

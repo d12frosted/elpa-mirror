@@ -744,13 +744,13 @@
       (:url . "https://elpa.gnu.org/packages/dbus-codegen.html")
       (:commit . "04114e4cbc8f422e6b77cfc202d1109c96316117"))])
  (debbugs
-  . [(0 46 0 20260222 93040) ((emacs (26 1)) (soap-client (3 1 5)))
+  . [(0 47 0 20260730 0) ((emacs (26 1)) (soap-client (3 1 5)))
      "SOAP library to access debbugs servers" tar
      ((:keywords "comm" "hypermedia")
       (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
       (:authors ("Michael Albinus" . "michael.albinus@gmx.de"))
       (:url . "https://elpa.gnu.org/packages/debbugs.html")
-      (:commit . "b8b8dfc65dea9bfdd370b8f84e3883974a044a2b"))])
+      (:commit . "a9ab46cddf1e51acfd02186cbf8610d978113206"))])
  (delight
   . [(1 7 0 20200711 42851) ((cl-lib (0 5)) (nadvice (0 3)))
      "A dimmer switch for your lighter text" tar
@@ -1003,13 +1003,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260724 12) ((emacs (29 1)))
+  . [(1 2 1 0 20260730 13) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "36ba80c7ee2bcefd0dc8800929fa7a2d179f0bc4"))])
+      (:commit . "5ccb35aea3806eabdd9cc8ec3fd013618c836ced"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -1691,7 +1691,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260727 2) ((emacs (28)))
+  . [(9 1 0 0 20260730 7) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1701,7 +1701,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "89755af46aace89d2f2ab7c47ef48b4131d1fd08"))])
+      (:commit . "229f38ee94a8a9112d97564556049f039d684eb2"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -3552,7 +3552,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "c107480fca7e42737c51b2afaa33ac31e92a7290"))])
  (tmr
-  . [(1 3 0 0 20260529 24) ((emacs (29 1)))
+  . [(1 3 0 0 20260730 43) ((emacs (29 1)))
      "Set timers using a convenient notation" tar
      ((:url . "https://github.com/protesilaos/tmr")
       (:keywords "convenience" "timer")
@@ -3561,7 +3561,7 @@
 		("Damien Cassou" . "damien@cassou.me")
 		("Daniel Mendler" . "mail@daniel-mendler.de")
 		("Steven Allen" . "steven@stebalien.com"))
-      (:commit . "ce6a462acd7459a732538192c71b5166ba0a8ee1"))])
+      (:commit . "cbef092bbb3ac40d62d7a7a00b002acefeacbf13"))])
  (tomelr
   . [(0 4 3 0 20220511 213722)
      ((emacs (26 3)) (map (3 2 1)) (seq (2 23)))
@@ -3630,7 +3630,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 5 0 20260729 6)
+  . [(0 13 5 0 20260730 7)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3640,7 +3640,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "5a94048e3b2cbf72558509ba4ef9fdd9501f2480"))])
+      (:commit . "0d6bbd3b111057b463f253c1be2a7978a4e37ef4"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
