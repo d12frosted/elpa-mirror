@@ -1,7 +1,7 @@
 
 About:
 
-Nimbus dark theme for Emacs. Beautiful, slightly retro, yet readable
+Nimbus dark theme for Emacs.  Beautiful, slightly retro, yet readable
 and easy on the eyes.
 
 See README.md for more info.

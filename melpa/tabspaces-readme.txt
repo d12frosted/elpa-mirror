@@ -1,7 +1,7 @@
 This package provides several functions to facilitate a frame-based
 tab workflow with one workspace per tab, integration with project.el (for
 project-based workspaces) and buffer isolation per tab (i.e. a "tabspace"
-workspace). The package assumes project.el and tab-bar.el are both present
+workspace).  The package assumes project.el and tab-bar.el are both present
 (they are built-in to Emacs 27.1+).
 
 This file is not part of GNU Emacs.
