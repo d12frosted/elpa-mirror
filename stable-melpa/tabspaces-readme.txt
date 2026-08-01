@@ -4,9 +4,8 @@ project-based workspaces) and buffer isolation per tab (i.e. a "tabspace"
 workspace).  The package assumes project.el and tab-bar.el are both present
 (they are built-in to Emacs 27.1+).
 
-This file is not part of GNU Emacs.
+;; Acknowledgements
 
-; Acknowledgements
 Much of the package code is inspired by:
 
 - https://github.com/kaz-yos/emacs
