@@ -37,7 +37,7 @@ Built-in Emacs alternative: M-x vc-annotate
 ;; How this works:
 
 For every visible header, we get a range of line numbers like
-21–34; from .git/, we get the last modification in this range.
+21-34; from .git/, we get the last modification in this range.
 We put a read-only overlay on the last character of the Org header
 with the date.
 We accurately do "git commit --amend" if the current day is the day
