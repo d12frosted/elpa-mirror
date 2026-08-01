@@ -3552,7 +3552,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "c107480fca7e42737c51b2afaa33ac31e92a7290"))])
  (tmr
-  . [(1 3 0 0 20260731 45) ((emacs (29 1)))
+  . [(1 4 0 0 20260731 0) ((emacs (29 1)))
      "Set timers using a convenient notation" tar
      ((:url . "https://github.com/protesilaos/tmr")
       (:keywords "convenience" "timer")
@@ -3561,7 +3561,7 @@
 		("Damien Cassou" . "damien@cassou.me")
 		("Daniel Mendler" . "mail@daniel-mendler.de")
 		("Steven Allen" . "steven@stebalien.com"))
-      (:commit . "98fecc0ac222636e9d0655eabb4472e1d3dd82fd"))])
+      (:commit . "34a23bbd40771c804133969e217a35c47b494a61"))])
  (tomelr
   . [(0 4 3 0 20220511 213722)
      ((emacs (26 3)) (map (3 2 1)) (seq (2 23)))
@@ -3630,7 +3630,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 5 0 20260730 7)
+  . [(0 13 5 0 20260731 14)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3640,7 +3640,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "0d6bbd3b111057b463f253c1be2a7978a4e37ef4"))])
+      (:commit . "f05949d63681e4ce338cb672a0e0abfd51fd1296"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

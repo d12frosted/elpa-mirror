@@ -14,7 +14,7 @@ a non-intrusive but still noticeable visual indicator.
 ## Installation
 
 The preferred way to install the mode is by grabbing
-`auto-dim-other-buffers` package form NonGNU ELPA:
+`auto-dim-other-buffers` package from NonGNU ELPA:
 
     M-x package-install RET auto-dim-other-buffers RET
 
@@ -22,9 +22,9 @@ Once installed, enable the mode with:
 
     M-x auto-dim-other-buffers-mode RET
 
-To make it enabled every time Emacs starts, add the following to Emacs
-initialisation file (typically `~/.emacs`, `~/.emacs.d/init.el` or
-`~/.config/emacs/init.el`):
+To automatically enable the mode when Emacs starts, add the following to
+your Emacs initialisation file (typically `~/.emacs`,
+`~/.emacs.d/init.el` or `~/.config/emacs/init.el`):
 
     (add-hook 'after-init-hook (lambda ()
       (when (fboundp 'auto-dim-other-buffers-mode)
@@ -58,15 +58,15 @@ the variable or using the following snippet:
 By its nature, `auto-dim-other-buffers-mode` often forces full-window
 refreshes which may cause flickering on some systems and displays.  To
 mitigate it, try disabling `fringe` highlighting which—due to Emacs’
-display code limitation—require full-frame refresh.  See Customisation
-section above for instruction how to do it.
+display code limitation—requires full-frame refresh.  See the
+Customisation section above for instruction on how to do it.
 
 ### Text which should be hidden in org-mode is not
 
-To hide text, `org-mode` uses `org-hide` face whose foreground is set
-to the background colour of the `default` face.  When
-`auto-dim-other-buffers-mode` changes background of a dimmed window it
-also needs to be applied to the `org-hide` face.  The good news is
+To hide text, `org-mode` uses `org-hide` face whose foreground is set to
+the background colour of the `default` face.  When
+`auto-dim-other-buffers-mode` changes the background of a dimmed window
+it also needs to be applied to the `org-hide` face.  The good news is
 that this is supported out of the box.  The caveat is that it requires
 that `auto-dim-other-buffers` and `auto-dim-other-buffers-hide` are
 changed in sync.
@@ -84,8 +84,8 @@ and set its foreground and background to match background of the
 ## Afterword
 
 Note that despite its name, the mode operates on *windows* rather than
-buffers.  In other words, selected window is highlighted and all other
-windows are dimmed even if they display the same buffer.  The package
-is named `auto-dim-other-buffer` for historical reasons.
+buffers.  In other words, the selected window is highlighted and all
+other windows are dimmed even if they display the same buffer.  The
+package is named `auto-dim-other-buffers` for historical reasons.
 
-Requires Emacs 27 to work.
+Requires at least Emacs 27.

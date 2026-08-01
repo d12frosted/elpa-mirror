@@ -95,13 +95,13 @@
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
  (auto-dim-other-buffers
-  . [(2 2 2 0 20260624 0) ((emacs (27 1)))
+  . [(2 2 3 0 20260731 2) ((emacs (27 1)))
      "Makes windows without focus less prominent" tar
      ((:url . "https://github.com/mina86/auto-dim-other-buffers.el")
       (:keywords "faces")
       (:maintainer "Michal Nazarewicz" . "mina86@mina86.com")
       (:authors ("Michal Nazarewicz" . "mina86@mina86.com"))
-      (:commit . "cf0263073470190b85f6013066856126aac67d19"))])
+      (:commit . "640a32f6ccdd9d93279342882be2389e1d3abd01"))])
  (autothemer
   . [(0 2 18 0 20260620 7) ((dash (2 10 0)) (emacs (26 1)))
      "Conveniently define themes" tar
@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(39 0 -4 0 20260731 3) ((emacs (28 1)) (seq (2 24)))
+  . [(39 0 -4 0 20260731 13) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "d2737731e01d4a110bc27e02811b2a840bcc5f46"))])
+      (:commit . "62e8f1cf99ac9b67b62cf205affb0260c8838a10"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -955,7 +955,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260727 72)
+  . [(0 9 9 5 0 20260731 73)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -964,7 +964,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "513a6b74310d7bcc2a6138ccc1860b4577e73800"))])
+      (:commit . "9cafa41e7172a995e4eeadb5049a8c05bf7c30ba"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1305,7 +1305,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260731 79)
+  . [(4 6 0 0 20260731 82)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 6)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1317,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "b8e54f1e368a36225f830062c439ac7d8a0aa437"))])
+      (:commit . "2520e5e4fdfb08e9c944648c7bff657f9bcf96e1"))])
  (magit-section
-  . [(4 6 0 0 20260731 79)
+  . [(4 6 0 0 20260731 82)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1328,7 +1328,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "b8e54f1e368a36225f830062c439ac7d8a0aa437"))])
+      (:commit . "2520e5e4fdfb08e9c944648c7bff657f9bcf96e1"))])
  (markdown-mode
   . [(2 9 -3 0 20260722 13) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar

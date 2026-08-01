@@ -11,11 +11,11 @@ for `tmr' (or TMR, TMR May Ring, …), and provides every other piece of
 information pertinent to it.  The name of the package is pronounced as
 “timer” or “T-M-R”.
 
-The documentation furnished herein corresponds to stable version 1.3.0,
-released on 2026-01-25.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 1.4.0,
+released on 2026-07-31.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 1.4.0-dev.
+Current development target is 1.5.0-dev.
 
 ⁃ Package name (GNU ELPA): `tmr'
 ⁃ Official manual: <https://protesilaos.com/emacs/tmr>
@@ -201,10 +201,9 @@ Table of Contents
 
   The `tmr-repeat' is like `tmr' though also prompts for a number of
   repetitions repeat count. This means that the specified timer will run
-  that many times. [ Part of 1.4.0-dev. ] When called with a prefix
-  argument (`C-u' with default keybindings) it asks for a description
-  and whether timer should be acknowledged or not once all repetitions
-  are done.
+  that many times. When called with a prefix argument (`C-u' with
+  default keybindings) it asks for a description and whether timer
+  should be acknowledged or not once all repetitions are done.
 
   When the timer is set, a message is sent to the echo area recording
   the current time and the point in the future when the timer elapses.
@@ -243,8 +242,10 @@ Table of Contents
 
   The command `tmr-edit-repeat-count' sets the repeat count of the given
   timer. When the repeat count is set to `0', then the timer is no
-  longer considered repeatable. [ The command `tmr-edit-repeat-count' is
-  part of 1.4.0-dev. ]
+  longer considered repeatable. Modifying a timer’s repeat count does
+  not start a new timer. It simply updates the relevant data. Use the
+  command `tmr-clone' to start a new timer using the data of an existing
+  timer.
 
   The command `tmr-toggle-acknowledge' toggles the acknowledge flag of a
   given timer object. A timer that needs to be acknowledged prompts for
@@ -383,8 +384,6 @@ remaining time] See section 7.1
 7.3 Control the visible columns of the tabulated view
 ─────────────────────────────────────────────────────
 
-  [ The `tmr-tabulated-columns' is part of 1.4.0-dev. ]
-
   The user option `tmr-tabulated-columns' controls which columns are
   displayed by `tmr-tabulated-view' ([Grid or tabulated view]). The
   default value shows all the available columns. The columns are
@@ -400,8 +399,6 @@ remaining time] See section 7.1
         how much time is left in the timer;
   `paused'
         whether the timer is paused or not;
-  `repeatable'
-        whether the timer is set to repeat or not;
   `remaining-repeats'
         the number of repeats left;
   `total-repeats'
@@ -533,9 +530,6 @@ remaining time] See section 7.1
 
 10 The timer prompt
 ═══════════════════
-
-  [ The `tmr-read-timer' and `tmr-completion-metadata' are both part of
-    1.4.0-dev. ]
 
   For commands that act on timers, the function `tmr-read-timer' is
   involved in the minibuffer completion phase: it is how the user picks
