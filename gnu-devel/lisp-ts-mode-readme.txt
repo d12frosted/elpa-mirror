@@ -143,14 +143,21 @@ Table of Contents
         line. If nil (the default), the directive characters themselves
         are aligned, like
         ┌────
-        │ "~:@{
-        │      ~A
+        │ "~:@{~
+        │      ~A~
         │    ~}"
         └────
-        If set to non-nil, the ~s are aligned:
+        If set to non-nil:
         ┌────
-        │ "~:@{
-        │   ~A
+        │ "~:@{~
+        │   ~A~
+        │  ~}"
+        └────
+        If the value is the symbol `end', non-nil behavior applies to
+        the end directive, but nil behavior applies to the contents:
+        ┌────
+        │ "~:@{~
+        │      ~A~
         │  ~}"
         └────
   `lisp-ts-mode-format-group-indent-offset'

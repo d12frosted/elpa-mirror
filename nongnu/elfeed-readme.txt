@@ -11,9 +11,9 @@ database format is stable and is never expected to change.
 <https://github.com/emacs-elfeed/elfeed/blob/screenshots/screenshot.png?raw=true>
 
 
-[ELPA] <https://elpa.nongnu.org/packages/elfeed.html>
+[ELPA] <https://elpa.nongnu.org/nongnu/elfeed.html>
 
-[MELPA] <https://melpa.org/#/elfeed>
+[MELPA] <https://releases.melpa.org/#/elfeed>
 
 [notmuch] <https://notmuchmail.org/>
 

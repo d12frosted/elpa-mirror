@@ -473,7 +473,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 0 0 20260730 11) ((emacs (29 1)) (compat (31)))
+  . [(4 1 1 0 20260801 0) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -482,7 +482,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "520c52b622de477da60e0d55788d3a20d1f8ab0f"))])
+      (:commit . "fdf477f99fe1e152f7fbcb098fae1de00fa09efb"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -1305,9 +1305,9 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 6 0 0 20260731 82)
+  . [(4 7 0 0 20260731 0)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
-      (magit-section (4 6)) (seq (2 24)) (transient (0 13))
+      (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
      "A Git porcelain inside Emacs" tar
      ((:url . "https://github.com/magit/magit")
@@ -1317,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "2520e5e4fdfb08e9c944648c7bff657f9bcf96e1"))])
+      (:commit . "67f203853e74e926e2c99f60ed508840714f7ced"))])
  (magit-section
-  . [(4 6 0 0 20260731 82)
+  . [(4 7 0 0 20260731 0)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1328,7 +1328,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "2520e5e4fdfb08e9c944648c7bff657f9bcf96e1"))])
+      (:commit . "67f203853e74e926e2c99f60ed508840714f7ced"))])
  (markdown-mode
   . [(2 9 -3 0 20260722 13) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1520,9 +1520,9 @@
       (:authors ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
       (:commit . "e2599a106a26ce5511095e23df4ea04be6687a8a"))])
  (orgit
-  . [(2 2 0 0 20260729 2)
+  . [(2 2 1 0 20260731 0)
      ((emacs (29 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
-      (magit (4 6)) (org (9 8)))
+      (magit (4 7)) (org (9 8)))
      "Support for Org links to Magit buffers" tar
      ((:url . "https://github.com/magit/orgit")
       (:keywords "hypermedia" "vc")
@@ -1530,7 +1530,7 @@
 		   . "emacs.orgit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-      (:commit . "d6491aca80da25323459c6431021f153f364a97f"))])
+      (:commit . "c948819a7cad37a654ada275ebf7c003abf782d0"))])
  (p4-16-mode
   . [(0 3 0 20231118 161633) nil
      "Support for the P4_16 programming language" tar
@@ -2167,7 +2167,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 2 0 20260730 9)
+  . [(3 5 3 0 20260731 0)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2176,7 +2176,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "2671aa47e610cbb2763858507d881bdb90b1065a"))])
+      (:commit . "a1f92a26e53033ec58e1d2ce9b132da7ebae816e"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar

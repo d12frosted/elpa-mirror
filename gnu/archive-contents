@@ -380,13 +380,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 7) ((emacs (29 1)) (compat (31)))
+  . [(2 8) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "c99911b08831c26179145686b4beffa96f1f8a68"))])
+      (:commit . "5a3aa3058eb47bd10ae72c8919921e3fb40952a5"))])
  (capf-autosuggest
   . [(0 3) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -576,13 +576,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "1b30a28857727202d1f6a027f83ad66151fb1e92"))])
  (corfu
-  . [(2 11) ((emacs (29 1)) (compat (31)))
+  . [(2 12) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "8243708421012f15a5f864ec88f6af01e5395dd8"))])
+      (:commit . "f6306d8c5ba540e75c208c8069b3b677de48a183"))])
  (coterm
   . [(1 6) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1733,13 +1733,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "4e13f89fe8837b84d40b969e6a5431816180a747"))])
  (jinx
-  . [(2 8) ((emacs (29 1)) (compat (31))) "Enchanted Spell Checker"
+  . [(2 9) ((emacs (29 1)) (compat (31))) "Enchanted Spell Checker"
      tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "987b9f90eb10df53c34c0f4972469875c1e93203"))])
+      (:commit . "270866399c959a583caec0115d7dbc069f01ff29"))])
  (jit-spell
   . [(0 5) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -1781,12 +1781,12 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 0) ((emacs (29 1))) "Described keymaps with popup help" tar
-     ((:url . "https://codeberg.org/thanosapollo/emacs-keymap-popup")
+  . [(0 4 1) ((emacs (29 1))) "Described keymaps with popup help" tar
+     ((:url . "https://git.thanosapollo.org/emacs-keymap-popup")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "d0b50926a186d2de72aa12c6d6b06e384731865a"))])
+      (:commit . "b5970885ad19209da1f53bd3ad5872fae2f511ad"))])
  (kind-icon
   . [(0 2 2) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -1878,13 +1878,13 @@
       (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
       (:commit . "fa75ea6b05070ce0f06befdef1954afa99aa5e89"))])
  (lisp-ts-mode
-  . [(0 3 0) ((emacs (30 2)) (cond-star (0)) (compat (31)))
+  . [(0 3 2) ((emacs (30 2)) (cond-star (0)) (compat (31)))
      "lisp-mode with tree-sitter support" tar
      ((:url . "https://codeberg.org/zshaftel/lisp-ts-mode")
       (:keywords "lisp" "languages" "tree-sitter")
       (:maintainer "zach shaftel" . "zach@shaf.tel")
       (:authors ("zach shaftel" . "zach@shaf.tel"))
-      (:commit . "15d86f40335c8be20250f7f86d0476b1c3a4ac90"))])
+      (:commit . "864e6059dac1caad3588762ad9fe1bdb2aae5332"))])
  (listen
   . [(0 10 1)
      ((emacs (29 1)) (persist (0 6)) (taxy (0 10))
@@ -2091,12 +2091,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "2ff29c5d6abae3637d6174d889f39745fcd13fa5"))])
  (minuet
-  . [(0 8 0) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 9 0) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "13fb314a795951b9190c53c59ef281abf7a2cb4f"))])
+      (:commit . "d83e647b0a4e35b79dec4d879e280dc17bb809c8"))])
  (mmm-mode
   . [(0 5 11) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
@@ -2413,12 +2413,12 @@
       (:url . "https://elpa.gnu.org/packages/osc.html")
       (:commit . "6b6dbb4176f45f9ff3a783c816c4556ca2931a22"))])
  (osm
-  . [(2 4) ((emacs (29 1)) (compat (31))) "OpenStreetMap viewer" tar
+  . [(2 5) ((emacs (29 1)) (compat (31))) "OpenStreetMap viewer" tar
      ((:url . "https://github.com/minad/osm")
       (:keywords "network" "multimedia" "hypermedia" "mouse")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "d6167ca4f99bead657ac6f7f163c1fcf9b34267f"))])
+      (:commit . "117a00204afd95c9ac2ef1016e31c67d5cd01268"))])
  (other-frame-window
   . [(1 0 6) ((emacs (24 4)))
      "Minor mode to enable global prefix keys for other frame/window buffer placement"
@@ -3355,7 +3355,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient
-  . [(0 13 5)
+  . [(0 13 6)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3365,7 +3365,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "3d20a780605f0a33d6360dc0a2ce9174c69a9a92"))])
+      (:commit . "9ba468bcbc7f6061c02a5319ff961f3e5ba6fa13"))])
  (transient-cycles
   . [(2 1) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

@@ -404,13 +404,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 7 0 20260725 16) ((emacs (29 1)) (compat (31)))
+  . [(2 8 0 20260801 0) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "d3dd033dd261b31cf6f87df35cd83c8a6e31573b"))])
+      (:commit . "5a3aa3058eb47bd10ae72c8919921e3fb40952a5"))])
  (capf-autosuggest
   . [(0 3 0 20211123 104430) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 6 0 20260731 6) ((emacs (29 1)) (compat (31)))
+  . [(3 6 0 20260731 7) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "42d55c206907303959d885b2f28bd46bf5468409"))])
+      (:commit . "6af0dc99ff8eb8da3ca24bf9abd9a72354dcc5e1"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 11 0 20260725 8) ((emacs (29 1)) (compat (31)))
+  . [(2 12 0 20260801 0) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "86aacc85b11be1fbeb43b33128347b4c220070ca"))])
+      (:commit . "f6306d8c5ba540e75c208c8069b3b677de48a183"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1450,12 +1450,12 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "d7c243ac3be2a67986f53f3dc31ba1426e82b771"))])
  (futur
-  . [(1 7 0 20260721 9) nil "Future/promise-based async library" tar
+  . [(1 7 0 20260731 12) nil "Future/promise-based async library" tar
      ((:keywords "concurrency" "async" "promises" "futures")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/futur.html")
-      (:commit . "e307e22054d2d3f64ad9cfe998dd2b33cfc16ca7"))])
+      (:commit . "71e45426889d6c9bf61ad906ddb999c1a7aa2b3f"))])
  (gcmh
   . [(0 2 1 0 20201116 225142) ((emacs (24)))
      "the Garbage Collector Magic Hack" tar
@@ -1847,13 +1847,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "1bd355ecda036f23468d82b803146d3258a84977"))])
  (jinx
-  . [(2 8 0 20260729 11) ((emacs (29 1)) (compat (31)))
+  . [(2 9 0 20260801 0) ((emacs (29 1)) (compat (31)))
      "Enchanted Spell Checker" tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "ab922067c58ef88ae69d1c288c35202c5fef2c55"))])
+      (:commit . "270866399c959a583caec0115d7dbc069f01ff29"))])
  (jit-spell
   . [(0 5 0 20251012 84654) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -1897,13 +1897,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 0 0 20260715 2) ((emacs (29 1)))
+  . [(0 4 1 0 20260801 0) ((emacs (29 1)))
      "Described keymaps with popup help" tar
-     ((:url . "https://codeberg.org/thanosapollo/emacs-keymap-popup")
+     ((:url . "https://git.thanosapollo.org/emacs-keymap-popup")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "44ee56b4de2756460a366c7fa45de6dbf7bee9fe"))])
+      (:commit . "b5970885ad19209da1f53bd3ad5872fae2f511ad"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -2000,14 +2000,14 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "65556a218fe138516ebe557726fe6e4b8b60f539"))])
  (lisp-ts-mode
-  . [(0 3 0 0 20260720 0)
+  . [(0 3 2 0 20260731 0)
      ((emacs (30 2)) (cond-star (0)) (compat (31)))
      "lisp-mode with tree-sitter support" tar
      ((:url . "https://codeberg.org/zshaftel/lisp-ts-mode")
       (:keywords "lisp" "languages" "tree-sitter")
       (:maintainer "zach shaftel" . "zach@shaf.tel")
       (:authors ("zach shaftel" . "zach@shaf.tel"))
-      (:commit . "15d86f40335c8be20250f7f86d0476b1c3a4ac90"))])
+      (:commit . "864e6059dac1caad3588762ad9fe1bdb2aae5332"))])
  (listen
   . [(0 10 1 0 20260105 223313)
      ((emacs (29 1)) (persist (0 6)) (taxy (0 10))
@@ -2232,12 +2232,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "b295cab07c1932c11dd00f23ba29c1ff0de486ab"))])
  (minuet
-  . [(0 8 0 0 20260730 1) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 9 0 0 20260731 0) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "68381b4a041170bf6ab727806bd59194fd8760f6"))])
+      (:commit . "d83e647b0a4e35b79dec4d879e280dc17bb809c8"))])
  (mmm-mode
   . [(0 5 11 0 20240222 42825) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
@@ -2574,13 +2574,13 @@
       (:url . "https://elpa.gnu.org/packages/osc.html")
       (:commit . "62eda3d8fb288b6a16c35a7220a507d0991c5a74"))])
  (osm
-  . [(2 4 0 20260723 2) ((emacs (29 1)) (compat (31)))
+  . [(2 5 0 20260801 0) ((emacs (29 1)) (compat (31)))
      "OpenStreetMap viewer" tar
      ((:url . "https://github.com/minad/osm")
       (:keywords "network" "multimedia" "hypermedia" "mouse")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "2041694815e9b143e7703513efd2a620e7d55080"))])
+      (:commit . "117a00204afd95c9ac2ef1016e31c67d5cd01268"))])
  (other-frame-window
   . [(1 0 6 0 20221221 81352) ((emacs (24 4)))
      "Minor mode to enable global prefix keys for other frame/window buffer placement"
@@ -3630,7 +3630,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 5 0 20260731 14)
+  . [(0 13 6 0 20260731 0)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3640,7 +3640,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "f05949d63681e4ce338cb672a0e0abfd51fd1296"))])
+      (:commit . "9ba468bcbc7f6061c02a5319ff961f3e5ba6fa13"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

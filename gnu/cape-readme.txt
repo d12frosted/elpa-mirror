@@ -123,7 +123,7 @@ Table of Contents
 
 [ELPA] <https://elpa.gnu.org/packages/cape.html>
 
-[MELPA] <https://melpa.org/#/cape>
+[MELPA] <https://releases.melpa.org/#/cape>
 
 ["Running Hooks" in the Elisp manual] <info:elisp#Running Hooks>
 
