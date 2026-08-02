@@ -1,27 +1,133 @@
-2026-08-02T09:04:31+0000  ace-flyspell               (file-locked /mnt/store/melpa/packages/ace-flyspell-readme.txt root@9618f8f74984 (pid 1528) Cannot resolve lock conflict in batch mode)
-2026-08-02T09:07:39+0000  amread-mode                Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:14:53+0000  copilot-chat               copilot-chat[-pkg].el matching package name is missing
-2026-08-02T09:15:49+0000  company-nginx              Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T09:22:55+0000  edebug-inline-result       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:23:07+0000  eldoc-overlay              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:26:27+0000  eide                       Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T09:28:37+0000  external-dict              Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T09:37:36+0000  hoa-mode                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:38:11+0000  i3wm                       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:41:33+0000  inline-docs                Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:45:08+0000  kiwix                      Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:49:05+0000  major-mode-icons           Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T09:55:00+0000  ob-php                     Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:55:08+0000  ob-redis                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:56:32+0000  org-bookmarks              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T09:57:44+0000  org-contacts               Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T09:57:50+0000  org-kindle                 Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T09:57:58+0000  org-link-beautify          Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T09:58:37+0000  org-seek                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T10:03:10+0000  pushover                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T10:05:00+0000  proxy-mode                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T10:07:11+0000  rainbow-fart               Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T10:10:19+0000  sdcv                       Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T10:12:10+0000  smiles-mode                Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
-2026-08-02T10:12:41+0000  spice-mode                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-2026-08-02T10:14:01+0000  topspace                   Command `git reset --hard 33c2a6f0a11d1d88cdb2065c5a897e33507f4c86' exited with non-zero exit-code: 1
+2026-08-02T13:05:07+0000  ace-flyspell               (file-locked /mnt/store/melpa/packages/ace-flyspell-readme.txt root@9618f8f74984 (pid 1528) Cannot resolve lock conflict in batch mode)
+2026-08-02T13:05:48+0000  actionscript-mode          Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:06:00+0000  agda-lib-mode              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:09:01+0000  amread-mode                Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:10:16+0000  arduino-mode               Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:15:27+0000  copilot-chat               copilot-chat[-pkg].el matching package name is missing
+2026-08-02T13:16:48+0000  company-nginx              Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:22:54+0000  edebug-inline-result       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:29:21+0000  external-dict              Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:29:23+0000  ffmpeg-utils               Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:32:22+0000  geiser                     Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:32:23+0000  geiser-chez                Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:32:24+0000  geiser-gambit              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:32:45+0000  gdb-x                      Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:32:55+0000  geiser-racket              Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:32:55+0000  geiser-guile               Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:32:55+0000  geiser-mit                 Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:33:28+0000  git-lens                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:33:35+0000  git-timemachine            Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:34:03+0000  gnu-indent                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:34:25+0000  go-prettify-mode           Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:34:29+0000  go-template-helper-mode    Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:34:29+0000  go-template-mode           Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:36:06+0000  guix                       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:37:14+0000  helm-emoji                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:37:15+0000  helm-elfeed                Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:38:40+0000  hoa-mode                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:39:03+0000  hl-indent-scope            Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:39:04+0000  hl-block-mode              Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:39:04+0000  hl-prog-extra              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:39:17+0000  i3wm                       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:39:41+0000  hyperspace                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:40:00+0000  idle-highlight-mode        Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:40:48+0000  info-nav                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:40:58+0000  inkpot-theme               Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:41:03+0000  insert-kaomoji             Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:41:15+0000  iosevka-theme              Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:41:26+0000  iso-639                    Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:42:06+0000  ivy-spotify                Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:43:02+0000  jit-lock-stealth-progress  Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:43:15+0000  inline-docs                Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:43:51+0000  kagi                       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:44:35+0000  klere-theme                Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:44:37+0000  klondike                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:45:34+0000  lem                        Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:45:58+0000  lingva                     Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:46:35+0000  loccur                     Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:46:50+0000  loopy                      Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:46:51+0000  loopy-dash                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:47:10+0000  lsp-scheme                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:47:10+0000  kiwix                      Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:47:35+0000  magit-commit-mark          Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:49:18+0000  meep                       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:50:15+0000  minsk-theme                Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:50:25+0000  mo-git-blame               Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:50:34+0000  mode-line-idle             Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:50:46+0000  mono-complete              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:51:06+0000  mowie                      Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:51:26+0000  mu4e-walk                  Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:51:26+0000  major-mode-icons           Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:51:52+0000  nael                       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:52:50+0000  noaa                       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:53:00+0000  nordic-night-theme         Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:53:03+0000  mu4e-marker-icons          Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:54:02+0000  ob-nix                     Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:54:19+0000  oblivion-theme             Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:54:34+0000  octo-mode                  Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:55:14+0000  ob-smiles                  Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:55:42+0000  ob-php                     Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:55:42+0000  ob-redis                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:55:50+0000  ob-spice                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:56:55+0000  org-habit-ng               Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:57:02+0000  org-invoice-table          Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:58:08+0000  org-bookmarks              Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T13:58:10+0000  org-contacts               Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:58:36+0000  org-variable-pitch         Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:58:47+0000  org-kindle                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:59:15+0000  outline-stars              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T13:59:44+0000  org-seek                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:00:14+0000  paper-theme                Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:00:29+0000  pass-coffin                Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:00:31+0000  org-tag-beautify           Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:01:09+0000  persist-state              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:02:34+0000  plaster                    Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:04:04+0000  prog-face-refine           Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:04:06+0000  project-butler             Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:04:23+0000  pushover                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:04:55+0000  py-autopep8                Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:05:16+0000  proxy-mode                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:06:28+0000  recomplete                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:06:49+0000  repeat-fu                  Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:07:12+0000  revert-buffer-all          Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:07:18+0000  ride-mode                  Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:07:31+0000  rainbow-fart               Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:07:33+0000  ron-mode                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:07:58+0000  run-stuff                  Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:07:58+0000  russian-calendar           Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:08:42+0000  scratch                    Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:08:50+0000  scroll-on-drag             Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:08:51+0000  scroll-on-jump             Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:09:14+0000  selected-window-contrast   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:09:29+0000  sentex                     Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:09:45+0000  session-async              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:10:00+0000  shell-here                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:10:08+0000  shift-number               Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:10:15+0000  show-inactive-region       Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:10:24+0000  sidecar-locals             Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:10:37+0000  simple-rtm                 Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:10:48+0000  sketch-themes              Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:11:03+0000  slothbar                   Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:11:51+0000  sol-mode                   Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:12:14+0000  spatial-navigate           Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:12:19+0000  spell-fu                   Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:12:24+0000  spotify                    Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:12:41+0000  ssh                        Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:12:49+0000  starling                   Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:13:12+0000  subatomic-theme            Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:13:42+0000  sxiv                       Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:14:09+0000  tabspaces                  Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:14:13+0000  tangonov-theme             Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:14:48+0000  test-case-mode             Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:15:18+0000  tidal                      Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:15:49+0000  titlecase                  Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:15:56+0000  topspace                   Command `git reset --hard 33c2a6f0a11d1d88cdb2065c5a897e33507f4c86' exited with non-zero exit-code: 1
+2026-08-02T14:16:32+0000  tp                         Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:16:53+0000  tree-sitter-indent         Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:17:27+0000  twtxt                      Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:17:48+0000  undo-fu-session            Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:17:53+0000  unicode-math-input         Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:18:08+0000  unspecified-theme          Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:18:56+0000  viking-mode                Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
+2026-08-02T14:19:03+0000  visible-mark               Command `git remote set-head origin --auto' exited with non-zero exit-code: 128
+2026-08-02T14:19:05+0000  visual-fill-column         Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
