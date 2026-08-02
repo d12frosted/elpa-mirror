@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 11 0 20260729 0)
+  . [(1 11 0 20260801 3)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "04c31616481fe55b4362859af01241041b755a6a"))])
+      (:commit . "0816a26a4bef4406f7cbd0de02b3c81847acd1e2"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -1167,14 +1167,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 5 0 20260731 9)
+  . [(0 12 5 0 20260801 12)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "7d7091aad72f38c58b7814f4d750202848870667"))])
+      (:commit . "2cbf8764759a4765393578dca821b2d5234672ad"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1839,11 +1839,11 @@
       (:keywords "languages" "lisp" "slime")
       (:commit . "957f61d8b8b57c1f463b56620a274eb77a09bc16"))])
  (sly
-  . [(1 0 43 0 20260402 224912) ((emacs (24 5)))
+  . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
      ((:url . "https://github.com/joaotavora/sly")
       (:keywords "languages" "lisp" "sly")
-      (:commit . "759c0ff8741ced8793257f2b7ed95a23e13e1407"))])
+      (:commit . "3ffa216d0818972f7a7fea38a566a6b570349f3b"))])
  (smartparens
   . [(1 11 0 0 20260129 121419) ((dash (2 13 0)))
      "Automatic insertion, wrapping and paredit-like navigation with user defined pairs."
@@ -1922,7 +1922,7 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "3ed24d3e9f57e5b3a7915dd46ce5219557e1033d"))])
  (swift-mode
-  . [(10 0 0 0 20260726 5) ((emacs (25 2)))
+  . [(10 0 0 0 20260801 20) ((emacs (25 2)))
      "Major-mode for Apple's Swift programming language" tar
      ((:url . "https://github.com/swift-emacs/swift-mode")
       (:keywords "languages" "swift")
@@ -1931,7 +1931,7 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net"))
-      (:commit . "875fa67d36b196703e1106c35f29095f06b8371e"))])
+      (:commit . "610b2c24433c11c30a39a6799af69b10cd3bec97"))])
  (symbol-overlay
   . [(4 3 0 20260703 4) ((emacs (24 3)) (seq (2 2)))
      "Highlight symbols with keymap-enabled overlays" tar

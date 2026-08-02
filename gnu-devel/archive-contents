@@ -744,13 +744,13 @@
       (:url . "https://elpa.gnu.org/packages/dbus-codegen.html")
       (:commit . "04114e4cbc8f422e6b77cfc202d1109c96316117"))])
  (debbugs
-  . [(0 47 0 20260730 0) ((emacs (26 1)) (soap-client (3 1 5)))
+  . [(0 47 0 20260801 1) ((emacs (26 1)) (soap-client (3 1 5)))
      "SOAP library to access debbugs servers" tar
      ((:keywords "comm" "hypermedia")
       (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
       (:authors ("Michael Albinus" . "michael.albinus@gmx.de"))
       (:url . "https://elpa.gnu.org/packages/debbugs.html")
-      (:commit . "a9ab46cddf1e51acfd02186cbf8610d978113206"))])
+      (:commit . "f597af6745a957ef74ab4d0a703c17065875733e"))])
  (delight
   . [(1 7 0 20200711 42851) ((cl-lib (0 5)) (nadvice (0 3)))
      "A dimmer switch for your lighter text" tar
@@ -1092,7 +1092,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "5cdb7dd361ad3b5d7310f94375a832cd94c182d8"))])
  (eglot
-  . [(1 24 0 20260623 0)
+  . [(1 24 0 20260801 1)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1101,7 +1101,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "b24ed25b39f346370e1b90eebe86fcacdd4e48e3"))])
+      (:commit . "85393f868cd463fede69b671c735cd9bc918be11"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -2028,14 +2028,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 31 3 0 20260724 2)
+  . [(0 31 3 0 20260801 3)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "93a15f0ed92e0c1727fe6d5b99654dfcb794bc2e"))])
+      (:commit . "791bf823259f495439e56c626975ccad487c779b"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -2455,13 +2455,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "0ffd9d6903714c1f6d8fcbb6a20941fb33dd7ae5"))])
  (org
-  . [(10 0 -1 0 20260726 397) ((emacs (28 2)))
+  . [(10 0 -1 0 20260801 404) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "6e8663ef2f9fb68881aff153457c364b214c46ce"))])
+      (:commit . "08c347f81f20f0d4716b0e2f46f9e776050e50f4"))])
  (org-contacts
   . [(1 3 0 20260221 85240) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2861,12 +2861,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "cc5491c575d47eb14c7206598c515b9aed4a5724"))])
  (qrencode
-  . [(1 4 -2 1 0 20260725 0) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 4 0 20260801 0) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "d96e458305c07ce845f3ebff573416972d1f8834"))])
+      (:commit . "677939b0566295e1ff227de115edfcfeceb52bab"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
@@ -3510,13 +3510,13 @@
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
       (:commit . "ee1957f3bce6ed04627b985e95a17db190781e06"))])
  (tex-parens
-  . [(0 7 0 20260225 9) ((emacs (27 1))) "Like lisp.el, but for tex"
+  . [(0 7 0 20260727 10) ((emacs (27 1))) "Like lisp.el, but for tex"
      tar
      ((:url . "https://github.com/ultronozm/tex-parens.el")
       (:keywords "tex" "convenience")
       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-      (:commit . "48b4fcd109e5080fe5e91dccf315d6d3fa270aee"))])
+      (:commit . "a9caabd7fcd135c2fa625bc1c37d323ef5d02f6f"))])
  (theme-buffet
   . [(0 1 2 0 20240105 165329) ((emacs (29 1)))
      "Time based theme switcher" tar
@@ -3588,14 +3588,14 @@
       (:url . "https://elpa.gnu.org/packages/track-changes.html")
       (:commit . "17ddfd66e65c19f44dee41ee1b7ee1ce23ef3ed2"))])
  (tramp
-  . [(2 8 2 1 0 20260730 0) ((emacs (28 1)))
+  . [(2 8 2 1 0 20260801 1) ((emacs (28 1)))
      "Transparent Remote Access, Multiple Protocol" tar
      ((:url . "https://www.gnu.org/software/tramp/")
       (:keywords "comm" "processes")
       (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
       (:authors ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 		("Michael Albinus" . "michael.albinus@gmx.de"))
-      (:commit . "56569d77e50d73b3db7b34e903adade9122660ce"))])
+      (:commit . "c56c7dc5a6deda226bf1b0d8f936673aceb6189a"))])
  (tramp-hlo
   . [(0 0 2 0 20251231 3054) ((tramp (2 8 0 5)))
      "High level operations as Tramp handlers" tar

@@ -2671,6 +2671,13 @@
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "672df0288b55f8bb7ebacdce5335f9e11955482e"))])
+ (qrencode
+  . [(1 4) ((emacs (25 1))) "QRCode encoder" tar
+     ((:url . "https://github.com/ruediger/qrencode-el")
+      (:keywords "qrcode" "comm")
+      (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
+      (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
+      (:commit . "677939b0566295e1ff227de115edfcfeceb52bab"))])
  (quarter-plane
   . [(0 1) nil "editing using quarter-plane screen model" tar
      ((:keywords "convenience" "wp")
