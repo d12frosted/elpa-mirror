@@ -1844,6 +1844,13 @@
       (:authors ("Andreas Politz" . "politza@fh-trier.de"))
       (:url . "https://elpa.nongnu.org/nongnu/tablist.html")
       (:commit . "f6b495d09494784163c3e6ba75b771b71fe226a8"))])
+ (tabspaces
+  . [(1 10 0) ((emacs (27 1)) (project (0 8 1)))
+     "Leverage tab-bar and project for buffer-isolated workspaces" tar
+     ((:url . "https://codeberg.org/mclear-tools/tabspaces")
+      (:keywords "convenience" "frames")
+      (:authors ("Colin McLear" . "mclear@fastmail.com"))
+      (:commit . "f39e75148d978cefaabadc213f031bde34d34d9e"))])
  (tangotango-theme
   . [(0 0 7) nil "Tango Palette color theme for Emacs 24." tar
      ((:url . "https://github.com/juba/color-theme-tangotango")

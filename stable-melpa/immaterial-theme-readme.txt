@@ -4,4 +4,4 @@ configuration file:
   (load-theme 'immaterial-dark t)    ;; dark variant
   (load-theme 'immaterial-light t)   ;; light variant
 
-Requirements: Emacs 29.
+Requirements: Emacs 31.

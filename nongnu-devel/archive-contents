@@ -1167,14 +1167,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 5 0 20260801 12)
+  . [(0 12 5 0 20260802 19)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "2cbf8764759a4765393578dca821b2d5234672ad"))])
+      (:commit . "4b0cf2b2a0383e8726079be2df5cffce9f996a45"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1956,6 +1956,13 @@
       (:authors ("Andreas Politz" . "politza@fh-trier.de"))
       (:url . "https://elpa.nongnu.org/nongnu/tablist.html")
       (:commit . "faab7a035ef2258cc4ea2182f67e3aedab7e2af9"))])
+ (tabspaces
+  . [(1 10 0 0 20260801 6) ((emacs (27 1)) (project (0 8 1)))
+     "Leverage tab-bar and project for buffer-isolated workspaces" tar
+     ((:url . "https://codeberg.org/mclear-tools/tabspaces")
+      (:keywords "convenience" "frames")
+      (:authors ("Colin McLear" . "mclear@fastmail.com"))
+      (:commit . "09e65cbf7ad7ec2d62a1919d9082e216f0c6082d"))])
  (tangotango-theme
   . [(0 0 7 0 20241117 114955) nil
      "Tango Palette color theme for Emacs 24." tar

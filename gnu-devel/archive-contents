@@ -1003,13 +1003,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260730 13) ((emacs (29 1)))
+  . [(1 2 1 0 20260802 14) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "5ccb35aea3806eabdd9cc8ec3fd013618c836ced"))])
+      (:commit . "ce4493132e26c4fbaf08f96e5aa8abee16399257"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -2861,12 +2861,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "cc5491c575d47eb14c7206598c515b9aed4a5724"))])
  (qrencode
-  . [(1 4 0 20260801 0) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 4 0 20260801 2) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "677939b0566295e1ff227de115edfcfeceb52bab"))])
+      (:commit . "3f4b87954289160d3333f5a528869850916618e3"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
