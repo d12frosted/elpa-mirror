@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(39 0 -4 0 20260731 13) ((emacs (28 1)) (seq (2 24)))
+  . [(39 0 -4 0 20260802 20) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "62e8f1cf99ac9b67b62cf205affb0260c8838a10"))])
+      (:commit . "a45491a6ef01c0b6ed87d3962be68542925d97b3"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -955,7 +955,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260731 73)
+  . [(0 9 9 5 0 20260802 77)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -964,7 +964,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "9cafa41e7172a995e4eeadb5049a8c05bf7c30ba"))])
+      (:commit . "3c93bccf9a117535f2573e5a9753d6324474689a"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1167,14 +1167,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 5 0 20260802 19)
+  . [(0 12 5 0 20260802 22)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "4b0cf2b2a0383e8726079be2df5cffce9f996a45"))])
+      (:commit . "d3b345680e2b763b54be2229a13a7bb8bdc9fb6a"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1957,12 +1957,12 @@
       (:url . "https://elpa.nongnu.org/nongnu/tablist.html")
       (:commit . "faab7a035ef2258cc4ea2182f67e3aedab7e2af9"))])
  (tabspaces
-  . [(1 10 0 0 20260801 6) ((emacs (27 1)) (project (0 8 1)))
+  . [(1 10 0 0 20260802 7) ((emacs (27 1)) (project (0 8 1)))
      "Leverage tab-bar and project for buffer-isolated workspaces" tar
      ((:url . "https://codeberg.org/mclear-tools/tabspaces")
       (:keywords "convenience" "frames")
       (:authors ("Colin McLear" . "mclear@fastmail.com"))
-      (:commit . "09e65cbf7ad7ec2d62a1919d9082e216f0c6082d"))])
+      (:commit . "5254c8b8352bcb036cc6096af2d35e7e4da02c2c"))])
  (tangotango-theme
   . [(0 0 7 0 20241117 114955) nil
      "Tango Palette color theme for Emacs 24." tar

@@ -23,7 +23,7 @@ some keys in your frame title:
 
 ```el
 (use-package keycoach
-  :load-path "~/.emacs.d/packages/keycoach" ; Coming to MELPA soon I hope
+  :ensure t
 
   :config
 
