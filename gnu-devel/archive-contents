@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260802 51) ((emacs (28 1)))
+  . [(14 1 2 0 20260802 54) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "c96da616f5281ff6cd134e12bf8b619a4229e7da"))])
+      (:commit . "26d901abc0feec6de40b7a9b56430c570bfde569"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -332,12 +332,12 @@
       (:authors ("Amy Pillow" . "amypillow@lavache.com"))
       (:commit . "08e1c84dee28f87010f50cb4e9a48c0798c8912b"))])
  (breadcrumb
-  . [(1 0 1 0 20260630 15) ((emacs (28 1)) (project (0 9 8)))
+  . [(1 0 1 0 20260802 16) ((emacs (28 1)) (project (0 9 8)))
      "project and imenu-based breadcrumb paths" tar
      ((:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
-      (:commit . "899ddc05c54ba9e005974deeea7518c798c1bd87"))])
+      (:commit . "6f11e36b5e334160c6b3ac7272b701d88443a8f5"))])
  (brief
   . [(5 92 0 20240823 62608) ((nadvice (0 3)) (cl-lib (0 5)))
      "Brief Editor Emulator (Brief Mode)" tar
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 12 0 20260801 0) ((emacs (29 1)) (compat (31)))
+  . [(2 12 0 20260802 4) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "f6306d8c5ba540e75c208c8069b3b677de48a183"))])
+      (:commit . "4b440fb30ff2fff4291af676b59da7ab22130a45"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -2861,12 +2861,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "cc5491c575d47eb14c7206598c515b9aed4a5724"))])
  (qrencode
-  . [(1 4 0 20260801 2) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 5 -2 3 0 20260802 0) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "3f4b87954289160d3333f5a528869850916618e3"))])
+      (:commit . "7f19d5c20039e3c3e3872c7ae031509a0369d3bd"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar

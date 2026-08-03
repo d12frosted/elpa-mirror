@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(39 0 -4 0 20260802 20) ((emacs (28 1)) (seq (2 24)))
+  . [(39 0 -4 0 20260803 21) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "a45491a6ef01c0b6ed87d3962be68542925d97b3"))])
+      (:commit . "10d2c4ab71b6da103aa4fda70a67e72401b5a82c"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -2129,11 +2129,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(8 3 3 -4 0 20260727 55) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(8 3 3 -4 0 20260802 57) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "88361f97daa22a4df0a49c0f4b93e257ecba8a5b"))])
+      (:commit . "b8a1b5f6c108a1e06f6a0f13bbb52ed6847156bd"))])
  (web-mode
   . [(17 3 24 0 20260623 0) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
