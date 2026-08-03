@@ -7,6 +7,7 @@ bible-gateway is a simple package that fetches content from
 - Search the Bible by keyword and display results in a dedicated buffer with
   clickable references and pagination
 - Follow a daily reading plan from a CSV file
+- Memorise Bible verses with touch-typing
 
 Usage:
 
@@ -33,3 +34,6 @@ from BibleGateway, and displays them in a dedicated buffer.
 M-x `bible-gateway-read-today' fetches all of today's passages from
 the active reading plan (set via `bible-gateway-reading-plan') and
 displays them in a single buffer.
+
+M-x `bible-gateway-memorise' helps you memorise a Bible verse using a
+touch-typing practice mode, with live color-coded feedback as you type.
