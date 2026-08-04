@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(39 0 -4 0 20260804 53) ((emacs (28 1)) (seq (2 24)))
+  . [(39 0 -4 0 20260804 69) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "de33ef07b14d631a3520c29435982a955c24615f"))])
+      (:commit . "816ea80ca24703c6e3fcbb75ff9eec5a9b0149ef"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1621,12 +1621,12 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "ced3f1e4fa9bb8d3d33150f43d0dc357e4917636"))])
  (php-mode
-  . [(1 26 1 0 20260724 81) ((emacs (27 1)))
+  . [(1 26 1 0 20260804 86) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "71c3f320b428135d144db338491eef7cda968abf"))])
+      (:commit . "4bc3f18bc93574f4bd0575fc9642a5e92b60c59a"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -2129,11 +2129,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(8 3 3 -4 0 20260802 57) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(8 3 3 -4 0 20260804 86) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "b8a1b5f6c108a1e06f6a0f13bbb52ed6847156bd"))])
+      (:commit . "ac3b46232fd7492bb7c78d5008e005a3ea91e57e"))])
  (web-mode
   . [(17 3 24 0 20260623 0) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

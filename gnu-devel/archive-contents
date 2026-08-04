@@ -332,12 +332,12 @@
       (:authors ("Amy Pillow" . "amypillow@lavache.com"))
       (:commit . "08e1c84dee28f87010f50cb4e9a48c0798c8912b"))])
  (breadcrumb
-  . [(1 0 1 0 20260802 16) ((emacs (28 1)) (project (0 9 8)))
+  . [(1 0 1 0 20260804 20) ((emacs (28 1)) (project (0 9 8)))
      "project and imenu-based breadcrumb paths" tar
      ((:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
-      (:commit . "6f11e36b5e334160c6b3ac7272b701d88443a8f5"))])
+      (:commit . "bcf7f1d1c102f8430c017d66aeee5d12e26585a4"))])
  (brief
   . [(5 92 0 20240823 62608) ((nadvice (0 3)) (cl-lib (0 5)))
      "Brief Editor Emulator (Brief Mode)" tar
@@ -1691,7 +1691,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260730 7) ((emacs (28)))
+  . [(9 1 0 0 20260804 10) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1701,7 +1701,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "229f38ee94a8a9112d97564556049f039d684eb2"))])
+      (:commit . "5e7da602760c64b75d62924e19a039ad48991a20"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -1830,14 +1830,14 @@
       (:maintainer "Danny Freeman" . "danny@dfreeman.email")
       (:commit . "b4f59c13acf783513c897a639eb4e35c20b288d9"))])
  (javaimp
-  . [(0 9 2 0 20260715 9) nil
+  . [(0 9 2 0 20260804 10) nil
      "Add and reorder Java import statements in Maven/Gradle projects"
      tar
      ((:keywords "java" "maven" "gradle" "programming")
       (:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm")
       (:authors ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
       (:url . "https://elpa.gnu.org/packages/javaimp.html")
-      (:commit . "7d734bb703ccb47dc77286563a42d9d8a7407fe0"))])
+      (:commit . "b24e7d43f668cf731f57c3e52373180febabec45"))])
  (jgraph-mode
   . [(1 1 0 20221221 80333) ((cl-lib (0 5)))
      "Major mode for Jgraph files" tar
@@ -1897,13 +1897,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 1 0 20260801 0) ((emacs (29 1)))
+  . [(0 4 1 0 20260804 3) ((emacs (29 1)))
      "Described keymaps with popup help" tar
-     ((:url . "https://git.thanosapollo.org/emacs-keymap-popup")
+     ((:url . "https://git.thanosapollo.org/emacs-keymap-popup/")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "b5970885ad19209da1f53bd3ad5872fae2f511ad"))])
+      (:commit . "9650c92bf59cd7fbbca917d86de6b49d45626103"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -2232,12 +2232,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "b295cab07c1932c11dd00f23ba29c1ff0de486ab"))])
  (minuet
-  . [(0 9 0 0 20260802 1) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 9 0 0 20260804 3) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "eb1cae8f8ce8d640a558bdf1a663d195b357b8f4"))])
+      (:commit . "c22e773b6a9dcccdbeb901172d5e347d4c013984"))])
  (mmm-mode
   . [(0 5 11 0 20240222 42825) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
