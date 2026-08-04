@@ -744,13 +744,13 @@
       (:url . "https://elpa.gnu.org/packages/dbus-codegen.html")
       (:commit . "04114e4cbc8f422e6b77cfc202d1109c96316117"))])
  (debbugs
-  . [(0 47 0 20260802 2) ((emacs (26 1)) (soap-client (3 1 5)))
+  . [(0 47 0 20260804 3) ((emacs (26 1)) (soap-client (3 1 5)))
      "SOAP library to access debbugs servers" tar
      ((:keywords "comm" "hypermedia")
       (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
       (:authors ("Michael Albinus" . "michael.albinus@gmx.de"))
       (:url . "https://elpa.gnu.org/packages/debbugs.html")
-      (:commit . "377ee488812d9d7e6f6ff4fdc469c80d42888bc1"))])
+      (:commit . "ab200b3f86f04694c0e4f4b76e74551d2a197a84"))])
  (delight
   . [(1 7 0 20200711 42851) ((cl-lib (0 5)) (nadvice (0 3)))
      "A dimmer switch for your lighter text" tar
@@ -2455,13 +2455,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "0ffd9d6903714c1f6d8fcbb6a20941fb33dd7ae5"))])
  (org
-  . [(10 0 -1 0 20260802 406) ((emacs (28 2)))
+  . [(10 0 -1 0 20260804 407) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "faa57589c7b8f4748e5685cd03c6d79b7c6e05e1"))])
+      (:commit . "437fd1151a75c0ff98d759f67f3dfb0fa82d7c6f"))])
  (org-contacts
   . [(1 3 0 20260221 85240) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -3487,12 +3487,12 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "c5fdc3806b486d9d86a54c50efac3d4a141e789d"))])
  (termint
-  . [(0 2 3 0 20260802 1) ((emacs (29 1)))
+  . [(0 2 3 0 20260804 2) ((emacs (29 1)))
      "Run REPLs in a terminal backend" tar
      ((:url . "https://github.com/milanglacier/termint.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "b640da2a32b0a25cd7cee1ee96a2e35d363ad3fc"))])
+      (:commit . "bf97d0a417902417febc2b6925152dab5610057f"))])
  (test-simple
   . [(1 3 2 0 20260118 164127) ((emacs (24 4)) (compat (30 1 0 1)))
      "Simple Unit Test Framework for Emacs Lisp" tar
