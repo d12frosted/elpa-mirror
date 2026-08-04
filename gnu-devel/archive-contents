@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260802 54) ((emacs (28 1)))
+  . [(14 1 2 0 20260803 55) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "26d901abc0feec6de40b7a9b56430c570bfde569"))])
+      (:commit . "7ef44e5aa33cba6de30eb51ab5b83dcbd3fa956c"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1092,7 +1092,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "5cdb7dd361ad3b5d7310f94375a832cd94c182d8"))])
  (eglot
-  . [(1 24 0 20260801 1)
+  . [(1 24 0 20260802 2)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1101,7 +1101,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "85393f868cd463fede69b671c735cd9bc918be11"))])
+      (:commit . "c5264625b986b192f916e23146cd04115e46f14c"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
