@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260729 44)
+  . [(2 1 0 -4 0 20260805 47)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "6a32711dda5c9d0fadf2e364b595bf658748f790"))])
+      (:commit . "0802064728e4fa4befe5f06869c88c57a700a7dd"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -473,7 +473,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 1 0 20260801 0) ((emacs (29 1)) (compat (31)))
+  . [(4 1 1 0 20260805 1) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -482,7 +482,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "fdf477f99fe1e152f7fbcb098fae1de00fa09efb"))])
+      (:commit . "2970e5d1aa2a6f5c4cb607e0b835b91a6bffec4f"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(39 0 -4 0 20260804 69) ((emacs (28 1)) (seq (2 24)))
+  . [(39 0 -4 0 20260805 77) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "816ea80ca24703c6e3fcbb75ff9eec5a9b0149ef"))])
+      (:commit . "3088cd5464c259f6e8e55cff0ba4cfe6521744fb"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1167,14 +1167,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 12 5 0 20260802 22)
+  . [(0 13 0 0 20260805 0)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "d3b345680e2b763b54be2229a13a7bb8bdc9fb6a"))])
+      (:commit . "25c2b32620ef9d7a3bce98896e5d223d0d539a75"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1621,12 +1621,12 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "ced3f1e4fa9bb8d3d33150f43d0dc357e4917636"))])
  (php-mode
-  . [(1 26 1 0 20260804 86) ((emacs (27 1)))
+  . [(1 26 1 0 20260805 106) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "4bc3f18bc93574f4bd0575fc9642a5e92b60c59a"))])
+      (:commit . "a3658f63d85b1558a9dbdec45f33eed8f0d56041"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar

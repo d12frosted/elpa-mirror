@@ -32,7 +32,13 @@
 ══════════════
 
   ⁃ Emacs 29.1 or later, compiled with dynamic module support
+  ⁃ [fsm] 0.2.0 or later
+  ⁃ [keymap-popup] 0.2 or later
 
+
+[fsm] <https://elpa.gnu.org/packages/fsm.html>
+
+[keymap-popup] <https://elpa.gnu.org/packages/keymap-popup.html>
 
 2.1 OMEMO encryption (optional)
 ───────────────────────────────
