@@ -11,15 +11,12 @@ tested to work with a single frame workflow, but should work with
 multiple frames as well.
 
 While other great packages exist for managing workspaces, such as
-[bufler], [perspective] and [persp-mode], this package is less complex
-than those alternatives, and works entirely based on the built-in (to
-emacs 27+) tab-bar and project packages. If you like simple, this may be
-the workspace package for you. That said, bufler, perspective or
-persp-mode, etc. may better fit your needs.
-
-*NOTE*: version 1.2 renames several functions and streamlines tab and
-project creation. Apologies if this breaks your workflow. Please update
-your configuration accordingly.
+[activities], [bufferlo], [bufler], [perspective] and [persp-mode], this
+package is less complex than most alternatives, and works entirely based
+on the built-in (to emacs 27+) tab-bar and project packages. If you like
+simple, this may be the workspace package for you. That said, one of the
+others may better fit your needs.  [project-x] extends project.el itself
+and pairs well with tabspaces.
 
 
 [tab-bar.el]
@@ -28,11 +25,17 @@ your configuration accordingly.
 [project.el]
 <https://github.com/emacs-mirror/emacs/blob/master/lisp/progmodes/project.el>
 
+[activities] <https://github.com/alphapapa/activities.el>
+
+[bufferlo] <https://github.com/florommel/bufferlo>
+
 [bufler] <https://github.com/alphapapa/bufler.el>
 
 [perspective] <https://github.com/nex3/perspective-el>
 
 [persp-mode] <https://github.com/Bad-ptr/persp-mode.el>
+
+[project-x] <https://github.com/vmargb/project-x>
 
 
 1 Basic Usage
@@ -86,9 +89,25 @@ your configuration accordingly.
 2 Installation
 ══════════════
 
-  You may install this package either from Melpa (`M-x package-install
-  tabspaces RET') or by cloning this repo and adding it to your
-  load-path.
+  Tabspaces is available from [NonGNU ELPA], which is enabled by default
+  in Emacs 28 and later, so `M-x package-install RET tabspaces RET'
+  works out of the box. It is also on [MELPA], or you can clone this
+  repo and add it to your load-path.
+
+  If you have both archives enabled, note that package.el prefers
+  MELPA's date-stamped snapshot versions (for example `20260801.1200')
+  over NonGNU ELPA's release versions (for example `1.10.0'), so MELPA
+  wins by default. To install the reviewed NonGNU ELPA release instead,
+  give it priority:
+
+  ┌────
+  │ (setq package-archive-priorities '(("nongnu" . 10)))
+  └────
+
+
+[NonGNU ELPA] <https://elpa.nongnu.org/nongnu/tabspaces.html>
+
+[MELPA] <https://melpa.org/#/tabspaces>
 
 
 3 Setup
@@ -885,7 +904,67 @@ your configuration accordingly.
   completely.
 
 
-4 Acknowledgments
+4 Alternatives
+══════════════
+
+  Emacs workspace packages differ mainly in what they scope buffers to
+  and in how much machinery they bring along. This sketch describes each
+  package's model; see their manuals for current details.
+
+  [perspective]
+        Named workspaces, each with its own buffer list and window
+        layout. Perspectives live per frame and you switch between them
+        by name.  State can be saved to and restored from disk.
+  [persp-mode]
+        The same named-workspace idea, with perspectives shared across
+        frames and its own session save and restore.
+  [beframe]
+        Scopes buffers to frames, with the frame as the unit of work.
+  [bufferlo]
+        Like tabspaces, attaches local buffer lists to frames and tabs
+        through the built-in buffer-list parameters. It stays agnostic
+        about projects and persists tabs and frames via the bookmark
+        system.
+  [activities]
+        Task-oriented "activities" layered over tab-bar or frames, with
+        suspend and resume across sessions built on bookmarks.
+        Persistence and task switching are its emphasis.
+  [project-x]
+        Extends project.el with per-project session saving, extra root
+        markers, and an optional tab mode. It overlaps with tabspaces'
+        project sessions while staying closer to plain project.el.
+
+  Tabspaces sits at the intersection of tabs and projects: each tab-bar
+  tab holds an isolated buffer list, tabs map to project.el projects
+  (which need not be under version control; any directory project.el
+  recognizes through root markers works), and sessions can be saved
+  globally or per project. If you want one tab per project with the
+  built-in libraries doing the work, that is the gap this package fills.
+
+
+[perspective] <https://github.com/nex3/perspective-el>
+
+[persp-mode] <https://github.com/Bad-ptr/persp-mode.el>
+
+[beframe] <https://github.com/protesilaos/beframe>
+
+[bufferlo] <https://github.com/florommel/bufferlo>
+
+[activities] <https://github.com/alphapapa/activities.el>
+
+[project-x] <https://github.com/vmargb/project-x>
+
+
+5 Development
+═════════════
+
+  I develop tabspaces with help from Claude Code, chiefly for
+  bug-hunting, code review, and the test suite. I review every change
+  before it lands, and AI-assisted commits carry an `Assisted-by'
+  trailer in their commit messages.
+
+
+6 Acknowledgments
 ═════════════════
 
   Code for this package is derived from, or inspired by, a variety of

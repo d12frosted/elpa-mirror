@@ -2,6 +2,8 @@ f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 30+)
 
 Recently changed, added or improved:
+  [08-2026] Additional font-locking for error regions added.  This can be
+            customized by `f90-ts-font-lock-error' and `f90-ts-font-lock-error-face'.
   [08-2026] Smart end completion of coarray "change team ... end team" blocks fixed.
             It was wrongly assumed that the end statement is "end change team".
 
@@ -22,7 +24,7 @@ Recently changed, added or improved:
 
 Features:
   - Almost all statements up to F2023
-  - Syntax highlighting
+  - Syntax highlighting, including syntactically incorrect code
   - Indentation of lines, regions, multiline statements and structure blocks
   - Alignment for multiline statements with rotation and other options
   - Smart end completion
