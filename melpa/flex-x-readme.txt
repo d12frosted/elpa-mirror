@@ -4,6 +4,7 @@ Features:
 
 - Space-separated AND filtering.
 - Sorting by minibuffer history and flex score.
+- A minibuffer indicator for fuzzy or literal matching.
 - Standard completion highlighting, including lazy highlighting.
 - An optional regexp expander for non-ASCII candidates, such as migemo or
   pyim.

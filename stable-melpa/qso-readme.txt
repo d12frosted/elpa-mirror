@@ -31,6 +31,10 @@ Features
   - Also useful for repeating sent information reports in contests
 - Automatically populates BAND based on FREQ for commonly used
   bands, if otherwise left blank or not shown on the form
+- Optional live radio synchronization through Hamlib's rigctld:
+  FREQ, MODE and SUBMODE follow the radio as the operator tunes
+  or changes mode, and the current reading is shown in the header
+  line above the form
 - Option to lookup callsign information and show the information
   (text) in another buffer (requires an internet connection)
 - Option to check the log for duplicates before recording the QSO
@@ -50,3 +54,27 @@ Getting Started
  6) Click "Apply" or "Apply and Save" as appropriate.
  7) Execute M-x qso-log-form to bring up and begin using the log
     entry form.
+
+Reading Frequency and Mode From the Radio (optional)
+
+ 1) Install Hamlib and start its rigctld daemon against your radio,
+    for example:
+
+      rigctld -m 3073 -r /dev/ttyUSB0 -s 38400
+
+    Run "rigctl -l" to find the model number (-m) for your radio.
+    rigctld is used rather than a direct serial connection so that
+    this package can share the radio with other software (WSJT-X,
+    fldigi, and so on) and so that polling never blocks Emacs.
+ 2) Turn on "QSO Hamlib Enable" in the QSO customization group, and
+    set the host and port if rigctld is not on the default
+    localhost:4532.
+ 3) Add FREQ, MODE and (optionally) SUBMODE to the form fields so
+    that the values are visible while logging.  SUBMODE is written
+    to the ADIF record whether or not it appears on the form.
+ 4) Within the form, C-c C-r reads the radio once and C-c C-t turns
+    synchronization on or off.
+
+While synchronization is running, a field is updated only when it is
+empty or still holds the value the radio last put there, so anything
+typed by the operator is never overwritten.
