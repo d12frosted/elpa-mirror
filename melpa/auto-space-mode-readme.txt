@@ -1,6 +1,7 @@
 auto-space-mode automatically adds spaces between CJK characters
 (Chinese, Japanese, Korean) and ASCII words during input.  This behavior
 ONLY occurs during input and does NOT modify other parts of your document.
+File name and path input in the minibuffer is left unchanged.
 
 To use auto-space-mode, add the following to your init file:
 
