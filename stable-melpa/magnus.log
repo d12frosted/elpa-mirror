@@ -2,39 +2,59 @@
  • Building package magnus
 From https://github.com/hrishikeshs/magnus
 Updating /mnt/store/melpa/working/magnus/
-Checking out 0939004f0bf00021246b8fb62fc5e8939b8d98da
+Checking out 18b7424fde49fd0257964065ff07841f6e21dec6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magnus/
-  to /tmp/magnus-fJKd5F/magnus-20260711.945/
+  to /tmp/magnus-rDNegr/magnus-20260807.630/
     lint.el -> lint.el
     magnus-attention.el -> magnus-attention.el
+    magnus-background.el -> magnus-background.el
     magnus-context.el -> magnus-context.el
     magnus-coord.el -> magnus-coord.el
+    magnus-doctor.el -> magnus-doctor.el
+    magnus-environment.el -> magnus-environment.el
+    magnus-headless.el -> magnus-headless.el
     magnus-health.el -> magnus-health.el
     magnus-instances.el -> magnus-instances.el
+    magnus-onboarding.el -> magnus-onboarding.el
     magnus-persistence.el -> magnus-persistence.el
     magnus-process.el -> magnus-process.el
+    magnus-provider-claude.el -> magnus-provider-claude.el
     magnus-provider-codex.el -> magnus-provider-codex.el
     magnus-provider.el -> magnus-provider.el
+    magnus-review-controller.el -> magnus-review-controller.el
+    magnus-review-ui.el -> magnus-review-ui.el
+    magnus-review.el -> magnus-review.el
     magnus-status.el -> magnus-status.el
+    magnus-terminal.el -> magnus-terminal.el
     magnus-trace.el -> magnus-trace.el
     magnus-transient.el -> magnus-transient.el
     magnus.el -> magnus.el
-Created magnus-20260711.945.tar containing:
-  magnus-20260711.945/
-  magnus-20260711.945/lint.el
-  magnus-20260711.945/magnus-attention.el
-  magnus-20260711.945/magnus-context.el
-  magnus-20260711.945/magnus-coord.el
-  magnus-20260711.945/magnus-health.el
-  magnus-20260711.945/magnus-instances.el
-  magnus-20260711.945/magnus-persistence.el
-  magnus-20260711.945/magnus-pkg.el
-  magnus-20260711.945/magnus-process.el
-  magnus-20260711.945/magnus-provider-codex.el
-  magnus-20260711.945/magnus-provider.el
-  magnus-20260711.945/magnus-status.el
-  magnus-20260711.945/magnus-trace.el
-  magnus-20260711.945/magnus-transient.el
-  magnus-20260711.945/magnus.el
-Built magnus in 6.722s, finished at 2026-08-07T05:18:26+0000
+Created magnus-20260807.630.tar containing:
+  magnus-20260807.630/
+  magnus-20260807.630/lint.el
+  magnus-20260807.630/magnus-attention.el
+  magnus-20260807.630/magnus-background.el
+  magnus-20260807.630/magnus-context.el
+  magnus-20260807.630/magnus-coord.el
+  magnus-20260807.630/magnus-doctor.el
+  magnus-20260807.630/magnus-environment.el
+  magnus-20260807.630/magnus-headless.el
+  magnus-20260807.630/magnus-health.el
+  magnus-20260807.630/magnus-instances.el
+  magnus-20260807.630/magnus-onboarding.el
+  magnus-20260807.630/magnus-persistence.el
+  magnus-20260807.630/magnus-pkg.el
+  magnus-20260807.630/magnus-process.el
+  magnus-20260807.630/magnus-provider-claude.el
+  magnus-20260807.630/magnus-provider-codex.el
+  magnus-20260807.630/magnus-provider.el
+  magnus-20260807.630/magnus-review-controller.el
+  magnus-20260807.630/magnus-review-ui.el
+  magnus-20260807.630/magnus-review.el
+  magnus-20260807.630/magnus-status.el
+  magnus-20260807.630/magnus-terminal.el
+  magnus-20260807.630/magnus-trace.el
+  magnus-20260807.630/magnus-transient.el
+  magnus-20260807.630/magnus.el
+Built magnus in 6.302s, finished at 2026-08-07T09:49:34+0000
