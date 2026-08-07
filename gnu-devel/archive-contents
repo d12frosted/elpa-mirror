@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260805 56) ((emacs (28 1)))
+  . [(14 1 2 0 20260806 57) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "2eccc1e51a9f26018e64051aa46fcdfab0d038ab"))])
+      (:commit . "e35e3dbf734e4e7e5b2223ce553b925d143fb621"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1847,13 +1847,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "1bd355ecda036f23468d82b803146d3258a84977"))])
  (jinx
-  . [(2 9 0 20260801 0) ((emacs (29 1)) (compat (31)))
+  . [(2 9 0 20260806 1) ((emacs (29 1)) (compat (31)))
      "Enchanted Spell Checker" tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "270866399c959a583caec0115d7dbc069f01ff29"))])
+      (:commit . "1618bed334898b04f3a16fb6fd9fdf0a250dab2f"))])
  (jit-spell
   . [(0 5 0 20251012 84654) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -1897,13 +1897,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 1 0 20260804 3) ((emacs (29 1)))
+  . [(0 4 1 0 20260806 6) ((emacs (29 1)))
      "Described keymaps with popup help" tar
      ((:url . "https://git.thanosapollo.org/emacs-keymap-popup/")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "9650c92bf59cd7fbbca917d86de6b49d45626103"))])
+      (:commit . "16bd73e754ede80a7949afa37e3baedbf7820b61"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -3630,7 +3630,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 6 0 20260731 0)
+  . [(0 13 7 0 20260806 0)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3640,7 +3640,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "9ba468bcbc7f6061c02a5319ff961f3e5ba6fa13"))])
+      (:commit . "0ec75dcce235f5ab3d39a02b878e6aaa78159b22"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
