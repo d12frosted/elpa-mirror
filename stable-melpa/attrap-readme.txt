@@ -3,8 +3,8 @@ Attrap! provides a command to attempt to fix the flycheck error at point.
 Users: Invoke the command `attrap-attrap' when point is on a
 flycheck or flymake error, and check the results.  (If several
 fixes apply you will be asked which one to apply.) Attrap!
-currently comes with builtin fixers for haskell (GHC messages) and
-elisp.
+currently comes with builtin fixers for haskell (GHC messages),
+elisp, latex and a generic eglot redirect.
 
 Configuration: `attrap-flymake-backends-alist' is an alist from
 flymake backend to attrap fixer.  `attrap-flycheck-checkers-alist'

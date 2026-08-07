@@ -925,13 +925,13 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "090eded80f801cb4f651490cdd9a78910ef63946"))])
  (dired-sidebar
-  . [(2 0 1 0 20260729 1) ((emacs (29 1)) (compat (30 0 0 0)))
+  . [(2 0 1 0 20260806 3) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar
      ((:url . "https://github.com/jojojames/dired-sidebar")
       (:keywords "dired" "files" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "c97d0710450453170b6d850dc94ea80db17a96d7"))])
+      (:commit . "af43b8164191a6afb656a524c48010eb9e372c5d"))])
  (disk-usage
   . [(1 3 3 0 20230920 164444) ((emacs (26 1)))
      "Sort and browse disk usage listings" tar
@@ -1847,13 +1847,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "1bd355ecda036f23468d82b803146d3258a84977"))])
  (jinx
-  . [(2 9 0 20260806 1) ((emacs (29 1)) (compat (31)))
+  . [(2 9 0 20260806 2) ((emacs (29 1)) (compat (31)))
      "Enchanted Spell Checker" tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "1618bed334898b04f3a16fb6fd9fdf0a250dab2f"))])
+      (:commit . "e859caedcaec6c2d6f621dd90c2bcf56d2954c4d"))])
  (jit-spell
   . [(0 5 0 20251012 84654) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -2232,12 +2232,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "b295cab07c1932c11dd00f23ba29c1ff0de486ab"))])
  (minuet
-  . [(0 9 0 0 20260805 4) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 9 0 0 20260807 6) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "225b15311cbee9717d57aae226b29b78a8be1b2d"))])
+      (:commit . "89287bb10ac0b7db6eb7e11bf697f5b479e720e1"))])
  (mmm-mode
   . [(0 5 11 0 20240222 42825) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
