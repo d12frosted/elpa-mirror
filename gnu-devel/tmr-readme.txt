@@ -33,7 +33,8 @@ Table of Contents
 1. COPYING
 2. Installation
 .. 1. GNU ELPA package
-.. 2. Manual installation
+.. 2. Debian package
+.. 3. Manual installation
 3. Sample configuration
 4. How to specify the duration of a new timer
 5. Create a new timer
@@ -98,7 +99,15 @@ Table of Contents
   <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-2.2 Manual installation
+2.2 Debian package
+──────────────────
+
+  As of 2026-08-07, Debian `sid' provides the `elpa-tmr' package:
+  <https://packages.debian.org/sid/elpa-tmr>. It will be part of Debian
+  `forky', once that becomes stable.
+
+
+2.3 Manual installation
 ───────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
@@ -608,6 +617,9 @@ remaining time] See section 7.1
         Christian Tietze, Ed Tavinor, Eugene Mikhaylov, Karol Mróz,
         Lucas Quintana, Mirko Hernandez, Nathan R. DeGruchy, Pavlo
         Lysov, f6p, jpg.
+
+  Packaging
+        Nicholas D Steeves (Debian).
 
 
 15 GNU Free Documentation License
