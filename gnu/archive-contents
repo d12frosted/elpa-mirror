@@ -1619,13 +1619,13 @@
       (:authors ("Durand" . "mmemmew@gmail.com"))
       (:commit . "5a57e52122fe483fa9bd39049c13a25334e408da"))])
  (indent-bars
-  . [(1 0 0) ((emacs (27 1)) (compat (30)))
+  . [(1 0 1) ((emacs (27 1)) (compat (30)))
      "Highlight indentation with bars" tar
      ((:url . "https://github.com/jdtsmith/indent-bars")
       (:keywords "convenience")
       (:maintainer "J.D. Smith" . "jdtsmith+elpa@gmail.com")
       (:authors ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
-      (:commit . "f29ba938453e66de62600edd363e62a8cfe491c3"))])
+      (:commit . "36620c5f3fba2ba8f23d7ef947e0d1d09e412bf5"))])
  (inspector
   . [(0 39) ((emacs (27 1)))
      "Tool for inspection of Emacs Lisp objects" tar

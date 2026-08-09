@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260807 58) ((emacs (28 1)))
+  . [(14 1 2 0 20260808 60) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "a9855646bb960e934f09e92f056912dcc43e516f"))])
+      (:commit . "043c08315f0edb7e588b12fe76b3f91ae968b862"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -273,12 +273,12 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e4d0b4e5823c3137a70ca3f5d367c76bfadd0db0"))])
  (bicep-ts-mode
-  . [(0 1 4 0 20260720 83) nil "tree-sitter support for Bicep" tar
+  . [(0 1 4 0 20260808 85) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
       (:keywords "bicep" "languages" "tree-sitter")
       (:maintainer "Jostein Kjønigsen" . "jostein@kjonigsen.net")
       (:authors ("Jostein Kjønigsen" . "jostein@kjonigsen.net"))
-      (:commit . "f59889ab175bb309b474b82ca2cde4e791fe2677"))])
+      (:commit . "9825f9b4eb68abbd78b3e78a9757f96b751e06c4"))])
  (bind-key
   . [(2 4 1 0 20260408 145602) ((emacs (24 3)))
      "A simple way to manage personal keybindings" tar
@@ -1725,13 +1725,13 @@
       (:authors ("Durand" . "mmemmew@gmail.com"))
       (:commit . "8f221c58a8c694112738e346c630d4d49a41d967"))])
  (indent-bars
-  . [(1 0 0 0 20260418 90339) ((emacs (27 1)) (compat (30)))
+  . [(1 0 1 0 20260808 0) ((emacs (27 1)) (compat (30)))
      "Highlight indentation with bars" tar
      ((:url . "https://github.com/jdtsmith/indent-bars")
       (:keywords "convenience")
       (:maintainer "J.D. Smith" . "jdtsmith+elpa@gmail.com")
       (:authors ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
-      (:commit . "f95fee11d9932cba71d686807025239be0319e91"))])
+      (:commit . "36620c5f3fba2ba8f23d7ef947e0d1d09e412bf5"))])
  (inspector
   . [(0 39 0 20251204 171741) ((emacs (27 1)))
      "Tool for inspection of Emacs Lisp objects" tar
@@ -2455,13 +2455,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "0ffd9d6903714c1f6d8fcbb6a20941fb33dd7ae5"))])
  (org
-  . [(10 0 -1 0 20260804 407) ((emacs (28 2)))
+  . [(10 0 -1 0 20260808 414) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "437fd1151a75c0ff98d759f67f3dfb0fa82d7c6f"))])
+      (:commit . "473544a0c1d6b9a9941f4684f44229bf89a80c3a"))])
  (org-contacts
   . [(1 3 0 20260221 85240) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
