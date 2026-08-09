@@ -1021,7 +1021,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260806 41) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260808 43) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1029,14 +1029,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "a1b40f38d653d2a6ae48eb64d90818b0fcb386e5"))])
+      (:commit . "a985db48bd3f5d4d365bb547b91bfe2ea5d3e85e"))])
  (helm-core
-  . [(4 0 7 0 20260806 41) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260808 43) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "a1b40f38d653d2a6ae48eb64d90818b0fcb386e5"))])
+      (:commit . "a985db48bd3f5d4d365bb547b91bfe2ea5d3e85e"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1832,11 +1832,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "e8551dca4f2009e332285228cb971f8594aca1c7"))])
  (slime
-  . [(2 32 -4 0 20260730 54) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260808 55) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "957f61d8b8b57c1f463b56620a274eb77a09bc16"))])
+      (:commit . "32740772e0b669679df835d38044493b9b090487"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar

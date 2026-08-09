@@ -2,3 +2,34 @@
  • Building package vterm
 From https://github.com/akermu/emacs-libvterm
 Updating /mnt/store/melpa/working/vterm/
+Checking out 70921114908ebb260d6686db8cbe2445a64f90a2
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vterm/
+  to /tmp/vterm-Lhj7Kg/vterm-20260730.1414/
+    CMakeLists.txt -> CMakeLists.txt
+    elisp.c -> elisp.c
+    elisp.h -> elisp.h
+    emacs-module.h -> emacs-module.h
+    etc => etc
+    utf8.c -> utf8.c
+    utf8.h -> utf8.h
+    vterm.el -> vterm.el
+    vterm-module.c -> vterm-module.c
+    vterm-module.h -> vterm-module.h
+Created vterm-20260730.1414.tar containing:
+  vterm-20260730.1414/
+  vterm-20260730.1414/CMakeLists.txt
+  vterm-20260730.1414/elisp.c
+  vterm-20260730.1414/elisp.h
+  vterm-20260730.1414/emacs-module.h
+  vterm-20260730.1414/etc/
+  vterm-20260730.1414/etc/emacs-vterm-bash.sh
+  vterm-20260730.1414/etc/emacs-vterm-zsh.sh
+  vterm-20260730.1414/etc/emacs-vterm.fish
+  vterm-20260730.1414/utf8.c
+  vterm-20260730.1414/utf8.h
+  vterm-20260730.1414/vterm-module.c
+  vterm-20260730.1414/vterm-module.h
+  vterm-20260730.1414/vterm-pkg.el
+  vterm-20260730.1414/vterm.el
+Built vterm in 4.719s, finished at 2026-08-09T08:53:34+0000
