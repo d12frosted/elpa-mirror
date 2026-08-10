@@ -2,11 +2,12 @@
  • Building package php-mode
 From https://github.com/emacs-php/php-mode
 Updating /mnt/store/melpa/working/php-mode/
-Checking out a3658f63d85b1558a9dbdec45f33eed8f0d56041
+Checking out f92c0acf51a36c30b8dd8b7a2b61c2785be45780
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/php-mode/
-  to /tmp/php-mode-uV9OXF/php-mode-20260805.1304/
+  to /tmp/php-mode-g3CkfM/php-mode-20260810.1325/
   ! lisp/php-align.el -> php-align.el
+  ! lisp/php-cc-mode.el -> php-cc-mode.el
   ! lisp/php-complete.el -> php-complete.el
   ! lisp/php-core.el -> php-core.el
   ! lisp/php-defs.el -> php-defs.el
@@ -21,24 +22,27 @@ Copying files (->) and directories (=>)
   ! lisp/php-mode-debug.el -> php-mode-debug.el
   ! lisp/php-mode.el -> php-mode.el
   ! lisp/php-project.el -> php-project.el
+  ! lisp/php-style.el -> php-style.el
   ! lisp/php.el -> php.el
-Created php-mode-20260805.1304.tar containing:
-  php-mode-20260805.1304/
-  php-mode-20260805.1304/php-align.el
-  php-mode-20260805.1304/php-complete.el
-  php-mode-20260805.1304/php-core.el
-  php-mode-20260805.1304/php-defs.el
-  php-mode-20260805.1304/php-face.el
-  php-mode-20260805.1304/php-flymake.el
-  php-mode-20260805.1304/php-format.el
-  php-mode-20260805.1304/php-ide-phpactor.el
-  php-mode-20260805.1304/php-ide.el
-  php-mode-20260805.1304/php-indent.el
-  php-mode-20260805.1304/php-keywords.el
-  php-mode-20260805.1304/php-local-manual.el
-  php-mode-20260805.1304/php-mode-debug.el
-  php-mode-20260805.1304/php-mode-pkg.el
-  php-mode-20260805.1304/php-mode.el
-  php-mode-20260805.1304/php-project.el
-  php-mode-20260805.1304/php.el
-Built php-mode in 5.938s, finished at 2026-08-10T12:14:48+0000
+Created php-mode-20260810.1325.tar containing:
+  php-mode-20260810.1325/
+  php-mode-20260810.1325/php-align.el
+  php-mode-20260810.1325/php-cc-mode.el
+  php-mode-20260810.1325/php-complete.el
+  php-mode-20260810.1325/php-core.el
+  php-mode-20260810.1325/php-defs.el
+  php-mode-20260810.1325/php-face.el
+  php-mode-20260810.1325/php-flymake.el
+  php-mode-20260810.1325/php-format.el
+  php-mode-20260810.1325/php-ide-phpactor.el
+  php-mode-20260810.1325/php-ide.el
+  php-mode-20260810.1325/php-indent.el
+  php-mode-20260810.1325/php-keywords.el
+  php-mode-20260810.1325/php-local-manual.el
+  php-mode-20260810.1325/php-mode-debug.el
+  php-mode-20260810.1325/php-mode-pkg.el
+  php-mode-20260810.1325/php-mode.el
+  php-mode-20260810.1325/php-project.el
+  php-mode-20260810.1325/php-style.el
+  php-mode-20260810.1325/php.el
+Built php-mode in 4.638s, finished at 2026-08-10T17:03:31+0000
