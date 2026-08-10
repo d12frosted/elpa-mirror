@@ -1,3 +1,7 @@
+This package is deprecated: Flycheck's built-in `d-dmd' checker
+covers unittest blocks with
+(setq flycheck-dmd-args '("-unittest" "-main")).
+
 This library adds D unittest support to flycheck.
 
 Requirements:
