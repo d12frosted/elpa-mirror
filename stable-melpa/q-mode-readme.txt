@@ -9,13 +9,19 @@ Some of its major features include:
 
  - interaction with inferior q[con] instance (comint-mode),
 
- - variable and function indexing (imenu),
+ - native Emacs qcon replacement supporting TLS (`q-con'),
+
+ - secure password retrieval (auth-source),
+
+ - named remote connections (q-connections),
+
+ - incremental, project-wide indexing (imenu, xref),
 
  - completion at point (CAPF),
 
  - signature help (eldoc),
 
- - definition/reference navigation (xref),
+ - current function in the mode line (which-function-mode),
 
  - code folding (hideshow).
 
@@ -42,8 +48,33 @@ initialization file.
 
 Use `M-x q' to start an inferior q shell.  Or use `M-x q-qcon' to
 create an inferior qcon shell to communicate with an existing q
-process.  Both can be prefixed with the universal-argument `C-u` to
+process.  Both can be prefixed with the universal-argument `C-u' to
 customize the arguments used to start the processes.
+
+`M-x q-con' talks to an existing q process the same way `q-qcon'
+does, but without executing an external qcon binary: Emacs opens
+the TCP connection itself.  This matters for the password - qcon
+receives it as a literal command-line argument, so it's visible to
+anyone on the machine running `ps'; `q-con' resolves it from
+auth-source only for the instant it takes to write it to the
+socket, and it never becomes a command-line argument at all.
+`q-con' also supports TLS: prefix a host with `tcps://' - in
+`q-connection-host', a `q-connections' entry, or typed ad-hoc at the
+prompt - to connect over TLS instead of plain tcp.
+
+When prompted this way, `q-qcon' and `q-con' both offer named
+connections from `q-connections' as completion candidates,
+alongside the option of typing an ad-hoc "host:port[:user]" string.
+Each entry in `q-connections' is a (NAME HOST PORT USER) list,
+letting you refer to a remote q server by a short name instead of
+retyping its host/port/user every time.  In every case, the
+password itself is never typed or stored in `q-connections' - it's
+always resolved from auth-source.  `.netrc'/`.authinfo' is the
+common case, but auth-source is backend-agnostic: anything
+registered as an `auth-source-backend' (e.g. the system Secret
+Service/macOS Keychain via `auth-source-pass' or `secrets.el', or a
+custom backend you write yourself) is consulted the same way, so
+the password need not live in a plaintext file at all.
 
 The first q[con] session opened becomes the activated buffer.
 To open a new session and send code to the new buffer, it must be
