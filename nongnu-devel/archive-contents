@@ -2238,14 +2238,14 @@
       (:maintainer "Mark A. Hershberger" . "mah@everybody.org")
       (:commit . "68c5b2d1f5b36f1ddbd5434f6a9c4998046e18af"))])
  (yaml-mode
-  . [(0 0 16 0 20260420 21817) ((emacs (24 1)))
+  . [(0 0 16 0 20260809 15) ((emacs (24 1)))
      "Major mode for editing YAML files" tar
      ((:url . "https://github.com/yoshiki/yaml-mode")
       (:keywords "data" "yaml")
       (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
       (:authors ("Yoshiki Kurihara" . "clouder@gmail.com")
 		("Marshall T. Vandegrift" . "llasram@gmail.com"))
-      (:commit . "96ef0201101a7cd591febd5886633154dae8834c"))])
+      (:commit . "5d7347519c94eac1c9383a3b9bebe218d3e43318"))])
  (yasnippet-snippets
   . [(1 0 0 20251215 123158) ((yasnippet (0 8 0)))
      "Collection of yasnippet snippets" tar

@@ -1691,7 +1691,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260804 10) ((emacs (28)))
+  . [(9 1 0 0 20260809 11) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1701,7 +1701,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "5e7da602760c64b75d62924e19a039ad48991a20"))])
+      (:commit . "fa9bc5a5ba75006c8a2fb61802c0af28833bc435"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2455,13 +2455,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "0ffd9d6903714c1f6d8fcbb6a20941fb33dd7ae5"))])
  (org
-  . [(10 0 -1 0 20260808 414) ((emacs (28 2)))
+  . [(10 0 -1 0 20260809 415) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "473544a0c1d6b9a9941f4684f44229bf89a80c3a"))])
+      (:commit . "e186e41778a46b8d12015db5a1c79aab3ee33565"))])
  (org-contacts
   . [(1 3 0 20260221 85240) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
