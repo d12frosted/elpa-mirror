@@ -89,7 +89,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   PostgreSQL. For example, it does not support `CREATE FUNCTION`, `REINDEX`, `DO`, `now` as time,
   does not parse timestamps that are accepted by PostgreSQL, casting `NaN` to numerical types,
   prepared statements with runtime-resolved column types, the UUID type, hex escaping, `NOCYCLE` in
-  SQL sequences, casting strings to arrays. Last tested 2025-06 with version 1.1.0 (these
+  SQL sequences, casting strings to arrays. Last tested 2025-08 with version 1.2.0 (these
   limitations are also present in the hosted motherduck.com instance).
 
 - The [Microsoft DocumentDB](https://github.com/microsoft/documentdb) extension for MongoDB-like
@@ -143,7 +143,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 
 - The [RisingWave](https://github.com/risingwavelabs/risingwave) event streaming database (Apache
   license) is mostly working. It does not support `GENERATED ALWAYS AS IDENTITY` or `SERIAL`
-  columns, nor `VACUUM ANALYZE`. Last tested 2026-07 with v3.0.1.
+  columns, nor `VACUUM ANALYZE`. Last tested 2026-08 with v3.0.2.
 
 - The [CrateDB](https://crate.io/) distributed database (Apache licence). CrateDB does not support
   rows (e.g. `SELECT (1,2)`), does not support the `time`, `varbit`, `bytea`, `jsonb` and `hstore`
@@ -162,30 +162,33 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 
 - The [Apache Datafusion](https://datafusion.apache.org/) query engine, designed primarily for
   incremental processing applications (“streaming”), has quite good PostgreSQL compatibility (using
-  the pgwire library). It does not support the `timetz` datatype, nor `TRUNCATE TABLE`, nor
-  `UPDATE`, nor `CREATE INDEX` statements. Last tested 2026-07 with version 54.0.
+  the pgwire library). It does not support the `timetz`, `bit` and `uuid` datatypes, nor `TRUNCATE
+  TABLE`, nor `UPDATE`, nor `CREATE INDEX` statements, nor collation. Last tested 2026-08 with
+  version 54.1.
 
 - The [Picodata](https://git.picodata.io/core/picodata) distributed in-memory shard-per-CPU-core
   database engine (BSD licence) has reasonably good PostgreSQL compatibility and works well with
   pg-el. Some SQL parsing incompatibilities, tables must have a primary key, no VACCUM, no SERIAL,
   no arrays, no support for the PostgreSQL system tables (pg-el includes workarounds for this). Last
-  tested 2026-07 with version 26.3.
+  tested 2026-08 with version 26.3.
 
 - The [SereneDB](https://github.com/serenedb/serenedb) distributed real-time search-oriented
   database (Apache licence) has fairly good PostgreSQL compatibility. It uses the PostgreSQL SQL
   parser, but a fully reimplemented backend. No support for the `char` type, no SERIAL, no support
   for `DROP SEQUENCE`, no hstore, no XML functionality, some SQL incompatibilities. Last tested
-  2026-07 with version 26.07.
+  2026-08 with version 26.07.
 
 - The [Doltgres](https://github.com/dolthub/doltgresql) version-controlled database (Apache
-  licensed) has rapidly improving PostgreSQL compatibility. It does not implement ownership-related
-  system tables, nor int4range functions. It works well, with these limitations, with pg-el. Last
-  tested 2026-07 with a version that is reported as 15.5.
+  licensed) has rapidly improving PostgreSQL compatibility. It does not implement PREPARE, DO,
+  collation, cursors, maxval on sequences, cascaded deletions, reindexing indexes, non-UTF8
+  client-encodings, comments on tables, ownership-related system tables, paramter change
+  notifications, int4range functions, functions such as `to_json` and `array_remove`. It works well,
+  with these limitations, with pg-el. Last tested 2026-08 with a version that is reported as 15.5.
 
 - The [Materialize](https://materialize.com/) operational database (a proprietary differential
   dataflow database) has many limitations in its PostgreSQL compatibility: no support for primary
   keys, unique constraints, check constraints, for the `bit` type for example. It works with these
-  limitations with pg-el (last tested 2026-07 with Materialize v26.33).
+  limitations with pg-el (last tested 2026-08 with Materialize v26.35).
 
 - The [CedarDB](https://cedardb.com/) database spun off from the Umbra research database developed
   at the University of Munich is fairly PostgreSQL compatible and works well with pg-el. Last tested
@@ -209,12 +212,6 @@ The following PostgreSQL-compatible databases or extensions have been tested:
   support the `CHR` and `MD5` functions, row expressions, and `WHERE` clauses without a `FROM`
   clause.
 
-- The [Vertica](https://www.vertica.com/) distributed database (a propriety column-oriented database
-  targeting analytics workloads). Its PostgreSQL compatibility is limited: it does not support
-  certain datatypes such as `int2`, `int4` and `text`, the parsing of `timetz` strings is not
-  compatible with PostgreSQL, the serialization of arrays is not PostgreSQL-compatible. Last tested
-  2025-07 with the community edition, version 25.3.
-
 - [YottaDB Octo](https://gitlab.com/YottaDB/DBMS/YDBOcto), which is built on the YottaDB key-value
   store (which is historically based on the MUMPS programming language). GNU AGPL v3 licence. There
   are many limitations in the PostgreSQL compatibility: no user metainformation, no cursors, no
@@ -225,7 +222,7 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 - The [GreptimeDB](https://github.com/GrepTimeTeam/greptimedb) time series database built on the
   DataFusion query engine (Apache license) implements quite a lot of the PostgreSQL wire protocol,
   but has more restrictions on the use of identifiers than PostgreSQL (for example, `id` is not
-  accepted as a column name) and does not support data types such as `bit`. Last tested v1.1.3
+  accepted as a column name) and does not support data types such as `bit`. Last tested v1.1.4
   in 2026-07.
 
 - The [H2](https://github.com/h2database/h2database) embeddable database implements some aspects of
@@ -237,6 +234,10 @@ The following PostgreSQL-compatible databases or extensions have been tested:
 - The [XTDB](https://github.com/xtdb/xtdb) immutable database (MPL-2 license) can be queried using
   SQL over the PostgreSQL wire protocol. There are currently strong limitations on the DDL syntax
   accepted. Last tested v2.1.0 in 2026-07.
+
+- The [Datahike](https://datahike.io/) immutable database (Eclipe Public Licence) with the
+  [pg-datahike adapter](https://github.com/replikativ/pg-datahike/) works well. Last tested v0.1.58
+  of the pg-datahike jar in 2026-08.
 
 - Hosted PostgreSQL services that have been tested: as of 2025-06 render.com is running a Debian
   build of PostgreSQL 16.8 and works fine (requires TLS connection), as of 2024-12

@@ -728,13 +728,13 @@
       (:url . "https://elpa.gnu.org/packages/darkroom.html")
       (:commit . "4496945487130ae1123a9f17b40674ec24c54e8f"))])
  (dash
-  . [(2 20 0 0 20260221 134621) ((emacs (24)))
+  . [(2 20 0 0 20260810 9) ((emacs (24)))
      "A modern list library for Emacs" tar
      ((:url . "https://github.com/magnars/dash.el")
       (:keywords "extensions" "lisp")
       (:maintainer "Basil L. Contovounesios" . "basil@contovou.net")
       (:authors ("Magnar Sveen" . "magnars@gmail.com"))
-      (:commit . "d3a84021dbe48dba63b52ef7665651e0cf02e915"))])
+      (:commit . "d746dd9edcb67a108818beb0cdc78dc1cb466832"))])
  (dbus-codegen
   . [(0 1 0 20220306 62546) ((cl-lib (0 5)))
      "Lisp code generation for D-Bus." tar
@@ -760,12 +760,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20260729 11) ((emacs (28 1)))
+  . [(4 2 3 0 20260810 15) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "3718a603056985c0832705d4f41eea944ed5031e"))])
+      (:commit . "9ae9d0e1ea30b4fcc1700caafbd55a1ff08ad7b6"))])
  (denote-journal
   . [(0 3 0 0 20260520 123338) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar

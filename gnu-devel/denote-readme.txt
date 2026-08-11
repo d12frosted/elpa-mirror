@@ -7996,14 +7996,14 @@ section 21.13
         Cassou, Eduardo Grajeda, Elias Storms, Eshel Yaron, Florian,
         Glenna D., Graham Marlow, Hilde Rhyne, Ivan Sokolov, Jack Baty,
         Jakub Szczerbowski, James Kalyan, Jean-Charles Bagneris,
-        Jean-Philippe Gagné Guay, Jianwei Hou, Joseph Turner, Jürgen
-        Hötzel, Kaushal Modi, Kai von Fintel, Kierin Bell, Kostas
+        Jean-Philippe Gagné Guay, Jeff Valk, Jianwei Hou, Joseph Turner,
+        Jürgen Hötzel, Kaushal Modi, Kai von Fintel, Kierin Bell, Kostas
         Andreadis, Kristoffer Balintona, Kyle Meyer, Laurent Gatto,
         Lucas Quintana, Maikol Solis, Marc Fargas, Marco Baringer,
         Matthew Batson, Matthew Lemon, Matthieu Muller, Matto Fransen,
         Noboru Ota (nobiot), Norwid Behrnd, Octavian, Pavlo V. Lysov,
         Peter Prevos, Philip Kaludercic, Ryota, Samuel W. Flint, Quiliro
-        Ordóñez, Stephen R. Kifer, Stefan Monnier, Stefan Thesing,
+        Ordóñez, Stephen R.  Kifer, Stefan Monnier, Stefan Thesing,
         Thibaut Benjamin, Tobias Lidman-Strauss, Tomasz Hołubowicz,
         TomoeMami , Vedang Manerikar, Wesley Harvey, Yann Dutrieux,
         Zhenxu Xu, alvmts, arsaber101, bplubell, bryanrinders,

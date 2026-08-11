@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(39 0 -4 0 20260810 102) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260810 0) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "231d48d526b8f2e0b9ad28e5af79f55e5058556a"))])
+      (:commit . "e6fe520a21df70854055468a77c2dfe8adf02297"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1424,14 +1424,14 @@
       (:url . "https://elpa.nongnu.org/nongnu/nginx-mode.html")
       (:commit . "c4ac5de975d65c84893a130a470af32a48b0b66c"))])
  (nix-mode
-  . [(1 5 0 0 20260809 57)
+  . [(1 5 0 0 20260810 58)
      ((emacs (27 1)) (magit-section (0)) (reformatter (0))
       (transient (0 3)))
      "Major mode for editing .nix files" tar
      ((:url . "https://github.com/NixOS/nix-mode")
       (:keywords "nix" "languages" "tools" "unix")
       (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
-      (:commit . "4b66989ba2ac67b9f9dae7f89afe9fdc056c01fe"))])
+      (:commit . "2c77e7e0b7540efbb20ccaee3557ef90a5dc77f0"))])
  (nov
   . [(0 5 0 0 20251213 150137) ((esxml (0 3 6)) (emacs (25 1)))
      "Featureful EPUB reader mode" tar
@@ -1612,21 +1612,21 @@
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
       (:commit . "365f88238f46f9b1425685562105881800f10386"))])
  (pg
-  . [(0 68 0 20260727 2) ((emacs (28 1)) (peg (1 0 1)))
+  . [(0 68 0 20260810 23) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
      ((:url . "https://github.com/emarsden/pg-el")
       (:keywords "data" "comm" "database" "postgresql")
       (:maintainer "Eric Marsden"
 		   . "eric.marsden@risk-engineering.org")
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-      (:commit . "ced3f1e4fa9bb8d3d33150f43d0dc357e4917636"))])
+      (:commit . "53299f3484304a95eccb63f57269b730b09dea5b"))])
  (php-mode
-  . [(1 26 1 0 20260805 106) ((emacs (27 1)))
+  . [(1 26 1 0 20260810 112) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "a3658f63d85b1558a9dbdec45f33eed8f0d56041"))])
+      (:commit . "fdcba033490bf974c465f09f1590277772d46eb0"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1652,13 +1652,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 4 0 -4 0 20260810 39) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260810 0) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "4cc310b2d02332a61965eaaef11519a4603b7987"))])
+      (:commit . "f954c2f0f347500e1b5b482d9492075447de5256"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

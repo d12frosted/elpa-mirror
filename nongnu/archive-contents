@@ -699,7 +699,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
  (flycheck
-  . [(38 3) ((emacs (28 1)) (seq (2 24))) "On-the-fly syntax checking"
+  . [(39 0) ((emacs (28 1)) (seq (2 24))) "On-the-fly syntax checking"
      tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -708,7 +708,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "4414c198f1efe1015c7523119c7c29f152f7243d"))])
+      (:commit . "65b93d8e9f406ce276824675101cd20d8e1f2960"))])
  (flymake-guile
   . [(0 5) ((emacs (26 1)) (flymake (1 2 1))) "Guile flymake backend"
      tar
@@ -1566,13 +1566,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "176f9fb0c29ac60898e1e938458f26205511cc23"))])
  (projectile
-  . [(3 3 0) ((emacs (28 1)) (compat (30)))
+  . [(3 4 0) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "d1cc09ba9beced496b6aca70e6a8a1da07917c16"))])
+      (:commit . "b60bb09927a6c78793dc96a2da3c5a8d4cec3062"))])
  (proof-general
   . [(4 5) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

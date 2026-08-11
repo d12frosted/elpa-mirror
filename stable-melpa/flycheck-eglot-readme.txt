@@ -1,3 +1,7 @@
+This package is deprecated for Flycheck 38 and newer, which ship a
+built-in Eglot bridge under the same mode names; running both makes
+them clash.  See the README for migration.
+
 A simple "glue" minor mode that allows Flycheck and Eglot to work together.
 
 You just need to enable `global-flycheck-eglot-mode'.
