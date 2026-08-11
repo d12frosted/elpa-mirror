@@ -1,33 +1,28 @@
 
-This package brings soccer (football) fixtures, results, table in your Emacs.
-Currently it works for
+This package brings soccer (football) fixtures, results and league
+tables into Emacs, for every competition the source site covers.
 
-1. Premier League (England)
-2. La Liga (Spain)
-3. Ligue 1 (France)
+The entry point is `soccer', a transient menu from which every view is
+reachable.  Views open in a `soccer-mode' buffer which has its own
+transient bound to "?", so a league table is one keystroke away from the
+fixtures of the club under point.
 
-Other leagues could be easily included and would be in future.
+Kick off times are absolute instants and are shown in your own time
+zone automatically; set `soccer-timezone' to override that.
 
-To get the time of kick off in your local time, you may want to set the
-following value accordingly
+The individual commands are still available directly:
 
-(setq soccer-time-local-time-utc-offset "+0530") ;; this should be changed to your local one
-
-Common Functions:
-
-This package comes with handy interactive functions to get useful information in your minibuffer.
-To invoke a function use "M-x Function" where Function could be any of the following functions
-
-Functions	                Actions
-soccer-fixtures-next	Fixture for the Next match
-soccer-fixtures-next-5	Fixtures of the Next 5 matches
-soccer-fixtures-full-in-org	Full fixtures saved in org file
+Function                     Action
+soccer                       Transient menu with everything
+soccer-fixtures-next         Fixture for the next match
+soccer-fixtures-next-5       Fixtures of the next 5 matches
+soccer-fixtures-full-in-org  Full fixtures saved in an org file
 soccer-fixtures-all-clubs    Fixtures for all clubs in a league
-soccer-results-last	        Result of the last match
-soccer-results-last-5	Results of the last 5 matches
-soccer-results-full-in-org	Full list of results in org file
+soccer-results-last          Result of the last match
+soccer-results-last-5        Results of the last 5 matches
+soccer-results-full-in-org   Full list of results in an org file
 soccer-results-all-clubs     Results for all clubs in a league
-soccer-table                 Full Ranking table
+soccer-table                 Full ranking table
 soccer-table-top-4           Ranking table with top 4 teams
 soccer-table-bottom-4        Ranking table with bottom 4 teams
 soccer-scorecard             Scorecard of a match
