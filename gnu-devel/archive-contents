@@ -869,13 +869,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl
-  . [(1 10 0 0 20260723 188) ((cl-lib (0 2)) (emacs (27 1)))
+  . [(1 10 0 0 20260811 192) ((cl-lib (0 2)) (emacs (27 1)))
      "Highlight uncommitted changes using VC" tar
      ((:url . "https://github.com/dgutov/diff-hl")
       (:keywords "vc" "diff")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
-      (:commit . "91fcd4fa42fef895a754e80c4435ae6314be7822"))])
+      (:commit . "6f1df2b83d1140a2938409b35de7f4c9c7b1defd"))])
  (diffview
   . [(1 0 0 20230224 111651) nil "View diffs in side-by-side format"
      tar
@@ -2254,13 +2254,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260730 29) ((emacs (28 1)))
+  . [(5 3 0 0 20260811 30) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "75aa3fa79efd04ddf7980a1d3ec0cef6e4f4af90"))])
+      (:commit . "52d4665bc5d5505e9761fe6068ab5426ad70a52a"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
@@ -2735,12 +2735,11 @@
       (:authors ("Jose E. Marchesi" . "jemarch@gnu.org"))
       (:commit . "1268958f1d9eb2a21ab548101b3bdf0dcc348253"))])
  (poke-mode
-  . [(3 1 0 20231014 222558) nil
-     "Major mode for editing Poke programs" tar
+  . [(3 1 0 20260809 1) nil "Major mode for editing Poke programs" tar
      ((:maintainer "Jose E. Marchesi" . "jemarch@gnu.org")
       (:authors ("Aurelien Aptel" . "aaptel@suse.com"))
       (:url . "https://elpa.gnu.org/packages/poke-mode.html")
-      (:commit . "340bb45867cce7f86d09a00b809c2c2078302a9e"))])
+      (:commit . "c81e1985cc0c94ee6a98300179976d72370f4b4e"))])
  (poker
   . [(0 2 0 20221221 81510) nil "Texas hold 'em poker" tar
      ((:keywords "games")

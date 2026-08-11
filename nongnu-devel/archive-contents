@@ -805,13 +805,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser
-  . [(0 33 1 0 20260727 7) ((emacs (27 1)) (project (0 8 1)))
+  . [(0 33 2 0 20260810 0) ((emacs (27 1)) (project (0 8 1)))
      "GNU Emacs and Scheme talk to each other" tar
      ((:url . "https://gitlab.com/emacs-geiser/")
       (:keywords "languages" "scheme" "geiser")
       (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
       (:authors ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-      (:commit . "417a5c35b0f6e35a322e733df49343d494cf0a54"))])
+      (:commit . "efcf1939fd839e9ea22d68ff0ebbd8ca2e1b71e1"))])
  (geiser-chez
   . [(0 18 0 20260727 5) ((emacs (26 1)) (geiser (0 19)))
      "Chez and Geiser talk to each other" tar
@@ -1021,7 +1021,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260808 43) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260811 46) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1029,14 +1029,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "a985db48bd3f5d4d365bb547b91bfe2ea5d3e85e"))])
+      (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (helm-core
-  . [(4 0 7 0 20260808 43) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260811 46) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "a985db48bd3f5d4d365bb547b91bfe2ea5d3e85e"))])
+      (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1627,6 +1627,14 @@
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
       (:commit . "fdcba033490bf974c465f09f1590277772d46eb0"))])
+ (pinyin-isearch
+  . [(1 7 0 0 20260718 9) ((emacs (28 1))) "Pinyin mode for isearch"
+     tar
+     ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
+      (:keywords "chinese" "isearch" "matching" "convenience")
+      (:maintainer "Anoncheg" . "vitalij@gmx.com")
+      (:authors ("Anoncheg" . "vitalij@gmx.com"))
+      (:commit . "9834cb04fb59d8cb600059f20bf297522c764deb"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1652,13 +1660,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 5 0 -4 0 20260810 0) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260811 3) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "f954c2f0f347500e1b5b482d9492075447de5256"))])
+      (:commit . "fcd8f2b7d9e67623bfcdcb3ab874d31016badeae"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

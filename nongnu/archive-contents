@@ -768,13 +768,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser
-  . [(0 33 1) ((emacs (27 1)) (project (0 8 1)))
+  . [(0 33 2) ((emacs (27 1)) (project (0 8 1)))
      "GNU Emacs and Scheme talk to each other" tar
      ((:url . "https://gitlab.com/emacs-geiser/")
       (:keywords "languages" "scheme" "geiser")
       (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
       (:authors ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-      (:commit . "84c25e9683a18d00387b6c16b0cee66269536c3c"))])
+      (:commit . "efcf1939fd839e9ea22d68ff0ebbd8ca2e1b71e1"))])
  (geiser-chez
   . [(0 18) ((emacs (26 1)) (geiser (0 19)))
      "Chez and Geiser talk to each other" tar
@@ -1543,6 +1543,11 @@
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
       (:commit . "9a2fe1c6c34f4f22f11efff0caf1d4e7c8ea233a"))])
+ (pinyin-isearch
+  . [(1 7 0) ((emacs (28 1))) "Pinyin mode for isearch" tar
+     ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
+      (:keywords "chinese" "pinyin" "matching" "convenience")
+      (:commit . "9e9b97ad9c1b927e462cd012a27351f8d595baa8"))])
  (popon
   . [(0 13) ((emacs (25 1))) "\"Pop\" floating text \"on\" a window"
      tar
