@@ -546,7 +546,7 @@
       (:authors ("Ingo Lohmar" . "i.lohmar@gmail.com"))
       (:commit . "120e982f47e01945c044e0762ba376741c41b76c"))])
  (compat
-  . [(31 0 0 2 0 20260716 2) ((emacs (25 1)))
+  . [(31 0 0 2 0 20260812 3) ((emacs (25 1)))
      "Emacs Lisp Compatibility Library" tar
      ((:url . "https://github.com/emacs-compat/compat")
       (:keywords "lisp" "maint")
@@ -554,7 +554,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Philip Kaludercic" . "philipk@posteo.net")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "1f3d7596173cf2851d3c4181b15d6c3573a38252"))])
+      (:commit . "ad2720457067b72859ba1247f6fdb3361b204bc6"))])
  (cond-star
   . [(1 0 0 20260523 114724) ((emacs (24 3)))
      "Extended form of `cond' construct" tar
@@ -1092,7 +1092,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "5cdb7dd361ad3b5d7310f94375a832cd94c182d8"))])
  (eglot
-  . [(1 24 0 20260807 3)
+  . [(1 24 0 20260811 4)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1101,7 +1101,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "899bd2bedbd9cbcd0305e7fcb3ea987b3e5fa1d2"))])
+      (:commit . "108d066bdd1505268f040d4d0940c7b40ac6e7eb"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -1251,7 +1251,7 @@
       (:authors ("Alexander L. Belikoff" . "alexander@belikoff.net"))
       (:commit . "899bd2bedbd9cbcd0305e7fcb3ea987b3e5fa1d2"))])
  (ergoemacs-mode
-  . [(5 16 10 12 0 20240828 210215)
+  . [(5 16 10 12 0 20260811 462)
      ((emacs (24 1)) (cl-lib (0 5)) (nadvice (0 4)))
      "Emacs mode based on common modern interface and ergonomics." tar
      ((:url . "https://github.com/ergoemacs/ergoemacs-mode")
@@ -1262,7 +1262,7 @@
 		("Matthew L. Fidler" . "matthew.fidler@gmail.com")
 		("Kim F. Storm -- CUA approach for C-x and C-c"
 		 . "storm@cua.dk"))
-      (:commit . "97d856bbf081de1d387ec646d06aac7bcce3f675"))])
+      (:commit . "5e83523752a47231af64c352fe4af57ad44dc456"))])
  (ess
   . [(26 5 0 0 20260723 1) ((emacs (25 1))) "Emacs Speaks Statistics"
      tar
@@ -1369,14 +1369,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 5 0 20260702 3)
+  . [(1 4 5 0 20260811 6)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "220bd832e1d8f9eb46ef5da6a24a3881916fe20c"))])
+      (:commit . "108d066bdd1505268f040d4d0940c7b40ac6e7eb"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1691,7 +1691,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260811 13) ((emacs (28)))
+  . [(9 1 0 0 20260812 14) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1701,7 +1701,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "ca94a43632ba60074601f46682d8faf1007f7c1d"))])
+      (:commit . "38d4dbf41e52cfd3e5213de6133232b143df32e4"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
