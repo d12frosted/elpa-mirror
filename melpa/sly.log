@@ -2,40 +2,99 @@
  • Building package sly
 From https://github.com/joaotavora/sly
 Updating /mnt/store/melpa/working/sly/
-Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://github.com/joaotavora/sly/': server verification failed: certificate signer not trusted. (CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none)
-
-
-Error: package-build-error "Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128"
-  signal(package-build-error "Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128")
-  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
-  package-build--error(#<package-github-recipe package-github-recipe-103077e3375b> "%s" "Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-github-recipe package-github-recipe-103077e3375b> "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  #f(lambda (rcp) [t] (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-github-recipe package-github-recipe-103077e3375b>)
-  apply(#f(lambda (rcp) [t] (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-github-recipe package-github-recipe-103077e3375b> nil)
-  package-build--fetch(#<package-github-recipe package-github-recipe-103077e3375b>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x133 (car tail))) (progn (ignore (consp x133)) (let* ((x134 (car-safe x133)) (x135 (cdr-safe x133))) (let ((file x134) (attrs x135)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "sly")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x133 (car tail))) (progn (ignore (consp x133)) (let* ((x134 (car-safe x133)) (x135 (cdr-safe x133))) (let ((file x134) (attrs x135)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "sly")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Package build error
-Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x133 (car tail))) (progn (ignore (consp x133)) (let* ((x134 (car-safe x133)) (x135 (cdr-safe x133))) (let ((file x134) (attrs x135)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "sly")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("sly")
-  eval((package-build-archive "sly") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"sly\")"))
-  command-line()
-  normal-top-level()
+Checking out 759c0ff8741ced8793257f2b7ed95a23e13e1407
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sly/
+  to /tmp/sly-UoTNdJ/sly-20260402.2249/
+    sly.el -> sly.el
+  ! doc/contributors.texi -> contributors.texi
+  ! doc/sly.texi -> sly.texi
+    lib => lib
+    slynk => slynk
+    contrib => contrib
+  ! doc/images => images
+Generating contributors.info
+Generating sly.info
+Created sly-20260402.2249.tar containing:
+  sly-20260402.2249/
+  sly-20260402.2249/contrib/
+  sly-20260402.2249/contrib/sly-autodoc.el
+  sly-20260402.2249/contrib/sly-fancy-inspector.el
+  sly-20260402.2249/contrib/sly-fancy-trace.el
+  sly-20260402.2249/contrib/sly-fancy.el
+  sly-20260402.2249/contrib/sly-fontifying-fu.el
+  sly-20260402.2249/contrib/sly-indentation.el
+  sly-20260402.2249/contrib/sly-mrepl.el
+  sly-20260402.2249/contrib/sly-package-fu.el
+  sly-20260402.2249/contrib/sly-profiler.el
+  sly-20260402.2249/contrib/sly-retro.el
+  sly-20260402.2249/contrib/sly-scratch.el
+  sly-20260402.2249/contrib/sly-stickers.el
+  sly-20260402.2249/contrib/sly-trace-dialog.el
+  sly-20260402.2249/contrib/sly-tramp.el
+  sly-20260402.2249/contrib/slynk-arglists.lisp
+  sly-20260402.2249/contrib/slynk-fancy-inspector.lisp
+  sly-20260402.2249/contrib/slynk-indentation.lisp
+  sly-20260402.2249/contrib/slynk-mrepl.lisp
+  sly-20260402.2249/contrib/slynk-package-fu.lisp
+  sly-20260402.2249/contrib/slynk-profiler.lisp
+  sly-20260402.2249/contrib/slynk-retro.lisp
+  sly-20260402.2249/contrib/slynk-stickers.lisp
+  sly-20260402.2249/contrib/slynk-trace-dialog.lisp
+  sly-20260402.2249/contrib/sylvesters.txt
+  sly-20260402.2249/contributors.info
+  sly-20260402.2249/dir
+  sly-20260402.2249/images/
+  sly-20260402.2249/images/stickers-1-placed-stickers.png
+  sly-20260402.2249/images/stickers-2-armed-stickers.png
+  sly-20260402.2249/images/stickers-3-replay-stickers.png
+  sly-20260402.2249/images/stickers-4-breaking-stickers.png
+  sly-20260402.2249/images/stickers-5-fetch-recordings.png
+  sly-20260402.2249/images/tutorial-1.png
+  sly-20260402.2249/images/tutorial-2.png
+  sly-20260402.2249/images/tutorial-3.png
+  sly-20260402.2249/images/tutorial-4.png
+  sly-20260402.2249/images/tutorial-5.png
+  sly-20260402.2249/images/tutorial-6.png
+  sly-20260402.2249/lib/
+  sly-20260402.2249/lib/.nosearch
+  sly-20260402.2249/lib/hyperspec.el
+  sly-20260402.2249/lib/sly-buttons.el
+  sly-20260402.2249/lib/sly-cl-indent.el
+  sly-20260402.2249/lib/sly-common.el
+  sly-20260402.2249/lib/sly-completion.el
+  sly-20260402.2249/lib/sly-messages.el
+  sly-20260402.2249/lib/sly-parse.el
+  sly-20260402.2249/lib/sly-tests.el
+  sly-20260402.2249/sly-pkg.el
+  sly-20260402.2249/sly.el
+  sly-20260402.2249/sly.info
+  sly-20260402.2249/slynk/
+  sly-20260402.2249/slynk/backend/
+  sly-20260402.2249/slynk/backend/abcl.lisp
+  sly-20260402.2249/slynk/backend/allegro.lisp
+  sly-20260402.2249/slynk/backend/ccl.lisp
+  sly-20260402.2249/slynk/backend/clasp.lisp
+  sly-20260402.2249/slynk/backend/clisp.lisp
+  sly-20260402.2249/slynk/backend/cmucl.lisp
+  sly-20260402.2249/slynk/backend/corman.lisp
+  sly-20260402.2249/slynk/backend/ecl.lisp
+  sly-20260402.2249/slynk/backend/lispworks.lisp
+  sly-20260402.2249/slynk/backend/mkcl.lisp
+  sly-20260402.2249/slynk/backend/sbcl.lisp
+  sly-20260402.2249/slynk/backend/scl.lisp
+  sly-20260402.2249/slynk/metering.lisp
+  sly-20260402.2249/slynk/slynk-apropos.lisp
+  sly-20260402.2249/slynk/slynk-backend.lisp
+  sly-20260402.2249/slynk/slynk-completion.lisp
+  sly-20260402.2249/slynk/slynk-gray.lisp
+  sly-20260402.2249/slynk/slynk-loader.lisp
+  sly-20260402.2249/slynk/slynk-match.lisp
+  sly-20260402.2249/slynk/slynk-rpc.lisp
+  sly-20260402.2249/slynk/slynk-source-file-cache.lisp
+  sly-20260402.2249/slynk/slynk-source-path-parser.lisp
+  sly-20260402.2249/slynk/slynk.asd
+  sly-20260402.2249/slynk/slynk.lisp
+  sly-20260402.2249/slynk/start-slynk.lisp
+  sly-20260402.2249/slynk/xref.lisp
+Built sly in 16.948s, finished at 2026-08-12T11:33:09+0000
