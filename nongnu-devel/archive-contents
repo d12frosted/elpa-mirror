@@ -473,7 +473,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 1 0 20260805 1) ((emacs (29 1)) (compat (31)))
+  . [(4 1 1 0 20260811 2) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -482,7 +482,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "2970e5d1aa2a6f5c4cb607e0b835b91a6bffec4f"))])
+      (:commit . "8501c40269816301e0463f23b70ad2ab5329e5de"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -732,7 +732,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(40 0 -4 0 20260810 0) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260811 5) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +741,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "e6fe520a21df70854055468a77c2dfe8adf02297"))])
+      (:commit . "d7860ed0c116f1660b43fb0c4d8f37009d3f08fc"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -918,13 +918,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "f31dbe60478b6270bb57b6b05998df8eec56f801"))])
  (gnuplot
-  . [(0 12 0 20260628 3) ((emacs (29 1)) (compat (31)))
+  . [(0 12 0 20260811 5) ((emacs (29 1)) (compat (31)))
      "Major-mode and interactive frontend for gnuplot" tar
      ((:url . "https://github.com/emacs-gnuplot/gnuplot")
       (:keywords "data" "gnuplot" "plotting")
       (:maintainer ("Maxime Tréca" . "maxime@gmail.com")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "6e758c7ad7bb2865357b13e10ba8c4a1d39ba9c6"))])
+      (:commit . "51e96281da3b027a2bb64130120a607758ea6300"))])
  (go-mode
   . [(1 6 0 0 20260529 24) ((emacs (26 1)))
      "Major mode for the Go programming language" tar
@@ -1305,7 +1305,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 0 0 20260731 0)
+  . [(4 7 0 0 20260807 2)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1317,9 +1317,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "67f203853e74e926e2c99f60ed508840714f7ced"))])
+      (:commit . "b1742562074e794348bdc56da838ac9d3ae40364"))])
  (magit-section
-  . [(4 7 0 0 20260731 0)
+  . [(4 7 0 0 20260807 2)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1328,7 +1328,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "67f203853e74e926e2c99f60ed508840714f7ced"))])
+      (:commit . "b1742562074e794348bdc56da838ac9d3ae40364"))])
  (markdown-mode
   . [(2 9 -3 0 20260722 13) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1378,13 +1378,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "22831489d3bbc22aef315c0f003bf3756b8889fa"))])
  (moe-theme
-  . [(1 1 0 0 20260515 84137) nil
+  . [(1 1 0 0 20260811 12) nil
      "A colorful eye-candy theme. Moe, moe, kyun!" tar
      ((:url . "https://github.com/kuanyui/moe-theme.el")
       (:keywords "themes")
       (:maintainer "kuanyui" . "azazabc123@gmail.com")
       (:authors ("kuanyui" . "azazabc123@gmail.com"))
-      (:commit . "c7d711e940a6c4e7a2270830aeaf52c1ce789455"))])
+      (:commit . "d091865eeb97b0894e6517137dc0544560bc57fb"))])
  (monokai-theme
   . [(3 5 3 0 20240911 104603) nil "A fruity color theme for Emacs."
      tar
@@ -1832,14 +1832,14 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "173e4d632c94af6670869729c09bfb8ba484d257"))])
  (simple-httpd
-  . [(1 6 0 20260709 3) ((emacs (29 1)) (compat (31)))
+  . [(1 6 0 20260811 5) ((emacs (29 1)) (compat (31)))
      "Pure Elisp HTTP server" tar
      ((:url . "https://github.com/skeeto/emacs-http-server")
       (:keywords "network" "comm")
       (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "e8551dca4f2009e332285228cb971f8594aca1c7"))])
+      (:commit . "d74da3eaf2b37432fe8fa66c2a470550e811f081"))])
  (slime
   . [(2 32 -4 0 20260808 55) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
