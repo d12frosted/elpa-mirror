@@ -250,6 +250,14 @@
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "ab0fac4282bf6426f4a5bce0fec7bf40d18b2e1a"))])
+ (codex-ide
+  . [(0 1 0 0 20260806 58)
+     ((emacs (28 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
+      (eat (0 9 4)))
+     "Run Codex CLI in an Emacs terminal" tar
+     ((:url . "https://git.thanosapollo.org/emacs-codex-ide")
+      (:keywords "ai" "codex" "tools" "terminal")
+      (:commit . "a33a6c481ff2f3c4af4e63a76de4cd12e17da773"))])
  (coffee-mode
   . [(0 6 3 0 20230908 103000) ((emacs (24 3)))
      "Major mode for CoffeeScript code" tar
@@ -732,7 +740,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(40 0 -4 0 20260811 5) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260813 6) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -741,7 +749,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "d7860ed0c116f1660b43fb0c4d8f37009d3f08fc"))])
+      (:commit . "bed4c3b735d7a6285e3ed6ee1012007ae590c663"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1037,6 +1045,16 @@
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
+ (hermes
+  . [(0 2 0 0 20260813 54)
+     ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
+      (markdown-mode (2 6)))
+     "Emacs frontend for Hermes Agent" tar
+     ((:url . "https://git.thanosapollo.org/emacs-hermes")
+      (:keywords "tools" "convenience")
+      (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
+      (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
+      (:commit . "feef6c5b609d0b90cdb5216ba79c316df38a3b4a"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1478,6 +1496,14 @@
       (:maintainer "Phillip Lord" . "phillip.lord@russet.org.uk")
       (:authors ("Paul Sexton" . "eeeickythump@gmail.com"))
       (:commit . "bf8fe812d44a3ce3e84361fb39b8ef28ca10fd0c"))])
+ (org-history
+  . [(0 5 2 0 20260803 0) ((emacs (29 1)))
+     "Show Dates for Org headers from vcs + auto-commit" tar
+     ((:url . "https://codeberg.org/Anoncheg/emacs-org-history")
+      (:keywords "org" "outline" "vc")
+      (:maintainer nil . "github.com/Anoncheg1,codeberg.org/Anoncheg")
+      (:authors (nil . "github.com/Anoncheg1,codeberg.org/Anoncheg"))
+      (:commit . "3049ba97830e8dd19a56add34ad2538cf11a0ac8"))])
  (org-journal
   . [(2 2 0 0 20260413 140147) ((emacs (26 1)) (org (9 1)))
      "a simple org-mode based journaling mode" tar

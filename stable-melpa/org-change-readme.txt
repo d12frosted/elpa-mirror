@@ -5,7 +5,9 @@ with org-change-delete (C-` d), and replacements with
 org-change-replace (C-` r).  Accept or reject changes with
 org-change-accept (C-` k) and org-change-reject (C-` x), or with
 C-` K and C-` X to move to the next change as well.  Comment
-on a change with org-change-comment (C-` c).  Move between changes
+on a change with org-change-comment (C-` c).  Highlight a span and
+comment on it, without proposing a change, with
+org-change-annotate (C-` m).  Move between changes
 with org-change-next-change (C-` n) and
 org-change-previous-change (C-` p).  Count them with
 org-change-info (C-` i), or list them in a side window with

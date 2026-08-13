@@ -989,6 +989,16 @@
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
+ (hermes
+  . [(0 2 0)
+     ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
+      (markdown-mode (2 6)))
+     "Emacs frontend for Hermes Agent" tar
+     ((:url . "https://git.thanosapollo.org/emacs-hermes")
+      (:keywords "tools" "convenience")
+      (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
+      (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
+      (:commit . "e44a0576dd54020482ad3f5d331436b5305e42c3"))])
  (hideshowvis
   . [(0 9) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1402,6 +1412,14 @@
       (:maintainer "Phillip Lord" . "phillip.lord@russet.org.uk")
       (:authors ("Paul Sexton" . "eeeickythump@gmail.com"))
       (:commit . "4c114489e682e514e79701045d541ab6f3dc3fb4"))])
+ (org-history
+  . [(0 5 2) ((emacs (29 1)))
+     "Show Dates for Org headers from vcs + auto-commit" tar
+     ((:url . "https://codeberg.org/Anoncheg/emacs-org-history")
+      (:keywords "org" "outline" "vc")
+      (:maintainer nil . "github.com/Anoncheg1,codeberg.org/Anoncheg")
+      (:authors (nil . "github.com/Anoncheg1,codeberg.org/Anoncheg"))
+      (:commit . "3049ba97830e8dd19a56add34ad2538cf11a0ac8"))])
  (org-journal
   . [(2 2 0) ((emacs (25 1)) (org (9 1)))
      "a simple org-mode based journaling mode" tar

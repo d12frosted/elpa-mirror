@@ -1152,7 +1152,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "583951606e4e19fd53acd8c5691210b9acb524d7"))])
  (ellama
-  . [(1 31 0 0 20260720 1)
+  . [(1 32 1 0 20260812 1)
      ((emacs (28 1)) (llm (0 31 1)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1160,7 +1160,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "5d32a48a8d1797fec776ba56279dc99dd58f399a"))])
+      (:commit . "a86e9154ae88907d3de2710195810cda986ef0d8"))])
  (emacs-gc-stats
   . [(1 4 2 0 20231206 152254) ((emacs (25 1)))
      "Collect Emacs GC statistics" tar
@@ -2232,12 +2232,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "b295cab07c1932c11dd00f23ba29c1ff0de486ab"))])
  (minuet
-  . [(0 9 0 0 20260807 6) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 9 0 0 20260813 9) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "89287bb10ac0b7db6eb7e11bf697f5b479e720e1"))])
+      (:commit . "9e7a7952dcf3e69f70e632530b13ccb245e449a1"))])
  (mmm-mode
   . [(0 5 11 0 20240222 42825) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
