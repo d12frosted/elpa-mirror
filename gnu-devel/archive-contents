@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260811 61) ((emacs (28 1)))
+  . [(14 1 2 0 20260812 62) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "7aa0e072b35beb4cb83510bdd0e109046fb006fa"))])
+      (:commit . "5c3af8120cbd8612a3eebcb8422eb6fbe6967615"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1182,22 +1182,22 @@
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-nl.html")
       (:commit . "a45a02dbdeb45067e51aa51c3bf5f5d746757cb8"))])
  (embark
-  . [(1 2 0 20260609 21) ((emacs (29 1)) (compat (31)))
+  . [(1 2 0 20260812 23) ((emacs (29 1)) (compat (31)))
      "Conveniently act on minibuffer completions" tar
      ((:url . "https://github.com/oantolin/embark")
       (:keywords "convenience")
       (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-      (:commit . "350ca86924c5027e80875943fba7b912a71e5791"))])
+      (:commit . "87e53827cf6659dcc4ac4e54be9af34aeca44f6e"))])
  (embark-consult
-  . [(1 2 0 20260609 20)
+  . [(1 2 0 20260812 22)
      ((emacs (29 1)) (compat (31)) (embark (1 1)) (consult (3 2)))
      "Consult integration for Embark" tar
      ((:url . "https://github.com/oantolin/embark")
       (:keywords "convenience")
       (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-      (:commit . "350ca86924c5027e80875943fba7b912a71e5791"))])
+      (:commit . "87e53827cf6659dcc4ac4e54be9af34aeca44f6e"))])
  (ement
   . [(0 18 -1 0 20251117 1)
      ((emacs (27 1)) (map (2 1)) (persist (0 5)) (plz (0 6))
