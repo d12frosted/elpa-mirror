@@ -93,6 +93,17 @@ default, running a command with `otpp-prefix' will disable this behavior,
 which results of the next command to be run in the `default-directory'
 depending on the visited buffer.
 
+When working within a project with `otpp-mode`, it is possible to switch
+to buffers that belong to another project, as this is the default behaviour
+of `next-buffer` or `prev-buffer`.  You can further constrain `otpp-mode`
+to filter out non current project buffers, by leveraging the helper filter
+function, `otpp-skip-external-buffers`.
+
+```emacs-lisp
+  ;; Apply the filter to skip non-current project buffers
+  (setopt switch-to-prev-buffer-skip #'otpp-skip-external-buffers)
+```
+
 ; Similar packages
 
 This section is not exhaustive, it includes only the packages that I used

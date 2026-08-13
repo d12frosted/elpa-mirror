@@ -25,7 +25,7 @@ Key bindings in the terminal buffer:
   C-c C-c   Interrupt          C-c C-z   Suspend
   C-c C-d   EOF                C-c C-\   Quit
   C-c C-t   Copy mode          C-c C-y   Paste
-  C-c C-l   Clear scrollback   C-c C-q   Send next key literally
+  C-c M-l   Clear scrollback   C-q       Send next key literally
   C-c M-w   Copy scrollback    C-y / M-y Yank / yank-pop
   C-c C-n / C-c C-p            Next/previous hyperlink
   C-c M-n / C-c M-p            Next/previous prompt (OSC 133)
