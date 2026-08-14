@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 12 0 20260811 7) ((emacs (29 1)) (compat (31)))
+  . [(2 13 0 20260813 0) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "1c88f38cf9cb0b2e130cf989ef361cd70cf2b46f"))])
+      (:commit . "6477aac54fa1ea4865b23d7562e48b83a082a1e4"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1084,13 +1084,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "ffa3b88874d064256c5221d2bbcb1564d901602a"))])
  (ef-themes
-  . [(2 2 0 0 20260621 0) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 2 0 0 20260813 1) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "5cdb7dd361ad3b5d7310f94375a832cd94c182d8"))])
+      (:commit . "94617a83b08c1e28bdcfb92498dc5dd7179e504f"))])
  (eglot
   . [(1 24 0 20260811 4)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
@@ -1450,12 +1450,13 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "d7c243ac3be2a67986f53f3dc31ba1426e82b771"))])
  (futur
-  . [(2 0 0 20260809 0) nil "Future/promise-based async library" tar
-     ((:keywords "concurrency" "async" "promises" "futures")
+  . [(2 0 0 20260813 1) ((emacs (27 1)))
+     "Future/promise-based async library" tar
+     ((:url . "https://elpa.gnu.org/packages/futur.html")
+      (:keywords "concurrency" "async" "promises" "futures")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-      (:url . "https://elpa.gnu.org/packages/futur.html")
-      (:commit . "2bd1d6cb405e8e27719a3be4f2de79668b1c5d2f"))])
+      (:commit . "3ebae9df195db67977b740e51e47d869e3bc5835"))])
  (gcmh
   . [(0 2 1 0 20201116 225142) ((emacs (24)))
      "the Garbage Collector Magic Hack" tar
@@ -1847,13 +1848,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "1bd355ecda036f23468d82b803146d3258a84977"))])
  (jinx
-  . [(2 9 0 20260811 4) ((emacs (29 1)) (compat (31)))
+  . [(2 10 0 20260813 1) ((emacs (29 1)) (compat (31)))
      "Enchanted Spell Checker" tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "8337f43b3316cd46c67245b5fb5a99cb3fed47be"))])
+      (:commit . "23f6d028decb6081ee30659e7e841f6046e5f511"))])
  (jit-spell
   . [(0 5 0 20251012 84654) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -2232,12 +2233,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "b295cab07c1932c11dd00f23ba29c1ff0de486ab"))])
  (minuet
-  . [(0 9 0 0 20260813 9) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 9 0 0 20260813 10) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "9e7a7952dcf3e69f70e632530b13ccb245e449a1"))])
+      (:commit . "00c4a74497539b735329269d5753b990ca991898"))])
  (mmm-mode
   . [(0 5 11 0 20240222 42825) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
@@ -2254,13 +2255,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260811 30) ((emacs (28 1)))
+  . [(5 3 0 0 20260813 31) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "52d4665bc5d5505e9761fe6068ab5426ad70a52a"))])
+      (:commit . "887af1139ea5832bd4469ded991cc992f0bf2229"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
@@ -2463,14 +2464,14 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "e186e41778a46b8d12015db5a1c79aab3ee33565"))])
  (org-contacts
-  . [(1 3 0 20260221 85240) ((emacs (29 1)) (org (9 7)))
+  . [(1 3 0 20260813 7) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
      ((:url . "https://repo.or.cz/org-contacts.git")
       (:keywords "contacts" "org-mode" "outlines" "hypermedia"
 		 "calendar")
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:authors ("Julien Danjou" . "julien@danjou.info"))
-      (:commit . "a9175a2918d2e6d5400368d9504a617e4eb2b49c"))])
+      (:commit . "791a9daff267083df2dce76f33e0027f516c64d8"))])
  (org-edna
   . [(1 1 2 0 20200902 94459)
      ((emacs (25 1)) (seq (2 19)) (org (9 0 5)))

@@ -488,7 +488,7 @@ database format is stable and is never expected to change.
   Entries are viewed locally in Emacs by typing `RET' while over an
   entry in the search listing. The content will be displayed in a
   separate buffer using `elfeed-show-mode', rendered using Emacs'
-  built-in shr package. This requires an Emacs compiled with `libxml2'
+  built-in shr package. This requires an Emacs compiled with `libxml'
   bindings, which provides the necessary HTML parser.
 
   Sometimes displaying images can slow down or even crash Emacs. Set

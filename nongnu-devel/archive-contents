@@ -251,13 +251,14 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "ab0fac4282bf6426f4a5bce0fec7bf40d18b2e1a"))])
  (codex-ide
-  . [(0 1 0 0 20260806 58)
-     ((emacs (28 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
+  . [(0 1 1 0 20260813 0)
+     ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
       (eat (0 9 4)))
-     "Run Codex CLI in an Emacs terminal" tar
+     "Run Codex CLI in a terminal" tar
      ((:url . "https://git.thanosapollo.org/emacs-codex-ide")
       (:keywords "ai" "codex" "tools" "terminal")
-      (:commit . "a33a6c481ff2f3c4af4e63a76de4cd12e17da773"))])
+      (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
+      (:commit . "d11a143ac52894eb25bbb43d877c8761f2f01244"))])
  (coffee-mode
   . [(0 6 3 0 20230908 103000) ((emacs (24 3)))
      "Major mode for CoffeeScript code" tar
@@ -481,7 +482,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 1 0 20260812 3) ((emacs (29 1)) (compat (31)))
+  . [(4 1 1 0 20260813 6) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -490,7 +491,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "f35317b73b0c6c9d590b67a989c36b83011be4ab"))])
+      (:commit . "687305f99713bff6c32120ee8dd471f001c3dc86"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -1046,7 +1047,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hermes
-  . [(0 2 0 0 20260813 54)
+  . [(0 2 1 0 20260813 1)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1054,7 +1055,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "feef6c5b609d0b90cdb5216ba79c316df38a3b4a"))])
+      (:commit . "7ee5eb0774c0b41254602447d861cad08e40db6b"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1686,13 +1687,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (projectile
-  . [(3 5 0 -4 0 20260811 3) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260813 4) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "fcd8f2b7d9e67623bfcdcb3ab874d31016badeae"))])
+      (:commit . "10fa39917aa3a5c7f64aae31da49b4dfd9f6eb55"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

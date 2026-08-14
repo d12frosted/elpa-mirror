@@ -235,6 +235,15 @@
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "96fdffcbe9e1b8ebf9ad14e23b06f62cc3422e22"))])
+ (codex-ide
+  . [(0 1 1)
+     ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
+      (eat (0 9 4)))
+     "Run Codex CLI in a terminal" tar
+     ((:url . "https://git.thanosapollo.org/emacs-codex-ide")
+      (:keywords "ai" "codex" "tools" "terminal")
+      (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
+      (:commit . "d11a143ac52894eb25bbb43d877c8761f2f01244"))])
  (coffee-mode
   . [(0 6 3) ((emacs (24 1)) (cl-lib (0 5)))
      "Major mode for CoffeeScript code" tar
@@ -990,7 +999,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
  (hermes
-  . [(0 2 0)
+  . [(0 2 1)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -998,7 +1007,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "e44a0576dd54020482ad3f5d331436b5305e42c3"))])
+      (:commit . "5ac3ce02e16867a2282083184c8bdbb896616857"))])
  (hideshowvis
   . [(0 9) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
