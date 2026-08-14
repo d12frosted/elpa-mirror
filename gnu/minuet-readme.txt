@@ -25,6 +25,7 @@
   - [minuet-auto-suggestion-debounce-delay](#minuet-auto-suggestion-debounce-delay)
   - [minuet-auto-suggestion-throttle-delay](#minuet-auto-suggestion-throttle-delay)
 - [Duet (Next Edit Prediction)](#duet-next-edit-prediction)
+  - [Automatic Prediction](#automatic-prediction)
   - [Context Options](#context-options)
   - [Edit History](#edit-history)
   - [TODO](#todo)
@@ -125,6 +126,9 @@ preferred package managers.
      ;; Accept the first line of completion, or N lines with a numeric-prefix:
      ;; e.g. C-u 2 M-a will accepts 2 lines of completion.
      ("M-a" . #'minuet-accept-suggestion-line)
+     ;; Accept the first word of completion, or N words with a numeric-prefix:
+     ;; e.g. C-u 2 M-w will accepts 2 words of completion.
+     ("M-w" . #'minuet-accept-suggestion-word)
      ("M-e" . #'minuet-dismiss-suggestion))
 
     :init
@@ -562,8 +566,10 @@ This feature is highly experimental:
   performs well with the prompt structure.
 - Comparable small models from competitors of Google—`claude-haiku-4.5` and
   `gpt-5.4-mini`—perform poorly.
-- Given completion latency constraints, automatic duet prediction is not
-  implemented.
+- Automatic prediction is available through `minuet-duet-auto-mode` (see
+  [Automatic Prediction](#automatic-prediction)), but the feature is
+  latency-sensitive: pick a fast model, and consider raising
+  `minuet-duet-auto-debounce-delay` for slower providers.
 
 It is recommended to configure the thinking levels of the models; refer to the
 [provider options](#provider-options) for guidance on managing thinking settings
@@ -576,6 +582,78 @@ requests. Duet expects the model to return the complete rewritten editable
 region, including the cursor marker; if the response is truncated, the parser
 will reject it. Leave the limit unset when the provider allows that, or set it
 large enough to cover the full rewritten region.
+
+## Automatic Prediction
+
+Enable `minuet-duet-auto-mode` in a buffer to request predictions
+automatically:
+
+```elisp
+(add-hook 'prog-mode-hook #'minuet-duet-auto-mode)
+```
+
+Running `minuet-duet-auto-mode` together with `minuet-auto-suggestion-mode` is
+allowed, but both will issue requests as you type; you likely want one or the
+other in a given buffer.
+
+Relevant options:
+
+- `minuet-duet-auto-debounce-delay`: seconds to wait after you stop editing
+  before requesting a prediction; each new edit restarts the wait (default
+  0.6).
+- `minuet-duet-auto-block-predicates`: list of functions called before an
+  automatic prediction; if any returns non-nil, no prediction is requested at
+  that moment. The default is empty. Unlike inline completion, duet rewrites a
+  text region based on your recent edits, so edits made outside evil insert
+  state (for example deleting lines in normal state) still trigger
+  predictions.
+- `minuet-duet-auto-enable-history`: whether enabling the mode also enables
+  `minuet-duet-history-mode` (default t).
+
+### Combining Inline Completion and Duet Prediction
+
+You can run both modes in one buffer and use the block predicates to split
+responsibilities between them.  Below are two example setups.
+
+**Vanilla users: inline completion only at end of line, duet only elsewhere.**
+
+```elisp
+(defun my-minuet-inline-only-at-eol-p ()
+  "Return non-nil to block inline completion when point is not at EOL."
+  (not (eolp)))
+
+(defun my-minuet-duet-only-not-at-eol-p ()
+  "Return non-nil to block duet prediction when point is at EOL."
+  (eolp))
+
+(add-hook 'minuet-auto-suggestion-block-predicates
+          #'my-minuet-inline-only-at-eol-p)
+(add-hook 'minuet-duet-auto-block-predicates
+          #'my-minuet-duet-only-not-at-eol-p)
+
+(add-hook 'prog-mode-hook #'minuet-auto-suggestion-mode)
+(add-hook 'prog-mode-hook #'minuet-duet-auto-mode)
+```
+
+**Evil users: inline completion in insert state, duet in normal state.**
+
+```lisp
+;; Block inline completion outside insert/emacs state. Note that this is
+;; already the default.
+(add-hook 'minuet-auto-suggestion-block-predicates
+          #'minuet-evil-not-insert-state-p)
+
+(defun my-minuet-duet-only-in-evil-normal-p ()
+  "Return non-nil to block duet prediction outside evil normal state."
+  (not (and (bound-and-true-p evil-local-mode)
+            (evil-normal-state-p))))
+
+(add-hook 'minuet-duet-auto-block-predicates
+          #'my-minuet-duet-only-in-evil-normal-p)
+
+(add-hook 'prog-mode-hook #'minuet-auto-suggestion-mode)
+(add-hook 'prog-mode-hook #'minuet-duet-auto-mode)
+```
 
 ## Context Options
 
@@ -591,13 +669,13 @@ edit.
 
 ## Edit History
 
-To track your recent edits and incorporate them into duet prompts as
-unified diffs, enable `minuet-duet-history-mode` in a buffer. This
-feature is opt-in and must be activated per buffer.
+To track your recent edits and incorporate them into duet prompts as unified
+diffs, enable `minuet-duet-history-mode` in a buffer. This feature is opt-in and
+must be activated per buffer.
 
-Since history tracking saves temporary snapshots to disk, use a named
-hook function to exclude buffers with sensitive names. The following
-example skips `.env` files (including variants like `.env.local
+Since history tracking saves temporary snapshots to disk, use a named hook
+function to exclude buffers with sensitive names. The following example skips
+`.env` files (including variants like `.env.local
 
 ```elisp
 (defun my-minuet-duet-history-maybe-enable ()
@@ -614,22 +692,22 @@ Relevant options:
 
 - `minuet-duet-history-idle-delay`: idle seconds before pending edits are
   recorded (default 1.5).
-- `minuet-duet-history-max-entries`: history entries kept per buffer
-  (default 8).
-- `minuet-duet-history-max-entry-chars`: characters recorded per edit
-  (default 2000). A longer diff keeps only its leading whole hunks that fit;
-  when not even the first hunk fits (e.g. a large single-hunk paste), the
-  edit is not recorded.
-- `minuet-duet-history-diff-context-lines`: unchanged context lines shown
-  around each hunk (default 2).
+- `minuet-duet-history-max-entries`: history entries kept per buffer (default
+  8).
+- `minuet-duet-history-max-entry-chars`: characters recorded per edit (default
+  2000). A longer diff keeps only its leading whole hunks that fit; when not
+  even the first hunk fits (e.g. a large single-hunk paste), the edit is not
+  recorded.
+- `minuet-duet-history-diff-context-lines`: unchanged context lines shown around
+  each hunk (default 2).
 - `minuet-duet-history-max-prompt-chars`: total characters of history included
   in prompts; the newest entry is always included (default 6000).
 - `minuet-duet-history-max-buffer-size`: buffers larger than this are not
   tracked (default 1000000).
-- `minuet-duet-history-diff-program`: the diff program to run (default
-  `diff`, expected on `PATH`; Windows users without one can point this at any
-  program that emits unified diffs with POSIX diff exit codes). The mode
-  refuses to enable when the program is not found.
+- `minuet-duet-history-diff-program`: the diff program to run, either a program
+  name or a list of a program and its leading arguments. The default is `diff`;
+  on native Windows without `diff` on `PATH` it falls back to
+  `git diff --no-index`. The mode is disabled if the program is not found.
 - `minuet-duet-history-flush-timeout`: seconds a prediction waits for the
   in-flight diff before proceeding with slightly stale history (default 0.2).
 
@@ -638,7 +716,7 @@ Relevant options:
 - [x] Implement a proper diff mechanism to include recent edit changes in
       prompts.
 - [ ] Add support for specialized NES models (Zeta, Sweep).
-- [ ] Implement automatically triggered duet prediction.
+- [x] Implement automatically triggered duet prediction.
 
 # Provider Options
 
@@ -678,7 +756,7 @@ Below is the default value:
 
 ```lisp
 (defvar minuet-openai-options
-    `(:model "gpt-5.4-nano"
+    `(:model "gpt-5.6-luna"
       :api-key "OPENAI_API_KEY"
       :system
       (:template minuet-default-system-template
@@ -702,18 +780,16 @@ request timeout from outputing too many tokens.
 
 ```lisp
 (minuet-set-optional-options minuet-openai-options :max_completion_tokens 128)
-;; For thinking models.
+;; Recommended for thinking models (e.g., gpt-5.6-luna).
 (minuet-set-optional-options minuet-openai-options :reasoning_effort "none")
-;; Use "minimal" if your chosen model does not support "none".
 ```
 
 Note: If you intend to use GPT-5 series models (e.g., `gpt-5-mini` or
-`gpt-5.4-nano`), keep the following points in mind:
+`gpt-5.6-luna`), keep the following points in mind:
 
 1. Use `max_completion_tokens` instead of `max_tokens`.
 2. These models do not support `top_p` or `temperature` adjustments.
-3. Disable thinking by setting `reasoning_effort` to `none`, or use `minimal` if
-   your chosen model does not support `none`.
+3. Disable thinking by setting `reasoning_effort` to `none`.
 
 </details>
 
@@ -894,14 +970,14 @@ request timeout from outputing too many tokens.
 | **DeepSeek API**     | `thinking = { type = 'disabled' }`                                         |
 | **Various Provider** | `reasoning_effort = 'none'`                                                |
 
-````lisp
+```lisp
 ;; or "minimal", depending on the model (OpenRouter)
 (minuet-set-optional-options minuet-openai-compatible-options :reasoning '(:effort none))
 ;; or "minimal", depending on the model (various providers)
 (minuet-set-optional-options minuet-openai-compatible-options :reasoning_effort "none")
 ;; DeepSeek API
 (minuet-set-optional-options minuet-openai-compatible-options :thinking '(:type "disabled"))
-````
+```
 
 </details>
 

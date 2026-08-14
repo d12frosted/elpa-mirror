@@ -8,6 +8,7 @@ bible-gateway is a simple package that fetches content from
   clickable references and pagination
 - Follow a daily reading plan from a CSV file
 - Help you memorise Bible verses using touch-typing
+- Compare Bible translations side by side in one window
 
 Usage:
 
@@ -36,3 +37,6 @@ in a single buffer.
 
 M-x `bible-gateway-memorise' helps you memorise Bible verses using a
 touch-typing practice mode, with live color-coded feedback as you type.
+
+M-x `bible-gateway-compare' compares Bible passages from different Bible
+translations side by side in one window.
