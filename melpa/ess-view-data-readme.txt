@@ -6,6 +6,32 @@ ess-view-data-save-backend-list: write.csv (default), readr::write_csv,
 ess-view-data-complete-backend-list: jsonlite
 ess-view-data-read-string: ess-completing-read (default), completing-read,
                            ido-completing-read, ivy-completing-read
+ess-view-data-display-backend: how to display data in the view buffer.
+  `table' (default): a structured tabulated-list with column types, aligned
+  cells, truncated long cells and clickable sort headers.
+  `print' / `kable': keep the historical text output of the print/kable
+  backends (csv text with the '# Trace' / '# Last' / '# Page number' head
+  lines and a csv-mode column header).
+  To restore the historical csv + header view, set
+  `ess-view-data-display-backend' to `print', e.g.:
+
+    M-x customize-option RET ess-view-data-display-backend RET print
+    (setq ess-view-data-display-backend 'print)
+
+  NB: the setting is global; refresh the current view buffer
+  (ess-view-data-reset or re-run ess-view-data-print) after switching.
+
+Table display keys (`ess-view-data-table-mode'):
+  S: sort by the column at point (server-side arrange over the whole data).
+  W: widen the current column; cells re-truncate from the full-value cache
+     at the new width, so repeated W reveals more of every long cell.
+  w: ess-view-data-widen-current-column-full - fit the current column to
+     its longest full value.
+  a: ess-view-data-widen-all-columns-full - fit every column to its longest
+     full value; the whole current page then sits in the buffer as full
+     text and built-in isearch (C-s / C-r) can search the full values.
+  v: ess-view-data-show-cell-value - show the full cell value at point in a
+     read-only buffer (from the local cache, no R round trip).
 
 Utils:
 NOTE: it will make a copy of the data and then does the following action
