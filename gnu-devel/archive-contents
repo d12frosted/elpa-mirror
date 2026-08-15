@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260812 62) ((emacs (28 1)))
+  . [(14 1 2 0 20260814 63) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "5c3af8120cbd8612a3eebcb8422eb6fbe6967615"))])
+      (:commit . "3ad2a0a8e7349641685cdd0e81c3d11d56eedf65"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1084,13 +1084,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "ffa3b88874d064256c5221d2bbcb1564d901602a"))])
  (ef-themes
-  . [(2 2 0 0 20260813 1) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 2 1 0 20260814 0) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "94617a83b08c1e28bdcfb92498dc5dd7179e504f"))])
+      (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
   . [(1 24 0 20260811 4)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))

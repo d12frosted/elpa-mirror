@@ -12,8 +12,8 @@ Supported AI coding CLIs include:
   - Antigravity CLI
   - Opencode
   - Claude Code
+  - Muse Code
   - GitHub Copilot CLI
-  - Gemini CLI
   - Kilo
   - Grok CLI
   - Cursor CLI
@@ -21,6 +21,7 @@ Supported AI coding CLIs include:
   - Open Interpreter CLI (Codex-compatible)
   - CodeBuddy Code CLI
   - Aider CLI
+  - Gemini CLI
   - agent-shell
   - ECA (Editor Code Assistant)
 

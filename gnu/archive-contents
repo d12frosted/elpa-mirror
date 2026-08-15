@@ -1020,13 +1020,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "ffa3b88874d064256c5221d2bbcb1564d901602a"))])
  (ef-themes
-  . [(2 2 0) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 2 1) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "5cdb7dd361ad3b5d7310f94375a832cd94c182d8"))])
+      (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
   . [(1 24)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
