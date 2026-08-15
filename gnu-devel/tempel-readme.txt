@@ -5,7 +5,7 @@
 
 Tempel is a tiny template package for Emacs, which uses the syntax of
 the Emacs Tempo library. Tempo is an ancient temple of the church of
-Emacs. It is over 31 years old, but still in good shape since it
+Emacs. It is over 32 years old, but still in good shape since it
 successfully resisted change over the decades. However it looks a bit
 dusty here and there. Therefore we present Tempel, its worthy successor
 with inline expansion and integration with recent Emacs

@@ -126,8 +126,8 @@ alt="CLA assistant" /></a>
   │   :after org
   │   :commands (kiwix-launch-server kiwix-at-point)
   │   :custom ((kiwix-server-use-docker t)
-  │ 	   (kiwix-server-port 8089)
-  │ 	   (kiwix-default-library "wikipedia_en_all_2016-02.zim"))
+  │            (kiwix-server-port 8089)
+  │            (kiwix-default-library "wikipedia_en_all_2016-02.zim"))
   │   :hook (org-load . org-kiwix-setup-link))
   └────
 
@@ -329,7 +329,7 @@ alt="CLA assistant" /></a>
   └────
 
 
-[this command] See listing 1
+[this command] Unknown reference
 
 
 5 Config
@@ -348,9 +348,9 @@ alt="CLA assistant" /></a>
   │   :commands (kiwix-launch-server kiwix-at-point)
   │   :bind (:map document-prefix ("w" . kiwix-at-point))
   │   :custom ((kiwix-server-type 'kiwix-serve-local)
-  │ 	   (kiwix-server-url "http://127.0.0.1")
-  │ 	   (kiwix-server-port 8089)
-  │ 	   (kiwix-zim-dir (expand-file-name "/path/to/kiwix_zim_libraries")))
+  │            (kiwix-server-url "http://127.0.0.1")
+  │            (kiwix-server-port 8089)
+  │            (kiwix-zim-dir (expand-file-name "/path/to/kiwix_zim_libraries")))
   │   :hook (org-load . org-kiwix-setup-link)
   │   :init (require 'org-kiwix)
   │   :config (add-hook 'org-load-hook #'org-kiwix-setup-link))
@@ -367,9 +367,9 @@ alt="CLA assistant" /></a>
   │   :commands (kiwix-launch-server kiwix-at-point)
   │   :bind (:map document-prefix ("w" . kiwix-at-point))
   │   :custom ((kiwix-server-type 'docker-local)
-  │ 	   (kiwix-server-url "http://127.0.0.1")
-  │ 	   (kiwix-server-port 8089)
-  │ 	   (kiwix-zim-dir (expand-file-name "/path/to/kiwix_zim_libraries")))
+  │            (kiwix-server-url "http://127.0.0.1")
+  │            (kiwix-server-port 8089)
+  │            (kiwix-zim-dir (expand-file-name "/path/to/kiwix_zim_libraries")))
   │   :hook (org-load . org-kiwix-setup-link)
   │   :init (require 'org-kiwix)
   │   :config (add-hook 'org-load-hook #'org-kiwix-setup-link))
@@ -386,8 +386,8 @@ alt="CLA assistant" /></a>
   │   :commands (kiwix-launch-server kiwix-at-point)
   │   :bind (:map document-prefix ("w" . kiwix-at-point))
   │   :custom ((kiwix-server-type 'docker-remote)
-  │ 	   (kiwix-server-url "http://192.168.31.251")
-  │ 	   (kiwix-server-port 8089))
+  │            (kiwix-server-url "http://192.168.31.251")
+  │            (kiwix-server-port 8089))
   │   :hook (org-load . org-kiwix-setup-link)
   │   :init (require 'org-kiwix)
   │   :config (add-hook 'org-load-hook #'org-kiwix-setup-link))

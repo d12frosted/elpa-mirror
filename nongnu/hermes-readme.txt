@@ -61,6 +61,11 @@ gateway.
   • `RET' to send.
   • `/' for slash commands.
   • `C-c C-o' for the actions menu.
+  • Chats propose the launching buffer's `default-directory' when
+    creating a session; the gateway returns the authoritative workspace.
+    Use “Set directory” to browse the owning instance and change an idle
+    chat's gateway workspace without changing Emacs's local
+    `default-directory'.
   • `M-x hermes-close' closes local connections and Hermes buffers for
     restart.
 
