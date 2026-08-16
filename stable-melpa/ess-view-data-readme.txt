@@ -1,3 +1,16 @@
+This file is the entry point of the ess-view-data package.  The
+implementation is split across four support files, all loaded by
+requiring this one:
+- ess-view-data-core.el: customization group, options and
+  buffer-local state, pure utilities and the generic backend API.
+- ess-view-data-backend.el: verb code generation, the shared
+  backend skeleton and the dplyr / dplyr+DT / data.table+magrittr
+  data backends plus the print/kable and save backends.
+- ess-view-data-table.el: the tabulated-list table display,
+  server-side sorting, cell widening and the render/refresh
+  orchestration.
+- ess-view-data-complete.el: completion cache and commands.
+
 Customization:
 ess-view-data-backend-list: dplyr (default), dplyr+DT, data.table+magrittr
 ess-view-data-print-backend-list: print (default), kable
@@ -32,6 +45,11 @@ Table display keys (`ess-view-data-table-mode'):
      text and built-in isearch (C-s / C-r) can search the full values.
   v: ess-view-data-show-cell-value - show the full cell value at point in a
      read-only buffer (from the local cache, no R round trip).
+
+The header line follows horizontal scrolling: it is rebuilt before every
+redisplay from the window's current horizontal scroll, so column names stay
+aligned with the data at any scroll position and the columns hidden right of
+the window become reachable by scrolling right (also after `a').
 
 Utils:
 NOTE: it will make a copy of the data and then does the following action
