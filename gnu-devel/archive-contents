@@ -1242,14 +1242,14 @@
       (:url . "https://elpa.gnu.org/packages/epoch-view.html")
       (:commit . "7a9773a8b55491bd47f23dfdb6c4224f5cc8e50c"))])
  (erc
-  . [(5 7 -4 0 20260815 24) ((emacs (27 1)) (compat (31)))
+  . [(5 7 -4 0 20260816 25) ((emacs (27 1)) (compat (31)))
      "An Emacs Internet Relay Chat client" tar
      ((:url . "https://www.gnu.org/software/emacs/erc.html")
       (:keywords "irc" "chat" "client" "internet")
       (:maintainer ("Amin Bandali" . "bandali@gnu.org")
 		   ("F. Jason Park" . "jp@neverwas.me"))
       (:authors ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-      (:commit . "682a56c8a34c4421e607f33697da1c1707f53631"))])
+      (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
  (ergoemacs-mode
   . [(5 16 10 12 0 20260811 462)
      ((emacs (24 1)) (cl-lib (0 5)) (nadvice (0 4)))
@@ -1369,14 +1369,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 6 0 20260815 7)
+  . [(1 4 6 0 20260816 8)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "682a56c8a34c4421e607f33697da1c1707f53631"))])
+      (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -3242,13 +3242,13 @@
       (:url . "https://elpa.gnu.org/packages/sml-mode.html")
       (:commit . "39ad5243eb761821e5342ed8cf1ba111d2492f48"))])
  (so-long
-  . [(1 1 2 0 20260101 125434) ((emacs (24 4)))
+  . [(1 1 2 0 20260816 24) ((emacs (24 4)))
      "Say farewell to performance problems with minified code." tar
      ((:url . "https://savannah.nongnu.org/projects/so-long")
       (:keywords "convenience")
       (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
-      (:commit . "17ddfd66e65c19f44dee41ee1b7ee1ce23ef3ed2"))])
+      (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
  (soap-client
   . [(3 2 3 0 20260310 104821) ((emacs (24 1)) (cl-lib (0 6 1)))
      "Access SOAP web services" tar
@@ -3846,14 +3846,14 @@
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
       (:commit . "57dfaf751f9d71e921cdbeaa34b9aafa3c502ba3"))])
  (verilog-mode
-  . [(2026 4 14 10117132 0 20260621 0) nil
+  . [(2026 4 14 10117132 0 20260816 1) nil
      "major mode for editing verilog source in Emacs" tar
      ((:url . "https://www.veripool.org") (:keywords "languages")
       (:maintainer ("Michael McNamara" . "mac@verilog.com")
 		   ("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:authors ("Michael McNamara" . "mac@verilog.com")
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
-      (:commit . "b3574e6464b0cce4a878106c07f1ea8f65989a6b"))])
+      (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
  (vertico
   . [(2 12 0 20260811 3) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar

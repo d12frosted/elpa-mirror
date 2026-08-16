@@ -245,7 +245,7 @@ In some cases it may be useful to set a file-local `mode' variable to
 Refer to M-: (info "(emacs) Specifying File Variables") RET
 
 If so-long itself causes problems, disable the automated behavior with
-M-- M-x global-so-long-mode, or M-: (global-so-long-mode 0)
+M-- M-x global-so-long-mode, or M-: (global-so-long-mode -1)
 
 * Example configuration
 -----------------------
