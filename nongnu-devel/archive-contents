@@ -482,7 +482,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 1 0 20260814 28) ((emacs (29 1)) (compat (31)))
+  . [(4 1 1 0 20260815 40) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -491,7 +491,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "a40da551f3a948209e1cc8dbb9a151dc429bb3e5"))])
+      (:commit . "f3f2b794404ce8091cfdeedded9974c961589276"))])
  (elfeed-web
   . [(4 0 0 0 20260628 4)
      ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
@@ -1047,7 +1047,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hermes
-  . [(0 3 1 0 20260815 0)
+  . [(0 3 1 0 20260815 6)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1055,7 +1055,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "93def9ce6793e8bb7f4e47cec0d9fd04ec302100"))])
+      (:commit . "21f2c2a55f316de4518709dacd48a80a0b8e1916"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar

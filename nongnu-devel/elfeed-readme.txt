@@ -299,19 +299,19 @@ database format is stable and is never expected to change.
   leads to a tree of the following form.
 
   ┌────
-  │ emacs
-  │   ├─● emacs-news
-  │   lists
-  │     ├─● emacs-devel
-  │     ╰─● emacs-bugs
-  │ [all feeds]
+  │ ▼ emacs
+  │ ├─● emacs-news
+  │ ╰─▼ lists
+  │   ├─● emacs-devel
+  │   ╰─● emacs-bugs
+  │ ▼ [all feeds]
+  │ ├─● …
+  │ ╰─● emacs-devel
+  │ ▼ [all tags]
+  │ ├─● …
+  │ ╰─▼ emacs
   │   ├─● …
   │   ╰─● emacs-devel
-  │ [all tags]
-  │   ├─● …
-  │   ╰─● emacs
-  │        ├─● …
-  │        ╰─● emacs-devel
   └────
 
 

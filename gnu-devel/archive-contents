@@ -1092,7 +1092,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
-  . [(1 24 0 20260811 4)
+  . [(1 24 0 20260815 11)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1101,7 +1101,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "108d066bdd1505268f040d4d0940c7b40ac6e7eb"))])
+      (:commit . "682a56c8a34c4421e607f33697da1c1707f53631"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -1242,14 +1242,14 @@
       (:url . "https://elpa.gnu.org/packages/epoch-view.html")
       (:commit . "7a9773a8b55491bd47f23dfdb6c4224f5cc8e50c"))])
  (erc
-  . [(5 7 -4 0 20260807 22) ((emacs (27 1)) (compat (31)))
+  . [(5 7 -4 0 20260815 24) ((emacs (27 1)) (compat (31)))
      "An Emacs Internet Relay Chat client" tar
      ((:url . "https://www.gnu.org/software/emacs/erc.html")
       (:keywords "irc" "chat" "client" "internet")
       (:maintainer ("Amin Bandali" . "bandali@gnu.org")
 		   ("F. Jason Park" . "jp@neverwas.me"))
       (:authors ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-      (:commit . "899bd2bedbd9cbcd0305e7fcb3ea987b3e5fa1d2"))])
+      (:commit . "682a56c8a34c4421e607f33697da1c1707f53631"))])
  (ergoemacs-mode
   . [(5 16 10 12 0 20260811 462)
      ((emacs (24 1)) (cl-lib (0 5)) (nadvice (0 4)))
@@ -1369,14 +1369,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 5 0 20260814 7)
+  . [(1 4 6 0 20260815 7)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "3782643b5d33eb6ea366b97d27725b5f93b3e30b"))])
+      (:commit . "682a56c8a34c4421e607f33697da1c1707f53631"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1692,7 +1692,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260812 14) ((emacs (28)))
+  . [(9 1 0 0 20260815 15) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1702,7 +1702,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "38d4dbf41e52cfd3e5213de6133232b143df32e4"))])
+      (:commit . "37615fa192e2cafcb11cd0d3c6bea1dbfaff388a"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2456,13 +2456,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "f4a8114ed729d34d35cec6c7eb34b5d0b23aaa6f"))])
  (org
-  . [(10 0 -1 0 20260809 415) ((emacs (28 2)))
+  . [(10 0 -1 0 20260815 423) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "e186e41778a46b8d12015db5a1c79aab3ee33565"))])
+      (:commit . "6916affedfcfb75739f946e29ee5e2da5c1d8c50"))])
  (org-contacts
   . [(1 3 0 20260813 7) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
