@@ -464,14 +464,14 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (eldoc-mouse
-  . [(3 0 8 0 20260612 0)
+  . [(3 0 8 0 20260817 1)
      ((emacs (27 1)) (posframe (1 5 1)) (eglot (1 23)))
      "Display documentation for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse")
       (:keywords "tools" "languages" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "6b7bddc4b16c0b3d6f4203e03e659b5211cab516"))])
+      (:commit . "a7ba5ad987c94d456868fd6c1a4def78b7f835b7"))])
  (eldoc-mouse-nov
   . [(0 1 1 0 20260330 75946)
      ((emacs (27 1)) (eldoc-mouse (3 0 2)) (nov (0 5 0)))
@@ -741,7 +741,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(40 0 -4 0 20260813 6) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260817 7) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -750,7 +750,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "bed4c3b735d7a6285e3ed6ee1012007ae590c663"))])
+      (:commit . "61d125ba2582f456208470ca659d34381000e189"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1686,6 +1686,14 @@
       (:maintainer "Juergen Hoetzel" . "juergen@hoetzel.info")
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
+ (project-store
+  . [(0 9 0 0 20260816 1) ((emacs (29 1)))
+     "Project backend for Nix store" tar
+     ((:url . "https://github.com/jian-lin/project-store")
+      (:keywords "nix" "store" "project" "tools")
+      (:maintainer "Lin Jian" . "me@linj.tech")
+      (:authors ("Lin Jian" . "me@linj.tech"))
+      (:commit . "e28d289f985de8c4c131785d26cd4e96a07f2358"))])
  (projectile
   . [(3 5 0 -4 0 20260813 4) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
