@@ -546,7 +546,7 @@
       (:authors ("Ingo Lohmar" . "i.lohmar@gmail.com"))
       (:commit . "120e982f47e01945c044e0762ba376741c41b76c"))])
  (compat
-  . [(31 0 0 2 0 20260812 3) ((emacs (25 1)))
+  . [(31 0 0 2 0 20260817 5) ((emacs (25 1)))
      "Emacs Lisp Compatibility Library" tar
      ((:url . "https://github.com/emacs-compat/compat")
       (:keywords "lisp" "maint")
@@ -554,7 +554,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Philip Kaludercic" . "philipk@posteo.net")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "ad2720457067b72859ba1247f6fdb3361b204bc6"))])
+      (:commit . "3c70c4572c2e54aaebb3dcdd0b2ef6a84676118e"))])
  (cond-star
   . [(1 0 0 20260523 114724) ((emacs (24 3)))
      "Extended form of `cond' construct" tar
@@ -1092,7 +1092,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
-  . [(1 24 0 20260815 11)
+  . [(1 24 0 20260817 14)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1101,7 +1101,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "682a56c8a34c4421e607f33697da1c1707f53631"))])
+      (:commit . "21f96f539b68a9e2b8f29b0aef3ce1acbb528c94"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -1369,14 +1369,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 6 0 20260816 8)
+  . [(1 4 6 0 20260817 10)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
+      (:commit . "21f96f539b68a9e2b8f29b0aef3ce1acbb528c94"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1930,13 +1930,13 @@
       (:url . "https://elpa.gnu.org/packages/kmb.html")
       (:commit . "bc71038e9ac9e7612374485e5af442f0c3326388"))])
  (kubed
-  . [(0 7 1 0 20260817 1) ((emacs (29 1))) "Kubernetes, Emacs, done!"
+  . [(0 7 1 0 20260817 4) ((emacs (29 1))) "Kubernetes, Emacs, done!"
      tar
      ((:url . "https://eshelyaron.com/kubed.html")
       (:keywords "tools" "kubernetes" "containers")
       (:maintainer "Eshel Yaron" . "~eshel/kubed-devel@lists.sr.ht")
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
-      (:commit . "7736db2205142ab77b6618383eb393a13e25c50e"))])
+      (:commit . "80fe51f8bb76533b04e2c26f29dbcab1aca07ea9"))])
  (landmark
   . [(1 0 0 20221221 80428) nil
      "Neural-network robot that learns landmarks" tar
@@ -2623,13 +2623,14 @@
       (:authors ("Junpeng Qiu" . "qjpchmail@gmail.com"))
       (:commit . "2cbbbc2254aa7bcaa4fb5e07c8c1bf2f381dba26"))])
  (parser-generator
-  . [(0 2 9 0 20260105 101345) ((emacs (26)))
-     "Parser Generator library" tar
-     ((:url . "https://github.com/cjohansson/emacs-parser-generator")
+  . [(0 2 9 0 20260817 2) ((emacs (26))) "Parser Generator library"
+     tar
+     ((:url
+       . "https://forgejo.cvj.se/cjohansson/emacs-parser-generator")
       (:keywords "tools" "convenience")
       (:maintainer "Christian Johansson" . "christian@cvj.se")
       (:authors ("Christian Johansson" . "christian@cvj.se"))
-      (:commit . "f50a986f644c32482a2cfd1fb0aa0b79b2774f0d"))])
+      (:commit . "c7b7f4645b477be0e6abb40945347e72de6e1fee"))])
  (path-iterator
   . [(1 0 0 20221221 81414) ((emacs (25 0)))
      "An iterator for traversing a directory path." tar
@@ -2677,13 +2678,13 @@
       (:authors ("Hugo Thunnissen" . "devel@hugot.nl"))
       (:commit . "ce64041a4be5da24514356a3d6e7f6b9fafdd51b"))])
  (phps-mode
-  . [(0 4 52 0 20260109 100035) ((emacs (26)))
+  . [(0 4 52 0 20260817 2) ((emacs (26)))
      "Major mode for PHP with code intelligence" tar
-     ((:url . "https://github.com/cjohansson/emacs-phps-mode")
+     ((:url . "https://forgejo.cvj.se/cjohansson/emacs-phps-mode")
       (:keywords "tools" "convenience")
       (:maintainer "Christian Johansson" . "christian@cvj.se")
       (:authors ("Christian Johansson" . "christian@cvj.se"))
-      (:commit . "4d9df2563e37649fecdd76333ee793864a5739a3"))])
+      (:commit . "d509c7228a145fe3eabd40723f59c07fa81597d6"))])
  (pinentry
   . [(0 1 0 20250408 22039) nil "GnuPG Pinentry server implementation"
      tar
@@ -3335,13 +3336,13 @@
       (:authors ("Aleksandr Vityazev" . "avityazev@posteo.org"))
       (:commit . "e7ee980ff7713c58fa31d620c5679d78c7dde947"))])
  (ssh-deploy
-  . [(3 1 16 0 20241117 185025) ((emacs (25)))
+  . [(3 1 16 0 20260817 4) ((emacs (25)))
      "Deployment via Tramp, global or per directory." tar
-     ((:url . "https://github.com/cjohansson/emacs-ssh-deploy")
+     ((:url . "https://forgejo.cvj.se/cjohansson/emacs-ssh-deploy")
       (:keywords "tools" "convenience")
       (:maintainer "Christian Johansson" . "christian@cvj.se")
       (:authors ("Christian Johansson" . "christian@cvj.se"))
-      (:commit . "dc8882d1806c0fdd635bc625b109179dfa3c929c"))])
+      (:commit . "d33b081828c9a13730ff2af8dc548ad6eeeea61f"))])
  (standard-themes
   . [(3 0 2 0 20260424 102741) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Like the default theme but more consistent" tar

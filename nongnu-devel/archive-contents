@@ -1047,7 +1047,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hermes
-  . [(0 3 1 0 20260816 18)
+  . [(0 3 2 0 20260817 1)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1055,7 +1055,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "4941ff9f546f024c846dde6cfde84e14a9442906"))])
+      (:commit . "d5eb4cc4dbb25e4d91ed822977f4742ffb330238"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1695,13 +1695,13 @@
       (:authors ("Lin Jian" . "me@linj.tech"))
       (:commit . "e28d289f985de8c4c131785d26cd4e96a07f2358"))])
  (projectile
-  . [(3 5 0 -4 0 20260813 4) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260817 6) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "10fa39917aa3a5c7f64aae31da49b4dfd9f6eb55"))])
+      (:commit . "a99daedfd4ea2a865ae12be06ecc5c61321cb47c"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

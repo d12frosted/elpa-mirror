@@ -56,16 +56,18 @@ gateway.
 2 Usage
 ═══════
 
-  `M-x hermes' opens the dashboard and `M-x hermes-chat' opens a chat
-  buffer:
+  `M-x hermes' opens the dashboard.  `M-x hermes-project-chat' switches
+  to a live chat for the current project or creates one at its root;
+  with `C-u' it always creates another.  `M-x hermes-chat' always opens
+  a new chat buffer:
   • `RET' to send.
   • `/' for slash commands.
   • `C-c C-o' for the actions menu.
   • Chats propose the launching buffer's `default-directory' when
     creating a session; the gateway returns the authoritative workspace.
     Use “Set directory” to browse the owning instance and change an idle
-    chat's gateway workspace without changing Emacs's local
-    `default-directory'.
+    chat's gateway workspace and buffer-local `default-directory'
+    together.
   • `M-x hermes-close' closes local connections and Hermes buffers for
     restart.
 
