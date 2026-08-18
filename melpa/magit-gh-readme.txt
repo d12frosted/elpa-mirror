@@ -1,6 +1,7 @@
 A lightweight GitHub CLI (gh) integration for Magit.
-Provides commands to list and checkout pull requests
-using the `gh` CLI tool (https://cli.github.com).
+Provides commands to list and checkout pull requests and to
+work with repositories (view, list, fork, create, and sync)
+using the `gh' CLI tool (https://cli.github.com).
 
 Usage:
   Press ",'" in Magit buffers to open the GitHub CLI menu.

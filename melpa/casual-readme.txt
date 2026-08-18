@@ -94,14 +94,20 @@ supported:
 
 INSTALLATION
 
+Simplified installation is done via the command `casual-init'. Run this via
+extended-execute-command (M-x) or add this to your Emacs initialization file.
+
+  (require 'casual)
+  (casual-init)
+
+By default `casual-init' will setup keybindings for all modules supported by
+Casual. Configure the customizable hook variable `casual-init-hook' to control
+which modules to enable.
+
+  M-x customize-variable casual-init-hook
+
 Users can choose any or all of the user interfaces made available by Casual
 at their pleasure.
 
-Configuration of a particular Casual user interface is performed per mode.
-For details, refer to the Info node `(casual) Install'.
-
-Casual relies on the latest stable release of `transient' which may differ
-from the version that is preinstalled as a built-in. By default, `package.el'
-will not upgrade a built-in package. Set the customizable variable
-`package-install-upgrade-built-in' to `t' to override this. For more details,
-please refer to the "Install" section on this project's repository web page.
+For details on installation of different modules refer to the Info node
+`(casual) Install'.
