@@ -204,14 +204,14 @@
 		("Damien Doligez" . "damien.doligez@inria.fr"))
       (:commit . "744333dc4c4bd8b93e037efa8f7362b0903b96a2"))])
  (casual
-  . [(2 17 1 0 20260718 0)
+  . [(3 0 1 0 20260817 0)
      ((emacs (30 1)) (transient (0 9 0)) (csv-mode (1 27)))
      "Transient user interfaces for various modes" tar
      ((:url . "https://github.com/kickingvegas/casual")
       (:keywords "tools" "wp")
       (:maintainer "Charles Choi" . "kickingvegas@gmail.com")
       (:authors ("Charles Choi" . "kickingvegas@gmail.com"))
-      (:commit . "cadbeab2ec45804e63a328202c9a82fbed2413c5"))])
+      (:commit . "4360a3f8bd8dc775bd1c41a0fb26f2397785ad7f"))])
  (cdlatex
   . [(4 18 5 0 20241007 162342) nil
      "Fast input methods for LaTeX environments and math" tar
@@ -573,13 +573,13 @@
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
  (evil-collection
-  . [(3 0 1 0 20260729 0) ((emacs (29 1)) (evil (1 2 13)))
+  . [(3 0 1 0 20260818 1) ((emacs (29 1)) (evil (1 2 13)))
      "A set of keybindings for Evil mode" tar
      ((:url . "https://github.com/emacs-evil/evil-collection")
       (:keywords "evil" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "fa8da0ebba4bbf2a84a78183420d8303179ef427"))])
+      (:commit . "0a9a4c46e274584f66a2e0c313819697c0ab0d2d"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar

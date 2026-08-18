@@ -83,17 +83,61 @@
 3 Install
 ═════════
 
-  In Emacs, a “mode” is analogous to an “app” in that it is a grouping
-  of related features. Installation of Casual is done on a per-mode
-  basis.
+  Casual versions 3.0 or greater offer a simplified installation with
+  command `casual-init'. Run this via `extended-execute-command' (`M-x')
+  or add this to your Emacs initialization file.
 
-  [Installation instructions for the different modes supported by Casual
-  can be found in the Casual User Guide].
+  ┌────
+  │ (require 'casual)
+  │ (casual-init)
+  └────
+
+  By default `casual-init' will setup keybindings for all modules
+  supported by Casual. Configure the customizable hook variable
+  `casual-init-hook' to control which modules to enable.
+
+  ┌────
+  │ M-x customize-variable casual-init-hook
+  └────
 
 
-[Installation instructions for the different modes supported by Casual
-can be found in the Casual User Guide]
-<https://kickingvegas.github.io/casual/Install.html>
+  Users can choose any or all of the user interfaces made available by
+  Casual at their pleasure.
+
+  To lower cognitive load, Casual uses the convention of re-using the
+  same keybinding to invoke a mode-specific main menu. For this purpose,
+  Casual uses two customizable variables to specify what keybinding to
+  bind to a Transient menu for a mode.
+
+  • `casual-keybinding-primary' (`C-o') - used for a main menu
+  • `casual-keybinding-secondary' (`M-m') - used for an auxiliary menu
+
+  Modify these variables to preference.
+
+  Casual makes [opinionated design decisions] on menu keybindings that
+  do not necessarily align with existing default bindings of a
+  mode. Each hook function in `casual-init-hook' honors a module
+  specific variable to make additional keybindings that reconcile
+  Transient menu bindings with that of a specific mode map. These
+  variables are of the form `casual-<module>-add-extra-keybindings' and
+  by default are set to `t'. Users wishing to disable them can do so via
+  `customize-variable'.
+
+  Note that `casual-init' will only work if Casual is installed via
+  `package-install'.
+
+  Users of Casual version 2.x do /not/ have to change their existing
+  setup. That said, migrating to `casual-init' offers significant
+  convenience by requiring less configuration.
+
+  For more detail on installation of different modules refer to the
+  [Casual User Guide].
+
+
+[opinionated design decisions]
+<https://kickingvegas.github.io/casual/Motivations.html>
+
+[Casual User Guide] <https://kickingvegas.github.io/casual/Install.html>
 
 
 4 Asks

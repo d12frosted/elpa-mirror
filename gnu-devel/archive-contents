@@ -2509,13 +2509,13 @@
       (:authors ("Martin Edström" . "meedstrom@runbox.eu"))
       (:commit . "07094dac902e452d59533e4d01e8177afaa0cfd1"))])
  (org-modern
-  . [(1 15 0 20260811 2) ((emacs (29 1)) (org (9 6)) (compat (31)))
+  . [(1 15 0 20260818 3) ((emacs (29 1)) (org (9 6)) (compat (31)))
      "Modern looks for Org" tar
      ((:url . "https://github.com/minad/org-modern")
       (:keywords "outlines" "hypermedia" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "23107b9cfddc5e7f899f4fed45a361fe93bf1be7"))])
+      (:commit . "d106d02cf045cc968c09989e9c48e0f2b44c574c"))])
  (org-notify
   . [(0 1 2 0 20251219 195448) ((emacs (25 1)))
      "Notifications for Org-mode" tar

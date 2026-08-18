@@ -119,6 +119,7 @@
     TODO keywords.
   • `visual-wrap-prefix-mode' relies on the `wrap-prefix' text property
     which is also used by `org-modern'.
+  • `visual-line-mode' may cause line wraps in headline tags.
 
 
 [org-modern-indent] <https://github.com/jdtsmith/org-modern-indent>
