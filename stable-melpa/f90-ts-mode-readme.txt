@@ -2,6 +2,8 @@ f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 30+)
 
 Recently changed, added or improved:
+  [08-2026] Jump-to-rightmost-position added to interactive fill operation
+            added.
   [08-2026] Mark region operations fixed: always consider trimmed region
             of nodes.  Some nodes like a whole "subroutine..end subroutine"
             block contains a trailing newline, which should not be

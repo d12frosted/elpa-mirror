@@ -401,6 +401,13 @@
      ((:url . "https://github.com/spotify/dockerfile-mode")
       (:keywords "docker" "languages" "processes" "tools")
       (:commit . "97733ce074b1252c1270fd5e8a53d178b66668ed"))])
+ (doom-game
+  . [(0 1 0 20260818 4) ((emacs (31 0))) "DOOM on Emacs" tar
+     ((:url . "https://github.com/minad/doom-on-emacs")
+      (:keywords "games")
+      (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+      (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
+      (:commit . "c01017027e9cb8a156409a3f2ea2a647ea501205"))])
  (dracula-theme
   . [(1 8 3 0 20260701 10) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")
@@ -741,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(40 0 -4 0 20260817 7) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260818 10) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -750,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "61d125ba2582f456208470ca659d34381000e189"))])
+      (:commit . "c13a6dde068c21f67230db99cf85a56ef91382db"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1047,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hermes
-  . [(0 3 2 0 20260817 1)
+  . [(0 3 2 0 20260818 2)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1055,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "d5eb4cc4dbb25e4d91ed822977f4742ffb330238"))])
+      (:commit . "fc7b66e988ef8267e21220c0057555c0856dadad"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1186,14 +1193,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 13 1 0 20260816 3)
+  . [(0 13 1 0 20260818 4)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "4b678cc261bf26fab4a1035babba4cfb181275cb"))])
+      (:commit . "54b1bef6dddd3b787a33b91cf66280892725d475"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1695,13 +1702,13 @@
       (:authors ("Lin Jian" . "me@linj.tech"))
       (:commit . "e28d289f985de8c4c131785d26cd4e96a07f2358"))])
  (projectile
-  . [(3 5 0 -4 0 20260817 6) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260818 14) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "a99daedfd4ea2a865ae12be06ecc5c61321cb47c"))])
+      (:commit . "a770b83830250ea5d4ebccaaf3199c31f45040f8"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
