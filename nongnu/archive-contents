@@ -382,6 +382,13 @@
      ((:url . "https://github.com/spotify/dockerfile-mode")
       (:keywords "docker" "languages" "processes" "tools")
       (:commit . "7ce17e054eca4d56ca8bc1e4a6a0dbf58efd8d52"))])
+ (doom-game
+  . [(0 3) ((emacs (31 0))) "DOOM on Emacs" tar
+     ((:url . "https://github.com/minad/doom-on-emacs")
+      (:keywords "games")
+      (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+      (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
+      (:commit . "0c429c5d25d7d51c6c02243b81f38c45166783f6"))])
  (dracula-theme
   . [(1 8 3) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")

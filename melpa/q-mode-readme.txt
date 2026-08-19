@@ -9,6 +9,8 @@ Some of its major features include:
 
  - interaction with inferior q[con] instance (comint-mode),
 
+ - inline eval results next to the code that produced them (`q-inline-mode'),
+
  - native Emacs qcon replacement supporting TLS (`q-con'),
 
  - secure password retrieval (auth-source),
@@ -98,6 +100,19 @@ q process buffer for direct interaction.
 If the source file exists on the same machine as the q process,
 `C-c M-l' can be used to load the file associated with the active
 buffer.
+
+`M-x q-inline-mode' toggles showing eval results as an overlay next
+to the code that produced them, in addition to the usual q[con]
+buffer output.  `C-c C-.' pops up the full, untruncated reply for
+the result at point (useful for tables, which are shown truncated
+to their first line inline); `C-c C-k' clears the result at point,
+and `C-u C-c C-k' clears every result in the buffer.  Editing the
+code a result is attached to clears that result automatically.  The
+`q-inline-duration' variable controls how long a result stays
+visible: nil (the default) leaves it until the code is edited or
+explicitly cleared, a number of seconds auto-clears it after that
+long, and the symbol `command' clears it as soon as any command
+runs.
 
 `C-c C-g' triggers a manual rescan of the project, re-scanning only
 files whose mtime has changed.  Prefix with `C-u' to force all files

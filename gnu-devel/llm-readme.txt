@@ -478,6 +478,14 @@
   function was first called from.  If the buffer has been killed, it
   will be executed in a temporary buffer instead.
 
+  The error callback is called when something goes wrong, either
+  something like an incorrect model, or a quality issue like an
+  incorrect tool being called.  Sometimes, there may be both errors and
+  successes, such as if there are two tools called, one of which is
+  correct and the other incorrect.  In those cases, this will count as a
+  success, and if `multi-output' is on, you can get a list of errors
+  with the `:errors' key.
+
 
 7.1 Main functions
 ──────────────────
@@ -580,6 +588,9 @@
 
   The possible plist keys are:
   • `:text' , for the main textual output.
+  • `:errors', a list of errors that happened during processing along
+    with relevant error data.  If this is returned it means not
+    everything failed, otherwise the error callback would be called.
   • `:reasoning', for reasoning output, when the model provides it.
   • `:tool-uses', the tools that the llm identified to be called, as a
     list of plists, with `:name' and `:args' values.

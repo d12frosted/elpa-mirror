@@ -1242,14 +1242,14 @@
       (:url . "https://elpa.gnu.org/packages/epoch-view.html")
       (:commit . "7a9773a8b55491bd47f23dfdb6c4224f5cc8e50c"))])
  (erc
-  . [(5 7 -4 0 20260816 25) ((emacs (27 1)) (compat (31)))
+  . [(5 7 -4 0 20260818 26) ((emacs (27 1)) (compat (31)))
      "An Emacs Internet Relay Chat client" tar
      ((:url . "https://www.gnu.org/software/emacs/erc.html")
       (:keywords "irc" "chat" "client" "internet")
       (:maintainer ("Amin Bandali" . "bandali@gnu.org")
 		   ("F. Jason Park" . "jp@neverwas.me"))
       (:authors ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-      (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
+      (:commit . "7d55a39debff4b145af7ecf654fc699b22f0229c"))])
  (ergoemacs-mode
   . [(5 16 10 12 0 20260811 462)
      ((emacs (24 1)) (cl-lib (0 5)) (nadvice (0 4)))
@@ -2029,14 +2029,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 31 3 0 20260801 3)
+  . [(0 31 3 0 20260818 5)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "791bf823259f495439e56c626975ccad487c779b"))])
+      (:commit . "4566f266949b2165cc7eaf25f3195198c0f28edb"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
