@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260807 59)
+  . [(2 1 0 -4 0 20260819 69)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "501e1686962ce2613f7478b2a3a0f63c546b812e"))])
+      (:commit . "96238051df176784483fe5b518083d744cb3ccb6"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -402,12 +402,12 @@
       (:keywords "docker" "languages" "processes" "tools")
       (:commit . "97733ce074b1252c1270fd5e8a53d178b66668ed"))])
  (doom-game
-  . [(0 3 0 20260818 0) ((emacs (31 0))) "DOOM on Emacs" tar
+  . [(0 3 0 20260819 1) ((emacs (31 0))) "DOOM on Emacs" tar
      ((:url . "https://github.com/minad/doom-on-emacs")
       (:keywords "games")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "0c429c5d25d7d51c6c02243b81f38c45166783f6"))])
+      (:commit . "cb1ab50c4f61bcd7482e041c3c5a11db4b66a95b"))])
  (dracula-theme
   . [(1 8 3 0 20260701 10) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hermes
-  . [(0 3 2 0 20260818 2)
+  . [(0 3 2 0 20260819 3)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "fc7b66e988ef8267e21220c0057555c0856dadad"))])
+      (:commit . "1734956f9581f41aaec392f8c5b6918b3c43a863"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 0 0 20260813 3)
+  . [(4 7 0 0 20260819 10)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,9 +1343,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "a68e9de623b2b59e9afb7329d0c947826b26a604"))])
+      (:commit . "2d9d48fec6acf5e545395d7c514fd8b70f6ad028"))])
  (magit-section
-  . [(4 7 0 0 20260813 3)
+  . [(4 7 0 0 20260819 10)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1354,7 +1354,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "a68e9de623b2b59e9afb7329d0c947826b26a604"))])
+      (:commit . "2d9d48fec6acf5e545395d7c514fd8b70f6ad028"))])
  (markdown-mode
   . [(2 9 -3 0 20260722 13) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1404,13 +1404,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "22831489d3bbc22aef315c0f003bf3756b8889fa"))])
  (moe-theme
-  . [(1 1 0 0 20260811 12) nil
+  . [(1 1 0 0 20260819 13) nil
      "A colorful eye-candy theme. Moe, moe, kyun!" tar
      ((:url . "https://github.com/kuanyui/moe-theme.el")
       (:keywords "themes")
       (:maintainer "kuanyui" . "azazabc123@gmail.com")
       (:authors ("kuanyui" . "azazabc123@gmail.com"))
-      (:commit . "d091865eeb97b0894e6517137dc0544560bc57fb"))])
+      (:commit . "6a5c85c89855ff1fba6aa57d68346b9b7bb7cec0"))])
  (monokai-theme
   . [(3 5 3 0 20240911 104603) nil "A fruity color theme for Emacs."
      tar
