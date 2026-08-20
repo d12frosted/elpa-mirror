@@ -2255,13 +2255,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260816 32) ((emacs (28 1)))
+  . [(5 3 0 0 20260819 33) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "8ebcedea65c2609af1c7a23257007c1e2a910add"))])
+      (:commit . "75ad3771352ed4b61a141f8d4d63e1b08a6c5cbc"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar

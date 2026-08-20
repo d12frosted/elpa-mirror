@@ -1694,13 +1694,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-store
-  . [(0 9 0 0 20260819 2) ((emacs (29 1)))
+  . [(0 9 0 0 20260820 3) ((emacs (29 1)))
      "Project backend for Nix store" tar
      ((:url . "https://github.com/jian-lin/project-store")
       (:keywords "nix" "store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "6c2bb36826d0aa41e3842b44b24e6a649dbb386d"))])
+      (:commit . "5e4e0e8531ea066b0c32538b6ce4c3f7aa90d8f2"))])
  (projectile
   . [(3 5 0 -4 0 20260818 14) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
@@ -1817,6 +1817,14 @@
       (:maintainer "Mozilla" . "rust-mode@noreply.github.com")
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
       (:commit . "0058837c048cc031ca1a13f598a6a6604777458b"))])
+ (sapling
+  . [(0 2 1 0 20260820 0) ((emacs (26 1)))
+     "Magit-like interface for Sapling" tar
+     ((:url . "https://github.com/swithinchan/sapling/")
+      (:keywords "tools" "vc")
+      (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
+      (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
+      (:commit . "5948e50ce95c7302bf91eac4d341fcd628581b3d"))])
  (sass-mode
   . [(3 0 16 0 20190502 5315) ((haml-mode (3 0 15)) (cl-lib (0 5)))
      "Major mode for editing Sass files" tar
@@ -2163,6 +2171,14 @@
       (:authors ("Venkat Iyer" . "venkat@comit.com"))
       (:url . "https://elpa.nongnu.org/nongnu/vc-fossil.html")
       (:commit . "4a4a3e4df83ba2f1ea8bfd8aa7e9f9b2c1c32ca9"))])
+ (vc-sapling
+  . [(0 2 1 0 20260820 0) ((emacs (26 1)) (sapling (0 2 0)))
+     "VC backend for Sapling" tar
+     ((:url . "https://github.com/swithinchan/vc-sapling/")
+      (:keywords "tools" "vc")
+      (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
+      (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
+      (:commit . "d1edae122831e39ea5e6c67e26a5f2efd218bf06"))])
  (vcomplete
   . [(2 0 0 20230227 132830) ((emacs (25 1))) "Visual completions" tar
      ((:url . "https://dsemy.com/projects/vcomplete")

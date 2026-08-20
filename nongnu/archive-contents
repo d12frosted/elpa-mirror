@@ -1710,6 +1710,13 @@
       (:maintainer "Mozilla" . "rust-mode@noreply.github.com")
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
       (:commit . "a8c69ce8f5e7793d2f81dbef60fb37b4b93afccf"))])
+ (sapling
+  . [(0 2 1) ((emacs (26 1))) "Magit-like interface for Sapling" tar
+     ((:url . "https://github.com/swithinchan/sapling/")
+      (:keywords "tools" "vc")
+      (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
+      (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
+      (:commit . "5948e50ce95c7302bf91eac4d341fcd628581b3d"))])
  (sass-mode
   . [(3 0 16) ((haml-mode (3 0 15)))
      "Major mode for editing Sass files" tar
@@ -2034,6 +2041,14 @@
       (:authors ("Venkat Iyer" . "venkat@comit.com"))
       (:url . "https://elpa.nongnu.org/nongnu/vc-fossil.html")
       (:commit . "4a4a3e4df83ba2f1ea8bfd8aa7e9f9b2c1c32ca9"))])
+ (vc-sapling
+  . [(0 2 1) ((emacs (26 1)) (sapling (0 2 0)))
+     "VC backend for Sapling" tar
+     ((:url . "https://github.com/swithinchan/vc-sapling/")
+      (:keywords "tools" "vc")
+      (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
+      (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
+      (:commit . "d1edae122831e39ea5e6c67e26a5f2efd218bf06"))])
  (vcomplete
   . [(2 0) ((emacs (25 1))) "Visual completions" tar
      ((:url . "https://dsemy.com/projects/vcomplete")
