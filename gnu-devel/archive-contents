@@ -1393,6 +1393,15 @@
       (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "d72e3ad4cdfd5cea1509a241d55e18f54ae2aeca"))])
+ (flymake-harper
+  . [(0 1 0 0 20260820 5) ((emacs (27 1)))
+     "Flymake backend for Harper" tar
+     ((:url . "https://codeberg.org/pkal/flymake-harper.el")
+      (:keywords "convenience" "text")
+      (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
+      (:authors ("Manuel Uberti" . "manuel.uberti@inventati.org")
+		("Philip Kaludercic" . "philipk@posteo.net"))
+      (:commit . "9327ba7fc17c7a3ef738c9be520c5ffad7a6d296"))])
  (flymake-proselint
   . [(0 3 0 0 20260704 11) ((emacs (27 1)))
      "Flymake backend for proselint" tar

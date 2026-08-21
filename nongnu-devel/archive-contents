@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260819 69)
+  . [(2 1 0 -4 0 20260820 71)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "96238051df176784483fe5b518083d744cb3ccb6"))])
+      (:commit . "87e5363ec21751644ad8b33f66da5a5504972c5a"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -402,12 +402,12 @@
       (:keywords "docker" "languages" "processes" "tools")
       (:commit . "97733ce074b1252c1270fd5e8a53d178b66668ed"))])
  (doom-game
-  . [(0 3 0 20260819 1) ((emacs (31 0))) "DOOM on Emacs" tar
+  . [(0 3 0 20260820 2) ((emacs (31 0))) "DOOM on Emacs" tar
      ((:url . "https://github.com/minad/doom-on-emacs")
       (:keywords "games")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "cb1ab50c4f61bcd7482e041c3c5a11db4b66a95b"))])
+      (:commit . "68c1691fe2c4e40df13094d5a2b5743713882697"))])
  (dracula-theme
   . [(1 8 3 0 20260701 10) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")
@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "4b1346eb9a8a76ee9c9dede69738c63ad97ac5b6"))])
  (flycheck
-  . [(40 0 -4 0 20260819 13) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260820 16) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "740fc32056ddd9f705b975f686b144bb84efa6a2"))])
+      (:commit . "ac7a53aa2d69680d38261be4f26a9404675bfaed"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1702,13 +1702,13 @@
       (:authors ("Lin Jian" . "me@linj.tech"))
       (:commit . "5e4e0e8531ea066b0c32538b6ce4c3f7aa90d8f2"))])
  (projectile
-  . [(3 5 0 -4 0 20260818 14) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260820 23) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "a770b83830250ea5d4ebccaaf3199c31f45040f8"))])
+      (:commit . "c1ad79b7c98bba4e8382fc993556ca62b71e19ea"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -1891,11 +1891,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "d74da3eaf2b37432fe8fa66c2a470550e811f081"))])
  (slime
-  . [(2 32 -4 0 20260808 55) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260820 56) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "32740772e0b669679df835d38044493b9b090487"))])
+      (:commit . "ec7d59f50007cf899ebe7539a639bdb88392baf4"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
