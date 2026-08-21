@@ -2,6 +2,7 @@ f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 30+)
 
 Recently changed, added or improved:
+  [08-2026] `f90-ts-shift-line-break' as combined break/join function added.
   [08-2026] Defcustom `f90-ts-font-lock-error` replaced by
             `f90-ts-font-lock-error-show'.  Errors are now always fontified
             by `f90-ts-font-lock-error-face'.  The new defcustom
