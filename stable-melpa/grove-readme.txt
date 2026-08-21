@@ -12,6 +12,12 @@ Features:
 - Inbox review for triaging untagged notes
 
 Usage:
+  ;;;; Single note location
   (setq grove-directory "~/notes/")
+  ;;;; Profile mode for different storage locations.
+  (setq grove-profiles
+        '((personal :directory "~/remoteFolder/personal")
+          (work     :directory "~/localFolder/work")
+          (other    :directory "~/otherNotes")))
   (global-grove-mode 1)   ; auto-enable grove-mode in vault files
   (grove-open)
