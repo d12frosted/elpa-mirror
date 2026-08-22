@@ -1,14 +1,19 @@
-View data from dired via ess(-r)
+View data files from Dired via ESS and R.
 
 (require 'dired-view-data)
 (dired-view-data-global-mode)
-or call minor-mode in dired buffer mannualy
+
+or enable the minor mode in Dired buffers manually:
 (dired-view-data-mode 1)
-which make `dired-do-shell-command' (`S-!') recognize those files as well if
-`dired-view-data-guess-shell-alist-p' is `t'.
 
-In dired buffer, call `dired-view-data` (`V' or `C-c C-v') on a data file
-(e.g., sas7bdat, xpt, rds, csv, rda or rdata), and buffer will pop up with
-data displayed.
+In a Dired buffer, call `dired-view-data' (`V' or `C-c C-v') on a
+data file (sas7bdat, xpt, xlsx/xls, parquet, sav, dta, rds, csv,
+tsv, rda or rdata) and a buffer pops up with the data rendered by
+`ess-view-data'.
 
-You can modify or add new format via `dired-view-data-data-name-format'.
+Add or change formats via `dired-view-data-data-name-format'.
+Quit the R session with `dired-view-data-quit-session'.
+
+Optionally set `dired-view-data-guess-shell-alist-p' to t to also
+hook `dired-do-shell-command' (`!') for those files; it is off by
+default.  See NEWS.md for what changed in version 2.
