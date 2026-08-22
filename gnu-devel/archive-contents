@@ -1242,14 +1242,14 @@
       (:url . "https://elpa.gnu.org/packages/epoch-view.html")
       (:commit . "7a9773a8b55491bd47f23dfdb6c4224f5cc8e50c"))])
  (erc
-  . [(5 7 -4 0 20260818 26) ((emacs (27 1)) (compat (31)))
+  . [(5 7 -4 0 20260821 27) ((emacs (27 1)) (compat (31)))
      "An Emacs Internet Relay Chat client" tar
      ((:url . "https://www.gnu.org/software/emacs/erc.html")
       (:keywords "irc" "chat" "client" "internet")
       (:maintainer ("Amin Bandali" . "bandali@gnu.org")
 		   ("F. Jason Park" . "jp@neverwas.me"))
       (:authors ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-      (:commit . "7d55a39debff4b145af7ecf654fc699b22f0229c"))])
+      (:commit . "b0975ac3d94b66e001a272e41616222f5dd41e87"))])
  (ergoemacs-mode
   . [(5 16 10 12 0 20260811 462)
      ((emacs (24 1)) (cl-lib (0 5)) (nadvice (0 4)))
@@ -1459,13 +1459,13 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "d7c243ac3be2a67986f53f3dc31ba1426e82b771"))])
  (futur
-  . [(2 0 0 20260813 1) ((emacs (27 1)))
+  . [(2 0 0 20260821 2) ((emacs (27 1)))
      "Future/promise-based async library" tar
      ((:url . "https://elpa.gnu.org/packages/futur.html")
       (:keywords "concurrency" "async" "promises" "futures")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-      (:commit . "3ebae9df195db67977b740e51e47d869e3bc5835"))])
+      (:commit . "cb69abfa32bd230d3d1763f4a294c85e1337db6d"))])
  (gcmh
   . [(0 2 1 0 20201116 225142) ((emacs (24)))
      "the Garbage Collector Magic Hack" tar
@@ -1701,7 +1701,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260815 15) ((emacs (28)))
+  . [(9 1 0 0 20260821 27) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1711,7 +1711,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "37615fa192e2cafcb11cd0d3c6bea1dbfaff388a"))])
+      (:commit . "65816c72d6fd13823b0359e6cfee3b682ff11547"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
