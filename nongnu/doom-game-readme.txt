@@ -58,7 +58,7 @@ source tree, and also available for download as [patch] for Emacs
 
   Install via `M-x package-install RET doom-game RET' from [ELPA]. After
   the installation, invoke `M-x doom'. Compilation output and error
-  messages will appear in the `*doom-log*' buffer.
+  messages will appear in the ephemeral `_*doom-log*' buffer.
 
 
 [ELPA] <https://elpa.nongnu.org/nongnu/doom-game.html>
@@ -69,8 +69,8 @@ source tree, and also available for download as [patch] for Emacs
 
   Clone this repository and execute the command `make'. This will
   download the DOOM source, compile the native Emacs module, and then
-  start DOOM in `emacs -Q'. Error messages will appear in the
-  `*doom-log*' buffer.
+  start DOOM in `emacs -Q'. Error messages will appear in the ephemeral
+  `_*doom-log*' buffer.
 
 
 2 Canvas links

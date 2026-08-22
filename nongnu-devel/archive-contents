@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260821 73)
+  . [(2 1 0 -4 0 20260821 78)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "12722d3b290d8a5fe54c3222e3d9061505e878e3"))])
+      (:commit . "3fce442f0fe0e3908aa221daba95168e1fb57965"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -402,12 +402,12 @@
       (:keywords "docker" "languages" "processes" "tools")
       (:commit . "97733ce074b1252c1270fd5e8a53d178b66668ed"))])
  (doom-game
-  . [(0 3 0 20260820 2) ((emacs (31 0))) "DOOM on Emacs" tar
+  . [(0 4 0 20260821 0) ((emacs (31 0))) "DOOM on Emacs" tar
      ((:url . "https://github.com/minad/doom-on-emacs")
       (:keywords "games")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "68c1691fe2c4e40df13094d5a2b5743713882697"))])
+      (:commit . "cf637c9c59f34f997c00728eccac8685763927b2"))])
  (dracula-theme
   . [(1 8 3 0 20260701 10) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")
@@ -489,7 +489,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 1 1 0 20260816 45) ((emacs (29 1)) (compat (31)))
+  . [(4 2 0 0 20260821 0) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -498,10 +498,10 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "943a5acf49b286a129a78f7142672126781578c0"))])
+      (:commit . "737c1d6d2649b1ff82c5e2d2d9891a7caeac3835"))])
  (elfeed-web
-  . [(4 0 0 0 20260628 4)
-     ((emacs (29 1)) (compat (31)) (elfeed (4 0 0))
+  . [(4 1 0 0 20260821 0)
+     ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
       (simple-httpd (1 6)))
      "Web interface to Elfeed" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed-web")
@@ -511,7 +511,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "57018aff30f12f5fd07897ceb6958dc056cc6c87"))])
+      (:commit . "1f089663e7952c33512c37d2bd2544043e039e23"))])
  (elixir-mode
   . [(2 5 0 0 20230626 143859) ((emacs (25)))
      "Major mode for editing Elixir files" tar
@@ -738,17 +738,17 @@
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
       (:commit . "4ce420f28663fc11a979c5b665db69d46471f6bc"))])
  (flx
-  . [(0 6 2 0 20260820 11) ((cl-lib (0 3)))
+  . [(0 6 3 0 20260821 0) ((cl-lib (0 3)))
      "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
-      (:commit . "6803eca89d0c4c7871433c993463e66aabf77443"))])
+      (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flx-ido
-  . [(0 6 2 0 20260820 11) ((emacs (24 1)) (flx (0 1)) (cl-lib (0 3)))
+  . [(0 6 3 0 20260821 0) ((emacs (24 1)) (flx (0 1)) (cl-lib (0 3)))
      "flx integration for ido" tar
      ((:url . "https://github.com/lewang/flx")
-      (:commit . "6803eca89d0c4c7871433c993463e66aabf77443"))])
+      (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260821 17) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260821 20) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "e5c9e9acae64da1cc52a21124a7b6987fb9f2a53"))])
+      (:commit . "7074b82cc82b6c3258f0f436514eca5236101336"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260821 91)
+  . [(0 9 9 5 0 20260821 92)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "33b7af7113580c32af7a8593766d33f16b926973"))])
+      (:commit . "cd2cd7367dc0e0b1ba14cf6e5e648c0e488fff99"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar

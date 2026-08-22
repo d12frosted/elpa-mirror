@@ -380,13 +380,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 8) ((emacs (29 1)) (compat (31)))
+  . [(2 9) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "5a3aa3058eb47bd10ae72c8919921e3fb40952a5"))])
+      (:commit . "f0135abaf95a22b9fb2c951751a5d0733ce61bbd"))])
  (capf-autosuggest
   . [(0 3) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -576,13 +576,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "1b30a28857727202d1f6a027f83ad66151fb1e92"))])
  (corfu
-  . [(2 13) ((emacs (29 1)) (compat (31)))
+  . [(2 14) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "6477aac54fa1ea4865b23d7562e48b83a082a1e4"))])
+      (:commit . "75be36fe63e78c63ac71c32039ab07836bd532ac"))])
  (coterm
   . [(1 6) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -800,13 +800,13 @@
       (:authors ("Aleksandr Vityazev" . "avityazew@gmail.com"))
       (:commit . "bc07c1124545cbf6e5ebe64e92bfaa306e309033"))])
  (dicom
-  . [(1 5) ((emacs (29 1)) (compat (31)))
+  . [(1 6) ((emacs (29 1)) (compat (31)))
      "DICOM viewer - Digital Imaging & Communications in Medicine" tar
      ((:url . "https://github.com/minad/dicom")
       (:keywords "multimedia" "hypermedia" "files")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "026a12a27939b29935ea343bab9162ed27bd732e"))])
+      (:commit . "5db856bd206ac899ecd5378eb3cb655b310397f5"))])
  (dict-tree
   . [(0 17) ((trie (0 6)) (tNFA (0 1 1)) (heap (0 3)) (emacs (24 1)))
      "Dictionary data structure" tar
@@ -1308,13 +1308,13 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "d72e3ad4cdfd5cea1509a241d55e18f54ae2aeca"))])
  (flymake-harper
-  . [(0 1 0) ((emacs (27 1))) "Flymake backend for harper" tar
+  . [(0 1 1) ((emacs (27 1))) "Flymake backend for Harper" tar
      ((:url . "https://codeberg.org/pkal/flymake-harper.el")
-      (:keywords "convenience")
+      (:keywords "convenience" "text")
       (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
       (:authors ("Manuel Uberti" . "manuel.uberti@inventati.org")
 		("Philip Kaludercic" . "philipk@posteo.net"))
-      (:commit . "bf1da925ea2e14f6234851c8df1543489d7fe20a"))])
+      (:commit . "d7c8ff434ab388cd5a29a25b7ecd7340c17fd371"))])
  (flymake-proselint
   . [(0 3 0) ((emacs (26 1))) "Flymake backend for proselint" tar
      ((:url . "https://git.sr.ht/~manuel-uberti/flycheck-proselint")
@@ -1989,7 +1989,7 @@
       (:url . "https://elpa.gnu.org/packages/map.html")
       (:commit . "9da2efb670574b473ab864ae0456b4f1b38e680b"))])
  (marginalia
-  . [(2 11) ((emacs (29 1)) (compat (31)))
+  . [(2 12) ((emacs (29 1)) (compat (31)))
      "Enrich existing commands with completion annotations" tar
      ((:url . "https://github.com/minad/marginalia")
       (:keywords "docs" "help" "matching" "completion")
@@ -1997,7 +1997,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "feb66c02bbd88dba867cdd92b94fe24279ed578a"))])
+      (:commit . "7ec0b70afb43a756ecd45a958c6ebe797717fc91"))])
  (markchars
   . [(0 2 2) nil "Mark chars fitting certain characteristics" tar
      ((:maintainer "Lennart Borgman" . "lennart.borgman@gmail.com")
@@ -3583,13 +3583,13 @@
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:commit . "b3574e6464b0cce4a878106c07f1ea8f65989a6b"))])
  (vertico
-  . [(2 12) ((emacs (29 1)) (compat (31)))
+  . [(2 13) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
      ((:url . "https://github.com/minad/vertico")
       (:keywords "convenience" "files" "matching" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "be96000c2b0b3501723291b3721ceba12f784dcd"))])
+      (:commit . "a6874e3d8c74a9eea77967d702d608ebbd6b27ec"))])
  (vertico-posframe
   . [(0 9 2) ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))
      "Using posframe to show Vertico" tar

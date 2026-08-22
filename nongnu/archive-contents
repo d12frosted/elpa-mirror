@@ -383,12 +383,12 @@
       (:keywords "docker" "languages" "processes" "tools")
       (:commit . "7ce17e054eca4d56ca8bc1e4a6a0dbf58efd8d52"))])
  (doom-game
-  . [(0 3) ((emacs (31 0))) "DOOM on Emacs" tar
+  . [(0 4) ((emacs (31 0))) "DOOM on Emacs" tar
      ((:url . "https://github.com/minad/doom-on-emacs")
       (:keywords "games")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "0c429c5d25d7d51c6c02243b81f38c45166783f6"))])
+      (:commit . "cf637c9c59f34f997c00728eccac8685763927b2"))])
  (dracula-theme
   . [(1 8 3) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")
@@ -467,7 +467,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "2d89026fbc61214fda25d5dd589cd328ddce5f6e"))])
  (elfeed
-  . [(4 1 1) ((emacs (29 1)) (compat (31))) "An Atom/RSS feed reader"
+  . [(4 2 0) ((emacs (29 1)) (compat (31))) "An Atom/RSS feed reader"
      tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -476,10 +476,10 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "fdf477f99fe1e152f7fbcb098fae1de00fa09efb"))])
+      (:commit . "737c1d6d2649b1ff82c5e2d2d9891a7caeac3835"))])
  (elfeed-web
-  . [(4 0 0)
-     ((emacs (28 1)) (compat (31)) (elfeed (3 4 2))
+  . [(4 1 0)
+     ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
       (simple-httpd (1 6)))
      "Web interface to Elfeed" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed-web")
@@ -489,7 +489,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "e947501a29457a55dfb0828aa791185c6b41bc37"))])
+      (:commit . "1f089663e7952c33512c37d2bd2544043e039e23"))])
  (elixir-mode
   . [(2 5 0) ((emacs (25))) "Major mode for editing Elixir files" tar
      ((:url . "https://github.com/elixir-editors/emacs-elixir")
@@ -706,14 +706,14 @@
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
       (:commit . "84e57b17520edbadbdca17e0b2dba50c56134d74"))])
  (flx
-  . [(0 6 2) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
+  . [(0 6 3) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
-      (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
+      (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flx-ido
-  . [(0 6 2) ((flx (0 1)) (cl-lib (0 3))) "flx integration for ido"
-     tar
+  . [(0 6 3) ((emacs (24 1)) (flx (0 1)) (cl-lib (0 3)))
+     "flx integration for ido" tar
      ((:url . "https://github.com/lewang/flx")
-      (:commit . "29e3664b75618847eaaf821713a74eb3c897a124"))])
+      (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
   . [(39 0) ((emacs (28 1)) (seq (2 24))) "On-the-fly syntax checking"
      tar

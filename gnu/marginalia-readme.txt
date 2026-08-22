@@ -60,7 +60,7 @@ Table of Contents
 
 [ELPA] <https://elpa.gnu.org/packages/marginalia.html>
 
-[MELPA] <https://melpa.org/#/marginalia>
+[MELPA] <https://releases.melpa.org/#/marginalia>
 
 [Vertico] <https://github.com/minad/vertico>
 
