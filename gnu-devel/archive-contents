@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260819 67) ((emacs (28 1)))
+  . [(14 1 2 0 20260822 68) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "34e5496f1205181dfd995066ed599197229bacfa"))])
+      (:commit . "1c17eb433c7a040df4136911672cb8bd0bbf36e2"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -266,12 +266,12 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "85261a928ae0ec3b41e639f05291ffd6bf7c231c"))])
  (beframe
-  . [(1 5 0 0 20260605 5) ((emacs (28 1))) "Isolate buffers per frame"
+  . [(1 5 0 0 20260822 6) ((emacs (28 1))) "Isolate buffers per frame"
      tar
      ((:url . "https://github.com/protesilaos/beframe")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "e4d0b4e5823c3137a70ca3f5d367c76bfadd0db0"))])
+      (:commit . "0ba4d4cf5485c181c24b57dd6ccee387704c606b"))])
  (bicep-ts-mode
   . [(0 1 4 0 20260808 85) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
@@ -1459,13 +1459,13 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "d7c243ac3be2a67986f53f3dc31ba1426e82b771"))])
  (futur
-  . [(2 0 0 20260821 2) ((emacs (27 1)))
+  . [(2 0 0 20260822 4) ((emacs (27 1)))
      "Future/promise-based async library" tar
      ((:url . "https://elpa.gnu.org/packages/futur.html")
       (:keywords "concurrency" "async" "promises" "futures")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-      (:commit . "cb69abfa32bd230d3d1763f4a294c85e1337db6d"))])
+      (:commit . "bcfc5c34b6a616d80bfbc41772a8f3a65e39b01a"))])
  (gcmh
   . [(0 2 1 0 20201116 225142) ((emacs (24)))
      "the Garbage Collector Magic Hack" tar
@@ -1701,7 +1701,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260821 27) ((emacs (28)))
+  . [(9 1 0 0 20260822 30) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1711,7 +1711,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "65816c72d6fd13823b0359e6cfee3b682ff11547"))])
+      (:commit . "498ccb4c2e547aad20766eec64e802453987a40c"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2038,14 +2038,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 31 3 0 20260818 5)
+  . [(0 31 3 0 20260822 6)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "4566f266949b2165cc7eaf25f3195198c0f28edb"))])
+      (:commit . "7658e372962c5028a53d7b605bb8f9870f696987"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -2465,13 +2465,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "f4a8114ed729d34d35cec6c7eb34b5d0b23aaa6f"))])
  (org
-  . [(10 0 -1 0 20260821 424) ((emacs (28 2)))
+  . [(10 0 -1 0 20260822 429) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "708e12df330b49542937d97e976d8435b8c96fba"))])
+      (:commit . "2f2e4d865c8c3023bcfc9c9434bbac219cecf82c"))])
  (org-contacts
   . [(1 3 0 20260813 7) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
