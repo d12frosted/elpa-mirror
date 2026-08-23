@@ -1,5 +1,5 @@
 
-Introduces a margin formatter for Corfu which adds icons. The icons are
+Introduces a margin formatter for Corfu which adds icons.  The icons are
 configurable, but should be text icons provided by the icons fonts in
 `nerd-icons'.
 
