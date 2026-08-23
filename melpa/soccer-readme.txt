@@ -2,8 +2,12 @@
 This package brings soccer (football) fixtures, results and league
 tables into Emacs, for every competition the source site covers.
 
-The entry point is `soccer', a transient menu from which every view is
-reachable.  Views open in a `soccer-mode' buffer which has its own
+`soccer-dashboard' is the quickest way in: it shows the recent results,
+the upcoming fixtures and the table of `soccer-favourite-league' in one
+buffer, and "l" there switches to any other competition.
+
+The other entry point is `soccer', a transient menu from which every view
+is reachable.  Views open in a `soccer-mode' buffer which has its own
 transient bound to "?", so a league table is one keystroke away from the
 fixtures of the club under point.
 
@@ -14,6 +18,9 @@ The individual commands are still available directly:
 
 Function                     Action
 soccer                       Transient menu with everything
+soccer-dashboard             Results, fixtures and table at a glance
+soccer-set-favourite-league  Competition the dashboard opens on
+soccer-set-favourite-club    Club the dashboard follows
 soccer-fixtures-next         Fixture for the next match
 soccer-fixtures-next-5       Fixtures of the next 5 matches
 soccer-fixtures-full-in-org  Full fixtures saved in an org file

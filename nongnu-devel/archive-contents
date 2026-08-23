@@ -244,12 +244,12 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "3c68569738f04a22d52f1ca28f593c2ee733bf04"))])
  (clojure-ts-mode
-  . [(0 6 0 0 20260822 52) ((emacs (30 1)))
+  . [(0 6 0 0 20260823 53) ((emacs (30 1)))
      "Major mode for Clojure code" tar
      ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "5b4fad04095297ef228c5f5c36f6e12674f59ab5"))])
+      (:commit . "2bce67a68c270157d940ac9374ab393804c7e00d"))])
  (codex-ide
   . [(0 1 1 0 20260813 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
@@ -1818,13 +1818,13 @@
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
       (:commit . "0058837c048cc031ca1a13f598a6a6604777458b"))])
  (sapling
-  . [(0 2 1 0 20260820 0) ((emacs (26 1)))
+  . [(0 2 2 0 20260823 3) ((emacs (26 1)))
      "Magit-like interface for Sapling" tar
      ((:url . "https://github.com/swithinchan/sapling/")
       (:keywords "tools" "vc")
       (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
       (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
-      (:commit . "5948e50ce95c7302bf91eac4d341fcd628581b3d"))])
+      (:commit . "f09e225dff1b6d716bfc77627445c81b09857b6b"))])
  (sass-mode
   . [(3 0 16 0 20190502 5315) ((haml-mode (3 0 15)) (cl-lib (0 5)))
      "Major mode for editing Sass files" tar
@@ -1920,11 +1920,11 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "1443d6dce378ad2d65a8a8c45d5279481a79dfab"))])
  (spacemacs-theme
-  . [(0 2 0 20260812 45) ((emacs (24)))
+  . [(0 2 0 20260822 48) ((emacs (24)))
      "Color theme with a dark and light versions." tar
      ((:url . "https://github.com/nashamri/spacemacs-theme")
       (:keywords "color" "theme")
-      (:commit . "c1617a86bc18ae611b0c0cf1d51e5906a2676c6b"))])
+      (:commit . "77bc457dbb7927c7b12abfa6f9c9318b7c768c15"))])
  (spell-fu
   . [(0 3 0 20260524 63613) ((emacs (29 1)))
      "Fast & light spelling highlighter" tar
@@ -2172,13 +2172,13 @@
       (:url . "https://elpa.nongnu.org/nongnu/vc-fossil.html")
       (:commit . "4a4a3e4df83ba2f1ea8bfd8aa7e9f9b2c1c32ca9"))])
  (vc-sapling
-  . [(0 2 1 0 20260820 0) ((emacs (26 1)) (sapling (0 2 0)))
+  . [(0 2 1 0 20260823 1) ((emacs (26 1)) (sapling (0 2 0)))
      "VC backend for Sapling" tar
      ((:url . "https://github.com/swithinchan/vc-sapling/")
       (:keywords "tools" "vc")
       (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
       (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
-      (:commit . "d1edae122831e39ea5e6c67e26a5f2efd218bf06"))])
+      (:commit . "3c312fa571cafad8c8ba592531ad30737c402c4c"))])
  (vcomplete
   . [(2 0 0 20230227 132830) ((emacs (25 1))) "Visual completions" tar
      ((:url . "https://dsemy.com/projects/vcomplete")

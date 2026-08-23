@@ -1711,12 +1711,12 @@
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
       (:commit . "a8c69ce8f5e7793d2f81dbef60fb37b4b93afccf"))])
  (sapling
-  . [(0 2 1) ((emacs (26 1))) "Magit-like interface for Sapling" tar
+  . [(0 2 2) ((emacs (26 1))) "Magit-like interface for Sapling" tar
      ((:url . "https://github.com/swithinchan/sapling/")
       (:keywords "tools" "vc")
       (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
       (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
-      (:commit . "5948e50ce95c7302bf91eac4d341fcd628581b3d"))])
+      (:commit . "0f833a51cf7515470fe0348661133cf4ce8f3bc2"))])
  (sass-mode
   . [(3 0 16) ((haml-mode (3 0 15)))
      "Major mode for editing Sass files" tar
