@@ -2,7 +2,8 @@ This is a collection of tools and prompts to use gptel "agentically" with any
 LLM, to autonomously perform tasks.
 
 It has access to
-- the web (via basic web search, URL fetching and YouTube video metadata),
+- the web (via basic web search and URL fetching, including YouTube video
+  descriptions and transcripts),
 - local files (read/write/edit),
 - the state of Emacs (documentation and Elisp evaluation),
 - and Bash, if you are in a POSIX-y environment.

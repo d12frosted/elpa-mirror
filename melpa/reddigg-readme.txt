@@ -2,13 +2,13 @@ This package allows you to browse reddit in org-mode.
 
 Reddit now requires a logged-in, browser-driven session for its
 JSON endpoints, so reddigg no longer talks to old.reddit.com
-directly with `url-retrieve'.  Instead it uses the `browsel'
-package (https://github.com/dmgerman/browsel) to run the fetch
+directly with `url-retrieve'.  Instead it uses the `browser-gt'
+package (https://github.com/dmgerman/browser-gt) to run the fetch
 *inside* an already-open, already-authenticated reddit tab in
 your real browser, and reads the resulting JSON text back into
 Emacs.  You must:
-  1. Have `browsel' set up and running (see its README) with both
-     the Emacs side (`browsel-start') and the browser extension
+  1. Have `browser-gt' set up and running (see its README) with both
+     the Emacs side (`browser-gt-start') and the browser extension
      loaded and connected.
   2. Be logged into old.reddit.com in that browser.
 reddigg will look for an already-open reddit tab; if it can't
