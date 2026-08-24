@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260822 84)
+  . [(2 1 0 -4 0 20260824 86)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "646435c9b875d9aaa7ed5dffe941bbb37db13394"))])
+      (:commit . "4dc6e271c0e30f0db3398ecd0bfe33171543c548"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260821 20) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260824 22) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "7074b82cc82b6c3258f0f436514eca5236101336"))])
+      (:commit . "2a8f8d761092e3b1f77b57699c89d79836e24b69"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -821,13 +821,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "ce2ea016a67b200862788e81f0ff1f8f7e4e0454"))])
  (geiser
-  . [(0 33 2 0 20260810 0) ((emacs (27 1)) (project (0 8 1)))
+  . [(0 33 2 0 20260823 1) ((emacs (27 1)) (project (0 8 1)))
      "GNU Emacs and Scheme talk to each other" tar
      ((:url . "https://gitlab.com/emacs-geiser/")
       (:keywords "languages" "scheme" "geiser")
       (:maintainer "Jose Antonio Ortega Ruiz" . "(jao@gnu.org)")
       (:authors ("Jose Antonio Ortega Ruiz" . "(jao@gnu.org)"))
-      (:commit . "efcf1939fd839e9ea22d68ff0ebbd8ca2e1b71e1"))])
+      (:commit . "584f78b103037e8bc6f4b22a6fae23e09f619d6d"))])
  (geiser-chez
   . [(0 18 0 20260727 5) ((emacs (26 1)) (geiser (0 19)))
      "Chez and Geiser talk to each other" tar
@@ -1193,14 +1193,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 13 1 0 20260818 4)
+  . [(0 13 1 0 20260824 8)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "54b1bef6dddd3b787a33b91cf66280892725d475"))])
+      (:commit . "2e6691fe5573fa9c7dbbfa22ab9aef8b8315dcc2"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1693,14 +1693,14 @@
       (:maintainer "Juergen Hoetzel" . "juergen@hoetzel.info")
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
- (project-store
-  . [(0 9 0 0 20260820 3) ((emacs (29 1)))
-     "Project backend for Nix store" tar
-     ((:url . "https://github.com/jian-lin/project-store")
-      (:keywords "nix" "store" "project" "tools")
+ (project-nix-store
+  . [(0 9 0 0 20260824 4) ((emacs (29 1)))
+     "Project backend for Nix-like store" tar
+     ((:url . "https://github.com/jian-lin/project-nix-store")
+      (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "5e4e0e8531ea066b0c32538b6ce4c3f7aa90d8f2"))])
+      (:commit . "0c889c344ed7c3648a2a06501cddbfa5e2ac6063"))])
  (projectile
   . [(3 5 0 -4 0 20260820 23) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
