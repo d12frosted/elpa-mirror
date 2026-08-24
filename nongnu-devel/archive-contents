@@ -845,11 +845,11 @@
       (:authors ("Peter" . "craven@gmx.net"))
       (:commit . "52bf07aee6fa2d6e9864c5a4a1f72f15e830d55c"))])
  (geiser-chicken
-  . [(0 17 0 20260727 8) ((emacs (24 4)) (geiser (0 19)))
+  . [(0 17 0 20260819 10) ((emacs (24 4)) (geiser (0 19)))
      "Chicken's implementation of the geiser protocols" tar
      ((:url . "https://gitlab.com/emacs-geiser/chicken")
       (:keywords "languages" "chicken" "scheme" "geiser")
-      (:commit . "80a2aeded0face0822c477d085e62695ab57f639"))])
+      (:commit . "ba0c16df8ce21f1722e27e4591656c9b64fafdff"))])
  (geiser-gambit
   . [(0 18 1 0 20260727 3) ((emacs (26 1)) (geiser (0 18)))
      "Gambit's implementation of the geiser protocols" tar
@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260821 92)
+  . [(0 9 9 5 0 20260823 93)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "cd2cd7367dc0e0b1ba14cf6e5e648c0e488fff99"))])
+      (:commit . "5d6312fd38959682aacf3972897d06c98aba5089"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar

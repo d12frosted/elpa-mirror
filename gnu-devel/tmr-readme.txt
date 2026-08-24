@@ -211,8 +211,8 @@ Table of Contents
   The `tmr-repeat' is like `tmr' though also prompts for a number of
   repetitions repeat count. This means that the specified timer will run
   that many times. When called with a prefix argument (`C-u' with
-  default keybindings) it asks for a description and whether timer
-  should be acknowledged or not once all repetitions are done.
+  default keybindings) it asks for a description and whether each timer
+  repetition should be acknowledged before starting the next.
 
   When the timer is set, a message is sent to the echo area recording
   the current time and the point in the future when the timer elapses.
@@ -616,7 +616,7 @@ remaining time] See section 7.1
   Contributions to the code or manual
         Christian Tietze, Ed Tavinor, Eugene Mikhaylov, Karol Mróz,
         Lucas Quintana, Mirko Hernandez, Nathan R. DeGruchy, Pavlo
-        Lysov, f6p, jpg.
+        Lysov, f6p, jpg, purdobol.
 
   Packaging
         Nicholas D Steeves (Debian).

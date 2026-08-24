@@ -3978,9 +3978,19 @@ section 10.2
   └────
 
 
+  If the value is `local', the link consists of the text of the current
+  heading, like this:
+
+  ┌────
+  │ [[*Heading text][Heading text]].
+  └────
+
+
+  [ The `local' option is part of 4.3.0-dev. ]
+
   However, if there already exists a `CUSTOM_ID' property for the
   current heading, this is always given priority and is used instead of
-  the context.
+  the context or local heading.
 
   If the value is `id' or, for backward-compatibility, any other non-nil
   value, then Denote will use the standard Org mechanism of the
@@ -8001,12 +8011,12 @@ section 21.13
         Andreadis, Kristoffer Balintona, Kyle Meyer, Laurent Gatto,
         Lucas Quintana, Maikol Solis, Marc Fargas, Marco Baringer,
         Matthew Batson, Matthew Lemon, Matthieu Muller, Matto Fransen,
-        Noboru Ota (nobiot), Norwid Behrnd, Octavian, Pavlo V. Lysov,
-        Peter Prevos, Philip Kaludercic, Ryota, Samuel W. Flint, Quiliro
-        Ordóñez, Stephen R.  Kifer, Stefan Monnier, Stefan Thesing,
-        Thibaut Benjamin, Tobias Lidman-Strauss, Tomasz Hołubowicz,
-        TomoeMami , Vedang Manerikar, Wesley Harvey, Yann Dutrieux,
-        Zhenxu Xu, alvmts, arsaber101, bplubell, bryanrinders,
+        Michael Korat, Noboru Ota (nobiot), Norwid Behrnd, Octavian,
+        Pavlo V. Lysov, Peter Prevos, Philip Kaludercic, Ryota, Samuel
+        W. Flint, Quiliro Ordóñez, Stephen R. Kifer, Stefan Monnier,
+        Stefan Thesing, Thibaut Benjamin, Tobias Lidman-Strauss, Tomasz
+        Hołubowicz, TomoeMami , Vedang Manerikar, Wesley Harvey, Yann
+        Dutrieux, Zhenxu Xu, alvmts, arsaber101, bplubell, bryanrinders,
         dulikiles, eum3l, experimental-code-86, ezchi, gnuhack, gvalson,
         jarofromel, leinfink (Henrik), l-o-l-h (Lincoln), mattyonweb,
         maxbrieiev, mentalisttraceur, nescias, pmenair, relict007,
