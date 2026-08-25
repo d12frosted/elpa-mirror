@@ -2,40 +2,98 @@
  • Building package zotero
 From https://gitlab.com/fvdbeek/emacs-zotero
 Updating /mnt/store/melpa/working/zotero/
-Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128
-fatal: unable to access 'https://gitlab.com/fvdbeek/emacs-zotero/': The requested URL returned error: 502
-
-
-Error: package-build-error "Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128"
-  signal(package-build-error "Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128")
-  (let ((message (apply #'format-message format-string args))) (package-build--log package message) (signal 'package-build-error message))
-  package-build--error(#<package-gitlab-recipe package-gitlab-recipe-10e5ac2c6ee9> "%s" "Command `git fetch -f --tags --prune --prune-tags origin' exited with non-zero exit-code: 128")
-  (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))
-  (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))
-  (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))
-  (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))
-  (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))
-  (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))
-  (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))))
-  (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary)))))))))
-  (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))
-  (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer))))
-  (let ((temp-buffer (generate-new-buffer " *temp*" t))) (save-current-buffer (set-buffer temp-buffer) (unwind-protect (progn (let* ((args-orig (cons command args)) (val (nconc (and (not (eq system-type 'windows-nt)) (list "env" "LC_ALL=C")) (if (and package-build-timeout package-build-timeout-executable) (nconc (list package-build-timeout-executable "-k" "60" (number-to-string package-build-timeout) command) args) (cons command args))))) (progn (ignore (consp val)) (let* ((x74 (car-safe val)) (x75 (cdr-safe val))) (let ((command x74) (args x75)) (let* ((exit-code (apply #'call-process command nil (current-buffer) nil args))) (if (equal exit-code 0) nil (let ((summary (format-message "Command `%s' exited with non-zero exit-code: %s" (mapconcat #'shell-quote-argument args-orig " ") exit-code))) (message "%s" summary) (message "%s" (buffer-string)) (package-build--error package "%s" summary))))))))) (and (buffer-name temp-buffer) (kill-buffer temp-buffer)))))
-  package-build--call-process(#<package-gitlab-recipe package-gitlab-recipe-10e5ac2c6ee9> "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin")
-  (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto"))
-  (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))
-  (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))
-  (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))
-  (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))
-  #f(lambda (rcp) [t] (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir)))))))(#<package-gitlab-recipe package-gitlab-recipe-10e5ac2c6ee9>)
-  apply(#f(lambda (rcp) [t] (progn (let ((dir (package-recipe--working-tree rcp)) (url (eieio-oref rcp 'url)) (protocol (package-recipe--upstream-protocol rcp))) (cond ((eq package-build--inhibit-fetch 'strict)) ((not (member protocol package-build-allowed-git-protocols)) (package-build--error rcp "Fetching using the %s protocol is not allowed" protocol)) ((and (file-exists-p (expand-file-name ".git" dir)) (let ((default-directory dir)) (string= (car (process-lines "git" "config" "remote.origin.url")) url))) (if package-build--inhibit-fetch nil (let ((default-directory dir)) (package-build--message "Updating %s" dir) (package-build--call-process rcp "git" "fetch" "-f" "--tags" "--prune" "--prune-tags" "origin") (package-build--call-process rcp "git" "remote" "set-head" "origin" "--auto")))) (t (if (file-exists-p dir) (progn (delete-directory dir t))) (package-build--message "Cloning %s" url) (make-directory package-build-working-dir t) (let ((default-directory package-build-working-dir)) (package-build--call-process rcp "git" "clone" url dir))))))) #<package-gitlab-recipe package-gitlab-recipe-10e5ac2c6ee9> nil)
-  package-build--fetch(#<package-gitlab-recipe package-gitlab-recipe-10e5ac2c6ee9>)
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x133 (car tail))) (progn (ignore (consp x133)) (let* ((x134 (car-safe x133)) (x135 (cdr-safe x133))) (let ((file x134) (attrs x135)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "zotero")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x133 (car tail))) (progn (ignore (consp x133)) (let* ((x134 (car-safe x133)) (x135 (cdr-safe x133))) (let ((file x134) (attrs x135)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "zotero")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-upPackage build error
-date "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x133 (car tail))) (progn (ignore (consp x133)) (let* ((x134 (car-safe x133)) (x135 (cdr-safe x133))) (let ((file x134) (attrs x135)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "zotero")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("zotero")
-  eval((package-build-archive "zotero") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"zotero\")"))
-  command-line()
-  normal-top-level()
+Checking out eef5080e6a2ed0cae12c3d21580864f4b394cd5f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zotero/
+  to /tmp/zotero-du9alm/zotero-20240112.2111/
+    zotero-arxiv.el -> zotero-arxiv.el
+    zotero-auth.el -> zotero-auth.el
+    zotero-browser.el -> zotero-browser.el
+    zotero-cache.el -> zotero-cache.el
+    zotero-crossref.el -> zotero-crossref.el
+    zotero-diff.el -> zotero-diff.el
+    zotero-edit.el -> zotero-edit.el
+    zotero-fulltext.el -> zotero-fulltext.el
+    zotero-json.el -> zotero-json.el
+    zotero-lib.el -> zotero-lib.el
+    zotero-openlibrary.el -> zotero-openlibrary.el
+    zotero-pmid.el -> zotero-pmid.el
+    zotero-recognize.el -> zotero-recognize.el
+    zotero-sync.el -> zotero-sync.el
+    zotero.el -> zotero.el
+    img => img
+Created zotero-20240112.2111.tar containing:
+  zotero-20240112.2111/
+  zotero-20240112.2111/img/
+  zotero-20240112.2111/img/treeitem-artwork.png
+  zotero-20240112.2111/img/treeitem-attachment-link.png
+  zotero-20240112.2111/img/treeitem-attachment-pdf-link.png
+  zotero-20240112.2111/img/treeitem-attachment-pdf.png
+  zotero-20240112.2111/img/treeitem-attachment-snapshot.png
+  zotero-20240112.2111/img/treeitem-attachment-web-link.png
+  zotero-20240112.2111/img/treeitem-audioRecording.png
+  zotero-20240112.2111/img/treeitem-bill.png
+  zotero-20240112.2111/img/treeitem-blogPost.png
+  zotero-20240112.2111/img/treeitem-book.png
+  zotero-20240112.2111/img/treeitem-bookSection.png
+  zotero-20240112.2111/img/treeitem-case.png
+  zotero-20240112.2111/img/treeitem-computerProgram.png
+  zotero-20240112.2111/img/treeitem-conferencePaper.png
+  zotero-20240112.2111/img/treeitem-dictionaryEntry.png
+  zotero-20240112.2111/img/treeitem-email.png
+  zotero-20240112.2111/img/treeitem-encyclopediaArticle.png
+  zotero-20240112.2111/img/treeitem-film.png
+  zotero-20240112.2111/img/treeitem-forumPost.png
+  zotero-20240112.2111/img/treeitem-hearing.png
+  zotero-20240112.2111/img/treeitem-instantMessage.png
+  zotero-20240112.2111/img/treeitem-interview.png
+  zotero-20240112.2111/img/treeitem-journalArticle.png
+  zotero-20240112.2111/img/treeitem-letter.png
+  zotero-20240112.2111/img/treeitem-magazineArticle.png
+  zotero-20240112.2111/img/treeitem-manuscript.png
+  zotero-20240112.2111/img/treeitem-map.png
+  zotero-20240112.2111/img/treeitem-newspaperArticle.png
+  zotero-20240112.2111/img/treeitem-note.png
+  zotero-20240112.2111/img/treeitem-patent.png
+  zotero-20240112.2111/img/treeitem-podcast.png
+  zotero-20240112.2111/img/treeitem-presentation.png
+  zotero-20240112.2111/img/treeitem-radioBroadcast.png
+  zotero-20240112.2111/img/treeitem-report.png
+  zotero-20240112.2111/img/treeitem-statute.png
+  zotero-20240112.2111/img/treeitem-thesis.png
+  zotero-20240112.2111/img/treeitem-tvBroadcast.png
+  zotero-20240112.2111/img/treeitem-videoRecording.png
+  zotero-20240112.2111/img/treeitem-webpage.png
+  zotero-20240112.2111/img/treeitem.png
+  zotero-20240112.2111/img/treesource-bucket.png
+  zotero-20240112.2111/img/treesource-collection.png
+  zotero-20240112.2111/img/treesource-commons.png
+  zotero-20240112.2111/img/treesource-duplicates.png
+  zotero-20240112.2111/img/treesource-feed-error.png
+  zotero-20240112.2111/img/treesource-feed-updating.png
+  zotero-20240112.2111/img/treesource-feed.png
+  zotero-20240112.2111/img/treesource-feedLibrary.png
+  zotero-20240112.2111/img/treesource-groups.png
+  zotero-20240112.2111/img/treesource-library.png
+  zotero-20240112.2111/img/treesource-search.png
+  zotero-20240112.2111/img/treesource-share.png
+  zotero-20240112.2111/img/treesource-trash-full.png
+  zotero-20240112.2111/img/treesource-trash.png
+  zotero-20240112.2111/img/treesource-unfiled.png
+  zotero-20240112.2111/zotero-arxiv.el
+  zotero-20240112.2111/zotero-auth.el
+  zotero-20240112.2111/zotero-browser.el
+  zotero-20240112.2111/zotero-cache.el
+  zotero-20240112.2111/zotero-crossref.el
+  zotero-20240112.2111/zotero-diff.el
+  zotero-20240112.2111/zotero-edit.el
+  zotero-20240112.2111/zotero-fulltext.el
+  zotero-20240112.2111/zotero-json.el
+  zotero-20240112.2111/zotero-lib.el
+  zotero-20240112.2111/zotero-openlibrary.el
+  zotero-20240112.2111/zotero-pkg.el
+  zotero-20240112.2111/zotero-pmid.el
+  zotero-20240112.2111/zotero-recognize.el
+  zotero-20240112.2111/zotero-sync.el
+  zotero-20240112.2111/zotero.el
+Built zotero in 8.162s, finished at 2026-08-25T15:38:14+0000
