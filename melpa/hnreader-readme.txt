@@ -23,6 +23,7 @@ hnreader-view-comments-in-same-window: if nil then will not create new window
 when viewing comments
 
 ; Changelog
+0.2.9 2026-08-24 add user agent
 0.2.8 2025-07-02 Show title in all pages
 0.2.7 2025-07-01 update title capture for page and item
 0.2.6 2024-11-09 update css class capture

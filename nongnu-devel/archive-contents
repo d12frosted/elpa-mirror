@@ -489,7 +489,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 2 0 0 20260821 0) ((emacs (29 1)) (compat (31)))
+  . [(4 2 0 0 20260824 1) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -498,7 +498,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "737c1d6d2649b1ff82c5e2d2d9891a7caeac3835"))])
+      (:commit . "76344cc88cb6da7141ff9a85a23fc3395cc0c6b5"))])
  (elfeed-web
   . [(4 1 0 0 20260821 0)
      ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260824 22) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260824 24) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "2a8f8d761092e3b1f77b57699c89d79836e24b69"))])
+      (:commit . "a7fb756679d65a05744d75a1e3d488e44329d23a"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -934,13 +934,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "f31dbe60478b6270bb57b6b05998df8eec56f801"))])
  (gnuplot
-  . [(0 12 0 20260811 5) ((emacs (29 1)) (compat (31)))
+  . [(0 12 0 20260824 6) ((emacs (29 1)) (compat (31)))
      "Major-mode and interactive frontend for gnuplot" tar
      ((:url . "https://github.com/emacs-gnuplot/gnuplot")
       (:keywords "data" "gnuplot" "plotting")
       (:maintainer ("Maxime Tréca" . "maxime@gmail.com")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "51e96281da3b027a2bb64130120a607758ea6300"))])
+      (:commit . "5ad168b06031ed24980042fedcb4565c7372842b"))])
  (go-mode
   . [(1 6 0 0 20260529 24) ((emacs (26 1)))
      "Major mode for the Go programming language" tar
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hermes
-  . [(0 3 2 0 20260822 32)
+  . [(0 3 3 0 20260824 5)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "49f73209b346073d2b35d7d0f2b1ad915b34d570"))])
+      (:commit . "fb72acc5f74eb632ee0eb6e0f15968531badef23"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1655,12 +1655,12 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "17e82d7557cc8d86abdf0679c6a54be3bc25cf5f"))])
  (php-mode
-  . [(1 26 1 0 20260810 112) ((emacs (27 1)))
+  . [(1 26 1 0 20260824 114) ((emacs (27 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "fdcba033490bf974c465f09f1590277772d46eb0"))])
+      (:commit . "3d57e94aa7ec2b94c6b0f39d39a70c79c7326e25"))])
  (pinyin-isearch
   . [(1 7 0 0 20260718 9) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
@@ -1702,13 +1702,13 @@
       (:authors ("Lin Jian" . "me@linj.tech"))
       (:commit . "0c889c344ed7c3648a2a06501cddbfa5e2ac6063"))])
  (projectile
-  . [(3 5 0 -4 0 20260820 23) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260824 25) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "c1ad79b7c98bba4e8382fc993556ca62b71e19ea"))])
+      (:commit . "f60f47f2f72d60201679e8c3b50ad00bae3889dd"))])
  (proof-general
   . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -1882,14 +1882,14 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "173e4d632c94af6670869729c09bfb8ba484d257"))])
  (simple-httpd
-  . [(1 6 0 20260811 5) ((emacs (29 1)) (compat (31)))
+  . [(1 6 0 20260824 6) ((emacs (29 1)) (compat (31)))
      "Pure Elisp HTTP server" tar
      ((:url . "https://github.com/skeeto/emacs-http-server")
       (:keywords "network" "comm")
       (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "d74da3eaf2b37432fe8fa66c2a470550e811f081"))])
+      (:commit . "e6ffb91b7e5fa35169e7bc2c477eb292cb990973"))])
  (slime
   . [(2 32 -4 0 20260820 56) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
@@ -2201,11 +2201,11 @@
       (:maintainer nil . "viewmail-info@nongnu.org")
       (:commit . "ac3b46232fd7492bb7c78d5008e005a3ea91e57e"))])
  (web-mode
-  . [(17 3 24 0 20260623 0) ((emacs (24 3 1)))
+  . [(17 3 25 0 20260824 1) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
      ((:url . "https://web-mode.org") (:keywords "languages")
       (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
-      (:commit . "aeee2d4c82a791ff69657c1413873bf9265544df"))])
+      (:commit . "e417e389474f934f4f3c11c88ad6c476642e1f90"))])
  (webpaste
   . [(3 2 2 0 20241125 141806)
      ((emacs (24 4)) (request (0 2 0)) (cl-lib (0 5)))
