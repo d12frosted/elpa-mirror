@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 12 0 20260816 0)
+  . [(1 12 0 20260825 2)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "2d8c28d3fbd64260cbfd5a1477aea3bff55ba54f"))])
+      (:commit . "8bc3dfc31ba618a373c2ef014137daefd068277b"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -997,12 +997,12 @@
       (:authors ("Alexey Kutepov" . "reximkut@gmail.com"))
       (:commit . "2e9f99c41fe8ef0557e9ea0f3b94ef50c68b5557"))])
  (gruvbox-theme
-  . [(1 30 1 0 20250117 22202) ((autothemer (0 2)))
+  . [(1 30 3 0 20260826 1) ((autothemer (0 2)))
      "A retro-groove colour theme for Emacs" tar
      ((:url . "https://github.com/greduan/emacs-theme-gruvbox")
       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
       (:authors ("Jason Milkins" . "jasonm23@gmail.com"))
-      (:commit . "6cbf80b6cde3c2390502dc94a911ab7378495249"))])
+      (:commit . "a98069247e180057804d296716bfb1759fc41bc6"))])
  (guru-mode
   . [(1 0 0 20211025 115715) nil "Become an Emacs guru" tar
      ((:url . "https://github.com/bbatsov/guru-mode")
@@ -1892,11 +1892,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "e6ffb91b7e5fa35169e7bc2c477eb292cb990973"))])
  (slime
-  . [(2 32 -4 0 20260825 57) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260825 58) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "37530f48dfa52871c632b1783029ab7c7e84bd39"))])
+      (:commit . "06e46196ad7d972c10559291d8a82f8beb735463"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -1943,14 +1943,14 @@
       (:authors ("Y. N. Lo" . "elisp@fastmail.com"))
       (:commit . "615cc1cb021384291cec39a2048a3a36859e8cb9"))])
  (standard-keys-mode
-  . [(1 0 0 0 20260105 112114) ((emacs (29 1)))
+  . [(1 0 1 0 20260825 0) ((emacs (29 1)))
      "Emulate standard keybindings from modern editors" tar
      ((:url
        . "https://github.com/DevelopmentCool2449/standard-keys-mode")
       (:keywords "emulations" "convenience")
       (:maintainer "Elias G. Pérez" . "eg642616@gmail.com")
       (:authors ("Elias G. Pérez" . "eg642616@gmail.com"))
-      (:commit . "0ba642acc051c36a7e7d77b4444082fb6af4e868"))])
+      (:commit . "0ce25c79cf39d65833c3b877e3ab4ae5c77aaae2"))])
  (stylus-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .styl files" tar

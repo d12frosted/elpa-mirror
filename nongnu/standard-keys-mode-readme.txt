@@ -3,9 +3,6 @@
                           ━━━━━━━━━━━━━━━━━━━━
 
 
-
-
-
 1 Introduction
 ══════════════
 
@@ -96,8 +93,8 @@
    `Control' `q'               `save-buffers-kill-terminal' (Quit Emacs)                                        
    `Control' `e'               `C-x' prefix                                                                     
    `Control' `d'               `C-c' prefix                                                                     
-   `Control' `x'               `kill-region' (Cut)                                                              
-   `Control' `c'               `kill-ring-save' (Copy)                                                          
+   `Control' `x'               `standard-keys-cut-region-or-line' (Cut)                                         
+   `Control' `c'               `standard-keys-copy-region-or-line' (Copy)                                       
    `Control' `v'               `yank' (Paste)                                                                   
    `Control' `z'               `undo'                                                                           
    `Control' `y'               `undo-redo' (Redo)                                                               
@@ -115,6 +112,7 @@
    `Control' `='               `text-scale-adjust' (Set Zoom)                                                   
    `Control' `n'               `standard-keys-create-new-buffer' (Create a new empty buffer)                    
    `Control' `;'               `comment-line' (Comment out current line)                                        
+   `Alt/Meta' `0'              `delete-window'                                                                  
    `Alt/Meta' `1'              `delete-other-windows'                                                           
    `Alt/Meta' `2'              `split-window-below'                                                             
    `Alt/Meta' `3'              `split-window-right'                                                             
@@ -167,6 +165,48 @@
 
     default: `'standard-keys-default-keymap'
 
+  ⁃ `standard-keys-new-buffer-mode'
+
+    Which major mode should `standard-keys-create-new-buffer' use.
+
+    The value can be any major mode function symbol.
+
+    If set to `scratch-buffer', it will create a new scratch buffer.
+
+    default: `'fundamental-mode'
+
+
+3.3 Commands
+────────────
+
+  ⁃ `standard-keys-keyboard-quit'
+
+    Quit from the current command/action.  This acts like `C-g' but is
+    intended to be used for any other additional keybindings.
+
+    *NOTE*: This doesn't work if `C-g' is remaped.
+
+  ⁃ `standard-keys-newline-and-indent-before-point'
+
+    Like `newline-and-indent', but inserts the newline before cursor.
+
+  ⁃ `standard-keys-move-beginning-of-line-or-indentation'
+
+    This acts like `move-beginning-of-line', but can also move the
+    cursor to the beginning of the indentation.
+
+  ⁃ `standard-keys-create-new-buffer'
+
+    Create a new Untitled empty buffer.
+
+  ⁃ `standard-keys-copy-region-or-line'
+
+    Copy the active region, or the current line if no region is active.
+
+  ⁃ `standard-keys-cut-region-or-line'
+
+    Cut the active region, or the current line if no region is active.
+
 
 4 Troubleshooting
 ═════════════════
@@ -208,8 +248,6 @@
 
 5 Alternatives
 ══════════════
-
-[ergoemacs] <http://ergoemacs.github.io/>
 
 5.1 [ergoemacs].
 ────────────────
