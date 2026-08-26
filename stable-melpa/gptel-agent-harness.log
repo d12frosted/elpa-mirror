@@ -2,40 +2,48 @@
  • Building package gptel-agent-harness
 From https://github.com/beacoder/gptel-agent-harness
 Updating /mnt/store/melpa/working/gptel-agent-harness/
-Checking out 56f53ece82d48a87c192476b273b21eeba1d26ce
+Checking out ff8ca7bbf74a618efca01d70eaaca58077053e40
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gptel-agent-harness/
-  to /tmp/gptel-agent-harness-pmV7sv/gptel-agent-harness-20260826.1001/
+  to /tmp/gptel-agent-harness-suCmTT/gptel-agent-harness-20260826.1547/
     gptel-agent-harness-agent.el -> gptel-agent-harness-agent.el
     gptel-agent-harness-commands.el -> gptel-agent-harness-commands.el
+    gptel-agent-harness-compact.el -> gptel-agent-harness-compact.el
+    gptel-agent-harness-config.el -> gptel-agent-harness-config.el
+    gptel-agent-harness-display.el -> gptel-agent-harness-display.el
     gptel-agent-harness-fsm.el -> gptel-agent-harness-fsm.el
     gptel-agent-harness-session.el -> gptel-agent-harness-session.el
+    gptel-agent-harness-supervisor.el -> gptel-agent-harness-supervisor.el
     gptel-agent-harness-tools.el -> gptel-agent-harness-tools.el
     gptel-agent-harness.el -> gptel-agent-harness.el
     agents => agents
     prompts => prompts
-Created gptel-agent-harness-20260826.1001.tar containing:
-  gptel-agent-harness-20260826.1001/
-  gptel-agent-harness-20260826.1001/agents/
-  gptel-agent-harness-20260826.1001/agents/gptel-opencode-agent.md
-  gptel-agent-harness-20260826.1001/agents/gptel-opencode-subagent.md
-  gptel-agent-harness-20260826.1001/gptel-agent-harness-agent.el
-  gptel-agent-harness-20260826.1001/gptel-agent-harness-commands.el
-  gptel-agent-harness-20260826.1001/gptel-agent-harness-fsm.el
-  gptel-agent-harness-20260826.1001/gptel-agent-harness-pkg.el
-  gptel-agent-harness-20260826.1001/gptel-agent-harness-session.el
-  gptel-agent-harness-20260826.1001/gptel-agent-harness-tools.el
-  gptel-agent-harness-20260826.1001/gptel-agent-harness.el
-  gptel-agent-harness-20260826.1001/prompts/
-  gptel-agent-harness-20260826.1001/prompts/build-switch.md
-  gptel-agent-harness-20260826.1001/prompts/commands/
-  gptel-agent-harness-20260826.1001/prompts/commands/explain.md
-  gptel-agent-harness-20260826.1001/prompts/compact.md
-  gptel-agent-harness-20260826.1001/prompts/initialize.md
-  gptel-agent-harness-20260826.1001/prompts/plan-mode.md
-  gptel-agent-harness-20260826.1001/prompts/plan.md
-  gptel-agent-harness-20260826.1001/prompts/review.md
-  gptel-agent-harness-20260826.1001/prompts/summary.md
-  gptel-agent-harness-20260826.1001/prompts/task-completion-rules.md
-  gptel-agent-harness-20260826.1001/prompts/title.md
-Built gptel-agent-harness in 5.359s, finished at 2026-08-26T11:32:27+0000
+Created gptel-agent-harness-20260826.1547.tar containing:
+  gptel-agent-harness-20260826.1547/
+  gptel-agent-harness-20260826.1547/agents/
+  gptel-agent-harness-20260826.1547/agents/gptel-opencode-agent.md
+  gptel-agent-harness-20260826.1547/agents/gptel-opencode-subagent.md
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-agent.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-commands.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-compact.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-config.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-display.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-fsm.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-pkg.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-session.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-supervisor.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness-tools.el
+  gptel-agent-harness-20260826.1547/gptel-agent-harness.el
+  gptel-agent-harness-20260826.1547/prompts/
+  gptel-agent-harness-20260826.1547/prompts/build-switch.md
+  gptel-agent-harness-20260826.1547/prompts/commands/
+  gptel-agent-harness-20260826.1547/prompts/commands/explain.md
+  gptel-agent-harness-20260826.1547/prompts/compact.md
+  gptel-agent-harness-20260826.1547/prompts/initialize.md
+  gptel-agent-harness-20260826.1547/prompts/plan-mode.md
+  gptel-agent-harness-20260826.1547/prompts/plan.md
+  gptel-agent-harness-20260826.1547/prompts/review.md
+  gptel-agent-harness-20260826.1547/prompts/summary.md
+  gptel-agent-harness-20260826.1547/prompts/task-completion-rules.md
+  gptel-agent-harness-20260826.1547/prompts/title.md
+Built gptel-agent-harness in 3.882s, finished at 2026-08-26T22:32:56+0000

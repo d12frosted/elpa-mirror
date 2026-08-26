@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 7 0 20260825 4) ((emacs (29 1)) (compat (31)))
+  . [(3 7 0 20260826 5) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "dcbc3b8e5347d0c4b5c6187d0e150b1c26c385ff"))])
+      (:commit . "1aec7822fec2724a2e4978665681992f420c29b5"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -635,6 +635,15 @@
       (:maintainer "Basil L. Contovounesios" . "basil@contovou.net")
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "a0f7fc3c0403a957d009f2bdcc248d3bd5fcfe01"))])
+ (cperl-mode
+  . [(32 0 50 0 20260825 0) ((emacs (26 1)))
+     "Perl code editing commands" tar
+     ((:url . "https://github.com/HaraldJoerg/cperl-mode/issues/32")
+      (:keywords "languages")
+      (:maintainer nil . "emacs-devel@gnu.org")
+      (:authors ("Ilya Zakharevich" . "ilyaz@cpan.org")
+		("Jonathan Rockway" . "jon@jrock.us"))
+      (:commit . "c32955a0e937a9a4f05119285e6ef2a61399012e"))])
  (cpio-mode
   . [(0 17 0 20241101 133717) ((emacs (24 5)))
      "Handle cpio archives in the style of dired" tar

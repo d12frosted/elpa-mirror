@@ -1604,6 +1604,14 @@
       (:maintainer "Frédéric Perrin" . "fredericperrinreselfr")
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "176f9fb0c29ac60898e1e938458f26205511cc23"))])
+ (project-nix-store
+  . [(0 10 0) ((emacs (29 1))) "Project backend for Nix-like store"
+     tar
+     ((:url . "https://github.com/jian-lin/project-nix-store")
+      (:keywords "nix" "nix-store" "project" "tools")
+      (:maintainer "Lin Jian" . "me@linj.tech")
+      (:authors ("Lin Jian" . "me@linj.tech"))
+      (:commit . "ae6c743f98f2f46222cec670d96b1d125db1c7c5"))])
  (projectile
   . [(3 4 0) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar

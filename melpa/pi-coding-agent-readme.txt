@@ -16,6 +16,8 @@ Usage:
   C-u M-x pi-coding-agent                Start a named session
   M-x pi-coding-agent-open-session-file  Open a JSONL session file as live session
   M-x pi-coding-agent-toggle             Hide/show session windows in current frame
+  M-x pi-coding-agent-session-browser    Browse sessions (filter, switch)
+  M-x pi-coding-agent-tree-browser       Browse conversation tree (navigate, label)
 
 Many users define an alias: (defalias 'pi 'pi-coding-agent)
 
@@ -25,7 +27,7 @@ Key Bindings:
     C-c C-s        Queue steering (interrupts after current tool; busy only)
     C-c C-k        Abort current operation
     C-c C-p        Open menu
-    C-c C-r        Resume session
+    C-c C-r        Browse sessions
     M-p / M-n      History navigation
     C-r            Incremental history search (like readline)
     TAB            Path/file completion
@@ -40,7 +42,7 @@ Key Bindings:
                    plain path, or local Markdown label)
     C-c C-k        Abort current operation
     C-c C-n        New session
-    C-c C-r        Resume session
+    C-c C-r        Browse sessions
     C-c C-e        Export HTML
     C-c C-c        Compact context
     C-c C-m        Select model
@@ -57,6 +59,9 @@ Editor Features:
 
 Press C-c C-p for the full transient menu with model selection,
 thinking level, completed-thinking controls, session management,
-and custom commands.
+and custom commands.  Its Session r entry opens the disk-backed
+session browser, and Context w opens the conversation-tree browser;
+press ? in either browser to discover switching/navigation, search,
+filters, renaming, and labels.
 
 See README.org for more documentation.

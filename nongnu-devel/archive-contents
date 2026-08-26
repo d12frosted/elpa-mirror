@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260825 27) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260826 38) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "43e5418c4352f2eec6278bf4b97a51be15c8563e"))])
+      (:commit . "372de373a2ba92f732e4746f1e62f28f8d1f02e0"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hermes
-  . [(0 3 3 0 20260824 5)
+  . [(0 3 3 0 20260824 6)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "fb72acc5f74eb632ee0eb6e0f15968531badef23"))])
+      (:commit . "b6a8c6bc8484a54c2d171c69d18ac8126621b143"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1695,13 +1695,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-nix-store
-  . [(0 9 0 0 20260824 4) ((emacs (29 1)))
+  . [(0 10 0 0 20260826 0) ((emacs (29 1)))
      "Project backend for Nix-like store" tar
      ((:url . "https://github.com/jian-lin/project-nix-store")
       (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "0c889c344ed7c3648a2a06501cddbfa5e2ac6063"))])
+      (:commit . "ae6c743f98f2f46222cec670d96b1d125db1c7c5"))])
  (projectile
   . [(3 5 0 -4 0 20260825 31) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar

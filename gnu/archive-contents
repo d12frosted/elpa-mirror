@@ -599,6 +599,14 @@
       (:maintainer "Basil L. Contovounesios" . "basil@contovou.net")
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "72f47d4d1e6dcf89d59f5af65f365dd704efe9e5"))])
+ (cperl-mode
+  . [(32 0 50) ((emacs (26 1))) "Perl code editing commands" tar
+     ((:url . "https://github.com/HaraldJoerg/cperl-mode/issues/32")
+      (:keywords "languages")
+      (:maintainer nil . "emacs-devel@gnu.org")
+      (:authors ("Ilya Zakharevich" . "ilyaz@cpan.org")
+		("Jonathan Rockway" . "jon@jrock.us"))
+      (:commit . "ca03a4c3857b46f24613d1b4dc87299847fdaf19"))])
  (cpio-mode
   . [(0 17) nil "Handle cpio archives in the style of dired." tar
      ((:keywords "files")
