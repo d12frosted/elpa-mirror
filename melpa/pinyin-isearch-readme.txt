@@ -66,8 +66,10 @@ with fallback to latin normal characters.
 is a strict grammatical requirement used to prevent ambiguity.
 Apostrophe use is rare, generally at word boundaries or within
 compounds.  to prevent misreading when a syllable starting
-with a, e, or o follows another syllable directly.
+with a, e, or o follows another syllable directly. - chech that it is solved.
 - Upperacase for pinyin.
 - Cangjie search
 - method for  getting pinyin for chinese characters.
 - allow connecting other input methods.
+- use "M-s s" key to enable strict mode
+ for current pinuin/characrters/both modes if active

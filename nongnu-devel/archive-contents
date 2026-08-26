@@ -402,12 +402,12 @@
       (:keywords "docker" "languages" "processes" "tools")
       (:commit . "97733ce074b1252c1270fd5e8a53d178b66668ed"))])
  (doom-game
-  . [(0 4 0 20260821 0) ((emacs (31 0))) "DOOM on Emacs" tar
+  . [(0 4 0 20260825 1) ((emacs (31 0))) "DOOM on Emacs" tar
      ((:url . "https://github.com/minad/doom-on-emacs")
       (:keywords "games")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "cf637c9c59f34f997c00728eccac8685763927b2"))])
+      (:commit . "9d5929335c4080699a2daa153ace2996c905008a"))])
  (dracula-theme
   . [(1 8 3 0 20260701 10) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")
@@ -471,14 +471,14 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (eldoc-mouse
-  . [(3 0 8 0 20260817 1)
+  . [(3 0 9 0 20260825 0)
      ((emacs (27 1)) (posframe (1 5 1)) (eglot (1 23)))
      "Display documentation for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse")
       (:keywords "tools" "languages" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "a7ba5ad987c94d456868fd6c1a4def78b7f835b7"))])
+      (:commit . "0bcefa8d1bc33f251ea10b138fc4e5dbfedb92ed"))])
  (eldoc-mouse-nov
   . [(0 1 1 0 20260330 75946)
      ((emacs (27 1)) (eldoc-mouse (3 0 2)) (nov (0 5 0)))
@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260825 25) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260825 27) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "595ac0d2cb4ff0e12caf2b6fb29df270ce1df9d6"))])
+      (:commit . "43e5418c4352f2eec6278bf4b97a51be15c8563e"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -934,13 +934,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "f31dbe60478b6270bb57b6b05998df8eec56f801"))])
  (gnuplot
-  . [(0 12 0 20260824 6) ((emacs (29 1)) (compat (31)))
+  . [(0 12 0 20260825 7) ((emacs (29 1)) (compat (31)))
      "Major-mode and interactive frontend for gnuplot" tar
      ((:url . "https://github.com/emacs-gnuplot/gnuplot")
       (:keywords "data" "gnuplot" "plotting")
       (:maintainer ("Maxime Tréca" . "maxime@gmail.com")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "5ad168b06031ed24980042fedcb4565c7372842b"))])
+      (:commit . "3b6110a00f2bb5fcdcf5a7ea86e6ee15eec7a21d"))])
  (go-mode
   . [(1 6 0 0 20260529 24) ((emacs (26 1)))
      "Major mode for the Go programming language" tar
@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260825 97)
+  . [(0 9 9 5 0 20260825 99)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "a990c46e1ae091ab60da5f904153dac61ce68909"))])
+      (:commit . "092bbc32fcada63404c572f6c3497c6d68d955f7"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1364,13 +1364,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "6995b8d095eceace0b947c1217646781ab021c10"))])
  (mastodon
-  . [(2 1 0 0 20260808 72) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
+  . [(2 1 1 0 20260825 74) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "5ddf28b9454ad9ee12738f9467e3ad013b788ee3"))])
+      (:commit . "b3c19403378f9b465302274fb6dda71243c4cfce"))])
  (material-theme
   . [(2015 0 20210904 122621) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar
@@ -1655,20 +1655,21 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "17e82d7557cc8d86abdf0679c6a54be3bc25cf5f"))])
  (php-mode
-  . [(1 26 1 0 20260824 114) ((emacs (27 1)))
+  . [(1 28 0 0 20260825 32) ((emacs (28 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
-      (:commit . "3d57e94aa7ec2b94c6b0f39d39a70c79c7326e25"))])
+      (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
+      (:commit . "0e32f79ffca49578eba452d38b62e434e517df5e"))])
  (pinyin-isearch
-  . [(1 7 0 0 20260718 9) ((emacs (28 1))) "Pinyin mode for isearch"
+  . [(1 7 0 0 20260825 11) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
      ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
       (:keywords "chinese" "isearch" "matching" "convenience")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "9834cb04fb59d8cb600059f20bf297522c764deb"))])
+      (:commit . "96487d65adfb7f3119ff078e09234abec651226f"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1702,20 +1703,20 @@
       (:authors ("Lin Jian" . "me@linj.tech"))
       (:commit . "0c889c344ed7c3648a2a06501cddbfa5e2ac6063"))])
  (projectile
-  . [(3 5 0 -4 0 20260825 26) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260825 31) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "5abaa50c48ee661181cf96a1a7c1131f2d619b51"))])
+      (:commit . "48e3f2901c6b909e6c8d077258b833494c7c948c"))])
  (proof-general
-  . [(4 6 -4 0 20260622 265) ((emacs (25 2)))
+  . [(4 6 -4 0 20260825 269) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "38e3f59d4b650fbfb9649c84f24adbc9056ffa30"))])
+      (:commit . "9799d01c357f9c35634887dffb3276b6d7adb1ac"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -1818,13 +1819,13 @@
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
       (:commit . "0058837c048cc031ca1a13f598a6a6604777458b"))])
  (sapling
-  . [(0 2 2 0 20260823 3) ((emacs (26 1)))
-     "Magit-like interface for Sapling" tar
+  . [(0 2 3 0 20260825 0) ((emacs (26 1)))
+     "Fast interface for Sapling" tar
      ((:url . "https://github.com/swithinchan/sapling/")
       (:keywords "tools" "vc")
       (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
       (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
-      (:commit . "f09e225dff1b6d716bfc77627445c81b09857b6b"))])
+      (:commit . "444ea019a39695838216e793751a686d6b52eb30"))])
  (sass-mode
   . [(3 0 16 0 20190502 5315) ((haml-mode (3 0 15)) (cl-lib (0 5)))
      "Major mode for editing Sass files" tar
@@ -1891,11 +1892,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "e6ffb91b7e5fa35169e7bc2c477eb292cb990973"))])
  (slime
-  . [(2 32 -4 0 20260820 56) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260825 57) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "ec7d59f50007cf899ebe7539a639bdb88392baf4"))])
+      (:commit . "37530f48dfa52871c632b1783029ab7c7e84bd39"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar

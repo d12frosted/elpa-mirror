@@ -273,12 +273,12 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "0ba4d4cf5485c181c24b57dd6ccee387704c606b"))])
  (bicep-ts-mode
-  . [(0 1 4 0 20260808 85) nil "tree-sitter support for Bicep" tar
+  . [(0 1 4 0 20260825 88) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
       (:keywords "bicep" "languages" "tree-sitter")
       (:maintainer "Jostein Kjønigsen" . "jostein@kjonigsen.net")
       (:authors ("Jostein Kjønigsen" . "jostein@kjonigsen.net"))
-      (:commit . "9825f9b4eb68abbd78b3e78a9757f96b751e06c4"))])
+      (:commit . "9aecd345822227d24c9c8f095e7b02666ee25534"))])
  (bind-key
   . [(2 4 1 0 20260408 145602) ((emacs (24 3)))
      "A simple way to manage personal keybindings" tar
@@ -3369,12 +3369,12 @@
       (:url . "https://elpa.gnu.org/packages/stream.html")
       (:commit . "b9b3ad5c38063703cfa5a06522031e631c49b7e3"))])
  (substitute
-  . [(0 6 1 0 20260728 0) ((emacs (27 1)))
+  . [(0 6 1 0 20260825 3) ((emacs (27 1)))
      "Efficiently replace targets in the buffer or context" tar
      ((:url . "https://github.com/protesilaos/substitute")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "e4bf1ac7f8ae5d8cf27f05ab35412e2da4d04e3d"))])
+      (:commit . "ef962007ed7bc8e5c84f3639b373785e784da5d9"))])
  (svg
   . [(1 1 0 20260101 125434) ((emacs (25)))
      "SVG image creation functions" tar
@@ -3865,13 +3865,13 @@
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
  (vertico
-  . [(2 13 0 20260821 0) ((emacs (29 1)) (compat (31)))
+  . [(2 13 0 20260825 1) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
      ((:url . "https://github.com/minad/vertico")
       (:keywords "convenience" "files" "matching" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "a6874e3d8c74a9eea77967d702d608ebbd6b27ec"))])
+      (:commit . "5b6a8b64f79113534a8e13950e00bc6f99256329"))])
  (vertico-posframe
   . [(0 9 2 0 20260201 41512)
      ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))

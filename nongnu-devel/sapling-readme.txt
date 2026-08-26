@@ -1,4 +1,4 @@
-A fast, Magit-inspired interface for the Sapling SCM (`sl').
+A fast interface for the Sapling SCM (`sl').
 
 The status buffer is the main entry point:
 
