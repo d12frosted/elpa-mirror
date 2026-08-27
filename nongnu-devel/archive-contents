@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260824 86)
+  . [(2 1 0 -4 0 20260827 94)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "4dc6e271c0e30f0db3398ecd0bfe33171543c548"))])
+      (:commit . "81a861653fd7f8505fe436dda2dd8639e1d14bb3"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -489,7 +489,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 2 0 0 20260824 1) ((emacs (29 1)) (compat (31)))
+  . [(4 2 0 0 20260827 2) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -498,7 +498,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "76344cc88cb6da7141ff9a85a23fc3395cc0c6b5"))])
+      (:commit . "bff7a9852ddee43188781034109cabf937cb8baf"))])
  (elfeed-web
   . [(4 1 0 0 20260821 0)
      ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260826 38) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260827 43) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "372de373a2ba92f732e4746f1e62f28f8d1f02e0"))])
+      (:commit . "9f2e923225acb13a438040bb2c570f27959e744b"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260825 99)
+  . [(0 9 9 5 0 20260826 101)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "092bbc32fcada63404c572f6c3497c6d68d955f7"))])
+      (:commit . "1f6556d9266c756a142337ccc82acfa5bba713ec"))])
  (graphql-mode
   . [(1 0 0 0 20260524 82344) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1356,13 +1356,13 @@
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
       (:commit . "2d9d48fec6acf5e545395d7c514fd8b70f6ad028"))])
  (markdown-mode
-  . [(2 9 -3 0 20260821 15) ((emacs (28 1)))
+  . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
      ((:url . "https://jblevins.org/projects/markdown-mode/")
       (:keywords "markdown" "github flavored markdown" "itex")
       (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
-      (:commit . "6995b8d095eceace0b947c1217646781ab021c10"))])
+      (:commit . "76cb4ffecfdf95ee769e5cb4608e04202c3c1521"))])
  (mastodon
   . [(2 1 1 0 20260825 74) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
@@ -1663,13 +1663,13 @@
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
       (:commit . "0e32f79ffca49578eba452d38b62e434e517df5e"))])
  (pinyin-isearch
-  . [(1 7 0 0 20260825 11) ((emacs (28 1))) "Pinyin mode for isearch"
+  . [(1 7 0 0 20260827 12) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
      ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
       (:keywords "chinese" "isearch" "matching" "convenience")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "96487d65adfb7f3119ff078e09234abec651226f"))])
+      (:commit . "3e9ca21623b36a36ed8d0254a4d1b84ef058cb15"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1819,13 +1819,13 @@
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
       (:commit . "0058837c048cc031ca1a13f598a6a6604777458b"))])
  (sapling
-  . [(0 2 3 0 20260825 0) ((emacs (26 1)))
+  . [(0 3 1 0 20260827 0) ((emacs (26 1)))
      "Fast interface for Sapling" tar
      ((:url . "https://github.com/swithinchan/sapling/")
       (:keywords "tools" "vc")
       (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
       (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
-      (:commit . "444ea019a39695838216e793751a686d6b52eb30"))])
+      (:commit . "37bf45fa2b34f1099bf7e352fa0e88b35bb779c7"))])
  (sass-mode
   . [(3 0 16 0 20190502 5315) ((haml-mode (3 0 15)) (cl-lib (0 5)))
      "Major mode for editing Sass files" tar
@@ -1892,11 +1892,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "e6ffb91b7e5fa35169e7bc2c477eb292cb990973"))])
  (slime
-  . [(2 32 -4 0 20260825 58) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260827 60) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "06e46196ad7d972c10559291d8a82f8beb735463"))])
+      (:commit . "d93a570f57600611d534893fa381d0cf10b85e23"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -1981,7 +1981,7 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "3ed24d3e9f57e5b3a7915dd46ce5219557e1033d"))])
  (swift-mode
-  . [(10 0 0 0 20260822 36) ((emacs (25 2)))
+  . [(10 0 0 0 20260827 38) ((emacs (25 2)))
      "Major-mode for Apple's Swift programming language" tar
      ((:url . "https://github.com/swift-emacs/swift-mode")
       (:keywords "languages" "swift")
@@ -1990,7 +1990,7 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net"))
-      (:commit . "053336346073e6e2849c19cadd6c6e3e79985c2d"))])
+      (:commit . "bb4ef3a344a04ec97c8707ad8c5aadc2f446ad02"))])
  (symbol-overlay
   . [(4 3 0 20260703 4) ((emacs (24 3)) (seq (2 2)))
      "Highlight symbols with keymap-enabled overlays" tar

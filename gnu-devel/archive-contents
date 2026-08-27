@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 14 0 20260821 0) ((emacs (29 1)) (compat (31)))
+  . [(2 14 0 20260826 6) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "75be36fe63e78c63ac71c32039ab07836bd532ac"))])
+      (:commit . "213ec2b5afe1da4e15090808c00871f8cb3b730a"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260822 30) ((emacs (28)))
+  . [(9 1 0 0 20260826 34) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "498ccb4c2e547aad20766eec64e802453987a40c"))])
+      (:commit . "cb4339d7e43383d0724da9ab0990cebe87e57352"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -3874,13 +3874,13 @@
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
  (vertico
-  . [(2 13 0 20260825 1) ((emacs (29 1)) (compat (31)))
+  . [(2 13 0 20260826 9) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
      ((:url . "https://github.com/minad/vertico")
       (:keywords "convenience" "files" "matching" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "5b6a8b64f79113534a8e13950e00bc6f99256329"))])
+      (:commit . "df51b901b78251be1e3bb54f173856f4cc395163"))])
  (vertico-posframe
   . [(0 9 2 0 20260201 41512)
      ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))

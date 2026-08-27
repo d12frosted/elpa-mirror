@@ -1712,12 +1712,12 @@
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
       (:commit . "a8c69ce8f5e7793d2f81dbef60fb37b4b93afccf"))])
  (sapling
-  . [(0 2 3) ((emacs (26 1))) "Fast interface for Sapling" tar
+  . [(0 3 1) ((emacs (26 1))) "Fast interface for Sapling" tar
      ((:url . "https://github.com/swithinchan/sapling/")
       (:keywords "tools" "vc")
       (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
       (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
-      (:commit . "444ea019a39695838216e793751a686d6b52eb30"))])
+      (:commit . "37bf45fa2b34f1099bf7e352fa0e88b35bb779c7"))])
  (sass-mode
   . [(3 0 16) ((haml-mode (3 0 15)))
      "Major mode for editing Sass files" tar
