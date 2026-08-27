@@ -73,7 +73,7 @@ retyping its host/port/user every time.  In every case, the
 password itself is never typed or stored in `q-connections' - it's
 always resolved from auth-source.  `.netrc'/`.authinfo' is the
 common case, but auth-source is backend-agnostic: anything
-registered as an `auth-source-backend' (e.g. the system Secret
+registered as an auth-source-backend (e.g. the system Secret
 Service/macOS Keychain via `auth-source-pass' or `secrets.el', or a
 custom backend you write yourself) is consulted the same way, so
 the password need not live in a plaintext file at all.

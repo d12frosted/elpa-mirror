@@ -5,7 +5,6 @@ This file is the package entry point: it defines the global
 modules, each in its own file:
 
 - gptel-agent-harness-config.el      — user options and prompt files
-- gptel-agent-harness-fsm.el — FSM hardening advice and helpers
 - gptel-agent-harness-compact.el     — automatic context compaction
 - gptel-agent-harness-display.el     — mode-line display, token calibration, context rules
 - gptel-agent-harness-supervisor.el  — FSM supervisor, build/plan mode
