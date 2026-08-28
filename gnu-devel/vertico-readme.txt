@@ -317,7 +317,7 @@ Table of Contents
   the subdirectory [extensions/]. The extensions are installed together
   with Vertico.  The extensions are inactive by default and can be
   enabled manually if desired.  Furthermore it is possible to install
-  all of the files separately, both `vertico.el' and the `vertico-*.el'
+  each of the files individually, `vertico.el' and the `vertico-*.el'
   extensions. Currently the following extensions come with the Vertico
   package:
 

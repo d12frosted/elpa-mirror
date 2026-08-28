@@ -47,11 +47,10 @@
   vendored [picomemo] source.  Build dependencies: a C compiler,
   `pkg-config', and Mbed TLS 3.0 or later (`mbedcrypto').
 
-  Build the module manually from the jabber source or ELPA/package
-  directory:
+  Build the module from the ELPA package directory:
 
   ┌────
-  │ cd /path/to/jabber-source-or-elpa-dir
+  │ cd /path/to/elpa/jabber-VERSION
   │ make module
   └────
 
@@ -66,87 +65,23 @@
 3 Installation
 ══════════════
 
-  `jabber.el' is available via [NonGNU ELPA].
+  `jabber.el' is available via [NonGNU ELPA].  That is the only
+  supported install path.
 
-  You can install it via `M-x package-install RET jabber'
+  ┌────
+  │ (use-package jabber
+  │   :ensure t
+  │   :config
+  │   (setq jabber-account-list
+  │         `(("user@example.org"
+  │            (:password . ,(auth-source-pass-get 'secret "xmpp/example.org")))))
+  │   (jabber-modeline-mode 1)
+  │   :bind-keymap (("C-x C-j" . jabber-global-keymap))
+  │   :hook (kill-emacs . jabber-disconnect))
+  └────
 
 
 [NonGNU ELPA] <https://elpa.nongnu.org/nongnu/jabber.html>
-
-3.1 package-vc (Emacs 30+)
-──────────────────────────
-
-  Emacs honors package-vc build commands such as `:make' only when
-  `package-vc-allow-build-commands' allows the package.
-
-  ┌────
-  │ (setq package-vc-allow-build-commands '(jabber))
-  │ 
-  │ (use-package jabber
-  │   :ensure nil
-  │   :vc (:url "https://git.thanosapollo.org/emacs-jabber"
-  │             :branch "master"
-  │             :rev :newest
-  │             :lisp-dir "lisp"
-  │             :doc "README.org"
-  │             :make "module")
-  │   :custom
-  │   (jabber-account-list '(("user@example.org")))
-  │   :config
-  │   (jabber-modeline-mode 1)
-  │   :bind-keymap (("C-x C-j" . jabber-global-keymap))
-  │   :hook (kill-emacs . jabber-disconnect))
-  └────
-
-
-3.2 straight.el
-───────────────
-
-  ┌────
-  │ (use-package jabber
-  │   :straight `(jabber
-  │               :type git
-  │               :host nil
-  │               :repo "https://git.thanosapollo.org/emacs-jabber"
-  │               :branch "master"
-  │               :files ("lisp/*.el"
-  │                       "lisp/jabber-omemo-core.so"
-  │                       "lisp/jabber-omemo-core.dylib")
-  │               :pre-build ,(pcase system-type
-  │                             ('berkeley-unix '(("gmake" "module" "CC=clang")))
-  │                             ('darwin '(("make" "module" "CC=clang")))
-  │                             (_ '(("make" "module")))))
-  │   :custom
-  │   (jabber-account-list '(("user@example.org")))
-  │   :config
-  │   (jabber-modeline-mode 1)
-  │   :bind-keymap (("C-x C-j" . jabber-global-keymap))
-  │   :hook (kill-emacs . jabber-disconnect))
-  └────
-
-
-3.3 Nix
-───────
-
-  The repository ships a `flake.nix' with Emacs, test, lint, and
-  native-module build dependencies.
-
-  ┌────
-  │ make test
-  │ make module
-  └────
-
-  To enter the same environment manually:
-
-  ┌────
-  │ nix develop
-  └────
-
-  To run the isolated Nix checks:
-
-  ┌────
-  │ nix flake check
-  └────
 
 
 4 Configuration
@@ -161,14 +96,6 @@
   ┌────
   │ (setq jabber-account-list '(("user@example.org")
   │                              ("second@account.org")))
-  └────
-
-  With `pass' (password-store):
-
-  ┌────
-  │ (setq jabber-account-list
-  │       `(("user@example.org"
-  │          (:password . ,(auth-source-pass-get 'secret "xmpp/example.org/user")))))
   └────
 
 

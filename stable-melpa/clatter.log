@@ -2,10 +2,10 @@
  • Building package clatter
 From https://github.com/parenworks/clatter.el
 Updating /mnt/store/melpa/working/clatter/
-Checking out ac41e8c8d7a53a5b963abf88353c0c5e290ec196
+Checking out 209a0c99e512de0ff8f945c67582be29fa9ccd11
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clatter/
-  to /tmp/clatter-8iJji6/clatter-20260827.1727/
+  to /tmp/clatter-DNfblI/clatter-20260828.855/
     clatter-actions.el -> clatter-actions.el
     clatter-cap.el -> clatter-cap.el
     clatter-chathistory.el -> clatter-chathistory.el
@@ -14,6 +14,8 @@ Copying files (->) and directories (=>)
     clatter-config.el -> clatter-config.el
     clatter-connection.el -> clatter-connection.el
     clatter-dcc.el -> clatter-dcc.el
+    clatter-evil.el -> clatter-evil.el
+    clatter-feed.el -> clatter-feed.el
     clatter-format.el -> clatter-format.el
     clatter-handlers.el -> clatter-handlers.el
     clatter-hl-nicks.el -> clatter-hl-nicks.el
@@ -38,39 +40,41 @@ Copying files (->) and directories (=>)
     clatter-ui.el -> clatter-ui.el
     clatter-url-preview.el -> clatter-url-preview.el
     clatter.el -> clatter.el
-Created clatter-20260827.1727.tar containing:
-  clatter-20260827.1727/
-  clatter-20260827.1727/clatter-actions.el
-  clatter-20260827.1727/clatter-cap.el
-  clatter-20260827.1727/clatter-chathistory.el
-  clatter-20260827.1727/clatter-commands.el
-  clatter-20260827.1727/clatter-completion.el
-  clatter-20260827.1727/clatter-config.el
-  clatter-20260827.1727/clatter-connection.el
-  clatter-20260827.1727/clatter-dcc.el
-  clatter-20260827.1727/clatter-format.el
-  clatter-20260827.1727/clatter-handlers.el
-  clatter-20260827.1727/clatter-hl-nicks.el
-  clatter-20260827.1727/clatter-image.el
-  clatter-20260827.1727/clatter-list.el
-  clatter-20260827.1727/clatter-log.el
-  clatter-20260827.1727/clatter-model.el
-  clatter-20260827.1727/clatter-nicklist.el
-  clatter-20260827.1727/clatter-notify.el
-  clatter-20260827.1727/clatter-org.el
-  clatter-20260827.1727/clatter-pals.el
-  clatter-20260827.1727/clatter-pkg.el
-  clatter-20260827.1727/clatter-protocol.el
-  clatter-20260827.1727/clatter-rawlog.el
-  clatter-20260827.1727/clatter-read-marker.el
-  clatter-20260827.1727/clatter-sasl-scram.el
-  clatter-20260827.1727/clatter-search.el
-  clatter-20260827.1727/clatter-smart.el
-  clatter-20260827.1727/clatter-socks.el
-  clatter-20260827.1727/clatter-soju.el
-  clatter-20260827.1727/clatter-sts.el
-  clatter-20260827.1727/clatter-track.el
-  clatter-20260827.1727/clatter-ui.el
-  clatter-20260827.1727/clatter-url-preview.el
-  clatter-20260827.1727/clatter.el
-Built clatter in 6.038s, finished at 2026-08-27T18:49:04+0000
+Created clatter-20260828.855.tar containing:
+  clatter-20260828.855/
+  clatter-20260828.855/clatter-actions.el
+  clatter-20260828.855/clatter-cap.el
+  clatter-20260828.855/clatter-chathistory.el
+  clatter-20260828.855/clatter-commands.el
+  clatter-20260828.855/clatter-completion.el
+  clatter-20260828.855/clatter-config.el
+  clatter-20260828.855/clatter-connection.el
+  clatter-20260828.855/clatter-dcc.el
+  clatter-20260828.855/clatter-evil.el
+  clatter-20260828.855/clatter-feed.el
+  clatter-20260828.855/clatter-format.el
+  clatter-20260828.855/clatter-handlers.el
+  clatter-20260828.855/clatter-hl-nicks.el
+  clatter-20260828.855/clatter-image.el
+  clatter-20260828.855/clatter-list.el
+  clatter-20260828.855/clatter-log.el
+  clatter-20260828.855/clatter-model.el
+  clatter-20260828.855/clatter-nicklist.el
+  clatter-20260828.855/clatter-notify.el
+  clatter-20260828.855/clatter-org.el
+  clatter-20260828.855/clatter-pals.el
+  clatter-20260828.855/clatter-pkg.el
+  clatter-20260828.855/clatter-protocol.el
+  clatter-20260828.855/clatter-rawlog.el
+  clatter-20260828.855/clatter-read-marker.el
+  clatter-20260828.855/clatter-sasl-scram.el
+  clatter-20260828.855/clatter-search.el
+  clatter-20260828.855/clatter-smart.el
+  clatter-20260828.855/clatter-socks.el
+  clatter-20260828.855/clatter-soju.el
+  clatter-20260828.855/clatter-sts.el
+  clatter-20260828.855/clatter-track.el
+  clatter-20260828.855/clatter-ui.el
+  clatter-20260828.855/clatter-url-preview.el
+  clatter-20260828.855/clatter.el
+Built clatter in 5.942s, finished at 2026-08-28T10:17:02+0000

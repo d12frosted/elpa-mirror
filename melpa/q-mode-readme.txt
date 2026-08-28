@@ -15,7 +15,7 @@ Some of its major features include:
 
  - secure password retrieval (auth-source),
 
- - named remote connections (q-connections),
+ - named remote connections (q-connections-alist),
 
  - incremental, project-wide indexing (imenu, xref),
 
@@ -61,19 +61,19 @@ anyone on the machine running `ps'; `q-con' resolves it from
 auth-source only for the instant it takes to write it to the
 socket, and it never becomes a command-line argument at all.
 `q-con' also supports TLS: prefix a host with `tcps://' - in
-`q-connection-host', a `q-connections' entry, or typed ad-hoc at the
+`q-connection-host', a `q-connections-alist' entry, or typed ad-hoc at the
 prompt - to connect over TLS instead of plain tcp.
 
 When prompted this way, `q-qcon' and `q-con' both offer named
-connections from `q-connections' as completion candidates,
+connections from `q-connections-alist' as completion candidates,
 alongside the option of typing an ad-hoc "host:port[:user]" string.
-Each entry in `q-connections' is a (NAME HOST PORT USER) list,
+Each entry in `q-connections-alist' is a (NAME HOST PORT USER) list,
 letting you refer to a remote q server by a short name instead of
 retyping its host/port/user every time.  In every case, the
-password itself is never typed or stored in `q-connections' - it's
+password itself is never typed or stored in `q-connections-alist' - it's
 always resolved from auth-source.  `.netrc'/`.authinfo' is the
 common case, but auth-source is backend-agnostic: anything
-registered as an auth-source-backend (e.g. the system Secret
+registered as an `auth-source-backend' (e.g. the system Secret
 Service/macOS Keychain via `auth-source-pass' or `secrets.el', or a
 custom backend you write yourself) is consulted the same way, so
 the password need not live in a plaintext file at all.

@@ -411,7 +411,7 @@ Table of Contents
 ═════════════════════════════
 
   At its core, Denote is a file-naming scheme ([The file-naming
-  scheme]).  It is applies to new text files that Denote creates or to
+  scheme]).  It applies to new text files that Denote creates or to
   existing files of any type (videos, PDFs, images, …). Here is the big
   picture view on how to get started with Denote:
 
@@ -8024,30 +8024,30 @@ section 21.13
 
   Ideas and/or user feedback
         Abin Simon, Aditya Yadav, Alan Schmitt, Aleksandr Vityazev, Alex
-        Griffin, Alex Hirschfeld, Alexis Purslane, Alfredo Borrás, Alp
-        Eren Kose, André Bering, Ashton Wiersdorf, Bhargav Kulkarni,
-        Benjamin Kästner, Claudio Migliorelli, Claudiu Tănăselia, Colin
-        McLear, Cosmin-Octavian C, Damien Cassou, Davi Ramos, Elias
-        Storms, Federico Stilman, Florian, Frédéric Willem Frank Ehmsen,
-        Glenna D., Guo Yong, Hanspeter Gisler Harold Ollivier,
-        IceAsteroid, Jack Baty, Jay Rajput, Jean-Charles Bagneris, Jeff
-        Valk, Jens Östlund, Jeremy Friesen, Jonathan Sahar, Johan
-        Bolmsjö, Jonas Großekathöfer, Jousimies, Juanjo Presa, Julian
-        Hoch, Kai von Fintel, Kaushal Modi, Kevin Izevbigie, Kolmas,
-        Lukas C. Bossert, M.  Hadi Timachi, Maikol Solis, Mark Olson,
-        Michael Jones, Mirko Hernandez, Morten Kjeldgaard, Niall Dooley,
-        Nick Bell, Oliver Epper, Paul van Gelder, Peter Prevos, Peter
-        Smith, Riccardo Giannitrapani, Rory Molinari, Samuel W. Flint,
-        Sergio Rey, Suhail Singh, Shreyas Ragavan, Stefan Thesing,
-        Summer Emacs, Sven Seebeck, Taoufik, TJ Stankus, Vick (VicZz),
-        Viktor Haag, Vineet C. Kulkarni, Wade Mealing, Wilf, Yi Liu,
-        Ypot, 82Kang, atanasj, azegas, babusri, bdillahu, coherentstate,
-        doolio, duli, drcxd, elge70, elliottw, fingerknight, GuutBoy,
-        hpgisler, hyperfocus1337,johkneisl, jtpavlock, juh, leafarbelm,
-        mentalisttraceur, mjkalyan, o-rxw, oatmealm, potchie-maker,
-        Pratik-Mishra-4979, pRot0ta1p, rbenit68, relict007, sarcom-sar,
-        sienic, skissue, sundar bp, wuzhihao, yetanotherfossman,
-        zadca123
+        Griffin, Alex Hirschfeld, Alexis Purslane, Alfredo Borrás, Ali
+        Bozorgzadeh, Alp Eren Kose, André Bering, Ashton Wiersdorf,
+        Bhargav Kulkarni, Benjamin Kästner, Claudio Migliorelli, Claudiu
+        Tănăselia, Colin McLear, Cosmin-Octavian C, Damien Cassou, Davi
+        Ramos, Elias Storms, Federico Stilman, Florian, Frédéric Willem
+        Frank Ehmsen, Glenna D., Guo Yong, Hanspeter Gisler Harold
+        Ollivier, IceAsteroid, Jack Baty, Jay Rajput, Jean-Charles
+        Bagneris, Jeff Valk, Jens Östlund, Jeremy Friesen, Jonathan
+        Sahar, Johan Bolmsjö, Jonas Großekathöfer, Jousimies, Juanjo
+        Presa, Julian Hoch, Kai von Fintel, Kaushal Modi, Kevin
+        Izevbigie, Kolmas, Lukas C. Bossert, M. Hadi Timachi, Maikol
+        Solis, Mark Olson, Michael Jones, Mirko Hernandez, Morten
+        Kjeldgaard, Niall Dooley, Nick Bell, Oliver Epper, Paul van
+        Gelder, Peter Prevos, Peter Smith, Riccardo Giannitrapani, Rory
+        Molinari, Samuel W. Flint, Sergio Rey, Suhail Singh, Shreyas
+        Ragavan, Stefan Thesing, Summer Emacs, Sven Seebeck, Taoufik, TJ
+        Stankus, Vick (VicZz), Viktor Haag, Vineet C. Kulkarni, Wade
+        Mealing, Wilf, Yi Liu, Ypot, 82Kang, atanasj, azegas, babusri,
+        bdillahu, coherentstate, doolio, duli, drcxd, elge70, elliottw,
+        fingerknight, GuutBoy, hpgisler, hyperfocus1337,johkneisl,
+        jtpavlock, juh, leafarbelm, mentalisttraceur, mjkalyan, o-rxw,
+        oatmealm, potchie-maker, Pratik-Mishra-4979, pRot0ta1p,
+        rbenit68, relict007, sarcom-sar, sienic, skissue, sundar bp,
+        wuzhihao, yetanotherfossman, zadca123
 
   Special thanks to Peter Povinec who helped refine the file-naming
   scheme, which is the cornerstone of this project.
