@@ -600,13 +600,13 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "72f47d4d1e6dcf89d59f5af65f365dd704efe9e5"))])
  (cperl-mode
-  . [(32 0 50) ((emacs (26 1))) "Perl code editing commands" tar
-     ((:url . "https://github.com/HaraldJoerg/cperl-mode/issues/32")
+  . [(33 0 0) ((emacs (26 1))) "Perl code editing commands" tar
+     ((:url . "https://elpa.gnu.org/packages/cperl-mode.html")
       (:keywords "languages")
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Ilya Zakharevich" . "ilyaz@cpan.org")
 		("Jonathan Rockway" . "jon@jrock.us"))
-      (:commit . "ca03a4c3857b46f24613d1b4dc87299847fdaf19"))])
+      (:commit . "f4f249a2249a7047ba41a659b8fcdcd7e1caf4e0"))])
  (cpio-mode
   . [(0 17) nil "Handle cpio archives in the style of dired." tar
      ((:keywords "files")
@@ -825,13 +825,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl
-  . [(1 10 0) ((cl-lib (0 2)) (emacs (25 1)))
+  . [(1 11 0) ((cl-lib (0 2)) (emacs (27 1)))
      "Highlight uncommitted changes using VC" tar
      ((:url . "https://github.com/dgutov/diff-hl")
       (:keywords "vc" "diff")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
-      (:commit . "b80ff9b4a772f7ea000e86fbf88175104ddf9557"))])
+      (:commit . "8dca5a562289adc3eabc4f0a15a8c856aa799268"))])
  (diffview
   . [(1 0) nil "View diffs in side-by-side format" single
      ((:keywords "convenience" "diff")

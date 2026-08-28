@@ -266,12 +266,12 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "85261a928ae0ec3b41e639f05291ffd6bf7c231c"))])
  (beframe
-  . [(1 5 0 0 20260827 16) ((emacs (28 1)))
+  . [(1 5 0 0 20260828 18) ((emacs (28 1)))
      "Isolate buffers per frame" tar
      ((:url . "https://github.com/protesilaos/beframe")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "3ee3f53ada6b4dc1d8a490b68daab367248a98d7"))])
+      (:commit . "f1824ddbda0c6fb09745e4404e7521a42e2fb258"))])
  (bicep-ts-mode
   . [(0 1 4 0 20260825 88) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 7 0 20260826 5) ((emacs (29 1)) (compat (31)))
+  . [(3 7 0 20260828 6) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "1aec7822fec2724a2e4978665681992f420c29b5"))])
+      (:commit . "5ebf5fa743f7a0ad1e16a2f4f3bc8bd5b63aefc9"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 14 0 20260828 10) ((emacs (29 1)) (compat (31)))
+  . [(2 14 0 20260828 12) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "3df7a7abc97c48401fc9f8cb2a8f4fd6c8df3b73"))])
+      (:commit . "c68f993d2df82bfab8a973c6f1af047dc3543093"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -636,14 +636,14 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "a0f7fc3c0403a957d009f2bdcc248d3bd5fcfe01"))])
  (cperl-mode
-  . [(32 0 50 0 20260825 0) ((emacs (26 1)))
+  . [(33 0 0 0 20260828 0) ((emacs (26 1)))
      "Perl code editing commands" tar
-     ((:url . "https://github.com/HaraldJoerg/cperl-mode/issues/32")
+     ((:url . "https://elpa.gnu.org/packages/cperl-mode.html")
       (:keywords "languages")
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Ilya Zakharevich" . "ilyaz@cpan.org")
 		("Jonathan Rockway" . "jon@jrock.us"))
-      (:commit . "c32955a0e937a9a4f05119285e6ef2a61399012e"))])
+      (:commit . "07c786f8618b2847f7951ed0de3ccb45377e2bf8"))])
  (cpio-mode
   . [(0 17 0 20241101 133717) ((emacs (24 5)))
      "Handle cpio archives in the style of dired" tar
@@ -769,12 +769,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20260827 23) ((emacs (28 1)))
+  . [(4 2 3 0 20260828 24) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "2c8cf137ac2f9829454322f987211506100da60c"))])
+      (:commit . "0a157981e58faa8c98cfc937dfb2792533642197"))])
  (denote-journal
   . [(0 3 0 0 20260520 123338) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -878,13 +878,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl
-  . [(1 10 0 0 20260811 192) ((cl-lib (0 2)) (emacs (27 1)))
+  . [(1 11 0 0 20260828 0) ((cl-lib (0 2)) (emacs (27 1)))
      "Highlight uncommitted changes using VC" tar
      ((:url . "https://github.com/dgutov/diff-hl")
       (:keywords "vc" "diff")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
-      (:commit . "6f1df2b83d1140a2938409b35de7f4c9c7b1defd"))])
+      (:commit . "8dca5a562289adc3eabc4f0a15a8c856aa799268"))])
  (diffview
   . [(1 0 0 20230224 111651) nil "View diffs in side-by-side format"
      tar
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260827 36) ((emacs (28)))
+  . [(9 1 0 0 20260828 39) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "8a3a7c169a5be932cdcf776eae9f2a5acd281d04"))])
+      (:commit . "15d966309baf0de622749ecf3a14b2c96f611a31"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2482,14 +2482,14 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "76e4dbe07f93f8a3e5e0f0c326e7088b58e84876"))])
  (org-contacts
-  . [(1 3 0 20260813 7) ((emacs (29 1)) (org (9 7)))
+  . [(1 3 0 20260828 8) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
      ((:url . "https://repo.or.cz/org-contacts.git")
       (:keywords "contacts" "org-mode" "outlines" "hypermedia"
 		 "calendar")
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:authors ("Julien Danjou" . "julien@danjou.info"))
-      (:commit . "791a9daff267083df2dce76f33e0027f516c64d8"))])
+      (:commit . "dda8ba65f186384169b0025c0696f4a784674e0e"))])
  (org-edna
   . [(1 1 2 0 20200902 94459)
      ((emacs (25 1)) (seq (2 19)) (org (9 0 5)))
@@ -3874,13 +3874,13 @@
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
  (vertico
-  . [(2 13 0 20260828 17) ((emacs (29 1)) (compat (31)))
+  . [(2 13 0 20260828 20) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
      ((:url . "https://github.com/minad/vertico")
       (:keywords "convenience" "files" "matching" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "0e142b076298c4e02dff10190aaf208670b6dce8"))])
+      (:commit . "a7425c2865d2dbc36d8a12e09695b278b0142637"))])
  (vertico-posframe
   . [(0 9 2 0 20260201 41512)
      ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))

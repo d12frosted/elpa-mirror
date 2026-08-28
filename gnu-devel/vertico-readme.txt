@@ -563,8 +563,8 @@ Table of Contents
      the minibuffer.
   7. Install Embark-Consult to export from `consult-line' to editable
      `occur-mode' buffers and from `consult-grep' to `grep-mode'
-     buffers. On Emacs 31, use `grep-edit-mode' for editing or [wgrep]
-     on older Emacs version.
+     buffers. Install [wgrep] for editable Grep buffers, or use the less
+     featureful `grep-edit-mode' on Emacs 31.
   8. Fine tune Vertico with [extensions].
 
   The ecosystem is modular. You don't have to use all of these
