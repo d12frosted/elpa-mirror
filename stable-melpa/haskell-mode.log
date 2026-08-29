@@ -2,10 +2,10 @@
  • Building package haskell-mode
 From https://github.com/haskell/haskell-mode
 Updating /mnt/store/melpa/working/haskell-mode/
-Checking out 2dd755a5fa11577a9388af88f385d2a8e18f7a8d
+Checking out d252d4a6feb3b15e4d0be88e6a42b98d8f5766ba
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/haskell-mode/
-  to /tmp/haskell-mode-V4qMoH/haskell-mode-20260206.1050/
+  to /tmp/haskell-mode-sPBOG7/haskell-mode-20260829.851/
     ghc-core.el -> ghc-core.el
     ghci-script-mode.el -> ghci-script-mode.el
     haskell-align-imports.el -> haskell-align-imports.el
@@ -51,52 +51,52 @@ Copying files (->) and directories (=>)
     NEWS -> NEWS
     logo.svg -> logo.svg
 Generating haskell-mode.info
-Created haskell-mode-20260206.1050.tar containing:
-  haskell-mode-20260206.1050/
-  haskell-mode-20260206.1050/NEWS
-  haskell-mode-20260206.1050/dir
-  haskell-mode-20260206.1050/ghc-core.el
-  haskell-mode-20260206.1050/ghci-script-mode.el
-  haskell-mode-20260206.1050/haskell-align-imports.el
-  haskell-mode-20260206.1050/haskell-c2hs.el
-  haskell-mode-20260206.1050/haskell-cabal.el
-  haskell-mode-20260206.1050/haskell-collapse.el
-  haskell-mode-20260206.1050/haskell-commands.el
-  haskell-mode-20260206.1050/haskell-compile.el
-  haskell-mode-20260206.1050/haskell-complete-module.el
-  haskell-mode-20260206.1050/haskell-completions.el
-  haskell-mode-20260206.1050/haskell-customize.el
-  haskell-mode-20260206.1050/haskell-debug.el
-  haskell-mode-20260206.1050/haskell-decl-scan.el
-  haskell-mode-20260206.1050/haskell-doc.el
-  haskell-mode-20260206.1050/haskell-font-lock.el
-  haskell-mode-20260206.1050/haskell-ghc-support.el
-  haskell-mode-20260206.1050/haskell-hoogle.el
-  haskell-mode-20260206.1050/haskell-indent.el
-  haskell-mode-20260206.1050/haskell-indentation.el
-  haskell-mode-20260206.1050/haskell-interactive-mode.el
-  haskell-mode-20260206.1050/haskell-lexeme.el
-  haskell-mode-20260206.1050/haskell-load.el
-  haskell-mode-20260206.1050/haskell-menu.el
-  haskell-mode-20260206.1050/haskell-mode-pkg.el
-  haskell-mode-20260206.1050/haskell-mode.el
-  haskell-mode-20260206.1050/haskell-mode.info
-  haskell-mode-20260206.1050/haskell-modules.el
-  haskell-mode-20260206.1050/haskell-move-nested.el
-  haskell-mode-20260206.1050/haskell-navigate-imports.el
-  haskell-mode-20260206.1050/haskell-presentation-mode.el
-  haskell-mode-20260206.1050/haskell-process.el
-  haskell-mode-20260206.1050/haskell-repl.el
-  haskell-mode-20260206.1050/haskell-sandbox.el
-  haskell-mode-20260206.1050/haskell-session.el
-  haskell-mode-20260206.1050/haskell-sort-imports.el
-  haskell-mode-20260206.1050/haskell-string.el
-  haskell-mode-20260206.1050/haskell-svg.el
-  haskell-mode-20260206.1050/haskell-unicode-input-method.el
-  haskell-mode-20260206.1050/haskell-utils.el
-  haskell-mode-20260206.1050/haskell.el
-  haskell-mode-20260206.1050/highlight-uses-mode.el
-  haskell-mode-20260206.1050/inf-haskell.el
-  haskell-mode-20260206.1050/logo.svg
-  haskell-mode-20260206.1050/w3m-haddock.el
-Built haskell-mode in 16.467s, finished at 2026-08-28T21:35:02+0000
+Created haskell-mode-20260829.851.tar containing:
+  haskell-mode-20260829.851/
+  haskell-mode-20260829.851/NEWS
+  haskell-mode-20260829.851/dir
+  haskell-mode-20260829.851/ghc-core.el
+  haskell-mode-20260829.851/ghci-script-mode.el
+  haskell-mode-20260829.851/haskell-align-imports.el
+  haskell-mode-20260829.851/haskell-c2hs.el
+  haskell-mode-20260829.851/haskell-cabal.el
+  haskell-mode-20260829.851/haskell-collapse.el
+  haskell-mode-20260829.851/haskell-commands.el
+  haskell-mode-20260829.851/haskell-compile.el
+  haskell-mode-20260829.851/haskell-complete-module.el
+  haskell-mode-20260829.851/haskell-completions.el
+  haskell-mode-20260829.851/haskell-customize.el
+  haskell-mode-20260829.851/haskell-debug.el
+  haskell-mode-20260829.851/haskell-decl-scan.el
+  haskell-mode-20260829.851/haskell-doc.el
+  haskell-mode-20260829.851/haskell-font-lock.el
+  haskell-mode-20260829.851/haskell-ghc-support.el
+  haskell-mode-20260829.851/haskell-hoogle.el
+  haskell-mode-20260829.851/haskell-indent.el
+  haskell-mode-20260829.851/haskell-indentation.el
+  haskell-mode-20260829.851/haskell-interactive-mode.el
+  haskell-mode-20260829.851/haskell-lexeme.el
+  haskell-mode-20260829.851/haskell-load.el
+  haskell-mode-20260829.851/haskell-menu.el
+  haskell-mode-20260829.851/haskell-mode-pkg.el
+  haskell-mode-20260829.851/haskell-mode.el
+  haskell-mode-20260829.851/haskell-mode.info
+  haskell-mode-20260829.851/haskell-modules.el
+  haskell-mode-20260829.851/haskell-move-nested.el
+  haskell-mode-20260829.851/haskell-navigate-imports.el
+  haskell-mode-20260829.851/haskell-presentation-mode.el
+  haskell-mode-20260829.851/haskell-process.el
+  haskell-mode-20260829.851/haskell-repl.el
+  haskell-mode-20260829.851/haskell-sandbox.el
+  haskell-mode-20260829.851/haskell-session.el
+  haskell-mode-20260829.851/haskell-sort-imports.el
+  haskell-mode-20260829.851/haskell-string.el
+  haskell-mode-20260829.851/haskell-svg.el
+  haskell-mode-20260829.851/haskell-unicode-input-method.el
+  haskell-mode-20260829.851/haskell-utils.el
+  haskell-mode-20260829.851/haskell.el
+  haskell-mode-20260829.851/highlight-uses-mode.el
+  haskell-mode-20260829.851/inf-haskell.el
+  haskell-mode-20260829.851/logo.svg
+  haskell-mode-20260829.851/w3m-haddock.el
+Built haskell-mode in 15.665s, finished at 2026-08-29T12:41:42+0000

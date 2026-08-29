@@ -1744,13 +1744,13 @@
       (:authors ("Durand" . "mmemmew@gmail.com"))
       (:commit . "8f221c58a8c694112738e346c630d4d49a41d967"))])
  (indent-bars
-  . [(1 0 1 0 20260808 0) ((emacs (27 1)) (compat (30)))
+  . [(1 0 1 0 20260828 4) ((emacs (27 1)) (compat (30)))
      "Highlight indentation with bars" tar
      ((:url . "https://github.com/jdtsmith/indent-bars")
       (:keywords "convenience")
       (:maintainer "J.D. Smith" . "jdtsmith+elpa@gmail.com")
       (:authors ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
-      (:commit . "36620c5f3fba2ba8f23d7ef947e0d1d09e412bf5"))])
+      (:commit . "5d4b9131696b2c5992df24cfbcbe029cc16c7cb4"))])
  (inspector
   . [(0 39 0 20251204 171741) ((emacs (27 1)))
      "Tool for inspection of Emacs Lisp objects" tar
@@ -2019,14 +2019,14 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "65556a218fe138516ebe557726fe6e4b8b60f539"))])
  (lisp-ts-mode
-  . [(0 3 3 0 20260814 0)
+  . [(0 3 4 0 20260828 0)
      ((emacs (30 2)) (cond-star (0)) (compat (31)))
      "lisp-mode with tree-sitter support" tar
      ((:url . "https://codeberg.org/zshaftel/lisp-ts-mode")
       (:keywords "lisp" "languages" "tree-sitter")
       (:maintainer "zach shaftel" . "zach@shaf.tel")
       (:authors ("zach shaftel" . "zach@shaf.tel"))
-      (:commit . "9642d56362f0417a5b9a9c6299282e5df8b02353"))])
+      (:commit . "d42a20f33c46d8eaa653440e134c0aa954dbbe98"))])
  (listen
   . [(0 10 1 0 20260105 223313)
      ((emacs (29 1)) (persist (0 6)) (taxy (0 10))
@@ -2482,14 +2482,14 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "76e4dbe07f93f8a3e5e0f0c326e7088b58e84876"))])
  (org-contacts
-  . [(1 3 0 20260828 8) ((emacs (29 1)) (org (9 7)))
+  . [(1 3 0 20260829 10) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
      ((:url . "https://repo.or.cz/org-contacts.git")
       (:keywords "contacts" "org-mode" "outlines" "hypermedia"
 		 "calendar")
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:authors ("Julien Danjou" . "julien@danjou.info"))
-      (:commit . "dda8ba65f186384169b0025c0696f4a784674e0e"))])
+      (:commit . "886d78099e4cf5ed620379b81097134fea4b8e83"))])
  (org-edna
   . [(1 1 2 0 20200902 94459)
      ((emacs (25 1)) (seq (2 19)) (org (9 0 5)))
@@ -2785,13 +2785,13 @@
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
       (:commit . "d83b894ee7a9daf7c8e9b864c23d08f1b23d78f6"))])
  (posframe
-  . [(1 5 2 0 20260816 2) ((emacs (26 1)))
+  . [(1 5 2 0 20260829 4) ((emacs (26 1)))
      "Pop a posframe (just a frame) at point" tar
      ((:url . "https://github.com/tumashu/posframe")
       (:keywords "convenience" "tooltip")
       (:maintainer "Feng Shu" . "tumashu@163.com")
       (:authors ("Feng Shu" . "tumashu@163.com"))
-      (:commit . "ec0ec37c0d6397422a07def499e87591ca037af7"))])
+      (:commit . "6f89c0acd29306cb2cd023418d18134cfc507800"))])
  (pq
   . [(0 2 0 20240911 1) ((emacs (25))) "libpq binding" tar
      ((:url . "https://github.com/anse1/emacs-libpq")

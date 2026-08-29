@@ -2,10 +2,10 @@
  • Building package fzf-native
 From https://github.com/dangduc/fzf-native
 Updating /mnt/store/melpa/working/fzf-native/
-Checking out 39dc386062d6ae942b4a7e8592d26ce11b73bf29
+Checking out 6c5d4be5fb28afb00cb1aea0a3a6c4e2291957c3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fzf-native/
-  to /tmp/fzf-native-UQvZAB/fzf-native-20260714.2328/
+  to /tmp/fzf-native-2oJ3M4/fzf-native-20260829.443/
     fzf-native.el -> fzf-native.el
     bin => bin
     CMakeLists.txt -> CMakeLists.txt
@@ -15,29 +15,31 @@ Copying files (->) and directories (=>)
     emacs-module.h -> emacs-module.h
     fzf-additions.h -> fzf-additions.h
     fzf.h -> fzf.h
-Created fzf-native-20260714.2328.tar containing:
-  fzf-native-20260714.2328/
-  fzf-native-20260714.2328/CMakeLists.txt
-  fzf-native-20260714.2328/bin/
-  fzf-native-20260714.2328/bin/Darwin/
-  fzf-native-20260714.2328/bin/Darwin/arm64/
-  fzf-native-20260714.2328/bin/Darwin/arm64/fzf-native-module.so
-  fzf-native-20260714.2328/bin/Darwin/fzf-native-module.so
-  fzf-native-20260714.2328/bin/FreeBSD/
-  fzf-native-20260714.2328/bin/FreeBSD/fzf-native-module.so
-  fzf-native-20260714.2328/bin/Linux/
-  fzf-native-20260714.2328/bin/Linux/fzf-native-module.so
-  fzf-native-20260714.2328/bin/Windows/
-  fzf-native-20260714.2328/bin/Windows/Release/
-  fzf-native-20260714.2328/bin/Windows/Release/fzf-native-module.dll
-  fzf-native-20260714.2328/bin/Windows/Release/fzf-native-module.exp
-  fzf-native-20260714.2328/bin/Windows/Release/fzf-native-module.lib
-  fzf-native-20260714.2328/emacs-module.h
-  fzf-native-20260714.2328/fzf-additions.c
-  fzf-native-20260714.2328/fzf-additions.h
-  fzf-native-20260714.2328/fzf-native-module.c
-  fzf-native-20260714.2328/fzf-native-pkg.el
-  fzf-native-20260714.2328/fzf-native.el
-  fzf-native-20260714.2328/fzf.c
-  fzf-native-20260714.2328/fzf.h
-Built fzf-native in 4.694s, finished at 2026-08-28T21:29:34+0000
+    utf8_char_index.h -> utf8_char_index.h
+Created fzf-native-20260829.443.tar containing:
+  fzf-native-20260829.443/
+  fzf-native-20260829.443/CMakeLists.txt
+  fzf-native-20260829.443/bin/
+  fzf-native-20260829.443/bin/Darwin/
+  fzf-native-20260829.443/bin/Darwin/arm64/
+  fzf-native-20260829.443/bin/Darwin/arm64/fzf-native-module.so
+  fzf-native-20260829.443/bin/Darwin/fzf-native-module.so
+  fzf-native-20260829.443/bin/FreeBSD/
+  fzf-native-20260829.443/bin/FreeBSD/fzf-native-module.so
+  fzf-native-20260829.443/bin/Linux/
+  fzf-native-20260829.443/bin/Linux/fzf-native-module.so
+  fzf-native-20260829.443/bin/Windows/
+  fzf-native-20260829.443/bin/Windows/Release/
+  fzf-native-20260829.443/bin/Windows/Release/fzf-native-module.dll
+  fzf-native-20260829.443/bin/Windows/Release/fzf-native-module.exp
+  fzf-native-20260829.443/bin/Windows/Release/fzf-native-module.lib
+  fzf-native-20260829.443/emacs-module.h
+  fzf-native-20260829.443/fzf-additions.c
+  fzf-native-20260829.443/fzf-additions.h
+  fzf-native-20260829.443/fzf-native-module.c
+  fzf-native-20260829.443/fzf-native-pkg.el
+  fzf-native-20260829.443/fzf-native.el
+  fzf-native-20260829.443/fzf.c
+  fzf-native-20260829.443/fzf.h
+  fzf-native-20260829.443/utf8_char_index.h
+Built fzf-native in 4.570s, finished at 2026-08-29T12:36:27+0000

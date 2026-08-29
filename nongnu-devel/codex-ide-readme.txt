@@ -62,8 +62,8 @@
   ⁃ When `codex-ide-mcp-enabled' is non-nil (default), session start
     registers a transient local MCP URL via Codex `-c' overrides.
   ⁃ The bridge can evaluate Elisp, edit buffers, and run shell
-    commands. It only accepts loopback bind addresses; disable it when
-    those tools are not needed.
+    commands. It exposes those control tools by default and only accepts
+    loopback bind addresses.
   ⁃ Commands: `codex-ide-mcp-start', `codex-ide-mcp-stop',
     `codex-ide-mcp-status', `codex-ide-mcp-install-codex-config'.
   ⁃ Default port is ephemeral (`codex-ide-mcp-port' 0). Persistent Codex
@@ -74,23 +74,24 @@
 1.6 Useful knobs
 ────────────────
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Variable                        Default intent                       
-  ──────────────────────────────────────────────────────────────────────
-   `codex-ide-cli-path'            Codex executable                     
-   `codex-ide-terminal-backend'    `eat'; optionally set to `vterm'     
-   `codex-ide-ask-for-approval'    Optional `--ask-for-approval' policy 
-   `codex-ide-cli-extra-args'      Extra CLI args                       
-   `codex-ide-no-alt-screen'       Inline TUI mode                      
-   `codex-ide-mcp-enabled'         Auto-register local MCP bridge       
-   `codex-ide-mcp-port'            0 = ephemeral port                   
-   `codex-ide-context-auto-start'  Auto-start context IPC               
-   `codex-ide-debug'               Debug logging                        
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Variable                        Default intent                            
+  ───────────────────────────────────────────────────────────────────────────
+   `codex-ide-cli-path'            Codex executable                          
+   `codex-ide-terminal-backend'    `eat'; optionally set to `vterm'          
+   `codex-ide-ask-for-approval'    Optional `--ask-for-approval' policy      
+   `codex-ide-cli-extra-args'      Extra CLI args                            
+   `codex-ide-no-alt-screen'       Inline TUI mode                           
+   `codex-ide-yolo'                Full control without approvals or sandbox 
+   `codex-ide-mcp-enabled'         Auto-register local MCP bridge            
+   `codex-ide-mcp-port'            0 = ephemeral port                        
+   `codex-ide-context-auto-start'  Auto-start context IPC                    
+   `codex-ide-debug'               Debug logging                             
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   Menu *Save configuration* persists the documented symbol set only
-  (CLI/terminal/display/approval/no-alt-screen/extra-args/config-overrides/debug/
-  MCP host-port-enable/context-auto-start).
+  (CLI/terminal/display/approval/YOLO/no-alt-screen/extra-args/config-overrides/
+  debug/MCP host-port-enable/context-auto-start).
 
 
 1.7 Optional vterm backend
@@ -120,7 +121,15 @@
 1.9 Installation
 ────────────────
 
-  ⁃ Using `:vc'
+  ⁃ Emacs 29.1 using `package-vc-install'
+  ┌────
+  │ (unless (package-installed-p 'codex-ide)
+  │   (package-vc-install
+  │    '(codex-ide :url "https://git.thanosapollo.org/emacs-codex-ide"
+  │                :lisp-dir "lisp")))
+  └────
+
+  ⁃ Emacs 30 or newer using `use-package :vc'
   ┌────
   │ (use-package codex-ide
   │   :vc (:url "https://git.thanosapollo.org/emacs-codex-ide"
