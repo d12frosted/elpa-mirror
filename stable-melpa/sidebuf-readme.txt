@@ -8,6 +8,7 @@ Features:
  - Pin buffers to the top of the list
  - Toggle visibility of *special* and hidden buffers
  - Active-buffer tracking with fringe indicator
+ - Current-line highlight centered on the text (Emacs 31+)
  - Smart window reuse when selecting buffers
  - Modified-buffer indicators
  - Kill buffers without leaving the sidebar
