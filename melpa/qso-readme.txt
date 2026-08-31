@@ -37,6 +37,12 @@ Features
   line above the form
 - Option to lookup callsign information and show the information
   (text) in another buffer (requires an internet connection)
+- Callsigns can be looked up at callook.info, HamQTH or QRZ.com,
+  and the fields worth keeping can be filled in automatically,
+  whether or not they appear on the form
+- Country, continent and CQ/ITU zones can be worked out from the
+  callsign itself using a cty.dat country file, which covers the
+  whole world with no network connection and no account
 - Option to check the log for duplicates before recording the QSO
 - Option to clear the form without saving the information (e.g.
   for incomplete QSOs)
@@ -78,3 +84,38 @@ Reading Frequency and Mode From the Radio (optional)
 While synchronization is running, a field is updated only when it is
 empty or still holds the value the radio last put there, so anything
 typed by the operator is never overwritten.
+
+Looking Up Callsigns (optional)
+
+"QSO Callsign Lookup Source" chooses where details come from:
+
+  callook.info  United States only, no account needed.  This is the
+                default, and it serves the FCC's public database.
+  HamQTH        Worldwide, free, but asks you to register.
+  QRZ.com       Worldwide, needs a paid XML subscription.
+
+Most countries outside the United States do not publish operator
+names and addresses at all, which is why a worldwide lookup means
+using a community-maintained callbook rather than an official
+register.
+
+HamQTH and QRZ.com need a login.  Put the username in "QSO Callsign
+Lookup User" and the password in ~/.authinfo.gpg, so that it is not
+kept in your Emacs configuration:
+
+  machine www.hamqth.com login MYCALL password SECRET
+  machine xmldata.qrz.com login MYCALL password SECRET
+
+"QSO Callsign Lookup Fields" chooses what to fill in.  A field is
+filled whether or not it is on the form: anything not on the form is
+written straight into the ADIF record when the QSO is submitted.
+
+Country, continent and CQ/ITU zones can also be worked out from the
+callsign alone, with no network connection and no account, for any
+callsign in the world.  Download a country file from
+https://www.country-files.com, point "QSO Country File" at it, and
+leave "QSO Callsign Lookup DXCC" on.  Whatever the chosen source
+reports takes precedence over this, and if the file is missing the
+rest of the form carries on as usual.
+
+Within the form, C-c C-l looks up the callsign that has been typed.

@@ -1012,13 +1012,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260827 21) ((emacs (29 1)))
+  . [(1 2 1 0 20260831 22) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "8c2da2197e325e05d3c9d510afa73ebda2719fe2"))])
+      (:commit . "87fda13dbba9c95e0588512b224b5e6f85faf16a"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -2130,7 +2130,7 @@
       (:url . "https://elpa.gnu.org/packages/map.html")
       (:commit . "1b2a8de314ae7d6cc530884f272e95f64b93e81b"))])
  (marginalia
-  . [(2 12 0 20260821 0) ((emacs (29 1)) (compat (31)))
+  . [(2 12 0 20260831 1) ((emacs (29 1)) (compat (31)))
      "Enrich existing commands with completion annotations" tar
      ((:url . "https://github.com/minad/marginalia")
       (:keywords "docs" "help" "matching" "completion")
@@ -2138,7 +2138,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "7ec0b70afb43a756ecd45a958c6ebe797717fc91"))])
+      (:commit . "d76d7e36185ab552240c14fb08f7abcbf9a2910c"))])
  (markchars
   . [(0 2 2 0 20221221 80510) nil
      "Mark chars fitting certain characteristics" tar
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260829 36) ((emacs (28 1)))
+  . [(5 3 0 0 20260831 40) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "9a3cd56cc2305c66cd3aa8097fa793518dd0ed6c"))])
+      (:commit . "24e4b4b9e47a382cba6dfb3dc41d68a8ba7912d2"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar

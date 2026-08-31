@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260831 69) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260831 75) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "79b63918c0c06add944f8ba037702c76ac3ff146"))])
+      (:commit . "2a9a860400b29df67a91b7b20902f72f68c37b39"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1193,14 +1193,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 13 2 0 20260828 0)
+  . [(0 13 2 0 20260831 3)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "52c696a5a5ea0ccc0313d11e41f11ddd7b312a2f"))])
+      (:commit . "0373c7f22f36108e97c3ee10c8775b96c13fed95"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 0 0 20260822 20)
+  . [(4 7 0 0 20260831 21)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,9 +1343,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "137f137dccb37097ae9caa31018cafa071ff4ec1"))])
+      (:commit . "27e7c77f1a8279a1739c153ac62853cb5ca055dd"))])
  (magit-section
-  . [(4 7 0 0 20260822 20)
+  . [(4 7 0 0 20260831 21)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1354,7 +1354,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "137f137dccb37097ae9caa31018cafa071ff4ec1"))])
+      (:commit . "27e7c77f1a8279a1739c153ac62853cb5ca055dd"))])
  (markdown-mode
   . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1663,13 +1663,13 @@
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
       (:commit . "0e32f79ffca49578eba452d38b62e434e517df5e"))])
  (pinyin-isearch
-  . [(1 7 0 0 20260830 15) ((emacs (28 1))) "Pinyin mode for isearch"
+  . [(1 7 0 0 20260831 19) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
      ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
       (:keywords "chinese" "isearch" "matching" "convenience")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "06ffefb25481857d3e244190997bf0cc3aec55bf"))])
+      (:commit . "73bf3838f5a68fcb129c453cb453196d535a3241"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar

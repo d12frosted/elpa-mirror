@@ -1,21 +1,22 @@
-Full-GTD implements David Allen's complete "Getting Things Done" methodology
-for Emacs org-mode, covering all five workflow steps: Capture, Clarify,
-Organize, Reflect, and Engage.
+Complete Getting Things Done for Emacs org-mode.
+
+The only Emacs implementation that covers the entire GTD framework:
+capture, clarify, organize, reflect, engage, plus the Natural
+Planning Model and the Six Horizons of Focus.
 
 Key features:
-- Full GTD workflow with single-key inbox processing, optional clarify,
-  and hybrid date input (t/T/w/h shortcuts or free-form)
-- Natural Planning Model for project planning with forced completion
-- Six Horizons of Focus (L3-L6) with hierarchy
-  constraints
-- Daily and weekly review cycles with horizon columns
-- Context-based filtering and delegation tracking
-- Standard GTD lists: Projects, Next Actions, Waiting For,
-  Someday/Maybe, Reference
-- Single-card execution: algorithmic prioritization by
-  urgency/horizons/context instead of list browsing
+- One-key inbox processing with clarify, staging table, and hybrid
+  date input (t/T/w/h or free-form).
+- Reference and Someday/Maybe archives with project association.
+- Daily & weekly reviews with table editing and jump-to-source.
+- Single-card Do sessions with smart prioritization (urgency,
+  horizons, context).
+- Horizon matrix view that spot orphaned projects immediately.
+- Planning workflow enforces Purpose → Vision → Goal → Project →
+  Next Action.
 
-This package aims to implement the complete framework from the
-original book, including both horizontal (workflow) and vertical
-(horizons) focus management, which existing packages do not fully
-cover.
+Commands: full-gtd-capture, full-gtd-process-inbox,
+full-gtd-review-daily, full-gtd-review-weekly, full-gtd-do,
+full-gtd-horizons-view, full-gtd-planning-start.
+
+Data lives in plain Org files (default ~/.full-gtd/).
