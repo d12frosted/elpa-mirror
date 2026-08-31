@@ -1,11 +1,11 @@
 
  • Building package magent
 From https://github.com/Jamie-Cui/magent
-Cloning https://github.com/Jamie-Cui/magent
-Checking out 0959570cb2ba87854d4cfb650a29937834defac1
+Updating /mnt/store/melpa/working/magent/
+Checking out 59c2082d99a92a6e2d582a70c46d94ee6207bddd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magent/
-  to /tmp/magent-4XBr5X/magent-20260828.702/
+  to /tmp/magent-yU8BIR/magent-20260831.915/
   ! lisp/magent-acp.el -> magent-acp.el
   ! lisp/magent-action-builtin-doctor.el -> magent-action-builtin-doctor.el
   ! lisp/magent-action-builtins.el -> magent-action-builtins.el
@@ -49,92 +49,92 @@ Copying files (->) and directories (=>)
   ! lisp/magent.el -> magent.el
     prompts => prompts
     skills => skills
-Created magent-20260828.702.tar containing:
-  magent-20260828.702/
-  magent-20260828.702/magent-acp.el
-  magent-20260828.702/magent-action-builtin-doctor.el
-  magent-20260828.702/magent-action-builtins.el
-  magent-20260828.702/magent-action-controls.el
-  magent-20260828.702/magent-action-session-view.el
-  magent-20260828.702/magent-action-session.el
-  magent-20260828.702/magent-action-skills.el
-  magent-20260828.702/magent-action.el
-  magent-20260828.702/magent-agent-builtins.el
-  magent-20260828.702/magent-agent-file.el
-  magent-20260828.702/magent-agent-info.el
-  magent-20260828.702/magent-agent-job.el
-  magent-20260828.702/magent-agent-loop.el
-  magent-20260828.702/magent-agent-registry.el
-  magent-20260828.702/magent-agent-shell.el
-  magent-20260828.702/magent-agent.el
-  magent-20260828.702/magent-approval.el
-  magent-20260828.702/magent-audit.el
-  magent-20260828.702/magent-capability.el
-  magent-20260828.702/magent-config.el
-  magent-20260828.702/magent-file-loader.el
-  magent-20260828.702/magent-json.el
-  magent-20260828.702/magent-ledger.el
-  magent-20260828.702/magent-lifecycle-events.el
-  magent-20260828.702/magent-log.el
-  magent-20260828.702/magent-permission.el
-  magent-20260828.702/magent-pkg.el
-  magent-20260828.702/magent-project-instructions.el
-  magent-20260828.702/magent-prompt.el
-  magent-20260828.702/magent-protocol.el
-  magent-20260828.702/magent-redaction.el
-  magent-20260828.702/magent-runtime-api.el
-  magent-20260828.702/magent-runtime-queue.el
-  magent-20260828.702/magent-runtime.el
-  magent-20260828.702/magent-sampling-gptel.el
-  magent-20260828.702/magent-sampling.el
-  magent-20260828.702/magent-session.el
-  magent-20260828.702/magent-skill-manager.el
-  magent-20260828.702/magent-skills.el
-  magent-20260828.702/magent-tool-orchestrator.el
-  magent-20260828.702/magent-tools.el
-  magent-20260828.702/magent.el
-  magent-20260828.702/prompts/
-  magent-20260828.702/prompts/actions/
-  magent-20260828.702/prompts/actions/explain.org
-  magent-20260828.702/prompts/actions/fix.org
-  magent-20260828.702/prompts/actions/init.org
-  magent-20260828.702/prompts/actions/review.org
-  magent-20260828.702/prompts/actions/test.org
-  magent-20260828.702/prompts/agents/
-  magent-20260828.702/prompts/agents/build.org
-  magent-20260828.702/prompts/agents/compaction.org
-  magent-20260828.702/prompts/agents/explore.org
-  magent-20260828.702/prompts/agents/summary.org
-  magent-20260828.702/prompts/agents/title.org
-  magent-20260828.702/prompts/internal/
-  magent-20260828.702/prompts/internal/active-skills.org
-  magent-20260828.702/prompts/internal/additional-instruction.org
-  magent-20260828.702/prompts/internal/doctor-system.org
-  magent-20260828.702/prompts/internal/doctor-user.org
-  magent-20260828.702/prompts/internal/emacs-diagnosis.org
-  magent-20260828.702/prompts/internal/project-context.org
-  magent-20260828.702/prompts/internal/project-instructions.org
-  magent-20260828.702/prompts/internal/runtime-policy.org
-  magent-20260828.702/prompts/internal/session-compaction.org
-  magent-20260828.702/prompts/manifest.txt
-  magent-20260828.702/prompts/system.org
-  magent-20260828.702/skills/
-  magent-20260828.702/skills/emacs-buffer-editing/
-  magent-20260828.702/skills/emacs-buffer-editing/SKILL.md
-  magent-20260828.702/skills/emacs-command-variable-introspection/
-  magent-20260828.702/skills/emacs-command-variable-introspection/SKILL.md
-  magent-20260828.702/skills/emacs-config-reload/
-  magent-20260828.702/skills/emacs-config-reload/SKILL.md
-  magent-20260828.702/skills/emacs-hook-debugging/
-  magent-20260828.702/skills/emacs-hook-debugging/SKILL.md
-  magent-20260828.702/skills/emacs-runtime-inspection/
-  magent-20260828.702/skills/emacs-runtime-inspection/SKILL.md
-  magent-20260828.702/skills/lsp-workspace-workflow/
-  magent-20260828.702/skills/lsp-workspace-workflow/SKILL.md
-  magent-20260828.702/skills/magit-workflow/
-  magent-20260828.702/skills/magit-workflow/SKILL.md
-  magent-20260828.702/skills/org-structure-workflow/
-  magent-20260828.702/skills/org-structure-workflow/SKILL.md
-  magent-20260828.702/skills/project-workflow/
-  magent-20260828.702/skills/project-workflow/SKILL.md
-Built magent in 9.608s, finished at 2026-08-30T18:45:27+0000
+Created magent-20260831.915.tar containing:
+  magent-20260831.915/
+  magent-20260831.915/magent-acp.el
+  magent-20260831.915/magent-action-builtin-doctor.el
+  magent-20260831.915/magent-action-builtins.el
+  magent-20260831.915/magent-action-controls.el
+  magent-20260831.915/magent-action-session-view.el
+  magent-20260831.915/magent-action-session.el
+  magent-20260831.915/magent-action-skills.el
+  magent-20260831.915/magent-action.el
+  magent-20260831.915/magent-agent-builtins.el
+  magent-20260831.915/magent-agent-file.el
+  magent-20260831.915/magent-agent-info.el
+  magent-20260831.915/magent-agent-job.el
+  magent-20260831.915/magent-agent-loop.el
+  magent-20260831.915/magent-agent-registry.el
+  magent-20260831.915/magent-agent-shell.el
+  magent-20260831.915/magent-agent.el
+  magent-20260831.915/magent-approval.el
+  magent-20260831.915/magent-audit.el
+  magent-20260831.915/magent-capability.el
+  magent-20260831.915/magent-config.el
+  magent-20260831.915/magent-file-loader.el
+  magent-20260831.915/magent-json.el
+  magent-20260831.915/magent-ledger.el
+  magent-20260831.915/magent-lifecycle-events.el
+  magent-20260831.915/magent-log.el
+  magent-20260831.915/magent-permission.el
+  magent-20260831.915/magent-pkg.el
+  magent-20260831.915/magent-project-instructions.el
+  magent-20260831.915/magent-prompt.el
+  magent-20260831.915/magent-protocol.el
+  magent-20260831.915/magent-redaction.el
+  magent-20260831.915/magent-runtime-api.el
+  magent-20260831.915/magent-runtime-queue.el
+  magent-20260831.915/magent-runtime.el
+  magent-20260831.915/magent-sampling-gptel.el
+  magent-20260831.915/magent-sampling.el
+  magent-20260831.915/magent-session.el
+  magent-20260831.915/magent-skill-manager.el
+  magent-20260831.915/magent-skills.el
+  magent-20260831.915/magent-tool-orchestrator.el
+  magent-20260831.915/magent-tools.el
+  magent-20260831.915/magent.el
+  magent-20260831.915/prompts/
+  magent-20260831.915/prompts/actions/
+  magent-20260831.915/prompts/actions/explain.org
+  magent-20260831.915/prompts/actions/fix.org
+  magent-20260831.915/prompts/actions/init.org
+  magent-20260831.915/prompts/actions/review.org
+  magent-20260831.915/prompts/actions/test.org
+  magent-20260831.915/prompts/agents/
+  magent-20260831.915/prompts/agents/build.org
+  magent-20260831.915/prompts/agents/compaction.org
+  magent-20260831.915/prompts/agents/explore.org
+  magent-20260831.915/prompts/agents/summary.org
+  magent-20260831.915/prompts/agents/title.org
+  magent-20260831.915/prompts/internal/
+  magent-20260831.915/prompts/internal/active-skills.org
+  magent-20260831.915/prompts/internal/additional-instruction.org
+  magent-20260831.915/prompts/internal/doctor-system.org
+  magent-20260831.915/prompts/internal/doctor-user.org
+  magent-20260831.915/prompts/internal/emacs-diagnosis.org
+  magent-20260831.915/prompts/internal/project-context.org
+  magent-20260831.915/prompts/internal/project-instructions.org
+  magent-20260831.915/prompts/internal/runtime-policy.org
+  magent-20260831.915/prompts/internal/session-compaction.org
+  magent-20260831.915/prompts/manifest.txt
+  magent-20260831.915/prompts/system.org
+  magent-20260831.915/skills/
+  magent-20260831.915/skills/emacs-buffer-editing/
+  magent-20260831.915/skills/emacs-buffer-editing/SKILL.md
+  magent-20260831.915/skills/emacs-command-variable-introspection/
+  magent-20260831.915/skills/emacs-command-variable-introspection/SKILL.md
+  magent-20260831.915/skills/emacs-config-reload/
+  magent-20260831.915/skills/emacs-config-reload/SKILL.md
+  magent-20260831.915/skills/emacs-hook-debugging/
+  magent-20260831.915/skills/emacs-hook-debugging/SKILL.md
+  magent-20260831.915/skills/emacs-runtime-inspection/
+  magent-20260831.915/skills/emacs-runtime-inspection/SKILL.md
+  magent-20260831.915/skills/lsp-workspace-workflow/
+  magent-20260831.915/skills/lsp-workspace-workflow/SKILL.md
+  magent-20260831.915/skills/magit-workflow/
+  magent-20260831.915/skills/magit-workflow/SKILL.md
+  magent-20260831.915/skills/org-structure-workflow/
+  magent-20260831.915/skills/org-structure-workflow/SKILL.md
+  magent-20260831.915/skills/project-workflow/
+  magent-20260831.915/skills/project-workflow/SKILL.md
+Built magent in 4.857s, finished at 2026-08-31T14:52:53+0000

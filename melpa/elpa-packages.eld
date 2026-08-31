@@ -5350,7 +5350,6 @@
   (smblog :url "https://github.com/aaptel/smblog-mode")
   (smeargle :url "https://github.com/emacsorphanage/smeargle")
   (smex :url "https://github.com/nonsequitur/smex")
-  (smilefjes :url "https://github.com/themkat/smilefjes.el")
   (smiles-mode :url "https://repo.or.cz/smiles-mode.git")
   (smithers :url "https://gitlab.com/mtekman/smithers.el")
   (smithy-mode :url "https://github.com/mnemitz/smithy-mode")

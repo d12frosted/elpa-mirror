@@ -60,6 +60,17 @@ Table of Contents
   │ (use-package lisp-ts-mode
   │   :ensure t)
   └────
+  If you use [Doom Emacs], it's now available as a flag in the
+  `common-lisp' module.  In the `doom!' block in your `~init.el':
+  ┌────
+  │ (doom! ;; ...
+  │        :tools
+  │        tree-sitter
+  │        :lang
+  │        (common-lisp +tree-sitter)
+  │        ;; ...
+  │        )
+  └────
   If you use [elpaca], you can use the following recipe:
   ┌────
   │ (elpaca lisp-ts-mode)
@@ -92,6 +103,8 @@ Table of Contents
   But if you use [gaudy-cl], it will apply the grammar on its own (and
   much more).
 
+
+[Doom Emacs] <https://github.com/doomemacs>
 
 [elpaca] <https://github.com/progfolio/elpaca>
 

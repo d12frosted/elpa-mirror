@@ -58,16 +58,20 @@ gateway.
 
   `M-x hermes' opens the dashboard.  `M-x hermes-project-chat' switches
   to a live chat for the current project or creates one at its root;
-  with `C-u' it always creates another.  `M-x hermes-chat' always opens
-  a new chat buffer:
+  with `C-u' it always creates another.  Project-chat names stay
+  anchored to that launching project while the header reports the
+  gateway working directory.  Customize
+  `hermes-chat-buffer-name-function' to replace the default complete
+  naming convention.  `M-x hermes-chat' always opens a new chat buffer:
   • `RET' to send.
   • `/' for slash commands.
   • `C-c C-o' for the actions menu.
-  • Chats propose the launching buffer's `default-directory' when
-    creating a session; the gateway returns the authoritative workspace.
-    Use “Set directory” to browse the owning instance and change an idle
-    chat's gateway workspace and buffer-local `default-directory'
-    together.
+  • A legacy local/spawned chat proposes the launching buffer's
+    `default-directory' and mirrors later directory changes locally.
+    Named or remote instances own an independent gateway filesystem, may
+    begin detached, and never replace the Emacs-local
+    `default-directory'.  Use “Set directory” to browse or enter a path
+    in the owning gateway's namespace.
   • `M-x hermes-close' closes local connections and Hermes buffers for
     restart.
 
@@ -89,8 +93,9 @@ gateway.
   already own one.  Chat buffers remain attached to their original
   instance, so chats against different dashboards can stay open at the
   same time.  Browser views retain their chosen instance until
-  explicitly reopened for another one.  With zero or one named instance,
-  existing single-dashboard behavior is unchanged.
+  explicitly reopened for another one.  With no named instances,
+  filesystem behavior follows the resolved local/remote start mode;
+  every named instance is treated as an independent gateway namespace.
 
 
 3 Dashboard authentication
@@ -100,28 +105,30 @@ gateway.
 
   • Loopback dashboards (`127.0.0.1' / `localhost') can spawn or attach
     without extra credentials when the dashboard is not gated.
-  • Remote or gated dashboards probe `/api/status' and choose one of the
-    supported attach paths below.
+  • Remote or gated dashboards probe `/api/status'.  Auto mode uses
+    valid stored basic credentials first, otherwise native PKCE when
+    advertised, and finally reports missing basic credentials for a
+    basic-only dashboard.
 
   Supported gated attach paths:
 
-  1. *Native PKCE OAuth* — when `/api/status' advertises `native_pkce',
+  1. *Basic/password* — auth-source entry with port
+      `hermes-dashboard-basic', login `username', and password
+      secret. Emacs posts password-login cookies and mints a WebSocket
+      ticket.
+  2. *Native PKCE OAuth* — when `/api/status' advertises `native_pkce',
       Emacs opens the system browser, completes the official
       `/auth/native/*' loopback flow, stores access/refresh tokens in
       auth-source under login/port `hermes-dashboard-native',
       authenticates REST with `Authorization: Bearer', and mints a
       short-lived WebSocket ticket. Failed or cancelled login does not
       overwrite prior stored tokens.
-  2. *Basic/password* — auth-source entry with port
-      `hermes-dashboard-basic', login `username', and password
-      secret. Emacs posts password-login cookies and mints a WebSocket
-      ticket.
   3. *Legacy session token* — auth-source entry with login/port
       `hermes-dashboard-token' and the token as secret, or environment
       variable `HERMES_DASHBOARD_SESSION_TOKEN'. Used for ungated
       dashboards and forced `token' mode.
 
-  Force a path with:
+  Force `native', `basic', or `token' to bypass auto selection:
 
   ┌────
   │ (setq hermes-dashboard-transport-remote-auth-method 'native) ; or 'basic / 'token / 'auto

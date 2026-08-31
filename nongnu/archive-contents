@@ -24,7 +24,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 12)
+  . [(1 13)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -33,7 +33,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "2d8c28d3fbd64260cbfd5a1477aea3bff55ba54f"))])
+      (:commit . "9046a03af9edfe7077ea4dfa67b52b8c63edb0a6"))])
  (alect-themes
   . [(0 11) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -1006,7 +1006,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
  (hermes
-  . [(0 4 0)
+  . [(0 4 2)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1014,7 +1014,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "a282f7be5707ee29d7e291a05eb1be8d7126ae9f"))])
+      (:commit . "24997a34911481d8f85eb53e3148149e92b8aa6c"))])
  (hideshowvis
   . [(0 9) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1712,12 +1712,13 @@
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
       (:commit . "a8c69ce8f5e7793d2f81dbef60fb37b4b93afccf"))])
  (sapling
-  . [(0 3 1) ((emacs (26 1))) "Fast interface for Sapling" tar
+  . [(0 3 2) ((emacs (26 1)) (transient (0 3 0)))
+     "Fast interface for Sapling" tar
      ((:url . "https://github.com/swithinchan/sapling/")
       (:keywords "tools" "vc")
       (:maintainer "Swithin Chan" . "swithinchan@yahoo.com.hk")
       (:authors ("Swithin Chan" . "swithinchan@yahoo.com.hk"))
-      (:commit . "37bf45fa2b34f1099bf7e352fa0e88b35bb779c7"))])
+      (:commit . "0462aa9b402eba218ba1a45c5b8ac9e3a3a42561"))])
  (sass-mode
   . [(3 0 16) ((haml-mode (3 0 15)))
      "Major mode for editing Sass files" tar

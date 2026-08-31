@@ -20,8 +20,12 @@ Based on Emacs "chinese-sisheng", "chinese-py", "chinese-punct".
 pinyin-isearch.el
  ├─ pinyin-isearch-pinyin.el (→ pinyin-isearch-loaders.el)
  ├─ pinyin-isearch-chars.el (→ pinyin-isearch-loaders.el)
+ ├/+ pinyin-isearch-help.el (→ pinyin-isearch.el)
  └─ pinyin-isearch-loaders.el
 ```
+
+# Emacs versions support
+Emacs 28.1 -> 30.2
 
 # Demonstation
 ![Demo](https://codeberg.org/Anoncheg/public-share/raw/branch/main/pinyin-isearch.gif)
