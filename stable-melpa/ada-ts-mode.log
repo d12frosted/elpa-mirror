@@ -2,12 +2,12 @@
  • Building package ada-ts-mode
 From https://github.com/brownts/ada-ts-mode
 Updating /mnt/store/melpa/working/ada-ts-mode/
-Checking out 32fcf68dba7463902481b256cdecad08e4b5b0a7
+Checking out 234393fb9d0cc8e3c6f726a3bbc001437ed136e7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ada-ts-mode/
-  to /tmp/ada-ts-mode-5yCyxP/ada-ts-mode-20260627.1553/
+  to /tmp/ada-ts-mode-5cSSlI/ada-ts-mode-20260830.2310/
     ada-ts-als.el -> ada-ts-als.el
-    ada-ts-casing.el -> ada-ts-casing.el
+    ada-ts-case.el -> ada-ts-case.el
     ada-ts-common.el -> ada-ts-common.el
     ada-ts-imenu.el -> ada-ts-imenu.el
     ada-ts-indentation.el -> ada-ts-indentation.el
@@ -15,20 +15,22 @@ Copying files (->) and directories (=>)
     ada-ts-lspclient-lsp-mode.el -> ada-ts-lspclient-lsp-mode.el
     ada-ts-lspclient.el -> ada-ts-lspclient.el
     ada-ts-mode.el -> ada-ts-mode.el
+    ada-ts-paren.el -> ada-ts-paren.el
   ! doc/ada-ts-mode.texi -> ada-ts-mode.texi
 Generating ada-ts-mode.info
-Created ada-ts-mode-20260627.1553.tar containing:
-  ada-ts-mode-20260627.1553/
-  ada-ts-mode-20260627.1553/ada-ts-als.el
-  ada-ts-mode-20260627.1553/ada-ts-casing.el
-  ada-ts-mode-20260627.1553/ada-ts-common.el
-  ada-ts-mode-20260627.1553/ada-ts-imenu.el
-  ada-ts-mode-20260627.1553/ada-ts-indentation.el
-  ada-ts-mode-20260627.1553/ada-ts-lspclient-eglot.el
-  ada-ts-mode-20260627.1553/ada-ts-lspclient-lsp-mode.el
-  ada-ts-mode-20260627.1553/ada-ts-lspclient.el
-  ada-ts-mode-20260627.1553/ada-ts-mode-pkg.el
-  ada-ts-mode-20260627.1553/ada-ts-mode.el
-  ada-ts-mode-20260627.1553/ada-ts-mode.info
-  ada-ts-mode-20260627.1553/dir
-Built ada-ts-mode in 7.413s, finished at 2026-09-01T10:39:25+0000
+Created ada-ts-mode-20260830.2310.tar containing:
+  ada-ts-mode-20260830.2310/
+  ada-ts-mode-20260830.2310/ada-ts-als.el
+  ada-ts-mode-20260830.2310/ada-ts-case.el
+  ada-ts-mode-20260830.2310/ada-ts-common.el
+  ada-ts-mode-20260830.2310/ada-ts-imenu.el
+  ada-ts-mode-20260830.2310/ada-ts-indentation.el
+  ada-ts-mode-20260830.2310/ada-ts-lspclient-eglot.el
+  ada-ts-mode-20260830.2310/ada-ts-lspclient-lsp-mode.el
+  ada-ts-mode-20260830.2310/ada-ts-lspclient.el
+  ada-ts-mode-20260830.2310/ada-ts-mode-pkg.el
+  ada-ts-mode-20260830.2310/ada-ts-mode.el
+  ada-ts-mode-20260830.2310/ada-ts-mode.info
+  ada-ts-mode-20260830.2310/ada-ts-paren.el
+  ada-ts-mode-20260830.2310/dir
+Built ada-ts-mode in 7.876s, finished at 2026-09-01T16:08:47+0000

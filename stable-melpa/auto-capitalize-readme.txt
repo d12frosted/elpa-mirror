@@ -24,8 +24,7 @@ installed in `after-change-functions' when the mode is enabled. It serves as
 the main entry point for the capitalization logic, which is based on two
 hooks that you can add your own predicates to.
 
-The
-`auto-capitalize-blocking-functions' hook gives you the right of first
+The `auto-capitalize-blocking-functions' hook gives you the right of first
 refusal over capitalization: each function in that hook is called with two
 arguments, TEXT-START and WORD-START, and returns non-nil to block
 capitalization of the word at WORD-START. A single function in that hook
