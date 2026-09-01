@@ -1012,13 +1012,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260901 24) ((emacs (29 1)))
+  . [(1 2 1 0 20260901 25) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "ede6a8825e10af2ccc558b1cee15c1fefaee6356"))])
+      (:commit . "777c80af0348d4b8eac783f7378d261fb4cc8c9f"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -1916,13 +1916,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 3 0 20260823 0) ((emacs (29 1)))
+  . [(0 4 3 0 20260901 1) ((emacs (29 1)))
      "Described keymaps with popup help" tar
      ((:url . "https://git.thanosapollo.org/emacs-keymap-popup/")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "51569cc03e7baba51005d08e6019c24c1a4794c9"))])
+      (:commit . "bd61677c74b2d6bc6fb94e881723d6dbb7154299"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260901 41) ((emacs (28 1)))
+  . [(5 3 0 0 20260901 42) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "fd124dc3708d1b3240b8e49a70f58f7e50a5cc41"))])
+      (:commit . "a3e7ba280524dfd4bdaf3169ef5901ac91dadb01"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
@@ -3649,7 +3649,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 7 0 20260825 3)
+  . [(0 13 8 0 20260901 0)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3659,7 +3659,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "9ac2d48909e1d34890a4a17581d6693dcc867800"))])
+      (:commit . "0cacc84ff0c7df126e194666ff8b8a1e6082e796"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

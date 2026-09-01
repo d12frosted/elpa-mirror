@@ -55,7 +55,7 @@ prog-mode should be auto-capitalized, and its comment analogue
 This package is a revamp of Yuta Yamada’s version
 (https://github.com/yuutayamada/auto-capitalize-el), which is itself a fork
 of the original auto-capitalize.el, written by Kevin Rodgers and shared on
-the emacswiki (https://www.emacswiki.org/emacs/auto-capitalize.el). I have
+the emacs wiki (https://www.emacswiki.org/emacs/auto-capitalize.el). I have
 tried to streamline the code, building on the refactoring process that Yuta
 Yamada had already started, and removing/replacing old artifacts with their
 modern equivalent. I have also modified the package’s interface to make it

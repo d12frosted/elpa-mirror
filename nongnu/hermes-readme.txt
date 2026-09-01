@@ -62,16 +62,22 @@ gateway.
   anchored to that launching project while the header reports the
   gateway working directory.  Customize
   `hermes-chat-buffer-name-function' to replace the default complete
-  naming convention.  `M-x hermes-chat' always opens a new chat buffer:
+  naming convention.  A direct or resumed remote chat uses the editor
+  directory in its initial buffer name while its gateway cwd is unknown.
+  Its header stays detached, and the editor path is not sent to the
+  gateway.  `M-x hermes-chat' always opens a new chat buffer:
   • `RET' to send.
   • `/' for slash commands.
   • `C-c C-o' for the actions menu.
-  • A legacy local/spawned chat proposes the launching buffer's
-    `default-directory' and mirrors later directory changes locally.
-    Named or remote instances own an independent gateway filesystem, may
-    begin detached, and never replace the Emacs-local
-    `default-directory'.  Use “Set directory” to browse or enter a path
-    in the owning gateway's namespace.
+  • Each chat pins its resolved spawned or remote transport mode.  A
+    spawned chat starts from the editor's `default-directory'; a remote
+    chat does not.
+  • Passive gateway cwd updates change the header and a direct chat's
+    buffer name, but leave `default-directory' alone.
+  • “Set directory” browses or accepts a path in the gateway's
+    namespace.  On success, the backend-returned path becomes both the
+    gateway cwd and the buffer's `default-directory'; a project chat
+    keeps its launch-root name.
   • `M-x hermes-close' closes local connections and Hermes buffers for
     restart.
 
@@ -90,12 +96,11 @@ gateway.
   └────
 
   Commands prompt for an instance only when the current buffer does not
-  already own one.  Chat buffers remain attached to their original
-  instance, so chats against different dashboards can stay open at the
-  same time.  Browser views retain their chosen instance until
-  explicitly reopened for another one.  With no named instances,
-  filesystem behavior follows the resolved local/remote start mode;
-  every named instance is treated as an independent gateway namespace.
+  already own one.  Chat buffers retain their original instance and
+  resolved transport mode, so later configuration changes cannot reroute
+  them.  Chats against different dashboards can stay open at the same
+  time.  Browser views retain their chosen instance until explicitly
+  reopened for another one.
 
 
 3 Dashboard authentication
