@@ -72,20 +72,43 @@
 2 Requirements
 ══════════════
 
-  Casual requires Emacs 30.1+, Transient 0.9.0+, csv-mode 1.27+.
+  Casual requires the following software to be installed as baseline:
 
-  Certain menus require more installed software:
+  • [GNU Emacs] 30.1+
+  • [Transient] 0.9+
 
-  • Casual Dired: GNU Coreutils
-  • Casual Image: ImageMagick 6+
+  Versions of GNU Emacs 30.1 or greater will satisfy the above
+  requirements with its built-in version of Transient.
+
+  Certain Casual modules require more installed software:
+
+  • Casual Dired: [GNU Core Utilities] 8.32+
+  • Casual Image: [ImageMagick] 6+
+  • Casual CSV: [csv-mode] 1.27+ (installed as a dependency)
+
+  Casual has been verified with the following configuration:
+
+  • GNU Emacs 31.1 (macOS 15.7, Ubuntu Linux 22.04.5 LTS)
+
+
+[GNU Emacs]
+<https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html>
+
+[Transient] <https://github.com/magit/transient>
+
+[GNU Core Utilities] <https://www.gnu.org/software/coreutils/>
+
+[ImageMagick] <https://imagemagick.org>
+
+[csv-mode] <https://elpa.gnu.org/packages/csv-mode.html>
 
 
 3 Install
 ═════════
 
   Casual versions 3.0 or greater offer a simplified installation with
-  command `casual-init'. Run this via `extended-execute-command' (`M-x')
-  or add this to your Emacs initialization file.
+  the command `casual-init'. Run this via `extended-execute-command'
+  (`M-x') or add this to your Emacs initialization file.
 
   ┌────
   │ (require 'casual)
@@ -140,25 +163,14 @@
 [Casual User Guide] <https://kickingvegas.github.io/casual/Install.html>
 
 
-4 Asks
-══════
-
-  As Casual is new, we are looking for early adopters! Your [feedback]
-  is welcome as it will likely impact Casual's evolution, particularly
-  with regards to UI.
-
-
-[feedback] <https://github.com/kickingvegas/casual/discussions>
-
-
-5 Development
+4 Development
 ═════════════
 
   For users who wish to help contribute to Casual or personally
   customize it for their own usage, please read the .
 
 
-6 Sponsorship
+5 Sponsorship
 ═════════════
 
   It costs money to make, enhance, and maintain Casual as ideologically
@@ -172,7 +184,7 @@
 <https://www.buymeacoffee.com/kickingvegas>
 
 
-7 See Also
+6 See Also
 ══════════
 
   While the package `casual' focuses on user interfaces for built-in
@@ -197,7 +209,7 @@
 [Casual Suite] <https://github.com/kickingvegas/casual-suite>
 
 
-8 Acknowledgments
+7 Acknowledgments
 ═════════════════
 
   A heartfelt thanks to all the contributors to [Transient], [Magit],

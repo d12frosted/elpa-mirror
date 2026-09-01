@@ -1,17 +1,17 @@
 
 A small, buffer-agnostic engine that turns a LaTeX math string into an
 SVG image suitable for overlaying in an Emacs buffer.  It is the
-rendering core extracted from `agent-shell-math-renderer'; front-ends
-(agent-shell's markdown renderer, an Org preview mode, ...) do their own
-equation detection and image *placement* and delegate the actual
-typesetting here.
+rendering engine behind `agent-shell-math-renderer' (math in agent-shell's
+chat output) and the `latex-to-svg' preview stack (Org and Markdown).
+A front-end finds the equations and places the images; the typesetting,
+caching and sizing happen here.
 
 Design (why it is cheap to recolor and rescale):
 
   * Equations are compiled with `latex' + `dvisvgm' to a standalone SVG,
-    content-addressed on disk (SHA-1 of LaTeX + preamble + style).  Each
-    unique equation therefore compiles at most once, ever, and the cache
-    is shared across every front-end.
+    named on disk after its own content (SHA-1 of LaTeX + preamble +
+    style).  Each unique equation therefore compiles at most once, and
+    the cache is shared across every front-end.
 
   * The on-disk SVG is COLOR-INDEPENDENT: dvisvgm `--currentcolor' emits
     the default ink as the literal token `currentColor', which is

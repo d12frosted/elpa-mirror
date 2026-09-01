@@ -204,14 +204,14 @@
 		("Damien Doligez" . "damien.doligez@inria.fr"))
       (:commit . "744333dc4c4bd8b93e037efa8f7362b0903b96a2"))])
  (casual
-  . [(3 0 1 0 20260817 0)
+  . [(3 0 2 0 20260831 0)
      ((emacs (30 1)) (transient (0 9 0)) (csv-mode (1 27)))
      "Transient user interfaces for various modes" tar
      ((:url . "https://github.com/kickingvegas/casual")
       (:keywords "tools" "wp")
       (:maintainer "Charles Choi" . "kickingvegas@gmail.com")
       (:authors ("Charles Choi" . "kickingvegas@gmail.com"))
-      (:commit . "4360a3f8bd8dc775bd1c41a0fb26f2397785ad7f"))])
+      (:commit . "60259e256e34d4f6ae64ef950c740cacbe8b4d37"))])
  (cdlatex
   . [(4 18 5 0 20241007 162342) nil
      "Fast input methods for LaTeX environments and math" tar
@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260831 75) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260831 77) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "2a9a860400b29df67a91b7b20902f72f68c37b39"))])
+      (:commit . "b57dd09725f1330eb84421ecfbc7eeea2159f72a"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "acff7751af0623f1bbebb1f3bf1ee4831f7f5035"))])
  (hermes
-  . [(0 4 2 0 20260830 0)
+  . [(0 4 2 0 20260831 5)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "24997a34911481d8f85eb53e3148149e92b8aa6c"))])
+      (:commit . "ba3a7072a6c106885edb5b5514045eb6c07909f9"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
