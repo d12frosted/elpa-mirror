@@ -760,7 +760,7 @@ section 5
   Author/maintainer
         Protesilaos.
   Contributions to code or the manual
-        Peter Prevos, Vedang Manerikar.
+        Peter Prevos, Vedang Manerikar, morivan.
   Ideas and user feedback
         GCamp6, Jung Han, Matt Nolan, Tonus.
 

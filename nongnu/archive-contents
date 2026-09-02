@@ -236,14 +236,14 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "96fdffcbe9e1b8ebf9ad14e23b06f62cc3422e22"))])
  (codex-ide
-  . [(0 1 1)
+  . [(0 1 2)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
       (eat (0 9 4)))
      "Run Codex CLI in a terminal" tar
      ((:url . "https://git.thanosapollo.org/emacs-codex-ide")
       (:keywords "ai" "codex" "tools" "terminal")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
-      (:commit . "d11a143ac52894eb25bbb43d877c8761f2f01244"))])
+      (:commit . "f17b452de291d131193df08b0e73f8e2d3e57092"))])
  (coffee-mode
   . [(0 6 3) ((emacs (24 1)) (cl-lib (0 5)))
      "Major mode for CoffeeScript code" tar

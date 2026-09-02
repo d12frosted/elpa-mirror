@@ -251,14 +251,14 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "2bce67a68c270157d940ac9374ab393804c7e00d"))])
  (codex-ide
-  . [(0 1 1 0 20260829 3)
+  . [(0 1 2 0 20260902 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
       (eat (0 9 4)))
      "Run Codex CLI in a terminal" tar
      ((:url . "https://git.thanosapollo.org/emacs-codex-ide")
       (:keywords "ai" "codex" "tools" "terminal")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
-      (:commit . "08bc9caee8faaed040a342f0b533e0f265e9a0f5"))])
+      (:commit . "f17b452de291d131193df08b0e73f8e2d3e57092"))])
  (coffee-mode
   . [(0 6 3 0 20230908 103000) ((emacs (24 3)))
      "Major mode for CoffeeScript code" tar
@@ -1861,13 +1861,13 @@
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "4f903331db2c15fb4427ededca2d764d8f65db64"))])
  (selected-window-contrast
-  . [(0 4 1 0 20260406 62115) ((emacs (26 1)))
+  . [(0 4 1 0 20260902 4) ((emacs (26 1)))
      "Highlight window and cursor at switching" tar
      ((:url . "https://codeberg.org/Anoncheg/selected-window-contrast")
       (:keywords "color" "windows" "faces" "buffer" "background")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "06038f426e43bf58d0d90db23f7a9fe97a446d00"))])
+      (:commit . "484a21c502eb3d136008e45b36112b0fb0a77aad"))])
  (sesman
   . [(0 3 3 -4 0 20260616 21) ((emacs (25))) "Generic Session Manager"
      tar
