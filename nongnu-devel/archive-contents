@@ -748,7 +748,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
  (flycheck
-  . [(40 0 -4 0 20260901 82) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20260902 86) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -757,7 +757,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "041d0fd16071b81d19ccee178560c98d1b0b48b6"))])
+      (:commit . "9076d01a8a685bb0f03302e7bf3feaf41e6c34dc"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1037,7 +1037,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
  (helm
-  . [(4 0 7 0 20260901 49) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260902 51) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1045,14 +1045,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "2db35e246ef1cbf8d24c3b7c64a3f68959c3c7d9"))])
+      (:commit . "90712c571f21ccf024b7eb6dcb9ccb5bffbad073"))])
  (helm-core
-  . [(4 0 7 0 20260901 49) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260902 51) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "2db35e246ef1cbf8d24c3b7c64a3f68959c3c7d9"))])
+      (:commit . "90712c571f21ccf024b7eb6dcb9ccb5bffbad073"))])
  (hermes
   . [(0 4 3 0 20260901 0)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
@@ -1663,13 +1663,13 @@
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
       (:commit . "0e32f79ffca49578eba452d38b62e434e517df5e"))])
  (pinyin-isearch
-  . [(1 7 0 0 20260831 19) ((emacs (28 1))) "Pinyin mode for isearch"
+  . [(1 7 2 0 20260902 4) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
      ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
       (:keywords "chinese" "isearch" "matching" "convenience")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "73bf3838f5a68fcb129c453cb453196d535a3241"))])
+      (:commit . "194f95f14ba50a4fbb98ee61eb97946a2c5a230e"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1913,13 +1913,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 2 0 0 20260728 0) ((emacs (24 1))) "The Solarized color theme"
+  . [(2 2 0 0 20260902 3) ((emacs (24 1))) "The Solarized color theme"
      tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "1443d6dce378ad2d65a8a8c45d5279481a79dfab"))])
+      (:commit . "7ca8e84dc489e3dc2b806c0e2d43ab7dd293d6e3"))])
  (spacemacs-theme
   . [(0 2 0 20260822 48) ((emacs (24)))
      "Color theme with a dark and light versions." tar
@@ -1981,7 +1981,7 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "3ed24d3e9f57e5b3a7915dd46ce5219557e1033d"))])
  (swift-mode
-  . [(10 0 0 0 20260827 38) ((emacs (25 2)))
+  . [(10 0 0 0 20260902 39) ((emacs (25 2)))
      "Major-mode for Apple's Swift programming language" tar
      ((:url . "https://github.com/swift-emacs/swift-mode")
       (:keywords "languages" "swift")
@@ -1990,7 +1990,7 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net"))
-      (:commit . "bb4ef3a344a04ec97c8707ad8c5aadc2f446ad02"))])
+      (:commit . "a81a6e5edc3077ea34ded55a6179f5d6166a3008"))])
  (symbol-overlay
   . [(4 3 0 20260703 4) ((emacs (24 3)) (seq (2 2)))
      "Highlight symbols with keymap-enabled overlays" tar

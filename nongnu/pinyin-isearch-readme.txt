@@ -7,9 +7,9 @@ Eng | [中文](./README_zh.md)
 
 # pinyin-isearch - Emacs package for toneless pinyin search in pinyin and Chinese characters.
 
-Allow to search with pinyin without diacritical marks in pinyin text. With few characters you will find all variants.
+This package allow to search with pinyin without diacritical marks in pinyin text and chinese characters. Accurate regex for search created that match all variants.
 
-Emacs Isearch "submode" that replace isearch-regexp-function to generate regex for search.
+Implemented as Emacs Isearch modification.
 
 For example: to find "Shànghǎi" and "上海" in text you just type: ``` C-s shanghai ```.
 
@@ -20,8 +20,12 @@ Based on Emacs "chinese-sisheng", "chinese-py", "chinese-punct".
 pinyin-isearch.el
  ├─ pinyin-isearch-pinyin.el (→ pinyin-isearch-loaders.el)
  ├─ pinyin-isearch-chars.el (→ pinyin-isearch-loaders.el)
+ ├/+ pinyin-isearch-help.el (→ pinyin-isearch.el)
  └─ pinyin-isearch-loaders.el
 ```
+
+# Emacs versions support
+Emacs 28.1 -> 30.2
 
 # Demonstation
 ![Demo](https://codeberg.org/Anoncheg/public-share/raw/branch/main/pinyin-isearch.gif)
@@ -30,6 +34,8 @@ pinyin-isearch.el
 - should not conflict with other isearch modes
 - fix isearch jumping without return.
 - fallback to search for normal latin text by default
+- support for apostraphe ('’), like “zú’ò” 足哦.
+- no external dependencies
 
 ## Features of Chinese characters search
 - search from the first character entered.

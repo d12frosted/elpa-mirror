@@ -1578,10 +1578,12 @@
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
       (:commit . "e31073a5030932da37a72df9b8a5be017189d450"))])
  (pinyin-isearch
-  . [(1 7 0) ((emacs (28 1))) "Pinyin mode for isearch" tar
+  . [(1 7 2) ((emacs (28 1))) "Pinyin mode for isearch" tar
      ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
-      (:keywords "chinese" "pinyin" "matching" "convenience")
-      (:commit . "9e9b97ad9c1b927e462cd012a27351f8d595baa8"))])
+      (:keywords "chinese" "isearch" "matching" "convenience")
+      (:maintainer "Anoncheg" . "vitalij@gmx.com")
+      (:authors ("Anoncheg" . "vitalij@gmx.com"))
+      (:commit . "55b9c765e7284de03269bdc4404e5bc5a384b042"))])
  (popon
   . [(0 13) ((emacs (25 1))) "\"Pop\" floating text \"on\" a window"
      tar
