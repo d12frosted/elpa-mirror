@@ -537,12 +537,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 7) ((emacs (29 1)) (compat (31)))
+  . [(3 8) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "3ddec5493bce5445f099537be50b7a4f79c68321"))])
+      (:commit . "788735b54e5ad9d33137613aebae055443e3e05e"))])
  (consult-denote
   . [(0 5 1) ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
@@ -576,13 +576,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "1b30a28857727202d1f6a027f83ad66151fb1e92"))])
  (corfu
-  . [(2 14) ((emacs (29 1)) (compat (31)))
+  . [(2 15) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "75be36fe63e78c63ac71c32039ab07836bd532ac"))])
+      (:commit . "4303506204bdf5df8f5e7d1457f6fca465a4da8e"))])
  (coterm
   . [(1 6) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1293,13 +1293,13 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "20fe3e77bb73773c8678e65ae38020b0b7f996eb"))])
  (flymake
-  . [(1 4 6) ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
+  . [(1 4 7) ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "da0565d9b57d67c59177b5069346fcf32778b2dd"))])
+      (:commit . "507d93ad48a060e286afd1df14f70938f13fc8ad"))])
  (flymake-clippy
   . [(1 1 0) ((emacs (27))) "Flymake backend for Clippy" tar
      ((:url . "https://github.com/mak-kirkland/flymake-clippy")
@@ -3591,13 +3591,13 @@
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:commit . "b3574e6464b0cce4a878106c07f1ea8f65989a6b"))])
  (vertico
-  . [(2 13) ((emacs (29 1)) (compat (31)))
+  . [(2 14) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
      ((:url . "https://github.com/minad/vertico")
       (:keywords "convenience" "files" "matching" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "a6874e3d8c74a9eea77967d702d608ebbd6b27ec"))])
+      (:commit . "493ac505168006b008b0504366614ee17c63d844"))])
  (vertico-posframe
   . [(0 9 2) ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))
      "Using posframe to show Vertico" tar

@@ -612,8 +612,8 @@ Table of Contents
   We maintain small extension packages to Corfu in this repository in
   the subdirectory [extensions/]. The extensions are installed together
   with Corfu. The extensions are inactive by default and can be enabled
-  manually if desired.  Furthermore it is possible to install all of the
-  files separately, both `corfu.el' and the `corfu-*.el'
+  manually if desired.  Furthermore it is possible to install each of
+  the files individually, `corfu.el' and the `corfu-*.el'
   extensions. Currently the following extensions come with the Corfu
   package:
 

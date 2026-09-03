@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260902 73) ((emacs (28 1)))
+  . [(14 1 2 0 20260903 75) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "82189092e425f48f8da60b68ffb0b276d9eeb833"))])
+      (:commit . "9ac12c37e2b6a95c00d7dbc2553b46b5ac20e54c"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 7 0 20260829 8) ((emacs (29 1)) (compat (31)))
+  . [(3 8 0 20260903 0) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "3a2441ddb08d9897eb266cda4935fa91a767e1d5"))])
+      (:commit . "788735b54e5ad9d33137613aebae055443e3e05e"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 14 0 20260828 12) ((emacs (29 1)) (compat (31)))
+  . [(2 15 0 20260903 0) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "c68f993d2df82bfab8a973c6f1af047dc3543093"))])
+      (:commit . "4303506204bdf5df8f5e7d1457f6fca465a4da8e"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1378,14 +1378,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 6 0 20260817 10)
+  . [(1 4 7 0 20260903 0)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "21f96f539b68a9e2b8f29b0aef3ce1acbb528c94"))])
+      (:commit . "c1a79f0d32c48279b65c73b12b7e218f1eab932a"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -2182,12 +2182,12 @@
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
       (:commit . "83ea45983975bc6d17a908bf4acddfc47d51763a"))])
  (mct
-  . [(1 1 1 0 20260629 0) ((emacs (29 4)))
+  . [(1 1 1 0 20260903 2) ((emacs (29 4)))
      "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "ffe1555ace9041c93b78ba2fdf1f4656111394f3"))])
+      (:commit . "7784f2ab24e9db6a2dc98472b673befe0b5c52bc"))])
  (memory-usage
   . [(0 2 0 20201201 223908) nil
      "Analyze the memory usage of Emacs in various ways" tar
@@ -3874,13 +3874,13 @@
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
  (vertico
-  . [(2 13 0 20260830 21) ((emacs (29 1)) (compat (31)))
+  . [(2 14 0 20260903 0) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
      ((:url . "https://github.com/minad/vertico")
       (:keywords "convenience" "files" "matching" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "cd2eb6daff6a5a68a11740aa363729ec6f8702d3"))])
+      (:commit . "493ac505168006b008b0504366614ee17c63d844"))])
  (vertico-posframe
   . [(0 9 2 0 20260201 41512)
      ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))

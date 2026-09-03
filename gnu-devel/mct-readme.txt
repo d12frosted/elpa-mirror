@@ -6,6 +6,11 @@
                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
+[ *UPDATE 2026-09-03:* Starting with Emacs 31, this package is no longer
+  needed. You can get almost the same experience by configuring built-in
+  features. I did a video on the matter:
+  <https://protesilaos.com/codelog/2026-07-29-emacs-default-minibuffer-completion-overview/>. ]
+
 This manual, written by Protesilaos, describes the customization options
 for `mct' (or `mct.el' and variants), and provides every other piece of
 information pertinent to it.
