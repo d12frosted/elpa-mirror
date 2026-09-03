@@ -1084,14 +1084,14 @@
       (:authors ("Markus Triska" . "triska@metalevel.at"))
       (:commit . "2356aa9634361a54c312e4a537199e671f1bc47a"))])
  (eev
-  . [(20260126 0 20260126 21331) ((emacs (25 1)))
+  . [(20260903 0 20260903 0) ((emacs (25 1)))
      "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)"
      tar
      ((:url . "http://anggtwu.net/#eev")
       (:keywords "lisp" "e-scripts")
       (:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-      (:commit . "ffa3b88874d064256c5221d2bbcb1564d901602a"))])
+      (:commit . "9aa4aca967ea30262b50a9510b1bcd0dc400e1b5"))])
  (ef-themes
   . [(2 2 1 0 20260814 0) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
@@ -4087,10 +4087,10 @@
       (:authors ("Mattias Engdegård" . "mattias.engdegard@gmail.com"))
       (:commit . "fc4d6b5ddae9eb2c8adc2b117e6f33f3a09a4e96"))])
  (xref
-  . [(1 7 0 0 20260831 44) ((emacs (26 1)))
+  . [(1 7 0 0 20260902 45) ((emacs (26 1)))
      "Cross-referencing commands" tar
      ((:url . "https://elpa.gnu.org/packages/xref.html")
-      (:commit . "2e9d0a09bcb8ff90c7b630cec899c55f00f65b2a"))])
+      (:commit . "9df0d969ecb536a168c38255a38ea292c057c341"))])
  (xref-union
   . [(0 2 0 0 20260222 131318) ((emacs (25 1)))
      "Combine multiple Xref backends" tar
