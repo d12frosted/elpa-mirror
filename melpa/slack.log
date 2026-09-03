@@ -3,172 +3,29 @@
 From https://github.com/emacs-slack/emacs-slack
 Updating /mnt/store/melpa/working/slack/
 Checking out a7c971ef6f92ec1b9dca164512cd276a95cdfaa5
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/slack/
-  to /tmp/slack-vR1DVH/slack-20260901.1147/
-    emacs-slack.el -> emacs-slack.el
-    slack-action.el -> slack-action.el
-    slack-activity-feed-buffer.el -> slack-activity-feed-buffer.el
-    slack-all-threads-buffer.el -> slack-all-threads-buffer.el
-    slack-attachment.el -> slack-attachment.el
-    slack-authorize.el -> slack-authorize.el
-    slack-block.el -> slack-block.el
-    slack-bot-message.el -> slack-bot-message.el
-    slack-bot.el -> slack-bot.el
-    slack-buffer.el -> slack-buffer.el
-    slack-channel.el -> slack-channel.el
-    slack-company.el -> slack-company.el
-    slack-conversations.el -> slack-conversations.el
-    slack-counts.el -> slack-counts.el
-    slack-create-message.el -> slack-create-message.el
-    slack-defcustoms.el -> slack-defcustoms.el
-    slack-dialog-buffer.el -> slack-dialog-buffer.el
-    slack-dialog-edit-element-buffer.el -> slack-dialog-edit-element-buffer.el
-    slack-dialog.el -> slack-dialog.el
-    slack-dnd-status.el -> slack-dnd-status.el
-    slack-emoji.el -> slack-emoji.el
-    slack-event.el -> slack-event.el
-    slack-export.el -> slack-export.el
-    slack-file-info-buffer.el -> slack-file-info-buffer.el
-    slack-file-list-buffer.el -> slack-file-list-buffer.el
-    slack-file.el -> slack-file.el
-    slack-group.el -> slack-group.el
-    slack-im.el -> slack-im.el
-    slack-image.el -> slack-image.el
-    slack-log.el -> slack-log.el
-    slack-message-attachment-preview-buffer.el -> slack-message-attachment-preview-buffer.el
-    slack-message-buffer.el -> slack-message-buffer.el
-    slack-message-compose-buffer.el -> slack-message-compose-buffer.el
-    slack-message-edit-buffer.el -> slack-message-edit-buffer.el
-    slack-message-editor.el -> slack-message-editor.el
-    slack-message-event.el -> slack-message-event.el
-    slack-message-faces.el -> slack-message-faces.el
-    slack-message-formatter.el -> slack-message-formatter.el
-    slack-message-notification.el -> slack-message-notification.el
-    slack-message-reaction.el -> slack-message-reaction.el
-    slack-message-sender.el -> slack-message-sender.el
-    slack-message-share-buffer.el -> slack-message-share-buffer.el
-    slack-message.el -> slack-message.el
-    slack-modeline.el -> slack-modeline.el
-    slack-mrkdwn.el -> slack-mrkdwn.el
-    slack-pinned-item.el -> slack-pinned-item.el
-    slack-pinned-items-buffer.el -> slack-pinned-items-buffer.el
-    slack-reaction-event.el -> slack-reaction-event.el
-    slack-reaction.el -> slack-reaction.el
-    slack-reminder.el -> slack-reminder.el
-    slack-reply-event.el -> slack-reply-event.el
-    slack-request.el -> slack-request.el
-    slack-room-buffer.el -> slack-room-buffer.el
-    slack-room-event.el -> slack-room-event.el
-    slack-room-info-buffer.el -> slack-room-info-buffer.el
-    slack-room-message-compose-buffer.el -> slack-room-message-compose-buffer.el
-    slack-room.el -> slack-room.el
-    slack-scheduled-messages-buffer.el -> slack-scheduled-messages-buffer.el
-    slack-search-result-buffer.el -> slack-search-result-buffer.el
-    slack-search.el -> slack-search.el
-    slack-selectable.el -> slack-selectable.el
-    slack-slash-commands.el -> slack-slash-commands.el
-    slack-star-event.el -> slack-star-event.el
-    slack-star.el -> slack-star.el
-    slack-stars-buffer.el -> slack-stars-buffer.el
-    slack-team-ws.el -> slack-team-ws.el
-    slack-team.el -> slack-team.el
-    slack-thread-event.el -> slack-thread-event.el
-    slack-thread-message-buffer.el -> slack-thread-message-buffer.el
-    slack-thread-message-compose-buffer.el -> slack-thread-message-compose-buffer.el
-    slack-thread.el -> slack-thread.el
-    slack-typing.el -> slack-typing.el
-    slack-unescape.el -> slack-unescape.el
-    slack-user-message.el -> slack-user-message.el
-    slack-user-profile-buffer.el -> slack-user-profile-buffer.el
-    slack-user.el -> slack-user.el
-    slack-usergroup.el -> slack-usergroup.el
-    slack-util.el -> slack-util.el
-    slack-vip.el -> slack-vip.el
-    slack-websocket.el -> slack-websocket.el
-    slack.el -> slack.el
-Created slack-20260901.1147.tar containing:
-  slack-20260901.1147/
-  slack-20260901.1147/emacs-slack.el
-  slack-20260901.1147/slack-action.el
-  slack-20260901.1147/slack-activity-feed-buffer.el
-  slack-20260901.1147/slack-all-threads-buffer.el
-  slack-20260901.1147/slack-attachment.el
-  slack-20260901.1147/slack-authorize.el
-  slack-20260901.1147/slack-block.el
-  slack-20260901.1147/slack-bot-message.el
-  slack-20260901.1147/slack-bot.el
-  slack-20260901.1147/slack-buffer.el
-  slack-20260901.1147/slack-channel.el
-  slack-20260901.1147/slack-company.el
-  slack-20260901.1147/slack-conversations.el
-  slack-20260901.1147/slack-counts.el
-  slack-20260901.1147/slack-create-message.el
-  slack-20260901.1147/slack-defcustoms.el
-  slack-20260901.1147/slack-dialog-buffer.el
-  slack-20260901.1147/slack-dialog-edit-element-buffer.el
-  slack-20260901.1147/slack-dialog.el
-  slack-20260901.1147/slack-dnd-status.el
-  slack-20260901.1147/slack-emoji.el
-  slack-20260901.1147/slack-event.el
-  slack-20260901.1147/slack-export.el
-  slack-20260901.1147/slack-file-info-buffer.el
-  slack-20260901.1147/slack-file-list-buffer.el
-  slack-20260901.1147/slack-file.el
-  slack-20260901.1147/slack-group.el
-  slack-20260901.1147/slack-im.el
-  slack-20260901.1147/slack-image.el
-  slack-20260901.1147/slack-log.el
-  slack-20260901.1147/slack-message-attachment-preview-buffer.el
-  slack-20260901.1147/slack-message-buffer.el
-  slack-20260901.1147/slack-message-compose-buffer.el
-  slack-20260901.1147/slack-message-edit-buffer.el
-  slack-20260901.1147/slack-message-editor.el
-  slack-20260901.1147/slack-message-event.el
-  slack-20260901.1147/slack-message-faces.el
-  slack-20260901.1147/slack-message-formatter.el
-  slack-20260901.1147/slack-message-notification.el
-  slack-20260901.1147/slack-message-reaction.el
-  slack-20260901.1147/slack-message-sender.el
-  slack-20260901.1147/slack-message-share-buffer.el
-  slack-20260901.1147/slack-message.el
-  slack-20260901.1147/slack-modeline.el
-  slack-20260901.1147/slack-mrkdwn.el
-  slack-20260901.1147/slack-pinned-item.el
-  slack-20260901.1147/slack-pinned-items-buffer.el
-  slack-20260901.1147/slack-pkg.el
-  slack-20260901.1147/slack-reaction-event.el
-  slack-20260901.1147/slack-reaction.el
-  slack-20260901.1147/slack-reminder.el
-  slack-20260901.1147/slack-reply-event.el
-  slack-20260901.1147/slack-request.el
-  slack-20260901.1147/slack-room-buffer.el
-  slack-20260901.1147/slack-room-event.el
-  slack-20260901.1147/slack-room-info-buffer.el
-  slack-20260901.1147/slack-room-message-compose-buffer.el
-  slack-20260901.1147/slack-room.el
-  slack-20260901.1147/slack-scheduled-messages-buffer.el
-  slack-20260901.1147/slack-search-result-buffer.el
-  slack-20260901.1147/slack-search.el
-  slack-20260901.1147/slack-selectable.el
-  slack-20260901.1147/slack-slash-commands.el
-  slack-20260901.1147/slack-star-event.el
-  slack-20260901.1147/slack-star.el
-  slack-20260901.1147/slack-stars-buffer.el
-  slack-20260901.1147/slack-team-ws.el
-  slack-20260901.1147/slack-team.el
-  slack-20260901.1147/slack-thread-event.el
-  slack-20260901.1147/slack-thread-message-buffer.el
-  slack-20260901.1147/slack-thread-message-compose-buffer.el
-  slack-20260901.1147/slack-thread.el
-  slack-20260901.1147/slack-typing.el
-  slack-20260901.1147/slack-unescape.el
-  slack-20260901.1147/slack-user-message.el
-  slack-20260901.1147/slack-user-profile-buffer.el
-  slack-20260901.1147/slack-user.el
-  slack-20260901.1147/slack-usergroup.el
-  slack-20260901.1147/slack-util.el
-  slack-20260901.1147/slack-vip.el
-  slack-20260901.1147/slack-websocket.el
-  slack-20260901.1147/slack.el
-Built slack in 5.891s, finished at 2026-09-02T19:57:51+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10f56af0a651> (("emacs-slack.el" . "emacs-slack.el") ("slack-action.el" . "slack-action.el") ("slack-activity-feed-buffer.el" . "slack-activity-feed-buffer.el") ("slack-all-threads-buffer.el" . "slack-all-threads-buffer.el") ("slack-attachment.el" . "slack-attachment.el") ("slack-authorize.el" . "slack-authorize.el") ("slack-block.el" . "slack-block.el") ("slack-bot-message.el" . "slack-bot-message.el") ("slack-bot.el" . "slack-bot.el") ("slack-buffer.el" . "slack-buffer.el") ("slack-channel.el" . "slack-channel.el") ("slack-company.el" . "slack-company.el") ("slack-conversations.el" . "slack-conversations.el") ("slack-counts.el" . "slack-counts.el") ("slack-create-message.el" . "slack-create-message.el") ("slack-defcustoms.el" . "slack-defcustoms.el") ("slack-dialog-buffer.el" . "slack-dialog-buffer.el") ("slack-dialog-edit-element-buffer.el" . "slack-dialog-edit-element-buffer.el") ("slack-dialog.el" . "slack-dialog.el") ("slack-dnd-status.el" . "slack-dnd-status.el") ("slack-emoji.el" . "slack-emoji.el") ("slack-event.el" . "slack-event.el") ("slack-export.el" . "slack-export.el") ("slack-file-info-buffer.el" . "slack-file-info-buffer.el") ("slack-file-list-buffer.el" . "slack-file-list-buffer.el") ("slack-file.el" . "slack-file.el") ("slack-group.el" . "slack-group.el") ("slack-im.el" . "slack-im.el") ("slack-image.el" . "slack-image.el") ("slack-log.el" . "slack-log.el") ("slack-message-attachment-preview-buffer.el" . "slack-message-attachment-preview-buffer.el") ("slack-message-buffer.el" . "slack-message-buffer.el") ("slack-message-compose-buffer.el" . "slack-message-compose-buffer.el") ("slack-message-edit-buffer.el" . "slack-message-edit-buffer.el") ("slack-message-editor.el" . "slack-message-editor.el") ("slack-message-event.el" . "slack-message-event.el") ("slack-message-faces.el" . "slack-message-faces.el") ("slack-message-formatter.el" . "slack-message-formatter.el") ("slack-message-notification.el" . "slack-message-notification.el") ("slack-message-reaction.el" . "slack-message-reaction.el") ("slack-message-sender.el" . "slack-message-sender.el") ("slack-message-share-buffer.el" . "slack-message-share-buffer.el") ("slack-message.el" . "slack-message.el") ("slack-modeline.el" . "slack-modeline.el") ("slack-mrkdwn.el" . "slack-mrkdwn.el") ("slack-pinned-item.el" . "slack-pinned-item.el") ("slack-pinned-items-buffer.el" . "slack-pinned-items-buffer.el") ("slack-reaction-event.el" . "slack-reaction-event.el") ("slack-reaction.el" . "slack-reaction.el") ("slack-reminder.el" . "slack-reminder.el") ("slack-reply-event.el" . "slack-reply-event.el") ("slack-request.el" . "slack-request.el") ("slack-room-buffer.el" . "slack-room-buffer.el") ("slack-room-event.el" . "slack-room-event.el") ("slack-room-info-buffer.el" . "slack-room-info-buffer.el") ("slack-room-message-compose-buffer.el" . "slack-room-message-compose-buffer.el") ("slack-room.el" . "slack-room.el") ("slack-scheduled-messages-buffer.el" . "slack-scheduled-messages-buffer.el") ("slack-search-result-buffer.el" . "slack-search-result-buffer.el") ("slack-search.el" . "slack-search.el") ("slack-selectable.el" . "slack-selectable.el") ("slack-slash-commands.el" . "slack-slash-commands.el") ("slack-star-event.el" . "slack-star-event.el") ("slack-star.el" . "slack-star.el") ("slack-stars-buffer.el" . "slack-stars-buffer.el") ("slack-team-ws.el" . "slack-team-ws.el") ("slack-team.el" . "slack-team.el") ("slack-thread-event.el" . "slack-thread-event.el") ("slack-thread-message-buffer.el" . "slack-thread-message-buffer.el") ("slack-thread-message-compose-buffer.el" . "slack-thread-message-compose-buffer.el") ("slack-thread.el" . "slack-thread.el") ("slack-typing.el" . "slack-typing.el") ("slack-unescape.el" . "slack-unescape.el") ("slack-user-message.el" . "slack-user-message.el") ("slack-user-profile-buffer.el" . "slack-user-profile-buffer.el") ("slack-user.el" . "slack-user.el") ("slack-usergroup.el" . "slack-usergroup.el") ("slack-util.el" . "slack-util.el") ("slack-vip.el" . "slack-vip.el") ("slack-websocket.el" . "slack-websocket.el") ("slack.el" . "slack.el")))
+  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10f56af0a651> (("emacs-slack.el" . "emacs-slack.el") ("slack-action.el" . "slack-action.el") ("slack-activity-feed-buffer.el" . "slack-activity-feed-buffer.el") ("slack-all-threads-buffer.el" . "slack-all-threads-buffer.el") ("slack-attachment.el" . "slack-attachment.el") ("slack-authorize.el" . "slack-authorize.el") ("slack-block.el" . "slack-block.el") ("slack-bot-message.el" . "slack-bot-message.el") ("slack-bot.el" . "slack-bot.el") ("slack-buffer.el" . "slack-buffer.el") ("slack-channel.el" . "slack-channel.el") ("slack-company.el" . "slack-company.el") ("slack-conversations.el" . "slack-conversations.el") ("slack-counts.el" . "slack-counts.el") ("slack-create-message.el" . "slack-create-message.el") ("slack-defcustoms.el" . "slack-defcustoms.el") ("slack-dialog-buffer.el" . "slack-dialog-buffer.el") ("slack-dialog-edit-element-buffer.el" . "slack-dialog-edit-element-buffer.el") ("slack-dialog.el" . "slack-dialog.el") ("slack-dnd-status.el" . "slack-dnd-status.el") ("slack-emoji.el" . "slack-emoji.el") ("slack-event.el" . "slack-event.el") ("slack-export.el" . "slack-export.el") ("slack-file-info-buffer.el" . "slack-file-info-buffer.el") ("slack-file-list-buffer.el" . "slack-file-list-buffer.el") ("slack-file.el" . "slack-file.el") ("slack-group.el" . "slack-group.el") ("slack-im.el" . "slack-im.el") ("slack-image.el" . "slack-image.el") ("slack-log.el" . "slack-log.el") ("slack-message-attachment-preview-buffer.el" . "slack-message-attachment-preview-buffer.el") ("slack-message-buffer.el" . "slack-message-buffer.el") ("slack-message-compose-buffer.el" . "slack-message-compose-buffer.el") ("slack-message-edit-buffer.el" . "slack-message-edit-buffer.el") ("slack-message-editor.el" . "slack-message-editor.el") ("slack-message-event.el" . "slack-message-event.el") ("slack-message-faces.el" . "slack-message-faces.el") ("slack-message-formatter.el" . "slack-message-formatter.el") ("slack-message-notification.el" . "slack-message-notification.el") ("slack-message-reaction.el" . "slack-message-reaction.el") ("slack-message-sender.el" . "slack-message-sender.el") ("slack-message-share-buffer.el" . "slack-message-share-buffer.el") ("slack-message.el" . "slack-message.el") ("slack-modeline.el" . "slack-modeline.el") ("slack-mrkdwn.el" . "slack-mrkdwn.el") ("slack-pinned-item.el" . "slack-pinned-item.el") ("slack-pinned-items-buffer.el" . "slack-pinned-items-buffer.el") ("slack-reaction-event.el" . "slack-reaction-event.el") ("slack-reaction.el" . "slack-reaction.el") ("slack-reminder.el" . "slack-reminder.el") ("slack-reply-event.el" . "slack-reply-event.el") ("slack-request.el" . "slack-request.el") ("slack-room-buffer.el" . "slack-room-buffer.el") ("slack-room-event.el" . "slack-room-event.el") ("slack-room-info-buffer.el" . "slack-room-info-buffer.el") ("slack-room-message-compose-buffer.el" . "slack-room-message-compose-buffer.el") ("slack-room.el" . "slack-room.el") ("slack-scheduled-messages-buffer.el" . "slack-scheduled-messages-buffer.el") ("slack-search-result-buffer.el" . "slack-search-result-buffer.el") ("slack-search.el" . "slack-search.el") ("slack-selectable.el" . "slack-selectable.el") ("slack-slash-commands.el" . "slack-slash-commands.el") ("slack-star-event.el" . "slack-star-event.el") ("slack-star.el" . "slack-star.el") ("slack-stars-buffer.el" . "slack-stars-buffer.el") ("slack-team-ws.el" . "slack-team-ws.el") ("slack-team.el" . "slack-team.el") ("slack-thread-event.el" . "slack-thread-event.el") ("slack-thread-message-buffer.el" . "slack-thread-message-buffer.el") ("slack-thread-message-compose-buffer.el" . "slack-thread-message-compose-buffer.el") ("slack-thread.el" . "slack-thread.el") ("slack-typing.el" . "slack-typing.el") ("slack-unescape.el" . "slack-unescape.el") ("slack-user-message.el" . "slack-user-message.el") ("slack-user-profile-buffer.el" . "slack-user-profile-buffer.el") ("slack-user.el" . "slack-user.el") ("slack-usergroup.el" . "slack-usergroup.el") ("slack-util.el" . "slack-util.el") ("slack-vip.el" . "slack-vip.el") ("slack-websocket.el" . "slack-websocket.el") ("slack.el" . "slack.el")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-10f56af0a651>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "slack")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "FeSymbol's function definition is void: package-build--build-multi-file-package
+tcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "slack")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "slack")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("slack")
+  eval((package-build-archive "slack") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"slack\")"))
+  command-line()
+  normal-top-level()

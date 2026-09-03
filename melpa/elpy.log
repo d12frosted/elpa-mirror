@@ -3,153 +3,29 @@
 From https://github.com/jorgenschaefer/elpy
 Updating /mnt/store/melpa/working/elpy/
 Checking out 9cdf26dfea1cb044b3cf1dfa9755b6479bfd9a1c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elpy/
-  to /tmp/elpy-Ypn4ys/elpy-20260715.1747/
-    elpy-django.el -> elpy-django.el
-    elpy-profile.el -> elpy-profile.el
-    elpy-refactor.el -> elpy-refactor.el
-    elpy-rpc.el -> elpy-rpc.el
-    elpy-shell.el -> elpy-shell.el
-    elpy.el -> elpy.el
-    snippets => snippets
-    elpy => elpy
-Created elpy-20260715.1747.tar containing:
-  elpy-20260715.1747/
-  elpy-20260715.1747/elpy-django.el
-  elpy-20260715.1747/elpy-pkg.el
-  elpy-20260715.1747/elpy-profile.el
-  elpy-20260715.1747/elpy-refactor.el
-  elpy-20260715.1747/elpy-rpc.el
-  elpy-20260715.1747/elpy-shell.el
-  elpy-20260715.1747/elpy.el
-  elpy-20260715.1747/elpy/
-  elpy-20260715.1747/elpy/__init__.py
-  elpy-20260715.1747/elpy/__main__.py
-  elpy-20260715.1747/elpy/auto_pep8.py
-  elpy-20260715.1747/elpy/blackutil.py
-  elpy-20260715.1747/elpy/compat.py
-  elpy-20260715.1747/elpy/jedibackend.py
-  elpy-20260715.1747/elpy/json_encoder.py
-  elpy-20260715.1747/elpy/pydocutils.py
-  elpy-20260715.1747/elpy/rpc.py
-  elpy-20260715.1747/elpy/server.py
-  elpy-20260715.1747/elpy/tests/
-  elpy-20260715.1747/elpy/tests/__init__.py
-  elpy-20260715.1747/elpy/tests/compat.py
-  elpy-20260715.1747/elpy/tests/support.py
-  elpy-20260715.1747/elpy/tests/test_auto_pep8.py
-  elpy-20260715.1747/elpy/tests/test_black.py
-  elpy-20260715.1747/elpy/tests/test_jedibackend.py
-  elpy-20260715.1747/elpy/tests/test_pydocutils.py
-  elpy-20260715.1747/elpy/tests/test_rpc.py
-  elpy-20260715.1747/elpy/tests/test_server.py
-  elpy-20260715.1747/elpy/tests/test_support.py
-  elpy-20260715.1747/elpy/tests/test_yapf.py
-  elpy-20260715.1747/elpy/yapfutil.py
-  elpy-20260715.1747/snippets/
-  elpy-20260715.1747/snippets/python-mode/
-  elpy-20260715.1747/snippets/python-mode/.yas-setup.el
-  elpy-20260715.1747/snippets/python-mode/_abs
-  elpy-20260715.1747/snippets/python-mode/_add
-  elpy-20260715.1747/snippets/python-mode/_and
-  elpy-20260715.1747/snippets/python-mode/_bool
-  elpy-20260715.1747/snippets/python-mode/_call
-  elpy-20260715.1747/snippets/python-mode/_cmp
-  elpy-20260715.1747/snippets/python-mode/_coerce
-  elpy-20260715.1747/snippets/python-mode/_complex
-  elpy-20260715.1747/snippets/python-mode/_contains
-  elpy-20260715.1747/snippets/python-mode/_del
-  elpy-20260715.1747/snippets/python-mode/_delattr
-  elpy-20260715.1747/snippets/python-mode/_delete
-  elpy-20260715.1747/snippets/python-mode/_delitem
-  elpy-20260715.1747/snippets/python-mode/_div
-  elpy-20260715.1747/snippets/python-mode/_divmod
-  elpy-20260715.1747/snippets/python-mode/_enter
-  elpy-20260715.1747/snippets/python-mode/_eq
-  elpy-20260715.1747/snippets/python-mode/_exit
-  elpy-20260715.1747/snippets/python-mode/_float
-  elpy-20260715.1747/snippets/python-mode/_floordiv
-  elpy-20260715.1747/snippets/python-mode/_ge
-  elpy-20260715.1747/snippets/python-mode/_get
-  elpy-20260715.1747/snippets/python-mode/_getattr
-  elpy-20260715.1747/snippets/python-mode/_getattribute
-  elpy-20260715.1747/snippets/python-mode/_getitem
-  elpy-20260715.1747/snippets/python-mode/_gt
-  elpy-20260715.1747/snippets/python-mode/_hash
-  elpy-20260715.1747/snippets/python-mode/_hex
-  elpy-20260715.1747/snippets/python-mode/_iadd
-  elpy-20260715.1747/snippets/python-mode/_iand
-  elpy-20260715.1747/snippets/python-mode/_idiv
-  elpy-20260715.1747/snippets/python-mode/_ifloordiv
-  elpy-20260715.1747/snippets/python-mode/_ilshift
-  elpy-20260715.1747/snippets/python-mode/_imod
-  elpy-20260715.1747/snippets/python-mode/_imul
-  elpy-20260715.1747/snippets/python-mode/_index
-  elpy-20260715.1747/snippets/python-mode/_init
-  elpy-20260715.1747/snippets/python-mode/_instancecheck
-  elpy-20260715.1747/snippets/python-mode/_int
-  elpy-20260715.1747/snippets/python-mode/_invert
-  elpy-20260715.1747/snippets/python-mode/_ior
-  elpy-20260715.1747/snippets/python-mode/_ipow
-  elpy-20260715.1747/snippets/python-mode/_irshift
-  elpy-20260715.1747/snippets/python-mode/_isub
-  elpy-20260715.1747/snippets/python-mode/_iter
-  elpy-20260715.1747/snippets/python-mode/_itruediv
-  elpy-20260715.1747/snippets/python-mode/_ixor
-  elpy-20260715.1747/snippets/python-mode/_le
-  elpy-20260715.1747/snippets/python-mode/_len
-  elpy-20260715.1747/snippets/python-mode/_long
-  elpy-20260715.1747/snippets/python-mode/_lshift
-  elpy-20260715.1747/snippets/python-mode/_lt
-  elpy-20260715.1747/snippets/python-mode/_mod
-  elpy-20260715.1747/snippets/python-mode/_mul
-  elpy-20260715.1747/snippets/python-mode/_ne
-  elpy-20260715.1747/snippets/python-mode/_neg
-  elpy-20260715.1747/snippets/python-mode/_new
-  elpy-20260715.1747/snippets/python-mode/_nonzero
-  elpy-20260715.1747/snippets/python-mode/_oct
-  elpy-20260715.1747/snippets/python-mode/_or
-  elpy-20260715.1747/snippets/python-mode/_pos
-  elpy-20260715.1747/snippets/python-mode/_pow
-  elpy-20260715.1747/snippets/python-mode/_radd
-  elpy-20260715.1747/snippets/python-mode/_rand
-  elpy-20260715.1747/snippets/python-mode/_rdivmod
-  elpy-20260715.1747/snippets/python-mode/_repr
-  elpy-20260715.1747/snippets/python-mode/_reversed
-  elpy-20260715.1747/snippets/python-mode/_rfloordiv
-  elpy-20260715.1747/snippets/python-mode/_rlshift
-  elpy-20260715.1747/snippets/python-mode/_rmod
-  elpy-20260715.1747/snippets/python-mode/_rmul
-  elpy-20260715.1747/snippets/python-mode/_ror
-  elpy-20260715.1747/snippets/python-mode/_rpow
-  elpy-20260715.1747/snippets/python-mode/_rrshift
-  elpy-20260715.1747/snippets/python-mode/_rshift
-  elpy-20260715.1747/snippets/python-mode/_rsub
-  elpy-20260715.1747/snippets/python-mode/_rtruediv
-  elpy-20260715.1747/snippets/python-mode/_rxor
-  elpy-20260715.1747/snippets/python-mode/_set
-  elpy-20260715.1747/snippets/python-mode/_setattr
-  elpy-20260715.1747/snippets/python-mode/_setitem
-  elpy-20260715.1747/snippets/python-mode/_slots
-  elpy-20260715.1747/snippets/python-mode/_str
-  elpy-20260715.1747/snippets/python-mode/_sub
-  elpy-20260715.1747/snippets/python-mode/_subclasscheck
-  elpy-20260715.1747/snippets/python-mode/_truediv
-  elpy-20260715.1747/snippets/python-mode/_unicode
-  elpy-20260715.1747/snippets/python-mode/_xor
-  elpy-20260715.1747/snippets/python-mode/ase
-  elpy-20260715.1747/snippets/python-mode/asne
-  elpy-20260715.1747/snippets/python-mode/asr
-  elpy-20260715.1747/snippets/python-mode/class
-  elpy-20260715.1747/snippets/python-mode/def
-  elpy-20260715.1747/snippets/python-mode/defs
-  elpy-20260715.1747/snippets/python-mode/enc
-  elpy-20260715.1747/snippets/python-mode/env
-  elpy-20260715.1747/snippets/python-mode/from
-  elpy-20260715.1747/snippets/python-mode/pdb
-  elpy-20260715.1747/snippets/python-mode/py3
-  elpy-20260715.1747/snippets/python-mode/super
-  elpy-20260715.1747/snippets/python-ts-mode/
-  elpy-20260715.1747/snippets/python-ts-mode/.yas-parents
-Built elpy in 4.149s, finished at 2026-09-02T18:50:40+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10e49dca4c6d> (("elpy-django.el" . "elpy-django.el") ("elpy-profile.el" . "elpy-profile.el") ("elpy-refactor.el" . "elpy-refactor.el") ("elpy-rpc.el" . "elpy-rpc.el") ("elpy-shell.el" . "elpy-shell.el") ("elpy.el" . "elpy.el") ("snippets" . "snippets") ("elpy" . "elpy")))
+  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10e49dca4c6d> (("elpy-django.el" . "elpy-django.el") ("elpy-profile.el" . "elpy-profile.el") ("elpy-refactor.el" . "elpy-refactor.el") ("elpy-rpc.el" . "elpy-rpc.el") ("elpy-shell.el" . "elpy-shell.el") ("elpy.el" . "elpy.el") ("snippets" . "snippets") ("elpy" . "elpy")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-10e49dca4c6d>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "elpy")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "elpy")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "elpy")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("elpy")
+  eval((package-build-archive "elpy") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--Symbol's function definition is void: package-build--build-multi-file-package
+eval" "(package-build-archive \"elpy\")"))
+  command-line()
+  normal-top-level()

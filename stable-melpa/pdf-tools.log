@@ -3,104 +3,29 @@
 From https://github.com/vedang/pdf-tools
 Updating /mnt/store/melpa/working/pdf-tools/
 Checking out e4b7f1f37cf59ddf025d609ffcdabe732a6e99ba
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pdf-tools/
-  to /tmp/pdf-tools-Pocxgi/pdf-tools-20260102.1101/
-  ! lisp/pdf-annot.el -> pdf-annot.el
-  ! lisp/pdf-cache.el -> pdf-cache.el
-  ! lisp/pdf-dev.el -> pdf-dev.el
-  ! lisp/pdf-history.el -> pdf-history.el
-  ! lisp/pdf-info.el -> pdf-info.el
-  ! lisp/pdf-isearch.el -> pdf-isearch.el
-  ! lisp/pdf-links.el -> pdf-links.el
-  ! lisp/pdf-loader.el -> pdf-loader.el
-  ! lisp/pdf-macs.el -> pdf-macs.el
-  ! lisp/pdf-misc.el -> pdf-misc.el
-  ! lisp/pdf-occur.el -> pdf-occur.el
-  ! lisp/pdf-outline.el -> pdf-outline.el
-  ! lisp/pdf-roll.el -> pdf-roll.el
-  ! lisp/pdf-sync.el -> pdf-sync.el
-  ! lisp/pdf-tools.el -> pdf-tools.el
-  ! lisp/pdf-util.el -> pdf-util.el
-  ! lisp/pdf-view.el -> pdf-view.el
-  ! lisp/pdf-virtual.el -> pdf-virtual.el
-    README -> README
-  ! Makefile -> build/Makefile
-  ! server => build/server
-Created pdf-tools-20260102.1101.tar containing:
-  pdf-tools-20260102.1101/
-  pdf-tools-20260102.1101/README
-  pdf-tools-20260102.1101/build/
-  pdf-tools-20260102.1101/build/Makefile
-  pdf-tools-20260102.1101/build/server/
-  pdf-tools-20260102.1101/build/server/.gitignore
-  pdf-tools-20260102.1101/build/server/Makefile.am
-  pdf-tools-20260102.1101/build/server/autobuild
-  pdf-tools-20260102.1101/build/server/autobuild.android
-  pdf-tools-20260102.1101/build/server/autogen.sh
-  pdf-tools-20260102.1101/build/server/configure.ac
-  pdf-tools-20260102.1101/build/server/epdfinfo.c
-  pdf-tools-20260102.1101/build/server/epdfinfo.h
-  pdf-tools-20260102.1101/build/server/poppler-versions
-  pdf-tools-20260102.1101/build/server/synctex_parser.c
-  pdf-tools-20260102.1101/build/server/synctex_parser.h
-  pdf-tools-20260102.1101/build/server/synctex_parser_advanced.h
-  pdf-tools-20260102.1101/build/server/synctex_parser_local.h
-  pdf-tools-20260102.1101/build/server/synctex_parser_readme.txt
-  pdf-tools-20260102.1101/build/server/synctex_parser_utils.c
-  pdf-tools-20260102.1101/build/server/synctex_parser_utils.h
-  pdf-tools-20260102.1101/build/server/synctex_parser_version.txt
-  pdf-tools-20260102.1101/build/server/synctex_version.h
-  pdf-tools-20260102.1101/build/server/test/
-  pdf-tools-20260102.1101/build/server/test/.gitignore
-  pdf-tools-20260102.1101/build/server/test/Makefile
-  pdf-tools-20260102.1101/build/server/test/docker/
-  pdf-tools-20260102.1101/build/server/test/docker/.gitignore
-  pdf-tools-20260102.1101/build/server/test/docker/lib/
-  pdf-tools-20260102.1101/build/server/test/docker/lib/run-tests
-  pdf-tools-20260102.1101/build/server/test/docker/lib/yes-or-enter
-  pdf-tools-20260102.1101/build/server/test/docker/templates/
-  pdf-tools-20260102.1101/build/server/test/docker/templates/Dockerfile.common.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/arch.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/centos.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/debian-10.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/debian-11.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/debian-9.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/emacs-26.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/emacs-27.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/emacs-28.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/emacs-29.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/fedora-34.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/fedora-35.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/fedora-36.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/freebsd.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/gentoo.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/macos.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/msys2.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/nixos.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/openbsd.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/opensuse.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/build/server/test/docker/templates/ubuntu-18.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/ubuntu-20.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/ubuntu-22.Dockerfile.in
-  pdf-tools-20260102.1101/build/server/test/docker/templates/void.Dockerfile.in.FAILING
-  pdf-tools-20260102.1101/pdf-annot.el
-  pdf-tools-20260102.1101/pdf-cache.el
-  pdf-tools-20260102.1101/pdf-dev.el
-  pdf-tools-20260102.1101/pdf-history.el
-  pdf-tools-20260102.1101/pdf-info.el
-  pdf-tools-20260102.1101/pdf-isearch.el
-  pdf-tools-20260102.1101/pdf-links.el
-  pdf-tools-20260102.1101/pdf-loader.el
-  pdf-tools-20260102.1101/pdf-macs.el
-  pdf-tools-20260102.1101/pdf-misc.el
-  pdf-tools-20260102.1101/pdf-occur.el
-  pdf-tools-20260102.1101/pdf-outline.el
-  pdf-tools-20260102.1101/pdf-roll.el
-  pdf-tools-20260102.1101/pdf-sync.el
-  pdf-tools-20260102.1101/pdf-tools-pkg.el
-  pdf-tools-20260102.1101/pdf-tools.el
-  pdf-tools-20260102.1101/pdf-util.el
-  pdf-tools-20260102.1101/pdf-view.el
-  pdf-tools-20260102.1101/pdf-virtual.el
-Built pdf-tools in 5.183s, finished at 2026-09-02T19:44:01+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-1035ead02d23> (("lisp/pdf-annot.el" . "pdf-annot.el") ("lisp/pdf-cache.el" . "pdf-cache.el") ("lisp/pdf-dev.el" . "pdf-dev.el") ("lisp/pdf-history.el" . "pdf-history.el") ("lisp/pdf-info.el" . "pdf-info.el") ("lisp/pdf-isearch.el" . "pdf-isearch.el") ("lisp/pdf-links.el" . "pdf-links.el") ("lisp/pdf-loader.el" . "pdf-loader.el") ("lisp/pdf-macs.el" . "pdf-macs.el") ("lisp/pdf-misc.el" . "pdf-misc.el") ("lisp/pdf-occur.el" . "pdf-occur.el") ("lisp/pdf-outline.el" . "pdf-outline.el") ("lisp/pdf-roll.el" . "pdf-roll.el") ("lisp/pdf-sync.el" . "pdf-sync.el") ("lisp/pdf-tools.el" . "pdf-tools.el") ("lisp/pdf-util.el" . "pdf-util.el") ("lisp/pdf-view.el" . "pdf-view.el") ("lisp/pdf-virtual.el" . "pdf-virtual.el") ("README" . "README") ("Makefile" . "build/Makefile") ("server" . "build/server")))
+  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-1035ead02d23> (("lisp/pdf-annot.el" . "pdf-annot.el") ("lisp/pdf-cache.el" . "pdf-cache.el") ("lisp/pdf-dev.el" . "pdf-dev.el") ("lisp/pdf-history.el" . "pdf-history.el") ("lisp/pdf-info.el" . "pdf-info.el") ("lisp/pdf-isearch.el" . "pdf-isearch.el") ("lisp/pdf-links.el" . "pdf-links.el") ("lisp/pdf-loader.el" . "pdf-loader.el") ("lisp/pdf-macs.el" . "pdf-macs.el") ("lisp/pdf-misc.el" . "pdf-misc.el") ("lisp/pdf-occur.el" . "pdf-occur.el") ("lisp/pdf-outline.el" . "pdf-outline.el") ("lisp/pdf-roll.el" . "pdf-roll.el") ("lisp/pdf-sync.el" . "pdf-sync.el") ("lisp/pdf-tools.el" . "pdf-tools.el") ("lisp/pdf-util.el" . "pdf-util.el") ("lisp/pdf-view.el" . "pdf-view.el") ("lisp/pdf-virtual.el" . "pdf-virtual.el") ("README" . "README") ("Makefile" . "build/Makefile") ("server" . "build/server")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-1035ead02d23>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "pdf-tools")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "pdf-tools")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "BuiltSymbol's function definition is void: package-build--build-multi-file-package
+" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "pdf-tools")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("pdf-tools")
+  eval((package-build-archive "pdf-tools") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"pdf-tools\")"))
+  command-line()
+  normal-top-level()

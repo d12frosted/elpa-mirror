@@ -3,95 +3,29 @@
 From https://github.com/jkitchin/org-ref
 Updating /mnt/store/melpa/working/org-ref/
 Checking out dc2481d430906fe2552f9318f4405242e6d37396
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-ref/
-  to /tmp/org-ref-fcdUqP/org-ref-20251206.1422/
-    contrib.el -> contrib.el
-    doi-utils.el -> doi-utils.el
-    nist-webbook.el -> nist-webbook.el
-    openalex.el -> openalex.el
-    org-ref-arxiv.el -> org-ref-arxiv.el
-    org-ref-bibliography-links.el -> org-ref-bibliography-links.el
-    org-ref-bibtex.el -> org-ref-bibtex.el
-    org-ref-citation-links.el -> org-ref-citation-links.el
-    org-ref-compat.el -> org-ref-compat.el
-    org-ref-core.el -> org-ref-core.el
-    org-ref-export.el -> org-ref-export.el
-    org-ref-extract.el -> org-ref-extract.el
-    org-ref-glossary.el -> org-ref-glossary.el
-    org-ref-helm.el -> org-ref-helm.el
-    org-ref-isbn.el -> org-ref-isbn.el
-    org-ref-ivy.el -> org-ref-ivy.el
-    org-ref-label-link.el -> org-ref-label-link.el
-    org-ref-latex.el -> org-ref-latex.el
-    org-ref-misc-links.el -> org-ref-misc-links.el
-    org-ref-natbib-bbl-citeproc.el -> org-ref-natbib-bbl-citeproc.el
-    org-ref-pdf.el -> org-ref-pdf.el
-    org-ref-pgk.el -> org-ref-pgk.el
-    org-ref-publish.el -> org-ref-publish.el
-    org-ref-pubmed.el -> org-ref-pubmed.el
-    org-ref-ref-links.el -> org-ref-ref-links.el
-    org-ref-refproc.el -> org-ref-refproc.el
-    org-ref-sci-id.el -> org-ref-sci-id.el
-    org-ref-scifinder.el -> org-ref-scifinder.el
-    org-ref-scopus.el -> org-ref-scopus.el
-    org-ref-url-utils.el -> org-ref-url-utils.el
-    org-ref-utils.el -> org-ref-utils.el
-    org-ref-worldcat.el -> org-ref-worldcat.el
-    org-ref-wos.el -> org-ref-wos.el
-    org-ref.el -> org-ref.el
-    x2bib.el -> x2bib.el
-    org-ref.org -> org-ref.org
-    org-ref.bib -> org-ref.bib
-    citeproc => citeproc
-Created org-ref-20251206.1422.tar containing:
-  org-ref-20251206.1422/
-  org-ref-20251206.1422/citeproc/
-  org-ref-20251206.1422/citeproc/csl-locales/
-  org-ref-20251206.1422/citeproc/csl-locales/locales-en-US.xml
-  org-ref-20251206.1422/citeproc/csl-styles/
-  org-ref-20251206.1422/citeproc/csl-styles/apa-5th-edition.csl
-  org-ref-20251206.1422/citeproc/csl-styles/apa-numeric-superscript-brackets.csl
-  org-ref-20251206.1422/citeproc/csl-styles/chicago-author-date-16th-edition.csl
-  org-ref-20251206.1422/citeproc/csl-styles/chicago-fullnote-bibliography-16th-edition.csl
-  org-ref-20251206.1422/citeproc/csl-styles/elsevier-harvard.csl
-  org-ref-20251206.1422/citeproc/csl-styles/elsevier-with-titles.csl
-  org-ref-20251206.1422/contrib.el
-  org-ref-20251206.1422/doi-utils.el
-  org-ref-20251206.1422/nist-webbook.el
-  org-ref-20251206.1422/openalex.el
-  org-ref-20251206.1422/org-ref-arxiv.el
-  org-ref-20251206.1422/org-ref-bibliography-links.el
-  org-ref-20251206.1422/org-ref-bibtex.el
-  org-ref-20251206.1422/org-ref-citation-links.el
-  org-ref-20251206.1422/org-ref-compat.el
-  org-ref-20251206.1422/org-ref-core.el
-  org-ref-20251206.1422/org-ref-export.el
-  org-ref-20251206.1422/org-ref-extract.el
-  org-ref-20251206.1422/org-ref-glossary.el
-  org-ref-20251206.1422/org-ref-helm.el
-  org-ref-20251206.1422/org-ref-isbn.el
-  org-ref-20251206.1422/org-ref-ivy.el
-  org-ref-20251206.1422/org-ref-label-link.el
-  org-ref-20251206.1422/org-ref-latex.el
-  org-ref-20251206.1422/org-ref-misc-links.el
-  org-ref-20251206.1422/org-ref-natbib-bbl-citeproc.el
-  org-ref-20251206.1422/org-ref-pdf.el
-  org-ref-20251206.1422/org-ref-pgk.el
-  org-ref-20251206.1422/org-ref-pkg.el
-  org-ref-20251206.1422/org-ref-publish.el
-  org-ref-20251206.1422/org-ref-pubmed.el
-  org-ref-20251206.1422/org-ref-ref-links.el
-  org-ref-20251206.1422/org-ref-refproc.el
-  org-ref-20251206.1422/org-ref-sci-id.el
-  org-ref-20251206.1422/org-ref-scifinder.el
-  org-ref-20251206.1422/org-ref-scopus.el
-  org-ref-20251206.1422/org-ref-url-utils.el
-  org-ref-20251206.1422/org-ref-utils.el
-  org-ref-20251206.1422/org-ref-worldcat.el
-  org-ref-20251206.1422/org-ref-wos.el
-  org-ref-20251206.1422/org-ref.bib
-  org-ref-20251206.1422/org-ref.el
-  org-ref-20251206.1422/org-ref.org
-  org-ref-20251206.1422/x2bib.el
-Built org-ref in 5.853s, finished at 2026-09-02T19:39:02+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10e54e61485e> (("contrib.el" . "contrib.el") ("doi-utils.el" . "doi-utils.el") ("nist-webbook.el" . "nist-webbook.el") ("openalex.el" . "openalex.el") ("org-ref-arxiv.el" . "org-ref-arxiv.el") ("org-ref-bibliography-links.el" . "org-ref-bibliography-links.el") ("org-ref-bibtex.el" . "org-ref-bibtex.el") ("org-ref-citation-links.el" . "org-ref-citation-links.el") ("org-ref-compat.el" . "org-ref-compat.el") ("org-ref-core.el" . "org-ref-core.el") ("org-ref-export.el" . "org-ref-export.el") ("org-ref-extract.el" . "org-ref-extract.el") ("org-ref-glossary.el" . "org-ref-glossary.el") ("org-ref-helm.el" . "org-ref-helm.el") ("org-ref-isbn.el" . "org-ref-isbn.el") ("org-ref-ivy.el" . "org-ref-ivy.el") ("org-ref-label-link.el" . "org-ref-label-link.el") ("org-ref-latex.el" . "org-ref-latex.el") ("org-ref-misc-links.el" . "org-ref-misc-links.el") ("org-ref-natbib-bbl-citeproc.el" . "org-ref-natbib-bbl-citeproc.el") ("org-ref-pdf.el" . "org-ref-pdf.el") ("org-ref-pgk.el" . "org-ref-pgk.el") ("org-ref-publish.el" . "org-ref-publish.el") ("org-ref-pubmed.el" . "org-ref-pubmed.el") ("org-ref-ref-links.el" . "org-ref-ref-links.el") ("org-ref-refproc.el" . "org-ref-refproc.el") ("org-ref-sci-id.el" . "org-ref-sci-id.el") ("org-ref-scifinder.el" . "org-ref-scifinder.el") ("org-ref-scopus.el" . "org-ref-scopus.el") ("org-ref-url-utils.el" . "org-ref-url-utils.el") ("org-ref-utils.el" . "org-ref-utils.el") ("org-ref-worldcat.el" . "org-ref-worldcat.el") ("org-ref-wos.el" . "org-ref-wos.el") ("org-ref.el" . "org-ref.el") ("x2bib.el" . "x2bib.el") ("org-ref.org" . "org-ref.org") ("org-ref.bib" . "org-ref.bib") ("citeproc" . "citeproc")))
+  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10e54e61485e> (("contrib.el" . "contrib.el") ("doi-utils.el" . "doi-utils.el") ("nist-webbook.el" . "nist-webbook.el") ("openalex.el" . "openalex.el") ("org-ref-arxiv.el" . "org-ref-arxiv.el") ("org-ref-bibliography-links.el" . "org-ref-bibliography-links.el") ("org-ref-bibtex.el" . "org-ref-bibtex.el") ("org-ref-citation-links.el" . "org-ref-citation-links.el") ("org-ref-compat.el" . "org-ref-compat.el") ("org-ref-core.el" . "org-ref-core.el") ("org-ref-export.el" . "org-ref-export.el") ("org-ref-extract.el" . "org-ref-extract.el") ("org-ref-glossary.el" . "org-ref-glossary.el") ("org-ref-helm.el" . "org-ref-helm.el") ("org-ref-isbn.el" . "org-ref-isbn.el") ("org-ref-ivy.el" . "org-ref-ivy.el") ("org-ref-label-link.el" . "org-ref-label-link.el") ("org-ref-latex.el" . "org-ref-latex.el") ("org-ref-misc-links.el" . "org-ref-misc-links.el") ("org-ref-natbib-bbl-citeproc.el" . "org-ref-natbib-bbl-citeproc.el") ("org-ref-pdf.el" . "org-ref-pdf.el") ("org-ref-pgk.el" . "org-ref-pgk.el") ("org-ref-publish.el" . "org-ref-publish.el") ("org-ref-pubmed.el" . "org-ref-pubmed.el") ("org-ref-ref-links.el" . "org-ref-ref-links.el") ("org-ref-refproc.el" . "org-ref-refproc.el") ("org-ref-sci-id.el" . "org-ref-sci-id.el") ("org-ref-scifinder.el" . "org-ref-scifinder.el") ("org-ref-scopus.el" . "org-ref-scopus.el") ("org-ref-url-utils.el" . "org-ref-url-utils.el") ("org-ref-utils.el" . "org-ref-utils.el") ("org-ref-worldcat.el" . "org-ref-worldcat.el") ("org-ref-wos.el" . "org-ref-wos.el") ("org-ref.el" . "org-ref.el") ("x2bib.el" . "x2bib.el") ("org-ref.org" . "org-ref.org") ("org-ref.bib" . "org-ref.bib") ("citeproc" . "citeproc")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-10e54e61485e>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "org-ref")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (filSymbol's function definition is void: package-build--build-multi-file-package
+e-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "org-ref")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "org-ref")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("org-ref")
+  eval((package-build-archive "org-ref") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"org-ref\")"))
+  command-line()
+  normal-top-level()

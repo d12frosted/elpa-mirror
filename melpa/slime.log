@@ -3,216 +3,29 @@
 From https://github.com/slime/slime
 Updating /mnt/store/melpa/working/slime/
 Checking out 4a5b4fb0b536da711fa536760137f5424301f087
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/slime/
-  to /tmp/slime-Q60CJp/slime-20260901.1240/
-    slime-autoloads.el -> slime-autoloads.el
-    slime-tests.el -> slime-tests.el
-    slime.el -> slime.el
-    lib/hyperspec.el -> lib/hyperspec.el
-    swank => swank
-    metering.lisp -> metering.lisp
-    nregex.lisp -> nregex.lisp
-    packages.lisp -> packages.lisp
-    sbcl-pprint-patch.lisp -> sbcl-pprint-patch.lisp
-    start-swank.lisp -> start-swank.lisp
-    swank-loader.lisp -> swank-loader.lisp
-    swank.lisp -> swank.lisp
-    xref.lisp -> xref.lisp
-    swank.asd -> swank.asd
-  ! doc/slime.texi -> slime.texi
-    contrib/README.md -> contrib/README.md
-    contrib/inferior-slime.el -> contrib/inferior-slime.el
-    contrib/slime-asdf.el -> contrib/slime-asdf.el
-    contrib/slime-autodoc.el -> contrib/slime-autodoc.el
-    contrib/slime-banner.el -> contrib/slime-banner.el
-    contrib/slime-buffer-streams.el -> contrib/slime-buffer-streams.el
-    contrib/slime-c-p-c.el -> contrib/slime-c-p-c.el
-    contrib/slime-cl-indent.el -> contrib/slime-cl-indent.el
-    contrib/slime-clipboard.el -> contrib/slime-clipboard.el
-    contrib/slime-coalton.el -> contrib/slime-coalton.el
-    contrib/slime-compiler-notes-tree.el -> contrib/slime-compiler-notes-tree.el
-    contrib/slime-editing-commands.el -> contrib/slime-editing-commands.el
-    contrib/slime-enclosing-context.el -> contrib/slime-enclosing-context.el
-    contrib/slime-fancy-inspector.el -> contrib/slime-fancy-inspector.el
-    contrib/slime-fancy-trace.el -> contrib/slime-fancy-trace.el
-    contrib/slime-fancy.el -> contrib/slime-fancy.el
-    contrib/slime-fontifying-fu.el -> contrib/slime-fontifying-fu.el
-    contrib/slime-fuzzy.el -> contrib/slime-fuzzy.el
-    contrib/slime-highlight-edits.el -> contrib/slime-highlight-edits.el
-    contrib/slime-hyperdoc.el -> contrib/slime-hyperdoc.el
-    contrib/slime-indentation.el -> contrib/slime-indentation.el
-    contrib/slime-listener-hooks.el -> contrib/slime-listener-hooks.el
-    contrib/slime-macrostep.el -> contrib/slime-macrostep.el
-    contrib/slime-mdot-fu.el -> contrib/slime-mdot-fu.el
-    contrib/slime-media.el -> contrib/slime-media.el
-    contrib/slime-mrepl.el -> contrib/slime-mrepl.el
-    contrib/slime-package-fu.el -> contrib/slime-package-fu.el
-    contrib/slime-parse.el -> contrib/slime-parse.el
-    contrib/slime-presentation-streams.el -> contrib/slime-presentation-streams.el
-    contrib/slime-presentations.el -> contrib/slime-presentations.el
-    contrib/slime-quicklisp.el -> contrib/slime-quicklisp.el
-    contrib/slime-references.el -> contrib/slime-references.el
-    contrib/slime-repl.el -> contrib/slime-repl.el
-    contrib/slime-sbcl-exts.el -> contrib/slime-sbcl-exts.el
-    contrib/slime-scheme.el -> contrib/slime-scheme.el
-    contrib/slime-scratch.el -> contrib/slime-scratch.el
-    contrib/slime-snapshot.el -> contrib/slime-snapshot.el
-    contrib/slime-sprof.el -> contrib/slime-sprof.el
-    contrib/slime-trace-dialog.el -> contrib/slime-trace-dialog.el
-    contrib/slime-tramp.el -> contrib/slime-tramp.el
-    contrib/slime-typeout-frame.el -> contrib/slime-typeout-frame.el
-    contrib/slime-xref-browser.el -> contrib/slime-xref-browser.el
-    contrib/slime-xterm-color.el -> contrib/slime-xterm-color.el
-    contrib/swank-arglists.lisp -> contrib/swank-arglists.lisp
-    contrib/swank-asdf.lisp -> contrib/swank-asdf.lisp
-    contrib/swank-buffer-streams.lisp -> contrib/swank-buffer-streams.lisp
-    contrib/swank-c-p-c.lisp -> contrib/swank-c-p-c.lisp
-    contrib/swank-clipboard.lisp -> contrib/swank-clipboard.lisp
-    contrib/swank-coalton.lisp -> contrib/swank-coalton.lisp
-    contrib/swank-fancy-inspector.lisp -> contrib/swank-fancy-inspector.lisp
-    contrib/swank-fuzzy.lisp -> contrib/swank-fuzzy.lisp
-    contrib/swank-goo.goo -> contrib/swank-goo.goo
-    contrib/swank-hyperdoc.lisp -> contrib/swank-hyperdoc.lisp
-    contrib/swank-ikarus.ss -> contrib/swank-ikarus.ss
-    contrib/swank-indentation.lisp -> contrib/swank-indentation.lisp
-    contrib/swank-jolt.k -> contrib/swank-jolt.k
-    contrib/swank-kawa.scm -> contrib/swank-kawa.scm
-    contrib/swank-larceny.scm -> contrib/swank-larceny.scm
-    contrib/swank-listener-hooks.lisp -> contrib/swank-listener-hooks.lisp
-    contrib/swank-macrostep.lisp -> contrib/swank-macrostep.lisp
-    contrib/swank-media.lisp -> contrib/swank-media.lisp
-    contrib/swank-mit-scheme.scm -> contrib/swank-mit-scheme.scm
-    contrib/swank-mlworks.sml -> contrib/swank-mlworks.sml
-    contrib/swank-mrepl.lisp -> contrib/swank-mrepl.lisp
-    contrib/swank-package-fu.lisp -> contrib/swank-package-fu.lisp
-    contrib/swank-presentation-streams.lisp -> contrib/swank-presentation-streams.lisp
-    contrib/swank-presentations.lisp -> contrib/swank-presentations.lisp
-    contrib/swank-quicklisp.lisp -> contrib/swank-quicklisp.lisp
-    contrib/swank-r6rs.scm -> contrib/swank-r6rs.scm
-    contrib/swank-repl.lisp -> contrib/swank-repl.lisp
-    contrib/swank-sbcl-exts.lisp -> contrib/swank-sbcl-exts.lisp
-    contrib/swank-snapshot.lisp -> contrib/swank-snapshot.lisp
-    contrib/swank-sprof.lisp -> contrib/swank-sprof.lisp
-    contrib/swank-trace-dialog.lisp -> contrib/swank-trace-dialog.lisp
-    contrib/swank-util.lisp -> contrib/swank-util.lisp
-    contrib/swank.rb -> contrib/swank.rb
-Generating slime.info
-Created slime-20260901.1240.tar containing:
-  slime-20260901.1240/
-  slime-20260901.1240/contrib/
-  slime-20260901.1240/contrib/README.md
-  slime-20260901.1240/contrib/inferior-slime.el
-  slime-20260901.1240/contrib/slime-asdf.el
-  slime-20260901.1240/contrib/slime-autodoc.el
-  slime-20260901.1240/contrib/slime-banner.el
-  slime-20260901.1240/contrib/slime-buffer-streams.el
-  slime-20260901.1240/contrib/slime-c-p-c.el
-  slime-20260901.1240/contrib/slime-cl-indent.el
-  slime-20260901.1240/contrib/slime-clipboard.el
-  slime-20260901.1240/contrib/slime-coalton.el
-  slime-20260901.1240/contrib/slime-compiler-notes-tree.el
-  slime-20260901.1240/contrib/slime-editing-commands.el
-  slime-20260901.1240/contrib/slime-enclosing-context.el
-  slime-20260901.1240/contrib/slime-fancy-inspector.el
-  slime-20260901.1240/contrib/slime-fancy-trace.el
-  slime-20260901.1240/contrib/slime-fancy.el
-  slime-20260901.1240/contrib/slime-fontifying-fu.el
-  slime-20260901.1240/contrib/slime-fuzzy.el
-  slime-20260901.1240/contrib/slime-highlight-edits.el
-  slime-20260901.1240/contrib/slime-hyperdoc.el
-  slime-20260901.1240/contrib/slime-indentation.el
-  slime-20260901.1240/contrib/slime-listener-hooks.el
-  slime-20260901.1240/contrib/slime-macrostep.el
-  slime-20260901.1240/contrib/slime-mdot-fu.el
-  slime-20260901.1240/contrib/slime-media.el
-  slime-20260901.1240/contrib/slime-mrepl.el
-  slime-20260901.1240/contrib/slime-package-fu.el
-  slime-20260901.1240/contrib/slime-parse.el
-  slime-20260901.1240/contrib/slime-presentation-streams.el
-  slime-20260901.1240/contrib/slime-presentations.el
-  slime-20260901.1240/contrib/slime-quicklisp.el
-  slime-20260901.1240/contrib/slime-references.el
-  slime-20260901.1240/contrib/slime-repl.el
-  slime-20260901.1240/contrib/slime-sbcl-exts.el
-  slime-20260901.1240/contrib/slime-scheme.el
-  slime-20260901.1240/contrib/slime-scratch.el
-  slime-20260901.1240/contrib/slime-snapshot.el
-  slime-20260901.1240/contrib/slime-sprof.el
-  slime-20260901.1240/contrib/slime-trace-dialog.el
-  slime-20260901.1240/contrib/slime-tramp.el
-  slime-20260901.1240/contrib/slime-typeout-frame.el
-  slime-20260901.1240/contrib/slime-xref-browser.el
-  slime-20260901.1240/contrib/slime-xterm-color.el
-  slime-20260901.1240/contrib/swank-arglists.lisp
-  slime-20260901.1240/contrib/swank-asdf.lisp
-  slime-20260901.1240/contrib/swank-buffer-streams.lisp
-  slime-20260901.1240/contrib/swank-c-p-c.lisp
-  slime-20260901.1240/contrib/swank-clipboard.lisp
-  slime-20260901.1240/contrib/swank-coalton.lisp
-  slime-20260901.1240/contrib/swank-fancy-inspector.lisp
-  slime-20260901.1240/contrib/swank-fuzzy.lisp
-  slime-20260901.1240/contrib/swank-goo.goo
-  slime-20260901.1240/contrib/swank-hyperdoc.lisp
-  slime-20260901.1240/contrib/swank-ikarus.ss
-  slime-20260901.1240/contrib/swank-indentation.lisp
-  slime-20260901.1240/contrib/swank-jolt.k
-  slime-20260901.1240/contrib/swank-kawa.scm
-  slime-20260901.1240/contrib/swank-larceny.scm
-  slime-20260901.1240/contrib/swank-listener-hooks.lisp
-  slime-20260901.1240/contrib/swank-macrostep.lisp
-  slime-20260901.1240/contrib/swank-media.lisp
-  slime-20260901.1240/contrib/swank-mit-scheme.scm
-  slime-20260901.1240/contrib/swank-mlworks.sml
-  slime-20260901.1240/contrib/swank-mrepl.lisp
-  slime-20260901.1240/contrib/swank-package-fu.lisp
-  slime-20260901.1240/contrib/swank-presentation-streams.lisp
-  slime-20260901.1240/contrib/swank-presentations.lisp
-  slime-20260901.1240/contrib/swank-quicklisp.lisp
-  slime-20260901.1240/contrib/swank-r6rs.scm
-  slime-20260901.1240/contrib/swank-repl.lisp
-  slime-20260901.1240/contrib/swank-sbcl-exts.lisp
-  slime-20260901.1240/contrib/swank-snapshot.lisp
-  slime-20260901.1240/contrib/swank-sprof.lisp
-  slime-20260901.1240/contrib/swank-trace-dialog.lisp
-  slime-20260901.1240/contrib/swank-util.lisp
-  slime-20260901.1240/contrib/swank.rb
-  slime-20260901.1240/dir
-  slime-20260901.1240/lib/
-  slime-20260901.1240/lib/hyperspec.el
-  slime-20260901.1240/metering.lisp
-  slime-20260901.1240/nregex.lisp
-  slime-20260901.1240/packages.lisp
-  slime-20260901.1240/sbcl-pprint-patch.lisp
-  slime-20260901.1240/slime-autoloads.el
-  slime-20260901.1240/slime-pkg.el
-  slime-20260901.1240/slime-tests.el
-  slime-20260901.1240/slime.el
-  slime-20260901.1240/slime.info
-  slime-20260901.1240/start-swank.lisp
-  slime-20260901.1240/swank-loader.lisp
-  slime-20260901.1240/swank.asd
-  slime-20260901.1240/swank.lisp
-  slime-20260901.1240/swank/
-  slime-20260901.1240/swank/abcl.lisp
-  slime-20260901.1240/swank/allegro.lisp
-  slime-20260901.1240/swank/backend.lisp
-  slime-20260901.1240/swank/ccl.lisp
-  slime-20260901.1240/swank/clasp.lisp
-  slime-20260901.1240/swank/clisp.lisp
-  slime-20260901.1240/swank/cmucl.lisp
-  slime-20260901.1240/swank/corman.lisp
-  slime-20260901.1240/swank/dotcl.lisp
-  slime-20260901.1240/swank/ecl.lisp
-  slime-20260901.1240/swank/gray.lisp
-  slime-20260901.1240/swank/lispworks.lisp
-  slime-20260901.1240/swank/match.lisp
-  slime-20260901.1240/swank/mezzano.lisp
-  slime-20260901.1240/swank/mkcl.lisp
-  slime-20260901.1240/swank/rpc.lisp
-  slime-20260901.1240/swank/sbcl.lisp
-  slime-20260901.1240/swank/scl.lisp
-  slime-20260901.1240/swank/source-file-cache.lisp
-  slime-20260901.1240/swank/source-path-parser.lisp
-  slime-20260901.1240/xref.lisp
-Built slime in 11.029s, finished at 2026-09-02T19:57:59+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10e8b360859f> (("slime-autoloads.el" . "slime-autoloads.el") ("slime-tests.el" . "slime-tests.el") ("slime.el" . "slime.el") ("lib/hyperspec.el" . "lib/hyperspec.el") ("swank" . "swank") ("metering.lisp" . "metering.lisp") ("nregex.lisp" . "nregex.lisp") ("packages.lisp" . "packages.lisp") ("sbcl-pprint-patch.lisp" . "sbcl-pprint-patch.lisp") ("start-swank.lisp" . "start-swank.lisp") ("swank-loader.lisp" . "swank-loader.lisp") ("swank.lisp" . "swank.lisp") ("xref.lisp" . "xref.lisp") ("swank.asd" . "swank.asd") ("doc/slime.texi" . "slime.texi") ("contrib/README.md" . "contrib/README.md") ("contrib/inferior-slime.el" . "contrib/inferior-slime.el") ("contrib/slime-asdf.el" . "contrib/slime-asdf.el") ("contrib/slime-autodoc.el" . "contrib/slime-autodoc.el") ("contrib/slime-banner.el" . "contrib/slime-banner.el") ("contrib/slime-buffer-streams.el" . "contrib/slime-buffer-streams.el") ("contrib/slime-c-p-c.el" . "contrib/slime-c-p-c.el") ("contrib/slime-cl-indent.el" . "contrib/slime-cl-indent.el") ("contrib/slime-clipboard.el" . "contrib/slime-clipboard.el") ("contrib/slime-coalton.el" . "contrib/slime-coalton.el") ("contrib/slime-compiler-notes-tree.el" . "contrib/slime-compiler-notes-tree.el") ("contrib/slime-editing-commands.el" . "contrib/slime-editing-commands.el") ("contrib/slime-enclosing-context.el" . "contrib/slime-enclosing-context.el") ("contrib/slime-fancy-inspector.el" . "contrib/slime-fancy-inspector.el") ("contrib/slime-fancy-trace.el" . "contrib/slime-fancy-trace.el") ("contrib/slime-fancy.el" . "contrib/slime-fancy.el") ("contrib/slime-fontifying-fu.el" . "contrib/slime-fontifying-fu.el") ("contrib/slime-fuzzy.el" . "contrib/slime-fuzzy.el") ("contrib/slime-highlight-edits.el" . "contrib/slime-highlight-edits.el") ("contrib/slime-hyperdoc.el" . "contrib/slime-hyperdoc.el") ("contrib/slime-indentation.el" . "contrib/slime-indentation.el") ("contrib/slime-listener-hooks.el" . "contrib/slime-listener-hooks.el") ("contrib/slime-macrostep.el" . "contrib/slime-macrostep.el") ("contrib/slime-mdot-fu.el" . "contrib/slime-mdot-fu.el") ("contrib/slime-media.el" . "contrib/slime-media.el") ("contrib/slime-mrepl.el" . "contrib/slime-mrepl.el") ("contrib/slime-package-fu.el" . "contrib/slime-package-fu.el") ("contrib/slime-parse.el" . "contrib/slime-parse.el") ("contrib/slime-presentation-streams.el" . "contrib/slime-presentation-streams.el") ("contrib/slime-presentations.el" . "contrib/slime-presentations.el") ("contrib/slime-quicklisp.el" . "contrib/slime-quicklisp.el") ("contrib/slime-references.el" . "contrib/slime-references.el") ("contrib/slime-repl.el" . "contrib/slime-repl.el") ("contrib/slime-sbcl-exts.el" . "contrib/slime-sbcl-exts.el") ("contrib/slime-scheme.el" . "contrib/slime-scheme.el") ("contrib/slime-scratch.el" . "contrib/slime-scratch.el") ("contrib/slime-snapshot.el" . "contrib/slime-snapshot.el") ("contrib/slime-sprof.el" . "contrib/slime-sprof.el") ("contrib/slime-trace-dialog.el" . "contrib/slime-trace-dialog.el") ("contrib/slime-tramp.el" . "contrib/slime-tramp.el") ("contrib/slime-typeout-frame.el" . "contrib/slime-typeout-frame.el") ("contrib/slime-xref-browser.el" . "contrib/slime-xref-browser.el") ("contrib/slime-xterm-color.el" . "contrib/slime-xterm-color.el") ("contrib/swank-arglists.lisp" . "contrib/swank-arglists.lisp") ("contrib/swank-asdf.lisp" . "contrib/swank-asdf.lisp") ("contrib/swank-buffer-streams.lisp" . "contrib/swank-buffer-streams.lisp") ("contrib/swank-c-p-c.lisp" . "contrib/swank-c-p-c.lisp") ("contrib/swank-clipboard.lisp" . "contrib/swank-clipboard.lisp") ("contrib/swank-coalton.lisp" . "contrib/swank-coalton.lisp") ("contrib/swank-fancy-inspector.lisp" . "contrib/swank-fancy-inspector.lisp") ("contrib/swank-fuzzy.lisp" . "contrib/swank-fuzzy.lisp") ("contrib/swank-goo.goo" . "contrib/swank-goo.goo") ("contrib/swank-hyperdoc.lisp" . "contrib/swank-hyperdoc.lisp") ("contrib/swank-ikarus.ss" . "contrib/swank-ikarus.ss") ("contrib/swank-indentation.lisp" . "contrib/swank-indentation.lisp") ("contrib/swank-jolt.k" . "contrib/swank-jolt.k") ("contrib/swank-kawa.scm" . "contrib/swank-kawa.scm") ("contrib/swank-larceny.scm" . "contrib/swank-larceny.scm") ("contrib/swank-listener-hooks.lisp" . "contrib/swank-listener-hooks.lisp") ("contrib/swank-macrostep.lisp" . "contrib/swank-macrostep.lisp") ("contrib/swank-media.lisp" . "contrib/swank-media.lisp") ("contrib/swank-mit-scheme.scm" . "contrib/swank-mit-scheme.scm") ("contrib/swank-mlworks.sml" . "contrib/swank-mlworks.sml") ("contrib/swank-mrepl.lisp" . "contrib/swank-mrepl.lisp") ("contrib/swank-package-fu.lisp" . "contrib/swank-package-fu.lisp") ("contrib/swank-presentation-streams.lisp" . "contrib/swank-presentation-streams.lisp") ("contrib/swank-presentations.lisp" . "contrib/swank-presentations.lisp") ("contrib/swank-quicklisp.lisp" . "contrib/swank-quicklisp.lisp") ("contrib/swank-r6rs.scm" . "contrib/swank-r6rs.scm") ("contrib/swank-repl.lisp" . "contrib/swank-repl.lisp") ("contrib/swank-sbcl-exts.lisp" . "contrib/swank-sbcl-exts.lisp") ("contrib/swank-snapshot.lisp" . "contrib/swank-snapshot.lisp") ("contrib/swank-sprof.lisp" . "contrib/swank-sprof.lisp") ("contrib/swank-trace-dialog.lisp" . "contrib/swank-trace-dialog.lisp") ("contrib/swank-util.lisp" . "contrib/swank-util.lisp") ("contrib/swank.rb" . "contrib/swank.rb")))
+  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10e8b360859f> (("slime-autoloads.el" . "slime-autoloads.el") ("slime-tests.el" . "slime-tests.el") ("slime.el" . "slime.el") ("lib/hyperspec.el" . "lib/hyperspec.el") ("swank" . "swank") ("metering.lisp" . "metering.lisp") ("nregex.lisp" . "nregex.lisp") ("packages.lisp" . "packages.lisp") ("sbcl-pprint-patch.lisp" . "sbcl-pprint-patch.lisp") ("start-swank.lisp" . "start-swank.lisp") ("swank-loader.lisp" . "swank-loader.lisp") ("swank.lisp" . "swank.lisp") ("xref.lisp" . "xref.lisp") ("swank.asd" . "swank.asd") ("doc/slime.texi" . "slime.texi") ("contrib/README.md" . "contrib/README.md") ("contrib/inferior-slime.el" . "contrib/inferior-slime.el") ("contrib/slime-asdf.el" . "contrib/slime-asdf.el") ("contrib/slime-autodoc.el" . "contrib/slime-autodoc.el") ("contrib/slime-banner.el" . "contrib/slime-banner.el") ("contrib/slime-buffer-streams.el" . "contrib/slime-buffer-streams.el") ("contrib/slime-c-p-c.el" . "contrib/slime-c-p-c.el") ("contrib/slime-cl-indent.el" . "contrib/slime-cl-indent.el") ("contrib/slime-clipboard.el" . "contrib/slime-clipboard.el") ("contrib/slime-coalton.el" . "contrib/slime-coalton.el") ("contrib/slime-compiler-notes-tree.el" . "contrib/slime-compiler-notes-tree.el") ("contrib/slime-editing-commands.el" . "contrib/slime-editing-commands.el") ("contrib/slime-enclosing-context.el" . "contrib/slime-enclosing-context.el") ("contrib/slime-fancy-inspector.el" . "contrib/slime-fancy-inspector.el") ("contrib/slime-fancy-trace.el" . "contrib/slime-fancy-trace.el") ("contrib/slime-fancy.el" . "contrib/slime-fancy.el") ("contrib/slime-fontifying-fu.el" . "contrib/slime-fontifying-fu.el") ("contrib/slime-fuzzy.el" . "contrib/slime-fuzzy.el") ("contrib/slime-highlight-edits.el" . "contrib/slime-highlight-edits.el") ("contrib/slime-hyperdoc.el" . "contrib/slime-hyperdoc.el") ("contrib/slime-indentation.el" . "contrib/slime-indentation.el") ("contrib/slime-listener-hooks.el" . "contrib/slime-listener-hooks.el") ("contrib/slime-macrostep.el" . "contrib/slime-macrostep.el") ("contrib/slime-mdot-fu.el" . "contrib/slime-mdot-fu.el") ("contrib/slime-media.el" . "contrib/slime-media.el") ("contrib/slime-mrepl.el" . "contrib/slime-mrepl.el") ("contrib/slime-package-fu.el" . "contrib/slime-package-fu.el") ("contrib/slime-parse.el" . "contrib/slime-parse.el") ("contrib/slime-presentation-streams.el" . "contrib/slime-presentation-streams.el") ("contrib/slime-presentations.el" . "contrib/slime-presentations.el") ("contrib/slime-quicklisp.el" . "contrib/slime-quicklisp.el") ("contrib/slime-references.el" . "contrib/slime-references.el") ("contrib/slime-repl.el" . "contrib/slime-repl.el") ("contrib/slime-sbcl-exts.el" . "contrib/slime-sbcl-exts.el") ("contrib/slime-scheme.el" . "contrib/slime-scheme.el") ("contrib/slime-scratch.el" . "contrib/slime-scratch.el") ("contrib/slime-snapshot.el" . "contrib/slime-snapshot.el") ("contrib/slime-sprof.el" . "contrib/slime-sprof.el") ("contrib/slime-trace-dialog.el" . "contrib/slime-trace-dialog.el") ("contrib/slime-tramp.el" . "contrib/slime-tramp.el") ("contrib/slime-typeout-frame.el" . "contrib/slime-typeout-frame.el") ("contrib/slime-xref-browser.el" . "contrib/slime-xref-browser.el") ("contrib/slime-xterm-color.el" . "contrib/slime-xterm-color.el") ("contrib/swank-arglists.lisp" . "contrib/swank-arglists.lisp") ("contrib/swank-asdf.lisp" . "contrib/swank-asdf.lisp") ("contrib/swank-buffer-streams.lisp" . "contrib/swank-buffer-streams.lisp") ("contrib/swank-c-p-c.lisp" . "contrib/swank-c-p-c.lisp") ("contrib/swank-clipboard.lisp" . "contrib/swank-clipboard.lisp") ("contrib/swank-coalton.lisp" . "contrib/swank-coalton.lisp") ("contrib/swank-fancy-inspector.lisp" . "contrib/swank-fancy-inspector.lisp") ("contrib/swank-fuzzy.lisp" . "contrib/swank-fuzzy.lisp") ("contrib/swank-goo.goo" . "contrib/swank-goo.goo") ("contrib/swank-hyperdoc.lisp" . "contrib/swank-hyperdoc.lisp") ("contrib/swank-ikarus.ss" . "contrib/swank-ikarus.ss") ("contrib/swank-indentation.lisp" . "contrib/swank-indentation.lisp") ("contrib/swank-jolt.k" . "contrib/swank-jolt.k") ("contrib/swank-kawa.scm" . "contrib/swank-kawa.scm") ("contrib/swank-larceny.scm" . "contrib/swank-larceny.scm") ("contrib/swank-listener-hooks.lisp" . "contrib/swank-listener-hooks.lisp") ("contrib/swank-macrostep.lisp" . "contrib/swank-macrostep.lisp") ("contrib/swank-media.lisp" . "contrib/swank-media.lisp") ("contrib/swank-mit-scheme.scm" . "contrib/swank-mit-scheme.scm") ("contrib/swank-mlworks.sml" . "contrib/swank-mlworks.sml") ("contrib/swank-mrepl.lisp" . "contrib/swank-mrepl.lisp") ("contrib/swank-package-fu.lisp" . "contrib/swank-package-fu.lisp") ("contrib/swank-presentation-streams.lisp" . "contrib/swank-presentation-streams.lisp") ("contrib/swank-presentations.lisp" . "contrib/swank-presentations.lisp") ("contrib/swank-quicklisp.lisp" . "contrib/swank-quicklisp.lisp") ("contrib/swank-r6rs.scm" . "contrib/swank-r6rs.scm") ("contrib/swank-repl.lisp" . "contrib/swank-repl.lisp") ("contrib/swank-sbcl-exts.lisp" . "contrib/swank-sbcl-exts.lisp") ("contrib/swank-snapshot.lisp" . "contrib/swank-snapshot.lisp") ("contrib/swank-sprof.lisp" . "contrib/swank-sprof.lisp") ("contrib/swank-trace-dialog.lisp" . "contrib/swank-trace-dialog.lisp") ("contrib/swank-util.lisp" . "contrib/swank-util.lisp") ("contrib/swank.rb" . "contrib/swank.rb")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-10e8b360859f>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "slime")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "slime")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if packaSymbol's function definition is void: package-build--build-multi-file-package
+ge-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "slime")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("slime")
+  eval((package-build-archive "slime") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"slime\")"))
+  command-line()
+  normal-top-level()

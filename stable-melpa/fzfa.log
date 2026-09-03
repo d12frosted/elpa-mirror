@@ -2,95 +2,30 @@
  • Building package fzfa
 From https://github.com/jojojames/fzfa
 Updating /mnt/store/melpa/working/fzfa/
-Checking out dba133b5348aab3dc429603e37523f62cf629875
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fzfa/
-  to /tmp/fzfa-JfeuvA/fzfa-20260902.1739/
-    fzfa-ag.el -> fzfa-ag.el
-    fzfa-chrome.el -> fzfa-chrome.el
-    fzfa-company.el -> fzfa-company.el
-    fzfa-eglot.el -> fzfa-eglot.el
-    fzfa-emacs.el -> fzfa-emacs.el
-    fzfa-embark.el -> fzfa-embark.el
-    fzfa-evil.el -> fzfa-evil.el
-    fzfa-fd.el -> fzfa-fd.el
-    fzfa-find.el -> fzfa-find.el
-    fzfa-firefox.el -> fzfa-firefox.el
-    fzfa-flymake.el -> fzfa-flymake.el
-    fzfa-git.el -> fzfa-git.el
-    fzfa-grep.el -> fzfa-grep.el
-    fzfa-helm.el -> fzfa-helm.el
-    fzfa-hg.el -> fzfa-hg.el
-    fzfa-hungry.el -> fzfa-hungry.el
-    fzfa-imenu.el -> fzfa-imenu.el
-    fzfa-info.el -> fzfa-info.el
-    fzfa-ivy.el -> fzfa-ivy.el
-    fzfa-loader.el -> fzfa-loader.el
-    fzfa-locate.el -> fzfa-locate.el
-    fzfa-mail.el -> fzfa-mail.el
-    fzfa-make.el -> fzfa-make.el
-    fzfa-media-thumbnail.el -> fzfa-media-thumbnail.el
-    fzfa-music.el -> fzfa-music.el
-    fzfa-notmuch.el -> fzfa-notmuch.el
-    fzfa-org.el -> fzfa-org.el
-    fzfa-pass.el -> fzfa-pass.el
-    fzfa-posframe.el -> fzfa-posframe.el
-    fzfa-project.el -> fzfa-project.el
-    fzfa-regexp.el -> fzfa-regexp.el
-    fzfa-replay.el -> fzfa-replay.el
-    fzfa-rg.el -> fzfa-rg.el
-    fzfa-safari.el -> fzfa-safari.el
-    fzfa-shell.el -> fzfa-shell.el
-    fzfa-spotlight.el -> fzfa-spotlight.el
-    fzfa-tramp.el -> fzfa-tramp.el
-    fzfa-transient.el -> fzfa-transient.el
-    fzfa-ugrep.el -> fzfa-ugrep.el
-    fzfa-vc.el -> fzfa-vc.el
-    fzfa-vertico.el -> fzfa-vertico.el
-    fzfa.el -> fzfa.el
-Created fzfa-20260902.1739.tar containing:
-  fzfa-20260902.1739/
-  fzfa-20260902.1739/fzfa-ag.el
-  fzfa-20260902.1739/fzfa-chrome.el
-  fzfa-20260902.1739/fzfa-company.el
-  fzfa-20260902.1739/fzfa-eglot.el
-  fzfa-20260902.1739/fzfa-emacs.el
-  fzfa-20260902.1739/fzfa-embark.el
-  fzfa-20260902.1739/fzfa-evil.el
-  fzfa-20260902.1739/fzfa-fd.el
-  fzfa-20260902.1739/fzfa-find.el
-  fzfa-20260902.1739/fzfa-firefox.el
-  fzfa-20260902.1739/fzfa-flymake.el
-  fzfa-20260902.1739/fzfa-git.el
-  fzfa-20260902.1739/fzfa-grep.el
-  fzfa-20260902.1739/fzfa-helm.el
-  fzfa-20260902.1739/fzfa-hg.el
-  fzfa-20260902.1739/fzfa-hungry.el
-  fzfa-20260902.1739/fzfa-imenu.el
-  fzfa-20260902.1739/fzfa-info.el
-  fzfa-20260902.1739/fzfa-ivy.el
-  fzfa-20260902.1739/fzfa-loader.el
-  fzfa-20260902.1739/fzfa-locate.el
-  fzfa-20260902.1739/fzfa-mail.el
-  fzfa-20260902.1739/fzfa-make.el
-  fzfa-20260902.1739/fzfa-media-thumbnail.el
-  fzfa-20260902.1739/fzfa-music.el
-  fzfa-20260902.1739/fzfa-notmuch.el
-  fzfa-20260902.1739/fzfa-org.el
-  fzfa-20260902.1739/fzfa-pass.el
-  fzfa-20260902.1739/fzfa-pkg.el
-  fzfa-20260902.1739/fzfa-posframe.el
-  fzfa-20260902.1739/fzfa-project.el
-  fzfa-20260902.1739/fzfa-regexp.el
-  fzfa-20260902.1739/fzfa-replay.el
-  fzfa-20260902.1739/fzfa-rg.el
-  fzfa-20260902.1739/fzfa-safari.el
-  fzfa-20260902.1739/fzfa-shell.el
-  fzfa-20260902.1739/fzfa-spotlight.el
-  fzfa-20260902.1739/fzfa-tramp.el
-  fzfa-20260902.1739/fzfa-transient.el
-  fzfa-20260902.1739/fzfa-ugrep.el
-  fzfa-20260902.1739/fzfa-vc.el
-  fzfa-20260902.1739/fzfa-vertico.el
-  fzfa-20260902.1739/fzfa.el
-Built fzfa in 7.383s, finished at 2026-09-02T19:02:18+0000
+Checking out 9633ff6f458b2c43a4b0a9b0879e238b4914bb3a
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-103c7b3d754a> (("fzfa-ag.el" . "fzfa-ag.el") ("fzfa-chrome.el" . "fzfa-chrome.el") ("fzfa-company.el" . "fzfa-company.el") ("fzfa-eglot.el" . "fzfa-eglot.el") ("fzfa-emacs.el" . "fzfa-emacs.el") ("fzfa-embark.el" . "fzfa-embark.el") ("fzfa-evil.el" . "fzfa-evil.el") ("fzfa-fd.el" . "fzfa-fd.el") ("fzfa-find.el" . "fzfa-find.el") ("fzfa-firefox.el" . "fzfa-firefox.el") ("fzfa-flymake.el" . "fzfa-flymake.el") ("fzfa-git.el" . "fzfa-git.el") ("fzfa-grep.el" . "fzfa-grep.el") ("fzfa-helm.el" . "fzfa-helm.el") ("fzfa-hg.el" . "fzfa-hg.el") ("fzfa-hungry.el" . "fzfa-hungry.el") ("fzfa-imenu.el" . "fzfa-imenu.el") ("fzfa-info.el" . "fzfa-info.el") ("fzfa-ivy.el" . "fzfa-ivy.el") ("fzfa-loader.el" . "fzfa-loader.el") ("fzfa-locate.el" . "fzfa-locate.el") ("fzfa-mail.el" . "fzfa-mail.el") ("fzfa-make.el" . "fzfa-make.el") ("fzfa-media-thumbnail.el" . "fzfa-media-thumbnail.el") ("fzfa-music.el" . "fzfa-music.el") ("fzfa-notmuch.el" . "fzfa-notmuch.el") ("fzfa-org.el" . "fzfa-org.el") ("fzfa-pass.el" . "fzfa-pass.el") ("fzfa-posframe.el" . "fzfa-posframe.el") ("fzfa-project.el" . "fzfa-project.el") ("fzfa-regexp.el" . "fzfa-regexp.el") ("fzfa-replay.el" . "fzfa-replay.el") ("fzfa-rg.el" . "fzfa-rg.el") ("fzfa-safari.el" . "fzfa-safari.el") ("fzfa-shell.el" . "fzfa-shell.el") ("fzfa-spotlight.el" . "fzfa-spotlight.el") ("fzfa-tramp.el" . "fzfa-tramp.el") ("fzfa-transient.el" . "fzfa-transient.el") ("fzfa-ugrep.el" . "fzfa-ugrep.el") ("fzfa-vc.el" . "fzfa-vc.el") ("fzfa-vertico.el" . "fzfa-vertico.el") ("fzfa.el" . "fzfa.el")))
+  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-103c7b3d754a> (("fzfa-ag.el" . "fzfa-ag.el") ("fzfa-chrome.el" . "fzfa-chrome.el") ("fzfa-company.el" . "fzfa-company.el") ("fzfa-eglot.el" . "fzfa-eglot.el") ("fzfa-emacs.el" . "fzfa-emacs.el") ("fzfa-embark.el" . "fzfa-embark.el") ("fzfa-evil.el" . "fzfa-evil.el") ("fzfa-fd.el" . "fzfa-fd.el") ("fzfa-find.el" . "fzfa-find.el") ("fzfa-firefox.el" . "fzfa-firefox.el") ("fzfa-flymake.el" . "fzfa-flymake.el") ("fzfa-git.el" . "fzfa-git.el") ("fzfa-grep.el" . "fzfa-grep.el") ("fzfa-helm.el" . "fzfa-helm.el") ("fzfa-hg.el" . "fzfa-hg.el") ("fzfa-hungry.el" . "fzfa-hungry.el") ("fzfa-imenu.el" . "fzfa-imenu.el") ("fzfa-info.el" . "fzfa-info.el") ("fzfa-ivy.el" . "fzfa-ivy.el") ("fzfa-loader.el" . "fzfa-loader.el") ("fzfa-locate.el" . "fzfa-locate.el") ("fzfa-mail.el" . "fzfa-mail.el") ("fzfa-make.el" . "fzfa-make.el") ("fzfa-media-thumbnail.el" . "fzfa-media-thumbnail.el") ("fzfa-music.el" . "fzfa-music.el") ("fzfa-notmuch.el" . "fzfa-notmuch.el") ("fzfa-org.el" . "fzfa-org.el") ("fzfa-pass.el" . "fzfa-pass.el") ("fzfa-posframe.el" . "fzfa-posframe.el") ("fzfa-project.el" . "fzfa-project.el") ("fzfa-regexp.el" . "fzfa-regexp.el") ("fzfa-replay.el" . "fzfa-replay.el") ("fzfa-rg.el" . "fzfa-rg.el") ("fzfa-safari.el" . "fzfa-safari.el") ("fzfa-shell.el" . "fzfa-shell.el") ("fzfa-spotlight.el" . "fzfa-spotlight.el") ("fzfa-tramp.el" . "fzfa-tramp.el") ("fzfa-transient.el" . "fzfa-transient.el") ("fzfa-ugrep.el" . "fzfa-ugrep.el") ("fzfa-vc.el" . "fzfa-vc.el") ("fzfa-vertico.el" . "fzfa-vertico.el") ("fzfa.el" . "fzfa.el")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-103c7b3d754a>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "fzfa")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (formatSymbol's function definition is void: package-build--build-multi-file-package
+-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "fzfa")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "fzfa")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("fzfa")
+  eval((package-build-archive "fzfa") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"fzfa\")"))
+  command-line()
+  normal-top-level()

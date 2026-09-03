@@ -3,172 +3,29 @@
 From https://github.com/osv/ac-html-angular
 Updating /mnt/store/melpa/working/ac-html-angular/
 Checking out 6bafe09afe03112ca4183d58461c1a6f6c2b3c67
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ac-html-angular/
-  to /tmp/ac-html-angular-6RK0vX/ac-html-angular-20151225.719/
-    ac-html-angular.el -> ac-html-angular.el
-    html-stuff => html-stuff
-Created ac-html-angular-20151225.719.tar containing:
-  ac-html-angular-20151225.719/
-  ac-html-angular-20151225.719/ac-html-angular-pkg.el
-  ac-html-angular-20151225.719/ac-html-angular.el
-  ac-html-angular-20151225.719/html-stuff/
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/a
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/details
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/form
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/global
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/html
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/img
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/input
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/ng-include
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/ng-messages
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/ng-pluralize
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/ng-view
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/option
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/script
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/select
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/textarea
-  ac-html-angular-20151225.719/html-stuff/html-attributes-list/window
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/a-ng-blur
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/a-ng-copy
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/a-ng-cut
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/a-ng-focus
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/a-ng-href
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/a-ng-paste
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/details-ng-open
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/form-name
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/form-ng-submit
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-animate-swap
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-app
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-bind
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-bind-html
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-bind-template
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-class
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-class-even
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-class-odd
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-click
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-cloak
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-controller
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-dblclick
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-form
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-hide
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-if
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-include
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-init
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-jq
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-keydown
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-keypress
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-keyup
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-message
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-message-exp
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-messages
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-messages-include
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-model-options
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-mousedown
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-mouseenter
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-mouseleave
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-mousemove
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-mouseover
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-mouseup
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-non-bindable
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-options
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-pluralize
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-repeat
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-show
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-style
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-swipe-left
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-swipe-right
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-switch
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-transclude
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/global-ng-view
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/html-ng-csp
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/img-ng-src
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/img-ng-srcset
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-max
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-min
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-name
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-blur
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-change
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-checked
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-copy
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-cut
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-disabled
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-false-value
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-focus
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-list
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-max
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-maxlength
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-min
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-minlength
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-model
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-paste
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-pattern
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-readonly
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-required
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-true-value
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-ng-value
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-pattern
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-required
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/input-value
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/ng-include-autoscroll
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/ng-include-onload
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/ng-messages-ng-messages
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/ng-pluralize-count
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/ng-pluralize-offset
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/ng-pluralize-when
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/ng-view-autoscroll
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/ng-view-onload
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/option-ng-selected
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/script-id
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/script-type
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-multiple
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-name
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-blur
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-change
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-copy
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-cut
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-focus
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-model
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-options
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-paste
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-ng-required
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/select-required
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-name
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-blur
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-change
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-copy
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-cut
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-focus
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-maxlength
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-minlength
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-model
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-paste
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-pattern
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-ng-required
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/textarea-required
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/window-ng-blur
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/window-ng-copy
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/window-ng-cut
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/window-ng-focus
-  ac-html-angular-20151225.719/html-stuff/html-attributes-short-docs/window-ng-paste
-  ac-html-angular-20151225.719/html-stuff/html-tag-list
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/a
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/form
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/input
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-form
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-include
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-message
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-message-exp
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-messages
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-messages-include
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-pluralize
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-switch
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-transclude
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/ng-view
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/script
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/select
-  ac-html-angular-20151225.719/html-stuff/html-tag-short-docs/textarea
-Built ac-html-angular in 4.555s, finished at 2026-09-02T18:23:32+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10e3ef59006d> (("ac-html-angular.el" . "ac-html-angular.el") ("html-stuff" . "html-stuff")))
+  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10e3ef59006d> (("ac-html-angular.el" . "ac-html-angular.el") ("html-stuff" . "html-stuff")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-10e3ef59006d>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "ac-html-angular")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (ifSymbol's function definition is void: package-build--build-multi-file-package
+ noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "ac-html-angular")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "ac-html-angular")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("ac-html-angular")
+  eval((package-build-archive "ac-html-angular") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"ac-html-angular\")"))
+  command-line()
+  normal-top-level()

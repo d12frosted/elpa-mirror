@@ -3,103 +3,29 @@
 From https://github.com/emacs-elsa/Elsa
 Updating /mnt/store/melpa/working/elsa/
 Checking out 4a4a180a7e6837ac359c0094e40da339e1300765
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elsa/
-  to /tmp/elsa-800Osf/elsa-20250717.1205/
-    Elsafile.el -> Elsafile.el
-    elsa-analyser.el -> elsa-analyser.el
-    elsa-check.el -> elsa-check.el
-    elsa-declare.el -> elsa-declare.el
-    elsa-dependencies.el -> elsa-dependencies.el
-    elsa-english.el -> elsa-english.el
-    elsa-error.el -> elsa-error.el
-    elsa-explainer.el -> elsa-explainer.el
-    elsa-extension-builtin.el -> elsa-extension-builtin.el
-    elsa-extension-cl.el -> elsa-extension-cl.el
-    elsa-extension-dash.el -> elsa-extension-dash.el
-    elsa-extension-eieio.el -> elsa-extension-eieio.el
-    elsa-extension-elsa.el -> elsa-extension-elsa.el
-    elsa-extension-flycheck.el -> elsa-extension-flycheck.el
-    elsa-extension-seq.el -> elsa-extension-seq.el
-    elsa-extension-subr.el -> elsa-extension-subr.el
-    elsa-font-lock.el -> elsa-font-lock.el
-    elsa-form.el -> elsa-form.el
-    elsa-functions.el -> elsa-functions.el
-    elsa-log.el -> elsa-log.el
-    elsa-lsp-core.el -> elsa-lsp-core.el
-    elsa-lsp.el -> elsa-lsp.el
-    elsa-methods.el -> elsa-methods.el
-    elsa-pkg.el -> elsa-pkg.el
-    elsa-reader.el -> elsa-reader.el
-    elsa-rules-list.el -> elsa-rules-list.el
-    elsa-ruleset.el -> elsa-ruleset.el
-    elsa-scope.el -> elsa-scope.el
-    elsa-startup.el -> elsa-startup.el
-    elsa-state.el -> elsa-state.el
-    elsa-structure-slot.el -> elsa-structure-slot.el
-    elsa-type-algebra.el -> elsa-type-algebra.el
-    elsa-type-helpers.el -> elsa-type-helpers.el
-    elsa-type.el -> elsa-type.el
-    elsa-typed-builtin.el -> elsa-typed-builtin.el
-    elsa-typed-cl.el -> elsa-typed-cl.el
-    elsa-typed-eieio.el -> elsa-typed-eieio.el
-    elsa-typed-subr.el -> elsa-typed-subr.el
-    elsa-typed-syntax.el -> elsa-typed-syntax.el
-    elsa-typed-thingatpt.el -> elsa-typed-thingatpt.el
-    elsa-types-simple.el -> elsa-types-simple.el
-    elsa-types.el -> elsa-types.el
-    elsa-variable.el -> elsa-variable.el
-    elsa.el -> elsa.el
-    bin => bin
-Created elsa-20250717.1205.tar containing:
-  elsa-20250717.1205/
-  elsa-20250717.1205/Elsafile.el
-  elsa-20250717.1205/bin/
-  elsa-20250717.1205/bin/elsa
-  elsa-20250717.1205/bin/elsa-lsp
-  elsa-20250717.1205/bin/elsa-lsp.bat
-  elsa-20250717.1205/bin/elsa.bat
-  elsa-20250717.1205/elsa-analyser.el
-  elsa-20250717.1205/elsa-check.el
-  elsa-20250717.1205/elsa-declare.el
-  elsa-20250717.1205/elsa-dependencies.el
-  elsa-20250717.1205/elsa-english.el
-  elsa-20250717.1205/elsa-error.el
-  elsa-20250717.1205/elsa-explainer.el
-  elsa-20250717.1205/elsa-extension-builtin.el
-  elsa-20250717.1205/elsa-extension-cl.el
-  elsa-20250717.1205/elsa-extension-dash.el
-  elsa-20250717.1205/elsa-extension-eieio.el
-  elsa-20250717.1205/elsa-extension-elsa.el
-  elsa-20250717.1205/elsa-extension-flycheck.el
-  elsa-20250717.1205/elsa-extension-seq.el
-  elsa-20250717.1205/elsa-extension-subr.el
-  elsa-20250717.1205/elsa-font-lock.el
-  elsa-20250717.1205/elsa-form.el
-  elsa-20250717.1205/elsa-functions.el
-  elsa-20250717.1205/elsa-log.el
-  elsa-20250717.1205/elsa-lsp-core.el
-  elsa-20250717.1205/elsa-lsp.el
-  elsa-20250717.1205/elsa-methods.el
-  elsa-20250717.1205/elsa-pkg.el
-  elsa-20250717.1205/elsa-reader.el
-  elsa-20250717.1205/elsa-rules-list.el
-  elsa-20250717.1205/elsa-ruleset.el
-  elsa-20250717.1205/elsa-scope.el
-  elsa-20250717.1205/elsa-startup.el
-  elsa-20250717.1205/elsa-state.el
-  elsa-20250717.1205/elsa-structure-slot.el
-  elsa-20250717.1205/elsa-type-algebra.el
-  elsa-20250717.1205/elsa-type-helpers.el
-  elsa-20250717.1205/elsa-type.el
-  elsa-20250717.1205/elsa-typed-builtin.el
-  elsa-20250717.1205/elsa-typed-cl.el
-  elsa-20250717.1205/elsa-typed-eieio.el
-  elsa-20250717.1205/elsa-typed-subr.el
-  elsa-20250717.1205/elsa-typed-syntax.el
-  elsa-20250717.1205/elsa-typed-thingatpt.el
-  elsa-20250717.1205/elsa-types-simple.el
-  elsa-20250717.1205/elsa-types.el
-  elsa-20250717.1205/elsa-variable.el
-  elsa-20250717.1205/elsa.el
-Built elsa in 4.841s, finished at 2026-09-02T18:50:42+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-102723c69854> (("Elsafile.el" . "Elsafile.el") ("elsa-analyser.el" . "elsa-analyser.el") ("elsa-check.el" . "elsa-check.el") ("elsa-declare.el" . "elsa-declare.el") ("elsa-dependencies.el" . "elsa-dependencies.el") ("elsa-english.el" . "elsa-english.el") ("elsa-error.el" . "elsa-error.el") ("elsa-explainer.el" . "elsa-explainer.el") ("elsa-extension-builtin.el" . "elsa-extension-builtin.el") ("elsa-extension-cl.el" . "elsa-extension-cl.el") ("elsa-extension-dash.el" . "elsa-extension-dash.el") ("elsa-extension-eieio.el" . "elsa-extension-eieio.el") ("elsa-extension-elsa.el" . "elsa-extension-elsa.el") ("elsa-extension-flycheck.el" . "elsa-extension-flycheck.el") ("elsa-extension-seq.el" . "elsa-extension-seq.el") ("elsa-extension-subr.el" . "elsa-extension-subr.el") ("elsa-font-lock.el" . "elsa-font-lock.el") ("elsa-form.el" . "elsa-form.el") ("elsa-functions.el" . "elsa-functions.el") ("elsa-log.el" . "elsa-log.el") ("elsa-lsp-core.el" . "elsa-lsp-core.el") ("elsa-lsp.el" . "elsa-lsp.el") ("elsa-methods.el" . "elsa-methods.el") ("elsa-pkg.el" . "elsa-pkg.el") ("elsa-reader.el" . "elsa-reader.el") ("elsa-rules-list.el" . "elsa-rules-list.el") ("elsa-ruleset.el" . "elsa-ruleset.el") ("elsa-scope.el" . "elsa-scope.el") ("elsa-startup.el" . "elsa-startup.el") ("elsa-state.el" . "elsa-state.el") ("elsa-structure-slot.el" . "elsa-structure-slot.el") ("elsa-type-algebra.el" . "elsa-type-algebra.el") ("elsa-type-helpers.el" . "elsa-type-helpers.el") ("elsa-type.el" . "elsa-type.el") ("elsa-typed-builtin.el" . "elsa-typed-builtin.el") ("elsa-typed-cl.el" . "elsa-typed-cl.el") ("elsa-typed-eieio.el" . "elsa-typed-eieio.el") ("elsa-typed-subr.el" . "elsa-typed-subr.el") ("elsa-typed-syntax.el" . "elsa-typed-syntax.el") ("elsa-typed-thingatpt.el" . "elsa-typed-thingatpt.el") ("elsa-types-simple.el" . "elsa-types-simple.el") ("elsa-types.el" . "elsa-types.el") ("elsa-variable.el" . "elsa-variable.el") ("elsa.el" . "elsa.el") ("bin" . "bin")))
+  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-102723c69854> (("Elsafile.el" . "Elsafile.el") ("elsa-analyser.el" . "elsa-analyser.el") ("elsa-check.el" . "elsa-check.el") ("elsa-declare.el" . "elsa-declare.el") ("elsa-dependencies.el" . "elsa-dependencies.el") ("elsa-english.el" . "elsa-english.el") ("elsa-error.el" . "elsa-error.el") ("elsa-explainer.el" . "elsa-explainer.el") ("elsa-extension-builtin.el" . "elsa-extension-builtin.el") ("elsa-extension-cl.el" . "elsa-extension-cl.el") ("elsa-extension-dash.el" . "elsa-extension-dash.el") ("elsa-extension-eieio.el" . "elsa-extension-eieio.el") ("elsa-extension-elsa.el" . "elsa-extension-elsa.el") ("elsa-extension-flycheck.el" . "elsa-extension-flycheck.el") ("elsa-extension-seq.el" . "elsa-extension-seq.el") ("elsa-extension-subr.el" . "elsa-extension-subr.el") ("elsa-font-lock.el" . "elsa-font-lock.el") ("elsa-form.el" . "elsa-form.el") ("elsa-functions.el" . "elsa-functions.el") ("elsa-log.el" . "elsa-log.el") ("elsa-lsp-core.el" . "elsa-lsp-core.el") ("elsa-lsp.el" . "elsa-lsp.el") ("elsa-methods.el" . "elsa-methods.el") ("elsa-pkg.el" . "elsa-pkg.el") ("elsa-reader.el" . "elsa-reader.el") ("elsa-rules-list.el" . "elsa-rules-list.el") ("elsa-ruleset.el" . "elsa-ruleset.el") ("elsa-scope.el" . "elsa-scope.el") ("elsa-startup.el" . "elsa-startup.el") ("elsa-state.el" . "elsa-state.el") ("elsa-structure-slot.el" . "elsa-structure-slot.el") ("elsa-type-algebra.el" . "elsa-type-algebra.el") ("elsa-type-helpers.el" . "elsa-type-helpers.el") ("elsa-type.el" . "elsa-type.el") ("elsa-typed-builtin.el" . "elsa-typed-builtin.el") ("elsa-typed-cl.el" . "elsa-typed-cl.el") ("elsa-typed-eieio.el" . "elsa-typed-eieio.el") ("elsa-typed-subr.el" . "elsa-typed-subr.el") ("elsa-typed-syntax.el" . "elsa-typed-syntax.el") ("elsa-typed-thingatpt.el" . "elsa-typed-thingatpt.el") ("elsa-types-simple.el" . "elsa-types-simple.el") ("elsa-types.el" . "elsa-types.el") ("elsa-variable.el" . "elsa-variable.el") ("elsa.el" . "elsa.el") ("bin" . "bin")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-github-recipe package-github-recipe-102723c69854>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "elsa")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-versioSymbol's function definition is void: package-build--build-multi-file-package
+n rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "elsa")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "elsa")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("elsa")
+  eval((package-build-archive "elsa") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"elsa\")"))
+  command-line()
+  normal-top-level()

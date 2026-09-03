@@ -3,97 +3,29 @@
 From https://gitlab.com/fvdbeek/emacs-zotero
 Updating /mnt/store/melpa/working/zotero/
 Checking out eef5080e6a2ed0cae12c3d21580864f4b394cd5f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/zotero/
-  to /tmp/zotero-1tJSS9/zotero-20240112.2111/
-    zotero-arxiv.el -> zotero-arxiv.el
-    zotero-auth.el -> zotero-auth.el
-    zotero-browser.el -> zotero-browser.el
-    zotero-cache.el -> zotero-cache.el
-    zotero-crossref.el -> zotero-crossref.el
-    zotero-diff.el -> zotero-diff.el
-    zotero-edit.el -> zotero-edit.el
-    zotero-fulltext.el -> zotero-fulltext.el
-    zotero-json.el -> zotero-json.el
-    zotero-lib.el -> zotero-lib.el
-    zotero-openlibrary.el -> zotero-openlibrary.el
-    zotero-pmid.el -> zotero-pmid.el
-    zotero-recognize.el -> zotero-recognize.el
-    zotero-sync.el -> zotero-sync.el
-    zotero.el -> zotero.el
-    img => img
-Created zotero-20240112.2111.tar containing:
-  zotero-20240112.2111/
-  zotero-20240112.2111/img/
-  zotero-20240112.2111/img/treeitem-artwork.png
-  zotero-20240112.2111/img/treeitem-attachment-link.png
-  zotero-20240112.2111/img/treeitem-attachment-pdf-link.png
-  zotero-20240112.2111/img/treeitem-attachment-pdf.png
-  zotero-20240112.2111/img/treeitem-attachment-snapshot.png
-  zotero-20240112.2111/img/treeitem-attachment-web-link.png
-  zotero-20240112.2111/img/treeitem-audioRecording.png
-  zotero-20240112.2111/img/treeitem-bill.png
-  zotero-20240112.2111/img/treeitem-blogPost.png
-  zotero-20240112.2111/img/treeitem-book.png
-  zotero-20240112.2111/img/treeitem-bookSection.png
-  zotero-20240112.2111/img/treeitem-case.png
-  zotero-20240112.2111/img/treeitem-computerProgram.png
-  zotero-20240112.2111/img/treeitem-conferencePaper.png
-  zotero-20240112.2111/img/treeitem-dictionaryEntry.png
-  zotero-20240112.2111/img/treeitem-email.png
-  zotero-20240112.2111/img/treeitem-encyclopediaArticle.png
-  zotero-20240112.2111/img/treeitem-film.png
-  zotero-20240112.2111/img/treeitem-forumPost.png
-  zotero-20240112.2111/img/treeitem-hearing.png
-  zotero-20240112.2111/img/treeitem-instantMessage.png
-  zotero-20240112.2111/img/treeitem-interview.png
-  zotero-20240112.2111/img/treeitem-journalArticle.png
-  zotero-20240112.2111/img/treeitem-letter.png
-  zotero-20240112.2111/img/treeitem-magazineArticle.png
-  zotero-20240112.2111/img/treeitem-manuscript.png
-  zotero-20240112.2111/img/treeitem-map.png
-  zotero-20240112.2111/img/treeitem-newspaperArticle.png
-  zotero-20240112.2111/img/treeitem-note.png
-  zotero-20240112.2111/img/treeitem-patent.png
-  zotero-20240112.2111/img/treeitem-podcast.png
-  zotero-20240112.2111/img/treeitem-presentation.png
-  zotero-20240112.2111/img/treeitem-radioBroadcast.png
-  zotero-20240112.2111/img/treeitem-report.png
-  zotero-20240112.2111/img/treeitem-statute.png
-  zotero-20240112.2111/img/treeitem-thesis.png
-  zotero-20240112.2111/img/treeitem-tvBroadcast.png
-  zotero-20240112.2111/img/treeitem-videoRecording.png
-  zotero-20240112.2111/img/treeitem-webpage.png
-  zotero-20240112.2111/img/treeitem.png
-  zotero-20240112.2111/img/treesource-bucket.png
-  zotero-20240112.2111/img/treesource-collection.png
-  zotero-20240112.2111/img/treesource-commons.png
-  zotero-20240112.2111/img/treesource-duplicates.png
-  zotero-20240112.2111/img/treesource-feed-error.png
-  zotero-20240112.2111/img/treesource-feed-updating.png
-  zotero-20240112.2111/img/treesource-feed.png
-  zotero-20240112.2111/img/treesource-feedLibrary.png
-  zotero-20240112.2111/img/treesource-groups.png
-  zotero-20240112.2111/img/treesource-library.png
-  zotero-20240112.2111/img/treesource-search.png
-  zotero-20240112.2111/img/treesource-share.png
-  zotero-20240112.2111/img/treesource-trash-full.png
-  zotero-20240112.2111/img/treesource-trash.png
-  zotero-20240112.2111/img/treesource-unfiled.png
-  zotero-20240112.2111/zotero-arxiv.el
-  zotero-20240112.2111/zotero-auth.el
-  zotero-20240112.2111/zotero-browser.el
-  zotero-20240112.2111/zotero-cache.el
-  zotero-20240112.2111/zotero-crossref.el
-  zotero-20240112.2111/zotero-diff.el
-  zotero-20240112.2111/zotero-edit.el
-  zotero-20240112.2111/zotero-fulltext.el
-  zotero-20240112.2111/zotero-json.el
-  zotero-20240112.2111/zotero-lib.el
-  zotero-20240112.2111/zotero-openlibrary.el
-  zotero-20240112.2111/zotero-pkg.el
-  zotero-20240112.2111/zotero-pmid.el
-  zotero-20240112.2111/zotero-recognize.el
-  zotero-20240112.2111/zotero-sync.el
-  zotero-20240112.2111/zotero.el
-Built zotero in 5.117s, finished at 2026-09-02T20:15:24+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-gitlab-recipe package-gitlab-recipe-1009f42d8554> (("zotero-arxiv.el" . "zotero-arxiv.el") ("zotero-auth.el" . "zotero-auth.el") ("zotero-browser.el" . "zotero-browser.el") ("zotero-cache.el" . "zotero-cache.el") ("zotero-crossref.el" . "zotero-crossref.el") ("zotero-diff.el" . "zotero-diff.el") ("zotero-edit.el" . "zotero-edit.el") ("zotero-fulltext.el" . "zotero-fulltext.el") ("zotero-json.el" . "zotero-json.el") ("zotero-lib.el" . "zotero-lib.el") ("zotero-openlibrary.el" . "zotero-openlibrary.el") ("zotero-pmid.el" . "zotero-pmid.el") ("zotero-recognize.el" . "zotero-recognize.el") ("zotero-sync.el" . "zotero-sync.el") ("zotero.el" . "zotero.el") ("img" . "img")))
+  funcall(package-build--build-multi-file-package #<package-gitlab-recipe package-gitlab-recipe-1009f42d8554> (("zotero-arxiv.el" . "zotero-arxiv.el") ("zotero-auth.el" . "zotero-auth.el") ("zotero-browser.el" . "zotero-browser.el") ("zotero-cache.el" . "zotero-cache.el") ("zotero-crossref.el" . "zotero-crossref.el") ("zotero-diff.el" . "zotero-diff.el") ("zotero-edit.el" . "zotero-edit.el") ("zotero-fulltext.el" . "zotero-fulltext.el") ("zotero-json.el" . "zotero-json.el") ("zotero-lib.el" . "zotero-lib.el") ("zotero-openlibrary.el" . "zotero-openlibrary.el") ("zotero-pmid.el" . "zotero-pmid.el") ("zotero-recognize.el" . "zotero-recognize.el") ("zotero-sync.el" . "zotero-sync.el") ("zotero.el" . "zotero.el") ("img" . "img")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-gitlab-recipe package-gitlab-recipe-1009f42d8554>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "zotero")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "zotero")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "zotero")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("zotero")
+  eval((package-build-archive "zotero") t)
+  command-line-1(("-L" "/mnt/storeSymbol's function definition is void: package-build--build-multi-file-package
+/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"zotero\")"))
+  command-line()
+  normal-top-level()

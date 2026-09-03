@@ -3,127 +3,29 @@
 From https://codeberg.org/guix/emacs-guix
 Updating /mnt/store/melpa/working/guix/
 Checking out addac35e3fcb7a812b239c4aa76eada1743d0921
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/guix/
-  to /tmp/guix-DS2suB/guix-20260724.1820/
-  ! elisp/guix-about.el -> guix-about.el
-  ! elisp/guix-auto-mode.el -> guix-auto-mode.el
-  ! elisp/guix-build-log.el -> guix-build-log.el
-  ! elisp/guix-command.el -> guix-command.el
-  ! elisp/guix-config.el -> guix-config.el
-  ! elisp/guix-default-config.el -> guix-default-config.el
-  ! elisp/guix-derivation.el -> guix-derivation.el
-  ! elisp/guix-devel.el -> guix-devel.el
-  ! elisp/guix-env-var.el -> guix-env-var.el
-  ! elisp/guix-external.el -> guix-external.el
-  ! elisp/guix-geiser.el -> guix-geiser.el
-  ! elisp/guix-graph.el -> guix-graph.el
-  ! elisp/guix-guile.el -> guix-guile.el
-  ! elisp/guix-hash.el -> guix-hash.el
-  ! elisp/guix-help-vars.el -> guix-help-vars.el
-  ! elisp/guix-help.el -> guix-help.el
-  ! elisp/guix-license.el -> guix-license.el
-  ! elisp/guix-location.el -> guix-location.el
-  ! elisp/guix-misc.el -> guix-misc.el
-  ! elisp/guix-package.el -> guix-package.el
-  ! elisp/guix-pcomplete.el -> guix-pcomplete.el
-  ! elisp/guix-popup.el -> guix-popup.el
-  ! elisp/guix-prettify.el -> guix-prettify.el
-  ! elisp/guix-profiles.el -> guix-profiles.el
-  ! elisp/guix-read.el -> guix-read.el
-  ! elisp/guix-repl.el -> guix-repl.el
-  ! elisp/guix-scheme.el -> guix-scheme.el
-  ! elisp/guix-service.el -> guix-service.el
-  ! elisp/guix-shell.el -> guix-shell.el
-  ! elisp/guix-ui-generation.el -> guix-ui-generation.el
-  ! elisp/guix-ui-license.el -> guix-ui-license.el
-  ! elisp/guix-ui-lint-checker.el -> guix-ui-lint-checker.el
-  ! elisp/guix-ui-messages.el -> guix-ui-messages.el
-  ! elisp/guix-ui-package-location.el -> guix-ui-package-location.el
-  ! elisp/guix-ui-package.el -> guix-ui-package.el
-  ! elisp/guix-ui-profile.el -> guix-ui-profile.el
-  ! elisp/guix-ui-service-location.el -> guix-ui-service-location.el
-  ! elisp/guix-ui-service.el -> guix-ui-service.el
-  ! elisp/guix-ui-store-item.el -> guix-ui-store-item.el
-  ! elisp/guix-ui-system-generation.el -> guix-ui-system-generation.el
-  ! elisp/guix-ui-system.el -> guix-ui-system.el
-  ! elisp/guix-ui.el -> guix-ui.el
-  ! elisp/guix-utils.el -> guix-utils.el
-  ! elisp/guix.el -> guix.el
-  ! doc/emacs-guix.texi -> emacs-guix.texi
-    images/guix-logo.svg -> images/guix-logo.svg
-    scheme/emacs-guix => scheme/emacs-guix
-    scheme/emacs-guix.scm -> scheme/emacs-guix.scm
-Generating emacs-guix.info
-Created guix-20260724.1820.tar containing:
-  guix-20260724.1820/
-  guix-20260724.1820/dir
-  guix-20260724.1820/emacs-guix.info
-  guix-20260724.1820/guix-about.el
-  guix-20260724.1820/guix-auto-mode.el
-  guix-20260724.1820/guix-build-log.el
-  guix-20260724.1820/guix-command.el
-  guix-20260724.1820/guix-config.el
-  guix-20260724.1820/guix-default-config.el
-  guix-20260724.1820/guix-derivation.el
-  guix-20260724.1820/guix-devel.el
-  guix-20260724.1820/guix-env-var.el
-  guix-20260724.1820/guix-external.el
-  guix-20260724.1820/guix-geiser.el
-  guix-20260724.1820/guix-graph.el
-  guix-20260724.1820/guix-guile.el
-  guix-20260724.1820/guix-hash.el
-  guix-20260724.1820/guix-help-vars.el
-  guix-20260724.1820/guix-help.el
-  guix-20260724.1820/guix-license.el
-  guix-20260724.1820/guix-location.el
-  guix-20260724.1820/guix-misc.el
-  guix-20260724.1820/guix-package.el
-  guix-20260724.1820/guix-pcomplete.el
-  guix-20260724.1820/guix-pkg.el
-  guix-20260724.1820/guix-popup.el
-  guix-20260724.1820/guix-prettify.el
-  guix-20260724.1820/guix-profiles.el
-  guix-20260724.1820/guix-read.el
-  guix-20260724.1820/guix-repl.el
-  guix-20260724.1820/guix-scheme.el
-  guix-20260724.1820/guix-service.el
-  guix-20260724.1820/guix-shell.el
-  guix-20260724.1820/guix-ui-generation.el
-  guix-20260724.1820/guix-ui-license.el
-  guix-20260724.1820/guix-ui-lint-checker.el
-  guix-20260724.1820/guix-ui-messages.el
-  guix-20260724.1820/guix-ui-package-location.el
-  guix-20260724.1820/guix-ui-package.el
-  guix-20260724.1820/guix-ui-profile.el
-  guix-20260724.1820/guix-ui-service-location.el
-  guix-20260724.1820/guix-ui-service.el
-  guix-20260724.1820/guix-ui-store-item.el
-  guix-20260724.1820/guix-ui-system-generation.el
-  guix-20260724.1820/guix-ui-system.el
-  guix-20260724.1820/guix-ui.el
-  guix-20260724.1820/guix-utils.el
-  guix-20260724.1820/guix.el
-  guix-20260724.1820/images/
-  guix-20260724.1820/images/guix-logo.svg
-  guix-20260724.1820/scheme/
-  guix-20260724.1820/scheme/emacs-guix.scm
-  guix-20260724.1820/scheme/emacs-guix/
-  guix-20260724.1820/scheme/emacs-guix/actions.scm
-  guix-20260724.1820/scheme/emacs-guix/commands.scm
-  guix-20260724.1820/scheme/emacs-guix/emacs.scm
-  guix-20260724.1820/scheme/emacs-guix/generations.scm
-  guix-20260724.1820/scheme/emacs-guix/graph.scm
-  guix-20260724.1820/scheme/emacs-guix/hash.scm
-  guix-20260724.1820/scheme/emacs-guix/licenses.scm
-  guix-20260724.1820/scheme/emacs-guix/lint.scm
-  guix-20260724.1820/scheme/emacs-guix/pack.scm
-  guix-20260724.1820/scheme/emacs-guix/packages.scm
-  guix-20260724.1820/scheme/emacs-guix/profiles.scm
-  guix-20260724.1820/scheme/emacs-guix/refresh.scm
-  guix-20260724.1820/scheme/emacs-guix/services.scm
-  guix-20260724.1820/scheme/emacs-guix/store-items.scm
-  guix-20260724.1820/scheme/emacs-guix/system-generations.scm
-  guix-20260724.1820/scheme/emacs-guix/system.scm
-  guix-20260724.1820/scheme/emacs-guix/utils.scm
-Built guix in 9.586s, finished at 2026-09-02T19:07:51+0000
+
+Error: void-function (package-build--build-multi-file-package)
+  package-build--build-multi-file-package(#<package-codeberg-recipe package-codeberg-recipe-1038aa621bb7> (("elisp/guix-about.el" . "guix-about.el") ("elisp/guix-auto-mode.el" . "guix-auto-mode.el") ("elisp/guix-build-log.el" . "guix-build-log.el") ("elisp/guix-command.el" . "guix-command.el") ("elisp/guix-config.el" . "guix-config.el") ("elisp/guix-default-config.el" . "guix-default-config.el") ("elisp/guix-derivation.el" . "guix-derivation.el") ("elisp/guix-devel.el" . "guix-devel.el") ("elisp/guix-env-var.el" . "guix-env-var.el") ("elisp/guix-external.el" . "guix-external.el") ("elisp/guix-geiser.el" . "guix-geiser.el") ("elisp/guix-graph.el" . "guix-graph.el") ("elisp/guix-guile.el" . "guix-guile.el") ("elisp/guix-hash.el" . "guix-hash.el") ("elisp/guix-help-vars.el" . "guix-help-vars.el") ("elisp/guix-help.el" . "guix-help.el") ("elisp/guix-license.el" . "guix-license.el") ("elisp/guix-location.el" . "guix-location.el") ("elisp/guix-misc.el" . "guix-misc.el") ("elisp/guix-package.el" . "guix-package.el") ("elisp/guix-pcomplete.el" . "guix-pcomplete.el") ("elisp/guix-popup.el" . "guix-popup.el") ("elisp/guix-prettify.el" . "guix-prettify.el") ("elisp/guix-profiles.el" . "guix-profiles.el") ("elisp/guix-read.el" . "guix-read.el") ("elisp/guix-repl.el" . "guix-repl.el") ("elisp/guix-scheme.el" . "guix-scheme.el") ("elisp/guix-service.el" . "guix-service.el") ("elisp/guix-shell.el" . "guix-shell.el") ("elisp/guix-ui-generation.el" . "guix-ui-generation.el") ("elisp/guix-ui-license.el" . "guix-ui-license.el") ("elisp/guix-ui-lint-checker.el" . "guix-ui-lint-checker.el") ("elisp/guix-ui-messages.el" . "guix-ui-messages.el") ("elisp/guix-ui-package-location.el" . "guix-ui-package-location.el") ("elisp/guix-ui-package.el" . "guix-ui-package.el") ("elisp/guix-ui-profile.el" . "guix-ui-profile.el") ("elisp/guix-ui-service-location.el" . "guix-ui-service-location.el") ("elisp/guix-ui-service.el" . "guix-ui-service.el") ("elisp/guix-ui-store-item.el" . "guix-ui-store-item.el") ("elisp/guix-ui-system-generation.el" . "guix-ui-system-generation.el") ("elisp/guix-ui-system.el" . "guix-ui-system.el") ("elisp/guix-ui.el" . "guix-ui.el") ("elisp/guix-utils.el" . "guix-utils.el") ("elisp/guix.el" . "guix.el") ("doc/emacs-guix.texi" . "emacs-guix.texi") ("images/guix-logo.svg" . "images/guix-logo.svg") ("scheme/emacs-guix" . "scheme/emacs-guix") ("scheme/emacs-guix.scm" . "scheme/emacs-guix.scm")))
+  funcall(package-build--build-multi-file-package #<package-codeberg-recipe package-codeberg-recipe-1038aa621bb7> (("elisp/guix-about.el" . "guix-about.el") ("elisp/guix-auto-mode.el" . "guix-auto-mode.el") ("elisp/guix-build-log.el" . "guix-build-log.el") ("elisp/guix-command.el" . "guix-command.el") ("elisp/guix-config.el" . "guix-config.el") ("elisp/guix-default-config.el" . "guix-default-config.el") ("elisp/guix-derivation.el" . "guix-derivation.el") ("elisp/guix-devel.el" . "guix-devel.el") ("elisp/guix-env-var.el" . "guix-env-var.el") ("elisp/guix-external.el" . "guix-external.el") ("elisp/guix-geiser.el" . "guix-geiser.el") ("elisp/guix-graph.el" . "guix-graph.el") ("elisp/guix-guile.el" . "guix-guile.el") ("elisp/guix-hash.el" . "guix-hash.el") ("elisp/guix-help-vars.el" . "guix-help-vars.el") ("elisp/guix-help.el" . "guix-help.el") ("elisp/guix-license.el" . "guix-license.el") ("elisp/guix-location.el" . "guix-location.el") ("elisp/guix-misc.el" . "guix-misc.el") ("elisp/guix-package.el" . "guix-package.el") ("elisp/guix-pcomplete.el" . "guix-pcomplete.el") ("elisp/guix-popup.el" . "guix-popup.el") ("elisp/guix-prettify.el" . "guix-prettify.el") ("elisp/guix-profiles.el" . "guix-profiles.el") ("elisp/guix-read.el" . "guix-read.el") ("elisp/guix-repl.el" . "guix-repl.el") ("elisp/guix-scheme.el" . "guix-scheme.el") ("elisp/guix-service.el" . "guix-service.el") ("elisp/guix-shell.el" . "guix-shell.el") ("elisp/guix-ui-generation.el" . "guix-ui-generation.el") ("elisp/guix-ui-license.el" . "guix-ui-license.el") ("elisp/guix-ui-lint-checker.el" . "guix-ui-lint-checker.el") ("elisp/guix-ui-messages.el" . "guix-ui-messages.el") ("elisp/guix-ui-package-location.el" . "guix-ui-package-location.el") ("elisp/guix-ui-package.el" . "guix-ui-package.el") ("elisp/guix-ui-profile.el" . "guix-ui-profile.el") ("elisp/guix-ui-service-location.el" . "guix-ui-service-location.el") ("elisp/guix-ui-service.el" . "guix-ui-service.el") ("elisp/guix-ui-store-item.el" . "guix-ui-store-item.el") ("elisp/guix-ui-system-generation.el" . "guix-ui-system-generation.el") ("elisp/guix-ui-system.el" . "guix-ui-system.el") ("elisp/guix-ui.el" . "guix-ui.el") ("elisp/guix-utils.el" . "guix-utils.el") ("elisp/guix.el" . "guix.el") ("doc/emacs-guix.texi" . "emacs-guix.texi") ("images/guix-logo.svg" . "images/guix-logo.svg") ("scheme/emacs-guix" . "scheme/emacs-guix") ("scheme/emacs-guix.scm" . "scheme/emacs-guix.scm")))
+  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
+  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
+  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
+  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
+  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
+  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
+  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
+  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
+  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
+  package-build--package(#<package-codeberg-recipe package-codeberg-recipe-1038aa621bb7>)
+  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
+  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
+  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
+  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
+  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "guix")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
+  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "guix")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "guix")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
+  package-build-archive("guix")
+  eval((package-build-archive "guix") t)
+  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-seSymbol's function definition is void: package-build--build-multi-file-package
+cs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"guix\")"))
+  command-line()
+  normal-top-level()
