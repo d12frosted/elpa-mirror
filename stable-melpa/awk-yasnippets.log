@@ -3,29 +3,94 @@
 From https://github.com/uberkael/awk-yasnippets
 Updating /mnt/store/melpa/working/awk-yasnippets/
 Checking out 12e8e0b49878099bda5d3e4915cc3c738c87b95c
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10ec93c43c5b> (("awk-yasnippets.el" . "awk-yasnippets.el") ("awk-mode" . "awk-mode")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10ec93c43c5b> (("awk-yasnippets.el" . "awk-yasnippets.el") ("awk-mode" . "awk-mode")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10ec93c43c5b>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "awk-yasnippets")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractiSymbol's function definition is void: package-build--build-multi-file-package
-ve "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "awk-yasnippets")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "awk-yasnippets")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("awk-yasnippets")
-  eval((package-build-archive "awk-yasnippets") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"awk-yasnippets\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/awk-yasnippets/
+  to /tmp/awk-yasnippets-SCF6pd/awk-yasnippets-20230515.1756/
+    awk-yasnippets.el -> awk-yasnippets.el
+    awk-mode => awk-mode
+Created awk-yasnippets-20230515.1756.tar containing:
+  awk-yasnippets-20230515.1756/
+  awk-yasnippets-20230515.1756/awk-mode/
+  awk-yasnippets-20230515.1756/awk-mode/.yas-make-groups
+  awk-yasnippets-20230515.1756/awk-mode/IO/
+  awk-yasnippets-20230515.1756/awk-mode/IO/close
+  awk-yasnippets-20230515.1756/awk-mode/IO/fflush
+  awk-yasnippets-20230515.1756/awk-mode/IO/getfile
+  awk-yasnippets-20230515.1756/awk-mode/IO/getvar
+  awk-yasnippets-20230515.1756/awk-mode/IO/nextfile
+  awk-yasnippets-20230515.1756/awk-mode/IO/piperead
+  awk-yasnippets-20230515.1756/awk-mode/IO/pri
+  awk-yasnippets-20230515.1756/awk-mode/IO/prif
+  awk-yasnippets-20230515.1756/awk-mode/IO/system
+  awk-yasnippets-20230515.1756/awk-mode/bits/
+  awk-yasnippets-20230515.1756/awk-mode/bits/and
+  awk-yasnippets-20230515.1756/awk-mode/bits/compl
+  awk-yasnippets-20230515.1756/awk-mode/bits/lshift
+  awk-yasnippets-20230515.1756/awk-mode/bits/or
+  awk-yasnippets-20230515.1756/awk-mode/bits/rshift
+  awk-yasnippets-20230515.1756/awk-mode/bits/xor
+  awk-yasnippets-20230515.1756/awk-mode/control/
+  awk-yasnippets-20230515.1756/awk-mode/control/break
+  awk-yasnippets-20230515.1756/awk-mode/control/cont
+  awk-yasnippets-20230515.1756/awk-mode/control/del
+  awk-yasnippets-20230515.1756/awk-mode/control/do
+  awk-yasnippets-20230515.1756/awk-mode/control/exit
+  awk-yasnippets-20230515.1756/awk-mode/control/fora
+  awk-yasnippets-20230515.1756/awk-mode/control/fori
+  awk-yasnippets-20230515.1756/awk-mode/control/if
+  awk-yasnippets-20230515.1756/awk-mode/control/ife
+  awk-yasnippets-20230515.1756/awk-mode/control/switch
+  awk-yasnippets-20230515.1756/awk-mode/control/while
+  awk-yasnippets-20230515.1756/awk-mode/fragments/
+  awk-yasnippets-20230515.1756/awk-mode/fragments/PROCINFO
+  awk-yasnippets-20230515.1756/awk-mode/fragments/append
+  awk-yasnippets-20230515.1756/awk-mode/fragments/func
+  awk-yasnippets-20230515.1756/awk-mode/fragments/pipe
+  awk-yasnippets-20230515.1756/awk-mode/fragments/shebang
+  awk-yasnippets-20230515.1756/awk-mode/fragments/socket
+  awk-yasnippets-20230515.1756/awk-mode/numeric/
+  awk-yasnippets-20230515.1756/awk-mode/numeric/atan2
+  awk-yasnippets-20230515.1756/awk-mode/numeric/cos
+  awk-yasnippets-20230515.1756/awk-mode/numeric/exp
+  awk-yasnippets-20230515.1756/awk-mode/numeric/int
+  awk-yasnippets-20230515.1756/awk-mode/numeric/log
+  awk-yasnippets-20230515.1756/awk-mode/numeric/rand
+  awk-yasnippets-20230515.1756/awk-mode/numeric/sin
+  awk-yasnippets-20230515.1756/awk-mode/numeric/sqrt
+  awk-yasnippets-20230515.1756/awk-mode/numeric/srand
+  awk-yasnippets-20230515.1756/awk-mode/rule/
+  awk-yasnippets-20230515.1756/awk-mode/rule/3
+  awk-yasnippets-20230515.1756/awk-mode/rule/B
+  awk-yasnippets-20230515.1756/awk-mode/rule/BF
+  awk-yasnippets-20230515.1756/awk-mode/rule/E
+  awk-yasnippets-20230515.1756/awk-mode/rule/EF
+  awk-yasnippets-20230515.1756/awk-mode/strings/
+  awk-yasnippets-20230515.1756/awk-mode/strings/asort
+  awk-yasnippets-20230515.1756/awk-mode/strings/asorti
+  awk-yasnippets-20230515.1756/awk-mode/strings/gensub
+  awk-yasnippets-20230515.1756/awk-mode/strings/gsub
+  awk-yasnippets-20230515.1756/awk-mode/strings/index
+  awk-yasnippets-20230515.1756/awk-mode/strings/length
+  awk-yasnippets-20230515.1756/awk-mode/strings/match
+  awk-yasnippets-20230515.1756/awk-mode/strings/patsplit
+  awk-yasnippets-20230515.1756/awk-mode/strings/split
+  awk-yasnippets-20230515.1756/awk-mode/strings/sprintf
+  awk-yasnippets-20230515.1756/awk-mode/strings/strtonum
+  awk-yasnippets-20230515.1756/awk-mode/strings/sub
+  awk-yasnippets-20230515.1756/awk-mode/strings/substr
+  awk-yasnippets-20230515.1756/awk-mode/strings/tolower
+  awk-yasnippets-20230515.1756/awk-mode/strings/toupper
+  awk-yasnippets-20230515.1756/awk-mode/templates/
+  awk-yasnippets-20230515.1756/awk-mode/templates/adel
+  awk-yasnippets-20230515.1756/awk-mode/templates/getcom
+  awk-yasnippets-20230515.1756/awk-mode/templates/getlinevar
+  awk-yasnippets-20230515.1756/awk-mode/time/
+  awk-yasnippets-20230515.1756/awk-mode/time/mktime
+  awk-yasnippets-20230515.1756/awk-mode/time/strftime
+  awk-yasnippets-20230515.1756/awk-mode/time/syst
+  awk-yasnippets-20230515.1756/awk-mode/type/
+  awk-yasnippets-20230515.1756/awk-mode/type/isarray
+  awk-yasnippets-20230515.1756/awk-mode/type/typeof
+  awk-yasnippets-20230515.1756/awk-yasnippets-pkg.el
+  awk-yasnippets-20230515.1756/awk-yasnippets.el
+Built awk-yasnippets in 3.798s, finished at 2026-09-04T00:14:30+0000

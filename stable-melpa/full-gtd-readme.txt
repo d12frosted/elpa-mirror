@@ -11,7 +11,7 @@ Key features:
 - Daily & weekly reviews with table editing and jump-to-source.
 - Single-card Do sessions with smart prioritization (urgency,
   horizons, context).
-- Horizon matrix view that spot orphaned projects immediately.
+- Horizon star-map view that spots orphaned projects immediately.
 - Planning workflow enforces Purpose → Vision → Goal → Project →
   Next Action.
 

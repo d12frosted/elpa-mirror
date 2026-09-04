@@ -3,29 +3,142 @@
 From https://github.com/jdee-emacs/jdee
 Updating /mnt/store/melpa/working/jdee/
 Checking out b510a29f1fc1bea218a6230fb219922775687c78
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10e3e8e74360> (("beanshell.el" . "beanshell.el") ("efc.el" . "efc.el") ("jcomplete.el" . "jcomplete.el") ("jdee-abbrev.el" . "jdee-abbrev.el") ("jdee-activator.el" . "jdee-activator.el") ("jdee-annotations.el" . "jdee-annotations.el") ("jdee-ant.el" . "jdee-ant.el") ("jdee-archive.el" . "jdee-archive.el") ("jdee-avl-tree.el" . "jdee-avl-tree.el") ("jdee-backend.el" . "jdee-backend.el") ("jdee-bookmark.el" . "jdee-bookmark.el") ("jdee-bsh.el" . "jdee-bsh.el") ("jdee-bug.el" . "jdee-bug.el") ("jdee-bytecode.el" . "jdee-bytecode.el") ("jdee-checkstyle.el" . "jdee-checkstyle.el") ("jdee-class.el" . "jdee-class.el") ("jdee-classpath.el" . "jdee-classpath.el") ("jdee-compile.el" . "jdee-compile.el") ("jdee-complete.el" . "jdee-complete.el") ("jdee-custom.el" . "jdee-custom.el") ("jdee-cygwin.el" . "jdee-cygwin.el") ("jdee-db.el" . "jdee-db.el") ("jdee-dbo.el" . "jdee-dbo.el") ("jdee-dbs.el" . "jdee-dbs.el") ("jdee-deps.el" . "jdee-deps.el") ("jdee-ecj-flymake.el" . "jdee-ecj-flymake.el") ("jdee-ejb.el" . "jdee-ejb.el") ("jdee-files.el" . "jdee-files.el") ("jdee-find.el" . "jdee-find.el") ("jdee-flycheck.el" . "jdee-flycheck.el") ("jdee-font-lock.el" . "jdee-font-lock.el") ("jdee-gen.el" . "jdee-gen.el") ("jdee-help.el" . "jdee-help.el") ("jdee-imenu.el" . "jdee-imenu.el") ("jdee-import.el" . "jdee-import.el") ("jdee-issues.el" . "jdee-issues.el") ("jdee-java-grammar.el" . "jdee-java-grammar.el") ("jdee-java-properties.el" . "jdee-java-properties.el") ("jdee-javadoc-gen.el" . "jdee-javadoc-gen.el") ("jdee-javadoc.el" . "jdee-javadoc.el") ("jdee-jdb.el" . "jdee-jdb.el") ("jdee-jdk-manager.el" . "jdee-jdk-manager.el") ("jdee-juci.el" . "jdee-juci.el") ("jdee-junit.el" . "jdee-junit.el") ("jdee-keys.el" . "jdee-keys.el") ("jdee-log.el" . "jdee-log.el") ("jdee-make.el" . "jdee-make.el") ("jdee-maven.el" . "jdee-maven.el") ("jdee-open-source.el" . "jdee-open-source.el") ("jdee-package.el" . "jdee-package.el") ("jdee-parse-expr.el" . "jdee-parse-expr.el") ("jdee-parse.el" . "jdee-parse.el") ("jdee-plugins.el" . "jdee-plugins.el") ("jdee-project-file.el" . "jdee-project-file.el") ("jdee-project.el" . "jdee-project.el") ("jdee-refactor.el" . "jdee-refactor.el") ("jdee-run.el" . "jdee-run.el") ("jdee-stacktrace.el" . "jdee-stacktrace.el") ("jdee-stat.el" . "jdee-stat.el") ("jdee-test.el" . "jdee-test.el") ("jdee-util.el" . "jdee-util.el") ("jdee-which-method.el" . "jdee-which-method.el") ("jdee-widgets.el" . "jdee-widgets.el") ("jdee-wiz.el" . "jdee-wiz.el") ("jdee-xref.el" . "jdee-xref.el") ("jdee.el" . "jdee.el")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10e3e8e74360> (("beanshell.el" . "beanshell.el") ("efc.el" . "efc.el") ("jcomplete.el" . "jcomplete.el") ("jdee-abbrev.el" . "jdee-abbrev.el") ("jdee-activator.el" . "jdee-activator.el") ("jdee-annotations.el" . "jdee-annotations.el") ("jdee-ant.el" . "jdee-ant.el") ("jdee-archive.el" . "jdee-archive.el") ("jdee-avl-tree.el" . "jdee-avl-tree.el") ("jdee-backend.el" . "jdee-backend.el") ("jdee-bookmark.el" . "jdee-bookmark.el") ("jdee-bsh.el" . "jdee-bsh.el") ("jdee-bug.el" . "jdee-bug.el") ("jdee-bytecode.el" . "jdee-bytecode.el") ("jdee-checkstyle.el" . "jdee-checkstyle.el") ("jdee-class.el" . "jdee-class.el") ("jdee-classpath.el" . "jdee-classpath.el") ("jdee-compile.el" . "jdee-compile.el") ("jdee-complete.el" . "jdee-complete.el") ("jdee-custom.el" . "jdee-custom.el") ("jdee-cygwin.el" . "jdee-cygwin.el") ("jdee-db.el" . "jdee-db.el") ("jdee-dbo.el" . "jdee-dbo.el") ("jdee-dbs.el" . "jdee-dbs.el") ("jdee-deps.el" . "jdee-deps.el") ("jdee-ecj-flymake.el" . "jdee-ecj-flymake.el") ("jdee-ejb.el" . "jdee-ejb.el") ("jdee-files.el" . "jdee-files.el") ("jdee-find.el" . "jdee-find.el") ("jdee-flycheck.el" . "jdee-flycheck.el") ("jdee-font-lock.el" . "jdee-font-lock.el") ("jdee-gen.el" . "jdee-gen.el") ("jdee-help.el" . "jdee-help.el") ("jdee-imenu.el" . "jdee-imenu.el") ("jdee-import.el" . "jdee-import.el") ("jdee-issues.el" . "jdee-issues.el") ("jdee-java-grammar.el" . "jdee-java-grammar.el") ("jdee-java-properties.el" . "jdee-java-properties.el") ("jdee-javadoc-gen.el" . "jdee-javadoc-gen.el") ("jdee-javadoc.el" . "jdee-javadoc.el") ("jdee-jdb.el" . "jdee-jdb.el") ("jdee-jdk-manager.el" . "jdee-jdk-manager.el") ("jdee-juci.el" . "jdee-juci.el") ("jdee-junit.el" . "jdee-junit.el") ("jdee-keys.el" . "jdee-keys.el") ("jdee-log.el" . "jdee-log.el") ("jdee-make.el" . "jdee-make.el") ("jdee-maven.el" . "jdee-maven.el") ("jdee-open-source.el" . "jdee-open-source.el") ("jdee-package.el" . "jdee-package.el") ("jdee-parse-expr.el" . "jdee-parse-expr.el") ("jdee-parse.el" . "jdee-parse.el") ("jdee-plugins.el" . "jdee-plugins.el") ("jdee-project-file.el" . "jdee-project-file.el") ("jdee-project.el" . "jdee-project.el") ("jdee-refactor.el" . "jdee-refactor.el") ("jdee-run.el" . "jdee-run.el") ("jdee-stacktrace.el" . "jdee-stacktrace.el") ("jdee-stat.el" . "jdee-stat.el") ("jdee-test.el" . "jdee-test.el") ("jdee-util.el" . "jdee-util.el") ("jdee-which-method.el" . "jdee-which-method.el") ("jdee-widgets.el" . "jdee-widgets.el") ("jdee-wiz.el" . "jdee-wiz.el") ("jdee-xref.el" . "jdee-xref.el") ("jdee.el" . "jdee.el")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10e3e8e74360>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "jdee")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "jdee")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "jdee")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("jdee")
-  eval((package-build-archive "jdee") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "-Symbol's function definition is void: package-build--build-multi-file-package
--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"jdee\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jdee/
+  to /tmp/jdee-5qoOgJ/jdee-20191102.1426/
+    beanshell.el -> beanshell.el
+    efc.el -> efc.el
+    jcomplete.el -> jcomplete.el
+    jdee-abbrev.el -> jdee-abbrev.el
+    jdee-activator.el -> jdee-activator.el
+    jdee-annotations.el -> jdee-annotations.el
+    jdee-ant.el -> jdee-ant.el
+    jdee-archive.el -> jdee-archive.el
+    jdee-avl-tree.el -> jdee-avl-tree.el
+    jdee-backend.el -> jdee-backend.el
+    jdee-bookmark.el -> jdee-bookmark.el
+    jdee-bsh.el -> jdee-bsh.el
+    jdee-bug.el -> jdee-bug.el
+    jdee-bytecode.el -> jdee-bytecode.el
+    jdee-checkstyle.el -> jdee-checkstyle.el
+    jdee-class.el -> jdee-class.el
+    jdee-classpath.el -> jdee-classpath.el
+    jdee-compile.el -> jdee-compile.el
+    jdee-complete.el -> jdee-complete.el
+    jdee-custom.el -> jdee-custom.el
+    jdee-cygwin.el -> jdee-cygwin.el
+    jdee-db.el -> jdee-db.el
+    jdee-dbo.el -> jdee-dbo.el
+    jdee-dbs.el -> jdee-dbs.el
+    jdee-deps.el -> jdee-deps.el
+    jdee-ecj-flymake.el -> jdee-ecj-flymake.el
+    jdee-ejb.el -> jdee-ejb.el
+    jdee-files.el -> jdee-files.el
+    jdee-find.el -> jdee-find.el
+    jdee-flycheck.el -> jdee-flycheck.el
+    jdee-font-lock.el -> jdee-font-lock.el
+    jdee-gen.el -> jdee-gen.el
+    jdee-help.el -> jdee-help.el
+    jdee-imenu.el -> jdee-imenu.el
+    jdee-import.el -> jdee-import.el
+    jdee-issues.el -> jdee-issues.el
+    jdee-java-grammar.el -> jdee-java-grammar.el
+    jdee-java-properties.el -> jdee-java-properties.el
+    jdee-javadoc-gen.el -> jdee-javadoc-gen.el
+    jdee-javadoc.el -> jdee-javadoc.el
+    jdee-jdb.el -> jdee-jdb.el
+    jdee-jdk-manager.el -> jdee-jdk-manager.el
+    jdee-juci.el -> jdee-juci.el
+    jdee-junit.el -> jdee-junit.el
+    jdee-keys.el -> jdee-keys.el
+    jdee-log.el -> jdee-log.el
+    jdee-make.el -> jdee-make.el
+    jdee-maven.el -> jdee-maven.el
+    jdee-open-source.el -> jdee-open-source.el
+    jdee-package.el -> jdee-package.el
+    jdee-parse-expr.el -> jdee-parse-expr.el
+    jdee-parse.el -> jdee-parse.el
+    jdee-plugins.el -> jdee-plugins.el
+    jdee-project-file.el -> jdee-project-file.el
+    jdee-project.el -> jdee-project.el
+    jdee-refactor.el -> jdee-refactor.el
+    jdee-run.el -> jdee-run.el
+    jdee-stacktrace.el -> jdee-stacktrace.el
+    jdee-stat.el -> jdee-stat.el
+    jdee-test.el -> jdee-test.el
+    jdee-util.el -> jdee-util.el
+    jdee-which-method.el -> jdee-which-method.el
+    jdee-widgets.el -> jdee-widgets.el
+    jdee-wiz.el -> jdee-wiz.el
+    jdee-xref.el -> jdee-xref.el
+    jdee.el -> jdee.el
+Created jdee-20191102.1426.tar containing:
+  jdee-20191102.1426/
+  jdee-20191102.1426/beanshell.el
+  jdee-20191102.1426/efc.el
+  jdee-20191102.1426/jcomplete.el
+  jdee-20191102.1426/jdee-abbrev.el
+  jdee-20191102.1426/jdee-activator.el
+  jdee-20191102.1426/jdee-annotations.el
+  jdee-20191102.1426/jdee-ant.el
+  jdee-20191102.1426/jdee-archive.el
+  jdee-20191102.1426/jdee-avl-tree.el
+  jdee-20191102.1426/jdee-backend.el
+  jdee-20191102.1426/jdee-bookmark.el
+  jdee-20191102.1426/jdee-bsh.el
+  jdee-20191102.1426/jdee-bug.el
+  jdee-20191102.1426/jdee-bytecode.el
+  jdee-20191102.1426/jdee-checkstyle.el
+  jdee-20191102.1426/jdee-class.el
+  jdee-20191102.1426/jdee-classpath.el
+  jdee-20191102.1426/jdee-compile.el
+  jdee-20191102.1426/jdee-complete.el
+  jdee-20191102.1426/jdee-custom.el
+  jdee-20191102.1426/jdee-cygwin.el
+  jdee-20191102.1426/jdee-db.el
+  jdee-20191102.1426/jdee-dbo.el
+  jdee-20191102.1426/jdee-dbs.el
+  jdee-20191102.1426/jdee-deps.el
+  jdee-20191102.1426/jdee-ecj-flymake.el
+  jdee-20191102.1426/jdee-ejb.el
+  jdee-20191102.1426/jdee-files.el
+  jdee-20191102.1426/jdee-find.el
+  jdee-20191102.1426/jdee-flycheck.el
+  jdee-20191102.1426/jdee-font-lock.el
+  jdee-20191102.1426/jdee-gen.el
+  jdee-20191102.1426/jdee-help.el
+  jdee-20191102.1426/jdee-imenu.el
+  jdee-20191102.1426/jdee-import.el
+  jdee-20191102.1426/jdee-issues.el
+  jdee-20191102.1426/jdee-java-grammar.el
+  jdee-20191102.1426/jdee-java-properties.el
+  jdee-20191102.1426/jdee-javadoc-gen.el
+  jdee-20191102.1426/jdee-javadoc.el
+  jdee-20191102.1426/jdee-jdb.el
+  jdee-20191102.1426/jdee-jdk-manager.el
+  jdee-20191102.1426/jdee-juci.el
+  jdee-20191102.1426/jdee-junit.el
+  jdee-20191102.1426/jdee-keys.el
+  jdee-20191102.1426/jdee-log.el
+  jdee-20191102.1426/jdee-make.el
+  jdee-20191102.1426/jdee-maven.el
+  jdee-20191102.1426/jdee-open-source.el
+  jdee-20191102.1426/jdee-package.el
+  jdee-20191102.1426/jdee-parse-expr.el
+  jdee-20191102.1426/jdee-parse.el
+  jdee-20191102.1426/jdee-pkg.el
+  jdee-20191102.1426/jdee-plugins.el
+  jdee-20191102.1426/jdee-project-file.el
+  jdee-20191102.1426/jdee-project.el
+  jdee-20191102.1426/jdee-refactor.el
+  jdee-20191102.1426/jdee-run.el
+  jdee-20191102.1426/jdee-stacktrace.el
+  jdee-20191102.1426/jdee-stat.el
+  jdee-20191102.1426/jdee-test.el
+  jdee-20191102.1426/jdee-util.el
+  jdee-20191102.1426/jdee-which-method.el
+  jdee-20191102.1426/jdee-widgets.el
+  jdee-20191102.1426/jdee-wiz.el
+  jdee-20191102.1426/jdee-xref.el
+  jdee-20191102.1426/jdee.el
+Built jdee in 5.168s, finished at 2026-09-04T00:56:02+0000

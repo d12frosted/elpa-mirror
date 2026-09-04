@@ -3,29 +3,363 @@
 From https://github.com/kickingvegas/casual
 Updating /mnt/store/melpa/working/casual/
 Checking out 60259e256e34d4f6ae64ef950c740cacbe8b4d37
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10f1e3b9f438> (("lisp/casual-agenda-settings.el" . "casual-agenda-settings.el") ("lisp/casual-agenda-utils.el" . "casual-agenda-utils.el") ("lisp/casual-agenda.el" . "casual-agenda.el") ("lisp/casual-bibtex-settings.el" . "casual-bibtex-settings.el") ("lisp/casual-bibtex-utils.el" . "casual-bibtex-utils.el") ("lisp/casual-bibtex.el" . "casual-bibtex.el") ("lisp/casual-bookmarks-settings.el" . "casual-bookmarks-settings.el") ("lisp/casual-bookmarks-utils.el" . "casual-bookmarks-utils.el") ("lisp/casual-bookmarks.el" . "casual-bookmarks.el") ("lisp/casual-calc--calc.el" . "casual-calc--calc.el") ("lisp/casual-calc-algebra.el" . "casual-calc-algebra.el") ("lisp/casual-calc-angle-measure.el" . "casual-calc-angle-measure.el") ("lisp/casual-calc-binary.el" . "casual-calc-binary.el") ("lisp/casual-calc-complex.el" . "casual-calc-complex.el") ("lisp/casual-calc-conversion.el" . "casual-calc-conversion.el") ("lisp/casual-calc-fileio.el" . "casual-calc-fileio.el") ("lisp/casual-calc-financial.el" . "casual-calc-financial.el") ("lisp/casual-calc-graphics.el" . "casual-calc-graphics.el") ("lisp/casual-calc-labels.el" . "casual-calc-labels.el") ("lisp/casual-calc-logarithmic.el" . "casual-calc-logarithmic.el") ("lisp/casual-calc-predicates.el" . "casual-calc-predicates.el") ("lisp/casual-calc-radix.el" . "casual-calc-radix.el") ("lisp/casual-calc-random.el" . "casual-calc-random.el") ("lisp/casual-calc-rounding.el" . "casual-calc-rounding.el") ("lisp/casual-calc-settings.el" . "casual-calc-settings.el") ("lisp/casual-calc-stack.el" . "casual-calc-stack.el") ("lisp/casual-calc-symbolic.el" . "casual-calc-symbolic.el") ("lisp/casual-calc-time.el" . "casual-calc-time.el") ("lisp/casual-calc-trail.el" . "casual-calc-trail.el") ("lisp/casual-calc-trigonometric.el" . "casual-calc-trigonometric.el") ("lisp/casual-calc-units.el" . "casual-calc-units.el") ("lisp/casual-calc-utils.el" . "casual-calc-utils.el") ("lisp/casual-calc-variables.el" . "casual-calc-variables.el") ("lisp/casual-calc-vector.el" . "casual-calc-vector.el") ("lisp/casual-calc.el" . "casual-calc.el") ("lisp/casual-calendar-constants.el" . "casual-calendar-constants.el") ("lisp/casual-calendar-settings.el" . "casual-calendar-settings.el") ("lisp/casual-calendar-utils.el" . "casual-calendar-utils.el") ("lisp/casual-calendar.el" . "casual-calendar.el") ("lisp/casual-compile-settings.el" . "casual-compile-settings.el") ("lisp/casual-compile-utils.el" . "casual-compile-utils.el") ("lisp/casual-compile.el" . "casual-compile.el") ("lisp/casual-css-settings.el" . "casual-css-settings.el") ("lisp/casual-css-utils.el" . "casual-css-utils.el") ("lisp/casual-css.el" . "casual-css.el") ("lisp/casual-csv-settings.el" . "casual-csv-settings.el") ("lisp/casual-csv-utils.el" . "casual-csv-utils.el") ("lisp/casual-csv.el" . "casual-csv.el") ("lisp/casual-dired-settings.el" . "casual-dired-settings.el") ("lisp/casual-dired-sort-by.el" . "casual-dired-sort-by.el") ("lisp/casual-dired-utils.el" . "casual-dired-utils.el") ("lisp/casual-dired-variables.el" . "casual-dired-variables.el") ("lisp/casual-dired.el" . "casual-dired.el") ("lisp/casual-ediff-settings.el" . "casual-ediff-settings.el") ("lisp/casual-ediff-utils.el" . "casual-ediff-utils.el") ("lisp/casual-ediff.el" . "casual-ediff.el") ("lisp/casual-editkit-constants.el" . "casual-editkit-constants.el") ("lisp/casual-editkit-settings.el" . "casual-editkit-settings.el") ("lisp/casual-editkit-utils.el" . "casual-editkit-utils.el") ("lisp/casual-editkit.el" . "casual-editkit.el") ("lisp/casual-elisp-settings.el" . "casual-elisp-settings.el") ("lisp/casual-elisp-utils.el" . "casual-elisp-utils.el") ("lisp/casual-elisp.el" . "casual-elisp.el") ("lisp/casual-eshell-settings.el" . "casual-eshell-settings.el") ("lisp/casual-eshell-utils.el" . "casual-eshell-utils.el") ("lisp/casual-eshell.el" . "casual-eshell.el") ("lisp/casual-eww-settings.el" . "casual-eww-settings.el") ("lisp/casual-eww-utils.el" . "casual-eww-utils.el") ("lisp/casual-eww.el" . "casual-eww.el") ("lisp/casual-help-settings.el" . "casual-help-settings.el") ("lisp/casual-help-utils.el" . "casual-help-utils.el") ("lisp/casual-help.el" . "casual-help.el") ("lisp/casual-html-settings.el" . "casual-html-settings.el") ("lisp/casual-html-utils.el" . "casual-html-utils.el") ("lisp/casual-html.el" . "casual-html.el") ("lisp/casual-ibuffer-filter.el" . "casual-ibuffer-filter.el") ("lisp/casual-ibuffer-settings.el" . "casual-ibuffer-settings.el") ("lisp/casual-ibuffer-utils.el" . "casual-ibuffer-utils.el") ("lisp/casual-ibuffer.el" . "casual-ibuffer.el") ("lisp/casual-image-settings.el" . "casual-image-settings.el") ("lisp/casual-image-utils.el" . "casual-image-utils.el") ("lisp/casual-image.el" . "casual-image.el") ("lisp/casual-info-settings.el" . "casual-info-settings.el") ("lisp/casual-info-utils.el" . "casual-info-utils.el") ("lisp/casual-info-variables.el" . "casual-info-variables.el") ("lisp/casual-info.el" . "casual-info.el") ("lisp/casual-isearch-settings.el" . "casual-isearch-settings.el") ("lisp/casual-isearch-utils.el" . "casual-isearch-utils.el") ("lisp/casual-isearch.el" . "casual-isearch.el") ("lisp/casual-ispell-settings.el" . "casual-ispell-settings.el") ("lisp/casual-ispell-utils.el" . "casual-ispell-utils.el") ("lisp/casual-ispell.el" . "casual-ispell.el") ("lisp/casual-lib.el" . "casual-lib.el") ("lisp/casual-make-settings.el" . "casual-make-settings.el") ("lisp/casual-make-utils.el" . "casual-make-utils.el") ("lisp/casual-make.el" . "casual-make.el") ("lisp/casual-man-settings.el" . "casual-man-settings.el") ("lisp/casual-man-utils.el" . "casual-man-utils.el") ("lisp/casual-man.el" . "casual-man.el") ("lisp/casual-org-settings.el" . "casual-org-settings.el") ("lisp/casual-org-utils.el" . "casual-org-utils.el") ("lisp/casual-org.el" . "casual-org.el") ("lisp/casual-re-builder-settings.el" . "casual-re-builder-settings.el") ("lisp/casual-re-builder-utils.el" . "casual-re-builder-utils.el") ("lisp/casual-re-builder.el" . "casual-re-builder.el") ("lisp/casual-timezone-settings.el" . "casual-timezone-settings.el") ("lisp/casual-timezone-utils.el" . "casual-timezone-utils.el") ("lisp/casual-timezone.el" . "casual-timezone.el") ("lisp/casual.el" . "casual.el") ("docs/casual.texi" . "casual.texi") ("docs/images" . "images")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10f1e3b9f438> (("lisp/casual-agenda-settings.el" . "casual-agenda-settings.el") ("lisp/casual-agenda-utils.el" . "casual-agenda-utils.el") ("lisp/casual-agenda.el" . "casual-agenda.el") ("lisp/casual-bibtex-settings.el" . "casual-bibtex-settings.el") ("lisp/casual-bibtex-utils.el" . "casual-bibtex-utils.el") ("lisp/casual-bibtex.el" . "casual-bibtex.el") ("lisp/casual-bookmarks-settings.el" . "casual-bookmarks-settings.el") ("lisp/casual-bookmarks-utils.el" . "casual-bookmarks-utils.el") ("lisp/casual-bookmarks.el" . "casual-bookmarks.el") ("lisp/casual-calc--calc.el" . "casual-calc--calc.el") ("lisp/casual-calc-algebra.el" . "casual-calc-algebra.el") ("lisp/casual-calc-angle-measure.el" . "casual-calc-angle-measure.el") ("lisp/casual-calc-binary.el" . "casual-calc-binary.el") ("lisp/casual-calc-complex.el" . "casual-calc-complex.el") ("lisp/casual-calc-conversion.el" . "casual-calc-conversion.el") ("lisp/casual-calc-fileio.el" . "casual-calc-fileio.el") ("lisp/casual-calc-financial.el" . "casual-calc-financial.el") ("lisp/casual-calc-graphics.el" . "casual-calc-graphics.el") ("lisp/casual-calc-labels.el" . "casual-calc-labels.el") ("lisp/casual-calc-logarithmic.el" . "casual-calc-logarithmic.el") ("lisp/casual-calc-predicates.el" . "casual-calc-predicates.el") ("lisp/casual-calc-radix.el" . "casual-calc-radix.el") ("lisp/casual-calc-random.el" . "casual-calc-random.el") ("lisp/casual-calc-rounding.el" . "casual-calc-rounding.el") ("lisp/casual-calc-settings.el" . "casual-calc-settings.el") ("lisp/casual-calc-stack.el" . "casual-calc-stack.el") ("lisp/casual-calc-symbolic.el" . "casual-calc-symbolic.el") ("lisp/casual-calc-time.el" . "casual-calc-time.el") ("lisp/casual-calc-trail.el" . "casual-calc-trail.el") ("lisp/casual-calc-trigonometric.el" . "casual-calc-trigonometric.el") ("lisp/casual-calc-units.el" . "casual-calc-units.el") ("lisp/casual-calc-utils.el" . "casual-calc-utils.el") ("lisp/casual-calc-variables.el" . "casual-calc-variables.el") ("lisp/casual-calc-vector.el" . "casual-calc-vector.el") ("lisp/casual-calc.el" . "casual-calc.el") ("lisp/casual-calendar-constants.el" . "casual-calendar-constants.el") ("lisp/casual-calendar-settings.el" . "casual-calendar-settings.el") ("lisp/casual-calendar-utils.el" . "casual-calendar-utils.el") ("lisp/casual-calendar.el" . "casual-calendar.el") ("lisp/casual-compile-settings.el" . "casual-compile-settings.el") ("lisp/casual-compile-utils.el" . "casual-compile-utils.el") ("lisp/casual-compile.el" . "casual-compile.el") ("lisp/casual-css-settings.el" . "casual-css-settings.el") ("lisp/casual-css-utils.el" . "casual-css-utils.el") ("lisp/casual-css.el" . "casual-css.el") ("lisp/casual-csv-settings.el" . "casual-csv-settings.el") ("lisp/casual-csv-utils.el" . "casual-csv-utils.el") ("lisp/casual-csv.el" . "casual-csv.el") ("lisp/casual-dired-settings.el" . "casual-dired-settings.el") ("lisp/casual-dired-sort-by.el" . "casual-dired-sort-by.el") ("lisp/casual-dired-utils.el" . "casual-dired-utils.el") ("lisp/casual-dired-variables.el" . "casual-dired-variables.el") ("lisp/casual-dired.el" . "casual-dired.el") ("lisp/casual-ediff-settings.el" . "casual-ediff-settings.el") ("lisp/casual-ediff-utils.el" . "casual-ediff-utils.el") ("lisp/casual-ediff.el" . "casual-ediff.el") ("lisp/casual-editkit-constants.el" . "casual-editkit-constants.el") ("lisp/casual-editkit-settings.el" . "casual-editkit-settings.el") ("lisp/casual-editkit-utils.el" . "casual-editkit-utils.el") ("lisp/casual-editkit.el" . "casual-editkit.el") ("lisp/casual-elisp-settings.el" . "casual-elisp-settings.el") ("lisp/casual-elisp-utils.el" . "casual-elisp-utils.el") ("lisp/casual-elisp.el" . "casual-elisp.el") ("lisp/casual-eshell-settings.el" . "casual-eshell-settings.el") ("lisp/casual-eshell-utils.el" . "casual-eshell-utils.el") ("lisp/casual-eshell.el" . "casual-eshell.el") ("lisp/casual-eww-settings.el" . "casual-eww-settings.el") ("lisp/casual-eww-utils.el" . "casual-eww-utils.el") ("lisp/casual-eww.el" . "casual-eww.el") ("lisp/casual-help-settings.el" . "casual-help-settings.el") ("lisp/casual-help-utils.el" . "casual-help-utils.el") ("lisp/casual-help.el" . "casual-help.el") ("lisp/casual-html-settings.el" . "casual-html-settings.el") ("lisp/casual-html-utils.el" . "casual-html-utils.el") ("lisp/casual-html.el" . "casual-html.el") ("lisp/casual-ibuffer-filter.el" . "casual-ibuffer-filter.el") ("lisp/casual-ibuffer-settings.el" . "casual-ibuffer-settings.el") ("lisp/casual-ibuffer-utils.el" . "casual-ibuffer-utils.el") ("lisp/casual-ibuffer.el" . "casual-ibuffer.el") ("lisp/casual-image-settings.el" . "casual-image-settings.el") ("lisp/casual-image-utils.el" . "casual-image-utils.el") ("lisp/casual-image.el" . "casual-image.el") ("lisp/casual-info-settings.el" . "casual-info-settings.el") ("lisp/casual-info-utils.el" . "casual-info-utils.el") ("lisp/casual-info-variables.el" . "casual-info-variables.el") ("lisp/casual-info.el" . "casual-info.el") ("lisp/casual-isearch-settings.el" . "casual-isearch-settings.el") ("lisp/casual-isearch-utils.el" . "casual-isearch-utils.el") ("lisp/casual-isearch.el" . "casual-isearch.el") ("lisp/casual-ispell-settings.el" . "casual-ispell-settings.el") ("lisp/casual-ispell-utils.el" . "casual-ispell-utils.el") ("lisp/casual-ispell.el" . "casual-ispell.el") ("lisp/casual-lib.el" . "casual-lib.el") ("lisp/casual-make-settings.el" . "casual-make-settings.el") ("lisp/casual-make-utils.el" . "casual-make-utils.el") ("lisp/casual-make.el" . "casual-make.el") ("lisp/casual-man-settings.el" . "casual-man-settings.el") ("lisp/casual-man-utils.el" . "casual-man-utils.el") ("lisp/casual-man.el" . "casual-man.el") ("lisp/casual-org-settings.el" . "casual-org-settings.el") ("lisp/casual-org-utils.el" . "casual-org-utils.el") ("lisp/casual-org.el" . "casual-org.el") ("lisp/casual-re-builder-settings.el" . "casual-re-builder-settings.el") ("lisp/casual-re-builder-utils.el" . "casual-re-builder-utils.el") ("lisp/casual-re-builder.el" . "casual-re-builder.el") ("lisp/casual-timezone-settings.el" . "casual-timezone-settings.el") ("lisp/casual-timezone-utils.el" . "casual-timezone-utils.el") ("lisp/casual-timezone.el" . "casual-timezone.el") ("lisp/casual.el" . "casual.el") ("docs/casual.texi" . "casual.texi") ("docs/images" . "images")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10f1e3b9f438>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "casual")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcheSymbol's function definition is void: package-build--build-multi-file-package
-r (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "casual")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "casual")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("casual")
-  eval((package-build-archive "casual") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"casual\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/casual/
+  to /tmp/casual-2iT2MG/casual-20260831.2129/
+  ! lisp/casual-agenda-settings.el -> casual-agenda-settings.el
+  ! lisp/casual-agenda-utils.el -> casual-agenda-utils.el
+  ! lisp/casual-agenda.el -> casual-agenda.el
+  ! lisp/casual-bibtex-settings.el -> casual-bibtex-settings.el
+  ! lisp/casual-bibtex-utils.el -> casual-bibtex-utils.el
+  ! lisp/casual-bibtex.el -> casual-bibtex.el
+  ! lisp/casual-bookmarks-settings.el -> casual-bookmarks-settings.el
+  ! lisp/casual-bookmarks-utils.el -> casual-bookmarks-utils.el
+  ! lisp/casual-bookmarks.el -> casual-bookmarks.el
+  ! lisp/casual-calc--calc.el -> casual-calc--calc.el
+  ! lisp/casual-calc-algebra.el -> casual-calc-algebra.el
+  ! lisp/casual-calc-angle-measure.el -> casual-calc-angle-measure.el
+  ! lisp/casual-calc-binary.el -> casual-calc-binary.el
+  ! lisp/casual-calc-complex.el -> casual-calc-complex.el
+  ! lisp/casual-calc-conversion.el -> casual-calc-conversion.el
+  ! lisp/casual-calc-fileio.el -> casual-calc-fileio.el
+  ! lisp/casual-calc-financial.el -> casual-calc-financial.el
+  ! lisp/casual-calc-graphics.el -> casual-calc-graphics.el
+  ! lisp/casual-calc-labels.el -> casual-calc-labels.el
+  ! lisp/casual-calc-logarithmic.el -> casual-calc-logarithmic.el
+  ! lisp/casual-calc-predicates.el -> casual-calc-predicates.el
+  ! lisp/casual-calc-radix.el -> casual-calc-radix.el
+  ! lisp/casual-calc-random.el -> casual-calc-random.el
+  ! lisp/casual-calc-rounding.el -> casual-calc-rounding.el
+  ! lisp/casual-calc-settings.el -> casual-calc-settings.el
+  ! lisp/casual-calc-stack.el -> casual-calc-stack.el
+  ! lisp/casual-calc-symbolic.el -> casual-calc-symbolic.el
+  ! lisp/casual-calc-time.el -> casual-calc-time.el
+  ! lisp/casual-calc-trail.el -> casual-calc-trail.el
+  ! lisp/casual-calc-trigonometric.el -> casual-calc-trigonometric.el
+  ! lisp/casual-calc-units.el -> casual-calc-units.el
+  ! lisp/casual-calc-utils.el -> casual-calc-utils.el
+  ! lisp/casual-calc-variables.el -> casual-calc-variables.el
+  ! lisp/casual-calc-vector.el -> casual-calc-vector.el
+  ! lisp/casual-calc.el -> casual-calc.el
+  ! lisp/casual-calendar-constants.el -> casual-calendar-constants.el
+  ! lisp/casual-calendar-settings.el -> casual-calendar-settings.el
+  ! lisp/casual-calendar-utils.el -> casual-calendar-utils.el
+  ! lisp/casual-calendar.el -> casual-calendar.el
+  ! lisp/casual-compile-settings.el -> casual-compile-settings.el
+  ! lisp/casual-compile-utils.el -> casual-compile-utils.el
+  ! lisp/casual-compile.el -> casual-compile.el
+  ! lisp/casual-css-settings.el -> casual-css-settings.el
+  ! lisp/casual-css-utils.el -> casual-css-utils.el
+  ! lisp/casual-css.el -> casual-css.el
+  ! lisp/casual-csv-settings.el -> casual-csv-settings.el
+  ! lisp/casual-csv-utils.el -> casual-csv-utils.el
+  ! lisp/casual-csv.el -> casual-csv.el
+  ! lisp/casual-dired-settings.el -> casual-dired-settings.el
+  ! lisp/casual-dired-sort-by.el -> casual-dired-sort-by.el
+  ! lisp/casual-dired-utils.el -> casual-dired-utils.el
+  ! lisp/casual-dired-variables.el -> casual-dired-variables.el
+  ! lisp/casual-dired.el -> casual-dired.el
+  ! lisp/casual-ediff-settings.el -> casual-ediff-settings.el
+  ! lisp/casual-ediff-utils.el -> casual-ediff-utils.el
+  ! lisp/casual-ediff.el -> casual-ediff.el
+  ! lisp/casual-editkit-constants.el -> casual-editkit-constants.el
+  ! lisp/casual-editkit-settings.el -> casual-editkit-settings.el
+  ! lisp/casual-editkit-utils.el -> casual-editkit-utils.el
+  ! lisp/casual-editkit.el -> casual-editkit.el
+  ! lisp/casual-elisp-settings.el -> casual-elisp-settings.el
+  ! lisp/casual-elisp-utils.el -> casual-elisp-utils.el
+  ! lisp/casual-elisp.el -> casual-elisp.el
+  ! lisp/casual-eshell-settings.el -> casual-eshell-settings.el
+  ! lisp/casual-eshell-utils.el -> casual-eshell-utils.el
+  ! lisp/casual-eshell.el -> casual-eshell.el
+  ! lisp/casual-eww-settings.el -> casual-eww-settings.el
+  ! lisp/casual-eww-utils.el -> casual-eww-utils.el
+  ! lisp/casual-eww.el -> casual-eww.el
+  ! lisp/casual-help-settings.el -> casual-help-settings.el
+  ! lisp/casual-help-utils.el -> casual-help-utils.el
+  ! lisp/casual-help.el -> casual-help.el
+  ! lisp/casual-html-settings.el -> casual-html-settings.el
+  ! lisp/casual-html-utils.el -> casual-html-utils.el
+  ! lisp/casual-html.el -> casual-html.el
+  ! lisp/casual-ibuffer-filter.el -> casual-ibuffer-filter.el
+  ! lisp/casual-ibuffer-settings.el -> casual-ibuffer-settings.el
+  ! lisp/casual-ibuffer-utils.el -> casual-ibuffer-utils.el
+  ! lisp/casual-ibuffer.el -> casual-ibuffer.el
+  ! lisp/casual-image-settings.el -> casual-image-settings.el
+  ! lisp/casual-image-utils.el -> casual-image-utils.el
+  ! lisp/casual-image.el -> casual-image.el
+  ! lisp/casual-info-settings.el -> casual-info-settings.el
+  ! lisp/casual-info-utils.el -> casual-info-utils.el
+  ! lisp/casual-info-variables.el -> casual-info-variables.el
+  ! lisp/casual-info.el -> casual-info.el
+  ! lisp/casual-isearch-settings.el -> casual-isearch-settings.el
+  ! lisp/casual-isearch-utils.el -> casual-isearch-utils.el
+  ! lisp/casual-isearch.el -> casual-isearch.el
+  ! lisp/casual-ispell-settings.el -> casual-ispell-settings.el
+  ! lisp/casual-ispell-utils.el -> casual-ispell-utils.el
+  ! lisp/casual-ispell.el -> casual-ispell.el
+  ! lisp/casual-lib.el -> casual-lib.el
+  ! lisp/casual-make-settings.el -> casual-make-settings.el
+  ! lisp/casual-make-utils.el -> casual-make-utils.el
+  ! lisp/casual-make.el -> casual-make.el
+  ! lisp/casual-man-settings.el -> casual-man-settings.el
+  ! lisp/casual-man-utils.el -> casual-man-utils.el
+  ! lisp/casual-man.el -> casual-man.el
+  ! lisp/casual-org-settings.el -> casual-org-settings.el
+  ! lisp/casual-org-utils.el -> casual-org-utils.el
+  ! lisp/casual-org.el -> casual-org.el
+  ! lisp/casual-re-builder-settings.el -> casual-re-builder-settings.el
+  ! lisp/casual-re-builder-utils.el -> casual-re-builder-utils.el
+  ! lisp/casual-re-builder.el -> casual-re-builder.el
+  ! lisp/casual-timezone-settings.el -> casual-timezone-settings.el
+  ! lisp/casual-timezone-utils.el -> casual-timezone-utils.el
+  ! lisp/casual-timezone.el -> casual-timezone.el
+  ! lisp/casual.el -> casual.el
+  ! docs/casual.texi -> casual.texi
+  ! docs/images => images
+Generating casual.info
+Created casual-20260831.2129.tar containing:
+  casual-20260831.2129/
+  casual-20260831.2129/casual-agenda-settings.el
+  casual-20260831.2129/casual-agenda-utils.el
+  casual-20260831.2129/casual-agenda.el
+  casual-20260831.2129/casual-bibtex-settings.el
+  casual-20260831.2129/casual-bibtex-utils.el
+  casual-20260831.2129/casual-bibtex.el
+  casual-20260831.2129/casual-bookmarks-settings.el
+  casual-20260831.2129/casual-bookmarks-utils.el
+  casual-20260831.2129/casual-bookmarks.el
+  casual-20260831.2129/casual-calc--calc.el
+  casual-20260831.2129/casual-calc-algebra.el
+  casual-20260831.2129/casual-calc-angle-measure.el
+  casual-20260831.2129/casual-calc-binary.el
+  casual-20260831.2129/casual-calc-complex.el
+  casual-20260831.2129/casual-calc-conversion.el
+  casual-20260831.2129/casual-calc-fileio.el
+  casual-20260831.2129/casual-calc-financial.el
+  casual-20260831.2129/casual-calc-graphics.el
+  casual-20260831.2129/casual-calc-labels.el
+  casual-20260831.2129/casual-calc-logarithmic.el
+  casual-20260831.2129/casual-calc-predicates.el
+  casual-20260831.2129/casual-calc-radix.el
+  casual-20260831.2129/casual-calc-random.el
+  casual-20260831.2129/casual-calc-rounding.el
+  casual-20260831.2129/casual-calc-settings.el
+  casual-20260831.2129/casual-calc-stack.el
+  casual-20260831.2129/casual-calc-symbolic.el
+  casual-20260831.2129/casual-calc-time.el
+  casual-20260831.2129/casual-calc-trail.el
+  casual-20260831.2129/casual-calc-trigonometric.el
+  casual-20260831.2129/casual-calc-units.el
+  casual-20260831.2129/casual-calc-utils.el
+  casual-20260831.2129/casual-calc-variables.el
+  casual-20260831.2129/casual-calc-vector.el
+  casual-20260831.2129/casual-calc.el
+  casual-20260831.2129/casual-calendar-constants.el
+  casual-20260831.2129/casual-calendar-settings.el
+  casual-20260831.2129/casual-calendar-utils.el
+  casual-20260831.2129/casual-calendar.el
+  casual-20260831.2129/casual-compile-settings.el
+  casual-20260831.2129/casual-compile-utils.el
+  casual-20260831.2129/casual-compile.el
+  casual-20260831.2129/casual-css-settings.el
+  casual-20260831.2129/casual-css-utils.el
+  casual-20260831.2129/casual-css.el
+  casual-20260831.2129/casual-csv-settings.el
+  casual-20260831.2129/casual-csv-utils.el
+  casual-20260831.2129/casual-csv.el
+  casual-20260831.2129/casual-dired-settings.el
+  casual-20260831.2129/casual-dired-sort-by.el
+  casual-20260831.2129/casual-dired-utils.el
+  casual-20260831.2129/casual-dired-variables.el
+  casual-20260831.2129/casual-dired.el
+  casual-20260831.2129/casual-ediff-settings.el
+  casual-20260831.2129/casual-ediff-utils.el
+  casual-20260831.2129/casual-ediff.el
+  casual-20260831.2129/casual-editkit-constants.el
+  casual-20260831.2129/casual-editkit-settings.el
+  casual-20260831.2129/casual-editkit-utils.el
+  casual-20260831.2129/casual-editkit.el
+  casual-20260831.2129/casual-elisp-settings.el
+  casual-20260831.2129/casual-elisp-utils.el
+  casual-20260831.2129/casual-elisp.el
+  casual-20260831.2129/casual-eshell-settings.el
+  casual-20260831.2129/casual-eshell-utils.el
+  casual-20260831.2129/casual-eshell.el
+  casual-20260831.2129/casual-eww-settings.el
+  casual-20260831.2129/casual-eww-utils.el
+  casual-20260831.2129/casual-eww.el
+  casual-20260831.2129/casual-help-settings.el
+  casual-20260831.2129/casual-help-utils.el
+  casual-20260831.2129/casual-help.el
+  casual-20260831.2129/casual-html-settings.el
+  casual-20260831.2129/casual-html-utils.el
+  casual-20260831.2129/casual-html.el
+  casual-20260831.2129/casual-ibuffer-filter.el
+  casual-20260831.2129/casual-ibuffer-settings.el
+  casual-20260831.2129/casual-ibuffer-utils.el
+  casual-20260831.2129/casual-ibuffer.el
+  casual-20260831.2129/casual-image-settings.el
+  casual-20260831.2129/casual-image-utils.el
+  casual-20260831.2129/casual-image.el
+  casual-20260831.2129/casual-info-settings.el
+  casual-20260831.2129/casual-info-utils.el
+  casual-20260831.2129/casual-info-variables.el
+  casual-20260831.2129/casual-info.el
+  casual-20260831.2129/casual-isearch-settings.el
+  casual-20260831.2129/casual-isearch-utils.el
+  casual-20260831.2129/casual-isearch.el
+  casual-20260831.2129/casual-ispell-settings.el
+  casual-20260831.2129/casual-ispell-utils.el
+  casual-20260831.2129/casual-ispell.el
+  casual-20260831.2129/casual-lib.el
+  casual-20260831.2129/casual-make-settings.el
+  casual-20260831.2129/casual-make-utils.el
+  casual-20260831.2129/casual-make.el
+  casual-20260831.2129/casual-man-settings.el
+  casual-20260831.2129/casual-man-utils.el
+  casual-20260831.2129/casual-man.el
+  casual-20260831.2129/casual-org-settings.el
+  casual-20260831.2129/casual-org-utils.el
+  casual-20260831.2129/casual-org.el
+  casual-20260831.2129/casual-pkg.el
+  casual-20260831.2129/casual-re-builder-settings.el
+  casual-20260831.2129/casual-re-builder-utils.el
+  casual-20260831.2129/casual-re-builder.el
+  casual-20260831.2129/casual-timezone-settings.el
+  casual-20260831.2129/casual-timezone-utils.el
+  casual-20260831.2129/casual-timezone.el
+  casual-20260831.2129/casual.el
+  casual-20260831.2129/casual.info
+  casual-20260831.2129/dir
+  casual-20260831.2129/images/
+  casual-20260831.2129/images/bookmarks-main-menu.png
+  casual-20260831.2129/images/casual-agenda-almanac-screenshot.png
+  casual-20260831.2129/images/casual-agenda-mark-screenshot.png
+  casual-20260831.2129/images/casual-agenda-operations-screenshot.png
+  casual-20260831.2129/images/casual-agenda-screenshot.png
+  casual-20260831.2129/images/casual-agenda-settings-screenshot.png
+  casual-20260831.2129/images/casual-agenda-unicode-screenshot.png
+  casual-20260831.2129/images/casual-bibtex-clean-entry-hook.png
+  casual-20260831.2129/images/casual-bibtex-screenshot.png
+  casual-20260831.2129/images/casual-bibtex-settings-screenshot.png
+  casual-20260831.2129/images/casual-bibtex-unicode-screenshot.png
+  casual-20260831.2129/images/casual-bookmarks-screenshot.png
+  casual-20260831.2129/images/casual-bookmarks-unicode-screenshot.png
+  casual-20260831.2129/images/casual-calc-tmenu.png
+  casual-20260831.2129/images/casual-calendar-calendars-menu.png
+  casual-20260831.2129/images/casual-calendar-diary-menu.png
+  casual-20260831.2129/images/casual-calendar-lunar-menu.png
+  casual-20260831.2129/images/casual-calendar-main-unicode.png
+  casual-20260831.2129/images/casual-calendar-screenshot.png
+  casual-20260831.2129/images/casual-calendar-settings-menu.png
+  casual-20260831.2129/images/casual-compile-grep-screenshot.png
+  casual-20260831.2129/images/casual-compile-screenshot.png
+  casual-20260831.2129/images/casual-css-screenshot.png
+  casual-20260831.2129/images/casual-css-settings-screenshot.png
+  casual-20260831.2129/images/casual-csv-align-screenshot.png
+  casual-20260831.2129/images/casual-csv-edit-screenshot.png
+  casual-20260831.2129/images/casual-csv-edit-unicode-screenshot.png
+  casual-20260831.2129/images/casual-csv-settings-screenshot.png
+  casual-20260831.2129/images/casual-csv-view-screenshot.png
+  casual-20260831.2129/images/casual-dired-change-screenshot.png
+  casual-20260831.2129/images/casual-dired-elisp-screenshot.png
+  casual-20260831.2129/images/casual-dired-link.png
+  casual-20260831.2129/images/casual-dired-marked-screenshot.png
+  casual-20260831.2129/images/casual-dired-regexp-screenshot.png
+  casual-20260831.2129/images/casual-dired-screenshot-unicode.png
+  casual-20260831.2129/images/casual-dired-screenshot.png
+  casual-20260831.2129/images/casual-dired-search-replace.png
+  casual-20260831.2129/images/casual-dired-settings-screenshot.png
+  casual-20260831.2129/images/casual-dired-sort-by-screenshot.png
+  casual-20260831.2129/images/casual-dired-utils-screenshot.png
+  casual-20260831.2129/images/casual-ediff-basic-screenshot.png
+  casual-20260831.2129/images/casual-ediff-merge-conflict.png
+  casual-20260831.2129/images/casual-ediff-screenshot.png
+  casual-20260831.2129/images/casual-editkit-bookmarks-screenshot.png
+  casual-20260831.2129/images/casual-editkit-copy-screenshot.png
+  casual-20260831.2129/images/casual-editkit-delete-screenshot.png
+  casual-20260831.2129/images/casual-editkit-edit-screenshot.png
+  casual-20260831.2129/images/casual-editkit-emoji-symbols-screenshot.png
+  casual-20260831.2129/images/casual-editkit-kill-screenshot.png
+  casual-20260831.2129/images/casual-editkit-macro-screenshot.png
+  casual-20260831.2129/images/casual-editkit-main-screenshot.png
+  casual-20260831.2129/images/casual-editkit-mark-screenshot.png
+  casual-20260831.2129/images/casual-editkit-move-screenshot.png
+  casual-20260831.2129/images/casual-editkit-move-word-screenshot.png
+  casual-20260831.2129/images/casual-editkit-narrow-screenshot.png
+  casual-20260831.2129/images/casual-editkit-open-screenshot.png
+  casual-20260831.2129/images/casual-editkit-project-screenshot.png
+  casual-20260831.2129/images/casual-editkit-rectangle-screenshot.png
+  casual-20260831.2129/images/casual-editkit-reformat-screenshot.png
+  casual-20260831.2129/images/casual-editkit-registers-screenshot.png
+  casual-20260831.2129/images/casual-editkit-search-screenshot.png
+  casual-20260831.2129/images/casual-editkit-settings-screenshot.png
+  casual-20260831.2129/images/casual-editkit-sort-screenshot.png
+  casual-20260831.2129/images/casual-editkit-tools-screenshot.png
+  casual-20260831.2129/images/casual-editkit-transform-screenshot.png
+  casual-20260831.2129/images/casual-editkit-transpose-screenshot.png
+  casual-20260831.2129/images/casual-editkit-window-delete-screenshot.png
+  casual-20260831.2129/images/casual-editkit-window-screenshot.png
+  casual-20260831.2129/images/casual-editkit-window-unicode-screenshot.png
+  casual-20260831.2129/images/casual-elisp-screenshot.png
+  casual-20260831.2129/images/casual-elisp-unicode-screenshot.png
+  casual-20260831.2129/images/casual-eshell-info-screenshot.png
+  casual-20260831.2129/images/casual-eshell-process-screenshot.png
+  casual-20260831.2129/images/casual-eshell-screenshot.png
+  casual-20260831.2129/images/casual-eshell-unicode-screenshot.png
+  casual-20260831.2129/images/casual-eww-bookmarks-screenshot.png
+  casual-20260831.2129/images/casual-eww-display-screenshot.png
+  casual-20260831.2129/images/casual-eww-screenshot.png
+  casual-20260831.2129/images/casual-eww-settings-screenshot.png
+  casual-20260831.2129/images/casual-eww-unicode-screenshot.png
+  casual-20260831.2129/images/casual-help-screenshot.png
+  casual-20260831.2129/images/casual-html-screenshot.png
+  casual-20260831.2129/images/casual-html-settings-screenshot.png
+  casual-20260831.2129/images/casual-html-tags-screenshot.png
+  casual-20260831.2129/images/casual-html-unicode-screenshot.png
+  casual-20260831.2129/images/casual-ibuffer-filter-screenshot.png
+  casual-20260831.2129/images/casual-ibuffer-main-screenshot.png
+  casual-20260831.2129/images/casual-ibuffer-main-unicode.png
+  casual-20260831.2129/images/casual-ibuffer-mark-regexp.png
+  casual-20260831.2129/images/casual-ibuffer-mark.png
+  casual-20260831.2129/images/casual-ibuffer-operations.png
+  casual-20260831.2129/images/casual-ibuffer-screenshot.png
+  casual-20260831.2129/images/casual-ibuffer-sortby-screenshot.png
+  casual-20260831.2129/images/casual-image-main-screenshot.png
+  casual-20260831.2129/images/casual-image-main-unicode-screenshot.png
+  casual-20260831.2129/images/casual-image-resize-screenshot.png
+  casual-20260831.2129/images/casual-info-screenshot.png
+  casual-20260831.2129/images/casual-info-unicode-screenshot.png
+  casual-20260831.2129/images/casual-isearch-settings-tmenu.png
+  casual-20260831.2129/images/casual-isearch-tmenu.png
+  casual-20260831.2129/images/casual-isearch-unicode.png
+  casual-20260831.2129/images/casual-ispell-prog-screenshot.png
+  casual-20260831.2129/images/casual-ispell-screenshot.png
+  casual-20260831.2129/images/casual-make-automatic-variables-screenshot.png
+  casual-20260831.2129/images/casual-make-mode-select-screenshot.png
+  casual-20260831.2129/images/casual-make-screenshot.png
+  casual-20260831.2129/images/casual-man-screenshot.png
+  casual-20260831.2129/images/casual-man-settings.png
+  casual-20260831.2129/images/casual-org-block-src-screenshot.png
+  casual-20260831.2129/images/casual-org-body-screenshot.png
+  casual-20260831.2129/images/casual-org-checkbox-screenshot.png
+  casual-20260831.2129/images/casual-org-clock-log-screenshot.png
+  casual-20260831.2129/images/casual-org-drawer-screenshot.png
+  casual-20260831.2129/images/casual-org-headline-screenshot.png
+  casual-20260831.2129/images/casual-org-in-block-src-screenshot.png
+  casual-20260831.2129/images/casual-org-item-screenshot.png
+  casual-20260831.2129/images/casual-org-keyword-affiliate.png
+  casual-20260831.2129/images/casual-org-keyword-screenshot.png
+  casual-20260831.2129/images/casual-org-property-drawer-screenshot.png
+  casual-20260831.2129/images/casual-org-property-screenshot.png
+  casual-20260831.2129/images/casual-org-settings-screenshot.png
+  casual-20260831.2129/images/casual-org-table-fedit-screenshot.png
+  casual-20260831.2129/images/casual-org-table-layout-screenshot.png
+  casual-20260831.2129/images/casual-org-table-screenshot.png
+  casual-20260831.2129/images/casual-org-tblfm-screenshot.png
+  casual-20260831.2129/images/casual-re-builder-screenshot.png
+  casual-20260831.2129/images/casual-timezone-planner-screenshot.png
+  casual-20260831.2129/images/casual-timezone-tmenu-screenshot.png
+  casual-20260831.2129/images/default-yellow.png
+Built casual in 15.581s, finished at 2026-09-04T00:18:45+0000

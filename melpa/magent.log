@@ -3,29 +3,138 @@
 From https://github.com/Jamie-Cui/magent
 Updating /mnt/store/melpa/working/magent/
 Checking out 40d8e092ed97024ebd4c496fd1a19eedb8f0225a
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-1022054d655b> (("lisp/magent-acp.el" . "magent-acp.el") ("lisp/magent-action-builtin-doctor.el" . "magent-action-builtin-doctor.el") ("lisp/magent-action-builtins.el" . "magent-action-builtins.el") ("lisp/magent-action-controls.el" . "magent-action-controls.el") ("lisp/magent-action-session-view.el" . "magent-action-session-view.el") ("lisp/magent-action-session.el" . "magent-action-session.el") ("lisp/magent-action-skills.el" . "magent-action-skills.el") ("lisp/magent-action.el" . "magent-action.el") ("lisp/magent-agent-builtins.el" . "magent-agent-builtins.el") ("lisp/magent-agent-file.el" . "magent-agent-file.el") ("lisp/magent-agent-info.el" . "magent-agent-info.el") ("lisp/magent-agent-job.el" . "magent-agent-job.el") ("lisp/magent-agent-loop.el" . "magent-agent-loop.el") ("lisp/magent-agent-registry.el" . "magent-agent-registry.el") ("lisp/magent-agent-shell.el" . "magent-agent-shell.el") ("lisp/magent-agent.el" . "magent-agent.el") ("lisp/magent-approval.el" . "magent-approval.el") ("lisp/magent-audit.el" . "magent-audit.el") ("lisp/magent-capability.el" . "magent-capability.el") ("lisp/magent-config.el" . "magent-config.el") ("lisp/magent-file-loader.el" . "magent-file-loader.el") ("lisp/magent-json.el" . "magent-json.el") ("lisp/magent-ledger.el" . "magent-ledger.el") ("lisp/magent-lifecycle-events.el" . "magent-lifecycle-events.el") ("lisp/magent-log.el" . "magent-log.el") ("lisp/magent-permission.el" . "magent-permission.el") ("lisp/magent-project-instructions.el" . "magent-project-instructions.el") ("lisp/magent-prompt.el" . "magent-prompt.el") ("lisp/magent-protocol.el" . "magent-protocol.el") ("lisp/magent-redaction.el" . "magent-redaction.el") ("lisp/magent-runtime-api.el" . "magent-runtime-api.el") ("lisp/magent-runtime-queue.el" . "magent-runtime-queue.el") ("lisp/magent-runtime.el" . "magent-runtime.el") ("lisp/magent-sampling-gptel.el" . "magent-sampling-gptel.el") ("lisp/magent-sampling.el" . "magent-sampling.el") ("lisp/magent-session.el" . "magent-session.el") ("lisp/magent-skill-manager.el" . "magent-skill-manager.el") ("lisp/magent-skills.el" . "magent-skills.el") ("lisp/magent-tool-orchestrator.el" . "magent-tool-orchestrator.el") ("lisp/magent-tools.el" . "magent-tools.el") ("lisp/magent.el" . "magent.el") ("prompts" . "prompts") ("skills" . "skills")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-1022054d655b> (("lisp/magent-acp.el" . "magent-acp.el") ("lisp/magent-action-builtin-doctor.el" . "magent-action-builtin-doctor.el") ("lisp/magent-action-builtins.el" . "magent-action-builtins.el") ("lisp/magent-action-controls.el" . "magent-action-controls.el") ("lisp/magent-action-session-view.el" . "magent-action-session-view.el") ("lisp/magent-action-session.el" . "magent-action-session.el") ("lisp/magent-action-skills.el" . "magent-action-skills.el") ("lisp/magent-action.el" . "magent-action.el") ("lisp/magent-agent-builtins.el" . "magent-agent-builtins.el") ("lisp/magent-agent-file.el" . "magent-agent-file.el") ("lisp/magent-agent-info.el" . "magent-agent-info.el") ("lisp/magent-agent-job.el" . "magent-agent-job.el") ("lisp/magent-agent-loop.el" . "magent-agent-loop.el") ("lisp/magent-agent-registry.el" . "magent-agent-registry.el") ("lisp/magent-agent-shell.el" . "magent-agent-shell.el") ("lisp/magent-agent.el" . "magent-agent.el") ("lisp/magent-approval.el" . "magent-approval.el") ("lisp/magent-audit.el" . "magent-audit.el") ("lisp/magent-capability.el" . "magent-capability.el") ("lisp/magent-config.el" . "magent-config.el") ("lisp/magent-file-loader.el" . "magent-file-loader.el") ("lisp/magent-json.el" . "magent-json.el") ("lisp/magent-ledger.el" . "magent-ledger.el") ("lisp/magent-lifecycle-events.el" . "magent-lifecycle-events.el") ("lisp/magent-log.el" . "magent-log.el") ("lisp/magent-permission.el" . "magent-permission.el") ("lisp/magent-project-instructions.el" . "magent-project-instructions.el") ("lisp/magent-prompt.el" . "magent-prompt.el") ("lisp/magent-protocol.el" . "magent-protocol.el") ("lisp/magent-redaction.el" . "magent-redaction.el") ("lisp/magent-runtime-api.el" . "magent-runtime-api.el") ("lisp/magent-runtime-queue.el" . "magent-runtime-queue.el") ("lisp/magent-runtime.el" . "magent-runtime.el") ("lisp/magent-sampling-gptel.el" . "magent-sampling-gptel.el") ("lisp/magent-sampling.el" . "magent-sampling.el") ("lisp/magent-session.el" . "magent-session.el") ("lisp/magent-skill-manager.el" . "magent-skill-manager.el") ("lisp/magent-skills.el" . "magent-skills.el") ("lisp/magent-tool-orchestrator.el" . "magent-tool-orchestrator.el") ("lisp/magent-tools.el" . "magent-tools.el") ("lisp/magent.el" . "magent.el") ("prompts" . "prompts") ("skills" . "skills")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-1022054d655b>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "magent")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "magent")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "magent")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("magent")
-  eval((package-build-archive "magent") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-buildSymbol's function definition is void: package-build--build-multi-file-package
-.el" "--eval" "(package-build-archive \"magent\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magent/
+  to /tmp/magent-oCOJVM/magent-20260902.503/
+  ! lisp/magent-acp.el -> magent-acp.el
+  ! lisp/magent-action-builtin-doctor.el -> magent-action-builtin-doctor.el
+  ! lisp/magent-action-builtins.el -> magent-action-builtins.el
+  ! lisp/magent-action-controls.el -> magent-action-controls.el
+  ! lisp/magent-action-session-view.el -> magent-action-session-view.el
+  ! lisp/magent-action-session.el -> magent-action-session.el
+  ! lisp/magent-action-skills.el -> magent-action-skills.el
+  ! lisp/magent-action.el -> magent-action.el
+  ! lisp/magent-agent-builtins.el -> magent-agent-builtins.el
+  ! lisp/magent-agent-file.el -> magent-agent-file.el
+  ! lisp/magent-agent-info.el -> magent-agent-info.el
+  ! lisp/magent-agent-job.el -> magent-agent-job.el
+  ! lisp/magent-agent-loop.el -> magent-agent-loop.el
+  ! lisp/magent-agent-registry.el -> magent-agent-registry.el
+  ! lisp/magent-agent-shell.el -> magent-agent-shell.el
+  ! lisp/magent-agent.el -> magent-agent.el
+  ! lisp/magent-approval.el -> magent-approval.el
+  ! lisp/magent-audit.el -> magent-audit.el
+  ! lisp/magent-capability.el -> magent-capability.el
+  ! lisp/magent-config.el -> magent-config.el
+  ! lisp/magent-file-loader.el -> magent-file-loader.el
+  ! lisp/magent-json.el -> magent-json.el
+  ! lisp/magent-ledger.el -> magent-ledger.el
+  ! lisp/magent-lifecycle-events.el -> magent-lifecycle-events.el
+  ! lisp/magent-log.el -> magent-log.el
+  ! lisp/magent-permission.el -> magent-permission.el
+  ! lisp/magent-project-instructions.el -> magent-project-instructions.el
+  ! lisp/magent-prompt.el -> magent-prompt.el
+  ! lisp/magent-protocol.el -> magent-protocol.el
+  ! lisp/magent-redaction.el -> magent-redaction.el
+  ! lisp/magent-runtime-api.el -> magent-runtime-api.el
+  ! lisp/magent-runtime-queue.el -> magent-runtime-queue.el
+  ! lisp/magent-runtime.el -> magent-runtime.el
+  ! lisp/magent-sampling-gptel.el -> magent-sampling-gptel.el
+  ! lisp/magent-sampling.el -> magent-sampling.el
+  ! lisp/magent-session.el -> magent-session.el
+  ! lisp/magent-skill-manager.el -> magent-skill-manager.el
+  ! lisp/magent-skills.el -> magent-skills.el
+  ! lisp/magent-tool-orchestrator.el -> magent-tool-orchestrator.el
+  ! lisp/magent-tools.el -> magent-tools.el
+  ! lisp/magent.el -> magent.el
+    prompts => prompts
+    skills => skills
+Created magent-20260902.503.tar containing:
+  magent-20260902.503/
+  magent-20260902.503/magent-acp.el
+  magent-20260902.503/magent-action-builtin-doctor.el
+  magent-20260902.503/magent-action-builtins.el
+  magent-20260902.503/magent-action-controls.el
+  magent-20260902.503/magent-action-session-view.el
+  magent-20260902.503/magent-action-session.el
+  magent-20260902.503/magent-action-skills.el
+  magent-20260902.503/magent-action.el
+  magent-20260902.503/magent-agent-builtins.el
+  magent-20260902.503/magent-agent-file.el
+  magent-20260902.503/magent-agent-info.el
+  magent-20260902.503/magent-agent-job.el
+  magent-20260902.503/magent-agent-loop.el
+  magent-20260902.503/magent-agent-registry.el
+  magent-20260902.503/magent-agent-shell.el
+  magent-20260902.503/magent-agent.el
+  magent-20260902.503/magent-approval.el
+  magent-20260902.503/magent-audit.el
+  magent-20260902.503/magent-capability.el
+  magent-20260902.503/magent-config.el
+  magent-20260902.503/magent-file-loader.el
+  magent-20260902.503/magent-json.el
+  magent-20260902.503/magent-ledger.el
+  magent-20260902.503/magent-lifecycle-events.el
+  magent-20260902.503/magent-log.el
+  magent-20260902.503/magent-permission.el
+  magent-20260902.503/magent-pkg.el
+  magent-20260902.503/magent-project-instructions.el
+  magent-20260902.503/magent-prompt.el
+  magent-20260902.503/magent-protocol.el
+  magent-20260902.503/magent-redaction.el
+  magent-20260902.503/magent-runtime-api.el
+  magent-20260902.503/magent-runtime-queue.el
+  magent-20260902.503/magent-runtime.el
+  magent-20260902.503/magent-sampling-gptel.el
+  magent-20260902.503/magent-sampling.el
+  magent-20260902.503/magent-session.el
+  magent-20260902.503/magent-skill-manager.el
+  magent-20260902.503/magent-skills.el
+  magent-20260902.503/magent-tool-orchestrator.el
+  magent-20260902.503/magent-tools.el
+  magent-20260902.503/magent.el
+  magent-20260902.503/prompts/
+  magent-20260902.503/prompts/actions/
+  magent-20260902.503/prompts/actions/explain.org
+  magent-20260902.503/prompts/actions/fix.org
+  magent-20260902.503/prompts/actions/init.org
+  magent-20260902.503/prompts/actions/review.org
+  magent-20260902.503/prompts/actions/test.org
+  magent-20260902.503/prompts/agents/
+  magent-20260902.503/prompts/agents/build.org
+  magent-20260902.503/prompts/agents/compaction.org
+  magent-20260902.503/prompts/agents/explore.org
+  magent-20260902.503/prompts/agents/summary.org
+  magent-20260902.503/prompts/agents/title.org
+  magent-20260902.503/prompts/internal/
+  magent-20260902.503/prompts/internal/active-skills.org
+  magent-20260902.503/prompts/internal/additional-instruction.org
+  magent-20260902.503/prompts/internal/doctor-system.org
+  magent-20260902.503/prompts/internal/doctor-user.org
+  magent-20260902.503/prompts/internal/emacs-diagnosis.org
+  magent-20260902.503/prompts/internal/project-context.org
+  magent-20260902.503/prompts/internal/project-instructions.org
+  magent-20260902.503/prompts/internal/runtime-policy.org
+  magent-20260902.503/prompts/internal/session-compaction.org
+  magent-20260902.503/prompts/manifest.txt
+  magent-20260902.503/prompts/system.org
+  magent-20260902.503/skills/
+  magent-20260902.503/skills/emacs-buffer-editing/
+  magent-20260902.503/skills/emacs-buffer-editing/SKILL.md
+  magent-20260902.503/skills/emacs-command-variable-introspection/
+  magent-20260902.503/skills/emacs-command-variable-introspection/SKILL.md
+  magent-20260902.503/skills/emacs-config-reload/
+  magent-20260902.503/skills/emacs-config-reload/SKILL.md
+  magent-20260902.503/skills/emacs-hook-debugging/
+  magent-20260902.503/skills/emacs-hook-debugging/SKILL.md
+  magent-20260902.503/skills/emacs-runtime-inspection/
+  magent-20260902.503/skills/emacs-runtime-inspection/SKILL.md
+  magent-20260902.503/skills/lsp-workspace-workflow/
+  magent-20260902.503/skills/lsp-workspace-workflow/SKILL.md
+  magent-20260902.503/skills/magit-workflow/
+  magent-20260902.503/skills/magit-workflow/SKILL.md
+  magent-20260902.503/skills/org-structure-workflow/
+  magent-20260902.503/skills/org-structure-workflow/SKILL.md
+  magent-20260902.503/skills/project-workflow/
+  magent-20260902.503/skills/project-workflow/SKILL.md
+Built magent in 5.111s, finished at 2026-09-04T01:02:32+0000

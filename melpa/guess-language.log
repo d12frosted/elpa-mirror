@@ -3,29 +3,148 @@
 From https://github.com/tmalsburg/guess-language.el
 Updating /mnt/store/melpa/working/guess-language/
 Checking out f7f74d50b11e090d7543daa0dfbf273820c006c7
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10f5e65aa75e> (("guess-language.el" . "guess-language.el") ("trigrams/README.org" . "README.org") ("trigrams/af" . "af") ("trigrams/ar" . "ar") ("trigrams/az" . "az") ("trigrams/bg" . "bg") ("trigrams/ca" . "ca") ("trigrams/ceb" . "ceb") ("trigrams/cs" . "cs") ("trigrams/cy" . "cy") ("trigrams/da" . "da") ("trigrams/de" . "de") ("trigrams/en" . "en") ("trigrams/eo" . "eo") ("trigrams/es" . "es") ("trigrams/et" . "et") ("trigrams/eu" . "eu") ("trigrams/fa" . "fa") ("trigrams/fi" . "fi") ("trigrams/fr" . "fr") ("trigrams/ha" . "ha") ("trigrams/haw" . "haw") ("trigrams/hi" . "hi") ("trigrams/hr" . "hr") ("trigrams/hu" . "hu") ("trigrams/id" . "id") ("trigrams/is" . "is") ("trigrams/it" . "it") ("trigrams/kk" . "kk") ("trigrams/ky" . "ky") ("trigrams/la" . "la") ("trigrams/lt" . "lt") ("trigrams/lv" . "lv") ("trigrams/mk" . "mk") ("trigrams/mn" . "mn") ("trigrams/nb" . "nb") ("trigrams/ne" . "ne") ("trigrams/nl" . "nl") ("trigrams/nr" . "nr") ("trigrams/nso" . "nso") ("trigrams/pl" . "pl") ("trigrams/ps" . "ps") ("trigrams/pt" . "pt") ("trigrams/pt_BR" . "pt_BR") ("trigrams/pt_PT" . "pt_PT") ("trigrams/ro" . "ro") ("trigrams/ru" . "ru") ("trigrams/sk" . "sk") ("trigrams/sl" . "sl") ("trigrams/so" . "so") ("trigrams/sq" . "sq") ("trigrams/sr" . "sr") ("trigrams/sr_LAT" . "sr_LAT") ("trigrams/ss" . "ss") ("trigrams/st" . "st") ("trigrams/sv" . "sv") ("trigrams/sw" . "sw") ("trigrams/tl" . "tl") ("trigrams/tlh" . "tlh") ("trigrams/tn" . "tn") ("trigrams/tr" . "tr") ("trigrams/ts" . "ts") ("trigrams/uk" . "uk") ("trigrams/ur" . "ur") ("trigrams/uz" . "uz") ("trigrams/ve" . "ve") ("trigrams/vi" . "vi") ("trigrams/xh" . "xh") ("trigrams/zu" . "zu")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10f5e65aa75e> (("guess-language.el" . "guess-language.el") ("trigrams/README.org" . "README.org") ("trigrams/af" . "af") ("trigrams/ar" . "ar") ("trigrams/az" . "az") ("trigrams/bg" . "bg") ("trigrams/ca" . "ca") ("trigrams/ceb" . "ceb") ("trigrams/cs" . "cs") ("trigrams/cy" . "cy") ("trigrams/da" . "da") ("trigrams/de" . "de") ("trigrams/en" . "en") ("trigrams/eo" . "eo") ("trigrams/es" . "es") ("trigrams/et" . "et") ("trigrams/eu" . "eu") ("trigrams/fa" . "fa") ("trigrams/fi" . "fi") ("trigrams/fr" . "fr") ("trigrams/ha" . "ha") ("trigrams/haw" . "haw") ("trigrams/hi" . "hi") ("trigrams/hr" . "hr") ("trigrams/hu" . "hu") ("trigrams/id" . "id") ("trigrams/is" . "is") ("trigrams/it" . "it") ("trigrams/kk" . "kk") ("trigrams/ky" . "ky") ("trigrams/la" . "la") ("trigrams/lt" . "lt") ("trigrams/lv" . "lv") ("trigrams/mk" . "mk") ("trigrams/mn" . "mn") ("trigrams/nb" . "nb") ("trigrams/ne" . "ne") ("trigrams/nl" . "nl") ("trigrams/nr" . "nr") ("trigrams/nso" . "nso") ("trigrams/pl" . "pl") ("trigrams/ps" . "ps") ("trigrams/pt" . "pt") ("trigrams/pt_BR" . "pt_BR") ("trigrams/pt_PT" . "pt_PT") ("trigrams/ro" . "ro") ("trigrams/ru" . "ru") ("trigrams/sk" . "sk") ("trigrams/sl" . "sl") ("trigrams/so" . "so") ("trigrams/sq" . "sq") ("trigrams/sr" . "sr") ("trigrams/sr_LAT" . "sr_LAT") ("trigrams/ss" . "ss") ("trigrams/st" . "st") ("trigrams/sv" . "sv") ("trigrams/sw" . "sw") ("trigrams/tl" . "tl") ("trigrams/tlh" . "tlh") ("trigrams/tn" . "tn") ("trigrams/tr" . "tr") ("trigrams/ts" . "ts") ("trigrams/uk" . "uk") ("trigrams/ur" . "ur") ("trigrams/uz" . "uz") ("trigrams/ve" . "ve") ("trigrams/vi" . "vi") ("trigrams/xh" . "xh") ("trigrams/zu" . "zu")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10f5e65aa75e>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "guess-language")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (meSymbol's function definition is void: package-build--build-multi-file-package
-ssage "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "guess-language")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "guess-language")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("guess-language")
-  eval((package-build-archive "guess-language") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"guess-language\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/guess-language/
+  to /tmp/guess-language-HsY22w/guess-language-20260625.628/
+    guess-language.el -> guess-language.el
+  ! trigrams/README.org -> README.org
+  ! trigrams/af -> af
+  ! trigrams/ar -> ar
+  ! trigrams/az -> az
+  ! trigrams/bg -> bg
+  ! trigrams/ca -> ca
+  ! trigrams/ceb -> ceb
+  ! trigrams/cs -> cs
+  ! trigrams/cy -> cy
+  ! trigrams/da -> da
+  ! trigrams/de -> de
+  ! trigrams/en -> en
+  ! trigrams/eo -> eo
+  ! trigrams/es -> es
+  ! trigrams/et -> et
+  ! trigrams/eu -> eu
+  ! trigrams/fa -> fa
+  ! trigrams/fi -> fi
+  ! trigrams/fr -> fr
+  ! trigrams/ha -> ha
+  ! trigrams/haw -> haw
+  ! trigrams/hi -> hi
+  ! trigrams/hr -> hr
+  ! trigrams/hu -> hu
+  ! trigrams/id -> id
+  ! trigrams/is -> is
+  ! trigrams/it -> it
+  ! trigrams/kk -> kk
+  ! trigrams/ky -> ky
+  ! trigrams/la -> la
+  ! trigrams/lt -> lt
+  ! trigrams/lv -> lv
+  ! trigrams/mk -> mk
+  ! trigrams/mn -> mn
+  ! trigrams/nb -> nb
+  ! trigrams/ne -> ne
+  ! trigrams/nl -> nl
+  ! trigrams/nr -> nr
+  ! trigrams/nso -> nso
+  ! trigrams/pl -> pl
+  ! trigrams/ps -> ps
+  ! trigrams/pt -> pt
+  ! trigrams/pt_BR -> pt_BR
+  ! trigrams/pt_PT -> pt_PT
+  ! trigrams/ro -> ro
+  ! trigrams/ru -> ru
+  ! trigrams/sk -> sk
+  ! trigrams/sl -> sl
+  ! trigrams/so -> so
+  ! trigrams/sq -> sq
+  ! trigrams/sr -> sr
+  ! trigrams/sr_LAT -> sr_LAT
+  ! trigrams/ss -> ss
+  ! trigrams/st -> st
+  ! trigrams/sv -> sv
+  ! trigrams/sw -> sw
+  ! trigrams/tl -> tl
+  ! trigrams/tlh -> tlh
+  ! trigrams/tn -> tn
+  ! trigrams/tr -> tr
+  ! trigrams/ts -> ts
+  ! trigrams/uk -> uk
+  ! trigrams/ur -> ur
+  ! trigrams/uz -> uz
+  ! trigrams/ve -> ve
+  ! trigrams/vi -> vi
+  ! trigrams/xh -> xh
+  ! trigrams/zu -> zu
+Created guess-language-20260625.628.tar containing:
+  guess-language-20260625.628/
+  guess-language-20260625.628/README.org
+  guess-language-20260625.628/af
+  guess-language-20260625.628/ar
+  guess-language-20260625.628/az
+  guess-language-20260625.628/bg
+  guess-language-20260625.628/ca
+  guess-language-20260625.628/ceb
+  guess-language-20260625.628/cs
+  guess-language-20260625.628/cy
+  guess-language-20260625.628/da
+  guess-language-20260625.628/de
+  guess-language-20260625.628/en
+  guess-language-20260625.628/eo
+  guess-language-20260625.628/es
+  guess-language-20260625.628/et
+  guess-language-20260625.628/eu
+  guess-language-20260625.628/fa
+  guess-language-20260625.628/fi
+  guess-language-20260625.628/fr
+  guess-language-20260625.628/guess-language-pkg.el
+  guess-language-20260625.628/guess-language.el
+  guess-language-20260625.628/ha
+  guess-language-20260625.628/haw
+  guess-language-20260625.628/hi
+  guess-language-20260625.628/hr
+  guess-language-20260625.628/hu
+  guess-language-20260625.628/id
+  guess-language-20260625.628/is
+  guess-language-20260625.628/it
+  guess-language-20260625.628/kk
+  guess-language-20260625.628/ky
+  guess-language-20260625.628/la
+  guess-language-20260625.628/lt
+  guess-language-20260625.628/lv
+  guess-language-20260625.628/mk
+  guess-language-20260625.628/mn
+  guess-language-20260625.628/nb
+  guess-language-20260625.628/ne
+  guess-language-20260625.628/nl
+  guess-language-20260625.628/nr
+  guess-language-20260625.628/nso
+  guess-language-20260625.628/pl
+  guess-language-20260625.628/ps
+  guess-language-20260625.628/pt
+  guess-language-20260625.628/pt_BR
+  guess-language-20260625.628/pt_PT
+  guess-language-20260625.628/ro
+  guess-language-20260625.628/ru
+  guess-language-20260625.628/sk
+  guess-language-20260625.628/sl
+  guess-language-20260625.628/so
+  guess-language-20260625.628/sq
+  guess-language-20260625.628/sr
+  guess-language-20260625.628/sr_LAT
+  guess-language-20260625.628/ss
+  guess-language-20260625.628/st
+  guess-language-20260625.628/sv
+  guess-language-20260625.628/sw
+  guess-language-20260625.628/tl
+  guess-language-20260625.628/tlh
+  guess-language-20260625.628/tn
+  guess-language-20260625.628/tr
+  guess-language-20260625.628/ts
+  guess-language-20260625.628/uk
+  guess-language-20260625.628/ur
+  guess-language-20260625.628/uz
+  guess-language-20260625.628/ve
+  guess-language-20260625.628/vi
+  guess-language-20260625.628/xh
+  guess-language-20260625.628/zu
+Built guess-language in 4.037s, finished at 2026-09-04T00:47:48+0000

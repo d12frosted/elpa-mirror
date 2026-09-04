@@ -3,29 +3,92 @@
 From https://github.com/emacs-helm/helm
 Updating /mnt/store/melpa/working/helm/
 Checking out 3b93c42c8f1e360daf39695d664beca54dc3d5fe
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10e9a6886d18> (("helm-adaptive.el" . "helm-adaptive.el") ("helm-bookmark.el" . "helm-bookmark.el") ("helm-buffers.el" . "helm-buffers.el") ("helm-color.el" . "helm-color.el") ("helm-command.el" . "helm-command.el") ("helm-dabbrev.el" . "helm-dabbrev.el") ("helm-easymenu.el" . "helm-easymenu.el") ("helm-elisp.el" . "helm-elisp.el") ("helm-epa.el" . "helm-epa.el") ("helm-eshell.el" . "helm-eshell.el") ("helm-eval.el" . "helm-eval.el") ("helm-external.el" . "helm-external.el") ("helm-fd.el" . "helm-fd.el") ("helm-files.el" . "helm-files.el") ("helm-find.el" . "helm-find.el") ("helm-font.el" . "helm-font.el") ("helm-for-files.el" . "helm-for-files.el") ("helm-global-bindings.el" . "helm-global-bindings.el") ("helm-grep.el" . "helm-grep.el") ("helm-help.el" . "helm-help.el") ("helm-id-utils.el" . "helm-id-utils.el") ("helm-imenu.el" . "helm-imenu.el") ("helm-info.el" . "helm-info.el") ("helm-locate.el" . "helm-locate.el") ("helm-man.el" . "helm-man.el") ("helm-misc.el" . "helm-misc.el") ("helm-mode.el" . "helm-mode.el") ("helm-net.el" . "helm-net.el") ("helm-occur.el" . "helm-occur.el") ("helm-packages.el" . "helm-packages.el") ("helm-regexp.el" . "helm-regexp.el") ("helm-ring.el" . "helm-ring.el") ("helm-semantic.el" . "helm-semantic.el") ("helm-sys.el" . "helm-sys.el") ("helm-tags.el" . "helm-tags.el") ("helm-types.el" . "helm-types.el") ("helm-utils.el" . "helm-utils.el") ("helm-x-files.el" . "helm-x-files.el") ("helm-x-icons.el" . "helm-x-icons.el") ("helm.el" . "helm.el") ("emacs-helm.sh" . "emacs-helm.sh")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10e9a6886d18> (("helm-adaptive.el" . "helm-adaptive.el") ("helm-bookmark.el" . "helm-bookmark.el") ("helm-buffers.el" . "helm-buffers.el") ("helm-color.el" . "helm-color.el") ("helm-command.el" . "helm-command.el") ("helm-dabbrev.el" . "helm-dabbrev.el") ("helm-easymenu.el" . "helm-easymenu.el") ("helm-elisp.el" . "helm-elisp.el") ("helm-epa.el" . "helm-epa.el") ("helm-eshell.el" . "helm-eshell.el") ("helm-eval.el" . "helm-eval.el") ("helm-external.el" . "helm-external.el") ("helm-fd.el" . "helm-fd.el") ("helm-files.el" . "helm-files.el") ("helm-find.el" . "helm-find.el") ("helm-font.el" . "helm-font.el") ("helm-for-files.el" . "helm-for-files.el") ("helm-global-bindings.el" . "helm-global-bindings.el") ("helm-grep.el" . "helm-grep.el") ("helm-help.el" . "helm-help.el") ("helm-id-utils.el" . "helm-id-utils.el") ("helm-imenu.el" . "helm-imenu.el") ("helm-info.el" . "helm-info.el") ("helm-locate.el" . "helm-locate.el") ("helm-man.el" . "helm-man.el") ("helm-misc.el" . "helm-misc.el") ("helm-mode.el" . "helm-mode.el") ("helm-net.el" . "helm-net.el") ("helm-occur.el" . "helm-occur.el") ("helm-packages.el" . "helm-packages.el") ("helm-regexp.el" . "helm-regexp.el") ("helm-ring.el" . "helm-ring.el") ("helm-semantic.el" . "helm-semantic.el") ("helm-sys.el" . "helm-sys.el") ("helm-tags.el" . "helm-tags.el") ("helm-types.el" . "helm-types.el") ("helm-utils.el" . "helm-utils.el") ("helm-x-files.el" . "helm-x-files.el") ("helm-x-icons.el" . "helm-x-icons.el") ("helm.el" . "helm.el") ("emacs-helm.sh" . "emacs-helm.sh")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10e9a6886d18>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "helm")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-stringSymbol's function definition is void: package-build--build-multi-file-package
- "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "helm")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "helm")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("helm")
-  eval((package-build-archive "helm") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"helm\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm/
+  to /tmp/helm-fWvtBb/helm-20260902.1428/
+    helm-adaptive.el -> helm-adaptive.el
+    helm-bookmark.el -> helm-bookmark.el
+    helm-buffers.el -> helm-buffers.el
+    helm-color.el -> helm-color.el
+    helm-command.el -> helm-command.el
+    helm-dabbrev.el -> helm-dabbrev.el
+    helm-easymenu.el -> helm-easymenu.el
+    helm-elisp.el -> helm-elisp.el
+    helm-epa.el -> helm-epa.el
+    helm-eshell.el -> helm-eshell.el
+    helm-eval.el -> helm-eval.el
+    helm-external.el -> helm-external.el
+    helm-fd.el -> helm-fd.el
+    helm-files.el -> helm-files.el
+    helm-find.el -> helm-find.el
+    helm-font.el -> helm-font.el
+    helm-for-files.el -> helm-for-files.el
+    helm-global-bindings.el -> helm-global-bindings.el
+    helm-grep.el -> helm-grep.el
+    helm-help.el -> helm-help.el
+    helm-id-utils.el -> helm-id-utils.el
+    helm-imenu.el -> helm-imenu.el
+    helm-info.el -> helm-info.el
+    helm-locate.el -> helm-locate.el
+    helm-man.el -> helm-man.el
+    helm-misc.el -> helm-misc.el
+    helm-mode.el -> helm-mode.el
+    helm-net.el -> helm-net.el
+    helm-occur.el -> helm-occur.el
+    helm-packages.el -> helm-packages.el
+    helm-regexp.el -> helm-regexp.el
+    helm-ring.el -> helm-ring.el
+    helm-semantic.el -> helm-semantic.el
+    helm-sys.el -> helm-sys.el
+    helm-tags.el -> helm-tags.el
+    helm-types.el -> helm-types.el
+    helm-utils.el -> helm-utils.el
+    helm-x-files.el -> helm-x-files.el
+    helm-x-icons.el -> helm-x-icons.el
+    helm.el -> helm.el
+    emacs-helm.sh -> emacs-helm.sh
+Created helm-20260902.1428.tar containing:
+  helm-20260902.1428/
+  helm-20260902.1428/emacs-helm.sh
+  helm-20260902.1428/helm-adaptive.el
+  helm-20260902.1428/helm-bookmark.el
+  helm-20260902.1428/helm-buffers.el
+  helm-20260902.1428/helm-color.el
+  helm-20260902.1428/helm-command.el
+  helm-20260902.1428/helm-dabbrev.el
+  helm-20260902.1428/helm-easymenu.el
+  helm-20260902.1428/helm-elisp.el
+  helm-20260902.1428/helm-epa.el
+  helm-20260902.1428/helm-eshell.el
+  helm-20260902.1428/helm-eval.el
+  helm-20260902.1428/helm-external.el
+  helm-20260902.1428/helm-fd.el
+  helm-20260902.1428/helm-files.el
+  helm-20260902.1428/helm-find.el
+  helm-20260902.1428/helm-font.el
+  helm-20260902.1428/helm-for-files.el
+  helm-20260902.1428/helm-global-bindings.el
+  helm-20260902.1428/helm-grep.el
+  helm-20260902.1428/helm-help.el
+  helm-20260902.1428/helm-id-utils.el
+  helm-20260902.1428/helm-imenu.el
+  helm-20260902.1428/helm-info.el
+  helm-20260902.1428/helm-locate.el
+  helm-20260902.1428/helm-man.el
+  helm-20260902.1428/helm-misc.el
+  helm-20260902.1428/helm-mode.el
+  helm-20260902.1428/helm-net.el
+  helm-20260902.1428/helm-occur.el
+  helm-20260902.1428/helm-packages.el
+  helm-20260902.1428/helm-pkg.el
+  helm-20260902.1428/helm-regexp.el
+  helm-20260902.1428/helm-ring.el
+  helm-20260902.1428/helm-semantic.el
+  helm-20260902.1428/helm-sys.el
+  helm-20260902.1428/helm-tags.el
+  helm-20260902.1428/helm-types.el
+  helm-20260902.1428/helm-utils.el
+  helm-20260902.1428/helm-x-files.el
+  helm-20260902.1428/helm-x-icons.el
+  helm-20260902.1428/helm.el
+Built helm in 6.228s, finished at 2026-09-04T00:48:44+0000

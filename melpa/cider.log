@@ -3,29 +3,120 @@
 From https://github.com/clojure-emacs/cider
 Updating /mnt/store/melpa/working/cider/
 Checking out cbd145c8896aae76483079ec446bc896fd419e53
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10ede5d67b3f> (("lisp/cider-apropos.el" . "cider-apropos.el") ("lisp/cider-browse-ns.el" . "cider-browse-ns.el") ("lisp/cider-browse-spec.el" . "cider-browse-spec.el") ("lisp/cider-cheatsheet.el" . "cider-cheatsheet.el") ("lisp/cider-classpath.el" . "cider-classpath.el") ("lisp/cider-client.el" . "cider-client.el") ("lisp/cider-cljs.el" . "cider-cljs.el") ("lisp/cider-clojuredocs.el" . "cider-clojuredocs.el") ("lisp/cider-common.el" . "cider-common.el") ("lisp/cider-compilation.el" . "cider-compilation.el") ("lisp/cider-completion-context.el" . "cider-completion-context.el") ("lisp/cider-completion.el" . "cider-completion.el") ("lisp/cider-connection.el" . "cider-connection.el") ("lisp/cider-debug.el" . "cider-debug.el") ("lisp/cider-doc.el" . "cider-doc.el") ("lisp/cider-docstring.el" . "cider-docstring.el") ("lisp/cider-doctor.el" . "cider-doctor.el") ("lisp/cider-eldoc.el" . "cider-eldoc.el") ("lisp/cider-endpoint.el" . "cider-endpoint.el") ("lisp/cider-enlighten.el" . "cider-enlighten.el") ("lisp/cider-eval.el" . "cider-eval.el") ("lisp/cider-find.el" . "cider-find.el") ("lisp/cider-format.el" . "cider-format.el") ("lisp/cider-history.el" . "cider-history.el") ("lisp/cider-inspector.el" . "cider-inspector.el") ("lisp/cider-inspiration.el" . "cider-inspiration.el") ("lisp/cider-jack-in.el" . "cider-jack-in.el") ("lisp/cider-log.el" . "cider-log.el") ("lisp/cider-macroexpansion.el" . "cider-macroexpansion.el") ("lisp/cider-macrostep.el" . "cider-macrostep.el") ("lisp/cider-mode.el" . "cider-mode.el") ("lisp/cider-ns-state.el" . "cider-ns-state.el") ("lisp/cider-ns.el" . "cider-ns.el") ("lisp/cider-overlays.el" . "cider-overlays.el") ("lisp/cider-popup.el" . "cider-popup.el") ("lisp/cider-profile.el" . "cider-profile.el") ("lisp/cider-repl.el" . "cider-repl.el") ("lisp/cider-resolve.el" . "cider-resolve.el") ("lisp/cider-scratch.el" . "cider-scratch.el") ("lisp/cider-selector.el" . "cider-selector.el") ("lisp/cider-session.el" . "cider-session.el") ("lisp/cider-stacktrace.el" . "cider-stacktrace.el") ("lisp/cider-tap.el" . "cider-tap.el") ("lisp/cider-test.el" . "cider-test.el") ("lisp/cider-tracing.el" . "cider-tracing.el") ("lisp/cider-tree-view.el" . "cider-tree-view.el") ("lisp/cider-util.el" . "cider-util.el") ("lisp/cider-xref-backend.el" . "cider-xref-backend.el") ("lisp/cider-xref-source.el" . "cider-xref-source.el") ("lisp/cider-xref-tree.el" . "cider-xref-tree.el") ("lisp/cider-xref.el" . "cider-xref.el") ("lisp/cider.el" . "cider.el") ("lisp/nrepl-bencode.el" . "nrepl-bencode.el") ("lisp/nrepl-client.el" . "nrepl-client.el") ("lisp/nrepl-dict.el" . "nrepl-dict.el")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10ede5d67b3f> (("lisp/cider-apropos.el" . "cider-apropos.el") ("lisp/cider-browse-ns.el" . "cider-browse-ns.el") ("lisp/cider-browse-spec.el" . "cider-browse-spec.el") ("lisp/cider-cheatsheet.el" . "cider-cheatsheet.el") ("lisp/cider-classpath.el" . "cider-classpath.el") ("lisp/cider-client.el" . "cider-client.el") ("lisp/cider-cljs.el" . "cider-cljs.el") ("lisp/cider-clojuredocs.el" . "cider-clojuredocs.el") ("lisp/cider-common.el" . "cider-common.el") ("lisp/cider-compilation.el" . "cider-compilation.el") ("lisp/cider-completion-context.el" . "cider-completion-context.el") ("lisp/cider-completion.el" . "cider-completion.el") ("lisp/cider-connection.el" . "cider-connection.el") ("lisp/cider-debug.el" . "cider-debug.el") ("lisp/cider-doc.el" . "cider-doc.el") ("lisp/cider-docstring.el" . "cider-docstring.el") ("lisp/cider-doctor.el" . "cider-doctor.el") ("lisp/cider-eldoc.el" . "cider-eldoc.el") ("lisp/cider-endpoint.el" . "cider-endpoint.el") ("lisp/cider-enlighten.el" . "cider-enlighten.el") ("lisp/cider-eval.el" . "cider-eval.el") ("lisp/cider-find.el" . "cider-find.el") ("lisp/cider-format.el" . "cider-format.el") ("lisp/cider-history.el" . "cider-history.el") ("lisp/cider-inspector.el" . "cider-inspector.el") ("lisp/cider-inspiration.el" . "cider-inspiration.el") ("lisp/cider-jack-in.el" . "cider-jack-in.el") ("lisp/cider-log.el" . "cider-log.el") ("lisp/cider-macroexpansion.el" . "cider-macroexpansion.el") ("lisp/cider-macrostep.el" . "cider-macrostep.el") ("lisp/cider-mode.el" . "cider-mode.el") ("lisp/cider-ns-state.el" . "cider-ns-state.el") ("lisp/cider-ns.el" . "cider-ns.el") ("lisp/cider-overlays.el" . "cider-overlays.el") ("lisp/cider-popup.el" . "cider-popup.el") ("lisp/cider-profile.el" . "cider-profile.el") ("lisp/cider-repl.el" . "cider-repl.el") ("lisp/cider-resolve.el" . "cider-resolve.el") ("lisp/cider-scratch.el" . "cider-scratch.el") ("lisp/cider-selector.el" . "cider-selector.el") ("lisp/cider-session.el" . "cider-session.el") ("lisp/cider-stacktrace.el" . "cider-stacktrace.el") ("lisp/cider-tap.el" . "cider-tap.el") ("lisp/cider-test.el" . "cider-test.el") ("lisp/cider-tracing.el" . "cider-tracing.el") ("lisp/cider-tree-view.el" . "cider-tree-view.el") ("lisp/cider-util.el" . "cider-util.el") ("lisp/cider-xref-backend.el" . "cider-xref-backend.el") ("lisp/cider-xref-source.el" . "cider-xref-source.el") ("lisp/cider-xref-tree.el" . "cider-xref-tree.el") ("lisp/cider-xref.el" . "cider-xref.el") ("lisp/cider.el" . "cider.el") ("lisp/nrepl-bencode.el" . "nrepl-bencode.el") ("lisp/nrepl-client.el" . "nrepl-client.el") ("lisp/nrepl-dict.el" . "nrepl-dict.el")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10ede5d67b3f>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "cider")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "cider")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "cider")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("cider")
-  eval((package-build-archive "cider") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-mSymbol's function definition is void: package-build--build-multi-file-package
-ulti-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"cider\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cider/
+  to /tmp/cider-7SVM93/cider-20260903.952/
+  ! lisp/cider-apropos.el -> cider-apropos.el
+  ! lisp/cider-browse-ns.el -> cider-browse-ns.el
+  ! lisp/cider-browse-spec.el -> cider-browse-spec.el
+  ! lisp/cider-cheatsheet.el -> cider-cheatsheet.el
+  ! lisp/cider-classpath.el -> cider-classpath.el
+  ! lisp/cider-client.el -> cider-client.el
+  ! lisp/cider-cljs.el -> cider-cljs.el
+  ! lisp/cider-clojuredocs.el -> cider-clojuredocs.el
+  ! lisp/cider-common.el -> cider-common.el
+  ! lisp/cider-compilation.el -> cider-compilation.el
+  ! lisp/cider-completion-context.el -> cider-completion-context.el
+  ! lisp/cider-completion.el -> cider-completion.el
+  ! lisp/cider-connection.el -> cider-connection.el
+  ! lisp/cider-debug.el -> cider-debug.el
+  ! lisp/cider-doc.el -> cider-doc.el
+  ! lisp/cider-docstring.el -> cider-docstring.el
+  ! lisp/cider-doctor.el -> cider-doctor.el
+  ! lisp/cider-eldoc.el -> cider-eldoc.el
+  ! lisp/cider-endpoint.el -> cider-endpoint.el
+  ! lisp/cider-enlighten.el -> cider-enlighten.el
+  ! lisp/cider-eval.el -> cider-eval.el
+  ! lisp/cider-find.el -> cider-find.el
+  ! lisp/cider-format.el -> cider-format.el
+  ! lisp/cider-history.el -> cider-history.el
+  ! lisp/cider-inspector.el -> cider-inspector.el
+  ! lisp/cider-inspiration.el -> cider-inspiration.el
+  ! lisp/cider-jack-in.el -> cider-jack-in.el
+  ! lisp/cider-log.el -> cider-log.el
+  ! lisp/cider-macroexpansion.el -> cider-macroexpansion.el
+  ! lisp/cider-macrostep.el -> cider-macrostep.el
+  ! lisp/cider-mode.el -> cider-mode.el
+  ! lisp/cider-ns-state.el -> cider-ns-state.el
+  ! lisp/cider-ns.el -> cider-ns.el
+  ! lisp/cider-overlays.el -> cider-overlays.el
+  ! lisp/cider-popup.el -> cider-popup.el
+  ! lisp/cider-profile.el -> cider-profile.el
+  ! lisp/cider-repl.el -> cider-repl.el
+  ! lisp/cider-resolve.el -> cider-resolve.el
+  ! lisp/cider-scratch.el -> cider-scratch.el
+  ! lisp/cider-selector.el -> cider-selector.el
+  ! lisp/cider-session.el -> cider-session.el
+  ! lisp/cider-stacktrace.el -> cider-stacktrace.el
+  ! lisp/cider-tap.el -> cider-tap.el
+  ! lisp/cider-test.el -> cider-test.el
+  ! lisp/cider-tracing.el -> cider-tracing.el
+  ! lisp/cider-tree-view.el -> cider-tree-view.el
+  ! lisp/cider-util.el -> cider-util.el
+  ! lisp/cider-xref-backend.el -> cider-xref-backend.el
+  ! lisp/cider-xref-source.el -> cider-xref-source.el
+  ! lisp/cider-xref-tree.el -> cider-xref-tree.el
+  ! lisp/cider-xref.el -> cider-xref.el
+  ! lisp/cider.el -> cider.el
+  ! lisp/nrepl-bencode.el -> nrepl-bencode.el
+  ! lisp/nrepl-client.el -> nrepl-client.el
+  ! lisp/nrepl-dict.el -> nrepl-dict.el
+Created cider-20260903.952.tar containing:
+  cider-20260903.952/
+  cider-20260903.952/cider-apropos.el
+  cider-20260903.952/cider-browse-ns.el
+  cider-20260903.952/cider-browse-spec.el
+  cider-20260903.952/cider-cheatsheet.el
+  cider-20260903.952/cider-classpath.el
+  cider-20260903.952/cider-client.el
+  cider-20260903.952/cider-cljs.el
+  cider-20260903.952/cider-clojuredocs.el
+  cider-20260903.952/cider-common.el
+  cider-20260903.952/cider-compilation.el
+  cider-20260903.952/cider-completion-context.el
+  cider-20260903.952/cider-completion.el
+  cider-20260903.952/cider-connection.el
+  cider-20260903.952/cider-debug.el
+  cider-20260903.952/cider-doc.el
+  cider-20260903.952/cider-docstring.el
+  cider-20260903.952/cider-doctor.el
+  cider-20260903.952/cider-eldoc.el
+  cider-20260903.952/cider-endpoint.el
+  cider-20260903.952/cider-enlighten.el
+  cider-20260903.952/cider-eval.el
+  cider-20260903.952/cider-find.el
+  cider-20260903.952/cider-format.el
+  cider-20260903.952/cider-history.el
+  cider-20260903.952/cider-inspector.el
+  cider-20260903.952/cider-inspiration.el
+  cider-20260903.952/cider-jack-in.el
+  cider-20260903.952/cider-log.el
+  cider-20260903.952/cider-macroexpansion.el
+  cider-20260903.952/cider-macrostep.el
+  cider-20260903.952/cider-mode.el
+  cider-20260903.952/cider-ns-state.el
+  cider-20260903.952/cider-ns.el
+  cider-20260903.952/cider-overlays.el
+  cider-20260903.952/cider-pkg.el
+  cider-20260903.952/cider-popup.el
+  cider-20260903.952/cider-profile.el
+  cider-20260903.952/cider-repl.el
+  cider-20260903.952/cider-resolve.el
+  cider-20260903.952/cider-scratch.el
+  cider-20260903.952/cider-selector.el
+  cider-20260903.952/cider-session.el
+  cider-20260903.952/cider-stacktrace.el
+  cider-20260903.952/cider-tap.el
+  cider-20260903.952/cider-test.el
+  cider-20260903.952/cider-tracing.el
+  cider-20260903.952/cider-tree-view.el
+  cider-20260903.952/cider-util.el
+  cider-20260903.952/cider-xref-backend.el
+  cider-20260903.952/cider-xref-source.el
+  cider-20260903.952/cider-xref-tree.el
+  cider-20260903.952/cider-xref.el
+  cider-20260903.952/cider.el
+  cider-20260903.952/nrepl-bencode.el
+  cider-20260903.952/nrepl-client.el
+  cider-20260903.952/nrepl-dict.el
+Built cider in 8.972s, finished at 2026-09-04T00:19:42+0000

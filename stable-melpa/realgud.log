@@ -3,29 +3,239 @@
 From https://github.com/realgud/realgud
 Updating /mnt/store/melpa/working/realgud/
 Checking out 2075721ad093b4525038f746cc4ad5c013f6d0b8
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-100a292eb73e> (("realgud.el" . "realgud.el") ("realgud/.nosearch" . ".nosearch") ("realgud-recursive-autoloads.el" . "realgud-recursive-autoloads.el") ("realgud/common/attach.el" . "realgud/common/attach.el") ("realgud/common/backtrace-mode.el" . "realgud/common/backtrace-mode.el") ("realgud/common/backtrack-mode.el" . "realgud/common/backtrack-mode.el") ("realgud/common/bp-image-data.el" . "realgud/common/bp-image-data.el") ("realgud/common/bp.el" . "realgud/common/bp.el") ("realgud/common/breakpoint-mode.el" . "realgud/common/breakpoint-mode.el") ("realgud/common/cmds.el" . "realgud/common/cmds.el") ("realgud/common/core.el" . "realgud/common/core.el") ("realgud/common/custom.el" . "realgud/common/custom.el") ("realgud/common/eval.el" . "realgud/common/eval.el") ("realgud/common/file.el" . "realgud/common/file.el") ("realgud/common/follow.el" . "realgud/common/follow.el") ("realgud/common/fringe.el" . "realgud/common/fringe.el") ("realgud/common/helper.el" . "realgud/common/helper.el") ("realgud/common/init.el" . "realgud/common/init.el") ("realgud/common/key.el" . "realgud/common/key.el") ("realgud/common/lang.el" . "realgud/common/lang.el") ("realgud/common/loc.el" . "realgud/common/loc.el") ("realgud/common/locals-mode.el" . "realgud/common/locals-mode.el") ("realgud/common/lochist.el" . "realgud/common/lochist.el") ("realgud/common/menu.el" . "realgud/common/menu.el") ("realgud/common/regexp.el" . "realgud/common/regexp.el") ("realgud/common/reset.el" . "realgud/common/reset.el") ("realgud/common/run.el" . "realgud/common/run.el") ("realgud/common/send.el" . "realgud/common/send.el") ("realgud/common/shortkey.el" . "realgud/common/shortkey.el") ("realgud/common/track-mode.el" . "realgud/common/track-mode.el") ("realgud/common/track.el" . "realgud/common/track.el") ("realgud/common/utils.el" . "realgud/common/utils.el") ("realgud/common/window.el" . "realgud/common/window.el") ("realgud/common/buffer/backtrace.el" . "realgud/common/buffer/backtrace.el") ("realgud/common/buffer/breakpoint.el" . "realgud/common/buffer/breakpoint.el") ("realgud/common/buffer/command.el" . "realgud/common/buffer/command.el") ("realgud/common/buffer/helper.el" . "realgud/common/buffer/helper.el") ("realgud/common/buffer/info.el" . "realgud/common/buffer/info.el") ("realgud/common/buffer/locals.el" . "realgud/common/buffer/locals.el") ("realgud/common/buffer/source.el" . "realgud/common/buffer/source.el") ("realgud/debugger/bashdb/bashdb.el" . "realgud/debugger/bashdb/bashdb.el") ("realgud/debugger/bashdb/core.el" . "realgud/debugger/bashdb/core.el") ("realgud/debugger/bashdb/init.el" . "realgud/debugger/bashdb/init.el") ("realgud/debugger/bashdb/track-mode.el" . "realgud/debugger/bashdb/track-mode.el") ("realgud/debugger/gdb/core.el" . "realgud/debugger/gdb/core.el") ("realgud/debugger/gdb/gdb.el" . "realgud/debugger/gdb/gdb.el") ("realgud/debugger/gdb/init.el" . "realgud/debugger/gdb/init.el") ("realgud/debugger/gdb/track-mode.el" . "realgud/debugger/gdb/track-mode.el") ("realgud/debugger/gub/core.el" . "realgud/debugger/gub/core.el") ("realgud/debugger/gub/gub.el" . "realgud/debugger/gub/gub.el") ("realgud/debugger/gub/init.el" . "realgud/debugger/gub/init.el") ("realgud/debugger/gub/track-mode.el" . "realgud/debugger/gub/track-mode.el") ("realgud/debugger/kshdb/core.el" . "realgud/debugger/kshdb/core.el") ("realgud/debugger/kshdb/init.el" . "realgud/debugger/kshdb/init.el") ("realgud/debugger/kshdb/kshdb.el" . "realgud/debugger/kshdb/kshdb.el") ("realgud/debugger/kshdb/track-mode.el" . "realgud/debugger/kshdb/track-mode.el") ("realgud/debugger/pdb/core.el" . "realgud/debugger/pdb/core.el") ("realgud/debugger/pdb/init.el" . "realgud/debugger/pdb/init.el") ("realgud/debugger/pdb/pdb.el" . "realgud/debugger/pdb/pdb.el") ("realgud/debugger/pdb/track-mode.el" . "realgud/debugger/pdb/track-mode.el") ("realgud/debugger/perldb/core.el" . "realgud/debugger/perldb/core.el") ("realgud/debugger/perldb/init.el" . "realgud/debugger/perldb/init.el") ("realgud/debugger/perldb/perldb.el" . "realgud/debugger/perldb/perldb.el") ("realgud/debugger/perldb/track-mode.el" . "realgud/debugger/perldb/track-mode.el") ("realgud/debugger/rdebug/core.el" . "realgud/debugger/rdebug/core.el") ("realgud/debugger/rdebug/init.el" . "realgud/debugger/rdebug/init.el") ("realgud/debugger/rdebug/rdebug.el" . "realgud/debugger/rdebug/rdebug.el") ("realgud/debugger/rdebug/track-mode.el" . "realgud/debugger/rdebug/track-mode.el") ("realgud/debugger/remake/core.el" . "realgud/debugger/remake/core.el") ("realgud/debugger/remake/init.el" . "realgud/debugger/remake/init.el") ("realgud/debugger/remake/remake.el" . "realgud/debugger/remake/remake.el") ("realgud/debugger/remake/track-mode.el" . "realgud/debugger/remake/track-mode.el") ("realgud/debugger/trepan/backtrack-mode.el" . "realgud/debugger/trepan/backtrack-mode.el") ("realgud/debugger/trepan/core.el" . "realgud/debugger/trepan/core.el") ("realgud/debugger/trepan/init.el" . "realgud/debugger/trepan/init.el") ("realgud/debugger/trepan/track-mode.el" . "realgud/debugger/trepan/track-mode.el") ("realgud/debugger/trepan/trepan.el" . "realgud/debugger/trepan/trepan.el") ("realgud/debugger/trepan.pl/backtrack-mode.el" . "realgud/debugger/trepan.pl/backtrack-mode.el") ("realgud/debugger/trepan.pl/core.el" . "realgud/debugger/trepan.pl/core.el") ("realgud/debugger/trepan.pl/init.el" . "realgud/debugger/trepan.pl/init.el") ("realgud/debugger/trepan.pl/track-mode.el" . "realgud/debugger/trepan.pl/track-mode.el") ("realgud/debugger/trepan.pl/trepanpl.el" . "realgud/debugger/trepan.pl/trepanpl.el") ("realgud/debugger/trepan2/core.el" . "realgud/debugger/trepan2/core.el") ("realgud/debugger/trepan2/init.el" . "realgud/debugger/trepan2/init.el") ("realgud/debugger/trepan2/track-mode.el" . "realgud/debugger/trepan2/track-mode.el") ("realgud/debugger/trepan2/trepan2.el" . "realgud/debugger/trepan2/trepan2.el") ("realgud/debugger/trepan3k/core.el" . "realgud/debugger/trepan3k/core.el") ("realgud/debugger/trepan3k/init.el" . "realgud/debugger/trepan3k/init.el") ("realgud/debugger/trepan3k/track-mode.el" . "realgud/debugger/trepan3k/track-mode.el") ("realgud/debugger/trepan3k/trepan3k.el" . "realgud/debugger/trepan3k/trepan3k.el") ("realgud/debugger/trepanjs/backtrack-mode.el" . "realgud/debugger/trepanjs/backtrack-mode.el") ("realgud/debugger/trepanjs/core.el" . "realgud/debugger/trepanjs/core.el") ("realgud/debugger/trepanjs/init.el" . "realgud/debugger/trepanjs/init.el") ("realgud/debugger/trepanjs/track-mode.el" . "realgud/debugger/trepanjs/track-mode.el") ("realgud/debugger/trepanjs/trepanjs.el" . "realgud/debugger/trepanjs/trepanjs.el") ("realgud/debugger/zshdb/core.el" . "realgud/debugger/zshdb/core.el") ("realgud/debugger/zshdb/init.el" . "realgud/debugger/zshdb/init.el") ("realgud/debugger/zshdb/track-mode.el" . "realgud/debugger/zshdb/track-mode.el") ("realgud/debugger/zshdb/zshdb.el" . "realgud/debugger/zshdb/zshdb.el") ("realgud/lang/java.el" . "realgud/lang/java.el") ("realgud/lang/js.el" . "realgud/lang/js.el") ("realgud/lang/perl.el" . "realgud/lang/perl.el") ("realgud/lang/posix-shell.el" . "realgud/lang/posix-shell.el") ("realgud/lang/python.el" . "realgud/lang/python.el") ("realgud/lang/ruby.el" . "realgud/lang/ruby.el")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-100a292eb73e> (("realgud.el" . "realgud.el") ("realgud/.nosearch" . ".nosearch") ("realgud-recursive-autoloads.el" . "realgud-recursive-autoloads.el") ("realgud/common/attach.el" . "realgud/common/attach.el") ("realgud/common/backtrace-mode.el" . "realgud/common/backtrace-mode.el") ("realgud/common/backtrack-mode.el" . "realgud/common/backtrack-mode.el") ("realgud/common/bp-image-data.el" . "realgud/common/bp-image-data.el") ("realgud/common/bp.el" . "realgud/common/bp.el") ("realgud/common/breakpoint-mode.el" . "realgud/common/breakpoint-mode.el") ("realgud/common/cmds.el" . "realgud/common/cmds.el") ("realgud/common/core.el" . "realgud/common/core.el") ("realgud/common/custom.el" . "realgud/common/custom.el") ("realgud/common/eval.el" . "realgud/common/eval.el") ("realgud/common/file.el" . "realgud/common/file.el") ("realgud/common/follow.el" . "realgud/common/follow.el") ("realgud/common/fringe.el" . "realgud/common/fringe.el") ("realgud/common/helper.el" . "realgud/common/helper.el") ("realgud/common/init.el" . "realgud/common/init.el") ("realgud/common/key.el" . "realgud/common/key.el") ("realgud/common/lang.el" . "realgud/common/lang.el") ("realgud/common/loc.el" . "realgud/common/loc.el") ("realgud/common/locals-mode.el" . "realgud/common/locals-mode.el") ("realgud/common/lochist.el" . "realgud/common/lochist.el") ("realgud/common/menu.el" . "realgud/common/menu.el") ("realgud/common/regexp.el" . "realgud/common/regexp.el") ("realgud/common/reset.el" . "realgud/common/reset.el") ("realgud/common/run.el" . "realgud/common/run.el") ("realgud/common/send.el" . "realgud/common/send.el") ("realgud/common/shortkey.el" . "realgud/common/shortkey.el") ("realgud/common/track-mode.el" . "realgud/common/track-mode.el") ("realgud/common/track.el" . "realgud/common/track.el") ("realgud/common/utils.el" . "realgud/common/utils.el") ("realgud/common/window.el" . "realgud/common/window.el") ("realgud/common/buffer/backtrace.el" . "realgud/common/buffer/backtrace.el") ("realgud/common/buffer/breakpoint.el" . "realgud/common/buffer/breakpoint.el") ("realgud/common/buffer/command.el" . "realgud/common/buffer/command.el") ("realgud/common/buffer/helper.el" . "realgud/common/buffer/helper.el") ("realgud/common/buffer/info.el" . "realgud/common/buffer/info.el") ("realgud/common/buffer/locals.el" . "realgud/common/buffer/locals.el") ("realgud/common/buffer/source.el" . "realgud/common/buffer/source.el") ("realgud/debugger/bashdb/bashdb.el" . "realgud/debugger/bashdb/bashdb.el") ("realgud/debugger/bashdb/core.el" . "realgud/debugger/bashdb/core.el") ("realgud/debugger/bashdb/init.el" . "realgud/debugger/bashdb/init.el") ("realgud/debugger/bashdb/track-mode.el" . "realgud/debugger/bashdb/track-mode.el") ("realgud/debugger/gdb/core.el" . "realgud/debugger/gdb/core.el") ("realgud/debugger/gdb/gdb.el" . "realgud/debugger/gdb/gdb.el") ("realgud/debugger/gdb/init.el" . "realgud/debugger/gdb/init.el") ("realgud/debugger/gdb/track-mode.el" . "realgud/debugger/gdb/track-mode.el") ("realgud/debugger/gub/core.el" . "realgud/debugger/gub/core.el") ("realgud/debugger/gub/gub.el" . "realgud/debugger/gub/gub.el") ("realgud/debugger/gub/init.el" . "realgud/debugger/gub/init.el") ("realgud/debugger/gub/track-mode.el" . "realgud/debugger/gub/track-mode.el") ("realgud/debugger/kshdb/core.el" . "realgud/debugger/kshdb/core.el") ("realgud/debugger/kshdb/init.el" . "realgud/debugger/kshdb/init.el") ("realgud/debugger/kshdb/kshdb.el" . "realgud/debugger/kshdb/kshdb.el") ("realgud/debugger/kshdb/track-mode.el" . "realgud/debugger/kshdb/track-mode.el") ("realgud/debugger/pdb/core.el" . "realgud/debugger/pdb/core.el") ("realgud/debugger/pdb/init.el" . "realgud/debugger/pdb/init.el") ("realgud/debugger/pdb/pdb.el" . "realgud/debugger/pdb/pdb.el") ("realgud/debugger/pdb/track-mode.el" . "realgud/debugger/pdb/track-mode.el") ("realgud/debugger/perldb/core.el" . "realgud/debugger/perldb/core.el") ("realgud/debugger/perldb/init.el" . "realgud/debugger/perldb/init.el") ("realgud/debugger/perldb/perldb.el" . "realgud/debugger/perldb/perldb.el") ("realgud/debugger/perldb/track-mode.el" . "realgud/debugger/perldb/track-mode.el") ("realgud/debugger/rdebug/core.el" . "realgud/debugger/rdebug/core.el") ("realgud/debugger/rdebug/init.el" . "realgud/debugger/rdebug/init.el") ("realgud/debugger/rdebug/rdebug.el" . "realgud/debugger/rdebug/rdebug.el") ("realgud/debugger/rdebug/track-mode.el" . "realgud/debugger/rdebug/track-mode.el") ("realgud/debugger/remake/core.el" . "realgud/debugger/remake/core.el") ("realgud/debugger/remake/init.el" . "realgud/debugger/remake/init.el") ("realgud/debugger/remake/remake.el" . "realgud/debugger/remake/remake.el") ("realgud/debugger/remake/track-mode.el" . "realgud/debugger/remake/track-mode.el") ("realgud/debugger/trepan/backtrack-mode.el" . "realgud/debugger/trepan/backtrack-mode.el") ("realgud/debugger/trepan/core.el" . "realgud/debugger/trepan/core.el") ("realgud/debugger/trepan/init.el" . "realgud/debugger/trepan/init.el") ("realgud/debugger/trepan/track-mode.el" . "realgud/debugger/trepan/track-mode.el") ("realgud/debugger/trepan/trepan.el" . "realgud/debugger/trepan/trepan.el") ("realgud/debugger/trepan.pl/backtrack-mode.el" . "realgud/debugger/trepan.pl/backtrack-mode.el") ("realgud/debugger/trepan.pl/core.el" . "realgud/debugger/trepan.pl/core.el") ("realgud/debugger/trepan.pl/init.el" . "realgud/debugger/trepan.pl/init.el") ("realgud/debugger/trepan.pl/track-mode.el" . "realgud/debugger/trepan.pl/track-mode.el") ("realgud/debugger/trepan.pl/trepanpl.el" . "realgud/debugger/trepan.pl/trepanpl.el") ("realgud/debugger/trepan2/core.el" . "realgud/debugger/trepan2/core.el") ("realgud/debugger/trepan2/init.el" . "realgud/debugger/trepan2/init.el") ("realgud/debugger/trepan2/track-mode.el" . "realgud/debugger/trepan2/track-mode.el") ("realgud/debugger/trepan2/trepan2.el" . "realgud/debugger/trepan2/trepan2.el") ("realgud/debugger/trepan3k/core.el" . "realgud/debugger/trepan3k/core.el") ("realgud/debugger/trepan3k/init.el" . "realgud/debugger/trepan3k/init.el") ("realgud/debugger/trepan3k/track-mode.el" . "realgud/debugger/trepan3k/track-mode.el") ("realgud/debugger/trepan3k/trepan3k.el" . "realgud/debugger/trepan3k/trepan3k.el") ("realgud/debugger/trepanjs/backtrack-mode.el" . "realgud/debugger/trepanjs/backtrack-mode.el") ("realgud/debugger/trepanjs/core.el" . "realgud/debugger/trepanjs/core.el") ("realgud/debugger/trepanjs/init.el" . "realgud/debugger/trepanjs/init.el") ("realgud/debugger/trepanjs/track-mode.el" . "realgud/debugger/trepanjs/track-mode.el") ("realgud/debugger/trepanjs/trepanjs.el" . "realgud/debugger/trepanjs/trepanjs.el") ("realgud/debugger/zshdb/core.el" . "realgud/debugger/zshdb/core.el") ("realgud/debugger/zshdb/init.el" . "realgud/debugger/zshdb/init.el") ("realgud/debugger/zshdb/track-mode.el" . "realgud/debugger/zshdb/track-mode.el") ("realgud/debugger/zshdb/zshdb.el" . "realgud/debugger/zshdb/zshdb.el") ("realgud/lang/java.el" . "realgud/lang/java.el") ("realgud/lang/js.el" . "realgud/lang/js.el") ("realgud/lang/perl.el" . "realgud/lang/perl.el") ("realgud/lang/posix-shell.el" . "realgud/lang/posix-shell.el") ("realgud/lang/python.el" . "realgud/lang/python.el") ("realgud/lang/ruby.el" . "realgud/lang/ruby.el")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-100a292eb73e>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "realgud")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "realgud")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)Symbol's function definition is void: package-build--build-multi-file-package
-)))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "realgud")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("realgud")
-  eval((package-build-archive "realgud") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"realgud\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud/
+  to /tmp/realgud-uG7zhG/realgud-20260821.933/
+    realgud.el -> realgud.el
+  ! realgud/.nosearch -> .nosearch
+    realgud-recursive-autoloads.el -> realgud-recursive-autoloads.el
+    realgud/common/attach.el -> realgud/common/attach.el
+    realgud/common/backtrace-mode.el -> realgud/common/backtrace-mode.el
+    realgud/common/backtrack-mode.el -> realgud/common/backtrack-mode.el
+    realgud/common/bp-image-data.el -> realgud/common/bp-image-data.el
+    realgud/common/bp.el -> realgud/common/bp.el
+    realgud/common/breakpoint-mode.el -> realgud/common/breakpoint-mode.el
+    realgud/common/cmds.el -> realgud/common/cmds.el
+    realgud/common/core.el -> realgud/common/core.el
+    realgud/common/custom.el -> realgud/common/custom.el
+    realgud/common/eval.el -> realgud/common/eval.el
+    realgud/common/file.el -> realgud/common/file.el
+    realgud/common/follow.el -> realgud/common/follow.el
+    realgud/common/fringe.el -> realgud/common/fringe.el
+    realgud/common/helper.el -> realgud/common/helper.el
+    realgud/common/init.el -> realgud/common/init.el
+    realgud/common/key.el -> realgud/common/key.el
+    realgud/common/lang.el -> realgud/common/lang.el
+    realgud/common/loc.el -> realgud/common/loc.el
+    realgud/common/locals-mode.el -> realgud/common/locals-mode.el
+    realgud/common/lochist.el -> realgud/common/lochist.el
+    realgud/common/menu.el -> realgud/common/menu.el
+    realgud/common/regexp.el -> realgud/common/regexp.el
+    realgud/common/reset.el -> realgud/common/reset.el
+    realgud/common/run.el -> realgud/common/run.el
+    realgud/common/send.el -> realgud/common/send.el
+    realgud/common/shortkey.el -> realgud/common/shortkey.el
+    realgud/common/track-mode.el -> realgud/common/track-mode.el
+    realgud/common/track.el -> realgud/common/track.el
+    realgud/common/utils.el -> realgud/common/utils.el
+    realgud/common/window.el -> realgud/common/window.el
+    realgud/common/buffer/backtrace.el -> realgud/common/buffer/backtrace.el
+    realgud/common/buffer/breakpoint.el -> realgud/common/buffer/breakpoint.el
+    realgud/common/buffer/command.el -> realgud/common/buffer/command.el
+    realgud/common/buffer/helper.el -> realgud/common/buffer/helper.el
+    realgud/common/buffer/info.el -> realgud/common/buffer/info.el
+    realgud/common/buffer/locals.el -> realgud/common/buffer/locals.el
+    realgud/common/buffer/source.el -> realgud/common/buffer/source.el
+    realgud/debugger/bashdb/bashdb.el -> realgud/debugger/bashdb/bashdb.el
+    realgud/debugger/bashdb/core.el -> realgud/debugger/bashdb/core.el
+    realgud/debugger/bashdb/init.el -> realgud/debugger/bashdb/init.el
+    realgud/debugger/bashdb/track-mode.el -> realgud/debugger/bashdb/track-mode.el
+    realgud/debugger/gdb/core.el -> realgud/debugger/gdb/core.el
+    realgud/debugger/gdb/gdb.el -> realgud/debugger/gdb/gdb.el
+    realgud/debugger/gdb/init.el -> realgud/debugger/gdb/init.el
+    realgud/debugger/gdb/track-mode.el -> realgud/debugger/gdb/track-mode.el
+    realgud/debugger/gub/core.el -> realgud/debugger/gub/core.el
+    realgud/debugger/gub/gub.el -> realgud/debugger/gub/gub.el
+    realgud/debugger/gub/init.el -> realgud/debugger/gub/init.el
+    realgud/debugger/gub/track-mode.el -> realgud/debugger/gub/track-mode.el
+    realgud/debugger/kshdb/core.el -> realgud/debugger/kshdb/core.el
+    realgud/debugger/kshdb/init.el -> realgud/debugger/kshdb/init.el
+    realgud/debugger/kshdb/kshdb.el -> realgud/debugger/kshdb/kshdb.el
+    realgud/debugger/kshdb/track-mode.el -> realgud/debugger/kshdb/track-mode.el
+    realgud/debugger/pdb/core.el -> realgud/debugger/pdb/core.el
+    realgud/debugger/pdb/init.el -> realgud/debugger/pdb/init.el
+    realgud/debugger/pdb/pdb.el -> realgud/debugger/pdb/pdb.el
+    realgud/debugger/pdb/track-mode.el -> realgud/debugger/pdb/track-mode.el
+    realgud/debugger/perldb/core.el -> realgud/debugger/perldb/core.el
+    realgud/debugger/perldb/init.el -> realgud/debugger/perldb/init.el
+    realgud/debugger/perldb/perldb.el -> realgud/debugger/perldb/perldb.el
+    realgud/debugger/perldb/track-mode.el -> realgud/debugger/perldb/track-mode.el
+    realgud/debugger/rdebug/core.el -> realgud/debugger/rdebug/core.el
+    realgud/debugger/rdebug/init.el -> realgud/debugger/rdebug/init.el
+    realgud/debugger/rdebug/rdebug.el -> realgud/debugger/rdebug/rdebug.el
+    realgud/debugger/rdebug/track-mode.el -> realgud/debugger/rdebug/track-mode.el
+    realgud/debugger/remake/core.el -> realgud/debugger/remake/core.el
+    realgud/debugger/remake/init.el -> realgud/debugger/remake/init.el
+    realgud/debugger/remake/remake.el -> realgud/debugger/remake/remake.el
+    realgud/debugger/remake/track-mode.el -> realgud/debugger/remake/track-mode.el
+    realgud/debugger/trepan/backtrack-mode.el -> realgud/debugger/trepan/backtrack-mode.el
+    realgud/debugger/trepan/core.el -> realgud/debugger/trepan/core.el
+    realgud/debugger/trepan/init.el -> realgud/debugger/trepan/init.el
+    realgud/debugger/trepan/track-mode.el -> realgud/debugger/trepan/track-mode.el
+    realgud/debugger/trepan/trepan.el -> realgud/debugger/trepan/trepan.el
+    realgud/debugger/trepan.pl/backtrack-mode.el -> realgud/debugger/trepan.pl/backtrack-mode.el
+    realgud/debugger/trepan.pl/core.el -> realgud/debugger/trepan.pl/core.el
+    realgud/debugger/trepan.pl/init.el -> realgud/debugger/trepan.pl/init.el
+    realgud/debugger/trepan.pl/track-mode.el -> realgud/debugger/trepan.pl/track-mode.el
+    realgud/debugger/trepan.pl/trepanpl.el -> realgud/debugger/trepan.pl/trepanpl.el
+    realgud/debugger/trepan2/core.el -> realgud/debugger/trepan2/core.el
+    realgud/debugger/trepan2/init.el -> realgud/debugger/trepan2/init.el
+    realgud/debugger/trepan2/track-mode.el -> realgud/debugger/trepan2/track-mode.el
+    realgud/debugger/trepan2/trepan2.el -> realgud/debugger/trepan2/trepan2.el
+    realgud/debugger/trepan3k/core.el -> realgud/debugger/trepan3k/core.el
+    realgud/debugger/trepan3k/init.el -> realgud/debugger/trepan3k/init.el
+    realgud/debugger/trepan3k/track-mode.el -> realgud/debugger/trepan3k/track-mode.el
+    realgud/debugger/trepan3k/trepan3k.el -> realgud/debugger/trepan3k/trepan3k.el
+    realgud/debugger/trepanjs/backtrack-mode.el -> realgud/debugger/trepanjs/backtrack-mode.el
+    realgud/debugger/trepanjs/core.el -> realgud/debugger/trepanjs/core.el
+    realgud/debugger/trepanjs/init.el -> realgud/debugger/trepanjs/init.el
+    realgud/debugger/trepanjs/track-mode.el -> realgud/debugger/trepanjs/track-mode.el
+    realgud/debugger/trepanjs/trepanjs.el -> realgud/debugger/trepanjs/trepanjs.el
+    realgud/debugger/zshdb/core.el -> realgud/debugger/zshdb/core.el
+    realgud/debugger/zshdb/init.el -> realgud/debugger/zshdb/init.el
+    realgud/debugger/zshdb/track-mode.el -> realgud/debugger/zshdb/track-mode.el
+    realgud/debugger/zshdb/zshdb.el -> realgud/debugger/zshdb/zshdb.el
+    realgud/lang/java.el -> realgud/lang/java.el
+    realgud/lang/js.el -> realgud/lang/js.el
+    realgud/lang/perl.el -> realgud/lang/perl.el
+    realgud/lang/posix-shell.el -> realgud/lang/posix-shell.el
+    realgud/lang/python.el -> realgud/lang/python.el
+    realgud/lang/ruby.el -> realgud/lang/ruby.el
+Created realgud-20260821.933.tar containing:
+  realgud-20260821.933/
+  realgud-20260821.933/.nosearch
+  realgud-20260821.933/realgud-pkg.el
+  realgud-20260821.933/realgud-recursive-autoloads.el
+  realgud-20260821.933/realgud.el
+  realgud-20260821.933/realgud/
+  realgud-20260821.933/realgud/common/
+  realgud-20260821.933/realgud/common/attach.el
+  realgud-20260821.933/realgud/common/backtrace-mode.el
+  realgud-20260821.933/realgud/common/backtrack-mode.el
+  realgud-20260821.933/realgud/common/bp-image-data.el
+  realgud-20260821.933/realgud/common/bp.el
+  realgud-20260821.933/realgud/common/breakpoint-mode.el
+  realgud-20260821.933/realgud/common/buffer/
+  realgud-20260821.933/realgud/common/buffer/backtrace.el
+  realgud-20260821.933/realgud/common/buffer/breakpoint.el
+  realgud-20260821.933/realgud/common/buffer/command.el
+  realgud-20260821.933/realgud/common/buffer/helper.el
+  realgud-20260821.933/realgud/common/buffer/info.el
+  realgud-20260821.933/realgud/common/buffer/locals.el
+  realgud-20260821.933/realgud/common/buffer/source.el
+  realgud-20260821.933/realgud/common/cmds.el
+  realgud-20260821.933/realgud/common/core.el
+  realgud-20260821.933/realgud/common/custom.el
+  realgud-20260821.933/realgud/common/eval.el
+  realgud-20260821.933/realgud/common/file.el
+  realgud-20260821.933/realgud/common/follow.el
+  realgud-20260821.933/realgud/common/fringe.el
+  realgud-20260821.933/realgud/common/helper.el
+  realgud-20260821.933/realgud/common/init.el
+  realgud-20260821.933/realgud/common/key.el
+  realgud-20260821.933/realgud/common/lang.el
+  realgud-20260821.933/realgud/common/loc.el
+  realgud-20260821.933/realgud/common/locals-mode.el
+  realgud-20260821.933/realgud/common/lochist.el
+  realgud-20260821.933/realgud/common/menu.el
+  realgud-20260821.933/realgud/common/regexp.el
+  realgud-20260821.933/realgud/common/reset.el
+  realgud-20260821.933/realgud/common/run.el
+  realgud-20260821.933/realgud/common/send.el
+  realgud-20260821.933/realgud/common/shortkey.el
+  realgud-20260821.933/realgud/common/track-mode.el
+  realgud-20260821.933/realgud/common/track.el
+  realgud-20260821.933/realgud/common/utils.el
+  realgud-20260821.933/realgud/common/window.el
+  realgud-20260821.933/realgud/debugger/
+  realgud-20260821.933/realgud/debugger/bashdb/
+  realgud-20260821.933/realgud/debugger/bashdb/bashdb.el
+  realgud-20260821.933/realgud/debugger/bashdb/core.el
+  realgud-20260821.933/realgud/debugger/bashdb/init.el
+  realgud-20260821.933/realgud/debugger/bashdb/track-mode.el
+  realgud-20260821.933/realgud/debugger/gdb/
+  realgud-20260821.933/realgud/debugger/gdb/core.el
+  realgud-20260821.933/realgud/debugger/gdb/gdb.el
+  realgud-20260821.933/realgud/debugger/gdb/init.el
+  realgud-20260821.933/realgud/debugger/gdb/track-mode.el
+  realgud-20260821.933/realgud/debugger/gub/
+  realgud-20260821.933/realgud/debugger/gub/core.el
+  realgud-20260821.933/realgud/debugger/gub/gub.el
+  realgud-20260821.933/realgud/debugger/gub/init.el
+  realgud-20260821.933/realgud/debugger/gub/track-mode.el
+  realgud-20260821.933/realgud/debugger/kshdb/
+  realgud-20260821.933/realgud/debugger/kshdb/core.el
+  realgud-20260821.933/realgud/debugger/kshdb/init.el
+  realgud-20260821.933/realgud/debugger/kshdb/kshdb.el
+  realgud-20260821.933/realgud/debugger/kshdb/track-mode.el
+  realgud-20260821.933/realgud/debugger/pdb/
+  realgud-20260821.933/realgud/debugger/pdb/core.el
+  realgud-20260821.933/realgud/debugger/pdb/init.el
+  realgud-20260821.933/realgud/debugger/pdb/pdb.el
+  realgud-20260821.933/realgud/debugger/pdb/track-mode.el
+  realgud-20260821.933/realgud/debugger/perldb/
+  realgud-20260821.933/realgud/debugger/perldb/core.el
+  realgud-20260821.933/realgud/debugger/perldb/init.el
+  realgud-20260821.933/realgud/debugger/perldb/perldb.el
+  realgud-20260821.933/realgud/debugger/perldb/track-mode.el
+  realgud-20260821.933/realgud/debugger/rdebug/
+  realgud-20260821.933/realgud/debugger/rdebug/core.el
+  realgud-20260821.933/realgud/debugger/rdebug/init.el
+  realgud-20260821.933/realgud/debugger/rdebug/rdebug.el
+  realgud-20260821.933/realgud/debugger/rdebug/track-mode.el
+  realgud-20260821.933/realgud/debugger/remake/
+  realgud-20260821.933/realgud/debugger/remake/core.el
+  realgud-20260821.933/realgud/debugger/remake/init.el
+  realgud-20260821.933/realgud/debugger/remake/remake.el
+  realgud-20260821.933/realgud/debugger/remake/track-mode.el
+  realgud-20260821.933/realgud/debugger/trepan.pl/
+  realgud-20260821.933/realgud/debugger/trepan.pl/backtrack-mode.el
+  realgud-20260821.933/realgud/debugger/trepan.pl/core.el
+  realgud-20260821.933/realgud/debugger/trepan.pl/init.el
+  realgud-20260821.933/realgud/debugger/trepan.pl/track-mode.el
+  realgud-20260821.933/realgud/debugger/trepan.pl/trepanpl.el
+  realgud-20260821.933/realgud/debugger/trepan/
+  realgud-20260821.933/realgud/debugger/trepan/backtrack-mode.el
+  realgud-20260821.933/realgud/debugger/trepan/core.el
+  realgud-20260821.933/realgud/debugger/trepan/init.el
+  realgud-20260821.933/realgud/debugger/trepan/track-mode.el
+  realgud-20260821.933/realgud/debugger/trepan/trepan.el
+  realgud-20260821.933/realgud/debugger/trepan2/
+  realgud-20260821.933/realgud/debugger/trepan2/core.el
+  realgud-20260821.933/realgud/debugger/trepan2/init.el
+  realgud-20260821.933/realgud/debugger/trepan2/track-mode.el
+  realgud-20260821.933/realgud/debugger/trepan2/trepan2.el
+  realgud-20260821.933/realgud/debugger/trepan3k/
+  realgud-20260821.933/realgud/debugger/trepan3k/core.el
+  realgud-20260821.933/realgud/debugger/trepan3k/init.el
+  realgud-20260821.933/realgud/debugger/trepan3k/track-mode.el
+  realgud-20260821.933/realgud/debugger/trepan3k/trepan3k.el
+  realgud-20260821.933/realgud/debugger/trepanjs/
+  realgud-20260821.933/realgud/debugger/trepanjs/backtrack-mode.el
+  realgud-20260821.933/realgud/debugger/trepanjs/core.el
+  realgud-20260821.933/realgud/debugger/trepanjs/init.el
+  realgud-20260821.933/realgud/debugger/trepanjs/track-mode.el
+  realgud-20260821.933/realgud/debugger/trepanjs/trepanjs.el
+  realgud-20260821.933/realgud/debugger/zshdb/
+  realgud-20260821.933/realgud/debugger/zshdb/core.el
+  realgud-20260821.933/realgud/debugger/zshdb/init.el
+  realgud-20260821.933/realgud/debugger/zshdb/track-mode.el
+  realgud-20260821.933/realgud/debugger/zshdb/zshdb.el
+  realgud-20260821.933/realgud/lang/
+  realgud-20260821.933/realgud/lang/java.el
+  realgud-20260821.933/realgud/lang/js.el
+  realgud-20260821.933/realgud/lang/perl.el
+  realgud-20260821.933/realgud/lang/posix-shell.el
+  realgud-20260821.933/realgud/lang/python.el
+  realgud-20260821.933/realgud/lang/ruby.el
+Built realgud in 3.578s, finished at 2026-09-04T01:24:36+0000

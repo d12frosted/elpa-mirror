@@ -3,29 +3,101 @@
 From https://github.com/stevenremot/roguel-ike
 Updating /mnt/store/melpa/working/roguel-ike/
 Checking out e2e0c089129353f0d4c08b42baf6dc9d66a05175
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10e082770e6d> (("roguel-ike.el" . "roguel-ike.el") ("roguel-ike" . "roguel-ike") ("roguel-ike-lib" . "roguel-ike-lib")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10e082770e6d> (("roguel-ike.el" . "roguel-ike.el") ("roguel-ike" . "roguel-ike") ("roguel-ike-lib" . "roguel-ike-lib")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10e082770e6d>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "roguel-ike")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version Symbol's function definition is void: package-build--build-multi-file-package
-nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "roguel-ike")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "roguel-ike")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("roguel-ike")
-  eval((package-build-archive "roguel-ike") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"roguel-ike\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/roguel-ike/
+  to /tmp/roguel-ike-pLRLH4/roguel-ike-20241228.929/
+    roguel-ike.el -> roguel-ike.el
+    roguel-ike => roguel-ike
+    roguel-ike-lib => roguel-ike-lib
+Created roguel-ike-20241228.929.tar containing:
+  roguel-ike-20241228.929/
+  roguel-ike-20241228.929/roguel-ike-lib/
+  roguel-ike-20241228.929/roguel-ike-lib/cell.el
+  roguel-ike-20241228.929/roguel-ike-lib/dispatcher.el
+  roguel-ike-20241228.929/roguel-ike-lib/fov.el
+  roguel-ike-20241228.929/roguel-ike-lib/level.el
+  roguel-ike-20241228.929/roguel-ike-lib/level/
+  roguel-ike-20241228.929/roguel-ike-lib/level/generator/
+  roguel-ike-20241228.929/roguel-ike-lib/level/generator/binary-node.el
+  roguel-ike-20241228.929/roguel-ike-lib/los.el
+  roguel-ike-20241228.929/roguel-ike-lib/math.el
+  roguel-ike-20241228.929/roguel-ike-lib/path-finding.el
+  roguel-ike-20241228.929/roguel-ike-lib/renderer.el
+  roguel-ike-20241228.929/roguel-ike-pkg.el
+  roguel-ike-20241228.929/roguel-ike.el
+  roguel-ike-20241228.929/roguel-ike/
+  roguel-ike-20241228.929/roguel-ike/behaviour.el
+  roguel-ike-20241228.929/roguel-ike/behaviour/
+  roguel-ike-20241228.929/roguel-ike/behaviour/ai.el
+  roguel-ike-20241228.929/roguel-ike/behaviour/manual.el
+  roguel-ike-20241228.929/roguel-ike/buffer-manager.el
+  roguel-ike-20241228.929/roguel-ike/controller.el
+  roguel-ike-20241228.929/roguel-ike/custom.el
+  roguel-ike-20241228.929/roguel-ike/data/
+  roguel-ike-20241228.929/roguel-ike/data/effects.el
+  roguel-ike-20241228.929/roguel-ike/data/races.el
+  roguel-ike-20241228.929/roguel-ike/data/skills.el
+  roguel-ike-20241228.929/roguel-ike/dungeon.el
+  roguel-ike-20241228.929/roguel-ike/entity.el
+  roguel-ike-20241228.929/roguel-ike/entity/
+  roguel-ike-20241228.929/roguel-ike/entity/factory/
+  roguel-ike-20241228.929/roguel-ike/entity/factory/hero.el
+  roguel-ike-20241228.929/roguel-ike/fov.el
+  roguel-ike-20241228.929/roguel-ike/game-screen.el
+  roguel-ike-20241228.929/roguel-ike/game-screen/
+  roguel-ike-20241228.929/roguel-ike/game-screen/arena.el
+  roguel-ike-20241228.929/roguel-ike/game-screen/dungeon-rampage.el
+  roguel-ike-20241228.929/roguel-ike/game-screen/fight.el
+  roguel-ike-20241228.929/roguel-ike/game-screen/select-hero.el
+  roguel-ike-20241228.929/roguel-ike/game-screen/select-mode.el
+  roguel-ike-20241228.929/roguel-ike/game-screen/test.el
+  roguel-ike-20241228.929/roguel-ike/game.el
+  roguel-ike-20241228.929/roguel-ike/graphics/
+  roguel-ike-20241228.929/roguel-ike/graphics/faces.el
+  roguel-ike-20241228.929/roguel-ike/graphics/renderer/
+  roguel-ike-20241228.929/roguel-ike/graphics/renderer/game.el
+  roguel-ike-20241228.929/roguel-ike/graphics/renderer/stats.el
+  roguel-ike-20241228.929/roguel-ike/graphics/widget/
+  roguel-ike-20241228.929/roguel-ike/graphics/widget/entity.el
+  roguel-ike-20241228.929/roguel-ike/graphics/widget/stats.el
+  roguel-ike-20241228.929/roguel-ike/hero-data.el
+  roguel-ike-20241228.929/roguel-ike/hero-data/
+  roguel-ike-20241228.929/roguel-ike/hero-data/manager.el
+  roguel-ike-20241228.929/roguel-ike/interactive-object.el
+  roguel-ike-20241228.929/roguel-ike/interactive-object/
+  roguel-ike-20241228.929/roguel-ike/interactive-object/door.el
+  roguel-ike-20241228.929/roguel-ike/interactive-object/stairs.el
+  roguel-ike-20241228.929/roguel-ike/level.el
+  roguel-ike-20241228.929/roguel-ike/level/
+  roguel-ike-20241228.929/roguel-ike/level/cell.el
+  roguel-ike-20241228.929/roguel-ike/level/cell/
+  roguel-ike-20241228.929/roguel-ike/level/cell/ground.el
+  roguel-ike-20241228.929/roguel-ike/level/cell/object.el
+  roguel-ike-20241228.929/roguel-ike/level/factory/
+  roguel-ike-20241228.929/roguel-ike/level/factory/all-rooms.el
+  roguel-ike-20241228.929/roguel-ike/level/factory/layout.el
+  roguel-ike-20241228.929/roguel-ike/level/factory/string.el
+  roguel-ike-20241228.929/roguel-ike/level/populator/
+  roguel-ike-20241228.929/roguel-ike/level/populator/arena.el
+  roguel-ike-20241228.929/roguel-ike/level/populator/periodic.el
+  roguel-ike-20241228.929/roguel-ike/message-logger.el
+  roguel-ike-20241228.929/roguel-ike/mode.el
+  roguel-ike-20241228.929/roguel-ike/mode/
+  roguel-ike-20241228.929/roguel-ike/mode/menu.el
+  roguel-ike-20241228.929/roguel-ike/path-finding.el
+  roguel-ike-20241228.929/roguel-ike/physics/
+  roguel-ike-20241228.929/roguel-ike/physics/motion.el
+  roguel-ike-20241228.929/roguel-ike/physics/world.el
+  roguel-ike-20241228.929/roguel-ike/race.el
+  roguel-ike-20241228.929/roguel-ike/skill.el
+  roguel-ike-20241228.929/roguel-ike/skill/
+  roguel-ike-20241228.929/roguel-ike/skill/object/
+  roguel-ike-20241228.929/roguel-ike/skill/object/fireball.el
+  roguel-ike-20241228.929/roguel-ike/skill/object/fractalball.el
+  roguel-ike-20241228.929/roguel-ike/stats.el
+  roguel-ike-20241228.929/roguel-ike/stats/
+  roguel-ike-20241228.929/roguel-ike/stats/effect.el
+  roguel-ike-20241228.929/roguel-ike/stats/regenerator.el
+  roguel-ike-20241228.929/roguel-ike/stats/slot.el
+  roguel-ike-20241228.929/roguel-ike/time-manager.el
+Built roguel-ike in 4.785s, finished at 2026-09-04T01:26:07+0000

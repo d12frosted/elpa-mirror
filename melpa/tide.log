@@ -3,29 +3,104 @@
 From https://github.com/ananthakumaran/tide
 Updating /mnt/store/melpa/working/tide/
 Checking out 9498c4c7fc97d8042fdff532f47f1dc79ebd163a
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-1003fd812554> (("tide-lv.el" . "tide-lv.el") ("tide.el" . "tide.el") ("tsserver" . "tsserver")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-1003fd812554> (("tide-lv.el" . "tide-lv.el") ("tide.el" . "tide.el") ("tsserver" . "tsserver")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-1003fd812554>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "tide")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noSymbol's function definition is void: package-build--build-multi-file-package
-ninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "tide")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "tide")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("tide")
-  eval((package-build-archive "tide") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"tide\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tide/
+  to /tmp/tide-P6V855/tide-20260219.336/
+    tide-lv.el -> tide-lv.el
+    tide.el -> tide.el
+    tsserver => tsserver
+Created tide-20260219.336.tar containing:
+  tide-20260219.336/
+  tide-20260219.336/tide-lv.el
+  tide-20260219.336/tide-pkg.el
+  tide-20260219.336/tide.el
+  tide-20260219.336/tsserver/
+  tide-20260219.336/tsserver/lib.core.d.ts
+  tide-20260219.336/tsserver/lib.core.es6.d.ts
+  tide-20260219.336/tsserver/lib.d.ts
+  tide-20260219.336/tsserver/lib.decorators.d.ts
+  tide-20260219.336/tsserver/lib.decorators.legacy.d.ts
+  tide-20260219.336/tsserver/lib.dom.d.ts
+  tide-20260219.336/tsserver/lib.dom.iterable.d.ts
+  tide-20260219.336/tsserver/lib.es2015.collection.d.ts
+  tide-20260219.336/tsserver/lib.es2015.core.d.ts
+  tide-20260219.336/tsserver/lib.es2015.d.ts
+  tide-20260219.336/tsserver/lib.es2015.generator.d.ts
+  tide-20260219.336/tsserver/lib.es2015.iterable.d.ts
+  tide-20260219.336/tsserver/lib.es2015.promise.d.ts
+  tide-20260219.336/tsserver/lib.es2015.proxy.d.ts
+  tide-20260219.336/tsserver/lib.es2015.reflect.d.ts
+  tide-20260219.336/tsserver/lib.es2015.symbol.d.ts
+  tide-20260219.336/tsserver/lib.es2015.symbol.wellknown.d.ts
+  tide-20260219.336/tsserver/lib.es2016.array.include.d.ts
+  tide-20260219.336/tsserver/lib.es2016.d.ts
+  tide-20260219.336/tsserver/lib.es2016.full.d.ts
+  tide-20260219.336/tsserver/lib.es2017.d.ts
+  tide-20260219.336/tsserver/lib.es2017.full.d.ts
+  tide-20260219.336/tsserver/lib.es2017.intl.d.ts
+  tide-20260219.336/tsserver/lib.es2017.object.d.ts
+  tide-20260219.336/tsserver/lib.es2017.sharedmemory.d.ts
+  tide-20260219.336/tsserver/lib.es2017.string.d.ts
+  tide-20260219.336/tsserver/lib.es2017.typedarrays.d.ts
+  tide-20260219.336/tsserver/lib.es2018.asyncgenerator.d.ts
+  tide-20260219.336/tsserver/lib.es2018.asynciterable.d.ts
+  tide-20260219.336/tsserver/lib.es2018.d.ts
+  tide-20260219.336/tsserver/lib.es2018.full.d.ts
+  tide-20260219.336/tsserver/lib.es2018.intl.d.ts
+  tide-20260219.336/tsserver/lib.es2018.promise.d.ts
+  tide-20260219.336/tsserver/lib.es2018.regexp.d.ts
+  tide-20260219.336/tsserver/lib.es2019.array.d.ts
+  tide-20260219.336/tsserver/lib.es2019.d.ts
+  tide-20260219.336/tsserver/lib.es2019.full.d.ts
+  tide-20260219.336/tsserver/lib.es2019.intl.d.ts
+  tide-20260219.336/tsserver/lib.es2019.object.d.ts
+  tide-20260219.336/tsserver/lib.es2019.string.d.ts
+  tide-20260219.336/tsserver/lib.es2019.symbol.d.ts
+  tide-20260219.336/tsserver/lib.es2020.bigint.d.ts
+  tide-20260219.336/tsserver/lib.es2020.d.ts
+  tide-20260219.336/tsserver/lib.es2020.date.d.ts
+  tide-20260219.336/tsserver/lib.es2020.full.d.ts
+  tide-20260219.336/tsserver/lib.es2020.intl.d.ts
+  tide-20260219.336/tsserver/lib.es2020.number.d.ts
+  tide-20260219.336/tsserver/lib.es2020.promise.d.ts
+  tide-20260219.336/tsserver/lib.es2020.sharedmemory.d.ts
+  tide-20260219.336/tsserver/lib.es2020.string.d.ts
+  tide-20260219.336/tsserver/lib.es2020.symbol.wellknown.d.ts
+  tide-20260219.336/tsserver/lib.es2021.d.ts
+  tide-20260219.336/tsserver/lib.es2021.full.d.ts
+  tide-20260219.336/tsserver/lib.es2021.intl.d.ts
+  tide-20260219.336/tsserver/lib.es2021.promise.d.ts
+  tide-20260219.336/tsserver/lib.es2021.string.d.ts
+  tide-20260219.336/tsserver/lib.es2021.weakref.d.ts
+  tide-20260219.336/tsserver/lib.es2022.array.d.ts
+  tide-20260219.336/tsserver/lib.es2022.d.ts
+  tide-20260219.336/tsserver/lib.es2022.error.d.ts
+  tide-20260219.336/tsserver/lib.es2022.full.d.ts
+  tide-20260219.336/tsserver/lib.es2022.intl.d.ts
+  tide-20260219.336/tsserver/lib.es2022.object.d.ts
+  tide-20260219.336/tsserver/lib.es2022.regexp.d.ts
+  tide-20260219.336/tsserver/lib.es2022.sharedmemory.d.ts
+  tide-20260219.336/tsserver/lib.es2022.string.d.ts
+  tide-20260219.336/tsserver/lib.es2023.array.d.ts
+  tide-20260219.336/tsserver/lib.es2023.d.ts
+  tide-20260219.336/tsserver/lib.es2023.full.d.ts
+  tide-20260219.336/tsserver/lib.es5.d.ts
+  tide-20260219.336/tsserver/lib.es6.d.ts
+  tide-20260219.336/tsserver/lib.esnext.array.d.ts
+  tide-20260219.336/tsserver/lib.esnext.asynciterable.d.ts
+  tide-20260219.336/tsserver/lib.esnext.bigint.d.ts
+  tide-20260219.336/tsserver/lib.esnext.d.ts
+  tide-20260219.336/tsserver/lib.esnext.full.d.ts
+  tide-20260219.336/tsserver/lib.esnext.intl.d.ts
+  tide-20260219.336/tsserver/lib.esnext.promise.d.ts
+  tide-20260219.336/tsserver/lib.esnext.string.d.ts
+  tide-20260219.336/tsserver/lib.esnext.symbol.d.ts
+  tide-20260219.336/tsserver/lib.esnext.weakref.d.ts
+  tide-20260219.336/tsserver/lib.scripthost.d.ts
+  tide-20260219.336/tsserver/lib.webworker.d.ts
+  tide-20260219.336/tsserver/lib.webworker.importscripts.d.ts
+  tide-20260219.336/tsserver/lib.webworker.iterable.d.ts
+  tide-20260219.336/tsserver/tsconfig.json
+  tide-20260219.336/tsserver/tsserver.js
+  tide-20260219.336/tsserver/typingsInstaller.js
+Built tide in 8.244s, finished at 2026-09-04T01:35:58+0000

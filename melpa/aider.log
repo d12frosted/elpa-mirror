@@ -3,29 +3,104 @@
 From https://github.com/tninja/aider.el
 Updating /mnt/store/melpa/working/aider/
 Checking out 5c2c093f20e14ca5f47ebbb35d4e198550f9fffc
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-103b84405554> (("aider-agile.el" . "aider-agile.el") ("aider-bootstrap.el" . "aider-bootstrap.el") ("aider-code-change.el" . "aider-code-change.el") ("aider-code-read.el" . "aider-code-read.el") ("aider-comint-markdown.el" . "aider-comint-markdown.el") ("aider-core.el" . "aider-core.el") ("aider-discussion.el" . "aider-discussion.el") ("aider-doom.el" . "aider-doom.el") ("aider-file.el" . "aider-file.el") ("aider-git.el" . "aider-git.el") ("aider-helm.el" . "aider-helm.el") ("aider-highlight-changes.el" . "aider-highlight-changes.el") ("aider-legacy-code.el" . "aider-legacy-code.el") ("aider-prompt-mode.el" . "aider-prompt-mode.el") ("aider-software-planning.el" . "aider-software-planning.el") ("aider-utils.el" . "aider-utils.el") ("aider.el" . "aider.el") ("snippets" . "snippets")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-103b84405554> (("aider-agile.el" . "aider-agile.el") ("aider-bootstrap.el" . "aider-bootstrap.el") ("aider-code-change.el" . "aider-code-change.el") ("aider-code-read.el" . "aider-code-read.el") ("aider-comint-markdown.el" . "aider-comint-markdown.el") ("aider-core.el" . "aider-core.el") ("aider-discussion.el" . "aider-discussion.el") ("aider-doom.el" . "aider-doom.el") ("aider-file.el" . "aider-file.el") ("aider-git.el" . "aider-git.el") ("aider-helm.el" . "aider-helm.el") ("aider-highlight-changes.el" . "aider-highlight-changes.el") ("aider-legacy-code.el" . "aider-legacy-code.el") ("aider-prompt-mode.el" . "aider-prompt-mode.el") ("aider-software-planning.el" . "aider-software-planning.el") ("aider-utils.el" . "aider-utils.el") ("aider.el" . "aider.el") ("snippets" . "snippets")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-103b84405554>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "aider")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "aider")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (fSymbol's function definition is void: package-build--build-multi-file-package
-loat-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "aider")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("aider")
-  eval((package-build-archive "aider") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"aider\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/aider/
+  to /tmp/aider-DZxsdX/aider-20251201.133/
+    aider-agile.el -> aider-agile.el
+    aider-bootstrap.el -> aider-bootstrap.el
+    aider-code-change.el -> aider-code-change.el
+    aider-code-read.el -> aider-code-read.el
+    aider-comint-markdown.el -> aider-comint-markdown.el
+    aider-core.el -> aider-core.el
+    aider-discussion.el -> aider-discussion.el
+    aider-doom.el -> aider-doom.el
+    aider-file.el -> aider-file.el
+    aider-git.el -> aider-git.el
+    aider-helm.el -> aider-helm.el
+    aider-highlight-changes.el -> aider-highlight-changes.el
+    aider-legacy-code.el -> aider-legacy-code.el
+    aider-prompt-mode.el -> aider-prompt-mode.el
+    aider-software-planning.el -> aider-software-planning.el
+    aider-utils.el -> aider-utils.el
+    aider.el -> aider.el
+    snippets => snippets
+Created aider-20251201.133.tar containing:
+  aider-20251201.133/
+  aider-20251201.133/aider-agile.el
+  aider-20251201.133/aider-bootstrap.el
+  aider-20251201.133/aider-code-change.el
+  aider-20251201.133/aider-code-read.el
+  aider-20251201.133/aider-comint-markdown.el
+  aider-20251201.133/aider-core.el
+  aider-20251201.133/aider-discussion.el
+  aider-20251201.133/aider-doom.el
+  aider-20251201.133/aider-file.el
+  aider-20251201.133/aider-git.el
+  aider-20251201.133/aider-helm.el
+  aider-20251201.133/aider-highlight-changes.el
+  aider-20251201.133/aider-legacy-code.el
+  aider-20251201.133/aider-pkg.el
+  aider-20251201.133/aider-prompt-mode.el
+  aider-20251201.133/aider-software-planning.el
+  aider-20251201.133/aider-utils.el
+  aider-20251201.133/aider.el
+  aider-20251201.133/snippets/
+  aider-20251201.133/snippets/aider-prompt-mode/
+  aider-20251201.133/snippets/aider-prompt-mode/add-comments
+  aider-20251201.133/snippets/aider-prompt-mode/add-documentation
+  aider-20251201.133/snippets/aider-prompt-mode/add-parameter
+  aider-20251201.133/snippets/aider-prompt-mode/algorithm
+  aider-20251201.133/snippets/aider-prompt-mode/architecture-diagram
+  aider-20251201.133/snippets/aider-prompt-mode/class
+  aider-20251201.133/snippets/aider-prompt-mode/code-alternatives
+  aider-20251201.133/snippets/aider-prompt-mode/code-review
+  aider-20251201.133/snippets/aider-prompt-mode/codegen
+  aider-20251201.133/snippets/aider-prompt-mode/commit
+  aider-20251201.133/snippets/aider-prompt-mode/create-boilerplate
+  aider-20251201.133/snippets/aider-prompt-mode/create-class
+  aider-20251201.133/snippets/aider-prompt-mode/create-function
+  aider-20251201.133/snippets/aider-prompt-mode/create-tests
+  aider-20251201.133/snippets/aider-prompt-mode/debug
+  aider-20251201.133/snippets/aider-prompt-mode/debug-component
+  aider-20251201.133/snippets/aider-prompt-mode/design
+  aider-20251201.133/snippets/aider-prompt-mode/diff-change
+  aider-20251201.133/snippets/aider-prompt-mode/docs
+  aider-20251201.133/snippets/aider-prompt-mode/entity-relationship-diagram
+  aider-20251201.133/snippets/aider-prompt-mode/explain
+  aider-20251201.133/snippets/aider-prompt-mode/explain-code
+  aider-20251201.133/snippets/aider-prompt-mode/fix-errors
+  aider-20251201.133/snippets/aider-prompt-mode/follow-style-guidelines
+  aider-20251201.133/snippets/aider-prompt-mode/generate-cheat-sheet
+  aider-20251201.133/snippets/aider-prompt-mode/generate-dockerfile
+  aider-20251201.133/snippets/aider-prompt-mode/generate-readme
+  aider-20251201.133/snippets/aider-prompt-mode/improve
+  aider-20251201.133/snippets/aider-prompt-mode/improve-error-handling
+  aider-20251201.133/snippets/aider-prompt-mode/improve-performance
+  aider-20251201.133/snippets/aider-prompt-mode/init
+  aider-20251201.133/snippets/aider-prompt-mode/merge
+  aider-20251201.133/snippets/aider-prompt-mode/mermaid-architecture-diagram
+  aider-20251201.133/snippets/aider-prompt-mode/modernize-best-practices
+  aider-20251201.133/snippets/aider-prompt-mode/modernize-code
+  aider-20251201.133/snippets/aider-prompt-mode/optimize
+  aider-20251201.133/snippets/aider-prompt-mode/optimize-prompt
+  aider-20251201.133/snippets/aider-prompt-mode/practices
+  aider-20251201.133/snippets/aider-prompt-mode/query
+  aider-20251201.133/snippets/aider-prompt-mode/refactor-code
+  aider-20251201.133/snippets/aider-prompt-mode/review
+  aider-20251201.133/snippets/aider-prompt-mode/review-code
+  aider-20251201.133/snippets/aider-prompt-mode/review-logical-errors
+  aider-20251201.133/snippets/aider-prompt-mode/rewrite-code
+  aider-20251201.133/snippets/aider-prompt-mode/rewrite-prompt
+  aider-20251201.133/snippets/aider-prompt-mode/schema
+  aider-20251201.133/snippets/aider-prompt-mode/security
+  aider-20251201.133/snippets/aider-prompt-mode/suggest-improvements
+  aider-20251201.133/snippets/aider-prompt-mode/transpile-code
+  aider-20251201.133/snippets/aider-prompt-mode/unit-tests
+  aider-20251201.133/snippets/aider-prompt-mode/validate-recommendations
+  aider-20251201.133/snippets/aider-prompt-mode/validate-recommendations-reflection
+  aider-20251201.133/snippets/aider-prompt-mode/world-class-engineer
+  aider-20251201.133/snippets/aider-prompt-mode/write-blog
+  aider-20251201.133/snippets/aider-prompt-mode/write-code
+  aider-20251201.133/snippets/aider-prompt-mode/write-regex
+  aider-20251201.133/snippets/aider-prompt-mode/write-terms-conditions
+Built aider in 4.713s, finished at 2026-09-04T00:11:57+0000

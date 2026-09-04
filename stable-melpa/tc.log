@@ -3,29 +3,91 @@
 From https://github.com/kanchoku/tc
 Updating /mnt/store/melpa/working/tc/
 Checking out 5d84e847cf34545a88dc2e1555dac3aef771b21f
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-100c03549268> (("eelll.el" . "eelll.el") ("tc-bushu.el" . "tc-bushu.el") ("tc-complete.el" . "tc-complete.el") ("tc-help.el" . "tc-help.el") ("tc-image.el" . "tc-image.el") ("tc-inst.el" . "tc-inst.el") ("tc-is22.el" . "tc-is22.el") ("tc-iscommon.el" . "tc-iscommon.el") ("tc-ishelper.el" . "tc-ishelper.el") ("tc-ja-alnum.el" . "tc-ja-alnum.el") ("tc-jiscode.el" . "tc-jiscode.el") ("tc-mazegaki.el" . "tc-mazegaki.el") ("tc-mkmzdic.el" . "tc-mkmzdic.el") ("tc-pre.el" . "tc-pre.el") ("tc-setup.el" . "tc-setup.el") ("tc-stat.el" . "tc-stat.el") ("tc-sysdep.el" . "tc-sysdep.el") ("tc-tbl.el" . "tc-tbl.el") ("tc-util.el" . "tc-util.el") ("tc.el" . "tc.el") ("try-etbl.el" . "try-etbl.el") ("try-tbl.el" . "try-tbl.el") ("ttc-ltbl.el" . "ttc-ltbl.el") ("ttc-rtbl.el" . "ttc-rtbl.el") ("ttc-tbl.el" . "ttc-tbl.el") ("tutc-tbl.el" . "tutc-tbl.el") ("tcode" . "tcode")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-100c03549268> (("eelll.el" . "eelll.el") ("tc-bushu.el" . "tc-bushu.el") ("tc-complete.el" . "tc-complete.el") ("tc-help.el" . "tc-help.el") ("tc-image.el" . "tc-image.el") ("tc-inst.el" . "tc-inst.el") ("tc-is22.el" . "tc-is22.el") ("tc-iscommon.el" . "tc-iscommon.el") ("tc-ishelper.el" . "tc-ishelper.el") ("tc-ja-alnum.el" . "tc-ja-alnum.el") ("tc-jiscode.el" . "tc-jiscode.el") ("tc-mazegaki.el" . "tc-mazegaki.el") ("tc-mkmzdic.el" . "tc-mkmzdic.el") ("tc-pre.el" . "tc-pre.el") ("tc-setup.el" . "tc-setup.el") ("tc-stat.el" . "tc-stat.el") ("tc-sysdep.el" . "tc-sysdep.el") ("tc-tbl.el" . "tc-tbl.el") ("tc-util.el" . "tc-util.el") ("tc.el" . "tc.el") ("try-etbl.el" . "try-etbl.el") ("try-tbl.el" . "try-tbl.el") ("ttc-ltbl.el" . "ttc-ltbl.el") ("ttc-rtbl.el" . "ttc-rtbl.el") ("ttc-tbl.el" . "ttc-tbl.el") ("tutc-tbl.el" . "tutc-tbl.el") ("tcode" . "tcode")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-100c03549268>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "tc")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "tc")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time aSymbol's function definition is void: package-build--build-multi-file-package
-ttrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "tc")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("tc")
-  eval((package-build-archive "tc") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"tc\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tc/
+  to /tmp/tc-Um7Lqf/tc-20260112.1340/
+    eelll.el -> eelll.el
+    tc-bushu.el -> tc-bushu.el
+    tc-complete.el -> tc-complete.el
+    tc-help.el -> tc-help.el
+    tc-image.el -> tc-image.el
+    tc-inst.el -> tc-inst.el
+    tc-is22.el -> tc-is22.el
+    tc-iscommon.el -> tc-iscommon.el
+    tc-ishelper.el -> tc-ishelper.el
+    tc-ja-alnum.el -> tc-ja-alnum.el
+    tc-jiscode.el -> tc-jiscode.el
+    tc-mazegaki.el -> tc-mazegaki.el
+    tc-mkmzdic.el -> tc-mkmzdic.el
+    tc-pre.el -> tc-pre.el
+    tc-setup.el -> tc-setup.el
+    tc-stat.el -> tc-stat.el
+    tc-sysdep.el -> tc-sysdep.el
+    tc-tbl.el -> tc-tbl.el
+    tc-util.el -> tc-util.el
+    tc.el -> tc.el
+    try-etbl.el -> try-etbl.el
+    try-tbl.el -> try-tbl.el
+    ttc-ltbl.el -> ttc-ltbl.el
+    ttc-rtbl.el -> ttc-rtbl.el
+    ttc-tbl.el -> ttc-tbl.el
+    tutc-tbl.el -> tutc-tbl.el
+    tcode => tcode
+Created tc-20260112.1340.tar containing:
+  tc-20260112.1340/
+  tc-20260112.1340/eelll.el
+  tc-20260112.1340/tc-bushu.el
+  tc-20260112.1340/tc-complete.el
+  tc-20260112.1340/tc-help.el
+  tc-20260112.1340/tc-image.el
+  tc-20260112.1340/tc-inst.el
+  tc-20260112.1340/tc-is22.el
+  tc-20260112.1340/tc-iscommon.el
+  tc-20260112.1340/tc-ishelper.el
+  tc-20260112.1340/tc-ja-alnum.el
+  tc-20260112.1340/tc-jiscode.el
+  tc-20260112.1340/tc-mazegaki.el
+  tc-20260112.1340/tc-mkmzdic.el
+  tc-20260112.1340/tc-pkg.el
+  tc-20260112.1340/tc-pre.el
+  tc-20260112.1340/tc-setup.el
+  tc-20260112.1340/tc-stat.el
+  tc-20260112.1340/tc-sysdep.el
+  tc-20260112.1340/tc-tbl.el
+  tc-20260112.1340/tc-util.el
+  tc-20260112.1340/tc.el
+  tc-20260112.1340/tcode/
+  tc-20260112.1340/tcode/EELLLTXT
+  tc-20260112.1340/tcode/EELLLTXT.tut
+  tc-20260112.1340/tcode/Makefile.am
+  tc-20260112.1340/tcode/Makefile.in
+  tc-20260112.1340/tcode/README
+  tc-20260112.1340/tcode/bushu.expand
+  tc-20260112.1340/tcode/bushu.rev
+  tc-20260112.1340/tcode/greece.maz
+  tc-20260112.1340/tcode/itaiji.maz
+  tc-20260112.1340/tcode/jukujiku.maz
+  tc-20260112.1340/tcode/mazegaki.dic
+  tc-20260112.1340/tcode/mk-mzdic
+  tc-20260112.1340/tcode/mkcertain.pl
+  tc-20260112.1340/tcode/pd_kihon.yom
+  tc-20260112.1340/tcode/step1.pl
+  tc-20260112.1340/tcode/step2.pl
+  tc-20260112.1340/tcode/symbol.rev
+  tc-20260112.1340/tcode/t1200.dat
+  tc-20260112.1340/tcode/t1353.dat
+  tc-20260112.1340/tcode/t225.dat
+  tc-20260112.1340/tcode/t300.dat
+  tc-20260112.1340/tcode/t400.dat
+  tc-20260112.1340/tcode/t450.dat
+  tc-20260112.1340/tcode/t575.dat
+  tc-20260112.1340/tcode/t675.dat
+  tc-20260112.1340/tcode/t900.dat
+  tc-20260112.1340/tcode/tcode.u
+  tc-20260112.1340/try-etbl.el
+  tc-20260112.1340/try-tbl.el
+  tc-20260112.1340/ttc-ltbl.el
+  tc-20260112.1340/ttc-rtbl.el
+  tc-20260112.1340/ttc-tbl.el
+  tc-20260112.1340/tutc-tbl.el
+Built tc in 8.306s, finished at 2026-09-04T01:34:24+0000

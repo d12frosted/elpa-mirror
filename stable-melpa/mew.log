@@ -3,29 +3,186 @@
 From https://github.com/kazu-yamamoto/Mew
 Updating /mnt/store/melpa/working/mew/
 Checking out 40e58f0098a2cc00eb20494af858746a1486d5ec
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10387d8e345b> (("elisp/mew-addrbook.el" . "mew-addrbook.el") ("elisp/mew-attach.el" . "mew-attach.el") ("elisp/mew-auth.el" . "mew-auth.el") ("elisp/mew-blvs.el" . "mew-blvs.el") ("elisp/mew-bq.el" . "mew-bq.el") ("elisp/mew-cache.el" . "mew-cache.el") ("elisp/mew-complete.el" . "mew-complete.el") ("elisp/mew-config.el" . "mew-config.el") ("elisp/mew-const.el" . "mew-const.el") ("elisp/mew-darwin.el" . "mew-darwin.el") ("elisp/mew-decode.el" . "mew-decode.el") ("elisp/mew-demo.el" . "mew-demo.el") ("elisp/mew-draft.el" . "mew-draft.el") ("elisp/mew-edit.el" . "mew-edit.el") ("elisp/mew-encode.el" . "mew-encode.el") ("elisp/mew-env.el" . "mew-env.el") ("elisp/mew-env0.el" . "mew-env0.el") ("elisp/mew-exec.el" . "mew-exec.el") ("elisp/mew-ext.el" . "mew-ext.el") ("elisp/mew-fib.el" . "mew-fib.el") ("elisp/mew-func.el" . "mew-func.el") ("elisp/mew-gemacs.el" . "mew-gemacs.el") ("elisp/mew-gnutls.el" . "mew-gnutls.el") ("elisp/mew-header.el" . "mew-header.el") ("elisp/mew-highlight.el" . "mew-highlight.el") ("elisp/mew-imap.el" . "mew-imap.el") ("elisp/mew-imap2.el" . "mew-imap2.el") ("elisp/mew-key.el" . "mew-key.el") ("elisp/mew-lang-jp.el" . "mew-lang-jp.el") ("elisp/mew-lang-kr.el" . "mew-lang-kr.el") ("elisp/mew-lang-latin.el" . "mew-lang-latin.el") ("elisp/mew-local.el" . "mew-local.el") ("elisp/mew-mark.el" . "mew-mark.el") ("elisp/mew-message.el" . "mew-message.el") ("elisp/mew-mime.el" . "mew-mime.el") ("elisp/mew-minibuf.el" . "mew-minibuf.el") ("elisp/mew-mule.el" . "mew-mule.el") ("elisp/mew-mule3.el" . "mew-mule3.el") ("elisp/mew-net.el" . "mew-net.el") ("elisp/mew-nntp.el" . "mew-nntp.el") ("elisp/mew-nntp2.el" . "mew-nntp2.el") ("elisp/mew-oauth2.el" . "mew-oauth2.el") ("elisp/mew-passwd.el" . "mew-passwd.el") ("elisp/mew-pgp.el" . "mew-pgp.el") ("elisp/mew-pick.el" . "mew-pick.el") ("elisp/mew-pop.el" . "mew-pop.el") ("elisp/mew-refile.el" . "mew-refile.el") ("elisp/mew-scan.el" . "mew-scan.el") ("elisp/mew-search.el" . "mew-search.el") ("elisp/mew-smime.el" . "mew-smime.el") ("elisp/mew-smtp.el" . "mew-smtp.el") ("elisp/mew-sort.el" . "mew-sort.el") ("elisp/mew-ssh.el" . "mew-ssh.el") ("elisp/mew-stunnel.el" . "mew-stunnel.el") ("elisp/mew-summary.el" . "mew-summary.el") ("elisp/mew-summary2.el" . "mew-summary2.el") ("elisp/mew-summary3.el" . "mew-summary3.el") ("elisp/mew-summary4.el" . "mew-summary4.el") ("elisp/mew-syntax.el" . "mew-syntax.el") ("elisp/mew-thread.el" . "mew-thread.el") ("elisp/mew-unix.el" . "mew-unix.el") ("elisp/mew-vars.el" . "mew-vars.el") ("elisp/mew-vars2.el" . "mew-vars2.el") ("elisp/mew-vars3.el" . "mew-vars3.el") ("elisp/mew-varsx.el" . "mew-varsx.el") ("elisp/mew-virtual.el" . "mew-virtual.el") ("elisp/mew-win32.el" . "mew-win32.el") ("elisp/mew.el" . "mew.el") ("etc" . "etc") ("info/mew.info" . "mew.info") ("info/mew.ja.info" . "mew.ja.info")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10387d8e345b> (("elisp/mew-addrbook.el" . "mew-addrbook.el") ("elisp/mew-attach.el" . "mew-attach.el") ("elisp/mew-auth.el" . "mew-auth.el") ("elisp/mew-blvs.el" . "mew-blvs.el") ("elisp/mew-bq.el" . "mew-bq.el") ("elisp/mew-cache.el" . "mew-cache.el") ("elisp/mew-complete.el" . "mew-complete.el") ("elisp/mew-config.el" . "mew-config.el") ("elisp/mew-const.el" . "mew-const.el") ("elisp/mew-darwin.el" . "mew-darwin.el") ("elisp/mew-decode.el" . "mew-decode.el") ("elisp/mew-demo.el" . "mew-demo.el") ("elisp/mew-draft.el" . "mew-draft.el") ("elisp/mew-edit.el" . "mew-edit.el") ("elisp/mew-encode.el" . "mew-encode.el") ("elisp/mew-env.el" . "mew-env.el") ("elisp/mew-env0.el" . "mew-env0.el") ("elisp/mew-exec.el" . "mew-exec.el") ("elisp/mew-ext.el" . "mew-ext.el") ("elisp/mew-fib.el" . "mew-fib.el") ("elisp/mew-func.el" . "mew-func.el") ("elisp/mew-gemacs.el" . "mew-gemacs.el") ("elisp/mew-gnutls.el" . "mew-gnutls.el") ("elisp/mew-header.el" . "mew-header.el") ("elisp/mew-highlight.el" . "mew-highlight.el") ("elisp/mew-imap.el" . "mew-imap.el") ("elisp/mew-imap2.el" . "mew-imap2.el") ("elisp/mew-key.el" . "mew-key.el") ("elisp/mew-lang-jp.el" . "mew-lang-jp.el") ("elisp/mew-lang-kr.el" . "mew-lang-kr.el") ("elisp/mew-lang-latin.el" . "mew-lang-latin.el") ("elisp/mew-local.el" . "mew-local.el") ("elisp/mew-mark.el" . "mew-mark.el") ("elisp/mew-message.el" . "mew-message.el") ("elisp/mew-mime.el" . "mew-mime.el") ("elisp/mew-minibuf.el" . "mew-minibuf.el") ("elisp/mew-mule.el" . "mew-mule.el") ("elisp/mew-mule3.el" . "mew-mule3.el") ("elisp/mew-net.el" . "mew-net.el") ("elisp/mew-nntp.el" . "mew-nntp.el") ("elisp/mew-nntp2.el" . "mew-nntp2.el") ("elisp/mew-oauth2.el" . "mew-oauth2.el") ("elisp/mew-passwd.el" . "mew-passwd.el") ("elisp/mew-pgp.el" . "mew-pgp.el") ("elisp/mew-pick.el" . "mew-pick.el") ("elisp/mew-pop.el" . "mew-pop.el") ("elisp/mew-refile.el" . "mew-refile.el") ("elisp/mew-scan.el" . "mew-scan.el") ("elisp/mew-search.el" . "mew-search.el") ("elisp/mew-smime.el" . "mew-smime.el") ("elisp/mew-smtp.el" . "mew-smtp.el") ("elisp/mew-sort.el" . "mew-sort.el") ("elisp/mew-ssh.el" . "mew-ssh.el") ("elisp/mew-stunnel.el" . "mew-stunnel.el") ("elisp/mew-summary.el" . "mew-summary.el") ("elisp/mew-summary2.el" . "mew-summary2.el") ("elisp/mew-summary3.el" . "mew-summary3.el") ("elisp/mew-summary4.el" . "mew-summary4.el") ("elisp/mew-syntax.el" . "mew-syntax.el") ("elisp/mew-thread.el" . "mew-thread.el") ("elisp/mew-unix.el" . "mew-unix.el") ("elisp/mew-vars.el" . "mew-vars.el") ("elisp/mew-vars2.el" . "mew-vars2.el") ("elisp/mew-vars3.el" . "mew-vars3.el") ("elisp/mew-varsx.el" . "mew-varsx.el") ("elisp/mew-virtual.el" . "mew-virtual.el") ("elisp/mew-win32.el" . "mew-win32.el") ("elisp/mew.el" . "mew.el") ("etc" . "etc") ("info/mew.info" . "mew.info") ("info/mew.ja.info" . "mew.ja.info")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10387d8e345b>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "mew")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "mew")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (tSymbol's function definition is void: package-build--build-multi-file-package
-ime-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "mew")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("mew")
-  eval((package-build-archive "mew") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"mew\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mew/
+  to /tmp/mew-rjgsSD/mew-20260827.401/
+  ! elisp/mew-addrbook.el -> mew-addrbook.el
+  ! elisp/mew-attach.el -> mew-attach.el
+  ! elisp/mew-auth.el -> mew-auth.el
+  ! elisp/mew-blvs.el -> mew-blvs.el
+  ! elisp/mew-bq.el -> mew-bq.el
+  ! elisp/mew-cache.el -> mew-cache.el
+  ! elisp/mew-complete.el -> mew-complete.el
+  ! elisp/mew-config.el -> mew-config.el
+  ! elisp/mew-const.el -> mew-const.el
+  ! elisp/mew-darwin.el -> mew-darwin.el
+  ! elisp/mew-decode.el -> mew-decode.el
+  ! elisp/mew-demo.el -> mew-demo.el
+  ! elisp/mew-draft.el -> mew-draft.el
+  ! elisp/mew-edit.el -> mew-edit.el
+  ! elisp/mew-encode.el -> mew-encode.el
+  ! elisp/mew-env.el -> mew-env.el
+  ! elisp/mew-env0.el -> mew-env0.el
+  ! elisp/mew-exec.el -> mew-exec.el
+  ! elisp/mew-ext.el -> mew-ext.el
+  ! elisp/mew-fib.el -> mew-fib.el
+  ! elisp/mew-func.el -> mew-func.el
+  ! elisp/mew-gemacs.el -> mew-gemacs.el
+  ! elisp/mew-gnutls.el -> mew-gnutls.el
+  ! elisp/mew-header.el -> mew-header.el
+  ! elisp/mew-highlight.el -> mew-highlight.el
+  ! elisp/mew-imap.el -> mew-imap.el
+  ! elisp/mew-imap2.el -> mew-imap2.el
+  ! elisp/mew-key.el -> mew-key.el
+  ! elisp/mew-lang-jp.el -> mew-lang-jp.el
+  ! elisp/mew-lang-kr.el -> mew-lang-kr.el
+  ! elisp/mew-lang-latin.el -> mew-lang-latin.el
+  ! elisp/mew-local.el -> mew-local.el
+  ! elisp/mew-mark.el -> mew-mark.el
+  ! elisp/mew-message.el -> mew-message.el
+  ! elisp/mew-mime.el -> mew-mime.el
+  ! elisp/mew-minibuf.el -> mew-minibuf.el
+  ! elisp/mew-mule.el -> mew-mule.el
+  ! elisp/mew-mule3.el -> mew-mule3.el
+  ! elisp/mew-net.el -> mew-net.el
+  ! elisp/mew-nntp.el -> mew-nntp.el
+  ! elisp/mew-nntp2.el -> mew-nntp2.el
+  ! elisp/mew-oauth2.el -> mew-oauth2.el
+  ! elisp/mew-passwd.el -> mew-passwd.el
+  ! elisp/mew-pgp.el -> mew-pgp.el
+  ! elisp/mew-pick.el -> mew-pick.el
+  ! elisp/mew-pop.el -> mew-pop.el
+  ! elisp/mew-refile.el -> mew-refile.el
+  ! elisp/mew-scan.el -> mew-scan.el
+  ! elisp/mew-search.el -> mew-search.el
+  ! elisp/mew-smime.el -> mew-smime.el
+  ! elisp/mew-smtp.el -> mew-smtp.el
+  ! elisp/mew-sort.el -> mew-sort.el
+  ! elisp/mew-ssh.el -> mew-ssh.el
+  ! elisp/mew-stunnel.el -> mew-stunnel.el
+  ! elisp/mew-summary.el -> mew-summary.el
+  ! elisp/mew-summary2.el -> mew-summary2.el
+  ! elisp/mew-summary3.el -> mew-summary3.el
+  ! elisp/mew-summary4.el -> mew-summary4.el
+  ! elisp/mew-syntax.el -> mew-syntax.el
+  ! elisp/mew-thread.el -> mew-thread.el
+  ! elisp/mew-unix.el -> mew-unix.el
+  ! elisp/mew-vars.el -> mew-vars.el
+  ! elisp/mew-vars2.el -> mew-vars2.el
+  ! elisp/mew-vars3.el -> mew-vars3.el
+  ! elisp/mew-varsx.el -> mew-varsx.el
+  ! elisp/mew-virtual.el -> mew-virtual.el
+  ! elisp/mew-win32.el -> mew-win32.el
+  ! elisp/mew.el -> mew.el
+    etc => etc
+  ! info/mew.info -> mew.info
+  ! info/mew.ja.info -> mew.ja.info
+Created mew-20260827.401.tar containing:
+  mew-20260827.401/
+  mew-20260827.401/dir
+  mew-20260827.401/etc/
+  mew-20260827.401/etc/Mew.img
+  mew-20260827.401/etc/Mew.png
+  mew-20260827.401/etc/Mew.xbm
+  mew-20260827.401/etc/Mew.xpm
+  mew-20260827.401/etc/mew-Audio.xpm
+  mew-20260827.401/etc/mew-Blank.xpm
+  mew-20260827.401/etc/mew-External.xpm
+  mew-20260827.401/etc/mew-Folder.xpm
+  mew-20260827.401/etc/mew-Image.xpm
+  mew-20260827.401/etc/mew-Octet-Stream.xpm
+  mew-20260827.401/etc/mew-Postscript.xpm
+  mew-20260827.401/etc/mew-Rfc822.xpm
+  mew-20260827.401/etc/mew-Text.xpm
+  mew-20260827.401/etc/mew-Unknown.xpm
+  mew-20260827.401/etc/mew-Video.xpm
+  mew-20260827.401/etc/mew-attach.xpm
+  mew-20260827.401/etc/mew-cite.xpm
+  mew-20260827.401/etc/mew-forward.xpm
+  mew-20260827.401/etc/mew-inc.xpm
+  mew-20260827.401/etc/mew-lock.xpm
+  mew-20260827.401/etc/mew-next.xpm
+  mew-20260827.401/etc/mew-pgp-enc.xpm
+  mew-20260827.401/etc/mew-pgp-sigenc.xpm
+  mew-20260827.401/etc/mew-pgp-sign.xpm
+  mew-20260827.401/etc/mew-prev.xpm
+  mew-20260827.401/etc/mew-queue.xpm
+  mew-20260827.401/etc/mew-refile.xpm
+  mew-20260827.401/etc/mew-reply.xpm
+  mew-20260827.401/etc/mew-send.xpm
+  mew-20260827.401/etc/mew-sep.xpm
+  mew-20260827.401/etc/mew-show.xpm
+  mew-20260827.401/etc/mew-write.xpm
+  mew-20260827.401/etc/mew-yank.xpm
+  mew-20260827.401/mew-addrbook.el
+  mew-20260827.401/mew-attach.el
+  mew-20260827.401/mew-auth.el
+  mew-20260827.401/mew-blvs.el
+  mew-20260827.401/mew-bq.el
+  mew-20260827.401/mew-cache.el
+  mew-20260827.401/mew-complete.el
+  mew-20260827.401/mew-config.el
+  mew-20260827.401/mew-const.el
+  mew-20260827.401/mew-darwin.el
+  mew-20260827.401/mew-decode.el
+  mew-20260827.401/mew-demo.el
+  mew-20260827.401/mew-draft.el
+  mew-20260827.401/mew-edit.el
+  mew-20260827.401/mew-encode.el
+  mew-20260827.401/mew-env.el
+  mew-20260827.401/mew-env0.el
+  mew-20260827.401/mew-exec.el
+  mew-20260827.401/mew-ext.el
+  mew-20260827.401/mew-fib.el
+  mew-20260827.401/mew-func.el
+  mew-20260827.401/mew-gemacs.el
+  mew-20260827.401/mew-gnutls.el
+  mew-20260827.401/mew-header.el
+  mew-20260827.401/mew-highlight.el
+  mew-20260827.401/mew-imap.el
+  mew-20260827.401/mew-imap2.el
+  mew-20260827.401/mew-key.el
+  mew-20260827.401/mew-lang-jp.el
+  mew-20260827.401/mew-lang-kr.el
+  mew-20260827.401/mew-lang-latin.el
+  mew-20260827.401/mew-local.el
+  mew-20260827.401/mew-mark.el
+  mew-20260827.401/mew-message.el
+  mew-20260827.401/mew-mime.el
+  mew-20260827.401/mew-minibuf.el
+  mew-20260827.401/mew-mule.el
+  mew-20260827.401/mew-mule3.el
+  mew-20260827.401/mew-net.el
+  mew-20260827.401/mew-nntp.el
+  mew-20260827.401/mew-nntp2.el
+  mew-20260827.401/mew-oauth2.el
+  mew-20260827.401/mew-passwd.el
+  mew-20260827.401/mew-pgp.el
+  mew-20260827.401/mew-pick.el
+  mew-20260827.401/mew-pkg.el
+  mew-20260827.401/mew-pop.el
+  mew-20260827.401/mew-refile.el
+  mew-20260827.401/mew-scan.el
+  mew-20260827.401/mew-search.el
+  mew-20260827.401/mew-smime.el
+  mew-20260827.401/mew-smtp.el
+  mew-20260827.401/mew-sort.el
+  mew-20260827.401/mew-ssh.el
+  mew-20260827.401/mew-stunnel.el
+  mew-20260827.401/mew-summary.el
+  mew-20260827.401/mew-summary2.el
+  mew-20260827.401/mew-summary3.el
+  mew-20260827.401/mew-summary4.el
+  mew-20260827.401/mew-syntax.el
+  mew-20260827.401/mew-thread.el
+  mew-20260827.401/mew-unix.el
+  mew-20260827.401/mew-vars.el
+  mew-20260827.401/mew-vars2.el
+  mew-20260827.401/mew-vars3.el
+  mew-20260827.401/mew-varsx.el
+  mew-20260827.401/mew-virtual.el
+  mew-20260827.401/mew-win32.el
+  mew-20260827.401/mew.el
+  mew-20260827.401/mew.info
+  mew-20260827.401/mew.ja.info
+Built mew in 4.726s, finished at 2026-09-04T01:04:34+0000

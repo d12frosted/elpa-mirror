@@ -3,29 +3,196 @@
 From https://github.com/emacs-tree-sitter/tree-sitter-langs
 Updating /mnt/store/melpa/working/tree-sitter-langs/
 Checking out 1a827f821fbcb967db5eecccd569b7fa4b93d152
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-github-recipe package-github-recipe-10ef9710237c> (("tree-sitter-langs-build.el" . "tree-sitter-langs-build.el") ("tree-sitter-langs.el" . "tree-sitter-langs.el") ("queries" . "queries")))
-  funcall(package-build--build-multi-file-package #<package-github-recipe package-github-recipe-10ef9710237c> (("tree-sitter-langs-build.el" . "tree-sitter-langs-build.el") ("tree-sitter-langs.el" . "tree-sitter-langs.el") ("queries" . "queries")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-github-recipe package-github-recipe-10ef9710237c>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "tree-sitter-langs")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (Symbol's function definition is void: package-build--build-multi-file-package
-eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "tree-sitter-langs")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "tree-sitter-langs")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("tree-sitter-langs")
-  eval((package-build-archive "tree-sitter-langs") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"tree-sitter-langs\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tree-sitter-langs/
+  to /tmp/tree-sitter-langs-Wo2b1n/tree-sitter-langs-20260729.1912/
+    tree-sitter-langs-build.el -> tree-sitter-langs-build.el
+    tree-sitter-langs.el -> tree-sitter-langs.el
+    queries => queries
+Created tree-sitter-langs-20260729.1912.tar containing:
+  tree-sitter-langs-20260729.1912/
+  tree-sitter-langs-20260729.1912/queries/
+  tree-sitter-langs-20260729.1912/queries/agda/
+  tree-sitter-langs-20260729.1912/queries/agda/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/arduino/
+  tree-sitter-langs-20260729.1912/queries/arduino/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/asm/
+  tree-sitter-langs-20260729.1912/queries/asm/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/astro/
+  tree-sitter-langs-20260729.1912/queries/astro/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/bash/
+  tree-sitter-langs-20260729.1912/queries/bash/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/bibtex/
+  tree-sitter-langs-20260729.1912/queries/bibtex/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/c/
+  tree-sitter-langs-20260729.1912/queries/c/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/cg/
+  tree-sitter-langs-20260729.1912/queries/cg/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/cmake/
+  tree-sitter-langs-20260729.1912/queries/cmake/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/cpp/
+  tree-sitter-langs-20260729.1912/queries/cpp/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/crystal/
+  tree-sitter-langs-20260729.1912/queries/crystal/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/css/
+  tree-sitter-langs-20260729.1912/queries/css/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/csv/
+  tree-sitter-langs-20260729.1912/queries/csv/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/dart/
+  tree-sitter-langs-20260729.1912/queries/dart/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/diff/
+  tree-sitter-langs-20260729.1912/queries/diff/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/dockerfile/
+  tree-sitter-langs-20260729.1912/queries/dockerfile/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/doxygen/
+  tree-sitter-langs-20260729.1912/queries/doxygen/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/ecma/
+  tree-sitter-langs-20260729.1912/queries/ecma/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/editorconfig/
+  tree-sitter-langs-20260729.1912/queries/editorconfig/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/elixir/
+  tree-sitter-langs-20260729.1912/queries/elixir/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/elm/
+  tree-sitter-langs-20260729.1912/queries/elm/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/fish/
+  tree-sitter-langs-20260729.1912/queries/fish/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/fsharp/
+  tree-sitter-langs-20260729.1912/queries/fsharp/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/gdscript/
+  tree-sitter-langs-20260729.1912/queries/gdscript/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/gdshader/
+  tree-sitter-langs-20260729.1912/queries/gdshader/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/git-config/
+  tree-sitter-langs-20260729.1912/queries/git-config/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/git-rebase/
+  tree-sitter-langs-20260729.1912/queries/git-rebase/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/gitattributes/
+  tree-sitter-langs-20260729.1912/queries/gitattributes/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/gitcommit/
+  tree-sitter-langs-20260729.1912/queries/gitcommit/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/gitignore/
+  tree-sitter-langs-20260729.1912/queries/gitignore/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/glsl/
+  tree-sitter-langs-20260729.1912/queries/glsl/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/go/
+  tree-sitter-langs-20260729.1912/queries/go/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/graphql/
+  tree-sitter-langs-20260729.1912/queries/graphql/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/groovy/
+  tree-sitter-langs-20260729.1912/queries/groovy/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/haskell/
+  tree-sitter-langs-20260729.1912/queries/haskell/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/haxe/
+  tree-sitter-langs-20260729.1912/queries/haxe/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/hcl/
+  tree-sitter-langs-20260729.1912/queries/hcl/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/hcl/highlights.terraform-mode.scm
+  tree-sitter-langs-20260729.1912/queries/heex/
+  tree-sitter-langs-20260729.1912/queries/heex/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/hlsl/
+  tree-sitter-langs-20260729.1912/queries/hlsl/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/html/
+  tree-sitter-langs-20260729.1912/queries/html/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/html_tags/
+  tree-sitter-langs-20260729.1912/queries/html_tags/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/jai/
+  tree-sitter-langs-20260729.1912/queries/jai/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/java/
+  tree-sitter-langs-20260729.1912/queries/java/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/javascript/
+  tree-sitter-langs-20260729.1912/queries/javascript/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/json/
+  tree-sitter-langs-20260729.1912/queries/json/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/julia/
+  tree-sitter-langs-20260729.1912/queries/julia/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/kotlin/
+  tree-sitter-langs-20260729.1912/queries/kotlin/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/lexc/
+  tree-sitter-langs-20260729.1912/queries/lexc/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/llvm-mir/
+  tree-sitter-langs-20260729.1912/queries/llvm-mir/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/llvm/
+  tree-sitter-langs-20260729.1912/queries/llvm/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/lua/
+  tree-sitter-langs-20260729.1912/queries/lua/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/make/
+  tree-sitter-langs-20260729.1912/queries/make/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/matlab/
+  tree-sitter-langs-20260729.1912/queries/matlab/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/mermaid/
+  tree-sitter-langs-20260729.1912/queries/mermaid/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/nim/
+  tree-sitter-langs-20260729.1912/queries/nim/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/ninja/
+  tree-sitter-langs-20260729.1912/queries/ninja/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/nix/
+  tree-sitter-langs-20260729.1912/queries/nix/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/ocaml-interface/
+  tree-sitter-langs-20260729.1912/queries/ocaml-interface/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/ocaml/
+  tree-sitter-langs-20260729.1912/queries/ocaml/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/pascal/
+  tree-sitter-langs-20260729.1912/queries/pascal/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/pgn/
+  tree-sitter-langs-20260729.1912/queries/pgn/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/php/
+  tree-sitter-langs-20260729.1912/queries/php/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/psv/
+  tree-sitter-langs-20260729.1912/queries/psv/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/purescript/
+  tree-sitter-langs-20260729.1912/queries/purescript/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/purescript/locals.scm
+  tree-sitter-langs-20260729.1912/queries/python/
+  tree-sitter-langs-20260729.1912/queries/python/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/r/
+  tree-sitter-langs-20260729.1912/queries/r/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/r/locals.scm
+  tree-sitter-langs-20260729.1912/queries/r/tags.scm
+  tree-sitter-langs-20260729.1912/queries/racket/
+  tree-sitter-langs-20260729.1912/queries/racket/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/ron/
+  tree-sitter-langs-20260729.1912/queries/ron/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/rtx/
+  tree-sitter-langs-20260729.1912/queries/rtx/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/ruby/
+  tree-sitter-langs-20260729.1912/queries/ruby/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/rust/
+  tree-sitter-langs-20260729.1912/queries/rust/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/slint/
+  tree-sitter-langs-20260729.1912/queries/slint/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/solidity/
+  tree-sitter-langs-20260729.1912/queries/solidity/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/sql/
+  tree-sitter-langs-20260729.1912/queries/sql/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/svelte/
+  tree-sitter-langs-20260729.1912/queries/svelte/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/tablegen/
+  tree-sitter-langs-20260729.1912/queries/tablegen/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/tcl/
+  tree-sitter-langs-20260729.1912/queries/tcl/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/tsv/
+  tree-sitter-langs-20260729.1912/queries/tsv/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/tsx/
+  tree-sitter-langs-20260729.1912/queries/tsx/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/twig/
+  tree-sitter-langs-20260729.1912/queries/twig/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/typescript/
+  tree-sitter-langs-20260729.1912/queries/typescript/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/typst/
+  tree-sitter-langs-20260729.1912/queries/typst/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/vim/
+  tree-sitter-langs-20260729.1912/queries/vim/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/wat/
+  tree-sitter-langs-20260729.1912/queries/wat/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/wgsl/
+  tree-sitter-langs-20260729.1912/queries/wgsl/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/xml/
+  tree-sitter-langs-20260729.1912/queries/xml/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/yaml/
+  tree-sitter-langs-20260729.1912/queries/yaml/highlights.scm
+  tree-sitter-langs-20260729.1912/queries/zig/
+  tree-sitter-langs-20260729.1912/queries/zig/highlights.scm
+  tree-sitter-langs-20260729.1912/tree-sitter-langs-build.el
+  tree-sitter-langs-20260729.1912/tree-sitter-langs-pkg.el
+  tree-sitter-langs-20260729.1912/tree-sitter-langs.el
+Built tree-sitter-langs in 6.595s, finished at 2026-09-04T01:37:24+0000

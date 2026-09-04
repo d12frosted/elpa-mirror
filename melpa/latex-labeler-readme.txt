@@ -20,7 +20,7 @@ configuration file (e.g.  ~/.emacs.d/init.el):
 
 (add-hook 'LaTeX-mode-hook #'latex-labeler-mode)
 
-Additionaly, it is recommended to add the following code.  This
+Additionally, it is recommended to add the following code.  This
 code suppresses the prompt for inserting an equation label when
 executing the `LaTeX-environment' command (C-c C-e):
 

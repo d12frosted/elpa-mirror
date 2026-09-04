@@ -3,29 +3,93 @@
 From https://gitlab.com/emacs-ansible/emacs-ansible
 Updating /mnt/store/melpa/working/ansible/
 Checking out 0d7bc93ad963677880d99c846a30ea6e6ed9eec5
-
-Error: void-function (package-build--build-multi-file-package)
-  package-build--build-multi-file-package(#<package-gitlab-recipe package-gitlab-recipe-1030e960a25b> (("ansible.el" . "ansible.el") ("snippets" . "snippets") ("dict" . "dict")))
-  funcall(package-build--build-multi-file-package #<package-gitlab-recipe package-gitlab-recipe-1030e960a25b> (("ansible.el" . "ansible.el") ("snippets" . "snippets") ("dict" . "dict")))
-  (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))
-  (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns")))
-  (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))
-  (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))
-  (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))
-  (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))
-  (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir))))))))
-  (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp))
-  (let ((default-directory (package-recipe--working-tree rcp))) (unwind-protect (let ((x0 rcp) (process-environment (copy-sequence process-environment))) (progn (ignore (eieio-object-p x0)) (let* ((x117 (eieio-oref x0 'name)) (x118 (eieio-oref x0 'version)) (x119 (eieio-oref x0 'commit)) (x120 (eieio-oref x0 'revdesc))) (let ((name x117) (version x118) (commit x119) (revdesc x120)) (progn (package-build--checkout rcp) (setenv "PACKAGE_VERSION" version) (setenv "PACKAGE_REVISION" commit) (setenv "PACKAGE_REVDESC" revdesc) (let* ((s (and t package-build-run-recipe-shell-command)) (command (and s (eieio-oref rcp 'shell-command)))) (if command (progn (package-build--message "Running %s" command) (package-build--call-sandboxed rcp shell-file-name shell-command-switch command)))) (let* ((s (and t package-build-run-recipe-make-targets)) (targets (and s (eieio-oref rcp 'make-targets)))) (if targets (progn (package-build--message "Running make %s" (string-join targets " ")) (apply #'package-build--call-sandboxed rcp "make" targets)))) (let* ((files (and t (package-build-expand-files-spec rcp t)))) (if files (funcall (or package-build-build-function 'package-build--legacy-build) rcp files) (package-build--error rcp "Unable to find files matching recipe patterns"))) (if package-build-badge-data (progn (package-build--write-badge-image name version package-build-archive-dir)))))))) (package-build--cleanup rcp)))
-  package-build--package(#<package-gitlab-recipe package-gitlab-recipe-1030e960a25b>)
-  (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))
-  (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents)))))
-  (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail))))))))
-  (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))
-  #f(lambda () [(silent nil) (dump-archive-contents nil) (name "ansible")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractSymbol's function definition is void: package-build--build-multi-file-package
-ive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t)))))()
-  handler-bind-1(#f(lambda () [(silent nil) (dump-archive-contents nil) (name "ansible")] (let* ((start-time (current-time)) (rcp (package-recipe-lookup name)) (url (eieio-oref rcp 'url)) (fetcher (package-recipe--fetcher rcp)) (version nil)) (if silent nil (message "%s%s package %s" (if noninteractive "\n • " "") (if package-build--inhibit-update "Fetching" "Building") name) (cond ((and package-build-verbose (not noninteractive)) (message "Package: %s" name) (message "Fetcher: %s" fetcher) (message "Source:  %s\n" url)) ((message "From %s" url)))) (package-build--fetch rcp) (if package-build--inhibit-update nil (package-build--select-version rcp) (setq version (eieio-oref rcp 'version)) (if version (progn (package-build--package rcp) (if dump-archive-contents (progn (package-build-dump-archive-contents))))) (cond (silent) ((not version) (message " ✗ Cannot determine version!")) ((and package-build-verbose (not noninteractive)) (message " ✓ Success:") (let ((tail (directory-files-and-attributes package-build-archive-dir nil (format "\\`%s-[0-9]+" name)))) (while tail (let ((x114 (car tail))) (progn (ignore (consp x114)) (let* ((x115 (car-safe x114)) (x116 (cdr-safe x114))) (let ((file x115) (attrs x116)) (message "  %s  %s" (format-time-string "%FT%T%z" (file-attribute-modification-time attrs) t) file)))) (setq tail (cdr tail)))))))) (if silent nil (message "%s %s in %.3fs, finished at %s" (if version "Built" "Fetched") name (float-time (time-since start-time)) (format-time-string "%FT%T%z" nil t))))) (error) #f(lambda (err) [(name "ansible")] (if (eq (car err) 'package-build-error) nil (package-build--log name err))))
-  package-build-archive("ansible")
-  eval((package-build-archive "ansible") t)
-  command-line-1(("-L" "/mnt/store/melpa/package-build" "--eval" "(progn (setq package-build-releases nil) (setq package-build-build-function 'package-build--build-multi-file-package) (setq package-build-snapshot-version-functions '(package-build-timestamp-version)) (setq package-build-badge-data '(\"MELPA\" \"#922793\")))" "--eval" "(progn (setq package-build-directory \"/mnt/store/melpa\") (setq package-build-archive-dir \"/mnt/store/melpa/packages\") (setq package-build-recipes-dir \"/mnt/store/melpa/recipes\") (setq package-build-working-dir \"/mnt/store/melpa/working\"))" "--eval" "()" "--eval" "(setq package-build--inhibit-fetch nil)" "--eval" "(setq package-build--inhibit-build nil)" "--eval" "(setq package-build-timeout-secs 600)" "--load" "package-build.el" "--eval" "(package-build-archive \"ansible\")"))
-  command-line()
-  normal-top-level()
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ansible/
+  to /tmp/ansible-LZYpFz/ansible-20260607.1852/
+    ansible.el -> ansible.el
+    snippets => snippets
+    dict => dict
+Created ansible-20260607.1852.tar containing:
+  ansible-20260607.1852/
+  ansible-20260607.1852/ansible-pkg.el
+  ansible-20260607.1852/ansible.el
+  ansible-20260607.1852/dict/
+  ansible-20260607.1852/dict/ansible
+  ansible-20260607.1852/snippets/
+  ansible-20260607.1852/snippets/text-mode/
+  ansible-20260607.1852/snippets/text-mode/ansible/
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/add_host
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/apt
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/apt_key
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/apt_repository
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/assemble
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/assert
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/async_status
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/blockinfile
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/command
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/copy
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/cron
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/deb822_repository
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/debconf
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/debug
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/dnf
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/dnf5
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/dpkg_selections
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/expect
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/fail
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/fetch
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/file
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/find
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/gather_facts
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/get_url
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/getent
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/git
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/group
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/group_by
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/hostname
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/import_playbook
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/import_role
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/import_tasks
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/include_role
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/include_tasks
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/include_vars
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/iptables
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/known_hosts
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/lineinfile
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/meta
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/mount_facts
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/package
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/package_facts
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/pause
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/ping
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/pip
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/raw
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/reboot
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/replace
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/rpm_key
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/script
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/service
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/service_facts
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/set_fact
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/set_stats
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/setup
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/shell
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/slurp
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/stat
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/subversion
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/systemd
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/systemd_service
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/sysvinit
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/tempfile
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/template
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/unarchive
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/uri
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/user
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/validate_argument_spec
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/wait_for
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/wait_for_connection
+  ansible-20260607.1852/snippets/text-mode/ansible/modules/yum_repository
+  ansible-20260607.1852/snippets/yaml-mode/
+  ansible-20260607.1852/snippets/yaml-mode/.yas-parents
+Built ansible in 4.356s, finished at 2026-09-04T00:12:47+0000
