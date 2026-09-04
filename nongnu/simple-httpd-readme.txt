@@ -12,12 +12,12 @@ but the server is vulnerable to denial of service attacks, so it should
 only be used for local development or automation. We make no guarantees
 regarding security.
 
-This package is available on [MELPA] and [ELPA].
+This package is available on [ELPA] or [MELPA].
 
 
-[MELPA] <https://melpa.org/>
+[ELPA] <https://elpa.nongnu.org/nongnu/simple-httpd.html>
 
-[ELPA] <https://nongnu.elpa.org/>
+[MELPA] <https://releases.melpa.org/#/simple-httpd>
 
 
 1 Usage

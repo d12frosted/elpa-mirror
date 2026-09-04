@@ -1,22 +1,24 @@
-*NOTICE:* Indentation has temporarily been disabled by default. SEE THE
-[INDENTATION] SECTION for why this was needed and what the plan is.
-TLDR indentation is going through a full rewrite.
+1 IMPORTANT!!!
+══════════════
+
+  This repo is being sunseted, please check out the new fork by Dominik
+  at [github].
 
 
-[INDENTATION] See section 9.1
+[github] <https://github.com/dschrempf/haskell-ts-mode>
 
 
-1 Contributing
+2 Contributing
 ══════════════
 
   Please contribute ideas on how the new indentation system would work.
   See [rewriting the indentation] section.
 
 
-[rewriting the indentation] See section 9.1.2
+[rewriting the indentation] See section 10.1.2
 
 
-2 Haskell mode based on treesitter
+3 Haskell mode based on treesitter
 ══════════════════════════════════
 
   A [Haskell] mode that uses [Tree-sitter].
@@ -32,7 +34,7 @@ TLDR indentation is going through a full rewrite.
 [Tree-sitter] <https://tree-sitter.github.io/tree-sitter/>
 
 
-3 Usage
+4 Usage
 ═══════
 
   • `C-c C-r' Open REPL
@@ -40,7 +42,7 @@ TLDR indentation is going through a full rewrite.
   • `M-q' Indent the function
 
 
-4 Features
+5 Features
 ══════════
 
   Overview of features:
@@ -53,7 +55,7 @@ TLDR indentation is going through a full rewrite.
   • Prettify Symbols mode support
 
 
-5 Comparison with `haskell-mode'
+6 Comparison with `haskell-mode'
 ════════════════════════════════
 
   The more interesting features are:
@@ -75,7 +77,7 @@ TLDR indentation is going through a full rewrite.
     and leaves other stuff to external packages.
 
 
-6 Motivation
+7 Motivation
 ════════════
 
   `haskell-mode' contains nearly 30k lines of code, and is about 30
@@ -94,7 +96,7 @@ TLDR indentation is going through a full rewrite.
 <https://elpa.nongnu.org/nongnu/haskell-tng-mode.html>
 
 
-7 Structural navigation
+8 Structural navigation
 ═══════════════════════
 
   This mode provides strucural navigation, for Emacs 30+.
@@ -109,7 +111,7 @@ TLDR indentation is going through a full rewrite.
   take you to the end of the second line.
 
 
-8 Installation
+9 Installation
 ══════════════
 
   Add this into your init.el:
@@ -133,7 +135,7 @@ TLDR indentation is going through a full rewrite.
   However, you might need to update the grammar version in the future.
 
 
-8.1 Other recommended packages
+9.1 Other recommended packages
 ──────────────────────────────
 
   Unlike `haskell-mode', this mode has a limited scope to just worrying
@@ -158,11 +160,11 @@ TLDR indentation is going through a full rewrite.
 [hcel] <https://github.com/emacsmirror/hcel>
 
 
-9 Customization
-═══════════════
+10 Customization
+════════════════
 
-9.1 Indentation
-───────────────
+10.1 Indentation
+────────────────
 
   *Indentation has been disabled by default*.  To enable it, use the
    following code.
@@ -172,8 +174,8 @@ TLDR indentation is going through a full rewrite.
   └────
 
 
-9.1.1 Why indentation has been disabled temporarily
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+10.1.1 Why indentation has been disabled temporarily
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Simply because the indention code became a monstrosity.  Don't belive
   me? check the `haskell-ts-indent-rules' variable.  Bugs are rampent,
@@ -181,8 +183,8 @@ TLDR indentation is going through a full rewrite.
   with no end in sight.
 
 
-9.1.2 Indentation rewrite
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+10.1.2 Indentation rewrite
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Check out the `newindent' branch to see the repo to see the progress.
 
@@ -210,8 +212,8 @@ TLDR indentation is going through a full rewrite.
 [hyai] <https://github.com/iquiw/hyai>
 
 
-9.2 Pretify Symbols mode
-────────────────────────
+10.2 Pretify Symbols mode
+─────────────────────────
 
   `prettify-symbols-mode' can be used to replace common symbols with
   unicode alternatives.
@@ -226,16 +228,16 @@ TLDR indentation is going through a full rewrite.
   └────
 
 
-9.3 Adjusting font lock level
-─────────────────────────────
+10.3 Adjusting font lock level
+──────────────────────────────
 
   Set `haskell-ts-font-lock-level' accordingly. The default and highest
   value is 4. You are against vibrancy, you can lower it to match your
   dreariness.
 
 
-9.4 Language server
-───────────────────
+10.4 Language server
+────────────────────
 
   `haskell-ts-mode' works with `lsp-mode' and, since Emacs 30, with
   `eglot'.
@@ -251,7 +253,7 @@ TLDR indentation is going through a full rewrite.
   └────
 
 
-10 TODO list
+11 TODO list
 ════════════
 
   • Support for M-x align, so that calling it will align all the ‘=’

@@ -251,14 +251,14 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "2bce67a68c270157d940ac9374ab393804c7e00d"))])
  (codex-ide
-  . [(0 1 2 0 20260902 0)
+  . [(0 1 2 0 20260904 1)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
       (eat (0 9 4)))
      "Run Codex CLI in a terminal" tar
      ((:url . "https://git.thanosapollo.org/emacs-codex-ide")
       (:keywords "ai" "codex" "tools" "terminal")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
-      (:commit . "f17b452de291d131193df08b0e73f8e2d3e57092"))])
+      (:commit . "a95d5dae060173fdf6bf54198462ccdbf0e1ad43"))])
  (coffee-mode
   . [(0 6 3 0 20230908 103000) ((emacs (24 3)))
      "Major mode for CoffeeScript code" tar
@@ -580,13 +580,13 @@
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
  (evil-collection
-  . [(3 0 1 0 20260818 1) ((emacs (29 1)) (evil (1 2 13)))
+  . [(3 0 2 0 20260904 0) ((emacs (29 1)) (evil (1 2 13)))
      "A set of keybindings for Evil mode" tar
      ((:url . "https://github.com/emacs-evil/evil-collection")
       (:keywords "evil" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "0a9a4c46e274584f66a2e0c313819697c0ab0d2d"))])
+      (:commit . "bce35101edcfe5ddccff270608ab71859fa90040"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -1017,11 +1017,11 @@
       (:keywords "markup" "languages" "html")
       (:commit . "3bb4a96535eb5c81dbe6a43bfa8d67a778d449c0"))])
  (haskell-mode
-  . [(17 5 0 20260829 70) ((emacs (25 1))) "A Haskell editing mode"
+  . [(17 5 0 20260904 72) ((emacs (25 1))) "A Haskell editing mode"
      tar
      ((:url . "https://github.com/haskell/haskell-mode")
       (:keywords "haskell" "cabal" "ghc" "repl" "languages")
-      (:commit . "d252d4a6feb3b15e4d0be88e6a42b98d8f5766ba"))])
+      (:commit . "4bdd38c22d8a54d3284b517e889863a1d3971998"))])
  (haskell-tng-mode
   . [(0 0 1 0 20230522 221126) ((emacs (27 1)) (popup (0 5 3)))
      "Major mode for editing Haskell" tar
@@ -1029,13 +1029,13 @@
       (:keywords "languages")
       (:commit . "9f63505d5c27312157e362404f5b922d0211be18"))])
  (haskell-ts-mode
-  . [(1 3 5 0 20251204 182222) ((emacs (29 3)))
+  . [(1 3 5 0 20260904 6) ((emacs (29 3)))
      "A treesit based major mode for haskell" tar
      ((:url . "https://codeberg.org/pranshu/haskell-ts-mode")
       (:keywords "languages" "haskell")
       (:maintainer "Pranshu Sharma" . "pranshu@bauherren.ovh")
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
-      (:commit . "bf143ee8382f09e0a68d775d80445065f32929c3"))])
+      (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
   . [(4 0 7 0 20260902 51) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
@@ -1591,13 +1591,13 @@
       (:authors ("Codingteam" . "codingteam@conference.jabber.ru"))
       (:commit . "071d008ebd734f469b87597cbdd34139a92e5308"))])
  (page-break-lines
-  . [(0 15 0 20260619 18) ((emacs (25 1)))
+  . [(0 15 0 20260904 20) ((emacs (25 1)))
      "Display ^L page breaks as tidy horizontal lines" tar
      ((:url . "https://github.com/purcell/page-break-lines")
       (:keywords "convenience" "faces")
       (:maintainer "Steve Purcell" . "steve@sanityinc.com")
       (:authors ("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "752f5eb59fa1f670e6e7aee626758d1a1c66ebae"))])
+      (:commit . "bd5eecd6580481fc37ed41c32d3c18cb49f4af57"))])
  (paredit
   . [(27 -2 0 20241103 20) nil "minor mode for editing parentheses"
      tar
@@ -1663,13 +1663,13 @@
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
       (:commit . "0e32f79ffca49578eba452d38b62e434e517df5e"))])
  (pinyin-isearch
-  . [(1 7 2 0 20260903 23) ((emacs (28 1))) "Pinyin mode for isearch"
+  . [(1 7 2 0 20260904 24) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
      ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
       (:keywords "chinese" "isearch" "matching" "convenience")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "ca9cac6c641ba6ef463ef3b2044a382b997f85e4"))])
+      (:commit . "163c2b6ee33d3bf18c2d2307a7ff851c9eaa67e6"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1883,14 +1883,14 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "173e4d632c94af6670869729c09bfb8ba484d257"))])
  (simple-httpd
-  . [(1 6 0 20260824 6) ((emacs (29 1)) (compat (31)))
+  . [(1 7 0 20260904 0) ((emacs (29 1)) (compat (31)))
      "Pure Elisp HTTP server" tar
      ((:url . "https://github.com/skeeto/emacs-http-server")
       (:keywords "network" "comm")
       (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "e6ffb91b7e5fa35169e7bc2c477eb292cb990973"))])
+      (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
  (slime
   . [(2 32 -4 0 20260904 67) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar

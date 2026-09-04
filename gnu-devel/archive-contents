@@ -894,13 +894,13 @@
       (:authors ("Mitchel Humpherys" . "mitch.special@gmail.com"))
       (:commit . "8f07c0ff4a1acef990589df0d3e32288f19c9d71"))])
  (diminish
-  . [(0 46 0 20220909 84745) ((emacs (24 3)))
+  . [(0 47 0 20260904 0) ((emacs (24 3)))
      "Diminished modes are minor modes with no modeline display" tar
      ((:url . "https://github.com/myrjola/diminish.el")
       (:keywords "extensions" "diminish" "minor" "codeprose")
       (:maintainer "Martin Yrjölä" . "martin.yrjola@gmail.com")
       (:authors ("Will Mengarini" . "seldon@eskimo.com"))
-      (:commit . "fbd5d846611bad828e336b25d2e131d1bc06b83d"))])
+      (:commit . "43d0b9e0d18e4d124e3f7dad9d73275fb678fa50"))])
  (dired-du
   . [(0 5 2 0 20221221 75108) ((emacs (24 4)) (cl-lib (0 5)))
      "Dired with recursive directory sizes" tar
@@ -1012,13 +1012,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 2 1 0 20260901 25) ((emacs (29 1)))
+  . [(1 3 0 0 20260904 0) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "777c80af0348d4b8eac783f7378d261fb4cc8c9f"))])
+      (:commit . "d0be237b7b63e455023666a51492ac34409d2caf"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -1744,13 +1744,13 @@
       (:authors ("Durand" . "mmemmew@gmail.com"))
       (:commit . "8f221c58a8c694112738e346c630d4d49a41d967"))])
  (indent-bars
-  . [(1 0 1 0 20260828 4) ((emacs (27 1)) (compat (30)))
+  . [(1 0 1 0 20260904 5) ((emacs (27 1)) (compat (30)))
      "Highlight indentation with bars" tar
      ((:url . "https://github.com/jdtsmith/indent-bars")
       (:keywords "convenience")
       (:maintainer "J.D. Smith" . "jdtsmith+elpa@gmail.com")
       (:authors ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
-      (:commit . "5d4b9131696b2c5992df24cfbcbe029cc16c7cb4"))])
+      (:commit . "7733b4b8e1fbd69dc38940000e6eea7516ca2dbc"))])
  (inspector
   . [(0 39 0 20251204 171741) ((emacs (27 1)))
      "Tool for inspection of Emacs Lisp objects" tar
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260901 42) ((emacs (28 1)))
+  . [(5 3 0 0 20260904 43) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "a3e7ba280524dfd4bdaf3169ef5901ac91dadb01"))])
+      (:commit . "bcf065b803439524ebe8b96f4584643562fee343"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
@@ -2844,13 +2844,13 @@
       (:url . "https://elpa.gnu.org/packages/pspp-mode.html")
       (:commit . "faf56c519049f0fbce3ab0a57e90702dd9f82da4"))])
  (pulsar
-  . [(1 4 1 0 20260723 2) ((emacs (28 1)))
+  . [(1 4 1 0 20260904 7) ((emacs (28 1)))
      "Pulse highlight on demand or after select functions" tar
      ((:url . "https://github.com/protesilaos/pulsar")
       (:keywords "convenience" "pulse" "highlight")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "1849c0720c3fe5eb92f800b20351b58bce8804b6"))])
+      (:commit . "b82c595ff67b127ea1bcb2a17aa423d72cbbe8c4"))])
  (pyim
   . [(5 3 6 0 20251230 80953)
      ((emacs (27 1)) (async (1 6)) (xr (1 13)))

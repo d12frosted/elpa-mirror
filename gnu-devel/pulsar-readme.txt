@@ -260,7 +260,7 @@ Table of Contents
 
   The command `pulsar-highlight-permanently-remove-all' removes all
   permanent highlights from the current buffer. It is the same calling
-  the above command with a prefix argument. [ Ths command is part of
+  the above command with a prefix argument. [ This command is part of
   1.5.0-dev. ]
 
   The command `pulsar-highlight-permanently-dwim' adds a permanent
@@ -288,17 +288,19 @@ Table of Contents
         that is pasted in the buffer. The user option
         `pulsar-pulse-region-functions' defines a list of functions that
         are region-aware in this regard. The default value covers
-        copyring, pasting, and undoing/redoing.
+        copying, pasting, and undoing/redoing.
   Window-related changes
         The pulse effect can be created whenever there is a change to
         the window layout. This includes the selection, addition,
-        deletion, orr resize of windows in a frame. Users can opt in to
+        deletion, or resize of windows in a frame. Users can opt in to
         this feature by setting `pulsar-pulse-on-window-change' to a
         non-`nil' value.
 
-  The user option `pulsar-region-face' sets the face that is used for
-  region-related pulses. By default, it is the same as the `pulsar-face'
-  ([Style of a pulse effect]).
+  The user options and `pulsar-region-face' and
+  `pulsar-window-change-face' set the faces that are used for
+  region-related and window-related changes pulses respectively. By
+  default, they are same as the `pulsar-face' ([Style of a pulse
+  effect]).
 
 
 [Overview] See section 4
@@ -399,9 +401,10 @@ Table of Contents
         Protesilaos.
 
   Contributions to the code or manual
-        Abdelhak Bougouffa, Aymeric Agon-Rambosson, Bahman Movaqar,
-        Daniel Mendler, Ivan Popovych, Javier Pacheco, JD Smith, Maxim
-        Dunaevsky, Ryan Kaskel, Steven Allen, shipmints, ukiran03.
+        Abdelhak Bougouffa, Alexander van den Berghe, Aymeric
+        Agon-Rambosson, Bahman Movaqar, Daniel Mendler, Ivan Popovych,
+        Javier Pacheco, JD Smith, Maxim Dunaevsky, Ryan Kaskel, Steven
+        Allen, shipmints, ukiran03.
 
   Ideas and user feedback
         Anwesh Gangula, Diego Alvarez, Duy Nguyen, Jake Miles, Koloszár
