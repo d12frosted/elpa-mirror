@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260902 102)
+  . [(0 9 9 5 0 20260903 105)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,15 +980,15 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "fea9551febb03e6b4d38a948a5a1f427e2bd406d"))])
+      (:commit . "cf0eb7d2289581e7d1f0eed52b29870d8739d4f2"))])
  (graphql-mode
-  . [(1 0 0 0 20260903 37) ((emacs (25 1)))
+  . [(1 0 0 0 20260904 38) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
      ((:url . "https://github.com/davazp/graphql-mode")
       (:keywords "languages")
       (:maintainer "David Vazquez Pua" . "davazp@gmail.com")
       (:authors ("David Vazquez Pua" . "davazp@gmail.com"))
-      (:commit . "9f6c7fda758e361b104dce8db05097dbda754f08"))])
+      (:commit . "96bddee439e1409fc31a79e7e28c9ba79de443b2"))])
  (gruber-darker-theme
   . [(0 7 0 20231026 203102) nil
      "Gruber Darker color theme for Emacs 24." tar
@@ -1574,7 +1574,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/p4-16-mode.html")
       (:commit . "794dd0056b4ca736ae5ecb39072547f22a006137"))])
  (package-lint
-  . [(0 26 0 20260808 27) ((emacs (25 1)) (let-alist (1 0 6)))
+  . [(0 26 0 20260903 32) ((emacs (25 1)) (let-alist (1 0 6)))
      "A linting library for elisp package authors" tar
      ((:url . "https://github.com/purcell/package-lint")
       (:keywords "lisp")
@@ -1582,7 +1582,7 @@
 		   ("Fanael Linithien" . "fanael4@gmail.com"))
       (:authors ("Steve Purcell" . "steve@sanityinc.com")
 		("Fanael Linithien" . "fanael4@gmail.com"))
-      (:commit . "87bf02ca387a37094e1a0057adefa9735d880cec"))])
+      (:commit . "1865be780a16098f972fef50a52b21ca6ee04df9"))])
  (pacmacs
   . [(0 1 1 0 20220411 143014) ((emacs (24 4)) (dash (2 18 0)))
      "Pacman for Emacs" tar
@@ -1892,11 +1892,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "e6ffb91b7e5fa35169e7bc2c477eb292cb990973"))])
  (slime
-  . [(2 32 -4 0 20260901 63) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260904 67) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "4a5b4fb0b536da711fa536760137f5424301f087"))])
+      (:commit . "990ad02bd5b9830245e4df6bcdbfe96ce05d1c5f"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar

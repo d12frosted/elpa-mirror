@@ -2,41 +2,53 @@
  • Building package mistty
 From https://github.com/szermatt/mistty
 Updating /mnt/store/melpa/working/mistty/
-Checking out 879abed83287ab79b6d3dbdab7df2bf3fc68769a
+Checking out 7b5cdd836ba1ef76a14f268a2ec6309af35bc8f2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mistty/
-  to /tmp/mistty-CTH1sH/mistty-20260715.1804/
+  to /tmp/mistty-aeJc2I/mistty-20260904.916/
     mistty-accum-macros.el -> mistty-accum-macros.el
     mistty-accum.el -> mistty-accum.el
+    mistty-alacritty.el -> mistty-alacritty.el
     mistty-changeset.el -> mistty-changeset.el
+    mistty-kbd.el -> mistty-kbd.el
     mistty-launch.el -> mistty-launch.el
     mistty-log.el -> mistty-log.el
     mistty-osc-colors.el -> mistty-osc-colors.el
     mistty-osc7.el -> mistty-osc7.el
     mistty-project.el -> mistty-project.el
     mistty-queue.el -> mistty-queue.el
+    mistty-scrolline.el -> mistty-scrolline.el
+    mistty-term-alacritty.el -> mistty-term-alacritty.el
+    mistty-term-base.el -> mistty-term-base.el
+    mistty-term-eterm.el -> mistty-term-eterm.el
     mistty-term.el -> mistty-term.el
     mistty-undo.el -> mistty-undo.el
     mistty-util.el -> mistty-util.el
     mistty.el -> mistty.el
     mistty.texi -> mistty.texi
 Generating mistty.info
-Created mistty-20260715.1804.tar containing:
-  mistty-20260715.1804/
-  mistty-20260715.1804/dir
-  mistty-20260715.1804/mistty-accum-macros.el
-  mistty-20260715.1804/mistty-accum.el
-  mistty-20260715.1804/mistty-changeset.el
-  mistty-20260715.1804/mistty-launch.el
-  mistty-20260715.1804/mistty-log.el
-  mistty-20260715.1804/mistty-osc-colors.el
-  mistty-20260715.1804/mistty-osc7.el
-  mistty-20260715.1804/mistty-pkg.el
-  mistty-20260715.1804/mistty-project.el
-  mistty-20260715.1804/mistty-queue.el
-  mistty-20260715.1804/mistty-term.el
-  mistty-20260715.1804/mistty-undo.el
-  mistty-20260715.1804/mistty-util.el
-  mistty-20260715.1804/mistty.el
-  mistty-20260715.1804/mistty.info
-Built mistty in 7.998s, finished at 2026-09-04T01:05:12+0000
+Created mistty-20260904.916.tar containing:
+  mistty-20260904.916/
+  mistty-20260904.916/dir
+  mistty-20260904.916/mistty-accum-macros.el
+  mistty-20260904.916/mistty-accum.el
+  mistty-20260904.916/mistty-alacritty.el
+  mistty-20260904.916/mistty-changeset.el
+  mistty-20260904.916/mistty-kbd.el
+  mistty-20260904.916/mistty-launch.el
+  mistty-20260904.916/mistty-log.el
+  mistty-20260904.916/mistty-osc-colors.el
+  mistty-20260904.916/mistty-osc7.el
+  mistty-20260904.916/mistty-pkg.el
+  mistty-20260904.916/mistty-project.el
+  mistty-20260904.916/mistty-queue.el
+  mistty-20260904.916/mistty-scrolline.el
+  mistty-20260904.916/mistty-term-alacritty.el
+  mistty-20260904.916/mistty-term-base.el
+  mistty-20260904.916/mistty-term-eterm.el
+  mistty-20260904.916/mistty-term.el
+  mistty-20260904.916/mistty-undo.el
+  mistty-20260904.916/mistty-util.el
+  mistty-20260904.916/mistty.el
+  mistty-20260904.916/mistty.info
+Built mistty in 12.513s, finished at 2026-09-04T10:36:05+0000
