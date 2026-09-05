@@ -10,3 +10,8 @@ further.
 
 Additionally, the package provides commands to toggle side windows or display
 buffers explicitly in one of the four sides manually.
+
+A buffer can also move from slot to slot along its side, by command or
+by a drag of the header line, and the width of a side and the height of
+each of its slots can be remembered per tab, so a layout you resize
+comes back as you left it.
