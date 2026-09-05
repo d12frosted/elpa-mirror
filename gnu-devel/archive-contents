@@ -1378,14 +1378,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 7 0 20260903 0)
+  . [(1 4 7 0 20260905 2)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "c1a79f0d32c48279b65c73b12b7e218f1eab932a"))])
+      (:commit . "7ca28566aa6a415d6f89297f40d258d1791cc6fd"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -2474,22 +2474,22 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "51f677f464424ce3c46e3deacb7709784795a03b"))])
  (org
-  . [(10 0 -1 0 20260902 534) ((emacs (28 2)))
+  . [(10 0 -1 0 20260905 539) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "00c0709e741447174481d66038b87951e19faaf2"))])
+      (:commit . "c8286c97c0843d2ea3a50bc833e17dd9a1919d92"))])
  (org-contacts
-  . [(1 3 0 20260829 10) ((emacs (29 1)) (org (9 7)))
+  . [(1 3 0 20260905 13) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
      ((:url . "https://repo.or.cz/org-contacts.git")
       (:keywords "contacts" "org-mode" "outlines" "hypermedia"
 		 "calendar")
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:authors ("Julien Danjou" . "julien@danjou.info"))
-      (:commit . "886d78099e4cf5ed620379b81097134fea4b8e83"))])
+      (:commit . "bc21e333851a92ce77c9f00b86c2f7a8795891a1"))])
  (org-edna
   . [(1 1 2 0 20200902 94459)
      ((emacs (25 1)) (seq (2 19)) (org (9 0 5)))
@@ -2904,13 +2904,12 @@
 		("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "f986fb68e75bdae951efb9e11a3012ab6bd408ee"))])
  (rainbow-mode
-  . [(1 0 6 0 20231215 171141) nil "Colorize color names in buffers"
-     tar
+  . [(1 0 7 0 20260905 0) nil "Colorize color names in buffers" tar
      ((:keywords "faces")
       (:maintainer "Julien Danjou" . "julien@danjou.info")
       (:authors ("Julien Danjou" . "julien@danjou.info"))
       (:url . "https://elpa.gnu.org/packages/rainbow-mode.html")
-      (:commit . "f7db3b5919f70420a91eb199f8663468de3033f3"))])
+      (:commit . "9d333d3a92132c2a9057d2a39e1ebd8cc575a1bb"))])
  (rbit
   . [(0 1 0 20201128 182847) nil "Red-black persistent interval trees"
      tar
@@ -3921,12 +3920,12 @@
       (:url . "https://elpa.gnu.org/packages/vlf.html")
       (:commit . "6192573ee088079bf1f81abc2bf2a370a5a92397"))])
  (vundo
-  . [(2 4 0 0 20251218 210411) ((emacs (28 1))) "Visual undo tree" tar
+  . [(2 4 0 0 20260905 15) ((emacs (28 1))) "Visual undo tree" tar
      ((:url . "https://github.com/casouri/vundo")
       (:keywords "undo" "text" "editing")
       (:maintainer "Yuan Fu" . "casouri@gmail.com")
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
-      (:commit . "e0af8c5845abf884a644215a9cac37f39c13cd5a"))])
+      (:commit . "04caf7ec54e4a7861d3591a1e090adc1fb76b5d1"))])
  (wcheck-mode
   . [(2026 5 0 20260529 0) nil "General interface for text checkers"
      tar

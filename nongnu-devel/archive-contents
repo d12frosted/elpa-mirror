@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "90712c571f21ccf024b7eb6dcb9ccb5bffbad073"))])
  (hermes
-  . [(0 4 3 0 20260901 0)
+  . [(0 5 0 0 20260905 0)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "0a539e4e35ca5d4d1dea0aec55d0b89ef7d7d96f"))])
+      (:commit . "ab2ee92ddd4db52a99b630f975d547736f3132cc"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1193,14 +1193,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 13 2 0 20260901 5)
+  . [(0 14 0 0 20260905 0)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "cd06fd1d28dca3244bd7bf489fbae7ddb26c5b18"))])
+      (:commit . "41b1d16ce501ae93b6970e13b8125a2664efefda"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1364,13 +1364,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "76cb4ffecfdf95ee769e5cb4608e04202c3c1521"))])
  (mastodon
-  . [(2 1 1 0 20260825 74) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
+  . [(2 1 2 0 20260905 74) ((emacs (29 1)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "b3c19403378f9b465302274fb6dda71243c4cfce"))])
+      (:commit . "47438191baf258ad0b53d47b0845c47eccf0300b"))])
  (material-theme
   . [(2015 0 20210904 122621) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar
@@ -1695,13 +1695,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-nix-store
-  . [(0 10 0 0 20260826 0) ((emacs (29 1)))
+  . [(0 10 0 0 20260905 1) ((emacs (29 1)))
      "Project backend for Nix-like store" tar
      ((:url . "https://github.com/jian-lin/project-nix-store")
       (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "ae6c743f98f2f46222cec670d96b1d125db1c7c5"))])
+      (:commit . "2a42fc67d6102ddfe81776f52704316a79b3e21e"))])
  (projectile
   . [(3 5 0 -4 0 20260903 56) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
