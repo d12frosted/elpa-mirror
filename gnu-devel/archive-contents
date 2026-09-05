@@ -404,13 +404,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 9 0 20260821 0) ((emacs (29 1)) (compat (31)))
+  . [(2 9 0 20260905 2) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "f0135abaf95a22b9fb2c951751a5d0733ce61bbd"))])
+      (:commit . "1c543fce9151821e8400258aefcfdee2fb24920d"))])
  (capf-autosuggest
   . [(0 3 0 20211123 104430) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -611,13 +611,13 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 15 0 20260903 0) ((emacs (29 1)) (compat (31)))
+  . [(2 15 0 20260905 2) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "4303506204bdf5df8f5e7d1457f6fca465a4da8e"))])
+      (:commit . "5869254349a035e16d656eb232a52cf0e163d531"))])
  (coterm
   . [(1 6 0 20221015 160420) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
@@ -1916,13 +1916,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 3 0 20260901 1) ((emacs (29 1)))
+  . [(0 4 3 0 20260904 4) ((emacs (29 1)))
      "Described keymaps with popup help" tar
      ((:url . "https://git.thanosapollo.org/emacs-keymap-popup/")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "bd61677c74b2d6bc6fb94e881723d6dbb7154299"))])
+      (:commit . "fabb202b62b365ec57bea5b0985ef6c415e04e22"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -2047,14 +2047,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 32 0 0 20260822 2)
+  . [(0 32 0 0 20260904 3)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "90e67fc4dfe3fae5b00e7cf6bb68137ac8c441a1"))])
+      (:commit . "f1c5d25100644f067ada661d96f68d1941599556"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar

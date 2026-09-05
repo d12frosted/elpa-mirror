@@ -251,14 +251,14 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "2bce67a68c270157d940ac9374ab393804c7e00d"))])
  (codex-ide
-  . [(0 1 2 0 20260904 1)
+  . [(0 1 3 0 20260904 7)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
       (eat (0 9 4)))
      "Run Codex CLI in a terminal" tar
      ((:url . "https://git.thanosapollo.org/emacs-codex-ide")
       (:keywords "ai" "codex" "tools" "terminal")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
-      (:commit . "a95d5dae060173fdf6bf54198462ccdbf0e1ad43"))])
+      (:commit . "0e89a3d97cb160e8ed1e9d5dd4d043865cb50e62"))])
  (coffee-mode
   . [(0 6 3 0 20230908 103000) ((emacs (24 3)))
      "Major mode for CoffeeScript code" tar
@@ -580,13 +580,13 @@
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
  (evil-collection
-  . [(3 0 2 0 20260904 0) ((emacs (29 1)) (evil (1 2 13)))
+  . [(3 0 2 0 20260904 3) ((emacs (29 1)) (evil (1 2 13)))
      "A set of keybindings for Evil mode" tar
      ((:url . "https://github.com/emacs-evil/evil-collection")
       (:keywords "evil" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "bce35101edcfe5ddccff270608ab71859fa90040"))])
+      (:commit . "945ca6e408f89946c9d99d2c3168a92cf065f874"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 5 0 20260903 105)
+  . [(0 9 9 5 0 20260904 106)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "cf0eb7d2289581e7d1f0eed52b29870d8739d4f2"))])
+      (:commit . "9417813e279f81d1ee1909f848b7c42f69d68d20"))])
  (graphql-mode
   . [(1 0 0 0 20260904 38) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar

@@ -38,7 +38,18 @@
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-1.3 Terminal scrolling
+1.3 Saved sessions
+──────────────────
+
+  ⁃ `codex-ide-resume-session-scan-limit' limits matching unique
+    sessions offered by the picker (default 200), after filtering by
+    project.
+  ⁃ If the project has no saved sessions, the picker offers other
+    projects.
+  ⁃ Metadata lines larger than one MiB produce an explicit error.
+
+
+1.4 Terminal scrolling
 ──────────────────────
 
   ⁃ With Eat, `C-c C-e' enters its read-only Emacs mode for ordinary
@@ -48,7 +59,7 @@
     with either backend.
 
 
-1.4 Context provider
+1.5 Context provider
 ────────────────────
 
   ⁃ With `codex-ide-context-auto-start' non-nil (default), new sessions
@@ -56,9 +67,14 @@
   ⁃ Disable with `(setq codex-ide-context-auto-start nil)'.
 
 
-1.5 MCP tools
+1.6 MCP tools
 ─────────────
 
+  ⁃ Supports stateless MCP `2026-07-28' requests and the `2025-06-18'
+    initialization flow for existing clients, on the same endpoint.
+  ⁃ Modern clients can discover capabilities with `server/discover' or
+    call tools directly, with protocol metadata and matching routing
+    headers.
   ⁃ When `codex-ide-mcp-enabled' is non-nil (default), session start
     registers a transient local MCP URL via Codex `-c' overrides.
   ⁃ The bridge can evaluate Elisp, edit buffers, and run shell
@@ -66,12 +82,15 @@
     loopback bind addresses.
   ⁃ Commands: `codex-ide-mcp-start', `codex-ide-mcp-stop',
     `codex-ide-mcp-status', `codex-ide-mcp-install-codex-config'.
+  ⁃ Structured edits require an explicit `buffer' name or open file
+    `path'.  Supplied tool arguments must match their advertised types;
+    for example, positions are integers and `indent' is a JSON boolean.
   ⁃ Default port is ephemeral (`codex-ide-mcp-port' 0). Persistent Codex
     config only stays reliable with a fixed port.
   ⁃ Disable auto registration with `(setq codex-ide-mcp-enabled nil)'.
 
 
-1.6 Useful knobs
+1.7 Useful knobs
 ────────────────
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -94,7 +113,7 @@
   debug/MCP host-port-enable/context-auto-start).
 
 
-1.7 Optional vterm backend
+1.8 Optional vterm backend
 ──────────────────────────
 
   Install vterm separately, then select it for new sessions:
@@ -109,7 +128,7 @@
   option does not alter already running sessions.
 
 
-1.8 Changelog
+1.9 Changelog
 ─────────────
 
   See [NEWS.org] for release notes.
@@ -118,8 +137,8 @@
 [NEWS.org] <file:NEWS.org>
 
 
-1.9 Installation
-────────────────
+1.10 Installation
+─────────────────
 
   ⁃ Emacs 29.1 using `package-vc-install'
   ┌────

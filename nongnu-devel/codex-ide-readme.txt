@@ -22,20 +22,24 @@
 1.2 Commands
 ────────────
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Command                                Purpose                                                           
-  ──────────────────────────────────────────────────────────────────────────────────────────────────────────
-   `M-x codex-ide'                        Start or toggle the active project session (`C-u' starts another) 
-   `M-x codex-ide-new-session'            Start another live session for the project                        
-   `M-x codex-ide-resume-last'            `codex resume --last'                                             
-   `M-x codex-ide-resume'                 Pick a saved session id, then `codex resume <id>'                 
-   `M-x codex-ide-stop'                   Stop only the *active* project session                            
-   `M-x codex-ide-toggle'                 Cycle live project sessions                                       
-   `M-x codex-ide-list-project-sessions'  Switch among project sessions                                     
-   `M-x codex-ide-list-sessions'          Switch among any live sessions                                    
-   `M-x codex-ide-send-prompt'            Send a minibuffer prompt into the active session                  
-   `M-x codex-ide-menu'                   Popup menu (sessions, config, MCP, debug)                         
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Command                                Purpose                                                               
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   `M-x codex-ide'                        Start or toggle the active project session (`C-u' starts another)     
+   `M-x codex-ide-new-session'            Start another live session for the project                            
+   `M-x codex-ide-resume-last'            `codex resume --last'                                                 
+   `M-x codex-ide-resume'                 Pick a saved session id, then `codex resume <id>'                     
+   `M-x codex-ide-rename-session'         Label a live session; empty input restores automatic naming           
+   `M-x codex-ide-stop'                   Stop only the *active* project session                                
+   `M-x codex-ide-toggle'                 Cycle live project sessions                                           
+   `M-x codex-ide-toggle-panel'           Hide or restore project session windows in this tab                   
+   `M-x codex-ide-show-project-sessions'  Show all project sessions in separate side windows                    
+   `M-x codex-ide-list-project-sessions'  Switch among project sessions                                         
+   `M-x codex-ide-list-sessions'          Switch among any live sessions                                        
+   `M-x codex-ide-attach-source'          Attach region or current line to one session draft without submitting 
+   `M-x codex-ide-send-prompt'            Send a minibuffer prompt into the active session                      
+   `M-x codex-ide-menu'                   Popup menu (sessions, config, MCP, debug)                             
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 1.3 Saved sessions
@@ -82,12 +86,69 @@
     loopback bind addresses.
   ⁃ Commands: `codex-ide-mcp-start', `codex-ide-mcp-stop',
     `codex-ide-mcp-status', `codex-ide-mcp-install-codex-config'.
+  ⁃ Structured edits require an explicit `buffer' name or open file
+    `path'.  Supplied tool arguments must match their advertised types;
+    for example, positions are integers and `indent' is a JSON boolean.
   ⁃ Default port is ephemeral (`codex-ide-mcp-port' 0). Persistent Codex
     config only stays reliable with a fixed port.
   ⁃ Disable auto registration with `(setq codex-ide-mcp-enabled nil)'.
 
 
-1.7 Useful knobs
+1.6.1 Custom tools
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Register tools before starting Codex, and restart sessions after
+  catalog changes because clients may cache discovery. Built-in tools
+  cannot be replaced or removed.  Handlers receive positional arguments
+  in schema order and return a JSON-encodable value as MCP text
+  content. Omitted optional arguments become `nil'; JSON booleans are
+  `t' and `:json-false'. Supported types: `string', `integer', `number',
+  `boolean'.  Handlers run synchronously and must return promptly.
+
+  ┌────
+  │ (require 'codex-ide-mcp-tools)
+  │ (codex-ide-mcp-register-tool
+  │  "greet" "Return a greeting."
+  │  '((:name "name" :type string :description "Name to greet."))
+  │  (lambda (name) (concat "Hello, " name)))
+  │ ;; Remove with (codex-ide-mcp-unregister-tool "greet").
+  └────
+
+
+1.7 Ediff review
+────────────────
+
+  `codex-ide-diff-review' takes old text, proposed text, a path label,
+  and a callback.  It returns immediately with an owner for
+  `codex-ide-diff-cancel'.  Edit the proposed buffer, then use `C-c C-a'
+  in the Ediff control buffer to accept, or `q' to reject.  The callback
+  receives `(accepted final-text)', `(rejected nil)', or `(cancelled
+  nil)'.  Only one review can be active.
+
+  Review never changes the target file or its visiting buffer.  The
+  caller owns applying accepted text.  `codex-ide-diff-preview' remains
+  a synchronous boolean preview with both buffers read-only.
+
+  Codex can call `emacs_review_start' with `buffer' (the live terminal
+  name), `token' (a unique retry token), `path', `old', and `new'.  It
+  receives a `review_id' promptly; `emacs_review_result' retrieves the
+  decision on a new connection, optionally with `cancel=true'.
+  Disconnecting HTTP does not cancel a review.  Identical owner/token
+  retries return the same ID; changed input with that token is rejected.
+  These arguments route the proposal to a session; they are not an
+  authentication boundary.
+
+  Apply only the accepted `content', after checking that the original
+  base has not changed.  Changed bases require another review.  The
+  tools do not intercept or enforce approval of other file writes.  One
+  review may be queued or open, with at most 16 retained receipts and
+  one MiB of combined UTF-8 input text.  Pending reviews expire after 30
+  minutes; final results remain available for another 30 minutes.
+  Session or server shutdown cancels pending UI while retaining results
+  until that retention expires.
+
+
+1.8 Useful knobs
 ────────────────
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -110,7 +171,7 @@
   debug/MCP host-port-enable/context-auto-start).
 
 
-1.8 Optional vterm backend
+1.9 Optional vterm backend
 ──────────────────────────
 
   Install vterm separately, then select it for new sessions:
@@ -125,8 +186,8 @@
   option does not alter already running sessions.
 
 
-1.9 Changelog
-─────────────
+1.10 Changelog
+──────────────
 
   See [NEWS.org] for release notes.
 
@@ -134,7 +195,7 @@
 [NEWS.org] <file:NEWS.org>
 
 
-1.10 Installation
+1.11 Installation
 ─────────────────
 
   ⁃ Emacs 29.1 using `package-vc-install'
@@ -161,3 +222,16 @@
   │              :repo "https://git.thanosapollo.org/emacs-codex-ide"
   │              :files ("lisp/*.el" "LICENSE")))
   └────
+
+
+1.12 Source attachments
+───────────────────────
+
+  `codex-ide-attach-source' snapshots the region (or current line),
+  source path or buffer name, and line range before choosing a project
+  session.  It inserts one literal bracketed paste on Eat or vterm
+  without pressing Return.  Review the draft in the Codex terminal
+  before submitting it.  Unicode, TAB and LF are supported; other
+  control characters and drafts larger than 1 MiB of UTF-8 text are
+  rejected without changing the draft or kill ring.  This command
+  targets the Codex TUI, not a shell prompt.
