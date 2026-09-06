@@ -8,3 +8,8 @@ Below are commands you can use:
 Search input word and display result with buffer
 `osx-dictionary-search-word-at-point'
 Search word around and display result with buffer
+`osx-dictionary-select-dictionary'
+Restrict lookups to one installed dictionary (or back to all active ones);
+the choice persists across sessions, and the offered dictionaries -- and
+their order in the prompt -- can be narrowed with
+`osx-dictionary-allowed-dictionaries'

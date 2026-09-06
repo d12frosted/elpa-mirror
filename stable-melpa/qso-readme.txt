@@ -81,6 +81,11 @@ Reading Frequency and Mode From the Radio (optional)
  4) Within the form, C-c C-r reads the radio once and C-c C-t turns
     synchronization on or off.
 
+The radio's line at the top of the form is headed by the model name
+the radio reports, so it reads "IC-7300  localhost:4532  connected"
+rather than "Rig".  A rigctld too old to answer for its capabilities
+leaves the line saying "Rig", as before.
+
 While synchronization is running, a field is updated only when it is
 empty or still holds the value the radio last put there, so anything
 typed by the operator is never overwritten.

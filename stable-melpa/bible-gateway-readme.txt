@@ -23,7 +23,8 @@ point. It can be called both interactively from \\[execute-extended-command]
 or programmatically with the book name and verse(s) as arguments.
 
 M-x `bible-gateway-read-passage' works like `bible-gateway-get-passage' but
-displays the passage in a dedicated buffer in `text-mode'.
+displays the passage in a dedicated buffer, with `n'/`p' to navigate between
+verses.
 
 M-x `bible-gateway-listen-passage' plays a Bible chapter from KJV Zondervan
 Audio in the browser.

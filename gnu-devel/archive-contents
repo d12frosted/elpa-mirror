@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260903 75) ((emacs (28 1)))
+  . [(14 1 2 0 20260906 77) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "9ac12c37e2b6a95c00d7dbc2553b46b5ac20e54c"))])
+      (:commit . "66cac14fc20b555d6267498c48b577a6b7027013"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 8 0 20260903 0) ((emacs (29 1)) (compat (31)))
+  . [(3 8 0 20260906 4) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "788735b54e5ad9d33137613aebae055443e3e05e"))])
+      (:commit . "be3021db13b4c96050f97fa147e65fa53f50fb36"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -1412,14 +1412,14 @@
 		("Philip Kaludercic" . "philipk@posteo.net"))
       (:commit . "d7c8ff434ab388cd5a29a25b7ecd7340c17fd371"))])
  (flymake-proselint
-  . [(0 3 0 0 20260704 11) ((emacs (27 1)))
+  . [(0 3 0 0 20260906 12) ((emacs (27 1)))
      "Flymake backend for proselint" tar
      ((:url . "https://git.sr.ht/~manuel-uberti/flymake-proselint")
       (:keywords "convenience")
       (:maintainer "Manuel Uberti"
 		   . "~manuel-uberti/flymake-proselint@lists.sr.ht")
-      (:authors ("Manuel Uberti" . "manuel.uberti@inventati.org"))
-      (:commit . "faa8091d83e5cd80fd6feae37d721f265ccb09d8"))])
+      (:authors ("Manuel Uberti" . "manuel.uberti@mailbox.org"))
+      (:commit . "45726057e5df8907a76f0d43e72c479d4ff8ecfd"))])
  (fontaine
   . [(3 1 0 0 20260629 0) ((emacs (29 1)))
      "Set font configurations using presets" tar
@@ -2047,14 +2047,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 32 0 0 20260905 7)
+  . [(0 32 1 0 20260906 1)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "3ba51ce24e38340892d027878b8d97a23bd979e6"))])
+      (:commit . "f4c8b2f5ebf25e4957e7f9804f0f8f426755be8d"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260904 43) ((emacs (28 1)))
+  . [(5 3 0 0 20260906 44) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "bcf065b803439524ebe8b96f4584643562fee343"))])
+      (:commit . "d7e30694cb8a39fdb2e9eedf17b2a546f55ce3be"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
@@ -3881,14 +3881,14 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "ccf98566f1940f96f5b8ba21f4ea9db370a177a4"))])
  (vertico-posframe
-  . [(0 9 2 0 20260201 41512)
+  . [(0 9 2 0 20260906 2)
      ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))
      "Using posframe to show Vertico" tar
      ((:url . "https://github.com/tumashu/vertico-posframe")
       (:keywords "abbrev" "convenience" "matching" "vertico")
       (:maintainer "Feng Shu" . "tumashu@163.com")
       (:authors ("Feng Shu" . "tumashu@163.com"))
-      (:commit . "d6e06a4f1b34d24cc0ca6ec69d2d6c965191b23e"))])
+      (:commit . "bc0d9caf16ecf48605a3f156b8cc559c51959b15"))])
  (vigenere
   . [(1 0 0 20221221 82600) ((emacs (25 1)))
      "Run a vigenere cipher on a block of text ;" tar
@@ -4086,10 +4086,10 @@
       (:authors ("Mattias Engdegård" . "mattias.engdegard@gmail.com"))
       (:commit . "fc4d6b5ddae9eb2c8adc2b117e6f33f3a09a4e96"))])
  (xref
-  . [(1 7 0 0 20260904 46) ((emacs (26 1)))
+  . [(1 7 0 0 20260906 47) ((emacs (26 1)))
      "Cross-referencing commands" tar
      ((:url . "https://elpa.gnu.org/packages/xref.html")
-      (:commit . "32d907d5d8b91647336e6f60a5ec6ee2dadce4fd"))])
+      (:commit . "8de8a9bc822b748167a8592e04f33e67695c3a54"))])
  (xref-union
   . [(0 2 0 0 20260222 131318) ((emacs (25 1)))
      "Combine multiple Xref backends" tar

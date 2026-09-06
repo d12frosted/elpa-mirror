@@ -285,8 +285,8 @@
     This default to "http".
   • `:host': The host that ollama is run on.  This is optional and will
     default to localhost.
-  • `:port': The port that ollama is run on.  This is optional and will
-    default to the default ollama port.
+  • `:port': The port that ollama is run on (an integer).  This is
+    optional and will default to the default ollama port.
   • `:chat-model': The model name to use for chat.  This is not optional
     for chat use, since there is no default.
   • `:embedding-model': The model name to use for embeddings.  Only
@@ -343,8 +343,8 @@
   parameters:
   • `:host': The host that GPT4All is run on.  This is optional and will
     default to localhost.
-  • `:port': The port that GPT4All is run on.  This is optional and will
-    default to the default ollama port.
+  • `:port': The port that GPT4All is run on, an integer.  This is
+    optional and will default to the default GPT4All port.
   • `:chat-model': The model name to use for chat.  This is not optional
     for chat use, since there is no default.
 

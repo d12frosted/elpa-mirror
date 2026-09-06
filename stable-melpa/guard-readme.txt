@@ -134,6 +134,13 @@ Here <place> can be:
   - `after': <body> will be executed after the code in the section
   - `over': <body> will be executed instead of the code in the section
 
+Parameters can be set using ~guard-parameterize~:
+
+  (guard-parameterize <section>
+    (<param-name1> <param-value1>)
+    (<param-name2> <param-value2>)
+    ...)
+
 =============================================================================
 7. Introspection
 =============================================================================
