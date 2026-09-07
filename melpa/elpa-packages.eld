@@ -3594,6 +3594,7 @@
   (metaweblog :url "https://github.com/org2blog/org2blog")
   (metrics-tracker :url "https://github.com/ianxm/emacs-tracker")
   (metronome :url "https://git.sr.ht/~jagrg/metronome")
+  (metropolis-light-theme :url "https://github.com/bitorhugo/metropolis-light-theme")
   (mew :url "https://github.com/kazu-yamamoto/Mew")
   (mexican-holidays :url "https://github.com/sggutier/mexican-holidays")
   (meyvn :url "https://github.com/danielsz/meyvn-el")
