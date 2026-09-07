@@ -64,8 +64,9 @@ Table of Contents
 .. 1. Use-package example
 .. 2. Custom variables
 .. 3. Project support
-.. 4. Fine-tuning
-.. 5. Default completion UI with auto update
+.. 4. Workspace isolation
+.. 5. Fine-tuning
+.. 6. Default completion UI with auto update
 4. Recommended packages
 5. Bug reports
 6. Hacking
@@ -1039,7 +1040,31 @@ Table of Contents
   └────
 
 
-3.4 Fine-tuning of individual commands
+3.4 Workspace isolation
+───────────────────────
+
+  By default Consult operates on all buffers in your Emacs instance, as
+  returned by `(buffer-list)'. The variable
+  `consult-buffer-list-function' specifies a function which returns the
+  list of buffers. This function is called for instance by
+  `consult-buffer' sources. The variable variable can be set to
+  alternative functions.
+
+  For per-frame/per-tab isolation set `consult-buffer-list-function' to
+  `consult--frame-buffer-list'. Alternatively use special buffer
+  functions provided by workspace packages like [beframe], [tabspaces]
+  or [bufferlo]. This way Consult integrates with your favored solution
+  for workspaces and buffer isolation.
+
+
+[beframe] <https://github.com/protesilaos/beframe>
+
+[tabspaces] <https://codeberg.org/mclear-tools/tabspaces>
+
+[bufferlo] <https://github.com/florommel/bufferlo>
+
+
+3.5 Fine-tuning of individual commands
 ──────────────────────────────────────
 
   *NOTE:* Consult supports fine-grained customization of individual
@@ -1113,7 +1138,7 @@ Table of Contents
 [multi sources] See section 2.4
 
 
-3.5 Default completion UI with auto update
+3.6 Default completion UI with auto update
 ──────────────────────────────────────────
 
   I recommend to use Vertico for best performance and an intuitive UI.

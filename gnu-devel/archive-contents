@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 8 0 20260906 5) ((emacs (29 1)) (compat (31)))
+  . [(3 8 0 20260907 6) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "4587c6ef80f042d1ae8af2cf6c5a20544865b294"))])
+      (:commit . "1b217ca2fb8bcfc4bb56feef829d1bb2b61c85b1"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -685,13 +685,13 @@
       (:authors ("Theodor Thornhill" . "theo@thornhill.no"))
       (:commit . "02c61c219b2c22491eff9b7315fed661fab423d4"))])
  (csv-mode
-  . [(1 27 0 20260505 161621) ((emacs (27 1)) (cl-lib (0 5)))
+  . [(1 27 0 20260907 5) ((emacs (27 1)) (cl-lib (0 5)))
      "Major mode for editing comma/char separated values" tar
      ((:keywords "convenience")
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Francis J. Wright" . "F.J.Wright@qmul.ac.uk"))
-      (:url . "https://elpa.gnu.org/packages/csv-mode.html")
-      (:commit . "3a441a41a3b1d61c2a9c9f5f091cb38ba6b45d47"))])
+      (:url . "https://elpa.gnu.org/nongnu/csv-mode.html")
+      (:commit . "a693259ddef057eda82421b2a4410b3e35832e91"))])
  (cursor-undo
   . [(1 1 5 0 20240818 152228) nil "Undo Cursor Movement" tar
      ((:keywords "undo" "cursor")
@@ -1101,7 +1101,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
-  . [(1 24 0 20260902 18)
+  . [(1 24 0 20260907 19)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1110,7 +1110,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "2e9d0a09bcb8ff90c7b630cec899c55f00f65b2a"))])
+      (:commit . "02121e3d980550da42dec4d82f33d91a7029ca88"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260906 44) ((emacs (28 1)))
+  . [(5 3 0 0 20260907 45) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "d7e30694cb8a39fdb2e9eedf17b2a546f55ce3be"))])
+      (:commit . "f1ad6c9383bc0ce5a5a9df4f3c3a85d32d34a863"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
