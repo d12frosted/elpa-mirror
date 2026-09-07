@@ -5527,6 +5527,7 @@
   (suomalainen-kalenteri :url "https://github.com/tlikonen/suomalainen-kalenteri")
   (super-save :url "https://github.com/bbatsov/super-save")
   (surround :url "https://github.com/mkleehammer/surround")
+  (surveyor :url "https://github.com/mrcnski/surveyor.el")
   (suscolors-theme :url "https://github.com/TheSuspiciousWombat/SusColors-emacs")
   (sv-kalender-namnsdagar :url "https://github.com/matsl/sv-kalender-namnsdagar")
   (svelte-mode :url "https://github.com/leafOfTree/svelte-mode")

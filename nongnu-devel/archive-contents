@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "90712c571f21ccf024b7eb6dcb9ccb5bffbad073"))])
  (hermes
-  . [(0 5 0 0 20260906 3)
+  . [(0 5 0 0 20260907 10)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "a61f6015ac6c67b57f00dca8442ef401c62a2548"))])
+      (:commit . "dd3266a41ce43c0bc9eed8fb5d54fe2b443b8cd3"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1695,13 +1695,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-nix-store
-  . [(0 10 0 0 20260906 6) ((emacs (29 1)))
+  . [(0 11 0 0 20260907 0) ((emacs (29 1)))
      "Project backend for Nix-like store" tar
      ((:url . "https://github.com/jian-lin/project-nix-store")
       (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "83968e448c359b22c390a54efef570fefe8a8950"))])
+      (:commit . "fb40eb5bfe6e88d76d4d810ab32ec7eb6fa9377a"))])
  (projectile
   . [(3 5 0 -4 0 20260903 56) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
