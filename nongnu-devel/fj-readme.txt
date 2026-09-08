@@ -450,9 +450,14 @@
    fj-compose-autocomplete       Whether to enable autocompletion in compose buffers.          
    fj-compose-comment-mode-hook  Hook run after entering or leaving `fj-compose-comment-mode'. 
    fj-compose-mode-hook          Hook run after entering or leaving `fj-compose-mode'.         
+   fj-host                       The forgejo host of the instance to use.                      
+   fj-inspect-profile-requests   Whether to profile requests info.                             
    fj-issues-sort-default        Default sort parameter for repo issues listing.               
+   fj-list-repo-langs            Whether to display a language column in repo listings.        
    fj-own-repos-default-order    The default order parameter for `fj-list-own-repos'.          
+   fj-prefer-browse-url          Whether to use `browse-url' instead of `browse-url-generic'.  
    fj-timeline-default-items     The default number of timeline items to load.                 
    fj-token-use-auth-source      Whether to use an auth-source file.                           
    fj-use-emojify                Whether to enable `emojify-mode' in item views.               
+   fj-user                       The username to use at `fj-host'.                             
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
