@@ -687,7 +687,7 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "91f28ee199a499b8d6e1b9c7a0f1c15f8a382198"))])
  (fj
-  . [(0 38)
+  . [(0 40)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
       (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -695,7 +695,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "665af2b3d0019b9bcb2297cc1f3aff81a62cea6f"))])
+      (:commit . "99bc4018ca8db59d4f72ae119a2d5589bbb56b45"))])
  (flamegraph
   . [(0 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"

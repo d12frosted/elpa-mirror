@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
  (aidermacs
-  . [(1 13 0 20260829 4)
+  . [(1 13 0 20260908 5)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "2be149e52f425d50e906c42c7664e1a321e67c2d"))])
+      (:commit . "b9a2512e54d8366a0b0472c418d1d2610c98c3ae"))])
  (alect-themes
   . [(0 11 0 20251205 150325) ((emacs (24 0)))
      "Configurable light, dark and black themes for Emacs 24 or later"
@@ -471,14 +471,14 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (eldoc-mouse
-  . [(3 0 9 0 20260825 0)
+  . [(3 0 9 0 20260908 1)
      ((emacs (27 1)) (posframe (1 5 1)) (eglot (1 23)))
      "Display documentation for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse")
       (:keywords "tools" "languages" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "0bcefa8d1bc33f251ea10b138fc4e5dbfedb92ed"))])
+      (:commit . "582ad79432959dc437bfa084c887178df608c62e"))])
  (eldoc-mouse-nov
   . [(0 1 1 0 20260330 75946)
      ((emacs (27 1)) (eldoc-mouse (3 0 2)) (nov (0 5 0)))
@@ -719,7 +719,7 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "91f28ee199a499b8d6e1b9c7a0f1c15f8a382198"))])
  (fj
-  . [(0 38 0 20260908 0)
+  . [(0 40 0 20260908 22)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
       (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -727,7 +727,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "665af2b3d0019b9bcb2297cc1f3aff81a62cea6f"))])
+      (:commit . "6b86044174c55820149fb256d12f55ac81ea6805"))])
  (flamegraph
   . [(0 2 0 20260609 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "90712c571f21ccf024b7eb6dcb9ccb5bffbad073"))])
  (hermes
-  . [(0 5 0 0 20260907 10)
+  . [(0 5 0 0 20260908 13)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "dd3266a41ce43c0bc9eed8fb5d54fe2b443b8cd3"))])
+      (:commit . "a3bc2ea51ac63104823cc1c91109a89af5bb0956"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1892,11 +1892,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
  (slime
-  . [(2 32 -4 0 20260904 67) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260908 68) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "990ad02bd5b9830245e4df6bcdbfe96ce05d1c5f"))])
+      (:commit . "1a1e0e3a5e5600138d9205291e2d9befdb269bea"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar

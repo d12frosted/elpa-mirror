@@ -62,6 +62,19 @@ with fallback to latin normal characters.
 - USDT (Tether) address: TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
 
+;; Why `isearch-fallback' wasn't used
+The built-in `isearch-fallback` function is designed for regex
+liberalization (adding `?`, `*`, `+` characters) and walks the
+command history to find previous match positions. Our position reset
+needs to go to the original start `isearch-opoint`, not to a previous
+match. Using `isearch-fallback` would complicate the code without
+solving the actual problem.
+`isearch-fallback` is for regex liberalization** - using it for
+position reset would be misusing it.
+It is called at isearch-printing-char before search, we dont know
+at this point how regex will chage, doing it two times or caching is
+complicated.
+
 ;; Todo:
 
 - ('’) in (Fāng'àn) apostrophe, syllable delimiter (隔音符号),
