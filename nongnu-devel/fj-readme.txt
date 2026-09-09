@@ -366,6 +366,7 @@
               fj-item-view                    View item NUMBER from REPO of OWNER.                                
               fj-item-view-mode               Major mode for viewing items.                                       
    >          fj-item-view-more               Load more items to the timeline, if it has more items.              
+              fj-jump-to-repo                 Jump to repo issues listing.                                        
    C-M-q      fj-kill-all-buffers             Kill all fj buffers.                                                
               fj-list-authored-issues         Return issues authored by `fj-user', in any repo.                   
               fj-list-authored-pulls          Return pulls authored by `fj-user', in any repo.                    
@@ -444,20 +445,21 @@
 12 variables index
 ══════════════════
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Custom variable               Description                                                   
-  ─────────────────────────────────────────────────────────────────────────────────────────────
-   fj-compose-autocomplete       Whether to enable autocompletion in compose buffers.          
-   fj-compose-comment-mode-hook  Hook run after entering or leaving `fj-compose-comment-mode'. 
-   fj-compose-mode-hook          Hook run after entering or leaving `fj-compose-mode'.         
-   fj-host                       The forgejo host of the instance to use.                      
-   fj-inspect-profile-requests   Whether to profile requests info.                             
-   fj-issues-sort-default        Default sort parameter for repo issues listing.               
-   fj-list-repo-langs            Whether to display a language column in repo listings.        
-   fj-own-repos-default-order    The default order parameter for `fj-list-own-repos'.          
-   fj-prefer-browse-url          Whether to use `browse-url' instead of `browse-url-generic'.  
-   fj-timeline-default-items     The default number of timeline items to load.                 
-   fj-token-use-auth-source      Whether to use an auth-source file.                           
-   fj-use-emojify                Whether to enable `emojify-mode' in item views.               
-   fj-user                       The username to use at `fj-host'.                             
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Custom variable               Description                                                     
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+   fj-compose-autocomplete       Whether to enable autocompletion in compose buffers.            
+   fj-compose-comment-mode-hook  Hook run after entering or leaving `fj-compose-comment-mode'.   
+   fj-compose-mode-hook          Hook run after entering or leaving `fj-compose-mode'.           
+   fj-host                       The forgejo host of the instance to use.                        
+   fj-inspect-profile-requests   Whether to profile requests info.                               
+   fj-issues-sort-default        Default sort parameter for repo issues listing.                 
+   fj-list-repo-langs            Whether to display a language column in repo listings.          
+   fj-own-repos-default-order    The default order parameter for `fj-list-own-repos'.            
+   fj-prefer-browse-url          Whether to use `browse-url' instead of `browse-url-generic'.    
+   fj-show-commit-msg-in-pulls   Whether to display commit messages for commits in PR timelines. 
+   fj-timeline-default-items     The default number of timeline items to load.                   
+   fj-token-use-auth-source      Whether to use an auth-source file.                             
+   fj-use-emojify                Whether to enable `emojify-mode' in item views.                 
+   fj-user                       The username to use at `fj-host'.                               
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

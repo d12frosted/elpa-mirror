@@ -5689,9 +5689,9 @@ section 10.4
   ┌────
   │ (defun my-denote--note-has-no-contents-p (file)
   │   "Return non-nil if FILE is an empty note.
-  │ This means that FILE conforms with `denote-file-is-note-p' and either
+  │ This means that FILE conforms with `denote-file-has-denoted-filename-p' and either
   │ has no contents or has only the front matter."
-  │   (and (denote-file-is-note-p file)
+  │   (and (denote-file-has-denoted-filename-p file)
   │        (or (denote--file-with-temp-buffer file
   │              (re-search-forward "^$" nil t)
   │              (if (re-search-forward "[^\s\t\n\r]+" nil t)
@@ -5786,7 +5786,7 @@ section 10.4
   │ Add this function to the `after-save-hook'."
   │   (let ((denote-rename-confirmations nil)
   │         (denote-save-buffers t)) ; to save again post-rename
-  │     (when (and buffer-file-name (denote-file-is-note-p buffer-file-name))
+  │     (when (and buffer-file-name (denote-file-has-denoted-filename-p buffer-file-name))
   │       (ignore-errors (denote-rename-file-using-front-matter buffer-file-name))
   │       (message "Buffer saved; Denote file renamed"))))
   │ 
@@ -6537,11 +6537,6 @@ section 21.13
         Return non-nil if `IDENTIFIER' string is a Denote date
         identifier.
 
-  Function `denote-file-is-note-p'
-        Return non-nil if `FILE' is an actual Denote note. For our
-        purposes, a note must satisfy `file-regular-p' and
-        `denote-filename-is-note-p'.
-
   Function `denote-file-has-identifier-p'
         Return non-nil if `FILE' has a Denote identifier.
 
@@ -6821,9 +6816,6 @@ section 21.13
 
   Function `denote-get-path-by-id'
         Return absolute path of `ID' string in `denote-directory-files'.
-
-  Function `denote-get-identifier-at-point'
-        Return the identifier at point or `POINT'.
 
   Function `denote-extract-keywords-from-path'
         Extract keywords from `PATH' and return them as a list of
@@ -7175,7 +7167,7 @@ section 21.13
         Regexp to match an identifier-only link in its context.  The
         format of such links is `denote-id-only-link-format'.
 
-  Function `denote-select-linked-file-prompt'
+  Function `denote-select-from-files-prompt'
         Prompt for linked file among `FILES'.
 
   Function `denote-get-links'
@@ -7207,6 +7199,10 @@ section 21.13
         This function is useful as the value of the user option
         `denote-link-description-format' (which can optionally be bound
         to a function).
+
+  Function `denote-get-link-identifier-or-query-term-at-point'
+        Return the Denote identifier or query term at point or optional
+        `POSITION'.
 
 
 22.8 Xref interface for developers or advanced users
@@ -8018,9 +8014,9 @@ section 21.13
         Hołubowicz, TomoeMami , Vedang Manerikar, Wesley Harvey, Yann
         Dutrieux, Zhenxu Xu, alvmts, arsaber101, bplubell, bryanrinders,
         dulikiles, eum3l, experimental-code-86, ezchi, gnuhack, gvalson,
-        jarofromel, leinfink (Henrik), l-o-l-h (Lincoln), mattyonweb,
-        maxbrieiev, mentalisttraceur, nescias, pmenair, relict007,
-        skissue.
+        jarofromel, kimsaram32, leinfink (Henrik), l-o-l-h (Lincoln),
+        mattyonweb, maxbrieiev, mentalisttraceur, nescias, pmenair,
+        relict007, skissue.
 
   Ideas and/or user feedback
         Abin Simon, Aditya Yadav, Alan Schmitt, Aleksandr Vityazev, Alex

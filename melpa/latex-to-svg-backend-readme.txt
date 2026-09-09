@@ -55,8 +55,10 @@ requests for the same equation are coalesced onto a single compile.
 
 The optional `:color'/`:background'/`:padding' keys override the
 display-time tint, an optional box color behind the equation, and padding
-that grows that box beyond the ink (all apply post-compile, no recompile);
-a front-end owns the user-facing preference and passes it through.
+that grows that box beyond the ink -- one number for all four sides, or a
+list of one to four numbers in CSS order, so a left-only gutter is
+(0 0 0 6) (all apply post-compile, no recompile); a front-end owns the
+user-facing preference and passes it through.
 
 Helpers a front-end typically needs for its refresh policy:
 `latex-to-svg-backend-available-p', `latex-to-svg-backend-appearance',

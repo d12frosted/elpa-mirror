@@ -72,22 +72,81 @@ Emacs 28.1 -> 30.2
 ```
 
 # Usage
-After ```C-s/r``` in isearch mode:
-- ```M-s h``` to activate Chinese characters seearch only submode.
-- ```M-s p``` to activate pinyin search only  submode.
-- ```M-s s``` to activate strict pinyin and Chinese characters submode.
-- ```M-s u``` to activate strict Chinese characters isearch submode.
-- ```M-s n``` to activate default Pinyin-isearch mode.
-- ```M-s r``` to activate standard search.
 
-or with M-x ```pinyin-isearch-forward/backward```
+**Activate:** `M-x pinyin-isearch-mode`
 
-You can set this mode by default per file with:
+**Search:**
+- `C-s` / `C-r` — Start forward/backward search
+- Type Pinyin (e.g., `beijing`) → highlights: 北京, Běi jīng, beijing
+- `C-n` / `C-p` — Navigate matches
+- `RET` — Confirm, jump to match
 
-```;-*- mode: pinyin-isearch; -*-```
+In other words:
+1. M-x pinyin-isearch-mode                     [Activate]
+2. C-s                                         [Start search]
+3. "beijing"                                   [Type pinyin]
+   → Highlights: 北京 and Běi jīng and beijing.
+4. M-s h                                       [Switch to characters-only]
+   → Filter results to exact character matches only
+5. M-s s                                       [Enable strict mode]
+   → More refined, exact-match-only results
+6. C-n / C-p                                   [Navigate matches]
+7. RET                                         [Confirm, jump to match]
+
+
+**Direct functions:** `M-x pinyin-isearch-forward/backward`
+
+**Submode Controls (during search):**
+| Key | Effect |
+|---------|--------|
+| `M-s h` | Characters-only search |
+| `M-s p` | Pinyin-only search |
+| `M-s b` | Both Pinyin & characters (default) |
+| `M-s s` | Toggle strict mode (exact matches only) |
+| `M-s <f1>` | Help reference |
+
+
+**Fallback:** `C-u C-s` at any time → standard Emacs isearch (bypass Pinyin entirely)
+
+For **file-local** activation, add this line at the begining of file:
+```elisp
+;-*- mode: pinyin-isearch; -*-
+```
 
 # Configuration
 
 `M-x customize-group pinyin-isearch`
 
-Variable `pinyin-isearch-default-mode` used to set default mode for `C-s/r` isearch: pinyin only or Chinese characters only or some strict version.
+| Option | Default | Effect |
+|--------|---------|--------|
+| `pinyin-isearch-default-mode` | `both` | Default search type at mode start |
+| `pinyin-isearch-strict` | `nil` | Global strictness setting |
+| `pinyin-isearch-full-fallback` | `t` | Include Latin letter fallback |
+| `pinyin-isearch-fix-jumping-flag` | `t` | Fix search-restart position behavior |
+
+
+# Other packages
+- Navigation in Dired, Packages, Buffers modes https://github.com/Anoncheg1/firstly-search
+- LLM chat blocks for Org-mode	https://github.com/Anoncheg1/emacs-cui
+- Ediff fix		https://github.com/Anoncheg1/ediffnw
+- Dired history	https://github.com/Anoncheg1/dired-hist
+- Selected window contrast	https://github.com/Anoncheg1/selected-window-contrast
+- Copy link to clipboard	https://github.com/Anoncheg1/emacs-org-links
+- Solution for "callback hell"	https://github.com/Anoncheg1/emacs-async1
+- Restore buffer state		https://github.com/Anoncheg1/emacs-unmodified-buffer1
+- outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
+- hiding password in cafe	https://github.com/Anoncheg1/emacs-hidepass
+- TAB key reimplementation	https://github.com/Anoncheg1/emacs-indent
+- Dates for Org-mode headers	https://github.com/Anoncheg1/emacs-org-history
+
+# Donate, sponsor the author
+You can sponsor author crypto money directly with crypto currencies:
+- **BTC (Bitcoin) address:** `1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25`
+
+![](https://raw.githubusercontent.com/Anoncheg1/public-share/refs/heads/main/BTC-1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25.png)
+
+- **USDT (Tether on TRX-TRON) address:** `TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN`
+
+![](https://raw.githubusercontent.com/Anoncheg1/public-share/refs/heads/main/USDT-TVoXfYMkVYLnQZV3mGZ6GvmumuBfGsZzsN.png)
+
+- **TON (Telegram Open Network) address:** `UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D`

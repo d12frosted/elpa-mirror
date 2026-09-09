@@ -9,14 +9,17 @@
   document:
 
   ┌────
-  │ commit 8c481ac9441ec8bc84163208a2412e9b45a96afe
-  │ Author: Eli Zaretskii <eliz@gnu.org>
-  │ Date:   Sun Mar 29 12:32:05 2026 +0300
+  │ commit 57c5967828f0415604a393b244bd62be93262f30
+  │ Author: Paul Eggert <eggert@cs.ucla.edu>
+  │ Date:   Thu Jul 23 23:02:55 2026 -0700
   │ 
-  │     ; Fix a typo in 'emacs-lisp-intro.texi'
+  │     current-time-list now defaults to nil
   │     
-  │     * doc/lispintro/emacs-lisp-intro.texi (lengths-list-file): Fix doc
-  │     string of 'lengths-list-file' and surrounding text.  (Bug#80686)
+  │     Change the default value from current-time-list from t to nil.
+  │     This continues the transition that was begun in Emacs 29, so
+  │     that functions like current-time generate timestamps in the
+  │     more-efficient and more-consistent (TICKS . HZ) form.
+  │     * src/timefns.c: Default to false.
   └────
 
 

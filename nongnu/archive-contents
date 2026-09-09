@@ -687,7 +687,7 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "91f28ee199a499b8d6e1b9c7a0f1c15f8a382198"))])
  (fj
-  . [(0 40)
+  . [(0 42)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
       (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -695,7 +695,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "99bc4018ca8db59d4f72ae119a2d5589bbb56b45"))])
+      (:commit . "98bc65cd29d4adf96f0c922e69885506103cf475"))])
  (flamegraph
   . [(0 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -1006,7 +1006,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
  (hermes
-  . [(0 5 0)
+  . [(0 6 0)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1014,7 +1014,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "ab2ee92ddd4db52a99b630f975d547736f3132cc"))])
+      (:commit . "7be0ac5314b805695fe0d6d0b66238d07bd28dc8"))])
  (hideshowvis
   . [(0 9) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1637,7 +1637,7 @@
       (:authors ("David Christiansen" . "david@davidchristiansen.dk"))
       (:commit . "1edda80e2e32b72e77f4f16ae5b83c312c68ee95"))])
  (racket-mode
-  . [(1 0 20260726 0) ((emacs (25 1)) (compat (30 0 2 0)))
+  . [(1 0 20260908 0) ((emacs (25 1)) (compat (30 0 2 0)))
      "Racket editing, REPL, and more" tar
      ((:url . "https://www.racket-mode.com/")
       (:authors

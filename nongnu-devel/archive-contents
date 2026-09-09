@@ -409,10 +409,10 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "9d5929335c4080699a2daa153ace2996c905008a"))])
  (dracula-theme
-  . [(1 8 3 0 20260701 10) ((emacs (24 3))) "Dracula Theme" tar
+  . [(1 8 3 0 20260907 17) ((emacs (24 3))) "Dracula Theme" tar
      ((:url . "https://github.com/dracula/emacs")
       (:maintainer "tienne Deparis" . "etienne@depar.is")
-      (:commit . "1acd97258258415f6a43c332475fbdcd7ceb9274"))])
+      (:commit . "538b8d20c667ac4b0c43ed1a5ef50760fb4ad754"))])
  (drupal-mode
   . [(0 8 1 0 20240816 123653) ((php-mode (1 5 0)))
      "Advanced minor mode for Drupal development" tar
@@ -719,7 +719,7 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "91f28ee199a499b8d6e1b9c7a0f1c15f8a382198"))])
  (fj
-  . [(0 40 0 20260908 22)
+  . [(0 42 0 20260909 0)
      ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
       (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -727,7 +727,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "6b86044174c55820149fb256d12f55ac81ea6805"))])
+      (:commit . "98bc65cd29d4adf96f0c922e69885506103cf475"))])
  (flamegraph
   . [(0 2 0 20260609 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "90712c571f21ccf024b7eb6dcb9ccb5bffbad073"))])
  (hermes
-  . [(0 5 0 0 20260908 13)
+  . [(0 6 0 0 20260909 0)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "a3bc2ea51ac63104823cc1c91109a89af5bb0956"))])
+      (:commit . "7be0ac5314b805695fe0d6d0b66238d07bd28dc8"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1253,7 +1253,7 @@
       (:authors ("martian hiatus" . "martianh@disroot.org"))
       (:commit . "3abd1604c3ab9451dcbc087099c499e6dc8882d7"))])
  (llama
-  . [(1 0 5 0 20260601 0) ((emacs (26 1)) (compat (31 0)))
+  . [(1 0 5 0 20260909 1) ((emacs (26 1)) (compat (31 0)))
      "Compact syntax for short lambda" tar
      ((:url . "https://github.com/tarsius/llama")
       (:keywords "extensions")
@@ -1261,7 +1261,7 @@
 		   . "emacs.llama@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.llama@jonas.bernoulli.dev"))
-      (:commit . "4d4024048053b898a01521046e0f063ee47615b0"))])
+      (:commit . "cfea618f14bc8317f8e4947fe10000b229b9a447"))])
  (logview
   . [(0 19 4 -4 0 20260218 1)
      ((emacs (25 1)) (datetime (0 8)) (extmap (1 0)) (compat (29)))
@@ -1663,13 +1663,13 @@
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
       (:commit . "0e32f79ffca49578eba452d38b62e434e517df5e"))])
  (pinyin-isearch
-  . [(1 7 2 0 20260906 30) ((emacs (28 1))) "Pinyin mode for isearch"
+  . [(1 7 2 0 20260909 59) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
      ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
       (:keywords "chinese" "isearch" "matching" "convenience")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "dbf9a0b28f6552f7427bad4e4be58c2a725b889f"))])
+      (:commit . "3d5b98051dc02fe18a0e62dfe2b733abca966e86"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar
@@ -1727,12 +1727,12 @@
       (:authors ("David Christiansen" . "david@davidchristiansen.dk"))
       (:commit . "50b102c1c0935fd3e0c465feed7f27d66b21cdf3"))])
  (racket-mode
-  . [(1 0 20260726 0) ((emacs (25 1)) (compat (30 0 2 0)))
+  . [(1 0 20260908 0) ((emacs (25 1)) (compat (30 0 2 0)))
      "Racket editing, REPL, and more" tar
      ((:url . "https://www.racket-mode.com/")
       (:authors
        ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
-      (:commit . "f92a33dcc3b604f53ef23a538e26e1f25c4fea47"))])
+      (:commit . "747b922221991c9eaff37976de325a6d7e571dd9"))])
  (radio
   . [(0 4 3 0 20260212 144358) ((emacs (29 1)))
      "Listen to Internet radio" tar
