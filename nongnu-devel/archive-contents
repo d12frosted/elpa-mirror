@@ -489,7 +489,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 2 0 0 20260829 4) ((emacs (29 1)) (compat (31)))
+  . [(4 2 0 0 20260909 8) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -498,7 +498,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "e61600ac3ec738b617109440304772bd02f031ba"))])
+      (:commit . "48dc501cdb52cec9aa75038e1a368da24eec87d8"))])
  (elfeed-web
   . [(4 1 0 0 20260821 0)
      ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20260905 3)
+  . [(0 9 9 6 0 20260908 4)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "4799c8018835f2e1af3da89513d7904dcc7a56f8"))])
+      (:commit . "b907507d0e417218a9a1c372d72354c23c096036"))])
  (graphql-mode
   . [(1 0 0 0 20260904 38) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1892,11 +1892,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
  (slime
-  . [(2 32 -4 0 20260908 68) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260909 69) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "1a1e0e3a5e5600138d9205291e2d9befdb269bea"))])
+      (:commit . "a93bb5e00235b72ce086faca13b33955f44b416e"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -2016,12 +2016,12 @@
       (:url . "https://elpa.nongnu.org/nongnu/tablist.html")
       (:commit . "faab7a035ef2258cc4ea2182f67e3aedab7e2af9"))])
  (tabspaces
-  . [(1 10 1 0 20260804 1) ((emacs (27 1)) (project (0 8 1)))
+  . [(1 11 0 0 20260908 2) ((emacs (27 1)) (project (0 8 1)))
      "Leverage tab-bar and project for buffer-isolated workspaces" tar
      ((:url . "https://codeberg.org/mclear-tools/tabspaces")
       (:keywords "convenience" "frames")
       (:authors ("Colin McLear" . "mclear@fastmail.com"))
-      (:commit . "ef19a5dc4147f6e69442bd2e64c00672438ebe04"))])
+      (:commit . "2bfb7361b8d82f660eca8bd2e131b5ca53d56916"))])
  (tangotango-theme
   . [(0 0 7 0 20241117 114955) nil
      "Tango Palette color theme for Emacs 24." tar

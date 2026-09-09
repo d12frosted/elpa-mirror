@@ -1,4 +1,4 @@
-Display Fido/icomplete minibuffer in a centered child frame.
+Display minibuffer in a centered child frame.
 
 Enable with:
 

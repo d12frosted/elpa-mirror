@@ -54,6 +54,8 @@ database format is stable and is never expected to change.
   • `@': add current date to the filter
   • `=': only include current feed
   • `~': exclude current feed
+  • `o': change sort order (by date, by feed)
+  • `O': reverse order
 
   This buffer will be empty until you add your feeds to the
   `elfeed-feeds' list and initiate an update with `M-x elfeed-update'
@@ -95,7 +97,7 @@ database format is stable and is never expected to change.
   • `RET': view selected entry in a buffer
   • `b': open selected entries in your browser
   • `B': open selected entries in your secondary browser
-  • `y': copy selected entries URL to the clipboard
+  • `w': copy selected entries URL to the clipboard
   • `r': tag selected entries as read (`C-u r' to tag all)
   • `u': tag selected entries as unread (`C-u u' to tag all)
   • `+': add a specific tag to selected entries
@@ -491,8 +493,27 @@ database format is stable and is never expected to change.
   built-in shr package. This requires an Emacs compiled with `libxml'
   bindings, which provides the necessary HTML parser.
 
-  Sometimes displaying images can slow down or even crash Emacs. Set
-  `shr-inhibit-images' to disable images if this is a problem.
+  Inside the show buffer you have these key bindings available:
+
+  • `+': add tag
+  • `-': remove tag
+  • `b': visit entry in primary browser
+  • `B': visit entry in secondary browser
+  • `R': toggle readable mode (see also the `:readable' feed option)
+  • `c': save url at point
+  • `f': fetch link and display it in buffer (see also the `:fetch-link'
+    feed option)
+  • `m': compose mail based on entry
+  • `n': move to next entry
+  • `p': move to previous entry
+  • `s': restart live search
+  • `u': tag as unread
+  • `w': copy link of post
+  • `P': play enclosure with EMMS
+  • `A': add enclosure to EMMS playlist
+  • `TAB': go to next link
+  • `SPC': go to next page
+  • `S-SPC', `DEL': go to previous page
 
 
 11 Web Interface

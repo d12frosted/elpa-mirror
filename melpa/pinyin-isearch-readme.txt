@@ -88,3 +88,5 @@ with a, e, or o follows another syllable directly.  - chech that it is solved.
 - allow connecting other input methods.
 - use "M-s s" key to enable strict mode
  for current pinuin/characrters/both modes if active
+
+[the sync-failure file](https://elpa.gnu.org/nongnu/pinyin-isearch-sync-failure.txt).

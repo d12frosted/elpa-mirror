@@ -878,13 +878,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl
-  . [(1 11 1 0 20260830 0) ((cl-lib (0 2)) (emacs (27 1)))
+  . [(1 11 1 0 20260909 3) ((cl-lib (0 2)) (emacs (27 1)))
      "Highlight uncommitted changes using VC" tar
      ((:url . "https://github.com/dgutov/diff-hl")
       (:keywords "vc" "diff")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
-      (:commit . "3d9552c575fd14ac98ac97bf3c19cdef39f79305"))])
+      (:commit . "0e1d464b48172a1f1e2f36103d812c9fc6387c4e"))])
  (diffview
   . [(1 0 0 20230224 111651) nil "View diffs in side-by-side format"
      tar

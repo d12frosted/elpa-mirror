@@ -695,6 +695,10 @@ and pairs well with tabspaces.
 
   The following functions form the public integration points:
 
+  • `(tabspaces-local-buffer-list &optional frame)' - Returns the
+    buffers in the current workspace. This is the recommended entry
+    point, and is a suitable value for consult's
+    `consult-buffer-list-function'.
   • `(tabspaces--list-tabspaces)' - Returns list of all workspace names
   • `(tabspaces--buffer-list &optional frame tabnum)' - Returns buffers
     for a workspace
@@ -704,72 +708,72 @@ and pairs well with tabspaces.
   • `(tabspaces--local-buffer-p buffer)' - Predicate testing if buffer
     belongs to current workspace
 
-  These functions use the `--' prefix (typically indicating internal
-  functions) but form the stable integration API. They are available
-  once the package is loaded, for instance after enabling
-  `tabspaces-mode'. Below are integration examples for popular
-  frameworks.
+  Prefer `tabspaces-local-buffer-list', which is the only one of these
+  named as public. It differs from `tabspaces--buffer-list' in also
+  honoring `tabspaces-include-buffers' and
+  `tabspaces-exclude-buffers'. The others use the `--' prefix (typically
+  indicating internal functions) but form the stable integration
+  API. They are available once the package is loaded, for instance after
+  enabling `tabspaces-mode'.
+
+  A workspace contains every buffer displayed in the tab and every
+  buffer buried in it. Burying, which is what `quit-window' and `q' do,
+  hides a buffer inside its workspace without removing it. Removal is
+  `tabspaces-remove-buffer', bound to `C-c TAB r', which takes the
+  buffer out of the workspace entirely.
+
+  Below are integration examples for popular frameworks.
 
 
 ◊ 3.10.2.1 Consult
 
-  If you have [consult] installed you can implement the following to
-  have workspace buffers in `consult-buffer':
+  If you have [consult] installed, point its buffer list at the
+  workspace:
 
   ┌────
-  │ ;; Filter Buffers for Consult-Buffer
-  │ 
-  │ (with-eval-after-load 'consult
-  │   ;; hide full buffer list (still available with "b" prefix)
-  │   (plist-put consult-source-buffer :hidden t)
-  │   (plist-put consult-source-buffer :default nil)
-  │   ;; set consult-workspace buffer list
-  │   (defvar consult--source-workspace
-  │     (list :name     "Workspace Buffers"
-  │           :narrow   ?w
-  │           :history  'buffer-name-history
-  │           :category 'buffer
-  │           :state    #'consult--buffer-state
-  │           :default  t
-  │           :items    (lambda () (consult--buffer-query
-  │                            :predicate #'tabspaces--local-buffer-p
-  │                            :sort 'visibility
-  │                            :as #'buffer-name)))
-  │ 
-  │     "Set workspace buffer list for consult-buffer.")
-  │   (add-to-list 'consult-buffer-sources 'consult--source-workspace))
+  │ (setq consult-buffer-list-function #'tabspaces-local-buffer-list)
   └────
 
-  This seamlessly integrates workspace buffers into `consult-buffer',
-  displaying workspace buffers by default and all buffers when narrowing
-  using "b". Note that you can also see all project related buffers and
-  files just by narrowing with "p" in [a default consult setup].
+  That one setting isolates every consult source that lists
+  buffers. Narrowing with "b" gives the workspace buffers, and narrowing
+  with "o" gives the buffers in other tabs, via
+  `consult-source-other-buffer', which consult enables automatically as
+  soon as `consult-buffer-list-function' is customized.
 
-  *NOTE*: We use `plist-put' to modify `consult-source-buffer' directly
-   rather than `consult-customize'. The `consult-customize' macro
-   validates its arguments at expansion time, which can fail depending
-   on load order and byte-compilation state (see [#76] and
-   [consult#345]). Using `plist-put' avoids this issue entirely.
+  Consult also offers `consult--frame-buffer-list', which reads the same
+  two frame parameters tabspaces uses. Prefer
+  `tabspaces-local-buffer-list' over it, because it additionally honors
+  `tabspaces-include-buffers'. That matters more than it sounds:
+  `tabspaces-reset-buffer-list' runs only when a tab is created and only
+  ever removes buffers, so an include-buffer that comes into existence
+  later, in some other tab, never enters an existing tab's frame
+  list. Entries people actually put in that variable, such as `*Org
+  Agenda*' or `*compilation*', are typically created mid-session.
 
-  *NOTE*: If you typically toggle between having `tabspaces-mode' active
-   and inactive, you may want to include a hook function to turn off the
-   `consult--source-workspace' and modify the visibility of
-   `consult--source-buffer':
+  *NOTE*: `consult-buffer-list-function' is global to consult rather
+   than local to `consult-buffer'. It also narrows
+   `consult-project-buffer'; `consult-line-multi', including the `C-u'
+   variant that is meant to search every buffer; and the recent-file
+   deduplication that hides files you already have open, so files open
+   in other tabs will reappear as recent-file candidates. Two sources
+   deliberately stay global and are unaffected:
+   `consult-source-hidden-buffer' on SPC, and the "other buffers" half
+   of `consult-source-other-buffer'. No single narrowing key lists every
+   buffer any more. If you want one back, add a source with
+   `:buffer-list t'.
+
+  *NOTE*: `consult-buffer-list-function' requires consult 2.7 or
+   later. Consult 2.9 and later require Emacs 29, while tabspaces itself
+   supports Emacs 27.1.
+
+  If you toggle `tabspaces-mode' on and off, restore the default when it
+  is off:
 
   ┌────
   │ (defun my--consult-tabspaces ()
-  │   "Deactivate isolated buffers when not using tabspaces."
-  │   (require 'consult)
-  │   (cond (tabspaces-mode
-  │          ;; hide full buffer list (still available with "b")
-  │          (plist-put consult-source-buffer :hidden t)
-  │          (plist-put consult-source-buffer :default nil)
-  │          (add-to-list 'consult-buffer-sources 'consult--source-workspace))
-  │         (t
-  │          ;; reset consult-buffer to show all buffers
-  │          (plist-put consult-source-buffer :hidden nil)
-  │          (plist-put consult-source-buffer :default t)
-  │          (setq consult-buffer-sources (remove #'consult--source-workspace consult-buffer-sources)))))
+  │   "Isolate consult's buffer list only while tabspaces is active."
+  │   (setq consult-buffer-list-function
+  │         (if tabspaces-mode #'tabspaces-local-buffer-list #'buffer-list)))
   │ 
   │ (add-hook 'tabspaces-mode-hook #'my--consult-tabspaces)
   └────
@@ -777,12 +781,79 @@ and pairs well with tabspaces.
 
   [consult] <https://github.com/minad/consult>
 
-  [a default consult setup]
-  <https://github.com/minad/consult#configuration>
+  ◊ 3.10.2.1.1 A separate narrowing category
 
-  [#76] <https://github.com/mclear-tools/tabspaces/issues/76>
+    If you would rather keep workspace buffers in their own source,
+    leaving the rest of consult untouched, use a custom source instead
+    of the setting above. This is also the option to choose if you want
+    isolation confined to `consult-buffer' and nowhere else:
 
-  [consult#345] <https://github.com/minad/consult/issues/345>
+    ┌────
+    │ ;; Filter Buffers for Consult-Buffer
+    │ 
+    │ (with-eval-after-load 'consult
+    │   ;; hide full buffer list (still available with "b" prefix)
+    │   (plist-put consult-source-buffer :hidden t)
+    │   (plist-put consult-source-buffer :default nil)
+    │   ;; set consult-workspace buffer list
+    │   (defvar consult--source-workspace
+    │     (list :name     "Workspace Buffers"
+    │           :narrow   ?w
+    │           :history  'buffer-name-history
+    │           :category 'buffer
+    │           :state    #'consult--buffer-state
+    │           :default  t
+    │           :items    (lambda () (consult--buffer-query
+    │                            :predicate #'tabspaces--local-buffer-p
+    │                            :sort 'visibility
+    │                            :as #'buffer-name)))
+    │ 
+    │     "Set workspace buffer list for consult-buffer.")
+    │   (add-to-list 'consult-buffer-sources 'consult--source-workspace))
+    └────
+
+    This shows workspace buffers by default and all buffers when
+    narrowing with "b". As written it needs consult 3.0 or later, where
+    `consult--source-buffer' became `consult-source-buffer'; on older
+    versions use the double-dash name.
+
+    *NOTE*: We use `plist-put' to modify `consult-source-buffer'
+     directly rather than `consult-customize'. The `consult-customize'
+     macro validates its arguments at expansion time, which can fail
+     depending on load order and byte-compilation state (see [#76] and
+     [consult#345]). Using `plist-put' avoids this issue entirely.
+
+    *NOTE*: With this recipe, narrowing with "p" still shows all project
+     buffers across tabs, since it leaves the other consult sources
+     alone.
+
+    *NOTE*: If you typically toggle between having `tabspaces-mode'
+     active and inactive, you may want to include a hook function to
+     turn off the `consult--source-workspace' and modify the visibility
+     of `consult-source-buffer':
+
+    ┌────
+    │ (defun my--consult-tabspaces ()
+    │   "Deactivate isolated buffers when not using tabspaces."
+    │   (require 'consult)
+    │   (cond (tabspaces-mode
+    │          ;; hide full buffer list (still available with "b")
+    │          (plist-put consult-source-buffer :hidden t)
+    │          (plist-put consult-source-buffer :default nil)
+    │          (add-to-list 'consult-buffer-sources 'consult--source-workspace))
+    │         (t
+    │          ;; reset consult-buffer to show all buffers
+    │          (plist-put consult-source-buffer :hidden nil)
+    │          (plist-put consult-source-buffer :default t)
+    │          (setq consult-buffer-sources (remove #'consult--source-workspace consult-buffer-sources)))))
+    │ 
+    │ (add-hook 'tabspaces-mode-hook #'my--consult-tabspaces)
+    └────
+
+
+    [#76] <https://github.com/mclear-tools/tabspaces/issues/76>
+
+    [consult#345] <https://github.com/minad/consult/issues/345>
 
 
 ◊ 3.10.2.2 Ivy
