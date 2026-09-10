@@ -1913,13 +1913,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 2 0 0 20260902 3) ((emacs (24 1))) "The Solarized color theme"
+  . [(2 2 0 0 20260910 4) ((emacs (24 1))) "The Solarized color theme"
      tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "7ca8e84dc489e3dc2b806c0e2d43ab7dd293d6e3"))])
+      (:commit . "9df935bede27abcaa1b1ca9035ac17f39d2f64c9"))])
  (spacemacs-theme
   . [(0 2 0 20260906 51) ((emacs (24)))
      "Color theme with a dark and light versions." tar
