@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260903 115)
+  . [(2 1 0 -4 0 20260910 125)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "d0dbbcc5f103424ff7bae97933bcb140d1703823"))])
+      (:commit . "c51d827861e392379baa7286fd5eff31b920efeb"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -471,14 +471,14 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "33aa6d7ee5d0e712b112c74ec6e076463b540e9e"))])
  (eldoc-mouse
-  . [(3 0 9 0 20260908 1)
+  . [(3 0 10 0 20260910 0)
      ((emacs (27 1)) (posframe (1 5 1)) (eglot (1 23)))
      "Display documentation for mouse hover" tar
      ((:url . "https://github.com/huangfeiyu/eldoc-mouse")
       (:keywords "tools" "languages" "convenience" "mouse" "hover")
       (:maintainer "Huang Feiyu" . "sibadake1@163.com")
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
-      (:commit . "582ad79432959dc437bfa084c887178df608c62e"))])
+      (:commit . "0c2285ba8f974ee3a295a6626f989e2b7c8a184e"))])
  (eldoc-mouse-nov
   . [(0 1 1 0 20260330 75946)
      ((emacs (27 1)) (eldoc-mouse (3 0 2)) (nov (0 5 0)))
@@ -1663,13 +1663,13 @@
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
       (:commit . "0e32f79ffca49578eba452d38b62e434e517df5e"))])
  (pinyin-isearch
-  . [(1 7 2 0 20260909 59) ((emacs (28 1))) "Pinyin mode for isearch"
+  . [(1 7 2 0 20260910 61) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
      ((:url . "https://github.com/Anoncheg1/pinyin-isearch")
       (:keywords "chinese" "isearch" "matching" "convenience")
       (:maintainer "Anoncheg" . "vitalij@gmx.com")
       (:authors ("Anoncheg" . "vitalij@gmx.com"))
-      (:commit . "3d5b98051dc02fe18a0e62dfe2b733abca966e86"))])
+      (:commit . "b27242d730f98423b0260d13dce78002fb2012b6"))])
  (popon
   . [(0 13 0 20230703 82713) ((emacs (25 1)))
      "\"Pop\" floating text \"on\" a window" tar

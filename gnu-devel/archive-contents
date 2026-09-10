@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 8 0 20260907 6) ((emacs (29 1)) (compat (31)))
+  . [(3 8 0 20260910 16) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "1b217ca2fb8bcfc4bb56feef829d1bb2b61c85b1"))])
+      (:commit . "f10cf28d3df1e43a8069f5a507c82654834c8b09"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260907 45) ((emacs (28 1)))
+  . [(5 3 0 0 20260910 46) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f1ad6c9383bc0ce5a5a9df4f3c3a85d32d34a863"))])
+      (:commit . "4fdacb698bf6d71c945c8d5ff8b356581439dff9"))])
  (mpdired
   . [(4 -1 0 20250502 1) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar

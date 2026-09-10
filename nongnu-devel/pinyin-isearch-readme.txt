@@ -2,6 +2,7 @@
 [![MELPA](https://melpa.org/packages/pinyin-isearch-badge.svg)](http://melpa.org/#/pinyin-isearch)
 ![build](https://github.com/Anoncheg1/pinyin-isearch/workflows/melpazoid-release/badge.svg)
 [![MELPA Stable](https://stable.melpa.org/packages/pinyin-isearch-badge.svg)](https://stable.melpa.org/#/pinyin-isearch)
+[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/pinyin-isearch.svg)](https://elpa.nongnu.org/nongnu/pinyin-isearch.html)
 
 Eng | [中文](./README_zh.md)
 
@@ -20,8 +21,8 @@ Based on Emacs "chinese-sisheng", "chinese-py", "chinese-punct".
 pinyin-isearch.el
  ├─ pinyin-isearch-pinyin.el (→ pinyin-isearch-loaders.el)
  ├─ pinyin-isearch-chars.el (→ pinyin-isearch-loaders.el)
- ├/+ pinyin-isearch-help.el (→ pinyin-isearch.el)
  └─ pinyin-isearch-loaders.el
+*-tests.el
 ```
 
 # Emacs versions support
