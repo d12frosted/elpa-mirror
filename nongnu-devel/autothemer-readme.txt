@@ -15,8 +15,6 @@ The package also includes useful theme development features see below.
 
 ## News
 
-We've added new things to AutoThemer in recent weeks:
-
 - Color distance is using CIELAB colorspace and CIE DE2000 distance algorithm.
     - As a result all missing face commands generate better color matches from the theme palette.
 - Colors which use color names  (Red1, Burlywood and other gems. now get color matched properly.)

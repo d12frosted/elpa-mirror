@@ -100,11 +100,11 @@
       (:authors ("Michal Nazarewicz" . "mina86@mina86.com"))
       (:commit . "ce10da580513a2969d14e894d9be658ffa855e0d"))])
  (autothemer
-  . [(0 2 18) ((dash (2 10 0)) (emacs (26 1)))
+  . [(0 2 19) ((dash (2 10 0)) (emacs (26 1)))
      "Conveniently define themes" tar
      ((:url . "https://github.com/jasonm23/autothemer")
       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
-      (:commit . "8f72afc6dba5ad7cc3a201a084fd20571f945d2e"))])
+      (:commit . "d5917521c1a0431d59431bbf1e8296affd7ddddb"))])
  (base32
   . [(1 0) ((emacs (27 1))) "Base32 support" tar
      ((:url . "https://gitlab.com/fledermaus/totp.el")
@@ -1854,11 +1854,11 @@
       (:authors ("John Olsson" . "john@cryon.se"))
       (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed
-  . [(1 5 1) ((emacs (25 1))) "A major mode for editing subtitles" tar
+  . [(1 5 2) ((emacs (25 1))) "A major mode for editing subtitles" tar
      ((:url . "https://github.com/sachac/subed")
       (:keywords "convenience" "files" "hypermedia" "multimedia")
       (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-      (:commit . "12386508eab140ee6c7d83654a162dbf52b0bf93"))])
+      (:commit . "be52d53bf2ccb583f881e5663ad5a6fc28221396"))])
  (sweeprolog
   . [(0 27 6) ((emacs (27 1)) (compat (29 1 4 2)))
      "Embedded SWI-Prolog" tar
