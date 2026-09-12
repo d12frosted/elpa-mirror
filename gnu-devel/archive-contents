@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260909 80) ((emacs (28 1)))
+  . [(14 1 2 0 20260911 81) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "7a460dcfbfcab9e1dbe862f090df5fb708b84c8e"))])
+      (:commit . "f91429c7c54206c1347db3f08feb572942e0a712"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "5806e3f9401606d16962cffae68188c92deb1272"))])
  (org
-  . [(10 0 -1 0 20260911 548) ((emacs (28 2)))
+  . [(10 0 -1 0 20260912 549) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "3b76ded2a46399be8ea00ec2d4afb884b9a0d730"))])
+      (:commit . "c812866f3469cfbe0972fbdf28f080c24b63212f"))])
  (org-contacts
   . [(1 3 0 20260905 13) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
