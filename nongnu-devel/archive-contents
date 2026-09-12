@@ -221,7 +221,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20260912 128)
+  . [(2 1 0 -4 0 20260912 129)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -235,7 +235,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "0ec629fc95bd94fd90fcde91204fcf665f4cd177"))])
+      (:commit . "6d87e355b5289cfb240ff10bac9e7ab73ac208b0"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1037,7 +1037,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20260902 51) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260912 54) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1045,16 +1045,16 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "90712c571f21ccf024b7eb6dcb9ccb5bffbad073"))])
+      (:commit . "e4d5625c2d65ea8725435e1352ce86ab462e4884"))])
  (helm-core
-  . [(4 0 7 0 20260902 51) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260912 54) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "90712c571f21ccf024b7eb6dcb9ccb5bffbad073"))])
+      (:commit . "e4d5625c2d65ea8725435e1352ce86ab462e4884"))])
  (hermes
-  . [(0 6 0 0 20260911 2)
+  . [(0 6 0 0 20260912 4)
      ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "840b03c60ed3ff1d32f6704901dca5eea51ee12d"))])
+      (:commit . "44c1b573b5125d990a2350239949b271d1a74ad2"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar

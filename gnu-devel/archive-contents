@@ -1101,7 +1101,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
-  . [(1 24 0 20260907 19)
+  . [(1 24 0 20260912 20)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1110,7 +1110,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "02121e3d980550da42dec4d82f33d91a7029ca88"))])
+      (:commit . "9447f629a0b99303ee1d7a92d9140a4fb1749de2"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -1378,14 +1378,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 7 0 20260905 2)
+  . [(1 4 7 0 20260912 3)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
-      (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "7ca28566aa6a415d6f89297f40d258d1791cc6fd"))])
+      (:url . "https://elpa.gnu.org/nongnu/flymake.html")
+      (:commit . "9447f629a0b99303ee1d7a92d9140a4fb1749de2"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260911 57) ((emacs (28)))
+  . [(9 1 0 0 20260912 59) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "50945472c3600dcce3bd8f823aaf9906ff4e74df"))])
+      (:commit . "bf32eb99d919133d7909534cfd6538539d4bbb0a"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -3768,14 +3768,14 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "0f20f8b59011471523b650cf1a3478a04362083d"))])
  (use-package
-   . [(2 4 6 0 20260316 172337) ((emacs (24 3)) (bind-key (2 4)))
+   . [(2 4 6 0 20260912 42) ((emacs (24 3)) (bind-key (2 4)))
       "A configuration macro for simplifying your .emacs" tar
       ((:url . "https://github.com/jwiegley/use-package")
        (:keywords "dotemacs" "startup" "speed" "config" "package"
 		  "extensions")
        (:maintainer "John Wiegley" . "johnw@newartisans.com")
        (:authors ("John Wiegley" . "johnw@newartisans.com"))
-       (:commit . "41474108529c6964ce1ad2da11ee36475a55634e"))])
+       (:commit . "9447f629a0b99303ee1d7a92d9140a4fb1749de2"))])
  (validate
   . [(1 0 4 0 20180215 204244)
      ((emacs (24 1)) (cl-lib (0 5)) (seq (2 16)))
