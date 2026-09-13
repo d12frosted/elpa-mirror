@@ -1,95 +1,109 @@
-Library and tools for faces and text properties.
+`face-explorer' is a library and a collection of tools related to
+text attributes and colors -- knows as "faces" in the Emacs
+vocabulary.
 
-This library is useful for packages that convert syntax highlighted
-buffers to other formats.  The functions can be used to determine
-how a face or a face text property looks, in terms of primitive
-face attributes (e.g. foreground and background colors).  Two sets
-of functions are provided, one for existing frames and one for
-fictitious displays, like 8 color tty.
+As a library it is useful, for example, for packages that convert
+syntax highlighted buffers to other formats.  (One such package is
+`e2ansi' that can render syntax highlighted text using ANSI escape
+sequences so that it can be displayed in a terminal.)
 
-In addition, the following tools are provided:
+The tools allows you to investigate faces in more depth than the
+corresponding built-in commands, e.g. `face-explorer-describe-face'
+shows the underlying face and theme definitions.
 
-- `face-explorer-list-faces' -- list all available faces.  Like
-  `list-faces-display' but with information on how a face is
-  defined.  In addition, a sample for the selected frame and for a
-  fictitious display is shown.
+In addition, there are tools for creating buffers with weird
+combination of faces, intended for stress-testing packages that
+process face information.
 
-- `face-explorer-describe-face' -- Print detailed information on
-  how a face is defined, and list all underlying definitions.
+Features:
 
-- `face-explorer-describe-face-prop' -- Describe the `face' text
-  property at the point in terms of primitive face attributes.
-  Also show how it would look on a fictitious display.
+- Support for batch mode -- When in batch mode, Emacs natively
+  doesn't support faces.  This package can determine how a specific
+  face would have looked in the normal Emacs user interface by
+  inspecting the low-level face definitions.
 
-- `face-explorer-list-display-features' -- Show which features a
-  display supports.  Most graphical displays support all, or most,
-  features.  However, many tty:s don't support, for example,
-  strike-through.  Using specially constructed faces, the resulting
-  buffer will render differently in different displays, e.g. a
-  graphical frame and a tty connected using `emacsclient -nw'.
+- Fictitious displays -- It's possible to retrieve information how
+  a face would look in any kind of display, not only the current.
+  For example, you can determine how a face would look in an
+  terminal that only supports eight colors.
 
-- `face-explorer-list-face-prop-examples' -- Show a buffer with an
-  assortment of `face' text properties.  A sample text is shown in
-  four variants: Native, a manually maintained reference vector,
-  the result of `face-explorer-face-prop-attributes' and
-  `face-explorer-face-prop-attributes-for-fictitious-display'.  Any
-  package that convert a buffer to another format (like HTML, ANSI,
-  or LaTeX) could use this buffer to ensure that everything work as
-  intended.
+- All sources are taken into account -- When determining the
+  attributes of a face, all face sources are taken into account.
+  This includes the underlying face definition, active themes, face
+  overrides, and remappings performed by `face-remapping-alist'.
 
-- `face-explorer-list-overlay-examples' -- Show a buffer with a
-  number of examples of overlays, some are mixed with `face' text
-  properties.  Any package that convert a buffer to another format
-  (like HTML, ANSI, or LaTeX) could use this buffer to ensure that
-  everything work as intended.
+Tools:
 
-- `face-explorer-tooltip-mode' -- Minor mode that shows tooltips
-  containing text properties and overlays at the mouse pointer.
+A number of tools useful when developing and testing packages that
+handle faces.  For example:
 
-- `face-explorer-simulate-display-mode' -- Minor mode for make a
-  buffer look like it would on a fictitious display.  Using this
-  you can, for example, see how a theme would look in using dark or
-  light background, a 8 color tty, or on a grayscale graphical
-  monitor.
+- Display information about faces which are more detailed than the
+  built-in system.  For example, the full face specification and
+  relevant theme definitions are displayed.
+
+- A *face verifier* that can determine common problems related to
+  face definitions.
+
+- Display test buffers that use faces in complicated ways.  This is
+  useful when testing packages that retreive face information.
+
+Library functions:
+
+Vocabulary:
+
+The following concepts are used when describing the library
+functions below.
+
+- *Primitive face attributes* -- How something looks to the user,
+  expressed as a property list of face attributes, after things
+  like *inherited faces*, *active themes*, and *redirects* have
+  been taken into account.  This can, for example, include the
+  foreground and the background color, if it is bold or italic etc.
+
+  Properties like `:height' could be relative (like 1.2) or
+  absolute (like 10).  Primitive face attributes never contain the
+  `:inherit' attribute.  Unspecified properties are not included.
+
+- *Face specification* -- Anything the `face' text properly
+  accepts, including a face name (a symbol or a string), a property
+  list `(KEYWORD VALUE ...)', or a mix of the above.
+
+Function for frames:
+
+The following functions can be used to query information about
+frames (defaulting to the current frame).
+
+- `face-explorer-face-attributes' -- The primitive face attributes
+  of a face in an existing frame.
+
+- `face-explorer-face-prop-attributes' -- The primitive face
+  attributes of a face specification in an existing frame..
+
+- `face-explorer-face-attributes-at' -- The primitive face
+  attributes at a specific position in a buffer in an existing
+  frame.
+
+- `face-explorer-face-attributes-for-future-frames' -- The
+  primitive face attributes of a face, if it was displayed in a
+  newly created frame.
 
 Fictitious displays:
 
 Emacs supports a variety of displays, from graphical frames to
-terminals with 8 colors.  Emacs itself provides query functions for
-existing displays.  This library provides query functions for any
-kind of display, allowing you to play the "what if" game.  (For
-example, how would a face look on a grayscale graphical display or
-an 8 color tty.)
-
-It is possible to use the query functions for fictitious displays
-in batch mode, when the normal face and colors system are severely
-restricted.
-
-Library functions:
-
-Function for existing frames:
-
-- `face-explorer-face-attributes' -- The face attributes
-  of a face, after expanding all inherited faces.
-
-- `face-explorer-face-prop-attributes' -- The primitive face
-  attributes of a face specification, as used by the `face' text
-  property.  Effectively, this can tell how a piece of text look to
-  the user, expressed in terms of foreground color, background
-  color, underline etc.  Face remappings performed by
-  `face-remapping-alist' are handled.
-
-- `face-explorer-face-attributes-at' -- The primitive face
-  attributes at a specific position in a buffer.
-
-Support for a fictitious display:
+simple terminals.  Built-in functions, like `face-foreground', only
+provides information on how a face looks in the current display
+environment.  This library provides query functions for any
+fictitious display.  For example, it can determine how a face would
+look in a terminal with eight colors or in a grayscale graphical
+display.
 
 The following variables defines a fictitious display.  The
 face-explorer tools use the global variants of these variables.
 However, when calling the functions in the library, it's possible
 to dynamically bind them using `let'.
 
-- `face-explorer-number-of-colors' -- Number of colors.
+- `face-explorer-number-of-colors' -- Number of colors, or `t' for
+  unrestricted number of colors.
 
 - `face-explorer-background-mode' -- The background mode, either
   `light' or `dark'.
@@ -101,37 +115,44 @@ to dynamically bind them using `let'.
   either a symbol like `tty' or a list like `(graphic ns)'.
 
 - `face-explorer-match-supports-function' -- A function to call to
-  determine the features a display supports.  By default, a
+  determine the features that a display supports.  By default, a
   graphical display supports everything and a tty supports things
   like underline and inverse video.
 
 The following functions can be used to query face-related
 information for fictitious displays:
 
-- `face-explorer-face-attributes-for-fictitious-display'
-  -- The face attributes of a face, after expanding all inherited
-  faces, for a fictitious display.
+- `face-explorer-face-attributes-for-fictitious-display' -- The
+  primitive face attributes a face would have in a fictitious
+  display.
 
 - `face-explorer-face-prop-attributes-for-fictitious-display' --
-  The primitive face attributes of a face specification, as used by
-  the `face' text property, for a fictitious display.  Effectively,
-  this can tell how a piece of text look to the user, expressed in
-  terms of foreground color, background color, underline etc.
+  The primitive face attributes a face specification, as used by
+  the `face' text property, would have in a fictitious display.
 
 - `face-explorer-face-attributes-for-fictitious-display-at' -- The
   primitive face attributes at a specific position in a buffer, for
   a fictitious display.
 
-Face-related tools:
+Usefule macros:
+
+- `face-explorer-with-fictitious-display' -- evaluate body with the
+  fictitious variables bound by `let'.  This allows the code in the
+  body to modify the variables without changing their global value.
+
+- `face-explorer-with-fictitious-display-as-frame' -- Ditto, and
+  set the fictitious display variables to match a frame.
+
+Tools provided by *face-explorer*:
 
 This package provide a number of face-related tools.  Most of them
-display information about a face both in the selected frame and as
+display information about a face both in the selected frame and how
 it would look on a fictitious display.
 
-Key bindings:
+Common key bindings:
 
-In the tool buffers, you can use the following keys to change the
-settings:
+Many tools display the result in dedicated buffers.  In the buffers,
+you can use the following keys to change the settings:
 
 - `-', `+', and `#' -- Decrease, increase, and set the number of
   colors of the fictitious display.  The increase and decrease
@@ -146,22 +167,6 @@ settings:
 - `g' -- Toggle the window system between that of the selected frame
   and a terminal.
 
-Face verifiers:
-
-The `face-explorer-list-faces' and `face-explorer-describe-face'
-tools warn about inappropriately defined faces.  You can use the
-following keys to handle these warnings:
-
-   - `wd' -- Disable verifier
-
-   - `we' -- Enable verifier
-
-   - `wa' -- Enable all verifiers
-
-   - `wn' -- Disable all verifiers
-
-   - `wx' -- Describe verifier.
-
 The `face-explorer-list-faces' tool:
 
 List all available faces.  Like `list-faces-display' but with
@@ -173,6 +178,7 @@ Additional keys:
 
 - `RET' -- Open the `face-explorer-describe-face' tool for the face
   on the line of the cursor.
+
 
 The `face-explorer-describe-face' tool:
 
@@ -191,9 +197,11 @@ Display information about a face.  This includes:
 - The face specifications used to define the face, originating from
   `defface', `custom-theme-set-faces' etc.
 
+
 The `face-explorer-describe-face-prop' tool:
 
-Display information about a `face' text property.  This includes:
+Display information about a `face' text property at the point.
+This includes:
 
 - The value of the property
 
@@ -205,40 +213,77 @@ Display information about a `face' text property.  This includes:
 - Samples how the `face' text property would look in a number of
   typical fictitious displays.
 
+
 The `face-explorer-list-display-features' tool:
 
-Display a buffer contains text using specially constructed faces
-that will look differently depending on available display features.
-For example, if you run `emacsclient -nw' from a terminal, this
-buffer will look differently than it does in a graphical frame.
+Show which features a display supports.  Most graphical displays
+support all, or most, features.  However, many tty:s don't support,
+for example, strike-through.
+
+This is implemented by using specially constructed faces that will
+look differently depending on available display features.  For
+example, if you run `emacsclient -nw' from a terminal, this buffer
+will look differently than it does in a graphical frame.
+
 
 The `face-explorer-list-face-prop-examples' tool:
 
-List sample text with face text properties in various variants.
+List sample text with face text properties in various forms of
+complexity.  This includes mixing faces with primive attribtues,
+explicit inheritence etc.
 
-This is useful for two reasons:
+This can be used to:
 
-- It can be used to investigate how Emacs, rally, displays various
+- Investigate how Emacs, really, displays various combinations of
   faces and text properties.
 
-- It can be used to test packages that convert text with text
-  properties to various other format, like PostScript, HTML, ANSI,
-  LaTeX etc.
+- Test packages that convert text with text properties to various
+  other format, like PostScript, HTML, ANSI, LaTeX etc.
+
+- Self-test of face-explorer itself.  When working properly, all
+  four columns with sample text should display the same value.
+
+The displayed buffer contains a number of columns:
+
+- Name -- A name of the example.
+
+- Native -- A sample text with the face property applied.
+
+- Reference -- A sample text with primitive attributes
+  demonstrating how example should look.
+
+- CurrentFrame -- A sample test with the attributes deduced by this
+  library.
+
+- Fictitious -- Ditto, but for the current fictitious
+  display.  (This can differ from the above.)
+
+- Spec -- The face attribute that is used on the line (a Lisp data
+  structure).
+
+Each example is displayed twice, the first with the attributes
+directly and the second with the attributes placed in a list.
+
 
 The `face-explorer-list-overlay-examples' tool:
 
-List sample text with overlays in various variants.
+Show a buffer with a number of examples of overlays, some are mixed
+with `face' text properties.  Any package that convert a buffer to
+another format (like HTML, ANSI, or LaTeX) could use this buffer to
+ensure that everything work as intended.
+
 
 The `face-explorer-tooltip-mode' tool:
 
-A minor mode that shows information about text
-properties and overlays in a tooltip.
+A minor mode that shows information about text properties and
+overlays in a tooltip.
 
 This is enabled in all buffers displayed by the tools in this
 module.
 
 `face-explorer-tooltip-global-mode' can be used to enable this mode
 for all buffers.
+
 
 The `face-explorer-simulate-display-mode' tool:
 
@@ -257,19 +302,37 @@ even when the fictitious display is set to `mono' or `grayscale'.
 `face-explorer-simulate-display-global-mode' can be used to enable
 this mode for all buffers.
 
-Vocabulary:
+Face verifiers:
 
-Primitive face attributes:
+The `face-explorer-list-faces' and `face-explorer-describe-face'
+tools warn about inappropriately defined faces.  You can use the
+following keys to handle these warnings:
 
-Normally, a face or face specification can be quite complex, for
-example a face can inherit from other faces and a face
-specification can contain several faces.  "Primitive face
-attributes" corresponds to how the face or face specification will
-look to the user, the foreground and background color it has,
-whether it is bold or italic etc.  Unspecified properties are not
-included.  Properties like :height could be relative (like 1.2) or
-absolute (like 10).  Primitive face attributes never contain the
-`:inherit' attribute.
+   - `wd' -- Disable verifier
+
+   - `we' -- Enable verifier
+
+   - `wa' -- Enable all verifiers
+
+   - `wn' -- Disable all verifiers
+
+   - `wx' -- Describe verifier.
+
+
+Implementing a converter using `face-explorer':
+
+The `face-explorer' can be used to implement converters that take a
+syntax-highlighted buffer as input and can emit any kind of
+structured output.
+
+The converter can iterate over the buffer using
+`face-explorer-next-face-property-change' and retreive face
+information using `face-explorer-face-attributes-at' or
+`face-explorer-face-attributes-for-fictitious-display-at'.
+
+The file [face-explorer-example.el](face-explorer-example.el)
+contains a simple example that visualizes the highlighting of a
+buffer.
 
 Technical background:
 
