@@ -687,15 +687,15 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "91f28ee199a499b8d6e1b9c7a0f1c15f8a382198"))])
  (fj
-  . [(0 42)
-     ((emacs (29 1)) (fedi (0 2)) (tp (0 8)) (transient (0 10 0))
-      (magit (4 3 8)))
+  . [(0 43)
+     ((emacs (29 1)) (compat (31)) (fedi (0 2)) (tp (0 8))
+      (transient (0 10 0)) (magit (4 3 8)))
      "Client for Forgejo instances" tar
      ((:url . "https://codeberg.org/martianh/fj.el")
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "98bc65cd29d4adf96f0c922e69885506103cf475"))])
+      (:commit . "266d0111c99bdcf4c68e275b38e28d2109af75d4"))])
  (flamegraph
   . [(0 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -1298,14 +1298,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "f5d520b3ee7722dd2231ab586ba51d8eb166e49b"))])
  (mastodon
-  . [(2 1 4)
-     ((emacs (29 1)) (compat (31 1)) (persist (0 8)) (tp (0 8)))
+  . [(2 1 5) ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "5494ebc03e8ccdd60a1388114086b42cb8b3bb27"))])
+      (:commit . "3d83185457a7f27268fc669c4124df017d31b8bb"))])
  (material-theme
   . [(2015) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar

@@ -329,8 +329,10 @@
    C-c C-o    fj-compose-read-owner           Read a repo owner.                                                  
    C-c C-r    fj-compose-read-repo            Read a repo for composing a issue or comment.                       
    C-c C-t    fj-compose-read-title           Read an issue title.                                                
+   C-c C-u    fj-compose-read-upload          Read a file to upload.                                              
    C-c C-S-l  fj-compose-remove-labels        Remove labels from item being composed.                             
    C-c S-RET  fj-compose-remove-milestone     Remove milestone from item being composed.                          
+   C-c C-S-u  fj-compose-remove-upload        Remove milestone from item being composed.                          
    C-c C-c    fj-compose-send                 Submit the issue or comment to your Forgejo instance.               
    C          fj-copy-item-url                Copy URL of current item, either issue or PR.                       
               fj-copy-pr-url                  Copy upstream Pull Request URL with branch name.                    
@@ -340,6 +342,7 @@
    C-c C-d    fj-cycle-sort-or-relation       Call `fj-own-items-cycle-relation' or `fj-list-issues-sort'.        
    C-c C-c    fj-cycle-state                  Cycle item state listing of open, closed, and all.                  
    C-c C-s    fj-cycle-type                   Cycle item type listing of issues, pulls, and all.                  
+              fj-delete-attachment            Delete attachment at point.                                         
               fj-delete-repo                  Delete repo at point, if you are its owner.                         
               fj-delete-repo-tag              Prompt for a repo tag and delete it on the server.                  
    <return>   fj-do-link-action               Do the action of the link at POS.                                   

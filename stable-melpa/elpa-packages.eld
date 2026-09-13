@@ -5283,6 +5283,7 @@
   (simplicity-theme :url "https://github.com/smallwat3r/emacs-simplicity-theme")
   (simply-annotate :url "https://github.com/captainflasmr/simply-annotate")
   (simulacrum :url "https://github.com/ErikPrantare/simulacrum.el")
+  (single-window :url "https://github.com/jamescherti/single-window.el")
   (sink :url "https://github.com/alcah/sink.el")
   (siri-shortcuts :url "https://github.com/danirukun/siri-shortcuts.el")
   (sis :url "https://github.com/laishulu/emacs-smart-input-source")
