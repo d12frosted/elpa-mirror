@@ -40,6 +40,11 @@ the `LESSOPEN' environment variable.
 
 Make sure that the `emacs' command is in the path.
 
+The Emacs package manager includes the version number in the
+installation location of `e2ansi'.  This, unfortunately, means that
+the shell configuration must be updated every time `e2ansi' is
+updated.
+
 Semi-automatic setup:
 
 Run the Emacs command `e2ansi-display-shell-setup' and copy
@@ -305,6 +310,16 @@ Attributes:
 
 * Underline
 
+Co-existing with `lesspipe':
+
+There are other applications that use the `LESSOPEN' environment
+variable, most notably [lesspipe](https://lesspipe.org).
+
+As of version 2.25 of *lesspipe*, it can be configured to used
+*e2ansi* to highlight source files, while other features of
+lesspipe are retained.  Simply set the environment variable
+`LESSCOLORIZER' to `e2ansi-cat' to accomplish this.
+
 More about `less':
 
 The pager application `less' is preinstalled on most systems.  If
@@ -313,13 +328,6 @@ build a new version from http://www.greenwoodsoftware.com/less
 
 The document [LessWindows](doc/LessWindows.md) describes how to
 build `less' on Windows using `cmake', a modern build system.
-
-Miscellaneous:
-
-The Emacs package manager includes the version number in the
-installation location of `e2ansi'.  This, unfortunately, means that
-the shell configuration must be updated every time `e2ansi' is
-updated.
 
 Gallery:
 
