@@ -2,9 +2,18 @@ f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 30+)
 
 Recently changed, added or improved:
-  [09-2026] Syntax highlighting, indentation and break/join/fill for string literals improved.
-            This requires a proposed (but not yet merged) tree-sitter language grammar extension.
-            See README.md for more details.
+  [09-2026] Fix some issues in comment-region operations (preserve
+            indentation, preserve trailing whitespace where possible,
+            region boundaries, missing `f90-ts-indent-region').
+  [09-2026] Fix indentation after uncommenting lines in comment-region
+;              operation executed on commented lines of code, with leading
+            ampersand or statement label.
+  [09-2026] Add (missing) option `keep-or-continued-line' to
+            `f90-ts--indent-options-alist' for indentation selection options.
+  [09-2026] Syntax highlighting, indentation and break/join/fill for string
+            literals improved.  This requires a proposed (but not yet merged)
+            tree-sitter language grammar extension.  See README.md for more
+            details.
   [09-2026] Testing with Emacs 31.1 and tree-sitter 0.26 added.
 
   [08-2026] `f90-ts-shift-line-break' as combined break/join function added.
@@ -42,8 +51,8 @@ Features:
   - Smart end completion
   - Configurable leading ampersand and statement label positions
   - Breaking and joining of continued lines
-  - Fill and rebalance operations for lines or regions (with rightmost breakpoint
-    selection or interactive break and join session)
+  - Fill and rebalance operations for lines or regions (with rightmost
+    breakpoint selection or interactive break and join session)
   - Region selection based on tree-sitter nodes
   - (Un)commenting regions with configurable prefixes and indentation rules
   - Special comments like doc strings and separators

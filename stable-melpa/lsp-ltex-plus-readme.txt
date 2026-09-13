@@ -1,5 +1,5 @@
 
-`lsp-ltex-plus' is an `lsp-mode' client for LTeX+, a LanguageTool-based
+`lsp-ltex-plus' is an Emacs client for LTeX+, a LanguageTool-based
 grammar, spell, and style checker.  It brings professional-grade writing
 feedback into Emacs for:
 
@@ -12,10 +12,9 @@ feedback into Emacs for:
 
 Highlights:
 
-  * Add-on integration — registers with `:add-on? t' and `:priority -1',
-    so it runs concurrently with primary LSP servers (texlab, pyright,
-    etc.) without competing for features such as Go-to-Definition or
-    Completion.
+  * Self-contained -- speaks the Language Server Protocol over the
+    `jsonrpc' library bundled with Emacs and reports through flymake,
+    so it runs beside any other language server without configuration.
   * Offline by default — the local `ltex-ls-plus' binary checks documents
     entirely on your machine, no network involved.  An optional remote
     LanguageTool server (with optional LanguageTool Premium credentials)
