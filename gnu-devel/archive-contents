@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 9 0 20260913 1) ((emacs (29 1)) (compat (31)))
+  . [(3 9 0 20260913 2) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "887ada3b684b233375435cf8f38eaafd240edcb4"))])
+      (:commit . "9979fbb02e633267d0f6bc6cafa266fe87a0007f"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 10 6 0 20260707 26)
+  . [(0 11 0 0 20260914 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 2 0)))
      "Knowledge System" tar
-     ((:url . "https://codeberg.org/thanosapollo/emacs-gnosis")
+     ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "f68bfc5500c38c1edb59ea6eed70b7a765d368f0"))])
+      (:commit . "190a68ecaa0fc3f30255985764317c73e558c575"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar
@@ -3774,14 +3774,14 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "0f20f8b59011471523b650cf1a3478a04362083d"))])
  (use-package
-   . [(2 4 6 0 20260912 42) ((emacs (24 3)) (bind-key (2 4)))
+   . [(2 4 6 0 20260913 43) ((emacs (24 3)) (bind-key (2 4)))
       "A configuration macro for simplifying your .emacs" tar
       ((:url . "https://github.com/jwiegley/use-package")
        (:keywords "dotemacs" "startup" "speed" "config" "package"
 		  "extensions")
        (:maintainer "John Wiegley" . "johnw@newartisans.com")
        (:authors ("John Wiegley" . "johnw@newartisans.com"))
-       (:commit . "9447f629a0b99303ee1d7a92d9140a4fb1749de2"))])
+       (:commit . "7a545438c618aced355574dc9a41c18f29bc7906"))])
  (validate
   . [(1 0 4 0 20180215 204244)
      ((emacs (24 1)) (cl-lib (0 5)) (seq (2 16)))
@@ -4092,10 +4092,10 @@
       (:authors ("Mattias Engdegård" . "mattias.engdegard@gmail.com"))
       (:commit . "fc4d6b5ddae9eb2c8adc2b117e6f33f3a09a4e96"))])
  (xref
-  . [(1 7 0 0 20260906 47) ((emacs (26 1)))
+  . [(1 7 0 0 20260914 49) ((emacs (26 1)))
      "Cross-referencing commands" tar
-     ((:url . "https://elpa.gnu.org/packages/xref.html")
-      (:commit . "8de8a9bc822b748167a8592e04f33e67695c3a54"))])
+     ((:url . "https://elpa.gnu.org/nongnu/xref.html")
+      (:commit . "7a545438c618aced355574dc9a41c18f29bc7906"))])
  (xref-union
   . [(0 2 0 0 20260222 131318) ((emacs (25 1)))
      "Combine multiple Xref backends" tar

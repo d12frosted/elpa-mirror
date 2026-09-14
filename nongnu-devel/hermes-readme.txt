@@ -103,7 +103,34 @@ gateway.
   reopened for another one.
 
 
-2.1 Output previews
+2.1 Headless prompts
+────────────────────
+
+  `(hermes-request REQUEST RESOLVE REJECT)' returns a cancellation
+  thunk.  Require `hermes-request' for use without the UI.  For example:
+
+  ┌────
+  │ (hermes-request '(:prompt "Explain spaced repetition." :profile "study-eval")
+  │                 (lambda (text) (message "%s" text))
+  │                 (lambda (reason) (message "Request failed: %s" reason)))
+  └────
+
+  The profile must exist in the selected backend catalogue with a
+  configured model and provider.  Each request captures those exact
+  choices from a fresh catalogue read, overriding backend launch
+  defaults without changing profile configuration.  Missing or malformed
+  choices fail before session creation; credentials and any configured
+  fallback policy remain backend-owned.  Each call creates a fresh
+  hidden session; no current chat history is used.  Only a successfully
+  completed final response reaches `RESOLVE'; cancellation, timeout,
+  disconnect, or required interaction reaches `REJECT'.
+  `hermes-request-timeout' bounds the request.  Closing the session is
+  best effort and does not delete backend history.  The profile controls
+  tools and instructions; choose a tool-less profile for evaluation that
+  must not act on the host.
+
+
+2.2 Output previews
 ───────────────────
 
   Completed tool outputs with published file paths, and closed HTML/SVG
@@ -130,7 +157,7 @@ gateway.
   revisions.
 
 
-2.2 Live tasks
+2.3 Live tasks
 ──────────────
 
   Use /Workspace → Live tasks/ in the chat actions menu, or `M-x
@@ -142,7 +169,7 @@ gateway.
   populate the panel from live tool results.
 
 
-2.3 Session pins and named workspaces
+2.4 Session pins and named workspaces
 ─────────────────────────────────────
 
   In `M-x hermes-list-sessions', `k' toggles the selected session's

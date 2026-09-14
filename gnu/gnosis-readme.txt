@@ -35,7 +35,7 @@
 ─────────
 
   Nodes are Zettelkasten-style notes stored as plain org-mode files.
-  Each node is identified by a unique UUID stored as an `#+id:'
+  Each node is identified by a unique UUID stored in an Org `:ID:'
   property.  Nodes are indexed in the database so that they can be
   searched, browsed by tag, and linked together using standard org-mode
   `[[id:UUID]]' syntax.
@@ -50,11 +50,83 @@
   are reviewed using a spaced repetition algorithm that adapts the
   interval between reviews based on performance.
 
-  Themata support five question types: basic, double, MCQ, cloze, and
-  mc-cloze.
+  Themata support basic, double, MCQ, cloze and mc-cloze text questions,
+  image-region and image-occlusion questions, and optional 3D model
+  questions.
+
+  For agent-assisted creation or repair, read the [thema authoring
+  skill] before drafting.  It covers source-backed questions,
+  descriptive links, cross-topic reuse, and verified native saves.  The
+  skill is agent-neutral; load it explicitly or install its directory
+  using your agent's skill mechanism.
 
 
-1.4 The Link Between Nodes and Themata
+[thema authoring skill] <file:skills/gnosis-themata/SKILL.md>
+
+
+1.4 Installation
+────────────────
+
+  Install from GNU ELPA with `M-x package-refresh-contents', then `M-x
+  package-install RET gnosis RET'.  Emacs installs the declared `compat'
+  and `keymap-popup' dependencies.  Core Gnosis requires Emacs 29.1 or
+  later with working SQLite support: `M-: (sqlite-available-p)' should
+  return `t'.  Python and native canvas support are not required.
+
+  Open `M-x gnosis-dashboard' to start, or `C-h i g (gnosis) RET' for
+  the installed manual.  See [Installation and Setup] for directories
+  and configuration.  Existing users: back up the old database, Org
+  files and media *before the first database open* with upgraded code;
+  see the manual's Database Version 9 section.
+
+
+[Installation and Setup] <file:docs/gnosis.org::#installation>
+
+
+1.5 Optional 3D support
+───────────────────────
+
+  Gnosis works without Python or a 3D renderer.  Model themata use the
+  optional `canvas-3d' backend, which is not included in the ELPA
+  package.  Install it separately from a matching Gnosis source
+  checkout; keep the whole `optional/canvas-3d/' directory, not just its
+  Lisp file.
+
+  The backend requires a graphical Emacs with `canvas-refresh' and the
+  `canvas' image type (Emacs 32 development builds), Python 3.12–3.14,
+  and a working EGL/OpenGL 3.3 driver.  Only Linux EGL is currently
+  verified.  Installing Python dependencies does not add canvas support
+  to an older Emacs.
+
+  Install [uv], then prepare and check the backend:
+
+  ┌────
+  │ cd /path/to/gnosis/optional/canvas-3d
+  │ uv sync --locked
+  │ ./preflight.py
+  └────
+
+  Point Gnosis at that directory in your Emacs configuration:
+
+  ┌────
+  │ (with-eval-after-load 'gnosis
+  │   (setq gnosis-model-renderer-directory
+  │         "/path/to/gnosis/optional/canvas-3d/"))
+  └────
+
+  The renderer loads only when needed.  Opening a model never installs
+  software or downloads dependencies.  See the [canvas-3d setup guide]
+  for preflight options, a standalone test scene, and renderer
+  configuration.  Anatomical models are not bundled.
+
+
+[uv] <https://docs.astral.sh/uv/getting-started/installation/>
+
+[canvas-3d setup guide]
+<https://git.thanosapollo.org/emacs-gnosis/tree/optional/canvas-3d/README.md>
+
+
+1.6 The Link Between Nodes and Themata
 ──────────────────────────────────────
 
   When you write a node about a topic, you can create themata whose
