@@ -8,7 +8,7 @@ Recently changed, added or improved:
             outside of region boundaries, add missing function
             `f90-ts-indent-region').
   [09-2026] Fix indentation after uncommenting lines in comment-region
-;              operation executed on commented lines of code, with leading
+            operation executed on commented lines of code, with leading
             ampersand or statement label.
   [09-2026] Add (missing) option `keep-or-continued-line' to
             `f90-ts--indent-options-alist' for indentation selection options.
