@@ -878,13 +878,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl
-  . [(1 11 1 0 20260909 3) ((cl-lib (0 2)) (emacs (27 1)))
+  . [(1 11 2 0 20260915 2) ((cl-lib (0 2)) (emacs (27 1)))
      "Highlight uncommitted changes using VC" tar
      ((:url . "https://github.com/dgutov/diff-hl")
       (:keywords "vc" "diff")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
-      (:commit . "0e1d464b48172a1f1e2f36103d812c9fc6387c4e"))])
+      (:commit . "b1ddfb3e4c68c8f6a4aee2e48e0016c3fb4c3803"))])
  (diffview
   . [(1 0 0 20230224 111651) nil "View diffs in side-by-side format"
      tar
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 11 0 0 20260914 0)
+  . [(0 11 0 0 20260915 5)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 2 0)))
      "Knowledge System" tar
      ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "190a68ecaa0fc3f30255985764317c73e558c575"))])
+      (:commit . "78e34bbdd5f442447270c19c4df1883665294dd0"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260913 62) ((emacs (28)))
+  . [(9 1 0 0 20260915 63) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "d36fb6c0aef0085a203bd9cd10d652f4cd92a69f"))])
+      (:commit . "375492bb75243751d4153574c73a47c9d086da53"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2474,22 +2474,22 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "5806e3f9401606d16962cffae68188c92deb1272"))])
  (org
-  . [(10 0 -1 0 20260914 550) ((emacs (28 2)))
+  . [(10 0 -1 0 20260915 551) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "25009e383b79fd4f388e073f313a654d41846c3f"))])
+      (:commit . "9f8be52a3b58516b1b6d829fea4e0ee68db6b602"))])
  (org-contacts
-  . [(1 3 0 20260905 13) ((emacs (29 1)) (org (9 7)))
+  . [(1 3 0 20260915 18) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
      ((:url . "https://repo.or.cz/org-contacts.git")
       (:keywords "contacts" "org-mode" "outlines" "hypermedia"
 		 "calendar")
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:authors ("Julien Danjou" . "julien@danjou.info"))
-      (:commit . "bc21e333851a92ce77c9f00b86c2f7a8795891a1"))])
+      (:commit . "a9a29e6374eb4e7baa28ef82b8613acd6eac5c6b"))])
  (org-edna
   . [(1 1 2 0 20200902 94459)
      ((emacs (25 1)) (seq (2 19)) (org (9 0 5)))
@@ -3716,6 +3716,14 @@
       (:maintainer "Eshel Yaron" . "me@eshelyaron.com")
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
+ (typewriter
+  . [(1 1 0 0 20260911 1) ((emacs (30 1)))
+     "Turn Emacs into a text adder" tar
+     ((:url . "https://github.com/enricoflor/typewriter.el")
+      (:keywords "wp")
+      (:maintainer "Enrico Flor" . "enrico@eflor.net")
+      (:authors ("Enrico Flor" . "enrico@eflor.net"))
+      (:commit . "2ef7f7ae25fe172cb088d026cb296b5e78f7cebe"))])
  (ulisp-repl
   . [(1 0 3 0 20230604 111559) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")

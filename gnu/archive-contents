@@ -825,13 +825,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl
-  . [(1 11 1) ((cl-lib (0 2)) (emacs (27 1)))
+  . [(1 11 2) ((cl-lib (0 2)) (emacs (27 1)))
      "Highlight uncommitted changes using VC" tar
      ((:url . "https://github.com/dgutov/diff-hl")
       (:keywords "vc" "diff")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
-      (:commit . "3d9552c575fd14ac98ac97bf3c19cdef39f79305"))])
+      (:commit . "5e467e66847069d29922efb1a91a25a78dbad3d5"))])
  (diffview
   . [(1 0) nil "View diffs in side-by-side format" single
      ((:keywords "convenience" "diff")
@@ -3438,6 +3438,13 @@
       (:maintainer "Eshel Yaron" . "me@eshelyaron.com")
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
+ (typewriter
+  . [(1 1 0) ((emacs (30 1))) "Turn Emacs into a text adder" tar
+     ((:url . "https://github.com/enricoflor/typewriter.el")
+      (:keywords "wp")
+      (:maintainer "Enrico Flor" . "enrico@eflor.net")
+      (:authors ("Enrico Flor" . "enrico@eflor.net"))
+      (:commit . "60d3a8d49601460a55604ad19831ceb6789c8935"))])
  (ulisp-repl
   . [(1 0 3) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
