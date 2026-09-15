@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 1 2 0 20260914 84) ((emacs (28 1)))
+  . [(14 2 0 0 20260915 0) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "749a3cca40d53785b14f63a0a27fba8b9ffe7a5f"))])
+      (:commit . "cc5a4776967eeaac3bba75b3be4365695d7dc97d"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 11 0 0 20260915 5)
+  . [(0 12 0 0 20260915 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 2 0)))
      "Knowledge System" tar
      ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "78e34bbdd5f442447270c19c4df1883665294dd0"))])
+      (:commit . "847727f08329bbcea9e22bfc53578f9d3a13697c"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar
@@ -2171,7 +2171,7 @@
       (:authors ("Ian Martins" . "ianxm@jhu.edu"))
       (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode
-  . [(8 2 0 0 20260428 134050) ((emacs (27 2)))
+  . [(8 2 1 0 20260915 0) ((emacs (27 2)))
      "Major mode for MATLAB(R) dot-m files" tar
      ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
       (:keywords "matlab(r)")
@@ -2180,7 +2180,7 @@
 		   ("John Ciolfi" . "john.ciolfi.32@gmail.com"))
       (:authors ("Matt Wette" . "mwette@alumni.caltech.edu")
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
-      (:commit . "83ea45983975bc6d17a908bf4acddfc47d51763a"))])
+      (:commit . "83d0aca7f6c817c0a418c773a59bd08e8f5dca5c"))])
  (mct
   . [(1 1 1 0 20260903 2) ((emacs (29 4)))
      "Minibuffer Confines Transcended" tar
@@ -2273,21 +2273,21 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260911 55) ((emacs (28 1)))
+  . [(5 3 0 0 20260915 57) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "ca6f09900a2abe5de161f9f68d94cf5126c47885"))])
+      (:commit . "7d739dba47397fcf16a50ac87e09b016c83560e3"))])
  (mpdired
-  . [(4 -1 0 20250502 1) ((emacs (29)))
+  . [(4 0 20260915 0) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
      ((:keywords "multimedia")
       (:maintainer "Manuel Giraud" . "manuel@ledu-giraud.fr")
       (:authors ("Manuel Giraud" . "manuel@ledu-giraud.fr"))
-      (:url . "https://elpa.gnu.org/packages/mpdired.html")
-      (:commit . "b94fd3df8d4ca636b978db580518c68929e1f8ee"))])
+      (:url . "https://elpa.gnu.org/nongnu/mpdired.html")
+      (:commit . "0fdaa232596349261b184871529b884186d8e5a9"))])
  (multi-mode
   . [(1 14 0 20240919 113013) nil "support for multiple major modes"
      tar
@@ -2904,11 +2904,11 @@
 		("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "f986fb68e75bdae951efb9e11a3012ab6bd408ee"))])
  (r-ts-mode
-  . [(1 1 3 0 20260913 11) ((emacs (30 1))) "R treesitter mode" tar
+  . [(1 2 0 0 20260915 0) ((emacs (30 1))) "R treesitter mode" tar
      ((:url . "https://codeberg.org/R-for-emacs/r-ts-mode")
       (:maintainer "Manuel Teodoro" . "ttm@teoten.me")
       (:authors ("Manuel Teodoro" . "ttm@teoten.me"))
-      (:commit . "50ceffa2b79fa316752ae0f49408cac2080ceada"))])
+      (:commit . "f5e4f6395a09a4d20a7dd41b5d8606ba56e39057"))])
  (rainbow-mode
   . [(1 0 7 0 20260905 0) nil "Colorize color names in buffers" tar
      ((:keywords "faces")
@@ -3717,13 +3717,13 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
  (typewriter
-  . [(1 1 0 0 20260911 1) ((emacs (30 1)))
+  . [(1 1 0 0 20260915 2) ((emacs (30 1)))
      "Turn Emacs into a text adder" tar
      ((:url . "https://github.com/enricoflor/typewriter.el")
       (:keywords "wp")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "2ef7f7ae25fe172cb088d026cb296b5e78f7cebe"))])
+      (:commit . "88619992c562293ee23c891330e1f693715f0350"))])
  (ulisp-repl
   . [(1 0 3 0 20230604 111559) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")

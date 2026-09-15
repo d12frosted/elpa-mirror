@@ -1,6 +1,7 @@
-This a client for the Music Player Daemon (mpd) with interactions
-inspired from Dired.  It features two views packed into the same
-interactive buffer: the browser view and the queue view.
+MPDired is a client for the Music Player Daemon (mpd) with
+interactions inspired from Dired.  It features two views packed
+into the same interactive buffer: the browser view and the queue
+view.
 
 In those views, most of the interactions are mimic after Dired mode
 with marks and action on them.  For example, in the queue view, you

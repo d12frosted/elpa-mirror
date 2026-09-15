@@ -3,6 +3,8 @@
             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
+[https://elpa.gnu.org/packages/typewriter.svg]
+
 This package provides `typewriter-mode', a small minor mode that
 deliberately handicaps Emacs to an extreme degree in order to provide
 something as close as possible to the strict forward-only typewriter
@@ -51,5 +53,17 @@ layout of text in the window, such as the fairly popular [olivetti], or
 any configuration that (for instance) hides or alters element of the
 emacs interface.
 
+The package is on [GNU Elpa], and you can install it in the usual ways,
+for instance:
+
+┌────
+│ (use-package typewriter)
+└────
+
+
+[https://elpa.gnu.org/packages/typewriter.svg]
+<https://elpa.gnu.org/packages/typewriter.html>
 
 [olivetti] <https://github.com/rnkn/olivetti>
+
+[GNU Elpa] <https://elpa.gnu.org/packages/typewriter.html>
