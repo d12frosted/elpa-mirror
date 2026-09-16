@@ -8,8 +8,8 @@ Usage:
 Pick blocks one at a time using their associated keys.  The transient stays
 open and shows a live preview as the prompt is built.
 
-Press `RET` to copy the composed prompt to the kill ring, then paste it into
-your agent (e.g. `agent-shell`) or anywhere else.
+Press `RET` to insert the composed prompt where you were, e.g. an
+`agent-shell` input line, or `M-w` to copy it to the kill ring instead.
 
 See the README for full usage instructions, or just start using promptu!
 

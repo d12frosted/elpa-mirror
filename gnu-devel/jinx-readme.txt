@@ -105,6 +105,7 @@ are listed in `jinx-camel-modes'. For these modes composite words in
   • `C-u M-$' or `M-x jinx-correct-all' spell-checks the entire buffer.
   • `C-u C-u M-$' or `M-x jinx-correct-word' forces correction of the
     word at point, even if it is not misspelled.
+  • `M-x jinx-occur' displays all misspelled words in a separate buffer.
 
   A sample configuration with the popular `use-package' macro is shown
   here:
