@@ -926,13 +926,13 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "91d57e3a4c5104c66a3abc18e281ee55e8979176"))])
  (dired-preview
-  . [(0 6 1 0 20260610 0) ((emacs (28 1)))
+  . [(0 6 1 0 20260916 1) ((emacs (28 1)))
      "Automatically preview file at point in Dired" tar
      ((:url . "https://github.com/protesilaos/dired-preview")
       (:keywords "files" "convenience")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "090eded80f801cb4f651490cdd9a78910ef63946"))])
+      (:commit . "8dd3c363069d66baa80d9c3bc5eccc72d5d001b9"))])
  (dired-sidebar
   . [(2 0 1 0 20260806 3) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 12 0 0 20260915 0)
+  . [(0 12 0 0 20260916 28)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 2 0)))
      "Knowledge System" tar
      ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "847727f08329bbcea9e22bfc53578f9d3a13697c"))])
+      (:commit . "3bbd5489d9c3208a62852302bcac65e7085dfa9d"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar

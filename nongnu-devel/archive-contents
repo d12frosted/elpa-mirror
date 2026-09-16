@@ -1054,15 +1054,15 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "4f53c80b636a93bd09bbd45eb150f385834cb494"))])
  (hermes
-  . [(0 7 0 0 20260914 0)
-     ((emacs (29 1)) (keymap-popup (0 3 1)) (websocket (1 15))
+  . [(0 7 0 0 20260916 24)
+     ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
      ((:url . "https://git.thanosapollo.org/emacs-hermes")
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "228b72b4acd7bf7750020f09f77b986405d61636"))])
+      (:commit . "df7216be1d10553355042d53bcf6648245a6f1bf"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1391,11 +1391,11 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "ed42ae8333d801c841ecf80fb5e4957badb99b51"))])
  (meow
-  . [(1 5 0 0 20260714 67) ((emacs (27 1)))
+  . [(1 5 0 0 20260915 68) ((emacs (27 1)))
      "Yet Another modal editing" tar
      ((:url . "https://www.github.com/DogLooksGood/meow")
       (:keywords "convenience" "modal-editing")
-      (:commit . "aa8aec19e70369b547176e625f5b95c4a8565e8e"))])
+      (:commit . "8aebed9f8cd8d865501b780e63acbeef55da231b"))])
  (minibar
   . [(0 3 0 20230414 114052) ((emacs (27 2)))
      "Modular status bar in minibuffer" tar
