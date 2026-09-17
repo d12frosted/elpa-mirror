@@ -5,5 +5,6 @@ associated to files and will be saved any time you run `kill-buffer' or
 `kill-emacs'.
 Furtermore, you can save them manually any time via `save-buffer' function.
 If `consult' is installed, `temporary-persistent-consult-switch-buffer'
-lists the temp buffers annotated with their contents summary.
+lists the temp buffers along with their contents summary, which the
+completion input narrows by as well as by the buffer name.
 See README.md for more information.
