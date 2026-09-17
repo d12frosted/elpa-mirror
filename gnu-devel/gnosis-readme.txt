@@ -54,15 +54,6 @@
   image-region and image-occlusion questions, and optional 3D model
   questions.
 
-  For agent-assisted creation or repair, read the [thema authoring
-  skill] before drafting.  It covers source-backed questions,
-  descriptive links, cross-topic reuse, and verified native saves.  The
-  skill is agent-neutral; load it explicitly or install its directory
-  using your agent's skill mechanism.
-
-
-[thema authoring skill] <file:skills/gnosis-themata/SKILL.md>
-
 
 1.4 Installation
 ────────────────

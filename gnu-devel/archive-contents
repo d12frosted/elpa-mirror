@@ -266,12 +266,12 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "85261a928ae0ec3b41e639f05291ffd6bf7c231c"))])
  (beframe
-  . [(1 5 0 0 20260828 18) ((emacs (28 1)))
-     "Isolate buffers per frame" tar
+  . [(1 6 0 0 20260917 0) ((emacs (28 1))) "Isolate buffers per frame"
+     tar
      ((:url . "https://github.com/protesilaos/beframe")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f1824ddbda0c6fb09745e4404e7521a42e2fb258"))])
+      (:commit . "6467a15db1144b8157cc73e21a491ceffa87e74a"))])
  (bicep-ts-mode
   . [(0 1 4 0 20260825 88) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
@@ -926,13 +926,13 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "91d57e3a4c5104c66a3abc18e281ee55e8979176"))])
  (dired-preview
-  . [(0 6 1 0 20260916 1) ((emacs (28 1)))
+  . [(0 6 2 0 20260917 2) ((emacs (28 1)))
      "Automatically preview file at point in Dired" tar
      ((:url . "https://github.com/protesilaos/dired-preview")
       (:keywords "files" "convenience")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "8dd3c363069d66baa80d9c3bc5eccc72d5d001b9"))])
+      (:commit . "7473ec7dfd91feec85755dca3d8e3518eafccdce"))])
  (dired-sidebar
   . [(2 0 1 0 20260806 3) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 12 0 0 20260916 28)
+  . [(0 12 0 0 20260917 44)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 2 0)))
      "Knowledge System" tar
      ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "3bbd5489d9c3208a62852302bcac65e7085dfa9d"))])
+      (:commit . "631da156274ebe816e0b25cdb3437217fe330465"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar
@@ -1916,13 +1916,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 4 0 20260917 0) ((emacs (29 1)))
+  . [(0 4 4 0 20260917 1) ((emacs (29 1)))
      "Described keymaps with popup help" tar
      ((:url . "https://git.thanosapollo.org/emacs-keymap-popup/")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "17d0305391021a2c217d531a436e29475c8563f2"))])
+      (:commit . "e907cfa04bed328398393d912ac5e1dec4fbff20"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar

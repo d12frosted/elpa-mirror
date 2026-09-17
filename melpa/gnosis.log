@@ -2,10 +2,10 @@
  • Building package gnosis
 From https://git.thanosapollo.org/emacs-gnosis
 Updating /mnt/store/melpa/working/gnosis/
-Checking out b7a89ad0a94d200996c746540b52f6d3740b0aa5
+Checking out 04cde304b7a94ef221e73ad256bf5a81e2415ba2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosis-YmqRa5/gnosis-20260917.739/
+  to /tmp/gnosis-M3D3Nc/gnosis-20260917.2049/
   ! lisp/gnosis-agent-eval-hermes.el -> gnosis-agent-eval-hermes.el
   ! lisp/gnosis-agent-eval.el -> gnosis-agent-eval.el
   ! lisp/gnosis-agent.el -> gnosis-agent.el
@@ -20,6 +20,7 @@ Copying files (->) and directories (=>)
   ! lisp/gnosis-fsrs.el -> gnosis-fsrs.el
   ! lisp/gnosis-image.el -> gnosis-image.el
   ! lisp/gnosis-journal.el -> gnosis-journal.el
+  ! lisp/gnosis-lecture.el -> gnosis-lecture.el
   ! lisp/gnosis-links.el -> gnosis-links.el
   ! lisp/gnosis-logical-day.el -> gnosis-logical-day.el
   ! lisp/gnosis-model.el -> gnosis-model.el
@@ -35,36 +36,37 @@ Copying files (->) and directories (=>)
   ! lisp/gnosis-utils.el -> gnosis-utils.el
   ! lisp/gnosis-vc.el -> gnosis-vc.el
   ! lisp/gnosis.el -> gnosis.el
-Created gnosis-20260917.739.tar containing:
-  gnosis-20260917.739/
-  gnosis-20260917.739/gnosis-agent-eval-hermes.el
-  gnosis-20260917.739/gnosis-agent-eval.el
-  gnosis-20260917.739/gnosis-agent.el
-  gnosis-20260917.739/gnosis-anki.el
-  gnosis-20260917.739/gnosis-answer.el
-  gnosis-20260917.739/gnosis-assets.el
-  gnosis-20260917.739/gnosis-backup.el
-  gnosis-20260917.739/gnosis-cloze.el
-  gnosis-20260917.739/gnosis-dashboard.el
-  gnosis-20260917.739/gnosis-db.el
-  gnosis-20260917.739/gnosis-export-import.el
-  gnosis-20260917.739/gnosis-fsrs.el
-  gnosis-20260917.739/gnosis-image.el
-  gnosis-20260917.739/gnosis-journal.el
-  gnosis-20260917.739/gnosis-links.el
-  gnosis-20260917.739/gnosis-logical-day.el
-  gnosis-20260917.739/gnosis-model.el
-  gnosis-20260917.739/gnosis-monkeytype.el
-  gnosis-20260917.739/gnosis-nodes.el
-  gnosis-20260917.739/gnosis-org.el
-  gnosis-20260917.739/gnosis-pkg.el
-  gnosis-20260917.739/gnosis-review.el
-  gnosis-20260917.739/gnosis-scheduler.el
-  gnosis-20260917.739/gnosis-sqlite.el
-  gnosis-20260917.739/gnosis-study.el
-  gnosis-20260917.739/gnosis-tags.el
-  gnosis-20260917.739/gnosis-tl.el
-  gnosis-20260917.739/gnosis-utils.el
-  gnosis-20260917.739/gnosis-vc.el
-  gnosis-20260917.739/gnosis.el
-Built gnosis in 5.103s, finished at 2026-09-17T15:48:30+0000
+Created gnosis-20260917.2049.tar containing:
+  gnosis-20260917.2049/
+  gnosis-20260917.2049/gnosis-agent-eval-hermes.el
+  gnosis-20260917.2049/gnosis-agent-eval.el
+  gnosis-20260917.2049/gnosis-agent.el
+  gnosis-20260917.2049/gnosis-anki.el
+  gnosis-20260917.2049/gnosis-answer.el
+  gnosis-20260917.2049/gnosis-assets.el
+  gnosis-20260917.2049/gnosis-backup.el
+  gnosis-20260917.2049/gnosis-cloze.el
+  gnosis-20260917.2049/gnosis-dashboard.el
+  gnosis-20260917.2049/gnosis-db.el
+  gnosis-20260917.2049/gnosis-export-import.el
+  gnosis-20260917.2049/gnosis-fsrs.el
+  gnosis-20260917.2049/gnosis-image.el
+  gnosis-20260917.2049/gnosis-journal.el
+  gnosis-20260917.2049/gnosis-lecture.el
+  gnosis-20260917.2049/gnosis-links.el
+  gnosis-20260917.2049/gnosis-logical-day.el
+  gnosis-20260917.2049/gnosis-model.el
+  gnosis-20260917.2049/gnosis-monkeytype.el
+  gnosis-20260917.2049/gnosis-nodes.el
+  gnosis-20260917.2049/gnosis-org.el
+  gnosis-20260917.2049/gnosis-pkg.el
+  gnosis-20260917.2049/gnosis-review.el
+  gnosis-20260917.2049/gnosis-scheduler.el
+  gnosis-20260917.2049/gnosis-sqlite.el
+  gnosis-20260917.2049/gnosis-study.el
+  gnosis-20260917.2049/gnosis-tags.el
+  gnosis-20260917.2049/gnosis-tl.el
+  gnosis-20260917.2049/gnosis-utils.el
+  gnosis-20260917.2049/gnosis-vc.el
+  gnosis-20260917.2049/gnosis.el
+Built gnosis in 6.717s, finished at 2026-09-17T20:53:52+0000

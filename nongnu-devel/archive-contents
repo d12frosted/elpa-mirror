@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "4f53c80b636a93bd09bbd45eb150f385834cb494"))])
  (hermes
-  . [(0 7 1 0 20260917 0)
+  . [(0 7 1 0 20260917 2)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "3bcafa0357d7f2d9071da8274f323134460105a6"))])
+      (:commit . "1d37d8da62e5d3e7f4a7318d0fc4ad9cdc0e4832"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20260911 5)
+  . [(4 7 1 0 20260917 6)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,7 +1343,7 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "83ba66c8ab6fcdbd809077ae4db1f7e2ed832655"))])
+      (:commit . "532adafa244b013bd10604ff885bd2806c9eec6e"))])
  (magit-section
   . [(4 7 1 0 20260911 5)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
@@ -1784,12 +1784,12 @@
       (:authors ("Takafumi Arakaki" . "aka.tkfatgmail.com"))
       (:commit . "c22e3c23a6dd90f64be536e176ea0ed6113a5ba6"))])
  (rfc-mode
-  . [(1 4 2 0 20260617 2) ((emacs (25 1)))
+  . [(1 4 2 0 20260917 3) ((emacs (25 1)))
      "RFC document browser and viewer" tar
      ((:url . "https://github.com/galdor/rfc-mode")
       (:maintainer "Nicolas Martyanoff" . "nicolas@n16f.net")
       (:authors ("Nicolas Martyanoff" . "nicolas@n16f.net"))
-      (:commit . "0ab3e0b5eca45e7baaea748063b8590d08b55789"))])
+      (:commit . "cd2cd1a8d9cf08634c3b9ff768f085ffdacbac0c"))])
  (rpm-spec-mode
   . [(0 16 0 20260616 59) ((emacs (27 1)) (compat (29 1 4 5)))
      "RPM spec mode for Emacs/XEmacs" tar
@@ -1967,12 +1967,12 @@
       (:authors ("John Olsson" . "john@cryon.se"))
       (:commit . "d61acae1ddb6830f98dbd9d2e82a9fb42833bd1b"))])
  (subed
-  . [(1 5 2 0 20260910 0) ((emacs (25 1)))
+  . [(1 5 3 0 20260917 0) ((emacs (25 1)))
      "A major mode for editing subtitles" tar
      ((:url . "https://github.com/sachac/subed")
       (:keywords "convenience" "files" "hypermedia" "multimedia")
       (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-      (:commit . "be52d53bf2ccb583f881e5663ad5a6fc28221396"))])
+      (:commit . "581d53e80518ddba48432f439bd73b4e208bec60"))])
  (sweeprolog
   . [(0 27 6 0 20260510 162905) ((emacs (27 1)) (compat (29 1 4 2)))
      "Embedded SWI-Prolog" tar

@@ -249,11 +249,11 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "0cf8b60f62876f3e75653a5fb30d5d5cdd74c586"))])
  (beframe
-  . [(1 5 0) ((emacs (28 1))) "Isolate buffers per frame" tar
+  . [(1 6 0) ((emacs (28 1))) "Isolate buffers per frame" tar
      ((:url . "https://github.com/protesilaos/beframe")
-      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-      (:authors ("Protesilaos Stavrou" . "info@protesilaos.com"))
-      (:commit . "68260beb5d60600a75d6e5b54eb1e5e9cf8c6eac"))])
+      (:maintainer "Protesilaos" . "info@protesilaos.com")
+      (:authors ("Protesilaos" . "info@protesilaos.com"))
+      (:commit . "6467a15db1144b8157cc73e21a491ceffa87e74a"))])
  (bicep-ts-mode
   . [(0 1 4) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
@@ -870,13 +870,13 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "bd8556eef10e57b175406c117f18e1953422c803"))])
  (dired-preview
-  . [(0 6 1) ((emacs (28 1)))
+  . [(0 6 2) ((emacs (28 1)))
      "Automatically preview file at point in Dired" tar
      ((:url . "https://github.com/protesilaos/dired-preview")
       (:keywords "files" "convenience")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "090eded80f801cb4f651490cdd9a78910ef63946"))])
+      (:commit . "1a28be95abaed0bf59f72f77f04c86916fc8b2ee"))])
  (dired-sidebar
   . [(2 0 1) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar
