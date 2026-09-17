@@ -81,6 +81,15 @@ gateway.
   • `M-x hermes-close' closes local connections and Hermes buffers for
     restart.
 
+  Hermes commands declare their buffer contexts for native `M-x'
+  completion.  To filter completion candidates by context, set
+  `read-extended-command-predicate' to
+  `command-completion-default-include-p'.  Hermes leaves this user
+  option unchanged; with `nil', all commands remain listed.  Dashboard,
+  chat, browser-opening and setup entry points stay available globally.
+  Context filtering does not change key bindings or prevent direct
+  invocation; commands retain their existing runtime checks.
+
   Point `hermes-dashboard-transport-url' at your running dashboard:
 
   ┌────

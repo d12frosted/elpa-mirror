@@ -1866,13 +1866,13 @@
       (:url . "https://elpa.gnu.org/packages/jgraph-mode.html")
       (:commit . "1bd355ecda036f23468d82b803146d3258a84977"))])
  (jinx
-  . [(2 10 0 20260916 3) ((emacs (29 1)) (compat (31)))
+  . [(2 10 0 20260916 5) ((emacs (29 1)) (compat (31)))
      "Enchanted Spell Checker" tar
      ((:url . "https://github.com/minad/jinx")
       (:keywords "convenience" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "95d3beea310c7a34e87f54dc46fff4b78d8baf39"))])
+      (:commit . "deacd6770efec5d9f98fc74df781fc0836124d79"))])
  (jit-spell
   . [(0 5 0 20251012 84654) ((emacs (27 1)) (compat (29 1)))
      "Just-in-time spell checking" tar
@@ -1916,13 +1916,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 3 0 20260916 13) ((emacs (29 1)))
+  . [(0 4 4 0 20260917 0) ((emacs (29 1)))
      "Described keymaps with popup help" tar
      ((:url . "https://git.thanosapollo.org/emacs-keymap-popup/")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "4f5aca220b4c97dcbd96ce7317305797895fc37c"))])
+      (:commit . "17d0305391021a2c217d531a436e29475c8563f2"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "5806e3f9401606d16962cffae68188c92deb1272"))])
  (org
-  . [(10 0 -1 0 20260915 551) ((emacs (28 2)))
+  . [(10 0 -1 0 20260917 552) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "9f8be52a3b58516b1b6d829fea4e0ee68db6b602"))])
+      (:commit . "c9455ea94c3962bab3ec98f56c0e75f066503693"))])
  (org-contacts
   . [(1 3 0 20260915 18) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar

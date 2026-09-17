@@ -2,10 +2,12 @@
  • Building package gnosis
 From https://git.thanosapollo.org/emacs-gnosis
 Updating /mnt/store/melpa/working/gnosis/
-Checking out 3bbd5489d9c3208a62852302bcac65e7085dfa9d
+Checking out b7a89ad0a94d200996c746540b52f6d3740b0aa5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnosis/
-  to /tmp/gnosis-tLYOX9/gnosis-20260916.735/
+  to /tmp/gnosis-zjKALB/gnosis-20260917.739/
+  ! lisp/gnosis-agent-eval-hermes.el -> gnosis-agent-eval-hermes.el
+  ! lisp/gnosis-agent-eval.el -> gnosis-agent-eval.el
   ! lisp/gnosis-agent.el -> gnosis-agent.el
   ! lisp/gnosis-anki.el -> gnosis-anki.el
   ! lisp/gnosis-answer.el -> gnosis-answer.el
@@ -33,34 +35,36 @@ Copying files (->) and directories (=>)
   ! lisp/gnosis-utils.el -> gnosis-utils.el
   ! lisp/gnosis-vc.el -> gnosis-vc.el
   ! lisp/gnosis.el -> gnosis.el
-Created gnosis-20260916.735.tar containing:
-  gnosis-20260916.735/
-  gnosis-20260916.735/gnosis-agent.el
-  gnosis-20260916.735/gnosis-anki.el
-  gnosis-20260916.735/gnosis-answer.el
-  gnosis-20260916.735/gnosis-assets.el
-  gnosis-20260916.735/gnosis-backup.el
-  gnosis-20260916.735/gnosis-cloze.el
-  gnosis-20260916.735/gnosis-dashboard.el
-  gnosis-20260916.735/gnosis-db.el
-  gnosis-20260916.735/gnosis-export-import.el
-  gnosis-20260916.735/gnosis-fsrs.el
-  gnosis-20260916.735/gnosis-image.el
-  gnosis-20260916.735/gnosis-journal.el
-  gnosis-20260916.735/gnosis-links.el
-  gnosis-20260916.735/gnosis-logical-day.el
-  gnosis-20260916.735/gnosis-model.el
-  gnosis-20260916.735/gnosis-monkeytype.el
-  gnosis-20260916.735/gnosis-nodes.el
-  gnosis-20260916.735/gnosis-org.el
-  gnosis-20260916.735/gnosis-pkg.el
-  gnosis-20260916.735/gnosis-review.el
-  gnosis-20260916.735/gnosis-scheduler.el
-  gnosis-20260916.735/gnosis-sqlite.el
-  gnosis-20260916.735/gnosis-study.el
-  gnosis-20260916.735/gnosis-tags.el
-  gnosis-20260916.735/gnosis-tl.el
-  gnosis-20260916.735/gnosis-utils.el
-  gnosis-20260916.735/gnosis-vc.el
-  gnosis-20260916.735/gnosis.el
-Built gnosis in 4.896s, finished at 2026-09-17T01:35:12+0000
+Created gnosis-20260917.739.tar containing:
+  gnosis-20260917.739/
+  gnosis-20260917.739/gnosis-agent-eval-hermes.el
+  gnosis-20260917.739/gnosis-agent-eval.el
+  gnosis-20260917.739/gnosis-agent.el
+  gnosis-20260917.739/gnosis-anki.el
+  gnosis-20260917.739/gnosis-answer.el
+  gnosis-20260917.739/gnosis-assets.el
+  gnosis-20260917.739/gnosis-backup.el
+  gnosis-20260917.739/gnosis-cloze.el
+  gnosis-20260917.739/gnosis-dashboard.el
+  gnosis-20260917.739/gnosis-db.el
+  gnosis-20260917.739/gnosis-export-import.el
+  gnosis-20260917.739/gnosis-fsrs.el
+  gnosis-20260917.739/gnosis-image.el
+  gnosis-20260917.739/gnosis-journal.el
+  gnosis-20260917.739/gnosis-links.el
+  gnosis-20260917.739/gnosis-logical-day.el
+  gnosis-20260917.739/gnosis-model.el
+  gnosis-20260917.739/gnosis-monkeytype.el
+  gnosis-20260917.739/gnosis-nodes.el
+  gnosis-20260917.739/gnosis-org.el
+  gnosis-20260917.739/gnosis-pkg.el
+  gnosis-20260917.739/gnosis-review.el
+  gnosis-20260917.739/gnosis-scheduler.el
+  gnosis-20260917.739/gnosis-sqlite.el
+  gnosis-20260917.739/gnosis-study.el
+  gnosis-20260917.739/gnosis-tags.el
+  gnosis-20260917.739/gnosis-tl.el
+  gnosis-20260917.739/gnosis-utils.el
+  gnosis-20260917.739/gnosis-vc.el
+  gnosis-20260917.739/gnosis.el
+Built gnosis in 6.594s, finished at 2026-09-17T11:00:05+0000
