@@ -870,13 +870,13 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "bd8556eef10e57b175406c117f18e1953422c803"))])
  (dired-preview
-  . [(0 6 2) ((emacs (28 1)))
-     "Automatically preview file at point in Dired" tar
+  . [(0 7 0) ((emacs (28 1))) "Automatically preview files in Dired"
+     tar
      ((:url . "https://github.com/protesilaos/dired-preview")
       (:keywords "files" "convenience")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "1a28be95abaed0bf59f72f77f04c86916fc8b2ee"))])
+      (:commit . "a015765e537622a662df9da45898c5d989b117dc"))])
  (dired-sidebar
   . [(2 0 1) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar

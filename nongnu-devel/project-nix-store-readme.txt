@@ -1,19 +1,20 @@
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            PROJECT-NIX-STORE - PROJECT BACKEND FOR NIX-LIKE
+              PROJECT-NIX-STORE - PROJECT BACKEND FOR NIX
                                  STORE
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This package is a `project.el' backend for Nix-like store.  Each store
+This package is a `project.el' backend for [Nix store].  Each store
 path, if it is a directory, is a project root.  See `project-root' for
 store path definition.
-
-At the time of writing, this package also supports Guix store.
 
 This package eases operations on store files with the help of project
 interfaces described in Info node `Projects'.  For example, while
 visiting a file under a store path, use `project-find-file' to quickly
 visit another file under the same store path.
+
+
+[Nix store] <https://nix.dev/manual/nix/2.35/store/index.html>
 
 
 1 Usage
@@ -43,7 +44,20 @@ visit another file under the same store path.
   this package.
 
 
-3 License
+3 Other Nix-Like Stores
+═══════════════════════
+
+  Besides Nix store, it is likely that this package also works for other
+  Nix-like stores.  For example, at the time of writing, this package
+  also supports Guix store.
+
+  The author only uses Nix store so he does not guarantee the support of
+  other Nix-like stores.
+
+  Contributions to support other Nix-like stores are welcome.
+
+
+4 License
 ═════════
 
   This package is [REUSE]-compliant.  To get the license and copyright

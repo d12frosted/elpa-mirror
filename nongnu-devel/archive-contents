@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20260910 5)
+  . [(0 9 9 6 0 20260918 8)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "ecc693d69e0f9737fa637abc88ec4ce0c3187b8e"))])
+      (:commit . "1230375331c911d721b54a54d6a30d1ae0283787"))])
  (graphql-mode
   . [(1 0 0 0 20260904 38) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1696,13 +1696,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-nix-store
-  . [(0 11 0 0 20260915 3) ((emacs (29 1)))
-     "Project backend for Nix-like store" tar
+  . [(0 12 0 0 20260918 0) ((emacs (29 1)))
+     "Project backend for Nix store" tar
      ((:url . "https://github.com/jian-lin/project-nix-store")
       (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "84f3ea7a10ccd1670f4a7c8b6fb460ddfc7c7e72"))])
+      (:commit . "917c29cada46c11b0503a26e660c1be15a6fa65f"))])
  (projectile
   . [(3 5 0 -4 0 20260916 60) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar

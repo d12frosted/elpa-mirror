@@ -125,13 +125,13 @@
       (:url . "https://elpa.gnu.org/packages/all.html")
       (:commit . "55aa1ac8853d81040aec0b3a2bd43200923146fd"))])
  (altcaps
-  . [(1 3 0 0 20260424 102117) ((emacs (27 1)))
+  . [(1 3 0 0 20260918 7) ((emacs (27 1)))
      "Apply alternating letter casing to convey sarcasm or mockery"
      tar
      ((:url . "https://github.com/protesilaos/altcaps")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "7f232db0e123cbf06c9b3fccbaef28c3f493de41"))])
+      (:commit . "54adb411c9e2d5767851bb8b70d34cc8cba0f77c"))])
  (ampc
   . [(0 2 0 20240220 181558) ((emacs (24 3)))
      "Asynchronous Music Player Controller" tar
@@ -926,13 +926,13 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "91d57e3a4c5104c66a3abc18e281ee55e8979176"))])
  (dired-preview
-  . [(0 6 2 0 20260918 6) ((emacs (28 1)))
-     "Automatically preview file at point in Dired" tar
+  . [(0 7 0 0 20260918 0) ((emacs (28 1)))
+     "Automatically preview files in Dired" tar
      ((:url . "https://github.com/protesilaos/dired-preview")
       (:keywords "files" "convenience")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "4525f41b28c72f3e061bbb65586ef907014617f7"))])
+      (:commit . "a015765e537622a662df9da45898c5d989b117dc"))])
  (dired-sidebar
   . [(2 0 1 0 20260806 3) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar
@@ -1101,7 +1101,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
-  . [(1 24 0 20260912 20)
+  . [(1 24 0 20260918 21)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1110,7 +1110,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "9447f629a0b99303ee1d7a92d9140a4fb1749de2"))])
+      (:commit . "012a5a02a03211ed79809336a75e2b28c9624b41"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260915 57) ((emacs (28 1)))
+  . [(5 3 0 0 20260918 58) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "7d739dba47397fcf16a50ac87e09b016c83560e3"))])
+      (:commit . "9427ba44964a292f03273e5be4d7a0f3c00b5029"))])
  (mpdired
   . [(4 0 20260915 0) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
