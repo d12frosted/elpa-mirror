@@ -486,7 +486,7 @@
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
       (:commit . "b99013b81712edbb94fdb57cce083d32ad06fbb8"))])
  (colorful-mode
-  . [(1 2 5 0 20260804 18)
+  . [(1 2 5 0 20260918 19)
      ((emacs (28 1)) (compat (31)) (cl-lib (1 0)))
      "Preview any color in your buffer in real time" tar
      ((:url . "https://github.com/DevelopmentCool2449/colorful-mode")
@@ -494,7 +494,7 @@
       (:maintainer ("Jen-Chieh" . "jcs090218@gmail.com")
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
       (:authors ("Elias G. Perez" . "eg642616@gmail.com"))
-      (:commit . "6712e9c969bfa8fc8538a0c1bd57a8ef9f974780"))])
+      (:commit . "31d3974f7f2c7fddac24c954321f200845c015e8"))])
  (comint-mime
   . [(0 7 0 20241116 123039)
      ((emacs (28 1)) (compat (29 1)) (mathjax (0 1)))
@@ -1378,14 +1378,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 7 0 20260912 3)
+  . [(1 4 7 0 20260919 6)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
-      (:url . "https://elpa.gnu.org/nongnu/flymake.html")
-      (:commit . "9447f629a0b99303ee1d7a92d9140a4fb1749de2"))])
+      (:url . "https://elpa.gnu.org/packages/flymake.html")
+      (:commit . "32ba9a422d5254776d18751bc9673380447f6334"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1916,13 +1916,13 @@
       (:url . "https://elpa.gnu.org/packages/jumpc.html")
       (:commit . "ab83a2a5416f83405361e25df8cbd8aab35cb8b3"))])
  (keymap-popup
-  . [(0 4 4 0 20260917 1) ((emacs (29 1)))
+  . [(0 4 4 0 20260919 2) ((emacs (29 1)))
      "Described keymaps with popup help" tar
      ((:url . "https://git.thanosapollo.org/emacs-keymap-popup/")
       (:keywords "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "e907cfa04bed328398393d912ac5e1dec4fbff20"))])
+      (:commit . "c09bbc975e636d34c8cbfc0540ebddae7b19c45b"))])
  (kind-icon
   . [(0 2 2 0 20250311 112658) ((emacs (27 1)) (svg-lib (0 2 8)))
      "Completion kind icons" tar
@@ -3782,14 +3782,14 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "0f20f8b59011471523b650cf1a3478a04362083d"))])
  (use-package
-   . [(2 4 6 0 20260913 43) ((emacs (24 3)) (bind-key (2 4)))
+   . [(2 4 6 0 20260919 45) ((emacs (24 3)) (bind-key (2 4)))
       "A configuration macro for simplifying your .emacs" tar
       ((:url . "https://github.com/jwiegley/use-package")
        (:keywords "dotemacs" "startup" "speed" "config" "package"
 		  "extensions")
        (:maintainer "John Wiegley" . "johnw@newartisans.com")
        (:authors ("John Wiegley" . "johnw@newartisans.com"))
-       (:commit . "7a545438c618aced355574dc9a41c18f29bc7906"))])
+       (:commit . "32ba9a422d5254776d18751bc9673380447f6334"))])
  (validate
   . [(1 0 4 0 20180215 204244)
      ((emacs (24 1)) (cl-lib (0 5)) (seq (2 16)))

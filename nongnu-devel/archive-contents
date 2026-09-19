@@ -251,14 +251,14 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "2bce67a68c270157d940ac9374ab393804c7e00d"))])
  (codex-ide
-  . [(0 1 3 0 20260904 7)
+  . [(0 1 4 0 20260919 1)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
       (eat (0 9 4)))
      "Run Codex CLI in a terminal" tar
      ((:url . "https://git.thanosapollo.org/emacs-codex-ide")
       (:keywords "ai" "codex" "tools" "terminal")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
-      (:commit . "0e89a3d97cb160e8ed1e9d5dd4d043865cb50e62"))])
+      (:commit . "7c871249860651a4a646f3ee7915f1ef81c3e0b4"))])
  (coffee-mode
   . [(0 6 3 0 20230908 103000) ((emacs (24 3)))
      "Major mode for CoffeeScript code" tar
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "4f53c80b636a93bd09bbd45eb150f385834cb494"))])
  (hermes
-  . [(0 7 1 0 20260917 2)
+  . [(0 7 1 0 20260919 5)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "1d37d8da62e5d3e7f4a7318d0fc4ad9cdc0e4832"))])
+      (:commit . "986db828ac1523adb412aa2e4f2babf608d1f479"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1193,14 +1193,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 14 0 0 20260907 4)
+  . [(0 14 0 0 20260919 5)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "8babf48a6d28b349b353197fa4029b90099578b6"))])
+      (:commit . "fb2e7b5bfd839f7764d5031f4896c6a0ee7208e0"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
