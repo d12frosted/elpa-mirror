@@ -2,10 +2,10 @@
  • Building package ghostel
 From https://github.com/dakra/ghostel
 Updating /mnt/store/melpa/working/ghostel/
-Checking out 67f43b3e83c15eface911389a291b08fb8311475
+Checking out 6be56484c5375ea08a4888c949d118327ff3d1c4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghostel/
-  to /tmp/ghostel-uNayjy/ghostel-20260918.915/
+  to /tmp/ghostel-iMwUyk/ghostel-20260918.2046/
   ! lisp/ghostel-bookmark.el -> ghostel-bookmark.el
   ! lisp/ghostel-comint.el -> ghostel-comint.el
   ! lisp/ghostel-compile.el -> ghostel-compile.el
@@ -27,88 +27,88 @@ Copying files (->) and directories (=>)
     build.zig -> build.zig
     build.zig.zon -> build.zig.zon
     symbols.map -> symbols.map
-Created ghostel-20260918.915.tar containing:
-  ghostel-20260918.915/
-  ghostel-20260918.915/build.zig
-  ghostel-20260918.915/build.zig.zon
-  ghostel-20260918.915/etc/
-  ghostel-20260918.915/etc/shell/
-  ghostel-20260918.915/etc/shell/bootstrap/
-  ghostel-20260918.915/etc/shell/bootstrap/bash/
-  ghostel-20260918.915/etc/shell/bootstrap/bash/inject.bash
-  ghostel-20260918.915/etc/shell/bootstrap/fish/
-  ghostel-20260918.915/etc/shell/bootstrap/fish/vendor_conf.d/
-  ghostel-20260918.915/etc/shell/bootstrap/fish/vendor_conf.d/integration.fish
-  ghostel-20260918.915/etc/shell/bootstrap/nushell/
-  ghostel-20260918.915/etc/shell/bootstrap/nushell/vendor/
-  ghostel-20260918.915/etc/shell/bootstrap/nushell/vendor/autoload/
-  ghostel-20260918.915/etc/shell/bootstrap/nushell/vendor/autoload/integration.nu
-  ghostel-20260918.915/etc/shell/bootstrap/zsh/
-  ghostel-20260918.915/etc/shell/bootstrap/zsh/.zshenv
-  ghostel-20260918.915/etc/shell/ghostel.bash
-  ghostel-20260918.915/etc/shell/ghostel.fish
-  ghostel-20260918.915/etc/shell/ghostel.nu
-  ghostel-20260918.915/etc/shell/ghostel.zsh
-  ghostel-20260918.915/etc/terminfo/
-  ghostel-20260918.915/etc/terminfo/67/
-  ghostel-20260918.915/etc/terminfo/67/ghostty
-  ghostel-20260918.915/etc/terminfo/78/
-  ghostel-20260918.915/etc/terminfo/78/xterm-ghostty
-  ghostel-20260918.915/etc/terminfo/g/
-  ghostel-20260918.915/etc/terminfo/g/ghostty
-  ghostel-20260918.915/etc/terminfo/x/
-  ghostel-20260918.915/etc/terminfo/x/xterm-ghostty
-  ghostel-20260918.915/etc/terminfo/xterm-ghostty.terminfo
-  ghostel-20260918.915/ghostel-bookmark.el
-  ghostel-20260918.915/ghostel-comint.el
-  ghostel-20260918.915/ghostel-compile.el
-  ghostel-20260918.915/ghostel-debug.el
-  ghostel-20260918.915/ghostel-desktop.el
-  ghostel-20260918.915/ghostel-eshell.el
-  ghostel-20260918.915/ghostel-faces.el
-  ghostel-20260918.915/ghostel-ime.el
-  ghostel-20260918.915/ghostel-kitty.el
-  ghostel-20260918.915/ghostel-line-mode.el
-  ghostel-20260918.915/ghostel-links.el
-  ghostel-20260918.915/ghostel-module-install.el
-  ghostel-20260918.915/ghostel-org.el
-  ghostel-20260918.915/ghostel-pkg.el
-  ghostel-20260918.915/ghostel-shell.el
-  ghostel-20260918.915/ghostel.el
-  ghostel-20260918.915/src/
-  ghostel-20260918.915/src/AGENTS.md
-  ghostel-20260918.915/src/CLAUDE.md
-  ghostel-20260918.915/src/ConPtyProcess.zig
-  ghostel-20260918.915/src/GhostelTerm.zig
-  ghostel-20260918.915/src/GlyphMetricsCache.zig
-  ghostel-20260918.915/src/NativeProcess.zig
-  ghostel-20260918.915/src/PosixPtyProcess.zig
-  ghostel-20260918.915/src/RecursiveMutex.zig
-  ghostel-20260918.915/src/Renderer.zig
-  ghostel-20260918.915/src/backend_types.zig
-  ghostel-20260918.915/src/comint_filter.zig
-  ghostel-20260918.915/src/emacs.h
-  ghostel-20260918.915/src/emacs.zig
-  ghostel-20260918.915/src/fixed_array_list.zig
-  ghostel-20260918.915/src/handler.zig
-  ghostel-20260918.915/src/input.zig
-  ghostel-20260918.915/src/kitty_graphics.zig
-  ghostel-20260918.915/src/module.zig
-  ghostel-20260918.915/src/platform.zig
-  ghostel-20260918.915/src/png.zig
-  ghostel-20260918.915/src/posix.h
-  ghostel-20260918.915/src/ppm.zig
-  ghostel-20260918.915/src/pty_utils.zig
-  ghostel-20260918.915/src/saved_markers.zig
-  ghostel-20260918.915/src/stb_image.c
-  ghostel-20260918.915/src/style_face.zig
-  ghostel-20260918.915/src/tests.zig
-  ghostel-20260918.915/src/utils.zig
-  ghostel-20260918.915/src/version.zig
-  ghostel-20260918.915/src/win32.h
-  ghostel-20260918.915/symbols.map
-  ghostel-20260918.915/vendor/
-  ghostel-20260918.915/vendor/emacs-module.h
-  ghostel-20260918.915/vendor/stb/
-  ghostel-20260918.915/vendor/stb/stb_image.h
-Built ghostel in 5.209s, finished at 2026-09-18T20:57:29+0000
+Created ghostel-20260918.2046.tar containing:
+  ghostel-20260918.2046/
+  ghostel-20260918.2046/build.zig
+  ghostel-20260918.2046/build.zig.zon
+  ghostel-20260918.2046/etc/
+  ghostel-20260918.2046/etc/shell/
+  ghostel-20260918.2046/etc/shell/bootstrap/
+  ghostel-20260918.2046/etc/shell/bootstrap/bash/
+  ghostel-20260918.2046/etc/shell/bootstrap/bash/inject.bash
+  ghostel-20260918.2046/etc/shell/bootstrap/fish/
+  ghostel-20260918.2046/etc/shell/bootstrap/fish/vendor_conf.d/
+  ghostel-20260918.2046/etc/shell/bootstrap/fish/vendor_conf.d/integration.fish
+  ghostel-20260918.2046/etc/shell/bootstrap/nushell/
+  ghostel-20260918.2046/etc/shell/bootstrap/nushell/vendor/
+  ghostel-20260918.2046/etc/shell/bootstrap/nushell/vendor/autoload/
+  ghostel-20260918.2046/etc/shell/bootstrap/nushell/vendor/autoload/integration.nu
+  ghostel-20260918.2046/etc/shell/bootstrap/zsh/
+  ghostel-20260918.2046/etc/shell/bootstrap/zsh/.zshenv
+  ghostel-20260918.2046/etc/shell/ghostel.bash
+  ghostel-20260918.2046/etc/shell/ghostel.fish
+  ghostel-20260918.2046/etc/shell/ghostel.nu
+  ghostel-20260918.2046/etc/shell/ghostel.zsh
+  ghostel-20260918.2046/etc/terminfo/
+  ghostel-20260918.2046/etc/terminfo/67/
+  ghostel-20260918.2046/etc/terminfo/67/ghostty
+  ghostel-20260918.2046/etc/terminfo/78/
+  ghostel-20260918.2046/etc/terminfo/78/xterm-ghostty
+  ghostel-20260918.2046/etc/terminfo/g/
+  ghostel-20260918.2046/etc/terminfo/g/ghostty
+  ghostel-20260918.2046/etc/terminfo/x/
+  ghostel-20260918.2046/etc/terminfo/x/xterm-ghostty
+  ghostel-20260918.2046/etc/terminfo/xterm-ghostty.terminfo
+  ghostel-20260918.2046/ghostel-bookmark.el
+  ghostel-20260918.2046/ghostel-comint.el
+  ghostel-20260918.2046/ghostel-compile.el
+  ghostel-20260918.2046/ghostel-debug.el
+  ghostel-20260918.2046/ghostel-desktop.el
+  ghostel-20260918.2046/ghostel-eshell.el
+  ghostel-20260918.2046/ghostel-faces.el
+  ghostel-20260918.2046/ghostel-ime.el
+  ghostel-20260918.2046/ghostel-kitty.el
+  ghostel-20260918.2046/ghostel-line-mode.el
+  ghostel-20260918.2046/ghostel-links.el
+  ghostel-20260918.2046/ghostel-module-install.el
+  ghostel-20260918.2046/ghostel-org.el
+  ghostel-20260918.2046/ghostel-pkg.el
+  ghostel-20260918.2046/ghostel-shell.el
+  ghostel-20260918.2046/ghostel.el
+  ghostel-20260918.2046/src/
+  ghostel-20260918.2046/src/AGENTS.md
+  ghostel-20260918.2046/src/CLAUDE.md
+  ghostel-20260918.2046/src/ConPtyProcess.zig
+  ghostel-20260918.2046/src/GhostelTerm.zig
+  ghostel-20260918.2046/src/GlyphMetricsCache.zig
+  ghostel-20260918.2046/src/NativeProcess.zig
+  ghostel-20260918.2046/src/PosixPtyProcess.zig
+  ghostel-20260918.2046/src/RecursiveMutex.zig
+  ghostel-20260918.2046/src/Renderer.zig
+  ghostel-20260918.2046/src/backend_types.zig
+  ghostel-20260918.2046/src/comint_filter.zig
+  ghostel-20260918.2046/src/emacs.h
+  ghostel-20260918.2046/src/emacs.zig
+  ghostel-20260918.2046/src/fixed_array_list.zig
+  ghostel-20260918.2046/src/handler.zig
+  ghostel-20260918.2046/src/input.zig
+  ghostel-20260918.2046/src/kitty_graphics.zig
+  ghostel-20260918.2046/src/module.zig
+  ghostel-20260918.2046/src/platform.zig
+  ghostel-20260918.2046/src/png.zig
+  ghostel-20260918.2046/src/posix.h
+  ghostel-20260918.2046/src/ppm.zig
+  ghostel-20260918.2046/src/pty_utils.zig
+  ghostel-20260918.2046/src/saved_markers.zig
+  ghostel-20260918.2046/src/stb_image.c
+  ghostel-20260918.2046/src/style_face.zig
+  ghostel-20260918.2046/src/tests.zig
+  ghostel-20260918.2046/src/utils.zig
+  ghostel-20260918.2046/src/version.zig
+  ghostel-20260918.2046/src/win32.h
+  ghostel-20260918.2046/symbols.map
+  ghostel-20260918.2046/vendor/
+  ghostel-20260918.2046/vendor/emacs-module.h
+  ghostel-20260918.2046/vendor/stb/
+  ghostel-20260918.2046/vendor/stb/stb_image.h
+Built ghostel in 5.089s, finished at 2026-09-19T01:41:03+0000
