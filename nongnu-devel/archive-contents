@@ -16,14 +16,14 @@
       (:authors ("Ozan Sener" . "ozan@ozansener.com"))
       (:commit . "89b1d778a1f8b385775c122f2bd1c62f0fbf931a"))])
  (age
-  . [(0 1 9 0 20250806 132339) ((emacs (28 1)))
+  . [(0 1 9 0 20260919 2) ((emacs (28 1)))
      "The Age Encryption Library" tar
      ((:url . "https://github.com/anticomputer/age.el")
       (:keywords "data")
       (:maintainer "Bas Alberts" . "bas@anti.computer")
       (:authors ("Daiki Ueno" . "ueno@unixuser.org")
 		("Bas Alberts" . "bas@anti.computer"))
-      (:commit . "e99165ef5274bc4512b8d77ba2ac208c59b5d456"))])
+      (:commit . "afe3bf43fab7ff988419762f851129048c396ccc"))])
  (aidermacs
   . [(1 13 0 20260908 5)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
@@ -489,7 +489,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 2 0 0 20260913 9) ((emacs (29 1)) (compat (31)))
+  . [(4 2 0 0 20260919 10) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -498,7 +498,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "df5965d71585acabd02888cb971273ffabe7e36f"))])
+      (:commit . "b39ca98c0ab05170cba943d6e31c5c2a3e285133"))])
  (elfeed-web
   . [(4 1 0 0 20260821 0)
      ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20260918 8)
+  . [(0 9 9 6 0 20260919 9)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "1230375331c911d721b54a54d6a30d1ae0283787"))])
+      (:commit . "44deae37928175764bbe8314dbbc79bdec28ab4c"))])
  (graphql-mode
   . [(1 0 0 0 20260904 38) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "4f53c80b636a93bd09bbd45eb150f385834cb494"))])
  (hermes
-  . [(0 7 1 0 20260919 5)
+  . [(0 7 1 0 20260919 7)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "986db828ac1523adb412aa2e4f2babf608d1f479"))])
+      (:commit . "28c5712c5169be341562fa0232fe8f53473be5f4"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20260917 6)
+  . [(4 7 1 0 20260919 7)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,7 +1343,7 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "532adafa244b013bd10604ff885bd2806c9eec6e"))])
+      (:commit . "2ac81c731e05963e3db80ea547570b1b841a5aca"))])
  (magit-section
   . [(4 7 1 0 20260911 5)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
@@ -2242,7 +2242,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 4 0 20260901 0)
+  . [(3 5 4 0 20260919 1)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2251,7 +2251,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "5021ef6885381cf5b2852f7a3f67ca8c4be1dca2"))])
+      (:commit . "53115f978576e043e050fd04d0cb7517296727e9"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar

@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 2 0 0 20260915 0) ((emacs (28 1)))
+  . [(14 2 0 0 20260919 1) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "cc5a4776967eeaac3bba75b3be4365695d7dc97d"))])
+      (:commit . "b3a7b226b3b9107319326e1a9792fdefdc8d20fa"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 12 0 0 20260918 59)
+  . [(0 12 0 0 20260919 62)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 2 0)))
      "Knowledge System" tar
      ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "78f5c62be6b6d1a9fa34f42b6a2f121c58471c7b"))])
+      (:commit . "31a69f6d8c834a901e5d919baab4e4e981af6d86"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "5806e3f9401606d16962cffae68188c92deb1272"))])
  (org
-  . [(10 0 -1 0 20260917 552) ((emacs (28 2)))
+  . [(10 0 -1 0 20260919 562) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "c9455ea94c3962bab3ec98f56c0e75f066503693"))])
+      (:commit . "63022c5a0cb61cd7642625618c0f310d04916d3d"))])
  (org-contacts
   . [(1 3 0 20260915 18) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -3654,7 +3654,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 8 0 20260909 1)
+  . [(0 13 8 0 20260919 5)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3664,7 +3664,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "03c8ccc6aab24021787aada2be12d64cb1f436e8"))])
+      (:commit . "a3e26414f2516f6443182e13e1d98882e1b209d6"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
@@ -3717,13 +3717,13 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
  (typewriter
-  . [(1 1 0 0 20260915 2) ((emacs (30 1)))
+  . [(1 1 0 0 20260919 3) ((emacs (30 1)))
      "Turn Emacs into a text adder" tar
      ((:url . "https://github.com/enricoflor/typewriter.el")
       (:keywords "wp")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "88619992c562293ee23c891330e1f693715f0350"))])
+      (:commit . "5b6ba16d1b0e2c9b2bbeb034a6c821019f254983"))])
  (ulisp-repl
   . [(1 0 3 0 20230604 111559) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")
@@ -3782,14 +3782,14 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "0f20f8b59011471523b650cf1a3478a04362083d"))])
  (use-package
-   . [(2 4 6 0 20260919 45) ((emacs (24 3)) (bind-key (2 4)))
+   . [(2 4 6 0 20260919 46) ((emacs (24 3)) (bind-key (2 4)))
       "A configuration macro for simplifying your .emacs" tar
       ((:url . "https://github.com/jwiegley/use-package")
        (:keywords "dotemacs" "startup" "speed" "config" "package"
 		  "extensions")
        (:maintainer "John Wiegley" . "johnw@newartisans.com")
        (:authors ("John Wiegley" . "johnw@newartisans.com"))
-       (:commit . "32ba9a422d5254776d18751bc9673380447f6334"))])
+       (:commit . "21370807746bf9e60385b810859fd56a18862bd2"))])
  (validate
   . [(1 0 4 0 20180215 204244)
      ((emacs (24 1)) (cl-lib (0 5)) (seq (2 16)))

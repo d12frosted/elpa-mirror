@@ -53,11 +53,12 @@ layout of text in the window, such as the fairly popular [olivetti], or
 any configuration that (for instance) hides or alters element of the
 emacs interface.
 
-The package is on [GNU Elpa], and you can install it in the usual ways,
+The package is on [GNU ELPA], and you can install it in the usual ways,
 for instance:
 
 ┌────
-│ (use-package typewriter)
+│ (use-package typewriter
+│   :ensure t)
 └────
 
 
@@ -66,4 +67,4 @@ for instance:
 
 [olivetti] <https://github.com/rnkn/olivetti>
 
-[GNU Elpa] <https://elpa.gnu.org/packages/typewriter.html>
+[GNU ELPA] <https://elpa.gnu.org/packages/typewriter.html>
