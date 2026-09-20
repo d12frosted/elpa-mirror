@@ -68,8 +68,8 @@
   the installed manual.  See [Installation and Setup] for directories
   and configuration.  Existing users: back up the old database, Org
   files and media *before the first database open* with upgraded code;
-  see the manual's [Database Upgrades and Rollback] section for 0.12.0
-  (schema 10).
+  see the manual's [Database Upgrades and Rollback] section for 0.13.0
+  (schema 11).
 
 
 [Installation and Setup] <file:docs/gnosis.org::#installation>

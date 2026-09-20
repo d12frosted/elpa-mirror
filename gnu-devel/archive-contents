@@ -1161,7 +1161,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "583951606e4e19fd53acd8c5691210b9acb524d7"))])
  (ellama
-  . [(1 32 1 0 20260812 1)
+  . [(1 32 2 0 20260920 1)
      ((emacs (28 1)) (llm (0 31 1)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1169,7 +1169,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "a86e9154ae88907d3de2710195810cda986ef0d8"))])
+      (:commit . "b98cb4a904b70def4f21050d5d202005ee00b3b4"))])
  (emacs-gc-stats
   . [(1 4 2 0 20231206 152254) ((emacs (25 1)))
      "Collect Emacs GC statistics" tar
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 12 0 0 20260919 62)
-     ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 2 0)))
+  . [(0 13 0 0 20260920 2)
+     ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 4)))
      "Knowledge System" tar
      ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "31a69f6d8c834a901e5d919baab4e4e981af6d86"))])
+      (:commit . "1eb319966ccfb7b5d1e5f50f3738d5962dc21441"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar
@@ -3298,13 +3298,13 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "04186129f2dccf48e288639b78adeb9c0e94be54"))])
  (spacious-padding
-  . [(0 8 0 0 20260724 4) ((emacs (28 1)))
+  . [(0 9 0 0 20260920 0) ((emacs (28 1)))
      "Increase the padding/spacing of frames and windows" tar
      ((:url . "https://github.com/protesilaos/spacious-padding")
       (:keywords "convenience" "focus" "writing" "presentation")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "03d475863f65fafe502141a06e919bc057554991"))])
+      (:commit . "b390a5b95a6398ff83f8eeb623b29147f42582a7"))])
  (speedrect
   . [(0 7 0 20241220 133155) ((emacs (29 1)) (compat (30)))
      "Fast modal rectangle commands" tar

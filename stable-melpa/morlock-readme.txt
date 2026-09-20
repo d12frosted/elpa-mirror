@@ -11,5 +11,5 @@ expressions.
 
 When using Emacs 32, this package can be replaced with just:
 
-  (dolist (sym '(not null xor with-no-warnings))
+  (dolist (symbol '(not null xor))
     (put symbol 'font-lock-keyword t))

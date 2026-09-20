@@ -1272,13 +1272,13 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "50cac3f726abd4e7872b8fa36ede72550ce66a64"))])
  (loopy
-  . [(0 16 1 0 20260920 13)
+  . [(0 16 1 0 20260920 14)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://codeberg.org/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "8dbce3056d4bb12a325704229dab072f0c934be3"))])
+      (:commit . "c50c15d87709ece2bee7f45d6a6d906bb8524aac"))])
  (loopy-dash
   . [(0 13 0 0 20260718 11)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))

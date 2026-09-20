@@ -54,15 +54,6 @@
   image-region and image-occlusion questions, and optional 3D model
   questions.
 
-  For agent-assisted creation or repair, read the [thema authoring
-  skill] before drafting.  It covers source-backed questions,
-  descriptive links, cross-topic reuse, and verified native saves.  The
-  skill is agent-neutral; load it explicitly or install its directory
-  using your agent's skill mechanism.
-
-
-[thema authoring skill] <file:skills/gnosis-themata/SKILL.md>
-
 
 1.4 Installation
 ────────────────
@@ -77,10 +68,14 @@
   the installed manual.  See [Installation and Setup] for directories
   and configuration.  Existing users: back up the old database, Org
   files and media *before the first database open* with upgraded code;
-  see the manual's Database Version 9 section.
+  see the manual's [Database Upgrades and Rollback] section for 0.13.0
+  (schema 11).
 
 
 [Installation and Setup] <file:docs/gnosis.org::#installation>
+
+[Database Upgrades and Rollback]
+<file:docs/gnosis.org::#database-upgrades>
 
 
 1.5 Optional 3D support
