@@ -527,13 +527,13 @@
       (:authors ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
       (:commit . "d799c467a1f35934f96d33960d638ddf796f01ba"))])
  (emacsql
-  . [(4 4 1 0 20260601 0) ((emacs (28 1)))
+  . [(4 4 1 0 20260920 3) ((emacs (28 1)))
      "High-level SQL database front-end" tar
      ((:url . "https://github.com/magit/emacsql")
       (:maintainer "Jonas Bernoulli"
 		   . "emacs.emacsql@jonas.bernoulli.dev")
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "d811bbefcb5e27841af55cae53aa939ba720de77"))])
+      (:commit . "5430450af72ebe4917ff87a6bf3ac8f613f6dced"))])
  (engine-mode
   . [(2 2 4 0 20230911 95607) ((emacs (24 4)))
      "Define and query search engines" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20260919 8)
+  . [(4 7 1 0 20260920 9)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,7 +1343,7 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "fe66e74a9cf50fe224d043039df85de20e3913b1"))])
+      (:commit . "5059906452ce0b05b23dd7c678a098665b395f6e"))])
  (magit-section
   . [(4 7 1 0 20260911 5)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
