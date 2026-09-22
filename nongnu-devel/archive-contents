@@ -1037,7 +1037,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20260915 57) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260918 61) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1045,16 +1045,16 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "4f53c80b636a93bd09bbd45eb150f385834cb494"))])
+      (:commit . "228879977563003631edc67926e6a241f8523d73"))])
  (helm-core
-  . [(4 0 7 0 20260915 57) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260918 61) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "4f53c80b636a93bd09bbd45eb150f385834cb494"))])
+      (:commit . "228879977563003631edc67926e6a241f8523d73"))])
  (hermes
-  . [(0 7 1 0 20260919 7)
+  . [(0 7 1 0 20260922 20)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "28c5712c5169be341562fa0232fe8f53473be5f4"))])
+      (:commit . "0b26b31783ca4fc77c988e45d66255cdfc22c229"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20260920 9)
+  . [(4 7 1 0 20260922 12)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,9 +1343,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "5059906452ce0b05b23dd7c678a098665b395f6e"))])
+      (:commit . "cd9117e3a8eb9b50814474d5addfd2ca92af5605"))])
  (magit-section
-  . [(4 7 1 0 20260920 9)
+  . [(4 7 1 0 20260922 12)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1354,7 +1354,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "5059906452ce0b05b23dd7c678a098665b395f6e"))])
+      (:commit . "cd9117e3a8eb9b50814474d5addfd2ca92af5605"))])
  (markdown-mode
   . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar

@@ -6,7 +6,7 @@ in Emacs where the slides are separated using the `page-delimiter`, by
 default the form feed character (`^L`).
 
 - Package name (GNU ELPA): `ffs`
-- Manual: <https://kelar.org/~bandali/gnu/emacs/ffs.html>
-- Change log: <https://kelar.org/~bandali/gnu/emacs/ffs-changelog.html>
+- Manual: <https://www.kelar.org/~bandali/ffs/ffs.html>
+- NEWS: <https://www.kelar.org/~bandali/ffs/NEWS>
 - Git repository: <https://git.kelar.org/~bandali/ffs>
 - Backronyms: fabulous foolproof slides - for freedom's sake - ffs flips slides

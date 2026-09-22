@@ -556,11 +556,11 @@
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "90880f81419577e1d3f68424d2a3adf31e6d663e"))])
  (cond-star
-  . [(1 0 0 20260523 114724) ((emacs (24 3)))
+  . [(1 0 0 20260922 24) ((emacs (24 3)))
      "Extended form of `cond' construct" tar
      ((:maintainer "Richard Stallman" . "rms@gnu.org")
       (:url . "https://elpa.gnu.org/packages/cond-star.html")
-      (:commit . "a96fc7d5465f97908a9a6d5d2cf3be8cbf6b0ebe"))])
+      (:commit . "f434ce3c4c2df579adab6fcf2cc9e281346722d2"))])
  (constants
   . [(2 11 1 0 20240827 95043) ((emacs (24 1)))
      "Enter definition of constants into source code" tar
@@ -1185,11 +1185,11 @@
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
       (:commit . "a2c2c167837cef08a1b8f86f5eb9864f93699300"))])
  (emacs-lisp-intro-nl
-  . [(0 0 20260909 47) nil "ELisp intro manual in NL" tar
+  . [(0 0 20260922 48) nil "ELisp intro manual in NL" tar
      ((:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
-      (:url . "https://elpa.gnu.org/nongnu/emacs-lisp-intro-nl.html")
-      (:commit . "c3dcc19374e442bc86ceb70a77b70763b2b17821"))])
+      (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-nl.html")
+      (:commit . "28dbb44fc1abbc3bd43a821a4888bd4f70df1b54"))])
  (embark
   . [(1 2 0 20260812 23) ((emacs (29 1)) (compat (31)))
      "Conveniently act on minibuffer completions" tar
@@ -1339,14 +1339,14 @@
       (:authors ("Lawrence Mitchell" . "wence@gmx.li"))
       (:commit . "4e192f6e03bc96f996923b307248b7d5b1d398fa"))])
  (ffs
-  . [(0 2 3 -4 0 20260919 2) ((emacs (27 1)))
+  . [(0 2 3 0 20260922 0) ((emacs (27 1)))
      "Form feed-separated plain text presentations" tar
      ((:url . "https://git.kelar.org/~bandali/ffs")
       (:keywords "convenience" "focus" "narrowing" "outlines"
 		 "presentation" "text")
       (:maintainer "Amin Bandali" . "bandali@gnu.org")
       (:authors ("Amin Bandali" . "bandali@gnu.org"))
-      (:commit . "83a8d053df20f2584509b5b712996eb78ba4a796"))])
+      (:commit . "e7d9c6f673b4e65e2bdc8036d8c90a7b7195ddca"))])
  (filechooser
   . [(0 3 0 0 20260723 0) ((emacs (28 1)) (compat (29 1)))
      "An xdg-desktop-portal filechooser" tar
