@@ -719,7 +719,7 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "91f28ee199a499b8d6e1b9c7a0f1c15f8a382198"))])
  (fj
-  . [(0 46 0 20260915 32)
+  . [(0 47 0 20260921 34)
      ((emacs (29 1)) (compat (31)) (fedi (0 2)) (tp (0 8))
       (transient (0 10 0)) (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -727,7 +727,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "d13fd40e2a546ec654a24ad450d052f9eebe8904"))])
+      (:commit . "73ea6263be5c0959e94688ca24a89265b4a172ad"))])
  (flamegraph
   . [(0 2 0 20260609 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -1345,7 +1345,7 @@
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
       (:commit . "5059906452ce0b05b23dd7c678a098665b395f6e"))])
  (magit-section
-  . [(4 7 1 0 20260911 5)
+  . [(4 7 1 0 20260920 9)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1354,7 +1354,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "83ba66c8ab6fcdbd809077ae4db1f7e2ed832655"))])
+      (:commit . "5059906452ce0b05b23dd7c678a098665b395f6e"))])
  (markdown-mode
   . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar

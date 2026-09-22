@@ -926,13 +926,13 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "91d57e3a4c5104c66a3abc18e281ee55e8979176"))])
  (dired-preview
-  . [(0 7 0 0 20260918 0) ((emacs (28 1)))
+  . [(0 7 0 0 20260921 2) ((emacs (28 1)))
      "Automatically preview files in Dired" tar
      ((:url . "https://github.com/protesilaos/dired-preview")
       (:keywords "files" "convenience")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "a015765e537622a662df9da45898c5d989b117dc"))])
+      (:commit . "0d6de0301df38ff6b44d7641e93142f180b5ad3a"))])
  (dired-sidebar
   . [(2 0 1 0 20260806 3) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar
@@ -2171,7 +2171,7 @@
       (:authors ("Ian Martins" . "ianxm@jhu.edu"))
       (:commit . "da128406fca3eeb66358d479082cd78f2fdeabb4"))])
  (matlab-mode
-  . [(8 2 1 0 20260915 0) ((emacs (27 2)))
+  . [(8 2 2 0 20260921 0) ((emacs (27 2)))
      "Major mode for MATLAB(R) dot-m files" tar
      ((:url . "https://github.com/mathworks/Emacs-MATLAB-Mode")
       (:keywords "matlab(r)")
@@ -2180,7 +2180,7 @@
 		   ("John Ciolfi" . "john.ciolfi.32@gmail.com"))
       (:authors ("Matt Wette" . "mwette@alumni.caltech.edu")
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
-      (:commit . "83d0aca7f6c817c0a418c773a59bd08e8f5dca5c"))])
+      (:commit . "8c647ab2e395da6216eab46afe112e7af3317fc5"))])
  (mct
   . [(1 1 1 0 20260903 2) ((emacs (29 4)))
      "Minibuffer Confines Transcended" tar
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20260918 58) ((emacs (28 1)))
+  . [(5 3 0 0 20260921 59) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "9427ba44964a292f03273e5be4d7a0f3c00b5029"))])
+      (:commit . "4fcc8d00540a81936a213d608a69c4c85df8f970"))])
  (mpdired
   . [(4 0 20260915 0) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
