@@ -20,6 +20,13 @@ A post is represented as a plist:
    :date         "2026-01-15"
    :tags         ("emacs" "lisp")
    :slug         "my-post"
+   :description  "Summary used for the link preview."
+   :image        "./images/screenshot.png"
    :source       "/path/to/file.org"
    :output       "/path/to/output/my-post.html"
    :assets       ("/path/to/images/screenshot.png"))
+
+:description comes from #+DESCRIPTION:, falling back to the first
+paragraph of the post.  :image comes from #+IMAGE:, falling back to the
+first image the post links to.  Both feed the Open Graph tags that
+social sites and chat clients read when a link is shared.
