@@ -1193,14 +1193,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 14 0 0 20260919 5)
+  . [(0 14 0 0 20260923 7)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "fb2e7b5bfd839f7764d5031f4896c6a0ee7208e0"))])
+      (:commit . "c91fbbbc07aaaa5f810cd7fba8e39cc02d7559af"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -2242,7 +2242,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 4 0 20260919 1)
+  . [(3 5 4 0 20260923 2)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2251,7 +2251,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "53115f978576e043e050fd04d0cb7517296727e9"))])
+      (:commit . "3195a545b6c9bec7f3fbb68eaba14a172e0ea3ef"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar

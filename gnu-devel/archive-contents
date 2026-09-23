@@ -556,11 +556,11 @@
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "90880f81419577e1d3f68424d2a3adf31e6d663e"))])
  (cond-star
-  . [(1 0 0 20260922 24) ((emacs (24 3)))
+  . [(1 0 0 20260923 26) ((emacs (24 3)))
      "Extended form of `cond' construct" tar
      ((:maintainer "Richard Stallman" . "rms@gnu.org")
       (:url . "https://elpa.gnu.org/packages/cond-star.html")
-      (:commit . "f434ce3c4c2df579adab6fcf2cc9e281346722d2"))])
+      (:commit . "46502897cbdcdc499a9af5d6b968d989c2bd9cf8"))])
  (constants
   . [(2 11 1 0 20240827 95043) ((emacs (24 1)))
      "Enter definition of constants into source code" tar
@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 9 0 20260913 2) ((emacs (29 1)) (compat (31)))
+  . [(3 9 0 20260923 3) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "9979fbb02e633267d0f6bc6cafa266fe87a0007f"))])
+      (:commit . "24eed02c31e80df16aed5f741b77b66e270de6eb"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 13 0 0 20260921 4)
+  . [(0 13 0 0 20260923 19)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 4)))
      "Linked notes and spaced repetition" tar
      ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "497149ab7ab88c2acbd398803b15c3f9b9ab910a"))])
+      (:commit . "dd81341093c6428e0b5a1faca43802e6fa485f5a"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar
@@ -2872,13 +2872,13 @@
       (:authors ("Feng Shu" . "tumashu@163.com"))
       (:commit . "55d9b324831b0fc79ff62f1c6f21aad72341a114"))])
  (python
-  . [(0 30 0 20260724 47) ((emacs (29 1)) (compat (29 1 1 0)))
+  . [(0 30 0 20260923 54) ((emacs (29 1)) (compat (29 1 1 0)))
      "Python's flying circus support for Emacs" tar
      ((:url . "https://github.com/fgallina/python.el")
       (:keywords "languages")
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
-      (:commit . "cc5491c575d47eb14c7206598c515b9aed4a5724"))])
+      (:commit . "46502897cbdcdc499a9af5d6b968d989c2bd9cf8"))])
  (qrencode
   . [(1 5 -2 4 0 20260906 0) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
@@ -3654,7 +3654,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 8 0 20260919 5)
+  . [(0 13 8 0 20260923 7)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3664,7 +3664,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "a3e26414f2516f6443182e13e1d98882e1b209d6"))])
+      (:commit . "db34982dd7d38b3275ae432e23cd708e28303b81"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
