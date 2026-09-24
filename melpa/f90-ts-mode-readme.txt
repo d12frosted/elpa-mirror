@@ -2,53 +2,51 @@ f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog:
-  [09-2026] Trimming of trailing whitespace characters in thing-end-of-X
-            navigation added.
-  [09-2026] Support for Emacs 29 + tree-sitter 0.20.x added (tested with
-            29.1, 29.3 and tree-sitter 0.20.8).
-  [09-2026] Fontification of error nodes fixed if line limitting is enabled.
-  [09-2026] Some issues in comment-region operations fixed (preserve
-            indentation, preserve trailing whitespace where possible,
-            keep existing alignment with keep options, do not operate
-            outside of region boundaries, add missing function
-            `f90-ts-indent-region').
-  [09-2026] Indentation after uncommenting lines in comment-region
-            operation on commented lines of code containing leading
-            ampersand or statement label fixed.
-  [09-2026] Missing option `keep-or-continued-line' added to
-            `f90-ts--indent-options-alist' for indentation selection options.
-  [09-2026] Syntax highlighting, indentation and break/join/fill for string
-            literals improved.  This requires a proposed (but not yet merged)
-            tree-sitter language grammar extension.  See README.md for more
-            details.
-  [09-2026] Testing with Emacs 31.1 and tree-sitter 0.26 added.
+[09-2026]
+  - Font locking of interface name in deferred procedure declaration fixed.
+  - Trimming of trailing whitespace characters in thing-end-of-X navigation
+    added.
+  - Support for Emacs 29 + tree-sitter 0.20.x added (tested with 29.1, 29.3
+    and tree-sitter 0.20.8).
+  - Fontification of error nodes fixed if line limitting is enabled.
+  - Some issues in comment-region operations fixed (preserve indentation,
+    preserve trailing whitespace where possible, keep existing alignment
+    with keep options, do not operate outside of region boundaries, add
+    missing function `f90-ts-indent-region').
+  - Indentation after uncommenting lines in comment-region operation on
+    commented lines of code containing leading ampersand or statement label
+    fixed.
+  - Missing option `keep-or-continued-line' added to
+    `f90-ts--indent-options-alist' for indentation selection options.
+  - Syntax highlighting, indentation and break/join/fill for string literals
+    improved.  This requires a proposed (but not yet merged) tree-sitter
+    language grammar extension.  See README.md for more details.
+  - Testing with Emacs 31.1 and tree-sitter 0.26 added.
 
-  [08-2026] `f90-ts-shift-line-break' as combined break/join function added.
-  [08-2026] Defcustom `f90-ts-font-lock-error` replaced by
-            `f90-ts-font-lock-error-show'.  Errors are now always fontified
-            by `f90-ts-font-lock-error-face'.  The new defcustom
-            `f90-ts-font-lock-error-show' can be used to turn ERROR node
-            highlighting on and off, or the number of lines to be highlighted
-            for each ERROR node.
-  [08-2026] Jump-to-rightmost-position (within fill-column) to the
-            interactive fill operation added.
-  [08-2026] Mark region operations fixed: always consider trimmed region
-            of nodes.  Some nodes like a whole "subroutine..end subroutine"
-            block contains a trailing newline, which should not be
-            considered.  Not consequently trimming all spans broke some mark
-            region operations.
-  [08-2026] About, README and MANUAL entries in the fortran and transient
-            popup menu to view information about the mode added.
-  [08-2026] Additional font-locking for error regions added.  This can be
-            customized by `f90-ts-font-lock-error' and
-            `f90-ts-font-lock-error-face'.
-  [08-2026] Smart end completion of coarray "change team ... end team"
-            blocks fixed.  It was wrongly assumed that the end statement is
-            "end change team".
+[08-2026]
+  - `f90-ts-shift-line-break' as combined break/join function added.
+  - Defcustom `f90-ts-font-lock-error` replaced by
+    `f90-ts-font-lock-error-show'.  Errors are now always fontified by
+    `f90-ts-font-lock-error-face'.  The new defcustom
+    `f90-ts-font-lock-error-show' can be used to turn ERROR node
+    highlighting on and off, or the number of lines to be highlighted for
+    each ERROR node.
+  - Jump-to-rightmost-position (within fill-column) to the interactive fill
+    operation added.
+  - Mark region operations fixed: always consider trimmed region of nodes.
+    Some nodes like a whole "subroutine..end subroutine" block contains a
+    trailing newline, which should not be considered.  Not consequently
+    trimming all spans broke some mark region operations.
+  - About, README and MANUAL entries in the fortran and transient popup menu
+    to view information about the mode added.
+  - Additional font-locking for error regions added.  This can be customized
+    by `f90-ts-font-lock-error' and `f90-ts-font-lock-error-face'.
+  - Smart end completion of coarray "change team ... end team" blocks fixed.
+    It was wrongly assumed that the end statement is "end change team".
 
-  [07-2026] Inherit attribute of some font lock faces fixed.
-  [07-2026] Alignment of unary expressions with leading minus or plus
-            improved.
+[07-2026]
+  - Inherit attribute of some font lock faces fixed.
+  - Alignment of unary expressions with leading minus or plus improved.
 
 Features:
   - Almost all statements up to F2023
@@ -87,6 +85,8 @@ for full documentation on options, keybindings, etc.
 Bugs and features:
   https://github.com/mscfd/emacs-f90-ts-mode/issues
 
-Note: Emacs 30.x must be linked against tree-sitter 0.25.x at runtime.
-Emacs 31 supports 0.26. The mode runs in both configurations.
+Notes:
+- Emacs 31 supports 0.26, and the mode runs in both configurations.
+- Emacs 30.x must be linked against tree-sitter 0.25.x at runtime.
+- Emacs 29 support has been tested with treesitter 0.20.8.
 For details see MANUAL at https://github.com/mscfd/emacs-f90-ts-mode
