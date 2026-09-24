@@ -723,11 +723,11 @@
       (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
       (:commit . "c1ef993f8c66fec71b10d70eb7a2cd0c416aaa12"))])
  (dape
-  . [(0 27 1 0 20260719 8) ((emacs (29 1)) (jsonrpc (1 0 25)))
+  . [(0 27 1 0 20260924 10) ((emacs (29 1)) (jsonrpc (1 0 25)))
      "Debug Adapter Protocol for Emacs" tar
      ((:url . "https://github.com/svaante/dape")
       (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-      (:commit . "b04e927abac6fcbef480c8a39881d69baa1bec98"))])
+      (:commit . "a5dcf2d086a91fbe6e600b6de482d8f680f4410c"))])
  (darkroom
   . [(0 3 0 20200507 173652) ((cl-lib (0 5)))
      "Remove visual distractions and focus on writing" tar
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 1 0 0 20260916 66) ((emacs (28)))
+  . [(9 1 0 0 20260923 67) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "2412b9ae68d0a9f2f70e3ad3f4c543cc07c332a4"))])
+      (:commit . "fdb4b9df16a09d743995b45385ac37420b6e7673"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2047,14 +2047,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 32 1 0 20260920 2)
+  . [(0 32 1 0 20260923 3)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "9ac4111020babe5996c87ddb60d62b9cfcea28c1"))])
+      (:commit . "2763af4fdc5cc595497b27ecbc4ee346e2481071"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
