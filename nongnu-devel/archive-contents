@@ -527,13 +527,13 @@
       (:authors ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
       (:commit . "d799c467a1f35934f96d33960d638ddf796f01ba"))])
  (emacsql
-  . [(4 4 1 0 20260920 3) ((emacs (28 1)))
+  . [(4 4 1 0 20260925 4) ((emacs (28 1)))
      "High-level SQL database front-end" tar
      ((:url . "https://github.com/magit/emacsql")
       (:maintainer "Jonas Bernoulli"
 		   . "emacs.emacsql@jonas.bernoulli.dev")
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "5430450af72ebe4917ff87a6bf3ac8f613f6dced"))])
+      (:commit . "a7e9d82e3334058ccc8c63fad9a42e953d4de0b4"))])
  (engine-mode
   . [(2 2 4 0 20230911 95607) ((emacs (24 4)))
      "Define and query search engines" tar
@@ -1253,7 +1253,7 @@
       (:authors ("martian hiatus" . "martianh@disroot.org"))
       (:commit . "3abd1604c3ab9451dcbc087099c499e6dc8882d7"))])
  (llama
-  . [(1 0 5 0 20260909 1) ((emacs (26 1)) (compat (31 0)))
+  . [(1 0 5 0 20260925 2) ((emacs (28 1)) (compat (31 1)))
      "Compact syntax for short lambda" tar
      ((:url . "https://github.com/tarsius/llama")
       (:keywords "extensions")
@@ -1261,7 +1261,7 @@
 		   . "emacs.llama@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.llama@jonas.bernoulli.dev"))
-      (:commit . "cfea618f14bc8317f8e4947fe10000b229b9a447"))])
+      (:commit . "8e4aeb81824a1d08e183220258fdfad1a0e03ada"))])
  (logview
   . [(0 19 4 -4 0 20260218 1)
      ((emacs (25 1)) (datetime (0 8)) (extmap (1 0)) (compat (29)))
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20260922 12)
+  . [(4 7 1 0 20260925 17)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,9 +1343,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "cd9117e3a8eb9b50814474d5addfd2ca92af5605"))])
+      (:commit . "328019647f4625c41b0f9bb0e61d812952722102"))])
  (magit-section
-  . [(4 7 1 0 20260922 12)
+  . [(4 7 1 0 20260925 17)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1354,7 +1354,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "cd9117e3a8eb9b50814474d5addfd2ca92af5605"))])
+      (:commit . "328019647f4625c41b0f9bb0e61d812952722102"))])
  (markdown-mode
   . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1555,7 +1555,7 @@
       (:authors ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
       (:commit . "e2599a106a26ce5511095e23df4ea04be6687a8a"))])
  (orgit
-  . [(2 2 1 0 20260731 0)
+  . [(2 2 1 0 20260925 1)
      ((emacs (29 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit (4 7)) (org (9 8)))
      "Support for Org links to Magit buffers" tar
@@ -1565,7 +1565,7 @@
 		   . "emacs.orgit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-      (:commit . "c948819a7cad37a654ada275ebf7c003abf782d0"))])
+      (:commit . "417986691dffb29f673a9d14f3c2aea13a326f88"))])
  (p4-16-mode
   . [(0 3 0 20231118 161633) nil
      "Support for the P4_16 programming language" tar
@@ -1893,11 +1893,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
  (slime
-  . [(2 32 -4 0 20260911 71) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20260925 73) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "b7c25d3cf9d29f9babd0431de00e44ad744a81fd"))])
+      (:commit . "6bcb626f1a7e2b4f39146f6f9c3d9460858f7ab1"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -2242,7 +2242,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 4 0 20260924 3)
+  . [(3 5 4 0 20260925 4)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2251,7 +2251,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "5e6b398c06609ad6b294b393d5af7fb6304b0d81"))])
+      (:commit . "7bec41144ea197961c76c769cfc0acaf689ebac0"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar

@@ -151,24 +151,25 @@ Table of Contents
 .. 21. Use the `denote-lint' package
 .. 22. Use the `denote-paperless' package
 21. Extending Denote
-.. 1. Define a custom file type to automatically encrypt new notes
-.. 2. Access the data of the latest note
-.. 3. Create a new note in any directory
-.. 4. Find empty notes and put them in a Dired buffer
-.. 5. Automatically rename the note after saving it
-.. 6. Narrow the list of files in Dired
-.. 7. Use `dired-virtual-mode' for arbitrary file listings
-.. 8. Use Embark to collect minibuffer candidates
-.. 9. Search file contents
-.. 10. Bookmark the directory with the notes
-.. 11. Treat your notes as a project
-.. 12. Use the tree-based file prompt for select commands
-.. 13. Rename files with Denote in the Image Dired thumbnails buffer
-.. 14. Rename files with Denote using `dired-preview'
-.. 15. Avoid duplicate identifiers when exporting Denote notes
+.. 1. Find a file in the `denote-directory'
+.. 2. Define a custom file type to automatically encrypt new notes
+.. 3. Access the data of the latest note
+.. 4. Create a new note in any directory
+.. 5. Find empty notes and put them in a Dired buffer
+.. 6. Automatically rename the note after saving it
+.. 7. Narrow the list of files in Dired
+.. 8. Use `dired-virtual-mode' for arbitrary file listings
+.. 9. Use Embark to collect minibuffer candidates
+.. 10. Search file contents
+.. 11. Bookmark the directory with the notes
+.. 12. Treat your notes as a project
+.. 13. Use the tree-based file prompt for select commands
+.. 14. Rename files with Denote in the Image Dired thumbnails buffer
+.. 15. Rename files with Denote using `dired-preview'
+.. 16. Avoid duplicate identifiers when exporting Denote notes
 ..... 1. Export Denote notes with Org Mode
 ..... 2. Export Denote notes with Markdown
-.. 16. Set up your workflow for daily or weekly meeting notes
+.. 17. Set up your workflow for daily or weekly meeting notes
 22. For developers or advanced users
 .. 1. Common building blocks for developers or advanced users
 .. 2. Predefined note values for developers or advanced users
@@ -635,7 +636,7 @@ section 10.2
 
 [The file naming scheme] See section 8
 
-[Access the data of the latest note] See section 21.2
+[Access the data of the latest note] See section 21.3
 
 [The `denote-kill-buffers' option] See section 6.1.7
 
@@ -1955,7 +1956,7 @@ See section 20.5
 
 [Linking notes] See section 10
 
-[Access the data of the latest note] See section 21.2
+[Access the data of the latest note] See section 21.3
 
 [Change the order of file name components] See section 8.1
 
@@ -2094,7 +2095,7 @@ See section 20.5
 
 [Change the order of file name components] See section 8.1
 
-[Access the data of the latest note] See section 21.2
+[Access the data of the latest note] See section 21.3
 
 7.1.1 The `denote-rename-confirmations' option
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
@@ -4706,7 +4707,7 @@ backlinks?] See section 27.11
 
 [Use `denote-grep' to search inside files] See section 17
 
-[Use `dired-virtual-mode' for arbitrary file listings] See section 21.7
+[Use `dired-virtual-mode' for arbitrary file listings] See section 21.8
 
 16.1 Focus the `denote-dired' buffer with `denote-dired-focus'
 ──────────────────────────────────────────────────────────────
@@ -5577,7 +5578,92 @@ section 10.4
 
 [Packages that build on Denote] See section 20
 
-21.1 Define a custom file type to automatically encrypt new notes
+21.1 Find a file in the `denote-directory'
+──────────────────────────────────────────
+
+  Because Denote files are standard files, we do not provide the
+  equivalent of a `find-file' command to directly open a file in the
+  `denote-directory'. Though users may still want to have that
+  functionality, which is easy to implement with what core Denote
+  already provides:
+
+  ┌────
+  │ (defun my-denote-find-file ()
+  │   "Open a file in the variable `denote-directory'."
+  │   (declare (interactive-only t))
+  │   (interactive)
+  │   (when-let* ((file (denote-file-prompt)))
+  │     (find-file file)))
+  └────
+
+  This can be extended to include commands that only match specific file
+  types or regular expressions in general. For example, here is how we
+  prompt only for files that include `.pdf' in their name and also
+  modify the minibuffer prompt to indicate what we are doing:
+
+  ┌────
+  │ (defun my-denote-find-file-pdf ()
+  │   "Prompt for FILE in the variable `denote-directory' and open it."
+  │   (declare (interactive-only t))
+  │   (interactive)
+  │   (when-let* ((file (denote-file-prompt "\\.pdf" "Find PDF file")))
+  │     (find-file file)))
+  └────
+
+  To take it a step further, we can define a keymap which we may then
+  bind to a prefix key. This way we can access all the “Denote find
+  file” commands we have defined for ourselves:
+
+  ┌────
+  │ ;; Define the keymap.  Notice the symbol of :prefix, which is used in
+  │ ;; the `define-key' below.
+  │ (defvar-keymap my-denote-find-file-map
+  │   :doc "Commands to find a file in the variable `denote-directory'."
+  │   :prefix 'my-denote-find
+  │   "f" #'my-denote-find-file
+  │   "p" #'my-denote-find-file-pdf)
+  │ 
+  │ ;; Pick a suitable prefix key.  Here we use C-c f.  So
+  │ ;; `my-denote-find-file' is this: C-c f f.
+  │ (define-key global-map (kbd "C-c f") 'my-denote-find)
+  └────
+
+  Putting it all together:
+
+  ┌────
+  │ ;; Use this as a template to define as many commands as you need, like
+  │ ;; with `my-denote-find-file-pdf'.
+  │ (defun my-denote-find-file ()
+  │   "Open a file in the variable `denote-directory'."
+  │   (declare (interactive-only t))
+  │   (interactive)
+  │   (when-let* ((file (denote-file-prompt)))
+  │     (find-file file)))
+  │ 
+  │ (defun my-denote-find-file-pdf ()
+  │   "Prompt for FILE in the variable `denote-directory' and open it."
+  │   (declare (interactive-only t))
+  │   (interactive)
+  │   (when-let* ((file (denote-file-prompt "\\.pdf" "Prompt for PDF file")))
+  │     (find-file file)))
+  │ 
+  │ ;; Define the keymap.  Notice the symbol of :prefix, which is used in
+  │ ;; the `define-key' below.
+  │ (defvar-keymap my-denote-find-file-map
+  │   :doc "Commands to find a file in the variable `denote-directory'."
+  │   :prefix 'my-denote-find
+  │   "f" #'my-denote-find-file
+  │   "p" #'my-denote-find-file-pdf)
+  │ 
+  │ ;; Pick a suitable prefix key.  Here we use C-c f.  So
+  │ ;; `my-denote-find-file' is this: C-c f f.
+  │ (define-key global-map (kbd "C-c f") 'my-denote-find)
+  └────
+
+  Enjoy!
+
+
+21.2 Define a custom file type to automatically encrypt new notes
 ─────────────────────────────────────────────────────────────────
 
   Denote can work with any file type. By default, it works with those
@@ -5627,7 +5713,7 @@ section 10.4
 [The `denote-prompts' option] See section 6.1.2
 
 
-21.2 Access the data of the latest note
+21.3 Access the data of the latest note
 ───────────────────────────────────────
 
   The variable `denote-current-data' is updated each time a new note is
@@ -5643,7 +5729,7 @@ section 10.4
   `denote-after-rename-file-hook'.
 
 
-21.3 Create a new note in any directory
+21.4 Create a new note in any directory
 ───────────────────────────────────────
 
   The commands that create new files are designed to write to the
@@ -5667,7 +5753,7 @@ section 10.4
   └────
 
 
-21.4 Find empty notes and put them in a Dired buffer
+21.5 Find empty notes and put them in a Dired buffer
 ────────────────────────────────────────────────────
 
   [ This feature is based on the command `denote-sort-dired' ([Sort
@@ -5769,7 +5855,7 @@ section 10.4
 [Link to an existing note or create a new one] See section 10.10
 
 
-21.5 Automatically rename the note after saving it
+21.6 Automatically rename the note after saving it
 ──────────────────────────────────────────────────
 
   While experimenting with Denote, users may need to try different
@@ -5794,7 +5880,7 @@ section 10.4
   └────
 
 
-21.6 Narrow the list of files in Dired
+21.7 Narrow the list of files in Dired
 ──────────────────────────────────────
 
   Emacs’ standard file manager (or directory editor) can read a regular
@@ -5856,7 +5942,7 @@ section 10.4
 section 8.4
 
 
-21.7 Use `dired-virtual-mode' for arbitrary file listings
+21.8 Use `dired-virtual-mode' for arbitrary file listings
 ─────────────────────────────────────────────────────────
 
   Emacs’ Dired is a powerful file manager that builds its functionality
@@ -5958,7 +6044,7 @@ section 8.4
 [The file-naming scheme] See section 8
 
 
-21.8 Use Embark to collect minibuffer candidates
+21.9 Use Embark to collect minibuffer candidates
 ────────────────────────────────────────────────
 
   `embark' is a remarkable package that lets you perform relevant,
@@ -5982,11 +6068,11 @@ section 8.4
   power of the minibuffer ([Narrow the list of files in Dired]).
 
 
-[Narrow the list of files in Dired] See section 21.6
+[Narrow the list of files in Dired] See section 21.7
 
 
-21.9 Search file contents
-─────────────────────────
+21.10 Search file contents
+──────────────────────────
 
   [ This is not needed given that we provide the `denote-grep' command
     ([Use `denote-grep' to search inside files]). ]
@@ -6032,7 +6118,7 @@ section 8.4
 [Use `denote-grep' to search inside files] See section 17
 
 
-21.10 Bookmark the directory with the notes
+21.11 Bookmark the directory with the notes
 ───────────────────────────────────────────
 
   Part of the reason Denote does not reinvent existing functionality is
@@ -6057,7 +6143,7 @@ section 8.4
   extras for working with directories, including bookmarks.
 
 
-21.11 Treat your notes as a project
+21.12 Treat your notes as a project
 ───────────────────────────────────
 
   Emacs has a built-in library for treating a directory tree as a
@@ -6090,7 +6176,7 @@ section 8.4
   Git).
 
 
-21.12 Use the tree-based file prompt for select commands
+21.13 Use the tree-based file prompt for select commands
 ────────────────────────────────────────────────────────
 
   Older versions of Denote had a file prompt that resembled that of the
@@ -6129,7 +6215,7 @@ section 8.4
   └────
 
 
-21.13 Rename files with Denote in the Image Dired thumbnails buffer
+21.14 Rename files with Denote in the Image Dired thumbnails buffer
 ───────────────────────────────────────────────────────────────────
 
   [Rename files with Denote using `dired-preview']
@@ -6194,12 +6280,12 @@ section 8.4
   └────
 
 
-[Rename files with Denote using `dired-preview'] See section 21.14
+[Rename files with Denote using `dired-preview'] See section 21.15
 
 [Rename multiple files at once] See section 7.3
 
 
-21.14 Rename files with Denote using `dired-preview'
+21.15 Rename files with Denote using `dired-preview'
 ────────────────────────────────────────────────────
 
   The `dired-preview' package (by me/Protesilaos) automatically displays
@@ -6253,10 +6339,10 @@ section 8.4
 [Rename multiple files at once] See section 7.3
 
 [Rename files with Denote in the Image Dired thumbnails buffer] See
-section 21.13
+section 21.14
 
 
-21.15 Avoid duplicate identifiers when exporting Denote notes
+21.16 Avoid duplicate identifiers when exporting Denote notes
 ─────────────────────────────────────────────────────────────
 
   When exporting Denote notes to, for example, an HTML or PDF file,
@@ -6277,7 +6363,7 @@ section 21.13
 
 [Convenience commands for note creation] See section 6.1.5
 
-21.15.1 Export Denote notes with Org Mode
+21.16.1 Export Denote notes with Org Mode
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Org Mode has a built-in configurable export engine.  You can prevent
@@ -6289,7 +6375,7 @@ section 21.13
   required pre-processing step for export purposes.
 
 
-◊ 21.15.1.1 Manually configure Org export
+◊ 21.16.1.1 Manually configure Org export
 
   Insert `#+export_file_name: FILENAME' in the front matter before
   exporting to force a filename called whatever the value of `FILENAME'
@@ -6306,10 +6392,10 @@ section 21.13
   this section ([Export Denote notes]).
 
 
-  [Export Denote notes] See section 21.15
+  [Export Denote notes] See section 21.16
 
 
-◊ 21.15.1.2 Automatically store Org exports in another folder
+◊ 21.16.1.2 Automatically store Org exports in another folder
 
   It is possible to automatically place all exports in another folder by
   making Org’s function `org-export-output-file-name' create the target
@@ -6367,7 +6453,7 @@ section 21.13
   [Exclude certain directories from all operations] See section 6.9
 
 
-◊ 21.15.1.3 Org Mode Publishing
+◊ 21.16.1.3 Org Mode Publishing
 
   Org Mode also has a publishing tool for exporting a collection of
   files. Some user might apply this approach to convert their note
@@ -6385,7 +6471,7 @@ section 21.13
   [Exclude certain directories from all operations] See section 6.9
 
 
-21.15.2 Export Denote notes with Markdown
+21.16.2 Export Denote notes with Markdown
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Exporting from Markdown requires an external processor (e.g.,
@@ -6401,7 +6487,7 @@ section 21.13
   of duplicate Denote identifiers.
 
 
-21.16 Set up your workflow for daily or weekly meeting notes
+21.17 Set up your workflow for daily or weekly meeting notes
 ────────────────────────────────────────────────────────────
 
   Perhaps as part of work, we meet with certain people on a regular
