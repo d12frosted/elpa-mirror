@@ -845,11 +845,11 @@
       (:authors ("Peter" . "craven@gmx.net"))
       (:commit . "52bf07aee6fa2d6e9864c5a4a1f72f15e830d55c"))])
  (geiser-chicken
-  . [(0 17 0 20260819 10) ((emacs (24 4)) (geiser (0 19)))
+  . [(0 17 0 20260924 11) ((emacs (24 4)) (geiser (0 19)))
      "Chicken's implementation of the geiser protocols" tar
      ((:url . "https://gitlab.com/emacs-geiser/chicken")
       (:keywords "languages" "chicken" "scheme" "geiser")
-      (:commit . "ba0c16df8ce21f1722e27e4591656c9b64fafdff"))])
+      (:commit . "74610c900b671dd40c1bd7114c991781e0621102"))])
  (geiser-gambit
   . [(0 18 1 0 20260727 3) ((emacs (26 1)) (geiser (0 18)))
      "Gambit's implementation of the geiser protocols" tar
@@ -971,7 +971,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20260919 9)
+  . [(0 9 9 6 0 20260924 16)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -980,7 +980,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "44deae37928175764bbe8314dbbc79bdec28ab4c"))])
+      (:commit . "ec25a41fb8bebf5ea08341a9d8c70c0ee907ee23"))])
  (graphql-mode
   . [(1 0 0 0 20260904 38) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1170,13 +1170,13 @@
 		("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "23b2a09294d8ac7f95edd83ad3bb26e21322cc6d"))])
  (isl
-  . [(1 7 0 20260924 1) ((emacs (29 1)))
+  . [(1 7 0 20260924 2) ((emacs (29 1)))
      "Simple incremental search in current-buffer" tar
      ((:url . "https://github.com/thierryvolpiatto/isearch-light")
       (:keywords "matching" "searching")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "9d1b47856e15538e5d577e9099d1805250b4e49c"))])
+      (:commit . "c2a121f0a14cf4c0e8cbbbafc0c86f20be8fbb97"))])
  (iwindow
   . [(1 1 0 20230920 203903)
      ((emacs (24 3)) (seq (2 23)) (compat (28 1 2 2)))
@@ -1696,13 +1696,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-nix-store
-  . [(0 12 0 0 20260918 0) ((emacs (29 1)))
+  . [(0 13 0 0 20260924 0) ((emacs (29 1)))
      "Project backend for Nix store" tar
      ((:url . "https://github.com/jian-lin/project-nix-store")
       (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "917c29cada46c11b0503a26e660c1be15a6fa65f"))])
+      (:commit . "d7099ae0759a9444489278b1749a8d68fe219e33"))])
  (projectile
   . [(3 5 0 -4 0 20260916 60) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
@@ -2242,7 +2242,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 4 0 20260923 2)
+  . [(3 5 4 0 20260924 3)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2251,7 +2251,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "3195a545b6c9bec7f3fbb68eaba14a172e0ea3ef"))])
+      (:commit . "5e6b398c06609ad6b294b393d5af7fb6304b0d81"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar

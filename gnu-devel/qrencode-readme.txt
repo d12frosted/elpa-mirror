@@ -12,21 +12,30 @@
 1.1 Usage
 ─────────
 
-  This package provides two user facing interactive functions, that will
-  encode text into a QR Code and show it in a separate buffer.
+  This package provides three user facing interactive functions, that
+  will encode text into a QR Code and show it in a separate buffer.
 
   `qrencode-region'
         Shows the current selection as a QR Code.
   `qrencode-url-at-point'
         Encode URL at point as QR Code.
+  `qrencode-string'
+        Encode a specific string (leading/trailing whitespace trimmed).
 
   Some customizations are provided using `M-x customize-group RET
     qrencode RET'.
 
   QR Codes are rendered as Unicode text, but there is an option to
-  export them as bitmap (NetPBM format).  There are also some public
-  elisp library functions to generate QR Codes for use in other elisp
-  code.
+  export them as bitmap (NetPBM format) by pressing `e' in the QR Code
+  buffer.  There are also some public elisp library functions to
+  generate QR Codes for use in other elisp code.
+
+  Currently two NetPBM formats are supported: P1 and P4.  The latter is
+  much smaller and the exporter much faster, so highly recommended.  But
+  due to backwards compatibility reasons we currently default to P1.  By
+  customizing `qrencode-export-format' to `'p4' the export format can be
+  changed.  In the next major version release P1 support is likely to
+  get dropped in favour of P4.
 
 
 1.1.1 Converting different bitmaps

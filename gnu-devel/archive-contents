@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 2 0 0 20260919 1) ((emacs (28 1)))
+  . [(14 2 0 0 20260924 2) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "b3a7b226b3b9107319326e1a9792fdefdc8d20fa"))])
+      (:commit . "e4764f06cd742d1f41c2888f2a77d72055e9b42b"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1537,14 +1537,14 @@
       (:url . "https://elpa.gnu.org/packages/gnorb.html")
       (:commit . "409e4fc2c83f8406f362028dbcc3a1fc21182819"))])
  (gnosis
-  . [(0 13 0 0 20260923 19)
+  . [(0 13 0 0 20260924 21)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 4)))
      "Linked notes and spaced repetition" tar
      ((:url . "https://git.thanosapollo.org/emacs-gnosis")
       (:keywords "extensions")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "dd81341093c6428e0b5a1faca43802e6fa485f5a"))])
+      (:commit . "5f030c9ff27187a5c1aa7131b9cc0719bbd73852"))])
  (gnu-elpa
   . [(1 1 0 20221212 224322) ((emacs (25 1)))
      "Advertise GNU ELPA packages" tar
@@ -2474,22 +2474,22 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "5806e3f9401606d16962cffae68188c92deb1272"))])
  (org
-  . [(10 0 -1 0 20260923 564) ((emacs (28 2)))
+  . [(10 0 -1 0 20260924 566) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "10814296c77681fbbf708f0d898fa88cbaa7ccce"))])
+      (:commit . "9aae2ea533ca58a5a859613a5ed91821a7a65e60"))])
  (org-contacts
-  . [(1 3 0 20260915 18) ((emacs (29 1)) (org (9 7)))
+  . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
      ((:url . "https://repo.or.cz/org-contacts.git")
       (:keywords "contacts" "org-mode" "outlines" "hypermedia"
 		 "calendar")
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:authors ("Julien Danjou" . "julien@danjou.info"))
-      (:commit . "a9a29e6374eb4e7baa28ef82b8613acd6eac5c6b"))])
+      (:commit . "7b93522b6f9d0f3343fd34e5fd1be2ce2f66b279"))])
  (org-edna
   . [(1 1 2 0 20200902 94459)
      ((emacs (25 1)) (seq (2 19)) (org (9 0 5)))
@@ -2880,12 +2880,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "46502897cbdcdc499a9af5d6b968d989c2bd9cf8"))])
  (qrencode
-  . [(1 5 -2 4 0 20260906 0) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 5 0 20260925 1) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "a63a44020f48cd178c762a30104d09f0cfa584fa"))])
+      (:commit . "472c492b2259484b87edb9bdc32d3fffab953432"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
@@ -3654,7 +3654,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 8 0 20260923 7)
+  . [(0 13 8 0 20260924 8)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3664,7 +3664,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "db34982dd7d38b3275ae432e23cd708e28303b81"))])
+      (:commit . "d1ab36958ddfd6c85aab00dbc130cd3e1a97615f"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
