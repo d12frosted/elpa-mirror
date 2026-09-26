@@ -489,7 +489,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 2 0 0 20260919 10) ((emacs (29 1)) (compat (31)))
+  . [(4 2 1 0 20260926 0) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -498,7 +498,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "b39ca98c0ab05170cba943d6e31c5c2a3e285133"))])
+      (:commit . "acbb86e342d2b8f85dfb30dce9df01db9a829c77"))])
  (elfeed-web
   . [(4 1 0 0 20260821 0)
      ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
@@ -691,11 +691,11 @@
        . "https://elpa.nongnu.org/nongnu/evil-visual-mark-mode.html")
       (:commit . "2bbaaae56ae53e68a8bcc7bc2cfe830a14843b4d"))])
  (evil-visualstar
-  . [(0 2 0 0 20160222 194815) ((evil (0)))
+  . [(0 2 1 0 20260926 0) ((emacs (24 4)) (evil (0)))
      "Starts a * or # search from the visual selection" tar
      ((:url . "https://github.com/bling/evil-visualstar")
       (:keywords "evil" "vim" "visualstar")
-      (:commit . "06c053d8f7381f91c53311b1234872ca96ced752"))])
+      (:commit . "e9f043361c4fd0ab6b7e7a52801c39f05c1e52c3"))])
  (exec-path-from-shell
   . [(2 2 0 20260619 14) ((emacs (26 1)))
      "Get environment variables such as $PATH from the shell" tar
@@ -1037,7 +1037,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20260918 61) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260926 63) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1045,14 +1045,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "228879977563003631edc67926e6a241f8523d73"))])
+      (:commit . "519e20239d3f4ac21cd9849361622d9c4c8f0e37"))])
  (helm-core
-  . [(4 0 7 0 20260918 61) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260926 63) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "228879977563003631edc67926e6a241f8523d73"))])
+      (:commit . "519e20239d3f4ac21cd9849361622d9c4c8f0e37"))])
  (hermes
   . [(0 7 1 0 20260922 20)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1193,14 +1193,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 14 0 0 20260923 7)
+  . [(0 14 0 0 20260926 20)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "c91fbbbc07aaaa5f810cd7fba8e39cc02d7559af"))])
+      (:commit . "0b93b7612a1742cddf992ed63f1989be5bb3eb74"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20260925 17)
+  . [(4 7 1 0 20260926 20)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,9 +1343,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "328019647f4625c41b0f9bb0e61d812952722102"))])
+      (:commit . "f33c312118c96b216427244fe94d0a6b0cd49a47"))])
  (magit-section
-  . [(4 7 1 0 20260925 17)
+  . [(4 7 1 0 20260926 20)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1354,7 +1354,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "328019647f4625c41b0f9bb0e61d812952722102"))])
+      (:commit . "f33c312118c96b216427244fe94d0a6b0cd49a47"))])
  (markdown-mode
   . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1555,7 +1555,7 @@
       (:authors ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
       (:commit . "e2599a106a26ce5511095e23df4ea04be6687a8a"))])
  (orgit
-  . [(2 2 1 0 20260925 1)
+  . [(2 2 1 0 20260926 2)
      ((emacs (29 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit (4 7)) (org (9 8)))
      "Support for Org links to Magit buffers" tar
@@ -1565,7 +1565,7 @@
 		   . "emacs.orgit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-      (:commit . "417986691dffb29f673a9d14f3c2aea13a326f88"))])
+      (:commit . "ebba35e2fd3fe831eff9a14e088f3cb0b593e215"))])
  (p4-16-mode
   . [(0 3 0 20231118 161633) nil
      "Support for the P4_16 programming language" tar

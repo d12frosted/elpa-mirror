@@ -1,7 +1,7 @@
 
-The shared front-end core over the `latex-to-svg-backend' rendering engine.
+The shared front-end core over the backend, `latex-to-svg-backend'.
 It detects LaTeX math in a markup buffer, overlays each occurrence with an
-SVG typeset by the engine, and provides equation numbering, `\\eqref' /
+SVG typeset by the backend, and provides equation numbering, `\\eqref' /
 `\\ref' resolution, reveal-on-cursor editing, render-on-leave, and theme /
 zoom refresh.  Per-markup packages (`latex-to-svg-for-markdown',
 `latex-to-svg-for-org-mode', …) are thin adaptors that plug in only what is
@@ -28,8 +28,8 @@ adaptor's minor mode:
 An adaptor sets these and then toggles `latex-to-svg-frontend-mode' (see its
 own minor mode, e.g. `latex-to-svg-for-markdown-mode').
 
-Because the engine renders its input *verbatim*, the core passes each
-element's source (delimiters and all).  The engine compiles each unique
+Because the backend renders its input *verbatim*, the core passes each
+element's source (delimiters and all).  The backend compiles each unique
 equation once (content-addressed), color-independent (`--currentcolor',
 tinted at display) and size-independent (scaled at display), so previews
 re-tint / re-scale straight from cache — with NO LaTeX recompile — on a

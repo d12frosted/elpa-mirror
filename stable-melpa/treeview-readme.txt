@@ -55,6 +55,9 @@ properties exist:
   icon-overlay
          The overlay containing the node icon
 
+  search-overlay
+         The overlay containing the matched part in the current search
+
   start  A marker at the position where the node begins
 
   end    A marker at the position where the node ends
@@ -63,6 +66,15 @@ properties exist:
 
   selected
          Whether the node is selected (non-nil if selected, nil if not)
+
+  search-matched
+         Whether the node matches the current search.
+
+  search-previous-node
+         The next matching node in the current search.
+
+  search-next-node
+         The previous matching node in the current search.
 
 Node states: Each node is in exactly one of three states, which are represented by the
 following Lisp symbols:
@@ -101,9 +113,12 @@ thus, variables whose values are function symbols.  Here is a list of that varia
   treeview-get-control-mouse-face-function
   treeview-get-selected-node-face-function
   treeview-get-highlighted-node-face-function
+  treeview-get-search-match-face-function
+  treeview-get-search-selected-face-function
   treeview-get-label-keymap-function
   treeview-get-label-face-function
   treeview-get-label-mouse-face-function
+  treeview-add-more-node-components-function
   treeview-get-icon-keymap-function
   treeview-get-icon-face-function
   treeview-get-icon-mouse-face-function

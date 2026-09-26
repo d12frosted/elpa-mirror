@@ -1,7 +1,7 @@
 
-A small, buffer-agnostic engine that turns a LaTeX math string into an
+A small, buffer-agnostic backend that turns a LaTeX math string into an
 SVG image suitable for overlaying in an Emacs buffer.  It is the
-rendering engine behind `agent-shell-math-renderer' (math in agent-shell's
+rendering backend behind `agent-shell-math-renderer' (math in agent-shell's
 chat output) and the `latex-to-svg' preview stack (Org and Markdown).
 A front-end finds the equations and places the images; the typesetting,
 caching and sizing happen here.
@@ -12,6 +12,12 @@ Design (why it is cheap to recolor and rescale):
     named on disk after its own content (SHA-1 of LaTeX + preamble +
     style).  Each unique equation therefore compiles at most once, and
     the cache is shared across every front-end.
+
+  * A second engine, RaTeX's `render-svg', needs no TeX installation
+    and typesets the math KaTeX supports; a caller chooses it per call
+    with `:engine ratex'.  It produces the same color- and
+    size-independent SVG; the `.fmt' precompilation and compile metadata
+    below are the LaTeX engine's.
 
   * The on-disk SVG is COLOR-INDEPENDENT: dvisvgm `--currentcolor' emits
     the default ink as the literal token `currentColor', which is
@@ -26,10 +32,10 @@ Design (why it is cheap to recolor and rescale):
 
   * The preamble is PRECOMPILED once to a LaTeX format file (`.fmt') via
     the `mylatexformat' package, then loaded by every equation compile
-    with a `%&' first line (see `latex-to-svg-backend-precompile').  This skips
-    re-parsing the class and packages (amsmath, ...) on each equation, so
-    compiles are markedly faster.  It falls back to a full compile when
-    `mylatexformat' is unavailable or the dump fails.
+    with a `%&' first line (see `latex-to-svg-backend-precompile').  This
+    skips re-parsing the class and packages (amsmath, ...) on each
+    equation, so compiles are markedly faster.  It falls back to a full
+    compile when `mylatexformat' is unavailable or the dump fails.
 
   * The cache is SHARDED into 256 subdirectories (by the first two hex
     characters of the content key) so no single directory accumulates
@@ -40,18 +46,24 @@ Design (why it is cheap to recolor and rescale):
 
 Public entry point:
 
-  (latex-to-svg-backend LATEX &key callback color background padding font-height)
+  (latex-to-svg-backend LATEX &key callback metadata engine fallback
+                        quiet rescale-by color background padding
+                        font-height)
 
 LATEX is placed *verbatim* in the document body, so the caller passes
 valid body LaTeX and decides inline vs display by the delimiters it uses
 (`$x$', `\(x\)', `\[x\]', `\begin{equation}...\end{equation}', ...).
-The engine is deliberately unaware of that distinction.
+The backend is deliberately unaware of that distinction.
 
 Returns an image now when one can be produced synchronously (cache /
 on-disk SVG / placeholder), else nil after scheduling an asynchronous
 compile; CALLBACK (a zero-argument function) is invoked once the SVG is
 ready, so the caller can re-query and place the image.  Concurrent
 requests for the same equation are coalesced onto a single compile.
+
+A formula the engine rejects is recorded and not compiled again;
+`:fallback latex' typesets it with LaTeX instead, and
+`latex-to-svg-backend-engine-used' says which engine drew a picture.
 
 The optional `:color'/`:background'/`:padding' keys override the
 display-time tint, an optional box color behind the equation, and padding
@@ -62,4 +74,5 @@ user-facing preference and passes it through.
 
 Helpers a front-end typically needs for its refresh policy:
 `latex-to-svg-backend-available-p', `latex-to-svg-backend-appearance',
-`latex-to-svg-backend-display-scale', and `latex-to-svg-backend-foreground-color'.
+`latex-to-svg-backend-display-scale', and
+`latex-to-svg-backend-foreground-color'.
