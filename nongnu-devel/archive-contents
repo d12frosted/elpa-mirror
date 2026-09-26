@@ -2106,13 +2106,13 @@
 		("Jen-Chieh" . "jcs090218@gmail.com"))
       (:commit . "cc1003b730a3167b972cc8400dffe19be7988fc7"))])
  (treeview
-  . [(1 3 1 0 20241101 11503) ((emacs (25 1)))
+  . [(1 4 0 0 20260926 3) ((emacs (29 1)))
      "A generic tree navigation library" tar
      ((:url . "https://github.com/tilmanrassy/emacs-treeview")
       (:keywords "lisp" "tools" "internal" "convenience")
       (:maintainer "Tilman Rassy" . "tilman.rassy@googlemail.com")
       (:authors ("Tilman Rassy" . "tilman.rassy@googlemail.com"))
-      (:commit . "9a1a16f84fc3c368443641f7a71aa2407ad91d38"))])
+      (:commit . "23f34fb3bc3ed7c9f6bad39b942b520cd20675f3"))])
  (tuareg
   . [(3 1 1 -4 0 20260626 1) ((emacs (26 3))) "OCaml mode" tar
      ((:url . "https://github.com/ocaml/tuareg")

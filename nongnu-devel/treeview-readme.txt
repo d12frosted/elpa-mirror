@@ -91,6 +91,7 @@ variables:
   *  treeview-get-label-keymap-function
   *  treeview-get-label-face-function
   *  treeview-get-label-mouse-face-function
+  *  treeview-add-more-node-components-function
   *  treeview-get-icon-keymap-function
   *  treeview-get-icon-face-function
   *  treeview-get-icon-mouse-face-function
