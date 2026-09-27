@@ -3,6 +3,8 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog:
 [09-2026]
+  - `f90-ts-indent-delete-trailing-whitespace' added to automatically delete
+    trailing whitespace after indentation operation.
   - Font locking of interface name in deferred procedure declaration fixed.
   - Trimming of trailing whitespace characters in thing-end-of-X navigation
     added.

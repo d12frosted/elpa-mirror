@@ -26,9 +26,9 @@
     qrencode RET'.
 
   QR Codes are rendered as Unicode text, but there is an option to
-  export them as bitmap (NetPBM format) by pressing `e' in the QR Code
-  buffer.  There are also some public elisp library functions to
-  generate QR Codes for use in other elisp code.
+  export them as bitmap (NetPBM format) or vector graphics (SVG) by
+  pressing `e' in the QR Code buffer.  There are also some public elisp
+  library functions to generate QR Codes for use in other elisp code.
 
   Currently two NetPBM formats are supported: P1 and P4.  The latter is
   much smaller and the exporter much faster, so highly recommended.  But
@@ -36,6 +36,10 @@
   customizing `qrencode-export-format' to `'p4' the export format can be
   changed.  In the next major version release P1 support is likely to
   get dropped in favour of P4.
+
+  SVG export is available if `svg.el' (Emacs 26.1 or newer) is
+  available.  This can be selected by customizing
+  `qrencode-export-format' to `'svg'.
 
 
 1.1.1 Converting different bitmaps
@@ -91,7 +95,7 @@
 
   <file:https://github.com/ruediger/qrencode-el/actions/workflows/test.yml/badge.svg>
 
-  The code is written in pure Emacs Lisp on GNU Emacs 27.  It should be
+  The code is written in pure Emacs Lisp on GNU Emacs 31.  It should be
   backwards compatible to GNU Emacs 25.1 and potentially even earlier
   with `seq' and `cl-lib' compat libraries.
 
