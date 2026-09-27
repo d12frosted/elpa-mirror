@@ -659,11 +659,11 @@
        . "https://elpa.nongnu.org/nongnu/evil-visual-mark-mode.html")
       (:commit . "2bbaaae56ae53e68a8bcc7bc2cfe830a14843b4d"))])
  (evil-visualstar
-  . [(0 2 1) ((emacs (24 4)) (evil (0)))
+  . [(0 2 2) ((emacs (24 4)) (evil (0)))
      "Starts a * or # search from the visual selection" tar
      ((:url . "https://github.com/bling/evil-visualstar")
       (:keywords "evil" "vim" "visualstar")
-      (:commit . "e9f043361c4fd0ab6b7e7a52801c39f05c1e52c3"))])
+      (:commit . "1584f0c4842dbdf67fc9414a59ac0375f2a00a3c"))])
  (exec-path-from-shell
   . [(2 2) ((emacs (24 4)))
      "Get environment variables such as $PATH from the shell" tar
