@@ -30,12 +30,12 @@ Design (why it is cheap to recolor and rescale):
     scaled at display time via `create-image' :scale, computed from the
     buffer font height so equations track the font — again no recompile.
 
-  * The preamble is PRECOMPILED once to a LaTeX format file (`.fmt') via
-    the `mylatexformat' package, then loaded by every equation compile
-    with a `%&' first line (see `latex-to-svg-backend-precompile').  This
-    skips re-parsing the class and packages (amsmath, ...) on each
-    equation, so compiles are markedly faster.  It falls back to a full
-    compile when `mylatexformat' is unavailable or the dump fails.
+  * The preamble is PRECOMPILED once to a LaTeX `.fmt' file with TeX's
+    `\dump', then loaded by every equation compile with a `%&' first
+    line (see `latex-to-svg-backend-precompile').  This skips re-parsing
+    the class and packages (amsmath, ...) on each equation, so compiles
+    are markedly faster.  It falls back to a full compile when the dump
+    fails.
 
   * The cache is SHARDED into 256 subdirectories (by the first two hex
     characters of the content key) so no single directory accumulates
