@@ -11,7 +11,7 @@ A simple usage of `cl-loop':
 
 How it could be done using `loopy':
 
-    (loopy (numbers i 1 10)
+    (loopy (numbers i :from 1 :to 10)
            (if (cl-evenp i)
                (collect evens i)
              (collect odds i))
