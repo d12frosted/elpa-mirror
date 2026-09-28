@@ -404,13 +404,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 9 0 20260905 2) ((emacs (29 1)) (compat (31)))
+  . [(2 10 0 20260927 0) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "1c543fce9151821e8400258aefcfdee2fb24920d"))])
+      (:commit . "50bc6187daf9af9df1a802fcbbd91fe4b952fc69"))])
  (capf-autosuggest
   . [(0 3 0 20211123 104430) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -2047,14 +2047,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 32 1 0 20260923 3)
+  . [(0 32 2 0 20260927 0)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "2763af4fdc5cc595497b27ecbc4ee346e2481071"))])
+      (:commit . "cc03cf723c007dd092932bacd86ea037273fbe0e"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -2465,14 +2465,14 @@
       (:authors ("Michael Heerdegen" . "michael_heerdegen@web.de"))
       (:commit . "643a866f578d04d81a1fa6fd6a61dd49d80c23b3"))])
  (orderless
-  . [(1 7 0 20260909 7) ((emacs (27 1)) (compat (31)))
+  . [(1 8 0 20260927 0) ((emacs (27 1)) (compat (31)))
      "Completion style for matching regexps in any order" tar
      ((:url . "https://github.com/oantolin/orderless")
       (:keywords "matching" "completion")
       (:maintainer ("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-      (:commit . "5806e3f9401606d16962cffae68188c92deb1272"))])
+      (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
  (org
   . [(10 0 -1 0 20260924 566) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
@@ -2872,20 +2872,20 @@
       (:authors ("Feng Shu" . "tumashu@163.com"))
       (:commit . "55d9b324831b0fc79ff62f1c6f21aad72341a114"))])
  (python
-  . [(0 30 0 20260923 54) ((emacs (29 1)) (compat (29 1 1 0)))
+  . [(0 30 0 20260928 55) ((emacs (29 1)) (compat (29 1 1 0)))
      "Python's flying circus support for Emacs" tar
      ((:url . "https://github.com/fgallina/python.el")
       (:keywords "languages")
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
-      (:commit . "46502897cbdcdc499a9af5d6b968d989c2bd9cf8"))])
+      (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
  (qrencode
-  . [(1 6 -2 1 0 20260926 5) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 6 -2 2 0 20260927 1) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "daae774935d0425a1c3607e79a1deee27f53e10b"))])
+      (:commit . "b197c5d1d9e258ecd431713419ebacffffe492d5"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
@@ -3878,14 +3878,14 @@
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
       (:commit . "57dfaf751f9d71e921cdbeaa34b9aafa3c502ba3"))])
  (verilog-mode
-  . [(2026 4 14 10117132 0 20260816 1) nil
+  . [(2026 8 31 185049335 0 20260927 0) nil
      "major mode for editing verilog source in Emacs" tar
      ((:url . "https://www.veripool.org") (:keywords "languages")
       (:maintainer ("Michael McNamara" . "mac@verilog.com")
 		   ("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:authors ("Michael McNamara" . "mac@verilog.com")
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
-      (:commit . "88cb65aae52e6a6c7adb82d067c8a20189393f61"))])
+      (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
  (vertico
   . [(2 15 0 20260913 0) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar

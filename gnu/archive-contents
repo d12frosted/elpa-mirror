@@ -380,13 +380,13 @@
       (:authors ("Kjartan Oli Agustsson" . "kjartanoli@disroot.org"))
       (:commit . "5f13266520c6135510bf214f67e084e39a97e3b3"))])
  (cape
-  . [(2 9) ((emacs (29 1)) (compat (31)))
+  . [(2 10) ((emacs (29 1)) (compat (31)))
      "Completion At Point Extensions" tar
      ((:url . "https://github.com/minad/cape")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "f0135abaf95a22b9fb2c951751a5d0733ce61bbd"))])
+      (:commit . "50bc6187daf9af9df1a802fcbbd91fe4b952fc69"))])
  (capf-autosuggest
   . [(0 3) ((emacs (25 1)))
      "History autosuggestions for comint and eshell" tar
@@ -1920,14 +1920,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 32 1)
+  . [(0 32 2)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "22b38a0876b98545a9c43bf00c1eeadc78f8c16f"))])
+      (:commit . "cc03cf723c007dd092932bacd86ea037273fbe0e"))])
  (lmc
   . [(1 4) nil "Little Man Computer in Elisp" tar
      ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
@@ -2306,14 +2306,14 @@
       (:authors ("Michael Heerdegen" . "michael_heerdegen@web.de"))
       (:commit . "cfc449d68e762cf05297bb923a48e9bbd0af1b92"))])
  (orderless
-  . [(1 7) ((emacs (27 1)) (compat (31)))
+  . [(1 8) ((emacs (27 1)) (compat (31)))
      "Completion style for matching regexps in any order" tar
      ((:url . "https://github.com/oantolin/orderless")
       (:keywords "matching" "completion")
       (:maintainer ("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-      (:commit . "cebe19e3cf0f30604d1ed1bfaa74fff21a4e89a5"))])
+      (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
  (org
   . [(9 8 10) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
@@ -3595,14 +3595,14 @@
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
       (:commit . "a0240be7a917dca47b95e401382affd1c11abea1"))])
  (verilog-mode
-  . [(2026 4 14 10117132) nil
+  . [(2026 8 31 185049335) nil
      "major mode for editing verilog source in Emacs" tar
      ((:url . "https://www.veripool.org") (:keywords "languages")
       (:maintainer ("Michael McNamara" . "mac@verilog.com")
 		   ("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:authors ("Michael McNamara" . "mac@verilog.com")
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
-      (:commit . "b3574e6464b0cce4a878106c07f1ea8f65989a6b"))])
+      (:commit . "593241a5d018a9e0e14d70cbf2e7957338fdd468"))])
  (vertico
   . [(2 15) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar

@@ -67,6 +67,7 @@
 ────────────────
 
   [file:https://elpa.gnu.org/packages/qrencode.svg]
+  [file:https://elpa.gnu.org/devel/qrencode.svg]
   [file:https://melpa.org/packages/qrencode-badge.svg]
   [file:https://stable.melpa.org/packages/qrencode-badge.svg]
 
@@ -75,6 +76,9 @@
 
 [file:https://elpa.gnu.org/packages/qrencode.svg]
 <https://elpa.gnu.org/packages/qrencode.html>
+
+[file:https://elpa.gnu.org/devel/qrencode.svg]
+<https://elpa.gnu.org/devel/qrencode.html>
 
 [file:https://melpa.org/packages/qrencode-badge.svg]
 <https://melpa.org/#/qrencode>
