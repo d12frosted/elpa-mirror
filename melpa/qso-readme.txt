@@ -3,7 +3,9 @@ capture and log amateur radio contacts (QSOs) into an ADIF file.
 
 qso.el provides a fuction that generates a customizable, dynamic
 form (qso-log-form) to log amateur radio QSOs using almost any
-combination of ADIF fields in the ADIF 3.1.4 specification.
+combination of ADIF fields.  The choices offered for enumerated
+fields, and the format of the log it writes, come from the adif
+package, so they follow the ADIF specification that package follows.
 This allows the user to customize the form for use in contests or
 general logging.  All customizations are accessible in the "QSO"
 group, whose parent is the Emacs "Applications" group, accessed
@@ -22,7 +24,7 @@ Features
 - No mouse required (using tab or shift-tab to change fields or
   hover over buttons)
 - Log entries are appended to a user-specified ADIF log file
-- Any field in the ADIF 3.1.4 specification can be selected to
+- Any field in the ADIF specification can be selected to
   appear on the form, in whatever order is desired
 - Each field has an option to preserve the most recent information
   after a QSO submission

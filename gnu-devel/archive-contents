@@ -1161,7 +1161,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "583951606e4e19fd53acd8c5691210b9acb524d7"))])
  (ellama
-  . [(1 32 2 0 20260928 3)
+  . [(1 32 3 0 20260929 1)
      ((emacs (28 1)) (llm (0 31 1)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1169,7 +1169,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "72f91cf436a025fec5c5fbd0bb47df0556468bf7"))])
+      (:commit . "549fd2688cd3e71a27f0addc0587fd248e1d7900"))])
  (emacs-gc-stats
   . [(1 4 2 0 20231206 152254) ((emacs (25 1)))
      "Collect Emacs GC statistics" tar
@@ -2019,14 +2019,14 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "65556a218fe138516ebe557726fe6e4b8b60f539"))])
  (lisp-ts-mode
-  . [(0 3 4 0 20260921 3)
+  . [(0 3 4 0 20260928 8)
      ((emacs (30 2)) (cond-star (0)) (compat (31)))
      "lisp-mode with tree-sitter support" tar
      ((:url . "https://codeberg.org/zshaftel/lisp-ts-mode")
       (:keywords "lisp" "languages" "tree-sitter")
       (:maintainer "zach shaftel" . "zach@shaf.tel")
       (:authors ("zach shaftel" . "zach@shaf.tel"))
-      (:commit . "af0afaa6963150b292542aafa363c51e0c38accf"))])
+      (:commit . "7bb5e6888318a47a8144f84fc6e4385f5519b8ba"))])
  (listen
   . [(0 10 1 0 20260105 223313)
      ((emacs (29 1)) (persist (0 6)) (taxy (0 10))
@@ -2047,14 +2047,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 32 2 0 20260927 0)
+  . [(0 32 2 0 20260929 1)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "cc03cf723c007dd092932bacd86ea037273fbe0e"))])
+      (:commit . "d1f5b810236e6279e2dcbe2db355dbb2076db537"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -3612,14 +3612,14 @@
       (:url . "https://elpa.gnu.org/packages/track-changes.html")
       (:commit . "17ddfd66e65c19f44dee41ee1b7ee1ce23ef3ed2"))])
  (tramp
-  . [(2 8 2 2 0 20260928 1) ((emacs (28 1)))
+  . [(2 8 2 3 0 20260929 0) ((emacs (28 1)))
      "Transparent Remote Access, Multiple Protocol" tar
      ((:url . "https://www.gnu.org/software/tramp/")
       (:keywords "comm" "processes")
       (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
       (:authors ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 		("Michael Albinus" . "michael.albinus@gmx.de"))
-      (:commit . "255ab1eaee36c10abefac120ff757f733a235896"))])
+      (:commit . "825c92c3a159466c1ff8633adc7f7e283241818d"))])
  (tramp-hlo
   . [(0 0 2 0 20251231 3054) ((tramp (2 8 0 5)))
      "High level operations as Tramp handlers" tar

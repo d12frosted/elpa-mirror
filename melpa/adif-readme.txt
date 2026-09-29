@@ -165,3 +165,17 @@ Coded values:
   valid codes are ever offered -- never a value entered earlier for
   this or any other field.  How strictly the list is enforced is set
   by `adif-require-known-values'.
+
+Use from other packages:
+  Another package that writes ADIF, such as a logger, can take the
+  specification from here rather than carrying its own copy.  These
+  are the supported interface, and will keep their meaning:
+
+    `adif-field-names'           every field name in the specification
+    `adif-field-values-for'      the valid codes for a field, with
+                                 their descriptions, or nil
+    `adif-record-to-string'      one record, lengths computed
+    `adif-file-header'           a new log's header, lengths computed
+    `adif-specification-version' the ADIF release the tables follow
+
+  Names containing a double hyphen are internal and may change.
