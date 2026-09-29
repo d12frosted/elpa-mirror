@@ -2526,13 +2526,13 @@
       (:authors ("Hugo Thunnissen" . "devel@hugot.nl"))
       (:commit . "ce64041a4be5da24514356a3d6e7f6b9fafdd51b"))])
  (phps-mode
-  . [(0 4 52) ((emacs (26)))
+  . [(0 4 53) ((emacs (26)))
      "Major mode for PHP with code intelligence" tar
-     ((:url . "https://github.com/cjohansson/emacs-phps-mode")
+     ((:url . "https://forgejo.cvj.se/cjohansson/emacs-phps-mode")
       (:keywords "tools" "convenience")
       (:maintainer "Christian Johansson" . "christian@cvj.se")
       (:authors ("Christian Johansson" . "christian@cvj.se"))
-      (:commit . "81029f85ea6563d92a6091c12935600e431e4ea5"))])
+      (:commit . "fb1c2ab97c3c554f5e23da418cd3839cb3471d6b"))])
  (pinentry
   . [(0 1) nil "GnuPG Pinentry server implementation" tar
      ((:keywords "gnupg") (:maintainer "Daiki Ueno" . "ueno@gnu.org")

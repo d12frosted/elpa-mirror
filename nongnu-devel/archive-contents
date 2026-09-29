@@ -36,14 +36,13 @@
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
       (:commit . "b9a2512e54d8366a0b0472c418d1d2610c98c3ae"))])
  (alect-themes
-  . [(0 11 0 20251205 150325) ((emacs (24 0)))
-     "Configurable light, dark and black themes for Emacs 24 or later"
-     tar
+  . [(0 11 0 20260928 15) ((emacs (25 0)))
+     "Configurable light, dark and black themes" tar
      ((:url . "https://github.com/alezost/alect-themes")
       (:keywords "color" "theme")
       (:maintainer "Alex Kost" . "alezost@gmail.com")
       (:authors ("Alex Kost" . "alezost@gmail.com"))
-      (:commit . "b1f97e4bc0dc6ec91c7e9999fbe9fa371016463b"))])
+      (:commit . "c1730e30bb96c578fc984ce533d2253fd83517b2"))])
  (ample-theme
   . [(0 3 0 0 20260611 50) nil "Calm Dark Theme for Emacs" tar
      ((:url . "https://github.com/jordonbiondo/ample-theme")
@@ -580,13 +579,13 @@
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
  (evil-collection
-  . [(3 0 3 0 20260920 3) ((emacs (29 1)) (evil (1 2 13)))
+  . [(3 0 3 0 20260927 4) ((emacs (29 1)) (evil (1 2 13)))
      "A set of keybindings for Evil mode" tar
      ((:url . "https://github.com/emacs-evil/evil-collection")
       (:keywords "evil" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "2cca4b8e479b1e7923bcef40d3006f6b7e33d996"))])
+      (:commit . "a24e38cebd7a474423898fae7f58ddfd98d87ace"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -1273,13 +1272,13 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "50cac3f726abd4e7872b8fa36ede72550ce66a64"))])
  (loopy
-  . [(0 16 1 0 20260920 14)
+  . [(0 16 1 0 20260927 15)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://codeberg.org/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "c50c15d87709ece2bee7f45d6a6d906bb8524aac"))])
+      (:commit . "f02d09667489011e412321ee9331b5163c4c1b36"))])
  (loopy-dash
   . [(0 13 0 0 20260718 11)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))
