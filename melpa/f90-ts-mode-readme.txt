@@ -3,6 +3,10 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog:
 [09-2026]
+  - `f90-ts-mode.el' decomposed into several smaller packages.  Experimental
+    `f90-ts-nav' (tree in fortran menu and tree view in side panel) has been
+    made optional and requires a separate use-package to load it,
+    see `README.md'.
   - `f90-ts-indent-delete-trailing-whitespace' added to automatically delete
     trailing whitespace after indentation operation.
   - Font locking of interface name in deferred procedure declaration fixed.

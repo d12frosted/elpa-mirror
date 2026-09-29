@@ -488,7 +488,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 2 1 0 20260926 0) ((emacs (29 1)) (compat (31)))
+  . [(4 2 1 0 20260929 1) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -497,7 +497,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "acbb86e342d2b8f85dfb30dce9df01db9a829c77"))])
+      (:commit . "f69b4da9b89be04e3b5bd0fecac77a48d914e64c"))])
  (elfeed-web
   . [(4 1 0 0 20260821 0)
      ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
@@ -1037,7 +1037,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20260929 65) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20260929 67) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1045,14 +1045,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "6bb792835d4664ab13246ccb520c8d338ac00d69"))])
+      (:commit . "1858dc0cec60cff5e4f992f41f0740a66ca31ae2"))])
  (helm-core
-  . [(4 0 7 0 20260929 65) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20260929 67) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "6bb792835d4664ab13246ccb520c8d338ac00d69"))])
+      (:commit . "1858dc0cec60cff5e4f992f41f0740a66ca31ae2"))])
  (hermes
   . [(0 7 1 0 20260922 20)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1519,12 +1519,12 @@
      ((:url . "http://github.com/bastibe/org-journal")
       (:commit . "6460f6f2b0835b4b8aa87d5fdf40cac7deb319f5"))])
  (org-mime
-  . [(0 3 4 0 20251201 24527) ((emacs (27 1)))
+  . [(0 3 5 0 20260929 0) ((emacs (29 1)))
      "org html export for text/html MIME emails" tar
      ((:url . "http://github.com/org-mime/org-mime")
       (:keywords "mime" "mail" "email" "html")
-      (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
-      (:commit . "ffaad784a8597ee52842a578c01bd347d3e0281d"))])
+      (:maintainer "Chen Bin" . "chb_shAThotmailDOTcom")
+      (:commit . "18b421f9a73428a49d9a534d3920e63ca21bea5b"))])
  (org-present
   . [(0 1 0 20220806 144744) ((org (7)))
      "Minimalist presentation minor-mode for Emacs org-mode." tar
@@ -1704,13 +1704,13 @@
       (:authors ("Lin Jian" . "me@linj.tech"))
       (:commit . "d7099ae0759a9444489278b1749a8d68fe219e33"))])
  (projectile
-  . [(3 5 0 -4 0 20260916 60) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20260929 64) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "f902073c1d10bb125875470c9dcbdcd7c9a1eefb"))])
+      (:commit . "7a33281b1efcba42d4355e465258e1a7dc1899aa"))])
  (proof-general
   . [(4 6 -4 0 20260825 269) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar

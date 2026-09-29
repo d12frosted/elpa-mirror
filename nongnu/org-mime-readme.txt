@@ -1,7 +1,7 @@
 1 org-mime
 ══════════
 
-  [https://travis-ci.org/org-mime/org-mime.svg?branch=master]
+  [file:https://github.com/org-mime/org-mime/actions/workflows/test.yml/badge.svg]
   [file:https://elpa.nongnu.org/nongnu/org-mime.svg]
   [file:http://melpa.org/packages/org-mime-badge.svg]
   [file:http://stable.melpa.org/packages/org-mime-badge.svg]
@@ -12,13 +12,13 @@
   can be useful for sending tables, fontified source code, and inline
   images in email.
 
-  Tested on Emacs 25.1, 26.1, 27
+  Tested on Emacs 29 30
 
   Screenshot: <file:screenshot.png>
 
 
-[https://travis-ci.org/org-mime/org-mime.svg?branch=master]
-<https://travis-ci.org/org-mime/org-mime>
+[file:https://github.com/org-mime/org-mime/actions/workflows/test.yml/badge.svg]
+<https://github.com/org-mime/org-mime/actions/workflows/test.yml>
 
 [file:https://elpa.nongnu.org/nongnu/org-mime.svg]
 <https://elpa.nongnu.org/nongnu/org-mime.html>
@@ -91,11 +91,11 @@
   Org-mode buffers,
   ┌────
   │ (add-hook 'message-mode-hook
-  │ 	  (lambda ()
-  │ 	    (local-set-key (kbd "C-c M-o") 'org-mime-htmlize)))
+  │           (lambda ()
+  │             (local-set-key (kbd "C-c M-o") 'org-mime-htmlize)))
   │ (add-hook 'org-mode-hook
-  │ 	  (lambda ()
-  │ 	    (local-set-key (kbd "C-c M-o") 'org-mime-org-buffer-htmlize)))
+  │           (lambda ()
+  │             (local-set-key (kbd "C-c M-o") 'org-mime-org-buffer-htmlize)))
   └────
 
 
@@ -146,24 +146,24 @@
 
   ┌────
   │ (add-hook 'org-mime-html-hook
-  │ 	  (lambda ()
-  │ 	    (org-mime-change-element-style
-  │ 	     "pre" (format "color: %s; background-color: %s; padding: 0.5em;"
-  │ 			   "#E6E1DC" "#232323"))))
+  │           (lambda ()
+  │             (org-mime-change-element-style
+  │              "pre" (format "color: %s; background-color: %s; padding: 0.5em;"
+  │                            "#E6E1DC" "#232323"))))
   │ 
   │ ;; the following can be used to nicely offset block quotes in email bodies
   │ (add-hook 'org-mime-html-hook
-  │ 	  (lambda ()
-  │ 	    (org-mime-change-element-style
-  │ 	     "blockquote" "border-left: 2px solid gray; padding-left: 4px;")))
+  │           (lambda ()
+  │             (org-mime-change-element-style
+  │              "blockquote" "border-left: 2px solid gray; padding-left: 4px;")))
   └────
 
   Below code renders text between "#" in red color,
   ┌────
   │ (add-hook 'org-mime-html-hook
-  │ 	  (lambda ()
-  │ 	    (while (re-search-forward "#\\([^#]*\\)#" nil t)
-  │ 	      (replace-match "<span style=\"color:red\">\\1</span>"))))
+  │           (lambda ()
+  │             (while (re-search-forward "#\\([^#]*\\)#" nil t)
+  │               (replace-match "<span style=\"color:red\">\\1</span>"))))
   └────
   For other customization options see the org-mime customization group.
 
@@ -181,10 +181,17 @@
   overrides Org default settings (but still inferior to file-local
   settings),
   ┌────
-  │ (setq org-mime-export-options '(:with-latex imagemagick
-  │ 				:section-numbers nil
-  │ 				:with-author nil
-  │ 				:with-toc nil))
+  │ (setq org-mime-export-options
+  │       '(:with-latex imagemagick
+  │         :section-numbers nil
+  │         :with-author nil
+  │         :with-toc nil))
+  │ 
+  │ (setq org-mime-export-options
+  │       '(:with-latex verbatim ; Keep everything in verbatim
+  │         :section-numbers nil
+  │         :with-author nil
+  │         :with-toc nil))
   └────
   Or just setup your export options in org buffer/subtree.
 
@@ -199,9 +206,6 @@
   <https://github.com/org-mime/org-mime/issues/33> for technical
   details.
 
-  You can also modify the variable
-  `org-mime-org-html-with-latex-default'.
-
 
 4.6 fix exported plain text and html
 ────────────────────────────────────
@@ -212,18 +216,18 @@
   `org-mime-plain-text-hook'. For example, below code removes "\\",
   ┌────
   │ (add-hook 'org-mime-plain-text-hook
-  │ 	  (lambda ()
-  │ 	    (while (re-search-forward "\\\\" nil t)
-  │ 	      (replace-match ""))))
+  │           (lambda ()
+  │             (while (re-search-forward "\\\\" nil t)
+  │               (replace-match ""))))
   └────
 
   The exported HTML could be modified in `org-mime-html-hook'. For
   example, below code renders text between "#" in red color,
   ┌────
   │ (add-hook 'org-mime-html-hook
-  │ 	  (lambda ()
-  │ 	    (while (re-search-forward "#\\([^#]*\\)#" nil t)
-  │ 	      (replace-match "<span style=\"color:red\">\\1</span>"))))
+  │           (lambda ()
+  │             (while (re-search-forward "#\\([^#]*\\)#" nil t)
+  │               (replace-match "<span style=\"color:red\">\\1</span>"))))
   └────
 
   Surely you can fix the exported HTML in `org-mode'. For example, One
@@ -253,10 +257,10 @@
   ┌────
   │ (setq org-mime-find-html-start
   │       (lambda (start)
-  │ 	(save-excursion
-  │ 	  (goto-char start)
-  │ 	  (search-forward "<#secure method=pgpmime mode=sign>")
-  │ 	  (+ (point) 1))))
+  │         (save-excursion
+  │           (goto-char start)
+  │           (search-forward "<#secure method=pgpmime mode=sign>")
+  │           (+ (point) 1))))
   └────
 
 

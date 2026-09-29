@@ -2,13 +2,37 @@
  • Building package f90-ts-mode
 From https://github.com/mscfd/emacs-f90-ts-mode
 Updating /mnt/store/melpa/working/f90-ts-mode/
-Checking out fffcbe266a883f3ada3379bf4338ca29ebb88329
+Checking out 3815dc52119467c6b01268c2eed94d86a5bc4bb0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/f90-ts-mode/
-  to /tmp/f90-ts-mode-F5ptk6/f90-ts-mode-20260927.1203/
+  to /tmp/f90-ts-mode-KluGXE/f90-ts-mode-20260929.1814/
+    f90-ts-auxiliary.el -> f90-ts-auxiliary.el
+    f90-ts-break-join-fill.el -> f90-ts-break-join-fill.el
+    f90-ts-comment-region.el -> f90-ts-comment-region.el
+    f90-ts-custom.el -> f90-ts-custom.el
+    f90-ts-font-lock.el -> f90-ts-font-lock.el
+    f90-ts-imenu.el -> f90-ts-imenu.el
+    f90-ts-indent.el -> f90-ts-indent.el
+    f90-ts-mark-region.el -> f90-ts-mark-region.el
     f90-ts-mode.el -> f90-ts-mode.el
-Created f90-ts-mode-20260927.1203.tar containing:
-  f90-ts-mode-20260927.1203/
-  f90-ts-mode-20260927.1203/f90-ts-mode-pkg.el
-  f90-ts-mode-20260927.1203/f90-ts-mode.el
-Built f90-ts-mode in 11.368s, finished at 2026-09-29T15:21:15+0000
+    f90-ts-nav.el -> f90-ts-nav.el
+    f90-ts-thing.el -> f90-ts-thing.el
+    f90-ts-workaround.el -> f90-ts-workaround.el
+    f90-ts-xref.el -> f90-ts-xref.el
+Created f90-ts-mode-20260929.1814.tar containing:
+  f90-ts-mode-20260929.1814/
+  f90-ts-mode-20260929.1814/f90-ts-auxiliary.el
+  f90-ts-mode-20260929.1814/f90-ts-break-join-fill.el
+  f90-ts-mode-20260929.1814/f90-ts-comment-region.el
+  f90-ts-mode-20260929.1814/f90-ts-custom.el
+  f90-ts-mode-20260929.1814/f90-ts-font-lock.el
+  f90-ts-mode-20260929.1814/f90-ts-imenu.el
+  f90-ts-mode-20260929.1814/f90-ts-indent.el
+  f90-ts-mode-20260929.1814/f90-ts-mark-region.el
+  f90-ts-mode-20260929.1814/f90-ts-mode-pkg.el
+  f90-ts-mode-20260929.1814/f90-ts-mode.el
+  f90-ts-mode-20260929.1814/f90-ts-nav.el
+  f90-ts-mode-20260929.1814/f90-ts-thing.el
+  f90-ts-mode-20260929.1814/f90-ts-workaround.el
+  f90-ts-mode-20260929.1814/f90-ts-xref.el
+Built f90-ts-mode in 5.354s, finished at 2026-09-29T20:33:17+0000

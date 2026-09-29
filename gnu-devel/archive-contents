@@ -769,12 +769,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20260925 29) ((emacs (28 1)))
+  . [(4 2 3 0 20260929 30) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "4a4eee6cbb0730dcc499235f55625d5d3d53cfae"))])
+      (:commit . "0235c24249a6ab665ecab9565bdb0ddfe76ace22"))])
  (denote-journal
   . [(0 3 0 0 20260520 123338) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -3878,14 +3878,14 @@
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
       (:commit . "57dfaf751f9d71e921cdbeaa34b9aafa3c502ba3"))])
  (verilog-mode
-  . [(2026 8 31 185049335 0 20260927 0) nil
+  . [(2026 8 31 185049335 0 20260929 1) nil
      "major mode for editing verilog source in Emacs" tar
      ((:url . "https://www.veripool.org") (:keywords "languages")
       (:maintainer ("Michael McNamara" . "mac@verilog.com")
 		   ("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:authors ("Michael McNamara" . "mac@verilog.com")
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
-      (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
+      (:commit . "240ea4d15c654808823c7188d7ecba5c219a8c1f"))])
  (vertico
   . [(2 15 0 20260913 0) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
@@ -4100,10 +4100,10 @@
       (:authors ("Mattias Engdegård" . "mattias.engdegard@gmail.com"))
       (:commit . "fc4d6b5ddae9eb2c8adc2b117e6f33f3a09a4e96"))])
  (xref
-  . [(1 7 0 0 20260922 50) ((emacs (26 1)))
+  . [(1 7 0 0 20260929 51) ((emacs (26 1)))
      "Cross-referencing commands" tar
      ((:url . "https://elpa.gnu.org/packages/xref.html")
-      (:commit . "388b97002ea9931223e6d8925c3e16c978653ac9"))])
+      (:commit . "240ea4d15c654808823c7188d7ecba5c219a8c1f"))])
  (xref-union
   . [(0 2 0 0 20260222 131318) ((emacs (25 1)))
      "Combine multiple Xref backends" tar

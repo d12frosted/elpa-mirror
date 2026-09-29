@@ -12,7 +12,7 @@
   can be useful for sending tables, fontified source code, and inline
   images in email.
 
-  Tested on Emacs 25.1, 26.1, 27
+  Tested on Emacs 29 30
 
   Screenshot: <file:screenshot.png>
 
@@ -181,10 +181,17 @@
   overrides Org default settings (but still inferior to file-local
   settings),
   ┌────
-  │ (setq org-mime-export-options '(:with-latex imagemagick
-  │                                 :section-numbers nil
-  │                                 :with-author nil
-  │                                 :with-toc nil))
+  │ (setq org-mime-export-options
+  │       '(:with-latex imagemagick
+  │         :section-numbers nil
+  │         :with-author nil
+  │         :with-toc nil))
+  │ 
+  │ (setq org-mime-export-options
+  │       '(:with-latex verbatim ; Keep everything in verbatim
+  │         :section-numbers nil
+  │         :with-author nil
+  │         :with-toc nil))
   └────
   Or just setup your export options in org buffer/subtree.
 
@@ -198,9 +205,6 @@
   Please double check your org and latex setup. See
   <https://github.com/org-mime/org-mime/issues/33> for technical
   details.
-
-  You can also modify the variable
-  `org-mime-org-html-with-latex-default'.
 
 
 4.6 fix exported plain text and html
