@@ -12,3 +12,7 @@ its key or mouse binding.
 
 - `keycast-log-mode' displays a list of recent bindings in a dedicated
   frame.
+
+A fifth mode, `keycast-invisible-mode', determines the current binding,
+but without displaying it anywhere.  Use `keycast-format' to format the
+current binding, and write your own code to display it somewhere.

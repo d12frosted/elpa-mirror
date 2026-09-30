@@ -177,5 +177,10 @@ Use from other packages:
     `adif-record-to-string'      one record, lengths computed
     `adif-file-header'           a new log's header, lengths computed
     `adif-specification-version' the ADIF release the tables follow
+    `adif-field-type'            a field's data type, such as Date
+    `adif-field-import-only-p'   whether a field is not to be written
+    `adif-value-import-only-p'   whether a code is not to be written
+    `adif-value-problem'         what is wrong with one value, or nil
+    `adif-record-problems'       what is wrong with a whole record
 
   Names containing a double hyphen are internal and may change.

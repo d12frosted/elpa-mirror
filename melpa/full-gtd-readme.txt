@@ -1,8 +1,7 @@
 Complete Getting Things Done for Emacs org-mode.
 
-The only Emacs implementation that covers the entire GTD framework:
-capture, clarify, organize, reflect, engage, plus the Natural
-Planning Model and the Six Horizons of Focus.
+Covering capture, clarify, organize, reflect, engage, plus the
+Natural Planning Model and the Six Horizons of Focus.
 
 Key features:
 - One-key inbox processing with clarify, staging table, and hybrid
