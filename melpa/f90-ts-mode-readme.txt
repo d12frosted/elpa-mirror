@@ -1,7 +1,11 @@
 f90-ts-mode is a major mode for editing Fortran 90/2003 (and newer) source
 files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
-Changelog:
+Changelog (recent):
+[10-2026]
+  - Transient menu restructured and decomposed.
+  - Support for hideshow and outline added.
+
 [09-2026]
   - `f90-ts-mode.el' decomposed into several smaller packages.  Experimental
     `f90-ts-nav' (tree in fortran menu and tree view in side panel) has been
@@ -50,10 +54,6 @@ Changelog:
   - Smart end completion of coarray "change team ... end team" blocks fixed.
     It was wrongly assumed that the end statement is "end change team".
 
-[07-2026]
-  - Inherit attribute of some font lock faces fixed.
-  - Alignment of unary expressions with leading minus or plus improved.
-
 Features:
   - Almost all statements up to F2023
   - Syntax highlighting, including syntactically incorrect code
@@ -73,6 +73,7 @@ Features:
   - Coarray keywords and statements
   - Imenu and a Fortran menu in the menu bar
   - Navigation (defun, things, Xref, side panel tree)
+  - Hideshow and outline support (support for external treesit-fold is pending)
 
 Features can be found by the fortran menu or a transient popup bound
 to the key C-c C-f.

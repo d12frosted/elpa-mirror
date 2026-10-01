@@ -2,10 +2,10 @@
  • Building package ekg-agent
 From https://github.com/ahyatt/ekg
 Updating /mnt/store/melpa/working/ekg-agent/
-Checking out 3ea7ac9fc6f881ce63e8ab06dc71f4f383016c6f
+Checking out 84c9d9a9685f07b6988a618f11920ca063474fc8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ekg-agent/
-  to /tmp/ekg-agent-K6CIm7/ekg-agent-20260717.2134/
+  to /tmp/ekg-agent-vHZ8ao/ekg-agent-20260930.14/
     ekg-agent.el -> ekg-agent.el
   ! agent_tools/ekg-add-note -> ekg-add-note
   ! agent_tools/ekg-agent-debug-analyzer => ekg-agent-debug-analyzer
@@ -17,23 +17,23 @@ Copying files (->) and directories (=>)
   ! agent_tools/ekg-trash -> ekg-trash
   ! agent_tools/ekg-update-tags -> ekg-update-tags
   ! agent_tools/skill.md -> skill.md
-Created ekg-agent-20260717.2134.tar containing:
-  ekg-agent-20260717.2134/
-  ekg-agent-20260717.2134/ekg-add-note
-  ekg-agent-20260717.2134/ekg-agent-debug-analyzer/
-  ekg-agent-20260717.2134/ekg-agent-debug-analyzer/SKILL.md
-  ekg-agent-20260717.2134/ekg-agent-debug-analyzer/agents/
-  ekg-agent-20260717.2134/ekg-agent-debug-analyzer/agents/openai.yaml
-  ekg-agent-20260717.2134/ekg-agent-debug-analyzer/scripts/
-  ekg-agent-20260717.2134/ekg-agent-debug-analyzer/scripts/analyze_debug_json.py
-  ekg-agent-20260717.2134/ekg-agent-pkg.el
-  ekg-agent-20260717.2134/ekg-agent.el
-  ekg-agent-20260717.2134/ekg-append-note
-  ekg-agent-20260717.2134/ekg-org-add-child
-  ekg-agent-20260717.2134/ekg-org-edit
-  ekg-agent-20260717.2134/ekg-read
-  ekg-agent-20260717.2134/ekg-tags
-  ekg-agent-20260717.2134/ekg-trash
-  ekg-agent-20260717.2134/ekg-update-tags
-  ekg-agent-20260717.2134/skill.md
-Built ekg-agent in 4.785s, finished at 2026-10-01T01:56:47+0000
+Created ekg-agent-20260930.14.tar containing:
+  ekg-agent-20260930.14/
+  ekg-agent-20260930.14/ekg-add-note
+  ekg-agent-20260930.14/ekg-agent-debug-analyzer/
+  ekg-agent-20260930.14/ekg-agent-debug-analyzer/SKILL.md
+  ekg-agent-20260930.14/ekg-agent-debug-analyzer/agents/
+  ekg-agent-20260930.14/ekg-agent-debug-analyzer/agents/openai.yaml
+  ekg-agent-20260930.14/ekg-agent-debug-analyzer/scripts/
+  ekg-agent-20260930.14/ekg-agent-debug-analyzer/scripts/analyze_debug_json.py
+  ekg-agent-20260930.14/ekg-agent-pkg.el
+  ekg-agent-20260930.14/ekg-agent.el
+  ekg-agent-20260930.14/ekg-append-note
+  ekg-agent-20260930.14/ekg-org-add-child
+  ekg-agent-20260930.14/ekg-org-edit
+  ekg-agent-20260930.14/ekg-read
+  ekg-agent-20260930.14/ekg-tags
+  ekg-agent-20260930.14/ekg-trash
+  ekg-agent-20260930.14/ekg-update-tags
+  ekg-agent-20260930.14/skill.md
+Built ekg-agent in 5.956s, finished at 2026-10-01T11:53:11+0000

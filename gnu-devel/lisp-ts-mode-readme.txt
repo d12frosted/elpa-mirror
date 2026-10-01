@@ -39,6 +39,9 @@ Table of Contents
   directives. This also means `forward-sexp' moves across those
   directives like it does on regular lists.
 
+  The mode also has enhanced `imenu' support:
+  <file:imenu comparison.png>
+
   Aside from that, the truth is tree-sitter doesn't add nearly as much
   to most Lisp languages *on its own* compared to other
   languages. Emacs' syntax system is (unsurprisingly) extremely well

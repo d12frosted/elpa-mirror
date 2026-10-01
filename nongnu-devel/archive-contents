@@ -294,13 +294,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "501548c3d51f926c687e8cd838c5865ec45d03cc"))])
  (crux
-  . [(0 6 0 -4 0 20260930 37) ((emacs (28 1)))
+  . [(0 6 0 -4 0 20261001 44) ((emacs (28 1)))
      "A Collection of Ridiculously Useful eXtensions" tar
      ((:url . "https://github.com/bbatsov/crux")
       (:keywords "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "aa04bddd6f88934e4cddcd3b366efd15d27b3ab0"))])
+      (:commit . "29b05ef8eda684aa8cb2156ef68aaef2f50985e4"))])
  (csv2ledger
   . [(1 5 5 0 20260621 0) ((emacs (29 1)) (csv-mode (1 24)))
      "Convert csv files to ledger entries" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20260927 21)
+  . [(4 7 1 0 20260930 22)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,9 +1343,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "5c73c1c411574a3561356d77907dbb1ce90b4e0b"))])
+      (:commit . "6c1312a7f7a56c9016c4cdbd5b3483cfafe20f57"))])
  (magit-section
-  . [(4 7 1 0 20260927 21)
+  . [(4 7 1 0 20260930 22)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1354,7 +1354,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "5c73c1c411574a3561356d77907dbb1ce90b4e0b"))])
+      (:commit . "6c1312a7f7a56c9016c4cdbd5b3483cfafe20f57"))])
  (markdown-mode
   . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1364,14 +1364,14 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "76cb4ffecfdf95ee769e5cb4608e04202c3c1521"))])
  (mastodon
-  . [(2 1 5 0 20260913 78)
+  . [(2 1 6 0 20260930 80)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "156a4e2c76a2cd2c69c4e4fe35800a08afb17bfe"))])
+      (:commit . "fdc3890adf8a9eade52ba2f53c23f1dc48f21464"))])
  (material-theme
   . [(2015 0 20210904 122621) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar
@@ -1728,12 +1728,12 @@
       (:authors ("David Christiansen" . "david@davidchristiansen.dk"))
       (:commit . "50b102c1c0935fd3e0c465feed7f27d66b21cdf3"))])
  (racket-mode
-  . [(1 0 20260908 0) ((emacs (25 1)) (compat (30 0 2 0)))
+  . [(1 0 20260926 0) ((emacs (25 1)) (compat (30 0 2 0)))
      "Racket editing, REPL, and more" tar
      ((:url . "https://www.racket-mode.com/")
       (:authors
        ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
-      (:commit . "747b922221991c9eaff37976de325a6d7e571dd9"))])
+      (:commit . "112ede7765c19011f58d67b4dac9a5435846a07d"))])
  (radio
   . [(0 4 3 0 20260212 144358) ((emacs (29 1)))
      "Listen to Internet radio" tar
@@ -1893,11 +1893,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
  (slime
-  . [(2 32 -4 0 20260925 73) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20261001 75) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "6bcb626f1a7e2b4f39146f6f9c3d9460858f7ab1"))])
+      (:commit . "82dfda1a83e22de6fad93f54f3201f5dec6754fb"))])
  (sly
   . [(1 0 43 0 20260801 146) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar

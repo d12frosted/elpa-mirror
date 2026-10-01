@@ -4759,7 +4759,7 @@
   (projectile :url "https://github.com/bbatsov/projectile")
   (projectile-codesearch :url "https://github.com/abingham/emacs-codesearch")
   (projectile-git-autofetch :url "https://github.com/andrmuel/projectile-git-autofetch")
-  (projectile-rails :url "https://github.com/asok/projectile-rails")
+  (projectile-rails :url "https://github.com/Silex/projectile-rails")
   (projectile-ripgrep :url "https://github.com/nlamirault/ripgrep.el")
   (projectile-sift :url "https://github.com/nlamirault/sift.el")
   (projectile-speedbar :url "https://github.com/anshulverma/projectile-speedbar")
