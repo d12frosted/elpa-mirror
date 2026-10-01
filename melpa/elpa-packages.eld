@@ -2979,7 +2979,6 @@
   (ivy-erlang-complete :url "https://github.com/s-kostyaev/ivy-erlang-complete")
   (ivy-explorer :url "https://github.com/clemera/ivy-explorer")
   (ivy-file-preview :url "https://github.com/jcs-legacy/ivy-file-preview")
-  (ivy-fuz :url "https://github.com/Silex/ivy-fuz.el")
   (ivy-gitlab :url "https://github.com/nlamirault/emacs-gitlab")
   (ivy-historian :url "https://github.com/PythonNut/historian.el")
   (ivy-hoogle :url "https://github.com/aartamonau/ivy-hoogle")

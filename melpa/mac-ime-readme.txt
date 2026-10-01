@@ -8,7 +8,9 @@ IME when you press prefix keys (like C-x) or when Emacs prompts for input
 
 Note that this package requires a dynamic module (`mac-ime-module.so`).
 On the first activation, it will prompt you and download the module
-from GitHub using `curl`.  Please ensure you are online for this step.
+from GitHub using `curl` into `mac-ime-module-directory', where it is
+kept across package upgrades.  Please ensure you are online for this
+step.
 
 To use this package, add the following to your init file:
 
