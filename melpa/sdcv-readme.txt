@@ -14,6 +14,7 @@ Search around word and display with `popup tooltip'.
 Search input word and display with buffer.
 `sdcv-search-input+'
 Search input word and display with `popup tooltip'.
+`sdcv-set-dictionaries-list'
 
 Tips:
 
