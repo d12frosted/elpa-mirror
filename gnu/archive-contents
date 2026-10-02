@@ -2688,12 +2688,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "672df0288b55f8bb7ebacdce5335f9e11955482e"))])
  (qrencode
-  . [(1 5) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 6) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "60cc1b9d0a7a0026c20a7446072cf94e3b1f63c7"))])
+      (:commit . "3ba67bdf376c9e1445bcc4710c7c8c4bd3c5c65c"))])
  (quarter-plane
   . [(0 1) nil "editing using quarter-plane screen model" tar
      ((:keywords "convenience" "wp")
@@ -3445,12 +3445,12 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
  (typewriter
-  . [(1 1 0) ((emacs (30 1))) "Turn Emacs into a text adder" tar
+  . [(1 2 0) ((emacs (30 1))) "Turn Emacs into a text adder" tar
      ((:url . "https://github.com/enricoflor/typewriter.el")
       (:keywords "wp")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "60d3a8d49601460a55604ad19831ceb6789c8935"))])
+      (:commit . "6bf6981843ca40541937480a8c44ec684a5a806e"))])
  (ulisp-repl
   . [(1 0 3) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")

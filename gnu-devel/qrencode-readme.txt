@@ -6,7 +6,7 @@
   For example the self-link (<https://github.com/ruediger/qrencode-el>)
   below was generated using this code:
 
-  <file:qr-self.png>
+  <file:qr-self.svg>
 
 
 1.1 Usage
@@ -39,7 +39,10 @@
 
   SVG export is available if `svg.el' (Emacs 26.1 or newer) is
   available.  This can be selected by customizing
-  `qrencode-export-format' to `'svg'.
+  `qrencode-export-format' to `'svg' or by using the `.svg' file name
+  suffix.  Filename based format detection is controlled using
+  `qrencode-export-format-based-on-filename', which is enabled by
+  default.
 
 
 1.1.1 Converting different bitmaps

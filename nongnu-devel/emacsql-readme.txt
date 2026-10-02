@@ -8,8 +8,8 @@
 
   Any [readable lisp value] can be stored as a value in EmacSQL,
   including numbers, strings, symbols, lists, vectors, and
-  closures. EmacSQL has no concept of "TEXT" values; it's all just lisp
-  objects. The lisp object `nil' corresponds 1:1 with `NULL' in the
+  closures. EmacSQL has no concept of "TEXT" values; it's all just Lisp
+  objects. The Lisp object `nil' corresponds 1:1 with `NULL' in the
   database.
 
   Requires Emacs 28 or later.
@@ -104,7 +104,7 @@
   specifications. The rest of the list specifies table constraints. A
   column identifier is a symbol and a column's specification can either
   be just this symbol or it can include constraints as a list. Because
-  EmacSQL stores entire lisp objects as values, the only relevant (and
+  EmacSQL stores entire Lisp objects as values, the only relevant (and
   allowed) types are `integer', `float', and `object' (default).
 
   ┌────
@@ -112,7 +112,7 @@
   └────
 
   Dashes in identifiers are converted into underscores when compiled
-  into SQL. This allows for lisp-style identifiers to be used in SQL.
+  into SQL. This allows for Lisp-style identifiers to be used in SQL.
   Constraints follow the compilation rules below.
 
   ┌────
@@ -146,7 +146,7 @@
 1.3 Operators
 ─────────────
 
-  Expressions are written lisp-style, with the operator first. If it
+  Expressions are written Lisp-style, with the operator first. If it
   looks like an operator EmacSQL treats it like an operator. However,
   several operators are special.
 
@@ -207,7 +207,7 @@
   statements. You shouldn't normally be concatenating strings on your
   own. (And it leaves out any possibility of a SQL injection!) See the
   "Usage" section above for examples. A statement is a vector of
-  keywords and other lisp object.
+  keywords and other Lisp object.
 
   Prepared EmacSQL s-expression statements are compiled into SQL
   statements. The statement compiler is memorized so that using the same
@@ -220,7 +220,7 @@
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Rather than the typical uppercase SQL keywords, keywords in a prepared
-  EmacSQL statement are literally just that: lisp keywords. EmacSQL only
+  EmacSQL statement are literally just that: Lisp keywords. EmacSQL only
   understands a very small amount of SQL's syntax. The compiler follows
   some simple rules to convert an s-expression into SQL.
 

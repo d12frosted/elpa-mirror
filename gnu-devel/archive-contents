@@ -1161,7 +1161,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "583951606e4e19fd53acd8c5691210b9acb524d7"))])
  (ellama
-  . [(1 33 0 0 20260930 1)
+  . [(1 33 0 0 20261002 8)
      ((emacs (28 1)) (llm (0 31 1)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1169,7 +1169,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "b35e238972d3f1a91eb4aa8fb5b12c3e4a85e748"))])
+      (:commit . "b0a00300f15403fbeaa3802ab6d894ea0f4dc639"))])
  (emacs-gc-stats
   . [(1 4 2 0 20231206 152254) ((emacs (25 1)))
      "Collect Emacs GC statistics" tar
@@ -2880,12 +2880,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
  (qrencode
-  . [(1 6 -2 2 0 20260927 1) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 6 0 20261001 0) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "b197c5d1d9e258ecd431713419ebacffffe492d5"))])
+      (:commit . "3ba67bdf376c9e1445bcc4710c7c8c4bd3c5c65c"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
@@ -3654,7 +3654,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 8 0 20260926 10)
+  . [(0 13 8 0 20261002 15)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3664,7 +3664,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "a789ecb5485085adcbb404c736b95f71dee04329"))])
+      (:commit . "c886106bd506c4629ece352732f735657605cddb"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
@@ -3717,13 +3717,13 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
  (typewriter
-  . [(1 1 0 0 20260919 3) ((emacs (30 1)))
+  . [(1 2 0 0 20261001 5) ((emacs (30 1)))
      "Turn Emacs into a text adder" tar
      ((:url . "https://github.com/enricoflor/typewriter.el")
       (:keywords "wp")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "5b6ba16d1b0e2c9b2bbeb034a6c821019f254983"))])
+      (:commit . "74bfc798116778d0efd88e9a6bad861d4a5786a8"))])
  (ulisp-repl
   . [(1 0 3 0 20230604 111559) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")

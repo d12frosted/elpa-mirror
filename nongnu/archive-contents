@@ -253,7 +253,7 @@
       (:authors ("Chris Wanstrath" . "chris@ozmm.org"))
       (:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (cond-let
-  . [(1 1 4) ((emacs (28 1)))
+  . [(1 1 5) ((emacs (28 1)))
      "Additional and improved binding conditionals" tar
      ((:url . "https://github.com/tarsius/cond-let")
       (:keywords "extensions")
@@ -261,7 +261,7 @@
 		   . "emacs.cond-let@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.cond-let@jonas.bernoulli.dev"))
-      (:commit . "3b88187fe067d4ca3dec3ef8a329b0ce18bdb356"))])
+      (:commit . "09292a77001434f59ab55c775dec2b98cb18d028"))])
  (consult-flycheck
   . [(1 2) ((emacs (29 1)) (consult (3 5)) (flycheck (35)))
      "Provides the command `consult-flycheck'" tar
@@ -278,13 +278,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "501548c3d51f926c687e8cd838c5865ec45d03cc"))])
  (crux
-  . [(0 5 0) ((emacs (26 1)))
+  . [(0 6 0) ((emacs (28 1)))
      "A Collection of Ridiculously Useful eXtensions" tar
      ((:url . "https://github.com/bbatsov/crux")
       (:keywords "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "7980df10e47eef41d4d1c57cfb690ec406381ed3"))])
+      (:commit . "d8208e9408357fa7c35b394587983257f915c465"))])
  (csv2ledger
   . [(1 5 5) ((emacs (29 1)) (csv-mode (1 24)))
      "Convert csv files to ledger entries" tar
@@ -504,12 +504,12 @@
       (:authors ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
       (:commit . "d799c467a1f35934f96d33960d638ddf796f01ba"))])
  (emacsql
-  . [(4 4 1) ((emacs (28 1))) "High-level SQL database front-end" tar
+  . [(4 4 2) ((emacs (28 1))) "High-level SQL database front-end" tar
      ((:url . "https://github.com/magit/emacsql")
       (:maintainer "Jonas Bernoulli"
 		   . "emacs.emacsql@jonas.bernoulli.dev")
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "d811bbefcb5e27841af55cae53aa939ba720de77"))])
+      (:commit . "7a4c607912c8fdd1fca4def4915d68f43b12d4da"))])
  (engine-mode
   . [(2 2 4) ((cl-lib (0 5))) "Define and query search engines" tar
      ((:url . "https://github.com/hrs/engine-mode")
@@ -868,7 +868,7 @@
       (:authors ("Jeronimo Pellegrini" . "(j_p@aleph0.info)"))
       (:commit . "3358d0cc01436bd8f71a500175db2716e75b2eed"))])
  (git-modes
-  . [(1 5 0) ((emacs (28 1)) (compat (31 0)))
+  . [(1 5 1) ((emacs (28 1)) (compat (31 1)))
      "Major modes for editing Git configuration files" tar
      ((:url . "https://github.com/magit/git-modes")
       (:keywords "convenience" "vc" "git")
@@ -878,7 +878,7 @@
 		("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
 		("Jonas Bernoulli"
 		 . "emacs.git-modes@jonas.bernoulli.dev"))
-      (:commit . "f291a4cc4a8b02a25d5cf93b4ab6af29e6f060d9"))])
+      (:commit . "f8a453725586c8225e47afca4c8cbc2c5585bf33"))])
  (gnu-apl-mode
   . [(1 5 1) nil "Emacs mode for GNU APL" tar
      ((:url . "http://www.gnu.org/software/apl/")
@@ -1006,7 +1006,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
  (hermes
-  . [(0 7 1)
+  . [(0 8 0)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1014,7 +1014,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "3bcafa0357d7f2d9071da8274f323134460105a6"))])
+      (:commit . "2ec10e56b798e251e68ce85306670794ffe6f877"))])
  (hideshowvis
   . [(0 9) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1134,13 +1134,13 @@
       (:keywords "j" "languages")
       (:commit . "1365e5a3fe772609685b3787bbd2960331c1a02f"))])
  (jabber
-  . [(0 14 0) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
+  . [(0 15 0) ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "41b1d16ce501ae93b6970e13b8125a2664efefda"))])
+      (:commit . "cba341249f7a3bd12c62a17dc2bdd05fbad518ba"))])
  (jade-mode
   . [(1 0 1) nil "Major mode for editing .jade files" tar
      ((:url . "https://github.com/brianc/jade-mode")
@@ -1188,7 +1188,7 @@
       (:authors ("martian hiatus" . "martianh@disroot.org"))
       (:commit . "df4c87e2ea7b7f48701615294d2d708e0f469bbf"))])
  (llama
-  . [(1 0 5) ((emacs (26 1)) (compat (31 0)))
+  . [(1 0 6) ((emacs (28 1)) (compat (31 1)))
      "Compact syntax for short lambda" tar
      ((:url . "https://github.com/tarsius/llama")
       (:keywords "extensions")
@@ -1196,7 +1196,7 @@
 		   . "emacs.llama@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.llama@jonas.bernoulli.dev"))
-      (:commit . "4d4024048053b898a01521046e0f063ee47615b0"))])
+      (:commit . "6850d0c91b629da14fdff2300c222289d1a0029a"))])
  (logview
   . [(0 19 3)
      ((emacs (25 1)) (datetime (0 8)) (extmap (1 0)) (compat (29)))
@@ -1476,8 +1476,8 @@
       (:authors ("Takaaki ISHIKAWA" . "takaxpatieeedotorg"))
       (:commit . "941e7e6cb8a5a0b193345263ed912cceecae1887"))])
  (orgit
-  . [(2 2 1)
-     ((emacs (29 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
+  . [(2 2 2)
+     ((emacs (29 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (magit (4 7)) (org (9 8)))
      "Support for Org links to Magit buffers" tar
      ((:url . "https://github.com/magit/orgit")
@@ -1486,7 +1486,7 @@
 		   . "emacs.orgit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.orgit@jonas.bernoulli.dev"))
-      (:commit . "c948819a7cad37a654ada275ebf7c003abf782d0"))])
+      (:commit . "5e5110393e73513571a55e8ca93894dd4629bc00"))])
  (p4-16-mode
   . [(0 3) nil "Support for the P4_16 programming language" tar
      ((:keywords "languages" "p4_16")
