@@ -278,13 +278,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "501548c3d51f926c687e8cd838c5865ec45d03cc"))])
  (crux
-  . [(0 6 0) ((emacs (28 1)))
+  . [(0 6 1) ((emacs (28 1)))
      "A Collection of Ridiculously Useful eXtensions" tar
      ((:url . "https://github.com/bbatsov/crux")
       (:keywords "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "d8208e9408357fa7c35b394587983257f915c465"))])
+      (:commit . "c0cab0b0423fadf63bdf0f08bd2b74eb0139b893"))])
  (csv2ledger
   . [(1 5 5) ((emacs (29 1)) (csv-mode (1 24)))
      "Convert csv files to ledger entries" tar

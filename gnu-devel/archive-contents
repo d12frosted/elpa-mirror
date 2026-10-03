@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 1 0 0 20260721 0) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 1 0 0 20261002 2) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "1cc907ac9e46ae4209eb5a341131787e0c678406"))])
+      (:commit . "0c6388bb3b7766a88b11e51a628895aa6253d684"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 10 0 20260926 0) ((emacs (29 1)) (compat (31)))
+  . [(3 10 0 20261002 1) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "3c64214db5cd61a8f8186e4dce89c0e04be1652c"))])
+      (:commit . "e1183ed28bd921974b13c4bef2c7a8289607ddc3"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -1251,14 +1251,14 @@
       (:url . "https://elpa.gnu.org/packages/epoch-view.html")
       (:commit . "7a9773a8b55491bd47f23dfdb6c4224f5cc8e50c"))])
  (erc
-  . [(5 7 -4 0 20260821 27) ((emacs (27 1)) (compat (31)))
+  . [(5 7 -4 0 20261002 28) ((emacs (27 1)) (compat (31)))
      "An Emacs Internet Relay Chat client" tar
      ((:url . "https://www.gnu.org/software/emacs/erc.html")
       (:keywords "irc" "chat" "client" "internet")
       (:maintainer ("Amin Bandali" . "bandali@gnu.org")
 		   ("F. Jason Park" . "jp@neverwas.me"))
       (:authors ("Alexander L. Belikoff" . "alexander@belikoff.net"))
-      (:commit . "b0975ac3d94b66e001a272e41616222f5dd41e87"))])
+      (:commit . "41bf9fed8c9a9047546448b45c81db3ca2a6a313"))])
  (ergoemacs-mode
   . [(5 16 10 12 0 20260811 462)
      ((emacs (24 1)) (cl-lib (0 5)) (nadvice (0 4)))
@@ -1378,14 +1378,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 7 0 20260919 6)
+  . [(1 4 7 0 20261002 7)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "32ba9a422d5254776d18751bc9673380447f6334"))])
+      (:commit . "41bf9fed8c9a9047546448b45c81db3ca2a6a313"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1965,14 +1965,14 @@
       (:url . "https://elpa.gnu.org/packages/landmark.html")
       (:commit . "d520bfeef47349320645d2cd06839be0df326a1d"))])
  (latex-table-wizard
-  . [(1 6 0 0 20260503 212802)
+  . [(1 6 1 0 20261002 1)
      ((emacs (27 1)) (auctex (12 1)) (transient (0 3 7)))
      "Magic editing of LaTeX tables" tar
      ((:url . "https://github.com/enricoflor/latex-table-wizard")
       (:keywords "convenience" "tex")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "0ccd242ba521ed3b323d1dc84f49febe80b2eec7"))])
+      (:commit . "2fb1bd37f3bd267bd5b8c41e02d2b82507328824"))])
  (leaf
   . [(4 5 5 0 20260508 153103) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
@@ -2394,13 +2394,13 @@
       (:authors ("John Heidemann" . "johnh@isi.edu"))
       (:commit . "2a25d79f7e5d9ab7298ba40e11e78d1f2ded06d2"))])
  (notmuch-indicator
-  . [(1 3 0 0 20260424 102728) ((emacs (27 1)))
+  . [(1 3 0 0 20261002 3) ((emacs (27 1)))
      "Display mode line indicator with notmuch-count(1) output" tar
      ((:url . "https://github.com/protesilaos/notmuch-indicator")
       (:keywords "convenience" "mail")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "cb6d2abc005d0e8d9272090ef05e870041fbe13e"))])
+      (:commit . "82214b1bc1a3ee8c4cd389a9e12493b5004b3ec4"))])
  (ntlm
   . [(2 1 0 0 20260101 125434) ((emacs (27 1)))
      "NTLM (NT LanManager) authentication support" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
  (org
-  . [(10 0 -1 0 20260930 569) ((emacs (28 2)))
+  . [(10 0 -1 0 20261002 570) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "1b5909c274551457707fb428b4a2aab7e5710d82"))])
+      (:commit . "79db5088e6672de06840fdb38f60c32d91f11bbe"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -3717,13 +3717,13 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
  (typewriter
-  . [(1 2 0 0 20261001 5) ((emacs (30 1)))
+  . [(1 2 1 0 20261002 1) ((emacs (30 1)))
      "Turn Emacs into a text adder" tar
      ((:url . "https://github.com/enricoflor/typewriter.el")
-      (:keywords "wp")
+      (:keywords "text")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "74bfc798116778d0efd88e9a6bad861d4a5786a8"))])
+      (:commit . "85c99b02437fae98da9a035f3e00200202289463"))])
  (ulisp-repl
   . [(1 0 3 0 20230604 111559) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")

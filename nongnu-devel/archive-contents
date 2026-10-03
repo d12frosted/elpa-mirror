@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261001 138)
+  . [(2 1 0 -4 0 20261002 142)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "10986d1205ab6e7269db266d55e1657b5f884c7e"))])
+      (:commit . "2baf573e06d1f818f45680e9b49aed76e076645b"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -294,13 +294,13 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "501548c3d51f926c687e8cd838c5865ec45d03cc"))])
  (crux
-  . [(0 7 0 -4 0 20261001 0) ((emacs (28 1)))
+  . [(0 7 0 -4 0 20261002 0) ((emacs (28 1)))
      "A Collection of Ridiculously Useful eXtensions" tar
      ((:url . "https://github.com/bbatsov/crux")
       (:keywords "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "3298e8db6d5346f78c9408df8b869636faf1d990"))])
+      (:commit . "e769fe4a40813c8b1d1d869acbfee2323d2ed182"))])
  (csv2ledger
   . [(1 5 5 0 20260621 0) ((emacs (29 1)) (csv-mode (1 24)))
      "Convert csv files to ledger entries" tar
@@ -1054,7 +1054,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "1e6b608da9994f84da3d8c1e2ab090f91b2d27e1"))])
  (hermes
-  . [(0 8 0 0 20261001 1)
+  . [(0 8 0 0 20261002 2)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1062,7 +1062,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "460c5a2c9fc78168cfcbf9d1c20db3870fbe3b41"))])
+      (:commit . "aaf3e72e83ca51f8c812883d67d04dd04ce743d7"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1331,7 +1331,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261002 29)
+  . [(4 7 1 0 20261002 31)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1343,9 +1343,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "8802df2ebcde3d1d90ba2f8a31f64eb95ea0124b"))])
+      (:commit . "f5f9afe0fb838f6a5a4349255743a605f8cdb50b"))])
  (magit-section
-  . [(4 7 1 0 20261002 29)
+  . [(4 7 1 0 20261002 31)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1354,7 +1354,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "8802df2ebcde3d1d90ba2f8a31f64eb95ea0124b"))])
+      (:commit . "f5f9afe0fb838f6a5a4349255743a605f8cdb50b"))])
  (markdown-mode
   . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1607,12 +1607,12 @@
       (:authors ("Taylor R. Campbell" . "campbell@paredit.org"))
       (:commit . "af075775af91f2dbc63b915d762b4aec092946c4"))])
  (parseclj
-  . [(1 1 1 0 20260526 2) ((emacs (25))) "Clojure/EDN parser" tar
+  . [(1 1 1 0 20261002 16) ((emacs (26 1))) "Clojure/EDN parser" tar
      ((:keywords "lisp" "clojure" "edn" "parser")
       (:maintainer "Arne Brasseur" . "arne@arnebrasseur.net")
       (:authors ("Arne Brasseur" . "arne@arnebrasseur.net"))
       (:url . "https://elpa.nongnu.org/nongnu/parseclj.html")
-      (:commit . "ca828c202c026e45bd60503984cf510d904cae50"))])
+      (:commit . "249079da5c2655a8e503b33280c1ab1341e72de2"))])
  (parseedn
   . [(1 2 1 0 20261001 7) ((emacs (26)) (parseclj (1 1 1)) (map (2)))
      "Clojure/EDN parser" tar
@@ -1812,13 +1812,13 @@
       (:keywords "project" "convenience")
       (:commit . "f5fd18aa810c3d3269188cbbd731ddc09006f8f5"))])
  (rust-mode
-  . [(1 0 6 0 20260725 50) ((emacs (25 1)))
+  . [(1 0 6 0 20261002 52) ((emacs (25 1)))
      "A major-mode for editing Rust source code" tar
      ((:url . "https://github.com/rust-lang/rust-mode")
       (:keywords "languages")
       (:maintainer "Mozilla" . "rust-mode@noreply.github.com")
       (:authors ("Mozilla" . "rust-mode@noreply.github.com"))
-      (:commit . "0058837c048cc031ca1a13f598a6a6604777458b"))])
+      (:commit . "265e243732761b925e03ebb61930a3aeea034d0e"))])
  (sapling
   . [(0 3 2 0 20260830 1) ((emacs (26 1)) (transient (0 3 0)))
      "Fast interface for Sapling" tar

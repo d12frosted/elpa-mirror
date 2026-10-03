@@ -10,6 +10,18 @@ gateway.
 
 ⁃ `M-x hermes' dashboard with `keymap-popup' actions
 ⁃ ERC/emacs-jabber-style chat buffer with streaming replies
+⁃ Completed paragraphs, closed code fences and complete pipe-table rows
+  render while replies stream; unfinished fragments stay literal.  The
+  regular timer is throttled by `hermes-chat-stream-format-delay'
+  (default 0.1 seconds), so typing does not postpone formatting until
+  idle.  Streaming tables use compact content-aware columns and reflow
+  with the narrowest displaying window; stable-width single-grid rows
+  append without repainting completed output.  Very narrow column panels
+  repaint only the active table, reusing fontified rows to keep values
+  with their headers; this layout work grows with table size.  Final
+  completion uses the full formatter, including source-copy buttons,
+  images and diff links.  Formatting does not change the backend-owned
+  Running state or retained source.
 ⁃ Slash commands, approvals, clarify/sudo/secret prompts, interrupts,
   and steering
 ⁃ Markdown-rendered replies; diffs open as `[View Diff]' in `diff-mode'

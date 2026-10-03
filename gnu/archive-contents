@@ -1842,13 +1842,13 @@
       (:url . "https://elpa.gnu.org/packages/landmark.html")
       (:commit . "422d310c7726898b8d85f95f2336c79c8aaf30eb"))])
  (latex-table-wizard
-  . [(1 6 0) ((emacs (27 1)) (auctex (12 1)) (transient (0 3 7)))
+  . [(1 6 1) ((emacs (27 1)) (auctex (12 1)) (transient (0 3 7)))
      "Magic editing of LaTeX tables" tar
      ((:url . "https://github.com/enricoflor/latex-table-wizard")
       (:keywords "convenience" "tex")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "0ccd242ba521ed3b323d1dc84f49febe80b2eec7"))])
+      (:commit . "0eece7940a32eb82e5418fadba0189b0dd84ddd1"))])
  (leaf
   . [(4 5 5) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
@@ -3445,12 +3445,12 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
  (typewriter
-  . [(1 2 0) ((emacs (30 1))) "Turn Emacs into a text adder" tar
+  . [(1 2 1) ((emacs (30 1))) "Turn Emacs into a text adder" tar
      ((:url . "https://github.com/enricoflor/typewriter.el")
-      (:keywords "wp")
+      (:keywords "text")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "6bf6981843ca40541937480a8c44ec684a5a806e"))])
+      (:commit . "2abe95413c7db1f3867ed1bd2d31676de40c6219"))])
  (ulisp-repl
   . [(1 0 3) ((emacs (26 1))) "uLisp REPL" tar
      ((:maintainer "Thomas Fitzsimmons" . "fitzsim@fitzsim.org")

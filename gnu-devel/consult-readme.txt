@@ -41,7 +41,8 @@ and Embark work together.
 Table of Contents
 ─────────────────
 
-1. Available commands
+1. Screenshots
+2. Available commands
 .. 1. Virtual Buffers
 .. 2. Editing
 .. 3. Register
@@ -54,28 +55,28 @@ Table of Contents
 .. 10. Org Mode
 .. 11. Help
 .. 12. Miscellaneous
-2. Special features
+3. Special features
 .. 1. Live previews
 .. 2. Narrowing and grouping
 .. 3. Asynchronous search
 .. 4. Multiple sources
 .. 5. Embark integration
-3. Configuration
+4. Configuration
 .. 1. Use-package example
 .. 2. Custom variables
 .. 3. Project support
 .. 4. Workspace isolation
 .. 5. Fine-tuning
 .. 6. Default completion UI with auto update
-4. Recommended packages
-5. Bug reports
-6. Hacking
+5. Recommended packages
+6. Bug reports
+7. Hacking
 .. 1. Creating simple commands
 .. 2. Creating asynchronous completion commands
 .. 3. Live preview
-7. Contributions
-8. Acknowledgments
-9. Indices
+8. Contributions
+9. Acknowledgments
+10. Indices
 .. 1. Function index
 .. 2. Concept index
 
@@ -85,11 +86,11 @@ Table of Contents
 
 [Elisp manual] <info:elisp#Minibuffer Completion>
 
-[live preview] See section 2.1
+[live preview] See section 3.1
 
-[grouping and narrowing] See section 2.2
+[grouping and narrowing] See section 3.2
 
-[full list of commands] See section 1
+[full list of commands] See section 2
 
 [Vertico] <https://github.com/minad/vertico>
 
@@ -101,10 +102,20 @@ Table of Contents
 
 [Orderless] <https://github.com/oantolin/orderless>
 
-[Embark integration] See section 2.5
+[Embark integration] See section 3.5
 
 
-1 Available commands
+1 Screenshots
+═════════════
+
+  Fig. 1: Command `consult-git-grep'
+
+  Fig. 2: Command `consult-imenu'
+
+  Fig. 3: Command `consult-line'
+
+
+2 Available commands
 ════════════════════
 
   Most Consult commands follow the meaningful naming scheme
@@ -121,7 +132,7 @@ Table of Contents
 
 [Marginalia] <https://github.com/minad/marginalia>
 
-1.1 Virtual Buffers
+2.1 Virtual Buffers
 ───────────────────
 
   • `consult-buffer': Enhanced version of `switch-to-buffer' with
@@ -161,10 +172,10 @@ Table of Contents
     enables tracking of recent files.
 
 
-[other sources] See section 2.4
+[other sources] See section 3.4
 
 
-1.2 Editing
+2.2 Editing
 ───────────
 
   • `consult-yank-from-kill-ring': Enhanced version of `yank' to select
@@ -180,7 +191,7 @@ Table of Contents
   • `consult-kmacro': Select macro from the macro ring and execute it.
 
 
-1.3 Register
+2.3 Register
 ────────────
 
   • `consult-register': Select from list of registers. The command
@@ -208,10 +219,10 @@ Table of Contents
     ‣ `C-u 100 M-' x': Store number in register `x'.
 
 
-[example configuration] See section 3.1
+[example configuration] See section 4.1
 
 
-1.4 Navigation
+2.4 Navigation
 ──────────────
 
   • `consult-goto-line': Jump to line number enhanced with live
@@ -235,7 +246,7 @@ Table of Contents
 [imenu-anywhere] <https://github.com/vspinu/imenu-anywhere>
 
 
-1.5 Search
+2.5 Search
 ──────────
 
   • `consult-line': Enter search string and select from matching lines.
@@ -266,7 +277,7 @@ Table of Contents
     filtering.
 
 
-1.6 Grep and Find
+2.6 Grep and Find
 ─────────────────
 
   • `consult-grep-match': Jump to a Grep match in related Grep
@@ -303,10 +314,10 @@ Table of Contents
     like those for the consult grep commands.
 
 
-[project directory] See section 3.3
+[project directory] See section 4.3
 
 
-1.7 Compilation
+2.7 Compilation
 ───────────────
 
   • `consult-compile-error': Jump to a compilation error in related
@@ -320,7 +331,7 @@ Table of Contents
     `xref-show-xrefs-function' and `xref-show-definitions-function'.
 
 
-1.8 Histories
+2.8 Histories
 ─────────────
 
   • `consult-complex-command': Select a command from the
@@ -344,7 +355,7 @@ Table of Contents
 [Cape] <https://github.com/minad/cape>
 
 
-1.9 Modes
+2.9 Modes
 ─────────
 
   • `consult-minor-mode-menu': Enable/disable minor mode. Supports
@@ -355,7 +366,7 @@ Table of Contents
     local-minor/global-minor/major mode via the keys `l/g/m'.
 
 
-1.10 Org Mode
+2.10 Org Mode
 ─────────────
 
   • `consult-org-heading': Variant of `consult-imenu' or
@@ -368,7 +379,7 @@ Table of Contents
     live preview and recursive editing.
 
 
-1.11 Help
+2.11 Help
 ─────────
 
   • `consult-man': Find Unix man page, via Unix `apropos' or `man
@@ -393,7 +404,7 @@ Table of Contents
   └────
 
 
-1.12 Miscellaneous
+2.12 Miscellaneous
 ──────────────────
 
   • `consult-theme': Select a theme and disable all currently enabled
@@ -421,7 +432,7 @@ Table of Contents
 [Corfu] <https://github.com/minad/corfu>
 
 
-2 Special features
+3 Special features
 ══════════════════
 
   Consult enhances `completing-read' with live previews of candidates,
@@ -435,7 +446,7 @@ Table of Contents
   while still offering advanced features.
 
 
-2.1 Live previews
+3.1 Live previews
 ─────────────────
 
   Some Consult commands support live previews. For example when you
@@ -517,14 +528,14 @@ Table of Contents
   └────
 
 
-[example configuration] See section 3.1
+[example configuration] See section 4.1
 
 [org-modern] <https://github.com/minad/org-modern>
 
 [hl-todo] <https://github.com/tarsius/hl-todo>
 
 
-2.2 Narrowing and grouping
+3.2 Narrowing and grouping
 ──────────────────────────
 
   Consult has special support for candidate groups. If the completion UI
@@ -556,14 +567,14 @@ Table of Contents
   `consult-narrow-key'.
 
 
-[multiple sources] See section 2.4
+[multiple sources] See section 3.4
 
-[example configuration] See section 3.1
+[example configuration] See section 4.1
 
 [which-key] <https://github.com/justbur/emacs-which-key>
 
 
-2.3 Asynchronous search
+3.3 Asynchronous search
 ───────────────────────
 
   Consult has support for asynchronous generation of candidate
@@ -645,7 +656,7 @@ Table of Contents
     provided.
 
 
-2.4 Multiple sources
+3.4 Multiple sources
 ────────────────────
 
   Multiple static and asynchronous candidate sources can be
@@ -760,7 +771,7 @@ Table of Contents
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
 
-2.5 Embark integration
+3.5 Embark integration
 ──────────────────────
 
   *NOTE*: Install the `embark-consult' package from MELPA, which
@@ -806,7 +817,7 @@ Table of Contents
 [wgrep] <https://github.com/mhayashi1120/Emacs-wgrep>
 
 
-3 Configuration
+4 Configuration
 ═══════════════
 
   Consult can be installed from [ELPA] or [MELPA] via the Emacs built-in
@@ -827,7 +838,7 @@ Table of Contents
 
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
-3.1 Use-package example
+4.1 Use-package example
 ───────────────────────
 
   The Consult package only provides commands and does not add any
@@ -952,7 +963,7 @@ Table of Contents
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
 
-3.2 Custom variables
+4.2 Custom variables
 ────────────────────
 
   *TIP:* If you have [Marginalia] installed, type `M-x
@@ -1013,7 +1024,7 @@ Table of Contents
 [Marginalia] <https://github.com/minad/marginalia>
 
 
-3.3 Project support
+4.3 Project support
 ───────────────────
 
   Multiple Consult search commands like `consult-grep' try to discover
@@ -1040,7 +1051,7 @@ Table of Contents
   └────
 
 
-3.4 Workspace isolation
+4.4 Workspace isolation
 ───────────────────────
 
   By default Consult operates on all buffers in your Emacs instance, as
@@ -1064,7 +1075,7 @@ Table of Contents
 [bufferlo] <https://github.com/florommel/bufferlo>
 
 
-3.5 Fine-tuning of individual commands
+4.5 Fine-tuning of individual commands
 ──────────────────────────────────────
 
   *NOTE:* Consult supports fine-grained customization of individual
@@ -1135,10 +1146,10 @@ Table of Contents
 
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
-[multi sources] See section 2.4
+[multi sources] See section 3.4
 
 
-3.6 Default completion UI with auto update
+4.6 Default completion UI with auto update
 ──────────────────────────────────────────
 
   I recommend to use Vertico for best performance and an intuitive UI.
@@ -1168,7 +1179,7 @@ Table of Contents
   └────
 
 
-4 Recommended packages
+5 Recommended packages
 ══════════════════════
 
   I use and recommend this combination of packages:
@@ -1224,7 +1235,7 @@ Table of Contents
 <https://github.com/minad/consult/wiki/Auxiliary-packages>
 
 
-5 Bug reports
+6 Bug reports
 ═════════════
 
   If you find a bug or suspect that there is a problem with Consult,
@@ -1291,10 +1302,10 @@ Table of Contents
 [evil-collection] <https://github.com/emacs-evil/evil-collection>
 
 
-6 Hacking
+7 Hacking
 ═════════
 
-6.1 Creating simple commands
+7.1 Creating simple commands
 ────────────────────────────
 
   When creating simple commands you can either use `consult--read' or
@@ -1355,7 +1366,7 @@ Table of Contents
   └────
 
 
-6.2 Creating asynchronous completion commands
+7.2 Creating asynchronous completion commands
 ─────────────────────────────────────────────
 
   If you have a completion source that's both dynamic and expensive to
@@ -1413,7 +1424,7 @@ Table of Contents
   sources. Specify them as `:async' field of the source plist.
 
 
-6.3 Live preview
+7.3 Live preview
 ────────────────
 
   Implementing live preview requires the definition of a state or
@@ -1448,7 +1459,7 @@ Table of Contents
   └────
 
 
-7 Contributions
+8 Contributions
 ═══════════════
 
   Consult is a community effort, please participate in the discussions.
@@ -1468,7 +1479,7 @@ Table of Contents
 [Consult wiki] <https://github.com/minad/consult/wiki>
 
 
-8 Acknowledgments
+9 Acknowledgments
 ═════════════════
 
   This package took inspiration from [Counsel] by Oleh Krehel. Some of
@@ -1574,12 +1585,12 @@ Table of Contents
 [Protesilaos Stavrou] <https://protesilaos.com>
 
 
-9 Indices
-═════════
+10 Indices
+══════════
 
-9.1 Function index
+10.1 Function index
+───────────────────
+
+
+10.2 Concept index
 ──────────────────
-
-
-9.2 Concept index
-─────────────────
