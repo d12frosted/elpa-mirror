@@ -527,6 +527,10 @@
     based on the value of state.  This is a fast, synchronous function.
     See the [Decisions] section for more information on this and the
     other decision functions.
+  • `llm-decide-async provider questions state result-callback
+    error-callback': Decide a list of questions based on the value of
+    state, asynchronously.  See the [Decisions] section for more
+    information.
   • `llm-decide-bool': Decide a single boolean question, a convenience
     function for `llm-decide'.
   • `llm-decide-choice': Decide a single multiple choice question, a
@@ -924,9 +928,10 @@
   Decisions are a way to ask the LLM to make a fast decision based on a
   set of options.  The LLM will return the option it thinks is best
   along with a confidence, and probabilities.  *This is alpha
-  functionality and the API may change in the future*. Decisions are
-  synchronous calls, since they return very quickly, and are extremely
-  cheap.
+  functionality and the API may change in the future*. Decisions can be
+  synchronous calls without significant wait times for the user, since
+  they return very quickly (in the low hundreds of milliseconds,
+  typically), and are extremely cheap.
 
   The `llm-typesafe' module defines the TypeSafe API, which can be used
   with [TypeSafe AI] as well as compatible open systems such as
@@ -993,8 +998,11 @@
   │            (llm-decision-score-confidence (alist-get 'priority result)))))
   └────
 
-  There are also methods to make this easier, when dealing with single
-  questions.  This, for example, returns `nil'.
+  `llm-decide-async' is also available, and has the same callback
+  structure as the rest of the library.
+
+  There are also methods to make calling `llm-decide' easier, when
+  dealing with single questions.  This, for example, returns `nil'.
 
   ┌────
   │ (llm-decide-bool my-llm-provider "Is this text Spanish?" "Meu aerobarco está cheio de enguias")
@@ -1012,6 +1020,8 @@
   ┌────
   │ (llm-decide-score my-llm-provider "Rate how unusual the sentence is" '("Common" "Ordinary" "Unusual" "Very unusual") "Meu aerobarco está cheio de enguias")
   └────
+
+  All of these are synchronous only.
 
 
 [TypeSafe AI] <https://typesafe.ai/>
