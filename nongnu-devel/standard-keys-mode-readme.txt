@@ -49,18 +49,24 @@
 [ryo] <https://github.com/Kungsgeten/ryo-modal>
 
 
-2 [Get started]
-═══════════════
+2 Get started
+═════════════
 
-  For install and use `standard-keys-mode', see the [GET_STARTED.org]
-  file, which additionally provides a simple and documented template
-  configuration with several tips to help you get started with Emacs and
-  standard-keys easily.
+  `standard-keys-mode' requires Emacs 29.1 or greater
 
+  For install it, you can run:
 
-[Get started] <file:GET_STARTED.org>
+  ⁃ `M-x package-install RET standard-keys-mode RET'
 
-[GET_STARTED.org] <file:GET_STARTED.org>
+  ⁃ Alternatively using `use-package' keyword:
+
+  ┌────
+  │ (use-package standard-keys-mode
+  │   :ensure t :hook after-init)
+  └────
+
+  Once you have it installed you can enable it with `M-x
+  standard-keys-mode'
 
 
 3 Configuration
@@ -230,7 +236,7 @@
 4.3 I cannot rebind `C-g' properly
 ──────────────────────────────────
 
-  It is not possible to remap `C-g' properly.
+  It is not possible to remap `C-g'.
 
   Although solutions such as this can be used:
 
@@ -249,8 +255,8 @@
 5 Alternatives
 ══════════════
 
-5.1 [ergoemacs].
-────────────────
+5.1 [ergoemacs]
+───────────────
 
         A minor-mode that aims to:
         • Use/Create ergonomic keybindings in emacs that will
@@ -264,12 +270,15 @@
 
   But if you don't care about this, you can try it.
 
+  (comment written on: 2025-08-28, this may no longer apply in the
+  future)
+
 
 [ergoemacs] <http://ergoemacs.github.io/>
 
 
-5.2 [cua-mode] (built-in in Emacs).
-───────────────────────────────────
+5.2 [cua-mode] (built-in in Emacs)
+──────────────────────────────────
 
         CUA mode is a global minor mode.  When enabled, typed text
         replaces the active selection, and you can use C-z, C-x,
@@ -302,7 +311,7 @@
         to leverage common shortcuts that you are used to while
         making it easy to learn Emacs.
 
-  wakib-keys was the inspiration for package.
+  wakib-keys was the inspiration for this package.
 
   Like standard-keys-mode, wakib rebinds the C-x/C-c prefixes to C-e/C-d
   respectively.  However wakib has been somewhat outdated, with some
@@ -311,9 +320,33 @@
   If you are using an older Emacs version (prior 29.x), you can use
   wakib-keys instead of standard-keys-mode.
 
+  (comment written on: 2025-08-28, this may no longer apply in the
+  future)
+
+
+[wakib-keys] <https://github.com/darkstego/wakib-keys>
+
+
+5.4 [mortal-mode]
+─────────────────
+
+        A basic Emacs configuration for users accustomed to modern
+        editors like Kate, VS Code, Notepad++, Sublime Text,
+        PyCharm, and many others. This config tries to make
+        vanilla Emacs feel more like one of those editors. It
+        gives you a familiar starting point for your own Emacs
+        configuration adventures without having to unlearn years
+        of muscle memory.
+
+  I have no comments, because I haven't used it, but analyzing the code,
+  it doesn't appear to be compatible with the C-x and C-c prefixes,
+  despite trying to remap them.
+
+  (comment written on: 2026-10-02, this may no longer apply in the
+  future)
   ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
   Thanks to Abdulla Bubshait (darkstego) for creating wakib-keys, which
   was the inspiration for this package.
 
 
-[wakib-keys] <https://github.com/darkstego/wakib-keys>
+[mortal-mode] <https://github.com/BenediktChlopik/mortal-mode>

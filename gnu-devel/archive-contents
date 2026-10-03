@@ -1101,7 +1101,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
-  . [(1 24 0 20260918 21)
+  . [(1 24 0 20261002 22)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1110,7 +1110,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "012a5a02a03211ed79809336a75e2b28c9624b41"))])
+      (:commit . "9a20d5c7664e214fde3810f9f8f1a21a36e9bfb5"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -2047,14 +2047,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 32 2 0 20260929 1)
+  . [(0 32 2 0 20261003 4)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "d1f5b810236e6279e2dcbe2db355dbb2076db537"))])
+      (:commit . "91b5632951e4a859bed1ecd7c9ed5abb47a71ad9"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
