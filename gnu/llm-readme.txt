@@ -523,6 +523,20 @@
     error-callback': same as `llm-embedding-async', but takes in a list
     of strings, and returns a list of vectors whose order corresponds to
     the ordering of the strings.
+  • `llm-decide provider questions state': Decide a list of questions
+    based on the value of state.  This is a fast, synchronous function.
+    See the [Decisions] section for more information on this and the
+    other decision functions.
+  • `llm-decide-async provider questions state result-callback
+    error-callback': Decide a list of questions based on the value of
+    state, asynchronously.  See the [Decisions] section for more
+    information.
+  • `llm-decide-bool': Decide a single boolean question, a convenience
+    function for `llm-decide'.
+  • `llm-decide-choice': Decide a single multiple choice question, a
+    convenience function for `llm-decide'.
+  • `llm-decide-score': Decide a score along a scale, a convenience
+    function for `llm-decide'.
   • `llm-count-tokens provider string': Count how many tokens are in
     `string'.  This may vary by `provider', because some provideres
     implement an API for this, but typically is always about the same.
@@ -570,6 +584,8 @@
       new response (from the user, usually) to the prompt.  The `role'
       is optional, and defaults to `'user'.
 
+
+[Decisions] See section 7.8
 
 7.1.1 Return and multi-output
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
@@ -719,6 +735,10 @@
         fails (e.g., invalid API key).
       • `llm-request-bad-request': Signaled when the request was invalid
         (e.g., bad format).
+      • `llm-request-too-many-requests': Signaled when the client has
+        exceeded their rate limit.
+      • `llm-request-service-unavailable': Signaled when the LLM service
+        provider is temporarily unavailable.
     • `llm-tool-call-error': The base error for all tool calling errors.
       • `llm-tool-unknown-tool': Signaled when an LLM attempts to call a
         tool that was not provided in the prompt's tools list.
@@ -902,7 +922,114 @@
   because most models do not support video and audio.
 
 
-7.8 Advanced prompt creation
+7.8 Decisions
+─────────────
+
+  Decisions are a way to ask the LLM to make a fast decision based on a
+  set of options.  The LLM will return the option it thinks is best
+  along with a confidence, and probabilities.  *This is alpha
+  functionality and the API may change in the future*. Decisions can be
+  synchronous calls without significant wait times for the user, since
+  they return very quickly (in the low hundreds of milliseconds,
+  typically), and are extremely cheap.
+
+  The `llm-typesafe' module defines the TypeSafe API, which can be used
+  with [TypeSafe AI] as well as compatible open systems such as
+  [Ollaya].  OpenRouter also supports this, and requires the
+  `decide-model' to be set on it.
+
+  There are three types of questions you can ask with the `llm-decide'
+  call.  You can ask a variety of questions in the same call about the
+  input.  The `llm-decide' is called like `(llm-decide provider
+  questions state)', where `questions' is a list of `llm-question'
+  structs, and `state' is a string that is passed to the LLM to give it
+  context; this is the input that all the questions are being asked
+  against.  The `llm-question' objects can be one of three types,
+  boolean, multiple choice, or a score.  The results are returned in an
+  alist with the question name as the key and the result as the value.
+
+  The three types of questions are:
+  1. Boolean: This is a yes/no question, and the result is a
+     `llm-decision-bool' struct with a confidence value that the
+     question is true.
+  2. Choice: This is a multiple choice question, and the result is a
+     `llm-decision-choice' struct with a choice, a confidence value, and
+     a probability for each choice.
+  3. Score: This is a list of increasing ordinal values on some scale,
+     and the result is a `llm-decision-score' struct with a
+     floating-point index on that scale (between 0 and one minus the
+     length of the list), a confidence value, and a probability for each
+     ordinal value.
+
+  For example, this demonstrates all three types of questions, and the
+  results are returned in an alist with the question name as the key and
+  the result as the value.
+  ┌────
+  │ (let ((result (llm-decide
+  │                my-llm-provider
+  │                (list (make-llm-question-bool
+  │                       :name 'is_reasonable_todo_date
+  │                       :instructions "A task and date will be passed in, make sure this date is not unreasonably far away given the task.  Today is October 1st, 2026." :true-description "The date could possibly be reasonable" :false-description "The date is somehow unreasonable for the task, either too near or too far away.")
+  │                      (make-llm-question-choice
+  │                       :name 'context
+  │                       :instructions "For the task and date, choose the most appropriate context for the task."
+  │                       :choices
+  │                       '((home . "A task done at home")
+  │                         (work . "A task done at work")
+  │                         (errand . "A task done while running errands")
+  │                         (school . "A task done at school")
+  │                         (other . "A task done in another context")))
+  │                      (make-llm-question-score
+  │                       :name 'priority
+  │                       :instructions "Evaluate the priority of this task, assuming a normal situation."
+  │                       :scale '("Low" "Medium" "High" "Critical")))
+  │                "Task: Buy milk, Due Date: December 31, 2029")))
+  │   (concat
+  │    (format "Is the due date reasonable? %s (confidence: %0.02f)\n"
+  │            (if (> (llm-decision-bool-confidence (alist-get 'is_reasonable_todo_date result)) 0.5)
+  │                "Yes"
+  │              "No")
+  │            (llm-decision-bool-confidence (alist-get 'is_reasonable_todo_date result)))
+  │    (format "Context: %s (confidence: %0.02f)\n"
+  │            (llm-decision-choice-choice (alist-get 'context result))
+  │            (llm-decision-choice-confidence (alist-get 'context result)))
+  │    (format "Priority: %s (confidence: %0.02f)\n"
+  │            (llm-decision-score-score (alist-get 'priority result))
+  │            (llm-decision-score-confidence (alist-get 'priority result)))))
+  └────
+
+  `llm-decide-async' is also available, and has the same callback
+  structure as the rest of the library.
+
+  There are also methods to make calling `llm-decide' easier, when
+  dealing with single questions.  This, for example, returns `nil'.
+
+  ┌────
+  │ (llm-decide-bool my-llm-provider "Is this text Spanish?" "Meu aerobarco está cheio de enguias")
+  └────
+
+  This returns one of several choices, in this case, returning `pt'.
+
+  ┌────
+  │ (llm-decide-choice my-llm-provider "What language is this text in?" '((pt . "Portuguese") (it . "Italian") (es . "Spanish")) "Meu aerobarco está cheio de enguias")
+  └────
+
+  And this returns a score on a scale, in this case returning a float
+  such as `2.78', close to "Very unusual".
+
+  ┌────
+  │ (llm-decide-score my-llm-provider "Rate how unusual the sentence is" '("Common" "Ordinary" "Unusual" "Very unusual") "Meu aerobarco está cheio de enguias")
+  └────
+
+  All of these are synchronous only.
+
+
+[TypeSafe AI] <https://typesafe.ai/>
+
+[Ollaya] <https://ollaya.dev/>
+
+
+7.9 Advanced prompt creation
 ────────────────────────────
 
   The `llm-prompt' module provides helper functions to create prompts

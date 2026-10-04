@@ -570,12 +570,12 @@
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
       (:commit . "f07e221d4d5597c7ccf4b0003c0909a88bdfcc9e"))])
  (consult
-  . [(3 10 0 20261002 1) ((emacs (29 1)) (compat (31)))
+  . [(3 10 0 20261004 2) ((emacs (29 1)) (compat (31)))
      "Search and navigate via completing-read" tar
      ((:url . "https://github.com/minad/consult")
       (:keywords "matching" "files" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
-      (:commit . "e1183ed28bd921974b13c4bef2c7a8289607ddc3"))])
+      (:commit . "a64569f377b8bc0f62e1d2ae0f3ee48ba4a7cc1c"))])
  (consult-denote
   . [(0 5 1 0 20260704 0)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
@@ -2047,14 +2047,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 32 2 0 20261003 6)
+  . [(0 33 0 0 20261004 0)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "53827937220436814de3350a08dcce1311eb85e5"))])
+      (:commit . "e40290d1e2560b011809910e8d73514aea77723c"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
  (org
-  . [(10 0 -1 0 20261003 571) ((emacs (28 2)))
+  . [(10 0 -1 0 20261004 577) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "3b73b8a0cecf6435c265ce0f680dc3c135294c39"))])
+      (:commit . "99638063abc801d95cb64653e239a79e1a67f363"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2880,12 +2880,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
  (qrencode
-  . [(1 6 0 20261001 0) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 6 0 20261004 1) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "3ba67bdf376c9e1445bcc4710c7c8c4bd3c5c65c"))])
+      (:commit . "7661840e8b3cfa1908b7e57c474d4118981de7d2"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
