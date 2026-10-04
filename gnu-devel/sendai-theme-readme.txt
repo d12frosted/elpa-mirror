@@ -15,7 +15,7 @@
   via separate color definitions for basic TTYs, 256-color TTYs, and
   true-color (24-bit) displays. On 256-color TTYs, you can optionally
   use the 8 basic TTY color definitions (and their bright variants)
-  where appropriate by enabling `sendai-inherit-tty-colors'. This is
+  where appropriate by enabling `sendai-inherit-tty-colors'.  This is
   useful if you set your terminal emulator's theme to match Sendai's
   palette.
 
@@ -46,3 +46,8 @@
 <https://www.gnu.org/prep/maintain/html_node/Copyright-Papers.html>
 
 [the mailing list] <https://lists.sr.ht/~jimporter/sendai-theme-devel>
+
+1.3.1 AI Contribution Guidelines
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Don't.

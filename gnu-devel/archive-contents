@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 2 0 0 20261001 13) ((emacs (28)))
+  . [(9 2 0 0 20261003 16) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "857a7196f33de90472a915532d5d679207cbab69"))])
+      (:commit . "98713bbb937cdf0e8ac27791bd0bf33271b819c8"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -3134,11 +3134,11 @@
       (:url . "https://elpa.gnu.org/packages/sed-mode.html")
       (:commit . "6009f57567959387b9e34068567e982b6991eb24"))])
  (sendai-theme
-  . [(0 1 1 -4 0 20260701 2) ((emacs (27 1)))
+  . [(0 1 1 -4 0 20261003 4) ((emacs (27 1)))
      "A cool blue color theme" tar
      ((:url . "https://sr.ht/~jimporter/sendai-theme/")
       (:keywords "theme")
-      (:commit . "cccc533de1f626a9e4213820bad73ae9200cb04f"))])
+      (:commit . "b9b9c9b43be0689402e8f54bf225cf74c73dad7e"))])
  (seq
   . [(2 24 0 20240201 135317) nil "Sequence manipulation functions"
      tar
