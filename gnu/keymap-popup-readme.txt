@@ -103,4 +103,45 @@ arguments are deliberately out of scope; for those, use transient.
   └────
 
   Set `USE_NIX=0' to run a Make target directly in the current
-  environment.
+  environment.  Focused commands remain available:
+
+  ┌────
+  │ make test TESTS=tests/keymap-popup-declarations-tests.el
+  └────
+
+
+5.1 Emacs compatibility matrix
+──────────────────────────────
+
+  From outside `nix develop', with Python 3 and Nix installed, run:
+
+  ┌────
+  │ make test-matrix
+  │ # Override the installed executable for another installation:
+  │ make test-matrix THANOS_EMACS=/absolute/path/to/emacs
+  └────
+
+  The required lanes are the exact `Package-Requires' minimum (29.1),
+  the default `pkgs.emacs' from this project's pinned Nixpkgs, and
+  *Thanos Emacs fork*.  Thanos uses his own Emacs fork; the third lane
+  captures the installed executable before Nix changes PATH.  It does
+  not rebuild the fork and is not reproducible from the flake alone.  A
+  missing executable fails that lane rather than selecting Nix Emacs.
+
+  Each lane compiles, lints, and runs the selected batch ERT suite in
+  separate source, bytecode/native-cache, HOME, XDG, and temporary data
+  paths.  The runner freezes one Git-aware source archive, attempts all
+  three lanes, prints actual runtime versions and paths in their logs,
+  and fails if any lane is unavailable, fails, or lacks complete ERT
+  statistics.  Evidence is retained in the printed temporary directory.
+  Batch skips remain explicit in `ert.json'; `make test-native' still
+  provides the separate native terminal/minibuffer checks.
+
+  Use `MATRIX_TESTS=tests/keymap-popup-declarations-tests.el make
+  test-matrix' for a focused diagnostic run, not a replacement for the
+  full matrix.  Run `python3 admin/test-matrix-runner.py' for runner
+  regressions.  The pure `matrix-minimum' and `matrix-default' flake
+  checks use the same lane runner.  The installed fork stays outside
+  sandbox checks.  New source/test/support files must be added to
+  `admin/source-manifest.json'; ignored/private files and generated
+  artifacts are not matrix inputs.

@@ -9,12 +9,8 @@ Or from source:
   (add-to-list 'load-path "/path/to/emacs-sema")
   (require 'sema-mode)
 
-If you use eglot, register Sema's language server (`sema lsp') so that
-`M-x eglot' starts it in Sema buffers:
-
-  (with-eval-after-load 'eglot #'sema-register-with-eglot)
-
-For automatic startup, also add `eglot-ensure' to the mode hook:
+Eglot registration is automatic.  For automatic startup, add
+`eglot-ensure' to the mode hook:
 
   (add-hook 'sema-mode-hook #'eglot-ensure)
 
