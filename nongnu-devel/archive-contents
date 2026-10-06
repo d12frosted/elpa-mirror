@@ -1065,7 +1065,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "1e6b608da9994f84da3d8c1e2ab090f91b2d27e1"))])
  (hermes
-  . [(0 8 0 0 20261002 2)
+  . [(0 8 0 0 20261005 7)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1073,7 +1073,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "aaf3e72e83ca51f8c812883d67d04dd04ce743d7"))])
+      (:commit . "35ca2d494afd53e0affd450aaa297d7fb0c8a7e0"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1204,14 +1204,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 15 0 0 20261002 0)
+  . [(0 15 0 0 20261005 4)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "cba341249f7a3bd12c62a17dc2bdd05fbad518ba"))])
+      (:commit . "2f039029684cc96bb735f708d0293c39aabb997f"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261003 37)
+  . [(4 7 1 0 20261005 38)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "e9ed99c5e3cdd3fab31204f2809ce9d01d672c89"))])
+      (:commit . "bd9bce524cce1557db37c4e2260b0a7874c1075c"))])
  (magit-section
-  . [(4 7 1 0 20261003 37)
+  . [(4 7 1 0 20261005 38)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "e9ed99c5e3cdd3fab31204f2809ce9d01d672c89"))])
+      (:commit . "bd9bce524cce1557db37c4e2260b0a7874c1075c"))])
  (markdown-mode
   . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -2208,11 +2208,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 0 -4 0 20261003 228) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 0 -4 0 20261005 235) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "6e67a14aee0070561f99b2ecbcb306ed8b5b866f"))])
+      (:commit . "1bc8b945720369f596878d99bcd33155b7c99486"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

@@ -36,6 +36,16 @@ A section is defined with:
 
 If a section starts with a string, that acts as its doscstring.
 
+<options> is a plist with available keys:
+  - `:parents': a list of parent sections
+  - `:default-child': for mutually exclusive nodes we pick the allowed one
+  -                   in the parent section definition
+  - `:allow-condition': a condition that will be called during checking
+                        the allowed status of a node.  It can be:
+    - A function which will be called
+    - A cons which will be wrapped in a lambda and called
+    - A symbol whose value will be taken
+
 =============================================================================
 3. DEPENDENCIES & INHERITANCE
 =============================================================================
@@ -70,7 +80,8 @@ as a (maybe transitive) parent.
 Allowed sections will run during initialization and disallowed will not.
 
 A section is allowed either if it is *explicitly allowed* or if *all* of its
-parents are allowed.
+parents are allowed or if its allow condition evaluates to t (or
+shortcircuits here).
 A section can also be *explicitly disallowed* in which case it is disallowed.
 
 All sections are transitive children of guard-parent-node which is by default
