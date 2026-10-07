@@ -723,22 +723,22 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "bb4867e13ec7480d4dbc1d99888627e4cc8ef2f6"))])
  (fedi
-  . [(0 4 0 20260509 80113) ((emacs (28 1)) (markdown-mode (2 5)))
+  . [(0 5 0 20261005 4) ((emacs (28 1)) (markdown-mode (2 5)))
      "Helper functions for fediverse clients" tar
      ((:url . "https://codeberg.org/martianh/fedi.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "91f28ee199a499b8d6e1b9c7a0f1c15f8a382198"))])
+      (:commit . "c79f66c8196723fc135053b4a8eec085fcc613ca"))])
  (fj
-  . [(0 47 0 20260921 34)
-     ((emacs (29 1)) (compat (31)) (fedi (0 2)) (tp (0 8))
+  . [(0 48 0 20261006 35)
+     ((emacs (29 1)) (compat (31)) (fedi (0 5)) (tp (0 8))
       (transient (0 10 0)) (magit (4 3 8)))
      "Client for Forgejo instances" tar
      ((:url . "https://codeberg.org/martianh/fj.el")
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "73ea6263be5c0959e94688ca24a89265b4a172ad"))])
+      (:commit . "e3e2b461102b050aead991a065d513c6109c25da"))])
  (flamegraph
   . [(0 2 0 20260609 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -982,7 +982,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20261001 19)
+  . [(0 9 9 6 0 20261006 22)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -991,7 +991,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "edb3fee3b5266e9060f6d121e9b3914eb7c3409d"))])
+      (:commit . "406432d83f8a76e7af54d88c97df1863bd9a9119"))])
  (graphql-mode
   . [(1 0 0 0 20260904 38) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1065,7 +1065,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "1e6b608da9994f84da3d8c1e2ab090f91b2d27e1"))])
  (hermes
-  . [(0 8 0 0 20261005 7)
+  . [(0 8 0 0 20261006 9)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1073,7 +1073,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "35ca2d494afd53e0affd450aaa297d7fb0c8a7e0"))])
+      (:commit . "f304bf42c427e49b90f615a5c756565663fa164a"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1530,12 +1530,12 @@
      ((:url . "http://github.com/bastibe/org-journal")
       (:commit . "6460f6f2b0835b4b8aa87d5fdf40cac7deb319f5"))])
  (org-mime
-  . [(0 3 5 0 20260929 0) ((emacs (29 1)))
+  . [(0 3 5 0 20261006 1) ((emacs (29 1)))
      "org html export for text/html MIME emails" tar
      ((:url . "http://github.com/org-mime/org-mime")
       (:keywords "mime" "mail" "email" "html")
       (:maintainer "Chen Bin" . "chb_shAThotmailDOTcom")
-      (:commit . "18b421f9a73428a49d9a534d3920e63ca21bea5b"))])
+      (:commit . "926bf4e60405e171c79758e017de99b1005926b1"))])
  (org-present
   . [(0 1 0 20220806 144744) ((org (7)))
      "Minimalist presentation minor-mode for Emacs org-mode." tar
@@ -1910,11 +1910,11 @@
       (:keywords "languages" "lisp" "slime")
       (:commit . "82dfda1a83e22de6fad93f54f3201f5dec6754fb"))])
  (sly
-  . [(1 0 43 0 20260801 146) ((emacs (24 5)))
+  . [(1 0 43 0 20261006 147) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
      ((:url . "https://github.com/joaotavora/sly")
       (:keywords "languages" "lisp" "sly")
-      (:commit . "3ffa216d0818972f7a7fea38a566a6b570349f3b"))])
+      (:commit . "191fe38eaa83e4e7556a940aa4b234666215cced"))])
  (smartparens
   . [(1 11 0 0 20260129 121419) ((dash (2 13 0)))
      "Automatic insertion, wrapping and paredit-like navigation with user defined pairs."
@@ -2146,14 +2146,14 @@
       (:keywords "typescript" "languages")
       (:commit . "2535780bdb318d86761b9bd21b0347ca6a89628f"))])
  (typst-ts-mode
-  . [(0 12 2 0 20260624 24) ((emacs (29 1)))
+  . [(0 12 2 0 20261006 26) ((emacs (29 1)))
      "Tree Sitter support for Typst" tar
      ((:url . "https://codeberg.org/meow_king/typst-ts-mode")
       (:keywords "typst" "languages" "tree-sitter")
       (:maintainer ("Ziqi Yang" . "mr.meowking@anche.no")
 		   ("Huan Nguyen" . "nguyenthieuhuan@gmail.com"))
       (:authors ("Ziqi Yang" . "mr.meowking@anche.no"))
-      (:commit . "155bb36cff3afe701a0f6b57bd3fe5c9effaa314"))])
+      (:commit . "ee17b331ebfa8d8b7c2f54a1c39ab3d76e134706"))])
  (ujelly-theme
   . [(1 3 6 0 20241111 2243) nil
      "Ujelly theme for GNU Emacs 24 (deftheme)" tar
@@ -2208,11 +2208,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 0 -4 0 20261005 235) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 0 -4 0 20261006 241) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "1bc8b945720369f596878d99bcd33155b7c99486"))])
+      (:commit . "f4331f8fb1744ba72a3e0cafd5d00755aaa6b3a0"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

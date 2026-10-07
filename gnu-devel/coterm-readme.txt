@@ -3,6 +3,12 @@ supported for all newly spawned comint processes.  This allows you to use
 more complex console programs such as "less" and "mpv" and full-screen TUI
 programs such as "vi", "top", "htop" or even "emacs -nw".
 
+If you prefer to enable coterm-mode only on specific commands,
+then, instead of activating `coterm-mode', use `coterm-apply' as an
+advice.  For instance:
+
+  (advice-add 'shell :around 'coterm-apply)
+
 In addition to that, the following two local minor modes may be used:
 
 `coterm-char-mode': if enabled, most characters you type are sent directly
@@ -34,6 +40,10 @@ It is best to add the following elisp snippet to your Emacs init file, to
 enable `coterm-mode' automatically on startup:
 
   (coterm-mode)
+
+  ;; Alternatively, to enhance M-x shell but keep other
+  ;; comint-based modes unmodified:
+  (advice-add 'shell :around 'coterm-apply)
 
   ;; Optional: bind `coterm-char-mode-cycle' to C-; in comint
   (with-eval-after-load 'comint

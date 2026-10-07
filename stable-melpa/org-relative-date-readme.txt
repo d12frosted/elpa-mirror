@@ -5,8 +5,8 @@ replacing text via a `display' property, it appends an `after-string' overlay,
 so the raw `<2027-01-09 Sat .+6m>' stays visible and editable.
 
 Overlays are painted lazily through `jit-lock' (only the visible region is
-scanned, so large agenda/journal files stay responsive), and a daily timer
-re-runs them so the counts do not go stale at midnight.
+scanned, so large agenda/journal files stay responsive), and a timer
+repaints them when the date changes so the counts do not go stale.
 
 Usage:
 

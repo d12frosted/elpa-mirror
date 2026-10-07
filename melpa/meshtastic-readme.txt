@@ -6,9 +6,11 @@ Requires the meshtastic Python package:
 
 Configure `meshtastic-serial-port' in your init file, then:
 
-  M-x meshtastic           - welcome screen
-  M-x meshtastic-channels  - list channels
-  M-x meshtastic-nodes     - list nodes by hops
+  M-x meshtastic                 - welcome screen
+  M-x meshtastic-channels        - list channels
+  M-x meshtastic-nodes           - list nodes by hops
+  M-x meshtastic-direct-messages - list DM conversations
+  M-x meshtastic-unread          - conversations with unread messages
 
 Messages received since the bridge started are buffered in memory
 and shown when a chat buffer is opened.

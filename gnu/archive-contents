@@ -2220,13 +2220,13 @@
       (:url . "https://elpa.gnu.org/packages/nftables-mode.html")
       (:commit . "05600129ee8ea0774c6ac446a2bd18fc1dde54eb"))])
  (nhexl-mode
-  . [(1 5) ((emacs (24 4)) (cl-lib (0 5)))
+  . [(1 6) ((emacs (24 4)))
      "Minor mode to edit files via hex-dump format" tar
      ((:keywords "data")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/nhexl-mode.html")
-      (:commit . "ec80692dec04e238f2ae3284cfd8f9d05ac1d2a3"))])
+      (:commit . "da0c2d94178685f6a7b8771123cce7700d4707bc"))])
  (nlinum
   . [(1 9) nil "Show line numbers in the margin" tar
      ((:keywords "convenience")

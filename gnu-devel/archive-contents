@@ -619,13 +619,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "b468efac023dda39332acc943edc9895c80b5a6f"))])
  (coterm
-  . [(1 6 0 20261005 5) ((emacs (26 1)) (compat (28 1 2 0)))
+  . [(1 6 0 20261006 6) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
      ((:url . "https://repo.or.cz/emacs-coterm.git")
       (:keywords "processes")
       (:maintainer "Miha Rihtaršič" . "miha@kamnitnik.top")
       (:authors ("Miha Rihtaršič" . "miha@kamnitnik.top"))
-      (:commit . "9ccac1303312c3e0d6e660400a7439fa65ea96cd"))])
+      (:commit . "3ab69bc7a3254041852e611f318a249f80fd6705"))])
  (counsel
   . [(0 15 1 0 20260913 36)
      ((emacs (24 5)) (ivy (0 15 1)) (swiper (0 15 1)))
@@ -1185,11 +1185,11 @@
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
       (:commit . "a2c2c167837cef08a1b8f86f5eb9864f93699300"))])
  (emacs-lisp-intro-nl
-  . [(0 0 20261003 51) nil "ELisp intro manual in NL" tar
+  . [(0 0 20261006 52) nil "ELisp intro manual in NL" tar
      ((:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-nl.html")
-      (:commit . "baf14c0a6f460ee8cc60d4dbd5be101289441330"))])
+      (:commit . "847fbab389e55beaee69393d9f3f9745f0c332b5"))])
  (embark
   . [(1 2 0 20260812 23) ((emacs (29 1)) (compat (31)))
      "Conveniently act on minibuffer completions" tar
@@ -2372,13 +2372,13 @@
       (:url . "https://elpa.gnu.org/packages/nftables-mode.html")
       (:commit . "94e3b544a145e05ed3af26fcde6fef317451200a"))])
  (nhexl-mode
-  . [(1 5 0 20221215 152407) ((emacs (24 4)))
+  . [(1 6 0 20261006 0) ((emacs (24 4)))
      "Minor mode to edit files via hex-dump format" tar
      ((:keywords "data")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
       (:url . "https://elpa.gnu.org/packages/nhexl-mode.html")
-      (:commit . "70d3c545857f59e892fba9dbefdca4fa25b9af9a"))])
+      (:commit . "da0c2d94178685f6a7b8771123cce7700d4707bc"))])
  (nlinum
   . [(1 9 0 20221221 80940) nil "Show line numbers in the margin" tar
      ((:keywords "convenience")
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
  (org
-  . [(10 0 -1 0 20261005 578) ((emacs (28 2)))
+  . [(10 0 -1 0 20261007 580) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "a3dee41618ca55f2aaab33ff097534310cde1e32"))])
+      (:commit . "187cedecfe678ce46a97303732d6ddefa85bbd88"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
