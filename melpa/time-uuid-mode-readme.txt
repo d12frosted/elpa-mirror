@@ -8,4 +8,4 @@ cursor, this will clean itself up after 5 seconds.
 
 Get the development version from git:
 
-   git clone git://github.com:RobertPlant/time-uuid-mode.git
+   git clone https://github.com/RobertPlant/time-uuid-mode.git
