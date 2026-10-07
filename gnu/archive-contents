@@ -1842,13 +1842,13 @@
       (:url . "https://elpa.gnu.org/packages/landmark.html")
       (:commit . "422d310c7726898b8d85f95f2336c79c8aaf30eb"))])
  (latex-table-wizard
-  . [(1 6 1) ((emacs (27 1)) (auctex (12 1)) (transient (0 3 7)))
+  . [(1 6 2) ((emacs (27 1)) (auctex (12 1)) (transient (0 3 7)))
      "Magic editing of LaTeX tables" tar
      ((:url . "https://github.com/enricoflor/latex-table-wizard")
       (:keywords "convenience" "tex")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "0eece7940a32eb82e5418fadba0189b0dd84ddd1"))])
+      (:commit . "7e30b492ec594e641727fb31d07291e767d0897a"))])
  (leaf
   . [(4 5 5) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar

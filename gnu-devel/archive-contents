@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 2 0 0 20261005 10) ((emacs (28 1)))
+  . [(14 2 0 0 20261007 11) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "966e78acd01e434a9342c8861905fe8507ccbebd"))])
+      (:commit . "deadd50c293503f93420c2d048288215cd717ad7"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1161,7 +1161,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "583951606e4e19fd53acd8c5691210b9acb524d7"))])
  (ellama
-  . [(1 33 0 0 20261002 8)
+  . [(1 33 1 0 20261007 8)
      ((emacs (28 1)) (llm (0 31 1)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1169,7 +1169,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "b0a00300f15403fbeaa3802ab6d894ea0f4dc639"))])
+      (:commit . "b6e71f41583e85d2e1fe93ccaa34593f7b4015b8"))])
  (emacs-gc-stats
   . [(1 4 2 0 20231206 152254) ((emacs (25 1)))
      "Collect Emacs GC statistics" tar
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 2 0 0 20261005 19) ((emacs (28)))
+  . [(9 2 0 0 20261007 20) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "de57d1774e9989fc866cc6f68b6fd8a0c1ecc1b1"))])
+      (:commit . "6e1d7ba31e9d23d885e37406dc7a2f3eefe37aaa"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -1965,14 +1965,14 @@
       (:url . "https://elpa.gnu.org/packages/landmark.html")
       (:commit . "d520bfeef47349320645d2cd06839be0df326a1d"))])
  (latex-table-wizard
-  . [(1 6 1 0 20261002 1)
+  . [(1 6 2 0 20261007 0)
      ((emacs (27 1)) (auctex (12 1)) (transient (0 3 7)))
      "Magic editing of LaTeX tables" tar
      ((:url . "https://github.com/enricoflor/latex-table-wizard")
       (:keywords "convenience" "tex")
       (:maintainer "Enrico Flor" . "enrico@eflor.net")
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
-      (:commit . "2fb1bd37f3bd267bd5b8c41e02d2b82507328824"))])
+      (:commit . "7e30b492ec594e641727fb31d07291e767d0897a"))])
  (leaf
   . [(4 5 5 0 20260508 153103) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
@@ -2251,12 +2251,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "b295cab07c1932c11dd00f23ba29c1ff0de486ab"))])
  (minuet
-  . [(0 10 0 0 20260825 1) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 10 0 0 20261007 2) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "2614e70f5e3f52a621c8ea12bacb24ebd6a69e13"))])
+      (:commit . "687a65b244efb0dfc6126322f0e128b23ba44cfb"))])
  (mmm-mode
   . [(0 5 11 0 20240222 42825) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
  (org
-  . [(10 0 -1 0 20261007 580) ((emacs (28 2)))
+  . [(10 0 -1 0 20261007 581) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "187cedecfe678ce46a97303732d6ddefa85bbd88"))])
+      (:commit . "c4ea1b908e4ee9cc2b421ebbf74244401b98d83b"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2880,12 +2880,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
  (qrencode
-  . [(1 6 0 20261004 1) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 6 0 20261007 2) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "7661840e8b3cfa1908b7e57c474d4118981de7d2"))])
+      (:commit . "a8f5cec87a82a9f3c6312193ac6a6eb93563564e"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar

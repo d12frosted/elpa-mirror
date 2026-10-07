@@ -33,4 +33,15 @@ Header args:
                        prompts (e.g. reading a full PDF) without raising
                        the global default.
 
+  :model ID-OR-NAME    Switch the session model before sending.  The change
+                       sticks for later blocks and interactive use.
+
+  :thought-level ID-OR-NAME
+                       Switch the session thought level before sending.
+                       Sticks the same way.  Errors when the agent does
+                       not advertise one.
+
+  :context TEXT        Prepend TEXT to the block body.  A single token that
+                       names an Org element uses that element's body.
+
   :results raw         Omit the leading ": " prefix on each result line.
