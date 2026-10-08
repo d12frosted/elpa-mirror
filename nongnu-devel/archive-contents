@@ -1,12 +1,12 @@
 (1
  (adoc-mode
-  . [(0 9 0 0 20261007 52) ((emacs (28 1)))
+  . [(0 9 0 0 20261008 62) ((emacs (28 1)))
      "a major-mode for editing AsciiDoc files" tar
      ((:url . "https://github.com/bbatsov/adoc-mode")
       (:keywords "asciidoc" "text")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Florian Kaufmann" . "sensorflo@gmail.com"))
-      (:commit . "e11f4bc21f786c34abe3e369f74b0fb3715bf7cf"))])
+      (:commit . "b50f2e2f87d4af3325a53eb4827746cdd894a51e"))])
  (afternoon-theme
   . [(0 1 0 20140104 185934) ((emacs (24 1)))
      "Dark color theme with a deep blue background" tar
@@ -177,12 +177,12 @@
       (:authors ("Dave Pearson" . "davep@davep.org"))
       (:commit . "eb14169161ddeba9a703c42f7352cb52f732cc86"))])
  (buttercup
-  . [(1 40 0 20260512 214133) ((emacs (24 4)))
+  . [(1 41 0 20261007 0) ((emacs (24 4)))
      "Behavior-Driven Emacs Lisp Testing" tar
      ((:url . "https://github.com/jorgenschaefer/emacs-buttercup")
       (:maintainer "Ola Nilsson" . "ola.nilsson@gmail.com")
       (:authors ("Jorgen Schaefer" . "contact@jorgenschaefer.de"))
-      (:commit . "39c8e762408a166a5afa03b8e79dd8d1a0de5caa"))])
+      (:commit . "3bcf6cf0e164d558072a484f467169a0e77bd791"))])
  (camera
   . [(0 3 0 20230828 93723) ((emacs (25 1)))
      "Take picture with your camera" tar
@@ -1367,13 +1367,13 @@
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
       (:commit . "49504a982b7d8948da297e1ab515bece4008273d"))])
  (markdown-mode
-  . [(2 9 -3 0 20260827 20) ((emacs (28 1)))
+  . [(2 9 -3 0 20261008 22) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
      ((:url . "https://jblevins.org/projects/markdown-mode/")
       (:keywords "markdown" "github flavored markdown" "itex")
       (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
-      (:commit . "76cb4ffecfdf95ee769e5cb4608e04202c3c1521"))])
+      (:commit . "aa79129f3de38d40daeb7cd6333c785e585b5d25"))])
  (mastodon
   . [(2 1 7 0 20261007 81)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
