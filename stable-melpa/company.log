@@ -5,7 +5,7 @@ Updating /mnt/store/melpa/working/company/
 Checking out 34c263702f3270f562976819c86880f8d832d1cd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/company/
-  to /tmp/company-RP601J/company-20261005.348/
+  to /tmp/company-2MYJOS/company-20261005.348/
     company-abbrev.el -> company-abbrev.el
     company-bbdb.el -> company-bbdb.el
     company-capf.el -> company-capf.el
@@ -55,10 +55,10 @@ Copying files (->) and directories (=>)
   ! doc/images/small/tooltip-quick-access.png -> images/small/tooltip-quick-access.png
   ! doc/images/small/tooltip-search.png -> images/small/tooltip-search.png
 Generating company.info
-Command `makeinfo --no-split company.texi -o /tmp/company-RP601J/company-20261005.348/company.info' exited with non-zero exit-code: 1
+Command `makeinfo --no-split company.texi -o /tmp/company-2MYJOS/company-20261005.348/company.info' exited with non-zero exit-code: 1
 company.texi:1590: `@end' expected `defopt', but saw `defun'
 
-Error: (package-build-error "Command `makeinfo --no-split company.texi -o /tmp/company-RP601J/company-20261005.348/company.info' exited with non-zero exit-code: 1")
+Error: (package-build-error "Command `makeinfo --no-split company.texi -o /tmp/company-2MYJOS/company-20261005.348/company.info' exited with non-zero exit-code: 1")
 Created company-20261005.348.tar containing:
   company-20261005.348/
   company-20261005.348/company-abbrev.el
@@ -173,4 +173,4 @@ Created company-20261005.348.tar containing:
   company-20261005.348/images/small/tooltip-qa-faces-light.png
   company-20261005.348/images/small/tooltip-quick-access.png
   company-20261005.348/images/small/tooltip-search.png
-Built company in 9.423s, finished at 2026-10-08T15:07:48+0000
+Built company in 7.131s, finished at 2026-10-08T19:29:08+0000

@@ -49,4 +49,6 @@ the moment the cursor leaves it (`--render-on-leave', on `post-command-hook'),
 never while still inside — so half-typed equations are not compiled.  That
 same discrete leave event reconciles numbers and references synchronously;
 the debounced `after-change' pass is only the backstop for edits with no
-clean leave (delete, paste, undo).
+clean leave (delete, paste, undo).  `latex-to-svg-frontend-reveal' sets
+in which buffers point reveals the source: by default not in a read-only
+one, except during an Isearch.

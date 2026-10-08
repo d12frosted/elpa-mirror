@@ -769,12 +769,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20261005 37) ((emacs (28 1)))
+  . [(4 2 3 0 20261008 39) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "effe298f788306dd4f01900c556a59821e46c2db"))])
+      (:commit . "f7fca5280b9ae0b7468da0a0615eedd1a9fd9f8c"))])
  (denote-journal
   . [(0 3 0 0 20260520 123338) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
  (org
-  . [(10 0 -1 0 20261007 581) ((emacs (28 2)))
+  . [(10 0 -1 0 20261008 588) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "c4ea1b908e4ee9cc2b421ebbf74244401b98d83b"))])
+      (:commit . "12b7959f7ef47468944fa373e6b55b2a7d07cae8"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2785,13 +2785,13 @@
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
       (:commit . "d83b894ee7a9daf7c8e9b864c23d08f1b23d78f6"))])
  (posframe
-  . [(1 5 2 0 20260930 10) ((emacs (26 1)))
+  . [(1 5 2 0 20261008 12) ((emacs (26 1)))
      "Pop a posframe (just a frame) at point" tar
      ((:url . "https://github.com/tumashu/posframe")
       (:keywords "convenience" "tooltip")
       (:maintainer "Feng Shu" . "tumashu@163.com")
       (:authors ("Feng Shu" . "tumashu@163.com"))
-      (:commit . "4b69cc261f5a1675b8f0f54e2634b1451cbc8c32"))])
+      (:commit . "45450ee132d060d297550b7c43f3d72ba77df3c7"))])
  (pq
   . [(0 2 0 20240911 1) ((emacs (25))) "libpq binding" tar
      ((:url . "https://github.com/anse1/emacs-libpq")

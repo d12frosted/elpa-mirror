@@ -2975,7 +2975,7 @@ section 8.4
   │    (replace-regexp-in-string "[][{}!@#$%^&*()+'\"?,.\|;:~`‘’“”/_ =-]*" ""
   │                              (denote-slug-keep-only-ascii str))))
   │ 
-  │ (defcustom denote-file-name-slug-functions
+  │ (setq denote-file-name-slug-functions
   │   '((identifier . identity) ; keep the original
   │     (title . my-denote-sluggify-title)
   │     (signature . my-denote-sluggify-signature)
@@ -3025,7 +3025,7 @@ section 8.3.2
   │    (replace-regexp-in-string "[][{}!@#$%^&*()+'\"?,.\|;:~`‘’“”/_ =-]*" ""
   │                              (denote-slug-remove-accents str))))
   │ 
-  │ (defcustom denote-file-name-slug-functions
+  │ (setq denote-file-name-slug-functions
   │   '((identifier . identity) ; keep the original
   │     (title . my-denote-sluggify-title)
   │     (signature . my-denote-sluggify-signature)
