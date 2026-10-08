@@ -153,10 +153,13 @@
   source file (typically `~/.authinfo.gpg', check the value of
   `auth-sources'). When you first update to 2.0.0, or if you encounter
   issues due to old credentials, call `(mastodon-forget-all-logins)' to
-  remove the old mastodon.el plstore, and then authenticate again. If
-  you don't want to use the auth source file, set
+  remove the old mastodon.el plstore, and then authenticate again.
+
+  If you don't want to use the auth source file, set
   `mastodon-auth-use-auth-source' to nil. Entries will instead be stored
-  encrypted in `mastodon-client--token-file', a plstore.
+  encrypted in `mastodon-client--token-file', a plstore. If you don't
+  want to encrypt the plstore, set
+  `mastodon-auth-encrypt-tokens-plstore' to nil.
 
   If for some reason you reauthenticate, you'll need to either remove
   the entry in your auth sources file, or manually update the token in
@@ -171,6 +174,12 @@
   authenticating.  If you have `auth-source-save-behavior' set to nil,
   you'll also need to add such an entry manually. Moreover, you should
   ensure that your `auth-sources' file is actually writable.
+
+  If you happen to already have an entry for the same instance and
+  username, you can distinguish your mastodon.el entry by using the
+  `:port' slot as follows:
+
+  `machine INSTANCE login USERNAME port mastodon.el password AUTHTOKEN'
 
   Finally, if you find you're asked for your key passphrase too often
   while authenticating, consider setting `epa-file-encrypt-to' (for

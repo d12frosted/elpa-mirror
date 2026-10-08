@@ -130,7 +130,9 @@ gateway.
   resolved transport mode, so later configuration changes cannot reroute
   them.  Chats against different dashboards can stay open at the same
   time.  Browser views retain their chosen instance until explicitly
-  reopened for another one.
+  reopened for another one; with more than one instance configured, the
+  mode line names it next to the buffer name.  List browsers keep their
+  column titles in the header line.
 
 
 2.1 Kanban task bodies
