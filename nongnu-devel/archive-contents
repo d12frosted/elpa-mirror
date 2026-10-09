@@ -1,12 +1,12 @@
 (1
  (adoc-mode
-  . [(0 9 0 0 20261008 87) ((emacs (28 1)))
+  . [(0 9 0 0 20261009 88) ((emacs (28 1)))
      "a major-mode for editing AsciiDoc files" tar
      ((:url . "https://github.com/bbatsov/adoc-mode")
       (:keywords "asciidoc" "text")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Florian Kaufmann" . "sensorflo@gmail.com"))
-      (:commit . "d03aa374fd4a84cc971a63a31313785bce9a98f3"))])
+      (:commit . "4f70ef9b4f15d38d8a8e6f81ec030c57d4ebc3d3"))])
  (afternoon-theme
   . [(0 1 0 20140104 185934) ((emacs (24 1)))
      "Dark color theme with a deep blue background" tar
@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261007 144)
+  . [(2 1 0 -4 0 20261009 146)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "5ec9d2d1970b45261d3ce85658f10946da541a10"))])
+      (:commit . "9069897908516b2823d55af029a36dca8024b83a"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1367,13 +1367,13 @@
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
       (:commit . "49504a982b7d8948da297e1ab515bece4008273d"))])
  (markdown-mode
-  . [(2 9 -3 0 20261008 22) ((emacs (28 1)))
+  . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
      ((:url . "https://jblevins.org/projects/markdown-mode/")
       (:keywords "markdown" "github flavored markdown" "itex")
       (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
-      (:commit . "aa79129f3de38d40daeb7cd6333c785e585b5d25"))])
+      (:commit . "1d22840d588be29aa57eca36f28a32bede331550"))])
  (mastodon
   . [(2 1 7 0 20261007 81)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
