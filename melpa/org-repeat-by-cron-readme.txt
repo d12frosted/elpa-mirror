@@ -81,4 +81,26 @@ cookie (e.g., +1w) on the same task, the build-in cookie will
 be taken over and preserved, so you can use this package with
 org-habit.
 
+Relative repeaters
+
+REPEAT_CRON also accepts a bare Org repeater instead of a cron
+string.  This is useful when the repetition is relative to the
+previous occurrence rather than a calendar rule:
+
+#+begin_src org
+,* TODO Water the plants
+:PROPERTIES:
+:REPEAT_CRON: +3d
+:END:
+#+end_src
+
+A single "+" is rewritten to ".+", i.e. the next date is counted
+from the day the task is completed (Org's ".+" semantics).  Write
+"++3d" to keep Org's anchored, catch-up semantics.  The rule must
+start with "+" and must be a bare repeater: ".+3d" and "+3d extra"
+are rejected, and upper-case units such as "+3D" are lower-cased.
+Such rules are handled by Org's own `org-auto-repeat-maybe'; this
+package only recognises the rule, rewrites the cookie and maintains
+the anchor property.
+
 Check README for more usage: https://github.com/TomoeMami/org-repeat-by-cron.el
