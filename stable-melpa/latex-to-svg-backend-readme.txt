@@ -19,6 +19,11 @@ Design (why it is cheap to recolor and rescale):
     size-independent SVG; the `.fmt' precompilation and compile metadata
     below are the LaTeX engine's.
 
+  * A third engine, `:engine texres', runs LaTeX through texres, a TeX
+    distribution in a single executable, and converts its PDF with
+    `pdftocairo'.  It reads the LaTeX engine's preamble and has its own
+    `.fmt' file and compile metadata.
+
   * The on-disk SVG is COLOR-INDEPENDENT: dvisvgm `--currentcolor' emits
     the default ink as the literal token `currentColor', which is
     substituted with the buffer foreground at display time.  A theme
