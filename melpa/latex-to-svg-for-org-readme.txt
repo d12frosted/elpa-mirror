@@ -6,7 +6,8 @@ then enables the core.  All the actual work lives in
 `latex-to-svg-frontend'.
 
 Detection uses the core's universal scanner (not `org-element'); the Org
-block/comment regions below are excluded from it, as are inline `~code~' /
+block, comment, table formula and fixed-width regions below are excluded
+from it, as are inline `~code~' /
 `=verbatim=' spans, so `=\(=' stays literal text.  Disable a delimiter
 family with the core toggles if a markup character still causes false
 positives.

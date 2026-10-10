@@ -117,6 +117,24 @@ gateway.
   │ hermes dashboard --no-open --tui --host 127.0.0.1 --port 9119
   └────
 
+  To keep a local dashboard independent of Emacs restarts, run it under
+  an external supervisor (for example, a systemd user service), and
+  explicitly attach rather than spawn:
+
+  ┌────
+  │ (setq hermes-dashboard-transport-start-mode 'remote
+  │       hermes-dashboard-transport-url "http://127.0.0.1:9119")
+  └────
+
+  Here `remote' means externally managed, even on loopback.  Closing
+  Emacs or reconnecting only closes the client socket; it does not stop
+  the dashboard.  If the service is absent, attachment fails without
+  starting a replacement.  Start/check your service explicitly, then
+  retry or use `hermes-dashboard-reconnect'.  `hermes-dashboard-restart'
+  deliberately refuses externally managed dashboards.  The default
+  `auto' mode still spawns a local child for loopback endpoints; it is
+  not the service-attachment setting.
+
   To use more than one dashboard, configure named instances:
 
   ┌────

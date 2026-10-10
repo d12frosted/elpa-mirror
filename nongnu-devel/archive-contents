@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261009 146)
+  . [(2 1 0 -4 0 20261009 147)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "9069897908516b2823d55af029a36dca8024b83a"))])
+      (:commit . "dafaff10c71c497c25fc2ed3500665c3b78e72b9"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1065,7 +1065,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "1e6b608da9994f84da3d8c1e2ab090f91b2d27e1"))])
  (hermes
-  . [(0 8 0 0 20261007 10)
+  . [(0 8 0 0 20261009 11)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1073,7 +1073,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "861194d7e925a38b9fb12d2094b3db3596218cb2"))])
+      (:commit . "90530b73e39e17a7d9aca18ca34b9b93a1d6545e"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261007 39)
+  . [(4 7 1 0 20261009 41)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "49504a982b7d8948da297e1ab515bece4008273d"))])
+      (:commit . "f8962486cd0089aa51fc1a2138aab11336d64422"))])
  (magit-section
-  . [(4 7 1 0 20261007 39)
+  . [(4 7 1 0 20261009 41)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "49504a982b7d8948da297e1ab515bece4008273d"))])
+      (:commit . "f8962486cd0089aa51fc1a2138aab11336d64422"))])
  (markdown-mode
   . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1439,13 +1439,13 @@
       (:authors ("Johann Klähn" . "johann@jklaehn.de"))
       (:commit . "62cb8825d525d7c9475dd93d62ba84d419bc4832"))])
  (multiple-cursors
-  . [(1 5 0 0 20260419 93113) ((emacs (24 4)) (cl-lib (0 5)))
+  . [(1 5 0 0 20261009 7) ((emacs (24 4)) (cl-lib (0 5)))
      "Multiple cursors for Emacs" tar
      ((:url . "https://github.com/magnars/multiple-cursors.el")
       (:keywords "editing" "cursors")
       (:maintainer "Magnar Sveen" . "magnars@gmail.com")
       (:authors ("Magnar Sveen" . "magnars@gmail.com"))
-      (:commit . "94b8b07a4bab87f803123723b68227565429dfa1"))])
+      (:commit . "6086e34e86cc9c305c693f440e648588335669c9"))])
  (nasm-mode
   . [(1 1 1 0 20260509 95321) ((emacs (24 3)))
      "NASM x86 assembly major mode" tar
@@ -2253,7 +2253,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 4 0 20261003 11)
+  . [(3 5 4 0 20261009 12)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2262,7 +2262,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "ca956bbfd1c9f163d2a8390716fcd39799d23f34"))])
+      (:commit . "3c390146741be401ff2e78e337707efd4bdec506"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar
