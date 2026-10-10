@@ -769,12 +769,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20261009 116) ((emacs (28 1)))
+  . [(4 2 3 0 20261010 131) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "2033f431ce235015011fbf7abcb161fb0f332072"))])
+      (:commit . "f77f705092151636002f4e6d3700f802b8f945be"))])
  (denote-journal
   . [(0 3 0 0 20260520 123338) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -783,12 +783,12 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "374224ad2b3162c1fa92bb9ecdb61f157a781c4b"))])
  (denote-markdown
-  . [(0 3 0 0 20260520 123211) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0 0 20261010 2) ((emacs (28 1)) (denote (4 0 0)))
      "Extensions that better integrate Denote with Markdown" tar
      ((:url . "https://github.com/protesilaos/denote-markdown")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "e46945b128b8ea7b3dd9e2c5af3f120045e9243a"))])
+      (:commit . "1a1b832fafbb32d695370e383c7d285de88bb83a"))])
  (denote-menu
   . [(1 4 0 0 20250829 94810) ((emacs (28 1)) (denote (3 0 0)))
      "View denote files in a tabulated list." tar
@@ -797,12 +797,12 @@
       (:authors ("Mohamed Suliman" . "sulimanm@tcd.ie"))
       (:commit . "9bf3bed5e0f59621a98169bbbd4b359d3a039b22"))])
  (denote-org
-  . [(0 3 0 0 20260904 5) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0 0 20261010 6) ((emacs (28 1)) (denote (4 0 0)))
      "Denote extensions for Org mode" tar
      ((:url . "https://github.com/protesilaos/denote-org")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "d32a5db4e76be691949c3551617d228ff3496c63"))])
+      (:commit . "dca4c968afbcc213c161937ce895e5337987f57c"))])
  (denote-review
   . [(1 0 7 0 20260409 90040) ((emacs (28 1)) (denote (4 1 3)))
      "implements review process for denote notes" tar
@@ -1378,14 +1378,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 7 0 20261002 7)
+  . [(1 4 7 0 20261010 11)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "41bf9fed8c9a9047546448b45c81db3ca2a6a313"))])
+      (:commit . "bcd8db9dc1757a9602b2664dd1eb36fbf40a1903"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -2130,7 +2130,7 @@
       (:url . "https://elpa.gnu.org/packages/map.html")
       (:commit . "1b2a8de314ae7d6cc530884f272e95f64b93e81b"))])
  (marginalia
-  . [(2 13 0 20260926 0) ((emacs (29 1)) (compat (31)))
+  . [(2 13 0 20261010 1) ((emacs (29 1)) (compat (31)))
      "Enrich existing commands with completion annotations" tar
      ((:url . "https://github.com/minad/marginalia")
       (:keywords "docs" "help" "matching" "completion")
@@ -2138,7 +2138,7 @@
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "42eafcfddbe88d92ed96521a00a5a90a49bac4dd"))])
+      (:commit . "381af583d2530796b9955ff2fe0cba3ad3119943"))])
  (markchars
   . [(0 2 2 0 20221221 80510) nil
      "Mark chars fitting certain characteristics" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
  (org
-  . [(10 0 -1 0 20261010 592) ((emacs (28 2)))
+  . [(10 0 -1 0 20261010 595) ((emacs (28 2)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "ecd737348f00faefbd642af1b5aeaedfd95cf965"))])
+      (:commit . "61a8e63bd8caa1ef5cb747bf80c3109d44ac8d4c"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar

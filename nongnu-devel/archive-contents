@@ -437,7 +437,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99"))])
  (ebuild-mode
-  . [(1 88 0 20261001 0) ((emacs (26 3)))
+  . [(1 88 0 20261010 2) ((emacs (26 3)))
      "edit ebuild and eclass files" tar
      ((:keywords "languages" "processes")
       (:maintainer nil . "emacs@gentoo.org")
@@ -446,7 +446,7 @@
 		("Christian Faulhammer" . "fauli@gentoo.org")
 		("Ulrich Müller" . "ulm@gentoo.org"))
       (:url . "https://elpa.nongnu.org/nongnu/ebuild-mode.html")
-      (:commit . "0171516b881f66f73369978a781e440611f0a42d"))])
+      (:commit . "b54a7b218585766bac818384aac6d569a94d4d09"))])
  (edit-indirect
   . [(0 1 13 0 20240128 11949) ((emacs (24 3)))
      "Edit regions in separate buffers" tar
@@ -499,7 +499,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "395c6960c8dbbc26d9988b26d4afeb15ae7ab2c8"))])
  (elfeed
-  . [(4 2 1 0 20260929 1) ((emacs (29 1)) (compat (31)))
+  . [(4 2 1 0 20261010 2) ((emacs (29 1)) (compat (31)))
      "An Atom/RSS feed reader" tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -508,7 +508,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "f69b4da9b89be04e3b5bd0fecac77a48d914e64c"))])
+      (:commit . "4c962a423c9f3eef9472555fccecf268f9d380fe"))])
  (elfeed-web
   . [(4 1 0 0 20260821 0)
      ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261009 41)
+  . [(4 7 1 0 20261010 42)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "f8962486cd0089aa51fc1a2138aab11336d64422"))])
+      (:commit . "58a469820bc3dc388f0193e3024147fb55a6c98f"))])
  (magit-section
-  . [(4 7 1 0 20261009 41)
+  . [(4 7 1 0 20261010 42)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "f8962486cd0089aa51fc1a2138aab11336d64422"))])
+      (:commit . "58a469820bc3dc388f0193e3024147fb55a6c98f"))])
  (markdown-mode
   . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -2208,11 +2208,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 0 -4 0 20261009 247) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 0 -4 0 20261010 250) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "cd6324a0ccd99f9c55799d82937d9b7a3b722ac9"))])
+      (:commit . "e1a00b9c9143dad6182cfb3069bc040a6434077e"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
