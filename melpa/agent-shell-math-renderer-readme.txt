@@ -40,10 +40,10 @@ math, fenced blocks, streaming watermark) and image *placement* (via
 `display' text properties), while `latex-to-svg-backend' compiles each unique
 equation to a color- and size-independent SVG (cached on disk by
 content, tinted and scaled at display time).  Compilation is
-asynchronous; the image is overlaid when ready.  When the toolchain is
-absent or `latex-to-svg-backend-use-placeholder' is set, a placeholder panel
-boxing the raw LaTeX is shown instead.  The engine that typesets
-(LaTeX, or RaTeX without a TeX installation) is chosen by
-`agent-shell-math-renderer-engine'.  Backend settings (programs,
+asynchronous; the image is overlaid when ready.  When a program of
+the engine is not found, the backend warns once per session, naming
+the engine and the program, and the source stays as text.  The engine
+that typesets (LaTeX, RaTeX without a TeX installation, or texres) is
+chosen by `agent-shell-math-renderer-engine'.  Backend settings (programs,
 preamble, cache directory, font scale, placeholder / non-graphic
 behaviour) live in the `latex-to-svg-backend-*' customization group.
