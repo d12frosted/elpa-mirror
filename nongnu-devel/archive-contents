@@ -1,12 +1,12 @@
 (1
  (adoc-mode
-  . [(0 9 0 0 20261009 88) ((emacs (28 1)))
+  . [(0 9 0 0 20261010 91) ((emacs (28 1)))
      "a major-mode for editing AsciiDoc files" tar
      ((:url . "https://github.com/bbatsov/adoc-mode")
       (:keywords "asciidoc" "text")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Florian Kaufmann" . "sensorflo@gmail.com"))
-      (:commit . "4f70ef9b4f15d38d8a8e6f81ec030c57d4ebc3d3"))])
+      (:commit . "0a09281d337a2512858c096225b60d9e7a0e7911"))])
  (afternoon-theme
   . [(0 1 0 20140104 185934) ((emacs (24 1)))
      "Dark color theme with a deep blue background" tar
@@ -243,12 +243,12 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "3c68569738f04a22d52f1ca28f593c2ee733bf04"))])
  (clojure-ts-mode
-  . [(0 6 0 0 20260823 53) ((emacs (30 1)))
+  . [(0 6 0 0 20261010 60) ((emacs (30 1)))
      "Major mode for Clojure code" tar
      ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "2bce67a68c270157d940ac9374ab393804c7e00d"))])
+      (:commit . "36bd7088145419086d24ec8367b63dbafecb2f14"))])
  (codex-ide
   . [(0 1 4 0 20260919 1)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
@@ -1204,14 +1204,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 15 0 0 20261007 5)
+  . [(0 15 0 0 20261010 8)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "0fcfece6d7ffcd38b699aada74c70a1068fa7069"))])
+      (:commit . "d9efdb564a76de333f4d4d95d716deda2df4b395"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -2208,11 +2208,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 0 -4 0 20261007 244) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 0 -4 0 20261009 247) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "4388b250ae85a4eafba19efbf01c720336923dac"))])
+      (:commit . "cd6324a0ccd99f9c55799d82937d9b7a3b722ac9"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
