@@ -45,5 +45,5 @@ the engine is not found, the backend warns once per session, naming
 the engine and the program, and the source stays as text.  The engine
 that typesets (LaTeX, RaTeX without a TeX installation, or texres) is
 chosen by `agent-shell-math-renderer-engine'.  Backend settings (programs,
-preamble, cache directory, font scale, placeholder / non-graphic
-behaviour) live in the `latex-to-svg-backend-*' customization group.
+preamble, cache directory, font scale) live in the
+`latex-to-svg-backend-*' customization group.

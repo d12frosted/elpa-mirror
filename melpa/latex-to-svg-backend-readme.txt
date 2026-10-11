@@ -26,14 +26,15 @@ Design (why it is cheap to recolor and rescale):
 
   * The on-disk SVG is COLOR-INDEPENDENT: dvisvgm `--currentcolor' emits
     the default ink as the literal token `currentColor', which is
-    substituted with the buffer foreground at display time.  A theme
+    substituted with the caller's `:color' at display time.  A theme
     switch therefore re-tints from cache with no recompile.  The image
     background is transparent, so it always matches the buffer.
 
   * The on-disk SVG is SIZE-INDEPENDENT: it is compiled at dvisvgm
     `--scale=1' (natural point dimensions, glyphs as outline paths) and
-    scaled at display time via `create-image' :scale, computed from the
-    buffer font height so equations track the font — again no recompile.
+    given its width in pixels at display time, computed from the
+    x-height of the text around it, so equations track the font — again
+    no recompile.  An inline equation's baseline sits on the line's.
 
   * The preamble is PRECOMPILED once to a LaTeX `.fmt' file with TeX's
     `\dump', then loaded by every equation compile with a `%&' first
@@ -53,7 +54,7 @@ Public entry point:
 
   (latex-to-svg-backend LATEX &key callback metadata engine fallback
                         quiet rescale-by color background padding
-                        font-height)
+                        x-height)
 
 LATEX is placed *verbatim* in the document body, so the caller passes
 valid body LaTeX and decides inline vs display by the delimiters it uses
@@ -61,7 +62,7 @@ valid body LaTeX and decides inline vs display by the delimiters it uses
 The backend is deliberately unaware of that distinction.
 
 Returns an image now when one can be produced synchronously (cache /
-on-disk SVG / placeholder), else nil after scheduling an asynchronous
+on-disk SVG), else nil after scheduling an asynchronous
 compile; CALLBACK (a zero-argument function) is invoked once the SVG is
 ready, so the caller can re-query and place the image.  Concurrent
 requests for the same equation are coalesced onto a single compile.
@@ -70,15 +71,13 @@ A formula the engine rejects is recorded and not compiled again;
 `:fallback latex' typesets it with LaTeX instead, and
 `latex-to-svg-backend-engine-used' says which engine drew a picture.
 
-The optional `:color'/`:background'/`:padding' keys override the
-display-time tint, an optional box color behind the equation, and padding
-that grows that box beyond the ink -- one number for all four sides, or a
-list of one to four numbers in CSS order, so a left-only gutter is
-(0 0 0 6) (all apply post-compile, no recompile); a front-end owns the
-user-facing preference and passes it through.
+The backend reads no faces and no frames.  The caller passes the
+tint as `:color' and the x-height of the text as `:x-height', both
+read on the frame that shows its buffer; `:background' and `:padding'
+add a box behind the equation and grow it beyond the ink -- one number
+for all four sides, or a list of one to four numbers in CSS order, so a
+left-only gutter is (0 0 0 6).  All apply post-compile, no recompile.
 
 Helpers a front-end typically needs for its refresh policy:
-`latex-to-svg-backend-available-p', `latex-to-svg-backend-appearance',
-`latex-to-svg-backend-display-scale',
-`latex-to-svg-backend-foreground-color', and
+`latex-to-svg-backend-available-p' and
 `latex-to-svg-backend-image-width'.
