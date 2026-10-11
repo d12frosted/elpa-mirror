@@ -64,7 +64,7 @@ Table of Contents
   │   :ensure t)
   └────
   If you use [Doom Emacs], it's now available as a flag in the
-  `common-lisp' module.  In the `doom!' block in your `~init.el':
+  `common-lisp' module.  In the `doom!' block in your `init.el':
   ┌────
   │ (doom! ;; ...
   │        :tools

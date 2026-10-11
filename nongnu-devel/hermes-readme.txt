@@ -787,15 +787,22 @@ gateway.
   Desktop notifications default to completed chat replies, terminal chat
   errors, input requests, background-task results, and Kanban states
   that need attention.  Cron failures use the same policy when cron
-  failure monitoring is enabled.  They are suppressed when the target
-  buffer is already visible on the focused frame. Customize the event
-  set, or set it to `nil' to disable notifications:
+  failure monitoring is enabled.  They are suppressed only when the
+  target buffer is in the selected window of the focused
+  frame. Customize the event set, or set it to `nil' to disable
+  notifications:
 
   ┌────
   │ (setq hermes-notifications-events
   │       '(chat-reply chat-error prompt background
   │         kanban-attention cron-failure kanban-done))
   └────
+
+  While any chat awaits an approval, clarification or other input, the
+  global mode line shows a segment such as `[Hermes: Clarify]'.  It
+  names the prompt kind and count, never the prompt itself; clicking it
+  answers from the owning chat.  Customize
+  `hermes-chat-prompt-indicator' to `nil' to hide it.
 
 
 [hermes-emacs-plugin] <https://git.thanosapollo.org/hermes-emacs-plugin>
