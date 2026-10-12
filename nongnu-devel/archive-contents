@@ -982,7 +982,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20261006 22)
+  . [(0 9 9 6 0 20261011 24)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -991,7 +991,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "406432d83f8a76e7af54d88c97df1863bd9a9119"))])
+      (:commit . "2ccca591e0ec65325dc1a431e13ae157864f8040"))])
  (graphql-mode
   . [(1 0 0 0 20260904 38) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20261001 71) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20261011 73) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,16 +1056,16 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "1e6b608da9994f84da3d8c1e2ab090f91b2d27e1"))])
+      (:commit . "eb7f3a91146d07c4c06cf7eed5efd4a30c289807"))])
  (helm-core
-  . [(4 0 7 0 20261001 71) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20261011 73) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "1e6b608da9994f84da3d8c1e2ab090f91b2d27e1"))])
+      (:commit . "eb7f3a91146d07c4c06cf7eed5efd4a30c289807"))])
  (hermes
-  . [(0 8 0 0 20261011 13)
+  . [(0 8 0 0 20261011 28)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1073,7 +1073,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "d16b0e5f4adc25ec15c89d34578892c276d73163"))])
+      (:commit . "0507cfe9bf1e7924846ef671cb90b4db144e24a4"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1461,6 +1461,14 @@
       (:authors ("Andrew J Cosgriff" . "andrew@cosgriff.name"))
       (:url . "https://elpa.nongnu.org/nongnu/nginx-mode.html")
       (:commit . "c4ac5de975d65c84893a130a470af32a48b0b66c"))])
+ (nightpanel-theme
+  . [(0 1 0 0 20261010 5) ((emacs (24 1)))
+     "Saab instrument cluster colorscheme" tar
+     ((:url . "https://github.com/gregfelice/nightpanel-theme")
+      (:keywords "faces" "theme")
+      (:maintainer "Greg Felice" . "gregfelice@gmail.com")
+      (:authors ("Greg Felice" . "gregfelice@gmail.com"))
+      (:commit . "9835406644e0f6ab99619c86925f3182df4db9f7"))])
  (nix-mode
   . [(1 5 0 0 20260810 58)
      ((emacs (27 1)) (magit-section (0)) (reformatter (0))

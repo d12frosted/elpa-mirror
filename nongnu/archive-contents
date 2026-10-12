@@ -1386,6 +1386,14 @@
       (:authors ("Andrew J Cosgriff" . "andrew@cosgriff.name"))
       (:url . "https://elpa.nongnu.org/nongnu/nginx-mode.html")
       (:commit . "c4ac5de975d65c84893a130a470af32a48b0b66c"))])
+ (nightpanel-theme
+  . [(0 1 0) ((emacs (27 1))) "Saab instrument cluster colorscheme"
+     tar
+     ((:url . "https://github.com/gregfelice/nightpanel-theme")
+      (:keywords "faces" "theme")
+      (:maintainer "Greg Felice" . "gregfelice@gmail.com")
+      (:authors ("Greg Felice" . "gregfelice@gmail.com"))
+      (:commit . "e67d53b67f727f2f9f9bc948f69df2044c0d8c6d"))])
  (nix-mode
   . [(1 5 0) ((emacs (25 1)) (magit-section (0)) (transient (0 3)))
      "Major mode for editing .nix files" tar

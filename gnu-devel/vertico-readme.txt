@@ -38,7 +38,6 @@ Table of Contents
 .. 4. Submitting the empty string
 .. 5. `tmm-menubar' (Fixed on Emacs 31)
 .. 6. `ffap-menu' (Fixed on Emacs 31)
-.. 7. Tramp hostname and username completion (Fixed on Emacs 29)
 
 
 [extensions] See section 5
@@ -905,25 +904,3 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
 
 
 [bug#74616] <https://debbugs.gnu.org/cgi/bugreport.cgi?bug=74616>
-
-
-11.7 Tramp hostname and username completion (Fixed on Emacs 29)
-───────────────────────────────────────────────────────────────
-
-  *NOTE:* On Emacs 29.2 and Tramp 2.7 the workarounds described in this
-  section are not necessary anymore, since the relevant completion
-  tables have been fixed.
-
-  In combination with Orderless or other non-prefix completion styles
-  like `substring' or `flex', host names and user names are not made
-  available for completion after entering `/ssh:'. In order to avoid
-  this problem, the `basic' completion style should be specified for the
-  file completion category, such that `basic' is tried before
-  `orderless'. This can be achieved by putting `basic' first in the
-  completion style overrides for the file completion category.
-
-  ┌────
-  │ (setq completion-styles '(orderless basic)
-  │       completion-category-defaults nil
-  │       completion-category-overrides '((file (styles basic partial-completion))))
-  └────

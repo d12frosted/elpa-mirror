@@ -8,9 +8,10 @@ Example usage:
 
   (simulacrum-define-event-type my-event)
 
-  (keymap-global-set "<my-event>"
-                     (simulacrum-command
-                      (lambda (n) (message "Got %s" n))))
+  (simulacrum-define-command display-number (n)
+    (message "Got %s" n))
+
+  (keymap-global-set "<my-event>" #'display-number)
 
   (simulacrum-generate-event 'my-event 42)
 
