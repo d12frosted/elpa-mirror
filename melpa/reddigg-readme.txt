@@ -2,18 +2,20 @@ This package allows you to browse reddit in org-mode.
 
 Reddit now requires a logged-in, browser-driven session for its
 JSON endpoints, so reddigg no longer talks to old.reddit.com
-directly with `url-retrieve'.  Instead it uses the `browser-gt'
-package (https://github.com/dmgerman/browser-gt) to run the fetch
-*inside* an already-open, already-authenticated reddit tab in
-your real browser, and reads the resulting JSON text back into
-Emacs.  You must:
-  1. Have `browser-gt' set up and running (see its README) with both
-     the Emacs side (`browser-gt-start') and the browser extension
-     loaded and connected.
-  2. Be logged into old.reddit.com in that browser.
-reddigg will look for an already-open reddit tab; if it can't
-find one it will offer to open old.reddit.com for you and wait
-for it to finish loading before continuing.
+directly.  Instead it talks to a small local Python server (see
+server/reddigg_server.py) over a simple HTTP/REST API.  That server
+relays requests to a reddit tab running the reddigg userscript,
+which is the only thing with the user's real, logged-in session.
+You must:
+  1. Run the server:  python3 server/reddigg_server.py
+  2. Load userscript/reddigg-ws.user.js in your browser and be
+     logged into old.reddit.com there.
+The server listens on a single port (1979) for both the userscript's
+websocket and Emacs's REST requests.  REST requests are authenticated
+with a token the server stores in `reddigg-token-file'.
+See `reddigg-server-url' to point Emacs at a non-default host/port,
+and `reddigg-ping' to check that the whole chain
+(Emacs -> server -> browser tab) is working.
 
 Buffers:
 There are three buffers which are on org-mode. They show links and elisp
@@ -38,6 +40,13 @@ r/emacs/comments/lfww57/weekly_tipstricketc_thread/ or
 https://old.reddit.com/r/emacs/comments/lfww57/weekly_tipstricketc_thread/)
 and show it.
 
-* Remarks
-This mode only lets you view reddit. For a complete interaction with reddit check
-out md4rd at https://github.com/ahungry/md4rd.
+reddigg-ping: check the server and the browser tab are reachable.
+
+reddigg-refresh-session: re-read the logged-in username from the tab.
+
+* Interaction (in the generated buffers, `reddigg-view-mode')
+C-c C-v u / d / 0   upvote / downvote / clear vote
+C-c C-v r           reply
+C-c C-v e           edit your own post/comment
+C-c C-v x           delete your own post/comment
+`reddigg-submit-post' creates a new submission.
